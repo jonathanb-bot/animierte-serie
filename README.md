@@ -1,63 +1,67 @@
-# Animierte Serie
+# Animierte Serie – „24. Stock“
 
-Animierte Story-Videos im Hochformat (1080×1920, TikTok/Reels/Shorts). Jede Folge ist **eine JSON-Datei** in `episoden/`. Daraus entsteht automatisch das fertige Video mit Animation, Kamerafahrten, Wort-für-Wort-Untertiteln, HUD, Effekten, Stimme und Musik.
+Animierte Story-Videos im Hochformat (1080×1920) für TikTok, Reels und Shorts, im sauberen Flat-Vektor-Stil. Jede Folge ist eine **einfache Textdatei** in `episoden/`. Daraus entsteht automatisch das fertige Video mit Figuren, Kamerafahrten, Wort-für-Wort-Untertiteln, HUD, Licht, Effekten, Musik und Stimme.
 
-## So läuft es
+- `serienplan.md`: Staffelplan, Figuren, Cliffhanger
+- `figuren.json`: alle Figuren. Sie sehen in jeder Folge gleich aus.
+- `episoden/folge-XX.txt`: die Drehbücher
+- `engine/`: die Animation (Figuren, Szenen, Objekte)
+- `render.mjs`: rendert eine Folge zur MP4
 
-1. Claude schreibt eine Folge nach `episoden/folge-XX.json`.
-2. Optional kommt die Stimme dazu, eine Datei pro Szene: `audio/folge-XX/01.mp3`, `02.mp3` …
-   Die Länge jeder Szene und das Timing der Untertitel passen sich dann automatisch an.
-3. Optional kommt Musik dazu: `musik/xyz.mp3`, eingetragen in der Folge unter `"musik"`.
-4. **Push → GitHub Actions rendert automatisch.** Das fertige Video liegt danach unter **Releases** zum Download, siehe Tab „Actions“ bzw. „Releases“ im Repo.
+## Ablauf
 
-Lokal rendern:
+1. Drehbuch schreiben bzw. ändern: `episoden/folge-XX.txt`
+2. Optional die Stimme: pro Einstellung eine Datei `audio/folge-XX/001.mp3`, `002.mp3` … Szenenlänge und Untertitel passen sich automatisch an.
+3. Optional Musik: `musik/spannung.mp3` hochladen und im Drehbuch `@musik musik/spannung.mp3` eintragen.
+4. **Push → GitHub rendert automatisch** (bis zu 5 Folgen gleichzeitig). Das Video liegt danach unter **Releases**.
+
+Lokal:
 
 ```bash
 npm install && npx playwright install chromium   # einmalig, dazu ffmpeg
-node render.mjs episoden/folge-00-test.json       # volles Video -> ausgabe/
-node render.mjs episoden/folge-00-test.json --vorschau   # schnell, kleine Auflösung
-node render.mjs episoden/folge-00-test.json --bilder     # nur ein Standbild pro Szene
+node render.mjs episoden/folge-01.txt             # volles Video -> ausgabe/
+node render.mjs episoden/folge-01.txt --bilder    # schnell: ein Standbild pro Einstellung
+node render.mjs episoden/folge-01.txt --vorschau  # kleine, schnelle Vorschau
 ```
 
-## Aufbau einer Folge
+## Drehbuch-Format
 
-```json
-{
-  "titel": "…",
-  "fps": 30,
-  "musik": "musik/spannung.mp3",
-  "musik_lautstaerke": 0.16,
-  "figuren": {
-    "luca": { "typ": "junge", "haut": "#f1cfb1", "haare": "#2f2520", "jacke": "#4f6d8a", "hose": "#2d3340" }
-  },
-  "szenen": [
-    { "typ": "gesicht", "figur": "luca", "ausdruck": "schreck", "text": "Dann *klopft* es.", "hud": { "tag": 4, "zeit": "10:07", "co2": 1.0 } }
-  ]
-}
+```
+# Folge 1: Der erste Tag
+@hud tag=1 zeit=07:40 wasser=12/40L essen=6/10Tage     ← Anzeige oben links (gilt, bis sie geändert wird)
+@zeit nacht                                            ← Tageszeit für alle folgenden Einstellungen
+== Szene 2: Ein ganz normaler Morgen ==                ← Kapitel (nur zur Gliederung)
+[wohnung du walter morgen licht=an zoom-rein] Du stehst in deiner *Küche*.
+[gesicht walter ort=treppenhaus besorgt] „Benutz nie den Aufzug.“
 ```
 
-**Figuren** (`typ`): `junge`, `maedchen`, `mann`, `glatze`. Dazu die Farben `haut`, `haare`, `jacke`, `hose`, `schuhe`, `augen`, optional `muetze` und `bart`.
+Jede Zeile `[…] Text` ist eine Einstellung. Der Text ist zugleich Erzählung und Untertitel. `*Wort*` hebt ein Wort hervor. Steht Text in „Anführungszeichen“, bewegt die Figur beim Sprechen den Mund.
 
-**Szenentypen**
+In der Klammer steht zuerst der **Typ**, danach beliebige Angaben:
 
-| typ | Zeigt | Wichtige Felder |
+| Typ | Zeigt | Nützliche Angaben |
 |---|---|---|
-| `gesicht` | Nahaufnahme, Figur spricht, blinzelt | `figur`, `ausdruck`, `blick: [x,y]` |
-| `figur` | Ganze Figur(en) im Bunkerraum | `figur` oder `figuren: [..]`, `geste`, `gesten`, `ausdruecke`, `sprecher` |
-| `schnitt` | Querschnitt: Erde, Schacht, Bunker | `figuren`, `himmel: "tag"/"nacht"`, `im_schacht`, `luft`, `alarm` |
-| `luke` | Blick durch die Luke nach oben | `figur`, `zappeln`, `schuhe: false` |
-| `titel` | Großer Text-Knall | `gross`, `groesse`, `farbe`, `textfarbe` |
+| `skyline` | Stadt von außen, unser Turm | `licht` (oberstes Fenster an), `heli`, `regen`, `fahrt` |
+| `hochhaus` | Querschnitt mit 24 Etagen | `etage=24`, `bis_etage=1`, `zombies="1-8"`, `barrikade=20`, `wasser=voll/weg`, `druck=6`, `aufzug=14`, `strom=false`, `horde=12`, `laerm_x=880`, `tank=0.6` |
+| `wohnung` | Wohnung im 24. Stock | `licht=an/aus/kerze`, `vorhang=zu/schliesst`, `hahn=an/tropft`, `vorraete=6`, `objekt=topf`, `barrikade`, `klebeband` |
+| `bad` | Badewanne, Toilette | `fuell=0.1 fuell_bis=0.8`, `liter=150`, `hahn=an/tropft`, `licht=kerze` |
+| `treppenhaus` | Brandschutztür, Etagennummer | `etage=20`, `barrikade` / `barrikade=baut`, `zombies`, `klopfen`, `licht=an` |
+| `strasse` | Läden, Autos, Horde | `horde=10`, `laerm_x=800`, `alarm`, `figur_x=200` |
+| `dach` | Tank, Regentonnen, SOS | `tank=0.7`, `tonnen=false`, `regen`, `sos` / `sos=malt`, `signal`, `heli` / `heli=kommt` |
+| `objekt` | Infokarte mit Icons | `objekte="badewanne:150 Liter\|boiler:80 Liter"`, `gross="Überschrift"`, `durchgestrichen=feuer`, `farbe=#hex` |
+| `karte` | Stadtplan | `route="haus>apotheke"`, `horden=supermarkt,bruecke`, `orte=haus,apotheke,stadion` |
+| `gesicht` | Nahaufnahme, unscharfer Hintergrund | `ort=wohnung/treppenhaus/dach/bad/strasse`, `licht=kerze/taschenlampe` |
+| `titel` | Titelkarte | `oben=`, `gross=` (Zeilenumbruch mit `\|`), `unten=`, `groesse=` |
 
-**Ausdrücke:** `neutral`, `froh`, `traurig`, `schreck`, `angst`, `wuetend`, `muede`
-**Gesten:** `steht`, `winkt`, `zeigt`, `haende_hoch`
+**Allgemein:**
+- **Figuren:** `du`, `lena`, `mila`, `walter`, `kai`, `pilotin`, `zombie3` … Für Posen oder Ausdrücke pro Figur: `lena:psst`, `walter:besorgt`.
+- **Ausdrücke:** `neutral froh traurig schreck angst wuetend muede entschlossen besorgt misstrauisch`
+- **Posen:** `steht winkt zeigt zeigt_links zeigt_hoch haende_hoch angst psst denkt huefte traegt taschenlampe lauscht geht rennt`
+- **Tageszeit:** `tag morgen abend nacht`
+- **Kamera:** `ruhig zoom-rein zoom-raus schwenk-hoch schwenk-runter schwenk-links schwenk-rechts nah fahrt` oder exakt mit `fokus=540,900 zoom=1.2 fokus_bis=… zoom_bis=…`
+- **Effekte:** `staub asche schnee wackeln=1 blitz alarm blende dauer=3 hud=false`
+- **Icons:** wasserflasche kanister badewanne boiler eimer topf kerze taschenlampe dose funkgeraet powerbank medizin wecker plane kocher decke tropfen ohr auge gluehbirne toilette spuelkasten feuer kreuz batterie zombiekopf regen solar schluessel rucksack treppe uhr herz muell
 
-**Für jede Szene:**
-- `text`: der Erzähltext, gleichzeitig der Untertitel. Mit `*Wort*` wird ein Wort hervorgehoben (gelb und unterstrichen).
-- `dauer`: Sekunden, optional. Sonst ergibt sie sich aus dem Audio bzw. der Textlänge.
-- `kamera`: `{ "von": {"zoom":1, "x":540, "y":960}, "bis": {...}, "kurve": "sanft|linear|raus|rein" }`. Die Welt ist 1080×1920 groß, x/y geben den Bildmittelpunkt an.
-- `hud`: `{ "tag": 4, "zeit": "10:07", "co2": 1.0 }`
-- Effekte: `partikel` (`staub|asche|schnee`), `wackeln` (0–2), `blitz`, `alarm`, `tint` + `tint_staerke`, `vignette`, `uebergang: "blende"`, `punch: false`
+## Stimme
 
-## Stimme erzeugen
-
-Pro Szene eine Audiodatei, egal ob ElevenLabs (z. B. über Shotstack), eine eigene Aufnahme oder etwas anderes. Den Text der Szene sprechen lassen und als `audio/<folge>/<NN>.mp3` speichern. Die Nummerierung beginnt bei 01.
+Pro Einstellung eine Audiodatei mit genau dem Text der Zeile, z. B. mit ElevenLabs über Shotstack, als eigene Aufnahme oder aus einem anderen TTS. Gespeichert als `audio/folge-01/001.mp3`, `002.mp3` … Die Nummer entspricht der Reihenfolge der `[…]`-Zeilen.

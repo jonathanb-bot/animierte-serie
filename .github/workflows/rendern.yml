@@ -1,4 +1,4 @@
-name: Folge rendern
+name: Folgen rendern
 
 on:
   push:
@@ -6,10 +6,12 @@ on:
       - "episoden/**"
       - "audio/**"
       - "musik/**"
+      - "engine/**"
+      - "figuren.json"
   workflow_dispatch:
     inputs:
       folge:
-        description: "Episoden-Datei, z.B. folge-01 (leer = alle)"
+        description: "z.B. folge-01 (leer = alle Folgen)"
         required: false
         default: ""
 
@@ -17,63 +19,62 @@ permissions:
   contents: write
 
 jobs:
-  rendern:
+  auswahl:
     runs-on: ubuntu-latest
-    timeout-minutes: 120
+    outputs:
+      liste: ${{ steps.w.outputs.liste }}
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 2
+      - id: w
+        run: |
+          if [ -n "${{ github.event.inputs.folge }}" ]; then
+            L="${{ github.event.inputs.folge }}"
+          elif [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            L=$(ls episoden/folge-*.txt | xargs -n1 basename | sed 's/\.txt$//')
+          else
+            G=$(git diff --name-only HEAD~1 HEAD || true)
+            if echo "$G" | grep -qE '^(engine/|figuren.json)'; then
+              L=$(ls episoden/folge-*.txt | xargs -n1 basename | sed 's/\.txt$//')
+            else
+              L=$(echo "$G" | grep -E '^episoden/folge-.*\.txt$' | xargs -r -n1 basename | sed 's/\.txt$//')
+              for d in $(echo "$G" | grep -E '^audio/' | cut -d/ -f2 | sort -u); do L="$L $d"; done
+            fi
+          fi
+          J=$(echo $L | tr ' ' '\n' | sort -u | grep . | jq -R . | jq -sc .)
+          echo "liste=$J" >> "$GITHUB_OUTPUT"
+          echo "Rendere: $J"
 
+  rendern:
+    needs: auswahl
+    if: needs.auswahl.outputs.liste != '[]' && needs.auswahl.outputs.liste != ''
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      max-parallel: 5
+      matrix:
+        folge: ${{ fromJson(needs.auswahl.outputs.liste) }}
+    steps:
+      - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-
       - name: Werkzeuge installieren
         run: |
           sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
           npm install --no-audit --no-fund
           npx playwright install --with-deps chromium
-
-      - name: Welche Folgen?
-        id: welche
-        run: |
-          if [ -n "${{ github.event.inputs.folge }}" ]; then
-            LISTE="episoden/${{ github.event.inputs.folge }}.json"
-          elif [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            LISTE=$(ls episoden/*.json)
-          else
-            GEAENDERT=$(git diff --name-only HEAD~1 HEAD || true)
-            LISTE=$(echo "$GEAENDERT" | grep -E '^episoden/.*\.json$' || true)
-            # Neue Audios -> zugehörige Folge neu rendern
-            for d in $(echo "$GEAENDERT" | grep -E '^audio/' | cut -d/ -f2 | sort -u); do
-              [ -f "episoden/$d.json" ] && LISTE="$LISTE episoden/$d.json"
-            done
-          fi
-          LISTE=$(echo $LISTE | tr ' ' '\n' | sort -u | tr '\n' ' ')
-          echo "liste=$LISTE" >> "$GITHUB_OUTPUT"
-          echo "Rendere: $LISTE"
-
       - name: Rendern
-        if: steps.welche.outputs.liste != ''
-        run: |
-          for f in ${{ steps.welche.outputs.liste }}; do
-            node render.mjs "$f"
-          done
-
-      - name: Als Download bereitstellen (Release)
-        if: steps.welche.outputs.liste != ''
+        run: node render.mjs "episoden/${{ matrix.folge }}.txt"
+      - name: Als Download bereitstellen
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          for f in ${{ steps.welche.outputs.liste }}; do
-            id=$(basename "$f" .json)
-            tag="$id-v${{ github.run_number }}"
-            gh release create "$tag" "ausgabe/$id.mp4" --title "$id (Version ${{ github.run_number }})" --notes "Automatisch gerendert aus $f"
-          done
-
+          tag="${{ matrix.folge }}-v${{ github.run_number }}"
+          gh release create "$tag" "ausgabe/${{ matrix.folge }}.mp4" --title "${{ matrix.folge }} (Version ${{ github.run_number }})" --notes "Automatisch gerendert."
       - uses: actions/upload-artifact@v4
-        if: steps.welche.outputs.liste != ''
         with:
-          name: videos
-          path: ausgabe/*.mp4
+          name: ${{ matrix.folge }}
+          path: ausgabe/${{ matrix.folge }}.mp4

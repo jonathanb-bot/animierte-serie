@@ -1,0 +1,85 @@
+# Folge 5: Wasserdiebe
+
+== Szene 1: Die Rechnung geht nicht auf ==
+@zeit morgen
+@hud tag=5 zeit=07:10 wasser=205/400L essen=7/10Tage akku=90/100%
+[bad fuell=0.42 du:denkt] Du gehst ins Bad und schaust dir die Wanne an. Dann die Flaschen. Dann rechnest du.
+[objekt objekte="wasserflasche:5 Personen|tropfen:10 Liter am Tag" gross="Soll"] Fünf Leute, zwei Liter pro Kopf. Zehn Liter am Tag.
+[objekt objekte="tropfen:Es fehlen 25 Liter" farbe="#4a1e1e"] Aber seit Kai da ist, fehlen jeden Tag *mehr*. Insgesamt fünfundzwanzig Liter.
+[gesicht du ort=bad wuetend zoom-rein] Fünfundzwanzig Liter verschwinden nicht von allein.
+[titel oben="Folge 5" gross="Wasserdiebe" unten="24. Stock" dauer=3]
+== Was bisher geschah ==
+[skyline nacht nah licht hud=false] Was bisher geschah: Ihr habt gesehen, wie ein beleuchtetes Haus von der Horde *überrannt* wurde.
+[objekt objekte="decke:Verdunkeln|kerze:Nur im Bad|taschenlampe:Nach unten" hud=false] Seitdem gelten strenge *Lichtregeln*.
+[gesicht kai ort=wohnung nacht licht=aus misstrauisch hud=false] Kai hat heimlich eine Evakuierung im Radio gehört. Und es *verschwiegen*.
+[gesicht mila ort=wohnung morgen besorgt hud=false] Und Mila hat gesehen, wie er *Wasser* in seinen Rucksack gesteckt hat.
+
+== Szene 2: Der Rucksack ==
+[wohnung du kai:huefte lena walter morgen licht=aus] Du stellst Kai zur Rede. Vor allen.
+[gesicht kai ort=wohnung morgen wuetend] „Spinnst du? Ich hab euch *Essen* gebracht!“
+[wohnung du:zeigt kai lena walter morgen licht=aus objekt=rucksack objekt_x=780 objekt_y=1380 objekt_s=0.45] Walter öffnet den Rucksack. Zehn volle Flaschen. Und eine Karte der Stadt.
+[gesicht kai ort=wohnung morgen traurig] Kai lässt die Schultern sinken. „Okay. Ich hab eine Durchsage gehört. *Evakuierung*. Am Stadion.“
+
+== Szene 3: Die Wahrheit ==
+[gesicht lena ort=wohnung morgen wuetend] „Und du wolltest alleine gehen? Mit *unserem* Wasser?“
+[gesicht kai ort=wohnung morgen besorgt] „Vier Kilometer. Mit einem Kind und einem alten Mann? Das schafft ihr *nie*.“
+[karte orte=haus,stadion,bruecke route="haus>bruecke>stadion" horden=bruecke,supermarkt] Und das Schlimme ist: Er hat nicht ganz unrecht. Die Brücke ist voll von *ihnen*.
+[gesicht walter ort=wohnung morgen denkt entschlossen] Walter sagt lange nichts. Dann: „Hubschrauber landen nicht nur an Stadien. Sie sehen auch *Dächer*.“
+
+== Szene 4: Abstimmung ==
+[wohnung du lena mila kai walter morgen licht=aus] Ihr stimmt ab. Kai rauswerfen? Oder bleiben lassen?
+[gesicht mila ort=wohnung morgen traurig] Mila sagt leise: „Wenn wir ihn rausschmeißen, sind wir wie *die* da draußen.“
+[gesicht du ort=wohnung morgen denkt] Das sitzt. Kai darf bleiben. Aber es gibt ab jetzt *Regeln*.
+
+== Szene 5: Rationen ==
+@hud zeit=10:00 wasser=230/400L
+[objekt objekte="schluessel:Wasser wird verschlossen" farbe="#2a3a4a"] Erstens: Das Trinkwasser kommt in einen Raum. Den Schlüssel hat *Walter*.
+[objekt objekte="wasserflasche:2 Liter|uhr:Pro Tag" gross="Ration"] Zweitens: Jeder bekommt seine Ration. Zwei Liter. Morgens ausgeteilt. Nicht mehr.
+[objekt objekte="medizin:Wasserbuch" farbe="#2a3a2a"] Drittens: Alles wird *aufgeschrieben*. Wer was nimmt, wann und wie viel.
+[gesicht walter ort=wohnung tag entschlossen] „Ein Strich auf Papier ist ehrlicher als jedes *Versprechen*.“
+
+== Szene 6: Das Problem mit der Wanne ==
+@hud zeit=13:00
+[bad fuell=0.4 lena:denkt] Dann entdeckt Lena etwas, das allen Angst macht.
+[gesicht lena ort=bad besorgt zoom-rein] Das Wasser in der Badewanne steht seit fünf Tagen. Offen. Staub. Haare. *Keime*.
+[objekt objekte="tropfen:Stehendes Wasser" farbe="#3a3a1e"] Stehendes Wasser wird mit der Zeit schlecht. Und Durchfall kann hier *tödlich* sein.
+[objekt objekte="kocher:Abkochen" gross="Lösung"] Die Lösung: abkochen. Sprudelnd kochen lassen. Mindestens *eine Minute*.
+[gesicht kai ort=wohnung tag froh] Kai hat einen kleinen *Gaskocher*. Zum ersten Mal ist er wirklich nützlich.
+[objekt objekte="kocher:Nur am Fenster|feuer:Lüften!" farbe="#4a2a1e"] Aber Gas in einer geschlossenen Wohnung ist gefährlich. Kochen nur am offenen Fenster. *Tagsüber*.
+
+== Szene 7: Zu wenig ==
+@hud tag=6 zeit=09:30 wasser=200/400L
+[wohnung du walter:denkt tag licht=aus] Trotz Rationen sinkt euer Wasser. Langsam. Aber *jeden* Tag.
+[objekt objekte="tropfen:20 Tage" gross="Noch übrig"] Zwanzig Tage. Wenn alles gut geht. Wenn keiner krank wird.
+[gesicht du ort=wohnung tag besorgt] Und was dann?
+
+== Szene 8: Walters Geheimnis ==
+[gesicht walter ort=wohnung tag denkt] Am Abend erzählt Walter von früher.
+[hochhaus etage=24 tag strom=false tank=0.6 zoom-raus] „Als ich hier angefangen hab, gab es oben auf dem Dach einen alten *Wassertank*.“
+[gesicht walter ort=wohnung abend entschlossen] „Seit Jahren nicht benutzt. Aber er ist noch da. Und er *fängt Regen*.“
+[gesicht du ort=wohnung abend froh zoom-rein] Ein Tank. Voller Wasser. Direkt über euren Köpfen.
+
+== Szene 9: Die Dachtür ==
+@zeit abend
+@hud zeit=18:40
+[treppenhaus etage=25 licht=aus du:taschenlampe kai walter] Der Weg aufs Dach: ein schmaler Aufgang über dem 24. Stock. Eine schwere Stahltür.
+[gesicht walter ort=treppenhaus licht=taschenlampe traurig] Abgeschlossen. Walters Schlüsselbund liegt irgendwo im *Erdgeschoss*.
+[objekt objekte="schluessel:Kein Schlüssel" durchgestrichen=schluessel farbe="#4a1e1e"] Unerreichbar.
+[gesicht kai ort=treppenhaus licht=taschenlampe froh] Kai grinst und zieht etwas aus seinem Rucksack. Ein *Brecheisen*.
+[treppenhaus etage=25 licht=aus du:taschenlampe kai:traegt wackeln=0.8] Das Schloss gibt nach. Zu laut. Ihr wartet. Aber unten bleibt alles *ruhig*.
+
+== Szene 10: Auf dem Dach ==
+@zeit abend
+[dach abend tank=0.6 tonnen=false zoom-rein] Die Tür schwingt auf. Kalter Wind. Der Himmel ist orange.
+[dach abend tank=0.6 tonnen=false du kai walter] Und da ist er. Der Tank. Groß wie ein *Auto*.
+[gesicht du ort=dach abend froh] Für einen Moment vergisst du alles.
+[dach abend tank=0.6 tonnen=false zombie3 pose=zombie zoom-rein] Bis du siehst, dass hinter dem Tank *jemand* steht.
+[gesicht du ort=dach abend schreck zoom-rein] Mit dem Rücken zu euch. Ganz still. Und er dreht sich *langsam* um.
+[titel gross="Fortsetzung folgt" oben="Folge 6: Auf dem Dach" farbe="#2a0d0b" dauer=3.5]
+
+
+== Überlebens-Check ==
+@hud aus
+[objekt objekte="kocher:Abkochen|uhr:1 Minute" gross="Überlebens-Check" farbe="#1e2f45"] Überlebens-Check! Wie machst du stehendes Wasser *sicherer*?
+[objekt objekte="kocher:Abkochen|uhr:1 Minute" gross="Die Antwort" farbe="#1e3a2a"] Sprudelnd abkochen. Mindestens *eine Minute* lang.
+[titel gross="Was hättest du|gemacht?" groesse=120 unten="Schreib es in die Kommentare" farbe="#1e2f45" dauer=3.5]

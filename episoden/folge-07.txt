@@ -1,0 +1,84 @@
+# Folge 7: Fieber
+
+== Szene 1: Die Nacht ==
+@zeit nacht
+@hud tag=9 zeit=23:40 wasser=310/400L essen=6/10Tage akku=70/100%
+[wohnung lena mila nacht licht=kerze vorhang=zu] Mila glüht. Lena wischt ihr mit einem feuchten Tuch über die Stirn.
+[gesicht lena ort=wohnung nacht licht=kerze besorgt] „Durchfall und Fieber. Sie verliert Wasser *schneller*, als sie trinken kann.“
+[gesicht du ort=wohnung nacht licht=kerze besorgt zoom-rein] Es ist nicht der Hunger, der Menschen in so einer Lage umbringt. Es ist *Wasser*. Zu wenig. Oder das *falsche*.
+[titel oben="Folge 7" gross="Fieber" unten="24. Stock" dauer=3]
+== Was bisher geschah ==
+[dach tank=0.55 tonnen=false walter:zeigt du hud=false] Was bisher geschah: Ihr habt auf dem Dach anderthalbtausend Liter *Wasser* gefunden.
+[dach abend tank=0.7 tonnen regen du:haende_hoch mila:froh hud=false] Ihr habt gelernt, Regen zu sammeln und Wasser *abzukochen*.
+[skyline abend heli hud=false] Ein Hubschrauber ist vorbeigeflogen. Ohne euch zu *sehen*.
+[gesicht mila ort=wohnung nacht licht=kerze traurig hud=false] Und Mila hat ungekochtes Tankwasser getrunken. Jetzt hat sie *hohes Fieber*.
+
+== Szene 2: Was Lena weiß ==
+[gesicht lena ort=wohnung nacht licht=kerze entschlossen] Lena ist Pflege-Azubi. Sie weiß, was jetzt zählt.
+[objekt objekte="wasserflasche:Viel trinken|tropfen:Salz + Zucker" gross="Sofort"] Erstens: trinken, trinken, trinken. Abgekocht. Mit etwas Salz und Zucker, damit der Körper es *hält*.
+[objekt objekte="medizin:Fiebermittel|tropfen:Elektrolyte" gross="Brauchen wir"] Zweitens: Sie braucht ein Fiebermittel für Kinder. Und Elektrolyte aus der *Apotheke*.
+[gesicht lena ort=wohnung nacht licht=kerze traurig] „Zwei Tage“, sagt Lena. „Wenn es nicht besser wird, dann … zwei Tage.“
+
+== Szene 3: Die Apotheke ==
+@zeit morgen
+@hud tag=10 zeit=06:30
+[strasse morgen horde=9 zoom-raus] Am Morgen schaut ihr vom Dach nach unten. Die Apotheke liegt direkt gegenüber. Vierzig Meter.
+[karte orte=haus,apotheke,supermarkt route="haus>apotheke" horden=supermarkt] Vierzig Meter. Aber dazwischen: die *Straße*.
+[strasse morgen horde=12 zoom-rein] Zwölf von ihnen, mindestens. Sie stehen einfach da. Und warten.
+[gesicht kai ort=dach morgen entschlossen] Kai sagt: „Ich geh. Ich kenn die Gegend. Ich war Fahrradkurier.“
+[gesicht du ort=dach morgen entschlossen] Und du sagst: „Ich komm mit.“
+
+== Szene 4: Der Weg nach unten ==
+[hochhaus etage=24 bis_etage=1 tag strom=false barrikade=20 zombies="3-12" horde=12] Das Problem ist nicht nur die Straße. Es sind die *vierundzwanzig Etagen* davor.
+[gesicht walter ort=wohnung morgen denkt] Walter kennt den Hinterausgang. „Kellertreppe, dann der Hof. Da kommen nur die *Mülltonnen* hin.“
+[objekt objekte="treppe:20 Etagen|uhr:Kein Aufzug" farbe="#2a3a4a"] Zwanzig Etagen runter. Zu Fuß. Leise. Mit unbekannten Fluren *in jeder Etage*.
+
+== Szene 5: Die Ablenkung ==
+[gesicht kai ort=wohnung morgen denkt] „Wir brauchen eine Ablenkung“, sagt Kai. „Etwas, das sie *weglockt*.“
+[objekt objekte="powerbank:Handy laden|wecker:Wecker stellen" gross="Der Plan"] Ihr ladet ein altes Handy mit der Powerbank. Stellt einen Alarm auf *vierzehn Uhr*. Volle Lautstärke.
+[dach morgen tank=0.7 tonnen kai:zeigt walter] Walter wirft es vom Dach. So weit wie möglich. Weg von der Apotheke. Ans andere Ende der Straße.
+[strasse tag horde=12 laerm_x=1000 zoom-raus] Um vierzehn Uhr klingelt es. Sie laufen hin. Und ihr habt *freie Bahn*.
+[gesicht lena ort=wohnung morgen besorgt] „Und wenn es nicht klappt?“ Keiner antwortet.
+
+== Szene 6: Abstieg ==
+@hud zeit=12:30
+[treppenhaus etage=20 licht=aus barrikade du:taschenlampe kai] Halb eins. Ihr klettert über die Barrikade. Ab hier ist *Niemandsland*.
+[treppenhaus etage=17 licht=aus du:taschenlampe kai:psst] Siebzehn. Sechzehn. Eure Schritte klingen viel zu laut.
+[hochhaus etage=14 tag strom=false zombies="3-12" zoom-rein] Fünfzehn. Vierzehn. Hinter einer Wohnungstür: *Kratzen*.
+[gesicht kai ort=treppenhaus licht=taschenlampe besorgt] Zwölf. Kais alte Etage. Er schaut nicht hin.
+[treppenhaus etage=12 licht=aus du:taschenlampe kai zombies] Die Tür zum Flur steht offen. Drinnen stehen sie. Drei. Mit dem Rücken zu euch.
+[gesicht du ort=treppenhaus licht=taschenlampe angst zoom-rein] Ihr schleicht vorbei. Stufe. Für. *Stufe*.
+
+== Szene 7: Erdgeschoss ==
+@hud zeit=13:35
+[treppenhaus etage=1 licht=aus du:taschenlampe kai] Erdgeschoss. Ihr habt es geschafft. Fünfundzwanzig Minuten bis zum Alarm.
+[gesicht kai ort=treppenhaus licht=taschenlampe froh] Kai flüstert: „Genug Zeit. Wir warten am Hinterausgang.“
+[objekt objekte="uhr:Warten" farbe="#2a2a3a"] Ihr sitzt im Dunkeln. Und wartet. Jede Minute fühlt sich an wie *zehn*.
+
+== Szene 8: Oben auf dem Dach ==
+@hud zeit=13:40
+[dach tag tank=0.7 tonnen walter:denkt] Oben auf dem Dach steht Walter mit dem Handy in der Hand.
+[gesicht walter ort=dach entschlossen] Er holt aus. Und wirft. *So weit er kann*.
+[skyline tag zoom-rein] Das Handy fliegt. Und fliegt. Aber der Wind ist stärker, als er dachte.
+[gesicht walter ort=dach schreck zoom-rein] Es dreht ab. *Zurück*. Richtung Straßenmitte.
+
+== Szene 9: Zu früh ==
+@hud zeit=13:44
+[gesicht du ort=treppenhaus licht=taschenlampe besorgt] Unten im Erdgeschoss schaust du auf die Uhr. Noch sechzehn Minuten.
+[strasse tag horde=12 zoom-raus] Draußen ist alles still.
+[strasse tag horde=12 laerm_x=150 wackeln=0.8 blitz] Dann klingelt es. *Jetzt*. Sechzehn Minuten zu früh.
+[gesicht kai ort=treppenhaus licht=taschenlampe schreck] Kai wird blass. „Ich hab den Alarm auf dreizehn Uhr vierundvierzig gestellt. Nicht vierzehn Uhr. Ich hab mich *vertippt*.“
+
+== Szene 10: Die falsche Richtung ==
+[strasse tag horde=14 laerm_x=150 zoom-rein] Und das ist noch nicht das Schlimmste.
+[strasse tag horde=16 laerm_x=150 schwenk-links] Das Handy ist nicht am Ende der Straße gelandet. Sondern direkt auf dem Vordach der *Apotheke*.
+[karte orte=haus,apotheke route="haus>apotheke" horden=apotheke] Jeder einzelne von ihnen läuft jetzt genau dorthin, wo ihr *hinmüsst*.
+[gesicht du ort=treppenhaus licht=taschenlampe schreck zoom-rein] Und oben im 24. Stock wird Milas Fieber immer *höher*.
+[titel gross="Fortsetzung folgt" oben="Folge 8: Die Apotheke" farbe="#2a0d0b" dauer=3.5]
+
+
+== Überlebens-Check ==
+@hud aus
+[objekt objekte="wecker:Alarm|uhr:Zeit" gross="Überlebens-Check" farbe="#1e2f45"] Überlebens-Check! Was hättest du an Kais Stelle *anders* gemacht?
+[objekt objekte="wecker:Alarm|uhr:Zeit" gross="Die Antwort" farbe="#1e3a2a"] Alarmzeit *doppelt* prüfen. Und nie mit dem Wind werfen.
+[titel gross="Was hättest du|gemacht?" groesse=120 unten="Schreib es in die Kommentare" farbe="#1e2f45" dauer=3.5]

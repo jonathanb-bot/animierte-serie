@@ -1,0 +1,91 @@
+# Folge 6: Auf dem Dach
+
+== Szene 1: Der Mann hinter dem Tank ==
+@zeit abend
+@hud tag=6 zeit=18:52 wasser=200/400L essen=7/10Tage akku=85/100%
+[dach abend tank=0.6 tonnen=false zombie3 zoom-rein] Er dreht sich um. Graue Haut. Milchige Augen. Ein Anzug, voller Flecken.
+[gesicht walter ort=dach abend traurig] Walter erkennt ihn. „Herr Brandt. Zweiundzwanzigster Stock. Hat hier oben immer *geraucht*.“
+[gesicht kai ort=dach abend wuetend] Kai hebt das Brecheisen. Aber Walter hält seinen Arm fest.
+[gesicht walter ort=dach abend entschlossen] „Kein Kampf. Jeder Kampf ist *Lärm*. Und Lärm holt die anderen.“
+[titel oben="Folge 6" gross="Auf dem Dach" unten="24. Stock" dauer=3]
+== Was bisher geschah ==
+[gesicht kai ort=wohnung morgen traurig hud=false] Was bisher geschah: Kai hat Wasser gestohlen. Er wollte allein zum *Stadion*.
+[objekt objekte="schluessel:Wasser verschlossen|wasserflasche:2 Liter pro Tag" hud=false] Seitdem wird das Wasser *rationiert*.
+[dach abend tank=0.6 tonnen=false zombie3 hud=false] Walter hat euch zum alten Tank auf dem Dach geführt. Aber da oben war *jemand*.
+
+== Szene 2: Die Falle ==
+[dach abend tank=0.6 tonnen=false zombie3 du lena:denkt] Neben dem Tank steht ein kleiner Betonbau. Der *Technikraum*. Die Tür ist offen.
+[gesicht lena ort=dach abend entschlossen] Lena flüstert: „Wir locken ihn da rein. Und machen die Tür zu.“
+[dach abend tank=0.6 tonnen=false zombie3 kai:zeigt laerm_x=300 laerm_y=1200] Kai klopft zweimal leise gegen die offene Stahltür. Dann tritt er *zur Seite*.
+[dach abend tank=0.6 tonnen=false zombie3 pose=zombie_geht wackeln=0.2] Herr Brandt dreht den Kopf. Langsam. Und schlurft auf das Geräusch zu.
+[gesicht du ort=dach abend angst zoom-rein] Ein Schritt. Noch einer. Er ist drin.
+[dach abend tank=0.6 tonnen=false du:traegt kai:traegt blitz wackeln=0.6] *Tür zu*. Kai rammt das Brecheisen unter die Klinke.
+[gesicht kai ort=dach abend froh] Von drinnen kommt ein dumpfes Kratzen. Aber die Tür *hält*.
+
+== Szene 3: Der Tank ==
+@zeit tag
+@hud tag=7 zeit=08:00
+[dach tank=0.55 tonnen=false walter:zeigt du zoom-raus] Am nächsten Morgen klettert Walter die Leiter am Tank hoch.
+[gesicht walter ort=dach froh] „Halb voll! Das sind locker *anderthalbtausend* Liter!“
+[objekt objekte="tropfen:1500 Liter" gross="Im Tank"] Anderthalbtausend Liter. Genug für Monate.
+[gesicht walter ort=dach besorgt] Dann schaut er genauer hin. „Aber *trinken* würde ich das so nicht.“
+[objekt objekte="tropfen:Algen, Staub, Vogeldreck" farbe="#3a3a1e"] Algen. Laub. Vogeldreck. Das Wasser steht seit Jahren.
+
+== Szene 4: Wasser sauber machen ==
+[wohnung du lena walter tag licht=aus objekt=topf objekt_x=900 objekt_y=1320] Lena zeigt euch, wie man Wasser *trinkbar* macht.
+[objekt objekte="decke:1. Filtern" gross="Schritt 1"] Erstens: durch ein sauberes Tuch oder einen Kaffeefilter gießen. Das holt den groben *Dreck* raus.
+[objekt objekte="kocher:2. Abkochen" gross="Schritt 2"] Zweitens: sprudelnd kochen lassen. Mindestens eine Minute. Das tötet die meisten *Keime*.
+[objekt objekte="wasserflasche:3. Sonne" gross="Wenn kein Gas"] Und wenn das Gas ausgeht? Klare Plastikflaschen. Sechs Stunden in die *pralle Sonne*.
+[gesicht lena ort=wohnung tag entschlossen] „Das UV-Licht der Sonne tötet viele Keime. Nicht perfekt. Aber besser als nichts.“
+[dach tank=0.55 tonnen=false du:traegt lena objekt=wasserflasche objekt_x=540 objekt_y=1480 objekt_s=0.35] Ab jetzt liegen auf dem Dach jeden Tag Flaschen in der Sonne.
+
+== Szene 5: Regen sammeln ==
+@hud zeit=13:20
+[gesicht kai ort=dach froh] Kai hat die nächste Idee. „Wenn der Tank Regen sammelt, können *wir* das auch.“
+[dach tank=0.55 tonnen kai:traegt du] Aus den leeren Wohnungen holt ihr Planen, Duschvorhänge und Regentonnen.
+[objekt objekte="plane:Plane|eimer:Tonne" gross="Regenfalle"] Die Plane wird schräg gespannt. In der Mitte ein Loch. Darunter: die *Tonne*.
+[gesicht walter ort=dach denkt] „Die ersten Liter bei jedem Regen wegkippen“, sagt Walter. „Die spülen den *Dreck* vom Dach.“
+
+== Szene 6: Der erste Regen ==
+@zeit abend
+@hud tag=8 zeit=17:10
+[dach abend tank=0.55 tonnen regen zoom-rein] Am achten Tag zieht ein Gewitter auf.
+[dach abend tank=0.6 tonnen regen du:haende_hoch mila:froh lena:froh] Und dann *regnet* es. Richtig. Stundenlang.
+[gesicht mila ort=dach abend froh] Mila steht mit ausgebreiteten Armen auf dem Dach und lacht.
+@hud wasser=320/400L
+[dach abend tank=0.7 tonnen regen walter:froh kai:froh] Die Tonnen laufen voll. Der Tank steigt. Zum ersten Mal habt ihr *genug*.
+
+== Szene 7: Das Geräusch am Himmel ==
+@zeit abend
+@hud tag=9 zeit=19:30
+[dach abend tank=0.7 tonnen du lena mila] Am Abend des neunten Tages hört ihr etwas, das ihr seit über einer Woche nicht gehört habt.
+[objekt objekte="ohr:Rotoren" farbe="#2a3a4a"] Ein Knattern. Rhythmisch. *Laut*.
+[dach abend tank=0.7 tonnen heli du:zeigt_hoch mila:winkt lena:winkt] Ein *Hubschrauber*! Er fliegt tief über die Dächer.
+
+== Szene 8: Vorbei ==
+[dach abend tank=0.7 tonnen heli du:winkt mila:winkt kai:winkt wackeln=0.3] Ihr springt. Ihr winkt. Ihr schreit.
+[skyline abend heli zoom-raus] Aber er dreht *nicht* ab. Er fliegt weiter Richtung Stadion.
+[gesicht du ort=dach abend traurig zoom-rein] Ihr seid nur ein Dach unter Tausenden. Ohne Zeichen. Ohne *Signal*.
+[gesicht walter ort=dach abend entschlossen] Walter sagt leise: „Nächstes Mal sehen sie uns. Dafür *sorgen* wir.“
+
+== Szene 9: Mila ==
+@zeit nacht
+@hud zeit=23:15
+[wohnung du lena mila nacht licht=kerze vorhang=zu] In dieser Nacht kann Mila nicht schlafen. Ihr ist *heiß*.
+[gesicht lena ort=wohnung nacht licht=kerze besorgt] Lena legt ihr die Hand auf die Stirn. Ihr Gesicht wird blass.
+[gesicht mila ort=wohnung nacht licht=kerze traurig] „Ich hatte so Durst“, flüstert Mila. „Ich hab vom Tank *getrunken*. Direkt. Bevor ihr es gekocht habt.“
+
+== Szene 10: Fieber ==
+[gesicht lena ort=wohnung nacht licht=kerze angst zoom-rein] Lena flüstert: „Ihr Fieber ist *hoch*. Und es steigt.“
+[objekt objekte="medizin:Kein Fiebermittel" durchgestrichen=medizin farbe="#4a1e1e"] Keine Medikamente. Keine Salze gegen den Wasserverlust. *Nichts*.
+[wohnung du lena mila walter kai nacht licht=kerze vorhang=zu] Ihr wisst alle, wo es Medikamente gibt.
+[strasse nacht horde=12 zoom-rein] Direkt gegenüber. Auf der anderen Straßenseite. Mitten *zwischen* ihnen.
+[gesicht du ort=wohnung nacht licht=kerze entschlossen zoom-rein] Und jemand muss dorthin.
+[titel gross="Fortsetzung folgt" oben="Folge 7: Fieber" farbe="#2a0d0b" dauer=3.5]
+
+
+== Überlebens-Check ==
+@hud aus
+[objekt objekte="plane:Erste Liter weg|kocher:Abkochen" gross="Überlebens-Check" farbe="#1e2f45"] Überlebens-Check! Was musst du bei Regenwasser vom Dach *beachten*?
+[objekt objekte="plane:Erste Liter weg|kocher:Abkochen" gross="Die Antwort" farbe="#1e3a2a"] Die ersten Liter wegkippen. Danach trotzdem *filtern und abkochen*.
+[titel gross="Was hättest du|gemacht?" groesse=120 unten="Schreib es in die Kommentare" farbe="#1e2f45" dauer=3.5]

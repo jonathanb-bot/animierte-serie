@@ -10,11 +10,15 @@ const ROOT = path.dirname(fileURLToPath(import.meta.url));
 const args = process.argv.slice(2);
 const opt = (n, d) => { const i = args.indexOf("--" + n); return i >= 0 ? args[i + 1] : d; };
 const flag = n => args.includes("--" + n);
-const datei = args.find(a => a.endsWith(".json"));
-if (!datei) { console.error("Bitte Episoden-Datei angeben, z.B. episoden/folge-01.json"); process.exit(1); }
+import { parse } from "./drehbuch.mjs";
+const datei = args.find(a => /\.(json|txt)$/.test(a));
+if (!datei) { console.error("Bitte Folge angeben, z.B. episoden/folge-01.txt"); process.exit(1); }
 
-const ep = JSON.parse(fs.readFileSync(datei, "utf8"));
-const id = path.basename(datei, ".json");
+const castDatei = path.join(ROOT, "figuren.json");
+const cast = fs.existsSync(castDatei) ? JSON.parse(fs.readFileSync(castDatei, "utf8")) : {};
+const ep = datei.endsWith(".txt") ? parse(fs.readFileSync(datei, "utf8"), cast) : { ...JSON.parse(fs.readFileSync(datei, "utf8")) };
+if (!datei.endsWith(".txt")) ep.figuren = { ...cast, ...(ep.figuren || {}) };
+const id = path.basename(datei).replace(/\.(json|txt)$/, "");
 const vorschau = flag("vorschau");
 const FPS = Number(opt("fps", vorschau ? 15 : ep.fps || 30));
 const W = 1080, H = 1920;
@@ -24,12 +28,12 @@ const dauerVon = f => Number(execFileSync("ffprobe", ["-v", "error", "-show_entr
 // ---------- Timing ----------
 let start = 0;
 const szenen = ep.szenen.map((s, i) => {
-  const nr = String(i + 1).padStart(2, "0");
-  const kandidaten = [s.audio, `audio/${id}/${nr}.mp3`, `audio/${id}/${nr}.wav`].filter(Boolean).map(p => path.join(ROOT, p));
+  const nr = String(i + 1).padStart(3, "0"), nr2 = String(i + 1).padStart(2, "0");
+  const kandidaten = [s.audio, `audio/${id}/${nr}.mp3`, `audio/${id}/${nr}.wav`, `audio/${id}/${nr2}.mp3`].filter(Boolean).map(p => path.join(ROOT, p));
   const audio = kandidaten.find(p => fs.existsSync(p));
-  const roh = (s.text || "").split(/\s+/).filter(Boolean);
-  const sprechDauer = audio ? dauerVon(audio) : roh.length * 0.36 + 0.4;
-  const dauer = s.dauer || (audio ? sprechDauer + 0.35 : Math.max(1.6, sprechDauer + 0.5));
+  const roh = (s.text || "").replace(/[„“"»«]/g, "").split(/\s+/).filter(Boolean);
+  const sprechDauer = audio ? dauerVon(audio) : roh.reduce((a, w) => a + 0.2 + w.replace(/\*/g, "").length * 0.035 + (/[.!?…]$/.test(w) ? 0.25 : /[,:;]$/.test(w) ? 0.12 : 0), 0);
+  const dauer = s.dauer || (audio ? sprechDauer + 0.35 : roh.length ? Math.max(2.0, sprechDauer + 0.55) : 3);
   // Wörter gleichmäßig nach Länge verteilen (Satzzeichen = kleine Pause)
   const gew = roh.map(w => w.replace(/\*/g, "").length + 3 + (/[.!?…]$/.test(w) ? 4 : /[,:;]$/.test(w) ? 2 : 0));
   const summe = gew.reduce((a, b) => a + b, 0) || 1;
@@ -58,9 +62,13 @@ if (flag("bilder")) {
   await page.goto("file://" + path.join(ROOT, "engine", "index.html"));
   await page.evaluate(async () => { await document.fonts.load("900 80px Titel"); await document.fonts.load("700 40px HUD"); });
   await page.evaluate(d => window.init(d), { W, H, dauer: gesamt, figuren: ep.figuren, untertitel_y: ep.untertitel_y, szenen });
+  const nur = opt("nur", null); // z.B. --nur 1-12
+  const [na, nb] = nur ? nur.split("-").map(Number) : [1, szenen.length];
+  fs.rmSync(dir, { recursive: true, force: true }); fs.mkdirSync(dir, { recursive: true });
   for (const [i, s] of szenen.entries()) {
+    if (i + 1 < na || i + 1 > (nb || na)) continue;
     await page.evaluate(t => window.zeichne(t), s.start + s.dauer * 0.6);
-    await page.screenshot({ path: path.join(dir, `${String(i + 1).padStart(2, "0")}.jpg`), type: "jpeg", quality: 85 });
+    await page.screenshot({ path: path.join(dir, `${String(i + 1).padStart(3, "0")}.jpg`), type: "jpeg", quality: 85 });
   }
   await browser.close();
   console.log("Bilder in", path.relative(ROOT, dir));
@@ -86,10 +94,10 @@ const tonDatei = path.join(tmp, "ton.wav");
     mix.push("[m]"); n += 2;
   }
   // Whoosh bei jedem Schnitt
-  const schnitte = szenen.slice(1).map(s => s.start);
+  const schnitte = szenen.slice(1).filter((s, i) => s.typ !== szenen[i].typ || s.whoosh).map(s => s.start);
   if (schnitte.length && ep.whoosh !== false) {
     inputs.push("-f", "lavfi", "-i", "anoisesrc=color=pink:amplitude=0.9:d=0.5");
-    filter.push(`[${n}:a]highpass=f=400,lowpass=f=3500,afade=t=in:d=0.18,afade=t=out:st=0.18:d=0.32,volume=0.22,asplit=${schnitte.length}${schnitte.map((_, i) => `[w${i}]`).join("")}`);
+    filter.push(`[${n}:a]highpass=f=400,lowpass=f=3500,afade=t=in:d=0.18,afade=t=out:st=0.18:d=0.32,volume=0.13,asplit=${schnitte.length}${schnitte.map((_, i) => `[w${i}]`).join("")}`);
     schnitte.forEach((t, i) => { const ms = Math.max(0, Math.round((t - 0.2) * 1000)); filter.push(`[w${i}]adelay=${ms}|${ms}[wd${i}]`); mix.push(`[wd${i}]`); });
     n++;
   }

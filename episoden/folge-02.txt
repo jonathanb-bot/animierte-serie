@@ -1,0 +1,96 @@
+# Folge 2: Kein Druck
+
+== Szene 1: Wer ist da? ==
+@zeit nacht
+@hud tag=1 zeit=23:59 wasser=150/200L essen=6/10Tage akku=80/100%
+[treppenhaus etage=24 licht=aus klopfen wackeln=0.6] Das Hämmern an deiner Tür wird lauter.
+[gesicht du ort=wohnung nacht licht=taschenlampe angst] Dann eine Stimme. Eine Frauenstimme. Flüsternd.
+[gesicht lena ort=treppenhaus angst] „Bitte! Mach auf! Ich hab meine kleine Schwester dabei!“
+[gesicht walter ort=wohnung nacht licht=kerze misstrauisch] Walter schüttelt den Kopf. „Wir wissen nicht, ob sie gebissen wurden.“
+[gesicht du ort=wohnung nacht licht=taschenlampe besorgt zoom-rein] Aber das Klopfen ist *laut*. Und Lärm lockt sie an.
+[titel oben="Folge 2" gross="Kein Druck" unten="24. Stock" dauer=3]
+== Was bisher geschah ==
+[skyline tag zoom-rein rauch hud=false] Was bisher geschah: Die Zombie-Apokalypse bricht aus. Du wohnst im *24. Stock*.
+[strasse tag alarm horde=8 laerm_x=250 hud=false] Du hast gelernt: Sie reagieren auf *Lärm*.
+[bad fuell=0.1 fuell_bis=0.7 du hud=false] Du hast die Badewanne gefüllt, *bevor* der Strom ausfiel.
+[gesicht walter ort=wohnung tag froh hud=false] Du hast Walter kennengelernt. Den alten Hausmeister.
+[treppenhaus etage=24 licht=aus klopfen hud=false] Und um Mitternacht hat jemand an deine Tür *gehämmert*.
+
+== Szene 2: Die Kontrolle ==
+@hud tag=2 zeit=00:01
+[treppenhaus etage=24 licht=aus du:taschenlampe lena:angst mila:angst] Du öffnest die Tür einen Spalt. Taschenlampe ins Gesicht.
+[gesicht du ort=treppenhaus licht=taschenlampe entschlossen] „Ärmel hoch. Beide. Zeigt mir eure Arme und Hälse.“
+[treppenhaus etage=24 licht=aus du:taschenlampe lena:haende_hoch mila:haende_hoch] Lena zeigt ihre Arme. Mila auch. Keine Bisse. Keine Kratzer.
+[gesicht lena ort=treppenhaus traurig] „Wir wohnen im dreiundzwanzigsten. Unser Wasser war schon vor einer Stunde weg.“
+[wohnung du lena mila walter nacht licht=kerze vorhang=zu] Ihr seid jetzt zu viert. Und vier Leute brauchen *viel* mehr Wasser.
+
+== Szene 3: Wie viel Wasser braucht ein Mensch? ==
+@hud zeit=08:10
+[wohnung du:denkt walter morgen licht=aus] Am Morgen setzt ihr euch zusammen und rechnet.
+[objekt objekte="wasserflasche:2 Liter pro Tag" gross="Pro Person"] Zum Trinken und Kochen braucht ein Mensch ungefähr *zwei Liter* am Tag.
+[objekt objekte="herz:3 Tage ohne Wasser" farbe="#4a1e24"] Ohne Wasser überlebst du nur wenige Tage. Ohne Essen *Wochen*.
+[objekt objekte="wasserflasche:4 Personen|tropfen:8 Liter am Tag"] Ihr seid vier. Das heißt: *acht Liter* jeden Tag. Nur fürs Überleben.
+[bad fuell=0.72 du lena liter=150] In der Badewanne sind etwa hundert Liter. Dazu die Töpfe und Flaschen.
+[gesicht lena ort=bad besorgt] „Das reicht keine drei Wochen. Und wir haben uns noch nicht *gewaschen*.“
+
+== Szene 4: Versteckte Wasserreserven ==
+[gesicht walter ort=wohnung morgen froh] Walter lächelt. „In jeder Wohnung gibt es Wasser, das keiner sieht.“
+[objekt objekte="boiler:Boiler" gross="Versteck 1"] Erstens: der *Warmwasserspeicher*. Oft achtzig Liter oder mehr.
+[bad du:zeigt walter objekt=boiler objekt_x=180 objekt_y=900 objekt_s=0.7] Unten ist ein Ablasshahn. Ihr füllt alles ab, solange es noch warm ist.
+[objekt objekte="spuelkasten:Spülkasten" gross="Versteck 2"] Zweitens: der *Spülkasten* der Toilette. Sieben bis neun Liter. Sauberes Leitungswasser.
+[objekt objekte="wasserflasche:Leitung" gross="Versteck 3"] Drittens: Die Leitungen selbst. Unten in der Wohnung kann noch Wasser in den Rohren stehen.
+[gesicht walter ort=wohnung morgen wuetend] „Aber niemals das Wasser aus der *Heizung* trinken. Da sind Chemikalien drin.“
+[objekt objekte="feuer:Heizungswasser" durchgestrichen=feuer farbe="#4a1e1e"] Heizungswasser ist tabu. Egal wie durstig ihr seid.
+
+== Szene 5: Die Wohnungen der anderen ==
+@hud zeit=11:30
+[hochhaus etage=24 bis_etage=21 tag strom=false wasser=weg druck=6] Und dann gibt es noch die Wohnungen auf deiner Etage. Und darunter.
+[treppenhaus etage=23 licht=aus du:taschenlampe walter] Viele Nachbarn sind geflohen. Ihre Wohnungen stehen leer.
+[gesicht du ort=treppenhaus licht=taschenlampe besorgt] Jeder Spülkasten. Jeder Boiler. Jede volle Flasche im Kühlschrank.
+@hud wasser=290/400L
+[objekt objekte="boiler:4 Boiler|spuelkasten:6 Spülkästen|wasserflasche:31 Flaschen" gross="Ausbeute"] Am Abend habt ihr fast *dreihundert* Liter.
+[wohnung du:froh lena:froh mila:froh walter tag licht=aus vorraete=8] Zum ersten Mal seit gestern fühlt ihr euch ein bisschen sicher.
+
+== Szene 6: Die Toilette ==
+@hud zeit=15:00
+[gesicht mila ort=bad schreck] Dann muss Mila aufs Klo. Und keiner hat daran gedacht.
+[bad fuell=0.72 mila:denkt] Ohne Wasserdruck kannst du nicht spülen. Und Trinkwasser in die Toilette kippen? Viel zu wertvoll.
+[objekt objekte="eimer:Eimer|muell:Müllbeutel" gross="Notklo"] Die Lösung: Eimer, Müllbeutel, gut verschließen. Klingt eklig. *Ist* es auch.
+[gesicht lena ort=bad entschlossen] „Hygiene ist kein Luxus. Wenn hier einer krank wird, haben wir *keinen* Arzt.“
+[objekt objekte="medizin:Sauber bleiben" farbe="#1f3a2f"] Hände waschen mit wenig Wasser. Abfall weit weg. Das schützt vor Krankheiten.
+
+== Szene 7: Der Kühlschrank ==
+@hud zeit=17:20 essen=7/10Tage
+[wohnung du lena tag licht=aus vorraete=8] Euer Kühlschrank ist warm. Was darin ist, verdirbt jetzt schnell.
+[objekt objekte="essen:Erst Frisches|dose:Dann Dosen" gross="Reihenfolge"] Also esst ihr zuerst alles Frische. Die Dosen kommen *zuletzt*.
+[wohnung du lena mila:froh walter abend licht=aus vorraete=8 zoom-rein] Ihr esst kalte Nudeln. Für Mila ist es fast wie ein Picknick.
+
+== Szene 8: Die erste Nacht zu viert ==
+@zeit nacht
+@hud zeit=21:40
+[skyline nacht zoom-rein] Die Stadt ist komplett dunkel. Nur vereinzelt brennen noch Feuer.
+[wohnung du lena mila walter nacht licht=kerze vorhang=zu] Ihr flüstert nur noch. Gewöhnt euch an die Stille.
+[gesicht mila ort=wohnung nacht licht=kerze traurig] „Kommt Mama morgen?“, fragt Mila.
+[gesicht lena ort=wohnung nacht licht=kerze traurig] Lena antwortet nicht. Sie streicht ihr nur über den Kopf.
+
+== Szene 9: Ein Geräusch ==
+@hud zeit=02:17
+[wohnung du nacht licht=aus vorhang=zu] Mitten in der Nacht wachst du auf.
+[gesicht mila ort=wohnung nacht licht=taschenlampe angst] Mila steht an der Tür. Sie zittert. „Da ist was im *Treppenhaus*.“
+[treppenhaus etage=24 licht=aus du:lauscht] Du legst dein Ohr an die Tür. Erst nichts. Dann …
+[treppenhaus etage=21 licht=aus zombies=false wackeln=0.3] Ein Schlurfen. Langsam. Gleichmäßig. Und ein *Stöhnen*.
+[gesicht du ort=treppenhaus licht=taschenlampe schreck] Du erinnerst dich an das Hämmern von gestern Nacht.
+
+== Szene 10: Es kommt näher ==
+[hochhaus etage=15 bis_etage=22 nacht strom=false zombies="10-21"] Das Klopfen hat sie *angelockt*. Etage für Etage sind sie dem Lärm gefolgt.
+[gesicht walter ort=wohnung nacht licht=kerze besorgt] Walter flüstert: „Sie sind langsam auf Treppen. Aber sie hören *nicht* auf.“
+[treppenhaus etage=22 licht=aus zombies klopfen] Einundzwanzig. Zweiundzwanzig.
+[gesicht du ort=treppenhaus licht=taschenlampe entschlossen zoom-rein] Und eure Tür ist das *Einzige*, was zwischen euch und ihnen steht.
+[titel gross="Fortsetzung folgt" oben="Folge 3: Das Treppenhaus" farbe="#2a0d0b" dauer=3.5]
+
+
+== Überlebens-Check ==
+@hud aus
+[objekt objekte="boiler:Boiler|spuelkasten:Spülkasten|wasserflasche:Leitung" gross="Überlebens-Check" farbe="#1e2f45"] Überlebens-Check! Wo findest du in deiner Wohnung *versteckt* Wasser?
+[objekt objekte="boiler:Boiler|spuelkasten:Spülkasten|wasserflasche:Leitung" gross="Die Antwort" farbe="#1e3a2a"] Boiler, Spülkasten und die Leitungen. Aber *niemals* Heizungswasser.
+[titel gross="Was hättest du|gemacht?" groesse=120 unten="Schreib es in die Kommentare" farbe="#1e2f45" dauer=3.5]

@@ -1,9 +1,10 @@
 # Hinweise für Claude
 
-- Projekt: animierte Story-Serie für Jonathan. Format und Felder stehen in README.md.
-- Neue Folge: `episoden/folge-XX.json` schreiben, Ziel ca. 5 Minuten (rund 60–80 Szenen à 3–6 s). Mit Cliffhanger enden. Szenentypen abwechseln, alle 3–5 s ein Schnitt. Schlüsselwörter mit `*…*` markieren.
-- Vor dem Push prüfen: `node render.mjs <datei> --bilder` und die Standbilder ansehen.
-- Stimme: pro Szene `audio/<folge>/NN.mp3` (ElevenLabs via Shotstack `generate_asset`, vorher Kosten nennen).
-- Push auf main → GitHub Actions rendert → Video als Release.
-- Figuren immer gleich halten: Figuren-Definitionen von Folge zu Folge kopieren.
+- Projekt: animierte Serie „24. Stock“ (Zombie-Apokalypse im Hochhaus) für Jonathan. Format und Felder stehen in README.md, die Handlung in serienplan.md.
+- Stil: **clean** Flat-Vektor, keine Konturen, weiche Schattierung. Jonathan legt großen Wert darauf, dass es sauber aussieht.
+- Folgen sind `episoden/folge-XX.txt` (Drehbuch-Format). Ziel ca. 5 Minuten, 10 Kapitel, ~50–65 Einstellungen. Du-Erzählung, Cliffhanger am Ende, danach „Überlebens-Check“.
+- Vor jedem Push: `node render.mjs <datei> --bilder` und die Standbilder ansehen.
+- Figuren nur in `figuren.json` ändern, dann bleiben sie in allen Folgen gleich.
+- Stimme: `audio/folge-XX/NNN.mp3` pro Einstellung (ElevenLabs via Shotstack, vorher Kosten nennen).
+- Push → GitHub Actions rendert (Matrix, max. 5 parallel) → Releases.
 - Sprache: Deutsch.

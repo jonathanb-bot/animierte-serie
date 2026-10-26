@@ -1,0 +1,92 @@
+# Folge 4: Licht aus
+
+== Szene 1: Der Fremde ==
+@zeit nacht
+@hud tag=2 zeit=23:42 wasser=280/400L essen=6/10Tage akku=60/100%
+[treppenhaus etage=20 licht=aus barrikade du:taschenlampe walter] Hinter der Barrikade wartet ein Mann. Allein.
+[gesicht kai ort=treppenhaus licht=taschenlampe angst] „Ich heiße Kai. Zwölfter Stock. Meine Etage ist *voll* von denen.“
+[gesicht walter ort=treppenhaus licht=taschenlampe misstrauisch] Walter flüstert: „Wenn wir ihn reinlassen, müssen wir ihn auch *durchfüttern*.“
+[gesicht kai ort=treppenhaus licht=taschenlampe besorgt] „Ich hab Konserven. Eine Powerbank. Und ein *Kurbelradio*.“
+[titel oben="Folge 4" gross="Licht aus" unten="24. Stock" dauer=3]
+== Was bisher geschah ==
+[treppenhaus etage=20 licht=aus barrikade du walter hud=false] Was bisher geschah: Ihr habt eine Barrikade im *20. Stock* gebaut.
+[hochhaus etage=10 bis_etage=4 tag strom=false aufzug=14 zombies="1-12" laerm_x=140 hud=false] Ein Wecker im Aufzugschacht hat die Zombies nach *unten* gelockt.
+[gesicht kai ort=treppenhaus licht=taschenlampe angst hud=false] Und hinter der Barrikade stand plötzlich ein Fremder. *Kai*.
+
+== Szene 2: Über die Barrikade ==
+[treppenhaus etage=20 licht=aus barrikade du:taschenlampe kai:haende_hoch] Ihr macht die Barrikade nicht auf. Kai muss *drüberklettern*. Ganz oben, am Geländer.
+[gesicht du ort=treppenhaus licht=taschenlampe entschlossen] „Erst die Arme. Dann den Hals. Dann die Beine.“
+[treppenhaus etage=20 licht=aus barrikade du:taschenlampe kai:haende_hoch walter] Keine Bisse. Nur ein Kratzer an der Hand. Von *Glas*, sagt er.
+[gesicht lena ort=treppenhaus licht=taschenlampe besorgt] Lena schaut sich den Kratzer genau an. Sauber. Kein Fieber. Sie *glaubt* ihm.
+[wohnung du lena mila kai walter nacht licht=kerze vorhang=zu] Ihr seid jetzt zu fünft.
+@hud essen=9/10Tage akku=100/100%
+
+== Szene 3: Das Radio ==
+@hud tag=3 zeit=08:20
+[objekt objekte="funkgeraet:Kurbelradio" farbe="#2a3a2a"] Kais Kurbelradio braucht keinen Strom. Eine Minute kurbeln, ein paar Minuten *Empfang*.
+[wohnung du lena kai:denkt walter tag licht=aus] Ihr dreht stundenlang an den Sendern. Fast überall nur Rauschen.
+[gesicht kai ort=wohnung tag besorgt] Dann eine automatische Durchsage: „Bleiben Sie zu Hause. Verdunkeln Sie Ihre Fenster.“
+[gesicht du ort=wohnung tag denkt misstrauisch] *Verdunkeln*. Warum ausgerechnet das?
+
+== Szene 4: Das Haus gegenüber ==
+@zeit abend
+@hud zeit=20:30
+[skyline abend zoom-rein] Am Abend seht ihr die Antwort. Im Hochhaus gegenüber, fünfzehnter Stock.
+[skyline nacht licht nah] Dort brennt *Licht*. Hell. Mit einem Generator.
+[gesicht walter ort=wohnung nacht besorgt] „Die Idioten. Den Generator hört man drei Straßen weit.“
+[strasse nacht horde=10 laerm_x=540 zoom-raus] Und unten auf der Straße passiert etwas. Sie *sammeln* sich. Dutzende.
+[strasse nacht horde=14 laerm_x=540 zoom-rein] Sie starren nach oben. Zum Licht. Zum Lärm.
+
+== Szene 5: Die Nacht gegenüber ==
+@hud zeit=23:05
+[skyline nacht licht wackeln=0.3] Gegen Mitternacht hört ihr Glas zersplittern. Schreie.
+[gesicht mila ort=wohnung nacht angst] Lena hält Mila die Ohren zu.
+[skyline nacht nah] Dann geht das Licht gegenüber aus. Und es wird *still*.
+[gesicht du ort=wohnung nacht licht=aus traurig zoom-rein] Ihr sagt kein Wort. Aber ihr wisst alle, was das bedeutet.
+
+== Szene 6: Die Lichtregeln ==
+@zeit nacht
+@hud tag=4 zeit=07:30
+[wohnung du walter lena morgen licht=aus] Am nächsten Morgen macht ihr *Regeln*. Für jede Nacht.
+[objekt objekte="decke:Verdunkeln" gross="Regel 1"] Erstens: Alle Fenster verdunkeln. Dicke Decken, Alufolie, *keine* Lücke.
+[wohnung du:traegt lena morgen vorhang=schliesst licht=aus] Ihr klebt die Ränder ab. Von außen soll eure Wohnung aussehen wie alle anderen. *Tot*.
+[objekt objekte="kerze:Nur ohne Fenster" gross="Regel 2"] Zweitens: Kerzen nur in Räumen *ohne* Fenster. Im Bad. Im Flur.
+[objekt objekte="taschenlampe:Nach unten" gross="Regel 3"] Drittens: Taschenlampen immer *nach unten* richten. Nie zum Fenster.
+[objekt objekte="powerbank:Bildschirm dunkel" gross="Regel 4"] Und viertens: Handys auf dunkelste Helligkeit. Ein Display leuchtet weiter, als du denkst.
+
+== Szene 7: Feuer ==
+[gesicht walter ort=bad wuetend] Walter ist bei einer Sache *besonders* streng.
+[objekt objekte="feuer:Brandgefahr" farbe="#4a2a1e"] Eine umgefallene Kerze. In einem Hochhaus. *Ohne* Feuerwehr.
+[gesicht walter ort=bad entschlossen] „Wenn es hier brennt, brennen wir. Kerze nie unbeaufsichtigt. Immer feste Unterlage.“
+[bad licht=kerze fuell=0.55 walter:zeigt objekt=eimer objekt_x=900 objekt_y=1560] Daneben steht immer ein Eimer. Gefüllt mit *gebrauchtem* Wasser. Nur für den Notfall.
+
+== Szene 8: Leben im Dunkeln ==
+@zeit abend
+@hud zeit=19:00 wasser=250/400L
+[wohnung du lena mila kai walter abend licht=aus vorhang=zu] Die Tage werden ruhiger. Ihr gewöhnt euch an die Dunkelheit.
+[gesicht kai ort=wohnung abend froh] Kai erzählt Witze. Leise. Selbst Walter muss manchmal lachen.
+[bad licht=kerze fuell=0.55 lena mila:froh] Lena bringt Mila im Kerzenlicht Kartenspiele bei.
+[gesicht du ort=wohnung abend denkt besorgt] Aber du merkst etwas. Kai kurbelt das Radio immer, wenn er glaubt, dass ihr *schlaft*.
+
+== Szene 9: Die Durchsage ==
+@zeit nacht
+@hud zeit=02:40
+[wohnung kai:lauscht nacht licht=aus vorhang=zu objekt=funkgeraet objekt_x=760 objekt_y=1300 objekt_s=0.4] In der vierten Nacht hörst du ihn flüstern. Er hält das Radio ans Ohr.
+[objekt objekte="funkgeraet:Evakuierung" farbe="#1e3a2a"] Eine neue Durchsage. „Evakuierung per Hubschrauber. In *sieben Tagen*. Am Stadion.“
+[karte orte=haus,stadion,bruecke route="haus>bruecke>stadion" horden=bruecke,supermarkt] Das Stadion ist vier Kilometer entfernt. Quer durch die Stadt. Über die *Brücke*.
+[gesicht kai ort=wohnung nacht licht=aus misstrauisch zoom-rein] Kai schaltet das Radio aus. Er erzählt *niemandem* davon.
+
+== Szene 10: Was Mila gesehen hat ==
+@zeit morgen
+@hud tag=5 zeit=06:50
+[wohnung du mila morgen licht=aus] Am Morgen zupft Mila an deinem Ärmel.
+[gesicht mila ort=wohnung morgen besorgt] „Du“, flüstert sie. „Kai hat heute Nacht *Wasserflaschen* in seinen Rucksack gesteckt.“
+[gesicht du ort=wohnung morgen schreck zoom-rein] Und plötzlich ist der gefährlichste Mensch in eurer Wohnung vielleicht *keiner* von denen da draußen.
+[titel gross="Fortsetzung folgt" oben="Folge 5: Wasserdiebe" farbe="#2a0d0b" dauer=3.5]
+
+
+== Überlebens-Check ==
+@hud aus
+[objekt objekte="kerze:Kerze|powerbank:Display|auge:Licht" gross="Überlebens-Check" farbe="#1e2f45"] Überlebens-Check! Was verrät dich nachts am *schnellsten*?
+[objekt objekte="kerze:Kerze|powerbank:Display|auge:Licht" gross="Die Antwort" farbe="#1e3a2a"] Jedes Licht. Auch ein Handy-Display. Von oben sieht man es *kilometerweit*.
+[titel gross="Was hättest du|gemacht?" groesse=120 unten="Schreib es in die Kommentare" farbe="#1e2f45" dauer=3.5]
