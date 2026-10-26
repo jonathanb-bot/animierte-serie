@@ -1,0 +1,66 @@
+# Vorlage für eine Folge von „24. Stock“. Kopieren nach folgen/folge-XX/ton.yaml und ausfüllen.
+# Format: docs/ton-drehbuch.md
+titel: "24. Stock – Folge X: <Titel>"
+video: folge-XX.mp4
+
+sprecher:
+  erzaehler:
+    stimme: de-DE-FlorianMultilingualNeural
+  nachbarin:
+    stimme: de-DE-SeraphinaMultilingualNeural
+    pan: -0.15
+
+kapitel:
+  - titel: Vorspann
+    musik: titel
+    ort: trocken
+    ablauf:
+      - pause: 3.2                 # Titelschlag fällt bei Sekunde 3
+      - erzaehler: "Vierundzwanzigster Stock."
+        emotion: dramatisch
+      - erzaehler: "Folge X. <Titel>."
+        emotion: spannend
+
+  - titel: Was bisher geschah
+    musik: rueckblick
+    ort: trocken
+    ablauf:
+      - sfx: whoosh
+      - erzaehler: "Was bisher geschah …"
+        emotion: erzaehlend
+
+  # --- Kapitel 1 bis 10 ---
+  - titel: "Kapitel 1: <…>"
+    musik: tag                     # tag / erklaeren / abend / nacht / spannung / action / traurig / hoffnung
+    ort: wohnung
+    atmo: [stadt_fern]
+    ablauf:
+      - erzaehler: "…"
+        emotion: erzaehlend
+
+  - titel: Cliffhanger
+    musik: cliffhanger
+    ort: draussen
+    atmo: [wind]
+    ablauf:
+      - erzaehler: "…"
+        emotion: spannend
+      - hoehepunkt: true
+      - pause: 3.5
+
+  - titel: Überlebens-Check
+    musik: outro
+    ort: trocken
+    ablauf:
+      - sfx: whoosh
+      - erzaehler: "Überlebens-Check!"
+        emotion: froh
+      - sfx: ui_pop
+      - erzaehler: "Was denkst du: Was passiert als Nächstes?"
+        emotion: fragend
+      - erzaehler: "Und wie würdest du in dieser Situation reagieren? A: … B: … Oder C: …"
+        emotion: erklaerend
+      - sfx: ui_ding
+      - erzaehler: "Schreib's in die Kommentare. Wir sehen uns in Folge X plus eins."
+        emotion: cool
+      - pause: 1.5

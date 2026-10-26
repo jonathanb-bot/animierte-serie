@@ -1,0 +1,126 @@
+# Hörprobe für die Ton-Pipeline – zeigt Stimmen, Emotionen, Räume, Geräusche, Musik.
+# Bauen:  python -m ton folgen/demo/ton.yaml
+titel: "24. Stock – Hörprobe"
+
+sprecher:
+  erzaehler:
+    stimme: de-DE-FlorianMultilingualNeural
+  nachbarin:
+    stimme: de-DE-SeraphinaMultilingualNeural
+    pan: -0.15
+  durchsage:
+    stimme: de-DE-KillianNeural
+    tempo: -4
+    hoehe: -3
+
+kapitel:
+  - titel: Vorspann
+    musik: titel
+    ort: trocken
+    dauer: 9
+    ablauf:
+      - pause: 3.2
+      - erzaehler: "Vierundzwanzigster Stock."
+        emotion: dramatisch
+      - pause: 0.4
+      - erzaehler: "Folge eins. Der Tag, an dem der Strom ging."
+        emotion: spannend
+
+  - titel: Stromausfall
+    musik: abend
+    ort: wohnung
+    atmo: [stadt_fern, kuehlschrank]
+    ablauf:
+      - erzaehler: "Es ist Dienstagabend. Du sitzt in deiner Wohnung, ganz oben, mit Blick über die ganze Stadt."
+        emotion: ruhig
+      - erzaehler: "Und dann... wird es still."
+        emotion: spannend
+      - sfx: stromausfall
+        warten: true
+      - atmo_stop: kuehlschrank
+      - pause: 0.6
+      - erzaehler: "Kein Kühlschrank. Kein Licht. Kein Netz."
+        emotion: ernst
+      - sfx: kein_netz
+        warten: true
+      - sfx: taschenlampe
+      - atmo: kerze_knistern
+        pegel: -4
+
+  - titel: Wasser
+    musik: spannung
+    ort: bad
+    atmo: [stille_raum]
+    ablauf:
+      - erzaehler: "Dein erster Gedanke sollte nicht dem Handy gelten. Sondern dem Wasser."
+        emotion: erklaerend
+      - sfx: wasserhahn
+        dauer: 2.5
+      - erzaehler: "Denn im vierundzwanzigsten Stock kommt das Wasser nur mit Pumpen an. Und die brauchen Strom."
+        emotion: erklaerend
+      - sfx: wasser_stockt
+        warten: true
+      - erzaehler: "Genau so klingt es, wenn dir die Zeit davonläuft."
+        emotion: ernst
+      - sfx: ui_ding
+      - erzaehler: "Also: Badewanne zu. Und volllaufen lassen, solange noch etwas kommt!"
+        emotion: aufgeregt
+      - sfx: badewanne
+        dauer: 5
+
+  - titel: Treppenhaus
+    musik: nacht
+    ort: treppenhaus
+    atmo: [treppenhaus_atmo]
+    ablauf:
+      - sfx: treppenhaus_tuer
+        warten: true
+      - sfx: schritte
+        dauer: 4
+        pegel: -3
+        versatz: 0.5
+      - nachbarin: "Hallo? Ist da oben noch jemand?"
+        emotion: fragend
+      - nachbarin: "Ich bin's, aus dem dreiundzwanzigsten! Unten im Eingang... da ist irgendwas!"
+        emotion: panisch
+      - sfx: zombie
+        pegel: -6
+        versatz: 0.3
+        ort: treppenhaus
+      - erzaehler: "Das Treppenhaus ist wie ein riesiger Trichter. Jedes Geräusch wandert nach oben. Und nach unten."
+        emotion: leise
+        ort: trocken
+
+  - titel: Cliffhanger
+    musik: cliffhanger
+    ort: draussen
+    atmo: [{name: zombie_horde, pegel: -4, parameter: {entfernung: 0.8}}, wind]
+    ablauf:
+      - sfx: autoalarm
+        dauer: 5
+        pegel: -6
+        parameter: {entfernung: 0.85}
+      - erzaehler: "Und dann geht unten auf der Straße eine Alarmanlage los."
+        emotion: dramatisch
+      - pause: 1.2
+      - erzaehler: "Und alles, was da unten ist... dreht sich um."
+        emotion: spannend
+      - hoehepunkt: true      # hier knallt der Cliffhanger-Schlag
+      - pause: 3.5
+
+  - titel: Überlebens-Check
+    musik: outro
+    ort: trocken
+    ablauf:
+      - sfx: whoosh
+      - erzaehler: "Überlebens-Check!"
+        emotion: froh
+      - sfx: ui_pop
+      - erzaehler: "Was denkst du: Was passiert als Nächstes?"
+        emotion: fragend
+      - erzaehler: "Und wie würdest du reagieren? A: Licht aus und ganz still bleiben. B: Die Nachbarin reinholen. Oder C: Erst mal Wasser sichern."
+        emotion: erklaerend
+      - sfx: ui_ding
+      - erzaehler: "Schreib's in die Kommentare. Und denk dran: Im vierundzwanzigsten Stock zählt jeder Liter."
+        emotion: cool
+      - pause: 1.5
