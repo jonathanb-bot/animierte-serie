@@ -1,0 +1,13 @@
+{
+  "name": "animierte-serie",
+  "private": true,
+  "type": "module",
+  "description": "Animierte Story-Serie: Episoden als JSON, automatisch gerendert",
+  "scripts": {
+    "render": "node render.mjs",
+    "bilder": "node render.mjs --bilder"
+  },
+  "dependencies": {
+    "playwright": "^1.50.0"
+  }
+}
