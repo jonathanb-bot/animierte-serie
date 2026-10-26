@@ -1,65 +1,94 @@
 # Ton-Drehbuch (`ton.yaml`)
 
 Jede Folge hat ein Ton-Drehbuch. Daraus baut `python -m ton` Stimme, Musik, Geräusche, Atmo,
-Untertitel und Timing. Die Zeitachse ergibt sich von selbst: Zeilen laufen nacheinander ab.
+Untertitel, HUD und Timing. Die Zeitachse ergibt sich von selbst: Zeilen laufen nacheinander ab.
+
+## Serien-Stil („kurzgeschichte“) – nach der Vorlage eingemessen
+
+Die Vorlage (Hochkant-Kurzgeschichte, ~12 s analysiert) klingt so – und genau so ist der Standard-Stil eingestellt:
+
+| Vorlage | Umsetzung |
+|---|---|
+| **eine** tiefe Erzählstimme (~110 Hz), trocken, nah, keine Figurenstimmen – Zitate spricht der Erzähler | `de-DE-ConradNeural`, kein Hall, Zitate einfach in den Erzähltext |
+| zügig: ~4 Wörter/s, Pausen ~0,4–0,8 s | Tempo +18 %, Emotionen ändern das Tempo nur halb so stark |
+| durchgehender dunkler Drone auf A, fast ohne Höhen, ~12 dB unter der Stimme, kaum Ducking | Musik `dunkel` (Spannung: `dunkel_puls`) |
+| harte **Stille-Schnitte** beim Szenenwechsel (alles fällt auf digitale Stille) | `- schnitt: 0.45` |
+| kaum Geräusche | Geräusche leise und sparsam (`sfx` nur für Schlüsselmomente) |
+| Wort-für-Wort-Untertitel, GROSS, dunkle Box, aktuelles Wort unterstrichen, Schlüsselwörter orange/gelb | automatisch; `*Wort*` = orange, `_Wort_` = gelb |
+| große orange Einblendung („ZU SCHMAL“) | `- einblendung: "Zu schmal"` |
+| HUD oben links: „☀ TAG 4 \| 10:05“ + Statusbalken | `hud:` pro Kapitel |
+| Hochkant 9:16, −14 LUFS | Standard |
+
+Der alte Stil mit Figurenstimmen, Raumhall und komponierter Musik bleibt mit `stil: hoerspiel` verfügbar.
+
+### Schreibregeln
+
+1. **Du-Form, Präsens.** „Du hörst Schritte.“ – nicht „Er hörte Schritte.“
+2. **Kurze Sätze, 2–8 Wörter.** Ein Gedanke pro Satz. Details als Ein-Wort-Sätze: „Eine junge Stimme. *Heiser*.“
+3. **Fakten knapp und konkret:** Zahlen, Namen, Uhrzeiten („Er heißt _Ben_. Er ist _19_.“).
+4. **Zitate spricht der Erzähler** direkt mit: „Bitte, ich bin allein.“
+5. **Pro Satz höchstens ein markiertes Schlüsselwort** – Gefahr `*…*` (orange), Namen/Zahlen/Lösungen `_…_` (gelb).
+6. **Szenenwechsel = Stille-Schnitt** (`schnitt: 0.45`), danach sofort weiter sprechen.
+7. Pro Kapitel höchstens 1–2 **Einblendungen** mit 1–3 Wörtern.
+8. Jede Folge endet mit dem **Überlebens-Check** (siehe unten).
+
+## Beispiel
 
 ```yaml
 titel: "24. Stock – Folge 2: Wasser"
-video: folge-02.mp4          # optional: Video ohne Ton, wird mit dem Ton zusammengeführt
-
-sprecher:
-  erzaehler: {stimme: de-DE-FlorianMultilingualNeural}    # nah & trocken (kein Raumhall)
-  nachbarin: {stimme: de-DE-SeraphinaMultilingualNeural, pan: -0.15}
-  herr_berger: {stimme: de-DE-KillianNeural, hoehe: -6, tempo: -5}
+stil: kurzgeschichte          # Standard; alternativ: hoerspiel
+format: hochkant              # hochkant (1080×1920, Standard) | quer (1920×1080)
+video: folge-02.mp4           # optional: Video ohne Ton, wird mit dem Ton zusammengeführt
+untertitel_einbrennen: true   # Standard im Serien-Stil
 
 kapitel:
-  - titel: Was bisher geschah
-    musik: rueckblick           # Stimmung (Liste unten) oder "keine"
-    ort: wohnung                # Raumhall für Figuren und Geräusche
-    atmo: [stadt_fern, {name: wind, pegel: -4}]
+  - titel: Der Hahn
+    musik: dunkel
+    hud: {tag: 2, uhr: "07:12", uhr_bis: "07:15", anzeige: "Wasser", wert: 0.7, text: "70 %"}
     ablauf:
-      - erzaehler: "Text …"
+      - erzaehler: "Tag zwei. Du drehst den Hahn auf."
+      - sfx: wasser_stockt
+      - erzaehler: "Nichts. Nur ein *Gurgeln*."
         emotion: spannend
-      - sfx: wecker             # läuft PARALLEL zur nächsten Zeile
-      - sfx: stromausfall
-        warten: true            # … oder: erst abspielen, dann weiter
-      - pause: 1.0
-      - nachbarin: "Hallo? Ist da wer?"
-        emotion: fragend
+      - einblendung: "Kein Wasser"
+      - schnitt: 0.45
+      - erzaehler: "Gut, dass du gestern die _Badewanne_ gefüllt hast."
 ```
 
 ## Bausteine im `ablauf`
 
 | Eintrag | Wirkung |
 |---|---|
-| `<sprecher>: "Text"` | Zeile sprechen. Optional: `emotion`, `pegel` (dB), `ort`, `pan`, `versatz`, `parallel: true`, `luecke` |
-| `sfx: name` | Geräusch. Optional: `dauer`, `pegel`, `ort`, `pan`, `versatz`, `warten: true`, `parameter: {…}` |
-| `pause: 1.5` | Stille (Musik/Atmo laufen weiter) |
-| `atmo: name` / `atmo_stop: name` | Hintergrund ab hier starten / beenden (z. B. Kühlschrank verstummt beim Stromausfall) |
-| `hoehepunkt: true` | Hier fällt der Schlag von `titel`- bzw. `cliffhanger`-Musik |
-| `musik_aus: 0.3` | Musik schlagartig (in 0,3 s) ausblenden – für plötzliche Stille |
+| `erzaehler: "Text"` | Zeile sprechen. Optional: `emotion`, `pegel` (dB), `luecke`, `parallel: true`, `versatz` |
+| `sfx: name` | Geräusch, läuft parallel. Optional: `dauer`, `pegel`, `ort`, `pan`, `versatz`, `warten: true`, `parameter: {…}` |
+| `pause: 1.5` | Stille in der Stimme (Drone läuft weiter) |
+| `schnitt: 0.45` | **Stille-Schnitt:** alles hart auf digitale Stille, dann hart weiter |
+| `einblendung: "Text"` | große Texteinblendung oben. Optional: `farbe: orange\|gelb`, `dauer`, `versatz` |
+| `atmo: name` / `atmo_stop: name` | Hintergrundgeräusch ab hier starten / beenden |
+| `musik_aus: 0.3` | Musik in 0,3 s ausblenden (bleibt bis Kapitelende aus) |
+| `hoehepunkt: true` | Schlag der `titel`-/`cliffhanger`-Musik (nur Stil `hoerspiel`) |
 | `bei: 12.0` | Springe auf Sekunde 12 im Kapitel (zum Synchronisieren mit fertigem Video) |
 
-Kapitel-Optionen: `titel`, `musik`, `musik_pegel`, `intensitaet` (0–1), `ort`, `atmo`, `dauer` (Mindestlänge),
-`start` (absolute Startzeit in der Folge), `vorlauf`, `nachlauf`, `hoehepunkt` (Sekunde im Kapitel).
+Kapitel-Optionen: `titel`, `musik`, `musik_pegel`, `ort`, `atmo`, `hud`, `dauer` (Mindestlänge),
+`start` (absolute Startzeit in der Folge), `vorlauf`, `nachlauf`.
 
-`*Wort*` im Text ist erlaubt (wird ignoriert), `...` erzeugt eine lange Pause, `?` hebt die Stimme.
+**HUD** (`hud:`): `tag`, `uhr` (Uhrzeit am Kapitelanfang), `uhr_bis` (läuft bis Kapitelende hoch),
+`anzeige` (Name des Balkens, z. B. Wasser, Akku, Essen), `wert` (0–1), `text` (z. B. „70 %“).
+Werte gelten weiter, bis ein Kapitel sie ändert; `hud: aus` blendet das HUD aus.
 
-## Gegen eintönige Stimmen
+**Emotionen** (wirken im Serien-Stil gedämpft): `erzaehlend` (Standard), `neutral`, `ruhig`, `ernst`, `spannend`,
+`dramatisch`, `leise`, `aufgeregt`, `panisch`, `froh`, `erleichtert`, `traurig`, `wuetend`, `fragend`,
+`erklaerend`, `cool`. `...` im Text = lange Pause, `?` hebt die Stimme.
 
-- **Emotionen:** `erzaehlend` (Standard Erzähler), `neutral`, `ruhig`, `ernst`, `spannend`, `dramatisch`, `leise`,
-  `aufgeregt`, `panisch`, `froh`, `erleichtert`, `traurig`, `wuetend`, `fragend`, `erklaerend`, `cool`
-- Jede Zeile wird in Sätze zerlegt; jeder Satz bekommt eigenes Tempo/Tonhöhe (+ kleine Zufallsvariation).
-- Emotion **pro Zeile wechseln** – lieber drei kurze Zeilen mit verschiedenen Emotionen als ein langer Absatz.
-- Kostenlose Stimmen (Microsoft Edge Neural), am lebendigsten: `de-DE-FlorianMultilingualNeural`,
-  `de-DE-SeraphinaMultilingualNeural`. Weitere: `de-DE-ConradNeural`, `de-DE-KillianNeural`, `de-DE-KatjaNeural`,
-  `de-DE-AmalaNeural`, `de-AT-JonasNeural`, `de-AT-IngridNeural`, `de-CH-JanNeural`, `de-CH-LeniNeural`.
+**Weitere Sprecher** sind möglich (`sprecher:` mit `stimme`, `tempo`, `hoehe`, `pan`, `im_raum`), die Vorlage
+nutzt aber nur den Erzähler. Kostenlose Stimmen: `de-DE-ConradNeural`, `de-DE-KillianNeural`,
+`de-DE-FlorianMultilingualNeural`, `de-DE-SeraphinaMultilingualNeural`, `de-DE-KatjaNeural`, `de-DE-AmalaNeural`.
 
-## Musik-Stimmungen
+## Musik
 
-`titel`, `rueckblick`, `tag`, `erklaeren`, `abend`, `nacht`, `spannung`, `action`, `traurig`, `hoffnung`,
-`cliffhanger`, `outro` – alle selbst komponiert (lizenzfrei). Das Serienmotiv „24. Stock“ steckt in
-`titel`, `cliffhanger` und `outro`. Unter Sprache wird die Musik automatisch leiser (Ducking).
+- Serien-Stil: `dunkel` (Standard), `dunkel_puls` (Spannung, tiefer Puls)
+- Weitere: `titel`, `rueckblick`, `tag`, `erklaeren`, `abend`, `nacht`, `spannung`, `action`, `traurig`,
+  `hoffnung`, `cliffhanger`, `outro`, `keine`
 
 ## Geräusche & Atmos
 
@@ -81,24 +110,24 @@ Räume (`ort`): trocken, wohnung, bad, flur, treppenhaus, keller, draussen, dach
 
 ## Feste Teile jeder Folge
 
-1. **Vorspann** – `musik: titel`, Schlag bei Sekunde 3, danach Folgentitel.
-2. **Was bisher geschah** (ab Folge 2) – `musik: rueckblick`.
-3. **10 Kapitel** der Handlung.
-4. **Cliffhanger** – `musik: cliffhanger`, `hoehepunkt: true` direkt nach dem letzten Satz, dann 3–4 s Pause.
-5. **Überlebens-Check** – `musik: outro`, immer mit diesen zwei Fragen an die Zuschauer:
+1. **Was bisher geschah** (ab Folge 2) – 2–4 kurze Sätze, dann `schnitt`.
+2. **10 Kapitel** der Handlung.
+3. **Cliffhanger** – `musik: dunkel_puls`, letzter Satz mit Wendung, dann `schnitt: 0.6`.
+4. **Überlebens-Check** – `hud: aus`, Einblendung „Überlebens-Check“, immer mit diesen Fragen:
    - „Was denkst du: Was passiert als Nächstes?“
-   - „Und wie würdest du in dieser Situation reagieren?“ (gern mit Antwort A/B/C)
-   - Aufforderung, es in die Kommentare zu schreiben.
+   - „Und wie würdest du reagieren? A: … B: … C: …“
+   - „Schreib es in die Kommentare.“
 
-Vorlage: [`folgen/vorlage/ton.yaml`](../folgen/vorlage/ton.yaml).
+Vorlage: [`folgen/vorlage/ton.yaml`](../folgen/vorlage/ton.yaml) · Hörprobe: [`folgen/demo/ton.yaml`](../folgen/demo/ton.yaml)
 
 ## Ausgabe (`<folge>/ausgabe/`)
 
 | Datei | Inhalt |
 |---|---|
-| `ton.wav` | fertige Tonspur, −14 LUFS, Spitzen ≤ −1 dBTP (YouTube-tauglich) |
+| `ton.wav` | fertige Tonspur, −14 LUFS, Spitzen ≤ −1 dBTP (YouTube/TikTok-tauglich) |
 | `stem_stimme.wav`, `stem_musik.wav`, `stem_geraeusche.wav` | Einzelspuren zum Nachmischen |
-| `untertitel.srt` | Untertitel, satzgenau |
-| `timing.json` | Start/Ende jedes Kapitels, jeder Zeile und jedes Satzes – damit kann der Video-Renderer Szenenlängen und Mundbewegungen an die Stimme anpassen |
-| `<video>_mit_ton.mp4` | wenn `video` angegeben: Video + Ton + zuschaltbare Untertitel |
-| `vorschau.mp4` | mit `--vorschau`: Prüfvideo (Kapiteltitel + Untertitel) ohne Animation |
+| `untertitel.ass` | Wort-für-Wort-Untertitel + HUD + Einblendungen im Serien-Look |
+| `untertitel.srt` | satzweise Untertitel zum Hochladen (zuschaltbar) |
+| `timing.json` | Start/Ende jedes Kapitels, jeder Zeile, jedes Satzes und **jedes Wortes**, dazu Schnitte, Einblendungen, HUD – damit kann der Video-Renderer Szenen, Mundbewegungen und Grafiken an die Stimme anpassen |
+| `<video>_mit_ton.mp4` | wenn `video` angegeben: Video + Ton (+ eingebrannte Untertitel/HUD) + zuschaltbare Untertitel |
+| `vorschau.mp4` | mit `--vorschau`: Prüfvideo ohne Animation, aber mit Untertiteln/HUD |

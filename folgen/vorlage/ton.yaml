@@ -1,66 +1,45 @@
-# Vorlage für eine Folge von „24. Stock“. Kopieren nach folgen/folge-XX/ton.yaml und ausfüllen.
-# Format: docs/ton-drehbuch.md
+# Vorlage für eine Folge von „24. Stock“ im Serien-Stil. Kopieren nach folgen/folge-XX/ton.yaml.
+# Schreibregeln und Format: docs/ton-drehbuch.md
 titel: "24. Stock – Folge X: <Titel>"
+stil: kurzgeschichte
 video: folge-XX.mp4
 
-sprecher:
-  erzaehler:
-    stimme: de-DE-FlorianMultilingualNeural
-  nachbarin:
-    stimme: de-DE-SeraphinaMultilingualNeural
-    pan: -0.15
-
 kapitel:
-  - titel: Vorspann
-    musik: titel
-    ort: trocken
+  - titel: Was bisher geschah          # ab Folge 2
+    musik: dunkel
+    hud: {tag: 1, uhr: "21:40", anzeige: "Wasser", wert: 0.8, text: "80 %"}
     ablauf:
-      - pause: 3.2                 # Titelschlag fällt bei Sekunde 3
-      - erzaehler: "Vierundzwanzigster Stock."
-        emotion: dramatisch
-      - erzaehler: "Folge X. <Titel>."
-        emotion: spannend
+      - erzaehler: "Was bisher geschah."
+      - erzaehler: "<2–4 kurze Sätze>"
+      - schnitt: 0.5
 
-  - titel: Was bisher geschah
-    musik: rueckblick
-    ort: trocken
-    ablauf:
-      - sfx: whoosh
-      - erzaehler: "Was bisher geschah …"
-        emotion: erzaehlend
-
-  # --- Kapitel 1 bis 10 ---
+  # --- Kapitel 1 bis 10: kurze Sätze, Du-Form, Präsens ---
   - titel: "Kapitel 1: <…>"
-    musik: tag                     # tag / erklaeren / abend / nacht / spannung / action / traurig / hoffnung
-    ort: wohnung
-    atmo: [stadt_fern]
+    musik: dunkel                      # dunkel | dunkel_puls (Spannung)
+    hud: {uhr: "21:41", uhr_bis: "21:45"}
     ablauf:
-      - erzaehler: "…"
-        emotion: erzaehlend
+      - erzaehler: "<Satz>. <Satz>. <Detail>."
+      - erzaehler: "Die *Gefahr* steht in Sternchen. _Namen_ und _Zahlen_ in Unterstrichen."
+      - einblendung: "<2 Wörter>"
+      - schnitt: 0.45                  # Szenenwechsel: harte Stille
 
   - titel: Cliffhanger
-    musik: cliffhanger
-    ort: draussen
-    atmo: [wind]
+    musik: dunkel_puls
     ablauf:
-      - erzaehler: "…"
-        emotion: spannend
-      - hoehepunkt: true
-      - pause: 3.5
+      - erzaehler: "<letzter Satz>... *<Wendung>*."
+        emotion: dramatisch
+      - schnitt: 0.6
 
   - titel: Überlebens-Check
-    musik: outro
-    ort: trocken
+    musik: dunkel
+    hud: aus
     ablauf:
-      - sfx: whoosh
-      - erzaehler: "Überlebens-Check!"
-        emotion: froh
-      - sfx: ui_pop
+      - einblendung: "Überlebens-Check"
+        dauer: 2.0
+      - erzaehler: "Überlebens-Check."
+        emotion: ernst
       - erzaehler: "Was denkst du: Was passiert als Nächstes?"
         emotion: fragend
-      - erzaehler: "Und wie würdest du in dieser Situation reagieren? A: … B: … Oder C: …"
-        emotion: erklaerend
-      - sfx: ui_ding
-      - erzaehler: "Schreib's in die Kommentare. Wir sehen uns in Folge X plus eins."
-        emotion: cool
-      - pause: 1.5
+      - erzaehler: "Und wie würdest du reagieren? A: <…>. B: <…>. C: <…>."
+      - erzaehler: "Schreib es in die Kommentare."
+      - pause: 1.2

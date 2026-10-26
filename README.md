@@ -1,30 +1,33 @@
 # 24. Stock – animierte Serie
 
 10 Folgen à ~4–5 Minuten: Du wohnst im 24. Stock, der Strom fällt aus – und draußen ist nichts mehr normal.
-Jede Folge: Vorspann → „Was bisher geschah“ → 10 Kapitel → Cliffhanger → **Überlebens-Check**
+Jede Folge: „Was bisher geschah“ → 10 Kapitel → Cliffhanger → **Überlebens-Check**
 („Was denkst du, passiert als Nächstes? Wie würdest du reagieren?“).
 
 ## Ton-Pipeline (`ton/`)
 
-Baut aus einem Ton-Drehbuch pro Folge die komplette Tonspur – kostenlos, ohne API-Schlüssel:
+Baut aus einem Ton-Drehbuch pro Folge die komplette Tonspur – kostenlos, ohne API-Schlüssel.
+Der Standard-Stil ist nach der Vorlage (Hochkant-Kurzgeschichte) eingemessen:
 
-- **Stimmen:** Microsoft-Edge-Neural-Stimmen (gratis), mit Emotionen, satzweiser Betonung und echten Pausen,
-  eigene Stimme pro Figur, Figuren klingen im Raum (Bad, Treppenhaus, draußen …)
-- **Musik:** selbst komponiert nach Stimmung (Titel, Rückblick, Spannung, Nacht, Action, Cliffhanger, Outro …),
-  wird unter Sprache automatisch leiser
-- **Geräusche & Atmos:** über 50 synthetische Sounds – Wecker, Autoalarm, Zombies, Wasserhahn, der versiegt,
-  Treppenhaus-Schritte, Kerzen, Wind, Regen, SOS-Pfeife …
-- **Master:** −14 LUFS (YouTube), Untertitel (`.srt`), `timing.json` für den Video-Renderer,
-  optional direkt ins fertige Video gemischt
+- **Stimme:** eine tiefe, trockene, zügige Erzählstimme in Du-Form (kostenlose Microsoft-Neural-Stimme),
+  satzweise Betonung, Emotionen, echte Pausen
+- **Musik:** durchgehender dunkler Drone, ~12 dB unter der Stimme – plus harte **Stille-Schnitte** bei Szenenwechseln
+- **Geräusche:** über 50 synthetische Sounds (Wecker, Autoalarm, Zombies, versiegender Wasserhahn, Treppenhaus …),
+  sparsam eingesetzt
+- **Bild-Elemente:** Wort-für-Wort-Untertitel (GROSS, Schlüsselwörter orange/gelb), große Einblendungen,
+  HUD mit Tag, Uhrzeit und Statusbalken
+- **Master:** −14 LUFS, `timing.json` mit Wortzeiten für den Video-Renderer, optional direkt ins Video gemischt
 
 ```bash
 pip install -r requirements.txt          # + ffmpeg
-python -m ton folgen/demo/ton.yaml --vorschau            # Hörprobe mit Prüfvideo
-python -m ton folgen/folge-01/ton.yaml --video folge-01.mp4   # Ton ins fertige Video
-python -m ton --liste                    # alle Geräusche, Musik-Stimmungen, Emotionen, Räume
+python -m ton folgen/demo/ton.yaml --vorschau                 # Hörprobe mit Prüfvideo
+python -m ton folgen/folge-01/ton.yaml --video folge-01.mp4   # Ton + Untertitel ins fertige Video
+python -m ton --liste                    # Geräusche, Musik, Emotionen, Räume
 ```
 
-Format des Drehbuchs: [docs/ton-drehbuch.md](docs/ton-drehbuch.md) · Vorlage: [folgen/vorlage/ton.yaml](folgen/vorlage/ton.yaml)
+Format und Schreibregeln: [docs/ton-drehbuch.md](docs/ton-drehbuch.md) · Vorlage: [folgen/vorlage/ton.yaml](folgen/vorlage/ton.yaml)
 
 Auf GitHub: **Actions → „Ton bauen“ → Run workflow** baut die Tonspuren aller Folgen parallel und stellt sie als
 Download bereit.
+
+Schrift: Oswald (SIL Open Font License, `assets/schriften/OFL.txt`).

@@ -220,6 +220,9 @@ STIMMUNGEN = {
     "outro":      dict(bpm=90, folge=["F", "Am", "Bb", "C"], hell=0.6),
     "titel":      dict(bpm=80, folge=["Dm", "Bb", "F", "A"], hell=0.5),
     "cliffhanger": dict(bpm=70, folge=["Dm", "Bb"], hell=0.3),
+    # Kurzgeschichten-Stil (Vorlage): dunkler Dauer-Drone auf A, kaum Höhen
+    "dunkel":      dict(bpm=60, folge=["Am", "F", "Dm", "Am"], hell=0.2),
+    "dunkel_puls": dict(bpm=66, folge=["Am", "F", "Dm", "E"], hell=0.2),
 }
 
 
@@ -245,6 +248,7 @@ def musik(stimmung: str, dauer: float, seed: int = 0, intensitaet: float = 1.0,
         "tag": _tag, "erklaeren": _erklaeren, "abend": _abend, "nacht": _nacht, "spannung": _spannung,
         "action": _action, "rueckblick": _rueckblick, "traurig": _traurig, "hoffnung": _hoffnung,
         "outro": _outro, "titel": _titel, "cliffhanger": _cliffhanger,
+        "dunkel": _dunkel, "dunkel_puls": _dunkel_puls,
     }[stimmung]
     arranger(trocken, nass, takte, takt, beat, akk, hell, rng, intensitaet, dauer, hoehepunkt)
 
@@ -431,3 +435,44 @@ def _cliffhanger(tr, na, takte, takt, beat, akk, hell, rng, I, dauer, hp=None):
         tr.setze(erzeugen("riser", dauer=r), hit_t - r, 0.6)
     tr.setze(erzeugen("hit"), hit_t, 1.0)
     _motiv(na, hit_t + 1.0, beat, "klavier", transponieren=-12, gain=0.6)
+
+
+def _dunkel_bett(tr, na, takte, takt, akk, rng, dauer):
+    """Grundton A als sägezahnreicher Drone, tief gefiltert, atmet langsam; Akkorde nur als Schatten."""
+    n = A.sek(dauer + 2)
+    t = np.arange(n) / SR
+    atem = 0.75 + 0.25 * np.sin(2 * np.pi * 0.06 * t + rng.random() * 6)
+    grund = np.zeros(n, np.float32)
+    for m, g in ((33, 0.4), (45, 1.0), (52, 0.12)):  # A1, A2, E3
+        for d in (-0.0015, 0.0015):
+            grund += saege(hz(m) * (1 + d), n) * g
+    weich = A.lp(grund, 420, 4)
+    hell = A.lp(grund, 900, 2)
+    w = (0.5 + 0.5 * np.sin(2 * np.pi * 0.035 * t)).astype(np.float32)
+    x = (weich * (1 - w) + hell * w * 0.6) * atem
+    luft = A.bp(rng.standard_normal(n).astype(np.float32), 600, 5000) * 0.045 * atem  # Raumluft, wie in der Vorlage
+    tr.setze(A.breite((A.hp(x, 50) * 0.18 + luft) * A.huelle(n, 1.5, r=2.0), 14), 0, 1.0)
+    for i in range(takte):
+        g, iv = akk(i)
+        akkord_ = [g + v for v in iv]
+        p = pad(akkord_, takt + 1.5, 0.15, rng)
+        na.setze(A.lp(p, 700), i * takt, 0.2)
+
+
+def _dunkel(tr, na, takte, takt, beat, akk, hell, rng, I, dauer, hp=None):
+    _dunkel_bett(tr, na, takte, takt, akk, rng, dauer)
+    for i in range(1, takte):
+        if rng.random() < 0.35:
+            g, iv = akk(i)
+            na.setze(A.lp(klavier(g + 12 + iv[rng.integers(len(iv))], 4.0, 0.25, rng), 1200),
+                     i * takt + rng.choice([0, 2]) * beat, 0.25, rng.uniform(-0.4, 0.4))
+
+
+def _dunkel_puls(tr, na, takte, takt, beat, akk, hell, rng, I, dauer, hp=None):
+    _dunkel_bett(tr, na, takte, takt, akk, rng, dauer)
+    for i in range(takte):
+        g, _ = akk(i)
+        for b in (0, 1, 2, 3):
+            tr.setze(A.lp(bass(g - 12, beat * 0.5, "weich"), 200), i * takt + b * beat, 0.45 if b % 2 == 0 else 0.3)
+        for b in (0, 2):
+            tr.setze(A.lp(kick(0.7), 120), i * takt + b * beat, 0.35)

@@ -1,126 +1,78 @@
-# Hörprobe für die Ton-Pipeline – zeigt Stimmen, Emotionen, Räume, Geräusche, Musik.
-# Bauen:  python -m ton folgen/demo/ton.yaml
+# Hörprobe im Serien-Stil (Vorlage): eine tiefe, zügige Erzählstimme in Du-Form, dunkler Drone,
+# harte Stille-Schnitte, Wort-für-Wort-Untertitel, HUD.  Bauen:  python -m ton folgen/demo/ton.yaml --vorschau
 titel: "24. Stock – Hörprobe"
-
-sprecher:
-  erzaehler:
-    stimme: de-DE-FlorianMultilingualNeural
-  nachbarin:
-    stimme: de-DE-SeraphinaMultilingualNeural
-    pan: -0.15
-  durchsage:
-    stimme: de-DE-KillianNeural
-    tempo: -4
-    hoehe: -3
+stil: kurzgeschichte
 
 kapitel:
-  - titel: Vorspann
-    musik: titel
-    ort: trocken
-    dauer: 9
-    ablauf:
-      - pause: 3.2
-      - erzaehler: "Vierundzwanzigster Stock."
-        emotion: dramatisch
-      - pause: 0.4
-      - erzaehler: "Folge eins. Der Tag, an dem der Strom ging."
-        emotion: spannend
-
   - titel: Stromausfall
-    musik: abend
-    ort: wohnung
-    atmo: [stadt_fern, kuehlschrank]
+    musik: dunkel
+    hud: {tag: 1, uhr: "21:40", uhr_bis: "21:41", anzeige: "Wasser", wert: 1.0, text: "voll"}
+    atmo: [kuehlschrank]
     ablauf:
-      - erzaehler: "Es ist Dienstagabend. Du sitzt in deiner Wohnung, ganz oben, mit Blick über die ganze Stadt."
-        emotion: ruhig
-      - erzaehler: "Und dann... wird es still."
+      - erzaehler: "Dienstagabend. Vierundzwanzigster Stock."
+      - erzaehler: "Dann wird es *still*."
         emotion: spannend
       - sfx: stromausfall
-        warten: true
       - atmo_stop: kuehlschrank
-      - pause: 0.6
-      - erzaehler: "Kein Kühlschrank. Kein Licht. Kein Netz."
+      - schnitt: 0.5
+      - erzaehler: "Kein Licht. Kein Kühlschrank. *Kein Netz*."
         emotion: ernst
-      - sfx: kein_netz
-        warten: true
-      - sfx: taschenlampe
-      - atmo: kerze_knistern
-        pegel: -4
+      - einblendung: "Kein Netz"
+        versatz: -0.9
 
   - titel: Wasser
-    musik: spannung
-    ort: bad
-    atmo: [stille_raum]
+    musik: dunkel
+    hud: {uhr: "21:43", uhr_bis: "21:46", wert: 0.7, text: "70 %"}
     ablauf:
-      - erzaehler: "Dein erster Gedanke sollte nicht dem Handy gelten. Sondern dem Wasser."
-        emotion: erklaerend
-      - sfx: wasserhahn
-        dauer: 2.5
-      - erzaehler: "Denn im vierundzwanzigsten Stock kommt das Wasser nur mit Pumpen an. Und die brauchen Strom."
-        emotion: erklaerend
-      - sfx: wasser_stockt
-        warten: true
-      - erzaehler: "Genau so klingt es, wenn dir die Zeit davonläuft."
+      - erzaehler: "Dein erster Gedanke ist das Handy. Falsch."
+      - erzaehler: "Denk an das *Wasser*."
         emotion: ernst
-      - sfx: ui_ding
-      - erzaehler: "Also: Badewanne zu. Und volllaufen lassen, solange noch etwas kommt!"
+      - sfx: wasser_stockt
+        pegel: 3
+      - erzaehler: "So weit oben kommt es nur mit Pumpen an. Und die brauchen Strom."
+        emotion: erklaerend
+      - erzaehler: "Du hast vielleicht noch _zehn Minuten_."
+        emotion: spannend
+      - einblendung: "Badewanne voll"
+        farbe: gelb
+        dauer: 2.0
+      - erzaehler: "Also: Stöpsel rein. Badewanne voll laufen lassen. Jetzt."
         emotion: aufgeregt
       - sfx: badewanne
-        dauer: 5
+        dauer: 4
+        pegel: -2
 
   - titel: Treppenhaus
-    musik: nacht
-    ort: treppenhaus
-    atmo: [treppenhaus_atmo]
+    musik: dunkel_puls
+    hud: {uhr: "22:10", uhr_bis: "22:12", wert: 0.95, text: "95 %"}
     ablauf:
-      - sfx: treppenhaus_tuer
-        warten: true
-      - sfx: schritte
-        dauer: 4
-        pegel: -3
-        versatz: 0.5
-      - nachbarin: "Hallo? Ist da oben noch jemand?"
-        emotion: fragend
-      - nachbarin: "Ich bin's, aus dem dreiundzwanzigsten! Unten im Eingang... da ist irgendwas!"
-        emotion: panisch
-      - sfx: zombie
-        pegel: -6
-        versatz: 0.3
-        ort: treppenhaus
-      - erzaehler: "Das Treppenhaus ist wie ein riesiger Trichter. Jedes Geräusch wandert nach oben. Und nach unten."
-        emotion: leise
-        ort: trocken
-
-  - titel: Cliffhanger
-    musik: cliffhanger
-    ort: draussen
-    atmo: [{name: zombie_horde, pegel: -4, parameter: {entfernung: 0.8}}, wind]
-    ablauf:
-      - sfx: autoalarm
-        dauer: 5
-        pegel: -6
-        parameter: {entfernung: 0.85}
-      - erzaehler: "Und dann geht unten auf der Straße eine Alarmanlage los."
-        emotion: dramatisch
-      - pause: 1.2
-      - erzaehler: "Und alles, was da unten ist... dreht sich um."
+      - schnitt: 0.45
+      - erzaehler: "Zweiundzwanzig Uhr zehn. Jemand ist im *Treppenhaus*."
         emotion: spannend
-      - hoehepunkt: true      # hier knallt der Cliffhanger-Schlag
-      - pause: 3.5
+      - sfx: schritte
+        dauer: 3
+        ort: treppenhaus
+        pegel: -4
+      - erzaehler: "Eine Frauenstimme. Leise. Hallo? Ist da oben noch jemand?"
+        emotion: leise
+      - erzaehler: "Sie wohnt einen Stock unter dir. Sie heißt _Mara_."
+      - sfx: zombie
+        ort: treppenhaus
+        pegel: -6
+      - erzaehler: "Und von ganz unten... *antwortet etwas*."
+        emotion: dramatisch
+      - schnitt: 0.6
 
   - titel: Überlebens-Check
-    musik: outro
-    ort: trocken
+    musik: dunkel
+    hud: aus
     ablauf:
-      - sfx: whoosh
-      - erzaehler: "Überlebens-Check!"
-        emotion: froh
-      - sfx: ui_pop
+      - einblendung: "Überlebens-Check"
+        dauer: 2.0
+      - erzaehler: "Überlebens-Check."
+        emotion: ernst
       - erzaehler: "Was denkst du: Was passiert als Nächstes?"
         emotion: fragend
-      - erzaehler: "Und wie würdest du reagieren? A: Licht aus und ganz still bleiben. B: Die Nachbarin reinholen. Oder C: Erst mal Wasser sichern."
-        emotion: erklaerend
-      - sfx: ui_ding
-      - erzaehler: "Schreib's in die Kommentare. Und denk dran: Im vierundzwanzigsten Stock zählt jeder Liter."
-        emotion: cool
-      - pause: 1.5
+      - erzaehler: "Und wie würdest du reagieren? A: Licht aus und ganz still sein. B: _Mara_ reinholen. C: Erst das Wasser sichern."
+      - erzaehler: "Schreib es in die Kommentare."
+      - pause: 1.2

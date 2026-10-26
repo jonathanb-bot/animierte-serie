@@ -4,12 +4,16 @@ Gegen Monotonie:
 - jede Zeile wird in Sätze zerlegt, jeder Satz bekommt eigene Prosodie
   (Emotion + Satzzeichen + kleine Zufallsvariation),
 - echte Pausen zwischen Sätzen ("..." = lange Pause),
-- je Figur eine eigene Stimme, Figuren klingen im Raum (Hall), der Erzähler nah und trocken.
+- je Figur eine eigene Stimme möglich, Figuren klingen im Raum (Hall), der Erzähler nah und trocken.
+
+Zu jeder Zeile werden Wort-Zeitstempel geliefert (für Wort-für-Wort-Untertitel).
+Markierungen im Text: *Wort* = Akzent (orange), _Wort_ = Hervorhebung (gelb) – nur für Untertitel.
 """
 from __future__ import annotations
 
 import asyncio
 import hashlib
+import json
 import os
 import re
 from dataclasses import dataclass, field
@@ -41,11 +45,8 @@ EMOTIONEN = {
     "cool":        (-4, -3, 0, 1.0),
 }
 
-STANDARD_STIMMEN = {
-    "erzaehler": "de-DE-FlorianMultilingualNeural",
-}
-
 _SATZ = re.compile(r"(.+?(?:\.\.\.|…|[.!?]+|$))(?:\s+|$)", re.S)
+_MARKE = re.compile(r"([*_])([^*_]+?)\1")
 
 
 @dataclass
@@ -57,6 +58,8 @@ class Sprecher:
     lautstaerke: int = 0  # in %
     im_raum: bool = True  # Hall des Ortes anwenden? (Erzähler: nein)
     pan: float = 0.0
+    pausen: float = 1.0   # Faktor für Pausen zwischen Sätzen
+    emotion_staerke: float = 1.0  # wie stark Emotionen Tempo/Tonhöhe/Pausen verändern
 
 
 @dataclass
@@ -70,23 +73,40 @@ class Satz:
 
 @dataclass
 class Gesprochen:
-    """Ergebnis einer Zeile: Audio (mono) + Untertitel relativ zum Zeilenstart."""
+    """Ergebnis einer Zeile: Audio (mono), Satz- und Wortzeiten relativ zum Zeilenstart."""
     audio: np.ndarray
-    cues: list = field(default_factory=list)  # (start_s, ende_s, text)
+    cues: list = field(default_factory=list)    # (start_s, ende_s, satz)
+    woerter: list = field(default_factory=list)  # (start_s, ende_s, wort, akzent) akzent: None|"orange"|"gelb"
 
     @property
     def dauer(self) -> float:
         return len(self.audio) / A.SR
 
 
+def norm(wort: str) -> str:
+    return "".join(c for c in wort.lower() if c.isalnum())
+
+
+def markierungen(text: str) -> tuple[str, dict]:
+    """'Die *Schultern* stecken fest' -> ('Die Schultern stecken fest', {'schultern': 'orange'})"""
+    akzente = {}
+    for m in _MARKE.finditer(text):
+        farbe = "orange" if m.group(1) == "*" else "gelb"
+        for w in m.group(2).split():
+            akzente[norm(w)] = farbe
+    return _MARKE.sub(lambda m: m.group(2), text), akzente
+
+
 def saetze(text: str) -> list[str]:
-    text = " ".join(text.replace("*", "").split())
+    text = " ".join(markierungen(text)[0].split())
     teile = [m.group(1).strip() for m in _SATZ.finditer(text) if m.group(1).strip()]
     return [t for t in teile if any(c.isalnum() for c in t)]  # nur Satzzeichen -> nichts zu sprechen
 
 
 def prosodie(sprecher: Sprecher, text: str, emotion: str = "neutral") -> list[Satz]:
     t0, h0, v0, pf = EMOTIONEN.get(emotion, EMOTIONEN["neutral"])
+    k = sprecher.emotion_staerke
+    t0, h0, pf = round(t0 * k), round(h0 * k), 1 + (pf - 1) * k
     teile = saetze(text)
     seed = int(hashlib.md5((sprecher.name + text).encode()).hexdigest()[:8], 16)
     rng = np.random.default_rng(seed)
@@ -111,7 +131,7 @@ def prosodie(sprecher: Sprecher, text: str, emotion: str = "neutral") -> list[Sa
             tempo -= 2  # Einstieg etwas bewusster
         if len(s) < 18:
             tempo -= 3  # kurze Sätze wirken mit etwas Luft
-        out.append(Satz(s, tempo, hoehe, laut, pause * pf))
+        out.append(Satz(s, tempo, hoehe, laut, pause * pf * sprecher.pausen))
     return out
 
 
@@ -130,7 +150,8 @@ def _ssl_vorbereiten():
 
 async def _synth(stimme: str, s: Satz, sem: asyncio.Semaphore) -> Path:
     ziel = _schluessel(stimme, s)
-    if ziel.exists() and ziel.stat().st_size > 0:
+    meta = ziel.with_suffix(".json")
+    if ziel.exists() and ziel.stat().st_size > 0 and meta.exists():
         return ziel
     import edge_tts
     async with sem:
@@ -139,11 +160,18 @@ async def _synth(stimme: str, s: Satz, sem: asyncio.Semaphore) -> Path:
                 c = edge_tts.Communicate(
                     s.text, stimme,
                     rate=f"{s.tempo:+d}%", pitch=f"{s.hoehe:+d}Hz", volume=f"{max(-90, s.lautstaerke):+d}%",
-                    proxy=os.environ.get("HTTPS_PROXY") or None,
+                    boundary="WordBoundary", proxy=os.environ.get("HTTPS_PROXY") or None,
                 )
+                daten, woerter = bytearray(), []
+                async for ch in c.stream():
+                    if ch["type"] == "audio":
+                        daten.extend(ch["data"])
+                    elif ch["type"] == "WordBoundary":
+                        woerter.append((ch["offset"] / 1e7, (ch["offset"] + ch["duration"]) / 1e7, ch["text"]))
                 tmp = ziel.with_suffix(".tmp")
-                await c.save(str(tmp))
+                tmp.write_bytes(bytes(daten))
                 tmp.rename(ziel)
+                meta.write_text(json.dumps(woerter, ensure_ascii=False))
                 return ziel
             except Exception:
                 if versuch == 3:
@@ -152,13 +180,11 @@ async def _synth(stimme: str, s: Satz, sem: asyncio.Semaphore) -> Path:
     return ziel
 
 
-def _trimmen(x: np.ndarray, schwelle=0.006) -> np.ndarray:
+def _trimm_grenzen(x: np.ndarray, schwelle=0.006) -> tuple[int, int]:
     idx = np.where(np.abs(x) > schwelle)[0]
     if len(idx) == 0:
-        return x[:0]
-    a = max(0, idx[0] - A.sek(0.02))
-    e = min(len(x), idx[-1] + A.sek(0.08))
-    return x[a:e]
+        return 0, 0
+    return max(0, idx[0] - A.sek(0.02)), min(len(x), idx[-1] + A.sek(0.08))
 
 
 def stimm_kette(x: np.ndarray) -> np.ndarray:
@@ -175,27 +201,33 @@ def sprechen_viele(auftraege: list[tuple[Sprecher, str, str]]) -> list[Gesproche
     """Alle Zeilen einer Folge parallel synthetisieren. auftraege: (sprecher, text, emotion)."""
     _ssl_vorbereiten()
     CACHE.mkdir(parents=True, exist_ok=True)
-    geplant = [(sp, prosodie(sp, text, emo)) for sp, text, emo in auftraege]
+    geplant = [(sp, prosodie(sp, text, emo), markierungen(text)[1]) for sp, text, emo in auftraege]
 
     async def alle():
         sem = asyncio.Semaphore(6)
-        jobs = [_synth(sp.stimme, s, sem) for sp, ss in geplant for s in ss]
+        jobs = [_synth(sp.stimme, s, sem) for sp, ss, _ in geplant for s in ss]
         return await asyncio.gather(*jobs)
 
     dateien = iter(asyncio.run(alle()))
     ergebnisse = []
-    for sp, ss in geplant:
-        stuecke, cues, t = [], [], 0.0
+    for sp, ss, akzente in geplant:
+        stuecke, cues, woerter, t = [], [], [], 0.0
         for j, s in enumerate(ss):
-            x = _trimmen(A.laden(str(next(dateien))))
+            datei = next(dateien)
+            roh = A.laden(str(datei))
+            a, e = _trimm_grenzen(roh)
+            x = roh[a:e]
             stuecke.append(x)
             cues.append((t, t + len(x) / A.SR, s.text))
+            versatz = t - a / A.SR
+            for w0, w1, w in json.loads(datei.with_suffix(".json").read_text()):
+                woerter.append((max(t, w0 + versatz), min(t + len(x) / A.SR, w1 + versatz), w, akzente.get(norm(w))))
             t += len(x) / A.SR
             if j < len(ss) - 1:
                 stuecke.append(np.zeros(A.sek(s.pause), np.float32))
                 t += s.pause
         if sum(len(x) for x in stuecke) < A.sek(0.05):
-            ergebnisse.append(Gesprochen(np.zeros(A.sek(0.5), np.float32), []))
+            ergebnisse.append(Gesprochen(np.zeros(A.sek(0.5), np.float32)))
             continue
-        ergebnisse.append(Gesprochen(stimm_kette(np.concatenate(stuecke)), cues))
+        ergebnisse.append(Gesprochen(stimm_kette(np.concatenate(stuecke)), cues, woerter))
     return ergebnisse
