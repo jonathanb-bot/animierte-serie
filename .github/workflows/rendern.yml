@@ -1,0 +1,80 @@
+name: Folgen rendern
+
+on:
+  push:
+    paths:
+      - "episoden/**"
+      - "audio/**"
+      - "musik/**"
+      - "engine/**"
+      - "figuren.json"
+  workflow_dispatch:
+    inputs:
+      folge:
+        description: "z.B. folge-01 (leer = alle Folgen)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+jobs:
+  auswahl:
+    runs-on: ubuntu-latest
+    outputs:
+      liste: ${{ steps.w.outputs.liste }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - id: w
+        run: |
+          if [ -n "${{ github.event.inputs.folge }}" ]; then
+            L="${{ github.event.inputs.folge }}"
+          elif [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            L=$(ls episoden/folge-*.txt | xargs -n1 basename | sed 's/\.txt$//')
+          else
+            G=$(git diff --name-only HEAD~1 HEAD || true)
+            if echo "$G" | grep -qE '^(engine/|figuren.json)'; then
+              L=$(ls episoden/folge-*.txt | xargs -n1 basename | sed 's/\.txt$//')
+            else
+              L=$(echo "$G" | grep -E '^episoden/folge-.*\.txt$' | xargs -r -n1 basename | sed 's/\.txt$//')
+              for d in $(echo "$G" | grep -E '^audio/' | cut -d/ -f2 | sort -u); do L="$L $d"; done
+            fi
+          fi
+          J=$(echo $L | tr ' ' '\n' | sort -u | grep . | jq -R . | jq -sc .)
+          echo "liste=$J" >> "$GITHUB_OUTPUT"
+          echo "Rendere: $J"
+
+  rendern:
+    needs: auswahl
+    if: needs.auswahl.outputs.liste != '[]' && needs.auswahl.outputs.liste != ''
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      max-parallel: 5
+      matrix:
+        folge: ${{ fromJson(needs.auswahl.outputs.liste) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Werkzeuge installieren
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+          npm install --no-audit --no-fund
+          npx playwright install --with-deps chromium
+      - name: Rendern
+        run: node render.mjs "episoden/${{ matrix.folge }}.txt"
+      - name: Als Download bereitstellen
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          tag="${{ matrix.folge }}-v${{ github.run_number }}"
+          gh release create "$tag" "ausgabe/${{ matrix.folge }}.mp4" --title "${{ matrix.folge }} (Version ${{ github.run_number }})" --notes "Automatisch gerendert."
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.folge }}
+          path: ausgabe/${{ matrix.folge }}.mp4

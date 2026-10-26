@@ -1,0 +1,89 @@
+# Folge 3: Das Treppenhaus
+
+== Szene 1: Vor der Tür ==
+@zeit nacht
+@hud tag=2 zeit=02:24 wasser=290/400L essen=7/10Tage akku=70/100%
+[treppenhaus etage=24 licht=aus zombies klopfen wackeln=0.5] Sie stehen direkt vor eurer Tür. Zwei. Vielleicht drei.
+[wohnung du:psst lena mila:angst walter nacht licht=aus vorhang=zu] Keiner bewegt sich. Keiner atmet laut.
+[gesicht du ort=wohnung nacht licht=aus angst zoom-rein] Du zählst die Sekunden. Zehn. Zwanzig. Sechzig.
+[treppenhaus etage=24 licht=aus zombies wackeln=0.1] Dann wird das Schlurfen leiser. Sie verlieren das *Interesse*.
+[titel oben="Folge 3" gross="Das Treppenhaus" unten="24. Stock" dauer=3]
+== Was bisher geschah ==
+[wohnung du lena mila walter nacht licht=kerze vorhang=zu hud=false] Was bisher geschah: Lena und ihre kleine Schwester Mila sind bei euch eingezogen.
+[objekt objekte="boiler:Boiler|spuelkasten:Spülkasten|wasserflasche:Flaschen" hud=false] Ihr habt alle versteckten *Wasserreserven* im Haus geplündert.
+[hochhaus etage=15 bis_etage=22 nacht strom=false zombies="10-21" hud=false] Aber das Hämmern an der Tür hat *sie* angelockt. Etage für Etage.
+
+== Szene 2: Warum sie hochkamen ==
+@zeit morgen
+@hud zeit=07:15
+[gesicht walter ort=wohnung morgen entschlossen] Am Morgen sagt Walter: „Ein Treppenhaus ist wie ein *Schalltrichter*.“
+[hochhaus etage=24 bis_etage=10 tag strom=false zombies="1-9" laerm_x=880] Jedes Geräusch oben hallt bis ganz nach unten. Jede zugeknallte Tür. Jeder Schrei.
+[objekt objekte="ohr:Hall im Treppenhaus" farbe="#3a2a4a"] Und sie folgen dem Geräusch. Stufe für Stufe. *Ohne* Pause.
+[gesicht du ort=wohnung morgen besorgt] Wenn ihr hier überleben wollt, muss das Treppenhaus *dicht* werden.
+
+== Szene 3: Der Aufzug ==
+[hochhaus etage=14 tag strom=false aufzug=14 zombies="1-9" zoom-rein] Und der Aufzug? Der hängt seit gestern im vierzehnten Stock.
+[gesicht walter ort=treppenhaus besorgt] „Ein Aufzugschacht ist ein Loch durch das ganze Haus. Ohne Strom ist er *nutzlos*.“
+[objekt objekte="schluessel:Aufzug" durchgestrichen=schluessel farbe="#4a1e1e"] Also bleibt nur ein Weg nach oben. Und genau den müsst ihr *versperren*.
+
+== Szene 4: Der Plan ==
+@hud zeit=09:00
+[hochhaus etage=21 tag strom=false barrikade=20 zombies="1-9" zoom-rein] Walters Plan: eine *Barrikade* im zwanzigsten Stock.
+[gesicht walter ort=wohnung tag entschlossen] „Nicht direkt vor unserer Tür. Vier Etagen tiefer. Dann haben wir *Abstand*.“
+[objekt objekte="treppe:4 Etagen Puffer" farbe="#2a3a4a"] Vier Etagen Puffer bedeuten: Wenn sie durchbrechen, habt ihr Zeit. Zeit zum *Reagieren*.
+[gesicht lena ort=wohnung tag besorgt] „Aber wie bauen wir die, ohne Lärm zu machen?“
+
+== Szene 5: Leise arbeiten ==
+@hud zeit=10:30
+[treppenhaus etage=21 licht=aus du:traegt walter] Die Regel: Nichts wird *geschleift*. Alles wird *getragen*.
+[objekt objekte="decke:Decken unter Möbel" gross="Leise Tricks"] Decken unter schwere Möbel. Socken über die Schuhe. Türen nur *halb* öffnen.
+[treppenhaus etage=20 licht=aus barrikade=baut du:traegt lena:traegt] Sofas, Schränke, Matratzen aus den leeren Wohnungen. Stück für Stück.
+[gesicht du ort=treppenhaus licht=taschenlampe muede] Es ist anstrengend. Vier Etagen runter, mit einem Schrank auf dem Rücken.
+[treppenhaus etage=20 licht=aus barrikade=baut walter:zeigt du:traegt] Walter erklärt, wie man stapelt: Schwere Sachen *unten*. Verkeilt gegen die Wand.
+
+== Szene 6: Das Geräusch ==
+@hud zeit=12:45
+[treppenhaus etage=20 licht=aus barrikade=baut du:traegt lena:schreck blitz wackeln=1.2] Dann passiert es. Ein Stuhl rutscht ab. Er knallt *zwölf Etagen* tief durch den Treppenschacht.
+[gesicht du ort=treppenhaus licht=taschenlampe schreck zoom-rein] Das Echo hört gar nicht mehr auf.
+[hochhaus etage=8 bis_etage=16 tag strom=false zombies="1-12" laerm_x=880] Unten setzt sich etwas in Bewegung. Viele Schritte. *Schnell*.
+[gesicht walter ort=treppenhaus entschlossen] „Weitermachen! *Jetzt*!“
+
+== Szene 7: Ablenkung ==
+[gesicht lena ort=treppenhaus entschlossen] Lena hat eine Idee. Sie rennt zurück in eure Wohnung.
+[objekt objekte="wecker:Alter Wecker" farbe="#3a2a2a"] Ein alter Wecker. Mit einer richtig *lauten* Klingel.
+[hochhaus etage=14 tag strom=false aufzug=14 zombies="1-12"] Sie stellt ihn auf eine Minute. Und wirft ihn in den offenen Aufzugschacht.
+[hochhaus etage=10 bis_etage=4 tag strom=false aufzug=14 zombies="1-12" laerm_x=140 wackeln=0.4] Er fällt. Und fällt. Und *klingelt* irgendwo ganz unten.
+[strasse tag horde=8 laerm_x=200 zoom-raus] Alles, was im Haus ist, dreht um. *Weg* von euch. *Hin* zum Lärm.
+[gesicht du ort=treppenhaus licht=taschenlampe froh] Ihr habt zehn Minuten. Vielleicht weniger.
+
+== Szene 8: Die Barrikade steht ==
+@hud zeit=13:30
+[treppenhaus etage=20 licht=aus barrikade du:traegt lena walter] Ihr arbeitet so schnell wie noch nie. Schrank. Matratze. Waschmaschine.
+[treppenhaus etage=20 licht=aus barrikade du:huefte lena:huefte walter:froh zoom-raus] Und dann steht sie. Eine Wand aus Möbeln, vom Boden bis zum *Geländer*.
+[hochhaus etage=19 bis_etage=24 tag strom=false barrikade=20 zombies="1-12" zoom=1] Zwischen euch und dem Rest der Welt: vier Etagen. Und *eine* Barrikade.
+[gesicht walter ort=treppenhaus froh] „So. Jetzt schlafen wir mal eine Nacht *durch*.“
+
+== Szene 9: Am Abend ==
+@zeit abend
+@hud zeit=19:10 akku=60/100%
+[wohnung du lena mila walter abend licht=aus] Ihr esst Dosensuppe. Kalt. Keiner beschwert sich.
+[gesicht mila ort=wohnung abend froh] Mila malt mit einem Kuli ein Bild von eurer Barrikade. „Damit die Monster draußen bleiben.“
+[gesicht du ort=wohnung abend froh] Zum ersten Mal *lachst* du ein bisschen.
+
+== Szene 10: Die Stimme ==
+@zeit nacht
+@hud zeit=23:40
+[treppenhaus etage=20 licht=aus barrikade] Kurz vor Mitternacht macht ihr einen letzten Kontrollgang zur Barrikade.
+[treppenhaus etage=20 licht=aus barrikade du:taschenlampe walter:lauscht] Alles ruhig. Dann hört Walter etwas. Von *unten*.
+[gesicht walter ort=treppenhaus licht=taschenlampe schreck] Kein Stöhnen. Kein Schlurfen.
+[hochhaus etage=17 bis_etage=19 nacht strom=false barrikade=20 zombies="1-12"] Sondern eine Stimme. Ein Mensch. *Leise*. Direkt hinter der Barrikade.
+[gesicht kai ort=treppenhaus angst licht=taschenlampe] „Hallo? Ist da oben wer? Bitte … ich hab *Essen* dabei.“
+[gesicht du ort=treppenhaus licht=taschenlampe misstrauisch zoom-rein] Und jetzt musst du entscheiden, ob du einem Fremden *vertraust*.
+[titel gross="Fortsetzung folgt" oben="Folge 4: Licht aus" farbe="#2a0d0b" dauer=3.5]
+
+
+== Überlebens-Check ==
+@hud aus
+[objekt objekte="wecker:Ablenkung|ohr:Lärm" gross="Überlebens-Check" farbe="#1e2f45"] Überlebens-Check! Warum war der Wecker im Aufzugschacht so *clever*?
+[objekt objekte="wecker:Ablenkung|ohr:Lärm" gross="Die Antwort" farbe="#1e3a2a"] Weil Lärm sie lockt. Und der Schacht den Lärm *weit weg* von euch gebracht hat.
+[titel gross="Was hättest du|gemacht?" groesse=120 unten="Schreib es in die Kommentare" farbe="#1e2f45" dauer=3.5]

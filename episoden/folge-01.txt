@@ -1,0 +1,96 @@
+# Folge 1: Der erste Tag
+
+== Szene 1: Kalter Einstieg ==
+[skyline nacht fahrt dauer=4.5] Stell dir vor, die *Zombie-Apokalypse* bricht aus.
+[hochhaus etage=24 nacht du strom=false zombies=1-10 horde=14 zoom=0.95] Und du wohnst ganz oben. Im *24. Stock* eines Hochhauses.
+[hochhaus etage=24 bis_etage=1 nacht strom=false zombies=1-10 horde=14] Unter dir: dreiundzwanzig Etagen. Und ganz unten: *sie*.
+[gesicht du ort=wohnung nacht schreck] Die Frage ist nicht, ob sie kommen. Sondern *wann*.
+[titel oben="Folge 1" gross="Der erste Tag" unten="24. Stock" dauer=3.2]
+
+== Szene 2: Ein ganz normaler Morgen ==
+@hud tag=1 zeit=07:40 wasser=12/40L essen=6/10Tage akku=100/100%
+[skyline morgen zoom-rein licht] Dienstag, sieben Uhr vierzig. Die Sonne geht über der Stadt auf.
+[wohnung du morgen froh licht=an] Du stehst in deiner Küche im obersten Stock. Kaffee, Handy, alles wie immer.
+[wohnung du:denkt morgen besorgt licht=an] Dann vibriert dein Handy. Einmal. Zweimal. *Zwanzigmal*.
+[gesicht du ort=wohnung morgen besorgt zoom-rein] Eilmeldung: Unruhen in der Innenstadt. Menschen greifen andere Menschen an.
+[objekt objekte="funkgeraet:Notfall-Warnung" farbe="#4a1e1e"] Bleiben Sie in Ihren Wohnungen. Halten Sie Türen und Fenster *geschlossen*.
+[gesicht du ort=wohnung morgen misstrauisch] Du denkst: Das ist bestimmt übertrieben.
+[wohnung du:zeigt morgen schreck licht=an zoom-rein] Bis du aus dem Fenster schaust.
+
+== Szene 3: Die Straße ==
+@hud zeit=07:52
+[strasse morgen horde=4 zoom-raus] Unten auf der Straße rennen Leute. Aber nicht alle rennen *weg*.
+[strasse morgen horde=6 laerm_x=300 schwenk-links] Manche rennen *hinterher*. Sie bewegen sich komisch. Ruckartig.
+[strasse morgen alarm horde=7 zoom-rein] Dann geht eine *Autoalarmanlage* los.
+[strasse morgen alarm horde=9 laerm_x=250 zoom-raus] Und plötzlich drehen sich alle gleichzeitig um. Und laufen genau dorthin.
+[gesicht du ort=wohnung morgen schreck] Da merkst du dir die erste Regel: Sie reagieren auf *Lärm*.
+[objekt objekte="ohr:Regel 1: Lärm" farbe="#3a2a4a"] Alles, was laut ist, lockt sie an. Und Hochhäuser *hallen*.
+
+== Szene 4: Oben bleiben oder fliehen? ==
+@hud zeit=08:15
+[hochhaus etage=20 bis_etage=24 tag du zoom=0.95] Jetzt musst du entscheiden. Fliehen oder bleiben?
+[hochhaus etage=6 tag zombies=1-3 horde=10 schwenk-runter] Fliehen heißt: vierundzwanzig Stockwerke runter. Durch ein Treppenhaus, das du nicht kennst.
+[strasse tag horde=10 zoom-raus] Und unten durch genau die Straße, in der *sie* sind.
+[skyline tag zoom-rein licht] Oben bleiben heißt: Du bist weit weg von allem. Sie müssen *zu dir* hoch.
+[treppenhaus etage=24 licht=an du:denkt] Und es gibt nur einen Weg zu dir: das *Treppenhaus*. Den Aufzug kannst du vergessen.
+[gesicht du ort=wohnung tag entschlossen] Du entscheidest dich. Du *bleibst*.
+
+== Szene 5: Das Wasser ==
+@hud zeit=08:30
+[gesicht du ort=wohnung tag denkt besorgt] Und dann fällt dir etwas ein, woran fast niemand denkt.
+[hochhaus etage=1 bis_etage=24 tag wasser=voll zoom=0.9] Wasser kommt nicht von allein in den 24. Stock. Es wird von *Pumpen* hochgedrückt.
+[objekt objekte="gluehbirne:Strom|tropfen:Druck" farbe="#1f3a4f"] Und Pumpen brauchen *Strom*. Fällt der Strom aus, fällt zuerst das Wasser ganz oben aus.
+[hochhaus etage=24 tag wasser=weg druck=6 zoom=0.95] Die unteren Etagen haben vielleicht noch Wasser. Du ganz oben: *nichts mehr*.
+[gesicht du ort=bad tag schreck zoom-rein] Also rennst du ins Bad.
+[bad fuell=0 fuell_bis=0.45 du:zeigt] Stöpsel rein, Wasserhahn *voll auf*. Die Badewanne läuft voll.
+[wohnung du:traegt morgen hahn=an licht=an objekt=topf objekt_x=900 objekt_y=1300] Dann jeder Topf. Jede Flasche. Jeder Eimer, den du findest.
+[objekt objekte="topf:Töpfe|eimer:Eimer|wasserflasche:Flaschen" gross="Alles füllen"] Alles, was Wasser halten kann, wird *gefüllt*.
+@hud wasser=40/40L
+[bad fuell=0.45 fuell_bis=0.75 du:froh liter=150] Die Badewanne fasst über hundert Liter. Das kann über Leben und Tod *entscheiden*.
+
+== Szene 6: Was du hast ==
+@hud zeit=10:05
+[wohnung du:denkt tag licht=an vorraete=6 zoom-rein] Danach machst du eine Bestandsaufnahme.
+[objekt objekte="dose:6 Tage Essen|taschenlampe:1 Lampe|powerbank:1 Powerbank|kerze:4 Kerzen" farbe="#2a3a2a"] Essen für ungefähr sechs Tage. Eine Taschenlampe. Eine Powerbank. Vier Kerzen.
+[gesicht du ort=wohnung tag besorgt] Nicht viel. Aber mehr als die meisten.
+[wohnung du:psst tag licht=aus] Und du machst *alles* aus. Fernseher. Musik. Sogar den Kühlschrank hörst du jetzt brummen.
+
+== Szene 7: Walter ==
+@hud zeit=14:20
+[treppenhaus etage=24 licht=an klopfen dauer=3] Am Nachmittag: *Klopfen*. Leise. Dreimal.
+[gesicht du ort=wohnung tag angst] Du hältst den Atem an.
+[treppenhaus etage=24 licht=an walter:psst] Durch den Spion siehst du einen alten Mann. Er hält einen Finger vor den Mund.
+[gesicht walter ort=treppenhaus entschlossen] „Ich bin Walter. Dreißig Jahre Hausmeister hier. Lass mich rein, Junge.“
+[wohnung du walter tag licht=aus] Walter kennt dieses Haus *besser* als jeder andere.
+[gesicht walter ort=wohnung tag besorgt] „Hast du Wasser gesammelt? Gut. Heute Abend fällt der Strom aus. Die Notstromaggregate halten nicht lange.“
+[gesicht walter ort=wohnung tag wuetend] „Und benutz nie den Aufzug. Wenn der stecken bleibt, bist du in einer *Kiste*.“
+[hochhaus etage=12 tag aufzug=12 zombies=1-6 zoom-rein] Ein Aufzug ohne Strom ist eine Falle. Mit offenen Türen in jeder Etage.
+
+== Szene 8: Die Stadt wird dunkel ==
+@zeit abend
+@hud zeit=19:45
+[skyline abend zoom-raus] Am Abend sitzt ihr am Fenster und seht zu, wie die Stadt *stirbt*.
+[wohnung du walter abend licht=aus] Überall Rauch. Sirenen, die eine nach der anderen verstummen.
+[skyline nacht zoom-rein] Dann gehen die ersten Lichter aus. Ganze Viertel werden *schwarz*.
+[gesicht walter ort=wohnung nacht besorgt] „Siehst du die Fenster, die noch leuchten? Die sieht man kilometerweit.“
+[skyline nacht licht nah] Und nicht nur Menschen sehen sie.
+[objekt objekte="auge:Regel 2: Licht" farbe="#2a2a4a"] Zweite Regel: Licht verrät dich. Nachts bleibt es *dunkel*.
+
+== Szene 9: Stromausfall ==
+@zeit nacht
+@hud zeit=22:13 akku=80/100%
+[wohnung du walter nacht licht=an vorhang=zu] Um zweiundzwanzig Uhr dreizehn passiert es.
+[wohnung du:schreck walter:schreck nacht licht=aus vorhang=zu blitz] *Klack.* Der Strom ist weg.
+[bad fuell=0.75 hahn=tropft licht=kerze du] Du rennst ins Bad und drehst den Hahn auf. Ein Gurgeln. Ein paar Tropfen. Dann *nichts*.
+[hochhaus etage=24 bis_etage=8 nacht wasser=weg druck=5 strom=false zombies=1-10] Die Pumpen stehen still. Und das Wasser im 24. Stock ist *weg*.
+[gesicht walter ort=wohnung nacht licht=kerze froh] Walter grinst. „Gut, dass du die Wanne gefüllt hast.“
+
+== Szene 10: Das Klopfen ==
+@hud zeit=23:58
+[wohnung du walter nacht licht=kerze vorhang=zu] Kurz vor Mitternacht. Ihr wollt gerade schlafen.
+[treppenhaus etage=24 licht=aus zombies=false wackeln=0.4] Da hört ihr Schritte im Treppenhaus. *Schnelle* Schritte.
+[gesicht du ort=wohnung nacht licht=kerze angst] Sie kommen näher. Etage für Etage.
+[hochhaus etage=18 bis_etage=24 nacht strom=false zombies=1-10] Zweiundzwanzig. Dreiundzwanzig. *Vierundzwanzig*.
+[treppenhaus etage=24 licht=aus klopfen wackeln=1] Dann: Jemand hämmert gegen deine Tür.
+[gesicht du ort=treppenhaus licht=taschenlampe schreck zoom-rein] Und du weißt nicht, ob da draußen noch ein *Mensch* steht.
+[titel gross="Fortsetzung folgt" oben="Folge 2: Kein Druck" farbe="#2a0d0b" dauer=3.5]

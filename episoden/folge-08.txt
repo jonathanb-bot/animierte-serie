@@ -1,0 +1,85 @@
+# Folge 8: Die Apotheke
+
+== Szene 1: Klingeln ==
+@zeit tag
+@hud tag=10 zeit=13:45 wasser=300/400L essen=6/10Tage akku=60/100%
+[strasse tag horde=16 laerm_x=150 zoom-rein] Das Handy klingelt auf dem Vordach der Apotheke. Und sie kommen von *überall*.
+[strasse tag horde=18 laerm_x=150 schwenk-links] Aus Seitenstraßen. Aus Hauseingängen. Aus kaputten Autos.
+[gesicht du ort=treppenhaus licht=taschenlampe angst] Du stehst hinter der Hoftür und zählst. Bei zwanzig hörst du *auf*.
+[titel oben="Folge 8" gross="Die Apotheke" unten="24. Stock" dauer=3]
+== Was bisher geschah ==
+[karte orte=haus,apotheke route="haus>apotheke" horden=supermarkt hud=false] Was bisher geschah: Mila braucht Medikamente. Die Apotheke liegt *direkt gegenüber*.
+[treppenhaus etage=12 licht=aus du:taschenlampe kai zombies hud=false] Du und Kai seid zwanzig Etagen nach unten geschlichen.
+[strasse tag horde=14 laerm_x=150 hud=false] Aber das Handy zur Ablenkung ist auf dem Dach der *Apotheke* gelandet. Und hat zu früh geklingelt.
+
+== Szene 2: Warten ==
+@hud zeit=13:52
+[treppenhaus etage=1 licht=aus du kai] Nach ein paar Minuten verstummt das Klingeln. Der Akku ist leer.
+[strasse tag horde=18 laerm_x=150 zoom-raus] Aber sie gehen nicht weg. Sie bleiben einfach *stehen*. Vor der Apotheke.
+[gesicht kai ort=treppenhaus licht=taschenlampe traurig] Kai flüstert: „Das ist meine Schuld. Ich hab das *verbockt*.“
+[gesicht du ort=treppenhaus licht=taschenlampe entschlossen] Du sagst: „Dann reparieren wir es. Wir brauchen eine *zweite* Ablenkung.“
+
+== Szene 3: Kais Idee ==
+[gesicht kai ort=treppenhaus licht=taschenlampe denkt] Kai denkt nach. Dann leuchten seine Augen.
+[strasse tag horde=4 alarm zoom-rein] „Am Ende der Straße steht ein Lieferwagen. Wenn ich die Scheibe einschlage, geht die *Alarmanlage* los.“
+[gesicht du ort=treppenhaus licht=taschenlampe besorgt] „Und dann? Dann rennen sie alle zu *dir*.“
+[gesicht kai ort=treppenhaus licht=taschenlampe froh] Kai grinst schief. „Ich war Fahrradkurier. Ich bin *schnell*.“
+[treppenhaus etage=1 licht=aus du kai:winkt] Bevor du etwas sagen kannst, ist er weg.
+
+== Szene 4: Der Alarm ==
+@hud zeit=14:03
+[strasse tag horde=18 laerm_x=150 zoom-raus] Eine Minute. Zwei. Nichts passiert.
+[strasse tag alarm horde=18 laerm_x=980 wackeln=0.5] Dann schreit die Alarmanlage los. Laut. *Grell*.
+[strasse tag horde=18 laerm_x=1000 schwenk-rechts] Sie drehen sich um. Alle. Und setzen sich in Bewegung. *Weg* von der Apotheke.
+[strasse tag horde=4 laerm_x=1050 du:rennt figur_x=200 zoom-raus] Jetzt oder nie. Du rennst.
+
+== Szene 5: Über die Straße ==
+[strasse tag horde=5 laerm_x=1050 du:rennt figur_x=400] Vierzig Meter. Scherben unter deinen Schuhen. Dein Herz hämmert.
+[gesicht du ort=strasse tag angst zoom-rein] Einer von ihnen steht noch mitten auf der Straße. Er *dreht* den Kopf.
+[strasse tag horde=3 laerm_x=1050 du:psst figur_x=520] Du bleibst stehen. Völlig still. Er schaut. Und schaut. Dann dreht er sich *weg*. Zum Alarm.
+[strasse tag horde=3 laerm_x=1050 du:geht figur_x=180 schwenk-links] Du schleichst weiter. Durch das zerbrochene Schaufenster. Hinein.
+
+== Szene 6: Im Dunkeln ==
+@hud zeit=14:06
+[wohnung du:taschenlampe tag licht=aus vorhang=zu moebel=false wand="#c8d4cc"] In der Apotheke ist es dunkel. Die Rollläden sind halb unten.
+[gesicht du ort=treppenhaus licht=taschenlampe besorgt] Taschenlampe nach unten. Wie Walter es gesagt hat. Licht verrät dich *auch hier*.
+[objekt objekte="medizin:Fiebersaft Kinder|tropfen:Elektrolyte" gross="Die Liste"] Lena hat es dir aufgeschrieben. Fiebersaft für Kinder. Elektrolyte. Mehr *nicht*.
+[gesicht du ort=treppenhaus licht=taschenlampe denkt] Regal für Regal. Erkältung. Allergie. Haut. Dann: *Kinder*.
+
+== Szene 7: Hinter dem Tresen ==
+[gesicht du ort=treppenhaus licht=taschenlampe schreck zoom-rein] Du greifst zu. Und hörst ein Geräusch. Direkt hinter dir.
+[treppenhaus etage=1 licht=aus du:taschenlampe zombies] Hinter dem Verkaufstresen. Ein Mann im weißen Kittel. Der *Apotheker*.
+[gesicht du ort=treppenhaus licht=taschenlampe angst] Er ist eingeklemmt. Zwischen Tresen und Regal. Er kommt nicht raus. Aber er *stöhnt*.
+[strasse tag horde=6 laerm_x=1050 zoom-rein] Und jedes Stöhnen ist ein Signal für die anderen draußen.
+@hud essen=6/10Tage
+[objekt objekte="medizin:Fiebersaft|tropfen:Elektrolyte|medizin:Verband" gross="Eingepackt"] Du stopfst alles in die Jacke. Fiebersaft. Elektrolyte. Verbandszeug. Und raus.
+
+== Szene 8: Wo ist Kai? ==
+@hud zeit=14:14
+[strasse tag horde=4 du:rennt figur_x=700 schwenk-rechts] Du rennst zurück über die Straße. Die Alarmanlage ist verstummt.
+[strasse tag horde=14 laerm_x=1000 zoom-raus] Am Ende der Straße: eine riesige Traube von *ihnen*. Rund um den Lieferwagen.
+[gesicht du ort=strasse tag besorgt zoom-rein] Und keine Spur von Kai.
+[treppenhaus etage=1 licht=aus du:taschenlampe] Du wartest am Hinterausgang. Eine Minute. Fünf. Zehn.
+[gesicht du ort=treppenhaus licht=taschenlampe traurig] Mila braucht die Medikamente. Du *musst* gehen.
+
+== Szene 9: Zwanzig Etagen ==
+@hud zeit=14:40
+[hochhaus etage=1 bis_etage=19 tag strom=false barrikade=20 zombies="3-12"] Du rennst die Treppe hoch. Etage für Etage. Deine Beine brennen.
+[treppenhaus etage=12 licht=aus du:rennt zombies] Am zwölften Stock vorbei. Ohne hinzusehen.
+[treppenhaus etage=20 licht=aus barrikade du:haende_hoch] Zwanzig. Die Barrikade. Du kletterst hoch. Ganz oben am Geländer.
+[gesicht du ort=treppenhaus licht=taschenlampe muede] Und dann schaust du nach unten. Durch den Spalt zwischen den Treppen.
+
+== Szene 10: Die offene Tür ==
+[hochhaus etage=1 bis_etage=10 tag strom=false zombies="1-12" horde=20 laerm_x=880] Unten im Erdgeschoss bewegt sich etwas. *Viel*. Sehr viel.
+[gesicht du ort=treppenhaus licht=taschenlampe schreck] Und dir wird schlecht. Weil dir etwas klar wird.
+[objekt objekte="schluessel:Hintertür offen" farbe="#4a1e1e"] Du hast die Hintertür *offen* gelassen.
+[hochhaus etage=4 bis_etage=14 tag strom=false zombies="1-14" horde=20 wackeln=0.4] Die Horde vom Lieferwagen ist dir gefolgt. Ins Haus. Ins Treppenhaus.
+[gesicht du ort=treppenhaus licht=taschenlampe angst zoom-rein] Und sie kommen *hoch*.
+[titel gross="Fortsetzung folgt" oben="Folge 9: Die Horde" farbe="#2a0d0b" dauer=3.5]
+
+
+== Überlebens-Check ==
+@hud aus
+[objekt objekte="schluessel:Tür offen" gross="Überlebens-Check" farbe="#1e2f45"] Überlebens-Check! Welchen Fehler hast du in dieser Folge *gemacht*?
+[objekt objekte="schluessel:Tür offen" gross="Die Antwort" farbe="#1e3a2a"] Die Hintertür. Jede offene Tür ist eine *Einladung*.
+[titel gross="Was hättest du|gemacht?" groesse=120 unten="Schreib es in die Kommentare" farbe="#1e2f45" dauer=3.5]

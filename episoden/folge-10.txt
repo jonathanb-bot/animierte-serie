@@ -1,0 +1,85 @@
+# Folge 10: Das Dach
+
+== Szene 1: Flucht nach oben ==
+@zeit nacht
+@hud tag=11 zeit=23:58 wasser=290/400L essen=4/10Tage akku=40/100%
+[treppenhaus etage=23 licht=aus zombies klopfen wackeln=1] Das Stöhnen kommt von unten. Dreiundzwanzig. Ganz nah.
+[wohnung du:traegt lena mila walter nacht licht=kerze vorhang=zu] Ihr nehmt nur das Wichtigste. Wasser. Medikamente. Decken. Die *Taschenlampe*.
+[treppenhaus etage=25 licht=aus du:taschenlampe lena mila walter] Dann die schmale Treppe zum Dach. Mila auf Lenas Rücken.
+[gesicht du ort=treppenhaus licht=taschenlampe angst zoom-rein] Hinter euch: Schritte. Viele Schritte. Auf *eurer* Etage.
+[titel oben="Folge 10" gross="Das Dach" unten="Staffelfinale" dauer=3]
+== Was bisher geschah ==
+[gesicht kai ort=dach froh hud=false] Was bisher geschah: Kai lebt. Er hat sich aufs Dach *gegenüber* gerettet.
+[dach tank=0.7 tonnen sos du:traegt lena:traegt hud=false] Ihr habt ein riesiges *SOS* auf euer Dach gelegt.
+[treppenhaus etage=20 licht=aus barrikade zombies klopfen wackeln=1.5 hud=false] Und mitten in der Nacht ist die Barrikade *gebrochen*.
+
+== Szene 2: Die Stahltür ==
+@hud tag=12 zeit=00:04
+[dach nacht tank=0.7 tonnen sos du:traegt walter wackeln=0.6] Ihr knallt die Stahltür hinter euch zu. Aber das Schloss ist *kaputt*. Kai hat es aufgebrochen.
+[gesicht walter ort=dach nacht licht=taschenlampe denkt] Walter schaut sich um. „Wir brauchen etwas Langes. Aus *Metall*.“
+[dach nacht tank=0.7 tonnen sos du:zeigt walter] Die Leiter am Wassertank. Ihr reißt das untere Stück ab. Und verkeilt es quer vor der Tür.
+[treppenhaus etage=25 licht=aus zombies klopfen wackeln=1.4] Sekunden später: Schläge gegen die Tür. Von *innen*.
+[gesicht du ort=dach nacht licht=taschenlampe entschlossen] Sie hält. Jeder Schlag bringt die Stange zum Zittern. Aber sie *hält*.
+
+== Szene 3: Die längste Nacht ==
+@hud zeit=03:20
+[dach nacht tank=0.7 tonnen sos du lena mila walter] Ihr sitzt auf dem Dach. Eng zusammen. Unter euch hämmern sie gegen die Tür.
+[gesicht mila ort=dach nacht angst] Mila hält sich die Ohren zu. „Hören die *nie* auf?“
+[gesicht lena ort=dach nacht traurig] Lena flüstert: „Nein. Aber wir auch *nicht*.“
+[skyline nacht zoom-raus] Über euch die Sterne. Unter euch eine Stadt, die nicht mehr *schläft*. Und nicht mehr *lebt*.
+
+== Szene 4: Morgengrauen ==
+@zeit morgen
+@hud zeit=06:10 akku=30/100%
+[dach morgen tank=0.7 tonnen sos du lena mila walter] Dann wird es hell. Tag zwölf.
+[skyline morgen zoom-rein] Auf dem Dach gegenüber blitzt es. *Kai*. Er ist noch da.
+[gesicht kai ort=dach morgen froh] Er zeigt nach Osten. Immer wieder. *Kurz. Lang. Kurz*.
+[objekt objekte="ohr:Rotoren" farbe="#2a3a4a"] Und dann hört ihr es. Das Knattern. Lauter als jemals zuvor.
+
+== Szene 5: Das Signal ==
+[dach morgen tank=0.7 tonnen sos heli du:zeigt_hoch walter] Ein Hubschrauber. Weit weg. Er fliegt die Dächer ab, eins nach dem anderen.
+[gesicht walter ort=dach morgen entschlossen] „*Jetzt*!“, ruft Walter. „Jetzt das Feuer!“
+[dach morgen tank=0.7 tonnen sos signal du:traegt] Kais Gaskocher. Ein alter Autoreifen aus dem Technikraum-Lager. Nasse Tücher darüber.
+[dach morgen tank=0.7 tonnen sos signal du lena:winkt mila:winkt] Dicker, *dunkler* Rauch steigt auf. Über allen anderen Dächern.
+[objekt objekte="feuer:Rauch|auge:Spiegel|decke:SOS" gross="Alle Signale"] SOS. Rauch. Spiegel. Alles gleichzeitig.
+
+== Szene 6: Er dreht ab ==
+[skyline morgen heli zoom-rein] Der Hubschrauber wird langsamer. Er bleibt in der Luft *stehen*.
+[gesicht du ort=dach morgen besorgt zoom-rein] Dann dreht er sich. Ganz langsam. Und kommt *auf euch zu*.
+[dach morgen tank=0.7 tonnen sos signal heli=kommt du:winkt lena:winkt mila:winkt walter:winkt] Ihr springt. Ihr winkt. Mila *schreit* vor Freude.
+
+== Szene 7: Die Tür ==
+[treppenhaus etage=25 licht=aus zombies klopfen wackeln=2 blitz] Aber der Lärm des Hubschraubers macht *sie* wahnsinnig.
+[dach morgen tank=0.7 tonnen sos heli=kommt walter:haende_hoch wackeln=1] Die Schläge gegen die Tür werden *wilder*. Die Metallstange biegt sich.
+[gesicht walter ort=dach morgen entschlossen] Walter stemmt sich mit dem ganzen Körper gegen die Tür. „Geht! Kinder zuerst!“
+
+== Szene 8: Rettung ==
+@hud zeit=06:31
+[dach morgen tank=0.7 tonnen sos heli=kommt lena mila] Aus dem Hubschrauber wird eine Rettungswinde heruntergelassen. Ein Soldat hängt daran.
+[gesicht pilotin ort=dach morgen entschlossen] „Wie viele seid ihr?“ „*Vier*. Und einer auf dem Dach gegenüber!“
+[dach morgen tank=0.7 tonnen sos heli=kommt lena:froh mila:froh] Erst Mila. Dann Lena. Dann du.
+[gesicht du ort=dach morgen schreck zoom-rein] Und als du oben bist, siehst du die Tür *aufbrechen*.
+[dach morgen tank=0.7 tonnen sos heli=kommt walter:rennt zombie2 zombie4 wackeln=0.8] Walter rennt. Der Soldat packt ihn am Arm. Und zieht ihn in letzter Sekunde *hoch*.
+
+== Szene 9: Kai ==
+[skyline morgen heli zoom-raus] Der Hubschrauber dreht ab. Zum Dach gegenüber.
+[gesicht kai ort=dach morgen froh] Kai steht schon da. Mit dem Spiegel in der Hand. Er hat euch den Hubschrauber *geschickt*.
+[gesicht walter ort=dach morgen froh] Als er an Bord klettert, sagt Walter nur: „Du Idiot.“ Und *umarmt* ihn.
+[gesicht mila ort=dach morgen froh] Mila lacht. Zum ersten Mal seit Tagen.
+
+== Szene 10: Die drei Regeln ==
+@hud aus
+[skyline morgen zoom-raus rauch] Unter euch zieht die Stadt vorbei. Euer Hochhaus wird immer *kleiner*.
+[objekt objekte="tropfen:Wasser sichern|ohr:Leise sein|auge:Kein Licht" gross="Die drei Regeln"] Zwölf Tage. Und drei Regeln, die euch das Leben gerettet haben.
+[gesicht du ort=dach morgen froh] Wasser sichern. Leise sein. *Kein Licht*.
+[skyline abend zoom-rein rauch] Am Abend erreicht ihr das Stadion. Tausende Menschen. Zelte. Soldaten.
+[skyline nacht nah licht] Und das Flutlicht ist *an*. Hell. Weithin sichtbar. Die ganze Nacht.
+[gesicht du ort=dach nacht schreck zoom-rein] Und du denkst nur eins: *Das ist ein Fehler*.
+[titel gross="Ende Staffel 1" oben="24. Stock" unten="Fortsetzung folgt …" farbe="#2a0d0b" dauer=4]
+
+
+== Überlebens-Check ==
+@hud aus
+[objekt objekte="tropfen:Wasser|ohr:Lärm|auge:Licht" gross="Überlebens-Check" farbe="#1e2f45"] Überlebens-Check! Wärst du ins Stadion gegangen? Oder *oben* geblieben?
+[objekt objekte="tropfen:Wasser|ohr:Lärm|auge:Licht" gross="Die Antwort" farbe="#1e3a2a"] Wasser sichern. Leise sein. Kein Licht. Und *niemals* vergessen.
+[titel gross="Was hättest du|gemacht?" groesse=120 unten="Schreib es in die Kommentare" farbe="#1e2f45" dauer=3.5]

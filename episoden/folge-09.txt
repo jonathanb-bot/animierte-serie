@@ -1,0 +1,85 @@
+# Folge 9: Die Horde
+
+== Szene 1: Zurück oben ==
+@zeit tag
+@hud tag=10 zeit=14:58 wasser=300/400L essen=5/10Tage akku=55/100%
+[treppenhaus etage=24 licht=aus du:traegt lena] Du stolperst in die Wohnung. Lena nimmt dir die Medikamente ab, ohne ein Wort.
+[wohnung lena mila du tag licht=aus vorhang=zu] Fiebersaft. Elektrolyte in abgekochtem Wasser. Schluck für Schluck.
+[gesicht du ort=wohnung tag muede] Dann erst erzählst du es. Kai. Die Hintertür. Die *Horde*.
+[titel oben="Folge 9" gross="Die Horde" unten="24. Stock" dauer=3]
+== Was bisher geschah ==
+[strasse tag alarm horde=18 laerm_x=980 hud=false] Was bisher geschah: Kai hat die Horde mit einer Autoalarmanlage *weggelockt*.
+[objekt objekte="medizin:Fiebersaft|tropfen:Elektrolyte" hud=false] Du hast die Medikamente für Mila geholt.
+[gesicht du ort=treppenhaus licht=taschenlampe schreck hud=false] Aber du hast die Hintertür *offen* gelassen. Und Kai ist nicht zurückgekommen.
+
+== Szene 2: Im Treppenhaus ==
+@hud zeit=15:40
+[hochhaus etage=14 bis_etage=20 tag strom=false barrikade=20 zombies="1-19"] Eine Stunde später sind sie da. An der Barrikade im zwanzigsten Stock.
+[treppenhaus etage=20 licht=aus barrikade zombies klopfen wackeln=0.6] Sie drücken. Sie kratzen. Und das Stöhnen hallt durch das *ganze* Haus.
+[gesicht walter ort=treppenhaus licht=taschenlampe besorgt] Walter schaut sich die Barrikade an. „Sie hält. Noch. Aber je mehr kommen, desto *stärker* drücken sie.“
+[objekt objekte="zombiekopf:Dutzende" farbe="#3a1e1e"] Einer allein kann keine Barrikade umwerfen. Fünfzig *schon*.
+
+== Szene 3: Verstärken ==
+[treppenhaus etage=21 licht=aus du:traegt walter:zeigt] Ihr holt alles, was noch schwer ist. Kühlschränke. Bücherregale. Eine *Badewanne*.
+[objekt objekte="treppe:Verkeilen|decke:Leise sein" gross="Trick"] Walters Trick: Alles wird gegen die Stufen *verkeilt*. Je mehr sie drücken, desto fester sitzt es.
+[treppenhaus etage=20 licht=aus barrikade du:huefte walter] Die Barrikade ist jetzt doppelt so hoch. Für heute *muss* das reichen.
+
+== Szene 4: Mila ==
+@zeit nacht
+@hud tag=11 zeit=05:30
+[wohnung lena mila nacht licht=kerze vorhang=zu] In der Nacht sitzt Lena die ganze Zeit neben Mila.
+[gesicht lena ort=wohnung nacht licht=kerze froh zoom-rein] Gegen Morgen legt sie ihr die Hand auf die Stirn. Und *lächelt* zum ersten Mal seit Tagen.
+[gesicht mila ort=wohnung nacht licht=kerze muede] „Lena? Ich hab Hunger.“
+[gesicht lena ort=wohnung nacht licht=kerze froh] Das Fieber *sinkt*.
+
+== Szene 5: Ein Blitz ==
+@zeit tag
+@hud zeit=09:15
+[dach tank=0.7 tonnen du walter] Am Morgen geht ihr aufs Dach. Ihr braucht Luft. Und einen Plan.
+[skyline tag zoom-rein] Da blitzt etwas auf. Auf dem Dach des Hochhauses *gegenüber*.
+[objekt objekte="auge:Lichtsignal" farbe="#2a3a4a"] Kurz. Lang. Kurz. Jemand spiegelt die Sonne. Direkt zu euch.
+[gesicht du ort=dach froh zoom-rein] Du kneifst die Augen zusammen. Eine Gestalt. Mit Rucksack. Sie *winkt*.
+[gesicht kai ort=dach froh] Es ist *Kai*. Er hat es aufs andere Dach geschafft.
+
+== Szene 6: Der Tag der Evakuierung ==
+[objekt objekte="funkgeraet:Heute: Tag 11" farbe="#1e3a2a"] Und dann fällt euch ein, welcher Tag heute ist. Tag elf. Der Tag der *Evakuierung*.
+[gesicht walter ort=dach entschlossen] Walter: „Ins Stadion kommen wir nicht. Also muss der Hubschrauber zu *uns* kommen.“
+[dach tank=0.7 tonnen heli du:zeigt_hoch walter] Die Hubschrauber suchen die Dächer ab. Aber vor drei Tagen ist einer *einfach weitergeflogen*.
+[gesicht du ort=dach denkt] Ihr braucht ein Zeichen. Eins, das man von oben *nicht übersehen* kann.
+
+== Szene 7: Signale ==
+[objekt objekte="decke:Bettlaken|auge:SOS" gross="Signal 1"] Erstens: weiße Bettlaken. Ausgelegt als drei riesige Buchstaben. *S. O. S.*
+[dach tank=0.7 tonnen sos=malt du:traegt lena:traegt] Ihr holt jedes helle Laken aus jeder leeren Wohnung.
+[objekt objekte="auge:Spiegel" gross="Signal 2"] Zweitens: ein Spiegel. Wie Kai. Ein Blitz aus Sonnenlicht ist *kilometerweit* zu sehen.
+[objekt objekte="feuer:Rauch" gross="Signal 3"] Drittens: Rauch. Aber nur, wenn ein Hubschrauber *da ist*. Feuer auf einem Dach ist gefährlich.
+[dach tank=0.7 tonnen sos walter:froh du:huefte zoom-raus] Am Mittag liegt da ein SOS, so groß wie ein Tennisplatz.
+
+== Szene 8: Warten ==
+@zeit abend
+@hud zeit=17:30
+[dach abend tank=0.7 tonnen sos du lena mila walter] Ihr wartet. Mila ist eingewickelt in eine Decke. Sie ist schwach. Aber sie *lebt*.
+[skyline abend zoom-raus] Weit weg hört ihr Rotoren. Richtung Stadion. Immer wieder.
+[gesicht lena ort=dach abend besorgt] Aber keiner kommt zu euch.
+[gesicht walter ort=dach abend entschlossen] „Morgen“, sagt Walter. „Morgen fliegen sie *nochmal*.“
+
+== Szene 9: Das Geräusch ==
+@zeit nacht
+@hud zeit=23:50 akku=40/100%
+[wohnung du lena mila walter nacht licht=kerze vorhang=zu] In der Nacht schläft keiner richtig.
+[treppenhaus etage=20 licht=aus barrikade zombies klopfen wackeln=0.8] Das Drücken an der Barrikade wird *lauter*. Rhythmischer.
+[gesicht walter ort=wohnung nacht licht=kerze angst] Walter steht auf. „Das sind jetzt hundert. Mindestens.“
+[hochhaus etage=16 bis_etage=21 nacht strom=false barrikade=20 zombies="1-19" wackeln=0.5] Das ganze Treppenhaus ist voll. Bis runter ins *Erdgeschoss*.
+
+== Szene 10: Es bricht ==
+[treppenhaus etage=20 licht=aus barrikade zombies klopfen wackeln=1.5 blitz] Dann: ein Krachen. Holz splittert. Metall kreischt.
+[gesicht du ort=wohnung nacht licht=kerze schreck zoom-rein] Die Barrikade im zwanzigsten Stock ist *gebrochen*.
+[hochhaus etage=20 bis_etage=23 nacht strom=false zombies="1-21" wackeln=0.6] Einundzwanzig. Zweiundzwanzig. Sie kommen.
+[gesicht walter ort=wohnung nacht licht=kerze entschlossen] Walter greift nach Milas Hand. „*Aufs Dach*. Sofort.“
+[titel gross="Fortsetzung folgt" oben="Folge 10: Das Dach" farbe="#2a0d0b" dauer=3.5]
+
+
+== Überlebens-Check ==
+@hud aus
+[objekt objekte="decke:SOS|auge:Spiegel|feuer:Rauch" gross="Überlebens-Check" farbe="#1e2f45"] Überlebens-Check! Welche Signale sieht ein Hubschrauber *am besten*?
+[objekt objekte="decke:SOS|auge:Spiegel|feuer:Rauch" gross="Die Antwort" farbe="#1e3a2a"] Große helle Zeichen, Spiegelblitze und Rauch. Am besten *alles zusammen*.
+[titel gross="Was hättest du|gemacht?" groesse=120 unten="Schreib es in die Kommentare" farbe="#1e2f45" dauer=3.5]
