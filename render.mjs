@@ -24,6 +24,22 @@ const FPS = Number(opt("fps", vorschau ? 15 : ep.fps || 30));
 const W = 1080, H = 1920;
 
 const dauerVon = f => Number(execFileSync("ffprobe", ["-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", f]).toString().trim());
+// Echte Wortzeiten (audio/folge-XX/NNN.json, z. B. von `python -m ton.folge`) den Drehbuch-Wörtern zuordnen
+const norm = w => w.toLowerCase().replace(/[^a-z0-9äöüß]/g, "");
+function wortzeiten(roh, datei) {
+  if (!fs.existsSync(datei)) return null;
+  const wz = JSON.parse(fs.readFileSync(datei, "utf8"));
+  const out = []; let j = 0;
+  for (const w of roh) {
+    const ziel = norm(w);
+    if (!ziel) { out.push(null); continue; }
+    let acc = "", a = null, b = null;
+    while (j < wz.length && acc.length < ziel.length) { if (a === null) a = wz[j].start; acc += norm(wz[j].w); b = wz[j].ende; j++; }
+    if (a === null || acc !== ziel) return null;
+    out.push([a, b]);
+  }
+  return out.map((z, k) => z || [out[k - 1]?.[1] ?? 0, out[k - 1]?.[1] ?? 0]);
+}
 
 // ---------- Timing ----------
 let start = 0;
@@ -39,10 +55,12 @@ const szenen = ep.szenen.map((s, i) => {
   const summe = gew.reduce((a, b) => a + b, 0) || 1;
   const t0 = audio ? 0.05 : 0.15, t1 = audio ? sprechDauer - 0.05 : Math.min(dauer - 0.3, t0 + sprechDauer);
   let acc = t0;
+  const echt = audio ? wortzeiten(roh, audio.replace(/\.(mp3|wav)$/, ".json")) : null;
   const woerter = roh.map((w, k) => {
     const len = (gew[k] / summe) * (t1 - t0);
     const key = /^\*.*\*[.,!?…:;]?$/.test(w);
-    const o = { w: w.replace(/\*/g, ""), start: acc, ende: acc + len, key };
+    const o = echt ? { w: w.replace(/\*/g, ""), start: echt[k][0], ende: echt[k][1], key }
+                   : { w: w.replace(/\*/g, ""), start: acc, ende: acc + len, key };
     acc += len; return o;
   });
   const o = { ...s, start, dauer, woerter, _audio: audio || null };

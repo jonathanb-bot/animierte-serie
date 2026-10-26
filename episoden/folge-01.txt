@@ -1,4 +1,7 @@
 # Folge 1: Der erste Tag
+@musik musik/folge-01.mp3
+@musik_lautstaerke 1
+@whoosh aus
 
 == Szene 1: Kalter Einstieg ==
 [skyline nacht fahrt dauer=4.5] Stell dir vor, die *Zombie-Apokalypse* bricht aus.

@@ -5,6 +5,6 @@
 - Folgen sind `episoden/folge-XX.txt` (Drehbuch-Format). Ziel ca. 5 Minuten, 10 Kapitel, ~50–65 Einstellungen. Du-Erzählung, Cliffhanger am Ende, danach „Überlebens-Check“.
 - Vor jedem Push: `node render.mjs <datei> --bilder` und die Standbilder ansehen.
 - Figuren nur in `figuren.json` ändern, dann bleiben sie in allen Folgen gleich.
-- Stimme: `audio/folge-XX/NNN.mp3` pro Einstellung (ElevenLabs via Shotstack, vorher Kosten nennen).
+- Stimme + Hintergrund kostenlos: `python -m ton.folge episoden/folge-XX.txt` (Stil der Vorlage: eine tiefe Erzählstimme, Drone, Stille-Schnitte, dezente Geräusche), danach `python -m ton.pruefen folge-XX` (Ziel ~ -15 LUFS, ~12 dB Abstand). ElevenLabs nur nach Kostenangabe.
 - Push → GitHub Actions rendert (Matrix, max. 5 parallel) → Releases.
 - Sprache: Deutsch.

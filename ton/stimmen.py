@@ -221,7 +221,15 @@ def sprechen_viele(auftraege: list[tuple[Sprecher, str, str]]) -> list[Gesproche
             cues.append((t, t + len(x) / A.SR, s.text))
             versatz = t - a / A.SR
             for w0, w1, w in json.loads(datei.with_suffix(".json").read_text()):
-                woerter.append((max(t, w0 + versatz), min(t + len(x) / A.SR, w1 + versatz), w, akzente.get(norm(w))))
+                # manchmal fasst der Dienst mehrere Wörter zu einer Marke zusammen ("der Straße") -> aufteilen
+                teile = w.split()
+                gesamt = sum(len(x) + 1 for x in teile)
+                a0 = w0
+                for teil in teile:
+                    a1 = a0 + (w1 - w0) * (len(teil) + 1) / gesamt
+                    woerter.append((max(t, a0 + versatz), min(t + len(x) / A.SR, a1 + versatz), teil,
+                                    akzente.get(norm(teil))))
+                    a0 = a1
             t += len(x) / A.SR
             if j < len(ss) - 1:
                 stuecke.append(np.zeros(A.sek(s.pause), np.float32))
