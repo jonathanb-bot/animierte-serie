@@ -587,9 +587,9 @@
     const atem = 1 + Math.sin(t * 2) * 0.006;
     ctx.save(); ctx.translate(540, 1000 + bob); ctx.scale(atem, atem);
     // Schultern
-    box(-110, 140, 220, 240, 60, shade(f.haut, -0.18));
+    box(-120, 120, 240, 260, 60, shade(f.haut, -0.12));
     ctx.beginPath(); ctx.moveTo(-470, 1200); ctx.bezierCurveTo(-460, 520, -360, 400, -150, 360); ctx.lineTo(150, 360); ctx.bezierCurveTo(360, 400, 460, 520, 470, 1200); ctx.closePath(); fill(f.jacke);
-    ctx.beginPath(); ctx.moveTo(-470, 1200); ctx.bezierCurveTo(-460, 520, -360, 400, -150, 360); ctx.lineTo(150, 360); ctx.bezierCurveTo(360, 400, 460, 520, 470, 1200); ctx.closePath(); A.weich(-470, 360, 470, 1200);
+    ctx.beginPath(); ctx.moveTo(-470, 1200); ctx.bezierCurveTo(-460, 520, -360, 400, -150, 360); ctx.lineTo(150, 360); ctx.bezierCurveTo(360, 400, 460, 520, 470, 1200); ctx.closePath(); A.schattiere(-470, 470, 0.22);
     ctx.beginPath(); ctx.moveTo(-150, 365); ctx.quadraticCurveTo(0, 470, 150, 365); ctx.lineTo(120, 340); ctx.quadraticCurveTo(0, 420, -120, 340); ctx.closePath(); fill(shade(f.jacke, -0.12));
     if (f.rucksack) for (const sx of [-1, 1]) box(sx * 250 - 25, 420, 50, 800, 20, f.rucksack);
     A.kopf(0, -60, 330, f, { t, ausdruck: s.ausdruck, spricht: s._spricht && (s.sprecher ? s.sprecher === s.figur : true) && s.stumm !== true, blick: s.blick, drehung: s.drehung ?? Math.sin(t * 0.5) * 0.12, neigung: Math.sin(t * 0.9) * 0.025, seed: 4 });
