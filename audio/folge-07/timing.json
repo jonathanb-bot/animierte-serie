@@ -1,0 +1,455 @@
+{
+ "dauer": 205.13,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "wohnung",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 4.286,
+   "emotion": "erzaehlend",
+   "text": "Mila glüht. Lena wischt ihr mit einem feuchten Tuch über die Stirn."
+  },
+  {
+   "nr": 2,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 4.286,
+   "dauer": 3.998,
+   "emotion": "ernst",
+   "text": "„Durchfall und Fieber. Sie verliert Wasser *schneller*, als sie trinken kann.“"
+  },
+  {
+   "nr": 3,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 8.284,
+   "dauer": 6.23,
+   "emotion": "ernst",
+   "text": "Es ist nicht der Hunger, der Menschen in so einer Lage umbringt. Es ist *Wasser*. Zu wenig. Oder das *falsche*."
+  },
+  {
+   "nr": 4,
+   "typ": "titel",
+   "kapitel": 1,
+   "start": 14.514,
+   "dauer": 3.0,
+   "emotion": null,
+   "text": ""
+  },
+  {
+   "nr": 5,
+   "typ": "dach",
+   "kapitel": 2,
+   "start": 17.514,
+   "dauer": 5.246,
+   "emotion": "erzaehlend",
+   "text": "Was bisher geschah: Ihr habt auf dem Dach anderthalbtausend Liter *Wasser* gefunden."
+  },
+  {
+   "nr": 6,
+   "typ": "dach",
+   "kapitel": 2,
+   "start": 22.76,
+   "dauer": 3.83,
+   "emotion": "froh",
+   "text": "Ihr habt gelernt, Regen zu sammeln und Wasser *abzukochen*."
+  },
+  {
+   "nr": 7,
+   "typ": "skyline",
+   "kapitel": 2,
+   "start": 26.59,
+   "dauer": 3.206,
+   "emotion": "erzaehlend",
+   "text": "Ein Hubschrauber ist vorbeigeflogen. Ohne euch zu *sehen*."
+  },
+  {
+   "nr": 8,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 29.796,
+   "dauer": 5.078,
+   "emotion": "traurig",
+   "text": "Und Mila hat ungekochtes Tankwasser getrunken. Jetzt hat sie *hohes Fieber*."
+  },
+  {
+   "nr": 9,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 34.874,
+   "dauer": 3.47,
+   "emotion": "ernst",
+   "text": "Lena ist Pflege-Azubi. Sie weiß, was jetzt zählt."
+  },
+  {
+   "nr": 10,
+   "typ": "objekt",
+   "kapitel": 3,
+   "start": 38.344,
+   "dauer": 6.254,
+   "emotion": "erklaerend",
+   "text": "Erstens: trinken, trinken, trinken. Abgekocht. Mit etwas Salz und Zucker, damit der Körper es *hält*."
+  },
+  {
+   "nr": 11,
+   "typ": "objekt",
+   "kapitel": 3,
+   "start": 44.598,
+   "dauer": 4.934,
+   "emotion": "erklaerend",
+   "text": "Zweitens: Sie braucht ein Fiebermittel für Kinder. Und Elektrolyte aus der *Apotheke*."
+  },
+  {
+   "nr": 12,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 49.532,
+   "dauer": 4.694,
+   "emotion": "traurig",
+   "text": "„Zwei Tage“, sagt Lena. „Wenn es nicht besser wird, dann … zwei Tage.“"
+  },
+  {
+   "nr": 13,
+   "typ": "strasse",
+   "kapitel": 4,
+   "start": 54.226,
+   "dauer": 5.774,
+   "emotion": "erzaehlend",
+   "text": "Am Morgen schaut ihr vom Dach nach unten. Die Apotheke liegt direkt gegenüber. Vierzig Meter."
+  },
+  {
+   "nr": 14,
+   "typ": "karte",
+   "kapitel": 4,
+   "start": 60.0,
+   "dauer": 3.206,
+   "emotion": "erklaerend",
+   "text": "Vierzig Meter. Aber dazwischen: die *Straße*."
+  },
+  {
+   "nr": 15,
+   "typ": "strasse",
+   "kapitel": 4,
+   "start": 63.206,
+   "dauer": 4.358,
+   "emotion": "erzaehlend",
+   "text": "Zwölf von ihnen, mindestens. Sie stehen einfach da. Und warten."
+  },
+  {
+   "nr": 16,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 67.564,
+   "dauer": 3.878,
+   "emotion": "ernst",
+   "text": "Kai sagt: „Ich geh. Ich kenn die Gegend. Ich war Fahrradkurier.“"
+  },
+  {
+   "nr": 17,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 71.442,
+   "dauer": 1.814,
+   "emotion": "ernst",
+   "text": "Und du sagst: „Ich komm mit.“"
+  },
+  {
+   "nr": 18,
+   "typ": "hochhaus",
+   "kapitel": 5,
+   "start": 73.256,
+   "dauer": 4.382,
+   "emotion": "erzaehlend",
+   "text": "Das Problem ist nicht nur die Straße. Es sind die *vierundzwanzig Etagen* davor."
+  },
+  {
+   "nr": 19,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 77.638,
+   "dauer": 4.742,
+   "emotion": "erzaehlend",
+   "text": "Walter kennt den Hinterausgang. „Kellertreppe, dann der Hof. Da kommen nur die *Mülltonnen* hin.“"
+  },
+  {
+   "nr": 20,
+   "typ": "objekt",
+   "kapitel": 5,
+   "start": 82.38,
+   "dauer": 5.462,
+   "emotion": "erklaerend",
+   "text": "Zwanzig Etagen runter. Zu Fuß. Leise. Mit unbekannten Fluren *in jeder Etage*."
+  },
+  {
+   "nr": 21,
+   "typ": "gesicht",
+   "kapitel": 6,
+   "start": 87.842,
+   "dauer": 3.614,
+   "emotion": "erzaehlend",
+   "text": "„Wir brauchen eine Ablenkung“, sagt Kai. „Etwas, das sie *weglockt*.“"
+  },
+  {
+   "nr": 22,
+   "typ": "objekt",
+   "kapitel": 6,
+   "start": 91.456,
+   "dauer": 5.846,
+   "emotion": "erklaerend",
+   "text": "Ihr ladet ein altes Handy mit der Powerbank. Stellt einen Alarm auf *vierzehn Uhr*. Volle Lautstärke."
+  },
+  {
+   "nr": 23,
+   "typ": "dach",
+   "kapitel": 6,
+   "start": 97.302,
+   "dauer": 5.558,
+   "emotion": "erzaehlend",
+   "text": "Walter wirft es vom Dach. So weit wie möglich. Weg von der Apotheke. Ans andere Ende der Straße."
+  },
+  {
+   "nr": 24,
+   "typ": "strasse",
+   "kapitel": 6,
+   "start": 102.86,
+   "dauer": 4.262,
+   "emotion": "erzaehlend",
+   "text": "Um vierzehn Uhr klingelt es. Sie laufen hin. Und ihr habt *freie Bahn*."
+  },
+  {
+   "nr": 25,
+   "typ": "gesicht",
+   "kapitel": 6,
+   "start": 107.122,
+   "dauer": 2.558,
+   "emotion": "ernst",
+   "text": "„Und wenn es nicht klappt?“ Keiner antwortet."
+  },
+  {
+   "nr": 26,
+   "typ": "treppenhaus",
+   "kapitel": 7,
+   "start": 109.68,
+   "dauer": 4.55,
+   "emotion": "erzaehlend",
+   "text": "Halb eins. Ihr klettert über die Barrikade. Ab hier ist *Niemandsland*."
+  },
+  {
+   "nr": 27,
+   "typ": "treppenhaus",
+   "kapitel": 7,
+   "start": 114.23,
+   "dauer": 3.758,
+   "emotion": "erzaehlend",
+   "text": "Siebzehn. Sechzehn. Eure Schritte klingen viel zu laut."
+  },
+  {
+   "nr": 28,
+   "typ": "hochhaus",
+   "kapitel": 7,
+   "start": 117.988,
+   "dauer": 4.166,
+   "emotion": "erzaehlend",
+   "text": "Fünfzehn. Vierzehn. Hinter einer Wohnungstür: *Kratzen*."
+  },
+  {
+   "nr": 29,
+   "typ": "gesicht",
+   "kapitel": 7,
+   "start": 122.154,
+   "dauer": 3.23,
+   "emotion": "ernst",
+   "text": "Zwölf. Kais alte Etage. Er schaut nicht hin."
+  },
+  {
+   "nr": 30,
+   "typ": "treppenhaus",
+   "kapitel": 7,
+   "start": 125.384,
+   "dauer": 5.126,
+   "emotion": "erzaehlend",
+   "text": "Die Tür zum Flur steht offen. Drinnen stehen sie. Drei. Mit dem Rücken zu euch."
+  },
+  {
+   "nr": 31,
+   "typ": "gesicht",
+   "kapitel": 7,
+   "start": 130.51,
+   "dauer": 3.758,
+   "emotion": "spannend",
+   "text": "Ihr schleicht vorbei. Stufe. Für. *Stufe*."
+  },
+  {
+   "nr": 32,
+   "typ": "treppenhaus",
+   "kapitel": 8,
+   "start": 134.268,
+   "dauer": 4.142,
+   "emotion": "erzaehlend",
+   "text": "Erdgeschoss. Ihr habt es geschafft. Fünfundzwanzig Minuten bis zum Alarm."
+  },
+  {
+   "nr": 33,
+   "typ": "gesicht",
+   "kapitel": 8,
+   "start": 138.41,
+   "dauer": 3.566,
+   "emotion": "froh",
+   "text": "Kai flüstert: „Genug Zeit. Wir warten am Hinterausgang.“"
+  },
+  {
+   "nr": 34,
+   "typ": "objekt",
+   "kapitel": 8,
+   "start": 141.976,
+   "dauer": 4.238,
+   "emotion": "erklaerend",
+   "text": "Ihr sitzt im Dunkeln. Und wartet. Jede Minute fühlt sich an wie *zehn*."
+  },
+  {
+   "nr": 35,
+   "typ": "dach",
+   "kapitel": 9,
+   "start": 146.214,
+   "dauer": 2.87,
+   "emotion": "erzaehlend",
+   "text": "Oben auf dem Dach steht Walter mit dem Handy in der Hand."
+  },
+  {
+   "nr": 36,
+   "typ": "gesicht",
+   "kapitel": 9,
+   "start": 149.084,
+   "dauer": 3.302,
+   "emotion": "ernst",
+   "text": "Er holt aus. Und wirft. *So weit er kann*."
+  },
+  {
+   "nr": 37,
+   "typ": "skyline",
+   "kapitel": 9,
+   "start": 152.386,
+   "dauer": 4.958,
+   "emotion": "erzaehlend",
+   "text": "Das Handy fliegt. Und fliegt. Aber der Wind ist stärker, als er dachte."
+  },
+  {
+   "nr": 38,
+   "typ": "gesicht",
+   "kapitel": 9,
+   "start": 157.344,
+   "dauer": 2.654,
+   "emotion": "spannend",
+   "text": "Es dreht ab. *Zurück*. Richtung Straßenmitte."
+  },
+  {
+   "nr": 39,
+   "typ": "gesicht",
+   "kapitel": 10,
+   "start": 159.998,
+   "dauer": 4.142,
+   "emotion": "ernst",
+   "text": "Unten im Erdgeschoss schaust du auf die Uhr. Noch sechzehn Minuten."
+  },
+  {
+   "nr": 40,
+   "typ": "strasse",
+   "kapitel": 10,
+   "start": 164.14,
+   "dauer": 1.526,
+   "emotion": "erzaehlend",
+   "text": "Draußen ist alles still."
+  },
+  {
+   "nr": 41,
+   "typ": "strasse",
+   "kapitel": 10,
+   "start": 165.666,
+   "dauer": 3.59,
+   "emotion": "erzaehlend",
+   "text": "Dann klingelt es. *Jetzt*. Sechzehn Minuten zu früh."
+  },
+  {
+   "nr": 42,
+   "typ": "gesicht",
+   "kapitel": 10,
+   "start": 169.256,
+   "dauer": 6.614,
+   "emotion": "spannend",
+   "text": "Kai wird blass. „Ich hab den Alarm auf dreizehn Uhr vierundvierzig gestellt. Nicht vierzehn Uhr. Ich hab mich *vertippt*.“"
+  },
+  {
+   "nr": 43,
+   "typ": "strasse",
+   "kapitel": 11,
+   "start": 175.87,
+   "dauer": 1.622,
+   "emotion": "erzaehlend",
+   "text": "Und das ist noch nicht das Schlimmste."
+  },
+  {
+   "nr": 44,
+   "typ": "strasse",
+   "kapitel": 11,
+   "start": 177.492,
+   "dauer": 5.006,
+   "emotion": "erzaehlend",
+   "text": "Das Handy ist nicht am Ende der Straße gelandet. Sondern direkt auf dem Vordach der *Apotheke*."
+  },
+  {
+   "nr": 45,
+   "typ": "karte",
+   "kapitel": 11,
+   "start": 182.498,
+   "dauer": 4.094,
+   "emotion": "erklaerend",
+   "text": "Jeder einzelne von ihnen läuft jetzt genau dorthin, wo ihr *hinmüsst*."
+  },
+  {
+   "nr": 46,
+   "typ": "gesicht",
+   "kapitel": 11,
+   "start": 186.592,
+   "dauer": 3.662,
+   "emotion": "spannend",
+   "text": "Und oben im 24. Stock wird Milas Fieber immer *höher*."
+  },
+  {
+   "nr": 47,
+   "typ": "titel",
+   "kapitel": 11,
+   "start": 190.254,
+   "dauer": 3.5,
+   "emotion": null,
+   "text": ""
+  },
+  {
+   "nr": 48,
+   "typ": "objekt",
+   "kapitel": 12,
+   "start": 193.754,
+   "dauer": 3.974,
+   "emotion": "erklaerend",
+   "text": "Überlebens-Check! Was hättest du an Kais Stelle *anders* gemacht?"
+  },
+  {
+   "nr": 49,
+   "typ": "objekt",
+   "kapitel": 12,
+   "start": 197.728,
+   "dauer": 3.902,
+   "emotion": "erklaerend",
+   "text": "Alarmzeit *doppelt* prüfen. Und nie mit dem Wind werfen."
+  },
+  {
+   "nr": 50,
+   "typ": "titel",
+   "kapitel": 12,
+   "start": 201.63,
+   "dauer": 3.5,
+   "emotion": null,
+   "text": ""
+  }
+ ]
+}

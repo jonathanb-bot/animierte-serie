@@ -496,7 +496,7 @@
     const r = rnd(5); for (let i = 0; i < 26; i++) circle(r() * W, r() * H, 2 + r() * 4, rgba("#ffffff", 0.06 + 0.06 * Math.sin(t + i)));
     const items = s.objekte || [];
     const n = items.length;
-    const pos = n === 1 ? [[540, 860]] : n === 2 ? [[300, 860], [780, 860]] : n === 3 ? [[540, 640], [280, 1080], [800, 1080]] : items.map((_, i) => [270 + (i % 2) * 540, 560 + Math.floor(i / 2) * 470]);
+    const pos = n === 1 ? [[540, 860]] : n === 2 ? [[300, 860], [780, 860]] : n === 3 ? [[540, 570], [280, 985], [800, 985]] : items.map((_, i) => [270 + (i % 2) * 540, 560 + Math.floor(i / 2) * 470]);
     const gr = n === 1 ? 1.5 : n === 2 ? 1.05 : n === 3 ? 0.95 : 0.8;
     items.forEach((it, i) => {
       const [name, label] = it.split(":");

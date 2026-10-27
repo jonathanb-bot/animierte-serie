@@ -1,4 +1,7 @@
 # Folge 9: Die Horde
+@musik musik/folge-09.mp3
+@musik_lautstaerke 1
+@whoosh aus
 
 == Szene 1: Zurück oben ==
 @zeit tag

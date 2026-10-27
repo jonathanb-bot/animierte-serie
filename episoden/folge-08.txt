@@ -1,4 +1,7 @@
 # Folge 8: Die Apotheke
+@musik musik/folge-08.mp3
+@musik_lautstaerke 1
+@whoosh aus
 
 == Szene 1: Klingeln ==
 @zeit tag
@@ -43,7 +46,7 @@
 @hud zeit=14:06
 [wohnung du:taschenlampe tag licht=aus vorhang=zu moebel=false wand="#c8d4cc"] In der Apotheke ist es dunkel. Die Rollläden sind halb unten.
 [gesicht du ort=treppenhaus licht=taschenlampe besorgt] Taschenlampe nach unten. Wie Walter es gesagt hat. Licht verrät dich *auch hier*.
-[objekt objekte="medizin:Fiebersaft Kinder|tropfen:Elektrolyte" gross="Die Liste"] Lena hat es dir aufgeschrieben. Fiebersaft für Kinder. Elektrolyte. Mehr *nicht*.
+[objekt objekte="medizin:Fiebersaft|tropfen:Elektrolyte" gross="Die Liste"] Lena hat es dir aufgeschrieben. Fiebersaft für Kinder. Elektrolyte. Mehr *nicht*.
 [gesicht du ort=treppenhaus licht=taschenlampe denkt] Regal für Regal. Erkältung. Allergie. Haut. Dann: *Kinder*.
 
 == Szene 7: Hinter dem Tresen ==

@@ -1,0 +1,464 @@
+{
+ "dauer": 197.584,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "strasse",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 4.838,
+   "emotion": "erzaehlend",
+   "text": "Das Handy klingelt auf dem Vordach der Apotheke. Und sie kommen von *überall*."
+  },
+  {
+   "nr": 2,
+   "typ": "strasse",
+   "kapitel": 1,
+   "start": 4.838,
+   "dauer": 4.382,
+   "emotion": "erzaehlend",
+   "text": "Aus Seitenstraßen. Aus Hauseingängen. Aus kaputten Autos."
+  },
+  {
+   "nr": 3,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 9.22,
+   "dauer": 4.286,
+   "emotion": "spannend",
+   "text": "Du stehst hinter der Hoftür und zählst. Bei zwanzig hörst du *auf*."
+  },
+  {
+   "nr": 4,
+   "typ": "titel",
+   "kapitel": 1,
+   "start": 13.506,
+   "dauer": 3.0,
+   "emotion": null,
+   "text": ""
+  },
+  {
+   "nr": 5,
+   "typ": "karte",
+   "kapitel": 2,
+   "start": 16.506,
+   "dauer": 5.342,
+   "emotion": "erklaerend",
+   "text": "Was bisher geschah: Mila braucht Medikamente. Die Apotheke liegt *direkt gegenüber*."
+  },
+  {
+   "nr": 6,
+   "typ": "treppenhaus",
+   "kapitel": 2,
+   "start": 21.848,
+   "dauer": 3.35,
+   "emotion": "erzaehlend",
+   "text": "Du und Kai seid zwanzig Etagen nach unten geschlichen."
+  },
+  {
+   "nr": 7,
+   "typ": "strasse",
+   "kapitel": 2,
+   "start": 25.198,
+   "dauer": 5.414,
+   "emotion": "erzaehlend",
+   "text": "Aber das Handy zur Ablenkung ist auf dem Dach der *Apotheke* gelandet. Und hat zu früh geklingelt."
+  },
+  {
+   "nr": 8,
+   "typ": "treppenhaus",
+   "kapitel": 3,
+   "start": 30.612,
+   "dauer": 4.094,
+   "emotion": "erzaehlend",
+   "text": "Nach ein paar Minuten verstummt das Klingeln. Der Akku ist leer."
+  },
+  {
+   "nr": 9,
+   "typ": "strasse",
+   "kapitel": 3,
+   "start": 34.706,
+   "dauer": 4.502,
+   "emotion": "erzaehlend",
+   "text": "Aber sie gehen nicht weg. Sie bleiben einfach *stehen*. Vor der Apotheke."
+  },
+  {
+   "nr": 10,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 39.208,
+   "dauer": 3.59,
+   "emotion": "traurig",
+   "text": "Kai flüstert: „Das ist meine Schuld. Ich hab das *verbockt*.“"
+  },
+  {
+   "nr": 11,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 42.798,
+   "dauer": 4.022,
+   "emotion": "ernst",
+   "text": "Du sagst: „Dann reparieren wir es. Wir brauchen eine *zweite* Ablenkung.“"
+  },
+  {
+   "nr": 12,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 46.82,
+   "dauer": 2.942,
+   "emotion": "erzaehlend",
+   "text": "Kai denkt nach. Dann leuchten seine Augen."
+  },
+  {
+   "nr": 13,
+   "typ": "strasse",
+   "kapitel": 4,
+   "start": 49.762,
+   "dauer": 5.534,
+   "emotion": "erzaehlend",
+   "text": "„Am Ende der Straße steht ein Lieferwagen. Wenn ich die Scheibe einschlage, geht die *Alarmanlage* los.“"
+  },
+  {
+   "nr": 14,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 55.296,
+   "dauer": 2.582,
+   "emotion": "ernst",
+   "text": "„Und dann? Dann rennen sie alle zu *dir*.“"
+  },
+  {
+   "nr": 15,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 57.878,
+   "dauer": 3.758,
+   "emotion": "froh",
+   "text": "Kai grinst schief. „Ich war Fahrradkurier. Ich bin *schnell*.“"
+  },
+  {
+   "nr": 16,
+   "typ": "treppenhaus",
+   "kapitel": 4,
+   "start": 61.636,
+   "dauer": 2.03,
+   "emotion": "erzaehlend",
+   "text": "Bevor du etwas sagen kannst, ist er weg."
+  },
+  {
+   "nr": 17,
+   "typ": "strasse",
+   "kapitel": 5,
+   "start": 63.666,
+   "dauer": 3.086,
+   "emotion": "erzaehlend",
+   "text": "Eine Minute. Zwei. Nichts passiert."
+  },
+  {
+   "nr": 18,
+   "typ": "strasse",
+   "kapitel": 5,
+   "start": 66.752,
+   "dauer": 3.398,
+   "emotion": "erzaehlend",
+   "text": "Dann schreit die Alarmanlage los. Laut. *Grell*."
+  },
+  {
+   "nr": 19,
+   "typ": "strasse",
+   "kapitel": 5,
+   "start": 70.15,
+   "dauer": 5.39,
+   "emotion": "erzaehlend",
+   "text": "Sie drehen sich um. Alle. Und setzen sich in Bewegung. *Weg* von der Apotheke."
+  },
+  {
+   "nr": 20,
+   "typ": "strasse",
+   "kapitel": 5,
+   "start": 75.54,
+   "dauer": 2.246,
+   "emotion": "erzaehlend",
+   "text": "Jetzt oder nie. Du rennst."
+  },
+  {
+   "nr": 21,
+   "typ": "strasse",
+   "kapitel": 6,
+   "start": 77.786,
+   "dauer": 4.454,
+   "emotion": "erzaehlend",
+   "text": "Vierzig Meter. Scherben unter deinen Schuhen. Dein Herz hämmert."
+  },
+  {
+   "nr": 22,
+   "typ": "gesicht",
+   "kapitel": 6,
+   "start": 82.24,
+   "dauer": 3.71,
+   "emotion": "spannend",
+   "text": "Einer von ihnen steht noch mitten auf der Straße. Er *dreht* den Kopf."
+  },
+  {
+   "nr": 23,
+   "typ": "strasse",
+   "kapitel": 6,
+   "start": 85.95,
+   "dauer": 6.662,
+   "emotion": "erzaehlend",
+   "text": "Du bleibst stehen. Völlig still. Er schaut. Und schaut. Dann dreht er sich *weg*. Zum Alarm."
+  },
+  {
+   "nr": 24,
+   "typ": "strasse",
+   "kapitel": 6,
+   "start": 92.612,
+   "dauer": 4.262,
+   "emotion": "erzaehlend",
+   "text": "Du schleichst weiter. Durch das zerbrochene Schaufenster. Hinein."
+  },
+  {
+   "nr": 25,
+   "typ": "wohnung",
+   "kapitel": 7,
+   "start": 96.874,
+   "dauer": 3.926,
+   "emotion": "erzaehlend",
+   "text": "In der Apotheke ist es dunkel. Die Rollläden sind halb unten."
+  },
+  {
+   "nr": 26,
+   "typ": "gesicht",
+   "kapitel": 7,
+   "start": 100.8,
+   "dauer": 4.598,
+   "emotion": "ernst",
+   "text": "Taschenlampe nach unten. Wie Walter es gesagt hat. Licht verrät dich *auch hier*."
+  },
+  {
+   "nr": 27,
+   "typ": "objekt",
+   "kapitel": 7,
+   "start": 105.398,
+   "dauer": 5.03,
+   "emotion": "erklaerend",
+   "text": "Lena hat es dir aufgeschrieben. Fiebersaft für Kinder. Elektrolyte. Mehr *nicht*."
+  },
+  {
+   "nr": 28,
+   "typ": "gesicht",
+   "kapitel": 7,
+   "start": 110.428,
+   "dauer": 5.15,
+   "emotion": "erzaehlend",
+   "text": "Regal für Regal. Erkältung. Allergie. Haut. Dann: *Kinder*."
+  },
+  {
+   "nr": 29,
+   "typ": "gesicht",
+   "kapitel": 8,
+   "start": 115.578,
+   "dauer": 4.214,
+   "emotion": "spannend",
+   "text": "Du greifst zu. Und hörst ein Geräusch. Direkt hinter dir."
+  },
+  {
+   "nr": 30,
+   "typ": "treppenhaus",
+   "kapitel": 8,
+   "start": 119.792,
+   "dauer": 4.598,
+   "emotion": "erzaehlend",
+   "text": "Hinter dem Verkaufstresen. Ein Mann im weißen Kittel. Der *Apotheker*."
+  },
+  {
+   "nr": 31,
+   "typ": "gesicht",
+   "kapitel": 8,
+   "start": 124.39,
+   "dauer": 4.982,
+   "emotion": "spannend",
+   "text": "Er ist eingeklemmt. Zwischen Tresen und Regal. Er kommt nicht raus. Aber er *stöhnt*."
+  },
+  {
+   "nr": 32,
+   "typ": "strasse",
+   "kapitel": 8,
+   "start": 129.372,
+   "dauer": 3.11,
+   "emotion": "erzaehlend",
+   "text": "Und jedes Stöhnen ist ein Signal für die anderen draußen."
+  },
+  {
+   "nr": 33,
+   "typ": "objekt",
+   "kapitel": 8,
+   "start": 132.482,
+   "dauer": 4.766,
+   "emotion": "erklaerend",
+   "text": "Du stopfst alles in die Jacke. Fiebersaft. Elektrolyte. Verbandszeug. Und raus."
+  },
+  {
+   "nr": 34,
+   "typ": "strasse",
+   "kapitel": 9,
+   "start": 137.248,
+   "dauer": 3.422,
+   "emotion": "erzaehlend",
+   "text": "Du rennst zurück über die Straße. Die Alarmanlage ist verstummt."
+  },
+  {
+   "nr": 35,
+   "typ": "strasse",
+   "kapitel": 9,
+   "start": 140.67,
+   "dauer": 4.814,
+   "emotion": "erzaehlend",
+   "text": "Am Ende der Straße: eine riesige Traube von *ihnen*. Rund um den Lieferwagen."
+  },
+  {
+   "nr": 36,
+   "typ": "gesicht",
+   "kapitel": 9,
+   "start": 145.484,
+   "dauer": 1.622,
+   "emotion": "ernst",
+   "text": "Und keine Spur von Kai."
+  },
+  {
+   "nr": 37,
+   "typ": "treppenhaus",
+   "kapitel": 9,
+   "start": 147.106,
+   "dauer": 4.31,
+   "emotion": "erzaehlend",
+   "text": "Du wartest am Hinterausgang. Eine Minute. Fünf. Zehn."
+  },
+  {
+   "nr": 38,
+   "typ": "gesicht",
+   "kapitel": 9,
+   "start": 151.416,
+   "dauer": 2.918,
+   "emotion": "traurig",
+   "text": "Mila braucht die Medikamente. Du *musst* gehen."
+  },
+  {
+   "nr": 39,
+   "typ": "hochhaus",
+   "kapitel": 10,
+   "start": 154.334,
+   "dauer": 3.95,
+   "emotion": "erzaehlend",
+   "text": "Du rennst die Treppe hoch. Etage für Etage. Deine Beine brennen."
+  },
+  {
+   "nr": 40,
+   "typ": "treppenhaus",
+   "kapitel": 10,
+   "start": 158.284,
+   "dauer": 2.702,
+   "emotion": "erzaehlend",
+   "text": "Am zwölften Stock vorbei. Ohne hinzusehen."
+  },
+  {
+   "nr": 41,
+   "typ": "treppenhaus",
+   "kapitel": 10,
+   "start": 160.986,
+   "dauer": 4.598,
+   "emotion": "erzaehlend",
+   "text": "Zwanzig. Die Barrikade. Du kletterst hoch. Ganz oben am Geländer."
+  },
+  {
+   "nr": 42,
+   "typ": "gesicht",
+   "kapitel": 10,
+   "start": 165.584,
+   "dauer": 3.47,
+   "emotion": "ruhig",
+   "text": "Und dann schaust du nach unten. Durch den Spalt zwischen den Treppen."
+  },
+  {
+   "nr": 43,
+   "typ": "hochhaus",
+   "kapitel": 11,
+   "start": 169.054,
+   "dauer": 4.43,
+   "emotion": "erzaehlend",
+   "text": "Unten im Erdgeschoss bewegt sich etwas. *Viel*. Sehr viel."
+  },
+  {
+   "nr": 44,
+   "typ": "gesicht",
+   "kapitel": 11,
+   "start": 173.484,
+   "dauer": 2.654,
+   "emotion": "spannend",
+   "text": "Und dir wird schlecht. Weil dir etwas klar wird."
+  },
+  {
+   "nr": 45,
+   "typ": "objekt",
+   "kapitel": 11,
+   "start": 176.138,
+   "dauer": 1.91,
+   "emotion": "erklaerend",
+   "text": "Du hast die Hintertür *offen* gelassen."
+  },
+  {
+   "nr": 46,
+   "typ": "hochhaus",
+   "kapitel": 11,
+   "start": 178.048,
+   "dauer": 4.478,
+   "emotion": "erzaehlend",
+   "text": "Die Horde vom Lieferwagen ist dir gefolgt. Ins Haus. Ins Treppenhaus."
+  },
+  {
+   "nr": 47,
+   "typ": "gesicht",
+   "kapitel": 11,
+   "start": 182.526,
+   "dauer": 1.262,
+   "emotion": "spannend",
+   "text": "Und sie kommen *hoch*."
+  },
+  {
+   "nr": 48,
+   "typ": "titel",
+   "kapitel": 11,
+   "start": 183.788,
+   "dauer": 3.5,
+   "emotion": null,
+   "text": ""
+  },
+  {
+   "nr": 49,
+   "typ": "objekt",
+   "kapitel": 12,
+   "start": 187.288,
+   "dauer": 3.398,
+   "emotion": "erklaerend",
+   "text": "Überlebens-Check! Welchen Fehler hast du in dieser Folge *gemacht*?"
+  },
+  {
+   "nr": 50,
+   "typ": "objekt",
+   "kapitel": 12,
+   "start": 190.686,
+   "dauer": 3.398,
+   "emotion": "erklaerend",
+   "text": "Die Hintertür. Jede offene Tür ist eine *Einladung*."
+  },
+  {
+   "nr": 51,
+   "typ": "titel",
+   "kapitel": 12,
+   "start": 194.084,
+   "dauer": 3.5,
+   "emotion": null,
+   "text": ""
+  }
+ ]
+}
