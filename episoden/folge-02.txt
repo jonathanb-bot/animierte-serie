@@ -1,4 +1,7 @@
 # Folge 2: Kein Druck
+@musik musik/folge-02.mp3
+@musik_lautstaerke 1
+@whoosh aus
 
 == Szene 1: Wer ist da? ==
 @zeit nacht
