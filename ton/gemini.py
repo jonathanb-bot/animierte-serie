@@ -51,11 +51,13 @@ def _post(body: dict) -> dict:
     url = f"https://generativelanguage.googleapis.com/v1beta/models/{MODELL}:generateContent"
     while True:
         schluessel = SCHLUESSEL[_aktiv]
-        kopf = {"Content-Type": "application/json", **({"x-goog-api-key": schluessel} if schluessel else {})}
+        # Schlüssel als URL-Parameter: einen x-goog-api-key-Header ersetzt der Proxy durch seinen eigenen
+        kopf = {"Content-Type": "application/json"}
         try:
             for versuch in range(4):
                 try:
-                    req = urllib.request.Request(url, data=json.dumps(body).encode(), headers=kopf)
+                    req = urllib.request.Request(url + (f"?key={schluessel}" if schluessel else ""),
+                                                 data=json.dumps(body).encode(), headers=kopf)
                     return json.load(urllib.request.urlopen(req, timeout=300))
                 except urllib.error.HTTPError as e:
                     info = e.read().decode(errors="replace")
