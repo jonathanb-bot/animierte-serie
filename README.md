@@ -81,5 +81,14 @@ python -m ton.pruefen folge-01                  # Lautheit und Abstand Stimme/Hi
   `hahn=…`, `fuell_bis`, Schritte, Handy …). Pro Einstellung: `ton=zombie,wind` oder `ton=aus`.
 - Im Drehbuch werden `@musik musik/folge-XX.mp3`, `@musik_lautstaerke 1` und `@whoosh aus` gesetzt.
 
+**Natürlichere Stimme mit Gemini** (kostenlos 10 Anfragen/Tag – reicht für eine Folge, zwei Kapitel pro Anfrage):
+
+```bash
+python -m ton.folge episoden/folge-01.txt --stimme gemini:Orus   # oder gemini:Algenib
+```
+
+Gemini liefert keine Wortzeiten; die ermittelt eine lokale Spracherkennung (faster-whisper) und schneidet daran
+auch die Einstellungen. Fertiges Rohaudio liegt im Cache, ein zweiter Lauf kostet keine Anfrage.
+
 Danach pushen – GitHub rendert wie gewohnt. Wer lieber eine andere Stimme nutzt (ElevenLabs, eigene Aufnahme):
 einfach `audio/folge-XX/NNN.mp3` ersetzen; ohne `NNN.json` verteilt der Renderer die Wörter wie bisher nach Länge.

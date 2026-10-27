@@ -3,3 +3,4 @@ scipy>=1.11
 soundfile>=0.12
 PyYAML>=6.0
 edge-tts>=7.0
+faster-whisper>=1.2   # nur für --stimme gemini (Wortzeiten)

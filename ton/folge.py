@@ -11,6 +11,9 @@ Erzeugt:
 - audio/folge-XX/timing.json  Szenenzeiten (gleiche Rechnung wie render.mjs)
 Im Drehbuch werden dafür `@musik musik/folge-XX.mp3`, `@musik_lautstaerke 1` und `@whoosh aus` gesetzt.
 
+Stimme: standardmäßig kostenlos Edge „Conrad“. Mit `--stimme gemini` (oder `gemini:Algenib`) spricht Gemini-TTS
+(natürlicher; kostenlos 10 Anfragen/Tag, zwei Kapitel pro Anfrage; Wortzeiten per faster-whisper).
+
 Pro Einstellung lässt sich in der Klammer steuern: `emotion=spannend`, `ton=zombie,wind` oder `ton=aus`.
 """
 from __future__ import annotations
@@ -201,7 +204,7 @@ def drehbuch_kopf_setzen(pfad: Path, musik_rel: str):
     pfad.write_text("\n".join(zeilen) + "\n", encoding="utf-8")
 
 
-def bauen(drehbuch: str, nur_stimme=False, drone=False, log=print) -> dict:
+def bauen(drehbuch: str, nur_stimme=False, drone=False, stimme="edge", log=print) -> dict:
     pfad = Path(drehbuch).resolve()
     fid = pfad.stem
     einst, _ = lesen(pfad)
@@ -211,7 +214,13 @@ def bauen(drehbuch: str, nur_stimme=False, drone=False, log=print) -> dict:
     # 1) Stimmen
     sprechend = [e for e in einst if sprechtext(e.text)]
     log(f"{fid}: {len(einst)} Einstellungen, {len(sprechend)} mit Text – Stimmen werden erzeugt …")
-    gesprochen = S.sprechen_viele([(ERZAEHLER, sprechtext(e.text), emotion_fuer(e)) for e in sprechend])
+    if stimme.startswith("gemini"):
+        from . import gemini
+        name = stimme.split(":", 1)[1] if ":" in stimme else "Orus"
+        gesprochen = gemini.sprechen([re.sub(r"[„“\"»«]", "", e.text) for e in sprechend],
+                                     [e.kapitel for e in sprechend], name, log=log)
+    else:
+        gesprochen = S.sprechen_viele([(ERZAEHLER, sprechtext(e.text), emotion_fuer(e)) for e in sprechend])
     for e, g in zip(sprechend, gesprochen):
         x = g.audio * A.db(STIMME_RMS - _rms_db(g.audio) + 20 * np.log10(
             max(0.05, 1 + S.EMOTIONEN.get(emotion_fuer(e), S.EMOTIONEN["neutral"])[2] / 100)))
@@ -312,9 +321,10 @@ def main(argv=None):
     p.add_argument("drehbuch", nargs="+", help="episoden/folge-XX.txt")
     p.add_argument("--nur-stimme", action="store_true")
     p.add_argument("--drone", action="store_true", help="dunklen Drone-Teppich wieder unterlegen")
+    p.add_argument("--stimme", default="edge", help="edge (Standard) oder gemini[:Stimme], z. B. gemini:Orus")
     a = p.parse_args(argv)
     for d in a.drehbuch:
-        bauen(d, nur_stimme=a.nur_stimme, drone=a.drone)
+        bauen(d, nur_stimme=a.nur_stimme, drone=a.drone, stimme=a.stimme)
     return 0
 
 
