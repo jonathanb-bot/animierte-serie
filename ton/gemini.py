@@ -25,9 +25,11 @@ from . import audio as A
 from .stimmen import CACHE, Gesprochen, markierungen, norm, stimm_kette
 
 MODELL = os.environ.get("GEMINI_TTS_MODELL", "gemini-3.8-flash-tts")
-STIL = ("Du bist der Erzähler einer düsteren Kurzgeschichte für TikTok: tiefe, trockene, nahe Männerstimme, "
-        "zügig, ruhig bedrohlich, Deutsch. Sprich ausschließlich den Text der Nachricht, nichts davon vorlesen, "
-        "was hier steht. Nach jeder Zeile eine kurze Pause.")
+# Das Modell kennt keine Systemanweisung -> Stil steht vor dem Text. Liest Gemini ihn mit vor, schneidet der
+# Whisper-Abgleich ihn wieder weg.
+STIL = ("Lies den folgenden deutschen Text als Erzähler einer düsteren Kurzgeschichte für TikTok vor: "
+        "tiefe, trockene, nahe Männerstimme, zügig, ruhig bedrohlich, nach jeder Zeile eine kurze Pause. "
+        "Nur den Text sprechen:\n\n")
 MAX_PAUSE = 0.6    # längere Pausen werden darauf gekürzt
 TEMPO = 1.0
 _WHISPER = None
@@ -49,24 +51,17 @@ def _post(body: dict) -> dict:
             info = e.read().decode(errors="replace")
             if e.code == 429 and ("per day" in info.lower() or "PerDay" in info):
                 raise KontingentErschoepft("Gemini-Tageskontingent aufgebraucht (kostenlos: 10 Anfragen/Tag).") from e
-            if versuch == 3 or e.code not in (429, 500, 503):
+            if versuch == 3 or e.code not in (429, 500, 502, 503, 504):
                 raise RuntimeError(f"Gemini-TTS: HTTP {e.code}: {info[:300]}") from e
             time.sleep(15 * (versuch + 1))
     raise RuntimeError("Gemini-TTS: keine Antwort")
 
 
 def _anfrage(text: str, stimme: str) -> np.ndarray:
-    body = {"contents": [{"role": "user", "parts": [{"text": text}]}],
-            "systemInstruction": {"parts": [{"text": STIL}]},
+    body = {"contents": [{"parts": [{"text": STIL + text}]}],
             "generationConfig": {"responseModalities": ["AUDIO"],
                                  "speechConfig": {"voiceConfig": {"prebuiltVoiceConfig": {"voiceName": stimme}}}}}
-    try:
-        d = _post(body)
-    except RuntimeError as e:
-        if "HTTP 400" not in str(e):
-            raise
-        body.pop("systemInstruction")  # Modell kennt keine Systemanweisung -> nur der Text
-        d = _post(body)
+    d = _post(body)
     p = d["candidates"][0]["content"]["parts"][0]["inlineData"]
     roh = base64.b64decode(p["data"])
     if "wav" in p["mimeType"]:
@@ -154,6 +149,26 @@ def _zuordnen(skript: list[str], erkannt: list[tuple[float, float, str]]) -> lis
     return zeiten
 
 
+def _rauschtor(x: np.ndarray, unter_db=34.0, daempfung_db=-40.0) -> np.ndarray:
+    """Pausen wirklich still machen: alles, was unter_db unter der Sprache liegt (Atmer, Grundrauschen), absenken."""
+    fr = A.sek(0.005)
+    n = len(x) // fr
+    if n < 4:
+        return x
+    rms = np.sqrt(np.mean(x[:n * fr].reshape(n, fr) ** 2, axis=1)) + 1e-9
+    sprache = np.percentile(rms, 80)
+    offen = rms > sprache * 10 ** (-unter_db / 20)
+    halt = 10  # 50 ms nachhalten, damit Wortenden nicht abgeschnitten werden
+    offen = np.convolve(offen.astype(float), np.ones(2 * halt + 1), "same") > 0
+    ziel = np.where(offen, 1.0, 10 ** (daempfung_db / 20))
+    g, v = np.empty(n), 1.0
+    for i, z in enumerate(ziel):  # schnell auf, langsam zu
+        v += (z - v) * (0.6 if z > v else 0.08)
+        g[i] = v
+    gain = np.interp(np.arange(len(x)), np.arange(n) * fr + fr / 2, g)
+    return (x * gain).astype(np.float32)
+
+
 def _ruhigste(x: np.ndarray, t0: float, t1: float) -> float:
     """Leiseste Stelle (Mitte des leisesten 30-ms-Fensters) zwischen t0 und t1."""
     a, b = A.sek(max(0.0, t0)), A.sek(max(t0, t1))
@@ -206,6 +221,6 @@ def sprechen(zeilen: list[str], kapitel: list[int], stimme="Orus", kapitel_pro_a
             ws = [(min(dauer, max(0.0, zeiten[k][0] - start[z])), min(dauer, max(0.0, zeiten[k][1] - start[z])), w,
                    akzente.get(norm(w)))
                   for k, (zz, w) in enumerate(woerter) if zz == z]
-            out[i] = Gesprochen(stimm_kette(y), [(0.0, len(y) / A.SR, zeilen[i])], ws)
+            out[i] = Gesprochen(_rauschtor(stimm_kette(y)), [(0.0, len(y) / A.SR, zeilen[i])], ws)
         log(f"    {len(idx)} Zeilen zugeordnet ({len(erkannt)} Wörter erkannt, Skript {len(woerter)})")
     return out
