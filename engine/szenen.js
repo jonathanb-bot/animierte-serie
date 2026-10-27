@@ -6,7 +6,7 @@
 
   // ---------- Paletten ----------
   const HIMMEL = {
-    tag: ["#6fa8d6", "#cfe5f0"], morgen: ["#8fa6c9", "#f4cfae"], abend: ["#384073", "#ee9a66"], nacht: ["#0a0f24", "#25305a"], rot: ["#3a0f12", "#b2412f"],
+    tag: ["#24456e", "#5f86a8"], morgen: ["#2a3a66", "#b07c6c"], abend: ["#1f2450", "#a8655a"], nacht: ["#070b1d", "#1c2550"], rot: ["#2a0c14", "#83332c"],
   };
   const zeitVon = s => s.zeit || "tag";
   A.himmelMalen = (zeit, x0 = -3000, y0 = -3000, w = 9000, h = 12000, top = -800, bottom = 1400) => {
@@ -581,15 +581,15 @@
     const bg = { ...s, figuren: [], figur: null, objekt: null, horde: 3, laerm_x: null, zombies: s.zombies, klopfen: false };
     A.umleiten(oc, () => (SZ[ort] || SZ.wohnung)(bg, t, 0.5));
     ctx.save(); ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.filter = "blur(12px)"; ctx.drawImage(A._off, -20, -20, W + 40, H + 40); ctx.restore();
-    ctx.fillStyle = "rgba(0,0,0,0.12)"; ctx.fillRect(-2000, -2000, 5000, 6000);
+    ctx.fillStyle = "rgba(8,10,26,0.28)"; ctx.fillRect(-2000, -2000, 5000, 6000);
     const f = A.fig(s.figur);
     const bob = Math.sin(t * 1.5) * 7;
     const atem = 1 + Math.sin(t * 2) * 0.006;
     ctx.save(); ctx.translate(540, 1000 + bob); ctx.scale(atem, atem);
     // Schultern
-    box(-120, 120, 240, 260, 60, shade(f.haut, -0.12));
+    box(-110, 140, 220, 240, 60, shade(f.haut, -0.18));
     ctx.beginPath(); ctx.moveTo(-470, 1200); ctx.bezierCurveTo(-460, 520, -360, 400, -150, 360); ctx.lineTo(150, 360); ctx.bezierCurveTo(360, 400, 460, 520, 470, 1200); ctx.closePath(); fill(f.jacke);
-    ctx.beginPath(); ctx.moveTo(-470, 1200); ctx.bezierCurveTo(-460, 520, -360, 400, -150, 360); ctx.lineTo(150, 360); ctx.bezierCurveTo(360, 400, 460, 520, 470, 1200); ctx.closePath(); A.schattiere(-470, 470, 0.22);
+    ctx.beginPath(); ctx.moveTo(-470, 1200); ctx.bezierCurveTo(-460, 520, -360, 400, -150, 360); ctx.lineTo(150, 360); ctx.bezierCurveTo(360, 400, 460, 520, 470, 1200); ctx.closePath(); A.weich(-470, 360, 470, 1200);
     ctx.beginPath(); ctx.moveTo(-150, 365); ctx.quadraticCurveTo(0, 470, 150, 365); ctx.lineTo(120, 340); ctx.quadraticCurveTo(0, 420, -120, 340); ctx.closePath(); fill(shade(f.jacke, -0.12));
     if (f.rucksack) for (const sx of [-1, 1]) box(sx * 250 - 25, 420, 50, 800, 20, f.rucksack);
     A.kopf(0, -60, 330, f, { t, ausdruck: s.ausdruck, spricht: s._spricht && (s.sprecher ? s.sprecher === s.figur : true) && s.stumm !== true, blick: s.blick, drehung: s.drehung ?? Math.sin(t * 0.5) * 0.12, neigung: Math.sin(t * 0.9) * 0.025, seed: 4 });

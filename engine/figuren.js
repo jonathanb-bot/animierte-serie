@@ -1,16 +1,26 @@
-/* Figuren: Köpfe, Körper, Posen, Zombies – sauberer Flat-Vektor-Stil */
+/* Figuren: bewusst abstrakt und ruhig (Stil „Dinge Erklärt“): runde Köpfe ohne Details,
+   kleine dunkle Augen, Haare als glatte Kappe, schlichte Körper, weiche Verlaufs-Schattierung, keine Konturen. */
 (() => {
-  const { rr, fill, circle, ellipse, capsule, shade, rgba, schattiere, clamp, lerp } = A;
+  const { rr, fill, circle, ellipse, capsule, shade, rgba, clamp, lerp } = A;
 
-  A.STANDARD = { haut: "#f2cfb3", haare: "#3a2b24", haar: "kurz", jacke: "#4f6e8c", hose: "#2e3441", schuhe: "#22252c", augen: "#2a2630", muetze: null, bart: null, brille: null, kapuze: false, rucksack: null, zombie: false, groesse: 1 };
-  const ZOMBIE_HAUT = ["#a9b89c", "#9fae95", "#b3b69a", "#98a893"];
-  const ZOMBIE_KLEIDUNG = [["#6d5b4b", "#3d3a36"], ["#5a6a73", "#34383d"], ["#7a4a46", "#3a3433"], ["#5d6b4f", "#373a31"], ["#8a8170", "#423f3a"], ["#4d5670", "#2f323a"]];
+  A.STANDARD = { haut: "#e6c3a8", haare: "#2f2630", haar: "kurz", jacke: "#3f5f86", hose: "#262c40", schuhe: "#1c2030", augen: "#1d1a26", muetze: null, bart: null, brille: null, kapuze: false, rucksack: null, zombie: false, groesse: 1 };
+  const ZOMBIE_HAUT = ["#8f9f8c", "#86978a", "#97a08a", "#7f9188"];
+  const ZOMBIE_KLEIDUNG = [["#4f4a52", "#2c2b35"], ["#3f4f5c", "#272c38"], ["#5a4048", "#2e2a33"], ["#465345", "#2a2e2c"], ["#5f5a58", "#33313a"], ["#3c4560", "#262a38"]];
   A.zombieFigur = (n) => {
     const k = ZOMBIE_KLEIDUNG[n % ZOMBIE_KLEIDUNG.length];
     const haarStile = ["kurz", "wuschel", "lang", "glatze", "seite", "dutt"];
-    const haarFarben = ["#3d3530", "#5e5249", "#7a6a55", "#2c2724", "#6b5a3c"];
-    return { ...A.STANDARD, zombie: true, haut: ZOMBIE_HAUT[n % 4], jacke: k[0], hose: k[1], haar: haarStile[(n * 7) % 6], haare: haarFarben[(n * 3) % 5], schuhe: "#2b2a28" };
+    const haarFarben = ["#3a3438", "#4a4246", "#5a5048", "#2a262c", "#4f463c"];
+    return { ...A.STANDARD, zombie: true, haut: ZOMBIE_HAUT[n % 4], jacke: k[0], hose: k[1], haar: haarStile[(n * 7) % 6], haare: haarFarben[(n * 3) % 5], schuhe: "#1e1f26" };
   };
+
+  // Weiche Verlaufs-Schattierung auf den aktuellen Pfad: Licht von links oben, Schatten rechts unten
+  function weich(x0, y0, x1, y1, st = 1) {
+    ctx.save(); ctx.clip();
+    ctx.fillStyle = A.lgrad(x0, y0, x1, y1, [[0, rgba("#ffffff", 0.10 * st)], [0.45, rgba("#ffffff", 0)], [0.6, rgba(A.SCHATTEN, 0)], [1, rgba(A.SCHATTEN, 0.32 * st)]]);
+    ctx.fillRect(Math.min(x0, x1) - 50, Math.min(y0, y1) - 50, Math.abs(x1 - x0) + 100, Math.abs(y1 - y0) + 100);
+    ctx.restore();
+  }
+  A.weich = weich;
 
   function blinzeln(t, seed) {
     const periode = 3.1 + (seed % 9) * 0.37;
@@ -19,65 +29,43 @@
     return 1;
   }
 
-  // ---------- Haare ----------
+  // ---------- Haare: eine glatte Kappe, wenige Grundformen ----------
   function haareHinten(f, R) {
-    ctx.fillStyle = shade(f.haare, -0.12);
-    if (f.haar === "lang") {
-      ctx.beginPath(); ctx.moveTo(-1.08 * R, -0.2 * R);
-      ctx.bezierCurveTo(-1.25 * R, 0.8 * R, -1.15 * R, 1.35 * R, -0.7 * R, 1.5 * R);
-      ctx.lineTo(0.7 * R, 1.5 * R);
-      ctx.bezierCurveTo(1.15 * R, 1.35 * R, 1.25 * R, 0.8 * R, 1.08 * R, -0.2 * R); ctx.closePath(); ctx.fill();
-    } else if (f.haar === "kind") {
-      for (const s of [-1, 1]) {
-        ellipse(s * 1.12 * R, 0.35 * R, 0.3 * R, 0.42 * R, shade(f.haare, -0.08), s * 0.3);
-        A.box(s * 1.0 * R - 0.08 * R, 0.0 * R, 0.16 * R, 0.14 * R, 0.07 * R, "#e0566b");
-      }
-    } else if (f.haar === "dutt") {
-      circle(0, -1.12 * R, 0.36 * R, shade(f.haare, -0.08));
-    }
+    const c = shade(f.haare, -0.1);
+    if (f.haar === "lang") { rr(-1.04 * R, -0.3 * R, 2.08 * R, 1.75 * R, 0.9 * R); fill(c); }
+    else if (f.haar === "kind") { for (const s of [-1, 1]) circle(s * 1.0 * R, -0.25 * R, 0.3 * R, c); }
+    else if (f.haar === "dutt") circle(0, -1.1 * R, 0.34 * R, c);
   }
-
   function haareVorne(f, R) {
-    const c = f.haare;
-    ctx.fillStyle = c;
-    const dome = (seiteY = 0.0, top = 1.48) => {
-      ctx.moveTo(-1.03 * R, seiteY * R);
-      ctx.bezierCurveTo(-1.1 * R, -top * R, 1.1 * R, -top * R, 1.03 * R, seiteY * R);
-    };
     if (f.haar === "glatze" || f.haar === "keine") {
-      ellipse(-0.42 * R, -0.62 * R, 0.26 * R, 0.1 * R, "rgba(255,255,255,0.22)", -0.6);
-      if (f.haar === "glatze" && f.haare_seiten !== false) {
-        for (const s of [-1, 1]) { ctx.beginPath(); ctx.moveTo(s * 1.02 * R, 0.1 * R); ctx.quadraticCurveTo(s * 1.08 * R, -0.45 * R, s * 0.8 * R, -0.62 * R); ctx.quadraticCurveTo(s * 0.92 * R, -0.25 * R, s * 0.86 * R, 0.1 * R); ctx.closePath(); fill(c); }
-      }
+      if (f.haar === "glatze") for (const s of [-1, 1]) ellipse(s * 0.93 * R, 0.0, 0.14 * R, 0.32 * R, f.haare, s * 0.15);
       return;
     }
     ctx.beginPath();
-    if (f.haar === "kurz") {
-      dome(0.0);
-      ctx.quadraticCurveTo(0.98 * R, -0.42 * R, 0.6 * R, -0.5 * R);
-      ctx.bezierCurveTo(0.25 * R, -0.58 * R, -0.15 * R, -0.36 * R, -0.6 * R, -0.48 * R);
-      ctx.quadraticCurveTo(-0.95 * R, -0.5 * R, -1.03 * R, 0.0);
+    if (f.haar === "wuschel") {
+      ctx.moveTo(-1.02 * R, 0.0);
+      ctx.bezierCurveTo(-1.1 * R, -1.25 * R, -0.5 * R, -1.32 * R, -0.25 * R, -1.18 * R);
+      ctx.bezierCurveTo(0.0, -1.38 * R, 0.55 * R, -1.32 * R, 0.62 * R, -1.08 * R);
+      ctx.bezierCurveTo(1.05 * R, -1.05 * R, 1.12 * R, -0.5 * R, 1.02 * R, 0.0);
+      ctx.quadraticCurveTo(0.6 * R, -0.6 * R, -0.1 * R, -0.52 * R);
+      ctx.quadraticCurveTo(-0.75 * R, -0.5 * R, -1.02 * R, 0.0);
     } else if (f.haar === "seite") {
-      dome(-0.05);
-      ctx.quadraticCurveTo(0.95 * R, -0.5 * R, 0.55 * R, -0.62 * R);
-      ctx.bezierCurveTo(0.2 * R, -0.72 * R, -0.3 * R, -0.55 * R, -0.75 * R, -0.42 * R);
-      ctx.quadraticCurveTo(-0.98 * R, -0.35 * R, -1.03 * R, -0.05 * R);
-    } else if (f.haar === "wuschel") {
-      dome(0.0, 1.55);
-      const pts = [[0.95, -0.25], [0.7, -0.5], [0.4, -0.45], [0.15, -0.55], [-0.15, -0.42], [-0.45, -0.55], [-0.75, -0.42], [-0.98, -0.2]];
-      let px = 1.03, py = 0;
-      for (const [x, y] of pts) { ctx.quadraticCurveTo(((px + x) / 2) * R, ((py + y) / 2 - 0.12) * R, x * R, y * R); px = x; py = y; }
-      ctx.lineTo(-1.03 * R, 0);
+      ctx.moveTo(-1.02 * R, -0.05 * R);
+      ctx.bezierCurveTo(-1.08 * R, -1.32 * R, 1.08 * R, -1.32 * R, 1.02 * R, -0.05 * R);
+      ctx.quadraticCurveTo(0.85 * R, -0.62 * R, 0.25 * R, -0.66 * R);
+      ctx.quadraticCurveTo(-0.6 * R, -0.62 * R, -1.02 * R, -0.05 * R);
+    } else if (f.haar === "kurz") {
+      ctx.moveTo(-1.02 * R, -0.1 * R);
+      ctx.bezierCurveTo(-1.08 * R, -1.3 * R, 1.08 * R, -1.3 * R, 1.02 * R, -0.1 * R);
+      ctx.quadraticCurveTo(0.7 * R, -0.62 * R, 0.0, -0.6 * R);
+      ctx.quadraticCurveTo(-0.7 * R, -0.62 * R, -1.02 * R, -0.1 * R);
     } else { // lang, kind, dutt: Mittelscheitel
-      ctx.moveTo(-1.06 * R, 0.25 * R);
-      ctx.bezierCurveTo(-1.14 * R, -1.48 * R, 1.14 * R, -1.48 * R, 1.06 * R, 0.25 * R);
-      ctx.quadraticCurveTo(0.85 * R, -0.5 * R, 0.06 * R, -0.66 * R);
-      ctx.quadraticCurveTo(-0.85 * R, -0.5 * R, -1.06 * R, 0.25 * R);
+      ctx.moveTo(-1.05 * R, 0.2 * R);
+      ctx.bezierCurveTo(-1.1 * R, -1.32 * R, 1.1 * R, -1.32 * R, 1.05 * R, 0.2 * R);
+      ctx.quadraticCurveTo(0.8 * R, -0.5 * R, 0.0, -0.62 * R);
+      ctx.quadraticCurveTo(-0.8 * R, -0.5 * R, -1.05 * R, 0.2 * R);
     }
-    ctx.closePath(); ctx.fill();
-    // Glanz
-    ctx.save(); ctx.beginPath(); ctx.arc(-0.05 * R, -0.05 * R, 0.82 * R, 1.13 * Math.PI, 1.42 * Math.PI);
-    ctx.lineWidth = 0.07 * R; ctx.lineCap = "round"; ctx.strokeStyle = rgba(shade(c, 0.45), 0.55); ctx.stroke(); ctx.restore();
+    ctx.closePath(); fill(f.haare);
   }
 
   // ---------- Kopf ----------
@@ -86,115 +74,78 @@
     const aus = o.ausdruck || (f.zombie ? "zombie" : "neutral");
     const seed = (o.seed ?? 3) | 0;
     const d = clamp(o.drehung || 0, -1, 1);
-    const fx = d * 0.17 * R;
+    const fx = d * 0.2 * R;
     ctx.save(); ctx.translate(x, y); ctx.rotate(o.neigung || 0);
-    // Schatten des Kopfes auf Hals
-    ellipse(0, 0.95 * R, 0.55 * R, 0.16 * R, rgba(A.SCHATTEN, 0.18));
     haareHinten(f, R);
-    // Ohren
-    for (const s of [-1, 1]) {
-      const sichtbar = 1 - Math.max(0, s * d) * 0.6;
-      ellipse(s * 0.97 * R - d * 0.06 * R, 0.08 * R, 0.17 * R * sichtbar, 0.2 * R, shade(f.haut, -0.05));
-      ellipse(s * 0.99 * R - d * 0.06 * R, 0.08 * R, 0.08 * R * sichtbar, 0.11 * R, shade(f.haut, -0.16));
-    }
-    // Gesicht
-    ctx.beginPath();
-    ctx.ellipse(0, -0.05 * R, R, 0.98 * R, 0, 0, Math.PI * 2);
-    ctx.moveTo(0.84 * R, 0.3 * R); ctx.ellipse(0, 0.3 * R, 0.84 * R, 0.72 * R, 0, 0, Math.PI * 2);
-    fill(f.haut);
-    schattiere(-R + fx * 2, R + fx * 2, f.zombie ? 0.3 : 0.2);
-    // Bart
+    // Gesicht: ein ruhiges Oval
+    ctx.beginPath(); ctx.ellipse(0, 0, R, 1.04 * R, 0, 0, Math.PI * 2); fill(f.haut);
+    ctx.beginPath(); ctx.ellipse(0, 0, R, 1.04 * R, 0, 0, Math.PI * 2); weich(-R, -R, R, R, f.zombie ? 1.2 : 1);
     if (f.bart) {
-      ctx.beginPath(); ctx.moveTo(-0.9 * R, 0.0);
-      ctx.bezierCurveTo(-0.92 * R, 0.95 * R, -0.45 * R, 1.12 * R, fx, 1.12 * R);
-      ctx.bezierCurveTo(0.45 * R, 1.12 * R, 0.92 * R, 0.95 * R, 0.9 * R, 0.0);
-      ctx.bezierCurveTo(0.7 * R, 0.4 * R, 0.4 * R, 0.38 * R, fx, 0.4 * R);
-      ctx.bezierCurveTo(-0.4 * R, 0.38 * R, -0.7 * R, 0.4 * R, -0.9 * R, 0.0); fill(f.bart);
+      ctx.beginPath(); ctx.moveTo(-0.92 * R, 0.1 * R);
+      ctx.bezierCurveTo(-0.85 * R, 0.95 * R, -0.4 * R, 1.06 * R, fx, 1.06 * R);
+      ctx.bezierCurveTo(0.4 * R, 1.06 * R, 0.85 * R, 0.95 * R, 0.92 * R, 0.1 * R);
+      ctx.bezierCurveTo(0.6 * R, 0.42 * R, 0.3 * R, 0.4 * R, fx, 0.42 * R);
+      ctx.bezierCurveTo(-0.3 * R, 0.4 * R, -0.6 * R, 0.42 * R, -0.92 * R, 0.1 * R); fill(f.bart);
     }
-    // Wangen
-    if (!f.zombie) for (const s of [-1, 1]) ellipse(fx + s * 0.55 * R, 0.33 * R, 0.13 * R, 0.075 * R, "rgba(232,120,110,0.28)");
-    // Augen
-    let bl = blinzeln(t, seed);
-    const schreck = aus === "schreck";
-    const gr = schreck ? 1.15 : 1;
-    const bx = (o.blick || [0, 0])[0] * 0.065 * R + d * 0.05 * R, by = (o.blick || [0, 0])[1] * 0.06 * R;
+    // Augen: klein und dunkel; bei Schreck weiß mit kleiner Pupille; Zombies: blasses Leuchten
+    const bl = blinzeln(t, seed);
+    const schreck = aus === "schreck" || aus === "angst";
+    const bx = (o.blick || [0, 0])[0] * 0.05 * R + d * 0.06 * R, by = (o.blick || [0, 0])[1] * 0.05 * R;
     for (const s of [-1, 1]) {
-      const ex = fx + s * 0.35 * R * (1 - s * d * 0.08), ey = 0.0;
-      const rx = 0.19 * R * gr * (1 - s * d * 0.12), ry = 0.235 * R * gr;
-      if (f.zombie || aus === "muede") ellipse(ex, ey + 0.2 * R, 0.17 * R, 0.08 * R, rgba(f.zombie ? "#4a3b52" : "#8a6a7a", 0.35));
-      ellipse(ex, ey, rx, ry * bl, f.zombie ? "#e6e8d8" : "#fcfcf8");
-      if (bl > 0.35) {
-        ctx.save(); ctx.beginPath(); ctx.ellipse(ex, ey, rx, ry * bl, 0, 0, Math.PI * 2); ctx.clip();
-        if (f.zombie) {
-          circle(ex + bx * 0.5, ey + by, 0.055 * R, "#b9bcae");
-        } else {
-          const pr = schreck ? 0.085 * R : 0.115 * R;
-          circle(ex + bx, ey + by + 0.02 * R, pr, f.augen);
-          circle(ex + bx - 0.04 * R, ey + by - 0.035 * R, 0.038 * R, "#fff");
-          circle(ex + bx + 0.035 * R, ey + by + 0.05 * R, 0.017 * R, "rgba(255,255,255,0.8)");
-        }
-        // Oberlid
-        if (aus === "muede" || aus === "misstrauisch") { ctx.fillStyle = f.haut; ctx.fillRect(ex - rx, ey - ry, rx * 2, ry * (aus === "muede" ? 0.95 : 0.7)); }
-        ctx.restore();
+      const ex = fx + s * 0.36 * R * (1 - s * d * 0.1), ey = 0.02 * R;
+      if (f.zombie) {
+        ctx.fillStyle = A.rgrad(ex, ey, 0, 0.22 * R, [[0, "rgba(214,232,200,0.55)"], [1, "rgba(214,232,200,0)"]]);
+        ctx.fillRect(ex - 0.22 * R, ey - 0.22 * R, 0.44 * R, 0.44 * R);
+        ellipse(ex, ey, 0.085 * R, 0.07 * R, "#dfe9d2");
+        continue;
       }
-      // Lidlinie
-      ctx.beginPath(); ctx.ellipse(ex, ey, rx, ry * bl, 0, 1.12 * Math.PI, 1.88 * Math.PI);
-      ctx.strokeStyle = rgba(shade(f.haut, -0.6), 0.7); ctx.lineWidth = 0.035 * R; ctx.lineCap = "round"; ctx.stroke();
-      // Augenbrauen
-      let rot = 0, hy = -0.36 * R;
-      if (aus === "wuetend" || aus === "entschlossen") { rot = s * (aus === "wuetend" ? 0.32 : 0.16); hy += 0.04 * R; }
-      if (aus === "traurig" || aus === "angst" || aus === "besorgt") rot = -s * 0.28;
-      if (schreck) hy -= 0.1 * R;
-      if (aus === "misstrauisch") rot = s === 1 ? -0.2 : 0.25;
-      if (aus === "froh") hy -= 0.03 * R;
-      ctx.save(); ctx.translate(ex, ey + hy * gr); ctx.rotate(rot);
-      capsule(-0.15 * R, 0, 0.15 * R, 0, 0.045 * R, 0.035 * R);
-      fill(f.haar === "glatze" || f.haar === "keine" ? shade(f.haut, -0.4) : shade(f.haare, -0.2)); ctx.restore();
+      if (schreck) {
+        ellipse(ex, ey, 0.15 * R, 0.18 * R * bl, "#f1efe8");
+        if (bl > 0.4) circle(ex + bx * 0.6, ey + by, 0.055 * R, f.augen);
+      } else {
+        const h = aus === "muede" ? 0.05 : aus === "misstrauisch" ? 0.08 : 0.13;
+        ellipse(ex + bx, ey + by, 0.095 * R, Math.max(0.012 * R, h * R * bl), f.augen);
+        if (bl > 0.5 && h > 0.1) circle(ex + bx - 0.03 * R, ey + by - 0.045 * R, 0.025 * R, "rgba(255,255,255,0.75)");
+      }
+      // Augenbrauen nur als zarte Andeutung, wo sie Gefühl tragen
+      let rot = 0, hy = -0.3 * R;
+      if (aus === "wuetend" || aus === "entschlossen") { rot = s * (aus === "wuetend" ? 0.35 : 0.18); hy += 0.04 * R; }
+      if (aus === "traurig" || aus === "angst" || aus === "besorgt") rot = -s * 0.3;
+      if (schreck) hy -= 0.06 * R;
+      if (aus === "misstrauisch") rot = s === 1 ? -0.22 : 0.22;
+      if (rot || schreck) {
+        ctx.save(); ctx.translate(ex, ey + hy); ctx.rotate(rot);
+        capsule(-0.11 * R, 0, 0.11 * R, 0, 0.032 * R, 0.032 * R);
+        fill(rgba(shade(f.haut, -0.55), 0.8)); ctx.restore();
+      }
     }
-    // Nase
-    ellipse(fx * 1.25, 0.25 * R, 0.075 * R, 0.055 * R, shade(f.haut, -0.13));
-    // Mund
-    const mx = fx * 1.15, my = 0.53 * R;
-    const lippe = shade(f.haut, -0.55);
+    // Mund: nur, wenn er etwas erzählt
+    const mx = fx * 1.1, my = 0.48 * R, mund = shade(f.haut, -0.5);
     const sp = o.spricht ? 0.25 + 0.75 * Math.abs(Math.sin(t * 15.5) * Math.sin(t * 6.1 + 1.3)) : 0;
-    const offen = (w, h) => {
-      ctx.save(); A.rr(mx - w, my - h * 0.4, w * 2, h, Math.min(w, h) * 0.9); ctx.fillStyle = "#3a1f24"; ctx.fill(); ctx.clip();
-      A.box(mx - w, my - h * 0.4 - 1, w * 2, h * 0.28, 2, "#f3eee6");
-      ellipse(mx, my + h * 0.6, w * 0.7, h * 0.35, "#c8616a");
-      ctx.restore();
-    };
-    ctx.lineCap = "round";
     if (aus === "zombie") {
-      const k = 0.1 + 0.05 * Math.sin(t * 2.3 + seed);
-      ctx.beginPath(); ctx.moveTo(mx - 0.2 * R, my);
-      for (let i = 0; i <= 6; i++) ctx.lineTo(mx - 0.2 * R + i * 0.0667 * R, my + (i % 2 ? 0.05 : -0.02) * R);
-      ctx.lineTo(mx + 0.18 * R, my + k * R * 1.4); ctx.lineTo(mx - 0.18 * R, my + k * R * 1.5); ctx.closePath(); fill("#2c1d22");
+      const k = 0.05 + 0.03 * Math.sin(t * 2.3 + seed);
+      ellipse(mx, my, 0.14 * R, k * R, "#2a2430");
     } else if (sp > 0) {
-      offen(0.15 * R + 0.03 * R * sp, 0.06 * R + 0.17 * R * sp);
+      ellipse(mx, my, 0.09 * R + 0.02 * R * sp, 0.03 * R + 0.08 * R * sp, "#3a2630");
     } else if (schreck) {
-      offen(0.12 * R, 0.26 * R);
-    } else if (aus === "angst") {
-      offen(0.14 * R, 0.1 * R);
+      ellipse(mx, my + 0.02 * R, 0.07 * R, 0.1 * R, "#3a2630");
     } else if (aus === "froh") {
-      ctx.save(); ctx.beginPath(); ctx.moveTo(mx - 0.2 * R, my - 0.03 * R); ctx.quadraticCurveTo(mx, my + 0.28 * R, mx + 0.2 * R, my - 0.03 * R); ctx.closePath(); ctx.fillStyle = "#3a1f24"; ctx.fill(); ctx.clip();
-      A.box(mx - 0.2 * R, my - 0.05 * R, 0.4 * R, 0.07 * R, 2, "#f3eee6"); ellipse(mx, my + 0.2 * R, 0.1 * R, 0.07 * R, "#c8616a"); ctx.restore();
+      ctx.beginPath(); ctx.moveTo(mx - 0.14 * R, my - 0.02 * R); ctx.quadraticCurveTo(mx, my + 0.16 * R, mx + 0.14 * R, my - 0.02 * R); ctx.closePath(); fill("#3a2630");
     } else {
-      const k = aus === "traurig" || aus === "besorgt" ? -0.07 : aus === "wuetend" ? -0.04 : aus === "entschlossen" ? 0 : 0.03;
-      ctx.beginPath(); ctx.moveTo(mx - 0.15 * R, my); ctx.quadraticCurveTo(mx, my + k * R * 2, mx + 0.15 * R, my);
-      ctx.strokeStyle = lippe; ctx.lineWidth = 0.05 * R; ctx.stroke();
+      const k = aus === "traurig" || aus === "besorgt" ? -0.05 : aus === "wuetend" ? -0.03 : 0.02;
+      ctx.beginPath(); ctx.moveTo(mx - 0.1 * R, my); ctx.quadraticCurveTo(mx, my + k * R * 2, mx + 0.1 * R, my);
+      ctx.strokeStyle = mund; ctx.lineWidth = 0.04 * R; ctx.lineCap = "round"; ctx.stroke();
     }
     haareVorne(f, R);
     if (f.muetze) {
-      ctx.beginPath(); ctx.moveTo(-1.1 * R, -0.25 * R);
-      ctx.bezierCurveTo(-1.12 * R, -1.55 * R, 1.12 * R, -1.55 * R, 1.1 * R, -0.25 * R); ctx.closePath(); fill(f.muetze);
-      schattiere(-R, R, 0.2);
-      A.box(-1.13 * R, -0.45 * R, 2.26 * R, 0.3 * R, 0.15 * R, shade(f.muetze, -0.12));
-      circle(0, -1.22 * R, 0.17 * R, shade(f.muetze, 0.15));
+      ctx.beginPath(); ctx.moveTo(-1.08 * R, -0.3 * R);
+      ctx.bezierCurveTo(-1.1 * R, -1.45 * R, 1.1 * R, -1.45 * R, 1.08 * R, -0.3 * R); ctx.closePath(); fill(f.muetze);
+      A.box(-1.1 * R, -0.46 * R, 2.2 * R, 0.24 * R, 0.12 * R, shade(f.muetze, -0.15));
     }
     if (f.brille) {
-      ctx.lineWidth = 0.045 * R; ctx.strokeStyle = f.brille;
-      for (const s of [-1, 1]) { A.rr(fx + s * 0.35 * R - 0.25 * R, -0.2 * R, 0.5 * R, 0.38 * R, 0.14 * R); ctx.fillStyle = "rgba(220,235,255,0.12)"; ctx.fill(); ctx.stroke(); }
-      A.line(fx - 0.1 * R, -0.05 * R, fx + 0.1 * R, -0.05 * R, 0.045 * R, f.brille);
+      ctx.lineWidth = 0.035 * R; ctx.strokeStyle = rgba(f.brille, 0.85);
+      for (const s of [-1, 1]) { ctx.beginPath(); ctx.ellipse(fx + s * 0.36 * R, 0.02 * R, 0.21 * R, 0.17 * R, 0, 0, Math.PI * 2); ctx.stroke(); }
+      A.line(fx - 0.15 * R, 0.0, fx + 0.15 * R, 0.0, 0.035 * R, rgba(f.brille, 0.85));
     }
     ctx.restore();
   };
@@ -228,7 +179,7 @@
     const t = o.t || 0, ph = o.phase ?? (x * 0.013);
     const P = pose(o.pose || (f.zombie ? "zombie" : "steht"), t, f, ph);
     let bob = Math.sin(t * 2.1 + ph) * 2.5;
-    let fl = [-40, 0], fr = [40, 0], lift = [0, 0];
+    let fl = [-34, 0], fr = [34, 0], lift = [0, 0];
     if (P.gehen) {
       const sp = P.gehen === 2 ? 11 : P.gehen < 1 ? 4 : 7.5;
       const w = t * sp + ph;
@@ -238,63 +189,52 @@
       if (!f.zombie) { P.hl = [-100, -215 + Math.cos(w) * 22]; P.hr = [100, -215 - Math.cos(w) * 22]; }
     }
     ctx.save(); ctx.translate(x, y); ctx.scale((o.spiegeln ? -s : s) * (f.groesse || 1), s * (f.groesse || 1));
-    // Bodenschatten
-    ellipse(0, -2, 110, 18, rgba(A.SCHATTEN, 0.22));
+    ellipse(0, -2, 95, 14, rgba(A.SCHATTEN, 0.3));
     ctx.rotate(P.lean);
-    // Beine
+    // Beine: schlichte Kapseln, Füße als dunkle Ovale
     for (const [i, side] of [[0, -1], [1, 1]]) {
       const ft = i ? fr : fl, hy = -200 + bob * 0.3, l = lift[i];
-      capsule(side * 36, hy, ft[0], -24 - l, 29, 23); fill(i ? shade(f.hose, -0.08) : f.hose);
-      // Schuh
-      A.box(ft[0] - 36, -36 - l, 72, 34, 16, f.schuhe);
-      A.box(ft[0] - 36, -10 - l, 72, 9, 4, shade(f.schuhe, 0.25));
-      if (f.zombie) A.poly([[ft[0] - 28, -60 - l], [ft[0] - 14, -44 - l], [ft[0], -60 - l], [ft[0] + 14, -46 - l], [ft[0] + 28, -60 - l], [ft[0] + 28, -40 - l], [ft[0] - 28, -40 - l]], shade(f.hose, -0.15));
+      capsule(side * 30, hy, ft[0], -22 - l, 26, 21); fill(i ? shade(f.hose, -0.12) : f.hose);
+      ellipse(ft[0] + side * 6, -14 - l, 32, 15, f.schuhe);
     }
     ctx.translate(0, bob);
-    // Rucksack hinten
-    if (f.rucksack) { A.box(-82, -380, 164, 190, 40, shade(f.rucksack, -0.15)); }
-    // Hals
-    A.box(-23, -415, 46, 60, 16, shade(f.haut, -0.12));
-    // Torso
-    ctx.beginPath(); ctx.moveTo(-76, -372);
-    ctx.bezierCurveTo(-96, -352, -84, -260, -72, -182); ctx.lineTo(72, -182);
-    ctx.bezierCurveTo(84, -260, 96, -352, 76, -372); ctx.quadraticCurveTo(0, -398, -76, -372); ctx.closePath();
-    fill(f.jacke); ctx.beginPath(); ctx.moveTo(-76, -372);
-    ctx.bezierCurveTo(-96, -352, -84, -260, -72, -182); ctx.lineTo(72, -182);
-    ctx.bezierCurveTo(84, -260, 96, -352, 76, -372); ctx.quadraticCurveTo(0, -398, -76, -372); ctx.closePath();
-    schattiere(-90, 90, 0.24);
-    A.box(-74, -206, 148, 26, 12, shade(f.jacke, -0.12));
-    if (f.zombie) { // zerrissener Saum + Flecken
-      A.poly([[-72, -182], [-50, -160], [-34, -182], [-10, -164], [8, -182], [30, -158], [50, -182], [72, -182], [72, -190], [-72, -190]], shade(f.jacke, -0.12));
-      ellipse(30, -290, 22, 14, rgba("#3d2a26", 0.35), 0.4); ellipse(-40, -240, 14, 9, rgba("#3d2a26", 0.3));
-    } else {
-      A.line(0, -380, 0, -205, 4, shade(f.jacke, -0.2));
-    }
-    // Kragen / Kapuze
-    if (f.kapuze) { ctx.beginPath(); ctx.ellipse(0, -378, 66, 26, 0, 0, Math.PI * 2); fill(shade(f.jacke, -0.15)); }
-    else { ctx.beginPath(); ctx.moveTo(-46, -385); ctx.quadraticCurveTo(0, -350, 46, -385); ctx.lineTo(36, -396); ctx.quadraticCurveTo(0, -372, -36, -396); ctx.closePath(); fill(shade(f.jacke, -0.1)); }
-    if (f.rucksack) { for (const sx of [-1, 1]) A.box(sx * 52 - 9, -380, 18, 150, 8, f.rucksack); }
-    // Kopf
-    A.kopf(0, -490, 102, f, { t, ausdruck: o.ausdruck, spricht: o.spricht, blick: o.blick, drehung: o.drehung, neigung: P.neig + (o.neigung || 0), seed: o.seed ?? Math.round(ph * 10) });
+    if (f.rucksack) A.box(-78, -376, 156, 182, 44, shade(f.rucksack, -0.2));
+    // Körper: ein weicher, nach unten leicht breiterer Block
+    const torso = () => {
+      ctx.beginPath(); ctx.moveTo(-62, -388);
+      ctx.bezierCurveTo(-92, -380, -88, -250, -80, -186);
+      ctx.quadraticCurveTo(0, -172, 80, -186);
+      ctx.bezierCurveTo(88, -250, 92, -380, 62, -388);
+      ctx.quadraticCurveTo(0, -402, -62, -388); ctx.closePath();
+    };
+    torso(); fill(f.jacke); torso(); weich(-90, -400, 90, -180);
+    if (f.zombie) { ellipse(26, -292, 18, 12, rgba("#1e1820", 0.28), 0.4); ellipse(-34, -236, 12, 8, rgba("#1e1820", 0.22)); }
+    if (f.kapuze) { ctx.beginPath(); ctx.ellipse(0, -386, 58, 20, 0, 0, Math.PI * 2); fill(shade(f.jacke, -0.18)); }
+    if (f.rucksack) for (const sx of [-1, 1]) A.box(sx * 46 - 8, -384, 16, 150, 8, shade(f.rucksack, 0.05));
+    A.kopf(0, -500, 104, f, { t, ausdruck: o.ausdruck, spricht: o.spricht, blick: o.blick, drehung: o.drehung, neigung: P.neig + (o.neigung || 0), seed: o.seed ?? Math.round(ph * 10) });
     // Arme
-    const sch = [[-74, -360], [74, -360]];
+    const sch = [[-66, -356], [66, -356]];
     const haende = [P.hl, P.hr];
     for (const i of [0, 1]) {
       const [sx, sy] = sch[i];
       const [tx, ty] = [haende[i][0], haende[i][1] - bob];
       let a = A.ik(sx, sy, tx, ty, 100, 94, 1), b = A.ik(sx, sy, tx, ty, 100, 94, -1);
       const k = (i === 0 ? a.ex < b.ex : a.ex > b.ex) ? a : b;
-      const arm = shade(f.jacke, i ? -0.1 : -0.04);
-      capsule(sx, sy, k.ex, k.ey, 24, 20); fill(arm);
-      capsule(k.ex, k.ey, k.hx, k.hy, 20, 17); fill(arm);
-      circle(k.hx, k.hy, 19, f.haut);
-      ctx.beginPath(); ctx.arc(k.hx, k.hy, 19, 0, Math.PI * 2); schattiere(k.hx - 19, k.hx + 19, 0.18);
+      const arm = shade(f.jacke, i ? -0.14 : -0.06);
+      capsule(sx, sy, k.ex, k.ey, 21, 18); fill(arm);
+      capsule(k.ex, k.ey, k.hx, k.hy, 18, 15); fill(arm);
+      circle(k.hx, k.hy, 16, shade(f.haut, i ? -0.08 : 0));
       if (o.pose === "taschenlampe" && i === 1) {
-        ctx.save(); ctx.translate(k.hx, k.hy); A.box(-10, -40, 20, 62, 6, "#2f3236"); A.box(-14, -52, 28, 16, 5, "#44484d"); ctx.restore();
-        A.licht(k.hx, k.hy - 80, 520, "#fff4d0", 1.3);
+        ctx.save(); ctx.translate(k.hx, k.hy); A.box(-9, -40, 18, 58, 8, "#2a2d36"); ctx.restore();
+        A.licht(k.hx, k.hy - 80, 520, "#f3e6c4", 1.2);
       }
       if (o.halt && i === 1) A.objekt(o.halt, k.hx, k.hy - 10, 0.55, t);
     }
     ctx.restore();
   };
+
+  // Figuren zusätzlich in die Maske zeichnen (siehe A.maskeZeichnen)
+  const figurRoh = A.figur, kopfRoh = A.kopf;
+  A.figur = (...a) => { figurRoh(...a); A.maskeZeichnen(() => figurRoh(...a)); };
+  A.kopf = (...a) => { kopfRoh(...a); A.maskeZeichnen(() => kopfRoh(...a)); };
 })();

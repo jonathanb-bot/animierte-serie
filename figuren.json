@@ -1,7 +1,7 @@
 {
   "du":     { "haar": "kurz",    "haare": "#3a2a22", "haut": "#f1cfb3", "jacke": "#3f6b8f", "hose": "#2b3140", "kapuze": true },
   "lena":   { "haar": "lang",    "haare": "#7a4b2a", "haut": "#eec3a2", "jacke": "#8c3f45", "hose": "#2f2c33", "augen": "#3b5a3a" },
-  "mila":   { "haar": "kind",    "haare": "#9a6235", "haut": "#f3d1b5", "jacke": "#e2a93b", "hose": "#4a5470", "groesse": 0.78 },
+  "mila":   { "haar": "kind",    "haare": "#9a6235", "haut": "#f3d1b5", "jacke": "#c08f48", "hose": "#4a5470", "groesse": 0.78 },
   "walter": { "haar": "glatze",  "haare": "#c9c4bd", "haut": "#eec6a6", "jacke": "#55603f", "hose": "#3a3a35", "bart": "#d8d3cc", "brille": "#3b3b40" },
   "kai":    { "haar": "wuschel", "haare": "#2b2522", "haut": "#c99772", "jacke": "#2e2f35", "hose": "#3b4a5e", "rucksack": "#6b5a3c" },
   "pilotin":{ "haar": "dutt",    "haare": "#2c2420", "haut": "#d9a882", "jacke": "#4b5a3a", "hose": "#3a4030", "muetze": "#3d4a32" }
