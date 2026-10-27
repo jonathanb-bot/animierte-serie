@@ -39,22 +39,37 @@ class KontingentErschoepft(RuntimeError):
     pass
 
 
+# Schlüssel der Reihe nach: zuerst der vom Proxy eingesetzte bzw. GEMINI_API_KEY, dann GEMINI_API_KEY_2 …
+# (Limits gelten pro Google-Projekt; ein zweiter Schlüssel hilft nur aus einem anderen Projekt.)
+SCHLUESSEL = [os.environ.get("GEMINI_API_KEY")] + [os.environ[f"GEMINI_API_KEY_{n}"] for n in range(2, 10)
+                                                    if os.environ.get(f"GEMINI_API_KEY_{n}")]
+_aktiv = 0
+
+
 def _post(body: dict) -> dict:
+    global _aktiv
     url = f"https://generativelanguage.googleapis.com/v1beta/models/{MODELL}:generateContent"
-    schluessel = os.environ.get("GEMINI_API_KEY")
-    kopf = {"Content-Type": "application/json", **({"x-goog-api-key": schluessel} if schluessel else {})}
-    for versuch in range(4):
+    while True:
+        schluessel = SCHLUESSEL[_aktiv]
+        kopf = {"Content-Type": "application/json", **({"x-goog-api-key": schluessel} if schluessel else {})}
         try:
-            req = urllib.request.Request(url, data=json.dumps(body).encode(), headers=kopf)
-            return json.load(urllib.request.urlopen(req, timeout=300))
-        except urllib.error.HTTPError as e:
-            info = e.read().decode(errors="replace")
-            if e.code == 429 and ("per day" in info.lower() or "PerDay" in info):
-                raise KontingentErschoepft("Gemini-Tageskontingent aufgebraucht (kostenlos: 10 Anfragen/Tag).") from e
-            if versuch == 3 or e.code not in (429, 500, 502, 503, 504):
-                raise RuntimeError(f"Gemini-TTS: HTTP {e.code}: {info[:300]}") from e
-            time.sleep(15 * (versuch + 1))
-    raise RuntimeError("Gemini-TTS: keine Antwort")
+            for versuch in range(4):
+                try:
+                    req = urllib.request.Request(url, data=json.dumps(body).encode(), headers=kopf)
+                    return json.load(urllib.request.urlopen(req, timeout=300))
+                except urllib.error.HTTPError as e:
+                    info = e.read().decode(errors="replace")
+                    if e.code == 429 and ("per day" in info.lower() or "PerDay" in info):
+                        raise KontingentErschoepft(
+                            f"Gemini-Tageskontingent aufgebraucht (Schlüssel {_aktiv + 1} von {len(SCHLUESSEL)}).") from e
+                    if versuch == 3 or e.code not in (429, 500, 502, 503, 504):
+                        raise RuntimeError(f"Gemini-TTS: HTTP {e.code}: {info[:300]}") from e
+                    time.sleep(15 * (versuch + 1))
+            raise RuntimeError("Gemini-TTS: keine Antwort")
+        except KontingentErschoepft:
+            if _aktiv + 1 >= len(SCHLUESSEL):
+                raise
+            _aktiv += 1
 
 
 def _anfrage(text: str, stimme: str) -> np.ndarray:
