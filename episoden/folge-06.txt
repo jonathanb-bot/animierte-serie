@@ -1,4 +1,7 @@
 # Folge 6: Auf dem Dach
+@musik musik/folge-06.mp3
+@musik_lautstaerke 1
+@whoosh aus
 
 == Szene 1: Der Mann hinter dem Tank ==
 @zeit abend
@@ -10,7 +13,7 @@
 [titel oben="Folge 6" gross="Auf dem Dach" unten="24. Stock" dauer=3]
 == Was bisher geschah ==
 [gesicht kai ort=wohnung morgen traurig hud=false] Was bisher geschah: Kai hat Wasser gestohlen. Er wollte allein zum *Stadion*.
-[objekt objekte="schluessel:Wasser verschlossen|wasserflasche:2 Liter pro Tag" hud=false] Seitdem wird das Wasser *rationiert*.
+[objekt objekte="schluessel:Verschlossen|wasserflasche:2 L pro Tag" hud=false] Seitdem wird das Wasser *rationiert*.
 [dach abend tank=0.6 tonnen=false zombie3 hud=false] Walter hat euch zum alten Tank auf dem Dach geführt. Aber da oben war *jemand*.
 
 == Szene 2: Die Falle ==
@@ -29,7 +32,7 @@
 [gesicht walter ort=dach froh] „Halb voll! Das sind locker *anderthalbtausend* Liter!“
 [objekt objekte="tropfen:1500 Liter" gross="Im Tank"] Anderthalbtausend Liter. Genug für Monate.
 [gesicht walter ort=dach besorgt] Dann schaut er genauer hin. „Aber *trinken* würde ich das so nicht.“
-[objekt objekte="tropfen:Algen, Staub, Vogeldreck" farbe="#3a3a1e"] Algen. Laub. Vogeldreck. Das Wasser steht seit Jahren.
+[objekt objekte="tropfen:Algen, Laub, Dreck" farbe="#3a3a1e"] Algen. Laub. Vogeldreck. Das Wasser steht seit Jahren.
 
 == Szene 4: Wasser sauber machen ==
 [wohnung du lena walter tag licht=aus objekt=topf objekt_x=900 objekt_y=1320] Lena zeigt euch, wie man Wasser *trinkbar* macht.

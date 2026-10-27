@@ -1,4 +1,7 @@
 # Folge 5: Wasserdiebe
+@musik musik/folge-05.mp3
+@musik_lautstaerke 1
+@whoosh aus
 
 == Szene 1: Die Rechnung geht nicht auf ==
 @zeit morgen
@@ -33,7 +36,7 @@
 
 == Szene 5: Rationen ==
 @hud zeit=10:00 wasser=230/400L
-[objekt objekte="schluessel:Wasser wird verschlossen" farbe="#2a3a4a"] Erstens: Das Trinkwasser kommt in einen Raum. Den Schlüssel hat *Walter*.
+[objekt objekte="schluessel:Weggeschlossen" farbe="#2a3a4a"] Erstens: Das Trinkwasser kommt in einen Raum. Den Schlüssel hat *Walter*.
 [objekt objekte="wasserflasche:2 Liter|uhr:Pro Tag" gross="Ration"] Zweitens: Jeder bekommt seine Ration. Zwei Liter. Morgens ausgeteilt. Nicht mehr.
 [objekt objekte="medizin:Wasserbuch" farbe="#2a3a2a"] Drittens: Alles wird *aufgeschrieben*. Wer was nimmt, wann und wie viel.
 [gesicht walter ort=wohnung tag entschlossen] „Ein Strich auf Papier ist ehrlicher als jedes *Versprechen*.“
