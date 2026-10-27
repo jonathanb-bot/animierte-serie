@@ -96,4 +96,4 @@
 [hochhaus etage=18 bis_etage=24 nacht strom=false zombies=1-10] Zweiundzwanzig. Dreiundzwanzig. *Vierundzwanzig*.
 [treppenhaus etage=24 licht=aus klopfen wackeln=1] Dann: Jemand hämmert gegen deine Tür.
 [gesicht du ort=treppenhaus licht=taschenlampe schreck zoom-rein] Und du weißt nicht, ob da draußen noch ein *Mensch* steht.
-[titel gross="Fortsetzung folgt" oben="Folge 2: Kein Druck" farbe="#2a0d0b" dauer=3.5]
+[titel oben="Fortsetzung folgt" gross="Teil 2|Kein Druck" groesse=120 knopf="Jetzt auf dem Profil" farbe="#2a0d0b" dauer=4]

@@ -78,11 +78,4 @@
 [objekt objekte="schluessel:Hintertür offen" farbe="#4a1e1e"] Du hast die Hintertür *offen* gelassen.
 [hochhaus etage=4 bis_etage=14 tag strom=false zombies="1-14" horde=20 wackeln=0.4] Die Horde vom Lieferwagen ist dir gefolgt. Ins Haus. Ins Treppenhaus.
 [gesicht du ort=treppenhaus licht=taschenlampe angst zoom-rein] Und sie kommen *hoch*.
-[titel gross="Fortsetzung folgt" oben="Folge 9: Die Horde" farbe="#2a0d0b" dauer=3.5]
-
-
-== Überlebens-Check ==
-@hud aus
-[objekt objekte="schluessel:Tür offen" gross="Überlebens-Check" farbe="#1e2f45"] Überlebens-Check! Welchen Fehler hast du in dieser Folge *gemacht*?
-[objekt objekte="schluessel:Tür offen" gross="Die Antwort" farbe="#1e3a2a"] Die Hintertür. Jede offene Tür ist eine *Einladung*.
-[titel gross="Was hättest du|gemacht?" groesse=120 unten="Schreib es in die Kommentare" farbe="#1e2f45" dauer=3.5]
+[titel oben="Fortsetzung folgt" gross="Teil 9|Die Horde" groesse=120 knopf="Jetzt auf dem Profil" farbe="#2a0d0b" dauer=4]

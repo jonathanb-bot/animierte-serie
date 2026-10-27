@@ -82,11 +82,4 @@
 [hochhaus etage=17 bis_etage=19 nacht strom=false barrikade=20 zombies="1-12"] Sondern eine Stimme. Ein Mensch. *Leise*. Direkt hinter der Barrikade.
 [gesicht kai ort=treppenhaus angst licht=taschenlampe] „Hallo? Ist da oben wer? Bitte … ich hab *Essen* dabei.“
 [gesicht du ort=treppenhaus licht=taschenlampe misstrauisch zoom-rein] Und jetzt musst du entscheiden, ob du einem Fremden *vertraust*.
-[titel gross="Fortsetzung folgt" oben="Folge 4: Licht aus" farbe="#2a0d0b" dauer=3.5]
-
-
-== Überlebens-Check ==
-@hud aus
-[objekt objekte="wecker:Ablenkung|ohr:Lärm" gross="Überlebens-Check" farbe="#1e2f45"] Überlebens-Check! Warum war der Wecker im Aufzugschacht so *clever*?
-[objekt objekte="wecker:Ablenkung|ohr:Lärm" gross="Die Antwort" farbe="#1e3a2a"] Weil Lärm sie lockt. Und der Schacht den Lärm *weit weg* von euch gebracht hat.
-[titel gross="Was hättest du|gemacht?" groesse=120 unten="Schreib es in die Kommentare" farbe="#1e2f45" dauer=3.5]
+[titel oben="Fortsetzung folgt" gross="Teil 4|Licht aus" groesse=120 knopf="Jetzt auf dem Profil" farbe="#2a0d0b" dauer=4]

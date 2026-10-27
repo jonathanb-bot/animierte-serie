@@ -89,11 +89,4 @@
 [gesicht walter ort=wohnung nacht licht=kerze besorgt] Walter flüstert: „Sie sind langsam auf Treppen. Aber sie hören *nicht* auf.“
 [treppenhaus etage=22 licht=aus zombies klopfen] Einundzwanzig. Zweiundzwanzig.
 [gesicht du ort=treppenhaus licht=taschenlampe entschlossen zoom-rein] Und eure Tür ist das *Einzige*, was zwischen euch und ihnen steht.
-[titel gross="Fortsetzung folgt" oben="Folge 3: Das Treppenhaus" farbe="#2a0d0b" dauer=3.5]
-
-
-== Überlebens-Check ==
-@hud aus
-[objekt objekte="boiler:Boiler|spuelkasten:Spülkasten|wasserflasche:Leitung" gross="Überlebens-Check" farbe="#1e2f45"] Überlebens-Check! Wo findest du in deiner Wohnung *versteckt* Wasser?
-[objekt objekte="boiler:Boiler|spuelkasten:Spülkasten|wasserflasche:Leitung" gross="Die Antwort" farbe="#1e3a2a"] Boiler, Spülkasten und die Leitungen. Aber *niemals* Heizungswasser.
-[titel gross="Was hättest du|gemacht?" groesse=120 unten="Schreib es in die Kommentare" farbe="#1e2f45" dauer=3.5]
+[titel oben="Fortsetzung folgt" gross="Teil 3|Das Treppenhaus" groesse=120 knopf="Jetzt auf dem Profil" farbe="#2a0d0b" dauer=4]

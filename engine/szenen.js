@@ -607,11 +607,24 @@
     const r = rnd(3); for (let i = 0; i < 40; i++) { const y = (r() * H - t * 30 * (0.5 + r())) % H; circle(r() * W, (y + H) % H, 2 + r() * 3, rgba("#ffffff", 0.15)); }
     const ein = E.pop(clamp(t / 0.5, 0, 1));
     ctx.save(); ctx.translate(540, 820); ctx.scale(0.8 + 0.2 * ein, 0.8 + 0.2 * ein); ctx.globalAlpha = clamp(t / 0.25, 0, 1);
-    if (s.oben) A.text(s.oben.toUpperCase(), 0, -170, 60, s.akzent || "#ffcf3d");
     const zeilen = String(s.gross || "").toUpperCase().split("|");
+    if (s.oben) A.text(s.oben.toUpperCase(), 0, -170 - (zeilen.length - 1) * 45, 60, s.akzent || "#ffcf3d");
     zeilen.forEach((z, i) => { ctx.save(); ctx.shadowColor = "rgba(0,0,0,0.6)"; ctx.shadowBlur = 30; A.text(z, 0, i * (s.groesse || 150) * 1.05 - (zeilen.length - 1) * (s.groesse || 150) * 0.5, s.groesse || 150, s.textfarbe || "#f4efe6", "center", 900, "Titel", 940); ctx.restore(); });
     if (s.unten) A.text(s.unten.toUpperCase(), 0, 170 + (zeilen.length - 1) * 80, 52, "rgba(255,255,255,0.7)", "center", 700, "HUD");
     ctx.restore();
+    // Knopf unter dem Titel (z. B. „Jetzt auf dem Profil“), erscheint kurz nach dem Titel und pulsiert sanft
+    if (s.knopf) {
+      const k = E.pop(clamp((t - 0.6) / 0.5, 0, 1));
+      if (k > 0) {
+        const txt = s.knopf.toUpperCase(), y = 820 + 250 + (zeilen.length - 1) * 80;
+        ctx.save(); ctx.translate(540, y); ctx.scale(k * (1 + 0.025 * Math.sin(t * 3.2)), k * (1 + 0.025 * Math.sin(t * 3.2)));
+        ctx.font = "900 50px Titel";
+        const tw = ctx.measureText(txt).width;
+        box(-tw / 2 - 50, -50, tw + 100, 100, 50, s.knopf_farbe || "#e2b443");
+        A.text(txt, 0, 0, 50, "#1a1410");
+        ctx.restore();
+      }
+    }
     A._dunkel = 0;
   };
 })();

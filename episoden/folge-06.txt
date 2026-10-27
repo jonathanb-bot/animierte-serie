@@ -84,11 +84,4 @@
 [wohnung du lena mila walter kai nacht licht=kerze vorhang=zu] Ihr wisst alle, wo es Medikamente gibt.
 [strasse nacht horde=12 zoom-rein] Direkt gegenüber. Auf der anderen Straßenseite. Mitten *zwischen* ihnen.
 [gesicht du ort=wohnung nacht licht=kerze entschlossen zoom-rein] Und jemand muss dorthin.
-[titel gross="Fortsetzung folgt" oben="Folge 7: Fieber" farbe="#2a0d0b" dauer=3.5]
-
-
-== Überlebens-Check ==
-@hud aus
-[objekt objekte="plane:Erste Liter weg|kocher:Abkochen" gross="Überlebens-Check" farbe="#1e2f45"] Überlebens-Check! Was musst du bei Regenwasser vom Dach *beachten*?
-[objekt objekte="plane:Erste Liter weg|kocher:Abkochen" gross="Die Antwort" farbe="#1e3a2a"] Die ersten Liter wegkippen. Danach trotzdem *filtern und abkochen*.
-[titel gross="Was hättest du|gemacht?" groesse=120 unten="Schreib es in die Kommentare" farbe="#1e2f45" dauer=3.5]
+[titel oben="Fortsetzung folgt" gross="Teil 7|Fieber" groesse=120 knopf="Jetzt auf dem Profil" farbe="#2a0d0b" dauer=4]

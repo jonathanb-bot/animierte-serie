@@ -51,7 +51,7 @@ In der Klammer steht zuerst der **Typ**, danach beliebige Angaben:
 | `objekt` | Infokarte mit Icons | `objekte="badewanne:150 Liter\|boiler:80 Liter"`, `gross="Überschrift"`, `durchgestrichen=feuer`, `farbe=#hex` |
 | `karte` | Stadtplan | `route="haus>apotheke"`, `horden=supermarkt,bruecke`, `orte=haus,apotheke,stadion` |
 | `gesicht` | Nahaufnahme, unscharfer Hintergrund | `ort=wohnung/treppenhaus/dach/bad/strasse`, `licht=kerze/taschenlampe` |
-| `titel` | Titelkarte | `oben=`, `gross=` (Zeilenumbruch mit `\|`), `unten=`, `groesse=` |
+| `titel` | Titelkarte | `oben=`, `gross=` (Zeilenumbruch mit `\|`), `unten=`, `groesse=`, `knopf="Jetzt auf dem Profil"` |
 
 **Allgemein:**
 - **Figuren:** `du`, `lena`, `mila`, `walter`, `kai`, `pilotin`, `zombie3` … Für Posen oder Ausdrücke pro Figur: `lena:psst`, `walter:besorgt`.

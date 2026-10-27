@@ -77,11 +77,4 @@
 [strasse tag horde=16 laerm_x=150 schwenk-links] Das Handy ist nicht am Ende der Straße gelandet. Sondern direkt auf dem Vordach der *Apotheke*.
 [karte orte=haus,apotheke route="haus>apotheke" horden=apotheke] Jeder einzelne von ihnen läuft jetzt genau dorthin, wo ihr *hinmüsst*.
 [gesicht du ort=treppenhaus licht=taschenlampe schreck zoom-rein] Und oben im 24. Stock wird Milas Fieber immer *höher*.
-[titel gross="Fortsetzung folgt" oben="Folge 8: Die Apotheke" farbe="#2a0d0b" dauer=3.5]
-
-
-== Überlebens-Check ==
-@hud aus
-[objekt objekte="wecker:Alarm|uhr:Zeit" gross="Überlebens-Check" farbe="#1e2f45"] Überlebens-Check! Was hättest du an Kais Stelle *anders* gemacht?
-[objekt objekte="wecker:Alarm|uhr:Zeit" gross="Die Antwort" farbe="#1e3a2a"] Alarmzeit *doppelt* prüfen. Und nie mit dem Wind werfen.
-[titel gross="Was hättest du|gemacht?" groesse=120 unten="Schreib es in die Kommentare" farbe="#1e2f45" dauer=3.5]
+[titel oben="Fortsetzung folgt" gross="Teil 8|Die Apotheke" groesse=120 knopf="Jetzt auf dem Profil" farbe="#2a0d0b" dauer=4]

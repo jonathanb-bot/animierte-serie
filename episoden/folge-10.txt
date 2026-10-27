@@ -75,11 +75,4 @@
 [skyline abend zoom-rein rauch] Am Abend erreicht ihr das Stadion. Tausende Menschen. Zelte. Soldaten.
 [skyline nacht nah licht] Und das Flutlicht ist *an*. Hell. Weithin sichtbar. Die ganze Nacht.
 [gesicht du ort=dach nacht schreck zoom-rein] Und du denkst nur eins: *Das ist ein Fehler*.
-[titel gross="Ende Staffel 1" oben="24. Stock" unten="Fortsetzung folgt …" farbe="#2a0d0b" dauer=4]
-
-
-== Überlebens-Check ==
-@hud aus
-[objekt objekte="tropfen:Wasser|ohr:Lärm|auge:Licht" gross="Überlebens-Check" farbe="#1e2f45"] Überlebens-Check! Wärst du ins Stadion gegangen? Oder *oben* geblieben?
-[objekt objekte="tropfen:Wasser|ohr:Lärm|auge:Licht" gross="Die Antwort" farbe="#1e3a2a"] Wasser sichern. Leise sein. Kein Licht. Und *niemals* vergessen.
-[titel gross="Was hättest du|gemacht?" groesse=120 unten="Schreib es in die Kommentare" farbe="#1e2f45" dauer=3.5]
+[titel oben="Ende Staffel 1" gross="Staffel 2|kommt" groesse=130 knopf="Folgen und nichts verpassen" farbe="#2a0d0b" dauer=4.5]
