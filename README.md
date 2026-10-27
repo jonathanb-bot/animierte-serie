@@ -76,8 +76,8 @@ python -m ton.pruefen folge-01                  # Lautheit und Abstand Stimme/Hi
   (kostenlose Microsoft-Neural-Stimme „Conrad“, +18 % Tempo). Auch Zitate spricht der Erzähler – wie in der Vorlage.
   Die Betonung richtet sich nach dem Ausdruck in der Klammer (`schreck`, `besorgt` …) oder nach `emotion=…`.
 - **Wortzeiten** als `audio/folge-XX/NNN.json` – `render.mjs` legt die Untertitel damit exakt auf die Stimme.
-- **Hintergrund** als `musik/folge-XX.mp3`: dunkler Drone ~12 dB unter der Stimme, an jeder Kapitelgrenze (`== … ==`)
-  ein harter **Stille-Schnitt**, dazu dezente Geräusche passend zum Bild (`alarm`, `klopfen`, `blitz`/„Klack“,
+- **Hintergrund** als `musik/folge-XX.mp3`: kein Drone und kein Rauschen (alter Teppich nur mit `--drone`), an jeder Kapitelgrenze (`== … ==`)
+  ein harter **Stille-Schnitt**, dazu leise Geräusche passend zum Bild (Warnsignale wie Alarm, Sirene, Wecker etwas lauter) (`alarm`, `klopfen`, `blitz`/„Klack“,
   `hahn=…`, `fuell_bis`, Schritte, Handy …). Pro Einstellung: `ton=zombie,wind` oder `ton=aus`.
 - Im Drehbuch werden `@musik musik/folge-XX.mp3`, `@musik_lautstaerke 1` und `@whoosh aus` gesetzt.
 

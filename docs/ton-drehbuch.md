@@ -11,7 +11,7 @@ Die Vorlage (Hochkant-Kurzgeschichte, ~12 s analysiert) klingt so – und genau 
 |---|---|
 | **eine** tiefe Erzählstimme (~110 Hz), trocken, nah, keine Figurenstimmen – Zitate spricht der Erzähler | `de-DE-ConradNeural`, kein Hall, Zitate einfach in den Erzähltext |
 | zügig: ~4 Wörter/s, Pausen ~0,4–0,8 s | Tempo +18 %, Emotionen ändern das Tempo nur halb so stark |
-| durchgehender dunkler Drone auf A, fast ohne Höhen, ~12 dB unter der Stimme, kaum Ducking | Musik `dunkel` (Spannung: `dunkel_puls`) |
+| ~~durchgehender dunkler Drone~~ – für „24. Stock“ abgeschaltet (kein Brummen/Rauschen), nur noch mit `--drone` | Musik `dunkel` (Spannung: `dunkel_puls`) |
 | harte **Stille-Schnitte** beim Szenenwechsel (alles fällt auf digitale Stille) | `- schnitt: 0.45` |
 | kaum Geräusche | Geräusche leise und sparsam (`sfx` nur für Schlüsselmomente) |
 | Wort-für-Wort-Untertitel, GROSS, dunkle Box, aktuelles Wort unterstrichen, Schlüsselwörter orange/gelb | automatisch; `*Wort*` = orange, `_Wort_` = gelb |
@@ -61,7 +61,7 @@ kapitel:
 |---|---|
 | `erzaehler: "Text"` | Zeile sprechen. Optional: `emotion`, `pegel` (dB), `luecke`, `parallel: true`, `versatz` |
 | `sfx: name` | Geräusch, läuft parallel. Optional: `dauer`, `pegel`, `ort`, `pan`, `versatz`, `warten: true`, `parameter: {…}` |
-| `pause: 1.5` | Stille in der Stimme (Drone läuft weiter) |
+| `pause: 1.5` | Stille in der Stimme |
 | `schnitt: 0.45` | **Stille-Schnitt:** alles hart auf digitale Stille, dann hart weiter |
 | `einblendung: "Text"` | große Texteinblendung oben. Optional: `farbe: orange\|gelb`, `dauer`, `versatz` |
 | `atmo: name` / `atmo_stop: name` | Hintergrundgeräusch ab hier starten / beenden |

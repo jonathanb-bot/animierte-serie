@@ -5,8 +5,9 @@
 Erzeugt:
 - audio/folge-XX/NNN.mp3  Erzählstimme pro Einstellung (eine tiefe, trockene, zügige Stimme – auch Zitate)
 - audio/folge-XX/NNN.json Wortzeiten (render.mjs legt die Untertitel damit exakt auf die Stimme)
-- musik/folge-XX.mp3      Hintergrundspur: dunkler Drone, harte Stille-Schnitte an Kapitelgrenzen,
-                          dezente Geräusche passend zum Bild (Alarm, Klopfen, Stromausfall, Wasser …)
+- musik/folge-XX.mp3      Hintergrundspur: leise Geräusche passend zum Bild (Klopfen, Stromausfall, Wasser …),
+                          Warnsignale (Alarm, Sirene, Wecker) etwas lauter, harte Stille-Schnitte an Kapitelgrenzen.
+                          Kein Drone/Rauschen mehr – mit --drone kommt der alte dunkle Teppich zurück.
 - audio/folge-XX/timing.json  Szenenzeiten (gleiche Rechnung wie render.mjs)
 Im Drehbuch werden dafür `@musik musik/folge-XX.mp3`, `@musik_lautstaerke 1` und `@whoosh aus` gesetzt.
 
@@ -33,7 +34,9 @@ from . import stimmen as S
 ROOT = Path(__file__).resolve().parent.parent
 STIMME_RMS = -12.5      # Stimme (aktive Anteile) – ergibt im Mix ~ -14,5 LUFS wie die Vorlage
 BETT_RMS = STIMME_RMS - 17.0     # ergibt im Mix ~12 dB Abstand Stimme/Drone wie in der Vorlage gemessen
-SFX_PEAK = -14.0
+SFX_PEAK = -20.0        # Geräusche leise unter der Stimme
+WARN_PEAK = -14.0       # Warnsignale dürfen deutlich hörbar bleiben
+WARNSIGNALE = {"autoalarm", "sirene_fern", "wecker", "wecker_klingel", "sos_pfeife"}
 SCHNITT = 0.42          # Länge der Stille an Kapitelgrenzen (Vorlage: ~0,45 s)
 NACH_STIMME = 0.35      # render.mjs: Szene = Sprechdauer + 0,35 s
 
@@ -198,7 +201,7 @@ def drehbuch_kopf_setzen(pfad: Path, musik_rel: str):
     pfad.write_text("\n".join(zeilen) + "\n", encoding="utf-8")
 
 
-def bauen(drehbuch: str, nur_stimme=False, log=print) -> dict:
+def bauen(drehbuch: str, nur_stimme=False, drone=False, log=print) -> dict:
     pfad = Path(drehbuch).resolve()
     fid = pfad.stem
     einst, _ = lesen(pfad)
@@ -244,15 +247,15 @@ def bauen(drehbuch: str, nur_stimme=False, log=print) -> dict:
     if nur_stimme:
         return {"dauer": gesamt}
 
-    # 3) Hintergrundspur: Drone + Geräusche + Stille-Schnitte
-    log("  Drone, Geräusche und Stille-Schnitte …")
+    # 3) Hintergrundspur: Geräusche + Stille-Schnitte (Drone nur mit --drone)
+    log("  Geräusche und Stille-Schnitte …" if not drone else "  Drone, Geräusche und Stille-Schnitte …")
     n = A.sek(gesamt + 1)
     bett = np.zeros((n, 2), np.float32)
     kapitel_start = {}
     for e in einst:
         kapitel_start.setdefault(e.kapitel, e)
     # Spannung (dunkel_puls) in Kapiteln mit Angst/Schreck/Klopfen, sonst dunkel
-    for k, e0 in kapitel_start.items():
+    for k, e0 in (kapitel_start.items() if drone else ()):
         teile = [e for e in einst if e.kapitel == k]
         a, b = teile[0].start, teile[-1].start + teile[-1].dauer
         spannung = any(f.split(":")[-1] in ("angst", "schreck") for e in teile for f in e.flags) and \
@@ -276,7 +279,8 @@ def bauen(drehbuch: str, nur_stimme=False, log=print) -> dict:
             if s.get("ort"):
                 xs = A.hall(xs, s["ort"])
             xs = A.fade(xs, 0.02, 0.3)
-            bett = A.einmischen(bett, xs * A.db(SFX_PEAK + float(s.get("pegel", 0))),
+            peak = WARN_PEAK if s["name"] in WARNSIGNALE else SFX_PEAK
+            bett = A.einmischen(bett, xs * A.db(peak + float(s.get("pegel", 0))),
                                 A.sek(e.start + float(s.get("versatz", 0.1))))
     bett = bett[:n]
     # Stille-Schnitte: vor jedem neuen Kapitel fällt alles hart auf null
@@ -307,9 +311,10 @@ def main(argv=None):
     p = argparse.ArgumentParser(prog="python -m ton.folge", description="Stimme + Hintergrund für eine Folge")
     p.add_argument("drehbuch", nargs="+", help="episoden/folge-XX.txt")
     p.add_argument("--nur-stimme", action="store_true")
+    p.add_argument("--drone", action="store_true", help="dunklen Drone-Teppich wieder unterlegen")
     a = p.parse_args(argv)
     for d in a.drehbuch:
-        bauen(d, nur_stimme=a.nur_stimme)
+        bauen(d, nur_stimme=a.nur_stimme, drone=a.drone)
     return 0
 
 
