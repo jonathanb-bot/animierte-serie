@@ -12,7 +12,7 @@ Erzeugt:
 Im Drehbuch werden dafür `@musik musik/folge-XX.mp3`, `@musik_lautstaerke 1` und `@whoosh aus` gesetzt.
 
 Stimme: standardmäßig kostenlos Edge „Conrad“. Mit `--stimme gemini` (oder `gemini:Algenib`) spricht Gemini-TTS
-(natürlicher; kostenlos 10 Anfragen/Tag, zwei Kapitel pro Anfrage; Wortzeiten per faster-whisper).
+(natürlicher; kostenlos 10 Anfragen/Tag, zwei Kapitel pro Anfrage, mit `--anfragen N` auf N Anfragen verteilt; Wortzeiten per faster-whisper).
 
 Pro Einstellung lässt sich in der Klammer steuern: `emotion=spannend`, `ton=zombie,wind` oder `ton=aus`.
 """
@@ -204,7 +204,7 @@ def drehbuch_kopf_setzen(pfad: Path, musik_rel: str):
     pfad.write_text("\n".join(zeilen) + "\n", encoding="utf-8")
 
 
-def bauen(drehbuch: str, nur_stimme=False, drone=False, stimme="edge", log=print) -> dict:
+def bauen(drehbuch: str, nur_stimme=False, drone=False, stimme="edge", anfragen=None, log=print) -> dict:
     pfad = Path(drehbuch).resolve()
     fid = pfad.stem
     einst, _ = lesen(pfad)
@@ -218,7 +218,7 @@ def bauen(drehbuch: str, nur_stimme=False, drone=False, stimme="edge", log=print
         from . import gemini
         name = stimme.split(":", 1)[1] if ":" in stimme else "Orus"
         gesprochen = gemini.sprechen([re.sub(r"[„“\"»«]", "", e.text) for e in sprechend],
-                                     [e.kapitel for e in sprechend], name, log=log)
+                                     [e.kapitel for e in sprechend], name, anfragen=anfragen, log=log)
     else:
         gesprochen = S.sprechen_viele([(ERZAEHLER, sprechtext(e.text), emotion_fuer(e)) for e in sprechend])
     for e, g in zip(sprechend, gesprochen):
@@ -322,9 +322,10 @@ def main(argv=None):
     p.add_argument("--nur-stimme", action="store_true")
     p.add_argument("--drone", action="store_true", help="dunklen Drone-Teppich wieder unterlegen")
     p.add_argument("--stimme", default="edge", help="edge (Standard) oder gemini[:Stimme], z. B. gemini:Orus")
+    p.add_argument("--anfragen", type=int, help="nur Gemini: Kapitel auf so viele Anfragen verteilen")
     a = p.parse_args(argv)
     for d in a.drehbuch:
-        bauen(d, nur_stimme=a.nur_stimme, drone=a.drone, stimme=a.stimme)
+        bauen(d, nur_stimme=a.nur_stimme, drone=a.drone, stimme=a.stimme, anfragen=a.anfragen)
     return 0
 
 

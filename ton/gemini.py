@@ -195,10 +195,14 @@ def _ruhigste(x: np.ndarray, t0: float, t1: float) -> float:
 
 
 def sprechen(zeilen: list[str], kapitel: list[int], stimme="Orus", kapitel_pro_anfrage=2,
-             log=print) -> list[Gesprochen]:
-    """Eine Folge sprechen. zeilen = Sprechtext je Einstellung (mit *Markierungen*), kapitel = Kapitel je Zeile."""
+             anfragen: int | None = None, log=print) -> list[Gesprochen]:
+    """Eine Folge sprechen. zeilen = Sprechtext je Einstellung (mit *Markierungen*), kapitel = Kapitel je Zeile.
+    Mit anfragen=N werden die Kapitel auf N Anfragen verteilt (statt kapitel_pro_anfrage)."""
+    import math
     import subprocess
     import tempfile
+    if anfragen:
+        kapitel_pro_anfrage = math.ceil((max(kapitel) + 1) / anfragen)
     bloecke: dict[int, list[int]] = {}
     for i, k in enumerate(kapitel):
         bloecke.setdefault(k // kapitel_pro_anfrage, []).append(i)

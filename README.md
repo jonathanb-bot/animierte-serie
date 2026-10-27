@@ -85,6 +85,7 @@ python -m ton.pruefen folge-01                  # Lautheit und Abstand Stimme/Hi
 
 ```bash
 python -m ton.folge episoden/folge-01.txt --stimme gemini:Orus   # oder gemini:Algenib
+python -m ton.folge episoden/folge-03.txt --stimme gemini:Orus --anfragen 4   # Kapitel auf genau 4 Anfragen verteilen
 ```
 
 Gemini liefert keine Wortzeiten; die ermittelt eine lokale Spracherkennung (faster-whisper) und schneidet daran

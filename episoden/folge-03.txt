@@ -1,4 +1,7 @@
 # Folge 3: Das Treppenhaus
+@musik musik/folge-03.mp3
+@musik_lautstaerke 1
+@whoosh aus
 
 == Szene 1: Vor der Tür ==
 @zeit nacht
