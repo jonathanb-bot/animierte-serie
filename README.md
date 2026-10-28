@@ -22,7 +22,13 @@ npm install && npx playwright install chromium   # einmalig, dazu ffmpeg
 node render.mjs episoden/folge-01.txt             # volles Video -> ausgabe/
 node render.mjs episoden/folge-01.txt --bilder    # schnell: ein Standbild pro Einstellung
 node render.mjs episoden/folge-01.txt --vorschau  # kleine, schnelle Vorschau
+node render.mjs episoden/folge-01.txt --teile     # zusätzlich Teile für TikTok/Insta (je max. 59 s)
+node render.mjs episoden/folge-01.txt --teile-plan  # nur anzeigen, wie geteilt wird
 ```
+
+## Teile für TikTok und Instagram
+
+Mit `--teile` wird die fertige Folge in Clips von **höchstens 1 Minute** zerlegt: `ausgabe/folge-02-teil-1.mp4`, `folge-02-teil-2.mp4` … und eine Liste `folge-02-teile.txt` (Teil 1/6, Zeiten, Kapitel). Inhalt, Bild und Ton bleiben unverändert. Geschnitten wird nur an Kapitelgrenzen (`== … ==`), mit möglichst wenigen und etwa gleich langen Teilen. Die Länge richtet sich nach der echten Szenenlänge, mit Stimme also nach den Audiodateien. Andere Grenze: `--max 89`. GitHub macht das bei jedem Render automatisch, die Teile liegen mit im Release.
 
 ## Drehbuch-Format
 
