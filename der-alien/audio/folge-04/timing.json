@@ -1,0 +1,500 @@
+{
+ "dauer": 215.64,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 3.902,
+   "emotion": "spannend",
+   "text": "„Der Mann hat gesagt, du wärst gefährlich.“ Mara *kennt* ihn."
+  },
+  {
+   "nr": 2,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 3.902,
+   "dauer": 4.838,
+   "emotion": "wuetend",
+   "text": "„Du kennst den Mann im Mantel?“ Mara nickt. Sie kann dich nicht ansehen."
+  },
+  {
+   "nr": 3,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 8.74,
+   "dauer": 4.022,
+   "emotion": "traurig",
+   "text": "„Ich hab ihm geschrieben“, flüstert sie. „Gestern Nacht. Als du geschrien hast.“"
+  },
+  {
+   "nr": 4,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 12.762,
+   "dauer": 4.478,
+   "emotion": "spannend",
+   "text": "Deshalb stand er so schnell vor deiner Tür. Deshalb wusste er, *welche* Tür."
+  },
+  {
+   "nr": 5,
+   "typ": "titel",
+   "kapitel": 1,
+   "start": 17.24,
+   "dauer": 3.0,
+   "emotion": null,
+   "text": ""
+  },
+  {
+   "nr": 6,
+   "typ": "badezimmer",
+   "kapitel": 2,
+   "start": 20.24,
+   "dauer": 4.934,
+   "emotion": "erzaehlend",
+   "text": "Ein kleines Alien namens Nox versteckt sich bei dir. Ein Mann im Mantel jagt ihn."
+  },
+  {
+   "nr": 7,
+   "typ": "flur",
+   "kapitel": 2,
+   "start": 25.174,
+   "dauer": 4.502,
+   "emotion": "ernst",
+   "text": "Nox will vom Dach aus Hilfe rufen. Den Schlüssel hat deine Nachbarin *Mara*."
+  },
+  {
+   "nr": 8,
+   "typ": "handy",
+   "kapitel": 2,
+   "start": 29.676,
+   "dauer": 3.854,
+   "emotion": "erzaehlend",
+   "text": "Doch Mara hat Angst vor Nox. Und sie bekommt seltsame Nachrichten."
+  },
+  {
+   "nr": 9,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 33.53,
+   "dauer": 3.278,
+   "emotion": "spannend",
+   "text": "Sie flüstert: „Der Mann hat gesagt, du wärst gefährlich.“"
+  },
+  {
+   "nr": 10,
+   "typ": "wohnung",
+   "kapitel": 3,
+   "start": 36.808,
+   "dauer": 4.382,
+   "emotion": "traurig",
+   "text": "Mara rutscht an der Wand nach unten. „Mein Bruder ist weg. Seit vier Monaten.“"
+  },
+  {
+   "nr": 11,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 41.19,
+   "dauer": 4.478,
+   "emotion": "traurig",
+   "text": "„Er heißt Elias. Er kam einfach nicht nach Hause. Die Polizei findet nichts.“"
+  },
+  {
+   "nr": 12,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 45.668,
+   "dauer": 3.974,
+   "emotion": "ernst",
+   "text": "„Dann stand der Mann vor meiner Tür. Er sagte, er weiß, wo Elias ist.“"
+  },
+  {
+   "nr": 13,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 49.642,
+   "dauer": 5.078,
+   "emotion": "traurig",
+   "text": "„Ich sollte nur melden, wenn hier im Haus was Seltsames passiert. Dann bekomme ich Elias zurück.“"
+  },
+  {
+   "nr": 14,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 54.72,
+   "dauer": 3.11,
+   "emotion": "ernst",
+   "text": "Du bist wütend. Und gleichzeitig verstehst du sie."
+  },
+  {
+   "nr": 15,
+   "typ": "wohnung",
+   "kapitel": 4,
+   "start": 57.83,
+   "dauer": 5.726,
+   "emotion": "traurig",
+   "text": "Nox kriecht hinter dem Sofa hervor. Ganz langsam. Und setzt sich vor Mara."
+  },
+  {
+   "nr": 16,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 63.556,
+   "dauer": 2.606,
+   "emotion": "erzaehlend",
+   "text": "Er legt den Kopf schief. „Alles easy?“"
+  },
+  {
+   "nr": 17,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 66.162,
+   "dauer": 4.478,
+   "emotion": "spannend",
+   "text": "Mara starrt ihn an. „Das sagt *Elias* immer. Genau so.“"
+  },
+  {
+   "nr": 18,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 70.64,
+   "dauer": 3.542,
+   "emotion": "traurig",
+   "text": "Nox' Antennen sinken nach unten. Er sagt nichts."
+  },
+  {
+   "nr": 19,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 74.182,
+   "dauer": 3.686,
+   "emotion": "ernst",
+   "text": "„Nox“, sagst du leise. „Woher kennst du diesen Satz?“"
+  },
+  {
+   "nr": 20,
+   "typ": "lichtbild",
+   "kapitel": 5,
+   "start": 77.868,
+   "dauer": 5.342,
+   "emotion": "erzaehlend",
+   "text": "Nox öffnet die Kapsel. Wieder die vielen Gesichter. Die Liste der Gefangenen."
+  },
+  {
+   "nr": 21,
+   "typ": "lichtbild",
+   "kapitel": 5,
+   "start": 83.21,
+   "dauer": 4.838,
+   "emotion": "erzaehlend",
+   "text": "Er tippt auf ein Gesicht. Wuschelige rote Haare. Ein schiefes Grinsen."
+  },
+  {
+   "nr": 22,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 88.048,
+   "dauer": 3.278,
+   "emotion": "spannend",
+   "text": "Mara schlägt die Hand vor den Mund. „Elias.“"
+  },
+  {
+   "nr": 23,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 91.326,
+   "dauer": 3.59,
+   "emotion": "traurig",
+   "text": "„Er war in meiner Zelle“, sagt Nox. „Er hat mir Deutsch gelernt.“"
+  },
+  {
+   "nr": 24,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 94.916,
+   "dauer": 3.35,
+   "emotion": "froh",
+   "text": "Mara weint. Ganz leise. Er *lebt*."
+  },
+  {
+   "nr": 25,
+   "typ": "gesicht",
+   "kapitel": 6,
+   "start": 98.266,
+   "dauer": 3.278,
+   "emotion": "ernst",
+   "text": "„Dann los“, sagst du. „Aufs Dach. Jetzt. Bevor es hell wird.“"
+  },
+  {
+   "nr": 26,
+   "typ": "wohnung",
+   "kapitel": 6,
+   "start": 101.544,
+   "dauer": 3.614,
+   "emotion": "ernst",
+   "text": "Mara hält dich fest. „Nicht. Er wartet oben. An der Dachtür.“"
+  },
+  {
+   "nr": 27,
+   "typ": "gesicht",
+   "kapitel": 6,
+   "start": 105.158,
+   "dauer": 3.494,
+   "emotion": "ernst",
+   "text": "„Er hat es mir selbst gesagt. Er weiß, dass Nox zum Himmel will.“"
+  },
+  {
+   "nr": 28,
+   "typ": "hochhaus",
+   "kapitel": 6,
+   "start": 108.652,
+   "dauer": 4.046,
+   "emotion": "erzaehlend",
+   "text": "Oben, vor der Dachtür, steht ein Mann im Mantel. Und wartet."
+  },
+  {
+   "nr": 29,
+   "typ": "gesicht",
+   "kapitel": 6,
+   "start": 112.698,
+   "dauer": 3.782,
+   "emotion": "traurig",
+   "text": "Nox' Antennen hängen. „Dann morgen Nacht“, flüstert er."
+  },
+  {
+   "nr": 30,
+   "typ": "wohnung",
+   "kapitel": 7,
+   "start": 116.48,
+   "dauer": 4.574,
+   "emotion": "erzaehlend",
+   "text": "Mara steckt dein Handy an ihre Powerbank. „Wenn wir warten, dann mit vollem Akku.“"
+  },
+  {
+   "nr": 31,
+   "typ": "gesicht",
+   "kapitel": 7,
+   "start": 121.054,
+   "dauer": 4.982,
+   "emotion": "erzaehlend",
+   "text": "Nox schnuppert an der Powerbank. Dann leckt er daran. „Warm. Lecker?“"
+  },
+  {
+   "nr": 32,
+   "typ": "gesicht",
+   "kapitel": 7,
+   "start": 126.036,
+   "dauer": 2.99,
+   "emotion": "froh",
+   "text": "Mara muss lachen. Zum ersten Mal heute Nacht."
+  },
+  {
+   "nr": 33,
+   "typ": "gesicht",
+   "kapitel": 7,
+   "start": 129.026,
+   "dauer": 4.454,
+   "emotion": "ernst",
+   "text": "Ihr müsst einen ganzen Tag überstehen. Im selben Haus wie die Sammler."
+  },
+  {
+   "nr": 34,
+   "typ": "gesicht",
+   "kapitel": 7,
+   "start": 133.48,
+   "dauer": 2.678,
+   "emotion": "ernst",
+   "text": "„Ich schreib ihm nichts mehr“, sagt Mara. „*Versprochen*.“"
+  },
+  {
+   "nr": 35,
+   "typ": "wohnung",
+   "kapitel": 8,
+   "start": 136.158,
+   "dauer": 4.334,
+   "emotion": "erzaehlend",
+   "text": "Dann sagt Nox: „Da ist noch was. Von Elias. Für dich.“"
+  },
+  {
+   "nr": 36,
+   "typ": "gesicht",
+   "kapitel": 8,
+   "start": 140.492,
+   "dauer": 2.318,
+   "emotion": "spannend",
+   "text": "Mara hält den Atem an. „Für mich?“"
+  },
+  {
+   "nr": 37,
+   "typ": "gesicht",
+   "kapitel": 8,
+   "start": 142.81,
+   "dauer": 3.086,
+   "emotion": "ernst",
+   "text": "„Er hat in die Kapsel gesprochen. Bevor ich weggelaufen bin.“"
+  },
+  {
+   "nr": 38,
+   "typ": "lichtbild",
+   "kapitel": 8,
+   "start": 145.896,
+   "dauer": 3.014,
+   "emotion": "erzaehlend",
+   "text": "Der Lichtring pulsiert. Eine Tonaufnahme."
+  },
+  {
+   "nr": 39,
+   "typ": "gesicht",
+   "kapitel": 8,
+   "start": 148.91,
+   "dauer": 2.966,
+   "emotion": "ernst",
+   "text": "„Und wenn das gar nicht seine Stimme ist?“, flüstert Mara."
+  },
+  {
+   "nr": 40,
+   "typ": "lichtbild",
+   "kapitel": 9,
+   "start": 151.876,
+   "dauer": 2.942,
+   "emotion": "erzaehlend",
+   "text": "Eine Stimme: „Mara? Ich bin's. Elias.“"
+  },
+  {
+   "nr": 41,
+   "typ": "gesicht",
+   "kapitel": 9,
+   "start": 154.818,
+   "dauer": 2.942,
+   "emotion": "froh",
+   "text": "„Das ist er“, flüstert Mara. „Genau seine Stimme.“"
+  },
+  {
+   "nr": 42,
+   "typ": "gesicht",
+   "kapitel": 9,
+   "start": 157.76,
+   "dauer": 4.934,
+   "emotion": "erzaehlend",
+   "text": "Komisch. Deine *eigene* Stimme klingt auf Aufnahmen immer fremd. Die von anderen nie."
+  },
+  {
+   "nr": 43,
+   "typ": "objekt",
+   "kapitel": 9,
+   "start": 162.694,
+   "dauer": 6.23,
+   "emotion": "erklaerend",
+   "text": "Echter Fakt: Deine eigene Stimme hörst du doppelt. Durch die Luft. Und über die *Knochen* deines Kopfes."
+  },
+  {
+   "nr": 44,
+   "typ": "objekt",
+   "kapitel": 9,
+   "start": 168.924,
+   "dauer": 5.582,
+   "emotion": "erklaerend",
+   "text": "Die Knochen lassen sie tiefer klingen. Auf Aufnahmen fehlt das. So hören dich alle anderen."
+  },
+  {
+   "nr": 45,
+   "typ": "wohnung",
+   "kapitel": 10,
+   "start": 174.506,
+   "dauer": 5.318,
+   "emotion": "erzaehlend",
+   "text": "Draußen wird es hell. Die Sonne geht auf. Der Notruf muss bis heute Nacht warten."
+  },
+  {
+   "nr": 46,
+   "typ": "lichtbild",
+   "kapitel": 10,
+   "start": 179.824,
+   "dauer": 5.006,
+   "emotion": "erzaehlend",
+   "text": "Die Aufnahme läuft weiter. Elias klingt jetzt ernst. „Hör mir gut zu, Mara.“"
+  },
+  {
+   "nr": 47,
+   "typ": "wohnung",
+   "kapitel": 10,
+   "start": 184.83,
+   "dauer": 2.15,
+   "emotion": "ernst",
+   "text": "Mara rückt näher an die Kapsel heran."
+  },
+  {
+   "nr": 48,
+   "typ": "gesicht",
+   "kapitel": 10,
+   "start": 186.98,
+   "dauer": 3.254,
+   "emotion": "ruhig",
+   "text": "Nox schließt die Augen. Er kennt diese Worte schon."
+  },
+  {
+   "nr": 49,
+   "typ": "lichtbild",
+   "kapitel": 11,
+   "start": 190.234,
+   "dauer": 3.902,
+   "emotion": "erzaehlend",
+   "text": "„Sie versprechen dir, mich freizulassen. Das machen sie mit allen Familien.“"
+  },
+  {
+   "nr": 50,
+   "typ": "gesicht",
+   "kapitel": 11,
+   "start": 194.136,
+   "dauer": 1.214,
+   "emotion": "spannend",
+   "text": "Mara wird blass."
+  },
+  {
+   "nr": 51,
+   "typ": "lichtbild",
+   "kapitel": 11,
+   "start": 195.35,
+   "dauer": 3.134,
+   "emotion": "erzaehlend",
+   "text": "„Glaub ihm kein Wort. Auch dann nicht, wenn er aussieht wie ich.“"
+  },
+  {
+   "nr": 52,
+   "typ": "titel",
+   "kapitel": 11,
+   "start": 198.484,
+   "dauer": 3.5,
+   "emotion": null,
+   "text": ""
+  },
+  {
+   "nr": 53,
+   "typ": "objekt",
+   "kapitel": 12,
+   "start": 201.984,
+   "dauer": 3.878,
+   "emotion": "erklaerend",
+   "text": "Check! Warum klingt deine eigene Stimme auf Aufnahmen so fremd?"
+  },
+  {
+   "nr": 54,
+   "typ": "objekt",
+   "kapitel": 12,
+   "start": 205.862,
+   "dauer": 6.278,
+   "emotion": "erklaerend",
+   "text": "Beim Sprechen hörst du dich auch über die Knochen. Das klingt tiefer. Auf der Aufnahme hörst du nur, was alle *anderen* hören."
+  },
+  {
+   "nr": 55,
+   "typ": "titel",
+   "kapitel": 12,
+   "start": 212.14,
+   "dauer": 3.5,
+   "emotion": null,
+   "text": ""
+  }
+ ]
+}
