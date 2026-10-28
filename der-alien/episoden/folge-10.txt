@@ -1,0 +1,100 @@
+# Folge 10: Wieder zu Hause
+@serie Der Alien
+@mund zitate
+@look 0
+@zeit nacht
+
+== Kapitel 1: Der Suchkegel ==
+@hud tag=3 zeit=00:15 handy=71/100% netz=0/4 funk=100/100%
+[dach dachtuer schiff=sammler suchkegel hinter_tank=du,nox tank_pos=380:510 fokus=540,750 zoom=0.95 zoom_bis=1.05] Über dir hängt das Schiff der Sammler. Und es sucht *dich*.
+[dach dachtuer schiff=sammler hinter_tank=nox,du tank_pos=250:330 fokus=300,1100 zoom=1.5] Nox zieht dich hinter den Wassertank. In den Schatten.
+[dach dachtuer schiff=sammler suchkegel=380 hinter_tank=nox,du tank_pos=250:330 fokus=380,1000 zoom=1.2 wackeln=0.2] Der Lichtkegel streift den Tank. Einmal. Zweimal.
+[dach dachtuer=offen schiff=sammler mara:angst pos=820 fokus=820,1150 zoom=1.4 sagt=mara] An der Dachtür ruft Mara nach dir. Dann ist sie still.
+[titel oben="Folge 10" gross="Der Alien" unten="Wieder zu Hause" farbe=#0f1c33 akzent=#59c7ff dauer=3]
+
+== Was bisher geschah ==
+[badezimmer nox=korb nox:neugierig zahnbuerste=weg fokus=300,1130 zoom=1.5 hud=false] Ein kleines Alien namens Nox hat sich bei dir versteckt. Die Sammler jagen ihn.
+[kreuzung ampel=gruen zebra=mantel ausdruck_fern=froh taschenlampe augenleuchten=blitz fokus=540,1050 zoom=1.7 hud=false] Sie tragen geliehene Gesichter. Im Licht leuchten ihre Augen grün.
+[dach dachtuer hinter_tank=du,nox tank_pos=380:510 haelt=nox:kapsel notruf strahl fokus=480,800 zoom=0.95 hud=false] Mit deiner Nachbarin Mara habt ihr vom Dach den Notruf gesendet.
+[dach dachtuer schiff=sammler suchkegel hinter_tank=du,nox tank_pos=380:510 fokus=540,700 zoom=0.95 hud=false] Aber zuerst kam nicht Nox' Schiff. Sondern *ihres*.
+
+== Kapitel 2: Unter der Jacke ==
+@hud zeit=00:16
+[dach dachtuer beete schiff=sammler suchkegel=560 hinter_tank=nox,du tank_pos=250:330 fokus=540,1000 zoom=1.05] Der Lichtkegel bleibt mitten auf dem Dach stehen. Und wartet.
+[gesicht nox ort=dach angst leuchten=1 wackeln=0.3] Nox zittert. Und fängt an zu *leuchten*. Hell.
+[dach dachtuer schiff=sammler hinter_tank=nox,du_shirt tank_pos=250:330 leuchten=0.8 fokus=300,1100 zoom=1.6] Du ziehst deine Jacke aus. Und legst sie über ihn.
+[dach dachtuer schiff=sammler hinter_tank=du_shirt tank_pos=330 fokus=300,1100 zoom=1.6] Das Leuchten verschwindet unter dem Stoff.
+[gesicht du_shirt ort=dach angst] Du hältst ihn fest. Er hält dich fest.
+
+== Kapitel 3: Ein Akkord ==
+@hud zeit=00:18 handy=70/100%
+[dach dachtuer schiff=beide rettung_x=-100 rettung_y=420 rettung_s=0.5 hinter_tank=nox,du_shirt tank_pos=250:330 fokus=540,800 zoom=0.95] Dann hörst du einen Klang. Leise. Hoch. Wie ein Akkord.
+[skyline schiff=rettung zoom-rein] Über den Dächern kommt ein zweites Schiff. Rund. Weich. Mit warmem, blauem Licht.
+[gesicht nox ort=dach froh leuchten=0.4 blick=0,-1 sagt=nox] Nox' Antennen stellen sich auf. „*Meine* Leute.“
+[dach dachtuer schiff=beide hinter_tank=nox,du_shirt tank_pos=250:330 fokus=540,700 zoom=0.95 wackeln=0.3] Das dunkle Schiff dreht sich. Langsam. Das Brummen wird lauter.
+[gesicht du_shirt ort=dach schreck blick=0,-1 zoom-rein] Zwei Schiffe. Über deinem Dach. Und du mittendrin.
+
+== Kapitel 4: Durcheinander ==
+@hud zeit=00:19
+[dach dachtuer schiff=beide suchkegel blaukegel wind hinter_tank=nox,du_shirt tank_pos=250:330 fokus=540,900 zoom=0.95 wackeln=0.4] Weißes Licht. Blaues Licht. Wind. Lärm. Überall auf dem Dach.
+[dach dachtuer=offen schiff=beide wind fokus=820,1100 zoom=1.4] Du suchst Mara. An der Tür ist sie nicht mehr.
+[gesicht du_shirt ort=dach angst wackeln=0.3 sagt=du] „Mara!“, rufst du. Der Wind verschluckt deine Stimme.
+[dach dachtuer=offen schiff=beide wind mantel:angst mantel:geht pos=900 fokus=840,1150 zoom=1.35] Der Mann im Mantel weicht zurück. Zur Dachtür. Und verschwindet im Treppenhaus.
+@hud netz=4/4
+[dach dachtuer schiff=rettung blaukegel=640 hinter_tank=nox,du_shirt tank_pos=250:330 fokus=500,1000 zoom=1.05] Dann senkt sich ein blauer Lichtkegel auf das Dach. Ganz nah.
+
+== Kapitel 5: Abschied ==
+@hud zeit=00:20
+[dach dachtuer schiff=rettung blaukegel=760 du_shirt nox:neugierig pos=380,560 fokus=480,1350 zoom=1.45] Nox kriecht unter deiner Jacke hervor. Er schaut dich an.
+[gesicht nox ort=dach froh blaues_licht sagt=nox] „Du hast mich nicht verraten“, sagt er. „Nicht ein einziges Mal.“
+[gesicht du_shirt ort=dach traurig sagt=du] „Nur für eine Nacht, hab ich gesagt“, sagst du. Deine Stimme bricht.
+[dach dachtuer schiff=rettung blaukegel=760 du_shirt:traurig nox:umarmt nox:froh pos=420,500 fokus=460,1400 zoom=1.6 sagt=nox] Nox umarmt dein Bein. Ganz fest. „Alles easy“, flüstert er.
+[dach dachtuer schiff=rettung blaukegel=760 du_shirt nox:geht pos=300,720 fokus=540,1250 zoom=1.15] Dann läuft er los. Hinein in das blaue Licht.
+
+== Kapitel 6: Leer ==
+@hud zeit=00:21
+[dach dachtuer schiff=rettung blaukegel=640 silhouetten du_shirt pos=260 fokus=540,900 zoom=0.95] Das Licht ist so hell, dass du die Augen zukneifen musst. Silhouetten. Viele.
+[skyline schiff=beide zoom-raus] Das runde Schiff steigt auf. Das dunkle jagt hinterher.
+[skyline schiff=keins fokus=540,500 zoom=1.2] Beide verschwinden zwischen den Wolken.
+[dach dachtuer beete du_shirt pos=540 zoom-raus] Plötzlich ist es still. Das Dach ist leer.
+[gesicht du_shirt ort=dach traurig] Nox ist weg. Und Mara auch.
+
+== Kapitel 7: Stumm ==
+@hud zeit=00:40 handy=69/100%
+[dach dachtuer beete du_shirt:lauscht pos=600 fokus=560,1150 zoom=1.2] Du suchst das ganze Dach ab. Hinter dem Tank. Bei den Beeten. Nichts.
+[flur klopfen=rechts du_shirt:geht pos=800 fokus=640,1100 zoom=1.05] Du rennst nach unten. Du klopfst an Maras Tür. Keine Antwort.
+@zeit morgen
+@hud zeit=05:50 handy=41/100% funk=81/100%
+[wohnung hof vorhang=zu du_shirt:sitzt haelt=du_shirt:walkie_blau pos=540 fokus=540,1350 zoom=1.6] Stundenlang sitzt du da. Das Walkie-Talkie in der Hand. Es bleibt *stumm*.
+[gesicht du_shirt ort=wohnung hof muede] Draußen wird es langsam hell.
+
+== Kapitel 8: Auf den Stufen ==
+@hud zeit=06:30 handy=39/100% netz=0/4 funk=79/100%
+[flur du_shirt:geht pos=300 fokus=540,1100 zoom=1.05] Kurz nach sechs gehst du noch einmal ins Treppenhaus.
+[treppe etage=17 falschemara:sitzt falschemara:traurig pos=540 fokus=540,1300 zoom=1.3] Auf den Stufen sitzt jemand. Rote Haare. Senfgelbe Strickjacke. *Mara*.
+[gesicht falschemara ort=treppenhaus etage=17 muede sagt=falschemara] Sie schaut auf. „Ich bin runtergerannt“, sagt sie leise. „Als das Licht kam.“
+[treppe etage=17 du_shirt:umarmt falschemara:froh pos=480,600 fokus=540,1350 zoom=1.45] Du bist so erleichtert, dass du sie umarmst.
+[gesicht du_shirt ort=treppenhaus etage=17 froh sagt=du] „Komm“, sagst du. „Ich mach uns was Warmes.“
+
+== Kapitel 9: Wir sehen, was wir erwarten ==
+@hud zeit=06:40 handy=38/100%
+[kueche licht=an uhr=06:40 dampf falschemara:muede du_shirt pos=320,780 fokus=540,1200 zoom=1.05] In deiner Küche setzt sich Mara an den Tisch. Du stellst Wasser auf.
+[objekt objekte="tuerversuch:Nach dem Weg fragen" gross="Echter Fakt" farbe=#1e2f45] Echter Fakt: In einem berühmten Versuch fragte ein Forscher Passanten nach dem Weg.
+[objekt objekte="tuerversuch:Ein anderer Mensch" gross="Echter Fakt" farbe=#1e2f45] Dann trugen zwei Männer eine Tür zwischen ihnen durch. Dahinter stand plötzlich ein *anderer* Mensch.
+[objekt objekte="einsvonzwei:1 von 2" gross="Echter Fakt" farbe=#1e2f45] Etwa die Hälfte der Passanten merkte es nicht. Man nennt das *Veränderungsblindheit*.
+[gesicht du_shirt ort=kueche muede] Wir sehen oft, was wir erwarten. Nicht, was wirklich da ist.
+
+== Kapitel 10: Zwei Tassen ==
+@hud zeit=06:50 funk=78/100%
+[objekt objekte="walkie_blau:Blauer Punkt" gross="Funk" farbe=#1e2f45] Da rauscht das Walkie-Talkie. Der blaue Punkt leuchtet.
+[lichtbild ort=kueche inhalt=tonwelle mit=nox sagt=nox kapsel=aus ruhig fokus=540,900] „Hier Nox. Mara hat ihren Bruder gefunden. Beide sind hier bei mir.“
+[gesicht du_shirt ort=kueche schreck zoom-rein] Du senkst das Funkgerät. Langsam.
+[kueche licht=an uhr=06:50 tassen=2 kaffeedose falschemara:froh pos=700 fokus=600,1200 zoom=1.2 sagt=falschemara] Mara steht in deiner Küche. Sie stellt zwei Tassen auf den Tisch. „Wer war das?“, fragt sie.
+[gesicht falschemara ort=kueche froh augenleuchten=blitz zoom-rein] Du schaltest die Taschenlampe ein. Und ihre Augen blitzen *grün*.
+[titel oben="Der Alien" gross="Ende Staffel 1" unten="Fortsetzung folgt …" farbe=#0f1c33 akzent=#59c7ff dauer=4]
+
+== Check ==
+@hud aus
+[objekt objekte="tuerversuch:Tür-Versuch" gross="Check" farbe=#1e2f45] Check! Würdest du merken, wenn dein Gesprächspartner plötzlich ein anderer Mensch wäre?
+[objekt objekte="einsvonzwei:Die Hälfte nicht" gross="Die Antwort" farbe=#1e3a2a] Vielleicht nicht! Im Tür-Versuch merkte es etwa die *Hälfte* der Leute nicht.
+[titel gross="Was hättest du|gemacht?" groesse=120 unten="Schreib es in die Kommentare" farbe=#0f1c33 dauer=3.5]

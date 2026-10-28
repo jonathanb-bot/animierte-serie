@@ -377,7 +377,7 @@
       circle(110, -70, 36, tausch ? "#d9a882" : "#efc4a4"); box(75, -30, 70, 150, 26, tausch ? "#b5452f" : "#5a6b3f");
       const tx = ((t * 160) % 520) - 260; box(tx - 40, -170, 80, 300, 6, "#c9a06a"); box(tx - 30, -160, 60, 280, 4, "#b88f5a");
     },
-    einsvonzwei(t) { for (let i = 0; i < 2; i++) { circle(-80 + i * 160, -60, 46, i ? "#efc4a4" : "#efc4a4"); box(-130 + i * 160, -10, 100, 160, 36, i ? "#5a6b3f" : "#3d7fb8"); } A.text("?", 80, -170, 120, "#ffcf3d"); A.text("1 VON 2", 0, 200, 64, "#ffffff"); },
+    einsvonzwei(t) { for (let i = 0; i < 2; i++) { circle(-80 + i * 160, -60, 46, i ? "#efc4a4" : "#efc4a4"); box(-130 + i * 160, -10, 100, 160, 36, i ? "#5a6b3f" : "#3d7fb8"); } A.text("?", 80, -170, 120, "#ffcf3d"); },
     linse(t) { I.auge(t); ctx.beginPath(); ctx.arc(0, 0, 130, 0, Math.PI * 2); ctx.lineWidth = 18; ctx.strokeStyle = "#b89a5a"; ctx.stroke(); ellipse(-50, -60, 40, 18, rgba("#ffffff", 0.4), -0.6); },
     pfeil(t) { const dx = Math.sin(t * 3) * 14; ctx.save(); ctx.translate(dx, 0); box(-150, -22, 220, 44, 10, "#ffcf3d"); poly([[60, -70], [160, 0], [60, 70]], "#ffcf3d"); ctx.restore(); },
     zettel(t) { ctx.save(); ctx.rotate(-0.06); box(-120, -150, 240, 300, 10, "#fbf7ec"); for (let i = 0; i < 4; i++) { A.text(String(i + 1) + ".", -80, -90 + i * 62, 34, "#3a4250", "left"); line(-40, -90 + i * 62, 90, -90 + i * 62, 6, rgba("#3a4250", 0.5)); } ctx.restore(); },
