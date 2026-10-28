@@ -62,7 +62,7 @@
     const fs = 84, sx = 0.86;
     ctx.save();
     ctx.font = `900 ${fs}px Titel`; ctx.textBaseline = "middle";
-    const leer = fs * 0.34;
+    const leer = fs * 0.4;
     const breiten = g.woerter.map(w => ctx.measureText(w.w.toUpperCase()).width * sx);
     const gesamt = breiten.reduce((a, b) => a + b, 0) + leer * (g.woerter.length - 1);
     const y = s.untertitel_y || D.untertitel_y || 1380;
@@ -73,7 +73,7 @@
     g.woerter.forEach((w, i) => {
       const aktiv = t >= w.start, jetzt = t >= w.start && t < w.ende;
       ctx.save(); ctx.translate(x + breiten[i] / 2, 0);
-      if (jetzt) ctx.scale(1.07, 1.07);
+      if (jetzt) ctx.scale(1.04, 1.04);
       ctx.scale(sx, 1); ctx.textAlign = "center";
       const txt = w.w.toUpperCase();
       ctx.shadowColor = "rgba(0,0,0,0.45)"; ctx.shadowBlur = 14; ctx.shadowOffsetY = 3;
