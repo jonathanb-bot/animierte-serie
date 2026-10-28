@@ -55,7 +55,7 @@ const frames = Math.round((bis - von) * FPS);
 console.log(`Folge ${id}: ${szenen.length} Szenen, ${gesamt.toFixed(1)} s, rendere ${frames} Frames @ ${FPS} fps`);
 
 // ---------- Teile für TikTok/Insta: --teile [--max 59] ----------
-// Schneidet nur an Kapitelgrenzen (== … ==), so wenige Teile wie möglich, alle etwa gleich lang.
+// Schneidet nur an Kapitelgrenzen (== … ==), so wenige Teile wie möglich, alle möglichst gleich lang.
 // Ist ein Kapitel allein zu lang, wird es an Einstellungsgrenzen geteilt.
 const MAX = Number(opt("max", 59));
 const mmss = t => (t = Math.round(t), `${Math.floor(t / 60)}:${String(t % 60).padStart(2, "0")}`);
@@ -71,14 +71,14 @@ function teilePlan() {
   const dauer = (i, j) => szenen[einheiten[j - 1][1] - 1].start + szenen[einheiten[j - 1][1] - 1].dauer - szenen[einheiten[i][0]].start;
   const n = einheiten.length;
   for (let k = 1; k <= n; k++) {
-    // f[i] = kleinste mögliche Länge des längsten Teils für die ersten i Einheiten in genau k Teilen
+    // f[i] = kleinste Quadratsumme der Teillängen für die ersten i Einheiten in genau k Teilen (= möglichst gleich lang)
     let f = Array(n + 1).fill(Infinity), von = [];
     f[0] = 0;
     for (let t = 1; t <= k; t++) {
       const g = Array(n + 1).fill(Infinity), w = Array(n + 1);
       for (let j = 1; j <= n; j++) for (let i = 0; i < j; i++) {
         const d = dauer(i, j);
-        if (d <= MAX && Math.max(f[i], d) < g[j]) { g[j] = Math.max(f[i], d); w[j] = i; }
+        if (d <= MAX && f[i] + d * d < g[j]) { g[j] = f[i] + d * d; w[j] = i; }
       }
       f = g; von.push(w);
     }

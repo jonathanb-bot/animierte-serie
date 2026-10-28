@@ -43,13 +43,13 @@ einheiten.forEach((u, i) => console.log(`| ${u.name} | ${u.d.length} | ${len[i].
 const gesamt = len.reduce((a, b) => a + b, 0);
 console.log(`| **Gesamt** | ${einheiten.reduce((a, u) => a + u.d.length, 0)} | **${mmss(gesamt)}** |\n`);
 
-// so wenige Teile wie möglich, der längste so kurz wie möglich (wie render.mjs --teile)
+// so wenige Teile wie möglich, alle möglichst gleich lang (wie render.mjs --teile)
 const n = len.length, summe = (i, j) => len.slice(i, j).reduce((a, b) => a + b, 0);
 for (let k = 1; k <= n; k++) {
   let f = Array(n + 1).fill(Infinity); f[0] = 0; const von = [];
   for (let t = 1; t <= k; t++) {
     const g = Array(n + 1).fill(Infinity), w = [];
-    for (let j = 1; j <= n; j++) for (let i = 0; i < j; i++) { const d = summe(i, j); if (d <= MAX && Math.max(f[i], d) < g[j]) { g[j] = Math.max(f[i], d); w[j] = i; } }
+    for (let j = 1; j <= n; j++) for (let i = 0; i < j; i++) { const d = summe(i, j); if (d <= MAX && f[i] + d * d < g[j]) { g[j] = f[i] + d * d; w[j] = i; } }
     f = g; von.push(w);
   }
   if (f[n] === Infinity) continue;

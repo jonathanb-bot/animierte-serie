@@ -19,7 +19,7 @@ Du bist abends allein zu Hause. Aus deinem Badezimmer kommt ein Geräusch. Auf d
 ### Nox
 
 - Erwachsenes Wesen seiner Art, ca. 60 cm groß. Er ist aus einem Gefangenenschiff der Sammler geflohen.
-- **Haftballen:** Seine Finger und Zehen haften an glatten Wänden. Damit kann er an Fassaden klettern, aber nur langsam und nicht mit schwerer Last. Er kann nicht fliegen und nicht springen wie ein Superheld.
+- **Haftballen:** Seine Finger und Zehen haften an glatten Wänden. Damit kann er an Fassaden klettern, aber nur langsam und nicht mit schwerer Last. **Auf nassen Flächen rutscht er ab** (wie echte Geckos auf nassem Glas). Er kann nicht fliegen und nicht springen wie ein Superheld.
 - **Angstleuchten:** Wenn er große Angst hat, leuchtet seine Haut schwach hellblau. Er kann das nicht steuern. Nachts verrät es ihn.
 - **Feines Gehör:** Er hört sehr hohe Töne, die Menschen nicht mehr hören. Dazu gehört das hohe Pfeifen, das die Tarnung der Sammler von sich gibt. Er hört es nur aus wenigen Metern Entfernung.
 - **Sprache:** Er hat in der Gefangenschaft Deutsch gelernt, und zwar von **Elias**, Maras Bruder. Deshalb benutzt er Elias' Redewendungen, vor allem „Alles easy?“. Er spricht in kurzen Sätzen, die im Lauf der Staffel ein bisschen länger werden.
@@ -31,13 +31,14 @@ Du bist abends allein zu Hause. Aus deinem Badezimmer kommt ein Geräusch. Auf d
 Eine flache Metallscheibe, so groß wie ein Bierdeckel, mit einem Lichtring.
 
 1. **Aufzeichnungen:** Bild und Ton aus dem Gefangenenschiff: die Gefangenenliste, Aufnahmen von Gefangenen (darunter Elias) und Fundorte. Ein Fundort ist der Eingang deines Wohnhauses, denn dort wurde Elias vor Monaten geholt. Die Bilder erscheinen als flaches, bläuliches Lichtbild über der Kapsel.
-2. **Mithören:** Wenn die Kapsel sich mit dem Netz der Sammler verbindet, zeigt sie deren aktuelles Suchverzeichnis. **Grenze:** Jede Verbindung dauert etwa 10 Sekunden und verrät den Sammlern grob, wo die Kapsel ist, auf ein Haus genau, aber nicht auf eine Wohnung genau. Nox weiß das und verschweigt es dir bis Folge 5.
+2. **Mithören:** Wenn die Kapsel sich mit dem Netz der Sammler verbindet, zeigt sie deren aktuelles Suchverzeichnis und grob, wo ihr Schiff ist. Das Verzeichnis bleibt danach in der Kapsel gespeichert. **Grenze:** Jede Verbindung dauert etwa 10 Sekunden und verrät den Sammlern grob, wo die Kapsel ist, auf ein Haus genau, aber nicht auf eine Wohnung genau. Nox weiß das und verschweigt es dir bis Folge 5.
 3. **Notrufsender:** ruft Nox' Leute.
-   - Er braucht **freie Sicht zum Himmel**. Durch Wände, Decken und Fenster kommt das Signal nicht.
+   - Er braucht **freie Sicht zum Himmel nach allen Seiten**, zum Beispiel auf einem Dach oder einem freien Feld. Durch Wände, Decken und Fenster kommt das Signal nicht, und aus einem Fenster oder einem Innenhof zwischen hohen Häusern reicht es nicht.
    - Er funktioniert **nur nachts**, also zwischen Sonnenuntergang und Sonnenaufgang, weil Nox' Leute im Erdschatten warten.
    - Senden dauert **60 Sekunden ohne Unterbrechung**.
    - Beim Senden gibt die Kapsel einen starken Funkimpuls ab. Die Sammler empfangen ihn ebenfalls und kommen.
-   - Der Sender funktioniert **nur ein einziges Mal**.
+   - Der Sender funktioniert **nur ein einziges Mal**. Danach ist die Kapsel dunkel. Die zwei Splitter in den Walkie-Talkies (Folge 7) funktionieren weiter.
+   - Nox hat bei seiner Flucht nicht sofort gesendet, weil das Sammlerschiff noch über dem Haus war. Ein Notruf hätte sie sofort zu ihm geführt.
 4. Die Kapsel ist keine Waffe und kann niemanden verletzen.
 
 ### Die Sammler (die Verfolger)
@@ -50,7 +51,7 @@ Eine flache Metallscheibe, so groß wie ein Bierdeckel, mit einem Lichtring.
   - Alle Sammler können dieselbe Vorlage benutzen. Deshalb gibt es den „Mann im Mantel“ mehrfach.
 - **Erkennungszeichen** (gelten für jede Tarnung, ohne Ausnahme):
   1. **Grünes Augenleuchten:** Wenn Licht von der Seite des Betrachters kommt, zum Beispiel von einer Handy-Taschenlampe, leuchten ihre Augen kurz grünlich auf, wie bei einer Katze. Echte Menschen haben das nicht.
-  2. **Funkloch:** Im Umkreis von etwa 30 Metern um einen Sammler fällt der Handyempfang auf null.
+  2. **Funkloch:** Im Umkreis von etwa 15 Metern um einen Sammler fällt der Handyempfang auf null. Das sind ungefähr fünf Stockwerke oder eine breite Straße.
   3. **Hohes Pfeifen:** Nur Nox hört es.
 - **Störung der Tarnung:** Ein starker Funkimpuls in bis zu ca. 20 m Entfernung lässt die Tarnung etwa **2 Sekunden** flackern. Dann ist die wahre Gestalt zu sehen. In dieser Staffel ist der Notrufsender der Kapsel stark genug dafür. Die kurze Verbindung beim Mithören erzeugt nur ein winziges Flimmern (einmal sichtbar in Folge 2).
 - **Wie sie dich finden:**
@@ -59,6 +60,8 @@ Eine flache Metallscheibe, so groß wie ein Bierdeckel, mit einem Lichtring.
   - Dein Gesicht kennen sie, seit du in Folge 1 die Tür mit vorgelegter Kette geöffnet hast. Der Mann hat sich dein Gesicht gemerkt, und seitdem stehst du im Suchverzeichnis.
   - Danach finden sie dich über die Verbindungen der Kapsel (Folge 5) und über das, was sie selbst sehen.
 - **Was sie wollen:** die Kapsel zurück, weil die Aufzeichnungen sie entlarven könnten, und Nox. Menschen, die ihnen im Weg stehen, nehmen sie mit. Sie verletzen niemanden vor der Kamera.
+- **Sie meiden Aufsehen:** Bei Zeugen, Lärm oder Licht ziehen sie sich zurück und warten. Deshalb sind sie so höflich und geduldig.
+- **Sie bewachen nachts die Dachtür.** Sie wissen, dass Nox den freien Himmel braucht. Ab Folge 4 weißt du das von Mara.
 
 ### Das Funkgerät
 
@@ -82,7 +85,7 @@ Eine flache Metallscheibe, so groß wie ein Bierdeckel, mit einem Lichtring.
 | Wie identifizieren und verfolgen dich die Sammler? | Maras Meldung, dein Gesicht an der Türkette, Funkloch-Nähe, die Kapsel-Verbindung in Folge 5. | 1, 4, 5, 6 |
 | Wie funktioniert die Tarnung, was stört sie? | Siehe „Die Sammler“ oben. Gestört wird sie durch den Notruf-Impuls. | Hinweise ab 1, Erklärung in 7, Störung in 9 |
 | Wann überlässt Nox dir das Funkgerät? | Folge 9, auf dem Dach, vor dem Notruf. | 9 |
-| Wann gelangt die echte Mara zum Rettungsschiff? | Folge 10, im Durcheinander auf dem Dach. Sie trägt Nox zum Lichtkegel seiner Leute, wird mit hinaufgenommen und findet dort Elias. Du bist in diesem Moment hinter dem Wassertank in Deckung und siehst es nicht. | 10 |
+| Wann gelangt die echte Mara zum Rettungsschiff? | Folge 10, im Durcheinander auf dem Dach. Während Nox sich von dir verabschiedet und in den blauen Lichtkegel läuft, rennt Mara auf der anderen Seite des Wassertanks in denselben Kegel und wird mit hinaufgenommen. Dort findet sie Elias. Du siehst es nicht, weil der Tank dir die Sicht nimmt und das Licht blendet. | 10 |
 | Wie übernimmt ein Sammler Maras Gestalt und trifft dich? | In Folge 9 lenkt Mara einen Sammler an der Dachtür ab. Sie redet minutenlang mit ihm und bietet ihm zum Schein an, Nox auszuliefern. Er sieht sie dabei lange an, „als würde er sie auswendig lernen“, und hört ihre Stimme. In Folge 10 sitzt im Morgengrauen eine „Mara“ im Treppenhaus im 17. Stock und sagt: „Ich bin runtergerannt.“ | 9, 10 |
 
 ### Zeitleiste
@@ -203,7 +206,7 @@ Alles spielt in deinem Wohnhaus, einem Hochhaus mit 24 Etagen in der Ahornstraß
 | Folge | Titel | Faktenthema | Cliffhanger |
 |---|---|---|---|
 | 1 | Im Badezimmer | Türspion: Fischaugen-Linse, Blick nur in eine Richtung (dazu: Schallzahnbürste, ca. 31.000 Bewegungen pro Minute) | Durch den Türspion: Der Mann steht noch immer vor deiner Tür, sein Lächeln ist verschwunden. |
-| 2 | Nur bis morgen | Wie Geckos an Wänden haften (Van-der-Waals-Kräfte) | Auf einer Aufnahme in der Kapsel erkennst du den Eingang deines eigenen Wohnhauses. |
+| 2 | Nur bis morgen | Wie Geckos an Wänden haften (Van-der-Waals-Kräfte), und warum sie auf nassem Glas abrutschen | Auf einer Aufnahme in der Kapsel erkennst du den Eingang deines eigenen Wohnhauses. |
 | 3 | Deine Nachbarin | Schall durch Wände: Tiefe Töne kommen besser durch als hohe | Mara flüstert: „Der Mann hat gesagt, du wärst gefährlich.“ |
 | 4 | Das Versprechen | Warum deine eigene Stimme auf Aufnahmen fremd klingt (Knochenleitung) | Elias' Stimme: „Glaub ihm kein Wort. Auch dann nicht, wenn er aussieht wie ich.“ |
 | 5 | Was Nox gestohlen hat | Super-Recognizer: Etwa 1–2 % der Menschen erkennen Gesichter außergewöhnlich gut | Im Suchverzeichnis der Verfolger erscheint dein Gesicht. |
@@ -220,11 +223,11 @@ Echte Fakten und erfundene Alien-Fähigkeiten werden immer getrennt erzählt, zu
 | Folge | Quelle |
 |---|---|
 | 1 | Wikipedia „Peephole“ / „Türspion“ (Fischauge, einseitige Sicht, Umkehrgeräte); Philips-Datenblatt Sonicare HX4101 (31.000 Bürstenbewegungen pro Minute) |
-| 2 | Autumn et al. (2000), *Nature* 405, 681–685, „Adhesive force of a single gecko foot-hair“ |
+| 2 | Autumn et al. (2000), *Nature* 405, 681–685, „Adhesive force of a single gecko foot-hair“; Stark et al. (2013), *PNAS*, „Surface wettability plays a significant role in gecko adhesion underwater“ |
 | 3 | Institute of Acoustics, R. D. Ford, „Transmission of airborne noise in buildings“ (Massegesetz) |
 | 4 | Stenfelt & Goode (2005), „Bone-conducted sound: physiological and clinical aspects“, *Otology & Neurotology* 26, 1245–1261 |
 | 5 | Russell, Duchaine & Nakayama (2009), „Super-recognizers“, *Psychonomic Bulletin & Review* 16, 252–257; Universität Greenwich / Metropolitan Police (Anteil ca. 1–2 %) |
-| 6 | NIDCD (NIH), „Age-Related Hearing Loss (Presbycusis)“ |
+| 6 | NIDCD (NIH), „Age-Related Hearing Loss (Presbycusis)“; LSU, „How Well Do Dogs and Other Animals Hear?“ (Hunde bis ca. 45.000 Hz, nach Heffner) |
 | 7 | Ollivier et al. (2004), „Comparative morphology of the tapetum lucidum (among selected species)“, *Veterinary Ophthalmology* 7, 11–22 (Primaten, also auch Menschen, haben keins) |
 | 8 | Roelofs, Hagenaars & Stins (2010), „Facing freeze“, *Psychological Science* |
 | 9 | gps.gov „Space Segment“ (Bahnhöhe ca. 20.200 km); Lehrmaterial zu GPS-Abschattung durch Gebäude (wird in der Storyline genauer belegt) |

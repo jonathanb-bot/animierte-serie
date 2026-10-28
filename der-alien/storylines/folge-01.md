@@ -105,6 +105,7 @@ NEU ZU BAUEN:
 - Anzeige: Feld „NETZ“ mit 0–4 Balken, Feld „FUNK“ mit Text „nicht verbunden“
 - Icons: Zahnbürste, Auge mit Linse (Türspion), Pfeil in eine Richtung
 
+
 DAUER (geschätzt ohne Stimme, berechnet mit `node der-alien/dauer.mjs der-alien/storylines/folge-01.md`):
 
 | Abschnitt | Einstellungen | Dauer |
