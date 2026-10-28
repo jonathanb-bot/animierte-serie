@@ -1,0 +1,8 @@
+{
+  "du":     { "haar": "kurz",    "haare": "#4a3426", "haut": "#e9c3a0", "jacke": "#3e7a6a", "hose": "#2d3340", "kapuze": true },
+  "mara":   { "haar": "lang",    "haare": "#a4532e", "haut": "#f0c9a8", "jacke": "#c99a3b", "hose": "#2f3a4a" },
+  "elias":  { "haar": "wuschel", "haare": "#a4532e", "haut": "#f0c9a8", "jacke": "#4b6a92", "hose": "#2b2f36" },
+  "mantel": { "haar": "kurz",    "haare": "#8d8f93", "haut": "#e3bfa0", "jacke": "#6c7177", "hose": "#2b2e33", "mantel": true, "schal": "#3a3d42", "augenleuchten": "#9dffbf" },
+  "nox":    { "art": "nox",      "koerper": "#22356f", "bauch": "#304c96", "haftballen": "#5a7fd0", "augen": "#eaf6ff", "pupillen": "#0e1a33", "leuchten": "#8fdcff", "groesse": 0.33 },
+  "sammler":{ "art": "sammler",  "koerper": "#2a2d33", "schatten": "#454a53", "augen": "#9dffbf", "groesse": 1.17 }
+}

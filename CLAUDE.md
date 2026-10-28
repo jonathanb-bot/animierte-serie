@@ -8,3 +8,4 @@
 - Stimme: `audio/folge-XX/NNN.mp3` pro Einstellung (ElevenLabs via Shotstack, vorher Kosten nennen).
 - Push → GitHub Actions rendert (Matrix, max. 5 parallel) → Releases.
 - Sprache: Deutsch.
+- Zweite Serie „Der Alien“ liegt in `der-alien/`. Dort ist `serienbibel.md` verbindlich (Weltregeln, Figuren, NEU ZU BAUEN). Storylines liegen in `der-alien/storylines/`, die Dauer prüfst du mit `node der-alien/dauer.mjs <storyline>`.

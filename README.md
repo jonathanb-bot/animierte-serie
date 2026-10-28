@@ -7,6 +7,7 @@ Animierte Story-Videos im Hochformat (1080×1920) für TikTok, Reels und Shorts,
 - `episoden/folge-XX.txt`: die Drehbücher
 - `engine/`: die Animation (Figuren, Szenen, Objekte)
 - `render.mjs`: rendert eine Folge zur MP4
+- `der-alien/`: zweite Serie „Der Alien“ (Serienbibel, Storylines, Figuren)
 
 ## Ablauf
 
