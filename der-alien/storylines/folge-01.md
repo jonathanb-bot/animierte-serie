@@ -6,9 +6,9 @@ KAPITEL 1: Das Summen | wohnung, bad | Du, Nox | Nacht | Anzeige: Tag 1 · 23:17
 * Wohnung bei Nacht, nur die Stehlampe brennt, du auf dem Sofa mit dem Handy – Du bist allein zu Hause. Aber im Bad summt etwas.
 * Nahaufnahme: du, lauschend, misstrauisch – Deine elektrische Zahnbürste. Dabei steht sie doch in der Ladestation.
 * Badtür einen Spalt offen, das Fenster steht weit offen, auf dem Fensterbrett eine Plastikpflanze – Das Badfenster ist offen. Du hast es nach dem Duschen vergessen.
-* Bad: Auf dem Wäschekorb sitzt Nox und hält die summende Zahnbürste wie ein Schwert – Auf deinem Wäschekorb sitzt etwas Kleines. Dunkelblau. Mit riesigen Augen.
+* Bad: Auf dem Wäschekorb sitzt Nox und hält die summende Zahnbürste wie ein Schwert – Auf deinem Wäschekorb sitzt etwas Kleines. Grün. Mit riesigen, schwarzen Augen.
 * Nahaufnahme: du, Schreck – Du schreist.
-* Nahaufnahme: Nox, Schreck, die Ohrlappen stehen ab – Es schreit auch.
+* Nahaufnahme: Nox, Schreck, die Antennen stehen ab – Es schreit auch.
 * Titelkarte: oben „Folge 1“, groß „Der Alien“, unten „Im Badezimmer“ – (ohne Text, 3 s)
 (Haken am Ende: Was ist das, und warum schreit es?)
 
@@ -22,7 +22,7 @@ KAPITEL 2: Alles easy? | bad | Du, Nox | Nacht | Anzeige: Tag 1 · 23:18 · HAND
 
 KAPITEL 3: Es klingelt | wohnungstür, bad | Du, Nox | Nacht | Anzeige: Tag 1 · 23:19 · HANDY 34 % · NETZ 4/4 → 0/4 · FUNK nicht verbunden
 * Wohnungstür von innen, dunkler Flur – Da klingelt es an deiner Wohnungstür. Kurz vor Mitternacht.
-* Bad: Nox lässt die Zahnbürste fallen, seine Haut leuchtet schwach hellblau – Das Wesen lässt die Zahnbürste fallen. Seine Haut fängt an, schwach zu *leuchten*.
+* Bad: Nox lässt die Zahnbürste fallen, seine Haut leuchtet schwach hellgrün – Das Wesen lässt die Zahnbürste fallen. Seine Haut fängt an, schwach zu *leuchten*.
 * Nahaufnahme: Nox, Angst, flüstert – „Bitte. Sag ihm nicht, dass ich hier bin.“
 * Handy in deiner Hand, die Empfangsbalken fallen auf null (Anzeige: NETZ 0/4) – Du willst jemanden anrufen. Aber dein Handy hat plötzlich *keinen Empfang*.
 * Wohnungstür, es klingelt erneut – Es klingelt noch einmal. Langsam. Geduldig.
@@ -40,12 +40,12 @@ KAPITEL 5: Die Kette | treppenhaus etage=17 | Du, Mann im Mantel | Nacht | Anzei
 * Nahaufnahme: du, besorgt – Er weiß, dass du hier bist. Obwohl du keinen Laut gemacht hast.
 * Treppenhaus im 17. Stock, deine Tür einen Spalt offen, Kette vorgelegt, Flurlicht aus – Du legst die Kette vor und öffnest einen Spalt. Im Treppenhaus ist es dunkel.
 * Du leuchtest mit der Handy-Taschenlampe, seine Augen blitzen kurz grün auf (Effekt Augenleuchten) – Du leuchtest mit dem Handy. Für einen Moment blitzen seine Augen *grün* auf.
-* Nahaufnahme: Mann im Mantel, lächelnd – Bestimmt nur eine Spiegelung. „Mir ist ein kleines Tier entlaufen“, sagt er. „Blau. Es beißt.“
+* Nahaufnahme: Mann im Mantel, lächelnd – Bestimmt nur eine Spiegelung. „Mir ist ein kleines Tier entlaufen“, sagt er. „Grün. Es beißt.“
 * Nahaufnahme: Mann im Mantel, er mustert dich genau – Er sieht dich lange an. Als würde er sich dein Gesicht *merken*.
 (Haken am Ende: Was sagst du ihm?)
 
 KAPITEL 6: Deine Entscheidung | treppenhaus etage=17, bad | Du, Nox, Mann im Mantel | Nacht | Anzeige: Tag 1 · 23:22 · HANDY 33 % · NETZ 0/4 · FUNK nicht verbunden
-* Bad im Halbdunkel, unter dem Waschbecken leuchtet es schwach blau – Hinter dir, im Bad, hörst du ein leises Fiepen.
+* Bad im Halbdunkel, unter dem Waschbecken leuchtet es schwach grünlich – Hinter dir, im Bad, hörst du ein leises Fiepen.
 * Nahaufnahme: du, denkt nach – Du könntest einfach die Wahrheit sagen. Ein Satz. Und alles wäre vorbei.
 * Nahaufnahme: Nox, Angst, große Augen – Aber du denkst an diese riesigen Augen. Und wie es gezittert hat.
 * Türspalt mit Kette, du sprichst hindurch – „Hier ist kein Tier“, sagst du. „Gute Nacht.“
@@ -65,7 +65,7 @@ KAPITEL 8: Kein Mensch | bad | Du, Nox | Nacht | Anzeige: Tag 1 · 23:31 · HAND
 * Nahaufnahme: Nox lugt unter dem Handtuch hervor – „Weg?“, flüstert es. „Er ist weg“, sagst du.
 * Nox schnuppert an der Zahnpastatube und beißt hinein – Es schnuppert an deiner Zahnpasta. Dann beißt es hinein. „Bah!“
 * Nahaufnahme: du, fast lächelnd – Du musst fast lachen. Zum ersten Mal heute Nacht.
-* Nahaufnahme: Nox, ernst, die Ohrlappen hängen – „Wer war das?“, fragst du. Es schaut zur Tür. „*Kein* Mensch.“
+* Nahaufnahme: Nox, ernst, die Antennen hängen – „Wer war das?“, fragst du. Es schaut zur Tür. „*Kein* Mensch.“
 (Haken am Ende: „Kein Mensch.“)
 
 KAPITEL 9: Nur eine Nacht | wohnung | Du, Nox | Nacht | Anzeige: Tag 1 · 23:48 · HANDY 32 % · NETZ 4/4 → 0/4 · FUNK nicht verbunden
@@ -106,11 +106,12 @@ NEU ZU BAUEN:
 - Icons: Zahnbürste, Auge mit Linse (Türspion), Pfeil in eine Richtung
 
 
+
 DAUER (geschätzt ohne Stimme, berechnet mit `node der-alien/dauer.mjs der-alien/storylines/folge-01.md`):
 
 | Abschnitt | Einstellungen | Dauer |
 |---|---|---|
-| Kapitel 1: Das Summen | 7 | 27.4 s |
+| Kapitel 1: Das Summen | 7 | 27.8 s |
 | Kapitel 2: Alles easy? | 5 | 24.2 s |
 | Kapitel 3: Es klingelt | 5 | 24.0 s |
 | Kapitel 4: Der Mann im Mantel | 5 | 28.9 s |
@@ -121,14 +122,14 @@ DAUER (geschätzt ohne Stimme, berechnet mit `node der-alien/dauer.mjs der-alien
 | Kapitel 9: Nur eine Nacht | 5 | 23.1 s |
 | Kapitel 10: Der Türspion | 5 | 19.1 s |
 | Check | 3 | 16.2 s |
-| **Gesamt** | 55 | **4:21** |
+| **Gesamt** | 55 | **4:22** |
 
 | Teil | Inhalt | Dauer |
 |---|---|---|
-| 1/5 | Kapitel 1, Kapitel 2 | 51.6 s |
+| 1/5 | Kapitel 1, Kapitel 2 | 52.0 s |
 | 2/5 | Kapitel 3, Kapitel 4 | 52.9 s |
 | 3/5 | Kapitel 5, Kapitel 6 | 52.9 s |
 | 4/5 | Kapitel 7, Kapitel 8 | 45.4 s |
 | 5/5 | Kapitel 9, Kapitel 10, Check | 58.4 s |
 
-Teil 5 liegt knapp unter der Grenze. Mit echter Stimme teilt `render.mjs --teile` beim Rendern neu auf.
+Mit echter Stimme teilt `render.mjs --teile` beim Rendern neu auf.

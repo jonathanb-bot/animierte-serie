@@ -27,7 +27,7 @@ KAPITEL 2: Unter der Jacke | dach | Du, Nox | Nacht | Anzeige: Tag 3 · 00:16 ·
 KAPITEL 3: Ein Akkord | dach, skyline | Du, Nox | Nacht | Anzeige: Tag 3 · 00:18 · HANDY 70 % · NETZ 0/4 · FUNK 100 %
 * Dach: Ein warmes Licht am Horizont, ein leiser hoher Klang – Dann hörst du einen Klang. Leise. Hoch. Wie ein Akkord.
 * Skyline bei Nacht: Ein rundes, warm-blau leuchtendes Schiff kommt über die Dächer – Über den Dächern kommt ein zweites Schiff. Rund. Weich. Mit warmem, blauem Licht.
-* Nahaufnahme: Nox, die Ohrlappen stellen sich auf – Nox' Ohrlappen stellen sich auf. „*Meine* Leute.“
+* Nahaufnahme: Nox, die Antennen stellen sich auf – Nox' Antennen stellen sich auf. „*Meine* Leute.“
 * Dach: Das dunkle Schiff dreht sich, das Brummen wird lauter – Das dunkle Schiff dreht sich. Langsam. Das Brummen wird lauter.
 * Nahaufnahme: du, staunt – Zwei Schiffe. Über deinem Dach. Und du mittendrin.
 (Haken am Ende: Wer ist schneller?)
@@ -109,6 +109,7 @@ NEU ZU BAUEN:
 - Infokarten: Tür-Versuch (zwei Personen, Tür, ausgetauschter Mann), „1 von 2“
 - Titelkarte „Ende Staffel 1“
 
+
 DAUER (geschätzt ohne Stimme, berechnet mit `node der-alien/dauer.mjs der-alien/storylines/folge-10.md`):
 
 | Abschnitt | Einstellungen | Dauer |
@@ -116,7 +117,7 @@ DAUER (geschätzt ohne Stimme, berechnet mit `node der-alien/dauer.mjs der-alien
 | Kapitel 1: Der Suchkegel | 5 | 21.4 s |
 | Was bisher geschah | 4 | 20.2 s |
 | Kapitel 2: Unter der Jacke | 5 | 20.6 s |
-| Kapitel 3: Ein Akkord | 5 | 25.3 s |
+| Kapitel 3: Ein Akkord | 5 | 25.2 s |
 | Kapitel 4: Durcheinander | 5 | 25.4 s |
 | Kapitel 5: Abschied | 5 | 24.7 s |
 | Kapitel 6: Leer | 5 | 20.7 s |

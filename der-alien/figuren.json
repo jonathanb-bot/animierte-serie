@@ -5,6 +5,6 @@
   "falschemara": { "haar": "lang",    "haare": "#a4532e", "haut": "#f0c9a8", "jacke": "#c99a3b", "hose": "#2f3a4a", "augen": "#4a6a3a", "augenleuchten": "#9dffbf" },
   "elias":       { "haar": "wuschel", "haare": "#a4532e", "haut": "#f0c9a8", "jacke": "#4b6a92", "hose": "#2b2f36" },
   "mantel":      { "haar": "seite",   "haare": "#8d8f93", "haut": "#e3bfa0", "jacke": "#6c7177", "hose": "#2b2e33", "schuhe": "#15171b", "mantel": true, "schal": "#3a3d42", "augenleuchten": "#9dffbf" },
-  "nox":         { "art": "nox",      "koerper": "#22356f", "bauch": "#304c96", "haftballen": "#5a7fd0", "augen": "#eaf6ff", "pupillen": "#0e1a33", "leuchten": "#8fdcff", "groesse": 0.33 },
+  "nox":         { "art": "nox",      "koerper": "#78c850", "bauch": "#a7dd80", "haftballen": "#c9f0a0", "augen": "#070b08", "antenne": "#e6ff8c", "leuchten": "#e6ff8c", "groesse": 0.33 },
   "sammler":     { "art": "sammler",  "groesse": 1.0 }
 }

@@ -22,7 +22,7 @@
   // =====================================================================
   // NOX – Füße bei (x,y). Einheiten wie bei Menschen (Mensch ≈ 640 hoch), dann × f.groesse
   // =====================================================================
-  const NOX = { koerper: "#22356f", bauch: "#304c96", haftballen: "#5a7fd0", augen: "#eaf6ff", pupillen: "#0e1a33", leuchten: "#8fdcff" };
+  const NOX = { koerper: "#78c850", bauch: "#a7dd80", haftballen: "#c9f0a0", augen: "#070b08", antenne: "#e6ff8c", leuchten: "#e6ff8c" };
   const MIENE = {
     neutral: { ohr: 0, lid: 0, pup: 1, mund: "klein" },
     neugierig: { ohr: 1, lid: 0, pup: 1.15, mund: "o" },
@@ -78,6 +78,19 @@
     return P;
   }
 
+  // Kopf: groß, oben breit, zum Kinn schmal
+  function kopfPfad(w, top, bot) {
+    const h = bot - top;
+    ctx.beginPath(); ctx.moveTo(0, top);
+    ctx.bezierCurveTo(w * 0.78, top, w, top + h * 0.18, w, top + h * 0.45);
+    ctx.bezierCurveTo(w, top + h * 0.78, w * 0.42, bot, 0, bot);
+    ctx.bezierCurveTo(-w * 0.42, bot, -w, top + h * 0.78, -w, top + h * 0.45);
+    ctx.bezierCurveTo(-w, top + h * 0.18, -w * 0.78, top, 0, top);
+    ctx.closePath();
+  }
+  // Mandelauge, spitze Ecken
+  function mandelPfad(w, h) { ctx.beginPath(); ctx.moveTo(-w, 0); ctx.quadraticCurveTo(0, -h * 1.7, w, 0); ctx.quadraticCurveTo(0, h * 1.7, -w, 0); ctx.closePath(); }
+
   A.nox = (x, y, s, f, o = {}) => {
     f = Object.assign({}, NOX, f || {});
     const t = o.t || 0, ph = o.phase ?? x * 0.01;
@@ -86,86 +99,94 @@
     const le = clamp(o.leuchten || 0, 0, 1) * (0.85 + 0.15 * Math.sin(t * 6));
     ctx.save(); ctx.translate(x, y); const g = s * (f.groesse ?? 0.33); ctx.scale(o.spiegeln ? -g : g, g);
     // Gehen: Watscheln
-    let fl = [-95, 0], frr = [95, 0], lift = [0, 0], bob = Math.sin(t * 2.3 + ph) * 5;
+    let fl = [-70, 0], frr = [70, 0], lift = [0, 0], bob = Math.sin(t * 2.3 + ph) * 5;
     if (P.gehen) {
       const w = t * (P.gehen === 2 ? 13 : 8) + ph;
       lift = [Math.max(0, Math.sin(w)) * 34, Math.max(0, -Math.sin(w)) * 34];
       bob = -Math.abs(Math.sin(w)) * 18; P.kipp = Math.sin(w) * 0.07;
       P.hl = [-225, -230 - Math.sin(w) * 40]; P.hr = [225, -230 + Math.sin(w) * 40];
     }
-    if (P.fuss) { fl = [P.fuss[0][0], P.fuss[0][1]]; frr = [P.fuss[1][0], P.fuss[1][1]]; }
-    ellipse(0, -4, 170, 26, rgba(A.SCHATTEN, P.sitzen ? 0 : 0.22));
-    if (le > 0) { ctx.fillStyle = rgrad(0, -300, 40, 560, [[0, rgba(f.leuchten, 0.55 * le)], [1, rgba(f.leuchten, 0)]]); ctx.fillRect(-560, -860, 1120, 1120); A.licht(0, -300, 700, f.leuchten, 1.5 * le); }
-    const koerper = mix(f.koerper, "#5aa8ff", 0.35 * le), bauch = mix(f.bauch, f.leuchten, 0.45 * le);
+    if (P.fuss) { fl = [P.fuss[0][0] * 0.7, P.fuss[0][1]]; frr = [P.fuss[1][0] * 0.7, P.fuss[1][1]]; }
+    ellipse(0, -4, 130, 22, rgba(A.SCHATTEN, P.sitzen ? 0 : 0.22));
+    if (le > 0) { ctx.fillStyle = rgrad(0, -400, 40, 640, [[0, rgba(f.leuchten, 0.55 * le)], [1, rgba(f.leuchten, 0)]]); ctx.fillRect(-640, -1040, 1280, 1280); A.licht(0, -400, 760, f.leuchten, 1.5 * le); }
+    const haut = mix(f.koerper, f.leuchten, 0.4 * le), bauch = mix(f.bauch, "#ffffff", 0.3 * le), dunkler = shade(haut, -0.14);
     // Beine
     if (P.sitzen) {
       const sw2 = Math.sin(t * 2.2 + ph) * 12;
-      for (const sd of [-1, 1]) { capsule(sd * 70, -60, sd * 85, 70 + sd * sw2, 36, 30); fill(shade(koerper, -0.08)); ellipse(sd * 92, 90 + sd * sw2, 50, 26, shade(koerper, -0.12)); }
+      for (const sd of [-1, 1]) { capsule(sd * 45, -70, sd * 60, 70 + sd * sw2, 22, 18); fill(dunkler); ellipse(sd * 66, 86 + sd * sw2, 40, 18, shade(haut, -0.2)); }
     } else {
       for (const [i, sd] of [[0, -1], [1, 1]]) {
         const ft = i ? frr : fl, l = lift[i];
-        capsule(sd * 72, -80 + bob * 0.4, ft[0], -30 - l, 38, 32); fill(shade(koerper, -0.06));
-        ellipse(ft[0], -22 - l, 58, 28, shade(koerper, -0.12));
-        for (const k of [-1, 0, 1]) circle(ft[0] + k * 30, -8 - l, 10, rgba(f.haftballen, 0.9));
+        capsule(sd * 45, -95 + bob * 0.4, ft[0], -22 - l, 22, 18); fill(dunkler);
+        ellipse(ft[0] + sd * 8, -16 - l, 44, 18, shade(haut, -0.2));
+        for (const k of [-1, 0, 1]) circle(ft[0] + sd * 8 + k * 24, -6 - l, 8, rgba(f.haftballen, 0.9));
       }
     }
     ctx.translate(0, P.dy + bob + (P.sitzen ? 30 : 0)); ctx.rotate(P.kipp);
     if (P.sy !== 1) { ctx.translate(0, -40); ctx.scale(1, P.sy); ctx.translate(0, 40); }
-    // Ohrlappen (hinter dem Körper)
+    // Körper (klein, birnenförmig) und Hals
+    ctx.beginPath(); ctx.moveTo(-50, -300); ctx.bezierCurveTo(-120, -250, -110, -90, -60, -80); ctx.lineTo(60, -80); ctx.bezierCurveTo(110, -90, 120, -250, 50, -300); ctx.closePath(); fill(haut);
+    ctx.save(); ctx.clip(); ellipse(-6, -175, 58, 82, bauch); ctx.restore();
+    ctx.beginPath(); ctx.moveTo(-50, -300); ctx.bezierCurveTo(-120, -250, -110, -90, -60, -80); ctx.lineTo(60, -80); ctx.bezierCurveTo(110, -90, 120, -250, 50, -300); ctx.closePath(); schattiere(-115, 115, 0.26);
+    box(-26, -350, 52, 70, 22, dunkler);
+    // Antennen (zeigen die Stimmung: hoch = neugierig, hängend = traurig)
     const oh = clamp(M.ohr + (o.ohren || 0), -1, 1);
     for (const sd of [-1, 1]) {
-      const ox = sd * (205 + oh * 18), oy = -420 - oh * 70, rot = sd * (0.5 + oh * 0.45) + (oh < 0 ? sd * 0.5 : 0);
-      ctx.save(); ctx.translate(ox, oy); ctx.rotate(rot);
-      ellipse(0, 0, 40, 62, shade(koerper, -0.05)); ellipse(0, 6, 22, 40, rgba(bauch, 0.9));
-      ctx.restore();
+      const bx = sd * 62, by = -645, wob = Math.sin(t * 3 + sd + ph) * 8;
+      const tx = sd * lerp(lerp(235, 150, clamp(oh + 1, 0, 1)), 105, clamp(oh, 0, 1)) + wob, ty = lerp(lerp(-690, -790, clamp(oh + 1, 0, 1)), -835, clamp(oh, 0, 1)) + Math.abs(wob) * 0.5;
+      const cx = sd * 70 + (tx - sd * 70) * 0.2, cy = ty + (oh < 0 ? -40 : 30);
+      ctx.beginPath(); ctx.moveTo(bx, by); ctx.quadraticCurveTo(cx, cy, tx, ty); ctx.lineWidth = 13; ctx.strokeStyle = dunkler; ctx.lineCap = "round"; ctx.stroke();
+      const kp = 0.75 + 0.25 * Math.sin(t * 2.5 + sd);
+      circle(tx, ty, 26, mix(f.antenne, "#ffffff", 0.2 * le)); circle(tx - 8, ty - 8, 8, rgba("#ffffff", 0.7));
+      A.licht(tx, ty, 120, f.antenne, 0.6 * kp + 0.8 * le);
     }
-    // Körper
-    eiPfad(195, -575, -40); fill(koerper);
-    ctx.save(); eiPfad(195, -575, -40); ctx.clip();
-    ellipse(-10, -285, 135, 210, bauch);
-    ctx.restore();
-    eiPfad(195, -575, -40); schattiere(-195, 195, 0.28);
-    ellipse(-70, -500, 60, 26, rgba("#ffffff", 0.14 + 0.2 * le), -0.5);
-    // Augen
-    const blink = (() => { const per = 3.6 + (ph % 1.3), q = (t + ph) % per; return q < 0.14 ? 0.1 + 0.9 * Math.abs(Math.cos(q / 0.14 * Math.PI)) : 1; })();
+    // Kopf
+    kopfPfad(205, -665, -330); fill(haut);
+    kopfPfad(205, -665, -330); schattiere(-205, 205, 0.28);
+    ellipse(-80, -600, 70, 28, rgba("#ffffff", 0.18 + 0.2 * le), -0.45);
+    // Augen: große schwarze Mandelaugen mit Lichtpunkten
+    const blink = (() => { const per = 3.6 + (ph % 1.3), q = (t + ph) % per; return q < 0.14 ? 0.08 + 0.92 * Math.abs(Math.cos(q / 0.14 * Math.PI)) : 1; })();
     const gr = M.gross || 1;
     const bl = Array.isArray(o.blick) ? o.blick : M.blick || [0, 0];
     for (const sd of [-1, 1]) {
-      const ex = sd * 74, ey = -395, rx = 62 * gr, ry = 80 * gr * blink;
-      ellipse(ex, ey, rx, ry, f.augen);
+      const ex = sd * 90, ey = -470, w = 80 * gr, h = 48 * gr * blink;
+      ctx.save(); ctx.translate(ex, ey); ctx.rotate(-sd * 0.42); if (sd < 0) ctx.scale(-1, 1);
+      mandelPfad(w, h); ctx.fillStyle = lgrad(0, -h, 0, h, [[0, "#1b2a20"], [1, f.augen]]); ctx.fill();
       if (blink > 0.3) {
-        ctx.save(); ctx.beginPath(); ctx.ellipse(ex, ey, rx, ry, 0, 0, Math.PI * 2); ctx.clip();
-        const pr = 34 * M.pup, px = ex + bl[0] * 18, py = ey + bl[1] * 20 + 6;
-        circle(px, py, pr, f.pupillen);
-        circle(px - pr * 0.38, py - pr * 0.45, pr * 0.38, "#ffffff"); circle(px + pr * 0.35, py + pr * 0.4, pr * 0.15, rgba("#ffffff", 0.8));
-        // Oberlid
-        if (M.lid > 0) { ctx.save(); ctx.translate(ex, ey - ry); ctx.rotate(sd * (M.lidKipp || 0)); box(-rx * 1.4, -ry, rx * 2.8, ry + ry * 1.6 * M.lid, 0, koerper); ctx.restore(); }
+        ctx.save(); mandelPfad(w, h); ctx.clip();
+        const pu = M.pup, hx = (-w * 0.28 + bl[0] * 14) * (sd < 0 ? -1 : 1), hy = -h * 0.35 + bl[1] * 12;
+        circle(hx, hy, 17 * pu, "#ffffff"); circle(hx + 26, hy + 22, 7 * pu, rgba("#ffffff", 0.75));
+        ellipse(w * 0.1, h * 0.75, w * 0.6, h * 0.25, rgba("#7fdc8a", 0.18));
+        if (M.lid > 0) { ctx.save(); ctx.rotate(sd * (M.lidKipp || 0) * (sd < 0 ? -1 : 1)); box(-w * 1.3, -h * 2, w * 2.6, h * 2 * M.lid * 1.05 + h * 0.3, 0, haut); ctx.restore(); }
+        if (o.ausdruck === "froh") { ctx.beginPath(); ctx.ellipse(0, h * 1.25, w * 1.1, h * 0.75, 0, 0, Math.PI * 2); fill(haut); }
         ctx.restore();
       }
+      ctx.restore();
     }
+    // Nasenlöcher
+    for (const sd of [-1, 1]) ellipse(sd * 11, -398, 5, 7, dunkler);
     // Mund
-    const my = -268, sp = o.spricht ? 0.3 + 0.7 * Math.abs(Math.sin(t * 15) * Math.sin(t * 5.7 + 1)) : 0;
-    const mundc = "#0f1730";
-    if (sp > 0) ellipse(0, my + 4, 22 + 6 * sp, 6 + 22 * sp, mundc);
-    else if (M.mund === "auf") ellipse(0, my + 8, 24, 32, mundc);
-    else if (M.mund === "o") ellipse(0, my + 2, 13, 15, mundc);
-    else if (M.mund === "zittert") { ctx.beginPath(); ctx.moveTo(-26, my); for (let i = 0; i <= 6; i++) ctx.lineTo(-26 + i * 8.7, my + (i % 2 ? -6 : 6) + Math.sin(t * 20) * 2); ctx.lineWidth = 9; ctx.strokeStyle = mundc; ctx.lineCap = "round"; ctx.stroke(); }
-    else if (M.mund === "lacht") { ctx.beginPath(); ctx.moveTo(-34, my - 6); ctx.quadraticCurveTo(0, my + 40, 34, my - 6); ctx.closePath(); fill(mundc); ellipse(0, my + 16, 14, 7, "#d86b84"); }
-    else { const k = M.mund === "traurig" ? -12 : M.mund === "flach" ? 0 : 10; ctx.beginPath(); ctx.moveTo(-24, my); ctx.quadraticCurveTo(0, my + k, 24, my); ctx.lineWidth = 9; ctx.strokeStyle = mundc; ctx.lineCap = "round"; ctx.stroke(); }
-    // Hände (Armlänge begrenzt), Gehaltenes zwischen bzw. in der Hand
-    const haende = [P.hl, P.hr].map(([tx, ty], i) => { const sx = (i ? 1 : -1) * 160, sy = -300, d = Math.hypot(tx - sx, ty - sy), k = Math.min(1, 210 / Math.max(d, 1)); return [sx + (tx - sx) * k, sy + (ty - sy) * k]; });
+    const my = -362, sp = o.spricht ? 0.3 + 0.7 * Math.abs(Math.sin(t * 15) * Math.sin(t * 5.7 + 1)) : 0;
+    const mundc = "#1d3320";
+    if (sp > 0) ellipse(0, my + 4, 18 + 5 * sp, 5 + 17 * sp, mundc);
+    else if (M.mund === "auf") ellipse(0, my + 6, 20, 26, mundc);
+    else if (M.mund === "o") ellipse(0, my + 2, 10, 12, mundc);
+    else if (M.mund === "zittert") { ctx.beginPath(); ctx.moveTo(-22, my); for (let i = 0; i <= 6; i++) ctx.lineTo(-22 + i * 7.3, my + (i % 2 ? -5 : 5) + Math.sin(t * 20) * 2); ctx.lineWidth = 8; ctx.strokeStyle = mundc; ctx.lineCap = "round"; ctx.stroke(); }
+    else if (M.mund === "lacht") { ctx.beginPath(); ctx.moveTo(-28, my - 5); ctx.quadraticCurveTo(0, my + 32, 28, my - 5); ctx.closePath(); fill(mundc); ellipse(0, my + 13, 11, 6, "#e07a8a"); }
+    else { const k = M.mund === "traurig" ? -10 : M.mund === "flach" ? 0 : 9; ctx.beginPath(); ctx.moveTo(-20, my); ctx.quadraticCurveTo(0, my + k, 20, my); ctx.lineWidth = 8; ctx.strokeStyle = mundc; ctx.lineCap = "round"; ctx.stroke(); }
+    // Hände (lange dünne Arme), Gehaltenes zwischen bzw. in der Hand
+    const haende = [P.hl, P.hr].map(([tx, ty], i) => { const sx = (i ? 1 : -1) * 82, sy = -265, d = Math.hypot(tx - sx, ty - sy), k = Math.min(1, 250 / Math.max(d, 1)); return [sx + (tx - sx) * k, sy + (ty - sy) * k]; });
     const ziel = P.verschr ? null : o.halt;
     if (ziel) {
       const [gx, gy] = P.einhand ? [haende[1][0], haende[1][1] - 40] : [(haende[0][0] + haende[1][0]) / 2, (haende[0][1] + haende[1][1]) / 2 - 30];
       ctx.save(); ctx.translate(gx, gy); if (P.einhand) ctx.rotate(0.5 + Math.sin(t * 9) * 0.3); A.objekt(ziel, 0, 0, 0.66, t); ctx.restore();
       A._haltPos = ctx.getTransform().transformPoint(new DOMPoint(gx, gy));
     }
-    // Arme
     for (const [i, sd] of [[0, -1], [1, 1]]) {
-      const sx = sd * 160, sy = -300, [hx, hy] = haende[i];
-      capsule(sx, sy, hx, hy, 40, 32); fill(shade(koerper, i ? -0.1 : -0.03));
-      circle(hx, hy, 34, shade(koerper, 0.02));
-      for (const a of [-0.7, 0, 0.7]) { const ang = Math.atan2(hy - sy, hx - sx) + a; circle(hx + Math.cos(ang) * 30, hy + Math.sin(ang) * 30, 13, f.haftballen); }
+      const sx = sd * 82, sy = -265, [hx, hy] = haende[i];
+      capsule(sx, sy, hx, hy, 22, 17); fill(i ? shade(haut, -0.1) : shade(haut, -0.03));
+      circle(hx, hy, 24, shade(haut, 0.02));
+      for (const a of [-0.75, 0, 0.75]) { const ang = Math.atan2(hy - sy, hx - sx) + a; circle(hx + Math.cos(ang) * 24, hy + Math.sin(ang) * 24, 10, f.haftballen); }
     }
     ctx.restore();
   };
@@ -173,7 +194,7 @@
   // Kleine Silhouette von Nox' Leuten (im Lichtkegel)
   A.noxLeute = (x, y, s, t, a = 0.7) => {
     ctx.save(); ctx.globalAlpha = a;
-    A.nox(x, y, s, { koerper: "#3b5bb0", bauch: "#5b7bd0", groesse: 0.42 }, { t, pose: "steht", ausdruck: "neutral", phase: x });
+    A.nox(x, y, s, { koerper: "#9ad77a", bauch: "#c4eba5", groesse: 0.42 }, { t, pose: "steht", ausdruck: "neutral", phase: x });
     ctx.restore();
   };
 
@@ -311,7 +332,7 @@
       if (leuchten) { ctx.fillStyle = rgrad(0, 0, 20, 320, [[0, rgba("#8fdcff", 0.5 * leuchten)], [1, "rgba(143,220,255,0)"]]); ctx.fillRect(-320, -320, 640, 640); A.licht(0, 0, 400, "#8fdcff", 1.3 * leuchten); }
       ctx.beginPath(); ctx.arc(0, -70, 90, Math.PI, 0); ctx.lineWidth = 18; ctx.strokeStyle = "#2b2f36"; ctx.stroke();
       box(-170, -80, 340, 190, 60, A.mix("#3a4a6a", "#8fdcff", 0.4 * leuchten)); box(-170, -10, 340, 14, 6, "#2b2f36");
-      if (augen) { box(-70, -95, 140, 40, 18, "#0e1a33"); for (const sd of [-1, 1]) { ellipse(sd * 30, -75, 18, 14, "#eaf6ff"); circle(sd * 30, -73, 7, "#0e1a33"); } }
+      if (augen) { box(-80, -100, 160, 46, 20, "#78c850"); for (const sd of [-1, 1]) { ctx.save(); ctx.translate(sd * 34, -78); ctx.rotate(-sd * 0.4); ellipse(0, 0, 24, 13, "#070b08"); circle(-sd * 7, -4, 4, "#ffffff"); ctx.restore(); } }
     },
     sporttasche_leuchtet(t) { I.sporttasche(t, 0.8 + 0.2 * Math.sin(t * 6)); },
     gecko(t, nass = false) {
@@ -515,7 +536,7 @@
       const ny = by + 95, g = (s.nox_s || 1) * 0.33;
       A.nox(1000, ny, s.nox_s || 1, nf, noxOpt(s, t, { pose: "duckt" }));
       box(bx, by + 34, 440, 286, 50, "#f4f6f8"); ctx.beginPath(); ctx.rect(bx, by + 34, 440, 286); A.schattiere(bx, bx + 440, 0.12);
-      if (s.handtuch !== false) { const top = ny - 520 * g, unten = ny - 470 * g; ctx.beginPath(); ctx.moveTo(1000 - 150, unten + 20); ctx.bezierCurveTo(1000 - 130, top - 110, 1000 + 130, top - 110, 1000 + 150, unten + 20); ctx.closePath(); fill("#e0a23d"); line(1000 - 120, unten - 10, 1000 + 120, unten - 10, 10, "#c98a2a"); }
+      if (s.handtuch !== false) { const top = ny - 610 * g, unten = ny - 475 * g; ctx.beginPath(); ctx.moveTo(1000 - 170, unten + 20); ctx.bezierCurveTo(1000 - 150, top - 120, 1000 + 150, top - 120, 1000 + 170, unten + 20); ctx.closePath(); fill("#e0a23d"); line(1000 - 135, unten - 10, 1000 + 135, unten - 10, 10, "#c98a2a"); }
     }
     if (s.handtuch !== false && wo !== "wanne") { const hx = bx + 70, hy = by - 22; box(hx, hy, 180, 210, 22, "#e0a23d"); for (const k of [40, 160]) box(hx, hy + k, 180, 14, 4, "#c98a2a"); }
     A.figurenZeigen(ohne(s, "nox"), t, 1660, 0.95);

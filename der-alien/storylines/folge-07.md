@@ -81,14 +81,14 @@ KAPITEL 9: Eine Nachricht | wohnung (Maras Wohnung) | Du, Mara, Nox | Nacht | An
 * Nahaufnahme: du, misstrauisch – Nach vier Monaten? Ausgerechnet *jetzt*?
 (Haken am Ende: Was schreibt Elias?)
 
-KAPITEL 10: Das kleine blaue Wesen | wohnung (Maras Wohnung) | Du, Mara, Nox | Nacht | Anzeige: Tag 2 · 22:30 · HANDY 78 % · NETZ 4/4 · FUNK 100 %
-* Handy-Display mit der Nachricht – „Bring ihnen das kleine blaue Wesen. Dann lassen sie mich gehen.“
+KAPITEL 10: Das kleine grüne Wesen | wohnung (Maras Wohnung) | Du, Mara, Nox | Nacht | Anzeige: Tag 2 · 22:30 · HANDY 78 % · NETZ 4/4 · FUNK 100 %
+* Handy-Display mit der Nachricht – „Bring ihnen das kleine grüne Wesen. Dann lassen sie mich gehen.“
 * Nahaufnahme: Mara, schaut langsam zu Nox – Mara schaut langsam zu Nox.
-* Nahaufnahme: Nox, die Ohrlappen hängen – Nox schaut zurück. Und sagt kein Wort.
+* Nahaufnahme: Nox, die Antennen hängen – Nox schaut zurück. Und sagt kein Wort.
 * Titelkarte: oben „Folge 8: Du oder er“, groß „Fortsetzung folgt“ – (ohne Text, 3,5 s)
 (Haken am Ende: Wird Mara Nox ausliefern?)
 
-CLIFFHANGER: Mara bekommt eine Nachricht vom Handy ihres Bruders: „Bring ihnen das kleine blaue Wesen. Dann lassen sie mich gehen.“
+CLIFFHANGER: Mara bekommt eine Nachricht vom Handy ihres Bruders: „Bring ihnen das kleine grüne Wesen. Dann lassen sie mich gehen.“
 
 CHECK: Frage: Warum leuchten Katzenaugen, wenn man sie anleuchtet? / Antwort: Hinter ihrer Netzhaut liegt eine spiegelnde Schicht, das Tapetum lucidum. Menschen haben sie *nicht*.
 Was hättest du gemacht? Schreib es in die Kommentare.
@@ -109,6 +109,7 @@ NEU ZU BAUEN:
 - Icons: Katzenauge, Handy, Gehirn mit Fragezeichen
 - Anzeige: FUNK wechselt von „nicht verbunden“ auf 100 %
 
+
 DAUER (geschätzt ohne Stimme, berechnet mit `node der-alien/dauer.mjs der-alien/storylines/folge-07.md`):
 
 | Abschnitt | Einstellungen | Dauer |
@@ -123,7 +124,7 @@ DAUER (geschätzt ohne Stimme, berechnet mit `node der-alien/dauer.mjs der-alien
 | Kapitel 7: Weit | 5 | 26.4 s |
 | Kapitel 8: Das Dach | 5 | 26.7 s |
 | Kapitel 9: Eine Nachricht | 5 | 17.3 s |
-| Kapitel 10: Das kleine blaue Wesen | 4 | 14.8 s |
+| Kapitel 10: Das kleine grüne Wesen | 4 | 14.8 s |
 | Check | 3 | 15.1 s |
 | **Gesamt** | 57 | **4:29** |
 

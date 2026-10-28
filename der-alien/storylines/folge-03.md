@@ -19,7 +19,7 @@ Was bisher geschah:
 
 KAPITEL 2: Der Dachschlüssel | wohnung | Du, Nox | Nacht | Anzeige: Tag 2 · 04:12 · HANDY 23 % · NETZ 4/4 · FUNK nicht verbunden
 * Nahaufnahme: du – „Meine Nachbarin hat einen Dachschlüssel. Sie gießt da oben die Beete. Sie heißt *Mara*.“
-* Nahaufnahme: Nox zuckt zusammen, die Ohrlappen stehen ab – Bei dem Namen zuckt Nox zusammen. Nur ganz kurz.
+* Nahaufnahme: Nox zuckt zusammen, die Antennen stehen ab – Bei dem Namen zuckt Nox zusammen. Nur ganz kurz.
 * Nahaufnahme: du, misstrauisch – „Kennst du sie?“ „Nein“, sagt er schnell. Zu schnell.
 * Nahaufnahme: du, denkt nach – Du weißt nicht, ob du ihm trauen kannst. Aber du hast keine bessere Idee.
 * Nahaufnahme: Nox, besorgt – „Okay“, flüstert Nox. „Aber sie darf mich nicht *sehen*. Noch nicht.“
@@ -103,6 +103,7 @@ NEU ZU BAUEN:
 - `bad`: Lüftungsgitter an der Wand
 - Infokarten: Schallwellen an einer Wand (tief kommt durch, hoch wird geschluckt), Lautsprecher hinter der Wand
 - Icons: Schallwelle, Lautsprecher
+
 
 DAUER (geschätzt ohne Stimme, berechnet mit `node der-alien/dauer.mjs der-alien/storylines/folge-03.md`):
 

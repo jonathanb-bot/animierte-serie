@@ -1,9 +1,9 @@
 FOLGE 8: Du oder er
 Faktenthema: Schreckstarre: Bei plötzlicher Gefahr erstarren Menschen oft zuerst, und der Puls wird langsamer
-Hook (erster Satz): „Bring ihnen das kleine blaue Wesen.“ Und Mara hält Nox im Arm.
+Hook (erster Satz): „Bring ihnen das kleine grüne Wesen.“ Und Mara hält Nox im Arm.
 
 KAPITEL 1: Wesen | wohnung (Maras Wohnung) | Du, Mara, Nox | Nacht | Anzeige: Tag 2 · 22:31 · HANDY 78 % · NETZ 4/4 · FUNK 100 %
-* Mara mit dem Handy in der einen Hand, Nox im anderen Arm – „Bring ihnen das kleine blaue Wesen.“ Und Mara hält Nox im Arm.
+* Mara mit dem Handy in der einen Hand, Nox im anderen Arm – „Bring ihnen das kleine grüne Wesen.“ Und Mara hält Nox im Arm.
 * Nahaufnahme: du, angespannt – Du siehst Mara an. Mara sieht Nox an. Keiner atmet.
 * Nahaufnahme: Mara, denkt nach – „Elias würde ihn nie *Wesen* nennen“, sagt Mara langsam. „Er würde *Nox* schreiben.“
 * Nahaufnahme: Mara, entschlossen, löscht die Nachricht – „Und selbst wenn sie echt ist: Elias würde wollen, dass ich Nox *helfe*.“
@@ -14,7 +14,7 @@ Was bisher geschah:
 * Nox will vom Dach aus seine Leute rufen. Die Sammler jagen ihn.
 * Sie können Gesichter *ausleihen*. Aber im Licht leuchten ihre Augen grün.
 * Nox hat eure alten Walkie-Talkies umgebaut. Jetzt reichen sie bis zu seinen Leuten.
-* Dann kam eine Nachricht von Elias' Handy: „Bring ihnen das kleine blaue Wesen.“
+* Dann kam eine Nachricht von Elias' Handy: „Bring ihnen das kleine grüne Wesen.“
 
 KAPITEL 2: Mitternacht | wohnung (Maras Wohnung), treppenhaus etage=17 | Du, Mara, Nox | Nacht | Anzeige: Tag 2 · 23:30 · HANDY 75 % · NETZ 4/4 · FUNK 100 %
 * Maras Wohnung: Mara steckt den Dachschlüssel ein – Halb zwölf. Zeit. Mara steckt den Dachschlüssel ein.
@@ -35,7 +35,7 @@ KAPITEL 3: Stufe für Stufe | treppenhaus etage=19, treppenhaus etage=21 | Du, M
 KAPITEL 4: Guten Abend | treppenhaus etage=22 | Du, Mara, Nox, Mann im Mantel | Nacht | Anzeige: Tag 2 · 23:41 · HANDY 74 % · NETZ 4/4 → 0/4 · FUNK 100 %
 * Handy: Die Empfangsbalken fallen auf null (Anzeige: NETZ 0/4) – Im zweiundzwanzigsten Stock fällt dein Empfang auf *null*.
 * Nahaufnahme: du, bleibt stehen – Du bleibst stehen.
-* Nahaufnahme: Nox, die Ohrlappen stellen sich auf – Nox' Ohrlappen stellen sich auf. „Pfeifen“, haucht er. „*Über* uns.“
+* Nahaufnahme: Nox, die Antennen stellen sich auf – Nox' Antennen stellen sich auf. „Pfeifen“, haucht er. „*Über* uns.“
 * Treppenhaus: auf dem Absatz über euch eine Gestalt im grauen Mantel – Auf dem Treppenabsatz über euch steht jemand. Grauer Mantel.
 * Nahaufnahme: Mann im Mantel, freundlich – „Guten Abend“, sagt er freundlich.
 (Haken am Ende: Er hat gewartet.)
@@ -78,7 +78,7 @@ KAPITEL 9: Er wartet | treppenhaus etage=22 | Du, Mara, Mann im Mantel | Nacht |
 (Haken am Ende: Er kommt zurück.)
 
 KAPITEL 10: Dazwischen | treppenhaus etage=22 | Du, Mara, Nox, Mann im Mantel | Nacht | Anzeige: Tag 2 · 23:58 · HANDY 73 % · NETZ 0/4 · FUNK 100 %
-* Treppe: eine kleine, schwach blau leuchtende Gestalt kommt herunter – Kleine Schritte kommen die Treppe herunter. Schwach blau leuchtend.
+* Treppe: eine kleine, schwach grün leuchtende Gestalt kommt herunter – Kleine Schritte kommen die Treppe herunter. Schwach grün leuchtend.
 * Treppenhaus: Nox stellt sich zwischen dich und den Mann – Nox stellt sich zwischen dich und den Mann.
 * Nahaufnahme: Nox, zitternd, aber entschlossen – Er zittert. Er leuchtet. Aber er geht keinen Schritt zurück.
 * Titelkarte: oben „Folge 9: Auf dem Dach“, groß „Fortsetzung folgt“ – (ohne Text, 3,5 s)
@@ -101,6 +101,7 @@ NEU ZU BAUEN:
 - Infokarten: Herz mit „langsamer“, still stehender Mensch
 - Icon: Herz mit Pulslinie
 
+
 DAUER (geschätzt ohne Stimme, berechnet mit `node der-alien/dauer.mjs der-alien/storylines/folge-08.md`):
 
 | Abschnitt | Einstellungen | Dauer |
@@ -109,7 +110,7 @@ DAUER (geschätzt ohne Stimme, berechnet mit `node der-alien/dauer.mjs der-alien
 | Was bisher geschah | 4 | 22.6 s |
 | Kapitel 2: Mitternacht | 5 | 23.6 s |
 | Kapitel 3: Stufe für Stufe | 5 | 21.6 s |
-| Kapitel 4: Guten Abend | 5 | 19.0 s |
+| Kapitel 4: Guten Abend | 5 | 18.9 s |
 | Kapitel 5: Erstarrt | 4 | 23.7 s |
 | Kapitel 6: Lauf | 4 | 20.1 s |
 | Kapitel 7: Das tun sie immer | 5 | 23.0 s |
@@ -123,7 +124,7 @@ DAUER (geschätzt ohne Stimme, berechnet mit `node der-alien/dauer.mjs der-alien
 |---|---|---|
 | 1/6 | Kapitel 1, Was bisher geschah | 47.2 s |
 | 2/6 | Kapitel 2, Kapitel 3 | 45.2 s |
-| 3/6 | Kapitel 4, Kapitel 5 | 42.7 s |
+| 3/6 | Kapitel 4, Kapitel 5 | 42.6 s |
 | 4/6 | Kapitel 6, Kapitel 7 | 43.1 s |
 | 5/6 | Kapitel 8, Kapitel 9 | 35.2 s |
 | 6/6 | Kapitel 10, Check | 31.9 s |

@@ -12,7 +12,7 @@ KAPITEL 1: Er wartet | wohnungstür, Türspion-Ansicht | Du, Nox, Mann im Mantel
 (Haken am Ende: Wer sind die Sammler?)
 
 Was bisher geschah:
-* Du bist allein zu Hause. In deinem Bad sitzt ein kleines, blaues Wesen.
+* Du bist allein zu Hause. In deinem Bad sitzt ein kleines, grünes Wesen.
 * Es heißt *Nox*. Und es spricht Deutsch.
 * Ein Mann im grauen Mantel will es zurück. Du sagst ihm, hier sei kein Tier.
 * Doch er ist nicht gegangen. Er hat vor deiner Tür *gewartet*.
@@ -30,7 +30,7 @@ KAPITEL 3: Die Kapsel | wohnung | Du, Nox | Nacht | Anzeige: Tag 2 · 00:34 · H
 * Nahaufnahme: Nox, zeigt nach oben – „Aber nur nachts. Und nur unter *freiem* Himmel.“
 * Wohnung: Blick aus dem Fenster auf den Innenhof, gegenüber eine hohe Hauswand – Deine Fenster zeigen auf den Innenhof. Gegenüber nur Hauswände. Viel zu wenig Himmel.
 * Nahaufnahme: du, denkt nach – Das Dach! Aber die Dachtür ist immer *abgeschlossen*.
-* Nahaufnahme: Nox, die Ohrlappen hängen – Nox schaut zum Fenster. „Wenn die Sonne kommt, ist es vorbei. Dann warten. Einen ganzen Tag.“
+* Nahaufnahme: Nox, die Antennen hängen – Nox schaut zum Fenster. „Wenn die Sonne kommt, ist es vorbei. Dann warten. Einen ganzen Tag.“
 (Haken am Ende: Wie kommt ihr aufs Dach?)
 
 KAPITEL 4: Sprechsteine | wohnung | Du, Nox | Nacht | Anzeige: Tag 2 · 00:58 · HANDY 30 % · NETZ 4/4 · FUNK nicht verbunden
@@ -85,7 +85,7 @@ KAPITEL 9: Fundorte | wohnung, Lichtbild | Du, Nox | Nacht | Anzeige: Tag 2 · 0
 KAPITEL 10: Ahornstraße 12 | wohnung, Lichtbild | Du, Nox | Nacht | Anzeige: Tag 2 · 03:40 · HANDY 25 % · NETZ 4/4 · FUNK nicht verbunden
 * Lichtbild wird scharf: Hausnummer 12, kaputte Laterne, Klingelschild – Das Bild wird scharf. Die Hausnummer zwölf. Die kaputte Laterne. Das Klingelschild.
 * Nahaufnahme: du, Schreck – Das ist *dein* Haus.
-* Nahaufnahme: Nox, die Ohrlappen hängen – Nox sagt nichts. Er schaut nur auf den Boden.
+* Nahaufnahme: Nox, die Antennen hängen – Nox sagt nichts. Er schaut nur auf den Boden.
 * Titelkarte: oben „Folge 3: Deine Nachbarin“, groß „Fortsetzung folgt“ – (ohne Text, 3,5 s)
 (Haken am Ende: Die Sammler waren schon einmal hier.)
 
@@ -108,6 +108,7 @@ NEU ZU BAUEN:
 - Effekt: Flimmern der Tarnung (schwach)
 - Kulissen-Erweiterung: Fassade außen am Badfenster bei Regen
 - Icon: Gecko
+
 
 DAUER (geschätzt ohne Stimme, berechnet mit `node der-alien/dauer.mjs der-alien/storylines/folge-02.md`):
 

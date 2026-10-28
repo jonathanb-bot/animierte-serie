@@ -8,7 +8,7 @@
 [wohnung hof licht=an vorhang=zu du:sitzt haelt=du:handy zoom-rein] Du bist allein zu Hause. Aber im Bad summt etwas.
 [gesicht du ort=wohnung hof licht=an misstrauisch] Deine elektrische Zahnbürste. Dabei steht sie doch in der Ladestation.
 [badezimmer zahnbuerste=weg tuerlicht fokus=300,640 zoom=1.55 zoom_bis=1.3 fokus_bis=330,760] Das Badfenster ist offen. Du hast es nach dem Duschen vergessen.
-[badezimmer nox=korb nox:neugierig haelt=nox:zahnbuerste zahnbuerste=weg tuerlicht fokus=300,1130 zoom=1.45 zoom_bis=1.75] Auf deinem Wäschekorb sitzt etwas Kleines. Dunkelblau. Mit riesigen Augen.
+[badezimmer nox=korb nox:neugierig haelt=nox:zahnbuerste zahnbuerste=weg tuerlicht fokus=300,1130 zoom=1.45 zoom_bis=1.75] Auf deinem Wäschekorb sitzt etwas Kleines. Grün. Mit riesigen, schwarzen Augen.
 [gesicht du ort=badezimmer schreck wackeln=0.7] Du schreist.
 [gesicht nox ort=badezimmer schreck haelt haelt=zahnbuerste wackeln=0.7] Es schreit auch.
 [titel oben="Folge 1" gross="Der Alien" unten="Im Badezimmer" farbe=#0f1c33 akzent=#59c7ff dauer=3]
@@ -44,7 +44,7 @@
 [tuer spalt draussen=mantel ausdruck_draussen=froh fokus=600,950 zoom=1.2 zoom_bis=1.35] Du legst die Kette vor und öffnest einen Spalt. Im Treppenhaus ist es dunkel.
 @hud handy=33/100%
 [tuer spalt draussen=mantel ausdruck_draussen=froh taschenlampe augenleuchten=blitz fokus=690,870 zoom=1.7 zoom_bis=1.85] Du leuchtest mit dem Handy. Für einen Moment blitzen seine Augen *grün* auf.
-[gesicht mantel ort=treppenhaus etage=17 froh] Bestimmt nur eine Spiegelung. „Mir ist ein kleines Tier entlaufen“, sagt er. „Blau. Es beißt.“
+[gesicht mantel ort=treppenhaus etage=17 froh] Bestimmt nur eine Spiegelung. „Mir ist ein kleines Tier entlaufen“, sagt er. „Grün. Es beißt.“
 [gesicht mantel ort=treppenhaus etage=17 neutral stumm zoom-rein] Er sieht dich lange an. Als würde er sich dein Gesicht *merken*.
 
 == Kapitel 6: Deine Entscheidung ==

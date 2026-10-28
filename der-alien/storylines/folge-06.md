@@ -37,7 +37,7 @@ KAPITEL 4: Die Straße | strasse, karte | Du, Mara, Nox | Nacht | Anzeige: Tag 2
 * Straße: Mara zeigt auf einen kleinen roten Wagen hinter der Kreuzung – Maras Auto steht hinter der Kreuzung. Ein kleiner, roter Wagen.
 * Karte: Route vom Haus über die Kreuzung zum Auto – Zweihundert Meter. Über eine einzige Kreuzung.
 * Die Tasche, ein leises Fiepen – Aus der Tasche kommt ein Fiepen. Ganz leise.
-* Nahaufnahme: Nox in der Tasche, Ohrlappen stehen – „Ich höre was“, flüstert Nox. „Ein Pfeifen. Ganz *hoch*.“
+* Nahaufnahme: Nox in der Tasche, Antennen stehen – „Ich höre was“, flüstert Nox. „Ein Pfeifen. Ganz *hoch*.“
 (Haken am Ende: Was pfeift da?)
 
 KAPITEL 5: Zu hoch | strasse, objekt | Du, Mara, Nox | Nacht | Anzeige: Tag 2 · 17:54 · HANDY 91 % · NETZ 4/4 · FUNK nicht verbunden
@@ -102,6 +102,7 @@ NEU ZU BAUEN:
 - Mann im Mantel: zweimal gleichzeitig im Bild, gehend
 - `treppenhaus`: Erdgeschoss mit Haustür
 - Icons: Ohr mit sinkender Linie, Hund
+
 
 DAUER (geschätzt ohne Stimme, berechnet mit `node der-alien/dauer.mjs der-alien/storylines/folge-06.md`):
 

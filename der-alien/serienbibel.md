@@ -4,7 +4,7 @@ Eigenständige Serie, keine Fortsetzung von „24. Stock“. Alles hier ist verb
 
 ## Grundidee
 
-Du bist abends allein zu Hause. Aus deinem Badezimmer kommt ein Geräusch. Auf deinem Wäschekorb sitzt ein kleines, dunkelblaues Alien und hält deine elektrische Zahnbürste wie eine Waffe. Du schreist, es schreit auch. Dann klingelt es an der Tür. Das Alien flüstert: „Bitte. Sag ihm nicht, dass ich hier bin.“ Vor der Tür steht ein freundlicher Mann im grauen Mantel: „Guten Abend. Sie haben etwas gefunden, das mir gehört.“ Du musst entscheiden, wem du glaubst.
+Du bist abends allein zu Hause. Aus deinem Badezimmer kommt ein Geräusch. Auf deinem Wäschekorb sitzt ein kleines, grünes Alien und hält deine elektrische Zahnbürste wie eine Waffe. Du schreist, es schreit auch. Dann klingelt es an der Tür. Das Alien flüstert: „Bitte. Sag ihm nicht, dass ich hier bin.“ Vor der Tür steht ein freundlicher Mann im grauen Mantel: „Guten Abend. Sie haben etwas gefunden, das mir gehört.“ Du musst entscheiden, wem du glaubst.
 
 **Stimmung:** unheimlich, emotional, gelegentlich lustig. Spannung entsteht aus Geheimnissen, Entdeckungen und der wachsenden Bindung zwischen dir und Nox. Kleine komische Momente entstehen, wenn Nox Alltagsgegenstände falsch versteht. Kein Blut, kein Gore, keine detaillierte Gewalt.
 
@@ -20,7 +20,7 @@ Du bist abends allein zu Hause. Aus deinem Badezimmer kommt ein Geräusch. Auf d
 
 - Erwachsenes Wesen seiner Art, ca. 60 cm groß. Er ist aus einem Gefangenenschiff der Sammler geflohen.
 - **Haftballen:** Seine Finger und Zehen haften an glatten Wänden. Damit kann er an Fassaden klettern, aber nur langsam und nicht mit schwerer Last. **Auf nassen Flächen rutscht er ab** (wie echte Geckos auf nassem Glas). Er kann nicht fliegen und nicht springen wie ein Superheld.
-- **Angstleuchten:** Wenn er große Angst hat, leuchtet seine Haut schwach hellblau. Er kann das nicht steuern. Nachts verrät es ihn.
+- **Angstleuchten:** Wenn er große Angst hat, leuchtet seine Haut hell gelbgrün. Er kann das nicht steuern. Nachts verrät es ihn.
 - **Feines Gehör:** Er hört sehr hohe Töne, die Menschen nicht mehr hören. Dazu gehört das hohe Pfeifen, das die Tarnung der Sammler von sich gibt. Er hört es nur aus wenigen Metern Entfernung.
 - **Sprache:** Er hat in der Gefangenschaft Deutsch gelernt, und zwar von **Elias**, Maras Bruder. Deshalb benutzt er Elias' Redewendungen, vor allem „Alles easy?“. Er spricht in kurzen Sätzen, die im Lauf der Staffel ein bisschen länger werden.
 - **Er kann nicht:** Gedanken lesen, kämpfen, sich unsichtbar machen oder Menschen heilen. Wenn er Angst hat, versteckt er sich oder flieht.
@@ -118,7 +118,7 @@ Ende Oktober, Sonnenuntergang ca. 17:10, Sonnenaufgang ca. 07:00.
 | Der Mann unter der Laterne flimmert kurz, als die Kapsel sich verbindet | 2 | 9 |
 | Nox zuckt zusammen, als du den Namen „Mara“ sagst | 3 | 5 |
 | Nox hört ein Pfeifen, das du nicht hörst | 6 | 7 |
-| In der Nachricht steht „das kleine blaue Wesen“, obwohl Elias ihn „Nox“ nennen würde | 7 | 8 (Mara erkennt es) |
+| In der Nachricht steht „das kleine grüne Wesen“, obwohl Elias ihn „Nox“ nennen würde | 7 | 8 (Mara erkennt es) |
 | Der Sammler sieht Mara lange an | 9 | 10 |
 
 ---
@@ -165,10 +165,10 @@ Alles spielt in deinem Wohnhaus, einem Hochhaus mit 24 Etagen in der Ahornstraß
 - **Frisur:** kurz · **Haare:** `#4a3426` · **Haut:** `#e9c3a0` · **Jacke:** Hoodie grün-petrol `#3e7a6a` · **Hose:** `#2d3340` · **Extras:** Kapuze, Handy in der Hand
 
 ### Nox – dein unerwarteter Gast
-- **Form:** einfaches, aufrechtes Oval als Körper, kein Hals. Kurze, runde Arme mit drei Fingern, kurze Beine. Zwei kleine runde Ohrlappen an den Seiten des Kopfteils: Sie stehen ab, wenn er neugierig ist, und hängen, wenn er traurig ist.
+- **Form:** so, wie man sich ein Alien vorstellt („Little Green Men“): großer, kahler Kopf, oben breit und zum Kinn schmal, kleiner birnenförmiger Körper mit dünnem Hals, lange dünne Arme mit drei Fingern, kurze dünne Beine. Zwei Antennen mit leuchtenden Kugeln oben auf dem Kopf zeigen die Stimmung: Sie stehen hoch, wenn er neugierig ist, und hängen zur Seite, wenn er traurig ist.
 - **Größe:** ca. 60 cm, also etwa ein Drittel von dir
-- **Farben:** Körper dunkelblau `#22356f` · Bauch und Gesicht etwas heller `#304c96` · Haftballen an Fingern und Zehen `#5a7fd0` · Angstleuchten als weicher Schein `#8fdcff`
-- **Augen:** zwei große, helle Ovale `#eaf6ff` mit runden dunklen Pupillen `#0e1a33` und je einem Glanzpunkt. Die Augen tragen fast die ganze Mimik.
+- **Farben:** Haut grün `#78c850` · Bauch heller `#a7dd80` · Haftballen an Fingern und Zehen `#c9f0a0` · Antennenkugeln und Angstleuchten gelbgrün `#e6ff8c`
+- **Augen:** zwei große, schwarze Mandelaugen `#070b08`, schräg gestellt, mit weißen Lichtpunkten. Über die Lider und die Lichtpunkte tragen sie fast die ganze Mimik. Dazu zwei kleine Nasenlöcher und ein kleiner Mund.
 - **Bewegung:** tapsige kleine Schritte, bei Schreck ein Sprung rückwärts, beim Klettern langsam und „klebend“
 - **Geräusch:** leises „Prrt“ bei Neugier, hohes Fiepen bei Angst, kleine Schritte „tapp-tapp“
 - **Stimme:** hell, sanft, kurze Sätze
@@ -197,7 +197,7 @@ Alles spielt in deinem Wohnhaus, einem Hochhaus mit 24 Etagen in der Ahornstraß
 - **Im Bild:** nur kurz, beim Flackern der Tarnung, als Silhouette und im Gegenlicht. Nie bedrohlich nah und nie in Gewaltszenen.
 
 ### Nox' Leute
-- Nur als Silhouetten im Lichtkegel ihres Schiffs, ähnlich wie Nox, aber etwas größer und heller blau `#3b5bb0`. Sie sprechen nicht.
+- Nur als Silhouetten im Lichtkegel ihres Schiffs, ähnlich wie Nox, aber etwas größer und heller grün `#9ad77a`. Sie sprechen nicht.
 
 ---
 
@@ -211,7 +211,7 @@ Alles spielt in deinem Wohnhaus, einem Hochhaus mit 24 Etagen in der Ahornstraß
 | 4 | Das Versprechen | Warum deine eigene Stimme auf Aufnahmen fremd klingt (Knochenleitung) | Elias' Stimme: „Glaub ihm kein Wort. Auch dann nicht, wenn er aussieht wie ich.“ |
 | 5 | Was Nox gestohlen hat | Super-Recognizer: Etwa 1–2 % der Menschen erkennen Gesichter außergewöhnlich gut | Im Suchverzeichnis der Verfolger erscheint dein Gesicht. |
 | 6 | Raus aus dem Haus | Hörgrenze: Menschen hören bis ca. 20.000 Hz, mit dem Alter weniger | Du drehst dich um: Derselbe Mann steht auch hinter euch. |
-| 7 | Das falsche Gesicht | Warum Katzenaugen leuchten (Tapetum lucidum), und warum Menschenaugen das nicht tun | Nachricht von Elias' Handy: „Bring ihnen das kleine blaue Wesen. Dann lassen sie mich gehen.“ |
+| 7 | Das falsche Gesicht | Warum Katzenaugen leuchten (Tapetum lucidum), und warum Menschenaugen das nicht tun | Nachricht von Elias' Handy: „Bring ihnen das kleine grüne Wesen. Dann lassen sie mich gehen.“ |
 | 8 | Du oder er | Schreckstarre: Bei Gefahr erstarren Menschen oft zuerst, der Puls wird langsamer | Kleine Schritte kommen zurück. Nox stellt sich zwischen dich und den Mann. |
 | 9 | Auf dem Dach | Satellitensignale brauchen freie Sicht zum Himmel (GPS-Satelliten in ca. 20.200 km Höhe) | Ein Schiff erscheint über dem Dach. Nox schaut hinauf: „Nicht das.“ |
 | 10 | Wieder zu Hause | Veränderungsblindheit: Im Tür-Experiment bemerkte etwa die Hälfte nicht, dass der Gesprächspartner ausgetauscht wurde | Nox funkt: „Mara hat ihren Bruder gefunden. Beide sind hier bei mir.“ In deiner Küche stellt „Mara“ zwei Tassen hin: „Wer war das?“ Ihre Augen leuchten im Handylicht kurz grün. |
@@ -249,7 +249,7 @@ Echte Fakten und erfundene Alien-Fähigkeiten werden immer getrennt erzählt, zu
 Stand: alles gebaut (`engine/alien.js`). Wie man die Teile im Drehbuch benutzt, steht in `der-alien/README.md`.
 
 ### Figuren
-- [x] **Nox**, eigene Figurenart: Oval-Körper, Ohrlappen, große Augen, Haftballen. Posen: steht, sitzt, duckt sich, klettert, hält etwas, zeigt. Ausdrücke: neutral, neugierig, schreck, angst, froh, traurig, stur. Dazu der Effekt Angstleuchten.
+- [x] **Nox**, eigene Figurenart: großer Kopf, schwarze Mandelaugen, Antennen, kleiner Körper, Haftballen. Posen: steht, sitzt, duckt sich, klettert, hält etwas, zeigt. Ausdrücke: neutral, neugierig, schreck, angst, froh, traurig, stur. Dazu der Effekt Angstleuchten.
 - [x] **Mara**, mit vorhandenen Bausteinen (lange Haare, Strickjacke)
 - [x] **Elias**, mit vorhandenen Bausteinen (auch als bläuliches Lichtbild)
 - [x] **Mann im Mantel**: neues Kleidungsteil „Mantel“ (knielang) und Schal. Mehrfach gleichzeitig im Bild darstellbar.

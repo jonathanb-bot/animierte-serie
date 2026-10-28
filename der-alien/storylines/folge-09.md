@@ -83,7 +83,7 @@ KAPITEL 9: Gesendet | dach | Du, Mara, Nox, Mann im Mantel | Nacht | Anzeige: Ta
 KAPITEL 10: Nicht das | dach, skyline | Du, Mara, Nox, Mann im Mantel | Nacht | Anzeige: Tag 3 · 00:14 · HANDY 71 % · NETZ 0/4 · FUNK 100 %
 * Dach: Über euch wird es dunkler, ein tiefes Brummen – Über euch wird es dunkler. Dunkler als die Nacht. Ein tiefes Brummen.
 * Dach: Ein langer, dunkler Keil mit grünen Lichtschlitzen schiebt sich über das Dach – Ein Schiff schiebt sich über das Dach. Lang. Dunkel. Mit grünen Lichtern.
-* Nahaufnahme: Nox, schaut hinauf, die Ohrlappen hängen – Nox schaut hinauf. Und flüstert: „Nicht *das*.“
+* Nahaufnahme: Nox, schaut hinauf, die Antennen hängen – Nox schaut hinauf. Und flüstert: „Nicht *das*.“
 * Titelkarte: oben „Folge 10: Wieder zu Hause“, groß „Fortsetzung folgt“ – (ohne Text, 3,5 s)
 (Haken am Ende: Die Sammler sind zuerst da.)
 
@@ -105,6 +105,7 @@ NEU ZU BAUEN:
 - Kapsel dunkel (nach dem Senden)
 - Infokarten: Satellit mit 20.200 km, Haus blockiert das Signal, Handy mit Kartennadel
 - Icons: Satellit, Kartennadel
+
 
 DAUER (geschätzt ohne Stimme, berechnet mit `node der-alien/dauer.mjs der-alien/storylines/folge-09.md`):
 

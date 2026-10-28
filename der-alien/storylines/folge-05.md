@@ -69,7 +69,7 @@ KAPITEL 8: Hier | wohnung | Du, Mara, Nox | Tag | Anzeige: Tag 2 · 14:31 · HAN
 * Lichtbild: Countdown 3, 2, 1, dann erlischt es – Drei. Zwei. Eins. Das Licht erlischt.
 * Nox lässt die Kapsel los, sein Leuchten wird schwächer – Nox lässt die Kapsel los. Sein Leuchten wird schwächer.
 * Nahaufnahme: Mara – „Nox. Was ist so schlimm an zehn Sekunden?“
-* Nahaufnahme: Nox, Ohrlappen hängen – „Wenn die Kapsel hört, hören *sie* auch. Jetzt wissen sie: Die Kapsel ist hier.“
+* Nahaufnahme: Nox, Antennen hängen – „Wenn die Kapsel hört, hören *sie* auch. Jetzt wissen sie: Die Kapsel ist hier.“
 * Nahaufnahme: du, Schreck – Dir wird schlecht. Das war *deine* Idee.
 (Haken am Ende: Du hast sie verraten.)
 
@@ -106,6 +106,7 @@ NEU ZU BAUEN:
 - `wohnung`: Maras Küchenfenster mit Kräutertöpfen (Basilikum, Minze, Thymian)
 - Lichtbild: Gesichterraster mit Countdown, einzelne Gesichter (Nox, Elias, du), Markierung
 - Icons: Gesicht mit Raster, Überwachungskamera
+
 
 DAUER (geschätzt ohne Stimme, berechnet mit `node der-alien/dauer.mjs der-alien/storylines/folge-05.md`):
 

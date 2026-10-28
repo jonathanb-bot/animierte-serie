@@ -28,7 +28,7 @@ KAPITEL 3: Das sagt Elias immer | wohnung | Du, Mara, Nox | Nacht | Anzeige: Tag
 * Nox kriecht hinter dem Sofa hervor und setzt sich vor Mara – Nox kriecht hinter dem Sofa hervor. Ganz langsam. Und setzt sich vor Mara.
 * Nahaufnahme: Nox, legt den Kopf schief – Er legt den Kopf schief. „Alles easy?“
 * Nahaufnahme: Mara, Schreck – Mara starrt ihn an. „Das sagt *Elias* immer. Genau so.“
-* Nahaufnahme: Nox, die Ohrlappen sinken – Nox' Ohrlappen sinken nach unten. Er sagt nichts.
+* Nahaufnahme: Nox, die Antennen sinken – Nox' Antennen sinken nach unten. Er sagt nichts.
 * Nahaufnahme: du – „Nox“, sagst du leise. „Woher kennst du diesen Satz?“
 (Haken am Ende: Woher kennt Nox Elias' Satz?)
 
@@ -45,7 +45,7 @@ KAPITEL 5: Die Dachtür | wohnung, hochhaus | Du, Mara, Nox | Nacht | Anzeige: T
 * Mara hält dich am Arm fest – Mara hält dich fest. „Nicht. Er wartet oben. An der Dachtür.“
 * Nahaufnahme: Mara, besorgt – „Er hat es mir selbst gesagt. Er weiß, dass Nox zum Himmel will.“
 * Hochhaus-Querschnitt: ganz oben vor der Dachtür eine Figur im Mantel – Oben, vor der Dachtür, steht ein Mann im Mantel. Und wartet.
-* Nahaufnahme: Nox, die Ohrlappen hängen – Nox' Ohrlappen hängen. „Dann morgen Nacht“, flüstert er.
+* Nahaufnahme: Nox, die Antennen hängen – Nox' Antennen hängen. „Dann morgen Nacht“, flüstert er.
 (Haken am Ende: Ihr müsst einen ganzen Tag überstehen.)
 
 KAPITEL 6: Ein ganzer Tag | wohnung | Du, Mara, Nox | Nacht | Anzeige: Tag 2 · 06:10 · HANDY 17 % → lädt · NETZ 4/4 · FUNK nicht verbunden
@@ -104,6 +104,7 @@ NEU ZU BAUEN:
 - Anzeige: HANDY „lädt“ (Blitz-Symbol)
 - Icons: Mikrofon, Kopf mit Schallweg
 
+
 DAUER (geschätzt ohne Stimme, berechnet mit `node der-alien/dauer.mjs der-alien/storylines/folge-04.md`):
 
 | Abschnitt | Einstellungen | Dauer |
@@ -111,7 +112,7 @@ DAUER (geschätzt ohne Stimme, berechnet mit `node der-alien/dauer.mjs der-alien
 | Kapitel 1: Geständnis | 5 | 25.8 s |
 | Was bisher geschah | 4 | 21.9 s |
 | Kapitel 2: Elias | 5 | 29.8 s |
-| Kapitel 3: Das sagt Elias immer | 5 | 22.9 s |
+| Kapitel 3: Das sagt Elias immer | 5 | 22.8 s |
 | Kapitel 4: Die Liste | 5 | 24.3 s |
 | Kapitel 5: Die Dachtür | 5 | 26.2 s |
 | Kapitel 6: Ein ganzer Tag | 5 | 25.9 s |
