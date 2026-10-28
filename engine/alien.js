@@ -718,6 +718,8 @@
     const fern = (namen, xs, y, sk) => String(namen).split(",").forEach((nm, i) => { const f = A.fig(nm); A.figur(xs[i] ?? 540, y, sk, f, { t: t + i, ausdruck: s.ausdruck_fern || "froh", leuchten: A.augenWert(s, t), pose: s.pose_fern, spricht: s._spricht && s.sprecher === nm, seed: 9 + i }); });
     if (s.gegenueber) fern(s.gegenueber, [s.gx ?? 230], 1060, 0.42);
     if (s.zebra) fern(s.zebra, [540], 1360, 0.56);
+    // Nox auf dem Dach des geparkten Autos
+    if (s.nox_auto) A.figur(950, 1104, 0.42, A.fig("nox"), { t, ausdruck: s.ausdruck_nox || "angst", pose: s.pose_nox || "springt", leuchten: s.leuchten === true ? 1 : s.leuchten || 0 });
     if (s.alarm) { const an = Math.sin(t * 9) > 0; circle(820, 1150, 16, an ? "#ffb347" : "#5a4020"); if (an) A.licht(820, 1150, 260, "#ffb347", 1.2); A.laermWellen(950, 1150, t, 0.9); }
     if (s.taschenlampe) { const tx = s.zebra ? 540 : s.gx ?? 230, ty = s.zebra ? 1360 - 500 * 0.56 : 1060 - 500 * 0.42; ctx.save(); ctx.globalCompositeOperation = "screen"; ctx.fillStyle = lgrad(150, 1900, tx, ty, [[0, "rgba(255,248,220,0.05)"], [1, "rgba(255,248,220,0.3)"]]); poly([[60, 1950], [260, 1950], [tx + 50, ty], [tx - 50, ty]]); ctx.fill(); ctx.restore(); A.licht(tx, ty, 260, "#fff4d0", 1.2); }
     A.figurenZeigen(s, t, 1880, 0.72);

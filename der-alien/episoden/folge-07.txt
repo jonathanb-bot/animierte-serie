@@ -1,0 +1,99 @@
+# Folge 7: Das falsche Gesicht
+@serie Der Alien
+@mund zitate
+@look 0
+@zeit nacht
+
+== Kapitel 1: Alarm ==
+@hud tag=2 zeit=18:00 handy=88/100% netz=0/4 funk=nicht_verbunden
+[kreuzung ampel=gruen zebra=mantel ausdruck_fern=froh mantel:froh du:angst mara:angst haelt=mara:sporttasche_leuchtet pos=120,460,760 fokus=540,1150 zoom-raus] Zwei Männer. Ein Gesicht. Und ihr steht genau dazwischen.
+[kreuzung auto nox_auto pose_nox=springt ausdruck_nox=wuetend fokus=900,1150 zoom=1.6 zoom_bis=1.75] Da springt Nox aus der Tasche. Direkt auf ein parkendes Auto.
+[kreuzung auto alarm nox_auto pose_nox=fuchtelt ausdruck_nox=froh fokus=880,1150 zoom=1.35 wackeln=0.3] Die Alarmanlage heult los. Laut. Blinkend.
+[kreuzung ampel=gruen auto alarm fenster_an nox_auto pose_nox=fuchtelt ausdruck_nox=froh fokus=540,800 zoom=1.1 zoom_bis=1.2] Überall gehen Fenster auf. Licht. Stimmen. „Was ist denn da los?“
+[kreuzung auto alarm fenster_an gegenueber=mantel gx=230 ausdruck_fern=wuetend fokus=300,950 zoom=1.5] Die beiden Männer treten zurück in den Schatten. Sie mögen keine *Zuschauer*.
+[titel oben="Folge 7" gross="Der Alien" unten="Das falsche Gesicht" farbe=#0f1c33 akzent=#59c7ff dauer=3]
+
+== Was bisher geschah ==
+[gesicht nox ort=wohnung hof licht=an angst haelt haelt=kapsel hud=false] Nox ist ein Alien auf der Flucht. Die Sammler wollen ihn und seine Kapsel.
+[treppe erdgeschoss du:geht mara:geht haelt=mara:sporttasche pos=420,680 hud=false] Du, Nox und deine Nachbarin Mara wolltet mit dem Auto aus der Stadt fliehen.
+[kreuzung ampel=rot gegenueber=mantel gx=230 fokus=300,900 zoom=1.6 hud=false] An der Kreuzung wartete der Mann im Mantel.
+[kreuzung eingang mantel:froh pos=540 fokus=540,1420 zoom=1.25 hud=false] Doch als du dich umgedreht hast, stand *derselbe* Mann auch hinter euch.
+
+== Kapitel 2: Die Seitentür ==
+@hud zeit=18:01
+[kreuzung ampel=gruen garage auto alarm du:rennt mara:rennt haelt=mara:sporttasche_leuchtet pos=520,760 fokus=700,1250 zoom=1.2] Mara schnappt sich Nox. Ihr rennt zur Garageneinfahrt.
+[kreuzung garage du:zeigt mara haelt=du:schluessel pos=880,700 fokus=880,1250 zoom=1.6] Dein Hausschlüssel passt in die Seitentür. Ihr seid drin.
+[treppe keller du mara haelt=mara:sporttasche pos=420,680 zoom-rein] Im Keller ist es dunkel. Nur das Notlicht brennt.
+[handy ort=treppenhaus etage=0 netz=0 netz_bis=4 akku=88 uhrzeit=18:01] Dein Handy: wieder voller Empfang.
+@hud netz=4/4
+[gesicht du ort=treppenhaus etage=0 entschlossen zoom-rein] Immer wenn der Mann nah war, war dein Empfang weg. *Jedes* Mal.
+
+== Kapitel 3: Geliehen ==
+@hud zeit=18:30 handy=86/100%
+[hochhaus etage=10 bis_etage=17 treppe=du@12,mara@12,nox@12 unsere=17] Siebzehn Stockwerke. Keiner sagt ein Wort.
+[wohnung hof kraeuter vorhang=auf sofa=#7a4f45 wand=#cfc2ad du:sitzt mara:sitzt nox:sitzt pos=300,760,520 fokus=540,1300 zoom=1.2] Ihr versteckt euch bei Mara. Deine Wohnung kennen sie ja schon.
+[wohnung hof kraeuter vorhang=auf sofa=#7a4f45 wand=#cfc2ad mara:sitzt nox:umarmt nox:angst leuchten=0.3 pos=600,470 fokus=540,1400 zoom=1.6] Nox zittert noch. Mara hält ihn fest. Ohne Angst diesmal.
+[gesicht mara ort=wohnung hof kraeuter vorhang=auf sofa=#7a4f45 wand=#cfc2ad misstrauisch sagt=mara] „Zwei gleiche Männer“, sagt sie leise. „Zwillinge?“
+[gesicht nox ort=wohnung hof kraeuter vorhang=auf sofa=#7a4f45 wand=#cfc2ad entschlossen sagt=nox] „Keine Zwillinge“, sagt Nox. „Das Gesicht ist *geliehen*.“
+
+== Kapitel 4: Nur außen ==
+@hud zeit=19:05 handy=85/100%
+[lichtbild ort=wohnung hof kraeuter vorhang=auf sofa=#7a4f45 wand=#cfc2ad inhalt=raum ruhig fokus=540,900] Nox zeigt eine gespeicherte Aufnahme. Ein Raum auf dem Schiff.
+[lichtbild ort=wohnung hof kraeuter vorhang=auf sofa=#7a4f45 wand=#cfc2ad inhalt=silhouette ueberlagern zoom-rein fokus=540,880] Darin steht eine lange, dünne Gestalt. Unscharf. Dann legt sich ein Gesicht darüber. Der Mann im Mantel.
+[gesicht nox ort=wohnung hof kraeuter vorhang=auf sofa=#7a4f45 wand=#cfc2ad entschlossen sagt=nox] „Was sie lange anschauen, können sie werden“, sagt Nox. „Aussehen. Stimme.“
+[gesicht mara ort=wohnung hof kraeuter vorhang=auf sofa=#7a4f45 wand=#cfc2ad angst sagt=mara] „Und dann wissen sie alles über den Menschen?“
+[gesicht nox ort=wohnung hof kraeuter vorhang=auf sofa=#7a4f45 wand=#cfc2ad besorgt sagt=nox] „Nur außen. Nicht innen. Keine *Erinnerungen*.“
+
+== Kapitel 5: Grüne Augen ==
+@hud zeit=19:30 handy=84/100%
+[gesicht du ort=wohnung hof kraeuter vorhang=auf sofa=#7a4f45 wand=#cfc2ad denkt sagt=du] Dann fällt es dir ein. Das Handylicht. Seine Augen. „Sie haben *grün* geleuchtet.“
+[gesicht nox ort=wohnung hof kraeuter vorhang=auf sofa=#7a4f45 wand=#cfc2ad entschlossen sagt=nox] „Die Augen kann die Tarnung nicht“, sagt Nox. „Im Licht leuchten sie.“
+[objekt objekte="katzenauge:Tapetum lucidum" gross="Echter Fakt" farbe=#1e2f45] Echter Fakt: Katzen haben hinter der Netzhaut eine spiegelnde Schicht. Das *Tapetum lucidum*.
+[objekt objekte="lichtweg:Licht kommt zurück" gross="Echter Fakt" farbe=#1e2f45] Sie wirft Licht zurück. Deshalb leuchten Katzenaugen, wenn man sie anleuchtet.
+[objekt objekte="menschenauge:Kein Leuchten" gross="Echter Fakt" farbe=#1e2f45] Menschen haben diese Schicht nicht. Ein Menschenauge leuchtet nie *grün*.
+
+== Kapitel 6: Die Liste ==
+@hud zeit=19:45
+[wohnung hof kraeuter vorhang=auf sofa=#7a4f45 wand=#cfc2ad mara:sitzt mara:misstrauisch objekt=zettel objekt_x=720 objekt_y=1600 objekt_s=0.4 pos=480 fokus=580,1420 zoom=1.45] Mara schreibt eine Liste. Woran erkennt man einen Sammler?
+[objekt objekte="katzenauge:Grünes Leuchten" gross="Erstens" farbe=#1e2f45] Erstens: Im Lampenlicht leuchten ihre Augen grün.
+[objekt objekte="handy_netz0:Kein Empfang" gross="Zweitens" farbe=#1e2f45] Zweitens: In ihrer Nähe ist der Handyempfang weg.
+[objekt objekte="gehirn:Keine Erinnerungen" gross="Drittens" farbe=#1e2f45] Drittens: Sie wissen nichts, was nur *ihr* wisst.
+[gesicht nox ort=wohnung hof kraeuter vorhang=auf sofa=#7a4f45 wand=#cfc2ad froh sagt=nox] „Und viertens“, sagt Nox stolz. „Ich höre sie pfeifen.“
+
+== Kapitel 7: Weit ==
+@hud zeit=20:30 handy=82/100%
+[wohnung hof kraeuter vorhang=auf sofa=#7a4f45 wand=#cfc2ad nox:froh nox:haelt haelt=nox:walkie objekt=sporttasche objekt_x=760 objekt_y=1560 objekt_s=0.5 pos=480 fokus=560,1350 zoom=1.7 sagt=nox] Nox holt die gelben Walkie-Talkies aus der Tasche. „Sprechsteine. Jetzt besser machen.“
+[gesicht nox ort=wohnung hof kraeuter vorhang=auf sofa=#7a4f45 wand=#cfc2ad entschlossen haelt haelt=kapsel] Er löst zwei winzige Splitter aus der Kapsel. Und drückt sie in die Geräte.
+@hud funk=100/100%
+[objekt objekte="walkie_blau:Blauer Punkt" gross="Sprechsteine" farbe=#1e2f45] Auf beiden Geräten glimmt jetzt ein winziger, blauer Punkt.
+[gesicht nox ort=wohnung hof kraeuter vorhang=auf sofa=#7a4f45 wand=#cfc2ad froh haelt haelt=walkie_blau sagt=nox] „Jetzt reichen sie *weit*“, sagt Nox. „Bis zu meinen Leuten.“
+[gesicht du ort=wohnung hof kraeuter vorhang=auf sofa=#7a4f45 wand=#cfc2ad froh zoom-rein] Aus einem Kinderspielzeug ist ein Funkgerät für Außerirdische geworden.
+
+== Kapitel 8: Das Dach ==
+@hud zeit=21:30 handy=80/100%
+[hochhaus etage=17 bis_etage=24 unsere=17] Ihr braucht freien Himmel. Raus aus der Stadt geht nicht mehr. Bleibt nur *euer* Dach.
+[gesicht du ort=wohnung hof kraeuter vorhang=auf sofa=#7a4f45 wand=#cfc2ad entschlossen] Sieben Stockwerke nach oben. Um Mitternacht, wenn alles schläft.
+[wohnung hof kraeuter vorhang=auf sofa=#7a4f45 wand=#cfc2ad mara:haelt haelt=mara:schluessel,nox:kapsel nox:entschlossen pos=640,380 fokus=520,1350 zoom=1.5] Mara hat den Schlüssel. Nox die Kapsel. Und du das Handy, um Augen zu prüfen.
+[gesicht nox ort=wohnung hof kraeuter vorhang=auf sofa=#7a4f45 wand=#cfc2ad entschlossen sagt=nox] „Sechzig Sekunden“, sagt Nox. „Dann kommen meine Leute.“
+[gesicht mara ort=wohnung hof kraeuter vorhang=auf sofa=#7a4f45 wand=#cfc2ad besorgt sagt=mara] „Und die Sammler?“, fragt Mara. Keiner antwortet.
+
+== Kapitel 9: Eine Nachricht ==
+@hud zeit=22:25 handy=78/100%
+[wohnung hof kraeuter vorhang=auf sofa=#7a4f45 wand=#cfc2ad licht=aus du:sitzt mara:sitzt nox:sitzt nox:muede pos=300,760,520 zoom-raus] Noch zwei Stunden. Ihr wartet im Dunkeln.
+[wohnung hof kraeuter vorhang=auf sofa=#7a4f45 wand=#cfc2ad licht=aus objekt=handy_licht objekt_x=540 objekt_y=1560 objekt_s=0.4 fokus=540,1500 zoom=2.2 wackeln=0.5] Da vibriert Maras Handy. Eine Nachricht.
+[gesicht mara ort=wohnung hof kraeuter vorhang=auf sofa=#7a4f45 wand=#cfc2ad schreck] Mara schaut darauf. Und erstarrt.
+[gesicht mara ort=wohnung hof kraeuter vorhang=auf sofa=#7a4f45 wand=#cfc2ad traurig sagt=mara] „Von Elias“, flüstert sie. „Von *seinem* Handy.“
+[gesicht du ort=wohnung hof kraeuter vorhang=auf sofa=#7a4f45 wand=#cfc2ad misstrauisch] Nach vier Monaten? Ausgerechnet *jetzt*?
+
+== Kapitel 10: Das kleine grüne Wesen ==
+@hud zeit=22:30
+[handy ort=wohnung hof kraeuter vorhang=auf sofa=#7a4f45 wand=#cfc2ad wer=mara nachricht="Bring ihnen das kleine grüne Wesen. Dann lassen sie mich gehen." von=Elias akku=61 uhrzeit=22:30 sagt=elias] „Bring ihnen das kleine grüne Wesen. Dann lassen sie mich gehen.“
+[gesicht mara ort=wohnung hof kraeuter vorhang=auf sofa=#7a4f45 wand=#cfc2ad besorgt blick=1,0.3 zoom-rein] Mara schaut langsam zu Nox.
+[gesicht nox ort=wohnung hof kraeuter vorhang=auf sofa=#7a4f45 wand=#cfc2ad traurig blick=-1,0] Nox schaut zurück. Und sagt kein Wort.
+[titel oben="Folge 8: Du oder er" gross="Fortsetzung folgt" farbe=#0f1c33 akzent=#59c7ff dauer=3.5]
+
+== Check ==
+@hud aus
+[objekt objekte="katzenauge:Katzenauge" gross="Check" farbe=#1e2f45] Check! Warum leuchten Katzenaugen, wenn man sie anleuchtet?
+[objekt objekte="katzenauge:Spiegelschicht|menschenauge:Fehlt uns" gross="Die Antwort" farbe=#1e3a2a] Hinter ihrer Netzhaut liegt eine spiegelnde Schicht, das Tapetum lucidum. Menschen haben sie *nicht*.
+[titel gross="Was hättest du|gemacht?" groesse=120 unten="Schreib es in die Kommentare" farbe=#0f1c33 dauer=3.5]

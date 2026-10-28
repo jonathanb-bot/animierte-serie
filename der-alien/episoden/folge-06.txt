@@ -1,0 +1,95 @@
+# Folge 6: Raus aus dem Haus
+@serie Der Alien
+@mund zitate
+@look 0
+@zeit abend
+
+== Kapitel 1: Raus hier ==
+@hud tag=2 zeit=17:40 handy=92/100% netz=4/4 funk=nicht_verbunden
+[lichtbild ort=wohnung hof inhalt=gesichter zeige=nox@8,elias@15,du@27 neu=du fokus=540,1000 zoom=1.3 zoom_bis=1.45] Dein Gesicht steht auf ihrer Liste. Und sie wissen, wo die Kapsel ist.
+[gesicht mara ort=wohnung hof entschlossen sagt=mara] „Wir müssen hier raus“, sagt Mara. „Mit meinem Auto. Raus aus der Stadt.“
+[gesicht nox ort=wohnung hof entschlossen sagt=nox] „Freies Feld“, sagt Nox. „Viel Himmel. Gut für Notruf.“
+[gesicht du ort=wohnung hof denkt] Bis zum Auto sind es nur zweihundert Meter. Über eine Kreuzung.
+[titel oben="Folge 6" gross="Der Alien" unten="Raus aus dem Haus" farbe=#0f1c33 akzent=#59c7ff dauer=3]
+
+== Was bisher geschah ==
+[gesicht nox ort=wohnung hof entschlossen haelt haelt=kapsel hud=false] Nox ist mit einer Kapsel voller Beweise vor den Sammlern geflohen.
+[hochhaus zeit=nacht etage=24 treppe=mantel@24 unsere=17 zoom-rein hud=false] Mit ihr will er Hilfe rufen. Doch an eurer Dachtür wartet ein Mann im Mantel.
+[lichtbild ort=wohnung hof inhalt=countdown countdown=10 countdown_bis=8 ruhig fokus=540,900 hud=false] Du hast darauf bestanden, ins Netz der Sammler zu schauen.
+[lichtbild ort=wohnung hof inhalt=gesichter zeige=nox@8,elias@15,du@27 neu=du fokus=540,1000 zoom=1.3 hud=false] Jetzt wissen sie, wo die Kapsel ist. Und im Suchverzeichnis: *dein* Gesicht.
+
+== Kapitel 2: Die Tasche ==
+@hud zeit=17:42
+[wohnung hof vorhang=zu licht=an mara:haelt haelt=mara:sporttasche nox:neugierig pos=640,330 fokus=520,1300 zoom=1.45 sagt=mara] Mara hält eine große Sporttasche auf. „Rein da.“
+[gesicht nox ort=wohnung hof licht=an misstrauisch blick=0,0.8 sagt=nox] Nox schaut hinein. „Gefängnis?“ „Nur bis zum Auto“, sagst du.
+[gesicht du ort=wohnung hof licht=an entschlossen blick=0,0.3] Du ziehst deine Kapuze tief ins Gesicht. Hoffentlich reicht das.
+[objekt objekte="sporttasche:Nur die Augen" gross="Nox" farbe=#1e2f45] Nox klettert hinein. Mit beiden Sprechsteinen im Arm. Nur seine Augen schauen noch heraus.
+[gesicht mara ort=wohnung hof licht=an entschlossen sagt=mara] „Und wenn du Angst kriegst“, sagt Mara, „dann leuchte bitte *nicht*.“
+
+== Kapitel 3: Siebzehn Stockwerke ==
+@hud zeit=17:45 handy=91/100%
+[treppe etage=17 du:geht mara:geht haelt=mara:sporttasche pos=420,680 zoom-rein] Siebzehn Stockwerke nach unten. Den Aufzug nehmt ihr nicht. Zu laut.
+[hochhaus etage=12 treppe=du@10,mara@10 unsere=17] Zehnter Stock. Alles still. Dein Handy zeigt vollen Empfang.
+[gesicht du ort=treppenhaus etage=10 misstrauisch] Du hast einen Verdacht. Immer wenn der Mann da war, war dein Empfang *weg*.
+[treppe etage=10 mara:geht haelt=mara:sporttasche pos=540 fokus=600,1400 zoom=1.7 wackeln=0.4 sagt=nox] Die Tasche zuckt. Nox flüstert: „Schneller.“
+[treppe erdgeschoss du:geht mara:geht haelt=mara:sporttasche pos=420,680 zoom-rein] Erdgeschoss. Die Haustür. Draußen ist es schon dunkel.
+
+== Kapitel 4: Die Straße ==
+@zeit nacht
+@hud zeit=17:52
+[kreuzung du mara haelt=mara:sporttasche pos=300,560 zoom-raus] Draußen ist es kalt. Die Laternen gehen gerade an.
+[kreuzung auto mara:zeigt haelt=mara:sporttasche pos=420 fokus=700,1220 zoom=1.1] Maras Auto steht hinter der Kreuzung. Ein kleiner, roter Wagen.
+[objekt objekte="handy_karte:200 Meter" gross="Der Weg" farbe=#1e2f45] Zweihundert Meter. Über eine einzige Kreuzung.
+[kreuzung mara haelt=mara:sporttasche pos=540 fokus=600,1640 zoom=2.2] Aus der Tasche kommt ein Fiepen. Ganz leise.
+[gesicht nox ort=kreuzung angst sagt=nox] „Ich höre was“, flüstert Nox. „Ein Pfeifen. Ganz *hoch*.“
+
+== Kapitel 5: Zu hoch ==
+@hud zeit=17:54
+[gesicht du ort=kreuzung lauscht] Du lauschst. Du hörst nur Autos. Und deinen eigenen Atem.
+[objekt objekte="ohr:Bis 20.000 Hertz" gross="Echter Fakt" farbe=#1e2f45] Echter Fakt: Junge Menschen hören Töne bis etwa *zwanzigtausend* Schwingungen pro Sekunde.
+[objekt objekte="ohrkurve:Sinkt im Alter" gross="Echter Fakt" farbe=#1e2f45] Mit dem Alter sinkt diese Grenze. Sehr hohe Töne hört man dann nicht mehr.
+[objekt objekte="hund:Bis 45.000 Hertz" gross="Echter Fakt" farbe=#1e2f45] Nox' Gehör ist erfunden. Aber Hunde zum Beispiel hören wirklich viel höhere Töne als wir.
+[gesicht nox ort=kreuzung angst leuchten=0.3 sagt=nox] „Es kommt näher“, flüstert Nox.
+
+== Kapitel 6: Die Kreuzung ==
+@hud zeit=17:56 handy=90/100%
+[kreuzung ampel=rot du mara haelt=mara:sporttasche pos=380,640 fokus=540,1150] Ihr steht an der Kreuzung. Die Ampel ist rot.
+[handy ort=kreuzung netz=4 netz_bis=0 akku=90 uhrzeit=17:56] Dein Handy: kein Empfang. Mitten in der Stadt.
+@hud netz=0/4
+[kreuzung ampel=rot gegenueber=mantel gx=230 fokus=300,900 zoom=1.6 zoom_bis=1.9] Auf der anderen Straßenseite steht ein Mann. Grauer Mantel.
+[gesicht mantel ort=kreuzung froh winkt] Er lächelt. Und hebt die Hand zum Gruß.
+[gesicht mara ort=kreuzung angst sagt=mara] Mara packt deinen Arm. „Er ist es.“
+
+== Kapitel 7: Grün ==
+@hud zeit=17:57 handy=89/100%
+[gesicht du ort=kreuzung besorgt sagt=du] „Zurück“, flüsterst du. „Ganz ruhig. Nicht rennen.“
+[kreuzung mara:angst haelt=mara:sporttasche_leuchtet pos=540 fokus=600,1640 zoom=2.2] Die Tasche fängt an, schwach zu *leuchten*. Mara drückt sie fest an sich.
+[kreuzung ampel=gruen zebra=mantel pose_fern=geht ausdruck_fern=froh fokus=540,1150 zoom=1.3 zoom_bis=1.5] Die Ampel wird grün. Der Mann geht los. Langsam. Direkt auf euch zu.
+[kreuzung ampel=gruen zebra=mantel ausdruck_fern=froh taschenlampe augenleuchten=blitz fokus=540,1050 zoom=1.7 zoom_bis=1.85] Du leuchtest mit dem Handy. Wieder blitzen seine Augen *grün* auf.
+
+== Kapitel 8: Rückwärts ==
+@hud zeit=17:58 handy=88/100%
+[kreuzung ampel=gruen zebra=mantel ausdruck_fern=froh du:angst mara:angst haelt=mara:sporttasche_leuchtet pos=300,780 zoom-raus] Ihr geht rückwärts. Schritt für Schritt. Ohne ihn aus den Augen zu lassen.
+[gesicht nox ort=kreuzung angst leuchten=0.6 sagt=nox] „Pfeifen ist laut“, wimmert Nox. „*Zwei* Pfeifen.“
+[gesicht du ort=kreuzung misstrauisch] Zwei? Da ist doch nur *ein* Mann.
+[kreuzung ampel=gruen zebra=mantel ausdruck_fern=neutral fokus=540,1150 zoom=1.45] Mitten auf dem Zebrastreifen bleibt der Mann stehen. Er folgt euch nicht mehr.
+[gesicht du ort=kreuzung misstrauisch zoom-rein] Warum bleibt er stehen? Er müsste euch doch nur *folgen*.
+
+== Kapitel 9: Hinten ==
+[gesicht mantel ort=kreuzung froh zoom-rein] Er lächelt. Als wüsste er etwas, das du nicht weißt.
+[gesicht mara ort=kreuzung angst sagt=mara] „Warum hat er aufgehört?“, flüstert Mara.
+[gesicht nox ort=kreuzung schreck leuchten=0.7 sagt=nox] Nox' Augen werden riesig. „Nicht vorne“, wimmert er. „*Hinten*.“
+[gesicht du ort=kreuzung angst blick=-1,0 zoom-rein] Du drehst dich langsam um.
+
+== Kapitel 10: Zweimal ==
+@hud zeit=17:59
+[kreuzung eingang mantel:froh pos=540 fokus=540,1420 zoom=1.25 zoom_bis=1.35] Vor eurem Hauseingang steht ein Mann. Grauer Mantel. Freundliches Lächeln.
+[kreuzung ampel=gruen zebra=mantel ausdruck_fern=froh fokus=540,1150 zoom=1.45] Du schaust zurück. Der Mann auf der Kreuzung steht noch da.
+[gesicht du ort=kreuzung schreck wackeln=0.5 zoom-rein] Es ist *derselbe* Mann. Zweimal.
+[titel oben="Folge 7: Das falsche Gesicht" gross="Fortsetzung folgt" farbe=#0f1c33 akzent=#59c7ff dauer=3.5]
+
+== Check ==
+@hud aus
+[objekt objekte="ohr:Hörgrenze" gross="Check" farbe=#1e2f45] Check! Bis zu welcher Tonhöhe hören junge Menschen?
+[objekt objekte="ohr:20.000 Hertz|hund:Viel höher" gross="Die Antwort" farbe=#1e3a2a] Bis etwa zwanzigtausend Hertz. Mit dem Alter sinkt die Grenze. Hunde hören viel *höher*.
+[titel gross="Was hättest du|gemacht?" groesse=120 unten="Schreib es in die Kommentare" farbe=#0f1c33 dauer=3.5]
