@@ -1,0 +1,437 @@
+{
+ "dauer": 196.472,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "treppenhaus",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 4.886,
+   "emotion": "erzaehlend",
+   "text": "Das Stöhnen kommt von unten. Dreiundzwanzig. Ganz nah."
+  },
+  {
+   "nr": 2,
+   "typ": "wohnung",
+   "kapitel": 1,
+   "start": 4.886,
+   "dauer": 5.318,
+   "emotion": "erzaehlend",
+   "text": "Ihr nehmt nur das Wichtigste. Wasser. Medikamente. Decken. Die *Taschenlampe*."
+  },
+  {
+   "nr": 3,
+   "typ": "treppenhaus",
+   "kapitel": 1,
+   "start": 10.204,
+   "dauer": 3.83,
+   "emotion": "erzaehlend",
+   "text": "Dann die schmale Treppe zum Dach. Mila auf Lenas Rücken."
+  },
+  {
+   "nr": 4,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 14.034,
+   "dauer": 4.718,
+   "emotion": "spannend",
+   "text": "Hinter euch: Schritte. Viele Schritte. Auf *eurer* Etage."
+  },
+  {
+   "nr": 5,
+   "typ": "titel",
+   "kapitel": 1,
+   "start": 18.752,
+   "dauer": 3.0,
+   "emotion": null,
+   "text": ""
+  },
+  {
+   "nr": 6,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 21.752,
+   "dauer": 5.006,
+   "emotion": "froh",
+   "text": "Was bisher geschah: Kai lebt. Er hat sich aufs Dach *gegenüber* gerettet."
+  },
+  {
+   "nr": 7,
+   "typ": "dach",
+   "kapitel": 2,
+   "start": 26.758,
+   "dauer": 3.158,
+   "emotion": "erzaehlend",
+   "text": "Ihr habt ein riesiges *SOS* auf euer Dach gelegt."
+  },
+  {
+   "nr": 8,
+   "typ": "treppenhaus",
+   "kapitel": 2,
+   "start": 29.916,
+   "dauer": 3.254,
+   "emotion": "erzaehlend",
+   "text": "Und mitten in der Nacht ist die Barrikade *gebrochen*."
+  },
+  {
+   "nr": 9,
+   "typ": "dach",
+   "kapitel": 3,
+   "start": 33.17,
+   "dauer": 5.606,
+   "emotion": "erzaehlend",
+   "text": "Ihr knallt die Stahltür hinter euch zu. Aber das Schloss ist *kaputt*. Kai hat es aufgebrochen."
+  },
+  {
+   "nr": 10,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 38.776,
+   "dauer": 4.214,
+   "emotion": "erzaehlend",
+   "text": "Walter schaut sich um. „Wir brauchen etwas Langes. Aus *Metall*.“"
+  },
+  {
+   "nr": 11,
+   "typ": "dach",
+   "kapitel": 3,
+   "start": 42.99,
+   "dauer": 5.534,
+   "emotion": "erzaehlend",
+   "text": "Die Leiter am Wassertank. Ihr reißt das untere Stück ab. Und verkeilt es quer vor der Tür."
+  },
+  {
+   "nr": 12,
+   "typ": "treppenhaus",
+   "kapitel": 3,
+   "start": 48.524,
+   "dauer": 3.59,
+   "emotion": "erzaehlend",
+   "text": "Sekunden später: Schläge gegen die Tür. Von *innen*."
+  },
+  {
+   "nr": 13,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 52.114,
+   "dauer": 5.054,
+   "emotion": "ernst",
+   "text": "Sie hält. Jeder Schlag bringt die Stange zum Zittern. Aber sie *hält*."
+  },
+  {
+   "nr": 14,
+   "typ": "dach",
+   "kapitel": 4,
+   "start": 57.168,
+   "dauer": 5.006,
+   "emotion": "erzaehlend",
+   "text": "Ihr sitzt auf dem Dach. Eng zusammen. Unter euch hämmern sie gegen die Tür."
+  },
+  {
+   "nr": 15,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 62.174,
+   "dauer": 3.446,
+   "emotion": "spannend",
+   "text": "Mila hält sich die Ohren zu. „Hören die *nie* auf?“"
+  },
+  {
+   "nr": 16,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 65.62,
+   "dauer": 3.494,
+   "emotion": "traurig",
+   "text": "Lena flüstert: „Nein. Aber wir auch *nicht*.“"
+  },
+  {
+   "nr": 17,
+   "typ": "skyline",
+   "kapitel": 4,
+   "start": 69.114,
+   "dauer": 5.678,
+   "emotion": "erzaehlend",
+   "text": "Über euch die Sterne. Unter euch eine Stadt, die nicht mehr *schläft*. Und nicht mehr *lebt*."
+  },
+  {
+   "nr": 18,
+   "typ": "dach",
+   "kapitel": 5,
+   "start": 74.792,
+   "dauer": 2.342,
+   "emotion": "erzaehlend",
+   "text": "Dann wird es hell. Tag zwölf."
+  },
+  {
+   "nr": 19,
+   "typ": "skyline",
+   "kapitel": 5,
+   "start": 77.134,
+   "dauer": 3.998,
+   "emotion": "erzaehlend",
+   "text": "Auf dem Dach gegenüber blitzt es. *Kai*. Er ist noch da."
+  },
+  {
+   "nr": 20,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 81.132,
+   "dauer": 4.31,
+   "emotion": "froh",
+   "text": "Er zeigt nach Osten. Immer wieder. *Kurz. Lang. Kurz*."
+  },
+  {
+   "nr": 21,
+   "typ": "objekt",
+   "kapitel": 5,
+   "start": 85.442,
+   "dauer": 4.334,
+   "emotion": "erklaerend",
+   "text": "Und dann hört ihr es. Das Knattern. Lauter als jemals zuvor."
+  },
+  {
+   "nr": 22,
+   "typ": "dach",
+   "kapitel": 6,
+   "start": 89.776,
+   "dauer": 4.358,
+   "emotion": "erzaehlend",
+   "text": "Ein Hubschrauber. Weit weg. Er fliegt die Dächer ab, eins nach dem anderen."
+  },
+  {
+   "nr": 23,
+   "typ": "gesicht",
+   "kapitel": 6,
+   "start": 94.134,
+   "dauer": 2.702,
+   "emotion": "ernst",
+   "text": "„*Jetzt*!“, ruft Walter. „Jetzt das Feuer!“"
+  },
+  {
+   "nr": 24,
+   "typ": "dach",
+   "kapitel": 6,
+   "start": 96.836,
+   "dauer": 4.91,
+   "emotion": "erzaehlend",
+   "text": "Kais Gaskocher. Ein alter Autoreifen aus dem Technikraum-Lager. Nasse Tücher darüber."
+  },
+  {
+   "nr": 25,
+   "typ": "dach",
+   "kapitel": 6,
+   "start": 101.746,
+   "dauer": 3.758,
+   "emotion": "erzaehlend",
+   "text": "Dicker, *dunkler* Rauch steigt auf. Über allen anderen Dächern."
+  },
+  {
+   "nr": 26,
+   "typ": "objekt",
+   "kapitel": 6,
+   "start": 105.504,
+   "dauer": 3.542,
+   "emotion": "erklaerend",
+   "text": "SOS. Rauch. Spiegel. Alles gleichzeitig."
+  },
+  {
+   "nr": 27,
+   "typ": "skyline",
+   "kapitel": 7,
+   "start": 109.046,
+   "dauer": 3.278,
+   "emotion": "erzaehlend",
+   "text": "Der Hubschrauber wird langsamer. Er bleibt in der Luft *stehen*."
+  },
+  {
+   "nr": 28,
+   "typ": "gesicht",
+   "kapitel": 7,
+   "start": 112.324,
+   "dauer": 4.07,
+   "emotion": "ernst",
+   "text": "Dann dreht er sich. Ganz langsam. Und kommt *auf euch zu*."
+  },
+  {
+   "nr": 29,
+   "typ": "dach",
+   "kapitel": 7,
+   "start": 116.394,
+   "dauer": 3.158,
+   "emotion": "erzaehlend",
+   "text": "Ihr springt. Ihr winkt. Mila *schreit* vor Freude."
+  },
+  {
+   "nr": 30,
+   "typ": "treppenhaus",
+   "kapitel": 8,
+   "start": 119.552,
+   "dauer": 2.846,
+   "emotion": "erzaehlend",
+   "text": "Aber der Lärm des Hubschraubers macht *sie* wahnsinnig."
+  },
+  {
+   "nr": 31,
+   "typ": "dach",
+   "kapitel": 8,
+   "start": 122.398,
+   "dauer": 4.166,
+   "emotion": "erzaehlend",
+   "text": "Die Schläge gegen die Tür werden *wilder*. Die Metallstange biegt sich."
+  },
+  {
+   "nr": 32,
+   "typ": "gesicht",
+   "kapitel": 8,
+   "start": 126.564,
+   "dauer": 4.742,
+   "emotion": "ernst",
+   "text": "Walter stemmt sich mit dem ganzen Körper gegen die Tür. „Geht! Kinder zuerst!“"
+  },
+  {
+   "nr": 33,
+   "typ": "dach",
+   "kapitel": 9,
+   "start": 131.306,
+   "dauer": 4.238,
+   "emotion": "erzaehlend",
+   "text": "Aus dem Hubschrauber wird eine Rettungswinde heruntergelassen. Ein Soldat hängt daran."
+  },
+  {
+   "nr": 34,
+   "typ": "gesicht",
+   "kapitel": 9,
+   "start": 135.544,
+   "dauer": 3.95,
+   "emotion": "ernst",
+   "text": "„Wie viele seid ihr?“ „*Vier*. Und einer auf dem Dach gegenüber!“"
+  },
+  {
+   "nr": 35,
+   "typ": "dach",
+   "kapitel": 9,
+   "start": 139.494,
+   "dauer": 2.606,
+   "emotion": "froh",
+   "text": "Erst Mila. Dann Lena. Dann du."
+  },
+  {
+   "nr": 36,
+   "typ": "gesicht",
+   "kapitel": 9,
+   "start": 142.1,
+   "dauer": 3.11,
+   "emotion": "spannend",
+   "text": "Und als du oben bist, siehst du die Tür *aufbrechen*."
+  },
+  {
+   "nr": 37,
+   "typ": "dach",
+   "kapitel": 9,
+   "start": 145.21,
+   "dauer": 5.222,
+   "emotion": "erzaehlend",
+   "text": "Walter rennt. Der Soldat packt ihn am Arm. Und zieht ihn in letzter Sekunde *hoch*."
+  },
+  {
+   "nr": 38,
+   "typ": "skyline",
+   "kapitel": 10,
+   "start": 150.432,
+   "dauer": 3.038,
+   "emotion": "erzaehlend",
+   "text": "Der Hubschrauber dreht ab. Zum Dach gegenüber."
+  },
+  {
+   "nr": 39,
+   "typ": "gesicht",
+   "kapitel": 10,
+   "start": 153.47,
+   "dauer": 5.63,
+   "emotion": "froh",
+   "text": "Kai steht schon da. Mit dem Spiegel in der Hand. Er hat euch den Hubschrauber *geschickt*."
+  },
+  {
+   "nr": 40,
+   "typ": "gesicht",
+   "kapitel": 10,
+   "start": 159.1,
+   "dauer": 5.126,
+   "emotion": "froh",
+   "text": "Als er an Bord klettert, sagt Walter nur: „Du Idiot.“ Und *umarmt* ihn."
+  },
+  {
+   "nr": 41,
+   "typ": "gesicht",
+   "kapitel": 10,
+   "start": 164.226,
+   "dauer": 2.822,
+   "emotion": "froh",
+   "text": "Mila lacht. Zum ersten Mal seit Tagen."
+  },
+  {
+   "nr": 42,
+   "typ": "skyline",
+   "kapitel": 11,
+   "start": 167.048,
+   "dauer": 4.814,
+   "emotion": "erzaehlend",
+   "text": "Unter euch zieht die Stadt vorbei. Euer Hochhaus wird immer *kleiner*."
+  },
+  {
+   "nr": 43,
+   "typ": "objekt",
+   "kapitel": 11,
+   "start": 171.862,
+   "dauer": 4.478,
+   "emotion": "erklaerend",
+   "text": "Zwölf Tage. Und drei Regeln, die euch das Leben gerettet haben."
+  },
+  {
+   "nr": 44,
+   "typ": "gesicht",
+   "kapitel": 11,
+   "start": 176.34,
+   "dauer": 3.086,
+   "emotion": "froh",
+   "text": "Wasser sichern. Leise sein. *Kein Licht*."
+  },
+  {
+   "nr": 45,
+   "typ": "skyline",
+   "kapitel": 11,
+   "start": 179.426,
+   "dauer": 4.742,
+   "emotion": "erzaehlend",
+   "text": "Am Abend erreicht ihr das Stadion. Tausende Menschen. Zelte. Soldaten."
+  },
+  {
+   "nr": 46,
+   "typ": "skyline",
+   "kapitel": 11,
+   "start": 184.168,
+   "dauer": 4.598,
+   "emotion": "erzaehlend",
+   "text": "Und das Flutlicht ist *an*. Hell. Weithin sichtbar. Die ganze Nacht."
+  },
+  {
+   "nr": 47,
+   "typ": "gesicht",
+   "kapitel": 11,
+   "start": 188.766,
+   "dauer": 3.206,
+   "emotion": "spannend",
+   "text": "Und du denkst nur eins: *Das ist ein Fehler*."
+  },
+  {
+   "nr": 48,
+   "typ": "titel",
+   "kapitel": 11,
+   "start": 191.972,
+   "dauer": 4.5,
+   "emotion": null,
+   "text": ""
+  }
+ ]
+}

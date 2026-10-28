@@ -1,4 +1,7 @@
 # Folge 10: Das Dach
+@musik musik/folge-10.mp3
+@musik_lautstaerke 1
+@whoosh aus
 
 == Szene 1: Flucht nach oben ==
 @zeit nacht
