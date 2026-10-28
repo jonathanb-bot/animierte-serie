@@ -1,0 +1,94 @@
+# Folge 8: Du oder er
+@serie Der Alien
+@mund zitate
+@look 0
+@zeit nacht
+
+== Kapitel 1: Wesen ==
+@hud tag=2 zeit=22:31 handy=78/100% netz=4/4 funk=100/100%
+[wohnung hof kraeuter vorhang=auf sofa=#7a4f45 wand=#cfc2ad mara:haelt haelt=mara:handy_licht nox:umarmt nox:angst pos=600,470 fokus=540,1350 zoom=1.5 sagt=elias] „Bring ihnen das kleine grüne Wesen.“ Und Mara hält Nox im Arm.
+[gesicht du ort=wohnung hof kraeuter vorhang=auf sofa=#7a4f45 wand=#cfc2ad besorgt zoom-rein] Du siehst Mara an. Mara sieht Nox an. Keiner atmet.
+[gesicht mara ort=wohnung hof kraeuter vorhang=auf sofa=#7a4f45 wand=#cfc2ad denkt sagt=mara] „Elias würde ihn nie *Wesen* nennen“, sagt Mara langsam. „Er würde *Nox* schreiben.“
+[gesicht mara ort=wohnung hof kraeuter vorhang=auf sofa=#7a4f45 wand=#cfc2ad entschlossen sagt=mara] „Und selbst wenn sie echt ist: Elias würde wollen, dass ich Nox *helfe*.“
+[titel oben="Folge 8" gross="Der Alien" unten="Du oder er" farbe=#0f1c33 akzent=#59c7ff dauer=3]
+
+== Was bisher geschah ==
+[hochhaus etage=17 bis_etage=24 unsere=17 hud=false] Nox will vom Dach aus seine Leute rufen. Die Sammler jagen ihn.
+[kreuzung ampel=gruen zebra=mantel ausdruck_fern=froh taschenlampe augenleuchten=blitz fokus=540,1050 zoom=1.7 hud=false] Sie können Gesichter *ausleihen*. Aber im Licht leuchten ihre Augen grün.
+[objekt objekte="walkie_blau:Sprechsteine" gross="Umgebaut" farbe=#1e2f45] Nox hat eure alten Walkie-Talkies umgebaut. Jetzt reichen sie bis zu seinen Leuten.
+[handy ort=wohnung hof kraeuter vorhang=auf sofa=#7a4f45 wand=#cfc2ad wer=mara nachricht="Bring ihnen das kleine grüne Wesen. Dann lassen sie mich gehen." von=Elias akku=61 uhrzeit=22:30 hud=false sagt=elias] Dann kam eine Nachricht von Elias' Handy: „Bring ihnen das kleine grüne Wesen.“
+
+== Kapitel 2: Mitternacht ==
+@hud zeit=23:30 handy=75/100%
+[wohnung hof kraeuter vorhang=auf sofa=#7a4f45 wand=#cfc2ad mara:haelt haelt=mara:schluessel pos=540 fokus=540,1350 zoom=1.6] Halb zwölf. Zeit. Mara steckt den Dachschlüssel ein.
+[wohnung hof kraeuter vorhang=auf sofa=#7a4f45 wand=#cfc2ad du:geht nox:geht nox:neugierig pos=640,380 fokus=520,1400 zoom=1.45] Nox tappt hinter dir her. Seine kleinen Füße machen *tapp, tapp*.
+[gesicht nox ort=wohnung hof kraeuter vorhang=auf sofa=#7a4f45 wand=#cfc2ad besorgt sagt=nox] „Wenn ich Angst kriege“, flüstert er, „dann leuchte ich.“ „Ich weiß“, sagst du.
+[flur du mara nox:neugierig pos=560,820,380 fokus=600,1250 zoom=1.05] Ihr tretet ins Treppenhaus. Nur das grüne Notlicht brennt.
+[handy ort=flur netz=4 akku=75 uhrzeit=23:30] Dein Handy: voller Empfang. Noch.
+
+== Kapitel 3: Stufe für Stufe ==
+@hud zeit=23:35
+[treppe etage=19 mara:geht du:geht nox:geht pos=640,440,240 fokus=540,1250 zoom-rein] Achtzehnter Stock. Neunzehnter. Ihr nehmt jede Stufe einzeln.
+[hochhaus etage=20 treppe=mara@19,du@19,nox@19 unsere=17] Mara geht vorne. Du in der Mitte. Nox hinten.
+[gesicht nox ort=treppenhaus etage=19 neugierig blick=0,-0.6 sagt=nox] Nox bleibt stehen. Er lauscht. Dann schüttelt er den Kopf. „Kein Pfeifen.“
+[treppe etage=21 mara:geht du:geht nox:geht pos=640,440,240 fokus=540,1250 zoom-rein] Zwanzigster Stock. Einundzwanzigster.
+[gesicht du ort=treppenhaus etage=21 misstrauisch zoom-rein] Bis jetzt läuft alles gut. *Zu* gut.
+
+== Kapitel 4: Guten Abend ==
+@hud zeit=23:41 handy=74/100%
+[handy ort=treppenhaus etage=22 netz=4 netz_bis=0 akku=74 uhrzeit=23:41] Im zweiundzwanzigsten Stock fällt dein Empfang auf *null*.
+@hud netz=0/4
+[gesicht du ort=treppenhaus etage=22 angst] Du bleibst stehen.
+[gesicht nox ort=treppenhaus etage=22 angst leuchten=0.3 blick=0,-1 sagt=nox] Nox' Antennen stellen sich auf. „Pfeifen“, haucht er. „*Über* uns.“
+[treppe etage=22 oben=mantel ausdruck_oben=froh du:angst mara:angst nox:angst pos=440,680,240 fokus=540,1200 zoom=1.0 zoom_bis=1.1] Auf dem Treppenabsatz über euch steht jemand. Grauer Mantel.
+[gesicht mantel ort=treppenhaus etage=22 froh sagt=mantel] „Guten Abend“, sagt er freundlich.
+
+== Kapitel 5: Erstarrt ==
+@hud zeit=23:42
+[gesicht du ort=treppenhaus etage=22 schreck wackeln=0.2] Du willst wegrennen. Aber du kannst dich nicht bewegen.
+[objekt objekte="herzpuls:Langsamer" gross="Echter Fakt" farbe=#1e2f45] Echter Fakt: Bei plötzlicher Gefahr *erstarren* viele Menschen zuerst. Der Puls wird dabei sogar langsamer.
+[objekt objekte="erstarrt:Schreckstarre" gross="Echter Fakt" farbe=#1e2f45] Forscher nennen das Schreckstarre. Der Körper hält still und beobachtet. Ein uralter Schutzreflex.
+[treppe etage=22 oben=mantel ausdruck_oben=froh pose_oben=geht fokus=560,900 zoom=1.5 zoom_bis=1.7 sagt=mantel] Der Mann kommt eine Stufe herunter. „Das kleine Wesen, bitte.“
+
+== Kapitel 6: Lauf ==
+@hud zeit=23:43
+[gesicht du ort=treppenhaus etage=22 entschlossen sagt=du] „Nox“, flüsterst du. „Lauf. Zum Dach. *Allein*.“
+[treppe etage=22 mara:haelt haelt=mara:schluessel nox:entschlossen pos=640,420 fokus=540,1480 zoom=1.6 sagt=mara] Mara drückt ihm den Dachschlüssel in die Hand. „Lauf!“
+[hochhaus etage=22 treppe=mantel@22,nox@23 leuchten=0.3 unsere=17 zoom-rein] Nox springt an die Wand. Und klettert. Über den Mann hinweg. Nach oben.
+[gesicht mantel ort=treppenhaus etage=22 neutral stumm zoom-rein] Der Mann schaut ihm nicht einmal nach. Er schaut nur *dich* an.
+
+== Kapitel 7: Das tun sie immer ==
+@hud zeit=23:45
+[gesicht mantel ort=treppenhaus etage=22 froh sagt=mantel] „Er kommt zurück“, sagt er ruhig. „Wegen dir. Das tun sie immer.“
+[treppe etage=22 mantel:froh mantel:zeigt du:angst pos=440,640 fokus=540,1350 zoom=1.45] Er legt dir die Hand auf die Schulter. Ganz leicht. Ganz *kalt*.
+[gesicht mara ort=treppenhaus etage=22 entschlossen sagt=mara] Mara stellt sich neben dich. „Lassen Sie uns gehen.“
+[gesicht mantel ort=treppenhaus etage=22 froh sagt=mantel] „Mara“, sagt er freundlich. „Sie wollten doch Ihren Bruder.“
+[gesicht mara ort=treppenhaus etage=22 traurig blick=0,0.8 zoom-rein] Mara zögert. Nur eine Sekunde.
+
+== Kapitel 8: Allein ==
+@hud zeit=23:50 handy=73/100%
+[hochhaus etage=24 treppe=nox@24 pose_treppe=sitzt leuchten=0.4 unsere=17 zoom-rein] Oben, an der Dachtür, sitzt Nox. Allein. Mit dem Schlüssel.
+[gesicht nox ort=treppenhaus etage=24 traurig haelt haelt=schluessel leuchten=0.3] Er könnte aufschließen. Den Notruf senden. Und für immer weg sein.
+[gesicht du ort=treppenhaus etage=22 besorgt] Und du stehst hier unten. Mit einem Sammler.
+[gesicht du ort=treppenhaus etage=22 entschlossen blick=0,-0.8 sagt=du] „Geh“, denkst du. „Bitte. Geh einfach.“
+[treppe etage=22 fokus=540,900 zoom=1.2 zoom_bis=1.3] Ein paar Sekunden ist es ganz still.
+
+== Kapitel 9: Er wartet ==
+@hud zeit=23:56
+[gesicht mantel ort=treppenhaus etage=22 neutral stumm zoom-rein] Der Mann wartet. Geduldig. Als wüsste er schon, wie es ausgeht.
+[gesicht mara ort=treppenhaus etage=22 angst sagt=mara] „Warum wartet er?“, flüstert Mara.
+[gesicht du ort=treppenhaus etage=22 lauscht blick=0,-0.8] Dann hörst du es. Von oben.
+[treppe etage=22 fokus=540,800 zoom=1.5 zoom_bis=1.7] *Tapp. Tapp. Tapp.*
+
+== Kapitel 10: Dazwischen ==
+@hud zeit=23:58
+[treppe etage=22 oben=nox pose_oben=geht ausdruck_oben=angst leuchten=0.5 fokus=560,850 zoom=1.6 zoom_bis=1.8] Kleine Schritte kommen die Treppe herunter. Schwach grün leuchtend.
+[treppe etage=22 du:angst nox:haende_hoch nox:entschlossen mantel:froh leuchten=0.5 pos=200,540,860 fokus=540,1300 zoom=1.12 untertitel_y=1760] Nox stellt sich zwischen dich und den Mann.
+[gesicht nox ort=treppenhaus etage=22 entschlossen leuchten=0.7 wackeln=0.3 zoom-rein] Er zittert. Er leuchtet. Aber er geht keinen Schritt zurück.
+[titel oben="Folge 9: Auf dem Dach" gross="Fortsetzung folgt" farbe=#0f1c33 akzent=#59c7ff dauer=3.5]
+
+== Check ==
+@hud aus
+[objekt objekte="erstarrt:Gefahr" gross="Check" farbe=#1e2f45] Check! Was macht dein Körper oft zuerst, wenn plötzlich Gefahr droht?
+[objekt objekte="erstarrt:Erstarren|herzpuls:Langsamer" gross="Die Antwort" farbe=#1e3a2a] Er *erstarrt*. Der Puls wird kurz langsamer. Forscher nennen das Schreckstarre.
+[titel gross="Was hättest du|gemacht?" groesse=120 unten="Schreib es in die Kommentare" farbe=#0f1c33 dauer=3.5]
