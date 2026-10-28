@@ -1,0 +1,518 @@
+{
+ "dauer": 223.084,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "lichtbild",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 3.638,
+   "emotion": "erzaehlend",
+   "text": "Das ist dein Haus. Die Sammler waren schon einmal *hier*."
+  },
+  {
+   "nr": 2,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 3.638,
+   "dauer": 3.806,
+   "emotion": "wuetend",
+   "text": "„Wen haben sie hier geholt?“, fragst du. „Nox. Wen?“"
+  },
+  {
+   "nr": 3,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 7.444,
+   "dauer": 3.35,
+   "emotion": "traurig",
+   "text": "„Später“, sagt er nur. Und dreht die Kapsel um."
+  },
+  {
+   "nr": 4,
+   "typ": "kueche",
+   "kapitel": 1,
+   "start": 10.794,
+   "dauer": 3.518,
+   "emotion": "erzaehlend",
+   "text": "Es ist kurz nach vier. In drei Stunden geht die Sonne auf."
+  },
+  {
+   "nr": 5,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 14.312,
+   "dauer": 3.35,
+   "emotion": "ernst",
+   "text": "Du brauchst den Schlüssel zum Dach. Und du weißt, wer ihn hat."
+  },
+  {
+   "nr": 6,
+   "typ": "titel",
+   "kapitel": 1,
+   "start": 17.662,
+   "dauer": 3.0,
+   "emotion": null,
+   "text": ""
+  },
+  {
+   "nr": 7,
+   "typ": "skyline",
+   "kapitel": 2,
+   "start": 20.662,
+   "dauer": 4.382,
+   "emotion": "erzaehlend",
+   "text": "Nox ist aus einem Schiff der *Sammler* geflohen. Sie fangen Menschen."
+  },
+  {
+   "nr": 8,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 25.044,
+   "dauer": 4.382,
+   "emotion": "ernst",
+   "text": "Mit seiner Kapsel kann er Hilfe rufen. Aber nur nachts und unter freiem Himmel."
+  },
+  {
+   "nr": 9,
+   "typ": "fassade",
+   "kapitel": 2,
+   "start": 29.426,
+   "dauer": 3.302,
+   "emotion": "spannend",
+   "text": "Zum Dach klettern ging nicht. Der Regen war zu stark."
+  },
+  {
+   "nr": 10,
+   "typ": "lichtbild",
+   "kapitel": 2,
+   "start": 32.728,
+   "dauer": 3.35,
+   "emotion": "erzaehlend",
+   "text": "Und in der Kapsel ist ein Bild von *deinem* Hauseingang."
+  },
+  {
+   "nr": 11,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 36.078,
+   "dauer": 4.406,
+   "emotion": "erzaehlend",
+   "text": "„Meine Nachbarin hat einen Dachschlüssel. Sie gießt da oben die Beete. Sie heißt *Mara*.“"
+  },
+  {
+   "nr": 12,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 40.484,
+   "dauer": 3.206,
+   "emotion": "spannend",
+   "text": "Bei dem Namen zuckt Nox zusammen. Nur ganz kurz."
+  },
+  {
+   "nr": 13,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 43.69,
+   "dauer": 3.71,
+   "emotion": "ernst",
+   "text": "„Kennst du sie?“ „Nein“, sagt er schnell. Zu schnell."
+  },
+  {
+   "nr": 14,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 47.4,
+   "dauer": 3.83,
+   "emotion": "erzaehlend",
+   "text": "Du weißt nicht, ob du ihm trauen kannst. Aber du hast keine bessere Idee."
+  },
+  {
+   "nr": 15,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 51.23,
+   "dauer": 4.262,
+   "emotion": "ernst",
+   "text": "„Okay“, flüstert Nox. „Aber sie darf mich nicht *sehen*. Noch nicht.“"
+  },
+  {
+   "nr": 16,
+   "typ": "badezimmer",
+   "kapitel": 4,
+   "start": 55.492,
+   "dauer": 4.334,
+   "emotion": "erzaehlend",
+   "text": "Im Bad hörst du etwas. Durch die Wand. Aus Maras Wohnung."
+  },
+  {
+   "nr": 17,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 59.826,
+   "dauer": 5.726,
+   "emotion": "erzaehlend",
+   "text": "Ein tiefes Brummen. Musik? Nein. Eine Stimme. Mara *telefoniert*."
+  },
+  {
+   "nr": 18,
+   "typ": "objekt",
+   "kapitel": 4,
+   "start": 65.552,
+   "dauer": 5.75,
+   "emotion": "erklaerend",
+   "text": "Echter Fakt: Durch Wände kommen vor allem *tiefe* Töne. Hohe Töne werden stärker geschluckt."
+  },
+  {
+   "nr": 19,
+   "typ": "objekt",
+   "kapitel": 4,
+   "start": 71.302,
+   "dauer": 3.11,
+   "emotion": "erklaerend",
+   "text": "Deshalb hörst du beim Nachbarn eher den Bass als den Gesang."
+  },
+  {
+   "nr": 20,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 74.412,
+   "dauer": 3.494,
+   "emotion": "ernst",
+   "text": "Um vier Uhr morgens. Mit wem telefoniert Mara?"
+  },
+  {
+   "nr": 21,
+   "typ": "flur",
+   "kapitel": 5,
+   "start": 77.906,
+   "dauer": 3.95,
+   "emotion": "erzaehlend",
+   "text": "Du klopfst leise an Maras Tür. Drinnen wird es sofort still."
+  },
+  {
+   "nr": 22,
+   "typ": "flur",
+   "kapitel": 5,
+   "start": 81.856,
+   "dauer": 5.462,
+   "emotion": "ernst",
+   "text": "Mara öffnet. Strickjacke, zerzauste Haare. Sie sieht nicht aus, als hätte sie geschlafen."
+  },
+  {
+   "nr": 23,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 87.318,
+   "dauer": 3.518,
+   "emotion": "spannend",
+   "text": "„Du?“, fragt sie. „Um vier Uhr morgens?“"
+  },
+  {
+   "nr": 24,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 90.836,
+   "dauer": 3.806,
+   "emotion": "ernst",
+   "text": "„Ich brauche den Dachschlüssel“, sagst du. „Bitte. Frag nicht, warum.“"
+  },
+  {
+   "nr": 25,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 94.642,
+   "dauer": 2.942,
+   "emotion": "ernst",
+   "text": "Mara mustert dich. „Hast du vorhin *geschrien*?“"
+  },
+  {
+   "nr": 26,
+   "typ": "gesicht",
+   "kapitel": 6,
+   "start": 97.584,
+   "dauer": 3.686,
+   "emotion": "ernst",
+   "text": "„Ich hab mich erschreckt“, sagst du. „Eine Spinne.“ Eine schlechte Lüge."
+  },
+  {
+   "nr": 27,
+   "typ": "gesicht",
+   "kapitel": 6,
+   "start": 101.27,
+   "dauer": 4.958,
+   "emotion": "ernst",
+   "text": "Mara nickt langsam. „Ich komm mit“, sagt sie. „Allein geht da keiner hoch.“"
+  },
+  {
+   "nr": 28,
+   "typ": "flur",
+   "kapitel": 6,
+   "start": 106.228,
+   "dauer": 4.694,
+   "emotion": "erzaehlend",
+   "text": "Sie holt ihren Schlüsselbund. Und eine Powerbank. Mara denkt praktisch."
+  },
+  {
+   "nr": 29,
+   "typ": "gesicht",
+   "kapitel": 6,
+   "start": 110.922,
+   "dauer": 2.87,
+   "emotion": "ernst",
+   "text": "Du hast ein Problem. Wie erklärst du ihr Nox?"
+  },
+  {
+   "nr": 30,
+   "typ": "flur",
+   "kapitel": 6,
+   "start": 113.792,
+   "dauer": 4.574,
+   "emotion": "erzaehlend",
+   "text": "Da hörst du hinter dir ein leises „Prrt“. Deine Tür steht einen Spalt offen."
+  },
+  {
+   "nr": 31,
+   "typ": "flur",
+   "kapitel": 7,
+   "start": 118.366,
+   "dauer": 3.95,
+   "emotion": "erzaehlend",
+   "text": "Nox lugt aus der Tür. Neugierig. Wie immer."
+  },
+  {
+   "nr": 32,
+   "typ": "gesicht",
+   "kapitel": 7,
+   "start": 122.316,
+   "dauer": 2.63,
+   "emotion": "spannend",
+   "text": "Mara sieht ihn. Und erstarrt."
+  },
+  {
+   "nr": 33,
+   "typ": "flur",
+   "kapitel": 7,
+   "start": 124.946,
+   "dauer": 4.238,
+   "emotion": "spannend",
+   "text": "Nox erschrickt. Und fängt an zu *leuchten*. Mitten im dunklen Treppenhaus."
+  },
+  {
+   "nr": 34,
+   "typ": "flur",
+   "kapitel": 7,
+   "start": 129.184,
+   "dauer": 3.614,
+   "emotion": "spannend",
+   "text": "Mara weicht zurück, bis an die Wand. Sie ist kreidebleich."
+  },
+  {
+   "nr": 35,
+   "typ": "gesicht",
+   "kapitel": 7,
+   "start": 132.798,
+   "dauer": 3.95,
+   "emotion": "erzaehlend",
+   "text": "„Ganz ruhig“, sagst du. „Er tut nichts. Er heißt *Nox*.“"
+  },
+  {
+   "nr": 36,
+   "typ": "tuer",
+   "kapitel": 8,
+   "start": 136.748,
+   "dauer": 3.014,
+   "emotion": "spannend",
+   "text": "Du ziehst beide in deine Wohnung. Bevor jemand etwas hört."
+  },
+  {
+   "nr": 37,
+   "typ": "wohnung",
+   "kapitel": 8,
+   "start": 139.762,
+   "dauer": 4.91,
+   "emotion": "spannend",
+   "text": "Mara bleibt an der Wand stehen. Nox hinter dem Sofa. Beide starren sich an."
+  },
+  {
+   "nr": 38,
+   "typ": "wohnung",
+   "kapitel": 8,
+   "start": 144.672,
+   "dauer": 3.374,
+   "emotion": "ernst",
+   "text": "Mara schaut immer wieder auf ihr Handy. Ihre Hände zittern."
+  },
+  {
+   "nr": 39,
+   "typ": "gesicht",
+   "kapitel": 8,
+   "start": 148.046,
+   "dauer": 4.022,
+   "emotion": "ernst",
+   "text": "Sie hat nicht nur Angst. Sie sieht aus, als hätte sie mit ihm *gerechnet*."
+  },
+  {
+   "nr": 40,
+   "typ": "gesicht",
+   "kapitel": 8,
+   "start": 152.068,
+   "dauer": 4.958,
+   "emotion": "erzaehlend",
+   "text": "Nox flüstert: „Alles easy?“ Mara zuckt zusammen, als hätte sie das schon mal gehört."
+  },
+  {
+   "nr": 41,
+   "typ": "gesicht",
+   "kapitel": 9,
+   "start": 157.026,
+   "dauer": 4.118,
+   "emotion": "erzaehlend",
+   "text": "Du erklärst ihr alles. Die Sammler. Die Kapsel. Den Notruf."
+  },
+  {
+   "nr": 42,
+   "typ": "hochhaus",
+   "kapitel": 9,
+   "start": 161.144,
+   "dauer": 5.582,
+   "emotion": "erzaehlend",
+   "text": "Der Plan: sieben Stockwerke durchs Treppenhaus. Die Dachtür. Und sechzig Sekunden Notruf."
+  },
+  {
+   "nr": 43,
+   "typ": "gesicht",
+   "kapitel": 9,
+   "start": 166.726,
+   "dauer": 3.062,
+   "emotion": "erzaehlend",
+   "text": "„Und dann ist er weg?“, fragt Mara. „Für immer?“"
+  },
+  {
+   "nr": 44,
+   "typ": "gesicht",
+   "kapitel": 9,
+   "start": 169.788,
+   "dauer": 1.838,
+   "emotion": "ernst",
+   "text": "„Für immer“, sagt Nox."
+  },
+  {
+   "nr": 45,
+   "typ": "gesicht",
+   "kapitel": 9,
+   "start": 171.626,
+   "dauer": 3.83,
+   "emotion": "ernst",
+   "text": "Mara nickt. Aber sie schaut dabei nur Nox an. Nicht dich."
+  },
+  {
+   "nr": 46,
+   "typ": "wohnung",
+   "kapitel": 10,
+   "start": 175.456,
+   "dauer": 4.43,
+   "emotion": "erzaehlend",
+   "text": "Mara hat den Dachschlüssel in der Hand. Aber sie gibt ihn dir nicht."
+  },
+  {
+   "nr": 47,
+   "typ": "gesicht",
+   "kapitel": 10,
+   "start": 179.886,
+   "dauer": 3.11,
+   "emotion": "ernst",
+   "text": "„Mara? Wir müssen los. Bevor es hell wird.“"
+  },
+  {
+   "nr": 48,
+   "typ": "gesicht",
+   "kapitel": 10,
+   "start": 182.996,
+   "dauer": 3.206,
+   "emotion": "traurig",
+   "text": "„Warte“, sagt sie leise. „Ich muss dir was sagen.“"
+  },
+  {
+   "nr": 49,
+   "typ": "handy",
+   "kapitel": 10,
+   "start": 186.202,
+   "dauer": 4.382,
+   "emotion": "erzaehlend",
+   "text": "Da leuchtet ihr Handy auf. Eine Nachricht. Nur ein Wort: „*Und?*“"
+  },
+  {
+   "nr": 50,
+   "typ": "gesicht",
+   "kapitel": 10,
+   "start": 190.584,
+   "dauer": 3.014,
+   "emotion": "ernst",
+   "text": "Wer schreibt um fünf Uhr morgens nur „Und?“"
+  },
+  {
+   "nr": 51,
+   "typ": "wohnung",
+   "kapitel": 11,
+   "start": 193.598,
+   "dauer": 3.902,
+   "emotion": "spannend",
+   "text": "Mara dreht das Handy um. Zu spät. Du hast es gesehen."
+  },
+  {
+   "nr": 52,
+   "typ": "wohnung",
+   "kapitel": 11,
+   "start": 197.5,
+   "dauer": 3.566,
+   "emotion": "spannend",
+   "text": "Nox duckt sich hinter das Sofa. Er leuchtet wieder."
+  },
+  {
+   "nr": 53,
+   "typ": "gesicht",
+   "kapitel": 11,
+   "start": 201.066,
+   "dauer": 4.958,
+   "emotion": "spannend",
+   "text": "Mara schaut Nox an. Dann flüstert sie: „Der Mann hat gesagt, du wärst *gefährlich*.“"
+  },
+  {
+   "nr": 54,
+   "typ": "titel",
+   "kapitel": 11,
+   "start": 206.024,
+   "dauer": 3.5,
+   "emotion": null,
+   "text": ""
+  },
+  {
+   "nr": 55,
+   "typ": "objekt",
+   "kapitel": 12,
+   "start": 209.524,
+   "dauer": 5.102,
+   "emotion": "erklaerend",
+   "text": "Check! Warum hörst du beim Nachbarn eher den Bass als den Gesang?"
+  },
+  {
+   "nr": 56,
+   "typ": "objekt",
+   "kapitel": 12,
+   "start": 214.626,
+   "dauer": 4.958,
+   "emotion": "erklaerend",
+   "text": "Wände schlucken hohe Töne stärker als tiefe. Tiefe Töne kommen *besser* durch."
+  },
+  {
+   "nr": 57,
+   "typ": "titel",
+   "kapitel": 12,
+   "start": 219.584,
+   "dauer": 3.5,
+   "emotion": null,
+   "text": ""
+  }
+ ]
+}
