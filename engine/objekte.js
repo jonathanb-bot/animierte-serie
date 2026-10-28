@@ -146,4 +146,8 @@
       ctx.lineWidth = 10 * s * (1 - w); ctx.strokeStyle = A.rgba(farbe, 0.8 * (1 - w)); ctx.stroke();
     }
   };
+
+  // Icons und Gegenstände bleiben klar (siehe A.maskeZeichnen in kern.js)
+  const objektRoh = A.objekt;
+  A.objekt = (...a) => { objektRoh(...a); A.maskeZeichnen(() => objektRoh(...a)); };
 })();

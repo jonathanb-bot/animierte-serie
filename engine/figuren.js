@@ -320,4 +320,9 @@
     }
     ctx.restore();
   };
+
+  // Figuren zusätzlich in die Maske zeichnen (siehe A.maskeZeichnen): der Farblook lässt sie warm
+  const figurRoh = A.figur, kopfRoh = A.kopf;
+  A.figur = (...a) => { figurRoh(...a); A.maskeZeichnen(() => figurRoh(...a)); };
+  A.kopf = (...a) => { kopfRoh(...a); A.maskeZeichnen(() => kopfRoh(...a)); };
 })();

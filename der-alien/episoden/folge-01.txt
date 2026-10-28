@@ -1,6 +1,7 @@
 # Folge 1: Im Badezimmer
 @serie Der Alien
 @mund zitate
+@look 0
 @zeit nacht
 
 == Kapitel 1: Das Summen ==

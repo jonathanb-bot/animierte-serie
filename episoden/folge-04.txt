@@ -1,4 +1,7 @@
 # Folge 4: Licht aus
+@musik musik/folge-04.mp3
+@musik_lautstaerke 1
+@whoosh aus
 
 == Szene 1: Der Fremde ==
 @zeit nacht
@@ -82,11 +85,4 @@
 [wohnung du mila morgen licht=aus] Am Morgen zupft Mila an deinem Ärmel.
 [gesicht mila ort=wohnung morgen besorgt] „Du“, flüstert sie. „Kai hat heute Nacht *Wasserflaschen* in seinen Rucksack gesteckt.“
 [gesicht du ort=wohnung morgen schreck zoom-rein] Und plötzlich ist der gefährlichste Mensch in eurer Wohnung vielleicht *keiner* von denen da draußen.
-[titel gross="Fortsetzung folgt" oben="Folge 5: Wasserdiebe" farbe="#2a0d0b" dauer=3.5]
-
-
-== Überlebens-Check ==
-@hud aus
-[objekt objekte="kerze:Kerze|powerbank:Display|auge:Licht" gross="Überlebens-Check" farbe="#1e2f45"] Überlebens-Check! Was verrät dich nachts am *schnellsten*?
-[objekt objekte="kerze:Kerze|powerbank:Display|auge:Licht" gross="Die Antwort" farbe="#1e3a2a"] Jedes Licht. Auch ein Handy-Display. Von oben sieht man es *kilometerweit*.
-[titel gross="Was hättest du|gemacht?" groesse=120 unten="Schreib es in die Kommentare" farbe="#1e2f45" dauer=3.5]
+[titel oben="Fortsetzung folgt" gross="Teil 5|Wasserdiebe" groesse=120 knopf="Jetzt auf dem Profil" farbe="#2a0d0b" dauer=4]

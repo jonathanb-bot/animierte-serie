@@ -1,4 +1,7 @@
 # Folge 9: Die Horde
+@musik musik/folge-09.mp3
+@musik_lautstaerke 1
+@whoosh aus
 
 == Szene 1: Zurück oben ==
 @zeit tag
@@ -75,11 +78,4 @@
 [gesicht du ort=wohnung nacht licht=kerze schreck zoom-rein] Die Barrikade im zwanzigsten Stock ist *gebrochen*.
 [hochhaus etage=20 bis_etage=23 nacht strom=false zombies="1-21" wackeln=0.6] Einundzwanzig. Zweiundzwanzig. Sie kommen.
 [gesicht walter ort=wohnung nacht licht=kerze entschlossen] Walter greift nach Milas Hand. „*Aufs Dach*. Sofort.“
-[titel gross="Fortsetzung folgt" oben="Folge 10: Das Dach" farbe="#2a0d0b" dauer=3.5]
-
-
-== Überlebens-Check ==
-@hud aus
-[objekt objekte="decke:SOS|auge:Spiegel|feuer:Rauch" gross="Überlebens-Check" farbe="#1e2f45"] Überlebens-Check! Welche Signale sieht ein Hubschrauber *am besten*?
-[objekt objekte="decke:SOS|auge:Spiegel|feuer:Rauch" gross="Die Antwort" farbe="#1e3a2a"] Große helle Zeichen, Spiegelblitze und Rauch. Am besten *alles zusammen*.
-[titel gross="Was hättest du|gemacht?" groesse=120 unten="Schreib es in die Kommentare" farbe="#1e2f45" dauer=3.5]
+[titel oben="Fortsetzung folgt" gross="Teil 10|Das Dach" groesse=120 knopf="Jetzt auf dem Profil" farbe="#2a0d0b" dauer=4]

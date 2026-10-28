@@ -1,4 +1,7 @@
 # Folge 6: Auf dem Dach
+@musik musik/folge-06.mp3
+@musik_lautstaerke 1
+@whoosh aus
 
 == Szene 1: Der Mann hinter dem Tank ==
 @zeit abend
@@ -10,7 +13,7 @@
 [titel oben="Folge 6" gross="Auf dem Dach" unten="24. Stock" dauer=3]
 == Was bisher geschah ==
 [gesicht kai ort=wohnung morgen traurig hud=false] Was bisher geschah: Kai hat Wasser gestohlen. Er wollte allein zum *Stadion*.
-[objekt objekte="schluessel:Wasser verschlossen|wasserflasche:2 Liter pro Tag" hud=false] Seitdem wird das Wasser *rationiert*.
+[objekt objekte="schluessel:Verschlossen|wasserflasche:2 L pro Tag" hud=false] Seitdem wird das Wasser *rationiert*.
 [dach abend tank=0.6 tonnen=false zombie3 hud=false] Walter hat euch zum alten Tank auf dem Dach geführt. Aber da oben war *jemand*.
 
 == Szene 2: Die Falle ==
@@ -29,7 +32,7 @@
 [gesicht walter ort=dach froh] „Halb voll! Das sind locker *anderthalbtausend* Liter!“
 [objekt objekte="tropfen:1500 Liter" gross="Im Tank"] Anderthalbtausend Liter. Genug für Monate.
 [gesicht walter ort=dach besorgt] Dann schaut er genauer hin. „Aber *trinken* würde ich das so nicht.“
-[objekt objekte="tropfen:Algen, Staub, Vogeldreck" farbe="#3a3a1e"] Algen. Laub. Vogeldreck. Das Wasser steht seit Jahren.
+[objekt objekte="tropfen:Algen, Laub, Dreck" farbe="#3a3a1e"] Algen. Laub. Vogeldreck. Das Wasser steht seit Jahren.
 
 == Szene 4: Wasser sauber machen ==
 [wohnung du lena walter tag licht=aus objekt=topf objekt_x=900 objekt_y=1320] Lena zeigt euch, wie man Wasser *trinkbar* macht.
@@ -81,11 +84,4 @@
 [wohnung du lena mila walter kai nacht licht=kerze vorhang=zu] Ihr wisst alle, wo es Medikamente gibt.
 [strasse nacht horde=12 zoom-rein] Direkt gegenüber. Auf der anderen Straßenseite. Mitten *zwischen* ihnen.
 [gesicht du ort=wohnung nacht licht=kerze entschlossen zoom-rein] Und jemand muss dorthin.
-[titel gross="Fortsetzung folgt" oben="Folge 7: Fieber" farbe="#2a0d0b" dauer=3.5]
-
-
-== Überlebens-Check ==
-@hud aus
-[objekt objekte="plane:Erste Liter weg|kocher:Abkochen" gross="Überlebens-Check" farbe="#1e2f45"] Überlebens-Check! Was musst du bei Regenwasser vom Dach *beachten*?
-[objekt objekte="plane:Erste Liter weg|kocher:Abkochen" gross="Die Antwort" farbe="#1e3a2a"] Die ersten Liter wegkippen. Danach trotzdem *filtern und abkochen*.
-[titel gross="Was hättest du|gemacht?" groesse=120 unten="Schreib es in die Kommentare" farbe="#1e2f45" dauer=3.5]
+[titel oben="Fortsetzung folgt" gross="Teil 7|Fieber" groesse=120 knopf="Jetzt auf dem Profil" farbe="#2a0d0b" dauer=4]
