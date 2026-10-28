@@ -1,0 +1,527 @@
+{
+ "dauer": 241.986,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "spion",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 3.998,
+   "emotion": "ernst",
+   "text": "Er steht noch immer vor deiner Tür. Und er lächelt nicht mehr."
+  },
+  {
+   "nr": 2,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 3.998,
+   "dauer": 3.974,
+   "emotion": "spannend",
+   "text": "Du wagst nicht zu atmen. Eine Minute. Zwei."
+  },
+  {
+   "nr": 3,
+   "typ": "tuer",
+   "kapitel": 1,
+   "start": 7.972,
+   "dauer": 6.182,
+   "emotion": "spannend",
+   "text": "Hinter dir tappen kleine Füße. „Er wartet“, flüstert Nox. „Sammler warten *immer*.“"
+  },
+  {
+   "nr": 4,
+   "typ": "spion",
+   "kapitel": 1,
+   "start": 14.154,
+   "dauer": 2.534,
+   "emotion": "erzaehlend",
+   "text": "Dann dreht sich der Mann um. Und geht."
+  },
+  {
+   "nr": 5,
+   "typ": "handy",
+   "kapitel": 1,
+   "start": 16.688,
+   "dauer": 3.086,
+   "emotion": "erzaehlend",
+   "text": "Sofort ist dein Empfang wieder da. Komisch."
+  },
+  {
+   "nr": 6,
+   "typ": "titel",
+   "kapitel": 1,
+   "start": 19.774,
+   "dauer": 3.0,
+   "emotion": null,
+   "text": ""
+  },
+  {
+   "nr": 7,
+   "typ": "badezimmer",
+   "kapitel": 2,
+   "start": 22.774,
+   "dauer": 4.838,
+   "emotion": "erzaehlend",
+   "text": "Du bist allein zu Hause. In deinem Bad sitzt ein kleines, grünes Wesen."
+  },
+  {
+   "nr": 8,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 27.612,
+   "dauer": 2.486,
+   "emotion": "froh",
+   "text": "Es heißt *Nox*. Und es spricht Deutsch."
+  },
+  {
+   "nr": 9,
+   "typ": "spion",
+   "kapitel": 2,
+   "start": 30.098,
+   "dauer": 4.262,
+   "emotion": "froh",
+   "text": "Ein Mann im grauen Mantel will es zurück. Du sagst ihm, hier sei kein Tier."
+  },
+  {
+   "nr": 10,
+   "typ": "spion",
+   "kapitel": 2,
+   "start": 34.36,
+   "dauer": 3.638,
+   "emotion": "ernst",
+   "text": "Doch er ist nicht gegangen. Er hat vor deiner Tür *gewartet*."
+  },
+  {
+   "nr": 11,
+   "typ": "kueche",
+   "kapitel": 3,
+   "start": 37.998,
+   "dauer": 4.622,
+   "emotion": "erzaehlend",
+   "text": "Ihr sitzt auf dem Küchenboden. Du und ein *Alien*. Um Mitternacht."
+  },
+  {
+   "nr": 12,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 42.62,
+   "dauer": 3.494,
+   "emotion": "ernst",
+   "text": "„Was bist du?“, fragst du. „Und wer sind die *Sammler*?“"
+  },
+  {
+   "nr": 13,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 46.114,
+   "dauer": 6.062,
+   "emotion": "ernst",
+   "text": "„Sie fangen. Menschen. Und uns.“ Er zeigt auf sich. „Ich bin weggelaufen.“"
+  },
+  {
+   "nr": 14,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 52.176,
+   "dauer": 4.07,
+   "emotion": "ernst",
+   "text": "„Ich rufe meine Leute. Dann bin ich weg. Nur bis morgen.“"
+  },
+  {
+   "nr": 15,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 56.246,
+   "dauer": 3.806,
+   "emotion": "ernst",
+   "text": "Nur bis morgen. Das klingt gut. Fast *zu* gut."
+  },
+  {
+   "nr": 16,
+   "typ": "kueche",
+   "kapitel": 4,
+   "start": 60.052,
+   "dauer": 5.078,
+   "emotion": "erzaehlend",
+   "text": "Nox legt die Metallscheibe auf den Boden. „Kapsel“, sagt er. „Ruft meine Leute.“"
+  },
+  {
+   "nr": 17,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 65.13,
+   "dauer": 3.014,
+   "emotion": "ernst",
+   "text": "„Aber nur nachts. Und nur unter *freiem* Himmel.“"
+  },
+  {
+   "nr": 18,
+   "typ": "wohnung",
+   "kapitel": 4,
+   "start": 68.144,
+   "dauer": 5.198,
+   "emotion": "erzaehlend",
+   "text": "Deine Fenster zeigen auf den Innenhof. Gegenüber nur Hauswände. Viel zu wenig Himmel."
+  },
+  {
+   "nr": 19,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 73.342,
+   "dauer": 3.014,
+   "emotion": "erzaehlend",
+   "text": "Das Dach! Aber die Dachtür ist immer *abgeschlossen*."
+  },
+  {
+   "nr": 20,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 76.356,
+   "dauer": 5.87,
+   "emotion": "traurig",
+   "text": "Nox schaut zum Fenster. „Wenn die Sonne kommt, ist es vorbei. Dann warten. Einen ganzen Tag.“"
+  },
+  {
+   "nr": 21,
+   "typ": "wohnung",
+   "kapitel": 5,
+   "start": 82.226,
+   "dauer": 3.206,
+   "emotion": "erzaehlend",
+   "text": "Während du nachdenkst, durchwühlt Nox deine Umzugskiste."
+  },
+  {
+   "nr": 22,
+   "typ": "wohnung",
+   "kapitel": 5,
+   "start": 85.432,
+   "dauer": 3.254,
+   "emotion": "froh",
+   "text": "Er findet deine alten *Walkie-Talkies*. Aus der Grundschule."
+  },
+  {
+   "nr": 23,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 88.686,
+   "dauer": 4.718,
+   "emotion": "erzaehlend",
+   "text": "„Hallo?“ Seine Stimme kommt aus dem zweiten Gerät. Nox quiekt vor Freude."
+  },
+  {
+   "nr": 24,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 93.404,
+   "dauer": 3.326,
+   "emotion": "froh",
+   "text": "„*Sprechsteine!*“, ruft er. Er drückt beide an sich."
+  },
+  {
+   "nr": 25,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 96.73,
+   "dauer": 3.758,
+   "emotion": "froh",
+   "text": "„Die reichen nur bis zum Nachbarn“, sagst du. Er hört gar nicht zu."
+  },
+  {
+   "nr": 26,
+   "typ": "badezimmer",
+   "kapitel": 6,
+   "start": 100.488,
+   "dauer": 4.19,
+   "emotion": "erzaehlend",
+   "text": "Du schaust aus dem Badfenster. Siebzehn Stockwerke tiefer liegt die Straße."
+  },
+  {
+   "nr": 27,
+   "typ": "tiefblick",
+   "kapitel": 6,
+   "start": 104.678,
+   "dauer": 3.71,
+   "emotion": "erzaehlend",
+   "text": "Unter einer Laterne steht der Mann im Mantel. Er schaut nach oben."
+  },
+  {
+   "nr": 28,
+   "typ": "gesicht",
+   "kapitel": 6,
+   "start": 108.388,
+   "dauer": 3.902,
+   "emotion": "erzaehlend",
+   "text": "Nox tippt auf die Kapsel. „Ich schaue, wo ihr Schiff ist. Nur kurz.“"
+  },
+  {
+   "nr": 29,
+   "typ": "tiefblick",
+   "kapitel": 6,
+   "start": 112.29,
+   "dauer": 4.574,
+   "emotion": "erzaehlend",
+   "text": "Da unten *flimmert* der Mann. Nur einen Augenblick. Wie ein kaputter Bildschirm."
+  },
+  {
+   "nr": 30,
+   "typ": "gesicht",
+   "kapitel": 6,
+   "start": 116.864,
+   "dauer": 3.254,
+   "emotion": "spannend",
+   "text": "Du blinzelst. Das war bestimmt die Laterne. Oder?"
+  },
+  {
+   "nr": 31,
+   "typ": "gesicht",
+   "kapitel": 6,
+   "start": 120.118,
+   "dauer": 3.614,
+   "emotion": "ernst",
+   "text": "„Schiff ist weg“, sagt Nox. Aber er sieht dich dabei nicht an."
+  },
+  {
+   "nr": 32,
+   "typ": "gesicht",
+   "kapitel": 7,
+   "start": 123.732,
+   "dauer": 5.99,
+   "emotion": "ernst",
+   "text": "„So bin ich gekommen“, sagt Nox. Er zeigt dir seine Finger. Kleine, weiche Polster."
+  },
+  {
+   "nr": 33,
+   "typ": "badezimmer",
+   "kapitel": 7,
+   "start": 129.722,
+   "dauer": 3.926,
+   "emotion": "froh",
+   "text": "Er drückt die Hand an die Fliesen. Und bleibt einfach *hängen*."
+  },
+  {
+   "nr": 34,
+   "typ": "objekt",
+   "kapitel": 7,
+   "start": 133.648,
+   "dauer": 4.598,
+   "emotion": "erklaerend",
+   "text": "Nox' Polster sind erfunden. Aber echte *Geckos* laufen wirklich an Wänden hoch."
+  },
+  {
+   "nr": 35,
+   "typ": "objekt",
+   "kapitel": 7,
+   "start": 138.246,
+   "dauer": 5.654,
+   "emotion": "erklaerend",
+   "text": "An ihren Füßen sitzen Millionen winziger Härchen. Winzige Anziehungskräfte halten sie fest."
+  },
+  {
+   "nr": 36,
+   "typ": "tiefblick",
+   "kapitel": 7,
+   "start": 143.9,
+   "dauer": 4.598,
+   "emotion": "erzaehlend",
+   "text": "Die Laterne unten ist leer. „Ich klettere zum Dach“, sagt Nox. „Allein.“"
+  },
+  {
+   "nr": 37,
+   "typ": "badezimmer",
+   "kapitel": 8,
+   "start": 148.498,
+   "dauer": 3.782,
+   "emotion": "ernst",
+   "text": "Gerade als Nox aufs Fensterbrett steigt, fängt es an zu *regnen*."
+  },
+  {
+   "nr": 38,
+   "typ": "fassade",
+   "kapitel": 8,
+   "start": 152.28,
+   "dauer": 4.67,
+   "emotion": "spannend",
+   "text": "Nox klettert los. Einen Meter. Zwei. Dann rutscht seine Hand ab."
+  },
+  {
+   "nr": 39,
+   "typ": "fassade",
+   "kapitel": 8,
+   "start": 156.95,
+   "dauer": 3.998,
+   "emotion": "spannend",
+   "text": "Du greifst zu. Im letzten Moment. Und ziehst ihn zurück ins Bad."
+  },
+  {
+   "nr": 40,
+   "typ": "objekt",
+   "kapitel": 8,
+   "start": 160.948,
+   "dauer": 3.998,
+   "emotion": "erklaerend",
+   "text": "Echter Fakt: Auch echte Geckos verlieren auf *nassem* Glas ihren Halt."
+  },
+  {
+   "nr": 41,
+   "typ": "gesicht",
+   "kapitel": 8,
+   "start": 164.946,
+   "dauer": 3.59,
+   "emotion": "spannend",
+   "text": "Nox zittert. Und leuchtet. „Danke“, flüstert er."
+  },
+  {
+   "nr": 42,
+   "typ": "wohnung",
+   "kapitel": 9,
+   "start": 168.536,
+   "dauer": 4.43,
+   "emotion": "spannend",
+   "text": "Du willst Nox mit dem Föhn trocknen. Er springt hinter das Sofa. „*Waffe!*“"
+  },
+  {
+   "nr": 43,
+   "typ": "gesicht",
+   "kapitel": 9,
+   "start": 172.966,
+   "dauer": 3.542,
+   "emotion": "froh",
+   "text": "„Das ist nur warme Luft“, sagst du. Er glaubt dir kein Wort."
+  },
+  {
+   "nr": 44,
+   "typ": "wohnung",
+   "kapitel": 9,
+   "start": 176.508,
+   "dauer": 5.918,
+   "emotion": "erzaehlend",
+   "text": "Später, in ein Handtuch gewickelt, sitzt er vor der Kapsel. Du fragst: „Was ist noch da drin?“"
+  },
+  {
+   "nr": 45,
+   "typ": "lichtbild",
+   "kapitel": 9,
+   "start": 182.426,
+   "dauer": 5.438,
+   "emotion": "erzaehlend",
+   "text": "Ein bläuliches Lichtbild erscheint. Gesichter. Dutzende. Menschen. Und Wesen wie Nox."
+  },
+  {
+   "nr": 46,
+   "typ": "gesicht",
+   "kapitel": 9,
+   "start": 187.864,
+   "dauer": 3.35,
+   "emotion": "traurig",
+   "text": "„Gefangene“, sagt er leise. „Alle auf dem Schiff.“"
+  },
+  {
+   "nr": 47,
+   "typ": "lichtbild",
+   "kapitel": 10,
+   "start": 191.214,
+   "dauer": 5.942,
+   "emotion": "erzaehlend",
+   "text": "Nox wischt weiter. Orte erscheinen. Ein Parkplatz. Eine Bushaltestelle."
+  },
+  {
+   "nr": 48,
+   "typ": "gesicht",
+   "kapitel": 10,
+   "start": 197.156,
+   "dauer": 3.854,
+   "emotion": "ernst",
+   "text": "„Wo sie Menschen holen“, sagt er. „Fundorte.“"
+  },
+  {
+   "nr": 49,
+   "typ": "gesicht",
+   "kapitel": 10,
+   "start": 201.01,
+   "dauer": 5.438,
+   "emotion": "ernst",
+   "text": "Dir wird kalt. Die Sammler holen Menschen. *Hier*. In deiner Stadt."
+  },
+  {
+   "nr": 50,
+   "typ": "lichtbild",
+   "kapitel": 10,
+   "start": 206.448,
+   "dauer": 4.91,
+   "emotion": "erzaehlend",
+   "text": "Dann bleibt das Bild stehen. Ein Hauseingang. Mit einem Ahornbaum davor."
+  },
+  {
+   "nr": 51,
+   "typ": "gesicht",
+   "kapitel": 10,
+   "start": 211.358,
+   "dauer": 1.958,
+   "emotion": "ernst",
+   "text": "Irgendwas daran kommt dir bekannt vor."
+  },
+  {
+   "nr": 52,
+   "typ": "lichtbild",
+   "kapitel": 11,
+   "start": 213.316,
+   "dauer": 6.806,
+   "emotion": "erzaehlend",
+   "text": "Das Bild wird scharf. Die Hausnummer zwölf. Die kaputte Laterne. Das Klingelschild."
+  },
+  {
+   "nr": 53,
+   "typ": "gesicht",
+   "kapitel": 11,
+   "start": 220.122,
+   "dauer": 1.382,
+   "emotion": "spannend",
+   "text": "Das ist *dein* Haus."
+  },
+  {
+   "nr": 54,
+   "typ": "gesicht",
+   "kapitel": 11,
+   "start": 221.504,
+   "dauer": 3.134,
+   "emotion": "traurig",
+   "text": "Nox sagt nichts. Er schaut nur auf den Boden."
+  },
+  {
+   "nr": 55,
+   "typ": "titel",
+   "kapitel": 11,
+   "start": 224.638,
+   "dauer": 3.5,
+   "emotion": null,
+   "text": ""
+  },
+  {
+   "nr": 56,
+   "typ": "objekt",
+   "kapitel": 12,
+   "start": 228.138,
+   "dauer": 3.23,
+   "emotion": "erklaerend",
+   "text": "Check! Wie laufen Geckos kopfüber an Glasscheiben?"
+  },
+  {
+   "nr": 57,
+   "typ": "objekt",
+   "kapitel": 12,
+   "start": 231.368,
+   "dauer": 7.118,
+   "emotion": "erklaerend",
+   "text": "Millionen winziger Härchen an ihren Füßen. Dadurch wirken winzige Anziehungskräfte. Nur auf *nassem* Glas rutschen sie."
+  },
+  {
+   "nr": 58,
+   "typ": "titel",
+   "kapitel": 12,
+   "start": 238.486,
+   "dauer": 3.5,
+   "emotion": null,
+   "text": ""
+  }
+ ]
+}
