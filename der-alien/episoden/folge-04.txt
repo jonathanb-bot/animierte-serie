@@ -1,0 +1,96 @@
+# Folge 4: Das Versprechen
+@serie Der Alien
+@mund zitate
+@look 0
+@zeit nacht
+
+== Kapitel 1: Geständnis ==
+@hud tag=2 zeit=05:00 handy=20/100% netz=4/4 funk=nicht_verbunden
+[gesicht mara ort=wohnung hof licht=an angst blick=1,0.3 sagt=mara zoom-rein] „Der Mann hat gesagt, du wärst gefährlich.“ Mara *kennt* ihn.
+[gesicht du ort=wohnung hof licht=an wuetend sagt=du] „Du kennst den Mann im Mantel?“ Mara nickt. Sie kann dich nicht ansehen.
+[gesicht mara ort=wohnung hof licht=an traurig haelt haelt=handy blick=0,1 sagt=mara] „Ich hab ihm geschrieben“, flüstert sie. „Gestern Nacht. Als du geschrien hast.“
+[gesicht du ort=wohnung hof licht=an schreck wackeln=0.4] Deshalb stand er so schnell vor deiner Tür. Deshalb wusste er, *welche* Tür.
+[titel oben="Folge 4" gross="Der Alien" unten="Das Versprechen" farbe=#0f1c33 akzent=#59c7ff dauer=3]
+
+== Was bisher geschah ==
+[badezimmer nox=korb nox:neugierig zahnbuerste=weg fokus=300,1130 zoom=1.5 hud=false] Ein kleines Alien namens Nox versteckt sich bei dir. Ein Mann im Mantel jagt ihn.
+[flur rechts=offen licht=an mara:misstrauisch du pos=820,330 fokus=600,1100 zoom=1.1 hud=false] Nox will vom Dach aus Hilfe rufen. Den Schlüssel hat deine Nachbarin *Mara*.
+[handy ort=wohnung hof licht=an wer=mara nachricht="Und?" von=Unbekannt akku=64 uhrzeit=04:52 hud=false] Doch Mara hat Angst vor Nox. Und sie bekommt seltsame Nachrichten.
+[gesicht mara ort=wohnung hof licht=an angst blick=1,0.3 hud=false sagt=mara] Sie flüstert: „Der Mann hat gesagt, du wärst gefährlich.“
+
+== Kapitel 2: Elias ==
+@hud zeit=05:05 handy=19/100%
+[wohnung hof vorhang=zu licht=an mara:sitzt mara:traurig pos=760 fokus=700,1300 zoom=1.5 sagt=mara] Mara rutscht an der Wand nach unten. „Mein Bruder ist weg. Seit vier Monaten.“
+[gesicht mara ort=wohnung hof licht=an traurig sagt=mara] „Er heißt Elias. Er kam einfach nicht nach Hause. Die Polizei findet nichts.“
+[gesicht mara ort=wohnung hof licht=an besorgt blick=-0.6,0 sagt=mara] „Dann stand der Mann vor meiner Tür. Er sagte, er weiß, wo Elias ist.“
+[gesicht mara ort=wohnung hof licht=an traurig blick=0,1 sagt=mara] „Ich sollte nur melden, wenn hier im Haus was Seltsames passiert. Dann bekomme ich Elias zurück.“
+[gesicht du ort=wohnung hof licht=an besorgt] Du bist wütend. Und gleichzeitig verstehst du sie.
+
+== Kapitel 3: Das sagt Elias immer ==
+@hud zeit=05:12
+[wohnung hof vorhang=zu licht=an mara:sitzt mara:traurig nox:sitzt nox:neugierig pos=760,460 fokus=620,1300 zoom=1.45] Nox kriecht hinter dem Sofa hervor. Ganz langsam. Und setzt sich vor Mara.
+[gesicht nox ort=wohnung hof licht=an neugierig blick=0.6,0.2 sagt=nox] Er legt den Kopf schief. „Alles easy?“
+[gesicht mara ort=wohnung hof licht=an schreck sagt=mara zoom-rein] Mara starrt ihn an. „Das sagt *Elias* immer. Genau so.“
+[gesicht nox ort=wohnung hof licht=an traurig blick=0,1] Nox' Antennen sinken nach unten. Er sagt nichts.
+[gesicht du ort=wohnung hof licht=an misstrauisch sagt=du] „Nox“, sagst du leise. „Woher kennst du diesen Satz?“
+
+== Kapitel 4: Die Liste ==
+@hud zeit=05:20 handy=18/100%
+[lichtbild ort=wohnung hof inhalt=gesichter zeige=elias@9,nox@2 scroll=30 ruhig fokus=540,900] Nox öffnet die Kapsel. Wieder die vielen Gesichter. Die Liste der Gefangenen.
+[lichtbild ort=wohnung hof inhalt=gesicht gesicht=elias label=Elias zoom-rein fokus=540,880] Er tippt auf ein Gesicht. Wuschelige rote Haare. Ein schiefes Grinsen.
+[gesicht mara ort=wohnung hof licht=an schreck sagt=mara] Mara schlägt die Hand vor den Mund. „Elias.“
+[gesicht nox ort=wohnung hof licht=an traurig sagt=nox] „Er war in meiner Zelle“, sagt Nox. „Er hat mir Deutsch gelernt.“
+[gesicht mara ort=wohnung hof licht=an froh zoom-rein] Mara weint. Ganz leise. Er *lebt*.
+
+== Kapitel 5: Die Dachtür ==
+@hud zeit=05:35 handy=17/100%
+[gesicht du ort=wohnung hof licht=an entschlossen sagt=du] „Dann los“, sagst du. „Aufs Dach. Jetzt. Bevor es hell wird.“
+[wohnung hof vorhang=zu licht=an du:geht mara:haelt mara:besorgt pos=420,640 fokus=540,1250 zoom=1.45 sagt=mara] Mara hält dich fest. „Nicht. Er wartet oben. An der Dachtür.“
+[gesicht mara ort=wohnung hof licht=an besorgt sagt=mara] „Er hat es mir selbst gesagt. Er weiß, dass Nox zum Himmel will.“
+[hochhaus etage=24 treppe=mantel@24 unsere=17 zoom-rein] Oben, vor der Dachtür, steht ein Mann im Mantel. Und wartet.
+[gesicht nox ort=wohnung hof licht=an traurig sagt=nox] Nox' Antennen hängen. „Dann morgen Nacht“, flüstert er.
+
+== Kapitel 6: Ein ganzer Tag ==
+@hud zeit=06:10 handy=17/100%+
+[wohnung hof vorhang=zu licht=an mara:sitzt haelt=mara:powerbank objekt=handy objekt_x=860 objekt_y=1560 objekt_s=0.35 pos=700 fokus=700,1350 zoom=1.6 sagt=mara] Mara steckt dein Handy an ihre Powerbank. „Wenn wir warten, dann mit vollem Akku.“
+[gesicht nox ort=wohnung hof licht=an neugierig haelt haelt=powerbank sagt=nox] Nox schnuppert an der Powerbank. Dann leckt er daran. „Warm. Lecker?“
+[gesicht mara ort=wohnung hof licht=an froh] Mara muss lachen. Zum ersten Mal heute Nacht.
+[gesicht du ort=wohnung hof licht=an besorgt] Ihr müsst einen ganzen Tag überstehen. Im selben Haus wie die Sammler.
+[gesicht mara ort=wohnung hof licht=an entschlossen sagt=mara] „Ich schreib ihm nichts mehr“, sagt Mara. „*Versprochen*.“
+
+== Kapitel 7: Noch eine Aufnahme ==
+@hud zeit=06:30 handy=36/100%+
+[wohnung hof vorhang=zu licht=an nox:sitzt nox:neugierig objekt=kapsel objekt_x=640 objekt_y=1560 objekt_s=0.55 pos=480 fokus=560,1400 zoom=1.7 sagt=nox] Dann sagt Nox: „Da ist noch was. Von Elias. Für dich.“
+[gesicht mara ort=wohnung hof licht=an schreck sagt=mara] Mara hält den Atem an. „Für mich?“
+[gesicht nox ort=wohnung hof licht=an entschlossen haelt haelt=kapsel sagt=nox] „Er hat in die Kapsel gesprochen. Bevor ich weggelaufen bin.“
+[lichtbild ort=wohnung hof inhalt=tonwelle ruhig fokus=540,900] Der Lichtring pulsiert. Eine Tonaufnahme.
+[gesicht mara ort=wohnung hof licht=an besorgt sagt=mara] „Und wenn das gar nicht seine Stimme ist?“, flüstert Mara.
+
+== Kapitel 8: Wie klingt eine Stimme? ==
+@hud zeit=06:40 handy=45/100%+
+[lichtbild ort=wohnung hof inhalt=tonwelle mit=elias sagt=elias ruhig fokus=540,900] Eine Stimme: „Mara? Ich bin's. Elias.“
+[gesicht mara ort=wohnung hof licht=an froh sagt=mara] „Das ist er“, flüstert Mara. „Genau seine Stimme.“
+[gesicht du ort=wohnung hof licht=an denkt] Komisch. Deine *eigene* Stimme klingt auf Aufnahmen immer fremd. Die von anderen nie.
+[objekt objekte="kopfschall:Luft und Knochen" gross="Echter Fakt" farbe=#1e2f45] Echter Fakt: Deine eigene Stimme hörst du doppelt. Durch die Luft. Und über die *Knochen* deines Kopfes.
+[objekt objekte="mikrofon:Nur die Luft" gross="Echter Fakt" farbe=#1e2f45] Die Knochen lassen sie tiefer klingen. Auf Aufnahmen fehlt das. So hören dich alle anderen.
+
+== Kapitel 9: Morgengrauen ==
+@zeit morgen
+@hud zeit=06:58 handy=52/100%+
+[wohnung hof vorhang=zu du mara:sitzt nox:sitzt objekt=kapsel objekt_x=540 objekt_y=1560 objekt_s=0.5 pos=250,760,420 zoom-raus] Draußen wird es hell. Die Sonne geht auf. Der Notruf muss bis heute Nacht warten.
+[lichtbild ort=wohnung hof zeit=morgen inhalt=tonwelle mit=elias sagt=elias ruhig fokus=540,900] Die Aufnahme läuft weiter. Elias klingt jetzt ernst. „Hör mir gut zu, Mara.“
+[wohnung hof vorhang=zu mara:sitzt mara:besorgt objekt=kapsel objekt_x=540 objekt_y=1560 objekt_s=0.5 pos=700 fokus=620,1350 zoom=1.6 zoom_bis=1.8] Mara rückt näher an die Kapsel heran.
+[gesicht nox ort=wohnung hof muede] Nox schließt die Augen. Er kennt diese Worte schon.
+
+== Kapitel 10: Kein Wort ==
+@hud zeit=07:05 handy=55/100%+
+[lichtbild ort=wohnung hof zeit=morgen inhalt=gesicht gesicht=elias label=Elias sagt=elias ruhig fokus=540,900] „Sie versprechen dir, mich freizulassen. Das machen sie mit allen Familien.“
+[gesicht mara ort=wohnung hof schreck zoom-rein] Mara wird blass.
+[lichtbild ort=wohnung hof zeit=morgen inhalt=gesicht gesicht=elias label=Elias sagt=elias zoom-rein fokus=540,880] „Glaub ihm kein Wort. Auch dann nicht, wenn er aussieht wie ich.“
+[titel oben="Folge 5: Was Nox gestohlen hat" gross="Fortsetzung folgt" farbe=#0f1c33 akzent=#59c7ff dauer=3.5]
+
+== Check ==
+@hud aus
+[objekt objekte="mikrofon:Aufnahme" gross="Check" farbe=#1e2f45] Check! Warum klingt deine eigene Stimme auf Aufnahmen so fremd?
+[objekt objekte="kopfschall:Über die Knochen" gross="Die Antwort" farbe=#1e3a2a] Beim Sprechen hörst du dich auch über die Knochen. Das klingt tiefer. Auf der Aufnahme hörst du nur, was alle *anderen* hören.
+[titel gross="Was hättest du|gemacht?" groesse=120 unten="Schreib es in die Kommentare" farbe=#0f1c33 dauer=3.5]

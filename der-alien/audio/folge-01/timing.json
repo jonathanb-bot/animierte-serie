@@ -1,0 +1,500 @@
+{
+ "dauer": 201.912,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "wohnung",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 3.47,
+   "emotion": "erzaehlend",
+   "text": "Du bist allein zu Hause. Aber im Bad summt etwas."
+  },
+  {
+   "nr": 2,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 3.47,
+   "dauer": 4.31,
+   "emotion": "ernst",
+   "text": "Deine elektrische Zahnbürste. Dabei steht sie doch in der Ladestation."
+  },
+  {
+   "nr": 3,
+   "typ": "badezimmer",
+   "kapitel": 1,
+   "start": 7.78,
+   "dauer": 3.59,
+   "emotion": "erzaehlend",
+   "text": "Das Badfenster ist offen. Du hast es nach dem Duschen vergessen."
+  },
+  {
+   "nr": 4,
+   "typ": "badezimmer",
+   "kapitel": 1,
+   "start": 11.37,
+   "dauer": 5.342,
+   "emotion": "erzaehlend",
+   "text": "Auf deinem Wäschekorb sitzt etwas Kleines. Grün. Mit riesigen, schwarzen Augen."
+  },
+  {
+   "nr": 5,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 16.712,
+   "dauer": 1.07,
+   "emotion": "spannend",
+   "text": "Du schreist."
+  },
+  {
+   "nr": 6,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 17.782,
+   "dauer": 1.358,
+   "emotion": "spannend",
+   "text": "Es schreit auch."
+  },
+  {
+   "nr": 7,
+   "typ": "titel",
+   "kapitel": 1,
+   "start": 19.14,
+   "dauer": 3.0,
+   "emotion": null,
+   "text": ""
+  },
+  {
+   "nr": 8,
+   "typ": "badezimmer",
+   "kapitel": 2,
+   "start": 22.14,
+   "dauer": 3.398,
+   "emotion": "spannend",
+   "text": "Dann hört ihr gleichzeitig auf. Und starrt euch nur an."
+  },
+  {
+   "nr": 9,
+   "typ": "badezimmer",
+   "kapitel": 2,
+   "start": 25.538,
+   "dauer": 3.758,
+   "emotion": "wuetend",
+   "text": "Es fuchtelt mit deiner Zahnbürste. Als wäre sie eine *Waffe*."
+  },
+  {
+   "nr": 10,
+   "typ": "objekt",
+   "kapitel": 2,
+   "start": 29.296,
+   "dauer": 6.254,
+   "emotion": "erklaerend",
+   "text": "Echter Fakt: Eine Schallzahnbürste bewegt ihren Kopf rund *31.000-mal* pro Minute. Daher das Summen."
+  },
+  {
+   "nr": 11,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 35.55,
+   "dauer": 2.918,
+   "emotion": "erzaehlend",
+   "text": "Dann fragt es mit heller Stimme: „Alles easy?“"
+  },
+  {
+   "nr": 12,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 38.468,
+   "dauer": 3.35,
+   "emotion": "ernst",
+   "text": "Es spricht *Deutsch*. Und nichts hier ist easy."
+  },
+  {
+   "nr": 13,
+   "typ": "tuer",
+   "kapitel": 3,
+   "start": 41.818,
+   "dauer": 3.398,
+   "emotion": "erzaehlend",
+   "text": "Da klingelt es an deiner Wohnungstür. Kurz vor Mitternacht."
+  },
+  {
+   "nr": 14,
+   "typ": "badezimmer",
+   "kapitel": 3,
+   "start": 45.216,
+   "dauer": 3.974,
+   "emotion": "spannend",
+   "text": "Das Wesen lässt die Zahnbürste fallen. Seine Haut fängt an, schwach zu *leuchten*."
+  },
+  {
+   "nr": 15,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 49.19,
+   "dauer": 2.486,
+   "emotion": "spannend",
+   "text": "„Bitte. Sag ihm nicht, dass ich hier bin.“"
+  },
+  {
+   "nr": 16,
+   "typ": "handy",
+   "kapitel": 3,
+   "start": 51.676,
+   "dauer": 3.854,
+   "emotion": "erzaehlend",
+   "text": "Du willst jemanden anrufen. Aber dein Handy hat plötzlich *keinen Empfang*."
+  },
+  {
+   "nr": 17,
+   "typ": "tuer",
+   "kapitel": 3,
+   "start": 55.53,
+   "dauer": 3.662,
+   "emotion": "erzaehlend",
+   "text": "Es klingelt noch einmal. Langsam. Geduldig."
+  },
+  {
+   "nr": 18,
+   "typ": "tuer",
+   "kapitel": 4,
+   "start": 59.192,
+   "dauer": 4.67,
+   "emotion": "erzaehlend",
+   "text": "Du schleichst zur Tür. Ganz leise. Und schaust durch den Türspion."
+  },
+  {
+   "nr": 19,
+   "typ": "spion",
+   "kapitel": 4,
+   "start": 63.862,
+   "dauer": 4.046,
+   "emotion": "froh",
+   "text": "Draußen steht ein Mann. Grauer Mantel. Freundliches Gesicht."
+  },
+  {
+   "nr": 20,
+   "typ": "objekt",
+   "kapitel": 4,
+   "start": 67.908,
+   "dauer": 6.158,
+   "emotion": "erklaerend",
+   "text": "Echter Fakt: Ein Türspion ist eine *Fischaugen-Linse*. Von innen siehst du fast den ganzen Flur."
+  },
+  {
+   "nr": 21,
+   "typ": "objekt",
+   "kapitel": 4,
+   "start": 74.066,
+   "dauer": 4.718,
+   "emotion": "erklaerend",
+   "text": "Von außen sieht man dagegen kaum etwas. Die Linsen funktionieren nur in *eine* Richtung."
+  },
+  {
+   "nr": 22,
+   "typ": "spion",
+   "kapitel": 4,
+   "start": 78.784,
+   "dauer": 3.662,
+   "emotion": "froh",
+   "text": "„Guten Abend“, sagt er. „Sie haben etwas gefunden, das *mir* gehört.“"
+  },
+  {
+   "nr": 23,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 82.446,
+   "dauer": 3.662,
+   "emotion": "ernst",
+   "text": "Er weiß, dass du hier bist. Obwohl du keinen Laut gemacht hast."
+  },
+  {
+   "nr": 24,
+   "typ": "tuer",
+   "kapitel": 5,
+   "start": 86.108,
+   "dauer": 4.43,
+   "emotion": "erzaehlend",
+   "text": "Du legst die Kette vor und öffnest einen Spalt. Im Treppenhaus ist es dunkel."
+  },
+  {
+   "nr": 25,
+   "typ": "tuer",
+   "kapitel": 5,
+   "start": 90.538,
+   "dauer": 4.382,
+   "emotion": "erzaehlend",
+   "text": "Du leuchtest mit dem Handy. Für einen Moment blitzen seine Augen *grün* auf."
+  },
+  {
+   "nr": 26,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 94.92,
+   "dauer": 5.774,
+   "emotion": "froh",
+   "text": "Bestimmt nur eine Spiegelung. „Mir ist ein kleines Tier entlaufen“, sagt er. „Grün. Es beißt.“"
+  },
+  {
+   "nr": 27,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 100.694,
+   "dauer": 3.47,
+   "emotion": "erzaehlend",
+   "text": "Er sieht dich lange an. Als würde er sich dein Gesicht *merken*."
+  },
+  {
+   "nr": 28,
+   "typ": "badezimmer",
+   "kapitel": 6,
+   "start": 104.164,
+   "dauer": 2.87,
+   "emotion": "spannend",
+   "text": "Hinter dir, im Bad, hörst du ein leises Fiepen."
+  },
+  {
+   "nr": 29,
+   "typ": "gesicht",
+   "kapitel": 6,
+   "start": 107.034,
+   "dauer": 4.502,
+   "emotion": "ernst",
+   "text": "Du könntest einfach die Wahrheit sagen. Ein Satz. Und alles wäre vorbei."
+  },
+  {
+   "nr": 30,
+   "typ": "gesicht",
+   "kapitel": 6,
+   "start": 111.536,
+   "dauer": 3.782,
+   "emotion": "spannend",
+   "text": "Aber du denkst an diese riesigen Augen. Und wie es gezittert hat."
+  },
+  {
+   "nr": 31,
+   "typ": "tuer",
+   "kapitel": 6,
+   "start": 115.318,
+   "dauer": 2.534,
+   "emotion": "ernst",
+   "text": "„Hier ist kein Tier“, sagst du. „Gute Nacht.“"
+  },
+  {
+   "nr": 32,
+   "typ": "gesicht",
+   "kapitel": 6,
+   "start": 117.852,
+   "dauer": 3.446,
+   "emotion": "froh",
+   "text": "Er nickt langsam. „Natürlich. Gute Nacht.“"
+  },
+  {
+   "nr": 33,
+   "typ": "tuer",
+   "kapitel": 7,
+   "start": 121.298,
+   "dauer": 4.718,
+   "emotion": "spannend",
+   "text": "Du schließt die Tür. Draußen entfernen sich Schritte. Ganz ruhig."
+  },
+  {
+   "nr": 34,
+   "typ": "hochhaus",
+   "kapitel": 7,
+   "start": 126.016,
+   "dauer": 4.046,
+   "emotion": "erzaehlend",
+   "text": "Siebzehnter Stock. Sechzehnter. Die Schritte werden leiser."
+  },
+  {
+   "nr": 35,
+   "typ": "handy",
+   "kapitel": 7,
+   "start": 130.062,
+   "dauer": 3.038,
+   "emotion": "erzaehlend",
+   "text": "Dein Handy vibriert. Der Empfang ist wieder da."
+  },
+  {
+   "nr": 36,
+   "typ": "badezimmer",
+   "kapitel": 7,
+   "start": 133.1,
+   "dauer": 2.702,
+   "emotion": "erzaehlend",
+   "text": "Im Bad summt die Zahnbürste noch auf dem Boden."
+  },
+  {
+   "nr": 37,
+   "typ": "gesicht",
+   "kapitel": 7,
+   "start": 135.802,
+   "dauer": 3.254,
+   "emotion": "ruhig",
+   "text": "Du atmest aus. Er ist weg. *Denkst* du."
+  },
+  {
+   "nr": 38,
+   "typ": "badezimmer",
+   "kapitel": 8,
+   "start": 139.056,
+   "dauer": 3.35,
+   "emotion": "spannend",
+   "text": "Das Wesen ist in die Badewanne geklettert. Unter dein Handtuch."
+  },
+  {
+   "nr": 39,
+   "typ": "badezimmer",
+   "kapitel": 8,
+   "start": 142.406,
+   "dauer": 3.23,
+   "emotion": "erzaehlend",
+   "text": "„Weg?“, flüstert es. „Er ist weg“, sagst du."
+  },
+  {
+   "nr": 40,
+   "typ": "gesicht",
+   "kapitel": 8,
+   "start": 145.636,
+   "dauer": 3.59,
+   "emotion": "erzaehlend",
+   "text": "Es schnuppert an deiner Zahnpasta. Dann beißt es hinein. „Bah!“"
+  },
+  {
+   "nr": 41,
+   "typ": "gesicht",
+   "kapitel": 8,
+   "start": 149.226,
+   "dauer": 3.734,
+   "emotion": "froh",
+   "text": "Du musst fast lachen. Zum ersten Mal heute Nacht."
+  },
+  {
+   "nr": 42,
+   "typ": "gesicht",
+   "kapitel": 8,
+   "start": 152.96,
+   "dauer": 4.022,
+   "emotion": "traurig",
+   "text": "„Wer war das?“, fragst du. Es schaut zur Tür. „*Kein* Mensch.“"
+  },
+  {
+   "nr": 43,
+   "typ": "wohnung",
+   "kapitel": 9,
+   "start": 156.982,
+   "dauer": 2.822,
+   "emotion": "ruhig",
+   "text": "Du baust ihm ein Lager aus Decken. Nur für *eine* Nacht."
+  },
+  {
+   "nr": 44,
+   "typ": "gesicht",
+   "kapitel": 9,
+   "start": 159.804,
+   "dauer": 3.23,
+   "emotion": "ruhig",
+   "text": "„Ich bin Nox“, sagt es. Dann rollt er sich zusammen."
+  },
+  {
+   "nr": 45,
+   "typ": "gesicht",
+   "kapitel": 9,
+   "start": 163.034,
+   "dauer": 4.118,
+   "emotion": "erzaehlend",
+   "text": "Er drückt eine flache Metallscheibe an sich. Ein Lichtring glimmt darauf."
+  },
+  {
+   "nr": 46,
+   "typ": "gesicht",
+   "kapitel": 9,
+   "start": 167.152,
+   "dauer": 3.662,
+   "emotion": "erzaehlend",
+   "text": "„Was ist das?“, fragst du. „Meins.“ Mehr sagt er nicht."
+  },
+  {
+   "nr": 47,
+   "typ": "handy",
+   "kapitel": 9,
+   "start": 170.814,
+   "dauer": 2.342,
+   "emotion": "erzaehlend",
+   "text": "Und dein Handy? Wieder *kein Empfang*."
+  },
+  {
+   "nr": 48,
+   "typ": "tuer",
+   "kapitel": 10,
+   "start": 173.156,
+   "dauer": 3.302,
+   "emotion": "erzaehlend",
+   "text": "Du gehst noch einmal zur Tür. Nur zur Sicherheit."
+  },
+  {
+   "nr": 49,
+   "typ": "gesicht",
+   "kapitel": 10,
+   "start": 176.458,
+   "dauer": 2.726,
+   "emotion": "spannend",
+   "text": "Du hältst die Luft an. Und schaust hindurch."
+  },
+  {
+   "nr": 50,
+   "typ": "spion",
+   "kapitel": 10,
+   "start": 179.184,
+   "dauer": 3.374,
+   "emotion": "erzaehlend",
+   "text": "Der Mann steht noch immer da. Direkt vor deiner Tür."
+  },
+  {
+   "nr": 51,
+   "typ": "spion",
+   "kapitel": 10,
+   "start": 182.558,
+   "dauer": 1.718,
+   "emotion": "ernst",
+   "text": "Und sein Lächeln ist *verschwunden*."
+  },
+  {
+   "nr": 52,
+   "typ": "titel",
+   "kapitel": 10,
+   "start": 184.276,
+   "dauer": 3.5,
+   "emotion": null,
+   "text": ""
+  },
+  {
+   "nr": 53,
+   "typ": "objekt",
+   "kapitel": 11,
+   "start": 187.776,
+   "dauer": 3.662,
+   "emotion": "erklaerend",
+   "text": "Check! Kann man von außen durch einen Türspion schauen?"
+  },
+  {
+   "nr": 54,
+   "typ": "objekt",
+   "kapitel": 11,
+   "start": 191.438,
+   "dauer": 6.974,
+   "emotion": "erklaerend",
+   "text": "Kaum. Die Linsen wirken nur von innen. Aber es gibt Umkehrgeräte. Deshalb haben manche Türspione eine *Klappe*."
+  },
+  {
+   "nr": 55,
+   "typ": "titel",
+   "kapitel": 11,
+   "start": 198.412,
+   "dauer": 3.5,
+   "emotion": null,
+   "text": ""
+  }
+ ]
+}

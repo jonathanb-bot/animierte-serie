@@ -1,0 +1,99 @@
+# Folge 2: Nur bis morgen
+@serie Der Alien
+@mund zitate
+@look 0
+@zeit nacht
+
+== Kapitel 1: Er wartet ==
+@hud tag=2 zeit=00:05 handy=32/100% netz=0/4 funk=nicht_verbunden
+[spion mantel entschlossen nah zoom-rein] Er steht noch immer vor deiner Tür. Und er lächelt nicht mehr.
+[gesicht du ort=tuer angst] Du wagst nicht zu atmen. Eine Minute. Zwei.
+[tuer du:lauscht nox:angst pos=760,330 sagt=nox] Hinter dir tappen kleine Füße. „Er wartet“, flüstert Nox. „Sammler warten *immer*.“
+[spion mantel neutral pose=geht zoom-raus] Dann dreht sich der Mann um. Und geht.
+[handy ort=tuer netz=0 netz_bis=4 akku=32 uhrzeit=00:06] Sofort ist dein Empfang wieder da. Komisch.
+@hud netz=4/4
+[titel oben="Folge 2" gross="Der Alien" unten="Nur bis morgen" farbe=#0f1c33 akzent=#59c7ff dauer=3]
+
+== Was bisher geschah ==
+[badezimmer nox=korb nox:neugierig zahnbuerste=weg fokus=300,1130 zoom=1.5 hud=false] Du bist allein zu Hause. In deinem Bad sitzt ein kleines, grünes Wesen.
+[gesicht nox ort=badezimmer licht=an froh hud=false] Es heißt *Nox*. Und es spricht Deutsch.
+[spion mantel froh hud=false] Ein Mann im grauen Mantel will es zurück. Du sagst ihm, hier sei kein Tier.
+[spion mantel entschlossen nah hud=false] Doch er ist nicht gegangen. Er hat vor deiner Tür *gewartet*.
+
+== Kapitel 2: Was bist du? ==
+@hud zeit=00:20 handy=31/100%
+[kueche du:sitzt nox:sitzt pos=360,700 fokus=540,1250 zoom=1.25] Ihr sitzt auf dem Küchenboden. Du und ein *Alien*. Um Mitternacht.
+[gesicht du ort=kueche misstrauisch] „Was bist du?“, fragst du. „Und wer sind die *Sammler*?“
+[gesicht nox ort=kueche besorgt zeigt] „Sie fangen. Menschen. Und uns.“ Er zeigt auf sich. „Ich bin weggelaufen.“
+[gesicht nox ort=kueche entschlossen] „Ich rufe meine Leute. Dann bin ich weg. Nur bis morgen.“
+[gesicht du ort=kueche misstrauisch zoom-rein] Nur bis morgen. Das klingt gut. Fast *zu* gut.
+
+== Kapitel 3: Die Kapsel ==
+@hud zeit=00:34
+[kueche du:sitzt nox:sitzt pos=360,700 objekt=kapsel objekt_x=540 objekt_y=1560 objekt_s=0.55 fokus=540,1350 zoom=1.45 sagt=nox] Nox legt die Metallscheibe auf den Boden. „Kapsel“, sagt er. „Ruft meine Leute.“
+[gesicht nox ort=kueche entschlossen zeigt_hoch] „Aber nur nachts. Und nur unter *freiem* Himmel.“
+[wohnung hof vorhang=auf licht=an fokus=540,700 zoom=1.3 zoom_bis=1.45] Deine Fenster zeigen auf den Innenhof. Gegenüber nur Hauswände. Viel zu wenig Himmel.
+[gesicht du ort=wohnung hof licht=an denkt] Das Dach! Aber die Dachtür ist immer *abgeschlossen*.
+[gesicht nox ort=wohnung hof licht=an traurig] Nox schaut zum Fenster. „Wenn die Sonne kommt, ist es vorbei. Dann warten. Einen ganzen Tag.“
+
+== Kapitel 4: Sprechsteine ==
+@hud zeit=00:58 handy=30/100%
+[wohnung hof vorhang=zu licht=an du:denkt nox:neugierig pos=300,700 objekt=kiste objekt_x=760 objekt_y=1470 objekt_s=0.6] Während du nachdenkst, durchwühlt Nox deine Umzugskiste.
+[wohnung hof vorhang=zu licht=an nox:froh nox:haelt haelt=nox:walkie objekt=walkie objekt_x=700 objekt_y=1490 objekt_s=0.4 pos=540 fokus=560,1330 zoom=1.9] Er findet deine alten *Walkie-Talkies*. Aus der Grundschule.
+[gesicht nox ort=wohnung hof licht=an neugierig haelt haelt=walkie sagt=nox] „Hallo?“ Seine Stimme kommt aus dem zweiten Gerät. Nox quiekt vor Freude.
+[gesicht nox ort=wohnung hof licht=an froh haelt haelt=walkie] „*Sprechsteine!*“, ruft er. Er drückt beide an sich.
+[gesicht du ort=wohnung hof licht=an froh sagt=du] „Die reichen nur bis zum Nachbarn“, sagst du. Er hört gar nicht zu.
+
+== Kapitel 5: Unter der Laterne ==
+@hud zeit=01:30 handy=29/100%
+[badezimmer du nox:neugierig nox=fenster pos=700 fokus=520,980 zoom=1.08] Du schaust aus dem Badfenster. Siebzehn Stockwerke tiefer liegt die Straße.
+[tiefblick schaut_hoch zoom-rein] Unter einer Laterne steht der Mann im Mantel. Er schaut nach oben.
+[gesicht nox ort=badezimmer neutral haelt haelt=kapsel] Nox tippt auf die Kapsel. „Ich schaue, wo ihr Schiff ist. Nur kurz.“
+[tiefblick flimmern] Da unten *flimmert* der Mann. Nur einen Augenblick. Wie ein kaputter Bildschirm.
+[gesicht du ort=badezimmer schreck] Du blinzelst. Das war bestimmt die Laterne. Oder?
+[gesicht nox ort=badezimmer besorgt blick=-1,0.4] „Schiff ist weg“, sagt Nox. Aber er sieht dich dabei nicht an.
+
+== Kapitel 6: Klettern ==
+@hud zeit=02:10 handy=28/100%
+[gesicht nox ort=badezimmer licht=an entschlossen zeigt_haende] „So bin ich gekommen“, sagt Nox. Er zeigt dir seine Finger. Kleine, weiche Polster.
+[badezimmer licht=an nox=fliesen nox:froh du:schreck pos=380 fokus=580,1100 zoom=1.1] Er drückt die Hand an die Fliesen. Und bleibt einfach *hängen*.
+[objekt objekte="gecko:Echte Geckos" gross="Echter Fakt" farbe=#1e2f45] Nox' Polster sind erfunden. Aber echte *Geckos* laufen wirklich an Wänden hoch.
+[objekt objekte="gecko:Millionen Härchen" gross="Echter Fakt" farbe=#1e2f45] An ihren Füßen sitzen Millionen winziger Härchen. Winzige Anziehungskräfte halten sie fest.
+[tiefblick leer] Die Laterne unten ist leer. „Ich klettere zum Dach“, sagt Nox. „Allein.“
+
+== Kapitel 7: Regen ==
+@hud zeit=02:40 handy=27/100%
+[badezimmer regen nox=fenster nox:entschlossen fokus=300,800 zoom=1.5] Gerade als Nox aufs Fensterbrett steigt, fängt es an zu *regnen*.
+[fassade regen rutscht nox:angst] Nox klettert los. Einen Meter. Zwei. Dann rutscht seine Hand ab.
+[fassade regen hand nox:schreck leuchten=0.5 wackeln=0.5] Du greifst zu. Im letzten Moment. Und ziehst ihn zurück ins Bad.
+[objekt objekte="gecko_nass:Nasses Glas" gross="Echter Fakt" farbe=#1e2f45] Echter Fakt: Auch echte Geckos verlieren auf *nassem* Glas ihren Halt.
+[gesicht nox ort=badezimmer angst leuchten=0.6] Nox zittert. Und leuchtet. „Danke“, flüstert er.
+
+== Kapitel 8: Waffe! ==
+@hud zeit=03:05 handy=26/100%
+[wohnung hof vorhang=zu licht=an du:zeigt haelt=du:foehn nox:springt nox:schreck pos=700,180 sagt=nox] Du willst Nox mit dem Föhn trocknen. Er springt hinter das Sofa. „*Waffe!*“
+[gesicht du ort=wohnung hof licht=an froh sagt=du] „Das ist nur warme Luft“, sagst du. Er glaubt dir kein Wort.
+[wohnung hof vorhang=zu licht=aus du:sitzt nox:sitzt objekt=kapsel objekt_x=540 objekt_y=1560 objekt_s=0.55 pos=330,750 sagt=du] Später, in ein Handtuch gewickelt, sitzt er vor der Kapsel. Du fragst: „Was ist noch da drin?“
+[lichtbild ort=wohnung hof inhalt=gesichter scroll=40 ruhig fokus=540,900] Ein bläuliches Lichtbild erscheint. Gesichter. Dutzende. Menschen. Und Wesen wie Nox.
+[gesicht nox ort=wohnung hof traurig] „Gefangene“, sagt er leise. „Alle auf dem Schiff.“
+
+== Kapitel 9: Fundorte ==
+@hud zeit=03:30 handy=25/100%
+[lichtbild ort=wohnung hof inhalt=orte ruhig fokus=540,900] Nox wischt weiter. Orte erscheinen. Ein Parkplatz. Eine Bushaltestelle.
+[gesicht nox ort=wohnung hof besorgt] „Wo sie Menschen holen“, sagt er. „Fundorte.“
+[gesicht du ort=wohnung hof besorgt] Dir wird kalt. Die Sammler holen Menschen. *Hier*. In deiner Stadt.
+[lichtbild ort=wohnung hof inhalt=eingang unscharf ruhig fokus=540,900] Dann bleibt das Bild stehen. Ein Hauseingang. Mit einem Ahornbaum davor.
+[gesicht du ort=wohnung hof misstrauisch] Irgendwas daran kommt dir bekannt vor.
+
+== Kapitel 10: Ahornstraße 12 ==
+@hud zeit=03:40
+[lichtbild ort=wohnung hof inhalt=eingang scharf zoom-rein fokus=540,880] Das Bild wird scharf. Die Hausnummer zwölf. Die kaputte Laterne. Das Klingelschild.
+[gesicht du ort=wohnung hof schreck zoom-rein] Das ist *dein* Haus.
+[gesicht nox ort=wohnung hof traurig blick=0,1] Nox sagt nichts. Er schaut nur auf den Boden.
+[titel oben="Folge 3: Deine Nachbarin" gross="Fortsetzung folgt" farbe=#0f1c33 akzent=#59c7ff dauer=3.5]
+
+== Check ==
+@hud aus
+[objekt objekte="gecko:Gecko" gross="Check" farbe=#1e2f45] Check! Wie laufen Geckos kopfüber an Glasscheiben?
+[objekt objekte="gecko_nass:Nur nicht nass" gross="Die Antwort" farbe=#1e3a2a] Millionen winziger Härchen an ihren Füßen. Dadurch wirken winzige Anziehungskräfte. Nur auf *nassem* Glas rutschen sie.
+[titel gross="Was hättest du|gemacht?" groesse=120 unten="Schreib es in die Kommentare" farbe=#0f1c33 dauer=3.5]

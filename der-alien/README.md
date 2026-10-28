@@ -6,10 +6,21 @@ Zweite, eigenständige Serie im Projekt. Gleiches Format und gleicher Stil wie �
 - `storylines/folge-XX.md`: ausführliche Storylines (Kapitel, Einstellungen, Check, Fakten-Check, Dauer)
 - `episoden/folge-XX.txt`: die Drehbücher → `node render.mjs der-alien/episoden/folge-01.txt` (Ausgabe `ausgabe/der-alien-folge-01.mp4`)
 - `figuren.json`: die Figuren dieser Serie (du, du_shirt, mara, falschemara, elias, mantel, nox, sammler)
-- `audio/folge-XX/NNN.mp3`: Stimme pro Einstellung (wie bei „24. Stock“)
+- `audio/folge-XX/NNN.mp3` + `NNN.json`: Stimme und Wortzeiten pro Einstellung, `musik/folge-XX.mp3`: leise Geräusche und Stille-Schnitte
 - `dauer.mjs`: schätzt die Dauer einer Storyline und teilt sie in Teile von höchstens 1 Minute
 
 Die Grafik steckt in `engine/alien.js`. „24. Stock“ bleibt davon unverändert.
+
+## Stimme (immer Gemini „Orus“)
+
+```bash
+pip install -r requirements.txt                                                  # einmalig
+python -m ton.folge der-alien/episoden/folge-01.txt --stimme gemini:Orus --anfragen 4
+python -m ton.pruefen der-alien-folge-01                                         # Ziel ca. -15 LUFS
+node render.mjs der-alien/episoden/folge-01.txt --teile
+```
+
+`ton.folge` schreibt die Dateien in `der-alien/audio/` und `der-alien/musik/` und setzt `@musik`, `@musik_lautstaerke` und `@whoosh aus` oben ins Drehbuch. Gemini ist kostenlos, aber auf ca. 10 Anfragen pro Tag begrenzt: 4 Anfragen pro Folge, also etwa 2 Folgen pro Tag. Ein zweiter Lauf mit gleichem Text kostet nichts (Zwischenspeicher). Keine Drones, kein Rauschen.
 
 ## Kopf eines Drehbuchs
 
@@ -17,6 +28,7 @@ Die Grafik steckt in `engine/alien.js`. „24. Stock“ bleibt davon unveränder
 # Folge 1: Im Badezimmer
 @serie Der Alien
 @mund zitate                       ← Mund bewegt sich nur bei Wörtern in „…“
+@look 0                            ← heller Look (kein dunkler Farblook wie bei 24. Stock)
 @zeit nacht
 @hud tag=1 zeit=23:17 handy=34/100% netz=4/4 funk=nicht_verbunden
 ```

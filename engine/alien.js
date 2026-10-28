@@ -828,6 +828,8 @@
     if (name === "wesen") { ellipse(x, y, R * 0.9, R, "#9fb2cc"); for (const sd of [-1, 1]) { ellipse(x + sd * R * 0.35, y - R * 0.1, R * 0.22, R * 0.3, "#ffffff"); circle(x + sd * R * 0.35, y - R * 0.05, R * 0.1, "#1d2128"); } return; }
     A.kopf(x, y, R, name ? A.fig(name) : zufallsMensch(seed), { t, ausdruck: "neutral", seed });
   };
+  // Countdown, der während der Einstellung von countdown bis countdown_bis herunterzählt
+  const zaehler = (s, p) => { const v = Number(s.countdown ?? 10); if (s.countdown_bis == null) return v; const b = Number(s.countdown_bis); return Math.max(b, v - Math.floor(p * (v - b + 1))); };
   function inhalt(s, t, p) {
     const art = String(s.inhalt || "gesichter");
     ctx.fillStyle = "#000"; ctx.fillRect(0, 0, PW, PH);
@@ -843,7 +845,7 @@
         if (s.markiere && nm === s.markiere) { ctx.beginPath(); A.rr(x - 66, y - 70, 132, 148, 16); ctx.lineWidth = 8; ctx.strokeStyle = "#ffffff"; ctx.stroke(); A.text("GEFANGEN", x, y + 60, 20, "#ffffff", "center", 700, "HUD"); }
         if (s.neu && nm === s.neu) { const pu = 0.5 + 0.5 * Math.sin(t * 6); ctx.beginPath(); A.rr(x - 66, y - 70, 132, 148, 16); ctx.lineWidth = 10; ctx.strokeStyle = rgba("#ffffff", 0.5 + 0.5 * pu); ctx.stroke(); A.text("NEU", x, y - 82, 26, "#ffffff", "center", 700, "HUD"); }
       }
-      if (s.countdown != null) { box(PW - 170, 20, 150, 110, 18, "rgba(0,0,0,0.6)"); A.text(String(s.countdown), PW - 95, 76, 80, "#ffffff"); }
+      if (s.countdown != null) { box(PW - 170, 20, 150, 110, 18, "rgba(0,0,0,0.6)"); A.text(String(zaehler(s, p)), PW - 95, 76, 80, "#ffffff"); }
     } else if (art === "gesicht") {
       kopfVon(s.gesicht || "elias", PW / 2, PH / 2 - 20, 190, t, 3);
       if (s.label) { box(PW / 2 - 200, PH - 110, 400, 70, 14, "rgba(255,255,255,0.15)"); A.text(String(s.label).toUpperCase(), PW / 2, PH - 74, 40, "#ffffff"); }
@@ -861,7 +863,7 @@
     } else if (art === "eingang") {
       ctx.save(); if (s.unscharf) ctx.filter = "blur(7px)"; A.hauseingang(PW / 2 + 40, PH - 30, s.scharf ? 1.0 : 0.95, t); ctx.restore();
     } else if (art === "countdown") {
-      A.text(String(s.countdown ?? 10), PW / 2, PH / 2, 360, "#ffffff");
+      A.text(String(zaehler(s, p)), PW / 2, PH / 2, 360, "#ffffff");
     } else if (art === "tonwelle") {
       if (s.mit) { ctx.save(); ctx.globalAlpha = 0.45; kopfVon(s.mit, PW / 2, 230, 150, t, 2); ctx.restore(); }
       for (let i = 0; i < 44; i++) { const h = 20 + Math.abs(Math.sin(t * 7 + i * 0.7) * Math.sin(t * 2.3 + i)) * 150 * (s._spricht ? 1 : 0.25); box(30 + i * 18.5, 500 - h / 2, 11, h, 5, "#ffffff"); }
@@ -957,7 +959,7 @@
     if (f.art !== "nox") return gesichtAlt(s, t, p);
     const dn = A.unscharf(s.ort || "wohnung", s, t, 12, 1);
     ctx.fillStyle = "rgba(0,0,0,0.12)"; ctx.fillRect(-2000, -2000, 5000, 6000);
-    A.nox(540, 1700 + Math.sin(t * 1.5) * 6, 5.6, f, { t, ausdruck: s.ausdruck, spricht: s._spricht && (s.sprecher ? s.sprecher === s.figur : true) && s.stumm !== true, leuchten: s.leuchten === true ? 1 : s.leuchten || 0, blick: s.blick, pose: s.pose || "steht", halt: s.haelt && String(s.haelt).replace(/^nox:/, "") });
+    A.nox(540, 1700 + Math.sin(t * 1.5) * 6, 5.6, f, { t, ausdruck: s.ausdruck, spricht: s._spricht && (s.sprecher ? s.sprecher === s.figur : true) && s.stumm !== true, leuchten: s.leuchten === true ? 1 : s.leuchten || 0, blick: typeof s.blick === "string" && s.blick.includes(",") ? s.blick.split(",").map(Number) : s.blick, pose: s.pose || "steht", halt: s.haelt && String(s.haelt).replace(/^nox:/, "") });
     if (s.licht === "taschenlampe") A.licht(700, 700, 700, "#fff4d0", 1.1);
     A._dunkel = s.dunkel ?? (dn ?? 0) * 0.75;
   };

@@ -617,7 +617,7 @@
     const ein = E.pop(clamp(t / 0.5, 0, 1));
     ctx.save(); ctx.translate(540, 820); ctx.scale(0.8 + 0.2 * ein, 0.8 + 0.2 * ein); ctx.globalAlpha = clamp(t / 0.25, 0, 1);
     const zeilen = String(s.gross || "").toUpperCase().split("|");
-    if (s.oben) A.text(s.oben.toUpperCase(), 0, -170 - (zeilen.length - 1) * 45, 60, s.akzent || "#ffcf3d");
+    if (s.oben) A.text(s.oben.toUpperCase(), 0, -170 - (zeilen.length - 1) * 45, 60, s.akzent || "#ffcf3d", "center", 900, "Titel", 940);
     zeilen.forEach((z, i) => { ctx.save(); ctx.shadowColor = "rgba(0,0,0,0.6)"; ctx.shadowBlur = 30; A.text(z, 0, i * (s.groesse || 150) * 1.05 - (zeilen.length - 1) * (s.groesse || 150) * 0.5, s.groesse || 150, s.textfarbe || "#f4efe6", "center", 900, "Titel", 940); ctx.restore(); });
     if (s.unten) A.text(s.unten.toUpperCase(), 0, 170 + (zeilen.length - 1) * 80, 52, "rgba(255,255,255,0.7)", "center", 700, "HUD");
     ctx.restore();

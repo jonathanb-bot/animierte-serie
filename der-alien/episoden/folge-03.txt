@@ -1,0 +1,97 @@
+# Folge 3: Deine Nachbarin
+@serie Der Alien
+@mund zitate
+@look 0
+@zeit nacht
+
+== Kapitel 1: Später ==
+@hud tag=2 zeit=04:10 handy=23/100% netz=4/4 funk=nicht_verbunden
+[lichtbild ort=wohnung hof inhalt=eingang scharf ruhig fokus=540,900] Das ist dein Haus. Die Sammler waren schon einmal *hier*.
+[gesicht du ort=wohnung hof licht=an wuetend sagt=du] „Wen haben sie hier geholt?“, fragst du. „Nox. Wen?“
+[gesicht nox ort=wohnung hof licht=an traurig blick=-1,0.3] „Später“, sagt er nur. Und dreht die Kapsel um.
+[kueche uhr=04:10 licht=an fokus=780,1150 zoom=1.15 zoom_bis=1.3] Es ist kurz nach vier. In drei Stunden geht die Sonne auf.
+[gesicht du ort=wohnung hof licht=an entschlossen zoom-rein] Du brauchst den Schlüssel zum Dach. Und du weißt, wer ihn hat.
+[titel oben="Folge 3" gross="Der Alien" unten="Deine Nachbarin" farbe=#0f1c33 akzent=#59c7ff dauer=3]
+
+== Was bisher geschah ==
+[skyline schiff=sammler tint=#2a4a8a tint_staerke=0.35 hud=false] Nox ist aus einem Schiff der *Sammler* geflohen. Sie fangen Menschen.
+[gesicht nox ort=wohnung hof licht=an entschlossen haelt haelt=kapsel hud=false] Mit seiner Kapsel kann er Hilfe rufen. Aber nur nachts und unter freiem Himmel.
+[fassade regen rutscht nox:angst hud=false] Zum Dach klettern ging nicht. Der Regen war zu stark.
+[lichtbild ort=wohnung hof inhalt=eingang scharf ruhig fokus=540,900 hud=false] Und in der Kapsel ist ein Bild von *deinem* Hauseingang.
+
+== Kapitel 2: Der Dachschlüssel ==
+@hud zeit=04:12
+[gesicht du ort=wohnung hof licht=an neutral sagt=du] „Meine Nachbarin hat einen Dachschlüssel. Sie gießt da oben die Beete. Sie heißt *Mara*.“
+[gesicht nox ort=wohnung hof licht=an schreck wackeln=0.4] Bei dem Namen zuckt Nox zusammen. Nur ganz kurz.
+[gesicht du ort=wohnung hof licht=an misstrauisch] „Kennst du sie?“ „Nein“, sagt er schnell. Zu schnell.
+[gesicht du ort=wohnung hof licht=an denkt] Du weißt nicht, ob du ihm trauen kannst. Aber du hast keine bessere Idee.
+[gesicht nox ort=wohnung hof licht=an besorgt] „Okay“, flüstert Nox. „Aber sie darf mich nicht *sehen*. Noch nicht.“
+
+== Kapitel 3: Durch die Wand ==
+@hud zeit=04:15
+[badezimmer licht=an du:lauscht pos=820 fokus=640,1000 zoom=1.15] Im Bad hörst du etwas. Durch die Wand. Aus Maras Wohnung.
+[gesicht du ort=badezimmer licht=an lauscht zoom-rein] Ein tiefes Brummen. Musik? Nein. Eine Stimme. Mara *telefoniert*.
+[objekt objekte="schallwand:Tief kommt durch" gross="Echter Fakt" farbe=#1e2f45] Echter Fakt: Durch Wände kommen vor allem *tiefe* Töne. Hohe Töne werden stärker geschluckt.
+[objekt objekte="lautsprecher:Nur der Bass" gross="Echter Fakt" farbe=#1e2f45] Deshalb hörst du beim Nachbarn eher den Bass als den Gesang.
+[gesicht du ort=badezimmer licht=an misstrauisch] Um vier Uhr morgens. Mit wem telefoniert Mara?
+
+== Kapitel 4: Bei Mara ==
+@hud zeit=04:20 handy=22/100%
+[flur klopfen=rechts du:geht pos=800 fokus=640,1100 zoom=1.05] Du klopfst leise an Maras Tür. Drinnen wird es sofort still.
+[flur rechts=offen licht=an mara:misstrauisch du pos=820,330 fokus=600,1100 zoom=1.1 zoom_bis=1.25] Mara öffnet. Strickjacke, zerzauste Haare. Sie sieht nicht aus, als hätte sie geschlafen.
+[gesicht mara ort=flur rechts=offen schreck sagt=mara] „Du?“, fragt sie. „Um vier Uhr morgens?“
+[gesicht du ort=flur besorgt sagt=du] „Ich brauche den Dachschlüssel“, sagst du. „Bitte. Frag nicht, warum.“
+[gesicht mara ort=flur rechts=offen misstrauisch zoom-rein] Mara mustert dich. „Hast du vorhin *geschrien*?“
+
+== Kapitel 5: Eine schlechte Lüge ==
+@hud zeit=04:22
+[gesicht du ort=flur besorgt sagt=du] „Ich hab mich erschreckt“, sagst du. „Eine Spinne.“ Eine schlechte Lüge.
+[gesicht mara ort=flur rechts=offen entschlossen] Mara nickt langsam. „Ich komm mit“, sagt sie. „Allein geht da keiner hoch.“
+[flur rechts=offen licht=an mara:haelt haelt=mara:schluessel objekt=powerbank objekt_x=725 objekt_y=1585 objekt_s=0.28 pos=820 fokus=800,1250 zoom=1.45] Sie holt ihren Schlüsselbund. Und eine Powerbank. Mara denkt praktisch.
+[gesicht du ort=flur besorgt] Du hast ein Problem. Wie erklärst du ihr Nox?
+[flur links=spalt augen_spalt rechts=offen licht=an fokus=260,1000 zoom=1.5 zoom_bis=1.7] Da hörst du hinter dir ein leises „Prrt“. Deine Tür steht einen Spalt offen.
+
+== Kapitel 6: Der Anblick ==
+@hud zeit=04:23
+[flur links=spalt rechts=offen licht=an nox:neugierig pos=400 fokus=360,1380 zoom=1.45] Nox lugt aus der Tür. Neugierig. Wie immer.
+[gesicht mara ort=flur rechts=offen schreck wackeln=0.4] Mara sieht ihn. Und erstarrt.
+[flur links=spalt rechts=offen nox:schreck leuchten pos=400 fokus=360,1380 zoom=1.45 wackeln=0.3] Nox erschrickt. Und fängt an zu *leuchten*. Mitten im dunklen Treppenhaus.
+[flur links=spalt rechts=offen mara:angst nox:angst leuchten=0.6 pos=980,400 fokus=640,1150 zoom=1.05] Mara weicht zurück, bis an die Wand. Sie ist kreidebleich.
+[gesicht du ort=flur haende_hoch sagt=du] „Ganz ruhig“, sagst du. „Er tut nichts. Er heißt *Nox*.“
+
+== Kapitel 7: Alles easy? ==
+@hud zeit=04:30 handy=21/100%
+[tuer du:geht mara:angst pos=420,760] Du ziehst beide in deine Wohnung. Bevor jemand etwas hört.
+[wohnung hof vorhang=zu licht=an mara:angst nox:misstrauisch nox:duckt pos=860,200] Mara bleibt an der Wand stehen. Nox hinter dem Sofa. Beide starren sich an.
+[wohnung hof vorhang=zu licht=an mara:besorgt haelt=mara:handy_licht pos=420 fokus=420,1150 zoom=1.6] Mara schaut immer wieder auf ihr Handy. Ihre Hände zittern.
+[gesicht du ort=wohnung hof licht=an misstrauisch] Sie hat nicht nur Angst. Sie sieht aus, als hätte sie mit ihm *gerechnet*.
+[gesicht nox ort=wohnung hof licht=an neugierig blick=0.6,0 sagt=nox] Nox flüstert: „Alles easy?“ Mara zuckt zusammen, als hätte sie das schon mal gehört.
+
+== Kapitel 8: Der Plan ==
+@hud zeit=04:40
+[gesicht du ort=wohnung hof licht=an zeigt] Du erklärst ihr alles. Die Sammler. Die Kapsel. Den Notruf.
+[hochhaus etage=17 bis_etage=24 unsere=17] Der Plan: sieben Stockwerke durchs Treppenhaus. Die Dachtür. Und sechzig Sekunden Notruf.
+[gesicht mara ort=wohnung hof licht=an denkt sagt=mara] „Und dann ist er weg?“, fragt Mara. „Für immer?“
+[gesicht nox ort=wohnung hof licht=an entschlossen sagt=nox] „Für immer“, sagt Nox.
+[gesicht mara ort=wohnung hof licht=an besorgt blick=1,0.2] Mara nickt. Aber sie schaut dabei nur Nox an. Nicht dich.
+
+== Kapitel 9: Und? ==
+@hud zeit=04:52 handy=20/100%
+[wohnung hof vorhang=zu licht=an mara:haelt haelt=mara:schluessel pos=540 fokus=540,1150 zoom=1.7] Mara hat den Dachschlüssel in der Hand. Aber sie gibt ihn dir nicht.
+[gesicht du ort=wohnung hof licht=an besorgt sagt=du] „Mara? Wir müssen los. Bevor es hell wird.“
+[gesicht mara ort=wohnung hof licht=an traurig sagt=mara] „Warte“, sagt sie leise. „Ich muss dir was sagen.“
+[handy ort=wohnung hof licht=an wer=mara nachricht="Und?" von=Unbekannt akku=64 uhrzeit=04:52] Da leuchtet ihr Handy auf. Eine Nachricht. Nur ein Wort: „*Und?*“
+[gesicht du ort=wohnung hof licht=an misstrauisch zoom-rein] Wer schreibt um fünf Uhr morgens nur „Und?“
+
+== Kapitel 10: Gefährlich ==
+@hud zeit=05:00
+[wohnung hof vorhang=zu licht=an mara:schreck haelt=mara:handy_licht pos=540 fokus=540,1150 zoom=1.6 wackeln=0.3] Mara dreht das Handy um. Zu spät. Du hast es gesehen.
+[wohnung hof vorhang=zu licht=an nox:duckt nox:angst leuchten pos=180 fokus=300,1300 zoom=1.6] Nox duckt sich hinter das Sofa. Er leuchtet wieder.
+[gesicht mara ort=wohnung hof licht=an angst blick=1,0.3 sagt=mara zoom-rein] Mara schaut Nox an. Dann flüstert sie: „Der Mann hat gesagt, du wärst *gefährlich*.“
+[titel oben="Folge 4: Das Versprechen" gross="Fortsetzung folgt" farbe=#0f1c33 akzent=#59c7ff dauer=3.5]
+
+== Check ==
+@hud aus
+[objekt objekte="lautsprecher:Bass" gross="Check" farbe=#1e2f45] Check! Warum hörst du beim Nachbarn eher den Bass als den Gesang?
+[objekt objekte="schallwand:Tief kommt durch" gross="Die Antwort" farbe=#1e3a2a] Wände schlucken hohe Töne stärker als tiefe. Tiefe Töne kommen *besser* durch.
+[titel gross="Was hättest du|gemacht?" groesse=120 unten="Schreib es in die Kommentare" farbe=#0f1c33 dauer=3.5]

@@ -1,0 +1,98 @@
+# Folge 5: Was Nox gestohlen hat
+@serie Der Alien
+@mund zitate
+@look 0
+@zeit tag
+
+== Kapitel 1: Alles ==
+@hud tag=2 zeit=13:30 handy=100/100% netz=4/4 funk=nicht_verbunden
+[wohnung hof vorhang=zu du:sitzt mara:sitzt nox:sitzt nox:muede objekt=kapsel objekt_x=540 objekt_y=1560 objekt_s=0.5 pos=250,800,420 zoom-rein sagt=elias] „Auch dann nicht, wenn er aussieht wie ich.“ Der Satz lässt dich nicht los.
+[gesicht mara ort=wohnung hof muede blick=0,1] Mittag. Keiner hat geschlafen. Mara starrt seit Stunden auf die Kapsel.
+[gesicht du ort=wohnung hof entschlossen sagt=du] „Nox“, sagst du. „Jetzt will ich *alles* wissen.“
+[gesicht nox ort=wohnung hof stur verschraenkt sagt=nox] Nox verschränkt die Arme. „Meins.“
+[gesicht du ort=wohnung hof wuetend sagt=du zoom-rein] „Nein“, sagst du. „Diesmal nicht.“
+[titel oben="Folge 5" gross="Der Alien" unten="Was Nox gestohlen hat" farbe=#0f1c33 akzent=#59c7ff dauer=3]
+
+== Was bisher geschah ==
+[badezimmer nox=korb nox:angst leuchten zahnbuerste=weg fokus=300,1130 zoom=1.5 hud=false] Nox versteckt sich bei dir vor den Sammlern. Sie fangen Menschen.
+[gesicht mara ort=wohnung hof licht=an traurig hud=false] Deine Nachbarin Mara hat dem Mann im Mantel von dir erzählt. Er versprach ihr ihren Bruder.
+[lichtbild ort=wohnung hof inhalt=gesicht gesicht=elias label=Elias ruhig fokus=540,900 hud=false] Doch in Nox' Kapsel ist ihr Bruder *Elias*. Gefangen.
+[lichtbild ort=wohnung hof inhalt=tonwelle mit=elias sagt=elias ruhig fokus=540,900 hud=false] Seine Nachricht: „Glaub ihm kein Wort. Auch dann nicht, wenn er aussieht wie ich.“
+
+== Kapitel 2: Der Sprung ==
+@hud zeit=13:35
+[gesicht nox ort=wohnung hof traurig blick=0,0.6 sagt=nox] Nox seufzt. „Ich war auf ihrem Schiff. Mit Elias. Mit vielen.“
+[skyline zeit=nacht schiff=tuer tint=#2a4a8a tint_staerke=0.35 sagt=nox] „Das Schiff war über der Stadt. Eine Tür ging auf. Und ich bin *gesprungen*.“
+[dach zeit=nacht nox:springt nox:angst pos=520 tint=#2a4a8a tint_staerke=0.25 fokus=540,1420 zoom=1.5 sagt=nox] „Auf dein Dach.“
+[gesicht nox ort=wohnung hof entschlossen haelt haelt=kapsel sagt=nox] „Ich hab die Kapsel mitgenommen. Alles über die Gefangenen ist da drin.“
+[gesicht du ort=wohnung hof schreck zoom-rein] Deshalb jagen sie ihn. Die Kapsel könnte sie *verraten*.
+
+== Kapitel 3: Das falsche Fenster ==
+@hud zeit=13:50 handy=99/100%
+[gesicht nox ort=wohnung hof neutral blick=1,0 sagt=nox] Nox schaut Mara an. „Elias hat gesagt: Ahornstraße. Siebzehnter Stock. Fenster mit Kräutern.“
+[wohnung hof kraeuter vorhang=auf fokus=400,1000 zoom=1.6 zoom_bis=1.8] Maras Küchenfenster. Basilikum, Minze, Thymian. *Echte* Kräuter.
+[badezimmer fokus=300,640 zoom=1.6 zoom_bis=1.8] Gleich daneben: dein Badfenster. Mit einer Plastikpflanze.
+[gesicht nox ort=wohnung hof besorgt blick=0,1 sagt=nox] „Im Dunkeln sah die auch wie Kräuter aus“, murmelt Nox.
+[gesicht mara ort=wohnung hof froh sagt=mara zoom-rein] „Du wolltest zu *mir*“, flüstert Mara.
+
+== Kapitel 4: Keine Geheimnisse ==
+@hud zeit=14:00 handy=98/100%
+[gesicht mara ort=wohnung hof misstrauisch sagt=mara] „Warum hast du nichts gesagt?“
+[gesicht nox ort=wohnung hof traurig sagt=nox] „Elias sagte: Mara hilft. Aber auf dem Schiff hieß es: Jemand im Haus *meldet* alles.“
+[gesicht mara ort=wohnung hof traurig blick=-1,0.4] Mara schaut weg. Er hatte recht. Das war sie.
+[gesicht du ort=wohnung hof entschlossen sagt=du] „Ab jetzt keine Geheimnisse mehr“, sagst du. „Gibt's noch was?“
+[gesicht nox ort=wohnung hof besorgt haelt haelt=kapsel blick=0,1 zoom-rein] Nox schaut lange auf die Kapsel. *Zu* lange.
+
+== Kapitel 5: Das Netz ==
+@hud zeit=14:20 handy=97/100%
+[gesicht nox ort=wohnung hof besorgt haelt haelt=kapsel sagt=nox] „Die Kapsel kann ihr Netz *hören*“, sagt Nox. „Wen sie suchen. Wo sie suchen.“
+[gesicht du ort=wohnung hof entschlossen sagt=du] „Dann zeig es uns. Wir müssen wissen, was sie wissen.“
+[gesicht nox ort=wohnung hof angst wackeln=0.3 sagt=nox] Nox schüttelt heftig den Kopf. „Nicht gut. Gar nicht gut.“
+[gesicht mara ort=wohnung hof besorgt sagt=mara] „Warum nicht?“, fragt Mara. Nox antwortet nicht.
+[gesicht du ort=wohnung hof misstrauisch] Schon wieder ein Geheimnis. Du hast genug davon.
+
+== Kapitel 6: Zehn Sekunden ==
+@hud zeit=14:30 handy=96/100%
+[gesicht du ort=wohnung hof besorgt zeigt sagt=du] „Nox. Bitte. Zeig es uns.“ Du hältst die Hand auf.
+[gesicht nox ort=wohnung hof besorgt haelt haelt=kapsel sagt=nox] Nox zögert. Dann tippt er auf die Kapsel. „Zehn Sekunden. Nicht mehr.“
+[lichtbild ort=wohnung hof inhalt=gesichter scroll=400 ruhig fokus=540,900] Der Lichtring wird hell. Gesichter rauschen vorbei. *Hunderte*.
+[lichtbild ort=wohnung hof inhalt=countdown countdown=10 countdown_bis=8 ruhig fokus=540,900] Zehn. Neun. Acht.
+[gesicht nox ort=wohnung hof angst leuchten=0.5 sagt=nox] Nox fängt an zu leuchten. „Schneller“, flüstert er.
+
+== Kapitel 7: Hunderte Gesichter ==
+[lichtbild ort=wohnung hof inhalt=gesichter scroll=120 countdown=7 countdown_bis=6 ruhig fokus=540,900] Die Sammler suchen Hunderte. Menschen. Wesen wie Nox. Jedes Gesicht in einem Raster.
+[gesicht mara ort=wohnung hof besorgt sagt=mara] „Wie finden sie jemanden in einer ganzen Stadt?“, flüstert Mara.
+[objekt objekte="gesichtraster:1–2 von 100" gross="Echter Fakt" farbe=#1e2f45] Echter Fakt: Ein bis zwei von hundert Menschen erkennen Gesichter außergewöhnlich gut. *Super-Recognizer*.
+[objekt objekte="kamera:Überwachungsvideos" gross="Echter Fakt" farbe=#1e2f45] Die Londoner Polizei setzt solche Leute ein. Sie erkennen Gesuchte sogar auf Überwachungsvideos.
+[lichtbild ort=wohnung hof inhalt=countdown countdown=5 countdown_bis=4 ruhig fokus=540,900] Fünf. Vier.
+
+== Kapitel 8: Hier ==
+@hud zeit=14:31
+[lichtbild ort=wohnung hof inhalt=countdown countdown=3 countdown_bis=1 ruhig fokus=540,900] Drei. Zwei. Eins. Das Licht erlischt.
+[wohnung hof vorhang=zu nox:sitzt nox:angst leuchten=0.3 objekt=kapsel_aus objekt_x=700 objekt_y=1560 objekt_s=0.55 pos=480 fokus=560,1400 zoom=1.7] Nox lässt die Kapsel los. Sein Leuchten wird schwächer.
+[gesicht mara ort=wohnung hof besorgt sagt=mara] „Nox. Was ist so schlimm an zehn Sekunden?“
+[gesicht nox ort=wohnung hof traurig sagt=nox] „Wenn die Kapsel hört, hören *sie* auch. Jetzt wissen sie: Die Kapsel ist hier.“
+[gesicht du ort=wohnung hof schreck wackeln=0.3] Dir wird schlecht. Das war *deine* Idee.
+
+== Kapitel 9: Gespeichert ==
+@zeit abend
+@hud zeit=16:30 handy=93/100%
+[wohnung hof vorhang=zu du:sitzt du:traurig mara:sitzt mara:besorgt pos=420,640 fokus=540,1350 zoom=1.5 sagt=mara] „Sie wussten sowieso, dass er hier ist“, sagt Mara leise. „Wegen mir.“
+[wohnung hof vorhang=auf du:sitzt mara:sitzt nox:sitzt objekt=kapsel_aus objekt_x=540 objekt_y=1560 objekt_s=0.5 pos=250,800,420 zoom-raus] Stundenlang sitzt ihr still da. Das Licht draußen wird schon orange.
+[gesicht du ort=wohnung hof besorgt sagt=du] „Was stand im Verzeichnis?“, fragst du. „Hast du es gespeichert?“
+[gesicht nox ort=wohnung hof entschlossen haelt haelt=kapsel] Nox nickt. Ohne neue Verbindung. Nur gespeichert.
+[lichtbild ort=wohnung hof inhalt=gesichter zeige=nox@8,elias@15,du@27 scroll=15 ruhig fokus=540,900] Die Gesichter laufen noch einmal vorbei. Ganz langsam.
+
+== Kapitel 10: Gesucht ==
+@hud zeit=16:40
+[lichtbild ort=wohnung hof inhalt=gesichter zeige=nox@8,elias@15,du@27 fokus=540,760 zoom=1.25] Ganz oben: Nox.
+[lichtbild ort=wohnung hof inhalt=gesichter zeige=nox@8,elias@15,du@27 markiere=elias fokus=540,860 zoom=1.25] Weiter unten: Elias. Markiert.
+[lichtbild ort=wohnung hof inhalt=gesichter zeige=nox@8,elias@15,du@27 neu=du fokus=540,1000 zoom=1.3 zoom_bis=1.5] Und ganz unten ein neues Gesicht. Erst seit gestern Nacht.
+[gesicht du ort=wohnung hof schreck zoom-rein wackeln=0.4] Es ist *deins*.
+[titel oben="Folge 6: Raus aus dem Haus" gross="Fortsetzung folgt" farbe=#0f1c33 akzent=#59c7ff dauer=3.5]
+
+== Check ==
+@hud aus
+[objekt objekte="gesichtraster:Super-Recognizer" gross="Check" farbe=#1e2f45] Check! Wie viele Menschen sind Super-Recognizer?
+[objekt objekte="gesichtraster:1–2 von 100" gross="Die Antwort" farbe=#1e3a2a] Etwa ein bis zwei von hundert. Sie erkennen Gesichter sogar auf unscharfen Bildern *wieder*.
+[titel gross="Was hättest du|gemacht?" groesse=120 unten="Schreib es in die Kommentare" farbe=#0f1c33 dauer=3.5]
