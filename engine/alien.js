@@ -992,7 +992,8 @@
     if (s.suchkegel) { const ziel = s.suchkegel === true ? 540 + Math.sin(t * 0.8) * 380 : Number(s.suchkegel); A.kegel(s.schiff_x ?? 560, (s.schiff_y ?? 250) + 70, ziel, 1520, 230, "#e9f2ff", 0.9); }
     if (s.blaukegel) { const zx = s.blaukegel === true ? 640 : Number(s.blaukegel); A.kegel(s.rettung_x ?? 300, (s.rettung_y ?? 300) + 80, zx, 1640, 260, "#9fdcff", 1.1); if (s.silhouetten) for (let i = 0; i < 4; i++) { const q = ((t * 0.25 + i / 4) % 1); A.noxLeute(zx - 120 + i * 80, lerp(1600, 500, q), 1, t + i, 0.5 * (1 - q)); } }
     if (s.notruf) A.notruf(s, t);
-    if (s.countdown != null) A.countdown(s.countdown, t);
+    // mit countdown_bis zählt die Anzeige im Sekundentakt herunter
+    if (s.countdown != null) A.countdown(s.countdown_bis != null ? Math.max(Number(s.countdown_bis), Number(s.countdown) - Math.floor(t)) : s.countdown, t);
     if (s.wind) A.wind(t);
   };
   A.vorFiguren = (s, t) => { if (s.typ === "dach") dachVor(s, t); };

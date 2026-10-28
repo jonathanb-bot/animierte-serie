@@ -1,0 +1,94 @@
+# Folge 9: Auf dem Dach
+@serie Der Alien
+@mund zitate
+@look 0
+@zeit nacht
+
+== Kapitel 1: Ein Angebot ==
+@hud tag=3 zeit=00:00 handy=73/100% netz=0/4 funk=100/100%
+[treppe etage=22 du:angst nox:haende_hoch nox:entschlossen mantel:froh leuchten=0.5 pos=200,540,860 fokus=540,1280 zoom=1.12 untertitel_y=1760] Nox ist zurückgekommen. Für *dich*.
+[gesicht mantel ort=treppenhaus etage=22 froh sagt=mantel] „Wie rührend“, sagt der Mann. „Dann nehme ich euch beide.“
+[treppe etage=22 mara:entschlossen mara:zeigt mantel:neutral pos=400,760 fokus=560,1300 zoom=1.2 untertitel_y=1760 sagt=mara] Da tritt Mara vor. „Warten Sie. Ich mache Ihnen ein Angebot.“
+[gesicht mantel ort=treppenhaus etage=22 neugierig stumm drehung=0.25 zoom-rein] Der Mann neigt den Kopf. Schräg. Wie ein Vogel.
+[titel oben="Folge 9" gross="Der Alien" unten="Auf dem Dach" farbe=#0f1c33 akzent=#59c7ff dauer=3]
+
+== Was bisher geschah ==
+[lichtbild ort=wohnung hof inhalt=silhouette ueberlagern ruhig fokus=540,900 hud=false] Nox ist ein Alien auf der Flucht vor den Sammlern. Sie tragen fremde Gesichter.
+[treppe etage=22 oben=mantel ausdruck_oben=froh du:angst mara:angst nox:angst pos=440,680,240 fokus=540,1200 zoom=1.0 hud=false] Er will vom Dach aus Hilfe rufen. Doch im Treppenhaus wartete ein Sammler.
+[hochhaus etage=24 treppe=nox@24 pose_treppe=sitzt leuchten=0.4 unsere=17 hud=false] Nox hätte allein entkommen können.
+[treppe etage=22 du:angst nox:haende_hoch nox:entschlossen mantel:froh leuchten=0.5 pos=200,540,860 fokus=540,1280 zoom=1.12 untertitel_y=1760 hud=false] Aber er kam zurück. Und stellte sich zwischen dich und den Mann.
+
+== Kapitel 2: Die Abmachung ==
+@hud zeit=00:01
+[gesicht mara ort=treppenhaus etage=22 neutral sagt=mara] „Ich bringe Ihnen das Wesen. Oben auf dem Dach. Ohne Ärger.“
+[gesicht mara ort=treppenhaus etage=22 entschlossen sagt=mara] „Dafür lassen Sie meinen Bruder frei. Und meinen Nachbarn gehen.“
+[gesicht du ort=treppenhaus etage=22 schreck wackeln=0.3] Du starrst Mara an. Meint sie das *ernst*?
+[treppe etage=22 du:besorgt mara:neutral mara:haelt pos=640,440 fokus=540,1450 zoom=1.7 untertitel_y=1760] Mara schaut dich nicht an. Aber ihre Hand drückt kurz deine. Zweimal.
+[gesicht mantel ort=treppenhaus etage=22 froh sagt=mantel] „Einverstanden“, sagt der Mann. „Gehen wir aufs Dach.“
+
+== Kapitel 3: Der ganze Himmel ==
+@hud zeit=00:05 handy=72/100%
+[dach dachtuer=offen mara:haelt haelt=mara:schluessel mantel:froh pos=760,1000 fokus=820,1250 zoom=1.3 wind] Mara schließt die Dachtür auf. Kalte Nachtluft schlägt euch entgegen.
+[dach dachtuer beete fokus=540,700 zoom=1.0 zoom_bis=1.1] Das Dach. Über euch: der *ganze* Himmel.
+[dach dachtuer hinter_tank=du,nox tank_pos=380:510 fokus=360,1150 zoom=1.3] Nox flitzt hinter den Wassertank. Du hinterher.
+[dach dachtuer=offen mara:zeigt mantel:neutral pos=760,1000 fokus=820,1250 zoom=1.35 sagt=mara] Mara bleibt mit dem Mann an der Tür. „Lassen Sie mich mit ihm reden. Er vertraut nur mir.“
+[gesicht mantel ort=dach neutral stumm zoom-rein] Der Mann nickt. Und sieht Mara an. Lange. Als würde er sie *auswendig* lernen.
+
+== Kapitel 4: Freie Sicht ==
+@hud zeit=00:08
+[dach dachtuer hinter_tank=du,nox tank_pos=380:510 nox:haelt_hoch haelt=nox:kapsel fokus=360,1050 zoom=1.6 sagt=nox] Hinter dem Tank hält Nox die Kapsel hoch. „Hier. Viel Himmel.“
+[objekt objekte="satellit:20.200 km" gross="Echter Fakt" farbe=#1e2f45] Echter Fakt: Auch *GPS* braucht freien Himmel. Die Satelliten kreisen in rund zwanzigtausend Kilometern Höhe.
+[objekt objekte="hausblock:Kein Signal" gross="Echter Fakt" farbe=#1e2f45] Ihre Signale kommen nicht durch Wände und Decken. Zwischen Hochhäusern wird die Ortung ungenau.
+[objekt objekte="handy_karte:Signal weg" gross="Echter Fakt" farbe=#1e2f45] Deshalb verliert dein Navi im Tunnel oder im Haus so oft das Signal.
+[gesicht nox ort=dach entschlossen haelt haelt=kapsel sagt=nox] „Sechzig Sekunden“, flüstert Nox. „Dann nicht mehr *aufhören*.“
+
+== Kapitel 5: Für dich ==
+@hud zeit=00:10
+[dach dachtuer hinter_tank=du,nox tank_pos=380:510 haelt=nox:walkie,du:walkie fokus=400,1050 zoom=1.7] Nox drückt dir eins der gelben Walkie-Talkies in die Hand.
+[gesicht nox ort=dach froh haelt haelt=walkie_blau sagt=nox] „Du behältst“, sagt er. „Ich rufe.“
+[gesicht du ort=dach froh haelt=walkie sagt=du] „Du rufst mich an? Von da oben?“ Nox nickt ernst.
+[gesicht du ort=dach traurig zoom-rein] Ein Kinderspielzeug. Und plötzlich das Wertvollste, was du hast.
+[dach dachtuer hinter_tank=du,nox tank_pos=380:510 haelt=nox:kapsel notruf fokus=360,1050 zoom=1.5] Dann tippt Nox auf die Kapsel. Der Notruf *beginnt*.
+
+== Kapitel 6: Sechzig ==
+@hud zeit=00:11
+[dach dachtuer hinter_tank=du,nox tank_pos=380:510 haelt=nox:kapsel notruf countdown=60 countdown_bis=59 fokus=480,950 zoom=1.15] Ein Lichtring breitet sich aus. Sechzig. Neunundfünfzig.
+[dach dachtuer=offen mara:zeigt mantel:neutral pos=760,1000 fokus=820,1250 zoom=1.35] An der Tür redet Mara. Über Elias. Über früher. Ohne Pause.
+[gesicht mantel ort=dach neugierig stumm drehung=0.25] Der Mann hört ihr zu. Er saugt jedes Wort auf.
+[dach dachtuer hinter_tank=du,nox tank_pos=380:510 haelt=nox:kapsel notruf countdown=40 countdown_bis=39 fokus=480,950 zoom=1.15] Vierzig. Neununddreißig.
+[gesicht mantel ort=dach neutral stumm blick=-1,0 zoom-rein] Dann dreht der Mann den Kopf. Zum Wassertank. Zum *Licht*.
+
+== Kapitel 7: Darunter ==
+[dach dachtuer hinter_tank=du,nox tank_pos=380:510 haelt=nox:kapsel notruf impuls countdown=30 countdown_bis=29 fokus=540,950 zoom=1.05 wackeln=0.3] Dreißig. Ein starker Impuls rollt über das Dach.
+[dach dachtuer=offen mantel:neutral stoerung=0.4 pos=880 fokus=820,1250 zoom=1.5] Der Mann *flackert*. Streifen. Farben. Und darunter …
+[dach dachtuer=offen sammler pos=880 stoerung=0.8 fokus=820,1150 zoom=1.3] … eine lange, dünne Gestalt. Mit grünen, leuchtenden Schlitzen statt Augen.
+[dach dachtuer=offen mara:angst mantel:froh pos=700,960 fokus=820,1250 zoom=1.3] Zwei Sekunden. Dann ist der Mann wieder da. Mantel. Lächeln.
+[gesicht mara ort=dach angst wackeln=0.2] Mara hat es auch gesehen. Sie redet trotzdem weiter. Ihre Stimme zittert.
+
+== Kapitel 8: Zehn ==
+@hud zeit=00:12 handy=71/100%
+[dach dachtuer mantel:geht mantel:wuetend hinter_tank=du,nox tank_pos=380:510 notruf pos=780 fokus=560,1150 zoom=1.05] Der Mann geht los. Zum Tank. Nicht mehr freundlich. Nicht mehr langsam.
+[dach dachtuer mara:haende_hoch mara:wuetend mantel:wuetend pos=560,820 fokus=680,1250 zoom=1.3 sagt=mara] Mara stellt sich ihm in den Weg. „Wir hatten eine *Abmachung*!“
+[dach dachtuer hinter_tank=du,nox tank_pos=380:510 haelt=nox:kapsel notruf countdown=10 countdown_bis=8 fokus=480,950 zoom=1.15] Zehn. Neun. Acht.
+[gesicht nox ort=dach angst haelt haelt=kapsel leuchten=0.6 wackeln=0.3] Nox hält die Kapsel mit beiden Händen. Er zittert. Aber er lässt nicht los.
+[dach dachtuer hinter_tank=du,nox tank_pos=380:510 haelt=nox:kapsel notruf impuls countdown=3 countdown_bis=1 fokus=480,950 zoom=1.15 wackeln=0.4] Drei. Zwei. Eins.
+
+== Kapitel 9: Gesendet ==
+[dach dachtuer hinter_tank=du,nox tank_pos=380:510 haelt=nox:kapsel notruf strahl fokus=480,800 zoom=0.95] Ein dünner Lichtstrahl schießt in den Himmel. Und ist weg.
+[dach dachtuer hinter_tank=du,nox tank_pos=380:510 haelt=nox:kapsel_aus fokus=360,1100 zoom=1.6] Die Kapsel wird dunkel. Für immer. Nox lässt sie sinken.
+[gesicht nox ort=dach froh haelt haelt=kapsel_aus sagt=nox] „Gesendet“, flüstert Nox. „Sie kommen.“
+[dach dachtuer mantel:froh pos=780 fokus=760,1200 zoom=1.4] Der Mann bleibt stehen. Er lächelt wieder. Und schaut nach oben.
+[gesicht du ort=dach misstrauisch] Warum *lächelt* er?
+
+== Kapitel 10: Nicht das ==
+@hud zeit=00:14
+[dach dachtuer hinter_tank=du,nox tank_pos=380:510 schiff=kommt fokus=540,800 zoom=0.95 wackeln=0.2] Über euch wird es dunkler. Dunkler als die Nacht. Ein tiefes Brummen.
+[dach dachtuer schiff=sammler suchkegel hinter_tank=du,nox tank_pos=380:510 fokus=540,700 zoom=0.95 zoom_bis=1.05] Ein Schiff schiebt sich über das Dach. Lang. Dunkel. Mit grünen Lichtern.
+[gesicht nox ort=dach angst blick=0,-1 leuchten=0.8 sagt=nox zoom-rein] Nox schaut hinauf. Und flüstert: „Nicht *das*.“
+[titel oben="Folge 10: Wieder zu Hause" gross="Fortsetzung folgt" farbe=#0f1c33 akzent=#59c7ff dauer=3.5]
+
+== Check ==
+@hud aus
+[objekt objekte="handy_karte:Navi" gross="Check" farbe=#1e2f45] Check! Warum verliert dein Handy-Navi im Haus oft das Signal?
+[objekt objekte="satellit:20.200 km|hausblock:Blockiert" gross="Die Antwort" farbe=#1e3a2a] GPS-Signale kommen aus rund zwanzigtausend Kilometern Höhe. Wände und Decken *blockieren* sie.
+[titel gross="Was hättest du|gemacht?" groesse=120 unten="Schreib es in die Kommentare" farbe=#0f1c33 dauer=3.5]
