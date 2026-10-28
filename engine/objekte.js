@@ -129,6 +129,7 @@
   };
   I.spuelkasten = I.toilette; I.flasche = I.wasserflasche; I.lampe = I.taschenlampe; I.radio = I.funkgeraet; I.essen = I.dose; I.zombie = I.zombiekopf;
   A.ICONS = Object.keys(I);
+  A.I = I; // weitere Icons können hier ergänzt werden (z.B. engine/alien.js)
 
   A.objekt = (name, x, y, s = 1, t = 0) => {
     const fn = I[name]; if (!fn) return;

@@ -44,6 +44,17 @@
     balken.forEach(([name, wert, max, einheit], i) => {
       const y = 92 + i * 46;
       ctx.font = "700 27px HUD"; ctx.fillStyle = "rgba(255,255,255,0.85)"; ctx.textAlign = "left"; ctx.fillText(name.toUpperCase(), 24, y);
+      // Text statt Wert, z.B. „nicht verbunden“
+      if (wert == null) { ctx.fillStyle = "rgba(255,255,255,0.5)"; ctx.fillText(String(einheit).toUpperCase(), 150, y + 1); return; }
+      // Empfang als vier Balken
+      if (name.toLowerCase() === "netz") {
+        const an = clamp(Math.round(wert), 0, max || 4), farbe = an === 0 ? "#ff5a4a" : an === 1 ? "#ffb347" : "#7fdc8a";
+        for (let k = 0; k < (max || 4); k++) box(150 + k * 26, y + 12 - (10 + k * 7), 18, 10 + k * 7, 4, k < an ? farbe : "rgba(255,255,255,0.18)");
+        if (an === 0) { ctx.fillStyle = "#ff5a4a"; ctx.fillText("KEIN NETZ", 262, y + 1); }
+        return;
+      }
+      const laedt = /\+$/.test(einheit || ""); if (laedt) einheit = einheit.slice(0, -1);
+      if (laedt) A.poly([[372, y - 14], [360, y + 2], [369, y + 2], [364, y + 15], [378, y - 3], [369, y - 3]], "#ffd36b");
       box(150, y - 10, 140, 20, 10, "rgba(255,255,255,0.18)");
       const ant = clamp(wert / max, 0, 1);
       const farbe = ant < 0.25 ? "#ff5a4a" : ant < 0.5 ? "#ffb347" : name.toLowerCase().startsWith("wasser") ? "#5cc2ff" : "#7fdc8a";
@@ -117,7 +128,7 @@
     for (let i = 0; i < D.szenen.length; i++) { const sz = D.szenen[i]; if (T >= sz.start && T < sz.start + sz.dauer) { idx = i; break; } }
     const s = D.szenen[idx];
     const t = T - s.start, p = clamp(t / s.dauer, 0, 1);
-    s._spricht = (s.woerter || []).some(w => t >= w.start && t < w.ende);
+    s._spricht = (s.woerter || []).some(w => t >= w.start && t < w.ende && (D.mund !== "zitate" || w.zitat));
     ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.filter = "none"; ctx.globalAlpha = 1; ctx.globalCompositeOperation = "source-over";
     ctx.fillStyle = "#000"; ctx.fillRect(0, 0, W, H);
     A.lichter = []; A._dunkel = 0;

@@ -6,6 +6,6 @@
 - Vor jedem Push: `node render.mjs <datei> --bilder` und die Standbilder ansehen.
 - Figuren nur in `figuren.json` ändern, dann bleiben sie in allen Folgen gleich.
 - Stimme: `audio/folge-XX/NNN.mp3` pro Einstellung (ElevenLabs via Shotstack, vorher Kosten nennen).
-- Push → GitHub Actions rendert (Matrix, max. 5 parallel) → Releases.
+- Push → GitHub Actions rendert (Matrix, max. 5 parallel) → Releases. Änderungen an `engine/`, `render.mjs`, `drehbuch.mjs` rendern alle Folgen beider Serien neu; für Zwischenstände `[skip ci]` in die Commit-Nachricht.
 - Sprache: Deutsch.
-- Zweite Serie „Der Alien“ liegt in `der-alien/`. Dort ist `serienbibel.md` verbindlich (Weltregeln, Figuren, NEU ZU BAUEN). Storylines liegen in `der-alien/storylines/`, die Dauer prüfst du mit `node der-alien/dauer.mjs <storyline>`.
+- Zweite Serie „Der Alien“ liegt in `der-alien/`. Dort ist `serienbibel.md` verbindlich (Weltregeln, Figuren, NEU ZU BAUEN). Storylines liegen in `der-alien/storylines/`, die Dauer prüfst du mit `node der-alien/dauer.mjs <storyline>`. Kulissen und Angaben stehen in `der-alien/README.md`, die Grafik in `engine/alien.js`. „24. Stock“ darf sich dadurch nicht verändern.

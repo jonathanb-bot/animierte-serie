@@ -1,6 +1,6 @@
 // Liest ein Drehbuch im einfachen Textformat (siehe README) und macht daraus Szenen-Objekte.
-const AUSDRUECKE = ["neutral", "froh", "traurig", "schreck", "angst", "wuetend", "muede", "entschlossen", "besorgt", "misstrauisch", "zombie"];
-const POSEN = ["steht", "winkt", "zeigt", "zeigt_links", "zeigt_hoch", "haende_hoch", "angst", "psst", "denkt", "huefte", "traegt", "taschenlampe", "lauscht", "geht", "rennt", "zombie", "zombie_geht"];
+const AUSDRUECKE = ["neutral", "froh", "traurig", "schreck", "angst", "wuetend", "muede", "entschlossen", "besorgt", "misstrauisch", "zombie", "neugierig", "stur", "angewidert"];
+const POSEN = ["steht", "winkt", "zeigt", "zeigt_links", "zeigt_hoch", "haende_hoch", "angst", "psst", "denkt", "huefte", "traegt", "taschenlampe", "lauscht", "geht", "rennt", "zombie", "zombie_geht", "sitzt", "duckt", "klettert", "haelt", "haelt_hoch", "verschraenkt", "umarmt", "springt", "zeigt_haende", "handy", "fuchtelt", "rutscht"];
 const ZEITEN = ["tag", "morgen", "abend", "nacht", "rot"];
 const KAMERAS = ["ruhig", "zoom-rein", "zoom-raus", "schwenk-hoch", "schwenk-runter", "schwenk-links", "schwenk-rechts", "nah", "weit", "fahrt"];
 const PARTIKEL = ["staub", "asche", "schnee"];
@@ -62,6 +62,8 @@ export function parse(text, cast = {}) {
     if (zeile.startsWith("@")) {
       const [cmd, ...rest] = zeile.slice(1).split(/\s+/);
       if (cmd === "musik") ep.musik = rest[0];
+      else if (cmd === "serie") ep.serie = rest.join(" ");
+      else if (cmd === "mund") ep.mund = rest[0];
       else if (cmd === "musik_lautstaerke") ep.musik_lautstaerke = Number(rest[0]);
       else if (cmd === "zeit") zeit = rest[0];
       else if (cmd === "hud") {
@@ -70,11 +72,13 @@ export function parse(text, cast = {}) {
         for (const [k, v] of tokenize(rest.join(" "))) {
           if (k === "tag") neu.tag = v; else if (k === "zeit") neu.zeit = v; else if (k === "nacht") neu.nacht = v === "true";
           else if (k) {
-            const m = v.match(/^([\d.,]+)\/([\d.,]+)(.*)$/); if (!m) throw new Error("HUD-Wert falsch: " + k + "=" + v);
             const label = k.replace(/_/g, " ");
             const idx = neu.balken.findIndex(b => b[0] === label);
             if (v === "aus") { if (idx >= 0) neu.balken.splice(idx, 1); continue; }
-            const b = [label, Number(m[1].replace(",", ".")), Number(m[2].replace(",", ".")), m[3] || ""];
+            const m = v.match(/^([\d.,]+)\/([\d.,]+)(.*)$/);
+            if (!m && !/^[a-zäöüß_]+$/i.test(v)) throw new Error("HUD-Wert falsch: " + k + "=" + v);
+            // Zahl/Maximum (z.B. 34/100%, 4/4, 36/100%+ für „lädt“) oder Text (z.B. nicht_verbunden)
+            const b = m ? [label, Number(m[1].replace(",", ".")), Number(m[2].replace(",", ".")), m[3] || ""] : [label, null, null, v.replace(/_/g, " ")];
             if (idx >= 0) neu.balken[idx] = b; else neu.balken.push(b);
           }
         }

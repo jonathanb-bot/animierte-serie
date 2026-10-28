@@ -246,52 +246,54 @@ Echte Fakten und erfundene Alien-Fähigkeiten werden immer getrennt erzählt, zu
 
 ## 8. NEU ZU BAUEN (ganze Staffel)
 
+Stand: alles gebaut (`engine/alien.js`). Wie man die Teile im Drehbuch benutzt, steht in `der-alien/README.md`.
+
 ### Figuren
-- [ ] **Nox**, eigene Figurenart: Oval-Körper, Ohrlappen, große Augen, Haftballen. Posen: steht, sitzt, duckt sich, klettert, hält etwas, zeigt. Ausdrücke: neutral, neugierig, schreck, angst, froh, traurig, stur. Dazu der Effekt Angstleuchten.
-- [ ] **Mara**, mit vorhandenen Bausteinen (lange Haare, Strickjacke)
-- [ ] **Elias**, mit vorhandenen Bausteinen (auch als bläuliches Lichtbild)
-- [ ] **Mann im Mantel**: neues Kleidungsteil „Mantel“ (knielang) und Schal. Mehrfach gleichzeitig im Bild darstellbar.
-- [ ] **Sammler, wahre Gestalt**: schmale Silhouette mit Augenschlitzen
-- [ ] **Nox' Leute**: Silhouetten, abgeleitet von Nox
+- [x] **Nox**, eigene Figurenart: Oval-Körper, Ohrlappen, große Augen, Haftballen. Posen: steht, sitzt, duckt sich, klettert, hält etwas, zeigt. Ausdrücke: neutral, neugierig, schreck, angst, froh, traurig, stur. Dazu der Effekt Angstleuchten.
+- [x] **Mara**, mit vorhandenen Bausteinen (lange Haare, Strickjacke)
+- [x] **Elias**, mit vorhandenen Bausteinen (auch als bläuliches Lichtbild)
+- [x] **Mann im Mantel**: neues Kleidungsteil „Mantel“ (knielang) und Schal. Mehrfach gleichzeitig im Bild darstellbar.
+- [x] **Sammler, wahre Gestalt**: schmale Silhouette mit Augenschlitzen
+- [x] **Nox' Leute**: Silhouetten, abgeleitet von Nox
 
 ### Gegenstände
-- [ ] Metallkapsel (zu, offen mit Lichtring, mit Lichtbild darüber)
-- [ ] Elektrische Zahnbürste (mit Summ-Vibration)
-- [ ] Wäschekorb
-- [ ] Zahnpastatube
-- [ ] Kinder-Walkie-Talkies (Paar, gelb, mit kleinem Lichtsplitter nach dem Umbau)
-- [ ] Handy in der Hand (Display an, Taschenlampe an)
-- [ ] Türkette
-- [ ] Plastikpflanze (dein Badfenster) und Kräutertöpfe (Maras Fenster)
-- [ ] Teetassen und Kaffeetassen (Folge 10)
-- [ ] Deckenlager
+- [x] Metallkapsel (zu, offen mit Lichtring, mit Lichtbild darüber)
+- [x] Elektrische Zahnbürste (mit Summ-Vibration)
+- [x] Wäschekorb
+- [x] Zahnpastatube
+- [x] Kinder-Walkie-Talkies (Paar, gelb, mit kleinem Lichtsplitter nach dem Umbau)
+- [x] Handy in der Hand (Display an, Taschenlampe an)
+- [x] Türkette
+- [x] Plastikpflanze (dein Badfenster) und Kräutertöpfe (Maras Fenster)
+- [x] Teetassen und Kaffeetassen (Folge 10)
+- [x] Deckenlager
 
 ### Technik und Effekte
-- [ ] **Tarnungs-Störung**: 2 s Flackern mit waagerechten Streifen und Farbversatz, darunter die wahre Gestalt
-- [ ] **Augenleuchten**: zwei kleine grüne Glanzpunkte, die kurz aufblitzen
-- [ ] **Lichtbild der Kapsel**: flaches, bläuliches Hologramm, leicht flimmernd
-- [ ] **Notruf-Impuls**: Lichtring, der sich ausbreitet, dazu ein Countdown von 60 s
-- [ ] **Türspion-Ansicht**: Fischaugen-Verzerrung mit kreisrunder Maske
-- [ ] **Suchkegel** des Sammlerschiffs
-- [ ] **Lichtkegel** des Rettungsschiffs (warm-blau)
+- [x] **Tarnungs-Störung**: 2 s Flackern mit waagerechten Streifen und Farbversatz, darunter die wahre Gestalt
+- [x] **Augenleuchten**: zwei kleine grüne Glanzpunkte, die kurz aufblitzen
+- [x] **Lichtbild der Kapsel**: flaches, bläuliches Hologramm, leicht flimmernd
+- [x] **Notruf-Impuls**: Lichtring, der sich ausbreitet, dazu ein Countdown von 60 s
+- [x] **Türspion-Ansicht**: Fischaugen-Verzerrung mit kreisrunder Maske
+- [x] **Suchkegel** des Sammlerschiffs
+- [x] **Lichtkegel** des Rettungsschiffs (warm-blau)
 
 ### Schiffe
-- [ ] Sammlerschiff: Silhouette für `skyline` und `dach`
-- [ ] Schiff von Nox' Leuten: Silhouette für `skyline` und `dach`
+- [x] Sammlerschiff: Silhouette für `skyline` und `dach`
+- [x] Schiff von Nox' Leuten: Silhouette für `skyline` und `dach`
 
 ### Kulissen-Erweiterungen und neue Orte
-- [ ] `bad`: offenes Fenster mit Fensterbrett, Wäschekorb
-- [ ] **Neuer Ort: Wohnungstür von innen** (Flur, Tür, Türspion, Kette, Garderobe)
-- [ ] **Neuer Ort: Kreuzung** (Erweiterung von `strasse`: Ampel, Zebrastreifen, Laternen)
-- [ ] `wohnung`: Farbvariante für Maras Wohnung, Kräuter am Fenster
-- [ ] `dach`: Dachtür als Ort zum Ablenken, Deckung hinter dem Wassertank
+- [x] `bad`: offenes Fenster mit Fensterbrett, Wäschekorb
+- [x] **Neuer Ort: Wohnungstür von innen** (Flur, Tür, Türspion, Kette, Garderobe)
+- [x] **Neuer Ort: Kreuzung** (Erweiterung von `strasse`: Ampel, Zebrastreifen, Laternen)
+- [x] `wohnung`: Farbvariante für Maras Wohnung, Kräuter am Fenster
+- [x] `dach`: Dachtür als Ort zum Ablenken, Deckung hinter dem Wassertank
 
 ### Anzeige
-- [ ] Balken mit Text statt Wert („nicht verbunden“)
-- [ ] NETZ als Balkensymbol 0–4
+- [x] Balken mit Text statt Wert („nicht verbunden“)
+- [x] NETZ als Balkensymbol 0–4
 
 ### Icons
-- [ ] Zahnbürste, Türspion/Auge mit Linse, Walkie-Talkie, Kapsel, Gecko, Schallwelle, Satellit, Katzenauge, Gesicht/Raster, Handy
+- [x] Zahnbürste, Türspion/Auge mit Linse, Walkie-Talkie, Kapsel, Gecko, Schallwelle, Satellit, Katzenauge, Gesicht/Raster, Handy
 
 ### Technik im Projekt
-- [ ] `render.mjs` und GitHub-Workflow: Serien-Ordner unterstützen (`der-alien/episoden`, `der-alien/figuren.json`, `der-alien/audio`)
+- [x] `render.mjs` und GitHub-Workflow: Serien-Ordner unterstützen (`der-alien/episoden`, `der-alien/figuren.json`, `der-alien/audio`)

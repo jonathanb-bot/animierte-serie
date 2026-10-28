@@ -132,11 +132,14 @@
           circle(ex + bx, ey + by + 0.02 * R, pr, f.augen);
           circle(ex + bx - 0.04 * R, ey + by - 0.035 * R, 0.038 * R, "#fff");
           circle(ex + bx + 0.035 * R, ey + by + 0.05 * R, 0.017 * R, "rgba(255,255,255,0.8)");
+          if (o.leuchten > 0) { const gl = f.augenleuchten || "#9dffbf"; circle(ex + bx, ey + by + 0.02 * R, pr * 1.1, rgba(gl, 0.95 * o.leuchten)); circle(ex + bx - 0.03 * R, ey + by - 0.02 * R, pr * 0.45, rgba("#ffffff", 0.9 * o.leuchten)); }
         }
         // Oberlid
         if (aus === "muede" || aus === "misstrauisch") { ctx.fillStyle = f.haut; ctx.fillRect(ex - rx, ey - ry, rx * 2, ry * (aus === "muede" ? 0.95 : 0.7)); }
         ctx.restore();
       }
+      // Grünes Augenleuchten (Der Alien): Schein, der auch die Dunkelheit überstrahlt
+      if (o.leuchten > 0 && bl > 0.35) { const gl = f.augenleuchten || "#9dffbf"; ctx.fillStyle = A.rgrad(ex + bx, ey + by, 0, 0.5 * R, [[0, rgba(gl, 0.55 * o.leuchten)], [1, rgba(gl, 0)]]); ctx.fillRect(ex + bx - 0.5 * R, ey + by - 0.5 * R, R, R); A.licht(ex + bx, ey + by, 0.6 * R, gl, 1.3 * o.leuchten); }
       // Lidlinie
       ctx.beginPath(); ctx.ellipse(ex, ey, rx, ry * bl, 0, 1.12 * Math.PI, 1.88 * Math.PI);
       ctx.strokeStyle = rgba(shade(f.haut, -0.6), 0.7); ctx.lineWidth = 0.035 * R; ctx.lineCap = "round"; ctx.stroke();
@@ -217,6 +220,7 @@
       case "taschenlampe": P.hr = [110, -330]; break;
       case "lauscht": P.hr = [-5, -470]; P.neig = 0.12; break;
       case "geht": case "rennt": P.gehen = name === "rennt" ? 2 : 1; break;
+      case "sitzt": P.sitzen = true; P.hl = [-125, -205]; P.hr = [125, -205]; break;
       case "zombie": P.hl = [-135 + Math.sin(t * 1.3 + ph) * 12, -370 + Math.sin(t * 1.9 + ph) * 10]; P.hr = [135 + Math.sin(t * 1.1 + ph) * 12, -380 + Math.cos(t * 1.6 + ph) * 10]; P.neig = Math.sin(t * 0.8 + ph) * 0.12 + 0.08; P.lean = Math.sin(t * 1.2 + ph) * 0.05; break;
       case "zombie_geht": P.hl = [-130, -375 + Math.sin(t * 4 + ph) * 12]; P.hr = [130, -375 + Math.cos(t * 4 + ph) * 12]; P.neig = Math.sin(t * 0.8 + ph) * 0.12 + 0.08; P.gehen = 0.6; break;
     }
@@ -241,6 +245,15 @@
     // Bodenschatten
     ellipse(0, -2, 110, 18, rgba(A.SCHATTEN, 0.22));
     ctx.rotate(P.lean);
+    // Sitzen: Schneidersitz, der Oberkörper sinkt ab
+    if (P.sitzen) {
+      for (const side of [-1, 1]) {
+        capsule(side * 40, -40, side * 120, -18, 30, 26); fill(side > 0 ? shade(f.hose, -0.08) : f.hose);
+        capsule(side * 120, -18, -side * 20, -6, 26, 22); fill(side > 0 ? f.hose : shade(f.hose, -0.08));
+        A.box(-side * 20 - 30, -26, 60, 26, 12, f.schuhe);
+      }
+      ctx.translate(0, 165);
+    } else
     // Beine
     for (const [i, side] of [[0, -1], [1, 1]]) {
       const ft = i ? fr : fl, hy = -200 + bob * 0.3, l = lift[i];
@@ -263,6 +276,15 @@
     ctx.bezierCurveTo(-96, -352, -84, -260, -72, -182); ctx.lineTo(72, -182);
     ctx.bezierCurveTo(84, -260, 96, -352, 76, -372); ctx.quadraticCurveTo(0, -398, -76, -372); ctx.closePath();
     schattiere(-90, 90, 0.24);
+    if (f.mantel) {
+      // knielanger Mantel über den Beinen, Revers, Knöpfe
+      ctx.beginPath(); ctx.moveTo(-74, -200); ctx.lineTo(-92, -88); ctx.quadraticCurveTo(0, -76, 92, -88); ctx.lineTo(74, -200); ctx.closePath(); fill(f.jacke);
+      ctx.beginPath(); ctx.moveTo(-74, -200); ctx.lineTo(-92, -88); ctx.quadraticCurveTo(0, -76, 92, -88); ctx.lineTo(74, -200); ctx.closePath(); schattiere(-92, 92, 0.24);
+      A.line(6, -210, 10, -84, 4, shade(f.jacke, -0.25));
+      A.box(-74, -214, 148, 16, 8, shade(f.jacke, -0.14));
+      A.poly([[-40, -384], [-6, -300], [-30, -290], [-62, -370]], shade(f.jacke, -0.16)); A.poly([[40, -384], [6, -300], [30, -290], [62, -370]], shade(f.jacke, -0.1));
+      for (const by of [-280, -240]) circle(-16, by, 6, shade(f.jacke, -0.35));
+    } else
     A.box(-74, -206, 148, 26, 12, shade(f.jacke, -0.12));
     if (f.zombie) { // zerrissener Saum + Flecken
       A.poly([[-72, -182], [-50, -160], [-34, -182], [-10, -164], [8, -182], [30, -158], [50, -182], [72, -182], [72, -190], [-72, -190]], shade(f.jacke, -0.12));
@@ -274,8 +296,9 @@
     if (f.kapuze) { ctx.beginPath(); ctx.ellipse(0, -378, 66, 26, 0, 0, Math.PI * 2); fill(shade(f.jacke, -0.15)); }
     else { ctx.beginPath(); ctx.moveTo(-46, -385); ctx.quadraticCurveTo(0, -350, 46, -385); ctx.lineTo(36, -396); ctx.quadraticCurveTo(0, -372, -36, -396); ctx.closePath(); fill(shade(f.jacke, -0.1)); }
     if (f.rucksack) { for (const sx of [-1, 1]) A.box(sx * 52 - 9, -380, 18, 150, 8, f.rucksack); }
+    if (f.schal) { A.box(-50, -404, 100, 34, 16, f.schal); A.box(14, -388, 30, 92, 12, shade(f.schal, -0.1)); }
     // Kopf
-    A.kopf(0, -490, 102, f, { t, ausdruck: o.ausdruck, spricht: o.spricht, blick: o.blick, drehung: o.drehung, neigung: P.neig + (o.neigung || 0), seed: o.seed ?? Math.round(ph * 10) });
+    A.kopf(0, -490, 102, f, { t, ausdruck: o.ausdruck, spricht: o.spricht, blick: o.blick, drehung: o.drehung, neigung: P.neig + (o.neigung || 0), seed: o.seed ?? Math.round(ph * 10), leuchten: o.leuchten });
     // Arme
     const sch = [[-74, -360], [74, -360]];
     const haende = [P.hl, P.hr];

@@ -249,6 +249,12 @@
     ctx.save(); ctx.beginPath(); ctx.rect(x, y, w, h); ctx.clip();
     const c = HIMMEL[zeit] || HIMMEL.tag;
     ctx.fillStyle = lgrad(0, y, 0, y + h, [[0, c[0]], [1, c[1]]]); ctx.fillRect(x, y, w, h);
+    if (s.hof) { // Innenhof: gegenüber nur eine hohe Hauswand mit Fenstern
+      const nacht = zeit === "nacht" || zeit === "abend", wandc = nacht ? "#2a2f3e" : "#a9a49a", r = rnd(19);
+      box(x, y + h * 0.06, w, h, 0, wandc);
+      for (let yy = y + h * 0.1; yy < y + h; yy += 120) for (let xx = x + 30; xx < x + w - 40; xx += 150) box(xx, yy, 80, 90, 4, nacht ? (r() < 0.15 ? "#e9b866" : "#1c2130") : rgba("#ffffff", 0.25));
+      ctx.restore(); return;
+    }
     if (zeit === "nacht") { const r = rnd(4); for (let i = 0; i < 30; i++) circle(x + r() * w, y + r() * h * 0.5, 1.6, "rgba(255,255,255,0.7)"); circle(x + w * 0.78, y + h * 0.2, 26, "#f2efe2"); }
     ctx.save(); ctx.translate(x, y + h); ctx.scale(w / 1080, w / 1080);
     stadt(21, 40, 120, 520, mix(c[1], "#2a2f45", 0.45), zeit, t, 0.05, -100, 1200);
@@ -269,6 +275,7 @@
     fensterBlick(fx, fy, fw, fh, zeit, t, s);
     line(fx + fw / 2, fy, fx + fw / 2, fy + fh, 14, "#f2efe9"); line(fx, fy + fh * 0.45, fx + fw, fy + fh * 0.45, 14, "#f2efe9");
     box(fx - 40, fy + fh + 18, fw + 80, 26, 6, "#e6e1d8");
+    if (s.kraeuter && A.kraeuter) A.kraeuter(fx + 40, fy + fh + 18, t);
     if (s.klebeband) { line(fx + 20, fy + 20, fx + fw - 20, fy + fh - 20, 22, rgba("#d9cfa0", 0.85)); line(fx + fw - 20, fy + 20, fx + 20, fy + fh - 20, 22, rgba("#d9cfa0", 0.85)); }
     if (zeit !== "nacht" && s.vorhang !== "zu") A.licht(fx + fw / 2, fy + fh / 2, 700, "#dfe9ff", 0.6);
     // Vorhang
@@ -286,7 +293,8 @@
     box(-1500, 1440, 4080, 18, 0, "#efe9df");
     // Sofa links
     if (s.moebel !== false) {
-      box(-60, 1190, 330, 150, 40, "#5c6f8a"); box(-60, 1290, 330, 130, 30, "#6a7f9c"); box(-80, 1250, 60, 180, 26, "#5c6f8a"); box(250, 1250, 60, 180, 26, "#5c6f8a");
+      const sofa = s.sofa || "#5c6f8a";
+      box(-60, 1190, 330, 150, 40, sofa); box(-60, 1290, 330, 130, 30, shade(sofa, 0.1)); box(-80, 1250, 60, 180, 26, sofa); box(250, 1250, 60, 180, 26, sofa);
       // Küche rechts
       box(800, 1130, 400, 320, 10, "#e9e6e0"); box(790, 1110, 420, 30, 6, "#9b8b7a");
       box(850, 1120, 120, 16, 6, "#b8bec4"); box(895, 1040, 14, 84, 6, "#9aa2a8"); box(895, 1036, 50, 14, 6, "#9aa2a8");
@@ -592,7 +600,8 @@
     ctx.beginPath(); ctx.moveTo(-470, 1200); ctx.bezierCurveTo(-460, 520, -360, 400, -150, 360); ctx.lineTo(150, 360); ctx.bezierCurveTo(360, 400, 460, 520, 470, 1200); ctx.closePath(); A.schattiere(-470, 470, 0.22);
     ctx.beginPath(); ctx.moveTo(-150, 365); ctx.quadraticCurveTo(0, 470, 150, 365); ctx.lineTo(120, 340); ctx.quadraticCurveTo(0, 420, -120, 340); ctx.closePath(); fill(shade(f.jacke, -0.12));
     if (f.rucksack) for (const sx of [-1, 1]) box(sx * 250 - 25, 420, 50, 800, 20, f.rucksack);
-    A.kopf(0, -60, 330, f, { t, ausdruck: s.ausdruck, spricht: s._spricht && (s.sprecher ? s.sprecher === s.figur : true) && s.stumm !== true, blick: s.blick, drehung: s.drehung ?? Math.sin(t * 0.5) * 0.12, neigung: Math.sin(t * 0.9) * 0.025, seed: 4 });
+    A.kopf(0, -60, 330, f, { t, ausdruck: s.ausdruck, spricht: s._spricht && (s.sprecher ? s.sprecher === s.figur : true) && s.stumm !== true, blick: Array.isArray(s.blick) ? s.blick : undefined, drehung: s.drehung ?? Math.sin(t * 0.5) * 0.12, neigung: Math.sin(t * 0.9) * 0.025, seed: 4, leuchten: A.augenWert ? A.augenWert(s, t) : 0 });
+    if (f.schal) { box(-200, 318, 400, 110, 50, f.schal); ctx.save(); ctx.translate(-90, 400); ctx.rotate(0.12); box(-50, 0, 110, 230, 34, shade(f.schal, -0.1)); ctx.restore(); }
     ctx.restore();
     if (s.licht === "taschenlampe") A.licht(700, 700, 700, "#fff4d0", 1.1);
     if (s.licht === "kerze") A.licht(800, 1500, 900, "#ffb84d", 1.2);

@@ -10,10 +10,13 @@ on:
       - "figuren.json"
       - "render.mjs"
       - "drehbuch.mjs"
+      - "der-alien/episoden/**"
+      - "der-alien/audio/**"
+      - "der-alien/figuren.json"
   workflow_dispatch:
     inputs:
       folge:
-        description: "z.B. folge-01 (leer = alle Folgen)"
+        description: "z.B. folge-01 oder der-alien-folge-01 (leer = alle Folgen)"
         required: false
         default: ""
 
@@ -31,17 +34,29 @@ jobs:
           fetch-depth: 2
       - id: w
         run: |
+          # Einträge sind Pfade ohne .txt, z.B. episoden/folge-01 oder der-alien/episoden/folge-01
+          alle() { ls $1 2>/dev/null | sed 's/\.txt$//'; }
+          ALLE="$(alle 'episoden/folge-*.txt') $(alle 'der-alien/episoden/folge-*.txt')"
           if [ -n "${{ github.event.inputs.folge }}" ]; then
-            L="${{ github.event.inputs.folge }}"
+            L=""
+            for f in ${{ github.event.inputs.folge }}; do
+              case "$f" in
+                */*) L="$L $f" ;;
+                der-alien-*) L="$L der-alien/episoden/${f#der-alien-}" ;;
+                *) L="$L episoden/$f" ;;
+              esac
+            done
           elif [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            L=$(ls episoden/folge-*.txt | xargs -n1 basename | sed 's/\.txt$//')
+            L="$ALLE"
           else
             G=$(git diff --name-only HEAD~1 HEAD || true)
             if echo "$G" | grep -qE '^(engine/|figuren.json|render.mjs|drehbuch.mjs)'; then
-              L=$(ls episoden/folge-*.txt | xargs -n1 basename | sed 's/\.txt$//')
+              L="$ALLE"
             else
-              L=$(echo "$G" | grep -E '^episoden/folge-.*\.txt$' | xargs -r -n1 basename | sed 's/\.txt$//')
-              for d in $(echo "$G" | grep -E '^audio/' | cut -d/ -f2 | sort -u); do L="$L $d"; done
+              L=$(echo "$G" | grep -E '^(der-alien/)?episoden/folge-.*\.txt$' | sed 's/\.txt$//')
+              for d in $(echo "$G" | grep -E '^audio/' | cut -d/ -f2 | sort -u); do L="$L episoden/$d"; done
+              for d in $(echo "$G" | grep -E '^der-alien/audio/' | cut -d/ -f3 | sort -u); do L="$L der-alien/episoden/$d"; done
+              if echo "$G" | grep -q '^der-alien/figuren.json'; then L="$L $(alle 'der-alien/episoden/folge-*.txt')"; fi
             fi
           fi
           J=$(echo $L | tr ' ' '\n' | sort -u | grep . | jq -R . | jq -sc .)
@@ -69,18 +84,23 @@ jobs:
           npm install --no-audit --no-fund
           npx playwright install --with-deps chromium
       - name: Rendern
-        run: node render.mjs "episoden/${{ matrix.folge }}.txt" --teile
+        id: r
+        run: |
+          node render.mjs "${{ matrix.folge }}.txt" --teile
+          # Ausgabename wie in render.mjs: folge-01 oder der-alien-folge-01
+          echo "name=$(echo '${{ matrix.folge }}' | sed 's#^episoden/##; s#/episoden/#-#')" >> "$GITHUB_OUTPUT"
       - name: Als Download bereitstellen
         env:
           GH_TOKEN: ${{ github.token }}
+          NAME: ${{ steps.r.outputs.name }}
         run: |
-          tag="${{ matrix.folge }}-v${{ github.run_number }}"
-          { echo "Automatisch gerendert. Ganze Folge plus Teile für TikTok/Insta (je max. 1 Minute):"; echo; cat "ausgabe/${{ matrix.folge }}-teile.txt"; } > notes.txt
-          gh release create "$tag" "ausgabe/${{ matrix.folge }}.mp4" ausgabe/${{ matrix.folge }}-teil-*.mp4 --title "${{ matrix.folge }} (Version ${{ github.run_number }})" --notes-file notes.txt
+          tag="$NAME-v${{ github.run_number }}"
+          { echo "Automatisch gerendert. Ganze Folge plus Teile für TikTok/Insta (je max. 1 Minute):"; echo; cat "ausgabe/$NAME-teile.txt"; } > notes.txt
+          gh release create "$tag" "ausgabe/$NAME.mp4" ausgabe/$NAME-teil-*.mp4 --title "$NAME (Version ${{ github.run_number }})" --notes-file notes.txt
       - uses: actions/upload-artifact@v4
         with:
-          name: ${{ matrix.folge }}
+          name: ${{ steps.r.outputs.name }}
           path: |
-            ausgabe/${{ matrix.folge }}.mp4
-            ausgabe/${{ matrix.folge }}-teil-*.mp4
-            ausgabe/${{ matrix.folge }}-teile.txt
+            ausgabe/${{ steps.r.outputs.name }}.mp4
+            ausgabe/${{ steps.r.outputs.name }}-teil-*.mp4
+            ausgabe/${{ steps.r.outputs.name }}-teile.txt

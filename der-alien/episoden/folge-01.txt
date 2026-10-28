@@ -1,0 +1,95 @@
+# Folge 1: Im Badezimmer
+@serie Der Alien
+@mund zitate
+@zeit nacht
+
+== Kapitel 1: Das Summen ==
+@hud tag=1 zeit=23:17 handy=34/100% netz=4/4 funk=nicht_verbunden
+[wohnung hof licht=an vorhang=zu du:sitzt haelt=du:handy zoom-rein] Du bist allein zu Hause. Aber im Bad summt etwas.
+[gesicht du ort=wohnung hof licht=an misstrauisch] Deine elektrische Zahnbürste. Dabei steht sie doch in der Ladestation.
+[badezimmer zahnbuerste=weg tuerlicht fokus=300,640 zoom=1.55 zoom_bis=1.3 fokus_bis=330,760] Das Badfenster ist offen. Du hast es nach dem Duschen vergessen.
+[badezimmer nox=korb nox:neugierig haelt=nox:zahnbuerste zahnbuerste=weg tuerlicht fokus=300,1130 zoom=1.45 zoom_bis=1.75] Auf deinem Wäschekorb sitzt etwas Kleines. Dunkelblau. Mit riesigen Augen.
+[gesicht du ort=badezimmer schreck wackeln=0.7] Du schreist.
+[gesicht nox ort=badezimmer schreck haelt haelt=zahnbuerste wackeln=0.7] Es schreit auch.
+[titel oben="Folge 1" gross="Der Alien" unten="Im Badezimmer" farbe=#0f1c33 akzent=#59c7ff dauer=3]
+
+== Kapitel 2: Alles easy? ==
+@hud zeit=23:18
+[badezimmer licht=an du:schreck nox=korb nox:schreck haelt=nox:zahnbuerste zahnbuerste=weg pos=720 ruhig] Dann hört ihr gleichzeitig auf. Und starrt euch nur an.
+[badezimmer licht=an nox=korb nox:fuchtelt nox:wuetend haelt=nox:zahnbuerste zahnbuerste=weg fokus=260,1120 zoom=1.6 zoom_bis=1.75] Es fuchtelt mit deiner Zahnbürste. Als wäre sie eine *Waffe*.
+[objekt objekte="zahnbuerste:31.000 pro Minute" gross="Echter Fakt" farbe=#1e2f45] Echter Fakt: Eine Schallzahnbürste bewegt ihren Kopf rund *31.000-mal* pro Minute. Daher das Summen.
+[gesicht nox ort=badezimmer licht=an neugierig] Dann fragt es mit heller Stimme: „Alles easy?“
+[gesicht du ort=badezimmer licht=an misstrauisch] Es spricht *Deutsch*. Und nichts hier ist easy.
+
+== Kapitel 3: Es klingelt ==
+@hud zeit=23:19
+[tuer klingel zoom-rein] Da klingelt es an deiner Wohnungstür. Kurz vor Mitternacht.
+[badezimmer licht=an nox=korb nox:angst leuchten zahnbuerste=boden fokus=330,1230 zoom=1.5 wackeln=0.3] Das Wesen lässt die Zahnbürste fallen. Seine Haut fängt an, schwach zu *leuchten*.
+[gesicht nox ort=badezimmer licht=an angst leuchten=0.7] „Bitte. Sag ihm nicht, dass ich hier bin.“
+[handy ort=badezimmer licht=an netz=4 netz_bis=0 akku=34 uhrzeit=23:19] Du willst jemanden anrufen. Aber dein Handy hat plötzlich *keinen Empfang*.
+@hud netz=0/4
+[tuer klingel fokus=540,900 zoom=1.25 zoom_bis=1.4] Es klingelt noch einmal. Langsam. Geduldig.
+
+== Kapitel 4: Der Mann im Mantel ==
+@hud zeit=23:20
+[tuer du:geht pos=280 fokus=480,1050 zoom=1.05 zoom_bis=1.2] Du schleichst zur Tür. Ganz leise. Und schaust durch den Türspion.
+[spion mantel froh zoom-rein] Draußen steht ein Mann. Grauer Mantel. Freundliches Gesicht.
+[objekt objekte="linse:Fischauge" gross="Echter Fakt" farbe=#1e2f45] Echter Fakt: Ein Türspion ist eine *Fischaugen-Linse*. Von innen siehst du fast den ganzen Flur.
+[objekt objekte="pfeil:Nur nach außen" gross="Echter Fakt" farbe=#1e2f45] Von außen sieht man dagegen kaum etwas. Die Linsen funktionieren nur in *eine* Richtung.
+[spion mantel froh nah sagt=mantel] „Guten Abend“, sagt er. „Sie haben etwas gefunden, das *mir* gehört.“
+
+== Kapitel 5: Die Kette ==
+@hud zeit=23:21
+[gesicht du ort=tuer besorgt] Er weiß, dass du hier bist. Obwohl du keinen Laut gemacht hast.
+[tuer spalt draussen=mantel ausdruck_draussen=froh fokus=600,950 zoom=1.2 zoom_bis=1.35] Du legst die Kette vor und öffnest einen Spalt. Im Treppenhaus ist es dunkel.
+@hud handy=33/100%
+[tuer spalt draussen=mantel ausdruck_draussen=froh taschenlampe augenleuchten=blitz fokus=690,870 zoom=1.7 zoom_bis=1.85] Du leuchtest mit dem Handy. Für einen Moment blitzen seine Augen *grün* auf.
+[gesicht mantel ort=treppenhaus etage=17 froh] Bestimmt nur eine Spiegelung. „Mir ist ein kleines Tier entlaufen“, sagt er. „Blau. Es beißt.“
+[gesicht mantel ort=treppenhaus etage=17 neutral stumm zoom-rein] Er sieht dich lange an. Als würde er sich dein Gesicht *merken*.
+
+== Kapitel 6: Deine Entscheidung ==
+@hud zeit=23:22
+[badezimmer nox=waschbecken nox:angst leuchten zahnbuerste=boden fokus=640,1320 zoom=1.45] Hinter dir, im Bad, hörst du ein leises Fiepen.
+[gesicht du ort=tuer besorgt] Du könntest einfach die Wahrheit sagen. Ein Satz. Und alles wäre vorbei.
+[gesicht nox ort=badezimmer angst leuchten=0.6] Aber du denkst an diese riesigen Augen. Und wie es gezittert hat.
+[tuer spalt draussen=mantel ausdruck_draussen=froh du:entschlossen pos=820 sagt=du] „Hier ist kein Tier“, sagst du. „Gute Nacht.“
+[gesicht mantel ort=treppenhaus etage=17 froh] Er nickt langsam. „Natürlich. Gute Nacht.“
+
+== Kapitel 7: Schritte ==
+@hud zeit=23:23
+[tuer du:angst pos=540] Du schließt die Tür. Draußen entfernen sich Schritte. Ganz ruhig.
+[hochhaus etage=17 bis_etage=14 strom=false treppe=mantel@16 unsere=17] Siebzehnter Stock. Sechzehnter. Die Schritte werden leiser.
+[handy ort=tuer netz=0 netz_bis=4 akku=33 uhrzeit=23:23] Dein Handy vibriert. Der Empfang ist wieder da.
+@hud netz=4/4
+[badezimmer licht=an zahnbuerste=boden fokus=560,1430 zoom=1.7 zoom_bis=1.85] Im Bad summt die Zahnbürste noch auf dem Boden.
+[gesicht du ort=tuer muede] Du atmest aus. Er ist weg. *Denkst* du.
+
+== Kapitel 8: Kein Mensch ==
+@hud zeit=23:31
+[badezimmer licht=an nox=wanne nox:angst zahnbuerste=boden fokus=960,1220 zoom=1.45] Das Wesen ist in die Badewanne geklettert. Unter dein Handtuch.
+[badezimmer licht=an nox=wanne nox:neugierig du pos=560 sagt=nox zahnbuerste=boden] „Weg?“, flüstert es. „Er ist weg“, sagst du.
+[gesicht nox ort=badezimmer licht=an angewidert haelt haelt=zahnpasta] Es schnuppert an deiner Zahnpasta. Dann beißt es hinein. „Bah!“
+[gesicht du ort=badezimmer licht=an froh] Du musst fast lachen. Zum ersten Mal heute Nacht.
+[gesicht nox ort=badezimmer licht=an traurig] „Wer war das?“, fragst du. Es schaut zur Tür. „*Kein* Mensch.“
+
+== Kapitel 9: Nur eine Nacht ==
+@hud zeit=23:48 handy=32/100%
+[wohnung hof licht=an vorhang=zu du nox:muede objekt=deckenlager objekt_x=760 objekt_y=1470 objekt_s=0.9 pos=360,760] Du baust ihm ein Lager aus Decken. Nur für *eine* Nacht.
+[gesicht nox ort=wohnung hof licht=an muede] „Ich bin Nox“, sagt es. Dann rollt er sich zusammen.
+[gesicht nox ort=wohnung hof licht=an neutral haelt haelt=kapsel] Er drückt eine flache Metallscheibe an sich. Ein Lichtring glimmt darauf.
+[gesicht nox ort=wohnung hof licht=an stur haelt haelt=kapsel] „Was ist das?“, fragst du. „Meins.“ Mehr sagt er nicht.
+[handy ort=wohnung hof licht=an netz=4 netz_bis=0 akku=32 uhrzeit=23:48] Und dein Handy? Wieder *kein Empfang*.
+
+== Kapitel 10: Der Türspion ==
+@hud zeit=23:59 netz=0/4
+[tuer du:geht pos=300] Du gehst noch einmal zur Tür. Nur zur Sicherheit.
+[gesicht du ort=tuer angst zoom-rein] Du hältst die Luft an. Und schaust hindurch.
+[spion mantel neutral] Der Mann steht noch immer da. Direkt vor deiner Tür.
+[spion mantel entschlossen nah zoom-rein] Und sein Lächeln ist *verschwunden*.
+[titel oben="Folge 2: Nur bis morgen" gross="Fortsetzung folgt" farbe=#0f1c33 akzent=#59c7ff dauer=3.5]
+
+== Check ==
+@hud aus
+[objekt objekte="linse:Türspion" gross="Check" farbe=#1e2f45] Check! Kann man von außen durch einen Türspion schauen?
+[objekt objekte="linse:Kaum" gross="Die Antwort" farbe=#1e3a2a] Kaum. Die Linsen wirken nur von innen. Aber es gibt Umkehrgeräte. Deshalb haben manche Türspione eine *Klappe*.
+[titel gross="Was hättest du|gemacht?" groesse=120 unten="Schreib es in die Kommentare" farbe=#0f1c33 dauer=3.5]

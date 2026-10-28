@@ -14,11 +14,14 @@ import { parse } from "./drehbuch.mjs";
 const datei = args.find(a => /\.(json|txt)$/.test(a));
 if (!datei) { console.error("Bitte Folge angeben, z.B. episoden/folge-01.txt"); process.exit(1); }
 
-const castDatei = path.join(ROOT, "figuren.json");
+// Serienordner: <serie>/episoden/folge-XX.txt mit eigener <serie>/figuren.json und <serie>/audio (z.B. der-alien/)
+const SERIE = (() => { const d = path.dirname(path.resolve(datei)), p = path.dirname(d); return path.basename(d) === "episoden" && p !== ROOT && fs.existsSync(path.join(p, "figuren.json")) ? p : ROOT; })();
+const castDatei = path.join(SERIE, "figuren.json");
 const cast = fs.existsSync(castDatei) ? JSON.parse(fs.readFileSync(castDatei, "utf8")) : {};
 const ep = datei.endsWith(".txt") ? parse(fs.readFileSync(datei, "utf8"), cast) : { ...JSON.parse(fs.readFileSync(datei, "utf8")) };
 if (!datei.endsWith(".txt")) ep.figuren = { ...cast, ...(ep.figuren || {}) };
 const id = path.basename(datei).replace(/\.(json|txt)$/, "");
+const name = (SERIE === ROOT ? "" : path.basename(SERIE) + "-") + id; // Name der Ausgabedateien
 const vorschau = flag("vorschau");
 const FPS = Number(opt("fps", vorschau ? 15 : ep.fps || 30));
 const W = 1080, H = 1920;
@@ -29,7 +32,7 @@ const dauerVon = f => Number(execFileSync("ffprobe", ["-v", "error", "-show_entr
 let start = 0;
 const szenen = ep.szenen.map((s, i) => {
   const nr = String(i + 1).padStart(3, "0"), nr2 = String(i + 1).padStart(2, "0");
-  const kandidaten = [s.audio, `audio/${id}/${nr}.mp3`, `audio/${id}/${nr}.wav`, `audio/${id}/${nr2}.mp3`].filter(Boolean).map(p => path.join(ROOT, p));
+  const kandidaten = [s.audio, `audio/${id}/${nr}.mp3`, `audio/${id}/${nr}.wav`, `audio/${id}/${nr2}.mp3`].filter(Boolean).map(p => path.join(SERIE, p));
   const audio = kandidaten.find(p => fs.existsSync(p));
   const roh = (s.text || "").replace(/[„“"»«]/g, "").split(/\s+/).filter(Boolean);
   const sprechDauer = audio ? dauerVon(audio) : roh.reduce((a, w) => a + 0.2 + w.replace(/\*/g, "").length * 0.035 + (/[.!?…]$/.test(w) ? 0.25 : /[,:;]$/.test(w) ? 0.12 : 0), 0);
@@ -39,10 +42,13 @@ const szenen = ep.szenen.map((s, i) => {
   const summe = gew.reduce((a, b) => a + b, 0) || 1;
   const t0 = audio ? 0.05 : 0.15, t1 = audio ? sprechDauer - 0.05 : Math.min(dauer - 0.3, t0 + sprechDauer);
   let acc = t0;
+  // Welche Wörter stehen in Anführungszeichen? (für @mund zitate: Mund bewegt sich nur dort)
+  let inZ = false;
+  const zitat = (s.text || "").split(/\s+/).filter(w => w.replace(/[„“"»«]/g, "")).map(w => { const auf = /[„»]/.test(w) || (/"/.test(w) && !inZ); const z = inZ || auf; if (auf) inZ = true; if (/[“«]/.test(w) || (/"/.test(w) && z && !auf)) inZ = false; if (/[„»].*[“«]/.test(w)) inZ = false; return z; });
   const woerter = roh.map((w, k) => {
     const len = (gew[k] / summe) * (t1 - t0);
     const key = /^\*.*\*[.,!?…:;]?$/.test(w);
-    const o = { w: w.replace(/\*/g, ""), start: acc, ende: acc + len, key };
+    const o = { w: w.replace(/\*/g, ""), start: acc, ende: acc + len, key, zitat: !!zitat[k] };
     acc += len; return o;
   });
   const o = { ...s, start, dauer, woerter, _audio: audio || null };
@@ -94,19 +100,19 @@ function teilePlan() {
 }
 const teile = flag("teile") || flag("teile-plan") ? teilePlan() : null;
 const teileListe = teile && [
-  `24. Stock – ${ep.titel}`, "",
+  `${ep.serie || (SERIE === ROOT ? "24. Stock" : path.basename(SERIE))} – ${ep.titel}`, "",
   ...teile.map((t, k) => `Teil ${k + 1}/${teile.length}  ${mmss(t.start)}–${mmss(t.ende)}  (${(t.ende - t.start).toFixed(0)} s)  ${t.kapitel.join(", ")}`),
 ].join("\n");
 if (flag("teile-plan")) { console.log(teileListe); process.exit(0); }
 
 // ---------- Nur Standbilder (schnelle Kontrolle): --bilder ----------
 if (flag("bilder")) {
-  const dir = path.join(ROOT, "ausgabe", `${id}-bilder`); fs.mkdirSync(dir, { recursive: true });
+  const dir = path.join(ROOT, "ausgabe", `${name}-bilder`); fs.mkdirSync(dir, { recursive: true });
   const browser = await chromium.launch();
   const page = await browser.newPage({ viewport: { width: W, height: H } });
   await page.goto("file://" + path.join(ROOT, "engine", "index.html"));
   await page.evaluate(async () => { await document.fonts.load("900 80px Titel"); await document.fonts.load("700 40px HUD"); });
-  await page.evaluate(d => window.init(d), { W, H, dauer: gesamt, figuren: ep.figuren, untertitel_y: ep.untertitel_y, szenen });
+  await page.evaluate(d => window.init(d), { W, H, dauer: gesamt, figuren: ep.figuren, untertitel_y: ep.untertitel_y, mund: ep.mund, szenen });
   const nur = opt("nur", null); // z.B. --nur 1-12
   const [na, nb] = nur ? nur.split("-").map(Number) : [1, szenen.length];
   fs.rmSync(dir, { recursive: true, force: true }); fs.mkdirSync(dir, { recursive: true });
@@ -128,7 +134,7 @@ const tonDatei = path.join(tmp, "ton.wav");
   const inputs = [], filter = [], mix = [];
   let n = 0;
   // Musik oder Atmo
-  const musik = ep.musik && fs.existsSync(path.join(ROOT, ep.musik)) ? path.join(ROOT, ep.musik) : null;
+  const musik = ep.musik ? [path.join(SERIE, ep.musik), path.join(ROOT, ep.musik)].find(p => fs.existsSync(p)) || null : null;
   if (musik) {
     inputs.push("-stream_loop", "-1", "-i", musik);
     filter.push(`[${n}:a]atrim=0:${gesamt},volume=${ep.musik_lautstaerke ?? 0.16},afade=t=out:st=${Math.max(0, gesamt - 1.5)}:d=1.5[m]`); mix.push("[m]"); n++;
@@ -157,7 +163,7 @@ const tonDatei = path.join(tmp, "ton.wav");
 }
 
 // ---------- Bild ----------
-const ziel = path.join(ROOT, "ausgabe", `${id}${vorschau ? "-vorschau" : ""}.mp4`);
+const ziel = path.join(ROOT, "ausgabe", `${name}${vorschau ? "-vorschau" : ""}.mp4`);
 const ff = spawn("ffmpeg", ["-y", "-v", "error",
   "-f", "image2pipe", "-framerate", String(FPS), "-c:v", "mjpeg", "-i", "-",
   "-ss", String(von), "-i", tonDatei,
@@ -170,7 +176,7 @@ const browser = await chromium.launch();
 const page = await browser.newPage({ viewport: { width: W, height: H } });
 await page.goto("file://" + path.join(ROOT, "engine", "index.html"));
 await page.evaluate(async () => { await document.fonts.load("900 80px Titel"); await document.fonts.load("700 40px HUD"); });
-await page.evaluate(d => window.init(d), { W, H, dauer: gesamt, figuren: ep.figuren, untertitel_y: ep.untertitel_y, szenen });
+await page.evaluate(d => window.init(d), { W, H, dauer: gesamt, figuren: ep.figuren, untertitel_y: ep.untertitel_y, mund: ep.mund, szenen });
 
 const schreib = buf => new Promise(r => (ff.stdin.write(buf) ? r() : ff.stdin.once("drain", r)));
 const t0 = Date.now();
