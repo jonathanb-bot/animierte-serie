@@ -1,0 +1,509 @@
+{
+ "dauer": 214.166,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "treppe",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 2.726,
+   "emotion": "ernst",
+   "text": "Nox ist zurückgekommen. Für *dich*."
+  },
+  {
+   "nr": 2,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 2.726,
+   "dauer": 3.566,
+   "emotion": "froh",
+   "text": "„Wie rührend“, sagt der Mann. „Dann nehme ich euch beide.“"
+  },
+  {
+   "nr": 3,
+   "typ": "treppe",
+   "kapitel": 1,
+   "start": 6.292,
+   "dauer": 4.046,
+   "emotion": "ernst",
+   "text": "Da tritt Mara vor. „Warten Sie. Ich mache Ihnen ein Angebot.“"
+  },
+  {
+   "nr": 4,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 10.338,
+   "dauer": 3.662,
+   "emotion": "erzaehlend",
+   "text": "Der Mann neigt den Kopf. Schräg. Wie ein Vogel."
+  },
+  {
+   "nr": 5,
+   "typ": "titel",
+   "kapitel": 1,
+   "start": 14.0,
+   "dauer": 3.0,
+   "emotion": null,
+   "text": ""
+  },
+  {
+   "nr": 6,
+   "typ": "lichtbild",
+   "kapitel": 2,
+   "start": 17.0,
+   "dauer": 4.838,
+   "emotion": "erzaehlend",
+   "text": "Nox ist ein Alien auf der Flucht vor den Sammlern. Sie tragen fremde Gesichter."
+  },
+  {
+   "nr": 7,
+   "typ": "treppe",
+   "kapitel": 2,
+   "start": 21.838,
+   "dauer": 4.478,
+   "emotion": "spannend",
+   "text": "Er will vom Dach aus Hilfe rufen. Doch im Treppenhaus wartete ein Sammler."
+  },
+  {
+   "nr": 8,
+   "typ": "hochhaus",
+   "kapitel": 2,
+   "start": 26.316,
+   "dauer": 2.078,
+   "emotion": "erzaehlend",
+   "text": "Nox hätte allein entkommen können."
+  },
+  {
+   "nr": 9,
+   "typ": "treppe",
+   "kapitel": 2,
+   "start": 28.394,
+   "dauer": 3.902,
+   "emotion": "ernst",
+   "text": "Aber er kam zurück. Und stellte sich zwischen dich und den Mann."
+  },
+  {
+   "nr": 10,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 32.296,
+   "dauer": 3.734,
+   "emotion": "erzaehlend",
+   "text": "„Ich bringe Ihnen das Wesen. Oben auf dem Dach. Ohne Ärger.“"
+  },
+  {
+   "nr": 11,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 36.03,
+   "dauer": 3.638,
+   "emotion": "ernst",
+   "text": "„Dafür lassen Sie meinen Bruder frei. Und meinen Nachbarn gehen.“"
+  },
+  {
+   "nr": 12,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 39.668,
+   "dauer": 2.798,
+   "emotion": "spannend",
+   "text": "Du starrst Mara an. Meint sie das *ernst*?"
+  },
+  {
+   "nr": 13,
+   "typ": "treppe",
+   "kapitel": 3,
+   "start": 42.466,
+   "dauer": 4.598,
+   "emotion": "ernst",
+   "text": "Mara schaut dich nicht an. Aber ihre Hand drückt kurz deine. Zweimal."
+  },
+  {
+   "nr": 14,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 47.064,
+   "dauer": 3.254,
+   "emotion": "froh",
+   "text": "„Einverstanden“, sagt der Mann. „Gehen wir aufs Dach.“"
+  },
+  {
+   "nr": 15,
+   "typ": "dach",
+   "kapitel": 4,
+   "start": 50.318,
+   "dauer": 4.334,
+   "emotion": "froh",
+   "text": "Mara schließt die Dachtür auf. Kalte Nachtluft schlägt euch entgegen."
+  },
+  {
+   "nr": 16,
+   "typ": "dach",
+   "kapitel": 4,
+   "start": 54.652,
+   "dauer": 3.614,
+   "emotion": "erzaehlend",
+   "text": "Das Dach. Über euch: der *ganze* Himmel."
+  },
+  {
+   "nr": 17,
+   "typ": "dach",
+   "kapitel": 4,
+   "start": 58.266,
+   "dauer": 3.326,
+   "emotion": "erzaehlend",
+   "text": "Nox flitzt hinter den Wassertank. Du hinterher."
+  },
+  {
+   "nr": 18,
+   "typ": "dach",
+   "kapitel": 4,
+   "start": 61.592,
+   "dauer": 5.03,
+   "emotion": "erzaehlend",
+   "text": "Mara bleibt mit dem Mann an der Tür. „Lassen Sie mich mit ihm reden. Er vertraut nur mir.“"
+  },
+  {
+   "nr": 19,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 66.622,
+   "dauer": 4.958,
+   "emotion": "erzaehlend",
+   "text": "Der Mann nickt. Und sieht Mara an. Lange. Als würde er sie *auswendig* lernen."
+  },
+  {
+   "nr": 20,
+   "typ": "dach",
+   "kapitel": 5,
+   "start": 71.58,
+   "dauer": 3.854,
+   "emotion": "erzaehlend",
+   "text": "Hinter dem Tank hält Nox die Kapsel hoch. „Hier. Viel Himmel.“"
+  },
+  {
+   "nr": 21,
+   "typ": "objekt",
+   "kapitel": 5,
+   "start": 75.434,
+   "dauer": 6.686,
+   "emotion": "erklaerend",
+   "text": "Echter Fakt: Auch *GPS* braucht freien Himmel. Die Satelliten kreisen in rund zwanzigtausend Kilometern Höhe."
+  },
+  {
+   "nr": 22,
+   "typ": "objekt",
+   "kapitel": 5,
+   "start": 82.12,
+   "dauer": 5.27,
+   "emotion": "erklaerend",
+   "text": "Ihre Signale kommen nicht durch Wände und Decken. Zwischen Hochhäusern wird die Ortung ungenau."
+  },
+  {
+   "nr": 23,
+   "typ": "objekt",
+   "kapitel": 5,
+   "start": 87.39,
+   "dauer": 3.95,
+   "emotion": "erklaerend",
+   "text": "Deshalb verliert dein Navi im Tunnel oder im Haus so oft das Signal."
+  },
+  {
+   "nr": 24,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 91.34,
+   "dauer": 3.422,
+   "emotion": "ernst",
+   "text": "„Sechzig Sekunden“, flüstert Nox. „Dann nicht mehr *aufhören*.“"
+  },
+  {
+   "nr": 25,
+   "typ": "dach",
+   "kapitel": 6,
+   "start": 94.762,
+   "dauer": 3.062,
+   "emotion": "erzaehlend",
+   "text": "Nox drückt dir eins der gelben Walkie-Talkies in die Hand."
+  },
+  {
+   "nr": 26,
+   "typ": "gesicht",
+   "kapitel": 6,
+   "start": 97.824,
+   "dauer": 2.462,
+   "emotion": "froh",
+   "text": "„Du behältst“, sagt er. „Ich rufe.“"
+  },
+  {
+   "nr": 27,
+   "typ": "gesicht",
+   "kapitel": 6,
+   "start": 100.286,
+   "dauer": 3.83,
+   "emotion": "froh",
+   "text": "„Du rufst mich an? Von da oben?“ Nox nickt ernst."
+  },
+  {
+   "nr": 28,
+   "typ": "gesicht",
+   "kapitel": 6,
+   "start": 104.116,
+   "dauer": 3.806,
+   "emotion": "traurig",
+   "text": "Ein Kinderspielzeug. Und plötzlich das Wertvollste, was du hast."
+  },
+  {
+   "nr": 29,
+   "typ": "dach",
+   "kapitel": 6,
+   "start": 107.922,
+   "dauer": 3.206,
+   "emotion": "erzaehlend",
+   "text": "Dann tippt Nox auf die Kapsel. Der Notruf *beginnt*."
+  },
+  {
+   "nr": 30,
+   "typ": "dach",
+   "kapitel": 7,
+   "start": 111.128,
+   "dauer": 4.718,
+   "emotion": "erzaehlend",
+   "text": "Ein Lichtring breitet sich aus. Sechzig. Neunundfünfzig."
+  },
+  {
+   "nr": 31,
+   "typ": "dach",
+   "kapitel": 7,
+   "start": 115.846,
+   "dauer": 4.43,
+   "emotion": "erzaehlend",
+   "text": "An der Tür redet Mara. Über Elias. Über früher. Ohne Pause."
+  },
+  {
+   "nr": 32,
+   "typ": "gesicht",
+   "kapitel": 7,
+   "start": 120.276,
+   "dauer": 3.158,
+   "emotion": "erzaehlend",
+   "text": "Der Mann hört ihr zu. Er saugt jedes Wort auf."
+  },
+  {
+   "nr": 33,
+   "typ": "dach",
+   "kapitel": 7,
+   "start": 123.434,
+   "dauer": 2.39,
+   "emotion": "erzaehlend",
+   "text": "Vierzig. Neununddreißig."
+  },
+  {
+   "nr": 34,
+   "typ": "gesicht",
+   "kapitel": 7,
+   "start": 125.824,
+   "dauer": 4.526,
+   "emotion": "erzaehlend",
+   "text": "Dann dreht der Mann den Kopf. Zum Wassertank. Zum *Licht*."
+  },
+  {
+   "nr": 35,
+   "typ": "dach",
+   "kapitel": 8,
+   "start": 130.35,
+   "dauer": 2.438,
+   "emotion": "erzaehlend",
+   "text": "Dreißig. Ein starker Impuls rollt über das Dach."
+  },
+  {
+   "nr": 36,
+   "typ": "dach",
+   "kapitel": 8,
+   "start": 132.788,
+   "dauer": 4.022,
+   "emotion": "erzaehlend",
+   "text": "Der Mann *flackert*. Streifen. Farben. Und darunter …"
+  },
+  {
+   "nr": 37,
+   "typ": "dach",
+   "kapitel": 8,
+   "start": 136.81,
+   "dauer": 5.534,
+   "emotion": "erzaehlend",
+   "text": "… eine lange, dünne Gestalt. Mit grünen, leuchtenden Schlitzen statt Augen."
+  },
+  {
+   "nr": 38,
+   "typ": "dach",
+   "kapitel": 8,
+   "start": 142.344,
+   "dauer": 4.19,
+   "emotion": "froh",
+   "text": "Zwei Sekunden. Dann ist der Mann wieder da. Mantel. Lächeln."
+  },
+  {
+   "nr": 39,
+   "typ": "gesicht",
+   "kapitel": 8,
+   "start": 146.534,
+   "dauer": 3.662,
+   "emotion": "spannend",
+   "text": "Mara hat es auch gesehen. Sie redet trotzdem weiter. Ihre Stimme zittert."
+  },
+  {
+   "nr": 40,
+   "typ": "dach",
+   "kapitel": 9,
+   "start": 150.196,
+   "dauer": 4.118,
+   "emotion": "wuetend",
+   "text": "Der Mann geht los. Zum Tank. Nicht mehr freundlich. Nicht mehr langsam."
+  },
+  {
+   "nr": 41,
+   "typ": "dach",
+   "kapitel": 9,
+   "start": 154.314,
+   "dauer": 3.134,
+   "emotion": "wuetend",
+   "text": "Mara stellt sich ihm in den Weg. „Wir hatten eine *Abmachung*!“"
+  },
+  {
+   "nr": 42,
+   "typ": "dach",
+   "kapitel": 9,
+   "start": 157.448,
+   "dauer": 2.486,
+   "emotion": "erzaehlend",
+   "text": "Zehn. Neun. Acht."
+  },
+  {
+   "nr": 43,
+   "typ": "gesicht",
+   "kapitel": 9,
+   "start": 159.934,
+   "dauer": 4.19,
+   "emotion": "spannend",
+   "text": "Nox hält die Kapsel mit beiden Händen. Er zittert. Aber er lässt nicht los."
+  },
+  {
+   "nr": 44,
+   "typ": "dach",
+   "kapitel": 9,
+   "start": 164.124,
+   "dauer": 2.63,
+   "emotion": "erzaehlend",
+   "text": "Drei. Zwei. Eins."
+  },
+  {
+   "nr": 45,
+   "typ": "dach",
+   "kapitel": 10,
+   "start": 166.754,
+   "dauer": 3.878,
+   "emotion": "erzaehlend",
+   "text": "Ein dünner Lichtstrahl schießt in den Himmel. Und ist weg."
+  },
+  {
+   "nr": 46,
+   "typ": "dach",
+   "kapitel": 10,
+   "start": 170.632,
+   "dauer": 4.238,
+   "emotion": "erzaehlend",
+   "text": "Die Kapsel wird dunkel. Für immer. Nox lässt sie sinken."
+  },
+  {
+   "nr": 47,
+   "typ": "gesicht",
+   "kapitel": 10,
+   "start": 174.87,
+   "dauer": 3.278,
+   "emotion": "froh",
+   "text": "„Gesendet“, flüstert Nox. „Sie kommen.“"
+  },
+  {
+   "nr": 48,
+   "typ": "dach",
+   "kapitel": 10,
+   "start": 178.148,
+   "dauer": 3.902,
+   "emotion": "froh",
+   "text": "Der Mann bleibt stehen. Er lächelt wieder. Und schaut nach oben."
+  },
+  {
+   "nr": 49,
+   "typ": "gesicht",
+   "kapitel": 10,
+   "start": 182.05,
+   "dauer": 1.478,
+   "emotion": "ernst",
+   "text": "Warum *lächelt* er?"
+  },
+  {
+   "nr": 50,
+   "typ": "dach",
+   "kapitel": 11,
+   "start": 183.528,
+   "dauer": 4.766,
+   "emotion": "erzaehlend",
+   "text": "Über euch wird es dunkler. Dunkler als die Nacht. Ein tiefes Brummen."
+  },
+  {
+   "nr": 51,
+   "typ": "dach",
+   "kapitel": 11,
+   "start": 188.294,
+   "dauer": 5.678,
+   "emotion": "erzaehlend",
+   "text": "Ein Schiff schiebt sich über das Dach. Lang. Dunkel. Mit grünen Lichtern."
+  },
+  {
+   "nr": 52,
+   "typ": "gesicht",
+   "kapitel": 11,
+   "start": 193.972,
+   "dauer": 3.614,
+   "emotion": "spannend",
+   "text": "Nox schaut hinauf. Und flüstert: „Nicht *das*.“"
+  },
+  {
+   "nr": 53,
+   "typ": "titel",
+   "kapitel": 11,
+   "start": 197.586,
+   "dauer": 3.5,
+   "emotion": null,
+   "text": ""
+  },
+  {
+   "nr": 54,
+   "typ": "objekt",
+   "kapitel": 12,
+   "start": 201.086,
+   "dauer": 3.95,
+   "emotion": "erklaerend",
+   "text": "Check! Warum verliert dein Handy-Navi im Haus oft das Signal?"
+  },
+  {
+   "nr": 55,
+   "typ": "objekt",
+   "kapitel": 12,
+   "start": 205.036,
+   "dauer": 5.63,
+   "emotion": "erklaerend",
+   "text": "GPS-Signale kommen aus rund zwanzigtausend Kilometern Höhe. Wände und Decken *blockieren* sie."
+  },
+  {
+   "nr": 56,
+   "typ": "titel",
+   "kapitel": 12,
+   "start": 210.666,
+   "dauer": 3.5,
+   "emotion": null,
+   "text": ""
+  }
+ ]
+}

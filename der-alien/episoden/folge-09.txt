@@ -1,4 +1,7 @@
 # Folge 9: Auf dem Dach
+@musik musik/folge-09.mp3
+@musik_lautstaerke 1
+@whoosh aus
 @serie Der Alien
 @mund zitate
 @look 0
