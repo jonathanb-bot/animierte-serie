@@ -4,27 +4,27 @@
  "folgen": {
   "01": {
    "titel": "Der erste Tag",
-   "teile": 7
+   "teile": 5
   },
   "02": {
    "titel": "Kein Druck",
-   "teile": 6
+   "teile": 5
   },
   "03": {
    "titel": "Das Treppenhaus",
-   "teile": 6
+   "teile": 4
   },
   "04": {
    "titel": "Licht aus",
-   "teile": 6
+   "teile": 4
   },
   "05": {
    "titel": "Wasserdiebe",
-   "teile": 6
+   "teile": 4
   },
   "06": {
    "titel": "Auf dem Dach",
-   "teile": 6
+   "teile": 5
   },
   "07": {
    "titel": "Fieber",
@@ -45,263 +45,166 @@
  },
  "dateien": {
   "24-stock/folge-01-teil-1.mp4": {
-   "ok": false,
-   "bild_s": 54.77,
-   "ton_s": 54.76,
-   "lufs": -35.9,
-   "grund": "zu leise, Stimme fehlt vermutlich"
+   "ok": true,
+   "bild_s": 44.83,
+   "ton_s": 44.82,
+   "lufs": -14.9
   },
   "24-stock/folge-01-teil-2.mp4": {
-   "ok": false,
-   "bild_s": 58.4,
-   "ton_s": 58.38,
-   "lufs": -35.9,
-   "grund": "zu leise, Stimme fehlt vermutlich"
+   "ok": true,
+   "bild_s": 44.23,
+   "ton_s": 44.23,
+   "lufs": -14.4
   },
   "24-stock/folge-01-teil-3.mp4": {
-   "ok": false,
-   "bild_s": 45.7,
-   "ton_s": 45.7,
-   "lufs": -35.9,
-   "grund": "zu leise, Stimme fehlt vermutlich"
+   "ok": true,
+   "bild_s": 51.93,
+   "ton_s": 51.9,
+   "lufs": -14.8
   },
   "24-stock/folge-01-teil-4.mp4": {
-   "ok": false,
-   "bild_s": 19.7,
-   "ton_s": 19.7,
-   "lufs": -36.0,
-   "grund": "zu leise, Stimme fehlt vermutlich"
+   "ok": true,
+   "bild_s": 49.03,
+   "ton_s": 49.02,
+   "lufs": -14.9
   },
   "24-stock/folge-01-teil-5.mp4": {
-   "ok": false,
-   "bild_s": 41.07,
-   "ton_s": 41.06,
-   "lufs": -35.9,
-   "grund": "zu leise, Stimme fehlt vermutlich"
-  },
-  "24-stock/folge-01-teil-6.mp4": {
-   "ok": false,
-   "bild_s": 28.3,
-   "ton_s": 28.27,
-   "lufs": -35.9,
-   "grund": "zu leise, Stimme fehlt vermutlich"
-  },
-  "24-stock/folge-01-teil-7.mp4": {
-   "ok": false,
-   "bild_s": 49.47,
-   "ton_s": 49.48,
-   "lufs": -35.9,
-   "grund": "zu leise, Stimme fehlt vermutlich"
+   "ok": true,
+   "bild_s": 40.2,
+   "ton_s": 40.19,
+   "lufs": -15.4
   },
   "24-stock/folge-02-teil-1.mp4": {
-   "ok": false,
-   "bild_s": 47.1,
-   "ton_s": 47.09,
-   "lufs": -35.9,
-   "grund": "zu leise, Stimme fehlt vermutlich"
+   "ok": true,
+   "bild_s": 39.17,
+   "ton_s": 39.16,
+   "lufs": -14.9
   },
   "24-stock/folge-02-teil-2.mp4": {
-   "ok": false,
-   "bild_s": 56.23,
-   "ton_s": 56.21,
-   "lufs": -35.9,
-   "grund": "zu leise, Stimme fehlt vermutlich"
+   "ok": true,
+   "bild_s": 41.87,
+   "ton_s": 41.87,
+   "lufs": -14.6
   },
   "24-stock/folge-02-teil-3.mp4": {
-   "ok": false,
-   "bild_s": 38.83,
-   "ton_s": 38.81,
-   "lufs": -35.9,
-   "grund": "zu leise, Stimme fehlt vermutlich"
+   "ok": true,
+   "bild_s": 51.5,
+   "ton_s": 51.48,
+   "lufs": -14.8
   },
   "24-stock/folge-02-teil-4.mp4": {
-   "ok": false,
-   "bild_s": 53.2,
-   "ton_s": 53.17,
-   "lufs": -35.8,
-   "grund": "zu leise, Stimme fehlt vermutlich"
+   "ok": true,
+   "bild_s": 41.1,
+   "ton_s": 41.08,
+   "lufs": -15.0
   },
   "24-stock/folge-02-teil-5.mp4": {
-   "ok": false,
-   "bild_s": 54.37,
-   "ton_s": 54.35,
-   "lufs": -35.9,
-   "grund": "zu leise, Stimme fehlt vermutlich"
-  },
-  "24-stock/folge-02-teil-6.mp4": {
-   "ok": false,
-   "bild_s": 35.87,
-   "ton_s": 35.88,
-   "lufs": -35.9,
-   "grund": "zu leise, Stimme fehlt vermutlich"
+   "ok": true,
+   "bild_s": 51.9,
+   "ton_s": 51.94,
+   "lufs": -14.9
   },
   "24-stock/folge-03-teil-1.mp4": {
-   "ok": false,
-   "bild_s": 35.67,
-   "ton_s": 35.66,
-   "lufs": -36.0,
-   "grund": "zu leise, Stimme fehlt vermutlich"
+   "ok": true,
+   "bild_s": 49.17,
+   "ton_s": 49.16,
+   "lufs": -14.8
   },
   "24-stock/folge-03-teil-2.mp4": {
-   "ok": false,
-   "bild_s": 37.8,
-   "ton_s": 37.8,
-   "lufs": -35.8,
-   "grund": "zu leise, Stimme fehlt vermutlich"
+   "ok": true,
+   "bild_s": 48.4,
+   "ton_s": 48.38,
+   "lufs": -14.9
   },
   "24-stock/folge-03-teil-3.mp4": {
-   "ok": false,
-   "bild_s": 47.77,
-   "ton_s": 47.74,
-   "lufs": -35.8,
-   "grund": "zu leise, Stimme fehlt vermutlich"
+   "ok": true,
+   "bild_s": 52.57,
+   "ton_s": 52.54,
+   "lufs": -14.8
   },
   "24-stock/folge-03-teil-4.mp4": {
-   "ok": false,
-   "bild_s": 46.0,
-   "ton_s": 45.99,
-   "lufs": -35.9,
-   "grund": "zu leise, Stimme fehlt vermutlich"
-  },
-  "24-stock/folge-03-teil-5.mp4": {
-   "ok": false,
-   "bild_s": 35.23,
-   "ton_s": 35.23,
-   "lufs": -35.9,
-   "grund": "zu leise, Stimme fehlt vermutlich"
-  },
-  "24-stock/folge-03-teil-6.mp4": {
-   "ok": false,
-   "bild_s": 45.8,
-   "ton_s": 45.78,
-   "lufs": -36.0,
-   "grund": "zu leise, Stimme fehlt vermutlich"
+   "ok": true,
+   "bild_s": 38.9,
+   "ton_s": 38.91,
+   "lufs": -14.6
   },
   "24-stock/folge-04-teil-1.mp4": {
-   "ok": false,
-   "bild_s": 36.8,
-   "ton_s": 36.78,
-   "lufs": -36.0,
-   "grund": "zu leise, Stimme fehlt vermutlich"
+   "ok": true,
+   "bild_s": 49.47,
+   "ton_s": 49.44,
+   "lufs": -15.3
   },
   "24-stock/folge-04-teil-2.mp4": {
-   "ok": false,
-   "bild_s": 45.53,
-   "ton_s": 45.52,
-   "lufs": -35.9,
-   "grund": "zu leise, Stimme fehlt vermutlich"
+   "ok": true,
+   "bild_s": 48.8,
+   "ton_s": 48.78,
+   "lufs": -14.6
   },
   "24-stock/folge-04-teil-3.mp4": {
-   "ok": false,
-   "bild_s": 40.33,
-   "ton_s": 40.33,
-   "lufs": -36.0,
-   "grund": "zu leise, Stimme fehlt vermutlich"
+   "ok": true,
+   "bild_s": 49.63,
+   "ton_s": 49.6,
+   "lufs": -14.7
   },
   "24-stock/folge-04-teil-4.mp4": {
-   "ok": false,
-   "bild_s": 54.5,
-   "ton_s": 54.48,
-   "lufs": -35.9,
-   "grund": "zu leise, Stimme fehlt vermutlich"
-  },
-  "24-stock/folge-04-teil-5.mp4": {
-   "ok": false,
-   "bild_s": 43.0,
-   "ton_s": 42.98,
-   "lufs": -35.9,
-   "grund": "zu leise, Stimme fehlt vermutlich"
-  },
-  "24-stock/folge-04-teil-6.mp4": {
-   "ok": false,
-   "bild_s": 32.97,
-   "ton_s": 32.98,
-   "lufs": -36.0,
-   "grund": "zu leise, Stimme fehlt vermutlich"
+   "ok": true,
+   "bild_s": 51.13,
+   "ton_s": 51.17,
+   "lufs": -15.0
   },
   "24-stock/folge-05-teil-1.mp4": {
-   "ok": false,
-   "bild_s": 44.27,
-   "ton_s": 44.23,
-   "lufs": -35.9,
-   "grund": "zu leise, Stimme fehlt vermutlich"
+   "ok": true,
+   "bild_s": 55.6,
+   "ton_s": 55.58,
+   "lufs": -14.5
   },
   "24-stock/folge-05-teil-2.mp4": {
-   "ok": false,
-   "bild_s": 44.37,
-   "ton_s": 44.34,
-   "lufs": -35.9,
-   "grund": "zu leise, Stimme fehlt vermutlich"
+   "ok": true,
+   "bild_s": 49.97,
+   "ton_s": 49.95,
+   "lufs": -15.3
   },
   "24-stock/folge-05-teil-3.mp4": {
-   "ok": false,
-   "bild_s": 37.2,
-   "ton_s": 37.2,
-   "lufs": -35.8,
-   "grund": "zu leise, Stimme fehlt vermutlich"
+   "ok": true,
+   "bild_s": 55.83,
+   "ton_s": 55.81,
+   "lufs": -15.0
   },
   "24-stock/folge-05-teil-4.mp4": {
-   "ok": false,
-   "bild_s": 46.67,
-   "ton_s": 46.65,
-   "lufs": -35.8,
-   "grund": "zu leise, Stimme fehlt vermutlich"
-  },
-  "24-stock/folge-05-teil-5.mp4": {
-   "ok": false,
-   "bild_s": 43.73,
-   "ton_s": 43.72,
-   "lufs": -35.9,
-   "grund": "zu leise, Stimme fehlt vermutlich"
-  },
-  "24-stock/folge-05-teil-6.mp4": {
-   "ok": false,
-   "bild_s": 37.43,
-   "ton_s": 37.45,
-   "lufs": -35.9,
-   "grund": "zu leise, Stimme fehlt vermutlich"
+   "ok": true,
+   "bild_s": 41.2,
+   "ton_s": 41.21,
+   "lufs": -14.7
   },
   "24-stock/folge-06-teil-1.mp4": {
-   "ok": false,
-   "bild_s": 40.83,
-   "ton_s": 40.81,
-   "lufs": -35.9,
-   "grund": "zu leise, Stimme fehlt vermutlich"
+   "ok": true,
+   "bild_s": 34.23,
+   "ton_s": 34.23,
+   "lufs": -15.0
   },
   "24-stock/folge-06-teil-2.mp4": {
-   "ok": false,
-   "bild_s": 36.03,
-   "ton_s": 36.02,
-   "lufs": -35.9,
-   "grund": "zu leise, Stimme fehlt vermutlich"
+   "ok": true,
+   "bild_s": 45.03,
+   "ton_s": 45.02,
+   "lufs": -14.9
   },
   "24-stock/folge-06-teil-3.mp4": {
-   "ok": false,
-   "bild_s": 57.13,
-   "ton_s": 57.11,
-   "lufs": -35.9,
-   "grund": "zu leise, Stimme fehlt vermutlich"
+   "ok": true,
+   "bild_s": 45.73,
+   "ton_s": 45.72,
+   "lufs": -14.8
   },
   "24-stock/folge-06-teil-4.mp4": {
-   "ok": false,
-   "bild_s": 24.23,
-   "ton_s": 24.21,
-   "lufs": -35.8,
-   "grund": "zu leise, Stimme fehlt vermutlich"
+   "ok": true,
+   "bild_s": 40.9,
+   "ton_s": 40.88,
+   "lufs": -14.9
   },
   "24-stock/folge-06-teil-5.mp4": {
-   "ok": false,
-   "bild_s": 50.77,
-   "ton_s": 50.74,
-   "lufs": -36.0,
-   "grund": "zu leise, Stimme fehlt vermutlich"
-  },
-  "24-stock/folge-06-teil-6.mp4": {
-   "ok": false,
-   "bild_s": 54.83,
-   "ton_s": 54.82,
-   "lufs": -35.9,
-   "grund": "zu leise, Stimme fehlt vermutlich"
+   "ok": true,
+   "bild_s": 33.53,
+   "ton_s": 33.54,
+   "lufs": -14.9
   },
   "24-stock/folge-07-teil-1.mp4": {
    "ok": true,
