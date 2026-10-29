@@ -1,0 +1,482 @@
+{
+ "dauer": 216.956,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "wohnung",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 4.334,
+   "emotion": "spannend",
+   "text": "„Bring ihnen das kleine grüne Wesen.“ Und Mara hält Nox im Arm."
+  },
+  {
+   "nr": 2,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 4.334,
+   "dauer": 4.43,
+   "emotion": "ernst",
+   "text": "Du siehst Mara an. Mara sieht Nox an. Keiner atmet."
+  },
+  {
+   "nr": 3,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 8.764,
+   "dauer": 5.078,
+   "emotion": "erzaehlend",
+   "text": "„Elias würde ihn nie *Wesen* nennen“, sagt Mara langsam. „Er würde *Nox* schreiben.“"
+  },
+  {
+   "nr": 4,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 13.842,
+   "dauer": 3.806,
+   "emotion": "ernst",
+   "text": "„Und selbst wenn sie echt ist: Elias würde wollen, dass ich Nox *helfe*.“"
+  },
+  {
+   "nr": 5,
+   "typ": "titel",
+   "kapitel": 1,
+   "start": 17.648,
+   "dauer": 3.0,
+   "emotion": null,
+   "text": ""
+  },
+  {
+   "nr": 6,
+   "typ": "hochhaus",
+   "kapitel": 2,
+   "start": 20.648,
+   "dauer": 4.166,
+   "emotion": "erzaehlend",
+   "text": "Nox will vom Dach aus seine Leute rufen. Die Sammler jagen ihn."
+  },
+  {
+   "nr": 7,
+   "typ": "kreuzung",
+   "kapitel": 2,
+   "start": 24.814,
+   "dauer": 4.07,
+   "emotion": "erzaehlend",
+   "text": "Sie können Gesichter *ausleihen*. Aber im Licht leuchten ihre Augen grün."
+  },
+  {
+   "nr": 8,
+   "typ": "objekt",
+   "kapitel": 2,
+   "start": 28.884,
+   "dauer": 4.718,
+   "emotion": "erklaerend",
+   "text": "Nox hat eure alten Walkie-Talkies umgebaut. Jetzt reichen sie bis zu seinen Leuten."
+  },
+  {
+   "nr": 9,
+   "typ": "handy",
+   "kapitel": 2,
+   "start": 33.602,
+   "dauer": 4.502,
+   "emotion": "erzaehlend",
+   "text": "Dann kam eine Nachricht von Elias' Handy: „Bring ihnen das kleine grüne Wesen.“"
+  },
+  {
+   "nr": 10,
+   "typ": "wohnung",
+   "kapitel": 3,
+   "start": 38.104,
+   "dauer": 3.854,
+   "emotion": "erzaehlend",
+   "text": "Halb zwölf. Zeit. Mara steckt den Dachschlüssel ein."
+  },
+  {
+   "nr": 11,
+   "typ": "wohnung",
+   "kapitel": 3,
+   "start": 41.958,
+   "dauer": 4.286,
+   "emotion": "erzaehlend",
+   "text": "Nox tappt hinter dir her. Seine kleinen Füße machen *tapp, tapp*."
+  },
+  {
+   "nr": 12,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 46.244,
+   "dauer": 5.174,
+   "emotion": "ernst",
+   "text": "„Wenn ich Angst kriege“, flüstert er, „dann leuchte ich.“ „Ich weiß“, sagst du."
+  },
+  {
+   "nr": 13,
+   "typ": "flur",
+   "kapitel": 3,
+   "start": 51.418,
+   "dauer": 3.542,
+   "emotion": "erzaehlend",
+   "text": "Ihr tretet ins Treppenhaus. Nur das grüne Notlicht brennt."
+  },
+  {
+   "nr": 14,
+   "typ": "handy",
+   "kapitel": 3,
+   "start": 54.96,
+   "dauer": 3.038,
+   "emotion": "erzaehlend",
+   "text": "Dein Handy: voller Empfang. Noch."
+  },
+  {
+   "nr": 15,
+   "typ": "treppe",
+   "kapitel": 4,
+   "start": 57.998,
+   "dauer": 18.014,
+   "emotion": "erzaehlend",
+   "text": "Achtzehnter Stock. Neunzehnter. Ihr nehmt jede Stufe einzeln."
+  },
+  {
+   "nr": 16,
+   "typ": "hochhaus",
+   "kapitel": 4,
+   "start": 76.012,
+   "dauer": 3.782,
+   "emotion": "erzaehlend",
+   "text": "Mara geht vorne. Du in der Mitte. Nox hinten."
+  },
+  {
+   "nr": 17,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 79.794,
+   "dauer": 4.742,
+   "emotion": "erzaehlend",
+   "text": "Nox bleibt stehen. Er lauscht. Dann schüttelt er den Kopf. „Kein Pfeifen.“"
+  },
+  {
+   "nr": 18,
+   "typ": "treppe",
+   "kapitel": 4,
+   "start": 84.536,
+   "dauer": 2.87,
+   "emotion": "erzaehlend",
+   "text": "Zwanzigster Stock. Einundzwanzigster."
+  },
+  {
+   "nr": 19,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 87.406,
+   "dauer": 2.846,
+   "emotion": "ernst",
+   "text": "Bis jetzt läuft alles gut. *Zu* gut."
+  },
+  {
+   "nr": 20,
+   "typ": "handy",
+   "kapitel": 5,
+   "start": 90.252,
+   "dauer": 2.774,
+   "emotion": "erzaehlend",
+   "text": "Im zweiundzwanzigsten Stock fällt dein Empfang auf *null*."
+  },
+  {
+   "nr": 21,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 93.026,
+   "dauer": 1.382,
+   "emotion": "spannend",
+   "text": "Du bleibst stehen."
+  },
+  {
+   "nr": 22,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 94.408,
+   "dauer": 4.526,
+   "emotion": "spannend",
+   "text": "Nox' Antennen stellen sich auf. „Pfeifen“, haucht er. „*Über* uns.“"
+  },
+  {
+   "nr": 23,
+   "typ": "treppe",
+   "kapitel": 5,
+   "start": 98.934,
+   "dauer": 3.374,
+   "emotion": "spannend",
+   "text": "Auf dem Treppenabsatz über euch steht jemand. Grauer Mantel."
+  },
+  {
+   "nr": 24,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 102.308,
+   "dauer": 1.766,
+   "emotion": "froh",
+   "text": "„Guten Abend“, sagt er freundlich."
+  },
+  {
+   "nr": 25,
+   "typ": "gesicht",
+   "kapitel": 6,
+   "start": 104.074,
+   "dauer": 3.182,
+   "emotion": "spannend",
+   "text": "Du willst wegrennen. Aber du kannst dich nicht bewegen."
+  },
+  {
+   "nr": 26,
+   "typ": "objekt",
+   "kapitel": 6,
+   "start": 107.256,
+   "dauer": 6.254,
+   "emotion": "erklaerend",
+   "text": "Echter Fakt: Bei plötzlicher Gefahr *erstarren* viele Menschen zuerst. Der Puls wird dabei sogar langsamer."
+  },
+  {
+   "nr": 27,
+   "typ": "objekt",
+   "kapitel": 6,
+   "start": 113.51,
+   "dauer": 5.822,
+   "emotion": "erklaerend",
+   "text": "Forscher nennen das Schreckstarre. Der Körper hält still und beobachtet. Ein uralter Schutzreflex."
+  },
+  {
+   "nr": 28,
+   "typ": "treppe",
+   "kapitel": 6,
+   "start": 119.332,
+   "dauer": 3.59,
+   "emotion": "erzaehlend",
+   "text": "Der Mann kommt eine Stufe herunter. „Das kleine Wesen, bitte.“"
+  },
+  {
+   "nr": 29,
+   "typ": "gesicht",
+   "kapitel": 7,
+   "start": 122.922,
+   "dauer": 4.694,
+   "emotion": "ernst",
+   "text": "„Nox“, flüsterst du. „Lauf. Zum Dach. *Allein*.“"
+  },
+  {
+   "nr": 30,
+   "typ": "treppe",
+   "kapitel": 7,
+   "start": 127.616,
+   "dauer": 3.422,
+   "emotion": "ernst",
+   "text": "Mara drückt ihm den Dachschlüssel in die Hand. „Lauf!“"
+  },
+  {
+   "nr": 31,
+   "typ": "hochhaus",
+   "kapitel": 7,
+   "start": 131.038,
+   "dauer": 5.39,
+   "emotion": "erzaehlend",
+   "text": "Nox springt an die Wand. Und klettert. Über den Mann hinweg. Nach oben."
+  },
+  {
+   "nr": 32,
+   "typ": "gesicht",
+   "kapitel": 7,
+   "start": 136.428,
+   "dauer": 3.446,
+   "emotion": "erzaehlend",
+   "text": "Der Mann schaut ihm nicht einmal nach. Er schaut nur *dich* an."
+  },
+  {
+   "nr": 33,
+   "typ": "gesicht",
+   "kapitel": 8,
+   "start": 139.874,
+   "dauer": 4.55,
+   "emotion": "froh",
+   "text": "„Er kommt zurück“, sagt er ruhig. „Wegen dir. Das tun sie immer.“"
+  },
+  {
+   "nr": 34,
+   "typ": "treppe",
+   "kapitel": 8,
+   "start": 144.424,
+   "dauer": 4.214,
+   "emotion": "froh",
+   "text": "Er legt dir die Hand auf die Schulter. Ganz leicht. Ganz *kalt*."
+  },
+  {
+   "nr": 35,
+   "typ": "gesicht",
+   "kapitel": 8,
+   "start": 148.638,
+   "dauer": 3.134,
+   "emotion": "ernst",
+   "text": "Mara stellt sich neben dich. „Lassen Sie uns gehen.“"
+  },
+  {
+   "nr": 36,
+   "typ": "gesicht",
+   "kapitel": 8,
+   "start": 151.772,
+   "dauer": 4.022,
+   "emotion": "froh",
+   "text": "„Mara“, sagt er freundlich. „Sie wollten doch Ihren Bruder.“"
+  },
+  {
+   "nr": 37,
+   "typ": "gesicht",
+   "kapitel": 8,
+   "start": 155.794,
+   "dauer": 2.486,
+   "emotion": "traurig",
+   "text": "Mara zögert. Nur eine Sekunde."
+  },
+  {
+   "nr": 38,
+   "typ": "hochhaus",
+   "kapitel": 9,
+   "start": 158.28,
+   "dauer": 5.318,
+   "emotion": "erzaehlend",
+   "text": "Oben, an der Dachtür, sitzt Nox. Allein. Mit dem Schlüssel."
+  },
+  {
+   "nr": 39,
+   "typ": "gesicht",
+   "kapitel": 9,
+   "start": 163.598,
+   "dauer": 4.262,
+   "emotion": "traurig",
+   "text": "Er könnte aufschließen. Den Notruf senden. Und für immer weg sein."
+  },
+  {
+   "nr": 40,
+   "typ": "gesicht",
+   "kapitel": 9,
+   "start": 167.86,
+   "dauer": 2.846,
+   "emotion": "ernst",
+   "text": "Und du stehst hier unten. Mit einem Sammler."
+  },
+  {
+   "nr": 41,
+   "typ": "gesicht",
+   "kapitel": 9,
+   "start": 170.706,
+   "dauer": 3.566,
+   "emotion": "ernst",
+   "text": "„Geh“, denkst du. „Bitte. Geh einfach.“"
+  },
+  {
+   "nr": 42,
+   "typ": "treppe",
+   "kapitel": 9,
+   "start": 174.272,
+   "dauer": 2.678,
+   "emotion": "erzaehlend",
+   "text": "Ein paar Sekunden ist es ganz still."
+  },
+  {
+   "nr": 43,
+   "typ": "gesicht",
+   "kapitel": 10,
+   "start": 176.95,
+   "dauer": 4.91,
+   "emotion": "erzaehlend",
+   "text": "Der Mann wartet. Geduldig. Als wüsste er schon, wie es ausgeht."
+  },
+  {
+   "nr": 44,
+   "typ": "gesicht",
+   "kapitel": 10,
+   "start": 181.86,
+   "dauer": 2.51,
+   "emotion": "spannend",
+   "text": "„Warum wartet er?“, flüstert Mara."
+  },
+  {
+   "nr": 45,
+   "typ": "gesicht",
+   "kapitel": 10,
+   "start": 184.37,
+   "dauer": 2.39,
+   "emotion": "erzaehlend",
+   "text": "Dann hörst du es. Von oben."
+  },
+  {
+   "nr": 46,
+   "typ": "treppe",
+   "kapitel": 10,
+   "start": 186.76,
+   "dauer": 2.486,
+   "emotion": "erzaehlend",
+   "text": "*Tapp. Tapp. Tapp.*"
+  },
+  {
+   "nr": 47,
+   "typ": "treppe",
+   "kapitel": 11,
+   "start": 189.246,
+   "dauer": 4.406,
+   "emotion": "erzaehlend",
+   "text": "Kleine Schritte kommen die Treppe herunter. Schwach grün leuchtend."
+  },
+  {
+   "nr": 48,
+   "typ": "treppe",
+   "kapitel": 11,
+   "start": 193.652,
+   "dauer": 2.75,
+   "emotion": "ernst",
+   "text": "Nox stellt sich zwischen dich und den Mann."
+  },
+  {
+   "nr": 49,
+   "typ": "gesicht",
+   "kapitel": 11,
+   "start": 196.402,
+   "dauer": 3.974,
+   "emotion": "ernst",
+   "text": "Er zittert. Er leuchtet. Aber er geht keinen Schritt zurück."
+  },
+  {
+   "nr": 50,
+   "typ": "titel",
+   "kapitel": 11,
+   "start": 200.376,
+   "dauer": 3.5,
+   "emotion": null,
+   "text": ""
+  },
+  {
+   "nr": 51,
+   "typ": "objekt",
+   "kapitel": 12,
+   "start": 203.876,
+   "dauer": 4.622,
+   "emotion": "erklaerend",
+   "text": "Check! Was macht dein Körper oft zuerst, wenn plötzlich Gefahr droht?"
+  },
+  {
+   "nr": 52,
+   "typ": "objekt",
+   "kapitel": 12,
+   "start": 208.498,
+   "dauer": 4.958,
+   "emotion": "erklaerend",
+   "text": "Er *erstarrt*. Der Puls wird kurz langsamer. Forscher nennen das Schreckstarre."
+  },
+  {
+   "nr": 53,
+   "typ": "titel",
+   "kapitel": 12,
+   "start": 213.456,
+   "dauer": 3.5,
+   "emotion": null,
+   "text": ""
+  }
+ ]
+}
