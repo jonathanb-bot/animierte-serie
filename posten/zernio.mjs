@@ -39,10 +39,20 @@ console.log("Verbundene Konten:", liste.map(a => `${a.platform}:${a.username || 
 if (args.includes("--konten")) process.exit(0);
 const konto = p => liste.find(a => a.platform === p);
 
+// Geplante Posts zurückziehen: Einträge in plan.loeschen (IDs aus status.json)
+for (const pid of plan.loeschen || []) {
+  const st = status[pid];
+  if (!st?.zernioId || st.geloescht) continue;
+  const r = await api("DELETE", `/posts/${st.zernioId}`);
+  st.geloescht = r.ok; st.ok = false; st.loeschHttp = r.status; st.loeschAntwort = r.ok ? undefined : JSON.stringify(r.json).slice(0, 300);
+  speichern();
+  console.log(r.ok ? `🗑 ${pid} zurückgezogen` : `✗ ${pid} konnte nicht zurückgezogen werden: HTTP ${r.status} ${JSON.stringify(r.json).slice(0, 300)}`);
+}
+
 let neu = 0, fehler = 0;
 for (const post of plan.posts) {
   if (nur && !nur.includes(post.id)) continue;
-  if (status[post.id]?.ok) continue;
+  if (status[post.id]?.ok || status[post.id]?.geloescht || (plan.loeschen || []).includes(post.id)) continue;
   const acc = konto(post.platform);
   if (!acc) { console.log(`✗ ${post.id}: kein ${post.platform}-Konto verbunden`); fehler++; continue; }
 
