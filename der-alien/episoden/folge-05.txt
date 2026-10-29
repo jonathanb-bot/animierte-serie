@@ -1,4 +1,7 @@
 # Folge 5: Was Nox gestohlen hat
+@musik musik/folge-05.mp3
+@musik_lautstaerke 1
+@whoosh aus
 @serie Der Alien
 @mund zitate
 @look 0

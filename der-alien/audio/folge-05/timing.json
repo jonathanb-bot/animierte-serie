@@ -1,0 +1,527 @@
+{
+ "dauer": 215.25,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "wohnung",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 4.286,
+   "emotion": "ruhig",
+   "text": "„Auch dann nicht, wenn er aussieht wie ich.“ Der Satz lässt dich nicht los."
+  },
+  {
+   "nr": 2,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 4.286,
+   "dauer": 4.862,
+   "emotion": "ruhig",
+   "text": "Mittag. Keiner hat geschlafen. Mara starrt seit Stunden auf die Kapsel."
+  },
+  {
+   "nr": 3,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 9.148,
+   "dauer": 3.254,
+   "emotion": "ernst",
+   "text": "„Nox“, sagst du. „Jetzt will ich *alles* wissen.“"
+  },
+  {
+   "nr": 4,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 12.402,
+   "dauer": 2.726,
+   "emotion": "erzaehlend",
+   "text": "Nox verschränkt die Arme. „Meins.“"
+  },
+  {
+   "nr": 5,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 15.128,
+   "dauer": 2.222,
+   "emotion": "wuetend",
+   "text": "„Nein“, sagst du. „Diesmal nicht.“"
+  },
+  {
+   "nr": 6,
+   "typ": "titel",
+   "kapitel": 1,
+   "start": 17.35,
+   "dauer": 3.0,
+   "emotion": null,
+   "text": ""
+  },
+  {
+   "nr": 7,
+   "typ": "badezimmer",
+   "kapitel": 2,
+   "start": 20.35,
+   "dauer": 3.734,
+   "emotion": "spannend",
+   "text": "Nox versteckt sich bei dir vor den Sammlern. Sie fangen Menschen."
+  },
+  {
+   "nr": 8,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 24.084,
+   "dauer": 5.318,
+   "emotion": "traurig",
+   "text": "Deine Nachbarin Mara hat dem Mann im Mantel von dir erzählt. Er versprach ihr ihren Bruder."
+  },
+  {
+   "nr": 9,
+   "typ": "lichtbild",
+   "kapitel": 2,
+   "start": 29.402,
+   "dauer": 3.566,
+   "emotion": "erzaehlend",
+   "text": "Doch in Nox' Kapsel ist ihr Bruder *Elias*. Gefangen."
+  },
+  {
+   "nr": 10,
+   "typ": "lichtbild",
+   "kapitel": 2,
+   "start": 32.968,
+   "dauer": 4.838,
+   "emotion": "erzaehlend",
+   "text": "Seine Nachricht: „Glaub ihm kein Wort. Auch dann nicht, wenn er aussieht wie ich.“"
+  },
+  {
+   "nr": 11,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 37.806,
+   "dauer": 4.67,
+   "emotion": "traurig",
+   "text": "Nox seufzt. „Ich war auf ihrem Schiff. Mit Elias. Mit vielen.“"
+  },
+  {
+   "nr": 12,
+   "typ": "skyline",
+   "kapitel": 3,
+   "start": 42.476,
+   "dauer": 4.406,
+   "emotion": "erzaehlend",
+   "text": "„Das Schiff war über der Stadt. Eine Tür ging auf. Und ich bin *gesprungen*.“"
+  },
+  {
+   "nr": 13,
+   "typ": "dach",
+   "kapitel": 3,
+   "start": 46.882,
+   "dauer": 1.07,
+   "emotion": "spannend",
+   "text": "„Auf dein Dach.“"
+  },
+  {
+   "nr": 14,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 47.952,
+   "dauer": 3.638,
+   "emotion": "ernst",
+   "text": "„Ich hab die Kapsel mitgenommen. Alles über die Gefangenen ist da drin.“"
+  },
+  {
+   "nr": 15,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 51.59,
+   "dauer": 3.59,
+   "emotion": "spannend",
+   "text": "Deshalb jagen sie ihn. Die Kapsel könnte sie *verraten*."
+  },
+  {
+   "nr": 16,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 55.18,
+   "dauer": 6.878,
+   "emotion": "erzaehlend",
+   "text": "Nox schaut Mara an. „Elias hat gesagt: Ahornstraße. Siebzehnter Stock. Fenster mit Kräutern.“"
+  },
+  {
+   "nr": 17,
+   "typ": "wohnung",
+   "kapitel": 4,
+   "start": 62.058,
+   "dauer": 5.198,
+   "emotion": "erzaehlend",
+   "text": "Maras Küchenfenster. Basilikum, Minze, Thymian. *Echte* Kräuter."
+  },
+  {
+   "nr": 18,
+   "typ": "badezimmer",
+   "kapitel": 4,
+   "start": 67.256,
+   "dauer": 4.286,
+   "emotion": "erzaehlend",
+   "text": "Gleich daneben: dein Badfenster. Mit einer Plastikpflanze."
+  },
+  {
+   "nr": 19,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 71.542,
+   "dauer": 3.614,
+   "emotion": "ernst",
+   "text": "„Im Dunkeln sah die auch wie Kräuter aus“, murmelt Nox."
+  },
+  {
+   "nr": 20,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 75.156,
+   "dauer": 2.222,
+   "emotion": "froh",
+   "text": "„Du wolltest zu *mir*“, flüstert Mara."
+  },
+  {
+   "nr": 21,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 77.378,
+   "dauer": 1.526,
+   "emotion": "ernst",
+   "text": "„Warum hast du nichts gesagt?“"
+  },
+  {
+   "nr": 22,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 78.904,
+   "dauer": 5.342,
+   "emotion": "traurig",
+   "text": "„Elias sagte: Mara hilft. Aber auf dem Schiff hieß es: Jemand im Haus *meldet* alles.“"
+  },
+  {
+   "nr": 23,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 84.246,
+   "dauer": 3.23,
+   "emotion": "traurig",
+   "text": "Mara schaut weg. Er hatte recht. Das war sie."
+  },
+  {
+   "nr": 24,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 87.476,
+   "dauer": 3.662,
+   "emotion": "ernst",
+   "text": "„Ab jetzt keine Geheimnisse mehr“, sagst du. „Gibt's noch was?“"
+  },
+  {
+   "nr": 25,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 91.138,
+   "dauer": 3.302,
+   "emotion": "ernst",
+   "text": "Nox schaut lange auf die Kapsel. *Zu* lange."
+  },
+  {
+   "nr": 26,
+   "typ": "gesicht",
+   "kapitel": 6,
+   "start": 94.44,
+   "dauer": 5.006,
+   "emotion": "ernst",
+   "text": "„Die Kapsel kann ihr Netz *hören*“, sagt Nox. „Wen sie suchen. Wo sie suchen.“"
+  },
+  {
+   "nr": 27,
+   "typ": "gesicht",
+   "kapitel": 6,
+   "start": 99.446,
+   "dauer": 2.87,
+   "emotion": "ernst",
+   "text": "„Dann zeig es uns. Wir müssen wissen, was sie wissen.“"
+  },
+  {
+   "nr": 28,
+   "typ": "gesicht",
+   "kapitel": 6,
+   "start": 102.316,
+   "dauer": 3.686,
+   "emotion": "spannend",
+   "text": "Nox schüttelt heftig den Kopf. „Nicht gut. Gar nicht gut.“"
+  },
+  {
+   "nr": 29,
+   "typ": "gesicht",
+   "kapitel": 6,
+   "start": 106.002,
+   "dauer": 3.182,
+   "emotion": "ernst",
+   "text": "„Warum nicht?“, fragt Mara. Nox antwortet nicht."
+  },
+  {
+   "nr": 30,
+   "typ": "gesicht",
+   "kapitel": 6,
+   "start": 109.184,
+   "dauer": 3.062,
+   "emotion": "ernst",
+   "text": "Schon wieder ein Geheimnis. Du hast genug davon."
+  },
+  {
+   "nr": 31,
+   "typ": "gesicht",
+   "kapitel": 7,
+   "start": 112.246,
+   "dauer": 3.734,
+   "emotion": "ernst",
+   "text": "„Nox. Bitte. Zeig es uns.“ Du hältst die Hand auf."
+  },
+  {
+   "nr": 32,
+   "typ": "gesicht",
+   "kapitel": 7,
+   "start": 115.98,
+   "dauer": 4.766,
+   "emotion": "ernst",
+   "text": "Nox zögert. Dann tippt er auf die Kapsel. „Zehn Sekunden. Nicht mehr.“"
+  },
+  {
+   "nr": 33,
+   "typ": "lichtbild",
+   "kapitel": 7,
+   "start": 120.746,
+   "dauer": 3.71,
+   "emotion": "erzaehlend",
+   "text": "Der Lichtring wird hell. Gesichter rauschen vorbei. *Hunderte*."
+  },
+  {
+   "nr": 34,
+   "typ": "lichtbild",
+   "kapitel": 7,
+   "start": 124.456,
+   "dauer": 2.558,
+   "emotion": "erzaehlend",
+   "text": "Zehn. Neun. Acht."
+  },
+  {
+   "nr": 35,
+   "typ": "gesicht",
+   "kapitel": 7,
+   "start": 127.014,
+   "dauer": 2.966,
+   "emotion": "spannend",
+   "text": "Nox fängt an zu leuchten. „Schneller“, flüstert er."
+  },
+  {
+   "nr": 36,
+   "typ": "lichtbild",
+   "kapitel": 8,
+   "start": 129.98,
+   "dauer": 5.942,
+   "emotion": "erzaehlend",
+   "text": "Die Sammler suchen Hunderte. Menschen. Wesen wie Nox. Jedes Gesicht in einem Raster."
+  },
+  {
+   "nr": 37,
+   "typ": "gesicht",
+   "kapitel": 8,
+   "start": 135.922,
+   "dauer": 3.35,
+   "emotion": "ernst",
+   "text": "„Wie finden sie jemanden in einer ganzen Stadt?“, flüstert Mara."
+  },
+  {
+   "nr": 38,
+   "typ": "objekt",
+   "kapitel": 8,
+   "start": 139.272,
+   "dauer": 6.038,
+   "emotion": "erklaerend",
+   "text": "Echter Fakt: Ein bis zwei von hundert Menschen erkennen Gesichter außergewöhnlich gut. *Super-Recognizer*."
+  },
+  {
+   "nr": 39,
+   "typ": "objekt",
+   "kapitel": 8,
+   "start": 145.31,
+   "dauer": 5.126,
+   "emotion": "erklaerend",
+   "text": "Die Londoner Polizei setzt solche Leute ein. Sie erkennen Gesuchte sogar auf Überwachungsvideos."
+  },
+  {
+   "nr": 40,
+   "typ": "lichtbild",
+   "kapitel": 8,
+   "start": 150.436,
+   "dauer": 1.646,
+   "emotion": "erzaehlend",
+   "text": "Fünf. Vier."
+  },
+  {
+   "nr": 41,
+   "typ": "lichtbild",
+   "kapitel": 9,
+   "start": 152.082,
+   "dauer": 3.878,
+   "emotion": "erzaehlend",
+   "text": "Drei. Zwei. Eins. Das Licht erlischt."
+  },
+  {
+   "nr": 42,
+   "typ": "wohnung",
+   "kapitel": 9,
+   "start": 155.96,
+   "dauer": 3.23,
+   "emotion": "spannend",
+   "text": "Nox lässt die Kapsel los. Sein Leuchten wird schwächer."
+  },
+  {
+   "nr": 43,
+   "typ": "gesicht",
+   "kapitel": 9,
+   "start": 159.19,
+   "dauer": 2.462,
+   "emotion": "ernst",
+   "text": "„Nox. Was ist so schlimm an zehn Sekunden?“"
+  },
+  {
+   "nr": 44,
+   "typ": "gesicht",
+   "kapitel": 9,
+   "start": 161.652,
+   "dauer": 4.886,
+   "emotion": "traurig",
+   "text": "„Wenn die Kapsel hört, hören *sie* auch. Jetzt wissen sie: Die Kapsel ist hier.“"
+  },
+  {
+   "nr": 45,
+   "typ": "gesicht",
+   "kapitel": 9,
+   "start": 166.538,
+   "dauer": 2.606,
+   "emotion": "spannend",
+   "text": "Dir wird schlecht. Das war *deine* Idee."
+  },
+  {
+   "nr": 46,
+   "typ": "wohnung",
+   "kapitel": 10,
+   "start": 169.144,
+   "dauer": 4.694,
+   "emotion": "traurig",
+   "text": "„Sie wussten sowieso, dass er hier ist“, sagt Mara leise. „Wegen mir.“"
+  },
+  {
+   "nr": 47,
+   "typ": "wohnung",
+   "kapitel": 10,
+   "start": 173.838,
+   "dauer": 4.31,
+   "emotion": "erzaehlend",
+   "text": "Stundenlang sitzt ihr still da. Das Licht draußen wird schon orange."
+  },
+  {
+   "nr": 48,
+   "typ": "gesicht",
+   "kapitel": 10,
+   "start": 178.148,
+   "dauer": 3.638,
+   "emotion": "ernst",
+   "text": "„Was stand im Verzeichnis?“, fragst du. „Hast du es gespeichert?“"
+  },
+  {
+   "nr": 49,
+   "typ": "gesicht",
+   "kapitel": 10,
+   "start": 181.786,
+   "dauer": 3.71,
+   "emotion": "ernst",
+   "text": "Nox nickt. Ohne neue Verbindung. Nur gespeichert."
+  },
+  {
+   "nr": 50,
+   "typ": "lichtbild",
+   "kapitel": 10,
+   "start": 185.496,
+   "dauer": 3.23,
+   "emotion": "erzaehlend",
+   "text": "Die Gesichter laufen noch einmal vorbei. Ganz langsam."
+  },
+  {
+   "nr": 51,
+   "typ": "lichtbild",
+   "kapitel": 11,
+   "start": 188.726,
+   "dauer": 2.078,
+   "emotion": "erzaehlend",
+   "text": "Ganz oben: Nox."
+  },
+  {
+   "nr": 52,
+   "typ": "lichtbild",
+   "kapitel": 11,
+   "start": 190.804,
+   "dauer": 3.398,
+   "emotion": "erzaehlend",
+   "text": "Weiter unten: Elias. Markiert."
+  },
+  {
+   "nr": 53,
+   "typ": "lichtbild",
+   "kapitel": 11,
+   "start": 194.202,
+   "dauer": 3.95,
+   "emotion": "erzaehlend",
+   "text": "Und ganz unten ein neues Gesicht. Erst seit gestern Nacht."
+  },
+  {
+   "nr": 54,
+   "typ": "gesicht",
+   "kapitel": 11,
+   "start": 198.152,
+   "dauer": 1.166,
+   "emotion": "spannend",
+   "text": "Es ist *deins*."
+  },
+  {
+   "nr": 55,
+   "typ": "titel",
+   "kapitel": 11,
+   "start": 199.318,
+   "dauer": 3.5,
+   "emotion": null,
+   "text": ""
+  },
+  {
+   "nr": 56,
+   "typ": "objekt",
+   "kapitel": 12,
+   "start": 202.818,
+   "dauer": 3.518,
+   "emotion": "erklaerend",
+   "text": "Check! Wie viele Menschen sind Super-Recognizer?"
+  },
+  {
+   "nr": 57,
+   "typ": "objekt",
+   "kapitel": 12,
+   "start": 206.336,
+   "dauer": 5.414,
+   "emotion": "erklaerend",
+   "text": "Etwa ein bis zwei von hundert. Sie erkennen Gesichter sogar auf unscharfen Bildern *wieder*."
+  },
+  {
+   "nr": 58,
+   "typ": "titel",
+   "kapitel": 12,
+   "start": 211.75,
+   "dauer": 3.5,
+   "emotion": null,
+   "text": ""
+  }
+ ]
+}
