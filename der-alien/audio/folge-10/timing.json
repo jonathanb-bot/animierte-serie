@@ -1,0 +1,518 @@
+{
+ "dauer": 221.328,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "dach",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 3.518,
+   "emotion": "erzaehlend",
+   "text": "Über dir hängt das Schiff der Sammler. Und es sucht *dich*."
+  },
+  {
+   "nr": 2,
+   "typ": "dach",
+   "kapitel": 1,
+   "start": 3.518,
+   "dauer": 3.206,
+   "emotion": "erzaehlend",
+   "text": "Nox zieht dich hinter den Wassertank. In den Schatten."
+  },
+  {
+   "nr": 3,
+   "typ": "dach",
+   "kapitel": 1,
+   "start": 6.724,
+   "dauer": 3.782,
+   "emotion": "erzaehlend",
+   "text": "Der Lichtkegel streift den Tank. Einmal. Zweimal."
+  },
+  {
+   "nr": 4,
+   "typ": "dach",
+   "kapitel": 1,
+   "start": 10.506,
+   "dauer": 3.422,
+   "emotion": "spannend",
+   "text": "An der Dachtür ruft Mara nach dir. Dann ist sie still."
+  },
+  {
+   "nr": 5,
+   "typ": "titel",
+   "kapitel": 1,
+   "start": 13.928,
+   "dauer": 3.0,
+   "emotion": null,
+   "text": ""
+  },
+  {
+   "nr": 6,
+   "typ": "badezimmer",
+   "kapitel": 2,
+   "start": 16.928,
+   "dauer": 4.694,
+   "emotion": "erzaehlend",
+   "text": "Ein kleines Alien namens Nox hat sich bei dir versteckt. Die Sammler jagen ihn."
+  },
+  {
+   "nr": 7,
+   "typ": "kreuzung",
+   "kapitel": 2,
+   "start": 21.622,
+   "dauer": 4.094,
+   "emotion": "erzaehlend",
+   "text": "Sie tragen geliehene Gesichter. Im Licht leuchten ihre Augen grün."
+  },
+  {
+   "nr": 8,
+   "typ": "dach",
+   "kapitel": 2,
+   "start": 25.716,
+   "dauer": 3.542,
+   "emotion": "erzaehlend",
+   "text": "Mit deiner Nachbarin Mara habt ihr vom Dach den Notruf gesendet."
+  },
+  {
+   "nr": 9,
+   "typ": "dach",
+   "kapitel": 2,
+   "start": 29.258,
+   "dauer": 3.11,
+   "emotion": "erzaehlend",
+   "text": "Aber zuerst kam nicht Nox' Schiff. Sondern *ihres*."
+  },
+  {
+   "nr": 10,
+   "typ": "dach",
+   "kapitel": 3,
+   "start": 32.368,
+   "dauer": 3.566,
+   "emotion": "erzaehlend",
+   "text": "Der Lichtkegel bleibt mitten auf dem Dach stehen. Und wartet."
+  },
+  {
+   "nr": 11,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 35.934,
+   "dauer": 3.566,
+   "emotion": "spannend",
+   "text": "Nox zittert. Und fängt an zu *leuchten*. Hell."
+  },
+  {
+   "nr": 12,
+   "typ": "dach",
+   "kapitel": 3,
+   "start": 39.5,
+   "dauer": 2.894,
+   "emotion": "erzaehlend",
+   "text": "Du ziehst deine Jacke aus. Und legst sie über ihn."
+  },
+  {
+   "nr": 13,
+   "typ": "dach",
+   "kapitel": 3,
+   "start": 42.394,
+   "dauer": 2.198,
+   "emotion": "erzaehlend",
+   "text": "Das Leuchten verschwindet unter dem Stoff."
+  },
+  {
+   "nr": 14,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 44.592,
+   "dauer": 2.63,
+   "emotion": "spannend",
+   "text": "Du hältst ihn fest. Er hält dich fest."
+  },
+  {
+   "nr": 15,
+   "typ": "dach",
+   "kapitel": 4,
+   "start": 47.222,
+   "dauer": 5.198,
+   "emotion": "erzaehlend",
+   "text": "Dann hörst du einen Klang. Leise. Hoch. Wie ein Akkord."
+  },
+  {
+   "nr": 16,
+   "typ": "skyline",
+   "kapitel": 4,
+   "start": 52.42,
+   "dauer": 6.542,
+   "emotion": "erzaehlend",
+   "text": "Über den Dächern kommt ein zweites Schiff. Rund. Weich. Mit warmem, blauem Licht."
+  },
+  {
+   "nr": 17,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 58.962,
+   "dauer": 3.254,
+   "emotion": "froh",
+   "text": "Nox' Antennen stellen sich auf. „*Meine* Leute.“"
+  },
+  {
+   "nr": 18,
+   "typ": "dach",
+   "kapitel": 4,
+   "start": 62.216,
+   "dauer": 4.598,
+   "emotion": "erzaehlend",
+   "text": "Das dunkle Schiff dreht sich. Langsam. Das Brummen wird lauter."
+  },
+  {
+   "nr": 19,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 66.814,
+   "dauer": 4.214,
+   "emotion": "spannend",
+   "text": "Zwei Schiffe. Über deinem Dach. Und du mittendrin."
+  },
+  {
+   "nr": 20,
+   "typ": "dach",
+   "kapitel": 5,
+   "start": 71.028,
+   "dauer": 5.846,
+   "emotion": "erzaehlend",
+   "text": "Weißes Licht. Blaues Licht. Wind. Lärm. Überall auf dem Dach."
+  },
+  {
+   "nr": 21,
+   "typ": "dach",
+   "kapitel": 5,
+   "start": 76.874,
+   "dauer": 3.014,
+   "emotion": "erzaehlend",
+   "text": "Du suchst Mara. An der Tür ist sie nicht mehr."
+  },
+  {
+   "nr": 22,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 79.888,
+   "dauer": 3.398,
+   "emotion": "spannend",
+   "text": "„Mara!“, rufst du. Der Wind verschluckt deine Stimme."
+  },
+  {
+   "nr": 23,
+   "typ": "dach",
+   "kapitel": 5,
+   "start": 83.286,
+   "dauer": 5.366,
+   "emotion": "spannend",
+   "text": "Der Mann im Mantel weicht zurück. Zur Dachtür. Und verschwindet im Treppenhaus."
+  },
+  {
+   "nr": 24,
+   "typ": "dach",
+   "kapitel": 5,
+   "start": 88.652,
+   "dauer": 3.95,
+   "emotion": "erzaehlend",
+   "text": "Dann senkt sich ein blauer Lichtkegel auf das Dach. Ganz nah."
+  },
+  {
+   "nr": 25,
+   "typ": "dach",
+   "kapitel": 6,
+   "start": 92.602,
+   "dauer": 3.542,
+   "emotion": "erzaehlend",
+   "text": "Nox kriecht unter deiner Jacke hervor. Er schaut dich an."
+  },
+  {
+   "nr": 26,
+   "typ": "gesicht",
+   "kapitel": 6,
+   "start": 96.144,
+   "dauer": 4.046,
+   "emotion": "froh",
+   "text": "„Du hast mich nicht verraten“, sagt er. „Nicht ein einziges Mal.“"
+  },
+  {
+   "nr": 27,
+   "typ": "gesicht",
+   "kapitel": 6,
+   "start": 100.19,
+   "dauer": 4.19,
+   "emotion": "traurig",
+   "text": "„Nur für eine Nacht, hab ich gesagt“, sagst du. Deine Stimme bricht."
+  },
+  {
+   "nr": 28,
+   "typ": "dach",
+   "kapitel": 6,
+   "start": 104.38,
+   "dauer": 4.598,
+   "emotion": "traurig",
+   "text": "Nox umarmt dein Bein. Ganz fest. „Alles easy“, flüstert er."
+  },
+  {
+   "nr": 29,
+   "typ": "dach",
+   "kapitel": 6,
+   "start": 108.978,
+   "dauer": 3.35,
+   "emotion": "erzaehlend",
+   "text": "Dann läuft er los. Hinein in das blaue Licht."
+  },
+  {
+   "nr": 30,
+   "typ": "dach",
+   "kapitel": 7,
+   "start": 112.328,
+   "dauer": 5.438,
+   "emotion": "erzaehlend",
+   "text": "Das Licht ist so hell, dass du die Augen zukneifen musst. Silhouetten. Viele."
+  },
+  {
+   "nr": 31,
+   "typ": "skyline",
+   "kapitel": 7,
+   "start": 117.766,
+   "dauer": 3.902,
+   "emotion": "erzaehlend",
+   "text": "Das runde Schiff steigt auf. Das dunkle jagt hinterher."
+  },
+  {
+   "nr": 32,
+   "typ": "skyline",
+   "kapitel": 7,
+   "start": 121.668,
+   "dauer": 2.126,
+   "emotion": "erzaehlend",
+   "text": "Beide verschwinden zwischen den Wolken."
+  },
+  {
+   "nr": 33,
+   "typ": "dach",
+   "kapitel": 7,
+   "start": 123.794,
+   "dauer": 2.822,
+   "emotion": "erzaehlend",
+   "text": "Plötzlich ist es still. Das Dach ist leer."
+  },
+  {
+   "nr": 34,
+   "typ": "gesicht",
+   "kapitel": 7,
+   "start": 126.616,
+   "dauer": 2.702,
+   "emotion": "traurig",
+   "text": "Nox ist weg. Und Mara auch."
+  },
+  {
+   "nr": 35,
+   "typ": "dach",
+   "kapitel": 8,
+   "start": 129.318,
+   "dauer": 4.598,
+   "emotion": "erzaehlend",
+   "text": "Du suchst das ganze Dach ab. Hinter dem Tank. Bei den Beeten. Nichts."
+  },
+  {
+   "nr": 36,
+   "typ": "flur",
+   "kapitel": 8,
+   "start": 133.916,
+   "dauer": 4.31,
+   "emotion": "erzaehlend",
+   "text": "Du rennst nach unten. Du klopfst an Maras Tür. Keine Antwort."
+  },
+  {
+   "nr": 37,
+   "typ": "wohnung",
+   "kapitel": 8,
+   "start": 138.226,
+   "dauer": 4.454,
+   "emotion": "erzaehlend",
+   "text": "Stundenlang sitzt du da. Das Walkie-Talkie in der Hand. Es bleibt *stumm*."
+  },
+  {
+   "nr": 38,
+   "typ": "gesicht",
+   "kapitel": 8,
+   "start": 142.68,
+   "dauer": 1.598,
+   "emotion": "ruhig",
+   "text": "Draußen wird es langsam hell."
+  },
+  {
+   "nr": 39,
+   "typ": "flur",
+   "kapitel": 9,
+   "start": 144.278,
+   "dauer": 2.726,
+   "emotion": "erzaehlend",
+   "text": "Kurz nach sechs gehst du noch einmal ins Treppenhaus."
+  },
+  {
+   "nr": 40,
+   "typ": "treppe",
+   "kapitel": 9,
+   "start": 147.004,
+   "dauer": 5.462,
+   "emotion": "traurig",
+   "text": "Auf den Stufen sitzt jemand. Rote Haare. Senfgelbe Strickjacke. *Mara*."
+  },
+  {
+   "nr": 41,
+   "typ": "gesicht",
+   "kapitel": 9,
+   "start": 152.466,
+   "dauer": 5.054,
+   "emotion": "ruhig",
+   "text": "Sie schaut auf. „Ich bin runtergerannt“, sagt sie leise. „Als das Licht kam.“"
+  },
+  {
+   "nr": 42,
+   "typ": "treppe",
+   "kapitel": 9,
+   "start": 157.52,
+   "dauer": 2.174,
+   "emotion": "froh",
+   "text": "Du bist so erleichtert, dass du sie umarmst."
+  },
+  {
+   "nr": 43,
+   "typ": "gesicht",
+   "kapitel": 9,
+   "start": 159.694,
+   "dauer": 3.014,
+   "emotion": "froh",
+   "text": "„Komm“, sagst du. „Ich mach uns was Warmes.“"
+  },
+  {
+   "nr": 44,
+   "typ": "kueche",
+   "kapitel": 10,
+   "start": 162.708,
+   "dauer": 4.358,
+   "emotion": "ruhig",
+   "text": "In deiner Küche setzt sich Mara an den Tisch. Du stellst Wasser auf."
+  },
+  {
+   "nr": 45,
+   "typ": "objekt",
+   "kapitel": 10,
+   "start": 167.066,
+   "dauer": 4.718,
+   "emotion": "erklaerend",
+   "text": "Echter Fakt: In einem berühmten Versuch fragte ein Forscher Passanten nach dem Weg."
+  },
+  {
+   "nr": 46,
+   "typ": "objekt",
+   "kapitel": 10,
+   "start": 171.784,
+   "dauer": 5.654,
+   "emotion": "erklaerend",
+   "text": "Dann trugen zwei Männer eine Tür zwischen ihnen durch. Dahinter stand plötzlich ein *anderer* Mensch."
+  },
+  {
+   "nr": 47,
+   "typ": "objekt",
+   "kapitel": 10,
+   "start": 177.438,
+   "dauer": 4.814,
+   "emotion": "erklaerend",
+   "text": "Etwa die Hälfte der Passanten merkte es nicht. Man nennt das *Veränderungsblindheit*."
+  },
+  {
+   "nr": 48,
+   "typ": "gesicht",
+   "kapitel": 10,
+   "start": 182.252,
+   "dauer": 4.286,
+   "emotion": "ruhig",
+   "text": "Wir sehen oft, was wir erwarten. Nicht, was wirklich da ist."
+  },
+  {
+   "nr": 49,
+   "typ": "objekt",
+   "kapitel": 11,
+   "start": 186.538,
+   "dauer": 2.87,
+   "emotion": "erklaerend",
+   "text": "Da rauscht das Walkie-Talkie. Der blaue Punkt leuchtet."
+  },
+  {
+   "nr": 50,
+   "typ": "lichtbild",
+   "kapitel": 11,
+   "start": 189.408,
+   "dauer": 3.686,
+   "emotion": "erzaehlend",
+   "text": "„Hier Nox. Mara hat ihren Bruder gefunden. Beide sind hier bei mir.“"
+  },
+  {
+   "nr": 51,
+   "typ": "gesicht",
+   "kapitel": 11,
+   "start": 193.094,
+   "dauer": 2.39,
+   "emotion": "spannend",
+   "text": "Du senkst das Funkgerät. Langsam."
+  },
+  {
+   "nr": 52,
+   "typ": "kueche",
+   "kapitel": 11,
+   "start": 195.484,
+   "dauer": 5.558,
+   "emotion": "froh",
+   "text": "Mara steht in deiner Küche. Sie stellt zwei Tassen auf den Tisch. „Wer war das?“, fragt sie."
+  },
+  {
+   "nr": 53,
+   "typ": "gesicht",
+   "kapitel": 11,
+   "start": 201.042,
+   "dauer": 3.926,
+   "emotion": "froh",
+   "text": "Du schaltest die Taschenlampe ein. Und ihre Augen blitzen *grün*."
+  },
+  {
+   "nr": 54,
+   "typ": "titel",
+   "kapitel": 11,
+   "start": 204.968,
+   "dauer": 4.0,
+   "emotion": null,
+   "text": ""
+  },
+  {
+   "nr": 55,
+   "typ": "objekt",
+   "kapitel": 12,
+   "start": 208.968,
+   "dauer": 4.574,
+   "emotion": "erklaerend",
+   "text": "Check! Würdest du merken, wenn dein Gesprächspartner plötzlich ein anderer Mensch wäre?"
+  },
+  {
+   "nr": 56,
+   "typ": "objekt",
+   "kapitel": 12,
+   "start": 213.542,
+   "dauer": 4.286,
+   "emotion": "erklaerend",
+   "text": "Vielleicht nicht! Im Tür-Versuch merkte es etwa die *Hälfte* der Leute nicht."
+  },
+  {
+   "nr": 57,
+   "typ": "titel",
+   "kapitel": 12,
+   "start": 217.828,
+   "dauer": 3.5,
+   "emotion": null,
+   "text": ""
+  }
+ ]
+}

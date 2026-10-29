@@ -1,4 +1,7 @@
 # Folge 10: Wieder zu Hause
+@musik musik/folge-10.mp3
+@musik_lautstaerke 1
+@whoosh aus
 @serie Der Alien
 @mund zitate
 @look 0
