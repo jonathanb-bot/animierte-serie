@@ -7,10 +7,12 @@
   "am": "2026-10-29T21:05:46.952Z"
  },
  "insta-01-1": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-10-29T22:30:00",
   "zernioId": "6ae3b52c28e18fc94a535d1a",
   "http": 201,
-  "am": "2026-10-29T21:05:48.718Z"
+  "am": "2026-10-29T21:05:48.718Z",
+  "geloescht": true,
+  "loeschHttp": 200
  }
 }
