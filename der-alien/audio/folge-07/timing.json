@@ -1,0 +1,518 @@
+{
+ "dauer": 233.428,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "kreuzung",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 5.222,
+   "emotion": "spannend",
+   "text": "Zwei Männer. Ein Gesicht. Und ihr steht genau dazwischen."
+  },
+  {
+   "nr": 2,
+   "typ": "kreuzung",
+   "kapitel": 1,
+   "start": 5.222,
+   "dauer": 3.83,
+   "emotion": "erzaehlend",
+   "text": "Da springt Nox aus der Tasche. Direkt auf ein parkendes Auto."
+  },
+  {
+   "nr": 3,
+   "typ": "kreuzung",
+   "kapitel": 1,
+   "start": 9.052,
+   "dauer": 3.23,
+   "emotion": "erzaehlend",
+   "text": "Die Alarmanlage heult los. Laut. Blinkend."
+  },
+  {
+   "nr": 4,
+   "typ": "kreuzung",
+   "kapitel": 1,
+   "start": 12.282,
+   "dauer": 4.358,
+   "emotion": "erzaehlend",
+   "text": "Überall gehen Fenster auf. Licht. Stimmen. „Was ist denn da los?“"
+  },
+  {
+   "nr": 5,
+   "typ": "kreuzung",
+   "kapitel": 1,
+   "start": 16.64,
+   "dauer": 4.406,
+   "emotion": "erzaehlend",
+   "text": "Die beiden Männer treten zurück in den Schatten. Sie mögen keine *Zuschauer*."
+  },
+  {
+   "nr": 6,
+   "typ": "titel",
+   "kapitel": 1,
+   "start": 21.046,
+   "dauer": 3.0,
+   "emotion": null,
+   "text": ""
+  },
+  {
+   "nr": 7,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 24.046,
+   "dauer": 4.214,
+   "emotion": "spannend",
+   "text": "Nox ist ein Alien auf der Flucht. Die Sammler wollen ihn und seine Kapsel."
+  },
+  {
+   "nr": 8,
+   "typ": "treppe",
+   "kapitel": 2,
+   "start": 28.26,
+   "dauer": 4.694,
+   "emotion": "erzaehlend",
+   "text": "Du, Nox und deine Nachbarin Mara wolltet mit dem Auto aus der Stadt fliehen."
+  },
+  {
+   "nr": 9,
+   "typ": "kreuzung",
+   "kapitel": 2,
+   "start": 32.954,
+   "dauer": 2.774,
+   "emotion": "erzaehlend",
+   "text": "An der Kreuzung wartete der Mann im Mantel."
+  },
+  {
+   "nr": 10,
+   "typ": "kreuzung",
+   "kapitel": 2,
+   "start": 35.728,
+   "dauer": 4.118,
+   "emotion": "froh",
+   "text": "Doch als du dich umgedreht hast, stand *derselbe* Mann auch hinter euch."
+  },
+  {
+   "nr": 11,
+   "typ": "kreuzung",
+   "kapitel": 3,
+   "start": 39.846,
+   "dauer": 3.23,
+   "emotion": "erzaehlend",
+   "text": "Mara schnappt sich Nox. Ihr rennt zur Garageneinfahrt."
+  },
+  {
+   "nr": 12,
+   "typ": "kreuzung",
+   "kapitel": 3,
+   "start": 43.076,
+   "dauer": 3.038,
+   "emotion": "erzaehlend",
+   "text": "Dein Hausschlüssel passt in die Seitentür. Ihr seid drin."
+  },
+  {
+   "nr": 13,
+   "typ": "treppe",
+   "kapitel": 3,
+   "start": 46.114,
+   "dauer": 3.35,
+   "emotion": "erzaehlend",
+   "text": "Im Keller ist es dunkel. Nur das Notlicht brennt."
+  },
+  {
+   "nr": 14,
+   "typ": "handy",
+   "kapitel": 3,
+   "start": 49.464,
+   "dauer": 2.222,
+   "emotion": "erzaehlend",
+   "text": "Dein Handy: wieder voller Empfang."
+  },
+  {
+   "nr": 15,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 51.686,
+   "dauer": 4.31,
+   "emotion": "ernst",
+   "text": "Immer wenn der Mann nah war, war dein Empfang weg. *Jedes* Mal."
+  },
+  {
+   "nr": 16,
+   "typ": "hochhaus",
+   "kapitel": 4,
+   "start": 55.996,
+   "dauer": 18.182,
+   "emotion": "erzaehlend",
+   "text": "Siebzehn Stockwerke. Keiner sagt ein Wort."
+  },
+  {
+   "nr": 17,
+   "typ": "wohnung",
+   "kapitel": 4,
+   "start": 74.178,
+   "dauer": 3.758,
+   "emotion": "erzaehlend",
+   "text": "Ihr versteckt euch bei Mara. Deine Wohnung kennen sie ja schon."
+  },
+  {
+   "nr": 18,
+   "typ": "wohnung",
+   "kapitel": 4,
+   "start": 77.936,
+   "dauer": 4.334,
+   "emotion": "spannend",
+   "text": "Nox zittert noch. Mara hält ihn fest. Ohne Angst diesmal."
+  },
+  {
+   "nr": 19,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 82.27,
+   "dauer": 3.182,
+   "emotion": "ernst",
+   "text": "„Zwei gleiche Männer“, sagt sie leise. „Zwillinge?“"
+  },
+  {
+   "nr": 20,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 85.452,
+   "dauer": 3.566,
+   "emotion": "ernst",
+   "text": "„Keine Zwillinge“, sagt Nox. „Das Gesicht ist *geliehen*.“"
+  },
+  {
+   "nr": 21,
+   "typ": "lichtbild",
+   "kapitel": 5,
+   "start": 89.018,
+   "dauer": 4.43,
+   "emotion": "erzaehlend",
+   "text": "Nox zeigt eine gespeicherte Aufnahme. Ein Raum auf dem Schiff."
+  },
+  {
+   "nr": 22,
+   "typ": "lichtbild",
+   "kapitel": 5,
+   "start": 93.448,
+   "dauer": 6.758,
+   "emotion": "erzaehlend",
+   "text": "Darin steht eine lange, dünne Gestalt. Unscharf. Dann legt sich ein Gesicht darüber. Der Mann im Mantel."
+  },
+  {
+   "nr": 23,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 100.206,
+   "dauer": 4.79,
+   "emotion": "ernst",
+   "text": "„Was sie lange anschauen, können sie werden“, sagt Nox. „Aussehen. Stimme.“"
+  },
+  {
+   "nr": 24,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 104.996,
+   "dauer": 2.222,
+   "emotion": "spannend",
+   "text": "„Und dann wissen sie alles über den Menschen?“"
+  },
+  {
+   "nr": 25,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 107.218,
+   "dauer": 3.326,
+   "emotion": "ernst",
+   "text": "„Nur außen. Nicht innen. Keine *Erinnerungen*.“"
+  },
+  {
+   "nr": 26,
+   "typ": "gesicht",
+   "kapitel": 6,
+   "start": 110.544,
+   "dauer": 5.294,
+   "emotion": "erzaehlend",
+   "text": "Dann fällt es dir ein. Das Handylicht. Seine Augen. „Sie haben *grün* geleuchtet.“"
+  },
+  {
+   "nr": 27,
+   "typ": "gesicht",
+   "kapitel": 6,
+   "start": 115.838,
+   "dauer": 3.854,
+   "emotion": "ernst",
+   "text": "„Die Augen kann die Tarnung nicht“, sagt Nox. „Im Licht leuchten sie.“"
+  },
+  {
+   "nr": 28,
+   "typ": "objekt",
+   "kapitel": 6,
+   "start": 119.692,
+   "dauer": 6.254,
+   "emotion": "erklaerend",
+   "text": "Echter Fakt: Katzen haben hinter der Netzhaut eine spiegelnde Schicht. Das *Tapetum lucidum*."
+  },
+  {
+   "nr": 29,
+   "typ": "objekt",
+   "kapitel": 6,
+   "start": 125.946,
+   "dauer": 4.31,
+   "emotion": "erklaerend",
+   "text": "Sie wirft Licht zurück. Deshalb leuchten Katzenaugen, wenn man sie anleuchtet."
+  },
+  {
+   "nr": 30,
+   "typ": "objekt",
+   "kapitel": 6,
+   "start": 130.256,
+   "dauer": 4.334,
+   "emotion": "erklaerend",
+   "text": "Menschen haben diese Schicht nicht. Ein Menschenauge leuchtet nie *grün*."
+  },
+  {
+   "nr": 31,
+   "typ": "wohnung",
+   "kapitel": 7,
+   "start": 134.59,
+   "dauer": 4.334,
+   "emotion": "ernst",
+   "text": "Mara schreibt eine Liste. Woran erkennt man einen Sammler?"
+  },
+  {
+   "nr": 32,
+   "typ": "objekt",
+   "kapitel": 7,
+   "start": 138.924,
+   "dauer": 3.518,
+   "emotion": "erklaerend",
+   "text": "Erstens: Im Lampenlicht leuchten ihre Augen grün."
+  },
+  {
+   "nr": 33,
+   "typ": "objekt",
+   "kapitel": 7,
+   "start": 142.442,
+   "dauer": 3.374,
+   "emotion": "erklaerend",
+   "text": "Zweitens: In ihrer Nähe ist der Handyempfang weg."
+  },
+  {
+   "nr": 34,
+   "typ": "objekt",
+   "kapitel": 7,
+   "start": 145.816,
+   "dauer": 3.47,
+   "emotion": "erklaerend",
+   "text": "Drittens: Sie wissen nichts, was nur *ihr* wisst."
+  },
+  {
+   "nr": 35,
+   "typ": "gesicht",
+   "kapitel": 7,
+   "start": 149.286,
+   "dauer": 3.902,
+   "emotion": "froh",
+   "text": "„Und viertens“, sagt Nox stolz. „Ich höre sie pfeifen.“"
+  },
+  {
+   "nr": 36,
+   "typ": "wohnung",
+   "kapitel": 8,
+   "start": 153.188,
+   "dauer": 5.318,
+   "emotion": "froh",
+   "text": "Nox holt die gelben Walkie-Talkies aus der Tasche. „Sprechsteine. Jetzt besser machen.“"
+  },
+  {
+   "nr": 37,
+   "typ": "gesicht",
+   "kapitel": 8,
+   "start": 158.506,
+   "dauer": 4.19,
+   "emotion": "ernst",
+   "text": "Er löst zwei winzige Splitter aus der Kapsel. Und drückt sie in die Geräte."
+  },
+  {
+   "nr": 38,
+   "typ": "objekt",
+   "kapitel": 8,
+   "start": 162.696,
+   "dauer": 3.446,
+   "emotion": "erklaerend",
+   "text": "Auf beiden Geräten glimmt jetzt ein winziger, blauer Punkt."
+  },
+  {
+   "nr": 39,
+   "typ": "gesicht",
+   "kapitel": 8,
+   "start": 166.142,
+   "dauer": 3.182,
+   "emotion": "froh",
+   "text": "„Jetzt reichen sie *weit*“, sagt Nox. „Bis zu meinen Leuten.“"
+  },
+  {
+   "nr": 40,
+   "typ": "gesicht",
+   "kapitel": 8,
+   "start": 169.324,
+   "dauer": 3.782,
+   "emotion": "froh",
+   "text": "Aus einem Kinderspielzeug ist ein Funkgerät für Außerirdische geworden."
+  },
+  {
+   "nr": 41,
+   "typ": "hochhaus",
+   "kapitel": 9,
+   "start": 173.106,
+   "dauer": 4.67,
+   "emotion": "erzaehlend",
+   "text": "Ihr braucht freien Himmel. Raus aus der Stadt geht nicht mehr. Bleibt nur *euer* Dach."
+  },
+  {
+   "nr": 42,
+   "typ": "gesicht",
+   "kapitel": 9,
+   "start": 177.776,
+   "dauer": 3.854,
+   "emotion": "ernst",
+   "text": "Sieben Stockwerke nach oben. Um Mitternacht, wenn alles schläft."
+  },
+  {
+   "nr": 43,
+   "typ": "wohnung",
+   "kapitel": 9,
+   "start": 181.63,
+   "dauer": 4.982,
+   "emotion": "ernst",
+   "text": "Mara hat den Schlüssel. Nox die Kapsel. Und du das Handy, um Augen zu prüfen."
+  },
+  {
+   "nr": 44,
+   "typ": "gesicht",
+   "kapitel": 9,
+   "start": 186.612,
+   "dauer": 3.11,
+   "emotion": "ernst",
+   "text": "„Sechzig Sekunden“, sagt Nox. „Dann kommen meine Leute.“"
+  },
+  {
+   "nr": 45,
+   "typ": "gesicht",
+   "kapitel": 9,
+   "start": 189.722,
+   "dauer": 3.302,
+   "emotion": "ernst",
+   "text": "„Und die Sammler?“, fragt Mara. Keiner antwortet."
+  },
+  {
+   "nr": 46,
+   "typ": "wohnung",
+   "kapitel": 10,
+   "start": 193.024,
+   "dauer": 3.062,
+   "emotion": "ruhig",
+   "text": "Noch zwei Stunden. Ihr wartet im Dunkeln."
+  },
+  {
+   "nr": 47,
+   "typ": "wohnung",
+   "kapitel": 10,
+   "start": 196.086,
+   "dauer": 3.254,
+   "emotion": "erzaehlend",
+   "text": "Da vibriert Maras Handy. Eine Nachricht."
+  },
+  {
+   "nr": 48,
+   "typ": "gesicht",
+   "kapitel": 10,
+   "start": 199.34,
+   "dauer": 2.702,
+   "emotion": "spannend",
+   "text": "Mara schaut darauf. Und erstarrt."
+  },
+  {
+   "nr": 49,
+   "typ": "gesicht",
+   "kapitel": 10,
+   "start": 202.042,
+   "dauer": 3.326,
+   "emotion": "traurig",
+   "text": "„Von Elias“, flüstert sie. „Von *seinem* Handy.“"
+  },
+  {
+   "nr": 50,
+   "typ": "gesicht",
+   "kapitel": 10,
+   "start": 205.368,
+   "dauer": 3.134,
+   "emotion": "ernst",
+   "text": "Nach vier Monaten? Ausgerechnet *jetzt*?"
+  },
+  {
+   "nr": 51,
+   "typ": "handy",
+   "kapitel": 11,
+   "start": 208.502,
+   "dauer": 4.07,
+   "emotion": "erzaehlend",
+   "text": "„Bring ihnen das kleine grüne Wesen. Dann lassen sie mich gehen.“"
+  },
+  {
+   "nr": 52,
+   "typ": "gesicht",
+   "kapitel": 11,
+   "start": 212.572,
+   "dauer": 2.006,
+   "emotion": "ernst",
+   "text": "Mara schaut langsam zu Nox."
+  },
+  {
+   "nr": 53,
+   "typ": "gesicht",
+   "kapitel": 11,
+   "start": 214.578,
+   "dauer": 2.846,
+   "emotion": "traurig",
+   "text": "Nox schaut zurück. Und sagt kein Wort."
+  },
+  {
+   "nr": 54,
+   "typ": "titel",
+   "kapitel": 11,
+   "start": 217.424,
+   "dauer": 3.5,
+   "emotion": null,
+   "text": ""
+  },
+  {
+   "nr": 55,
+   "typ": "objekt",
+   "kapitel": 12,
+   "start": 220.924,
+   "dauer": 3.422,
+   "emotion": "erklaerend",
+   "text": "Check! Warum leuchten Katzenaugen, wenn man sie anleuchtet?"
+  },
+  {
+   "nr": 56,
+   "typ": "objekt",
+   "kapitel": 12,
+   "start": 224.346,
+   "dauer": 5.582,
+   "emotion": "erklaerend",
+   "text": "Hinter ihrer Netzhaut liegt eine spiegelnde Schicht, das Tapetum lucidum. Menschen haben sie *nicht*."
+  },
+  {
+   "nr": 57,
+   "typ": "titel",
+   "kapitel": 12,
+   "start": 229.928,
+   "dauer": 3.5,
+   "emotion": null,
+   "text": ""
+  }
+ ]
+}
