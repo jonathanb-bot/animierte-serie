@@ -1,0 +1,491 @@
+{
+ "dauer": 222.682,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "lichtbild",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 4.382,
+   "emotion": "erzaehlend",
+   "text": "Dein Gesicht steht auf ihrer Liste. Und sie wissen, wo die Kapsel ist."
+  },
+  {
+   "nr": 2,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 4.382,
+   "dauer": 3.95,
+   "emotion": "ernst",
+   "text": "„Wir müssen hier raus“, sagt Mara. „Mit meinem Auto. Raus aus der Stadt.“"
+  },
+  {
+   "nr": 3,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 8.332,
+   "dauer": 3.734,
+   "emotion": "ernst",
+   "text": "„Freies Feld“, sagt Nox. „Viel Himmel. Gut für Notruf.“"
+  },
+  {
+   "nr": 4,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 12.066,
+   "dauer": 4.334,
+   "emotion": "erzaehlend",
+   "text": "Bis zum Auto sind es nur zweihundert Meter. Über eine Kreuzung."
+  },
+  {
+   "nr": 5,
+   "typ": "titel",
+   "kapitel": 1,
+   "start": 16.4,
+   "dauer": 3.0,
+   "emotion": null,
+   "text": ""
+  },
+  {
+   "nr": 6,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 19.4,
+   "dauer": 3.566,
+   "emotion": "ernst",
+   "text": "Nox ist mit einer Kapsel voller Beweise vor den Sammlern geflohen."
+  },
+  {
+   "nr": 7,
+   "typ": "hochhaus",
+   "kapitel": 2,
+   "start": 22.966,
+   "dauer": 5.246,
+   "emotion": "erzaehlend",
+   "text": "Mit ihr will er Hilfe rufen. Doch an eurer Dachtür wartet ein Mann im Mantel."
+  },
+  {
+   "nr": 8,
+   "typ": "lichtbild",
+   "kapitel": 2,
+   "start": 28.212,
+   "dauer": 3.182,
+   "emotion": "erzaehlend",
+   "text": "Du hast darauf bestanden, ins Netz der Sammler zu schauen."
+  },
+  {
+   "nr": 9,
+   "typ": "lichtbild",
+   "kapitel": 2,
+   "start": 31.394,
+   "dauer": 4.814,
+   "emotion": "erzaehlend",
+   "text": "Jetzt wissen sie, wo die Kapsel ist. Und im Suchverzeichnis: *dein* Gesicht."
+  },
+  {
+   "nr": 10,
+   "typ": "wohnung",
+   "kapitel": 3,
+   "start": 36.208,
+   "dauer": 3.014,
+   "emotion": "erzaehlend",
+   "text": "Mara hält eine große Sporttasche auf. „Rein da.“"
+  },
+  {
+   "nr": 11,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 39.222,
+   "dauer": 4.502,
+   "emotion": "ernst",
+   "text": "Nox schaut hinein. „Gefängnis?“ „Nur bis zum Auto“, sagst du."
+  },
+  {
+   "nr": 12,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 43.724,
+   "dauer": 3.686,
+   "emotion": "ernst",
+   "text": "Du ziehst deine Kapuze tief ins Gesicht. Hoffentlich reicht das."
+  },
+  {
+   "nr": 13,
+   "typ": "objekt",
+   "kapitel": 3,
+   "start": 47.41,
+   "dauer": 5.558,
+   "emotion": "erklaerend",
+   "text": "Nox klettert hinein. Mit beiden Sprechsteinen im Arm. Nur seine Augen schauen noch heraus."
+  },
+  {
+   "nr": 14,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 52.968,
+   "dauer": 3.638,
+   "emotion": "ernst",
+   "text": "„Und wenn du Angst kriegst“, sagt Mara, „dann leuchte bitte *nicht*.“"
+  },
+  {
+   "nr": 15,
+   "typ": "treppe",
+   "kapitel": 4,
+   "start": 56.606,
+   "dauer": 4.694,
+   "emotion": "erzaehlend",
+   "text": "Siebzehn Stockwerke nach unten. Den Aufzug nehmt ihr nicht. Zu laut."
+  },
+  {
+   "nr": 16,
+   "typ": "hochhaus",
+   "kapitel": 4,
+   "start": 61.3,
+   "dauer": 4.478,
+   "emotion": "erzaehlend",
+   "text": "Zehnter Stock. Alles still. Dein Handy zeigt vollen Empfang."
+  },
+  {
+   "nr": 17,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 65.778,
+   "dauer": 4.862,
+   "emotion": "ernst",
+   "text": "Du hast einen Verdacht. Immer wenn der Mann da war, war dein Empfang *weg*."
+  },
+  {
+   "nr": 18,
+   "typ": "treppe",
+   "kapitel": 4,
+   "start": 70.64,
+   "dauer": 3.518,
+   "emotion": "erzaehlend",
+   "text": "Die Tasche zuckt. Nox flüstert: „Schneller.“"
+  },
+  {
+   "nr": 19,
+   "typ": "treppe",
+   "kapitel": 4,
+   "start": 74.158,
+   "dauer": 3.878,
+   "emotion": "erzaehlend",
+   "text": "Erdgeschoss. Die Haustür. Draußen ist es schon dunkel."
+  },
+  {
+   "nr": 20,
+   "typ": "kreuzung",
+   "kapitel": 5,
+   "start": 78.036,
+   "dauer": 3.23,
+   "emotion": "erzaehlend",
+   "text": "Draußen ist es kalt. Die Laternen gehen gerade an."
+  },
+  {
+   "nr": 21,
+   "typ": "kreuzung",
+   "kapitel": 5,
+   "start": 81.266,
+   "dauer": 4.214,
+   "emotion": "erzaehlend",
+   "text": "Maras Auto steht hinter der Kreuzung. Ein kleiner, roter Wagen."
+  },
+  {
+   "nr": 22,
+   "typ": "objekt",
+   "kapitel": 5,
+   "start": 85.48,
+   "dauer": 3.302,
+   "emotion": "erklaerend",
+   "text": "Zweihundert Meter. Über eine einzige Kreuzung."
+  },
+  {
+   "nr": 23,
+   "typ": "kreuzung",
+   "kapitel": 5,
+   "start": 88.782,
+   "dauer": 2.966,
+   "emotion": "erzaehlend",
+   "text": "Aus der Tasche kommt ein Fiepen. Ganz leise."
+  },
+  {
+   "nr": 24,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 91.748,
+   "dauer": 4.886,
+   "emotion": "spannend",
+   "text": "„Ich höre was“, flüstert Nox. „Ein Pfeifen. Ganz *hoch*.“"
+  },
+  {
+   "nr": 25,
+   "typ": "gesicht",
+   "kapitel": 6,
+   "start": 96.634,
+   "dauer": 4.238,
+   "emotion": "erzaehlend",
+   "text": "Du lauschst. Du hörst nur Autos. Und deinen eigenen Atem."
+  },
+  {
+   "nr": 26,
+   "typ": "objekt",
+   "kapitel": 6,
+   "start": 100.872,
+   "dauer": 5.342,
+   "emotion": "erklaerend",
+   "text": "Echter Fakt: Junge Menschen hören Töne bis etwa *zwanzigtausend* Schwingungen pro Sekunde."
+  },
+  {
+   "nr": 27,
+   "typ": "objekt",
+   "kapitel": 6,
+   "start": 106.214,
+   "dauer": 4.142,
+   "emotion": "erklaerend",
+   "text": "Mit dem Alter sinkt diese Grenze. Sehr hohe Töne hört man dann nicht mehr."
+  },
+  {
+   "nr": 28,
+   "typ": "objekt",
+   "kapitel": 6,
+   "start": 110.356,
+   "dauer": 5.15,
+   "emotion": "erklaerend",
+   "text": "Nox' Gehör ist erfunden. Aber Hunde zum Beispiel hören wirklich viel höhere Töne als wir."
+  },
+  {
+   "nr": 29,
+   "typ": "gesicht",
+   "kapitel": 6,
+   "start": 115.506,
+   "dauer": 2.462,
+   "emotion": "spannend",
+   "text": "„Es kommt näher“, flüstert Nox."
+  },
+  {
+   "nr": 30,
+   "typ": "kreuzung",
+   "kapitel": 7,
+   "start": 117.968,
+   "dauer": 16.862,
+   "emotion": "erzaehlend",
+   "text": "Ihr steht an der Kreuzung. Die Ampel ist rot."
+  },
+  {
+   "nr": 31,
+   "typ": "handy",
+   "kapitel": 7,
+   "start": 134.83,
+   "dauer": 3.614,
+   "emotion": "erzaehlend",
+   "text": "Dein Handy: kein Empfang. Mitten in der Stadt."
+  },
+  {
+   "nr": 32,
+   "typ": "kreuzung",
+   "kapitel": 7,
+   "start": 138.444,
+   "dauer": 3.83,
+   "emotion": "erzaehlend",
+   "text": "Auf der anderen Straßenseite steht ein Mann. Grauer Mantel."
+  },
+  {
+   "nr": 33,
+   "typ": "gesicht",
+   "kapitel": 7,
+   "start": 142.274,
+   "dauer": 2.798,
+   "emotion": "froh",
+   "text": "Er lächelt. Und hebt die Hand zum Gruß."
+  },
+  {
+   "nr": 34,
+   "typ": "gesicht",
+   "kapitel": 7,
+   "start": 145.072,
+   "dauer": 2.606,
+   "emotion": "spannend",
+   "text": "Mara packt deinen Arm. „Er ist es.“"
+  },
+  {
+   "nr": 35,
+   "typ": "gesicht",
+   "kapitel": 8,
+   "start": 147.678,
+   "dauer": 3.158,
+   "emotion": "ernst",
+   "text": "„Zurück“, flüsterst du. „Ganz ruhig. Nicht rennen.“"
+  },
+  {
+   "nr": 36,
+   "typ": "kreuzung",
+   "kapitel": 8,
+   "start": 150.836,
+   "dauer": 3.926,
+   "emotion": "spannend",
+   "text": "Die Tasche fängt an, schwach zu *leuchten*. Mara drückt sie fest an sich."
+  },
+  {
+   "nr": 37,
+   "typ": "kreuzung",
+   "kapitel": 8,
+   "start": 154.762,
+   "dauer": 4.886,
+   "emotion": "erzaehlend",
+   "text": "Die Ampel wird grün. Der Mann geht los. Langsam. Direkt auf euch zu."
+  },
+  {
+   "nr": 38,
+   "typ": "kreuzung",
+   "kapitel": 8,
+   "start": 159.648,
+   "dauer": 3.734,
+   "emotion": "erzaehlend",
+   "text": "Du leuchtest mit dem Handy. Wieder blitzen seine Augen *grün* auf."
+  },
+  {
+   "nr": 39,
+   "typ": "kreuzung",
+   "kapitel": 9,
+   "start": 163.382,
+   "dauer": 3.734,
+   "emotion": "spannend",
+   "text": "Ihr geht rückwärts. Schritt für Schritt. Ohne ihn aus den Augen zu lassen."
+  },
+  {
+   "nr": 40,
+   "typ": "gesicht",
+   "kapitel": 9,
+   "start": 167.116,
+   "dauer": 3.638,
+   "emotion": "spannend",
+   "text": "„Pfeifen ist laut“, wimmert Nox. „*Zwei* Pfeifen.“"
+  },
+  {
+   "nr": 41,
+   "typ": "gesicht",
+   "kapitel": 9,
+   "start": 170.754,
+   "dauer": 2.39,
+   "emotion": "ernst",
+   "text": "Zwei? Da ist doch nur *ein* Mann."
+  },
+  {
+   "nr": 42,
+   "typ": "kreuzung",
+   "kapitel": 9,
+   "start": 173.144,
+   "dauer": 3.998,
+   "emotion": "erzaehlend",
+   "text": "Mitten auf dem Zebrastreifen bleibt der Mann stehen. Er folgt euch nicht mehr."
+  },
+  {
+   "nr": 43,
+   "typ": "gesicht",
+   "kapitel": 9,
+   "start": 177.142,
+   "dauer": 3.206,
+   "emotion": "ernst",
+   "text": "Warum bleibt er stehen? Er müsste euch doch nur *folgen*."
+  },
+  {
+   "nr": 44,
+   "typ": "gesicht",
+   "kapitel": 10,
+   "start": 180.348,
+   "dauer": 3.974,
+   "emotion": "froh",
+   "text": "Er lächelt. Als wüsste er etwas, das du nicht weißt."
+  },
+  {
+   "nr": 45,
+   "typ": "gesicht",
+   "kapitel": 10,
+   "start": 184.322,
+   "dauer": 2.75,
+   "emotion": "spannend",
+   "text": "„Warum hat er aufgehört?“, flüstert Mara."
+  },
+  {
+   "nr": 46,
+   "typ": "gesicht",
+   "kapitel": 10,
+   "start": 187.072,
+   "dauer": 5.078,
+   "emotion": "spannend",
+   "text": "Nox' Augen werden riesig. „Nicht vorne“, wimmert er. „*Hinten*.“"
+  },
+  {
+   "nr": 47,
+   "typ": "gesicht",
+   "kapitel": 10,
+   "start": 192.15,
+   "dauer": 2.198,
+   "emotion": "spannend",
+   "text": "Du drehst dich langsam um."
+  },
+  {
+   "nr": 48,
+   "typ": "kreuzung",
+   "kapitel": 11,
+   "start": 194.348,
+   "dauer": 5.198,
+   "emotion": "froh",
+   "text": "Vor eurem Hauseingang steht ein Mann. Grauer Mantel. Freundliches Lächeln."
+  },
+  {
+   "nr": 49,
+   "typ": "kreuzung",
+   "kapitel": 11,
+   "start": 199.546,
+   "dauer": 3.854,
+   "emotion": "erzaehlend",
+   "text": "Du schaust zurück. Der Mann auf der Kreuzung steht noch da."
+  },
+  {
+   "nr": 50,
+   "typ": "gesicht",
+   "kapitel": 11,
+   "start": 203.4,
+   "dauer": 2.894,
+   "emotion": "spannend",
+   "text": "Es ist *derselbe* Mann. Zweimal."
+  },
+  {
+   "nr": 51,
+   "typ": "titel",
+   "kapitel": 11,
+   "start": 206.294,
+   "dauer": 3.5,
+   "emotion": null,
+   "text": ""
+  },
+  {
+   "nr": 52,
+   "typ": "objekt",
+   "kapitel": 12,
+   "start": 209.794,
+   "dauer": 3.662,
+   "emotion": "erklaerend",
+   "text": "Check! Bis zu welcher Tonhöhe hören junge Menschen?"
+  },
+  {
+   "nr": 53,
+   "typ": "objekt",
+   "kapitel": 12,
+   "start": 213.456,
+   "dauer": 5.726,
+   "emotion": "erklaerend",
+   "text": "Bis etwa zwanzigtausend Hertz. Mit dem Alter sinkt die Grenze. Hunde hören viel *höher*."
+  },
+  {
+   "nr": 54,
+   "typ": "titel",
+   "kapitel": 12,
+   "start": 219.182,
+   "dauer": 3.5,
+   "emotion": null,
+   "text": ""
+  }
+ ]
+}
