@@ -1,0 +1,46 @@
+name: Posts einplanen (TikTok + Instagram)
+
+# Gibt die Posts aus posten/plan.json mit Uhrzeit an Zernio weiter.
+# Läuft, wenn sich posten/plan.json ändert, oder von Hand ("Run workflow").
+on:
+  push:
+    branches: [main]
+    paths: ["posten/plan.json", "posten/zernio.mjs"]
+  workflow_dispatch:
+    inputs:
+      nur:
+        description: "Nur diese Posts, z.B. tiktok-08,insta-01-1 (leer = alle offenen)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: posten
+  cancel-in-progress: false
+
+jobs:
+  einplanen:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Posts an Zernio senden
+        env:
+          ZERNIO_API_KEY: ${{ secrets.ZERNIO_API_KEY }}
+        run: |
+          if [ -n "${{ github.event.inputs.nur }}" ]; then
+            node posten/zernio.mjs --nur "${{ github.event.inputs.nur }}" | tee posten/letzter-lauf.txt
+          else
+            node posten/zernio.mjs | tee posten/letzter-lauf.txt
+          fi
+      - name: Stand speichern
+        if: always()
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          git add posten/status.json posten/letzter-lauf.txt 2>/dev/null || true
+          git diff --cached --quiet || (git commit -m "Posting-Stand aktualisiert [skip ci]" && git push)
