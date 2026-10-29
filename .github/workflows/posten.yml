@@ -28,6 +28,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+      - name: ffmpeg für die Ton-Prüfung
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
       - name: Posts an Zernio senden
         env:
           ZERNIO_API_KEY: ${{ secrets.ZERNIO_API_KEY }}

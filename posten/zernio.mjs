@@ -7,6 +7,8 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { spawnSync } from "node:child_process";
+import os from "node:os";
 
 const DIR = path.dirname(fileURLToPath(import.meta.url));
 const API = "https://zernio.com/api/v1";
@@ -49,12 +51,45 @@ for (const pid of plan.loeschen || []) {
   console.log(r.ok ? `🗑 ${pid} zurückgezogen` : `✗ ${pid} konnte nicht zurückgezogen werden: HTTP ${r.status} ${JSON.stringify(r.json).slice(0, 300)}`);
 }
 
+// Prüfung vor jedem Post: Video laden; Ton muss da sein, so lang wie das Bild und hörbar laut (Stimme).
+// Gibt null zurück, wenn alles passt, sonst den Grund.
+async function pruefe(url) {
+  const tmp = path.join(os.tmpdir(), "pruef-" + Date.now() + ".mp4");
+  try {
+    const r = await fetch(url);
+    if (!r.ok) return `Video nicht abrufbar (HTTP ${r.status})`;
+    fs.writeFileSync(tmp, Buffer.from(await r.arrayBuffer()));
+    const dauer = s => Number(spawnSync("ffprobe", ["-v", "error", "-select_streams", s, "-show_entries", "stream=duration", "-of", "csv=p=0", tmp]).stdout.toString().trim() || 0);
+    const v = dauer("v:0"), a = dauer("a:0");
+    if (!v) return "keine Bildspur";
+    if (!a) return "keine Tonspur";
+    if (Math.abs(v - a) > 0.5) return `Ton (${a.toFixed(1)} s) und Bild (${v.toFixed(1)} s) unterschiedlich lang`;
+    const log = spawnSync("ffmpeg", ["-nostats", "-i", tmp, "-map", "0:a:0", "-af", "ebur128", "-f", "null", "-"]).stderr.toString();
+    const m = log.match(/I:\s+(-?[\d.]+) LUFS\s*\n\s*Threshold/);
+    const lufs = m ? Number(m[1]) : null;
+    if (lufs === null) return "Lautheit nicht messbar";
+    if (lufs < -24) return `Ton zu leise (${lufs} LUFS) – vermutlich fehlt die Stimme`;
+    return null;
+  } catch (e) {
+    return "Prüfung fehlgeschlagen: " + String(e.message).slice(0, 200);
+  } finally {
+    try { fs.unlinkSync(tmp); } catch {}
+  }
+}
+
 let neu = 0, fehler = 0;
 for (const post of plan.posts) {
   if (nur && !nur.includes(post.id)) continue;
   if (status[post.id]?.ok || status[post.id]?.geloescht || (plan.loeschen || []).includes(post.id)) continue;
   const acc = konto(post.platform);
   if (!acc) { console.log(`✗ ${post.id}: kein ${post.platform}-Konto verbunden`); fehler++; continue; }
+  const problem = await pruefe(post.video);
+  if (problem) {
+    console.log(`✗ ${post.id}: NICHT eingeplant – ${problem}`);
+    status[post.id] = { ok: false, zeit: post.zeit, pruefung: problem, am: new Date().toISOString() }; speichern();
+    fehler++; continue;
+  }
+  console.log(`  ${post.id}: Prüfung ok (Bild, Ton, Lautstärke)`);
 
   const platformSpecificData = post.platform === "tiktok"
     ? { privacyLevel: "PUBLIC_TO_EVERYONE", allowComment: true, allowDuet: true, allowStitch: true,
