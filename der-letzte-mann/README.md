@@ -30,6 +30,7 @@ node der-letzte-mann/dauer.mjs der-letzte-mann/storylines/folge-01.md
 | Drehbücher (`episoden/`) | alle 10 fertig, erzeugt mit `python3 der-letzte-mann/drehbuch.py` aus den Storylines |
 | Stimme (`audio/`, `musik/`) | alle 10 mit Gemini „Orus“, ohne „Echter Fakt“, jede Einstellung per Spracherkennung gegen den Text geprüft, −14,9 bis −15,7 LUFS. Staffel gemessen 17:24 min |
 | Grafik (`engine/letzter-mann.js`) | gebaut, Standbilder aller Folgen geprüft. `rendern.yml` kennt die Serie (`der-letzte-mann-folge-XX`). Rendern lokal: `node render.mjs der-letzte-mann/episoden/folge-XX.txt --teile --max 60` |
+| Fertige Videos | alle 10 gerendert und geprüft (Ton da, Bild = Ton, −14,7 bis −15,4 LUFS). Branch `youtube-upload`: `der-letzte-mann-folgen/folge-XX.mp4` = ganze Folge (TikTok), `der-letzte-mann/folge-XX-teil-N.mp4` = 2 Teile je Folge (Instagram/YouTube, alle Folgen über 90 s, Schnitt nach Kapitel 2, 43–57 s). Prüfliste 134/134 ok |
 
 ## Reihenfolge beim Posten
 
