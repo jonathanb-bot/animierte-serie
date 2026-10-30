@@ -14,3 +14,4 @@
 - **DRINGLICH – vor jeder Arbeit die offenen GitHub-Issues mit Label `dringlich` lesen** (dort stehen Jonathans feste Regeln) und neue wichtige Vorgaben ebenfalls als Issue mit Label `dringlich` bzw. `regel` festhalten.
 - **Nie „Echter Fakt“** (Jonathans feste Vorgabe, Issue #2): Fakten werden direkt erzählt, ohne diese Einleitung, weder im Sprechtext noch als Überschrift auf der Infokarte. Gilt für alle künftigen Folgen und Serien.
 - **Fertige Videos (Issue #4):** TikTok bekommt immer die ganze Folge. Instagram und YouTube: Folgen unter 90 s ungeschnitten, längere in Teile von höchstens 60 s (nur an Kapitelgrenzen). Ablage auf Branch `youtube-upload` (`<serie>-folgen/` ganze Folgen, `<serie>/` Teile, danach `python3 pruefen.py`).
+- **Posten (Issue #6):** „Der letzte Mann“ läuft ab 30.10. parallel zu den anderen Serien, 2 Stunden versetzt: Instagram 10/14/18 Uhr, YouTube 10:30/14:30/18:30, TikTok 10 und 18 Uhr. Eingetragen in `posten/plan.json` auf `main`.

@@ -34,4 +34,12 @@ node der-letzte-mann/dauer.mjs der-letzte-mann/storylines/folge-01.md
 
 ## Reihenfolge beim Posten
 
-Wie im Projekt festgelegt: Eine Serie wird immer komplett gepostet, bevor die nächste beginnt. „Der letzte Mann“ kommt nach „24. Stock“ und „Der Alien“.
+Jonathans Vorgabe vom 30.10. (Issue #6): „Der letzte Mann“ läuft **ab 30.10. parallel** zu „24. Stock“ / „Der Alien“, immer 2 Stunden versetzt.
+
+| Plattform | pro Tag | Zeiten | Versatz zu den anderen |
+|---|---|---|---|
+| Instagram | 3 Teile | 10:00, 14:00, 18:00 | Vormittag +2 h, Mittag +2 h, Abend −2 h |
+| YouTube Shorts | 3 Teile | 10:30, 14:30, 18:30 | wie Instagram |
+| TikTok | 2 ganze Folgen | 10:00, 18:00 | früh +2 h, abends −2 h |
+
+Eingetragen in `posten/plan.json` auf `main` (IDs `mann-tiktok-XX`, `mann-insta-XX-N`, `mann-yt-XX-N`). TikTok 30.10.–4.11., Instagram/YouTube 30.10.–6.11.
