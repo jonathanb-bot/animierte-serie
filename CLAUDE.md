@@ -13,3 +13,6 @@
 - Eine Serie wird immer komplett gepostet, bevor die nächste beginnt (erst „24. Stock“, dann „Der Alien“, dann „Der letzte Mann“).
 - **Arbeitsablauf bei neuen Folgen (Jonathans Vorgabe):** alle Folgen auf einmal schreiben (Storylines → Drehbücher), danach sofort und ohne Rückfrage die Stimme mit Gemini „Orus“ erzeugen und jede Einstellung gegen den Text prüfen. Details in `CLAUDE.md` auf Branch `claude/der-letzte-mann`.
 - Dritte Serie „Der letzte Mann“ (10 Folgen à ca. 1,5 min, je 2 Teile ≤ 60 s): Ordner `der-letzte-mann/` auf Branch `claude/der-letzte-mann` (Serienbibel, Storylines, Drehbücher, Stimme).
+- **DRINGLICH – vor jeder Arbeit die offenen GitHub-Issues mit Label `dringlich` lesen** (dort stehen Jonathans feste Regeln) und neue wichtige Vorgaben ebenfalls als Issue mit Label `dringlich` bzw. `regel` festhalten.
+- **Nie „Echter Fakt“** (Jonathans feste Vorgabe, Issue #2): Fakten werden direkt erzählt, ohne diese Einleitung, weder im Sprechtext noch als Überschrift auf der Infokarte. Gilt für alle künftigen Folgen und Serien.
+- **Fertige Videos (Issue #4):** TikTok bekommt immer die ganze Folge. Instagram und YouTube: Folgen unter 90 s ungeschnitten, längere in Teile von höchstens 60 s (nur an Kapitelgrenzen). Ablage auf Branch `youtube-upload` (`<serie>-folgen/` ganze Folgen, `<serie>/` Teile, danach `python3 pruefen.py`).
