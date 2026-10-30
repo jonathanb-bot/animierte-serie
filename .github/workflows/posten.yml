@@ -37,6 +37,7 @@ jobs:
       - name: Posts an Zernio senden
         env:
           ZERNIO_API_KEY: ${{ secrets.ZERNIO_API_KEY }}
+          ZERNIO_API_KEY_YT: ${{ secrets.ZERNIO_API_KEY_YT }}
         run: |
           if [ "${{ github.event.inputs.status }}" = "true" ]; then
             node posten/zernio.mjs --status | tee posten/letzter-status.txt

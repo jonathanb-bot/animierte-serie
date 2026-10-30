@@ -13,7 +13,9 @@ import os from "node:os";
 const DIR = path.dirname(fileURLToPath(import.meta.url));
 const API = "https://zernio.com/api/v1";
 const KEY = process.env.ZERNIO_API_KEY;
+const KEY_YT = process.env.ZERNIO_API_KEY_YT || ""; // zweites Zernio-Konto nur für YouTube
 if (!KEY) { console.error("ZERNIO_API_KEY fehlt (GitHub-Secret)."); process.exit(1); }
+const keyFuer = plattform => (plattform === "youtube" && KEY_YT ? KEY_YT : KEY);
 const args = process.argv.slice(2);
 const nur = (() => { const i = args.indexOf("--nur"); return i >= 0 ? args[i + 1].split(",").map(s => s.trim()) : null; })();
 
@@ -22,10 +24,10 @@ const statusDatei = path.join(DIR, "status.json");
 const status = fs.existsSync(statusDatei) ? JSON.parse(fs.readFileSync(statusDatei, "utf8")) : {};
 const speichern = () => fs.writeFileSync(statusDatei, JSON.stringify(status, null, 1) + "\n");
 
-async function api(methode, pfad, body) {
+async function api(methode, pfad, body, key = KEY) {
   const r = await fetch(API + pfad, {
     method: methode,
-    headers: { Authorization: `Bearer ${KEY}`, "Content-Type": "application/json" },
+    headers: { Authorization: `Bearer ${key}`, "Content-Type": "application/json" },
     body: body ? JSON.stringify(body) : undefined,
   });
   const text = await r.text();
@@ -36,7 +38,12 @@ async function api(methode, pfad, body) {
 // Verbundene Konten holen
 const konten = await api("GET", "/accounts");
 if (!konten.ok) { console.error("Konten konnten nicht geladen werden:", konten.status, JSON.stringify(konten.json).slice(0, 400)); process.exit(1); }
-const liste = (konten.json.accounts || []).filter(a => a.isActive !== false);
+let liste = (konten.json.accounts || []).filter(a => a.isActive !== false);
+if (KEY_YT) {
+  const k2 = await api("GET", "/accounts", null, KEY_YT);
+  if (k2.ok) liste = liste.concat((k2.json.accounts || []).filter(a => a.isActive !== false && a.platform === "youtube").map(a => ({ ...a, _yt: true })));
+  else console.log("YouTube-Konto (2. Schlüssel) nicht erreichbar:", k2.status);
+}
 console.log("Verbundene Konten:", liste.map(a => `${a.platform}:${a.username || a.displayName}`).join(", ") || "keine");
 if (args.includes("--konten")) process.exit(0);
 
@@ -47,7 +54,7 @@ if (args.includes("--status")) {
   for (const post of plan.posts) {
     const st = status[post.id];
     if (!st?.zernioId || post.zeit.slice(0, 16) > iso(jetzt)) continue;
-    const r = await api("GET", `/posts/${st.zernioId}`);
+    const r = await api("GET", `/posts/${st.zernioId}`, null, keyFuer(post.platform));
     const p = r.json?.post || r.json || {};
     const pl = (p.platforms || [])[0] || {};
     const info = { status: p.status, plattform: pl.status, url: pl.platformPostUrl || pl.url || pl.publishedUrl, fehler: pl.errorMessage || pl.error || p.error };
@@ -62,7 +69,8 @@ const konto = p => liste.find(a => a.platform === p);
 for (const pid of plan.loeschen || []) {
   const st = status[pid];
   if (!st?.zernioId || st.geloescht) continue;
-  const r = await api("DELETE", `/posts/${st.zernioId}`);
+  const pp = plan.posts.find(x => x.id === pid);
+  const r = await api("DELETE", `/posts/${st.zernioId}`, null, keyFuer(pp?.platform));
   st.geloescht = r.ok; st.ok = false; st.loeschHttp = r.status; st.loeschAntwort = r.ok ? undefined : JSON.stringify(r.json).slice(0, 300);
   speichern();
   console.log(r.ok ? `🗑 ${pid} zurückgezogen` : `✗ ${pid} konnte nicht zurückgezogen werden: HTTP ${r.status} ${JSON.stringify(r.json).slice(0, 300)}`);
@@ -98,6 +106,9 @@ let neu = 0, fehler = 0;
 for (const post of plan.posts) {
   if (nur && !nur.includes(post.id)) continue;
   if (status[post.id]?.ok || status[post.id]?.geloescht || (plan.loeschen || []).includes(post.id)) continue;
+  // Nie verspätet nachposten: Zeitpunkt muss mindestens 10 Minuten in der Zukunft liegen
+  { const j = new Date(Date.now() + 10 * 60000).toLocaleString("sv-SE", { timeZone: "Europe/Berlin" }).replace(" ", "T").slice(0, 16);
+    if (post.zeit.slice(0, 16) < j) { console.log(`– ${post.id}: Zeit ${post.zeit} ist vorbei, übersprungen`); continue; } }
   const acc = konto(post.platform);
   if (!acc) { console.log(`✗ ${post.id}: kein ${post.platform}-Konto verbunden`); fehler++; continue; }
   const problem = await pruefe(post.video);
@@ -111,6 +122,8 @@ for (const post of plan.posts) {
   const platformSpecificData = post.platform === "tiktok"
     ? { privacyLevel: "PUBLIC_TO_EVERYONE", allowComment: true, allowDuet: true, allowStitch: true,
         commercialContentType: "none", videoMadeWithAi: true, contentPreviewConfirmed: true, expressConsentGiven: true }
+    : post.platform === "youtube"
+    ? { title: post.titel, visibility: "public", madeForKids: false, categoryId: "24" }
     : (plan.instagram || {});
   const body = {
     content: post.text,
@@ -120,7 +133,8 @@ for (const post of plan.posts) {
     timezone: "Europe/Berlin",
     metadata: { serie: "24-stock", postId: post.id },
   };
-  const r = await api("POST", "/posts", body);
+  if (post.platform === "youtube") body.tags = ["zombie", "animation", "story", "24 stock", "shorts"];
+  const r = await api("POST", "/posts", body, keyFuer(post.platform));
   const id = r.json?.post?._id || r.json?._id || r.json?.id || null;
   status[post.id] = { ok: r.ok, zeit: post.zeit, zernioId: id, http: r.status, antwort: r.ok ? undefined : JSON.stringify(r.json).slice(0, 600), am: new Date().toISOString() };
   speichern();
