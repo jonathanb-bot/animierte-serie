@@ -22,7 +22,13 @@ npm install && npx playwright install chromium   # einmalig, dazu ffmpeg
 node render.mjs episoden/folge-01.txt             # volles Video -> ausgabe/
 node render.mjs episoden/folge-01.txt --bilder    # schnell: ein Standbild pro Einstellung
 node render.mjs episoden/folge-01.txt --vorschau  # kleine, schnelle Vorschau
+node render.mjs episoden/folge-01.txt --teile     # zusätzlich Teile für TikTok/Insta (je max. 59 s)
+node render.mjs episoden/folge-01.txt --teile-plan  # nur anzeigen, wie geteilt wird
 ```
+
+## Teile für TikTok und Instagram
+
+Mit `--teile` wird die fertige Folge in Clips von **höchstens 1 Minute** zerlegt: `ausgabe/folge-02-teil-1.mp4`, `folge-02-teil-2.mp4` … und eine Liste `folge-02-teile.txt` (Teil 1/6, Zeiten, Kapitel). Inhalt, Bild und Ton bleiben unverändert. Geschnitten wird nur an Kapitelgrenzen (`== … ==`), mit möglichst wenigen und etwa gleich langen Teilen. Die Länge richtet sich nach der echten Szenenlänge, mit Stimme also nach den Audiodateien. Andere Grenze: `--max 89`. GitHub macht das bei jedem Render automatisch, die Teile liegen mit im Release.
 
 ## Drehbuch-Format
 
@@ -51,7 +57,7 @@ In der Klammer steht zuerst der **Typ**, danach beliebige Angaben:
 | `objekt` | Infokarte mit Icons | `objekte="badewanne:150 Liter\|boiler:80 Liter"`, `gross="Überschrift"`, `durchgestrichen=feuer`, `farbe=#hex` |
 | `karte` | Stadtplan | `route="haus>apotheke"`, `horden=supermarkt,bruecke`, `orte=haus,apotheke,stadion` |
 | `gesicht` | Nahaufnahme, unscharfer Hintergrund | `ort=wohnung/treppenhaus/dach/bad/strasse`, `licht=kerze/taschenlampe` |
-| `titel` | Titelkarte | `oben=`, `gross=` (Zeilenumbruch mit `\|`), `unten=`, `groesse=` |
+| `titel` | Titelkarte | `oben=`, `gross=` (Zeilenumbruch mit `\|`), `unten=`, `groesse=`, `knopf="Jetzt auf dem Profil"` |
 
 **Allgemein:**
 - **Figuren:** `du`, `lena`, `mila`, `walter`, `kai`, `pilotin`, `zombie3` … Für Posen oder Ausdrücke pro Figur: `lena:psst`, `walter:besorgt`.
@@ -62,6 +68,34 @@ In der Klammer steht zuerst der **Typ**, danach beliebige Angaben:
 - **Effekte:** `staub asche schnee wackeln=1 blitz alarm blende dauer=3 hud=false`
 - **Icons:** wasserflasche kanister badewanne boiler eimer topf kerze taschenlampe dose funkgeraet powerbank medizin wecker plane kocher decke tropfen ohr auge gluehbirne toilette spuelkasten feuer kreuz batterie zombiekopf regen solar schluessel rucksack treppe uhr herz muell
 
-## Stimme
+## Stimme, Hintergrund und Geräusche (kostenlos)
 
-Pro Einstellung eine Audiodatei mit genau dem Text der Zeile, z. B. mit ElevenLabs über Shotstack, als eigene Aufnahme oder aus einem anderen TTS. Gespeichert als `audio/folge-01/001.mp3`, `002.mp3` … Die Nummer entspricht der Reihenfolge der `[…]`-Zeilen.
+```bash
+pip install -r requirements.txt                 # einmalig (Python 3, dazu ffmpeg)
+python -m ton.folge episoden/folge-01.txt       # Stimme + Hintergrund für Folge 1
+python -m ton.pruefen folge-01                  # Lautheit und Abstand Stimme/Hintergrund messen
+```
+
+`ton.folge` macht den Ton im Stil der Vorlage (Hochkant-Kurzgeschichte):
+
+- **Erzählstimme** pro Einstellung als `audio/folge-XX/NNN.mp3`: eine tiefe, trockene, zügige Stimme
+  (kostenlose Microsoft-Neural-Stimme „Conrad“, +18 % Tempo). Auch Zitate spricht der Erzähler – wie in der Vorlage.
+  Die Betonung richtet sich nach dem Ausdruck in der Klammer (`schreck`, `besorgt` …) oder nach `emotion=…`.
+- **Wortzeiten** als `audio/folge-XX/NNN.json` – `render.mjs` legt die Untertitel damit exakt auf die Stimme.
+- **Hintergrund** als `musik/folge-XX.mp3`: kein Drone und kein Rauschen (alter Teppich nur mit `--drone`), an jeder Kapitelgrenze (`== … ==`)
+  ein harter **Stille-Schnitt**, dazu leise Geräusche passend zum Bild (Warnsignale wie Alarm, Sirene, Wecker etwas lauter) (`alarm`, `klopfen`, `blitz`/„Klack“,
+  `hahn=…`, `fuell_bis`, Schritte, Handy …). Pro Einstellung: `ton=zombie,wind` oder `ton=aus`.
+- Im Drehbuch werden `@musik musik/folge-XX.mp3`, `@musik_lautstaerke 1` und `@whoosh aus` gesetzt.
+
+**Natürlichere Stimme mit Gemini** (kostenlos 10 Anfragen/Tag – reicht für eine Folge, zwei Kapitel pro Anfrage):
+
+```bash
+python -m ton.folge episoden/folge-01.txt --stimme gemini:Orus   # oder gemini:Algenib
+python -m ton.folge episoden/folge-03.txt --stimme gemini:Orus --anfragen 4   # Kapitel auf genau 4 Anfragen verteilen
+```
+
+Gemini liefert keine Wortzeiten; die ermittelt eine lokale Spracherkennung (faster-whisper) und schneidet daran
+auch die Einstellungen. Fertiges Rohaudio liegt im Cache, ein zweiter Lauf kostet keine Anfrage.
+
+Danach pushen – GitHub rendert wie gewohnt. Wer lieber eine andere Stimme nutzt (ElevenLabs, eigene Aufnahme):
+einfach `audio/folge-XX/NNN.mp3` ersetzen; ohne `NNN.json` verteilt der Renderer die Wörter wie bisher nach Länge.

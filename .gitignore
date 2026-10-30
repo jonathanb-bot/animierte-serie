@@ -1,3 +1,5 @@
 node_modules/
 ausgabe/
 *.log
+__pycache__/
+.cache/

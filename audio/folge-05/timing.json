@@ -1,0 +1,464 @@
+{
+ "dauer": 212.224,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "bad",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 5.438,
+   "emotion": "erzaehlend",
+   "text": "Du gehst ins Bad und schaust dir die Wanne an. Dann die Flaschen. Dann rechnest du."
+  },
+  {
+   "nr": 2,
+   "typ": "objekt",
+   "kapitel": 1,
+   "start": 5.438,
+   "dauer": 4.502,
+   "emotion": "erklaerend",
+   "text": "Fünf Leute, zwei Liter pro Kopf. Zehn Liter am Tag."
+  },
+  {
+   "nr": 3,
+   "typ": "objekt",
+   "kapitel": 1,
+   "start": 9.94,
+   "dauer": 6.206,
+   "emotion": "erklaerend",
+   "text": "Aber seit Kai da ist, fehlen jeden Tag *mehr*. Insgesamt fünfundzwanzig Liter."
+  },
+  {
+   "nr": 4,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 16.146,
+   "dauer": 3.398,
+   "emotion": "wuetend",
+   "text": "Fünfundzwanzig Liter verschwinden nicht von allein."
+  },
+  {
+   "nr": 5,
+   "typ": "titel",
+   "kapitel": 1,
+   "start": 19.544,
+   "dauer": 3.0,
+   "emotion": null,
+   "text": ""
+  },
+  {
+   "nr": 6,
+   "typ": "skyline",
+   "kapitel": 2,
+   "start": 22.544,
+   "dauer": 4.958,
+   "emotion": "erzaehlend",
+   "text": "Was bisher geschah: Ihr habt gesehen, wie ein beleuchtetes Haus von der Horde *überrannt* wurde."
+  },
+  {
+   "nr": 7,
+   "typ": "objekt",
+   "kapitel": 2,
+   "start": 27.502,
+   "dauer": 2.63,
+   "emotion": "erklaerend",
+   "text": "Seitdem gelten strenge *Lichtregeln*."
+  },
+  {
+   "nr": 8,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 30.132,
+   "dauer": 4.91,
+   "emotion": "ernst",
+   "text": "Kai hat heimlich eine Evakuierung im Radio gehört. Und es *verschwiegen*."
+  },
+  {
+   "nr": 9,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 35.042,
+   "dauer": 3.398,
+   "emotion": "ernst",
+   "text": "Und Mila hat gesehen, wie er *Wasser* in seinen Rucksack gesteckt hat."
+  },
+  {
+   "nr": 10,
+   "typ": "wohnung",
+   "kapitel": 3,
+   "start": 38.44,
+   "dauer": 2.438,
+   "emotion": "erzaehlend",
+   "text": "Du stellst Kai zur Rede. Vor allen."
+  },
+  {
+   "nr": 11,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 40.878,
+   "dauer": 2.894,
+   "emotion": "wuetend",
+   "text": "„Spinnst du? Ich hab euch *Essen* gebracht!“"
+  },
+  {
+   "nr": 12,
+   "typ": "wohnung",
+   "kapitel": 3,
+   "start": 43.772,
+   "dauer": 4.934,
+   "emotion": "erzaehlend",
+   "text": "Walter öffnet den Rucksack. Zehn volle Flaschen. Und eine Karte der Stadt."
+  },
+  {
+   "nr": 13,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 48.706,
+   "dauer": 6.878,
+   "emotion": "traurig",
+   "text": "Kai lässt die Schultern sinken. „Okay. Ich hab eine Durchsage gehört. *Evakuierung*. Am Stadion.“"
+  },
+  {
+   "nr": 14,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 55.584,
+   "dauer": 3.998,
+   "emotion": "wuetend",
+   "text": "„Und du wolltest alleine gehen? Mit *unserem* Wasser?“"
+  },
+  {
+   "nr": 15,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 59.582,
+   "dauer": 5.558,
+   "emotion": "ernst",
+   "text": "„Vier Kilometer. Mit einem Kind und einem alten Mann? Das schafft ihr *nie*.“"
+  },
+  {
+   "nr": 16,
+   "typ": "karte",
+   "kapitel": 4,
+   "start": 65.14,
+   "dauer": 5.03,
+   "emotion": "erklaerend",
+   "text": "Und das Schlimme ist: Er hat nicht ganz unrecht. Die Brücke ist voll von *ihnen*."
+  },
+  {
+   "nr": 17,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 70.17,
+   "dauer": 5.822,
+   "emotion": "ernst",
+   "text": "Walter sagt lange nichts. Dann: „Hubschrauber landen nicht nur an Stadien. Sie sehen auch *Dächer*.“"
+  },
+  {
+   "nr": 18,
+   "typ": "wohnung",
+   "kapitel": 5,
+   "start": 75.992,
+   "dauer": 3.422,
+   "emotion": "erzaehlend",
+   "text": "Ihr stimmt ab. Kai rauswerfen? Oder bleiben lassen?"
+  },
+  {
+   "nr": 19,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 79.414,
+   "dauer": 4.19,
+   "emotion": "traurig",
+   "text": "Mila sagt leise: „Wenn wir ihn rausschmeißen, sind wir wie *die* da draußen.“"
+  },
+  {
+   "nr": 20,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 83.604,
+   "dauer": 3.854,
+   "emotion": "erzaehlend",
+   "text": "Das sitzt. Kai darf bleiben. Aber es gibt ab jetzt *Regeln*."
+  },
+  {
+   "nr": 21,
+   "typ": "objekt",
+   "kapitel": 6,
+   "start": 87.458,
+   "dauer": 4.19,
+   "emotion": "erklaerend",
+   "text": "Erstens: Das Trinkwasser kommt in einen Raum. Den Schlüssel hat *Walter*."
+  },
+  {
+   "nr": 22,
+   "typ": "objekt",
+   "kapitel": 6,
+   "start": 91.648,
+   "dauer": 5.798,
+   "emotion": "erklaerend",
+   "text": "Zweitens: Jeder bekommt seine Ration. Zwei Liter. Morgens ausgeteilt. Nicht mehr."
+  },
+  {
+   "nr": 23,
+   "typ": "objekt",
+   "kapitel": 6,
+   "start": 97.446,
+   "dauer": 4.67,
+   "emotion": "erklaerend",
+   "text": "Drittens: Alles wird *aufgeschrieben*. Wer was nimmt, wann und wie viel."
+  },
+  {
+   "nr": 24,
+   "typ": "gesicht",
+   "kapitel": 6,
+   "start": 102.116,
+   "dauer": 3.422,
+   "emotion": "ernst",
+   "text": "„Ein Strich auf Papier ist ehrlicher als jedes *Versprechen*.“"
+  },
+  {
+   "nr": 25,
+   "typ": "bad",
+   "kapitel": 7,
+   "start": 105.538,
+   "dauer": 3.59,
+   "emotion": "erzaehlend",
+   "text": "Dann entdeckt Lena etwas, das allen Angst macht."
+  },
+  {
+   "nr": 26,
+   "typ": "gesicht",
+   "kapitel": 7,
+   "start": 109.128,
+   "dauer": 6.038,
+   "emotion": "ernst",
+   "text": "Das Wasser in der Badewanne steht seit fünf Tagen. Offen. Staub. Haare. *Keime*."
+  },
+  {
+   "nr": 27,
+   "typ": "objekt",
+   "kapitel": 7,
+   "start": 115.166,
+   "dauer": 4.982,
+   "emotion": "erklaerend",
+   "text": "Stehendes Wasser wird mit der Zeit schlecht. Und Durchfall kann hier *tödlich* sein."
+  },
+  {
+   "nr": 28,
+   "typ": "objekt",
+   "kapitel": 7,
+   "start": 120.148,
+   "dauer": 5.414,
+   "emotion": "erklaerend",
+   "text": "Die Lösung: abkochen. Sprudelnd kochen lassen. Mindestens *eine Minute*."
+  },
+  {
+   "nr": 29,
+   "typ": "gesicht",
+   "kapitel": 7,
+   "start": 125.562,
+   "dauer": 4.334,
+   "emotion": "froh",
+   "text": "Kai hat einen kleinen *Gaskocher*. Zum ersten Mal ist er wirklich nützlich."
+  },
+  {
+   "nr": 30,
+   "typ": "objekt",
+   "kapitel": 7,
+   "start": 129.896,
+   "dauer": 6.062,
+   "emotion": "erklaerend",
+   "text": "Aber Gas in einer geschlossenen Wohnung ist gefährlich. Kochen nur am offenen Fenster. *Tagsüber*."
+  },
+  {
+   "nr": 31,
+   "typ": "wohnung",
+   "kapitel": 8,
+   "start": 135.958,
+   "dauer": 4.79,
+   "emotion": "erzaehlend",
+   "text": "Trotz Rationen sinkt euer Wasser. Langsam. Aber *jeden* Tag."
+  },
+  {
+   "nr": 32,
+   "typ": "objekt",
+   "kapitel": 8,
+   "start": 140.748,
+   "dauer": 4.094,
+   "emotion": "erklaerend",
+   "text": "Zwanzig Tage. Wenn alles gut geht. Wenn keiner krank wird."
+  },
+  {
+   "nr": 33,
+   "typ": "gesicht",
+   "kapitel": 8,
+   "start": 144.842,
+   "dauer": 0.974,
+   "emotion": "ernst",
+   "text": "Und was dann?"
+  },
+  {
+   "nr": 34,
+   "typ": "gesicht",
+   "kapitel": 9,
+   "start": 145.816,
+   "dauer": 2.294,
+   "emotion": "erzaehlend",
+   "text": "Am Abend erzählt Walter von früher."
+  },
+  {
+   "nr": 35,
+   "typ": "hochhaus",
+   "kapitel": 9,
+   "start": 148.11,
+   "dauer": 4.382,
+   "emotion": "erzaehlend",
+   "text": "„Als ich hier angefangen hab, gab es oben auf dem Dach einen alten *Wassertank*.“"
+  },
+  {
+   "nr": 36,
+   "typ": "gesicht",
+   "kapitel": 9,
+   "start": 152.492,
+   "dauer": 4.742,
+   "emotion": "ernst",
+   "text": "„Seit Jahren nicht benutzt. Aber er ist noch da. Und er *fängt Regen*.“"
+  },
+  {
+   "nr": 37,
+   "typ": "gesicht",
+   "kapitel": 9,
+   "start": 157.234,
+   "dauer": 4.118,
+   "emotion": "froh",
+   "text": "Ein Tank. Voller Wasser. Direkt über euren Köpfen."
+  },
+  {
+   "nr": 38,
+   "typ": "treppenhaus",
+   "kapitel": 10,
+   "start": 161.352,
+   "dauer": 6.326,
+   "emotion": "erzaehlend",
+   "text": "Der Weg aufs Dach: ein schmaler Aufgang über dem 24. Stock. Eine schwere Stahltür."
+  },
+  {
+   "nr": 39,
+   "typ": "gesicht",
+   "kapitel": 10,
+   "start": 167.678,
+   "dauer": 3.878,
+   "emotion": "traurig",
+   "text": "Abgeschlossen. Walters Schlüsselbund liegt irgendwo im *Erdgeschoss*."
+  },
+  {
+   "nr": 40,
+   "typ": "objekt",
+   "kapitel": 10,
+   "start": 171.556,
+   "dauer": 1.214,
+   "emotion": "erklaerend",
+   "text": "Unerreichbar."
+  },
+  {
+   "nr": 41,
+   "typ": "gesicht",
+   "kapitel": 10,
+   "start": 172.77,
+   "dauer": 3.926,
+   "emotion": "froh",
+   "text": "Kai grinst und zieht etwas aus seinem Rucksack. Ein *Brecheisen*."
+  },
+  {
+   "nr": 42,
+   "typ": "treppenhaus",
+   "kapitel": 10,
+   "start": 176.696,
+   "dauer": 5.102,
+   "emotion": "erzaehlend",
+   "text": "Das Schloss gibt nach. Zu laut. Ihr wartet. Aber unten bleibt alles *ruhig*."
+  },
+  {
+   "nr": 43,
+   "typ": "dach",
+   "kapitel": 11,
+   "start": 181.798,
+   "dauer": 4.142,
+   "emotion": "erzaehlend",
+   "text": "Die Tür schwingt auf. Kalter Wind. Der Himmel ist orange."
+  },
+  {
+   "nr": 44,
+   "typ": "dach",
+   "kapitel": 11,
+   "start": 185.94,
+   "dauer": 3.422,
+   "emotion": "erzaehlend",
+   "text": "Und da ist er. Der Tank. Groß wie ein *Auto*."
+  },
+  {
+   "nr": 45,
+   "typ": "gesicht",
+   "kapitel": 11,
+   "start": 189.362,
+   "dauer": 1.862,
+   "emotion": "froh",
+   "text": "Für einen Moment vergisst du alles."
+  },
+  {
+   "nr": 46,
+   "typ": "dach",
+   "kapitel": 11,
+   "start": 191.224,
+   "dauer": 2.99,
+   "emotion": "erzaehlend",
+   "text": "Bis du siehst, dass hinter dem Tank *jemand* steht."
+  },
+  {
+   "nr": 47,
+   "typ": "gesicht",
+   "kapitel": 11,
+   "start": 194.214,
+   "dauer": 4.358,
+   "emotion": "spannend",
+   "text": "Mit dem Rücken zu euch. Ganz still. Und er dreht sich *langsam* um."
+  },
+  {
+   "nr": 48,
+   "typ": "titel",
+   "kapitel": 11,
+   "start": 198.572,
+   "dauer": 3.5,
+   "emotion": null,
+   "text": ""
+  },
+  {
+   "nr": 49,
+   "typ": "objekt",
+   "kapitel": 12,
+   "start": 202.072,
+   "dauer": 3.374,
+   "emotion": "erklaerend",
+   "text": "Überlebens-Check! Wie machst du stehendes Wasser *sicherer*?"
+  },
+  {
+   "nr": 50,
+   "typ": "objekt",
+   "kapitel": 12,
+   "start": 205.446,
+   "dauer": 3.278,
+   "emotion": "erklaerend",
+   "text": "Sprudelnd abkochen. Mindestens *eine Minute* lang."
+  },
+  {
+   "nr": 51,
+   "typ": "titel",
+   "kapitel": 12,
+   "start": 208.724,
+   "dauer": 3.5,
+   "emotion": null,
+   "text": ""
+  }
+ ]
+}

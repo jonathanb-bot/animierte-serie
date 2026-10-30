@@ -1,0 +1,572 @@
+{
+ "dauer": 229.682,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "skyline",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 4.5,
+   "emotion": "erzaehlend",
+   "text": "Stell dir vor, die *Zombie-Apokalypse* bricht aus."
+  },
+  {
+   "nr": 2,
+   "typ": "hochhaus",
+   "kapitel": 1,
+   "start": 4.5,
+   "dauer": 4.142,
+   "emotion": "erzaehlend",
+   "text": "Und du wohnst ganz oben. Im *24. Stock* eines Hochhauses."
+  },
+  {
+   "nr": 3,
+   "typ": "hochhaus",
+   "kapitel": 1,
+   "start": 8.642,
+   "dauer": 4.238,
+   "emotion": "erzaehlend",
+   "text": "Unter dir: dreiundzwanzig Etagen. Und ganz unten: *sie*."
+  },
+  {
+   "nr": 4,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 12.88,
+   "dauer": 3.038,
+   "emotion": "spannend",
+   "text": "Die Frage ist nicht, ob sie kommen. Sondern *wann*."
+  },
+  {
+   "nr": 5,
+   "typ": "titel",
+   "kapitel": 1,
+   "start": 15.918,
+   "dauer": 3.2,
+   "emotion": null,
+   "text": ""
+  },
+  {
+   "nr": 6,
+   "typ": "skyline",
+   "kapitel": 2,
+   "start": 19.118,
+   "dauer": 3.998,
+   "emotion": "erzaehlend",
+   "text": "Dienstag, sieben Uhr vierzig. Die Sonne geht über der Stadt auf."
+  },
+  {
+   "nr": 7,
+   "typ": "wohnung",
+   "kapitel": 2,
+   "start": 23.116,
+   "dauer": 4.814,
+   "emotion": "froh",
+   "text": "Du stehst in deiner Küche im obersten Stock. Kaffee, Handy, alles wie immer."
+  },
+  {
+   "nr": 8,
+   "typ": "wohnung",
+   "kapitel": 2,
+   "start": 27.93,
+   "dauer": 4.622,
+   "emotion": "ernst",
+   "text": "Dann vibriert dein Handy. Einmal. Zweimal. *Zwanzigmal*."
+  },
+  {
+   "nr": 9,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 32.552,
+   "dauer": 4.718,
+   "emotion": "ernst",
+   "text": "Eilmeldung: Unruhen in der Innenstadt. Menschen greifen andere Menschen an."
+  },
+  {
+   "nr": 10,
+   "typ": "objekt",
+   "kapitel": 2,
+   "start": 37.27,
+   "dauer": 3.542,
+   "emotion": "erklaerend",
+   "text": "Bleiben Sie in Ihren Wohnungen. Halten Sie Türen und Fenster *geschlossen*."
+  },
+  {
+   "nr": 11,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 40.812,
+   "dauer": 2.39,
+   "emotion": "ernst",
+   "text": "Du denkst: Das ist bestimmt übertrieben."
+  },
+  {
+   "nr": 12,
+   "typ": "wohnung",
+   "kapitel": 2,
+   "start": 43.202,
+   "dauer": 1.622,
+   "emotion": "spannend",
+   "text": "Bis du aus dem Fenster schaust."
+  },
+  {
+   "nr": 13,
+   "typ": "strasse",
+   "kapitel": 3,
+   "start": 44.824,
+   "dauer": 3.902,
+   "emotion": "erzaehlend",
+   "text": "Unten auf der Straße rennen Leute. Aber nicht alle rennen *weg*."
+  },
+  {
+   "nr": 14,
+   "typ": "strasse",
+   "kapitel": 3,
+   "start": 48.726,
+   "dauer": 4.334,
+   "emotion": "erzaehlend",
+   "text": "Manche rennen *hinterher*. Sie bewegen sich komisch. Ruckartig."
+  },
+  {
+   "nr": 15,
+   "typ": "strasse",
+   "kapitel": 3,
+   "start": 53.06,
+   "dauer": 2.222,
+   "emotion": "erzaehlend",
+   "text": "Dann geht eine *Autoalarmanlage* los."
+  },
+  {
+   "nr": 16,
+   "typ": "strasse",
+   "kapitel": 3,
+   "start": 55.282,
+   "dauer": 4.382,
+   "emotion": "erzaehlend",
+   "text": "Und plötzlich drehen sich alle gleichzeitig um. Und laufen genau dorthin."
+  },
+  {
+   "nr": 17,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 59.664,
+   "dauer": 3.614,
+   "emotion": "spannend",
+   "text": "Da merkst du dir die erste Regel: Sie reagieren auf *Lärm*."
+  },
+  {
+   "nr": 18,
+   "typ": "objekt",
+   "kapitel": 3,
+   "start": 63.278,
+   "dauer": 3.71,
+   "emotion": "erklaerend",
+   "text": "Alles, was laut ist, lockt sie an. Und Hochhäuser *hallen*."
+  },
+  {
+   "nr": 19,
+   "typ": "hochhaus",
+   "kapitel": 4,
+   "start": 66.988,
+   "dauer": 2.774,
+   "emotion": "erzaehlend",
+   "text": "Jetzt musst du entscheiden. Fliehen oder bleiben?"
+  },
+  {
+   "nr": 20,
+   "typ": "hochhaus",
+   "kapitel": 4,
+   "start": 69.762,
+   "dauer": 4.838,
+   "emotion": "erzaehlend",
+   "text": "Fliehen heißt: vierundzwanzig Stockwerke runter. Durch ein Treppenhaus, das du nicht kennst."
+  },
+  {
+   "nr": 21,
+   "typ": "strasse",
+   "kapitel": 4,
+   "start": 74.6,
+   "dauer": 3.014,
+   "emotion": "erzaehlend",
+   "text": "Und unten durch genau die Straße, in der *sie* sind."
+  },
+  {
+   "nr": 22,
+   "typ": "skyline",
+   "kapitel": 4,
+   "start": 77.614,
+   "dauer": 4.55,
+   "emotion": "erzaehlend",
+   "text": "Oben bleiben heißt: Du bist weit weg von allem. Sie müssen *zu dir* hoch."
+  },
+  {
+   "nr": 23,
+   "typ": "treppenhaus",
+   "kapitel": 4,
+   "start": 82.164,
+   "dauer": 4.838,
+   "emotion": "erzaehlend",
+   "text": "Und es gibt nur einen Weg zu dir: das *Treppenhaus*. Den Aufzug kannst du vergessen."
+  },
+  {
+   "nr": 24,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 87.002,
+   "dauer": 2.054,
+   "emotion": "ernst",
+   "text": "Du entscheidest dich. Du *bleibst*."
+  },
+  {
+   "nr": 25,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 89.056,
+   "dauer": 3.494,
+   "emotion": "ernst",
+   "text": "Und dann fällt dir etwas ein, woran fast niemand denkt."
+  },
+  {
+   "nr": 26,
+   "typ": "hochhaus",
+   "kapitel": 5,
+   "start": 92.55,
+   "dauer": 5.63,
+   "emotion": "erzaehlend",
+   "text": "Wasser kommt nicht von allein in den 24. Stock. Es wird von *Pumpen* hochgedrückt."
+  },
+  {
+   "nr": 27,
+   "typ": "objekt",
+   "kapitel": 5,
+   "start": 98.18,
+   "dauer": 5.798,
+   "emotion": "erklaerend",
+   "text": "Und Pumpen brauchen *Strom*. Fällt der Strom aus, fällt zuerst das Wasser ganz oben aus."
+  },
+  {
+   "nr": 28,
+   "typ": "hochhaus",
+   "kapitel": 5,
+   "start": 103.978,
+   "dauer": 4.502,
+   "emotion": "erzaehlend",
+   "text": "Die unteren Etagen haben vielleicht noch Wasser. Du ganz oben: *nichts mehr*."
+  },
+  {
+   "nr": 29,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 108.48,
+   "dauer": 1.478,
+   "emotion": "spannend",
+   "text": "Also rennst du ins Bad."
+  },
+  {
+   "nr": 30,
+   "typ": "bad",
+   "kapitel": 5,
+   "start": 109.958,
+   "dauer": 4.238,
+   "emotion": "erzaehlend",
+   "text": "Stöpsel rein, Wasserhahn *voll auf*. Die Badewanne läuft voll."
+  },
+  {
+   "nr": 31,
+   "typ": "wohnung",
+   "kapitel": 5,
+   "start": 114.196,
+   "dauer": 3.71,
+   "emotion": "erzaehlend",
+   "text": "Dann jeder Topf. Jede Flasche. Jeder Eimer, den du findest."
+  },
+  {
+   "nr": 32,
+   "typ": "objekt",
+   "kapitel": 5,
+   "start": 117.906,
+   "dauer": 2.558,
+   "emotion": "erklaerend",
+   "text": "Alles, was Wasser halten kann, wird *gefüllt*."
+  },
+  {
+   "nr": 33,
+   "typ": "bad",
+   "kapitel": 5,
+   "start": 120.464,
+   "dauer": 4.118,
+   "emotion": "froh",
+   "text": "Die Badewanne fasst über hundert Liter. Das kann über Leben und Tod *entscheiden*."
+  },
+  {
+   "nr": 34,
+   "typ": "wohnung",
+   "kapitel": 6,
+   "start": 124.582,
+   "dauer": 2.006,
+   "emotion": "erzaehlend",
+   "text": "Danach machst du eine Bestandsaufnahme."
+  },
+  {
+   "nr": 35,
+   "typ": "objekt",
+   "kapitel": 6,
+   "start": 126.588,
+   "dauer": 5.606,
+   "emotion": "erklaerend",
+   "text": "Essen für ungefähr sechs Tage. Eine Taschenlampe. Eine Powerbank. Vier Kerzen."
+  },
+  {
+   "nr": 36,
+   "typ": "gesicht",
+   "kapitel": 6,
+   "start": 132.194,
+   "dauer": 2.486,
+   "emotion": "ernst",
+   "text": "Nicht viel. Aber mehr als die meisten."
+  },
+  {
+   "nr": 37,
+   "typ": "wohnung",
+   "kapitel": 6,
+   "start": 134.68,
+   "dauer": 6.278,
+   "emotion": "erzaehlend",
+   "text": "Und du machst *alles* aus. Fernseher. Musik. Sogar den Kühlschrank hörst du jetzt brummen."
+  },
+  {
+   "nr": 38,
+   "typ": "treppenhaus",
+   "kapitel": 7,
+   "start": 140.958,
+   "dauer": 3.0,
+   "emotion": "erzaehlend",
+   "text": "Am Nachmittag: *Klopfen*. Leise. Dreimal."
+  },
+  {
+   "nr": 39,
+   "typ": "gesicht",
+   "kapitel": 7,
+   "start": 143.958,
+   "dauer": 1.382,
+   "emotion": "spannend",
+   "text": "Du hältst den Atem an."
+  },
+  {
+   "nr": 40,
+   "typ": "treppenhaus",
+   "kapitel": 7,
+   "start": 145.34,
+   "dauer": 4.142,
+   "emotion": "erzaehlend",
+   "text": "Durch den Spion siehst du einen alten Mann. Er hält einen Finger vor den Mund."
+  },
+  {
+   "nr": 41,
+   "typ": "gesicht",
+   "kapitel": 7,
+   "start": 149.482,
+   "dauer": 3.926,
+   "emotion": "ernst",
+   "text": "„Ich bin Walter. Dreißig Jahre Hausmeister hier. Lass mich rein, Junge.“"
+  },
+  {
+   "nr": 42,
+   "typ": "wohnung",
+   "kapitel": 7,
+   "start": 153.408,
+   "dauer": 2.558,
+   "emotion": "erzaehlend",
+   "text": "Walter kennt dieses Haus *besser* als jeder andere."
+  },
+  {
+   "nr": 43,
+   "typ": "gesicht",
+   "kapitel": 7,
+   "start": 155.966,
+   "dauer": 5.798,
+   "emotion": "ernst",
+   "text": "„Hast du Wasser gesammelt? Gut. Heute Abend fällt der Strom aus. Die Notstromaggregate halten nicht lange.“"
+  },
+  {
+   "nr": 44,
+   "typ": "gesicht",
+   "kapitel": 7,
+   "start": 161.764,
+   "dauer": 3.95,
+   "emotion": "wuetend",
+   "text": "„Und benutz nie den Aufzug. Wenn der stecken bleibt, bist du in einer *Kiste*.“"
+  },
+  {
+   "nr": 45,
+   "typ": "hochhaus",
+   "kapitel": 7,
+   "start": 165.714,
+   "dauer": 4.358,
+   "emotion": "erzaehlend",
+   "text": "Ein Aufzug ohne Strom ist eine Falle. Mit offenen Türen in jeder Etage."
+  },
+  {
+   "nr": 46,
+   "typ": "skyline",
+   "kapitel": 8,
+   "start": 170.072,
+   "dauer": 3.086,
+   "emotion": "erzaehlend",
+   "text": "Am Abend sitzt ihr am Fenster und seht zu, wie die Stadt *stirbt*."
+  },
+  {
+   "nr": 47,
+   "typ": "wohnung",
+   "kapitel": 8,
+   "start": 173.158,
+   "dauer": 3.518,
+   "emotion": "erzaehlend",
+   "text": "Überall Rauch. Sirenen, die eine nach der anderen verstummen."
+  },
+  {
+   "nr": 48,
+   "typ": "skyline",
+   "kapitel": 8,
+   "start": 176.676,
+   "dauer": 3.422,
+   "emotion": "erzaehlend",
+   "text": "Dann gehen die ersten Lichter aus. Ganze Viertel werden *schwarz*."
+  },
+  {
+   "nr": 49,
+   "typ": "gesicht",
+   "kapitel": 8,
+   "start": 180.098,
+   "dauer": 4.022,
+   "emotion": "ernst",
+   "text": "„Siehst du die Fenster, die noch leuchten? Die sieht man kilometerweit.“"
+  },
+  {
+   "nr": 50,
+   "typ": "skyline",
+   "kapitel": 8,
+   "start": 184.12,
+   "dauer": 1.862,
+   "emotion": "erzaehlend",
+   "text": "Und nicht nur Menschen sehen sie."
+  },
+  {
+   "nr": 51,
+   "typ": "objekt",
+   "kapitel": 8,
+   "start": 185.982,
+   "dauer": 3.998,
+   "emotion": "erklaerend",
+   "text": "Zweite Regel: Licht verrät dich. Nachts bleibt es *dunkel*."
+  },
+  {
+   "nr": 52,
+   "typ": "wohnung",
+   "kapitel": 9,
+   "start": 189.98,
+   "dauer": 3.086,
+   "emotion": "erzaehlend",
+   "text": "Um zweiundzwanzig Uhr dreizehn passiert es."
+  },
+  {
+   "nr": 53,
+   "typ": "wohnung",
+   "kapitel": 9,
+   "start": 193.066,
+   "dauer": 2.078,
+   "emotion": "spannend",
+   "text": "*Klack.* Der Strom ist weg."
+  },
+  {
+   "nr": 54,
+   "typ": "bad",
+   "kapitel": 9,
+   "start": 195.144,
+   "dauer": 5.846,
+   "emotion": "erzaehlend",
+   "text": "Du rennst ins Bad und drehst den Hahn auf. Ein Gurgeln. Ein paar Tropfen. Dann *nichts*."
+  },
+  {
+   "nr": 55,
+   "typ": "hochhaus",
+   "kapitel": 9,
+   "start": 200.99,
+   "dauer": 5.078,
+   "emotion": "erzaehlend",
+   "text": "Die Pumpen stehen still. Und das Wasser im 24. Stock ist *weg*."
+  },
+  {
+   "nr": 56,
+   "typ": "gesicht",
+   "kapitel": 9,
+   "start": 206.068,
+   "dauer": 2.99,
+   "emotion": "froh",
+   "text": "Walter grinst. „Gut, dass du die Wanne gefüllt hast.“"
+  },
+  {
+   "nr": 57,
+   "typ": "wohnung",
+   "kapitel": 10,
+   "start": 209.058,
+   "dauer": 2.846,
+   "emotion": "erzaehlend",
+   "text": "Kurz vor Mitternacht. Ihr wollt gerade schlafen."
+  },
+  {
+   "nr": 58,
+   "typ": "treppenhaus",
+   "kapitel": 10,
+   "start": 211.904,
+   "dauer": 3.062,
+   "emotion": "erzaehlend",
+   "text": "Da hört ihr Schritte im Treppenhaus. *Schnelle* Schritte."
+  },
+  {
+   "nr": 59,
+   "typ": "gesicht",
+   "kapitel": 10,
+   "start": 214.966,
+   "dauer": 2.654,
+   "emotion": "spannend",
+   "text": "Sie kommen näher. Etage für Etage."
+  },
+  {
+   "nr": 60,
+   "typ": "hochhaus",
+   "kapitel": 10,
+   "start": 217.62,
+   "dauer": 3.446,
+   "emotion": "erzaehlend",
+   "text": "Zweiundzwanzig. Dreiundzwanzig. *Vierundzwanzig*."
+  },
+  {
+   "nr": 61,
+   "typ": "treppenhaus",
+   "kapitel": 10,
+   "start": 221.066,
+   "dauer": 2.414,
+   "emotion": "erzaehlend",
+   "text": "Dann: Jemand hämmert gegen deine Tür."
+  },
+  {
+   "nr": 62,
+   "typ": "gesicht",
+   "kapitel": 10,
+   "start": 223.48,
+   "dauer": 2.702,
+   "emotion": "spannend",
+   "text": "Und du weißt nicht, ob da draußen noch ein *Mensch* steht."
+  },
+  {
+   "nr": 63,
+   "typ": "titel",
+   "kapitel": 10,
+   "start": 226.182,
+   "dauer": 3.5,
+   "emotion": null,
+   "text": ""
+  }
+ ]
+}

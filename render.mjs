@@ -24,6 +24,22 @@ const FPS = Number(opt("fps", vorschau ? 15 : ep.fps || 30));
 const W = 1080, H = 1920;
 
 const dauerVon = f => Number(execFileSync("ffprobe", ["-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", f]).toString().trim());
+// Echte Wortzeiten (audio/folge-XX/NNN.json, z. B. von `python -m ton.folge`) den Drehbuch-Wörtern zuordnen
+const norm = w => w.toLowerCase().replace(/[^a-z0-9äöüß]/g, "");
+function wortzeiten(roh, datei) {
+  if (!fs.existsSync(datei)) return null;
+  const wz = JSON.parse(fs.readFileSync(datei, "utf8"));
+  const out = []; let j = 0;
+  for (const w of roh) {
+    const ziel = norm(w);
+    if (!ziel) { out.push(null); continue; }
+    let acc = "", a = null, b = null;
+    while (j < wz.length && acc.length < ziel.length) { if (a === null) a = wz[j].start; acc += norm(wz[j].w); b = wz[j].ende; j++; }
+    if (a === null || acc !== ziel) return null;
+    out.push([a, b]);
+  }
+  return out.map((z, k) => z || [out[k - 1]?.[1] ?? 0, out[k - 1]?.[1] ?? 0]);
+}
 
 // ---------- Timing ----------
 let start = 0;
@@ -39,10 +55,12 @@ const szenen = ep.szenen.map((s, i) => {
   const summe = gew.reduce((a, b) => a + b, 0) || 1;
   const t0 = audio ? 0.05 : 0.15, t1 = audio ? sprechDauer - 0.05 : Math.min(dauer - 0.3, t0 + sprechDauer);
   let acc = t0;
+  const echt = audio ? wortzeiten(roh, audio.replace(/\.(mp3|wav)$/, ".json")) : null;
   const woerter = roh.map((w, k) => {
     const len = (gew[k] / summe) * (t1 - t0);
     const key = /^\*.*\*[.,!?…:;]?$/.test(w);
-    const o = { w: w.replace(/\*/g, ""), start: acc, ende: acc + len, key };
+    const o = echt ? { w: w.replace(/\*/g, ""), start: echt[k][0], ende: echt[k][1], key }
+                   : { w: w.replace(/\*/g, ""), start: acc, ende: acc + len, key };
     acc += len; return o;
   });
   const o = { ...s, start, dauer, woerter, _audio: audio || null };
@@ -53,6 +71,51 @@ const gesamt = start;
 const von = Number(opt("von", 0)), bis = Math.min(Number(opt("bis", gesamt)), gesamt);
 const frames = Math.round((bis - von) * FPS);
 console.log(`Folge ${id}: ${szenen.length} Szenen, ${gesamt.toFixed(1)} s, rendere ${frames} Frames @ ${FPS} fps`);
+
+// ---------- Teile für TikTok/Insta: --teile [--max 59] ----------
+// Schneidet nur an Kapitelgrenzen (== … ==), so wenige Teile wie möglich, alle etwa gleich lang.
+// Ist ein Kapitel allein zu lang, wird es an Einstellungsgrenzen geteilt.
+const MAX = Number(opt("max", 59));
+const mmss = t => (t = Math.round(t), `${Math.floor(t / 60)}:${String(t % 60).padStart(2, "0")}`);
+function teilePlan() {
+  const grenzen = [...new Set([0, ...ep.kapitel.map(k => k.ab), szenen.length])].filter(a => a <= szenen.length).sort((a, b) => a - b);
+  const einheiten = [];
+  for (let k = 0; k < grenzen.length - 1; k++) {
+    const [a, b] = [grenzen[k], grenzen[k + 1]];
+    if (a === b) continue;
+    const d = szenen[b - 1].start + szenen[b - 1].dauer - szenen[a].start;
+    if (d <= MAX) einheiten.push([a, b]); else for (let i = a; i < b; i++) einheiten.push([i, i + 1]);
+  }
+  const dauer = (i, j) => szenen[einheiten[j - 1][1] - 1].start + szenen[einheiten[j - 1][1] - 1].dauer - szenen[einheiten[i][0]].start;
+  const n = einheiten.length;
+  for (let k = 1; k <= n; k++) {
+    // f[i] = kleinste mögliche Länge des längsten Teils für die ersten i Einheiten in genau k Teilen
+    let f = Array(n + 1).fill(Infinity), von = [];
+    f[0] = 0;
+    for (let t = 1; t <= k; t++) {
+      const g = Array(n + 1).fill(Infinity), w = Array(n + 1);
+      for (let j = 1; j <= n; j++) for (let i = 0; i < j; i++) {
+        const d = dauer(i, j);
+        if (d <= MAX && Math.max(f[i], d) < g[j]) { g[j] = Math.max(f[i], d); w[j] = i; }
+      }
+      f = g; von.push(w);
+    }
+    if (f[n] === Infinity) continue;
+    const teile = [];
+    for (let j = n, t = k - 1; t >= 0; t--) { const i = von[t][j]; teile.unshift([einheiten[i][0], einheiten[j - 1][1]]); j = i; }
+    return teile.map(([a, b]) => ({
+      a, b, start: szenen[a].start, ende: szenen[b - 1].start + szenen[b - 1].dauer,
+      kapitel: ep.kapitel.filter(c => c.ab >= a && c.ab < b).map(c => c.name),
+    }));
+  }
+  throw new Error(`Eine einzelne Einstellung ist länger als ${MAX} s`);
+}
+const teile = flag("teile") || flag("teile-plan") ? teilePlan() : null;
+const teileListe = teile && [
+  `24. Stock – ${ep.titel}`, "",
+  ...teile.map((t, k) => `Teil ${k + 1}/${teile.length}  ${mmss(t.start)}–${mmss(t.ende)}  (${(t.ende - t.start).toFixed(0)} s)  ${t.kapitel.join(", ")}`),
+].join("\n");
+if (flag("teile-plan")) { console.log(teileListe); process.exit(0); }
 
 // ---------- Nur Standbilder (schnelle Kontrolle): --bilder ----------
 if (flag("bilder")) {
@@ -140,3 +203,18 @@ await new Promise(r => ff.on("close", r));
 await browser.close();
 fs.rmSync(tmp, { recursive: true, force: true });
 console.log(`Fertig: ${path.relative(ROOT, ziel)}  (${((Date.now() - t0) / 1000).toFixed(0)} s)`);
+
+// ---------- Teile ausschneiden (Bild und Ton unverändert, nur kurzes Ein-/Ausblenden des Tons gegen Knackser) ----------
+if (teile) {
+  if (von !== 0 || bis !== gesamt) { console.log("Teile nur beim vollen Video (ohne --von/--bis)."); process.exit(0); }
+  for (const [k, t] of teile.entries()) {
+    const d = t.ende - t.start;
+    const out = ziel.replace(/\.mp4$/, `-teil-${k + 1}.mp4`);
+    execFileSync("ffmpeg", ["-y", "-v", "error", "-ss", t.start.toFixed(3), "-i", ziel, "-t", d.toFixed(3),
+      "-c:v", "libx264", "-preset", "veryfast", "-crf", vorschau ? "28" : "19", "-pix_fmt", "yuv420p",
+      "-af", `afade=t=in:d=0.15,afade=t=out:st=${Math.max(0, d - 0.4).toFixed(3)}:d=0.4`,
+      "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", out]);
+    console.log(`  Teil ${k + 1}/${teile.length}: ${path.relative(ROOT, out)}  (${d.toFixed(1)} s)`);
+  }
+  fs.writeFileSync(ziel.replace(/\.mp4$/, "-teile.txt"), teileListe + "\n");
+}
