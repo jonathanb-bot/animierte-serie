@@ -47,6 +47,47 @@ if (KEY_YT) {
 console.log("Verbundene Konten:", liste.map(a => `${a.platform}:${a.username || a.displayName}`).join(", ") || "keine");
 if (args.includes("--konten")) process.exit(0);
 
+// --abgleich [--echt]: geplante Posts bei Zernio mit plan.json abgleichen (Zernio ist die Wahrheit).
+// Doppelte oder falsch terminierte Posts werden gelöscht (nur mit --echt), status.json wird neu aufgebaut.
+if (args.includes("--abgleich")) {
+  const echt = args.includes("--echt");
+  const plat = Object.fromEntries(plan.posts.map(p => [p.id, p]));
+  const seen = {};
+  for (const [name, key] of [["haupt", KEY], ["yt", KEY_YT]]) {
+    if (!key) continue;
+    let page = 1, alle = [];
+    while (true) {
+      const r = await api("GET", `/posts?status=scheduled&limit=100&page=${page}`, null, key);
+      if (!r.ok) { console.log(`Liste ${name}: HTTP ${r.status} ${JSON.stringify(r.json).slice(0, 300)}`); break; }
+      const posts = r.json.posts || r.json.data || [];
+      alle = alle.concat(posts);
+      if (posts.length < 100) break; page++;
+    }
+    console.log(`Konto ${name}: ${alle.length} geplante Posts bei Zernio`);
+    for (const z of alle) {
+      const pid = z.metadata?.postId;
+      const zeit = String(z.scheduledFor || "");
+      const soll = plat[pid];
+      const berlin = zeit ? new Date(zeit).toLocaleString("sv-SE", { timeZone: "Europe/Berlin" }).replace(" ", "T").slice(0, 16) : "";
+      const passt = soll && soll.zeit.slice(0, 16) === berlin && !seen[pid];
+      if (passt) { seen[pid] = true; status[pid] = { ok: true, zeit: soll.zeit, zernioId: z._id, am: new Date().toISOString() }; console.log(`= ${pid} ${berlin}`); }
+      else {
+        console.log(`${echt ? "🗑" : "(würde löschen)"} ${pid || "?"} ${berlin} ${soll ? (seen[pid] ? "doppelt" : "falsche Zeit, soll " + soll.zeit) : "nicht im Plan"}`);
+        if (echt) await api("DELETE", `/posts/${z._id}`, null, key);
+      }
+    }
+  }
+  if (echt) {
+    // Einträge ohne gültigen geplanten Post bei Zernio: veröffentlichte behalten, Rest neu einplanen lassen
+    for (const p of plan.posts) if (!seen[p.id] && status[p.id] && !status[p.id].ergebnis?.status?.startsWith("pub")) {
+      const bald = new Date(Date.now() + 10 * 60000).toLocaleString("sv-SE", { timeZone: "Europe/Berlin" }).replace(" ", "T").slice(0, 16);
+      if (p.zeit.slice(0, 16) > bald) delete status[p.id];
+    }
+    speichern();
+  }
+  process.exit(0);
+}
+
 // --status: bei Zernio nachfragen, was aus den fälligen Posts geworden ist
 if (args.includes("--status")) {
   const jetzt = new Date(new Date().toLocaleString("en-US", { timeZone: "Europe/Berlin" }));

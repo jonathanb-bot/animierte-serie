@@ -16,6 +16,10 @@ on:
         description: "Nur Status abfragen (true/false)"
         required: false
         default: "false"
+      abgleich:
+        description: "Abgleich mit Zernio: leer, 'test' oder 'echt'"
+        required: false
+        default: ""
 
 permissions:
   contents: write
@@ -29,6 +33,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
       - uses: actions/setup-node@v4
         with:
           node-version: 22
@@ -39,7 +45,11 @@ jobs:
           ZERNIO_API_KEY: ${{ secrets.ZERNIO_API_KEY }}
           ZERNIO_API_KEY_YT: ${{ secrets.ZERNIO_API_KEY_YT }}
         run: |
-          if [ "${{ github.event.inputs.status }}" = "true" ]; then
+          if [ "${{ github.event.inputs.abgleich }}" = "test" ]; then
+            node posten/zernio.mjs --abgleich | tee posten/letzter-abgleich.txt
+          elif [ "${{ github.event.inputs.abgleich }}" = "echt" ]; then
+            node posten/zernio.mjs --abgleich --echt | tee posten/letzter-abgleich.txt && node posten/zernio.mjs | tee posten/letzter-lauf.txt
+          elif [ "${{ github.event.inputs.status }}" = "true" ]; then
             node posten/zernio.mjs --status | tee posten/letzter-status.txt
           elif [ -n "${{ github.event.inputs.nur }}" ]; then
             node posten/zernio.mjs --nur "${{ github.event.inputs.nur }}" | tee posten/letzter-lauf.txt
