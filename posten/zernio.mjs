@@ -149,9 +149,10 @@ for (const post of plan.posts) {
   // Uhrzeit geändert und noch nicht veröffentlicht? Alten Termin bei Zernio löschen und neu einplanen.
   { const st = status[post.id];
     const bald = new Date(Date.now() + 10 * 60000).toLocaleString("sv-SE", { timeZone: "Europe/Berlin" }).replace(" ", "T").slice(0, 16);
-    if (st?.ok && st.zernioId && st.zeit !== post.zeit && st.zeit.slice(0, 16) > bald) {
+    const neueFassung = post.fassung && (st?.fassung || 1) !== post.fassung; // Video neu gerendert → neu einplanen
+    if (st?.ok && st.zernioId && (st.zeit !== post.zeit || neueFassung) && st.zeit.slice(0, 16) > bald) {
       const d = await api("DELETE", `/posts/${st.zernioId}`, null, keyFuer(post.platform));
-      console.log(d.ok ? `↻ ${post.id}: ${st.zeit} → ${post.zeit}` : `✗ ${post.id}: alter Termin nicht löschbar (HTTP ${d.status})`);
+      console.log(d.ok ? `↻ ${post.id}: ${st.zeit} → ${post.zeit}${neueFassung ? " (neue Fassung " + post.fassung + ")" : ""}` : `✗ ${post.id}: alter Termin nicht löschbar (HTTP ${d.status})`);
       if (d.ok) delete status[post.id]; else { fehler++; continue; }
       speichern();
     } }
@@ -186,7 +187,7 @@ for (const post of plan.posts) {
   if (post.platform === "youtube") body.tags = post.tags || ["zombie", "animation", "story", "24 stock", "shorts"];
   const r = await api("POST", "/posts", body, keyFuer(post.platform));
   const id = r.json?.post?._id || r.json?._id || r.json?.id || null;
-  status[post.id] = { ok: r.ok, zeit: post.zeit, zernioId: id, http: r.status, antwort: r.ok ? undefined : JSON.stringify(r.json).slice(0, 600), am: new Date().toISOString() };
+  status[post.id] = { ok: r.ok, zeit: post.zeit, fassung: post.fassung, zernioId: id, http: r.status, antwort: r.ok ? undefined : JSON.stringify(r.json).slice(0, 600), am: new Date().toISOString() };
   speichern();
   if (r.ok) { neu++; console.log(`✓ ${post.id} eingeplant für ${post.zeit} (${id})`); }
   else { fehler++; console.log(`✗ ${post.id}: HTTP ${r.status} ${JSON.stringify(r.json).slice(0, 400)}`); }
