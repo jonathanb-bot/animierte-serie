@@ -1,6 +1,10 @@
 {
  "serie": "24. Stock",
  "regel": "ok = Tonspur da, so lang wie das Bild, Stimme hörbar (> -24 LUFS)",
+ "reihenfolge": [
+  "24-stock",
+  "der-alien"
+ ],
  "folgen": {
   "01": {
    "titel": "Der erste Tag",
@@ -319,6 +323,446 @@
    "bild_s": 196.47,
    "ton_s": 196.46,
    "lufs": -14.9
+  },
+  "der-alien/folge-01-teil-1.mp4": {
+   "ok": true,
+   "bild_s": 41.83,
+   "ton_s": 41.82,
+   "lufs": -14.7
+  },
+  "der-alien/folge-01-teil-2.mp4": {
+   "ok": true,
+   "bild_s": 40.63,
+   "ton_s": 40.63,
+   "lufs": -14.7
+  },
+  "der-alien/folge-01-teil-3.mp4": {
+   "ok": true,
+   "bild_s": 38.87,
+   "ton_s": 38.85,
+   "lufs": -14.8
+  },
+  "der-alien/folge-01-teil-4.mp4": {
+   "ok": true,
+   "bild_s": 35.7,
+   "ton_s": 35.68,
+   "lufs": -15.1
+  },
+  "der-alien/folge-01-teil-5.mp4": {
+   "ok": true,
+   "bild_s": 44.93,
+   "ton_s": 44.92,
+   "lufs": -15.0
+  },
+  "der-alien/folge-02-teil-1.mp4": {
+   "ok": true,
+   "bild_s": 38.0,
+   "ton_s": 38.0,
+   "lufs": -15.1
+  },
+  "der-alien/folge-02-teil-2.mp4": {
+   "ok": true,
+   "bild_s": 44.23,
+   "ton_s": 44.23,
+   "lufs": -15.3
+  },
+  "der-alien/folge-02-teil-3.mp4": {
+   "ok": true,
+   "bild_s": 41.53,
+   "ton_s": 41.51,
+   "lufs": -15.1
+  },
+  "der-alien/folge-02-teil-4.mp4": {
+   "ok": true,
+   "bild_s": 44.83,
+   "ton_s": 44.8,
+   "lufs": -15.2
+  },
+  "der-alien/folge-02-teil-5.mp4": {
+   "ok": true,
+   "bild_s": 44.8,
+   "ton_s": 44.78,
+   "lufs": -15.1
+  },
+  "der-alien/folge-02-teil-6.mp4": {
+   "ok": true,
+   "bild_s": 28.67,
+   "ton_s": 28.67,
+   "lufs": -14.4
+  },
+  "der-alien/folge-03-teil-1.mp4": {
+   "ok": true,
+   "bild_s": 55.5,
+   "ton_s": 55.49,
+   "lufs": -14.8
+  },
+  "der-alien/folge-03-teil-2.mp4": {
+   "ok": true,
+   "bild_s": 42.1,
+   "ton_s": 42.09,
+   "lufs": -14.9
+  },
+  "der-alien/folge-03-teil-3.mp4": {
+   "ok": true,
+   "bild_s": 39.17,
+   "ton_s": 39.16,
+   "lufs": -15.3
+  },
+  "der-alien/folge-03-teil-4.mp4": {
+   "ok": true,
+   "bild_s": 38.73,
+   "ton_s": 38.71,
+   "lufs": -15.2
+  },
+  "der-alien/folge-03-teil-5.mp4": {
+   "ok": true,
+   "bild_s": 47.6,
+   "ton_s": 47.63,
+   "lufs": -15.0
+  },
+  "der-alien/folge-04-teil-1.mp4": {
+   "ok": true,
+   "bild_s": 57.83,
+   "ton_s": 57.83,
+   "lufs": -14.9
+  },
+  "der-alien/folge-04-teil-2.mp4": {
+   "ok": true,
+   "bild_s": 58.67,
+   "ton_s": 58.65,
+   "lufs": -14.8
+  },
+  "der-alien/folge-04-teil-3.mp4": {
+   "ok": true,
+   "bild_s": 58.03,
+   "ton_s": 58.03,
+   "lufs": -15.2
+  },
+  "der-alien/folge-04-teil-4.mp4": {
+   "ok": true,
+   "bild_s": 41.13,
+   "ton_s": 41.11,
+   "lufs": -15.1
+  },
+  "der-alien/folge-05-teil-1.mp4": {
+   "ok": true,
+   "bild_s": 55.2,
+   "ton_s": 55.18,
+   "lufs": -15.5
+  },
+  "der-alien/folge-05-teil-2.mp4": {
+   "ok": true,
+   "bild_s": 57.07,
+   "ton_s": 57.07,
+   "lufs": -15.2
+  },
+  "der-alien/folge-05-teil-3.mp4": {
+   "ok": true,
+   "bild_s": 56.9,
+   "ton_s": 56.9,
+   "lufs": -15.1
+  },
+  "der-alien/folge-05-teil-4.mp4": {
+   "ok": true,
+   "bild_s": 46.1,
+   "ton_s": 46.09,
+   "lufs": -15.0
+  },
+  "der-alien/folge-06-teil-1.mp4": {
+   "ok": true,
+   "bild_s": 56.63,
+   "ton_s": 56.61,
+   "lufs": -14.9
+  },
+  "der-alien/folge-06-teil-2.mp4": {
+   "ok": true,
+   "bild_s": 40.03,
+   "ton_s": 40.03,
+   "lufs": -14.8
+  },
+  "der-alien/folge-06-teil-3.mp4": {
+   "ok": true,
+   "bild_s": 51.07,
+   "ton_s": 51.04,
+   "lufs": -14.6
+  },
+  "der-alien/folge-06-teil-4.mp4": {
+   "ok": true,
+   "bild_s": 32.7,
+   "ton_s": 32.67,
+   "lufs": -15.2
+  },
+  "der-alien/folge-06-teil-5.mp4": {
+   "ok": true,
+   "bild_s": 42.33,
+   "ton_s": 42.31,
+   "lufs": -15.0
+  },
+  "der-alien/folge-07-teil-1.mp4": {
+   "ok": true,
+   "bild_s": 39.87,
+   "ton_s": 39.85,
+   "lufs": -14.8
+  },
+  "der-alien/folge-07-teil-2.mp4": {
+   "ok": true,
+   "bild_s": 49.2,
+   "ton_s": 49.17,
+   "lufs": -14.5
+  },
+  "der-alien/folge-07-teil-3.mp4": {
+   "ok": true,
+   "bild_s": 45.6,
+   "ton_s": 45.57,
+   "lufs": -14.3
+  },
+  "der-alien/folge-07-teil-4.mp4": {
+   "ok": true,
+   "bild_s": 58.47,
+   "ton_s": 58.43,
+   "lufs": -14.7
+  },
+  "der-alien/folge-07-teil-5.mp4": {
+   "ok": true,
+   "bild_s": 40.37,
+   "ton_s": 40.4,
+   "lufs": -14.7
+  },
+  "der-alien/folge-08-teil-1.mp4": {
+   "ok": true,
+   "bild_s": 58.0,
+   "ton_s": 58.0,
+   "lufs": -15.0
+  },
+  "der-alien/folge-08-teil-2.mp4": {
+   "ok": true,
+   "bild_s": 46.1,
+   "ton_s": 46.08,
+   "lufs": -14.9
+  },
+  "der-alien/folge-08-teil-3.mp4": {
+   "ok": true,
+   "bild_s": 54.23,
+   "ton_s": 54.21,
+   "lufs": -14.9
+  },
+  "der-alien/folge-08-teil-4.mp4": {
+   "ok": true,
+   "bild_s": 58.67,
+   "ton_s": 58.68,
+   "lufs": -15.1
+  },
+  "der-alien/folge-09-teil-1.mp4": {
+   "ok": true,
+   "bild_s": 50.33,
+   "ton_s": 50.32,
+   "lufs": -15.3
+  },
+  "der-alien/folge-09-teil-2.mp4": {
+   "ok": true,
+   "bild_s": 44.47,
+   "ton_s": 44.44,
+   "lufs": -14.8
+  },
+  "der-alien/folge-09-teil-3.mp4": {
+   "ok": true,
+   "bild_s": 35.6,
+   "ton_s": 35.59,
+   "lufs": -14.9
+  },
+  "der-alien/folge-09-teil-4.mp4": {
+   "ok": true,
+   "bild_s": 36.43,
+   "ton_s": 36.4,
+   "lufs": -15.1
+  },
+  "der-alien/folge-09-teil-5.mp4": {
+   "ok": true,
+   "bild_s": 47.37,
+   "ton_s": 47.41,
+   "lufs": -14.9
+  },
+  "der-alien/folge-10-teil-1.mp4": {
+   "ok": true,
+   "bild_s": 47.23,
+   "ton_s": 47.22,
+   "lufs": -15.1
+  },
+  "der-alien/folge-10-teil-2.mp4": {
+   "ok": true,
+   "bild_s": 45.4,
+   "ton_s": 45.38,
+   "lufs": -14.9
+  },
+  "der-alien/folge-10-teil-3.mp4": {
+   "ok": true,
+   "bild_s": 51.7,
+   "ton_s": 51.68,
+   "lufs": -15.2
+  },
+  "der-alien/folge-10-teil-4.mp4": {
+   "ok": true,
+   "bild_s": 42.27,
+   "ton_s": 42.26,
+   "lufs": -15.1
+  },
+  "der-alien/folge-10-teil-5.mp4": {
+   "ok": true,
+   "bild_s": 34.77,
+   "ton_s": 34.79,
+   "lufs": -15.4
+  },
+  "der-alien-folgen/folge-01.mp4": {
+   "ok": true,
+   "bild_s": 201.9,
+   "ton_s": 201.9,
+   "lufs": -14.8
+  },
+  "der-alien-folgen/folge-02.mp4": {
+   "ok": true,
+   "bild_s": 241.97,
+   "ton_s": 241.99,
+   "lufs": -15.1
+  },
+  "der-alien-folgen/folge-03.mp4": {
+   "ok": true,
+   "bild_s": 223.07,
+   "ton_s": 223.08,
+   "lufs": -15.0
+  },
+  "der-alien-folgen/folge-04.mp4": {
+   "ok": true,
+   "bild_s": 215.63,
+   "ton_s": 215.62,
+   "lufs": -15.0
+  },
+  "der-alien-folgen/folge-05.mp4": {
+   "ok": true,
+   "bild_s": 215.23,
+   "ton_s": 215.23,
+   "lufs": -15.2
+  },
+  "der-alien-folgen/folge-06.mp4": {
+   "ok": true,
+   "bild_s": 222.67,
+   "ton_s": 222.66,
+   "lufs": -14.8
+  },
+  "der-alien-folgen/folge-07.mp4": {
+   "ok": true,
+   "bild_s": 233.4,
+   "ton_s": 233.43,
+   "lufs": -14.6
+  },
+  "der-alien-folgen/folge-08.mp4": {
+   "ok": true,
+   "bild_s": 216.93,
+   "ton_s": 216.96,
+   "lufs": -15.0
+  },
+  "der-alien-folgen/folge-09.mp4": {
+   "ok": true,
+   "bild_s": 214.13,
+   "ton_s": 214.17,
+   "lufs": -15.0
+  },
+  "der-alien-folgen/folge-10.mp4": {
+   "ok": true,
+   "bild_s": 221.3,
+   "ton_s": 221.33,
+   "lufs": -15.1
+  }
+ },
+ "serien": {
+  "24-stock": {
+   "name": "24. Stock",
+   "folgen": {
+    "01": {
+     "titel": "Der erste Tag",
+     "teile": 5
+    },
+    "02": {
+     "titel": "Kein Druck",
+     "teile": 5
+    },
+    "03": {
+     "titel": "Das Treppenhaus",
+     "teile": 4
+    },
+    "04": {
+     "titel": "Licht aus",
+     "teile": 4
+    },
+    "05": {
+     "titel": "Wasserdiebe",
+     "teile": 4
+    },
+    "06": {
+     "titel": "Auf dem Dach",
+     "teile": 5
+    },
+    "07": {
+     "titel": "Fieber",
+     "teile": 4
+    },
+    "08": {
+     "titel": "Die Apotheke",
+     "teile": 4
+    },
+    "09": {
+     "titel": "Die Horde",
+     "teile": 4
+    },
+    "10": {
+     "titel": "Das Dach",
+     "teile": 4
+    }
+   }
+  },
+  "der-alien": {
+   "name": "Der Alien",
+   "folgen": {
+    "01": {
+     "titel": "Im Badezimmer",
+     "teile": 5
+    },
+    "02": {
+     "titel": "Nur bis morgen",
+     "teile": 6
+    },
+    "03": {
+     "titel": "Deine Nachbarin",
+     "teile": 5
+    },
+    "04": {
+     "titel": "Das Versprechen",
+     "teile": 4
+    },
+    "05": {
+     "titel": "Was Nox gestohlen hat",
+     "teile": 4
+    },
+    "06": {
+     "titel": "Raus aus dem Haus",
+     "teile": 5
+    },
+    "07": {
+     "titel": "Das falsche Gesicht",
+     "teile": 5
+    },
+    "08": {
+     "titel": "Du oder er",
+     "teile": 4
+    },
+    "09": {
+     "titel": "Auf dem Dach",
+     "teile": 5
+    },
+    "10": {
+     "titel": "Wieder zu Hause",
+     "teile": 5
+    }
+   }
   }
  }
 }

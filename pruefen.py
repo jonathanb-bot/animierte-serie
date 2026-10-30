@@ -29,9 +29,12 @@ def pruefe(f):
     elif l < -24: grund = "zu leise, Stimme fehlt vermutlich"
     return {"ok": grund is None, "bild_s": round(v, 2), "ton_s": round(a, 2), "lufs": l, **({"grund": grund} if grund else {})}
 
+ALIEN = {1: "Im Badezimmer", 2: "Nur bis morgen", 3: "Deine Nachbarin", 4: "Das Versprechen", 5: "Was Nox gestohlen hat",
+         6: "Raus aus dem Haus", 7: "Das falsche Gesicht", 8: "Du oder er", 9: "Auf dem Dach", 10: "Wieder zu Hause"}
 ergebnis = {"serie": "24. Stock", "regel": "ok = Tonspur da, so lang wie das Bild, Stimme hörbar (> -24 LUFS)",
-            "folgen": {}, "dateien": {}}
-for f in sorted((ROOT / "24-stock").glob("*.mp4")) + sorted((ROOT / "24-stock-folgen").glob("*.mp4")):
+            "reihenfolge": ["24-stock", "der-alien"], "folgen": {}, "dateien": {}, "serien": {}}
+for f in sorted((ROOT / "24-stock").glob("*.mp4")) + sorted((ROOT / "24-stock-folgen").glob("*.mp4")) \
+       + sorted((ROOT / "der-alien").glob("*.mp4")) + sorted((ROOT / "der-alien-folgen").glob("*.mp4")):
     rel = f.relative_to(ROOT).as_posix()
     ergebnis["dateien"][rel] = pruefe(f)
     print(rel, ergebnis["dateien"][rel])
@@ -39,5 +42,11 @@ for n in TITEL:
     teile = sorted(int(m.group(1)) for p in (ROOT / "24-stock").glob(f"folge-{n:02d}-teil-*.mp4")
                    if (m := re.search(r"teil-(\d+)", p.name)))
     ergebnis["folgen"][f"{n:02d}"] = {"titel": TITEL[n], "teile": len(teile)}
+for ordner, name, titel in (("24-stock", "24. Stock", TITEL), ("der-alien", "Der Alien", ALIEN)):
+    fo = {}
+    for n in titel:
+        teile = sorted(int(m.group(1)) for p in (ROOT / ordner).glob(f"folge-{n:02d}-teil-*.mp4") if (m := re.search(r"teil-(\d+)", p.name)))
+        fo[f"{n:02d}"] = {"titel": titel[n], "teile": len(teile)}
+    ergebnis["serien"][ordner] = {"name": name, "folgen": fo}
 (ROOT / "geprueft.json").write_text(json.dumps(ergebnis, ensure_ascii=False, indent=1) + "\n")
 print("fertig:", sum(d["ok"] for d in ergebnis["dateien"].values()), "ok von", len(ergebnis["dateien"]))
