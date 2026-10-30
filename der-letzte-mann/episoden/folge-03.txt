@@ -1,4 +1,7 @@
 # Folge 3: Sie kennen deinen Namen
+@musik musik/folge-03.mp3
+@musik_lautstaerke 1
+@whoosh aus
 @serie Der letzte Mann
 @mund zitate
 @look 0
@@ -7,40 +10,40 @@
 @zeit tag
 @hud tag=1 zeit=11:45 handy=74/100% netz=2/4 konsole=nicht_verbunden
 // New-York-Platz am frühen Morgen, auf dem größten Bildschirm das grobe Webcam-Bild: „THE LAST MAN?“
-[newyork k4] Stell dir vor, dein Gesicht hängt auf dem größten Bildschirm von *New York*.
+[newyork zeit=morgen bild=webcam schirm="THE LAST MAN?"] Stell dir vor, dein Gesicht hängt auf dem größten Bildschirm von *New York*.
 // Handy: Kommentare scrollen, „Fake?“, „Wo ist das?“, „Wer ist er?“
-[handy] Darunter Tausende Kommentare. „Fake?“ „Wo ist das?“ „Wer ist er?“
+[handy bildschirm=post uhrzeit=11:45 akku=74 netz=2 ort=wohnung kommentare="Fake?|Wo ist das?|Wer ist er?"] Darunter Tausende Kommentare. „Fake?“ „Wo ist das?“ „Wer ist er?“
 // Nahaufnahme: Alex, geschmeichelt
 [gesicht du ort=wohnung froh] Wer ist er? *Du*. Und du siehst eigentlich gut aus.
 // Nahaufnahme: Lea, trocken
 [gesicht lea ort=wohnung neutral] „Du siehst aus wie ein Pixelhaufen.“
 // Nahaufnahme: Alex, besorgt
 [gesicht du ort=wohnung besorgt] Ein Pixelhaufen, den die ganze Welt *sucht*.
-[titel oben="Folge 3" gross="DER LETZTE MANN" unten="Sie kennen deinen Namen" dauer=1 hud=false]
+[titel oben="Folge 3" gross="DER LETZTE MANN" unten="Sie kennen deinen Namen" farbe=#14213d akzent=#e2b443 groesse=120 dauer=1 hud=false]
 
 == Was bisher geschah ==
 // Skyline
-[skyline hud=false] Um 8:13 Uhr sind alle Männer verschwunden. Nur du nicht.
+[skyline rauch=false hud=false] Um 8:13 Uhr sind alle Männer verschwunden. Nur du nicht.
 // Wohnung: Lea am Vorhang
-[wohnung du lea vorhang=schliesst hud=false] Lea, deine Nachbarin, versteckt dich.
+[wohnung du lea vorhang=zu licht=an hud=false] Lea, deine Nachbarin, versteckt dich.
 // Küche: Radio
-[kueche ton=funk_rauschen hud=false] Und jede Stunde rauscht kurz das Radio.
+[kueche uhr=11:45 ton=funk_rauschen hud=false] Und jede Stunde rauscht kurz das Radio.
 // Handy: Webcam-Post
-[handy hud=false] Doch eine Wetterkamera hat dich am Fenster fotografiert.
+[handy bildschirm=post uhrzeit=11:45 akku=74 netz=2 ort=wohnung hud=false] Doch eine Wetterkamera hat dich am Fenster fotografiert.
 
 == Kapitel 2: Unscharf ==
 @zeit tag
 @hud tag=1 zeit=12:30 handy=72/100% netz=3/4 konsole=nicht_verbunden
 // Handy: Das Bild ist stark vergrößert, nur Pixel
-[handy] Das Bild ist grob. Keiner erkennt dich.
+[handy bildschirm=post uhrzeit=12:30 akku=72 netz=3 ort=wohnung] Das Bild ist grob. Keiner erkennt dich.
 // Skyline: Hubschrauber kreisen über der Stadt
-[skyline heli] Über der Stadt kreisen Hubschrauber. Alle suchen den Pixelhaufen.
+[skyline rauch=false heli] Über der Stadt kreisen Hubschrauber. Alle suchen den Pixelhaufen.
 // Nahaufnahme: Lea
 [gesicht lea ort=wohnung neutral] Lea erkennt dich sofort. Sie kennt dich ja.
 // Infokarte: unscharfes Gesicht, daneben ein Häkchen bei „bekannt“
-[objekt gross="Echter Fakt"] Echter Fakt: Bekannte Gesichter erkennen wir sogar auf miesen Videos.
+[objekt objekte="gesicht_bekannt:Bekannt" farbe=#1e2f45] Bekannte Gesichter erkennen wir sogar auf miesen Videos.
 // Infokarte: dasselbe Gesicht, Fragezeichen bei „fremd“
-[objekt] Fremde kaum. Selbst erfahrene Polizisten nicht.
+[objekt objekte="gesicht_fremd:Fremd" farbe=#1e2f45] Fremde kaum. Selbst erfahrene Polizisten nicht.
 // Nahaufnahme: Lea, besorgt
 [gesicht lea ort=wohnung besorgt] „Nur wer dich kennt, findet dich“, sagt Lea. „Oder wer dich *schon* sucht.“
 // SCHNITT: Ende Teil 1
@@ -49,13 +52,13 @@
 @zeit tag
 @hud tag=1 zeit=15:13 handy=63/100% netz=3/4 konsole=nicht_verbunden
 // New-York-Platz am Morgen, alle Bildschirme flackern gleichzeitig
-[newyork k4] Um 15:13 Uhr flackern in New York alle Bildschirme. Zehn Sekunden.
+[newyork zeit=morgen flackern bild=webcam schirm="THE LAST MAN?"] Um 15:13 Uhr flackern in New York alle Bildschirme. Zehn Sekunden.
 // Küche: Das Radio rauscht, Lea notiert die Uhrzeit auf einer Karteikarte
-[kueche du lea ton=funk_rauschen] Bei dir rauscht das Radio. Lea schreibt die Uhrzeiten auf.
+[kueche lea lea:denkt uhr=15:13 ton=funk_rauschen] Bei dir rauscht das Radio. Lea schreibt die Uhrzeiten auf.
 // Karteikarte nah: 9:13, 10:13, 11:13 … 15:13
-[karte orte=haus,hausverwaltung route="haus>hausverwaltung"] Immer um *dreizehn* nach. Wie um 8:13.
+[objekt objekte="uhrzeiten" farbe=#1e2f45] Immer um *dreizehn* nach. Wie um 8:13.
 // Handy: Anruf „Unbekannt“, es vibriert
-[handy] Dann vibriert dein Handy. Unbekannte Nummer.
+[handy bildschirm=anruf name=Unbekannt status="eingehend" uhrzeit=15:13 akku=63 netz=3 ort=wohnung] Dann vibriert dein Handy. Unbekannte Nummer.
 // Nahaufnahme: Alex, Handy am Ohr
 [gesicht du ort=wohnung neutral] Eine ruhige Frauenstimme: „Hier ist Doktor Eva *Winter*.“
 
@@ -65,7 +68,7 @@
 // Nahaufnahme: Alex, richtet sich unwillkürlich die Haare
 [gesicht du ort=wohnung neutral] Eine Wissenschaftlerin. Klingt klug. Du richtest unwillkürlich deine Haare.
 // Handy: Anrufbildschirm „Dr. E. Winter“, Tonwelle
-[handy] „Ich biete Ihnen Schutz an. Und Antworten.“
+[handy bildschirm=anruf name="Dr. E. Winter" status=verbunden uhrzeit=15:20 akku=62 netz=3 ort=wohnung] „Ich biete Ihnen Schutz an. Und Antworten.“
 // Nahaufnahme: Lea, misstrauisch, flüstert
 [gesicht lea ort=wohnung misstrauisch] Lea flüstert: „Winter? Den Namen kenne ich.“
 // Nahaufnahme: Alex, geschmeichelt
@@ -74,10 +77,10 @@
 [gesicht du ort=wohnung misstrauisch] Du fragst: „Woher haben Sie meine Nummer?“
 // Nahaufnahme: Alex, Schreck
 [gesicht du ort=wohnung schreck] „Herr Brandt. Kastanienweg 7, dritter Stock.“ Du hast ihr beides *nie* gesagt.
-[titel oben="Folge 4: Die falsche Rettung" gross="Fortsetzung folgt" dauer=1 hud=false]
+[titel oben="Folge 4: Die falsche Rettung" gross="Fortsetzung folgt" farbe=#14213d akzent=#e2b443 groesse=110 dauer=1 hud=false]
 
 == Check ==
 @hud aus
-[objekt gross="Frage" farbe=#1e2f45] Frage: Warum erkannte nur Lea dich?
-[objekt gross="Antwort" farbe=#1e3a2a] Antwort: Bekannte Gesichter erkennen wir selbst unscharf.
-[titel gross="Was hättest du|gemacht?" groesse=120 unten="Schreib es in die Kommentare"] Was hättest du gemacht? Schreib es in die Kommentare.
+[objekt objekte="ohr" gross="Frage" farbe=#1e2f45] Frage: Warum erkannte nur Lea dich?
+[objekt objekte="gluehbirne" gross="Antwort" farbe=#1e3a2a] Antwort: Bekannte Gesichter erkennen wir selbst unscharf.
+[titel gross="Was hättest du|gemacht?" groesse=120 unten="Schreib es in die Kommentare" farbe=#14213d akzent=#e2b443] Was hättest du gemacht? Schreib es in die Kommentare.

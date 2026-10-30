@@ -1,4 +1,7 @@
 # Folge 5: Unter deiner Wohnung
+@musik musik/folge-05.mp3
+@musik_lautstaerke 1
+@whoosh aus
 @serie Der letzte Mann
 @mund zitate
 @look 0
@@ -17,45 +20,45 @@
 // Nahaufnahme: Alex, denkt nach
 [gesicht du ort=wohnung neutral] Den Fragebogen hast du ausgefüllt. Mit Name, Adresse und Foto.
 // Karte: Kastanienweg 7 und die Hausverwaltung zwei Straßen weiter
-[karte orte=haus,hausverwaltung route="haus>hausverwaltung"] Im Messplan steht ein Kellerraum: *S7*. Den Schlüssel hat die Hausverwaltung.
-[titel oben="Folge 5" gross="DER LETZTE MANN" unten="Unter deiner Wohnung" dauer=1 hud=false]
+[stadtplan] Im Messplan steht ein Kellerraum: *S7*. Den Schlüssel hat die Hausverwaltung.
+[titel oben="Folge 5" gross="DER LETZTE MANN" unten="Unter deiner Wohnung" farbe=#14213d akzent=#e2b443 groesse=120 dauer=1 hud=false]
 
 == Was bisher geschah ==
 // Skyline
-[skyline hud=false] Alle Männer sind verschwunden. Nur du nicht.
+[skyline rauch=false hud=false] Alle Männer sind verschwunden. Nur du nicht.
 // Handy: „Dr. E. Winter“
-[handy hud=false] Doktor Winter will dich treffen. Sie kannte dich schon vorher.
+[handy bildschirm=anruf name="Dr. E. Winter" status=verbunden uhrzeit=10:10 akku=93 netz=4 ort=wohnung hud=false] Doktor Winter will dich treffen. Sie kannte dich schon vorher.
 // Nahaufnahme: Lea
 [gesicht lea ort=wohnung neutral hud=false] Lea fand heraus: Ihr Projekt lief in deinem Haus.
 // Handy: Tabelle „Ankerpersonen“
-[handy hud=false] In ihrem Projektplan bist du „Ankerperson A“.
+[handy bildschirm=tabelle uhrzeit=10:10 akku=93 netz=4 ort=wohnung hud=false] In ihrem Projektplan bist du „Ankerperson A“.
 
 == Kapitel 2: Die Fotowand ==
 @zeit tag
 @hud tag=2 zeit=11:00 handy=90/100% netz=4/4 konsole=nicht_verbunden
 // Straße: Lea geht allein, Kapuze auf
-[strasse lea] Lea holt den Schlüssel allein. Draußen würde dich jede erkennen.
+[strasse horde=0 kaputt=false rauch=false lea lea:geht figur_x=520 laeden=baeckerei,supermarkt,apotheke] Lea holt den Schlüssel allein. Draußen würde dich jede erkennen.
 // Bahnhof: Feldbetten auf dem Bahnsteig, Anzeige „Ersatzverkehr – Fahrerinnen gesucht“
-[bahnhof k1] Am Bahnhof stehen jetzt Feldbetten. Die Anzeige sucht Fahrerinnen.
+[bahnhof hilfspunkt k1 zug="ERSATZVERKEHR" anzeige="Fahrerinnen gesucht" anzeige_gross=48 uhr=11:00] Am Bahnhof stehen jetzt Feldbetten. Die Anzeige sucht Fahrerinnen.
 // Suchstelle: lange Fotowand, Helferin mit Warnweste
-[strasse suchstelle k3] Vor der Hausverwaltung: eine Suchstelle. Hunderte Fotos vermisster Männer.
+[suchstelle k3] Vor der Hausverwaltung: eine Suchstelle. Hunderte Fotos vermisster Männer.
 // Infokarte: Icon Suchdienst (Lupe mit Person), „seit 1945“
-[objekt gross="Echter Fakt"] Echter Fakt: Das Rote Kreuz sucht bis heute Kriegsvermisste. Tausende Anfragen pro Jahr.
+[objekt objekte="suchdienst:Suchdienst" farbe=#1e2f45] Das Rote Kreuz sucht bis heute Kriegsvermisste. Tausende Anfragen pro Jahr.
 // Fotowand nah: Zettel „Nika S., 26“ mit gelbem Schal
-[strasse suchstelle k3 markiere=nika nah] Dann sieht Lea ein Foto, das nicht passt: eine *Frau*. Nika, 26.
+[handy bildschirm=foto uhrzeit=11:00 akku=90 netz=4 ort=wohnung] Dann sieht Lea ein Foto, das nicht passt: eine *Frau*. Nika, 26.
 // SCHNITT: Ende Teil 1
 
 == Kapitel 3: Der Schlüssel ==
 @zeit tag
 @hud tag=2 zeit=12:20 handy=86/100% netz=4/4 konsole=nicht_verbunden
 // Handy: Foto des Vermisstenzettels „Nika S., 26“
-[handy] Lea schickt dir das Foto. Die einzige vermisste Frau.
+[handy bildschirm=foto uhrzeit=12:20 akku=86 netz=4 ort=keller] Lea schickt dir das Foto. Die einzige vermisste Frau.
 // Treppe hinab, Lea mit Schlüsselbund
-[treppe keller] Dann geht ihr zusammen in den Keller.
+[treppe keller lea du] Dann geht ihr zusammen in den Keller.
 // Schlüsselbund nah: großer Schlüssel „S7“, kleiner „S7-S“
-[keller ansicht=raum] Am Bund: ein großer Schlüssel, „S7“. Und ein kleiner, „S7-S“.
+[objekt objekte="schluesselbund:S7 · S7-S" farbe=#2a2f3a] Am Bund: ein großer Schlüssel, „S7“. Und ein kleiner, „S7-S“.
 // Kellerflur: Hausverteiler, eine Sicherung mit roter Plombe „S7 – NICHT EINSCHALTEN“
-[keller ansicht=flur nah=verteiler plombe du lea] Am Sicherungskasten klebt eine rote Plombe: „S7. Nicht einschalten.“
+[keller ansicht=flur fokus=225,840 zoom=1.9] Am Sicherungskasten klebt eine rote Plombe: „S7. Nicht einschalten.“
 // Kellerflur: Handy zeigt einen Balken
 [keller ansicht=flur du lea] Hier unten hast du nur noch einen Balken Empfang.
 
@@ -63,19 +66,19 @@
 @zeit tag
 @hud tag=2 zeit=12:41 handy=85/100% netz=1/4 konsole=nicht_verbunden
 // Kellerflur: graue Stahltür „S7 – Projekt SPIEGEL“
-[keller ansicht=flur nah=tuer du lea] Vor euch: eine Stahltür. „S7. Projekt Spiegel.“
+[keller ansicht=flur du lea] Vor euch: eine Stahltür. „S7. Projekt Spiegel.“
 // Nahaufnahme: Alex, Handy am Ohr
-[gesicht du ort=keller neutral] Aus Gewohnheit rufst du deinen Vater an. Wieder Mailbox.
+[gesicht du ort=keller ansicht=raum licht=konsole neutral] Aus Gewohnheit rufst du deinen Vater an. Wieder Mailbox.
 // Nahaufnahme: Alex, lauscht, erstarrt
-[gesicht du ort=keller misstrauisch] Doch dieselbe Stimme hörst du noch einmal. *Hinter* der Tür.
+[gesicht du ort=keller ansicht=raum licht=konsole misstrauisch] Doch dieselbe Stimme hörst du noch einmal. *Hinter* der Tür.
 // Nahaufnahme: Lea, starr vor Schreck
-[gesicht lea ort=keller schreck] Lea flüstert: „Hörst du das auch?“
+[gesicht lea ort=keller ansicht=raum licht=konsole schreck] Lea flüstert: „Hörst du das auch?“
 // Stahltür nah, dumpfe Stimme
-[keller ansicht=flur nah=tuer du lea] „Hier ist Thomas …“ Die Stimme deines Vaters. Ganz *nah*.
-[titel oben="Folge 6: Das tote Telefon" gross="Fortsetzung folgt" dauer=1 hud=false]
+[keller ansicht=flur stimme fokus=740,1000 zoom=1.3] „Hier ist Thomas …“ Die Stimme deines Vaters. Ganz *nah*.
+[titel oben="Folge 6: Das tote Telefon" gross="Fortsetzung folgt" farbe=#14213d akzent=#e2b443 groesse=110 dauer=1 hud=false]
 
 == Check ==
 @hud aus
-[objekt gross="Frage" farbe=#1e2f45] Frage: Seit wann sucht das Rote Kreuz Kriegsvermisste?
-[objekt gross="Antwort" farbe=#1e3a2a] Antwort: Seit 1945. Bis heute kommen jährlich Tausende Anfragen.
-[titel gross="Was hättest du|gemacht?" groesse=120 unten="Schreib es in die Kommentare"] Was hättest du gemacht? Schreib es in die Kommentare.
+[objekt objekte="ohr" gross="Frage" farbe=#1e2f45] Frage: Seit wann sucht das Rote Kreuz Kriegsvermisste?
+[objekt objekte="gluehbirne" gross="Antwort" farbe=#1e3a2a] Antwort: Seit 1945. Bis heute kommen jährlich Tausende Anfragen.
+[titel gross="Was hättest du|gemacht?" groesse=120 unten="Schreib es in die Kommentare" farbe=#14213d akzent=#e2b443] Was hättest du gemacht? Schreib es in die Kommentare.

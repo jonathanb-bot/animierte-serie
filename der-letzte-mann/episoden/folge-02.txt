@@ -1,40 +1,43 @@
 # Folge 2: Bleib vom Fenster weg
+@musik musik/folge-02.mp3
+@musik_lautstaerke 1
+@whoosh aus
 @serie Der letzte Mann
 @mund zitate
 @look 0
 
 == Kapitel 1: Lea ==
 @zeit morgen
-@hud tag=1 zeit=09:05 handy=55/100% netz=1/4 netz_text=überlastet konsole=nicht_verbunden
+@hud tag=1 zeit=09:05 handy=55/100% netz=1/4 konsole=nicht_verbunden
 // Türspion-Ansicht: Lea im Flur, Arme verschränkt
-[spion lea misstrauisch] Stell dir vor, jemand weiß, dass du *noch* da bist.
+[spion lea etage=3 flurlicht=an misstrauisch] Stell dir vor, jemand weiß, dass du *noch* da bist.
 // Wohnungstür offen, Lea schiebt sich an Alex vorbei
-[tuer du draussen=lea] Deine Nachbarin Lea schiebt sich einfach an dir vorbei.
+[tuer du lea du:froh lea:misstrauisch] Deine Nachbarin Lea schiebt sich einfach an dir vorbei.
 // Nahaufnahme: Lea, mustert Alex von oben bis unten
 [gesicht lea ort=wohnung neutral] Sie mustert dich von oben bis unten. Du ziehst wieder den Bauch ein.
 // Wohnung: Lea zieht den Vorhang zu
-[wohnung du lea vorhang=schliesst] Als Erstes zieht sie deinen Vorhang zu. „Bleib vom Fenster weg.“
+[wohnung du lea vorhang=schliesst lea:zeigt] Als Erstes zieht sie deinen Vorhang zu. „Bleib vom Fenster weg.“
 // Nahaufnahme: Alex, charmantes Lächeln
 [gesicht du ort=wohnung froh] Du lächelst charmant. „Willst du einen Kaffee?“
 // Nahaufnahme: Lea, misstrauisch
 [gesicht lea ort=wohnung misstrauisch] „Ich will, dass dich *niemand* sieht.“
-[titel oben="Folge 2" gross="DER LETZTE MANN" unten="Bleib vom Fenster weg" dauer=1 hud=false]
+[titel oben="Folge 2" gross="DER LETZTE MANN" unten="Bleib vom Fenster weg" farbe=#14213d akzent=#e2b443 groesse=120 dauer=1 hud=false]
 
 == Was bisher geschah ==
 // Skyline am Morgen
-[skyline hud=false] Um 8:13 Uhr sind plötzlich alle Männer verschwunden.
+[skyline rauch=false hud=false] Um 8:13 Uhr sind plötzlich alle Männer verschwunden.
 // Tokio-Kreuzung
-[tokio k4 hud=false] Überall auf der Welt. Vom Bahnhof bis nach Tokio.
+[tokio zeit=tag hud=false] Überall auf der Welt. Vom Bahnhof bis nach Tokio.
 // Nahaufnahme: Alex, besorgt
 [gesicht du ort=wohnung besorgt hud=false] Nur du bist geblieben. Dein Vater geht nicht ran.
 // Türspion-Ansicht: Lea
-[spion lea misstrauisch hud=false] Dann klingelt deine Nachbarin: „Ich habe dich gesehen.“
+[spion lea etage=3 flurlicht=an misstrauisch hud=false] Dann klingelt deine Nachbarin: „Ich habe dich gesehen.“
 
 == Kapitel 2: Nicht zum Flirten ==
 @zeit morgen
-@hud tag=1 zeit=09:12 handy=55/100%+ netz=1/4 netz_text=überlastet konsole=nicht_verbunden
+@hud tag=1 zeit=09:12 handy=55/100%+ netz=1/4 konsole=nicht_verbunden
 // Wohnung: Lea steckt ihre Powerbank an dein Handy
-[wohnung du lea] Lea gibt dir eine Powerbank. Sie arbeitet in der Leitstelle.
+[wohnung du lea vorhang=zu licht=an] Lea gibt dir eine Powerbank. Sie arbeitet in der Leitstelle.
 // Nahaufnahme: Lea, ernst
 [gesicht lea ort=wohnung besorgt] „Kommt raus, dass es noch einen Mann gibt, stehen hier Hunderte.“
 // Nahaufnahme: Alex, froh
@@ -49,23 +52,23 @@
 @zeit tag
 @hud tag=1 zeit=10:13 handy=66/100%+ netz=2/4 konsole=nicht_verbunden
 // Küche: Das Küchenradio rauscht, die Herduhr zeigt 10:13
-[kueche ton=funk_rauschen] Um 10:13 rauscht das Radio. Wie schon um 9:13.
+[kueche uhr=10:13 ton=funk_rauschen] Um 10:13 rauscht das Radio. Wie schon um 9:13.
 // Straße vor dem Haus: Frauen schieben gemeinsam liegengebliebene Autos von der Kreuzung
-[strasse lea] Draußen schieben Frauen die liegengebliebenen Autos von der Kreuzung.
+[strasse horde=0 kaputt=false rauch=false k1 k3 k1:traegt k3:traegt figur_x=380 laeden=baeckerei,supermarkt,apotheke] Draußen schieben Frauen die liegengebliebenen Autos von der Kreuzung.
 // Infokarte: Glasscheibe, ein kleiner Pfeil wird zurückgeworfen, „ca. 4 %“
-[objekt gross="Echter Fakt"] Echter Fakt: Glas spiegelt pro Oberfläche etwa *vier Prozent* des Lichts.
+[objekt objekte="glasscheibe:ca. 4 % pro Fläche" farbe=#1e2f45] Glas spiegelt pro Oberfläche etwa *vier Prozent* des Lichts.
 // Infokarte: links Tag (Scheibe spiegelt den Himmel), rechts Nacht (helles Zimmer gut sichtbar)
-[objekt] Tagsüber sieht man darum fast nur Spiegelungen. Nachts *alles*.
+[objekt objekte="tag_nacht" farbe=#1e2f45] Tagsüber sieht man darum fast nur Spiegelungen. Nachts *alles*.
 // Wohnung: Alex direkt an der Scheibe, prüft im Spiegelbild seine Frisur
-[wohnung du] Es ist Tag. Also prüfst du am Fenster deine Frisur.
+[wohnung du vorhang=zu licht=an] Es ist Tag. Also prüfst du am Fenster deine Frisur.
 // Dach gegenüber: Die Wetterkamera dreht sich langsam zu dir
-[dach webcam] Gegenüber dreht sich eine Kamera.
+[dach webcam tonnen=false rauch=false] Gegenüber dreht sich eine Kamera.
 
 == Kapitel 4: Vor drei Minuten ==
 @zeit tag
 @hud tag=1 zeit=11:41 handy=74/100%+ netz=2/4 konsole=nicht_verbunden
 // Wohnung: Lea kommt herein, Alex steht noch am Fenster
-[wohnung du lea] Als Lea zurückkommt, stehst du immer noch am Fenster.
+[wohnung du lea du:denkt froh] Als Lea zurückkommt, stehst du immer noch am Fenster.
 // Nahaufnahme: Lea, wütend
 [gesicht lea ort=wohnung wuetend] „Weg da!“ Sie zieht dich am Shirt zurück.
 // Nahaufnahme: Alex, gekränkt; Lea trocken
@@ -73,11 +76,11 @@
 // Nahaufnahme: Lea, ihr Handy vibriert, sie wird blass
 [gesicht lea ort=wohnung neutral] Dann vibriert ihr Handy. Eine Kollegin schickt einen Link.
 // Handy: Post mit grobem Wetterkamera-Bild, Alex am Fenster, „Ist das ein MANN?? Kastanienweg“, „vor 3 Minuten“
-[handy] Ein Bild der Wetterkamera. Du am Fenster. „Ist das ein *Mann*?“ Vor drei Minuten.
-[titel oben="Folge 3: Sie kennen deinen Namen" gross="Fortsetzung folgt" dauer=1 hud=false]
+[handy bildschirm=post uhrzeit=11:41 akku=74 netz=2 ort=wohnung] Ein Bild der Wetterkamera. Du am Fenster. „Ist das ein *Mann*?“ Vor drei Minuten.
+[titel oben="Folge 3: Sie kennen deinen Namen" gross="Fortsetzung folgt" farbe=#14213d akzent=#e2b443 groesse=110 dauer=1 hud=false]
 
 == Check ==
 @hud aus
-[objekt gross="Frage" farbe=#1e2f45] Frage: Warum sieht man nachts in helle Zimmer hinein?
-[objekt gross="Antwort" farbe=#1e3a2a] Antwort: Das Zimmerlicht überstrahlt die schwache Spiegelung.
-[titel gross="Was hättest du|gemacht?" groesse=120 unten="Schreib es in die Kommentare"] Was hättest du gemacht? Schreib es in die Kommentare.
+[objekt objekte="ohr" gross="Frage" farbe=#1e2f45] Frage: Warum sieht man nachts in helle Zimmer hinein?
+[objekt objekte="gluehbirne" gross="Antwort" farbe=#1e3a2a] Antwort: Das Zimmerlicht überstrahlt die schwache Spiegelung.
+[titel gross="Was hättest du|gemacht?" groesse=120 unten="Schreib es in die Kommentare" farbe=#14213d akzent=#e2b443] Was hättest du gemacht? Schreib es in die Kommentare.

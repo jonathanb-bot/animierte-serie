@@ -1,4 +1,7 @@
 # Folge 1: Außer dir
+@musik musik/folge-01.mp3
+@musik_lautstaerke 1
+@whoosh aus
 @serie Der letzte Mann
 @mund zitate
 @look 0
@@ -7,71 +10,71 @@
 @zeit morgen
 @hud tag=1 zeit=08:13 handy=64/100% netz=4/4 konsole=nicht_verbunden
 // Skyline am Morgen, unten stehen Autos kreuz und quer, Hupen von überall
-[skyline] Stell dir vor, du bist der *einzige* Mann auf der Welt.
+[skyline rauch=false] Stell dir vor, du bist der *einzige* Mann auf der Welt.
 // Wohnung: Alex im Shirt am Fenster, Kaffeetasse in der Hand, schaut verwirrt hinaus. Auf dem Dach gegenüber dreht sich eine Wetterkamera auf ihrem Mast (Hinweis für Folge 2)
-[wohnung du] 8:13 Uhr. Draußen hupen plötzlich alle Autos.
+[wohnung du du:denkt froh] 8:13 Uhr. Draußen hupen plötzlich alle Autos.
 // Handy in der Hand: Eilmeldungen stapeln sich, oben „Männer weltweit verschwunden“
-[handy] Eilmeldung um Eilmeldung: Die Männer sind *weg*. Einfach verschwunden.
+[handy bildschirm=meldungen uhrzeit=08:13 akku=64 netz=4 ort=wohnung] Eilmeldung um Eilmeldung: Die Männer sind *weg*. Einfach verschwunden.
 // Nahaufnahme: Alex, froh, ein schiefes Grinsen
 [gesicht du ort=wohnung froh] Du grinst. Nur Frauen. Und *du*.
 // Bad: Alex richtet vor dem Spiegel die Haare, auf dem Handy die Dating-App „Funkel“
-[bad du] Du öffnest deine Dating-App. Endlich keine Konkurrenz.
+[bad du du:denkt froh] Du öffnest deine Dating-App. Endlich keine Konkurrenz.
 // Nahaufnahme: Alex, Augenbraue hochgezogen, selbstzufrieden
 [gesicht du ort=wohnung froh] Flirten kannst du allerdings immer noch *nicht*.
-[titel oben="Folge 1" gross="DER LETZTE MANN" unten="Außer dir" dauer=1 hud=false]
+[titel oben="Folge 1" gross="DER LETZTE MANN" unten="Außer dir" farbe=#14213d akzent=#e2b443 groesse=120 dauer=1 hud=false]
 
 == Kapitel 2: Keine Antwort ==
 @zeit morgen
-@hud tag=1 zeit=08:24 handy=61/100% netz=1/4 netz_text=überlastet konsole=nicht_verbunden
+@hud tag=1 zeit=08:24 handy=61/100% netz=1/4 konsole=nicht_verbunden
 // Handy: Anrufbildschirm „Papa“, dann „Ben“, beide Male „Mailbox“
-[handy] Du rufst Papa an: Mailbox. Deinen besten Freund: Mailbox.
+[handy bildschirm=anruf name=Papa status=Mailbox uhrzeit=08:24 akku=61 netz=1 ort=wohnung] Du rufst Papa an: Mailbox. Deinen besten Freund: Mailbox.
 // Handy nah, Tonwelle der Ansage
-[handy] „Hier ist Thomas. Ich bin gerade nicht erreichbar.“
+[handy bildschirm=anruf name=Papa status=Mailbox uhrzeit=08:24 akku=61 netz=1 ort=wohnung welle] „Hier ist Thomas. Ich bin gerade nicht erreichbar.“
 // Handy: Anrufliste, dreimal „Papa – Mailbox“
-[handy] Du rufst noch mal an. Und noch mal. Immer *dieselbe* Ansage.
+[handy bildschirm=anrufliste uhrzeit=08:24 akku=61 netz=1 ort=wohnung] Du rufst noch mal an. Und noch mal. Immer *dieselbe* Ansage.
 // Handy: Warnmeldung im Vollbild, rotes Warndreieck, schriller Ton
-[handy] Dann schrillt dein Handy: eine *Warnung*.
+[handy bildschirm=warnung uhrzeit=08:24 akku=61 netz=1 ort=wohnung] Dann schrillt dein Handy: eine *Warnung*.
 // Infokarte: Funkmast, Wellen gehen gleichzeitig an viele Handys, Überschrift „Cell Broadcast“
-[objekt gross="Echter Fakt"] Echter Fakt: Cell Broadcast kommt an, selbst wenn das Netz für Anrufe *überlastet* ist.
+[objekt objekte="funkmast:Cell Broadcast" farbe=#1e2f45] Cell Broadcast kommt an, selbst wenn das Netz für Anrufe *überlastet* ist.
 // Nahaufnahme: Alex, Angst, das Grinsen ist verschwunden
 [gesicht du ort=wohnung angst] Die Männer sind weg. Du bist *geblieben*.
 // SCHNITT: Ende Teil 1
 
 == Kapitel 3: Überall ==
 @zeit morgen
-@hud tag=1 zeit=08:41 handy=58/100% netz=1/4 netz_text=überlastet konsole=nicht_verbunden
+@hud tag=1 zeit=08:41 handy=58/100% netz=1/4 konsole=nicht_verbunden
 // Skyline von oben, Kamera fährt über die Dächer
-[skyline] Um 8:13 verschwanden die Männer. *Überall*.
+[skyline rauch=false fahrt] Um 8:13 verschwanden die Männer. *Überall*.
 // Bahnhof: Bahnsteiganzeige „Fällt aus“, eine Frau wartet mit zwei Kaffeebechern
-[bahnhof k1] Am Bahnhof wartet eine Frau mit *zwei* Kaffeebechern.
+[bahnhof k1 k1:traegt haelt=k1:zwei_becher uhr=08:41] Am Bahnhof wartet eine Frau mit *zwei* Kaffeebechern.
 // Supermarkt: In einem verlassenen Einkaufswagen klingelt ein Handy, eine Kundin schaut sich um
-[supermarkt k2] Im Supermarkt klingelt ein Handy. Niemand geht ran.
+[supermarkt k2 klingelt k2:misstrauisch] Im Supermarkt klingelt ein Handy. Niemand geht ran.
 // Tokio-Kreuzung am Nachmittag, große Uhr zeigt 16:13, Menschen bleiben stehen
-[tokio k4] In Tokio war es in derselben Sekunde 16:13 Uhr.
+[tokio zeit=tag uhr=16:13] In Tokio war es in derselben Sekunde 16:13 Uhr.
 // New-York-Platz bei Nacht, alle Bildschirme zeigen „BREAKING NEWS“
-[newyork k4] In New York war es 2:13 Uhr nachts. Alle Bildschirme zeigen dasselbe.
+[newyork zeit=nacht] In New York war es 2:13 Uhr nachts. Alle Bildschirme zeigen dasselbe.
 // Nahaufnahme: Nachrichtensprecherin vor unscharfem Studio, Bauchbinde „EILMELDUNG“
-[gesicht sprecherin ort=studio bauchbinde="EILMELDUNG"] „Es gibt keine Ausnahme“, sagt die Sprecherin.
+[gesicht sprecherin ort=studio bauchbinde="Eilmeldung" sagt=sprecherin] „Es gibt keine Ausnahme“, sagt die Sprecherin.
 
 == Kapitel 4: Es klingelt ==
 @zeit morgen
-@hud tag=1 zeit=09:05 handy=55/100% netz=1/4 netz_text=überlastet konsole=nicht_verbunden
+@hud tag=1 zeit=09:05 handy=55/100% netz=1/4 konsole=nicht_verbunden
 // Wohnung: Alex sitzt auf dem Sofa und starrt auf sein Handy
-[wohnung du] Du bist der letzte Mann. Es fühlt sich *nicht* gut an.
+[wohnung du du:sitzt pos=120] Du bist der letzte Mann. Es fühlt sich *nicht* gut an.
 // Wohnung: Alex am offenen Fenster, unten auf der Straße nur Frauen, eine schaut zufällig hoch
-[wohnung du] Du stellst dich ans Fenster. Unten auf der Straße: nur Frauen.
+[wohnung du du:denkt froh] Du stellst dich ans Fenster. Unten auf der Straße: nur Frauen.
 // Wohnungstür von innen, die Klingel leuchtet auf
 [tuer klingel] Da klingelt es an deiner Tür.
 // Wohnungstür: Alex streicht sein Shirt glatt und zieht den Bauch ein
-[tuer du] Du ziehst den Bauch ein. Dein peinlichster Reflex überlebt sogar das Ende der Welt.
+[tuer du du:froh] Du ziehst den Bauch ein. Dein peinlichster Reflex überlebt sogar das Ende der Welt.
 // Türspion-Ansicht: Lea steht im Flur, ernst, Arme verschränkt
-[spion lea misstrauisch] Draußen steht deine Nachbarin. „Ich weiß, dass du noch da bist.“
+[spion lea etage=3 flurlicht=an misstrauisch] Draußen steht deine Nachbarin. „Ich weiß, dass du noch da bist.“
 // Türspion-Ansicht, nah: Lea schaut direkt in den Spion
-[spion lea misstrauisch nah] „Ich habe dich durchs Fenster *gesehen*.“
-[titel oben="Folge 2: Bleib vom Fenster weg" gross="Fortsetzung folgt" dauer=1 hud=false]
+[spion lea etage=3 flurlicht=an misstrauisch nah] „Ich habe dich durchs Fenster *gesehen*.“
+[titel oben="Folge 2: Bleib vom Fenster weg" gross="Fortsetzung folgt" farbe=#14213d akzent=#e2b443 groesse=110 dauer=1 hud=false]
 
 == Check ==
 @hud aus
-[objekt gross="Frage" farbe=#1e2f45] Frage: Warum kam die Warnung trotz Überlastung an?
-[objekt gross="Antwort" farbe=#1e3a2a] Antwort: Cell Broadcast funkt an alle geeigneten Handys der Funkzelle.
-[titel gross="Was hättest du|gemacht?" groesse=120 unten="Schreib es in die Kommentare"] Was hättest du gemacht? Schreib es in die Kommentare.
+[objekt objekte="ohr" gross="Frage" farbe=#1e2f45] Frage: Warum kam die Warnung trotz Überlastung an?
+[objekt objekte="gluehbirne" gross="Antwort" farbe=#1e3a2a] Antwort: Cell Broadcast funkt an alle geeigneten Handys der Funkzelle.
+[titel gross="Was hättest du|gemacht?" groesse=120 unten="Schreib es in die Kommentare" farbe=#14213d akzent=#e2b443] Was hättest du gemacht? Schreib es in die Kommentare.

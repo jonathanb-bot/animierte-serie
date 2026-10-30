@@ -1,12 +1,12 @@
 {
- "dauer": 95.158,
+ "dauer": 110.776,
  "einstellungen": [
   {
    "nr": 1,
    "typ": "keller",
    "kapitel": 1,
    "start": 0.0,
-   "dauer": 4.67,
+   "dauer": 4.406,
    "emotion": "erzaehlend",
    "text": "Stell dir vor, die Frau hinter allem steht plötzlich vor dir."
   },
@@ -14,8 +14,8 @@
    "nr": 2,
    "typ": "keller",
    "kapitel": 1,
-   "start": 4.67,
-   "dauer": 4.334,
+   "start": 4.406,
+   "dauer": 3.926,
    "emotion": "erzaehlend",
    "text": "Gerade piept noch die Konsole: „Neues Muster gespeichert: T.“"
   },
@@ -23,8 +23,8 @@
    "nr": 3,
    "typ": "keller",
    "kapitel": 1,
-   "start": 9.004,
-   "dauer": 3.134,
+   "start": 8.332,
+   "dauer": 4.67,
    "emotion": "erzaehlend",
    "text": "Doktor Eva Winter. Mantel. Tablet."
   },
@@ -32,8 +32,8 @@
    "nr": 4,
    "typ": "gesicht",
    "kapitel": 1,
-   "start": 12.138,
-   "dauer": 2.438,
+   "start": 13.002,
+   "dauer": 3.086,
    "emotion": "erzaehlend",
    "text": "„Herr Brandt. Sie haben S7 geweckt.“"
   },
@@ -41,206 +41,233 @@
    "nr": 5,
    "typ": "gesicht",
    "kapitel": 1,
-   "start": 14.576,
-   "dauer": 2.534,
+   "start": 16.088,
+   "dauer": 3.614,
+   "emotion": "erzaehlend",
+   "text": "Lea stellt sich zwischen euch. Freundlich ist anders."
+  },
+  {
+   "nr": 6,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 19.702,
+   "dauer": 2.582,
    "emotion": "erzaehlend",
    "text": "Du ziehst den Bauch ein. *Schon* wieder."
   },
   {
-   "nr": 6,
+   "nr": 7,
    "typ": "titel",
    "kapitel": 1,
-   "start": 17.11,
+   "start": 22.284,
    "dauer": 1.0,
    "emotion": null,
    "text": ""
-  },
-  {
-   "nr": 7,
-   "typ": "skyline",
-   "kapitel": 2,
-   "start": 18.11,
-   "dauer": 2.75,
-   "emotion": "erzaehlend",
-   "text": "Alle Männer sind verschwunden. Nur du nicht."
   },
   {
    "nr": 8,
    "typ": "keller",
    "kapitel": 2,
-   "start": 20.86,
-   "dauer": 3.038,
+   "start": 23.284,
+   "dauer": 3.062,
+   "emotion": "erzaehlend",
+   "text": "Unter deinem Haus steht die Konsole von Projekt Spiegel."
+  },
+  {
+   "nr": 9,
+   "typ": "skyline",
+   "kapitel": 2,
+   "start": 26.346,
+   "dauer": 2.942,
+   "emotion": "erzaehlend",
+   "text": "Alle Männer sind verschwunden. Nur du nicht."
+  },
+  {
+   "nr": 10,
+   "typ": "keller",
+   "kapitel": 2,
+   "start": 29.288,
+   "dauer": 3.182,
    "emotion": "erzaehlend",
    "text": "Über ein Telefon im Keller hast du deinen Vater erreicht."
   },
   {
-   "nr": 9,
+   "nr": 11,
    "typ": "gesicht",
    "kapitel": 2,
-   "start": 23.898,
-   "dauer": 3.206,
+   "start": 32.47,
+   "dauer": 3.086,
    "emotion": "erzaehlend",
    "text": "Bei ihm sind alle Frauen weg. Bis auf eine."
   },
   {
-   "nr": 10,
+   "nr": 12,
    "typ": "gesicht",
    "kapitel": 3,
-   "start": 27.104,
+   "start": 35.556,
    "dauer": 3.062,
    "emotion": "erzaehlend",
    "text": "„Wir wollten die Welt kurz spiegeln. Zum Messen.“"
   },
   {
-   "nr": 11,
+   "nr": 13,
    "typ": "objekt",
    "kapitel": 3,
-   "start": 30.166,
-   "dauer": 5.75,
+   "start": 38.618,
+   "dauer": 6.206,
    "emotion": "erklaerend",
    "text": "Echter Fakt: GPS-Uhren gehen wegen der Relativität täglich 38 Mikrosekunden vor."
   },
   {
-   "nr": 12,
+   "nr": 14,
    "typ": "objekt",
    "kapitel": 3,
-   "start": 35.916,
+   "start": 44.824,
    "dauer": 3.542,
    "emotion": "erklaerend",
    "text": "Unkorrigiert wäre GPS pro Tag zehn Kilometer daneben."
   },
   {
-   "nr": 13,
+   "nr": 15,
    "typ": "gesicht",
    "kapitel": 3,
-   "start": 39.458,
-   "dauer": 2.846,
+   "start": 48.366,
+   "dauer": 2.87,
    "emotion": "ernst",
    "text": "„Um 8:13 wurde daraus eine zweite *Welt*.“"
   },
   {
-   "nr": 14,
+   "nr": 16,
    "typ": "gesicht",
    "kapitel": 3,
-   "start": 42.304,
-   "dauer": 4.694,
+   "start": 51.236,
+   "dauer": 4.742,
    "emotion": "spannend",
    "text": "Zwei Welten. Hier die Frauen. Drüben die Männer. Und Papa."
   },
   {
-   "nr": 15,
-   "typ": "gesicht",
-   "kapitel": 4,
-   "start": 46.998,
-   "dauer": 4.742,
-   "emotion": "erzaehlend",
-   "text": "„Jede Seite braucht einen Anker“, sagt Winter. „Dich. Aus der Hörstudie.“"
-  },
-  {
-   "nr": 16,
-   "typ": "keller",
-   "kapitel": 4,
-   "start": 51.74,
-   "dauer": 5.078,
-   "emotion": "erzaehlend",
-   "text": "„Das dritte Lämpchen zeigt gespeicherte Muster an dieser Tür. Auf *beiden* Seiten.“"
-  },
-  {
    "nr": 17,
-   "typ": "keller",
+   "typ": "newyork",
    "kapitel": 4,
-   "start": 56.818,
-   "dauer": 4.982,
+   "start": 55.978,
+   "dauer": 6.134,
    "emotion": "erzaehlend",
-   "text": "„Ein Anker hält eine Seite. Zwei Anker an derselben Schwelle halten eine *Tür*.“"
+   "text": "In New York flackerten um 15:13 wieder alle Bildschirme. Niemand weiß, warum."
   },
   {
    "nr": 18,
    "typ": "gesicht",
    "kapitel": 4,
-   "start": 61.8,
-   "dauer": 4.118,
-   "emotion": "ernst",
-   "text": "„Ohne Kontrolle verschiebt so eine Tür Menschen. Auch Lea.“"
+   "start": 62.112,
+   "dauer": 4.934,
+   "emotion": "erzaehlend",
+   "text": "„Jede Seite braucht einen Anker“, sagt Winter. „Dich. Aus der Hörstudie.“"
   },
   {
    "nr": 19,
    "typ": "keller",
-   "kapitel": 5,
-   "start": 65.918,
-   "dauer": 3.638,
+   "kapitel": 4,
+   "start": 67.046,
+   "dauer": 4.55,
    "emotion": "erzaehlend",
-   "text": "Winter sperrt die Konsole. „Morgen um acht schalte ich ab.“"
+   "text": "„Das dritte Lämpchen zeigt gespeicherte Muster an dieser Tür. Auf *beiden* Seiten.“"
   },
   {
    "nr": 20,
-   "typ": "gesicht",
-   "kapitel": 5,
-   "start": 69.556,
-   "dauer": 3.59,
+   "typ": "keller",
+   "kapitel": 4,
+   "start": 71.596,
+   "dauer": 5.558,
    "emotion": "erzaehlend",
-   "text": "„Lassen Sie die Sicherung aus. Ohne Netzstrom: nur zehn Sekunden.“"
+   "text": "„Ein Anker hält eine Seite. Zwei Anker an derselben Schwelle halten eine *Tür*.“"
   },
   {
    "nr": 21,
-   "typ": "keller",
-   "kapitel": 5,
-   "start": 73.146,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 77.154,
    "dauer": 3.59,
-   "emotion": "erzaehlend",
-   "text": "Auf ihrem Tablet blinkt ein Protokoll. Lea schnappt es sich."
+   "emotion": "ernst",
+   "text": "„Ohne Kontrolle verschiebt so eine Tür Menschen. Auch Lea.“"
   },
   {
    "nr": 22,
    "typ": "keller",
    "kapitel": 5,
-   "start": 76.736,
-   "dauer": 4.046,
+   "start": 80.744,
+   "dauer": 3.614,
    "emotion": "erzaehlend",
-   "text": "„Anker B. Seite B. Wählversuche: 31.“"
+   "text": "Winter sperrt die Konsole. „Morgen um acht schalte ich ab.“"
   },
   {
    "nr": 23,
    "typ": "gesicht",
    "kapitel": 5,
-   "start": 80.782,
-   "dauer": 2.87,
+   "start": 84.358,
+   "dauer": 4.19,
+   "emotion": "erzaehlend",
+   "text": "„Lassen Sie die Sicherung aus. Ohne Netzstrom: nur zehn Sekunden.“"
+  },
+  {
+   "nr": 24,
+   "typ": "keller",
+   "kapitel": 5,
+   "start": 88.548,
+   "dauer": 3.566,
+   "emotion": "erzaehlend",
+   "text": "Auf ihrem Tablet blinkt ein Protokoll. Lea schnappt es sich."
+  },
+  {
+   "nr": 25,
+   "typ": "keller",
+   "kapitel": 5,
+   "start": 92.114,
+   "dauer": 4.142,
+   "emotion": "erzaehlend",
+   "text": "„Anker B. Seite B. Wählversuche: 31.“"
+  },
+  {
+   "nr": 26,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 96.256,
+   "dauer": 3.014,
    "emotion": "spannend",
    "text": "Die zweite Ausnahme sucht *dich*. Seit gestern."
   },
   {
-   "nr": 24,
+   "nr": 27,
    "typ": "titel",
    "kapitel": 5,
-   "start": 83.652,
+   "start": 99.27,
    "dauer": 1.0,
    "emotion": null,
    "text": ""
   },
   {
-   "nr": 25,
+   "nr": 28,
    "typ": "objekt",
    "kapitel": 6,
-   "start": 84.652,
-   "dauer": 3.278,
+   "start": 100.27,
+   "dauer": 3.638,
    "emotion": "erklaerend",
    "text": "Frage: Warum müssen GPS-Uhren korrigiert werden?"
   },
   {
-   "nr": 26,
+   "nr": 29,
    "typ": "objekt",
    "kapitel": 6,
-   "start": 87.93,
-   "dauer": 4.55,
+   "start": 103.908,
+   "dauer": 4.262,
    "emotion": "erklaerend",
    "text": "Antwort: Sie gehen täglich 38 Mikrosekunden vor."
   },
   {
-   "nr": 27,
+   "nr": 30,
    "typ": "titel",
    "kapitel": 6,
-   "start": 92.48,
-   "dauer": 2.678,
+   "start": 108.17,
+   "dauer": 2.606,
    "emotion": "erzaehlend",
    "text": "Was hättest du gemacht? Schreib es in die Kommentare."
   }

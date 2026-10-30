@@ -1,12 +1,12 @@
 {
- "dauer": 95.038,
+ "dauer": 107.776,
  "einstellungen": [
   {
    "nr": 1,
    "typ": "skyline",
    "kapitel": 1,
    "start": 0.0,
-   "dauer": 5.078,
+   "dauer": 5.582,
    "emotion": "erzaehlend",
    "text": "Stell dir vor, jemand will dich retten. Und weiß zu viel über dich."
   },
@@ -14,8 +14,8 @@
    "nr": 2,
    "typ": "bad",
    "kapitel": 1,
-   "start": 5.078,
-   "dauer": 4.214,
+   "start": 5.582,
+   "dauer": 4.502,
    "emotion": "erzaehlend",
    "text": "Tag zwei. Um elf holt dich ein Wagen ab. Zu Doktor Winter."
   },
@@ -23,224 +23,251 @@
    "nr": 3,
    "typ": "bad",
    "kapitel": 1,
-   "start": 9.292,
-   "dauer": 4.07,
+   "start": 10.084,
+   "dauer": 4.19,
    "emotion": "erzaehlend",
    "text": "Du probierst drei Hemden. Für ein Treffen, das eine *Falle* sein könnte."
   },
   {
    "nr": 4,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 14.274,
+   "dauer": 3.566,
+   "emotion": "erzaehlend",
+   "text": "Hemd Nummer drei. Für das Ende der Welt siehst du *gut* aus."
+  },
+  {
+   "nr": 5,
    "typ": "handy",
    "kapitel": 1,
-   "start": 13.362,
-   "dauer": 3.974,
+   "start": 17.84,
+   "dauer": 4.022,
    "emotion": "erzaehlend",
    "text": "Du rufst Papa an. Mailbox. Zum *dreißigsten* Mal."
   },
   {
-   "nr": 5,
+   "nr": 6,
    "typ": "titel",
    "kapitel": 1,
-   "start": 17.336,
+   "start": 21.862,
    "dauer": 1.0,
    "emotion": null,
    "text": ""
   },
   {
-   "nr": 6,
+   "nr": 7,
    "typ": "skyline",
    "kapitel": 2,
-   "start": 18.336,
+   "start": 22.862,
    "dauer": 3.278,
    "emotion": "erzaehlend",
    "text": "Alle Männer sind verschwunden. Nur du bist geblieben."
   },
   {
-   "nr": 7,
+   "nr": 8,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 26.14,
+   "dauer": 1.958,
+   "emotion": "erzaehlend",
+   "text": "Lea, deine Nachbarin, hilft dir."
+  },
+  {
+   "nr": 9,
    "typ": "newyork",
    "kapitel": 2,
-   "start": 21.614,
-   "dauer": 2.414,
+   "start": 28.098,
+   "dauer": 2.366,
    "emotion": "erzaehlend",
    "text": "Ein Bild von dir am Fenster ging um die Welt."
   },
   {
-   "nr": 8,
+   "nr": 10,
    "typ": "handy",
    "kapitel": 2,
-   "start": 24.028,
-   "dauer": 3.614,
+   "start": 30.464,
+   "dauer": 3.542,
    "emotion": "erzaehlend",
    "text": "Dann rief Doktor Winter an. Sie kannte deine Adresse."
   },
   {
-   "nr": 9,
-   "typ": "tuer",
-   "kapitel": 3,
-   "start": 27.642,
-   "dauer": 3.638,
-   "emotion": "erzaehlend",
-   "text": "Um halb neun kommt Lea aus der Nachtschicht. Mit einem Ausdruck."
-  },
-  {
-   "nr": 10,
-   "typ": "gesicht",
-   "kapitel": 3,
-   "start": 31.28,
-   "dauer": 3.566,
-   "emotion": "erzaehlend",
-   "text": "„Gestern um 7:50 rief mich eine Doktor Winter an.“"
-  },
-  {
    "nr": 11,
-   "typ": "objekt",
+   "typ": "supermarkt",
    "kapitel": 3,
-   "start": 34.846,
-   "dauer": 4.31,
-   "emotion": "erklaerend",
-   "text": "Die Brandmelder in deinem *Keller* sollten abgeschaltet werden. Für einen Messbetrieb."
+   "start": 34.006,
+   "dauer": 3.782,
+   "emotion": "erzaehlend",
+   "text": "Tag zwei. Im Supermarkt gibt es Wasser nur noch rationiert."
   },
   {
    "nr": 12,
-   "typ": "gesicht",
+   "typ": "tuer",
    "kapitel": 3,
-   "start": 39.156,
-   "dauer": 2.702,
-   "emotion": "ernst",
-   "text": "Von 7:55 bis 8:30 Uhr."
+   "start": 37.788,
+   "dauer": 3.566,
+   "emotion": "erzaehlend",
+   "text": "Um halb neun kommt Lea aus der Nachtschicht. Mit einem Ausdruck."
   },
   {
    "nr": 13,
    "typ": "gesicht",
    "kapitel": 3,
-   "start": 41.858,
-   "dauer": 4.886,
+   "start": 41.354,
+   "dauer": 3.638,
+   "emotion": "erzaehlend",
+   "text": "„Gestern um 7:50 rief mich eine Doktor Winter an.“"
+  },
+  {
+   "nr": 14,
+   "typ": "objekt",
+   "kapitel": 3,
+   "start": 44.992,
+   "dauer": 4.622,
+   "emotion": "erklaerend",
+   "text": "Die Brandmelder in deinem *Keller* sollten abgeschaltet werden. Für einen Messbetrieb."
+  },
+  {
+   "nr": 15,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 49.614,
+   "dauer": 2.894,
+   "emotion": "ernst",
+   "text": "Von 7:55 bis 8:30 Uhr."
+  },
+  {
+   "nr": 16,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 52.508,
+   "dauer": 4.766,
    "emotion": "ernst",
    "text": "„Mittendrin war 8:13“, sagt Lea. „Und ihr Projekt war *hier*.“"
   },
   {
-   "nr": 14,
+   "nr": 17,
    "typ": "kueche",
    "kapitel": 4,
-   "start": 46.744,
-   "dauer": 2.51,
+   "start": 57.274,
+   "dauer": 2.966,
    "emotion": "erzaehlend",
    "text": "Ein Projekt in deinem Keller."
   },
   {
-   "nr": 15,
+   "nr": 18,
    "typ": "handy",
    "kapitel": 4,
-   "start": 49.254,
-   "dauer": 4.838,
+   "start": 60.24,
+   "dauer": 5.006,
    "emotion": "erzaehlend",
    "text": "An der Meldung hängt eine Datei: „Messplan S7, Projekt Spiegel“."
   },
   {
-   "nr": 16,
+   "nr": 19,
    "typ": "handy",
    "kapitel": 4,
-   "start": 54.092,
-   "dauer": 4.67,
+   "start": 65.246,
+   "dauer": 4.598,
    "emotion": "erzaehlend",
    "text": "Lea öffnet die Dateieigenschaften. Erstellt am 21. Oktober."
   },
   {
-   "nr": 17,
+   "nr": 20,
    "typ": "objekt",
    "kapitel": 4,
-   "start": 58.762,
-   "dauer": 3.83,
+   "start": 69.844,
+   "dauer": 4.286,
    "emotion": "erklaerend",
    "text": "Echter Fakt: Dateien speichern oft unsichtbar, wann sie erstellt wurden."
   },
   {
-   "nr": 18,
+   "nr": 21,
    "typ": "gesicht",
    "kapitel": 4,
-   "start": 62.592,
-   "dauer": 3.782,
+   "start": 74.13,
+   "dauer": 3.902,
    "emotion": "ernst",
    "text": "Die Datei ist drei Wochen *alt*. Älter als das Ereignis."
-  },
-  {
-   "nr": 19,
-   "typ": "gesicht",
-   "kapitel": 5,
-   "start": 66.374,
-   "dauer": 3.542,
-   "emotion": "erzaehlend",
-   "text": "Der Wagen kommt in einer Stunde. Aber Lea scrollt weiter."
-  },
-  {
-   "nr": 20,
-   "typ": "handy",
-   "kapitel": 5,
-   "start": 69.916,
-   "dauer": 3.638,
-   "emotion": "erzaehlend",
-   "text": "Seite drei: eine Liste. Überschrift: „*Ankerpersonen*“."
-  },
-  {
-   "nr": 21,
-   "typ": "handy",
-   "kapitel": 5,
-   "start": 73.554,
-   "dauer": 4.742,
-   "emotion": "erzaehlend",
-   "text": "Erste Zeile: Brandt, Alex. Kastanienweg 7. Dritter Stock."
   },
   {
    "nr": 22,
    "typ": "gesicht",
    "kapitel": 5,
-   "start": 78.296,
-   "dauer": 2.606,
+   "start": 78.032,
+   "dauer": 3.686,
+   "emotion": "erzaehlend",
+   "text": "Der Wagen kommt in einer Stunde. Aber Lea scrollt weiter."
+  },
+  {
+   "nr": 23,
+   "typ": "handy",
+   "kapitel": 5,
+   "start": 81.718,
+   "dauer": 4.31,
+   "emotion": "erzaehlend",
+   "text": "Seite drei: eine Liste. Überschrift: „*Ankerpersonen*“."
+  },
+  {
+   "nr": 24,
+   "typ": "handy",
+   "kapitel": 5,
+   "start": 86.028,
+   "dauer": 4.67,
+   "emotion": "erzaehlend",
+   "text": "Erste Zeile: Brandt, Alex. Kastanienweg 7. Dritter Stock."
+  },
+  {
+   "nr": 25,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 90.698,
+   "dauer": 2.63,
    "emotion": "spannend",
    "text": "Geschrieben drei Wochen *vor* dem Ereignis."
   },
   {
-   "nr": 23,
+   "nr": 26,
    "typ": "gesicht",
    "kapitel": 5,
-   "start": 80.902,
-   "dauer": 3.878,
+   "start": 93.328,
+   "dauer": 3.902,
    "emotion": "ernst",
    "text": "„Sie will dich nicht retten“, sagt Lea. „Sie hat dich *ausgesucht*.“"
   },
   {
-   "nr": 24,
+   "nr": 27,
    "typ": "titel",
    "kapitel": 5,
-   "start": 84.78,
+   "start": 97.23,
    "dauer": 1.0,
    "emotion": null,
    "text": ""
   },
   {
-   "nr": 25,
+   "nr": 28,
    "typ": "objekt",
    "kapitel": 6,
-   "start": 85.78,
-   "dauer": 3.326,
+   "start": 98.23,
+   "dauer": 3.278,
    "emotion": "erklaerend",
    "text": "Frage: Woran sah Lea, dass die Datei alt ist?"
   },
   {
-   "nr": 26,
+   "nr": 29,
    "typ": "objekt",
    "kapitel": 6,
-   "start": 89.106,
-   "dauer": 3.542,
+   "start": 101.508,
+   "dauer": 3.758,
    "emotion": "erklaerend",
    "text": "Antwort: Am Erstellungsdatum in den Dateieigenschaften."
   },
   {
-   "nr": 27,
+   "nr": 30,
    "typ": "titel",
    "kapitel": 6,
-   "start": 92.648,
-   "dauer": 2.39,
+   "start": 105.266,
+   "dauer": 2.51,
    "emotion": "erzaehlend",
    "text": "Was hättest du gemacht? Schreib es in die Kommentare."
   }

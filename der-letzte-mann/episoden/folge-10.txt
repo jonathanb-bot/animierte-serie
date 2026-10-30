@@ -1,79 +1,82 @@
 # Folge 10: Die Stimme
+@musik musik/folge-10.mp3
+@musik_lautstaerke 1
+@whoosh aus
 @serie Der letzte Mann
 @mund zitate
 @look 0
 
 == Kapitel 1: Hallo? ==
 @zeit nacht
-@hud tag=2 zeit=23:13 handy=83/100% netz=0/4 konsole=66/100%+ konsole_text=NETZ
+@hud tag=2 zeit=23:13 handy=83/100% netz=0/4 konsole=66/100%+
 // Funkwecker 23:12:59, Alex' Finger über der Taste
-[keller ansicht=raum nah=funkwecker du] Stell dir vor, es gibt noch jemanden wie dich. Nur in einer *anderen* Welt.
+[keller ansicht=raum licht=an display="NETZ|FENSTER 23:13:00" l1=an du fokus=340,1190 zoom=2.4 druecken funkwecker=23:12:59] Stell dir vor, es gibt noch jemanden wie dich. Nur in einer *anderen* Welt.
 // Raum S7: Lea an der Konsole, den Funkwecker vor sich
-[keller ansicht=raum nah=funkwecker lea] Lea zählt die Sekunden mit. Drei. Zwei. Eins.
+[keller ansicht=raum licht=an display="NETZ|FENSTER 23:13:00" l1=an lea funkwecker=23:12:59] Lea zählt die Sekunden mit. Drei. Zwei. Eins.
 // Funkwecker springt auf 23:13:00, das blaue Lämpchen geht an, das Projekttelefon klingelt
-[keller ansicht=raum nah=telefon l2=an] 23:13 Uhr. Du drückst. Blaues Licht. Das alte Telefon klingelt.
+[keller ansicht=raum licht=an display="NETZ|FENSTER 23:13:00" l1=an fokus=330,1035 zoom=2.4 l2=an klingelt funkwecker=23:13:00] 23:13 Uhr. Du drückst. Blaues Licht. Das alte Telefon klingelt.
 // Nahaufnahme: Alex, Hörer am Ohr
-[gesicht du ort=keller neutral] Eine Frauenstimme, dünn und rauschend: „Hallo? Hier ist *Nika*.“
+[gesicht du ort=keller ansicht=raum licht=konsole neutral] Eine Frauenstimme, dünn und rauschend: „Hallo? Hier ist *Nika*.“
 // Nahaufnahme: Alex, froh
-[gesicht du ort=keller froh] Du bist nicht mehr der Einzige.
-[titel oben="Folge 10" gross="DER LETZTE MANN" unten="Die Stimme" dauer=1 hud=false]
+[gesicht du ort=keller ansicht=raum licht=konsole froh] Du bist nicht mehr der Einzige.
+[titel oben="Folge 10" gross="DER LETZTE MANN" unten="Die Stimme" farbe=#14213d akzent=#e2b443 groesse=120 dauer=1 hud=false]
 
 == Was bisher geschah ==
 // Skyline, halb hell, halb dunkel
-[skyline hud=false] Um 8:13 wurde die Welt geteilt. Hier Frauen, drüben Männer.
+[skyline rauch=false hud=false] Um 8:13 wurde die Welt geteilt. Hier Frauen, drüben Männer.
 // Nahaufnahme: Alex
-[gesicht du ort=keller neutral hud=false] Jede Seite hat eine Ausnahme. Hier du, drüben eine Frau.
+[gesicht du ort=wohnung neutral hud=false] Jede Seite hat eine Ausnahme. Hier du, drüben eine Frau.
 // Funkwecker
-[keller ansicht=raum nah=funkwecker hud=false] Um 23:13 Uhr versuchst du es wieder.
+[keller ansicht=raum licht=konsole fokus=215,700 zoom=2.6 funkwecker=23:12:59 hud=false] Um 23:13 Uhr versuchst du es wieder.
 
 == Kapitel 2: Zehn Sekunden mit Nika ==
 @zeit nacht
-@hud tag=2 zeit=23:13 handy=83/100% netz=0/4 konsole=66/100%+ konsole_text=NETZ
+@hud tag=2 zeit=23:13 handy=83/100% netz=0/4 konsole=66/100%+
 // Nahaufnahme: Alex, spricht schnell
-[gesicht du ort=keller neutral] „Alex. Keller, Kastanienweg 7.“
+[gesicht du ort=keller ansicht=raum licht=konsole neutral] „Alex. Keller, Kastanienweg 7.“
 // Nahaufnahme: Alex, lauscht
-[gesicht du ort=keller misstrauisch] „Nika. Gleicher Keller. Andere *Welt*.“
+[gesicht du ort=keller ansicht=raum licht=konsole misstrauisch] „Nika. Gleicher Keller. Andere *Welt*.“
 // Infokarte: Frequenzband, nur der Bereich 300–3400 Hz ist hell
-[objekt gross="Echter Fakt"] Echter Fakt: Alte Telefone übertragen nur 300 bis 3400 Hertz. Stimmen klingen dünn.
+[objekt objekte="frequenz:Telefonband" farbe=#1e2f45] Alte Telefone übertragen nur 300 bis 3400 Hertz. Stimmen klingen dünn.
 // Nahaufnahme: Alex, verlegen
-[gesicht du ort=keller muede] Die Stimme kennst du: Hörstudie. Du, mit Kaffee auf der Hose.
+[gesicht du ort=keller ansicht=raum licht=konsole muede] Die Stimme kennst du: Hörstudie. Du, mit Kaffee auf der Hose.
 // Nahaufnahme: Alex, Schreck
-[gesicht du ort=keller schreck] Dann sagt sie: „Ich weiß, wie wir die Tür *öffnen*.“
+[gesicht du ort=keller ansicht=raum licht=konsole schreck] Dann sagt sie: „Ich weiß, wie wir die Tür *öffnen*.“
 // SCHNITT: Ende Teil 1
 
 == Kapitel 3: Wer war an der Tür? ==
 @zeit nacht
-@hud tag=3 zeit=00:13 handy=79/100% netz=0/4 konsole=86/100%+ konsole_text=NETZ
+@hud tag=3 zeit=00:13 handy=79/100% netz=0/4 konsole=86/100%+
 // Tokio-Kreuzung am Morgen, Menschen halten Fotos ihrer Angehörigen hoch
-[tokio k4] In Tokio ist Morgen. Menschen halten Fotos hoch.
+[tokio zeit=morgen fotos schirm=fotos menge=12] In Tokio ist Morgen. Menschen halten Fotos hoch.
 // Funkwecker 00:13:00, das blaue Lämpchen
-[keller ansicht=raum nah=funkwecker l2=an] 0:13 Uhr. Nika spricht schnell.
+[keller ansicht=raum licht=an display="VERBINDUNG|GEGENSTELLE S7 (B)" l1=an l2=an l3=an fokus=330,1035 zoom=2.4 funkwecker=00:13:00] 0:13 Uhr. Nika spricht schnell.
 // Nahaufnahme: Alex, Hörer am Ohr
-[gesicht du ort=keller neutral] „1:13 Uhr. Beide an die Kellertür. Auf drei drücken wir die Klinke.“
+[gesicht du ort=keller ansicht=raum licht=konsole neutral] „1:13 Uhr. Beide an die Kellertür. Auf drei drücken wir die Klinke.“
 // Nahaufnahme: Alex, misstrauisch
-[gesicht du ort=keller misstrauisch] „Warst du um 22:58 an der Tür?“ „Nein“, sagt Nika. „Da war ich *oben*.“
+[gesicht du ort=keller ansicht=raum licht=konsole misstrauisch] „Warst du um 22:58 an der Tür?“ „Nein“, sagt Nika. „Da war ich *oben*.“
 // Konsole nah: Das dritte Lämpchen leuchtet weiter
-[keller ansicht=raum nah=konsole l3=an] Wer war es dann? Das dritte Lämpchen leuchtet noch.
+[keller ansicht=raum licht=an display="VERBINDUNG|GEGENSTELLE S7 (B)" l1=an l2=an l3=an fokus=330,1035 zoom=2.4 l3=an] Wer war es dann? Das dritte Lämpchen leuchtet noch.
 
 == Kapitel 4: Auf drei ==
 @zeit nacht
-@hud tag=3 zeit=01:13 handy=75/100% netz=0/4 konsole=100/100% konsole_text=NETZ
+@hud tag=3 zeit=01:13 handy=75/100% netz=0/4 konsole=100/100%
 // Raum S7 im vollen Licht: Lea an der Konsole, Alex mit dem Hörer an der Tür
-[keller ansicht=raum nah=telefon licht=an lea du] 1:13 Uhr. Lea an der Konsole. Du vor der Kellertür.
+[keller ansicht=raum licht=an display="NETZ · AKKU 100 %|FENSTER 01:13:00" l1=an l2=an l3=an du lea hoerer_ab du:lauscht pos=880,300] 1:13 Uhr. Lea an der Konsole. Du vor der Kellertür.
 // Konsole nah: Das dritte Lämpchen blinkt dreimal
-[keller ansicht=raum nah=konsole l3=blinkt3] Das Lämpchen blinkt dreimal. Ihr seid nur *zwei*.
+[keller ansicht=raum licht=an display="NETZ · AKKU 100 %|FENSTER 01:13:00" l1=an l2=an l3=an fokus=330,1035 zoom=2.4 l3=blinkt3] Das Lämpchen blinkt dreimal. Ihr seid nur *zwei*.
 // Nahaufnahme: Alex, Hörer am Ohr
-[gesicht du ort=keller neutral] Am Telefon sagt Nika: „Auf drei. Wir öffnen gleichzeitig.“
+[gesicht du ort=keller ansicht=raum licht=konsole neutral] Am Telefon sagt Nika: „Auf drei. Wir öffnen gleichzeitig.“
 // Alex' Hand legt sich auf die Klinke
-[keller ansicht=raum du] Du legst deine Hand auf die Klinke.
+[keller ansicht=raum licht=an display="NETZ · AKKU 100 %|FENSTER 01:13:00" l1=an l2=an l3=an du klinke fokus=860,1090 zoom=1.35] Du legst deine Hand auf die Klinke.
 // Messkammertür: Sie vibriert leicht unter drei Schlägen
-[keller ansicht=raum nah=messkammer klopfen] Von der anderen Seite klopft *jemand*.
+[keller ansicht=raum licht=an display="NETZ · AKKU 100 %|FENSTER 01:13:00" l1=an l2=an l3=an fokus=860,1090 zoom=1.35 klopfen] Von der anderen Seite klopft *jemand*.
 // Nahaufnahme: Alex, Schreck
-[gesicht du ort=keller schreck klopfen] Nika flüstert: „Ich habe noch gar nicht geklopft.“
-[titel oben="Staffel 2" gross="Fortsetzung folgt" dauer=1 hud=false]
+[gesicht du ort=keller ansicht=raum licht=konsole schreck] Nika flüstert: „Ich habe noch gar nicht geklopft.“
+[titel oben="Staffel 2" gross="Fortsetzung folgt" farbe=#14213d akzent=#e2b443 groesse=110 dauer=1 hud=false]
 
 == Check ==
 @hud aus
-[objekt gross="Frage" farbe=#1e2f45] Frage: Warum klingen Stimmen am alten Telefon dünn?
-[objekt gross="Antwort" farbe=#1e3a2a] Antwort: Es überträgt nur 300 bis 3400 Hertz.
-[titel gross="Was hättest du|gemacht?" groesse=120 unten="Schreib es in die Kommentare"] Was hättest du gemacht? Schreib es in die Kommentare.
+[objekt objekte="ohr" gross="Frage" farbe=#1e2f45] Frage: Warum klingen Stimmen am alten Telefon dünn?
+[objekt objekte="gluehbirne" gross="Antwort" farbe=#1e3a2a] Antwort: Es überträgt nur 300 bis 3400 Hertz.
+[titel gross="Was hättest du|gemacht?" groesse=120 unten="Schreib es in die Kommentare" farbe=#14213d akzent=#e2b443] Was hättest du gemacht? Schreib es in die Kommentare.

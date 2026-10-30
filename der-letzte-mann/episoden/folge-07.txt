@@ -1,4 +1,7 @@
 # Folge 7: Zehn Sekunden
+@musik musik/folge-07.mp3
+@musik_lautstaerke 1
+@whoosh aus
 @serie Der letzte Mann
 @mund zitate
 @look 0
@@ -7,75 +10,75 @@
 @zeit tag
 @hud tag=2 zeit=13:13 handy=82/100% netz=0/4 konsole=33/100%
 // Alex mit dem Hörer am Ohr, die Konsole im Hintergrund
-[keller ansicht=raum nah=telefon du] Stell dir vor, du hast *zehn* Sekunden mit deinem Vater.
+[keller ansicht=raum licht=konsole display="FENSTER 13:13:00|VERBINDUNG" l1=an du hoerer_ab du:lauscht] Stell dir vor, du hast *zehn* Sekunden mit deinem Vater.
 // Konsole: Das blaue Lämpchen „VERBINDUNG“ geht an
-[keller ansicht=raum nah=konsole l2=an] 13:13 Uhr. Das blaue Lämpchen geht an. Es klingelt.
+[keller ansicht=raum licht=konsole display="FENSTER 13:13:00|VERBINDUNG" l1=an fokus=330,1035 zoom=2.4 l2=an] 13:13 Uhr. Das blaue Lämpchen geht an. Es klingelt.
 // Nahaufnahme: Alex, lauscht, Hörer am Ohr
-[gesicht du ort=keller misstrauisch] Ein Klicken. Rauschen. Dann: „*Alex*?“
+[gesicht du ort=keller ansicht=raum licht=konsole misstrauisch] Ein Klicken. Rauschen. Dann: „*Alex*?“
 // Nahaufnahme: Alex, froh und verzweifelt zugleich
-[gesicht du ort=keller froh] „Papa! Papa, hörst du mich?“
+[gesicht du ort=keller ansicht=raum licht=konsole froh] „Papa! Papa, hörst du mich?“
 // Konsole: Das blaue Lämpchen erlischt
-[keller ansicht=raum nah=konsole l2=aus] Stille. Die Leitung ist tot. Nach genau zehn Sekunden.
-[titel oben="Folge 7" gross="DER LETZTE MANN" unten="Zehn Sekunden" dauer=1 hud=false]
+[keller ansicht=raum licht=konsole display="FENSTER 13:13:00|VERBINDUNG" l1=an fokus=330,1035 zoom=2.4 l2=aus] Stille. Die Leitung ist tot. Nach genau zehn Sekunden.
+[titel oben="Folge 7" gross="DER LETZTE MANN" unten="Zehn Sekunden" farbe=#14213d akzent=#e2b443 groesse=120 dauer=1 hud=false]
 
 == Was bisher geschah ==
 // Skyline
-[skyline hud=false] Um 8:13 Uhr verschwanden alle Männer. Nur du bliebst.
+[skyline rauch=false hud=false] Um 8:13 Uhr verschwanden alle Männer. Nur du bliebst.
 // Raum S7: Konsole
-[keller ansicht=raum nah=konsole hud=false] Unter deinem Haus steht die Konsole von Projekt Spiegel.
+[keller ansicht=raum licht=konsole hud=false] Unter deinem Haus steht die Konsole von Projekt Spiegel.
 // Projekttelefon
-[keller ansicht=raum nah=telefon hud=false] Über ihr altes Telefon hast du deinen Vater angerufen.
+[keller ansicht=raum licht=konsole fokus=450,700 zoom=2.5 hud=false] Über ihr altes Telefon hast du deinen Vater angerufen.
 // Display
-[keller ansicht=raum nah=display hud=false] Die Konsole kündigte ein Fenster an: 13:13 Uhr.
+[keller ansicht=raum licht=konsole fokus=330,885 zoom=2.3 hud=false] Die Konsole kündigte ein Fenster an: 13:13 Uhr.
 
 == Kapitel 2: Immer um dreizehn ==
 @zeit tag
 @hud tag=2 zeit=13:20 handy=81/100% netz=0/4 konsole=33/100%
 // Tokio-Kreuzung bei Nacht, große Uhr 21:13, alle Bildschirme flackern
-[tokio k4] In Tokio flackerten gerade alle Bildschirme.
+[tokio zeit=nacht uhr=21:13 flackern k4] In Tokio flackerten gerade alle Bildschirme.
 // Nahaufnahme: Lea mit ihrer Karteikarte voller Uhrzeiten
-[gesicht lea ort=keller neutral] Lea vergleicht: Radio, Bildschirme, dein Anruf. Immer um *dreizehn* nach.
+[gesicht lea ort=keller ansicht=raum licht=konsole neutral] Lea vergleicht: Radio, Bildschirme, dein Anruf. Immer um *dreizehn* nach.
 // Infokarte: Weltuhr, Deutschland :13, Indien :43
-[objekt gross="Echter Fakt"] Echter Fakt: Indien ist eine halbe Stunde versetzt. Bei Minute 13 zeigt die Uhr dort Minute 43.
+[objekt objekte="weltuhr" farbe=#1e2f45] Indien ist eine halbe Stunde versetzt. Bei Minute 13 zeigt die Uhr dort Minute 43.
 // Display nah: „Nächstes Fenster: 14:13:00“, Nahaufnahme Alex
-[keller ansicht=raum nah=display du] Nächstes Fenster: 14:13 Uhr. Was sagst du in zehn *Sekunden*?
+[keller ansicht=raum licht=konsole display="AKKU 33 %|NÄCHSTES FENSTER|14:13:00" l1=an du fokus=330,885 zoom=2.3] Nächstes Fenster: 14:13 Uhr. Was sagst du in zehn *Sekunden*?
 // SCHNITT: Ende Teil 1
 
 == Kapitel 3: Die Karteikarte ==
 @zeit tag
 @hud tag=2 zeit=13:50 handy=79/100% netz=0/4 konsole=33/100%
 // Lea schreibt auf eine Karteikarte
-[keller ansicht=raum lea] Lea nimmt jeden Tag Notrufe an. Sie schreibt dir eine Karte.
+[keller ansicht=raum licht=konsole display="AKKU 33 %|NÄCHSTES FENSTER|14:13:00" l1=an lea] Lea nimmt jeden Tag Notrufe an. Sie schreibt dir eine Karte.
 // Karteikarte nah: „1. Wer  2. Wo  3. Eine Frage“
-[karte orte=haus,hausverwaltung route="haus>hausverwaltung"] „Wer bist du. Wo bist du. Eine Frage. Mehr nicht.“
+[objekt objekte="karteikarte" farbe=#1e2f45] „Wer bist du. Wo bist du. Eine Frage. Mehr nicht.“
 // Nahaufnahme: Alex, murmelt, zählt mit den Fingern
-[gesicht du ort=keller neutral] Du übst. Neun Sekunden. Acht.
+[gesicht du ort=keller ansicht=raum licht=konsole neutral] Du übst. Neun Sekunden. Acht.
 // Nahaufnahme: Alex, müde über sich selbst
-[gesicht du ort=keller muede] Fürs Flirten hast du nie so viel geübt.
+[gesicht du ort=keller ansicht=raum licht=konsole muede] Fürs Flirten hast du nie so viel geübt.
 // Nahaufnahme: Lea, lächelt kurz
-[gesicht lea ort=keller neutral] Lea lächelt. Zum ersten Mal seit gestern.
+[gesicht lea ort=keller ansicht=raum licht=konsole froh] Lea lächelt. Zum ersten Mal seit gestern.
 // Konsole: 14:12:50, Alex dreht die Wählscheibe
-[keller ansicht=raum nah=konsole du] 14:12 Uhr. Du wählst. Dein Herz schlägt bis zum Hals.
+[keller ansicht=raum licht=konsole display="AKKU 33 %|NÄCHSTES FENSTER|14:13:00" l1=an du hoerer_ab du:lauscht] 14:12 Uhr. Du wählst. Dein Herz schlägt bis zum Hals.
 
 == Kapitel 4: Die Frau ==
 @zeit tag
 @hud tag=2 zeit=14:13 handy=77/100% netz=0/4 konsole=28/100%
 // Konsole: blaues Lämpchen an, Alex mit dem Hörer
-[keller ansicht=raum nah=telefon l2=an du] 14:13 Uhr. Er nimmt sofort ab.
+[keller ansicht=raum licht=konsole display="FENSTER 14:13:00|VERBINDUNG" l1=an du fokus=330,1035 zoom=2.4 hoerer_ab du:lauscht] 14:13 Uhr. Er nimmt sofort ab.
 // Nahaufnahme: Alex, spricht schnell
-[gesicht du ort=keller neutral] „Papa, ich bin's! Im Keller, Kastanienweg 7!“
+[gesicht du ort=keller ansicht=raum licht=konsole neutral] „Papa, ich bin's! Im Keller, Kastanienweg 7!“
 // Nahaufnahme: Alex, Hörer am Ohr
-[gesicht du ort=keller neutral] „Alex! Hier sind alle *Frauen* weg!“
+[gesicht du ort=keller ansicht=raum licht=konsole neutral] „Alex! Hier sind alle *Frauen* weg!“
 // Nahaufnahme: Alex, Schreck
-[gesicht du ort=keller schreck] Alle Frauen. Bei ihm ist es genau *umgekehrt*.
+[gesicht du ort=keller ansicht=raum licht=konsole schreck] Alle Frauen. Bei ihm ist es genau *umgekehrt*.
 // Nahaufnahme: Alex, lauscht angestrengt
-[gesicht du ort=keller misstrauisch] Dann: „Hier gibt es eine Frau, die eigentlich nicht hier sein dürfte.“
+[gesicht du ort=keller ansicht=raum licht=konsole misstrauisch] Dann: „Hier gibt es eine Frau, die eigentlich nicht hier sein dürfte.“
 // Konsole: Das blaue Lämpchen erlischt
-[keller ansicht=raum nah=konsole l2=aus] Die Leitung bricht ab.
-[titel oben="Folge 8: Du warst nicht vorgesehen" gross="Fortsetzung folgt" dauer=1 hud=false]
+[keller ansicht=raum licht=konsole display="FENSTER 14:13:00|VERBINDUNG" l1=an fokus=330,1035 zoom=2.4 l2=aus] Die Leitung bricht ab.
+[titel oben="Folge 8: Du warst nicht vorgesehen" gross="Fortsetzung folgt" farbe=#14213d akzent=#e2b443 groesse=110 dauer=1 hud=false]
 
 == Check ==
 @hud aus
-[objekt gross="Frage" farbe=#1e2f45] Frage: Bei dir ist Minute 13. Welche Minute ist in Indien?
-[objekt gross="Antwort" farbe=#1e3a2a] Antwort: Minute 43, eine halbe Stunde versetzt.
-[titel gross="Was hättest du|gemacht?" groesse=120 unten="Schreib es in die Kommentare"] Was hättest du gemacht? Schreib es in die Kommentare.
+[objekt objekte="ohr" gross="Frage" farbe=#1e2f45] Frage: Bei dir ist Minute 13. Welche Minute ist in Indien?
+[objekt objekte="gluehbirne" gross="Antwort" farbe=#1e3a2a] Antwort: Minute 43, eine halbe Stunde versetzt.
+[titel gross="Was hättest du|gemacht?" groesse=120 unten="Schreib es in die Kommentare" farbe=#14213d akzent=#e2b443] Was hättest du gemacht? Schreib es in die Kommentare.
