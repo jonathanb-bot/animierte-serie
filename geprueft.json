@@ -677,37 +677,37 @@
    "ok": true,
    "bild_s": 43.37,
    "ton_s": 43.34,
-   "lufs": -15.4
+   "lufs": -16.4
   },
   "der-letzte-mann/folge-01-teil-2.mp4": {
    "ok": true,
    "bild_s": 41.6,
    "ton_s": 41.62,
-   "lufs": -15.1
+   "lufs": -16.2
   },
   "der-letzte-mann/folge-02-teil-1.mp4": {
    "ok": true,
    "bild_s": 52.93,
    "ton_s": 52.91,
-   "lufs": -14.9
+   "lufs": -16.0
   },
   "der-letzte-mann/folge-02-teil-2.mp4": {
    "ok": true,
    "bild_s": 43.53,
    "ton_s": 43.55,
-   "lufs": -14.9
+   "lufs": -16.0
   },
   "der-letzte-mann/folge-03-teil-1.mp4": {
    "ok": true,
    "bild_s": 53.6,
    "ton_s": 53.58,
-   "lufs": -15.0
+   "lufs": -17.1
   },
   "der-letzte-mann/folge-03-teil-2.mp4": {
    "ok": true,
    "bild_s": 46.73,
    "ton_s": 46.75,
-   "lufs": -15.4
+   "lufs": -17.1
   },
   "der-letzte-mann/folge-04-teil-1.mp4": {
    "ok": true,
@@ -725,13 +725,13 @@
    "ok": true,
    "bild_s": 55.0,
    "ton_s": 54.98,
-   "lufs": -14.8
+   "lufs": -16.9
   },
   "der-letzte-mann/folge-05-teil-2.mp4": {
    "ok": true,
    "bild_s": 38.9,
    "ton_s": 38.91,
-   "lufs": -14.7
+   "lufs": -16.7
   },
   "der-letzte-mann/folge-06-teil-1.mp4": {
    "ok": true,
@@ -749,25 +749,25 @@
    "ok": true,
    "bild_s": 52.4,
    "ton_s": 52.37,
-   "lufs": -14.7
+   "lufs": -16.3
   },
   "der-letzte-mann/folge-07-teil-2.mp4": {
    "ok": true,
    "bild_s": 41.33,
    "ton_s": 41.32,
-   "lufs": -14.8
+   "lufs": -16.5
   },
   "der-letzte-mann/folge-08-teil-1.mp4": {
    "ok": true,
    "bild_s": 56.37,
    "ton_s": 56.36,
-   "lufs": -15.3
+   "lufs": -16.8
   },
   "der-letzte-mann/folge-08-teil-2.mp4": {
    "ok": true,
    "bild_s": 45.27,
    "ton_s": 45.29,
-   "lufs": -15.1
+   "lufs": -16.6
   },
   "der-letzte-mann/folge-09-teil-1.mp4": {
    "ok": true,
@@ -785,31 +785,31 @@
    "ok": true,
    "bild_s": 55.73,
    "ton_s": 55.71,
-   "lufs": -15.4
+   "lufs": -17.0
   },
   "der-letzte-mann/folge-10-teil-2.mp4": {
    "ok": true,
    "bild_s": 39.87,
    "ton_s": 39.88,
-   "lufs": -14.9
+   "lufs": -16.6
   },
   "der-letzte-mann-folgen/folge-01.mp4": {
    "ok": true,
    "bild_s": 84.93,
    "ton_s": 84.96,
-   "lufs": -15.2
+   "lufs": -16.3
   },
   "der-letzte-mann-folgen/folge-02.mp4": {
    "ok": true,
    "bild_s": 96.43,
    "ton_s": 96.46,
-   "lufs": -14.9
+   "lufs": -16.0
   },
   "der-letzte-mann-folgen/folge-03.mp4": {
    "ok": true,
    "bild_s": 100.3,
    "ton_s": 100.32,
-   "lufs": -15.1
+   "lufs": -17.1
   },
   "der-letzte-mann-folgen/folge-04.mp4": {
    "ok": true,
@@ -821,7 +821,7 @@
    "ok": true,
    "bild_s": 93.87,
    "ton_s": 93.89,
-   "lufs": -14.8
+   "lufs": -16.8
   },
   "der-letzte-mann-folgen/folge-06.mp4": {
    "ok": true,
@@ -833,13 +833,13 @@
    "ok": true,
    "bild_s": 93.7,
    "ton_s": 93.7,
-   "lufs": -14.7
+   "lufs": -16.3
   },
   "der-letzte-mann-folgen/folge-08.mp4": {
    "ok": true,
    "bild_s": 101.63,
    "ton_s": 101.65,
-   "lufs": -15.2
+   "lufs": -16.7
   },
   "der-letzte-mann-folgen/folge-09.mp4": {
    "ok": true,
@@ -851,7 +851,7 @@
    "ok": true,
    "bild_s": 95.57,
    "ton_s": 95.59,
-   "lufs": -15.1
+   "lufs": -16.8
   }
  },
  "serien": {
