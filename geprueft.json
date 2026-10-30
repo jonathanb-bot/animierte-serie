@@ -681,8 +681,8 @@
   },
   "der-letzte-mann/folge-01-teil-2.mp4": {
    "ok": true,
-   "bild_s": 51.37,
-   "ton_s": 51.39,
+   "bild_s": 41.6,
+   "ton_s": 41.62,
    "lufs": -15.1
   },
   "der-letzte-mann/folge-02-teil-1.mp4": {
@@ -693,8 +693,8 @@
   },
   "der-letzte-mann/folge-02-teil-2.mp4": {
    "ok": true,
-   "bild_s": 52.7,
-   "ton_s": 52.72,
+   "bild_s": 43.53,
+   "ton_s": 43.55,
    "lufs": -14.9
   },
   "der-letzte-mann/folge-03-teil-1.mp4": {
@@ -705,9 +705,9 @@
   },
   "der-letzte-mann/folge-03-teil-2.mp4": {
    "ok": true,
-   "bild_s": 55.03,
-   "ton_s": 55.05,
-   "lufs": -15.3
+   "bild_s": 46.73,
+   "ton_s": 46.75,
+   "lufs": -15.4
   },
   "der-letzte-mann/folge-04-teil-1.mp4": {
    "ok": true,
@@ -717,9 +717,9 @@
   },
   "der-letzte-mann/folge-04-teil-2.mp4": {
    "ok": true,
-   "bild_s": 48.37,
-   "ton_s": 48.35,
-   "lufs": -15.3
+   "bild_s": 40.23,
+   "ton_s": 40.22,
+   "lufs": -15.2
   },
   "der-letzte-mann/folge-05-teil-1.mp4": {
    "ok": true,
@@ -729,8 +729,8 @@
   },
   "der-letzte-mann/folge-05-teil-2.mp4": {
    "ok": true,
-   "bild_s": 49.7,
-   "ton_s": 49.71,
+   "bild_s": 38.9,
+   "ton_s": 38.91,
    "lufs": -14.7
   },
   "der-letzte-mann/folge-06-teil-1.mp4": {
@@ -741,8 +741,8 @@
   },
   "der-letzte-mann/folge-06-teil-2.mp4": {
    "ok": true,
-   "bild_s": 50.6,
-   "ton_s": 50.59,
+   "bild_s": 41.9,
+   "ton_s": 41.89,
    "lufs": -14.8
   },
   "der-letzte-mann/folge-07-teil-1.mp4": {
@@ -753,8 +753,8 @@
   },
   "der-letzte-mann/folge-07-teil-2.mp4": {
    "ok": true,
-   "bild_s": 52.77,
-   "ton_s": 52.76,
+   "bild_s": 41.33,
+   "ton_s": 41.32,
    "lufs": -14.8
   },
   "der-letzte-mann/folge-08-teil-1.mp4": {
@@ -765,8 +765,8 @@
   },
   "der-letzte-mann/folge-08-teil-2.mp4": {
    "ok": true,
-   "bild_s": 54.77,
-   "ton_s": 54.8,
+   "bild_s": 45.27,
+   "ton_s": 45.29,
    "lufs": -15.1
   },
   "der-letzte-mann/folge-09-teil-1.mp4": {
@@ -777,9 +777,9 @@
   },
   "der-letzte-mann/folge-09-teil-2.mp4": {
    "ok": true,
-   "bild_s": 47.8,
-   "ton_s": 47.81,
-   "lufs": -15.2
+   "bild_s": 38.07,
+   "ton_s": 38.09,
+   "lufs": -15.1
   },
   "der-letzte-mann/folge-10-teil-1.mp4": {
    "ok": true,
@@ -789,68 +789,68 @@
   },
   "der-letzte-mann/folge-10-teil-2.mp4": {
    "ok": true,
-   "bild_s": 49.8,
-   "ton_s": 49.82,
-   "lufs": -15.0
+   "bild_s": 39.87,
+   "ton_s": 39.88,
+   "lufs": -14.9
   },
   "der-letzte-mann-folgen/folge-01.mp4": {
    "ok": true,
-   "bild_s": 94.7,
-   "ton_s": 94.73,
+   "bild_s": 84.93,
+   "ton_s": 84.96,
    "lufs": -15.2
   },
   "der-letzte-mann-folgen/folge-02.mp4": {
    "ok": true,
-   "bild_s": 105.6,
-   "ton_s": 105.63,
+   "bild_s": 96.43,
+   "ton_s": 96.46,
    "lufs": -14.9
   },
   "der-letzte-mann-folgen/folge-03.mp4": {
    "ok": true,
-   "bild_s": 108.6,
-   "ton_s": 108.63,
+   "bild_s": 100.3,
+   "ton_s": 100.32,
    "lufs": -15.1
   },
   "der-letzte-mann-folgen/folge-04.mp4": {
    "ok": true,
-   "bild_s": 105.63,
-   "ton_s": 105.62,
+   "bild_s": 97.5,
+   "ton_s": 97.49,
    "lufs": -15.2
   },
   "der-letzte-mann-folgen/folge-05.mp4": {
    "ok": true,
-   "bild_s": 104.67,
-   "ton_s": 104.69,
+   "bild_s": 93.87,
+   "ton_s": 93.89,
    "lufs": -14.8
   },
   "der-letzte-mann-folgen/folge-06.mp4": {
    "ok": true,
-   "bild_s": 100.27,
-   "ton_s": 100.27,
+   "bild_s": 91.57,
+   "ton_s": 91.56,
    "lufs": -15.1
   },
   "der-letzte-mann-folgen/folge-07.mp4": {
    "ok": true,
-   "bild_s": 105.13,
-   "ton_s": 105.13,
+   "bild_s": 93.7,
+   "ton_s": 93.7,
    "lufs": -14.7
   },
   "der-letzte-mann-folgen/folge-08.mp4": {
    "ok": true,
-   "bild_s": 111.13,
-   "ton_s": 111.16,
+   "bild_s": 101.63,
+   "ton_s": 101.65,
    "lufs": -15.2
   },
   "der-letzte-mann-folgen/folge-09.mp4": {
    "ok": true,
-   "bild_s": 102.17,
-   "ton_s": 102.18,
+   "bild_s": 92.43,
+   "ton_s": 92.46,
    "lufs": -15.0
   },
   "der-letzte-mann-folgen/folge-10.mp4": {
    "ok": true,
-   "bild_s": 105.5,
-   "ton_s": 105.53,
+   "bild_s": 95.57,
+   "ton_s": 95.59,
    "lufs": -15.1
   }
  },
