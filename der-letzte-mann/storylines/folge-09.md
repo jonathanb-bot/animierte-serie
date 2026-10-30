@@ -41,7 +41,7 @@ KAPITEL 3: Zwei Sekunden | keller (raum), bahnhof, objekt | Alex, Lea | Nacht | 
 * Bahnhof bei Nacht, leer, die Bahnsteiganzeige flackert – Am Bahnhof flackert die Anzeige.
 * Display nah: „Gegenstelle verpasst (−2 s)“ – „Verpasst.“ Zwei Sekunden. Deine Handyuhr geht ohne Netz nach.
 * Lea stellt ihren Funkwecker auf die Konsole – Lea holt ihren Funkwecker.
-* Infokarte: Funkturm bei Frankfurt, Wellen über Europa, „ca. 2000 km“ – Echter Fakt: Funkuhren holen die Zeit von einem Sender bei Frankfurt. Reichweite: 2000 Kilometer.
+* Infokarte: Funkturm bei Frankfurt, Wellen über Europa, „ca. 2000 km“ – Funkuhren holen die Zeit von einem Sender bei Frankfurt. Reichweite: 2000 Kilometer.
 (Haken am Ende: Klappt es um 23:13?)
 
 KAPITEL 4: Das dritte Lämpchen | keller (raum), gesicht | Alex, Lea | Nacht | Anzeige: Tag 2, 22:58, HANDY 84 %, NETZ 0/4, KONSOLE 61 % + NETZ

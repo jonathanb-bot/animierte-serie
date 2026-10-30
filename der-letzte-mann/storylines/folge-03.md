@@ -28,7 +28,7 @@ KAPITEL 2: Unscharf | handy, gesicht, objekt | Alex, Lea | Tag | Anzeige: Tag 1,
 * Handy: Das Bild ist stark vergrößert, nur Pixel – Das Bild ist grob. Keiner erkennt dich.
 * Skyline: Hubschrauber kreisen über der Stadt – Über der Stadt kreisen Hubschrauber. Alle suchen den Pixelhaufen.
 * Nahaufnahme: Lea – Lea erkennt dich sofort. Sie kennt dich ja.
-* Infokarte: unscharfes Gesicht, daneben ein Häkchen bei „bekannt“ – Echter Fakt: Bekannte Gesichter erkennen wir sogar auf miesen Videos.
+* Infokarte: unscharfes Gesicht, daneben ein Häkchen bei „bekannt“ – Bekannte Gesichter erkennen wir sogar auf miesen Videos.
 * Infokarte: dasselbe Gesicht, Fragezeichen bei „fremd“ – Fremde kaum. Selbst erfahrene Polizisten nicht.
 * Nahaufnahme: Lea, besorgt – „Nur wer dich kennt, findet dich“, sagt Lea. „Oder wer dich *schon* sucht.“
 (Haken am Ende: Wer hat ihn schon vorher gesucht?)

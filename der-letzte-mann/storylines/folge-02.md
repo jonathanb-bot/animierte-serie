@@ -39,7 +39,7 @@ Laufzeit Teil 1: 56,3 Sekunden
 KAPITEL 3: Spiegelung | kueche, objekt, wohnung | Alex | Tag | Anzeige: Tag 1, 10:13, HANDY 66 % +, NETZ 2/4, KONSOLE nicht verbunden (grau)
 * Küche: Das Küchenradio rauscht, die Herduhr zeigt 10:13 – Um 10:13 rauscht das Radio. Wie schon um 9:13.
 * Straße vor dem Haus: Frauen schieben gemeinsam liegengebliebene Autos von der Kreuzung – Draußen schieben Frauen die liegengebliebenen Autos von der Kreuzung.
-* Infokarte: Glasscheibe, ein kleiner Pfeil wird zurückgeworfen, „ca. 4 %“ – Echter Fakt: Glas spiegelt pro Oberfläche etwa *vier Prozent* des Lichts.
+* Infokarte: Glasscheibe, ein kleiner Pfeil wird zurückgeworfen, „ca. 4 %“ – Glas spiegelt pro Oberfläche etwa *vier Prozent* des Lichts.
 * Infokarte: links Tag (Scheibe spiegelt den Himmel), rechts Nacht (helles Zimmer gut sichtbar) – Tagsüber sieht man darum fast nur Spiegelungen. Nachts *alles*.
 * Wohnung: Alex direkt an der Scheibe, prüft im Spiegelbild seine Frisur – Es ist Tag. Also prüfst du am Fenster deine Frisur.
 * Dach gegenüber: Die Wetterkamera dreht sich langsam zu dir – Gegenüber dreht sich eine Kamera.

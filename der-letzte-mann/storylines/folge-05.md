@@ -29,7 +29,7 @@ KAPITEL 2: Die Fotowand | strasse (Suchstelle), objekt | Lea, Komparsin k3 | Tag
 * Straße: Lea geht allein, Kapuze auf – Lea holt den Schlüssel allein. Draußen würde dich jede erkennen.
 * Bahnhof: Feldbetten auf dem Bahnsteig, Anzeige „Ersatzverkehr – Fahrerinnen gesucht“ – Am Bahnhof stehen jetzt Feldbetten. Die Anzeige sucht Fahrerinnen.
 * Suchstelle: lange Fotowand, Helferin mit Warnweste – Vor der Hausverwaltung: eine Suchstelle. Hunderte Fotos vermisster Männer.
-* Infokarte: Icon Suchdienst (Lupe mit Person), „seit 1945“ – Echter Fakt: Das Rote Kreuz sucht bis heute Kriegsvermisste. Tausende Anfragen pro Jahr.
+* Infokarte: Icon Suchdienst (Lupe mit Person), „seit 1945“ – Das Rote Kreuz sucht bis heute Kriegsvermisste. Tausende Anfragen pro Jahr.
 * Fotowand nah: Zettel „Nika S., 26“ mit gelbem Schal – Dann sieht Lea ein Foto, das nicht passt: eine *Frau*. Nika, 26.
 (Haken am Ende: Warum fehlt hier eine Frau?)
 

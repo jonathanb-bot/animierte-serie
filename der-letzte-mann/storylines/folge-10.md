@@ -26,7 +26,7 @@ WAS BISHER GESCHAH:
 KAPITEL 2: Zehn Sekunden mit Nika | keller (raum), objekt, gesicht | Alex, Nika (nur Stimme) | Nacht | Anzeige: Tag 2, 23:13, HANDY 83 %, NETZ 0/4, KONSOLE 66 % + NETZ
 * Nahaufnahme: Alex, spricht schnell – „Alex. Keller, Kastanienweg 7.“
 * Nahaufnahme: Alex, lauscht – „Nika. Gleicher Keller. Andere *Welt*.“
-* Infokarte: Frequenzband, nur der Bereich 300–3400 Hz ist hell – Echter Fakt: Alte Telefone übertragen nur 300 bis 3400 Hertz. Stimmen klingen dünn.
+* Infokarte: Frequenzband, nur der Bereich 300–3400 Hz ist hell – Alte Telefone übertragen nur 300 bis 3400 Hertz. Stimmen klingen dünn.
 * Nahaufnahme: Alex, verlegen – Die Stimme kennst du: Hörstudie. Du, mit Kaffee auf der Hose.
 * Nahaufnahme: Alex, Schreck – Dann sagt sie: „Ich weiß, wie wir die Tür *öffnen*.“
 (Haken am Ende: Wie öffnet man die Tür?)

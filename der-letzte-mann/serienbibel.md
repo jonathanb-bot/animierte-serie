@@ -334,7 +334,7 @@ Frisuren nur aus: kurz, lang, Kind, Glatze, wuschelig, Dutt. Wenige Farben, einf
 
 ### Faktenquellen (werden in jeder Storyline genauer belegt)
 
-Echte Fakten und erfundene Regeln werden immer getrennt erzählt, zum Beispiel: „Das Spiegelnetz ist erfunden. Echte alte Telefone …“
+Echte Fakten und erfundene Regeln werden getrennt erzählt: Der Fakt steht in einer eigenen Einstellung mit Infokarte, die erfundene Technik wird nie als Fakt erzählt. **Ohne die Einleitung „Echter Fakt“** (weder gesprochen noch als Überschrift auf der Karte, Jonathans feste Vorgabe für alle Serien).
 
 | Folge | Quelle |
 |---|---|
@@ -361,6 +361,7 @@ Echte Fakten und erfundene Regeln werden immer getrennt erzählt, zum Beispiel: 
 - **Titelkarte:** höchstens 1 s, ohne Text. Oben „Folge X“, groß „DER LETZTE MANN“, unten der Folgentitel.
 - **Was bisher geschah:** ab Folge 2, 12–15 s, 3 bis 5 kurze Sätze.
 - **Fortsetzung folgt:** ca. 1 s.
+- **Fakten:** nie mit „Echter Fakt“ einleiten, weder im Sprechtext noch auf der Infokarte. Der Fakt wird direkt erzählt („Cell Broadcast kommt an, selbst wenn …“).
 - **Check:** „Frage: …“ → „Antwort: …“ → „Was hättest du gemacht? Schreib es in die Kommentare.“, zusammen höchstens 14 s.
 - **Aufnahmen außerhalb deiner Wohnung:** in fast jeder Folge, meist 2–4 s. Jede zeigt einen Unterschied, liefert einen Hinweis oder macht das Ausmaß verständlich. Sie gehören zur Kapitelzeit.
 - **Teile:** Jede Folge wird in **zwei Teile von höchstens 60 s** geschnitten, immer nach Kapitel 2.

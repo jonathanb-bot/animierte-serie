@@ -27,7 +27,7 @@ WAS BISHER GESCHAH:
 
 KAPITEL 2: Zwei Welten | keller (raum), objekt, gesicht | Alex, Winter | Tag | Anzeige: Tag 2, 14:40, HANDY 76 %, NETZ 0/4, KONSOLE 28 %
 * Nahaufnahme: Winter, sachlich – „Wir wollten die Welt kurz spiegeln. Zum Messen.“
-* Infokarte: Satellit mit Uhr, „+38 µs pro Tag“ – Echter Fakt: GPS-Uhren gehen wegen der Relativität täglich 38 Mikrosekunden vor.
+* Infokarte: Satellit mit Uhr, „+38 µs pro Tag“ – GPS-Uhren gehen wegen der Relativität täglich 38 Mikrosekunden vor.
 * Infokarte: Karte mit Punkt, der um „10 km“ verrutscht – Unkorrigiert wäre GPS pro Tag zehn Kilometer daneben.
 * Nahaufnahme: Winter, besorgt – „Um 8:13 wurde daraus eine zweite *Welt*.“
 * Nahaufnahme: Alex, Schreck – Zwei Welten. Hier die Frauen. Drüben die Männer. Und Papa.

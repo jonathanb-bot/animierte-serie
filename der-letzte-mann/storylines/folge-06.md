@@ -26,7 +26,7 @@ WAS BISHER GESCHAH:
 KAPITEL 2: Kabel ab | keller (raum), objekt | Alex, Lea | Tag | Anzeige: Tag 2, 12:50, HANDY 84 %, NETZ 0/4, KONSOLE nicht verbunden (grau)
 * Raum S7, Lea leuchtet den Schrank ab – Der Raum heißt S7. Jeder Anruf an Papa läuft hierher.
 * Projekttelefon nah: beige, Wählscheibe, das Anschlusskabel sauber durchtrennt – Auf dem Schrank steht ein altes Telefon. Das Kabel ist *durchgeschnitten*.
-* Infokarte: altes Telefon, Leitung zur Vermittlungsstelle mit Blitz-Symbol – Echter Fakt: Alte Festnetztelefone bekamen Strom über die Leitung. Sogar bei Stromausfall.
+* Infokarte: altes Telefon, Leitung zur Vermittlungsstelle mit Blitz-Symbol – Alte Festnetztelefone bekamen Strom über die Leitung. Sogar bei Stromausfall.
 * Hörer nah, leises Rauschen – Ohne Kabel müsste es tot sein. Doch im Hörer *rauscht* es.
 (Haken am Ende: Wer versorgt dieses Telefon?)
 

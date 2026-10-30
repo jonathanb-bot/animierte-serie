@@ -21,7 +21,7 @@ KAPITEL 2: Keine Antwort | wohnung, handy, objekt | Alex, Thomas (nur Stimme) | 
 * Handy nah, Tonwelle der Ansage – „Hier ist Thomas. Ich bin gerade nicht erreichbar.“
 * Handy: Anrufliste, dreimal „Papa – Mailbox“ – Du rufst noch mal an. Und noch mal. Immer *dieselbe* Ansage.
 * Handy: Warnmeldung im Vollbild, rotes Warndreieck, schriller Ton – Dann schrillt dein Handy: eine *Warnung*.
-* Infokarte: Funkmast, Wellen gehen gleichzeitig an viele Handys, Überschrift „Cell Broadcast“ – Echter Fakt: Cell Broadcast kommt an, selbst wenn das Netz für Anrufe *überlastet* ist.
+* Infokarte: Funkmast, Wellen gehen gleichzeitig an viele Handys, Überschrift „Cell Broadcast“ – Cell Broadcast kommt an, selbst wenn das Netz für Anrufe *überlastet* ist.
 * Nahaufnahme: Alex, Angst, das Grinsen ist verschwunden – Die Männer sind weg. Du bist *geblieben*.
 (Haken am Ende: Warum ausgerechnet du? Und wo ist dein Vater?)
 

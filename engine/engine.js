@@ -44,6 +44,15 @@
     balken.forEach(([name, wert, max, einheit], i) => {
       const y = 92 + i * 46;
       ctx.font = "700 27px HUD"; ctx.fillStyle = "rgba(255,255,255,0.85)"; ctx.textAlign = "left"; ctx.fillText(name.toUpperCase(), 24, y);
+      // lange Beschriftungen (z. B. „KONSOLE“) schieben Wert und Balken nach rechts; kurze bleiben bei x = 150
+      const dx = Math.max(0, 24 + ctx.measureText(name.toUpperCase()).width + 10 - 150);
+      ctx.save(); ctx.translate(dx, 0);
+      try { balkenWert(name, wert, max, einheit, y); } finally { ctx.restore(); }
+    });
+    ctx.restore();
+  }
+  function balkenWert(name, wert, max, einheit, y) {
+    {
       // Text statt Wert, z.B. „nicht verbunden“
       if (wert == null) { ctx.fillStyle = "rgba(255,255,255,0.5)"; ctx.fillText(String(einheit).toUpperCase(), 150, y + 1); return; }
       // Empfang als vier Balken
@@ -60,8 +69,7 @@
       const farbe = ant < 0.25 ? "#d86a5e" : ant < 0.5 ? "#d9a35f" : name.toLowerCase().startsWith("wasser") ? "#6aa8cf" : "#78b593";
       if (ant > 0) box(150, y - 10, Math.max(20, 140 * ant), 20, 10, farbe);
       ctx.fillStyle = "#fff"; ctx.fillText(`${String(wert).replace(".", ",")}${einheit ? " " + einheit : ""}`, 304, y + 1);
-    });
-    ctx.restore();
+    }
   }
 
   // ---------- Untertitel ----------

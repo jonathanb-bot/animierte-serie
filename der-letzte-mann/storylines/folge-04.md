@@ -40,7 +40,7 @@ KAPITEL 3: Die Datei | kueche, handy, objekt | Alex, Lea | Morgen | Anzeige: Tag
 * Küche: Lea und Alex über ihr Handy gebeugt – Ein Projekt in deinem Keller.
 * Handy: PDF „Messplan S7 – Projekt SPIEGEL“ – An der Meldung hängt eine Datei: „Messplan S7, Projekt Spiegel“.
 * Handy: Dateieigenschaften, „Erstellt: 21.10., 14:02“ – Lea öffnet die Dateieigenschaften. Erstellt am 21. Oktober.
-* Infokarte: Datei mit kleinem Info-Etikett, Datum und Autorin – Echter Fakt: Dateien speichern oft unsichtbar, wann sie erstellt wurden.
+* Infokarte: Datei mit kleinem Info-Etikett, Datum und Autorin – Dateien speichern oft unsichtbar, wann sie erstellt wurden.
 * Nahaufnahme: Alex, besorgt – Die Datei ist drei Wochen *alt*. Älter als das Ereignis.
 (Haken am Ende: Was steht in der alten Datei?)
 

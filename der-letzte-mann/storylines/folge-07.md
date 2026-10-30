@@ -27,7 +27,7 @@ WAS BISHER GESCHAH:
 KAPITEL 2: Immer um dreizehn | tokio, keller (raum), objekt | Alex, Lea, Komparsin k4 | Tag (Tokio: Nacht) | Anzeige: Tag 2, 13:20, HANDY 81 %, NETZ 0/4, KONSOLE 33 %
 * Tokio-Kreuzung bei Nacht, große Uhr 21:13, alle Bildschirme flackern – In Tokio flackerten gerade alle Bildschirme.
 * Nahaufnahme: Lea mit ihrer Karteikarte voller Uhrzeiten – Lea vergleicht: Radio, Bildschirme, dein Anruf. Immer um *dreizehn* nach.
-* Infokarte: Weltuhr, Deutschland :13, Indien :43 – Echter Fakt: Indien ist eine halbe Stunde versetzt. Bei Minute 13 zeigt die Uhr dort Minute 43.
+* Infokarte: Weltuhr, Deutschland :13, Indien :43 – Indien ist eine halbe Stunde versetzt. Bei Minute 13 zeigt die Uhr dort Minute 43.
 * Display nah: „Nächstes Fenster: 14:13:00“, Nahaufnahme Alex – Nächstes Fenster: 14:13 Uhr. Was sagst du in zehn *Sekunden*?
 (Haken am Ende: Was sagst du deinem Vater in zehn Sekunden?)
 
