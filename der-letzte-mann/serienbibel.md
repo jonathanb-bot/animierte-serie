@@ -77,7 +77,7 @@ Es klingelt. Du streichst automatisch dein Shirt glatt. Vor der Tür steht deine
 - **Gespeicherte Muster:** A (Alex) und B (Nika) aus der Kalibrierung. Dazu **jede Stimme, die während eines Fensters über die Konsole spricht**. Das Display zeigt dann „Neues Muster gespeichert“.
 - **Notbetrieb:** Seit 08:13 läuft die Konsole auf ihrem eingebauten **Akku**. Der Netzstrom ist abgeschaltet: Im Hausverteiler im Kellerflur ist die Sicherung „S7“ heruntergeklappt und mit einer roten Plombe „PROJEKT SPIEGEL – NICHT EINSCHALTEN“ gesichert. Für den Messbetrieb lief die Konsole bewusst nur auf Akku, damit das Stromnetz die Messung nicht stört. Im Notbetrieb vermittelt sie Anrufe an Verschwundene nur an deren gespeicherte Ansage. Dabei klingt die Ansage auch leise aus dem Konsolenlautsprecher.
 - **Aufwecken:** Ein Anker drückt die Taste BEREIT. Das Display zeigt „Nächstes Fenster: 13:13:00“.
-- **Schlüsselschalter:** steht seit dem Ereignis auf BETRIEB. Auf SPERRE nimmt die Konsole keine Fenster an. Passende Schlüssel: Winters eigener Schlüssel und ein **kleiner Ersatzschlüssel „S7-S“ am Schlüsselbund der Hausverwaltung**, mit dem der Raum vermietet wurde. Er ist in Folge 5 und 6 zu sehen. In Folge 8 stellt Winter auf SPERRE und nimmt ihren Schlüssel mit. In Folge 9 entsperrt Lea mit dem Ersatzschlüssel.
+- **Schlüsselschalter:** steht seit dem Ereignis auf BETRIEB. Auf SPERRE nimmt die Konsole keine Fenster an. Passende Schlüssel: Winters eigener Schlüssel und ein **kleiner Ersatzschlüssel „S7-S“ am Schlüsselbund der Hausverwaltung**, mit dem der Raum vermietet wurde. Er ist in Folge 5 und 6 zu sehen. In Folge 8 stellt Winter beim Gehen (17:30) auf SPERRE und nimmt ihren Schlüssel mit. In Folge 9 entsperrt Lea mit dem Ersatzschlüssel.
 - **Verbinden:**
   - **Mit einem Telefon auf der anderen Seite:** Ein Anker drückt BEREIT und wählt vor dem Fenster eine Nummer. Um :13:00 klingelt es drüben.
   - **Mit der Gegenkonsole (S7 auf Seite B):** Ohne Nummer. Auf **beiden** Seiten muss ein Anker **in derselben Sekunde (:13:00)** BEREIT drücken. Wer eine Nummer gewählt hat, ist für dieses Fenster belegt.
@@ -121,11 +121,11 @@ Dann bleibt die Tür so lange offen, wie beide Anker die Klinke halten und Netzs
 
 | Frage | Festlegung | Folge |
 |---|---|---|
-| **Warum sind Alex und Nika als Ankerpersonen zurückgeblieben?** | Beide haben an der „Hörstudie“ am 20. Oktober teilgenommen. Ihre Muster wurden als Gegenpole gespeichert: Alex für Seite A, Nika für Seite B. Bei der Teilung wurde jede Seite an ihrem Anker festgemacht. | Andeutung 4 (Datei), Erinnerung an die Studie 4, Erklärung 8 |
+| **Warum sind Alex und Nika als Ankerpersonen zurückgeblieben?** | Beide haben an der „Hörstudie“ am 20. Oktober teilgenommen. Ihre Muster wurden als Gegenpole gespeichert: Alex für Seite A, Nika für Seite B. Bei der Teilung wurde jede Seite an ihrem Anker festgemacht. | Andeutung 4 (Datei), Erinnerung an die Studie 5, Erklärung 8 |
 | **Was wusste Winter vorher?** | Dass das Experiment Menschen theoretisch zwischen Weltversionen verschieben kann. Sie hat dieses Risiko kleingerechnet und nicht gemeldet. Dass es Ankerpersonen gibt, wer sie sind (Namen, Adressen, Telefonnummern, Studienfotos), und dass sie über Flyer in Häusern nahe den Knoten angeworben wurden, ohne zu erfahren, wofür. | 3, 4, 8 |
 | **Was erfährt Winter erst später?** | Dass die Teilung dauerhaft ist und nach dem Testmerkmal sortiert hat (ab 08:13). Dass die Anker wirklich geblieben sind (Alex: Tag 1, 11:41 durch das Webcam-Bild; Nika: Tag 2 durch das Protokoll von S7). Dass Alex S7 geweckt hat (Tag 2, 13:12, Alarm auf ihrem Tablet). Dass Nika jede Stunde wählt (Tag 2, 14:40, Protokoll). Von Thomas an der Schwelle weiß sie in Staffel 1 nichts. | 3, 8 |
 | **Wie entsteht die Aufnahme von Alex und wie wird sie veröffentlicht?** | Auf dem Dach gegenüber (Kastanienweg 10) steht die **Wetterkamera der Stadtzeitung**. Sie stellt alle 10 Minuten automatisch ein Bild ins Netz. Um 11:30 steht Alex wieder am Fenster und prüft im Spiegelbild der Scheibe seine Frisur. Eine Nutzerin vergrößert das Bild und postet es um 11:38: „Ist das ein MANN?? Kastanienweg“. Um 11:41 sieht Alex den Post mit dem Hinweis „vor 3 Minuten“. Das Bild ist grob und unscharf. Fremde erkennen ihn darauf nicht, Bekannte schon. | Kamera sichtbar in 1/2, Post 2, weltweit 3 |
-| **Wie findet Winter seine Identität heraus?** | Sie sieht das Webcam-Bild in den Nachrichten und erkennt die Adresse: Kastanienweg 7, Haus von Knoten S7. Sie vergleicht das Gesicht mit den Studienfotos der Anker und findet: Anker A, Alex Brandt, 3. OG links. Telefonnummer und Adresse stehen im Studienformular. Um 16:20 ruft sie an. | 3 (Anruf), 4 (Datei zeigt, dass sie ihn vorher kannte) |
+| **Wie findet Winter seine Identität heraus?** | Sie sieht das Webcam-Bild in den Nachrichten und erkennt die Adresse: Kastanienweg 7, Haus von Knoten S7. Sie vergleicht das Gesicht mit den Studienfotos der Anker und findet: Anker A, Alex Brandt, 3. OG links. Telefonnummer und Adresse stehen im Studienformular. Um 15:20 ruft sie an. | 3 (Anruf), 4 (Datei zeigt, dass sie ihn vorher kannte) |
 | **Warum führen die Projektunterlagen zu seinem Wohnhaus?** | Lea ist Leitstellendisponentin. Am Morgen des Ereignisses hat sie um 07:50 selbst einen Anruf angenommen: Die Brandmeldeanlage im Technikkeller Kastanienweg 7 wird von 07:55 bis 08:30 für „Messbetrieb Projekt SPIEGEL“ abgeschaltet, Ansprechpartnerin Dr. E. Winter. In ihrer Nachtschicht von Tag 1 auf Tag 2 holt sie die Meldung und ihren Anhang aus dem Archiv. Der Anhang ist der „Messplan S7“, eine PDF-Datei. Die Dateieigenschaften zeigen, dass sie am 21. Oktober erstellt wurde, also vor dem Ereignis. Darin steht: „Ankerperson A: Brandt, Alex, Kastanienweg 7, 3. OG“. | 3 (Lea: „Winter? Den Namen kenne ich.“), 4 |
 | **Warum ist im Keller zunächst die Stimme seines Vaters zu hören?** | Alex ruft vor der Tür von S7 wieder seinen Vater an, aus Gewohnheit, wie seit Folge 1. Im Kellerflur hat er noch einen Balken Empfang. Der Anruf läuft über den Knoten S7 (Regel 5). Im Notbetrieb spielt die Konsole die gespeicherte Mailboxansage ab, auch aus ihrem Lautsprecher. Durch die Tür hört Alex die Stimme seines Vaters, dumpf, einen Moment nach dem eigenen Handy. Zuschauer kennen den Text der Ansage aus Folge 1. | 1 (Ansage), 5 (Stimme hinter der Tür), 6 (Auflösung) |
 | **Wie wird das Projekttelefon versorgt, welche Grenzen hat es?** | Drahtlos von der Konsole (erfunden), Kabel durchtrennt. Nur in Raum S7, nur während Fenstern, Energie aus der Konsole. Siehe oben. | 6 |
@@ -141,8 +141,8 @@ Dann bleibt die Tür so lange offen, wie beide Anker die Klinke halten und Netzs
 | Lea: „Ich habe dich durchs Fenster gesehen.“ Die Wetterkamera auf dem Dach gegenüber dreht sich im Hintergrund. | 1 | 2 (Webcam-Bild im Netz) |
 | Das Radio rauscht um 09:13 zehn Sekunden lang | 2 | 7 (Fenster um Minute 13) |
 | Die Sprecherin: „Es gibt keine Ausnahme.“ | 1 | 2 (du), 5 und 8 (Nika auf der anderen Seite) |
-| Lea kennt den Namen Winter | 3 | 4 (Anruf zur Brandmeldeanlage) |
-| Großbildschirme in New York flackern um 14:13 deutscher Zeit | 3 | 7 |
+| Lea kennt den Namen Winter | 3 (vorbereitet in 2: „Um 7:50 kam ein seltsamer Anruf.“) | 4 (Anruf zur Brandmeldeanlage) |
+| Großbildschirme in New York flackern um 15:13 deutscher Zeit | 3 | 7 |
 | Plombierte Sicherung „S7 – NICHT EINSCHALTEN“ im Kellerflur | 5 | 8 (Netzstrom nötig), 9 (Lea schaltet ein) |
 | Kleiner Ersatzschlüssel „S7-S“ am Schlüsselbund der Hausverwaltung | 5, 6 | 9 (Lea entsperrt die Konsole) |
 | Vermisstenplakat an der Fotowand: einzige vermisste **Frau**, „Nika S., 26“ | 5 | 8 (Anker B), 9 (gleiches Haus, 1. OG), 10 (Stimme) |
@@ -168,13 +168,13 @@ Dann bleibt die Tür so lange offen, wie beide Anker die Klinke halten und Netzs
 |---|---|---|
 | 1 | Tag 1, 08:13–09:05 | Ereignis, Anrufe, Welt, Lea klingelt |
 | 2 | Tag 1, 09:05–11:41 | Lea hilft, Fenster verhängt, Radio rauscht um 09:13, Webcam-Post um 11:41 |
-| 3 | Tag 1, 11:45–16:20 | Bild geht um die Welt, Winter ruft an und kennt Name und Adresse |
+| 3 | Tag 1, 11:45–15:20 | Bild geht um die Welt, Winter ruft an und kennt Name und Adresse |
 | 4 | Tag 2, 07:40–09:50 | Treffen mit Winter für 11:00 vereinbart, Lea kommt aus der Nachtschicht mit dem Messplan |
 | 5 | Tag 2, 10:10–12:41 | Lea holt den Kellerschlüssel bei der Hausverwaltung (Suchstelle, Fotowand), Kellerflur, Stimme hinter der Tür |
 | 6 | Tag 2, 12:41–13:12 | Raum S7, Konsole, Projekttelefon, Leuchte 3 flackert, Konsole erwacht, Alex wählt |
 | 7 | Tag 2, 13:13–14:13 | Erstes Fenster (nur „Alex?“), Regel erkannt, Vorbereitung, zweites Fenster mit Thomas |
 | 8 | Tag 2, 14:20–17:30 | Winter im Keller, Erklärung, Protokoll mit Nikas Wählversuchen |
-| 9 | Tag 2, 20:30–22:58 | Konsole entsperrt, Netzstrom, missglückter Versuch 22:13, Funkwecker, Leuchte 3 reagiert |
+| 9 | Tag 2, 20:40–22:58 | Konsole entsperrt, Netzstrom, missglückter Versuch 22:13, Funkwecker, Leuchte 3 reagiert |
 | 10 | Tag 2, 23:13 – Tag 3, 01:13 | Erster Kontakt mit Nika, Absprache, Öffnungsversuch, Klopfen |
 
 ### Kontaktfenster und Gespräche
@@ -185,7 +185,9 @@ Dann bleibt die Tür so lange offen, wie beide Anker die Klinke halten und Netzs
 | Tag 1, 10:13 – Tag 2, 12:13 (stündlich) | Konsole im Notbetrieb | Nika drückt an S7 (B) jede Stunde BEREIT | keine Verbindung (Protokoll, Folge 8) |
 | Tag 2, 13:13 | Alex hat Thomas' Handy gewählt (Akku 38 → 33 %) | Thomas' Handy klingelt. Nikas Versuch: belegt. | Thomas: „Alex?“ Rauschen, Abbruch nach 10 s (Folge 7) |
 | Tag 2, 14:13 | Alex wählt Thomas mit Leas Karteikarte (33 → 28 %) | Thomas nimmt sofort ab | Gespräch (Folge 7), Muster T gespeichert |
-| Tag 2, 15:13 – 21:13 | Winter stellt um 15:05 auf SPERRE. Lea entsperrt erst um 20:40 mit dem Ersatzschlüssel, wenn das Haus ruhig ist und Winters Wagen weg ist. | Nika versucht weiter | keine Verbindung |
+| Tag 2, 15:13 – 17:13 | Winter ist im Raum, niemand drückt BEREIT | Nika versucht weiter | keine Verbindung |
+| Tag 2, 18:13 – 20:13 | Winter stellt beim Gehen um 17:30 auf SPERRE. Lea entsperrt um 20:40 mit dem Ersatzschlüssel, wenn das Haus ruhig ist. | Nika versucht weiter | keine Verbindung |
+| Tag 2, 21:13 | Netzstrom gerade an, Alex und Lea bereiten sich vor (kein Versuch) | Nika versucht weiter | keine Verbindung |
 | Tag 2, 22:13 | Alex drückt BEREIT nach Handyuhr, zwei Sekunden zu spät | Nika drückt um :13:00 | keine Verbindung (Folge 9) |
 | Tag 2, 23:13 | Alex drückt BEREIT nach Leas Funkwecker | Nika drückt um :13:00 | **Erster Kontakt mit Nika** (Folge 10) |
 | Tag 3, 00:13 | wie 23:13 | wie 23:13 | Absprache: 01:13, Messkammertür, auf drei (Folge 10) |
@@ -210,14 +212,14 @@ Oben links stehen Tag und Uhrzeit, darunter drei Balken mit Beschriftung. Was no
 | Folge | K1 | K2 | K3 | K4 |
 |---|---|---|---|---|
 | 1 | T1 08:13 · 64 % · 4/4 · grau | 08:24 · 61 % · 1/4 überlastet | 08:41 · 58 % · 1/4 | 09:05 · 55 % · 1/4 |
-| 2 | T1 09:05 · 55 % · 1/4 | 09:13 · 55 % + · 1/4 | 10:40 · 66 % + · 2/4 | 11:41 · 74 % + · 2/4 |
-| 3 | T1 11:45 · 74 % · 2/4 | 12:30 · 72 % · 3/4 | 15:13 · 63 % · 3/4 | 16:20 · 60 % · 3/4 |
+| 2 | T1 09:05 · 55 % · 1/4 | 09:12 · 55 % + · 1/4 | 10:13 · 66 % + · 2/4 | 11:41 · 74 % + · 2/4 |
+| 3 | T1 11:45 · 74 % · 2/4 | 12:30 · 72 % · 3/4 | 15:13 · 63 % · 3/4 | 15:20 · 62 % · 3/4 |
 | 4 | T2 07:40 · 100 % · 4/4 | 08:30 · 98 % · 4/4 | 09:15 · 96 % · 4/4 | 09:50 · 94 % · 4/4 |
 | 5 | T2 10:10 · 93 % · 4/4 | 11:00 · 90 % · 4/4 | 12:20 · 86 % · 4/4 | 12:41 · 85 % · 1/4 (Kellerflur) |
 | 6 | T2 12:41 · 85 % · 1/4 · grau | 12:50 · 84 % · 0/4 · grau | 13:05 · 83 % · 0/4 · grau | 13:12 · 82 % · 0/4 · **38 %** |
 | 7 | T2 13:13 · 82 % · 0/4 · 33 % | 13:20 · 81 % · 0/4 · 33 % | 13:50 · 79 % · 0/4 · 33 % | 14:13 · 77 % · 0/4 · 28 % |
 | 8 | T2 14:20 · 77 % · 0/4 · 28 % | 14:40 · 76 % · 0/4 · 28 % | 16:00 · 70 % · 0/4 · 27 % | 17:30 · 64 % · 0/4 · 25 % |
-| 9 | T2 20:30 · 92 % · 0/4 · 22 % | 21:00 · 90 % · 0/4 · 22 % + Netz | 22:13 · 86 % · 0/4 · 46 % + | 22:58 · 84 % · 0/4 · 61 % + |
+| 9 | T2 20:40 · 92 % · 0/4 · 22 % | 21:00 · 90 % · 0/4 · 22 % + Netz | 22:13 · 86 % · 0/4 · 46 % + | 22:58 · 84 % · 0/4 · 61 % + |
 | 10 | T2 23:13 · 83 % · 0/4 · 66 % + | 00:13 · 79 % · 0/4 · 86 % + | 00:50 · 77 % · 0/4 · 98 % + | T3 01:13 · 75 % · 0/4 · 100 % Netz |
 
 (Zwischen Folge 8 und 9 lädt Alex sein Handy in Leas Wohnung.)
@@ -371,7 +373,7 @@ Echte Fakten und erfundene Regeln werden immer getrennt erzählt, zum Beispiel: 
 
 ## 9. NEU ZU BAUEN (ganze Staffel)
 
-Stand: nichts gebaut. Bausteine aus „Der Alien“ (`engine/alien.js`) werden wiederverwendet, wo es passt. „24. Stock“ und „Der Alien“ dürfen sich dadurch nicht verändern. Neue Grafik kommt in eine eigene Datei `engine/letzter-mann.js`.
+Stand: nichts gebaut. Storylines und Drehbücher aller 10 Folgen sowie die Stimme (Gemini „Orus“) sind fertig. Bausteine aus „Der Alien“ (`engine/alien.js`) werden wiederverwendet, wo es passt. „24. Stock“ und „Der Alien“ dürfen sich dadurch nicht verändern. Neue Grafik kommt in eine eigene Datei `engine/letzter-mann.js`.
 
 ### Figuren
 - [ ] **Alex** (`du`): kurze, leicht hochgestylte Haare, T-Shirt terrakotta. Mit vorhandenen Bausteinen.

@@ -1,0 +1,75 @@
+# Folge 6: Das tote Telefon
+@serie Der letzte Mann
+@mund zitate
+@look 0
+
+== Kapitel 1: Papa? ==
+@zeit tag
+@hud tag=2 zeit=12:41 handy=85/100% netz=1/4 konsole=nicht_verbunden
+// Kellerflur: Alex vor der Stahltür S7
+[keller ansicht=flur nah=tuer du lea] Stell dir vor, hinter dieser Tür ist dein *Vater*.
+// Stahltür nah: Alex steckt den großen Schlüssel ins Schloss
+[keller ansicht=flur nah=tuer du lea ton=schloss] Du steckst den großen Schlüssel ins Schloss. Deine Hand zittert.
+// Tür offen, Taschenlampenkegel in einem dunklen Raum
+[keller ansicht=raum licht=taschenlampe] „Papa?“ Keine Antwort. Nur ein dunkler Raum.
+// Raum S7: ein grauer Schrank mit Display und Lautsprecher
+[keller ansicht=raum nah=display] Kein Vater. Nur ein grauer Schrank mit Lautsprecher.
+// Display nah: „Ansage: Thomas B. – 31 Anrufe“
+[keller ansicht=raum nah=display] Auf dem Display: „Ansage Thomas B. 31 Anrufe.“ *Deine* Anrufe.
+[titel oben="Folge 6" gross="DER LETZTE MANN" unten="Das tote Telefon" dauer=1 hud=false]
+
+== Was bisher geschah ==
+// Skyline
+[skyline hud=false] Um 8:13 Uhr verschwanden alle Männer. Nur du nicht.
+// Handy: Tabelle „Ankerpersonen“
+[handy hud=false] Ein Projekt namens Spiegel hatte dich vorher ausgewählt.
+// Kellerflur: Stahltür S7
+[keller ansicht=flur nah=tuer du lea hud=false] Im Keller hast du die Stimme deines Vaters gehört.
+
+== Kapitel 2: Kabel ab ==
+@zeit tag
+@hud tag=2 zeit=12:50 handy=84/100% netz=0/4 konsole=nicht_verbunden
+// Raum S7, Lea leuchtet den Schrank ab
+[keller ansicht=raum lea] Der Raum heißt S7. Jeder Anruf an Papa läuft hierher.
+// Projekttelefon nah: beige, Wählscheibe, das Anschlusskabel sauber durchtrennt
+[keller ansicht=raum nah=telefon] Auf dem Schrank steht ein altes Telefon. Das Kabel ist *durchgeschnitten*.
+// Infokarte: altes Telefon, Leitung zur Vermittlungsstelle mit Blitz-Symbol
+[objekt gross="Echter Fakt"] Echter Fakt: Alte Festnetztelefone bekamen Strom über die Leitung. Sogar bei Stromausfall.
+// Hörer nah, leises Rauschen
+[keller ansicht=raum nah=telefon ton=funk_rauschen] Ohne Kabel müsste es tot sein. Doch im Hörer *rauscht* es.
+// SCHNITT: Ende Teil 1
+
+== Kapitel 3: Drei Lämpchen ==
+@zeit tag
+@hud tag=2 zeit=13:05 handy=83/100% netz=0/4 konsole=nicht_verbunden
+// Konsole nah: drei Lämpchen „BEREIT“, „VERBINDUNG“, „SCHWELLE“, alle aus
+[keller ansicht=raum nah=konsole] An der Konsole: drei Lämpchen. „Bereit“, „Verbindung“, „Schwelle“.
+// Raum S7: hinten eine schwere Stahltür „MESSKAMMER“
+[keller ansicht=raum] Hinten eine zweite Stahltür: „Messkammer“. Die Klinke gibt nicht nach.
+// Alex' Hand auf der Klinke, das dritte Lämpchen flackert einmal weiß
+[keller ansicht=raum l3=flackert du] Als du sie anfasst, flackert das dritte Lämpchen. *Einmal*.
+// Nahaufnahme: Lea, misstrauisch – „Hast du was gedrückt?“
+[gesicht lea ort=keller misstrauisch] „Nein.“
+// Konsole: Schlüsselschalter auf „BETRIEB“, daneben eine große Taste „BEREIT“
+[keller ansicht=raum nah=schalter] Daneben ein Schlüsselschalter. Und eine große Taste: *Bereit*.
+
+== Kapitel 4: Bereit ==
+@zeit tag
+@hud tag=2 zeit=13:12 handy=82/100% netz=0/4 konsole=38/100%
+// Nahaufnahme: Alex, entschlossen, Finger auf der Taste
+[gesicht du ort=keller entschlossen] Du drückst. Natürlich. Unter Druck bist du *vorschnell*.
+// Konsole erwacht: Lämpchen 1 grün, das Display baut sich auf, Staub im Licht
+[keller ansicht=raum nah=display l1=an ton=strom_an] Die Konsole erwacht. Grünes Licht. Akku: 38 Prozent.
+// Display nah: „Nächstes Fenster: 13:13:00“
+[keller ansicht=raum nah=display] „Nächstes Fenster: 13:13 Uhr.“ In einer Minute.
+// Nahaufnahme: Lea, leise
+[gesicht lea ort=keller neutral] „Dreizehn nach“, flüstert Lea. „Wie das Radio.“
+// Alex mit dem Hörer am Ohr, dreht die Wählscheibe
+[keller ansicht=raum nah=telefon du] Du nimmst den Hörer. Und wählst die Nummer deines *Vaters*.
+[titel oben="Folge 7: Zehn Sekunden" gross="Fortsetzung folgt" dauer=1 hud=false]
+
+== Check ==
+@hud aus
+[objekt gross="Frage" farbe=#1e2f45] Frage: Warum gingen alte Telefone bei Stromausfall?
+[objekt gross="Antwort" farbe=#1e3a2a] Antwort: Ihr Strom kam über die Telefonleitung.
+[titel gross="Was hättest du|gemacht?" groesse=120 unten="Schreib es in die Kommentare"] Was hättest du gemacht? Schreib es in die Kommentare.

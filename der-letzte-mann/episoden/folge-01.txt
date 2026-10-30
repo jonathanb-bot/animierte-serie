@@ -1,0 +1,76 @@
+# Folge 1: Außer dir
+@musik musik/folge-01.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@serie Der letzte Mann
+@mund zitate
+@look 0
+
+== Kapitel 1: Nur Frauen. Und du. ==
+@zeit morgen
+@hud tag=1 zeit=08:13 handy=64/100% netz=4/4 konsole=nicht_verbunden
+// Skyline am Morgen, unten stehen Autos kreuz und quer, Hupen von überall
+[skyline] Stell dir vor, du bist der *einzige* Mann auf der Welt.
+// Wohnung: Alex im Shirt am Fenster, Kaffeetasse in der Hand, schaut verwirrt hinaus. Auf dem Dach gegenüber dreht sich eine Wetterkamera auf ihrem Mast (Hinweis für Folge 2)
+[wohnung du] 8:13 Uhr. Draußen hupen plötzlich alle Autos.
+// Handy in der Hand: Eilmeldungen stapeln sich, oben „Männer weltweit verschwunden“
+[handy] Eilmeldung: Die Männer sind *weg*.
+// Nahaufnahme: Alex, froh, ein schiefes Grinsen
+[gesicht du ort=wohnung froh] Du grinst. Nur Frauen. Und *du*.
+// Bad: Alex richtet vor dem Spiegel die Haare, auf dem Handy die Dating-App „Funkel“
+[bad du] Du öffnest deine Dating-App. Endlich keine Konkurrenz.
+// Nahaufnahme: Alex, Augenbraue hochgezogen, selbstzufrieden
+[gesicht du ort=wohnung froh] Flirten kannst du allerdings immer noch *nicht*.
+[titel oben="Folge 1" gross="DER LETZTE MANN" unten="Außer dir" dauer=1 hud=false]
+
+== Kapitel 2: Keine Antwort ==
+@zeit morgen
+@hud tag=1 zeit=08:24 handy=61/100% netz=1/4 netz_text=überlastet konsole=nicht_verbunden
+// Handy: Anrufbildschirm „Papa“, dann „Ben“, beide Male „Mailbox“
+[handy] Du rufst Papa an: Mailbox. Deinen besten Freund: Mailbox.
+// Handy nah, Tonwelle der Ansage
+[handy] „Hier ist Thomas. Ich bin gerade nicht erreichbar.“
+// Handy: Warnmeldung im Vollbild, rotes Warndreieck, schriller Ton
+[handy] Dann schrillt dein Handy: eine *Warnung*.
+// Infokarte: Funkmast, Wellen gehen gleichzeitig an viele Handys, Überschrift „Cell Broadcast“
+[objekt gross="Echter Fakt"] Echter Fakt: Cell Broadcast kommt an, selbst wenn das Netz für Anrufe *überlastet* ist.
+// Nahaufnahme: Alex, Angst, das Grinsen ist verschwunden
+[gesicht du ort=wohnung angst] Die Männer sind weg. Du bist *geblieben*.
+// SCHNITT: Ende Teil 1
+
+== Kapitel 3: Überall ==
+@zeit morgen
+@hud tag=1 zeit=08:41 handy=58/100% netz=1/4 netz_text=überlastet konsole=nicht_verbunden
+// Skyline von oben, Kamera fährt über die Dächer
+[skyline] Um 8:13 verschwanden die Männer. *Überall*.
+// Bahnhof: Bahnsteiganzeige „Fällt aus“, eine Frau wartet mit zwei Kaffeebechern
+[bahnhof k1] Am Bahnhof wartet eine Frau mit *zwei* Kaffeebechern.
+// Supermarkt: In einem verlassenen Einkaufswagen klingelt ein Handy, eine Kundin schaut sich um
+[supermarkt k2] Im Supermarkt klingelt ein Handy. Niemand geht ran.
+// Tokio-Kreuzung am Nachmittag, große Uhr zeigt 16:13, Menschen bleiben stehen
+[tokio k4] In Tokio war es in derselben Sekunde 16:13 Uhr.
+// New-York-Platz bei Nacht, alle Bildschirme zeigen „BREAKING NEWS“
+[newyork k4] In New York 2:13 Uhr nachts.
+// Nahaufnahme: Nachrichtensprecherin vor unscharfem Studio, Bauchbinde „EILMELDUNG“
+[gesicht sprecherin ort=studio bauchbinde="EILMELDUNG"] „Es gibt keine Ausnahme“, sagt die Sprecherin.
+
+== Kapitel 4: Es klingelt ==
+@zeit morgen
+@hud tag=1 zeit=09:05 handy=55/100% netz=1/4 netz_text=überlastet konsole=nicht_verbunden
+// Wohnung: Alex sitzt auf dem Sofa und starrt auf sein Handy
+[wohnung du] Du bist der letzte Mann. Es fühlt sich *nicht* gut an.
+// Wohnungstür von innen, die Klingel leuchtet auf
+[tuer klingel] Da klingelt es an deiner Tür.
+// Wohnungstür: Alex streicht sein Shirt glatt und zieht den Bauch ein
+[tuer du] Du ziehst den Bauch ein. Dein peinlichster Reflex überlebt sogar das Ende der Welt.
+// Türspion-Ansicht: Lea steht im Flur, ernst, Arme verschränkt
+[spion lea misstrauisch] Draußen steht deine Nachbarin. „Ich weiß, dass du noch da bist.“
+// Türspion-Ansicht, nah: Lea schaut direkt in den Spion
+[spion lea misstrauisch nah] „Ich habe dich durchs Fenster *gesehen*.“
+[titel oben="Folge 2: Bleib vom Fenster weg" gross="Fortsetzung folgt" dauer=1 hud=false]
+
+== Check ==
+@hud aus
+[objekt gross="Frage" farbe=#1e2f45] Frage: Warum kam die Warnung trotz Überlastung an?
+[objekt gross="Antwort" farbe=#1e3a2a] Antwort: Cell Broadcast funkt an alle geeigneten Handys der Funkzelle.
+[titel gross="Was hättest du|gemacht?" groesse=120 unten="Schreib es in die Kommentare"] Was hättest du gemacht? Schreib es in die Kommentare.

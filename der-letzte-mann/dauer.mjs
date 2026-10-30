@@ -77,3 +77,18 @@ teil2Arten.forEach(a => console.log(zeile(a)));
 console.log(`| **Teil 2** | | **${t2.toFixed(1)} s** |`);
 console.log(`| **Gesamte Folge** | | **${(t1 + t2).toFixed(1)} s** |`);
 if (warnungen.length) { console.log("\nHinweise:"); warnungen.forEach(w => console.log("- " + w)); process.exitCode = 1; }
+
+// Mit Stimme: echte Längen aus audio/folge-XX/timing.json (geschrieben von python -m ton.folge)
+const id = datei.match(/folge-\d+/)?.[0], serie = new URL(".", import.meta.url).pathname;
+const drehbuch = `${serie}episoden/${id}.txt`, timing = `${serie}audio/${id}/timing.json`;
+if (id && fs.existsSync(drehbuch) && fs.existsSync(timing)) {
+  const namen = fs.readFileSync(drehbuch, "utf8").split(/\r?\n/).filter(z => /^==/.test(z)).map(z => z.replace(/=/g, "").trim());
+  const t = JSON.parse(fs.readFileSync(timing, "utf8")), je = namen.map(() => 0);
+  for (const e of t.einstellungen) je[e.kapitel - 1] += e.dauer;
+  const grenze = namen.findIndex(n => /^Kapitel 2\b/.test(n)) + 1;
+  const g1 = je.slice(0, grenze).reduce((a, b) => a + b, 0), g2 = je.slice(grenze).reduce((a, b) => a + b, 0);
+  console.log("\nGemessen mit Stimme (Titelkarte bei Kapitel 1, „Fortsetzung folgt“ bei Kapitel 4):\n\n| Abschnitt | Dauer |\n|---|---|");
+  namen.forEach((n, i) => { console.log(`| ${n} | ${je[i].toFixed(1)} s |`); if (i + 1 === grenze) console.log(`| **Teil 1** | **${g1.toFixed(1)} s** |`); });
+  console.log(`| **Teil 2** | **${g2.toFixed(1)} s** |\n| **Gesamte Folge** | **${(g1 + g2).toFixed(1)} s** |`);
+  if (g1 > GRENZEN.teil || g2 > GRENZEN.teil || g1 + g2 > GRENZEN.folge) { console.log("\nACHTUNG: Grenze mit Stimme überschritten."); process.exitCode = 1; }
+}

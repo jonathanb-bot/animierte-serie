@@ -1,0 +1,77 @@
+# Folge 9: Die zweite Ausnahme
+@serie Der letzte Mann
+@mund zitate
+@look 0
+
+== Kapitel 1: Nika ==
+@zeit nacht
+@hud tag=2 zeit=20:40 handy=92/100% netz=0/4 konsole=22/100%
+// Raum S7 im Taschenlampenlicht, die Konsole dunkel
+[keller ansicht=raum nah=konsole licht=taschenlampe] Stell dir vor, jemand drückt jede Stunde einen Knopf. Für *dich*.
+// Lea steckt den kleinen Schlüssel „S7-S“ in den Schlüsselschalter
+[keller ansicht=raum nah=schalter lea] Winter ist weg. Lea probiert den kleinen Schlüssel.
+// Schlüsselschalter dreht auf „BETRIEB“, Lämpchen 1 grün
+[keller ansicht=raum nah=schalter l1=an] Er passt. Die Konsole steht wieder auf „Betrieb“.
+// Handy: Foto „Nika S., 26 – Kastanienweg 7, 1. OG“ vergrößert
+[handy] Auf Leas Foto: „Nika S. Kastanienweg 7.“
+// Nahaufnahme: Alex, verlegen
+[gesicht du ort=keller muede] Sie wohnt in *deinem* Haus. Angesprochen hast du sie nie.
+[titel oben="Folge 9" gross="DER LETZTE MANN" unten="Die zweite Ausnahme" dauer=1 hud=false]
+
+== Was bisher geschah ==
+// Raum S7: Konsole
+[keller ansicht=raum nah=konsole hud=false] Du bist der letzte Mann. Unter deinem Haus steht eine Konsole.
+// Konsole: blaues Lämpchen
+[keller ansicht=raum nah=konsole l2=an hud=false] Über sie erreichst du die andere Welt. Zehn Sekunden pro Stunde.
+// Tablet: Protokoll
+[keller ansicht=raum objekt=tablet hud=false] Dort sucht die zweite Ausnahme nach dir.
+
+== Kapitel 2: Die Plombe ==
+@zeit nacht
+@hud tag=2 zeit=21:00 handy=90/100% netz=0/4 konsole=22/100%+ konsole_text=NETZ
+// Kellerflur: Hausverteiler, rote Plombe an der Sicherung S7
+[keller ansicht=flur nah=verteiler plombe du lea] Mehr als zehn Sekunden gibt es nur mit Netzstrom.
+// Nahaufnahme: Lea, entschlossen
+[gesicht lea ort=keller entschlossen] „Winter will eine Tür kontrollieren“, sagt Lea. „Ich will meinen *Bruder* zurück.“
+// Lea klappt die Sicherung hoch, die Plombe reißt
+[keller ansicht=raum lea ton=strom_an] Die Plombe reißt. Klack.
+// Raum S7: Deckenlicht geht an, Display „NETZ · lädt“
+[keller ansicht=raum nah=display licht=an] Im Raum geht das Licht an. Die Konsole lädt.
+// Nahaufnahme: Lea, ernst
+[gesicht lea ort=keller besorgt] „Jetzt nur noch in derselben *Sekunde* drücken. Du und sie.“
+// SCHNITT: Ende Teil 1
+
+== Kapitel 3: Zwei Sekunden ==
+@zeit nacht
+@hud tag=2 zeit=22:13 handy=86/100% netz=0/4 konsole=46/100%+ konsole_text=NETZ
+// Konsole: Alex' Finger über der Taste, daneben sein Handy mit 22:13
+[keller ansicht=raum nah=konsole du] 22:13 Uhr. Du drückst nach deiner Handyuhr.
+// Bahnhof bei Nacht, leer, die Bahnsteiganzeige flackert
+[bahnhof k1] Am Bahnhof flackert die Anzeige.
+// Display nah: „Gegenstelle verpasst (−2 s)“
+[keller ansicht=raum nah=display] „Verpasst.“ Zwei Sekunden. Deine Handyuhr geht ohne Netz nach.
+// Lea stellt ihren Funkwecker auf die Konsole
+[keller ansicht=raum nah=funkwecker lea] Lea holt ihren Funkwecker.
+// Infokarte: Funkturm bei Frankfurt, Wellen über Europa, „ca. 2000 km“
+[objekt gross="Echter Fakt"] Echter Fakt: Funkuhren holen die Zeit von einem Sender bei Frankfurt. Reichweite: 2000 Kilometer.
+
+== Kapitel 4: Das dritte Lämpchen ==
+@zeit nacht
+@hud tag=2 zeit=22:58 handy=84/100% netz=0/4 konsole=61/100%+ konsole_text=NETZ
+// Funkwecker nah, Sekunden laufen
+[keller ansicht=raum nah=funkwecker] Der Funkwecker zeigt die Sekunden. Noch fünfzehn Minuten.
+// Nahaufnahme: Alex, richtet seine Haare
+[gesicht du ort=keller neutral] Du richtest deine Haare. Für eine *Stimme*.
+// Nahaufnahme: Lea, trocken
+[gesicht lea ort=keller neutral] „Sie sieht dich nicht“, sagt Lea. „Ich weiß.“
+// Raum S7: Alex an der Konsole, die Messkammertür weit weg und leer
+[keller ansicht=raum nah=messkammer du] Du stehst an der Konsole. Niemand ist an der Tür.
+// Konsole nah: Das dritte Lämpchen leuchtet weiß
+[keller ansicht=raum nah=konsole l3=an] Da leuchtet das dritte Lämpchen. Ohne Verbindung. Ohne *dich*.
+[titel oben="Folge 10: Die Stimme" gross="Fortsetzung folgt" dauer=1 hud=false]
+
+== Check ==
+@hud aus
+[objekt gross="Frage" farbe=#1e2f45] Frage: Woher kennt eine Funkuhr die genaue Zeit?
+[objekt gross="Antwort" farbe=#1e3a2a] Antwort: Von einem Langwellensender bei Frankfurt mit Atomuhren.
+[titel gross="Was hättest du|gemacht?" groesse=120 unten="Schreib es in die Kommentare"] Was hättest du gemacht? Schreib es in die Kommentare.

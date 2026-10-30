@@ -1,0 +1,75 @@
+# Folge 5: Unter deiner Wohnung
+@serie Der letzte Mann
+@mund zitate
+@look 0
+
+== Kapitel 1: Fünfzig Euro ==
+@zeit tag
+@hud tag=2 zeit=10:10 handy=93/100% netz=4/4 konsole=nicht_verbunden
+// Treppe, Blick hinab in den Keller
+[treppe keller] Stell dir vor, die Antwort liegt direkt unter deiner *Wohnung*.
+// Nahaufnahme: Alex, denkt nach
+[gesicht du ort=wohnung neutral] Dir fällt etwas ein: Vor drei Wochen warst du bei einer Hörstudie. Fünfzig Euro.
+// Nahaufnahme: Alex, verlegen
+[gesicht du ort=wohnung muede] Wegen der netten Stimme am Telefon.
+// Nahaufnahme: Lea, trocken
+[gesicht lea ort=wohnung neutral] „Natürlich“, sagt Lea.
+// Karte: Kastanienweg 7 und die Hausverwaltung zwei Straßen weiter
+[karte orte=haus,hausverwaltung route="haus>hausverwaltung"] Im Messplan steht ein Kellerraum: *S7*. Den Schlüssel hat die Hausverwaltung.
+[titel oben="Folge 5" gross="DER LETZTE MANN" unten="Unter deiner Wohnung" dauer=1 hud=false]
+
+== Was bisher geschah ==
+// Skyline
+[skyline hud=false] Alle Männer sind verschwunden. Nur du nicht.
+// Handy: „Dr. E. Winter“
+[handy hud=false] Doktor Winter will dich treffen. Sie kannte dich schon vorher.
+// Handy: Tabelle „Ankerpersonen“
+[handy hud=false] In ihrem Projektplan bist du „Ankerperson A“.
+
+== Kapitel 2: Die Fotowand ==
+@zeit tag
+@hud tag=2 zeit=11:00 handy=90/100% netz=4/4 konsole=nicht_verbunden
+// Straße: Lea geht allein, Kapuze auf
+[strasse lea] Lea holt den Schlüssel allein. Draußen würde dich jede erkennen.
+// Suchstelle: lange Fotowand, Helferin mit Warnweste
+[strasse suchstelle k3] Vor der Hausverwaltung: eine Suchstelle. Hunderte Fotos vermisster Männer.
+// Infokarte: Icon Suchdienst (Lupe mit Person), „seit 1945“
+[objekt gross="Echter Fakt"] Echter Fakt: Das Rote Kreuz sucht bis heute Kriegsvermisste. Tausende Anfragen pro Jahr.
+// Fotowand nah: Zettel „Nika S., 26“ mit gelbem Schal
+[strasse suchstelle k3 markiere=nika nah] Dann sieht Lea ein Foto, das nicht passt: eine *Frau*. Nika, 26.
+// SCHNITT: Ende Teil 1
+
+== Kapitel 3: Der Schlüssel ==
+@zeit tag
+@hud tag=2 zeit=12:20 handy=86/100% netz=4/4 konsole=nicht_verbunden
+// Handy: Foto des Vermisstenzettels „Nika S., 26“
+[handy] Lea schickt dir das Foto. Die einzige vermisste Frau.
+// Treppe hinab, Lea mit Schlüsselbund
+[treppe keller] Dann geht ihr zusammen in den Keller.
+// Schlüsselbund nah: großer Schlüssel „S7“, kleiner „S7-S“
+[keller ansicht=raum] Am Bund: ein großer Schlüssel, „S7“. Und ein kleiner, „S7-S“.
+// Kellerflur: Hausverteiler, eine Sicherung mit roter Plombe „S7 – NICHT EINSCHALTEN“
+[keller ansicht=flur nah=verteiler plombe du lea] Am Sicherungskasten klebt eine rote Plombe: „S7. Nicht einschalten.“
+// Kellerflur: Handy zeigt einen Balken
+[keller ansicht=flur du lea] Hier unten hast du nur noch einen Balken Empfang.
+
+== Kapitel 4: Die Stimme ==
+@zeit tag
+@hud tag=2 zeit=12:41 handy=85/100% netz=1/4 konsole=nicht_verbunden
+// Kellerflur: graue Stahltür „S7 – Projekt SPIEGEL“
+[keller ansicht=flur nah=tuer du lea] Vor euch: eine Stahltür. „S7. Projekt Spiegel.“
+// Nahaufnahme: Alex, Handy am Ohr
+[gesicht du ort=keller neutral] Aus Gewohnheit rufst du deinen Vater an. Wieder Mailbox.
+// Nahaufnahme: Alex, lauscht, erstarrt
+[gesicht du ort=keller misstrauisch] Doch dieselbe Stimme hörst du noch einmal. *Hinter* der Tür.
+// Nahaufnahme: Lea, starr vor Schreck
+[gesicht lea ort=keller schreck] Lea flüstert: „Hörst du das auch?“
+// Stahltür nah, dumpfe Stimme
+[keller ansicht=flur nah=tuer du lea] „Hier ist Thomas …“ Die Stimme deines Vaters. Ganz *nah*.
+[titel oben="Folge 6: Das tote Telefon" gross="Fortsetzung folgt" dauer=1 hud=false]
+
+== Check ==
+@hud aus
+[objekt gross="Frage" farbe=#1e2f45] Frage: Seit wann sucht das Rote Kreuz Kriegsvermisste?
+[objekt gross="Antwort" farbe=#1e3a2a] Antwort: Seit 1945. Bis heute kommen jährlich Tausende Anfragen.
+[titel gross="Was hättest du|gemacht?" groesse=120 unten="Schreib es in die Kommentare"] Was hättest du gemacht? Schreib es in die Kommentare.

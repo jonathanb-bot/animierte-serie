@@ -1,0 +1,75 @@
+# Folge 8: Du warst nicht vorgesehen
+@serie Der letzte Mann
+@mund zitate
+@look 0
+
+== Kapitel 1: Doktor Winter ==
+@zeit tag
+@hud tag=2 zeit=14:20 handy=77/100% netz=0/4 konsole=28/100%
+// Raum S7: In der Tür steht eine Frau mit Mantel und Tablet, Gegenlicht
+[keller ansicht=raum] Stell dir vor, die Frau hinter allem steht plötzlich vor dir.
+// Display nah: „Neues Muster gespeichert: T“
+[keller ansicht=raum nah=display] Gerade piept noch die Konsole: „Neues Muster gespeichert: T.“
+// Raum S7: Winter tritt ein, ruhig
+[keller ansicht=raum winter] Doktor Eva Winter. Mantel. Tablet.
+// Nahaufnahme: Winter, freundlich
+[gesicht winter ort=keller neutral] „Herr Brandt. Sie haben S7 geweckt.“
+// Nahaufnahme: Alex, zieht den Bauch ein
+[gesicht du ort=keller neutral] Du ziehst den Bauch ein. *Schon* wieder.
+[titel oben="Folge 8" gross="DER LETZTE MANN" unten="Du warst nicht vorgesehen" dauer=1 hud=false]
+
+== Was bisher geschah ==
+// Skyline
+[skyline hud=false] Alle Männer sind verschwunden. Nur du nicht.
+// Projekttelefon
+[keller ansicht=raum nah=telefon hud=false] Über ein Telefon im Keller hast du deinen Vater erreicht.
+// Nahaufnahme: Alex
+[gesicht du ort=keller neutral hud=false] Bei ihm sind alle Frauen weg. Bis auf eine.
+
+== Kapitel 2: Zwei Welten ==
+@zeit tag
+@hud tag=2 zeit=14:40 handy=76/100% netz=0/4 konsole=28/100%
+// Nahaufnahme: Winter, sachlich
+[gesicht winter ort=keller neutral] „Wir wollten die Welt kurz spiegeln. Zum Messen.“
+// Infokarte: Satellit mit Uhr, „+38 µs pro Tag“
+[objekt gross="Echter Fakt"] Echter Fakt: GPS-Uhren gehen wegen der Relativität täglich 38 Mikrosekunden vor.
+// Infokarte: Karte mit Punkt, der um „10 km“ verrutscht
+[objekt] Unkorrigiert wäre GPS pro Tag zehn Kilometer daneben.
+// Nahaufnahme: Winter, besorgt
+[gesicht winter ort=keller besorgt] „Um 8:13 wurde daraus eine zweite *Welt*.“
+// Nahaufnahme: Alex, Schreck
+[gesicht du ort=keller schreck] Zwei Welten. Hier die Frauen. Drüben die Männer. Und Papa.
+// SCHNITT: Ende Teil 1
+
+== Kapitel 3: Ankerpersonen ==
+@zeit tag
+@hud tag=2 zeit=16:00 handy=70/100% netz=0/4 konsole=27/100%
+// Nahaufnahme: Winter
+[gesicht winter ort=keller neutral] „Jede Seite braucht einen Anker“, sagt Winter. „Dich. Aus der Hörstudie.“
+// Raum S7: Winter zeigt auf das dritte Lämpchen
+[keller ansicht=raum l3=an winter] „Das dritte Lämpchen zeigt gespeicherte Muster an dieser Tür. Auf *beiden* Seiten.“
+// Messkammertür
+[keller ansicht=raum nah=messkammer] „Ein Anker hält eine Seite. Zwei Anker an derselben Schwelle halten eine *Tür*.“
+// Nahaufnahme: Winter, ernst, Blick zu Lea
+[gesicht winter ort=keller besorgt] „Ohne Kontrolle verschiebt so eine Tür Menschen. Auch Lea.“
+
+== Kapitel 4: Die zweite Ausnahme ==
+@zeit abend
+@hud tag=2 zeit=17:30 handy=64/100% netz=0/4 konsole=25/100%
+// Konsole: Winter dreht ihren Schlüssel auf „SPERRE“
+[keller ansicht=raum nah=konsole winter] Winter sperrt die Konsole. „Morgen um acht schalte ich ab.“
+// Nahaufnahme: Winter
+[gesicht winter ort=keller neutral] „Lassen Sie die Sicherung aus. Ohne Netzstrom: nur zehn Sekunden.“
+// Tablet: Winter will es wegstecken, Lea greift danach
+[keller ansicht=raum objekt=tablet lea winter] Auf ihrem Tablet blinkt ein Protokoll. Lea schnappt es sich.
+// Tablet nah: „Anker B · Seite B · Wählversuche: 31 · stündlich seit Tag 1, 10:13“
+[keller ansicht=raum objekt=tablet] „Anker B. Seite B. Wählversuche: 31.“
+// Nahaufnahme: Alex, Schreck
+[gesicht du ort=keller schreck] Die zweite Ausnahme sucht *dich*. Seit gestern.
+[titel oben="Folge 9: Die zweite Ausnahme" gross="Fortsetzung folgt" dauer=1 hud=false]
+
+== Check ==
+@hud aus
+[objekt gross="Frage" farbe=#1e2f45] Frage: Warum müssen GPS-Uhren korrigiert werden?
+[objekt gross="Antwort" farbe=#1e3a2a] Antwort: Sie gehen täglich 38 Mikrosekunden vor.
+[titel gross="Was hättest du|gemacht?" groesse=120 unten="Schreib es in die Kommentare"] Was hättest du gemacht? Schreib es in die Kommentare.
