@@ -53,6 +53,8 @@
 [keller ansicht=raum licht=taschenlampe display="NOTBETRIEB" fokus=330,1035 zoom=2.4 klinke fokus=860,1090 zoom=1.35 l3=flackert rauch=false] Als du sie anfasst, flackert das dritte Lämpchen. *Einmal*.
 // Nahaufnahme: Lea, misstrauisch
 [gesicht lea ort=keller ansicht=raum licht=konsole misstrauisch rauch=false] „Hast du was gedrückt?“, fragt Lea. „Nein.“
+// Nahaufnahme: Alex, verlegen, Lea steht dicht vor ihm
+[gesicht du ort=keller ansicht=raum licht=konsole verlegen rauch=false] Sie steht dicht vor dir. Eine Sekunde zu lang. Dann dreht sie sich *weg*.
 // Konsole: Schlüsselschalter auf „BETRIEB“, daneben eine große Taste „BEREIT“
 [keller ansicht=raum licht=taschenlampe display="NOTBETRIEB" fokus=340,1190 zoom=2.4 rauch=false] Daneben ein Schlüsselschalter. Und eine große Taste: *Bereit*.
 

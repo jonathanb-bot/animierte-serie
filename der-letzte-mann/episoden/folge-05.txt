@@ -53,6 +53,8 @@
 [handy bildschirm=foto uhrzeit=12:20 akku=86 netz=4 ort=keller rauch=false] Lea schickt dir das Foto. Die einzige vermisste Frau.
 // Treppe hinab, Lea mit Schlüsselbund
 [treppe keller lea du rauch=false] Dann geht ihr zusammen in den Keller.
+// Treppe: Lea greift im Dunkeln nach Alex' Hand
+[treppe keller lea du rauch=false] Im Dunkeln greift Lea nach deiner Hand. „Nur wegen der Treppe.“
 // Schlüsselbund nah: großer Schlüssel „S7“, kleiner „S7-S“
 [objekt objekte="schluesselbund:S7 · S7-S" farbe=#2a2f3a rauch=false] Am Bund: ein großer Schlüssel, „S7“. Und ein kleiner, „S7-S“.
 // Kellerflur: Hausverteiler, eine Sicherung mit roter Plombe „S7 – NICHT EINSCHALTEN“

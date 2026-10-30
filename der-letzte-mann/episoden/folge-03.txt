@@ -55,6 +55,8 @@
 [newyork zeit=morgen flackern bild=webcam schirm="THE LAST MAN?" rauch=false] Um 15:13 Uhr flackern in New York alle Bildschirme. Zehn Sekunden.
 // Küche: Das Radio rauscht, Lea notiert die Uhrzeit auf einer Karteikarte
 [kueche lea lea:denkt uhr=15:13 ton=funk_rauschen rauch=false] Bei dir rauscht das Radio. Lea schreibt die Uhrzeiten auf.
+// Nahaufnahme: Alex, verlegen, Lea sitzt dicht neben ihm
+[gesicht du ort=wohnung verlegen rauch=false] Ihr Knie berührt deins. Keiner von euch rückt *weg*.
 // Karteikarte nah: 9:13, 10:13, 11:13 … 15:13
 [objekt objekte="uhrzeiten" farbe=#1e2f45 rauch=false] Immer um *dreizehn* nach. Wie um 8:13.
 // Handy: Anruf „Unbekannt“, es vibriert

@@ -40,8 +40,10 @@
 [objekt objekte="frequenz:Telefonband" farbe=#1e2f45 rauch=false] Alte Telefone übertragen nur 300 bis 3400 Hertz. Stimmen klingen dünn.
 // Nahaufnahme: Alex, verlegen
 [gesicht du ort=keller ansicht=raum licht=konsole muede rauch=false] Die Stimme kennst du: Hörstudie. Du, mit Kaffee auf der Hose.
+// Nahaufnahme: Lea, still, eifersüchtig
+[gesicht lea ort=keller ansicht=raum licht=konsole misstrauisch rauch=false] Nika lacht: „Du warst der *Süße* mit dem Fleck.“ Lea wird ganz still.
 // Nahaufnahme: Alex, Schreck
-[gesicht du ort=keller ansicht=raum licht=konsole schreck rauch=false] Dann sagt sie: „Ich weiß, wie wir die Tür *öffnen*.“
+[gesicht du ort=keller ansicht=raum licht=konsole schreck rauch=false] Dann sagt Nika: „Ich weiß, wie wir die Tür *öffnen*.“
 // SCHNITT: Ende Teil 1
 
 == Kapitel 3: Wer war an der Tür? ==

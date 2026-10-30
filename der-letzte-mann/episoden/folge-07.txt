@@ -57,6 +57,8 @@
 [gesicht du ort=keller ansicht=raum licht=konsole muede rauch=false] Fürs Flirten hast du nie so viel geübt.
 // Nahaufnahme: Lea, lächelt kurz
 [gesicht lea ort=keller ansicht=raum licht=konsole froh rauch=false] Lea lächelt. Zum ersten Mal seit gestern.
+// Nahaufnahme: Lea, frech
+[gesicht lea ort=keller ansicht=raum licht=konsole froh rauch=false] „Übrigens“, sagt sie. „So schlecht flirtest du gar *nicht*.“
 // Konsole: 14:12:50, Alex dreht die Wählscheibe
 [keller ansicht=raum licht=konsole display="AKKU 33 %|NÄCHSTES FENSTER|14:13:00" l1=an du hoerer_ab du:lauscht rauch=false] 14:12 Uhr. Du wählst. Dein Herz schlägt bis zum Hals.
 

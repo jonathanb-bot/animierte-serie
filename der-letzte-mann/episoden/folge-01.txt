@@ -63,6 +63,8 @@
 [wohnung du du:sitzt pos=120 rauch=false] Du bist der letzte Mann. Es fühlt sich *nicht* gut an.
 // Wohnung: Alex am offenen Fenster, unten auf der Straße nur Frauen, eine schaut zufällig hoch
 [wohnung du du:denkt froh rauch=false] Du stellst dich ans Fenster. Unten auf der Straße: nur Frauen.
+// Straße von oben: Eine Frau schaut hoch und zwinkert
+[wohnung du du:denkt froh rauch=false] Eine schaut hoch. Und *zwinkert*. Du winkst zurück. Viel zu eifrig.
 // Wohnungstür von innen, die Klingel leuchtet auf
 [tuer klingel rauch=false] Da klingelt es an deiner Tür.
 // Wohnungstür: Alex streicht sein Shirt glatt und zieht den Bauch ein

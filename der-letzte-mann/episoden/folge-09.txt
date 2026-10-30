@@ -71,6 +71,8 @@
 [gesicht du ort=keller ansicht=raum licht=konsole neutral rauch=false] Du richtest deine Haare. Für eine *Stimme*.
 // Nahaufnahme: Lea, trocken
 [gesicht lea ort=keller ansicht=raum licht=konsole neutral rauch=false] „Sie sieht dich nicht“, sagt Lea. „Ich weiß.“
+// Nahaufnahme: Lea richtet Alex den Kragen
+[gesicht lea ort=keller ansicht=raum licht=konsole froh rauch=false] Dann richtet sie dir den Kragen. „Für den Fall, dass doch.“
 // Raum S7: Alex an der Konsole, die Messkammertür weit weg und leer
 [keller ansicht=raum licht=an display="NETZ · LÄDT|NÄCHSTES FENSTER|23:13:00" l1=an du rauch=false] Du stehst an der Konsole. Niemand ist an der Tür.
 // Konsole nah: Das dritte Lämpchen leuchtet weiß

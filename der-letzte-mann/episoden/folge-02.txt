@@ -73,6 +73,8 @@
 [gesicht lea ort=wohnung wuetend rauch=false] „Weg da!“ Sie zieht dich am Shirt zurück.
 // Nahaufnahme: Alex, gekränkt; Lea trocken
 [gesicht du ort=wohnung neutral rauch=false] „Ich hab nur kurz die Haare …“ „Das sehe ich“, sagt Lea.
+// Nahaufnahme: Lea, ganz nah, hält ihn noch am Shirt fest
+[gesicht lea ort=wohnung neutral rauch=false] Sie hält dich noch am Shirt fest. So nah, dass du ihr Parfüm riechst.
 // Nahaufnahme: Lea, ihr Handy vibriert, sie wird blass
 [gesicht lea ort=wohnung neutral rauch=false] Dann vibriert ihr Handy. Eine Kollegin schickt einen Link.
 // Handy: Post mit grobem Wetterkamera-Bild, Alex am Fenster, „Ist das ein MANN?? Kastanienweg“, „vor 3 Minuten“

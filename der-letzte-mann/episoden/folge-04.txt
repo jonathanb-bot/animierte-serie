@@ -67,6 +67,8 @@
 @hud tag=2 zeit=09:50 handy=94/100% netz=4/4 konsole=nicht_verbunden
 // Nahaufnahme: Alex, schaut auf die Uhr
 [gesicht du ort=wohnung neutral rauch=false] Der Wagen kommt in einer Stunde. Aber Lea scrollt weiter.
+// Nahaufnahme: Alex, verlegen, Lea lehnt über seiner Schulter
+[gesicht du ort=wohnung verlegen rauch=false] Sie lehnt sich über deine Schulter. Du vergisst kurz zu *atmen*.
 // Handy: Seite 3, Tabelle mit Überschrift „Ankerpersonen“
 [handy bildschirm=tabelle uhrzeit=09:50 akku=94 netz=4 ort=wohnung markiere=false rauch=false] Seite drei: eine Liste. Überschrift: „*Ankerpersonen*“.
 // Handy, nah: „A: Brandt, Alex – Kastanienweg 7, 3. OG“

@@ -61,6 +61,8 @@
 [keller ansicht=raum licht=konsole display="MUSTER: A · B · T" l1=an fokus=860,1090 zoom=1.35 rauch=false] „Ein Anker hält eine Seite. Zwei Anker an derselben Schwelle halten eine *Tür*.“
 // Nahaufnahme: Winter, ernst, Blick zu Lea
 [gesicht winter ort=keller ansicht=raum licht=konsole besorgt rauch=false] „Ohne Kontrolle verschiebt so eine Tür Menschen. Auch Lea.“
+// Nahaufnahme: Alex, Lea nimmt seine Hand
+[gesicht du ort=keller ansicht=raum licht=konsole besorgt rauch=false] Lea nimmt deine Hand. Diesmal nicht wegen der *Treppe*.
 
 == Kapitel 4: Die zweite Ausnahme ==
 @zeit abend
