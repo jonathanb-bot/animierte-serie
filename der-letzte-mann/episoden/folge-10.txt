@@ -1,7 +1,4 @@
 # Folge 10: Die Stimme
-@musik musik/folge-10.mp3
-@musik_lautstaerke 1
-@whoosh aus
 @serie Der letzte Mann
 @mund zitate
 @look 0
@@ -11,6 +8,8 @@
 @hud tag=2 zeit=23:13 handy=83/100% netz=0/4 konsole=66/100%+ konsole_text=NETZ
 // Funkwecker 23:12:59, Alex' Finger über der Taste
 [keller ansicht=raum nah=funkwecker du] Stell dir vor, es gibt noch jemanden wie dich. Nur in einer *anderen* Welt.
+// Raum S7: Lea an der Konsole, den Funkwecker vor sich
+[keller ansicht=raum nah=funkwecker lea] Lea zählt die Sekunden mit. Drei. Zwei. Eins.
 // Funkwecker springt auf 23:13:00, das blaue Lämpchen geht an, das Projekttelefon klingelt
 [keller ansicht=raum nah=telefon l2=an] 23:13 Uhr. Du drückst. Blaues Licht. Das alte Telefon klingelt.
 // Nahaufnahme: Alex, Hörer am Ohr

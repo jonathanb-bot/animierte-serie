@@ -1,7 +1,4 @@
 # Folge 4: Die falsche Rettung
-@musik musik/folge-04.mp3
-@musik_lautstaerke 1
-@whoosh aus
 @serie Der letzte Mann
 @mund zitate
 @look 0
@@ -15,6 +12,8 @@
 [bad du] Tag zwei. Um elf holt dich ein Wagen ab. Zu Doktor Winter.
 // Bad: Alex hält das dritte Hemd vor sich
 [bad du] Du probierst drei Hemden. Für ein Treffen, das eine *Falle* sein könnte.
+// Nahaufnahme: Alex vor dem Spiegel, zufrieden
+[gesicht du ort=wohnung neutral] Hemd Nummer drei. Für das Ende der Welt siehst du *gut* aus.
 // Handy: Anruf „Papa“, „Mailbox“
 [handy] Du rufst Papa an. Mailbox. Zum *dreißigsten* Mal.
 [titel oben="Folge 4" gross="DER LETZTE MANN" unten="Die falsche Rettung" dauer=1 hud=false]
@@ -22,6 +21,8 @@
 == Was bisher geschah ==
 // Skyline
 [skyline hud=false] Alle Männer sind verschwunden. Nur du bist geblieben.
+// Nahaufnahme: Lea
+[gesicht lea ort=wohnung neutral hud=false] Lea, deine Nachbarin, hilft dir.
 // New-York-Platz mit deinem Bild
 [newyork k4 hud=false] Ein Bild von dir am Fenster ging um die Welt.
 // Handy: „Dr. E. Winter“
@@ -30,6 +31,8 @@
 == Kapitel 2: Die Nachtschicht ==
 @zeit morgen
 @hud tag=2 zeit=08:30 handy=98/100% netz=4/4 konsole=nicht_verbunden
+// Supermarkt: Kassiererin, Schild „Wasser: 2 pro Person“
+[supermarkt k2] Tag zwei. Im Supermarkt gibt es Wasser nur noch rationiert.
 // Wohnungstür: Lea, müde, mit einer Mappe
 [tuer draussen=lea] Um halb neun kommt Lea aus der Nachtschicht. Mit einem Ausdruck.
 // Nahaufnahme: Lea

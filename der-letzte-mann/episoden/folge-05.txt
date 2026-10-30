@@ -1,7 +1,4 @@
 # Folge 5: Unter deiner Wohnung
-@musik musik/folge-05.mp3
-@musik_lautstaerke 1
-@whoosh aus
 @serie Der letzte Mann
 @mund zitate
 @look 0
@@ -17,6 +14,8 @@
 [gesicht du ort=wohnung muede] Wegen der netten Stimme am Telefon.
 // Nahaufnahme: Lea, trocken
 [gesicht lea ort=wohnung neutral] „Natürlich“, sagt Lea.
+// Nahaufnahme: Alex, denkt nach
+[gesicht du ort=wohnung neutral] Den Fragebogen hast du ausgefüllt. Mit Name, Adresse und Foto.
 // Karte: Kastanienweg 7 und die Hausverwaltung zwei Straßen weiter
 [karte orte=haus,hausverwaltung route="haus>hausverwaltung"] Im Messplan steht ein Kellerraum: *S7*. Den Schlüssel hat die Hausverwaltung.
 [titel oben="Folge 5" gross="DER LETZTE MANN" unten="Unter deiner Wohnung" dauer=1 hud=false]
@@ -26,6 +25,8 @@
 [skyline hud=false] Alle Männer sind verschwunden. Nur du nicht.
 // Handy: „Dr. E. Winter“
 [handy hud=false] Doktor Winter will dich treffen. Sie kannte dich schon vorher.
+// Nahaufnahme: Lea
+[gesicht lea ort=wohnung neutral hud=false] Lea fand heraus: Ihr Projekt lief in deinem Haus.
 // Handy: Tabelle „Ankerpersonen“
 [handy hud=false] In ihrem Projektplan bist du „Ankerperson A“.
 
@@ -34,6 +35,8 @@
 @hud tag=2 zeit=11:00 handy=90/100% netz=4/4 konsole=nicht_verbunden
 // Straße: Lea geht allein, Kapuze auf
 [strasse lea] Lea holt den Schlüssel allein. Draußen würde dich jede erkennen.
+// Bahnhof: Feldbetten auf dem Bahnsteig, Anzeige „Ersatzverkehr – Fahrerinnen gesucht“
+[bahnhof k1] Am Bahnhof stehen jetzt Feldbetten. Die Anzeige sucht Fahrerinnen.
 // Suchstelle: lange Fotowand, Helferin mit Warnweste
 [strasse suchstelle k3] Vor der Hausverwaltung: eine Suchstelle. Hunderte Fotos vermisster Männer.
 // Infokarte: Icon Suchdienst (Lupe mit Person), „seit 1945“

@@ -1,7 +1,4 @@
 # Folge 2: Bleib vom Fenster weg
-@musik musik/folge-02.mp3
-@musik_lautstaerke 1
-@whoosh aus
 @serie Der letzte Mann
 @mund zitate
 @look 0
@@ -13,6 +10,8 @@
 [spion lea misstrauisch] Stell dir vor, jemand weiß, dass du *noch* da bist.
 // Wohnungstür offen, Lea schiebt sich an Alex vorbei
 [tuer du draussen=lea] Deine Nachbarin Lea schiebt sich einfach an dir vorbei.
+// Nahaufnahme: Lea, mustert Alex von oben bis unten
+[gesicht lea ort=wohnung neutral] Sie mustert dich von oben bis unten. Du ziehst wieder den Bauch ein.
 // Wohnung: Lea zieht den Vorhang zu
 [wohnung du lea vorhang=schliesst] Als Erstes zieht sie deinen Vorhang zu. „Bleib vom Fenster weg.“
 // Nahaufnahme: Alex, charmantes Lächeln
@@ -24,6 +23,8 @@
 == Was bisher geschah ==
 // Skyline am Morgen
 [skyline hud=false] Um 8:13 Uhr sind plötzlich alle Männer verschwunden.
+// Tokio-Kreuzung
+[tokio k4 hud=false] Überall auf der Welt. Vom Bahnhof bis nach Tokio.
 // Nahaufnahme: Alex, besorgt
 [gesicht du ort=wohnung besorgt hud=false] Nur du bist geblieben. Dein Vater geht nicht ran.
 // Türspion-Ansicht: Lea
@@ -49,6 +50,8 @@
 @hud tag=1 zeit=10:13 handy=66/100%+ netz=2/4 konsole=nicht_verbunden
 // Küche: Das Küchenradio rauscht, die Herduhr zeigt 10:13
 [kueche ton=funk_rauschen] Um 10:13 rauscht das Radio. Wie schon um 9:13.
+// Straße vor dem Haus: Frauen schieben gemeinsam liegengebliebene Autos von der Kreuzung
+[strasse lea] Draußen schieben Frauen die liegengebliebenen Autos von der Kreuzung.
 // Infokarte: Glasscheibe, ein kleiner Pfeil wird zurückgeworfen, „ca. 4 %“
 [objekt gross="Echter Fakt"] Echter Fakt: Glas spiegelt pro Oberfläche etwa *vier Prozent* des Lichts.
 // Infokarte: links Tag (Scheibe spiegelt den Himmel), rechts Nacht (helles Zimmer gut sichtbar)

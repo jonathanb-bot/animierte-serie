@@ -1,7 +1,4 @@
 # Folge 1: Außer dir
-@musik musik/folge-01.mp3
-@musik_lautstaerke 1
-@whoosh aus
 @serie Der letzte Mann
 @mund zitate
 @look 0
@@ -14,7 +11,7 @@
 // Wohnung: Alex im Shirt am Fenster, Kaffeetasse in der Hand, schaut verwirrt hinaus. Auf dem Dach gegenüber dreht sich eine Wetterkamera auf ihrem Mast (Hinweis für Folge 2)
 [wohnung du] 8:13 Uhr. Draußen hupen plötzlich alle Autos.
 // Handy in der Hand: Eilmeldungen stapeln sich, oben „Männer weltweit verschwunden“
-[handy] Eilmeldung: Die Männer sind *weg*.
+[handy] Eilmeldung um Eilmeldung: Die Männer sind *weg*. Einfach verschwunden.
 // Nahaufnahme: Alex, froh, ein schiefes Grinsen
 [gesicht du ort=wohnung froh] Du grinst. Nur Frauen. Und *du*.
 // Bad: Alex richtet vor dem Spiegel die Haare, auf dem Handy die Dating-App „Funkel“
@@ -30,6 +27,8 @@
 [handy] Du rufst Papa an: Mailbox. Deinen besten Freund: Mailbox.
 // Handy nah, Tonwelle der Ansage
 [handy] „Hier ist Thomas. Ich bin gerade nicht erreichbar.“
+// Handy: Anrufliste, dreimal „Papa – Mailbox“
+[handy] Du rufst noch mal an. Und noch mal. Immer *dieselbe* Ansage.
 // Handy: Warnmeldung im Vollbild, rotes Warndreieck, schriller Ton
 [handy] Dann schrillt dein Handy: eine *Warnung*.
 // Infokarte: Funkmast, Wellen gehen gleichzeitig an viele Handys, Überschrift „Cell Broadcast“
@@ -50,7 +49,7 @@
 // Tokio-Kreuzung am Nachmittag, große Uhr zeigt 16:13, Menschen bleiben stehen
 [tokio k4] In Tokio war es in derselben Sekunde 16:13 Uhr.
 // New-York-Platz bei Nacht, alle Bildschirme zeigen „BREAKING NEWS“
-[newyork k4] In New York 2:13 Uhr nachts.
+[newyork k4] In New York war es 2:13 Uhr nachts. Alle Bildschirme zeigen dasselbe.
 // Nahaufnahme: Nachrichtensprecherin vor unscharfem Studio, Bauchbinde „EILMELDUNG“
 [gesicht sprecherin ort=studio bauchbinde="EILMELDUNG"] „Es gibt keine Ausnahme“, sagt die Sprecherin.
 
@@ -59,6 +58,8 @@
 @hud tag=1 zeit=09:05 handy=55/100% netz=1/4 netz_text=überlastet konsole=nicht_verbunden
 // Wohnung: Alex sitzt auf dem Sofa und starrt auf sein Handy
 [wohnung du] Du bist der letzte Mann. Es fühlt sich *nicht* gut an.
+// Wohnung: Alex am offenen Fenster, unten auf der Straße nur Frauen, eine schaut zufällig hoch
+[wohnung du] Du stellst dich ans Fenster. Unten auf der Straße: nur Frauen.
 // Wohnungstür von innen, die Klingel leuchtet auf
 [tuer klingel] Da klingelt es an deiner Tür.
 // Wohnungstür: Alex streicht sein Shirt glatt und zieht den Bauch ein

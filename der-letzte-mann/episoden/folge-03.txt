@@ -1,7 +1,4 @@
 # Folge 3: Sie kennen deinen Namen
-@musik musik/folge-03.mp3
-@musik_lautstaerke 1
-@whoosh aus
 @serie Der letzte Mann
 @mund zitate
 @look 0
@@ -26,6 +23,8 @@
 [skyline hud=false] Um 8:13 Uhr sind alle Männer verschwunden. Nur du nicht.
 // Wohnung: Lea am Vorhang
 [wohnung du lea vorhang=schliesst hud=false] Lea, deine Nachbarin, versteckt dich.
+// Küche: Radio
+[kueche ton=funk_rauschen hud=false] Und jede Stunde rauscht kurz das Radio.
 // Handy: Webcam-Post
 [handy hud=false] Doch eine Wetterkamera hat dich am Fenster fotografiert.
 
@@ -34,6 +33,8 @@
 @hud tag=1 zeit=12:30 handy=72/100% netz=3/4 konsole=nicht_verbunden
 // Handy: Das Bild ist stark vergrößert, nur Pixel
 [handy] Das Bild ist grob. Keiner erkennt dich.
+// Skyline: Hubschrauber kreisen über der Stadt
+[skyline heli] Über der Stadt kreisen Hubschrauber. Alle suchen den Pixelhaufen.
 // Nahaufnahme: Lea
 [gesicht lea ort=wohnung neutral] Lea erkennt dich sofort. Sie kennt dich ja.
 // Infokarte: unscharfes Gesicht, daneben ein Häkchen bei „bekannt“
@@ -67,6 +68,8 @@
 [handy] „Ich biete Ihnen Schutz an. Und Antworten.“
 // Nahaufnahme: Lea, misstrauisch, flüstert
 [gesicht lea ort=wohnung misstrauisch] Lea flüstert: „Winter? Den Namen kenne ich.“
+// Nahaufnahme: Alex, geschmeichelt
+[gesicht du ort=wohnung froh] Schutz. Antworten. Und eine Frau, die *dich* sucht. Klingt fast gut.
 // Nahaufnahme: Alex, misstrauisch
 [gesicht du ort=wohnung misstrauisch] Du fragst: „Woher haben Sie meine Nummer?“
 // Nahaufnahme: Alex, Schreck

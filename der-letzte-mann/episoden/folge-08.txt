@@ -1,7 +1,4 @@
 # Folge 8: Du warst nicht vorgesehen
-@musik musik/folge-08.mp3
-@musik_lautstaerke 1
-@whoosh aus
 @serie Der letzte Mann
 @mund zitate
 @look 0
@@ -17,11 +14,15 @@
 [keller ansicht=raum winter] Doktor Eva Winter. Mantel. Tablet.
 // Nahaufnahme: Winter, freundlich
 [gesicht winter ort=keller neutral] „Herr Brandt. Sie haben S7 geweckt.“
+// Nahaufnahme: Lea, verschränkte Arme, stellt sich zwischen Alex und Winter
+[gesicht lea ort=keller neutral] Lea stellt sich zwischen euch. Freundlich ist anders.
 // Nahaufnahme: Alex, zieht den Bauch ein
 [gesicht du ort=keller neutral] Du ziehst den Bauch ein. *Schon* wieder.
 [titel oben="Folge 8" gross="DER LETZTE MANN" unten="Du warst nicht vorgesehen" dauer=1 hud=false]
 
 == Was bisher geschah ==
+// Raum S7: Konsole
+[keller ansicht=raum nah=konsole hud=false] Unter deinem Haus steht die Konsole von Projekt Spiegel.
 // Skyline
 [skyline hud=false] Alle Männer sind verschwunden. Nur du nicht.
 // Projekttelefon
@@ -47,6 +48,8 @@
 == Kapitel 3: Ankerpersonen ==
 @zeit tag
 @hud tag=2 zeit=16:00 handy=70/100% netz=0/4 konsole=27/100%
+// New-York-Platz am Morgen, alle Bildschirme flackern
+[newyork k4] In New York flackerten um 15:13 wieder alle Bildschirme. Niemand weiß, warum.
 // Nahaufnahme: Winter
 [gesicht winter ort=keller neutral] „Jede Seite braucht einen Anker“, sagt Winter. „Dich. Aus der Hörstudie.“
 // Raum S7: Winter zeigt auf das dritte Lämpchen

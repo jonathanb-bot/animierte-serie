@@ -1,7 +1,4 @@
 # Folge 7: Zehn Sekunden
-@musik musik/folge-07.mp3
-@musik_lautstaerke 1
-@whoosh aus
 @serie Der letzte Mann
 @mund zitate
 @look 0
@@ -28,6 +25,8 @@
 [keller ansicht=raum nah=konsole hud=false] Unter deinem Haus steht die Konsole von Projekt Spiegel.
 // Projekttelefon
 [keller ansicht=raum nah=telefon hud=false] Über ihr altes Telefon hast du deinen Vater angerufen.
+// Display
+[keller ansicht=raum nah=display hud=false] Die Konsole kündigte ein Fenster an: 13:13 Uhr.
 
 == Kapitel 2: Immer um dreizehn ==
 @zeit tag
@@ -53,6 +52,8 @@
 [gesicht du ort=keller neutral] Du übst. Neun Sekunden. Acht.
 // Nahaufnahme: Alex, müde über sich selbst
 [gesicht du ort=keller muede] Fürs Flirten hast du nie so viel geübt.
+// Nahaufnahme: Lea, lächelt kurz
+[gesicht lea ort=keller neutral] Lea lächelt. Zum ersten Mal seit gestern.
 // Konsole: 14:12:50, Alex dreht die Wählscheibe
 [keller ansicht=raum nah=konsole du] 14:12 Uhr. Du wählst. Dein Herz schlägt bis zum Hals.
 

@@ -1,7 +1,4 @@
 # Folge 9: Die zweite Ausnahme
-@musik musik/folge-09.mp3
-@musik_lautstaerke 1
-@whoosh aus
 @serie Der letzte Mann
 @mund zitate
 @look 0
@@ -15,6 +12,8 @@
 [keller ansicht=raum nah=schalter lea] Winter ist weg. Lea probiert den kleinen Schlüssel.
 // Schlüsselschalter dreht auf „BETRIEB“, Lämpchen 1 grün
 [keller ansicht=raum nah=schalter l1=an] Er passt. Die Konsole steht wieder auf „Betrieb“.
+// Suchstelle bei Nacht, Kerzen vor der Fotowand, Nikas Zettel mit gelbem Schal
+[strasse suchstelle k3 markiere=nika nah] An der Suchstelle brennen jetzt Kerzen. Nikas Zettel hängt noch.
 // Handy: Foto „Nika S., 26 – Kastanienweg 7, 1. OG“ vergrößert
 [handy] Auf Leas Foto: „Nika S. Kastanienweg 7.“
 // Nahaufnahme: Alex, verlegen
@@ -24,6 +23,8 @@
 == Was bisher geschah ==
 // Raum S7: Konsole
 [keller ansicht=raum nah=konsole hud=false] Du bist der letzte Mann. Unter deinem Haus steht eine Konsole.
+// Nahaufnahme: Winter
+[gesicht winter ort=keller neutral hud=false] Doktor Winter will sie morgen früh *abschalten*.
 // Konsole: blaues Lämpchen
 [keller ansicht=raum nah=konsole l2=an hud=false] Über sie erreichst du die andere Welt. Zehn Sekunden pro Stunde.
 // Tablet: Protokoll
