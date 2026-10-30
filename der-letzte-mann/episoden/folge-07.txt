@@ -75,10 +75,4 @@
 [gesicht du ort=keller ansicht=raum licht=konsole misstrauisch rauch=false] Dann: „Hier gibt es eine Frau, die eigentlich nicht hier sein dürfte.“
 // Konsole: Das blaue Lämpchen erlischt
 [keller ansicht=raum licht=konsole display="FENSTER 14:13:00|VERBINDUNG" l1=an fokus=330,1035 zoom=2.4 l2=aus rauch=false] Die Leitung bricht ab.
-[titel oben="Folge 8: Du warst nicht vorgesehen" gross="Fortsetzung folgt" farbe=#14213d akzent=#e2b443 groesse=110 dauer=1 hud=false]
-
-== Check ==
-@hud aus
-[objekt objekte="ohr" gross="Frage" farbe=#1e2f45] Frage: Bei dir ist Minute 13. Welche Minute ist in Indien?
-[objekt objekte="gluehbirne" gross="Antwort" farbe=#1e3a2a] Antwort: Minute 43, eine halbe Stunde versetzt.
-[titel gross="Was hättest du|gemacht?" groesse=120 unten="Schreib es in die Kommentare" farbe=#14213d akzent=#e2b443] Was hättest du gemacht? Schreib es in die Kommentare.
+[titel oben="Folge 8: Du warst nicht vorgesehen" gross="Fortsetzung folgt" farbe=#14213d akzent=#e2b443 groesse=110 dauer=2 hud=false]

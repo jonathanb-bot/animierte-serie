@@ -77,10 +77,4 @@
 [gesicht lea ort=wohnung neutral rauch=false] Dann vibriert ihr Handy. Eine Kollegin schickt einen Link.
 // Handy: Post mit grobem Wetterkamera-Bild, Alex am Fenster, „Ist das ein MANN?? Kastanienweg“, „vor 3 Minuten“
 [handy bildschirm=post uhrzeit=11:41 akku=74 netz=2 ort=wohnung rauch=false] Ein Bild der Wetterkamera. Du am Fenster. „Ist das ein *Mann*?“ Vor drei Minuten.
-[titel oben="Folge 3: Sie kennen deinen Namen" gross="Fortsetzung folgt" farbe=#14213d akzent=#e2b443 groesse=110 dauer=1 hud=false]
-
-== Check ==
-@hud aus
-[objekt objekte="ohr" gross="Frage" farbe=#1e2f45] Frage: Warum sieht man nachts in helle Zimmer hinein?
-[objekt objekte="gluehbirne" gross="Antwort" farbe=#1e3a2a] Antwort: Das Zimmerlicht überstrahlt die schwache Spiegelung.
-[titel gross="Was hättest du|gemacht?" groesse=120 unten="Schreib es in die Kommentare" farbe=#14213d akzent=#e2b443] Was hättest du gemacht? Schreib es in die Kommentare.
+[titel oben="Folge 3: Sie kennen deinen Namen" gross="Fortsetzung folgt" farbe=#14213d akzent=#e2b443 groesse=110 dauer=2 hud=false]

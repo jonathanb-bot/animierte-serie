@@ -73,10 +73,4 @@
 [gesicht lea ort=keller ansicht=raum licht=konsole schreck rauch=false] Lea flüstert: „Hörst du das auch?“
 // Stahltür nah, dumpfe Stimme
 [keller ansicht=flur stimme fokus=740,1000 zoom=1.3 rauch=false] „Hier ist Thomas …“ Die Stimme deines Vaters. Ganz *nah*.
-[titel oben="Folge 6: Das tote Telefon" gross="Fortsetzung folgt" farbe=#14213d akzent=#e2b443 groesse=110 dauer=1 hud=false]
-
-== Check ==
-@hud aus
-[objekt objekte="ohr" gross="Frage" farbe=#1e2f45] Frage: Seit wann sucht das Rote Kreuz Kriegsvermisste?
-[objekt objekte="gluehbirne" gross="Antwort" farbe=#1e3a2a] Antwort: Seit 1945. Bis heute kommen jährlich Tausende Anfragen.
-[titel gross="Was hättest du|gemacht?" groesse=120 unten="Schreib es in die Kommentare" farbe=#14213d akzent=#e2b443] Was hättest du gemacht? Schreib es in die Kommentare.
+[titel oben="Folge 6: Das tote Telefon" gross="Fortsetzung folgt" farbe=#14213d akzent=#e2b443 groesse=110 dauer=2 hud=false]

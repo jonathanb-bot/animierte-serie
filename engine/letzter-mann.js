@@ -226,37 +226,109 @@
   // TOKIO – Kreuzung mit Zebrastreifen, Leuchtreklame (ohne echte Marken), Großbildschirm, Uhr
   // =====================================================================
   SZ.tokio = (s, t) => {
-    const zeit = s.zeit || "tag", nacht = zeit === "nacht", hc = HIMMEL[zeit] || HIMMEL.tag, fl = flackert(s, t);
-    ctx.fillStyle = lgrad(0, -300, 0, 900, [[0, hc[0]], [1, hc[1]]]); ctx.fillRect(-1500, -1500, 4080, 3000);
-    const r = rnd(88), neon = ["#ff4fa3", "#4fd8ff", "#ffd34f", "#7dff8a", "#ff7a4f"];
-    // Hochhäuser links/rechts
-    for (const [x0, x1, top] of [[-200, 300, 80], [780, 1300, 40], [300, 780, 330]]) {
-      box(x0, top, x1 - x0, 1200 - top, 2, nacht ? "#232838" : "#7c8494");
-      for (let yy = top + 40; yy < 1150; yy += 64) for (let xx = x0 + 24; xx < x1 - 30; xx += 52) box(xx, yy, 30, 36, 3, nacht ? (r() < 0.45 ? "#f1c27a" : "#1a1e2a") : rgba("#dfeaf5", 0.45));
+    const zeit = s.zeit || "tag", nacht = zeit === "nacht", abend = zeit === "abend", hc = HIMMEL[zeit] || HIMMEL.tag, fl = flackert(s, t);
+    const dunkel = nacht || abend, vx = 540, yh = 1010;
+    const r = rnd(88), neon = ["#ff4fa3", "#4fd8ff", "#ffd34f", "#7dff8a", "#ff7a4f", "#b98bff"];
+    // Himmel + Dunst
+    ctx.fillStyle = lgrad(0, -300, 0, yh, [[0, hc[0]], [1, hc[1]]]); ctx.fillRect(-1500, -1500, 4080, 3000);
+    // ferne Skyline (leichte Parallaxe) + Funkturm in Rot-Weiß
+    const ox = -t * 5;
+    ctx.save(); ctx.translate(ox, 0);
+    silhouette(91, yh, 260, 720, mix(hc[1], "#2a3048", dunkel ? 0.75 : 0.42), dunkel, -700, 1900);
+    const tx = 770, tb = yh - 120, th = 760;
+    for (let k = 0; k < 8; k++) { const y0 = tb - k * th / 8, y1 = tb - (k + 1) * th / 8, w0 = 70 * (1 - k / 9), w1 = 70 * (1 - (k + 1) / 9), c = k % 2 ? "#f2f2ee" : "#d9472e";
+      poly([[tx - w0, y0], [tx + w0, y0], [tx + w1, y1], [tx - w1, y1]], dunkel ? shade(c, -0.35) : mix(c, hc[1], 0.25)); }
+    box(tx - 46, tb - th * 0.45, 92, 26, 6, dunkel ? "#3a3f55" : "#c9ced8"); line(tx, tb - th, tx, tb - th - 90, 5, "#d9472e");
+    if (dunkel) { circle(tx, tb - th - 90, 7, (Math.sin(t * 3) > 0 ? "#ff5544" : "#5a1a14")); A.licht(tx, tb - th * 0.6, 260, "#ff9a6a", 0.35); }
+    ctx.restore();
+    // Boden: Gehwege hell, Straße dunkel, perspektivisch
+    box(-1500, yh, 4080, 1400, 0, dunkel ? "#3a3d45" : "#9b9ea4");
+    const strasse = nacht ? "#25282f" : abend ? "#33363e" : "#4a4e56";
+    poly([[vx - 50, yh], [vx + 50, yh], [vx + 820, 1940], [vx - 820, 1940]], strasse);
+    for (let k = 0; k < 9; k++) { const a = k / 9, b = (k + 0.45) / 9, ya = yh + (1940 - yh) * a * a, yb = yh + (1940 - yh) * b * b, wa = 4 + 12 * a, wb = 4 + 12 * b;
+      poly([[vx - wa, ya], [vx + wa, ya], [vx + wb, yb], [vx - wb, yb]], rgba("#f2e7b4", 0.75)); }
+    // Häuserschlucht links und rechts (hinten nach vorn)
+    const N = 6, schilder = [];
+    for (let i = 0; i < N; i++) {
+      const f = i / (N - 1), ff = f * f;
+      const kante = 70 + 520 * ff, breite = 70 + 520 * f, hoch = 420 + 1500 * ff, fuss = yh + 30 + 560 * ff;
+      for (const seite of [-1, 1]) {
+        const xi = vx + seite * kante, xa = xi + seite * breite, x0 = Math.min(xi, xa), w = Math.abs(xa - xi), top = fuss - hoch;
+        const rr = rnd(i * 17 + (seite > 0 ? 5 : 1));
+        const basis = ["#6f7889", "#8a8f9c", "#5f6b7d", "#9a8f86", "#707a8a"][Math.floor(rr() * 5)];
+        const c = dunkel ? mix(basis, "#151a28", 0.72 - 0.2 * f) : mix(basis, hc[1], 0.35 * (1 - f));
+        box(x0, top, w, fuss - top, 2, c);
+        // Fassadenkante zur Straße (Seitenwand, Tiefe)
+        const tiefe = 18 + 70 * f; poly([[xi, top], [xi - seite * tiefe, top + tiefe * 0.6], [xi - seite * tiefe, fuss - tiefe * 0.2], [xi, fuss]], shade(c, -0.18));
+        // Fenster
+        const fw = 14 + 26 * f, fh = 18 + 30 * f, gx = fw * 1.7, gy = fh * 1.6;
+        for (let yy = top + gy * 0.6; yy < fuss - gy * 1.4; yy += gy) for (let xx = x0 + gx * 0.4; xx < x0 + w - fw; xx += gx) {
+          const an = rr() < (dunkel ? 0.5 : 0.25);
+          box(xx, yy, fw, fh, 2, dunkel ? (an ? (rr() < 0.7 ? "#f1c27a" : "#bfe3ff") : "#1b2030") : (an ? rgba("#ffffff", 0.55) : rgba("#2a3448", 0.35)));
+        }
+        // Ladenzone unten mit Markise
+        const lh = 60 + 160 * f; box(x0, fuss - lh, w, lh, 0, shade(c, -0.25)); box(x0 + w * 0.08, fuss - lh * 0.82, w * 0.84, lh * 0.62, 3, dunkel ? "#f0c98a" : "#a9c3d2"); box(x0 + w * 0.08, fuss - lh * 0.82, w * 0.84, lh * 0.12, 0, rgba("#ffffff", dunkel ? 0.15 : 0.35));
+        if (dunkel) A.licht(x0 + w / 2, fuss - lh / 2, w * 0.6, "#ffcf8a", 0.5);
+        box(x0, fuss - lh - 14 * (0.4 + f), w, 14 * (0.4 + f) + 4, 2, neon[(i + (seite > 0 ? 2 : 0)) % neon.length]);
+        // senkrechtes Leuchtschild an der Straßenkante
+        schilder.push({ x: xi + seite * (6 + 20 * f), y: top + hoch * 0.18, w: 26 + 70 * f, h: 160 + 560 * f, c: neon[Math.floor(rr() * neon.length)], seite, f, n: i * 3 + (seite > 0 ? 1 : 0) });
+        // waagerechtes Schild
+        if (f > 0.2) { const sw = w * 0.55, sh = 30 + 70 * f, sx = seite < 0 ? x0 + w * 0.1 : x0 + w * 0.35, sy = top + hoch * 0.5; schilder.push({ x: sx, y: sy, w: sw, h: sh, c: neon[Math.floor(rr() * neon.length)], quer: true, f, n: i * 3 + 2 + (seite > 0 ? 7 : 0) }); }
+      }
     }
-    // Leuchtreklame: abstrakte Zeichen
-    for (const [x, y, w, h] of [[20, 260, 120, 420], [880, 200, 140, 480], [120, 760, 150, 260]]) {
-      const c = neon[Math.floor(r() * neon.length)]; box(x, y, w, h, 10, "#151925");
-      for (let k = 0; k < Math.floor(h / 90); k++) { box(x + 30, y + 30 + k * 90, w - 60, 14, 6, c); box(x + w / 2 - 7, y + 40 + k * 90, 14, 46, 6, c); }
-      A.licht(x + w / 2, y + h / 2, 300, c, nacht ? 0.9 : 0.4);
+    // Leuchtschilder mit abstrakten Zeichen (keine echten Marken)
+    for (const z of schilder) {
+      const puls = 0.85 + 0.15 * Math.sin(t * (1.3 + (z.n % 4) * 0.4) + z.n), a = (z.n % 5 === 0 ? fl : 1) * puls;
+      const x0 = z.quer ? z.x : (z.seite < 0 ? z.x - z.w : z.x);
+      box(x0, z.y, z.w, z.h, 6 + 6 * z.f, dunkel ? "#11141d" : "#1d2230");
+      ctx.save(); ctx.globalAlpha = a;
+      const rz = rnd(z.n + 300), st = Math.max(3, 4 + 8 * z.f);
+      if (z.quer) { for (let k = 0; k < 4; k++) { const gx = x0 + z.w * (0.12 + k * 0.21); line(gx, z.y + z.h * 0.25, gx + z.w * 0.12, z.y + z.h * 0.25, st, z.c); line(gx + z.w * 0.06, z.y + z.h * 0.2, gx + z.w * (0.02 + rz() * 0.08), z.y + z.h * 0.78, st, z.c); if (rz() < 0.6) line(gx, z.y + z.h * 0.55, gx + z.w * 0.12, z.y + z.h * 0.55, st, z.c); } }
+      else { const n = Math.max(2, Math.floor(z.h / (z.w * 1.15))); for (let k = 0; k < n; k++) { const gy = z.y + 14 + k * (z.h - 28) / n, gh = (z.h - 28) / n * 0.8; line(x0 + z.w * 0.22, gy + gh * 0.2, x0 + z.w * 0.78, gy + gh * 0.2, st, z.c); line(x0 + z.w * 0.5, gy + gh * 0.05, x0 + z.w * (0.3 + rz() * 0.4), gy + gh, st, z.c); if (rz() < 0.5) line(x0 + z.w * 0.25, gy + gh * 0.6, x0 + z.w * 0.75, gy + gh * 0.6, st, z.c); } }
+      ctx.restore();
+      A.licht(x0 + z.w / 2, z.y + z.h / 2, Math.max(z.w, z.h) * 0.7, z.c, (dunkel ? 0.85 : 0.3) * a);
     }
-    // Großbildschirm mit Uhr
-    const bx = 360, by = 420, bw = 360, bh = 230;
+    // Großbildschirm über der Kreuzung + Uhr
+    const bx = 380, by = 360, bw = 330, bh = 210;
+    line(bx + 40, by + bh, bx + 40, yh - 40, 10, "#2a2f3d"); line(bx + bw - 40, by + bh, bx + bw - 40, yh - 40, 10, "#2a2f3d");
     box(bx - 14, by - 14, bw + 28, bh + 28, 10, "#151925"); ctx.save(); ctx.globalAlpha = fl;
     box(bx, by, bw, bh, 6, s.schirm === "fotos" ? "#2c3a4e" : "#b5302a");
-    if (s.schirm === "fotos") for (let k = 0; k < 6; k++) { box(bx + 20 + k * 56, by + 60, 46, 60, 4, "#f4f1ea"); A.kopf(bx + 43 + k * 56, by + 92, 18, passantin(k + 40), { t, seed: k }); }
-    else { box(bx, by + bh - 60, bw, 60, 0, "#1d2128"); schrift("● ● ●", bx + bw / 2, by + 90, 60, "#ffffff"); for (let k = 0; k < 3; k++) box(bx + 40, by + bh - 46 + k * 0, bw - 80 - k * 60, 10, 4, rgba("#ffffff", 0.7 - k * 0.2)); }
-    ctx.restore(); A.licht(bx + bw / 2, by + bh / 2, 420, "#ff7a6a", 0.7 * fl);
-    if (s.uhr) { box(440, 700, 200, 80, 10, "#0d1218"); schrift(s.uhr, 540, 742, 52, "#ffd36b"); }
-    // Straße mit Diagonal-Zebrastreifen
-    box(-1500, 1200, 4080, 900, 0, nacht ? "#2c2f36" : "#4a4e56");
-    ctx.save(); ctx.translate(540, 1500); ctx.transform(1, 0, 0, 0.42, 0, 0);
-    for (let k = -8; k <= 8; k++) box(k * 90 - 30, -560, 50, 1120, 6, rgba("#e9e6dc", 0.85));
-    ctx.rotate(Math.PI / 2); for (let k = -6; k <= 6; k++) box(k * 90 - 30, -560, 50, 1120, 6, rgba("#e9e6dc", 0.55));
-    ctx.restore();
-    menge(s.menge ?? 14, 1260, 1800, 0.32, 0.6, t, 5, !!s.fotos);
+    if (s.schirm === "fotos") for (let k = 0; k < 5; k++) { box(bx + 18 + k * 62, by + 60, 52, 66, 4, "#f4f1ea"); A.kopf(bx + 44 + k * 62, by + 94, 20, passantin(k + 40), { t, seed: k }); }
+    else { box(bx, by + bh - 56, bw, 56, 0, "#1d2128"); schrift("● ● ●", bx + bw / 2, by + 80, 54, "#ffffff"); const lauf = (t * 90) % (bw + 200); for (let k = 0; k < 4; k++) box(bx + bw - lauf + k * 70, by + bh - 36, 50, 12, 4, rgba("#ffffff", 0.75)); }
+    ctx.restore(); A.licht(bx + bw / 2, by + bh / 2, 420, "#ff7a6a", (dunkel ? 0.8 : 0.45) * fl);
+    if (s.uhr) { box(bx + bw / 2 - 110, by + bh + 30, 220, 84, 10, "#0d1218"); schrift(s.uhr, bx + bw / 2, by + bh + 74, 54, "#ffd36b"); }
+    // Oberleitungen / Kabel quer über die Straße
+    for (const [y, d] of [[260, 70], [330, 90], [470, 60]]) { ctx.beginPath(); ctx.moveTo(-60, y); ctx.quadraticCurveTo(vx, y + d, 1140, y + 20); ctx.strokeStyle = rgba("#141821", 0.75); ctx.lineWidth = 4; ctx.stroke(); }
+    // Zebrastreifen vorne + diagonale Streifen
+    const zy0 = 1380, zy1 = 1560;
+    for (let k = -9; k <= 9; k++) { const xa = vx + k * 46, xb = vx + k * 70; poly([[xa - 14, zy0], [xa + 14, zy0], [xb + 22, zy1], [xb - 22, zy1]], rgba("#ece8dc", 0.88)); }
+    ctx.save(); ctx.globalAlpha = 0.35; for (let k = -6; k <= 6; k++) { const x = vx + k * 120; poly([[x - 20, 1180], [x + 20, 1180], [x + 160, 1360], [x + 120, 1360]], "#ece8dc"); } ctx.restore();
+    // stehengebliebene Autos mit Warnblinker
+    const blink = Math.sin(t * 6) > 0;
+    const auto = (x, y, sk, farbe, dreh = 0) => {
+      ctx.save(); ctx.translate(x, y); ctx.rotate(dreh); ctx.scale(sk, sk);
+      ellipse(0, 6, 190, 26, rgba("#000", 0.3));
+      box(-170, -90, 340, 96, 26, farbe); box(-110, -160, 220, 82, 30, shade(farbe, -0.08));
+      box(-94, -148, 88, 60, 12, dunkel ? "#2a3446" : "#a9c3d8"); box(6, -148, 88, 60, 12, dunkel ? "#2a3446" : "#a9c3d8");
+      for (const wx of [-110, 110]) { circle(wx, 6, 34, "#16181c"); circle(wx, 6, 14, "#7b8088"); }
+      for (const lx of [-162, 142]) { box(lx, -70, 20, 26, 6, blink ? "#ffb02e" : "#7a4a1a"); if (blink) A.licht(lx + 10, -57, 70, "#ffb02e", 0.9); }
+      ctx.restore();
+    };
+    auto(380, 1150, 0.32, "#e9e6df", -0.05); auto(700, 1230, 0.44, "#2f6fb5", 0.09); auto(250, 1330, 0.6, "#b5452f", 0.12);
+    // Ampeln + Laternen
+    const ampel = (x, yb, sk, rot) => { line(x, yb, x, yb - 520 * sk, 12 * sk, "#2b2f38"); box(x - 30 * sk, yb - 640 * sk, 60 * sk, 150 * sk, 10 * sk, "#1d2128");
+      circle(x, yb - 605 * sk, 18 * sk, rot ? "#ff4a3a" : "#4a1a14"); circle(x, yb - 565 * sk, 18 * sk, rot ? "#163a20" : "#3cff6a");
+      A.licht(x, yb - (rot ? 605 : 565) * sk, 120 * sk, rot ? "#ff4a3a" : "#3cff6a", dunkel ? 0.9 : 0.4); };
+    ampel(70, 1700, 1, true); ampel(1010, 1660, 0.9, false); ampel(330, 1120, 0.35, true); ampel(760, 1110, 0.33, true);
+    for (const [x, yb, sk] of [[150, 1260, 0.45], [930, 1250, 0.43], [255, 1090, 0.25], [830, 1085, 0.24]]) { line(x, yb, x, yb - 700 * sk, 9 * sk, "#30343d"); box(x - 40 * sk, yb - 715 * sk, 80 * sk, 20 * sk, 8 * sk, dunkel ? "#fff1cf" : "#dfe4ea"); if (dunkel) A.licht(x, yb - 690 * sk, 380 * sk, "#fff1d0", 0.85); }
+    // wenige Menschen auf den Gehwegen (perspektivisch klein)
+    const n = s.menge ?? 6, plaetze = [[150, 1170, 0.13], [915, 1160, 0.13], [70, 1300, 0.2], [1000, 1290, 0.2], [230, 1105, 0.09], [840, 1100, 0.09], [40, 1500, 0.3], [1040, 1480, 0.3], [300, 1070, 0.07], [780, 1068, 0.07], [130, 1420, 0.25], [960, 1400, 0.25], [190, 1220, 0.16], [880, 1210, 0.16]];
+    plaetze.slice(0, Math.min(n, plaetze.length)).sort((a, b) => a[1] - b[1]).forEach(([x, y, sk], i) => {
+      A.figur(x, y, sk, passantin(5 + i), { t: t + i, pose: s.fotos ? "traegt" : i % 3 ? "steht" : "geht", ausdruck: s.fotos ? "besorgt" : "neutral", seed: i });
+      if (s.fotos) { const fy = y - 560 * sk; box(x - 70 * sk, fy - 90 * sk, 140 * sk, 110 * sk, 8 * sk, "#f4f1ea"); A.kopf(x, fy - 40 * sk, 30 * sk, passantin(i + 90), { t, ausdruck: "neutral", seed: i }); }
+    });
     A.figurenZeigen(s, t, 1880, 0.7);
-    A._dunkel = nacht ? 0.42 : zeit === "abend" ? 0.25 : 0;
+    A._dunkel = nacht ? 0.36 : abend ? 0.2 : 0;
   };
 
   // =====================================================================

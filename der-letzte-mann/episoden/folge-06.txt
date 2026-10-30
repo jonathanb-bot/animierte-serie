@@ -69,10 +69,4 @@
 [gesicht lea ort=keller ansicht=raum licht=konsole besorgt rauch=false] „Dreizehn nach“, flüstert Lea. „Wie das Radio.“
 // Alex mit dem Hörer am Ohr, dreht die Wählscheibe
 [keller ansicht=raum licht=konsole display="AKKU 38 %|NÄCHSTES FENSTER|13:13:00" l1=an du hoerer_ab du:lauscht rauch=false] Du nimmst den Hörer. Und wählst die Nummer deines *Vaters*.
-[titel oben="Folge 7: Zehn Sekunden" gross="Fortsetzung folgt" farbe=#14213d akzent=#e2b443 groesse=110 dauer=1 hud=false]
-
-== Check ==
-@hud aus
-[objekt objekte="ohr" gross="Frage" farbe=#1e2f45] Frage: Warum gingen alte Telefone bei Stromausfall?
-[objekt objekte="gluehbirne" gross="Antwort" farbe=#1e3a2a] Antwort: Ihr Strom kam über die Telefonleitung.
-[titel gross="Was hättest du|gemacht?" groesse=120 unten="Schreib es in die Kommentare" farbe=#14213d akzent=#e2b443] Was hättest du gemacht? Schreib es in die Kommentare.
+[titel oben="Folge 7: Zehn Sekunden" gross="Fortsetzung folgt" farbe=#14213d akzent=#e2b443 groesse=110 dauer=2 hud=false]

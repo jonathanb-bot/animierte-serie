@@ -75,10 +75,4 @@
 [keller ansicht=raum licht=an display="NETZ · LÄDT|NÄCHSTES FENSTER|23:13:00" l1=an du rauch=false] Du stehst an der Konsole. Niemand ist an der Tür.
 // Konsole nah: Das dritte Lämpchen leuchtet weiß
 [keller ansicht=raum licht=an display="NETZ · LÄDT|NÄCHSTES FENSTER|23:13:00" l1=an fokus=330,1035 zoom=2.4 l3=an rauch=false] Da leuchtet das dritte Lämpchen. Ohne Verbindung. Ohne *dich*.
-[titel oben="Folge 10: Die Stimme" gross="Fortsetzung folgt" farbe=#14213d akzent=#e2b443 groesse=110 dauer=1 hud=false]
-
-== Check ==
-@hud aus
-[objekt objekte="ohr" gross="Frage" farbe=#1e2f45] Frage: Woher kennt eine Funkuhr die genaue Zeit?
-[objekt objekte="gluehbirne" gross="Antwort" farbe=#1e3a2a] Antwort: Von einem Langwellensender bei Frankfurt mit Atomuhren.
-[titel gross="Was hättest du|gemacht?" groesse=120 unten="Schreib es in die Kommentare" farbe=#14213d akzent=#e2b443] Was hättest du gemacht? Schreib es in die Kommentare.
+[titel oben="Folge 10: Die Stimme" gross="Fortsetzung folgt" farbe=#14213d akzent=#e2b443 groesse=110 dauer=2 hud=false]

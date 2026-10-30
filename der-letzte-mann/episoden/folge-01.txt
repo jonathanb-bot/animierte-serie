@@ -71,10 +71,4 @@
 [spion lea etage=3 flurlicht=an misstrauisch rauch=false] Draußen steht deine Nachbarin. „Ich weiß, dass du noch da bist.“
 // Türspion-Ansicht, nah: Lea schaut direkt in den Spion
 [spion lea etage=3 flurlicht=an misstrauisch nah rauch=false] „Ich habe dich durchs Fenster *gesehen*.“
-[titel oben="Folge 2: Bleib vom Fenster weg" gross="Fortsetzung folgt" farbe=#14213d akzent=#e2b443 groesse=110 dauer=1 hud=false]
-
-== Check ==
-@hud aus
-[objekt objekte="ohr" gross="Frage" farbe=#1e2f45] Frage: Warum kam die Warnung trotz Überlastung an?
-[objekt objekte="gluehbirne" gross="Antwort" farbe=#1e3a2a] Antwort: Cell Broadcast funkt an alle geeigneten Handys der Funkzelle.
-[titel gross="Was hättest du|gemacht?" groesse=120 unten="Schreib es in die Kommentare" farbe=#14213d akzent=#e2b443] Was hättest du gemacht? Schreib es in die Kommentare.
+[titel oben="Folge 2: Bleib vom Fenster weg" gross="Fortsetzung folgt" farbe=#14213d akzent=#e2b443 groesse=110 dauer=2 hud=false]

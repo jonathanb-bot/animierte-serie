@@ -73,10 +73,4 @@
 [keller ansicht=raum licht=an display="NETZ · AKKU 100 %|FENSTER 01:13:00" l1=an l2=an l3=an fokus=860,1090 zoom=1.35 klopfen rauch=false] Von der anderen Seite klopft *jemand*.
 // Nahaufnahme: Alex, Schreck
 [gesicht du ort=keller ansicht=raum licht=konsole schreck rauch=false] Nika flüstert: „Ich habe noch gar nicht geklopft.“
-[titel oben="Staffel 2" gross="Fortsetzung folgt" farbe=#14213d akzent=#e2b443 groesse=110 dauer=1 hud=false]
-
-== Check ==
-@hud aus
-[objekt objekte="ohr" gross="Frage" farbe=#1e2f45] Frage: Warum klingen Stimmen am alten Telefon dünn?
-[objekt objekte="gluehbirne" gross="Antwort" farbe=#1e3a2a] Antwort: Es überträgt nur 300 bis 3400 Hertz.
-[titel gross="Was hättest du|gemacht?" groesse=120 unten="Schreib es in die Kommentare" farbe=#14213d akzent=#e2b443] Was hättest du gemacht? Schreib es in die Kommentare.
+[titel oben="Staffel 2" gross="Fortsetzung folgt" farbe=#14213d akzent=#e2b443 groesse=110 dauer=2 hud=false]

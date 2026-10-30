@@ -75,10 +75,4 @@
 [handy bildschirm=protokoll wer=winter ort=keller ansicht=raum licht=konsole zeilen="Anker B · Seite B|Wählversuche: 31|stündlich seit Tag 1, 10:13|Gegenstelle: S7 (B)" rauch=false] „Anker B. Seite B. Wählversuche: 31.“
 // Nahaufnahme: Alex, Schreck
 [gesicht du ort=keller ansicht=raum licht=konsole schreck rauch=false] Die zweite Ausnahme sucht *dich*. Seit gestern.
-[titel oben="Folge 9: Die zweite Ausnahme" gross="Fortsetzung folgt" farbe=#14213d akzent=#e2b443 groesse=110 dauer=1 hud=false]
-
-== Check ==
-@hud aus
-[objekt objekte="ohr" gross="Frage" farbe=#1e2f45] Frage: Warum müssen GPS-Uhren korrigiert werden?
-[objekt objekte="gluehbirne" gross="Antwort" farbe=#1e3a2a] Antwort: Sie gehen täglich 38 Mikrosekunden vor.
-[titel gross="Was hättest du|gemacht?" groesse=120 unten="Schreib es in die Kommentare" farbe=#14213d akzent=#e2b443] Was hättest du gemacht? Schreib es in die Kommentare.
+[titel oben="Folge 9: Die zweite Ausnahme" gross="Fortsetzung folgt" farbe=#14213d akzent=#e2b443 groesse=110 dauer=2 hud=false]

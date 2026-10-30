@@ -75,10 +75,4 @@
 [gesicht du ort=wohnung schreck rauch=false] Geschrieben drei Wochen *vor* dem Ereignis.
 // Nahaufnahme: Lea, misstrauisch
 [gesicht lea ort=wohnung misstrauisch rauch=false] „Sie will dich nicht retten“, sagt Lea. „Sie hat dich *ausgesucht*.“
-[titel oben="Folge 5: Unter deiner Wohnung" gross="Fortsetzung folgt" farbe=#14213d akzent=#e2b443 groesse=110 dauer=1 hud=false]
-
-== Check ==
-@hud aus
-[objekt objekte="ohr" gross="Frage" farbe=#1e2f45] Frage: Woran sah Lea, dass die Datei alt ist?
-[objekt objekte="gluehbirne" gross="Antwort" farbe=#1e3a2a] Antwort: Am Erstellungsdatum in den Dateieigenschaften.
-[titel gross="Was hättest du|gemacht?" groesse=120 unten="Schreib es in die Kommentare" farbe=#14213d akzent=#e2b443] Was hättest du gemacht? Schreib es in die Kommentare.
+[titel oben="Folge 5: Unter deiner Wohnung" gross="Fortsetzung folgt" farbe=#14213d akzent=#e2b443 groesse=110 dauer=2 hud=false]

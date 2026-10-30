@@ -77,10 +77,4 @@
 [gesicht du ort=wohnung misstrauisch rauch=false] Du fragst: „Woher haben Sie meine Nummer?“
 // Nahaufnahme: Alex, Schreck
 [gesicht du ort=wohnung schreck rauch=false] „Herr Brandt. Kastanienweg 7, dritter Stock.“ Du hast ihr beides *nie* gesagt.
-[titel oben="Folge 4: Die falsche Rettung" gross="Fortsetzung folgt" farbe=#14213d akzent=#e2b443 groesse=110 dauer=1 hud=false]
-
-== Check ==
-@hud aus
-[objekt objekte="ohr" gross="Frage" farbe=#1e2f45] Frage: Warum erkannte nur Lea dich?
-[objekt objekte="gluehbirne" gross="Antwort" farbe=#1e3a2a] Antwort: Bekannte Gesichter erkennen wir selbst unscharf.
-[titel gross="Was hättest du|gemacht?" groesse=120 unten="Schreib es in die Kommentare" farbe=#14213d akzent=#e2b443] Was hättest du gemacht? Schreib es in die Kommentare.
+[titel oben="Folge 4: Die falsche Rettung" gross="Fortsetzung folgt" farbe=#14213d akzent=#e2b443 groesse=110 dauer=2 hud=false]
