@@ -1,7 +1,7 @@
 FOLGE 7: Zehn Sekunden
 Faktenthema: Zeitmessung: Zeitzonen mit halben und Viertelstunden. Wenn bei dir Minute 13 ist, zeigt die Uhr in Indien Minute 43 und in Nepal Minute 58.
 Hook (erster Satz): Stell dir vor, du hast zehn Sekunden mit deinem Vater.
-Geplante Gesamtlaufzeit: 113 Sekunden (Teil 1: 55 s, Teil 2: 58 s)
+Geplante Gesamtlaufzeit: 105 Sekunden (Teil 1: 52 s, Teil 2: 53 s, gemessen mit Stimme)
 Was bisher geschah:
 - Um 8:13 Uhr verschwanden alle Männer, nur du bliebst.
 - Unter deinem Haus steht die Konsole von Projekt Spiegel.
@@ -32,7 +32,7 @@ KAPITEL 2: Immer um dreizehn | tokio, keller (raum), objekt | Alex, Lea, Kompars
 (Haken am Ende: Was sagst du deinem Vater in zehn Sekunden?)
 
 SCHNITT: ENDE TEIL 1
-Laufzeit Teil 1: 55,3 Sekunden
+Laufzeit Teil 1: 52,4 Sekunden (gemessen mit Stimme)
 
 KAPITEL 3: Die Karteikarte | keller (raum), objekt, gesicht | Alex, Lea | Tag | Anzeige: Tag 2, 13:50, HANDY 79 %, NETZ 0/4, KONSOLE 33 %
 * Lea schreibt auf eine Karteikarte – Lea nimmt jeden Tag Notrufe an. Sie schreibt dir eine Karte.
@@ -58,8 +58,8 @@ FORTSETZUNG FOLGT
 CHECK: Frage: Bei dir ist Minute 13. Welche Minute ist in Indien? / Antwort: Minute 43, eine halbe Stunde versetzt.
 „Was hättest du gemacht? Schreib es in die Kommentare.“
 
-Laufzeit Teil 2: 57,8 Sekunden
-Laufzeit gesamte Folge: 113,1 Sekunden
+Laufzeit Teil 2: 52,8 Sekunden (gemessen mit Stimme)
+Laufzeit gesamte Folge: 105,1 Sekunden (gemessen mit Stimme)
 
 FAKTEN-CHECK:
 - **Zeitzonen mit halben und Viertelstunden:** Indien nutzt die Indian Standard Time (IST, UTC+5:30), Nepal die Nepal Time (NPT, UTC+5:45). Im November (MEZ = UTC+1) entspricht 14:13 bei dir 18:43 in Indien und 18:58 in Nepal. Die Minute ist also tatsächlich eine andere. Quellen: timeanddate.com, „Time Zone in India“ (https://www.timeanddate.com/time/zone/india) und „Time Zone in Nepal“ (https://www.timeanddate.com/time/zone/nepal)
@@ -75,20 +75,37 @@ NEU ZU BAUEN:
 - Ton: Telefonstimme mit dünnem Klang (Filter 300–3400 Hz) für Thomas, Klingeln des alten Telefons
 - Lea: Ausdruck „lächelt kurz“ (vorhanden: `froh`)
 
-DAUER (geschätzt ohne Stimme, berechnet mit `node der-letzte-mann/dauer.mjs der-letzte-mann/storylines/folge-07.md`):
+DAUER (berechnet mit `node der-letzte-mann/dauer.mjs der-letzte-mann/storylines/folge-07.md`):
 
-| Abschnitt | Einstellungen | Dauer |
-|---|---|---|
-| Kapitel 1: Alex? | 5 | 20.2 s |
-| Titelkarte | – | 1.0 s |
-| Was bisher geschah | 3 | 12.9 s |
-| Kapitel 2: Immer um dreizehn | 4 | 21.2 s |
-| **Teil 1** | | **55.3 s** |
-| Kapitel 3: Die Karteikarte | 5 | 21.5 s |
-| Kapitel 4: Die Frau | 6 | 22.0 s |
-| Fortsetzung folgt | – | 1.0 s |
-| Check | 3 | 13.4 s |
-| **Teil 2** | | **57.8 s** |
-| **Gesamte Folge** | | **113.1 s** |
+| Abschnitt | Einstellungen | Formel | mit Stimme (× 0.84) |
+|---|---|---|---|
+| Kapitel 1: Alex? | 5 | 20.2 s | 17.0 s |
+| Titelkarte | – | 1.0 s | 1.0 s |
+| Was bisher geschah | 4 | 16.8 s | 14.1 s |
+| Kapitel 2: Immer um dreizehn | 4 | 20.3 s | 17.0 s |
+| **Teil 1** | | 58.4 s | **49.2 s** |
+| Kapitel 3: Die Karteikarte | 6 | 25.1 s | 21.1 s |
+| Kapitel 4: Die Frau | 6 | 22.0 s | 18.4 s |
+| Fortsetzung folgt | – | 1.0 s | 1.0 s |
+| Check | 3 | 13.4 s | 11.2 s |
+| **Teil 2** | | 61.4 s | **51.8 s** |
+| **Gesamte Folge** | | 119.8 s | **100.9 s** |
 
-Mit echter Stimme (Gemini „Orus“) wird nachgemessen. Liegt ein Teil dann über 60 s, wird zuerst im Text gekürzt, nie an Titelkarte oder Check.
+Hinweise:
+- Kapitel 1: Alex?: 17.0 s (Ziel 20–22 s)
+- Kapitel 2: Immer um dreizehn: 17.0 s (Ziel 20–22 s)
+- Kapitel 4: Die Frau: 18.4 s (Ziel 20–22 s)
+
+Gemessen mit Stimme (Titelkarte bei Kapitel 1, „Fortsetzung folgt“ bei Kapitel 4):
+
+| Abschnitt | Dauer |
+|---|---|
+| Kapitel 1: Alex? | 18.7 s |
+| Was bisher geschah | 14.4 s |
+| Kapitel 2: Immer um dreizehn | 19.3 s |
+| **Teil 1** | **52.4 s** |
+| Kapitel 3: Die Karteikarte | 22.9 s |
+| Kapitel 4: Die Frau | 17.4 s |
+| Check | 12.4 s |
+| **Teil 2** | **52.8 s** |
+| **Gesamte Folge** | **105.1 s** |

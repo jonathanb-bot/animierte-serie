@@ -1,7 +1,7 @@
 FOLGE 4: Die falsche Rettung
 Faktenthema: Alltagstechnik: Dateien speichern unsichtbare Metadaten wie Erstellungsdatum und Autor.
 Hook (erster Satz): Stell dir vor, jemand will dich retten. Und weiß zu viel über dich.
-Geplante Gesamtlaufzeit: 115 Sekunden (Teil 1: 57 s, Teil 2: 58 s)
+Geplante Gesamtlaufzeit: 106 Sekunden (Teil 1: 57 s, Teil 2: 48 s, gemessen mit Stimme)
 Was bisher geschah:
 - Alle Männer sind verschwunden, nur du bist geblieben.
 - Ein Bild von dir am Fenster ging um die Welt.
@@ -34,7 +34,7 @@ KAPITEL 2: Die Nachtschicht | tuer, kueche, objekt | Alex, Lea | Morgen | Anzeig
 (Haken am Ende: Was hat Winter in deinem Keller gemacht?)
 
 SCHNITT: ENDE TEIL 1
-Laufzeit Teil 1: 56,9 Sekunden
+Laufzeit Teil 1: 57,3 Sekunden (gemessen mit Stimme)
 
 KAPITEL 3: Die Datei | kueche, handy, objekt | Alex, Lea | Morgen | Anzeige: Tag 2, 09:15, HANDY 96 %, NETZ 4/4, KONSOLE nicht verbunden (grau)
 * Küche: Lea und Alex über ihr Handy gebeugt – Ein Projekt in deinem Keller.
@@ -58,8 +58,8 @@ FORTSETZUNG FOLGT
 CHECK: Frage: Woran sah Lea, dass die Datei alt ist? / Antwort: Am Erstellungsdatum in den Dateieigenschaften.
 „Was hättest du gemacht? Schreib es in die Kommentare.“
 
-Laufzeit Teil 2: 57,8 Sekunden
-Laufzeit gesamte Folge: 114,7 Sekunden
+Laufzeit Teil 2: 48,4 Sekunden (gemessen mit Stimme)
+Laufzeit gesamte Folge: 105,6 Sekunden (gemessen mit Stimme)
 
 FAKTEN-CHECK:
 - **Metadaten in Dateien:** PDF-Dateien enthalten ein Dokument-Informationsverzeichnis mit Einträgen wie „CreationDate“ (Erstellungsdatum), „ModDate“ (Änderungsdatum) und „Author“. Viele Programme zeigen sie unter „Dokumenteigenschaften“ an. Ähnlich speichern Fotos EXIF-Daten. Diese Angaben lassen sich verändern, sie sind also ein Hinweis und kein Beweis. In der Geschichte reicht der Hinweis, um Lea misstrauisch zu machen. Quellen: ISO 32000-1:2008 (PDF 1.7), Abschnitt 14.3.3 „Document Information Dictionary“; Adobe Acrobat-Hilfe „PDF-Eigenschaften und Metadaten“ (https://helpx.adobe.com/de/acrobat/using/pdf-properties-metadata.html)
@@ -75,20 +75,35 @@ NEU ZU BAUEN:
 - Lea: Mappe mit Ausdruck
 - `supermarkt`: Kassiererin `k2`, Schild „Wasser: 2 pro Person“
 
-DAUER (geschätzt ohne Stimme, berechnet mit `node der-letzte-mann/dauer.mjs der-letzte-mann/storylines/folge-04.md`):
+DAUER (berechnet mit `node der-letzte-mann/dauer.mjs der-letzte-mann/storylines/folge-04.md`):
 
-| Abschnitt | Einstellungen | Dauer |
-|---|---|---|
-| Kapitel 1: Drei Hemden | 4 | 21.0 s |
-| Titelkarte | – | 1.0 s |
-| Was bisher geschah | 3 | 12.7 s |
-| Kapitel 2: Die Nachtschicht | 5 | 22.2 s |
-| **Teil 1** | | **56.9 s** |
-| Kapitel 3: Die Datei | 5 | 22.2 s |
-| Kapitel 4: Ankerperson | 5 | 22.2 s |
-| Fortsetzung folgt | – | 1.0 s |
-| Check | 3 | 12.4 s |
-| **Teil 2** | | **57.8 s** |
-| **Gesamte Folge** | | **114.7 s** |
+| Abschnitt | Einstellungen | Formel | mit Stimme (× 0.84) |
+|---|---|---|---|
+| Kapitel 1: Drei Hemden | 5 | 26.1 s | 21.9 s |
+| Titelkarte | – | 1.0 s | 1.0 s |
+| Was bisher geschah | 4 | 15.8 s | 13.2 s |
+| Kapitel 2: Die Nachtschicht | 6 | 27.0 s | 22.7 s |
+| **Teil 1** | | 69.9 s | **58.8 s** |
+| Kapitel 3: Die Datei | 5 | 21.3 s | 17.9 s |
+| Kapitel 4: Ankerperson | 5 | 22.2 s | 18.6 s |
+| Fortsetzung folgt | – | 1.0 s | 1.0 s |
+| Check | 3 | 12.4 s | 10.4 s |
+| **Teil 2** | | 56.9 s | **47.9 s** |
+| **Gesamte Folge** | | 126.7 s | **106.8 s** |
 
-Mit echter Stimme (Gemini „Orus“) wird nachgemessen. Liegt ein Teil dann über 60 s, wird zuerst im Text gekürzt, nie an Titelkarte oder Check.
+Hinweise:
+- Kapitel 3: Die Datei: 17.9 s (Ziel 20–22 s)
+
+Gemessen mit Stimme (Titelkarte bei Kapitel 1, „Fortsetzung folgt“ bei Kapitel 4):
+
+| Abschnitt | Dauer |
+|---|---|
+| Kapitel 1: Drei Hemden | 22.9 s |
+| Was bisher geschah | 11.1 s |
+| Kapitel 2: Die Nachtschicht | 23.3 s |
+| **Teil 1** | **57.3 s** |
+| Kapitel 3: Die Datei | 19.6 s |
+| Kapitel 4: Ankerperson | 19.6 s |
+| Check | 9.1 s |
+| **Teil 2** | **48.4 s** |
+| **Gesamte Folge** | **105.6 s** |

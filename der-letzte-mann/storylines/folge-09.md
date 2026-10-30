@@ -1,7 +1,7 @@
 FOLGE 9: Die zweite Ausnahme
 Faktenthema: Funk und Zeitmessung: Funkuhren stellen sich nach dem Langwellensender DCF77 bei Frankfurt. Er reicht ca. 2000 km, die Zeit stammt von Atomuhren der PTB.
 Hook (erster Satz): Stell dir vor, jemand drückt jede Stunde einen Knopf. Für dich.
-Geplante Gesamtlaufzeit: 114 Sekunden (Teil 1: 58 s, Teil 2: 56 s)
+Geplante Gesamtlaufzeit: 102 Sekunden (Teil 1: 54 s, Teil 2: 48 s, gemessen mit Stimme)
 Was bisher geschah:
 - Du bist der letzte Mann, unter deinem Haus steht eine Konsole.
 - Über sie erreichst du die andere Welt, zehn Sekunden pro Stunde.
@@ -34,7 +34,7 @@ KAPITEL 2: Die Plombe | keller (flur, raum), gesicht | Alex, Lea | Nacht | Anzei
 (Haken am Ende: Schaffen sie dieselbe Sekunde?)
 
 SCHNITT: ENDE TEIL 1
-Laufzeit Teil 1: 57,7 Sekunden
+Laufzeit Teil 1: 54,4 Sekunden (gemessen mit Stimme)
 
 KAPITEL 3: Zwei Sekunden | keller (raum), bahnhof, objekt | Alex, Lea | Nacht | Anzeige: Tag 2, 22:13, HANDY 86 %, NETZ 0/4, KONSOLE 46 % + NETZ
 * Konsole: Alex' Finger über der Taste, daneben sein Handy mit 22:13 – 22:13 Uhr. Du drückst nach deiner Handyuhr.
@@ -58,8 +58,8 @@ FORTSETZUNG FOLGT
 CHECK: Frage: Woher kennt eine Funkuhr die genaue Zeit? / Antwort: Von einem Langwellensender bei Frankfurt mit Atomuhren.
 „Was hättest du gemacht? Schreib es in die Kommentare.“
 
-Laufzeit Teil 2: 56,2 Sekunden
-Laufzeit gesamte Folge: 113,9 Sekunden
+Laufzeit Teil 2: 47,8 Sekunden (gemessen mit Stimme)
+Laufzeit gesamte Folge: 102,2 Sekunden (gemessen mit Stimme)
 
 FAKTEN-CHECK:
 - **DCF77:** Der Langwellensender DCF77 (77,5 kHz) in Mainflingen bei Frankfurt am Main verbreitet die gesetzliche Zeit Deutschlands. Sie wird von Atomuhren der Physikalisch-Technischen Bundesanstalt (PTB) abgeleitet. Die Reichweite beträgt etwa 2000 km. Funkuhren empfangen das Signal und stellen sich danach. Quellen: PTB, „DCF77“ (https://www.ptb.de/cms/ptb/fachabteilungen/abt4/fb-44/ag-442/verbreitung-der-gesetzlichen-zeit/dcf77.html); Wikipedia „DCF77“ (https://de.wikipedia.org/wiki/DCF77)
@@ -78,20 +78,37 @@ NEU ZU BAUEN:
 - Ton: Sicherung (vorhanden: `strom_an`)
 - `strasse` (`suchstelle`) bei Nacht: Kerzen vor der Fotowand, Nikas Zettel markiert
 
-DAUER (geschätzt ohne Stimme, berechnet mit `node der-letzte-mann/dauer.mjs der-letzte-mann/storylines/folge-09.md`):
+DAUER (berechnet mit `node der-letzte-mann/dauer.mjs der-letzte-mann/storylines/folge-09.md`):
 
-| Abschnitt | Einstellungen | Dauer |
-|---|---|---|
-| Kapitel 1: Nika | 5 | 21.8 s |
-| Titelkarte | – | 1.0 s |
-| Was bisher geschah | 3 | 13.6 s |
-| Kapitel 2: Die Plombe | 5 | 21.3 s |
-| **Teil 1** | | **57.7 s** |
-| Kapitel 3: Zwei Sekunden | 5 | 20.9 s |
-| Kapitel 4: Das dritte Lämpchen | 5 | 21.4 s |
-| Fortsetzung folgt | – | 1.0 s |
-| Check | 3 | 12.9 s |
-| **Teil 2** | | **56.2 s** |
-| **Gesamte Folge** | | **113.9 s** |
+| Abschnitt | Einstellungen | Formel | mit Stimme (× 0.84) |
+|---|---|---|---|
+| Kapitel 1: Nika | 6 | 26.8 s | 22.5 s |
+| Titelkarte | – | 1.0 s | 1.0 s |
+| Was bisher geschah | 4 | 17.2 s | 14.4 s |
+| Kapitel 2: Die Plombe | 5 | 21.3 s | 17.9 s |
+| **Teil 1** | | 66.3 s | **55.8 s** |
+| Kapitel 3: Zwei Sekunden | 5 | 20.0 s | 16.8 s |
+| Kapitel 4: Das dritte Lämpchen | 5 | 21.4 s | 18.0 s |
+| Fortsetzung folgt | – | 1.0 s | 1.0 s |
+| Check | 3 | 12.9 s | 10.8 s |
+| **Teil 2** | | 55.3 s | **46.6 s** |
+| **Gesamte Folge** | | 121.5 s | **102.4 s** |
 
-Mit echter Stimme (Gemini „Orus“) wird nachgemessen. Liegt ein Teil dann über 60 s, wird zuerst im Text gekürzt, nie an Titelkarte oder Check.
+Hinweise:
+- Kapitel 2: Die Plombe: 17.9 s (Ziel 20–22 s)
+- Kapitel 3: Zwei Sekunden: 16.8 s (Ziel 20–22 s)
+- Kapitel 4: Das dritte Lämpchen: 18.0 s (Ziel 20–22 s)
+
+Gemessen mit Stimme (Titelkarte bei Kapitel 1, „Fortsetzung folgt“ bei Kapitel 4):
+
+| Abschnitt | Dauer |
+|---|---|
+| Kapitel 1: Nika | 24.1 s |
+| Was bisher geschah | 13.1 s |
+| Kapitel 2: Die Plombe | 17.1 s |
+| **Teil 1** | **54.4 s** |
+| Kapitel 3: Zwei Sekunden | 19.3 s |
+| Kapitel 4: Das dritte Lämpchen | 17.8 s |
+| Check | 10.7 s |
+| **Teil 2** | **47.8 s** |
+| **Gesamte Folge** | **102.2 s** |

@@ -1,7 +1,7 @@
 FOLGE 10: Die Stimme
 Faktenthema: Schall und Telefonie: Klassische Telefone übertragen nur 300 bis 3400 Hertz. Deshalb klingen Stimmen am Telefon dünner.
 Hook (erster Satz): Stell dir vor, es gibt noch jemanden wie dich. Nur in einer anderen Welt.
-Geplante Gesamtlaufzeit: 112 Sekunden (Teil 1: 56 s, Teil 2: 57 s)
+Geplante Gesamtlaufzeit: 106 Sekunden (Teil 1: 56 s, Teil 2: 50 s, gemessen mit Stimme)
 Was bisher geschah:
 - Um 8:13 Uhr wurde die Welt geteilt: hier die Frauen, drüben die Männer.
 - Auf jeder Seite blieb eine Ausnahme: hier du, drüben eine Frau.
@@ -32,7 +32,7 @@ KAPITEL 2: Zehn Sekunden mit Nika | keller (raum), objekt, gesicht | Alex, Nika 
 (Haken am Ende: Wie öffnet man die Tür?)
 
 SCHNITT: ENDE TEIL 1
-Laufzeit Teil 1: 55,5 Sekunden
+Laufzeit Teil 1: 55,7 Sekunden (gemessen mit Stimme)
 
 KAPITEL 3: Wer war an der Tür? | tokio, keller (raum), gesicht | Alex, Lea, Nika (nur Stimme), Komparsin k4 | Nacht (Tokio: Morgen) | Anzeige: Tag 3, 00:13, HANDY 79 %, NETZ 0/4, KONSOLE 86 % + NETZ
 * Tokio-Kreuzung am Morgen, Menschen halten Fotos ihrer Angehörigen hoch – In Tokio ist Morgen. Menschen halten Fotos hoch.
@@ -57,8 +57,8 @@ FORTSETZUNG FOLGT
 CHECK: Frage: Warum klingen Stimmen am alten Telefon dünn? / Antwort: Es überträgt nur 300 bis 3400 Hertz.
 „Was hättest du gemacht? Schreib es in die Kommentare.“
 
-Laufzeit Teil 2: 56,8 Sekunden
-Laufzeit gesamte Folge: 112,3 Sekunden
+Laufzeit Teil 2: 49,8 Sekunden (gemessen mit Stimme)
+Laufzeit gesamte Folge: 105,5 Sekunden (gemessen mit Stimme)
 
 FAKTEN-CHECK:
 - **Telefonband 300–3400 Hz:** Klassische Schmalband-Telefonie (analog, ISDN, Codec G.711) überträgt Sprache im Bereich von ca. 300 bis 3400 Hz. Tiefe Grundtöne und hohe Zischlaute fehlen deshalb, und Stimmen klingen dünner. Dass man sie trotzdem erkennt, liegt daran, dass das Ohr den fehlenden Grundton aus den Obertönen ergänzt. HD-Telefonie (G.722) überträgt etwa 50 bis 7000 Hz. Quellen: ITU-T P.310 (Telefonband 300–3400 Hz); NFON-Lexikon „HD-Telefonie“ (https://www.nfon.com/en/get-started/cloud-telephony/lexicon/knowledge-base-detail/hd-telephony)
@@ -76,24 +76,36 @@ NEU ZU BAUEN:
 - Ton: Telefonstimme mit dünnem Klang für Nika, Klopfen (vorhanden: `tuer_klopfen`)
 - `keller` (`ansicht=raum`): Lea zählt am Funkwecker die Sekunden (Nahaufnahme)
 
-DAUER (geschätzt ohne Stimme, berechnet mit `node der-letzte-mann/dauer.mjs der-letzte-mann/storylines/folge-10.md`):
+DAUER (berechnet mit `node der-letzte-mann/dauer.mjs der-letzte-mann/storylines/folge-10.md`):
 
-| Abschnitt | Einstellungen | Dauer |
-|---|---|---|
-| Kapitel 1: Hallo? | 4 | 19.3 s |
-| Titelkarte | – | 1.0 s |
-| Was bisher geschah | 3 | 13.0 s |
-| Kapitel 2: Zehn Sekunden mit Nika | 5 | 22.2 s |
-| **Teil 1** | | **55.5 s** |
-| Kapitel 3: Wer war an der Tür? | 5 | 19.7 s |
-| Kapitel 4: Auf drei | 6 | 23.7 s |
-| Fortsetzung folgt | – | 1.0 s |
-| Check | 3 | 12.3 s |
-| **Teil 2** | | **56.8 s** |
-| **Gesamte Folge** | | **112.3 s** |
+| Abschnitt | Einstellungen | Formel | mit Stimme (× 0.84) |
+|---|---|---|---|
+| Kapitel 1: Hallo? | 5 | 23.8 s | 20.0 s |
+| Titelkarte | – | 1.0 s | 1.0 s |
+| Was bisher geschah | 3 | 13.0 s | 10.9 s |
+| Kapitel 2: Zehn Sekunden mit Nika | 5 | 21.3 s | 17.9 s |
+| **Teil 1** | | 59.1 s | **49.8 s** |
+| Kapitel 3: Wer war an der Tür? | 5 | 23.0 s | 19.3 s |
+| Kapitel 4: Auf drei | 6 | 23.7 s | 19.9 s |
+| Fortsetzung folgt | – | 1.0 s | 1.0 s |
+| Check | 3 | 12.3 s | 10.4 s |
+| **Teil 2** | | 60.1 s | **50.6 s** |
+| **Gesamte Folge** | | 119.2 s | **100.4 s** |
 
 Hinweise:
-- Kapitel 1: Hallo?: 19.3 s (Ziel 20–22 s)
-- Kapitel 4: Auf drei: 23.7 s (Ziel 20–22 s)
+- Was bisher geschah: 10.9 s (Ziel 12–15 s)
+- Kapitel 2: Zehn Sekunden mit Nika: 17.9 s (Ziel 20–22 s)
 
-Mit echter Stimme (Gemini „Orus“) wird nachgemessen. Liegt ein Teil dann über 60 s, wird zuerst im Text gekürzt, nie an Titelkarte oder Check.
+Gemessen mit Stimme (Titelkarte bei Kapitel 1, „Fortsetzung folgt“ bei Kapitel 4):
+
+| Abschnitt | Dauer |
+|---|---|
+| Kapitel 1: Hallo? | 25.1 s |
+| Was bisher geschah | 10.9 s |
+| Kapitel 2: Zehn Sekunden mit Nika | 19.7 s |
+| **Teil 1** | **55.7 s** |
+| Kapitel 3: Wer war an der Tür? | 19.4 s |
+| Kapitel 4: Auf drei | 19.5 s |
+| Check | 10.9 s |
+| **Teil 2** | **49.8 s** |
+| **Gesamte Folge** | **105.5 s** |

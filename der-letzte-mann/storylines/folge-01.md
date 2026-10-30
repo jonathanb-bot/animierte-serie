@@ -1,7 +1,7 @@
 FOLGE 1: Außer dir
 Faktenthema: Warnsysteme: Cell Broadcast erreicht jedes geeignete Handy in einer Funkzelle, auch wenn kaum noch Anrufe durchkommen. Dazu Zeitzonen: dieselbe Sekunde ist in Tokio 16:13 und in New York 02:13.
 Hook (erster Satz): Stell dir vor, du bist der einzige Mann auf der Welt.
-Geplante Gesamtlaufzeit: 104 Sekunden (Teil 1: 46 s, Teil 2: 59 s)
+Geplante Gesamtlaufzeit: 95 Sekunden (Teil 1: 43 s, Teil 2: 51 s, gemessen mit Stimme)
 Was bisher geschah: entfällt (erst ab Folge 2)
 
 KAPITEL 1: Nur Frauen. Und du. | skyline, wohnung, handy, bad | Alex | Morgen | Anzeige: Tag 1, 08:13, HANDY 64 %, NETZ 4/4, KONSOLE nicht verbunden (grau)
@@ -26,7 +26,7 @@ KAPITEL 2: Keine Antwort | wohnung, handy, objekt | Alex, Thomas (nur Stimme) | 
 (Haken am Ende: Warum ausgerechnet du? Und wo ist dein Vater?)
 
 SCHNITT: ENDE TEIL 1
-Laufzeit Teil 1: 45,6 Sekunden
+Laufzeit Teil 1: 43,3 Sekunden (gemessen mit Stimme)
 
 KAPITEL 3: Überall | bahnhof, supermarkt, tokio, newyork, gesicht | Komparsinnen, Nachrichtensprecherin | Morgen (Ortszeit je nach Stadt) | Anzeige: Tag 1, 08:41, HANDY 58 %, NETZ 1/4 „überlastet“, KONSOLE nicht verbunden (grau)
 * Skyline von oben, Kamera fährt über die Dächer – Um 8:13 verschwanden die Männer. *Überall*.
@@ -52,8 +52,8 @@ FORTSETZUNG FOLGT
 CHECK: Frage: Warum kam die Warnung trotz Überlastung an? / Antwort: Cell Broadcast funkt an alle geeigneten Handys der Funkzelle.
 „Was hättest du gemacht? Schreib es in die Kommentare.“
 
-Laufzeit Teil 2: 58,7 Sekunden
-Laufzeit gesamte Folge: 104,4 Sekunden
+Laufzeit Teil 2: 51,4 Sekunden (gemessen mit Stimme)
+Laufzeit gesamte Folge: 94,7 Sekunden (gemessen mit Stimme)
 
 FAKTEN-CHECK:
 - **Cell Broadcast:** Seit dem 23. Februar 2023 warnt Deutschland per Cell Broadcast. Die Warnung wird an alle geeigneten Handys gesendet, die in einer Funkzelle eingebucht sind. Man braucht dafür keine App und keine Telefonnummer. Laut BBK kommt die Warnung auch dann an, wenn in der Funkzelle keine weiteren Gespräche mehr aufgebaut werden können. Die Zelle selbst muss aber in Betrieb sein. Grenzen: Ältere Geräte (etwa vor Android 11 oder iOS 16.1), ausgeschaltete Handys und Handys im Flugmodus erhalten nichts. Deshalb heißt es im Check bewusst „alle geeigneten Handys“. Quellen: Verbraucherzentrale, „Cell Broadcast: Neues Warnsystem für Katastrophen in Deutschland“ (https://www.verbraucherzentrale.de/wissen/digitale-welt/mobilfunk-und-festnetz/cell-broadcast-neues-warnsystem-fuer-katastrophen-in-deutschland-77578); Vodafone-Hilfe „Cell Broadcast“ (https://www.vodafone.de/hilfe/cell-broadcast.html); ingenieur.de mit BBK-Angaben (https://www.ingenieur.de/technik/fachbereiche/ittk/cell-broadcast-so-kommt-die-katastrophenwarnung-auf-ihr-smartphone/)
@@ -72,19 +72,30 @@ NEU ZU BAUEN:
 - `handy`: Anrufliste mit mehrfach „Papa – Mailbox“
 - Anzeige: Balken KONSOLE grau mit „nicht verbunden“, NETZ mit Zusatz „überlastet“
 
-DAUER (geschätzt ohne Stimme, berechnet mit `node der-letzte-mann/dauer.mjs der-letzte-mann/storylines/folge-01.md`):
+DAUER (berechnet mit `node der-letzte-mann/dauer.mjs der-letzte-mann/storylines/folge-01.md`):
 
-| Abschnitt | Einstellungen | Dauer |
-|---|---|---|
-| Kapitel 1: Nur Frauen. Und du. | 6 | 22.4 s |
-| Titelkarte | – | 1.0 s |
-| Kapitel 2: Keine Antwort | 5 | 22.2 s |
-| **Teil 1** | | **45.6 s** |
-| Kapitel 3: Überall | 6 | 22.1 s |
-| Kapitel 4: Es klingelt | 5 | 22.2 s |
-| Fortsetzung folgt | – | 1.0 s |
-| Check | 3 | 13.5 s |
-| **Teil 2** | | **58.7 s** |
-| **Gesamte Folge** | | **104.4 s** |
+| Abschnitt | Einstellungen | Formel | mit Stimme (× 0.84) |
+|---|---|---|---|
+| Kapitel 1: Nur Frauen. Und du. | 6 | 24.6 s | 20.7 s |
+| Titelkarte | – | 1.0 s | 1.0 s |
+| Kapitel 2: Keine Antwort | 6 | 26.5 s | 22.2 s |
+| **Teil 1** | | 52.1 s | **43.9 s** |
+| Kapitel 3: Überall | 6 | 24.7 s | 20.8 s |
+| Kapitel 4: Es klingelt | 6 | 27.4 s | 23.0 s |
+| Fortsetzung folgt | – | 1.0 s | 1.0 s |
+| Check | 3 | 13.5 s | 11.3 s |
+| **Teil 2** | | 66.6 s | **56.1 s** |
+| **Gesamte Folge** | | 118.7 s | **100.0 s** |
 
-Mit echter Stimme (Gemini „Orus“) wird nachgemessen. Liegt ein Teil dann über 60 s, wird zuerst im Text gekürzt, nie an Titelkarte oder Check.
+Gemessen mit Stimme (Titelkarte bei Kapitel 1, „Fortsetzung folgt“ bei Kapitel 4):
+
+| Abschnitt | Dauer |
+|---|---|
+| Kapitel 1: Nur Frauen. Und du. | 23.1 s |
+| Kapitel 2: Keine Antwort | 20.2 s |
+| **Teil 1** | **43.3 s** |
+| Kapitel 3: Überall | 19.8 s |
+| Kapitel 4: Es klingelt | 20.9 s |
+| Check | 10.8 s |
+| **Teil 2** | **51.4 s** |
+| **Gesamte Folge** | **94.7 s** |

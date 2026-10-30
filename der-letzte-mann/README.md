@@ -27,9 +27,9 @@ node der-letzte-mann/dauer.mjs der-letzte-mann/storylines/folge-01.md
 |---|---|
 | Serienbibel, Figurenblätter, Staffelplan, NEU ZU BAUEN, Laufzeitplan | fertig |
 | Storylines (`storylines/`) | alle 10 fertig |
-| Drehbücher (`episoden/`) | alle 10 fertig; die Kulissen-Angaben sind vorläufig, bis die Grafik gebaut ist |
-| Stimme (`audio/`, `musik/`) | alle 10 mit Gemini „Orus“, jede Einstellung per Spracherkennung gegen den Text geprüft, −15,0 bis −15,5 LUFS |
-| Grafik (`engine/letzter-mann.js`) | noch nicht begonnen (siehe NEU ZU BAUEN). Erst danach rendern und den Workflow `rendern.yml` um den Ordner erweitern. |
+| Drehbücher (`episoden/`) | alle 10 fertig, erzeugt mit `python3 der-letzte-mann/drehbuch.py` aus den Storylines |
+| Stimme (`audio/`, `musik/`) | alle 10 mit Gemini „Orus“, ohne „Echter Fakt“, jede Einstellung per Spracherkennung gegen den Text geprüft, −14,9 bis −15,7 LUFS. Staffel gemessen 17:24 min |
+| Grafik (`engine/letzter-mann.js`) | gebaut, Standbilder aller Folgen geprüft. `rendern.yml` kennt die Serie (`der-letzte-mann-folge-XX`). Rendern lokal: `node render.mjs der-letzte-mann/episoden/folge-XX.txt --teile --max 60` |
 
 ## Reihenfolge beim Posten
 

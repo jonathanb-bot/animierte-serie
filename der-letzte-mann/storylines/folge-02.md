@@ -1,7 +1,7 @@
 FOLGE 2: Bleib vom Fenster weg
 Faktenthema: Licht: Eine Glasscheibe spiegelt pro Oberfläche etwa 4 % des Lichts. Tagsüber sieht man von außen deshalb vor allem Spiegelungen, nachts wird ein helles Zimmer zum Schaufenster.
 Hook (erster Satz): Stell dir vor, jemand weiß, dass du noch da bist.
-Geplante Gesamtlaufzeit: 113 Sekunden (Teil 1: 56 s, Teil 2: 57 s)
+Geplante Gesamtlaufzeit: 106 Sekunden (Teil 1: 53 s, Teil 2: 53 s, gemessen mit Stimme)
 Was bisher geschah:
 - Um 8:13 Uhr sind alle Männer verschwunden.
 - Nur du bist geblieben, dein Vater geht nicht ran.
@@ -34,7 +34,7 @@ KAPITEL 2: Nicht zum Flirten | wohnung, gesicht | Alex, Lea | Morgen | Anzeige: 
 (Haken am Ende: Welcher Anruf, und wusste jemand vorher Bescheid?)
 
 SCHNITT: ENDE TEIL 1
-Laufzeit Teil 1: 56,3 Sekunden
+Laufzeit Teil 1: 52,9 Sekunden (gemessen mit Stimme)
 
 KAPITEL 3: Spiegelung | kueche, objekt, wohnung | Alex | Tag | Anzeige: Tag 1, 10:13, HANDY 66 % +, NETZ 2/4, KONSOLE nicht verbunden (grau)
 * Küche: Das Küchenradio rauscht, die Herduhr zeigt 10:13 – Um 10:13 rauscht das Radio. Wie schon um 9:13.
@@ -59,8 +59,8 @@ FORTSETZUNG FOLGT
 CHECK: Frage: Warum sieht man nachts in helle Zimmer hinein? / Antwort: Das Zimmerlicht überstrahlt die schwache Spiegelung.
 „Was hättest du gemacht? Schreib es in die Kommentare.“
 
-Laufzeit Teil 2: 56,7 Sekunden
-Laufzeit gesamte Folge: 113,0 Sekunden
+Laufzeit Teil 2: 52,7 Sekunden (gemessen mit Stimme)
+Laufzeit gesamte Folge: 105,6 Sekunden (gemessen mit Stimme)
 
 FAKTEN-CHECK:
 - **Glas spiegelt etwa 4 % pro Oberfläche:** Bei senkrechtem Lichteinfall wird an einer Grenzfläche Luft/Glas der Anteil ((n₂−n₁)/(n₂+n₁))² zurückgeworfen. Mit n ≈ 1,5 sind das rund 4 %, bei einer Scheibe mit zwei Oberflächen also rund 8 %. Ist es draußen viel heller als drinnen, überdeckt diese Spiegelung den Blick ins Zimmer. Nachts ist es umgekehrt. Quellen: IEEE TechNav „Fresnel reflection“ (https://technav.ieee.org/topic/fresnel-reflection/); Cornell Graphics, „Fresnel Reflectance“ (https://www.graphics.cornell.edu/~westin/misc/fresnel.html)
@@ -76,20 +76,32 @@ NEU ZU BAUEN:
 - `strasse`: Frauen schieben liegengebliebene Autos von der Kreuzung (Komparsinnen `k1`, `k3`, Pose „schiebt“)
 - `tokio` im Rückblick (vorhanden aus Folge 1)
 
-DAUER (geschätzt ohne Stimme, berechnet mit `node der-letzte-mann/dauer.mjs der-letzte-mann/storylines/folge-02.md`):
+DAUER (berechnet mit `node der-letzte-mann/dauer.mjs der-letzte-mann/storylines/folge-02.md`):
 
-| Abschnitt | Einstellungen | Dauer |
-|---|---|---|
-| Kapitel 1: Lea | 5 | 20.7 s |
-| Titelkarte | – | 1.0 s |
-| Was bisher geschah | 3 | 12.4 s |
-| Kapitel 2: Nicht zum Flirten | 5 | 22.2 s |
-| **Teil 1** | | **56.3 s** |
-| Kapitel 3: Spiegelung | 5 | 21.5 s |
-| Kapitel 4: Vor drei Minuten | 5 | 21.3 s |
-| Fortsetzung folgt | – | 1.0 s |
-| Check | 3 | 13.0 s |
-| **Teil 2** | | **56.7 s** |
-| **Gesamte Folge** | | **113.0 s** |
+| Abschnitt | Einstellungen | Formel | mit Stimme (× 0.84) |
+|---|---|---|---|
+| Kapitel 1: Lea | 6 | 26.3 s | 22.1 s |
+| Titelkarte | – | 1.0 s | 1.0 s |
+| Was bisher geschah | 4 | 16.7 s | 14.0 s |
+| Kapitel 2: Nicht zum Flirten | 5 | 22.2 s | 18.7 s |
+| **Teil 1** | | 66.2 s | **55.8 s** |
+| Kapitel 3: Spiegelung | 6 | 25.3 s | 21.3 s |
+| Kapitel 4: Vor drei Minuten | 5 | 24.3 s | 20.4 s |
+| Fortsetzung folgt | – | 1.0 s | 1.0 s |
+| Check | 3 | 13.0 s | 10.9 s |
+| **Teil 2** | | 63.5 s | **53.5 s** |
+| **Gesamte Folge** | | 129.7 s | **109.3 s** |
 
-Mit echter Stimme (Gemini „Orus“) wird nachgemessen. Liegt ein Teil dann über 60 s, wird zuerst im Text gekürzt, nie an Titelkarte oder Check.
+Gemessen mit Stimme (Titelkarte bei Kapitel 1, „Fortsetzung folgt“ bei Kapitel 4):
+
+| Abschnitt | Dauer |
+|---|---|
+| Kapitel 1: Lea | 21.6 s |
+| Was bisher geschah | 13.1 s |
+| Kapitel 2: Nicht zum Flirten | 18.3 s |
+| **Teil 1** | **52.9 s** |
+| Kapitel 3: Spiegelung | 22.6 s |
+| Kapitel 4: Vor drei Minuten | 19.9 s |
+| Check | 10.2 s |
+| **Teil 2** | **52.7 s** |
+| **Gesamte Folge** | **105.6 s** |

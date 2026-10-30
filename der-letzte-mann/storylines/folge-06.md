@@ -1,7 +1,7 @@
 FOLGE 6: Das tote Telefon
 Faktenthema: Telefonie: Alte Festnetztelefone bekamen ihren Strom über die Telefonleitung von der Vermittlungsstelle und funktionierten deshalb auch bei Stromausfall.
 Hook (erster Satz): Stell dir vor, hinter dieser Tür ist dein Vater.
-Geplante Gesamtlaufzeit: 113 Sekunden (Teil 1: 57 s, Teil 2: 56 s)
+Geplante Gesamtlaufzeit: 100 Sekunden (Teil 1: 50 s, Teil 2: 51 s, gemessen mit Stimme)
 Was bisher geschah:
 - Um 8:13 Uhr verschwanden alle Männer, nur du nicht.
 - Ein Projekt namens Spiegel hatte dich vorher ausgewählt.
@@ -31,7 +31,7 @@ KAPITEL 2: Kabel ab | keller (raum), objekt | Alex, Lea | Tag | Anzeige: Tag 2, 
 (Haken am Ende: Wer versorgt dieses Telefon?)
 
 SCHNITT: ENDE TEIL 1
-Laufzeit Teil 1: 57,2 Sekunden
+Laufzeit Teil 1: 49,7 Sekunden (gemessen mit Stimme)
 
 KAPITEL 3: Drei Lämpchen | keller (raum) | Alex, Lea | Tag | Anzeige: Tag 2, 13:05, HANDY 83 %, NETZ 0/4, KONSOLE nicht verbunden (grau)
 * Konsole nah: drei Lämpchen „BEREIT“, „VERBINDUNG“, „SCHWELLE“, alle aus – An der Konsole: drei Lämpchen. „Bereit“, „Verbindung“, „Schwelle“.
@@ -55,8 +55,8 @@ FORTSETZUNG FOLGT
 CHECK: Frage: Warum gingen alte Telefone bei Stromausfall? / Antwort: Ihr Strom kam über die Telefonleitung.
 „Was hättest du gemacht? Schreib es in die Kommentare.“
 
-Laufzeit Teil 2: 56,2 Sekunden
-Laufzeit gesamte Folge: 113,3 Sekunden
+Laufzeit Teil 2: 50,6 Sekunden (gemessen mit Stimme)
+Laufzeit gesamte Folge: 100,3 Sekunden (gemessen mit Stimme)
 
 FAKTEN-CHECK:
 - **Strom über die Telefonleitung:** Beim klassischen analogen Anschluss speist die Vermittlungsstelle die Teilnehmerleitung mit Gleichspannung (meist ca. 48 V). Ein einfaches Telefon ohne Netzteil braucht deshalb keine Steckdose. Fällt im Haus der Strom aus, kann es weiter telefonieren, solange Vermittlungsstelle und Leitungsnetz versorgt sind. Bei heutigen IP-Anschlüssen hängt der Router am Hausstrom, dann geht das in der Regel nicht mehr. Quellen: Wikipedia, „Plain old telephone service“ (https://en.wikipedia.org/wiki/Plain_old_telephone_service); teltarif, „Telekom: Diese IP-Anschlüsse bieten Speisespannung an der TAE“ (https://www.teltarif.de/n/67407)
@@ -71,20 +71,37 @@ NEU ZU BAUEN:
 - Icon `telefon_alt` (Telefon mit Leitung und Blitz)
 - Ton: Schloss (vorhanden: `schloss`), Rauschen im Hörer (vorhanden: `funk_rauschen`), Konsole an (vorhanden: `strom_an`)
 
-DAUER (geschätzt ohne Stimme, berechnet mit `node der-letzte-mann/dauer.mjs der-letzte-mann/storylines/folge-06.md`):
+DAUER (berechnet mit `node der-letzte-mann/dauer.mjs der-letzte-mann/storylines/folge-06.md`):
 
-| Abschnitt | Einstellungen | Dauer |
-|---|---|---|
-| Kapitel 1: Papa? | 5 | 22.4 s |
-| Titelkarte | – | 1.0 s |
-| Was bisher geschah | 3 | 12.5 s |
-| Kapitel 2: Kabel ab | 4 | 21.2 s |
-| **Teil 1** | | **57.2 s** |
-| Kapitel 3: Drei Lämpchen | 5 | 21.4 s |
-| Kapitel 4: Bereit | 5 | 21.7 s |
-| Fortsetzung folgt | – | 1.0 s |
-| Check | 3 | 12.1 s |
-| **Teil 2** | | **56.2 s** |
-| **Gesamte Folge** | | **113.3 s** |
+| Abschnitt | Einstellungen | Formel | mit Stimme (× 0.84) |
+|---|---|---|---|
+| Kapitel 1: Papa? | 5 | 22.4 s | 18.8 s |
+| Titelkarte | – | 1.0 s | 1.0 s |
+| Was bisher geschah | 3 | 12.5 s | 10.5 s |
+| Kapitel 2: Kabel ab | 4 | 20.3 s | 17.1 s |
+| **Teil 1** | | 56.3 s | **47.4 s** |
+| Kapitel 3: Drei Lämpchen | 5 | 23.1 s | 19.4 s |
+| Kapitel 4: Bereit | 5 | 21.7 s | 18.2 s |
+| Fortsetzung folgt | – | 1.0 s | 1.0 s |
+| Check | 3 | 12.1 s | 10.1 s |
+| **Teil 2** | | 57.9 s | **48.8 s** |
+| **Gesamte Folge** | | 114.1 s | **96.2 s** |
 
-Mit echter Stimme (Gemini „Orus“) wird nachgemessen. Liegt ein Teil dann über 60 s, wird zuerst im Text gekürzt, nie an Titelkarte oder Check.
+Hinweise:
+- Was bisher geschah: 10.5 s (Ziel 12–15 s)
+- Kapitel 2: Kabel ab: 17.1 s (Ziel 20–22 s)
+- Kapitel 4: Bereit: 18.2 s (Ziel 20–22 s)
+
+Gemessen mit Stimme (Titelkarte bei Kapitel 1, „Fortsetzung folgt“ bei Kapitel 4):
+
+| Abschnitt | Dauer |
+|---|---|
+| Kapitel 1: Papa? | 21.8 s |
+| Was bisher geschah | 10.4 s |
+| Kapitel 2: Kabel ab | 17.5 s |
+| **Teil 1** | **49.7 s** |
+| Kapitel 3: Drei Lämpchen | 21.2 s |
+| Kapitel 4: Bereit | 19.7 s |
+| Check | 9.7 s |
+| **Teil 2** | **50.6 s** |
+| **Gesamte Folge** | **100.3 s** |

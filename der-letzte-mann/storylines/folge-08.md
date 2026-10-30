@@ -1,7 +1,7 @@
 FOLGE 8: Du warst nicht vorgesehen
 Faktenthema: Zeitmessung: GPS-Satellitenuhren gehen wegen der Relativität ca. 38 Mikrosekunden pro Tag vor. Ohne Korrektur läge GPS nach einem Tag um rund 10 km daneben.
 Hook (erster Satz): Stell dir vor, die Frau hinter allem steht plötzlich vor dir.
-Geplante Gesamtlaufzeit: 112 Sekunden (Teil 1: 55 s, Teil 2: 57 s)
+Geplante Gesamtlaufzeit: 111 Sekunden (Teil 1: 56 s, Teil 2: 55 s, gemessen mit Stimme)
 Was bisher geschah:
 - Alle Männer sind verschwunden, nur du nicht.
 - Über ein Telefon im Keller hast du deinen Vater erreicht, zehn Sekunden lang.
@@ -34,7 +34,7 @@ KAPITEL 2: Zwei Welten | keller (raum), objekt, gesicht | Alex, Winter | Tag | A
 (Haken am Ende: Warum bist du dann hier?)
 
 SCHNITT: ENDE TEIL 1
-Laufzeit Teil 1: 55,3 Sekunden
+Laufzeit Teil 1: 56,4 Sekunden (gemessen mit Stimme)
 
 KAPITEL 3: Ankerpersonen | keller (raum), gesicht | Alex, Lea, Winter | Tag | Anzeige: Tag 2, 16:00, HANDY 70 %, NETZ 0/4, KONSOLE 27 %
 * New-York-Platz am Morgen, alle Bildschirme flackern – In New York flackerten um 15:13 wieder alle Bildschirme. Niemand weiß, warum.
@@ -58,8 +58,8 @@ FORTSETZUNG FOLGT
 CHECK: Frage: Warum müssen GPS-Uhren korrigiert werden? / Antwort: Sie gehen täglich 38 Mikrosekunden vor.
 „Was hättest du gemacht? Schreib es in die Kommentare.“
 
-Laufzeit Teil 2: 57,0 Sekunden
-Laufzeit gesamte Folge: 112,2 Sekunden
+Laufzeit Teil 2: 54,8 Sekunden (gemessen mit Stimme)
+Laufzeit gesamte Folge: 111,2 Sekunden (gemessen mit Stimme)
 
 FAKTEN-CHECK:
 - **GPS und Relativität:** Die Satellitenuhren laufen wegen ihrer Geschwindigkeit etwa 7 µs pro Tag langsamer (spezielle Relativität). Wegen der schwächeren Schwerkraft in ca. 20.200 km Höhe laufen sie etwa 45 µs pro Tag schneller (allgemeine Relativität). Netto gehen sie rund 38 µs pro Tag vor. Deshalb werden die Uhren schon vor dem Start etwas langsamer eingestellt. Ohne diese Korrektur würde sich die Position je nach Rechnung um ca. 10–12 km pro Tag verschieben. Quellen: Ashby (2003), „Relativity in the Global Positioning System“, *Living Reviews in Relativity* 6, 1 (https://link.springer.com/article/10.12942/lrr-2003-1); GPS World, „Inside the Box: GPS and Relativity“ (https://www.gpsworld.com/inside-the-box-gps-and-relativity/)
@@ -74,20 +74,35 @@ NEU ZU BAUEN:
 - Licht: Gegenlicht in der Tür von S7
 - `newyork`: Morgen, alle Bildschirme flackern (wie Folge 3)
 
-DAUER (geschätzt ohne Stimme, berechnet mit `node der-letzte-mann/dauer.mjs der-letzte-mann/storylines/folge-08.md`):
+DAUER (berechnet mit `node der-letzte-mann/dauer.mjs der-letzte-mann/storylines/folge-08.md`):
 
-| Abschnitt | Einstellungen | Dauer |
-|---|---|---|
-| Kapitel 1: Doktor Winter | 5 | 19.7 s |
-| Titelkarte | – | 1.0 s |
-| Was bisher geschah | 3 | 12.3 s |
-| Kapitel 2: Zwei Welten | 5 | 22.2 s |
-| **Teil 1** | | **55.3 s** |
-| Kapitel 3: Ankerpersonen | 4 | 22.0 s |
-| Kapitel 4: Die zweite Ausnahme | 5 | 22.1 s |
-| Fortsetzung folgt | – | 1.0 s |
-| Check | 3 | 11.8 s |
-| **Teil 2** | | **57.0 s** |
-| **Gesamte Folge** | | **112.2 s** |
+| Abschnitt | Einstellungen | Formel | mit Stimme (× 0.84) |
+|---|---|---|---|
+| Kapitel 1: Doktor Winter | 6 | 24.0 s | 20.1 s |
+| Titelkarte | – | 1.0 s | 1.0 s |
+| Was bisher geschah | 4 | 16.6 s | 14.0 s |
+| Kapitel 2: Zwei Welten | 5 | 21.3 s | 17.9 s |
+| **Teil 1** | | 62.9 s | **53.0 s** |
+| Kapitel 3: Ankerpersonen | 5 | 27.9 s | 23.4 s |
+| Kapitel 4: Die zweite Ausnahme | 5 | 22.1 s | 18.6 s |
+| Fortsetzung folgt | – | 1.0 s | 1.0 s |
+| Check | 3 | 11.8 s | 9.9 s |
+| **Teil 2** | | 62.8 s | **52.9 s** |
+| **Gesamte Folge** | | 125.7 s | **105.9 s** |
 
-Mit echter Stimme (Gemini „Orus“) wird nachgemessen. Liegt ein Teil dann über 60 s, wird zuerst im Text gekürzt, nie an Titelkarte oder Check.
+Hinweise:
+- Kapitel 2: Zwei Welten: 17.9 s (Ziel 20–22 s)
+
+Gemessen mit Stimme (Titelkarte bei Kapitel 1, „Fortsetzung folgt“ bei Kapitel 4):
+
+| Abschnitt | Dauer |
+|---|---|
+| Kapitel 1: Doktor Winter | 22.6 s |
+| Was bisher geschah | 12.9 s |
+| Kapitel 2: Zwei Welten | 20.8 s |
+| **Teil 1** | **56.4 s** |
+| Kapitel 3: Ankerpersonen | 24.8 s |
+| Kapitel 4: Die zweite Ausnahme | 19.5 s |
+| Check | 10.5 s |
+| **Teil 2** | **54.8 s** |
+| **Gesamte Folge** | **111.2 s** |

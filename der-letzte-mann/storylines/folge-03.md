@@ -1,7 +1,7 @@
 FOLGE 3: Sie kennen deinen Namen
 Faktenthema: Wahrnehmung: Bekannte Gesichter erkennen wir selbst auf sehr schlechten Videobildern, fremde kaum. Auch erfahrene Polizisten waren dabei nicht besser.
 Hook (erster Satz): Stell dir vor, dein Gesicht hängt auf dem größten Bildschirm von New York.
-Geplante Gesamtlaufzeit: 114 Sekunden (Teil 1: 57 s, Teil 2: 56 s)
+Geplante Gesamtlaufzeit: 109 Sekunden (Teil 1: 54 s, Teil 2: 55 s, gemessen mit Stimme)
 Was bisher geschah:
 - Um 8:13 Uhr sind alle Männer verschwunden, nur du nicht.
 - Lea, deine Nachbarin, versteckt dich.
@@ -34,7 +34,7 @@ KAPITEL 2: Unscharf | handy, gesicht, objekt | Alex, Lea | Tag | Anzeige: Tag 1,
 (Haken am Ende: Wer hat ihn schon vorher gesucht?)
 
 SCHNITT: ENDE TEIL 1
-Laufzeit Teil 1: 57,4 Sekunden
+Laufzeit Teil 1: 53,6 Sekunden (gemessen mit Stimme)
 
 KAPITEL 3: Dreizehn nach | newyork, kueche, handy | Alex, Lea | Tag | Anzeige: Tag 1, 15:13, HANDY 63 %, NETZ 3/4, KONSOLE nicht verbunden (grau)
 * New-York-Platz am Morgen, alle Bildschirme flackern gleichzeitig – Um 15:13 Uhr flackern in New York alle Bildschirme. Zehn Sekunden.
@@ -59,8 +59,8 @@ FORTSETZUNG FOLGT
 CHECK: Frage: Warum erkannte nur Lea dich? / Antwort: Bekannte Gesichter erkennen wir selbst unscharf.
 „Was hättest du gemacht? Schreib es in die Kommentare.“
 
-Laufzeit Teil 2: 56,4 Sekunden
-Laufzeit gesamte Folge: 113,8 Sekunden
+Laufzeit Teil 2: 55,1 Sekunden (gemessen mit Stimme)
+Laufzeit gesamte Folge: 108,6 Sekunden (gemessen mit Stimme)
 
 FAKTEN-CHECK:
 - **Bekannte Gesichter auf schlechten Bildern:** In zwei Experimenten zeigten Burton und Kollegen Aufnahmen einer Überwachungskamera in schlechter Qualität. Wer die gezeigten Personen persönlich kannte, erkannte sie sehr zuverlässig. Wer sie nicht kannte, schnitt sehr schlecht ab. Polizisten mit Erfahrung in forensischer Identifizierung waren dabei nicht besser als andere Unbekannte. Wurde der Kopf verdeckt, sank die Erkennung stark. Es war also tatsächlich das Gesicht, nicht Figur oder Gang. Quelle: Burton, Wilson, Cowan & Bruce (1999), „Face Recognition in Poor-Quality Video: Evidence From Security Surveillance“, *Psychological Science* 10(3), 243–248, doi:10.1111/1467-9280.00144 (https://www.psychologicalscience.org/journals/psychological-science/1467-9280.00144/)
@@ -74,20 +74,36 @@ NEU ZU BAUEN:
 - Gegenstand: Karteikarte mit Uhrzeiten
 - `skyline`: Hubschrauber über der Stadt am Tag (vorhanden: `heli`)
 
-DAUER (geschätzt ohne Stimme, berechnet mit `node der-letzte-mann/dauer.mjs der-letzte-mann/storylines/folge-03.md`):
+DAUER (berechnet mit `node der-letzte-mann/dauer.mjs der-letzte-mann/storylines/folge-03.md`):
 
-| Abschnitt | Einstellungen | Dauer |
-|---|---|---|
-| Kapitel 1: The Last Man? | 5 | 22.3 s |
-| Titelkarte | – | 1.0 s |
-| Was bisher geschah | 3 | 12.0 s |
-| Kapitel 2: Unscharf | 5 | 22.1 s |
-| **Teil 1** | | **57.4 s** |
-| Kapitel 3: Dreizehn nach | 5 | 21.2 s |
-| Kapitel 4: Schutz und Antworten | 5 | 22.5 s |
-| Fortsetzung folgt | – | 1.0 s |
-| Check | 3 | 11.7 s |
-| **Teil 2** | | **56.4 s** |
-| **Gesamte Folge** | | **113.8 s** |
+| Abschnitt | Einstellungen | Formel | mit Stimme (× 0.84) |
+|---|---|---|---|
+| Kapitel 1: The Last Man? | 5 | 22.3 s | 18.7 s |
+| Titelkarte | – | 1.0 s | 1.0 s |
+| Was bisher geschah | 4 | 15.4 s | 12.9 s |
+| Kapitel 2: Unscharf | 6 | 26.1 s | 21.9 s |
+| **Teil 1** | | 64.7 s | **54.5 s** |
+| Kapitel 3: Dreizehn nach | 5 | 21.2 s | 17.8 s |
+| Kapitel 4: Schutz und Antworten | 6 | 28.3 s | 23.8 s |
+| Fortsetzung folgt | – | 1.0 s | 1.0 s |
+| Check | 3 | 11.7 s | 9.8 s |
+| **Teil 2** | | 62.2 s | **52.4 s** |
+| **Gesamte Folge** | | 127.0 s | **107.0 s** |
 
-Mit echter Stimme (Gemini „Orus“) wird nachgemessen. Liegt ein Teil dann über 60 s, wird zuerst im Text gekürzt, nie an Titelkarte oder Check.
+Hinweise:
+- Kapitel 3: Dreizehn nach: 17.8 s (Ziel 20–22 s)
+- Kapitel 4: Schutz und Antworten: 23.8 s (Ziel 20–22 s)
+
+Gemessen mit Stimme (Titelkarte bei Kapitel 1, „Fortsetzung folgt“ bei Kapitel 4):
+
+| Abschnitt | Dauer |
+|---|---|
+| Kapitel 1: The Last Man? | 20.6 s |
+| Was bisher geschah | 12.2 s |
+| Kapitel 2: Unscharf | 20.8 s |
+| **Teil 1** | **53.6 s** |
+| Kapitel 3: Dreizehn nach | 20.4 s |
+| Kapitel 4: Schutz und Antworten | 25.3 s |
+| Check | 9.3 s |
+| **Teil 2** | **55.1 s** |
+| **Gesamte Folge** | **108.6 s** |
