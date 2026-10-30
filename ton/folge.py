@@ -252,6 +252,11 @@ def bauen(drehbuch: str, nur_stimme=False, drone=False, stimme="edge", anfragen=
         if f.stem not in gueltig:
             f.unlink()
 
+    # Erzählstimme auf die Referenz aus „24. Stock“ angleichen (Gemini schwankt in der Tonhöhe)
+    if stimme.startswith("gemini"):
+        from .angleichen import angleichen
+        angleichen(audio_dir, log=log)
+
     # 2) Zeitachse – identisch zu render.mjs
     t = 0.0
     for e in einst:
