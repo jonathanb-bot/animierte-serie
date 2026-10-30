@@ -1,130 +1,233 @@
 Verbundene Konten: tiktok:storys4you.de1, instagram:sto.rys4you, youtube:clappeuch3985
+↻ tiktok-10: 2026-10-31T17:30:00 → 2026-10-31T08:00:00
+  tiktok-10: Prüfung ok (Bild, Ton, Lautstärke)
+✓ tiktok-10 eingeplant für 2026-10-31T08:00:00 (6ae4544218859d94a2cc272b)
+↻ insta-02-1: 2026-10-31T07:00:00 → 2026-10-31T00:00:00
   insta-02-1: Prüfung ok (Bild, Ton, Lautstärke)
-✓ insta-02-1 eingeplant für 2026-10-31T07:00:00 (6ae4530718859d94a2cc1c59)
+✓ insta-02-1 eingeplant für 2026-10-31T00:00:00 (6ae4544418859d94a2cc273f)
+↻ insta-02-2: 2026-10-31T12:00:00 → 2026-10-31T04:00:00
   insta-02-2: Prüfung ok (Bild, Ton, Lautstärke)
-✓ insta-02-2 eingeplant für 2026-10-31T12:00:00 (6ae4530a18859d94a2cc1c71)
+✓ insta-02-2 eingeplant für 2026-10-31T04:00:00 (6ae4544718859d94a2cc274f)
+↻ insta-02-3: 2026-10-31T18:00:00 → 2026-10-31T08:00:00
   insta-02-3: Prüfung ok (Bild, Ton, Lautstärke)
-✓ insta-02-3 eingeplant für 2026-10-31T18:00:00 (6ae4530c975c14280918741e)
+✓ insta-02-3 eingeplant für 2026-10-31T08:00:00 (6ae4544a18859d94a2cc2772)
+↻ insta-02-4: 2026-11-01T07:30:00 → 2026-10-31T12:00:00
   insta-02-4: Prüfung ok (Bild, Ton, Lautstärke)
-✓ insta-02-4 eingeplant für 2026-11-01T07:30:00 (6ae4530e18859d94a2cc1c94)
+✓ insta-02-4 eingeplant für 2026-10-31T12:00:00 (6ae4544c18859d94a2cc277a)
+↻ insta-02-5: 2026-11-01T12:30:00 → 2026-10-31T16:00:00
   insta-02-5: Prüfung ok (Bild, Ton, Lautstärke)
-✓ insta-02-5 eingeplant für 2026-11-01T12:30:00 (6ae4531118859d94a2cc1cb8)
+✓ insta-02-5 eingeplant für 2026-10-31T16:00:00 (6ae4545018859d94a2cc27ae)
+↻ insta-03-1: 2026-11-01T18:30:00 → 2026-10-31T20:00:00
   insta-03-1: Prüfung ok (Bild, Ton, Lautstärke)
-✓ insta-03-1 eingeplant für 2026-11-01T18:30:00 (6ae45313830e388d1b488c13)
+✓ insta-03-1 eingeplant für 2026-10-31T20:00:00 (6ae45453830e388d1b488d36)
+↻ insta-03-2: 2026-11-02T08:00:00 → 2026-11-01T00:00:00
   insta-03-2: Prüfung ok (Bild, Ton, Lautstärke)
-✓ insta-03-2 eingeplant für 2026-11-02T08:00:00 (6ae4531518859d94a2cc1cf9)
+✓ insta-03-2 eingeplant für 2026-11-01T00:00:00 (6ae4545618859d94a2cc27d4)
+↻ insta-03-3: 2026-11-02T13:00:00 → 2026-11-01T04:00:00
   insta-03-3: Prüfung ok (Bild, Ton, Lautstärke)
-✓ insta-03-3 eingeplant für 2026-11-02T13:00:00 (6ae4531818859d94a2cc1d04)
+✓ insta-03-3 eingeplant für 2026-11-01T04:00:00 (6ae4545918859d94a2cc27f3)
+↻ insta-03-4: 2026-11-02T19:00:00 → 2026-11-01T08:00:00
   insta-03-4: Prüfung ok (Bild, Ton, Lautstärke)
-✓ insta-03-4 eingeplant für 2026-11-02T19:00:00 (6ae4531b18859d94a2cc1d19)
+✓ insta-03-4 eingeplant für 2026-11-01T08:00:00 (6ae4545b18859d94a2cc280a)
+↻ insta-04-1: 2026-11-03T08:30:00 → 2026-11-01T12:00:00
   insta-04-1: Prüfung ok (Bild, Ton, Lautstärke)
-✓ insta-04-1 eingeplant für 2026-11-03T08:30:00 (6ae4531d975c142809187451)
+✓ insta-04-1 eingeplant für 2026-11-01T12:00:00 (6ae4545e975c1428091878aa)
+↻ insta-04-2: 2026-11-03T13:30:00 → 2026-11-01T16:00:00
   insta-04-2: Prüfung ok (Bild, Ton, Lautstärke)
-✓ insta-04-2 eingeplant für 2026-11-03T13:30:00 (6ae45320830e388d1b488c36)
+✓ insta-04-2 eingeplant für 2026-11-01T16:00:00 (6ae4546118859d94a2cc2832)
+↻ insta-04-3: 2026-11-03T19:30:00 → 2026-11-01T20:00:00
   insta-04-3: Prüfung ok (Bild, Ton, Lautstärke)
-✓ insta-04-3 eingeplant für 2026-11-03T19:30:00 (6ae45322975c14280918745d)
+✓ insta-04-3 eingeplant für 2026-11-01T20:00:00 (6ae45464975c1428091878c7)
+↻ insta-04-4: 2026-11-04T09:00:00 → 2026-11-02T00:00:00
   insta-04-4: Prüfung ok (Bild, Ton, Lautstärke)
-✓ insta-04-4 eingeplant für 2026-11-04T09:00:00 (6ae4532418859d94a2cc1d62)
+✓ insta-04-4 eingeplant für 2026-11-02T00:00:00 (6ae4546718859d94a2cc287a)
+↻ insta-05-1: 2026-11-04T14:00:00 → 2026-11-02T04:00:00
   insta-05-1: Prüfung ok (Bild, Ton, Lautstärke)
-✓ insta-05-1 eingeplant für 2026-11-04T14:00:00 (6ae4532618859d94a2cc1d77)
+✓ insta-05-1 eingeplant für 2026-11-02T04:00:00 (6ae4546b18859d94a2cc28c8)
+↻ insta-05-2: 2026-11-04T20:00:00 → 2026-11-02T08:00:00
   insta-05-2: Prüfung ok (Bild, Ton, Lautstärke)
-✓ insta-05-2 eingeplant für 2026-11-04T20:00:00 (6ae4532918859d94a2cc1d84)
+✓ insta-05-2 eingeplant für 2026-11-02T08:00:00 (6ae4546e18859d94a2cc2910)
+↻ insta-05-3: 2026-11-05T09:30:00 → 2026-11-02T12:00:00
   insta-05-3: Prüfung ok (Bild, Ton, Lautstärke)
-✓ insta-05-3 eingeplant für 2026-11-05T09:30:00 (6ae4532b18859d94a2cc1dac)
+✓ insta-05-3 eingeplant für 2026-11-02T12:00:00 (6ae4547118859d94a2cc2936)
+↻ insta-05-4: 2026-11-05T14:30:00 → 2026-11-02T16:00:00
   insta-05-4: Prüfung ok (Bild, Ton, Lautstärke)
-✓ insta-05-4 eingeplant für 2026-11-05T14:30:00 (6ae4532d18859d94a2cc1dbc)
+✓ insta-05-4 eingeplant für 2026-11-02T16:00:00 (6ae4547418859d94a2cc295f)
+↻ insta-06-1: 2026-11-05T20:30:00 → 2026-11-02T20:00:00
   insta-06-1: Prüfung ok (Bild, Ton, Lautstärke)
-✓ insta-06-1 eingeplant für 2026-11-05T20:30:00 (6ae4533018859d94a2cc1dcd)
+✓ insta-06-1 eingeplant für 2026-11-02T20:00:00 (6ae4547618859d94a2cc2976)
+↻ insta-06-2: 2026-11-06T10:00:00 → 2026-11-03T00:00:00
+  insta-06-2: Prüfung ok (Bild, Ton, Lautstärke)
+✓ insta-06-2 eingeplant für 2026-11-03T00:00:00 (6ae4547918859d94a2cc2990)
+↻ insta-06-3: 2026-11-06T15:00:00 → 2026-11-03T04:00:00
+  insta-06-3: Prüfung ok (Bild, Ton, Lautstärke)
+✓ insta-06-3 eingeplant für 2026-11-03T04:00:00 (6ae4547c18859d94a2cc29a4)
+↻ insta-06-4: 2026-11-06T21:00:00 → 2026-11-03T08:00:00
+  insta-06-4: Prüfung ok (Bild, Ton, Lautstärke)
+✓ insta-06-4 eingeplant für 2026-11-03T08:00:00 (6ae4547f18859d94a2cc29cd)
+↻ insta-06-5: 2026-11-07T07:00:00 → 2026-11-03T12:00:00
+  insta-06-5: Prüfung ok (Bild, Ton, Lautstärke)
+✓ insta-06-5 eingeplant für 2026-11-03T12:00:00 (6ae4548118859d94a2cc29ef)
+↻ insta-07-1: 2026-11-07T12:00:00 → 2026-11-03T16:00:00
+  insta-07-1: Prüfung ok (Bild, Ton, Lautstärke)
+✓ insta-07-1 eingeplant für 2026-11-03T16:00:00 (6ae4548418859d94a2cc2a05)
+↻ insta-07-2: 2026-11-07T18:00:00 → 2026-11-03T20:00:00
+  insta-07-2: Prüfung ok (Bild, Ton, Lautstärke)
+✓ insta-07-2 eingeplant für 2026-11-03T20:00:00 (6ae45487975c142809187958)
+↻ insta-07-3: 2026-11-08T07:30:00 → 2026-11-04T00:00:00
   insta-07-3: Prüfung ok (Bild, Ton, Lautstärke)
-✓ insta-07-3 eingeplant für 2026-11-08T07:30:00 (6ae4533218859d94a2cc1ddc)
+✓ insta-07-3 eingeplant für 2026-11-04T00:00:00 (6ae4548a830e388d1b488d6b)
+↻ insta-07-4: 2026-11-08T12:30:00 → 2026-11-04T04:00:00
   insta-07-4: Prüfung ok (Bild, Ton, Lautstärke)
-✓ insta-07-4 eingeplant für 2026-11-08T12:30:00 (6ae4533518859d94a2cc1def)
+✓ insta-07-4 eingeplant für 2026-11-04T04:00:00 (6ae4548c18859d94a2cc2a4a)
+↻ insta-08-1: 2026-11-08T18:30:00 → 2026-11-04T08:00:00
   insta-08-1: Prüfung ok (Bild, Ton, Lautstärke)
-✓ insta-08-1 eingeplant für 2026-11-08T18:30:00 (6ae4533718859d94a2cc1e10)
+✓ insta-08-1 eingeplant für 2026-11-04T08:00:00 (6ae4548f18859d94a2cc2a64)
+↻ insta-08-2: 2026-11-09T08:00:00 → 2026-11-04T12:00:00
   insta-08-2: Prüfung ok (Bild, Ton, Lautstärke)
-✓ insta-08-2 eingeplant für 2026-11-09T08:00:00 (6ae4533a18859d94a2cc1e25)
+✓ insta-08-2 eingeplant für 2026-11-04T12:00:00 (6ae45492830e388d1b488d73)
+↻ insta-08-3: 2026-11-09T13:00:00 → 2026-11-04T16:00:00
   insta-08-3: Prüfung ok (Bild, Ton, Lautstärke)
-✓ insta-08-3 eingeplant für 2026-11-09T13:00:00 (6ae4533c975c1428091874b3)
+✓ insta-08-3 eingeplant für 2026-11-04T16:00:00 (6ae45495975c14280918798b)
+↻ insta-08-4: 2026-11-09T19:00:00 → 2026-11-04T20:00:00
   insta-08-4: Prüfung ok (Bild, Ton, Lautstärke)
-✓ insta-08-4 eingeplant für 2026-11-09T19:00:00 (6ae4533f975c1428091874c6)
+✓ insta-08-4 eingeplant für 2026-11-04T20:00:00 (6ae4549718859d94a2cc2a9a)
+↻ insta-09-1: 2026-11-10T08:30:00 → 2026-11-05T00:00:00
   insta-09-1: Prüfung ok (Bild, Ton, Lautstärke)
-✓ insta-09-1 eingeplant für 2026-11-10T08:30:00 (6ae4534118859d94a2cc1e72)
+✓ insta-09-1 eingeplant für 2026-11-05T00:00:00 (6ae4549a18859d94a2cc2ab8)
+↻ insta-09-2: 2026-11-10T13:30:00 → 2026-11-05T04:00:00
   insta-09-2: Prüfung ok (Bild, Ton, Lautstärke)
-✓ insta-09-2 eingeplant für 2026-11-10T13:30:00 (6ae4534318859d94a2cc1e85)
+✓ insta-09-2 eingeplant für 2026-11-05T04:00:00 (6ae4549d830e388d1b488d87)
+↻ insta-09-3: 2026-11-10T19:30:00 → 2026-11-05T08:00:00
   insta-09-3: Prüfung ok (Bild, Ton, Lautstärke)
-✓ insta-09-3 eingeplant für 2026-11-10T19:30:00 (6ae45346975c142809187503)
+✓ insta-09-3 eingeplant für 2026-11-05T08:00:00 (6ae454a018859d94a2cc2adf)
+↻ insta-09-4: 2026-11-11T09:00:00 → 2026-11-05T12:00:00
   insta-09-4: Prüfung ok (Bild, Ton, Lautstärke)
-✓ insta-09-4 eingeplant für 2026-11-11T09:00:00 (6ae4534818859d94a2cc1ec9)
+✓ insta-09-4 eingeplant für 2026-11-05T12:00:00 (6ae454a2830e388d1b488d95)
+↻ insta-10-1: 2026-11-11T14:00:00 → 2026-11-05T16:00:00
   insta-10-1: Prüfung ok (Bild, Ton, Lautstärke)
-✓ insta-10-1 eingeplant für 2026-11-11T14:00:00 (6ae4534a975c142809187529)
+✓ insta-10-1 eingeplant für 2026-11-05T16:00:00 (6ae454a518859d94a2cc2b22)
+↻ insta-10-2: 2026-11-11T20:00:00 → 2026-11-05T20:00:00
   insta-10-2: Prüfung ok (Bild, Ton, Lautstärke)
-✓ insta-10-2 eingeplant für 2026-11-11T20:00:00 (6ae4534d975c142809187537)
+✓ insta-10-2 eingeplant für 2026-11-05T20:00:00 (6ae454a718859d94a2cc2b3f)
+↻ insta-10-3: 2026-11-12T09:30:00 → 2026-11-06T00:00:00
   insta-10-3: Prüfung ok (Bild, Ton, Lautstärke)
-✓ insta-10-3 eingeplant für 2026-11-12T09:30:00 (6ae4534f18859d94a2cc1f2f)
+✓ insta-10-3 eingeplant für 2026-11-06T00:00:00 (6ae454aa18859d94a2cc2b66)
+↻ insta-10-4: 2026-11-12T14:30:00 → 2026-11-06T04:00:00
   insta-10-4: Prüfung ok (Bild, Ton, Lautstärke)
-✓ insta-10-4 eingeplant für 2026-11-12T14:30:00 (6ae4535218859d94a2cc1f4a)
+✓ insta-10-4 eingeplant für 2026-11-06T04:00:00 (6ae454ad18859d94a2cc2ba6)
+↻ yt-02-1: 2026-10-31T07:30:00 → 2026-10-31T00:30:00
   yt-02-1: Prüfung ok (Bild, Ton, Lautstärke)
-✓ yt-02-1 eingeplant für 2026-10-31T07:30:00 (6ae45354830e388d1b488c93)
+✓ yt-02-1 eingeplant für 2026-10-31T00:30:00 (6ae454af975c142809187a03)
+↻ yt-02-2: 2026-10-31T12:30:00 → 2026-10-31T04:30:00
   yt-02-2: Prüfung ok (Bild, Ton, Lautstärke)
-✓ yt-02-2 eingeplant für 2026-10-31T12:30:00 (6ae45356975c142809187576)
+✓ yt-02-2 eingeplant für 2026-10-31T04:30:00 (6ae454b218859d94a2cc2bfa)
+↻ yt-02-3: 2026-10-31T18:30:00 → 2026-10-31T08:30:00
   yt-02-3: Prüfung ok (Bild, Ton, Lautstärke)
-✓ yt-02-3 eingeplant für 2026-10-31T18:30:00 (6ae45358975c142809187584)
+✓ yt-02-3 eingeplant für 2026-10-31T08:30:00 (6ae454b518859d94a2cc2c26)
+↻ yt-02-4: 2026-11-01T08:00:00 → 2026-10-31T12:30:00
   yt-02-4: Prüfung ok (Bild, Ton, Lautstärke)
-✓ yt-02-4 eingeplant für 2026-11-01T08:00:00 (6ae4535b975c14280918759c)
+✓ yt-02-4 eingeplant für 2026-10-31T12:30:00 (6ae454b7975c142809187a3c)
+↻ yt-02-5: 2026-11-01T13:00:00 → 2026-10-31T16:30:00
   yt-02-5: Prüfung ok (Bild, Ton, Lautstärke)
-✓ yt-02-5 eingeplant für 2026-11-01T13:00:00 (6ae4535d18859d94a2cc1fdc)
+✓ yt-02-5 eingeplant für 2026-10-31T16:30:00 (6ae454ba18859d94a2cc2c7e)
+↻ yt-03-1: 2026-11-01T19:00:00 → 2026-10-31T20:30:00
   yt-03-1: Prüfung ok (Bild, Ton, Lautstärke)
-✓ yt-03-1 eingeplant für 2026-11-01T19:00:00 (6ae4535f18859d94a2cc1feb)
+✓ yt-03-1 eingeplant für 2026-10-31T20:30:00 (6ae454bc830e388d1b488db7)
+↻ yt-03-2: 2026-11-02T08:30:00 → 2026-11-01T00:30:00
   yt-03-2: Prüfung ok (Bild, Ton, Lautstärke)
-✓ yt-03-2 eingeplant für 2026-11-02T08:30:00 (6ae45362975c1428091875ab)
+✓ yt-03-2 eingeplant für 2026-11-01T00:30:00 (6ae454be18859d94a2cc2cba)
+↻ yt-03-3: 2026-11-02T13:30:00 → 2026-11-01T04:30:00
   yt-03-3: Prüfung ok (Bild, Ton, Lautstärke)
-✓ yt-03-3 eingeplant für 2026-11-02T13:30:00 (6ae4536418859d94a2cc200f)
+✓ yt-03-3 eingeplant für 2026-11-01T04:30:00 (6ae454c118859d94a2cc2cd5)
+↻ yt-03-4: 2026-11-02T19:30:00 → 2026-11-01T08:30:00
   yt-03-4: Prüfung ok (Bild, Ton, Lautstärke)
-✓ yt-03-4 eingeplant für 2026-11-02T19:30:00 (6ae4536618859d94a2cc2026)
+✓ yt-03-4 eingeplant für 2026-11-01T08:30:00 (6ae454c3975c142809187a66)
+↻ yt-04-1: 2026-11-03T09:00:00 → 2026-11-01T12:30:00
   yt-04-1: Prüfung ok (Bild, Ton, Lautstärke)
-✓ yt-04-1 eingeplant für 2026-11-03T09:00:00 (6ae4536818859d94a2cc2043)
+✓ yt-04-1 eingeplant für 2026-11-01T12:30:00 (6ae454c518859d94a2cc2d09)
+↻ yt-04-2: 2026-11-03T14:00:00 → 2026-11-01T16:30:00
   yt-04-2: Prüfung ok (Bild, Ton, Lautstärke)
-✓ yt-04-2 eingeplant für 2026-11-03T14:00:00 (6ae4536a975c1428091875ba)
+✓ yt-04-2 eingeplant für 2026-11-01T16:30:00 (6ae454c818859d94a2cc2d17)
+↻ yt-04-3: 2026-11-03T20:00:00 → 2026-11-01T20:30:00
   yt-04-3: Prüfung ok (Bild, Ton, Lautstärke)
-✓ yt-04-3 eingeplant für 2026-11-03T20:00:00 (6ae4536d18859d94a2cc207a)
+✓ yt-04-3 eingeplant für 2026-11-01T20:30:00 (6ae454ca18859d94a2cc2d2d)
+↻ yt-04-4: 2026-11-04T09:30:00 → 2026-11-02T00:30:00
   yt-04-4: Prüfung ok (Bild, Ton, Lautstärke)
-✓ yt-04-4 eingeplant für 2026-11-04T09:30:00 (6ae4536f18859d94a2cc2093)
+✓ yt-04-4 eingeplant für 2026-11-02T00:30:00 (6ae454cd18859d94a2cc2d41)
+↻ yt-05-1: 2026-11-04T14:30:00 → 2026-11-02T04:30:00
   yt-05-1: Prüfung ok (Bild, Ton, Lautstärke)
-✓ yt-05-1 eingeplant für 2026-11-04T14:30:00 (6ae4537118859d94a2cc20ac)
+✓ yt-05-1 eingeplant für 2026-11-02T04:30:00 (6ae454cf975c142809187a89)
+↻ yt-05-2: 2026-11-04T20:30:00 → 2026-11-02T08:30:00
   yt-05-2: Prüfung ok (Bild, Ton, Lautstärke)
-✓ yt-05-2 eingeplant für 2026-11-04T20:30:00 (6ae4537418859d94a2cc20b4)
+✓ yt-05-2 eingeplant für 2026-11-02T08:30:00 (6ae454d218859d94a2cc2d63)
+↻ yt-05-3: 2026-11-05T10:00:00 → 2026-11-02T12:30:00
   yt-05-3: Prüfung ok (Bild, Ton, Lautstärke)
-✓ yt-05-3 eingeplant für 2026-11-05T10:00:00 (6ae4537618859d94a2cc20ce)
+✓ yt-05-3 eingeplant für 2026-11-02T12:30:00 (6ae454d418859d94a2cc2d6d)
+↻ yt-05-4: 2026-11-05T15:00:00 → 2026-11-02T16:30:00
   yt-05-4: Prüfung ok (Bild, Ton, Lautstärke)
-✓ yt-05-4 eingeplant für 2026-11-05T15:00:00 (6ae45379975c1428091875e7)
+✓ yt-05-4 eingeplant für 2026-11-02T16:30:00 (6ae454d6975c142809187a98)
+↻ yt-06-1: 2026-11-05T21:00:00 → 2026-11-02T20:30:00
   yt-06-1: Prüfung ok (Bild, Ton, Lautstärke)
-✓ yt-06-1 eingeplant für 2026-11-05T21:00:00 (6ae4537b975c1428091875f2)
+✓ yt-06-1 eingeplant für 2026-11-02T20:30:00 (6ae454d918859d94a2cc2d8b)
+↻ yt-06-2: 2026-11-06T10:30:00 → 2026-11-03T00:30:00
+  yt-06-2: Prüfung ok (Bild, Ton, Lautstärke)
+✓ yt-06-2 eingeplant für 2026-11-03T00:30:00 (6ae454db18859d94a2cc2dac)
+↻ yt-06-3: 2026-11-06T15:30:00 → 2026-11-03T04:30:00
+  yt-06-3: Prüfung ok (Bild, Ton, Lautstärke)
+✓ yt-06-3 eingeplant für 2026-11-03T04:30:00 (6ae454de830e388d1b488dd1)
+↻ yt-06-4: 2026-11-06T21:30:00 → 2026-11-03T08:30:00
+  yt-06-4: Prüfung ok (Bild, Ton, Lautstärke)
+✓ yt-06-4 eingeplant für 2026-11-03T08:30:00 (6ae454e1975c142809187ab5)
+↻ yt-06-5: 2026-11-07T07:30:00 → 2026-11-03T12:30:00
+  yt-06-5: Prüfung ok (Bild, Ton, Lautstärke)
+✓ yt-06-5 eingeplant für 2026-11-03T12:30:00 (6ae454e37ba6b338d5ff6e8c)
+↻ yt-07-1: 2026-11-07T12:30:00 → 2026-11-03T16:30:00
+  yt-07-1: Prüfung ok (Bild, Ton, Lautstärke)
+✓ yt-07-1 eingeplant für 2026-11-03T16:30:00 (6ae454e68445b43a53005f3b)
+↻ yt-07-2: 2026-11-07T18:30:00 → 2026-11-03T20:30:00
+  yt-07-2: Prüfung ok (Bild, Ton, Lautstärke)
+✓ yt-07-2 eingeplant für 2026-11-03T20:30:00 (6ae454e818859d94a2cc2e02)
+↻ yt-07-3: 2026-11-08T08:00:00 → 2026-11-04T00:30:00
   yt-07-3: Prüfung ok (Bild, Ton, Lautstärke)
-✓ yt-07-3 eingeplant für 2026-11-08T08:00:00 (6ae4537d18859d94a2cc2113)
+✓ yt-07-3 eingeplant für 2026-11-04T00:30:00 (6ae454eb8445b43a53005f65)
+↻ yt-07-4: 2026-11-08T13:00:00 → 2026-11-04T04:30:00
   yt-07-4: Prüfung ok (Bild, Ton, Lautstärke)
-✓ yt-07-4 eingeplant für 2026-11-08T13:00:00 (6ae4537f975c142809187605)
+✓ yt-07-4 eingeplant für 2026-11-04T04:30:00 (6ae454ed8445b43a53005f78)
+↻ yt-08-1: 2026-11-08T19:00:00 → 2026-11-04T08:30:00
   yt-08-1: Prüfung ok (Bild, Ton, Lautstärke)
-✓ yt-08-1 eingeplant für 2026-11-08T19:00:00 (6ae45382830e388d1b488cac)
+✓ yt-08-1 eingeplant für 2026-11-04T08:30:00 (6ae454ef7ba6b338d5ff6ea2)
+↻ yt-08-2: 2026-11-09T08:30:00 → 2026-11-04T12:30:00
   yt-08-2: Prüfung ok (Bild, Ton, Lautstärke)
-✓ yt-08-2 eingeplant für 2026-11-09T08:30:00 (6ae4538418859d94a2cc2149)
+✓ yt-08-2 eingeplant für 2026-11-04T12:30:00 (6ae454f218859d94a2cc2e14)
+↻ yt-08-3: 2026-11-09T13:30:00 → 2026-11-04T16:30:00
   yt-08-3: Prüfung ok (Bild, Ton, Lautstärke)
-✓ yt-08-3 eingeplant für 2026-11-09T13:30:00 (6ae45386975c142809187620)
+✓ yt-08-3 eingeplant für 2026-11-04T16:30:00 (6ae454f48445b43a53005fb0)
+↻ yt-08-4: 2026-11-09T19:30:00 → 2026-11-04T20:30:00
   yt-08-4: Prüfung ok (Bild, Ton, Lautstärke)
-✓ yt-08-4 eingeplant für 2026-11-09T19:30:00 (6ae4538818859d94a2cc2168)
+✓ yt-08-4 eingeplant für 2026-11-04T20:30:00 (6ae454f78445b43a53005fd1)
+↻ yt-09-1: 2026-11-10T09:00:00 → 2026-11-05T00:30:00
   yt-09-1: Prüfung ok (Bild, Ton, Lautstärke)
-✓ yt-09-1 eingeplant für 2026-11-10T09:00:00 (6ae4538a18859d94a2cc216f)
+✓ yt-09-1 eingeplant für 2026-11-05T00:30:00 (6ae454f98445b43a53005fe6)
+↻ yt-09-2: 2026-11-10T14:00:00 → 2026-11-05T04:30:00
   yt-09-2: Prüfung ok (Bild, Ton, Lautstärke)
-✓ yt-09-2 eingeplant für 2026-11-10T14:00:00 (6ae4538d18859d94a2cc218e)
+✓ yt-09-2 eingeplant für 2026-11-05T04:30:00 (6ae454fb8445b43a53006009)
+↻ yt-09-3: 2026-11-10T20:00:00 → 2026-11-05T08:30:00
   yt-09-3: Prüfung ok (Bild, Ton, Lautstärke)
-✓ yt-09-3 eingeplant für 2026-11-10T20:00:00 (6ae4538f18859d94a2cc219f)
+✓ yt-09-3 eingeplant für 2026-11-05T08:30:00 (6ae454fe7ba6b338d5ff6ec5)
+↻ yt-09-4: 2026-11-11T09:30:00 → 2026-11-05T12:30:00
   yt-09-4: Prüfung ok (Bild, Ton, Lautstärke)
-✓ yt-09-4 eingeplant für 2026-11-11T09:30:00 (6ae4539118859d94a2cc21bc)
+✓ yt-09-4 eingeplant für 2026-11-05T12:30:00 (6ae455008445b43a5300602c)
+↻ yt-10-1: 2026-11-11T14:30:00 → 2026-11-05T16:30:00
   yt-10-1: Prüfung ok (Bild, Ton, Lautstärke)
-✓ yt-10-1 eingeplant für 2026-11-11T14:30:00 (6ae4539418859d94a2cc21cb)
+✓ yt-10-1 eingeplant für 2026-11-05T16:30:00 (6ae455038445b43a53006048)
+↻ yt-10-2: 2026-11-11T20:30:00 → 2026-11-05T20:30:00
   yt-10-2: Prüfung ok (Bild, Ton, Lautstärke)
-✓ yt-10-2 eingeplant für 2026-11-11T20:30:00 (6ae4539618859d94a2cc21f5)
+✓ yt-10-2 eingeplant für 2026-11-05T20:30:00 (6ae455058445b43a53006050)
+↻ yt-10-3: 2026-11-12T10:00:00 → 2026-11-06T00:30:00
   yt-10-3: Prüfung ok (Bild, Ton, Lautstärke)
-✓ yt-10-3 eingeplant für 2026-11-12T10:00:00 (6ae45398975c142809187661)
+✓ yt-10-3 eingeplant für 2026-11-06T00:30:00 (6ae455078445b43a53006067)
+↻ yt-10-4: 2026-11-12T15:00:00 → 2026-11-06T04:30:00
   yt-10-4: Prüfung ok (Bild, Ton, Lautstärke)
-✓ yt-10-4 eingeplant für 2026-11-12T15:00:00 (6ae4539a18859d94a2cc2218)
-Fertig: 64 neu eingeplant, 0 Fehler.
+✓ yt-10-4 eingeplant für 2026-11-06T04:30:00 (6ae4550a8445b43a53006080)
+Fertig: 77 neu eingeplant, 0 Fehler.
