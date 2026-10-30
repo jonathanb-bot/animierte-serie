@@ -9,7 +9,13 @@ Dritte, eigenständige Serie im Projekt. Gleiches Hochformat und gleicher Stil w
 - `storylines/folge-XX.md`: ausführliche Storylines (Kapitel, Einstellungen, Check, Fakten-Check, Laufzeit)
 - `figuren.json`: die Figuren dieser Serie (du = Alex, lea, winter, thomas, nika, k1–k4, sprecherin)
 - `dauer.mjs`: schätzt die Laufzeit einer Storyline, schneidet nach Kapitel 2 und prüft alle Grenzen
-- später: `episoden/folge-XX.txt` (Drehbücher), `audio/folge-XX/` (Stimme), `musik/folge-XX.mp3`
+- `episoden/folge-XX.txt`: Drehbücher (über jeder Zeile steht die Bildbeschreibung als Kommentar)
+- `audio/folge-XX/NNN.mp3` + `NNN.json`: Stimme und Wortzeiten pro Einstellung, `musik/folge-XX.mp3`: leise Geräusche und Stille-Schnitte
+
+```bash
+python -m ton.folge der-letzte-mann/episoden/folge-01.txt --stimme gemini:Orus --anfragen 2   # eine Anfrage pro Teil
+python -m ton.pruefen der-letzte-mann-folge-01                                                 # Ziel ca. -15 LUFS
+```
 
 ```bash
 node der-letzte-mann/dauer.mjs der-letzte-mann/storylines/folge-01.md
@@ -20,8 +26,10 @@ node der-letzte-mann/dauer.mjs der-letzte-mann/storylines/folge-01.md
 | Schritt | Stand |
 |---|---|
 | Serienbibel, Figurenblätter, Staffelplan, NEU ZU BAUEN, Laufzeitplan | fertig |
-| Storylines | Folge 1 fertig, Folgen 2–10 folgen (ein bis zwei pro Schritt) |
-| Grafik (`engine/letzter-mann.js`), Drehbücher, Stimme | noch nicht begonnen |
+| Storylines (`storylines/`) | alle 10 fertig |
+| Drehbücher (`episoden/`) | alle 10 fertig; die Kulissen-Angaben sind vorläufig, bis die Grafik gebaut ist |
+| Stimme (`audio/`, `musik/`) | alle 10 mit Gemini „Orus“, jede Einstellung per Spracherkennung gegen den Text geprüft, −15,0 bis −15,5 LUFS |
+| Grafik (`engine/letzter-mann.js`) | noch nicht begonnen (siehe NEU ZU BAUEN). Erst danach rendern und den Workflow `rendern.yml` um den Ordner erweitern. |
 
 ## Reihenfolge beim Posten
 

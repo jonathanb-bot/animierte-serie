@@ -1,0 +1,248 @@
+{
+ "dauer": 95.038,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "skyline",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 5.078,
+   "emotion": "erzaehlend",
+   "text": "Stell dir vor, jemand will dich retten. Und weiß zu viel über dich."
+  },
+  {
+   "nr": 2,
+   "typ": "bad",
+   "kapitel": 1,
+   "start": 5.078,
+   "dauer": 4.214,
+   "emotion": "erzaehlend",
+   "text": "Tag zwei. Um elf holt dich ein Wagen ab. Zu Doktor Winter."
+  },
+  {
+   "nr": 3,
+   "typ": "bad",
+   "kapitel": 1,
+   "start": 9.292,
+   "dauer": 4.07,
+   "emotion": "erzaehlend",
+   "text": "Du probierst drei Hemden. Für ein Treffen, das eine *Falle* sein könnte."
+  },
+  {
+   "nr": 4,
+   "typ": "handy",
+   "kapitel": 1,
+   "start": 13.362,
+   "dauer": 3.974,
+   "emotion": "erzaehlend",
+   "text": "Du rufst Papa an. Mailbox. Zum *dreißigsten* Mal."
+  },
+  {
+   "nr": 5,
+   "typ": "titel",
+   "kapitel": 1,
+   "start": 17.336,
+   "dauer": 1.0,
+   "emotion": null,
+   "text": ""
+  },
+  {
+   "nr": 6,
+   "typ": "skyline",
+   "kapitel": 2,
+   "start": 18.336,
+   "dauer": 3.278,
+   "emotion": "erzaehlend",
+   "text": "Alle Männer sind verschwunden. Nur du bist geblieben."
+  },
+  {
+   "nr": 7,
+   "typ": "newyork",
+   "kapitel": 2,
+   "start": 21.614,
+   "dauer": 2.414,
+   "emotion": "erzaehlend",
+   "text": "Ein Bild von dir am Fenster ging um die Welt."
+  },
+  {
+   "nr": 8,
+   "typ": "handy",
+   "kapitel": 2,
+   "start": 24.028,
+   "dauer": 3.614,
+   "emotion": "erzaehlend",
+   "text": "Dann rief Doktor Winter an. Sie kannte deine Adresse."
+  },
+  {
+   "nr": 9,
+   "typ": "tuer",
+   "kapitel": 3,
+   "start": 27.642,
+   "dauer": 3.638,
+   "emotion": "erzaehlend",
+   "text": "Um halb neun kommt Lea aus der Nachtschicht. Mit einem Ausdruck."
+  },
+  {
+   "nr": 10,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 31.28,
+   "dauer": 3.566,
+   "emotion": "erzaehlend",
+   "text": "„Gestern um 7:50 rief mich eine Doktor Winter an.“"
+  },
+  {
+   "nr": 11,
+   "typ": "objekt",
+   "kapitel": 3,
+   "start": 34.846,
+   "dauer": 4.31,
+   "emotion": "erklaerend",
+   "text": "Die Brandmelder in deinem *Keller* sollten abgeschaltet werden. Für einen Messbetrieb."
+  },
+  {
+   "nr": 12,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 39.156,
+   "dauer": 2.702,
+   "emotion": "ernst",
+   "text": "Von 7:55 bis 8:30 Uhr."
+  },
+  {
+   "nr": 13,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 41.858,
+   "dauer": 4.886,
+   "emotion": "ernst",
+   "text": "„Mittendrin war 8:13“, sagt Lea. „Und ihr Projekt war *hier*.“"
+  },
+  {
+   "nr": 14,
+   "typ": "kueche",
+   "kapitel": 4,
+   "start": 46.744,
+   "dauer": 2.51,
+   "emotion": "erzaehlend",
+   "text": "Ein Projekt in deinem Keller."
+  },
+  {
+   "nr": 15,
+   "typ": "handy",
+   "kapitel": 4,
+   "start": 49.254,
+   "dauer": 4.838,
+   "emotion": "erzaehlend",
+   "text": "An der Meldung hängt eine Datei: „Messplan S7, Projekt Spiegel“."
+  },
+  {
+   "nr": 16,
+   "typ": "handy",
+   "kapitel": 4,
+   "start": 54.092,
+   "dauer": 4.67,
+   "emotion": "erzaehlend",
+   "text": "Lea öffnet die Dateieigenschaften. Erstellt am 21. Oktober."
+  },
+  {
+   "nr": 17,
+   "typ": "objekt",
+   "kapitel": 4,
+   "start": 58.762,
+   "dauer": 3.83,
+   "emotion": "erklaerend",
+   "text": "Echter Fakt: Dateien speichern oft unsichtbar, wann sie erstellt wurden."
+  },
+  {
+   "nr": 18,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 62.592,
+   "dauer": 3.782,
+   "emotion": "ernst",
+   "text": "Die Datei ist drei Wochen *alt*. Älter als das Ereignis."
+  },
+  {
+   "nr": 19,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 66.374,
+   "dauer": 3.542,
+   "emotion": "erzaehlend",
+   "text": "Der Wagen kommt in einer Stunde. Aber Lea scrollt weiter."
+  },
+  {
+   "nr": 20,
+   "typ": "handy",
+   "kapitel": 5,
+   "start": 69.916,
+   "dauer": 3.638,
+   "emotion": "erzaehlend",
+   "text": "Seite drei: eine Liste. Überschrift: „*Ankerpersonen*“."
+  },
+  {
+   "nr": 21,
+   "typ": "handy",
+   "kapitel": 5,
+   "start": 73.554,
+   "dauer": 4.742,
+   "emotion": "erzaehlend",
+   "text": "Erste Zeile: Brandt, Alex. Kastanienweg 7. Dritter Stock."
+  },
+  {
+   "nr": 22,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 78.296,
+   "dauer": 2.606,
+   "emotion": "spannend",
+   "text": "Geschrieben drei Wochen *vor* dem Ereignis."
+  },
+  {
+   "nr": 23,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 80.902,
+   "dauer": 3.878,
+   "emotion": "ernst",
+   "text": "„Sie will dich nicht retten“, sagt Lea. „Sie hat dich *ausgesucht*.“"
+  },
+  {
+   "nr": 24,
+   "typ": "titel",
+   "kapitel": 5,
+   "start": 84.78,
+   "dauer": 1.0,
+   "emotion": null,
+   "text": ""
+  },
+  {
+   "nr": 25,
+   "typ": "objekt",
+   "kapitel": 6,
+   "start": 85.78,
+   "dauer": 3.326,
+   "emotion": "erklaerend",
+   "text": "Frage: Woran sah Lea, dass die Datei alt ist?"
+  },
+  {
+   "nr": 26,
+   "typ": "objekt",
+   "kapitel": 6,
+   "start": 89.106,
+   "dauer": 3.542,
+   "emotion": "erklaerend",
+   "text": "Antwort: Am Erstellungsdatum in den Dateieigenschaften."
+  },
+  {
+   "nr": 27,
+   "typ": "titel",
+   "kapitel": 6,
+   "start": 92.648,
+   "dauer": 2.39,
+   "emotion": "erzaehlend",
+   "text": "Was hättest du gemacht? Schreib es in die Kommentare."
+  }
+ ]
+}

@@ -1,0 +1,257 @@
+{
+ "dauer": 92.844,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "spion",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 3.086,
+   "emotion": "ernst",
+   "text": "Stell dir vor, jemand weiß, dass du *noch* da bist."
+  },
+  {
+   "nr": 2,
+   "typ": "tuer",
+   "kapitel": 1,
+   "start": 3.086,
+   "dauer": 2.774,
+   "emotion": "erzaehlend",
+   "text": "Deine Nachbarin Lea schiebt sich einfach an dir vorbei."
+  },
+  {
+   "nr": 3,
+   "typ": "wohnung",
+   "kapitel": 1,
+   "start": 5.86,
+   "dauer": 3.854,
+   "emotion": "erzaehlend",
+   "text": "Als Erstes zieht sie deinen Vorhang zu. „Bleib vom Fenster weg.“"
+  },
+  {
+   "nr": 4,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 9.714,
+   "dauer": 2.822,
+   "emotion": "froh",
+   "text": "Du lächelst charmant. „Willst du einen Kaffee?“"
+  },
+  {
+   "nr": 5,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 12.536,
+   "dauer": 1.622,
+   "emotion": "ernst",
+   "text": "„Ich will, dass dich *niemand* sieht.“"
+  },
+  {
+   "nr": 6,
+   "typ": "titel",
+   "kapitel": 1,
+   "start": 14.158,
+   "dauer": 1.0,
+   "emotion": null,
+   "text": ""
+  },
+  {
+   "nr": 7,
+   "typ": "skyline",
+   "kapitel": 2,
+   "start": 15.158,
+   "dauer": 3.446,
+   "emotion": "erzaehlend",
+   "text": "Um 8:13 Uhr sind plötzlich alle Männer verschwunden."
+  },
+  {
+   "nr": 8,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 18.604,
+   "dauer": 3.062,
+   "emotion": "ernst",
+   "text": "Nur du bist geblieben. Dein Vater geht nicht ran."
+  },
+  {
+   "nr": 9,
+   "typ": "spion",
+   "kapitel": 2,
+   "start": 21.666,
+   "dauer": 3.038,
+   "emotion": "ernst",
+   "text": "Dann klingelt deine Nachbarin: „Ich habe dich gesehen.“"
+  },
+  {
+   "nr": 10,
+   "typ": "wohnung",
+   "kapitel": 3,
+   "start": 24.704,
+   "dauer": 3.566,
+   "emotion": "erzaehlend",
+   "text": "Lea gibt dir eine Powerbank. Sie arbeitet in der Leitstelle."
+  },
+  {
+   "nr": 11,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 28.27,
+   "dauer": 3.47,
+   "emotion": "ernst",
+   "text": "„Kommt raus, dass es noch einen Mann gibt, stehen hier Hunderte.“"
+  },
+  {
+   "nr": 12,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 31.74,
+   "dauer": 3.254,
+   "emotion": "froh",
+   "text": "Hunderte Frauen. Wegen dir. Klingt *gut*."
+  },
+  {
+   "nr": 13,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 34.994,
+   "dauer": 2.462,
+   "emotion": "erzaehlend",
+   "text": "„Nicht zum Flirten. Zum *Untersuchen*.“"
+  },
+  {
+   "nr": 14,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 37.456,
+   "dauer": 5.51,
+   "emotion": "ernst",
+   "text": "Dann sagt sie leise: „Um 7:50 kam ein seltsamer Anruf. Kurz *davor*.“"
+  },
+  {
+   "nr": 15,
+   "typ": "kueche",
+   "kapitel": 4,
+   "start": 42.966,
+   "dauer": 4.886,
+   "emotion": "erzaehlend",
+   "text": "Um 10:13 rauscht das Radio. Wie schon um 9:13."
+  },
+  {
+   "nr": 16,
+   "typ": "objekt",
+   "kapitel": 4,
+   "start": 47.852,
+   "dauer": 5.222,
+   "emotion": "erklaerend",
+   "text": "Echter Fakt: Glas spiegelt pro Oberfläche etwa *vier Prozent* des Lichts."
+  },
+  {
+   "nr": 17,
+   "typ": "objekt",
+   "kapitel": 4,
+   "start": 53.074,
+   "dauer": 4.646,
+   "emotion": "erklaerend",
+   "text": "Tagsüber sieht man darum fast nur Spiegelungen. Nachts *alles*."
+  },
+  {
+   "nr": 18,
+   "typ": "wohnung",
+   "kapitel": 4,
+   "start": 57.72,
+   "dauer": 3.878,
+   "emotion": "erzaehlend",
+   "text": "Es ist Tag. Also prüfst du am Fenster deine Frisur."
+  },
+  {
+   "nr": 19,
+   "typ": "dach",
+   "kapitel": 4,
+   "start": 61.598,
+   "dauer": 2.15,
+   "emotion": "erzaehlend",
+   "text": "Gegenüber dreht sich eine Kamera."
+  },
+  {
+   "nr": 20,
+   "typ": "wohnung",
+   "kapitel": 5,
+   "start": 63.748,
+   "dauer": 3.014,
+   "emotion": "erzaehlend",
+   "text": "Als Lea zurückkommt, stehst du immer noch am Fenster."
+  },
+  {
+   "nr": 21,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 66.762,
+   "dauer": 2.63,
+   "emotion": "wuetend",
+   "text": "„Weg da!“ Sie zieht dich am Shirt zurück."
+  },
+  {
+   "nr": 22,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 69.392,
+   "dauer": 3.686,
+   "emotion": "erzaehlend",
+   "text": "„Ich hab nur kurz die Haare …“ „Das sehe ich“, sagt Lea."
+  },
+  {
+   "nr": 23,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 73.078,
+   "dauer": 3.398,
+   "emotion": "erzaehlend",
+   "text": "Dann vibriert ihr Handy. Eine Kollegin schickt einen Link."
+  },
+  {
+   "nr": 24,
+   "typ": "handy",
+   "kapitel": 5,
+   "start": 76.476,
+   "dauer": 5.342,
+   "emotion": "erzaehlend",
+   "text": "Ein Bild der Wetterkamera. Du am Fenster. „Ist das ein *Mann*?“ Vor drei Minuten."
+  },
+  {
+   "nr": 25,
+   "typ": "titel",
+   "kapitel": 5,
+   "start": 81.818,
+   "dauer": 1.0,
+   "emotion": null,
+   "text": ""
+  },
+  {
+   "nr": 26,
+   "typ": "objekt",
+   "kapitel": 6,
+   "start": 82.818,
+   "dauer": 3.662,
+   "emotion": "erklaerend",
+   "text": "Frage: Warum sieht man nachts in helle Zimmer hinein?"
+  },
+  {
+   "nr": 27,
+   "typ": "objekt",
+   "kapitel": 6,
+   "start": 86.48,
+   "dauer": 3.614,
+   "emotion": "erklaerend",
+   "text": "Antwort: Das Zimmerlicht überstrahlt die schwache Spiegelung."
+  },
+  {
+   "nr": 28,
+   "typ": "titel",
+   "kapitel": 6,
+   "start": 90.094,
+   "dauer": 2.75,
+   "emotion": "erzaehlend",
+   "text": "Was hättest du gemacht? Schreib es in die Kommentare."
+  }
+ ]
+}

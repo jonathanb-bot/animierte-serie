@@ -1,4 +1,7 @@
 # Folge 4: Die falsche Rettung
+@musik musik/folge-04.mp3
+@musik_lautstaerke 1
+@whoosh aus
 @serie Der letzte Mann
 @mund zitate
 @look 0

@@ -1,4 +1,7 @@
 # Folge 2: Bleib vom Fenster weg
+@musik musik/folge-02.mp3
+@musik_lautstaerke 1
+@whoosh aus
 @serie Der letzte Mann
 @mund zitate
 @look 0

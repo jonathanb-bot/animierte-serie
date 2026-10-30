@@ -1,0 +1,257 @@
+{
+ "dauer": 94.02,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "newyork",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 4.094,
+   "emotion": "erzaehlend",
+   "text": "Stell dir vor, dein Gesicht hängt auf dem größten Bildschirm von *New York*."
+  },
+  {
+   "nr": 2,
+   "typ": "handy",
+   "kapitel": 1,
+   "start": 4.094,
+   "dauer": 4.958,
+   "emotion": "erzaehlend",
+   "text": "Darunter Tausende Kommentare. „Fake?“ „Wo ist das?“ „Wer ist er?“"
+  },
+  {
+   "nr": 3,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 9.052,
+   "dauer": 3.95,
+   "emotion": "froh",
+   "text": "Wer ist er? *Du*. Und du siehst eigentlich gut aus."
+  },
+  {
+   "nr": 4,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 13.002,
+   "dauer": 2.198,
+   "emotion": "erzaehlend",
+   "text": "„Du siehst aus wie ein Pixelhaufen.“"
+  },
+  {
+   "nr": 5,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 15.2,
+   "dauer": 2.846,
+   "emotion": "ernst",
+   "text": "Ein Pixelhaufen, den die ganze Welt *sucht*."
+  },
+  {
+   "nr": 6,
+   "typ": "titel",
+   "kapitel": 1,
+   "start": 18.046,
+   "dauer": 1.0,
+   "emotion": null,
+   "text": ""
+  },
+  {
+   "nr": 7,
+   "typ": "skyline",
+   "kapitel": 2,
+   "start": 19.046,
+   "dauer": 4.31,
+   "emotion": "erzaehlend",
+   "text": "Um 8:13 Uhr sind alle Männer verschwunden. Nur du nicht."
+  },
+  {
+   "nr": 8,
+   "typ": "wohnung",
+   "kapitel": 2,
+   "start": 23.356,
+   "dauer": 2.582,
+   "emotion": "erzaehlend",
+   "text": "Lea, deine Nachbarin, versteckt dich."
+  },
+  {
+   "nr": 9,
+   "typ": "handy",
+   "kapitel": 2,
+   "start": 25.938,
+   "dauer": 3.158,
+   "emotion": "erzaehlend",
+   "text": "Doch eine Wetterkamera hat dich am Fenster fotografiert."
+  },
+  {
+   "nr": 10,
+   "typ": "handy",
+   "kapitel": 3,
+   "start": 29.096,
+   "dauer": 2.774,
+   "emotion": "erzaehlend",
+   "text": "Das Bild ist grob. Keiner erkennt dich."
+  },
+  {
+   "nr": 11,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 31.87,
+   "dauer": 2.918,
+   "emotion": "erzaehlend",
+   "text": "Lea erkennt dich sofort. Sie kennt dich ja."
+  },
+  {
+   "nr": 12,
+   "typ": "objekt",
+   "kapitel": 3,
+   "start": 34.788,
+   "dauer": 4.454,
+   "emotion": "erklaerend",
+   "text": "Echter Fakt: Bekannte Gesichter erkennen wir sogar auf miesen Videos."
+  },
+  {
+   "nr": 13,
+   "typ": "objekt",
+   "kapitel": 3,
+   "start": 39.242,
+   "dauer": 3.014,
+   "emotion": "erklaerend",
+   "text": "Fremde kaum. Selbst erfahrene Polizisten nicht."
+  },
+  {
+   "nr": 14,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 42.256,
+   "dauer": 5.27,
+   "emotion": "ernst",
+   "text": "„Nur wer dich kennt, findet dich“, sagt Lea. „Oder wer dich *schon* sucht.“"
+  },
+  {
+   "nr": 15,
+   "typ": "newyork",
+   "kapitel": 4,
+   "start": 47.526,
+   "dauer": 4.478,
+   "emotion": "erzaehlend",
+   "text": "Um 15:13 Uhr flackern in New York alle Bildschirme. Zehn Sekunden."
+  },
+  {
+   "nr": 16,
+   "typ": "kueche",
+   "kapitel": 4,
+   "start": 52.004,
+   "dauer": 3.974,
+   "emotion": "erzaehlend",
+   "text": "Bei dir rauscht das Radio. Lea schreibt die Uhrzeiten auf."
+  },
+  {
+   "nr": 17,
+   "typ": "karte",
+   "kapitel": 4,
+   "start": 55.978,
+   "dauer": 3.062,
+   "emotion": "erklaerend",
+   "text": "Immer um *dreizehn* nach. Wie um 8:13."
+  },
+  {
+   "nr": 18,
+   "typ": "handy",
+   "kapitel": 4,
+   "start": 59.04,
+   "dauer": 2.966,
+   "emotion": "erzaehlend",
+   "text": "Dann vibriert dein Handy. Unbekannte Nummer."
+  },
+  {
+   "nr": 19,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 62.006,
+   "dauer": 3.446,
+   "emotion": "erzaehlend",
+   "text": "Eine ruhige Frauenstimme: „Hier ist Doktor Eva *Winter*.“"
+  },
+  {
+   "nr": 20,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 65.452,
+   "dauer": 4.478,
+   "emotion": "erzaehlend",
+   "text": "Eine Wissenschaftlerin. Klingt klug. Du richtest unwillkürlich deine Haare."
+  },
+  {
+   "nr": 21,
+   "typ": "handy",
+   "kapitel": 5,
+   "start": 69.93,
+   "dauer": 3.038,
+   "emotion": "erzaehlend",
+   "text": "„Ich biete Ihnen Schutz an. Und Antworten.“"
+  },
+  {
+   "nr": 22,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 72.968,
+   "dauer": 3.134,
+   "emotion": "ernst",
+   "text": "Lea flüstert: „Winter? Den Namen kenne ich.“"
+  },
+  {
+   "nr": 23,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 76.102,
+   "dauer": 2.606,
+   "emotion": "ernst",
+   "text": "Du fragst: „Woher haben Sie meine Nummer?“"
+  },
+  {
+   "nr": 24,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 78.708,
+   "dauer": 4.646,
+   "emotion": "spannend",
+   "text": "„Herr Brandt. Kastanienweg 7, dritter Stock.“ Du hast ihr beides *nie* gesagt."
+  },
+  {
+   "nr": 25,
+   "typ": "titel",
+   "kapitel": 5,
+   "start": 83.354,
+   "dauer": 1.0,
+   "emotion": null,
+   "text": ""
+  },
+  {
+   "nr": 26,
+   "typ": "objekt",
+   "kapitel": 6,
+   "start": 84.354,
+   "dauer": 3.158,
+   "emotion": "erklaerend",
+   "text": "Frage: Warum erkannte nur Lea dich?"
+  },
+  {
+   "nr": 27,
+   "typ": "objekt",
+   "kapitel": 6,
+   "start": 87.512,
+   "dauer": 3.806,
+   "emotion": "erklaerend",
+   "text": "Antwort: Bekannte Gesichter erkennen wir selbst unscharf."
+  },
+  {
+   "nr": 28,
+   "typ": "titel",
+   "kapitel": 6,
+   "start": 91.318,
+   "dauer": 2.702,
+   "emotion": "erzaehlend",
+   "text": "Was hättest du gemacht? Schreib es in die Kommentare."
+  }
+ ]
+}

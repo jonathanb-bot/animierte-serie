@@ -1,0 +1,248 @@
+{
+ "dauer": 94.63,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "treppe",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 3.614,
+   "emotion": "erzaehlend",
+   "text": "Stell dir vor, die Antwort liegt direkt unter deiner *Wohnung*."
+  },
+  {
+   "nr": 2,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 3.614,
+   "dauer": 4.982,
+   "emotion": "erzaehlend",
+   "text": "Dir fällt etwas ein: Vor drei Wochen warst du bei einer Hörstudie. Fünfzig Euro."
+  },
+  {
+   "nr": 3,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 8.596,
+   "dauer": 1.886,
+   "emotion": "ruhig",
+   "text": "Wegen der netten Stimme am Telefon."
+  },
+  {
+   "nr": 4,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 10.482,
+   "dauer": 1.646,
+   "emotion": "erzaehlend",
+   "text": "„Natürlich“, sagt Lea."
+  },
+  {
+   "nr": 5,
+   "typ": "karte",
+   "kapitel": 1,
+   "start": 12.128,
+   "dauer": 4.718,
+   "emotion": "erklaerend",
+   "text": "Im Messplan steht ein Kellerraum: *S7*. Den Schlüssel hat die Hausverwaltung."
+  },
+  {
+   "nr": 6,
+   "typ": "titel",
+   "kapitel": 1,
+   "start": 16.846,
+   "dauer": 1.0,
+   "emotion": null,
+   "text": ""
+  },
+  {
+   "nr": 7,
+   "typ": "skyline",
+   "kapitel": 2,
+   "start": 17.846,
+   "dauer": 2.438,
+   "emotion": "erzaehlend",
+   "text": "Alle Männer sind verschwunden. Nur du nicht."
+  },
+  {
+   "nr": 8,
+   "typ": "handy",
+   "kapitel": 2,
+   "start": 20.284,
+   "dauer": 3.398,
+   "emotion": "erzaehlend",
+   "text": "Doktor Winter will dich treffen. Sie kannte dich schon vorher."
+  },
+  {
+   "nr": 9,
+   "typ": "handy",
+   "kapitel": 2,
+   "start": 23.682,
+   "dauer": 2.75,
+   "emotion": "erzaehlend",
+   "text": "In ihrem Projektplan bist du „Ankerperson A“."
+  },
+  {
+   "nr": 10,
+   "typ": "strasse",
+   "kapitel": 3,
+   "start": 26.432,
+   "dauer": 3.542,
+   "emotion": "erzaehlend",
+   "text": "Lea holt den Schlüssel allein. Draußen würde dich jede erkennen."
+  },
+  {
+   "nr": 11,
+   "typ": "strasse",
+   "kapitel": 3,
+   "start": 29.974,
+   "dauer": 4.142,
+   "emotion": "erzaehlend",
+   "text": "Vor der Hausverwaltung: eine Suchstelle. Hunderte Fotos vermisster Männer."
+  },
+  {
+   "nr": 12,
+   "typ": "objekt",
+   "kapitel": 3,
+   "start": 34.116,
+   "dauer": 4.886,
+   "emotion": "erklaerend",
+   "text": "Echter Fakt: Das Rote Kreuz sucht bis heute Kriegsvermisste. Tausende Anfragen pro Jahr."
+  },
+  {
+   "nr": 13,
+   "typ": "strasse",
+   "kapitel": 3,
+   "start": 39.002,
+   "dauer": 4.478,
+   "emotion": "erzaehlend",
+   "text": "Dann sieht Lea ein Foto, das nicht passt: eine *Frau*. Nika, 26."
+  },
+  {
+   "nr": 14,
+   "typ": "handy",
+   "kapitel": 4,
+   "start": 43.48,
+   "dauer": 3.974,
+   "emotion": "erzaehlend",
+   "text": "Lea schickt dir das Foto. Die einzige vermisste Frau."
+  },
+  {
+   "nr": 15,
+   "typ": "treppe",
+   "kapitel": 4,
+   "start": 47.454,
+   "dauer": 2.222,
+   "emotion": "erzaehlend",
+   "text": "Dann geht ihr zusammen in den Keller."
+  },
+  {
+   "nr": 16,
+   "typ": "keller",
+   "kapitel": 4,
+   "start": 49.676,
+   "dauer": 5.558,
+   "emotion": "erzaehlend",
+   "text": "Am Bund: ein großer Schlüssel, „S7“. Und ein kleiner, „S7-S“."
+  },
+  {
+   "nr": 17,
+   "typ": "keller",
+   "kapitel": 4,
+   "start": 55.234,
+   "dauer": 5.198,
+   "emotion": "erzaehlend",
+   "text": "Am Sicherungskasten klebt eine rote Plombe: „S7. Nicht einschalten.“"
+  },
+  {
+   "nr": 18,
+   "typ": "keller",
+   "kapitel": 4,
+   "start": 60.432,
+   "dauer": 3.398,
+   "emotion": "erzaehlend",
+   "text": "Hier unten hast du nur noch einen Balken Empfang."
+  },
+  {
+   "nr": 19,
+   "typ": "keller",
+   "kapitel": 5,
+   "start": 63.83,
+   "dauer": 4.67,
+   "emotion": "erzaehlend",
+   "text": "Vor euch: eine Stahltür. „S7. Projekt Spiegel.“"
+  },
+  {
+   "nr": 20,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 68.5,
+   "dauer": 3.83,
+   "emotion": "erzaehlend",
+   "text": "Aus Gewohnheit rufst du deinen Vater an. Wieder Mailbox."
+  },
+  {
+   "nr": 21,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 72.33,
+   "dauer": 3.638,
+   "emotion": "ernst",
+   "text": "Doch dieselbe Stimme hörst du noch einmal. *Hinter* der Tür."
+  },
+  {
+   "nr": 22,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 75.968,
+   "dauer": 2.174,
+   "emotion": "spannend",
+   "text": "Lea flüstert: „Hörst du das auch?“"
+  },
+  {
+   "nr": 23,
+   "typ": "keller",
+   "kapitel": 5,
+   "start": 78.142,
+   "dauer": 3.47,
+   "emotion": "erzaehlend",
+   "text": "„Hier ist Thomas …“ Die Stimme deines Vaters. Ganz *nah*."
+  },
+  {
+   "nr": 24,
+   "typ": "titel",
+   "kapitel": 5,
+   "start": 81.612,
+   "dauer": 1.0,
+   "emotion": null,
+   "text": ""
+  },
+  {
+   "nr": 25,
+   "typ": "objekt",
+   "kapitel": 6,
+   "start": 82.612,
+   "dauer": 3.71,
+   "emotion": "erklaerend",
+   "text": "Frage: Seit wann sucht das Rote Kreuz Kriegsvermisste?"
+  },
+  {
+   "nr": 26,
+   "typ": "objekt",
+   "kapitel": 6,
+   "start": 86.322,
+   "dauer": 5.558,
+   "emotion": "erklaerend",
+   "text": "Antwort: Seit 1945. Bis heute kommen jährlich Tausende Anfragen."
+  },
+  {
+   "nr": 27,
+   "typ": "titel",
+   "kapitel": 6,
+   "start": 91.88,
+   "dauer": 2.75,
+   "emotion": "erzaehlend",
+   "text": "Was hättest du gemacht? Schreib es in die Kommentare."
+  }
+ ]
+}

@@ -1,0 +1,248 @@
+{
+ "dauer": 84.91,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "skyline",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 3.206,
+   "emotion": "erzaehlend",
+   "text": "Stell dir vor, du bist der *einzige* Mann auf der Welt."
+  },
+  {
+   "nr": 2,
+   "typ": "wohnung",
+   "kapitel": 1,
+   "start": 3.206,
+   "dauer": 3.782,
+   "emotion": "erzaehlend",
+   "text": "8:13 Uhr. Draußen hupen plötzlich alle Autos."
+  },
+  {
+   "nr": 3,
+   "typ": "handy",
+   "kapitel": 1,
+   "start": 6.988,
+   "dauer": 2.438,
+   "emotion": "erzaehlend",
+   "text": "Eilmeldung: Die Männer sind *weg*."
+  },
+  {
+   "nr": 4,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 9.426,
+   "dauer": 3.446,
+   "emotion": "froh",
+   "text": "Du grinst. Nur Frauen. Und *du*."
+  },
+  {
+   "nr": 5,
+   "typ": "bad",
+   "kapitel": 1,
+   "start": 12.872,
+   "dauer": 3.446,
+   "emotion": "erzaehlend",
+   "text": "Du öffnest deine Dating-App. Endlich keine Konkurrenz."
+  },
+  {
+   "nr": 6,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 16.318,
+   "dauer": 2.414,
+   "emotion": "froh",
+   "text": "Flirten kannst du allerdings immer noch *nicht*."
+  },
+  {
+   "nr": 7,
+   "typ": "titel",
+   "kapitel": 1,
+   "start": 18.732,
+   "dauer": 1.0,
+   "emotion": null,
+   "text": ""
+  },
+  {
+   "nr": 8,
+   "typ": "handy",
+   "kapitel": 2,
+   "start": 19.732,
+   "dauer": 4.646,
+   "emotion": "erzaehlend",
+   "text": "Du rufst Papa an: Mailbox. Deinen besten Freund: Mailbox."
+  },
+  {
+   "nr": 9,
+   "typ": "handy",
+   "kapitel": 2,
+   "start": 24.378,
+   "dauer": 2.894,
+   "emotion": "erzaehlend",
+   "text": "„Hier ist Thomas. Ich bin gerade nicht erreichbar.“"
+  },
+  {
+   "nr": 10,
+   "typ": "handy",
+   "kapitel": 2,
+   "start": 27.272,
+   "dauer": 2.558,
+   "emotion": "erzaehlend",
+   "text": "Dann schrillt dein Handy: eine *Warnung*."
+  },
+  {
+   "nr": 11,
+   "typ": "objekt",
+   "kapitel": 2,
+   "start": 29.83,
+   "dauer": 4.838,
+   "emotion": "erklaerend",
+   "text": "Echter Fakt: Cell Broadcast kommt an, selbst wenn das Netz für Anrufe *überlastet* ist."
+  },
+  {
+   "nr": 12,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 34.668,
+   "dauer": 2.654,
+   "emotion": "spannend",
+   "text": "Die Männer sind weg. Du bist *geblieben*."
+  },
+  {
+   "nr": 13,
+   "typ": "skyline",
+   "kapitel": 3,
+   "start": 37.322,
+   "dauer": 3.23,
+   "emotion": "erzaehlend",
+   "text": "Um 8:13 verschwanden die Männer. *Überall*."
+  },
+  {
+   "nr": 14,
+   "typ": "bahnhof",
+   "kapitel": 3,
+   "start": 40.552,
+   "dauer": 3.134,
+   "emotion": "erzaehlend",
+   "text": "Am Bahnhof wartet eine Frau mit *zwei* Kaffeebechern."
+  },
+  {
+   "nr": 15,
+   "typ": "supermarkt",
+   "kapitel": 3,
+   "start": 43.686,
+   "dauer": 2.918,
+   "emotion": "erzaehlend",
+   "text": "Im Supermarkt klingelt ein Handy. Niemand geht ran."
+  },
+  {
+   "nr": 16,
+   "typ": "tokio",
+   "kapitel": 3,
+   "start": 46.604,
+   "dauer": 3.638,
+   "emotion": "erzaehlend",
+   "text": "In Tokio war es in derselben Sekunde 16:13 Uhr."
+  },
+  {
+   "nr": 17,
+   "typ": "newyork",
+   "kapitel": 3,
+   "start": 50.242,
+   "dauer": 2.366,
+   "emotion": "erzaehlend",
+   "text": "In New York 2:13 Uhr nachts."
+  },
+  {
+   "nr": 18,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 52.608,
+   "dauer": 2.63,
+   "emotion": "erzaehlend",
+   "text": "„Es gibt keine Ausnahme“, sagt die Sprecherin."
+  },
+  {
+   "nr": 19,
+   "typ": "wohnung",
+   "kapitel": 4,
+   "start": 55.238,
+   "dauer": 3.734,
+   "emotion": "erzaehlend",
+   "text": "Du bist der letzte Mann. Es fühlt sich *nicht* gut an."
+  },
+  {
+   "nr": 20,
+   "typ": "tuer",
+   "kapitel": 4,
+   "start": 58.972,
+   "dauer": 1.814,
+   "emotion": "erzaehlend",
+   "text": "Da klingelt es an deiner Tür."
+  },
+  {
+   "nr": 21,
+   "typ": "tuer",
+   "kapitel": 4,
+   "start": 60.786,
+   "dauer": 5.294,
+   "emotion": "erzaehlend",
+   "text": "Du ziehst den Bauch ein. Dein peinlichster Reflex überlebt sogar das Ende der Welt."
+  },
+  {
+   "nr": 22,
+   "typ": "spion",
+   "kapitel": 4,
+   "start": 66.08,
+   "dauer": 3.95,
+   "emotion": "ernst",
+   "text": "Draußen steht deine Nachbarin. „Ich weiß, dass du noch da bist.“"
+  },
+  {
+   "nr": 23,
+   "typ": "spion",
+   "kapitel": 4,
+   "start": 70.03,
+   "dauer": 1.934,
+   "emotion": "ernst",
+   "text": "„Ich habe dich durchs Fenster *gesehen*.“"
+  },
+  {
+   "nr": 24,
+   "typ": "titel",
+   "kapitel": 4,
+   "start": 71.964,
+   "dauer": 1.0,
+   "emotion": null,
+   "text": ""
+  },
+  {
+   "nr": 25,
+   "typ": "objekt",
+   "kapitel": 5,
+   "start": 72.964,
+   "dauer": 3.806,
+   "emotion": "erklaerend",
+   "text": "Frage: Warum kam die Warnung trotz Überlastung an?"
+  },
+  {
+   "nr": 26,
+   "typ": "objekt",
+   "kapitel": 5,
+   "start": 76.77,
+   "dauer": 4.886,
+   "emotion": "erklaerend",
+   "text": "Antwort: Cell Broadcast funkt an alle geeigneten Handys der Funkzelle."
+  },
+  {
+   "nr": 27,
+   "typ": "titel",
+   "kapitel": 5,
+   "start": 81.656,
+   "dauer": 3.254,
+   "emotion": "erzaehlend",
+   "text": "Was hättest du gemacht? Schreib es in die Kommentare."
+  }
+ ]
+}

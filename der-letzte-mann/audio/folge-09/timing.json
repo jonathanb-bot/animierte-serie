@@ -1,0 +1,257 @@
+{
+ "dauer": 96.468,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "keller",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 4.622,
+   "emotion": "erzaehlend",
+   "text": "Stell dir vor, jemand drückt jede Stunde einen Knopf. Für *dich*."
+  },
+  {
+   "nr": 2,
+   "typ": "keller",
+   "kapitel": 1,
+   "start": 4.622,
+   "dauer": 3.518,
+   "emotion": "erzaehlend",
+   "text": "Winter ist weg. Lea probiert den kleinen Schlüssel."
+  },
+  {
+   "nr": 3,
+   "typ": "keller",
+   "kapitel": 1,
+   "start": 8.14,
+   "dauer": 2.894,
+   "emotion": "erzaehlend",
+   "text": "Er passt. Die Konsole steht wieder auf „Betrieb“."
+  },
+  {
+   "nr": 4,
+   "typ": "handy",
+   "kapitel": 1,
+   "start": 11.034,
+   "dauer": 4.238,
+   "emotion": "erzaehlend",
+   "text": "Auf Leas Foto: „Nika S. Kastanienweg 7.“"
+  },
+  {
+   "nr": 5,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 15.272,
+   "dauer": 3.374,
+   "emotion": "ruhig",
+   "text": "Sie wohnt in *deinem* Haus. Angesprochen hast du sie nie."
+  },
+  {
+   "nr": 6,
+   "typ": "titel",
+   "kapitel": 1,
+   "start": 18.646,
+   "dauer": 1.0,
+   "emotion": null,
+   "text": ""
+  },
+  {
+   "nr": 7,
+   "typ": "keller",
+   "kapitel": 2,
+   "start": 19.646,
+   "dauer": 3.398,
+   "emotion": "erzaehlend",
+   "text": "Du bist der letzte Mann. Unter deinem Haus steht eine Konsole."
+  },
+  {
+   "nr": 8,
+   "typ": "keller",
+   "kapitel": 2,
+   "start": 23.044,
+   "dauer": 4.31,
+   "emotion": "erzaehlend",
+   "text": "Über sie erreichst du die andere Welt. Zehn Sekunden pro Stunde."
+  },
+  {
+   "nr": 9,
+   "typ": "keller",
+   "kapitel": 2,
+   "start": 27.354,
+   "dauer": 2.486,
+   "emotion": "erzaehlend",
+   "text": "Dort sucht die zweite Ausnahme nach dir."
+  },
+  {
+   "nr": 10,
+   "typ": "keller",
+   "kapitel": 3,
+   "start": 29.84,
+   "dauer": 2.774,
+   "emotion": "erzaehlend",
+   "text": "Mehr als zehn Sekunden gibt es nur mit Netzstrom."
+  },
+  {
+   "nr": 11,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 32.614,
+   "dauer": 4.982,
+   "emotion": "ernst",
+   "text": "„Winter will eine Tür kontrollieren“, sagt Lea. „Ich will meinen *Bruder* zurück.“"
+  },
+  {
+   "nr": 12,
+   "typ": "keller",
+   "kapitel": 3,
+   "start": 37.596,
+   "dauer": 1.934,
+   "emotion": "erzaehlend",
+   "text": "Die Plombe reißt. Klack."
+  },
+  {
+   "nr": 13,
+   "typ": "keller",
+   "kapitel": 3,
+   "start": 39.53,
+   "dauer": 2.99,
+   "emotion": "erzaehlend",
+   "text": "Im Raum geht das Licht an. Die Konsole lädt."
+  },
+  {
+   "nr": 14,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 42.52,
+   "dauer": 3.998,
+   "emotion": "ernst",
+   "text": "„Jetzt nur noch in derselben *Sekunde* drücken. Du und sie.“"
+  },
+  {
+   "nr": 15,
+   "typ": "keller",
+   "kapitel": 4,
+   "start": 46.518,
+   "dauer": 4.694,
+   "emotion": "erzaehlend",
+   "text": "22:13 Uhr. Du drückst nach deiner Handyuhr."
+  },
+  {
+   "nr": 16,
+   "typ": "bahnhof",
+   "kapitel": 4,
+   "start": 51.212,
+   "dauer": 2.198,
+   "emotion": "erzaehlend",
+   "text": "Am Bahnhof flackert die Anzeige."
+  },
+  {
+   "nr": 17,
+   "typ": "keller",
+   "kapitel": 4,
+   "start": 53.41,
+   "dauer": 4.886,
+   "emotion": "erzaehlend",
+   "text": "„Verpasst.“ Zwei Sekunden. Deine Handyuhr geht ohne Netz nach."
+  },
+  {
+   "nr": 18,
+   "typ": "keller",
+   "kapitel": 4,
+   "start": 58.296,
+   "dauer": 2.222,
+   "emotion": "erzaehlend",
+   "text": "Lea holt ihren Funkwecker."
+  },
+  {
+   "nr": 19,
+   "typ": "objekt",
+   "kapitel": 4,
+   "start": 60.518,
+   "dauer": 6.686,
+   "emotion": "erklaerend",
+   "text": "Echter Fakt: Funkuhren holen die Zeit von einem Sender bei Frankfurt. Reichweite: 2000 Kilometer."
+  },
+  {
+   "nr": 20,
+   "typ": "keller",
+   "kapitel": 5,
+   "start": 67.204,
+   "dauer": 3.758,
+   "emotion": "erzaehlend",
+   "text": "Der Funkwecker zeigt die Sekunden. Noch fünfzehn Minuten."
+  },
+  {
+   "nr": 21,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 70.962,
+   "dauer": 2.726,
+   "emotion": "erzaehlend",
+   "text": "Du richtest deine Haare. Für eine *Stimme*."
+  },
+  {
+   "nr": 22,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 73.688,
+   "dauer": 3.134,
+   "emotion": "erzaehlend",
+   "text": "„Sie sieht dich nicht“, sagt Lea. „Ich weiß.“"
+  },
+  {
+   "nr": 23,
+   "typ": "keller",
+   "kapitel": 5,
+   "start": 76.822,
+   "dauer": 3.398,
+   "emotion": "erzaehlend",
+   "text": "Du stehst an der Konsole. Niemand ist an der Tür."
+  },
+  {
+   "nr": 24,
+   "typ": "keller",
+   "kapitel": 5,
+   "start": 80.22,
+   "dauer": 4.19,
+   "emotion": "erzaehlend",
+   "text": "Da leuchtet das dritte Lämpchen. Ohne Verbindung. Ohne *dich*."
+  },
+  {
+   "nr": 25,
+   "typ": "titel",
+   "kapitel": 5,
+   "start": 84.41,
+   "dauer": 1.0,
+   "emotion": null,
+   "text": ""
+  },
+  {
+   "nr": 26,
+   "typ": "objekt",
+   "kapitel": 6,
+   "start": 85.41,
+   "dauer": 3.902,
+   "emotion": "erklaerend",
+   "text": "Frage: Woher kennt eine Funkuhr die genaue Zeit?"
+  },
+  {
+   "nr": 27,
+   "typ": "objekt",
+   "kapitel": 6,
+   "start": 89.312,
+   "dauer": 4.262,
+   "emotion": "erklaerend",
+   "text": "Antwort: Von einem Langwellensender bei Frankfurt mit Atomuhren."
+  },
+  {
+   "nr": 28,
+   "typ": "titel",
+   "kapitel": 6,
+   "start": 93.574,
+   "dauer": 2.894,
+   "emotion": "erzaehlend",
+   "text": "Was hättest du gemacht? Schreib es in die Kommentare."
+  }
+ ]
+}
