@@ -1,12 +1,12 @@
 {
- "dauer": 104.416,
+ "dauer": 105.136,
  "einstellungen": [
   {
    "nr": 1,
    "typ": "keller",
    "kapitel": 1,
    "start": 0.0,
-   "dauer": 3.254,
+   "dauer": 3.638,
    "emotion": "erzaehlend",
    "text": "Stell dir vor, du hast *zehn* Sekunden mit deinem Vater."
   },
@@ -14,8 +14,8 @@
    "nr": 2,
    "typ": "keller",
    "kapitel": 1,
-   "start": 3.254,
-   "dauer": 4.31,
+   "start": 3.638,
+   "dauer": 4.046,
    "emotion": "erzaehlend",
    "text": "13:13 Uhr. Das blaue Lämpchen geht an. Es klingelt."
   },
@@ -23,8 +23,8 @@
    "nr": 3,
    "typ": "gesicht",
    "kapitel": 1,
-   "start": 7.564,
-   "dauer": 3.758,
+   "start": 7.684,
+   "dauer": 3.734,
    "emotion": "ernst",
    "text": "Ein Klicken. Rauschen. Dann: „*Alex*?“"
   },
@@ -32,8 +32,8 @@
    "nr": 4,
    "typ": "gesicht",
    "kapitel": 1,
-   "start": 11.322,
-   "dauer": 1.958,
+   "start": 11.418,
+   "dauer": 2.174,
    "emotion": "froh",
    "text": "„Papa! Papa, hörst du mich?“"
   },
@@ -41,8 +41,8 @@
    "nr": 5,
    "typ": "keller",
    "kapitel": 1,
-   "start": 13.28,
-   "dauer": 4.286,
+   "start": 13.592,
+   "dauer": 4.094,
    "emotion": "erzaehlend",
    "text": "Stille. Die Leitung ist tot. Nach genau zehn Sekunden."
   },
@@ -50,7 +50,7 @@
    "nr": 6,
    "typ": "titel",
    "kapitel": 1,
-   "start": 17.566,
+   "start": 17.686,
    "dauer": 1.0,
    "emotion": null,
    "text": ""
@@ -59,8 +59,8 @@
    "nr": 7,
    "typ": "skyline",
    "kapitel": 2,
-   "start": 18.566,
-   "dauer": 3.566,
+   "start": 18.686,
+   "dauer": 3.902,
    "emotion": "erzaehlend",
    "text": "Um 8:13 Uhr verschwanden alle Männer. Nur du bliebst."
   },
@@ -68,8 +68,8 @@
    "nr": 8,
    "typ": "keller",
    "kapitel": 2,
-   "start": 22.132,
-   "dauer": 3.47,
+   "start": 22.588,
+   "dauer": 3.518,
    "emotion": "erzaehlend",
    "text": "Unter deinem Haus steht die Konsole von Projekt Spiegel."
   },
@@ -77,7 +77,7 @@
    "nr": 9,
    "typ": "keller",
    "kapitel": 2,
-   "start": 25.602,
+   "start": 26.106,
    "dauer": 3.11,
    "emotion": "erzaehlend",
    "text": "Über ihr altes Telefon hast du deinen Vater angerufen."
@@ -86,8 +86,8 @@
    "nr": 10,
    "typ": "keller",
    "kapitel": 2,
-   "start": 28.712,
-   "dauer": 3.71,
+   "start": 29.216,
+   "dauer": 3.854,
    "emotion": "erzaehlend",
    "text": "Die Konsole kündigte ein Fenster an: 13:13 Uhr."
   },
@@ -95,8 +95,8 @@
    "nr": 11,
    "typ": "tokio",
    "kapitel": 3,
-   "start": 32.422,
-   "dauer": 2.846,
+   "start": 33.07,
+   "dauer": 2.75,
    "emotion": "erzaehlend",
    "text": "In Tokio flackerten gerade alle Bildschirme."
   },
@@ -104,8 +104,8 @@
    "nr": 12,
    "typ": "gesicht",
    "kapitel": 3,
-   "start": 35.268,
-   "dauer": 5.342,
+   "start": 35.82,
+   "dauer": 5.534,
    "emotion": "erzaehlend",
    "text": "Lea vergleicht: Radio, Bildschirme, dein Anruf. Immer um *dreizehn* nach."
   },
@@ -113,17 +113,17 @@
    "nr": 13,
    "typ": "objekt",
    "kapitel": 3,
-   "start": 40.61,
-   "dauer": 6.422,
+   "start": 41.354,
+   "dauer": 6.062,
    "emotion": "erklaerend",
-   "text": "Echter Fakt: Indien ist eine halbe Stunde versetzt. Bei Minute 13 zeigt die Uhr dort Minute 43."
+   "text": "Indien ist eine halbe Stunde versetzt. Bei Minute 13 zeigt die Uhr dort Minute 43."
   },
   {
    "nr": 14,
    "typ": "keller",
    "kapitel": 3,
-   "start": 47.032,
-   "dauer": 4.622,
+   "start": 47.416,
+   "dauer": 4.958,
    "emotion": "erzaehlend",
    "text": "Nächstes Fenster: 14:13 Uhr. Was sagst du in zehn *Sekunden*?"
   },
@@ -131,16 +131,16 @@
    "nr": 15,
    "typ": "keller",
    "kapitel": 4,
-   "start": 51.654,
+   "start": 52.374,
    "dauer": 4.958,
    "emotion": "erzaehlend",
    "text": "Lea nimmt jeden Tag Notrufe an. Sie schreibt dir eine Karte."
   },
   {
    "nr": 16,
-   "typ": "karte",
+   "typ": "objekt",
    "kapitel": 4,
-   "start": 56.612,
+   "start": 57.332,
    "dauer": 4.406,
    "emotion": "erklaerend",
    "text": "„Wer bist du. Wo bist du. Eine Frage. Mehr nicht.“"
@@ -149,7 +149,7 @@
    "nr": 17,
    "typ": "gesicht",
    "kapitel": 4,
-   "start": 61.018,
+   "start": 61.738,
    "dauer": 3.134,
    "emotion": "erzaehlend",
    "text": "Du übst. Neun Sekunden. Acht."
@@ -158,7 +158,7 @@
    "nr": 18,
    "typ": "gesicht",
    "kapitel": 4,
-   "start": 64.152,
+   "start": 64.872,
    "dauer": 2.486,
    "emotion": "ruhig",
    "text": "Fürs Flirten hast du nie so viel geübt."
@@ -167,16 +167,16 @@
    "nr": 19,
    "typ": "gesicht",
    "kapitel": 4,
-   "start": 66.638,
+   "start": 67.358,
    "dauer": 3.206,
-   "emotion": "erzaehlend",
+   "emotion": "froh",
    "text": "Lea lächelt. Zum ersten Mal seit gestern."
   },
   {
    "nr": 20,
    "typ": "keller",
    "kapitel": 4,
-   "start": 69.844,
+   "start": 70.564,
    "dauer": 4.718,
    "emotion": "erzaehlend",
    "text": "14:12 Uhr. Du wählst. Dein Herz schlägt bis zum Hals."
@@ -185,7 +185,7 @@
    "nr": 21,
    "typ": "keller",
    "kapitel": 5,
-   "start": 74.562,
+   "start": 75.282,
    "dauer": 3.038,
    "emotion": "erzaehlend",
    "text": "14:13 Uhr. Er nimmt sofort ab."
@@ -194,7 +194,7 @@
    "nr": 22,
    "typ": "gesicht",
    "kapitel": 5,
-   "start": 77.6,
+   "start": 78.32,
    "dauer": 3.014,
    "emotion": "erzaehlend",
    "text": "„Papa, ich bin's! Im Keller, Kastanienweg 7!“"
@@ -203,7 +203,7 @@
    "nr": 23,
    "typ": "gesicht",
    "kapitel": 5,
-   "start": 80.614,
+   "start": 81.334,
    "dauer": 2.27,
    "emotion": "erzaehlend",
    "text": "„Alex! Hier sind alle *Frauen* weg!“"
@@ -212,7 +212,7 @@
    "nr": 24,
    "typ": "gesicht",
    "kapitel": 5,
-   "start": 82.884,
+   "start": 83.604,
    "dauer": 3.038,
    "emotion": "spannend",
    "text": "Alle Frauen. Bei ihm ist es genau *umgekehrt*."
@@ -221,7 +221,7 @@
    "nr": 25,
    "typ": "gesicht",
    "kapitel": 5,
-   "start": 85.922,
+   "start": 86.642,
    "dauer": 3.662,
    "emotion": "ernst",
    "text": "Dann: „Hier gibt es eine Frau, die eigentlich nicht hier sein dürfte.“"
@@ -230,7 +230,7 @@
    "nr": 26,
    "typ": "keller",
    "kapitel": 5,
-   "start": 89.584,
+   "start": 90.304,
    "dauer": 1.406,
    "emotion": "erzaehlend",
    "text": "Die Leitung bricht ab."
@@ -239,7 +239,7 @@
    "nr": 27,
    "typ": "titel",
    "kapitel": 5,
-   "start": 90.99,
+   "start": 91.71,
    "dauer": 1.0,
    "emotion": null,
    "text": ""
@@ -248,7 +248,7 @@
    "nr": 28,
    "typ": "objekt",
    "kapitel": 6,
-   "start": 91.99,
+   "start": 92.71,
    "dauer": 4.814,
    "emotion": "erklaerend",
    "text": "Frage: Bei dir ist Minute 13. Welche Minute ist in Indien?"
@@ -257,7 +257,7 @@
    "nr": 29,
    "typ": "objekt",
    "kapitel": 6,
-   "start": 96.804,
+   "start": 97.524,
    "dauer": 4.31,
    "emotion": "erklaerend",
    "text": "Antwort: Minute 43, eine halbe Stunde versetzt."
@@ -266,7 +266,7 @@
    "nr": 30,
    "typ": "titel",
    "kapitel": 6,
-   "start": 101.114,
+   "start": 101.834,
    "dauer": 3.302,
    "emotion": "erzaehlend",
    "text": "Was hättest du gemacht? Schreib es in die Kommentare."

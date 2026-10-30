@@ -1,7 +1,7 @@
 {
   "du":         { "haar": "kurz",    "haare": "#5a3d28", "haut": "#eac3a0", "jacke": "#c8693f", "hose": "#2e3a4f" },
   "lea":        { "haar": "dutt",    "haare": "#2f2622", "haut": "#c58f6a", "jacke": "#5b4b8a", "hose": "#2b2b33", "augen": "#4a3a2a" },
-  "winter":     { "haar": "kurz",    "haare": "#b9b2a6", "haut": "#f0cdb2", "jacke": "#3b3f48", "hose": "#3b3f48", "mantel": true, "brille": "#2a2a2e" },
+  "winter":     { "haar": "lang",    "haare": "#cbb88e", "haut": "#f0cdb2", "jacke": "#3b3f48", "hose": "#3b3f48", "mantel": true, "brille": "#2a2a2e" },
   "thomas":     { "haar": "glatze",  "haare": "#9a948c", "haut": "#e8bf9c", "jacke": "#7a5a3a", "hose": "#3a3a35", "bart": "#a8a29a" },
   "nika":       { "haar": "lang",    "haare": "#a5763f", "haut": "#b47a55", "jacke": "#2f6b52", "hose": "#2b2f36", "schal": "#e0b44a" },
   "k1":         { "haar": "lang",    "haare": "#3a2a22", "haut": "#f1cfb3", "jacke": "#c9b48f", "hose": "#2f3440", "mantel": true },

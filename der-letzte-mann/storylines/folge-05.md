@@ -22,7 +22,6 @@ TITELKARTE: DER LETZTE MANN
 WAS BISHER GESCHAH:
 * Skyline – Alle Männer sind verschwunden. Nur du nicht.
 * Handy: „Dr. E. Winter“ – Doktor Winter will dich treffen. Sie kannte dich schon vorher.
-* Nahaufnahme: Lea – Lea fand heraus: Ihr Projekt lief in deinem Haus.
 * Handy: Tabelle „Ankerpersonen“ – In ihrem Projektplan bist du „Ankerperson A“.
 
 KAPITEL 2: Die Fotowand | strasse (Suchstelle), objekt | Lea, Komparsin k3 | Tag | Anzeige: Tag 2, 11:00, HANDY 90 %, NETZ 4/4, KONSOLE nicht verbunden (grau)

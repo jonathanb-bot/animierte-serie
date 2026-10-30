@@ -1,12 +1,12 @@
 {
- "dauer": 104.618,
+ "dauer": 105.53,
  "einstellungen": [
   {
    "nr": 1,
    "typ": "keller",
    "kapitel": 1,
    "start": 0.0,
-   "dauer": 5.63,
+   "dauer": 5.774,
    "emotion": "erzaehlend",
    "text": "Stell dir vor, es gibt noch jemanden wie dich. Nur in einer *anderen* Welt."
   },
@@ -14,8 +14,8 @@
    "nr": 2,
    "typ": "keller",
    "kapitel": 1,
-   "start": 5.63,
-   "dauer": 5.03,
+   "start": 5.774,
+   "dauer": 4.814,
    "emotion": "erzaehlend",
    "text": "Lea zählt die Sekunden mit. Drei. Zwei. Eins."
   },
@@ -23,8 +23,8 @@
    "nr": 3,
    "typ": "keller",
    "kapitel": 1,
-   "start": 10.66,
-   "dauer": 5.318,
+   "start": 10.588,
+   "dauer": 6.998,
    "emotion": "erzaehlend",
    "text": "23:13 Uhr. Du drückst. Blaues Licht. Das alte Telefon klingelt."
   },
@@ -32,8 +32,8 @@
    "nr": 4,
    "typ": "gesicht",
    "kapitel": 1,
-   "start": 15.978,
-   "dauer": 4.67,
+   "start": 17.586,
+   "dauer": 4.622,
    "emotion": "erzaehlend",
    "text": "Eine Frauenstimme, dünn und rauschend: „Hallo? Hier ist *Nika*.“"
   },
@@ -41,8 +41,8 @@
    "nr": 5,
    "typ": "gesicht",
    "kapitel": 1,
-   "start": 20.648,
-   "dauer": 2.006,
+   "start": 22.208,
+   "dauer": 1.91,
    "emotion": "froh",
    "text": "Du bist nicht mehr der Einzige."
   },
@@ -50,7 +50,7 @@
    "nr": 6,
    "typ": "titel",
    "kapitel": 1,
-   "start": 22.654,
+   "start": 24.118,
    "dauer": 1.0,
    "emotion": null,
    "text": ""
@@ -59,8 +59,8 @@
    "nr": 7,
    "typ": "skyline",
    "kapitel": 2,
-   "start": 23.654,
-   "dauer": 4.238,
+   "start": 25.118,
+   "dauer": 4.67,
    "emotion": "erzaehlend",
    "text": "Um 8:13 wurde die Welt geteilt. Hier Frauen, drüben Männer."
   },
@@ -68,8 +68,8 @@
    "nr": 8,
    "typ": "gesicht",
    "kapitel": 2,
-   "start": 27.892,
-   "dauer": 3.95,
+   "start": 29.788,
+   "dauer": 3.518,
    "emotion": "erzaehlend",
    "text": "Jede Seite hat eine Ausnahme. Hier du, drüben eine Frau."
   },
@@ -77,8 +77,8 @@
    "nr": 9,
    "typ": "keller",
    "kapitel": 2,
-   "start": 31.842,
-   "dauer": 2.99,
+   "start": 33.306,
+   "dauer": 2.75,
    "emotion": "erzaehlend",
    "text": "Um 23:13 Uhr versuchst du es wieder."
   },
@@ -86,8 +86,8 @@
    "nr": 10,
    "typ": "gesicht",
    "kapitel": 3,
-   "start": 34.832,
-   "dauer": 3.038,
+   "start": 36.056,
+   "dauer": 2.678,
    "emotion": "erzaehlend",
    "text": "„Alex. Keller, Kastanienweg 7.“"
   },
@@ -95,8 +95,8 @@
    "nr": 11,
    "typ": "gesicht",
    "kapitel": 3,
-   "start": 37.87,
-   "dauer": 2.99,
+   "start": 38.734,
+   "dauer": 3.11,
    "emotion": "ernst",
    "text": "„Nika. Gleicher Keller. Andere *Welt*.“"
   },
@@ -104,17 +104,17 @@
    "nr": 12,
    "typ": "objekt",
    "kapitel": 3,
-   "start": 40.86,
-   "dauer": 6.806,
+   "start": 41.844,
+   "dauer": 6.278,
    "emotion": "erklaerend",
-   "text": "Echter Fakt: Alte Telefone übertragen nur 300 bis 3400 Hertz. Stimmen klingen dünn."
+   "text": "Alte Telefone übertragen nur 300 bis 3400 Hertz. Stimmen klingen dünn."
   },
   {
    "nr": 13,
    "typ": "gesicht",
    "kapitel": 3,
-   "start": 47.666,
-   "dauer": 3.974,
+   "start": 48.122,
+   "dauer": 4.454,
    "emotion": "ruhig",
    "text": "Die Stimme kennst du: Hörstudie. Du, mit Kaffee auf der Hose."
   },
@@ -122,8 +122,8 @@
    "nr": 14,
    "typ": "gesicht",
    "kapitel": 3,
-   "start": 51.64,
-   "dauer": 3.158,
+   "start": 52.576,
+   "dauer": 3.134,
    "emotion": "spannend",
    "text": "Dann sagt sie: „Ich weiß, wie wir die Tür *öffnen*.“"
   },
@@ -131,7 +131,7 @@
    "nr": 15,
    "typ": "tokio",
    "kapitel": 4,
-   "start": 54.798,
+   "start": 55.71,
    "dauer": 4.19,
    "emotion": "erzaehlend",
    "text": "In Tokio ist Morgen. Menschen halten Fotos hoch."
@@ -140,7 +140,7 @@
    "nr": 16,
    "typ": "keller",
    "kapitel": 4,
-   "start": 58.988,
+   "start": 59.9,
    "dauer": 2.75,
    "emotion": "erzaehlend",
    "text": "0:13 Uhr. Nika spricht schnell."
@@ -149,7 +149,7 @@
    "nr": 17,
    "typ": "gesicht",
    "kapitel": 4,
-   "start": 61.738,
+   "start": 62.65,
    "dauer": 4.31,
    "emotion": "erzaehlend",
    "text": "„1:13 Uhr. Beide an die Kellertür. Auf drei drücken wir die Klinke.“"
@@ -158,7 +158,7 @@
    "nr": 18,
    "typ": "gesicht",
    "kapitel": 4,
-   "start": 66.048,
+   "start": 66.96,
    "dauer": 5.006,
    "emotion": "ernst",
    "text": "„Warst du um 22:58 an der Tür?“ „Nein“, sagt Nika. „Da war ich *oben*.“"
@@ -167,7 +167,7 @@
    "nr": 19,
    "typ": "keller",
    "kapitel": 4,
-   "start": 71.054,
+   "start": 71.966,
    "dauer": 3.134,
    "emotion": "erzaehlend",
    "text": "Wer war es dann? Das dritte Lämpchen leuchtet noch."
@@ -176,7 +176,7 @@
    "nr": 20,
    "typ": "keller",
    "kapitel": 5,
-   "start": 74.188,
+   "start": 75.1,
    "dauer": 3.926,
    "emotion": "erzaehlend",
    "text": "1:13 Uhr. Lea an der Konsole. Du vor der Kellertür."
@@ -185,7 +185,7 @@
    "nr": 21,
    "typ": "keller",
    "kapitel": 5,
-   "start": 78.114,
+   "start": 79.026,
    "dauer": 3.494,
    "emotion": "erzaehlend",
    "text": "Das Lämpchen blinkt dreimal. Ihr seid nur *zwei*."
@@ -194,7 +194,7 @@
    "nr": 22,
    "typ": "gesicht",
    "kapitel": 5,
-   "start": 81.608,
+   "start": 82.52,
    "dauer": 3.902,
    "emotion": "erzaehlend",
    "text": "Am Telefon sagt Nika: „Auf drei. Wir öffnen gleichzeitig.“"
@@ -203,7 +203,7 @@
    "nr": 23,
    "typ": "keller",
    "kapitel": 5,
-   "start": 85.51,
+   "start": 86.422,
    "dauer": 2.03,
    "emotion": "erzaehlend",
    "text": "Du legst deine Hand auf die Klinke."
@@ -212,7 +212,7 @@
    "nr": 24,
    "typ": "keller",
    "kapitel": 5,
-   "start": 87.54,
+   "start": 88.452,
    "dauer": 2.006,
    "emotion": "erzaehlend",
    "text": "Von der anderen Seite klopft *jemand*."
@@ -221,7 +221,7 @@
    "nr": 25,
    "typ": "gesicht",
    "kapitel": 5,
-   "start": 89.546,
+   "start": 90.458,
    "dauer": 3.134,
    "emotion": "spannend",
    "text": "Nika flüstert: „Ich habe noch gar nicht geklopft.“"
@@ -230,7 +230,7 @@
    "nr": 26,
    "typ": "titel",
    "kapitel": 5,
-   "start": 92.68,
+   "start": 93.592,
    "dauer": 1.0,
    "emotion": null,
    "text": ""
@@ -239,7 +239,7 @@
    "nr": 27,
    "typ": "objekt",
    "kapitel": 6,
-   "start": 93.68,
+   "start": 94.592,
    "dauer": 3.83,
    "emotion": "erklaerend",
    "text": "Frage: Warum klingen Stimmen am alten Telefon dünn?"
@@ -248,7 +248,7 @@
    "nr": 28,
    "typ": "objekt",
    "kapitel": 6,
-   "start": 97.51,
+   "start": 98.422,
    "dauer": 4.478,
    "emotion": "erklaerend",
    "text": "Antwort: Es überträgt nur 300 bis 3400 Hertz."
@@ -257,7 +257,7 @@
    "nr": 29,
    "typ": "titel",
    "kapitel": 6,
-   "start": 101.988,
+   "start": 102.9,
    "dauer": 2.63,
    "emotion": "erzaehlend",
    "text": "Was hättest du gemacht? Schreib es in die Kommentare."

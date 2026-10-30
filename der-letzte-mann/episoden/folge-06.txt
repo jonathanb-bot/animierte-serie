@@ -1,4 +1,7 @@
 # Folge 6: Das tote Telefon
+@musik musik/folge-06.mp3
+@musik_lautstaerke 1
+@whoosh aus
 @serie Der letzte Mann
 @mund zitate
 @look 0
@@ -47,7 +50,7 @@
 // Raum S7: hinten eine schwere Stahltür „MESSKAMMER“
 [keller ansicht=raum licht=taschenlampe display="NOTBETRIEB"] Hinten eine zweite Stahltür: „Messkammer“. Die Klinke gibt nicht nach.
 // Alex' Hand auf der Klinke, das dritte Lämpchen flackert einmal weiß
-[keller ansicht=raum licht=taschenlampe display="NOTBETRIEB" du fokus=330,1035 zoom=2.4 klinke fokus=860,1090 zoom=1.35 l3=flackert] Als du sie anfasst, flackert das dritte Lämpchen. *Einmal*.
+[keller ansicht=raum licht=taschenlampe display="NOTBETRIEB" fokus=330,1035 zoom=2.4 klinke fokus=860,1090 zoom=1.35 l3=flackert] Als du sie anfasst, flackert das dritte Lämpchen. *Einmal*.
 // Nahaufnahme: Lea, misstrauisch
 [gesicht lea ort=keller ansicht=raum licht=konsole misstrauisch] „Hast du was gedrückt?“, fragt Lea. „Nein.“
 // Konsole: Schlüsselschalter auf „BETRIEB“, daneben eine große Taste „BEREIT“

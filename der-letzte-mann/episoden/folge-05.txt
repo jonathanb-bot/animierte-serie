@@ -28,8 +28,6 @@
 [skyline rauch=false hud=false] Alle Männer sind verschwunden. Nur du nicht.
 // Handy: „Dr. E. Winter“
 [handy bildschirm=anruf name="Dr. E. Winter" status=verbunden uhrzeit=10:10 akku=93 netz=4 ort=wohnung hud=false] Doktor Winter will dich treffen. Sie kannte dich schon vorher.
-// Nahaufnahme: Lea
-[gesicht lea ort=wohnung neutral hud=false] Lea fand heraus: Ihr Projekt lief in deinem Haus.
 // Handy: Tabelle „Ankerpersonen“
 [handy bildschirm=tabelle uhrzeit=10:10 akku=93 netz=4 ort=wohnung hud=false] In ihrem Projektplan bist du „Ankerperson A“.
 

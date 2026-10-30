@@ -287,7 +287,7 @@ Frisuren nur aus: kurz, lang, Kind, Glatze, wuschelig, Dutt. Wenige Farben, einf
 ### Dr. Eva Winter – Projektleiterin (`winter`)
 - **Alter:** 48 · **Rolle:** Leiterin von Projekt SPIEGEL
 - **Charakter:** ruhig, kompetent, überzeugend. Sie spricht langsam und nennt dich beim Namen. Sie will die Lage kontrollieren und verschweigt einen Teil der Wahrheit. Ihre Sorge vor weiteren Schäden ist echt.
-- **Frisur:** kurz · **Haare:** silberblond `#b9b2a6` · **Haut:** `#f0cdb2`
+- **Frisur:** lang (glatt, schulterlang) · **Haare:** aschblond `#cbb88e` · **Haut:** `#f0cdb2`
 - **Jacke:** Mantel anthrazit `#3b3f48` · **Hose:** `#3b3f48`
 - **Extras:** Brille `#2a2a2e`, Tablet, Schlüssel für den Schlüsselschalter der Konsole
 - **Auftritte:** Stimme am Telefon (3, 4), im Bild ab Folge 8

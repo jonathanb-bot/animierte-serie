@@ -1,5 +1,5 @@
 {
- "dauer": 102.208,
+ "dauer": 102.184,
  "einstellungen": [
   {
    "nr": 1,
@@ -150,7 +150,7 @@
    "typ": "keller",
    "kapitel": 4,
    "start": 54.37,
-   "dauer": 4.742,
+   "dauer": 4.262,
    "emotion": "erzaehlend",
    "text": "22:13 Uhr. Du drückst nach deiner Handyuhr."
   },
@@ -158,8 +158,8 @@
    "nr": 18,
    "typ": "bahnhof",
    "kapitel": 4,
-   "start": 59.112,
-   "dauer": 2.414,
+   "start": 58.632,
+   "dauer": 2.222,
    "emotion": "erzaehlend",
    "text": "Am Bahnhof flackert die Anzeige."
   },
@@ -167,8 +167,8 @@
    "nr": 19,
    "typ": "keller",
    "kapitel": 4,
-   "start": 61.526,
-   "dauer": 4.718,
+   "start": 60.854,
+   "dauer": 4.502,
    "emotion": "erzaehlend",
    "text": "„Verpasst.“ Zwei Sekunden. Deine Handyuhr geht ohne Netz nach."
   },
@@ -176,8 +176,8 @@
    "nr": 20,
    "typ": "keller",
    "kapitel": 4,
-   "start": 66.244,
-   "dauer": 2.054,
+   "start": 65.356,
+   "dauer": 1.934,
    "emotion": "erzaehlend",
    "text": "Lea holt ihren Funkwecker."
   },
@@ -185,17 +185,17 @@
    "nr": 21,
    "typ": "objekt",
    "kapitel": 4,
-   "start": 68.298,
-   "dauer": 6.518,
+   "start": 67.29,
+   "dauer": 6.374,
    "emotion": "erklaerend",
-   "text": "Echter Fakt: Funkuhren holen die Zeit von einem Sender bei Frankfurt. Reichweite: 2000 Kilometer."
+   "text": "Funkuhren holen die Zeit von einem Sender bei Frankfurt. Reichweite: 2000 Kilometer."
   },
   {
    "nr": 22,
    "typ": "keller",
    "kapitel": 5,
-   "start": 74.816,
-   "dauer": 3.302,
+   "start": 73.664,
+   "dauer": 3.758,
    "emotion": "erzaehlend",
    "text": "Der Funkwecker zeigt die Sekunden. Noch fünfzehn Minuten."
   },
@@ -203,8 +203,8 @@
    "nr": 23,
    "typ": "gesicht",
    "kapitel": 5,
-   "start": 78.118,
-   "dauer": 2.822,
+   "start": 77.422,
+   "dauer": 2.702,
    "emotion": "erzaehlend",
    "text": "Du richtest deine Haare. Für eine *Stimme*."
   },
@@ -212,8 +212,8 @@
    "nr": 24,
    "typ": "gesicht",
    "kapitel": 5,
-   "start": 80.94,
-   "dauer": 2.654,
+   "start": 80.124,
+   "dauer": 3.206,
    "emotion": "erzaehlend",
    "text": "„Sie sieht dich nicht“, sagt Lea. „Ich weiß.“"
   },
@@ -221,8 +221,8 @@
    "nr": 25,
    "typ": "keller",
    "kapitel": 5,
-   "start": 83.594,
-   "dauer": 3.086,
+   "start": 83.33,
+   "dauer": 3.062,
    "emotion": "erzaehlend",
    "text": "Du stehst an der Konsole. Niemand ist an der Tür."
   },
@@ -230,8 +230,8 @@
    "nr": 26,
    "typ": "keller",
    "kapitel": 5,
-   "start": 86.68,
-   "dauer": 4.046,
+   "start": 86.392,
+   "dauer": 4.07,
    "emotion": "erzaehlend",
    "text": "Da leuchtet das dritte Lämpchen. Ohne Verbindung. Ohne *dich*."
   },
@@ -239,7 +239,7 @@
    "nr": 27,
    "typ": "titel",
    "kapitel": 5,
-   "start": 90.726,
+   "start": 90.462,
    "dauer": 1.0,
    "emotion": null,
    "text": ""
@@ -248,8 +248,8 @@
    "nr": 28,
    "typ": "objekt",
    "kapitel": 6,
-   "start": 91.726,
-   "dauer": 3.47,
+   "start": 91.462,
+   "dauer": 3.494,
    "emotion": "erklaerend",
    "text": "Frage: Woher kennt eine Funkuhr die genaue Zeit?"
   },
@@ -257,8 +257,8 @@
    "nr": 29,
    "typ": "objekt",
    "kapitel": 6,
-   "start": 95.196,
-   "dauer": 4.118,
+   "start": 94.956,
+   "dauer": 4.238,
    "emotion": "erklaerend",
    "text": "Antwort: Von einem Langwellensender bei Frankfurt mit Atomuhren."
   },
@@ -266,8 +266,8 @@
    "nr": 30,
    "typ": "titel",
    "kapitel": 6,
-   "start": 99.314,
-   "dauer": 2.894,
+   "start": 99.194,
+   "dauer": 2.99,
    "emotion": "erzaehlend",
    "text": "Was hättest du gemacht? Schreib es in die Kommentare."
   }

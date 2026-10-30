@@ -1,12 +1,12 @@
 {
- "dauer": 108.606,
+ "dauer": 108.63,
  "einstellungen": [
   {
    "nr": 1,
    "typ": "newyork",
    "kapitel": 1,
    "start": 0.0,
-   "dauer": 5.534,
+   "dauer": 5.006,
    "emotion": "erzaehlend",
    "text": "Stell dir vor, dein Gesicht hängt auf dem größten Bildschirm von *New York*."
   },
@@ -14,8 +14,8 @@
    "nr": 2,
    "typ": "handy",
    "kapitel": 1,
-   "start": 5.534,
-   "dauer": 4.406,
+   "start": 5.006,
+   "dauer": 5.03,
    "emotion": "erzaehlend",
    "text": "Darunter Tausende Kommentare. „Fake?“ „Wo ist das?“ „Wer ist er?“"
   },
@@ -23,8 +23,8 @@
    "nr": 3,
    "typ": "gesicht",
    "kapitel": 1,
-   "start": 9.94,
-   "dauer": 4.19,
+   "start": 10.036,
+   "dauer": 4.67,
    "emotion": "froh",
    "text": "Wer ist er? *Du*. Und du siehst eigentlich gut aus."
   },
@@ -32,8 +32,8 @@
    "nr": 4,
    "typ": "gesicht",
    "kapitel": 1,
-   "start": 14.13,
-   "dauer": 2.366,
+   "start": 14.706,
+   "dauer": 2.27,
    "emotion": "erzaehlend",
    "text": "„Du siehst aus wie ein Pixelhaufen.“"
   },
@@ -41,8 +41,8 @@
    "nr": 5,
    "typ": "gesicht",
    "kapitel": 1,
-   "start": 16.496,
-   "dauer": 2.438,
+   "start": 16.976,
+   "dauer": 2.606,
    "emotion": "ernst",
    "text": "Ein Pixelhaufen, den die ganze Welt *sucht*."
   },
@@ -50,7 +50,7 @@
    "nr": 6,
    "typ": "titel",
    "kapitel": 1,
-   "start": 18.934,
+   "start": 19.582,
    "dauer": 1.0,
    "emotion": null,
    "text": ""
@@ -59,8 +59,8 @@
    "nr": 7,
    "typ": "skyline",
    "kapitel": 2,
-   "start": 19.934,
-   "dauer": 4.526,
+   "start": 20.582,
+   "dauer": 3.854,
    "emotion": "erzaehlend",
    "text": "Um 8:13 Uhr sind alle Männer verschwunden. Nur du nicht."
   },
@@ -68,8 +68,8 @@
    "nr": 8,
    "typ": "wohnung",
    "kapitel": 2,
-   "start": 24.46,
-   "dauer": 2.174,
+   "start": 24.436,
+   "dauer": 2.582,
    "emotion": "erzaehlend",
    "text": "Lea, deine Nachbarin, versteckt dich."
   },
@@ -77,8 +77,8 @@
    "nr": 9,
    "typ": "kueche",
    "kapitel": 2,
-   "start": 26.634,
-   "dauer": 2.582,
+   "start": 27.018,
+   "dauer": 2.462,
    "emotion": "erzaehlend",
    "text": "Und jede Stunde rauscht kurz das Radio."
   },
@@ -86,8 +86,8 @@
    "nr": 10,
    "typ": "handy",
    "kapitel": 2,
-   "start": 29.216,
-   "dauer": 2.966,
+   "start": 29.48,
+   "dauer": 3.254,
    "emotion": "erzaehlend",
    "text": "Doch eine Wetterkamera hat dich am Fenster fotografiert."
   },
@@ -95,8 +95,8 @@
    "nr": 11,
    "typ": "handy",
    "kapitel": 3,
-   "start": 32.182,
-   "dauer": 2.438,
+   "start": 32.734,
+   "dauer": 2.366,
    "emotion": "erzaehlend",
    "text": "Das Bild ist grob. Keiner erkennt dich."
   },
@@ -104,8 +104,8 @@
    "nr": 12,
    "typ": "skyline",
    "kapitel": 3,
-   "start": 34.62,
-   "dauer": 3.854,
+   "start": 35.1,
+   "dauer": 3.95,
    "emotion": "erzaehlend",
    "text": "Über der Stadt kreisen Hubschrauber. Alle suchen den Pixelhaufen."
   },
@@ -113,8 +113,8 @@
    "nr": 13,
    "typ": "gesicht",
    "kapitel": 3,
-   "start": 38.474,
-   "dauer": 2.798,
+   "start": 39.05,
+   "dauer": 3.326,
    "emotion": "erzaehlend",
    "text": "Lea erkennt dich sofort. Sie kennt dich ja."
   },
@@ -122,17 +122,17 @@
    "nr": 14,
    "typ": "objekt",
    "kapitel": 3,
-   "start": 41.272,
-   "dauer": 4.406,
+   "start": 42.376,
+   "dauer": 3.422,
    "emotion": "erklaerend",
-   "text": "Echter Fakt: Bekannte Gesichter erkennen wir sogar auf miesen Videos."
+   "text": "Bekannte Gesichter erkennen wir sogar auf miesen Videos."
   },
   {
    "nr": 15,
    "typ": "objekt",
    "kapitel": 3,
-   "start": 45.678,
-   "dauer": 3.182,
+   "start": 45.798,
+   "dauer": 3.23,
    "emotion": "erklaerend",
    "text": "Fremde kaum. Selbst erfahrene Polizisten nicht."
   },
@@ -140,8 +140,8 @@
    "nr": 16,
    "typ": "gesicht",
    "kapitel": 3,
-   "start": 48.86,
-   "dauer": 4.694,
+   "start": 49.028,
+   "dauer": 4.55,
    "emotion": "ernst",
    "text": "„Nur wer dich kennt, findet dich“, sagt Lea. „Oder wer dich *schon* sucht.“"
   },
@@ -149,7 +149,7 @@
    "nr": 17,
    "typ": "newyork",
    "kapitel": 4,
-   "start": 53.554,
+   "start": 53.578,
    "dauer": 6.278,
    "emotion": "erzaehlend",
    "text": "Um 15:13 Uhr flackern in New York alle Bildschirme. Zehn Sekunden."
@@ -158,16 +158,16 @@
    "nr": 18,
    "typ": "kueche",
    "kapitel": 4,
-   "start": 59.832,
+   "start": 59.856,
    "dauer": 3.806,
    "emotion": "erzaehlend",
    "text": "Bei dir rauscht das Radio. Lea schreibt die Uhrzeiten auf."
   },
   {
    "nr": 19,
-   "typ": "karte",
+   "typ": "objekt",
    "kapitel": 4,
-   "start": 63.638,
+   "start": 63.662,
    "dauer": 3.59,
    "emotion": "erklaerend",
    "text": "Immer um *dreizehn* nach. Wie um 8:13."
@@ -176,7 +176,7 @@
    "nr": 20,
    "typ": "handy",
    "kapitel": 4,
-   "start": 67.228,
+   "start": 67.252,
    "dauer": 3.038,
    "emotion": "erzaehlend",
    "text": "Dann vibriert dein Handy. Unbekannte Nummer."
@@ -185,7 +185,7 @@
    "nr": 21,
    "typ": "gesicht",
    "kapitel": 4,
-   "start": 70.266,
+   "start": 70.29,
    "dauer": 3.71,
    "emotion": "erzaehlend",
    "text": "Eine ruhige Frauenstimme: „Hier ist Doktor Eva *Winter*.“"
@@ -194,7 +194,7 @@
    "nr": 22,
    "typ": "gesicht",
    "kapitel": 5,
-   "start": 73.976,
+   "start": 74.0,
    "dauer": 4.526,
    "emotion": "erzaehlend",
    "text": "Eine Wissenschaftlerin. Klingt klug. Du richtest unwillkürlich deine Haare."
@@ -203,7 +203,7 @@
    "nr": 23,
    "typ": "handy",
    "kapitel": 5,
-   "start": 78.502,
+   "start": 78.526,
    "dauer": 2.966,
    "emotion": "erzaehlend",
    "text": "„Ich biete Ihnen Schutz an. Und Antworten.“"
@@ -212,7 +212,7 @@
    "nr": 24,
    "typ": "gesicht",
    "kapitel": 5,
-   "start": 81.468,
+   "start": 81.492,
    "dauer": 3.686,
    "emotion": "ernst",
    "text": "Lea flüstert: „Winter? Den Namen kenne ich.“"
@@ -221,7 +221,7 @@
    "nr": 25,
    "typ": "gesicht",
    "kapitel": 5,
-   "start": 85.154,
+   "start": 85.178,
    "dauer": 5.27,
    "emotion": "froh",
    "text": "Schutz. Antworten. Und eine Frau, die *dich* sucht. Klingt fast gut."
@@ -230,7 +230,7 @@
    "nr": 26,
    "typ": "gesicht",
    "kapitel": 5,
-   "start": 90.424,
+   "start": 90.448,
    "dauer": 2.534,
    "emotion": "ernst",
    "text": "Du fragst: „Woher haben Sie meine Nummer?“"
@@ -239,7 +239,7 @@
    "nr": 27,
    "typ": "gesicht",
    "kapitel": 5,
-   "start": 92.958,
+   "start": 92.982,
    "dauer": 5.342,
    "emotion": "spannend",
    "text": "„Herr Brandt. Kastanienweg 7, dritter Stock.“ Du hast ihr beides *nie* gesagt."
@@ -248,7 +248,7 @@
    "nr": 28,
    "typ": "titel",
    "kapitel": 5,
-   "start": 98.3,
+   "start": 98.324,
    "dauer": 1.0,
    "emotion": null,
    "text": ""
@@ -257,7 +257,7 @@
    "nr": 29,
    "typ": "objekt",
    "kapitel": 6,
-   "start": 99.3,
+   "start": 99.324,
    "dauer": 2.846,
    "emotion": "erklaerend",
    "text": "Frage: Warum erkannte nur Lea dich?"
@@ -266,7 +266,7 @@
    "nr": 30,
    "typ": "objekt",
    "kapitel": 6,
-   "start": 102.146,
+   "start": 102.17,
    "dauer": 3.638,
    "emotion": "erklaerend",
    "text": "Antwort: Bekannte Gesichter erkennen wir selbst unscharf."
@@ -275,7 +275,7 @@
    "nr": 31,
    "typ": "titel",
    "kapitel": 6,
-   "start": 105.784,
+   "start": 105.808,
    "dauer": 2.822,
    "emotion": "erzaehlend",
    "text": "Was hättest du gemacht? Schreib es in die Kommentare."

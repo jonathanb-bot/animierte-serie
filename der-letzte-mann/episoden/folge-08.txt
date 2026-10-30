@@ -39,7 +39,7 @@
 // Nahaufnahme: Winter, sachlich
 [gesicht winter ort=keller ansicht=raum licht=konsole neutral] „Wir wollten die Welt kurz spiegeln. Zum Messen.“
 // Infokarte: Satellit mit Uhr, „+38 µs pro Tag“
-[objekt objekte="satellit:+38 µs pro Tag" farbe=#1e2f45] GPS-Uhren gehen wegen der Relativität täglich 38 Mikrosekunden vor.
+[objekt objekte="satellit:+38 Mikrosekunden" farbe=#1e2f45] GPS-Uhren gehen wegen der Relativität täglich 38 Mikrosekunden vor.
 // Infokarte: Karte mit Punkt, der um „10 km“ verrutscht
 [objekt objekte="gps_fehler:ohne Korrektur" farbe=#1e2f45] Unkorrigiert wäre GPS pro Tag zehn Kilometer daneben.
 // Nahaufnahme: Winter, besorgt

@@ -1,5 +1,5 @@
 {
- "dauer": 107.776,
+ "dauer": 105.64,
  "einstellungen": [
   {
    "nr": 1,
@@ -34,7 +34,7 @@
    "kapitel": 1,
    "start": 14.274,
    "dauer": 3.566,
-   "emotion": "erzaehlend",
+   "emotion": "froh",
    "text": "Hemd Nummer drei. Für das Ende der Welt siehst du *gut* aus."
   },
   {
@@ -106,7 +106,7 @@
    "kapitel": 3,
    "start": 37.788,
    "dauer": 3.566,
-   "emotion": "erzaehlend",
+   "emotion": "ruhig",
    "text": "Um halb neun kommt Lea aus der Nachtschicht. Mit einem Ausdruck."
   },
   {
@@ -150,7 +150,7 @@
    "typ": "kueche",
    "kapitel": 4,
    "start": 57.274,
-   "dauer": 2.966,
+   "dauer": 3.062,
    "emotion": "erzaehlend",
    "text": "Ein Projekt in deinem Keller."
   },
@@ -158,8 +158,8 @@
    "nr": 18,
    "typ": "handy",
    "kapitel": 4,
-   "start": 60.24,
-   "dauer": 5.006,
+   "start": 60.336,
+   "dauer": 4.766,
    "emotion": "erzaehlend",
    "text": "An der Meldung hängt eine Datei: „Messplan S7, Projekt Spiegel“."
   },
@@ -167,8 +167,8 @@
    "nr": 19,
    "typ": "handy",
    "kapitel": 4,
-   "start": 65.246,
-   "dauer": 4.598,
+   "start": 65.102,
+   "dauer": 4.646,
    "emotion": "erzaehlend",
    "text": "Lea öffnet die Dateieigenschaften. Erstellt am 21. Oktober."
   },
@@ -176,16 +176,16 @@
    "nr": 20,
    "typ": "objekt",
    "kapitel": 4,
-   "start": 69.844,
-   "dauer": 4.286,
+   "start": 69.748,
+   "dauer": 3.23,
    "emotion": "erklaerend",
-   "text": "Echter Fakt: Dateien speichern oft unsichtbar, wann sie erstellt wurden."
+   "text": "Dateien speichern oft unsichtbar, wann sie erstellt wurden."
   },
   {
    "nr": 21,
    "typ": "gesicht",
    "kapitel": 4,
-   "start": 74.13,
+   "start": 72.978,
    "dauer": 3.902,
    "emotion": "ernst",
    "text": "Die Datei ist drei Wochen *alt*. Älter als das Ereignis."
@@ -194,8 +194,8 @@
    "nr": 22,
    "typ": "gesicht",
    "kapitel": 5,
-   "start": 78.032,
-   "dauer": 3.686,
+   "start": 76.88,
+   "dauer": 3.494,
    "emotion": "erzaehlend",
    "text": "Der Wagen kommt in einer Stunde. Aber Lea scrollt weiter."
   },
@@ -203,8 +203,8 @@
    "nr": 23,
    "typ": "handy",
    "kapitel": 5,
-   "start": 81.718,
-   "dauer": 4.31,
+   "start": 80.374,
+   "dauer": 4.142,
    "emotion": "erzaehlend",
    "text": "Seite drei: eine Liste. Überschrift: „*Ankerpersonen*“."
   },
@@ -212,8 +212,8 @@
    "nr": 24,
    "typ": "handy",
    "kapitel": 5,
-   "start": 86.028,
-   "dauer": 4.67,
+   "start": 84.516,
+   "dauer": 4.814,
    "emotion": "erzaehlend",
    "text": "Erste Zeile: Brandt, Alex. Kastanienweg 7. Dritter Stock."
   },
@@ -221,8 +221,8 @@
    "nr": 25,
    "typ": "gesicht",
    "kapitel": 5,
-   "start": 90.698,
-   "dauer": 2.63,
+   "start": 89.33,
+   "dauer": 2.702,
    "emotion": "spannend",
    "text": "Geschrieben drei Wochen *vor* dem Ereignis."
   },
@@ -230,8 +230,8 @@
    "nr": 26,
    "typ": "gesicht",
    "kapitel": 5,
-   "start": 93.328,
-   "dauer": 3.902,
+   "start": 92.032,
+   "dauer": 3.47,
    "emotion": "ernst",
    "text": "„Sie will dich nicht retten“, sagt Lea. „Sie hat dich *ausgesucht*.“"
   },
@@ -239,7 +239,7 @@
    "nr": 27,
    "typ": "titel",
    "kapitel": 5,
-   "start": 97.23,
+   "start": 95.502,
    "dauer": 1.0,
    "emotion": null,
    "text": ""
@@ -248,8 +248,8 @@
    "nr": 28,
    "typ": "objekt",
    "kapitel": 6,
-   "start": 98.23,
-   "dauer": 3.278,
+   "start": 96.502,
+   "dauer": 3.302,
    "emotion": "erklaerend",
    "text": "Frage: Woran sah Lea, dass die Datei alt ist?"
   },
@@ -257,8 +257,8 @@
    "nr": 29,
    "typ": "objekt",
    "kapitel": 6,
-   "start": 101.508,
-   "dauer": 3.758,
+   "start": 99.804,
+   "dauer": 3.326,
    "emotion": "erklaerend",
    "text": "Antwort: Am Erstellungsdatum in den Dateieigenschaften."
   },
@@ -266,7 +266,7 @@
    "nr": 30,
    "typ": "titel",
    "kapitel": 6,
-   "start": 105.266,
+   "start": 103.13,
    "dauer": 2.51,
    "emotion": "erzaehlend",
    "text": "Was hättest du gemacht? Schreib es in die Kommentare."

@@ -202,7 +202,8 @@ def _ohne_stilanweisung(x: np.ndarray, erkannt: list, log=print):
     letzten Wort der Anweisung abschneiden und neu erkennen."""
     stil = [norm(w) for w in STIL.split() if norm(w)]
     n = [norm(w) for _, _, w in erkannt[:len(stil) + 15]]
-    if len(n) < 3 or n[:2] != stil[:2] or stil[-1] not in n:
+    # tolerant: die Spracherkennung hört z. B. „liest“ statt „lies“; es reichen 3 Anweisungswörter am Anfang
+    if len(n) < 3 or len(set(n[:8]) & set(stil[:10])) < 3 or stil[-1] not in n:
         return x, erkannt
     k = n.index(stil[-1])
     log(f"    Stilanweisung mitgelesen – bis {erkannt[k][1]:.1f} s abgeschnitten")

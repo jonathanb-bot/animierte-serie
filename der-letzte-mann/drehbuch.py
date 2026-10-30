@@ -47,7 +47,7 @@ ICONS = [  # Infokarten: Stichwort in der Bildbeschreibung -> Icon und Beschrift
     ("Funkmast", "funkmast:Cell Broadcast"), ("Glasscheibe", "glasscheibe:ca. 4 % pro Fläche"), ("links Tag", "tag_nacht"),
     ("Häkchen", "gesicht_bekannt:Bekannt"), ("Fragezeichen", "gesicht_fremd:Fremd"), ("Formular", "formular:Messbetrieb Keller"),
     ("Datei mit", "datei_info:Metadaten"), ("Suchdienst", "suchdienst:Suchdienst"), ("altes Telefon", "telefon_alt:Strom über die Leitung"),
-    ("Weltuhr", "weltuhr"), ("Satellit", "satellit:+38 µs pro Tag"), ("verrutscht", "gps_fehler:ohne Korrektur"),
+    ("Weltuhr", "weltuhr"), ("Satellit", "satellit:+38 Mikrosekunden"), ("verrutscht", "gps_fehler:ohne Korrektur"),
     ("Funkturm", "funkuhr:ca. 2000 km"), ("Frequenzband", "frequenz:Telefonband"),
 ]
 AUSDRUCK = [("Schreck", "schreck"), ("Angst", "angst"), ("besorgt", "besorgt"), ("misstrauisch", "misstrauisch"), ("entschlossen", "entschlossen"),
@@ -104,6 +104,7 @@ def szene(ep, kap, b, text, kz, h):
         if "Eilmeldung" in b: return f"handy bildschirm=meldungen {basis}"
         if "Anrufliste" in b: return f"handy bildschirm=anrufliste {basis}"
         if "Warnmeldung" in b: return f"handy bildschirm=warnung {basis}"
+        if "Nika" in b or "Vermissten" in b: return f"handy bildschirm=foto {basis}"
         if "Post" in b or "Kommentare" in b or "vergrößert" in b or "Webcam" in b:
             return f"handy bildschirm=post {basis}" + (' kommentare="Fake?|Wo ist das?|Wer ist er?"' if "Kommentare" in b else "")
         if "Dateieigenschaften" in b: return f"handy bildschirm=pdf eigenschaften {basis}"

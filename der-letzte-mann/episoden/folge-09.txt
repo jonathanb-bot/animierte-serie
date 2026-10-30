@@ -18,7 +18,7 @@
 // Suchstelle bei Nacht, Kerzen vor der Fotowand, Nikas Zettel mit gelbem Schal
 [suchstelle k3 markiere zeit=nacht] An der Suchstelle brennen jetzt Kerzen. Nikas Zettel hängt noch.
 // Handy: Foto „Nika S., 26 – Kastanienweg 7, 1. OG“ vergrößert
-[handy bildschirm=post uhrzeit=20:40 akku=92 netz=0 ort=keller] Auf Leas Foto: „Nika S. Kastanienweg 7.“
+[handy bildschirm=foto uhrzeit=20:40 akku=92 netz=0 ort=keller] Auf Leas Foto: „Nika S. Kastanienweg 7.“
 // Nahaufnahme: Alex, verlegen
 [gesicht du ort=keller ansicht=raum licht=konsole muede] Sie wohnt in *deinem* Haus. Angesprochen hast du sie nie.
 [titel oben="Folge 9" gross="DER LETZTE MANN" unten="Die zweite Ausnahme" farbe=#14213d akzent=#e2b443 groesse=120 dauer=1 hud=false]

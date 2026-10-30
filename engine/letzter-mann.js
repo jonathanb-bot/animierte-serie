@@ -199,7 +199,7 @@
       ctx.restore();
       if (s.klopfen) A.laermWellen(dx + 170, dy + 380, t * 1.3, 0.8);
       if (s.l3 && s.l3 !== "aus") A.licht(dx + 170, dy + 700, 360, "#f4f6ff", 0.4 * lampeWert(s.l3, t));
-      if (s.klinke) { const jf = A.fig("du"), hx = dx + 60, hy = dy + 392; capsule(hx - 300, hy + 820, hx - 10, hy + 40, 64, 44); fill(jf.jacke); capsule(hx - 300, hy + 820, hx - 10, hy + 40, 64, 44); A.schattiere(hx - 360, hx + 40, 0.25); circle(hx, hy, 46, jf.haut); for (let k = 0; k < 3; k++) ellipse(hx - 30 + k * 26, hy - 34, 16, 26, shade(jf.haut, -0.04)); }
+      if (s.klinke) { const jf = A.fig("du"), hx = dx + 60, hy = dy + 392; capsule(hx - 230, hy + 640, hx - 20, hy + 50, 86, 58); fill(jf.jacke); capsule(hx - 230, hy + 640, hx - 20, hy + 50, 86, 58); A.schattiere(hx - 320, hx + 40, 0.25); circle(hx, hy, 46, jf.haut); for (let k = 0; k < 3; k++) ellipse(hx - 30 + k * 26, hy - 34, 16, 26, shade(jf.haut, -0.04)); }
       A.figurenZeigen(s, t, 1700, 0.92, (s.figuren || []).length === 2 ? [560, 900] : [620]);
     } else {
       // Kellerflur: Hausverteiler links, Stahltür S7 rechts
@@ -219,7 +219,7 @@
     }
     if (licht === "taschenlampe") { ctx.save(); ctx.globalCompositeOperation = "screen"; ctx.fillStyle = rgrad(560, 900, 20, 420, [[0, "rgba(255,248,220,0.16)"], [1, "rgba(255,248,220,0)"]]); ctx.fillRect(-500, -500, 2200, 2800); ctx.restore(); A.licht(560, 900, 560, "#fff4d0", 1.2); }
     if (licht === "an") A.licht(540, 300, 1100, "#fff6d8", 1);
-    A._dunkel = licht === "an" ? 0.12 : licht === "konsole" ? (s.konsole_aus ? 0.62 : 0.5) : 0.62;
+    A._dunkel = licht === "an" ? 0.1 : licht === "konsole" ? (s.konsole_aus ? 0.55 : 0.4) : 0.55;
   };
 
   // =====================================================================

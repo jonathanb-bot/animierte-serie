@@ -68,7 +68,7 @@
 // Nahaufnahme: Alex, Hörer am Ohr
 [gesicht du ort=keller ansicht=raum licht=konsole neutral] Am Telefon sagt Nika: „Auf drei. Wir öffnen gleichzeitig.“
 // Alex' Hand legt sich auf die Klinke
-[keller ansicht=raum licht=an display="NETZ · AKKU 100 %|FENSTER 01:13:00" l1=an l2=an l3=an du klinke fokus=860,1090 zoom=1.35] Du legst deine Hand auf die Klinke.
+[keller ansicht=raum licht=an display="NETZ · AKKU 100 %|FENSTER 01:13:00" l1=an l2=an l3=an klinke fokus=860,1090 zoom=1.35] Du legst deine Hand auf die Klinke.
 // Messkammertür: Sie vibriert leicht unter drei Schlägen
 [keller ansicht=raum licht=an display="NETZ · AKKU 100 %|FENSTER 01:13:00" l1=an l2=an l3=an fokus=860,1090 zoom=1.35 klopfen] Von der anderen Seite klopft *jemand*.
 // Nahaufnahme: Alex, Schreck

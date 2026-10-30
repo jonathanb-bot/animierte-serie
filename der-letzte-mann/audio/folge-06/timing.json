@@ -1,12 +1,12 @@
 {
- "dauer": 103.774,
+ "dauer": 100.27,
  "einstellungen": [
   {
    "nr": 1,
    "typ": "keller",
    "kapitel": 1,
    "start": 0.0,
-   "dauer": 3.83,
+   "dauer": 3.47,
    "emotion": "erzaehlend",
    "text": "Stell dir vor, hinter dieser Tür ist dein *Vater*."
   },
@@ -14,8 +14,8 @@
    "nr": 2,
    "typ": "keller",
    "kapitel": 1,
-   "start": 3.83,
-   "dauer": 3.95,
+   "start": 3.47,
+   "dauer": 3.686,
    "emotion": "erzaehlend",
    "text": "Du steckst den großen Schlüssel ins Schloss. Deine Hand zittert."
   },
@@ -23,8 +23,8 @@
    "nr": 3,
    "typ": "keller",
    "kapitel": 1,
-   "start": 7.78,
-   "dauer": 4.046,
+   "start": 7.156,
+   "dauer": 3.686,
    "emotion": "erzaehlend",
    "text": "„Papa?“ Keine Antwort. Nur ein dunkler Raum."
   },
@@ -32,8 +32,8 @@
    "nr": 4,
    "typ": "keller",
    "kapitel": 1,
-   "start": 11.826,
-   "dauer": 3.95,
+   "start": 10.842,
+   "dauer": 3.686,
    "emotion": "erzaehlend",
    "text": "Kein Vater. Nur ein grauer Schrank mit Lautsprecher."
   },
@@ -41,8 +41,8 @@
    "nr": 5,
    "typ": "keller",
    "kapitel": 1,
-   "start": 15.776,
-   "dauer": 6.446,
+   "start": 14.528,
+   "dauer": 6.254,
    "emotion": "erzaehlend",
    "text": "Auf dem Display: „Ansage Thomas B. 31 Anrufe.“ *Deine* Anrufe."
   },
@@ -50,7 +50,7 @@
    "nr": 6,
    "typ": "titel",
    "kapitel": 1,
-   "start": 22.222,
+   "start": 20.782,
    "dauer": 1.0,
    "emotion": null,
    "text": ""
@@ -59,8 +59,8 @@
    "nr": 7,
    "typ": "skyline",
    "kapitel": 2,
-   "start": 23.222,
-   "dauer": 3.902,
+   "start": 21.782,
+   "dauer": 4.214,
    "emotion": "erzaehlend",
    "text": "Um 8:13 Uhr verschwanden alle Männer. Nur du nicht."
   },
@@ -68,8 +68,8 @@
    "nr": 8,
    "typ": "handy",
    "kapitel": 2,
-   "start": 27.124,
-   "dauer": 3.758,
+   "start": 25.996,
+   "dauer": 3.446,
    "emotion": "erzaehlend",
    "text": "Ein Projekt namens Spiegel hatte dich vorher ausgewählt."
   },
@@ -77,8 +77,8 @@
    "nr": 9,
    "typ": "keller",
    "kapitel": 2,
-   "start": 30.882,
-   "dauer": 2.99,
+   "start": 29.442,
+   "dauer": 2.726,
    "emotion": "erzaehlend",
    "text": "Im Keller hast du die Stimme deines Vaters gehört."
   },
@@ -86,8 +86,8 @@
    "nr": 10,
    "typ": "keller",
    "kapitel": 3,
-   "start": 33.872,
-   "dauer": 4.718,
+   "start": 32.168,
+   "dauer": 4.358,
    "emotion": "erzaehlend",
    "text": "Der Raum heißt S7. Jeder Anruf an Papa läuft hierher."
   },
@@ -95,8 +95,8 @@
    "nr": 11,
    "typ": "keller",
    "kapitel": 3,
-   "start": 38.59,
-   "dauer": 3.95,
+   "start": 36.526,
+   "dauer": 4.358,
    "emotion": "erzaehlend",
    "text": "Auf dem Schrank steht ein altes Telefon. Das Kabel ist *durchgeschnitten*."
   },
@@ -104,17 +104,17 @@
    "nr": 12,
    "typ": "objekt",
    "kapitel": 3,
-   "start": 42.54,
-   "dauer": 6.422,
+   "start": 40.884,
+   "dauer": 4.862,
    "emotion": "erklaerend",
-   "text": "Echter Fakt: Alte Festnetztelefone bekamen Strom über die Leitung. Sogar bei Stromausfall."
+   "text": "Alte Festnetztelefone bekamen Strom über die Leitung. Sogar bei Stromausfall."
   },
   {
    "nr": 13,
    "typ": "keller",
    "kapitel": 3,
-   "start": 48.962,
-   "dauer": 4.526,
+   "start": 45.746,
+   "dauer": 3.926,
    "emotion": "erzaehlend",
    "text": "Ohne Kabel müsste es tot sein. Doch im Hörer *rauscht* es."
   },
@@ -122,8 +122,8 @@
    "nr": 14,
    "typ": "keller",
    "kapitel": 4,
-   "start": 53.488,
-   "dauer": 5.246,
+   "start": 49.672,
+   "dauer": 5.462,
    "emotion": "erzaehlend",
    "text": "An der Konsole: drei Lämpchen. „Bereit“, „Verbindung“, „Schwelle“."
   },
@@ -131,8 +131,8 @@
    "nr": 15,
    "typ": "keller",
    "kapitel": 4,
-   "start": 58.734,
-   "dauer": 4.838,
+   "start": 55.134,
+   "dauer": 4.67,
    "emotion": "erzaehlend",
    "text": "Hinten eine zweite Stahltür: „Messkammer“. Die Klinke gibt nicht nach."
   },
@@ -140,8 +140,8 @@
    "nr": 16,
    "typ": "keller",
    "kapitel": 4,
-   "start": 63.572,
-   "dauer": 4.046,
+   "start": 59.804,
+   "dauer": 4.094,
    "emotion": "erzaehlend",
    "text": "Als du sie anfasst, flackert das dritte Lämpchen. *Einmal*."
   },
@@ -149,8 +149,8 @@
    "nr": 17,
    "typ": "gesicht",
    "kapitel": 4,
-   "start": 67.618,
-   "dauer": 2.63,
+   "start": 63.898,
+   "dauer": 2.702,
    "emotion": "ernst",
    "text": "„Hast du was gedrückt?“, fragt Lea. „Nein.“"
   },
@@ -158,8 +158,8 @@
    "nr": 18,
    "typ": "keller",
    "kapitel": 4,
-   "start": 70.248,
-   "dauer": 4.574,
+   "start": 66.6,
+   "dauer": 4.238,
    "emotion": "erzaehlend",
    "text": "Daneben ein Schlüsselschalter. Und eine große Taste: *Bereit*."
   },
@@ -167,8 +167,8 @@
    "nr": 19,
    "typ": "gesicht",
    "kapitel": 5,
-   "start": 74.822,
-   "dauer": 3.254,
+   "start": 70.838,
+   "dauer": 3.422,
    "emotion": "ernst",
    "text": "Du drückst. Natürlich. Unter Druck bist du *vorschnell*."
   },
@@ -176,8 +176,8 @@
    "nr": 20,
    "typ": "keller",
    "kapitel": 5,
-   "start": 78.076,
-   "dauer": 4.55,
+   "start": 74.26,
+   "dauer": 4.694,
    "emotion": "erzaehlend",
    "text": "Die Konsole erwacht. Grünes Licht. Akku: 38 Prozent."
   },
@@ -185,8 +185,8 @@
    "nr": 21,
    "typ": "keller",
    "kapitel": 5,
-   "start": 82.626,
-   "dauer": 3.974,
+   "start": 78.954,
+   "dauer": 4.07,
    "emotion": "erzaehlend",
    "text": "„Nächstes Fenster: 13:13 Uhr.“ In einer Minute."
   },
@@ -194,17 +194,17 @@
    "nr": 22,
    "typ": "gesicht",
    "kapitel": 5,
-   "start": 86.6,
-   "dauer": 3.446,
-   "emotion": "erzaehlend",
+   "start": 83.024,
+   "dauer": 3.326,
+   "emotion": "ernst",
    "text": "„Dreizehn nach“, flüstert Lea. „Wie das Radio.“"
   },
   {
    "nr": 23,
    "typ": "keller",
    "kapitel": 5,
-   "start": 90.046,
-   "dauer": 3.446,
+   "start": 86.35,
+   "dauer": 3.23,
    "emotion": "erzaehlend",
    "text": "Du nimmst den Hörer. Und wählst die Nummer deines *Vaters*."
   },
@@ -212,7 +212,7 @@
    "nr": 24,
    "typ": "titel",
    "kapitel": 5,
-   "start": 93.492,
+   "start": 89.58,
    "dauer": 1.0,
    "emotion": null,
    "text": ""
@@ -221,8 +221,8 @@
    "nr": 25,
    "typ": "objekt",
    "kapitel": 6,
-   "start": 94.492,
-   "dauer": 3.542,
+   "start": 90.58,
+   "dauer": 3.806,
    "emotion": "erklaerend",
    "text": "Frage: Warum gingen alte Telefone bei Stromausfall?"
   },
@@ -230,8 +230,8 @@
    "nr": 26,
    "typ": "objekt",
    "kapitel": 6,
-   "start": 98.034,
-   "dauer": 3.206,
+   "start": 94.386,
+   "dauer": 3.278,
    "emotion": "erklaerend",
    "text": "Antwort: Ihr Strom kam über die Telefonleitung."
   },
@@ -239,8 +239,8 @@
    "nr": 27,
    "typ": "titel",
    "kapitel": 6,
-   "start": 101.24,
-   "dauer": 2.534,
+   "start": 97.664,
+   "dauer": 2.606,
    "emotion": "erzaehlend",
    "text": "Was hättest du gemacht? Schreib es in die Kommentare."
   }

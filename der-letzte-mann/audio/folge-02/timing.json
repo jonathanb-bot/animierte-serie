@@ -1,5 +1,5 @@
 {
- "dauer": 104.022,
+ "dauer": 105.63,
  "einstellungen": [
   {
    "nr": 1,
@@ -16,7 +16,7 @@
    "kapitel": 1,
    "start": 4.286,
    "dauer": 3.326,
-   "emotion": "erzaehlend",
+   "emotion": "ernst",
    "text": "Deine Nachbarin Lea schiebt sich einfach an dir vorbei."
   },
   {
@@ -150,7 +150,7 @@
    "typ": "kueche",
    "kapitel": 4,
    "start": 52.906,
-   "dauer": 5.678,
+   "dauer": 5.102,
    "emotion": "erzaehlend",
    "text": "Um 10:13 rauscht das Radio. Wie schon um 9:13."
   },
@@ -158,8 +158,8 @@
    "nr": 18,
    "typ": "strasse",
    "kapitel": 4,
-   "start": 58.584,
-   "dauer": 3.614,
+   "start": 58.008,
+   "dauer": 3.47,
    "emotion": "erzaehlend",
    "text": "Draußen schieben Frauen die liegengebliebenen Autos von der Kreuzung."
   },
@@ -167,17 +167,17 @@
    "nr": 19,
    "typ": "objekt",
    "kapitel": 4,
-   "start": 62.198,
-   "dauer": 4.07,
+   "start": 61.478,
+   "dauer": 4.526,
    "emotion": "erklaerend",
-   "text": "Echter Fakt: Glas spiegelt pro Oberfläche etwa *vier Prozent* des Lichts."
+   "text": "Glas spiegelt pro Oberfläche etwa *vier Prozent* des Lichts."
   },
   {
    "nr": 20,
    "typ": "objekt",
    "kapitel": 4,
-   "start": 66.268,
-   "dauer": 3.758,
+   "start": 66.004,
+   "dauer": 4.046,
    "emotion": "erklaerend",
    "text": "Tagsüber sieht man darum fast nur Spiegelungen. Nachts *alles*."
   },
@@ -185,8 +185,8 @@
    "nr": 21,
    "typ": "wohnung",
    "kapitel": 4,
-   "start": 70.026,
-   "dauer": 3.662,
+   "start": 70.05,
+   "dauer": 3.302,
    "emotion": "erzaehlend",
    "text": "Es ist Tag. Also prüfst du am Fenster deine Frisur."
   },
@@ -194,8 +194,8 @@
    "nr": 22,
    "typ": "dach",
    "kapitel": 4,
-   "start": 73.688,
-   "dauer": 1.958,
+   "start": 73.352,
+   "dauer": 2.174,
    "emotion": "erzaehlend",
    "text": "Gegenüber dreht sich eine Kamera."
   },
@@ -203,17 +203,17 @@
    "nr": 23,
    "typ": "wohnung",
    "kapitel": 5,
-   "start": 75.646,
-   "dauer": 2.894,
-   "emotion": "erzaehlend",
+   "start": 75.526,
+   "dauer": 3.302,
+   "emotion": "froh",
    "text": "Als Lea zurückkommt, stehst du immer noch am Fenster."
   },
   {
    "nr": 24,
    "typ": "gesicht",
    "kapitel": 5,
-   "start": 78.54,
-   "dauer": 2.774,
+   "start": 78.828,
+   "dauer": 2.438,
    "emotion": "wuetend",
    "text": "„Weg da!“ Sie zieht dich am Shirt zurück."
   },
@@ -221,8 +221,8 @@
    "nr": 25,
    "typ": "gesicht",
    "kapitel": 5,
-   "start": 81.314,
-   "dauer": 3.542,
+   "start": 81.266,
+   "dauer": 3.758,
    "emotion": "erzaehlend",
    "text": "„Ich hab nur kurz die Haare …“ „Das sehe ich“, sagt Lea."
   },
@@ -230,8 +230,8 @@
    "nr": 26,
    "typ": "gesicht",
    "kapitel": 5,
-   "start": 84.856,
-   "dauer": 3.422,
+   "start": 85.024,
+   "dauer": 3.734,
    "emotion": "erzaehlend",
    "text": "Dann vibriert ihr Handy. Eine Kollegin schickt einen Link."
   },
@@ -239,8 +239,8 @@
    "nr": 27,
    "typ": "handy",
    "kapitel": 5,
-   "start": 88.278,
-   "dauer": 5.174,
+   "start": 88.758,
+   "dauer": 5.702,
    "emotion": "erzaehlend",
    "text": "Ein Bild der Wetterkamera. Du am Fenster. „Ist das ein *Mann*?“ Vor drei Minuten."
   },
@@ -248,7 +248,7 @@
    "nr": 28,
    "typ": "titel",
    "kapitel": 5,
-   "start": 93.452,
+   "start": 94.46,
    "dauer": 1.0,
    "emotion": null,
    "text": ""
@@ -257,8 +257,8 @@
    "nr": 29,
    "typ": "objekt",
    "kapitel": 6,
-   "start": 94.452,
-   "dauer": 3.494,
+   "start": 95.46,
+   "dauer": 3.878,
    "emotion": "erklaerend",
    "text": "Frage: Warum sieht man nachts in helle Zimmer hinein?"
   },
@@ -266,8 +266,8 @@
    "nr": 30,
    "typ": "objekt",
    "kapitel": 6,
-   "start": 97.946,
-   "dauer": 3.614,
+   "start": 99.338,
+   "dauer": 3.686,
    "emotion": "erklaerend",
    "text": "Antwort: Das Zimmerlicht überstrahlt die schwache Spiegelung."
   },
@@ -275,8 +275,8 @@
    "nr": 31,
    "typ": "titel",
    "kapitel": 6,
-   "start": 101.56,
-   "dauer": 2.462,
+   "start": 103.024,
+   "dauer": 2.606,
    "emotion": "erzaehlend",
    "text": "Was hättest du gemacht? Schreib es in die Kommentare."
   }
