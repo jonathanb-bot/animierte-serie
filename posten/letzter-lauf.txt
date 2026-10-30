@@ -1,45 +1,88 @@
-Verbundene Konten: tiktok:storys4you.de1, instagram:sto.rys4you
-✗ yt-01-1: kein youtube-Konto verbunden
-✗ yt-01-2: kein youtube-Konto verbunden
-✗ yt-01-3: kein youtube-Konto verbunden
-✗ yt-01-4: kein youtube-Konto verbunden
-✗ yt-01-5: kein youtube-Konto verbunden
-✗ yt-02-1: kein youtube-Konto verbunden
-✗ yt-02-2: kein youtube-Konto verbunden
-✗ yt-02-3: kein youtube-Konto verbunden
-✗ yt-02-4: kein youtube-Konto verbunden
-✗ yt-02-5: kein youtube-Konto verbunden
-✗ yt-03-1: kein youtube-Konto verbunden
-✗ yt-03-2: kein youtube-Konto verbunden
-✗ yt-03-3: kein youtube-Konto verbunden
-✗ yt-03-4: kein youtube-Konto verbunden
-✗ yt-04-1: kein youtube-Konto verbunden
-✗ yt-04-2: kein youtube-Konto verbunden
-✗ yt-04-3: kein youtube-Konto verbunden
-✗ yt-04-4: kein youtube-Konto verbunden
-✗ yt-05-1: kein youtube-Konto verbunden
-✗ yt-05-2: kein youtube-Konto verbunden
-✗ yt-05-3: kein youtube-Konto verbunden
-✗ yt-05-4: kein youtube-Konto verbunden
-✗ yt-06-1: kein youtube-Konto verbunden
-✗ yt-06-2: kein youtube-Konto verbunden
-✗ yt-06-3: kein youtube-Konto verbunden
-✗ yt-06-4: kein youtube-Konto verbunden
-✗ yt-06-5: kein youtube-Konto verbunden
-✗ yt-07-1: kein youtube-Konto verbunden
-✗ yt-07-2: kein youtube-Konto verbunden
-✗ yt-07-3: kein youtube-Konto verbunden
-✗ yt-07-4: kein youtube-Konto verbunden
-✗ yt-08-1: kein youtube-Konto verbunden
-✗ yt-08-2: kein youtube-Konto verbunden
-✗ yt-08-3: kein youtube-Konto verbunden
-✗ yt-08-4: kein youtube-Konto verbunden
-✗ yt-09-1: kein youtube-Konto verbunden
-✗ yt-09-2: kein youtube-Konto verbunden
-✗ yt-09-3: kein youtube-Konto verbunden
-✗ yt-09-4: kein youtube-Konto verbunden
-✗ yt-10-1: kein youtube-Konto verbunden
-✗ yt-10-2: kein youtube-Konto verbunden
-✗ yt-10-3: kein youtube-Konto verbunden
-✗ yt-10-4: kein youtube-Konto verbunden
-Fertig: 0 neu eingeplant, 43 Fehler.
+Verbundene Konten: tiktok:storys4you.de1, instagram:sto.rys4you, youtube:clappeuch3985
+  yt-01-1: Prüfung ok (Bild, Ton, Lautstärke)
+✓ yt-01-1 eingeplant für 2026-10-31T08:30:00 (6ae44f147581537853a068c1)
+  yt-01-2: Prüfung ok (Bild, Ton, Lautstärke)
+✓ yt-01-2 eingeplant für 2026-10-31T13:30:00 (6ae44f177581537853a068d1)
+  yt-01-3: Prüfung ok (Bild, Ton, Lautstärke)
+✓ yt-01-3 eingeplant für 2026-10-31T19:30:00 (6ae44f197581537853a068e3)
+  yt-01-4: Prüfung ok (Bild, Ton, Lautstärke)
+✓ yt-01-4 eingeplant für 2026-11-01T09:30:00 (6ae44f1b8f901ff850e91b45)
+  yt-01-5: Prüfung ok (Bild, Ton, Lautstärke)
+✓ yt-01-5 eingeplant für 2026-11-01T14:30:00 (6ae44f1e8f901ff850e91b56)
+  yt-02-1: Prüfung ok (Bild, Ton, Lautstärke)
+✓ yt-02-1 eingeplant für 2026-11-01T20:30:00 (6ae44f208f901ff850e91b64)
+  yt-02-2: Prüfung ok (Bild, Ton, Lautstärke)
+✓ yt-02-2 eingeplant für 2026-11-02T10:30:00 (6ae44f228f901ff850e91b6c)
+  yt-02-3: Prüfung ok (Bild, Ton, Lautstärke)
+✓ yt-02-3 eingeplant für 2026-11-02T15:30:00 (6ae44f257581537853a06953)
+  yt-02-4: Prüfung ok (Bild, Ton, Lautstärke)
+✓ yt-02-4 eingeplant für 2026-11-02T21:30:00 (6ae44f287581537853a06975)
+  yt-02-5: Prüfung ok (Bild, Ton, Lautstärke)
+✓ yt-02-5 eingeplant für 2026-11-03T07:30:00 (6ae44f2b7581537853a06994)
+  yt-03-1: Prüfung ok (Bild, Ton, Lautstärke)
+✓ yt-03-1 eingeplant für 2026-11-03T12:30:00 (6ae44f2e8a729cff2dff70ba)
+  yt-03-2: Prüfung ok (Bild, Ton, Lautstärke)
+✓ yt-03-2 eingeplant für 2026-11-03T18:30:00 (6ae44f307581537853a069bd)
+  yt-03-3: Prüfung ok (Bild, Ton, Lautstärke)
+✓ yt-03-3 eingeplant für 2026-11-04T08:30:00 (6ae44f327581537853a069df)
+  yt-03-4: Prüfung ok (Bild, Ton, Lautstärke)
+✓ yt-03-4 eingeplant für 2026-11-04T13:30:00 (6ae44f358f901ff850e91bc9)
+  yt-04-1: Prüfung ok (Bild, Ton, Lautstärke)
+✓ yt-04-1 eingeplant für 2026-11-04T19:30:00 (6ae44f377581537853a069f7)
+  yt-04-2: Prüfung ok (Bild, Ton, Lautstärke)
+✓ yt-04-2 eingeplant für 2026-11-05T09:30:00 (6ae44f3a8f901ff850e91be3)
+  yt-04-3: Prüfung ok (Bild, Ton, Lautstärke)
+✓ yt-04-3 eingeplant für 2026-11-05T14:30:00 (6ae44f3c8f901ff850e91c03)
+  yt-04-4: Prüfung ok (Bild, Ton, Lautstärke)
+✓ yt-04-4 eingeplant für 2026-11-05T20:30:00 (6ae44f3f7581537853a06a3d)
+  yt-05-1: Prüfung ok (Bild, Ton, Lautstärke)
+✓ yt-05-1 eingeplant für 2026-11-06T10:30:00 (6ae44f418a729cff2dff70cc)
+  yt-05-2: Prüfung ok (Bild, Ton, Lautstärke)
+✓ yt-05-2 eingeplant für 2026-11-06T15:30:00 (6ae44f448f901ff850e91c08)
+  yt-05-3: Prüfung ok (Bild, Ton, Lautstärke)
+✓ yt-05-3 eingeplant für 2026-11-06T21:30:00 (6ae44f477581537853a06a79)
+  yt-05-4: Prüfung ok (Bild, Ton, Lautstärke)
+✓ yt-05-4 eingeplant für 2026-11-07T07:30:00 (6ae44f497581537853a06a8d)
+  yt-06-1: Prüfung ok (Bild, Ton, Lautstärke)
+✓ yt-06-1 eingeplant für 2026-11-07T12:30:00 (6ae44f4c7581537853a06aa0)
+  yt-06-2: Prüfung ok (Bild, Ton, Lautstärke)
+✓ yt-06-2 eingeplant für 2026-11-07T18:30:00 (6ae44f4e8a729cff2dff70d7)
+  yt-06-3: Prüfung ok (Bild, Ton, Lautstärke)
+✓ yt-06-3 eingeplant für 2026-11-08T08:30:00 (6ae44f518f901ff850e91c4e)
+  yt-06-4: Prüfung ok (Bild, Ton, Lautstärke)
+✓ yt-06-4 eingeplant für 2026-11-08T13:30:00 (6ae44f538f901ff850e91c5a)
+  yt-06-5: Prüfung ok (Bild, Ton, Lautstärke)
+✓ yt-06-5 eingeplant für 2026-11-08T19:30:00 (6ae44f567581537853a06afd)
+  yt-07-1: Prüfung ok (Bild, Ton, Lautstärke)
+✓ yt-07-1 eingeplant für 2026-11-09T09:30:00 (6ae44f588f901ff850e91c6f)
+  yt-07-2: Prüfung ok (Bild, Ton, Lautstärke)
+✓ yt-07-2 eingeplant für 2026-11-09T14:30:00 (6ae44f5a7581537853a06b1b)
+  yt-07-3: Prüfung ok (Bild, Ton, Lautstärke)
+✓ yt-07-3 eingeplant für 2026-11-09T20:30:00 (6ae44f5d7581537853a06b35)
+  yt-07-4: Prüfung ok (Bild, Ton, Lautstärke)
+✓ yt-07-4 eingeplant für 2026-11-10T10:30:00 (6ae44f5f8a729cff2dff70eb)
+  yt-08-1: Prüfung ok (Bild, Ton, Lautstärke)
+✓ yt-08-1 eingeplant für 2026-11-10T15:30:00 (6ae44f627581537853a06b4d)
+  yt-08-2: Prüfung ok (Bild, Ton, Lautstärke)
+✓ yt-08-2 eingeplant für 2026-11-10T21:30:00 (6ae44f647581537853a06b65)
+  yt-08-3: Prüfung ok (Bild, Ton, Lautstärke)
+✓ yt-08-3 eingeplant für 2026-11-11T07:30:00 (6ae44f668f901ff850e91c88)
+  yt-08-4: Prüfung ok (Bild, Ton, Lautstärke)
+✓ yt-08-4 eingeplant für 2026-11-11T12:30:00 (6ae44f698f901ff850e91c9b)
+  yt-09-1: Prüfung ok (Bild, Ton, Lautstärke)
+✓ yt-09-1 eingeplant für 2026-11-11T18:30:00 (6ae44f6b7581537853a06baf)
+  yt-09-2: Prüfung ok (Bild, Ton, Lautstärke)
+✓ yt-09-2 eingeplant für 2026-11-12T08:30:00 (6ae44f6e7581537853a06bba)
+  yt-09-3: Prüfung ok (Bild, Ton, Lautstärke)
+✓ yt-09-3 eingeplant für 2026-11-12T13:30:00 (6ae44f717581537853a06bc6)
+  yt-09-4: Prüfung ok (Bild, Ton, Lautstärke)
+✓ yt-09-4 eingeplant für 2026-11-12T19:30:00 (6ae44f738f901ff850e91cca)
+  yt-10-1: Prüfung ok (Bild, Ton, Lautstärke)
+✓ yt-10-1 eingeplant für 2026-11-13T09:30:00 (6ae44f757581537853a06bf1)
+  yt-10-2: Prüfung ok (Bild, Ton, Lautstärke)
+✓ yt-10-2 eingeplant für 2026-11-13T14:30:00 (6ae44f787581537853a06bff)
+  yt-10-3: Prüfung ok (Bild, Ton, Lautstärke)
+✓ yt-10-3 eingeplant für 2026-11-13T20:30:00 (6ae44f7b7581537853a06c1f)
+  yt-10-4: Prüfung ok (Bild, Ton, Lautstärke)
+✓ yt-10-4 eingeplant für 2026-11-14T10:30:00 (6ae44f7d8f901ff850e91cee)
+Fertig: 43 neu eingeplant, 0 Fehler.
