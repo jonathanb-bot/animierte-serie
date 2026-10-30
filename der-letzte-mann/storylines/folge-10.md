@@ -9,6 +9,7 @@ Was bisher geschah:
 
 KAPITEL 1: Hallo? | keller (raum), gesicht | Alex, Lea, Nika (nur Stimme) | Nacht | Anzeige: Tag 2, 23:13, HANDY 83 %, NETZ 0/4, KONSOLE 66 % + NETZ
 * Funkwecker 23:12:59, Alex' Finger über der Taste – Stell dir vor, es gibt noch jemanden wie dich. Nur in einer *anderen* Welt.
+* Raum S7: Lea an der Konsole, den Funkwecker vor sich – Lea zählt die Sekunden mit. Drei. Zwei. Eins.
 * Funkwecker springt auf 23:13:00, das blaue Lämpchen geht an, das Projekttelefon klingelt – 23:13 Uhr. Du drückst. Blaues Licht. Das alte Telefon klingelt.
 * Nahaufnahme: Alex, Hörer am Ohr – Eine Frauenstimme, dünn und rauschend: „Hallo? Hier ist *Nika*.“
 * Nahaufnahme: Alex, froh – Du bist nicht mehr der Einzige.
@@ -73,6 +74,7 @@ NEU ZU BAUEN:
 - `skyline`: halb hell, halb dunkel (für den Rückblick)
 - Icon `frequenz` (Frequenzband mit hellem Bereich)
 - Ton: Telefonstimme mit dünnem Klang für Nika, Klopfen (vorhanden: `tuer_klopfen`)
+- `keller` (`ansicht=raum`): Lea zählt am Funkwecker die Sekunden (Nahaufnahme)
 
 DAUER (geschätzt ohne Stimme, berechnet mit `node der-letzte-mann/dauer.mjs der-letzte-mann/storylines/folge-10.md`):
 

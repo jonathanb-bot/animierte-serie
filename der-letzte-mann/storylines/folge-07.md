@@ -22,6 +22,7 @@ WAS BISHER GESCHAH:
 * Skyline – Um 8:13 Uhr verschwanden alle Männer. Nur du bliebst.
 * Raum S7: Konsole – Unter deinem Haus steht die Konsole von Projekt Spiegel.
 * Projekttelefon – Über ihr altes Telefon hast du deinen Vater angerufen.
+* Display – Die Konsole kündigte ein Fenster an: 13:13 Uhr.
 
 KAPITEL 2: Immer um dreizehn | tokio, keller (raum), objekt | Alex, Lea, Komparsin k4 | Tag (Tokio: Nacht) | Anzeige: Tag 2, 13:20, HANDY 81 %, NETZ 0/4, KONSOLE 33 %
 * Tokio-Kreuzung bei Nacht, große Uhr 21:13, alle Bildschirme flackern – In Tokio flackerten gerade alle Bildschirme.
@@ -38,6 +39,7 @@ KAPITEL 3: Die Karteikarte | keller (raum), objekt, gesicht | Alex, Lea | Tag | 
 * Karteikarte nah: „1. Wer  2. Wo  3. Eine Frage“ – „Wer bist du. Wo bist du. Eine Frage. Mehr nicht.“
 * Nahaufnahme: Alex, murmelt, zählt mit den Fingern – Du übst. Neun Sekunden. Acht.
 * Nahaufnahme: Alex, müde über sich selbst – Fürs Flirten hast du nie so viel geübt.
+* Nahaufnahme: Lea, lächelt kurz – Lea lächelt. Zum ersten Mal seit gestern.
 * Konsole: 14:12:50, Alex dreht die Wählscheibe – 14:12 Uhr. Du wählst. Dein Herz schlägt bis zum Hals.
 (Haken am Ende: Diesmal muss es klappen.)
 
@@ -71,6 +73,7 @@ NEU ZU BAUEN:
 - Karteikarte mit drei Zeilen (Gegenstand, Nahaufnahme)
 - Icon `weltuhr` (zwei Zifferblätter mit :13 und :43)
 - Ton: Telefonstimme mit dünnem Klang (Filter 300–3400 Hz) für Thomas, Klingeln des alten Telefons
+- Lea: Ausdruck „lächelt kurz“ (vorhanden: `froh`)
 
 DAUER (geschätzt ohne Stimme, berechnet mit `node der-letzte-mann/dauer.mjs der-letzte-mann/storylines/folge-07.md`):
 

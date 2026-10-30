@@ -11,6 +11,7 @@ KAPITEL 1: Nika | keller (raum), handy, gesicht | Alex, Lea | Nacht | Anzeige: T
 * Raum S7 im Taschenlampenlicht, die Konsole dunkel – Stell dir vor, jemand drückt jede Stunde einen Knopf. Für *dich*.
 * Lea steckt den kleinen Schlüssel „S7-S“ in den Schlüsselschalter – Winter ist weg. Lea probiert den kleinen Schlüssel.
 * Schlüsselschalter dreht auf „BETRIEB“, Lämpchen 1 grün – Er passt. Die Konsole steht wieder auf „Betrieb“.
+* Suchstelle bei Nacht, Kerzen vor der Fotowand, Nikas Zettel mit gelbem Schal – An der Suchstelle brennen jetzt Kerzen. Nikas Zettel hängt noch.
 * Handy: Foto „Nika S., 26 – Kastanienweg 7, 1. OG“ vergrößert – Auf Leas Foto: „Nika S. Kastanienweg 7.“
 * Nahaufnahme: Alex, verlegen – Sie wohnt in *deinem* Haus. Angesprochen hast du sie nie.
 (Haken am Ende: Ist Nika die zweite Ausnahme?)
@@ -20,6 +21,7 @@ TITELKARTE: DER LETZTE MANN
 
 WAS BISHER GESCHAH:
 * Raum S7: Konsole – Du bist der letzte Mann. Unter deinem Haus steht eine Konsole.
+* Nahaufnahme: Winter – Doktor Winter will sie morgen früh *abschalten*.
 * Konsole: blaues Lämpchen – Über sie erreichst du die andere Welt. Zehn Sekunden pro Stunde.
 * Tablet: Protokoll – Dort sucht die zweite Ausnahme nach dir.
 
@@ -74,6 +76,7 @@ NEU ZU BAUEN:
 - Icon `funkuhr` (Sendemast mit Wellen über einer Europa-Silhouette)
 - Konsole: drittes Lämpchen dauerhaft an
 - Ton: Sicherung (vorhanden: `strom_an`)
+- `strasse` (`suchstelle`) bei Nacht: Kerzen vor der Fotowand, Nikas Zettel markiert
 
 DAUER (geschätzt ohne Stimme, berechnet mit `node der-letzte-mann/dauer.mjs der-letzte-mann/storylines/folge-09.md`):
 

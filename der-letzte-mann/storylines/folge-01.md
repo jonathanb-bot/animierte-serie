@@ -7,7 +7,7 @@ Was bisher geschah: entfällt (erst ab Folge 2)
 KAPITEL 1: Nur Frauen. Und du. | skyline, wohnung, handy, bad | Alex | Morgen | Anzeige: Tag 1, 08:13, HANDY 64 %, NETZ 4/4, KONSOLE nicht verbunden (grau)
 * Skyline am Morgen, unten stehen Autos kreuz und quer, Hupen von überall – Stell dir vor, du bist der *einzige* Mann auf der Welt.
 * Wohnung: Alex im Shirt am Fenster, Kaffeetasse in der Hand, schaut verwirrt hinaus. Auf dem Dach gegenüber dreht sich eine Wetterkamera auf ihrem Mast (Hinweis für Folge 2) – 8:13 Uhr. Draußen hupen plötzlich alle Autos.
-* Handy in der Hand: Eilmeldungen stapeln sich, oben „Männer weltweit verschwunden“ – Eilmeldung: Die Männer sind *weg*.
+* Handy in der Hand: Eilmeldungen stapeln sich, oben „Männer weltweit verschwunden“ – Eilmeldung um Eilmeldung: Die Männer sind *weg*. Einfach verschwunden.
 * Nahaufnahme: Alex, froh, ein schiefes Grinsen – Du grinst. Nur Frauen. Und *du*.
 * Bad: Alex richtet vor dem Spiegel die Haare, auf dem Handy die Dating-App „Funkel“ – Du öffnest deine Dating-App. Endlich keine Konkurrenz.
 * Nahaufnahme: Alex, Augenbraue hochgezogen, selbstzufrieden – Flirten kannst du allerdings immer noch *nicht*.
@@ -19,6 +19,7 @@ TITELKARTE: DER LETZTE MANN
 KAPITEL 2: Keine Antwort | wohnung, handy, objekt | Alex, Thomas (nur Stimme) | Morgen | Anzeige: Tag 1, 08:24, HANDY 61 %, NETZ 1/4 „überlastet“, KONSOLE nicht verbunden (grau)
 * Handy: Anrufbildschirm „Papa“, dann „Ben“, beide Male „Mailbox“ – Du rufst Papa an: Mailbox. Deinen besten Freund: Mailbox.
 * Handy nah, Tonwelle der Ansage – „Hier ist Thomas. Ich bin gerade nicht erreichbar.“
+* Handy: Anrufliste, dreimal „Papa – Mailbox“ – Du rufst noch mal an. Und noch mal. Immer *dieselbe* Ansage.
 * Handy: Warnmeldung im Vollbild, rotes Warndreieck, schriller Ton – Dann schrillt dein Handy: eine *Warnung*.
 * Infokarte: Funkmast, Wellen gehen gleichzeitig an viele Handys, Überschrift „Cell Broadcast“ – Echter Fakt: Cell Broadcast kommt an, selbst wenn das Netz für Anrufe *überlastet* ist.
 * Nahaufnahme: Alex, Angst, das Grinsen ist verschwunden – Die Männer sind weg. Du bist *geblieben*.
@@ -32,12 +33,13 @@ KAPITEL 3: Überall | bahnhof, supermarkt, tokio, newyork, gesicht | Komparsinne
 * Bahnhof: Bahnsteiganzeige „Fällt aus“, eine Frau wartet mit zwei Kaffeebechern – Am Bahnhof wartet eine Frau mit *zwei* Kaffeebechern.
 * Supermarkt: In einem verlassenen Einkaufswagen klingelt ein Handy, eine Kundin schaut sich um – Im Supermarkt klingelt ein Handy. Niemand geht ran.
 * Tokio-Kreuzung am Nachmittag, große Uhr zeigt 16:13, Menschen bleiben stehen – In Tokio war es in derselben Sekunde 16:13 Uhr.
-* New-York-Platz bei Nacht, alle Bildschirme zeigen „BREAKING NEWS“ – In New York 2:13 Uhr nachts.
+* New-York-Platz bei Nacht, alle Bildschirme zeigen „BREAKING NEWS“ – In New York war es 2:13 Uhr nachts. Alle Bildschirme zeigen dasselbe.
 * Nahaufnahme: Nachrichtensprecherin vor unscharfem Studio, Bauchbinde „EILMELDUNG“ – „Es gibt keine Ausnahme“, sagt die Sprecherin.
 (Haken am Ende: Doch. Es gibt eine Ausnahme: dich.)
 
 KAPITEL 4: Es klingelt | wohnung, tuer, spion | Alex, Lea | Morgen | Anzeige: Tag 1, 09:05, HANDY 55 %, NETZ 1/4 „überlastet“, KONSOLE nicht verbunden (grau)
 * Wohnung: Alex sitzt auf dem Sofa und starrt auf sein Handy – Du bist der letzte Mann. Es fühlt sich *nicht* gut an.
+* Wohnung: Alex am offenen Fenster, unten auf der Straße nur Frauen, eine schaut zufällig hoch – Du stellst dich ans Fenster. Unten auf der Straße: nur Frauen.
 * Wohnungstür von innen, die Klingel leuchtet auf – Da klingelt es an deiner Tür.
 * Wohnungstür: Alex streicht sein Shirt glatt und zieht den Bauch ein – Du ziehst den Bauch ein. Dein peinlichster Reflex überlebt sogar das Ende der Welt.
 * Türspion-Ansicht: Lea steht im Flur, ernst, Arme verschränkt – Draußen steht deine Nachbarin. „Ich weiß, dass du noch da bist.“
@@ -66,6 +68,8 @@ NEU ZU BAUEN:
 - `gesicht`: Ort `studio` mit Bauchbinde „EILMELDUNG“
 - Gegenstände: zwei Kaffeebecher, Einkaufswagen mit klingelndem Handy, Kaffeetasse, Wetterkamera auf Mast (Dach gegenüber, im Fenster sichtbar)
 - Icon: Funkmast mit Wellen (`funkmast`)
+- `wohnung`: Alex am offenen Fenster, Blick auf die Straße mit Frauen (eine schaut hoch)
+- `handy`: Anrufliste mit mehrfach „Papa – Mailbox“
 - Anzeige: Balken KONSOLE grau mit „nicht verbunden“, NETZ mit Zusatz „überlastet“
 
 DAUER (geschätzt ohne Stimme, berechnet mit `node der-letzte-mann/dauer.mjs der-letzte-mann/storylines/folge-01.md`):

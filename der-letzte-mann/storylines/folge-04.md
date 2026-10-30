@@ -11,6 +11,7 @@ KAPITEL 1: Drei Hemden | skyline, bad, handy | Alex | Morgen | Anzeige: Tag 2, 0
 * Skyline am Morgen, Hubschrauber über der Stadt – Stell dir vor, jemand will dich retten. Und weiß zu viel über dich.
 * Bad: Alex vor dem Spiegel, ein Hemd in jeder Hand – Tag zwei. Um elf holt dich ein Wagen ab. Zu Doktor Winter.
 * Bad: Alex hält das dritte Hemd vor sich – Du probierst drei Hemden. Für ein Treffen, das eine *Falle* sein könnte.
+* Nahaufnahme: Alex vor dem Spiegel, zufrieden – Hemd Nummer drei. Für das Ende der Welt siehst du *gut* aus.
 * Handy: Anruf „Papa“, „Mailbox“ – Du rufst Papa an. Mailbox. Zum *dreißigsten* Mal.
 (Haken am Ende: Ist das Treffen eine Falle?)
 
@@ -19,10 +20,12 @@ TITELKARTE: DER LETZTE MANN
 
 WAS BISHER GESCHAH:
 * Skyline – Alle Männer sind verschwunden. Nur du bist geblieben.
+* Nahaufnahme: Lea – Lea, deine Nachbarin, hilft dir.
 * New-York-Platz mit deinem Bild – Ein Bild von dir am Fenster ging um die Welt.
 * Handy: „Dr. E. Winter“ – Dann rief Doktor Winter an. Sie kannte deine Adresse.
 
 KAPITEL 2: Die Nachtschicht | tuer, kueche, objekt | Alex, Lea | Morgen | Anzeige: Tag 2, 08:30, HANDY 98 %, NETZ 4/4, KONSOLE nicht verbunden (grau)
+* Supermarkt: Kassiererin, Schild „Wasser: 2 pro Person“ – Tag zwei. Im Supermarkt gibt es Wasser nur noch rationiert.
 * Wohnungstür: Lea, müde, mit einer Mappe – Um halb neun kommt Lea aus der Nachtschicht. Mit einem Ausdruck.
 * Nahaufnahme: Lea – „Gestern um 7:50 rief mich eine Doktor Winter an.“
 * Infokarte: Formular „Brandmeldeanlage abgeschaltet – Kastanienweg 7, Keller – Messbetrieb“ – Die Brandmelder in deinem *Keller* sollten abgeschaltet werden. Für einen Messbetrieb.
@@ -70,6 +73,7 @@ NEU ZU BAUEN:
 - `handy`: PDF-Ansicht, Dateieigenschaften, Tabelle „Ankerpersonen“
 - Icon `datei_info`
 - Lea: Mappe mit Ausdruck
+- `supermarkt`: Kassiererin `k2`, Schild „Wasser: 2 pro Person“
 
 DAUER (geschätzt ohne Stimme, berechnet mit `node der-letzte-mann/dauer.mjs der-letzte-mann/storylines/folge-04.md`):
 

@@ -12,6 +12,7 @@ KAPITEL 1: Doktor Winter | keller (raum), gesicht | Alex, Lea, Winter | Tag | An
 * Display nah: „Neues Muster gespeichert: T“ – Gerade piept noch die Konsole: „Neues Muster gespeichert: T.“
 * Raum S7: Winter tritt ein, ruhig – Doktor Eva Winter. Mantel. Tablet.
 * Nahaufnahme: Winter, freundlich – „Herr Brandt. Sie haben S7 geweckt.“
+* Nahaufnahme: Lea, verschränkte Arme, stellt sich zwischen Alex und Winter – Lea stellt sich zwischen euch. Freundlich ist anders.
 * Nahaufnahme: Alex, zieht den Bauch ein – Du ziehst den Bauch ein. *Schon* wieder.
 (Haken am Ende: Was will sie?)
 
@@ -19,6 +20,7 @@ TITELKARTE: DER LETZTE MANN
 * Titelkarte: oben „Folge 8“, groß „DER LETZTE MANN“, unten „Du warst nicht vorgesehen“ – (ohne Text, 1 s)
 
 WAS BISHER GESCHAH:
+* Raum S7: Konsole – Unter deinem Haus steht die Konsole von Projekt Spiegel.
 * Skyline – Alle Männer sind verschwunden. Nur du nicht.
 * Projekttelefon – Über ein Telefon im Keller hast du deinen Vater erreicht.
 * Nahaufnahme: Alex – Bei ihm sind alle Frauen weg. Bis auf eine.
@@ -35,6 +37,7 @@ SCHNITT: ENDE TEIL 1
 Laufzeit Teil 1: 55,3 Sekunden
 
 KAPITEL 3: Ankerpersonen | keller (raum), gesicht | Alex, Lea, Winter | Tag | Anzeige: Tag 2, 16:00, HANDY 70 %, NETZ 0/4, KONSOLE 27 %
+* New-York-Platz am Morgen, alle Bildschirme flackern – In New York flackerten um 15:13 wieder alle Bildschirme. Niemand weiß, warum.
 * Nahaufnahme: Winter – „Jede Seite braucht einen Anker“, sagt Winter. „Dich. Aus der Hörstudie.“
 * Raum S7: Winter zeigt auf das dritte Lämpchen – „Das dritte Lämpchen zeigt gespeicherte Muster an dieser Tür. Auf *beiden* Seiten.“
 * Messkammertür – „Ein Anker hält eine Seite. Zwei Anker an derselben Schwelle halten eine *Tür*.“
@@ -69,6 +72,7 @@ NEU ZU BAUEN:
 - Schlüsselschalter: Drehung auf SPERRE
 - Infokarten: Icon `satellit` (vorhanden aus „Der Alien“) mit Uhr, Karte mit verrutschtem Punkt
 - Licht: Gegenlicht in der Tür von S7
+- `newyork`: Morgen, alle Bildschirme flackern (wie Folge 3)
 
 DAUER (geschätzt ohne Stimme, berechnet mit `node der-letzte-mann/dauer.mjs der-letzte-mann/storylines/folge-08.md`):
 

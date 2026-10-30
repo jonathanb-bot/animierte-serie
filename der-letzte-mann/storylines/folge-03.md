@@ -21,10 +21,12 @@ TITELKARTE: DER LETZTE MANN
 WAS BISHER GESCHAH:
 * Skyline – Um 8:13 Uhr sind alle Männer verschwunden. Nur du nicht.
 * Wohnung: Lea am Vorhang – Lea, deine Nachbarin, versteckt dich.
+* Küche: Radio – Und jede Stunde rauscht kurz das Radio.
 * Handy: Webcam-Post – Doch eine Wetterkamera hat dich am Fenster fotografiert.
 
 KAPITEL 2: Unscharf | handy, gesicht, objekt | Alex, Lea | Tag | Anzeige: Tag 1, 12:30, HANDY 72 %, NETZ 3/4, KONSOLE nicht verbunden (grau)
 * Handy: Das Bild ist stark vergrößert, nur Pixel – Das Bild ist grob. Keiner erkennt dich.
+* Skyline: Hubschrauber kreisen über der Stadt – Über der Stadt kreisen Hubschrauber. Alle suchen den Pixelhaufen.
 * Nahaufnahme: Lea – Lea erkennt dich sofort. Sie kennt dich ja.
 * Infokarte: unscharfes Gesicht, daneben ein Häkchen bei „bekannt“ – Echter Fakt: Bekannte Gesichter erkennen wir sogar auf miesen Videos.
 * Infokarte: dasselbe Gesicht, Fragezeichen bei „fremd“ – Fremde kaum. Selbst erfahrene Polizisten nicht.
@@ -46,6 +48,7 @@ KAPITEL 4: Schutz und Antworten | gesicht, handy | Alex, Lea, Winter (nur Stimme
 * Nahaufnahme: Alex, richtet sich unwillkürlich die Haare – Eine Wissenschaftlerin. Klingt klug. Du richtest unwillkürlich deine Haare.
 * Handy: Anrufbildschirm „Dr. E. Winter“, Tonwelle – „Ich biete Ihnen Schutz an. Und Antworten.“
 * Nahaufnahme: Lea, misstrauisch, flüstert – Lea flüstert: „Winter? Den Namen kenne ich.“
+* Nahaufnahme: Alex, geschmeichelt – Schutz. Antworten. Und eine Frau, die *dich* sucht. Klingt fast gut.
 * Nahaufnahme: Alex, misstrauisch – Du fragst: „Woher haben Sie meine Nummer?“
 * Nahaufnahme: Alex, Schreck – „Herr Brandt. Kastanienweg 7, dritter Stock.“ Du hast ihr beides *nie* gesagt.
 (Haken am Ende: Woher weiß sie das?)
@@ -69,6 +72,7 @@ NEU ZU BAUEN:
 - `handy`: Kommentarliste, Anrufbildschirm „Unbekannt“ und „Dr. E. Winter“
 - Infokarten: Icon `gesicht_unscharf` mit Häkchen und Fragezeichen
 - Gegenstand: Karteikarte mit Uhrzeiten
+- `skyline`: Hubschrauber über der Stadt am Tag (vorhanden: `heli`)
 
 DAUER (geschätzt ohne Stimme, berechnet mit `node der-letzte-mann/dauer.mjs der-letzte-mann/storylines/folge-03.md`):
 

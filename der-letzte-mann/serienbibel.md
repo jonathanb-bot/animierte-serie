@@ -256,12 +256,12 @@ Oben links stehen Tag und Uhrzeit, darunter drei Balken mit Beschriftung. Was no
 | Kulisse | Einsätze in der Staffel | Entwicklung |
 |---|---|---|
 | **Bahnhof** (Bahnsteig, Bahnsteiganzeige, Bank, Uhr) | 1, 5, 9 | 1: Frau mit zwei Kaffeebechern, „Fällt aus“ → 5: Hilfspunkt mit Feldbetten, Anzeige „Ersatzverkehr – Fahrerinnen gesucht“ → 9: nachts leer, die Anzeige flackert um 22:13 |
-| **Supermarkt** (Regal, Kasse, Einkaufswagen) | 1, 4, 8 | 1: verlassener Wagen mit klingelndem Handy → 4: Kassiererin, Schild „Wasser: 2 pro Person“ → 8: dasselbe Handy liegt jetzt im Fundkorb, Akku leer |
+| **Supermarkt** (Regal, Kasse, Einkaufswagen) | 1, 4 | 1: verlassener Wagen mit klingelndem Handy → 4: Kassiererin, Schild „Wasser: 2 pro Person“ (Staffel 2: das Handy im Fundkorb, Akku leer) |
 | **Keller** (Ansichten `flur` = Kellerflur mit Hausverteiler und Stahltür S7, `raum` = Vorraum mit Konsole, Projekttelefon und Messkammertür) | 5, 6, 7, 8, 9, 10 | Hauptschauplatz der zweiten Hälfte. Licht: Taschenlampe → Konsolenlicht → Deckenlicht mit Netzstrom. |
 | **Tokio-Kreuzung** (Zebrastreifen, Leuchtreklame, große Uhr) | 1, 7, 10 | 1: Nachmittag, 16:13, Menschen bleiben stehen → 7: Nacht, Bildschirme flackern um 21:13 Ortszeit (= 13:13 bei dir) → 10: Morgen, Menschen halten Fotos hoch |
 | **New-York-Platz** (Großbildschirme, Hochhäuser) | 1, 3, 8 | 1: Nacht, BREAKING NEWS → 3: Morgen, dein Webcam-Bild auf dem größten Bildschirm: „THE LAST MAN?“ → 8: Bildschirme flackern um 09:13 Ortszeit (= 15:13 bei dir) |
 
-**Variante Suchstelle** (aus `strasse`): Fotowand mit Vermisstenzetteln, Tisch, Helferinnen mit Warnwesten, später Zelt und Ladestation. Einsätze 5 und 9.
+**Variante Suchstelle** (aus `strasse`): Fotowand mit Vermisstenzetteln, Tisch, Helferinnen mit Warnwesten, nachts Kerzen. Einsätze 5 und 9. Dazu `strasse` in Folge 2: Frauen schieben liegengebliebene Autos von der Kreuzung.
 
 ---
 
@@ -366,7 +366,7 @@ Echte Fakten und erfundene Regeln werden immer getrennt erzählt, zum Beispiel: 
 - **Teile:** Jede Folge wird in **zwei Teile von höchstens 60 s** geschnitten, immer nach Kapitel 2.
   - Teil 1 = Kapitel 1 + Titelkarte + (Rückblick) + Kapitel 2
   - Teil 2 = Kapitel 3 + Kapitel 4 + Fortsetzung folgt + Check
-- **Rechner:** `node der-letzte-mann/dauer.mjs der-letzte-mann/storylines/folge-XX.md`. Er rechnet mit derselben Formel wie `render.mjs` ohne Stimme und warnt bei jeder überschrittenen Grenze. Mit echter Stimme wird nachgemessen. Gekürzt wird nur im Text, nie durch zusätzliche Einleitungen verlängert.
+- **Rechner:** `node der-letzte-mann/dauer.mjs der-letzte-mann/storylines/folge-XX.md`. Er rechnet mit der Formel von `render.mjs` und rechnet sie auf die Gemini-Stimme um (× 0,84, gemessen an Staffel 1). Ist die Folge vertont, zeigt er die echte Messung und meldet veraltetes Audio. Er warnt bei jeder überschrittenen Grenze. Maßgeblich ist die Messung mit Stimme. Gekürzt wird nur im Text, nie durch zusätzliche Einleitungen verlängert.
 - Den genauen Plan für alle Folgen und Teile enthält `laufzeitplan.md`.
 
 ---

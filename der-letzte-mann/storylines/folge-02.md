@@ -10,6 +10,7 @@ Was bisher geschah:
 KAPITEL 1: Lea | tuer, wohnung, gesicht | Alex, Lea | Morgen | Anzeige: Tag 1, 09:05, HANDY 55 %, NETZ 1/4 „überlastet“, KONSOLE nicht verbunden (grau)
 * Türspion-Ansicht: Lea im Flur, Arme verschränkt – Stell dir vor, jemand weiß, dass du *noch* da bist.
 * Wohnungstür offen, Lea schiebt sich an Alex vorbei – Deine Nachbarin Lea schiebt sich einfach an dir vorbei.
+* Nahaufnahme: Lea, mustert Alex von oben bis unten – Sie mustert dich von oben bis unten. Du ziehst wieder den Bauch ein.
 * Wohnung: Lea zieht den Vorhang zu – Als Erstes zieht sie deinen Vorhang zu. „Bleib vom Fenster weg.“
 * Nahaufnahme: Alex, charmantes Lächeln – Du lächelst charmant. „Willst du einen Kaffee?“
 * Nahaufnahme: Lea, misstrauisch – „Ich will, dass dich *niemand* sieht.“
@@ -20,6 +21,7 @@ TITELKARTE: DER LETZTE MANN
 
 WAS BISHER GESCHAH:
 * Skyline am Morgen – Um 8:13 Uhr sind plötzlich alle Männer verschwunden.
+* Tokio-Kreuzung – Überall auf der Welt. Vom Bahnhof bis nach Tokio.
 * Nahaufnahme: Alex, besorgt – Nur du bist geblieben. Dein Vater geht nicht ran.
 * Türspion-Ansicht: Lea – Dann klingelt deine Nachbarin: „Ich habe dich gesehen.“
 
@@ -36,6 +38,7 @@ Laufzeit Teil 1: 56,3 Sekunden
 
 KAPITEL 3: Spiegelung | kueche, objekt, wohnung | Alex | Tag | Anzeige: Tag 1, 10:13, HANDY 66 % +, NETZ 2/4, KONSOLE nicht verbunden (grau)
 * Küche: Das Küchenradio rauscht, die Herduhr zeigt 10:13 – Um 10:13 rauscht das Radio. Wie schon um 9:13.
+* Straße vor dem Haus: Frauen schieben gemeinsam liegengebliebene Autos von der Kreuzung – Draußen schieben Frauen die liegengebliebenen Autos von der Kreuzung.
 * Infokarte: Glasscheibe, ein kleiner Pfeil wird zurückgeworfen, „ca. 4 %“ – Echter Fakt: Glas spiegelt pro Oberfläche etwa *vier Prozent* des Lichts.
 * Infokarte: links Tag (Scheibe spiegelt den Himmel), rechts Nacht (helles Zimmer gut sichtbar) – Tagsüber sieht man darum fast nur Spiegelungen. Nachts *alles*.
 * Wohnung: Alex direkt an der Scheibe, prüft im Spiegelbild seine Frisur – Es ist Tag. Also prüfst du am Fenster deine Frisur.
@@ -70,6 +73,8 @@ NEU ZU BAUEN:
 - `dach`: Haus gegenüber mit Wetterkamera auf Mast
 - `handy`: Social-Post mit grobem Bild, Zeitangabe und Kommentaren
 - Lea: Powerbank als Gegenstand
+- `strasse`: Frauen schieben liegengebliebene Autos von der Kreuzung (Komparsinnen `k1`, `k3`, Pose „schiebt“)
+- `tokio` im Rückblick (vorhanden aus Folge 1)
 
 DAUER (geschätzt ohne Stimme, berechnet mit `node der-letzte-mann/dauer.mjs der-letzte-mann/storylines/folge-02.md`):
 

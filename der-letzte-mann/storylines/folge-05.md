@@ -12,6 +12,7 @@ KAPITEL 1: Fünfzig Euro | treppe, gesicht, karte | Alex, Lea | Tag | Anzeige: T
 * Nahaufnahme: Alex, denkt nach – Dir fällt etwas ein: Vor drei Wochen warst du bei einer Hörstudie. Fünfzig Euro.
 * Nahaufnahme: Alex, verlegen – Wegen der netten Stimme am Telefon.
 * Nahaufnahme: Lea, trocken – „Natürlich“, sagt Lea.
+* Nahaufnahme: Alex, denkt nach – Den Fragebogen hast du ausgefüllt. Mit Name, Adresse und Foto.
 * Karte: Kastanienweg 7 und die Hausverwaltung zwei Straßen weiter – Im Messplan steht ein Kellerraum: *S7*. Den Schlüssel hat die Hausverwaltung.
 (Haken am Ende: Was ist Raum S7?)
 
@@ -21,10 +22,12 @@ TITELKARTE: DER LETZTE MANN
 WAS BISHER GESCHAH:
 * Skyline – Alle Männer sind verschwunden. Nur du nicht.
 * Handy: „Dr. E. Winter“ – Doktor Winter will dich treffen. Sie kannte dich schon vorher.
+* Nahaufnahme: Lea – Lea fand heraus: Ihr Projekt lief in deinem Haus.
 * Handy: Tabelle „Ankerpersonen“ – In ihrem Projektplan bist du „Ankerperson A“.
 
 KAPITEL 2: Die Fotowand | strasse (Suchstelle), objekt | Lea, Komparsin k3 | Tag | Anzeige: Tag 2, 11:00, HANDY 90 %, NETZ 4/4, KONSOLE nicht verbunden (grau)
 * Straße: Lea geht allein, Kapuze auf – Lea holt den Schlüssel allein. Draußen würde dich jede erkennen.
+* Bahnhof: Feldbetten auf dem Bahnsteig, Anzeige „Ersatzverkehr – Fahrerinnen gesucht“ – Am Bahnhof stehen jetzt Feldbetten. Die Anzeige sucht Fahrerinnen.
 * Suchstelle: lange Fotowand, Helferin mit Warnweste – Vor der Hausverwaltung: eine Suchstelle. Hunderte Fotos vermisster Männer.
 * Infokarte: Icon Suchdienst (Lupe mit Person), „seit 1945“ – Echter Fakt: Das Rote Kreuz sucht bis heute Kriegsvermisste. Tausende Anfragen pro Jahr.
 * Fotowand nah: Zettel „Nika S., 26“ mit gelbem Schal – Dann sieht Lea ein Foto, das nicht passt: eine *Frau*. Nika, 26.
@@ -72,6 +75,7 @@ NEU ZU BAUEN:
 - Gegenstände: Schlüsselbund mit „S7“ und „S7-S“
 - Icon `suchdienst`
 - Ton: Stimme hinter der Tür (gedämpft, Tiefpass)
+- `bahnhof`, Variante `hilfspunkt`: Feldbetten auf dem Bahnsteig, Anzeige „Ersatzverkehr – Fahrerinnen gesucht“
 
 DAUER (geschätzt ohne Stimme, berechnet mit `node der-letzte-mann/dauer.mjs der-letzte-mann/storylines/folge-05.md`):
 

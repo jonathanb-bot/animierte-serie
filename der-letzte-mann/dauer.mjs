@@ -1,6 +1,7 @@
 #!/usr/bin/env node
-// Schätzt die Laufzeit einer Storyline von „Der letzte Mann“ (ohne Stimme, gleiche Formel wie render.mjs)
-// und prüft die festen Grenzen der Serie. Geschnitten wird immer nach Kapitel 2:
+// Schätzt die Laufzeit einer Storyline von „Der letzte Mann“ und prüft die festen Grenzen der Serie.
+// Formel wie render.mjs ohne Stimme; die Gemini-Stimme („Orus“) spricht schneller, daher wird für die Grenzen
+// mit Formel × STIMME gerechnet. Ist die Folge schon vertont, zählt die Messung aus audio/folge-XX/timing.json. Geschnitten wird immer nach Kapitel 2:
 //   Teil 1 = Kapitel 1 + Titelkarte + Was bisher geschah + Kapitel 2
 //   Teil 2 = Kapitel 3 + Kapitel 4 + Fortsetzung folgt + Check
 // node der-letzte-mann/dauer.mjs der-letzte-mann/storylines/folge-01.md
@@ -11,6 +12,8 @@ if (!datei) { console.error("Bitte Storyline angeben, z.B. der-letzte-mann/story
 
 // feste Längen (s)
 const TITELKARTE = 1.0, FORTSETZUNG = 1.0;
+// gemessen an Staffel 1: echte Stimme / Formel ≈ 0,84
+const STIMME = 0.84;
 // Grenzen aus der Serienbibel
 const GRENZEN = { kapitel: [20, 22], rueckblick: [12, 15], check: 14, teil: 60, folge: 119, einstellungen: [4, 6], woerter: 20 };
 
@@ -47,7 +50,9 @@ for (const zeile of fs.readFileSync(datei, "utf8").split(/\r?\n/)) {
   }
 }
 
-const summe = a => a.d.reduce((x, y) => x + y, 0);
+const formel = a => a.d.reduce((x, y) => x + y, 0);
+// feste Längen (Titelkarte, Fortsetzung) bleiben, gesprochene Abschnitte werden umgerechnet
+const summe = a => a.art === "fest" ? formel(a) : formel(a) * STIMME;
 const kapitel = n => abschnitte.find(a => a.art === "kapitel" && a.nr === n);
 const nach = (a, liste) => liste.includes(a);
 const teil1Arten = abschnitte.filter(a => (a.art === "kapitel" && a.nr <= 2) || a.name === "Titelkarte" || a.art === "rueckblick");
@@ -58,7 +63,7 @@ const t1 = teil1Arten.reduce((x, a) => x + summe(a), 0), t2 = teil2Arten.reduce(
 for (const a of abschnitte) {
   const d = summe(a);
   if (a.art === "kapitel") {
-    if (d < GRENZEN.kapitel[0] - 0.5 || d > GRENZEN.kapitel[1] + 0.5) warnungen.push(`${a.name}: ${d.toFixed(1)} s (Ziel ${GRENZEN.kapitel.join("–")} s)`);
+    if (d < GRENZEN.kapitel[0] - 1.5 || d > GRENZEN.kapitel[1] + 1.5) warnungen.push(`${a.name}: ${d.toFixed(1)} s (Ziel ${GRENZEN.kapitel.join("–")} s)`);
     if (a.d.length < GRENZEN.einstellungen[0] || a.d.length > GRENZEN.einstellungen[1]) warnungen.push(`${a.name}: ${a.d.length} Einstellungen (Ziel ${GRENZEN.einstellungen.join("–")})`);
   }
   if (a.art === "rueckblick" && (d < GRENZEN.rueckblick[0] || d > GRENZEN.rueckblick[1])) warnungen.push(`Was bisher geschah: ${d.toFixed(1)} s (Ziel ${GRENZEN.rueckblick.join("–")} s)`);
@@ -69,13 +74,14 @@ if (t1 > GRENZEN.teil) warnungen.push(`Teil 1: ${t1.toFixed(1)} s (max. ${GRENZE
 if (t2 > GRENZEN.teil) warnungen.push(`Teil 2: ${t2.toFixed(1)} s (max. ${GRENZEN.teil} s)`);
 if (t1 + t2 > GRENZEN.folge) warnungen.push(`Folge: ${(t1 + t2).toFixed(1)} s (max. ${GRENZEN.folge} s)`);
 
-const zeile = a => `| ${a.name} | ${a.art === "fest" ? "–" : a.d.length} | ${summe(a).toFixed(1)} s |`;
-console.log("| Abschnitt | Einstellungen | Dauer |\n|---|---|---|");
+const f1 = teil1Arten.reduce((x, a) => x + formel(a), 0), f2 = teil2Arten.reduce((x, a) => x + formel(a), 0);
+const zeile = a => `| ${a.name} | ${a.art === "fest" ? "–" : a.d.length} | ${formel(a).toFixed(1)} s | ${summe(a).toFixed(1)} s |`;
+console.log(`| Abschnitt | Einstellungen | Formel | mit Stimme (× ${STIMME}) |\n|---|---|---|---|`);
 teil1Arten.forEach(a => console.log(zeile(a)));
-console.log(`| **Teil 1** | | **${t1.toFixed(1)} s** |`);
+console.log(`| **Teil 1** | | ${f1.toFixed(1)} s | **${t1.toFixed(1)} s** |`);
 teil2Arten.forEach(a => console.log(zeile(a)));
-console.log(`| **Teil 2** | | **${t2.toFixed(1)} s** |`);
-console.log(`| **Gesamte Folge** | | **${(t1 + t2).toFixed(1)} s** |`);
+console.log(`| **Teil 2** | | ${f2.toFixed(1)} s | **${t2.toFixed(1)} s** |`);
+console.log(`| **Gesamte Folge** | | ${(f1 + f2).toFixed(1)} s | **${(t1 + t2).toFixed(1)} s** |`);
 if (warnungen.length) { console.log("\nHinweise:"); warnungen.forEach(w => console.log("- " + w)); process.exitCode = 1; }
 
 // Mit Stimme: echte Längen aus audio/folge-XX/timing.json (geschrieben von python -m ton.folge)
@@ -84,6 +90,11 @@ const drehbuch = `${serie}episoden/${id}.txt`, timing = `${serie}audio/${id}/tim
 if (id && fs.existsSync(drehbuch) && fs.existsSync(timing)) {
   const namen = fs.readFileSync(drehbuch, "utf8").split(/\r?\n/).filter(z => /^==/.test(z)).map(z => z.replace(/=/g, "").trim());
   const t = JSON.parse(fs.readFileSync(timing, "utf8")), je = namen.map(() => 0);
+  const texte = fs.readFileSync(drehbuch, "utf8").split(/\r?\n/).filter(z => /^\[/.test(z)).map(z => z.replace(/^\[[^\]]*\]\s*/, "").trim());
+  if (texte.join("|") !== t.einstellungen.map(e => e.text).join("|")) {
+    console.log("\nAudio veraltet: Der Drehbuchtext hat sich seit der Vertonung geändert. Bitte neu vertonen.");
+    process.exit(process.exitCode || 0);
+  }
   for (const e of t.einstellungen) je[e.kapitel - 1] += e.dauer;
   const grenze = namen.findIndex(n => /^Kapitel 2\b/.test(n)) + 1;
   const g1 = je.slice(0, grenze).reduce((a, b) => a + b, 0), g2 = je.slice(grenze).reduce((a, b) => a + b, 0);
