@@ -3,7 +3,8 @@
  "regel": "ok = Tonspur da, so lang wie das Bild, Stimme hörbar (> -24 LUFS)",
  "reihenfolge": [
   "24-stock",
-  "der-alien"
+  "der-alien",
+  "der-letzte-mann"
  ],
  "folgen": {
   "01": {
@@ -671,6 +672,186 @@
    "bild_s": 221.3,
    "ton_s": 221.33,
    "lufs": -15.1
+  },
+  "der-letzte-mann/folge-01-teil-1.mp4": {
+   "ok": true,
+   "bild_s": 43.37,
+   "ton_s": 43.34,
+   "lufs": -15.4
+  },
+  "der-letzte-mann/folge-01-teil-2.mp4": {
+   "ok": true,
+   "bild_s": 51.37,
+   "ton_s": 51.39,
+   "lufs": -15.1
+  },
+  "der-letzte-mann/folge-02-teil-1.mp4": {
+   "ok": true,
+   "bild_s": 52.93,
+   "ton_s": 52.91,
+   "lufs": -14.9
+  },
+  "der-letzte-mann/folge-02-teil-2.mp4": {
+   "ok": true,
+   "bild_s": 52.7,
+   "ton_s": 52.72,
+   "lufs": -14.9
+  },
+  "der-letzte-mann/folge-03-teil-1.mp4": {
+   "ok": true,
+   "bild_s": 53.6,
+   "ton_s": 53.58,
+   "lufs": -15.0
+  },
+  "der-letzte-mann/folge-03-teil-2.mp4": {
+   "ok": true,
+   "bild_s": 55.03,
+   "ton_s": 55.05,
+   "lufs": -15.3
+  },
+  "der-letzte-mann/folge-04-teil-1.mp4": {
+   "ok": true,
+   "bild_s": 57.3,
+   "ton_s": 57.27,
+   "lufs": -15.3
+  },
+  "der-letzte-mann/folge-04-teil-2.mp4": {
+   "ok": true,
+   "bild_s": 48.37,
+   "ton_s": 48.35,
+   "lufs": -15.3
+  },
+  "der-letzte-mann/folge-05-teil-1.mp4": {
+   "ok": true,
+   "bild_s": 55.0,
+   "ton_s": 54.98,
+   "lufs": -14.8
+  },
+  "der-letzte-mann/folge-05-teil-2.mp4": {
+   "ok": true,
+   "bild_s": 49.7,
+   "ton_s": 49.71,
+   "lufs": -14.7
+  },
+  "der-letzte-mann/folge-06-teil-1.mp4": {
+   "ok": true,
+   "bild_s": 49.7,
+   "ton_s": 49.67,
+   "lufs": -15.4
+  },
+  "der-letzte-mann/folge-06-teil-2.mp4": {
+   "ok": true,
+   "bild_s": 50.6,
+   "ton_s": 50.59,
+   "lufs": -14.8
+  },
+  "der-letzte-mann/folge-07-teil-1.mp4": {
+   "ok": true,
+   "bild_s": 52.4,
+   "ton_s": 52.37,
+   "lufs": -14.7
+  },
+  "der-letzte-mann/folge-07-teil-2.mp4": {
+   "ok": true,
+   "bild_s": 52.77,
+   "ton_s": 52.76,
+   "lufs": -14.8
+  },
+  "der-letzte-mann/folge-08-teil-1.mp4": {
+   "ok": true,
+   "bild_s": 56.37,
+   "ton_s": 56.36,
+   "lufs": -15.3
+  },
+  "der-letzte-mann/folge-08-teil-2.mp4": {
+   "ok": true,
+   "bild_s": 54.77,
+   "ton_s": 54.8,
+   "lufs": -15.1
+  },
+  "der-letzte-mann/folge-09-teil-1.mp4": {
+   "ok": true,
+   "bild_s": 54.4,
+   "ton_s": 54.37,
+   "lufs": -15.0
+  },
+  "der-letzte-mann/folge-09-teil-2.mp4": {
+   "ok": true,
+   "bild_s": 47.8,
+   "ton_s": 47.81,
+   "lufs": -15.2
+  },
+  "der-letzte-mann/folge-10-teil-1.mp4": {
+   "ok": true,
+   "bild_s": 55.73,
+   "ton_s": 55.71,
+   "lufs": -15.4
+  },
+  "der-letzte-mann/folge-10-teil-2.mp4": {
+   "ok": true,
+   "bild_s": 49.8,
+   "ton_s": 49.82,
+   "lufs": -15.0
+  },
+  "der-letzte-mann-folgen/folge-01.mp4": {
+   "ok": true,
+   "bild_s": 94.7,
+   "ton_s": 94.73,
+   "lufs": -15.2
+  },
+  "der-letzte-mann-folgen/folge-02.mp4": {
+   "ok": true,
+   "bild_s": 105.6,
+   "ton_s": 105.63,
+   "lufs": -14.9
+  },
+  "der-letzte-mann-folgen/folge-03.mp4": {
+   "ok": true,
+   "bild_s": 108.6,
+   "ton_s": 108.63,
+   "lufs": -15.1
+  },
+  "der-letzte-mann-folgen/folge-04.mp4": {
+   "ok": true,
+   "bild_s": 105.63,
+   "ton_s": 105.62,
+   "lufs": -15.2
+  },
+  "der-letzte-mann-folgen/folge-05.mp4": {
+   "ok": true,
+   "bild_s": 104.67,
+   "ton_s": 104.69,
+   "lufs": -14.8
+  },
+  "der-letzte-mann-folgen/folge-06.mp4": {
+   "ok": true,
+   "bild_s": 100.27,
+   "ton_s": 100.27,
+   "lufs": -15.1
+  },
+  "der-letzte-mann-folgen/folge-07.mp4": {
+   "ok": true,
+   "bild_s": 105.13,
+   "ton_s": 105.13,
+   "lufs": -14.7
+  },
+  "der-letzte-mann-folgen/folge-08.mp4": {
+   "ok": true,
+   "bild_s": 111.13,
+   "ton_s": 111.16,
+   "lufs": -15.2
+  },
+  "der-letzte-mann-folgen/folge-09.mp4": {
+   "ok": true,
+   "bild_s": 102.17,
+   "ton_s": 102.18,
+   "lufs": -15.0
+  },
+  "der-letzte-mann-folgen/folge-10.mp4": {
+   "ok": true,
+   "bild_s": 105.5,
+   "ton_s": 105.53,
+   "lufs": -15.1
   }
  },
  "serien": {
@@ -761,6 +942,51 @@
     "10": {
      "titel": "Wieder zu Hause",
      "teile": 5
+    }
+   }
+  },
+  "der-letzte-mann": {
+   "name": "Der letzte Mann",
+   "folgen": {
+    "01": {
+     "titel": "Außer dir",
+     "teile": 2
+    },
+    "02": {
+     "titel": "Bleib vom Fenster weg",
+     "teile": 2
+    },
+    "03": {
+     "titel": "Sie kennen deinen Namen",
+     "teile": 2
+    },
+    "04": {
+     "titel": "Die falsche Rettung",
+     "teile": 2
+    },
+    "05": {
+     "titel": "Unter deiner Wohnung",
+     "teile": 2
+    },
+    "06": {
+     "titel": "Das tote Telefon",
+     "teile": 2
+    },
+    "07": {
+     "titel": "Zehn Sekunden",
+     "teile": 2
+    },
+    "08": {
+     "titel": "Du warst nicht vorgesehen",
+     "teile": 2
+    },
+    "09": {
+     "titel": "Die zweite Ausnahme",
+     "teile": 2
+    },
+    "10": {
+     "titel": "Die Stimme",
+     "teile": 2
     }
    }
   }

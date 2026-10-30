@@ -31,10 +31,13 @@ def pruefe(f):
 
 ALIEN = {1: "Im Badezimmer", 2: "Nur bis morgen", 3: "Deine Nachbarin", 4: "Das Versprechen", 5: "Was Nox gestohlen hat",
          6: "Raus aus dem Haus", 7: "Das falsche Gesicht", 8: "Du oder er", 9: "Auf dem Dach", 10: "Wieder zu Hause"}
+LETZTER = {1: "Außer dir", 2: "Bleib vom Fenster weg", 3: "Sie kennen deinen Namen", 4: "Die falsche Rettung", 5: "Unter deiner Wohnung",
+           6: "Das tote Telefon", 7: "Zehn Sekunden", 8: "Du warst nicht vorgesehen", 9: "Die zweite Ausnahme", 10: "Die Stimme"}
 ergebnis = {"serie": "24. Stock", "regel": "ok = Tonspur da, so lang wie das Bild, Stimme hörbar (> -24 LUFS)",
-            "reihenfolge": ["24-stock", "der-alien"], "folgen": {}, "dateien": {}, "serien": {}}
+            "reihenfolge": ["24-stock", "der-alien", "der-letzte-mann"], "folgen": {}, "dateien": {}, "serien": {}}
 for f in sorted((ROOT / "24-stock").glob("*.mp4")) + sorted((ROOT / "24-stock-folgen").glob("*.mp4")) \
-       + sorted((ROOT / "der-alien").glob("*.mp4")) + sorted((ROOT / "der-alien-folgen").glob("*.mp4")):
+       + sorted((ROOT / "der-alien").glob("*.mp4")) + sorted((ROOT / "der-alien-folgen").glob("*.mp4")) \
+       + sorted((ROOT / "der-letzte-mann").glob("*.mp4")) + sorted((ROOT / "der-letzte-mann-folgen").glob("*.mp4")):
     rel = f.relative_to(ROOT).as_posix()
     ergebnis["dateien"][rel] = pruefe(f)
     print(rel, ergebnis["dateien"][rel])
@@ -42,7 +45,7 @@ for n in TITEL:
     teile = sorted(int(m.group(1)) for p in (ROOT / "24-stock").glob(f"folge-{n:02d}-teil-*.mp4")
                    if (m := re.search(r"teil-(\d+)", p.name)))
     ergebnis["folgen"][f"{n:02d}"] = {"titel": TITEL[n], "teile": len(teile)}
-for ordner, name, titel in (("24-stock", "24. Stock", TITEL), ("der-alien", "Der Alien", ALIEN)):
+for ordner, name, titel in (("24-stock", "24. Stock", TITEL), ("der-alien", "Der Alien", ALIEN), ("der-letzte-mann", "Der letzte Mann", LETZTER)):
     fo = {}
     for n in titel:
         teile = sorted(int(m.group(1)) for p in (ROOT / ordner).glob(f"folge-{n:02d}-teil-*.mp4") if (m := re.search(r"teil-(\d+)", p.name)))
