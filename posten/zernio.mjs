@@ -181,9 +181,9 @@ for (const post of plan.posts) {
     platforms: [{ platform: post.platform, accountId: acc._id, ...(Object.keys(platformSpecificData).length ? { platformSpecificData } : {}) }],
     scheduledFor: post.zeit,
     timezone: "Europe/Berlin",
-    metadata: { serie: "24-stock", postId: post.id },
+    metadata: { serie: post.serie || "24-stock", postId: post.id },
   };
-  if (post.platform === "youtube") body.tags = ["zombie", "animation", "story", "24 stock", "shorts"];
+  if (post.platform === "youtube") body.tags = post.tags || ["zombie", "animation", "story", "24 stock", "shorts"];
   const r = await api("POST", "/posts", body, keyFuer(post.platform));
   const id = r.json?.post?._id || r.json?._id || r.json?.id || null;
   status[post.id] = { ok: r.ok, zeit: post.zeit, zernioId: id, http: r.status, antwort: r.ok ? undefined : JSON.stringify(r.json).slice(0, 600), am: new Date().toISOString() };
