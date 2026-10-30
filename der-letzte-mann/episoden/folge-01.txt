@@ -59,8 +59,8 @@
 == Kapitel 4: Es klingelt ==
 @zeit morgen
 @hud tag=1 zeit=09:05 handy=55/100% netz=1/4 konsole=nicht_verbunden
-// Wohnung: Alex sitzt auf dem Sofa und starrt auf sein Handy
-[wohnung du du:sitzt pos=120 rauch=false] Du bist der letzte Mann. Es fühlt sich *nicht* gut an.
+// Wohnung: Alex steht im Zimmer und starrt auf sein Handy
+[wohnung du pos=330 rauch=false] Du bist der letzte Mann. Es fühlt sich *nicht* gut an.
 // Wohnung: Alex am offenen Fenster, unten auf der Straße nur Frauen, eine schaut zufällig hoch
 [wohnung du du:denkt froh rauch=false] Du stellst dich ans Fenster. Unten auf der Straße: nur Frauen.
 // Wohnungstür von innen, die Klingel leuchtet auf

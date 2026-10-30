@@ -226,7 +226,7 @@
   // TOKIO – Kreuzung mit Zebrastreifen, Leuchtreklame (ohne echte Marken), Großbildschirm, Uhr
   // =====================================================================
   SZ.tokio = (s, t) => {
-    const zeit = s.zeit || "tag", nacht = zeit === "nacht", abend = zeit === "abend", hc = HIMMEL[zeit] || HIMMEL.tag, fl = flackert(s, t);
+    const zeit = s.zeit || "tag", nacht = zeit === "nacht", abend = !nacht, hc = nacht ? HIMMEL.nacht : ["#1c2140", "#7a5a78"], fl = flackert(s, t);
     const dunkel = nacht || abend, vx = 540, yh = 1010;
     const r = rnd(88), neon = ["#ff4fa3", "#4fd8ff", "#ffd34f", "#7dff8a", "#ff7a4f", "#b98bff"];
     // Himmel + Dunst
@@ -269,24 +269,8 @@
         // Ladenzone unten mit Markise
         const lh = 60 + 160 * f; box(x0, fuss - lh, w, lh, 0, shade(c, -0.25)); box(x0 + w * 0.08, fuss - lh * 0.82, w * 0.84, lh * 0.62, 3, dunkel ? "#f0c98a" : "#a9c3d2"); box(x0 + w * 0.08, fuss - lh * 0.82, w * 0.84, lh * 0.12, 0, rgba("#ffffff", dunkel ? 0.15 : 0.35));
         if (dunkel) A.licht(x0 + w / 2, fuss - lh / 2, w * 0.6, "#ffcf8a", 0.5);
-        box(x0, fuss - lh - 14 * (0.4 + f), w, 14 * (0.4 + f) + 4, 2, neon[(i + (seite > 0 ? 2 : 0)) % neon.length]);
-        // senkrechtes Leuchtschild an der Straßenkante
-        schilder.push({ x: xi + seite * (6 + 20 * f), y: top + hoch * 0.18, w: 26 + 70 * f, h: 160 + 560 * f, c: neon[Math.floor(rr() * neon.length)], seite, f, n: i * 3 + (seite > 0 ? 1 : 0) });
-        // waagerechtes Schild
-        if (f > 0.2) { const sw = w * 0.55, sh = 30 + 70 * f, sx = seite < 0 ? x0 + w * 0.1 : x0 + w * 0.35, sy = top + hoch * 0.5; schilder.push({ x: sx, y: sy, w: sw, h: sh, c: neon[Math.floor(rr() * neon.length)], quer: true, f, n: i * 3 + 2 + (seite > 0 ? 7 : 0) }); }
+        box(x0, fuss - lh - 14 * (0.4 + f), w, 14 * (0.4 + f) + 4, 2, shade(c, -0.3));
       }
-    }
-    // Leuchtschilder mit abstrakten Zeichen (keine echten Marken)
-    for (const z of schilder) {
-      const puls = 0.85 + 0.15 * Math.sin(t * (1.3 + (z.n % 4) * 0.4) + z.n), a = (z.n % 5 === 0 ? fl : 1) * puls;
-      const x0 = z.quer ? z.x : (z.seite < 0 ? z.x - z.w : z.x);
-      box(x0, z.y, z.w, z.h, 6 + 6 * z.f, dunkel ? "#11141d" : "#1d2230");
-      ctx.save(); ctx.globalAlpha = a;
-      const rz = rnd(z.n + 300), st = Math.max(3, 4 + 8 * z.f);
-      if (z.quer) { for (let k = 0; k < 4; k++) { const gx = x0 + z.w * (0.12 + k * 0.21); line(gx, z.y + z.h * 0.25, gx + z.w * 0.12, z.y + z.h * 0.25, st, z.c); line(gx + z.w * 0.06, z.y + z.h * 0.2, gx + z.w * (0.02 + rz() * 0.08), z.y + z.h * 0.78, st, z.c); if (rz() < 0.6) line(gx, z.y + z.h * 0.55, gx + z.w * 0.12, z.y + z.h * 0.55, st, z.c); } }
-      else { const n = Math.max(2, Math.floor(z.h / (z.w * 1.15))); for (let k = 0; k < n; k++) { const gy = z.y + 14 + k * (z.h - 28) / n, gh = (z.h - 28) / n * 0.8; line(x0 + z.w * 0.22, gy + gh * 0.2, x0 + z.w * 0.78, gy + gh * 0.2, st, z.c); line(x0 + z.w * 0.5, gy + gh * 0.05, x0 + z.w * (0.3 + rz() * 0.4), gy + gh, st, z.c); if (rz() < 0.5) line(x0 + z.w * 0.25, gy + gh * 0.6, x0 + z.w * 0.75, gy + gh * 0.6, st, z.c); } }
-      ctx.restore();
-      A.licht(x0 + z.w / 2, z.y + z.h / 2, Math.max(z.w, z.h) * 0.7, z.c, (dunkel ? 0.85 : 0.3) * a);
     }
     // Großbildschirm über der Kreuzung + Uhr
     const bx = 380, by = 360, bw = 330, bh = 210;
@@ -303,32 +287,25 @@
     const zy0 = 1380, zy1 = 1560;
     for (let k = -9; k <= 9; k++) { const xa = vx + k * 46, xb = vx + k * 70; poly([[xa - 14, zy0], [xa + 14, zy0], [xb + 22, zy1], [xb - 22, zy1]], rgba("#ece8dc", 0.88)); }
     ctx.save(); ctx.globalAlpha = 0.35; for (let k = -6; k <= 6; k++) { const x = vx + k * 120; poly([[x - 20, 1180], [x + 20, 1180], [x + 160, 1360], [x + 120, 1360]], "#ece8dc"); } ctx.restore();
-    // stehengebliebene Autos mit Warnblinker
-    const blink = Math.sin(t * 6) > 0;
-    const auto = (x, y, sk, farbe, dreh = 0) => {
-      ctx.save(); ctx.translate(x, y); ctx.rotate(dreh); ctx.scale(sk, sk);
-      ellipse(0, 6, 190, 26, rgba("#000", 0.3));
-      box(-170, -90, 340, 96, 26, farbe); box(-110, -160, 220, 82, 30, shade(farbe, -0.08));
-      box(-94, -148, 88, 60, 12, dunkel ? "#2a3446" : "#a9c3d8"); box(6, -148, 88, 60, 12, dunkel ? "#2a3446" : "#a9c3d8");
-      for (const wx of [-110, 110]) { circle(wx, 6, 34, "#16181c"); circle(wx, 6, 14, "#7b8088"); }
-      for (const lx of [-162, 142]) { box(lx, -70, 20, 26, 6, blink ? "#ffb02e" : "#7a4a1a"); if (blink) A.licht(lx + 10, -57, 70, "#ffb02e", 0.9); }
-      ctx.restore();
-    };
-    auto(380, 1150, 0.32, "#e9e6df", -0.05); auto(700, 1230, 0.44, "#2f6fb5", 0.09); auto(250, 1330, 0.6, "#b5452f", 0.12);
     // Ampeln + Laternen
     const ampel = (x, yb, sk, rot) => { line(x, yb, x, yb - 520 * sk, 12 * sk, "#2b2f38"); box(x - 30 * sk, yb - 640 * sk, 60 * sk, 150 * sk, 10 * sk, "#1d2128");
       circle(x, yb - 605 * sk, 18 * sk, rot ? "#ff4a3a" : "#4a1a14"); circle(x, yb - 565 * sk, 18 * sk, rot ? "#163a20" : "#3cff6a");
       A.licht(x, yb - (rot ? 605 : 565) * sk, 120 * sk, rot ? "#ff4a3a" : "#3cff6a", dunkel ? 0.9 : 0.4); };
     ampel(70, 1700, 1, true); ampel(1010, 1660, 0.9, false); ampel(330, 1120, 0.35, true); ampel(760, 1110, 0.33, true);
     for (const [x, yb, sk] of [[150, 1260, 0.45], [930, 1250, 0.43], [255, 1090, 0.25], [830, 1085, 0.24]]) { line(x, yb, x, yb - 700 * sk, 9 * sk, "#30343d"); box(x - 40 * sk, yb - 715 * sk, 80 * sk, 20 * sk, 8 * sk, dunkel ? "#fff1cf" : "#dfe4ea"); if (dunkel) A.licht(x, yb - 690 * sk, 380 * sk, "#fff1d0", 0.85); }
-    // wenige Menschen auf den Gehwegen (perspektivisch klein)
-    const n = s.menge ?? 6, plaetze = [[150, 1170, 0.13], [915, 1160, 0.13], [70, 1300, 0.2], [1000, 1290, 0.2], [230, 1105, 0.09], [840, 1100, 0.09], [40, 1500, 0.3], [1040, 1480, 0.3], [300, 1070, 0.07], [780, 1068, 0.07], [130, 1420, 0.25], [960, 1400, 0.25], [190, 1220, 0.16], [880, 1210, 0.16]];
-    plaetze.slice(0, Math.min(n, plaetze.length)).sort((a, b) => a[1] - b[1]).forEach(([x, y, sk], i) => {
-      A.figur(x, y, sk, passantin(5 + i), { t: t + i, pose: s.fotos ? "traegt" : i % 3 ? "steht" : "geht", ausdruck: s.fotos ? "besorgt" : "neutral", seed: i });
-      if (s.fotos) { const fy = y - 560 * sk; box(x - 70 * sk, fy - 90 * sk, 140 * sk, 110 * sk, 8 * sk, "#f4f1ea"); A.kopf(x, fy - 40 * sk, 30 * sk, passantin(i + 90), { t, ausdruck: "neutral", seed: i }); }
+    // viele Menschen: auf Gehwegen und mitten auf der Kreuzung, perspektivisch (hinten klein, vorn groß)
+    const n = Math.max(s.menge ?? 34, 26), rm = rnd(4242), leute = [];
+    for (let i = 0; i < n; i++) {
+      const q = Math.pow(rm(), 0.8), y = lerp(1080, 1700, q), sk = lerp(0.07, 0.34, q), breiteHier = lerp(260, 620, q);
+      leute.push({ x: vx + (rm() * 2 - 1) * breiteHier + (rm() * 2 - 1) * 40, y, sk, i });
+    }
+    leute.sort((a, b) => a.y - b.y).forEach(p => {
+      const geht = !s.fotos && p.i % 3 === 0;
+      A.figur(p.x + (geht ? Math.sin(t * 0.6 + p.i) * 30 * p.sk : 0), p.y, p.sk, passantin(5 + p.i), { t: t + p.i, pose: s.fotos ? "traegt" : geht ? "geht" : "steht", ausdruck: s.fotos ? "besorgt" : "neutral", seed: p.i });
+      if (s.fotos) { const fy = p.y - 560 * p.sk; box(p.x - 70 * p.sk, fy - 90 * p.sk, 140 * p.sk, 110 * p.sk, 8 * p.sk, "#f4f1ea"); A.kopf(p.x, fy - 40 * p.sk, 30 * p.sk, passantin(p.i + 90), { t, ausdruck: "neutral", seed: p.i }); }
     });
     A.figurenZeigen(s, t, 1880, 0.7);
-    A._dunkel = nacht ? 0.36 : abend ? 0.2 : 0;
+    A._dunkel = nacht ? 0.42 : 0.32;
   };
 
   // =====================================================================
