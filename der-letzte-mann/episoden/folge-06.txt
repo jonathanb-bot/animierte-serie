@@ -10,65 +10,65 @@
 @zeit tag
 @hud tag=2 zeit=12:41 handy=85/100% netz=1/4 konsole=nicht_verbunden
 // Kellerflur: Alex vor der Stahltür S7
-[keller ansicht=flur du lea] Stell dir vor, hinter dieser Tür ist dein *Vater*.
+[keller ansicht=flur du lea rauch=false] Stell dir vor, hinter dieser Tür ist dein *Vater*.
 // Stahltür nah: Alex steckt den großen Schlüssel ins Schloss
-[keller ansicht=flur du du:zeigt fokus=740,1000 zoom=1.3] Du steckst den großen Schlüssel ins Schloss. Deine Hand zittert.
+[keller ansicht=flur du du:zeigt fokus=740,1000 zoom=1.3 rauch=false] Du steckst den großen Schlüssel ins Schloss. Deine Hand zittert.
 // Tür offen, Taschenlampenkegel in einem dunklen Raum
-[keller ansicht=flur tuer=offen licht=taschenlampe du du:taschenlampe] „Papa?“ Keine Antwort. Nur ein dunkler Raum.
+[keller ansicht=flur tuer=offen licht=taschenlampe du du:taschenlampe rauch=false] „Papa?“ Keine Antwort. Nur ein dunkler Raum.
 // Raum S7: ein grauer Schrank mit Display und Lautsprecher
-[keller ansicht=raum licht=taschenlampe display="ANSAGE: THOMAS B.|31 ANRUFE"] Kein Vater. Nur ein grauer Schrank mit Lautsprecher.
+[keller ansicht=raum licht=taschenlampe display="ANSAGE: THOMAS B.|31 ANRUFE" rauch=false] Kein Vater. Nur ein grauer Schrank mit Lautsprecher.
 // Display nah: „Ansage: Thomas B. – 31 Anrufe“
-[keller ansicht=raum licht=taschenlampe display="ANSAGE: THOMAS B.|31 ANRUFE" fokus=330,885 zoom=2.3] Auf dem Display: „Ansage Thomas B. 31 Anrufe.“ *Deine* Anrufe.
+[keller ansicht=raum licht=taschenlampe display="ANSAGE: THOMAS B.|31 ANRUFE" fokus=330,885 zoom=2.3 rauch=false] Auf dem Display: „Ansage Thomas B. 31 Anrufe.“ *Deine* Anrufe.
 [titel oben="Folge 6" gross="DER LETZTE MANN" unten="Das tote Telefon" farbe=#14213d akzent=#e2b443 groesse=120 dauer=1 hud=false]
 
 == Was bisher geschah ==
 // Skyline
 [skyline rauch=false hud=false] Um 8:13 Uhr verschwanden alle Männer. Nur du nicht.
 // Handy: Tabelle „Ankerpersonen“
-[handy bildschirm=tabelle uhrzeit=12:41 akku=85 netz=1 ort=wohnung hud=false] Ein Projekt namens Spiegel hatte dich vorher ausgewählt.
+[handy bildschirm=tabelle uhrzeit=12:41 akku=85 netz=1 ort=wohnung rauch=false hud=false] Ein Projekt namens Spiegel hatte dich vorher ausgewählt.
 // Kellerflur: Stahltür S7
-[keller ansicht=flur du lea hud=false] Im Keller hast du die Stimme deines Vaters gehört.
+[keller ansicht=flur du lea rauch=false hud=false] Im Keller hast du die Stimme deines Vaters gehört.
 
 == Kapitel 2: Kabel ab ==
 @zeit tag
 @hud tag=2 zeit=12:50 handy=84/100% netz=0/4 konsole=nicht_verbunden
 // Raum S7, Lea leuchtet den Schrank ab
-[keller ansicht=raum licht=taschenlampe display="ANSAGE: THOMAS B.|31 ANRUFE" lea] Der Raum heißt S7. Jeder Anruf an Papa läuft hierher.
+[keller ansicht=raum licht=taschenlampe display="ANSAGE: THOMAS B.|31 ANRUFE" lea rauch=false] Der Raum heißt S7. Jeder Anruf an Papa läuft hierher.
 // Projekttelefon nah: beige, Wählscheibe, das Anschlusskabel sauber durchtrennt
-[keller ansicht=raum licht=taschenlampe display="ANSAGE: THOMAS B.|31 ANRUFE" fokus=450,700 zoom=2.5] Auf dem Schrank steht ein altes Telefon. Das Kabel ist *durchgeschnitten*.
+[keller ansicht=raum licht=taschenlampe display="ANSAGE: THOMAS B.|31 ANRUFE" fokus=450,700 zoom=2.5 rauch=false] Auf dem Schrank steht ein altes Telefon. Das Kabel ist *durchgeschnitten*.
 // Infokarte: altes Telefon, Leitung zur Vermittlungsstelle mit Blitz-Symbol
-[objekt objekte="telefon_alt:Strom über die Leitung" farbe=#1e2f45] Alte Festnetztelefone bekamen Strom über die Leitung. Sogar bei Stromausfall.
+[objekt objekte="telefon_alt:Strom über die Leitung" farbe=#1e2f45 rauch=false] Alte Festnetztelefone bekamen Strom über die Leitung. Sogar bei Stromausfall.
 // Hörer nah, leises Rauschen
-[keller ansicht=raum licht=taschenlampe display="ANSAGE: THOMAS B.|31 ANRUFE" fokus=450,700 zoom=2.5 ton=funk_rauschen] Ohne Kabel müsste es tot sein. Doch im Hörer *rauscht* es.
+[keller ansicht=raum licht=taschenlampe display="ANSAGE: THOMAS B.|31 ANRUFE" fokus=450,700 zoom=2.5 ton=funk_rauschen rauch=false] Ohne Kabel müsste es tot sein. Doch im Hörer *rauscht* es.
 // SCHNITT: Ende Teil 1
 
 == Kapitel 3: Drei Lämpchen ==
 @zeit tag
 @hud tag=2 zeit=13:05 handy=83/100% netz=0/4 konsole=nicht_verbunden
 // Konsole nah: drei Lämpchen „BEREIT“, „VERBINDUNG“, „SCHWELLE“, alle aus
-[keller ansicht=raum licht=taschenlampe display="NOTBETRIEB" fokus=330,1035 zoom=2.4] An der Konsole: drei Lämpchen. „Bereit“, „Verbindung“, „Schwelle“.
+[keller ansicht=raum licht=taschenlampe display="NOTBETRIEB" fokus=330,1035 zoom=2.4 rauch=false] An der Konsole: drei Lämpchen. „Bereit“, „Verbindung“, „Schwelle“.
 // Raum S7: hinten eine schwere Stahltür „MESSKAMMER“
-[keller ansicht=raum licht=taschenlampe display="NOTBETRIEB"] Hinten eine zweite Stahltür: „Messkammer“. Die Klinke gibt nicht nach.
+[keller ansicht=raum licht=taschenlampe display="NOTBETRIEB" rauch=false] Hinten eine zweite Stahltür: „Messkammer“. Die Klinke gibt nicht nach.
 // Alex' Hand auf der Klinke, das dritte Lämpchen flackert einmal weiß
-[keller ansicht=raum licht=taschenlampe display="NOTBETRIEB" fokus=330,1035 zoom=2.4 klinke fokus=860,1090 zoom=1.35 l3=flackert] Als du sie anfasst, flackert das dritte Lämpchen. *Einmal*.
+[keller ansicht=raum licht=taschenlampe display="NOTBETRIEB" fokus=330,1035 zoom=2.4 klinke fokus=860,1090 zoom=1.35 l3=flackert rauch=false] Als du sie anfasst, flackert das dritte Lämpchen. *Einmal*.
 // Nahaufnahme: Lea, misstrauisch
-[gesicht lea ort=keller ansicht=raum licht=konsole misstrauisch] „Hast du was gedrückt?“, fragt Lea. „Nein.“
+[gesicht lea ort=keller ansicht=raum licht=konsole misstrauisch rauch=false] „Hast du was gedrückt?“, fragt Lea. „Nein.“
 // Konsole: Schlüsselschalter auf „BETRIEB“, daneben eine große Taste „BEREIT“
-[keller ansicht=raum licht=taschenlampe display="NOTBETRIEB" fokus=340,1190 zoom=2.4] Daneben ein Schlüsselschalter. Und eine große Taste: *Bereit*.
+[keller ansicht=raum licht=taschenlampe display="NOTBETRIEB" fokus=340,1190 zoom=2.4 rauch=false] Daneben ein Schlüsselschalter. Und eine große Taste: *Bereit*.
 
 == Kapitel 4: Bereit ==
 @zeit tag
 @hud tag=2 zeit=13:12 handy=82/100% netz=0/4 konsole=38/100%
 // Nahaufnahme: Alex, entschlossen, Finger auf der Taste
-[gesicht du ort=keller ansicht=raum licht=konsole entschlossen] Du drückst. Natürlich. Unter Druck bist du *vorschnell*.
+[gesicht du ort=keller ansicht=raum licht=konsole entschlossen rauch=false] Du drückst. Natürlich. Unter Druck bist du *vorschnell*.
 // Konsole erwacht: Lämpchen 1 grün, das Display baut sich auf, Staub im Licht
-[keller ansicht=raum licht=konsole display="AKKU 38 %|NÄCHSTES FENSTER|13:13:00" l1=an fokus=330,1035 zoom=2.4  ton=strom_an] Die Konsole erwacht. Grünes Licht. Akku: 38 Prozent.
+[keller ansicht=raum licht=konsole display="AKKU 38 %|NÄCHSTES FENSTER|13:13:00" l1=an fokus=330,1035 zoom=2.4  ton=strom_an rauch=false] Die Konsole erwacht. Grünes Licht. Akku: 38 Prozent.
 // Display nah: „Nächstes Fenster: 13:13:00“
-[keller ansicht=raum licht=konsole display="AKKU 38 %|NÄCHSTES FENSTER|13:13:00" l1=an fokus=330,885 zoom=2.3] „Nächstes Fenster: 13:13 Uhr.“ In einer Minute.
+[keller ansicht=raum licht=konsole display="AKKU 38 %|NÄCHSTES FENSTER|13:13:00" l1=an fokus=330,885 zoom=2.3 rauch=false] „Nächstes Fenster: 13:13 Uhr.“ In einer Minute.
 // Nahaufnahme: Lea, leise
-[gesicht lea ort=keller ansicht=raum licht=konsole besorgt] „Dreizehn nach“, flüstert Lea. „Wie das Radio.“
+[gesicht lea ort=keller ansicht=raum licht=konsole besorgt rauch=false] „Dreizehn nach“, flüstert Lea. „Wie das Radio.“
 // Alex mit dem Hörer am Ohr, dreht die Wählscheibe
-[keller ansicht=raum licht=konsole display="AKKU 38 %|NÄCHSTES FENSTER|13:13:00" l1=an du hoerer_ab du:lauscht] Du nimmst den Hörer. Und wählst die Nummer deines *Vaters*.
+[keller ansicht=raum licht=konsole display="AKKU 38 %|NÄCHSTES FENSTER|13:13:00" l1=an du hoerer_ab du:lauscht rauch=false] Du nimmst den Hörer. Und wählst die Nummer deines *Vaters*.
 [titel oben="Folge 7: Zehn Sekunden" gross="Fortsetzung folgt" farbe=#14213d akzent=#e2b443 groesse=110 dauer=1 hud=false]
 
 == Check ==

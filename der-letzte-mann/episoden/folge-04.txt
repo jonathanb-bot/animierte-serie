@@ -12,69 +12,69 @@
 // Skyline am Morgen, Hubschrauber über der Stadt
 [skyline rauch=false heli] Stell dir vor, jemand will dich retten. Und weiß zu viel über dich.
 // Bad: Alex vor dem Spiegel, ein Hemd in jeder Hand
-[bad du du:denkt] Tag zwei. Um elf holt dich ein Wagen ab. Zu Doktor Winter.
+[bad du du:denkt rauch=false] Tag zwei. Um elf holt dich ein Wagen ab. Zu Doktor Winter.
 // Bad: Alex hält das dritte Hemd vor sich
-[bad du du:denkt] Du probierst drei Hemden. Für ein Treffen, das eine *Falle* sein könnte.
+[bad du du:denkt rauch=false] Du probierst drei Hemden. Für ein Treffen, das eine *Falle* sein könnte.
 // Nahaufnahme: Alex vor dem Spiegel, zufrieden
-[gesicht du ort=wohnung froh] Hemd Nummer drei. Für das Ende der Welt siehst du *gut* aus.
+[gesicht du ort=wohnung froh rauch=false] Hemd Nummer drei. Für das Ende der Welt siehst du *gut* aus.
 // Handy: Anruf „Papa“, „Mailbox“
-[handy bildschirm=anruf name=Papa status=Mailbox uhrzeit=07:40 akku=100 netz=4 ort=wohnung] Du rufst Papa an. Mailbox. Zum *dreißigsten* Mal.
+[handy bildschirm=anruf name=Papa status=Mailbox uhrzeit=07:40 akku=100 netz=4 ort=wohnung rauch=false] Du rufst Papa an. Mailbox. Zum *dreißigsten* Mal.
 [titel oben="Folge 4" gross="DER LETZTE MANN" unten="Die falsche Rettung" farbe=#14213d akzent=#e2b443 groesse=120 dauer=1 hud=false]
 
 == Was bisher geschah ==
 // Skyline
 [skyline rauch=false hud=false] Alle Männer sind verschwunden. Nur du bist geblieben.
 // Nahaufnahme: Lea
-[gesicht lea ort=wohnung neutral hud=false] Lea, deine Nachbarin, hilft dir.
+[gesicht lea ort=wohnung neutral rauch=false hud=false] Lea, deine Nachbarin, hilft dir.
 // New-York-Platz mit deinem Bild
-[newyork zeit=morgen bild=webcam schirm="THE LAST MAN?" hud=false] Ein Bild von dir am Fenster ging um die Welt.
+[newyork zeit=morgen bild=webcam schirm="THE LAST MAN?" rauch=false hud=false] Ein Bild von dir am Fenster ging um die Welt.
 // Handy: „Dr. E. Winter“
-[handy bildschirm=anruf name="Dr. E. Winter" status=verbunden uhrzeit=07:40 akku=100 netz=4 ort=wohnung hud=false] Dann rief Doktor Winter an. Sie kannte deine Adresse.
+[handy bildschirm=anruf name="Dr. E. Winter" status=verbunden uhrzeit=07:40 akku=100 netz=4 ort=wohnung rauch=false hud=false] Dann rief Doktor Winter an. Sie kannte deine Adresse.
 
 == Kapitel 2: Die Nachtschicht ==
 @zeit morgen
 @hud tag=2 zeit=08:30 handy=98/100% netz=4/4 konsole=nicht_verbunden
 // Supermarkt: Kassiererin, Schild „Wasser: 2 pro Person“
-[supermarkt k2 kasse wagen=false schild="Wasser: 2 pro Person"] Tag zwei. Im Supermarkt gibt es Wasser nur noch rationiert.
+[supermarkt k2 kasse wagen=false schild="Wasser: 2 pro Person" rauch=false] Tag zwei. Im Supermarkt gibt es Wasser nur noch rationiert.
 // Wohnungstür: Lea, müde, mit einer Mappe
-[tuer lea lea:traegt haelt=lea:formular lea:muede] Um halb neun kommt Lea aus der Nachtschicht. Mit einem Ausdruck.
+[tuer lea lea:traegt haelt=lea:formular lea:muede rauch=false] Um halb neun kommt Lea aus der Nachtschicht. Mit einem Ausdruck.
 // Nahaufnahme: Lea
-[gesicht lea ort=wohnung neutral] „Gestern um 7:50 rief mich eine Doktor Winter an.“
+[gesicht lea ort=wohnung neutral rauch=false] „Gestern um 7:50 rief mich eine Doktor Winter an.“
 // Infokarte: Formular „Brandmeldeanlage abgeschaltet – Kastanienweg 7, Keller – Messbetrieb“
-[objekt objekte="formular:Messbetrieb Keller" farbe=#1e2f45] Die Brandmelder in deinem *Keller* sollten abgeschaltet werden. Für einen Messbetrieb.
+[objekt objekte="formular:Messbetrieb Keller" farbe=#1e2f45 rauch=false] Die Brandmelder in deinem *Keller* sollten abgeschaltet werden. Für einen Messbetrieb.
 // Nahaufnahme: Alex, misstrauisch
-[gesicht du ort=wohnung misstrauisch] Von 7:55 bis 8:30 Uhr.
+[gesicht du ort=wohnung misstrauisch rauch=false] Von 7:55 bis 8:30 Uhr.
 // Nahaufnahme: Lea, entschlossen
-[gesicht lea ort=wohnung entschlossen] „Mittendrin war 8:13“, sagt Lea. „Und ihr Projekt war *hier*.“
+[gesicht lea ort=wohnung entschlossen rauch=false] „Mittendrin war 8:13“, sagt Lea. „Und ihr Projekt war *hier*.“
 // SCHNITT: Ende Teil 1
 
 == Kapitel 3: Die Datei ==
 @zeit morgen
 @hud tag=2 zeit=09:15 handy=96/100% netz=4/4 konsole=nicht_verbunden
 // Küche: Lea und Alex über ihr Handy gebeugt
-[kueche lea lea:denkt du uhr=09:15] Ein Projekt in deinem Keller.
+[kueche lea lea:denkt du uhr=09:15 rauch=false] Ein Projekt in deinem Keller.
 // Handy: PDF „Messplan S7 – Projekt SPIEGEL“
-[handy bildschirm=pdf uhrzeit=09:15 akku=96 netz=4 ort=wohnung] An der Meldung hängt eine Datei: „Messplan S7, Projekt Spiegel“.
+[handy bildschirm=pdf uhrzeit=09:15 akku=96 netz=4 ort=wohnung rauch=false] An der Meldung hängt eine Datei: „Messplan S7, Projekt Spiegel“.
 // Handy: Dateieigenschaften, „Erstellt: 21.10., 14:02“
-[handy bildschirm=pdf eigenschaften uhrzeit=09:15 akku=96 netz=4 ort=wohnung] Lea öffnet die Dateieigenschaften. Erstellt am 21. Oktober.
+[handy bildschirm=pdf eigenschaften uhrzeit=09:15 akku=96 netz=4 ort=wohnung rauch=false] Lea öffnet die Dateieigenschaften. Erstellt am 21. Oktober.
 // Infokarte: Datei mit kleinem Info-Etikett, Datum und Autorin
-[objekt objekte="datei_info:Metadaten" farbe=#1e2f45] Dateien speichern oft unsichtbar, wann sie erstellt wurden.
+[objekt objekte="datei_info:Metadaten" farbe=#1e2f45 rauch=false] Dateien speichern oft unsichtbar, wann sie erstellt wurden.
 // Nahaufnahme: Alex, besorgt
-[gesicht du ort=wohnung besorgt] Die Datei ist drei Wochen *alt*. Älter als das Ereignis.
+[gesicht du ort=wohnung besorgt rauch=false] Die Datei ist drei Wochen *alt*. Älter als das Ereignis.
 
 == Kapitel 4: Ankerperson ==
 @zeit morgen
 @hud tag=2 zeit=09:50 handy=94/100% netz=4/4 konsole=nicht_verbunden
 // Nahaufnahme: Alex, schaut auf die Uhr
-[gesicht du ort=wohnung neutral] Der Wagen kommt in einer Stunde. Aber Lea scrollt weiter.
+[gesicht du ort=wohnung neutral rauch=false] Der Wagen kommt in einer Stunde. Aber Lea scrollt weiter.
 // Handy: Seite 3, Tabelle mit Überschrift „Ankerpersonen“
-[handy bildschirm=tabelle uhrzeit=09:50 akku=94 netz=4 ort=wohnung markiere=false] Seite drei: eine Liste. Überschrift: „*Ankerpersonen*“.
+[handy bildschirm=tabelle uhrzeit=09:50 akku=94 netz=4 ort=wohnung markiere=false rauch=false] Seite drei: eine Liste. Überschrift: „*Ankerpersonen*“.
 // Handy, nah: „A: Brandt, Alex – Kastanienweg 7, 3. OG“
-[handy bildschirm=tabelle uhrzeit=09:50 akku=94 netz=4 ort=wohnung] Erste Zeile: Brandt, Alex. Kastanienweg 7. Dritter Stock.
+[handy bildschirm=tabelle uhrzeit=09:50 akku=94 netz=4 ort=wohnung rauch=false] Erste Zeile: Brandt, Alex. Kastanienweg 7. Dritter Stock.
 // Nahaufnahme: Alex, Schreck
-[gesicht du ort=wohnung schreck] Geschrieben drei Wochen *vor* dem Ereignis.
+[gesicht du ort=wohnung schreck rauch=false] Geschrieben drei Wochen *vor* dem Ereignis.
 // Nahaufnahme: Lea, misstrauisch
-[gesicht lea ort=wohnung misstrauisch] „Sie will dich nicht retten“, sagt Lea. „Sie hat dich *ausgesucht*.“
+[gesicht lea ort=wohnung misstrauisch rauch=false] „Sie will dich nicht retten“, sagt Lea. „Sie hat dich *ausgesucht*.“
 [titel oben="Folge 5: Unter deiner Wohnung" gross="Fortsetzung folgt" farbe=#14213d akzent=#e2b443 groesse=110 dauer=1 hud=false]
 
 == Check ==

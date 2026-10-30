@@ -10,71 +10,71 @@
 @zeit tag
 @hud tag=2 zeit=14:20 handy=77/100% netz=0/4 konsole=28/100%
 // Raum S7: In der Tür steht eine Frau mit Mantel und Tablet, Gegenlicht
-[keller ansicht=raum licht=konsole display="NEUES MUSTER|GESPEICHERT: T" l1=an winter winter:verschraenkt] Stell dir vor, die Frau hinter allem steht plötzlich vor dir.
+[keller ansicht=raum licht=konsole display="NEUES MUSTER|GESPEICHERT: T" l1=an winter winter:verschraenkt rauch=false] Stell dir vor, die Frau hinter allem steht plötzlich vor dir.
 // Display nah: „Neues Muster gespeichert: T“
-[keller ansicht=raum licht=konsole display="NEUES MUSTER|GESPEICHERT: T" l1=an fokus=330,885 zoom=2.3] Gerade piept noch die Konsole: „Neues Muster gespeichert: T.“
+[keller ansicht=raum licht=konsole display="NEUES MUSTER|GESPEICHERT: T" l1=an fokus=330,885 zoom=2.3 rauch=false] Gerade piept noch die Konsole: „Neues Muster gespeichert: T.“
 // Raum S7: Winter tritt ein, ruhig
-[keller ansicht=raum licht=konsole display="NEUES MUSTER|GESPEICHERT: T" l1=an winter] Doktor Eva Winter. Mantel. Tablet.
+[keller ansicht=raum licht=konsole display="NEUES MUSTER|GESPEICHERT: T" l1=an winter rauch=false] Doktor Eva Winter. Mantel. Tablet.
 // Nahaufnahme: Winter, freundlich
-[gesicht winter ort=keller ansicht=raum licht=konsole froh] „Herr Brandt. Sie haben S7 geweckt.“
+[gesicht winter ort=keller ansicht=raum licht=konsole froh rauch=false] „Herr Brandt. Sie haben S7 geweckt.“
 // Nahaufnahme: Lea, verschränkte Arme, stellt sich zwischen Alex und Winter
-[gesicht lea ort=keller ansicht=raum licht=konsole neutral] Lea stellt sich zwischen euch. Freundlich ist anders.
+[gesicht lea ort=keller ansicht=raum licht=konsole neutral rauch=false] Lea stellt sich zwischen euch. Freundlich ist anders.
 // Nahaufnahme: Alex, zieht den Bauch ein
-[gesicht du ort=keller ansicht=raum licht=konsole neutral] Du ziehst den Bauch ein. *Schon* wieder.
+[gesicht du ort=keller ansicht=raum licht=konsole neutral rauch=false] Du ziehst den Bauch ein. *Schon* wieder.
 [titel oben="Folge 8" gross="DER LETZTE MANN" unten="Du warst nicht vorgesehen" farbe=#14213d akzent=#e2b443 groesse=120 dauer=1 hud=false]
 
 == Was bisher geschah ==
 // Raum S7: Konsole
-[keller ansicht=raum licht=konsole hud=false] Unter deinem Haus steht die Konsole von Projekt Spiegel.
+[keller ansicht=raum licht=konsole rauch=false hud=false] Unter deinem Haus steht die Konsole von Projekt Spiegel.
 // Skyline
 [skyline rauch=false hud=false] Alle Männer sind verschwunden. Nur du nicht.
 // Projekttelefon
-[keller ansicht=raum licht=konsole fokus=450,700 zoom=2.5 hud=false] Über ein Telefon im Keller hast du deinen Vater erreicht.
+[keller ansicht=raum licht=konsole fokus=450,700 zoom=2.5 rauch=false hud=false] Über ein Telefon im Keller hast du deinen Vater erreicht.
 // Nahaufnahme: Alex
-[gesicht du ort=wohnung neutral hud=false] Bei ihm sind alle Frauen weg. Bis auf eine.
+[gesicht du ort=wohnung neutral rauch=false hud=false] Bei ihm sind alle Frauen weg. Bis auf eine.
 
 == Kapitel 2: Zwei Welten ==
 @zeit tag
 @hud tag=2 zeit=14:40 handy=76/100% netz=0/4 konsole=28/100%
 // Nahaufnahme: Winter, sachlich
-[gesicht winter ort=keller ansicht=raum licht=konsole neutral] „Wir wollten die Welt kurz spiegeln. Zum Messen.“
+[gesicht winter ort=keller ansicht=raum licht=konsole neutral rauch=false] „Wir wollten die Welt kurz spiegeln. Zum Messen.“
 // Infokarte: Satellit mit Uhr, „+38 µs pro Tag“
-[objekt objekte="satellit:+38 Mikrosekunden" farbe=#1e2f45] GPS-Uhren gehen wegen der Relativität täglich 38 Mikrosekunden vor.
+[objekt objekte="satellit:+38 Mikrosekunden" farbe=#1e2f45 rauch=false] GPS-Uhren gehen wegen der Relativität täglich 38 Mikrosekunden vor.
 // Infokarte: Karte mit Punkt, der um „10 km“ verrutscht
-[objekt objekte="gps_fehler:ohne Korrektur" farbe=#1e2f45] Unkorrigiert wäre GPS pro Tag zehn Kilometer daneben.
+[objekt objekte="gps_fehler:ohne Korrektur" farbe=#1e2f45 rauch=false] Unkorrigiert wäre GPS pro Tag zehn Kilometer daneben.
 // Nahaufnahme: Winter, besorgt
-[gesicht winter ort=keller ansicht=raum licht=konsole besorgt] „Um 8:13 wurde daraus eine zweite *Welt*.“
+[gesicht winter ort=keller ansicht=raum licht=konsole besorgt rauch=false] „Um 8:13 wurde daraus eine zweite *Welt*.“
 // Nahaufnahme: Alex, Schreck
-[gesicht du ort=keller ansicht=raum licht=konsole schreck] Zwei Welten. Hier die Frauen. Drüben die Männer. Und Papa.
+[gesicht du ort=keller ansicht=raum licht=konsole schreck rauch=false] Zwei Welten. Hier die Frauen. Drüben die Männer. Und Papa.
 // SCHNITT: Ende Teil 1
 
 == Kapitel 3: Ankerpersonen ==
 @zeit tag
 @hud tag=2 zeit=16:00 handy=70/100% netz=0/4 konsole=27/100%
 // New-York-Platz am Morgen, alle Bildschirme flackern
-[newyork zeit=morgen flackern bild=webcam schirm="THE LAST MAN?"] In New York flackerten um 15:13 wieder alle Bildschirme. Niemand weiß, warum.
+[newyork zeit=morgen flackern bild=webcam schirm="THE LAST MAN?" rauch=false] In New York flackerten um 15:13 wieder alle Bildschirme. Niemand weiß, warum.
 // Nahaufnahme: Winter
-[gesicht winter ort=keller ansicht=raum licht=konsole neutral] „Jede Seite braucht einen Anker“, sagt Winter. „Dich. Aus der Hörstudie.“
+[gesicht winter ort=keller ansicht=raum licht=konsole neutral rauch=false] „Jede Seite braucht einen Anker“, sagt Winter. „Dich. Aus der Hörstudie.“
 // Raum S7: Winter zeigt auf das dritte Lämpchen
-[keller ansicht=raum licht=konsole display="MUSTER: A · B · T" l1=an winter fokus=330,1035 zoom=2.4] „Das dritte Lämpchen zeigt gespeicherte Muster an dieser Tür. Auf *beiden* Seiten.“
+[keller ansicht=raum licht=konsole display="MUSTER: A · B · T" l1=an winter fokus=330,1035 zoom=2.4 rauch=false] „Das dritte Lämpchen zeigt gespeicherte Muster an dieser Tür. Auf *beiden* Seiten.“
 // Messkammertür
-[keller ansicht=raum licht=konsole display="MUSTER: A · B · T" l1=an fokus=860,1090 zoom=1.35] „Ein Anker hält eine Seite. Zwei Anker an derselben Schwelle halten eine *Tür*.“
+[keller ansicht=raum licht=konsole display="MUSTER: A · B · T" l1=an fokus=860,1090 zoom=1.35 rauch=false] „Ein Anker hält eine Seite. Zwei Anker an derselben Schwelle halten eine *Tür*.“
 // Nahaufnahme: Winter, ernst, Blick zu Lea
-[gesicht winter ort=keller ansicht=raum licht=konsole besorgt] „Ohne Kontrolle verschiebt so eine Tür Menschen. Auch Lea.“
+[gesicht winter ort=keller ansicht=raum licht=konsole besorgt rauch=false] „Ohne Kontrolle verschiebt so eine Tür Menschen. Auch Lea.“
 
 == Kapitel 4: Die zweite Ausnahme ==
 @zeit abend
 @hud tag=2 zeit=17:30 handy=64/100% netz=0/4 konsole=25/100%
 // Konsole: Winter dreht ihren Schlüssel auf „SPERRE“
-[keller ansicht=raum licht=konsole display="GESPERRT" schalter=sperre schluessel winter schalter=sperre schluessel] Winter sperrt die Konsole. „Morgen um acht schalte ich ab.“
+[keller ansicht=raum licht=konsole display="GESPERRT" schalter=sperre schluessel winter schalter=sperre schluessel rauch=false] Winter sperrt die Konsole. „Morgen um acht schalte ich ab.“
 // Nahaufnahme: Winter
-[gesicht winter ort=keller ansicht=raum licht=konsole neutral] „Lassen Sie die Sicherung aus. Ohne Netzstrom: nur zehn Sekunden.“
+[gesicht winter ort=keller ansicht=raum licht=konsole neutral rauch=false] „Lassen Sie die Sicherung aus. Ohne Netzstrom: nur zehn Sekunden.“
 // Tablet: Winter will es wegstecken, Lea greift danach
-[handy bildschirm=protokoll wer=winter ort=keller ansicht=raum licht=konsole zeilen="Anker B · Seite B|Wählversuche: 31|stündlich seit Tag 1, 10:13|Gegenstelle: S7 (B)"] Auf ihrem Tablet blinkt ein Protokoll. Lea schnappt es sich.
+[handy bildschirm=protokoll wer=winter ort=keller ansicht=raum licht=konsole zeilen="Anker B · Seite B|Wählversuche: 31|stündlich seit Tag 1, 10:13|Gegenstelle: S7 (B)" rauch=false] Auf ihrem Tablet blinkt ein Protokoll. Lea schnappt es sich.
 // Tablet nah: „Anker B · Seite B · Wählversuche: 31 · stündlich seit Tag 1, 10:13“
-[handy bildschirm=protokoll wer=winter ort=keller ansicht=raum licht=konsole zeilen="Anker B · Seite B|Wählversuche: 31|stündlich seit Tag 1, 10:13|Gegenstelle: S7 (B)"] „Anker B. Seite B. Wählversuche: 31.“
+[handy bildschirm=protokoll wer=winter ort=keller ansicht=raum licht=konsole zeilen="Anker B · Seite B|Wählversuche: 31|stündlich seit Tag 1, 10:13|Gegenstelle: S7 (B)" rauch=false] „Anker B. Seite B. Wählversuche: 31.“
 // Nahaufnahme: Alex, Schreck
-[gesicht du ort=keller ansicht=raum licht=konsole schreck] Die zweite Ausnahme sucht *dich*. Seit gestern.
+[gesicht du ort=keller ansicht=raum licht=konsole schreck rauch=false] Die zweite Ausnahme sucht *dich*. Seit gestern.
 [titel oben="Folge 9: Die zweite Ausnahme" gross="Fortsetzung folgt" farbe=#14213d akzent=#e2b443 groesse=110 dauer=1 hud=false]
 
 == Check ==

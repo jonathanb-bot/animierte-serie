@@ -268,6 +268,7 @@ def baue(n):
             bild, text = e.groups()
             tag = szene(n, kap if modus == "k" else 0, bild, text, kz if modus == "k" else {"orte": ""}, h or {"zeit": "09:00", "handy": "60/100%", "netz": "4/4"})
             if tag is None: continue
+            if "rauch=" not in tag: tag += " rauch=false"  # kein Rauch über der Stadt (Überbleibsel aus „24. Stock“)
             if modus == "r": tag += " hud=false"
             out += [f"// {bild}", f"[{tag}] {text}"]
     alt.write_text("\n".join(out) + "\n", encoding="utf-8")

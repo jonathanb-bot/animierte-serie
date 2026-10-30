@@ -10,71 +10,71 @@
 @zeit nacht
 @hud tag=2 zeit=20:40 handy=92/100% netz=0/4 konsole=22/100%
 // Raum S7 im Taschenlampenlicht, die Konsole dunkel
-[keller ansicht=raum licht=taschenlampe display="GESPERRT" schalter=sperre] Stell dir vor, jemand drückt jede Stunde einen Knopf. Für *dich*.
+[keller ansicht=raum licht=taschenlampe display="GESPERRT" schalter=sperre rauch=false] Stell dir vor, jemand drückt jede Stunde einen Knopf. Für *dich*.
 // Lea steckt den kleinen Schlüssel „S7-S“ in den Schlüsselschalter
-[keller ansicht=raum licht=taschenlampe display="GESPERRT" schalter=sperre lea fokus=340,1190 zoom=2.4 schluessel] Winter ist weg. Lea probiert den kleinen Schlüssel.
+[keller ansicht=raum licht=taschenlampe display="GESPERRT" schalter=sperre lea fokus=340,1190 zoom=2.4 schluessel rauch=false] Winter ist weg. Lea probiert den kleinen Schlüssel.
 // Schlüsselschalter dreht auf „BETRIEB“, Lämpchen 1 grün
-[keller ansicht=raum licht=taschenlampe display="GESPERRT" schalter=sperre fokus=330,1035 zoom=2.4 schalter=betrieb schluessel] Er passt. Die Konsole steht wieder auf „Betrieb“.
+[keller ansicht=raum licht=taschenlampe display="GESPERRT" schalter=sperre fokus=330,1035 zoom=2.4 schalter=betrieb schluessel rauch=false] Er passt. Die Konsole steht wieder auf „Betrieb“.
 // Suchstelle bei Nacht, Kerzen vor der Fotowand, Nikas Zettel mit gelbem Schal
-[suchstelle k3 markiere zeit=nacht] An der Suchstelle brennen jetzt Kerzen. Nikas Zettel hängt noch.
+[suchstelle k3 markiere zeit=nacht rauch=false] An der Suchstelle brennen jetzt Kerzen. Nikas Zettel hängt noch.
 // Handy: Foto „Nika S., 26 – Kastanienweg 7, 1. OG“ vergrößert
-[handy bildschirm=foto uhrzeit=20:40 akku=92 netz=0 ort=keller] Auf Leas Foto: „Nika S. Kastanienweg 7.“
+[handy bildschirm=foto uhrzeit=20:40 akku=92 netz=0 ort=keller rauch=false] Auf Leas Foto: „Nika S. Kastanienweg 7.“
 // Nahaufnahme: Alex, verlegen
-[gesicht du ort=keller ansicht=raum licht=konsole muede] Sie wohnt in *deinem* Haus. Angesprochen hast du sie nie.
+[gesicht du ort=keller ansicht=raum licht=konsole muede rauch=false] Sie wohnt in *deinem* Haus. Angesprochen hast du sie nie.
 [titel oben="Folge 9" gross="DER LETZTE MANN" unten="Die zweite Ausnahme" farbe=#14213d akzent=#e2b443 groesse=120 dauer=1 hud=false]
 
 == Was bisher geschah ==
 // Raum S7: Konsole
-[keller ansicht=raum licht=konsole hud=false] Du bist der letzte Mann. Unter deinem Haus steht eine Konsole.
+[keller ansicht=raum licht=konsole rauch=false hud=false] Du bist der letzte Mann. Unter deinem Haus steht eine Konsole.
 // Nahaufnahme: Winter
-[gesicht winter ort=wohnung neutral hud=false] Doktor Winter will sie morgen früh *abschalten*.
+[gesicht winter ort=wohnung neutral rauch=false hud=false] Doktor Winter will sie morgen früh *abschalten*.
 // Konsole: blaues Lämpchen
-[keller ansicht=raum licht=konsole fokus=330,1035 zoom=2.4 hud=false] Über sie erreichst du die andere Welt. Zehn Sekunden pro Stunde.
+[keller ansicht=raum licht=konsole fokus=330,1035 zoom=2.4 rauch=false hud=false] Über sie erreichst du die andere Welt. Zehn Sekunden pro Stunde.
 // Tablet: Protokoll
-[handy bildschirm=protokoll wer=winter ort=keller ansicht=raum licht=konsole hud=false] Dort sucht die zweite Ausnahme nach dir.
+[handy bildschirm=protokoll wer=winter ort=keller ansicht=raum licht=konsole rauch=false hud=false] Dort sucht die zweite Ausnahme nach dir.
 
 == Kapitel 2: Die Plombe ==
 @zeit nacht
 @hud tag=2 zeit=21:00 handy=90/100% netz=0/4 konsole=22/100%+
 // Kellerflur: Hausverteiler, rote Plombe an der Sicherung S7
-[keller ansicht=flur fokus=225,840 zoom=1.9] Mehr als zehn Sekunden gibt es nur mit Netzstrom.
+[keller ansicht=flur fokus=225,840 zoom=1.9 rauch=false] Mehr als zehn Sekunden gibt es nur mit Netzstrom.
 // Nahaufnahme: Lea, entschlossen
-[gesicht lea ort=keller ansicht=raum licht=konsole entschlossen] „Winter will eine Tür kontrollieren“, sagt Lea. „Ich will meinen *Bruder* zurück.“
+[gesicht lea ort=keller ansicht=raum licht=konsole entschlossen rauch=false] „Winter will eine Tür kontrollieren“, sagt Lea. „Ich will meinen *Bruder* zurück.“
 // Lea klappt die Sicherung hoch, die Plombe reißt
-[keller ansicht=flur sicherung=an ton=strom_an fokus=225,840 zoom=1.9] Die Plombe reißt. Klack.
+[keller ansicht=flur sicherung=an ton=strom_an fokus=225,840 zoom=1.9 rauch=false] Die Plombe reißt. Klack.
 // Raum S7: Deckenlicht geht an, Display „NETZ · lädt“
-[keller ansicht=raum licht=an display="NETZ · LÄDT|AKKU 22 %" l1=an licht=an ton=strom_an] Im Raum geht das Licht an. Die Konsole lädt.
+[keller ansicht=raum licht=an display="NETZ · LÄDT|AKKU 22 %" l1=an licht=an ton=strom_an rauch=false] Im Raum geht das Licht an. Die Konsole lädt.
 // Nahaufnahme: Lea, ernst
-[gesicht lea ort=keller ansicht=raum licht=konsole besorgt] „Jetzt nur noch in derselben *Sekunde* drücken. Du und sie.“
+[gesicht lea ort=keller ansicht=raum licht=konsole besorgt rauch=false] „Jetzt nur noch in derselben *Sekunde* drücken. Du und sie.“
 // SCHNITT: Ende Teil 1
 
 == Kapitel 3: Zwei Sekunden ==
 @zeit nacht
 @hud tag=2 zeit=22:13 handy=86/100% netz=0/4 konsole=46/100%+
 // Konsole: Alex' Finger über der Taste, daneben sein Handy mit 22:13
-[keller ansicht=raum licht=an display="NETZ · LÄDT|AKKU 46 %" l1=an du fokus=340,1190 zoom=2.4 druecken] 22:13 Uhr. Du drückst nach deiner Handyuhr.
+[keller ansicht=raum licht=an display="NETZ · LÄDT|AKKU 46 %" l1=an du fokus=340,1190 zoom=2.4 druecken rauch=false] 22:13 Uhr. Du drückst nach deiner Handyuhr.
 // Bahnhof bei Nacht, leer, die Bahnsteiganzeige flackert
-[bahnhof zeit=nacht flackern zug="22:13   Kein Zugverkehr" anzeige="Bitte warten" uhr=22:13] Am Bahnhof flackert die Anzeige.
+[bahnhof zeit=nacht flackern zug="22:13   Kein Zugverkehr" anzeige="Bitte warten" uhr=22:13 rauch=false] Am Bahnhof flackert die Anzeige.
 // Display nah: „Gegenstelle verpasst (−2 s)“
-[keller ansicht=raum licht=an display="NETZ · LÄDT|AKKU 46 %" l1=an fokus=330,885 zoom=2.3] „Verpasst.“ Zwei Sekunden. Deine Handyuhr geht ohne Netz nach.
+[keller ansicht=raum licht=an display="NETZ · LÄDT|AKKU 46 %" l1=an fokus=330,885 zoom=2.3 rauch=false] „Verpasst.“ Zwei Sekunden. Deine Handyuhr geht ohne Netz nach.
 // Lea stellt ihren Funkwecker auf die Konsole
-[keller ansicht=raum licht=an display="NETZ · LÄDT|AKKU 46 %" l1=an lea funkwecker=22:58:41] Lea holt ihren Funkwecker.
+[keller ansicht=raum licht=an display="NETZ · LÄDT|AKKU 46 %" l1=an lea funkwecker=22:58:41 rauch=false] Lea holt ihren Funkwecker.
 // Infokarte: Funkturm bei Frankfurt, Wellen über Europa, „ca. 2000 km“
-[objekt objekte="funkuhr:ca. 2000 km" farbe=#1e2f45] Funkuhren holen die Zeit von einem Sender bei Frankfurt. Reichweite: 2000 Kilometer.
+[objekt objekte="funkuhr:ca. 2000 km" farbe=#1e2f45 rauch=false] Funkuhren holen die Zeit von einem Sender bei Frankfurt. Reichweite: 2000 Kilometer.
 
 == Kapitel 4: Das dritte Lämpchen ==
 @zeit nacht
 @hud tag=2 zeit=22:58 handy=84/100% netz=0/4 konsole=61/100%+
 // Funkwecker nah, Sekunden laufen
-[keller ansicht=raum licht=an display="NETZ · LÄDT|NÄCHSTES FENSTER|23:13:00" l1=an fokus=215,700 zoom=2.6 funkwecker=22:58:41] Der Funkwecker zeigt die Sekunden. Noch fünfzehn Minuten.
+[keller ansicht=raum licht=an display="NETZ · LÄDT|NÄCHSTES FENSTER|23:13:00" l1=an fokus=215,700 zoom=2.6 funkwecker=22:58:41 rauch=false] Der Funkwecker zeigt die Sekunden. Noch fünfzehn Minuten.
 // Nahaufnahme: Alex, richtet seine Haare
-[gesicht du ort=keller ansicht=raum licht=konsole neutral] Du richtest deine Haare. Für eine *Stimme*.
+[gesicht du ort=keller ansicht=raum licht=konsole neutral rauch=false] Du richtest deine Haare. Für eine *Stimme*.
 // Nahaufnahme: Lea, trocken
-[gesicht lea ort=keller ansicht=raum licht=konsole neutral] „Sie sieht dich nicht“, sagt Lea. „Ich weiß.“
+[gesicht lea ort=keller ansicht=raum licht=konsole neutral rauch=false] „Sie sieht dich nicht“, sagt Lea. „Ich weiß.“
 // Raum S7: Alex an der Konsole, die Messkammertür weit weg und leer
-[keller ansicht=raum licht=an display="NETZ · LÄDT|NÄCHSTES FENSTER|23:13:00" l1=an du] Du stehst an der Konsole. Niemand ist an der Tür.
+[keller ansicht=raum licht=an display="NETZ · LÄDT|NÄCHSTES FENSTER|23:13:00" l1=an du rauch=false] Du stehst an der Konsole. Niemand ist an der Tür.
 // Konsole nah: Das dritte Lämpchen leuchtet weiß
-[keller ansicht=raum licht=an display="NETZ · LÄDT|NÄCHSTES FENSTER|23:13:00" l1=an fokus=330,1035 zoom=2.4 l3=an] Da leuchtet das dritte Lämpchen. Ohne Verbindung. Ohne *dich*.
+[keller ansicht=raum licht=an display="NETZ · LÄDT|NÄCHSTES FENSTER|23:13:00" l1=an fokus=330,1035 zoom=2.4 l3=an rauch=false] Da leuchtet das dritte Lämpchen. Ohne Verbindung. Ohne *dich*.
 [titel oben="Folge 10: Die Stimme" gross="Fortsetzung folgt" farbe=#14213d akzent=#e2b443 groesse=110 dauer=1 hud=false]
 
 == Check ==
