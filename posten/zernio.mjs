@@ -39,6 +39,23 @@ if (!konten.ok) { console.error("Konten konnten nicht geladen werden:", konten.s
 const liste = (konten.json.accounts || []).filter(a => a.isActive !== false);
 console.log("Verbundene Konten:", liste.map(a => `${a.platform}:${a.username || a.displayName}`).join(", ") || "keine");
 if (args.includes("--konten")) process.exit(0);
+
+// --status: bei Zernio nachfragen, was aus den fälligen Posts geworden ist
+if (args.includes("--status")) {
+  const jetzt = new Date(new Date().toLocaleString("en-US", { timeZone: "Europe/Berlin" }));
+  const iso = d => d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0") + "T" + String(d.getHours()).padStart(2, "0") + ":" + String(d.getMinutes()).padStart(2, "0");
+  for (const post of plan.posts) {
+    const st = status[post.id];
+    if (!st?.zernioId || post.zeit.slice(0, 16) > iso(jetzt)) continue;
+    const r = await api("GET", `/posts/${st.zernioId}`);
+    const p = r.json?.post || r.json || {};
+    const pl = (p.platforms || [])[0] || {};
+    const info = { status: p.status, plattform: pl.status, url: pl.platformPostUrl || pl.url || pl.publishedUrl, fehler: pl.errorMessage || pl.error || p.error };
+    st.ergebnis = info; speichern();
+    console.log(`${post.id} (${post.zeit}): ${JSON.stringify(info)}${r.ok ? "" : " HTTP " + r.status + " " + JSON.stringify(r.json).slice(0, 300)}`);
+  }
+  process.exit(0);
+}
 const konto = p => liste.find(a => a.platform === p);
 
 // Geplante Posts zurückziehen: Einträge in plan.loeschen (IDs aus status.json)

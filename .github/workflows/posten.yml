@@ -12,6 +12,10 @@ on:
         description: "Nur diese Posts, z.B. tiktok-08,insta-01-1 (leer = alle offenen)"
         required: false
         default: ""
+      status:
+        description: "Nur Status abfragen (true/false)"
+        required: false
+        default: "false"
 
 permissions:
   contents: write
@@ -34,7 +38,9 @@ jobs:
         env:
           ZERNIO_API_KEY: ${{ secrets.ZERNIO_API_KEY }}
         run: |
-          if [ -n "${{ github.event.inputs.nur }}" ]; then
+          if [ "${{ github.event.inputs.status }}" = "true" ]; then
+            node posten/zernio.mjs --status | tee posten/letzter-status.txt
+          elif [ -n "${{ github.event.inputs.nur }}" ]; then
             node posten/zernio.mjs --nur "${{ github.event.inputs.nur }}" | tee posten/letzter-lauf.txt
           else
             node posten/zernio.mjs | tee posten/letzter-lauf.txt
@@ -44,5 +50,5 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@users.noreply.github.com"
-          git add posten/status.json posten/letzter-lauf.txt 2>/dev/null || true
+          git add posten/status.json posten/letzter-lauf.txt posten/letzter-status.txt 2>/dev/null || true
           git diff --cached --quiet || (git commit -m "Posting-Stand aktualisiert [skip ci]" && git push)
