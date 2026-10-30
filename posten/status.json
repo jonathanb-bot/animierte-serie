@@ -4,7 +4,12 @@
   "zeit": "2026-10-29T22:30:00",
   "zernioId": "6ae3b52a28e18fc94a535cf4",
   "http": 201,
-  "am": "2026-10-29T21:05:46.952Z"
+  "am": "2026-10-29T21:05:46.952Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.tiktok.com/@storys4you.de1/video/7702205955043298592"
+  }
  },
  "tiktok-09": {
   "ok": true,
@@ -25,7 +30,12 @@
   "zeit": "2026-10-30T07:00:00",
   "zernioId": "6ae3bbf0ef13cf6f76ac942e",
   "http": 201,
-  "am": "2026-10-29T21:34:40.612Z"
+  "am": "2026-10-29T21:34:40.612Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfG5PZyEXqk/"
+  }
  },
  "insta-01-2": {
   "ok": true,
