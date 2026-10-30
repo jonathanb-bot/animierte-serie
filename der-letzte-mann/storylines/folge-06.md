@@ -37,7 +37,7 @@ KAPITEL 3: Drei Lämpchen | keller (raum) | Alex, Lea | Tag | Anzeige: Tag 2, 13
 * Konsole nah: drei Lämpchen „BEREIT“, „VERBINDUNG“, „SCHWELLE“, alle aus – An der Konsole: drei Lämpchen. „Bereit“, „Verbindung“, „Schwelle“.
 * Raum S7: hinten eine schwere Stahltür „MESSKAMMER“ – Hinten eine zweite Stahltür: „Messkammer“. Die Klinke gibt nicht nach.
 * Alex' Hand auf der Klinke, das dritte Lämpchen flackert einmal weiß – Als du sie anfasst, flackert das dritte Lämpchen. *Einmal*.
-* Nahaufnahme: Lea, misstrauisch – „Hast du was gedrückt?“ – „Nein.“
+* Nahaufnahme: Lea, misstrauisch – „Hast du was gedrückt?“, fragt Lea. „Nein.“
 * Konsole: Schlüsselschalter auf „BETRIEB“, daneben eine große Taste „BEREIT“ – Daneben ein Schlüsselschalter. Und eine große Taste: *Bereit*.
 (Haken am Ende: Drückt er?)
 

@@ -1,7 +1,4 @@
 # Folge 2: Bleib vom Fenster weg
-@musik musik/folge-02.mp3
-@musik_lautstaerke 1
-@whoosh aus
 @serie Der letzte Mann
 @mund zitate
 @look 0
@@ -65,8 +62,8 @@
 [wohnung du lea] Als Lea zurückkommt, stehst du immer noch am Fenster.
 // Nahaufnahme: Lea, wütend
 [gesicht lea ort=wohnung wuetend] „Weg da!“ Sie zieht dich am Shirt zurück.
-// Nahaufnahme: Alex, gekränkt; Lea trocken – „Ich hab nur kurz die Haare …“
-[gesicht du ort=wohnung neutral] „Das sehe ich.“
+// Nahaufnahme: Alex, gekränkt; Lea trocken
+[gesicht du ort=wohnung neutral] „Ich hab nur kurz die Haare …“ „Das sehe ich“, sagt Lea.
 // Nahaufnahme: Lea, ihr Handy vibriert, sie wird blass
 [gesicht lea ort=wohnung neutral] Dann vibriert ihr Handy. Eine Kollegin schickt einen Link.
 // Handy: Post mit grobem Wetterkamera-Bild, Alex am Fenster, „Ist das ein MANN?? Kastanienweg“, „vor 3 Minuten“

@@ -48,8 +48,8 @@
 [keller ansicht=raum nah=funkwecker l2=an] 0:13 Uhr. Nika spricht schnell.
 // Nahaufnahme: Alex, Hörer am Ohr
 [gesicht du ort=keller neutral] „1:13 Uhr. Beide an die Kellertür. Auf drei drücken wir die Klinke.“
-// Nahaufnahme: Alex, misstrauisch – „Warst du um 22:58 an der Tür?“
-[gesicht du ort=keller misstrauisch] „Nein. Da war ich *oben*.“
+// Nahaufnahme: Alex, misstrauisch
+[gesicht du ort=keller misstrauisch] „Warst du um 22:58 an der Tür?“ „Nein“, sagt Nika. „Da war ich *oben*.“
 // Konsole nah: Das dritte Lämpchen leuchtet weiter
 [keller ansicht=raum nah=konsole l3=an] Wer war es dann? Das dritte Lämpchen leuchtet noch.
 

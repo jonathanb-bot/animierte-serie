@@ -1,4 +1,7 @@
 # Folge 8: Du warst nicht vorgesehen
+@musik musik/folge-08.mp3
+@musik_lautstaerke 1
+@whoosh aus
 @serie Der letzte Mann
 @mund zitate
 @look 0

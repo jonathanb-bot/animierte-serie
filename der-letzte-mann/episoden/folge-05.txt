@@ -1,4 +1,7 @@
 # Folge 5: Unter deiner Wohnung
+@musik musik/folge-05.mp3
+@musik_lautstaerke 1
+@whoosh aus
 @serie Der letzte Mann
 @mund zitate
 @look 0

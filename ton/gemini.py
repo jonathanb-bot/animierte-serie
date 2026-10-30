@@ -196,6 +196,20 @@ def _ruhigste(x: np.ndarray, t0: float, t1: float) -> float:
     return (a + int(np.argmin(e)) + 1.5 * fr) / A.SR
 
 
+def _ohne_stilanweisung(x: np.ndarray, erkannt: list, log=print):
+    """Liest Gemini die Stilanweisung mit vor, steht sie vor dem Text. Die Zuordnung schneidet sie nicht immer weg
+    (wird das erste Skriptwort nicht erkannt, beginnt die erste Zeile beim Anfang der Aufnahme). Darum: bis zum
+    letzten Wort der Anweisung abschneiden und neu erkennen."""
+    stil = [norm(w) for w in STIL.split() if norm(w)]
+    n = [norm(w) for _, _, w in erkannt[:len(stil) + 15]]
+    if len(n) < 3 or n[:2] != stil[:2] or stil[-1] not in n:
+        return x, erkannt
+    k = n.index(stil[-1])
+    log(f"    Stilanweisung mitgelesen – bis {erkannt[k][1]:.1f} s abgeschnitten")
+    x = x[A.sek(erkannt[k][1] + 0.05):]
+    return x, _erkennen(x)
+
+
 def sprechen(zeilen: list[str], kapitel: list[int], stimme="Orus", kapitel_pro_anfrage=2,
              anfragen: int | None = None, log=print) -> list[Gesprochen]:
     """Eine Folge sprechen. zeilen = Sprechtext je Einstellung (mit *Markierungen*), kapitel = Kapitel je Zeile.
@@ -210,7 +224,8 @@ def sprechen(zeilen: list[str], kapitel: list[int], stimme="Orus", kapitel_pro_a
         bloecke.setdefault(k // kapitel_pro_anfrage, []).append(i)
     out: list[Gesprochen | None] = [None] * len(zeilen)
     for idx in bloecke.values():
-        texte = [" ".join(markierungen(zeilen[i])[0].split()) for i in idx]
+        # „Frage:“/„Antwort:“ am Zeilenanfang hält Gemini sonst manchmal für Sprechernamen und lässt sie weg
+        texte = [re.sub(r"^(Frage|Antwort):", r"\1.", " ".join(markierungen(zeilen[i])[0].split())) for i in idx]
         x = _kuerzen(_block_audio(texte, stimme, log), MAX_PAUSE)
         if TEMPO != 1.0:
             with tempfile.TemporaryDirectory() as d:
@@ -219,6 +234,7 @@ def sprechen(zeilen: list[str], kapitel: list[int], stimme="Orus", kapitel_pro_a
                                 f"{d}/b.wav"], check=True)
                 x = A.laden(f"{d}/b.wav")
         erkannt = _erkennen(x)
+        x, erkannt = _ohne_stilanweisung(x, erkannt, log)
         woerter = [(z, w) for z, t in enumerate(texte) for w in t.split()]
         zeiten = _zuordnen([w for _, w in woerter], erkannt)
         # Zeilengrenzen: Mitte der Lücke zwischen letztem Wort der Zeile und erstem der nächsten

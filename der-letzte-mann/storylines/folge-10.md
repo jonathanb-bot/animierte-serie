@@ -37,7 +37,7 @@ KAPITEL 3: Wer war an der Tür? | tokio, keller (raum), gesicht | Alex, Lea, Nik
 * Tokio-Kreuzung am Morgen, Menschen halten Fotos ihrer Angehörigen hoch – In Tokio ist Morgen. Menschen halten Fotos hoch.
 * Funkwecker 00:13:00, das blaue Lämpchen – 0:13 Uhr. Nika spricht schnell.
 * Nahaufnahme: Alex, Hörer am Ohr – „1:13 Uhr. Beide an die Kellertür. Auf drei drücken wir die Klinke.“
-* Nahaufnahme: Alex, misstrauisch – „Warst du um 22:58 an der Tür?“ – „Nein. Da war ich *oben*.“
+* Nahaufnahme: Alex, misstrauisch – „Warst du um 22:58 an der Tür?“ „Nein“, sagt Nika. „Da war ich *oben*.“
 * Konsole nah: Das dritte Lämpchen leuchtet weiter – Wer war es dann? Das dritte Lämpchen leuchtet noch.
 (Haken am Ende: Wer ist noch da?)
 

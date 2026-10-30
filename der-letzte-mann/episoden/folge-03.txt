@@ -1,4 +1,7 @@
 # Folge 3: Sie kennen deinen Namen
+@musik musik/folge-03.mp3
+@musik_lautstaerke 1
+@whoosh aus
 @serie Der letzte Mann
 @mund zitate
 @look 0

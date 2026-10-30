@@ -1,4 +1,7 @@
 # Folge 7: Zehn Sekunden
+@musik musik/folge-07.mp3
+@musik_lautstaerke 1
+@whoosh aus
 @serie Der letzte Mann
 @mund zitate
 @look 0

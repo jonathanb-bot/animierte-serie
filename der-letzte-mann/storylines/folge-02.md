@@ -45,7 +45,7 @@ KAPITEL 3: Spiegelung | kueche, objekt, wohnung | Alex | Tag | Anzeige: Tag 1, 1
 KAPITEL 4: Vor drei Minuten | wohnung, gesicht, handy | Alex, Lea | Tag | Anzeige: Tag 1, 11:41, HANDY 74 % +, NETZ 2/4, KONSOLE nicht verbunden (grau)
 * Wohnung: Lea kommt herein, Alex steht noch am Fenster – Als Lea zurückkommt, stehst du immer noch am Fenster.
 * Nahaufnahme: Lea, wütend – „Weg da!“ Sie zieht dich am Shirt zurück.
-* Nahaufnahme: Alex, gekränkt; Lea trocken – „Ich hab nur kurz die Haare …“ – „Das sehe ich.“
+* Nahaufnahme: Alex, gekränkt; Lea trocken – „Ich hab nur kurz die Haare …“ „Das sehe ich“, sagt Lea.
 * Nahaufnahme: Lea, ihr Handy vibriert, sie wird blass – Dann vibriert ihr Handy. Eine Kollegin schickt einen Link.
 * Handy: Post mit grobem Wetterkamera-Bild, Alex am Fenster, „Ist das ein MANN?? Kastanienweg“, „vor 3 Minuten“ – Ein Bild der Wetterkamera. Du am Fenster. „Ist das ein *Mann*?“ Vor drei Minuten.
 (Haken am Ende: Jetzt kann es jeder sehen.)
