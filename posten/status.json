@@ -119,235 +119,301 @@
   "am": "2026-10-30T08:24:48.955Z"
  },
  "insta-03-1": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-10-31T20:00:00",
   "zernioId": "6ae45453830e388d1b488d36",
   "http": 201,
-  "am": "2026-10-30T08:24:51.709Z"
+  "am": "2026-10-30T08:24:51.709Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "insta-03-2": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-01T00:00:00",
   "zernioId": "6ae4545618859d94a2cc27d4",
   "http": 201,
-  "am": "2026-10-30T08:24:54.411Z"
+  "am": "2026-10-30T08:24:54.411Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "insta-03-3": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-01T04:00:00",
   "zernioId": "6ae4545918859d94a2cc27f3",
   "http": 201,
-  "am": "2026-10-30T08:24:57.228Z"
+  "am": "2026-10-30T08:24:57.228Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "insta-03-4": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-01T08:00:00",
   "zernioId": "6ae4545b18859d94a2cc280a",
   "http": 201,
-  "am": "2026-10-30T08:25:00.097Z"
+  "am": "2026-10-30T08:25:00.097Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "insta-04-1": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-01T12:00:00",
   "zernioId": "6ae4545e975c1428091878aa",
   "http": 201,
-  "am": "2026-10-30T08:25:03.010Z"
+  "am": "2026-10-30T08:25:03.010Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "insta-04-2": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-01T16:00:00",
   "zernioId": "6ae4546118859d94a2cc2832",
   "http": 201,
-  "am": "2026-10-30T08:25:05.851Z"
+  "am": "2026-10-30T08:25:05.851Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "insta-04-3": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-01T20:00:00",
   "zernioId": "6ae45464975c1428091878c7",
   "http": 201,
-  "am": "2026-10-30T08:25:08.618Z"
+  "am": "2026-10-30T08:25:08.618Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "insta-04-4": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-02T00:00:00",
   "zernioId": "6ae4546718859d94a2cc287a",
   "http": 201,
-  "am": "2026-10-30T08:25:11.415Z"
+  "am": "2026-10-30T08:25:11.415Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "insta-05-1": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-02T04:00:00",
   "zernioId": "6ae4546b18859d94a2cc28c8",
   "http": 201,
-  "am": "2026-10-30T08:25:16.134Z"
+  "am": "2026-10-30T08:25:16.134Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "insta-05-2": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-02T08:00:00",
   "zernioId": "6ae4546e18859d94a2cc2910",
   "http": 201,
-  "am": "2026-10-30T08:25:18.961Z"
+  "am": "2026-10-30T08:25:18.961Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "insta-05-3": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-02T12:00:00",
   "zernioId": "6ae4547118859d94a2cc2936",
   "http": 201,
-  "am": "2026-10-30T08:25:21.663Z"
+  "am": "2026-10-30T08:25:21.663Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "insta-05-4": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-02T16:00:00",
   "zernioId": "6ae4547418859d94a2cc295f",
   "http": 201,
-  "am": "2026-10-30T08:25:24.340Z"
+  "am": "2026-10-30T08:25:24.340Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "insta-06-1": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-02T20:00:00",
   "zernioId": "6ae4547618859d94a2cc2976",
   "http": 201,
-  "am": "2026-10-30T08:25:27.013Z"
+  "am": "2026-10-30T08:25:27.013Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "insta-06-2": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-03T00:00:00",
   "zernioId": "6ae4547918859d94a2cc2990",
   "http": 201,
-  "am": "2026-10-30T08:25:29.840Z"
+  "am": "2026-10-30T08:25:29.840Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "insta-06-3": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-03T04:00:00",
   "zernioId": "6ae4547c18859d94a2cc29a4",
   "http": 201,
-  "am": "2026-10-30T08:25:32.507Z"
+  "am": "2026-10-30T08:25:32.507Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "insta-06-4": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-03T08:00:00",
   "zernioId": "6ae4547f18859d94a2cc29cd",
   "http": 201,
-  "am": "2026-10-30T08:25:35.151Z"
+  "am": "2026-10-30T08:25:35.151Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "insta-06-5": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-03T12:00:00",
   "zernioId": "6ae4548118859d94a2cc29ef",
   "http": 201,
-  "am": "2026-10-30T08:25:37.837Z"
+  "am": "2026-10-30T08:25:37.837Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "insta-07-1": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-03T16:00:00",
   "zernioId": "6ae4548418859d94a2cc2a05",
   "http": 201,
-  "am": "2026-10-30T08:25:40.471Z"
+  "am": "2026-10-30T08:25:40.471Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "insta-07-2": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-03T20:00:00",
   "zernioId": "6ae45487975c142809187958",
   "http": 201,
-  "am": "2026-10-30T08:25:43.529Z"
+  "am": "2026-10-30T08:25:43.529Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "insta-07-3": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-04T00:00:00",
   "zernioId": "6ae4548a830e388d1b488d6b",
   "http": 201,
-  "am": "2026-10-30T08:25:46.171Z"
+  "am": "2026-10-30T08:25:46.171Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "insta-07-4": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-04T04:00:00",
   "zernioId": "6ae4548c18859d94a2cc2a4a",
   "http": 201,
-  "am": "2026-10-30T08:25:49.012Z"
+  "am": "2026-10-30T08:25:49.012Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "insta-08-1": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-04T08:00:00",
   "zernioId": "6ae4548f18859d94a2cc2a64",
   "http": 201,
-  "am": "2026-10-30T08:25:51.883Z"
+  "am": "2026-10-30T08:25:51.883Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "insta-08-2": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-04T12:00:00",
   "zernioId": "6ae45492830e388d1b488d73",
   "http": 201,
-  "am": "2026-10-30T08:25:54.656Z"
+  "am": "2026-10-30T08:25:54.656Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "insta-08-3": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-04T16:00:00",
   "zernioId": "6ae45495975c14280918798b",
   "http": 201,
-  "am": "2026-10-30T08:25:57.279Z"
+  "am": "2026-10-30T08:25:57.279Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "insta-08-4": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-04T20:00:00",
   "zernioId": "6ae4549718859d94a2cc2a9a",
   "http": 201,
-  "am": "2026-10-30T08:25:59.958Z"
+  "am": "2026-10-30T08:25:59.958Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "insta-09-1": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-05T00:00:00",
   "zernioId": "6ae4549a18859d94a2cc2ab8",
   "http": 201,
-  "am": "2026-10-30T08:26:02.817Z"
+  "am": "2026-10-30T08:26:02.817Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "insta-09-2": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-05T04:00:00",
   "zernioId": "6ae4549d830e388d1b488d87",
   "http": 201,
-  "am": "2026-10-30T08:26:05.572Z"
+  "am": "2026-10-30T08:26:05.572Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "insta-09-3": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-05T08:00:00",
   "zernioId": "6ae454a018859d94a2cc2adf",
   "http": 201,
-  "am": "2026-10-30T08:26:08.226Z"
+  "am": "2026-10-30T08:26:08.226Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "insta-09-4": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-05T12:00:00",
   "zernioId": "6ae454a2830e388d1b488d95",
   "http": 201,
-  "am": "2026-10-30T08:26:10.813Z"
+  "am": "2026-10-30T08:26:10.813Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "insta-10-1": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-05T16:00:00",
   "zernioId": "6ae454a518859d94a2cc2b22",
   "http": 201,
-  "am": "2026-10-30T08:26:13.425Z"
+  "am": "2026-10-30T08:26:13.425Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "insta-10-2": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-05T20:00:00",
   "zernioId": "6ae454a718859d94a2cc2b3f",
   "http": 201,
-  "am": "2026-10-30T08:26:16.086Z"
+  "am": "2026-10-30T08:26:16.086Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "insta-10-3": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-06T00:00:00",
   "zernioId": "6ae454aa18859d94a2cc2b66",
   "http": 201,
-  "am": "2026-10-30T08:26:18.954Z"
+  "am": "2026-10-30T08:26:18.954Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "insta-10-4": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-06T04:00:00",
   "zernioId": "6ae454ad18859d94a2cc2ba6",
   "http": 201,
-  "am": "2026-10-30T08:26:21.585Z"
+  "am": "2026-10-30T08:26:21.585Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "yt-02-1": {
   "ok": true,
@@ -385,235 +451,301 @@
   "am": "2026-10-30T08:26:34.267Z"
  },
  "yt-03-1": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-10-31T20:30:00",
   "zernioId": "6ae454bc830e388d1b488db7",
   "http": 201,
-  "am": "2026-10-30T08:26:36.613Z"
+  "am": "2026-10-30T08:26:36.613Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "yt-03-2": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-01T00:30:00",
   "zernioId": "6ae454be18859d94a2cc2cba",
   "http": 201,
-  "am": "2026-10-30T08:26:38.901Z"
+  "am": "2026-10-30T08:26:38.901Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "yt-03-3": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-01T04:30:00",
   "zernioId": "6ae454c118859d94a2cc2cd5",
   "http": 201,
-  "am": "2026-10-30T08:26:41.295Z"
+  "am": "2026-10-30T08:26:41.295Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "yt-03-4": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-01T08:30:00",
   "zernioId": "6ae454c3975c142809187a66",
   "http": 201,
-  "am": "2026-10-30T08:26:43.612Z"
+  "am": "2026-10-30T08:26:43.612Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "yt-04-1": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-01T12:30:00",
   "zernioId": "6ae454c518859d94a2cc2d09",
   "http": 201,
-  "am": "2026-10-30T08:26:45.934Z"
+  "am": "2026-10-30T08:26:45.934Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "yt-04-2": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-01T16:30:00",
   "zernioId": "6ae454c818859d94a2cc2d17",
   "http": 201,
-  "am": "2026-10-30T08:26:48.459Z"
+  "am": "2026-10-30T08:26:48.459Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "yt-04-3": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-01T20:30:00",
   "zernioId": "6ae454ca18859d94a2cc2d2d",
   "http": 201,
-  "am": "2026-10-30T08:26:50.815Z"
+  "am": "2026-10-30T08:26:50.815Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "yt-04-4": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-02T00:30:00",
   "zernioId": "6ae454cd18859d94a2cc2d41",
   "http": 201,
-  "am": "2026-10-30T08:26:53.614Z"
+  "am": "2026-10-30T08:26:53.614Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "yt-05-1": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-02T04:30:00",
   "zernioId": "6ae454cf975c142809187a89",
   "http": 201,
-  "am": "2026-10-30T08:26:56.044Z"
+  "am": "2026-10-30T08:26:56.044Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "yt-05-2": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-02T08:30:00",
   "zernioId": "6ae454d218859d94a2cc2d63",
   "http": 201,
-  "am": "2026-10-30T08:26:58.381Z"
+  "am": "2026-10-30T08:26:58.381Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "yt-05-3": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-02T12:30:00",
   "zernioId": "6ae454d418859d94a2cc2d6d",
   "http": 201,
-  "am": "2026-10-30T08:27:00.733Z"
+  "am": "2026-10-30T08:27:00.733Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "yt-05-4": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-02T16:30:00",
   "zernioId": "6ae454d6975c142809187a98",
   "http": 201,
-  "am": "2026-10-30T08:27:03.057Z"
+  "am": "2026-10-30T08:27:03.057Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "yt-06-1": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-02T20:30:00",
   "zernioId": "6ae454d918859d94a2cc2d8b",
   "http": 201,
-  "am": "2026-10-30T08:27:05.333Z"
+  "am": "2026-10-30T08:27:05.333Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "yt-06-2": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-03T00:30:00",
   "zernioId": "6ae454db18859d94a2cc2dac",
   "http": 201,
-  "am": "2026-10-30T08:27:07.772Z"
+  "am": "2026-10-30T08:27:07.772Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "yt-06-3": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-03T04:30:00",
   "zernioId": "6ae454de830e388d1b488dd1",
   "http": 201,
-  "am": "2026-10-30T08:27:10.124Z"
+  "am": "2026-10-30T08:27:10.124Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "yt-06-4": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-03T08:30:00",
   "zernioId": "6ae454e1975c142809187ab5",
   "http": 201,
-  "am": "2026-10-30T08:27:13.436Z"
+  "am": "2026-10-30T08:27:13.436Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "yt-06-5": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-03T12:30:00",
   "zernioId": "6ae454e37ba6b338d5ff6e8c",
   "http": 201,
-  "am": "2026-10-30T08:27:15.886Z"
+  "am": "2026-10-30T08:27:15.886Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "yt-07-1": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-03T16:30:00",
   "zernioId": "6ae454e68445b43a53005f3b",
   "http": 201,
-  "am": "2026-10-30T08:27:18.307Z"
+  "am": "2026-10-30T08:27:18.307Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "yt-07-2": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-03T20:30:00",
   "zernioId": "6ae454e818859d94a2cc2e02",
   "http": 201,
-  "am": "2026-10-30T08:27:20.725Z"
+  "am": "2026-10-30T08:27:20.725Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "yt-07-3": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-04T00:30:00",
   "zernioId": "6ae454eb8445b43a53005f65",
   "http": 201,
-  "am": "2026-10-30T08:27:23.121Z"
+  "am": "2026-10-30T08:27:23.121Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "yt-07-4": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-04T04:30:00",
   "zernioId": "6ae454ed8445b43a53005f78",
   "http": 201,
-  "am": "2026-10-30T08:27:25.473Z"
+  "am": "2026-10-30T08:27:25.473Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "yt-08-1": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-04T08:30:00",
   "zernioId": "6ae454ef7ba6b338d5ff6ea2",
   "http": 201,
-  "am": "2026-10-30T08:27:27.877Z"
+  "am": "2026-10-30T08:27:27.877Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "yt-08-2": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-04T12:30:00",
   "zernioId": "6ae454f218859d94a2cc2e14",
   "http": 201,
-  "am": "2026-10-30T08:27:30.245Z"
+  "am": "2026-10-30T08:27:30.245Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "yt-08-3": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-04T16:30:00",
   "zernioId": "6ae454f48445b43a53005fb0",
   "http": 201,
-  "am": "2026-10-30T08:27:32.781Z"
+  "am": "2026-10-30T08:27:32.781Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "yt-08-4": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-04T20:30:00",
   "zernioId": "6ae454f78445b43a53005fd1",
   "http": 201,
-  "am": "2026-10-30T08:27:35.177Z"
+  "am": "2026-10-30T08:27:35.177Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "yt-09-1": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-05T00:30:00",
   "zernioId": "6ae454f98445b43a53005fe6",
   "http": 201,
-  "am": "2026-10-30T08:27:37.595Z"
+  "am": "2026-10-30T08:27:37.595Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "yt-09-2": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-05T04:30:00",
   "zernioId": "6ae454fb8445b43a53006009",
   "http": 201,
-  "am": "2026-10-30T08:27:39.989Z"
+  "am": "2026-10-30T08:27:39.989Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "yt-09-3": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-05T08:30:00",
   "zernioId": "6ae454fe7ba6b338d5ff6ec5",
   "http": 201,
-  "am": "2026-10-30T08:27:42.368Z"
+  "am": "2026-10-30T08:27:42.368Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "yt-09-4": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-05T12:30:00",
   "zernioId": "6ae455008445b43a5300602c",
   "http": 201,
-  "am": "2026-10-30T08:27:44.765Z"
+  "am": "2026-10-30T08:27:44.765Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "yt-10-1": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-05T16:30:00",
   "zernioId": "6ae455038445b43a53006048",
   "http": 201,
-  "am": "2026-10-30T08:27:47.154Z"
+  "am": "2026-10-30T08:27:47.154Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "yt-10-2": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-05T20:30:00",
   "zernioId": "6ae455058445b43a53006050",
   "http": 201,
-  "am": "2026-10-30T08:27:49.486Z"
+  "am": "2026-10-30T08:27:49.486Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "yt-10-3": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-06T00:30:00",
   "zernioId": "6ae455078445b43a53006067",
   "http": 201,
-  "am": "2026-10-30T08:27:51.951Z"
+  "am": "2026-10-30T08:27:51.951Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "yt-10-4": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-06T04:30:00",
   "zernioId": "6ae4550a8445b43a53006080",
   "http": 201,
-  "am": "2026-10-30T08:27:54.460Z"
+  "am": "2026-10-30T08:27:54.460Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "alien-tiktok-01": {
   "ok": false,
@@ -2157,424 +2289,648 @@
   "http": 201,
   "am": "2026-10-31T10:44:55.825Z"
  },
+ "stock-insta-kurz-03-1": {
+  "ok": true,
+  "zeit": "2026-10-31T20:00:00",
+  "zernioId": "6ae5d40b234f720d1e66901e",
+  "http": 201,
+  "am": "2026-10-31T11:42:03.380Z"
+ },
+ "stock-yt-kurz-03-1": {
+  "ok": true,
+  "zeit": "2026-10-31T20:30:00",
+  "zernioId": "6ae5d40d234f720d1e669027",
+  "http": 201,
+  "am": "2026-10-31T11:42:05.582Z"
+ },
+ "stock-insta-kurz-03-2": {
+  "ok": true,
+  "zeit": "2026-11-01T00:00:00",
+  "zernioId": "6ae5d410234f720d1e66903f",
+  "http": 201,
+  "am": "2026-10-31T11:42:08.986Z"
+ },
+ "stock-yt-kurz-03-2": {
+  "ok": true,
+  "zeit": "2026-11-01T00:30:00",
+  "zernioId": "6ae5d412540304bc1e69d5e8",
+  "http": 201,
+  "am": "2026-10-31T11:42:11.147Z"
+ },
+ "stock-insta-kurz-04-1": {
+  "ok": true,
+  "zeit": "2026-11-01T04:00:00",
+  "zernioId": "6ae5d415540304bc1e69d5ec",
+  "http": 201,
+  "am": "2026-10-31T11:42:13.746Z"
+ },
+ "stock-yt-kurz-04-1": {
+  "ok": true,
+  "zeit": "2026-11-01T04:30:00",
+  "zernioId": "6ae5d417234f720d1e669062",
+  "http": 201,
+  "am": "2026-10-31T11:42:15.904Z"
+ },
+ "stock-insta-kurz-04-2": {
+  "ok": true,
+  "zeit": "2026-11-01T08:00:00",
+  "zernioId": "6ae5d41a234f720d1e669068",
+  "http": 201,
+  "am": "2026-10-31T11:42:18.396Z"
+ },
+ "stock-yt-kurz-04-2": {
+  "ok": true,
+  "zeit": "2026-11-01T08:30:00",
+  "zernioId": "6ae5d41c234f720d1e66906c",
+  "http": 201,
+  "am": "2026-10-31T11:42:20.485Z"
+ },
+ "stock-insta-kurz-05-1": {
+  "ok": true,
+  "zeit": "2026-11-01T12:00:00",
+  "zernioId": "6ae5d41ec8c627560eaafe88",
+  "http": 201,
+  "am": "2026-10-31T11:42:23.043Z"
+ },
+ "stock-yt-kurz-05-1": {
+  "ok": true,
+  "zeit": "2026-11-01T12:30:00",
+  "zernioId": "6ae5d421234f720d1e669090",
+  "http": 201,
+  "am": "2026-10-31T11:42:25.342Z"
+ },
+ "stock-insta-kurz-05-2": {
+  "ok": true,
+  "zeit": "2026-11-01T16:00:00",
+  "zernioId": "6ae5d423234f720d1e6690a2",
+  "http": 201,
+  "am": "2026-10-31T11:42:27.824Z"
+ },
+ "stock-yt-kurz-05-2": {
+  "ok": true,
+  "zeit": "2026-11-01T16:30:00",
+  "zernioId": "6ae5d425540304bc1e69d5fc",
+  "http": 201,
+  "am": "2026-10-31T11:42:29.919Z"
+ },
+ "stock-insta-kurz-06-1": {
+  "ok": true,
+  "zeit": "2026-11-01T20:00:00",
+  "zernioId": "6ae5d428234f720d1e6690bc",
+  "http": 201,
+  "am": "2026-10-31T11:42:32.369Z"
+ },
+ "stock-yt-kurz-06-1": {
+  "ok": true,
+  "zeit": "2026-11-01T20:30:00",
+  "zernioId": "6ae5d42a540304bc1e69d604",
+  "http": 201,
+  "am": "2026-10-31T11:42:34.463Z"
+ },
+ "stock-insta-kurz-06-2": {
+  "ok": true,
+  "zeit": "2026-11-02T00:00:00",
+  "zernioId": "6ae5d42c234f720d1e6690c9",
+  "http": 201,
+  "am": "2026-10-31T11:42:36.916Z"
+ },
+ "stock-yt-kurz-06-2": {
+  "ok": true,
+  "zeit": "2026-11-02T00:30:00",
+  "zernioId": "6ae5d42e234f720d1e6690ce",
+  "http": 201,
+  "am": "2026-10-31T11:42:39.010Z"
+ },
+ "stock-insta-kurz-07-1": {
+  "ok": true,
+  "zeit": "2026-11-02T04:00:00",
+  "zernioId": "6ae5d432234f720d1e6690e1",
+  "http": 201,
+  "am": "2026-10-31T11:42:42.537Z"
+ },
+ "stock-yt-kurz-07-1": {
+  "ok": true,
+  "zeit": "2026-11-02T04:30:00",
+  "zernioId": "6ae5d434234f720d1e6690ea",
+  "http": 201,
+  "am": "2026-10-31T11:42:44.654Z"
+ },
+ "stock-insta-kurz-07-2": {
+  "ok": true,
+  "zeit": "2026-11-02T08:00:00",
+  "zernioId": "6ae5d438234f720d1e6690fb",
+  "http": 201,
+  "am": "2026-10-31T11:42:48.169Z"
+ },
+ "stock-yt-kurz-07-2": {
+  "ok": true,
+  "zeit": "2026-11-02T08:30:00",
+  "zernioId": "6ae5d43a540304bc1e69d624",
+  "http": 201,
+  "am": "2026-10-31T11:42:50.291Z"
+ },
+ "stock-insta-kurz-08-1": {
+  "ok": true,
+  "zeit": "2026-11-02T12:00:00",
+  "zernioId": "6ae5d43d234f720d1e669129",
+  "http": 201,
+  "am": "2026-10-31T11:42:53.499Z"
+ },
+ "stock-yt-kurz-08-1": {
+  "ok": true,
+  "zeit": "2026-11-02T12:30:00",
+  "zernioId": "6ae5d43f540304bc1e69d635",
+  "http": 201,
+  "am": "2026-10-31T11:42:55.683Z"
+ },
+ "stock-insta-kurz-08-2": {
+  "ok": true,
+  "zeit": "2026-11-02T16:00:00",
+  "zernioId": "6ae5d442234f720d1e669135",
+  "http": 201,
+  "am": "2026-10-31T11:42:58.646Z"
+ },
+ "stock-yt-kurz-08-2": {
+  "ok": true,
+  "zeit": "2026-11-02T16:30:00",
+  "zernioId": "6ae5d444234f720d1e66913d",
+  "http": 201,
+  "am": "2026-10-31T11:43:00.749Z"
+ },
+ "stock-insta-kurz-09-1": {
+  "ok": true,
+  "zeit": "2026-11-02T20:00:00",
+  "zernioId": "6ae5d447234f720d1e669160",
+  "http": 201,
+  "am": "2026-10-31T11:43:03.926Z"
+ },
+ "stock-yt-kurz-09-1": {
+  "ok": true,
+  "zeit": "2026-11-02T20:30:00",
+  "zernioId": "6ae5d449234f720d1e66918a",
+  "http": 201,
+  "am": "2026-10-31T11:43:06.006Z"
+ },
+ "stock-insta-kurz-09-2": {
+  "ok": true,
+  "zeit": "2026-11-03T00:00:00",
+  "zernioId": "6ae5d44c234f720d1e6691b0",
+  "http": 201,
+  "am": "2026-10-31T11:43:08.496Z"
+ },
+ "stock-yt-kurz-09-2": {
+  "ok": true,
+  "zeit": "2026-11-03T00:30:00",
+  "zernioId": "6ae5d44e234f720d1e6691c9",
+  "http": 201,
+  "am": "2026-10-31T11:43:10.802Z"
+ },
+ "stock-insta-kurz-10-1": {
+  "ok": true,
+  "zeit": "2026-11-03T04:00:00",
+  "zernioId": "6ae5d451234f720d1e6691de",
+  "http": 201,
+  "am": "2026-10-31T11:43:13.267Z"
+ },
+ "stock-yt-kurz-10-1": {
+  "ok": true,
+  "zeit": "2026-11-03T04:30:00",
+  "zernioId": "6ae5d453234f720d1e669205",
+  "http": 201,
+  "am": "2026-10-31T11:43:15.675Z"
+ },
+ "stock-insta-kurz-10-2": {
+  "ok": true,
+  "zeit": "2026-11-03T08:00:00",
+  "zernioId": "6ae5d456540304bc1e69d649",
+  "http": 201,
+  "am": "2026-10-31T11:43:18.157Z"
+ },
+ "stock-yt-kurz-10-2": {
+  "ok": true,
+  "zeit": "2026-11-03T08:30:00",
+  "zernioId": "6ae5d458234f720d1e669230",
+  "http": 201,
+  "am": "2026-10-31T11:43:20.304Z"
+ },
  "alien-insta-kurz-01-1": {
   "ok": true,
-  "zeit": "2026-11-06T08:00:00",
-  "zernioId": "6ae5cd4c15e2bf79d81e9267",
+  "zeit": "2026-11-03T12:00:00",
+  "zernioId": "6ae5d45a540304bc1e69d64d",
   "http": 201,
-  "am": "2026-10-31T11:13:16.353Z"
+  "am": "2026-10-31T11:43:22.972Z"
  },
  "alien-yt-kurz-01-1": {
   "ok": true,
-  "zeit": "2026-11-06T08:30:00",
-  "zernioId": "6ae5cd4e92ba51bdb44a7974",
+  "zeit": "2026-11-03T12:30:00",
+  "zernioId": "6ae5d45d234f720d1e669246",
   "http": 201,
-  "am": "2026-10-31T11:13:18.610Z"
+  "am": "2026-10-31T11:43:25.385Z"
  },
  "alien-insta-kurz-01-2": {
   "ok": true,
-  "zeit": "2026-11-06T12:00:00",
-  "zernioId": "6ae5cd514feb2388c96a6d92",
+  "zeit": "2026-11-03T16:00:00",
+  "zernioId": "6ae5d460234f720d1e66924f",
   "http": 201,
-  "am": "2026-10-31T11:13:21.569Z"
+  "am": "2026-10-31T11:43:28.468Z"
  },
  "alien-yt-kurz-01-2": {
   "ok": true,
-  "zeit": "2026-11-06T12:30:00",
-  "zernioId": "6ae5cd5392ba51bdb44a79a1",
+  "zeit": "2026-11-03T16:30:00",
+  "zernioId": "6ae5d462234f720d1e669267",
   "http": 201,
-  "am": "2026-10-31T11:13:23.822Z"
+  "am": "2026-10-31T11:43:30.819Z"
  },
  "alien-insta-kurz-02-1": {
   "ok": true,
-  "zeit": "2026-11-06T16:00:00",
-  "zernioId": "6ae5cd5692ba51bdb44a79ae",
+  "zeit": "2026-11-03T20:00:00",
+  "zernioId": "6ae5d465234f720d1e669273",
   "http": 201,
-  "am": "2026-10-31T11:13:26.569Z"
+  "am": "2026-10-31T11:43:33.596Z"
  },
  "alien-yt-kurz-02-1": {
   "ok": true,
-  "zeit": "2026-11-06T16:30:00",
-  "zernioId": "6ae5cd5892ba51bdb44a79be",
+  "zeit": "2026-11-03T20:30:00",
+  "zernioId": "6ae5d467234f720d1e66927d",
   "http": 201,
-  "am": "2026-10-31T11:13:28.836Z"
+  "am": "2026-10-31T11:43:35.968Z"
  },
  "alien-insta-kurz-02-2": {
   "ok": true,
-  "zeit": "2026-11-06T20:00:00",
-  "zernioId": "6ae5cd5b92ba51bdb44a79d0",
+  "zeit": "2026-11-04T00:00:00",
+  "zernioId": "6ae5d46c234f720d1e669295",
   "http": 201,
-  "am": "2026-10-31T11:13:31.642Z"
+  "am": "2026-10-31T11:43:40.656Z"
  },
  "alien-yt-kurz-02-2": {
   "ok": true,
-  "zeit": "2026-11-06T20:30:00",
-  "zernioId": "6ae5cd5d15e2bf79d81e9296",
+  "zeit": "2026-11-04T00:30:00",
+  "zernioId": "6ae5d46f234f720d1e6692a4",
   "http": 201,
-  "am": "2026-10-31T11:13:34.013Z"
+  "am": "2026-10-31T11:43:43.148Z"
  },
  "alien-insta-kurz-03-1": {
   "ok": true,
-  "zeit": "2026-11-07T00:00:00",
-  "zernioId": "6ae5cd6015e2bf79d81e92a2",
+  "zeit": "2026-11-04T04:00:00",
+  "zernioId": "6ae5d472234f720d1e6692bd",
   "http": 201,
-  "am": "2026-10-31T11:13:36.674Z"
+  "am": "2026-10-31T11:43:47.079Z"
  },
  "alien-yt-kurz-03-1": {
   "ok": true,
-  "zeit": "2026-11-07T00:30:00",
-  "zernioId": "6ae5cd6292ba51bdb44a7a08",
+  "zeit": "2026-11-04T04:30:00",
+  "zernioId": "6ae5d475234f720d1e6692d1",
   "http": 201,
-  "am": "2026-10-31T11:13:39.063Z"
+  "am": "2026-10-31T11:43:49.506Z"
  },
  "alien-insta-kurz-03-2": {
   "ok": true,
-  "zeit": "2026-11-07T04:00:00",
-  "zernioId": "6ae5cd6592ba51bdb44a7a25",
+  "zeit": "2026-11-04T08:00:00",
+  "zernioId": "6ae5d478c8c627560eaafea8",
   "http": 201,
-  "am": "2026-10-31T11:13:41.564Z"
+  "am": "2026-10-31T11:43:53.119Z"
  },
  "alien-yt-kurz-03-2": {
   "ok": true,
-  "zeit": "2026-11-07T04:30:00",
-  "zernioId": "6ae5cd6715e2bf79d81e92b9",
+  "zeit": "2026-11-04T08:30:00",
+  "zernioId": "6ae5d47bc8c627560eaafeac",
   "http": 201,
-  "am": "2026-10-31T11:13:43.862Z"
+  "am": "2026-10-31T11:43:55.518Z"
  },
  "alien-insta-kurz-04-1": {
   "ok": true,
-  "zeit": "2026-11-07T08:00:00",
-  "zernioId": "6ae5cd6a92ba51bdb44a7a53",
+  "zeit": "2026-11-04T12:00:00",
+  "zernioId": "6ae5d47f234f720d1e669309",
   "http": 201,
-  "am": "2026-10-31T11:13:46.389Z"
+  "am": "2026-10-31T11:43:59.343Z"
  },
  "alien-yt-kurz-04-1": {
   "ok": true,
-  "zeit": "2026-11-07T08:30:00",
-  "zernioId": "6ae5cd6c92ba51bdb44a7a77",
+  "zeit": "2026-11-04T12:30:00",
+  "zernioId": "6ae5d481234f720d1e66931c",
   "http": 201,
-  "am": "2026-10-31T11:13:48.865Z"
+  "am": "2026-10-31T11:44:01.849Z"
  },
  "alien-insta-kurz-04-2": {
   "ok": true,
-  "zeit": "2026-11-07T12:00:00",
-  "zernioId": "6ae5cd6f15e2bf79d81e92d3",
+  "zeit": "2026-11-04T16:00:00",
+  "zernioId": "6ae5d484234f720d1e669329",
   "http": 201,
-  "am": "2026-10-31T11:13:51.582Z"
+  "am": "2026-10-31T11:44:04.931Z"
  },
  "alien-yt-kurz-04-2": {
   "ok": true,
-  "zeit": "2026-11-07T12:30:00",
-  "zernioId": "6ae5cd7192ba51bdb44a7a9c",
+  "zeit": "2026-11-04T16:30:00",
+  "zernioId": "6ae5d487234f720d1e66933c",
   "http": 201,
-  "am": "2026-10-31T11:13:53.854Z"
+  "am": "2026-10-31T11:44:07.417Z"
  },
  "alien-insta-kurz-05-1": {
   "ok": true,
-  "zeit": "2026-11-07T16:00:00",
-  "zernioId": "6ae5cd7492ba51bdb44a7aab",
+  "zeit": "2026-11-04T20:00:00",
+  "zernioId": "6ae5d48a234f720d1e66934e",
   "http": 201,
-  "am": "2026-10-31T11:13:56.389Z"
+  "am": "2026-10-31T11:44:10.587Z"
  },
  "alien-yt-kurz-05-1": {
   "ok": true,
-  "zeit": "2026-11-07T16:30:00",
-  "zernioId": "6ae5cd7692ba51bdb44a7ac4",
+  "zeit": "2026-11-04T20:30:00",
+  "zernioId": "6ae5d48c540304bc1e69d687",
   "http": 201,
-  "am": "2026-10-31T11:13:58.604Z"
+  "am": "2026-10-31T11:44:12.973Z"
  },
  "alien-insta-kurz-05-2": {
   "ok": true,
-  "zeit": "2026-11-07T20:00:00",
-  "zernioId": "6ae5cd7992ba51bdb44a7ad9",
+  "zeit": "2026-11-05T00:00:00",
+  "zernioId": "6ae5d490234f720d1e669375",
   "http": 201,
-  "am": "2026-10-31T11:14:01.350Z"
+  "am": "2026-10-31T11:44:16.817Z"
  },
  "alien-yt-kurz-05-2": {
   "ok": true,
-  "zeit": "2026-11-07T20:30:00",
-  "zernioId": "6ae5cd7b92ba51bdb44a7ae5",
+  "zeit": "2026-11-05T00:30:00",
+  "zernioId": "6ae5d493234f720d1e66938d",
   "http": 201,
-  "am": "2026-10-31T11:14:03.672Z"
+  "am": "2026-10-31T11:44:19.208Z"
  },
  "alien-insta-kurz-06-1": {
   "ok": true,
-  "zeit": "2026-11-08T00:00:00",
-  "zernioId": "6ae5cd7e92ba51bdb44a7af7",
+  "zeit": "2026-11-05T04:00:00",
+  "zernioId": "6ae5d496234f720d1e6693a7",
   "http": 201,
-  "am": "2026-10-31T11:14:06.272Z"
+  "am": "2026-10-31T11:44:22.236Z"
  },
  "alien-yt-kurz-06-1": {
   "ok": true,
-  "zeit": "2026-11-08T00:30:00",
-  "zernioId": "6ae5cd8015e2bf79d81e92f4",
+  "zeit": "2026-11-05T04:30:00",
+  "zernioId": "6ae5d498234f720d1e6693c5",
   "http": 201,
-  "am": "2026-10-31T11:14:08.495Z"
+  "am": "2026-10-31T11:44:25.036Z"
  },
  "alien-insta-kurz-06-2": {
   "ok": true,
-  "zeit": "2026-11-08T04:00:00",
-  "zernioId": "6ae5cd8215e2bf79d81e92fc",
+  "zeit": "2026-11-05T08:00:00",
+  "zernioId": "6ae5d49c540304bc1e69d6a0",
   "http": 201,
-  "am": "2026-10-31T11:14:11.060Z"
+  "am": "2026-10-31T11:44:28.177Z"
  },
  "alien-yt-kurz-06-2": {
   "ok": true,
-  "zeit": "2026-11-08T04:30:00",
-  "zernioId": "6ae5cd8592ba51bdb44a7b34",
+  "zeit": "2026-11-05T08:30:00",
+  "zernioId": "6ae5d49e234f720d1e6693f0",
   "http": 201,
-  "am": "2026-10-31T11:14:13.371Z"
+  "am": "2026-10-31T11:44:30.692Z"
  },
  "alien-insta-kurz-07-1": {
   "ok": true,
-  "zeit": "2026-11-08T08:00:00",
-  "zernioId": "6ae5cd8792ba51bdb44a7b48",
+  "zeit": "2026-11-05T12:00:00",
+  "zernioId": "6ae5d4a2234f720d1e6693fa",
   "http": 201,
-  "am": "2026-10-31T11:14:16.083Z"
+  "am": "2026-10-31T11:44:34.318Z"
  },
  "alien-yt-kurz-07-1": {
   "ok": true,
-  "zeit": "2026-11-08T08:30:00",
-  "zernioId": "6ae5cd8a92ba51bdb44a7b59",
+  "zeit": "2026-11-05T12:30:00",
+  "zernioId": "6ae5d4a4c8c627560eaafeb0",
   "http": 201,
-  "am": "2026-10-31T11:14:18.365Z"
+  "am": "2026-10-31T11:44:36.954Z"
  },
  "alien-insta-kurz-07-2": {
   "ok": true,
-  "zeit": "2026-11-08T12:00:00",
-  "zernioId": "6ae5cd8c92ba51bdb44a7b73",
+  "zeit": "2026-11-05T16:00:00",
+  "zernioId": "6ae5d4a7234f720d1e669430",
   "http": 201,
-  "am": "2026-10-31T11:14:21.009Z"
+  "am": "2026-10-31T11:44:39.876Z"
  },
  "alien-yt-kurz-07-2": {
   "ok": true,
-  "zeit": "2026-11-08T12:30:00",
-  "zernioId": "6ae5cd8f92ba51bdb44a7b91",
+  "zeit": "2026-11-05T16:30:00",
+  "zernioId": "6ae5d4aa540304bc1e69d6b3",
   "http": 201,
-  "am": "2026-10-31T11:14:23.500Z"
+  "am": "2026-10-31T11:44:42.310Z"
  },
  "alien-insta-kurz-08-1": {
   "ok": true,
-  "zeit": "2026-11-08T16:00:00",
-  "zernioId": "6ae5cd9192ba51bdb44a7ba9",
+  "zeit": "2026-11-05T20:00:00",
+  "zernioId": "6ae5d4ac234f720d1e669448",
   "http": 201,
-  "am": "2026-10-31T11:14:26.017Z"
+  "am": "2026-10-31T11:44:44.924Z"
  },
  "alien-yt-kurz-08-1": {
   "ok": true,
-  "zeit": "2026-11-08T16:30:00",
-  "zernioId": "6ae5cd9492ba51bdb44a7bbb",
+  "zeit": "2026-11-05T20:30:00",
+  "zernioId": "6ae5d4af234f720d1e669454",
   "http": 201,
-  "am": "2026-10-31T11:14:28.338Z"
+  "am": "2026-10-31T11:44:47.268Z"
  },
  "alien-insta-kurz-08-2": {
   "ok": true,
-  "zeit": "2026-11-08T20:00:00",
-  "zernioId": "6ae5cd9615e2bf79d81e931c",
+  "zeit": "2026-11-06T00:00:00",
+  "zernioId": "6ae5d4b1234f720d1e669469",
   "http": 201,
-  "am": "2026-10-31T11:14:30.884Z"
+  "am": "2026-10-31T11:44:49.897Z"
  },
  "alien-yt-kurz-08-2": {
   "ok": true,
-  "zeit": "2026-11-08T20:30:00",
-  "zernioId": "6ae5cd9992ba51bdb44a7bd7",
+  "zeit": "2026-11-06T00:30:00",
+  "zernioId": "6ae5d4b4234f720d1e669474",
   "http": 201,
-  "am": "2026-10-31T11:14:33.197Z"
+  "am": "2026-10-31T11:44:52.263Z"
  },
  "alien-insta-kurz-09-1": {
   "ok": true,
-  "zeit": "2026-11-09T00:00:00",
-  "zernioId": "6ae5cd9b92ba51bdb44a7beb",
+  "zeit": "2026-11-06T04:00:00",
+  "zernioId": "6ae5d4b7234f720d1e669492",
   "http": 201,
-  "am": "2026-10-31T11:14:35.976Z"
+  "am": "2026-10-31T11:44:55.261Z"
  },
  "alien-yt-kurz-09-1": {
   "ok": true,
-  "zeit": "2026-11-09T00:30:00",
-  "zernioId": "6ae5cd9e15e2bf79d81e932a",
+  "zeit": "2026-11-06T04:30:00",
+  "zernioId": "6ae5d4b9540304bc1e69d6c5",
   "http": 201,
-  "am": "2026-10-31T11:14:38.219Z"
+  "am": "2026-10-31T11:44:57.638Z"
  },
  "alien-insta-kurz-09-2": {
   "ok": true,
-  "zeit": "2026-11-09T04:00:00",
-  "zernioId": "6ae5cda092ba51bdb44a7c04",
+  "zeit": "2026-11-06T08:00:00",
+  "zernioId": "6ae5d4bcc8c627560eaafeb8",
   "http": 201,
-  "am": "2026-10-31T11:14:41.003Z"
+  "am": "2026-10-31T11:45:00.475Z"
  },
  "alien-yt-kurz-09-2": {
   "ok": true,
-  "zeit": "2026-11-09T04:30:00",
-  "zernioId": "6ae5cda392ba51bdb44a7c10",
+  "zeit": "2026-11-06T08:30:00",
+  "zernioId": "6ae5d4be234f720d1e6694b8",
   "http": 201,
-  "am": "2026-10-31T11:14:43.376Z"
+  "am": "2026-10-31T11:45:02.967Z"
  },
  "alien-insta-kurz-10-1": {
   "ok": true,
-  "zeit": "2026-11-09T08:00:00",
-  "zernioId": "6ae5cda692ba51bdb44a7c22",
+  "zeit": "2026-11-06T12:00:00",
+  "zernioId": "6ae5d4c1234f720d1e6694d6",
   "http": 201,
-  "am": "2026-10-31T11:14:46.244Z"
+  "am": "2026-10-31T11:45:05.828Z"
  },
  "alien-yt-kurz-10-1": {
   "ok": true,
-  "zeit": "2026-11-09T08:30:00",
-  "zernioId": "6ae5cda892ba51bdb44a7c32",
+  "zeit": "2026-11-06T12:30:00",
+  "zernioId": "6ae5d4c4540304bc1e69d6df",
   "http": 201,
-  "am": "2026-10-31T11:14:48.559Z"
+  "am": "2026-10-31T11:45:08.312Z"
  },
  "alien-insta-kurz-10-2": {
   "ok": true,
-  "zeit": "2026-11-09T12:00:00",
-  "zernioId": "6ae5cdab15e2bf79d81e9345",
+  "zeit": "2026-11-06T16:00:00",
+  "zernioId": "6ae5d4c8234f720d1e669510",
   "http": 201,
-  "am": "2026-10-31T11:14:51.130Z"
+  "am": "2026-10-31T11:45:12.343Z"
  },
  "alien-yt-kurz-10-2": {
   "ok": true,
-  "zeit": "2026-11-09T12:30:00",
-  "zernioId": "6ae5cdad92ba51bdb44a7c4c",
+  "zeit": "2026-11-06T16:30:00",
+  "zernioId": "6ae5d4ca540304bc1e69d6ed",
   "http": 201,
-  "am": "2026-10-31T11:14:53.529Z"
+  "am": "2026-10-31T11:45:14.715Z"
  },
  "mann-insta-kurz-01": {
   "ok": true,
-  "zeit": "2026-11-09T16:00:00",
-  "zernioId": "6ae5cdaf92ba51bdb44a7c66",
+  "zeit": "2026-11-06T20:00:00",
+  "zernioId": "6ae5d4ce540304bc1e69d6fd",
   "http": 201,
-  "am": "2026-10-31T11:14:56.094Z"
+  "am": "2026-10-31T11:45:18.250Z"
  },
  "mann-yt-kurz-01": {
   "ok": true,
-  "zeit": "2026-11-09T16:30:00",
-  "zernioId": "6ae5cdb237dce337b23a0caf",
+  "zeit": "2026-11-06T20:30:00",
+  "zernioId": "6ae5d4d0234f720d1e669545",
   "http": 201,
-  "am": "2026-10-31T11:14:58.305Z"
+  "am": "2026-10-31T11:45:20.692Z"
  },
  "mann-insta-kurz-02": {
   "ok": true,
-  "zeit": "2026-11-09T20:00:00",
-  "zernioId": "6ae5cdb515e2bf79d81e9361",
+  "zeit": "2026-11-07T00:00:00",
+  "zernioId": "6ae5d4d4540304bc1e69d710",
   "http": 201,
-  "am": "2026-10-31T11:15:01.317Z"
+  "am": "2026-10-31T11:45:24.238Z"
  },
  "mann-yt-kurz-02": {
   "ok": true,
-  "zeit": "2026-11-09T20:30:00",
-  "zernioId": "6ae5cdb715e2bf79d81e9369",
+  "zeit": "2026-11-07T00:30:00",
+  "zernioId": "6ae5d4d6c8c627560eaafec0",
   "http": 201,
-  "am": "2026-10-31T11:15:03.587Z"
+  "am": "2026-10-31T11:45:27.006Z"
  },
  "mann-insta-kurz-03": {
   "ok": true,
-  "zeit": "2026-11-10T00:00:00",
-  "zernioId": "6ae5cdba92ba51bdb44a7c90",
+  "zeit": "2026-11-07T04:00:00",
+  "zernioId": "6ae5d4da70411e9be7345d40",
   "http": 201,
-  "am": "2026-10-31T11:15:06.197Z"
+  "am": "2026-10-31T11:45:30.761Z"
  },
  "mann-yt-kurz-03": {
   "ok": true,
-  "zeit": "2026-11-10T00:30:00",
-  "zernioId": "6ae5cdbc4feb2388c96a6dc0",
+  "zeit": "2026-11-07T04:30:00",
+  "zernioId": "6ae5d4dc234f720d1e669580",
   "http": 201,
-  "am": "2026-10-31T11:15:08.463Z"
+  "am": "2026-10-31T11:45:33.129Z"
  },
  "mann-insta-kurz-04": {
   "ok": true,
-  "zeit": "2026-11-10T04:00:00",
-  "zernioId": "6ae5cdbe15e2bf79d81e938d",
+  "zeit": "2026-11-07T08:00:00",
+  "zernioId": "6ae5d4e0234f720d1e669587",
   "http": 201,
-  "am": "2026-10-31T11:15:11.016Z"
+  "am": "2026-10-31T11:45:36.563Z"
  },
  "mann-yt-kurz-04": {
   "ok": true,
-  "zeit": "2026-11-10T04:30:00",
-  "zernioId": "6ae5cdc14feb2388c96a6dc8",
+  "zeit": "2026-11-07T08:30:00",
+  "zernioId": "6ae5d4e2234f720d1e66958b",
   "http": 201,
-  "am": "2026-10-31T11:15:13.288Z"
+  "am": "2026-10-31T11:45:38.939Z"
  },
  "mann-insta-kurz-05": {
   "ok": true,
-  "zeit": "2026-11-10T08:00:00",
-  "zernioId": "6ae5cdc392ba51bdb44a7cc8",
+  "zeit": "2026-11-07T12:00:00",
+  "zernioId": "6ae5d4e670411e9be7345d98",
   "http": 201,
-  "am": "2026-10-31T11:15:16.053Z"
+  "am": "2026-10-31T11:45:42.266Z"
  },
  "mann-yt-kurz-05": {
   "ok": true,
-  "zeit": "2026-11-10T08:30:00",
-  "zernioId": "6ae5cdc692ba51bdb44a7ce0",
+  "zeit": "2026-11-07T12:30:00",
+  "zernioId": "6ae5d4e870411e9be7345da8",
   "http": 201,
-  "am": "2026-10-31T11:15:18.340Z"
+  "am": "2026-10-31T11:45:44.718Z"
  },
  "mann-insta-kurz-06": {
   "ok": true,
-  "zeit": "2026-11-10T12:00:00",
-  "zernioId": "6ae5cdc815e2bf79d81e939e",
+  "zeit": "2026-11-07T16:00:00",
+  "zernioId": "6ae5d4ec70411e9be7345de5",
   "http": 201,
-  "am": "2026-10-31T11:15:21.031Z"
+  "am": "2026-10-31T11:45:48.460Z"
  },
  "mann-yt-kurz-06": {
   "ok": true,
-  "zeit": "2026-11-10T12:30:00",
-  "zernioId": "6ae5cdcb15e2bf79d81e93a2",
+  "zeit": "2026-11-07T16:30:00",
+  "zernioId": "6ae5d4ee70411e9be7345e09",
   "http": 201,
-  "am": "2026-10-31T11:15:23.243Z"
+  "am": "2026-10-31T11:45:50.948Z"
  },
  "mann-insta-kurz-07": {
   "ok": true,
-  "zeit": "2026-11-10T16:00:00",
-  "zernioId": "6ae5cdcd92ba51bdb44a7cfe",
+  "zeit": "2026-11-07T20:00:00",
+  "zernioId": "6ae5d4f170411e9be7345e28",
   "http": 201,
-  "am": "2026-10-31T11:15:25.730Z"
+  "am": "2026-10-31T11:45:54.042Z"
  },
  "mann-yt-kurz-07": {
   "ok": true,
-  "zeit": "2026-11-10T16:30:00",
-  "zernioId": "6ae5cdcf92ba51bdb44a7d13",
+  "zeit": "2026-11-07T20:30:00",
+  "zernioId": "6ae5d4f470411e9be7345e3a",
   "http": 201,
-  "am": "2026-10-31T11:15:28.058Z"
+  "am": "2026-10-31T11:45:56.704Z"
  },
  "mann-insta-kurz-08": {
   "ok": true,
-  "zeit": "2026-11-10T20:00:00",
-  "zernioId": "6ae5cdd292ba51bdb44a7d25",
+  "zeit": "2026-11-08T00:00:00",
+  "zernioId": "6ae5d4f870411e9be7345e50",
   "http": 201,
-  "am": "2026-10-31T11:15:30.621Z"
+  "am": "2026-10-31T11:46:00.698Z"
  },
  "mann-yt-kurz-08": {
   "ok": true,
-  "zeit": "2026-11-10T20:30:00",
-  "zernioId": "6ae5cdd492ba51bdb44a7d33",
+  "zeit": "2026-11-08T00:30:00",
+  "zernioId": "6ae5d4fa70411e9be7345e54",
   "http": 201,
-  "am": "2026-10-31T11:15:33.031Z"
+  "am": "2026-10-31T11:46:03.107Z"
  },
  "mann-insta-kurz-09": {
   "ok": true,
-  "zeit": "2026-11-11T00:00:00",
-  "zernioId": "6ae5cdd792ba51bdb44a7d57",
+  "zeit": "2026-11-08T04:00:00",
+  "zernioId": "6ae5d4fe70411e9be7345e64",
   "http": 201,
-  "am": "2026-10-31T11:15:35.580Z"
+  "am": "2026-10-31T11:46:06.419Z"
  },
  "mann-yt-kurz-09": {
   "ok": true,
-  "zeit": "2026-11-11T00:30:00",
-  "zernioId": "6ae5cdd992ba51bdb44a7d62",
+  "zeit": "2026-11-08T04:30:00",
+  "zernioId": "6ae5d50070411e9be7345e74",
   "http": 201,
-  "am": "2026-10-31T11:15:37.847Z"
+  "am": "2026-10-31T11:46:08.817Z"
  },
  "mann-insta-kurz-10": {
   "ok": true,
-  "zeit": "2026-11-11T04:00:00",
-  "zernioId": "6ae5cddc92ba51bdb44a7d7c",
+  "zeit": "2026-11-08T08:00:00",
+  "zernioId": "6ae5d50470411e9be7345ea8",
   "http": 201,
-  "am": "2026-10-31T11:15:40.712Z"
+  "am": "2026-10-31T11:46:12.527Z"
  },
  "mann-yt-kurz-10": {
   "ok": true,
-  "zeit": "2026-11-11T04:30:00",
-  "zernioId": "6ae5cdde15e2bf79d81e93cf",
+  "zeit": "2026-11-08T08:30:00",
+  "zernioId": "6ae5d50670411e9be7345ec1",
   "http": 201,
-  "am": "2026-10-31T11:15:42.986Z"
+  "am": "2026-10-31T11:46:14.960Z"
  }
 }
