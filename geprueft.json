@@ -876,6 +876,36 @@
    "bild_s": 186.03,
    "ton_s": 186.06,
    "lufs": -15.8
+  },
+  "der-alien-tiktok/teil-1.mp4": {
+   "ok": true,
+   "bild_s": 412.47,
+   "ton_s": 412.47,
+   "lufs": -15.0
+  },
+  "der-alien-tiktok/teil-2.mp4": {
+   "ok": true,
+   "bild_s": 408.03,
+   "ton_s": 408.03,
+   "lufs": -15.0
+  },
+  "der-alien-tiktok/teil-3.mp4": {
+   "ok": true,
+   "bild_s": 409.13,
+   "ton_s": 409.13,
+   "lufs": -15.1
+  },
+  "der-alien-tiktok/teil-4.mp4": {
+   "ok": true,
+   "bild_s": 421.33,
+   "ton_s": 421.33,
+   "lufs": -14.8
+  },
+  "der-alien-tiktok/teil-5.mp4": {
+   "ok": true,
+   "bild_s": 406.6,
+   "ton_s": 406.6,
+   "lufs": -15.1
   }
  },
  "serien": {
@@ -1032,6 +1062,28 @@
     8
    ],
    "teil-4": [
+    9,
+    10
+   ]
+  },
+  "der-alien": {
+   "teil-1": [
+    1,
+    2
+   ],
+   "teil-2": [
+    3,
+    4
+   ],
+   "teil-3": [
+    5,
+    6
+   ],
+   "teil-4": [
+    7,
+    8
+   ],
+   "teil-5": [
     9,
     10
    ]
