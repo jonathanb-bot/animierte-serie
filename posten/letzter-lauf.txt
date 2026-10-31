@@ -1,149 +1,20 @@
-Verbundene Konten: tiktok:storys4you.de1, instagram:sto.rys4you, youtube:clappeuch3985
-  mann-tiktok-01b: Prüfung ok (Bild, Ton, Lautstärke)
-✓ mann-tiktok-01b eingeplant für 2026-11-05T20:00:00 (6ae4e7e21e6faa1f78201300)
-↻ mann-tiktok-02: 2026-10-31T10:00:00 → 2026-11-06T08:00:00
-  mann-tiktok-02: Prüfung ok (Bild, Ton, Lautstärke)
-✓ mann-tiktok-02 eingeplant für 2026-11-06T08:00:00 (6ae4e7e61e6faa1f78201311)
-↻ mann-tiktok-03: 2026-10-31T18:00:00 → 2026-11-06T20:00:00
-  mann-tiktok-03: Prüfung ok (Bild, Ton, Lautstärke)
-✓ mann-tiktok-03 eingeplant für 2026-11-06T20:00:00 (6ae4e7e91e6faa1f78201337)
-↻ mann-tiktok-04: 2026-11-01T10:00:00 → 2026-11-07T08:00:00
-  mann-tiktok-04: Prüfung ok (Bild, Ton, Lautstärke)
-✓ mann-tiktok-04 eingeplant für 2026-11-07T08:00:00 (6ae4e7ec1e6faa1f7820134f)
-↻ mann-tiktok-05: 2026-11-01T18:00:00 → 2026-11-07T20:00:00
-  mann-tiktok-05: Prüfung ok (Bild, Ton, Lautstärke)
-✓ mann-tiktok-05 eingeplant für 2026-11-07T20:00:00 (6ae4e7efbc7eea0a7294f46d)
-↻ mann-tiktok-06: 2026-11-02T10:00:00 → 2026-11-08T08:00:00
-  mann-tiktok-06: Prüfung ok (Bild, Ton, Lautstärke)
-✓ mann-tiktok-06 eingeplant für 2026-11-08T08:00:00 (6ae4e7f328a008bcec8ca7d3)
-↻ mann-tiktok-07: 2026-11-02T18:00:00 → 2026-11-08T20:00:00
-  mann-tiktok-07: Prüfung ok (Bild, Ton, Lautstärke)
-✓ mann-tiktok-07 eingeplant für 2026-11-08T20:00:00 (6ae4e7f6f56256005483b79f)
-↻ mann-tiktok-08: 2026-11-03T10:00:00 → 2026-11-09T08:00:00
-  mann-tiktok-08: Prüfung ok (Bild, Ton, Lautstärke)
-✓ mann-tiktok-08 eingeplant für 2026-11-09T08:00:00 (6ae4e7f9c62a7746c1630025)
-↻ mann-tiktok-09: 2026-11-03T18:00:00 → 2026-11-09T20:00:00
-  mann-tiktok-09: Prüfung ok (Bild, Ton, Lautstärke)
-✓ mann-tiktok-09 eingeplant für 2026-11-09T20:00:00 (6ae4e7fd28a008bcec8ca7e6)
-↻ mann-tiktok-10: 2026-11-04T10:00:00 → 2026-11-10T08:00:00
-  mann-tiktok-10: Prüfung ok (Bild, Ton, Lautstärke)
-✓ mann-tiktok-10 eingeplant für 2026-11-10T08:00:00 (6ae4e800c62a7746c1630042)
-  mann-insta-01-1b: Prüfung ok (Bild, Ton, Lautstärke)
-✓ mann-insta-01-1b eingeplant für 2026-11-14T08:00:00 (6ae4e803c62a7746c1630054)
-↻ mann-insta-01-2: 2026-10-31T10:00:00 → 2026-11-14T12:00:00
-  mann-insta-01-2: Prüfung ok (Bild, Ton, Lautstärke)
-✓ mann-insta-01-2 eingeplant für 2026-11-14T12:00:00 (6ae4e805c62a7746c1630064)
-↻ mann-insta-02-1: 2026-10-31T14:00:00 → 2026-11-14T16:00:00
-  mann-insta-02-1: Prüfung ok (Bild, Ton, Lautstärke)
-✓ mann-insta-02-1 eingeplant für 2026-11-14T16:00:00 (6ae4e80828a008bcec8ca7fb)
-↻ mann-insta-02-2: 2026-10-31T18:00:00 → 2026-11-14T20:00:00
-  mann-insta-02-2: Prüfung ok (Bild, Ton, Lautstärke)
-✓ mann-insta-02-2 eingeplant für 2026-11-14T20:00:00 (6ae4e80c28a008bcec8ca807)
-↻ mann-insta-03-1: 2026-11-01T10:00:00 → 2026-11-15T00:00:00
-  mann-insta-03-1: Prüfung ok (Bild, Ton, Lautstärke)
-✓ mann-insta-03-1 eingeplant für 2026-11-15T00:00:00 (6ae4e80ff56256005483b7e5)
-↻ mann-insta-03-2: 2026-11-01T14:00:00 → 2026-11-15T04:00:00
-  mann-insta-03-2: Prüfung ok (Bild, Ton, Lautstärke)
-✓ mann-insta-03-2 eingeplant für 2026-11-15T04:00:00 (6ae4e81128a008bcec8ca82d)
-↻ mann-insta-04-1: 2026-11-01T18:00:00 → 2026-11-15T08:00:00
-  mann-insta-04-1: Prüfung ok (Bild, Ton, Lautstärke)
-✓ mann-insta-04-1 eingeplant für 2026-11-15T08:00:00 (6ae4e81428a008bcec8ca83f)
-↻ mann-insta-04-2: 2026-11-02T10:00:00 → 2026-11-15T12:00:00
-  mann-insta-04-2: Prüfung ok (Bild, Ton, Lautstärke)
-✓ mann-insta-04-2 eingeplant für 2026-11-15T12:00:00 (6ae4e817c62a7746c16300d9)
-↻ mann-insta-05-1: 2026-11-02T14:00:00 → 2026-11-15T16:00:00
-  mann-insta-05-1: Prüfung ok (Bild, Ton, Lautstärke)
-✓ mann-insta-05-1 eingeplant für 2026-11-15T16:00:00 (6ae4e81a28a008bcec8ca85b)
-↻ mann-insta-05-2: 2026-11-02T18:00:00 → 2026-11-15T20:00:00
-  mann-insta-05-2: Prüfung ok (Bild, Ton, Lautstärke)
-✓ mann-insta-05-2 eingeplant für 2026-11-15T20:00:00 (6ae4e81dc62a7746c163010f)
-↻ mann-insta-06-1: 2026-11-03T10:00:00 → 2026-11-16T00:00:00
-  mann-insta-06-1: Prüfung ok (Bild, Ton, Lautstärke)
-✓ mann-insta-06-1 eingeplant für 2026-11-16T00:00:00 (6ae4e820846f49fbdef01a0e)
-↻ mann-insta-06-2: 2026-11-03T14:00:00 → 2026-11-16T04:00:00
-  mann-insta-06-2: Prüfung ok (Bild, Ton, Lautstärke)
-✓ mann-insta-06-2 eingeplant für 2026-11-16T04:00:00 (6ae4e823f56256005483b807)
-↻ mann-insta-07-1: 2026-11-03T18:00:00 → 2026-11-16T08:00:00
-  mann-insta-07-1: Prüfung ok (Bild, Ton, Lautstärke)
-✓ mann-insta-07-1 eingeplant für 2026-11-16T08:00:00 (6ae4e826c62a7746c163012b)
-↻ mann-insta-07-2: 2026-11-04T10:00:00 → 2026-11-16T12:00:00
-  mann-insta-07-2: Prüfung ok (Bild, Ton, Lautstärke)
-✓ mann-insta-07-2 eingeplant für 2026-11-16T12:00:00 (6ae4e82928a008bcec8ca888)
-↻ mann-insta-08-1: 2026-11-04T14:00:00 → 2026-11-16T16:00:00
-  mann-insta-08-1: Prüfung ok (Bild, Ton, Lautstärke)
-✓ mann-insta-08-1 eingeplant für 2026-11-16T16:00:00 (6ae4e82c28a008bcec8ca89e)
-↻ mann-insta-08-2: 2026-11-04T18:00:00 → 2026-11-16T20:00:00
-  mann-insta-08-2: Prüfung ok (Bild, Ton, Lautstärke)
-✓ mann-insta-08-2 eingeplant für 2026-11-16T20:00:00 (6ae4e82f28a008bcec8ca8a9)
-↻ mann-insta-09-1: 2026-11-05T10:00:00 → 2026-11-17T00:00:00
-  mann-insta-09-1: Prüfung ok (Bild, Ton, Lautstärke)
-✓ mann-insta-09-1 eingeplant für 2026-11-17T00:00:00 (6ae4e831c62a7746c1630158)
-↻ mann-insta-09-2: 2026-11-05T14:00:00 → 2026-11-17T04:00:00
-  mann-insta-09-2: Prüfung ok (Bild, Ton, Lautstärke)
-✓ mann-insta-09-2 eingeplant für 2026-11-17T04:00:00 (6ae4e83428a008bcec8ca8d1)
-↻ mann-insta-10-1: 2026-11-05T18:00:00 → 2026-11-17T08:00:00
-  mann-insta-10-1: Prüfung ok (Bild, Ton, Lautstärke)
-✓ mann-insta-10-1 eingeplant für 2026-11-17T08:00:00 (6ae4e837c62a7746c163017c)
-↻ mann-insta-10-2: 2026-11-06T10:00:00 → 2026-11-17T12:00:00
-  mann-insta-10-2: Prüfung ok (Bild, Ton, Lautstärke)
-✓ mann-insta-10-2 eingeplant für 2026-11-17T12:00:00 (6ae4e83a8efb43e4280d4d60)
-  mann-yt-01-1b: Prüfung ok (Bild, Ton, Lautstärke)
-✓ mann-yt-01-1b eingeplant für 2026-11-14T08:30:00 (6ae4e83cb0d2ccfa9f65211f)
-↻ mann-yt-01-2: 2026-10-31T10:30:00 → 2026-11-14T12:30:00
-  mann-yt-01-2: Prüfung ok (Bild, Ton, Lautstärke)
-✓ mann-yt-01-2 eingeplant für 2026-11-14T12:30:00 (6ae4e83fb0d2ccfa9f65212f)
-↻ mann-yt-02-1: 2026-10-31T14:30:00 → 2026-11-14T16:30:00
-  mann-yt-02-1: Prüfung ok (Bild, Ton, Lautstärke)
-✓ mann-yt-02-1 eingeplant für 2026-11-14T16:30:00 (6ae4e841b0d2ccfa9f65215d)
-↻ mann-yt-02-2: 2026-10-31T18:30:00 → 2026-11-14T20:30:00
-  mann-yt-02-2: Prüfung ok (Bild, Ton, Lautstärke)
-✓ mann-yt-02-2 eingeplant für 2026-11-14T20:30:00 (6ae4e8448efb43e4280d4d75)
-↻ mann-yt-03-1: 2026-11-01T10:30:00 → 2026-11-15T00:30:00
-  mann-yt-03-1: Prüfung ok (Bild, Ton, Lautstärke)
-✓ mann-yt-03-1 eingeplant für 2026-11-15T00:30:00 (6ae4e847b0d2ccfa9f652184)
-↻ mann-yt-03-2: 2026-11-01T14:30:00 → 2026-11-15T04:30:00
-  mann-yt-03-2: Prüfung ok (Bild, Ton, Lautstärke)
-✓ mann-yt-03-2 eingeplant für 2026-11-15T04:30:00 (6ae4e8498efb43e4280d4d8b)
-↻ mann-yt-04-1: 2026-11-01T18:30:00 → 2026-11-15T08:30:00
-  mann-yt-04-1: Prüfung ok (Bild, Ton, Lautstärke)
-✓ mann-yt-04-1 eingeplant für 2026-11-15T08:30:00 (6ae4e84cb0d2ccfa9f6521b7)
-↻ mann-yt-04-2: 2026-11-02T10:30:00 → 2026-11-15T12:30:00
-  mann-yt-04-2: Prüfung ok (Bild, Ton, Lautstärke)
-✓ mann-yt-04-2 eingeplant für 2026-11-15T12:30:00 (6ae4e84e8efb43e4280d4d9e)
-↻ mann-yt-05-1: 2026-11-02T14:30:00 → 2026-11-15T16:30:00
-  mann-yt-05-1: Prüfung ok (Bild, Ton, Lautstärke)
-✓ mann-yt-05-1 eingeplant für 2026-11-15T16:30:00 (6ae4e851b0d2ccfa9f6521e4)
-↻ mann-yt-05-2: 2026-11-02T18:30:00 → 2026-11-15T20:30:00
-  mann-yt-05-2: Prüfung ok (Bild, Ton, Lautstärke)
-✓ mann-yt-05-2 eingeplant für 2026-11-15T20:30:00 (6ae4e854b0d2ccfa9f6521f8)
-↻ mann-yt-06-1: 2026-11-03T10:30:00 → 2026-11-16T00:30:00
-  mann-yt-06-1: Prüfung ok (Bild, Ton, Lautstärke)
-✓ mann-yt-06-1 eingeplant für 2026-11-16T00:30:00 (6ae4e856945c86ed582ca41e)
-↻ mann-yt-06-2: 2026-11-03T14:30:00 → 2026-11-16T04:30:00
-  mann-yt-06-2: Prüfung ok (Bild, Ton, Lautstärke)
-✓ mann-yt-06-2 eingeplant für 2026-11-16T04:30:00 (6ae4e859945c86ed582ca422)
-↻ mann-yt-07-1: 2026-11-03T18:30:00 → 2026-11-16T08:30:00
-  mann-yt-07-1: Prüfung ok (Bild, Ton, Lautstärke)
-✓ mann-yt-07-1 eingeplant für 2026-11-16T08:30:00 (6ae4e85bb0d2ccfa9f65227b)
-↻ mann-yt-07-2: 2026-11-04T10:30:00 → 2026-11-16T12:30:00
-  mann-yt-07-2: Prüfung ok (Bild, Ton, Lautstärke)
-✓ mann-yt-07-2 eingeplant für 2026-11-16T12:30:00 (6ae4e85eb0d2ccfa9f65228b)
-↻ mann-yt-08-1: 2026-11-04T14:30:00 → 2026-11-16T16:30:00
-  mann-yt-08-1: Prüfung ok (Bild, Ton, Lautstärke)
-✓ mann-yt-08-1 eingeplant für 2026-11-16T16:30:00 (6ae4e860b0d2ccfa9f65229e)
-↻ mann-yt-08-2: 2026-11-04T18:30:00 → 2026-11-16T20:30:00
-  mann-yt-08-2: Prüfung ok (Bild, Ton, Lautstärke)
-✓ mann-yt-08-2 eingeplant für 2026-11-16T20:30:00 (6ae4e8638efb43e4280d4e00)
-↻ mann-yt-09-1: 2026-11-05T10:30:00 → 2026-11-17T00:30:00
-  mann-yt-09-1: Prüfung ok (Bild, Ton, Lautstärke)
-✓ mann-yt-09-1 eingeplant für 2026-11-17T00:30:00 (6ae4e865b0d2ccfa9f6522cc)
-↻ mann-yt-09-2: 2026-11-05T14:30:00 → 2026-11-17T04:30:00
-  mann-yt-09-2: Prüfung ok (Bild, Ton, Lautstärke)
-✓ mann-yt-09-2 eingeplant für 2026-11-17T04:30:00 (6ae4e8688efb43e4280d4e15)
-↻ mann-yt-10-1: 2026-11-05T18:30:00 → 2026-11-17T08:30:00
-  mann-yt-10-1: Prüfung ok (Bild, Ton, Lautstärke)
-✓ mann-yt-10-1 eingeplant für 2026-11-17T08:30:00 (6ae4e86b2b3c07fdb939a240)
-↻ mann-yt-10-2: 2026-11-06T10:30:00 → 2026-11-17T12:30:00
-  mann-yt-10-2: Prüfung ok (Bild, Ton, Lautstärke)
-✓ mann-yt-10-2 eingeplant für 2026-11-17T12:30:00 (6ae4e86e2b3c07fdb939a256)
-Fertig: 50 neu eingeplant, 0 Fehler.
+Verbundene Konten: tiktok:storys4you.de1, instagram:sto.rys4you, youtube:sto.rys4you
+🗑 mann-tiktok-01b zurückgezogen
+🗑 mann-tiktok-02 zurückgezogen
+🗑 mann-tiktok-03 zurückgezogen
+🗑 mann-tiktok-04 zurückgezogen
+🗑 mann-tiktok-05 zurückgezogen
+🗑 mann-tiktok-06 zurückgezogen
+🗑 mann-tiktok-07 zurückgezogen
+🗑 mann-tiktok-08 zurückgezogen
+🗑 mann-tiktok-09 zurückgezogen
+🗑 mann-tiktok-10 zurückgezogen
+  mann-tiktok-teil-1: Prüfung ok (Bild, Ton, Lautstärke)
+✓ mann-tiktok-teil-1 eingeplant für 2026-11-05T20:00:00 (6ae5bb8cf825eae0421ff224)
+  mann-tiktok-teil-2: Prüfung ok (Bild, Ton, Lautstärke)
+✓ mann-tiktok-teil-2 eingeplant für 2026-11-06T08:00:00 (6ae5bb91c5c6394347a7323f)
+  mann-tiktok-teil-3: Prüfung ok (Bild, Ton, Lautstärke)
+✓ mann-tiktok-teil-3 eingeplant für 2026-11-06T20:00:00 (6ae5bb98f825eae0421ff265)
+  mann-tiktok-teil-4: Prüfung ok (Bild, Ton, Lautstärke)
+✓ mann-tiktok-teil-4 eingeplant für 2026-11-07T08:00:00 (6ae5bb9dc5c6394347a7326e)
+Fertig: 4 neu eingeplant, 0 Fehler.
