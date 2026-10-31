@@ -1,20 +1,34 @@
 Verbundene Konten: tiktok:storys4you.de1, instagram:sto.rys4you, youtube:sto.rys4you
-🗑 mann-tiktok-01b zurückgezogen
-🗑 mann-tiktok-02 zurückgezogen
-🗑 mann-tiktok-03 zurückgezogen
-🗑 mann-tiktok-04 zurückgezogen
-🗑 mann-tiktok-05 zurückgezogen
-🗑 mann-tiktok-06 zurückgezogen
-🗑 mann-tiktok-07 zurückgezogen
-🗑 mann-tiktok-08 zurückgezogen
-🗑 mann-tiktok-09 zurückgezogen
-🗑 mann-tiktok-10 zurückgezogen
+🗑 alien-tiktok-01 zurückgezogen
+🗑 alien-tiktok-02 zurückgezogen
+🗑 alien-tiktok-03 zurückgezogen
+🗑 alien-tiktok-04 zurückgezogen
+🗑 alien-tiktok-05 zurückgezogen
+🗑 alien-tiktok-06 zurückgezogen
+🗑 alien-tiktok-07 zurückgezogen
+🗑 alien-tiktok-08 zurückgezogen
+🗑 alien-tiktok-09 zurückgezogen
+🗑 alien-tiktok-10 zurückgezogen
+  alien-tiktok-teil-1: Prüfung ok (Bild, Ton, Lautstärke)
+✓ alien-tiktok-teil-1 eingeplant für 2026-10-31T20:00:00 (6ae5c6858fd91f671c5f507a)
+  alien-tiktok-teil-2: Prüfung ok (Bild, Ton, Lautstärke)
+✓ alien-tiktok-teil-2 eingeplant für 2026-11-01T08:00:00 (6ae5c68a8fd91f671c5f5090)
+  alien-tiktok-teil-3: Prüfung ok (Bild, Ton, Lautstärke)
+✓ alien-tiktok-teil-3 eingeplant für 2026-11-01T20:00:00 (6ae5c68f8fd91f671c5f50a9)
+  alien-tiktok-teil-4: Prüfung ok (Bild, Ton, Lautstärke)
+✓ alien-tiktok-teil-4 eingeplant für 2026-11-02T08:00:00 (6ae5c6948fd91f671c5f50c4)
+  alien-tiktok-teil-5: Prüfung ok (Bild, Ton, Lautstärke)
+✓ alien-tiktok-teil-5 eingeplant für 2026-11-02T20:00:00 (6ae5c698e9e69fd6d96eff0e)
+↻ mann-tiktok-teil-1: 2026-11-05T20:00:00 → 2026-11-03T08:00:00
   mann-tiktok-teil-1: Prüfung ok (Bild, Ton, Lautstärke)
-✓ mann-tiktok-teil-1 eingeplant für 2026-11-05T20:00:00 (6ae5bb8cf825eae0421ff224)
+✓ mann-tiktok-teil-1 eingeplant für 2026-11-03T08:00:00 (6ae5c69c8fd91f671c5f50ff)
+↻ mann-tiktok-teil-2: 2026-11-06T08:00:00 → 2026-11-03T20:00:00
   mann-tiktok-teil-2: Prüfung ok (Bild, Ton, Lautstärke)
-✓ mann-tiktok-teil-2 eingeplant für 2026-11-06T08:00:00 (6ae5bb91c5c6394347a7323f)
+✓ mann-tiktok-teil-2 eingeplant für 2026-11-03T20:00:00 (6ae5c6a0e9e69fd6d96eff1c)
+↻ mann-tiktok-teil-3: 2026-11-06T20:00:00 → 2026-11-04T08:00:00
   mann-tiktok-teil-3: Prüfung ok (Bild, Ton, Lautstärke)
-✓ mann-tiktok-teil-3 eingeplant für 2026-11-06T20:00:00 (6ae5bb98f825eae0421ff265)
+✓ mann-tiktok-teil-3 eingeplant für 2026-11-04T08:00:00 (6ae5c6a48fd91f671c5f513d)
+↻ mann-tiktok-teil-4: 2026-11-07T08:00:00 → 2026-11-04T20:00:00
   mann-tiktok-teil-4: Prüfung ok (Bild, Ton, Lautstärke)
-✓ mann-tiktok-teil-4 eingeplant für 2026-11-07T08:00:00 (6ae5bb9dc5c6394347a7326e)
-Fertig: 4 neu eingeplant, 0 Fehler.
+✓ mann-tiktok-teil-4 eingeplant für 2026-11-04T20:00:00 (6ae5c6a7e9e69fd6d96eff2c)
+Fertig: 9 neu eingeplant, 0 Fehler.

@@ -616,74 +616,94 @@
   "am": "2026-10-30T08:27:54.460Z"
  },
  "alien-tiktok-01": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-10-31T20:00:00",
   "zernioId": "6ae45efbb0c7b5c8f0cb32dc",
   "http": 201,
-  "am": "2026-10-30T09:10:19.212Z"
+  "am": "2026-10-30T09:10:19.212Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "alien-tiktok-02": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-01T08:00:00",
   "zernioId": "6ae45effa423a43f4eb1b055",
   "http": 201,
-  "am": "2026-10-30T09:10:23.489Z"
+  "am": "2026-10-30T09:10:23.489Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "alien-tiktok-03": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-01T20:00:00",
   "zernioId": "6ae45f03b0c7b5c8f0cb3300",
   "http": 201,
-  "am": "2026-10-30T09:10:27.492Z"
+  "am": "2026-10-30T09:10:27.492Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "alien-tiktok-04": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-02T08:00:00",
   "zernioId": "6ae45f07a423a43f4eb1b069",
   "http": 201,
-  "am": "2026-10-30T09:10:31.402Z"
+  "am": "2026-10-30T09:10:31.402Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "alien-tiktok-05": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-02T20:00:00",
   "zernioId": "6ae45f0b40a6a031efec2a69",
   "http": 201,
-  "am": "2026-10-30T09:10:35.400Z"
+  "am": "2026-10-30T09:10:35.400Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "alien-tiktok-06": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-03T08:00:00",
   "zernioId": "6ae45f0fb0c7b5c8f0cb330f",
   "http": 201,
-  "am": "2026-10-30T09:10:39.288Z"
+  "am": "2026-10-30T09:10:39.288Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "alien-tiktok-07": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-03T20:00:00",
   "zernioId": "6ae45f1340a6a031efec2aa2",
   "http": 201,
-  "am": "2026-10-30T09:10:43.591Z"
+  "am": "2026-10-30T09:10:43.591Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "alien-tiktok-08": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-04T08:00:00",
   "zernioId": "6ae45f17a423a43f4eb1b0b5",
   "http": 201,
-  "am": "2026-10-30T09:10:47.450Z"
+  "am": "2026-10-30T09:10:47.450Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "alien-tiktok-09": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-04T20:00:00",
   "zernioId": "6ae45f1b40a6a031efec2adb",
   "http": 201,
-  "am": "2026-10-30T09:10:51.307Z"
+  "am": "2026-10-30T09:10:51.307Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "alien-tiktok-10": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-05T08:00:00",
   "zernioId": "6ae45f1f40a6a031efec2b02",
   "http": 201,
-  "am": "2026-10-30T09:10:55.301Z"
+  "am": "2026-10-30T09:10:55.301Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "alien-insta-01-1": {
   "ok": true,
@@ -1802,32 +1822,67 @@
   "http": 201,
   "am": "2026-10-30T18:56:46.233Z"
  },
+ "alien-tiktok-teil-1": {
+  "ok": true,
+  "zeit": "2026-10-31T20:00:00",
+  "zernioId": "6ae5c6858fd91f671c5f507a",
+  "http": 201,
+  "am": "2026-10-31T10:44:22.059Z"
+ },
+ "alien-tiktok-teil-2": {
+  "ok": true,
+  "zeit": "2026-11-01T08:00:00",
+  "zernioId": "6ae5c68a8fd91f671c5f5090",
+  "http": 201,
+  "am": "2026-10-31T10:44:27.012Z"
+ },
+ "alien-tiktok-teil-3": {
+  "ok": true,
+  "zeit": "2026-11-01T20:00:00",
+  "zernioId": "6ae5c68f8fd91f671c5f50a9",
+  "http": 201,
+  "am": "2026-10-31T10:44:31.679Z"
+ },
+ "alien-tiktok-teil-4": {
+  "ok": true,
+  "zeit": "2026-11-02T08:00:00",
+  "zernioId": "6ae5c6948fd91f671c5f50c4",
+  "http": 201,
+  "am": "2026-10-31T10:44:36.219Z"
+ },
+ "alien-tiktok-teil-5": {
+  "ok": true,
+  "zeit": "2026-11-02T20:00:00",
+  "zernioId": "6ae5c698e9e69fd6d96eff0e",
+  "http": 201,
+  "am": "2026-10-31T10:44:40.607Z"
+ },
  "mann-tiktok-teil-1": {
   "ok": true,
-  "zeit": "2026-11-05T20:00:00",
-  "zernioId": "6ae5bb8cf825eae0421ff224",
+  "zeit": "2026-11-03T08:00:00",
+  "zernioId": "6ae5c69c8fd91f671c5f50ff",
   "http": 201,
-  "am": "2026-10-31T09:57:32.772Z"
+  "am": "2026-10-31T10:44:44.702Z"
  },
  "mann-tiktok-teil-2": {
   "ok": true,
-  "zeit": "2026-11-06T08:00:00",
-  "zernioId": "6ae5bb91c5c6394347a7323f",
+  "zeit": "2026-11-03T20:00:00",
+  "zernioId": "6ae5c6a0e9e69fd6d96eff1c",
   "http": 201,
-  "am": "2026-10-31T09:57:37.849Z"
+  "am": "2026-10-31T10:44:48.212Z"
  },
  "mann-tiktok-teil-3": {
   "ok": true,
-  "zeit": "2026-11-06T20:00:00",
-  "zernioId": "6ae5bb98f825eae0421ff265",
+  "zeit": "2026-11-04T08:00:00",
+  "zernioId": "6ae5c6a48fd91f671c5f513d",
   "http": 201,
-  "am": "2026-10-31T09:57:44.310Z"
+  "am": "2026-10-31T10:44:52.209Z"
  },
  "mann-tiktok-teil-4": {
   "ok": true,
-  "zeit": "2026-11-07T08:00:00",
-  "zernioId": "6ae5bb9dc5c6394347a7326e",
+  "zeit": "2026-11-04T20:00:00",
+  "zernioId": "6ae5c6a7e9e69fd6d96eff2c",
   "http": 201,
-  "am": "2026-10-31T09:57:49.196Z"
+  "am": "2026-10-31T10:44:55.825Z"
  }
 }
