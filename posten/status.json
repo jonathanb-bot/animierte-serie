@@ -2081,9 +2081,8 @@
   "zernioId": "6ae4e86b2b3c07fdb939a240",
   "http": 201,
   "am": "2026-10-30T18:56:43.691Z",
-  "geloescht": false,
-  "loeschHttp": 429,
-  "loeschAntwort": "{\"error\":\"Rate limit exceeded. Please retry after 46 seconds.\",\"details\":{\"currentCount\":61,\"limit\":60,\"retryAfterSeconds\":46}}"
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "mann-yt-10-2": {
   "ok": false,
@@ -2092,9 +2091,8 @@
   "zernioId": "6ae4e86e2b3c07fdb939a256",
   "http": 201,
   "am": "2026-10-30T18:56:46.233Z",
-  "geloescht": false,
-  "loeschHttp": 429,
-  "loeschAntwort": "{\"error\":\"Rate limit exceeded. Please retry after 46 seconds.\",\"details\":{\"currentCount\":61,\"limit\":60,\"retryAfterSeconds\":46}}"
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "alien-tiktok-teil-1": {
   "ok": true,
