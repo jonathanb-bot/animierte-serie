@@ -1086,6 +1086,102 @@
    "bild_s": 58.2,
    "ton_s": 58.23,
    "lufs": -16.9
+  },
+  "24-stock-kurz/folge-03-teil-1.mp4": {
+   "ok": true,
+   "bild_s": 47.43,
+   "ton_s": 47.43,
+   "lufs": -14.9
+  },
+  "24-stock-kurz/folge-03-teil-2.mp4": {
+   "ok": true,
+   "bild_s": 59.2,
+   "ton_s": 59.2,
+   "lufs": -14.8
+  },
+  "24-stock-kurz/folge-04-teil-1.mp4": {
+   "ok": true,
+   "bild_s": 50.73,
+   "ton_s": 50.73,
+   "lufs": -14.9
+  },
+  "24-stock-kurz/folge-04-teil-2.mp4": {
+   "ok": true,
+   "bild_s": 54.4,
+   "ton_s": 54.4,
+   "lufs": -15.0
+  },
+  "24-stock-kurz/folge-05-teil-1.mp4": {
+   "ok": true,
+   "bild_s": 59.13,
+   "ton_s": 59.13,
+   "lufs": -14.9
+  },
+  "24-stock-kurz/folge-05-teil-2.mp4": {
+   "ok": true,
+   "bild_s": 48.43,
+   "ton_s": 48.43,
+   "lufs": -14.9
+  },
+  "24-stock-kurz/folge-06-teil-1.mp4": {
+   "ok": true,
+   "bild_s": 57.37,
+   "ton_s": 57.37,
+   "lufs": -15.0
+  },
+  "24-stock-kurz/folge-06-teil-2.mp4": {
+   "ok": true,
+   "bild_s": 50.77,
+   "ton_s": 50.77,
+   "lufs": -15.2
+  },
+  "24-stock-kurz/folge-07-teil-1.mp4": {
+   "ok": true,
+   "bild_s": 52.43,
+   "ton_s": 52.43,
+   "lufs": -15.6
+  },
+  "24-stock-kurz/folge-07-teil-2.mp4": {
+   "ok": true,
+   "bild_s": 56.27,
+   "ton_s": 56.27,
+   "lufs": -15.2
+  },
+  "24-stock-kurz/folge-08-teil-1.mp4": {
+   "ok": true,
+   "bild_s": 57.8,
+   "ton_s": 57.8,
+   "lufs": -15.3
+  },
+  "24-stock-kurz/folge-08-teil-2.mp4": {
+   "ok": true,
+   "bild_s": 48.27,
+   "ton_s": 48.3,
+   "lufs": -15.5
+  },
+  "24-stock-kurz/folge-09-teil-1.mp4": {
+   "ok": true,
+   "bild_s": 49.03,
+   "ton_s": 49.03,
+   "lufs": -15.2
+  },
+  "24-stock-kurz/folge-09-teil-2.mp4": {
+   "ok": true,
+   "bild_s": 57.93,
+   "ton_s": 57.92,
+   "lufs": -15.3
+  },
+  "24-stock-kurz/folge-10-teil-1.mp4": {
+   "ok": true,
+   "bild_s": 59.4,
+   "ton_s": 59.4,
+   "lufs": -14.9
+  },
+  "24-stock-kurz/folge-10-teil-2.mp4": {
+   "ok": true,
+   "bild_s": 56.83,
+   "ton_s": 56.83,
+   "lufs": -14.9
   }
  },
  "serien": {

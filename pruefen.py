@@ -39,7 +39,7 @@ for f in sorted((ROOT / "24-stock").glob("*.mp4")) + sorted((ROOT / "24-stock-fo
        + sorted((ROOT / "der-alien").glob("*.mp4")) + sorted((ROOT / "der-alien-folgen").glob("*.mp4")) \
        + sorted((ROOT / "der-letzte-mann").glob("*.mp4")) + sorted((ROOT / "der-letzte-mann-folgen").glob("*.mp4")) \
        + sorted((ROOT / "der-letzte-mann-tiktok").glob("*.mp4")) + sorted((ROOT / "der-alien-tiktok").glob("*.mp4")) \
-       + sorted((ROOT / "der-alien-kurz").glob("*.mp4")) + sorted((ROOT / "der-letzte-mann-kurz").glob("*.mp4")):
+       + sorted((ROOT / "der-alien-kurz").glob("*.mp4")) + sorted((ROOT / "der-letzte-mann-kurz").glob("*.mp4")) + sorted((ROOT / "24-stock-kurz").glob("*.mp4")):
     rel = f.relative_to(ROOT).as_posix()
     ergebnis["dateien"][rel] = pruefe(f)
     print(rel, ergebnis["dateien"][rel])
