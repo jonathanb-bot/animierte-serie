@@ -852,6 +852,30 @@
    "bild_s": 95.57,
    "ton_s": 95.59,
    "lufs": -16.8
+  },
+  "der-letzte-mann-tiktok/teil-1.mp4": {
+   "ok": true,
+   "bild_s": 277.73,
+   "ton_s": 277.76,
+   "lufs": -16.5
+  },
+  "der-letzte-mann-tiktok/teil-2.mp4": {
+   "ok": true,
+   "bild_s": 189.4,
+   "ton_s": 189.42,
+   "lufs": -15.9
+  },
+  "der-letzte-mann-tiktok/teil-3.mp4": {
+   "ok": true,
+   "bild_s": 282.97,
+   "ton_s": 283.01,
+   "lufs": -16.0
+  },
+  "der-letzte-mann-tiktok/teil-4.mp4": {
+   "ok": true,
+   "bild_s": 186.03,
+   "ton_s": 186.06,
+   "lufs": -15.8
   }
  },
  "serien": {
@@ -989,6 +1013,28 @@
      "teile": 2
     }
    }
+  }
+ },
+ "tiktok": {
+  "der-letzte-mann": {
+   "teil-1": [
+    1,
+    2,
+    3
+   ],
+   "teil-2": [
+    4,
+    5
+   ],
+   "teil-3": [
+    6,
+    7,
+    8
+   ],
+   "teil-4": [
+    9,
+    10
+   ]
   }
  }
 }

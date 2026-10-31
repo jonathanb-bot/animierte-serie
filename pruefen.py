@@ -37,7 +37,8 @@ ergebnis = {"serie": "24. Stock", "regel": "ok = Tonspur da, so lang wie das Bil
             "reihenfolge": ["24-stock", "der-alien", "der-letzte-mann"], "folgen": {}, "dateien": {}, "serien": {}}
 for f in sorted((ROOT / "24-stock").glob("*.mp4")) + sorted((ROOT / "24-stock-folgen").glob("*.mp4")) \
        + sorted((ROOT / "der-alien").glob("*.mp4")) + sorted((ROOT / "der-alien-folgen").glob("*.mp4")) \
-       + sorted((ROOT / "der-letzte-mann").glob("*.mp4")) + sorted((ROOT / "der-letzte-mann-folgen").glob("*.mp4")):
+       + sorted((ROOT / "der-letzte-mann").glob("*.mp4")) + sorted((ROOT / "der-letzte-mann-folgen").glob("*.mp4")) \
+       + sorted((ROOT / "der-letzte-mann-tiktok").glob("*.mp4")):
     rel = f.relative_to(ROOT).as_posix()
     ergebnis["dateien"][rel] = pruefe(f)
     print(rel, ergebnis["dateien"][rel])
@@ -51,5 +52,7 @@ for ordner, name, titel in (("24-stock", "24. Stock", TITEL), ("der-alien", "Der
         teile = sorted(int(m.group(1)) for p in (ROOT / ordner).glob(f"folge-{n:02d}-teil-*.mp4") if (m := re.search(r"teil-(\d+)", p.name)))
         fo[f"{n:02d}"] = {"titel": titel[n], "teile": len(teile)}
     ergebnis["serien"][ordner] = {"name": name, "folgen": fo}
+# TikTok-Sammelteile (Jonathans Vorgabe 31.10.): mehrere Folgen am Stück, "Fortsetzung folgt" nur am Ende des Teils
+ergebnis["tiktok"] = {"der-letzte-mann": {"teil-1": [1, 2, 3], "teil-2": [4, 5], "teil-3": [6, 7, 8], "teil-4": [9, 10]}}
 (ROOT / "geprueft.json").write_text(json.dumps(ergebnis, ensure_ascii=False, indent=1) + "\n")
 print("fertig:", sum(d["ok"] for d in ergebnis["dateien"].values()), "ok von", len(ergebnis["dateien"]))
