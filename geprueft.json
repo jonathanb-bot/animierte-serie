@@ -906,6 +906,186 @@
    "bild_s": 406.6,
    "ton_s": 406.6,
    "lufs": -15.1
+  },
+  "der-alien-kurz/folge-01-teil-1.mp4": {
+   "ok": true,
+   "bild_s": 46.57,
+   "ton_s": 46.57,
+   "lufs": -14.7
+  },
+  "der-alien-kurz/folge-01-teil-2.mp4": {
+   "ok": true,
+   "bild_s": 57.87,
+   "ton_s": 57.87,
+   "lufs": -14.9
+  },
+  "der-alien-kurz/folge-02-teil-1.mp4": {
+   "ok": true,
+   "bild_s": 58.4,
+   "ton_s": 58.4,
+   "lufs": -15.4
+  },
+  "der-alien-kurz/folge-02-teil-2.mp4": {
+   "ok": true,
+   "bild_s": 55.97,
+   "ton_s": 55.97,
+   "lufs": -15.1
+  },
+  "der-alien-kurz/folge-03-teil-1.mp4": {
+   "ok": true,
+   "bild_s": 58.67,
+   "ton_s": 58.67,
+   "lufs": -14.9
+  },
+  "der-alien-kurz/folge-03-teil-2.mp4": {
+   "ok": true,
+   "bild_s": 53.77,
+   "ton_s": 53.77,
+   "lufs": -15.2
+  },
+  "der-alien-kurz/folge-04-teil-1.mp4": {
+   "ok": true,
+   "bild_s": 55.47,
+   "ton_s": 55.47,
+   "lufs": -15.0
+  },
+  "der-alien-kurz/folge-04-teil-2.mp4": {
+   "ok": true,
+   "bild_s": 55.53,
+   "ton_s": 55.53,
+   "lufs": -15.4
+  },
+  "der-alien-kurz/folge-05-teil-1.mp4": {
+   "ok": true,
+   "bild_s": 54.63,
+   "ton_s": 54.63,
+   "lufs": -15.3
+  },
+  "der-alien-kurz/folge-05-teil-2.mp4": {
+   "ok": true,
+   "bild_s": 54.7,
+   "ton_s": 54.7,
+   "lufs": -15.4
+  },
+  "der-alien-kurz/folge-06-teil-1.mp4": {
+   "ok": true,
+   "bild_s": 51.83,
+   "ton_s": 51.83,
+   "lufs": -15.0
+  },
+  "der-alien-kurz/folge-06-teil-2.mp4": {
+   "ok": true,
+   "bild_s": 57.93,
+   "ton_s": 57.93,
+   "lufs": -15.3
+  },
+  "der-alien-kurz/folge-07-teil-1.mp4": {
+   "ok": true,
+   "bild_s": 52.47,
+   "ton_s": 52.47,
+   "lufs": -14.7
+  },
+  "der-alien-kurz/folge-07-teil-2.mp4": {
+   "ok": true,
+   "bild_s": 59.43,
+   "ton_s": 59.43,
+   "lufs": -14.7
+  },
+  "der-alien-kurz/folge-08-teil-1.mp4": {
+   "ok": true,
+   "bild_s": 59.1,
+   "ton_s": 59.1,
+   "lufs": -15.1
+  },
+  "der-alien-kurz/folge-08-teil-2.mp4": {
+   "ok": true,
+   "bild_s": 43.73,
+   "ton_s": 43.73,
+   "lufs": -15.4
+  },
+  "der-alien-kurz/folge-09-teil-1.mp4": {
+   "ok": true,
+   "bild_s": 53.87,
+   "ton_s": 53.87,
+   "lufs": -15.4
+  },
+  "der-alien-kurz/folge-09-teil-2.mp4": {
+   "ok": true,
+   "bild_s": 55.13,
+   "ton_s": 55.13,
+   "lufs": -15.0
+  },
+  "der-alien-kurz/folge-10-teil-1.mp4": {
+   "ok": true,
+   "bild_s": 59.0,
+   "ton_s": 59.0,
+   "lufs": -15.0
+  },
+  "der-alien-kurz/folge-10-teil-2.mp4": {
+   "ok": true,
+   "bild_s": 46.77,
+   "ton_s": 46.77,
+   "lufs": -15.5
+  },
+  "der-letzte-mann-kurz/folge-01.mp4": {
+   "ok": true,
+   "bild_s": 45.37,
+   "ton_s": 45.4,
+   "lufs": -16.5
+  },
+  "der-letzte-mann-kurz/folge-02.mp4": {
+   "ok": true,
+   "bild_s": 49.03,
+   "ton_s": 49.07,
+   "lufs": -16.0
+  },
+  "der-letzte-mann-kurz/folge-03.mp4": {
+   "ok": true,
+   "bild_s": 50.97,
+   "ton_s": 51.0,
+   "lufs": -17.1
+  },
+  "der-letzte-mann-kurz/folge-04.mp4": {
+   "ok": true,
+   "bild_s": 52.07,
+   "ton_s": 52.06,
+   "lufs": -15.2
+  },
+  "der-letzte-mann-kurz/folge-05.mp4": {
+   "ok": true,
+   "bild_s": 52.3,
+   "ton_s": 52.32,
+   "lufs": -16.8
+  },
+  "der-letzte-mann-kurz/folge-06.mp4": {
+   "ok": true,
+   "bild_s": 48.67,
+   "ton_s": 48.66,
+   "lufs": -15.1
+  },
+  "der-letzte-mann-kurz/folge-07.mp4": {
+   "ok": true,
+   "bild_s": 51.2,
+   "ton_s": 51.2,
+   "lufs": -16.7
+  },
+  "der-letzte-mann-kurz/folge-08.mp4": {
+   "ok": true,
+   "bild_s": 50.8,
+   "ton_s": 50.83,
+   "lufs": -17.1
+  },
+  "der-letzte-mann-kurz/folge-09.mp4": {
+   "ok": true,
+   "bild_s": 50.97,
+   "ton_s": 51.0,
+   "lufs": -15.2
+  },
+  "der-letzte-mann-kurz/folge-10.mp4": {
+   "ok": true,
+   "bild_s": 58.2,
+   "ton_s": 58.23,
+   "lufs": -16.9
   }
  },
  "serien": {
@@ -1088,5 +1268,6 @@
     10
    ]
   }
- }
+ },
+ "kurz": "Instagram/YouTube: gekürzte Fassungen (nur wichtigste Szenen), TikTok ungekürzt"
 }
