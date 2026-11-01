@@ -1,11 +1,61 @@
 {
  "_info": "Kennzahlen je Lauf (vidIQ). Schwellen: TikTok Creator Rewards ab 10.000 Followern + 100.000 Aufrufen in 30 Tagen (nur Videos über 1 Minute zählen); YouTube-Partnerprogramm ab 1.000 Abonnenten + 10 Mio. Shorts-Aufrufen in 90 Tagen; Instagram ca. 10.000 Follower. Erreichte Schwellen in 'meilensteine' vermerken und Jonathan per PushNotification melden.",
- "schwellen": {"tiktok_follower": 10000, "youtube_abonnenten": 1000, "instagram_follower": 10000},
+ "schwellen": {
+  "tiktok_follower": 10000,
+  "youtube_abonnenten": 1000,
+  "instagram_follower": 10000
+ },
  "meilensteine": [],
  "verlauf": [
-  {"datum": "2026-11-01", "youtube": {"kanal": "Storys4you (@sto.rys4you)", "abonnenten": 30, "aufrufe": 11231, "videos": 16},
-   "instagram": {"konto": "sto.rys4you", "zugang": "nur öffentlich (manuell verbunden)"},
-   "tiktok": {"konto": "storys4you.de1", "zugang": "vidIQ hat keine TikTok-Kontodaten"},
-   "hinweis": "YouTube-Analytics für 1.–31.10. noch leer (Daten kommen ca. 2 Tage verzögert)."}
- ]
+  {
+   "datum": "2026-11-01",
+   "youtube": {
+    "kanal": "Storys4you (@sto.rys4you)",
+    "abonnenten": 30,
+    "aufrufe": 11231,
+    "videos": 16
+   },
+   "instagram": {
+    "konto": "sto.rys4you",
+    "zugang": "nur öffentlich (manuell verbunden)"
+   },
+   "tiktok": {
+    "konto": "storys4you.de1",
+    "zugang": "vidIQ hat keine TikTok-Kontodaten"
+   },
+   "hinweis": "YouTube-Analytics für 1.–31.10. noch leer (Daten kommen ca. 2 Tage verzögert)."
+  },
+  {
+   "datum": "2026-11-01T21:50",
+   "quelle": "Analyse vor der Staffel (Zernio 41 Posts + vidIQ)",
+   "tiktok": {
+    "follower": 60,
+    "follower_30_tage": "+8/-0",
+    "likes_gesamt": 1137,
+    "videos": 13,
+    "hook_3s_median": 0.58,
+    "wiedergabe_s": "23–32",
+    "fuer_dich": "86–96 %",
+    "neue_zuschauer": "76–79 %"
+   },
+   "instagram": {
+    "follower": 4,
+    "aufrufe_30_tage": 19166,
+    "reichweite_30_tage": 10109,
+    "aktive_konten": 191,
+    "median_aufrufe": 1335
+   },
+   "youtube": {
+    "abonnenten": 30,
+    "abos_30_tage": "+3",
+    "aufrufe_30_tage": 1409,
+    "minuten_30_tage": 1038,
+    "median_aufrufe": 395,
+    "gute_shorts_bindung": "64–77 %"
+   },
+   "erkenntnis": "Teile, die mit Titel/Rückblick beginnen oder mit Check/Endkarte enden, floppen (Faktor 0,1–0,2); Mittelteile direkt in der Handlung 1,5–5,7. Hooks müssen ohne Vorwissen funktionieren (77 % neue Zuschauer).",
+   "vidiq_credits_danach": 124
+  }
+ ],
+ "letzte_analyse": "taeglich/analyse/2026-11-01.md"
 }
