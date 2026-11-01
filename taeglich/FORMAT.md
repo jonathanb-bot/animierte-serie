@@ -147,7 +147,19 @@ git add -A taeglich engine && git commit && git push -u origin taeglich         
 
 IDs: `taeglich-tiktok-sNN-teil-N`, `taeglich-insta-sNN-fXX`, `taeglich-yt-sNN-fXX`. Bis der Workflow „Posts einplanen“ fertig ist, nichts auf `main` pushen. Danach im Log prüfen, dass alles mit ✓ eingeplant ist.
 
+## Themen aus dem echten Leben (Jonathans Vorgabe 1.11. abends)
+
+Neben Überleben und Mysterium kommen **regelmäßig Themen, die jedem im Leben passieren**. Sie werden in Du-Form erzählt, sodass es dich direkt trifft, und **immer im gleichen Kurzgesagt-Stil** mit denselben Figuren, Kulissen und derselben Stimme. Mindestens jede 2. Staffel hat so ein Lebensthema als Hauptthema. In jeder Staffel greift mindestens eine Folge eines davon auf.
+
+- **Das Leben:** Geburt eines Geschwisterkinds, der erste Schultag, erste Liebe, der beste Freund, Streit und Versöhnung, Schulabschluss, Ausziehen, der erste Job, Eltern werden älter, alt werden, „Wie viel Zeit bleibt uns?“ (Kulisse `lebenszeit`)
+- **Der Tod:** Opa oder Oma stirbt, das Haustier, Abschied im Krankenhaus, was bleibt (Erinnerungen, Fotos, Gewohnheiten), Trauer und wie es weitergeht, die Frage, was danach kommt (nur als Gedanke, nie als Tatsache)
+- **Erzählweise beim Tod:** behutsam, ehrlich, nie reißerisch, keine Bilder von Verletzungen. Am Ende steht immer etwas Tröstendes oder Hoffnungsvolles (Zeit mit den Menschen, die noch da sind). **Nie Suizid oder Selbstverletzung.** Weiterhin kein Erfundenes als Tatsache.
+- Gute Kulissen dafür: `krankenhaus`, `esstisch` (leerer Stuhl), `wohnzimmer` (Fotos), `lebenszeit`, `see`, `landschaft`, `park` im Herbst und Winter, `weltall` (wie klein wir sind).
+
 ## Themenspeicher (Staffel-Ideen, nicht verpflichtend)
+
+- **Der leere Stuhl:** Opa ist gestorben, und am Esstisch steht sein Stuhl. Zehn Folgen über das letzte Jahr mit ihm und das, was bleibt. (esstisch, krankenhaus, wohnzimmer, see, lebenszeit)
+- **Ein ganzes Leben in 10 Minuten:** Von deiner Geburt bis du alt bist, jede Folge ein Lebensabschnitt. (lebenszeit, zimmer, klassenzimmer, grossstadt, wohnzimmer, weltall)
 
 - **Wenn die KI alles kann:** Stell dir vor, eine KI kann über Nacht alles, was du kannst. Deine Schule, dein Traumjob, deine Freunde, und was keine Maschine ersetzt. (rechenzentrum, auge, netz, grossstadt)
 - **Die letzten 1000 Sommer:** Lebenszeit, Freunde, die auseinanderziehen, der eine Sommer am See. (lebenszeit, see, landschaft, park)
