@@ -12,7 +12,7 @@ Diese Datei ist verbindlich für die geplante Aufgabe „Kurzvideo-Staffel alle 
 
 ## Die Staffel
 
-- **10 Folgen**, jede **45–58 s** (höchstens 60 s, sonst passt sie nicht als ein Post). Die Stimme hat ca. 110–140 Wörter, 12–18 Einstellungen.
+- **10 Folgen**, jede **65–85 s**. **Jedes Video muss über 1 Minute lang sein** (Jonathans dringende Vorgabe vom 1.11., Issue #12: TikTok zahlt im Creator Rewards Program ab 10.000 Followern nur für Videos über 1 Minute). Unter 90 s bleibt jede Folge ein einzelner Post auf Instagram und YouTube. Die Stimme hat ca. 170–210 Wörter, 18–26 Einstellungen. Ist eine Folge nach dem Vertonen kürzer als 62 s, schreib eine Einstellung dazu, statt zu dehnen.
 - **Eine durchgehende Geschichte** in Du-Form mit eigenem Titel und eigener Welt. Jede Staffel bekommt ein neues Thema.
 - **Jede Folge außer der letzten endet mit einem Cliffhanger, und zwar mit der letzten gesprochenen Zeile.** **Nie „Fortsetzung folgt“** (Jonathans feste Vorgabe vom 1.11., Issue #11): keine Karte, kein Text, kein Satz „Fortsetzung folgt“, auch nicht als Überschrift. Ebenso keine andere Endkarte.
 - **Folge 10** schließt die Geschichte mit einer starken letzten Zeile, ebenfalls ohne Endkarte.
@@ -39,9 +39,9 @@ Pro Staffel einen großen Kanal als Hauptvorbild wählen (abwechseln!) und kurz 
 ## Bauplan einer Folge
 
 1. **Hook** (Einstellung 1, gesprochen höchstens ca. 3 s): eine Du-Aussage, die trifft oder überrascht. Ab Folge 2 knüpft sie an den letzten Cliffhanger an.
-2. **Wiedererkennen** (2–3): ein Moment, den jeder kennt.
-3. **Steigerung** (3–5): eine Zahl, eine Folge oder ein Konflikt. Jede Einstellung bringt etwas Neues.
-4. **Wendung** (1–2).
+2. **Wiedererkennen** (3–5): ein Moment, den jeder kennt.
+3. **Steigerung** (6–9): eine Zahl, eine Folge oder ein Konflikt, gern mit einer zweiten Stufe. Jede Einstellung bringt etwas Neues.
+4. **Wendung** (2–3).
 5. **Cliffhanger** (1) als letzte Einstellung. Danach kommt nichts mehr, keine Karte „Fortsetzung folgt“.
 
 **Verboten:** Fragen ans Publikum („Was hättest du gemacht?“, „Schreib es in die Kommentare“, „Was ist richtig?“), Quiz und Check (#8). Ebenso „Echter Fakt“ (#2) und Erfundenes, das als Tatsache verkauft wird: Fantasie-Szenarien werden als „Stell dir vor …“ erzählt, Schätzungen als Schätzung. Fragen der Figuren in der Handlung sind erlaubt. Nicht predigen. Kein Suizid, keine Selbstverletzung, keine Essstörungen und keine Gewalt gegen Kinder. Tod und Abschied nur behutsam.
@@ -113,7 +113,7 @@ git add -A taeglich engine && git commit && git push -u origin taeglich         
 ## Posten (hinten anhängen)
 
 `staffel_veroeffentlichen.py` erledigt Folgendes:
-- jede Folge auf ca. −15 LUFS bringen und prüfen (Ton da, so lang wie das Bild, > −24 LUFS, ≤ 60 s)
+- jede Folge auf ca. −15 LUFS bringen und prüfen (Ton da, so lang wie das Bild, > −24 LUFS, **62–89 s**; kürzer als 62 s wird nicht gepostet)
 - die TikTok-Sammelteile schneiden (Standard 10 Folgen → Folge 1–3, 4–5, 6–8, 9–10, einfach aneinandergehängt; eine versehentliche „Fortsetzung folgt“-Karte würde überall herausgeschnitten) und prüfen
 - alles auf `youtube-upload` ablegen (`taeglich/sNN-fXX.mp4`, `taeglich-tiktok/sNN-teil-N.mp4`, `geprueft.json`)
 - alle Posts **pro Plattform hinter den letzten geplanten Post** hängen, im Takt TikTok 08:00/20:00, Instagram alle 4 Stunden, YouTube jeweils :30
