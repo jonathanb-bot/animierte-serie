@@ -10,6 +10,13 @@ Jonathans Auftrag vom 1.11.2026:
 
 Diese Datei ist verbindlich für die geplante Aufgabe „Kurzvideo-Staffel alle 2 Tage“. Außerdem gelten alle offenen GitHub-Issues mit Label `dringlich`.
 
+## Tempo (Jonathans Vorgabe 1.11. abends: bessere Analyse, mehr Videos pro Tag, damit es schneller geht)
+
+- **Posten:** TikTok **4× am Tag (08, 12, 16, 20 Uhr)**, Instagram alle 4 Stunden, YouTube jeweils :30. Neue Posts weiterhin hinten anhängen.
+- **Produktion jede Nacht um 23:44 prüfen:** `python taeglich/vorrat.py`. **PRODUZIEREN**, wenn gestern keine Staffel fertig wurde oder der TikTok-Vorrat unter 3 Tagen liegt, sonst AUSSETZEN. Normal ist also alle 2 Tage eine Staffel. Reicht der Vorrat nicht, wird jeden Tag produziert. 10 Folgen pro Staffel ergeben 4 TikTok-Teile, das füllt genau einen Tag mit 4 TikTok-Posts.
+- **Analyse jeden Abend um 21:39** (Zernio kostenlos), vidIQ nach Credit-Plan nur jeden 2. Abend.
+- In `staffeln.json` bekommt jede Staffel `datum` (JJJJ-MM-TT), sonst erkennt `vorrat.py` sie nicht.
+
 ## Die Staffel
 
 - **10 Folgen**, jede **65–85 s**. **Jedes Video muss über 1 Minute lang sein** (Jonathans dringende Vorgabe vom 1.11., Issue #12: TikTok zahlt im Creator Rewards Program ab 10.000 Followern nur für Videos über 1 Minute). Unter 90 s bleibt jede Folge ein einzelner Post auf Instagram und YouTube. Die Stimme hat ca. 170–210 Wörter, 18–26 Einstellungen. Ist eine Folge nach dem Vertonen kürzer als 62 s, schreib eine Einstellung dazu, statt zu dehnen.

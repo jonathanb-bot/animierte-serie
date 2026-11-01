@@ -1,6 +1,6 @@
 # Analyse vor jeder Staffel
 
-Jonathans Wunsch vom 1.11.2026: Vor jeder Staffel gründlich auswerten, **was bei den Leuten gut ankam**, und das in ähnlicher Form wieder einbauen. Die geplante Aufgabe „Analyse vor der Staffel“ läuft jeden 2. Abend um 21:39 Uhr, also vor der Produktion um 23:44 Uhr. Die Produktion liest das Ergebnis (`taeglich/analyse/aktuell.md`) und setzt es um.
+Jonathans Wunsch vom 1.11.2026: Vor jeder Staffel gründlich auswerten, **was bei den Leuten gut ankam**, und das in ähnlicher Form wieder einbauen. Die geplante Aufgabe „Analyse vor der Staffel“ läuft **jeden Abend** um 21:39 Uhr, also vor der Produktion um 23:44 Uhr. Zernio jedes Mal (kostenlos), vidIQ nur an ungeraden Tagen (`vidiq_channel_analytics` 5 Credits) und die Ausreißer-Suche nur jeden 4. Tag (5 Credits). Das ergibt ca. 115 Credits im Monat bei 150 verfügbaren. Die Produktion liest das Ergebnis (`taeglich/analyse/aktuell.md`) und setzt es um.
 
 Feste Regeln (Issues mit Label `dringlich`, `taeglich/FORMAT.md`) gehen immer vor: Eine Analyse darf nie dazu führen, dass Videos kürzer als 1 Minute werden, Fragen ans Publikum bekommen oder „Fortsetzung folgt“ zeigen.
 
