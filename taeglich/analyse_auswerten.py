@@ -138,8 +138,10 @@ def main(argv=None) -> int:
         z = lambda p: [p["id"], p["inhalt"], p["stimmung"], p["zeit"][5:16].replace("T", " "), p["alter_h"], p["aufrufe"], p["pro_h"], p["likes"], p["kommentare"], p["shares"], p["eng"], p["wiedergabe_s"], p["abbruch"], p["abschluss"]]
         print(f"\n## {plat}: Top 5 (Aufrufe pro Stunde, Posts ab 12 h alt)\n")
         print(tabelle([z(p) for p in g[:5]], kopf))
-        print(f"\n## {plat}: Flop 5\n")
-        print(tabelle([z(p) for p in g[-5:][::-1]], kopf))
+        rest = g[5:]
+        if rest:  # Flop nur aus Posts, die nicht schon in den Top 5 stehen
+            print(f"\n## {plat}: Flop {min(5, len(rest))}\n")
+            print(tabelle([z(p) for p in rest[-5:][::-1]], kopf))
 
     print("\n## Uhrzeiten (Median Aufrufe pro Stunde)\n")
     uhr = defaultdict(list)
