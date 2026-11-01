@@ -1182,6 +1182,12 @@
    "bild_s": 56.83,
    "ton_s": 56.83,
    "lufs": -14.9
+  },
+  "taeglich/video-001.mp4": {
+   "ok": true,
+   "bild_s": 45.47,
+   "ton_s": 45.5,
+   "lufs": -14.6
   }
  },
  "serien": {
@@ -1365,5 +1371,11 @@
    ]
   }
  },
- "kurz": "Instagram/YouTube: gekürzte Fassungen (nur wichtigste Szenen), TikTok ungekürzt"
+ "kurz": "Instagram/YouTube: gekürzte Fassungen (nur wichtigste Szenen), TikTok ungekürzt",
+ "taeglich": {
+  "video-001": {
+   "titel": "Die Zeit, die dir bleibt",
+   "datei": "taeglich/video-001.mp4"
+  }
+ }
 }
