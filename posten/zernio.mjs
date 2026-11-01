@@ -49,10 +49,10 @@ console.log("Verbundene Konten:", liste.map(a => `${a.platform}:${a.username || 
 if (args.includes("--konten")) process.exit(0);
 
 // --analyse: Auswertung für Claude (Jonathans Wunsch 1.11.: vor jeder Staffel schauen, was gut ankam).
-// Holt pro veröffentlichtem Post die Zernio-Analytics und pro Konto Zahlen der letzten 30 Tage,
-// schreibt alles nach posten/analyse.json (ohne Zugangsdaten). Ändert nichts bei Zernio.
+// Holt die Post-Analytics aller Posts der letzten 60 Tage (GET /analytics, seitenweise), Konto-Insights je Plattform
+// und die besten Posting-Zeiten. Schreibt posten/analyse.json (nur Zahlen und kurze Texte, keine Zugangsdaten).
 if (args.includes("--analyse")) {
-  const zahlen = (o, tiefe = 0, pre = "") => { // nur Zahlen und kurze Texte übernehmen, keine Tokens/Links
+  const zahlen = (o, tiefe = 0, pre = "") => {
     const out = {};
     if (!o || typeof o !== "object" || tiefe > 3) return out;
     for (const [k, v] of Object.entries(o)) {
@@ -60,36 +60,64 @@ if (args.includes("--analyse")) {
       if (typeof v === "number") out[pre + k] = v;
       else if (typeof v === "string" && v.length <= 60 && /date|time|status|platform|type|username|name|updated/i.test(k)) out[pre + k] = v;
       else if (v && typeof v === "object" && !Array.isArray(v)) Object.assign(out, zahlen(v, tiefe + 1, pre + k + "."));
-      else if (Array.isArray(v) && v.length && typeof v[0] === "object" && tiefe < 2) v.slice(0, 5).forEach((e, i) => Object.assign(out, zahlen(e, tiefe + 1, `${pre}${k}[${i}].`)));
+      else if (Array.isArray(v) && v.length && typeof v[0] === "object" && tiefe < 2) v.slice(0, 5).forEach((e, n) => Object.assign(out, zahlen(e, tiefe + 1, `${pre}${k}[${n}].`)));
     }
     return out;
   };
   const tag = d => d.toISOString().slice(0, 10);
-  const jetzt = new Date(), von = new Date(jetzt - 30 * 864e5);
-  const berlin = new Date(jetzt.toLocaleString("en-US", { timeZone: "Europe/Berlin" }));
-  const iso = d => d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0") + "T" + String(d.getHours()).padStart(2, "0") + ":" + String(d.getMinutes()).padStart(2, "0");
-  const ergebnis = { erstellt: jetzt.toISOString(), konten: [], posts: [], fehler: [] };
+  const jetzt = new Date(), von = new Date(jetzt - 60 * 864e5), von30 = new Date(jetzt - 30 * 864e5);
+  const warte = () => new Promise(res => setTimeout(res, 400));
+  const ergebnis = { erstellt: jetzt.toISOString(), konten: [], posts: [], best_time: {}, fehler: [] };
+  const zuPlan = {}; // Zernio-Post-ID -> Plan-Eintrag
+  for (const post of plan.posts) { const st = status[post.id]; if (st?.zernioId) zuPlan[st.zernioId] = post; }
+  // Konten: Follower aus /accounts, dazu die Insights der Plattform
+  const insights = { tiktok: "/analytics/tiktok/account-insights", instagram: "/analytics/instagram/account-insights", youtube: "/analytics/youtube/channel-insights" };
   for (const acc of liste) {
     const key = acc._yt ? KEY_YT : KEY;
-    const eintrag = { platform: acc.platform, username: acc.username || acc.displayName, konto: zahlen(acc) };
-    const r = await api("GET", `/analytics/account/${acc._id}?startDate=${tag(von)}&endDate=${tag(jetzt)}`, null, key);
-    if (r.ok) eintrag.analytics_30_tage = zahlen(r.json); else { eintrag.analytics_fehler = `HTTP ${r.status} ${JSON.stringify(r.json).slice(0, 200)}`; ergebnis.fehler.push(`${acc.platform}: Konto-Analytics HTTP ${r.status}`); }
-    ergebnis.konten.push(eintrag);
-    console.log(`Konto ${acc.platform}:${eintrag.username} ${r.ok ? "ok" : eintrag.analytics_fehler}`);
-    await new Promise(res => setTimeout(res, 400));
+    const e = { platform: acc.platform, username: acc.username || acc.displayName, follower: acc.followersCount ?? null, konto: zahlen(acc) };
+    if (insights[acc.platform]) {
+      const r = await api("GET", `${insights[acc.platform]}?accountId=${acc._id}&fromDate=${tag(von30)}&toDate=${tag(jetzt)}`, null, key);
+      if (r.ok) e.insights_30_tage = zahlen(r.json); else { e.insights_fehler = `HTTP ${r.status} ${JSON.stringify(r.json).slice(0, 240)}`; ergebnis.fehler.push(`${acc.platform}: Insights HTTP ${r.status}`); }
+      await warte();
+    }
+    ergebnis.konten.push(e);
+    console.log(`Konto ${acc.platform}:${e.username} Follower=${e.follower} Insights ${e.insights_fehler || "ok"}`);
   }
-  for (const post of plan.posts) {
-    const st = status[post.id];
-    if (!st?.zernioId || st.geloescht || (plan.loeschen || []).includes(post.id) || post.zeit.slice(0, 16) > iso(berlin)) continue;
-    const r = await api("GET", `/analytics/${st.zernioId}`, null, keyFuer(post.platform));
-    const e = { id: post.id, platform: post.platform, serie: post.serie || "24-stock", zeit: post.zeit, video: post.video.split("/youtube-upload/")[1] || post.video, url: st.ergebnis?.url || null };
-    if (r.ok) e.analytics = zahlen(r.json); else { e.fehler = `HTTP ${r.status} ${JSON.stringify(r.json).slice(0, 160)}`; ergebnis.fehler.push(`${post.id}: HTTP ${r.status}`); }
-    ergebnis.posts.push(e);
-    console.log(`${post.id}: ${r.ok ? Object.entries(e.analytics).filter(([k]) => /view|like|comment|share|save|reach|impression|watch/i.test(k)).slice(0, 8).map(([k, v]) => k + "=" + v).join(" ") : e.fehler}`);
-    await new Promise(res => setTimeout(res, 400));
+  // Posts: alle der letzten 60 Tage, je Zernio-Konto (YouTube hat einen eigenen Schlüssel)
+  const gesehen = new Set();
+  for (const [name, key] of [["haupt", KEY], ["yt", KEY_YT]]) {
+    if (!key) continue;
+    for (let page = 1; page <= 20; page++) {
+      const r = await api("GET", `/analytics?source=all&fromDate=${tag(von)}&toDate=${tag(jetzt)}&limit=100&page=${page}`, null, key);
+      if (!r.ok) { ergebnis.fehler.push(`Posts (${name}) Seite ${page}: HTTP ${r.status} ${JSON.stringify(r.json).slice(0, 240)}`); console.log(`Posts (${name}): HTTP ${r.status} ${JSON.stringify(r.json).slice(0, 300)}`); break; }
+      const liste2 = r.json.posts || r.json.data || [];
+      if (page === 1 && r.json.overview) ergebnis[`ueberblick_${name}`] = zahlen(r.json.overview);
+      for (const p of liste2) {
+        const zid = p.latePostId || p.postId;
+        if (gesehen.has(zid + (p.platform || ""))) continue;
+        gesehen.add(zid + (p.platform || ""));
+        const pl = zuPlan[p.latePostId] || zuPlan[p.postId];
+        ergebnis.posts.push({
+          id: pl?.id || null, platform: p.platform || pl?.platform, serie: pl?.serie || (pl ? "24-stock" : "extern"),
+          zeit: pl?.zeit || (p.publishedAt || p.scheduledFor || "").slice(0, 19), video: pl ? (pl.video.split("/youtube-upload/")[1] || pl.video) : null,
+          text: (p.content || "").split("\n")[0].slice(0, 80), url: p.platformPostUrl || null, typ: p.mediaProductType || p.mediaType || null,
+          sync: p.syncStatus || null, analytics: zahlen(p.analytics || {}),
+        });
+      }
+      console.log(`Posts (${name}) Seite ${page}: ${liste2.length}`);
+      await warte();
+      if (liste2.length < 100) break;
+    }
+  }
+  for (const plat of ["tiktok", "instagram", "youtube"]) {
+    const r = await api("GET", `/analytics/best-time?platform=${plat}`, null, plat === "youtube" && KEY_YT ? KEY_YT : KEY);
+    if (r.ok) ergebnis.best_time[plat] = r.json; else ergebnis.fehler.push(`best-time ${plat}: HTTP ${r.status}`);
+    await warte();
   }
   fs.writeFileSync(path.join(DIR, "analyse.json"), JSON.stringify(ergebnis, null, 1) + "\n");
-  console.log(`Fertig: ${ergebnis.konten.length} Konten, ${ergebnis.posts.length} Posts, ${ergebnis.fehler.length} Fehler → posten/analyse.json`);
+  const mitZahlen = ergebnis.posts.filter(p => Object.keys(p.analytics).length).length;
+  console.log(`Fertig: ${ergebnis.konten.length} Konten, ${ergebnis.posts.length} Posts (${mitZahlen} mit Zahlen), ${ergebnis.fehler.length} Fehler → posten/analyse.json`);
+  for (const f of ergebnis.fehler.slice(0, 10)) console.log("  Fehler: " + f);
   process.exit(0);
 }
 
