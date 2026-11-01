@@ -1,11 +1,2 @@
 Verbundene Konten: tiktok:storys4you.de1, instagram:sto.rys4you, youtube:sto.rys4you
-↻ taeglich-tiktok-001: 2026-11-01T18:00:00 → 2026-11-05T08:00:00
-  taeglich-tiktok-001: Prüfung ok (Bild, Ton, Lautstärke)
-✓ taeglich-tiktok-001 eingeplant für 2026-11-05T08:00:00 (6ae740aaffd4de370b93f20e)
-↻ taeglich-insta-001: 2026-11-01T18:00:00 → 2026-11-08T12:00:00
-  taeglich-insta-001: Prüfung ok (Bild, Ton, Lautstärke)
-✓ taeglich-insta-001 eingeplant für 2026-11-08T12:00:00 (6ae740acffd4de370b93f212)
-↻ taeglich-yt-001: 2026-11-01T18:30:00 → 2026-11-08T12:30:00
-  taeglich-yt-001: Prüfung ok (Bild, Ton, Lautstärke)
-✓ taeglich-yt-001 eingeplant für 2026-11-08T12:30:00 (6ae740af293762d3ff6780f3)
-Fertig: 3 neu eingeplant, 0 Fehler.
+Fertig: 0 neu eingeplant, 0 Fehler.
