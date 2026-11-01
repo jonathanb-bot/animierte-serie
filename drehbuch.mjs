@@ -27,6 +27,7 @@ function kameraFuer(s, preset, i) {
   if (typ === "wohnung" || typ === "treppenhaus" || typ === "bad") { fy = 1050; }
   if (typ === "strasse") { fy = 1150; }
   if (typ === "dach") { fy = 1050; }
+  if (["wohnzimmer", "zimmer", "esstisch", "park", "klassenzimmer", "krankenhaus", "see", "haltestelle"].includes(typ)) { fy = 1080; } // Alltag (taeglich/): Gesichter weiter weg von den Untertiteln
   if (s.fokus) [fx, fy] = String(s.fokus).split(",").map(Number);
   if (s.zoom) z = Number(s.zoom);
   const P = {

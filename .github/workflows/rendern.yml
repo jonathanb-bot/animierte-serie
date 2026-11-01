@@ -2,6 +2,8 @@ name: Folgen rendern
 
 on:
   push:
+    # Kurzvideos (taeglich/) rendert die Claude-Aufgabe selbst; Engine-Änderungen dort sollen nicht alle Serien neu rendern
+    branches-ignore: [taeglich]
     paths:
       - "episoden/**"
       - "audio/**"

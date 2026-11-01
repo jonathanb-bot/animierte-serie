@@ -126,7 +126,7 @@ if (flag("teile-plan")) { console.log(teileListe); process.exit(0); }
 // ---------- Nur Standbilder (schnelle Kontrolle): --bilder ----------
 if (flag("bilder")) {
   const dir = path.join(ROOT, "ausgabe", `${name}-bilder`); fs.mkdirSync(dir, { recursive: true });
-  const browser = await chromium.launch();
+  const browser = await chromium.launch(process.env.CHROMIUM ? { executablePath: process.env.CHROMIUM, args: ["--headless=new", "--no-sandbox"] } : {}); // CHROMIUM=/opt/pw-browsers/chromium in Claude-Sitzungen
   const page = await browser.newPage({ viewport: { width: W, height: H } });
   await page.goto("file://" + path.join(ROOT, "engine", "index.html"));
   await page.evaluate(async () => { await document.fonts.load("900 80px Titel"); await document.fonts.load("700 40px HUD"); });
@@ -190,7 +190,7 @@ const ff = spawn("ffmpeg", ["-y", "-v", "error",
   ...(vorschau ? ["-vf", "scale=540:960"] : []),
   "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", ziel], { stdio: ["pipe", "inherit", "inherit"] });
 
-const browser = await chromium.launch();
+const browser = await chromium.launch(process.env.CHROMIUM ? { executablePath: process.env.CHROMIUM, args: ["--headless=new", "--no-sandbox"] } : {}); // CHROMIUM=/opt/pw-browsers/chromium in Claude-Sitzungen
 const page = await browser.newPage({ viewport: { width: W, height: H } });
 await page.goto("file://" + path.join(ROOT, "engine", "index.html"));
 await page.evaluate(async () => { await document.fonts.load("900 80px Titel"); await document.fonts.load("700 40px HUD"); });

@@ -1,0 +1,19 @@
+{
+ "_info": "Ein Eintrag pro Kurzvideo (neueste unten). Die Aufgabe liest das vor jedem neuen Video, damit Stimmung, Kulissen, Thema und Vorbild abwechseln. veroeffentlichen.py liest titel/beschreibung/hashtags/tags/emoji und trägt 'veroeffentlicht' nach.",
+ "videos": [
+  {
+   "id": "video-001",
+   "datum": "2026-11-01",
+   "titel": "Die Zeit, die dir bleibt",
+   "stimmung": "warm",
+   "thema": "Familie: die meiste gemeinsame Zeit mit den Eltern liegt vor dem Auszug",
+   "kulissen": ["esstisch", "zimmer", "wohnzimmer", "haltestelle", "park", "objekt", "titel", "gesicht"],
+   "vorbild": "Kurzgesagt / Tim Urbans „The Tail End“-Rechnung: eine überraschende Rechnung über dein eigenes Leben, Bruch, dann ein warmer, konkreter Schluss",
+   "hook": "Du hast deine Eltern schon fast so oft gesehen, wie du sie jemals sehen wirst.",
+   "beschreibung": "Du hast deine Eltern schon fast so oft gesehen, wie du sie jemals sehen wirst. Und dann ruft jemand: „Essen ist fertig!“",
+   "hashtags": ["#familie", "#eltern", "#zeit", "#animation", "#story", "#storytime", "#deutsch"],
+   "tags": ["familie", "eltern", "zeit", "animation", "story"],
+   "emoji": "🤍"
+  }
+ ]
+}

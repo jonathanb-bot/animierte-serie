@@ -232,6 +232,10 @@ def bauen(drehbuch: str, nur_stimme=False, drone=False, stimme="edge", anfragen=
     log(f"{fid}: {len(einst)} Einstellungen, {len(sprechend)} mit Text – Stimmen werden erzeugt …")
     if stimme.startswith("gemini"):
         from . import gemini
+        m = re.search(r"^@stimmung\s+(\w+)", pfad.read_text(encoding="utf-8"), re.M)
+        if m:
+            gemini.stimmung_setzen(m.group(1))
+            log(f"Stimmung: {m.group(1)}")
         name = stimme.split(":", 1)[1] if ":" in stimme else "Orus"
         gesprochen = gemini.sprechen([re.sub(r"[„“\"»«]", "", e.text) for e in sprechend],
                                      [e.kapitel for e in sprechend], name, anfragen=anfragen, log=log)

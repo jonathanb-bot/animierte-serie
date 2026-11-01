@@ -1,0 +1,46 @@
+# Die Zeit, die dir bleibt
+@musik musik/video-001.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung warm
+@mund zitate
+@look 0.35
+@zeit abend
+
+== Hook ==
+// Esstisch am Abend: Mama, Papa, Lina, dein Platz ist leer, aber gedeckt
+[esstisch mama papa lina leer=3 gedeckt kerzen zoom-rein] Du hast deine Eltern schon fast so oft gesehen, wie du sie *jemals* sehen wirst.
+// Nahaufnahme: du, ungläubig, in deinem Zimmer
+[gesicht du ort=zimmer lichterkette misstrauisch] Klingt verrückt. Du siehst sie doch jeden Tag.
+
+== Alltag ==
+// Nahaufnahme: Mama ruft von unten
+[gesicht mama ort=esstisch froh] „Essen ist fertig!“
+// Zimmer: du mit dem Handy, Lichterkette, Licht aus
+[zimmer du du:handy lichterkette licht=aus schwenk-rechts] Und du rufst: „*Gleich!*“ Noch ein Video. Noch eins.
+// Esstisch: die anderen warten, dein Platz bleibt leer
+[esstisch mama:muede papa lina leer=3 gedeckt kerzen ruhig] Dein Platz bleibt leer. Nur ein Abend, denkst du.
+
+== Die Rechnung ==
+// Infokarte: Uhr „jeden Tag“
+[objekt objekte="uhr:Jeden Tag" gross="Bis du 18 bist" farbe=#2f3d5c] Aber rechne mal. Bis du achtzehn bist, seht ihr euch fast *jeden Tag*.
+// Wohnzimmer: du trägst eine Kiste, Mama und Papa winken
+[wohnzimmer du:traegt haelt=du:kiste mama papa:winkt licht=an foto=mama,papa,du,lina] Dann ziehst du aus. Ausbildung, Studium, eigene Wohnung.
+// Bushaltestelle im Regen: du allein
+[haltestelle du du:traurig regen ton=regen] Danach siehst du sie an Weihnachten. Und an ein paar Wochenenden.
+// Infokarte: Herz „10 Tage im Jahr“
+[objekt objekte="herz:10 Tage im Jahr" gross="Danach" farbe=#2f3d5c] Vielleicht zehn Tage im Jahr.
+// Titelkarte: über 90 %
+[titel oben="Mit 18, wenn es so kommt" gross="ÜBER 90 %" unten="eurer gemeinsamen Tage erlebt" farbe=#1d2840 akzent=#e9b866 groesse=150] Wenn es so kommt, hast du mit achtzehn über *neunzig Prozent* eurer gemeinsamen Tage schon erlebt.
+
+== Wendung ==
+// Park im Herbst: du und Papa gehen nebeneinander
+[park du papa jahreszeit=herbst schwenk-links] Das heißt nicht, dass es zu spät ist.
+// Nahaufnahme: Papa lächelt, Herbstpark
+[gesicht papa ort=park jahreszeit=herbst froh] Es heißt nur: Die Tage *jetzt* sind die wertvollsten.
+// Esstisch: Mama ruft wieder
+[gesicht mama ort=esstisch froh] „Essen ist fertig!“
+// Zimmer: du legst das Handy weg
+[zimmer du du:entschlossen lichterkette licht=aus zoom-rein] Also leg das Handy weg.
+// Esstisch: alle zusammen, du sitzt dabei
+[esstisch mama papa du lina kerzen froh zoom-raus] Und komm *sofort*.

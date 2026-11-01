@@ -1,0 +1,19 @@
+# Test: alle Alltags-Kulissen
+@mund zitate
+@look 0.3
+[wohnzimmer du mama licht=an foto=mama,papa,du,lina zeit=abend] Wohnzimmer am Abend, Licht an.
+[wohnzimmer du lina sofa_sitzen tv zeit=nacht] Wohnzimmer nachts, Fernseher, auf dem Sofa.
+[zimmer im_bett=du zeit=nacht lichterkette du] Zimmer nachts, im Bett, Lichterkette.
+[zimmer du:handy zeit=tag regen] Zimmer am Tag, Regen.
+[esstisch mama papa du lina leer=3 gedeckt kerzen zeit=abend foto=opa,oma] Esstisch, ein Stuhl leer.
+[esstisch oma opa du torte zeit=tag] Esstisch mit Torte.
+[park du ben jahreszeit=herbst zeit=abend] Park im Herbst.
+[park du mia jahreszeit=sommer zeit=tag] Park im Sommer.
+[park du jahreszeit=winter zeit=nacht schnee] Park im Winter.
+[klassenzimmer du ben lehrerin tafel="Klassenfahrt|in 3 Tagen!" uhr=11:55] Klassenzimmer.
+[krankenhaus patient=opa du mama zeit=abend] Krankenhaus.
+[see du ben sitzen zeit=abend gluehwuermchen] See am Abend.
+[see du zeit=tag lichter] See am Tag.
+[haltestelle du regen] Haltestelle im Regen.
+[gesicht du ort=park jahreszeit=herbst zeit=abend traurig] Nahaufnahme im Park.
+[gesicht oma ort=esstisch froh zeit=abend] „Nahaufnahme Oma.“

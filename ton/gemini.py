@@ -30,6 +30,25 @@ MODELL = os.environ.get("GEMINI_TTS_MODELL", "gemini-3.8-flash-tts")
 STIL = ("Lies den folgenden deutschen Text als Erzähler einer düsteren Kurzgeschichte für TikTok vor: "
         "tiefe, trockene, nahe Männerstimme, zügig, ruhig bedrohlich, nach jeder Zeile eine kurze Pause. "
         "Nur den Text sprechen:\n\n")
+# Für die Kurzvideos (taeglich/): `@stimmung <name>` im Drehbuch wählt den Vortrag. Gleiche Stimme „Orus“, nur die Erzählweise
+# ändert sich. Ohne @stimmung bleibt STIL wie oben (alle bisherigen Serien).
+STIMMUNGEN = {
+    "duester": "einer düsteren Kurzgeschichte für TikTok vor: tiefe, trockene, nahe Männerstimme, zügig, ruhig bedrohlich",
+    "spannend": "einer spannenden Kurzgeschichte für TikTok vor: tiefe, nahe Männerstimme, zügig, angespannt, mit Druck",
+    "traurig": "einer traurigen, berührenden Kurzgeschichte vor: tiefe, warme, nahe Männerstimme, ruhig und leise, mit Gefühl, nie kitschig",
+    "freudig": "einer fröhlichen, mitreißenden Kurzgeschichte vor: tiefe, warme Männerstimme, lebendig, mit einem Lächeln in der Stimme, zügig",
+    "warm": "einer nachdenklichen, warmherzigen Kurzgeschichte vor: tiefe, warme, nahe Männerstimme, ruhig und ehrlich, wie ein guter Freund",
+}
+
+
+def stimmung_setzen(name: str | None):
+    """STIL für eine Stimmung aus STIMMUNGEN setzen (unbekannt oder leer: unverändert)."""
+    global STIL
+    if name and name in STIMMUNGEN:
+        STIL = ("Lies den folgenden deutschen Text als Erzähler " + STIMMUNGEN[name] +
+                ", nach jeder Zeile eine kurze Pause. Nur den Text sprechen:\n\n")
+
+
 MAX_PAUSE = 0.6    # längere Pausen werden darauf gekürzt
 TEMPO = 1.0
 _WHISPER = None

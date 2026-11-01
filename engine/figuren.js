@@ -218,6 +218,7 @@
       case "huefte": P.hl = [-95, -235]; P.hr = [95, -235]; break;
       case "traegt": P.hl = [-62, -275]; P.hr = [62, -275]; break;
       case "taschenlampe": P.hr = [110, -330]; break;
+      case "handy": P.hl = [-20, -305]; P.hr = [30, -330]; P.neig = 0.1; break; // Blick aufs Handy (taeglich/)
       case "lauscht": P.hr = [-5, -470]; P.neig = 0.12; break;
       case "geht": case "rennt": P.gehen = name === "rennt" ? 2 : 1; break;
       case "sitzt": P.sitzen = true; P.hl = [-125, -205]; P.hr = [125, -205]; break;
@@ -315,6 +316,10 @@
       if (o.pose === "taschenlampe" && i === 1) {
         ctx.save(); ctx.translate(k.hx, k.hy); A.box(-10, -40, 20, 62, 6, "#2f3236"); A.box(-14, -52, 28, 16, 5, "#44484d"); ctx.restore();
         A.licht(k.hx, k.hy - 80, 520, "#fff4d0", 1.3);
+      }
+      if (o.pose === "handy" && i === 1) {
+        ctx.save(); ctx.translate(k.hx - 6, k.hy - 34); ctx.rotate(-0.12); A.box(-26, -46, 52, 92, 10, "#1b1f27"); A.box(-21, -40, 42, 78, 6, "#9fc6f0"); ctx.restore();
+        A.licht(k.hx, k.hy - 120, 380, "#9fc6ff", 0.9);
       }
       if (o.halt && i === 1) A.objekt(o.halt, k.hx, k.hy - 10, 0.55, t);
     }
