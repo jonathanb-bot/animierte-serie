@@ -27,7 +27,7 @@ function kameraFuer(s, preset, i) {
   if (typ === "wohnung" || typ === "treppenhaus" || typ === "bad") { fy = 1050; }
   if (typ === "strasse") { fy = 1150; }
   if (typ === "dach") { fy = 1050; }
-  if (["wohnzimmer", "zimmer", "esstisch", "park", "klassenzimmer", "krankenhaus", "see", "haltestelle"].includes(typ)) { fy = 1080; } // Alltag (taeglich/): Gesichter weiter weg von den Untertiteln
+  if (["wohnzimmer", "zimmer", "esstisch", "park", "klassenzimmer", "krankenhaus", "see", "haltestelle", "grossstadt", "rechenzentrum", "landschaft", "wald"].includes(typ)) { fy = 1080; } // Alltag (taeglich/): Gesichter weiter weg von den Untertiteln
   if (s.fokus) [fx, fy] = String(s.fokus).split(",").map(Number);
   if (s.zoom) z = Number(s.zoom);
   const P = {
@@ -54,7 +54,7 @@ function kameraFuer(s, preset, i) {
 
 export function parse(text, cast = {}) {
   const ep = { titel: "", figuren: { ...cast }, szenen: [], kapitel: [] };
-  let hud = null, zeit = null, look = null, i = 0;
+  let hud = null, zeit = null, look = null, kino = null, i = 0;
   for (const roh of text.split(/\r?\n/)) {
     const zeile = roh.trim();
     if (!zeile || zeile.startsWith("//")) continue;
@@ -69,6 +69,7 @@ export function parse(text, cast = {}) {
       else if (cmd === "whoosh") ep.whoosh = rest[0] !== "aus";
       else if (cmd === "zeit") zeit = rest[0];
       else if (cmd === "look") look = Number(rest[0]); // Farblook für alle folgenden Einstellungen (0 = aus)
+      else if (cmd === "kino") kino = Number(rest[0] ?? 1); // Kino-Look (Glühen, Körnung) für die Kurzvideos
       else if (cmd === "hud") {
         if (rest[0] === "aus") { hud = null; continue; }
         const neu = { ...(hud || {}), balken: [...((hud && hud.balken) || [])] };
@@ -123,6 +124,7 @@ export function parse(text, cast = {}) {
     if (Object.keys(ausdruecke).length) s.ausdruecke = ausdruecke;
     if (!s.zeit && zeit) s.zeit = zeit;
     if (s.look === undefined && look != null) s.look = look;
+    if (s.kino === undefined && kino != null) s.kino = kino;
     if (s.typ === "gesicht" && !s.ort) s.ort = "wohnung";
     // Wer spricht? Text in Anführungszeichen -> die (einzige/erste) Figur
     if (!s.sprecher && /[„“"»«]/.test(s.text)) s.sprecher = s.figur || (s.figuren || [])[0];

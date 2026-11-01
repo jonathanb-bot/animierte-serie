@@ -1,0 +1,20 @@
+# Katalog: Kulissen in Kurzgesagt-Richtung (mit @kino)
+@mund zitate
+@look 0.3
+@kino 1
+[weltall satellit mond] Weltall mit Erde, Satellit und Mond.
+[weltall sonne erde_y=1900] Weltall mit Sonne.
+[grossstadt zeit=nacht du ben] Großstadt bei Nacht, ihr auf dem Dach.
+[grossstadt zeit=abend] Großstadt am Abend.
+[rechenzentrum kern du] Rechenzentrum mit Kern.
+[rechenzentrum kern farbe=#ff5a3d] Rechenzentrum, roter Kern.
+[auge text="Es hat begonnen"] Das Auge.
+[auge farbe=#4fb8ff] Blaues Auge.
+[landschaft du mia zeit=abend] Landschaft am Abend.
+[landschaft zeit=tag see] Landschaft am Tag mit See.
+[landschaft zeit=nacht du] Landschaft bei Nacht.
+[wald du zeit=tag] Wald mit Lichtstrahlen.
+[wald zeit=abend nebel] Wald am Abend mit Nebel.
+[netz mitte=du] Netz mit dir in der Mitte.
+[lebenszeit jahre=16 markiert="16-18" oben="Dein Leben in Wochen"] Dein Leben in Wochen.
+[esstisch mama papa du lina kerzen zeit=abend] Esstisch mit Kino-Look.

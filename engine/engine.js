@@ -175,6 +175,7 @@
     if (s.alarm) { ctx.fillStyle = `rgba(255,30,20,${0.1 + 0.1 * Math.sin(T * 6)})`; ctx.fillRect(0, 0, W, H); }
     farblook(s.typ === "titel" ? 0 : s.look ?? 1);
     vignette(s.vignette ?? 0.5);
+    if (A.nachbearbeitung) A.nachbearbeitung(s, T); // Kino-Look (alltag.js), nur mit @kino
     hud(s.hud);
     untertitel(s, t);
     if (s.blitz && t < 0.3) { ctx.fillStyle = `rgba(255,255,255,${1 - t / 0.3})`; ctx.fillRect(0, 0, W, H); }
