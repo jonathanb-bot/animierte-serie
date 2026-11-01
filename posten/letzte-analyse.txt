@@ -1,45 +1,7 @@
 Verbundene Konten: tiktok:storys4you.de1, instagram:sto.rys4you, youtube:sto.rys4you
-Konto tiktok:storys4you.de1 HTTP 404 {"error":"No such API endpoint: GET /api/v1/analytics/account/6ae3b27f76419537971b4012","type":"not_found","code":"endpoint_not_found","docUrl":"https://docs.zernio.com","details":{"openapi":"https://
-Konto instagram:sto.rys4you HTTP 404 {"error":"No such API endpoint: GET /api/v1/analytics/account/6ae3b3424b0f181dba157740","type":"not_found","code":"endpoint_not_found","docUrl":"https://docs.zernio.com","details":{"openapi":"https://
-Konto youtube:sto.rys4you HTTP 404 {"error":"No such API endpoint: GET /api/v1/analytics/account/6ae44e70027b93dbb4055b20","type":"not_found","code":"endpoint_not_found","docUrl":"https://docs.zernio.com","details":{"openapi":"https://
-tiktok-08: HTTP 404 {"error":"No such API endpoint: GET /api/v1/analytics/6ae3b52a28e18fc94a535cf4","type":"not_found","code":"endpoint_not_found","docUrl":"https://docs.zernio.com
-tiktok-09: HTTP 404 {"error":"No such API endpoint: GET /api/v1/analytics/6ae3bbeadd2cc00b0c94a107","type":"not_found","code":"endpoint_not_found","docUrl":"https://docs.zernio.com
-tiktok-10: HTTP 404 {"error":"No such API endpoint: GET /api/v1/analytics/6ae4e6794434ed193616524b","type":"not_found","code":"endpoint_not_found","docUrl":"https://docs.zernio.com
-insta-01-1: HTTP 404 {"error":"No such API endpoint: GET /api/v1/analytics/6ae3bbf0ef13cf6f76ac942e","type":"not_found","code":"endpoint_not_found","docUrl":"https://docs.zernio.com
-insta-01-2: HTTP 404 {"error":"No such API endpoint: GET /api/v1/analytics/6ae450f38856df913e9fb191","type":"not_found","code":"endpoint_not_found","docUrl":"https://docs.zernio.com
-insta-01-3: HTTP 404 {"error":"No such API endpoint: GET /api/v1/analytics/6ae450f60c3cf0315e8dd880","type":"not_found","code":"endpoint_not_found","docUrl":"https://docs.zernio.com
-insta-01-4: HTTP 404 {"error":"No such API endpoint: GET /api/v1/analytics/6ae450f80c3cf0315e8dd89c","type":"not_found","code":"endpoint_not_found","docUrl":"https://docs.zernio.com
-insta-01-5: HTTP 404 {"error":"No such API endpoint: GET /api/v1/analytics/6ae450fb8856df913e9fb1b5","type":"not_found","code":"endpoint_not_found","docUrl":"https://docs.zernio.com
-insta-02-1: HTTP 404 {"error":"No such API endpoint: GET /api/v1/analytics/6ae4544418859d94a2cc273f","type":"not_found","code":"endpoint_not_found","docUrl":"https://docs.zernio.com
-insta-02-2: HTTP 404 {"error":"No such API endpoint: GET /api/v1/analytics/6ae4544718859d94a2cc274f","type":"not_found","code":"endpoint_not_found","docUrl":"https://docs.zernio.com
-insta-02-3: HTTP 404 {"error":"No such API endpoint: GET /api/v1/analytics/6ae4544a18859d94a2cc2772","type":"not_found","code":"endpoint_not_found","docUrl":"https://docs.zernio.com
-insta-02-4: HTTP 404 {"error":"No such API endpoint: GET /api/v1/analytics/6ae4544c18859d94a2cc277a","type":"not_found","code":"endpoint_not_found","docUrl":"https://docs.zernio.com
-insta-02-5: HTTP 404 {"error":"No such API endpoint: GET /api/v1/analytics/6ae4545018859d94a2cc27ae","type":"not_found","code":"endpoint_not_found","docUrl":"https://docs.zernio.com
-yt-01-1: HTTP 404 {"error":"No such API endpoint: GET /api/v1/analytics/6ae4515c0c3cf0315e8ddbfb","type":"not_found","code":"endpoint_not_found","docUrl":"https://docs.zernio.com
-yt-01-2: HTTP 404 {"error":"No such API endpoint: GET /api/v1/analytics/6ae4515f0c3cf0315e8ddc12","type":"not_found","code":"endpoint_not_found","docUrl":"https://docs.zernio.com
-yt-01-3: HTTP 404 {"error":"No such API endpoint: GET /api/v1/analytics/6ae451610c3cf0315e8ddc20","type":"not_found","code":"endpoint_not_found","docUrl":"https://docs.zernio.com
-yt-01-4: HTTP 404 {"error":"No such API endpoint: GET /api/v1/analytics/6ae451640c3cf0315e8ddc43","type":"not_found","code":"endpoint_not_found","docUrl":"https://docs.zernio.com
-yt-01-5: HTTP 404 {"error":"No such API endpoint: GET /api/v1/analytics/6ae451668856df913e9fb319","type":"not_found","code":"endpoint_not_found","docUrl":"https://docs.zernio.com
-yt-02-1: HTTP 404 {"error":"No such API endpoint: GET /api/v1/analytics/6ae454af975c142809187a03","type":"not_found","code":"endpoint_not_found","docUrl":"https://docs.zernio.com
-yt-02-2: HTTP 404 {"error":"No such API endpoint: GET /api/v1/analytics/6ae454b218859d94a2cc2bfa","type":"not_found","code":"endpoint_not_found","docUrl":"https://docs.zernio.com
-yt-02-3: HTTP 404 {"error":"No such API endpoint: GET /api/v1/analytics/6ae454b518859d94a2cc2c26","type":"not_found","code":"endpoint_not_found","docUrl":"https://docs.zernio.com
-yt-02-4: HTTP 404 {"error":"No such API endpoint: GET /api/v1/analytics/6ae454b7975c142809187a3c","type":"not_found","code":"endpoint_not_found","docUrl":"https://docs.zernio.com
-yt-02-5: HTTP 404 {"error":"No such API endpoint: GET /api/v1/analytics/6ae454ba18859d94a2cc2c7e","type":"not_found","code":"endpoint_not_found","docUrl":"https://docs.zernio.com
-alien-tiktok-teil-1: HTTP 404 {"error":"No such API endpoint: GET /api/v1/analytics/6ae5c6858fd91f671c5f507a","type":"not_found","code":"endpoint_not_found","docUrl":"https://docs.zernio.com
-alien-tiktok-teil-2: HTTP 404 {"error":"No such API endpoint: GET /api/v1/analytics/6ae5c68a8fd91f671c5f5090","type":"not_found","code":"endpoint_not_found","docUrl":"https://docs.zernio.com
-mann-tiktok-01: HTTP 404 {"error":"No such API endpoint: GET /api/v1/analytics/6ae4a5a8d3b530b176d74506","type":"not_found","code":"endpoint_not_found","docUrl":"https://docs.zernio.com
-mann-insta-01-1: HTTP 404 {"error":"No such API endpoint: GET /api/v1/analytics/6ae4a5c4a7235731085bc358","type":"not_found","code":"endpoint_not_found","docUrl":"https://docs.zernio.com
-mann-yt-01-1: HTTP 404 {"error":"No such API endpoint: GET /api/v1/analytics/6ae4a5f4062b4aea3b463c14","type":"not_found","code":"endpoint_not_found","docUrl":"https://docs.zernio.com
-stock-insta-kurz-03-1: HTTP 404 {"error":"No such API endpoint: GET /api/v1/analytics/6ae5d40b234f720d1e66901e","type":"not_found","code":"endpoint_not_found","docUrl":"https://docs.zernio.com
-stock-yt-kurz-03-1: HTTP 404 {"error":"No such API endpoint: GET /api/v1/analytics/6ae5d40d234f720d1e669027","type":"not_found","code":"endpoint_not_found","docUrl":"https://docs.zernio.com
-stock-insta-kurz-03-2: HTTP 404 {"error":"No such API endpoint: GET /api/v1/analytics/6ae5d410234f720d1e66903f","type":"not_found","code":"endpoint_not_found","docUrl":"https://docs.zernio.com
-stock-yt-kurz-03-2: HTTP 404 {"error":"No such API endpoint: GET /api/v1/analytics/6ae5d412540304bc1e69d5e8","type":"not_found","code":"endpoint_not_found","docUrl":"https://docs.zernio.com
-stock-insta-kurz-04-1: HTTP 404 {"error":"No such API endpoint: GET /api/v1/analytics/6ae5d415540304bc1e69d5ec","type":"not_found","code":"endpoint_not_found","docUrl":"https://docs.zernio.com
-stock-yt-kurz-04-1: HTTP 404 {"error":"No such API endpoint: GET /api/v1/analytics/6ae5d417234f720d1e669062","type":"not_found","code":"endpoint_not_found","docUrl":"https://docs.zernio.com
-stock-insta-kurz-04-2: HTTP 404 {"error":"No such API endpoint: GET /api/v1/analytics/6ae5d41a234f720d1e669068","type":"not_found","code":"endpoint_not_found","docUrl":"https://docs.zernio.com
-stock-yt-kurz-04-2: HTTP 404 {"error":"No such API endpoint: GET /api/v1/analytics/6ae5d41c234f720d1e66906c","type":"not_found","code":"endpoint_not_found","docUrl":"https://docs.zernio.com
-stock-insta-kurz-05-1: HTTP 404 {"error":"No such API endpoint: GET /api/v1/analytics/6ae5d41ec8c627560eaafe88","type":"not_found","code":"endpoint_not_found","docUrl":"https://docs.zernio.com
-stock-yt-kurz-05-1: HTTP 404 {"error":"No such API endpoint: GET /api/v1/analytics/6ae5d421234f720d1e669090","type":"not_found","code":"endpoint_not_found","docUrl":"https://docs.zernio.com
-stock-insta-kurz-05-2: HTTP 404 {"error":"No such API endpoint: GET /api/v1/analytics/6ae5d423234f720d1e6690a2","type":"not_found","code":"endpoint_not_found","docUrl":"https://docs.zernio.com
-stock-yt-kurz-05-2: HTTP 404 {"error":"No such API endpoint: GET /api/v1/analytics/6ae5d425540304bc1e69d5fc","type":"not_found","code":"endpoint_not_found","docUrl":"https://docs.zernio.com
-Fertig: 3 Konten, 40 Posts, 43 Fehler → posten/analyse.json
+Konto tiktok:storys4you.de1 Follower=59 Insights ok
+Konto instagram:sto.rys4you Follower=4 Insights ok
+Konto youtube:sto.rys4you Follower=26 Insights ok
+Posts (haupt) Seite 1: 29
+Posts (yt) Seite 1: 17
+Fertig: 3 Konten, 40 Posts (40 mit Zahlen), 0 Fehler → posten/analyse.json
