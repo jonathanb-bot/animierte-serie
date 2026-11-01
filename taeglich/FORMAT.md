@@ -89,9 +89,11 @@ Pro Staffel einen großen Kanal als Hauptvorbild wählen (abwechseln!) und kurz 
 
 `taeglich/figuren.json`: `du` (immer du), `mama`, `papa`, `oma`, `opa`, `lina` (kleine Schwester), `ben` (bester Freund), `mia` (Freundin), `lehrerin`, `fremder`. Neue Figuren einer Staffel nur dort ergänzen, mit Staffel-Vorsilbe (z. B. `s02_kapitaenin`). Die Grundbesetzung bleibt in allen Staffeln gleich, damit man sie wiedererkennt.
 
-## Auswertung mit vidIQ (jeder Lauf, vor dem Planen)
+## Auswertung (Aufgabe „Analyse vor der Staffel“, 21:39 Uhr)
 
-Jonathan hat vidIQ verbunden (1.11.). Damit siehst du, was funktioniert, und richtest die nächste Staffel danach aus. **Credits sind knapp:** 150 pro Monat (kostenloser Tarif), die meisten Abfragen kosten 5. Immer zuerst `vidiq_balance` (kostenlos) und mindestens 10 Credits Reserve lassen.
+Die Auswertung macht eine eigene Aufgabe vor jeder Produktion, der Ablauf steht in `taeglich/ANALYSE.md`. Sie nutzt Zernio (Zahlen aller Posts auf TikTok, Instagram und YouTube), vidIQ und eine Recherche von außen. Das Ergebnis steht in **`taeglich/analyse/aktuell.md`**. **Die Produktion liest diese Datei vor dem Planen und setzt die Punkte um** (Mehr davon / Weniger davon / 1 Experiment / Themenvorschläge). Feste Regeln gehen immer vor. Ist `aktuell.md` älter als 1 Tag oder fehlt sie, macht die Produktion nur die kostenlosen vidIQ-Abfragen und plant nach dem letzten Bericht.
+
+### vidIQ (Jonathan hat vidIQ am 1.11. verbunden) **Credits sind knapp:** 150 pro Monat (kostenloser Tarif), die meisten Abfragen kosten 5. Immer zuerst `vidiq_balance` (kostenlos) und mindestens 10 Credits Reserve lassen.
 
 | Abfrage | Kosten | Wann |
 |---|---|---|
