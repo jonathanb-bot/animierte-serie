@@ -29,7 +29,9 @@ for plat, n in PRO_TAG.items():
     print(f"{plat:10s} {len(zukunft):3d} Posts geplant, letzter {ende:%d.%m. %H:%M} → Vorrat {tage[plat]:.1f} Tage")
 
 staffeln = json.loads((ROOT / "taeglich" / "staffeln.json").read_text()).get("staffeln", [])
-gestern = (jetzt - dt.timedelta(days=1)).date().isoformat()
+# Nachtdatum: Läufe bis 6 Uhr früh zählen zur Nacht davor (z. B. Start 00:44 am 2.11. = Nacht vom 1.11.)
+nacht = (jetzt - dt.timedelta(hours=6)).date()
+gestern = (nacht - dt.timedelta(days=1)).isoformat()
 gestern_fertig = any(str(s.get("datum", "")).startswith(gestern) and s.get("veroeffentlicht") for s in staffeln)
 if not gestern_fertig:
     print("Gestern wurde keine Staffel fertig → PRODUZIEREN"); print("PRODUZIEREN"); sys.exit(0)
