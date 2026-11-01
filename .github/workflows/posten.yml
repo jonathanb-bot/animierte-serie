@@ -20,6 +20,10 @@ on:
         description: "Abgleich mit Zernio: leer, 'test' oder 'echt'"
         required: false
         default: ""
+      analyse:
+        description: "Analytics aller veröffentlichten Posts holen -> posten/analyse.json (true/false)"
+        required: false
+        default: "false"
 
 permissions:
   contents: write
@@ -45,7 +49,9 @@ jobs:
           ZERNIO_API_KEY: ${{ secrets.ZERNIO_API_KEY }}
           ZERNIO_API_KEY_YT: ${{ secrets.ZERNIO_API_KEY_YT }}
         run: |
-          if [ "${{ github.event.inputs.abgleich }}" = "test" ]; then
+          if [ "${{ github.event.inputs.analyse }}" = "true" ]; then
+            node posten/zernio.mjs --analyse | tee posten/letzte-analyse.txt
+          elif [ "${{ github.event.inputs.abgleich }}" = "test" ]; then
             node posten/zernio.mjs --abgleich | tee posten/letzter-abgleich.txt
           elif [ "${{ github.event.inputs.abgleich }}" = "echt" ]; then
             node posten/zernio.mjs --abgleich --echt | tee posten/letzter-abgleich.txt && node posten/zernio.mjs | tee posten/letzter-lauf.txt

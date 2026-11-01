@@ -3,6 +3,7 @@
 //   ZERNIO_API_KEY=... node posten/zernio.mjs            -> alle offenen Posts aus plan.json einplanen
 //   ... node posten/zernio.mjs --nur tiktok-08,insta-01-1 -> nur diese
 //   ... node posten/zernio.mjs --konten                   -> nur verbundene Konten anzeigen
+//   ... node posten/zernio.mjs --analyse                  -> Analytics aller veröffentlichten Posts + Konten -> posten/analyse.json
 // Was eingeplant wurde, steht danach in posten/status.json (wird nie doppelt gesendet).
 import fs from "node:fs";
 import path from "node:path";
@@ -46,6 +47,51 @@ if (KEY_YT) {
 }
 console.log("Verbundene Konten:", liste.map(a => `${a.platform}:${a.username || a.displayName}`).join(", ") || "keine");
 if (args.includes("--konten")) process.exit(0);
+
+// --analyse: Auswertung für Claude (Jonathans Wunsch 1.11.: vor jeder Staffel schauen, was gut ankam).
+// Holt pro veröffentlichtem Post die Zernio-Analytics und pro Konto Zahlen der letzten 30 Tage,
+// schreibt alles nach posten/analyse.json (ohne Zugangsdaten). Ändert nichts bei Zernio.
+if (args.includes("--analyse")) {
+  const zahlen = (o, tiefe = 0, pre = "") => { // nur Zahlen und kurze Texte übernehmen, keine Tokens/Links
+    const out = {};
+    if (!o || typeof o !== "object" || tiefe > 3) return out;
+    for (const [k, v] of Object.entries(o)) {
+      if (/token|secret|password|cookie|auth/i.test(k)) continue;
+      if (typeof v === "number") out[pre + k] = v;
+      else if (typeof v === "string" && v.length <= 60 && /date|time|status|platform|type|username|name|updated/i.test(k)) out[pre + k] = v;
+      else if (v && typeof v === "object" && !Array.isArray(v)) Object.assign(out, zahlen(v, tiefe + 1, pre + k + "."));
+      else if (Array.isArray(v) && v.length && typeof v[0] === "object" && tiefe < 2) v.slice(0, 5).forEach((e, i) => Object.assign(out, zahlen(e, tiefe + 1, `${pre}${k}[${i}].`)));
+    }
+    return out;
+  };
+  const tag = d => d.toISOString().slice(0, 10);
+  const jetzt = new Date(), von = new Date(jetzt - 30 * 864e5);
+  const berlin = new Date(jetzt.toLocaleString("en-US", { timeZone: "Europe/Berlin" }));
+  const iso = d => d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0") + "T" + String(d.getHours()).padStart(2, "0") + ":" + String(d.getMinutes()).padStart(2, "0");
+  const ergebnis = { erstellt: jetzt.toISOString(), konten: [], posts: [], fehler: [] };
+  for (const acc of liste) {
+    const key = acc._yt ? KEY_YT : KEY;
+    const eintrag = { platform: acc.platform, username: acc.username || acc.displayName, konto: zahlen(acc) };
+    const r = await api("GET", `/analytics/account/${acc._id}?startDate=${tag(von)}&endDate=${tag(jetzt)}`, null, key);
+    if (r.ok) eintrag.analytics_30_tage = zahlen(r.json); else { eintrag.analytics_fehler = `HTTP ${r.status} ${JSON.stringify(r.json).slice(0, 200)}`; ergebnis.fehler.push(`${acc.platform}: Konto-Analytics HTTP ${r.status}`); }
+    ergebnis.konten.push(eintrag);
+    console.log(`Konto ${acc.platform}:${eintrag.username} ${r.ok ? "ok" : eintrag.analytics_fehler}`);
+    await new Promise(res => setTimeout(res, 400));
+  }
+  for (const post of plan.posts) {
+    const st = status[post.id];
+    if (!st?.zernioId || st.geloescht || (plan.loeschen || []).includes(post.id) || post.zeit.slice(0, 16) > iso(berlin)) continue;
+    const r = await api("GET", `/analytics/${st.zernioId}`, null, keyFuer(post.platform));
+    const e = { id: post.id, platform: post.platform, serie: post.serie || "24-stock", zeit: post.zeit, video: post.video.split("/youtube-upload/")[1] || post.video, url: st.ergebnis?.url || null };
+    if (r.ok) e.analytics = zahlen(r.json); else { e.fehler = `HTTP ${r.status} ${JSON.stringify(r.json).slice(0, 160)}`; ergebnis.fehler.push(`${post.id}: HTTP ${r.status}`); }
+    ergebnis.posts.push(e);
+    console.log(`${post.id}: ${r.ok ? Object.entries(e.analytics).filter(([k]) => /view|like|comment|share|save|reach|impression|watch/i.test(k)).slice(0, 8).map(([k, v]) => k + "=" + v).join(" ") : e.fehler}`);
+    await new Promise(res => setTimeout(res, 400));
+  }
+  fs.writeFileSync(path.join(DIR, "analyse.json"), JSON.stringify(ergebnis, null, 1) + "\n");
+  console.log(`Fertig: ${ergebnis.konten.length} Konten, ${ergebnis.posts.length} Posts, ${ergebnis.fehler.length} Fehler → posten/analyse.json`);
+  process.exit(0);
+}
 
 // --abgleich [--echt]: geplante Posts bei Zernio mit plan.json abgleichen (Zernio ist die Wahrheit).
 // Doppelte oder falsch terminierte Posts werden gelöscht (nur mit --echt), status.json wird neu aufgebaut.
