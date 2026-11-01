@@ -1,0 +1,487 @@
+{
+ "erstellt": "2026-11-01T18:19:35.434Z",
+ "konten": [
+  {
+   "platform": "tiktok",
+   "username": "storys4you.de1",
+   "konto": {
+    "profileId.name": "Default",
+    "platform": "tiktok",
+    "platformUserId": "-000Pqr4ADTOGZRhhmtoFCG1dvpZmjT-Rp28",
+    "username": "storys4you.de1",
+    "displayName": "storys4you.de1",
+    "metadata.expires_in": 86400,
+    "metadata.profileData.username": "storys4you.de1",
+    "metadata.profileData.extraData.likesCount": 1100,
+    "metadata.profileData.extraData.videoCount": 12,
+    "metadata.profileData.extraData.followingCount": 5,
+    "metadata.profileData.followersCount": 59,
+    "metadata.profileData.displayName": "storys4you.de1",
+    "platformStatus": "active",
+    "followersCount": 59,
+    "followersLastUpdated": "2026-11-01T08:22:08.864Z",
+    "rateLimitCount": 0,
+    "updatedAt": "2026-11-01T08:22:08.865Z",
+    "tiktokAccountType": "personal",
+    "adsStatus": "not_connected"
+   },
+   "analytics_fehler": "HTTP 404 {\"error\":\"No such API endpoint: GET /api/v1/analytics/account/6ae3b27f76419537971b4012\",\"type\":\"not_found\",\"code\":\"endpoint_not_found\",\"docUrl\":\"https://docs.zernio.com\",\"details\":{\"openapi\":\"https://"
+  },
+  {
+   "platform": "instagram",
+   "username": "sto.rys4you",
+   "konto": {
+    "profileId.name": "Default",
+    "platform": "instagram",
+    "platformUserId": "28985770094384443",
+    "username": "sto.rys4you",
+    "displayName": "Storys4You",
+    "metadata.expires_in": 5184000,
+    "metadata.profileData.username": "sto.rys4you",
+    "metadata.profileData.extraData.mediaCount": 14,
+    "metadata.profileData.extraData.accountType": "MEDIA_CREATOR",
+    "metadata.profileData.extraData.followsCount": 0,
+    "metadata.profileData.followersCount": 4,
+    "metadata.profileData.displayName": "Storys4You",
+    "platformStatus": "active",
+    "followersCount": 4,
+    "followersLastUpdated": "2026-11-01T08:22:18.289Z",
+    "rateLimitCount": 0,
+    "updatedAt": "2026-11-01T08:22:18.289Z",
+    "adsStatus": "connected"
+   },
+   "analytics_fehler": "HTTP 404 {\"error\":\"No such API endpoint: GET /api/v1/analytics/account/6ae3b3424b0f181dba157740\",\"type\":\"not_found\",\"code\":\"endpoint_not_found\",\"docUrl\":\"https://docs.zernio.com\",\"details\":{\"openapi\":\"https://"
+  },
+  {
+   "platform": "youtube",
+   "username": "sto.rys4you",
+   "konto": {
+    "profileId.name": "Default",
+    "platform": "youtube",
+    "platformUserId": "UCDJfvYxtgy9sp6kyNDzaTcw",
+    "username": "sto.rys4you",
+    "displayName": "Storys4you",
+    "metadata.expires_in": 3599,
+    "metadata.profileData.username": "sto.rys4you",
+    "metadata.profileData.extraData.totalViews": 8886,
+    "metadata.profileData.extraData.videoCount": 14,
+    "metadata.profileData.followersCount": 26,
+    "metadata.profileData.displayName": "Storys4you",
+    "platformStatus": "active",
+    "followersCount": 26,
+    "followersLastUpdated": "2026-11-01T08:25:09.290Z",
+    "rateLimitCount": 0,
+    "updatedAt": "2026-11-01T16:53:31.234Z",
+    "adsStatus": "not_available"
+   },
+   "analytics_fehler": "HTTP 404 {\"error\":\"No such API endpoint: GET /api/v1/analytics/account/6ae44e70027b93dbb4055b20\",\"type\":\"not_found\",\"code\":\"endpoint_not_found\",\"docUrl\":\"https://docs.zernio.com\",\"details\":{\"openapi\":\"https://"
+  }
+ ],
+ "posts": [
+  {
+   "id": "tiktok-08",
+   "platform": "tiktok",
+   "serie": "24-stock",
+   "zeit": "2026-10-29T22:30:00",
+   "video": "24-stock-folgen/folge-08.mp4",
+   "url": "https://www.tiktok.com/@storys4you.de1/video/7702205955043298592",
+   "fehler": "HTTP 404 {\"error\":\"No such API endpoint: GET /api/v1/analytics/6ae3b52a28e18fc94a535cf4\",\"type\":\"not_found\",\"code\":\"endpoint_not_found\",\"docUrl\":\"https://docs.zernio.com"
+  },
+  {
+   "id": "tiktok-09",
+   "platform": "tiktok",
+   "serie": "24-stock",
+   "zeit": "2026-10-30T17:00:00",
+   "video": "24-stock-folgen/folge-09.mp4",
+   "url": null,
+   "fehler": "HTTP 404 {\"error\":\"No such API endpoint: GET /api/v1/analytics/6ae3bbeadd2cc00b0c94a107\",\"type\":\"not_found\",\"code\":\"endpoint_not_found\",\"docUrl\":\"https://docs.zernio.com"
+  },
+  {
+   "id": "tiktok-10",
+   "platform": "tiktok",
+   "serie": "24-stock",
+   "zeit": "2026-10-30T20:10:00",
+   "video": "24-stock-folgen/folge-10.mp4",
+   "url": null,
+   "fehler": "HTTP 404 {\"error\":\"No such API endpoint: GET /api/v1/analytics/6ae4e6794434ed193616524b\",\"type\":\"not_found\",\"code\":\"endpoint_not_found\",\"docUrl\":\"https://docs.zernio.com"
+  },
+  {
+   "id": "insta-01-1",
+   "platform": "instagram",
+   "serie": "24-stock",
+   "zeit": "2026-10-30T07:00:00",
+   "video": "24-stock/folge-01-teil-1.mp4",
+   "url": "https://www.instagram.com/reel/DfG5PZyEXqk/",
+   "fehler": "HTTP 404 {\"error\":\"No such API endpoint: GET /api/v1/analytics/6ae3bbf0ef13cf6f76ac942e\",\"type\":\"not_found\",\"code\":\"endpoint_not_found\",\"docUrl\":\"https://docs.zernio.com"
+  },
+  {
+   "id": "insta-01-2",
+   "platform": "instagram",
+   "serie": "24-stock",
+   "zeit": "2026-10-30T09:35:00",
+   "video": "24-stock/folge-01-teil-2.mp4",
+   "url": null,
+   "fehler": "HTTP 404 {\"error\":\"No such API endpoint: GET /api/v1/analytics/6ae450f38856df913e9fb191\",\"type\":\"not_found\",\"code\":\"endpoint_not_found\",\"docUrl\":\"https://docs.zernio.com"
+  },
+  {
+   "id": "insta-01-3",
+   "platform": "instagram",
+   "serie": "24-stock",
+   "zeit": "2026-10-30T09:45:00",
+   "video": "24-stock/folge-01-teil-3.mp4",
+   "url": null,
+   "fehler": "HTTP 404 {\"error\":\"No such API endpoint: GET /api/v1/analytics/6ae450f60c3cf0315e8dd880\",\"type\":\"not_found\",\"code\":\"endpoint_not_found\",\"docUrl\":\"https://docs.zernio.com"
+  },
+  {
+   "id": "insta-01-4",
+   "platform": "instagram",
+   "serie": "24-stock",
+   "zeit": "2026-10-30T15:00:00",
+   "video": "24-stock/folge-01-teil-4.mp4",
+   "url": null,
+   "fehler": "HTTP 404 {\"error\":\"No such API endpoint: GET /api/v1/analytics/6ae450f80c3cf0315e8dd89c\",\"type\":\"not_found\",\"code\":\"endpoint_not_found\",\"docUrl\":\"https://docs.zernio.com"
+  },
+  {
+   "id": "insta-01-5",
+   "platform": "instagram",
+   "serie": "24-stock",
+   "zeit": "2026-10-30T20:00:00",
+   "video": "24-stock/folge-01-teil-5.mp4",
+   "url": null,
+   "fehler": "HTTP 404 {\"error\":\"No such API endpoint: GET /api/v1/analytics/6ae450fb8856df913e9fb1b5\",\"type\":\"not_found\",\"code\":\"endpoint_not_found\",\"docUrl\":\"https://docs.zernio.com"
+  },
+  {
+   "id": "insta-02-1",
+   "platform": "instagram",
+   "serie": "24-stock",
+   "zeit": "2026-10-31T00:00:00",
+   "video": "24-stock/folge-02-teil-1.mp4",
+   "url": null,
+   "fehler": "HTTP 404 {\"error\":\"No such API endpoint: GET /api/v1/analytics/6ae4544418859d94a2cc273f\",\"type\":\"not_found\",\"code\":\"endpoint_not_found\",\"docUrl\":\"https://docs.zernio.com"
+  },
+  {
+   "id": "insta-02-2",
+   "platform": "instagram",
+   "serie": "24-stock",
+   "zeit": "2026-10-31T04:00:00",
+   "video": "24-stock/folge-02-teil-2.mp4",
+   "url": null,
+   "fehler": "HTTP 404 {\"error\":\"No such API endpoint: GET /api/v1/analytics/6ae4544718859d94a2cc274f\",\"type\":\"not_found\",\"code\":\"endpoint_not_found\",\"docUrl\":\"https://docs.zernio.com"
+  },
+  {
+   "id": "insta-02-3",
+   "platform": "instagram",
+   "serie": "24-stock",
+   "zeit": "2026-10-31T08:00:00",
+   "video": "24-stock/folge-02-teil-3.mp4",
+   "url": null,
+   "fehler": "HTTP 404 {\"error\":\"No such API endpoint: GET /api/v1/analytics/6ae4544a18859d94a2cc2772\",\"type\":\"not_found\",\"code\":\"endpoint_not_found\",\"docUrl\":\"https://docs.zernio.com"
+  },
+  {
+   "id": "insta-02-4",
+   "platform": "instagram",
+   "serie": "24-stock",
+   "zeit": "2026-10-31T12:00:00",
+   "video": "24-stock/folge-02-teil-4.mp4",
+   "url": null,
+   "fehler": "HTTP 404 {\"error\":\"No such API endpoint: GET /api/v1/analytics/6ae4544c18859d94a2cc277a\",\"type\":\"not_found\",\"code\":\"endpoint_not_found\",\"docUrl\":\"https://docs.zernio.com"
+  },
+  {
+   "id": "insta-02-5",
+   "platform": "instagram",
+   "serie": "24-stock",
+   "zeit": "2026-10-31T16:00:00",
+   "video": "24-stock/folge-02-teil-5.mp4",
+   "url": null,
+   "fehler": "HTTP 404 {\"error\":\"No such API endpoint: GET /api/v1/analytics/6ae4545018859d94a2cc27ae\",\"type\":\"not_found\",\"code\":\"endpoint_not_found\",\"docUrl\":\"https://docs.zernio.com"
+  },
+  {
+   "id": "yt-01-1",
+   "platform": "youtube",
+   "serie": "24-stock",
+   "zeit": "2026-10-30T09:35:00",
+   "video": "24-stock/folge-01-teil-1.mp4",
+   "url": null,
+   "fehler": "HTTP 404 {\"error\":\"No such API endpoint: GET /api/v1/analytics/6ae4515c0c3cf0315e8ddbfb\",\"type\":\"not_found\",\"code\":\"endpoint_not_found\",\"docUrl\":\"https://docs.zernio.com"
+  },
+  {
+   "id": "yt-01-2",
+   "platform": "youtube",
+   "serie": "24-stock",
+   "zeit": "2026-10-30T09:40:00",
+   "video": "24-stock/folge-01-teil-2.mp4",
+   "url": null,
+   "fehler": "HTTP 404 {\"error\":\"No such API endpoint: GET /api/v1/analytics/6ae4515f0c3cf0315e8ddc12\",\"type\":\"not_found\",\"code\":\"endpoint_not_found\",\"docUrl\":\"https://docs.zernio.com"
+  },
+  {
+   "id": "yt-01-3",
+   "platform": "youtube",
+   "serie": "24-stock",
+   "zeit": "2026-10-30T09:45:00",
+   "video": "24-stock/folge-01-teil-3.mp4",
+   "url": null,
+   "fehler": "HTTP 404 {\"error\":\"No such API endpoint: GET /api/v1/analytics/6ae451610c3cf0315e8ddc20\",\"type\":\"not_found\",\"code\":\"endpoint_not_found\",\"docUrl\":\"https://docs.zernio.com"
+  },
+  {
+   "id": "yt-01-4",
+   "platform": "youtube",
+   "serie": "24-stock",
+   "zeit": "2026-10-30T15:30:00",
+   "video": "24-stock/folge-01-teil-4.mp4",
+   "url": null,
+   "fehler": "HTTP 404 {\"error\":\"No such API endpoint: GET /api/v1/analytics/6ae451640c3cf0315e8ddc43\",\"type\":\"not_found\",\"code\":\"endpoint_not_found\",\"docUrl\":\"https://docs.zernio.com"
+  },
+  {
+   "id": "yt-01-5",
+   "platform": "youtube",
+   "serie": "24-stock",
+   "zeit": "2026-10-30T20:30:00",
+   "video": "24-stock/folge-01-teil-5.mp4",
+   "url": null,
+   "fehler": "HTTP 404 {\"error\":\"No such API endpoint: GET /api/v1/analytics/6ae451668856df913e9fb319\",\"type\":\"not_found\",\"code\":\"endpoint_not_found\",\"docUrl\":\"https://docs.zernio.com"
+  },
+  {
+   "id": "yt-02-1",
+   "platform": "youtube",
+   "serie": "24-stock",
+   "zeit": "2026-10-31T00:30:00",
+   "video": "24-stock/folge-02-teil-1.mp4",
+   "url": null,
+   "fehler": "HTTP 404 {\"error\":\"No such API endpoint: GET /api/v1/analytics/6ae454af975c142809187a03\",\"type\":\"not_found\",\"code\":\"endpoint_not_found\",\"docUrl\":\"https://docs.zernio.com"
+  },
+  {
+   "id": "yt-02-2",
+   "platform": "youtube",
+   "serie": "24-stock",
+   "zeit": "2026-10-31T04:30:00",
+   "video": "24-stock/folge-02-teil-2.mp4",
+   "url": null,
+   "fehler": "HTTP 404 {\"error\":\"No such API endpoint: GET /api/v1/analytics/6ae454b218859d94a2cc2bfa\",\"type\":\"not_found\",\"code\":\"endpoint_not_found\",\"docUrl\":\"https://docs.zernio.com"
+  },
+  {
+   "id": "yt-02-3",
+   "platform": "youtube",
+   "serie": "24-stock",
+   "zeit": "2026-10-31T08:30:00",
+   "video": "24-stock/folge-02-teil-3.mp4",
+   "url": null,
+   "fehler": "HTTP 404 {\"error\":\"No such API endpoint: GET /api/v1/analytics/6ae454b518859d94a2cc2c26\",\"type\":\"not_found\",\"code\":\"endpoint_not_found\",\"docUrl\":\"https://docs.zernio.com"
+  },
+  {
+   "id": "yt-02-4",
+   "platform": "youtube",
+   "serie": "24-stock",
+   "zeit": "2026-10-31T12:30:00",
+   "video": "24-stock/folge-02-teil-4.mp4",
+   "url": null,
+   "fehler": "HTTP 404 {\"error\":\"No such API endpoint: GET /api/v1/analytics/6ae454b7975c142809187a3c\",\"type\":\"not_found\",\"code\":\"endpoint_not_found\",\"docUrl\":\"https://docs.zernio.com"
+  },
+  {
+   "id": "yt-02-5",
+   "platform": "youtube",
+   "serie": "24-stock",
+   "zeit": "2026-10-31T16:30:00",
+   "video": "24-stock/folge-02-teil-5.mp4",
+   "url": null,
+   "fehler": "HTTP 404 {\"error\":\"No such API endpoint: GET /api/v1/analytics/6ae454ba18859d94a2cc2c7e\",\"type\":\"not_found\",\"code\":\"endpoint_not_found\",\"docUrl\":\"https://docs.zernio.com"
+  },
+  {
+   "id": "alien-tiktok-teil-1",
+   "platform": "tiktok",
+   "serie": "der-alien",
+   "zeit": "2026-10-31T20:00:00",
+   "video": "der-alien-tiktok/teil-1.mp4",
+   "url": null,
+   "fehler": "HTTP 404 {\"error\":\"No such API endpoint: GET /api/v1/analytics/6ae5c6858fd91f671c5f507a\",\"type\":\"not_found\",\"code\":\"endpoint_not_found\",\"docUrl\":\"https://docs.zernio.com"
+  },
+  {
+   "id": "alien-tiktok-teil-2",
+   "platform": "tiktok",
+   "serie": "der-alien",
+   "zeit": "2026-11-01T08:00:00",
+   "video": "der-alien-tiktok/teil-2.mp4",
+   "url": null,
+   "fehler": "HTTP 404 {\"error\":\"No such API endpoint: GET /api/v1/analytics/6ae5c68a8fd91f671c5f5090\",\"type\":\"not_found\",\"code\":\"endpoint_not_found\",\"docUrl\":\"https://docs.zernio.com"
+  },
+  {
+   "id": "mann-tiktok-01",
+   "platform": "tiktok",
+   "serie": "der-letzte-mann",
+   "zeit": "2026-10-30T18:00:00",
+   "video": "der-letzte-mann-folgen/folge-01.mp4",
+   "url": null,
+   "fehler": "HTTP 404 {\"error\":\"No such API endpoint: GET /api/v1/analytics/6ae4a5a8d3b530b176d74506\",\"type\":\"not_found\",\"code\":\"endpoint_not_found\",\"docUrl\":\"https://docs.zernio.com"
+  },
+  {
+   "id": "mann-insta-01-1",
+   "platform": "instagram",
+   "serie": "der-letzte-mann",
+   "zeit": "2026-10-30T18:00:00",
+   "video": "der-letzte-mann/folge-01-teil-1.mp4",
+   "url": null,
+   "fehler": "HTTP 404 {\"error\":\"No such API endpoint: GET /api/v1/analytics/6ae4a5c4a7235731085bc358\",\"type\":\"not_found\",\"code\":\"endpoint_not_found\",\"docUrl\":\"https://docs.zernio.com"
+  },
+  {
+   "id": "mann-yt-01-1",
+   "platform": "youtube",
+   "serie": "der-letzte-mann",
+   "zeit": "2026-10-30T18:30:00",
+   "video": "der-letzte-mann/folge-01-teil-1.mp4",
+   "url": null,
+   "fehler": "HTTP 404 {\"error\":\"No such API endpoint: GET /api/v1/analytics/6ae4a5f4062b4aea3b463c14\",\"type\":\"not_found\",\"code\":\"endpoint_not_found\",\"docUrl\":\"https://docs.zernio.com"
+  },
+  {
+   "id": "stock-insta-kurz-03-1",
+   "platform": "instagram",
+   "serie": "24-stock",
+   "zeit": "2026-10-31T20:00:00",
+   "video": "24-stock-kurz/folge-03-teil-1.mp4",
+   "url": null,
+   "fehler": "HTTP 404 {\"error\":\"No such API endpoint: GET /api/v1/analytics/6ae5d40b234f720d1e66901e\",\"type\":\"not_found\",\"code\":\"endpoint_not_found\",\"docUrl\":\"https://docs.zernio.com"
+  },
+  {
+   "id": "stock-yt-kurz-03-1",
+   "platform": "youtube",
+   "serie": "24-stock",
+   "zeit": "2026-10-31T20:30:00",
+   "video": "24-stock-kurz/folge-03-teil-1.mp4",
+   "url": null,
+   "fehler": "HTTP 404 {\"error\":\"No such API endpoint: GET /api/v1/analytics/6ae5d40d234f720d1e669027\",\"type\":\"not_found\",\"code\":\"endpoint_not_found\",\"docUrl\":\"https://docs.zernio.com"
+  },
+  {
+   "id": "stock-insta-kurz-03-2",
+   "platform": "instagram",
+   "serie": "24-stock",
+   "zeit": "2026-11-01T00:00:00",
+   "video": "24-stock-kurz/folge-03-teil-2.mp4",
+   "url": null,
+   "fehler": "HTTP 404 {\"error\":\"No such API endpoint: GET /api/v1/analytics/6ae5d410234f720d1e66903f\",\"type\":\"not_found\",\"code\":\"endpoint_not_found\",\"docUrl\":\"https://docs.zernio.com"
+  },
+  {
+   "id": "stock-yt-kurz-03-2",
+   "platform": "youtube",
+   "serie": "24-stock",
+   "zeit": "2026-11-01T00:30:00",
+   "video": "24-stock-kurz/folge-03-teil-2.mp4",
+   "url": null,
+   "fehler": "HTTP 404 {\"error\":\"No such API endpoint: GET /api/v1/analytics/6ae5d412540304bc1e69d5e8\",\"type\":\"not_found\",\"code\":\"endpoint_not_found\",\"docUrl\":\"https://docs.zernio.com"
+  },
+  {
+   "id": "stock-insta-kurz-04-1",
+   "platform": "instagram",
+   "serie": "24-stock",
+   "zeit": "2026-11-01T04:00:00",
+   "video": "24-stock-kurz/folge-04-teil-1.mp4",
+   "url": null,
+   "fehler": "HTTP 404 {\"error\":\"No such API endpoint: GET /api/v1/analytics/6ae5d415540304bc1e69d5ec\",\"type\":\"not_found\",\"code\":\"endpoint_not_found\",\"docUrl\":\"https://docs.zernio.com"
+  },
+  {
+   "id": "stock-yt-kurz-04-1",
+   "platform": "youtube",
+   "serie": "24-stock",
+   "zeit": "2026-11-01T04:30:00",
+   "video": "24-stock-kurz/folge-04-teil-1.mp4",
+   "url": null,
+   "fehler": "HTTP 404 {\"error\":\"No such API endpoint: GET /api/v1/analytics/6ae5d417234f720d1e669062\",\"type\":\"not_found\",\"code\":\"endpoint_not_found\",\"docUrl\":\"https://docs.zernio.com"
+  },
+  {
+   "id": "stock-insta-kurz-04-2",
+   "platform": "instagram",
+   "serie": "24-stock",
+   "zeit": "2026-11-01T08:00:00",
+   "video": "24-stock-kurz/folge-04-teil-2.mp4",
+   "url": null,
+   "fehler": "HTTP 404 {\"error\":\"No such API endpoint: GET /api/v1/analytics/6ae5d41a234f720d1e669068\",\"type\":\"not_found\",\"code\":\"endpoint_not_found\",\"docUrl\":\"https://docs.zernio.com"
+  },
+  {
+   "id": "stock-yt-kurz-04-2",
+   "platform": "youtube",
+   "serie": "24-stock",
+   "zeit": "2026-11-01T08:30:00",
+   "video": "24-stock-kurz/folge-04-teil-2.mp4",
+   "url": null,
+   "fehler": "HTTP 404 {\"error\":\"No such API endpoint: GET /api/v1/analytics/6ae5d41c234f720d1e66906c\",\"type\":\"not_found\",\"code\":\"endpoint_not_found\",\"docUrl\":\"https://docs.zernio.com"
+  },
+  {
+   "id": "stock-insta-kurz-05-1",
+   "platform": "instagram",
+   "serie": "24-stock",
+   "zeit": "2026-11-01T12:00:00",
+   "video": "24-stock-kurz/folge-05-teil-1.mp4",
+   "url": null,
+   "fehler": "HTTP 404 {\"error\":\"No such API endpoint: GET /api/v1/analytics/6ae5d41ec8c627560eaafe88\",\"type\":\"not_found\",\"code\":\"endpoint_not_found\",\"docUrl\":\"https://docs.zernio.com"
+  },
+  {
+   "id": "stock-yt-kurz-05-1",
+   "platform": "youtube",
+   "serie": "24-stock",
+   "zeit": "2026-11-01T12:30:00",
+   "video": "24-stock-kurz/folge-05-teil-1.mp4",
+   "url": null,
+   "fehler": "HTTP 404 {\"error\":\"No such API endpoint: GET /api/v1/analytics/6ae5d421234f720d1e669090\",\"type\":\"not_found\",\"code\":\"endpoint_not_found\",\"docUrl\":\"https://docs.zernio.com"
+  },
+  {
+   "id": "stock-insta-kurz-05-2",
+   "platform": "instagram",
+   "serie": "24-stock",
+   "zeit": "2026-11-01T16:00:00",
+   "video": "24-stock-kurz/folge-05-teil-2.mp4",
+   "url": null,
+   "fehler": "HTTP 404 {\"error\":\"No such API endpoint: GET /api/v1/analytics/6ae5d423234f720d1e6690a2\",\"type\":\"not_found\",\"code\":\"endpoint_not_found\",\"docUrl\":\"https://docs.zernio.com"
+  },
+  {
+   "id": "stock-yt-kurz-05-2",
+   "platform": "youtube",
+   "serie": "24-stock",
+   "zeit": "2026-11-01T16:30:00",
+   "video": "24-stock-kurz/folge-05-teil-2.mp4",
+   "url": null,
+   "fehler": "HTTP 404 {\"error\":\"No such API endpoint: GET /api/v1/analytics/6ae5d425540304bc1e69d5fc\",\"type\":\"not_found\",\"code\":\"endpoint_not_found\",\"docUrl\":\"https://docs.zernio.com"
+  }
+ ],
+ "fehler": [
+  "tiktok: Konto-Analytics HTTP 404",
+  "instagram: Konto-Analytics HTTP 404",
+  "youtube: Konto-Analytics HTTP 404",
+  "tiktok-08: HTTP 404",
+  "tiktok-09: HTTP 404",
+  "tiktok-10: HTTP 404",
+  "insta-01-1: HTTP 404",
+  "insta-01-2: HTTP 404",
+  "insta-01-3: HTTP 404",
+  "insta-01-4: HTTP 404",
+  "insta-01-5: HTTP 404",
+  "insta-02-1: HTTP 404",
+  "insta-02-2: HTTP 404",
+  "insta-02-3: HTTP 404",
+  "insta-02-4: HTTP 404",
+  "insta-02-5: HTTP 404",
+  "yt-01-1: HTTP 404",
+  "yt-01-2: HTTP 404",
+  "yt-01-3: HTTP 404",
+  "yt-01-4: HTTP 404",
+  "yt-01-5: HTTP 404",
+  "yt-02-1: HTTP 404",
+  "yt-02-2: HTTP 404",
+  "yt-02-3: HTTP 404",
+  "yt-02-4: HTTP 404",
+  "yt-02-5: HTTP 404",
+  "alien-tiktok-teil-1: HTTP 404",
+  "alien-tiktok-teil-2: HTTP 404",
+  "mann-tiktok-01: HTTP 404",
+  "mann-insta-01-1: HTTP 404",
+  "mann-yt-01-1: HTTP 404",
+  "stock-insta-kurz-03-1: HTTP 404",
+  "stock-yt-kurz-03-1: HTTP 404",
+  "stock-insta-kurz-03-2: HTTP 404",
+  "stock-yt-kurz-03-2: HTTP 404",
+  "stock-insta-kurz-04-1: HTTP 404",
+  "stock-yt-kurz-04-1: HTTP 404",
+  "stock-insta-kurz-04-2: HTTP 404",
+  "stock-yt-kurz-04-2: HTTP 404",
+  "stock-insta-kurz-05-1: HTTP 404",
+  "stock-yt-kurz-05-1: HTTP 404",
+  "stock-insta-kurz-05-2: HTTP 404",
+  "stock-yt-kurz-05-2: HTTP 404"
+ ]
+}
