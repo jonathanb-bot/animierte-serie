@@ -1,0 +1,4 @@
+{
+ "_info": "Eine Staffel pro Lauf (alle 2 Tage, nachts). Die Aufgabe liest das vor jeder neuen Staffel (Abwechslung bei Thema, Stimmungen, Kulissen, Vorbild). staffel_veroeffentlichen.py liest id/titel/beschreibung/hashtags/tags/emoji/folgen/tiktok_teile und trägt 'veroeffentlicht' nach.",
+ "staffeln": []
+}
