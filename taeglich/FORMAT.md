@@ -8,7 +8,7 @@ Jonathans Auftrag vom 1.11.2026:
 - **Stimmung** wechselt: mal düster, mal fröhlicher oder trauriger, mal geht es darum, wie wichtig Zeit mit Freunden und Familie ist.
 - Alles in Du-Form, es **betrifft dich direkt**. **Keine Quizze, keine Fragen ans Publikum.**
 
-Diese Datei ist verbindlich für die geplante Aufgabe „Kurzvideo-Staffel alle 2 Tage“. Außerdem gelten alle offenen GitHub-Issues mit Label `dringlich`.
+Diese Datei ist verbindlich für die geplante Aufgabe „Kurzvideo-Staffel alle 2 Tage“. Außerdem gelten alle offenen GitHub-Issues mit Label `dringlich`. **Jeder Lauf startet in einem neuen Chat** (Jonathans Vorgabe 1.11., wegen der Credits); die Abläufe stehen in `taeglich/laeufe/` (siehe README dort).
 
 ## Tempo (Jonathans Vorgabe 1.11. abends: bessere Analyse, mehr Videos pro Tag, damit es schneller geht)
 
