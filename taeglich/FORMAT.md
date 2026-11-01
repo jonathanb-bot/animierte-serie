@@ -50,9 +50,15 @@ Pro Staffel einen großen Kanal als Hauptvorbild wählen (abwechseln!) und kurz 
 
 **Sprache:** Du-Erzählung, kurze Sätze, gesprochenes Deutsch, Zahlen als Wörter. `*Wort*` hebt ein Wort hervor, „…“ ist ein Zitat (Mund bewegt sich).
 
-## Look: Kurzgesagt-Richtung
+## Look: Kurzgesagt-Richtung, viel Detail, hohe Bildqualität
 
-- Jedes Drehbuch hat `@kino 1` (Glühen heller Stellen, feine Körnung) und `@look` nach Stimmung (düster 0.8–1, spannend 0.6, traurig 0.5, warm 0.35, freudig 0.1–0.2).
+**Jonathans Vorgabe (1.11., nach dem Katalog-Bild):** „Ja, diesen Stil auch bitte künftig, mehr Aufwand in die Details und generell die Bildqualität hoch halten.“ Das gilt für alle künftigen Videos und Staffeln.
+
+- Jedes Drehbuch hat **`@qualitaet hoch`** (render.mjs: Einzelbilder JPEG 100, x264 slow/crf 16, Animations-Tuning, aq-mode 3 gegen Treppen in dunklen Verläufen), **`@kino 1`** (nur echte Lichter glühen, stehende Papier-Körnung) und `@look` nach Stimmung (düster 0.8–1, spannend 0.6, traurig 0.5, warm 0.35, freudig 0.1–0.2).
+- Keine bewegte Körnung und kein Rauschen, das sich pro Bild ändert. Das verdreifacht die Datenrate und wird auf TikTok/Instagram/YouTube zu Matsch.
+- **Detail-Prüfliste für jedes Bild:** Vorder-, Mittel- und Hintergrund sind erkennbar, mit Dunst nach hinten. Mindestens eine Lichtquelle mit Glühen. Schattenseite und Randlicht an großen Formen. Mindestens 3 kleine Detailelemente (Dachaufbauten, Pilze, Bücher, Lichterkette …). Etwas bewegt sich leise (Teilchen, Lichter, Wolken, Vögel). Keine leeren, flachen Flächen. Kontaktschatten unter Figuren und Möbeln.
+- **Neue Kulissen** müssen das Detailniveau von `grossstadt`, `wald`, `landschaft` und `weltall` erreichen (Referenz in `engine/kurzgesagt.js`).
+- **Bildkontrolle:** Neben den Standbild-Streifen pro Folge mindestens 3 Ausschnitte in voller Auflösung ansehen (`ffmpeg -vf crop=720:900:…`): Kanten sauber, keine Treppen in Verläufen, Text scharf, nichts verpixelt.
 - **Jede Folge hat mindestens 2 große Kulissen** aus der Kurzgesagt-Reihe, dazu Alltagsorte für die Nähe. Pro Staffel mindestens 8 verschiedene Kulissen.
 - Fehlt für die Geschichte ein Ort: **pro Lauf höchstens 2 neue Kulissen** in `engine/kurzgesagt.js` bauen. Im Stil heißt das: Ebenen mit Tiefe (hinten heller und dunstiger), Nebelbänder, Glühen (`glut`), Randlicht, gedämpfte Grundfarben mit leuchtenden Akzenten, keine Konturen. Danach in den Katalog eintragen, Standbilder ansehen und die alten Serien pixelgleich prüfen. Bestehende Kulissen nicht verändern, nur neue Namen.
 
@@ -96,12 +102,12 @@ export CHROMIUM=/opt/pw-browsers/chromium
 node render.mjs taeglich/episoden/sNN-fXX.txt --bilder        # 3. Standbilder JEDER Folge ansehen, korrigieren
 python -m ton.folge taeglich/episoden/sNN-fXX.txt --stimme gemini:Orus --anfragen 1     # 4. Stimme (je Folge 1 Anfrage)
 python taeglich/stimme_pruefen.py taeglich/episoden/sNN-fXX.txt                         # 5. muss OK melden
-node render.mjs taeglich/episoden/sNN-fXX.txt                 # 6. rendern (2 Folgen gleichzeitig im Hintergrund)
+node render.mjs taeglich/episoden/sNN-fXX.txt                 # 6. rendern in hoher Qualität (ca. 6 min pro Folge, 2 gleichzeitig im Hintergrund)
 python taeglich/staffel_veroeffentlichen.py sNN               # 7. prüfen, TikTok-Teile schneiden, ablegen, hinten anhängen
 git add -A taeglich engine && git commit && git push -u origin taeglich                 # 8. sichern
 ```
 
-- Kopf jedes Drehbuchs: `# <Staffeltitel> – Folge N: <Folgentitel>`, `@stimmung …`, `@mund zitate`, `@look …`, `@kino 1`, `@zeit …`. Über jeder Zeile steht ein `// Bildbeschreibung`.
+- Kopf jedes Drehbuchs: `# <Staffeltitel> – Folge N: <Folgentitel>`, `@stimmung …`, `@mund zitate`, `@qualitaet hoch`, `@look …`, `@kino 1`, `@zeit …`. Über jeder Zeile steht ein `// Bildbeschreibung`.
 - Gemini: 5 Schlüssel (Proxy + `GEMINI_API_KEY_2` … `_5`), je ca. 10 Anfragen am Tag. Sind alle erschöpft: nichts posten, die fertigen Folgen sichern, Jonathan Bescheid geben. Beim nächsten Lauf geht es mit dieser Staffel weiter.
 - Meldet `stimme_pruefen.py` einen Fehler: genauer hinhören. Ist es wirklich falsch, die Zeile eindeutiger formulieren und die Folge neu vertonen.
 - **Standbilder prüfen:** Gesichter nicht unter den Untertiteln, nichts am Rand abgeschnitten, nichts scheint durch, Text lesbar, jedes Bild passt zum Satz.

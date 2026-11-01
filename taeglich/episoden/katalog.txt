@@ -1,6 +1,7 @@
 # Test: alle Alltags-Kulissen
 @mund zitate
 @look 0.3
+@kino 1
 [wohnzimmer du mama licht=an foto=mama,papa,du,lina zeit=abend] Wohnzimmer am Abend, Licht an.
 [wohnzimmer du lina sofa_sitzen tv zeit=nacht] Wohnzimmer nachts, Fernseher, auf dem Sofa.
 [zimmer im_bett=du zeit=nacht lichterkette du] Zimmer nachts, im Bett, Lichterkette.

@@ -63,7 +63,7 @@ def lufs(f: Path) -> float | None:
     return float(m.group(1)) if m else None
 
 
-def pruefe(f: Path) -> dict:
+def pruefe(f: Path, max_dauer: float = MAX_DAUER) -> dict:
     """Gleiche Regel wie pruefen.py auf youtube-upload, dazu die Höchstdauer."""
     v, a = dauer(f, "v:0"), dauer(f, "a:0")
     l = lufs(f) if a else None
@@ -73,7 +73,7 @@ def pruefe(f: Path) -> dict:
     elif abs(v - a) > 0.5: grund = "Ton und Bild unterschiedlich lang"
     elif l is None: grund = "Lautheit nicht messbar"
     elif l < -24: grund = "zu leise, Stimme fehlt vermutlich"
-    elif v > MAX_DAUER: grund = f"zu lang ({v:.1f} s, höchstens {MAX_DAUER:.0f} s)"
+    elif v > max_dauer: grund = f"zu lang ({v:.1f} s, höchstens {max_dauer:.0f} s)"
     return {"ok": grund is None, "bild_s": round(v, 2), "ton_s": round(a, 2), "lufs": l, **({"grund": grund} if grund else {})}
 
 

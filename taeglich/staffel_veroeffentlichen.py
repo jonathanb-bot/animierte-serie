@@ -71,9 +71,13 @@ def teil_schneiden(folgen: list[dict], ziel: Path) -> None:
                     f"[{i}:a]atrim=0:{bis:.3f},asetpts=PTS-STARTPTS,afade=t=out:st={max(0, bis - 0.04):.3f}:d=0.04[a{i}]")
     kette = "".join(f"[v{i}][a{i}]" for i in range(len(folgen)))
     roh = ziel.with_name(ziel.stem + "-roh.mp4")
+    gesamt = sum(V.dauer(f["datei"], "v:0") for f in folgen)
+    # Hohe Qualität wie render.mjs mit @qualitaet hoch; Datenrate so begrenzt, dass die Datei unter 95 MB bleibt (GitHub-Grenze 100 MB)
+    deckel = int(min(12000, 95 * 8 * 1000 / max(gesamt, 1) - 220))
     V.lauf("ffmpeg", "-y", "-v", "error", *args, "-filter_complex", ";".join(filt) + f";{kette}concat=n={len(folgen)}:v=1:a=1[v][a]",
-           "-map", "[v]", "-map", "[a]", "-c:v", "libx264", "-preset", "medium", "-crf", "18", "-pix_fmt", "yuv420p",
-           "-c:a", "aac", "-b:a", "192k", "-ar", "48000", roh)
+           "-map", "[v]", "-map", "[a]", "-c:v", "libx264", "-preset", "slow", "-crf", "16", "-tune", "animation", "-profile:v", "high",
+           "-x264-params", "aq-mode=3", "-maxrate", f"{deckel}k", "-bufsize", f"{deckel * 2}k", "-pix_fmt", "yuv420p",
+           "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-movflags", "+faststart", roh)
     V.angleichen(roh, ziel)
     roh.unlink()
 
@@ -118,9 +122,7 @@ def main(argv=None) -> int:
             fehler.append(f"{fid}: nicht gerendert"); continue
         fertig = ROOT / "ausgabe" / f"taeglich-{fid}-fertig.mp4"
         V.angleichen(roh, fertig)
-        erg = V.pruefe(fertig)
-        if erg["ok"] and erg["bild_s"] > MAX_FOLGE:
-            erg.update(ok=False, grund=f"Folge zu lang für einen Post ({erg['bild_s']} s, höchstens 60 s)")
+        erg = V.pruefe(fertig, max_dauer=MAX_FOLGE)
         print(f"{fid}: {json.dumps(erg, ensure_ascii=False)}")
         if not erg["ok"]:
             fehler.append(f"{fid}: {erg['grund']}")
@@ -137,9 +139,7 @@ def main(argv=None) -> int:
     for k, nrn in enumerate(teile_def, 1):
         ziel = ROOT / "ausgabe" / f"taeglich-{a.staffel}-tiktok-teil-{k}.mp4"
         teil_schneiden([folgen[n - 1] for n in nrn], ziel)
-        erg = V.pruefe(ziel)
-        if erg["ok"] and erg["bild_s"] > MAX_TEIL:
-            erg.update(ok=False, grund="TikTok-Teil länger als 10 min")
+        erg = V.pruefe(ziel, max_dauer=MAX_TEIL)
         print(f"TikTok Teil {k} (Folge {nrn[0]}–{nrn[-1]}): {json.dumps(erg, ensure_ascii=False)}")
         if not erg["ok"]:
             print("NICHT veröffentlicht."); return 1
@@ -154,6 +154,9 @@ def main(argv=None) -> int:
     for t in teile:
         pfad = f"taeglich-tiktok/{a.staffel}-teil-{t['k']}.mp4"; dateien.append((pfad, t["datei"])); g["dateien"][pfad] = t["pruefung"]
     for pfad, quelle in dateien:
+        mb = quelle.stat().st_size / 1e6
+        if mb > 95:
+            print(f"{pfad}: {mb:.0f} MB – zu groß für GitHub (höchstens 95 MB). Nichts veröffentlicht."); return 1
         (yu / pfad).parent.mkdir(parents=True, exist_ok=True); shutil.copy(quelle, yu / pfad)
     g.setdefault("taeglich_staffeln", {})[a.staffel] = {"titel": st["titel"], "folgen": len(folgen), "tiktok_teile": teile_def}
     (yu / "geprueft.json").write_text(json.dumps(g, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")

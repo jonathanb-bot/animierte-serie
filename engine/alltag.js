@@ -94,6 +94,28 @@
     try { A.umleiten(A.mctx, fn); } finally { A.mctx.restore(); A.inMaske = false; }
   };
 
+  // Raumtiefe: Kontaktschatten an der Wandkante, dunklere Decke (wirkt wie Umgebungsverdeckung)
+  const raumtiefe = bodenY => {
+    ctx.fillStyle = lgrad(0, bodenY - 140, 0, bodenY, [[0, "rgba(10,12,30,0)"], [1, "rgba(10,12,30,0.2)"]]); ctx.fillRect(-1500, bodenY - 140, 4080, 140);
+    ctx.fillStyle = lgrad(0, bodenY, 0, bodenY + 110, [[0, "rgba(10,12,30,0.3)"], [1, "rgba(10,12,30,0)"]]); ctx.fillRect(-1500, bodenY, 4080, 110);
+    ctx.fillStyle = lgrad(0, -200, 0, 300, [[0, "rgba(10,12,30,0.32)"], [1, "rgba(10,12,30,0)"]]); ctx.fillRect(-1500, -200, 4080, 500);
+  };
+  // Lichtfleck auf dem Boden (Lampe, Fenster)
+  const lichtfleck = (x, y, rx, farbe, a) => {
+    ctx.save(); ctx.globalCompositeOperation = "screen"; ctx.translate(x, y); ctx.scale(1, 0.24);
+    ctx.fillStyle = rgrad(0, 0, 0, rx, [[0, rgba(farbe, a)], [1, rgba(farbe, 0)]]); ctx.fillRect(-rx, -rx, rx * 2, rx * 2); ctx.restore();
+  };
+  // Sonnenstrahl durchs Fenster bis auf den Boden (nur im Kino-Look, nicht nachts); richtung +1 = nach rechts
+  const fensterstrahl = (s, x, y, w, h, bodenY, richtung = 1) => {
+    if (!s.kino || zeitVon(s) === "nacht") return;
+    const dx = 460 * richtung, c = zeitVon(s) === "abend" ? "#ffc68a" : "#fff1d0";
+    ctx.save(); ctx.globalCompositeOperation = "screen";
+    ctx.fillStyle = lgrad(x, y, x + dx, bodenY + 140, [[0, rgba(c, 0.16)], [1, rgba(c, 0)]]);
+    poly([[x + w * 0.1, y + h * 0.15], [x + w * 0.9, y + h * 0.15], [x + w * 0.9 + dx, bodenY + 160], [x + w * 0.1 + dx, bodenY + 160]]); ctx.fill();
+    ctx.restore();
+    lichtfleck(x + w / 2 + dx * 0.95, bodenY + 120, w * 0.8, c, 0.22);
+  };
+
   const boden = (y, farbe, dielen = true) => {
     box(-1500, y, 4080, 900, 0, farbe);
     if (dielen) for (let x = -1500; x < 2600; x += 130) line(x, y, x - 90, y + 900, 3, rgba("#000", 0.07));
@@ -163,7 +185,9 @@
     } else { box(150, 1330, 130, 150, 24, "#b0573f"); for (const [dx, dy, r] of [[-40, -60, 60], [30, -90, 70], [0, -150, 60], [60, -30, 50]]) circle(215 + dx, 1330 + dy, r, shade("#5d8a50", dy / 600)); }
     stehlampe(520, 1480, an || nacht && s.licht !== "aus");
     sofa(600, 1300, 440, s.sofa_farbe || "#5f7f8f");
-    boden(1480, "#a77f5a");
+    boden(1480, "#a77f5a"); raumtiefe(1480);
+    if (an || nacht && s.licht !== "aus") lichtfleck(520, 1520, 380, "#ffd59a", 0.3);
+    fensterstrahl(s, 80, 380, 340, 540, 1480, 1);
     ellipse(560, 1660, 560, 110, rgba("#c9a27a", 0.9)); ellipse(560, 1660, 470, 82, rgba("#d8b58d", 0.9));
     if (s.sofa_sitzen) sitzend(s, t, 1330, 0.78, (s.figuren || []).length > 1 ? [720, 920] : [820]);
     else A.figurenZeigen(s, t, 1630, 0.95);
@@ -197,7 +221,9 @@
     if (s.laptop !== false && (nacht || s.laptop)) A.licht(810, 1160, 600, "#9fc6ff", 0.8);
     line(1000, 1240, 1000, 1120, 8, "#3a3632"); poly([[960, 1120], [1040, 1120], [1020, 1080], [980, 1080]], "#e9956a");
     if (an) A.licht(1000, 1140, 700, "#ffd59a", 1);
-    boden(1490, "#7f8a99", false); ellipse(500, 1700, 420, 70, rgba("#5d6878", 0.6));
+    boden(1490, "#7f8a99", false); raumtiefe(1490); ellipse(500, 1700, 420, 70, rgba("#5d6878", 0.6));
+    fensterstrahl(s, 640, 400, 340, 500, 1490, -1);
+    if (s.laptop !== false && (nacht || s.laptop)) lichtfleck(810, 1500, 300, "#9fc6ff", 0.25);
     const stehen = { ...s, figuren: (s.figuren || []).filter(n => n !== s.im_bett) };
     A.figurenZeigen(stehen, t, 1640, 0.95);
     A.alltagWetter(s, t, false);
@@ -296,7 +322,7 @@
     ctx.save(); ctx.translate(540, 310); ctx.rotate(((hh % 12) + mm / 60) / 12 * Math.PI * 2); line(0, 0, 0, -36, 8, "#2d3238"); ctx.restore();
     ctx.save(); ctx.translate(540, 310); ctx.rotate(mm / 60 * Math.PI * 2 + (s.uhr_laeuft ? t * 0.6 : 0)); line(0, 0, 0, -54, 5, "#2d3238"); ctx.restore(); circle(540, 310, 7, "#c94f3d");
     A.licht(-100, 700, 1300, zeit === "abend" ? "#ffc68a" : "#e4eeff", 0.7);
-    boden(1500, "#b9a98f", false);
+    boden(1500, "#b9a98f", false); raumtiefe(1500);
     A.figurenZeigen(s, t, 1630, 0.95);
     if (s.pulte !== false) for (const x of [-60, 560]) verdecke(() => { box(x, 1490, 580, 30, 8, "#c9a77a"); box(x + 10, 1520, 560, 90, 6, "#9a7452"); box(x + 30, 1610, 20, 330, 4, "#5d6268"); box(x + 530, 1610, 20, 330, 4, "#5d6268"); });
     A.alltagWetter(s, t, false);
@@ -331,7 +357,8 @@
     else box(220, 1270, 450, 60, 26, "#9fc0d8");
     // Blumen auf dem Nachttisch
     box(-200, 1260, 180, 220, 10, "#e9ecef"); box(-140, 1190, 60, 70, 12, rgba("#cfe3f0", 0.9)); for (const [dx, dy, c] of [[-20, -40, "#e9956a"], [20, -60, "#e2b443"], [0, -80, "#d9534f"]]) { line(-110, 1200, -110 + dx, 1200 + dy, 4, "#4f7a45"); circle(-110 + dx, 1200 + dy, 16, c); }
-    boden(1500, "#c9cfd2", false);
+    boden(1500, "#c9cfd2", false); raumtiefe(1500);
+    fensterstrahl(s, 90, 380, 380, 520, 1500, 1);
     const n = (s.figuren || []).length;
     A.figurenZeigen(s, t, 1640, 0.95, n === 1 ? [880] : n === 2 ? [800, 980] : undefined);
     A.alltagWetter(s, t, false);

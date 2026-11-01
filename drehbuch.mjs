@@ -64,6 +64,7 @@ export function parse(text, cast = {}) {
       const [cmd, ...rest] = zeile.slice(1).split(/\s+/);
       if (cmd === "musik") ep.musik = rest[0];
       else if (cmd === "serie") ep.serie = rest.join(" ");
+      else if (cmd === "qualitaet") ep.qualitaet = rest[0]; // "hoch": verlustfreie Einzelbilder, bessere Kodierung (Kurzvideos)
       else if (cmd === "mund") ep.mund = rest[0];
       else if (cmd === "musik_lautstaerke") ep.musik_lautstaerke = Number(rest[0]);
       else if (cmd === "whoosh") ep.whoosh = rest[0] !== "aus";

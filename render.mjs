@@ -182,11 +182,14 @@ const tonDatei = path.join(tmp, "ton.wav");
 
 // ---------- Bild ----------
 const ziel = path.join(ROOT, "ausgabe", `${name}${vorschau ? "-vorschau" : ""}.mp4`);
+// Hohe Bildqualität (@qualitaet hoch oder --hq): Einzelbilder JPEG 100 (fast verlustfrei, PNG wäre 6× langsamer), x264 slow/crf 16, Animations-Tuning, aq-mode 3 gegen Treppen in Verläufen
+const hq = !vorschau && (flag("hq") || ep.qualitaet === "hoch");
 const ff = spawn("ffmpeg", ["-y", "-v", "error",
   "-f", "image2pipe", "-framerate", String(FPS), "-c:v", "mjpeg", "-i", "-",
   "-ss", String(von), "-i", tonDatei,
   "-map", "0:v", "-map", "1:a", "-shortest",
-  "-c:v", "libx264", "-preset", "veryfast", "-crf", vorschau ? "28" : "19", "-pix_fmt", "yuv420p",
+  "-c:v", "libx264", "-preset", hq ? "slow" : "veryfast", "-crf", vorschau ? "28" : hq ? "16" : "19", "-pix_fmt", "yuv420p",
+  ...(hq ? ["-tune", "animation", "-profile:v", "high", "-x264-params", "aq-mode=3"] : []),
   ...(vorschau ? ["-vf", "scale=540:960"] : []),
   "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", ziel], { stdio: ["pipe", "inherit", "inherit"] });
 
@@ -200,7 +203,7 @@ const schreib = buf => new Promise(r => (ff.stdin.write(buf) ? r() : ff.stdin.on
 const t0 = Date.now();
 for (let f = 0; f < frames; f++) {
   await page.evaluate(t => window.zeichne(t), von + f / FPS);
-  const buf = await page.screenshot({ type: "jpeg", quality: vorschau ? 80 : 93 });
+  const buf = await page.screenshot({ type: "jpeg", quality: vorschau ? 80 : hq ? 100 : 93 });
   await schreib(buf);
   if (f % (FPS * 5) === 0) console.log(`  ${(f / FPS).toFixed(0)} s / ${((bis - von)).toFixed(0)} s  (${((Date.now() - t0) / 1000).toFixed(0)} s Rechenzeit)`);
 }
