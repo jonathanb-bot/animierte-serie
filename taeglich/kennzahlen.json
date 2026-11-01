@@ -1,0 +1,11 @@
+{
+ "_info": "Kennzahlen je Lauf (vidIQ). Schwellen: TikTok Creator Rewards ab 10.000 Followern + 100.000 Aufrufen in 30 Tagen (nur Videos über 1 Minute zählen); YouTube-Partnerprogramm ab 1.000 Abonnenten + 10 Mio. Shorts-Aufrufen in 90 Tagen; Instagram ca. 10.000 Follower. Erreichte Schwellen in 'meilensteine' vermerken und Jonathan per PushNotification melden.",
+ "schwellen": {"tiktok_follower": 10000, "youtube_abonnenten": 1000, "instagram_follower": 10000},
+ "meilensteine": [],
+ "verlauf": [
+  {"datum": "2026-11-01", "youtube": {"kanal": "Storys4you (@sto.rys4you)", "abonnenten": 30, "aufrufe": 11231, "videos": 16},
+   "instagram": {"konto": "sto.rys4you", "zugang": "nur öffentlich (manuell verbunden)"},
+   "tiktok": {"konto": "storys4you.de1", "zugang": "vidIQ hat keine TikTok-Kontodaten"},
+   "hinweis": "YouTube-Analytics für 1.–31.10. noch leer (Daten kommen ca. 2 Tage verzögert)."}
+ ]
+}

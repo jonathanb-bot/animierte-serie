@@ -89,6 +89,22 @@ Pro Staffel einen großen Kanal als Hauptvorbild wählen (abwechseln!) und kurz 
 
 `taeglich/figuren.json`: `du` (immer du), `mama`, `papa`, `oma`, `opa`, `lina` (kleine Schwester), `ben` (bester Freund), `mia` (Freundin), `lehrerin`, `fremder`. Neue Figuren einer Staffel nur dort ergänzen, mit Staffel-Vorsilbe (z. B. `s02_kapitaenin`). Die Grundbesetzung bleibt in allen Staffeln gleich, damit man sie wiedererkennt.
 
+## Auswertung mit vidIQ (jeder Lauf, vor dem Planen)
+
+Jonathan hat vidIQ verbunden (1.11.). Damit siehst du, was funktioniert, und richtest die nächste Staffel danach aus. **Credits sind knapp:** 150 pro Monat (kostenloser Tarif), die meisten Abfragen kosten 5. Immer zuerst `vidiq_balance` (kostenlos) und mindestens 10 Credits Reserve lassen.
+
+| Abfrage | Kosten | Wann |
+|---|---|---|
+| `vidiq_user_channels`, `vidiq_balance`, `vidiq_instagram_connected_accounts` | 0 | jeder Lauf: YouTube-Abonnenten und -Aufrufe |
+| `vidiq_instagram_owner_insights` (nur wenn `ownerInsightsAvailable: true`) | 0 | jeder Lauf: Wiedergabezeit, Abbruchquote der Reels |
+| `vidiq_channel_analytics` Kanal `UCDJfvYxtgy9sp6kyNDzaTcw`, `report=top_videos`, Metriken `engagedViews, averageViewDuration, averageViewPercentage, subscribersGained`, letzte 28 Tage | 5 | jeder Lauf |
+| `vidiq_instagram_tiktok_outlier_search` (Vorbild-Recherche: was bei deutschen Story-/Animations-Reels und TikToks gerade überdurchschnittlich läuft) | 5 | jeder 2. Lauf, statt WebSearch |
+| `vidiq_ig_profile` `sto.rys4you` (Follower) | 5 | einmal pro Woche |
+
+- Ergebnisse in `taeglich/kennzahlen.json` → `verlauf` eintragen (Datum, Zahlen, wichtigste Erkenntnis in einem Satz).
+- **Was die Zahlen ändern:** Folgen und Stimmungen mit hoher `averageViewPercentage` bzw. vielen `engagedViews` öfter, Hooks der schwächsten Folgen nicht wiederholen. Die Länge bleibt 65–85 s (Issue #12).
+- **Schwellen** (`kennzahlen.json` → `schwellen`): Wird eine erreicht (TikTok 10.000 Follower = Creator Rewards, YouTube 1.000 Abonnenten, Instagram 10.000), in `meilensteine` vermerken und Jonathan sofort per PushNotification melden. TikTok-Follower liefert vidIQ nicht; die Zahl kommt von Jonathan oder später über eine andere Verbindung.
+
 ## Ablauf eines Laufs (nachts)
 
 ```bash
