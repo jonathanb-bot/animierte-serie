@@ -50,6 +50,8 @@ Pro Staffel einen großen Kanal als Hauptvorbild wählen (abwechseln!) und kurz 
 
 ## Look: Kurzgesagt-Richtung, viel Detail, hohe Bildqualität
 
+**Ab der ersten Staffel (heute, 1.11.) und für jede weitere Serie (Jonathans Vorgabe, 1.11. abends):** Look wie „Dinge Erklärt – Kurzgesagt“, genau wie im Katalog-Bild. Vor jedem Kulissen- oder Figurenbau den Skill `serien-stil` laden (`.claude/skills/serien-stil/SKILL.md`): erst Katalog prüfen und wiederverwenden, Bilder nur als Code in der Engine, keine Bild-APIs, ChatGPT nur für Referenzbilder. Nie Kurzgesagt-Figuren, -Logo oder -Musik übernehmen.
+
 **Jonathans Vorgabe (1.11., nach dem Katalog-Bild):** „Ja, diesen Stil auch bitte künftig, mehr Aufwand in die Details und generell die Bildqualität hoch halten.“ Das gilt für alle künftigen Videos und Staffeln.
 
 - Jedes Drehbuch hat **`@qualitaet hoch`** (render.mjs: Einzelbilder JPEG 100, x264 slow/crf 16, Animations-Tuning, aq-mode 3 gegen Treppen in dunklen Verläufen), **`@kino 1`** (nur echte Lichter glühen, stehende Papier-Körnung) und `@look` nach Stimmung (düster 0.8–1, spannend 0.6, traurig 0.5, warm 0.35, freudig 0.1–0.2).
