@@ -2932,5 +2932,26 @@
   "zernioId": "6ae5d50670411e9be7345ec1",
   "http": 201,
   "am": "2026-10-31T11:46:14.960Z"
+ },
+ "taeglich-tiktok-001": {
+  "ok": true,
+  "zeit": "2026-11-01T18:00:00",
+  "zernioId": "6ae73da479447935d8ee8d11",
+  "http": 201,
+  "am": "2026-11-01T13:24:52.456Z"
+ },
+ "taeglich-insta-001": {
+  "ok": true,
+  "zeit": "2026-11-01T18:00:00",
+  "zernioId": "6ae73da679447935d8ee8d21",
+  "http": 201,
+  "am": "2026-11-01T13:24:54.671Z"
+ },
+ "taeglich-yt-001": {
+  "ok": true,
+  "zeit": "2026-11-01T18:30:00",
+  "zernioId": "6ae73da8caab7822dd662d2c",
+  "http": 201,
+  "am": "2026-11-01T13:24:56.815Z"
  }
 }
