@@ -14,10 +14,8 @@ Diese Datei ist verbindlich für die geplante Aufgabe „Kurzvideo-Staffel alle 
 
 - **10 Folgen**, jede **45–58 s** (höchstens 60 s, sonst passt sie nicht als ein Post). Die Stimme hat ca. 110–140 Wörter, 12–18 Einstellungen.
 - **Eine durchgehende Geschichte** in Du-Form mit eigenem Titel und eigener Welt. Jede Staffel bekommt ein neues Thema.
-- **Jede Folge außer der letzten endet mit einem Cliffhanger** und danach mit der Karte
-  `[titel oben="Folge N: <Titel der nächsten Folge>" gross="Fortsetzung folgt" farbe=#14213d akzent=#e2b443 groesse=110 dauer=2 hud=false]`
-  (ohne Text, genau so als letzte Zeile; die TikTok-Teile schneiden sie zwischen den Folgen heraus).
-- **Folge 10** schließt die Geschichte und endet mit `[titel oben="<Staffeltitel>" gross="Ende" … dauer=2 hud=false]`.
+- **Jede Folge außer der letzten endet mit einem Cliffhanger, und zwar mit der letzten gesprochenen Zeile.** **Nie „Fortsetzung folgt“** (Jonathans feste Vorgabe vom 1.11., Issue #11): keine Karte, kein Text, kein Satz „Fortsetzung folgt“, auch nicht als Überschrift. Ebenso keine andere Endkarte.
+- **Folge 10** schließt die Geschichte mit einer starken letzten Zeile, ebenfalls ohne Endkarte.
 - **Folge 1** zeigt direkt nach dem Hook eine kurze Titelkarte (`[titel oben="Folge 1" gross="<STAFFELTITEL>" unten="<Folgentitel>" … dauer=1 hud=false]`). Ab Folge 2 steht im Hook in einem Satz, wo wir stehen. Es gibt keinen Rückblick „Was bisher geschah“ (#9).
 - **Stimmungsbogen innerhalb der Staffel:** Jede Folge hat eine eigene Stimmung (`@stimmung`), über die Staffel gemischt, z. B. spannend → düster → freudig → traurig → warm. Mindestens 4 verschiedene pro Staffel, nie dreimal dieselbe hintereinander.
 - **Freunde und Familie:** In jeder Staffel tragen mindestens 2 Folgen die Botschaft, wie wichtig Zeit mit Freunden und Familie ist. Das gehört zur Handlung und wird jedes Mal aus einem neuen Blickwinkel erzählt (Eltern, Großeltern, Geschwister, bester Freund, alte Freunde).
@@ -44,7 +42,7 @@ Pro Staffel einen großen Kanal als Hauptvorbild wählen (abwechseln!) und kurz 
 2. **Wiedererkennen** (2–3): ein Moment, den jeder kennt.
 3. **Steigerung** (3–5): eine Zahl, eine Folge oder ein Konflikt. Jede Einstellung bringt etwas Neues.
 4. **Wendung** (1–2).
-5. **Cliffhanger** (1), dann die Karte „Fortsetzung folgt“.
+5. **Cliffhanger** (1) als letzte Einstellung. Danach kommt nichts mehr, keine Karte „Fortsetzung folgt“.
 
 **Verboten:** Fragen ans Publikum („Was hättest du gemacht?“, „Schreib es in die Kommentare“, „Was ist richtig?“), Quiz und Check (#8). Ebenso „Echter Fakt“ (#2) und Erfundenes, das als Tatsache verkauft wird: Fantasie-Szenarien werden als „Stell dir vor …“ erzählt, Schätzungen als Schätzung. Fragen der Figuren in der Handlung sind erlaubt. Nicht predigen. Kein Suizid, keine Selbstverletzung, keine Essstörungen und keine Gewalt gegen Kinder. Tod und Abschied nur behutsam.
 
@@ -116,7 +114,7 @@ git add -A taeglich engine && git commit && git push -u origin taeglich         
 
 `staffel_veroeffentlichen.py` erledigt Folgendes:
 - jede Folge auf ca. −15 LUFS bringen und prüfen (Ton da, so lang wie das Bild, > −24 LUFS, ≤ 60 s)
-- die TikTok-Sammelteile schneiden (Standard 10 Folgen → Folge 1–3, 4–5, 6–8, 9–10; „Fortsetzung folgt“ nur am Teilende) und prüfen
+- die TikTok-Sammelteile schneiden (Standard 10 Folgen → Folge 1–3, 4–5, 6–8, 9–10, einfach aneinandergehängt; eine versehentliche „Fortsetzung folgt“-Karte würde überall herausgeschnitten) und prüfen
 - alles auf `youtube-upload` ablegen (`taeglich/sNN-fXX.mp4`, `taeglich-tiktok/sNN-teil-N.mp4`, `geprueft.json`)
 - alle Posts **pro Plattform hinter den letzten geplanten Post** hängen, im Takt TikTok 08:00/20:00, Instagram alle 4 Stunden, YouTube jeweils :30
 

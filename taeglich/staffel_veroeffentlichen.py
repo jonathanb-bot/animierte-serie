@@ -6,14 +6,14 @@
 Jonathans Vorgaben:
 - Posten: alles hinten anhängen (1.11.). Pro Plattform geht es direkt nach dem letzten geplanten Post weiter, im festen
   Takt: TikTok 08:00 und 20:00, Instagram alle 4 Stunden (0, 4, 8, 12, 16, 20 Uhr), YouTube jeweils :30. Nie parallel.
-- TikTok (Issue #7): Folgen zu wenigen Sammelteilen zusammenschneiden (10 Folgen → 4 Teile, jeder höchstens 10 min). Die
-  „Fortsetzung folgt“-Karte am Ende einer Folge fliegt innerhalb eines Teils raus und bleibt nur am Teilende.
+- TikTok (Issue #7): Folgen zu wenigen Sammelteilen zusammenschneiden (10 Folgen → 4 Teile, jeder höchstens 10 min).
+- Nie „Fortsetzung folgt“ (Issue #11, 1.11.): Die Folgen enden mit dem Cliffhanger. Steht doch eine solche Karte am Ende,
+  wird sie überall herausgeschnitten (in der einzelnen Folge und im TikTok-Teil).
 - Instagram + YouTube: jede Folge ein Post (die Folgen sind schon kurz, höchstens 60 s, siehe FORMAT.md).
 - Vor jedem Post: Ton da, so lang wie das Bild, Stimme hörbar (> −24 LUFS). Lautheit wird auf ca. −15 LUFS gebracht.
 
 Voraussetzungen: `taeglich/staffeln.json` hat die Staffel (Titel, Folgen, Hashtags …), alle Folgen sind gerendert:
-`ausgabe/taeglich-s01-f01.mp4` … Die letzte Einstellung jeder Folge außer der letzten ist die Karte
-`[titel … gross="Fortsetzung folgt" … dauer=2]`.
+`ausgabe/taeglich-s01-f01.mp4` …
 """
 from __future__ import annotations
 
@@ -61,11 +61,11 @@ def karten_dauer(drehbuch: Path) -> float:
 
 
 def teil_schneiden(folgen: list[dict], ziel: Path) -> None:
-    """Folgen aneinanderhängen; bei allen außer der letzten die „Fortsetzung folgt“-Karte abschneiden."""
+    """Folgen aneinanderhängen; eine „Fortsetzung folgt“-Karte am Ende wird bei jeder Folge abgeschnitten (Issue #11)."""
     args, filt = [], []
     for i, f in enumerate(folgen):
         laenge = V.dauer(f["datei"], "v:0")
-        bis = laenge - (f["karte"] if i < len(folgen) - 1 else 0.0)
+        bis = laenge - f["karte"]
         args += ["-i", f["datei"]]
         filt.append(f"[{i}:v]trim=0:{bis:.3f},setpts=PTS-STARTPTS[v{i}];"
                     f"[{i}:a]atrim=0:{bis:.3f},asetpts=PTS-STARTPTS,afade=t=out:st={max(0, bis - 0.04):.3f}:d=0.04[a{i}]")
@@ -129,9 +129,16 @@ def main(argv=None) -> int:
         folgen.append({**f, "id": fid, "datei": fertig, "pruefung": erg, "karte": karten_dauer(ROOT / "taeglich" / "episoden" / f"{fid}.txt")})
     if fehler:
         print("NICHT veröffentlicht:\n  " + "\n  ".join(fehler)); return 1
-    for f in folgen[:-1]:
-        if not f["karte"]:
-            print(f"{f['id']}: letzte Einstellung ist keine „Fortsetzung folgt“-Karte – bitte ergänzen"); return 1
+    # Nie „Fortsetzung folgt“ (Issue #11): steht die Karte doch am Ende, aus der einzelnen Folge herausschneiden
+    for f in folgen:
+        if f["karte"]:
+            print(f"{f['id']}: „Fortsetzung folgt“-Karte am Ende gefunden – wird herausgeschnitten")
+            ohne = f["datei"].with_name(f["datei"].stem + "-ohne-karte.mp4")
+            teil_schneiden([{**f, "karte": f["karte"]}], ohne)
+            f["datei"], f["karte"] = ohne, 0.0
+            f["pruefung"] = V.pruefe(ohne, max_dauer=MAX_FOLGE)
+            if not f["pruefung"]["ok"]:
+                print(f"NICHT veröffentlicht: {f['id']}: {f['pruefung']['grund']}"); return 1
 
     # 2) TikTok-Sammelteile
     teile_def = st.get("tiktok_teile") or tiktok_teile_standard(len(folgen))
