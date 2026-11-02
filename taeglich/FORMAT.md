@@ -12,7 +12,7 @@ Diese Datei ist verbindlich für die geplante Aufgabe „Kurzvideo-Staffel alle 
 
 ## Tempo (Jonathans Vorgabe 1.11. abends: bessere Analyse, mehr Videos pro Tag, damit es schneller geht)
 
-- **Posten:** TikTok **4× am Tag (08, 12, 16, 20 Uhr)**, Instagram alle 4 Stunden, YouTube jeweils :30. Neue Posts weiterhin hinten anhängen.
+- **Posten:** TikTok **4× am Tag (08, 12, 16, 20 Uhr)**, **Instagram alle 2 Stunden, YouTube jeweils :30** (Jonathans Vorgabe 2.11., Issue #14: höchstens 1 Tag hinter TikTok). Neue Posts weiterhin hinten anhängen.
 - **Produktion jede Nacht um 23:44 prüfen:** `python taeglich/vorrat.py`. **PRODUZIEREN**, wenn gestern keine Staffel fertig wurde oder der TikTok-Vorrat unter 3 Tagen liegt, sonst AUSSETZEN. Normal ist also alle 2 Tage eine Staffel. Reicht der Vorrat nicht, wird jeden Tag produziert. 10 Folgen pro Staffel ergeben 4 TikTok-Teile, das füllt genau einen Tag mit 4 TikTok-Posts.
 - **Analyse jeden Abend um 21:39** (Zernio kostenlos), vidIQ nach Credit-Plan nur jeden 2. Abend.
 - In `staffeln.json` bekommt jede Staffel `datum` (JJJJ-MM-TT), sonst erkennt `vorrat.py` sie nicht.
@@ -164,7 +164,7 @@ git add -A taeglich engine && git commit && git push -u origin taeglich         
 - jede Folge auf ca. −15 LUFS bringen und prüfen (Ton da, so lang wie das Bild, > −24 LUFS, **62–89 s**; kürzer als 62 s wird nicht gepostet)
 - die TikTok-Sammelteile schneiden (Standard 10 Folgen → Folge 1–3, 4–5, 6–8, 9–10, einfach aneinandergehängt; eine versehentliche „Fortsetzung folgt“-Karte würde überall herausgeschnitten) und prüfen
 - alles auf `youtube-upload` ablegen (`taeglich/sNN-fXX.mp4`, `taeglich-tiktok/sNN-teil-N.mp4`, `geprueft.json`)
-- alle Posts **pro Plattform hinter den letzten geplanten Post** hängen, im Takt TikTok 08:00/20:00, Instagram alle 4 Stunden, YouTube jeweils :30
+- alle Posts **pro Plattform hinter den letzten geplanten Post** hängen, im Takt TikTok 08/12/16/20 Uhr, Instagram alle 2 Stunden, YouTube jeweils :30 (Issue #14)
 
 IDs: `taeglich-tiktok-sNN-teil-N`, `taeglich-insta-sNN-fXX`, `taeglich-yt-sNN-fXX`. Bis der Workflow „Posts einplanen“ fertig ist, nichts auf `main` pushen. Danach im Log prüfen, dass alles mit ✓ eingeplant ist.
 

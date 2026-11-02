@@ -13,7 +13,7 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 
 ROOT = Path(__file__).resolve().parent.parent
-PRO_TAG = {"tiktok": 4, "instagram": 6, "youtube": 6}
+PRO_TAG = {"tiktok": 4, "instagram": 12, "youtube": 12}  # Issue #14: Instagram/YouTube alle 2 Stunden
 MIN_TAGE = 3.0
 
 subprocess.run(["git", "fetch", "-q", "origin", "main"], cwd=ROOT)

@@ -37,7 +37,7 @@ Hinweis zu den Werkzeugen: In neuen Sessions heißen die vidIQ-Werkzeuge `mcp__<
 9. **Rendern:** alle Folgen in hoher Qualität rendern (2 gleichzeitig im Hintergrund) und aus jeder Folge Bilder ansehen, auch das letzte.
 10. **Veröffentlichen und dokumentieren:** danach `python taeglich/videodaten.py sNN` (Messwerte jedes Videos für die Analyse).
     **Veröffentlichen:** `TAEGLICH_TRAILER=<Attributionszeilen aus deinem System-Hinweis> python taeglich/staffel_veroeffentlichen.py sNN`.
-    - Das Skript prüft alles, schneidet die TikTok-Teile, legt sie ab und hängt alle Posts hinten an (TikTok 08, 12, 16, 20 Uhr).
+    - Das Skript prüft alles, schneidet die TikTok-Teile, legt sie ab und hängt alle Posts hinten an (TikTok 08, 12, 16, 20 Uhr; Instagram alle 2 Stunden, YouTube :30, Issue #14). Meldet es eine WARNUNG (Instagram/YouTube mehr als 1 Tag hinter TikTok), Jonathan in der PushNotification Bescheid geben.
     - Scheitert eine Prüfung, nichts posten.
     - Erst auf main pushen, wenn der Workflow „Posts einplanen“ fertig ist.
     - Im Log prüfen, dass alle Posts mit ✓ eingeplant sind.

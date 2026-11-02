@@ -50,7 +50,7 @@ def main() -> int:
         z = dt.datetime.fromisoformat(p["zeit"])
         tage[z.date()][p["platform"]].append(f"{z:%H:%M} {label(p, staffeln)}")
     z = [f"# Upload-Plan (Stand {jetzt:%d.%m.%Y %H:%M})", "",
-         "Automatisch aus `posten/plan.json` (`python taeglich/upload_plan.py`). Takt: TikTok 08/12/16/20 Uhr für neue Staffeln, Instagram alle 4 h, YouTube jeweils :30. Neue Staffeln werden hinten angehängt.", ""]
+         "Automatisch aus `posten/plan.json` (`python taeglich/upload_plan.py`). Takt: TikTok 08/12/16/20 Uhr für neue Staffeln, Instagram alle 2 h, YouTube jeweils :30 (Issue #14). Neue Staffeln werden hinten angehängt.", ""]
     for plat in ("tiktok", "instagram", "youtube"):
         ps = [p for p in posts if p["platform"] == plat]
         if ps:

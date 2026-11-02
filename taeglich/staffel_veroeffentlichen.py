@@ -33,7 +33,8 @@ ROOT = V.ROOT
 STAFFELN = ROOT / "taeglich" / "staffeln.json"
 RAW = "https://raw.githubusercontent.com/jonathanb-bot/animierte-serie/youtube-upload/{pfad}"
 TAKT = {"tiktok": [(8, 0), (12, 0), (16, 0), (20, 0)],  # 4× am Tag (Jonathans Vorgabe 1.11.: mehr Videos pro Tag)
-         "instagram": [(h, 0) for h in range(0, 24, 4)], "youtube": [(h, 30) for h in range(0, 24, 4)]}
+         # Instagram/YouTube alle 2 Stunden: höchstens 1 Tag hinter TikTok (Jonathans Vorgabe 2.11., Issue #14)
+         "instagram": [(h, 0) for h in range(0, 24, 2)], "youtube": [(h, 30) for h in range(0, 24, 2)]}
 MIN_DAUER = 62.0   # jedes Video über 1 Minute (Issue #12), mit kleinem Puffer
 MAX_FOLGE = 89.0   # unter 90 s: ein Post auf Instagram/YouTube (Issue #4/#9)
 MAX_TEIL = 600.0
@@ -228,6 +229,12 @@ def main(argv=None) -> int:
 
     for p in neu:
         print(f"  {p['id']}: {p['zeit']}")
+    # Issue #14: Instagram/YouTube höchstens 1 Tag hinter TikTok
+    erste = {pl: min((p["zeit"] for p in neu if p["platform"] == pl), default=None) for pl in ("tiktok", "instagram", "youtube")}
+    if erste["tiktok"]:
+        for pl in ("instagram", "youtube"):
+            if erste[pl] and dt.datetime.fromisoformat(erste[pl]) - dt.datetime.fromisoformat(erste["tiktok"]) > dt.timedelta(days=1):
+                print(f"WARNUNG: {pl} beginnt {erste[pl]}, mehr als 1 Tag nach TikTok ({erste['tiktok']}) – Issue #14: Jonathan Bescheid geben")
     if not neu:
         print("Alle Posts stehen schon im Plan."); return 0
     plan_datei.write_text(json.dumps(plan, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
