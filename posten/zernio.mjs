@@ -246,7 +246,7 @@ for (const post of plan.posts) {
 
   const platformSpecificData = post.platform === "tiktok"
     ? { privacyLevel: "PUBLIC_TO_EVERYONE", allowComment: true, allowDuet: true, allowStitch: true,
-        commercialContentType: "none", videoMadeWithAi: false, // KI-Haken aus (Jonathans Vorgabe 2.11., Issue #15) contentPreviewConfirmed: true, expressConsentGiven: true }
+        commercialContentType: "none", videoMadeWithAi: false /* KI-Haken aus: Jonathans Vorgabe 2.11., Issue #15 */, contentPreviewConfirmed: true, expressConsentGiven: true }
     : post.platform === "youtube"
     ? { title: post.titel, visibility: "public", madeForKids: false, categoryId: "24" }
     : (plan.instagram || {});
