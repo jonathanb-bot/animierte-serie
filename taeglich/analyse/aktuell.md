@@ -26,4 +26,8 @@ Aus `taeglich/analyse/2026-11-02.md`. Noch wenig Daten (61 Posts, keine Kurzvide
 
 10. **„Der Schneesturm“:** „Der Schnee hat dein Dorf eingeschlossen. Und Papa ist mit dem Auto nicht zurückgekommen.“ Drei Tage ohne Strom, die Familie rückt zusammen, Nachbarn helfen. Passt zur Jahreszeit (Feeds drehen Richtung Winter). Kulissen: landschaft, wald, wohnzimmer, esstisch. Hauptstimmung spannend, dazwischen warme Familienfolgen.
 11. **„Das Licht im Wald“:** „Deine Familie zieht in Opas altes Haus am Waldrand. In der ersten Nacht leuchtet etwas zwischen den Bäumen.“ Kulissen: wald, landschaft, see, grossstadt. Hauptstimmung Mysterium/spannend.
-12. **„Der Komet“:** „In 30 Tagen schlägt er ein. Und dein Opa will sein Haus nicht verlassen.“ Kulissen: weltall, landschaft, wohnzimmer, see. Hauptstimmung traurig/warm mit freudigen Momenten.
+12. **„Was wäre wenn“ (Jonathans Wunsch 2.11.), Folgen von 1–3 Minuten:** Gedankenexperimente aus dem echten Leben, die Schritt für Schritt eskalieren und dich direkt betreffen (Vorbild: What If / The Infographics Show). Der Hook ist eine Aussage, keine Frage ans Publikum (#8). Ideen:
+    - „Ab heute Nacht gibt es in ganz Europa keinen Strom. Und Opas Herzgerät läuft nur noch zwölf Stunden.“ (Tag für Tag, was ausfällt)
+    - „In 30 Tagen schlägt ein Komet ein. Und dein Opa will sein Haus nicht verlassen.“ (Kulissen: weltall, landschaft, wohnzimmer, see)
+    - „Ab morgen hört dein Handy für immer auf zu funktionieren. Deine beste Freundin wohnt 200 Kilometer weg.“
+    Passt zur Rotation mit XL-Folgen (90–120 s, s04) oder als Einzelvideo bis 3 min.

@@ -10,7 +10,7 @@ Hinweis zu den Werkzeugen: In neuen Sessions heißen die vidIQ-Werkzeuge `mcp__<
 4. `python taeglich/analyse_auswerten.py` ausführen und die Tabellen gründlich lesen: Top 5 und Flop 5 je Plattform. Bei jedem Video ansehen, warum es so lief (Hook, Thema, Stimmung, Kulissen, Länge, Uhrzeit). Dazu Recherche von außen: WebSearch (mode extended erlaubt, 3–6 Suchen) und vidIQ-Ausreißer nach Credit-Plan. Leitfrage: Was läuft gerade bei deutschsprachigen Story-, Animations- und Erklär-Shorts?
 5. Ergebnis schreiben:
    - `taeglich/analyse/JJJJ-MM-TT.md`: der Bericht.
-   - `taeglich/analyse/aktuell.md`: höchstens 12 verbindliche Punkte für die nächste Staffel, gegliedert in Mehr davon, Weniger davon, genau 1 Experiment und 2–3 Themenvorschläge.
+   - `taeglich/analyse/aktuell.md`: höchstens 12 verbindliche Punkte für die nächste Staffel, gegliedert in Mehr davon, Weniger davon, genau 1 Experiment und 2–3 Themenvorschläge (immer mindestens ein „Was wäre wenn“-Thema für Folgen von 1–3 Minuten, Jonathans Wunsch 2.11.).
    - `taeglich/kennzahlen.json` aktualisieren.
 
    Bei wenig Daten ehrlich „Tendenz“ schreiben, keine Regeln erfinden. Feste Regeln gehen immer vor: über 1 Minute, keine Fragen ans Publikum, nie „Fortsetzung folgt“, Kurzgesagt-Stil, Themen aus dem echten Leben.

@@ -28,6 +28,6 @@ Feste Regeln (Issues mit Label `dringlich`, `taeglich/FORMAT.md`) gehen immer vo
    - **Mehr davon:** was gut ankam, zum Beispiel „Hooks mit einer Zahl über dein Leben“, „Stimmung warm + Großstadt bei Nacht“, „Familie-Folgen“
    - **Weniger davon:** was schwach lief
    - **Ausprobieren:** genau 1 Experiment pro Staffel, damit wir dazulernen
-   - **Themenvorschläge:** 2–3 Staffel-Ideen, die zu den Ergebnissen passen
+   - **Themenvorschläge:** 2–3 Staffel-Ideen, die zu den Ergebnissen passen. **Immer auch mindestens ein „Was wäre wenn“-Thema für Folgen von 1–3 Minuten** (Jonathans Wunsch 2.11.): ein Gedankenexperiment aus dem echten Leben, das Schritt für Schritt eskaliert und dich direkt betrifft. Der Hook ist eine Aussage, keine Frage ans Publikum (#8), z. B. „Ab heute Nacht gibt es in ganz Europa keinen Strom.“
 3. `taeglich/kennzahlen.json`: Verlauf (Datum, Follower/Abonnenten je Plattform, Summen der letzten 30 Tage) und `meilensteine`. Ist eine Schwelle erreicht (TikTok 10.000 = Creator Rewards, YouTube 1.000, Instagram 10.000), sofort eine PushNotification an Jonathan.
 4. Branch `taeglich` committen und pushen. Eine PushNotification sonst nur bei etwas Auffälligem (Meilenstein, starker Absturz, Posting-Fehler bei Zernio).
