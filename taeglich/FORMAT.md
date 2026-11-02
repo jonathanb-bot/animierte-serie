@@ -79,6 +79,26 @@ Pro Staffel einen großen Kanal als Hauptvorbild wählen (abwechseln!) und kurz 
 
 **Sprache:** Du-Erzählung, kurze Sätze, gesprochenes Deutsch, Zahlen als Wörter. `*Wort*` hebt ein Wort hervor, „…“ ist ein Zitat (Mund bewegt sich).
 
+## Stil „leuchtend“ – Standard für alle neuen Folgen (Jonathans Vorgabe 2.11., Issue #17)
+
+Jonathan hat Referenzbilder in Kurzgesagt-Richtung geschickt und die Probe „Wüste“ abgenommen („genau so ist perfekt“). **Ab jetzt hat jede neue Folge diesen Look, jedes Mal passend zur Szene:**
+- **Kopf jedes Drehbuchs:** `@qualitaet hoch`, `@look 0` (kein Abdunkeln), `@kino 0.35`, `@stil leuchtend`, dazu `@palette <Farbfamilie>` als Standard der Folge.
+- **Eine Farbfamilie pro Einstellung** (`palette=lila|orange|tuerkis|rosa|gruen|blau`): Der Hintergrund wird eingefärbt, die Figuren behalten ihre Farben. Die Palette passt zu Ort, Tageszeit und Stimmung:
+
+| Stimmung | Paletten | Beispiele |
+|---|---|---|
+| düster | `lila`, `blau` | Stadt bei Nacht, Krankenhaus, Rechenzentrum |
+| spannend | `lila`, `rosa`, `blau` | Netz, Großstadt, Weltall |
+| traurig | `blau`, `tuerkis` | Regen, Park im Herbst, See |
+| freudig | `orange`, `gruen`, `tuerkis` | Wüste, Wald, Landschaft am Tag |
+| warm | `orange`, `rosa` | Wohnzimmer, Esstisch, Abendlandschaft |
+
+- In einer Folge wechseln die Paletten mit den Orten (2–4 verschiedene). Gleicher Ort, gleiche Palette, damit es einheitlich wirkt.
+- **Tiefe:** Der Hintergrund ist automatisch leicht weich (`tiefe=1.6`, `tiefe=0` aus), die Figuren bleiben scharf. Nahaufnahmen (`gesicht`) sind schon unscharf.
+- **Kulissen im neuen Stil** (`engine/leuchtend.js`): `duenen` (Wüste mit Tafelbergen, Oase, Tiefenunschärfe, dunklen Pflanzen vorne, Sonnenstrahlen; `zeit=tag|abend`, `gross` für nahe Figuren). Weitere Kulissen in diesem Stil kommen nach und nach dazu (Stadt von oben, Dschungel, Wolkenhimmel, Innenräume in einer Farbe). Bis dahin werden alle bestehenden Kulissen mit `@stil leuchtend` und Palette benutzt.
+- Merkmale, an denen sich neue Kulissen orientieren: eine Farbfamilie, Tiefenunschärfe in Ebenen, dunkle Silhouetten am Rand, Licht (Strahlen, Glühen, Linsenreflexe), Wechsel aus Detail und Ruhe, Panorama mit kleiner Figur. Nie Figuren, Vögel, Logo oder Szenen von Kurzgesagt nachbauen.
+- Die alten Serien (24. Stock, Der Alien, Der letzte Mann, s01) bleiben im bisherigen Look.
+
 ## Look: Kurzgesagt-Richtung, viel Detail, hohe Bildqualität
 
 **Ab der ersten Staffel (heute, 1.11.) und für jede weitere Serie (Jonathans Vorgabe, 1.11. abends):** Look wie „Dinge Erklärt – Kurzgesagt“, genau wie im Katalog-Bild. Vor jedem Kulissen- oder Figurenbau den Skill `serien-stil` laden (`.claude/skills/serien-stil/SKILL.md`): erst Katalog prüfen und wiederverwenden, Bilder nur als Code in der Engine, keine Bild-APIs, ChatGPT nur für Referenzbilder. Nie Kurzgesagt-Figuren, -Logo oder -Musik übernehmen.

@@ -38,7 +38,35 @@
     ctx.restore();
   };
 
+  // Stil „leuchtend“ (Jonathans Vorgabe 2.11.): kräftigere, sattere Farben wie in den Referenzbildern; nur mit @stil leuchtend
+  // Farbfamilien (palette=…): oben/unten, werden nur auf den Hintergrund gelegt (Figuren behalten ihre Farben)
+  const PALETTEN = { lila: ["#7a5cff", "#2a1670"], orange: ["#ffb347", "#e0503a"], tuerkis: ["#58d6c8", "#2a62a8"], rosa: ["#ff8fb8", "#6e3aa8"], gruen: ["#a6dc6a", "#2c7a5c"], blau: ["#6fb6ff", "#1e2f8a"] };
+  const leuchten = s => {
+    const c = lw("leuchten", W, H), f = lw("leuchtenFig", W, H);
+    c.setTransform(1, 0, 0, 1, 0, 0); c.filter = "none"; c.globalCompositeOperation = "source-over"; c.clearRect(0, 0, W, H); c.drawImage(A.cv, 0, 0);
+    // Figuren (Maske) scharf merken
+    f.setTransform(1, 0, 0, 1, 0, 0); f.globalCompositeOperation = "source-over"; f.clearRect(0, 0, W, H); f.drawImage(A.cv, 0, 0);
+    f.globalCompositeOperation = "destination-in"; f.drawImage(A.maske, 0, 0); f.globalCompositeOperation = "source-over";
+    ctx.save(); ctx.setTransform(1, 0, 0, 1, 0, 0);
+    // Tiefe: Hintergrund leicht weich (nicht bei Nahaufnahmen, die sind schon unscharf; tiefe=0 schaltet ab)
+    const tiefe = s.typ === "gesicht" ? 0 : (s.tiefe ?? 1.6);
+    ctx.filter = `saturate(1.3) contrast(1.06) brightness(1.04)${tiefe > 0 ? ` blur(${tiefe}px)` : ""}`; ctx.drawImage(c.canvas, 0, 0); ctx.filter = "none";
+    // Farbfamilie auf den Hintergrund
+    const pal = PALETTEN[s.palette];
+    if (pal) {
+      const t = lw("leuchtenTon", W, H);
+      t.setTransform(1, 0, 0, 1, 0, 0); t.globalCompositeOperation = "source-over"; t.fillStyle = lgrad.call ? (() => { const g = t.createLinearGradient(0, 0, 0, H); g.addColorStop(0, pal[0]); g.addColorStop(1, pal[1]); return g; })() : pal[0];
+      t.fillRect(0, 0, W, H); t.globalCompositeOperation = "destination-out"; t.drawImage(A.maske, 0, 0); t.globalCompositeOperation = "source-over";
+      ctx.globalCompositeOperation = "color"; ctx.globalAlpha = s.palette_staerke ?? 0.45; ctx.drawImage(t.canvas, 0, 0);
+      ctx.globalCompositeOperation = "soft-light"; ctx.globalAlpha = 0.25; ctx.drawImage(t.canvas, 0, 0);
+      ctx.globalCompositeOperation = "source-over"; ctx.globalAlpha = 1;
+    }
+    // Figuren scharf und in Originalfarbe (nur sattere Farben) wieder darüber
+    ctx.filter = "saturate(1.15)"; ctx.drawImage(f.canvas, 0, 0); ctx.filter = "none";
+    ctx.restore();
+  };
   A.nachbearbeitung = (s, T) => {
+    if (s.stil === "leuchtend") leuchten(s);
     const k = Number(s.kino) || 0;
     if (k <= 0) { if (s.hooktext) hookText(s, T); return; }
     const w4 = W / 4, h4 = H / 4, a = lw("klein", w4, h4), b = lw("glow", w4, h4);

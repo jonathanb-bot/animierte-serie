@@ -1,0 +1,16 @@
+# Probe: bestehende Kulissen im Stil leuchtend, mit Farbfamilien
+@mund zitate
+@qualitaet hoch
+@look 0
+@kino 0.35
+@stil leuchtend
+[grossstadt zeit=nacht du ben palette=lila] Großstadt lila.
+[landschaft zeit=abend see du palette=rosa] Landschaft rosa.
+[wald zeit=tag du palette=gruen] Wald grün.
+[weltall satellit palette=blau] Weltall blau.
+[wohnzimmer du mama licht=an zeit=abend foto=mama,papa,du,lina palette=orange] Wohnzimmer orange.
+[krankenhaus patient=opa du mama zeit=abend palette=lila] Krankenhaus lila.
+[park du ben jahreszeit=herbst zeit=abend palette=orange] Park orange.
+[esstisch mama papa du lina kerzen zeit=abend palette=tuerkis] Esstisch türkis.
+[gesicht lina ort=park jahreszeit=sommer zeit=tag froh palette=tuerkis] Gesicht.
+[duenen du] Dünen ohne Palette.
