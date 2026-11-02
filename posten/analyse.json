@@ -1,5 +1,5 @@
 {
- "erstellt": "2026-11-02T19:49:51.265Z",
+ "erstellt": "2026-11-02T20:42:36.906Z",
  "konten": [
   {
    "platform": "tiktok",
@@ -30,7 +30,7 @@
     "platform": "tiktok",
     "metricType": "total_value",
     "metrics.follower_count.total": 61,
-    "metrics.likes_count.total": 1197,
+    "metrics.likes_count.total": 1204,
     "metrics.video_count.total": 15,
     "metrics.followers_gained.total": 10,
     "metrics.followers_lost.total": 0
@@ -63,8 +63,8 @@
    "insights_30_tage": {
     "platform": "instagram",
     "metricType": "total_value",
-    "metrics.reach.total": 11035,
-    "metrics.views.total": 21905,
+    "metrics.reach.total": 11055,
+    "metrics.views.total": 21974,
     "metrics.accounts_engaged.total": 217,
     "metrics.total_interactions.total": 298
    }
@@ -89,7 +89,7 @@
     "followersCount": 36,
     "followersLastUpdated": "2026-11-02T08:35:40.170Z",
     "rateLimitCount": 0,
-    "updatedAt": "2026-11-02T19:07:05.503Z",
+    "updatedAt": "2026-11-02T20:31:56.657Z",
     "adsStatus": "not_available"
    },
    "insights_30_tage": {
@@ -1819,6 +1819,72 @@
    }
   },
   {
+   "id": "stock-yt-kurz-10-1",
+   "platform": "youtube",
+   "serie": "24-stock",
+   "zeit": "2026-11-02T20:30:00",
+   "video": "24-stock-kurz/folge-10-teil-1.mp4",
+   "text": "24. Stock – Folge 10: Das Dach (Teil 1/2) 🧟 #shorts",
+   "url": "https://www.youtube.com/watch?v=GtzOfYb2M1Y",
+   "typ": "video",
+   "sync": null,
+   "analytics": {
+    "impressions": 0,
+    "reach": 0,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "clicks": 0,
+    "views": 0,
+    "follows": 0,
+    "igReelsAvgWatchTime": 0,
+    "igReelsVideoViewTotalTime": 0,
+    "reelsSkipRate": 0,
+    "completionRate": 0,
+    "profileViews": 0,
+    "websiteClicks": 0,
+    "replays": 0,
+    "reposts": 0,
+    "videoDurationSeconds": 60,
+    "engagementRate": 0,
+    "lastUpdated": "2026-11-02T19:49:57Z"
+   }
+  },
+  {
+   "id": "stock-yt-kurz-09-2",
+   "platform": "youtube",
+   "serie": "24-stock",
+   "zeit": "2026-11-02T18:30:00",
+   "video": "24-stock-kurz/folge-09-teil-2.mp4",
+   "text": "24. Stock – Folge 9: Die Horde (Teil 2/2) 🧟 #shorts",
+   "url": "https://www.youtube.com/watch?v=9gmP3d7MBzM",
+   "typ": "video",
+   "sync": null,
+   "analytics": {
+    "impressions": 0,
+    "reach": 0,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "clicks": 0,
+    "views": 6,
+    "follows": 0,
+    "igReelsAvgWatchTime": 0,
+    "igReelsVideoViewTotalTime": 0,
+    "reelsSkipRate": 0,
+    "completionRate": 0,
+    "profileViews": 0,
+    "websiteClicks": 0,
+    "replays": 0,
+    "reposts": 0,
+    "videoDurationSeconds": 58,
+    "engagementRate": 0,
+    "lastUpdated": "2026-11-02T19:49:57Z"
+   }
+  },
+  {
    "id": "stock-yt-kurz-09-1",
    "platform": "youtube",
    "serie": "24-stock",
@@ -1836,7 +1902,7 @@
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 4,
+    "views": 12,
     "follows": 0,
     "igReelsAvgWatchTime": 0,
     "igReelsVideoViewTotalTime": 0,
@@ -1848,7 +1914,7 @@
     "reposts": 0,
     "videoDurationSeconds": 50,
     "engagementRate": 0,
-    "lastUpdated": "2026-11-02T17:04:15Z"
+    "lastUpdated": "2026-11-02T19:49:57Z"
    }
   },
   {
@@ -1869,7 +1935,7 @@
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 2,
+    "views": 6,
     "follows": 0,
     "igReelsAvgWatchTime": 0,
     "igReelsVideoViewTotalTime": 0,
@@ -1881,7 +1947,7 @@
     "reposts": 0,
     "videoDurationSeconds": 49,
     "engagementRate": 0,
-    "lastUpdated": "2026-11-02T17:04:15Z"
+    "lastUpdated": "2026-11-02T19:49:57Z"
    }
   },
   {
@@ -1897,12 +1963,12 @@
    "analytics": {
     "impressions": 0,
     "reach": 0,
-    "likes": 17,
+    "likes": 16,
     "comments": 0,
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 851,
+    "views": 1203,
     "follows": 0,
     "igReelsAvgWatchTime": 0,
     "igReelsVideoViewTotalTime": 0,
@@ -1913,8 +1979,8 @@
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 58,
-    "engagementRate": 2,
-    "lastUpdated": "2026-11-02T17:04:15Z"
+    "engagementRate": 1.33,
+    "lastUpdated": "2026-11-02T19:49:57Z"
    }
   },
   {
@@ -1930,12 +1996,12 @@
    "analytics": {
     "impressions": 0,
     "reach": 0,
-    "likes": 13,
+    "likes": 15,
     "comments": 0,
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 560,
+    "views": 621,
     "follows": 0,
     "igReelsAvgWatchTime": 0,
     "igReelsVideoViewTotalTime": 0,
@@ -1946,8 +2012,8 @@
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 57,
-    "engagementRate": 2.32,
-    "lastUpdated": "2026-11-02T17:04:15Z"
+    "engagementRate": 2.42,
+    "lastUpdated": "2026-11-02T19:49:57Z"
    }
   },
   {
@@ -1963,12 +2029,12 @@
    "analytics": {
     "impressions": 0,
     "reach": 0,
-    "likes": 17,
+    "likes": 19,
     "comments": 0,
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 827,
+    "views": 957,
     "follows": 0,
     "igReelsAvgWatchTime": 0,
     "igReelsVideoViewTotalTime": 0,
@@ -1979,8 +2045,8 @@
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 53,
-    "engagementRate": 2.06,
-    "lastUpdated": "2026-11-02T17:04:15Z"
+    "engagementRate": 1.99,
+    "lastUpdated": "2026-11-02T19:49:57Z"
    }
   },
   {
@@ -2001,7 +2067,7 @@
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 32,
+    "views": 36,
     "follows": 0,
     "igReelsAvgWatchTime": 0,
     "igReelsVideoViewTotalTime": 0,
@@ -2013,7 +2079,7 @@
     "reposts": 0,
     "videoDurationSeconds": 51,
     "engagementRate": 0,
-    "lastUpdated": "2026-11-02T17:04:15Z"
+    "lastUpdated": "2026-11-02T19:49:57Z"
    }
   },
   {
@@ -2034,7 +2100,7 @@
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 34,
+    "views": 48,
     "follows": 0,
     "igReelsAvgWatchTime": 0,
     "igReelsVideoViewTotalTime": 0,
@@ -2046,7 +2112,7 @@
     "reposts": 0,
     "videoDurationSeconds": 58,
     "engagementRate": 0,
-    "lastUpdated": "2026-11-02T17:04:15Z"
+    "lastUpdated": "2026-11-02T19:49:57Z"
    }
   },
   {
@@ -2067,7 +2133,7 @@
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 49,
+    "views": 55,
     "follows": 0,
     "igReelsAvgWatchTime": 0,
     "igReelsVideoViewTotalTime": 0,
@@ -2079,7 +2145,7 @@
     "reposts": 0,
     "videoDurationSeconds": 49,
     "engagementRate": 0,
-    "lastUpdated": "2026-11-02T17:04:15Z"
+    "lastUpdated": "2026-11-02T19:49:57Z"
    }
   },
   {
@@ -2100,7 +2166,7 @@
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 646,
+    "views": 737,
     "follows": 0,
     "igReelsAvgWatchTime": 0,
     "igReelsVideoViewTotalTime": 0,
@@ -2111,8 +2177,8 @@
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 60,
-    "engagementRate": 2.48,
-    "lastUpdated": "2026-11-02T17:04:15Z"
+    "engagementRate": 2.17,
+    "lastUpdated": "2026-11-02T19:49:57Z"
    }
   },
   {
@@ -2128,12 +2194,12 @@
    "analytics": {
     "impressions": 0,
     "reach": 0,
-    "likes": 27,
+    "likes": 29,
     "comments": 0,
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 725,
+    "views": 822,
     "follows": 0,
     "igReelsAvgWatchTime": 0,
     "igReelsVideoViewTotalTime": 0,
@@ -2144,8 +2210,8 @@
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 55,
-    "engagementRate": 3.72,
-    "lastUpdated": "2026-11-02T17:04:15Z"
+    "engagementRate": 3.53,
+    "lastUpdated": "2026-11-02T19:49:57Z"
    }
   },
   {
@@ -2166,7 +2232,7 @@
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 1324,
+    "views": 1332,
     "follows": 0,
     "igReelsAvgWatchTime": 0,
     "igReelsVideoViewTotalTime": 0,
@@ -2177,8 +2243,8 @@
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 51,
-    "engagementRate": 1.96,
-    "lastUpdated": "2026-11-02T17:04:15Z"
+    "engagementRate": 1.95,
+    "lastUpdated": "2026-11-02T19:49:57Z"
    }
   },
   {
@@ -2199,7 +2265,7 @@
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 59,
+    "views": 66,
     "follows": 0,
     "igReelsAvgWatchTime": 0,
     "igReelsVideoViewTotalTime": 0,
@@ -2210,8 +2276,8 @@
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 60,
-    "engagementRate": 3.39,
-    "lastUpdated": "2026-11-02T17:04:15Z"
+    "engagementRate": 3.03,
+    "lastUpdated": "2026-11-02T19:49:57Z"
    }
   },
   {
@@ -2232,7 +2298,7 @@
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 59,
+    "views": 69,
     "follows": 0,
     "igReelsAvgWatchTime": 0,
     "igReelsVideoViewTotalTime": 0,
@@ -2243,8 +2309,8 @@
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 48,
-    "engagementRate": 1.69,
-    "lastUpdated": "2026-11-02T17:04:15Z"
+    "engagementRate": 1.45,
+    "lastUpdated": "2026-11-02T19:49:57Z"
    }
   },
   {
@@ -2265,7 +2331,7 @@
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 60,
+    "views": 72,
     "follows": 0,
     "igReelsAvgWatchTime": 0,
     "igReelsVideoViewTotalTime": 0,
@@ -2276,8 +2342,8 @@
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 52,
-    "engagementRate": 1.67,
-    "lastUpdated": "2026-11-02T17:04:15Z"
+    "engagementRate": 1.39,
+    "lastUpdated": "2026-11-02T19:49:57Z"
    }
   },
   {
@@ -2298,7 +2364,7 @@
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 1371,
+    "views": 1382,
     "follows": 0,
     "igReelsAvgWatchTime": 0,
     "igReelsVideoViewTotalTime": 0,
@@ -2309,8 +2375,8 @@
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 42,
-    "engagementRate": 0.66,
-    "lastUpdated": "2026-11-02T17:04:15Z"
+    "engagementRate": 0.65,
+    "lastUpdated": "2026-11-02T19:49:57Z"
    }
   },
   {
@@ -2331,7 +2397,7 @@
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 1152,
+    "views": 1180,
     "follows": 0,
     "igReelsAvgWatchTime": 0,
     "igReelsVideoViewTotalTime": 0,
@@ -2342,8 +2408,8 @@
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 52,
-    "engagementRate": 1.04,
-    "lastUpdated": "2026-11-02T17:04:15Z"
+    "engagementRate": 1.02,
+    "lastUpdated": "2026-11-02T19:49:57Z"
    }
   },
   {
@@ -2364,7 +2430,7 @@
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 2374,
+    "views": 2424,
     "follows": 0,
     "igReelsAvgWatchTime": 0,
     "igReelsVideoViewTotalTime": 0,
@@ -2375,8 +2441,8 @@
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 42,
-    "engagementRate": 1.39,
-    "lastUpdated": "2026-11-02T17:04:15Z"
+    "engagementRate": 1.36,
+    "lastUpdated": "2026-11-02T19:49:57Z"
    }
   },
   {
@@ -2397,7 +2463,7 @@
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 99,
+    "views": 109,
     "follows": 0,
     "igReelsAvgWatchTime": 0,
     "igReelsVideoViewTotalTime": 0,
@@ -2408,8 +2474,8 @@
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 40,
-    "engagementRate": 3.03,
-    "lastUpdated": "2026-11-02T17:04:15Z"
+    "engagementRate": 2.75,
+    "lastUpdated": "2026-11-02T19:49:57Z"
    }
   },
   {
@@ -2430,7 +2496,7 @@
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 84,
+    "views": 94,
     "follows": 0,
     "igReelsAvgWatchTime": 0,
     "igReelsVideoViewTotalTime": 0,
@@ -2441,8 +2507,8 @@
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 41,
-    "engagementRate": 2.38,
-    "lastUpdated": "2026-11-02T17:04:15Z"
+    "engagementRate": 2.13,
+    "lastUpdated": "2026-11-02T19:49:57Z"
    }
   },
   {
@@ -2463,7 +2529,7 @@
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 124,
+    "views": 134,
     "follows": 0,
     "igReelsAvgWatchTime": 0,
     "igReelsVideoViewTotalTime": 0,
@@ -2475,7 +2541,7 @@
     "reposts": 0,
     "videoDurationSeconds": 50,
     "engagementRate": 0,
-    "lastUpdated": "2026-11-02T17:04:15Z"
+    "lastUpdated": "2026-11-02T19:49:57Z"
    }
   },
   {
@@ -2496,7 +2562,7 @@
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 1971,
+    "views": 1989,
     "follows": 0,
     "igReelsAvgWatchTime": 0,
     "igReelsVideoViewTotalTime": 0,
@@ -2507,8 +2573,8 @@
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 52,
-    "engagementRate": 1.27,
-    "lastUpdated": "2026-11-02T17:04:15Z"
+    "engagementRate": 1.26,
+    "lastUpdated": "2026-11-02T19:49:57Z"
    }
   },
   {
@@ -2529,7 +2595,7 @@
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 2292,
+    "views": 2311,
     "follows": 0,
     "igReelsAvgWatchTime": 0,
     "igReelsVideoViewTotalTime": 0,
@@ -2540,8 +2606,8 @@
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 45,
-    "engagementRate": 1.35,
-    "lastUpdated": "2026-11-02T17:04:15Z"
+    "engagementRate": 1.34,
+    "lastUpdated": "2026-11-02T19:49:57Z"
    }
   },
   {
@@ -2562,7 +2628,7 @@
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 1458,
+    "views": 1465,
     "follows": 0,
     "igReelsAvgWatchTime": 0,
     "igReelsVideoViewTotalTime": 0,
@@ -2573,8 +2639,8 @@
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 45,
-    "engagementRate": 1.85,
-    "lastUpdated": "2026-11-02T17:04:15Z"
+    "engagementRate": 1.84,
+    "lastUpdated": "2026-11-02T19:49:57Z"
    }
   },
   {
@@ -2869,6 +2935,12 @@
      "post_count": 1
     },
     {
+     "day_of_week": 6,
+     "hour": 7,
+     "avg_engagement": 29,
+     "post_count": 1
+    },
+    {
      "day_of_week": 1,
      "hour": 19,
      "avg_engagement": 28,
@@ -2882,12 +2954,6 @@
     },
     {
      "day_of_week": 6,
-     "hour": 7,
-     "avg_engagement": 27,
-     "post_count": 1
-    },
-    {
-     "day_of_week": 6,
      "hour": 3,
      "avg_engagement": 26,
      "post_count": 1
@@ -2895,13 +2961,13 @@
     {
      "day_of_week": 0,
      "hour": 3,
-     "avg_engagement": 17,
+     "avg_engagement": 19,
      "post_count": 1
     },
     {
      "day_of_week": 0,
      "hour": 11,
-     "avg_engagement": 17,
+     "avg_engagement": 16,
      "post_count": 1
     },
     {
@@ -2913,7 +2979,7 @@
     {
      "day_of_week": 0,
      "hour": 7,
-     "avg_engagement": 13,
+     "avg_engagement": 15,
      "post_count": 1
     },
     {
@@ -2935,39 +3001,27 @@
      "post_count": 1
     },
     {
+     "day_of_week": 4,
+     "hour": 19,
+     "avg_engagement": 2,
+     "post_count": 1
+    },
+    {
      "day_of_week": 5,
      "hour": 23,
      "avg_engagement": 2,
      "post_count": 1
     },
     {
-     "day_of_week": 4,
+     "day_of_week": 5,
      "hour": 19,
-     "avg_engagement": 2,
+     "avg_engagement": 1,
      "post_count": 1
     },
     {
      "day_of_week": 5,
      "hour": 15,
      "avg_engagement": 1,
-     "post_count": 1
-    },
-    {
-     "day_of_week": 5,
-     "hour": 19,
-     "avg_engagement": 1,
-     "post_count": 1
-    },
-    {
-     "day_of_week": 0,
-     "hour": 13,
-     "avg_engagement": 0,
-     "post_count": 1
-    },
-    {
-     "day_of_week": 4,
-     "hour": 17,
-     "avg_engagement": 0,
      "post_count": 1
     },
     {
@@ -2995,8 +3049,32 @@
      "post_count": 1
     },
     {
+     "day_of_week": 0,
+     "hour": 19,
+     "avg_engagement": 0,
+     "post_count": 1
+    },
+    {
      "day_of_week": 6,
      "hour": 15,
+     "avg_engagement": 0,
+     "post_count": 1
+    },
+    {
+     "day_of_week": 0,
+     "hour": 17,
+     "avg_engagement": 0,
+     "post_count": 1
+    },
+    {
+     "day_of_week": 4,
+     "hour": 17,
+     "avg_engagement": 0,
+     "post_count": 1
+    },
+    {
+     "day_of_week": 0,
+     "hour": 13,
      "avg_engagement": 0,
      "post_count": 1
     }
@@ -3011,9 +3089,9 @@
   "dataStaleness.staleAccountCount": 0
  },
  "ueberblick_yt": {
-  "totalPosts": 24,
-  "publishedPosts": 24,
+  "totalPosts": 26,
+  "publishedPosts": 26,
   "scheduledPosts": 0,
-  "dataStaleness.staleAccountCount": 1
+  "dataStaleness.staleAccountCount": 0
  }
 }
