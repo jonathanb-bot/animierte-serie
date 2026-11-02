@@ -1,7 +1,7 @@
 Verbundene Konten: tiktok:storys4you.de1, instagram:sto.rys4you, youtube:sto.rys4you
-Konto tiktok:storys4you.de1 Follower=59 Insights ok
-Konto instagram:sto.rys4you Follower=4 Insights ok
-Konto youtube:sto.rys4you Follower=26 Insights ok
-Posts (haupt) Seite 1: 29
-Posts (yt) Seite 1: 18
-Fertig: 3 Konten, 41 Posts (41 mit Zahlen), 0 Fehler → posten/analyse.json
+Konto tiktok:storys4you.de1 Follower=61 Insights ok
+Konto instagram:sto.rys4you Follower=6 Insights ok
+Konto youtube:sto.rys4you Follower=36 Insights ok
+Posts (haupt) Seite 1: 41
+Posts (yt) Seite 1: 24
+Fertig: 3 Konten, 59 Posts (59 mit Zahlen), 0 Fehler → posten/analyse.json
