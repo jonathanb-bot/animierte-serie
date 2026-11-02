@@ -36,7 +36,7 @@ TAKT = {"tiktok": [(8, 0), (12, 0), (16, 0), (20, 0)],  # 4× am Tag (Jonathans 
          # Instagram/YouTube alle 2 Stunden: höchstens 1 Tag hinter TikTok (Jonathans Vorgabe 2.11., Issue #14)
          "instagram": [(h, 0) for h in range(0, 24, 2)], "youtube": [(h, 30) for h in range(0, 24, 2)]}
 MIN_DAUER = 62.0   # jedes Video über 1 Minute (Issue #12), mit kleinem Puffer
-MAX_FOLGE = 89.0   # unter 90 s: ein Post auf Instagram/YouTube (Issue #4/#9)
+MAX_FOLGE = 90.0   # bis 90 s: ein Post auf Instagram/YouTube (Jonathans Vorgabe 2.11.)
 MAX_TEIL = 600.0
 VORLAUF = dt.timedelta(minutes=60)
 
