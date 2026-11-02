@@ -1,12 +1,88 @@
 {
-  "du":       { "haar": "wuschel", "haare": "#4a3324", "haut": "#eac3a0", "jacke": "#3f7f8c", "hose": "#2e3441" },
-  "mama":     { "haar": "dutt",    "haare": "#6a4a30", "haut": "#efc9a8", "jacke": "#b5524a", "hose": "#33363f" },
-  "papa":     { "haar": "seite",   "haare": "#3a2b24", "haut": "#e3b994", "jacke": "#4d6a8c", "hose": "#2b2f36", "bart": "#4a382c" },
-  "oma":      { "haar": "dutt",    "haare": "#d8d4cf", "haut": "#f0cdb2", "jacke": "#8a5a9c", "hose": "#3a3a45", "brille": "#2a2a2e" },
-  "opa":      { "haar": "glatze",  "haare": "#c9c4bd", "haut": "#e8bf9c", "jacke": "#6b7a4f", "hose": "#3a3a35", "brille": "#2a2a2e", "bart": "#d8d4cf" },
-  "lina":     { "haar": "kind",    "haare": "#7a4b2a", "haut": "#f1cfb3", "jacke": "#e2b443", "hose": "#4f6e8c", "groesse": 0.78 },
-  "ben":      { "haar": "kurz",    "haare": "#1f1a18", "haut": "#a8764e", "jacke": "#d9822f", "hose": "#2b2f36" },
-  "mia":      { "haar": "lang",    "haare": "#a5532e", "haut": "#f3d9c4", "jacke": "#5b4b8a", "hose": "#2b2b33" },
-  "lehrerin": { "haar": "lang",    "haare": "#2f2622", "haut": "#c58f6a", "jacke": "#2f6b52", "hose": "#2b2f36", "brille": "#2a2a2e" },
-  "fremder":  { "haar": "kurz",    "haare": "#2a2220", "haut": "#e6c09c", "jacke": "#3b3f48", "hose": "#2b2f36", "kapuze": true }
+ "du": {
+  "haar": "wuschel",
+  "haare": "#4a3324",
+  "haut": "#eac3a0",
+  "jacke": "#3f7f8c",
+  "hose": "#2e3441"
+ },
+ "mama": {
+  "haar": "dutt",
+  "haare": "#6a4a30",
+  "haut": "#efc9a8",
+  "jacke": "#b5524a",
+  "hose": "#33363f"
+ },
+ "papa": {
+  "haar": "seite",
+  "haare": "#3a2b24",
+  "haut": "#e3b994",
+  "jacke": "#4d6a8c",
+  "hose": "#2b2f36",
+  "bart": "#4a382c"
+ },
+ "oma": {
+  "haar": "dutt",
+  "haare": "#d8d4cf",
+  "haut": "#f0cdb2",
+  "jacke": "#8a5a9c",
+  "hose": "#3a3a45",
+  "brille": "#2a2a2e"
+ },
+ "opa": {
+  "haar": "glatze",
+  "haare": "#c9c4bd",
+  "haut": "#e8bf9c",
+  "jacke": "#6b7a4f",
+  "hose": "#3a3a35",
+  "brille": "#2a2a2e",
+  "bart": "#d8d4cf"
+ },
+ "lina": {
+  "haar": "kind",
+  "haare": "#7a4b2a",
+  "haut": "#f1cfb3",
+  "jacke": "#e2b443",
+  "hose": "#4f6e8c",
+  "groesse": 0.78
+ },
+ "ben": {
+  "haar": "kurz",
+  "haare": "#1f1a18",
+  "haut": "#a8764e",
+  "jacke": "#d9822f",
+  "hose": "#2b2f36"
+ },
+ "mia": {
+  "haar": "lang",
+  "haare": "#a5532e",
+  "haut": "#f3d9c4",
+  "jacke": "#5b4b8a",
+  "hose": "#2b2b33"
+ },
+ "lehrerin": {
+  "haar": "lang",
+  "haare": "#2f2622",
+  "haut": "#c58f6a",
+  "jacke": "#2f6b52",
+  "hose": "#2b2f36",
+  "brille": "#2a2a2e"
+ },
+ "fremder": {
+  "haar": "kurz",
+  "haare": "#2a2220",
+  "haut": "#e6c09c",
+  "jacke": "#3b3f48",
+  "hose": "#2b2f36",
+  "kapuze": true
+ },
+ "s01_funker": {
+  "haar": "kurz",
+  "haare": "#b9b4ac",
+  "haut": "#e2b996",
+  "jacke": "#6a5440",
+  "hose": "#33302c",
+  "brille": "#2a2a2e",
+  "bart": "#cfcac2"
+ }
 }

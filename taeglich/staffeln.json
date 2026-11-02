@@ -1,4 +1,133 @@
 {
  "_info": "Eine Staffel pro Lauf (alle 2 Tage, nachts). Die Aufgabe liest das vor jeder neuen Staffel (Abwechslung bei Thema, Stimmungen, Kulissen, Vorbild). staffel_veroeffentlichen.py liest id/titel/beschreibung/hashtags/tags/emoji/folgen/tiktok_teile und trägt 'veroeffentlicht' nach.",
- "staffeln": []
+ "staffeln": [
+  {
+   "id": "s01",
+   "datum": "2026-11-01",
+   "titel": "Funkstille",
+   "beschreibung": "Das Internet ist weg, die Stadt wird dunkel, und deine kleine Schwester ist verschwunden. Drei Tage ohne Netz, die deine Familie verändern.",
+   "thema": "Weltweiter Netzausfall durch einen Sonnensturm; Suche nach der Schwester, Opa allein, Familie findet wieder zueinander",
+   "hauptstimmung": "spannend",
+   "vorbild": "The Infographics Show / What If (Gedankenexperiment, das Schritt für Schritt eskaliert)",
+   "hashtags": [
+    "#funkstille",
+    "#animation",
+    "#geschichte",
+    "#familie",
+    "#storytime",
+    "#deutsch"
+   ],
+   "tags": [
+    "animation",
+    "geschichte",
+    "funkstille",
+    "familie",
+    "story",
+    "deutsch"
+   ],
+   "emoji": "📡",
+   "kulissen_neu": [
+    "polarlicht"
+   ],
+   "analyse": {
+    "quelle": "taeglich/analyse/aktuell.md (1.11.2026)",
+    "mehr_davon": [
+     "1: jeder erste Satz ein in sich verständliches Rätsel mit Gefahr oder Verlust, ohne Namen und Vorgeschichte",
+     "2: Start mitten im Konflikt, Bildwechsel alle 2–4 s (18–19 Einstellungen pro Folge)",
+     "3: Familie oder Freunde in Gefahr im Hook (Schwester, Opa)",
+     "4: Genre Überleben/Mysterium in Du-Form (Netzausfall, Sonnensturm)",
+     "5: Wendung jeder Folge bis ca. Sekunde 30–40"
+    ],
+    "weniger_davon": [
+     "6: keine Titelkarte, kein Serienname, kein Rückblick am Anfang, auch nicht in Folge 1",
+     "7: kein ruhiger Erklär-Einstieg",
+     "8: Instagram/YouTube-Texte schicken nicht mehr zu TikTok, sondern bitten ums Folgen (staffel_veroeffentlichen.py angepasst)"
+    ],
+    "experiment": "9: Hook-Text in Großbuchstaben in den ersten 2,5 s jeder Folge (neue Angabe hooktext= in engine/kurzgesagt.js). Messen: Hook 3 s TikTok (bisher Median 58 %) und Faktor Instagram/YouTube",
+    "thema": "10: „Funkstille“"
+   },
+   "folgen": [
+    {
+     "nr": 1,
+     "titel": "Kein Netz",
+     "stimmung": "spannend",
+     "beschreibung": "Das Internet ist weltweit weg. Und deine kleine Schwester ist nicht nach Hause gekommen."
+    },
+    {
+     "nr": 2,
+     "titel": "Die Wand aus Zetteln",
+     "stimmung": "duester",
+     "beschreibung": "Ohne Handy suchst du deine Schwester am überfüllten Bahnhof. Dann taucht dein bester Freund auf."
+    },
+    {
+     "nr": 3,
+     "titel": "Die Nacht ohne Licht",
+     "stimmung": "spannend",
+     "beschreibung": "Die ganze Stadt wird dunkel. Nur ein altes Zeichen kann dir jetzt noch helfen."
+    },
+    {
+     "nr": 4,
+     "titel": "Dreimal kurz",
+     "stimmung": "freudig",
+     "beschreibung": "Jemand pfeift zurück. Und ein alter Funker weiß, was wirklich passiert ist."
+    },
+    {
+     "nr": 5,
+     "titel": "Was der Funker hörte",
+     "stimmung": "duester",
+     "beschreibung": "Ein Sonnensturm hat die Erde getroffen. Und der zweite Schlag kommt noch."
+    },
+    {
+     "nr": 6,
+     "titel": "Bei mir klingelt sowieso keiner",
+     "stimmung": "traurig",
+     "beschreibung": "Dein Opa sitzt seit zwei Tagen allein im Dunkeln. Für ihn ist Funkstille nichts Neues."
+    },
+    {
+     "nr": 7,
+     "titel": "Notfunk",
+     "stimmung": "spannend",
+     "beschreibung": "Opa braucht sofort einen Arzt. Und kein Telefon der Welt funktioniert."
+    },
+    {
+     "nr": 8,
+     "titel": "Der grüne Himmel",
+     "stimmung": "freudig",
+     "beschreibung": "Mitten in der Nacht leuchtet der Himmel grün. Und deine ganze Familie ist zusammen."
+    },
+    {
+     "nr": 9,
+     "titel": "Drei Tage zu spät",
+     "stimmung": "warm",
+     "beschreibung": "Eine Nachricht von Opa hat drei Tage gebraucht. Und das Netz ist zurück."
+    },
+    {
+     "nr": 10,
+     "titel": "Jeden Sonntag",
+     "stimmung": "freudig",
+     "beschreibung": "Ein alter Mann glaubt, dass niemand auf ihn wartet. Er irrt sich gewaltig."
+    }
+   ],
+   "tiktok_teile": [
+    [
+     1,
+     2,
+     3
+    ],
+    [
+     4,
+     5
+    ],
+    [
+     6,
+     7,
+     8
+    ],
+    [
+     9,
+     10
+    ]
+   ]
+  }
+ ]
 }

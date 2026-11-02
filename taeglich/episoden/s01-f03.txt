@@ -1,0 +1,56 @@
+# Funkstille – Folge 3: Die Nacht ohne Licht
+@musik musik/s01-f03.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung spannend
+@mund zitate
+@qualitaet hoch
+@look 0.6
+@kino 1
+@zeit nacht
+
+== Hook ==
+// Großstadt bei Nacht, ihr auf dem Dach, die Lichter gehen aus
+[grossstadt zeit=nacht du ben wackeln=0.4 zoom-rein hooktext="DIE GANZE STADT WIRD DUNKEL"] Du stehst mitten in der Stadt. Und auf einmal gehen alle Lichter aus.
+// Nahaufnahme: du, erschrocken im Dunkeln
+[gesicht du ort=grossstadt zeit=nacht schreck] Erst eine Straße. Dann die nächste. Dann alles.
+
+== Wiedererkennen ==
+// Nahaufnahme: Ben mit Taschenlampe
+[gesicht ben ort=grossstadt zeit=nacht angst] Ben knipst seine Fahrradlampe an. „Okay. Jetzt wird's ernst.“
+// Weltall: Erde bei Nacht, große Flächen ohne Licht
+[weltall erde_y=1500 zoom-raus] Von oben sähe es aus, als hätte jemand ganze Länder ausgeknipst.
+// Netz: die letzten Knoten erlöschen
+[netz farbe=#ff5a3d schwenk-links] Viele Funkmasten haben Akkus für den Notfall. Aber die halten oft nur ein paar Stunden.
+// Infokarte: Was ohne Strom stoppt
+[objekt objekte="gluehbirne:Kein Licht|tropfen:Wenig Wasser|batterie:Kein Laden" gross="Ohne Strom" farbe=#1d2840] Ohne Strom laufen keine Ampeln. Keine Kassen. Und irgendwann auch keine Wasserpumpen.
+
+== Steigerung ==
+// Haltestelle nachts, Regen, ihr beide
+[haltestelle du ben regen zeit=nacht ton=regen] Ihr lauft weiter. Kilometer um Kilometer. Es fängt an zu regnen.
+// Nahaufnahme: du, nass, entschlossen
+[gesicht du ort=haltestelle zeit=nacht regen entschlossen] Irgendwo da draußen ist Lina. Allein. Im Dunkeln.
+// Nahaufnahme: Ben, ehrlich
+[gesicht ben ort=haltestelle zeit=nacht besorgt] „Sie ist schlau. Schlauer als wir zwei zusammen.“
+// Park im Herbst bei Nacht, nasse Blätter
+[park du ben jahreszeit=herbst zeit=nacht regen schwenk-rechts] Am Stadtpark ist es so dunkel, dass du deine eigene Hand kaum siehst.
+// Landschaft bei Nacht, Glühwürmchen
+[landschaft zeit=nacht du ruhig] Dann fällt dir etwas ein. Etwas aus der Zeit, als Lina noch klein war.
+
+== Wendung ==
+// Nahaufnahme: Lina als kleines Kind, lachend (Erinnerung)
+[gesicht lina ort=park jahreszeit=sommer zeit=tag froh] Ihr hattet ein Zeichen. Nur ihr zwei. Dreimal kurz pfeifen.
+// Infokarte: Ohr, drei kurze Töne
+[objekt objekte="ohr:Kurz|ohr:Kurz|ohr:Kurz" gross="Euer Zeichen" farbe=#1d2840] Wer es hört, pfeift zurück. Damit man sich im Kaufhaus nie verliert.
+// Nahaufnahme: du pfeifst
+[gesicht du ort=park jahreszeit=herbst zeit=nacht entschlossen] Du stellst dich mitten in den Park. Und pfeifst. Dreimal kurz.
+// Park: Stille, nur Regen
+[park du ben jahreszeit=herbst zeit=nacht regen ruhig] Nichts. Nur der Regen.
+// Nahaufnahme: Ben, leise
+[gesicht ben ort=park jahreszeit=herbst zeit=nacht traurig] „Komm. Vielleicht ist sie schon bei deinem Opa.“
+
+== Cliffhanger ==
+// Nahaufnahme: du lauschst
+[gesicht du ort=park jahreszeit=herbst zeit=nacht lauscht zoom-rein] Du drehst dich um. Und dann hörst du es.
+// Wald bei Nacht, Nebel, irgendwo ein Licht
+[landschaft zeit=nacht zoom-rein] Aus der Dunkelheit pfeift jemand zurück. Dreimal kurz. Genau euer Zeichen.

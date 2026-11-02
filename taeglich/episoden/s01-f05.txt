@@ -1,0 +1,56 @@
+# Funkstille – Folge 5: Was der Funker hörte
+@musik musik/s01-f05.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung duester
+@mund zitate
+@qualitaet hoch
+@look 0.85
+@kino 1
+@zeit morgen
+
+== Hook ==
+// Weltall: die Sonne schleudert Licht, die Erde klein
+[weltall sonne erde_y=1950 fokus=760,640 wackeln=0.4 zoom-rein hooktext="DIE SONNE HAT ZUGESCHLAGEN"] Die Sonne hat die Erde getroffen. Und der zweite Schlag kommt noch.
+// Nahaufnahme: der alte Funker, ernst
+[gesicht s01_funker ort=wohnzimmer zeit=morgen besorgt] Das sagt der alte Mann. In seiner Wohnung voller Kabel und Funkgeräte.
+
+== Wiedererkennen ==
+// Wohnzimmer: Lina, Ben, du und der Funker
+[wohnzimmer du lina ben s01_funker licht=aus zeit=morgen ruhig] Ihr sitzt bei ihm im Wohnzimmer. Kein Strom. Aber sein Funkgerät läuft mit Batterie.
+// Infokarte: Funkgerät
+[objekt objekte="funkgeraet:Kurzwelle|batterie:Batterie" gross="Funk geht noch" farbe=#3a2a2a] Über Kurzwelle reden Funker auf der ganzen Welt miteinander. Ohne Internet. Ohne Handymast.
+// Nahaufnahme: Funker erklärt
+[gesicht s01_funker ort=wohnzimmer zeit=morgen entschlossen] „Ein Sonnensturm. Ein riesiger. Alle reden heute Nacht nur darüber.“
+
+== Steigerung ==
+// Weltall: Sonne, Erde, Satellit
+[weltall sonne satellit erde_y=1800 fokus=700,700 schwenk-links] Bei einem Sonnensturm schleudert die Sonne Wolken aus geladenen Teilchen ins All.
+// Netz: rote Knoten, Störungen
+[netz farbe=#ff5a3d zoom-rein] Treffen sie die Erde, stören sie Satelliten, Funk und Stromnetze.
+// Infokarte: 1859
+[titel oben="Im Jahr" gross="1859" unten="sprühten Telegrafen Funken" farbe=#1d1a2a akzent=#ff8a5a groesse=170 hud=false] Im Jahr achtzehnhundertneunundfünfzig sprühten nach so einem Sturm Telegrafenleitungen Funken.
+// Infokarte: 1989
+[titel oben="Kanada, 1989" gross="9 STUNDEN" unten="ohne Strom" farbe=#1d1a2a akzent=#ff8a5a groesse=150 hud=false] Und neunzehnhundertneunundachtzig hatten Millionen Menschen in Kanada neun Stunden keinen Strom.
+// Rechenzentrum mit rotem Kern
+[rechenzentrum kern farbe=#ff5a3d schwenk-rechts] Heute hängt fast alles an Satelliten und Rechenzentren. Viel mehr als damals.
+// Nahaufnahme: Ben, leise
+[gesicht ben ort=wohnzimmer zeit=morgen angst] Ben flüstert: „Und der zweite Schlag?“
+
+== Wendung ==
+// Nahaufnahme: Funker
+[gesicht s01_funker ort=wohnzimmer zeit=morgen besorgt] „Heute Nacht. Vielleicht stärker als der erste.“
+// Nahaufnahme: du, besorgt
+[gesicht du ort=wohnzimmer zeit=morgen besorgt] Du denkst an Mama und Papa. Die suchen Lina immer noch.
+// Nahaufnahme: der Funker lächelt kurz
+[gesicht s01_funker ort=wohnzimmer zeit=morgen froh] Der Funker schreibt eine Nachricht auf einen Zettel.
+// Großstadt am Morgen, ein Radfahrer in der Ferne
+[grossstadt zeit=morgen schwenk-links] Ein Nachbar radelt damit zu euch nach Hause. Damit deine Eltern wissen: Lina ist da.
+// Nahaufnahme: Lina, plötzlich blass
+[gesicht lina ort=wohnzimmer zeit=morgen schreck] Da wird Lina ganz blass.
+
+== Cliffhanger ==
+// Nahaufnahme: Lina flüstert
+[gesicht lina ort=wohnzimmer zeit=morgen angst zoom-rein] „Opa nimmt jeden Abend seine Herztabletten.“
+// Landschaft am Abend, ein einsames Haus mit Licht
+[landschaft zeit=abend zoom-rein] „Und er hat mir letzte Woche gesagt: Die Packung ist fast leer.“

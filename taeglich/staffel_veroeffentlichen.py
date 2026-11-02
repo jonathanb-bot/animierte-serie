@@ -202,6 +202,15 @@ def main(argv=None) -> int:
             post = {"id": e.pop("id"), "platform": platform, "zeit": z.strftime("%Y-%m-%dT%H:%M:00"), "serie": "taeglich", **e}
             plan["posts"].append(post); neu.append(post)
 
+    def weiter(f: dict, konto: str | None) -> str:
+        # Analyse 1.11. (Punkt 8): nicht mehr zu TikTok schicken, sondern ums Folgen bitten (ohne Frage)
+        letzte = f["nr"] >= len(folgen)
+        if konto:
+            return (f"Folg {konto} für die nächste Staffel." if letzte
+                    else f"Folge {f['nr'] + 1} kommt als Nächstes. Folg {konto}, damit du sie nicht verpasst.")
+        return ("Abonnier den Kanal für die nächste Staffel." if letzte
+                else f"Folge {f['nr'] + 1} kommt als Nächstes. Abonnier den Kanal, damit du sie nicht verpasst.")
+
     anhaengen("tiktok", [{
         "id": f"taeglich-tiktok-{a.staffel}-teil-{t['k']}",
         "video": RAW.format(pfad=f"taeglich-tiktok/{a.staffel}-teil-{t['k']}.mp4"),
@@ -210,12 +219,12 @@ def main(argv=None) -> int:
                  + f"\n{st['beschreibung']}\nFolg mir, damit du keinen Teil verpasst!\n\n{tags_txt} #fyp")} for t in teile])
     anhaengen("instagram", [{
         "id": f"taeglich-insta-{f['id']}", "video": RAW.format(pfad=f"taeglich/{f['id']}.mp4"),
-        "text": f"{titel} – Folge {f['nr']}: {f['titel']} {em}\n{f.get('beschreibung') or st['beschreibung']}\nDie ganze Staffel gibt's auf TikTok: @storys4you.de1\n\n{tags_txt} #reels"} for f in folgen])
+        "text": f"{titel} – Folge {f['nr']}: {f['titel']} {em}\n{f.get('beschreibung') or st['beschreibung']}\n{weiter(f, '@sto.rys4you')}\n\n{tags_txt} #reels"} for f in folgen])
     anhaengen("youtube", [{
         "id": f"taeglich-yt-{f['id']}", "video": RAW.format(pfad=f"taeglich/{f['id']}.mp4"),
         "titel": f"{titel} – Folge {f['nr']}: {f['titel']} {em} #shorts"[:100],
         "tags": (st.get("tags") or ["animation", "story"]) + ["shorts"],
-        "text": f"{f.get('beschreibung') or st['beschreibung']}\nAbonnieren, um nichts zu verpassen!\nDie ganze Staffel auf TikTok: @storys4you.de1\n\n{tags_txt} #shorts"} for f in folgen])
+        "text": f"{f.get('beschreibung') or st['beschreibung']}\n{weiter(f, None)}\n\n{tags_txt} #shorts"} for f in folgen])
 
     for p in neu:
         print(f"  {p['id']}: {p['zeit']}")

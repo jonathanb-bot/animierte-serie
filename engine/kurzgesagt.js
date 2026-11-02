@@ -15,9 +15,30 @@
   const nebel = (y, h, farbe, a) => { ctx.fillStyle = lgrad(0, y - h, 0, y + h, [[0, rgba(farbe, 0)], [0.5, rgba(farbe, a)], [1, rgba(farbe, 0)]]); ctx.fillRect(-1500, y - h, 4080, h * 2); };
 
   // ---------- Kino-Look: Glühen heller Stellen + feine Körnung (nur mit @kino) ----------
+  // Hook-Text (Experiment der Analyse vom 1.11.): großer Satz in Großbuchstaben, nur in den ersten 2,5 s, nur wenn gesetzt
+  const hookText = (s, T) => {
+    const t = T - s.start, dauer = Math.min(2.5, s.dauer);
+    if (t < 0 || t > dauer) return;
+    const ein = E.pop(clamp(t / 0.25, 0, 1)), aus = clamp((dauer - t) / 0.3, 0, 1);
+    ctx.save(); ctx.setTransform(1, 0, 0, 1, 0, 0);
+    const woerter = String(s.hooktext).toUpperCase().split(/\s+/).filter(Boolean);
+    let fs = 96; ctx.font = `900 ${fs}px Titel`;
+    const zeilen = []; let z = "";
+    for (const w of woerter) { const v = z ? z + " " + w : w; if (z && ctx.measureText(v).width > 900) { zeilen.push(z); z = w; } else z = v; }
+    if (z) zeilen.push(z);
+    const breit = Math.max(...zeilen.map(l => ctx.measureText(l).width));
+    if (breit > 960) { fs = Math.floor(fs * 960 / breit); ctx.font = `900 ${fs}px Titel`; }
+    ctx.globalAlpha = aus; ctx.textAlign = "center"; ctx.textBaseline = "middle";
+    ctx.translate(W / 2, 300); ctx.scale(0.8 + 0.2 * ein, 0.8 + 0.2 * ein);
+    const lh = fs * 1.12, y0 = -(zeilen.length - 1) * lh / 2;
+    ctx.shadowColor = "rgba(0,0,0,0.6)"; ctx.shadowBlur = 26; ctx.shadowOffsetY = 5;
+    zeilen.forEach((l, i) => { ctx.fillStyle = "#ffffff"; ctx.fillText(l, 0, y0 + i * lh); });
+    ctx.restore();
+  };
+
   A.nachbearbeitung = (s, T) => {
     const k = Number(s.kino) || 0;
-    if (k <= 0) return;
+    if (k <= 0) { if (s.hooktext) hookText(s, T); return; }
     const w4 = W / 4, h4 = H / 4, a = lw("klein", w4, h4), b = lw("glow", w4, h4);
     a.setTransform(1, 0, 0, 1, 0, 0); a.filter = "none"; a.clearRect(0, 0, w4, h4); a.drawImage(A.cv, 0, 0, w4, h4);
     b.setTransform(1, 0, 0, 1, 0, 0); b.clearRect(0, 0, w4, h4); b.filter = "brightness(0.56) contrast(6) saturate(1.4) blur(7px)"; // nur echte Lichter glühen, helle Wände nicht (sonst milchig) b.drawImage(a.canvas, 0, 0); b.filter = "none";
@@ -35,6 +56,7 @@
     ctx.globalCompositeOperation = "overlay"; ctx.globalAlpha = clamp(0.1 * k, 0, 0.2);
     ctx.translate(-ox, -oy); ctx.fillStyle = A._kg_rausch; ctx.fillRect(0, 0, W + 256, H + 256);
     ctx.restore();
+    if (s.hooktext) hookText(s, T);
   };
 
   // =====================================================================
@@ -326,5 +348,53 @@
     }
     if (s.oben) A.text(String(s.oben).toUpperCase(), 540, 180, 54, "#ffffff", "center", 900, "Titel", 960);
     A._dunkel = 0;
+  };
+  // =====================================================================
+  // POLARLICHT – Nachthimmel mit wehenden Lichtvorhängen, Berge im Dunst, Stadtlichter am Horizont, Hügel vorne
+  // (farbe=#hex Hauptfarbe, stadt=false, see)  – neu für Staffel s01 „Funkstille“
+  // =====================================================================
+  SZ.polarlicht = (s, t) => {
+    const gruen = s.farbe || "#5dffb0";
+    ctx.fillStyle = lgrad(0, -600, 0, 1600, [[0, "#03061a"], [0.55, "#0a1838"], [1, "#16304a"]]); ctx.fillRect(-1500, -1500, 4080, 3400);
+    sterne(260, 19, t, -900, -900, 2900, 2200);
+    // Lichtvorhänge: viele schmale, senkrechte Streifen entlang einer wehenden Kurve
+    ctx.save(); ctx.globalCompositeOperation = "screen";
+    const baender = [[mix(gruen, "#b98cff", 0.55), 260, 3.1, 0.6], [mix(gruen, "#4fd8ff", 0.5), 470, 1.7, 0.8], [gruen, 640, 0.0, 1.0]];
+    for (const [farbe, y0, ph, st] of baender) {
+      for (let x = -600; x < 1700; x += 9) {
+        const welle = Math.sin(x * 0.004 + t * 0.35 + ph) * 120 + Math.sin(x * 0.011 - t * 0.6 + ph * 2) * 40;
+        const y = y0 + welle, h = 300 + 200 * (0.5 + 0.5 * Math.sin(x * 0.02 + t * 0.9 + ph)), a = st * (0.3 + 0.16 * Math.sin(x * 0.05 + t * 1.3 + ph));
+        ctx.fillStyle = lgrad(0, y - h, 0, y + 40, [[0, rgba(farbe, 0)], [0.7, rgba(farbe, a)], [0.92, rgba(mix(farbe, "#ffffff", 0.4), a * 1.6)], [1, rgba(farbe, 0)]]);
+        ctx.fillRect(x, y - h, 10, h + 40);
+      }
+      glut(540, y0 + 60, 900, farbe, 0.22 * st);
+    }
+    ctx.restore();
+    // ferne Berge in Schichten, hinten heller und dunstiger, mit grünem Randlicht von oben
+    const schichten = [[960, "#1d3550", 0.9, 3], [1060, "#142740", 0.6, 7], [1170, "#0c1a2c", 0.35, 11]];
+    for (const [basis, farbe, dunst, seed] of schichten) {
+      const r = rnd(seed), pk = []; for (let x = -700; x <= 1800; x += 130 + r() * 110) pk.push([x, basis - 60 - r() * 200]);
+      ctx.beginPath(); ctx.moveTo(-700, 2400); for (const [x, y] of pk) ctx.lineTo(x, y); ctx.lineTo(1800, 2400); ctx.closePath(); ctx.fillStyle = farbe; ctx.fill();
+      for (let k = 0; k < pk.length - 1; k++) line(pk[k][0], pk[k][1], pk[k + 1][0], pk[k + 1][1], 3, rgba(gruen, 0.18 * dunst));
+      nebel(basis + 20, 70, "#6fa0c0", 0.16 * dunst);
+    }
+    // Stadtlichter am Horizont (Notstrom: nur wenige Fenster)
+    if (s.stadt !== false) {
+      const r = rnd(29);
+      for (let i = 0; i < 26; i++) { const x = -60 + i * 46 + r() * 20, h = 50 + r() * 150; box(x, 1240 - h, 38, h + 40, 3, "#0a1424"); for (let k = 0; k < 5; k++) if (r() < 0.22) { const wx = x + 6 + Math.floor(r() * 3) * 10, wy = 1240 - h + 10 + r() * (h - 10); box(wx, wy, 6, 8, 1, "#ffd27a"); glut(wx + 3, wy + 4, 22, "#ffc66b", 0.35); } }
+      { const x = 760; box(x, 1000, 16, 240, 3, "#0a1424"); circle(x + 8, 990, 6, Math.sin(t * 3) > 0 ? "#ff5b4d" : "#5a1f1a"); glut(x + 8, 990, 40, "#ff5b4d", Math.sin(t * 3) > 0 ? 0.5 : 0); } // Funkturm mit Warnlicht
+      nebel(1250, 60, "#4a7090", 0.25);
+    }
+    if (s.see) { ctx.fillStyle = lgrad(0, 1280, 0, 1500, [[0, "#13304a"], [1, "#061220"]]); ctx.fillRect(-1500, 1280, 4080, 260);
+      ctx.save(); ctx.globalCompositeOperation = "screen"; for (let k = 0; k < 10; k++) box(200 + Math.sin(t + k) * 20, 1300 + k * 22, 680 - k * 40, 5, 2, rgba(gruen, 0.22 - k * 0.018)); ctx.restore(); }
+    // Hügel vorne mit grünem Randlicht, Gras, Tannen
+    ctx.beginPath(); ctx.moveTo(-1500, 2400); ctx.lineTo(-1500, 1560); ctx.bezierCurveTo(-200, 1480, 400, 1500, 900, 1540); ctx.bezierCurveTo(1400, 1580, 2000, 1560, 2600, 1600); ctx.lineTo(2600, 2400); ctx.closePath(); ctx.fillStyle = "#08130f"; ctx.fill();
+    ctx.fillStyle = lgrad(0, 1500, 0, 1620, [[0, rgba(gruen, 0.22)], [1, rgba(gruen, 0)]]); ctx.fill();
+    { const r = rnd(83); for (let i = 0; i < 70; i++) { const x = -150 + r() * 1400, y = 1560 + r() * 380, c = shade("#08130f", 0.1 + r() * 0.12); line(x, y, x - 6, y - 18, 3, c); line(x, y, x + 4, y - 22, 3, c); line(x, y, x + 10, y - 14, 3, c); } }
+    for (const [x, h] of [[-40, 440], [60, 320], [1000, 380], [1110, 480]]) { box(x - 6, 1560 - h * 0.25, 12, h * 0.25, 4, "#050a08"); for (let k = 0; k < 3; k++) { const yb = 1560 - h * 0.2 - k * h * 0.22, ys = 1560 - h * (0.55 + k * 0.22); poly([[x - 70 + k * 14, yb], [x + 70 - k * 14, yb], [x, ys]], shade("#06100c", k * 0.04)); line(x, ys, x - 70 + k * 14, yb, 2, rgba(gruen, 0.25)); } }
+    A.alltagWetter({ ...s, gluehwuermchen: s.gluehwuermchen ?? true }, t, true);
+    A.licht(540, 300, 1200, gruen, 0.5);
+    A.figurenZeigen(s, t, 1640, 0.95);
+    A._dunkel = 0.05;
   };
 })();

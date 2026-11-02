@@ -1,0 +1,56 @@
+# Funkstille – Folge 10: Jeden Sonntag
+@musik musik/s01-f10.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung freudig
+@mund zitate
+@qualitaet hoch
+@look 0.15
+@kino 1
+@zeit tag
+
+== Hook ==
+// Landschaft mit See am Tag, Sonne, Vögel
+[landschaft zeit=tag see wackeln=0.2 zoom-rein hooktext="ER GLAUBT, KEINER WARTET AUF IHN"] Ein alter Mann glaubt, dass niemand auf ihn wartet. Und er irrt sich gewaltig.
+// Krankenhaus: Opa sitzt auf dem Bett, du davor
+[krankenhaus patient=opa du lina zeit=tag ruhig] Du setzt dich zu deinem Opa aufs Bett.
+
+== Wiedererkennen ==
+// Nahaufnahme: du, fest
+[gesicht du ort=krankenhaus zeit=tag entschlossen] „Doch, Opa. Wir warten. Ab jetzt jeden Sonntag.“
+// Nahaufnahme: Opa, ungläubig
+[gesicht opa ort=krankenhaus zeit=tag misstrauisch] Opa schaut dich lange an. „Jeden Sonntag? Ihr habt doch so viel zu tun.“
+// Nahaufnahme: Lina, frech
+[gesicht lina ort=krankenhaus zeit=tag froh] Lina verschränkt die Arme. „Du hast ja keine Ahnung, wie langweilig das Internet ist.“
+// Nahaufnahme: Opa lacht
+[gesicht opa ort=krankenhaus zeit=tag froh] Da lacht Opa so laut, dass die Schwester draußen den Kopf reinsteckt.
+
+== Steigerung ==
+// Lebenszeit: viele helle Kästchen
+[lebenszeit jahre=16 markiert="16-26" oben="Jeden Sonntag" zoom-raus] Vierzig Nachmittage, hast du gedacht. Wenn ihr jeden Sonntag kommt, werden daraus Hunderte.
+// Esstisch am Tag: Opa, Torte, alle
+[esstisch opa du mama papa torte zeit=tag zoom-rein] Der erste Sonntag. Mama backt. Papa verbrennt die Kartoffeln. Opa isst trotzdem drei Teller.
+// Nahaufnahme: Mama
+[gesicht mama ort=esstisch zeit=tag froh] Die Handys liegen in der Obstschale. Keiner vermisst sie.
+// Esstisch: es klingelt, Ben und der Funker kommen dazu
+[esstisch opa du ben s01_funker torte zeit=tag ruhig] Am zweiten Sonntag bringt Ben seine Mutter mit. Und der alte Funker kommt auch.
+// Nahaufnahme: der Funker, gerührt
+[gesicht s01_funker ort=esstisch zeit=tag froh] Er sagt, so voll war sein Sonntag seit zwanzig Jahren nicht.
+// Nahaufnahme: Opa und Funker
+[gesicht opa ort=esstisch zeit=tag froh] Opa und er streiten sofort über Fußball. Wie zwei alte Freunde.
+
+== Wendung ==
+// See am Tag: ihr alle am Ufer
+[see du lina opa zeit=tag lichter schwenk-rechts] Im Sommer fahrt ihr zusammen an den See. Opa erzählt Geschichten, die du noch nie gehört hast.
+// Nahaufnahme: du, glücklich
+[gesicht du ort=see zeit=tag froh] Und du merkst: Du hättest sie alle fast verpasst.
+// Wald im Sonnenlicht
+[wald zeit=tag schwenk-links] Nicht wegen eines Sturms. Sondern wegen eines einzigen Wortes. Später.
+// Landschaft am Abend, alle auf dem Hügel
+[landschaft zeit=abend du lina opa ben zoom-raus] Inzwischen ist das Netz längst wieder da. Aber der Sonntag bleibt.
+
+== Schluss ==
+// Weltall: die Erde bei Nacht, alle Lichter leuchten wieder
+[weltall satellit mond zoom-raus] Drei Tage lang war die ganze Welt still.
+// Esstisch am Abend, Kerzen, alle lachen
+[esstisch opa mama papa du lina kerzen zeit=abend zoom-raus] Und genau da habt ihr angefangen, wieder miteinander zu reden.

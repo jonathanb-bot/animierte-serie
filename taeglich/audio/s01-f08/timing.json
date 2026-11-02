@@ -1,0 +1,167 @@
+{
+ "dauer": 73.908,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "polarlicht",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 5.75,
+   "emotion": "erzaehlend",
+   "text": "Das ganze Krankenhaus ist plötzlich dunkel. Und draußen leuchtet der Himmel grün."
+  },
+  {
+   "nr": 2,
+   "typ": "krankenhaus",
+   "kapitel": 1,
+   "start": 5.75,
+   "dauer": 3.638,
+   "emotion": "erzaehlend",
+   "text": "Drei Sekunden. Vier. Du hörst dein eigenes Herz."
+  },
+  {
+   "nr": 3,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 9.388,
+   "dauer": 2.318,
+   "emotion": "spannend",
+   "text": "Dann brummt es tief unten im Keller."
+  },
+  {
+   "nr": 4,
+   "typ": "krankenhaus",
+   "kapitel": 2,
+   "start": 11.706,
+   "dauer": 4.838,
+   "emotion": "erzaehlend",
+   "text": "Die Generatoren springen an. Das Licht flackert zurück. Opas Monitor piept wieder."
+  },
+  {
+   "nr": 5,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 16.544,
+   "dauer": 3.59,
+   "emotion": "froh",
+   "text": "Mama lacht. Ein bisschen zu laut. Vor lauter Erleichterung."
+  },
+  {
+   "nr": 6,
+   "typ": "polarlicht",
+   "kapitel": 3,
+   "start": 20.134,
+   "dauer": 2.15,
+   "emotion": "erzaehlend",
+   "text": "Und dann schaut ihr alle aus dem Fenster."
+  },
+  {
+   "nr": 7,
+   "typ": "weltall",
+   "kapitel": 3,
+   "start": 22.284,
+   "dauer": 4.598,
+   "emotion": "erzaehlend",
+   "text": "Wenn ein Sonnensturm die Erde trifft, leuchtet die Luft. Polarlichter."
+  },
+  {
+   "nr": 8,
+   "typ": "titel",
+   "kapitel": 3,
+   "start": 26.882,
+   "dauer": 6.302,
+   "emotion": "erzaehlend",
+   "text": "Normalerweise sieht man sie nur im hohen Norden. Aber vor zwei Jahren, im Mai, waren sie sogar über ganz Deutschland zu sehen."
+  },
+  {
+   "nr": 9,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 33.184,
+   "dauer": 4.958,
+   "emotion": "froh",
+   "text": "Lina drückt ihre Nase an die Scheibe. „Das ist das Schönste, was ich je gesehen hab.“"
+  },
+  {
+   "nr": 10,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 38.142,
+   "dauer": 3.446,
+   "emotion": "erzaehlend",
+   "text": "Da öffnet Opa die Augen. Er dreht den Kopf zum Fenster."
+  },
+  {
+   "nr": 11,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 41.588,
+   "dauer": 4.862,
+   "emotion": "froh",
+   "text": "„Das wollte ich mein ganzes Leben lang sehen. Und jetzt seh ich es mit euch.“"
+  },
+  {
+   "nr": 12,
+   "typ": "krankenhaus",
+   "kapitel": 4,
+   "start": 46.45,
+   "dauer": 2.87,
+   "emotion": "erzaehlend",
+   "text": "Keiner schaut aufs Handy. Es gibt ja auch keins, das geht."
+  },
+  {
+   "nr": 13,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 49.32,
+   "dauer": 5.702,
+   "emotion": "froh",
+   "text": "Papa erzählt, wie Opa ihm früher das Fahrradfahren beigebracht hat. Rückwärts. Aus Versehen."
+  },
+  {
+   "nr": 14,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 55.022,
+   "dauer": 3.326,
+   "emotion": "froh",
+   "text": "Du lachst, bis dir der Bauch wehtut. Mitten im Krankenhaus."
+  },
+  {
+   "nr": 15,
+   "typ": "polarlicht",
+   "kapitel": 4,
+   "start": 58.348,
+   "dauer": 4.118,
+   "emotion": "erzaehlend",
+   "text": "Später stehst du mit Lina und Ben draußen auf dem Hügel hinter dem Krankenhaus."
+  },
+  {
+   "nr": 16,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 62.466,
+   "dauer": 3.518,
+   "emotion": "froh",
+   "text": "Ben sagt: „Ohne den Ausfall hätten wir das verpasst.“"
+  },
+  {
+   "nr": 17,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 65.984,
+   "dauer": 2.174,
+   "emotion": "spannend",
+   "text": "Da vibriert etwas in deiner Jackentasche."
+  },
+  {
+   "nr": 18,
+   "typ": "handy",
+   "kapitel": 5,
+   "start": 68.158,
+   "dauer": 5.75,
+   "emotion": "erzaehlend",
+   "text": "Dein Handy. Ein einziger Balken. Und eine Nachricht, die drei Tage lang festgesteckt hat."
+  }
+ ]
+}

@@ -1,0 +1,56 @@
+# Funkstille – Folge 8: Der grüne Himmel
+@musik musik/s01-f08.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung freudig
+@mund zitate
+@qualitaet hoch
+@look 0.2
+@kino 1
+@zeit nacht
+
+== Hook ==
+// Polarlicht über der Stadt, grüne Vorhänge
+[polarlicht wackeln=0.3 zoom-rein hooktext="DER HIMMEL WIRD GRÜN"] Das ganze Krankenhaus ist plötzlich dunkel. Und draußen leuchtet der Himmel grün.
+// Krankenhaus: dunkel, nur der Monitor
+[krankenhaus patient=opa mama papa lina zeit=nacht wackeln=0.3] Drei Sekunden. Vier. Du hörst dein eigenes Herz.
+
+== Wiedererkennen ==
+// Nahaufnahme: du, angespannt
+[gesicht du ort=krankenhaus zeit=nacht angst] Dann brummt es tief unten im Keller.
+// Krankenhaus: Licht wieder an, Monitor piept
+[krankenhaus patient=opa mama papa lina zeit=nacht zoom-raus] Die Generatoren springen an. Das Licht flackert zurück. Opas Monitor piept wieder.
+// Nahaufnahme: Mama atmet aus
+[gesicht mama ort=krankenhaus zeit=nacht froh] Mama lacht. Ein bisschen zu laut. Vor lauter Erleichterung.
+
+== Steigerung ==
+// Polarlicht mit See, Spiegelung
+[polarlicht see schwenk-rechts] Und dann schaut ihr alle aus dem Fenster.
+// Weltall: Erde, Nachtseite mit grünem Leuchten am Rand
+[weltall erde_y=1500 zoom-raus] Wenn ein Sonnensturm die Erde trifft, leuchtet die Luft. Polarlichter.
+// Infokarte: Mai 2024
+[titel oben="Mai 2024" gross="POLARLICHT" unten="über ganz Deutschland" farbe=#0c1d2a akzent=#5dffb0 groesse=130 hud=false] Normalerweise sieht man sie nur im hohen Norden. Aber vor zwei Jahren, im Mai, waren sie sogar über ganz Deutschland zu sehen.
+// Nahaufnahme: Lina, staunend
+[gesicht lina ort=krankenhaus zeit=nacht froh] Lina drückt ihre Nase an die Scheibe. „Das ist das Schönste, was ich je gesehen hab.“
+// Nahaufnahme: Opa wacht auf
+[gesicht opa ort=krankenhaus zeit=nacht neugierig] Da öffnet Opa die Augen. Er dreht den Kopf zum Fenster.
+// Nahaufnahme: Opa, gerührt
+[gesicht opa ort=krankenhaus zeit=nacht froh] „Das wollte ich mein ganzes Leben lang sehen. Und jetzt seh ich es mit euch.“
+
+== Wendung ==
+// Krankenhaus: alle um das Bett
+[krankenhaus patient=opa mama papa du lina zeit=nacht ruhig] Keiner schaut aufs Handy. Es gibt ja auch keins, das geht.
+// Nahaufnahme: Papa grinst
+[gesicht papa ort=krankenhaus zeit=nacht froh] Papa erzählt, wie Opa ihm früher das Fahrradfahren beigebracht hat. Rückwärts. Aus Versehen.
+// Nahaufnahme: du lachst
+[gesicht du ort=krankenhaus zeit=nacht froh] Du lachst, bis dir der Bauch wehtut. Mitten im Krankenhaus.
+// Polarlicht: ihr zu dritt auf dem Hügel draußen
+[polarlicht du lina ben zoom-rein] Später stehst du mit Lina und Ben draußen auf dem Hügel hinter dem Krankenhaus.
+// Nahaufnahme: Ben, leise
+[gesicht ben ort=polarlicht froh] Ben sagt: „Ohne den Ausfall hätten wir das verpasst.“
+
+== Cliffhanger ==
+// Nahaufnahme: du spürst etwas in der Tasche
+[gesicht du ort=polarlicht schreck zoom-rein] Da vibriert etwas in deiner Jackentasche.
+// Handy: ein Balken, eine Nachricht kommt an
+[handy ort=polarlicht netz=0 netz_bis=1 akku=6 uhrzeit="03:12" von="Opa" nachricht="1 neue Nachricht"] Dein Handy. Ein einziger Balken. Und eine Nachricht, die drei Tage lang festgesteckt hat.

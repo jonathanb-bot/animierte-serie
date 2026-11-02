@@ -1,0 +1,167 @@
+{
+ "dauer": 75.996,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "netz",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 5.126,
+   "emotion": "erzaehlend",
+   "text": "Ein Mensch braucht sofort einen Arzt. Und kein Telefon der Welt funktioniert."
+  },
+  {
+   "nr": 2,
+   "typ": "wohnzimmer",
+   "kapitel": 1,
+   "start": 5.126,
+   "dauer": 4.406,
+   "emotion": "erzaehlend",
+   "text": "Opa atmet flach. Lina hält seine Hand. Ben rennt im Kreis."
+  },
+  {
+   "nr": 3,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 9.532,
+   "dauer": 4.766,
+   "emotion": "spannend",
+   "text": "Du willst die Eins-Eins-Zwei wählen. Aus Gewohnheit. Kein Balken."
+  },
+  {
+   "nr": 4,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 14.298,
+   "dauer": 4.862,
+   "emotion": "ernst",
+   "text": "Da klappt der alte Funker sein Gerät auf. „Ganz ruhig. Dafür ist das hier da.“"
+  },
+  {
+   "nr": 5,
+   "typ": "objekt",
+   "kapitel": 2,
+   "start": 19.16,
+   "dauer": 4.958,
+   "emotion": "erklaerend",
+   "text": "Bei großen Ausfällen helfen Funkamateure, Nachrichten weiterzugeben. Ganz ohne Netz."
+  },
+  {
+   "nr": 6,
+   "typ": "grossstadt",
+   "kapitel": 2,
+   "start": 24.118,
+   "dauer": 5.054,
+   "emotion": "erzaehlend",
+   "text": "Sein Ruf geht von Funker zu Funker. Quer durch die ganze Stadt. Bis zur Feuerwehr."
+  },
+  {
+   "nr": 7,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 29.172,
+   "dauer": 3.278,
+   "emotion": "erzaehlend",
+   "text": "Dann knackt es. „Wagen ist unterwegs. Zehn Minuten.“"
+  },
+  {
+   "nr": 8,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 32.45,
+   "dauer": 4.382,
+   "emotion": "ruhig",
+   "text": "Zehn Minuten können sehr lang sein. Opa drückt deine Hand. Ganz schwach."
+  },
+  {
+   "nr": 9,
+   "typ": "landschaft",
+   "kapitel": 3,
+   "start": 36.832,
+   "dauer": 3.974,
+   "emotion": "erzaehlend",
+   "text": "Dann siehst du es. Blaulicht. Mitten in einer Stadt ohne Licht."
+  },
+  {
+   "nr": 10,
+   "typ": "krankenhaus",
+   "kapitel": 3,
+   "start": 40.806,
+   "dauer": 5.606,
+   "emotion": "erzaehlend",
+   "text": "Das Krankenhaus läuft mit Notstrom. Große Generatoren im Keller, die anspringen, wenn das Netz ausfällt."
+  },
+  {
+   "nr": 11,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 46.412,
+   "dauer": 3.878,
+   "emotion": "ernst",
+   "text": "Die Ärzte arbeiten mit Papier und Kugelschreiber. Wie früher."
+  },
+  {
+   "nr": 12,
+   "typ": "krankenhaus",
+   "kapitel": 4,
+   "start": 50.29,
+   "dauer": 5.15,
+   "emotion": "erzaehlend",
+   "text": "Und dann geht die Tür auf. Mama. Papa. Der Zettel vom Funker hat sie gefunden."
+  },
+  {
+   "nr": 13,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 55.44,
+   "dauer": 3.374,
+   "emotion": "froh",
+   "text": "Mama sagt kein Wort. Sie hält euch einfach fest. Alle beide."
+  },
+  {
+   "nr": 14,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 58.814,
+   "dauer": 3.494,
+   "emotion": "traurig",
+   "text": "Papa setzt sich zu Opa. „Wir hätten viel öfter kommen sollen.“"
+  },
+  {
+   "nr": 15,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 62.308,
+   "dauer": 2.414,
+   "emotion": "froh",
+   "text": "Opa lächelt. „Jetzt seid ihr ja da.“"
+  },
+  {
+   "nr": 16,
+   "typ": "krankenhaus",
+   "kapitel": 4,
+   "start": 64.722,
+   "dauer": 3.302,
+   "emotion": "erzaehlend",
+   "text": "Der Arzt sagt: Er ist stabil. Ihr dürft bleiben."
+  },
+  {
+   "nr": 17,
+   "typ": "polarlicht",
+   "kapitel": 5,
+   "start": 68.024,
+   "dauer": 3.014,
+   "emotion": "erzaehlend",
+   "text": "Durchs Fenster siehst du, wie sich der Himmel langsam grün färbt."
+  },
+  {
+   "nr": 18,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 71.038,
+   "dauer": 4.958,
+   "emotion": "spannend",
+   "text": "Der zweite Sturm ist da. Und im ganzen Krankenhaus gehen die Lichter aus."
+  }
+ ]
+}

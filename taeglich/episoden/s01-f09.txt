@@ -1,0 +1,56 @@
+# Funkstille – Folge 9: Drei Tage zu spät
+@musik musik/s01-f09.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung warm
+@mund zitate
+@qualitaet hoch
+@look 0.35
+@kino 1
+@zeit abend
+
+== Hook ==
+// Handy in der Nacht, eine Nachricht leuchtet auf
+[handy ort=polarlicht netz=1 akku=6 uhrzeit="03:12" von="Opa" nachricht="Kommt ihr mal wieder vorbei? Ich vermisse euch." hooktext="DREI TAGE ZU SPÄT"] Eine Nachricht hat drei Tage gebraucht, um bei dir anzukommen. Und sie ist von deinem Opa.
+// Nahaufnahme: du liest, still
+[gesicht du ort=polarlicht traurig] Opa hat sie geschrieben, kurz bevor das Netz ausfiel.
+// Zimmer: Erinnerung, du auf dem Bett mit dem Handy
+[zimmer du du:handy lichterkette zeit=abend schwenk-rechts] Und jetzt erinnerst du dich. Du hast gesehen, dass er schreibt. Und gedacht: später.
+
+== Wiedererkennen ==
+// Nahaufnahme: du, beschämt
+[gesicht du ort=zimmer zeit=abend traurig] Später. Das sagen wir alle. Viel zu oft.
+// Netz: blaue Impulse kehren zurück
+[netz farbe=#59c7ff mitte=du zoom-raus] Am nächsten Morgen kommt das Netz zurück. Knoten für Knoten. Stadt für Stadt.
+// Großstadt am Morgen, Lichter gehen wieder an
+[grossstadt zeit=morgen schwenk-links] Die Ampeln springen an. Die Bäckerei nimmt wieder Karten. Als wäre nichts gewesen.
+// Handy: Nachrichten prasseln herein
+[handy ort=wohnzimmer netz=4 akku=60 uhrzeit="18:30" von="Gruppenchat" nachricht="Über 300 neue Nachrichten"] Und dein Handy explodiert. Mehr als dreihundert Nachrichten.
+
+== Steigerung ==
+// Esstisch am Abend: alle starren auf ihre Handys
+[esstisch mama:handy papa:handy du:handy lina:handy zeit=abend kerzen ruhig] Am Abend sitzt ihr wieder am Esstisch. Und jeder starrt auf sein Handy.
+// Nahaufnahme: du schaust auf
+[gesicht du ort=esstisch zeit=abend misstrauisch] Du schaust auf. Und siehst es. Es ist wie vorher. Genau wie vorher.
+// Lebenszeit: Wochen, die vergehen
+[lebenszeit jahre=16 fuellen oben="Abende, die so vergehen" zoom-raus] Abend für Abend. Woche für Woche. Nebeneinander, aber nicht zusammen.
+// Nahaufnahme: du, entschlossen
+[gesicht du ort=esstisch zeit=abend entschlossen] Also stehst du auf. Holst die große Obstschale. Und legst dein Handy hinein.
+
+== Wendung ==
+// Nahaufnahme: Lina grinst
+[gesicht lina ort=esstisch zeit=abend froh] Lina legt ihres dazu. Sofort.
+// Nahaufnahme: Papa zögert, dann lacht er
+[gesicht papa ort=esstisch zeit=abend froh] Papa zögert. Dann legt er seins auch rein. „Na gut. Funkstille.“
+// Nahaufnahme: Mama, warm
+[gesicht mama ort=esstisch zeit=abend froh] Mama sagt: „Drei Tage ohne Netz. Und wir haben mehr geredet als im ganzen Jahr.“
+// Esstisch: alle reden, Kerzen, Lachen
+[esstisch mama papa du lina zeit=abend kerzen gedeckt zoom-rein] Ihr esst. Ihr redet. Und keiner will als Erster aufstehen.
+// Nahaufnahme: Papa wird ernst
+[gesicht papa ort=esstisch zeit=abend besorgt] Dann sagt Papa: „Morgen darf Opa nach Hause.“
+
+== Cliffhanger ==
+// Krankenhaus: Opa im Bett, schaut aus dem Fenster
+[krankenhaus patient=opa du zeit=tag ruhig] Am nächsten Tag holt ihr ihn ab. Aber Opa will nicht aufstehen.
+// Nahaufnahme: Opa, leise
+[gesicht opa ort=krankenhaus zeit=tag traurig zoom-rein] „Nach Hause? Da wartet doch keiner auf mich.“

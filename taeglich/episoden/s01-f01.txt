@@ -1,0 +1,60 @@
+# Funkstille – Folge 1: Kein Netz
+@musik musik/s01-f01.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung spannend
+@mund zitate
+@qualitaet hoch
+@look 0.6
+@kino 1
+@zeit morgen
+
+== Hook ==
+// Netz der Welt, rote Knoten erlöschen, du in der Mitte
+[netz mitte=du farbe=#ff5a3d wackeln=0.4 zoom-rein hooktext="DEINE SCHWESTER IST NICHT ZU HAUSE"] Das Internet ist weg. Und deine Schwester ist nicht nach Hause gekommen.
+// Zimmer früh am Morgen: du schreckst im Bett hoch
+[zimmer im_bett=du du:schreck zeit=morgen lichterkette] Sechs Uhr früh. Mama reißt deine Tür auf.
+// Nahaufnahme: Mama, voller Angst
+[gesicht mama ort=wohnzimmer angst] „Lina ist nicht da. Ihr Bett ist leer.“
+// Handy: kein Balken, Nachricht nicht gesendet
+[handy ort=zimmer netz=0 akku=81 uhrzeit="06:02" von="Du an Lina" nachricht="Nicht gesendet: Wann kommst du?"] Du greifst zum Handy. Kein Balken. Kein WLAN.
+
+== Wiedererkennen ==
+// Wohnzimmer: Papa vor dem Fernseher mit Standbild
+[wohnzimmer papa:denkt mama:besorgt tv licht=an zeit=morgen] Lina hat bei einer Freundin übernachtet. Am anderen Ende der Stadt.
+// Nahaufnahme: Papa versucht anzurufen
+[gesicht papa ort=wohnzimmer besorgt] Papa ruft an. Nichts. Nicht mal ein Freizeichen.
+// Weltall: die Nachtseite der Erde, ein Satellit
+[weltall satellit zoom-raus] Und das nicht nur bei euch. In dieser Nacht ist auf der ganzen Welt das Netz zusammengebrochen.
+// Netz: Impulse reißen ab
+[netz farbe=#ff5a3d schwenk-links] Keine Nachricht. Kein Anruf. Keine Karte, die dir den Weg zeigt.
+
+== Steigerung ==
+// Nahaufnahme: Papa mit dem Autoschlüssel
+[gesicht papa ort=wohnzimmer entschlossen] Papa greift nach dem Schlüssel. „Wir holen sie. Jetzt.“
+// Großstadt am Morgen, still und grau
+[grossstadt zeit=morgen schwenk-rechts] Die Stadt ist seltsam still. Ampeln blinken gelb.
+// Haltestelle: Leute starren auf ihre Handys
+[haltestelle fremder mia regen zeit=morgen] An der Haltestelle starren alle auf ihre Handys. Als würde das irgendwas ändern.
+// Infokarte: nur noch Bargeld
+[objekt objekte="batterie:Nur Bargeld|funkgeraet:Kein Anruf|schluessel:Kein Ticket" gross="Ohne Netz" farbe=#2f3d5c] Keine Kartenzahlung. Kein Online-Ticket. Fast alles hängt am Netz.
+// Nahaufnahme: du im Auto, die Gedanken rasen
+[gesicht du ort=grossstadt zeit=morgen besorgt] Im Auto zählst du die Minuten. Lina ist zwölf. Sie war noch nie allein nachts in der Stadt.
+// Großstadt: ihr kommt an
+[grossstadt zeit=morgen zoom-rein] Zwanzig Minuten später seid ihr da.
+
+== Wendung ==
+// Fremdes Wohnzimmer, Licht aus, Vorhänge halb zu
+[wohnzimmer du papa:taschenlampe licht=aus zeit=morgen ruhig] Die Haustür ist nur angelehnt. „Hallo? Lina?“
+// Nahaufnahme: du, angespannt
+[gesicht du ort=wohnzimmer lauscht besorgt] Keine Antwort. Die Jacken fehlen. Die Schuhe fehlen.
+// Esstisch: halb leere Teller, Stühle weggeschoben
+[esstisch leer=4 gedeckt zeit=morgen zoom-rein] Auf dem Tisch stehen noch die Teller. Als wären alle mitten in der Nacht aufgebrochen.
+// Nahaufnahme: Papa, blass
+[gesicht papa ort=esstisch angst] Papa wird ganz blass.
+
+== Cliffhanger ==
+// Nahaufnahme: du entdeckst etwas auf dem Tisch
+[gesicht du ort=esstisch schreck zoom-rein] Dann siehst du es.
+// Handy mit Glitzerhülle auf dem Tisch, ein Akku-Rest
+[handy ort=esstisch netz=0 akku=9 uhrzeit="06:41" von="Lina" nachricht="Ich nehm den letzten Bus. Bis gleich!"] Mitten auf dem Tisch liegt Linas Handy. Sie ist ohne es los. Mitten in der Nacht.

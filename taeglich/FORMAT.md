@@ -81,6 +81,9 @@ Pro Staffel einen großen Kanal als Hauptvorbild wählen (abwechseln!) und kurz 
 | `wald` | Stämme in Schichten, Lichtstrahlen, schwebende Teilchen | `zeit`, `nebel` |
 | `netz` | leuchtende Knoten mit wandernden Impulsen | `farbe=#hex`, `mitte=du` (Kopf im Zentrum) |
 | `lebenszeit` | dein Leben in Wochen (90 × 52 Kästchen) | `jahre=16`, `markiert="16-18"`, `fuellen`, `oben="…"` |
+| `polarlicht` | Nachthimmel mit wehenden Lichtvorhängen, Berge im Dunst, Stadt mit Notstrom-Fenstern, Funkturm (neu in s01) | `farbe=#hex`, `stadt=false`, `see` |
+
+**Hook-Text** (Experiment aus der Analyse vom 1.11., ab s01): `hooktext="…"` in der ersten Einstellung zeigt bis zu 7 Wörter in Großbuchstaben oben im Bild, nur die ersten 2,5 s (`engine/kurzgesagt.js`).
 
 **Alltags-Kulissen** (`engine/alltag.js`, Katalog: `taeglich/episoden/katalog.txt`): `wohnzimmer` (`licht=an`, `tv`, `sofa_sitzen`, `foto=…`), `zimmer` (`im_bett=du`, `lichterkette`, `laptop`), `esstisch` (`leer=2`, `gedeckt`, `kerzen`, `torte`), `park` (`jahreszeit=…`, `sitzen`), `klassenzimmer` (`tafel="…|…"`, `uhr=`), `krankenhaus` (`patient=opa`, `monitor=flach`), `see` (`sitzen`), `haltestelle` (`bus=kommt`). Überall: `regen`, `blaetter`, `lichter`, `gluehwuermchen`, `zeit`. Dazu `gesicht` (Nahaufnahme, jede Kulisse als `ort=`), `objekt` (Infokarte mit Icons), `titel`, `handy`, `strasse`, `supermarkt`, `bahnhof`, `kueche`. Pose `du:handy`.
 

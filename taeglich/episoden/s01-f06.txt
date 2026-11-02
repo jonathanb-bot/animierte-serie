@@ -1,0 +1,56 @@
+# Funkstille – Folge 6: Bei mir klingelt sowieso keiner
+@musik musik/s01-f06.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung traurig
+@mund zitate
+@qualitaet hoch
+@look 0.5
+@kino 1
+@zeit abend
+
+== Hook ==
+// Landschaft am Abend: ein einzelnes Haus mit einem kleinen Licht
+[landschaft zeit=abend wackeln=0.2 zoom-rein hooktext="ER SITZT ALLEIN IM DUNKELN"] Ein alter Mann sitzt seit zwei Tagen allein im Dunkeln. Und niemand hat nach ihm gesehen.
+// Nahaufnahme: du, außer Atem, vor der Tür
+[gesicht du ort=landschaft zeit=abend besorgt] Es ist dein Opa. Ihr seid den ganzen Tag zu ihm gelaufen.
+
+== Wiedererkennen ==
+// Wohnzimmer bei Opa: Licht aus, Opa im Sessel
+[wohnzimmer opa sofa_sitzen licht=aus zeit=abend foto=opa,oma ruhig] Opa sitzt im Wohnzimmer. Eine Kerze. Ein Kreuzworträtsel. Sonst nichts.
+// Nahaufnahme: Opa, überrascht
+[gesicht opa ort=wohnzimmer zeit=abend schreck] Er schaut auf. „Ihr seid gekommen?“
+// Wohnzimmer: Lina fällt ihm um den Hals
+[wohnzimmer opa lina:umarmt du licht=aus zeit=abend zoom-rein] Lina fällt ihm um den Hals. Opa lacht. Und hustet. Und lacht wieder.
+// Nahaufnahme: Opa, leise
+[gesicht opa ort=wohnzimmer zeit=abend traurig] „Ach, Kinder. Für mich ist Funkstille nichts Neues.“
+
+== Steigerung ==
+// Nahaufnahme: Opa, traurig lächelnd
+[gesicht opa ort=wohnzimmer zeit=abend traurig] „Bei mir klingelt sowieso keiner. Das Telefon nicht. Und die Tür auch nicht.“
+// Nahaufnahme: du, getroffen
+[gesicht du ort=wohnzimmer zeit=abend traurig] Das trifft dich mitten in die Brust. Denn er hat recht.
+// Infokarte: Kalender
+[objekt objekte="herz:Geburtstag|kerze:Weihnachten|uhr:Ostern" gross="Wann ihr Opa seht" farbe=#2a2f45] Ihr seht ihn an Geburtstagen. An Weihnachten. Vielleicht noch an Ostern.
+// Titelkarte: vielleicht noch 40 Mal
+[titel oben="Wenn es so bleibt" gross="40 MAL" unten="siehst du ihn vielleicht noch" farbe=#1d2840 akzent=#e9b866 groesse=170 hud=false] Wenn es so bleibt, siehst du ihn vielleicht noch vierzigmal. Vierzig Nachmittage. Mehr nicht.
+// Lebenszeit: deine Wochen, gelebt und offen
+[lebenszeit jahre=16 markiert="16-30" oben="Dein Leben in Wochen" zoom-raus] Und jede Woche, die vergeht, kommt nicht zurück. Auch nicht für Opa.
+// Landschaft am Abend, Nebel im Tal
+[landschaft zeit=abend schwenk-links] Draußen wird es dunkel. Der zweite Sturm ist nicht mehr weit.
+
+== Wendung ==
+// Nahaufnahme: Lina fragt nach den Tabletten
+[gesicht lina ort=wohnzimmer zeit=abend besorgt] Lina fragt nach den Herztabletten. Opa winkt ab. „Zwei hab ich noch. Das reicht.“
+// Infokarte: Medizin, zwei Tabletten
+[objekt objekte="medizin:Noch zwei Tabletten" gross="Heute und morgen" farbe=#2a2f45] Zwei Tabletten. Heute und morgen. Und die Apotheken haben ohne Computer zu.
+// Nahaufnahme: Ben, still
+[gesicht ben ort=wohnzimmer zeit=abend traurig] Ben sagt nichts. Aber er denkt dasselbe wie du.
+// Wohnzimmer: alle zusammen, Kerze, warmes Licht
+[wohnzimmer opa du lina ben licht=aus zeit=abend ruhig] Ihr setzt euch zu ihm. Opa erzählt von früher.
+
+== Cliffhanger ==
+// Nahaufnahme: Opa, plötzlich grau
+[gesicht opa ort=wohnzimmer zeit=abend angst zoom-rein] Mitten im Satz hört er auf zu reden.
+// Nahaufnahme: du, erschrocken
+[gesicht du ort=wohnzimmer zeit=abend schreck zoom-rein] Sein Gesicht wird ganz grau. Er greift sich an die Brust. Und sinkt langsam in den Sessel.

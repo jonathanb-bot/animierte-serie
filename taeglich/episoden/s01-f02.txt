@@ -1,0 +1,56 @@
+# Funkstille – Folge 2: Die Wand aus Zetteln
+@musik musik/s01-f02.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung duester
+@mund zitate
+@qualitaet hoch
+@look 0.85
+@kino 1
+@zeit tag
+
+== Hook ==
+// Großstadt grau, ein Meer aus Dächern
+[grossstadt zeit=tag wackeln=0.3 zoom-rein hooktext="EIN KIND ALLEIN IN DER STADT"] Ein Kind ist allein in der Stadt. Ohne Handy. Und niemand kann es anrufen.
+// Nahaufnahme: du, verzweifelt, im fremden Esszimmer
+[gesicht du ort=esstisch angst] Es ist deine kleine Schwester. Und du hältst ihr Handy in der Hand.
+
+== Wiedererkennen ==
+// Nahaufnahme: Papa, angespannt
+[gesicht papa ort=esstisch besorgt] Papa sagt: „Früher hat man sich auch gefunden. Ohne Handy.“
+// Haltestelle vor dem Haus: eine Nachbarin zeigt die Straße hinunter
+[haltestelle lehrerin:zeigt du papa zeit=tag] Eine Nachbarin hat sie gesehen. „Die sind heute Nacht los. Zum Bahnhof.“
+// Netz: dunkel, nur einzelne Knoten
+[netz farbe=#ff5a3d schwenk-rechts] Ohne Netz bleibt dir nur, was früher alle hatten. Augen. Füße. Und Glück.
+
+== Steigerung ==
+// Bahnhof: überfüllt, die Anzeige ist schwarz
+[bahnhof du papa lehrerin mia zeit=tag anzeige="Kein Zugverkehr" ruhig] Am Bahnhof stehen Tausende. Kein Zug fährt. Die Stellwerke sind ohne Daten.
+// Nahaufnahme: du, suchend
+[gesicht du ort=bahnhof besorgt] Du rufst ihren Namen. Hundert Gesichter. Keins davon ist Lina.
+// Nahaufnahme: Ben, außer Atem
+[gesicht ben ort=bahnhof froh] Dann packt dich jemand an der Schulter. Ben. Dein bester Freund.
+// Nahaufnahme: Ben erklärt
+[gesicht ben ort=bahnhof entschlossen] „Ich konnte dich nicht erreichen. Also bin ich einfach hergeradelt.“
+// Nahaufnahme: du, gerührt
+[gesicht du ort=bahnhof froh] Kein Anruf. Keine Nachricht. Er ist einfach gekommen.
+// Großstadt: Leute in den Straßen, Mittag
+[grossstadt zeit=tag du ben schwenk-links] Und genau so sucht man ohne Netz. Zusammen.
+
+== Wendung ==
+// Bahnhof: eine Wand voller Zettel
+[objekt objekte="rucksack:Suche Mama|herz:Bei Tante Eva|kreuz:Treff Rathaus" gross="Die Zettelwand" farbe=#3a3346] An der Bahnhofswand hängen Hunderte Zettel. Menschen suchen Menschen.
+// Nahaufnahme: du liest, Ben schaut mit
+[gesicht du ort=bahnhof neugierig] Ihr lest jeden einzelnen. Zehn Minuten. Zwanzig.
+// Nahaufnahme: Ben zeigt
+[gesicht ben ort=bahnhof schreck] „Warte mal. Das ist doch ihre Schrift!“
+// Infokarte: Linas Zettel
+[objekt objekte="herz:Bin zu Opa! Lina" gross="Linas Zettel" farbe=#3a3346] Ein Zettel, mit Glitzerstift geschrieben. „Bin zu Opa gelaufen. Lina.“
+// Nahaufnahme: du atmest auf
+[gesicht du ort=bahnhof froh] Für einen Moment atmest du auf. Sie lebt. Sie hat einen Plan.
+
+== Cliffhanger ==
+// Auge: rot, bedrohlich
+[auge farbe=#ff5a3d zoom-rein] Dann rechnest du nach.
+// Landschaft am Abend, Sonne geht unter
+[landschaft zeit=abend zoom-raus] Opa wohnt zwölf Kilometer entfernt. Quer durch die ganze Stadt. Und in einer Stunde wird es dunkel.

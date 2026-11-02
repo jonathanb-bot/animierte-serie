@@ -1,0 +1,167 @@
+{
+ "dauer": 66.42,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "grossstadt",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 4.982,
+   "emotion": "erzaehlend",
+   "text": "Du stehst mitten in der Stadt. Und auf einmal gehen alle Lichter aus."
+  },
+  {
+   "nr": 2,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 4.982,
+   "dauer": 3.806,
+   "emotion": "spannend",
+   "text": "Erst eine Straße. Dann die nächste. Dann alles."
+  },
+  {
+   "nr": 3,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 8.788,
+   "dauer": 4.07,
+   "emotion": "spannend",
+   "text": "Ben knipst seine Fahrradlampe an. „Okay. Jetzt wird's ernst.“"
+  },
+  {
+   "nr": 4,
+   "typ": "weltall",
+   "kapitel": 2,
+   "start": 12.858,
+   "dauer": 3.878,
+   "emotion": "erzaehlend",
+   "text": "Von oben sähe es aus, als hätte jemand ganze Länder ausgeknipst."
+  },
+  {
+   "nr": 5,
+   "typ": "netz",
+   "kapitel": 2,
+   "start": 16.736,
+   "dauer": 4.526,
+   "emotion": "erzaehlend",
+   "text": "Viele Funkmasten haben Akkus für den Notfall. Aber die halten oft nur ein paar Stunden."
+  },
+  {
+   "nr": 6,
+   "typ": "objekt",
+   "kapitel": 2,
+   "start": 21.262,
+   "dauer": 4.742,
+   "emotion": "erklaerend",
+   "text": "Ohne Strom laufen keine Ampeln. Keine Kassen. Und irgendwann auch keine Wasserpumpen."
+  },
+  {
+   "nr": 7,
+   "typ": "haltestelle",
+   "kapitel": 3,
+   "start": 26.004,
+   "dauer": 3.806,
+   "emotion": "erzaehlend",
+   "text": "Ihr lauft weiter. Kilometer um Kilometer. Es fängt an zu regnen."
+  },
+  {
+   "nr": 8,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 29.81,
+   "dauer": 3.734,
+   "emotion": "ernst",
+   "text": "Irgendwo da draußen ist Lina. Allein. Im Dunkeln."
+  },
+  {
+   "nr": 9,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 33.544,
+   "dauer": 2.75,
+   "emotion": "ernst",
+   "text": "„Sie ist schlau. Schlauer als wir zwei zusammen.“"
+  },
+  {
+   "nr": 10,
+   "typ": "park",
+   "kapitel": 3,
+   "start": 36.294,
+   "dauer": 3.638,
+   "emotion": "erzaehlend",
+   "text": "Am Stadtpark ist es so dunkel, dass du deine eigene Hand kaum siehst."
+  },
+  {
+   "nr": 11,
+   "typ": "landschaft",
+   "kapitel": 3,
+   "start": 39.932,
+   "dauer": 3.998,
+   "emotion": "erzaehlend",
+   "text": "Dann fällt dir etwas ein. Etwas aus der Zeit, als Lina noch klein war."
+  },
+  {
+   "nr": 12,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 43.93,
+   "dauer": 3.854,
+   "emotion": "froh",
+   "text": "Ihr hattet ein Zeichen. Nur ihr zwei. Dreimal kurz pfeifen."
+  },
+  {
+   "nr": 13,
+   "typ": "objekt",
+   "kapitel": 4,
+   "start": 47.784,
+   "dauer": 3.614,
+   "emotion": "erklaerend",
+   "text": "Wer es hört, pfeift zurück. Damit man sich im Kaufhaus nie verliert."
+  },
+  {
+   "nr": 14,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 51.398,
+   "dauer": 4.118,
+   "emotion": "ernst",
+   "text": "Du stellst dich mitten in den Park. Und pfeifst. Dreimal kurz."
+  },
+  {
+   "nr": 15,
+   "typ": "park",
+   "kapitel": 4,
+   "start": 55.516,
+   "dauer": 1.886,
+   "emotion": "erzaehlend",
+   "text": "Nichts. Nur der Regen."
+  },
+  {
+   "nr": 16,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 57.402,
+   "dauer": 2.342,
+   "emotion": "traurig",
+   "text": "„Komm. Vielleicht ist sie schon bei deinem Opa.“"
+  },
+  {
+   "nr": 17,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 59.744,
+   "dauer": 2.558,
+   "emotion": "erzaehlend",
+   "text": "Du drehst dich um. Und dann hörst du es."
+  },
+  {
+   "nr": 18,
+   "typ": "landschaft",
+   "kapitel": 5,
+   "start": 62.302,
+   "dauer": 4.118,
+   "emotion": "erzaehlend",
+   "text": "Aus der Dunkelheit pfeift jemand zurück. Dreimal kurz. Genau euer Zeichen."
+  }
+ ]
+}

@@ -18,3 +18,4 @@
 [netz mitte=du] Netz mit dir in der Mitte.
 [lebenszeit jahre=16 markiert="16-18" oben="Dein Leben in Wochen"] Dein Leben in Wochen.
 [esstisch mama papa du lina kerzen zeit=abend] Esstisch mit Kino-Look.
+[polarlicht du lina] Polarlicht über Bergen und Stadt (farbe=#hex, stadt=false, see).

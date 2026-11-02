@@ -1,0 +1,56 @@
+# Funkstille – Folge 7: Notfunk
+@musik musik/s01-f07.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung spannend
+@mund zitate
+@qualitaet hoch
+@look 0.6
+@kino 1
+@zeit nacht
+
+== Hook ==
+// Netz: ein einziger blauer Knoten sendet in die Dunkelheit
+[netz farbe=#59c7ff wackeln=0.4 zoom-rein hooktext="KEIN NOTRUF. NIRGENDS."] Ein Mensch braucht sofort einen Arzt. Und kein Telefon der Welt funktioniert.
+// Wohnzimmer: Opa im Sessel, ihr um ihn herum
+[wohnzimmer opa sofa_sitzen du lina ben licht=aus zeit=nacht wackeln=0.3] Opa atmet flach. Lina hält seine Hand. Ben rennt im Kreis.
+
+== Wiedererkennen ==
+// Nahaufnahme: du, Panik
+[gesicht du ort=wohnzimmer zeit=nacht angst] Du willst die Eins-Eins-Zwei wählen. Aus Gewohnheit. Kein Balken.
+// Nahaufnahme: der Funker, ruhig
+[gesicht s01_funker ort=wohnzimmer zeit=nacht entschlossen] Da klappt der alte Funker sein Gerät auf. „Ganz ruhig. Dafür ist das hier da.“
+// Infokarte: Funkgerät
+[objekt objekte="funkgeraet:Notfunk" gross="Wenn alles ausfällt" farbe=#1d2840] Bei großen Ausfällen helfen Funkamateure, Nachrichten weiterzugeben. Ganz ohne Netz.
+// Großstadt bei Nacht, dunkel, ein Funkspruch wandert
+[grossstadt zeit=nacht schwenk-rechts] Sein Ruf geht von Funker zu Funker. Quer durch die ganze Stadt. Bis zur Feuerwehr.
+
+== Steigerung ==
+// Nahaufnahme: Funker lauscht
+[gesicht s01_funker ort=wohnzimmer zeit=nacht lauscht] Dann knackt es. „Wagen ist unterwegs. Zehn Minuten.“
+// Nahaufnahme: Opa, schwach lächelnd
+[gesicht opa ort=wohnzimmer zeit=nacht muede] Zehn Minuten können sehr lang sein. Opa drückt deine Hand. Ganz schwach.
+// Landschaft bei Nacht, blaues Licht am Horizont
+[landschaft zeit=nacht zoom-rein] Dann siehst du es. Blaulicht. Mitten in einer Stadt ohne Licht.
+// Krankenhaus: Opa im Bett, Monitor
+[krankenhaus patient=opa du lina zeit=nacht ruhig] Das Krankenhaus läuft mit Notstrom. Große Generatoren im Keller, die anspringen, wenn das Netz ausfällt.
+// Nahaufnahme: du am Bett
+[gesicht du ort=krankenhaus zeit=nacht besorgt] Die Ärzte arbeiten mit Papier und Kugelschreiber. Wie früher.
+
+== Wendung ==
+// Krankenhaus: Mama und Papa stürzen herein
+[krankenhaus patient=opa mama papa du lina zeit=nacht zoom-raus] Und dann geht die Tür auf. Mama. Papa. Der Zettel vom Funker hat sie gefunden.
+// Nahaufnahme: Mama, weinend vor Erleichterung
+[gesicht mama ort=krankenhaus zeit=nacht froh] Mama sagt kein Wort. Sie hält euch einfach fest. Alle beide.
+// Nahaufnahme: Papa, zu Opa
+[gesicht papa ort=krankenhaus zeit=nacht traurig] Papa setzt sich zu Opa. „Wir hätten viel öfter kommen sollen.“
+// Nahaufnahme: Opa, matt
+[gesicht opa ort=krankenhaus zeit=nacht froh] Opa lächelt. „Jetzt seid ihr ja da.“
+// Krankenhaus: alle zusammen
+[krankenhaus patient=opa mama papa lina zeit=nacht ruhig] Der Arzt sagt: Er ist stabil. Ihr dürft bleiben.
+
+== Cliffhanger ==
+// Polarlicht: der Himmel färbt sich grün
+[polarlicht zoom-raus] Durchs Fenster siehst du, wie sich der Himmel langsam grün färbt.
+// Nahaufnahme: du, erschrocken im plötzlichen Dunkel
+[gesicht du ort=krankenhaus zeit=nacht schreck zoom-rein] Der zweite Sturm ist da. Und im ganzen Krankenhaus gehen die Lichter aus.

@@ -1,0 +1,167 @@
+{
+ "dauer": 78.156,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "landschaft",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 6.254,
+   "emotion": "erzaehlend",
+   "text": "Ein alter Mann sitzt seit zwei Tagen allein im Dunkeln. Und niemand hat nach ihm gesehen."
+  },
+  {
+   "nr": 2,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 6.254,
+   "dauer": 3.446,
+   "emotion": "ernst",
+   "text": "Es ist dein Opa. Ihr seid den ganzen Tag zu ihm gelaufen."
+  },
+  {
+   "nr": 3,
+   "typ": "wohnzimmer",
+   "kapitel": 2,
+   "start": 9.7,
+   "dauer": 5.678,
+   "emotion": "erzaehlend",
+   "text": "Opa sitzt im Wohnzimmer. Eine Kerze. Ein Kreuzworträtsel. Sonst nichts."
+  },
+  {
+   "nr": 4,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 15.378,
+   "dauer": 2.246,
+   "emotion": "spannend",
+   "text": "Er schaut auf. „Ihr seid gekommen?“"
+  },
+  {
+   "nr": 5,
+   "typ": "wohnzimmer",
+   "kapitel": 2,
+   "start": 17.624,
+   "dauer": 5.246,
+   "emotion": "erzaehlend",
+   "text": "Lina fällt ihm um den Hals. Opa lacht. Und hustet. Und lacht wieder."
+  },
+  {
+   "nr": 6,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 22.87,
+   "dauer": 3.398,
+   "emotion": "traurig",
+   "text": "„Ach, Kinder. Für mich ist Funkstille nichts Neues.“"
+  },
+  {
+   "nr": 7,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 26.268,
+   "dauer": 4.502,
+   "emotion": "traurig",
+   "text": "„Bei mir klingelt sowieso keiner. Das Telefon nicht. Und die Tür auch nicht.“"
+  },
+  {
+   "nr": 8,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 30.77,
+   "dauer": 3.446,
+   "emotion": "traurig",
+   "text": "Das trifft dich mitten in die Brust. Denn er hat recht."
+  },
+  {
+   "nr": 9,
+   "typ": "objekt",
+   "kapitel": 3,
+   "start": 34.216,
+   "dauer": 4.838,
+   "emotion": "erklaerend",
+   "text": "Ihr seht ihn an Geburtstagen. An Weihnachten. Vielleicht noch an Ostern."
+  },
+  {
+   "nr": 10,
+   "typ": "titel",
+   "kapitel": 3,
+   "start": 39.054,
+   "dauer": 6.086,
+   "emotion": "erzaehlend",
+   "text": "Wenn es so bleibt, siehst du ihn vielleicht noch vierzigmal. Vierzig Nachmittage. Mehr nicht."
+  },
+  {
+   "nr": 11,
+   "typ": "lebenszeit",
+   "kapitel": 3,
+   "start": 45.14,
+   "dauer": 4.094,
+   "emotion": "erzaehlend",
+   "text": "Und jede Woche, die vergeht, kommt nicht zurück. Auch nicht für Opa."
+  },
+  {
+   "nr": 12,
+   "typ": "landschaft",
+   "kapitel": 3,
+   "start": 49.234,
+   "dauer": 3.638,
+   "emotion": "erzaehlend",
+   "text": "Draußen wird es dunkel. Der zweite Sturm ist nicht mehr weit."
+  },
+  {
+   "nr": 13,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 52.872,
+   "dauer": 5.726,
+   "emotion": "ernst",
+   "text": "Lina fragt nach den Herztabletten. Opa winkt ab. „Zwei hab ich noch. Das reicht.“"
+  },
+  {
+   "nr": 14,
+   "typ": "objekt",
+   "kapitel": 4,
+   "start": 58.598,
+   "dauer": 5.462,
+   "emotion": "erklaerend",
+   "text": "Zwei Tabletten. Heute und morgen. Und die Apotheken haben ohne Computer zu."
+  },
+  {
+   "nr": 15,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 64.06,
+   "dauer": 3.038,
+   "emotion": "traurig",
+   "text": "Ben sagt nichts. Aber er denkt dasselbe wie du."
+  },
+  {
+   "nr": 16,
+   "typ": "wohnzimmer",
+   "kapitel": 4,
+   "start": 67.098,
+   "dauer": 2.894,
+   "emotion": "erzaehlend",
+   "text": "Ihr setzt euch zu ihm. Opa erzählt von früher."
+  },
+  {
+   "nr": 17,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 69.992,
+   "dauer": 2.126,
+   "emotion": "spannend",
+   "text": "Mitten im Satz hört er auf zu reden."
+  },
+  {
+   "nr": 18,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 72.118,
+   "dauer": 6.038,
+   "emotion": "spannend",
+   "text": "Sein Gesicht wird ganz grau. Er greift sich an die Brust. Und sinkt langsam in den Sessel."
+  }
+ ]
+}

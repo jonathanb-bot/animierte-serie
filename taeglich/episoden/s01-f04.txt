@@ -1,0 +1,56 @@
+# Funkstille – Folge 4: Dreimal kurz
+@musik musik/s01-f04.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung freudig
+@mund zitate
+@qualitaet hoch
+@look 0.2
+@kino 1
+@zeit nacht
+
+== Hook ==
+// Wald bei Nacht, ein warmes Licht zwischen den Stämmen
+[landschaft zeit=nacht wackeln=0.3 zoom-rein hooktext="JEMAND PFEIFT ZURÜCK"] Mitten in der Nacht antwortet jemand auf ein Zeichen, das nur zwei Menschen kennen.
+// Nahaufnahme: du rennst los
+[gesicht du ort=park jahreszeit=herbst zeit=nacht entschlossen] Du rennst los. Durch nasses Laub, quer über den Rasen.
+
+== Wiedererkennen ==
+// Park bei Nacht: am Pavillon ein kleines Licht, ein alter Mann, Lina
+[park lina s01_funker jahreszeit=herbst zeit=nacht lichter ruhig] Unter dem Dach vom alten Pavillon brennt eine Kerze. Daneben ein alter Mann mit Decke.
+// Nahaufnahme: Lina, verweint, dann strahlend
+[gesicht lina ort=park jahreszeit=herbst zeit=nacht froh] Und unter der Decke: Lina.
+// Park: ihr umarmt euch
+[park du:umarmt lina:umarmt jahreszeit=herbst zeit=nacht lichter zoom-rein] Du hältst sie so fest, dass sie lachen muss.
+// Nahaufnahme: Lina lacht unter Tränen
+[gesicht lina ort=park jahreszeit=herbst zeit=nacht froh] „Du zerquetschst mich!“
+// Nahaufnahme: Ben, erleichtert
+[gesicht ben ort=park jahreszeit=herbst zeit=nacht froh] Ben dreht sich weg. Er sagt, es ist nur der Regen.
+
+== Steigerung ==
+// Nahaufnahme: Lina erklärt
+[gesicht lina ort=park jahreszeit=herbst zeit=nacht traurig] „Opa ist doch ganz allein. Ich wollte nur nachsehen, ob es ihm gut geht.“
+// Nahaufnahme: du, still
+[gesicht du ort=park jahreszeit=herbst zeit=nacht traurig] Und du merkst: Sie hat an Opa gedacht. Du nicht ein einziges Mal.
+// Nahaufnahme: der alte Mann, freundlich
+[gesicht s01_funker ort=park jahreszeit=herbst zeit=nacht froh] Der alte Mann hat sie im Dunkeln weinen hören. „Ich hab gesagt: Wir warten zusammen. Bis es hell wird.“
+// Infokarte: Funkgerät, Kerze, Decke
+[objekt objekte="funkgeraet:Funkgerät|kerze:Kerze|decke:Decke" gross="Sein Notfallkoffer" farbe=#2f3d5c] Er hat alles dabei. Kerze, Decke. Und ein altes Funkgerät.
+// Landschaft am Morgen, die Sonne geht auf
+[landschaft zeit=morgen du lina ben zoom-raus] Ihr wartet zusammen. Und dann geht über den Dächern die Sonne auf.
+// Großstadt am Morgen, golden
+[grossstadt zeit=morgen du lina schwenk-rechts] Die Stadt hat immer noch keinen Strom. Aber gerade ist dir das egal.
+
+== Wendung ==
+// Nahaufnahme: Lina lacht
+[gesicht lina ort=landschaft zeit=morgen froh] Lina teilt ihren letzten Keks in drei Teile. Für dich, für Ben, für den alten Mann.
+// Nahaufnahme: du lachst
+[gesicht du ort=landschaft zeit=morgen froh] Zum ersten Mal seit einem Tag lachst du.
+// Nahaufnahme: der Mann, ernst
+[gesicht s01_funker ort=landschaft zeit=morgen besorgt] Nur der alte Mann lacht nicht mit. Er hält das Funkgerät ans Ohr.
+
+== Cliffhanger ==
+// Netz: ein einzelner Knoten blinkt
+[netz farbe=#59c7ff mitte=du zoom-rein] „Ich war vierzig Jahre Funker. Ich weiß, was heute Nacht passiert ist.“
+// Weltall mit Sonne, gleißend
+[weltall sonne erde_y=1900 fokus=760,640 zoom-rein] „Und das war erst der Anfang.“

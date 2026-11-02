@@ -1,0 +1,167 @@
+{
+ "dauer": 75.564,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "landschaft",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 5.342,
+   "emotion": "erzaehlend",
+   "text": "Ein alter Mann glaubt, dass niemand auf ihn wartet. Und er irrt sich gewaltig."
+  },
+  {
+   "nr": 2,
+   "typ": "krankenhaus",
+   "kapitel": 1,
+   "start": 5.342,
+   "dauer": 2.894,
+   "emotion": "erzaehlend",
+   "text": "Du setzt dich zu deinem Opa aufs Bett."
+  },
+  {
+   "nr": 3,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 8.236,
+   "dauer": 3.494,
+   "emotion": "ernst",
+   "text": "„Doch, Opa. Wir warten. Ab jetzt jeden Sonntag.“"
+  },
+  {
+   "nr": 4,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 11.73,
+   "dauer": 4.766,
+   "emotion": "ernst",
+   "text": "Opa schaut dich lange an. „Jeden Sonntag? Ihr habt doch so viel zu tun.“"
+  },
+  {
+   "nr": 5,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 16.496,
+   "dauer": 5.03,
+   "emotion": "froh",
+   "text": "Lina verschränkt die Arme. „Du hast ja keine Ahnung, wie langweilig das Internet ist.“"
+  },
+  {
+   "nr": 6,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 21.526,
+   "dauer": 3.422,
+   "emotion": "froh",
+   "text": "Da lacht Opa so laut, dass die Schwester draußen den Kopf reinsteckt."
+  },
+  {
+   "nr": 7,
+   "typ": "lebenszeit",
+   "kapitel": 3,
+   "start": 24.948,
+   "dauer": 5.87,
+   "emotion": "erzaehlend",
+   "text": "Vierzig Nachmittage, hast du gedacht. Wenn ihr jeden Sonntag kommt, werden daraus Hunderte."
+  },
+  {
+   "nr": 8,
+   "typ": "esstisch",
+   "kapitel": 3,
+   "start": 30.818,
+   "dauer": 5.966,
+   "emotion": "erzaehlend",
+   "text": "Der erste Sonntag. Mama backt. Papa verbrennt die Kartoffeln. Opa isst trotzdem drei Teller."
+  },
+  {
+   "nr": 9,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 36.784,
+   "dauer": 3.254,
+   "emotion": "froh",
+   "text": "Die Handys liegen in der Obstschale. Keiner vermisst sie."
+  },
+  {
+   "nr": 10,
+   "typ": "esstisch",
+   "kapitel": 3,
+   "start": 40.038,
+   "dauer": 4.79,
+   "emotion": "erzaehlend",
+   "text": "Am zweiten Sonntag bringt Ben seine Mutter mit. Und der alte Funker kommt auch."
+  },
+  {
+   "nr": 11,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 44.828,
+   "dauer": 3.542,
+   "emotion": "froh",
+   "text": "Er sagt, so voll war sein Sonntag seit zwanzig Jahren nicht."
+  },
+  {
+   "nr": 12,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 48.37,
+   "dauer": 3.806,
+   "emotion": "froh",
+   "text": "Opa und er streiten sofort über Fußball. Wie zwei alte Freunde."
+  },
+  {
+   "nr": 13,
+   "typ": "see",
+   "kapitel": 4,
+   "start": 52.176,
+   "dauer": 5.198,
+   "emotion": "erzaehlend",
+   "text": "Im Sommer fahrt ihr zusammen an den See. Opa erzählt Geschichten, die du noch nie gehört hast."
+  },
+  {
+   "nr": 14,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 57.374,
+   "dauer": 3.014,
+   "emotion": "froh",
+   "text": "Und du merkst: Du hättest sie alle fast verpasst."
+  },
+  {
+   "nr": 15,
+   "typ": "wald",
+   "kapitel": 4,
+   "start": 60.388,
+   "dauer": 5.174,
+   "emotion": "erzaehlend",
+   "text": "Nicht wegen eines Sturms. Sondern wegen eines einzigen Wortes. Später."
+  },
+  {
+   "nr": 16,
+   "typ": "landschaft",
+   "kapitel": 4,
+   "start": 65.562,
+   "dauer": 3.926,
+   "emotion": "erzaehlend",
+   "text": "Inzwischen ist das Netz längst wieder da. Aber der Sonntag bleibt."
+  },
+  {
+   "nr": 17,
+   "typ": "weltall",
+   "kapitel": 5,
+   "start": 69.488,
+   "dauer": 2.294,
+   "emotion": "erzaehlend",
+   "text": "Drei Tage lang war die ganze Welt still."
+  },
+  {
+   "nr": 18,
+   "typ": "esstisch",
+   "kapitel": 5,
+   "start": 71.782,
+   "dauer": 3.782,
+   "emotion": "erzaehlend",
+   "text": "Und genau da habt ihr angefangen, wieder miteinander zu reden."
+  }
+ ]
+}

@@ -1,0 +1,167 @@
+{
+ "dauer": 79.02,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "handy",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 5.894,
+   "emotion": "erzaehlend",
+   "text": "Eine Nachricht hat drei Tage gebraucht, um bei dir anzukommen. Und sie ist von deinem Opa."
+  },
+  {
+   "nr": 2,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 5.894,
+   "dauer": 3.446,
+   "emotion": "traurig",
+   "text": "Opa hat sie geschrieben, kurz bevor das Netz ausfiel."
+  },
+  {
+   "nr": 3,
+   "typ": "zimmer",
+   "kapitel": 1,
+   "start": 9.34,
+   "dauer": 5.606,
+   "emotion": "erzaehlend",
+   "text": "Und jetzt erinnerst du dich. Du hast gesehen, dass er schreibt. Und gedacht: später."
+  },
+  {
+   "nr": 4,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 14.946,
+   "dauer": 3.446,
+   "emotion": "traurig",
+   "text": "Später. Das sagen wir alle. Viel zu oft."
+  },
+  {
+   "nr": 5,
+   "typ": "netz",
+   "kapitel": 2,
+   "start": 18.392,
+   "dauer": 5.534,
+   "emotion": "erzaehlend",
+   "text": "Am nächsten Morgen kommt das Netz zurück. Knoten für Knoten. Stadt für Stadt."
+  },
+  {
+   "nr": 6,
+   "typ": "grossstadt",
+   "kapitel": 2,
+   "start": 23.926,
+   "dauer": 5.078,
+   "emotion": "erzaehlend",
+   "text": "Die Ampeln springen an. Die Bäckerei nimmt wieder Karten. Als wäre nichts gewesen."
+  },
+  {
+   "nr": 7,
+   "typ": "handy",
+   "kapitel": 2,
+   "start": 29.004,
+   "dauer": 3.758,
+   "emotion": "erzaehlend",
+   "text": "Und dein Handy explodiert. Mehr als dreihundert Nachrichten."
+  },
+  {
+   "nr": 8,
+   "typ": "esstisch",
+   "kapitel": 3,
+   "start": 32.762,
+   "dauer": 4.334,
+   "emotion": "erzaehlend",
+   "text": "Am Abend sitzt ihr wieder am Esstisch. Und jeder starrt auf sein Handy."
+  },
+  {
+   "nr": 9,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 37.096,
+   "dauer": 5.03,
+   "emotion": "ernst",
+   "text": "Du schaust auf. Und siehst es. Es ist wie vorher. Genau wie vorher."
+  },
+  {
+   "nr": 10,
+   "typ": "lebenszeit",
+   "kapitel": 3,
+   "start": 42.126,
+   "dauer": 5.726,
+   "emotion": "erzaehlend",
+   "text": "Abend für Abend. Woche für Woche. Nebeneinander, aber nicht zusammen."
+  },
+  {
+   "nr": 11,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 47.852,
+   "dauer": 4.718,
+   "emotion": "ernst",
+   "text": "Also stehst du auf. Holst die große Obstschale. Und legst dein Handy hinein."
+  },
+  {
+   "nr": 12,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 52.57,
+   "dauer": 2.558,
+   "emotion": "froh",
+   "text": "Lina legt ihres dazu. Sofort."
+  },
+  {
+   "nr": 13,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 55.128,
+   "dauer": 4.718,
+   "emotion": "froh",
+   "text": "Papa zögert. Dann legt er seins auch rein. „Na gut. Funkstille.“"
+  },
+  {
+   "nr": 14,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 59.846,
+   "dauer": 5.318,
+   "emotion": "froh",
+   "text": "Mama sagt: „Drei Tage ohne Netz. Und wir haben mehr geredet als im ganzen Jahr.“"
+  },
+  {
+   "nr": 15,
+   "typ": "esstisch",
+   "kapitel": 4,
+   "start": 65.164,
+   "dauer": 4.142,
+   "emotion": "erzaehlend",
+   "text": "Ihr esst. Ihr redet. Und keiner will als Erster aufstehen."
+  },
+  {
+   "nr": 16,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 69.306,
+   "dauer": 3.014,
+   "emotion": "ernst",
+   "text": "Dann sagt Papa: „Morgen darf Opa nach Hause.“"
+  },
+  {
+   "nr": 17,
+   "typ": "krankenhaus",
+   "kapitel": 5,
+   "start": 72.32,
+   "dauer": 3.878,
+   "emotion": "erzaehlend",
+   "text": "Am nächsten Tag holt ihr ihn ab. Aber Opa will nicht aufstehen."
+  },
+  {
+   "nr": 18,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 76.198,
+   "dauer": 2.822,
+   "emotion": "traurig",
+   "text": "„Nach Hause? Da wartet doch keiner auf mich.“"
+  }
+ ]
+}
