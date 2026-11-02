@@ -22,14 +22,19 @@ Diese Datei ist verbindlich für die geplante Aufgabe „Kurzvideo-Staffel alle 
 
 Damit die Analyse herausfinden kann, was am besten ankommt, ändert sich das Format **von Staffel zu Staffel** nach einer festen Rotation. Feste Grenzen bleiben: jede Folge **62–90 s** (über 1 Minute, #12; bis 90 s ein Post auf Instagram/YouTube, Jonathans Vorgabe 2.11.), TikTok-Teile höchstens 10 min.
 
-| Staffel | Folgen | Längenband | Wörter pro Folge | Einstellungen | TikTok-Teile (Standard) |
+| Staffel | Folgen | Länge pro Folge | Wörter pro Folge | Einstellungen | TikTok |
 |---|---|---|---|---|---|
-| s01 (fertig) | 10 | frei (66–79 s gemessen) | 186–207 | 18–20 | 4 |
-| s02 | 8 | **kurz** 62–70 s | 185–195 | 18–22 | 3 |
-| s03 | 12 | **lang** 78–90 s | 210–225 | 22–26 | 5 |
-| s04 | 6 | **mittel** 70–78 s | 200–210 | 20–24 | 2 |
-| s05 | 10 | kurz 62–70 s | 185–195 | 18–22 | 4 |
-| ab s06 | nach Analyse | Gewinner aus „Format-Vergleich“, jede 3. Staffel wieder eine andere Kombination | | | |
+| s01 (fertig) | 10 | frei (66–79 s gemessen) | 186–207 | 18–20 | 4 Sammelteile |
+| s02 | 8 | **kurz** 60–70 s | 180–195 | 18–22 | **jede Folge ein eigener Post** |
+| s03 | 12 | **lang** 80–90 s | 215–230 | 22–26 | 5 Sammelteile |
+| s04 | 6 | **XL** 90–120 s (bis 2 min) | 240–310 | 24–30 | **jede Folge ein eigener Post** |
+| s05 | 10 | **mittel** 70–80 s | 195–210 | 20–24 | 4 Sammelteile |
+| s06 | 10 | **gemischt**: 3 Folgen ~60 s, 4 ~80 s, 3 ~110 s | je nach Länge | | jede Folge ein eigener Post |
+| ab s07 | nach Analyse | Gewinner aus „Format-Vergleich“, jede 3. Staffel wieder etwas anderes | | | |
+
+Jonathans Wunsch vom 2.11. abends: Abwechslung, auch **Kurzvideos von 1 bis 2 Minuten** und solche mit **höchstens 90 s**, und schauen, wie sie ankommen. Dazu testen wir auf TikTok **einzelne Folgen** statt Sammelteile: die Zahlen vom 2.11. zeigen, dass bei den 7-Minuten-Teilen nach einem Viertel nur noch 3–9 % zuschauen.
+- **Instagram/YouTube:** jede Folge ist ein Post, auch die XL-Folgen bis 2 min (beide Plattformen erlauben das). Nie in Teile unter 1 Minute schneiden (#12).
+- **TikTok einzeln:** in `staffeln.json` `"tiktok_teile": [[1], [2], …]`; jede Folge wird ein eigener TikTok-Post im normalen TikTok-Takt.
 
 - Das gewählte Format steht in `staffeln.json` → `format` (`folgen`, `laengenband`, `tiktok_teile`).
 - Die Gemini-Stimme schwankt je Anfrage (s01: 2,4–3,0 Wörter/s). Nach dem Vertonen zählt die **gemessene** Länge: liegt eine Folge außerhalb ihres Bands oder unter 62 s, eine Einstellung ergänzen bzw. kürzen und neu vertonen. Über 90 s lehnt `staffel_veroeffentlichen.py` ab.

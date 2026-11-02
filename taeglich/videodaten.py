@@ -21,7 +21,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 DATEN = ROOT / "taeglich" / "videodaten.json"
 KURZGESAGT = {"weltall", "grossstadt", "rechenzentrum", "auge", "landschaft", "wald", "netz", "lebenszeit", "polarlicht"}
-BAENDER = [("kurz", 62, 70), ("mittel", 70, 78), ("lang", 78, 90)]
+BAENDER = [("kurz", 60, 70), ("mittel", 70, 80), ("lang", 80, 90), ("xl", 90, 125)]
 
 
 def band(dauer: float | None) -> str:
@@ -30,7 +30,7 @@ def band(dauer: float | None) -> str:
     for name, a, b in BAENDER:
         if a <= dauer < b:
             return name
-    return "zu kurz" if dauer < 62 else "zu lang"
+    return "zu kurz" if dauer < 60 else "zu lang"
 
 
 def ffdauer(pfad: Path) -> float | None:

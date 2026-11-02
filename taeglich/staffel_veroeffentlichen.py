@@ -37,6 +37,7 @@ TAKT = {"tiktok": [(8, 0), (12, 0), (16, 0), (20, 0)],  # 4× am Tag (Jonathans 
          "instagram": [(h, 0) for h in range(0, 24, 2)], "youtube": [(h, 30) for h in range(0, 24, 2)]}
 MIN_DAUER = 62.0   # jedes Video über 1 Minute (Issue #12), mit kleinem Puffer
 MAX_FOLGE = 90.0   # bis 90 s: ein Post auf Instagram/YouTube (Jonathans Vorgabe 2.11.)
+MAX_XL = 125.0     # Format „XL“/„gemischt“: Folgen bis ca. 2 min (Jonathans Wunsch 2.11.)
 MAX_TEIL = 600.0
 VORLAUF = dt.timedelta(minutes=60)
 
@@ -117,6 +118,8 @@ def main(argv=None) -> int:
         if not st.get(feld):
             print(f"Feld „{feld}“ fehlt bei {a.staffel}"); return 1
 
+    # XL-Staffeln (Format-Rotation, Jonathans Wunsch 2.11.): Folgen bis 2 min, ungeteilt auf allen Plattformen
+    max_folge = MAX_XL if str((st.get("format") or {}).get("laengenband", "")).lower().startswith(("xl", "gemischt")) else MAX_FOLGE
     # 1) Jede Folge: Lautheit angleichen, prüfen
     folgen, fehler = [], []
     for f in st["folgen"]:
@@ -126,7 +129,7 @@ def main(argv=None) -> int:
             fehler.append(f"{fid}: nicht gerendert"); continue
         fertig = ROOT / "ausgabe" / f"taeglich-{fid}-fertig.mp4"
         V.angleichen(roh, fertig)
-        erg = V.pruefe(fertig, max_dauer=MAX_FOLGE, min_dauer=MIN_DAUER)
+        erg = V.pruefe(fertig, max_dauer=max_folge, min_dauer=MIN_DAUER)
         print(f"{fid}: {json.dumps(erg, ensure_ascii=False)}")
         if not erg["ok"]:
             fehler.append(f"{fid}: {erg['grund']}")
@@ -140,7 +143,7 @@ def main(argv=None) -> int:
             ohne = f["datei"].with_name(f["datei"].stem + "-ohne-karte.mp4")
             teil_schneiden([{**f, "karte": f["karte"]}], ohne)
             f["datei"], f["karte"] = ohne, 0.0
-            f["pruefung"] = V.pruefe(ohne, max_dauer=MAX_FOLGE, min_dauer=MIN_DAUER)
+            f["pruefung"] = V.pruefe(ohne, max_dauer=max_folge, min_dauer=MIN_DAUER)
             if not f["pruefung"]["ok"]:
                 print(f"NICHT veröffentlicht: {f['id']}: {f['pruefung']['grund']}"); return 1
 
