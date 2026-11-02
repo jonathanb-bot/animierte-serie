@@ -1,0 +1,4077 @@
+{
+ "_info": "Bildbibliothek (taeglich/bibliothek.mjs). Bilder in ausgabe/bibliothek/<id>.jpg, reproduzierbar. Nur freigegebene Bilder in Folgen benutzen. Drehbuch: [bild id=<id> …].",
+ "bilder": {
+  "grossstadt-tag-v01": {
+   "kulisse": "grossstadt",
+   "angaben": {
+    "zeit": "tag",
+    "variante": 1,
+    "dach": true
+   },
+   "kamera_y": 1080,
+   "figur_y": 1700,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "338db94d0c0bc157",
+   "freigegeben": false
+  },
+  "grossstadt-tag-v02": {
+   "kulisse": "grossstadt",
+   "angaben": {
+    "zeit": "tag",
+    "variante": 2,
+    "dach": true
+   },
+   "kamera_y": 1080,
+   "figur_y": 1700,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "fe8e335a33b72bf5",
+   "freigegeben": false
+  },
+  "grossstadt-tag-v03": {
+   "kulisse": "grossstadt",
+   "angaben": {
+    "zeit": "tag",
+    "variante": 3,
+    "dach": true
+   },
+   "kamera_y": 1080,
+   "figur_y": 1700,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "8a39970e09142192",
+   "freigegeben": false
+  },
+  "grossstadt-tag-v04": {
+   "kulisse": "grossstadt",
+   "angaben": {
+    "zeit": "tag",
+    "variante": 4,
+    "dach": true
+   },
+   "kamera_y": 1080,
+   "figur_y": 1700,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "a6d9c00cf2e24e7b",
+   "freigegeben": false
+  },
+  "grossstadt-tag-v05": {
+   "kulisse": "grossstadt",
+   "angaben": {
+    "zeit": "tag",
+    "variante": 5,
+    "dach": true
+   },
+   "kamera_y": 1080,
+   "figur_y": 1700,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "dab85fd458ff68c9",
+   "freigegeben": false
+  },
+  "grossstadt-tag-v06": {
+   "kulisse": "grossstadt",
+   "angaben": {
+    "zeit": "tag",
+    "variante": 6,
+    "dach": true
+   },
+   "kamera_y": 1080,
+   "figur_y": 1700,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "76dca3c79eab35f0",
+   "freigegeben": false
+  },
+  "grossstadt-tag-v07": {
+   "kulisse": "grossstadt",
+   "angaben": {
+    "zeit": "tag",
+    "variante": 7,
+    "dach": true
+   },
+   "kamera_y": 1080,
+   "figur_y": 1700,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "30767b42059e693b",
+   "freigegeben": false
+  },
+  "grossstadt-tag-v08": {
+   "kulisse": "grossstadt",
+   "angaben": {
+    "zeit": "tag",
+    "variante": 8,
+    "dach": true
+   },
+   "kamera_y": 1080,
+   "figur_y": 1700,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "68e03c60542d1546",
+   "freigegeben": false
+  },
+  "grossstadt-morgen-v01": {
+   "kulisse": "grossstadt",
+   "angaben": {
+    "zeit": "morgen",
+    "variante": 1,
+    "dach": true
+   },
+   "kamera_y": 1080,
+   "figur_y": 1700,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "38a216453e27d276",
+   "freigegeben": false
+  },
+  "grossstadt-morgen-v02": {
+   "kulisse": "grossstadt",
+   "angaben": {
+    "zeit": "morgen",
+    "variante": 2,
+    "dach": true
+   },
+   "kamera_y": 1080,
+   "figur_y": 1700,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "73d76d9e289c308d",
+   "freigegeben": false
+  },
+  "grossstadt-morgen-v03": {
+   "kulisse": "grossstadt",
+   "angaben": {
+    "zeit": "morgen",
+    "variante": 3,
+    "dach": true
+   },
+   "kamera_y": 1080,
+   "figur_y": 1700,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "8e3e6adeb3141762",
+   "freigegeben": false
+  },
+  "grossstadt-morgen-v04": {
+   "kulisse": "grossstadt",
+   "angaben": {
+    "zeit": "morgen",
+    "variante": 4,
+    "dach": true
+   },
+   "kamera_y": 1080,
+   "figur_y": 1700,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "6cc1d79c8c665e4b",
+   "freigegeben": false
+  },
+  "grossstadt-morgen-v05": {
+   "kulisse": "grossstadt",
+   "angaben": {
+    "zeit": "morgen",
+    "variante": 5,
+    "dach": true
+   },
+   "kamera_y": 1080,
+   "figur_y": 1700,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "96c0afc290568520",
+   "freigegeben": false
+  },
+  "grossstadt-morgen-v06": {
+   "kulisse": "grossstadt",
+   "angaben": {
+    "zeit": "morgen",
+    "variante": 6,
+    "dach": true
+   },
+   "kamera_y": 1080,
+   "figur_y": 1700,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "5b138193a1b5e146",
+   "freigegeben": false
+  },
+  "grossstadt-morgen-v07": {
+   "kulisse": "grossstadt",
+   "angaben": {
+    "zeit": "morgen",
+    "variante": 7,
+    "dach": true
+   },
+   "kamera_y": 1080,
+   "figur_y": 1700,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "78efe16df7460907",
+   "freigegeben": false
+  },
+  "grossstadt-morgen-v08": {
+   "kulisse": "grossstadt",
+   "angaben": {
+    "zeit": "morgen",
+    "variante": 8,
+    "dach": true
+   },
+   "kamera_y": 1080,
+   "figur_y": 1700,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "49b69873619e288c",
+   "freigegeben": false
+  },
+  "grossstadt-abend-v01": {
+   "kulisse": "grossstadt",
+   "angaben": {
+    "zeit": "abend",
+    "variante": 1,
+    "dach": true
+   },
+   "kamera_y": 1080,
+   "figur_y": 1700,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "a826ea29a447a51b",
+   "freigegeben": false
+  },
+  "grossstadt-abend-v02": {
+   "kulisse": "grossstadt",
+   "angaben": {
+    "zeit": "abend",
+    "variante": 2,
+    "dach": true
+   },
+   "kamera_y": 1080,
+   "figur_y": 1700,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "713854f9ac0cc191",
+   "freigegeben": false
+  },
+  "grossstadt-abend-v03": {
+   "kulisse": "grossstadt",
+   "angaben": {
+    "zeit": "abend",
+    "variante": 3,
+    "dach": true
+   },
+   "kamera_y": 1080,
+   "figur_y": 1700,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "daee7f141481c7d1",
+   "freigegeben": false
+  },
+  "grossstadt-abend-v04": {
+   "kulisse": "grossstadt",
+   "angaben": {
+    "zeit": "abend",
+    "variante": 4,
+    "dach": true
+   },
+   "kamera_y": 1080,
+   "figur_y": 1700,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "72114ed4074a32be",
+   "freigegeben": false
+  },
+  "grossstadt-abend-v05": {
+   "kulisse": "grossstadt",
+   "angaben": {
+    "zeit": "abend",
+    "variante": 5,
+    "dach": true
+   },
+   "kamera_y": 1080,
+   "figur_y": 1700,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "035adf15d2fcb391",
+   "freigegeben": false
+  },
+  "grossstadt-abend-v06": {
+   "kulisse": "grossstadt",
+   "angaben": {
+    "zeit": "abend",
+    "variante": 6,
+    "dach": true
+   },
+   "kamera_y": 1080,
+   "figur_y": 1700,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "d8c7f2ad77d0b21b",
+   "freigegeben": false
+  },
+  "grossstadt-abend-v07": {
+   "kulisse": "grossstadt",
+   "angaben": {
+    "zeit": "abend",
+    "variante": 7,
+    "dach": true
+   },
+   "kamera_y": 1080,
+   "figur_y": 1700,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "5ecb234bd76d1e78",
+   "freigegeben": false
+  },
+  "grossstadt-abend-v08": {
+   "kulisse": "grossstadt",
+   "angaben": {
+    "zeit": "abend",
+    "variante": 8,
+    "dach": true
+   },
+   "kamera_y": 1080,
+   "figur_y": 1700,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "cab60f4057b2fb48",
+   "freigegeben": false
+  },
+  "grossstadt-nacht-v01": {
+   "kulisse": "grossstadt",
+   "angaben": {
+    "zeit": "nacht",
+    "variante": 1,
+    "dach": true
+   },
+   "kamera_y": 1080,
+   "figur_y": 1700,
+   "figur_skala": 0.95,
+   "dunkel": 0.2,
+   "lichter": [],
+   "fingerabdruck": "178eafd78a812337",
+   "freigegeben": false
+  },
+  "grossstadt-nacht-v02": {
+   "kulisse": "grossstadt",
+   "angaben": {
+    "zeit": "nacht",
+    "variante": 2,
+    "dach": true
+   },
+   "kamera_y": 1080,
+   "figur_y": 1700,
+   "figur_skala": 0.95,
+   "dunkel": 0.2,
+   "lichter": [],
+   "fingerabdruck": "e8349b44279a707f",
+   "freigegeben": false
+  },
+  "grossstadt-nacht-v03": {
+   "kulisse": "grossstadt",
+   "angaben": {
+    "zeit": "nacht",
+    "variante": 3,
+    "dach": true
+   },
+   "kamera_y": 1080,
+   "figur_y": 1700,
+   "figur_skala": 0.95,
+   "dunkel": 0.2,
+   "lichter": [],
+   "fingerabdruck": "11ea7ad095c45e25",
+   "freigegeben": false
+  },
+  "grossstadt-nacht-v04": {
+   "kulisse": "grossstadt",
+   "angaben": {
+    "zeit": "nacht",
+    "variante": 4,
+    "dach": true
+   },
+   "kamera_y": 1080,
+   "figur_y": 1700,
+   "figur_skala": 0.95,
+   "dunkel": 0.2,
+   "lichter": [],
+   "fingerabdruck": "e5fa06ff7b5245f4",
+   "freigegeben": false
+  },
+  "grossstadt-nacht-v05": {
+   "kulisse": "grossstadt",
+   "angaben": {
+    "zeit": "nacht",
+    "variante": 5,
+    "dach": true
+   },
+   "kamera_y": 1080,
+   "figur_y": 1700,
+   "figur_skala": 0.95,
+   "dunkel": 0.2,
+   "lichter": [],
+   "fingerabdruck": "e07e4626860166b6",
+   "freigegeben": false
+  },
+  "grossstadt-nacht-v06": {
+   "kulisse": "grossstadt",
+   "angaben": {
+    "zeit": "nacht",
+    "variante": 6,
+    "dach": true
+   },
+   "kamera_y": 1080,
+   "figur_y": 1700,
+   "figur_skala": 0.95,
+   "dunkel": 0.2,
+   "lichter": [],
+   "fingerabdruck": "6b0b6d6c617f1e60",
+   "freigegeben": false
+  },
+  "grossstadt-nacht-v07": {
+   "kulisse": "grossstadt",
+   "angaben": {
+    "zeit": "nacht",
+    "variante": 7,
+    "dach": true
+   },
+   "kamera_y": 1080,
+   "figur_y": 1700,
+   "figur_skala": 0.95,
+   "dunkel": 0.2,
+   "lichter": [],
+   "fingerabdruck": "8fd518e51ed1452f",
+   "freigegeben": false
+  },
+  "grossstadt-nacht-v08": {
+   "kulisse": "grossstadt",
+   "angaben": {
+    "zeit": "nacht",
+    "variante": 8,
+    "dach": true
+   },
+   "kamera_y": 1080,
+   "figur_y": 1700,
+   "figur_skala": 0.95,
+   "dunkel": 0.2,
+   "lichter": [],
+   "fingerabdruck": "3d71af4e50a1867d",
+   "freigegeben": false
+  },
+  "landschaft-tag-v01": {
+   "kulisse": "landschaft",
+   "angaben": {
+    "zeit": "tag",
+    "see": false,
+    "variante": 1
+   },
+   "kamera_y": 1080,
+   "figur_y": 1640,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "36f234226ae98154",
+   "freigegeben": false
+  },
+  "landschaft-tag-v02": {
+   "kulisse": "landschaft",
+   "angaben": {
+    "zeit": "tag",
+    "see": false,
+    "variante": 2
+   },
+   "kamera_y": 1080,
+   "figur_y": 1640,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "c8f4d13424714e4b",
+   "freigegeben": false
+  },
+  "landschaft-tag-v03": {
+   "kulisse": "landschaft",
+   "angaben": {
+    "zeit": "tag",
+    "see": false,
+    "variante": 3
+   },
+   "kamera_y": 1080,
+   "figur_y": 1640,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "8566b8997fb9fe74",
+   "freigegeben": false
+  },
+  "landschaft-tag-v04": {
+   "kulisse": "landschaft",
+   "angaben": {
+    "zeit": "tag",
+    "see": false,
+    "variante": 4
+   },
+   "kamera_y": 1080,
+   "figur_y": 1640,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "d01743179c7e4f62",
+   "freigegeben": false
+  },
+  "landschaft-tag-see-v01": {
+   "kulisse": "landschaft",
+   "angaben": {
+    "zeit": "tag",
+    "see": true,
+    "variante": 1
+   },
+   "kamera_y": 1080,
+   "figur_y": 1640,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "20ef8c5481e11aa9",
+   "freigegeben": false
+  },
+  "landschaft-tag-see-v02": {
+   "kulisse": "landschaft",
+   "angaben": {
+    "zeit": "tag",
+    "see": true,
+    "variante": 2
+   },
+   "kamera_y": 1080,
+   "figur_y": 1640,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "7d6ee83af439ae83",
+   "freigegeben": false
+  },
+  "landschaft-tag-see-v03": {
+   "kulisse": "landschaft",
+   "angaben": {
+    "zeit": "tag",
+    "see": true,
+    "variante": 3
+   },
+   "kamera_y": 1080,
+   "figur_y": 1640,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "942a984d8c7d1f19",
+   "freigegeben": false
+  },
+  "landschaft-tag-see-v04": {
+   "kulisse": "landschaft",
+   "angaben": {
+    "zeit": "tag",
+    "see": true,
+    "variante": 4
+   },
+   "kamera_y": 1080,
+   "figur_y": 1640,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "4f0bf4e52e87ffd5",
+   "freigegeben": false
+  },
+  "landschaft-morgen-v01": {
+   "kulisse": "landschaft",
+   "angaben": {
+    "zeit": "morgen",
+    "see": false,
+    "variante": 1
+   },
+   "kamera_y": 1080,
+   "figur_y": 1640,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "404f68aca84ca55c",
+   "freigegeben": false
+  },
+  "landschaft-morgen-v02": {
+   "kulisse": "landschaft",
+   "angaben": {
+    "zeit": "morgen",
+    "see": false,
+    "variante": 2
+   },
+   "kamera_y": 1080,
+   "figur_y": 1640,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "6b7d7ea949960504",
+   "freigegeben": false
+  },
+  "landschaft-morgen-v03": {
+   "kulisse": "landschaft",
+   "angaben": {
+    "zeit": "morgen",
+    "see": false,
+    "variante": 3
+   },
+   "kamera_y": 1080,
+   "figur_y": 1640,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "33d3fd9aa39c2489",
+   "freigegeben": false
+  },
+  "landschaft-morgen-v04": {
+   "kulisse": "landschaft",
+   "angaben": {
+    "zeit": "morgen",
+    "see": false,
+    "variante": 4
+   },
+   "kamera_y": 1080,
+   "figur_y": 1640,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "70ae3b92a2ad7b76",
+   "freigegeben": false
+  },
+  "landschaft-morgen-see-v01": {
+   "kulisse": "landschaft",
+   "angaben": {
+    "zeit": "morgen",
+    "see": true,
+    "variante": 1
+   },
+   "kamera_y": 1080,
+   "figur_y": 1640,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "6b0f85ac4520c8c5",
+   "freigegeben": false
+  },
+  "landschaft-morgen-see-v02": {
+   "kulisse": "landschaft",
+   "angaben": {
+    "zeit": "morgen",
+    "see": true,
+    "variante": 2
+   },
+   "kamera_y": 1080,
+   "figur_y": 1640,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "bfcd921dc3531316",
+   "freigegeben": false
+  },
+  "landschaft-morgen-see-v03": {
+   "kulisse": "landschaft",
+   "angaben": {
+    "zeit": "morgen",
+    "see": true,
+    "variante": 3
+   },
+   "kamera_y": 1080,
+   "figur_y": 1640,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "961c4e7496dc9333",
+   "freigegeben": false
+  },
+  "landschaft-morgen-see-v04": {
+   "kulisse": "landschaft",
+   "angaben": {
+    "zeit": "morgen",
+    "see": true,
+    "variante": 4
+   },
+   "kamera_y": 1080,
+   "figur_y": 1640,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "6fa34d5326b9ccef",
+   "freigegeben": false
+  },
+  "landschaft-abend-v01": {
+   "kulisse": "landschaft",
+   "angaben": {
+    "zeit": "abend",
+    "see": false,
+    "variante": 1
+   },
+   "kamera_y": 1080,
+   "figur_y": 1640,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [
+    {
+     "x": 831,
+     "y": 1489,
+     "r": 260,
+     "farbe": "#ffc66b",
+     "st": 0.9
+    }
+   ],
+   "fingerabdruck": "06904325b2623711",
+   "freigegeben": false
+  },
+  "landschaft-abend-v02": {
+   "kulisse": "landschaft",
+   "angaben": {
+    "zeit": "abend",
+    "see": false,
+    "variante": 2
+   },
+   "kamera_y": 1080,
+   "figur_y": 1640,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [
+    {
+     "x": 831,
+     "y": 1489,
+     "r": 260,
+     "farbe": "#ffc66b",
+     "st": 0.9
+    }
+   ],
+   "fingerabdruck": "6c816d60b3009f2f",
+   "freigegeben": false
+  },
+  "landschaft-abend-v03": {
+   "kulisse": "landschaft",
+   "angaben": {
+    "zeit": "abend",
+    "see": false,
+    "variante": 3
+   },
+   "kamera_y": 1080,
+   "figur_y": 1640,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [
+    {
+     "x": 831,
+     "y": 1489,
+     "r": 260,
+     "farbe": "#ffc66b",
+     "st": 0.9
+    }
+   ],
+   "fingerabdruck": "ec99edb233c3ec1c",
+   "freigegeben": false
+  },
+  "landschaft-abend-v04": {
+   "kulisse": "landschaft",
+   "angaben": {
+    "zeit": "abend",
+    "see": false,
+    "variante": 4
+   },
+   "kamera_y": 1080,
+   "figur_y": 1640,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [
+    {
+     "x": 831,
+     "y": 1489,
+     "r": 260,
+     "farbe": "#ffc66b",
+     "st": 0.9
+    }
+   ],
+   "fingerabdruck": "33cf6fc52a79d0a5",
+   "freigegeben": false
+  },
+  "landschaft-abend-see-v01": {
+   "kulisse": "landschaft",
+   "angaben": {
+    "zeit": "abend",
+    "see": true,
+    "variante": 1
+   },
+   "kamera_y": 1080,
+   "figur_y": 1640,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [
+    {
+     "x": 831,
+     "y": 1489,
+     "r": 260,
+     "farbe": "#ffc66b",
+     "st": 0.9
+    }
+   ],
+   "fingerabdruck": "683e3c38ac9aba2b",
+   "freigegeben": false
+  },
+  "landschaft-abend-see-v02": {
+   "kulisse": "landschaft",
+   "angaben": {
+    "zeit": "abend",
+    "see": true,
+    "variante": 2
+   },
+   "kamera_y": 1080,
+   "figur_y": 1640,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [
+    {
+     "x": 831,
+     "y": 1489,
+     "r": 260,
+     "farbe": "#ffc66b",
+     "st": 0.9
+    }
+   ],
+   "fingerabdruck": "6925034b87dbb95c",
+   "freigegeben": false
+  },
+  "landschaft-abend-see-v03": {
+   "kulisse": "landschaft",
+   "angaben": {
+    "zeit": "abend",
+    "see": true,
+    "variante": 3
+   },
+   "kamera_y": 1080,
+   "figur_y": 1640,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [
+    {
+     "x": 831,
+     "y": 1489,
+     "r": 260,
+     "farbe": "#ffc66b",
+     "st": 0.9
+    }
+   ],
+   "fingerabdruck": "b26edca2a3f0cd94",
+   "freigegeben": false
+  },
+  "landschaft-abend-see-v04": {
+   "kulisse": "landschaft",
+   "angaben": {
+    "zeit": "abend",
+    "see": true,
+    "variante": 4
+   },
+   "kamera_y": 1080,
+   "figur_y": 1640,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [
+    {
+     "x": 831,
+     "y": 1489,
+     "r": 260,
+     "farbe": "#ffc66b",
+     "st": 0.9
+    }
+   ],
+   "fingerabdruck": "3208123daf578cdc",
+   "freigegeben": false
+  },
+  "landschaft-nacht-v01": {
+   "kulisse": "landschaft",
+   "angaben": {
+    "zeit": "nacht",
+    "see": false,
+    "variante": 1
+   },
+   "kamera_y": 1080,
+   "figur_y": 1640,
+   "figur_skala": 0.95,
+   "dunkel": 0.35,
+   "lichter": [
+    {
+     "x": 831,
+     "y": 1489,
+     "r": 260,
+     "farbe": "#ffc66b",
+     "st": 0.9
+    },
+    {
+     "x": 661.5433753698738,
+     "y": 1400.4544306367081,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.2
+    },
+    {
+     "x": 738.1359508687729,
+     "y": 1164.0624580552271,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.45244129544236894
+    },
+    {
+     "x": 72.91418589898117,
+     "y": 849.1615144757529,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.4727892280477045
+    },
+    {
+     "x": 167.27207112638337,
+     "y": 1626.4903013312257,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.24233600241796016
+    },
+    {
+     "x": 585.7606997464384,
+     "y": 1018.6852579811584,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.42704074859237845
+    },
+    {
+     "x": 915.259599678122,
+     "y": 1219.8499813248507,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.48767728239894154
+    },
+    {
+     "x": 134.02374783539392,
+     "y": 695.4654296155805,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.2838246494596778
+    },
+    {
+     "x": 973.7657757930301,
+     "y": 1326.7351361797932,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.3970959796156367
+    },
+    {
+     "x": 1073.3269764600143,
+     "y": 1664.5601150322457,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.4968074739870145
+    },
+    {
+     "x": 380.9232488781697,
+     "y": 667.70677299307,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.323635545572527
+    },
+    {
+     "x": 106.42855842574363,
+     "y": 823.0583777138819,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.36320633326681095
+    },
+    {
+     "x": 628.1891992367626,
+     "y": 1036.3512040167516,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.49999706196521104
+    },
+    {
+     "x": 681.0634009782214,
+     "y": 1066.8029553581987,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.3609718754001305
+    },
+    {
+     "x": 423.1117795844939,
+     "y": 790.6791040536607,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.3260501110479923
+    },
+    {
+     "x": 798.1672353238021,
+     "y": 1213.8728134636274,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.4971822067084611
+    },
+    {
+     "x": 499.63523482491473,
+     "y": 774.5661356954514,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.39508635204713505
+    },
+    {
+     "x": 690.3486835426988,
+     "y": 984.9097567914857,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.28637099499951957
+    },
+    {
+     "x": 1047.1707272056574,
+     "y": 916.5628143865581,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.48841924756386706
+    }
+   ],
+   "fingerabdruck": "a216bf505b5b92db",
+   "freigegeben": false
+  },
+  "landschaft-nacht-v02": {
+   "kulisse": "landschaft",
+   "angaben": {
+    "zeit": "nacht",
+    "see": false,
+    "variante": 2
+   },
+   "kamera_y": 1080,
+   "figur_y": 1640,
+   "figur_skala": 0.95,
+   "dunkel": 0.35,
+   "lichter": [
+    {
+     "x": 831,
+     "y": 1489,
+     "r": 260,
+     "farbe": "#ffc66b",
+     "st": 0.9
+    },
+    {
+     "x": 661.5433753698738,
+     "y": 1400.4544306367081,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.2
+    },
+    {
+     "x": 738.1359508687729,
+     "y": 1164.0624580552271,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.45244129544236894
+    },
+    {
+     "x": 72.91418589898117,
+     "y": 849.1615144757529,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.4727892280477045
+    },
+    {
+     "x": 167.27207112638337,
+     "y": 1626.4903013312257,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.24233600241796016
+    },
+    {
+     "x": 585.7606997464384,
+     "y": 1018.6852579811584,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.42704074859237845
+    },
+    {
+     "x": 915.259599678122,
+     "y": 1219.8499813248507,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.48767728239894154
+    },
+    {
+     "x": 134.02374783539392,
+     "y": 695.4654296155805,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.2838246494596778
+    },
+    {
+     "x": 973.7657757930301,
+     "y": 1326.7351361797932,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.3970959796156367
+    },
+    {
+     "x": 1073.3269764600143,
+     "y": 1664.5601150322457,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.4968074739870145
+    },
+    {
+     "x": 380.9232488781697,
+     "y": 667.70677299307,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.323635545572527
+    },
+    {
+     "x": 106.42855842574363,
+     "y": 823.0583777138819,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.36320633326681095
+    },
+    {
+     "x": 628.1891992367626,
+     "y": 1036.3512040167516,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.49999706196521104
+    },
+    {
+     "x": 681.0634009782214,
+     "y": 1066.8029553581987,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.3609718754001305
+    },
+    {
+     "x": 423.1117795844939,
+     "y": 790.6791040536607,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.3260501110479923
+    },
+    {
+     "x": 798.1672353238021,
+     "y": 1213.8728134636274,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.4971822067084611
+    },
+    {
+     "x": 499.63523482491473,
+     "y": 774.5661356954514,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.39508635204713505
+    },
+    {
+     "x": 690.3486835426988,
+     "y": 984.9097567914857,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.28637099499951957
+    },
+    {
+     "x": 1047.1707272056574,
+     "y": 916.5628143865581,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.48841924756386706
+    }
+   ],
+   "fingerabdruck": "9007c89f46595843",
+   "freigegeben": false
+  },
+  "landschaft-nacht-v03": {
+   "kulisse": "landschaft",
+   "angaben": {
+    "zeit": "nacht",
+    "see": false,
+    "variante": 3
+   },
+   "kamera_y": 1080,
+   "figur_y": 1640,
+   "figur_skala": 0.95,
+   "dunkel": 0.35,
+   "lichter": [
+    {
+     "x": 831,
+     "y": 1489,
+     "r": 260,
+     "farbe": "#ffc66b",
+     "st": 0.9
+    },
+    {
+     "x": 661.5433753698738,
+     "y": 1400.4544306367081,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.2
+    },
+    {
+     "x": 738.1359508687729,
+     "y": 1164.0624580552271,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.45244129544236894
+    },
+    {
+     "x": 72.91418589898117,
+     "y": 849.1615144757529,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.4727892280477045
+    },
+    {
+     "x": 167.27207112638337,
+     "y": 1626.4903013312257,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.24233600241796016
+    },
+    {
+     "x": 585.7606997464384,
+     "y": 1018.6852579811584,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.42704074859237845
+    },
+    {
+     "x": 915.259599678122,
+     "y": 1219.8499813248507,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.48767728239894154
+    },
+    {
+     "x": 134.02374783539392,
+     "y": 695.4654296155805,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.2838246494596778
+    },
+    {
+     "x": 973.7657757930301,
+     "y": 1326.7351361797932,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.3970959796156367
+    },
+    {
+     "x": 1073.3269764600143,
+     "y": 1664.5601150322457,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.4968074739870145
+    },
+    {
+     "x": 380.9232488781697,
+     "y": 667.70677299307,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.323635545572527
+    },
+    {
+     "x": 106.42855842574363,
+     "y": 823.0583777138819,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.36320633326681095
+    },
+    {
+     "x": 628.1891992367626,
+     "y": 1036.3512040167516,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.49999706196521104
+    },
+    {
+     "x": 681.0634009782214,
+     "y": 1066.8029553581987,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.3609718754001305
+    },
+    {
+     "x": 423.1117795844939,
+     "y": 790.6791040536607,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.3260501110479923
+    },
+    {
+     "x": 798.1672353238021,
+     "y": 1213.8728134636274,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.4971822067084611
+    },
+    {
+     "x": 499.63523482491473,
+     "y": 774.5661356954514,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.39508635204713505
+    },
+    {
+     "x": 690.3486835426988,
+     "y": 984.9097567914857,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.28637099499951957
+    },
+    {
+     "x": 1047.1707272056574,
+     "y": 916.5628143865581,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.48841924756386706
+    }
+   ],
+   "fingerabdruck": "77b13d0b0533e4c5",
+   "freigegeben": false
+  },
+  "landschaft-nacht-v04": {
+   "kulisse": "landschaft",
+   "angaben": {
+    "zeit": "nacht",
+    "see": false,
+    "variante": 4
+   },
+   "kamera_y": 1080,
+   "figur_y": 1640,
+   "figur_skala": 0.95,
+   "dunkel": 0.35,
+   "lichter": [
+    {
+     "x": 831,
+     "y": 1489,
+     "r": 260,
+     "farbe": "#ffc66b",
+     "st": 0.9
+    },
+    {
+     "x": 661.5433753698738,
+     "y": 1400.4544306367081,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.2
+    },
+    {
+     "x": 738.1359508687729,
+     "y": 1164.0624580552271,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.45244129544236894
+    },
+    {
+     "x": 72.91418589898117,
+     "y": 849.1615144757529,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.4727892280477045
+    },
+    {
+     "x": 167.27207112638337,
+     "y": 1626.4903013312257,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.24233600241796016
+    },
+    {
+     "x": 585.7606997464384,
+     "y": 1018.6852579811584,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.42704074859237845
+    },
+    {
+     "x": 915.259599678122,
+     "y": 1219.8499813248507,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.48767728239894154
+    },
+    {
+     "x": 134.02374783539392,
+     "y": 695.4654296155805,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.2838246494596778
+    },
+    {
+     "x": 973.7657757930301,
+     "y": 1326.7351361797932,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.3970959796156367
+    },
+    {
+     "x": 1073.3269764600143,
+     "y": 1664.5601150322457,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.4968074739870145
+    },
+    {
+     "x": 380.9232488781697,
+     "y": 667.70677299307,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.323635545572527
+    },
+    {
+     "x": 106.42855842574363,
+     "y": 823.0583777138819,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.36320633326681095
+    },
+    {
+     "x": 628.1891992367626,
+     "y": 1036.3512040167516,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.49999706196521104
+    },
+    {
+     "x": 681.0634009782214,
+     "y": 1066.8029553581987,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.3609718754001305
+    },
+    {
+     "x": 423.1117795844939,
+     "y": 790.6791040536607,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.3260501110479923
+    },
+    {
+     "x": 798.1672353238021,
+     "y": 1213.8728134636274,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.4971822067084611
+    },
+    {
+     "x": 499.63523482491473,
+     "y": 774.5661356954514,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.39508635204713505
+    },
+    {
+     "x": 690.3486835426988,
+     "y": 984.9097567914857,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.28637099499951957
+    },
+    {
+     "x": 1047.1707272056574,
+     "y": 916.5628143865581,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.48841924756386706
+    }
+   ],
+   "fingerabdruck": "a794ea4b368df620",
+   "freigegeben": false
+  },
+  "landschaft-nacht-see-v01": {
+   "kulisse": "landschaft",
+   "angaben": {
+    "zeit": "nacht",
+    "see": true,
+    "variante": 1
+   },
+   "kamera_y": 1080,
+   "figur_y": 1640,
+   "figur_skala": 0.95,
+   "dunkel": 0.35,
+   "lichter": [
+    {
+     "x": 831,
+     "y": 1489,
+     "r": 260,
+     "farbe": "#ffc66b",
+     "st": 0.9
+    },
+    {
+     "x": 661.5433753698738,
+     "y": 1400.4544306367081,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.2
+    },
+    {
+     "x": 738.1359508687729,
+     "y": 1164.0624580552271,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.45244129544236894
+    },
+    {
+     "x": 72.91418589898117,
+     "y": 849.1615144757529,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.4727892280477045
+    },
+    {
+     "x": 167.27207112638337,
+     "y": 1626.4903013312257,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.24233600241796016
+    },
+    {
+     "x": 585.7606997464384,
+     "y": 1018.6852579811584,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.42704074859237845
+    },
+    {
+     "x": 915.259599678122,
+     "y": 1219.8499813248507,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.48767728239894154
+    },
+    {
+     "x": 134.02374783539392,
+     "y": 695.4654296155805,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.2838246494596778
+    },
+    {
+     "x": 973.7657757930301,
+     "y": 1326.7351361797932,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.3970959796156367
+    },
+    {
+     "x": 1073.3269764600143,
+     "y": 1664.5601150322457,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.4968074739870145
+    },
+    {
+     "x": 380.9232488781697,
+     "y": 667.70677299307,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.323635545572527
+    },
+    {
+     "x": 106.42855842574363,
+     "y": 823.0583777138819,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.36320633326681095
+    },
+    {
+     "x": 628.1891992367626,
+     "y": 1036.3512040167516,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.49999706196521104
+    },
+    {
+     "x": 681.0634009782214,
+     "y": 1066.8029553581987,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.3609718754001305
+    },
+    {
+     "x": 423.1117795844939,
+     "y": 790.6791040536607,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.3260501110479923
+    },
+    {
+     "x": 798.1672353238021,
+     "y": 1213.8728134636274,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.4971822067084611
+    },
+    {
+     "x": 499.63523482491473,
+     "y": 774.5661356954514,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.39508635204713505
+    },
+    {
+     "x": 690.3486835426988,
+     "y": 984.9097567914857,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.28637099499951957
+    },
+    {
+     "x": 1047.1707272056574,
+     "y": 916.5628143865581,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.48841924756386706
+    }
+   ],
+   "fingerabdruck": "39a8c82de628057e",
+   "freigegeben": false
+  },
+  "landschaft-nacht-see-v02": {
+   "kulisse": "landschaft",
+   "angaben": {
+    "zeit": "nacht",
+    "see": true,
+    "variante": 2
+   },
+   "kamera_y": 1080,
+   "figur_y": 1640,
+   "figur_skala": 0.95,
+   "dunkel": 0.35,
+   "lichter": [
+    {
+     "x": 831,
+     "y": 1489,
+     "r": 260,
+     "farbe": "#ffc66b",
+     "st": 0.9
+    },
+    {
+     "x": 661.5433753698738,
+     "y": 1400.4544306367081,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.2
+    },
+    {
+     "x": 738.1359508687729,
+     "y": 1164.0624580552271,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.45244129544236894
+    },
+    {
+     "x": 72.91418589898117,
+     "y": 849.1615144757529,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.4727892280477045
+    },
+    {
+     "x": 167.27207112638337,
+     "y": 1626.4903013312257,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.24233600241796016
+    },
+    {
+     "x": 585.7606997464384,
+     "y": 1018.6852579811584,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.42704074859237845
+    },
+    {
+     "x": 915.259599678122,
+     "y": 1219.8499813248507,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.48767728239894154
+    },
+    {
+     "x": 134.02374783539392,
+     "y": 695.4654296155805,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.2838246494596778
+    },
+    {
+     "x": 973.7657757930301,
+     "y": 1326.7351361797932,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.3970959796156367
+    },
+    {
+     "x": 1073.3269764600143,
+     "y": 1664.5601150322457,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.4968074739870145
+    },
+    {
+     "x": 380.9232488781697,
+     "y": 667.70677299307,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.323635545572527
+    },
+    {
+     "x": 106.42855842574363,
+     "y": 823.0583777138819,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.36320633326681095
+    },
+    {
+     "x": 628.1891992367626,
+     "y": 1036.3512040167516,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.49999706196521104
+    },
+    {
+     "x": 681.0634009782214,
+     "y": 1066.8029553581987,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.3609718754001305
+    },
+    {
+     "x": 423.1117795844939,
+     "y": 790.6791040536607,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.3260501110479923
+    },
+    {
+     "x": 798.1672353238021,
+     "y": 1213.8728134636274,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.4971822067084611
+    },
+    {
+     "x": 499.63523482491473,
+     "y": 774.5661356954514,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.39508635204713505
+    },
+    {
+     "x": 690.3486835426988,
+     "y": 984.9097567914857,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.28637099499951957
+    },
+    {
+     "x": 1047.1707272056574,
+     "y": 916.5628143865581,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.48841924756386706
+    }
+   ],
+   "fingerabdruck": "750b0715c490049c",
+   "freigegeben": false
+  },
+  "landschaft-nacht-see-v03": {
+   "kulisse": "landschaft",
+   "angaben": {
+    "zeit": "nacht",
+    "see": true,
+    "variante": 3
+   },
+   "kamera_y": 1080,
+   "figur_y": 1640,
+   "figur_skala": 0.95,
+   "dunkel": 0.35,
+   "lichter": [
+    {
+     "x": 831,
+     "y": 1489,
+     "r": 260,
+     "farbe": "#ffc66b",
+     "st": 0.9
+    },
+    {
+     "x": 661.5433753698738,
+     "y": 1400.4544306367081,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.2
+    },
+    {
+     "x": 738.1359508687729,
+     "y": 1164.0624580552271,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.45244129544236894
+    },
+    {
+     "x": 72.91418589898117,
+     "y": 849.1615144757529,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.4727892280477045
+    },
+    {
+     "x": 167.27207112638337,
+     "y": 1626.4903013312257,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.24233600241796016
+    },
+    {
+     "x": 585.7606997464384,
+     "y": 1018.6852579811584,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.42704074859237845
+    },
+    {
+     "x": 915.259599678122,
+     "y": 1219.8499813248507,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.48767728239894154
+    },
+    {
+     "x": 134.02374783539392,
+     "y": 695.4654296155805,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.2838246494596778
+    },
+    {
+     "x": 973.7657757930301,
+     "y": 1326.7351361797932,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.3970959796156367
+    },
+    {
+     "x": 1073.3269764600143,
+     "y": 1664.5601150322457,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.4968074739870145
+    },
+    {
+     "x": 380.9232488781697,
+     "y": 667.70677299307,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.323635545572527
+    },
+    {
+     "x": 106.42855842574363,
+     "y": 823.0583777138819,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.36320633326681095
+    },
+    {
+     "x": 628.1891992367626,
+     "y": 1036.3512040167516,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.49999706196521104
+    },
+    {
+     "x": 681.0634009782214,
+     "y": 1066.8029553581987,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.3609718754001305
+    },
+    {
+     "x": 423.1117795844939,
+     "y": 790.6791040536607,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.3260501110479923
+    },
+    {
+     "x": 798.1672353238021,
+     "y": 1213.8728134636274,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.4971822067084611
+    },
+    {
+     "x": 499.63523482491473,
+     "y": 774.5661356954514,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.39508635204713505
+    },
+    {
+     "x": 690.3486835426988,
+     "y": 984.9097567914857,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.28637099499951957
+    },
+    {
+     "x": 1047.1707272056574,
+     "y": 916.5628143865581,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.48841924756386706
+    }
+   ],
+   "fingerabdruck": "6bf2df45623fca23",
+   "freigegeben": false
+  },
+  "landschaft-nacht-see-v04": {
+   "kulisse": "landschaft",
+   "angaben": {
+    "zeit": "nacht",
+    "see": true,
+    "variante": 4
+   },
+   "kamera_y": 1080,
+   "figur_y": 1640,
+   "figur_skala": 0.95,
+   "dunkel": 0.35,
+   "lichter": [
+    {
+     "x": 831,
+     "y": 1489,
+     "r": 260,
+     "farbe": "#ffc66b",
+     "st": 0.9
+    },
+    {
+     "x": 661.5433753698738,
+     "y": 1400.4544306367081,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.2
+    },
+    {
+     "x": 738.1359508687729,
+     "y": 1164.0624580552271,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.45244129544236894
+    },
+    {
+     "x": 72.91418589898117,
+     "y": 849.1615144757529,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.4727892280477045
+    },
+    {
+     "x": 167.27207112638337,
+     "y": 1626.4903013312257,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.24233600241796016
+    },
+    {
+     "x": 585.7606997464384,
+     "y": 1018.6852579811584,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.42704074859237845
+    },
+    {
+     "x": 915.259599678122,
+     "y": 1219.8499813248507,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.48767728239894154
+    },
+    {
+     "x": 134.02374783539392,
+     "y": 695.4654296155805,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.2838246494596778
+    },
+    {
+     "x": 973.7657757930301,
+     "y": 1326.7351361797932,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.3970959796156367
+    },
+    {
+     "x": 1073.3269764600143,
+     "y": 1664.5601150322457,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.4968074739870145
+    },
+    {
+     "x": 380.9232488781697,
+     "y": 667.70677299307,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.323635545572527
+    },
+    {
+     "x": 106.42855842574363,
+     "y": 823.0583777138819,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.36320633326681095
+    },
+    {
+     "x": 628.1891992367626,
+     "y": 1036.3512040167516,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.49999706196521104
+    },
+    {
+     "x": 681.0634009782214,
+     "y": 1066.8029553581987,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.3609718754001305
+    },
+    {
+     "x": 423.1117795844939,
+     "y": 790.6791040536607,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.3260501110479923
+    },
+    {
+     "x": 798.1672353238021,
+     "y": 1213.8728134636274,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.4971822067084611
+    },
+    {
+     "x": 499.63523482491473,
+     "y": 774.5661356954514,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.39508635204713505
+    },
+    {
+     "x": 690.3486835426988,
+     "y": 984.9097567914857,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.28637099499951957
+    },
+    {
+     "x": 1047.1707272056574,
+     "y": 916.5628143865581,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.48841924756386706
+    }
+   ],
+   "fingerabdruck": "51a8c8b54ea6281e",
+   "freigegeben": false
+  },
+  "wald-tag-v01": {
+   "kulisse": "wald",
+   "angaben": {
+    "zeit": "tag",
+    "nebel": false,
+    "variante": 1
+   },
+   "kamera_y": 1080,
+   "figur_y": 1660,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "bef9a010ef40837f",
+   "freigegeben": false
+  },
+  "wald-tag-v02": {
+   "kulisse": "wald",
+   "angaben": {
+    "zeit": "tag",
+    "nebel": false,
+    "variante": 2
+   },
+   "kamera_y": 1080,
+   "figur_y": 1660,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "398e7b1215dfa7bd",
+   "freigegeben": false
+  },
+  "wald-tag-v03": {
+   "kulisse": "wald",
+   "angaben": {
+    "zeit": "tag",
+    "nebel": false,
+    "variante": 3
+   },
+   "kamera_y": 1080,
+   "figur_y": 1660,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "8c5879d9a6bbcf9d",
+   "freigegeben": false
+  },
+  "wald-tag-v04": {
+   "kulisse": "wald",
+   "angaben": {
+    "zeit": "tag",
+    "nebel": false,
+    "variante": 4
+   },
+   "kamera_y": 1080,
+   "figur_y": 1660,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "c5d003cbdd3399e9",
+   "freigegeben": false
+  },
+  "wald-tag-nebel-v01": {
+   "kulisse": "wald",
+   "angaben": {
+    "zeit": "tag",
+    "nebel": true,
+    "variante": 1
+   },
+   "kamera_y": 1080,
+   "figur_y": 1660,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "7ada3cbc5f9c68a4",
+   "freigegeben": false
+  },
+  "wald-tag-nebel-v02": {
+   "kulisse": "wald",
+   "angaben": {
+    "zeit": "tag",
+    "nebel": true,
+    "variante": 2
+   },
+   "kamera_y": 1080,
+   "figur_y": 1660,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "a457a5723206edfa",
+   "freigegeben": false
+  },
+  "wald-tag-nebel-v03": {
+   "kulisse": "wald",
+   "angaben": {
+    "zeit": "tag",
+    "nebel": true,
+    "variante": 3
+   },
+   "kamera_y": 1080,
+   "figur_y": 1660,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "0737e4f51909c592",
+   "freigegeben": false
+  },
+  "wald-tag-nebel-v04": {
+   "kulisse": "wald",
+   "angaben": {
+    "zeit": "tag",
+    "nebel": true,
+    "variante": 4
+   },
+   "kamera_y": 1080,
+   "figur_y": 1660,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "a78a523e8eafc8e1",
+   "freigegeben": false
+  },
+  "wald-morgen-v01": {
+   "kulisse": "wald",
+   "angaben": {
+    "zeit": "morgen",
+    "nebel": false,
+    "variante": 1
+   },
+   "kamera_y": 1080,
+   "figur_y": 1660,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "9b765467234ea676",
+   "freigegeben": false
+  },
+  "wald-morgen-v02": {
+   "kulisse": "wald",
+   "angaben": {
+    "zeit": "morgen",
+    "nebel": false,
+    "variante": 2
+   },
+   "kamera_y": 1080,
+   "figur_y": 1660,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "b861ed99b5dd1c57",
+   "freigegeben": false
+  },
+  "wald-morgen-v03": {
+   "kulisse": "wald",
+   "angaben": {
+    "zeit": "morgen",
+    "nebel": false,
+    "variante": 3
+   },
+   "kamera_y": 1080,
+   "figur_y": 1660,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "8394d7dac08d2f1c",
+   "freigegeben": false
+  },
+  "wald-morgen-v04": {
+   "kulisse": "wald",
+   "angaben": {
+    "zeit": "morgen",
+    "nebel": false,
+    "variante": 4
+   },
+   "kamera_y": 1080,
+   "figur_y": 1660,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "ad990bae568915a7",
+   "freigegeben": false
+  },
+  "wald-morgen-nebel-v01": {
+   "kulisse": "wald",
+   "angaben": {
+    "zeit": "morgen",
+    "nebel": true,
+    "variante": 1
+   },
+   "kamera_y": 1080,
+   "figur_y": 1660,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "ad3b435f0aac673d",
+   "freigegeben": false
+  },
+  "wald-morgen-nebel-v02": {
+   "kulisse": "wald",
+   "angaben": {
+    "zeit": "morgen",
+    "nebel": true,
+    "variante": 2
+   },
+   "kamera_y": 1080,
+   "figur_y": 1660,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "03ccc8ddb503cf4e",
+   "freigegeben": false
+  },
+  "wald-morgen-nebel-v03": {
+   "kulisse": "wald",
+   "angaben": {
+    "zeit": "morgen",
+    "nebel": true,
+    "variante": 3
+   },
+   "kamera_y": 1080,
+   "figur_y": 1660,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "c233d7e2e27c76e8",
+   "freigegeben": false
+  },
+  "wald-morgen-nebel-v04": {
+   "kulisse": "wald",
+   "angaben": {
+    "zeit": "morgen",
+    "nebel": true,
+    "variante": 4
+   },
+   "kamera_y": 1080,
+   "figur_y": 1660,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "f9cac8f4b7dc32ad",
+   "freigegeben": false
+  },
+  "wald-abend-v01": {
+   "kulisse": "wald",
+   "angaben": {
+    "zeit": "abend",
+    "nebel": false,
+    "variante": 1
+   },
+   "kamera_y": 1080,
+   "figur_y": 1660,
+   "figur_skala": 0.95,
+   "dunkel": 0.15,
+   "lichter": [],
+   "fingerabdruck": "9756094e8883794b",
+   "freigegeben": false
+  },
+  "wald-abend-v02": {
+   "kulisse": "wald",
+   "angaben": {
+    "zeit": "abend",
+    "nebel": false,
+    "variante": 2
+   },
+   "kamera_y": 1080,
+   "figur_y": 1660,
+   "figur_skala": 0.95,
+   "dunkel": 0.15,
+   "lichter": [],
+   "fingerabdruck": "84a4473ca55dbca2",
+   "freigegeben": false
+  },
+  "wald-abend-v03": {
+   "kulisse": "wald",
+   "angaben": {
+    "zeit": "abend",
+    "nebel": false,
+    "variante": 3
+   },
+   "kamera_y": 1080,
+   "figur_y": 1660,
+   "figur_skala": 0.95,
+   "dunkel": 0.15,
+   "lichter": [],
+   "fingerabdruck": "57e5de09b3278317",
+   "freigegeben": false
+  },
+  "wald-abend-v04": {
+   "kulisse": "wald",
+   "angaben": {
+    "zeit": "abend",
+    "nebel": false,
+    "variante": 4
+   },
+   "kamera_y": 1080,
+   "figur_y": 1660,
+   "figur_skala": 0.95,
+   "dunkel": 0.15,
+   "lichter": [],
+   "fingerabdruck": "202f61f7bf033a35",
+   "freigegeben": false
+  },
+  "wald-abend-nebel-v01": {
+   "kulisse": "wald",
+   "angaben": {
+    "zeit": "abend",
+    "nebel": true,
+    "variante": 1
+   },
+   "kamera_y": 1080,
+   "figur_y": 1660,
+   "figur_skala": 0.95,
+   "dunkel": 0.15,
+   "lichter": [],
+   "fingerabdruck": "f5edbea3e314106a",
+   "freigegeben": false
+  },
+  "wald-abend-nebel-v02": {
+   "kulisse": "wald",
+   "angaben": {
+    "zeit": "abend",
+    "nebel": true,
+    "variante": 2
+   },
+   "kamera_y": 1080,
+   "figur_y": 1660,
+   "figur_skala": 0.95,
+   "dunkel": 0.15,
+   "lichter": [],
+   "fingerabdruck": "f0f34bc46b698b3c",
+   "freigegeben": false
+  },
+  "wald-abend-nebel-v03": {
+   "kulisse": "wald",
+   "angaben": {
+    "zeit": "abend",
+    "nebel": true,
+    "variante": 3
+   },
+   "kamera_y": 1080,
+   "figur_y": 1660,
+   "figur_skala": 0.95,
+   "dunkel": 0.15,
+   "lichter": [],
+   "fingerabdruck": "bfd9d87732ab5ea4",
+   "freigegeben": false
+  },
+  "wald-abend-nebel-v04": {
+   "kulisse": "wald",
+   "angaben": {
+    "zeit": "abend",
+    "nebel": true,
+    "variante": 4
+   },
+   "kamera_y": 1080,
+   "figur_y": 1660,
+   "figur_skala": 0.95,
+   "dunkel": 0.15,
+   "lichter": [],
+   "fingerabdruck": "2559080ab74a84da",
+   "freigegeben": false
+  },
+  "wald-nacht-v01": {
+   "kulisse": "wald",
+   "angaben": {
+    "zeit": "nacht",
+    "nebel": false,
+    "variante": 1
+   },
+   "kamera_y": 1080,
+   "figur_y": 1660,
+   "figur_skala": 0.95,
+   "dunkel": 0.45,
+   "lichter": [
+    {
+     "x": 661.5433753698738,
+     "y": 1400.4544306367081,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.2
+    },
+    {
+     "x": 738.1359508687729,
+     "y": 1164.0624580552271,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.45244129544236894
+    },
+    {
+     "x": 72.91418589898117,
+     "y": 849.1615144757529,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.4727892280477045
+    },
+    {
+     "x": 167.27207112638337,
+     "y": 1626.4903013312257,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.24233600241796016
+    },
+    {
+     "x": 585.7606997464384,
+     "y": 1018.6852579811584,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.42704074859237845
+    },
+    {
+     "x": 915.259599678122,
+     "y": 1219.8499813248507,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.48767728239894154
+    },
+    {
+     "x": 134.02374783539392,
+     "y": 695.4654296155805,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.2838246494596778
+    },
+    {
+     "x": 973.7657757930301,
+     "y": 1326.7351361797932,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.3970959796156367
+    },
+    {
+     "x": 1073.3269764600143,
+     "y": 1664.5601150322457,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.4968074739870145
+    },
+    {
+     "x": 380.9232488781697,
+     "y": 667.70677299307,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.323635545572527
+    },
+    {
+     "x": 106.42855842574363,
+     "y": 823.0583777138819,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.36320633326681095
+    },
+    {
+     "x": 628.1891992367626,
+     "y": 1036.3512040167516,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.49999706196521104
+    },
+    {
+     "x": 681.0634009782214,
+     "y": 1066.8029553581987,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.3609718754001305
+    },
+    {
+     "x": 423.1117795844939,
+     "y": 790.6791040536607,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.3260501110479923
+    },
+    {
+     "x": 798.1672353238021,
+     "y": 1213.8728134636274,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.4971822067084611
+    },
+    {
+     "x": 499.63523482491473,
+     "y": 774.5661356954514,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.39508635204713505
+    },
+    {
+     "x": 690.3486835426988,
+     "y": 984.9097567914857,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.28637099499951957
+    },
+    {
+     "x": 1047.1707272056574,
+     "y": 916.5628143865581,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.48841924756386706
+    }
+   ],
+   "fingerabdruck": "6902d6c4e918fe58",
+   "freigegeben": false
+  },
+  "wald-nacht-v02": {
+   "kulisse": "wald",
+   "angaben": {
+    "zeit": "nacht",
+    "nebel": false,
+    "variante": 2
+   },
+   "kamera_y": 1080,
+   "figur_y": 1660,
+   "figur_skala": 0.95,
+   "dunkel": 0.45,
+   "lichter": [
+    {
+     "x": 661.5433753698738,
+     "y": 1400.4544306367081,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.2
+    },
+    {
+     "x": 738.1359508687729,
+     "y": 1164.0624580552271,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.45244129544236894
+    },
+    {
+     "x": 72.91418589898117,
+     "y": 849.1615144757529,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.4727892280477045
+    },
+    {
+     "x": 167.27207112638337,
+     "y": 1626.4903013312257,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.24233600241796016
+    },
+    {
+     "x": 585.7606997464384,
+     "y": 1018.6852579811584,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.42704074859237845
+    },
+    {
+     "x": 915.259599678122,
+     "y": 1219.8499813248507,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.48767728239894154
+    },
+    {
+     "x": 134.02374783539392,
+     "y": 695.4654296155805,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.2838246494596778
+    },
+    {
+     "x": 973.7657757930301,
+     "y": 1326.7351361797932,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.3970959796156367
+    },
+    {
+     "x": 1073.3269764600143,
+     "y": 1664.5601150322457,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.4968074739870145
+    },
+    {
+     "x": 380.9232488781697,
+     "y": 667.70677299307,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.323635545572527
+    },
+    {
+     "x": 106.42855842574363,
+     "y": 823.0583777138819,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.36320633326681095
+    },
+    {
+     "x": 628.1891992367626,
+     "y": 1036.3512040167516,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.49999706196521104
+    },
+    {
+     "x": 681.0634009782214,
+     "y": 1066.8029553581987,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.3609718754001305
+    },
+    {
+     "x": 423.1117795844939,
+     "y": 790.6791040536607,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.3260501110479923
+    },
+    {
+     "x": 798.1672353238021,
+     "y": 1213.8728134636274,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.4971822067084611
+    },
+    {
+     "x": 499.63523482491473,
+     "y": 774.5661356954514,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.39508635204713505
+    },
+    {
+     "x": 690.3486835426988,
+     "y": 984.9097567914857,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.28637099499951957
+    },
+    {
+     "x": 1047.1707272056574,
+     "y": 916.5628143865581,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.48841924756386706
+    }
+   ],
+   "fingerabdruck": "ea9ddeceaa24687c",
+   "freigegeben": false
+  },
+  "wald-nacht-v03": {
+   "kulisse": "wald",
+   "angaben": {
+    "zeit": "nacht",
+    "nebel": false,
+    "variante": 3
+   },
+   "kamera_y": 1080,
+   "figur_y": 1660,
+   "figur_skala": 0.95,
+   "dunkel": 0.45,
+   "lichter": [
+    {
+     "x": 661.5433753698738,
+     "y": 1400.4544306367081,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.2
+    },
+    {
+     "x": 738.1359508687729,
+     "y": 1164.0624580552271,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.45244129544236894
+    },
+    {
+     "x": 72.91418589898117,
+     "y": 849.1615144757529,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.4727892280477045
+    },
+    {
+     "x": 167.27207112638337,
+     "y": 1626.4903013312257,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.24233600241796016
+    },
+    {
+     "x": 585.7606997464384,
+     "y": 1018.6852579811584,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.42704074859237845
+    },
+    {
+     "x": 915.259599678122,
+     "y": 1219.8499813248507,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.48767728239894154
+    },
+    {
+     "x": 134.02374783539392,
+     "y": 695.4654296155805,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.2838246494596778
+    },
+    {
+     "x": 973.7657757930301,
+     "y": 1326.7351361797932,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.3970959796156367
+    },
+    {
+     "x": 1073.3269764600143,
+     "y": 1664.5601150322457,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.4968074739870145
+    },
+    {
+     "x": 380.9232488781697,
+     "y": 667.70677299307,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.323635545572527
+    },
+    {
+     "x": 106.42855842574363,
+     "y": 823.0583777138819,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.36320633326681095
+    },
+    {
+     "x": 628.1891992367626,
+     "y": 1036.3512040167516,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.49999706196521104
+    },
+    {
+     "x": 681.0634009782214,
+     "y": 1066.8029553581987,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.3609718754001305
+    },
+    {
+     "x": 423.1117795844939,
+     "y": 790.6791040536607,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.3260501110479923
+    },
+    {
+     "x": 798.1672353238021,
+     "y": 1213.8728134636274,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.4971822067084611
+    },
+    {
+     "x": 499.63523482491473,
+     "y": 774.5661356954514,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.39508635204713505
+    },
+    {
+     "x": 690.3486835426988,
+     "y": 984.9097567914857,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.28637099499951957
+    },
+    {
+     "x": 1047.1707272056574,
+     "y": 916.5628143865581,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.48841924756386706
+    }
+   ],
+   "fingerabdruck": "1d434d4409531447",
+   "freigegeben": false
+  },
+  "wald-nacht-v04": {
+   "kulisse": "wald",
+   "angaben": {
+    "zeit": "nacht",
+    "nebel": false,
+    "variante": 4
+   },
+   "kamera_y": 1080,
+   "figur_y": 1660,
+   "figur_skala": 0.95,
+   "dunkel": 0.45,
+   "lichter": [
+    {
+     "x": 661.5433753698738,
+     "y": 1400.4544306367081,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.2
+    },
+    {
+     "x": 738.1359508687729,
+     "y": 1164.0624580552271,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.45244129544236894
+    },
+    {
+     "x": 72.91418589898117,
+     "y": 849.1615144757529,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.4727892280477045
+    },
+    {
+     "x": 167.27207112638337,
+     "y": 1626.4903013312257,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.24233600241796016
+    },
+    {
+     "x": 585.7606997464384,
+     "y": 1018.6852579811584,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.42704074859237845
+    },
+    {
+     "x": 915.259599678122,
+     "y": 1219.8499813248507,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.48767728239894154
+    },
+    {
+     "x": 134.02374783539392,
+     "y": 695.4654296155805,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.2838246494596778
+    },
+    {
+     "x": 973.7657757930301,
+     "y": 1326.7351361797932,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.3970959796156367
+    },
+    {
+     "x": 1073.3269764600143,
+     "y": 1664.5601150322457,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.4968074739870145
+    },
+    {
+     "x": 380.9232488781697,
+     "y": 667.70677299307,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.323635545572527
+    },
+    {
+     "x": 106.42855842574363,
+     "y": 823.0583777138819,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.36320633326681095
+    },
+    {
+     "x": 628.1891992367626,
+     "y": 1036.3512040167516,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.49999706196521104
+    },
+    {
+     "x": 681.0634009782214,
+     "y": 1066.8029553581987,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.3609718754001305
+    },
+    {
+     "x": 423.1117795844939,
+     "y": 790.6791040536607,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.3260501110479923
+    },
+    {
+     "x": 798.1672353238021,
+     "y": 1213.8728134636274,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.4971822067084611
+    },
+    {
+     "x": 499.63523482491473,
+     "y": 774.5661356954514,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.39508635204713505
+    },
+    {
+     "x": 690.3486835426988,
+     "y": 984.9097567914857,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.28637099499951957
+    },
+    {
+     "x": 1047.1707272056574,
+     "y": 916.5628143865581,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.48841924756386706
+    }
+   ],
+   "fingerabdruck": "41c9fc668bce4ff7",
+   "freigegeben": false
+  },
+  "wald-nacht-nebel-v01": {
+   "kulisse": "wald",
+   "angaben": {
+    "zeit": "nacht",
+    "nebel": true,
+    "variante": 1
+   },
+   "kamera_y": 1080,
+   "figur_y": 1660,
+   "figur_skala": 0.95,
+   "dunkel": 0.45,
+   "lichter": [
+    {
+     "x": 661.5433753698738,
+     "y": 1400.4544306367081,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.2
+    },
+    {
+     "x": 738.1359508687729,
+     "y": 1164.0624580552271,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.45244129544236894
+    },
+    {
+     "x": 72.91418589898117,
+     "y": 849.1615144757529,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.4727892280477045
+    },
+    {
+     "x": 167.27207112638337,
+     "y": 1626.4903013312257,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.24233600241796016
+    },
+    {
+     "x": 585.7606997464384,
+     "y": 1018.6852579811584,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.42704074859237845
+    },
+    {
+     "x": 915.259599678122,
+     "y": 1219.8499813248507,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.48767728239894154
+    },
+    {
+     "x": 134.02374783539392,
+     "y": 695.4654296155805,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.2838246494596778
+    },
+    {
+     "x": 973.7657757930301,
+     "y": 1326.7351361797932,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.3970959796156367
+    },
+    {
+     "x": 1073.3269764600143,
+     "y": 1664.5601150322457,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.4968074739870145
+    },
+    {
+     "x": 380.9232488781697,
+     "y": 667.70677299307,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.323635545572527
+    },
+    {
+     "x": 106.42855842574363,
+     "y": 823.0583777138819,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.36320633326681095
+    },
+    {
+     "x": 628.1891992367626,
+     "y": 1036.3512040167516,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.49999706196521104
+    },
+    {
+     "x": 681.0634009782214,
+     "y": 1066.8029553581987,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.3609718754001305
+    },
+    {
+     "x": 423.1117795844939,
+     "y": 790.6791040536607,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.3260501110479923
+    },
+    {
+     "x": 798.1672353238021,
+     "y": 1213.8728134636274,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.4971822067084611
+    },
+    {
+     "x": 499.63523482491473,
+     "y": 774.5661356954514,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.39508635204713505
+    },
+    {
+     "x": 690.3486835426988,
+     "y": 984.9097567914857,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.28637099499951957
+    },
+    {
+     "x": 1047.1707272056574,
+     "y": 916.5628143865581,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.48841924756386706
+    }
+   ],
+   "fingerabdruck": "18bfd7d291f8d60f",
+   "freigegeben": false
+  },
+  "wald-nacht-nebel-v02": {
+   "kulisse": "wald",
+   "angaben": {
+    "zeit": "nacht",
+    "nebel": true,
+    "variante": 2
+   },
+   "kamera_y": 1080,
+   "figur_y": 1660,
+   "figur_skala": 0.95,
+   "dunkel": 0.45,
+   "lichter": [
+    {
+     "x": 661.5433753698738,
+     "y": 1400.4544306367081,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.2
+    },
+    {
+     "x": 738.1359508687729,
+     "y": 1164.0624580552271,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.45244129544236894
+    },
+    {
+     "x": 72.91418589898117,
+     "y": 849.1615144757529,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.4727892280477045
+    },
+    {
+     "x": 167.27207112638337,
+     "y": 1626.4903013312257,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.24233600241796016
+    },
+    {
+     "x": 585.7606997464384,
+     "y": 1018.6852579811584,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.42704074859237845
+    },
+    {
+     "x": 915.259599678122,
+     "y": 1219.8499813248507,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.48767728239894154
+    },
+    {
+     "x": 134.02374783539392,
+     "y": 695.4654296155805,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.2838246494596778
+    },
+    {
+     "x": 973.7657757930301,
+     "y": 1326.7351361797932,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.3970959796156367
+    },
+    {
+     "x": 1073.3269764600143,
+     "y": 1664.5601150322457,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.4968074739870145
+    },
+    {
+     "x": 380.9232488781697,
+     "y": 667.70677299307,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.323635545572527
+    },
+    {
+     "x": 106.42855842574363,
+     "y": 823.0583777138819,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.36320633326681095
+    },
+    {
+     "x": 628.1891992367626,
+     "y": 1036.3512040167516,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.49999706196521104
+    },
+    {
+     "x": 681.0634009782214,
+     "y": 1066.8029553581987,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.3609718754001305
+    },
+    {
+     "x": 423.1117795844939,
+     "y": 790.6791040536607,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.3260501110479923
+    },
+    {
+     "x": 798.1672353238021,
+     "y": 1213.8728134636274,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.4971822067084611
+    },
+    {
+     "x": 499.63523482491473,
+     "y": 774.5661356954514,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.39508635204713505
+    },
+    {
+     "x": 690.3486835426988,
+     "y": 984.9097567914857,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.28637099499951957
+    },
+    {
+     "x": 1047.1707272056574,
+     "y": 916.5628143865581,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.48841924756386706
+    }
+   ],
+   "fingerabdruck": "80d2c37db11e1ba7",
+   "freigegeben": false
+  },
+  "wald-nacht-nebel-v03": {
+   "kulisse": "wald",
+   "angaben": {
+    "zeit": "nacht",
+    "nebel": true,
+    "variante": 3
+   },
+   "kamera_y": 1080,
+   "figur_y": 1660,
+   "figur_skala": 0.95,
+   "dunkel": 0.45,
+   "lichter": [
+    {
+     "x": 661.5433753698738,
+     "y": 1400.4544306367081,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.2
+    },
+    {
+     "x": 738.1359508687729,
+     "y": 1164.0624580552271,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.45244129544236894
+    },
+    {
+     "x": 72.91418589898117,
+     "y": 849.1615144757529,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.4727892280477045
+    },
+    {
+     "x": 167.27207112638337,
+     "y": 1626.4903013312257,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.24233600241796016
+    },
+    {
+     "x": 585.7606997464384,
+     "y": 1018.6852579811584,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.42704074859237845
+    },
+    {
+     "x": 915.259599678122,
+     "y": 1219.8499813248507,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.48767728239894154
+    },
+    {
+     "x": 134.02374783539392,
+     "y": 695.4654296155805,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.2838246494596778
+    },
+    {
+     "x": 973.7657757930301,
+     "y": 1326.7351361797932,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.3970959796156367
+    },
+    {
+     "x": 1073.3269764600143,
+     "y": 1664.5601150322457,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.4968074739870145
+    },
+    {
+     "x": 380.9232488781697,
+     "y": 667.70677299307,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.323635545572527
+    },
+    {
+     "x": 106.42855842574363,
+     "y": 823.0583777138819,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.36320633326681095
+    },
+    {
+     "x": 628.1891992367626,
+     "y": 1036.3512040167516,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.49999706196521104
+    },
+    {
+     "x": 681.0634009782214,
+     "y": 1066.8029553581987,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.3609718754001305
+    },
+    {
+     "x": 423.1117795844939,
+     "y": 790.6791040536607,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.3260501110479923
+    },
+    {
+     "x": 798.1672353238021,
+     "y": 1213.8728134636274,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.4971822067084611
+    },
+    {
+     "x": 499.63523482491473,
+     "y": 774.5661356954514,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.39508635204713505
+    },
+    {
+     "x": 690.3486835426988,
+     "y": 984.9097567914857,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.28637099499951957
+    },
+    {
+     "x": 1047.1707272056574,
+     "y": 916.5628143865581,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.48841924756386706
+    }
+   ],
+   "fingerabdruck": "0e4c5ff1cb233646",
+   "freigegeben": false
+  },
+  "wald-nacht-nebel-v04": {
+   "kulisse": "wald",
+   "angaben": {
+    "zeit": "nacht",
+    "nebel": true,
+    "variante": 4
+   },
+   "kamera_y": 1080,
+   "figur_y": 1660,
+   "figur_skala": 0.95,
+   "dunkel": 0.45,
+   "lichter": [
+    {
+     "x": 661.5433753698738,
+     "y": 1400.4544306367081,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.2
+    },
+    {
+     "x": 738.1359508687729,
+     "y": 1164.0624580552271,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.45244129544236894
+    },
+    {
+     "x": 72.91418589898117,
+     "y": 849.1615144757529,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.4727892280477045
+    },
+    {
+     "x": 167.27207112638337,
+     "y": 1626.4903013312257,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.24233600241796016
+    },
+    {
+     "x": 585.7606997464384,
+     "y": 1018.6852579811584,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.42704074859237845
+    },
+    {
+     "x": 915.259599678122,
+     "y": 1219.8499813248507,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.48767728239894154
+    },
+    {
+     "x": 134.02374783539392,
+     "y": 695.4654296155805,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.2838246494596778
+    },
+    {
+     "x": 973.7657757930301,
+     "y": 1326.7351361797932,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.3970959796156367
+    },
+    {
+     "x": 1073.3269764600143,
+     "y": 1664.5601150322457,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.4968074739870145
+    },
+    {
+     "x": 380.9232488781697,
+     "y": 667.70677299307,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.323635545572527
+    },
+    {
+     "x": 106.42855842574363,
+     "y": 823.0583777138819,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.36320633326681095
+    },
+    {
+     "x": 628.1891992367626,
+     "y": 1036.3512040167516,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.49999706196521104
+    },
+    {
+     "x": 681.0634009782214,
+     "y": 1066.8029553581987,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.3609718754001305
+    },
+    {
+     "x": 423.1117795844939,
+     "y": 790.6791040536607,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.3260501110479923
+    },
+    {
+     "x": 798.1672353238021,
+     "y": 1213.8728134636274,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.4971822067084611
+    },
+    {
+     "x": 499.63523482491473,
+     "y": 774.5661356954514,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.39508635204713505
+    },
+    {
+     "x": 690.3486835426988,
+     "y": 984.9097567914857,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.28637099499951957
+    },
+    {
+     "x": 1047.1707272056574,
+     "y": 916.5628143865581,
+     "r": 60,
+     "farbe": "#f2e98a",
+     "st": 0.48841924756386706
+    }
+   ],
+   "fingerabdruck": "824d4f10e283f1cf",
+   "freigegeben": false
+  },
+  "grossstadt-tag-weit-v01": {
+   "kulisse": "grossstadt",
+   "angaben": {
+    "zeit": "tag",
+    "variante": 1,
+    "dach": false
+   },
+   "kamera_y": 1080,
+   "figur_y": 1700,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "b647bd9fb632cb24",
+   "freigegeben": false
+  },
+  "grossstadt-tag-weit-v02": {
+   "kulisse": "grossstadt",
+   "angaben": {
+    "zeit": "tag",
+    "variante": 2,
+    "dach": false
+   },
+   "kamera_y": 1080,
+   "figur_y": 1700,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "65d198c31bc93f59",
+   "freigegeben": false
+  },
+  "grossstadt-tag-weit-v03": {
+   "kulisse": "grossstadt",
+   "angaben": {
+    "zeit": "tag",
+    "variante": 3,
+    "dach": false
+   },
+   "kamera_y": 1080,
+   "figur_y": 1700,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "3f23a61e85d30fed",
+   "freigegeben": false
+  },
+  "grossstadt-tag-weit-v04": {
+   "kulisse": "grossstadt",
+   "angaben": {
+    "zeit": "tag",
+    "variante": 4,
+    "dach": false
+   },
+   "kamera_y": 1080,
+   "figur_y": 1700,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "798386d83a1ccea0",
+   "freigegeben": false
+  },
+  "grossstadt-tag-weit-v05": {
+   "kulisse": "grossstadt",
+   "angaben": {
+    "zeit": "tag",
+    "variante": 5,
+    "dach": false
+   },
+   "kamera_y": 1080,
+   "figur_y": 1700,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "7fc1d92469d93da7",
+   "freigegeben": false
+  },
+  "grossstadt-tag-weit-v06": {
+   "kulisse": "grossstadt",
+   "angaben": {
+    "zeit": "tag",
+    "variante": 6,
+    "dach": false
+   },
+   "kamera_y": 1080,
+   "figur_y": 1700,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "fa53c161f1d2d088",
+   "freigegeben": false
+  },
+  "grossstadt-tag-weit-v07": {
+   "kulisse": "grossstadt",
+   "angaben": {
+    "zeit": "tag",
+    "variante": 7,
+    "dach": false
+   },
+   "kamera_y": 1080,
+   "figur_y": 1700,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "2f703ef34adc5167",
+   "freigegeben": false
+  },
+  "grossstadt-tag-weit-v08": {
+   "kulisse": "grossstadt",
+   "angaben": {
+    "zeit": "tag",
+    "variante": 8,
+    "dach": false
+   },
+   "kamera_y": 1080,
+   "figur_y": 1700,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "fea08fbf11a2efa0",
+   "freigegeben": false
+  },
+  "grossstadt-morgen-weit-v01": {
+   "kulisse": "grossstadt",
+   "angaben": {
+    "zeit": "morgen",
+    "variante": 1,
+    "dach": false
+   },
+   "kamera_y": 1080,
+   "figur_y": 1700,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "989cd916fb965728",
+   "freigegeben": false
+  },
+  "grossstadt-morgen-weit-v02": {
+   "kulisse": "grossstadt",
+   "angaben": {
+    "zeit": "morgen",
+    "variante": 2,
+    "dach": false
+   },
+   "kamera_y": 1080,
+   "figur_y": 1700,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "ba25f9b9468f16df",
+   "freigegeben": false
+  },
+  "grossstadt-morgen-weit-v03": {
+   "kulisse": "grossstadt",
+   "angaben": {
+    "zeit": "morgen",
+    "variante": 3,
+    "dach": false
+   },
+   "kamera_y": 1080,
+   "figur_y": 1700,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "cbc14be099fef723",
+   "freigegeben": false
+  },
+  "grossstadt-morgen-weit-v04": {
+   "kulisse": "grossstadt",
+   "angaben": {
+    "zeit": "morgen",
+    "variante": 4,
+    "dach": false
+   },
+   "kamera_y": 1080,
+   "figur_y": 1700,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "81d2838e97d9dd81",
+   "freigegeben": false
+  },
+  "grossstadt-morgen-weit-v05": {
+   "kulisse": "grossstadt",
+   "angaben": {
+    "zeit": "morgen",
+    "variante": 5,
+    "dach": false
+   },
+   "kamera_y": 1080,
+   "figur_y": 1700,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "0ec37dcfe09b045d",
+   "freigegeben": false
+  },
+  "grossstadt-morgen-weit-v06": {
+   "kulisse": "grossstadt",
+   "angaben": {
+    "zeit": "morgen",
+    "variante": 6,
+    "dach": false
+   },
+   "kamera_y": 1080,
+   "figur_y": 1700,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "b097714f3734b9a0",
+   "freigegeben": false
+  },
+  "grossstadt-morgen-weit-v07": {
+   "kulisse": "grossstadt",
+   "angaben": {
+    "zeit": "morgen",
+    "variante": 7,
+    "dach": false
+   },
+   "kamera_y": 1080,
+   "figur_y": 1700,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "8da4c927e3b192c6",
+   "freigegeben": false
+  },
+  "grossstadt-morgen-weit-v08": {
+   "kulisse": "grossstadt",
+   "angaben": {
+    "zeit": "morgen",
+    "variante": 8,
+    "dach": false
+   },
+   "kamera_y": 1080,
+   "figur_y": 1700,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "fe65ecc129695ba1",
+   "freigegeben": false
+  },
+  "grossstadt-abend-weit-v01": {
+   "kulisse": "grossstadt",
+   "angaben": {
+    "zeit": "abend",
+    "variante": 1,
+    "dach": false
+   },
+   "kamera_y": 1080,
+   "figur_y": 1700,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "8c4a92ed499bdc2c",
+   "freigegeben": false
+  },
+  "grossstadt-abend-weit-v02": {
+   "kulisse": "grossstadt",
+   "angaben": {
+    "zeit": "abend",
+    "variante": 2,
+    "dach": false
+   },
+   "kamera_y": 1080,
+   "figur_y": 1700,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "f694f10456d3d13d",
+   "freigegeben": false
+  },
+  "grossstadt-abend-weit-v03": {
+   "kulisse": "grossstadt",
+   "angaben": {
+    "zeit": "abend",
+    "variante": 3,
+    "dach": false
+   },
+   "kamera_y": 1080,
+   "figur_y": 1700,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "e170c07b85b025a6",
+   "freigegeben": false
+  },
+  "grossstadt-abend-weit-v04": {
+   "kulisse": "grossstadt",
+   "angaben": {
+    "zeit": "abend",
+    "variante": 4,
+    "dach": false
+   },
+   "kamera_y": 1080,
+   "figur_y": 1700,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "4dd3a2b7bd0adc86",
+   "freigegeben": false
+  },
+  "grossstadt-abend-weit-v05": {
+   "kulisse": "grossstadt",
+   "angaben": {
+    "zeit": "abend",
+    "variante": 5,
+    "dach": false
+   },
+   "kamera_y": 1080,
+   "figur_y": 1700,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "37b15d48cec08e50",
+   "freigegeben": false
+  },
+  "grossstadt-abend-weit-v06": {
+   "kulisse": "grossstadt",
+   "angaben": {
+    "zeit": "abend",
+    "variante": 6,
+    "dach": false
+   },
+   "kamera_y": 1080,
+   "figur_y": 1700,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "4537e02e4a0366a5",
+   "freigegeben": false
+  },
+  "grossstadt-abend-weit-v07": {
+   "kulisse": "grossstadt",
+   "angaben": {
+    "zeit": "abend",
+    "variante": 7,
+    "dach": false
+   },
+   "kamera_y": 1080,
+   "figur_y": 1700,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "ec59f13e9b521e51",
+   "freigegeben": false
+  },
+  "grossstadt-abend-weit-v08": {
+   "kulisse": "grossstadt",
+   "angaben": {
+    "zeit": "abend",
+    "variante": 8,
+    "dach": false
+   },
+   "kamera_y": 1080,
+   "figur_y": 1700,
+   "figur_skala": 0.95,
+   "dunkel": 0,
+   "lichter": [],
+   "fingerabdruck": "25338e9c459ad4fe",
+   "freigegeben": false
+  },
+  "grossstadt-nacht-weit-v01": {
+   "kulisse": "grossstadt",
+   "angaben": {
+    "zeit": "nacht",
+    "variante": 1,
+    "dach": false
+   },
+   "kamera_y": 1080,
+   "figur_y": 1700,
+   "figur_skala": 0.95,
+   "dunkel": 0.2,
+   "lichter": [],
+   "fingerabdruck": "0f6f8f0f87e58a4a",
+   "freigegeben": false
+  },
+  "grossstadt-nacht-weit-v02": {
+   "kulisse": "grossstadt",
+   "angaben": {
+    "zeit": "nacht",
+    "variante": 2,
+    "dach": false
+   },
+   "kamera_y": 1080,
+   "figur_y": 1700,
+   "figur_skala": 0.95,
+   "dunkel": 0.2,
+   "lichter": [],
+   "fingerabdruck": "bda92da6ae2a06ef",
+   "freigegeben": false
+  },
+  "grossstadt-nacht-weit-v03": {
+   "kulisse": "grossstadt",
+   "angaben": {
+    "zeit": "nacht",
+    "variante": 3,
+    "dach": false
+   },
+   "kamera_y": 1080,
+   "figur_y": 1700,
+   "figur_skala": 0.95,
+   "dunkel": 0.2,
+   "lichter": [],
+   "fingerabdruck": "29f6506faac143a1",
+   "freigegeben": false
+  },
+  "grossstadt-nacht-weit-v04": {
+   "kulisse": "grossstadt",
+   "angaben": {
+    "zeit": "nacht",
+    "variante": 4,
+    "dach": false
+   },
+   "kamera_y": 1080,
+   "figur_y": 1700,
+   "figur_skala": 0.95,
+   "dunkel": 0.2,
+   "lichter": [],
+   "fingerabdruck": "7bb75c12bc5a3163",
+   "freigegeben": false
+  },
+  "grossstadt-nacht-weit-v05": {
+   "kulisse": "grossstadt",
+   "angaben": {
+    "zeit": "nacht",
+    "variante": 5,
+    "dach": false
+   },
+   "kamera_y": 1080,
+   "figur_y": 1700,
+   "figur_skala": 0.95,
+   "dunkel": 0.2,
+   "lichter": [],
+   "fingerabdruck": "6316d63fa30f5f4a",
+   "freigegeben": false
+  },
+  "grossstadt-nacht-weit-v06": {
+   "kulisse": "grossstadt",
+   "angaben": {
+    "zeit": "nacht",
+    "variante": 6,
+    "dach": false
+   },
+   "kamera_y": 1080,
+   "figur_y": 1700,
+   "figur_skala": 0.95,
+   "dunkel": 0.2,
+   "lichter": [],
+   "fingerabdruck": "d9759ac1d4c70e23",
+   "freigegeben": false
+  },
+  "grossstadt-nacht-weit-v07": {
+   "kulisse": "grossstadt",
+   "angaben": {
+    "zeit": "nacht",
+    "variante": 7,
+    "dach": false
+   },
+   "kamera_y": 1080,
+   "figur_y": 1700,
+   "figur_skala": 0.95,
+   "dunkel": 0.2,
+   "lichter": [],
+   "fingerabdruck": "99c2c920e16b60b5",
+   "freigegeben": false
+  },
+  "grossstadt-nacht-weit-v08": {
+   "kulisse": "grossstadt",
+   "angaben": {
+    "zeit": "nacht",
+    "variante": 8,
+    "dach": false
+   },
+   "kamera_y": 1080,
+   "figur_y": 1700,
+   "figur_skala": 0.95,
+   "dunkel": 0.2,
+   "lichter": [],
+   "fingerabdruck": "002ee83e35c06ca6",
+   "freigegeben": false
+  }
+ }
+}

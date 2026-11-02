@@ -74,6 +74,24 @@ const szenen = ep.szenen.map((s, i) => {
   return o;
 });
 const gesamt = start;
+// Bildbibliothek (taeglich/bibliothek): Einstellungen `[bild id=…]` bekommen ihren Katalogeintrag und, wenn die Platte mit
+// passendem Fingerabdruck in ausgabe/bibliothek/ liegt, das Bild als data-URL. Ohne Platte zeichnet die Engine die Kulisse live.
+if (szenen.some(s => s.typ === "bild")) {
+  const katalog = JSON.parse(fs.readFileSync(path.join(ROOT, "taeglich", "bibliothek", "katalog.json"), "utf8")).bilder;
+  const { createHash } = await import("node:crypto");
+  for (const s of szenen.filter(x => x.typ === "bild")) {
+    const m = katalog[s.id];
+    if (!m) throw new Error(`Bild „${s.id}“ steht nicht im Katalog (taeglich/bibliothek/katalog.json)`);
+    if (!m.freigegeben) console.log(`Hinweis: Bild ${s.id} ist noch nicht freigegeben`);
+    s._meta = m;
+    const f = path.join(ROOT, "ausgabe", "bibliothek", `${s.id}.jpg`);
+    if (fs.existsSync(f)) {
+      const buf = fs.readFileSync(f);
+      if (createHash("sha256").update(buf).digest("hex").slice(0, 16) === m.fingerabdruck) s._bild_daten = "data:image/jpeg;base64," + buf.toString("base64");
+      else console.log(`Hinweis: ${s.id}.jpg passt nicht zum Fingerabdruck – wird live gezeichnet`);
+    } else console.log(`Hinweis: ${s.id}.jpg fehlt (node taeglich/bibliothek.mjs --nur ${s.id}) – wird live gezeichnet`);
+  }
+}
 const von = Number(opt("von", 0)), bis = Math.min(Number(opt("bis", gesamt)), gesamt);
 const frames = Math.round((bis - von) * FPS);
 console.log(`Folge ${id}: ${szenen.length} Szenen, ${gesamt.toFixed(1)} s, rendere ${frames} Frames @ ${FPS} fps`);

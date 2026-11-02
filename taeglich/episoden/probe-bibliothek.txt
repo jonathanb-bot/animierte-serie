@@ -1,0 +1,11 @@
+# Probe Bildbibliothek
+@mund zitate
+@qualitaet hoch
+@look 0.6
+@kino 1
+[bild id=grossstadt-nacht-v01 du ben ruhig] Aus der Bibliothek, Großstadt bei Nacht.
+[grossstadt zeit=nacht variante=1 du ben ruhig] Live gezeichnet, gleiche Variante.
+[bild id=landschaft-abend-see-v03 du lina:winkt zoom-rein] Landschaft am Abend mit See.
+[landschaft zeit=abend see variante=3 du lina:winkt zoom-rein] Live gezeichnet.
+[bild id=wald-morgen-nebel-v02 du schwenk-links] Wald am Morgen, Schwenk.
+[bild id=landschaft-nacht-v02 opa mama papa schwenk-hoch] Landschaft bei Nacht, Schwenk nach oben.

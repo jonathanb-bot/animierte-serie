@@ -111,6 +111,15 @@ Pro Staffel einen großen Kanal als Hauptvorbild wählen (abwechseln!) und kurz 
 
 **Alltags-Kulissen** (`engine/alltag.js`, Katalog: `taeglich/episoden/katalog.txt`): `wohnzimmer` (`licht=an`, `tv`, `sofa_sitzen`, `foto=…`), `zimmer` (`im_bett=du`, `lichterkette`, `laptop`), `esstisch` (`leer=2`, `gedeckt`, `kerzen`, `torte`), `park` (`jahreszeit=…`, `sitzen`), `klassenzimmer` (`tafel="…|…"`, `uhr=`), `krankenhaus` (`patient=opa`, `monitor=flach`), `see` (`sitzen`), `haltestelle` (`bus=kommt`). Überall: `regen`, `blaetter`, `lichter`, `gluehwuermchen`, `zeit`. Dazu `gesicht` (Nahaufnahme, jede Kulisse als `ort=`), `objekt` (Infokarte mit Icons), `titel`, `handy`, `strasse`, `supermarkt`, `bahnhof`, `kueche`. Pose `du:handy`.
 
+## Bildbibliothek (Jonathans Wunsch 2.11.: Hunderte bis Tausende fertige Bilder, nur noch herausgreifen und zoomen)
+
+- **Was:** fertige Hintergründe („Platten“) jeder Kurzgesagt-Kulisse in vielen Varianten (Tageszeit × Wetter × `variante=1…N` mit anderer Skyline, anderen Bergen, Bäumen, Wolken), doppelte Auflösung (2700 × 4800), damit Zoom scharf bleibt. Katalog: `taeglich/bibliothek/katalog.json` (im Git), Bilder: `ausgabe/bibliothek/<id>.jpg` (reproduzierbar, nicht im Git).
+- **Erzeugen:** `node taeglich/bibliothek.mjs` (alle, mit Übersichtsblättern `ausgabe/bibliothek/uebersicht-*.jpg`), `--nur id,…`, `--fuer <drehbuch>` (vor dem Rendern im frischen Container). Neue Varianten in `VARIANTEN()` ergänzen.
+- **Freigabe:** Übersichten einmal ansehen, Jonathan gibt frei: `node taeglich/bibliothek.mjs --freigeben <ids|kulisse|alle>`, schlechte `--sperren`. Ein verändertes Bild (anderer Fingerabdruck) muss neu freigegeben werden.
+- **Im Drehbuch:** `[bild id=grossstadt-nacht-v07 du ben zoom-rein] Text …`: Bild aus der Bibliothek, Figuren, Posen und Kamera wie gewohnt. Großstadt: `-v07` mit Dach für Figuren, `-weit-v07` nur Skyline. Nur **freigegebene** Bilder benutzen (render.mjs meldet sonst einen Hinweis).
+- **Prüfung:** Einstellungen mit freigegebenen Bibliotheksbildern müssen nicht mehr einzeln angesehen werden. Pro Folge ansehen: erstes und letztes Bild, alle Einstellungen ohne Bibliothek (Gesichter, Karten, Handy, neue Kulissen) und 1 Ausschnitt in voller Auflösung.
+- **Wirkung (gemessen 2.11.):** gleiches Bild wie live (≤ 2 % abweichende Pixel, nur bewegte Kleinigkeiten), Zeichnen ca. 25 % schneller; die alten Serien bleiben pixelgleich.
+
 ## Stimmungen
 
 | Stimmung | `@stimmung` | Bild |

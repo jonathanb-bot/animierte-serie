@@ -33,7 +33,8 @@ Hinweis zu den Werkzeugen: In neuen Sessions heißen die vidIQ-Werkzeuge `mcp__<
    - mindestens 2 Folgen zum Thema Freunde/Familie, mindestens 4 Stimmungen, je Folge mindestens 2 Kurzgesagt-Kulissen
    - höchstens 2 neue Kulissen
    - nach Engine-Änderungen die alten Serien pixelgleich prüfen
-7. **Standbilder:** Standbilder aller Folgen rendern und ALLE ansehen, dazu pro Folge 3 Ausschnitte in voller Auflösung. Korrigieren, bis alles sauber ist.
+6b. **Bildbibliothek:** für Kulissen bevorzugt freigegebene Bilder aus `taeglich/bibliothek/katalog.json` nehmen (`[bild id=…]`, siehe FORMAT.md), jedes Bild höchstens einmal pro Staffel. Vor dem Rendern `node taeglich/bibliothek.mjs --fuer <drehbuch>`.
+7. **Standbilder:** (Einstellungen mit freigegebenen Bibliotheksbildern nicht einzeln ansehen, nur erstes/letztes Bild und alles ohne Bibliothek) Standbilder aller Folgen rendern und ALLE ansehen, dazu pro Folge 3 Ausschnitte in voller Auflösung. Korrigieren, bis alles sauber ist.
 8. **Stimme:** je Folge `python -m ton.folge … --stimme gemini:Orus --anfragen 1`. Danach muss `python taeglich/stimme_pruefen.py …` OK melden. Ist eine Folge unter 65 s: Einstellungen ergänzen und neu vertonen.
 9. **Rendern:** alle Folgen in hoher Qualität rendern (2 gleichzeitig im Hintergrund) und aus jeder Folge Bilder ansehen, auch das letzte.
 10. **Veröffentlichen und dokumentieren:** danach `python taeglich/videodaten.py sNN` (Messwerte jedes Videos für die Analyse).

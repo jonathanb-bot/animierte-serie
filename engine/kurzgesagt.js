@@ -2,7 +2,9 @@
    Jonathans Wunsch vom 1.11. (Vorbild: „Dinge Erklärt – Kurzgesagt“, „KI hat das Undenkbare getan“).
    Nur neue Kulissen-Namen und ein Kino-Look, der ausschließlich mit `@kino` wirkt: die bisherigen Serien bleiben pixelgleich. */
 (() => {
-  const { box, circle, ellipse, poly, line, shade, rgba, lgrad, rgrad, mix, rnd, clamp, lerp, E } = A;
+  const { box, circle, ellipse, poly, line, shade, rgba, lgrad, rgrad, mix, clamp, lerp, E } = A;
+  // Varianten für die Bildbibliothek: `variante=N` verschiebt alle Zufalls-Startwerte. Ohne Angabe (0) bleibt alles pixelgleich.
+  const rnd = seed => A.rnd(seed + (A._kgVar || 0) * 7919);
   const W = A.W, H = A.H, SZ = A.SZ;
   const HIMMEL = { tag: ["#3f7fc0", "#a9d4ec"], morgen: ["#4b5d9a", "#f2b58a"], abend: ["#2a2c66", "#e9805a"], nacht: ["#060a1e", "#1d2650"] };
   const zeitVon = (s, std = "nacht") => (HIMMEL[s.zeit] ? s.zeit : std);
@@ -159,7 +161,7 @@
     box(-1500, 1520, 4080, 900, 0, "#0b0d18"); box(-1500, 1520, 4080, 160, 0, "#0f1220");
     for (let x = -300; x < 1500; x += 220) { line(x, 1520, x, 1470, 4, "#2a2f44"); if (abends) { circle(x, 1468, 5, "#ffe6a8"); glut(x, 1480, 70, "#ffd59a", 0.5); } }
     for (let i = 0; i < 26; i++) { const r = rnd(i + 40), sp = 120 + r() * 220, links = i % 2, x = links ? 1300 - ((t * sp + r() * 2600) % 2600) : -1300 + ((t * sp + r() * 2600) % 2600), y = links ? 1570 : 1630; box(x, y - 4, 70, 8, 4, links ? "#ff5b4d" : "#fff1c4"); glut(x + 35, y, 50, links ? "#ff5b4d" : "#fff1c4", 0.5); }
-    if (s.dach !== false && (s.figuren || []).length) {
+    if (s.dach !== false && ((s.figuren || []).length || s.dach === true)) { // dach=true: Dach auch ohne Figuren (Bildbibliothek)
       box(-1500, 1600, 4080, 600, 0, "#1a1d2c"); box(-1500, 1590, 4080, 20, 4, "#2a2f44");
       box(-80, 1460, 170, 140, 6, "#22263a"); box(-40, 1500, 60, 100, 4, "#151827"); box(-80, 1452, 180, 14, 4, "#2e3350"); // Dachausstieg
       for (const [vx, vh] of [[880, 70], [960, 50], [1030, 90]]) { box(vx, 1590 - vh, 34, vh, 6, "#2a2f44"); ellipse(vx + 17, 1590 - vh, 17, 6, "#3a4060"); }
@@ -396,5 +398,56 @@
     A.licht(540, 300, 1200, gruen, 0.5);
     A.figurenZeigen(s, t, 1640, 0.95);
     A._dunkel = 0.05;
+  };
+
+  // Alle Kurzgesagt-Kulissen lesen `variante` (Bildbibliothek, Jonathans Wunsch 2.11.)
+  for (const name of ["weltall", "grossstadt", "rechenzentrum", "auge", "landschaft", "wald", "netz", "lebenszeit", "polarlicht"]) {
+    const orig = SZ[name];
+    SZ[name] = (s, t, p) => { A._kgVar = Number(s.variante) || 0; try { return orig(s, t, p); } finally { A._kgVar = 0; } };
+  }
+
+  // =====================================================================
+  // BILDBIBLIOTHEK – fertige, freigegebene Hintergründe (taeglich/bibliothek/katalog.json), nur noch gezoomt/geschwenkt.
+  // Drehbuch: [bild id=grossstadt-nacht-v07 du lina zoom-rein]. render.mjs hängt `_meta` (Katalogeintrag) und, wenn die
+  // Bilddatei mit dem Fingerabdruck vorliegt, `_bild_daten` (data-URL) an. Fehlt die Datei, wird die Kulisse live gezeichnet.
+  // =====================================================================
+  const BILD = { x0: -135, b: 1350, h: 2400 }; // Weltausschnitt der Platten (deckt Zoom ab 1,0 und alle Schwenks ab)
+  SZ.bild = (s, t, p) => {
+    const m = s._meta;
+    if (!m) { A.text("BILD FEHLT: " + (s.id || "?"), 540, 960, 50, "#ff6b5b"); return; }
+    const angaben = { ...m.angaben, figuren: s.figuren, posen: s.posen, ausdruecke: s.ausdruecke, sprecher: s.sprecher, _spricht: s._spricht, haelt: s.haelt, pos: s.pos };
+    if (!s.fokus) ctx.translate(0, 960 - (m.kamera_y || 960)); // Kamera wie bei der Original-Kulisse
+    const img = A._bilder && A._bilder[s.id];
+    if (!img) { SZ[m.kulisse](angaben, t, p); return; } // Rückfall: live zeichnen (gleiches Bild)
+    ctx.drawImage(img, BILD.x0, (m.kamera_y || 960) - BILD.h / 2, BILD.b, BILD.h);
+    for (const l of m.lichter || []) A.licht(l.x, l.y, l.r, l.farbe, l.st);
+    if (m.figur_y != null) A.figurenZeigen(angaben, t, m.figur_y, m.figur_skala ?? 1);
+    A._dunkel = m.dunkel || 0;
+  };
+
+  // Bilder vor dem ersten Frame laden (nur wenn eine Folge `bild` benutzt; sonst unverändert)
+  const altInit = window.init;
+  window.init = daten => {
+    const r = altInit(daten);
+    const mitBild = (daten.szenen || []).filter(s => s.typ === "bild" && s._bild_daten);
+    if (!mitBild.length) return r;
+    A._bilder = {};
+    return Promise.all(mitBild.map(s => new Promise(ok => {
+      if (A._bilder[s.id]) return ok();
+      const img = new Image(); img.onload = () => { A._bilder[s.id] = img; ok(); }; img.onerror = () => ok(); img.src = s._bild_daten;
+    }))).then(() => r);
+  };
+
+  // Platte für die Bibliothek zeichnen (taeglich/bibliothek.mjs): Kulisse ohne Figuren, doppelte Auflösung, ohne Nachbearbeitung
+  window.platte = (kulisse, angaben, kameraY) => {
+    const k = 2, x0 = BILD.x0, y0 = kameraY - BILD.h / 2;
+    A.cv.width = BILD.b * k; A.cv.height = BILD.h * k;
+    ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.fillStyle = "#000"; ctx.fillRect(0, 0, A.cv.width, A.cv.height);
+    ctx.setTransform(k, 0, 0, k, -x0 * k, -y0 * k);
+    A.lichter = []; A._dunkel = 0;
+    let figur = null; const fz = A.figurenZeigen; A.figurenZeigen = (s, t, y, skala) => { figur = { y, skala }; };
+    try { SZ[kulisse]({ typ: kulisse, ...angaben }, 0, 0); } finally { A.figurenZeigen = fz; }
+    const lichter = A.lichter.map(l => ({ x: l.x / k + x0, y: l.y / k + y0, r: l.r / k, farbe: l.farbe, st: l.st }));
+    return { figur_y: figur ? figur.y : null, figur_skala: figur ? figur.skala : null, dunkel: A._dunkel, lichter, breite: A.cv.width, hoehe: A.cv.height };
   };
 })();
