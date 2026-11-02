@@ -127,7 +127,33 @@
      9,
      10
     ]
-   ]
+   ],
+   "veroeffentlicht": {
+    "taeglich-tiktok-s01-teil-1": "2026-11-05T12:00:00",
+    "taeglich-tiktok-s01-teil-2": "2026-11-05T16:00:00",
+    "taeglich-tiktok-s01-teil-3": "2026-11-05T20:00:00",
+    "taeglich-tiktok-s01-teil-4": "2026-11-06T08:00:00",
+    "taeglich-insta-s01-f01": "2026-11-08T16:00:00",
+    "taeglich-insta-s01-f02": "2026-11-08T20:00:00",
+    "taeglich-insta-s01-f03": "2026-11-09T00:00:00",
+    "taeglich-insta-s01-f04": "2026-11-09T04:00:00",
+    "taeglich-insta-s01-f05": "2026-11-09T08:00:00",
+    "taeglich-insta-s01-f06": "2026-11-09T12:00:00",
+    "taeglich-insta-s01-f07": "2026-11-09T16:00:00",
+    "taeglich-insta-s01-f08": "2026-11-09T20:00:00",
+    "taeglich-insta-s01-f09": "2026-11-10T00:00:00",
+    "taeglich-insta-s01-f10": "2026-11-10T04:00:00",
+    "taeglich-yt-s01-f01": "2026-11-08T16:30:00",
+    "taeglich-yt-s01-f02": "2026-11-08T20:30:00",
+    "taeglich-yt-s01-f03": "2026-11-09T00:30:00",
+    "taeglich-yt-s01-f04": "2026-11-09T04:30:00",
+    "taeglich-yt-s01-f05": "2026-11-09T08:30:00",
+    "taeglich-yt-s01-f06": "2026-11-09T12:30:00",
+    "taeglich-yt-s01-f07": "2026-11-09T16:30:00",
+    "taeglich-yt-s01-f08": "2026-11-09T20:30:00",
+    "taeglich-yt-s01-f09": "2026-11-10T00:30:00",
+    "taeglich-yt-s01-f10": "2026-11-10T04:30:00"
+   }
   }
  ]
 }
