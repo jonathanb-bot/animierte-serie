@@ -17,6 +17,7 @@ Feste Regeln (Issues mit Label `dringlich`, `taeglich/FORMAT.md`) gehen immer vo
 
 - **pro Post:** Aufrufe, Likes, Kommentare, Shares, Saves, Engagement-Rate und, falls vorhanden, Wiedergabezeit und Abbruchquote. Dazu **Aufrufe pro Stunde seit Veröffentlichung**, höchstens über 72 h gerechnet. So lassen sich alte und neue Posts fair vergleichen.
 - **Gruppen:** pro Plattform, pro Serie bzw. Staffel, pro Stimmung, pro Uhrzeit und pro Länge.
+- **Format-Vergleich (seit 2.11., Issue #13):** Das Skript verbindet die Posts mit `taeglich/videodaten.json` (Messwerte jedes Videos) und vergleicht **Längenband** (kurz 62–70 s, mittel 70–78 s, lang 78–89 s, TikTok-Teile nach Sekunden), **Folgen pro Staffel**, **Hook-Text ja/nein** und **Staffel**: Aufrufe/h, Wiedergabe in s und **Wiedergabe in % der Länge**. Im Bericht festhalten, welches Format vorn liegt; in `aktuell.md` das Format für die nächste Staffel nur ändern, wenn genug Daten da sind, sonst gilt die Rotation aus `FORMAT.md`. Fehlen Messwerte einer Staffel: `python taeglich/videodaten.py sNN`.
 - **Top 5 und Flop 5 je Plattform:** Bei jedem Video ansehen, warum es so lief (Hook im ersten Satz, Thema, Stimmung, Kulissen, Länge, Uhrzeit).
 - **Vorsicht bei wenig Daten:** Unter ca. 10 Posts pro Gruppe ist ein Ergebnis nur eine „Tendenz“, noch keine Regel. Posts jünger als 24 h nur mit Hinweis werten.
 

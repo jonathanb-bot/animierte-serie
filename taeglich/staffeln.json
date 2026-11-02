@@ -51,61 +51,71 @@
      "nr": 1,
      "titel": "Kein Netz",
      "stimmung": "spannend",
-     "beschreibung": "Das Internet ist weltweit weg. Und deine kleine Schwester ist nicht nach Hause gekommen."
+     "beschreibung": "Das Internet ist weltweit weg. Und deine kleine Schwester ist nicht nach Hause gekommen.",
+     "familie": false
     },
     {
      "nr": 2,
      "titel": "Die Wand aus Zetteln",
      "stimmung": "duester",
-     "beschreibung": "Ohne Handy suchst du deine Schwester am überfüllten Bahnhof. Dann taucht dein bester Freund auf."
+     "beschreibung": "Ohne Handy suchst du deine Schwester am überfüllten Bahnhof. Dann taucht dein bester Freund auf.",
+     "familie": true
     },
     {
      "nr": 3,
      "titel": "Die Nacht ohne Licht",
      "stimmung": "spannend",
-     "beschreibung": "Die ganze Stadt wird dunkel. Nur ein altes Zeichen kann dir jetzt noch helfen."
+     "beschreibung": "Die ganze Stadt wird dunkel. Nur ein altes Zeichen kann dir jetzt noch helfen.",
+     "familie": false
     },
     {
      "nr": 4,
      "titel": "Dreimal kurz",
      "stimmung": "freudig",
-     "beschreibung": "Jemand pfeift zurück. Und ein alter Funker weiß, was wirklich passiert ist."
+     "beschreibung": "Jemand pfeift zurück. Und ein alter Funker weiß, was wirklich passiert ist.",
+     "familie": true
     },
     {
      "nr": 5,
      "titel": "Was der Funker hörte",
      "stimmung": "duester",
-     "beschreibung": "Ein Sonnensturm hat die Erde getroffen. Und der zweite Schlag kommt noch."
+     "beschreibung": "Ein Sonnensturm hat die Erde getroffen. Und der zweite Schlag kommt noch.",
+     "familie": false
     },
     {
      "nr": 6,
      "titel": "Bei mir klingelt sowieso keiner",
      "stimmung": "traurig",
-     "beschreibung": "Dein Opa sitzt seit zwei Tagen allein im Dunkeln. Für ihn ist Funkstille nichts Neues."
+     "beschreibung": "Dein Opa sitzt seit zwei Tagen allein im Dunkeln. Für ihn ist Funkstille nichts Neues.",
+     "familie": true
     },
     {
      "nr": 7,
      "titel": "Notfunk",
      "stimmung": "spannend",
-     "beschreibung": "Opa braucht sofort einen Arzt. Und kein Telefon der Welt funktioniert."
+     "beschreibung": "Opa braucht sofort einen Arzt. Und kein Telefon der Welt funktioniert.",
+     "familie": false
     },
     {
      "nr": 8,
      "titel": "Der grüne Himmel",
      "stimmung": "freudig",
-     "beschreibung": "Mitten in der Nacht leuchtet der Himmel grün. Und deine ganze Familie ist zusammen."
+     "beschreibung": "Mitten in der Nacht leuchtet der Himmel grün. Und deine ganze Familie ist zusammen.",
+     "familie": true
     },
     {
      "nr": 9,
      "titel": "Drei Tage zu spät",
      "stimmung": "warm",
-     "beschreibung": "Eine Nachricht von Opa hat drei Tage gebraucht. Und das Netz ist zurück."
+     "beschreibung": "Eine Nachricht von Opa hat drei Tage gebraucht. Und das Netz ist zurück.",
+     "familie": true
     },
     {
      "nr": 10,
      "titel": "Jeden Sonntag",
      "stimmung": "freudig",
-     "beschreibung": "Ein alter Mann glaubt, dass niemand auf ihn wartet. Er irrt sich gewaltig."
+     "beschreibung": "Ein alter Mann glaubt, dass niemand auf ihn wartet. Er irrt sich gewaltig.",
+     "familie": true
     }
    ],
    "tiktok_teile": [
@@ -153,6 +163,11 @@
     "taeglich-yt-s01-f08": "2026-11-09T20:30:00",
     "taeglich-yt-s01-f09": "2026-11-10T00:30:00",
     "taeglich-yt-s01-f10": "2026-11-10T04:30:00"
+   },
+   "format": {
+    "folgen": 10,
+    "laengenband": "frei (65–85 s, Standard vor der Format-Rotation)",
+    "tiktok_teile": 4
    }
   }
  ]

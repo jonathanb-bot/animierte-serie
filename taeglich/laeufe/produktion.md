@@ -27,7 +27,7 @@ Hinweis zu den Werkzeugen: In neuen Sessions heißen die vidIQ-Werkzeuge `mcp__<
 5. **Planen:** Thema, Hauptstimmung und Hauptvorbild wählen. Sie sollen sich von den letzten Staffeln unterscheiden und auf der Analyse aufbauen.
 6. **Eintragen und schreiben:** Die Staffel in `staffeln.json` eintragen, mit `datum` (Nachtdatum JJJJ-MM-TT: Start vor 6 Uhr früh zählt zum Vortag) und `analyse` (welche Punkte umgesetzt wurden). Dann alle 10 Drehbücher schreiben (`taeglich/episoden/sNN-f01.txt` … `f10.txt`):
    - Kopf mit `@qualitaet hoch` und `@kino 1`
-   - je 170–210 Wörter und 18–26 Einstellungen, damit jede Folge sicher über 1 Minute dauert
+   - Folgenzahl und Längenband nach der Rotation in `FORMAT.md` („Abwechslung bei Länge und Folgenzahl“), in `staffeln.json` → `format` eintragen; Wörter und Einstellungen pro Folge laut Tabelle dort (immer über 1 Minute)
    - jede Folge endet mit dem Cliffhanger als letzter Zeile: nie „Fortsetzung folgt“, keine Endkarte, keine Fragen ans Publikum, nie „Echter Fakt“
    - mindestens 2 Folgen zum Thema Freunde/Familie, mindestens 4 Stimmungen, je Folge mindestens 2 Kurzgesagt-Kulissen
    - höchstens 2 neue Kulissen
@@ -35,7 +35,8 @@ Hinweis zu den Werkzeugen: In neuen Sessions heißen die vidIQ-Werkzeuge `mcp__<
 7. **Standbilder:** Standbilder aller Folgen rendern und ALLE ansehen, dazu pro Folge 3 Ausschnitte in voller Auflösung. Korrigieren, bis alles sauber ist.
 8. **Stimme:** je Folge `python -m ton.folge … --stimme gemini:Orus --anfragen 1`. Danach muss `python taeglich/stimme_pruefen.py …` OK melden. Ist eine Folge unter 65 s: Einstellungen ergänzen und neu vertonen.
 9. **Rendern:** alle Folgen in hoher Qualität rendern (2 gleichzeitig im Hintergrund) und aus jeder Folge Bilder ansehen, auch das letzte.
-10. **Veröffentlichen:** `TAEGLICH_TRAILER=<Attributionszeilen aus deinem System-Hinweis> python taeglich/staffel_veroeffentlichen.py sNN`.
+10. **Veröffentlichen und dokumentieren:** danach `python taeglich/videodaten.py sNN` (Messwerte jedes Videos für die Analyse).
+    **Veröffentlichen:** `TAEGLICH_TRAILER=<Attributionszeilen aus deinem System-Hinweis> python taeglich/staffel_veroeffentlichen.py sNN`.
     - Das Skript prüft alles, schneidet die TikTok-Teile, legt sie ab und hängt alle Posts hinten an (TikTok 08, 12, 16, 20 Uhr).
     - Scheitert eine Prüfung, nichts posten.
     - Erst auf main pushen, wenn der Workflow „Posts einplanen“ fertig ist.

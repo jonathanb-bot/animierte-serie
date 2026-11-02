@@ -157,6 +157,33 @@ def main(argv=None) -> int:
     if stim:
         print("\n## Stimmungen der Kurzvideos (Median Aufrufe pro Stunde)\n")
         print(tabelle([[pl, s, len(v), statistics.median(v)] for (pl, s), v in sorted(stim.items())], ["Plattform", "Stimmung", "Posts", "Median Aufrufe/h"]))
+    # Format-Vergleich (Jonathans Wunsch 2.11.): Länge, Folgenzahl, Hook-Text – aus taeglich/videodaten.json
+    vd_datei = ROOT / "taeglich" / "videodaten.json"
+    vd = json.loads(vd_datei.read_text(encoding="utf-8")) if vd_datei.exists() else {}
+    def vdaten(p):
+        v = str(p.get("video") or "")
+        v = v.split("youtube-upload/")[-1]
+        return vd.get(v)
+    format_gruppen = {"Längenband": defaultdict(list), "Folgen pro Staffel": defaultdict(list), "Hook-Text": defaultdict(list), "Staffel": defaultdict(list)}
+    for p in posts:
+        v = vdaten(p)
+        if not v or p["alter_h"] < 12:
+            continue
+        anteil = 100 * p["wiedergabe_s"] / v["dauer_s"] if p.get("wiedergabe_s") and v.get("dauer_s") else None
+        eintrag = (p["pro_h"], p["wiedergabe_s"], anteil)
+        art = "TikTok-Teil" if v["art"] == "tiktok_teil" else "Folge"
+        format_gruppen["Längenband"][(p["platform"], f"{art} {v.get('laengenband') or (str(round(v['dauer_s'] or 0)) + ' s')}")].append(eintrag)
+        format_gruppen["Folgen pro Staffel"][(p["platform"], str(v.get("folgen_in_staffel")))].append(eintrag)
+        format_gruppen["Hook-Text"][(p["platform"], "ja" if v.get("hooktext") else "nein")].append(eintrag)
+        format_gruppen["Staffel"][(p["platform"], v["staffel"])].append(eintrag)
+    if any(format_gruppen[g] for g in format_gruppen):
+        md = lambda xs: statistics.median(xs) if xs else None
+        for name, g in format_gruppen.items():
+            if not g:
+                continue
+            print(f"\n## Format-Vergleich: {name} (Median, Posts ab 12 h alt)\n")
+            print(tabelle([[pl, k, len(v), md([x[0] for x in v]), md([x[1] for x in v if x[1]]), md([x[2] for x in v if x[2]])]
+                           for (pl, k), v in sorted(g.items())], ["Plattform", name, "Posts", "Aufrufe/h", "Wiedergabe s", "Wiedergabe % der Länge"]))
     print("\nHinweis: Unter ca. 10 Posts pro Gruppe ist das nur eine Tendenz.")
     return 0
 

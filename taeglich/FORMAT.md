@@ -17,9 +17,27 @@ Diese Datei ist verbindlich für die geplante Aufgabe „Kurzvideo-Staffel alle 
 - **Analyse jeden Abend um 21:39** (Zernio kostenlos), vidIQ nach Credit-Plan nur jeden 2. Abend.
 - In `staffeln.json` bekommt jede Staffel `datum` (JJJJ-MM-TT), sonst erkennt `vorrat.py` sie nicht.
 
+## Abwechslung bei Länge und Folgenzahl (Jonathans Wunsch 2.11., Issue #13)
+
+Damit die Analyse herausfinden kann, was am besten ankommt, ändert sich das Format **von Staffel zu Staffel** nach einer festen Rotation. Feste Grenzen bleiben: jede Folge **62–89 s** (über 1 Minute, #12; unter 90 s ein Post auf Instagram/YouTube, #4), TikTok-Teile höchstens 10 min.
+
+| Staffel | Folgen | Längenband | Wörter pro Folge | Einstellungen | TikTok-Teile (Standard) |
+|---|---|---|---|---|---|
+| s01 (fertig) | 10 | frei (66–79 s gemessen) | 186–207 | 18–20 | 4 |
+| s02 | 8 | **kurz** 62–70 s | 185–195 | 18–22 | 3 |
+| s03 | 12 | **lang** 78–88 s | 210–225 | 22–26 | 5 |
+| s04 | 6 | **mittel** 70–78 s | 200–210 | 20–24 | 2 |
+| s05 | 10 | kurz 62–70 s | 185–195 | 18–22 | 4 |
+| ab s06 | nach Analyse | Gewinner aus „Format-Vergleich“, jede 3. Staffel wieder eine andere Kombination | | | |
+
+- Das gewählte Format steht in `staffeln.json` → `format` (`folgen`, `laengenband`, `tiktok_teile`).
+- Die Gemini-Stimme schwankt je Anfrage (s01: 2,4–3,0 Wörter/s). Nach dem Vertonen zählt die **gemessene** Länge: liegt eine Folge außerhalb ihres Bands oder unter 62 s, eine Einstellung ergänzen bzw. kürzen und neu vertonen. Über 89 s lehnt `staffel_veroeffentlichen.py` ab.
+- Innerhalb einer Staffel dürfen die Folgen um einige Sekunden schwanken; das wird mitgemessen.
+- **Dokumentieren:** Nach dem Veröffentlichen `python taeglich/videodaten.py sNN`. Das schreibt pro Video Länge, Band, Wörter, Sprechtempo, Einstellungen, Kurzgesagt-Kulissen, Nahaufnahmen, Faktenkarten, Stimmung, Hook-Satz, Hook-Text, Figuren, Folgenzahl und die Post-Termine nach `taeglich/videodaten.json` und `videodaten.md`. `analyse_auswerten.py` vergleicht damit Längenband, Folgen pro Staffel, Hook-Text und Staffel (Aufrufe/h, Wiedergabe in s und in % der Länge).
+
 ## Die Staffel
 
-- **10 Folgen**, jede **65–85 s**. **Jedes Video muss über 1 Minute lang sein** (Jonathans dringende Vorgabe vom 1.11., Issue #12: TikTok zahlt im Creator Rewards Program ab 10.000 Followern nur für Videos über 1 Minute). Unter 90 s bleibt jede Folge ein einzelner Post auf Instagram und YouTube. Die Stimme hat ca. 170–210 Wörter, 18–26 Einstellungen. Ist eine Folge nach dem Vertonen kürzer als 62 s, schreib eine Einstellung dazu, statt zu dehnen.
+- **6–12 Folgen** nach der Rotation oben (Standard 10), jede im Längenband der Staffel, immer **62–89 s**. **Jedes Video muss über 1 Minute lang sein** (Jonathans dringende Vorgabe vom 1.11., Issue #12: TikTok zahlt im Creator Rewards Program ab 10.000 Followern nur für Videos über 1 Minute). Unter 90 s bleibt jede Folge ein einzelner Post auf Instagram und YouTube. Die Stimme hat ca. 170–210 Wörter, 18–26 Einstellungen. Ist eine Folge nach dem Vertonen kürzer als 62 s, schreib eine Einstellung dazu, statt zu dehnen.
 - **Eine durchgehende Geschichte** in Du-Form mit eigenem Titel und eigener Welt. Jede Staffel bekommt ein neues Thema.
 - **Jede Folge außer der letzten endet mit einem Cliffhanger, und zwar mit der letzten gesprochenen Zeile.** **Nie „Fortsetzung folgt“** (Jonathans feste Vorgabe vom 1.11., Issue #11): keine Karte, kein Text, kein Satz „Fortsetzung folgt“, auch nicht als Überschrift. Ebenso keine andere Endkarte.
 - **Folge 10** schließt die Geschichte mit einer starken letzten Zeile, ebenfalls ohne Endkarte.

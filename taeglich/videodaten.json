@@ -1,0 +1,649 @@
+{
+ "taeglich-tiktok/s01-teil-1.mp4": {
+  "art": "tiktok_teil",
+  "staffel": "s01",
+  "staffel_titel": "Funkstille",
+  "teil": 1,
+  "teile_in_staffel": 4,
+  "folgen": [
+   1,
+   2,
+   3
+  ],
+  "folgen_in_staffel": 10,
+  "format_laengenband": "frei (65–85 s, Standard vor der Format-Rotation)",
+  "dauer_s": 207.55,
+  "hook_satz": "Das Internet ist weg.",
+  "hooktext": "DEINE SCHWESTER IST NICHT ZU HAUSE",
+  "stimmung": "spannend",
+  "posts": {
+   "tiktok": {
+    "id": "taeglich-tiktok-s01-teil-1",
+    "zeit": "2026-11-05T12:00:00"
+   }
+  }
+ },
+ "taeglich-tiktok/s01-teil-2.mp4": {
+  "art": "tiktok_teil",
+  "staffel": "s01",
+  "staffel_titel": "Funkstille",
+  "teil": 2,
+  "teile_in_staffel": 4,
+  "folgen": [
+   4,
+   5
+  ],
+  "folgen_in_staffel": 10,
+  "format_laengenband": "frei (65–85 s, Standard vor der Format-Rotation)",
+  "dauer_s": 150.78,
+  "hook_satz": "Mitten in der Nacht antwortet jemand auf ein Zeichen, das nur zwei Menschen kennen.",
+  "hooktext": "JEMAND PFEIFT ZURÜCK",
+  "stimmung": "freudig",
+  "posts": {
+   "tiktok": {
+    "id": "taeglich-tiktok-s01-teil-2",
+    "zeit": "2026-11-05T16:00:00"
+   }
+  }
+ },
+ "taeglich-tiktok/s01-teil-3.mp4": {
+  "art": "tiktok_teil",
+  "staffel": "s01",
+  "staffel_titel": "Funkstille",
+  "teil": 3,
+  "teile_in_staffel": 4,
+  "folgen": [
+   6,
+   7,
+   8
+  ],
+  "folgen_in_staffel": 10,
+  "format_laengenband": "frei (65–85 s, Standard vor der Format-Rotation)",
+  "dauer_s": 228.01,
+  "hook_satz": "Ein alter Mann sitzt seit zwei Tagen allein im Dunkeln.",
+  "hooktext": "ER SITZT ALLEIN IM DUNKELN",
+  "stimmung": "traurig",
+  "posts": {
+   "tiktok": {
+    "id": "taeglich-tiktok-s01-teil-3",
+    "zeit": "2026-11-05T20:00:00"
+   }
+  }
+ },
+ "taeglich-tiktok/s01-teil-4.mp4": {
+  "art": "tiktok_teil",
+  "staffel": "s01",
+  "staffel_titel": "Funkstille",
+  "teil": 4,
+  "teile_in_staffel": 4,
+  "folgen": [
+   9,
+   10
+  ],
+  "folgen_in_staffel": 10,
+  "format_laengenband": "frei (65–85 s, Standard vor der Format-Rotation)",
+  "dauer_s": 154.54,
+  "hook_satz": "Eine Nachricht hat drei Tage gebraucht, um bei dir anzukommen.",
+  "hooktext": "DREI TAGE ZU SPÄT",
+  "stimmung": "warm",
+  "posts": {
+   "tiktok": {
+    "id": "taeglich-tiktok-s01-teil-4",
+    "zeit": "2026-11-06T08:00:00"
+   }
+  }
+ },
+ "taeglich/s01-f01.mp4": {
+  "art": "folge",
+  "staffel": "s01",
+  "staffel_titel": "Funkstille",
+  "folge": 1,
+  "titel": "Kein Netz",
+  "folgen_in_staffel": 10,
+  "format_laengenband": "frei (65–85 s, Standard vor der Format-Rotation)",
+  "dauer_s": 67.43,
+  "laengenband": "kurz",
+  "woerter_pro_s": 2.97,
+  "familie_freunde": false,
+  "woerter": 200,
+  "einstellungen": 20,
+  "stimmung": "spannend",
+  "look": 0.6,
+  "hook_satz": "Das Internet ist weg.",
+  "hooktext": "DEINE SCHWESTER IST NICHT ZU HAUSE",
+  "kulissen": [
+   "esstisch",
+   "gesicht",
+   "grossstadt",
+   "haltestelle",
+   "handy",
+   "netz",
+   "objekt",
+   "weltall",
+   "wohnzimmer",
+   "zimmer"
+  ],
+  "kurzgesagt_einstellungen": 5,
+  "kurzgesagt_kulissen": [
+   "grossstadt",
+   "netz",
+   "weltall"
+  ],
+  "nahaufnahmen": 7,
+  "faktenkarten": 1,
+  "figuren": [
+   "du",
+   "fremder",
+   "mama",
+   "mia",
+   "papa"
+  ],
+  "letzte_zeile": "Mitten auf dem Tisch liegt Linas Handy. Sie ist ohne es los. Mitten in der Nacht.",
+  "posts": {
+   "instagram": {
+    "id": "taeglich-insta-s01-f01",
+    "zeit": "2026-11-08T16:00:00"
+   },
+   "youtube": {
+    "id": "taeglich-yt-s01-f01",
+    "zeit": "2026-11-08T16:30:00"
+   }
+  }
+ },
+ "taeglich/s01-f02.mp4": {
+  "art": "folge",
+  "staffel": "s01",
+  "staffel_titel": "Funkstille",
+  "folge": 2,
+  "titel": "Die Wand aus Zetteln",
+  "folgen_in_staffel": 10,
+  "format_laengenband": "frei (65–85 s, Standard vor der Format-Rotation)",
+  "dauer_s": 73.77,
+  "laengenband": "mittel",
+  "woerter_pro_s": 2.53,
+  "familie_freunde": true,
+  "woerter": 187,
+  "einstellungen": 18,
+  "stimmung": "duester",
+  "look": 0.85,
+  "hook_satz": "Ein Kind ist allein in der Stadt.",
+  "hooktext": "EIN KIND ALLEIN IN DER STADT",
+  "kulissen": [
+   "auge",
+   "bahnhof",
+   "gesicht",
+   "grossstadt",
+   "haltestelle",
+   "landschaft",
+   "netz",
+   "objekt"
+  ],
+  "kurzgesagt_einstellungen": 5,
+  "kurzgesagt_kulissen": [
+   "auge",
+   "grossstadt",
+   "landschaft",
+   "netz"
+  ],
+  "nahaufnahmen": 9,
+  "faktenkarten": 2,
+  "figuren": [
+   "ben",
+   "du",
+   "lehrerin",
+   "mia",
+   "papa"
+  ],
+  "letzte_zeile": "Opa wohnt zwölf Kilometer entfernt. Quer durch die ganze Stadt. Und in einer Stunde wird es dunkel.",
+  "posts": {
+   "instagram": {
+    "id": "taeglich-insta-s01-f02",
+    "zeit": "2026-11-08T20:00:00"
+   },
+   "youtube": {
+    "id": "taeglich-yt-s01-f02",
+    "zeit": "2026-11-08T20:30:00"
+   }
+  }
+ },
+ "taeglich/s01-f03.mp4": {
+  "art": "folge",
+  "staffel": "s01",
+  "staffel_titel": "Funkstille",
+  "folge": 3,
+  "titel": "Die Nacht ohne Licht",
+  "folgen_in_staffel": 10,
+  "format_laengenband": "frei (65–85 s, Standard vor der Format-Rotation)",
+  "dauer_s": 66.43,
+  "laengenband": "kurz",
+  "woerter_pro_s": 2.81,
+  "familie_freunde": false,
+  "woerter": 187,
+  "einstellungen": 18,
+  "stimmung": "spannend",
+  "look": 0.6,
+  "hook_satz": "Du stehst mitten in der Stadt.",
+  "hooktext": "DIE GANZE STADT WIRD DUNKEL",
+  "kulissen": [
+   "gesicht",
+   "grossstadt",
+   "haltestelle",
+   "landschaft",
+   "netz",
+   "objekt",
+   "park",
+   "weltall"
+  ],
+  "kurzgesagt_einstellungen": 5,
+  "kurzgesagt_kulissen": [
+   "grossstadt",
+   "landschaft",
+   "netz",
+   "weltall"
+  ],
+  "nahaufnahmen": 8,
+  "faktenkarten": 2,
+  "figuren": [
+   "ben",
+   "du",
+   "lina"
+  ],
+  "letzte_zeile": "Aus der Dunkelheit pfeift jemand zurück. Dreimal kurz. Genau euer Zeichen.",
+  "posts": {
+   "instagram": {
+    "id": "taeglich-insta-s01-f03",
+    "zeit": "2026-11-09T00:00:00"
+   },
+   "youtube": {
+    "id": "taeglich-yt-s01-f03",
+    "zeit": "2026-11-09T00:30:00"
+   }
+  }
+ },
+ "taeglich/s01-f04.mp4": {
+  "art": "folge",
+  "staffel": "s01",
+  "staffel_titel": "Funkstille",
+  "folge": 4,
+  "titel": "Dreimal kurz",
+  "folgen_in_staffel": 10,
+  "format_laengenband": "frei (65–85 s, Standard vor der Format-Rotation)",
+  "dauer_s": 72.58,
+  "laengenband": "mittel",
+  "woerter_pro_s": 2.8,
+  "familie_freunde": true,
+  "woerter": 203,
+  "einstellungen": 18,
+  "stimmung": "freudig",
+  "look": 0.2,
+  "hook_satz": "Mitten in der Nacht antwortet jemand auf ein Zeichen, das nur zwei Menschen kennen.",
+  "hooktext": "JEMAND PFEIFT ZURÜCK",
+  "kulissen": [
+   "gesicht",
+   "grossstadt",
+   "landschaft",
+   "netz",
+   "objekt",
+   "park",
+   "weltall"
+  ],
+  "kurzgesagt_einstellungen": 5,
+  "kurzgesagt_kulissen": [
+   "grossstadt",
+   "landschaft",
+   "netz",
+   "weltall"
+  ],
+  "nahaufnahmen": 10,
+  "faktenkarten": 1,
+  "figuren": [
+   "ben",
+   "du",
+   "lina",
+   "s01_funker"
+  ],
+  "letzte_zeile": "„Und das war erst der Anfang.“",
+  "posts": {
+   "instagram": {
+    "id": "taeglich-insta-s01-f04",
+    "zeit": "2026-11-09T04:00:00"
+   },
+   "youtube": {
+    "id": "taeglich-yt-s01-f04",
+    "zeit": "2026-11-09T04:30:00"
+   }
+  }
+ },
+ "taeglich/s01-f05.mp4": {
+  "art": "folge",
+  "staffel": "s01",
+  "staffel_titel": "Funkstille",
+  "folge": 5,
+  "titel": "Was der Funker hörte",
+  "folgen_in_staffel": 10,
+  "format_laengenband": "frei (65–85 s, Standard vor der Format-Rotation)",
+  "dauer_s": 78.27,
+  "laengenband": "lang",
+  "woerter_pro_s": 2.38,
+  "familie_freunde": false,
+  "woerter": 186,
+  "einstellungen": 18,
+  "stimmung": "duester",
+  "look": 0.85,
+  "hook_satz": "Die Sonne hat die Erde getroffen.",
+  "hooktext": "DIE SONNE HAT ZUGESCHLAGEN",
+  "kulissen": [
+   "gesicht",
+   "grossstadt",
+   "landschaft",
+   "netz",
+   "objekt",
+   "rechenzentrum",
+   "titel",
+   "weltall",
+   "wohnzimmer"
+  ],
+  "kurzgesagt_einstellungen": 6,
+  "kurzgesagt_kulissen": [
+   "grossstadt",
+   "landschaft",
+   "netz",
+   "rechenzentrum",
+   "weltall"
+  ],
+  "nahaufnahmen": 8,
+  "faktenkarten": 3,
+  "figuren": [
+   "ben",
+   "du",
+   "lina",
+   "s01_funker"
+  ],
+  "letzte_zeile": "„Und er hat mir letzte Woche gesagt: Die Packung ist fast leer.“",
+  "posts": {
+   "instagram": {
+    "id": "taeglich-insta-s01-f05",
+    "zeit": "2026-11-09T08:00:00"
+   },
+   "youtube": {
+    "id": "taeglich-yt-s01-f05",
+    "zeit": "2026-11-09T08:30:00"
+   }
+  }
+ },
+ "taeglich/s01-f06.mp4": {
+  "art": "folge",
+  "staffel": "s01",
+  "staffel_titel": "Funkstille",
+  "folge": 6,
+  "titel": "Bei mir klingelt sowieso keiner",
+  "folgen_in_staffel": 10,
+  "format_laengenband": "frei (65–85 s, Standard vor der Format-Rotation)",
+  "dauer_s": 78.17,
+  "laengenband": "lang",
+  "woerter_pro_s": 2.64,
+  "familie_freunde": true,
+  "woerter": 206,
+  "einstellungen": 18,
+  "stimmung": "traurig",
+  "look": 0.5,
+  "hook_satz": "Ein alter Mann sitzt seit zwei Tagen allein im Dunkeln.",
+  "hooktext": "ER SITZT ALLEIN IM DUNKELN",
+  "kulissen": [
+   "gesicht",
+   "landschaft",
+   "lebenszeit",
+   "objekt",
+   "titel",
+   "wohnzimmer"
+  ],
+  "kurzgesagt_einstellungen": 3,
+  "kurzgesagt_kulissen": [
+   "landschaft",
+   "lebenszeit"
+  ],
+  "nahaufnahmen": 9,
+  "faktenkarten": 3,
+  "figuren": [
+   "ben",
+   "du",
+   "lina",
+   "opa"
+  ],
+  "letzte_zeile": "Sein Gesicht wird ganz grau. Er greift sich an die Brust. Und sinkt langsam in den Sessel.",
+  "posts": {
+   "instagram": {
+    "id": "taeglich-insta-s01-f06",
+    "zeit": "2026-11-09T12:00:00"
+   },
+   "youtube": {
+    "id": "taeglich-yt-s01-f06",
+    "zeit": "2026-11-09T12:30:00"
+   }
+  }
+ },
+ "taeglich/s01-f07.mp4": {
+  "art": "folge",
+  "staffel": "s01",
+  "staffel_titel": "Funkstille",
+  "folge": 7,
+  "titel": "Notfunk",
+  "folgen_in_staffel": 10,
+  "format_laengenband": "frei (65–85 s, Standard vor der Format-Rotation)",
+  "dauer_s": 76.01,
+  "laengenband": "mittel",
+  "woerter_pro_s": 2.68,
+  "familie_freunde": false,
+  "woerter": 204,
+  "einstellungen": 18,
+  "stimmung": "spannend",
+  "look": 0.6,
+  "hook_satz": "Ein Mensch braucht sofort einen Arzt.",
+  "hooktext": "KEIN NOTRUF. NIRGENDS.",
+  "kulissen": [
+   "gesicht",
+   "grossstadt",
+   "krankenhaus",
+   "landschaft",
+   "netz",
+   "objekt",
+   "polarlicht",
+   "wohnzimmer"
+  ],
+  "kurzgesagt_einstellungen": 4,
+  "kurzgesagt_kulissen": [
+   "grossstadt",
+   "landschaft",
+   "netz",
+   "polarlicht"
+  ],
+  "nahaufnahmen": 9,
+  "faktenkarten": 1,
+  "figuren": [
+   "ben",
+   "du",
+   "lina",
+   "mama",
+   "opa",
+   "papa",
+   "s01_funker"
+  ],
+  "letzte_zeile": "Der zweite Sturm ist da. Und im ganzen Krankenhaus gehen die Lichter aus.",
+  "posts": {
+   "instagram": {
+    "id": "taeglich-insta-s01-f07",
+    "zeit": "2026-11-09T16:00:00"
+   },
+   "youtube": {
+    "id": "taeglich-yt-s01-f07",
+    "zeit": "2026-11-09T16:30:00"
+   }
+  }
+ },
+ "taeglich/s01-f08.mp4": {
+  "art": "folge",
+  "staffel": "s01",
+  "staffel_titel": "Funkstille",
+  "folge": 8,
+  "titel": "Der grüne Himmel",
+  "folgen_in_staffel": 10,
+  "format_laengenband": "frei (65–85 s, Standard vor der Format-Rotation)",
+  "dauer_s": 73.9,
+  "laengenband": "mittel",
+  "woerter_pro_s": 2.8,
+  "familie_freunde": true,
+  "woerter": 207,
+  "einstellungen": 18,
+  "stimmung": "freudig",
+  "look": 0.2,
+  "hook_satz": "Das ganze Krankenhaus ist plötzlich dunkel.",
+  "hooktext": "DER HIMMEL WIRD GRÜN",
+  "kulissen": [
+   "gesicht",
+   "handy",
+   "krankenhaus",
+   "polarlicht",
+   "titel",
+   "weltall"
+  ],
+  "kurzgesagt_einstellungen": 4,
+  "kurzgesagt_kulissen": [
+   "polarlicht",
+   "weltall"
+  ],
+  "nahaufnahmen": 9,
+  "faktenkarten": 1,
+  "figuren": [
+   "ben",
+   "du",
+   "lina",
+   "mama",
+   "opa",
+   "papa"
+  ],
+  "letzte_zeile": "Dein Handy. Ein einziger Balken. Und eine Nachricht, die drei Tage lang festgesteckt hat.",
+  "posts": {
+   "instagram": {
+    "id": "taeglich-insta-s01-f08",
+    "zeit": "2026-11-09T20:00:00"
+   },
+   "youtube": {
+    "id": "taeglich-yt-s01-f08",
+    "zeit": "2026-11-09T20:30:00"
+   }
+  }
+ },
+ "taeglich/s01-f09.mp4": {
+  "art": "folge",
+  "staffel": "s01",
+  "staffel_titel": "Funkstille",
+  "folge": 9,
+  "titel": "Drei Tage zu spät",
+  "folgen_in_staffel": 10,
+  "format_laengenband": "frei (65–85 s, Standard vor der Format-Rotation)",
+  "dauer_s": 79.04,
+  "laengenband": "lang",
+  "woerter_pro_s": 2.52,
+  "familie_freunde": true,
+  "woerter": 199,
+  "einstellungen": 18,
+  "stimmung": "warm",
+  "look": 0.35,
+  "hook_satz": "Eine Nachricht hat drei Tage gebraucht, um bei dir anzukommen.",
+  "hooktext": "DREI TAGE ZU SPÄT",
+  "kulissen": [
+   "esstisch",
+   "gesicht",
+   "grossstadt",
+   "handy",
+   "krankenhaus",
+   "lebenszeit",
+   "netz",
+   "zimmer"
+  ],
+  "kurzgesagt_einstellungen": 3,
+  "kurzgesagt_kulissen": [
+   "grossstadt",
+   "lebenszeit",
+   "netz"
+  ],
+  "nahaufnahmen": 9,
+  "faktenkarten": 0,
+  "figuren": [
+   "du",
+   "lina",
+   "mama",
+   "opa",
+   "papa"
+  ],
+  "letzte_zeile": "„Nach Hause? Da wartet doch keiner auf mich.“",
+  "posts": {
+   "instagram": {
+    "id": "taeglich-insta-s01-f09",
+    "zeit": "2026-11-10T00:00:00"
+   },
+   "youtube": {
+    "id": "taeglich-yt-s01-f09",
+    "zeit": "2026-11-10T00:30:00"
+   }
+  }
+ },
+ "taeglich/s01-f10.mp4": {
+  "art": "folge",
+  "staffel": "s01",
+  "staffel_titel": "Funkstille",
+  "folge": 10,
+  "titel": "Jeden Sonntag",
+  "folgen_in_staffel": 10,
+  "format_laengenband": "frei (65–85 s, Standard vor der Format-Rotation)",
+  "dauer_s": 75.58,
+  "laengenband": "mittel",
+  "woerter_pro_s": 2.74,
+  "familie_freunde": true,
+  "woerter": 207,
+  "einstellungen": 18,
+  "stimmung": "freudig",
+  "look": 0.15,
+  "hook_satz": "Ein alter Mann glaubt, dass niemand auf ihn wartet.",
+  "hooktext": "ER GLAUBT, KEINER WARTET AUF IHN",
+  "kulissen": [
+   "esstisch",
+   "gesicht",
+   "krankenhaus",
+   "landschaft",
+   "lebenszeit",
+   "see",
+   "wald",
+   "weltall"
+  ],
+  "kurzgesagt_einstellungen": 5,
+  "kurzgesagt_kulissen": [
+   "landschaft",
+   "lebenszeit",
+   "wald",
+   "weltall"
+  ],
+  "nahaufnahmen": 8,
+  "faktenkarten": 0,
+  "figuren": [
+   "ben",
+   "du",
+   "lina",
+   "mama",
+   "opa",
+   "papa",
+   "s01_funker"
+  ],
+  "letzte_zeile": "Und genau da habt ihr angefangen, wieder miteinander zu reden.",
+  "posts": {
+   "instagram": {
+    "id": "taeglich-insta-s01-f10",
+    "zeit": "2026-11-10T04:00:00"
+   },
+   "youtube": {
+    "id": "taeglich-yt-s01-f10",
+    "zeit": "2026-11-10T04:30:00"
+   }
+  }
+ }
+}
