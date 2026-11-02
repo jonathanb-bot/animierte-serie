@@ -14,7 +14,7 @@ Diese Datei ist verbindlich für die geplante Aufgabe „Kurzvideo-Staffel alle 
 ## Tempo (Jonathans Vorgabe 1.11. abends: bessere Analyse, mehr Videos pro Tag, damit es schneller geht)
 
 - **Posten:** TikTok **4× am Tag (08, 12, 16, 20 Uhr)**, **Instagram alle 2 Stunden, YouTube jeweils :30** (Jonathans Vorgabe 2.11., Issue #14: höchstens 1 Tag hinter TikTok). Neue Posts weiterhin hinten anhängen.
-- **Produktion jede Nacht um 23:44 prüfen:** `python taeglich/vorrat.py`. **PRODUZIEREN**, wenn gestern keine Staffel fertig wurde oder der TikTok-Vorrat unter 3 Tagen liegt, sonst AUSSETZEN. Normal ist also alle 2 Tage eine Staffel. Reicht der Vorrat nicht, wird jeden Tag produziert. 10 Folgen pro Staffel ergeben 4 TikTok-Teile, das füllt genau einen Tag mit 4 TikTok-Posts.
+- **Produktion jede Nacht um 23:44 prüfen (Jonathans Vorgabe 2.11., Issue #16):** `python taeglich/vorrat.py`. Erst wird der bestehende Vorrat abgearbeitet. **PRODUZIEREN**, sobald der TikTok-Vorrat unter 2 Tagen liegt, sonst AUSSETZEN. Danach entsteht jede Nacht eine Staffel, und ihre Posts beginnen gleich am nächsten Tag (TikTok ab 08/12 Uhr, Instagram/YouTube alle 2 Stunden). So wird jede Staffel an dem Tag gepostet, an dem sie fertig wird, ohne mehrtägigen Vorrat.
 - **Analyse jeden Abend um 21:39** (Zernio kostenlos), vidIQ nach Credit-Plan nur jeden 2. Abend.
 - In `staffeln.json` bekommt jede Staffel `datum` (JJJJ-MM-TT), sonst erkennt `vorrat.py` sie nicht.
 

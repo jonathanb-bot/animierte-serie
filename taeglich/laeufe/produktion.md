@@ -3,7 +3,8 @@
 Jonathans Vorgaben vom 1.11.:
 - nachts starten und eine ganze Staffel produzieren, für TikTok, Instagram und YouTube
 - beim Posten alles hinten anhängen
-- mehr Videos pro Tag (TikTok 4×); reicht der Vorrat nicht, jeden Tag produzieren
+- mehr Videos pro Tag (TikTok 4×, Instagram/YouTube alle 2 Stunden)
+- (2.11., Issue #16) erst den Vorrat abarbeiten, danach jede Nacht eine Staffel, die gleich am nächsten Tag gepostet wird
 - Kulissen in Kurzgesagt-Richtung, mit viel Detail und hoher Bildqualität
 - nie „Fortsetzung folgt“, jedes Video über 1 Minute
 - Themen aus dem echten Leben (Leben, Tod, Abschied, Familie) immer im gleichen Stil
@@ -17,7 +18,7 @@ Hinweis zu den Werkzeugen: In neuen Sessions heißen die vidIQ-Werkzeuge `mcp__<
    - `cd /home/user/animierte-serie && git fetch origin taeglich main && git checkout -B taeglich origin/taeglich`
    - `pip install -q -r requirements.txt && npm ci --ignore-scripts --no-audit --no-fund`
    - `export CHROMIUM=/opt/pw-browsers/chromium`
-2. **Vorrat prüfen:** `python taeglich/vorrat.py`. Lautet die letzte Zeile AUSSETZEN, sofort aufhören: kurz notieren, wie viele Tage Vorrat da sind, keine PushNotification. Ist eine Staffel halb fertig (etwa wegen des Gemini-Kontingents), diese zu Ende bringen.
+2. **Vorrat prüfen:** `python taeglich/vorrat.py`. Lautet die letzte Zeile AUSSETZEN, sofort aufhören: kurz notieren, wie viele Tage Vorrat da sind, keine PushNotification. PRODUZIEREN kommt, sobald der TikTok-Vorrat unter 2 Tagen liegt (Issue #16). Ist eine Staffel halb fertig (etwa wegen des Gemini-Kontingents), diese zu Ende bringen.
 3. **Regeln lesen:**
    - offene Issues mit Label `dringlich` (mcp__github__list_issues)
    - `git show origin/main:CLAUDE.md`
