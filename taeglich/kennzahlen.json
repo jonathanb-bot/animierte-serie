@@ -55,7 +55,37 @@
    },
    "erkenntnis": "Teile, die mit Titel/Rückblick beginnen oder mit Check/Endkarte enden, floppen (Faktor 0,1–0,2); Mittelteile direkt in der Handlung 1,5–5,7. Hooks müssen ohne Vorwissen funktionieren (77 % neue Zuschauer).",
    "vidiq_credits_danach": 124
+  },
+  {
+   "datum": "2026-11-02T21:42",
+   "quelle": "Analyse vor der Staffel (Zernio 61 Posts + vidIQ kostenlos)",
+   "tiktok": {
+    "follower": 61,
+    "follower_30_tage": "+10/-0",
+    "likes_30_tage": 1204,
+    "videos": 15,
+    "bindung_7s": "23–38 %",
+    "wiedergabe_s": "17–35",
+    "fuer_dich": "93–97 %"
+   },
+   "instagram": {
+    "follower": 6,
+    "aufrufe_30_tage": 21974,
+    "reichweite_30_tage": 11055,
+    "aktive_konten": 217
+   },
+   "youtube": {
+    "abonnenten": 40,
+    "abonnenten_zernio": 36,
+    "abos_30_tage": "+13",
+    "aufrufe_30_tage": 5877,
+    "minuten_30_tage": 2177,
+    "aufrufe_gesamt_vidiq": 13606,
+    "videos": 25
+   },
+   "erkenntnis": "YouTube: alle Posts 04:30–12:30 über 600 Aufrufe, alle 14:30–00:30 unter 135 (Uhrzeit statt Inhalt). TikTok verliert 62–77 % in den ersten 7 s. Instagram: Handlungs-Einstiege 3–5x vor Titel/Rückblick.",
+   "vidiq_credits_danach": 144
   }
  ],
- "letzte_analyse": "taeglich/analyse/2026-11-01.md"
+ "letzte_analyse": "taeglich/analyse/2026-11-02.md"
 }
