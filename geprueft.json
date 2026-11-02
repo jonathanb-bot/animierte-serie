@@ -1188,6 +1188,90 @@
    "bild_s": 45.47,
    "ton_s": 45.5,
    "lufs": -14.6
+  },
+  "taeglich/s01-f01.mp4": {
+   "ok": true,
+   "bild_s": 67.4,
+   "ton_s": 67.43,
+   "lufs": -14.6
+  },
+  "taeglich/s01-f02.mp4": {
+   "ok": true,
+   "bild_s": 73.73,
+   "ton_s": 73.77,
+   "lufs": -14.6
+  },
+  "taeglich/s01-f03.mp4": {
+   "ok": true,
+   "bild_s": 66.4,
+   "ton_s": 66.43,
+   "lufs": -14.6
+  },
+  "taeglich/s01-f04.mp4": {
+   "ok": true,
+   "bild_s": 72.53,
+   "ton_s": 72.58,
+   "lufs": -14.6
+  },
+  "taeglich/s01-f05.mp4": {
+   "ok": true,
+   "bild_s": 78.23,
+   "ton_s": 78.27,
+   "lufs": -14.6
+  },
+  "taeglich/s01-f06.mp4": {
+   "ok": true,
+   "bild_s": 78.13,
+   "ton_s": 78.17,
+   "lufs": -14.6
+  },
+  "taeglich/s01-f07.mp4": {
+   "ok": true,
+   "bild_s": 75.97,
+   "ton_s": 76.01,
+   "lufs": -14.6
+  },
+  "taeglich/s01-f08.mp4": {
+   "ok": true,
+   "bild_s": 73.9,
+   "ton_s": 73.9,
+   "lufs": -14.6
+  },
+  "taeglich/s01-f09.mp4": {
+   "ok": true,
+   "bild_s": 79.0,
+   "ton_s": 79.04,
+   "lufs": -14.6
+  },
+  "taeglich/s01-f10.mp4": {
+   "ok": true,
+   "bild_s": 75.53,
+   "ton_s": 75.58,
+   "lufs": -14.6
+  },
+  "taeglich-tiktok/s01-teil-1.mp4": {
+   "ok": true,
+   "bild_s": 207.53,
+   "ton_s": 207.55,
+   "lufs": -14.6
+  },
+  "taeglich-tiktok/s01-teil-2.mp4": {
+   "ok": true,
+   "bild_s": 150.77,
+   "ton_s": 150.78,
+   "lufs": -14.6
+  },
+  "taeglich-tiktok/s01-teil-3.mp4": {
+   "ok": true,
+   "bild_s": 228.0,
+   "ton_s": 228.01,
+   "lufs": -14.6
+  },
+  "taeglich-tiktok/s01-teil-4.mp4": {
+   "ok": true,
+   "bild_s": 154.53,
+   "ton_s": 154.54,
+   "lufs": -14.6
   }
  },
  "serien": {
@@ -1376,6 +1460,32 @@
   "video-001": {
    "titel": "Die Zeit, die dir bleibt",
    "datei": "taeglich/video-001.mp4"
+  }
+ },
+ "taeglich_staffeln": {
+  "s01": {
+   "titel": "Funkstille",
+   "folgen": 10,
+   "tiktok_teile": [
+    [
+     1,
+     2,
+     3
+    ],
+    [
+     4,
+     5
+    ],
+    [
+     6,
+     7,
+     8
+    ],
+    [
+     9,
+     10
+    ]
+   ]
   }
  }
 }
