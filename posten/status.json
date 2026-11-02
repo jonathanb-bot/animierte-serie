@@ -2254,41 +2254,6 @@
   "http": 201,
   "am": "2026-10-31T10:44:36.219Z"
  },
- "alien-tiktok-teil-5": {
-  "ok": true,
-  "zeit": "2026-11-02T20:00:00",
-  "zernioId": "6ae5c698e9e69fd6d96eff0e",
-  "http": 201,
-  "am": "2026-10-31T10:44:40.607Z"
- },
- "mann-tiktok-teil-1": {
-  "ok": true,
-  "zeit": "2026-11-03T08:00:00",
-  "zernioId": "6ae5c69c8fd91f671c5f50ff",
-  "http": 201,
-  "am": "2026-10-31T10:44:44.702Z"
- },
- "mann-tiktok-teil-2": {
-  "ok": true,
-  "zeit": "2026-11-03T20:00:00",
-  "zernioId": "6ae5c6a0e9e69fd6d96eff1c",
-  "http": 201,
-  "am": "2026-10-31T10:44:48.212Z"
- },
- "mann-tiktok-teil-3": {
-  "ok": true,
-  "zeit": "2026-11-04T08:00:00",
-  "zernioId": "6ae5c6a48fd91f671c5f513d",
-  "http": 201,
-  "am": "2026-10-31T10:44:52.209Z"
- },
- "mann-tiktok-teil-4": {
-  "ok": true,
-  "zeit": "2026-11-04T20:00:00",
-  "zernioId": "6ae5c6a7e9e69fd6d96eff2c",
-  "http": 201,
-  "am": "2026-10-31T10:44:55.825Z"
- },
  "stock-insta-kurz-03-1": {
   "ok": true,
   "zeit": "2026-10-31T20:00:00",
@@ -2442,41 +2407,6 @@
   "zernioId": "6ae5d43f540304bc1e69d635",
   "http": 201,
   "am": "2026-10-31T11:42:55.683Z"
- },
- "taeglich-tiktok-001": {
-  "ok": true,
-  "zeit": "2026-11-05T08:00:00",
-  "zernioId": "6ae740aaffd4de370b93f20e",
-  "http": 201,
-  "am": "2026-11-01T13:37:46.526Z"
- },
- "taeglich-tiktok-s01-teil-1": {
-  "ok": true,
-  "zeit": "2026-11-05T12:00:00",
-  "zernioId": "6ae7ebf7eabf1fb8a49bb1cc",
-  "http": 201,
-  "am": "2026-11-02T01:48:39.733Z"
- },
- "taeglich-tiktok-s01-teil-2": {
-  "ok": true,
-  "zeit": "2026-11-05T16:00:00",
-  "zernioId": "6ae7ebfbeabf1fb8a49bb1d4",
-  "http": 201,
-  "am": "2026-11-02T01:48:43.211Z"
- },
- "taeglich-tiktok-s01-teil-3": {
-  "ok": true,
-  "zeit": "2026-11-05T20:00:00",
-  "zernioId": "6ae7ebff593f1575ec59844b",
-  "http": 201,
-  "am": "2026-11-02T01:48:47.515Z"
- },
- "taeglich-tiktok-s01-teil-4": {
-  "ok": true,
-  "zeit": "2026-11-06T08:00:00",
-  "zernioId": "6ae7ec03593f1575ec598460",
-  "http": 201,
-  "am": "2026-11-02T01:48:51.361Z"
  },
  "stock-insta-kurz-08-2": {
   "ok": true,
@@ -3121,5 +3051,85 @@
   "zernioId": "6ae86352e56ee1d4a45b7180",
   "http": 201,
   "am": "2026-11-02T10:17:55.108Z"
+ },
+ "alien-tiktok-teil-5": {
+  "ok": true,
+  "zeit": "2026-11-02T20:00:00",
+  "fassung": 2,
+  "zernioId": "6ae8640ee56ee1d4a45b78bf",
+  "http": 201,
+  "am": "2026-11-02T10:21:03.003Z"
+ },
+ "mann-tiktok-teil-1": {
+  "ok": true,
+  "zeit": "2026-11-03T08:00:00",
+  "fassung": 2,
+  "zernioId": "6ae86413e56ee1d4a45b78fa",
+  "http": 201,
+  "am": "2026-11-02T10:21:07.414Z"
+ },
+ "mann-tiktok-teil-2": {
+  "ok": true,
+  "zeit": "2026-11-03T20:00:00",
+  "fassung": 2,
+  "zernioId": "6ae864164bf04970a01b58fe",
+  "http": 201,
+  "am": "2026-11-02T10:21:10.971Z"
+ },
+ "mann-tiktok-teil-3": {
+  "ok": true,
+  "zeit": "2026-11-04T08:00:00",
+  "fassung": 2,
+  "zernioId": "6ae8641a4bf04970a01b590e",
+  "http": 201,
+  "am": "2026-11-02T10:21:15.020Z"
+ },
+ "mann-tiktok-teil-4": {
+  "ok": true,
+  "zeit": "2026-11-04T20:00:00",
+  "fassung": 2,
+  "zernioId": "6ae8641e12d5a2c855d1286c",
+  "http": 201,
+  "am": "2026-11-02T10:21:18.486Z"
+ },
+ "taeglich-tiktok-001": {
+  "ok": true,
+  "zeit": "2026-11-05T08:00:00",
+  "fassung": 2,
+  "zernioId": "6ae86421e56ee1d4a45b79aa",
+  "http": 201,
+  "am": "2026-11-02T10:21:21.122Z"
+ },
+ "taeglich-tiktok-s01-teil-1": {
+  "ok": true,
+  "zeit": "2026-11-05T12:00:00",
+  "fassung": 2,
+  "zernioId": "6ae864244bf04970a01b5942",
+  "http": 201,
+  "am": "2026-11-02T10:21:24.980Z"
+ },
+ "taeglich-tiktok-s01-teil-2": {
+  "ok": true,
+  "zeit": "2026-11-05T16:00:00",
+  "fassung": 2,
+  "zernioId": "6ae86428e56ee1d4a45b79f3",
+  "http": 201,
+  "am": "2026-11-02T10:21:28.569Z"
+ },
+ "taeglich-tiktok-s01-teil-3": {
+  "ok": true,
+  "zeit": "2026-11-05T20:00:00",
+  "fassung": 2,
+  "zernioId": "6ae8642c4bf04970a01b595e",
+  "http": 201,
+  "am": "2026-11-02T10:21:32.607Z"
+ },
+ "taeglich-tiktok-s01-teil-4": {
+  "ok": true,
+  "zeit": "2026-11-06T08:00:00",
+  "fassung": 2,
+  "zernioId": "6ae864300b61d26a39b18111",
+  "http": 201,
+  "am": "2026-11-02T10:21:36.323Z"
  }
 }
