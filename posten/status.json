@@ -2953,5 +2953,173 @@
   "zernioId": "6ae740af293762d3ff6780f3",
   "http": 201,
   "am": "2026-11-01T13:37:51.353Z"
+ },
+ "taeglich-tiktok-s01-teil-1": {
+  "ok": true,
+  "zeit": "2026-11-05T12:00:00",
+  "zernioId": "6ae7ebf7eabf1fb8a49bb1cc",
+  "http": 201,
+  "am": "2026-11-02T01:48:39.733Z"
+ },
+ "taeglich-tiktok-s01-teil-2": {
+  "ok": true,
+  "zeit": "2026-11-05T16:00:00",
+  "zernioId": "6ae7ebfbeabf1fb8a49bb1d4",
+  "http": 201,
+  "am": "2026-11-02T01:48:43.211Z"
+ },
+ "taeglich-tiktok-s01-teil-3": {
+  "ok": true,
+  "zeit": "2026-11-05T20:00:00",
+  "zernioId": "6ae7ebff593f1575ec59844b",
+  "http": 201,
+  "am": "2026-11-02T01:48:47.515Z"
+ },
+ "taeglich-tiktok-s01-teil-4": {
+  "ok": true,
+  "zeit": "2026-11-06T08:00:00",
+  "zernioId": "6ae7ec03593f1575ec598460",
+  "http": 201,
+  "am": "2026-11-02T01:48:51.361Z"
+ },
+ "taeglich-insta-s01-f01": {
+  "ok": true,
+  "zeit": "2026-11-08T16:00:00",
+  "zernioId": "6ae7ec05593f1575ec598468",
+  "http": 201,
+  "am": "2026-11-02T01:48:54.120Z"
+ },
+ "taeglich-insta-s01-f02": {
+  "ok": true,
+  "zeit": "2026-11-08T20:00:00",
+  "zernioId": "6ae7ec08593f1575ec59847c",
+  "http": 201,
+  "am": "2026-11-02T01:48:57.027Z"
+ },
+ "taeglich-insta-s01-f03": {
+  "ok": true,
+  "zeit": "2026-11-09T00:00:00",
+  "zernioId": "6ae7ec0b593f1575ec598496",
+  "http": 201,
+  "am": "2026-11-02T01:48:59.822Z"
+ },
+ "taeglich-insta-s01-f04": {
+  "ok": true,
+  "zeit": "2026-11-09T04:00:00",
+  "zernioId": "6ae7ec0e97c0e7323b5c46d0",
+  "http": 201,
+  "am": "2026-11-02T01:49:02.882Z"
+ },
+ "taeglich-insta-s01-f05": {
+  "ok": true,
+  "zeit": "2026-11-09T08:00:00",
+  "zernioId": "6ae7ec1197c0e7323b5c46e0",
+  "http": 201,
+  "am": "2026-11-02T01:49:05.670Z"
+ },
+ "taeglich-insta-s01-f06": {
+  "ok": true,
+  "zeit": "2026-11-09T12:00:00",
+  "zernioId": "6ae7ec1497c0e7323b5c4701",
+  "http": 201,
+  "am": "2026-11-02T01:49:08.592Z"
+ },
+ "taeglich-insta-s01-f07": {
+  "ok": true,
+  "zeit": "2026-11-09T16:00:00",
+  "zernioId": "6ae7ec17eabf1fb8a49bb25d",
+  "http": 201,
+  "am": "2026-11-02T01:49:11.378Z"
+ },
+ "taeglich-insta-s01-f08": {
+  "ok": true,
+  "zeit": "2026-11-09T20:00:00",
+  "zernioId": "6ae7ec1a97c0e7323b5c4729",
+  "http": 201,
+  "am": "2026-11-02T01:49:14.340Z"
+ },
+ "taeglich-insta-s01-f09": {
+  "ok": true,
+  "zeit": "2026-11-10T00:00:00",
+  "zernioId": "6ae7ec1e593f1575ec5984b7",
+  "http": 201,
+  "am": "2026-11-02T01:49:18.148Z"
+ },
+ "taeglich-insta-s01-f10": {
+  "ok": true,
+  "zeit": "2026-11-10T04:00:00",
+  "zernioId": "6ae7ec21593f1575ec5984da",
+  "http": 201,
+  "am": "2026-11-02T01:49:21.884Z"
+ },
+ "taeglich-yt-s01-f01": {
+  "ok": true,
+  "zeit": "2026-11-08T16:30:00",
+  "zernioId": "6ae7ec24593f1575ec5984f4",
+  "http": 201,
+  "am": "2026-11-02T01:49:24.120Z"
+ },
+ "taeglich-yt-s01-f02": {
+  "ok": true,
+  "zeit": "2026-11-08T20:30:00",
+  "zernioId": "6ae7ec26eabf1fb8a49bb294",
+  "http": 201,
+  "am": "2026-11-02T01:49:26.357Z"
+ },
+ "taeglich-yt-s01-f03": {
+  "ok": true,
+  "zeit": "2026-11-09T00:30:00",
+  "zernioId": "6ae7ec2897c0e7323b5c476b",
+  "http": 201,
+  "am": "2026-11-02T01:49:28.664Z"
+ },
+ "taeglich-yt-s01-f04": {
+  "ok": true,
+  "zeit": "2026-11-09T04:30:00",
+  "zernioId": "6ae7ec2a97c0e7323b5c477b",
+  "http": 201,
+  "am": "2026-11-02T01:49:30.918Z"
+ },
+ "taeglich-yt-s01-f05": {
+  "ok": true,
+  "zeit": "2026-11-09T08:30:00",
+  "zernioId": "6ae7ec2d593f1575ec598517",
+  "http": 201,
+  "am": "2026-11-02T01:49:33.603Z"
+ },
+ "taeglich-yt-s01-f06": {
+  "ok": true,
+  "zeit": "2026-11-09T12:30:00",
+  "zernioId": "6ae7ec2f593f1575ec59851f",
+  "http": 201,
+  "am": "2026-11-02T01:49:35.966Z"
+ },
+ "taeglich-yt-s01-f07": {
+  "ok": true,
+  "zeit": "2026-11-09T16:30:00",
+  "zernioId": "6ae7ec32593f1575ec598527",
+  "http": 201,
+  "am": "2026-11-02T01:49:38.293Z"
+ },
+ "taeglich-yt-s01-f08": {
+  "ok": true,
+  "zeit": "2026-11-09T20:30:00",
+  "zernioId": "6ae7ec34eabf1fb8a49bb2cd",
+  "http": 201,
+  "am": "2026-11-02T01:49:40.689Z"
+ },
+ "taeglich-yt-s01-f09": {
+  "ok": true,
+  "zeit": "2026-11-10T00:30:00",
+  "zernioId": "6ae7ec36593f1575ec59852f",
+  "http": 201,
+  "am": "2026-11-02T01:49:43.035Z"
+ },
+ "taeglich-yt-s01-f10": {
+  "ok": true,
+  "zeit": "2026-11-10T04:30:00",
+  "zernioId": "6ae7ec39eabf1fb8a49bb2e0",
+  "http": 201,
+  "am": "2026-11-02T01:49:45.420Z"
  }
 }
