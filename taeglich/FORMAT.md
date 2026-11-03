@@ -75,6 +75,8 @@ Pro Staffel einen großen Kanal als Hauptvorbild wählen (abwechseln!) und kurz 
 4. **Wendung** (2–3).
 5. **Cliffhanger** (1) als letzte Einstellung. Danach kommt nichts mehr, keine Karte „Fortsetzung folgt“.
 
+**Keine Statusanzeige oben links** (Jonathans Vorgabe 3.11., Issue #19): kein `@hud` im Drehbuch, also kein Kasten mit Tag/Uhrzeit, Handy, Netz, Konsole o. Ä. Uhrzeit oder Akku erzählt bei Bedarf die Szene selbst (z. B. `[handy …]`). Prüfen: `grep -n "@hud" taeglich/episoden/sNN-*.txt` muss leer sein.
+
 **Verboten:** Fragen ans Publikum („Was hättest du gemacht?“, „Schreib es in die Kommentare“, „Was ist richtig?“), Quiz und Check (#8). Ebenso „Echter Fakt“ (#2) und Erfundenes, das als Tatsache verkauft wird: Fantasie-Szenarien werden als „Stell dir vor …“ erzählt, Schätzungen als Schätzung. Fragen der Figuren in der Handlung sind erlaubt. Nicht predigen. Kein Suizid, keine Selbstverletzung, keine Essstörungen und keine Gewalt gegen Kinder. Tod und Abschied nur behutsam.
 
 **Sprache:** Du-Erzählung, kurze Sätze, gesprochenes Deutsch, Zahlen als Wörter. `*Wort*` hebt ein Wort hervor, „…“ ist ein Zitat (Mund bewegt sich).

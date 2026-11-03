@@ -29,7 +29,7 @@ Hinweis zu den Werkzeugen: In neuen Sessions heißen die vidIQ-Werkzeuge `mcp__<
 6. **Eintragen und schreiben:** Die Staffel in `staffeln.json` eintragen, mit `datum` (Nachtdatum JJJJ-MM-TT: Start vor 6 Uhr früh zählt zum Vortag) und `analyse` (welche Punkte umgesetzt wurden). Dann alle 10 Drehbücher schreiben (`taeglich/episoden/sNN-f01.txt` … `f10.txt`):
    - Kopf mit `@qualitaet hoch`, `@look 0`, `@kino 0.35`, `@stil leuchtend` und `@palette …` (Stil „leuchtend“, Issue #17, Tabelle in FORMAT.md); jede Einstellung mit passender `palette=…`
    - Folgenzahl und Längenband nach der Rotation in `FORMAT.md` („Abwechslung bei Länge und Folgenzahl“), in `staffeln.json` → `format` eintragen; Wörter und Einstellungen pro Folge laut Tabelle dort (immer über 1 Minute)
-   - jede Folge endet mit dem Cliffhanger als letzter Zeile: nie „Fortsetzung folgt“, keine Endkarte, keine Fragen ans Publikum, nie „Echter Fakt“
+   - jede Folge endet mit dem Cliffhanger als letzter Zeile: nie „Fortsetzung folgt“, keine Endkarte, keine Fragen ans Publikum, nie „Echter Fakt“, kein `@hud` (keine Statusanzeige oben links, Issue #19)
    - mindestens 2 Folgen zum Thema Freunde/Familie, mindestens 4 Stimmungen, je Folge mindestens 2 Kurzgesagt-Kulissen
    - höchstens 2 neue Kulissen
    - nach Engine-Änderungen die alten Serien pixelgleich prüfen
