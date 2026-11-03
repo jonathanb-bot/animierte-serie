@@ -3071,65 +3071,65 @@
  "mann-tiktok-teil-2": {
   "ok": true,
   "zeit": "2026-11-03T20:00:00",
-  "fassung": 2,
-  "zernioId": "6ae864164bf04970a01b58fe",
+  "fassung": 3,
+  "zernioId": "6ae990d0fb116dbf0dcaade2",
   "http": 201,
-  "am": "2026-11-02T10:21:10.971Z"
+  "am": "2026-11-03T07:44:16.650Z"
  },
  "mann-tiktok-teil-3": {
   "ok": true,
   "zeit": "2026-11-04T08:00:00",
-  "fassung": 2,
-  "zernioId": "6ae8641a4bf04970a01b590e",
+  "fassung": 3,
+  "zernioId": "6ae990d5fb116dbf0dcaae04",
   "http": 201,
-  "am": "2026-11-02T10:21:15.020Z"
+  "am": "2026-11-03T07:44:21.667Z"
  },
  "mann-tiktok-teil-4": {
   "ok": true,
   "zeit": "2026-11-04T20:00:00",
-  "fassung": 2,
-  "zernioId": "6ae8641e12d5a2c855d1286c",
+  "fassung": 3,
+  "zernioId": "6ae990d96d903e4b46f2703b",
   "http": 201,
-  "am": "2026-11-02T10:21:18.486Z"
+  "am": "2026-11-03T07:44:25.892Z"
  },
  "taeglich-tiktok-001": {
   "ok": true,
   "zeit": "2026-11-05T08:00:00",
-  "fassung": 2,
-  "zernioId": "6ae86421e56ee1d4a45b79aa",
+  "fassung": 3,
+  "zernioId": "6ae990dcf1dfa423e078355f",
   "http": 201,
-  "am": "2026-11-02T10:21:21.122Z"
+  "am": "2026-11-03T07:44:28.498Z"
  },
  "taeglich-tiktok-s01-teil-1": {
   "ok": true,
   "zeit": "2026-11-05T12:00:00",
-  "fassung": 2,
-  "zernioId": "6ae864244bf04970a01b5942",
+  "fassung": 3,
+  "zernioId": "6ae990e06d903e4b46f2704e",
   "http": 201,
-  "am": "2026-11-02T10:21:24.980Z"
+  "am": "2026-11-03T07:44:32.878Z"
  },
  "taeglich-tiktok-s01-teil-2": {
   "ok": true,
   "zeit": "2026-11-05T16:00:00",
-  "fassung": 2,
-  "zernioId": "6ae86428e56ee1d4a45b79f3",
+  "fassung": 3,
+  "zernioId": "6ae990e46d903e4b46f2706c",
   "http": 201,
-  "am": "2026-11-02T10:21:28.569Z"
+  "am": "2026-11-03T07:44:36.880Z"
  },
  "taeglich-tiktok-s01-teil-3": {
   "ok": true,
   "zeit": "2026-11-05T20:00:00",
-  "fassung": 2,
-  "zernioId": "6ae8642c4bf04970a01b595e",
+  "fassung": 3,
+  "zernioId": "6ae990e96d903e4b46f27085",
   "http": 201,
-  "am": "2026-11-02T10:21:32.607Z"
+  "am": "2026-11-03T07:44:41.298Z"
  },
  "taeglich-tiktok-s01-teil-4": {
   "ok": true,
   "zeit": "2026-11-06T08:00:00",
-  "fassung": 2,
-  "zernioId": "6ae864300b61d26a39b18111",
+  "fassung": 3,
+  "zernioId": "6ae990ed78777dc169d2a314",
   "http": 201,
-  "am": "2026-11-02T10:21:36.323Z"
+  "am": "2026-11-03T07:44:45.437Z"
  }
 }
