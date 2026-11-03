@@ -1,5 +1,5 @@
 Verbundene Konten: tiktok:storys4you.de1, instagram:sto.rys4you, youtube:sto.rys4you (2. Zernio-Konto), tiktok:storys4you_eng (2. Zernio-Konto)
-  Hauptkonto    | tiktok | storys4you.de1 | storys4you.de1 | aktiv: true
-  Hauptkonto    | instagram | sto.rys4you | Storys4You | aktiv: true
+  Hauptkonto      | tiktok | storys4you.de1 | storys4you.de1 | aktiv: true
+  Hauptkonto      | instagram | sto.rys4you | Storys4You | aktiv: true
   2. Zernio-Konto | youtube | sto.rys4you | Storys4you | aktiv: true
   2. Zernio-Konto | tiktok | storys4you_eng | Storys4You | aktiv: true
