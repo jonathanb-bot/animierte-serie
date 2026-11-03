@@ -14,11 +14,15 @@ import os from "node:os";
 const DIR = path.dirname(fileURLToPath(import.meta.url));
 const API = "https://zernio.com/api/v1";
 const KEY = process.env.ZERNIO_API_KEY;
-const KEY_YT = process.env.ZERNIO_API_KEY_YT || ""; // zweites Zernio-Konto nur für YouTube
+const KEY_YT = process.env.ZERNIO_API_KEY_YT || ""; // zweites Zernio-Konto: YouTube (deutsch) + TikTok @storys4you_eng
+const KEY_3 = process.env.ZERNIO_API_KEY_3 || "";   // drittes Zernio-Konto: englisches Instagram + YouTube (Jonathan 3.11.)
+// Alle Schlüssel nach Nummer (0 = Hauptkonto, 1 = 2. Konto, 2 = 3. Konto). Leere Schlüssel werden übersprungen.
+const KEYS = [KEY, KEY_YT, KEY_3];
+const KNAME = k => ["Hauptkonto", "2. Zernio-Konto", "3. Zernio-Konto"][k] || `${k + 1}. Zernio-Konto`;
 if (!KEY) { console.error("ZERNIO_API_KEY fehlt (GitHub-Secret)."); process.exit(1); }
 const keyFuer = plattform => (plattform === "youtube" && KEY_YT ? KEY_YT : KEY);
 // Schlüssel für einen schon eingeplanten Post: das Konto, über das er eingeplant wurde (st.yt), sonst wie früher nach Plattform
-const keyVon = (post, st) => (st && typeof st.yt === "boolean" ? (st.yt ? KEY_YT : KEY) : keyFuer(post?.platform));
+const keyVon = (post, st) => (st && typeof st.k === "number" ? KEYS[st.k] : st && typeof st.yt === "boolean" ? (st.yt ? KEY_YT : KEY) : keyFuer(post?.platform));
 const args = process.argv.slice(2);
 const nur = (() => { const i = args.indexOf("--nur"); return i >= 0 ? args[i + 1].split(",").map(s => s.trim()) : null; })();
 
@@ -41,17 +45,18 @@ async function api(methode, pfad, body, key = KEY) {
 // Verbundene Konten holen
 const konten = await api("GET", "/accounts");
 if (!konten.ok) { console.error("Konten konnten nicht geladen werden:", konten.status, JSON.stringify(konten.json).slice(0, 400)); process.exit(1); }
-const alleKonten = (konten.json.accounts || []).map(a => ({ ...a, _yt: false }));
-if (KEY_YT) {
-  const k2 = await api("GET", "/accounts", null, KEY_YT);
-  if (k2.ok) alleKonten.push(...(k2.json.accounts || []).map(a => ({ ...a, _yt: true })));
-  else console.log("Zweites Zernio-Konto (2. Schlüssel) nicht erreichbar:", k2.status);
+const alleKonten = (konten.json.accounts || []).map(a => ({ ...a, _k: 0, _yt: false }));
+for (let k = 1; k < KEYS.length; k++) {
+  if (!KEYS[k]) continue;
+  const kk = await api("GET", "/accounts", null, KEYS[k]);
+  if (kk.ok) alleKonten.push(...(kk.json.accounts || []).map(a => ({ ...a, _k: k, _yt: k === 1 })));
+  else console.log(`${KNAME(k)} (${k + 1}. Schlüssel) nicht erreichbar:`, kk.status);
 }
 // Alle aktiven Konten beider Schlüssel (z. B. auch der englische Account im 2. Zernio-Konto, Jonathan 3.11.)
 let liste = alleKonten.filter(a => a.isActive !== false);
-console.log("Verbundene Konten:", liste.map(a => `${a.platform}:${a.username || a.displayName}${a._yt ? " (2. Zernio-Konto)" : ""}`).join(", ") || "keine");
+console.log("Verbundene Konten:", liste.map(a => `${a.platform}:${a.username || a.displayName}${a._k ? ` (${KNAME(a._k)})` : ""}`).join(", ") || "keine");
 if (args.includes("--konten")) {
-  for (const a of alleKonten) console.log(`  ${a._yt ? "2. Zernio-Konto" : "Hauptkonto   "} | ${a.platform} | ${a.username || "-"} | ${a.displayName || "-"} | aktiv: ${a.isActive !== false}`);
+  for (const a of alleKonten) console.log(`  ${KNAME(a._k).padEnd(15)} | ${a.platform} | ${a.username || "-"} | ${a.displayName || "-"} | aktiv: ${a.isActive !== false}`);
   process.exit(0);
 }
 
@@ -80,7 +85,7 @@ if (args.includes("--analyse")) {
   // Konten: Follower aus /accounts, dazu die Insights der Plattform
   const insights = { tiktok: "/analytics/tiktok/account-insights", instagram: "/analytics/instagram/account-insights", youtube: "/analytics/youtube/channel-insights" };
   for (const acc of liste) {
-    const key = acc._yt ? KEY_YT : KEY;
+    const key = KEYS[acc._k];
     const e = { platform: acc.platform, username: acc.username || acc.displayName, follower: acc.followersCount ?? null, konto: zahlen(acc) };
     if (insights[acc.platform]) {
       const r = await api("GET", `${insights[acc.platform]}?accountId=${acc._id}&fromDate=${tag(von30)}&toDate=${tag(jetzt)}`, null, key);
@@ -92,7 +97,7 @@ if (args.includes("--analyse")) {
   }
   // Posts: alle der letzten 60 Tage, je Zernio-Konto (YouTube hat einen eigenen Schlüssel)
   const gesehen = new Set();
-  for (const [name, key] of [["haupt", KEY], ["yt", KEY_YT]]) {
+  for (const [name, key] of [["haupt", KEY], ["yt", KEY_YT], ["drei", KEY_3]]) {
     if (!key) continue;
     for (let page = 1; page <= 20; page++) {
       const r = await api("GET", `/analytics?source=all&fromDate=${tag(von)}&toDate=${tag(jetzt)}&limit=100&page=${page}`, null, key);
@@ -134,7 +139,7 @@ if (args.includes("--abgleich")) {
   const echt = args.includes("--echt");
   const plat = Object.fromEntries(plan.posts.map(p => [p.id, p]));
   const seen = {};
-  for (const [name, key] of [["haupt", KEY], ["yt", KEY_YT]]) {
+  for (const [name, key] of [["haupt", KEY], ["yt", KEY_YT], ["drei", KEY_3]]) {
     if (!key) continue;
     let page = 1, alle = [];
     while (true) {
@@ -151,7 +156,7 @@ if (args.includes("--abgleich")) {
       const soll = plat[pid];
       const berlin = zeit ? new Date(zeit).toLocaleString("sv-SE", { timeZone: "Europe/Berlin" }).replace(" ", "T").slice(0, 16) : "";
       const passt = soll && soll.zeit.slice(0, 16) === berlin && !seen[pid];
-      if (passt) { seen[pid] = true; status[pid] = { ok: true, zeit: soll.zeit, zernioId: z._id, am: new Date().toISOString() }; console.log(`= ${pid} ${berlin}`); }
+      if (passt) { seen[pid] = true; status[pid] = { ok: true, zeit: soll.zeit, zernioId: z._id, k: KEYS.indexOf(key), yt: key === KEY_YT, am: new Date().toISOString() }; console.log(`= ${pid} ${berlin}`); }
       else {
         console.log(`${echt ? "🗑" : "(würde löschen)"} ${pid || "?"} ${berlin} ${soll ? (seen[pid] ? "doppelt" : "falsche Zeit, soll " + soll.zeit) : "nicht im Plan"}`);
         if (echt) await api("DELETE", `/posts/${z._id}`, null, key);
@@ -187,10 +192,10 @@ if (args.includes("--status")) {
 }
 // Konto für einen Post. Mit post.konto (Benutzername) genau dieses Konto. Ohne Angabe die bisherigen Standardkonten:
 // TikTok/Instagram aus dem Hauptkonto, YouTube aus dem 2. Zernio-Konto. So landet nie ein deutsches Video zufällig
-// auf dem englischen Account (der liegt im 2. Zernio-Konto, Jonathan 3.11.).
+// auf einem englischen Account (TikTok @storys4you_eng im 2., Instagram/YouTube englisch im 3. Zernio-Konto, Jonathan 3.11.).
 const konto = post => post.konto
   ? liste.find(a => a.platform === post.platform && [a.username, a.displayName].includes(post.konto))
-  : liste.find(a => a.platform === post.platform && a._yt === (post.platform === "youtube" && !!KEY_YT));
+  : liste.find(a => a.platform === post.platform && a._k === (post.platform === "youtube" && KEY_YT ? 1 : 0));
 
 // Geplante Posts zurückziehen: Einträge in plan.loeschen (IDs aus status.json)
 for (const pid of plan.loeschen || []) {
@@ -274,9 +279,9 @@ for (const post of plan.posts) {
   // als `tiktokSettings` auf oberster Ebene bekommen. platformSpecificData allein reichte nicht (Jonathan 3.11.).
   if (post.platform === "tiktok") body.tiktokSettings = { ...platformSpecificData, videoMadeWithAi: false };
   if (post.platform === "youtube") body.tags = post.tags || ["zombie", "animation", "story", "24 stock", "shorts"];
-  const r = await api("POST", "/posts", body, acc._yt ? KEY_YT : KEY);
+  const r = await api("POST", "/posts", body, KEYS[acc._k]);
   const id = r.json?.post?._id || r.json?._id || r.json?.id || null;
-  status[post.id] = { ok: r.ok, zeit: post.zeit, fassung: post.fassung, zernioId: id, yt: acc._yt, konto: acc.username || acc.displayName, http: r.status, antwort: r.ok ? undefined : JSON.stringify(r.json).slice(0, 600), am: new Date().toISOString() };
+  status[post.id] = { ok: r.ok, zeit: post.zeit, fassung: post.fassung, zernioId: id, yt: acc._yt, k: acc._k, konto: acc.username || acc.displayName, http: r.status, antwort: r.ok ? undefined : JSON.stringify(r.json).slice(0, 600), am: new Date().toISOString() };
   speichern();
   if (r.ok) { neu++; console.log(`✓ ${post.id} eingeplant für ${post.zeit} (${id})`);
     if (post.platform === "tiktok") { const w = JSON.stringify(r.json?.warnings || r.json?.post?.warnings || ""); const ki = JSON.stringify(r.json).match(/"(videoMadeWithAi|video_made_with_ai|isAigc)":\s*(true|false)/g);

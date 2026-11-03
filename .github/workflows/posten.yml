@@ -52,6 +52,7 @@ jobs:
         env:
           ZERNIO_API_KEY: ${{ secrets.ZERNIO_API_KEY }}
           ZERNIO_API_KEY_YT: ${{ secrets.ZERNIO_API_KEY_YT }}
+          ZERNIO_API_KEY_3: ${{ secrets.ZERNIO_API_KEY_3 }}
         run: |
           if [ "${{ github.event.inputs.konten }}" = "true" ]; then
             node posten/zernio.mjs --konten | tee posten/konten.txt
