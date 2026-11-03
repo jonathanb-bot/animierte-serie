@@ -20,6 +20,10 @@ on:
         description: "Abgleich mit Zernio: leer, 'test' oder 'echt'"
         required: false
         default: ""
+      konten:
+        description: "Nur alle verbundenen Konten beider Zernio-Schlüssel anzeigen (true/false)"
+        required: false
+        default: "false"
       analyse:
         description: "Analytics aller veröffentlichten Posts holen -> posten/analyse.json (true/false)"
         required: false
@@ -49,7 +53,9 @@ jobs:
           ZERNIO_API_KEY: ${{ secrets.ZERNIO_API_KEY }}
           ZERNIO_API_KEY_YT: ${{ secrets.ZERNIO_API_KEY_YT }}
         run: |
-          if [ "${{ github.event.inputs.analyse }}" = "true" ]; then
+          if [ "${{ github.event.inputs.konten }}" = "true" ]; then
+            node posten/zernio.mjs --konten | tee posten/konten.txt
+          elif [ "${{ github.event.inputs.analyse }}" = "true" ]; then
             node posten/zernio.mjs --analyse | tee posten/letzte-analyse.txt
           elif [ "${{ github.event.inputs.abgleich }}" = "test" ]; then
             node posten/zernio.mjs --abgleich | tee posten/letzter-abgleich.txt
