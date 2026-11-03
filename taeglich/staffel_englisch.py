@@ -6,8 +6,9 @@
 - Nur TikTok, Account storys4you_eng (2. Zernio-Konto). Sammelteile wie auf Deutsch (Issue #7), gleiche Teilgrenzen.
 - Takt: 1 Teil pro Tag um 01:00 Uhr Berlin (= 19:00 New York, 16:00 Los Angeles, 00:00 London: Abendspitze der
   englischsprachigen Zuschauer, kollidiert mit keinem deutschen Slot). Hinten angehängt an den letzten englischen Post.
-- Sobald der englische TikTok-Account so viele Follower hat wie der deutsche (Zahlen aus posten/analyse.json), gleich oft
-  wie Deutsch: 08, 12, 16, 20 Uhr.
+- Eingeholt (Jonathans Erklärung 3.11.): Ist der englische Account beim gleichen Teil wie der deutsche (z. B. beide bei
+  „Funkstille“ Teil 5), postet er genauso oft wie der deutsche, also jeden Teil zur selben Zeit wie das deutsche Gegenstück.
+  Ein englischer Teil kommt nie vor seinem deutschen Gegenstück.
 - Alle Regeln der deutschen Staffel gelten: über 1 Minute, Prüfung von Bild/Ton/Lautheit, nie „Fortsetzung folgt“,
   keine Fragen ans Publikum, kein KI-Haken.
 
@@ -33,18 +34,30 @@ KONTO_EN, KONTO_DE = "storys4you_eng", "storys4you.de1"
 TAKT_START = [(1, 0)]  # 1 pro Tag
 
 
-def takt_en(analyse: Path) -> list:
-    try:
-        konten = json.loads(analyse.read_text(encoding="utf-8")).get("konten", [])
-        f = {k.get("username"): k.get("follower") for k in konten if k.get("platform") == "tiktok"}
-        de, en = f.get(KONTO_DE), f.get(KONTO_EN)
-        if de is not None and en is not None and en >= de:
-            print(f"Englischer Account hat aufgeholt ({en} ≥ {de} Follower) → gleich oft wie Deutsch")
-            return S.TAKT["tiktok"]
-        print(f"Follower TikTok: Deutsch {de}, Englisch {en} → 1 Teil pro Tag um 01:00")
-    except Exception as e:  # noqa: BLE001
-        print(f"Follower nicht lesbar ({e}) → 1 Teil pro Tag")
-    return TAKT_START
+def zeiten_en(plan: dict, loeschen: set, staffel: str, teile: list, frueh: dt.datetime) -> list[dt.datetime]:
+    """Zeit je englischem Teil (Jonathans Erklärung 3.11.): Englisch startet mit den neuen Staffeln und läuft 1 Teil pro
+    Tag um 01:00, hinten an die englische Warteschlange. Der deutsche Account arbeitet währenddessen seinen Vorrat ab.
+    Hat Deutsch den Stand von Englisch eingeholt (der deutsche Teil läuft spätestens zum nächsten englischen Tagesslot),
+    postet Englisch genauso oft wie Deutsch: jeder Teil zur Zeit seines deutschen Gegenstücks (oder im nächsten
+    TikTok-Takt 08/12/16/20, wenn diese Zeit schon vorbei ist)."""
+    zeit = {p["id"]: dt.datetime.fromisoformat(p["zeit"]) for p in plan["posts"] if p["id"] not in loeschen}
+    en = sorted((z, i) for i, z in zeit.items() if i.startswith("taeglich-tiktok-en-"))
+    letzte = en[-1][0] if en else None
+    # einmal eingeholt, bleibt es dabei: der letzte englische Teil lief zur Zeit seines deutschen Gegenstücks
+    eingeholt = bool(en) and zeit.get(en[-1][1].replace("tiktok-en-", "tiktok-")) == letzte
+    out = []
+    for t in teile:
+        de = zeit.get(f"taeglich-tiktok-{staffel}-teil-{t['k']}")
+        start = max(letzte, frueh) if letzte else frueh
+        taeglich = S.naechste_slots("tiktok", start, 1, TAKT_START)[0]
+        if de and (eingeholt or de <= taeglich):  # Deutsch hat aufgeholt → gleich oft wie Deutsch
+            z = de if de > start else S.naechste_slots("tiktok", start, 1)[0]
+            art, eingeholt = "eingeholt, Takt wie Deutsch", z == de
+        else:
+            z, art = taeglich, "1 pro Tag"
+        out.append(z); letzte = z
+        print(f"  Teil {t['k']}: Deutsch {de}, Englisch {z} ({art})")
+    return out
 
 
 def main(argv=None) -> int:
@@ -111,14 +124,11 @@ def main(argv=None) -> int:
     plan_datei = repo_main / "posten" / "plan.json"
     plan = json.loads(plan_datei.read_text(encoding="utf-8"))
     loeschen, ids = set(plan.get("loeschen") or []), {p["id"] for p in plan["posts"]}
-    takt = takt_en(repo_main / "posten" / "analyse.json")
     frueh = dt.datetime.now(V.BERLIN).replace(tzinfo=None, second=0, microsecond=0) + S.VORLAUF
-    letzte = S.letzte_zeit(plan["posts"], loeschen, "tiktok", KONTO_EN)
-    start = max(letzte, frueh) if letzte else frueh
     tags_txt, em = " ".join(en["hashtags"]), st.get("emoji", "")
     neu_teile = [t for t in teile if f"taeglich-tiktok-en-{a.staffel}-teil-{t['k']}" not in ids]
     neu = []
-    for t, z in zip(neu_teile, S.naechste_slots("tiktok", start, len(neu_teile), takt)):
+    for t, z in zip(neu_teile, zeiten_en(plan, loeschen, a.staffel, neu_teile, frueh)):
         post = {"id": f"taeglich-tiktok-en-{a.staffel}-teil-{t['k']}", "platform": "tiktok", "konto": KONTO_EN,
                 "zeit": z.strftime("%Y-%m-%dT%H:%M:00"), "serie": "taeglich-en", "video": S.RAW.format(pfad=t["pfad"]),
                 "text": (f"{en['titel']} – Part {t['k']}/{len(teile)} (Episode {t['folgen'][0]}–{t['folgen'][-1]}) {em}\n"
