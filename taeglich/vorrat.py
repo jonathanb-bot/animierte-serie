@@ -24,7 +24,7 @@ jetzt = dt.datetime.now(ZoneInfo("Europe/Berlin")).replace(tzinfo=None)
 loeschen = set(plan.get("loeschen") or [])
 tage = {}
 for plat, n in PRO_TAG.items():
-    zeiten = sorted(dt.datetime.fromisoformat(p["zeit"]) for p in plan["posts"] if p["platform"] == plat and p["id"] not in loeschen)
+    zeiten = sorted(dt.datetime.fromisoformat(p["zeit"]) for p in plan["posts"] if p["platform"] == plat and p["id"] not in loeschen and not p.get("konto"))  # ohne englischen Account
     zukunft = [z for z in zeiten if z > jetzt]
     ende = zukunft[-1] if zukunft else jetzt
     tage[plat] = (ende - jetzt).total_seconds() / 86400
@@ -36,6 +36,9 @@ nacht = (jetzt - dt.timedelta(hours=6)).date()
 heute_fertig = any(str(s.get("datum", "")).startswith(nacht.isoformat()) and s.get("veroeffentlicht") for s in staffeln)
 if heute_fertig:
     print("In dieser Nacht ist schon eine Staffel fertig → AUSSETZEN"); print("AUSSETZEN"); sys.exit(0)
+# Einmalig: Jonathan wollte die neue Staffel (erste im Stil „leuchtend“ + englische Fassung) schon in der Nacht 3./4.11.
+if nacht.isoformat() == "2026-11-03":
+    print("Jonathans Wunsch 3.11.: in dieser Nacht trotz Vorrat produzieren → PRODUZIEREN"); print("PRODUZIEREN"); sys.exit(0)
 if tage["tiktok"] < MIN_TAGE:
     print(f"TikTok-Vorrat unter {MIN_TAGE:.0f} Tagen → PRODUZIEREN (Posts starten direkt danach)"); print("PRODUZIEREN"); sys.exit(0)
 print(f"Vorrat reicht noch {tage['tiktok']:.1f} Tage, erst abarbeiten → AUSSETZEN"); print("AUSSETZEN")

@@ -233,7 +233,12 @@ def bauen(drehbuch: str, nur_stimme=False, drone=False, stimme="edge", anfragen=
     if stimme.startswith("gemini"):
         from . import gemini
         m = re.search(r"^@stimmung\s+(\w+)", pfad.read_text(encoding="utf-8"), re.M)
-        if m:
+        sp = re.search(r"^@sprache\s+(\w+)", pfad.read_text(encoding="utf-8"), re.M)
+        if sp and sp.group(1) == "en":  # englische Fassung (3.11.)
+            lebendig = bool(re.search(r"^@vortrag\s+lebendig", pfad.read_text(encoding="utf-8"), re.M))
+            gemini.stimmung_setzen(m.group(1) if m else None, lebendig, "en")
+            log("Sprache: Englisch")
+        elif m:
             lebendig = bool(re.search(r"^@vortrag\s+lebendig", pfad.read_text(encoding="utf-8"), re.M))
             gemini.stimmung_setzen(m.group(1), lebendig)
             log(f"Stimmung: {m.group(1)}{' (lebendig)' if lebendig else ''}")

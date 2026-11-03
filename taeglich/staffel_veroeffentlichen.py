@@ -87,16 +87,18 @@ def teil_schneiden(folgen: list[dict], ziel: Path) -> None:
     roh.unlink()
 
 
-def letzte_zeit(posts: list, loeschen: set, platform: str) -> dt.datetime | None:
-    zeiten = [dt.datetime.fromisoformat(p["zeit"]) for p in posts if p["platform"] == platform and p["id"] not in loeschen]
+def letzte_zeit(posts: list, loeschen: set, platform: str, konto: str | None = None) -> dt.datetime | None:
+    # Posts mit eigenem "konto" (z. B. englischer TikTok-Account, 3.11.) laufen in einer eigenen Warteschlange
+    zeiten = [dt.datetime.fromisoformat(p["zeit"]) for p in posts
+              if p["platform"] == platform and p["id"] not in loeschen and p.get("konto") == konto]
     return max(zeiten) if zeiten else None
 
 
-def naechste_slots(platform: str, nach: dt.datetime, anzahl: int) -> list[dt.datetime]:
+def naechste_slots(platform: str, nach: dt.datetime, anzahl: int, takt: list | None = None) -> list[dt.datetime]:
     """Die nächsten `anzahl` Takt-Zeiten strikt nach `nach`."""
     out, tag = [], nach.replace(hour=0, minute=0, second=0, microsecond=0)
     while len(out) < anzahl:
-        for h, m in TAKT[platform]:
+        for h, m in (takt or TAKT[platform]):
             z = tag.replace(hour=h, minute=m)
             if z > nach and len(out) < anzahl:
                 out.append(z)

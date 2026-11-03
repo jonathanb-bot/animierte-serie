@@ -46,9 +46,27 @@ LEBENDIG = (", betone die entscheidenden Wörter deutlich, folge der Spannung mi
             "drängender bei Gefahr, langsamer und leiser bei Gefühl, eine kleine Pause vor jeder Wendung, nie übertrieben")
 
 
-def stimmung_setzen(name: str | None, lebendig: bool = False):
+# Englische Fassung (`@sprache en`, Jonathans Wunsch 3.11.: jede Staffel auch auf Englisch für TikTok @storys4you_eng)
+SPRACHE = "de"
+STIMMUNGEN_EN = {
+    "duester": "a dark short story for TikTok: deep, dry, close male voice, brisk, quietly menacing",
+    "spannend": "a gripping short story for TikTok: deep, close male voice, brisk, tense, with pressure",
+    "traurig": "a sad, moving short story: deep, warm, close male voice, calm and soft, with feeling, never cheesy",
+    "freudig": "a joyful, sweeping short story: deep, warm male voice, lively, with a smile in the voice, brisk",
+    "warm": "a thoughtful, warm-hearted short story: deep, warm, close male voice, calm and honest, like a good friend",
+}
+LEBENDIG_EN = (", stress the key words clearly, follow the tension with pace and volume: faster and more urgent in "
+               "danger, slower and softer with emotion, a short pause before every twist, never over the top")
+
+
+def stimmung_setzen(name: str | None, lebendig: bool = False, sprache: str = "de"):
     """STIL für eine Stimmung aus STIMMUNGEN setzen (unbekannt oder leer: unverändert)."""
-    global STIL
+    global STIL, SPRACHE
+    SPRACHE = sprache
+    if sprache == "en":
+        STIL = ("Read the following English text as the narrator of " + STIMMUNGEN_EN.get(name or "", STIMMUNGEN_EN["spannend"])
+                + (LEBENDIG_EN if lebendig else "") + ", a short pause after each line. Speak only the text:\n\n")
+        return
     if name and name in STIMMUNGEN:
         STIL = ("Lies den folgenden deutschen Text als Erzähler " + STIMMUNGEN[name] + (LEBENDIG if lebendig else "") +
                 ", nach jeder Zeile eine kurze Pause. Nur den Text sprechen:\n\n")
@@ -151,7 +169,7 @@ def _erkennen(x: np.ndarray) -> list[tuple[float, float, str]]:
         from faster_whisper import WhisperModel
         _WHISPER = WhisperModel(os.environ.get("WHISPER_MODELL", "small"), device="cpu", compute_type="int8")
     x16 = resample_poly(x, 16000 // np.gcd(A.SR, 16000), A.SR // np.gcd(A.SR, 16000)).astype(np.float32)
-    segs, _ = _WHISPER.transcribe(x16, language="de", word_timestamps=True)
+    segs, _ = _WHISPER.transcribe(x16, language=SPRACHE, word_timestamps=True)
     return [(w.start, w.end, w.word.strip()) for s in segs for w in s.words]
 
 

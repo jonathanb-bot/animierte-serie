@@ -14,13 +14,18 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-STIL_WOERTER = {"erzähler", "kurzgeschichte", "männerstimme", "lies", "vor", "pause", "tiktok"}
+STIL_WOERTER = {"erzähler", "kurzgeschichte", "männerstimme", "lies", "vor", "pause", "tiktok",
+                "narrator", "voice", "male", "short", "story"}
 
 
 ZAHLEN = {w: str(i) for i, w in enumerate("null eins zwei drei vier fünf sechs sieben acht neun zehn elf zwölf dreizehn vierzehn "
                                            "fünfzehn sechzehn siebzehn achtzehn neunzehn zwanzig".split())}
 ZAHLEN.update({"dreißig": "30", "vierzig": "40", "fünfzig": "50", "sechzig": "60", "siebzig": "70",
                "achtzig": "80", "neunzig": "90", "hundert": "100", "tausend": "1000"})
+# englische Fassung (3.11.)
+ZAHLEN.update({w: str(i) for i, w in enumerate("zero one two three four five six seven eight nine ten eleven twelve thirteen "
+                                               "fourteen fifteen sixteen seventeen eighteen nineteen twenty".split())})
+ZAHLEN.update({"thirty": "30", "forty": "40", "fifty": "50", "hundred": "100", "thousand": "1000"})
 
 
 def norm(t: str) -> list[str]:
@@ -46,6 +51,7 @@ def main(pfad: str) -> int:
     d = Path(pfad).resolve()
     audio = d.parent.parent / "audio" / d.stem
     texte = zeilen(d)
+    sprache = "en" if re.search(r"^@sprache\s+en\b", d.read_text(encoding="utf-8"), re.M) else "de"
     modell = WhisperModel("medium", device="cpu", compute_type="int8")  # "small" verhört sich zu oft
     fehler = 0
     for i, soll in enumerate(texte, 1):
@@ -56,7 +62,7 @@ def main(pfad: str) -> int:
             print(f"{i:03d} FEHLT  {soll}"); fehler += 1; continue
         roh = subprocess.run(["ffmpeg", "-v", "error", "-i", str(f), "-f", "f32le", "-ac", "1", "-ar", "16000", "-"],
                              capture_output=True, check=True).stdout
-        segs, _ = modell.transcribe(np.frombuffer(roh, dtype=np.float32), language="de", beam_size=5)
+        segs, _ = modell.transcribe(np.frombuffer(roh, dtype=np.float32), language=sprache, beam_size=5)
         ist = " ".join(s.text for s in segs).strip()
         a, b = norm(soll), norm(ist)
         q = difflib.SequenceMatcher(None, a, b).ratio()
