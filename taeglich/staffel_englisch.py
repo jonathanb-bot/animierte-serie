@@ -12,8 +12,8 @@ YouTube (3. Zernio-Konto, Jonathans Wunsch 3.11.).
   Ein englischer Teil kommt nie vor seinem deutschen Gegenstück.
 - Instagram + YouTube englisch (3. Zernio-Konto, Secret ZERNIO_API_KEY_3): jede Folge ein Post wie auf Deutsch,
   eigene Warteschlange, Takt wie Deutsch (Instagram alle 2 Stunden, YouTube :30), nie vor dem deutschen Gegenstück.
-  Aktiv, sobald unten KONTO_EN_INSTA / KONTO_EN_YT eingetragen sind (Benutzername wie im Workflow „Posts einplanen“
-  mit konten=true angezeigt); bis dahin nur TikTok.
+  Konto: "zernio:3" (das Instagram- bzw. YouTube-Konto im 3. Zernio-Konto, ohne Namen). Fehlt der Schlüssel noch,
+  meldet der Workflow „kein Konto verbunden“ und versucht es beim nächsten Lauf wieder.
 - Alle Regeln der deutschen Staffel gelten: über 1 Minute, Prüfung von Bild/Ton/Lautheit, nie „Fortsetzung folgt“,
   keine Fragen ans Publikum, kein KI-Haken.
 
@@ -36,9 +36,10 @@ import staffel_veroeffentlichen as S  # noqa: E402
 
 ROOT = V.ROOT
 KONTO_EN, KONTO_DE = "storys4you_eng", "storys4you.de1"
-# Englisches Instagram und YouTube im 3. Zernio-Konto (Jonathan 3.11.). None = noch nicht verbunden → wird übersprungen.
-KONTO_EN_INSTA: str | None = None
-KONTO_EN_YT: str | None = None
+# Englisches Instagram und YouTube im 3. Zernio-Konto (Jonathan 3.11.). "zernio:3" = das Konto dieser Plattform im
+# 3. Zernio-Konto, egal wie es heißt (posten/zernio.mjs). None = aus.
+KONTO_EN_INSTA: str | None = "zernio:3"
+KONTO_EN_YT: str | None = "zernio:3"
 TAKT_START = [(1, 0)]  # 1 pro Tag
 
 
