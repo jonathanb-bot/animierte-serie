@@ -1,0 +1,64 @@
+# The Jackpot – Episode 1: Six Numbers
+@musik musik/s02-f01-en.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@sprache en
+@stimmung freudig
+@vortrag lebendig
+@mund zitate
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette rosa
+@zeit nacht
+
+== Hook ==
+// Kiosk bei Nacht, das Neonschild flackert, du davor mit dem Schein
+[kiosk du:schreck zeit=nacht palette=rosa zoom-rein hooktext="YOU JUST WON 30 MILLION"] Imagine you just won thirty million. And nobody can ever know.
+// Lottoschein groß, die Kreuze leuchten
+[objekt objekte="lottoschein:All six numbers|geld:Bonus ball" gross="30 MILLION" palette=rosa] All six numbers. Plus the bonus ball.
+// Nahaufnahme: du, fassungslos, Kiosk im Rücken
+[gesicht du ort=kiosk zeit=nacht schreck palette=rosa zoom-rein] Right now, your bank account says eleven dollars and forty cents.
+// Handy: Kontostand
+[handy ort=kiosk zeit=nacht netz=4 akku=12 uhrzeit="11:41 PM" von="Banking" nachricht="Balance: $11.40" palette=rosa] Until a minute ago, that was your biggest problem.
+
+== Wiedererkennen ==
+// Esstisch am Abend vorher
+[esstisch opa:froh du oma mama torte kerzen zeit=abend palette=orange schwenk-rechts] Yesterday you turned eighteen. Grandpa slid an envelope across the table.
+// Nahaufnahme: Opa zwinkert
+[gesicht opa ort=esstisch zeit=abend froh palette=orange] “You're old enough now. Good luck, kiddo.”
+// Titelkarte: Opas Zahlen
+[titel oben="Grandpa's numbers" gross="41 YEARS" unten="every Saturday" farbe=#3a1f3a akzent=#ffb45e groesse=170 hud=false palette=orange zoom-rein] A lottery ticket. With the same numbers Grandpa has played for forty-one years.
+// Zimmer nachts
+[zimmer du zeit=nacht lichterkette palette=lila ruhig] Honestly, you only took it to be polite.
+
+== Steigerung ==
+// Weltall
+[weltall satellit palette=lila zoom-rein] The odds of winning this jackpot are about one in a hundred and forty million.
+// Großstadt nachts von oben
+[grossstadt zeit=nacht du palette=blau schwenk-links] That's like pointing at one random person in the whole country. Twice in a row.
+// Netz: Millionen Lichtpunkte
+[netz mitte=du farbe=#ffb45e palette=rosa zoom-raus] Every week, millions of people pick their numbers. This time, it's you.
+// Kiosk: das Gerät piept
+[kiosk du:lauscht zeit=nacht palette=rosa zoom-rein] The machine at the kiosk beeps three times. Then for a really long time.
+// Nahaufnahme: der Kioskbesitzer, blass
+[gesicht fremder ort=kiosk zeit=nacht schreck palette=rosa] “Kid. You need to go to the lottery office.”
+// Nahaufnahme: Kioskbesitzer lächelt
+[gesicht fremder ort=kiosk zeit=nacht froh palette=rosa ruhig] “And tell your grandpa I said hi.”
+
+== Wendung ==
+// Großstadt: du rennst nach Hause
+[grossstadt zeit=nacht du:rennt palette=blau wackeln=0.3 fahrt] You run home. The ticket sticks to your sweaty hand.
+// Zimmer: du sitzt auf dem Bett
+[zimmer du:sitzt zeit=nacht lichterkette palette=lila zoom-rein] Thirty million. You could skip school tomorrow. You could never have to do anything again.
+// Landschaft nachts
+[landschaft zeit=nacht du palette=lila zoom-raus] You could pay off Mom's house. No more night shifts for Dad. Every pony in the world for Lina.
+// Nahaufnahme: du denkst
+[gesicht du ort=zimmer zeit=nacht denkt palette=lila] But something's bugging you.
+
+== Cliffhanger ==
+// Nahaufnahme: du drehst den Schein um
+[gesicht du ort=zimmer zeit=nacht neugierig palette=lila zoom-rein] You flip the ticket over.
+// Lottoschein mit Opas Handschrift
+[objekt objekte="lottoschein:Grandpa's writing" gross="FOR ALL OF US" palette=lila] On the back, in Grandpa's shaky handwriting: “For all of us.”

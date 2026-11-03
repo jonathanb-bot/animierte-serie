@@ -1,0 +1,167 @@
+{
+ "dauer": 68.892,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "landschaft",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 4.91,
+   "emotion": "erzaehlend",
+   "text": "You can buy anything now. Except the one person who won't talk to you anymore."
+  },
+  {
+   "nr": 2,
+   "typ": "handy",
+   "kapitel": 1,
+   "start": 4.91,
+   "dauer": 3.206,
+   "emotion": "erzaehlend",
+   "text": "Eleven messages to Mia. Not one of them read."
+  },
+  {
+   "nr": 3,
+   "typ": "park",
+   "kapitel": 1,
+   "start": 8.116,
+   "dauer": 3.398,
+   "emotion": "erzaehlend",
+   "text": "For four days now, you've been sitting alone on your bench."
+  },
+  {
+   "nr": 4,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 11.514,
+   "dauer": 5.654,
+   "emotion": "traurig",
+   "text": "You always thought money makes problems smaller. So far, it's only made you smaller."
+  },
+  {
+   "nr": 5,
+   "typ": "lebenszeit",
+   "kapitel": 2,
+   "start": 17.168,
+   "dauer": 4.286,
+   "emotion": "erzaehlend",
+   "text": "You've been friends for twelve years. Since the first day of first grade."
+  },
+  {
+   "nr": 6,
+   "typ": "klassenzimmer",
+   "kapitel": 2,
+   "start": 21.454,
+   "dauer": 4.094,
+   "emotion": "erzaehlend",
+   "text": "At school, Mia sits next to Jonas now. Jonas!"
+  },
+  {
+   "nr": 7,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 25.548,
+   "dauer": 3.83,
+   "emotion": "ernst",
+   "text": "“Dude. She's not mad about the money. She's mad about you.”"
+  },
+  {
+   "nr": 8,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 29.378,
+   "dauer": 2.438,
+   "emotion": "traurig",
+   "text": "Ben's right. And that's the worst part."
+  },
+  {
+   "nr": 9,
+   "typ": "see",
+   "kapitel": 3,
+   "start": 31.816,
+   "dauer": 4.118,
+   "emotion": "erzaehlend",
+   "text": "In the evening, you walk to the lake. Where you two used to skip stones."
+  },
+  {
+   "nr": 10,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 35.934,
+   "dauer": 2.918,
+   "emotion": "traurig",
+   "text": "You find a flat stone. It sinks right away."
+  },
+  {
+   "nr": 11,
+   "typ": "weltall",
+   "kapitel": 3,
+   "start": 38.852,
+   "dauer": 4.142,
+   "emotion": "erzaehlend",
+   "text": "Thirty million dollars. And there's no one you can tell."
+  },
+  {
+   "nr": 12,
+   "typ": "wald",
+   "kapitel": 3,
+   "start": 42.994,
+   "dauer": 3.542,
+   "emotion": "erzaehlend",
+   "text": "You take the long way through the woods. Just so you don't have to go home."
+  },
+  {
+   "nr": 13,
+   "typ": "grossstadt",
+   "kapitel": 3,
+   "start": 46.536,
+   "dauer": 5.486,
+   "emotion": "erzaehlend",
+   "text": "On the way back, you look into the windows. Everywhere, people are sitting together at the table."
+  },
+  {
+   "nr": 14,
+   "typ": "wohnzimmer",
+   "kapitel": 4,
+   "start": 52.022,
+   "dauer": 4.31,
+   "emotion": "spannend",
+   "text": "At home, the lights are on. Mom is standing in the hallway, half into her jacket."
+  },
+  {
+   "nr": 15,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 56.332,
+   "dauer": 2.198,
+   "emotion": "spannend",
+   "text": "“Grandpa fell. In the kitchen.”"
+  },
+  {
+   "nr": 16,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 58.53,
+   "dauer": 1.31,
+   "emotion": "spannend",
+   "text": "Your stomach drops."
+  },
+  {
+   "nr": 17,
+   "typ": "krankenhaus",
+   "kapitel": 5,
+   "start": 59.84,
+   "dauer": 4.55,
+   "emotion": "erzaehlend",
+   "text": "Twenty minutes later, you're standing in the hospital. The monitor beeps softly."
+  },
+  {
+   "nr": 18,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 64.39,
+   "dauer": 4.502,
+   "emotion": "ruhig",
+   "text": "Grandpa opens his eyes. And the first thing he whispers is: “So you found it.”"
+  }
+ ]
+}

@@ -1,0 +1,60 @@
+# The Jackpot – Episode 5: Alone With Thirty Million
+@musik musik/s02-f05-en.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@sprache en
+@stimmung traurig
+@vortrag lebendig
+@mund zitate
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette blau
+@zeit abend
+
+== Hook ==
+// Landschaft am Abend
+[landschaft zeit=abend du palette=blau zoom-raus hooktext="30 MILLION. NOBODY TALKS TO YOU."] You can buy anything now. Except the one person who won't talk to you anymore.
+// Handy: ungelesen
+[handy ort=park zeit=abend netz=4 akku=52 uhrzeit="6:20 PM" von="You to Mia" nachricht="Please. Let me explain. (unread)" palette=blau] Eleven messages to Mia. Not one of them read.
+// Park im Herbst
+[park du:sitzt jahreszeit=herbst zeit=abend blaetter palette=blau zoom-rein] For four days now, you've been sitting alone on your bench.
+
+== Wiedererkennen ==
+// Nahaufnahme: du, traurig
+[gesicht du ort=park jahreszeit=herbst zeit=abend traurig palette=blau] You always thought money makes problems smaller. So far, it's only made you smaller.
+// Lebenszeit
+[lebenszeit jahre=18 markiert="6-18" oben="Twelve years with Mia" palette=tuerkis zoom-raus] You've been friends for twelve years. Since the first day of first grade.
+// Klassenzimmer
+[klassenzimmer du mia lehrerin tafel="Biology|Test Friday" uhr=10:15 palette=blau schwenk-links] At school, Mia sits next to Jonas now. Jonas!
+// Nahaufnahme: Ben
+[gesicht ben ort=klassenzimmer besorgt palette=blau] “Dude. She's not mad about the money. She's mad about you.”
+// Nahaufnahme: du, getroffen
+[gesicht du ort=klassenzimmer traurig palette=blau] Ben's right. And that's the worst part.
+
+== Steigerung ==
+// See am Abend
+[see du zeit=abend regen palette=tuerkis zoom-rein] In the evening, you walk to the lake. Where you two used to skip stones.
+// Nahaufnahme: du am See
+[gesicht du ort=see zeit=abend regen traurig palette=tuerkis] You find a flat stone. It sinks right away.
+// Weltall
+[weltall mond palette=blau zoom-raus] Thirty million dollars. And there's no one you can tell.
+// Wald
+[wald zeit=abend nebel du palette=blau zoom-rein] You take the long way through the woods. Just so you don't have to go home.
+// Großstadt abends
+[grossstadt zeit=abend palette=blau schwenk-rechts] On the way back, you look into the windows. Everywhere, people are sitting together at the table.
+
+== Wendung ==
+// Wohnzimmer
+[wohnzimmer mama:angst du licht=an zeit=nacht palette=lila zoom-rein] At home, the lights are on. Mom is standing in the hallway, half into her jacket.
+// Nahaufnahme: Mama
+[gesicht mama ort=wohnzimmer zeit=nacht angst palette=lila] “Grandpa fell. In the kitchen.”
+// Nahaufnahme: du, erschrocken
+[gesicht du ort=wohnzimmer zeit=nacht schreck palette=lila] Your stomach drops.
+
+== Cliffhanger ==
+// Krankenhaus nachts
+[krankenhaus patient=opa zeit=nacht palette=tuerkis zoom-rein] Twenty minutes later, you're standing in the hospital. The monitor beeps softly.
+// Nahaufnahme: Opa
+[gesicht opa ort=krankenhaus zeit=nacht muede palette=tuerkis zoom-rein] Grandpa opens his eyes. And the first thing he whispers is: “So you found it.”

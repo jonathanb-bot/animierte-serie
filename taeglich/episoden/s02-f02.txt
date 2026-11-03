@@ -1,0 +1,61 @@
+# Der Hauptgewinn – Folge 2: Niemand darf es wissen
+@musik musik/s02-f02.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung spannend
+@vortrag lebendig
+@mund zitate
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette blau
+@zeit tag
+
+== Hook ==
+// Großstadt am Tag, du klein vor dem riesigen Gebäude der Lottozentrale
+[grossstadt zeit=tag du palette=blau zoom-rein] Ab heute bist du Millionär. Und die erste Regel lautet: Halt den Mund.
+// Rechenzentrum: Zahlen und Daten fließen
+[rechenzentrum kern farbe=#4fb8ff palette=blau schwenk-rechts] Die Lottozentrale. Kühle Luft, leises Summen, ein Raum ohne Fenster.
+// Nahaufnahme: eine freundliche Beraterin
+[gesicht lehrerin ort=rechenzentrum ruhig palette=blau] „Erzählen Sie es so wenigen wie möglich.“
+// Nahaufnahme: die Beraterin, mit erhobenem Finger
+[gesicht lehrerin ort=rechenzentrum froh palette=blau] „Und kaufen Sie diese Woche nichts Großes.“
+
+== Wiedererkennen ==
+// Infokarte: Ratschläge
+[objekt objekte="schluessel:Anonym bleiben|uhr:Erst mal warten|herz:Wenige einweihen" gross="DIE REGELN" palette=blau] Deinen Namen veröffentlicht hier niemand. Das ist in Deutschland so üblich.
+// Nahaufnahme: du nickst, viel zu ernst
+[gesicht du ort=rechenzentrum entschlossen palette=blau] Du nickst. Sehr ernst. Wie ein Geheimagent mit Schulrucksack.
+// Netz: Gerüchte verbreiten sich von Knoten zu Knoten
+[netz mitte=du farbe=#ff5a3d palette=lila zoom-raus] Sie sagt, Gewinner bekommen plötzlich Anrufe von Leuten, die sie seit Jahren nicht gesehen haben.
+
+== Steigerung ==
+// Handy: Kontostand mit sehr vielen Nullen
+[handy ort=grossstadt zeit=tag netz=4 akku=64 uhrzeit="11:12" von="Banking" nachricht="Kontostand: 30.000.011,40 €" palette=blau] Am Mittag steht auf deinem Konto eine Zahl, die nicht auf den Bildschirm passt.
+// Nahaufnahme: du zählst die Nullen
+[gesicht du ort=grossstadt zeit=tag schreck palette=blau zoom-rein] Du zählst die Nullen dreimal. Es bleiben sechs.
+// Großstadt: du stehst auf dem Dach, Stadt unter dir
+[grossstadt zeit=abend du:froh palette=rosa schwenk-links] Du könntest dir jetzt eine Wohnung kaufen. Oder fünf.
+// Nahaufnahme: du denkst an Opa
+[gesicht du ort=grossstadt zeit=abend denkt palette=rosa] Aber hinten auf dem Schein steht „Für uns alle“.
+// Wohnzimmer abends: Familie vor dem Fernseher, ganz normal
+[wohnzimmer mama papa lina sofa_sitzen tv licht=an zeit=abend palette=orange zoom-rein] Zu Hause riecht es nach Bratkartoffeln. Lina streitet mit Papa um die Fernbedienung.
+// Nahaufnahme: Mama
+[gesicht mama ort=wohnzimmer zeit=abend froh palette=orange] „Na? Wie war dein erster Tag als Erwachsener?“
+
+== Wendung ==
+// Nahaufnahme: du, kurz davor, es zu sagen
+[gesicht du ort=wohnzimmer zeit=abend besorgt palette=orange zoom-rein] Du machst den Mund auf.
+// Wohnzimmer: alle schauen dich an
+[wohnzimmer mama papa lina du licht=an zeit=abend palette=orange ruhig] „Langweilig“, sagst du. Und alle nicken.
+// Weltall: die Erde dreht sich weiter
+[weltall mond palette=lila zoom-raus] Die Lüge geht erstaunlich leicht. Und genau das macht dir Angst.
+
+== Cliffhanger ==
+// Zimmer nachts: du legst den Schein in Opas alte Blechdose
+[zimmer du zeit=nacht lichterkette palette=lila zoom-rein] In der Nacht legst du den Schein in eine alte Blechdose unter dem Bett.
+// Nahaufnahme: du, entschlossen
+[gesicht du ort=zimmer zeit=nacht entschlossen palette=lila] Du beschließt: Bis Opas Geburtstag am Sonntag erfährt es niemand. Nicht mal Mia.
+// Handy: Nachricht von Mia
+[handy ort=zimmer zeit=nacht netz=4 akku=8 uhrzeit="00:14" von="Mia" nachricht="Du bist komisch heute. Alles okay?" palette=lila] Es wird die schlimmste Entscheidung deines Jahres.

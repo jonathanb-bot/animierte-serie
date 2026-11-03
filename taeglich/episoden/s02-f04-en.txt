@@ -1,0 +1,62 @@
+# The Jackpot – Episode 4: The Rumor
+@musik musik/s02-f04-en.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@sprache en
+@stimmung duester
+@vortrag lebendig
+@mund zitate
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette lila
+@zeit nacht
+
+== Hook ==
+// Auge
+[auge farbe=#ff5a3d text="WANTED" palette=lila zoom-rein] Somewhere in your town, there's a secret millionaire. And everyone's hunting for him.
+// Nahaufnahme: Mia
+[gesicht mia ort=grossstadt zeit=nacht misstrauisch palette=lila] “Hey. Was that you?”
+// Nahaufnahme: du lachst zu laut
+[gesicht du ort=grossstadt zeit=nacht froh palette=lila] “Me? I've got eleven bucks in my account.” You laugh. Way too loud.
+
+== Wiedererkennen ==
+// Klassenzimmer
+[klassenzimmer du ben lehrerin tafel="Math|Page 112" uhr=08:05 palette=blau schwenk-rechts] On Monday, the whole school is talking about the kiosk.
+// Nahaufnahme: Ben flüstert
+[gesicht ben ort=klassenzimmer neugierig palette=blau] “If it was me, I'd buy an island. With penguins.”
+// Nahaufnahme: du lachst gequält
+[gesicht du ort=klassenzimmer besorgt palette=blau] You laugh along. Your laugh sounds like a broken alarm clock.
+// Netz
+[netz mitte=du farbe=#ff5a3d palette=lila wackeln=0.3 zoom-raus] In the class group chat, everyone's guessing who it could be. Twenty-eight messages in one hour.
+
+== Steigerung ==
+// Haltestelle im Regen
+[haltestelle du fremder regen zeit=abend palette=blau zoom-rein] At the bus stop, a man you've never seen before starts talking to you.
+// Nahaufnahme: der Fremde
+[gesicht fremder ort=haltestelle zeit=abend regen neugierig palette=blau] “You live over by Linden Street, right?”
+// Handy: unbekannte Nummer
+[handy ort=haltestelle zeit=abend netz=3 akku=21 uhrzeit="7:48 PM" von="Unknown" nachricht="It's your cousin Ralph! Long time no see!" palette=blau] That night, you get a text from a cousin you didn't even know existed.
+// Nahaufnahme: du liest
+[gesicht du ort=zimmer zeit=nacht misstrauisch palette=lila] Ralph just wants to talk about family. And about a little loan.
+// Zimmer nachts
+[zimmer im_bett=du zeit=nacht lichterkette palette=lila zoom-rein] At three in the morning, you're wide awake. Every car outside sounds like it's stopping at your house.
+// Nahaufnahme: du, müde
+[gesicht du ort=zimmer zeit=nacht muede palette=lila] Thirty million. And you're sleeping worse than ever.
+
+== Wendung ==
+// Großstadt nachts
+[grossstadt zeit=nacht palette=lila schwenk-links] By the next morning, the rumor isn't a rumor anymore.
+// Weltall: Satellit
+[weltall satellit palette=lila zoom-raus] A photo only takes seconds to be everywhere.
+// Handy: Foto im Klassenchat
+[handy ort=zimmer zeit=morgen netz=4 akku=44 uhrzeit="7:02 AM" von="Class 12B" nachricht="Photo: Linden St kiosk, Saturday 11:41 PM. Our millionaire?" palette=lila] Someone posted a picture. The kiosk, Saturday night. And standing in front of it is you.
+// Kiosk
+[kiosk du zeit=nacht palette=rosa zoom-rein] It's blurry. But everyone knows that jacket.
+
+== Cliffhanger ==
+// Nahaufnahme: du starrst aufs Handy
+[gesicht du ort=zimmer zeit=morgen schreck palette=lila zoom-rein] Then a message pops up.
+// Handy: Mia
+[handy ort=zimmer zeit=morgen netz=4 akku=43 uhrzeit="7:03 AM" von="Mia" nachricht="I asked you. You lied right to my face." palette=lila] From Mia. “I asked you. You lied right to my face.”

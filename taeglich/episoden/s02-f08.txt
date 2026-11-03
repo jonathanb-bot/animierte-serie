@@ -1,0 +1,59 @@
+# Der Hauptgewinn – Folge 8: Für uns alle
+@musik musik/s02-f08.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung warm
+@vortrag lebendig
+@mund zitate
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette orange
+@zeit abend
+
+== Hook ==
+// Bahnhof abends, Mia mit Koffer, du vor ihr
+[bahnhof du mia zeit=abend palette=rosa zoom-rein zug="20:12   RE 7   Hamburg" uhr=20:25 anzeige="Abgefahren"] Deine beste Freundin hat ihren Zug sausen lassen. Für dich.
+// Nahaufnahme: Mia, ernst
+[gesicht mia ort=bahnhof zeit=abend misstrauisch palette=rosa zug="20:12   RE 7   Hamburg" uhr=20:25 anzeige="Abgefahren"] „Das Geld ist mir egal. Die Lüge nicht.“
+// Nahaufnahme: du
+[gesicht du ort=bahnhof zeit=abend traurig palette=rosa zug="20:12   RE 7   Hamburg" uhr=20:25 anzeige="Abgefahren"] „Ich weiß. Ich hatte Angst, dass sich alles ändert.“
+// Großstadt abends, ihr zwei auf dem Weg
+[grossstadt zeit=abend du mia palette=rosa schwenk-links] Ihr lauft zu Fuß nach Hause. Mia zieht ihren Koffer, du trägst ihre Tasche.
+
+== Wiedererkennen ==
+// Nahaufnahme: Mia lächelt schief
+[gesicht mia ort=bahnhof zeit=abend froh palette=rosa zug="20:12   RE 7   Hamburg" uhr=20:25 anzeige="Abgefahren"] „Hat es ja auch. Du bist ein schlechter Lügner geworden.“
+// See am Abend, ihr beide, Glühwürmchen
+[see du mia sitzen zeit=abend gluehwuermchen palette=rosa zoom-raus] Am See lässt sie einen Stein springen. Fünfmal. Deiner geht wieder unter.
+
+== Steigerung ==
+// Esstisch am Sonntag, alle da, Torte, Kerzen
+[esstisch oma opa mama papa lina du torte kerzen zeit=abend palette=orange zoom-rein] Sonntag. Opas Geburtstag. Er sitzt mit Krücken am Kopfende. Und zum ersten Mal seit acht Monaten ist jeder Stuhl besetzt.
+// Nahaufnahme: du stehst auf
+[gesicht du ort=esstisch zeit=abend entschlossen palette=orange] Du stehst auf. Dein Herz klopft lauter als bei der Lottozentrale.
+// Lottoschein groß
+[objekt objekte="lottoschein:Der Schein|geld:Für alle" gross="FÜR UNS ALLE" palette=orange] „Opa hat gewonnen. Mit euren Geburtstagen.“
+// Nahaufnahme: Papa lässt die Gabel fallen
+[gesicht papa ort=esstisch zeit=abend schreck palette=orange] Papa lässt die Gabel fallen. Oma verschluckt sich am Kuchen.
+// Nahaufnahme: Lina
+[gesicht lina ort=esstisch zeit=abend froh palette=orange] „Krieg ich jetzt ein Pferd?“
+// Nahaufnahme: Opa zwinkert
+[gesicht opa ort=esstisch zeit=abend froh palette=orange zoom-rein] Opa sagt gar nichts. Er zwinkert dir nur zu.
+
+== Wendung ==
+// Esstisch: alle lachen, Opa hebt das Glas
+[esstisch oma opa:froh mama papa lina du kerzen zeit=abend palette=orange schwenk-rechts] Ihr teilt es. Für uns alle, wie auf dem Schein. Und Opa will nur eins dafür.
+// Nahaufnahme: Opa
+[gesicht opa ort=esstisch zeit=abend froh palette=orange] „Jeden Sonntag. Hier. Alle. Ohne Ausrede.“
+// Nahaufnahme: du lachst
+[gesicht du ort=esstisch zeit=abend froh palette=orange] Der beste Deal deines Lebens.
+// Lebenszeit: viele Sonntage, die noch kommen
+[lebenszeit jahre=18 oben="Sonntage, die noch kommen" palette=orange zoom-raus] Wenn alles gut geht, sind das noch ein paar Hundert Sonntage. Jeder einzelne mehr wert als der Gewinn.
+
+== Cliffhanger ==
+// Polarlicht über der Stadt, warmes Leuchten, ihr am Fenster
+[polarlicht du mia farbe=#ffb45e palette=orange zoom-raus] Später stehst du mit Mia am Fenster. Die Stadt leuchtet.
+// Kiosk bei Nacht, Opa mit Krücken vor dem Neonschild
+[kiosk opa:froh zeit=nacht palette=rosa zoom-rein] Und am Samstag humpelt Opa zum Kiosk. Dieselben Zahlen. Wie immer. Weil er nie gespielt hat, um zu gewinnen.

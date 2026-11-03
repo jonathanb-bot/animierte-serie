@@ -1,0 +1,185 @@
+{
+ "dauer": 75.352,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "kiosk",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 5.126,
+   "emotion": "spannend",
+   "text": "Imagine you just won thirty million. And nobody can ever know."
+  },
+  {
+   "nr": 2,
+   "typ": "objekt",
+   "kapitel": 1,
+   "start": 5.126,
+   "dauer": 3.278,
+   "emotion": "erklaerend",
+   "text": "All six numbers. Plus the bonus ball."
+  },
+  {
+   "nr": 3,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 8.404,
+   "dauer": 3.95,
+   "emotion": "spannend",
+   "text": "Right now, your bank account says eleven dollars and forty cents."
+  },
+  {
+   "nr": 4,
+   "typ": "handy",
+   "kapitel": 1,
+   "start": 12.354,
+   "dauer": 3.014,
+   "emotion": "erzaehlend",
+   "text": "Until a minute ago, that was your biggest problem."
+  },
+  {
+   "nr": 5,
+   "typ": "esstisch",
+   "kapitel": 2,
+   "start": 15.368,
+   "dauer": 4.55,
+   "emotion": "froh",
+   "text": "Yesterday you turned eighteen. Grandpa slid an envelope across the table."
+  },
+  {
+   "nr": 6,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 19.918,
+   "dauer": 2.51,
+   "emotion": "froh",
+   "text": "“You're old enough now. Good luck, kiddo.”"
+  },
+  {
+   "nr": 7,
+   "typ": "titel",
+   "kapitel": 2,
+   "start": 22.428,
+   "dauer": 4.838,
+   "emotion": "erzaehlend",
+   "text": "A lottery ticket. With the same numbers Grandpa has played for forty-one years."
+  },
+  {
+   "nr": 8,
+   "typ": "zimmer",
+   "kapitel": 2,
+   "start": 27.266,
+   "dauer": 2.318,
+   "emotion": "erzaehlend",
+   "text": "Honestly, you only took it to be polite."
+  },
+  {
+   "nr": 9,
+   "typ": "weltall",
+   "kapitel": 3,
+   "start": 29.584,
+   "dauer": 5.174,
+   "emotion": "erzaehlend",
+   "text": "The odds of winning this jackpot are about one in a hundred and forty million."
+  },
+  {
+   "nr": 10,
+   "typ": "grossstadt",
+   "kapitel": 3,
+   "start": 34.758,
+   "dauer": 4.406,
+   "emotion": "erzaehlend",
+   "text": "That's like pointing at one random person in the whole country. Twice in a row."
+  },
+  {
+   "nr": 11,
+   "typ": "netz",
+   "kapitel": 3,
+   "start": 39.164,
+   "dauer": 4.766,
+   "emotion": "erzaehlend",
+   "text": "Every week, millions of people pick their numbers. This time, it's you."
+  },
+  {
+   "nr": 12,
+   "typ": "kiosk",
+   "kapitel": 3,
+   "start": 43.93,
+   "dauer": 4.502,
+   "emotion": "erzaehlend",
+   "text": "The machine at the kiosk beeps three times. Then for a really long time."
+  },
+  {
+   "nr": 13,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 48.432,
+   "dauer": 2.726,
+   "emotion": "spannend",
+   "text": "“Kid. You need to go to the lottery office.”"
+  },
+  {
+   "nr": 14,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 51.158,
+   "dauer": 1.694,
+   "emotion": "froh",
+   "text": "“And tell your grandpa I said hi.”"
+  },
+  {
+   "nr": 15,
+   "typ": "grossstadt",
+   "kapitel": 4,
+   "start": 52.852,
+   "dauer": 3.446,
+   "emotion": "erzaehlend",
+   "text": "You run home. The ticket sticks to your sweaty hand."
+  },
+  {
+   "nr": 16,
+   "typ": "zimmer",
+   "kapitel": 4,
+   "start": 56.298,
+   "dauer": 5.51,
+   "emotion": "erzaehlend",
+   "text": "Thirty million. You could skip school tomorrow. You could never have to do anything again."
+  },
+  {
+   "nr": 17,
+   "typ": "landschaft",
+   "kapitel": 4,
+   "start": 61.808,
+   "dauer": 5.966,
+   "emotion": "erzaehlend",
+   "text": "You could pay off Mom's house. No more night shifts for Dad. Every pony in the world for Lina."
+  },
+  {
+   "nr": 18,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 67.774,
+   "dauer": 1.718,
+   "emotion": "erzaehlend",
+   "text": "But something's bugging you."
+  },
+  {
+   "nr": 19,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 69.492,
+   "dauer": 1.502,
+   "emotion": "erzaehlend",
+   "text": "You flip the ticket over."
+  },
+  {
+   "nr": 20,
+   "typ": "objekt",
+   "kapitel": 5,
+   "start": 70.994,
+   "dauer": 4.358,
+   "emotion": "erklaerend",
+   "text": "On the back, in Grandpa's shaky handwriting: “For all of us.”"
+  }
+ ]
+}

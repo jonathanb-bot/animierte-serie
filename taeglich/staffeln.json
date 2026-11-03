@@ -169,6 +169,169 @@
     "laengenband": "frei (65–85 s, Standard vor der Format-Rotation)",
     "tiktok_teile": 4
    }
+  },
+  {
+   "id": "s02",
+   "datum": "2026-11-03",
+   "titel": "Der Hauptgewinn",
+   "beschreibung": "Du wirst 18, Opa schenkt dir einen Lottoschein, und plötzlich hast du 30 Millionen. Niemand darf es wissen. Aber eine Lüge kostet mehr als jedes Geld.",
+   "thema": "Was wäre wenn: Lottogewinn mit 18, Geheimhaltung, Lüge gegenüber der besten Freundin, Opas Zahlen (Familiengeburtstage), am Ende zählt der volle Tisch",
+   "hauptstimmung": "freudig",
+   "vorbild": "Dhar Mann (klare Folge einer Entscheidung, Wendung, Lehre nur gezeigt) mit Wunsch-Prämisse wie „Der letzte Mann“",
+   "hashtags": [
+    "#hauptgewinn",
+    "#lotto",
+    "#animation",
+    "#geschichte",
+    "#freundschaft",
+    "#storytime",
+    "#deutsch"
+   ],
+   "tags": [
+    "animation",
+    "geschichte",
+    "lotto",
+    "hauptgewinn",
+    "freundschaft",
+    "familie",
+    "story",
+    "deutsch"
+   ],
+   "emoji": "🎟️",
+   "kulissen_neu": [
+    "kiosk"
+   ],
+   "analyse": {
+    "quelle": "taeglich/analyse/aktuell.md (3.11.2026, 21:45)",
+    "mehr_davon": [
+     "1: jeder erste Satz eine große Ausgangslage über dich (kühne Prämisse „Stell dir vor, du hast 30 Millionen gewonnen“ bzw. neue Lage der Folge), ohne Namen und Vorgeschichte",
+     "2: Einstellung 1 kurz mit dem stärksten Bild, danach schnelle Beweisbilder (Lottoschein, Kontostand, Gesicht)",
+     "3: ein trockener, selbstironischer Satz in den ersten 15 s (elf Euro vierzig, Geheimagent mit Schulrucksack, Pinguin mit Rucksack)",
+     "4: Familie und Freunde im Zentrum (Opa, Mia, Ben, Lina), Wendung bis Sekunde 30–40",
+     "5: jede Folge trägt allein (erster Satz nennt die Lage)"
+    ],
+    "weniger_davon": [
+     "6: keine Titelkarte, kein Serienname, kein „Folge X“, kein Rückblick, keine Endkarte",
+     "7: keine ruhigen Einstiege ohne Prämisse",
+     "8: Mitte der Folge (30–35 s) neue Frage oder neues Bild statt Erklärstrecke"
+    ],
+    "experiment": "9: Hook-Text A/B: ungerade Folgen (1, 3, 5, 7) mit hooktext, gerade (2, 4, 6, 8) ohne. Messen: TikTok-Bindung nach 3 s und 7 s, Aufrufe/h Instagram",
+    "thema": "10: „Was wäre wenn: Der Hauptgewinn“"
+   },
+   "boegen": [
+    "Rückseite des Scheins „Für uns alle“ (F1) → Opa erklärt es (F6) → die Familie teilt (F8)",
+    "Opas Zahlen seit 41 Jahren (F1) → es sind die Geburtstage der Familie (F6) → „mit euren Geburtstagen“ (F8)",
+    "Kioskbesitzer „Grüß deinen Opa“ (F1) → Überraschung: Opa wusste es, sein Skatbruder (F6)",
+    "Mia: „Du rennst wie ein Pinguin mit Rucksack“ (F3) → du rennst zu ihr (F6, F7) → ihr erster Satz am Bahnhof (F7)",
+    "„Lina jedes Pferd der Welt“ (F1) → „Krieg ich jetzt ein Pferd?“ (F8)"
+   ],
+   "cliffhanger": [
+    "Entdeckung",
+    "Entscheidung",
+    "Entdeckung",
+    "Konfrontation",
+    "Ankunft/Geständnis",
+    "Entscheidung",
+    "Wiedersehen",
+    "Schluss"
+   ],
+   "folgen": [
+    {
+     "nr": 1,
+     "titel": "Sechs Richtige",
+     "stimmung": "freudig",
+     "beschreibung": "Stell dir vor, du hast gerade 30 Millionen gewonnen. Und niemand darf es wissen.",
+     "familie": true,
+     "hooktext": true
+    },
+    {
+     "nr": 2,
+     "titel": "Niemand darf es wissen",
+     "stimmung": "spannend",
+     "beschreibung": "Die Lottozentrale sagt: Halt den Mund. Und die erste Lüge geht erstaunlich leicht.",
+     "familie": true,
+     "hooktext": false
+    },
+    {
+     "nr": 3,
+     "titel": "Reich sein ist komisch",
+     "stimmung": "freudig",
+     "beschreibung": "Pizza, ein neues Fahrrad und eine Eilmeldung, die alles verrät.",
+     "familie": true,
+     "hooktext": true
+    },
+    {
+     "nr": 4,
+     "titel": "Das Gerücht",
+     "stimmung": "duester",
+     "beschreibung": "Die ganze Stadt sucht den Millionär. Und deine beste Freundin weiß, dass du gelogen hast.",
+     "familie": true,
+     "hooktext": false
+    },
+    {
+     "nr": 5,
+     "titel": "Allein mit dreißig Millionen",
+     "stimmung": "traurig",
+     "beschreibung": "Du kannst dir alles kaufen. Nur nicht die eine Person, die nicht mehr mit dir redet.",
+     "familie": true,
+     "hooktext": true
+    },
+    {
+     "nr": 6,
+     "titel": "Opas Zahlen",
+     "stimmung": "warm",
+     "beschreibung": "Opa liegt im Krankenhaus. Und er verrät, was seine Zahlen wirklich bedeuten.",
+     "familie": true,
+     "hooktext": false
+    },
+    {
+     "nr": 7,
+     "titel": "Gleis drei",
+     "stimmung": "spannend",
+     "beschreibung": "Vierzehn Minuten, ein leerer Akku und ein Zug, der gleich abfährt.",
+     "familie": true,
+     "hooktext": true
+    },
+    {
+     "nr": 8,
+     "titel": "Für uns alle",
+     "stimmung": "warm",
+     "beschreibung": "Ein voller Tisch am Sonntag. Und der beste Deal deines Lebens.",
+     "familie": true,
+     "hooktext": false
+    }
+   ],
+   "tiktok_teile": [
+    [
+     1
+    ],
+    [
+     2
+    ],
+    [
+     3
+    ],
+    [
+     4
+    ],
+    [
+     5
+    ],
+    [
+     6
+    ],
+    [
+     7
+    ],
+    [
+     8
+    ]
+   ],
+   "format": {
+    "folgen": 8,
+    "laengenband": "kurz 60–70 s (immer über 62 s)",
+    "tiktok_teile": 8
+   }
   }
  ]
 }

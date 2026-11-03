@@ -1,0 +1,61 @@
+# Der Hauptgewinn – Folge 4: Das Gerücht
+@musik musik/s02-f04.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung duester
+@vortrag lebendig
+@mund zitate
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette lila
+@zeit nacht
+
+== Hook ==
+// Auge mit Strahlen, rot
+[auge farbe=#ff5a3d text="GESUCHT" palette=lila zoom-rein] Irgendwo in deiner Stadt läuft ein Millionär herum. Und alle suchen ihn.
+// Nahaufnahme: Mia
+[gesicht mia ort=grossstadt zeit=nacht misstrauisch palette=lila] „Sag mal. Warst das du?“
+// Nahaufnahme: du lachst zu laut
+[gesicht du ort=grossstadt zeit=nacht froh palette=lila] „Ich? Ich hab elf Euro auf dem Konto.“ Du lachst. Viel zu laut.
+
+== Wiedererkennen ==
+// Klassenzimmer: alle tuscheln
+[klassenzimmer du ben lehrerin tafel="Mathe|Seite 112" uhr=08:05 palette=blau schwenk-rechts] Am Montag redet die ganze Schule nur über den Kiosk.
+// Nahaufnahme: Ben flüstert
+[gesicht ben ort=klassenzimmer neugierig palette=blau] „Wenn ich das wäre, hätte ich mir 'ne Insel gekauft. Mit Pinguinen.“
+// Nahaufnahme: du lachst gequält
+[gesicht du ort=klassenzimmer besorgt palette=blau] Du lachst mit. Dein Lachen klingt wie ein kaputter Wecker.
+// Netz: Nachrichten fliegen, ein Knoten leuchtet rot
+[netz mitte=du farbe=#ff5a3d palette=lila wackeln=0.3 zoom-raus] Im Klassenchat rätseln alle, wer der Gewinner ist. Achtundzwanzig Nachrichten in einer Stunde.
+
+== Steigerung ==
+// Haltestelle im Regen, ein Fremder schaut zu dir
+[haltestelle du fremder regen zeit=abend palette=blau zoom-rein] An der Haltestelle spricht dich ein Mann an, den du nie gesehen hast.
+// Nahaufnahme: der Fremde, freundlich, zu freundlich
+[gesicht fremder ort=haltestelle zeit=abend regen neugierig palette=blau] „Du wohnst doch bei der Lindenstraße, oder?“
+// Handy: unbekannte Nummer ruft an
+[handy ort=haltestelle zeit=abend netz=3 akku=21 uhrzeit="19:48" von="Unbekannt" nachricht="Hier ist dein Cousin Ralf! Lange nicht gesehen!" palette=blau] Abends schreibt dir ein Cousin, von dem du nicht wusstest, dass es ihn gibt.
+// Nahaufnahme: du liest, misstrauisch
+[gesicht du ort=zimmer zeit=nacht misstrauisch palette=lila] Ralf will nur kurz über die Familie reden. Und über ein Darlehen.
+// Zimmer nachts, du wach im Bett, das Handy leuchtet
+[zimmer im_bett=du zeit=nacht lichterkette palette=lila zoom-rein] Um drei Uhr nachts liegst du wach. Jedes Auto draußen klingt, als würde es vor eurem Haus halten.
+// Nahaufnahme: du, müde
+[gesicht du ort=zimmer zeit=nacht muede palette=lila] Dreißig Millionen. Und du schläfst schlechter als je zuvor.
+
+== Wendung ==
+// Großstadt nachts, Lichtspuren
+[grossstadt zeit=nacht palette=lila schwenk-links] Am nächsten Morgen ist das Gerücht kein Gerücht mehr.
+// Weltall: Satellit über der Erde
+[weltall satellit palette=lila zoom-raus] Ein Foto braucht nur Sekunden, um überall zu sein.
+// Handy: Foto im Klassenchat
+[handy ort=zimmer zeit=morgen netz=4 akku=44 uhrzeit="07:02" von="Klasse 12b" nachricht="Foto: Kiosk Lindenstraße, Samstag 23:41. Unser Millionär?" palette=lila] Jemand hat ein Foto gepostet. Der Kiosk, Samstagnacht. Und davor stehst du.
+// Kiosk bei Nacht, du davor wie auf dem Foto
+[kiosk du zeit=nacht palette=rosa zoom-rein] Unscharf. Aber jeder erkennt deine Jacke.
+
+== Cliffhanger ==
+// Nahaufnahme: du starrst aufs Handy
+[gesicht du ort=zimmer zeit=morgen schreck palette=lila zoom-rein] Darunter ploppt eine Nachricht auf.
+// Handy: Mia
+[handy ort=zimmer zeit=morgen netz=4 akku=43 uhrzeit="07:03" von="Mia" nachricht="Ich hab dich gefragt. Du hast mir ins Gesicht gelogen." palette=lila] Von Mia. „Ich hab dich gefragt. Du hast mir ins Gesicht gelogen.“

@@ -1,0 +1,62 @@
+# The Jackpot – Episode 2: Nobody Can Know
+@musik musik/s02-f02-en.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@sprache en
+@stimmung spannend
+@vortrag lebendig
+@mund zitate
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette blau
+@zeit tag
+
+== Hook ==
+// Großstadt am Tag
+[grossstadt zeit=tag du palette=blau zoom-rein] As of today, you're a millionaire. And rule number one is: keep your mouth shut.
+// Rechenzentrum
+[rechenzentrum kern farbe=#4fb8ff palette=blau schwenk-rechts] The lottery office. Cold air, a low hum, a room with no windows.
+// Nahaufnahme: Beraterin
+[gesicht lehrerin ort=rechenzentrum ruhig palette=blau] “Tell as few people as possible.”
+// Nahaufnahme: Beraterin, erhobener Finger
+[gesicht lehrerin ort=rechenzentrum froh palette=blau] “And don't buy anything big this week.”
+
+== Wiedererkennen ==
+// Infokarte
+[objekt objekte="schluessel:Stay anonymous|uhr:Wait first|herz:Tell very few" gross="THE RULES" palette=blau] Nobody here is going to publish your name. That's how it usually works.
+// Nahaufnahme: du nickst
+[gesicht du ort=rechenzentrum entschlossen palette=blau] You nod. Very seriously. Like a secret agent with a school backpack.
+// Netz
+[netz mitte=du farbe=#ff5a3d palette=lila zoom-raus] She says winners suddenly get calls from people they haven't seen in years.
+
+== Steigerung ==
+// Handy: Kontostand
+[handy ort=grossstadt zeit=tag netz=4 akku=64 uhrzeit="11:12 AM" von="Banking" nachricht="Balance: $30,000,011.40" palette=blau] By noon, your account shows a number that barely fits on the screen.
+// Nahaufnahme: du zählst die Nullen
+[gesicht du ort=grossstadt zeit=tag schreck palette=blau zoom-rein] You count the zeros three times. Still six.
+// Großstadt: du auf dem Dach
+[grossstadt zeit=abend du:froh palette=rosa schwenk-links] You could buy an apartment right now. Or five.
+// Nahaufnahme: du denkst an Opa
+[gesicht du ort=grossstadt zeit=abend denkt palette=rosa] But the back of that ticket says “For all of us.”
+// Wohnzimmer abends
+[wohnzimmer mama papa lina sofa_sitzen tv licht=an zeit=abend palette=orange zoom-rein] At home, it smells like fried potatoes. Lina's fighting Dad for the remote.
+// Nahaufnahme: Mama
+[gesicht mama ort=wohnzimmer zeit=abend froh palette=orange] “So? How was your first day as an adult?”
+
+== Wendung ==
+// Nahaufnahme: du, kurz davor
+[gesicht du ort=wohnzimmer zeit=abend besorgt palette=orange zoom-rein] You open your mouth.
+// Wohnzimmer: alle schauen dich an
+[wohnzimmer mama papa lina du licht=an zeit=abend palette=orange ruhig] “Boring,” you say. And everyone nods.
+// Weltall
+[weltall mond palette=lila zoom-raus] The lie comes out surprisingly easy. And that's exactly what scares you.
+
+== Cliffhanger ==
+// Zimmer nachts: Blechdose
+[zimmer du zeit=nacht lichterkette palette=lila zoom-rein] That night, you hide the ticket in an old tin box under your bed.
+// Nahaufnahme: du, entschlossen
+[gesicht du ort=zimmer zeit=nacht entschlossen palette=lila] You decide: until Grandpa's birthday on Sunday, nobody finds out. Not even Mia.
+// Handy: Nachricht von Mia
+[handy ort=zimmer zeit=nacht netz=4 akku=8 uhrzeit="12:14 AM" von="Mia" nachricht="You were weird today. You okay?" palette=lila] It'll be the worst decision you make all year.

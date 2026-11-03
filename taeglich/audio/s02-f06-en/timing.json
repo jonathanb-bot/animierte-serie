@@ -1,0 +1,176 @@
+{
+ "dauer": 78.122,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "krankenhaus",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 4.886,
+   "emotion": "erzaehlend",
+   "text": "Your grandpa is in the hospital. And he knows you're a millionaire."
+  },
+  {
+   "nr": 2,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 4.886,
+   "dauer": 3.638,
+   "emotion": "froh",
+   "text": "“The kiosk guy's my poker buddy. He can't keep a secret.”"
+  },
+  {
+   "nr": 3,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 8.524,
+   "dauer": 5.174,
+   "emotion": "spannend",
+   "text": "For a week, you've been lying to everyone. And Grandpa knew the whole time."
+  },
+  {
+   "nr": 4,
+   "typ": "krankenhaus",
+   "kapitel": 2,
+   "start": 13.698,
+   "dauer": 5.006,
+   "emotion": "erzaehlend",
+   "text": "His glasses are on the nightstand. Without them, he suddenly looks very old."
+  },
+  {
+   "nr": 5,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 18.704,
+   "dauer": 3.638,
+   "emotion": "erzaehlend",
+   "text": "“Broken hip. No big deal. Weeds don't die.”"
+  },
+  {
+   "nr": 6,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 22.342,
+   "dauer": 4.694,
+   "emotion": "traurig",
+   "text": "And then you tell him everything. The money. The lies. Mia."
+  },
+  {
+   "nr": 7,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 27.036,
+   "dauer": 4.742,
+   "emotion": "erzaehlend",
+   "text": "Grandpa listens without interrupting once. Nobody does that better than him."
+  },
+  {
+   "nr": 8,
+   "typ": "lebenszeit",
+   "kapitel": 3,
+   "start": 31.778,
+   "dauer": 5.198,
+   "emotion": "erzaehlend",
+   "text": "For forty-one years, Grandpa played the same numbers every single Saturday."
+  },
+  {
+   "nr": 9,
+   "typ": "objekt",
+   "kapitel": 3,
+   "start": 36.976,
+   "dauer": 7.886,
+   "emotion": "erklaerend",
+   "text": "They're not lucky numbers. They're birthdays. Grandma, Mom, Dad, Lina. And yours."
+  },
+  {
+   "nr": 10,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 44.862,
+   "dauer": 3.854,
+   "emotion": "erzaehlend",
+   "text": "“I never wanted to win. I just wanted to think of you every week.”"
+  },
+  {
+   "nr": 11,
+   "typ": "esstisch",
+   "kapitel": 3,
+   "start": 48.716,
+   "dauer": 4.886,
+   "emotion": "erzaehlend",
+   "text": "Every Sunday, the whole family sat at his table. Until everyone got too busy."
+  },
+  {
+   "nr": 12,
+   "typ": "landschaft",
+   "kapitel": 3,
+   "start": 53.602,
+   "dauer": 1.958,
+   "emotion": "erzaehlend",
+   "text": "The last time was eight months ago."
+  },
+  {
+   "nr": 13,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 55.56,
+   "dauer": 1.79,
+   "emotion": "traurig",
+   "text": "And you didn't show up either."
+  },
+  {
+   "nr": 14,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 57.35,
+   "dauer": 3.494,
+   "emotion": "froh",
+   "text": "“I wrote for all of us. Not for each of us.”"
+  },
+  {
+   "nr": 15,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 60.844,
+   "dauer": 2.966,
+   "emotion": "erzaehlend",
+   "text": "You don't quite get what he means. Not yet."
+  },
+  {
+   "nr": 16,
+   "typ": "esstisch",
+   "kapitel": 4,
+   "start": 63.81,
+   "dauer": 3.47,
+   "emotion": "erzaehlend",
+   "text": "You think about his dinner table. About the empty chairs."
+  },
+  {
+   "nr": 17,
+   "typ": "polarlicht",
+   "kapitel": 4,
+   "start": 67.28,
+   "dauer": 2.702,
+   "emotion": "erzaehlend",
+   "text": "Outside, the sky is slowly getting light."
+  },
+  {
+   "nr": 18,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 69.982,
+   "dauer": 3.686,
+   "emotion": "ernst",
+   "text": "“But first, you go see Mia. Today.”"
+  },
+  {
+   "nr": 19,
+   "typ": "grossstadt",
+   "kapitel": 5,
+   "start": 73.668,
+   "dauer": 4.454,
+   "emotion": "erzaehlend",
+   "text": "So you run. Like a penguin with a backpack. Straight to Mia."
+  }
+ ]
+}

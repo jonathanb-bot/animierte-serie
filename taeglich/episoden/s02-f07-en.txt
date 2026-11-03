@@ -1,0 +1,62 @@
+# The Jackpot – Episode 7: Platform Three
+@musik musik/s02-f07-en.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@sprache en
+@stimmung spannend
+@vortrag lebendig
+@mund zitate
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette rosa
+@zeit abend
+
+== Hook ==
+// Großstadt abends
+[grossstadt zeit=abend du:rennt palette=rosa wackeln=0.4 fahrt hooktext="14 MINUTES LEFT"] You're a millionaire. And you have exactly fourteen minutes not to lose your best friend.
+// Nahaufnahme: Ben
+[gesicht ben ort=grossstadt zeit=abend besorgt palette=rosa] Ben calls. “Mia's leaving. Half a year. Not a joke.”
+// Nahaufnahme: du
+[gesicht du ort=grossstadt zeit=abend schreck palette=rosa] Half a year. And she didn't tell you. Just like you didn't tell her.
+// Handy
+[handy ort=grossstadt zeit=abend netz=4 akku=6 uhrzeit="7:58 PM" von="Train" nachricht="Platform 3, departs 8:12 PM" palette=rosa] The train leaves at eight twelve.
+
+== Wiedererkennen ==
+// Haltestelle
+[haltestelle du zeit=abend regen palette=blau zoom-rein] No bus. No cab. You have thirty million dollars and not a single car.
+// Großstadt
+[grossstadt zeit=abend du:rennt palette=rosa schwenk-links] So you run. For the first time in your life, without complaining.
+// Landschaft
+[landschaft zeit=abend du:rennt palette=rosa zoom-raus] Across the park, over the bridge, past your bench.
+// Nahaufnahme: du keuchst
+[gesicht du ort=grossstadt zeit=abend entschlossen palette=rosa] Your lungs are burning. Your shoes are soaked.
+
+== Steigerung ==
+// Bahnhof
+[bahnhof du fremder lehrerin zeit=abend anzeige="Platform 3 – 8:12" palette=lila zoom-rein zug="8:12 PM   Express" uhr=20:11] The station is packed. Hundreds of people. And none of them is Mia.
+// Netz
+[netz mitte=du farbe=#ff5fa8 palette=rosa zoom-raus] You shout her name. A few people turn around. She doesn't.
+// Nahaufnahme: du suchst
+[gesicht du ort=bahnhof zeit=abend besorgt palette=lila zug="8:12 PM   Express" uhr=20:11 anzeige="Platform 3"] Red hat. No. Yellow suitcase. Not her either.
+// Handy
+[handy ort=bahnhof zeit=abend netz=2 akku=3 uhrzeit="8:11 PM" von="You to Mia" nachricht="I'm here. Platform 3." palette=lila zug="8:12 PM   Express" uhr=20:11 anzeige="Platform 3"] One minute left. Your battery: three percent.
+// Bahnhof
+[bahnhof du:rennt zeit=abend anzeige="Platform 3 – 8:12" palette=lila wackeln=0.3 fahrt zug="8:12 PM   Express" uhr=20:11] Platform three. The train is there. The doors are beeping.
+
+== Wendung ==
+// Nahaufnahme: du
+[gesicht du ort=bahnhof zeit=abend angst palette=lila zoom-rein zug="8:12 PM   Express" uhr=20:11 anzeige="Platform 3"] “Mia!” The doors close.
+// Bahnhof
+[bahnhof du zeit=abend palette=blau zoom-raus zug="8:12 PM   Express" uhr=20:11 anzeige="Platform 3"] The train pulls away. Slowly at first. Then it's gone.
+// Großstadt nachts
+[grossstadt zeit=nacht palette=blau zoom-raus] The lights of the train get smaller and smaller.
+// Nahaufnahme: du, leer
+[gesicht du ort=bahnhof zeit=abend traurig palette=blau zug="8:12 PM   Express" uhr=20:11 anzeige="Platform 3"] You just stand there. With a dead phone and thirty million dollars that are no use at all.
+
+== Cliffhanger ==
+// Nahaufnahme: du hörst eine Stimme
+[gesicht du ort=bahnhof zeit=abend lauscht palette=blau zug="8:12 PM   Express" uhr=20:11 anzeige="Platform 3"] Then someone behind you says:
+// Nahaufnahme: Mia
+[gesicht mia ort=bahnhof zeit=abend froh palette=rosa zoom-rein zug="8:12 PM   Express" uhr=20:11 anzeige="Platform 3"] “You still run like a penguin.”

@@ -1,0 +1,63 @@
+# Der Hauptgewinn – Folge 1: Sechs Richtige
+@musik musik/s02-f01.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung freudig
+@vortrag lebendig
+@mund zitate
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette rosa
+@zeit nacht
+
+== Hook ==
+// Kiosk bei Nacht, das Neonschild flackert, du davor mit dem Schein
+[kiosk du:schreck zeit=nacht palette=rosa zoom-rein hooktext="DU HAST 30 MILLIONEN GEWONNEN"] Stell dir vor, du hast gerade dreißig Millionen gewonnen. Und niemand darf es wissen.
+// Lottoschein groß, die Kreuze leuchten
+[objekt objekte="lottoschein:Sechs Richtige|geld:Superzahl" gross="30 MILLIONEN" palette=rosa] Sechs Richtige. Plus Superzahl.
+// Nahaufnahme: du, fassungslos, Kiosk im Rücken
+[gesicht du ort=kiosk zeit=nacht schreck palette=rosa zoom-rein] Auf deinem Konto liegen gerade elf Euro vierzig.
+// Handy: Kontostand
+[handy ort=kiosk zeit=nacht netz=4 akku=12 uhrzeit="23:41" von="Banking" nachricht="Kontostand: 11,40 €" palette=rosa] Bis eben war das dein größtes Problem.
+
+== Wiedererkennen ==
+// Esstisch am Abend vorher: Geburtstagstorte, Opa schiebt dir einen Umschlag hin
+[esstisch opa:froh du oma mama torte kerzen zeit=abend palette=orange schwenk-rechts] Gestern bist du achtzehn geworden. Opa hat dir einen Umschlag gegeben.
+// Nahaufnahme: Opa zwinkert
+[gesicht opa ort=esstisch zeit=abend froh palette=orange] „Jetzt darfst du's ja. Viel Glück, mein Junge.“
+// Titelkarte: Opas Zahlen
+[titel oben="Opas Zahlen" gross="41 JAHRE" unten="jeden Samstag" farbe=#3a1f3a akzent=#ffb45e groesse=170 hud=false palette=orange zoom-rein] Ein Lottoschein. Mit den Zahlen, die Opa seit einundvierzig Jahren spielt.
+// Zimmer nachts: du legst den Schein achtlos aufs Regal
+[zimmer du zeit=nacht lichterkette palette=lila ruhig] Du hast ihn ehrlich gesagt nur aus Höflichkeit eingesteckt.
+
+== Steigerung ==
+// Weltall: unzählige Lichter auf der Erde, eines blinkt auf
+[weltall satellit palette=lila zoom-rein] Die Chance auf diesen Gewinn liegt bei eins zu hundertvierzig Millionen.
+// Großstadt nachts von oben
+[grossstadt zeit=nacht du palette=blau schwenk-links] Das ist, als würdest du in ganz Deutschland zufällig auf eine einzige Person zeigen. Zweimal hintereinander.
+// Netz: Millionen Lichtpunkte, einer leuchtet auf
+[netz mitte=du farbe=#ffb45e palette=rosa zoom-raus] Jede Woche kreuzen Millionen Menschen ihre Zahlen an. Diesmal trifft es dich.
+// Kiosk: der Besitzer hinter der Scheibe, das Gerät piept
+[kiosk du:lauscht zeit=nacht palette=rosa zoom-rein] Der Automat am Kiosk piept dreimal. Dann sehr lange.
+// Nahaufnahme: der Kioskbesitzer, blass
+[gesicht fremder ort=kiosk zeit=nacht schreck palette=rosa] „Junge. Damit musst du zur Lottozentrale.“
+// Nahaufnahme: Kioskbesitzer lächelt dann
+[gesicht fremder ort=kiosk zeit=nacht froh palette=rosa ruhig] „Und grüß deinen Opa von mir.“
+
+== Wendung ==
+// Großstadt: du rennst nach Hause, Lichtspuren
+[grossstadt zeit=nacht du:rennt palette=blau wackeln=0.3 fahrt] Du rennst nach Hause. Der Schein klebt an deiner schwitzigen Hand.
+// Zimmer: du sitzt auf dem Bett, Licht aus
+[zimmer du:sitzt zeit=nacht lichterkette palette=lila zoom-rein] Dreißig Millionen. Du könntest morgen nicht mehr zur Schule gehen. Du könntest gar nichts mehr müssen.
+// Landschaft nachts, du klein unter dem Sternenhimmel
+[landschaft zeit=nacht du palette=lila zoom-raus] Du könntest Mama das Haus abbezahlen. Papa nie wieder Nachtschicht. Lina jedes Pferd der Welt.
+// Nahaufnahme: du denkst
+[gesicht du ort=zimmer zeit=nacht denkt palette=lila] Aber irgendwas stört dich.
+
+== Cliffhanger ==
+// Nahaufnahme: du drehst den Schein um
+[gesicht du ort=zimmer zeit=nacht neugierig palette=lila zoom-rein] Du drehst den Schein um.
+// Lottoschein mit Opas Handschrift
+[objekt objekte="lottoschein:Opas Schrift" gross="FÜR UNS ALLE" palette=lila] Auf der Rückseite steht, in Opas krakeliger Schrift: „Für uns alle.“

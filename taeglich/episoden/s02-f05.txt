@@ -1,0 +1,59 @@
+# Der Hauptgewinn – Folge 5: Allein mit dreißig Millionen
+@musik musik/s02-f05.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung traurig
+@vortrag lebendig
+@mund zitate
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette blau
+@zeit abend
+
+== Hook ==
+// Landschaft am Abend, du ganz klein auf einem Hügel
+[landschaft zeit=abend du palette=blau zoom-raus hooktext="30 MILLIONEN. NIEMAND REDET MIT DIR."] Du kannst dir jetzt alles kaufen. Nur nicht die eine Person, die nicht mehr mit dir redet.
+// Handy: Nachrichten an Mia, alle ungelesen
+[handy ort=park zeit=abend netz=4 akku=52 uhrzeit="18:20" von="Du an Mia" nachricht="Bitte. Lass es mich erklären. (ungelesen)" palette=blau] Elf Nachrichten an Mia. Keine gelesen.
+// Park im Herbst, Blätter fallen
+[park du:sitzt jahreszeit=herbst zeit=abend blaetter palette=blau zoom-rein] Seit vier Tagen sitzt du allein auf eurer Bank.
+
+== Wiedererkennen ==
+// Nahaufnahme: du, traurig
+[gesicht du ort=park jahreszeit=herbst zeit=abend traurig palette=blau] Du hast immer gedacht, Geld macht Probleme kleiner. Bisher macht es nur dich kleiner.
+// Lebenszeit: Wochen, in denen ihr Freunde wart
+[lebenszeit jahre=18 markiert="6-18" oben="Zwölf Jahre mit Mia" palette=tuerkis zoom-raus] Zwölf Jahre seid ihr befreundet. Seit dem ersten Schultag.
+// Klassenzimmer: Mia sitzt jetzt woanders
+[klassenzimmer du mia lehrerin tafel="Bio|Test Freitag" uhr=10:15 palette=blau schwenk-links] In der Schule sitzt Mia jetzt neben Jonas. Jonas!
+// Nahaufnahme: Ben, ungewohnt ernst
+[gesicht ben ort=klassenzimmer besorgt palette=blau] „Alter. Sie ist nicht sauer wegen dem Geld. Sie ist sauer wegen dir.“
+// Nahaufnahme: du, getroffen
+[gesicht du ort=klassenzimmer traurig palette=blau] Ben hat recht. Und das ist das Schlimmste.
+
+== Steigerung ==
+// See am Abend, Regen auf dem Wasser
+[see du zeit=abend regen palette=tuerkis zoom-rein] Am Abend gehst du zum See. Da, wo ihr früher Steine habt hüpfen lassen.
+// Nahaufnahme: du am See
+[gesicht du ort=see zeit=abend regen traurig palette=tuerkis] Du suchst einen flachen Stein. Er geht sofort unter.
+// Weltall: die Erde, klein und still
+[weltall mond palette=blau zoom-raus] Dreißig Millionen Euro. Und es gibt niemanden, dem du es sagen kannst.
+// Wald am Abend mit Nebel, du allein
+[wald zeit=abend nebel du palette=blau zoom-rein] Du nimmst den langen Weg durch den Wald. Nur damit du nicht nach Hause musst.
+// Großstadt abends, Fenster leuchten, in jedem Fenster sitzen Leute zusammen
+[grossstadt zeit=abend palette=blau schwenk-rechts] Auf dem Heimweg siehst du in die Fenster. Überall sitzen Leute zusammen am Tisch.
+
+== Wendung ==
+// Wohnzimmer: dunkel, Mamas Jacke halb an
+[wohnzimmer mama:angst du licht=an zeit=nacht palette=lila zoom-rein] Zu Hause ist das Licht an. Mama steht mit halb angezogener Jacke im Flur.
+// Nahaufnahme: Mama, mit Tränen
+[gesicht mama ort=wohnzimmer zeit=nacht angst palette=lila] „Opa ist gestürzt. In der Küche.“
+// Nahaufnahme: du, erschrocken
+[gesicht du ort=wohnzimmer zeit=nacht schreck palette=lila] Dir wird plötzlich eiskalt.
+
+== Cliffhanger ==
+// Krankenhaus nachts, der Monitor piept
+[krankenhaus patient=opa zeit=nacht palette=tuerkis zoom-rein] Zwanzig Minuten später stehst du im Krankenhaus. Der Monitor piept leise.
+// Nahaufnahme: Opa öffnet die Augen
+[gesicht opa ort=krankenhaus zeit=nacht muede palette=tuerkis zoom-rein] Opa öffnet die Augen. Und das Erste, was er flüstert, ist: „Du hast es also gefunden.“

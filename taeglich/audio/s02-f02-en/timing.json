@@ -1,0 +1,176 @@
+{
+ "dauer": 67.49,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "grossstadt",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 5.078,
+   "emotion": "erzaehlend",
+   "text": "As of today, you're a millionaire. And rule number one is: keep your mouth shut."
+  },
+  {
+   "nr": 2,
+   "typ": "rechenzentrum",
+   "kapitel": 1,
+   "start": 5.078,
+   "dauer": 4.838,
+   "emotion": "erzaehlend",
+   "text": "The lottery office. Cold air, a low hum, a room with no windows."
+  },
+  {
+   "nr": 3,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 9.916,
+   "dauer": 2.078,
+   "emotion": "erzaehlend",
+   "text": "“Tell as few people as possible.”"
+  },
+  {
+   "nr": 4,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 11.994,
+   "dauer": 2.222,
+   "emotion": "froh",
+   "text": "“And don't buy anything big this week.”"
+  },
+  {
+   "nr": 5,
+   "typ": "objekt",
+   "kapitel": 2,
+   "start": 14.216,
+   "dauer": 3.374,
+   "emotion": "erklaerend",
+   "text": "Nobody here is going to publish your name. That's how it usually works."
+  },
+  {
+   "nr": 6,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 17.59,
+   "dauer": 4.79,
+   "emotion": "ernst",
+   "text": "You nod. Very seriously. Like a secret agent with a school backpack."
+  },
+  {
+   "nr": 7,
+   "typ": "netz",
+   "kapitel": 2,
+   "start": 22.38,
+   "dauer": 4.19,
+   "emotion": "erzaehlend",
+   "text": "She says winners suddenly get calls from people they haven't seen in years."
+  },
+  {
+   "nr": 8,
+   "typ": "handy",
+   "kapitel": 3,
+   "start": 26.57,
+   "dauer": 3.902,
+   "emotion": "erzaehlend",
+   "text": "By noon, your account shows a number that barely fits on the screen."
+  },
+  {
+   "nr": 9,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 30.472,
+   "dauer": 3.422,
+   "emotion": "spannend",
+   "text": "You count the zeros three times. Still six."
+  },
+  {
+   "nr": 10,
+   "typ": "grossstadt",
+   "kapitel": 3,
+   "start": 33.894,
+   "dauer": 2.99,
+   "emotion": "froh",
+   "text": "You could buy an apartment right now. Or five."
+  },
+  {
+   "nr": 11,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 36.884,
+   "dauer": 3.038,
+   "emotion": "erzaehlend",
+   "text": "But the back of that ticket says “For all of us.”"
+  },
+  {
+   "nr": 12,
+   "typ": "wohnzimmer",
+   "kapitel": 3,
+   "start": 39.922,
+   "dauer": 4.574,
+   "emotion": "erzaehlend",
+   "text": "At home, it smells like fried potatoes. Lina's fighting Dad for the remote."
+  },
+  {
+   "nr": 13,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 44.496,
+   "dauer": 2.438,
+   "emotion": "froh",
+   "text": "“So? How was your first day as an adult?”"
+  },
+  {
+   "nr": 14,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 46.934,
+   "dauer": 1.286,
+   "emotion": "ernst",
+   "text": "You open your mouth."
+  },
+  {
+   "nr": 15,
+   "typ": "wohnzimmer",
+   "kapitel": 4,
+   "start": 48.22,
+   "dauer": 3.134,
+   "emotion": "erzaehlend",
+   "text": "“Boring,” you say. And everyone nods."
+  },
+  {
+   "nr": 16,
+   "typ": "weltall",
+   "kapitel": 4,
+   "start": 51.354,
+   "dauer": 4.502,
+   "emotion": "erzaehlend",
+   "text": "The lie comes out surprisingly easy. And that's exactly what scares you."
+  },
+  {
+   "nr": 17,
+   "typ": "zimmer",
+   "kapitel": 5,
+   "start": 55.856,
+   "dauer": 3.686,
+   "emotion": "erzaehlend",
+   "text": "That night, you hide the ticket in an old tin box under your bed."
+  },
+  {
+   "nr": 18,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 59.542,
+   "dauer": 5.15,
+   "emotion": "ernst",
+   "text": "You decide: until Grandpa's birthday on Sunday, nobody finds out. Not even Mia."
+  },
+  {
+   "nr": 19,
+   "typ": "handy",
+   "kapitel": 5,
+   "start": 64.692,
+   "dauer": 2.798,
+   "emotion": "erzaehlend",
+   "text": "It'll be the worst decision you make all year."
+  }
+ ]
+}

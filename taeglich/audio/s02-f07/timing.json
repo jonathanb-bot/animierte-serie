@@ -1,0 +1,176 @@
+{
+ "dauer": 65.138,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "grossstadt",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 5.798,
+   "emotion": "erzaehlend",
+   "text": "Du bist Millionär. Und du hast genau vierzehn Minuten, um deine beste Freundin nicht zu verlieren."
+  },
+  {
+   "nr": 2,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 5.798,
+   "dauer": 3.854,
+   "emotion": "ernst",
+   "text": "Ben ruft an. „Mia fährt weg. Ein halbes Jahr. Kein Witz.“"
+  },
+  {
+   "nr": 3,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 9.652,
+   "dauer": 4.142,
+   "emotion": "spannend",
+   "text": "Ein halbes Jahr. Und sie hat dir nichts gesagt. Genau wie du ihr."
+  },
+  {
+   "nr": 4,
+   "typ": "handy",
+   "kapitel": 1,
+   "start": 13.794,
+   "dauer": 1.982,
+   "emotion": "erzaehlend",
+   "text": "Der Zug fährt um zwölf nach acht."
+  },
+  {
+   "nr": 5,
+   "typ": "haltestelle",
+   "kapitel": 2,
+   "start": 15.776,
+   "dauer": 5.222,
+   "emotion": "erzaehlend",
+   "text": "Kein Bus. Kein Taxi. Du hast dreißig Millionen und kein einziges Auto."
+  },
+  {
+   "nr": 6,
+   "typ": "grossstadt",
+   "kapitel": 2,
+   "start": 20.998,
+   "dauer": 3.518,
+   "emotion": "erzaehlend",
+   "text": "Also rennst du. Zum ersten Mal in deinem Leben ohne zu meckern."
+  },
+  {
+   "nr": 7,
+   "typ": "landschaft",
+   "kapitel": 2,
+   "start": 24.516,
+   "dauer": 3.158,
+   "emotion": "erzaehlend",
+   "text": "Quer durch den Park, über die Brücke, an eurer Bank vorbei."
+  },
+  {
+   "nr": 8,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 27.674,
+   "dauer": 2.39,
+   "emotion": "ernst",
+   "text": "Deine Lunge brennt. Deine Schuhe sind nass."
+  },
+  {
+   "nr": 9,
+   "typ": "bahnhof",
+   "kapitel": 3,
+   "start": 30.064,
+   "dauer": 4.238,
+   "emotion": "erzaehlend",
+   "text": "Der Bahnhof ist voll. Hunderte Menschen. Und keiner davon ist Mia."
+  },
+  {
+   "nr": 10,
+   "typ": "netz",
+   "kapitel": 3,
+   "start": 34.302,
+   "dauer": 3.662,
+   "emotion": "erzaehlend",
+   "text": "Du rufst ihren Namen. Ein paar Leute drehen sich um. Sie nicht."
+  },
+  {
+   "nr": 11,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 37.964,
+   "dauer": 3.566,
+   "emotion": "ernst",
+   "text": "Rote Mütze. Nein. Gelber Koffer. Auch nicht."
+  },
+  {
+   "nr": 12,
+   "typ": "handy",
+   "kapitel": 3,
+   "start": 41.53,
+   "dauer": 3.11,
+   "emotion": "erzaehlend",
+   "text": "Noch eine Minute. Dein Akku: drei Prozent."
+  },
+  {
+   "nr": 13,
+   "typ": "bahnhof",
+   "kapitel": 3,
+   "start": 44.64,
+   "dauer": 3.206,
+   "emotion": "erzaehlend",
+   "text": "Gleis drei. Der Zug ist da. Die Türen piepen."
+  },
+  {
+   "nr": 14,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 47.846,
+   "dauer": 2.246,
+   "emotion": "spannend",
+   "text": "„Mia!“ Die Türen gehen zu."
+  },
+  {
+   "nr": 15,
+   "typ": "bahnhof",
+   "kapitel": 4,
+   "start": 50.092,
+   "dauer": 3.422,
+   "emotion": "erzaehlend",
+   "text": "Der Zug fährt los. Erst langsam. Dann ist er weg."
+  },
+  {
+   "nr": 16,
+   "typ": "grossstadt",
+   "kapitel": 4,
+   "start": 53.514,
+   "dauer": 2.63,
+   "emotion": "erzaehlend",
+   "text": "Die Lichter des Zuges werden kleiner und kleiner."
+  },
+  {
+   "nr": 17,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 56.144,
+   "dauer": 5.27,
+   "emotion": "traurig",
+   "text": "Du stehst da. Mit einem toten Handy und dreißig Millionen, die dir gar nichts nützen."
+  },
+  {
+   "nr": 18,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 61.414,
+   "dauer": 1.526,
+   "emotion": "erzaehlend",
+   "text": "Dann sagt jemand hinter dir:"
+  },
+  {
+   "nr": 19,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 62.94,
+   "dauer": 2.198,
+   "emotion": "froh",
+   "text": "„Du rennst echt immer noch wie ein Pinguin.“"
+  }
+ ]
+}

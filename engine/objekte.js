@@ -126,6 +126,15 @@
     uhr(t) { circle(0, 0, 120, "#2d3238"); circle(0, 0, 100, "#fff"); line(0, 0, 0, -70, 10, "#2d3238"); ctx.save(); ctx.rotate(t * 2); line(0, 0, 0, -85, 6, "#e04848"); ctx.restore(); },
     herz(t) { const s = 1 + Math.max(0, Math.sin(t * 6)) * 0.08; ctx.save(); ctx.scale(s, s); ctx.beginPath(); ctx.moveTo(0, 100); ctx.bezierCurveTo(-170, -10, -80, -150, 0, -60); ctx.bezierCurveTo(80, -150, 170, -10, 0, 100); fill("#e04858"); ctx.restore(); },
     muell(t) { box(-80, -80, 160, 180, 18, "#3b3f45"); box(-95, -100, 190, 30, 12, "#2d3136"); for (let i = -1; i <= 1; i++) box(i * 45 - 6, -50, 12, 120, 6, "#4b5057"); },
+    lottoschein(t) {
+      ctx.save(); ctx.rotate(-0.08); box(-130, -170, 260, 340, 18, "#fff6e4"); box(-130, -170, 260, 60, 18, "#e2506e"); box(-130, -130, 260, 20, 0, "#e2506e");
+      for (let r = 0; r < 5; r++) for (let c = 0; c < 5; c++) { const x = -100 + c * 50, y = -80 + r * 46; box(x, y, 34, 32, 6, "#f4d9d0"); if ((r * 5 + c) % 4 === 1 || r * 5 + c === 12) { line(x + 4, y + 4, x + 30, y + 28, 7, "#2c56c4"); line(x + 30, y + 4, x + 4, y + 28, 7, "#2c56c4"); } }
+      ctx.restore();
+    },
+    geld(t) {
+      for (let i = 0; i < 4; i++) { const y = 60 - i * 34; box(-150 + i * 6, y, 300, 110, 14, shade("#5fb37a", -i * 0.04)); box(-130 + i * 6, y + 14, 260, 82, 10, "#7fcf95"); circle(i * 6, y + 55, 30, "#5fb37a"); }
+      for (let k = 0; k < 3; k++) { const a = 0.5 + 0.5 * Math.sin(t * 3 + k * 2); circle(-120 + k * 120, -110 + (k % 2) * 30, 8, `rgba(255,255,255,${0.8 * a})`); }
+    },
   };
   I.spuelkasten = I.toilette; I.flasche = I.wasserflasche; I.lampe = I.taschenlampe; I.radio = I.funkgeraet; I.essen = I.dose; I.zombie = I.zombiekopf;
   A.ICONS = Object.keys(I);

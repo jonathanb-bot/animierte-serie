@@ -1,0 +1,176 @@
+{
+ "dauer": 67.346,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "grossstadt",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 4.982,
+   "emotion": "erzaehlend",
+   "text": "Ab heute bist du Millionär. Und die erste Regel lautet: Halt den Mund."
+  },
+  {
+   "nr": 2,
+   "typ": "rechenzentrum",
+   "kapitel": 1,
+   "start": 4.982,
+   "dauer": 5.102,
+   "emotion": "erzaehlend",
+   "text": "Die Lottozentrale. Kühle Luft, leises Summen, ein Raum ohne Fenster."
+  },
+  {
+   "nr": 3,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 10.084,
+   "dauer": 2.342,
+   "emotion": "erzaehlend",
+   "text": "„Erzählen Sie es so wenigen wie möglich.“"
+  },
+  {
+   "nr": 4,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 12.426,
+   "dauer": 2.294,
+   "emotion": "froh",
+   "text": "„Und kaufen Sie diese Woche nichts Großes.“"
+  },
+  {
+   "nr": 5,
+   "typ": "objekt",
+   "kapitel": 2,
+   "start": 14.72,
+   "dauer": 3.734,
+   "emotion": "erklaerend",
+   "text": "Deinen Namen veröffentlicht hier niemand. Das ist in Deutschland so üblich."
+  },
+  {
+   "nr": 6,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 18.454,
+   "dauer": 4.598,
+   "emotion": "ernst",
+   "text": "Du nickst. Sehr ernst. Wie ein Geheimagent mit Schulrucksack."
+  },
+  {
+   "nr": 7,
+   "typ": "netz",
+   "kapitel": 2,
+   "start": 23.052,
+   "dauer": 4.934,
+   "emotion": "erzaehlend",
+   "text": "Sie sagt, Gewinner bekommen plötzlich Anrufe von Leuten, die sie seit Jahren nicht gesehen haben."
+  },
+  {
+   "nr": 8,
+   "typ": "handy",
+   "kapitel": 3,
+   "start": 27.986,
+   "dauer": 3.662,
+   "emotion": "erzaehlend",
+   "text": "Am Mittag steht auf deinem Konto eine Zahl, die nicht auf den Bildschirm passt."
+  },
+  {
+   "nr": 9,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 31.648,
+   "dauer": 3.086,
+   "emotion": "spannend",
+   "text": "Du zählst die Nullen dreimal. Es bleiben sechs."
+  },
+  {
+   "nr": 10,
+   "typ": "grossstadt",
+   "kapitel": 3,
+   "start": 34.734,
+   "dauer": 3.278,
+   "emotion": "froh",
+   "text": "Du könntest dir jetzt eine Wohnung kaufen. Oder fünf."
+  },
+  {
+   "nr": 11,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 38.012,
+   "dauer": 2.942,
+   "emotion": "erzaehlend",
+   "text": "Aber hinten auf dem Schein steht „Für uns alle“."
+  },
+  {
+   "nr": 12,
+   "typ": "wohnzimmer",
+   "kapitel": 3,
+   "start": 40.954,
+   "dauer": 4.334,
+   "emotion": "erzaehlend",
+   "text": "Zu Hause riecht es nach Bratkartoffeln. Lina streitet mit Papa um die Fernbedienung."
+  },
+  {
+   "nr": 13,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 45.288,
+   "dauer": 2.774,
+   "emotion": "froh",
+   "text": "„Na? Wie war dein erster Tag als Erwachsener?“"
+  },
+  {
+   "nr": 14,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 48.062,
+   "dauer": 1.43,
+   "emotion": "ernst",
+   "text": "Du machst den Mund auf."
+  },
+  {
+   "nr": 15,
+   "typ": "wohnzimmer",
+   "kapitel": 4,
+   "start": 49.492,
+   "dauer": 2.726,
+   "emotion": "erzaehlend",
+   "text": "„Langweilig“, sagst du. Und alle nicken."
+  },
+  {
+   "nr": 16,
+   "typ": "weltall",
+   "kapitel": 4,
+   "start": 52.218,
+   "dauer": 3.806,
+   "emotion": "erzaehlend",
+   "text": "Die Lüge geht erstaunlich leicht. Und genau das macht dir Angst."
+  },
+  {
+   "nr": 17,
+   "typ": "zimmer",
+   "kapitel": 5,
+   "start": 56.024,
+   "dauer": 3.422,
+   "emotion": "erzaehlend",
+   "text": "In der Nacht legst du den Schein in eine alte Blechdose unter dem Bett."
+  },
+  {
+   "nr": 18,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 59.446,
+   "dauer": 5.414,
+   "emotion": "ernst",
+   "text": "Du beschließt: Bis Opas Geburtstag am Sonntag erfährt es niemand. Nicht mal Mia."
+  },
+  {
+   "nr": 19,
+   "typ": "handy",
+   "kapitel": 5,
+   "start": 64.86,
+   "dauer": 2.486,
+   "emotion": "erzaehlend",
+   "text": "Es wird die schlimmste Entscheidung deines Jahres."
+  }
+ ]
+}

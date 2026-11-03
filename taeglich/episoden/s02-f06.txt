@@ -1,0 +1,61 @@
+# Der Hauptgewinn – Folge 6: Opas Zahlen
+@musik musik/s02-f06.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung warm
+@vortrag lebendig
+@mund zitate
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette orange
+@zeit nacht
+
+== Hook ==
+// Krankenhaus nachts, Opa im Bett, du daneben, warmes Licht
+[krankenhaus patient=opa du zeit=nacht palette=orange zoom-rein] Dein Opa liegt im Krankenhaus. Und er weiß, dass du Millionär bist.
+// Nahaufnahme: Opa schmunzelt
+[gesicht opa ort=krankenhaus zeit=nacht froh palette=orange] „Der Kioskmann ist mein Skatbruder. Der kann nichts für sich behalten.“
+// Nahaufnahme: du, rot im Gesicht
+[gesicht du ort=krankenhaus zeit=nacht schreck palette=orange] Seit einer Woche lügst du alle an. Und Opa wusste es die ganze Zeit.
+
+== Wiedererkennen ==
+// Krankenhaus: Opas Hand mit Infusion, Brille auf dem Nachttisch
+[krankenhaus patient=opa du zeit=nacht monitor=flach palette=orange ruhig] Seine Brille liegt auf dem Nachttisch. Ohne sie sieht er plötzlich sehr alt aus.
+// Nahaufnahme: Opa
+[gesicht opa ort=krankenhaus zeit=nacht ruhig palette=orange] „Hüfte. Halb so wild. Unkraut vergeht nicht.“
+// Nahaufnahme: du, leise
+[gesicht du ort=krankenhaus zeit=nacht traurig palette=orange] Und dann erzählst du ihm alles. Das Geld. Die Lügen. Mia.
+// Nahaufnahme: Opa hört zu
+[gesicht opa ort=krankenhaus zeit=nacht ruhig palette=orange] Opa hört zu, ohne einmal zu unterbrechen. Das kann er besser als jeder andere.
+
+== Steigerung ==
+// Lebenszeit: einundvierzig Jahre in Wochen, jeder Samstag markiert
+[lebenszeit jahre=41 markiert="0-41" oben="Jeden Samstag seit 41 Jahren" palette=orange zoom-raus] Opa hat einundvierzig Jahre lang jeden Samstag dieselben Zahlen gespielt.
+// Infokarte: die Zahlen sind Geburtstage
+[objekt objekte="herz:Omas Geburtstag|herz:Mamas Geburtstag|herz:Dein Geburtstag" gross="OPAS ZAHLEN" palette=rosa] Es sind keine Glückszahlen. Es sind Geburtstage. Oma, Mama, Papa, Lina. Und deiner.
+// Nahaufnahme: Opa
+[gesicht opa ort=krankenhaus zeit=nacht ruhig palette=orange] „Ich wollte nie gewinnen. Ich wollte nur jede Woche an euch denken.“
+// Esstisch in der Erinnerung, die ganze Familie, Kerzen
+[esstisch oma opa mama papa lina du kerzen gedeckt zeit=abend palette=orange schwenk-rechts] Jeden Sonntag saß die ganze Familie bei ihm am Tisch. Bis alle irgendwann zu beschäftigt waren.
+// Landschaft am Abend, Berge, Vögel ziehen
+[landschaft zeit=abend palette=rosa zoom-raus] Das letzte Mal ist acht Monate her.
+// Nahaufnahme: du, beschämt
+[gesicht du ort=krankenhaus zeit=nacht traurig palette=orange] Und du warst auch nicht da.
+
+== Wendung ==
+// Nahaufnahme: Opa nimmt deine Hand
+[gesicht opa ort=krankenhaus zeit=nacht froh palette=orange zoom-rein] „Für uns alle, hab ich geschrieben. Nicht für jeden einzeln.“
+// Nahaufnahme: du verstehst
+[gesicht du ort=krankenhaus zeit=nacht neugierig palette=orange] Du verstehst nicht ganz, was er meint. Noch nicht.
+// Esstisch: leere Stühle, Kerzen
+[esstisch leer=3 gedeckt kerzen zeit=abend palette=orange zoom-rein] Du denkst an seinen Esstisch. An die leeren Stühle.
+// Polarlicht: Nachthimmel über der Stadt, warm leuchtend
+[polarlicht farbe=#ffb45e palette=orange zoom-rein] Draußen dämmert schon der Morgen.
+
+== Cliffhanger ==
+// Nahaufnahme: Opa, ernst
+[gesicht opa ort=krankenhaus zeit=morgen entschlossen palette=orange] „Aber zuerst gehst du zu Mia. Heute noch.“
+// Großstadt am Morgen, du rennst los
+[grossstadt zeit=morgen du:rennt palette=rosa fahrt] Also rennst du. Wie ein Pinguin mit Rucksack. Direkt zu Mia.

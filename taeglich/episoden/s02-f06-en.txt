@@ -1,0 +1,62 @@
+# The Jackpot – Episode 6: Grandpa's Numbers
+@musik musik/s02-f06-en.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@sprache en
+@stimmung warm
+@vortrag lebendig
+@mund zitate
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette orange
+@zeit nacht
+
+== Hook ==
+// Krankenhaus nachts
+[krankenhaus patient=opa du zeit=nacht palette=orange zoom-rein] Your grandpa is in the hospital. And he knows you're a millionaire.
+// Nahaufnahme: Opa schmunzelt
+[gesicht opa ort=krankenhaus zeit=nacht froh palette=orange] “The kiosk guy's my poker buddy. He can't keep a secret.”
+// Nahaufnahme: du
+[gesicht du ort=krankenhaus zeit=nacht schreck palette=orange] For a week, you've been lying to everyone. And Grandpa knew the whole time.
+
+== Wiedererkennen ==
+// Krankenhaus: Brille
+[krankenhaus patient=opa du zeit=nacht monitor=flach palette=orange ruhig] His glasses are on the nightstand. Without them, he suddenly looks very old.
+// Nahaufnahme: Opa
+[gesicht opa ort=krankenhaus zeit=nacht ruhig palette=orange] “Broken hip. No big deal. Weeds don't die.”
+// Nahaufnahme: du, leise
+[gesicht du ort=krankenhaus zeit=nacht traurig palette=orange] And then you tell him everything. The money. The lies. Mia.
+// Nahaufnahme: Opa hört zu
+[gesicht opa ort=krankenhaus zeit=nacht ruhig palette=orange] Grandpa listens without interrupting once. Nobody does that better than him.
+
+== Steigerung ==
+// Lebenszeit
+[lebenszeit jahre=41 markiert="0-41" oben="Every Saturday for 41 years" palette=orange zoom-raus] For forty-one years, Grandpa played the same numbers every single Saturday.
+// Infokarte
+[objekt objekte="herz:Grandma's birthday|herz:Mom's birthday|herz:Your birthday" gross="GRANDPA'S NUMBERS" palette=rosa] They're not lucky numbers. They're birthdays. Grandma, Mom, Dad, Lina. And yours.
+// Nahaufnahme: Opa
+[gesicht opa ort=krankenhaus zeit=nacht ruhig palette=orange] “I never wanted to win. I just wanted to think of you every week.”
+// Esstisch in der Erinnerung
+[esstisch oma opa mama papa lina du kerzen gedeckt zeit=abend palette=orange schwenk-rechts] Every Sunday, the whole family sat at his table. Until everyone got too busy.
+// Landschaft am Abend
+[landschaft zeit=abend palette=rosa zoom-raus] The last time was eight months ago.
+// Nahaufnahme: du, beschämt
+[gesicht du ort=krankenhaus zeit=nacht traurig palette=orange] And you didn't show up either.
+
+== Wendung ==
+// Nahaufnahme: Opa
+[gesicht opa ort=krankenhaus zeit=nacht froh palette=orange zoom-rein] “I wrote for all of us. Not for each of us.”
+// Nahaufnahme: du
+[gesicht du ort=krankenhaus zeit=nacht neugierig palette=orange] You don't quite get what he means. Not yet.
+// Esstisch: leere Stühle
+[esstisch leer=3 gedeckt kerzen zeit=abend palette=orange zoom-rein] You think about his dinner table. About the empty chairs.
+// Polarlicht
+[polarlicht farbe=#ffb45e palette=orange zoom-rein] Outside, the sky is slowly getting light.
+
+== Cliffhanger ==
+// Nahaufnahme: Opa, ernst
+[gesicht opa ort=krankenhaus zeit=morgen entschlossen palette=orange] “But first, you go see Mia. Today.”
+// Großstadt am Morgen
+[grossstadt zeit=morgen du:rennt palette=rosa fahrt] So you run. Like a penguin with a backpack. Straight to Mia.

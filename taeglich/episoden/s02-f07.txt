@@ -1,0 +1,61 @@
+# Der Hauptgewinn – Folge 7: Gleis drei
+@musik musik/s02-f07.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung spannend
+@vortrag lebendig
+@mund zitate
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette rosa
+@zeit abend
+
+== Hook ==
+// Großstadt abends, du rennst, Lichtspuren
+[grossstadt zeit=abend du:rennt palette=rosa wackeln=0.4 fahrt hooktext="NOCH 14 MINUTEN"] Du bist Millionär. Und du hast genau vierzehn Minuten, um deine beste Freundin nicht zu verlieren.
+// Nahaufnahme: Ben am Telefon, ungewohnt ernst
+[gesicht ben ort=grossstadt zeit=abend besorgt palette=rosa] Ben ruft an. „Mia fährt weg. Ein halbes Jahr. Kein Witz.“
+// Nahaufnahme: du, getroffen
+[gesicht du ort=grossstadt zeit=abend schreck palette=rosa] Ein halbes Jahr. Und sie hat dir nichts gesagt. Genau wie du ihr.
+// Handy: Uhrzeit
+[handy ort=grossstadt zeit=abend netz=4 akku=6 uhrzeit="19:58" von="Bahn" nachricht="Gleis 3, Abfahrt 20:12" palette=rosa] Der Zug fährt um zwölf nach acht.
+
+== Wiedererkennen ==
+// Haltestelle: kein Bus, kein Taxi
+[haltestelle du zeit=abend regen palette=blau zoom-rein] Kein Bus. Kein Taxi. Du hast dreißig Millionen und kein einziges Auto.
+// Großstadt: du rennst durch die Stadt
+[grossstadt zeit=abend du:rennt palette=rosa schwenk-links] Also rennst du. Zum ersten Mal in deinem Leben ohne zu meckern.
+// Landschaft am Abend, du rennst klein durchs Bild
+[landschaft zeit=abend du:rennt palette=rosa zoom-raus] Quer durch den Park, über die Brücke, an eurer Bank vorbei.
+// Nahaufnahme: du keuchst
+[gesicht du ort=grossstadt zeit=abend entschlossen palette=rosa] Deine Lunge brennt. Deine Schuhe sind nass.
+
+== Steigerung ==
+// Bahnhof: Menschenmassen, Anzeige
+[bahnhof du fremder lehrerin zeit=abend anzeige="Gleis 3 – 20:12" palette=lila zoom-rein zug="20:12   RE 7   Hamburg" uhr=20:11] Der Bahnhof ist voll. Hunderte Menschen. Und keiner davon ist Mia.
+// Netz: Menschen als Lichtpunkte, du suchst einen
+[netz mitte=du farbe=#ff5fa8 palette=rosa zoom-raus] Du rufst ihren Namen. Ein paar Leute drehen sich um. Sie nicht.
+// Nahaufnahme: du suchst
+[gesicht du ort=bahnhof zeit=abend besorgt palette=lila zug="20:12   RE 7   Hamburg" uhr=20:11 anzeige="Gleis 3"] Rote Mütze. Nein. Gelber Koffer. Auch nicht.
+// Handy: 20:11
+[handy ort=bahnhof zeit=abend netz=2 akku=3 uhrzeit="20:11" von="Du an Mia" nachricht="Ich bin hier. Gleis 3." palette=lila zug="20:12   RE 7   Hamburg" uhr=20:11 anzeige="Gleis 3"] Noch eine Minute. Dein Akku: drei Prozent.
+// Bahnhof: du rennst die Treppe hoch, der Zug steht da
+[bahnhof du:rennt zeit=abend anzeige="Gleis 3 – 20:12" palette=lila wackeln=0.3 fahrt zug="20:12   RE 7   Hamburg" uhr=20:11] Gleis drei. Der Zug ist da. Die Türen piepen.
+
+== Wendung ==
+// Nahaufnahme: du, verzweifelt
+[gesicht du ort=bahnhof zeit=abend angst palette=lila zoom-rein zug="20:12   RE 7   Hamburg" uhr=20:11 anzeige="Gleis 3"] „Mia!“ Die Türen gehen zu.
+// Bahnhof: der Zug fährt ab, du allein auf dem Bahnsteig
+[bahnhof du zeit=abend palette=blau zoom-raus zug="20:12   RE 7   Hamburg" uhr=20:11 anzeige="Gleis 3"] Der Zug fährt los. Erst langsam. Dann ist er weg.
+// Großstadt nachts, ein Lichtband verschwindet
+[grossstadt zeit=nacht palette=blau zoom-raus] Die Lichter des Zuges werden kleiner und kleiner.
+// Nahaufnahme: du, leer
+[gesicht du ort=bahnhof zeit=abend traurig palette=blau zug="20:12   RE 7   Hamburg" uhr=20:11 anzeige="Gleis 3"] Du stehst da. Mit einem toten Handy und dreißig Millionen, die dir gar nichts nützen.
+
+== Cliffhanger ==
+// Nahaufnahme: du hörst eine Stimme hinter dir
+[gesicht du ort=bahnhof zeit=abend lauscht palette=blau zoom-rein zug="20:12   RE 7   Hamburg" uhr=20:11 anzeige="Gleis 3"] Dann sagt jemand hinter dir:
+// Nahaufnahme: Mia mit Koffer, sie hat den Zug verpasst – absichtlich
+[gesicht mia ort=bahnhof zeit=abend froh palette=rosa zoom-rein zug="20:12   RE 7   Hamburg" uhr=20:11 anzeige="Gleis 3"] „Du rennst echt immer noch wie ein Pinguin.“

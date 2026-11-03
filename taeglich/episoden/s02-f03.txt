@@ -1,0 +1,61 @@
+# Der Hauptgewinn – Folge 3: Reich sein ist komisch
+@musik musik/s02-f03.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung freudig
+@vortrag lebendig
+@mund zitate
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette orange
+@zeit tag
+
+== Hook ==
+// Park im Sommer, ihr drei auf der Wiese mit Pizzakartons
+[park du ben mia jahreszeit=sommer zeit=tag palette=gruen zoom-rein hooktext="DU ZAHLST. DIESMAL ALLES."] Du hast dreißig Millionen. Und das Erste, was du dir gönnst, ist Pizza.
+// Nahaufnahme: Ben mit vollem Mund
+[gesicht ben ort=park jahreszeit=sommer zeit=tag froh palette=gruen] „Du zahlst? Wer bist du, und was hast du mit meinem Freund gemacht?“
+// Nahaufnahme: du, betont lässig
+[gesicht du ort=park jahreszeit=sommer zeit=tag froh palette=gruen] „Ich hab gespart.“ Du hast in deinem Leben noch nie gespart.
+// Landschaft am Tag mit See, weite Sicht
+[landschaft zeit=tag see du palette=tuerkis schwenk-rechts] Drei Tage ist es her. Keiner weiß davon. Nur du.
+
+== Wiedererkennen ==
+// Nahaufnahme: Mia lacht
+[gesicht mia ort=park jahreszeit=sommer zeit=tag froh palette=gruen] Mia lacht über den Witz von Ben. Sie hat Tomatensoße am Kinn.
+// Park: Mia und du laufen um die Wette, du hinten
+[park du:rennt mia:rennt jahreszeit=sommer zeit=tag palette=gruen fahrt] Dann rennt ihr zum Bus. Du verlierst. Wie immer.
+// Nahaufnahme: Mia grinst
+[gesicht mia ort=park jahreszeit=sommer zeit=tag froh palette=gruen] „Du rennst wie ein Pinguin mit Rucksack.“
+
+== Steigerung ==
+// Infokarte: Was du gekauft hast
+[objekt objekte="geld:Pizza für drei|schluessel:Neues Fahrrad|herz:Nichts für dich" gross="WOCHE 1" palette=orange] Du gibst kaum etwas aus. Du traust dich nicht.
+// Zimmer nachts: du schaust in die Blechdose
+[zimmer du zeit=nacht lichterkette palette=lila zoom-rein] Nachts holst du die Blechdose unter dem Bett hervor. Nur um nachzusehen, ob der Schein noch da ist.
+// Wohnzimmer: Lina freut sich über das neue Fahrrad
+[wohnzimmer lina:froh du licht=an zeit=abend palette=orange zoom-rein] Nur Linas Fahrrad ist seit Wochen kaputt. Also steht morgens ein neues vor der Tür.
+// Nahaufnahme: Lina, misstrauisch
+[gesicht lina ort=wohnzimmer zeit=abend misstrauisch palette=orange] „Wer schenkt einfach so ein Fahrrad? Hast du jemanden ausgeraubt?“
+// Nahaufnahme: du, zu schnell
+[gesicht du ort=wohnzimmer zeit=abend besorgt palette=orange] „Gutschein. Gewinnspiel.“ Du lügst schon wieder. Und es wird jedes Mal leichter.
+
+== Wendung ==
+// Großstadt abends von oben, alle Fenster leuchten
+[grossstadt zeit=abend du mia palette=rosa schwenk-links] Abends sitzt ihr auf dem Dach von Mias Haus. Die Stadt summt unter euch.
+// Nahaufnahme: Mia ernst
+[gesicht mia ort=grossstadt zeit=abend neugierig palette=rosa] „Du bist anders seit Samstag. Irgendwie leiser.“
+// Weltall: Sterne über der Stadt
+[weltall mond satellit palette=lila zoom-raus] Du könntest es ihr jetzt sagen. Nur ein Satz.
+// Nahaufnahme: du holst Luft
+[gesicht du ort=grossstadt zeit=abend besorgt palette=rosa] Du holst Luft.
+
+== Cliffhanger ==
+// Handy: Eilmeldung
+[handy ort=grossstadt zeit=abend netz=4 akku=33 uhrzeit="21:07" von="Eilmeldung" nachricht="30-Millionen-Schein wurde am Kiosk in der Lindenstraße gekauft" palette=rosa] Da vibrieren eure Handys gleichzeitig.
+// Kiosk bei Nacht mit Neonschild
+[kiosk zeit=nacht palette=rosa zoom-rein] Der Kiosk in der Lindenstraße. Dein Kiosk.
+// Nahaufnahme: Mia schaut dich an
+[gesicht mia ort=grossstadt zeit=abend misstrauisch palette=rosa zoom-rein] Mia schaut nicht auf ihr Handy. Sie schaut dich an.

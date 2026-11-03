@@ -20,7 +20,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 DATEN = ROOT / "taeglich" / "videodaten.json"
-KURZGESAGT = {"weltall", "grossstadt", "rechenzentrum", "auge", "landschaft", "wald", "netz", "lebenszeit", "polarlicht"}
+KURZGESAGT = {"weltall", "grossstadt", "rechenzentrum", "auge", "landschaft", "wald", "netz", "lebenszeit", "polarlicht", "duenen", "kiosk"}
 BAENDER = [("kurz", 60, 70), ("mittel", 70, 80), ("lang", 80, 90), ("xl", 90, 125)]
 
 

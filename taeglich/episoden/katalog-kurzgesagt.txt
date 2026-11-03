@@ -19,3 +19,4 @@
 [lebenszeit jahre=16 markiert="16-18" oben="Dein Leben in Wochen"] Dein Leben in Wochen.
 [esstisch mama papa du lina kerzen zeit=abend] Esstisch mit Kino-Look.
 [polarlicht du lina] Polarlicht über Bergen und Stadt (farbe=#hex, stadt=false, see).
+[kiosk du zeit=nacht palette=rosa] Lotto-Kiosk an der Straßenecke bei Nacht (leuchtend, neu in s02; zeit=abend, regen, gross).

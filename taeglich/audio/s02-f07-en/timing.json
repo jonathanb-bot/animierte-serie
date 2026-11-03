@@ -1,0 +1,176 @@
+{
+ "dauer": 65.762,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "grossstadt",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 5.054,
+   "emotion": "erzaehlend",
+   "text": "You're a millionaire. And you have exactly fourteen minutes not to lose your best friend."
+  },
+  {
+   "nr": 2,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 5.054,
+   "dauer": 3.782,
+   "emotion": "ernst",
+   "text": "Ben calls. “Mia's leaving. Half a year. Not a joke.”"
+  },
+  {
+   "nr": 3,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 8.836,
+   "dauer": 4.454,
+   "emotion": "spannend",
+   "text": "Half a year. And she didn't tell you. Just like you didn't tell her."
+  },
+  {
+   "nr": 4,
+   "typ": "handy",
+   "kapitel": 1,
+   "start": 13.29,
+   "dauer": 1.67,
+   "emotion": "erzaehlend",
+   "text": "The train leaves at eight twelve."
+  },
+  {
+   "nr": 5,
+   "typ": "haltestelle",
+   "kapitel": 2,
+   "start": 14.96,
+   "dauer": 5.03,
+   "emotion": "erzaehlend",
+   "text": "No bus. No cab. You have thirty million dollars and not a single car."
+  },
+  {
+   "nr": 6,
+   "typ": "grossstadt",
+   "kapitel": 2,
+   "start": 19.99,
+   "dauer": 3.614,
+   "emotion": "erzaehlend",
+   "text": "So you run. For the first time in your life, without complaining."
+  },
+  {
+   "nr": 7,
+   "typ": "landschaft",
+   "kapitel": 2,
+   "start": 23.604,
+   "dauer": 3.23,
+   "emotion": "erzaehlend",
+   "text": "Across the park, over the bridge, past your bench."
+  },
+  {
+   "nr": 8,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 26.834,
+   "dauer": 2.99,
+   "emotion": "ernst",
+   "text": "Your lungs are burning. Your shoes are soaked."
+  },
+  {
+   "nr": 9,
+   "typ": "bahnhof",
+   "kapitel": 3,
+   "start": 29.824,
+   "dauer": 4.142,
+   "emotion": "erzaehlend",
+   "text": "The station is packed. Hundreds of people. And none of them is Mia."
+  },
+  {
+   "nr": 10,
+   "typ": "netz",
+   "kapitel": 3,
+   "start": 33.966,
+   "dauer": 3.446,
+   "emotion": "erzaehlend",
+   "text": "You shout her name. A few people turn around. She doesn't."
+  },
+  {
+   "nr": 11,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 37.412,
+   "dauer": 3.806,
+   "emotion": "ernst",
+   "text": "Red hat. No. Yellow suitcase. Not her either."
+  },
+  {
+   "nr": 12,
+   "typ": "handy",
+   "kapitel": 3,
+   "start": 41.218,
+   "dauer": 3.302,
+   "emotion": "erzaehlend",
+   "text": "One minute left. Your battery: three percent."
+  },
+  {
+   "nr": 13,
+   "typ": "bahnhof",
+   "kapitel": 3,
+   "start": 44.52,
+   "dauer": 3.494,
+   "emotion": "erzaehlend",
+   "text": "Platform three. The train is there. The doors are beeping."
+  },
+  {
+   "nr": 14,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 48.014,
+   "dauer": 2.222,
+   "emotion": "spannend",
+   "text": "“Mia!” The doors close."
+  },
+  {
+   "nr": 15,
+   "typ": "bahnhof",
+   "kapitel": 4,
+   "start": 50.236,
+   "dauer": 3.758,
+   "emotion": "erzaehlend",
+   "text": "The train pulls away. Slowly at first. Then it's gone."
+  },
+  {
+   "nr": 16,
+   "typ": "grossstadt",
+   "kapitel": 4,
+   "start": 53.994,
+   "dauer": 2.774,
+   "emotion": "erzaehlend",
+   "text": "The lights of the train get smaller and smaller."
+  },
+  {
+   "nr": 17,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 56.768,
+   "dauer": 5.654,
+   "emotion": "traurig",
+   "text": "You just stand there. With a dead phone and thirty million dollars that are no use at all."
+  },
+  {
+   "nr": 18,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 62.422,
+   "dauer": 1.598,
+   "emotion": "erzaehlend",
+   "text": "Then someone behind you says:"
+  },
+  {
+   "nr": 19,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 64.02,
+   "dauer": 1.742,
+   "emotion": "froh",
+   "text": "“You still run like a penguin.”"
+  }
+ ]
+}

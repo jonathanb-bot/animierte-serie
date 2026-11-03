@@ -1,0 +1,60 @@
+# The Jackpot – Episode 8: For All of Us
+@musik musik/s02-f08-en.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@sprache en
+@stimmung warm
+@vortrag lebendig
+@mund zitate
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette orange
+@zeit abend
+
+== Hook ==
+// Bahnhof abends
+[bahnhof du mia zeit=abend palette=rosa zoom-rein zug="8:12 PM   Express" uhr=20:25 anzeige="Departed"] Your best friend let her train leave without her. For you.
+// Nahaufnahme: Mia
+[gesicht mia ort=bahnhof zeit=abend misstrauisch palette=rosa zug="8:12 PM   Express" uhr=20:25 anzeige="Departed"] “I don't care about the money. I care about the lie.”
+// Nahaufnahme: du
+[gesicht du ort=bahnhof zeit=abend traurig palette=rosa zug="8:12 PM   Express" uhr=20:25 anzeige="Departed"] “I know. I was scared everything would change.”
+
+== Wiedererkennen ==
+// Großstadt abends
+[grossstadt zeit=abend du mia palette=rosa schwenk-links] You walk home together. Mia pulls her suitcase, you carry her bag.
+// Nahaufnahme: Mia
+[gesicht mia ort=bahnhof zeit=abend froh palette=rosa zug="8:12 PM   Express" uhr=20:25 anzeige="Departed"] “Well, it did. You've gotten really bad at lying.”
+// See am Abend
+[see du mia sitzen zeit=abend gluehwuermchen palette=rosa zoom-raus] At the lake, she skips a stone. Five times. Yours sinks again.
+
+== Steigerung ==
+// Esstisch am Sonntag
+[esstisch oma opa mama papa lina du torte kerzen zeit=abend palette=orange zoom-rein] Sunday. Grandpa's birthday. He's at the head of the table with his crutches. And for the first time in eight months, every chair is taken.
+// Nahaufnahme: du stehst auf
+[gesicht du ort=esstisch zeit=abend entschlossen palette=orange] You stand up. Your heart is pounding harder than at the lottery office.
+// Lottoschein
+[objekt objekte="lottoschein:The ticket|geld:For everyone" gross="FOR ALL OF US" palette=orange] “Grandpa won. With your birthdays.”
+// Nahaufnahme: Papa
+[gesicht papa ort=esstisch zeit=abend schreck palette=orange] Dad drops his fork. Grandma chokes on her cake.
+// Nahaufnahme: Lina
+[gesicht lina ort=esstisch zeit=abend froh palette=orange] “So do I get a pony now?”
+// Nahaufnahme: Opa zwinkert
+[gesicht opa ort=esstisch zeit=abend froh palette=orange zoom-rein] Grandpa doesn't say a word. He just winks at you.
+
+== Wendung ==
+// Esstisch
+[esstisch oma opa:froh mama papa lina du kerzen zeit=abend palette=orange schwenk-rechts] You split it. For all of us, just like the ticket said. And Grandpa wants only one thing in return.
+// Nahaufnahme: Opa
+[gesicht opa ort=esstisch zeit=abend froh palette=orange] “Every Sunday. Here. Everyone. No excuses.”
+// Nahaufnahme: du lachst
+[gesicht du ort=esstisch zeit=abend froh palette=orange] Best deal of your life.
+// Lebenszeit
+[lebenszeit jahre=18 oben="Sundays still to come" palette=orange zoom-raus] If all goes well, that's still a few hundred Sundays. Each one worth more than the jackpot.
+
+== Cliffhanger ==
+// Polarlicht
+[polarlicht du mia farbe=#ffb45e palette=orange zoom-raus] Later, you stand at the window with Mia. The city is glowing.
+// Kiosk
+[kiosk opa:froh zeit=nacht palette=rosa zoom-rein] And on Saturday, Grandpa limps to the kiosk. Same numbers. Like always. Because he never played to win.

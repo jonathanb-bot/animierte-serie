@@ -1,0 +1,62 @@
+# The Jackpot – Episode 3: Being Rich Is Weird
+@musik musik/s02-f03-en.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@sprache en
+@stimmung freudig
+@vortrag lebendig
+@mund zitate
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette orange
+@zeit tag
+
+== Hook ==
+// Park im Sommer
+[park du ben mia jahreszeit=sommer zeit=tag palette=gruen zoom-rein hooktext="YOU'RE PAYING. FOR EVERYTHING."] You have thirty million dollars. And the first thing you treat yourself to is pizza.
+// Nahaufnahme: Ben
+[gesicht ben ort=park jahreszeit=sommer zeit=tag froh palette=gruen] “You're paying? Who are you, and what did you do with my friend?”
+// Nahaufnahme: du, lässig
+[gesicht du ort=park jahreszeit=sommer zeit=tag froh palette=gruen] “I've been saving.” You have never saved a dime in your life.
+// Landschaft
+[landschaft zeit=tag see du palette=tuerkis schwenk-rechts] It's been three days. Nobody knows. Just you.
+
+== Wiedererkennen ==
+// Nahaufnahme: Mia lacht
+[gesicht mia ort=park jahreszeit=sommer zeit=tag froh palette=gruen] Mia laughs at Ben's joke. She's got tomato sauce on her chin.
+// Park: ihr rennt
+[park du:rennt mia:rennt jahreszeit=sommer zeit=tag palette=gruen fahrt] Then you race to the bus. You lose. Like always.
+// Nahaufnahme: Mia grinst
+[gesicht mia ort=park jahreszeit=sommer zeit=tag froh palette=gruen] “You run like a penguin with a backpack.”
+
+== Steigerung ==
+// Infokarte
+[objekt objekte="geld:Pizza for three|schluessel:New bike|herz:Nothing for you" gross="WEEK 1" palette=orange] You barely spend anything. You don't dare.
+// Zimmer nachts: Blechdose
+[zimmer du zeit=nacht lichterkette palette=lila zoom-rein] At night, you pull the tin box out from under your bed. Just to check the ticket's still there.
+// Wohnzimmer: Lina und das Fahrrad
+[wohnzimmer lina:froh du licht=an zeit=abend palette=orange zoom-rein] But Lina's bike has been broken for weeks. So one morning, a new one is waiting by the door.
+// Nahaufnahme: Lina
+[gesicht lina ort=wohnzimmer zeit=abend misstrauisch palette=orange] “Who just gives away a bike? Did you rob someone?”
+// Nahaufnahme: du
+[gesicht du ort=wohnzimmer zeit=abend besorgt palette=orange] “Coupon. Contest.” You're lying again. And it gets easier every time.
+
+== Wendung ==
+// Großstadt abends
+[grossstadt zeit=abend du mia palette=rosa schwenk-links] In the evening, you sit on the roof of Mia's building. The city hums below you.
+// Nahaufnahme: Mia ernst
+[gesicht mia ort=grossstadt zeit=abend neugierig palette=rosa] “You've been different since Saturday. Quieter.”
+// Weltall
+[weltall mond satellit palette=lila zoom-raus] You could tell her right now. Just one sentence.
+// Nahaufnahme: du holst Luft
+[gesicht du ort=grossstadt zeit=abend besorgt palette=rosa] You take a breath.
+
+== Cliffhanger ==
+// Handy: Eilmeldung
+[handy ort=grossstadt zeit=abend netz=4 akku=33 uhrzeit="9:07 PM" von="Breaking News" nachricht="$30 million ticket was sold at the kiosk on Linden Street" palette=rosa] Then both your phones buzz at the same time.
+// Kiosk
+[kiosk zeit=nacht palette=rosa zoom-rein] The kiosk on Linden Street. Your kiosk.
+// Nahaufnahme: Mia schaut dich an
+[gesicht mia ort=grossstadt zeit=abend misstrauisch palette=rosa zoom-rein] Mia doesn't look at her phone. She looks at you.
