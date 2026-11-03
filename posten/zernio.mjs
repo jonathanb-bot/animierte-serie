@@ -193,7 +193,10 @@ if (args.includes("--status")) {
 // Konto für einen Post. Mit post.konto (Benutzername) genau dieses Konto. Ohne Angabe die bisherigen Standardkonten:
 // TikTok/Instagram aus dem Hauptkonto, YouTube aus dem 2. Zernio-Konto. So landet nie ein deutsches Video zufällig
 // auf einem englischen Account (TikTok @storys4you_eng im 2., Instagram/YouTube englisch im 3. Zernio-Konto, Jonathan 3.11.).
-const konto = post => post.konto
+// "zernio:3" = das Konto dieser Plattform im 3. Zernio-Konto, egal wie es heißt (englisches Instagram/YouTube, 3.11.).
+const konto = post => /^zernio:\d+$/.test(post.konto || "")
+  ? liste.find(a => a.platform === post.platform && a._k === Number(post.konto.split(":")[1]) - 1)
+  : post.konto
   ? liste.find(a => a.platform === post.platform && [a.username, a.displayName].includes(post.konto))
   : liste.find(a => a.platform === post.platform && a._k === (post.platform === "youtube" && KEY_YT ? 1 : 0));
 
