@@ -85,6 +85,42 @@
    },
    "erkenntnis": "YouTube: alle Posts 04:30–12:30 über 600 Aufrufe, alle 14:30–00:30 unter 135 (Uhrzeit statt Inhalt). TikTok verliert 62–77 % in den ersten 7 s. Instagram: Handlungs-Einstiege 3–5x vor Titel/Rückblick.",
    "vidiq_credits_danach": 144
+  },
+  {
+   "datum": "2026-11-03T21:45",
+   "quelle": "Analyse vor der Staffel (Zernio 84 Posts + vidIQ channel_analytics)",
+   "tiktok": {
+    "follower": 63,
+    "follower_metrik": 65,
+    "follower_30_tage": "+12/-0",
+    "likes_30_tage": 1309,
+    "videos": 17,
+    "bester_post": "mann-tiktok-teil-1: 46 % nach 5 s, 38 % nach 10 s, Ø 47 s, 4 Follows, 68,9 Aufrufe/h",
+    "fuer_dich": "96–98 %"
+   },
+   "tiktok_eng": {
+    "konto": "storys4you_eng",
+    "follower": 0,
+    "videos": 0
+   },
+   "instagram": {
+    "follower": 6,
+    "aufrufe_30_tage": 24433,
+    "reichweite_30_tage": 12299,
+    "aktive_konten": 223,
+    "posts_3_11": "10 Reels, je 116–309 Aufrufe"
+   },
+   "youtube": {
+    "abonnenten": 51,
+    "abonnenten_zernio": 48,
+    "aufrufe_gesamt_vidiq": 17647,
+    "videos": 37,
+    "aufrufe_heute": "+4.041",
+    "gute_shorts_bindung": "62–77 %",
+    "analytics_zernio": "HTTP 429 (Kontingent), kein Posting-Fehler"
+   },
+   "erkenntnis": "Kühne Prämisse im ersten Satz („Stell dir vor, du bist der einzige Mann …“) + Humor hält auf TikTok am besten (Tendenz). YouTube/Instagram: im 2-Stunden-Takt bekommen nur die ersten 2–3 Posts des Tages Reichweite (YouTube 02:30/04:30 >1.000, Rest 1–106).",
+   "vidiq_credits_danach": 139
   }
  ],
  "letzte_analyse": "taeglich/analyse/2026-11-02.md"
