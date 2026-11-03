@@ -15,7 +15,12 @@
   "ok": true,
   "zeit": "2026-10-30T17:00:00",
   "zernioId": "6ae3bbeadd2cc00b0c94a107",
-  "am": "2026-10-30T08:19:11.586Z"
+  "am": "2026-10-30T08:19:11.586Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.tiktok.com/@storys4you.de1/video/7702491881803910433"
+  }
  },
  "insta-01-1": {
   "ok": true,
@@ -33,90 +38,160 @@
   "ok": true,
   "zeit": "2026-10-30T09:35:00",
   "zernioId": "6ae450f38856df913e9fb191",
-  "am": "2026-10-30T08:19:11.586Z"
+  "am": "2026-10-30T08:19:11.586Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfHKtKtEhWy/"
+  }
  },
  "insta-01-3": {
   "ok": true,
   "zeit": "2026-10-30T09:45:00",
   "zernioId": "6ae450f60c3cf0315e8dd880",
-  "am": "2026-10-30T08:19:11.586Z"
+  "am": "2026-10-30T08:19:11.586Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfHL2X2DCWs/"
+  }
  },
  "insta-01-4": {
   "ok": true,
   "zeit": "2026-10-30T15:00:00",
   "zernioId": "6ae450f80c3cf0315e8dd89c",
-  "am": "2026-10-30T08:19:11.586Z"
+  "am": "2026-10-30T08:19:11.586Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfHv5vwjfMz/"
+  }
  },
  "insta-01-5": {
   "ok": true,
   "zeit": "2026-10-30T20:00:00",
   "zernioId": "6ae450fb8856df913e9fb1b5",
-  "am": "2026-10-30T08:19:11.586Z"
+  "am": "2026-10-30T08:19:11.586Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfISeYJgBjN/"
+  }
  },
  "yt-01-1": {
   "ok": true,
   "zeit": "2026-10-30T09:35:00",
   "zernioId": "6ae4515c0c3cf0315e8ddbfb",
-  "am": "2026-10-30T08:19:18.322Z"
+  "am": "2026-10-30T08:19:18.322Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=HjLnypE1Bqg"
+  }
  },
  "yt-01-2": {
   "ok": true,
   "zeit": "2026-10-30T09:40:00",
   "zernioId": "6ae4515f0c3cf0315e8ddc12",
-  "am": "2026-10-30T08:19:18.322Z"
+  "am": "2026-10-30T08:19:18.322Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=1eKgUKI4iSQ"
+  }
  },
  "yt-01-3": {
   "ok": true,
   "zeit": "2026-10-30T09:45:00",
   "zernioId": "6ae451610c3cf0315e8ddc20",
-  "am": "2026-10-30T08:19:18.322Z"
+  "am": "2026-10-30T08:19:18.322Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=x_VVxnQeaWY"
+  }
  },
  "yt-01-4": {
   "ok": true,
   "zeit": "2026-10-30T15:30:00",
   "zernioId": "6ae451640c3cf0315e8ddc43",
-  "am": "2026-10-30T08:19:18.321Z"
+  "am": "2026-10-30T08:19:18.321Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=5940kUfNa18"
+  }
  },
  "yt-01-5": {
   "ok": true,
   "zeit": "2026-10-30T20:30:00",
   "zernioId": "6ae451668856df913e9fb319",
-  "am": "2026-10-30T08:19:18.321Z"
+  "am": "2026-10-30T08:19:18.321Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=fCOKvyvcYrA"
+  }
  },
  "insta-02-1": {
   "ok": true,
   "zeit": "2026-10-31T00:00:00",
   "zernioId": "6ae4544418859d94a2cc273f",
   "http": 201,
-  "am": "2026-10-30T08:24:37.016Z"
+  "am": "2026-10-30T08:24:37.016Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfIuABIiQAN/"
+  }
  },
  "insta-02-2": {
   "ok": true,
   "zeit": "2026-10-31T04:00:00",
   "zernioId": "6ae4544718859d94a2cc274f",
   "http": 201,
-  "am": "2026-10-30T08:24:39.681Z"
+  "am": "2026-10-30T08:24:39.681Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfJJQ9Nj7Eg/"
+  }
  },
  "insta-02-3": {
   "ok": true,
   "zeit": "2026-10-31T08:00:00",
   "zernioId": "6ae4544a18859d94a2cc2772",
   "http": 201,
-  "am": "2026-10-30T08:24:42.338Z"
+  "am": "2026-10-30T08:24:42.338Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfJk16cCRX4/"
+  }
  },
  "insta-02-4": {
   "ok": true,
   "zeit": "2026-10-31T12:00:00",
   "zernioId": "6ae4544c18859d94a2cc277a",
   "http": 201,
-  "am": "2026-10-30T08:24:44.956Z"
+  "am": "2026-10-30T08:24:44.956Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfKAXGhlTXi/"
+  }
  },
  "insta-02-5": {
   "ok": true,
   "zeit": "2026-10-31T16:00:00",
   "zernioId": "6ae4545018859d94a2cc27ae",
   "http": 201,
-  "am": "2026-10-30T08:24:48.955Z"
+  "am": "2026-10-30T08:24:48.955Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfKb0lelIx8/"
+  }
  },
  "insta-03-1": {
   "ok": false,
@@ -125,7 +200,10 @@
   "http": 201,
   "am": "2026-10-30T08:24:51.709Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "insta-03-2": {
   "ok": false,
@@ -134,7 +212,10 @@
   "http": 201,
   "am": "2026-10-30T08:24:54.411Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "insta-03-3": {
   "ok": false,
@@ -143,7 +224,10 @@
   "http": 201,
   "am": "2026-10-30T08:24:57.228Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "insta-03-4": {
   "ok": false,
@@ -152,7 +236,10 @@
   "http": 201,
   "am": "2026-10-30T08:25:00.097Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "insta-04-1": {
   "ok": false,
@@ -161,7 +248,10 @@
   "http": 201,
   "am": "2026-10-30T08:25:03.010Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "insta-04-2": {
   "ok": false,
@@ -170,7 +260,10 @@
   "http": 201,
   "am": "2026-10-30T08:25:05.851Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "insta-04-3": {
   "ok": false,
@@ -179,7 +272,10 @@
   "http": 201,
   "am": "2026-10-30T08:25:08.618Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "insta-04-4": {
   "ok": false,
@@ -188,7 +284,10 @@
   "http": 201,
   "am": "2026-10-30T08:25:11.415Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "insta-05-1": {
   "ok": false,
@@ -197,7 +296,10 @@
   "http": 201,
   "am": "2026-10-30T08:25:16.134Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "insta-05-2": {
   "ok": false,
@@ -206,7 +308,10 @@
   "http": 201,
   "am": "2026-10-30T08:25:18.961Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "insta-05-3": {
   "ok": false,
@@ -215,7 +320,10 @@
   "http": 201,
   "am": "2026-10-30T08:25:21.663Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "insta-05-4": {
   "ok": false,
@@ -224,7 +332,10 @@
   "http": 201,
   "am": "2026-10-30T08:25:24.340Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "insta-06-1": {
   "ok": false,
@@ -233,7 +344,10 @@
   "http": 201,
   "am": "2026-10-30T08:25:27.013Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "insta-06-2": {
   "ok": false,
@@ -242,7 +356,10 @@
   "http": 201,
   "am": "2026-10-30T08:25:29.840Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "insta-06-3": {
   "ok": false,
@@ -251,7 +368,10 @@
   "http": 201,
   "am": "2026-10-30T08:25:32.507Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "insta-06-4": {
   "ok": false,
@@ -260,7 +380,10 @@
   "http": 201,
   "am": "2026-10-30T08:25:35.151Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "insta-06-5": {
   "ok": false,
@@ -269,7 +392,10 @@
   "http": 201,
   "am": "2026-10-30T08:25:37.837Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "insta-07-1": {
   "ok": false,
@@ -278,7 +404,10 @@
   "http": 201,
   "am": "2026-10-30T08:25:40.471Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "insta-07-2": {
   "ok": false,
@@ -287,7 +416,10 @@
   "http": 201,
   "am": "2026-10-30T08:25:43.529Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "insta-07-3": {
   "ok": false,
@@ -420,35 +552,60 @@
   "zeit": "2026-10-31T00:30:00",
   "zernioId": "6ae454af975c142809187a03",
   "http": 201,
-  "am": "2026-10-30T08:26:24.052Z"
+  "am": "2026-10-30T08:26:24.052Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=DuBr7jnrTnU"
+  }
  },
  "yt-02-2": {
   "ok": true,
   "zeit": "2026-10-31T04:30:00",
   "zernioId": "6ae454b218859d94a2cc2bfa",
   "http": 201,
-  "am": "2026-10-30T08:26:27.129Z"
+  "am": "2026-10-30T08:26:27.129Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=HwNV4WFrPuw"
+  }
  },
  "yt-02-3": {
   "ok": true,
   "zeit": "2026-10-31T08:30:00",
   "zernioId": "6ae454b518859d94a2cc2c26",
   "http": 201,
-  "am": "2026-10-30T08:26:29.454Z"
+  "am": "2026-10-30T08:26:29.454Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=YaY-lcTQD-Q"
+  }
  },
  "yt-02-4": {
   "ok": true,
   "zeit": "2026-10-31T12:30:00",
   "zernioId": "6ae454b7975c142809187a3c",
   "http": 201,
-  "am": "2026-10-30T08:26:31.920Z"
+  "am": "2026-10-30T08:26:31.920Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=7CbbFlofL1s"
+  }
  },
  "yt-02-5": {
   "ok": true,
   "zeit": "2026-10-31T16:30:00",
   "zernioId": "6ae454ba18859d94a2cc2c7e",
   "http": 201,
-  "am": "2026-10-30T08:26:34.267Z"
+  "am": "2026-10-30T08:26:34.267Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=lKGxf_YwJ7M"
+  }
  },
  "yt-03-1": {
   "ok": false,
@@ -457,7 +614,10 @@
   "http": 201,
   "am": "2026-10-30T08:26:36.613Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "yt-03-2": {
   "ok": false,
@@ -466,7 +626,10 @@
   "http": 201,
   "am": "2026-10-30T08:26:38.901Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "yt-03-3": {
   "ok": false,
@@ -475,7 +638,10 @@
   "http": 201,
   "am": "2026-10-30T08:26:41.295Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "yt-03-4": {
   "ok": false,
@@ -484,7 +650,10 @@
   "http": 201,
   "am": "2026-10-30T08:26:43.612Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "yt-04-1": {
   "ok": false,
@@ -493,7 +662,10 @@
   "http": 201,
   "am": "2026-10-30T08:26:45.934Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "yt-04-2": {
   "ok": false,
@@ -502,7 +674,10 @@
   "http": 201,
   "am": "2026-10-30T08:26:48.459Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "yt-04-3": {
   "ok": false,
@@ -511,7 +686,10 @@
   "http": 201,
   "am": "2026-10-30T08:26:50.815Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "yt-04-4": {
   "ok": false,
@@ -520,7 +698,10 @@
   "http": 201,
   "am": "2026-10-30T08:26:53.614Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "yt-05-1": {
   "ok": false,
@@ -529,7 +710,10 @@
   "http": 201,
   "am": "2026-10-30T08:26:56.044Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "yt-05-2": {
   "ok": false,
@@ -538,7 +722,10 @@
   "http": 201,
   "am": "2026-10-30T08:26:58.381Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "yt-05-3": {
   "ok": false,
@@ -547,7 +734,10 @@
   "http": 201,
   "am": "2026-10-30T08:27:00.733Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "yt-05-4": {
   "ok": false,
@@ -556,7 +746,10 @@
   "http": 201,
   "am": "2026-10-30T08:27:03.057Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "yt-06-1": {
   "ok": false,
@@ -565,7 +758,10 @@
   "http": 201,
   "am": "2026-10-30T08:27:05.333Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "yt-06-2": {
   "ok": false,
@@ -574,7 +770,10 @@
   "http": 201,
   "am": "2026-10-30T08:27:07.772Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "yt-06-3": {
   "ok": false,
@@ -583,7 +782,10 @@
   "http": 201,
   "am": "2026-10-30T08:27:10.124Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "yt-06-4": {
   "ok": false,
@@ -592,7 +794,10 @@
   "http": 201,
   "am": "2026-10-30T08:27:13.436Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "yt-06-5": {
   "ok": false,
@@ -601,7 +806,10 @@
   "http": 201,
   "am": "2026-10-30T08:27:15.886Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "yt-07-1": {
   "ok": false,
@@ -610,7 +818,10 @@
   "http": 201,
   "am": "2026-10-30T08:27:18.307Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "yt-07-2": {
   "ok": false,
@@ -619,7 +830,10 @@
   "http": 201,
   "am": "2026-10-30T08:27:20.725Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "yt-07-3": {
   "ok": false,
@@ -754,7 +968,10 @@
   "http": 201,
   "am": "2026-10-30T09:10:19.212Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "alien-tiktok-02": {
   "ok": false,
@@ -763,7 +980,10 @@
   "http": 201,
   "am": "2026-10-30T09:10:23.489Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "alien-tiktok-03": {
   "ok": false,
@@ -772,7 +992,10 @@
   "http": 201,
   "am": "2026-10-30T09:10:27.492Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "alien-tiktok-04": {
   "ok": false,
@@ -781,7 +1004,10 @@
   "http": 201,
   "am": "2026-10-30T09:10:31.402Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "alien-tiktok-05": {
   "ok": false,
@@ -790,7 +1016,10 @@
   "http": 201,
   "am": "2026-10-30T09:10:35.400Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "alien-tiktok-06": {
   "ok": false,
@@ -799,7 +1028,10 @@
   "http": 201,
   "am": "2026-10-30T09:10:39.288Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "alien-tiktok-07": {
   "ok": false,
@@ -808,7 +1040,10 @@
   "http": 201,
   "am": "2026-10-30T09:10:43.591Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "alien-tiktok-08": {
   "ok": false,
@@ -1706,28 +1941,48 @@
   "zeit": "2026-10-30T18:00:00",
   "zernioId": "6ae4a5a8d3b530b176d74506",
   "http": 201,
-  "am": "2026-10-30T14:11:52.831Z"
+  "am": "2026-10-30T14:11:52.831Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.tiktok.com/@storys4you.de1/video/7702507522141211936"
+  }
  },
  "mann-insta-01-1": {
   "ok": true,
   "zeit": "2026-10-30T18:00:00",
   "zernioId": "6ae4a5c4a7235731085bc358",
   "http": 201,
-  "am": "2026-10-30T14:12:20.820Z"
+  "am": "2026-10-30T14:12:20.820Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfIEz1pkaIW/"
+  }
  },
  "mann-yt-01-1": {
   "ok": true,
   "zeit": "2026-10-30T18:30:00",
   "zernioId": "6ae4a5f4062b4aea3b463c14",
   "http": 201,
-  "am": "2026-10-30T14:13:09.165Z"
+  "am": "2026-10-30T14:13:09.165Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=EUDldQykteQ"
+  }
  },
  "tiktok-10": {
   "ok": true,
   "zeit": "2026-10-30T20:10:00",
   "zernioId": "6ae4e6794434ed193616524b",
   "http": 201,
-  "am": "2026-10-30T18:48:25.916Z"
+  "am": "2026-10-30T18:48:25.916Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.tiktok.com/@storys4you.de1/video/7702540513945095456"
+  }
  },
  "mann-tiktok-01b": {
   "ok": false,
@@ -2231,406 +2486,686 @@
   "zeit": "2026-10-31T20:00:00",
   "zernioId": "6ae5c6858fd91f671c5f507a",
   "http": 201,
-  "am": "2026-10-31T10:44:22.059Z"
+  "am": "2026-10-31T10:44:22.059Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.tiktok.com/@storys4you.de1/video/7702909537983925536"
+  }
  },
  "alien-tiktok-teil-2": {
   "ok": true,
   "zeit": "2026-11-01T08:00:00",
   "zernioId": "6ae5c68a8fd91f671c5f5090",
   "http": 201,
-  "am": "2026-10-31T10:44:27.012Z"
+  "am": "2026-10-31T10:44:27.012Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.tiktok.com/@storys4you.de1/video/7703095037210463521"
+  }
  },
  "alien-tiktok-teil-3": {
   "ok": true,
   "zeit": "2026-11-01T20:00:00",
   "zernioId": "6ae5c68f8fd91f671c5f50a9",
   "http": 201,
-  "am": "2026-10-31T10:44:31.679Z"
+  "am": "2026-10-31T10:44:31.679Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.tiktok.com/@storys4you.de1/video/7703280546016693536"
+  }
  },
  "alien-tiktok-teil-4": {
   "ok": true,
   "zeit": "2026-11-02T08:00:00",
   "zernioId": "6ae5c6948fd91f671c5f50c4",
   "http": 201,
-  "am": "2026-10-31T10:44:36.219Z"
+  "am": "2026-10-31T10:44:36.219Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.tiktok.com/@storys4you.de1/video/7703465960258227489"
+  }
  },
  "stock-insta-kurz-03-1": {
   "ok": true,
   "zeit": "2026-10-31T20:00:00",
   "zernioId": "6ae5d40b234f720d1e66901e",
   "http": 201,
-  "am": "2026-10-31T11:42:03.380Z"
+  "am": "2026-10-31T11:42:03.380Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfK3M0fCNwa/"
+  }
  },
  "stock-yt-kurz-03-1": {
   "ok": true,
   "zeit": "2026-10-31T20:30:00",
   "zernioId": "6ae5d40d234f720d1e669027",
   "http": 201,
-  "am": "2026-10-31T11:42:05.582Z"
+  "am": "2026-10-31T11:42:05.582Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=Y-nMgCnrgDA"
+  }
  },
  "stock-insta-kurz-03-2": {
   "ok": true,
   "zeit": "2026-11-01T00:00:00",
   "zernioId": "6ae5d410234f720d1e66903f",
   "http": 201,
-  "am": "2026-10-31T11:42:08.986Z"
+  "am": "2026-10-31T11:42:08.986Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfLSw86DEgB/"
+  }
  },
  "stock-yt-kurz-03-2": {
   "ok": true,
   "zeit": "2026-11-01T00:30:00",
   "zernioId": "6ae5d412540304bc1e69d5e8",
   "http": 201,
-  "am": "2026-10-31T11:42:11.147Z"
+  "am": "2026-10-31T11:42:11.147Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=xt5gMXmA1H4"
+  }
  },
  "stock-insta-kurz-04-1": {
   "ok": true,
   "zeit": "2026-11-01T04:00:00",
   "zernioId": "6ae5d415540304bc1e69d5ec",
   "http": 201,
-  "am": "2026-10-31T11:42:13.746Z"
+  "am": "2026-10-31T11:42:13.746Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfLt8BSCFk3/"
+  }
  },
  "stock-yt-kurz-04-1": {
   "ok": true,
   "zeit": "2026-11-01T04:30:00",
   "zernioId": "6ae5d417234f720d1e669062",
   "http": 201,
-  "am": "2026-10-31T11:42:15.904Z"
+  "am": "2026-10-31T11:42:15.904Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=NU-MMtPxdys"
+  }
  },
  "stock-insta-kurz-04-2": {
   "ok": true,
   "zeit": "2026-11-01T08:00:00",
   "zernioId": "6ae5d41a234f720d1e669068",
   "http": 201,
-  "am": "2026-10-31T11:42:18.396Z"
+  "am": "2026-10-31T11:42:18.396Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfMJvcMiHtF/"
+  }
  },
  "stock-yt-kurz-04-2": {
   "ok": true,
   "zeit": "2026-11-01T08:30:00",
   "zernioId": "6ae5d41c234f720d1e66906c",
   "http": 201,
-  "am": "2026-10-31T11:42:20.485Z"
+  "am": "2026-10-31T11:42:20.485Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=iCe50k7SVdE"
+  }
  },
  "stock-insta-kurz-05-1": {
   "ok": true,
   "zeit": "2026-11-01T12:00:00",
   "zernioId": "6ae5d41ec8c627560eaafe88",
   "http": 201,
-  "am": "2026-10-31T11:42:23.043Z"
+  "am": "2026-10-31T11:42:23.043Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfMlGhJDS88/"
+  }
  },
  "stock-yt-kurz-05-1": {
   "ok": true,
   "zeit": "2026-11-01T12:30:00",
   "zernioId": "6ae5d421234f720d1e669090",
   "http": 201,
-  "am": "2026-10-31T11:42:25.342Z"
+  "am": "2026-10-31T11:42:25.342Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=xTwGL5By72s"
+  }
  },
  "stock-insta-kurz-05-2": {
   "ok": true,
   "zeit": "2026-11-01T16:00:00",
   "zernioId": "6ae5d423234f720d1e6690a2",
   "http": 201,
-  "am": "2026-10-31T11:42:27.824Z"
+  "am": "2026-10-31T11:42:27.824Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfNAZD1lNIT/"
+  }
  },
  "stock-yt-kurz-05-2": {
   "ok": true,
   "zeit": "2026-11-01T16:30:00",
   "zernioId": "6ae5d425540304bc1e69d5fc",
   "http": 201,
-  "am": "2026-10-31T11:42:29.919Z"
+  "am": "2026-10-31T11:42:29.919Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=U5iF6W0qdsc"
+  }
  },
  "stock-insta-kurz-06-1": {
   "ok": true,
   "zeit": "2026-11-01T20:00:00",
   "zernioId": "6ae5d428234f720d1e6690bc",
   "http": 201,
-  "am": "2026-10-31T11:42:32.369Z"
+  "am": "2026-10-31T11:42:32.369Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfNb9glgVOZ/"
+  }
  },
  "stock-yt-kurz-06-1": {
   "ok": true,
   "zeit": "2026-11-01T20:30:00",
   "zernioId": "6ae5d42a540304bc1e69d604",
   "http": 201,
-  "am": "2026-10-31T11:42:34.463Z"
+  "am": "2026-10-31T11:42:34.463Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=CuOTaKGhJ9A"
+  }
  },
  "stock-insta-kurz-06-2": {
   "ok": true,
   "zeit": "2026-11-02T00:00:00",
   "zernioId": "6ae5d42c234f720d1e6690c9",
   "http": 201,
-  "am": "2026-10-31T11:42:36.916Z"
+  "am": "2026-10-31T11:42:36.916Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfN3SsigYEn/"
+  }
  },
  "stock-yt-kurz-06-2": {
   "ok": true,
   "zeit": "2026-11-02T00:30:00",
   "zernioId": "6ae5d42e234f720d1e6690ce",
   "http": 201,
-  "am": "2026-10-31T11:42:39.010Z"
+  "am": "2026-10-31T11:42:39.010Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=ZYIlHn-DHrM"
+  }
  },
  "stock-insta-kurz-07-1": {
   "ok": true,
   "zeit": "2026-11-02T04:00:00",
   "zernioId": "6ae5d432234f720d1e6690e1",
   "http": 201,
-  "am": "2026-10-31T11:42:42.537Z"
+  "am": "2026-10-31T11:42:42.537Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfOS4XuAeNm/"
+  }
  },
  "stock-yt-kurz-07-1": {
   "ok": true,
   "zeit": "2026-11-02T04:30:00",
   "zernioId": "6ae5d434234f720d1e6690ea",
   "http": 201,
-  "am": "2026-10-31T11:42:44.654Z"
+  "am": "2026-10-31T11:42:44.654Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=iS7C7M0DFXk"
+  }
  },
  "stock-insta-kurz-07-2": {
   "ok": true,
   "zeit": "2026-11-02T08:00:00",
   "zernioId": "6ae5d438234f720d1e6690fb",
   "http": 201,
-  "am": "2026-10-31T11:42:48.169Z"
+  "am": "2026-10-31T11:42:48.169Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfOub2QHEsf/"
+  }
  },
  "stock-yt-kurz-07-2": {
   "ok": true,
   "zeit": "2026-11-02T08:30:00",
   "zernioId": "6ae5d43a540304bc1e69d624",
   "http": 201,
-  "am": "2026-10-31T11:42:50.291Z"
+  "am": "2026-10-31T11:42:50.291Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=SznTmGcL-J4"
+  }
  },
  "stock-insta-kurz-08-1": {
   "ok": true,
   "zeit": "2026-11-02T12:00:00",
   "zernioId": "6ae5d43d234f720d1e669129",
   "http": 201,
-  "am": "2026-10-31T11:42:53.499Z"
+  "am": "2026-10-31T11:42:53.499Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfPJ53cjkBF/"
+  }
  },
  "stock-yt-kurz-08-1": {
   "ok": true,
   "zeit": "2026-11-02T12:30:00",
   "zernioId": "6ae5d43f540304bc1e69d635",
   "http": 201,
-  "am": "2026-10-31T11:42:55.683Z"
+  "am": "2026-10-31T11:42:55.683Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=wLvSc2f1vq8"
+  }
  },
  "stock-insta-kurz-08-2": {
   "ok": true,
   "zeit": "2026-11-02T14:00:00",
   "zernioId": "6ae8624aec95a66f08208f5e",
   "http": 201,
-  "am": "2026-11-02T10:13:30.555Z"
+  "am": "2026-11-02T10:13:30.555Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfPXnlLAgqI/"
+  }
  },
  "stock-yt-kurz-08-2": {
   "ok": true,
   "zeit": "2026-11-02T14:30:00",
   "zernioId": "6ae8624dec95a66f08208f70",
   "http": 201,
-  "am": "2026-11-02T10:13:33.196Z"
+  "am": "2026-11-02T10:13:33.196Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=Qg2jNpus_g4"
+  }
  },
  "stock-insta-kurz-09-1": {
   "ok": true,
   "zeit": "2026-11-02T16:00:00",
   "zernioId": "6ae8624fec95a66f08208f90",
   "http": 201,
-  "am": "2026-11-02T10:13:36.085Z"
+  "am": "2026-11-02T10:13:36.085Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfPlrP-E1_Q/"
+  }
  },
  "stock-yt-kurz-09-1": {
   "ok": true,
   "zeit": "2026-11-02T16:30:00",
   "zernioId": "6ae86252ec95a66f08208fa5",
   "http": 201,
-  "am": "2026-11-02T10:13:38.744Z"
+  "am": "2026-11-02T10:13:38.744Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=bPo0KGl1MSo"
+  }
  },
  "stock-insta-kurz-09-2": {
   "ok": true,
   "zeit": "2026-11-02T18:00:00",
   "zernioId": "6ae86255ec95a66f08208fbb",
   "http": 201,
-  "am": "2026-11-02T10:13:41.712Z"
+  "am": "2026-11-02T10:13:41.712Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfPzOobkgyo/"
+  }
  },
  "stock-yt-kurz-09-2": {
   "ok": true,
   "zeit": "2026-11-02T18:30:00",
   "zernioId": "6ae8625812d5a2c855d12646",
   "http": 201,
-  "am": "2026-11-02T10:13:44.530Z"
+  "am": "2026-11-02T10:13:44.530Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=9gmP3d7MBzM"
+  }
  },
  "stock-insta-kurz-10-1": {
   "ok": true,
   "zeit": "2026-11-02T20:00:00",
   "zernioId": "6ae8625be56ee1d4a45b6883",
   "http": 201,
-  "am": "2026-11-02T10:13:47.350Z"
+  "am": "2026-11-02T10:13:47.350Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfQA8CygoSj/"
+  }
  },
  "stock-yt-kurz-10-1": {
   "ok": true,
   "zeit": "2026-11-02T20:30:00",
   "zernioId": "6ae8625de56ee1d4a45b6899",
   "http": 201,
-  "am": "2026-11-02T10:13:49.960Z"
+  "am": "2026-11-02T10:13:49.960Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=GtzOfYb2M1Y"
+  }
  },
  "stock-insta-kurz-10-2": {
   "ok": true,
   "zeit": "2026-11-02T22:00:00",
   "zernioId": "6ae86260e56ee1d4a45b68ab",
   "http": 201,
-  "am": "2026-11-02T10:13:52.951Z"
+  "am": "2026-11-02T10:13:52.951Z",
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 57 seconds."
+  }
  },
  "stock-yt-kurz-10-2": {
   "ok": true,
   "zeit": "2026-11-02T22:30:00",
   "zernioId": "6ae86263e56ee1d4a45b68c5",
   "http": 201,
-  "am": "2026-11-02T10:13:55.689Z"
+  "am": "2026-11-02T10:13:55.689Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=v_XEnaXkaX0"
+  }
  },
  "alien-insta-kurz-01-1": {
   "ok": true,
   "zeit": "2026-11-03T00:00:00",
   "zernioId": "6ae862664bf04970a01b52e5",
   "http": 201,
-  "am": "2026-11-02T10:13:58.589Z"
+  "am": "2026-11-02T10:13:58.589Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfQcUvnl2H3/"
+  }
  },
  "alien-yt-kurz-01-1": {
   "ok": true,
   "zeit": "2026-11-03T00:30:00",
   "zernioId": "6ae86269e56ee1d4a45b68fe",
   "http": 201,
-  "am": "2026-11-02T10:14:01.148Z"
+  "am": "2026-11-02T10:14:01.148Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=M4k33xNG5gg"
+  }
  },
  "alien-insta-kurz-01-2": {
   "ok": true,
   "zeit": "2026-11-03T02:00:00",
   "zernioId": "6ae8626c4bf04970a01b52f7",
   "http": 201,
-  "am": "2026-11-02T10:14:04.222Z"
+  "am": "2026-11-02T10:14:04.222Z",
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 55 seconds."
+  }
  },
  "alien-yt-kurz-01-2": {
   "ok": true,
   "zeit": "2026-11-03T02:30:00",
   "zernioId": "6ae8626ee56ee1d4a45b691c",
   "http": 201,
-  "am": "2026-11-02T10:14:06.866Z"
+  "am": "2026-11-02T10:14:06.866Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=SFqqgcjda_k"
+  }
  },
  "alien-insta-kurz-02-1": {
   "ok": true,
   "zeit": "2026-11-03T04:00:00",
   "zernioId": "6ae86271e56ee1d4a45b6941",
   "http": 201,
-  "am": "2026-11-02T10:14:09.916Z"
+  "am": "2026-11-02T10:14:09.916Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfQ3oQxDngb/"
+  }
  },
  "alien-yt-kurz-02-1": {
   "ok": true,
   "zeit": "2026-11-03T04:30:00",
   "zernioId": "6ae86274e56ee1d4a45b695d",
   "http": 201,
-  "am": "2026-11-02T10:14:12.770Z"
+  "am": "2026-11-02T10:14:12.770Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=vLr_lAACM4Q"
+  }
  },
  "alien-insta-kurz-02-2": {
   "ok": true,
   "zeit": "2026-11-03T06:00:00",
   "zernioId": "6ae862774bf04970a01b5314",
   "http": 201,
-  "am": "2026-11-02T10:14:15.794Z"
+  "am": "2026-11-02T10:14:15.794Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfRFVTzkqHz/"
+  }
  },
  "alien-yt-kurz-02-2": {
   "ok": true,
   "zeit": "2026-11-03T06:30:00",
   "zernioId": "6ae8627ae56ee1d4a45b6996",
   "http": 201,
-  "am": "2026-11-02T10:14:18.392Z"
+  "am": "2026-11-02T10:14:18.392Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=JY2LzB-78-A"
+  }
  },
  "alien-insta-kurz-03-1": {
   "ok": true,
   "zeit": "2026-11-03T08:00:00",
   "zernioId": "6ae8627de56ee1d4a45b69a9",
   "http": 201,
-  "am": "2026-11-02T10:14:21.235Z"
+  "am": "2026-11-02T10:14:21.235Z",
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 53 seconds."
+  }
  },
  "alien-yt-kurz-03-1": {
   "ok": true,
   "zeit": "2026-11-03T08:30:00",
   "zernioId": "6ae8627f4bf04970a01b5323",
   "http": 201,
-  "am": "2026-11-02T10:14:23.824Z"
+  "am": "2026-11-02T10:14:23.824Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=kyyGtNYHzjA"
+  }
  },
  "alien-insta-kurz-03-2": {
   "ok": true,
   "zeit": "2026-11-03T10:00:00",
   "zernioId": "6ae862824bf04970a01b5327",
   "http": 201,
-  "am": "2026-11-02T10:14:26.656Z"
+  "am": "2026-11-02T10:14:26.656Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfRg7q6DAlr/"
+  }
  },
  "alien-yt-kurz-03-2": {
   "ok": true,
   "zeit": "2026-11-03T10:30:00",
   "zernioId": "6ae86285e56ee1d4a45b69f3",
   "http": 201,
-  "am": "2026-11-02T10:14:29.327Z"
+  "am": "2026-11-02T10:14:29.327Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=QgD7LCWXiq0"
+  }
  },
  "alien-insta-kurz-04-1": {
   "ok": true,
   "zeit": "2026-11-03T12:00:00",
   "zernioId": "6ae86288e56ee1d4a45b6a07",
   "http": 201,
-  "am": "2026-11-02T10:14:32.826Z"
+  "am": "2026-11-02T10:14:32.826Z",
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 52 seconds."
+  }
  },
  "alien-yt-kurz-04-1": {
   "ok": true,
   "zeit": "2026-11-03T12:30:00",
   "zernioId": "6ae8628be56ee1d4a45b6a15",
   "http": 201,
-  "am": "2026-11-02T10:14:35.461Z"
+  "am": "2026-11-02T10:14:35.461Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=pO3DHtBzjjs"
+  }
  },
  "alien-insta-kurz-04-2": {
   "ok": true,
   "zeit": "2026-11-03T14:00:00",
   "zernioId": "6ae8628ee56ee1d4a45b6a23",
   "http": 201,
-  "am": "2026-11-02T10:14:38.511Z"
+  "am": "2026-11-02T10:14:38.511Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfR8jxblU2C/"
+  }
  },
  "alien-yt-kurz-04-2": {
   "ok": true,
   "zeit": "2026-11-03T14:30:00",
   "zernioId": "6ae862904bf04970a01b5352",
   "http": 201,
-  "am": "2026-11-02T10:14:41.086Z"
+  "am": "2026-11-02T10:14:41.086Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=vsA9YEUtN1g"
+  }
  },
  "alien-insta-kurz-05-1": {
   "ok": true,
   "zeit": "2026-11-03T16:00:00",
   "zernioId": "6ae86293e56ee1d4a45b6a60",
   "http": 201,
-  "am": "2026-11-02T10:14:44.132Z"
+  "am": "2026-11-02T10:14:44.132Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfSJ700jqVW/"
+  }
  },
  "alien-yt-kurz-05-1": {
   "ok": true,
   "zeit": "2026-11-03T16:30:00",
   "zernioId": "6ae86296e56ee1d4a45b6a78",
   "http": 201,
-  "am": "2026-11-02T10:14:46.974Z"
+  "am": "2026-11-02T10:14:46.974Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=nfgsylGHrog"
+  }
  },
  "alien-insta-kurz-05-2": {
   "ok": true,
   "zeit": "2026-11-03T18:00:00",
   "zernioId": "6ae86299e56ee1d4a45b6a8e",
   "http": 201,
-  "am": "2026-11-02T10:14:49.902Z"
+  "am": "2026-11-02T10:14:49.902Z",
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 51 seconds."
+  }
  },
  "alien-yt-kurz-05-2": {
   "ok": true,
   "zeit": "2026-11-03T18:30:00",
   "zernioId": "6ae8629ce56ee1d4a45b6aab",
   "http": 201,
-  "am": "2026-11-02T10:14:52.676Z"
+  "am": "2026-11-02T10:14:52.676Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=tjMCU0CUHIM"
+  }
  },
  "alien-insta-kurz-06-1": {
   "ok": true,
   "zeit": "2026-11-03T20:00:00",
   "zernioId": "6ae8629f4bf04970a01b5377",
   "http": 201,
-  "am": "2026-11-02T10:14:55.562Z"
+  "am": "2026-11-02T10:14:55.562Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfSlaJAAFYL/"
+  }
  },
  "alien-yt-kurz-06-1": {
   "ok": true,
   "zeit": "2026-11-03T20:30:00",
   "zernioId": "6ae862a2e56ee1d4a45b6ada",
   "http": 201,
-  "am": "2026-11-02T10:14:58.201Z"
+  "am": "2026-11-02T10:14:58.201Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=IoS9wp5APpc"
+  }
  },
  "alien-insta-kurz-06-2": {
   "ok": true,
@@ -3058,7 +3593,12 @@
   "fassung": 2,
   "zernioId": "6ae8640ee56ee1d4a45b78bf",
   "http": 201,
-  "am": "2026-11-02T10:21:03.003Z"
+  "am": "2026-11-02T10:21:03.003Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.tiktok.com/@storys4you.de1/video/7703651825014082848"
+  }
  },
  "mann-tiktok-teil-1": {
   "ok": true,
@@ -3066,7 +3606,12 @@
   "fassung": 2,
   "zernioId": "6ae86413e56ee1d4a45b78fa",
   "http": 201,
-  "am": "2026-11-02T10:21:07.414Z"
+  "am": "2026-11-02T10:21:07.414Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.tiktok.com/@storys4you.de1/video/7703837035445914913"
+  }
  },
  "mann-tiktok-teil-2": {
   "ok": true,
@@ -3074,7 +3619,12 @@
   "fassung": 3,
   "zernioId": "6ae990d0fb116dbf0dcaade2",
   "http": 201,
-  "am": "2026-11-03T07:44:16.650Z"
+  "am": "2026-11-03T07:44:16.650Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.tiktok.com/@storys4you.de1/video/7704022431538662689"
+  }
  },
  "mann-tiktok-teil-3": {
   "ok": true,
