@@ -258,12 +258,17 @@ for (const post of plan.posts) {
     timezone: "Europe/Berlin",
     metadata: { serie: post.serie || "24-stock", postId: post.id },
   };
+  // KI-Haken aus (Issue #15): Laut Zernio-Doku (docs.zernio.com/platforms/tiktok/posts) muss TikTok die Einstellungen
+  // als `tiktokSettings` auf oberster Ebene bekommen. platformSpecificData allein reichte nicht (Jonathan 3.11.).
+  if (post.platform === "tiktok") body.tiktokSettings = { ...platformSpecificData, videoMadeWithAi: false };
   if (post.platform === "youtube") body.tags = post.tags || ["zombie", "animation", "story", "24 stock", "shorts"];
   const r = await api("POST", "/posts", body, keyFuer(post.platform));
   const id = r.json?.post?._id || r.json?._id || r.json?.id || null;
   status[post.id] = { ok: r.ok, zeit: post.zeit, fassung: post.fassung, zernioId: id, http: r.status, antwort: r.ok ? undefined : JSON.stringify(r.json).slice(0, 600), am: new Date().toISOString() };
   speichern();
-  if (r.ok) { neu++; console.log(`✓ ${post.id} eingeplant für ${post.zeit} (${id})`); }
+  if (r.ok) { neu++; console.log(`✓ ${post.id} eingeplant für ${post.zeit} (${id})`);
+    if (post.platform === "tiktok") { const w = JSON.stringify(r.json?.warnings || r.json?.post?.warnings || ""); const ki = JSON.stringify(r.json).match(/"(videoMadeWithAi|video_made_with_ai|isAigc)":\s*(true|false)/g);
+      console.log(`  KI-Kennzeichnung laut Zernio: ${ki ? ki.join(", ") : "nicht in der Antwort"}${w && w !== '""' ? " | Hinweise: " + w.slice(0, 300) : ""}`); } }
   else { fehler++; console.log(`✗ ${post.id}: HTTP ${r.status} ${JSON.stringify(r.json).slice(0, 400)}`); }
   await new Promise(res => setTimeout(res, 1500));
 }
