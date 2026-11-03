@@ -84,7 +84,7 @@ Pro Staffel einen großen Kanal als Hauptvorbild wählen (abwechseln!) und kurz 
 ## Stil „leuchtend“ – Standard für alle neuen Folgen (Jonathans Vorgabe 2.11., Issue #17)
 
 Jonathan hat Referenzbilder in Kurzgesagt-Richtung geschickt und die Probe „Wüste“ abgenommen („genau so ist perfekt“). **Ab jetzt hat jede neue Folge diesen Look, jedes Mal passend zur Szene:**
-- **Kopf jedes Drehbuchs:** `@qualitaet hoch`, `@look 0` (kein Abdunkeln), `@kino 0.35`, `@stil leuchtend`, dazu `@palette <Farbfamilie>` als Standard der Folge.
+- **Kopf jedes Drehbuchs:** `@qualitaet max`, `@vortrag lebendig`, `@look 0` (kein Abdunkeln), `@kino 0.35`, `@stil leuchtend`, dazu `@palette <Farbfamilie>` als Standard der Folge (siehe „Qualität“ unten, seit 3.11.).
 - **Eine Farbfamilie pro Einstellung** (`palette=lila|orange|tuerkis|rosa|gruen|blau`): Der Hintergrund wird eingefärbt, die Figuren behalten ihre Farben. Die Palette passt zu Ort, Tageszeit und Stimmung:
 
 | Stimmung | Paletten | Beispiele |
@@ -101,13 +101,41 @@ Jonathan hat Referenzbilder in Kurzgesagt-Richtung geschickt und die Probe „W�
 - Merkmale, an denen sich neue Kulissen orientieren: eine Farbfamilie, Tiefenunschärfe in Ebenen, dunkle Silhouetten am Rand, Licht (Strahlen, Glühen, Linsenreflexe), Wechsel aus Detail und Ruhe, Panorama mit kleiner Figur. Nie Figuren, Vögel, Logo oder Szenen von Kurzgesagt nachbauen.
 - Die alten Serien (24. Stock, Der Alien, Der letzte Mann, s01) bleiben im bisherigen Look.
 
+## Qualität: schärfer, flüssiger, detailreicher, bessere Geschichten (Jonathans Wunsch 3.11., Issue #20)
+
+Gilt für alle neuen Folgen. Die alten Serien und schon gerenderte Videos bleiben, wie sie sind (pixelgleich geprüft).
+
+**Technik**
+- `@qualitaet max` statt `hoch`: **60 Bilder/s** und **1440×2560**. Die Engine zeichnet direkt in dieser Auflösung (`engine/ss.js` rechnet die 1080er-Koordinaten um), also echte, feinere Vektorkanten statt Hochskalieren. YouTube nutzt ab 1440p den besseren Codec; TikTok und Instagram skalieren sauber herunter. Datenrate automatisch unter 95 MB pro Datei (GitHub-Grenze).
+- Rechenzeit (gemessen 3.11., 4 Kerne): ca. 18-fache Echtzeit, also **ca. 20 min pro 70-s-Folge**. Immer 2 Folgen gleichzeitig im Hintergrund rendern und gleich nach der Stimme anfangen. Wird die Zeit knapp (Posting ab 08:00): `--fps 30` halbiert sie.
+- `--ss 2` zeichnet intern sogar in 2160×3840 (echte 4K-Kantenglättung), braucht aber noch einmal doppelt so lang. Nur für einzelne Vorzeige-Folgen.
+- Standbilder (`--bilder`) kommen jetzt in 1440×2560. Ausschnitte in voller Auflösung ansehen.
+
+**Bilder (zusätzlich zur Detail-Prüfliste unten)**
+- **Jede Folge hat mindestens 3 „Wow-Bilder“:** Panorama mit kleiner Figur, großes Licht (Sonne, Polarlicht, Stadt bei Nacht) oder eine Bibliotheks-Platte. Mindestens eines davon in den ersten 3 Einstellungen.
+- **Bibliotheks-Platten bevorzugen** (`[bild id=…]`): Sie sind in doppelter Auflösung gerechnet und zeigen ihre Details erst jetzt ganz.
+- **Keine leeren Hintergründe:** Auch Nahaufnahmen (`gesicht`, `handy`) bekommen einen Ort (`ort=…`), nie eine einfarbige Fläche.
+- **Immer etwas Bewegung:** jede Einstellung mit Kamerabewegung (`zoom-rein`, `zoom-raus`, `schwenk-…`) oder leiser Bewegung im Bild (Teilchen, Lichter, Regen, Glühwürmchen). Bei 60 fps wirkt das jetzt flüssig.
+- **Pro Staffel mindestens 1 neue Kulisse im Stil „leuchtend“** (`engine/leuchtend.js`) für den wichtigsten Ort der Geschichte, nach dem Skill `serien-stil`. Danach Katalog und Tabelle ergänzen, alte Serien pixelgleich prüfen.
+- Figuren in Panoramas klein, in Gefühlsmomenten groß (`gesicht`). Wechsel aus Weite und Nähe in jedem Kapitel.
+
+**Geschichten**
+- **Jede Folge hat ein konkretes Ziel, ein Hindernis und eine Entscheidung** der Du-Figur. Wer nur diese Folge sieht, versteht das in einem Satz.
+- **Zeigen statt erklären:** ein genaues Detail statt einer Zusammenfassung („Opas Brille liegt noch auf dem Tisch“ statt „Opa ist weg“). Pro Folge mindestens 3 solche Sinnes-Details (Geräusch, Licht, Geruch, Uhrzeit, Zahl).
+- **Dialoge kurz und eigen:** höchstens ca. 8 Wörter pro Zitat; jede Figur hat eine erkennbare Art zu reden (Opa: ruhig, alte Redewendungen; Lina: kurze, direkte Sätze; Ben: Witze, wenn er Angst hat). Mindestens 2 Zitate pro Folge, damit es lebt.
+- **Vorbereiten und einlösen:** Was in einer frühen Folge beiläufig gezeigt wird (ein Gegenstand, ein Satz), löst später etwas aus. Pro Staffel mindestens 2 solche Bögen, in `staffeln.json` unter `boegen` notieren.
+- **Cliffhanger abwechseln:** nicht nur Gefahr, auch Entdeckung, Entscheidung, Ankunft, Geständnis, Wiedersehen. Zwei Folgen hintereinander nie dieselbe Art.
+- **Mindestens eine echte Überraschung pro Staffel**, die vorher fair angedeutet war.
+- **Streichprobe vor der Stimme:** jedes Drehbuch einmal von oben lesen und jede Zeile streichen oder ersetzen, die nichts Neues bringt (keine Wiederholung dessen, was das Bild schon zeigt).
+- **Vortrag:** `@vortrag lebendig` (`ton/gemini.py`): gleiche Stimme „Orus“, aber Schlüsselwörter betont, schneller bei Gefahr, leiser bei Gefühl, kleine Pause vor jeder Wendung. Die Tonhöhe gleicht `ton.folge` wie immer an. Klingt eine Folge übertrieben: Zeile entschärfen und neu vertonen.
+
 ## Look: Kurzgesagt-Richtung, viel Detail, hohe Bildqualität
 
 **Ab der ersten Staffel (heute, 1.11.) und für jede weitere Serie (Jonathans Vorgabe, 1.11. abends):** Look wie „Dinge Erklärt – Kurzgesagt“, genau wie im Katalog-Bild. Vor jedem Kulissen- oder Figurenbau den Skill `serien-stil` laden (`.claude/skills/serien-stil/SKILL.md`): erst Katalog prüfen und wiederverwenden, Bilder nur als Code in der Engine, keine Bild-APIs, ChatGPT nur für Referenzbilder. Nie Kurzgesagt-Figuren, -Logo oder -Musik übernehmen.
 
 **Jonathans Vorgabe (1.11., nach dem Katalog-Bild):** „Ja, diesen Stil auch bitte künftig, mehr Aufwand in die Details und generell die Bildqualität hoch halten.“ Das gilt für alle künftigen Videos und Staffeln.
 
-- Jedes Drehbuch hat **`@qualitaet hoch`** (render.mjs: Einzelbilder JPEG 100, x264 slow/crf 16, Animations-Tuning, aq-mode 3 gegen Treppen in dunklen Verläufen), **`@kino 1`** (nur echte Lichter glühen, stehende Papier-Körnung) und `@look` nach Stimmung (düster 0.8–1, spannend 0.6, traurig 0.5, warm 0.35, freudig 0.1–0.2).
+- Jedes Drehbuch hat **`@qualitaet max`** (seit 3.11., siehe „Qualität“; vorher `hoch`: Einzelbilder JPEG 100, x264 slow/crf 16, Animations-Tuning, aq-mode 3 gegen Treppen in dunklen Verläufen), **`@kino 1`** (nur echte Lichter glühen, stehende Papier-Körnung) und `@look` nach Stimmung (düster 0.8–1, spannend 0.6, traurig 0.5, warm 0.35, freudig 0.1–0.2).
 - Keine bewegte Körnung und kein Rauschen, das sich pro Bild ändert. Das verdreifacht die Datenrate und wird auf TikTok/Instagram/YouTube zu Matsch.
 - **Detail-Prüfliste für jedes Bild:** Vorder-, Mittel- und Hintergrund sind erkennbar, mit Dunst nach hinten. Mindestens eine Lichtquelle mit Glühen. Schattenseite und Randlicht an großen Formen. Mindestens 3 kleine Detailelemente (Dachaufbauten, Pilze, Bücher, Lichterkette …). Etwas bewegt sich leise (Teilchen, Lichter, Wolken, Vögel). Keine leeren, flachen Flächen. Kontaktschatten unter Figuren und Möbeln.
 - **Neue Kulissen** müssen das Detailniveau von `grossstadt`, `wald`, `landschaft` und `weltall` erreichen (Referenz in `engine/kurzgesagt.js`).
@@ -185,12 +213,12 @@ export CHROMIUM=/opt/pw-browsers/chromium
 node render.mjs taeglich/episoden/sNN-fXX.txt --bilder        # 3. Standbilder JEDER Folge ansehen, korrigieren
 python -m ton.folge taeglich/episoden/sNN-fXX.txt --stimme gemini:Orus --anfragen 1     # 4. Stimme (je Folge 1 Anfrage)
 python taeglich/stimme_pruefen.py taeglich/episoden/sNN-fXX.txt                         # 5. muss OK melden
-node render.mjs taeglich/episoden/sNN-fXX.txt                 # 6. rendern in hoher Qualität (ca. 6 min pro Folge, 2 gleichzeitig im Hintergrund)
+node render.mjs taeglich/episoden/sNN-fXX.txt                 # 6. rendern mit @qualitaet max (1440×2560, 60 fps; ca. 20 min pro 70-s-Folge, 2 gleichzeitig im Hintergrund – früh starten!)
 python taeglich/staffel_veroeffentlichen.py sNN               # 7. prüfen, TikTok-Teile schneiden, ablegen, hinten anhängen
 git add -A taeglich engine && git commit && git push -u origin taeglich                 # 8. sichern
 ```
 
-- Kopf jedes Drehbuchs: `# <Staffeltitel> – Folge N: <Folgentitel>`, `@stimmung …`, `@mund zitate`, `@qualitaet hoch`, `@look …`, `@kino 1`, `@zeit …`. Über jeder Zeile steht ein `// Bildbeschreibung`.
+- Kopf jedes Drehbuchs: `# <Staffeltitel> – Folge N: <Folgentitel>`, `@stimmung …`, `@vortrag lebendig`, `@mund zitate`, `@qualitaet max`, dazu der Stil „leuchtend“ (siehe oben), `@zeit …`. Über jeder Zeile steht ein `// Bildbeschreibung`.
 - Gemini: 5 Schlüssel (Proxy + `GEMINI_API_KEY_2` … `_5`), je ca. 10 Anfragen am Tag. Sind alle erschöpft: nichts posten, die fertigen Folgen sichern, Jonathan Bescheid geben. Beim nächsten Lauf geht es mit dieser Staffel weiter.
 - Meldet `stimme_pruefen.py` einen Fehler: genauer hinhören. Ist es wirklich falsch, die Zeile eindeutiger formulieren und die Folge neu vertonen.
 - **Standbilder prüfen:** Gesichter nicht unter den Untertiteln, nichts am Rand abgeschnitten, nichts scheint durch, Text lesbar, jedes Bild passt zum Satz.

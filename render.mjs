@@ -23,7 +23,14 @@ if (!datei.endsWith(".txt")) ep.figuren = { ...cast, ...(ep.figuren || {}) };
 const id = path.basename(datei).replace(/\.(json|txt)$/, "");
 const name = (SERIE === ROOT ? "" : path.basename(SERIE) + "-") + id; // Name der Ausgabedateien
 const vorschau = flag("vorschau");
-const FPS = Number(opt("fps", vorschau ? 15 : ep.fps || 30));
+// @qualitaet max (neue Kurzvideo-Folgen ab 3.11., Jonathans Wunsch): 60 Bilder/s, die Engine zeichnet direkt in 1440×2560
+// (engine/ss.js rechnet die 1080er-Koordinaten um, echte Vektorkanten statt Hochskalieren). YouTube nutzt ab 1440p den
+// besseren Codec, TikTok/Instagram skalieren sauber herunter. --ss 2 zeichnet intern in 2160×3840 (ca. doppelte Rechenzeit).
+// Gemessen 3.11. (4 Kerne): 1080p30 ca. 0,2 s pro Bild, max ca. 0,29 s pro Bild → 70-s-Folge ca. 20 min.
+const QMAX = !vorschau && (flag("ultra") || ep.qualitaet === "max");
+const FPS = Number(opt("fps", vorschau ? 15 : ep.fps || (QMAX ? 60 : 30)));
+const AUS = QMAX ? [1440, 2560] : null;
+const SS = QMAX ? Number(opt("ss", AUS[0] / 1080)) : 1;
 const W = 1080, H = 1920;
 
 const dauerVon = f => Number(execFileSync("ffprobe", ["-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", f]).toString().trim());
@@ -146,6 +153,7 @@ if (flag("bilder")) {
   const dir = path.join(ROOT, "ausgabe", `${name}-bilder`); fs.mkdirSync(dir, { recursive: true });
   const browser = await chromium.launch(process.env.CHROMIUM ? { executablePath: process.env.CHROMIUM, args: ["--headless=new", "--no-sandbox"] } : {}); // CHROMIUM=/opt/pw-browsers/chromium in Claude-Sitzungen
   const page = await browser.newPage({ viewport: { width: W, height: H } });
+  if (SS !== 1) { await page.addInitScript(`window.SS = ${SS};`); await page.addInitScript({ path: path.join(ROOT, "engine", "ss.js") }); }
   await page.goto("file://" + path.join(ROOT, "engine", "index.html"));
   await page.evaluate(async () => { await document.fonts.load("900 80px Titel"); await document.fonts.load("700 40px HUD"); });
   await page.evaluate(d => window.init(d), { W, H, dauer: gesamt, figuren: ep.figuren, untertitel_y: ep.untertitel_y, mund: ep.mund, szenen });
@@ -155,7 +163,9 @@ if (flag("bilder")) {
   for (const [i, s] of szenen.entries()) {
     if (i + 1 < na || i + 1 > (nb || na)) continue;
     await page.evaluate(t => window.zeichne(t), s.start + s.dauer * 0.6);
-    await page.screenshot({ path: path.join(dir, `${String(i + 1).padStart(3, "0")}.jpg`), type: "jpeg", quality: 85 });
+    const bild = path.join(dir, `${String(i + 1).padStart(3, "0")}.jpg`);
+    if (SS !== 1) fs.writeFileSync(bild, Buffer.from((await page.evaluate(() => A.cv.toDataURL("image/jpeg", 0.9))).split(",")[1], "base64"));
+    else await page.screenshot({ path: bild, type: "jpeg", quality: 85 });
   }
   await browser.close();
   console.log("Bilder in", path.relative(ROOT, dir));
@@ -201,7 +211,7 @@ const tonDatei = path.join(tmp, "ton.wav");
 // ---------- Bild ----------
 const ziel = path.join(ROOT, "ausgabe", `${name}${vorschau ? "-vorschau" : ""}.mp4`);
 // Hohe Bildqualität (@qualitaet hoch oder --hq): Einzelbilder JPEG 100 (fast verlustfrei, PNG wäre 6× langsamer), x264 slow/crf 16, Animations-Tuning, aq-mode 3 gegen Treppen in Verläufen
-const hq = !vorschau && (flag("hq") || ep.qualitaet === "hoch");
+const hq = !vorschau && (flag("hq") || ep.qualitaet === "hoch" || QMAX);
 const ff = spawn("ffmpeg", ["-y", "-v", "error",
   "-f", "image2pipe", "-framerate", String(FPS), "-c:v", "mjpeg", "-i", "-",
   "-ss", String(von), "-i", tonDatei,
@@ -209,10 +219,14 @@ const ff = spawn("ffmpeg", ["-y", "-v", "error",
   "-c:v", "libx264", "-preset", hq ? "slow" : "veryfast", "-crf", vorschau ? "28" : hq ? "16" : "19", "-pix_fmt", "yuv420p",
   ...(hq ? ["-tune", "animation", "-profile:v", "high", "-x264-params", "aq-mode=3"] : []),
   ...(vorschau ? ["-vf", "scale=540:960"] : []),
+  // max: Ausgabe 1440×2560 (bei --ss 2 mit Lanczos verkleinert); Datenrate so gedeckelt, dass die Datei unter 95 MB bleibt (GitHub-Grenze)
+  ...(AUS ? [...(Math.round(W * SS) !== AUS[0] ? ["-vf", `scale=${AUS[0]}:${AUS[1]}:flags=lanczos`] : []), "-maxrate", `${Math.round(Math.min(16000, 95 * 8000 / Math.max(bis - von, 1) - 220))}k`,
+    "-bufsize", `${Math.round(2 * Math.min(16000, 95 * 8000 / Math.max(bis - von, 1) - 220))}k`] : []),
   "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", ziel], { stdio: ["pipe", "inherit", "inherit"] });
 
 const browser = await chromium.launch(process.env.CHROMIUM ? { executablePath: process.env.CHROMIUM, args: ["--headless=new", "--no-sandbox"] } : {}); // CHROMIUM=/opt/pw-browsers/chromium in Claude-Sitzungen
 const page = await browser.newPage({ viewport: { width: W, height: H } });
+if (SS !== 1) { await page.addInitScript(`window.SS = ${SS};`); await page.addInitScript({ path: path.join(ROOT, "engine", "ss.js") }); }
 await page.goto("file://" + path.join(ROOT, "engine", "index.html"));
 await page.evaluate(async () => { await document.fonts.load("900 80px Titel"); await document.fonts.load("700 40px HUD"); });
 await page.evaluate(d => window.init(d), { W, H, dauer: gesamt, figuren: ep.figuren, untertitel_y: ep.untertitel_y, mund: ep.mund, szenen });
@@ -221,7 +235,9 @@ const schreib = buf => new Promise(r => (ff.stdin.write(buf) ? r() : ff.stdin.on
 const t0 = Date.now();
 for (let f = 0; f < frames; f++) {
   await page.evaluate(t => window.zeichne(t), von + f / FPS);
-  const buf = await page.screenshot({ type: "jpeg", quality: vorschau ? 80 : hq ? 100 : 93 });
+  // max: Leinwand direkt als JPEG 97 abgreifen (volle Auflösung; JPEG 100 dauert doppelt so lang, sichtbar ist kein Unterschied)
+  const buf = SS !== 1 ? Buffer.from((await page.evaluate(() => A.cv.toDataURL("image/jpeg", 0.97))).split(",")[1], "base64")
+    : await page.screenshot({ type: "jpeg", quality: vorschau ? 80 : hq ? 100 : 93 });
   await schreib(buf);
   if (f % (FPS * 5) === 0) console.log(`  ${(f / FPS).toFixed(0)} s / ${((bis - von)).toFixed(0)} s  (${((Date.now() - t0) / 1000).toFixed(0)} s Rechenzeit)`);
 }

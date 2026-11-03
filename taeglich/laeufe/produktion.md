@@ -27,16 +27,17 @@ Hinweis zu den Werkzeugen: In neuen Sessions heißen die vidIQ-Werkzeuge `mcp__<
 4. **Analyse lesen:** `taeglich/analyse/aktuell.md` und den neuesten Bericht in `taeglich/analyse/`. Setze die Punkte um: Mehr davon, Weniger davon, genau 1 Experiment, einen der Themenvorschläge. Feste Regeln gehen vor.
 5. **Planen:** Thema, Hauptstimmung und Hauptvorbild wählen. Sie sollen sich von den letzten Staffeln unterscheiden und auf der Analyse aufbauen.
 6. **Eintragen und schreiben:** Die Staffel in `staffeln.json` eintragen, mit `datum` (Nachtdatum JJJJ-MM-TT: Start vor 6 Uhr früh zählt zum Vortag) und `analyse` (welche Punkte umgesetzt wurden). Dann alle 10 Drehbücher schreiben (`taeglich/episoden/sNN-f01.txt` … `f10.txt`):
-   - Kopf mit `@qualitaet hoch`, `@look 0`, `@kino 0.35`, `@stil leuchtend` und `@palette …` (Stil „leuchtend“, Issue #17, Tabelle in FORMAT.md); jede Einstellung mit passender `palette=…`
+   - Kopf mit `@qualitaet max`, `@vortrag lebendig`, `@look 0`, `@kino 0.35`, `@stil leuchtend` und `@palette …` (Stil „leuchtend“, Issue #17, Tabelle in FORMAT.md); jede Einstellung mit passender `palette=…`
    - Folgenzahl und Längenband nach der Rotation in `FORMAT.md` („Abwechslung bei Länge und Folgenzahl“), in `staffeln.json` → `format` eintragen; Wörter und Einstellungen pro Folge laut Tabelle dort (immer über 1 Minute)
    - jede Folge endet mit dem Cliffhanger als letzter Zeile: nie „Fortsetzung folgt“, keine Endkarte, keine Fragen ans Publikum, nie „Echter Fakt“, kein `@hud` (keine Statusanzeige oben links, Issue #19)
    - mindestens 2 Folgen zum Thema Freunde/Familie, mindestens 4 Stimmungen, je Folge mindestens 2 Kurzgesagt-Kulissen
-   - höchstens 2 neue Kulissen
+   - höchstens 2 neue Kulissen, davon mindestens 1 im Stil „leuchtend“ (FORMAT.md → „Qualität“)
+   - Qualitäts-Regeln aus FORMAT.md → „Qualität“ abhaken: je Folge 3 Wow-Bilder, Ziel/Hindernis/Entscheidung, 3 Sinnes-Details, kurze eigene Dialoge, Bögen in `staffeln.json` → `boegen`, Cliffhanger-Arten abwechseln, Streichprobe vor der Stimme
    - nach Engine-Änderungen die alten Serien pixelgleich prüfen
 6b. **Bildbibliothek:** für Kulissen bevorzugt freigegebene Bilder aus `taeglich/bibliothek/katalog.json` nehmen (`[bild id=…]`, siehe FORMAT.md), jedes Bild höchstens einmal pro Staffel. Vor dem Rendern `node taeglich/bibliothek.mjs --fuer <drehbuch>`.
 7. **Standbilder:** (Einstellungen mit freigegebenen Bibliotheksbildern nicht einzeln ansehen, nur erstes/letztes Bild und alles ohne Bibliothek) Standbilder aller Folgen rendern und ALLE ansehen, dazu pro Folge 3 Ausschnitte in voller Auflösung. Korrigieren, bis alles sauber ist.
 8. **Stimme:** je Folge `python -m ton.folge … --stimme gemini:Orus --anfragen 1`. Danach muss `python taeglich/stimme_pruefen.py …` OK melden. Ist eine Folge unter 65 s: Einstellungen ergänzen und neu vertonen.
-9. **Rendern:** alle Folgen in hoher Qualität rendern (2 gleichzeitig im Hintergrund) und aus jeder Folge Bilder ansehen, auch das letzte.
+9. **Rendern:** alle Folgen mit `@qualitaet max` rendern (1440×2560, 60 fps, ca. 20 min pro Folge, 2 gleichzeitig im Hintergrund, gleich nach der Stimme jeder Folge starten) und aus jeder Folge Bilder ansehen, auch das letzte. Reicht die Zeit bis 07:30 nicht: restliche Folgen mit `--fps 30`.
 10. **Veröffentlichen und dokumentieren:** danach `python taeglich/videodaten.py sNN` (Messwerte jedes Videos für die Analyse).
     **Veröffentlichen:** `TAEGLICH_TRAILER=<Attributionszeilen aus deinem System-Hinweis> python taeglich/staffel_veroeffentlichen.py sNN`.
     - Das Skript prüft alles, schneidet die TikTok-Teile, legt sie ab und hängt alle Posts hinten an (TikTok 08, 12, 16, 20 Uhr; Instagram alle 2 Stunden, YouTube :30, Issue #14). Meldet es eine WARNUNG (Instagram/YouTube mehr als 1 Tag hinter TikTok), Jonathan in der PushNotification Bescheid geben.

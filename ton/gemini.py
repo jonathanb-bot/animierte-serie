@@ -41,11 +41,16 @@ STIMMUNGEN = {
 }
 
 
-def stimmung_setzen(name: str | None):
+# `@vortrag lebendig` (neue Folgen ab 3.11., Jonathans Wunsch nach mehr Qualität): ausdrucksvoller erzählen, gleiche Stimme.
+LEBENDIG = (", betone die entscheidenden Wörter deutlich, folge der Spannung mit Tempo und Lautstärke: schneller und "
+            "drängender bei Gefahr, langsamer und leiser bei Gefühl, eine kleine Pause vor jeder Wendung, nie übertrieben")
+
+
+def stimmung_setzen(name: str | None, lebendig: bool = False):
     """STIL für eine Stimmung aus STIMMUNGEN setzen (unbekannt oder leer: unverändert)."""
     global STIL
     if name and name in STIMMUNGEN:
-        STIL = ("Lies den folgenden deutschen Text als Erzähler " + STIMMUNGEN[name] +
+        STIL = ("Lies den folgenden deutschen Text als Erzähler " + STIMMUNGEN[name] + (LEBENDIG if lebendig else "") +
                 ", nach jeder Zeile eine kurze Pause. Nur den Text sprechen:\n\n")
 
 

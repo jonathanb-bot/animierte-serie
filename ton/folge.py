@@ -234,8 +234,9 @@ def bauen(drehbuch: str, nur_stimme=False, drone=False, stimme="edge", anfragen=
         from . import gemini
         m = re.search(r"^@stimmung\s+(\w+)", pfad.read_text(encoding="utf-8"), re.M)
         if m:
-            gemini.stimmung_setzen(m.group(1))
-            log(f"Stimmung: {m.group(1)}")
+            lebendig = bool(re.search(r"^@vortrag\s+lebendig", pfad.read_text(encoding="utf-8"), re.M))
+            gemini.stimmung_setzen(m.group(1), lebendig)
+            log(f"Stimmung: {m.group(1)}{' (lebendig)' if lebendig else ''}")
         name = stimme.split(":", 1)[1] if ":" in stimme else "Orus"
         gesprochen = gemini.sprechen([re.sub(r"[„“\"»«]", "", e.text) for e in sprechend],
                                      [e.kapitel for e in sprechend], name, anfragen=anfragen, log=log)
