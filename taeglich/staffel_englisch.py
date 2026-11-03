@@ -1,4 +1,5 @@
-"""Englische Fassung einer Kurzvideo-Staffel auf TikTok @storys4you_eng posten (Jonathans Wunsch 3.11.).
+"""Englische Fassung einer Kurzvideo-Staffel auf TikTok @storys4you_eng posten, dazu auf dem englischen Instagram und
+YouTube (3. Zernio-Konto, Jonathans Wunsch 3.11.).
 
     python taeglich/staffel_englisch.py s02            # alles
     python taeglich/staffel_englisch.py s02 --probe    # prüfen und vorbereiten, nichts pushen
@@ -9,6 +10,10 @@
 - Eingeholt (Jonathans Erklärung 3.11.): Ist der englische Account beim gleichen Teil wie der deutsche (z. B. beide bei
   „Funkstille“ Teil 5), postet er genauso oft wie der deutsche, also jeden Teil zur selben Zeit wie das deutsche Gegenstück.
   Ein englischer Teil kommt nie vor seinem deutschen Gegenstück.
+- Instagram + YouTube englisch (3. Zernio-Konto, Secret ZERNIO_API_KEY_3): jede Folge ein Post wie auf Deutsch,
+  eigene Warteschlange, Takt wie Deutsch (Instagram alle 2 Stunden, YouTube :30), nie vor dem deutschen Gegenstück.
+  Aktiv, sobald unten KONTO_EN_INSTA / KONTO_EN_YT eingetragen sind (Benutzername wie im Workflow „Posts einplanen“
+  mit konten=true angezeigt); bis dahin nur TikTok.
 - Alle Regeln der deutschen Staffel gelten: über 1 Minute, Prüfung von Bild/Ton/Lautheit, nie „Fortsetzung folgt“,
   keine Fragen ans Publikum, kein KI-Haken.
 
@@ -31,6 +36,9 @@ import staffel_veroeffentlichen as S  # noqa: E402
 
 ROOT = V.ROOT
 KONTO_EN, KONTO_DE = "storys4you_eng", "storys4you.de1"
+# Englisches Instagram und YouTube im 3. Zernio-Konto (Jonathan 3.11.). None = noch nicht verbunden → wird übersprungen.
+KONTO_EN_INSTA: str | None = None
+KONTO_EN_YT: str | None = None
 TAKT_START = [(1, 0)]  # 1 pro Tag
 
 
@@ -102,8 +110,15 @@ def main(argv=None) -> int:
             print("NICHT veröffentlicht."); return 1
         teile.append({"k": k, "folgen": nrn, "datei": ziel, "pruefung": erg})
 
-    yu = V.klonen("youtube-upload", ["/geprueft.json", "/pruefen.py", "/README.md", "/taeglich-tiktok-en/"], "youtube-upload")
+    mit_folgen = bool(KONTO_EN_INSTA or KONTO_EN_YT)
+    yu = V.klonen("youtube-upload", ["/geprueft.json", "/pruefen.py", "/README.md", "/taeglich-tiktok-en/", "/taeglich-en/"], "youtube-upload")
     g = json.loads((yu / "geprueft.json").read_text(encoding="utf-8"))
+    for f in (folgen if mit_folgen else []):  # jede Folge einzeln für Instagram/YouTube englisch
+        pfad = f"taeglich-en/{f['id']}.mp4"
+        if f["datei"].stat().st_size / 1e6 > 95:
+            print(f"{pfad}: zu groß für GitHub (höchstens 95 MB). Nichts veröffentlicht."); return 1
+        (yu / pfad).parent.mkdir(parents=True, exist_ok=True); shutil.copy(f["datei"], yu / pfad)
+        g.setdefault("dateien", {})[pfad] = f["pruefung"]; f["pfad"] = pfad
     for t in teile:
         pfad = f"taeglich-tiktok-en/{a.staffel}-teil-{t['k']}.mp4"
         if t["datei"].stat().st_size / 1e6 > 95:
@@ -117,8 +132,8 @@ def main(argv=None) -> int:
         print("(Probe) youtube-upload: Commit vorbereitet, nicht gepusht")
     else:
         V.pushen(yu, "youtube-upload")
-        for t in teile:
-            V.warten_auf_raw(S.RAW.format(pfad=t["pfad"]), t["datei"].stat().st_size)
+        for x in teile + [f for f in folgen if f.get("pfad")]:
+            V.warten_auf_raw(S.RAW.format(pfad=x["pfad"]), x["datei"].stat().st_size)
 
     repo_main = V.klonen("main", ["/posten/"], "main")
     plan_datei = repo_main / "posten" / "plan.json"
@@ -135,15 +150,43 @@ def main(argv=None) -> int:
                          + " · ".join(en["folgen"][n - 1] for n in t["folgen"])
                          + f"\n{en['beschreibung']}\nFollow so you don't miss a part!\n\n{tags_txt} #fyp")}
         plan["posts"].append(post); neu.append(post); print(f"  {post['id']}: {post['zeit']}")
+
+    # Instagram + YouTube englisch: jede Folge ein Post, eigene Warteschlange je Konto, nie vor dem deutschen Gegenstück
+    zeit_de = {p["id"]: dt.datetime.fromisoformat(p["zeit"]) for p in plan["posts"] if p["id"] not in loeschen}
+    for platform, konto, kurz in (("instagram", KONTO_EN_INSTA, "insta"), ("youtube", KONTO_EN_YT, "yt")):
+        if not konto:
+            print(f"{platform} englisch: noch kein Konto eingetragen (KONTO_EN_{kurz.upper()}), übersprungen"); continue
+        letzte = S.letzte_zeit(plan["posts"], loeschen, platform, konto)
+        for f in folgen:
+            pid = f"taeglich-{kurz}-en-{f['id']}"
+            if pid in ids:
+                continue
+            start = max(letzte, frueh) if letzte else frueh
+            de = zeit_de.get(f"taeglich-{kurz}-{f['id']}")
+            if de and de > start:
+                start = de - dt.timedelta(minutes=1)  # frühestens zur Zeit des deutschen Gegenstücks
+            z = S.naechste_slots(platform, start, 1)[0]
+            nr, n = f["nr"], len(folgen)
+            weiter = ("Follow for the next season." if nr >= n else f"Episode {nr + 1} is up next. Follow so you don't miss it.")
+            post = {"id": pid, "platform": platform, "konto": konto, "zeit": z.strftime("%Y-%m-%dT%H:%M:00"), "serie": "taeglich-en",
+                    "video": S.RAW.format(pfad=f["pfad"])}
+            if platform == "youtube":
+                post["titel"] = f"{en['titel']} – Episode {nr}: {en['folgen'][nr - 1]} {em} #shorts"[:100]
+                post["tags"] = (en.get("tags") or ["animation", "story"]) + ["shorts"]
+                post["text"] = f"{en['beschreibung']}\n{weiter}\n\n{tags_txt} #shorts"
+            else:
+                post["text"] = f"{en['titel']} – Episode {nr}: {en['folgen'][nr - 1]} {em}\n{en['beschreibung']}\n{weiter}\n\n{tags_txt} #reels"
+            plan["posts"].append(post); neu.append(post); letzte = z; print(f"  {pid}: {post['zeit']}")
     if not neu:
         print("Alle englischen Posts stehen schon im Plan."); return 0
     plan_datei.write_text(json.dumps(plan, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     V.lauf("git", "add", "posten/plan.json", cwd=repo_main)
-    V.lauf("git", "commit", "-q", "-m", V.commit_text(f"Kurzvideo-Staffel {a.staffel} englisch hinten anhängen ({len(neu)} TikTok-Posts @{KONTO_EN})"), cwd=repo_main)
+    V.lauf("git", "commit", "-q", "-m", V.commit_text(f"Kurzvideo-Staffel {a.staffel} englisch hinten anhängen ({len(neu)} Posts: TikTok @{KONTO_EN}"
+                                                        f"{', Instagram/YouTube englisch' if mit_folgen else ''})"), cwd=repo_main)
     if a.probe:
         print("(Probe) main: Commit vorbereitet, nicht gepusht"); return 0
     V.pushen(repo_main, "main")
-    print("Plan gepusht – der Workflow „Posts einplanen“ plant bei Zernio auf @storys4you_eng ein.")
+    print("Plan gepusht – der Workflow „Posts einplanen“ plant bei Zernio auf den englischen Konten ein.")
     en["veroeffentlicht"] = {p["id"]: p["zeit"] for p in neu}
     S.STAFFELN.write_text(json.dumps(daten, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     print("staffeln.json aktualisiert – jetzt den Branch „taeglich“ committen und pushen.")
