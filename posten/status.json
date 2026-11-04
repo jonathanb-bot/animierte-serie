@@ -3921,5 +3921,85 @@
   "konto": "sto.rys4you",
   "http": 201,
   "am": "2026-11-04T03:50:27.005Z"
+ },
+ "taeglich-tiktok-en-s02-teil-1": {
+  "ok": true,
+  "zeit": "2026-11-05T01:00:00",
+  "zernioId": "6aeabad6a6d51a788cdc5993",
+  "yt": true,
+  "k": 1,
+  "konto": "storys4you_eng",
+  "http": 201,
+  "am": "2026-11-04T04:55:50.807Z"
+ },
+ "taeglich-tiktok-en-s02-teil-2": {
+  "ok": true,
+  "zeit": "2026-11-06T01:00:00",
+  "zernioId": "6aeabad9a6d51a788cdc5997",
+  "yt": true,
+  "k": 1,
+  "konto": "storys4you_eng",
+  "http": 201,
+  "am": "2026-11-04T04:55:53.767Z"
+ },
+ "taeglich-tiktok-en-s02-teil-3": {
+  "ok": true,
+  "zeit": "2026-11-06T20:00:00",
+  "zernioId": "6aeabadca6d51a788cdc59ad",
+  "yt": true,
+  "k": 1,
+  "konto": "storys4you_eng",
+  "http": 201,
+  "am": "2026-11-04T04:55:56.782Z"
+ },
+ "taeglich-tiktok-en-s02-teil-4": {
+  "ok": true,
+  "zeit": "2026-11-07T08:00:00",
+  "zernioId": "6aeabadfa6d51a788cdc59b8",
+  "yt": true,
+  "k": 1,
+  "konto": "storys4you_eng",
+  "http": 201,
+  "am": "2026-11-04T04:55:59.733Z"
+ },
+ "taeglich-tiktok-en-s02-teil-5": {
+  "ok": true,
+  "zeit": "2026-11-07T12:00:00",
+  "zernioId": "6aeabae2a6d51a788cdc59d3",
+  "yt": true,
+  "k": 1,
+  "konto": "storys4you_eng",
+  "http": 201,
+  "am": "2026-11-04T04:56:03.121Z"
+ },
+ "taeglich-tiktok-en-s02-teil-6": {
+  "ok": true,
+  "zeit": "2026-11-07T16:00:00",
+  "zernioId": "6aeabae6a6d51a788cdc59ef",
+  "yt": true,
+  "k": 1,
+  "konto": "storys4you_eng",
+  "http": 201,
+  "am": "2026-11-04T04:56:06.524Z"
+ },
+ "taeglich-tiktok-en-s02-teil-7": {
+  "ok": true,
+  "zeit": "2026-11-07T20:00:00",
+  "zernioId": "6aeabae9a6d51a788cdc59f3",
+  "yt": true,
+  "k": 1,
+  "konto": "storys4you_eng",
+  "http": 201,
+  "am": "2026-11-04T04:56:09.503Z"
+ },
+ "taeglich-tiktok-en-s02-teil-8": {
+  "ok": true,
+  "zeit": "2026-11-08T08:00:00",
+  "zernioId": "6aeabaeca6d51a788cdc59fa",
+  "yt": true,
+  "k": 1,
+  "konto": "storys4you_eng",
+  "http": 201,
+  "am": "2026-11-04T04:56:12.699Z"
  }
 }
