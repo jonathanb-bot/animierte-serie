@@ -45,10 +45,11 @@ Bis zum 22.11. bekommt möglichst **jedes Genre** eine eigene Staffel (Plan in `
 ## Zitat-Video nach jeder Staffel (Jonathans Wunsch 4.11., Issue #24)
 
 Nach jeder Staffel kommt **ein Zitat-Video** (etwa 1 Minute, immer über 62 s, #12): kurze, starke Sätze zum Thema der Staffel, z. B. „Wer dir sagt, Geld geht über alles, von dem halt dich fern.“ Darunter läuft **tiefe, ruhige Musik**.
-- **Drehbuch:** `taeglich/episoden/sNNz-f01.txt` (Titel `# <Staffeltitel> – Zitate: <Titel>`), 10–14 Einstellungen, 170–200 Wörter, je Satz ein Wow-Bild (Panorama, Licht, kleine Figur), Stil „leuchtend“, Stimme Orus wie immer. Erster Satz mit `hooktext`. Kein Endkarte, keine Fragen ans Publikum, die letzte Zeile ist eine kurze Aufforderung (z. B. „Ruf deinen Opa an. Heute.“).
+- **Drehbuch:** `taeglich/episoden/sNNz-f01.txt` (Vorlage `s02z-f01.txt`) (Titel `# <Staffeltitel> – Zitate: <Titel>`), 10–14 Einstellungen, 170–200 Wörter, je Satz ein Wow-Bild (Panorama, Licht, kleine Figur), Stil „leuchtend“, Stimme Orus wie immer. Erster Satz mit `hooktext`. Kein Endkarte, keine Fragen ans Publikum, die letzte Zeile ist eine kurze Aufforderung (z. B. „Ruf deinen Opa an. Heute.“).
 - **Keine erfundenen Zitate berühmter Leute:** eigene Sätze in Du-Form oder alte Sprichwörter ohne Namen. Ein Satz mit Namen nur, wenn die Quelle sicher belegt ist.
 - **Musik macht Jonathan selbst (4.11.):** Er legt einen eigenen, gemeinfreien Song darüber. Wir liefern das Video **ohne Musik** (nur Stimme und leise Geräusche wie bei den Folgen). `taeglich/zitat_musik.py` nur benutzen, wenn Jonathan es ausdrücklich will.
-- **Posten:** in `staffeln.json` als eigener Eintrag `id: "sNNz"`, `art: "zitate"`, 1 Folge, `tiktok_teile: [[1]]`, danach wie eine Staffel mit `staffel_veroeffentlichen.py sNNz` (hinten angehängt, also direkt nach der Staffel) und auf Englisch mit `staffel_englisch.py sNNz`. `vorrat.py` zählt Zitat-Videos nicht als Staffel.
+- **Sätze sehr simpel, aber tiefgründig** (Jonathan 4.11.): kurz, ein Gedanke, Alltagssprache. Bekannte Redewendungen ohne Namen sind erlaubt (z. B. „Geld ist nicht alles.“), gern mit einem zweiten Satz, der sie vertieft.
+- **Posten macht Jonathan selbst** (4.11.): Der geplante Lauf `taeglich/laeufe/zitate.md` (täglich 08:47) baut nach jeder veröffentlichten Staffel das Zitat-Video, schickt die Datei in den Chat zum Herunterladen und sagt per PushNotification Bescheid. Jonathan lädt es mit eigenem Song auf TikTok, Instagram und YouTube hoch. **Nicht** bei Zernio einplanen. In `staffeln.json` als Eintrag `id: "sNNz"`, `art: "zitate"`, `geliefert`, `posten: "manuell"`. `vorrat.py` zählt Zitat-Videos nicht als Staffel.
 
 ## Abwechslung bei Länge und Folgenzahl (Jonathans Wunsch 2.11., Issue #13)
 
