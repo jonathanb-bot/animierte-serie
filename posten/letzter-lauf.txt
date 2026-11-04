@@ -1,42 +1,34 @@
-Verbundene Konten: tiktok:storys4you.de1, instagram:sto.rys4you, youtube:sto.rys4you (2. Zernio-Konto), tiktok:storys4you_eng (2. Zernio-Konto)
-  taeglich-tiktok-en-s02-teil-1: Prüfung ok (Bild, Ton, Lautstärke)
-✓ taeglich-tiktok-en-s02-teil-1 eingeplant für 2026-11-05T01:00:00 (6aeabad6a6d51a788cdc5993)
-  KI-Kennzeichnung laut Zernio: "videoMadeWithAi":false, "videoMadeWithAi":false
-  taeglich-tiktok-en-s02-teil-2: Prüfung ok (Bild, Ton, Lautstärke)
-✓ taeglich-tiktok-en-s02-teil-2 eingeplant für 2026-11-06T01:00:00 (6aeabad9a6d51a788cdc5997)
-  KI-Kennzeichnung laut Zernio: "videoMadeWithAi":false, "videoMadeWithAi":false
-  taeglich-tiktok-en-s02-teil-3: Prüfung ok (Bild, Ton, Lautstärke)
-✓ taeglich-tiktok-en-s02-teil-3 eingeplant für 2026-11-06T20:00:00 (6aeabadca6d51a788cdc59ad)
-  KI-Kennzeichnung laut Zernio: "videoMadeWithAi":false, "videoMadeWithAi":false
-  taeglich-tiktok-en-s02-teil-4: Prüfung ok (Bild, Ton, Lautstärke)
-✓ taeglich-tiktok-en-s02-teil-4 eingeplant für 2026-11-07T08:00:00 (6aeabadfa6d51a788cdc59b8)
-  KI-Kennzeichnung laut Zernio: "videoMadeWithAi":false, "videoMadeWithAi":false
-  taeglich-tiktok-en-s02-teil-5: Prüfung ok (Bild, Ton, Lautstärke)
-✓ taeglich-tiktok-en-s02-teil-5 eingeplant für 2026-11-07T12:00:00 (6aeabae2a6d51a788cdc59d3)
-  KI-Kennzeichnung laut Zernio: "videoMadeWithAi":false, "videoMadeWithAi":false
-  taeglich-tiktok-en-s02-teil-6: Prüfung ok (Bild, Ton, Lautstärke)
-✓ taeglich-tiktok-en-s02-teil-6 eingeplant für 2026-11-07T16:00:00 (6aeabae6a6d51a788cdc59ef)
-  KI-Kennzeichnung laut Zernio: "videoMadeWithAi":false, "videoMadeWithAi":false
-  taeglich-tiktok-en-s02-teil-7: Prüfung ok (Bild, Ton, Lautstärke)
-✓ taeglich-tiktok-en-s02-teil-7 eingeplant für 2026-11-07T20:00:00 (6aeabae9a6d51a788cdc59f3)
-  KI-Kennzeichnung laut Zernio: "videoMadeWithAi":false, "videoMadeWithAi":false
-  taeglich-tiktok-en-s02-teil-8: Prüfung ok (Bild, Ton, Lautstärke)
-✓ taeglich-tiktok-en-s02-teil-8 eingeplant für 2026-11-08T08:00:00 (6aeabaeca6d51a788cdc59fa)
-  KI-Kennzeichnung laut Zernio: "videoMadeWithAi":false, "videoMadeWithAi":false
-✗ taeglich-insta-en-s02-f01: kein instagram-Konto zernio:3 verbunden
-✗ taeglich-insta-en-s02-f02: kein instagram-Konto zernio:3 verbunden
-✗ taeglich-insta-en-s02-f03: kein instagram-Konto zernio:3 verbunden
-✗ taeglich-insta-en-s02-f04: kein instagram-Konto zernio:3 verbunden
-✗ taeglich-insta-en-s02-f05: kein instagram-Konto zernio:3 verbunden
-✗ taeglich-insta-en-s02-f06: kein instagram-Konto zernio:3 verbunden
-✗ taeglich-insta-en-s02-f07: kein instagram-Konto zernio:3 verbunden
-✗ taeglich-insta-en-s02-f08: kein instagram-Konto zernio:3 verbunden
-✗ taeglich-yt-en-s02-f01: kein youtube-Konto zernio:3 verbunden
-✗ taeglich-yt-en-s02-f02: kein youtube-Konto zernio:3 verbunden
-✗ taeglich-yt-en-s02-f03: kein youtube-Konto zernio:3 verbunden
-✗ taeglich-yt-en-s02-f04: kein youtube-Konto zernio:3 verbunden
-✗ taeglich-yt-en-s02-f05: kein youtube-Konto zernio:3 verbunden
-✗ taeglich-yt-en-s02-f06: kein youtube-Konto zernio:3 verbunden
-✗ taeglich-yt-en-s02-f07: kein youtube-Konto zernio:3 verbunden
-✗ taeglich-yt-en-s02-f08: kein youtube-Konto zernio:3 verbunden
-Fertig: 8 neu eingeplant, 16 Fehler.
+Verbundene Konten: tiktok:storys4you.de1, instagram:sto.rys4you, youtube:sto.rys4you (2. Zernio-Konto), tiktok:storys4you_eng (2. Zernio-Konto), youtube:Storys4You_Eng (3. Zernio-Konto), instagram:sory4you_eng (3. Zernio-Konto)
+  taeglich-insta-en-s02-f01: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-insta-en-s02-f01 eingeplant für 2026-11-06T10:00:00 (6aeb064b2390576761d689be)
+  taeglich-insta-en-s02-f02: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-insta-en-s02-f02 eingeplant für 2026-11-06T12:00:00 (6aeb064e861aa415e9d23d5b)
+  taeglich-insta-en-s02-f03: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-insta-en-s02-f03 eingeplant für 2026-11-06T14:00:00 (6aeb0652861aa415e9d23d72)
+  taeglich-insta-en-s02-f04: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-insta-en-s02-f04 eingeplant für 2026-11-06T16:00:00 (6aeb0655861aa415e9d23d92)
+  taeglich-insta-en-s02-f05: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-insta-en-s02-f05 eingeplant für 2026-11-06T18:00:00 (6aeb0658861aa415e9d23da1)
+  taeglich-insta-en-s02-f06: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-insta-en-s02-f06 eingeplant für 2026-11-06T20:00:00 (6aeb065c861aa415e9d23dc2)
+  taeglich-insta-en-s02-f07: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-insta-en-s02-f07 eingeplant für 2026-11-06T22:00:00 (6aeb065f861aa415e9d23dd3)
+  taeglich-insta-en-s02-f08: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-insta-en-s02-f08 eingeplant für 2026-11-07T00:00:00 (6aeb0662861aa415e9d23de3)
+  taeglich-yt-en-s02-f01: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-yt-en-s02-f01 eingeplant für 2026-11-06T10:30:00 (6aeb0665861aa415e9d23de7)
+  taeglich-yt-en-s02-f02: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-yt-en-s02-f02 eingeplant für 2026-11-06T12:30:00 (6aeb0667861aa415e9d23df3)
+  taeglich-yt-en-s02-f03: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-yt-en-s02-f03 eingeplant für 2026-11-06T14:30:00 (6aeb066a861aa415e9d23e07)
+  taeglich-yt-en-s02-f04: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-yt-en-s02-f04 eingeplant für 2026-11-06T16:30:00 (6aeb066c861aa415e9d23e15)
+  taeglich-yt-en-s02-f05: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-yt-en-s02-f05 eingeplant für 2026-11-06T18:30:00 (6aeb066f861aa415e9d23e19)
+  taeglich-yt-en-s02-f06: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-yt-en-s02-f06 eingeplant für 2026-11-06T20:30:00 (6aeb0672861aa415e9d23e25)
+  taeglich-yt-en-s02-f07: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-yt-en-s02-f07 eingeplant für 2026-11-06T22:30:00 (6aeb0675861aa415e9d23e2f)
+  taeglich-yt-en-s02-f08: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-yt-en-s02-f08 eingeplant für 2026-11-07T00:30:00 (6aeb0677861aa415e9d23e3b)
+Fertig: 16 neu eingeplant, 0 Fehler.
