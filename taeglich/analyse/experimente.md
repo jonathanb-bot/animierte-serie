@@ -35,7 +35,7 @@ Reihenfolge als Vorschlag; die Analyse darf tauschen, aber jedes Genre kommt bis
 
 | Staffel | Genre | Format | Idee für die Welt |
 |---|---|---|---|
-| s03 | **Horror ohne Blut** (eigenes Wesen, Creepypasta-Stil) | horror: 4 × 2–3 min | Wald bei Nacht, Feldweg mit Strommasten, Hütte am See |
+| s03 | **Horror ohne Blut** (eigenes Wesen, Creepypasta-Stil), düsterer Look (`@look 0.75`, nur `blau`) | horror: 4 × 2–3 min | Wald bei Nacht, Feldweg mit Strommasten, Hütte am See |
 | s04 | Krimi / Rätsel | lang 12 × 80–90 s | Museum bei Nacht, Kleinstadt |
 | s05 | Sci-Fi / Zukunft | XL 6 × 90–120 s | Zukunftsstadt 2080, Raumstation |
 | s06 | Psychologie über dich | mittel 10 × 70–80 s | Schule, Großstadt, Gedankenwelt |
@@ -48,7 +48,7 @@ Reihenfolge als Vorschlag; die Analyse darf tauschen, aber jedes Genre kommt bis
 
 **Nicht als eigenes Genre:** reine Komödie (Jonathan 4.11.), **Romantik und Abenteuer/Reise** (Jonathan 4.11.: „raus“). Ein trockener, selbstironischer Satz pro Folge bleibt.
 
-**Nach jeder Staffel ein Zitat-Video** (Jonathans Wunsch 4.11., Issue #24): ca. 65–80 s, 8–12 kurze Sätze zum Thema der Staffel, tiefe Musik im Hintergrund. Messen: Saves und Shares pro Aufruf im Vergleich zu den Folgen.
+**Nach jeder Staffel ein Zitat-Video** (Jonathans Wunsch 4.11., Issue #24): ca. 65–80 s, 8–12 kurze Sätze zum Thema der Staffel, Musik legt Jonathan selbst darüber. Messen: Saves und Shares pro Aufruf im Vergleich zu den Folgen.
 
 
 ## Steckbriefe (je Staffel, schreibt die Produktion)
