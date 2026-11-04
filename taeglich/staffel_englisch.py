@@ -81,7 +81,8 @@ def main(argv=None) -> int:
     for feld in ("titel", "beschreibung", "hashtags", "folgen"):
         if not en.get(feld):
             print(f"staffeln.json → {a.staffel}.en.{feld} fehlt"); return 1
-    max_folge = S.MAX_XL if str((st.get("format") or {}).get("laengenband", "")).lower().startswith(("xl", "gemischt")) else S.MAX_FOLGE
+    band = str((st.get("format") or {}).get("laengenband", "")).lower()
+    max_folge = S.MAX_HORROR if band.startswith(("horror", "lang-2-3")) else S.MAX_XL if band.startswith(("xl", "gemischt")) else S.MAX_FOLGE
 
     folgen, fehler = [], []
     for f in st["folgen"]:

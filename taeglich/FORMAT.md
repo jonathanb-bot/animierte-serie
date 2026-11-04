@@ -28,6 +28,19 @@ Bis zum 22. November wird viel ausprobiert und alles genau ausgewertet. **Mögli
 - In `staffeln.json` bekommt jede Staffel `vielfalt` (`welt`, `genre`, `erzaehlform`, `hook_art`, `vorbild_kurz`, `figuren_fokus`, `laenge`, `folgen`, `tiktok`, `experiment`, `neue_kulissen`) und `cliffhanger` (Art je Folge). Die Analyse vergleicht danach.
 - Die Format-Rotation unten läuft weiter. **Ab s07 bis 22.11. wird nicht auf einen Gewinner festgelegt**, sondern weiter abgewechselt (Folgenzahl 6–12, Länge 62–120 s, TikTok einzeln oder Sammelteile).
 
+## Horror-Geschichten (Jonathans Wunsch 4.11., Issue #23)
+
+Jonathan möchte mehr Horror testen, **ohne Blut**: unheimliche Wesen im Stil moderner Internet-Gruselgeschichten (Creepypasta, Kryptiden), kurz als Test mit Folgen von **2–3 Minuten**, um zu sehen, ob es die Leute packt.
+- **Format „horror“:** 3–5 Folgen à 120–180 s (330–430 Wörter, 30–40 Einstellungen), TikTok jede Folge ein eigener Post, Instagram/YouTube jede Folge ein Post (Reels und Shorts erlauben bis 3 min; `staffel_veroeffentlichen.py` erlaubt bei `laengenband` „horror …“ bis 185 s). In `staffeln.json` → `format.laengenband` mit „horror“ beginnen. Stimme bei Folgen über 2 min mit `--anfragen 2`.
+- **Gruseln statt Gewalt:** kein Blut, keine Verletzungen, keine Leichen, keine Gewalt gegen Kinder, nie Suizid. Die Angst entsteht aus Stille, Geräuschen, einer Stimme, die jemanden nachahmt, Licht, das ausgeht, und dem Wesen, das man nie ganz sieht (nur Umriss, Augen, Schatten). Am Ende jeder Folge der Cliffhanger, die letzte Folge darf offen und unheimlich enden.
+- **Nur eigene Wesen:** keine bekannten Figuren nachbauen (z. B. nicht Siren Head, der Figur eines Künstlers, und nicht den Skinwalker aus der Navajo-Überlieferung), sondern eigene Wesen nach dem gleichen Prinzip, z. B. etwas, das Stimmen deiner Familie nachahmt, ein Wesen so hoch wie die Strommasten am Feldrand, ein Ruf aus dem Wald, der näher kommt. Name und Aussehen sind neu.
+- **Stil und Stimme bleiben:** Stil „leuchtend“ mit `lila`/`blau`, Nacht, Nebel, Taschenlampen-Kegel; Stimme Orus, `@vortrag lebendig` (leise, langsamer, Pausen vor der Wendung). Du-Form, keine Fragen ans Publikum.
+- **Kulissen dafür (neu bauen, Stil „leuchtend“):** Wald bei Nacht mit Nebel und Taschenlampe, Feldweg mit Strommasten, Hütte oder Camping am See, verlassene Tankstelle, Funkmast. Höchstens 2 neue pro Staffel.
+
+## Jedes Genre einmal ausprobieren (Jonathans Wunsch 4.11.)
+
+Bis zum 22.11. bekommt möglichst **jedes Genre** eine eigene Staffel (Plan in `taeglich/analyse/experimente.md`): Horror (ohne Blut), Romantik (erste Liebe, nie explizit), Abenteuer/Reise, Krimi/Rätsel, Sci-Fi/Zukunft, Psychologie über dich, Naturgewalt, Familiengeheimnis, Lebenszeit/Philosophie, Tierfreundschaft, Wettlauf gegen die Zeit. **Reine Komödie nicht** (Jonathan: „lustig jetzt nicht“); ein trockener Satz pro Folge bleibt.
+
 ## Abwechslung bei Länge und Folgenzahl (Jonathans Wunsch 2.11., Issue #13)
 
 Damit die Analyse herausfinden kann, was am besten ankommt, ändert sich das Format **von Staffel zu Staffel** nach einer festen Rotation. Feste Grenzen bleiben: jede Folge **62–90 s** (über 1 Minute, #12; bis 90 s ein Post auf Instagram/YouTube, Jonathans Vorgabe 2.11.), TikTok-Teile höchstens 10 min.
@@ -35,12 +48,13 @@ Damit die Analyse herausfinden kann, was am besten ankommt, ändert sich das For
 | Staffel | Folgen | Länge pro Folge | Wörter pro Folge | Einstellungen | TikTok |
 |---|---|---|---|---|---|
 | s01 (fertig) | 10 | frei (66–79 s gemessen) | 186–207 | 18–20 | 4 Sammelteile |
-| s02 | 8 | **kurz** 60–70 s | 180–195 | 18–22 | **jede Folge ein eigener Post** |
-| s03 | 12 | **lang** 80–90 s | 215–230 | 22–26 | 5 Sammelteile |
-| s04 | 6 | **XL** 90–120 s (bis 2 min) | 240–310 | 24–30 | **jede Folge ein eigener Post** |
-| s05 | 10 | **mittel** 70–80 s | 195–210 | 20–24 | 4 Sammelteile |
-| s06 | 10 | **gemischt**: 3 Folgen ~60 s, 4 ~80 s, 3 ~110 s | je nach Länge | | jede Folge ein eigener Post |
-| ab s07 | bis 22.11. weiter abwechseln (Testphase), danach nach Abschlussbericht | Gewinner erst ab 22.11. festlegen | | | |
+| s02 (fertig) | 8 | **kurz** 60–70 s (65–81 s gemessen) | 189–201 | 18–20 | **jede Folge ein eigener Post** |
+| s03 **Horror-Test** (Jonathans Wunsch 4.11., Issue #23) | 4 | **horror** 2–3 min (120–180 s) | 330–430 | 30–40 | **jede Folge ein eigener Post** |
+| s04 | 12 | **lang** 80–90 s | 215–230 | 22–26 | 5 Sammelteile |
+| s05 | 6 | **XL** 90–120 s (bis 2 min) | 240–310 | 24–30 | **jede Folge ein eigener Post** |
+| s06 | 10 | **mittel** 70–80 s | 195–210 | 20–24 | 4 Sammelteile |
+| s07 | 10 | **gemischt**: 3 Folgen ~60 s, 4 ~80 s, 3 ~110 s | je nach Länge | | jede Folge ein eigener Post |
+| ab s08 | bis 22.11. weiter abwechseln (Testphase), danach nach Abschlussbericht | Gewinner erst ab 22.11. festlegen | | | |
 
 Jonathans Wunsch vom 2.11. abends: Abwechslung, auch **Kurzvideos von 1 bis 2 Minuten** und solche mit **höchstens 90 s**, und schauen, wie sie ankommen. Dazu testen wir auf TikTok **einzelne Folgen** statt Sammelteile: die Zahlen vom 2.11. zeigen, dass bei den 7-Minuten-Teilen nach einem Viertel nur noch 3–9 % zuschauen.
 - **Instagram/YouTube:** jede Folge ist ein Post, auch die XL-Folgen bis 2 min (beide Plattformen erlauben das). Nie in Teile unter 1 Minute schneiden (#12).

@@ -38,6 +38,7 @@ TAKT = {"tiktok": [(8, 0), (12, 0), (16, 0), (20, 0)],  # 4× am Tag (Jonathans 
 MIN_DAUER = 62.0   # jedes Video über 1 Minute (Issue #12), mit kleinem Puffer
 MAX_FOLGE = 90.0   # bis 90 s: ein Post auf Instagram/YouTube (Jonathans Vorgabe 2.11.)
 MAX_XL = 125.0     # Format „XL“/„gemischt“: Folgen bis ca. 2 min (Jonathans Wunsch 2.11.)
+MAX_HORROR = 185.0 # Format „horror“: Folgen 2–3 min (Jonathans Wunsch 4.11., Issue #23); Reels/Shorts erlauben bis 3 min
 MAX_TEIL = 600.0
 VORLAUF = dt.timedelta(minutes=60)
 
@@ -121,7 +122,8 @@ def main(argv=None) -> int:
             print(f"Feld „{feld}“ fehlt bei {a.staffel}"); return 1
 
     # XL-Staffeln (Format-Rotation, Jonathans Wunsch 2.11.): Folgen bis 2 min, ungeteilt auf allen Plattformen
-    max_folge = MAX_XL if str((st.get("format") or {}).get("laengenband", "")).lower().startswith(("xl", "gemischt")) else MAX_FOLGE
+    band = str((st.get("format") or {}).get("laengenband", "")).lower()
+    max_folge = MAX_HORROR if band.startswith(("horror", "lang-2-3")) else MAX_XL if band.startswith(("xl", "gemischt")) else MAX_FOLGE
     # 1) Jede Folge: Lautheit angleichen, prüfen
     folgen, fehler = [], []
     for f in st["folgen"]:

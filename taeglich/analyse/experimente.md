@@ -17,7 +17,7 @@ Diese Datei schreibt **jede Analyse** (Abschnitt „Ergebnisse“) und **jede Pr
 
 **Welten / Hauptorte** (✓ = schon benutzt): Großstadt bei Nacht ✓ s01 · Heimatstadt/Kiosk ✓ s02 · Meer und Schiff · Leuchtturm-Insel · Wüste (`duenen`) · Dschungel · Schneesturm/Berghütte · Bergdorf · Unterwasser/Tauchen · Raumstation/Weltall · Flughafen/Flugzeug · Zug quer durch Europa · Bauernhof · Freizeitpark · Krankenhaus · Schule/Internat · Campingplatz am See · Vulkaninsel · Höhle · Museum bei Nacht · Altenheim · Zukunftsstadt 2080 · Kleinstadt in den 90ern (Erinnerung)
 
-**Genres:** Überleben/Mysterium ✓ s01 · Was wäre wenn/Alltagsdrama ✓ s02 · Abenteuer/Reise · Krimi/Rätsel · Komödie · erste Liebe (nie explizit) · Sci-Fi/Zukunft · Lebenszeit/Philosophie (Kurzgesagt) · Psychologie über dich (Psych2Go) · Naturgewalt · Freundschaft/Coming-of-Age · Familiengeheimnis · Wettlauf gegen die Zeit · Tierfreundschaft
+**Genres:** Überleben/Mysterium ✓ s01 · Was wäre wenn/Alltagsdrama ✓ s02 · **Horror ohne Blut** (Jonathans Wunsch 4.11.) · Abenteuer/Reise · Krimi/Rätsel · Romantik/erste Liebe (nie explizit) · Sci-Fi/Zukunft · Lebenszeit/Philosophie (Kurzgesagt) · Psychologie über dich (Psych2Go) · Naturgewalt · Freundschaft/Coming-of-Age · Familiengeheimnis · Wettlauf gegen die Zeit · Tierfreundschaft
 
 **Erzählformen:** chronologisch über Tage ✓ s01 · chronologisch über eine Woche ✓ s02 · Countdown (jede Folge eine Stunde weniger) · eine einzige Nacht in Echtzeit · rückwärts erzählt (Ende zuerst) · Zeitsprünge über ein ganzes Leben · Brief/Tagebuch an dich · Was wäre wenn mit zwei Enden (Folge A/B) · Rätsel, das jede Folge ein Stück löst · Reise mit einer Station pro Folge
 
@@ -27,7 +27,28 @@ Diese Datei schreibt **jede Analyse** (Abschnitt „Ergebnisse“) und **jede Pr
 
 **Figuren-Fokus:** Schwester ✓ · Opa ✓ · beste Freundin ✓ · bester Freund · Eltern · Oma · ein Fremder wird Freund · ein Tier · Lehrerin · neue Staffel-Figur (`sNN_…` in `figuren.json`)
 
-**Format (Rotation FORMAT.md):** s03 lang 12 Folgen · s04 XL 6 Folgen · s05 mittel 10 · s06 gemischt · danach bis 22.11. weiter abwechseln (Folgenzahl 6–12, Länge 62–120 s, TikTok einzeln oder Sammelteile).
+**Format (Rotation FORMAT.md):** s03 Horror-Test 4 × 2–3 min · s04 lang 12 Folgen · s05 XL 6 Folgen · s06 mittel 10 · s07 gemischt · danach bis 22.11. weiter abwechseln (Folgenzahl 6–12, Länge 62–120 s, TikTok einzeln oder Sammelteile).
+
+## Genre-Plan bis 22.11. (Jonathans Wunsch 4.11.: jedes Genre einmal ausprobieren, „lustig jetzt nicht“, mehr Horror)
+
+Reihenfolge als Vorschlag; die Analyse darf tauschen, aber jedes Genre kommt bis 22.11. einmal dran. Gute Genres werden ein zweites Mal geprüft, bevor sie als „Gewinner“ gelten.
+
+| Staffel | Genre | Format | Idee für die Welt |
+|---|---|---|---|
+| s03 | **Horror ohne Blut** (eigenes Wesen, Creepypasta-Stil) | horror: 4 × 2–3 min | Wald bei Nacht, Feldweg mit Strommasten, Hütte am See |
+| s04 | Romantik / erste Liebe (nie explizit) | lang 12 × 80–90 s | Sommer am Meer, Strandbar, Leuchtturm |
+| s05 | Abenteuer / Reise | XL 6 × 90–120 s | Zug quer durch Europa, Berge, Bahnhöfe |
+| s06 | Krimi / Rätsel | mittel 10 × 70–80 s | Museum bei Nacht, Kleinstadt |
+| s07 | Sci-Fi / Zukunft | gemischt | Zukunftsstadt 2080, Raumstation |
+| s08 | Horror ohne Blut, 2. Durchgang (anderes Wesen, andere Welt) | horror | Schneesturm, Berghütte, Funkmast |
+| s09 | Psychologie über dich | nach Analyse | Schule, Großstadt, Gedankenwelt |
+| s10 | Naturgewalt | nach Analyse | Vulkaninsel, Sturm auf See |
+| s11 | Familiengeheimnis | nach Analyse | Bauernhof, Dachboden, altes Haus |
+| s12 | Lebenszeit / Philosophie (Kurzgesagt) | nach Analyse | Weltall, Lebenszeit, Landschaft |
+| s13 | Tierfreundschaft | nach Analyse | Dschungel, Tierheim, Wald |
+| s14 | Wettlauf gegen die Zeit | nach Analyse | Flughafen, Countdown |
+
+**Nicht als eigenes Genre:** reine Komödie (Jonathan 4.11.). Ein trockener, selbstironischer Satz pro Folge bleibt.
 
 ## Steckbriefe (je Staffel, schreibt die Produktion)
 

@@ -1,5 +1,7 @@
 # Vorgaben für die nächste Staffel (Analyse vom 3.11.2026, 21:45)
 
+> **Nachtrag 4.11. (Jonathans Wunsch, Issue #23):** Die nächste Staffel (s03) ist der **Horror-Test**: 4 Folgen à 2–3 min, ohne Blut, eigenes Wesen im Creepypasta-Stil, neue Welt (z. B. Wald bei Nacht, Feldweg mit Strommasten). Das geht den Themenvorschlägen unten vor. Regeln: `FORMAT.md` → „Horror-Geschichten“, Genre-Plan in `experimente.md`.
+
 Aus `taeglich/analyse/2026-11-03.md`. Noch wenig Daten (84 Posts, keine Kurzvideo-Staffel gepostet), also **Tendenzen**. Feste Regeln gehen vor: über 1 Minute (#12), keine Fragen ans Publikum (#8), nie „Fortsetzung folgt“ (#11), Stil „leuchtend“ (#17), Qualität (#20), kein `@hud` (#19), Themen aus dem echten Leben, hinten anhängen, englische Fassung (#21). Format nach der Rotation in `FORMAT.md` (s02: 8 Folgen, 62–70 s, TikTok jede Folge einzeln).
 
 **Kernbefund:** 96–98 % der TikTok-Zuschauer kommen über „Für dich“ und kennen nichts. Bisher gehen in den ersten 7 s 62–77 % verloren. **Neu:** „Der letzte Mann“ Teil 1 hält mit einer kühnen Prämisse im ersten Satz („Stell dir vor, du bist der *einzige* Mann auf der Welt.“) 46 % nach 5 s und 38 % nach 10 s, 47 s Wiedergabe, 4 Follows – das beste TikTok bisher (1 Post, Tendenz). Auf YouTube/Instagram bekommen nur die ersten 2–3 Posts eines Tages Reichweite, Zuschauer steigen also irgendwo mitten in der Staffel ein.
