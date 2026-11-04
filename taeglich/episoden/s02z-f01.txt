@@ -1,0 +1,45 @@
+# Der Hauptgewinn – Zitate: Was Geld nicht kaufen kann
+@musik musik/s02z-f01.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung traurig
+@vortrag lebendig
+@mund zitate
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette blau
+@zeit abend
+
+== Hook ==
+// Kiosk bei Nacht, du klein davor, Neonschild
+[kiosk du zeit=nacht palette=rosa zoom-rein hooktext="HALT DICH VON IHM FERN"] Wer dir sagt, Geld geht über alles, von dem halt dich fern.
+// Großstadt bei Nacht von oben, tausend Fenster
+[grossstadt zeit=nacht palette=blau zoom-raus] Denn irgendwann verkauft er auch dich. Für den richtigen Preis.
+
+== Zitate ==
+// Park im Herbst, eine Bank, Blätter fallen
+[park du:sitzt jahreszeit=herbst zeit=abend blaetter palette=blau zoom-rein] Die Menschen, die dich mochten, als du elf Euro auf dem Konto hattest, sind die, die zählen.
+// Esstisch mit Kerzen, alle Stühle besetzt
+[esstisch oma opa mama papa lina du kerzen zeit=abend palette=orange schwenk-rechts] Du kannst dir ein Haus kaufen. Aber kein Zuhause. Ein Zuhause sind die Menschen an deinem Tisch.
+// Haltestelle im Regen, du allein
+[haltestelle du regen zeit=abend palette=blau zoom-rein] Wer nur kommt, wenn du etwas hast, war nie wirklich da.
+// Wald am Abend mit Nebel und Lichtstrahlen
+[wald zeit=abend nebel du palette=gruen zoom-rein] Die lautesten Menschen in deinem Leben sind selten die wichtigsten. Achte auf die, die bleiben, wenn es leise wird.
+// Lebenszeit: dein Leben in Wochen
+[lebenszeit jahre=18 oben="Deine Zeit" palette=tuerkis zoom-raus] Zeit ist das Einzige, was du ausgibst, ohne zu wissen, wie viel du noch hast. Gib sie den Richtigen.
+// See am Abend, zwei Figuren, Glühwürmchen
+[see du mia sitzen zeit=abend gluehwuermchen palette=rosa zoom-raus] Eine Lüge spart dir heute ein schwieriges Gespräch. Und kostet dich morgen einen Freund.
+// Weltall: die Erde, klein und still
+[weltall mond palette=lila zoom-raus] Auf diesem Planeten gibt es acht Milliarden Menschen. Ein paar davon würden für dich durch die Stadt rennen. Halt sie fest.
+// Wüste am Abend, Dünen glühen
+[duenen zeit=abend du palette=orange zoom-raus] Du kannst fast alles nachkaufen. Nur keinen Sonntag, der schon vorbei ist.
+// Polarlicht über Bergen und Stadt, warm
+[polarlicht farbe=#ffb45e palette=orange zoom-rein] Reich ist nicht, wer am meisten hat. Reich ist, wer am Sonntag nicht allein am Tisch sitzt.
+
+== Schluss ==
+// Landschaft am Abend, du ganz klein auf dem Hügel
+[landschaft zeit=abend du palette=rosa zoom-raus] Und wenn du heute nur eine Sache machst:
+// Handy: Anruf bei Opa
+[handy ort=wohnzimmer zeit=abend netz=4 akku=64 uhrzeit="19:30" von="Opa" nachricht="Anruf wird verbunden …" palette=orange] Ruf deinen Opa an. Nicht morgen. Heute.

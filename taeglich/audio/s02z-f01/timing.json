@@ -1,0 +1,122 @@
+{
+ "dauer": 64.598,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "kiosk",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 4.838,
+   "emotion": "erzaehlend",
+   "text": "Wer dir sagt, Geld geht über alles, von dem halt dich fern."
+  },
+  {
+   "nr": 2,
+   "typ": "grossstadt",
+   "kapitel": 1,
+   "start": 4.838,
+   "dauer": 3.59,
+   "emotion": "erzaehlend",
+   "text": "Denn irgendwann verkauft er auch dich. Für den richtigen Preis."
+  },
+  {
+   "nr": 3,
+   "typ": "park",
+   "kapitel": 2,
+   "start": 8.428,
+   "dauer": 5.15,
+   "emotion": "erzaehlend",
+   "text": "Die Menschen, die dich mochten, als du elf Euro auf dem Konto hattest, sind die, die zählen."
+  },
+  {
+   "nr": 4,
+   "typ": "esstisch",
+   "kapitel": 2,
+   "start": 13.578,
+   "dauer": 5.63,
+   "emotion": "erzaehlend",
+   "text": "Du kannst dir ein Haus kaufen. Aber kein Zuhause. Ein Zuhause sind die Menschen an deinem Tisch."
+  },
+  {
+   "nr": 5,
+   "typ": "haltestelle",
+   "kapitel": 2,
+   "start": 19.208,
+   "dauer": 3.302,
+   "emotion": "erzaehlend",
+   "text": "Wer nur kommt, wenn du etwas hast, war nie wirklich da."
+  },
+  {
+   "nr": 6,
+   "typ": "wald",
+   "kapitel": 2,
+   "start": 22.51,
+   "dauer": 6.206,
+   "emotion": "erzaehlend",
+   "text": "Die lautesten Menschen in deinem Leben sind selten die wichtigsten. Achte auf die, die bleiben, wenn es leise wird."
+  },
+  {
+   "nr": 7,
+   "typ": "lebenszeit",
+   "kapitel": 2,
+   "start": 28.716,
+   "dauer": 6.734,
+   "emotion": "erzaehlend",
+   "text": "Zeit ist das Einzige, was du ausgibst, ohne zu wissen, wie viel du noch hast. Gib sie den Richtigen."
+  },
+  {
+   "nr": 8,
+   "typ": "see",
+   "kapitel": 2,
+   "start": 35.45,
+   "dauer": 5.894,
+   "emotion": "erzaehlend",
+   "text": "Eine Lüge spart dir heute ein schwieriges Gespräch. Und kostet dich morgen einen Freund."
+  },
+  {
+   "nr": 9,
+   "typ": "weltall",
+   "kapitel": 2,
+   "start": 41.344,
+   "dauer": 6.638,
+   "emotion": "erzaehlend",
+   "text": "Auf diesem Planeten gibt es acht Milliarden Menschen. Ein paar davon würden für dich durch die Stadt rennen. Halt sie fest."
+  },
+  {
+   "nr": 10,
+   "typ": "duenen",
+   "kapitel": 2,
+   "start": 47.982,
+   "dauer": 4.67,
+   "emotion": "erzaehlend",
+   "text": "Du kannst fast alles nachkaufen. Nur keinen Sonntag, der schon vorbei ist."
+  },
+  {
+   "nr": 11,
+   "typ": "polarlicht",
+   "kapitel": 2,
+   "start": 52.652,
+   "dauer": 6.23,
+   "emotion": "erzaehlend",
+   "text": "Reich ist nicht, wer am meisten hat. Reich ist, wer am Sonntag nicht allein am Tisch sitzt."
+  },
+  {
+   "nr": 12,
+   "typ": "landschaft",
+   "kapitel": 3,
+   "start": 58.882,
+   "dauer": 2.342,
+   "emotion": "erzaehlend",
+   "text": "Und wenn du heute nur eine Sache machst:"
+  },
+  {
+   "nr": 13,
+   "typ": "handy",
+   "kapitel": 3,
+   "start": 61.224,
+   "dauer": 3.374,
+   "emotion": "erzaehlend",
+   "text": "Ruf deinen Opa an. Nicht morgen. Heute."
+  }
+ ]
+}

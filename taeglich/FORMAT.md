@@ -39,7 +39,15 @@ Jonathan möchte mehr Horror testen, **ohne Blut**: unheimliche Wesen im Stil mo
 
 ## Jedes Genre einmal ausprobieren (Jonathans Wunsch 4.11.)
 
-Bis zum 22.11. bekommt möglichst **jedes Genre** eine eigene Staffel (Plan in `taeglich/analyse/experimente.md`): Horror (ohne Blut), Romantik (erste Liebe, nie explizit), Abenteuer/Reise, Krimi/Rätsel, Sci-Fi/Zukunft, Psychologie über dich, Naturgewalt, Familiengeheimnis, Lebenszeit/Philosophie, Tierfreundschaft, Wettlauf gegen die Zeit. **Reine Komödie nicht** (Jonathan: „lustig jetzt nicht“); ein trockener Satz pro Folge bleibt.
+Bis zum 22.11. bekommt möglichst **jedes Genre** eine eigene Staffel (Plan in `taeglich/analyse/experimente.md`): Horror (ohne Blut, zweimal), Krimi/Rätsel, Sci-Fi/Zukunft, Psychologie über dich, Naturgewalt, Familiengeheimnis, Lebenszeit/Philosophie, Tierfreundschaft, Wettlauf gegen die Zeit. **Nicht:** reine Komödie („lustig jetzt nicht“), Romantik und Abenteuer/Reise (Jonathan 4.11.: „raus“). Ein trockener Satz pro Folge bleibt.
+
+## Zitat-Video nach jeder Staffel (Jonathans Wunsch 4.11., Issue #24)
+
+Nach jeder Staffel kommt **ein Zitat-Video** (etwa 1 Minute, immer über 62 s, #12): kurze, starke Sätze zum Thema der Staffel, z. B. „Wer dir sagt, Geld geht über alles, von dem halt dich fern.“ Darunter läuft **tiefe, ruhige Musik**.
+- **Drehbuch:** `taeglich/episoden/sNNz-f01.txt` (Titel `# <Staffeltitel> – Zitate: <Titel>`), 10–14 Einstellungen, 170–200 Wörter, je Satz ein Wow-Bild (Panorama, Licht, kleine Figur), Stil „leuchtend“, Stimme Orus wie immer. Erster Satz mit `hooktext`. Kein Endkarte, keine Fragen ans Publikum, die letzte Zeile ist eine kurze Aufforderung (z. B. „Ruf deinen Opa an. Heute.“).
+- **Keine erfundenen Zitate berühmter Leute:** eigene Sätze in Du-Form oder alte Sprichwörter ohne Namen. Ein Satz mit Namen nur, wenn die Quelle sicher belegt ist.
+- **Musik:** nach `python -m ton.folge …` noch `python taeglich/zitat_musik.py taeglich/episoden/sNNz-f01.txt` (prozedurale Musik aus `ton/musik.py`, Stimmung `traurig` = Streicher und tiefes Klavier, ca. 14 dB unter der Stimme, lizenzfrei). Das ist die einzige Ausnahme von „nur Geräusche“; Drone und Rauschen bleiben verboten.
+- **Posten:** in `staffeln.json` als eigener Eintrag `id: "sNNz"`, `art: "zitate"`, 1 Folge, `tiktok_teile: [[1]]`, danach wie eine Staffel mit `staffel_veroeffentlichen.py sNNz` (hinten angehängt, also direkt nach der Staffel) und auf Englisch mit `staffel_englisch.py sNNz`. `vorrat.py` zählt Zitat-Videos nicht als Staffel.
 
 ## Abwechslung bei Länge und Folgenzahl (Jonathans Wunsch 2.11., Issue #13)
 

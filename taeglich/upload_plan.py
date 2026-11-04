@@ -19,12 +19,12 @@ TAGE = ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So"]
 
 def label(p: dict, staffeln: dict) -> str:
     i = p["id"]
-    m = re.search(r"(s\d+)-teil-(\d+)$", i)
+    m = re.search(r"(s\d+z?)-teil-(\d+)$", i)
     if m:
         st = staffeln.get(m.group(1), {})
         nrn = (st.get("tiktok_teile") or [[]])[int(m.group(2)) - 1] if st.get("tiktok_teile") else []
         return f"„{st.get('titel', m.group(1))}“ Teil {m.group(2)}" + (f" (F{nrn[0]}–{nrn[-1]})" if nrn else "")
-    m = re.search(r"(s\d+)-f(\d+)$", i)
+    m = re.search(r"(s\d+z?)-f(\d+)$", i)
     if m:
         return f"„{staffeln.get(m.group(1), {}).get('titel', m.group(1))}“ F{int(m.group(2))}"
     if re.match(r"taeglich-(tiktok|insta|yt)-video-?\d+$|taeglich-(tiktok|insta|yt)-\d+$", i):

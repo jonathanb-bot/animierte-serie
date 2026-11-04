@@ -33,7 +33,7 @@ for plat, n in PRO_TAG.items():
 staffeln = json.loads((ROOT / "taeglich" / "staffeln.json").read_text()).get("staffeln", [])
 # Nachtdatum: Läufe bis 6 Uhr früh zählen zur Nacht davor (z. B. Start 00:44 am 2.11. = Nacht vom 1.11.)
 nacht = (jetzt - dt.timedelta(hours=6)).date()
-heute_fertig = any(str(s.get("datum", "")).startswith(nacht.isoformat()) and s.get("veroeffentlicht") for s in staffeln)
+heute_fertig = any(str(s.get("datum", "")).startswith(nacht.isoformat()) and s.get("veroeffentlicht") and s.get("art") != "zitate" for s in staffeln)  # Zitat-Videos zählen nicht (Issue #24)
 if heute_fertig:
     print("In dieser Nacht ist schon eine Staffel fertig → AUSSETZEN"); print("AUSSETZEN"); sys.exit(0)
 # Einmalig: Jonathan wollte die neue Staffel (erste im Stil „leuchtend“ + englische Fassung) schon in der Nacht 3./4.11.

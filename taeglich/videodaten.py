@@ -77,10 +77,10 @@ def posts_fuer(st: dict) -> dict:
     """Geplante Posts (aus staffeln.json → veroeffentlicht) je Video-Pfad."""
     out: dict[str, dict] = {}
     for pid, zeit in (st.get("veroeffentlicht") or {}).items():
-        m = re.match(r"taeglich-(insta|yt)-(s\d+-f\d+)$", pid)
+        m = re.match(r"taeglich-(insta|yt)-(s\d+z?-f\d+)$", pid)
         if m:
             out.setdefault(f"taeglich/{m.group(2)}.mp4", {})[{"insta": "instagram", "yt": "youtube"}[m.group(1)]] = {"id": pid, "zeit": zeit}
-        m = re.match(r"taeglich-tiktok-(s\d+)-teil-(\d+)$", pid)
+        m = re.match(r"taeglich-tiktok-(s\d+z?)-teil-(\d+)$", pid)
         if m:
             out.setdefault(f"taeglich-tiktok/{m.group(1)}-teil-{m.group(2)}.mp4", {})["tiktok"] = {"id": pid, "zeit": zeit}
     return out

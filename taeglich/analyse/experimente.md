@@ -17,7 +17,7 @@ Diese Datei schreibt **jede Analyse** (Abschnitt „Ergebnisse“) und **jede Pr
 
 **Welten / Hauptorte** (✓ = schon benutzt): Großstadt bei Nacht ✓ s01 · Heimatstadt/Kiosk ✓ s02 · Meer und Schiff · Leuchtturm-Insel · Wüste (`duenen`) · Dschungel · Schneesturm/Berghütte · Bergdorf · Unterwasser/Tauchen · Raumstation/Weltall · Flughafen/Flugzeug · Zug quer durch Europa · Bauernhof · Freizeitpark · Krankenhaus · Schule/Internat · Campingplatz am See · Vulkaninsel · Höhle · Museum bei Nacht · Altenheim · Zukunftsstadt 2080 · Kleinstadt in den 90ern (Erinnerung)
 
-**Genres:** Überleben/Mysterium ✓ s01 · Was wäre wenn/Alltagsdrama ✓ s02 · **Horror ohne Blut** (Jonathans Wunsch 4.11.) · Abenteuer/Reise · Krimi/Rätsel · Romantik/erste Liebe (nie explizit) · Sci-Fi/Zukunft · Lebenszeit/Philosophie (Kurzgesagt) · Psychologie über dich (Psych2Go) · Naturgewalt · Freundschaft/Coming-of-Age · Familiengeheimnis · Wettlauf gegen die Zeit · Tierfreundschaft
+**Genres:** Überleben/Mysterium ✓ s01 · Was wäre wenn/Alltagsdrama ✓ s02 · **Horror ohne Blut** (Jonathans Wunsch 4.11.) · Krimi/Rätsel (Romantik und Abenteuer/Reise nicht, Jonathan 4.11.) · Sci-Fi/Zukunft · Lebenszeit/Philosophie (Kurzgesagt) · Psychologie über dich (Psych2Go) · Naturgewalt · Freundschaft/Coming-of-Age · Familiengeheimnis · Wettlauf gegen die Zeit · Tierfreundschaft
 
 **Erzählformen:** chronologisch über Tage ✓ s01 · chronologisch über eine Woche ✓ s02 · Countdown (jede Folge eine Stunde weniger) · eine einzige Nacht in Echtzeit · rückwärts erzählt (Ende zuerst) · Zeitsprünge über ein ganzes Leben · Brief/Tagebuch an dich · Was wäre wenn mit zwei Enden (Folge A/B) · Rätsel, das jede Folge ein Stück löst · Reise mit einer Station pro Folge
 
@@ -36,19 +36,20 @@ Reihenfolge als Vorschlag; die Analyse darf tauschen, aber jedes Genre kommt bis
 | Staffel | Genre | Format | Idee für die Welt |
 |---|---|---|---|
 | s03 | **Horror ohne Blut** (eigenes Wesen, Creepypasta-Stil) | horror: 4 × 2–3 min | Wald bei Nacht, Feldweg mit Strommasten, Hütte am See |
-| s04 | Romantik / erste Liebe (nie explizit) | lang 12 × 80–90 s | Sommer am Meer, Strandbar, Leuchtturm |
-| s05 | Abenteuer / Reise | XL 6 × 90–120 s | Zug quer durch Europa, Berge, Bahnhöfe |
-| s06 | Krimi / Rätsel | mittel 10 × 70–80 s | Museum bei Nacht, Kleinstadt |
-| s07 | Sci-Fi / Zukunft | gemischt | Zukunftsstadt 2080, Raumstation |
+| s04 | Krimi / Rätsel | lang 12 × 80–90 s | Museum bei Nacht, Kleinstadt |
+| s05 | Sci-Fi / Zukunft | XL 6 × 90–120 s | Zukunftsstadt 2080, Raumstation |
+| s06 | Psychologie über dich | mittel 10 × 70–80 s | Schule, Großstadt, Gedankenwelt |
+| s07 | Naturgewalt | gemischt | Vulkaninsel, Sturm auf See |
 | s08 | Horror ohne Blut, 2. Durchgang (anderes Wesen, andere Welt) | horror | Schneesturm, Berghütte, Funkmast |
-| s09 | Psychologie über dich | nach Analyse | Schule, Großstadt, Gedankenwelt |
-| s10 | Naturgewalt | nach Analyse | Vulkaninsel, Sturm auf See |
-| s11 | Familiengeheimnis | nach Analyse | Bauernhof, Dachboden, altes Haus |
-| s12 | Lebenszeit / Philosophie (Kurzgesagt) | nach Analyse | Weltall, Lebenszeit, Landschaft |
-| s13 | Tierfreundschaft | nach Analyse | Dschungel, Tierheim, Wald |
-| s14 | Wettlauf gegen die Zeit | nach Analyse | Flughafen, Countdown |
+| s09 | Familiengeheimnis | nach Analyse | Bauernhof, Dachboden, altes Haus |
+| s10 | Lebenszeit / Philosophie (Kurzgesagt) | nach Analyse | Weltall, Lebenszeit, Landschaft |
+| s11 | Tierfreundschaft | nach Analyse | Dschungel, Tierheim, Wald |
+| s12 | Wettlauf gegen die Zeit | nach Analyse | Flughafen, Countdown |
 
-**Nicht als eigenes Genre:** reine Komödie (Jonathan 4.11.). Ein trockener, selbstironischer Satz pro Folge bleibt.
+**Nicht als eigenes Genre:** reine Komödie (Jonathan 4.11.), **Romantik und Abenteuer/Reise** (Jonathan 4.11.: „raus“). Ein trockener, selbstironischer Satz pro Folge bleibt.
+
+**Nach jeder Staffel ein Zitat-Video** (Jonathans Wunsch 4.11., Issue #24): ca. 65–80 s, 8–12 kurze Sätze zum Thema der Staffel, tiefe Musik im Hintergrund. Messen: Saves und Shares pro Aufruf im Vergleich zu den Folgen.
+
 
 ## Steckbriefe (je Staffel, schreibt die Produktion)
 

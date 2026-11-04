@@ -59,12 +59,12 @@ def folge_von(video: str | None, staffeln: dict, text: str = "") -> dict:
     """Was steckt im Video? Serie, Folge, bei Kurzvideo-Staffeln Titel und Stimmung."""
     if not video:
         return {"inhalt": (text or "extern")[:50], "stimmung": ""}
-    m = re.match(r"taeglich/(s\d+)-f(\d+)\.mp4", video)
+    m = re.match(r"taeglich/(s\d+z?)-f(\d+)\.mp4", video)
     if m:
         st = staffeln.get(m.group(1), {})
         f = next((x for x in st.get("folgen", []) if x.get("nr") == int(m.group(2))), {})
         return {"inhalt": f"{st.get('titel', m.group(1))} F{int(m.group(2))}: {f.get('titel', '')}", "stimmung": f.get("stimmung", "")}
-    m = re.match(r"taeglich-tiktok/(s\d+)-teil-(\d+)\.mp4", video)
+    m = re.match(r"taeglich-tiktok/(s\d+z?)-teil-(\d+)\.mp4", video)
     if m:
         return {"inhalt": f"{staffeln.get(m.group(1), {}).get('titel', m.group(1))} TikTok-Teil {m.group(2)}", "stimmung": ""}
     m = re.match(r"taeglich/(video-\d+)\.mp4", video)
