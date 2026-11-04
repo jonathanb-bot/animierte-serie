@@ -1,12 +1,12 @@
 {
- "dauer": 75.352,
+ "dauer": 77.8,
  "einstellungen": [
   {
    "nr": 1,
    "typ": "kiosk",
    "kapitel": 1,
    "start": 0.0,
-   "dauer": 5.126,
+   "dauer": 5.894,
    "emotion": "spannend",
    "text": "Imagine you just won thirty million. And nobody can ever know."
   },
@@ -14,8 +14,8 @@
    "nr": 2,
    "typ": "objekt",
    "kapitel": 1,
-   "start": 5.126,
-   "dauer": 3.278,
+   "start": 5.894,
+   "dauer": 2.774,
    "emotion": "erklaerend",
    "text": "All six numbers. Plus the bonus ball."
   },
@@ -23,8 +23,8 @@
    "nr": 3,
    "typ": "gesicht",
    "kapitel": 1,
-   "start": 8.404,
-   "dauer": 3.95,
+   "start": 8.668,
+   "dauer": 4.862,
    "emotion": "spannend",
    "text": "Right now, your bank account says eleven dollars and forty cents."
   },
@@ -32,8 +32,8 @@
    "nr": 4,
    "typ": "handy",
    "kapitel": 1,
-   "start": 12.354,
-   "dauer": 3.014,
+   "start": 13.53,
+   "dauer": 2.438,
    "emotion": "erzaehlend",
    "text": "Until a minute ago, that was your biggest problem."
   },
@@ -41,7 +41,7 @@
    "nr": 5,
    "typ": "esstisch",
    "kapitel": 2,
-   "start": 15.368,
+   "start": 15.968,
    "dauer": 4.55,
    "emotion": "froh",
    "text": "Yesterday you turned eighteen. Grandpa slid an envelope across the table."
@@ -50,8 +50,8 @@
    "nr": 6,
    "typ": "gesicht",
    "kapitel": 2,
-   "start": 19.918,
-   "dauer": 2.51,
+   "start": 20.518,
+   "dauer": 2.486,
    "emotion": "froh",
    "text": "“You're old enough now. Good luck, kiddo.”"
   },
@@ -59,8 +59,8 @@
    "nr": 7,
    "typ": "titel",
    "kapitel": 2,
-   "start": 22.428,
-   "dauer": 4.838,
+   "start": 23.004,
+   "dauer": 5.534,
    "emotion": "erzaehlend",
    "text": "A lottery ticket. With the same numbers Grandpa has played for forty-one years."
   },
@@ -68,8 +68,8 @@
    "nr": 8,
    "typ": "zimmer",
    "kapitel": 2,
-   "start": 27.266,
-   "dauer": 2.318,
+   "start": 28.538,
+   "dauer": 2.342,
    "emotion": "erzaehlend",
    "text": "Honestly, you only took it to be polite."
   },
@@ -77,8 +77,8 @@
    "nr": 9,
    "typ": "weltall",
    "kapitel": 3,
-   "start": 29.584,
-   "dauer": 5.174,
+   "start": 30.88,
+   "dauer": 4.886,
    "emotion": "erzaehlend",
    "text": "The odds of winning this jackpot are about one in a hundred and forty million."
   },
@@ -86,8 +86,8 @@
    "nr": 10,
    "typ": "grossstadt",
    "kapitel": 3,
-   "start": 34.758,
-   "dauer": 4.406,
+   "start": 35.766,
+   "dauer": 4.814,
    "emotion": "erzaehlend",
    "text": "That's like pointing at one random person in the whole country. Twice in a row."
   },
@@ -95,8 +95,8 @@
    "nr": 11,
    "typ": "netz",
    "kapitel": 3,
-   "start": 39.164,
-   "dauer": 4.766,
+   "start": 40.58,
+   "dauer": 5.054,
    "emotion": "erzaehlend",
    "text": "Every week, millions of people pick their numbers. This time, it's you."
   },
@@ -104,8 +104,8 @@
    "nr": 12,
    "typ": "kiosk",
    "kapitel": 3,
-   "start": 43.93,
-   "dauer": 4.502,
+   "start": 45.634,
+   "dauer": 4.958,
    "emotion": "erzaehlend",
    "text": "The machine at the kiosk beeps three times. Then for a really long time."
   },
@@ -113,8 +113,8 @@
    "nr": 13,
    "typ": "gesicht",
    "kapitel": 3,
-   "start": 48.432,
-   "dauer": 2.726,
+   "start": 50.592,
+   "dauer": 2.75,
    "emotion": "spannend",
    "text": "“Kid. You need to go to the lottery office.”"
   },
@@ -122,17 +122,17 @@
    "nr": 14,
    "typ": "gesicht",
    "kapitel": 3,
-   "start": 51.158,
-   "dauer": 1.694,
+   "start": 53.342,
+   "dauer": 1.766,
    "emotion": "froh",
-   "text": "“And tell your grandpa I said hi.”"
+   "text": "“Say hello to your grandpa for me.”"
   },
   {
    "nr": 15,
    "typ": "grossstadt",
    "kapitel": 4,
-   "start": 52.852,
-   "dauer": 3.446,
+   "start": 55.108,
+   "dauer": 3.182,
    "emotion": "erzaehlend",
    "text": "You run home. The ticket sticks to your sweaty hand."
   },
@@ -140,8 +140,8 @@
    "nr": 16,
    "typ": "zimmer",
    "kapitel": 4,
-   "start": 56.298,
-   "dauer": 5.51,
+   "start": 58.29,
+   "dauer": 5.894,
    "emotion": "erzaehlend",
    "text": "Thirty million. You could skip school tomorrow. You could never have to do anything again."
   },
@@ -149,35 +149,35 @@
    "nr": 17,
    "typ": "landschaft",
    "kapitel": 4,
-   "start": 61.808,
-   "dauer": 5.966,
+   "start": 64.184,
+   "dauer": 6.038,
    "emotion": "erzaehlend",
-   "text": "You could pay off Mom's house. No more night shifts for Dad. Every pony in the world for Lina."
+   "text": "You could pay off Mom's house. No more night shifts for Dad. Every pony in the world for your little sister."
   },
   {
    "nr": 18,
    "typ": "gesicht",
    "kapitel": 4,
-   "start": 67.774,
+   "start": 70.222,
    "dauer": 1.718,
    "emotion": "erzaehlend",
-   "text": "But something's bugging you."
+   "text": "But something is bugging you."
   },
   {
    "nr": 19,
    "typ": "gesicht",
    "kapitel": 5,
-   "start": 69.492,
-   "dauer": 1.502,
+   "start": 71.94,
+   "dauer": 1.55,
    "emotion": "erzaehlend",
-   "text": "You flip the ticket over."
+   "text": "Then you turn it around."
   },
   {
    "nr": 20,
    "typ": "objekt",
    "kapitel": 5,
-   "start": 70.994,
-   "dauer": 4.358,
+   "start": 73.49,
+   "dauer": 4.31,
    "emotion": "erklaerend",
    "text": "On the back, in Grandpa's shaky handwriting: “For all of us.”"
   }

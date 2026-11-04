@@ -1,12 +1,12 @@
 {
- "dauer": 72.242,
+ "dauer": 80.714,
  "einstellungen": [
   {
    "nr": 1,
    "typ": "krankenhaus",
    "kapitel": 1,
    "start": 0.0,
-   "dauer": 4.958,
+   "dauer": 5.078,
    "emotion": "erzaehlend",
    "text": "Dein Opa liegt im Krankenhaus. Und er weiß, dass du Millionär bist."
   },
@@ -14,8 +14,8 @@
    "nr": 2,
    "typ": "gesicht",
    "kapitel": 1,
-   "start": 4.958,
-   "dauer": 3.686,
+   "start": 5.078,
+   "dauer": 3.926,
    "emotion": "froh",
    "text": "„Der Kioskmann ist mein Skatbruder. Der kann nichts für sich behalten.“"
   },
@@ -23,8 +23,8 @@
    "nr": 3,
    "typ": "gesicht",
    "kapitel": 1,
-   "start": 8.644,
-   "dauer": 4.55,
+   "start": 9.004,
+   "dauer": 4.958,
    "emotion": "spannend",
    "text": "Seit einer Woche lügst du alle an. Und Opa wusste es die ganze Zeit."
   },
@@ -32,8 +32,8 @@
    "nr": 4,
    "typ": "krankenhaus",
    "kapitel": 2,
-   "start": 13.194,
-   "dauer": 4.598,
+   "start": 13.962,
+   "dauer": 4.742,
    "emotion": "erzaehlend",
    "text": "Seine Brille liegt auf dem Nachttisch. Ohne sie sieht er plötzlich sehr alt aus."
   },
@@ -41,8 +41,8 @@
    "nr": 5,
    "typ": "gesicht",
    "kapitel": 2,
-   "start": 17.792,
-   "dauer": 2.99,
+   "start": 18.704,
+   "dauer": 3.758,
    "emotion": "erzaehlend",
    "text": "„Hüfte. Halb so wild. Unkraut vergeht nicht.“"
   },
@@ -50,8 +50,8 @@
    "nr": 6,
    "typ": "gesicht",
    "kapitel": 2,
-   "start": 20.782,
-   "dauer": 4.334,
+   "start": 22.462,
+   "dauer": 5.198,
    "emotion": "traurig",
    "text": "Und dann erzählst du ihm alles. Das Geld. Die Lügen. Mia."
   },
@@ -59,8 +59,8 @@
    "nr": 7,
    "typ": "gesicht",
    "kapitel": 2,
-   "start": 25.116,
-   "dauer": 4.43,
+   "start": 27.66,
+   "dauer": 6.35,
    "emotion": "erzaehlend",
    "text": "Opa hört zu, ohne einmal zu unterbrechen. Das kann er besser als jeder andere."
   },
@@ -68,8 +68,8 @@
    "nr": 8,
    "typ": "lebenszeit",
    "kapitel": 3,
-   "start": 29.546,
-   "dauer": 4.31,
+   "start": 34.01,
+   "dauer": 5.414,
    "emotion": "erzaehlend",
    "text": "Opa hat einundvierzig Jahre lang jeden Samstag dieselben Zahlen gespielt."
   },
@@ -77,8 +77,8 @@
    "nr": 9,
    "typ": "objekt",
    "kapitel": 3,
-   "start": 33.856,
-   "dauer": 7.382,
+   "start": 39.424,
+   "dauer": 7.286,
    "emotion": "erklaerend",
    "text": "Es sind keine Glückszahlen. Es sind Geburtstage. Oma, Mama, Papa, Lina. Und deiner."
   },
@@ -86,8 +86,8 @@
    "nr": 10,
    "typ": "gesicht",
    "kapitel": 3,
-   "start": 41.238,
-   "dauer": 4.214,
+   "start": 46.71,
+   "dauer": 4.118,
    "emotion": "erzaehlend",
    "text": "„Ich wollte nie gewinnen. Ich wollte nur jede Woche an euch denken.“"
   },
@@ -95,8 +95,8 @@
    "nr": 11,
    "typ": "esstisch",
    "kapitel": 3,
-   "start": 45.452,
-   "dauer": 5.318,
+   "start": 50.828,
+   "dauer": 6.254,
    "emotion": "erzaehlend",
    "text": "Jeden Sonntag saß die ganze Familie bei ihm am Tisch. Bis alle irgendwann zu beschäftigt waren."
   },
@@ -104,7 +104,7 @@
    "nr": 12,
    "typ": "landschaft",
    "kapitel": 3,
-   "start": 50.77,
+   "start": 57.082,
    "dauer": 2.294,
    "emotion": "erzaehlend",
    "text": "Das letzte Mal ist acht Monate her."
@@ -113,8 +113,8 @@
    "nr": 13,
    "typ": "gesicht",
    "kapitel": 3,
-   "start": 53.064,
-   "dauer": 1.598,
+   "start": 59.376,
+   "dauer": 1.406,
    "emotion": "traurig",
    "text": "Und du warst auch nicht da."
   },
@@ -122,8 +122,8 @@
    "nr": 14,
    "typ": "gesicht",
    "kapitel": 4,
-   "start": 54.662,
-   "dauer": 3.038,
+   "start": 60.782,
+   "dauer": 4.358,
    "emotion": "froh",
    "text": "„Für uns alle, hab ich geschrieben. Nicht für jeden einzeln.“"
   },
@@ -131,8 +131,8 @@
    "nr": 15,
    "typ": "gesicht",
    "kapitel": 4,
-   "start": 57.7,
-   "dauer": 2.894,
+   "start": 65.14,
+   "dauer": 3.014,
    "emotion": "erzaehlend",
    "text": "Du verstehst nicht ganz, was er meint. Noch nicht."
   },
@@ -140,8 +140,8 @@
    "nr": 16,
    "typ": "esstisch",
    "kapitel": 4,
-   "start": 60.594,
-   "dauer": 3.014,
+   "start": 68.154,
+   "dauer": 3.374,
    "emotion": "erzaehlend",
    "text": "Du denkst an seinen Esstisch. An die leeren Stühle."
   },
@@ -149,17 +149,17 @@
    "nr": 17,
    "typ": "polarlicht",
    "kapitel": 4,
-   "start": 63.608,
-   "dauer": 2.102,
+   "start": 71.528,
+   "dauer": 1.838,
    "emotion": "erzaehlend",
-   "text": "Draußen wird der Himmel langsam hell."
+   "text": "Draußen dämmert schon der Morgen."
   },
   {
    "nr": 18,
    "typ": "gesicht",
    "kapitel": 5,
-   "start": 65.71,
-   "dauer": 2.654,
+   "start": 73.366,
+   "dauer": 3.014,
    "emotion": "ernst",
    "text": "„Aber zuerst gehst du zu Mia. Heute noch.“"
   },
@@ -167,8 +167,8 @@
    "nr": 19,
    "typ": "grossstadt",
    "kapitel": 5,
-   "start": 68.364,
-   "dauer": 3.878,
+   "start": 76.38,
+   "dauer": 4.334,
    "emotion": "erzaehlend",
    "text": "Also rennst du. Wie ein Pinguin mit Rucksack. Direkt zu Mia."
   }

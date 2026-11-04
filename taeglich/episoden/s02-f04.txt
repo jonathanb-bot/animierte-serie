@@ -16,7 +16,7 @@
 // Auge mit Strahlen, rot
 [auge farbe=#ff5a3d text="GESUCHT" palette=lila zoom-rein] Irgendwo in deiner Stadt läuft ein Millionär herum. Und alle suchen ihn.
 // Nahaufnahme: Mia
-[gesicht mia ort=grossstadt zeit=nacht misstrauisch palette=lila] „Sag mal. Warst das du?“
+[gesicht mia ort=grossstadt zeit=nacht misstrauisch palette=lila] „Sag mal. Warst du das?“
 // Nahaufnahme: du lachst zu laut
 [gesicht du ort=grossstadt zeit=nacht froh palette=lila] „Ich? Ich hab elf Euro auf dem Konto.“ Du lachst. Viel zu laut.
 
@@ -32,7 +32,7 @@
 
 == Steigerung ==
 // Haltestelle im Regen, ein Fremder schaut zu dir
-[haltestelle du fremder regen zeit=abend palette=blau zoom-rein] An der Haltestelle spricht dich ein Mann an, den du nie gesehen hast.
+[haltestelle du fremder regen zeit=abend palette=blau zoom-rein] An der Haltestelle wartet ein Mann, den du noch nie gesehen hast. Er starrt dich an.
 // Nahaufnahme: der Fremde, freundlich, zu freundlich
 [gesicht fremder ort=haltestelle zeit=abend regen neugierig palette=blau] „Du wohnst doch bei der Lindenstraße, oder?“
 // Handy: unbekannte Nummer ruft an

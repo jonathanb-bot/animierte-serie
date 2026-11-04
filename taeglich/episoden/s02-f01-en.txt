@@ -45,7 +45,7 @@
 // Nahaufnahme: der Kioskbesitzer, blass
 [gesicht fremder ort=kiosk zeit=nacht schreck palette=rosa] “Kid. You need to go to the lottery office.”
 // Nahaufnahme: Kioskbesitzer lächelt
-[gesicht fremder ort=kiosk zeit=nacht froh palette=rosa ruhig] “And tell your grandpa I said hi.”
+[gesicht fremder ort=kiosk zeit=nacht froh palette=rosa ruhig] “Say hello to your grandpa for me.”
 
 == Wendung ==
 // Großstadt: du rennst nach Hause
@@ -53,12 +53,12 @@
 // Zimmer: du sitzt auf dem Bett
 [zimmer du:sitzt zeit=nacht lichterkette palette=lila zoom-rein] Thirty million. You could skip school tomorrow. You could never have to do anything again.
 // Landschaft nachts
-[landschaft zeit=nacht du palette=lila zoom-raus] You could pay off Mom's house. No more night shifts for Dad. Every pony in the world for Lina.
+[landschaft zeit=nacht du palette=lila zoom-raus] You could pay off Mom's house. No more night shifts for Dad. Every pony in the world for your little sister.
 // Nahaufnahme: du denkst
-[gesicht du ort=zimmer zeit=nacht denkt palette=lila] But something's bugging you.
+[gesicht du ort=zimmer zeit=nacht denkt palette=lila] But something is bugging you.
 
 == Cliffhanger ==
 // Nahaufnahme: du drehst den Schein um
-[gesicht du ort=zimmer zeit=nacht neugierig palette=lila zoom-rein] You flip the ticket over.
+[gesicht du ort=zimmer zeit=nacht neugierig palette=lila zoom-rein] Then you turn it around.
 // Lottoschein mit Opas Handschrift
 [objekt objekte="lottoschein:Grandpa's writing" gross="FOR ALL OF US" palette=lila] On the back, in Grandpa's shaky handwriting: “For all of us.”

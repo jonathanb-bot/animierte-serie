@@ -1,12 +1,12 @@
 {
- "dauer": 65.834,
+ "dauer": 68.714,
  "einstellungen": [
   {
    "nr": 1,
    "typ": "auge",
    "kapitel": 1,
    "start": 0.0,
-   "dauer": 4.91,
+   "dauer": 4.574,
    "emotion": "erzaehlend",
    "text": "Irgendwo in deiner Stadt läuft ein Millionär herum. Und alle suchen ihn."
   },
@@ -14,17 +14,17 @@
    "nr": 2,
    "typ": "gesicht",
    "kapitel": 1,
-   "start": 4.91,
+   "start": 4.574,
    "dauer": 1.91,
    "emotion": "ernst",
-   "text": "„Sag mal. Warst das du?“"
+   "text": "„Sag mal. Warst du das?“"
   },
   {
    "nr": 3,
    "typ": "gesicht",
    "kapitel": 1,
-   "start": 6.82,
-   "dauer": 5.39,
+   "start": 6.484,
+   "dauer": 4.934,
    "emotion": "froh",
    "text": "„Ich? Ich hab elf Euro auf dem Konto.“ Du lachst. Viel zu laut."
   },
@@ -32,8 +32,8 @@
    "nr": 4,
    "typ": "klassenzimmer",
    "kapitel": 2,
-   "start": 12.21,
-   "dauer": 2.894,
+   "start": 11.418,
+   "dauer": 3.206,
    "emotion": "erzaehlend",
    "text": "Am Montag redet die ganze Schule nur über den Kiosk."
   },
@@ -41,8 +41,8 @@
    "nr": 5,
    "typ": "gesicht",
    "kapitel": 2,
-   "start": 15.104,
-   "dauer": 3.206,
+   "start": 14.624,
+   "dauer": 4.286,
    "emotion": "erzaehlend",
    "text": "„Wenn ich das wäre, hätte ich mir 'ne Insel gekauft. Mit Pinguinen.“"
   },
@@ -50,8 +50,8 @@
    "nr": 6,
    "typ": "gesicht",
    "kapitel": 2,
-   "start": 18.31,
-   "dauer": 3.254,
+   "start": 18.91,
+   "dauer": 3.038,
    "emotion": "ernst",
    "text": "Du lachst mit. Dein Lachen klingt wie ein kaputter Wecker."
   },
@@ -59,8 +59,8 @@
    "nr": 7,
    "typ": "netz",
    "kapitel": 2,
-   "start": 21.564,
-   "dauer": 4.646,
+   "start": 21.948,
+   "dauer": 4.862,
    "emotion": "erzaehlend",
    "text": "Im Klassenchat rätseln alle, wer der Gewinner ist. Achtundzwanzig Nachrichten in einer Stunde."
   },
@@ -68,17 +68,17 @@
    "nr": 8,
    "typ": "haltestelle",
    "kapitel": 3,
-   "start": 26.21,
-   "dauer": 3.302,
+   "start": 26.81,
+   "dauer": 4.286,
    "emotion": "erzaehlend",
-   "text": "An der Haltestelle spricht dich ein Mann an, den du nie gesehen hast."
+   "text": "An der Haltestelle wartet ein Mann, den du noch nie gesehen hast. Er starrt dich an."
   },
   {
    "nr": 9,
    "typ": "gesicht",
    "kapitel": 3,
-   "start": 29.512,
-   "dauer": 2.414,
+   "start": 31.096,
+   "dauer": 2.174,
    "emotion": "erzaehlend",
    "text": "„Du wohnst doch bei der Lindenstraße, oder?“"
   },
@@ -86,8 +86,8 @@
    "nr": 10,
    "typ": "handy",
    "kapitel": 3,
-   "start": 31.926,
-   "dauer": 3.326,
+   "start": 33.27,
+   "dauer": 3.734,
    "emotion": "erzaehlend",
    "text": "Abends schreibt dir ein Cousin, von dem du nicht wusstest, dass es ihn gibt."
   },
@@ -95,8 +95,8 @@
    "nr": 11,
    "typ": "gesicht",
    "kapitel": 3,
-   "start": 35.252,
-   "dauer": 3.974,
+   "start": 37.004,
+   "dauer": 3.83,
    "emotion": "ernst",
    "text": "Ralf will nur kurz über die Familie reden. Und über ein Darlehen."
   },
@@ -104,8 +104,8 @@
    "nr": 12,
    "typ": "zimmer",
    "kapitel": 3,
-   "start": 39.226,
-   "dauer": 4.838,
+   "start": 40.834,
+   "dauer": 5.726,
    "emotion": "erzaehlend",
    "text": "Um drei Uhr nachts liegst du wach. Jedes Auto draußen klingt, als würde es vor eurem Haus halten."
   },
@@ -113,8 +113,8 @@
    "nr": 13,
    "typ": "gesicht",
    "kapitel": 3,
-   "start": 44.064,
-   "dauer": 3.638,
+   "start": 46.56,
+   "dauer": 3.494,
    "emotion": "ruhig",
    "text": "Dreißig Millionen. Und du schläfst schlechter als je zuvor."
   },
@@ -122,8 +122,8 @@
    "nr": 14,
    "typ": "grossstadt",
    "kapitel": 4,
-   "start": 47.702,
-   "dauer": 2.27,
+   "start": 50.054,
+   "dauer": 2.582,
    "emotion": "erzaehlend",
    "text": "Am nächsten Morgen ist das Gerücht kein Gerücht mehr."
   },
@@ -131,8 +131,8 @@
    "nr": 15,
    "typ": "weltall",
    "kapitel": 4,
-   "start": 49.972,
-   "dauer": 2.438,
+   "start": 52.636,
+   "dauer": 2.582,
    "emotion": "erzaehlend",
    "text": "Ein Foto braucht nur Sekunden, um überall zu sein."
   },
@@ -140,8 +140,8 @@
    "nr": 16,
    "typ": "handy",
    "kapitel": 4,
-   "start": 52.41,
-   "dauer": 4.838,
+   "start": 55.218,
+   "dauer": 5.054,
    "emotion": "erzaehlend",
    "text": "Jemand hat ein Foto gepostet. Der Kiosk, Samstagnacht. Und davor stehst du."
   },
@@ -149,8 +149,8 @@
    "nr": 17,
    "typ": "kiosk",
    "kapitel": 4,
-   "start": 57.248,
-   "dauer": 2.342,
+   "start": 60.272,
+   "dauer": 2.75,
    "emotion": "erzaehlend",
    "text": "Unscharf. Aber jeder erkennt deine Jacke."
   },
@@ -158,8 +158,8 @@
    "nr": 18,
    "typ": "gesicht",
    "kapitel": 5,
-   "start": 59.59,
-   "dauer": 1.814,
+   "start": 63.022,
+   "dauer": 1.862,
    "emotion": "spannend",
    "text": "Darunter ploppt eine Nachricht auf."
   },
@@ -167,8 +167,8 @@
    "nr": 19,
    "typ": "handy",
    "kapitel": 5,
-   "start": 61.404,
-   "dauer": 4.43,
+   "start": 64.884,
+   "dauer": 3.83,
    "emotion": "erzaehlend",
    "text": "Von Mia. „Ich hab dich gefragt. Du hast mir ins Gesicht gelogen.“"
   }

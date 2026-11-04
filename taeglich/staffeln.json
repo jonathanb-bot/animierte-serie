@@ -331,6 +331,28 @@
     "folgen": 8,
     "laengenband": "kurz 60–70 s (immer über 62 s)",
     "tiktok_teile": 8
+   },
+   "en": {
+    "titel": "The Jackpot",
+    "beschreibung": "You turn 18, Grandpa gives you a lottery ticket, and suddenly you have 30 million. Nobody can know. But one lie costs more than any money.",
+    "hashtags": [
+     "#animation",
+     "#story",
+     "#storytime",
+     "#lottery",
+     "#friendship",
+     "#family"
+    ],
+    "folgen": [
+     "Six Numbers",
+     "Nobody Can Know",
+     "Being Rich Is Weird",
+     "The Rumor",
+     "Alone With Thirty Million",
+     "Grandpa's Numbers",
+     "Platform Three",
+     "For All of Us"
+    ]
    }
   }
  ]

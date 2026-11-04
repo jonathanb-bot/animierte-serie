@@ -36,7 +36,7 @@
 // See am Abend, Regen auf dem Wasser
 [see du zeit=abend regen palette=tuerkis zoom-rein] Am Abend gehst du zum See. Da, wo ihr früher Steine habt hüpfen lassen.
 // Nahaufnahme: du am See
-[gesicht du ort=see zeit=abend regen traurig palette=tuerkis] Du suchst einen flachen Stein. Er geht sofort unter.
+[gesicht du ort=see zeit=abend regen traurig palette=tuerkis] Du wirfst einen flachen Stein. Er geht sofort unter.
 // Weltall: die Erde, klein und still
 [weltall mond palette=blau zoom-raus] Dreißig Millionen Euro. Und es gibt niemanden, dem du es sagen kannst.
 // Wald am Abend mit Nebel, du allein

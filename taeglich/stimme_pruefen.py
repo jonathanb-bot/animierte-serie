@@ -28,11 +28,45 @@ ZAHLEN.update({w: str(i) for i, w in enumerate("zero one two three four five six
 ZAHLEN.update({"thirty": "30", "forty": "40", "fifty": "50", "hundred": "100", "thousand": "1000"})
 
 
+EN_EINER = {w: i for i, w in enumerate("zero one two three four five six seven eight nine ten eleven twelve thirteen "
+                                          "fourteen fifteen sixteen seventeen eighteen nineteen".split())}
+EN_ZEHNER = {w: 10 * i for i, w in enumerate("_ _ twenty thirty forty fifty sixty seventy eighty ninety".split()) if w != "_"}
+
+
+def en_zahlen(woerter: list[str]) -> list[str]:
+    """Englische Zahlwörter zusammenfassen: „a hundred and forty“ → „140“, „forty one“ → „41“ (Whisper schreibt Ziffern)."""
+    out, i = [], 0
+    while i < len(woerter):
+        j, wert, teil, gefunden = i, 0, 0, False
+        while j < len(woerter):
+            w = woerter[j]
+            if w in EN_EINER: teil += EN_EINER[w]
+            elif w in EN_ZEHNER: teil += EN_ZEHNER[w]
+            elif w == "hundred" and (gefunden or (j > i and woerter[j - 1] == "a")): teil = max(teil, 1) * 100
+            elif w == "thousand" and gefunden: wert += teil * 1000; teil = 0
+            elif w == "and" and gefunden and j + 1 < len(woerter) and (woerter[j + 1] in EN_EINER or woerter[j + 1] in EN_ZEHNER): pass
+            elif w == "a" and j + 1 < len(woerter) and woerter[j + 1] == "hundred" and not gefunden: pass
+            else: break
+            gefunden = gefunden or w not in ("and", "a")
+            j += 1
+        if gefunden:
+            out.append(str(wert + teil)); i = j
+        else:
+            out.append(woerter[i]); i += 1
+    return out
+
+
 def norm(t: str) -> list[str]:
     t = t.lower().replace("%", " prozent")
+    t = re.sub(r"\$(\d+)\.(\d\d)", r"\1 dollars and \2 cents", t)  # Whisper: „$11.40“
+    t = re.sub(r"\$(\d+)", r"\1 dollars", t)
+    t = re.sub(r"(\d),(\d)", r"\1\2", t)
     t = re.sub(r"[^a-z0-9äöüß ]+", " ", t)
+    w = t.split()
+    if {"hundred", "thousand", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"} & set(w):
+        w = en_zahlen(w)
     # Zahlwörter wie Ziffern behandeln (Whisper schreibt „18“, das Drehbuch „achtzehn“)
-    return [ZAHLEN.get(w, w).replace("ß", "ss") for w in t.split()]
+    return [ZAHLEN.get(x, x).replace("ß", "ss") for x in w]
 
 
 def zeilen(drehbuch: Path) -> list[str]:

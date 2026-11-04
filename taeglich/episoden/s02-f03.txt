@@ -48,13 +48,13 @@
 // Nahaufnahme: Mia ernst
 [gesicht mia ort=grossstadt zeit=abend neugierig palette=rosa] „Du bist anders seit Samstag. Irgendwie leiser.“
 // Weltall: Sterne über der Stadt
-[weltall mond satellit palette=lila zoom-raus] Du könntest es ihr jetzt sagen. Nur ein Satz.
+[weltall mond satellit palette=lila zoom-raus] Du könntest es ihr jetzt sagen. Ein einziger Satz würde reichen.
 // Nahaufnahme: du holst Luft
 [gesicht du ort=grossstadt zeit=abend besorgt palette=rosa] Du holst Luft.
 
 == Cliffhanger ==
 // Handy: Eilmeldung
-[handy ort=grossstadt zeit=abend netz=4 akku=33 uhrzeit="21:07" von="Eilmeldung" nachricht="30-Millionen-Schein wurde am Kiosk in der Lindenstraße gekauft" palette=rosa] Da vibrieren eure Handys gleichzeitig.
+[handy ort=grossstadt zeit=abend netz=4 akku=33 uhrzeit="21:07" von="Eilmeldung" nachricht="30-Millionen-Schein wurde am Kiosk in der Lindenstraße gekauft" palette=rosa] Da vibrieren plötzlich beide Handys gleichzeitig.
 // Kiosk bei Nacht mit Neonschild
 [kiosk zeit=nacht palette=rosa zoom-rein] Der Kiosk in der Lindenstraße. Dein Kiosk.
 // Nahaufnahme: Mia schaut dich an
