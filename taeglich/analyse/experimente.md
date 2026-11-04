@@ -21,7 +21,7 @@ Diese Datei schreibt **jede Analyse** (Abschnitt „Ergebnisse“) und **jede Pr
 
 **Erzählformen:** chronologisch über Tage ✓ s01 · chronologisch über eine Woche ✓ s02 · Countdown (jede Folge eine Stunde weniger) · eine einzige Nacht in Echtzeit · rückwärts erzählt (Ende zuerst) · Zeitsprünge über ein ganzes Leben · Brief/Tagebuch an dich · Was wäre wenn mit zwei Enden (Folge A/B) · Rätsel, das jede Folge ein Stück löst · Reise mit einer Station pro Folge
 
-**Hook-Arten:** Rätsel mit Gefahr ✓ s01 · kühne Prämisse ✓ s02 · Zahl über dein Leben · Countdown („Noch 24 Stunden …“) · Geständnis („Ich habe dich angelogen.“) · absurdes Bild in Sekunde 1 · Ende zuerst („Am Ende dieses Tages bist du …“) · direkte Aussage über dich (Psychologie)
+**Hook-Arten:** Rätsel mit Gefahr ✓ s01 · kühne Prämisse ✓ s02 · Regel/Warnung („In diesem Wald gibt es etwas, das …“) · Zahl über dein Leben · Countdown („Noch 24 Stunden …“) · Geständnis („Ich habe dich angelogen.“) · absurdes Bild in Sekunde 1 · Ende zuerst („Am Ende dieses Tages bist du …“) · direkte Aussage über dich (Psychologie)
 
 **Cliffhanger-Arten:** Entdeckung · Gefahr · Entscheidung · Ankunft · Geständnis · Wiedersehen · Rätsel · Zeitsprung · falsche Fährte
 
@@ -65,7 +65,14 @@ Reihenfolge als Vorschlag; die Analyse darf tauschen, aber jedes Genre kommt bis
 | E1 | s01 | Großer Hook-Text in den ersten 2,5 s hält mehr Leute | `hooktext` in allen Folgen | TikTok Bindung 3 s, Faktor Instagram/YouTube | offen (Posts ab 5.11.) |
 | E2 | s02 | Hook-Text wirkt im direkten Vergleich innerhalb einer Staffel | ungerade Folgen mit, gerade ohne | TikTok Bindung 3 s/7 s, Aufrufe/h Instagram | offen (Posts ab 6.11.) |
 | – | s02 | (Format-Rotation) TikTok-Einzelposts statt Sammelteile | 8 Einzelposts | Wiedergabe in % der Länge, Aufrufe/h | offen |
+| E3 | s03 | Wer nur eine Folge sieht, bleibt länger, wenn der erste Satz die Grund-Regel der Welt enthält (späte Teile ohne sie verlieren zwischen 5 und 30 s die Hälfte) | Folge 1 und 3 mit Grund-Prämisse + neuer Lage, Folge 2 und 4 nur neue Lage | TikTok Bindung 10 s/30 s, Ø Wiedergabe, Follows; Instagram Ø Wiedergabe (F3 gegen F2/F4) | offen |
 
 ## Ergebnisse (je Analyse ergänzen, mit Datum)
 
 - **4.11.:** Noch keine Kurzvideo-Staffel veröffentlicht (s01 ab 5.11., s02 ab 6.11.). Basis bisher: alte Serien.
+- **4.11. (110 Posts, noch keine Kurzvideo-Staffel; Bericht `2026-11-04.md`):**
+  - **Teil-1-Effekt, 2 Serien, 8 TikTok-Posts (Tendenz):** Teil 1 hält deutlich länger als alle späteren Teile – „Der letzte Mann“ 46,7 s Ø / 29 % nach 30 s / 5 Follows gegen Teil 2–3 17,4–18,5 s / 11–12 % / 0; „Der Alien“ 37,3 s / 13 % / 3 gegen Teil 2–5 17,9–25,2 s / 9–11 % / 0–1. Nach 5 s sind alle gleich (41–47 %), der Verlust entsteht zwischen 5 und 30 s. Erklärung: Die Prämissen der späteren Teile setzen Vorwissen voraus. → Experiment E3.
+  - **Hook-Art (alte Serien, je 1–3 Posts, Tendenz):** kühne Prämisse (mann-teil-1) 46,7 s > Rätsel mit Gefahr (alien-teil-1) 37,3 s > 24. Stock 27–31 s. Instagram: Prämissen-Serie 14,6–16,0 s gegen Rätsel-Serie Median ca. 8 s (2 gegen 14 Posts, gleiche Takt-Lage).
+  - **YouTube 4.11.:** kein neuer Short über 89 Aufrufe (am 3.11. zwei über 1.100); Kanal trotzdem +3.470 Aufrufe. Am 5.11. mit vidIQ prüfen.
+  - Welt, Genre, Erzählform, Cliffhanger-Art, Kulisse: noch keine Werte (s01 ab 5.11., s02 ab 6.11.). E1, E2 weiter offen.
+

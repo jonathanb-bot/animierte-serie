@@ -121,7 +121,44 @@
    },
    "erkenntnis": "Kühne Prämisse im ersten Satz („Stell dir vor, du bist der einzige Mann …“) + Humor hält auf TikTok am besten (Tendenz). YouTube/Instagram: im 2-Stunden-Takt bekommen nur die ersten 2–3 Posts des Tages Reichweite (YouTube 02:30/04:30 >1.000, Rest 1–106).",
    "vidiq_credits_danach": 139
+  },
+  {
+   "datum": "2026-11-04T21:45",
+   "quelle": "Analyse vor der Staffel (Zernio 110 Posts + vidIQ kostenlos)",
+   "tiktok": {
+    "follower": 65,
+    "follower_metrik": 66,
+    "follower_30_tage": "+14/-0",
+    "likes_30_tage": 1384,
+    "videos": 19,
+    "teil1_effekt": "mann-teil-1 Ø 46,7 s/5 Follows gegen Teil 2–3 17–18 s/0; alien-teil-1 37,3 s gegen Teil 2–5 18–25 s",
+    "fuer_dich": "97–98 %"
+   },
+   "tiktok_eng": {
+    "konto": "storys4you_eng",
+    "follower": 0,
+    "videos": 0
+   },
+   "instagram": {
+    "follower": 7,
+    "aufrufe_30_tage": 26277,
+    "reichweite_30_tage": 13445,
+    "aktive_konten": 233,
+    "interaktionen_30_tage": 339,
+    "posts_4_11": "126–236 Aufrufe je Reel; mann-kurz Ø 15–16 s, alien-kurz Ø ca. 8 s"
+   },
+   "youtube": {
+    "abonnenten": 55,
+    "abonnenten_zernio": 52,
+    "aufrufe_gesamt_vidiq": 21117,
+    "videos": 48,
+    "aufrufe_heute": "+3.470",
+    "neue_shorts_4_11": "bester 89 Aufrufe (04:30), Rest 5–67",
+    "analytics_zernio": "HTTP 429 (Kontingent), kein Posting-Fehler"
+   },
+   "erkenntnis": "Nur Teil 1 einer Serie hält: spätere Teile verlieren zwischen 5 und 30 s die Hälfte, weil ihre Prämisse Vorwissen braucht → jede Folge braucht die Grund-Regel der Welt im ersten Satz (E3 in s03).",
+   "vidiq_credits_danach": 139
   }
  ],
- "letzte_analyse": "taeglich/analyse/2026-11-02.md"
+ "letzte_analyse": "taeglich/analyse/2026-11-04.md"
 }
