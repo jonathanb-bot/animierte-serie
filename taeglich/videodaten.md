@@ -24,3 +24,27 @@ Automatisch aus `python taeglich/videodaten.py`. Grundlage für die Analyse (Lä
 | 3 | 6–8 | 228.01 | 11-05T20:00 |
 | 4 | 9–10 | 154.54 | 11-06T08:00 |
 
+## s02 „Der Hauptgewinn“ (8 Folgen, Format-Längenband: kurz 60–70 s (immer über 62 s))
+
+| Video | Länge s | Band | Wörter | Wörter/s | Einst. | Kurzgesagt-Einst. | Nah | Fakten | Stimmung | Hook-Text | Instagram | YouTube |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| F1 Sechs Richtige | 73.54 | mittel | 194 | 2.64 | 20 | 7 | 6 | 3 | freudig | DU HAST 30 MILLIONEN GEWONNEN | 11-06T10:00 | 11-06T10:30 |
+| F2 Niemand darf es wissen | 67.31 | kurz | 189 | 2.81 | 19 | 5 | 8 | 1 | spannend |  | 11-06T12:00 | 11-06T12:30 |
+| F3 Reich sein ist komisch | 69.27 | kurz | 197 | 2.84 | 19 | 4 | 9 | 1 | freudig | DU ZAHLST. DIESMAL ALLES. | 11-06T14:00 | 11-06T14:30 |
+| F4 Das Gerücht | 68.71 | kurz | 204 | 2.97 | 19 | 5 | 8 | 0 | duester |  | 11-06T16:00 | 11-06T16:30 |
+| F5 Allein mit dreißig Millionen | 68.03 | kurz | 200 | 2.94 | 18 | 5 | 7 | 0 | traurig | 30 MILLIONEN. NIEMAND REDET MIT DIR. | 11-06T18:00 | 11-06T18:30 |
+| F6 Opas Zahlen | 80.72 | lang | 199 | 2.47 | 19 | 4 | 10 | 1 | warm |  | 11-06T20:00 | 11-06T20:30 |
+| F7 Gleis drei | 65.13 | kurz | 186 | 2.86 | 19 | 5 | 8 | 0 | spannend | NOCH 14 MINUTEN | 11-06T22:00 | 11-06T22:30 |
+| F8 Für uns alle | 73.0 | mittel | 198 | 2.71 | 18 | 4 | 9 | 1 | warm |  | 11-07T00:00 | 11-07T00:30 |
+
+| TikTok-Teil | Folgen | Länge s | Termin |
+|---|---|---|---|
+| 1 | 1–1 | 73.54 | 11-06T12:00 |
+| 2 | 2–2 | 67.28 | 11-06T16:00 |
+| 3 | 3–3 | 69.27 | 11-06T20:00 |
+| 4 | 4–4 | 68.71 | 11-07T08:00 |
+| 5 | 5–5 | 68.03 | 11-07T12:00 |
+| 6 | 6–6 | 80.7 | 11-07T16:00 |
+| 7 | 7–7 | 65.13 | 11-07T20:00 |
+| 8 | 8–8 | 73.0 | 11-08T08:00 |
+

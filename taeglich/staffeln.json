@@ -330,7 +330,8 @@
    "format": {
     "folgen": 8,
     "laengenband": "kurz 60–70 s (immer über 62 s)",
-    "tiktok_teile": 8
+    "tiktok_teile": 8,
+    "gemessen": "65,1–80,7 s (f01 73,5 · f02 67,3 · f03 69,3 · f04 68,7 · f05 68,0 · f06 80,7 · f07 65,1 · f08 73,0); 5 von 8 im Band 60–70 s, die Stimme „lebendig“ spricht langsamer als geschätzt"
    },
    "en": {
     "titel": "The Jackpot",
@@ -353,6 +354,32 @@
      "Platform Three",
      "For All of Us"
     ]
+   },
+   "veroeffentlicht": {
+    "taeglich-tiktok-s02-teil-1": "2026-11-06T12:00:00",
+    "taeglich-tiktok-s02-teil-2": "2026-11-06T16:00:00",
+    "taeglich-tiktok-s02-teil-3": "2026-11-06T20:00:00",
+    "taeglich-tiktok-s02-teil-4": "2026-11-07T08:00:00",
+    "taeglich-tiktok-s02-teil-5": "2026-11-07T12:00:00",
+    "taeglich-tiktok-s02-teil-6": "2026-11-07T16:00:00",
+    "taeglich-tiktok-s02-teil-7": "2026-11-07T20:00:00",
+    "taeglich-tiktok-s02-teil-8": "2026-11-08T08:00:00",
+    "taeglich-insta-s02-f01": "2026-11-06T10:00:00",
+    "taeglich-insta-s02-f02": "2026-11-06T12:00:00",
+    "taeglich-insta-s02-f03": "2026-11-06T14:00:00",
+    "taeglich-insta-s02-f04": "2026-11-06T16:00:00",
+    "taeglich-insta-s02-f05": "2026-11-06T18:00:00",
+    "taeglich-insta-s02-f06": "2026-11-06T20:00:00",
+    "taeglich-insta-s02-f07": "2026-11-06T22:00:00",
+    "taeglich-insta-s02-f08": "2026-11-07T00:00:00",
+    "taeglich-yt-s02-f01": "2026-11-06T10:30:00",
+    "taeglich-yt-s02-f02": "2026-11-06T12:30:00",
+    "taeglich-yt-s02-f03": "2026-11-06T14:30:00",
+    "taeglich-yt-s02-f04": "2026-11-06T16:30:00",
+    "taeglich-yt-s02-f05": "2026-11-06T18:30:00",
+    "taeglich-yt-s02-f06": "2026-11-06T20:30:00",
+    "taeglich-yt-s02-f07": "2026-11-06T22:30:00",
+    "taeglich-yt-s02-f08": "2026-11-07T00:30:00"
    }
   }
  ]

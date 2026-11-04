@@ -93,6 +93,182 @@
    }
   }
  },
+ "taeglich-tiktok/s02-teil-1.mp4": {
+  "art": "tiktok_teil",
+  "staffel": "s02",
+  "staffel_titel": "Der Hauptgewinn",
+  "teil": 1,
+  "teile_in_staffel": 8,
+  "folgen": [
+   1
+  ],
+  "folgen_in_staffel": 8,
+  "format_laengenband": "kurz 60–70 s (immer über 62 s)",
+  "dauer_s": 73.54,
+  "hook_satz": "Stell dir vor, du hast gerade dreißig Millionen gewonnen.",
+  "hooktext": "DU HAST 30 MILLIONEN GEWONNEN",
+  "stimmung": "freudig",
+  "posts": {
+   "tiktok": {
+    "id": "taeglich-tiktok-s02-teil-1",
+    "zeit": "2026-11-06T12:00:00"
+   }
+  }
+ },
+ "taeglich-tiktok/s02-teil-2.mp4": {
+  "art": "tiktok_teil",
+  "staffel": "s02",
+  "staffel_titel": "Der Hauptgewinn",
+  "teil": 2,
+  "teile_in_staffel": 8,
+  "folgen": [
+   2
+  ],
+  "folgen_in_staffel": 8,
+  "format_laengenband": "kurz 60–70 s (immer über 62 s)",
+  "dauer_s": 67.28,
+  "hook_satz": "Ab heute bist du Millionär.",
+  "hooktext": null,
+  "stimmung": "spannend",
+  "posts": {
+   "tiktok": {
+    "id": "taeglich-tiktok-s02-teil-2",
+    "zeit": "2026-11-06T16:00:00"
+   }
+  }
+ },
+ "taeglich-tiktok/s02-teil-3.mp4": {
+  "art": "tiktok_teil",
+  "staffel": "s02",
+  "staffel_titel": "Der Hauptgewinn",
+  "teil": 3,
+  "teile_in_staffel": 8,
+  "folgen": [
+   3
+  ],
+  "folgen_in_staffel": 8,
+  "format_laengenband": "kurz 60–70 s (immer über 62 s)",
+  "dauer_s": 69.27,
+  "hook_satz": "Du hast dreißig Millionen.",
+  "hooktext": "DU ZAHLST. DIESMAL ALLES.",
+  "stimmung": "freudig",
+  "posts": {
+   "tiktok": {
+    "id": "taeglich-tiktok-s02-teil-3",
+    "zeit": "2026-11-06T20:00:00"
+   }
+  }
+ },
+ "taeglich-tiktok/s02-teil-4.mp4": {
+  "art": "tiktok_teil",
+  "staffel": "s02",
+  "staffel_titel": "Der Hauptgewinn",
+  "teil": 4,
+  "teile_in_staffel": 8,
+  "folgen": [
+   4
+  ],
+  "folgen_in_staffel": 8,
+  "format_laengenband": "kurz 60–70 s (immer über 62 s)",
+  "dauer_s": 68.71,
+  "hook_satz": "Irgendwo in deiner Stadt läuft ein Millionär herum.",
+  "hooktext": null,
+  "stimmung": "duester",
+  "posts": {
+   "tiktok": {
+    "id": "taeglich-tiktok-s02-teil-4",
+    "zeit": "2026-11-07T08:00:00"
+   }
+  }
+ },
+ "taeglich-tiktok/s02-teil-5.mp4": {
+  "art": "tiktok_teil",
+  "staffel": "s02",
+  "staffel_titel": "Der Hauptgewinn",
+  "teil": 5,
+  "teile_in_staffel": 8,
+  "folgen": [
+   5
+  ],
+  "folgen_in_staffel": 8,
+  "format_laengenband": "kurz 60–70 s (immer über 62 s)",
+  "dauer_s": 68.03,
+  "hook_satz": "Du kannst dir jetzt alles kaufen.",
+  "hooktext": "30 MILLIONEN. NIEMAND REDET MIT DIR.",
+  "stimmung": "traurig",
+  "posts": {
+   "tiktok": {
+    "id": "taeglich-tiktok-s02-teil-5",
+    "zeit": "2026-11-07T12:00:00"
+   }
+  }
+ },
+ "taeglich-tiktok/s02-teil-6.mp4": {
+  "art": "tiktok_teil",
+  "staffel": "s02",
+  "staffel_titel": "Der Hauptgewinn",
+  "teil": 6,
+  "teile_in_staffel": 8,
+  "folgen": [
+   6
+  ],
+  "folgen_in_staffel": 8,
+  "format_laengenband": "kurz 60–70 s (immer über 62 s)",
+  "dauer_s": 80.7,
+  "hook_satz": "Dein Opa liegt im Krankenhaus.",
+  "hooktext": null,
+  "stimmung": "warm",
+  "posts": {
+   "tiktok": {
+    "id": "taeglich-tiktok-s02-teil-6",
+    "zeit": "2026-11-07T16:00:00"
+   }
+  }
+ },
+ "taeglich-tiktok/s02-teil-7.mp4": {
+  "art": "tiktok_teil",
+  "staffel": "s02",
+  "staffel_titel": "Der Hauptgewinn",
+  "teil": 7,
+  "teile_in_staffel": 8,
+  "folgen": [
+   7
+  ],
+  "folgen_in_staffel": 8,
+  "format_laengenband": "kurz 60–70 s (immer über 62 s)",
+  "dauer_s": 65.13,
+  "hook_satz": "Du bist Millionär.",
+  "hooktext": "NOCH 14 MINUTEN",
+  "stimmung": "spannend",
+  "posts": {
+   "tiktok": {
+    "id": "taeglich-tiktok-s02-teil-7",
+    "zeit": "2026-11-07T20:00:00"
+   }
+  }
+ },
+ "taeglich-tiktok/s02-teil-8.mp4": {
+  "art": "tiktok_teil",
+  "staffel": "s02",
+  "staffel_titel": "Der Hauptgewinn",
+  "teil": 8,
+  "teile_in_staffel": 8,
+  "folgen": [
+   8
+  ],
+  "folgen_in_staffel": 8,
+  "format_laengenband": "kurz 60–70 s (immer über 62 s)",
+  "dauer_s": 73.0,
+  "hook_satz": "Deine beste Freundin hat ihren Zug sausen lassen.",
+  "hooktext": null,
+  "stimmung": "warm",
+  "posts": {
+   "tiktok": {
+    "id": "taeglich-tiktok-s02-teil-8",
+    "zeit": "2026-11-08T08:00:00"
+   }
+  }
+ },
  "taeglich/s01-f01.mp4": {
   "art": "folge",
   "staffel": "s01",
@@ -643,6 +819,471 @@
    "youtube": {
     "id": "taeglich-yt-s01-f10",
     "zeit": "2026-11-10T04:30:00"
+   }
+  }
+ },
+ "taeglich/s02-f01.mp4": {
+  "art": "folge",
+  "staffel": "s02",
+  "staffel_titel": "Der Hauptgewinn",
+  "folge": 1,
+  "titel": "Sechs Richtige",
+  "folgen_in_staffel": 8,
+  "format_laengenband": "kurz 60–70 s (immer über 62 s)",
+  "dauer_s": 73.54,
+  "laengenband": "mittel",
+  "woerter_pro_s": 2.64,
+  "familie_freunde": true,
+  "woerter": 194,
+  "einstellungen": 20,
+  "stimmung": "freudig",
+  "look": 0.0,
+  "hook_satz": "Stell dir vor, du hast gerade dreißig Millionen gewonnen.",
+  "hooktext": "DU HAST 30 MILLIONEN GEWONNEN",
+  "kulissen": [
+   "esstisch",
+   "gesicht",
+   "grossstadt",
+   "handy",
+   "kiosk",
+   "landschaft",
+   "netz",
+   "objekt",
+   "titel",
+   "weltall",
+   "zimmer"
+  ],
+  "kurzgesagt_einstellungen": 7,
+  "kurzgesagt_kulissen": [
+   "grossstadt",
+   "kiosk",
+   "landschaft",
+   "netz",
+   "weltall"
+  ],
+  "nahaufnahmen": 6,
+  "faktenkarten": 3,
+  "figuren": [
+   "du",
+   "fremder",
+   "mama",
+   "oma",
+   "opa"
+  ],
+  "letzte_zeile": "Auf der Rückseite steht, in Opas krakeliger Schrift: „Für uns alle.“",
+  "posts": {
+   "instagram": {
+    "id": "taeglich-insta-s02-f01",
+    "zeit": "2026-11-06T10:00:00"
+   },
+   "youtube": {
+    "id": "taeglich-yt-s02-f01",
+    "zeit": "2026-11-06T10:30:00"
+   }
+  }
+ },
+ "taeglich/s02-f02.mp4": {
+  "art": "folge",
+  "staffel": "s02",
+  "staffel_titel": "Der Hauptgewinn",
+  "folge": 2,
+  "titel": "Niemand darf es wissen",
+  "folgen_in_staffel": 8,
+  "format_laengenband": "kurz 60–70 s (immer über 62 s)",
+  "dauer_s": 67.31,
+  "laengenband": "kurz",
+  "woerter_pro_s": 2.81,
+  "familie_freunde": true,
+  "woerter": 189,
+  "einstellungen": 19,
+  "stimmung": "spannend",
+  "look": 0.0,
+  "hook_satz": "Ab heute bist du Millionär.",
+  "hooktext": null,
+  "kulissen": [
+   "gesicht",
+   "grossstadt",
+   "handy",
+   "netz",
+   "objekt",
+   "rechenzentrum",
+   "weltall",
+   "wohnzimmer",
+   "zimmer"
+  ],
+  "kurzgesagt_einstellungen": 5,
+  "kurzgesagt_kulissen": [
+   "grossstadt",
+   "netz",
+   "rechenzentrum",
+   "weltall"
+  ],
+  "nahaufnahmen": 8,
+  "faktenkarten": 1,
+  "figuren": [
+   "du",
+   "lehrerin",
+   "lina",
+   "mama",
+   "papa"
+  ],
+  "letzte_zeile": "Es wird die schlimmste Entscheidung deines Jahres.",
+  "posts": {
+   "instagram": {
+    "id": "taeglich-insta-s02-f02",
+    "zeit": "2026-11-06T12:00:00"
+   },
+   "youtube": {
+    "id": "taeglich-yt-s02-f02",
+    "zeit": "2026-11-06T12:30:00"
+   }
+  }
+ },
+ "taeglich/s02-f03.mp4": {
+  "art": "folge",
+  "staffel": "s02",
+  "staffel_titel": "Der Hauptgewinn",
+  "folge": 3,
+  "titel": "Reich sein ist komisch",
+  "folgen_in_staffel": 8,
+  "format_laengenband": "kurz 60–70 s (immer über 62 s)",
+  "dauer_s": 69.27,
+  "laengenband": "kurz",
+  "woerter_pro_s": 2.84,
+  "familie_freunde": true,
+  "woerter": 197,
+  "einstellungen": 19,
+  "stimmung": "freudig",
+  "look": 0.0,
+  "hook_satz": "Du hast dreißig Millionen.",
+  "hooktext": "DU ZAHLST. DIESMAL ALLES.",
+  "kulissen": [
+   "gesicht",
+   "grossstadt",
+   "handy",
+   "kiosk",
+   "landschaft",
+   "objekt",
+   "park",
+   "weltall",
+   "wohnzimmer",
+   "zimmer"
+  ],
+  "kurzgesagt_einstellungen": 4,
+  "kurzgesagt_kulissen": [
+   "grossstadt",
+   "kiosk",
+   "landschaft",
+   "weltall"
+  ],
+  "nahaufnahmen": 9,
+  "faktenkarten": 1,
+  "figuren": [
+   "ben",
+   "du",
+   "lina",
+   "mia"
+  ],
+  "letzte_zeile": "Mia schaut nicht auf ihr Handy. Sie schaut dich an.",
+  "posts": {
+   "instagram": {
+    "id": "taeglich-insta-s02-f03",
+    "zeit": "2026-11-06T14:00:00"
+   },
+   "youtube": {
+    "id": "taeglich-yt-s02-f03",
+    "zeit": "2026-11-06T14:30:00"
+   }
+  }
+ },
+ "taeglich/s02-f04.mp4": {
+  "art": "folge",
+  "staffel": "s02",
+  "staffel_titel": "Der Hauptgewinn",
+  "folge": 4,
+  "titel": "Das Gerücht",
+  "folgen_in_staffel": 8,
+  "format_laengenband": "kurz 60–70 s (immer über 62 s)",
+  "dauer_s": 68.71,
+  "laengenband": "kurz",
+  "woerter_pro_s": 2.97,
+  "familie_freunde": true,
+  "woerter": 204,
+  "einstellungen": 19,
+  "stimmung": "duester",
+  "look": 0.0,
+  "hook_satz": "Irgendwo in deiner Stadt läuft ein Millionär herum.",
+  "hooktext": null,
+  "kulissen": [
+   "auge",
+   "gesicht",
+   "grossstadt",
+   "haltestelle",
+   "handy",
+   "kiosk",
+   "klassenzimmer",
+   "netz",
+   "weltall",
+   "zimmer"
+  ],
+  "kurzgesagt_einstellungen": 5,
+  "kurzgesagt_kulissen": [
+   "auge",
+   "grossstadt",
+   "kiosk",
+   "netz",
+   "weltall"
+  ],
+  "nahaufnahmen": 8,
+  "faktenkarten": 0,
+  "figuren": [
+   "ben",
+   "du",
+   "fremder",
+   "lehrerin",
+   "mia"
+  ],
+  "letzte_zeile": "Von Mia. „Ich hab dich gefragt. Du hast mir ins Gesicht gelogen.“",
+  "posts": {
+   "instagram": {
+    "id": "taeglich-insta-s02-f04",
+    "zeit": "2026-11-06T16:00:00"
+   },
+   "youtube": {
+    "id": "taeglich-yt-s02-f04",
+    "zeit": "2026-11-06T16:30:00"
+   }
+  }
+ },
+ "taeglich/s02-f05.mp4": {
+  "art": "folge",
+  "staffel": "s02",
+  "staffel_titel": "Der Hauptgewinn",
+  "folge": 5,
+  "titel": "Allein mit dreißig Millionen",
+  "folgen_in_staffel": 8,
+  "format_laengenband": "kurz 60–70 s (immer über 62 s)",
+  "dauer_s": 68.03,
+  "laengenband": "kurz",
+  "woerter_pro_s": 2.94,
+  "familie_freunde": true,
+  "woerter": 200,
+  "einstellungen": 18,
+  "stimmung": "traurig",
+  "look": 0.0,
+  "hook_satz": "Du kannst dir jetzt alles kaufen.",
+  "hooktext": "30 MILLIONEN. NIEMAND REDET MIT DIR.",
+  "kulissen": [
+   "gesicht",
+   "grossstadt",
+   "handy",
+   "klassenzimmer",
+   "krankenhaus",
+   "landschaft",
+   "lebenszeit",
+   "park",
+   "see",
+   "wald",
+   "weltall",
+   "wohnzimmer"
+  ],
+  "kurzgesagt_einstellungen": 5,
+  "kurzgesagt_kulissen": [
+   "grossstadt",
+   "landschaft",
+   "lebenszeit",
+   "wald",
+   "weltall"
+  ],
+  "nahaufnahmen": 7,
+  "faktenkarten": 0,
+  "figuren": [
+   "ben",
+   "du",
+   "lehrerin",
+   "mama",
+   "mia",
+   "opa"
+  ],
+  "letzte_zeile": "Opa öffnet die Augen. Und das Erste, was er flüstert, ist: „Du hast es also gefunden.“",
+  "posts": {
+   "instagram": {
+    "id": "taeglich-insta-s02-f05",
+    "zeit": "2026-11-06T18:00:00"
+   },
+   "youtube": {
+    "id": "taeglich-yt-s02-f05",
+    "zeit": "2026-11-06T18:30:00"
+   }
+  }
+ },
+ "taeglich/s02-f06.mp4": {
+  "art": "folge",
+  "staffel": "s02",
+  "staffel_titel": "Der Hauptgewinn",
+  "folge": 6,
+  "titel": "Opas Zahlen",
+  "folgen_in_staffel": 8,
+  "format_laengenband": "kurz 60–70 s (immer über 62 s)",
+  "dauer_s": 80.72,
+  "laengenband": "lang",
+  "woerter_pro_s": 2.47,
+  "familie_freunde": true,
+  "woerter": 199,
+  "einstellungen": 19,
+  "stimmung": "warm",
+  "look": 0.0,
+  "hook_satz": "Dein Opa liegt im Krankenhaus.",
+  "hooktext": null,
+  "kulissen": [
+   "esstisch",
+   "gesicht",
+   "grossstadt",
+   "krankenhaus",
+   "landschaft",
+   "lebenszeit",
+   "objekt",
+   "polarlicht"
+  ],
+  "kurzgesagt_einstellungen": 4,
+  "kurzgesagt_kulissen": [
+   "grossstadt",
+   "landschaft",
+   "lebenszeit",
+   "polarlicht"
+  ],
+  "nahaufnahmen": 10,
+  "faktenkarten": 1,
+  "figuren": [
+   "du",
+   "lina",
+   "mama",
+   "oma",
+   "opa",
+   "papa"
+  ],
+  "letzte_zeile": "Also rennst du. Wie ein Pinguin mit Rucksack. Direkt zu Mia.",
+  "posts": {
+   "instagram": {
+    "id": "taeglich-insta-s02-f06",
+    "zeit": "2026-11-06T20:00:00"
+   },
+   "youtube": {
+    "id": "taeglich-yt-s02-f06",
+    "zeit": "2026-11-06T20:30:00"
+   }
+  }
+ },
+ "taeglich/s02-f07.mp4": {
+  "art": "folge",
+  "staffel": "s02",
+  "staffel_titel": "Der Hauptgewinn",
+  "folge": 7,
+  "titel": "Gleis drei",
+  "folgen_in_staffel": 8,
+  "format_laengenband": "kurz 60–70 s (immer über 62 s)",
+  "dauer_s": 65.13,
+  "laengenband": "kurz",
+  "woerter_pro_s": 2.86,
+  "familie_freunde": true,
+  "woerter": 186,
+  "einstellungen": 19,
+  "stimmung": "spannend",
+  "look": 0.0,
+  "hook_satz": "Du bist Millionär.",
+  "hooktext": "NOCH 14 MINUTEN",
+  "kulissen": [
+   "bahnhof",
+   "gesicht",
+   "grossstadt",
+   "haltestelle",
+   "handy",
+   "landschaft",
+   "netz"
+  ],
+  "kurzgesagt_einstellungen": 5,
+  "kurzgesagt_kulissen": [
+   "grossstadt",
+   "landschaft",
+   "netz"
+  ],
+  "nahaufnahmen": 8,
+  "faktenkarten": 0,
+  "figuren": [
+   "ben",
+   "du",
+   "fremder",
+   "lehrerin",
+   "mia"
+  ],
+  "letzte_zeile": "„Du rennst echt immer noch wie ein Pinguin.“",
+  "posts": {
+   "instagram": {
+    "id": "taeglich-insta-s02-f07",
+    "zeit": "2026-11-06T22:00:00"
+   },
+   "youtube": {
+    "id": "taeglich-yt-s02-f07",
+    "zeit": "2026-11-06T22:30:00"
+   }
+  }
+ },
+ "taeglich/s02-f08.mp4": {
+  "art": "folge",
+  "staffel": "s02",
+  "staffel_titel": "Der Hauptgewinn",
+  "folge": 8,
+  "titel": "Für uns alle",
+  "folgen_in_staffel": 8,
+  "format_laengenband": "kurz 60–70 s (immer über 62 s)",
+  "dauer_s": 73.0,
+  "laengenband": "mittel",
+  "woerter_pro_s": 2.71,
+  "familie_freunde": true,
+  "woerter": 198,
+  "einstellungen": 18,
+  "stimmung": "warm",
+  "look": 0.0,
+  "hook_satz": "Deine beste Freundin hat ihren Zug sausen lassen.",
+  "hooktext": null,
+  "kulissen": [
+   "bahnhof",
+   "esstisch",
+   "gesicht",
+   "grossstadt",
+   "kiosk",
+   "lebenszeit",
+   "objekt",
+   "polarlicht",
+   "see"
+  ],
+  "kurzgesagt_einstellungen": 4,
+  "kurzgesagt_kulissen": [
+   "grossstadt",
+   "kiosk",
+   "lebenszeit",
+   "polarlicht"
+  ],
+  "nahaufnahmen": 9,
+  "faktenkarten": 1,
+  "figuren": [
+   "du",
+   "lina",
+   "mama",
+   "mia",
+   "oma",
+   "opa",
+   "papa"
+  ],
+  "letzte_zeile": "Und am Samstag humpelt Opa zum Kiosk. Dieselben Zahlen. Wie immer. Weil er nie gespielt hat, um zu gewinnen.",
+  "posts": {
+   "instagram": {
+    "id": "taeglich-insta-s02-f08",
+    "zeit": "2026-11-07T00:00:00"
+   },
+   "youtube": {
+    "id": "taeglich-yt-s02-f08",
+    "zeit": "2026-11-07T00:30:00"
    }
   }
  }
