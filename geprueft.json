@@ -1272,6 +1272,102 @@
    "bild_s": 154.53,
    "ton_s": 154.54,
    "lufs": -14.6
+  },
+  "taeglich/s02-f01.mp4": {
+   "ok": true,
+   "bild_s": 73.52,
+   "ton_s": 73.54,
+   "lufs": -14.5
+  },
+  "taeglich/s02-f02.mp4": {
+   "ok": true,
+   "bild_s": 67.28,
+   "ton_s": 67.31,
+   "lufs": -14.5
+  },
+  "taeglich/s02-f03.mp4": {
+   "ok": true,
+   "bild_s": 69.25,
+   "ton_s": 69.27,
+   "lufs": -14.5
+  },
+  "taeglich/s02-f04.mp4": {
+   "ok": true,
+   "bild_s": 68.7,
+   "ton_s": 68.71,
+   "lufs": -14.6
+  },
+  "taeglich/s02-f05.mp4": {
+   "ok": true,
+   "bild_s": 68.02,
+   "ton_s": 68.03,
+   "lufs": -14.5
+  },
+  "taeglich/s02-f06.mp4": {
+   "ok": true,
+   "bild_s": 80.7,
+   "ton_s": 80.72,
+   "lufs": -14.6
+  },
+  "taeglich/s02-f07.mp4": {
+   "ok": true,
+   "bild_s": 65.13,
+   "ton_s": 65.13,
+   "lufs": -14.6
+  },
+  "taeglich/s02-f08.mp4": {
+   "ok": true,
+   "bild_s": 72.98,
+   "ton_s": 73.0,
+   "lufs": -14.6
+  },
+  "taeglich-tiktok/s02-teil-1.mp4": {
+   "ok": true,
+   "bild_s": 73.52,
+   "ton_s": 73.54,
+   "lufs": -14.5
+  },
+  "taeglich-tiktok/s02-teil-2.mp4": {
+   "ok": true,
+   "bild_s": 67.28,
+   "ton_s": 67.28,
+   "lufs": -14.6
+  },
+  "taeglich-tiktok/s02-teil-3.mp4": {
+   "ok": true,
+   "bild_s": 69.25,
+   "ton_s": 69.27,
+   "lufs": -14.5
+  },
+  "taeglich-tiktok/s02-teil-4.mp4": {
+   "ok": true,
+   "bild_s": 68.7,
+   "ton_s": 68.71,
+   "lufs": -14.6
+  },
+  "taeglich-tiktok/s02-teil-5.mp4": {
+   "ok": true,
+   "bild_s": 68.02,
+   "ton_s": 68.03,
+   "lufs": -14.5
+  },
+  "taeglich-tiktok/s02-teil-6.mp4": {
+   "ok": true,
+   "bild_s": 80.7,
+   "ton_s": 80.7,
+   "lufs": -14.6
+  },
+  "taeglich-tiktok/s02-teil-7.mp4": {
+   "ok": true,
+   "bild_s": 65.13,
+   "ton_s": 65.13,
+   "lufs": -14.5
+  },
+  "taeglich-tiktok/s02-teil-8.mp4": {
+   "ok": true,
+   "bild_s": 72.98,
+   "ton_s": 73.0,
+   "lufs": -14.6
   }
  },
  "serien": {
@@ -1484,6 +1580,36 @@
     [
      9,
      10
+    ]
+   ]
+  },
+  "s02": {
+   "titel": "Der Hauptgewinn",
+   "folgen": 8,
+   "tiktok_teile": [
+    [
+     1
+    ],
+    [
+     2
+    ],
+    [
+     3
+    ],
+    [
+     4
+    ],
+    [
+     5
+    ],
+    [
+     6
+    ],
+    [
+     7
+    ],
+    [
+     8
     ]
    ]
   }
