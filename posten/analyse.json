@@ -1,45 +1,46 @@
 {
- "erstellt": "2026-11-03T20:42:50.880Z",
+ "erstellt": "2026-11-04T20:41:29.848Z",
  "konten": [
   {
    "platform": "tiktok",
    "username": "storys4you.de1",
-   "follower": 63,
+   "follower": 65,
    "konto": {
     "profileId.name": "Default",
     "platform": "tiktok",
     "platformUserId": "-000Pqr4ADTOGZRhhmtoFCG1dvpZmjT-Rp28",
     "username": "storys4you.de1",
-    "displayName": "storys4you.de1",
+    "displayName": "Storys4You",
     "metadata.expires_in": 86400,
     "metadata.profileData.username": "storys4you.de1",
-    "metadata.profileData.extraData.likesCount": 1289,
-    "metadata.profileData.extraData.videoCount": 16,
+    "metadata.profileData.extraData.likesCount": 1358,
+    "metadata.profileData.extraData.videoCount": 18,
     "metadata.profileData.extraData.followingCount": 5,
-    "metadata.profileData.followersCount": 63,
-    "metadata.profileData.displayName": "storys4you.de1",
+    "metadata.profileData.followersCount": 65,
+    "metadata.profileData.displayName": "Storys4You",
     "platformStatus": "active",
-    "followersCount": 63,
-    "followersLastUpdated": "2026-11-03T10:18:04.573Z",
+    "followersCount": 65,
+    "followersLastUpdated": "2026-11-04T09:55:24.281Z",
     "rateLimitCount": 0,
-    "updatedAt": "2026-11-03T10:18:04.573Z",
+    "updatedAt": "2026-11-04T09:55:24.281Z",
     "tiktokAccountType": "personal",
-    "adsStatus": "not_connected"
+    "adsStatus": "not_connected",
+    "_k": 0
    },
    "insights_30_tage": {
     "platform": "tiktok",
     "metricType": "total_value",
-    "metrics.follower_count.total": 65,
-    "metrics.likes_count.total": 1309,
-    "metrics.video_count.total": 17,
-    "metrics.followers_gained.total": 12,
+    "metrics.follower_count.total": 66,
+    "metrics.likes_count.total": 1384,
+    "metrics.video_count.total": 19,
+    "metrics.followers_gained.total": 14,
     "metrics.followers_lost.total": 0
    }
   },
   {
    "platform": "instagram",
    "username": "sto.rys4you",
-   "follower": 6,
+   "follower": 7,
    "konto": {
     "profileId.name": "Default",
     "platform": "instagram",
@@ -48,31 +49,32 @@
     "displayName": "Storys4You",
     "metadata.expires_in": 5184000,
     "metadata.profileData.username": "sto.rys4you",
-    "metadata.profileData.extraData.mediaCount": 32,
+    "metadata.profileData.extraData.mediaCount": 44,
     "metadata.profileData.extraData.accountType": "MEDIA_CREATOR",
     "metadata.profileData.extraData.followsCount": 0,
-    "metadata.profileData.followersCount": 6,
+    "metadata.profileData.followersCount": 7,
     "metadata.profileData.displayName": "Storys4You",
     "platformStatus": "active",
-    "followersCount": 6,
-    "followersLastUpdated": "2026-11-03T10:18:05.772Z",
+    "followersCount": 7,
+    "followersLastUpdated": "2026-11-04T09:55:41.958Z",
     "rateLimitCount": 0,
-    "updatedAt": "2026-11-03T10:18:05.772Z",
-    "adsStatus": "connected"
+    "updatedAt": "2026-11-04T09:55:41.958Z",
+    "adsStatus": "connected",
+    "_k": 0
    },
    "insights_30_tage": {
     "platform": "instagram",
     "metricType": "total_value",
-    "metrics.reach.total": 12299,
-    "metrics.views.total": 24433,
-    "metrics.accounts_engaged.total": 223,
-    "metrics.total_interactions.total": 321
+    "metrics.reach.total": 13445,
+    "metrics.views.total": 26277,
+    "metrics.accounts_engaged.total": 233,
+    "metrics.total_interactions.total": 339
    }
   },
   {
    "platform": "youtube",
    "username": "sto.rys4you",
-   "follower": 48,
+   "follower": 52,
    "konto": {
     "profileId.name": "Default",
     "platform": "youtube",
@@ -81,16 +83,17 @@
     "displayName": "Storys4you",
     "metadata.expires_in": 3599,
     "metadata.profileData.username": "sto.rys4you",
-    "metadata.profileData.extraData.totalViews": 17647,
-    "metadata.profileData.extraData.videoCount": 32,
-    "metadata.profileData.followersCount": 48,
+    "metadata.profileData.extraData.totalViews": 21117,
+    "metadata.profileData.extraData.videoCount": 43,
+    "metadata.profileData.followersCount": 52,
     "metadata.profileData.displayName": "Storys4you",
     "platformStatus": "active",
-    "followersCount": 48,
-    "followersLastUpdated": "2026-11-03T10:21:34.066Z",
+    "followersCount": 52,
+    "followersLastUpdated": "2026-11-04T09:59:12.424Z",
     "rateLimitCount": 0,
-    "updatedAt": "2026-11-03T20:32:01.112Z",
-    "adsStatus": "not_available"
+    "updatedAt": "2026-11-04T20:32:09.491Z",
+    "adsStatus": "not_available",
+    "_k": 1
    },
    "insights_fehler": "HTTP 429 {\"error\":\"YouTube Analytics daily quota exhausted. Analytics requests succeed again after midnight Pacific Time.\",\"type\":\"rate_limit_error\",\"code\":\"rate_limited\",\"platform\":\"google\",\"details\":{\"quotaExhausted\":true,\"quotaScope\":\"DEVELOPER\","
   },
@@ -113,11 +116,12 @@
     "metadata.profileData.displayName": "Storys4You",
     "platformStatus": "active",
     "followersCount": 0,
-    "followersLastUpdated": "2026-11-03T19:30:08.961Z",
+    "followersLastUpdated": "2026-11-04T10:39:32.809Z",
     "rateLimitCount": 0,
-    "updatedAt": "2026-11-03T19:30:09.074Z",
+    "updatedAt": "2026-11-04T20:37:38.213Z",
     "tiktokAccountType": "personal",
-    "adsStatus": "not_connected"
+    "adsStatus": "not_connected",
+    "_k": 1
    },
    "insights_30_tage": {
     "platform": "tiktok",
@@ -128,9 +132,644 @@
     "metrics.followers_gained.total": 0,
     "metrics.followers_lost.total": 0
    }
+  },
+  {
+   "platform": "youtube",
+   "username": "storys4you_eng",
+   "follower": 0,
+   "konto": {
+    "profileId.name": "Default",
+    "platform": "youtube",
+    "platformUserId": "UC_dfpQwA9GY1RBDGH2ghaAg",
+    "username": "storys4you_eng",
+    "displayName": "Storys4You_Eng",
+    "metadata.expires_in": 3599,
+    "metadata.profileData.username": "storys4you_eng",
+    "metadata.profileData.extraData.totalViews": 0,
+    "metadata.profileData.extraData.videoCount": 0,
+    "metadata.profileData.followersCount": 0,
+    "metadata.profileData.displayName": "Storys4You_Eng",
+    "platformStatus": "active",
+    "followersCount": 0,
+    "followersLastUpdated": "2026-11-04T10:39:06.448Z",
+    "rateLimitCount": 0,
+    "updatedAt": "2026-11-04T10:39:06.449Z",
+    "adsStatus": "not_available",
+    "_k": 2
+   },
+   "insights_fehler": "HTTP 429 {\"error\":\"YouTube Analytics daily quota exhausted. Analytics requests succeed again after midnight Pacific Time.\",\"type\":\"rate_limit_error\",\"code\":\"rate_limited\",\"platform\":\"google\",\"details\":{\"quotaExhausted\":true,\"quotaScope\":\"DEVELOPER\","
+  },
+  {
+   "platform": "instagram",
+   "username": "sory4you_eng",
+   "follower": 0,
+   "konto": {
+    "profileId.name": "Default",
+    "platform": "instagram",
+    "platformUserId": "28582385541444372",
+    "username": "sory4you_eng",
+    "displayName": "Story You",
+    "metadata.expires_in": 5184000,
+    "metadata.profileData.username": "sory4you_eng",
+    "metadata.profileData.extraData.mediaCount": 0,
+    "metadata.profileData.extraData.accountType": "MEDIA_CREATOR",
+    "metadata.profileData.extraData.followsCount": 0,
+    "metadata.profileData.followersCount": 0,
+    "metadata.profileData.displayName": "Story You",
+    "platformStatus": "active",
+    "followersCount": 0,
+    "followersLastUpdated": "2026-11-04T10:44:56.795Z",
+    "rateLimitCount": 0,
+    "updatedAt": "2026-11-04T10:44:56.795Z",
+    "adsStatus": "connected",
+    "_k": 2
+   },
+   "insights_30_tage": {
+    "platform": "instagram",
+    "metricType": "total_value",
+    "metrics.reach.total": 0,
+    "metrics.views.total": 0,
+    "metrics.accounts_engaged.total": 0,
+    "metrics.total_interactions.total": 0
+   }
   }
  ],
  "posts": [
+  {
+   "id": "mann-insta-kurz-02",
+   "platform": "instagram",
+   "serie": "der-letzte-mann",
+   "zeit": "2026-11-04T18:00:00",
+   "video": "der-letzte-mann-kurz/folge-02.mp4",
+   "text": "Der letzte Mann – Folge 2: Bleib vom Fenster weg 👤",
+   "url": "https://www.instagram.com/reel/DfU8e4UDP_2/",
+   "typ": "REELS",
+   "sync": null,
+   "analytics": {
+    "impressions": 147,
+    "reach": 113,
+    "likes": 1,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "clicks": 0,
+    "views": 147,
+    "igReelsAvgWatchTime": 14591,
+    "igReelsVideoViewTotalTime": 1634301,
+    "reelsSkipRate": 45.1,
+    "completionRate": 0,
+    "profileViews": 0,
+    "websiteClicks": 0,
+    "replays": 0,
+    "reposts": 0,
+    "videoDurationSeconds": 49,
+    "engagementRate": 0.68,
+    "lastUpdated": "2026-11-04T18:32:36Z"
+   }
+  },
+  {
+   "id": "mann-insta-kurz-01",
+   "platform": "instagram",
+   "serie": "der-letzte-mann",
+   "zeit": "2026-11-04T16:00:00",
+   "video": "der-letzte-mann-kurz/folge-01.mp4",
+   "text": "Der letzte Mann – Folge 1: Außer dir 👤",
+   "url": "https://www.instagram.com/reel/DfUu0reAnDu/",
+   "typ": "REELS",
+   "sync": null,
+   "analytics": {
+    "impressions": 168,
+    "reach": 125,
+    "likes": 1,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "clicks": 0,
+    "views": 168,
+    "igReelsAvgWatchTime": 15985,
+    "igReelsVideoViewTotalTime": 1998223,
+    "reelsSkipRate": 41.9,
+    "completionRate": 0,
+    "profileViews": 0,
+    "websiteClicks": 0,
+    "replays": 0,
+    "reposts": 0,
+    "videoDurationSeconds": 45,
+    "engagementRate": 0.6,
+    "lastUpdated": "2026-11-04T18:32:36Z"
+   }
+  },
+  {
+   "id": "alien-insta-kurz-10-2",
+   "platform": "instagram",
+   "serie": "der-alien",
+   "zeit": "2026-11-04T14:00:00",
+   "video": "der-alien-kurz/folge-10-teil-2.mp4",
+   "text": "Der Alien – Folge 10: Wieder zu Hause (Teil 2/2) 👽",
+   "url": "https://www.instagram.com/reel/DfUhJkaCR4B/",
+   "typ": "REELS",
+   "sync": null,
+   "analytics": {
+    "impressions": 133,
+    "reach": 121,
+    "likes": 1,
+    "comments": 0,
+    "shares": 0,
+    "saves": 1,
+    "clicks": 0,
+    "views": 133,
+    "igReelsAvgWatchTime": 5103,
+    "igReelsVideoViewTotalTime": 627749,
+    "reelsSkipRate": 69.7,
+    "completionRate": 0,
+    "profileViews": 0,
+    "websiteClicks": 0,
+    "replays": 0,
+    "reposts": 0,
+    "videoDurationSeconds": 46,
+    "engagementRate": 1.5,
+    "lastUpdated": "2026-11-04T18:32:36Z"
+   }
+  },
+  {
+   "id": "alien-insta-kurz-10-1",
+   "platform": "instagram",
+   "serie": "der-alien",
+   "zeit": "2026-11-04T12:00:00",
+   "video": "der-alien-kurz/folge-10-teil-1.mp4",
+   "text": "Der Alien – Folge 10: Wieder zu Hause (Teil 1/2) 👽",
+   "url": "https://www.instagram.com/reel/DfUTs5bETLs/",
+   "typ": "REELS",
+   "sync": null,
+   "analytics": {
+    "impressions": 126,
+    "reach": 108,
+    "likes": 2,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "clicks": 0,
+    "views": 126,
+    "igReelsAvgWatchTime": 8747,
+    "igReelsVideoViewTotalTime": 979730,
+    "reelsSkipRate": 64,
+    "completionRate": 0,
+    "profileViews": 0,
+    "websiteClicks": 0,
+    "replays": 0,
+    "reposts": 0,
+    "videoDurationSeconds": 59,
+    "engagementRate": 1.59,
+    "lastUpdated": "2026-11-04T18:32:36Z"
+   }
+  },
+  {
+   "id": "alien-insta-kurz-09-2",
+   "platform": "instagram",
+   "serie": "der-alien",
+   "zeit": "2026-11-04T10:00:00",
+   "video": "der-alien-kurz/folge-09-teil-2.mp4",
+   "text": "Der Alien – Folge 9: Auf dem Dach (Teil 2/2) 👽",
+   "url": "https://www.instagram.com/reel/DfUFjdzjtR_/",
+   "typ": "REELS",
+   "sync": null,
+   "analytics": {
+    "impressions": 135,
+    "reach": 124,
+    "likes": 5,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "clicks": 0,
+    "views": 135,
+    "igReelsAvgWatchTime": 10758,
+    "igReelsVideoViewTotalTime": 1344771,
+    "reelsSkipRate": 62.1,
+    "completionRate": 0,
+    "profileViews": 0,
+    "websiteClicks": 0,
+    "replays": 0,
+    "reposts": 0,
+    "videoDurationSeconds": 55,
+    "engagementRate": 3.7,
+    "lastUpdated": "2026-11-04T18:32:36Z"
+   }
+  },
+  {
+   "id": "alien-insta-kurz-09-1",
+   "platform": "instagram",
+   "serie": "der-alien",
+   "zeit": "2026-11-04T08:00:00",
+   "video": "der-alien-kurz/folge-09-teil-1.mp4",
+   "text": "Der Alien – Folge 9: Auf dem Dach (Teil 1/2) 👽",
+   "url": "https://www.instagram.com/reel/DfT3x_tjc-G/",
+   "typ": "REELS",
+   "sync": null,
+   "analytics": {
+    "impressions": 141,
+    "reach": 121,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "clicks": 0,
+    "views": 141,
+    "igReelsAvgWatchTime": 10339,
+    "igReelsVideoViewTotalTime": 1251064,
+    "reelsSkipRate": 55.4,
+    "completionRate": 0,
+    "profileViews": 0,
+    "websiteClicks": 0,
+    "replays": 0,
+    "reposts": 0,
+    "videoDurationSeconds": 53,
+    "engagementRate": 0,
+    "lastUpdated": "2026-11-04T18:32:36Z"
+   }
+  },
+  {
+   "id": "mann-tiktok-teil-3",
+   "platform": "tiktok",
+   "serie": "der-letzte-mann",
+   "zeit": "2026-11-04T08:00:00",
+   "video": "der-letzte-mann-tiktok/teil-3.mp4",
+   "text": "Der letzte Mann – Teil 3/4 (Folge 6–8) 👤 Das tote Telefon · Zehn Sekunden · Du ",
+   "url": "https://www.tiktok.com/@storys4you.de1/video/7704207851434036513?utm_campaign=tt4d_open_api&utm_source=7608030276714774544",
+   "typ": "video",
+   "sync": null,
+   "analytics": {
+    "impressions": 0,
+    "reach": 0,
+    "likes": 31,
+    "comments": 0,
+    "shares": 1,
+    "saves": 0,
+    "clicks": 0,
+    "views": 727,
+    "follows": 0,
+    "igReelsAvgWatchTime": 17420,
+    "igReelsVideoViewTotalTime": 12976000,
+    "reelsSkipRate": 0,
+    "completionRate": 0.0081,
+    "profileViews": 0,
+    "websiteClicks": 0,
+    "impressionSources.forYou": 0.977,
+    "impressionSources.other": 0.001,
+    "impressionSources.personalProfile": 0.008,
+    "impressionSources.search": 0.013,
+    "impressionSources.sound": 0,
+    "impressionSources.directMessage": 0,
+    "impressionSources.follow": 0.001,
+    "audienceTypes.follower": 0.02,
+    "audienceTypes.newViewer": 0,
+    "audienceTypes.nonFollower": 0.98,
+    "audienceTypes.returnViewer": 0,
+    "retentionCurve.0": 1,
+    "retentionCurve.5": 0.41,
+    "retentionCurve.10": 0.24,
+    "retentionCurve.15": 0.18,
+    "retentionCurve.20": 0.16,
+    "retentionCurve.25": 0.12,
+    "retentionCurve.30": 0.11,
+    "retentionCurve.35": 0.1,
+    "retentionCurve.40": 0.09,
+    "retentionCurve.45": 0.09,
+    "retentionCurve.50": 0.08,
+    "retentionCurve.55": 0.08,
+    "retentionCurve.60": 0.07,
+    "retentionCurve.65": 0.07,
+    "retentionCurve.70": 0.06,
+    "retentionCurve.75": 0.05,
+    "retentionCurve.80": 0.05,
+    "retentionCurve.85": 0.05,
+    "retentionCurve.90": 0.05,
+    "retentionCurve.95": 0.04,
+    "retentionCurve.100": 0.04,
+    "retentionCurve.105": 0.04,
+    "retentionCurve.110": 0.03,
+    "retentionCurve.115": 0.02,
+    "retentionCurve.120": 0.02,
+    "retentionCurve.125": 0.02,
+    "retentionCurve.130": 0.02,
+    "retentionCurve.135": 0.02,
+    "retentionCurve.140": 0.02,
+    "retentionCurve.145": 0.02,
+    "retentionCurve.150": 0.02,
+    "retentionCurve.155": 0.02,
+    "retentionCurve.160": 0.02,
+    "retentionCurve.165": 0.02,
+    "retentionCurve.170": 0.02,
+    "retentionCurve.175": 0.02,
+    "retentionCurve.180": 0.01,
+    "retentionCurve.185": 0.01,
+    "retentionCurve.190": 0.01,
+    "retentionCurve.195": 0.01,
+    "retentionCurve.200": 0.01,
+    "retentionCurve.205": 0.01,
+    "retentionCurve.210": 0.01,
+    "retentionCurve.215": 0.01,
+    "retentionCurve.220": 0.01,
+    "retentionCurve.225": 0.01,
+    "retentionCurve.230": 0.01,
+    "retentionCurve.235": 0.01,
+    "retentionCurve.240": 0.01,
+    "retentionCurve.245": 0.01,
+    "retentionCurve.250": 0.01,
+    "retentionCurve.255": 0.01,
+    "retentionCurve.260": 0.01,
+    "retentionCurve.265": 0.01,
+    "retentionCurve.270": 0.01,
+    "retentionCurve.275": 0.01,
+    "retentionCurve.280": 0.01,
+    "replays": 0,
+    "reposts": 0,
+    "engagementRate": 4.4,
+    "lastUpdated": "2026-11-04T18:32:30Z"
+   }
+  },
+  {
+   "id": "alien-insta-kurz-08-2",
+   "platform": "instagram",
+   "serie": "der-alien",
+   "zeit": "2026-11-04T06:00:00",
+   "video": "der-alien-kurz/folge-08-teil-2.mp4",
+   "text": "Der Alien – Folge 8: Du oder er (Teil 2/2) 👽",
+   "url": "https://www.instagram.com/reel/DfTqOUFiOWo/",
+   "typ": "REELS",
+   "sync": null,
+   "analytics": {
+    "impressions": 135,
+    "reach": 123,
+    "likes": 1,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "clicks": 0,
+    "views": 135,
+    "igReelsAvgWatchTime": 7807,
+    "igReelsVideoViewTotalTime": 960309,
+    "reelsSkipRate": 50,
+    "completionRate": 0,
+    "profileViews": 0,
+    "websiteClicks": 0,
+    "replays": 0,
+    "reposts": 0,
+    "videoDurationSeconds": 43,
+    "engagementRate": 0.74,
+    "lastUpdated": "2026-11-04T18:32:36Z"
+   }
+  },
+  {
+   "id": "alien-insta-kurz-08-1",
+   "platform": "instagram",
+   "serie": "der-alien",
+   "zeit": "2026-11-04T04:00:00",
+   "video": "der-alien-kurz/folge-08-teil-1.mp4",
+   "text": "Der Alien – Folge 8: Du oder er (Teil 1/2) 👽",
+   "url": "https://www.instagram.com/reel/DfTcbNiIaX5/",
+   "typ": "REELS",
+   "sync": null,
+   "analytics": {
+    "impressions": 140,
+    "reach": 122,
+    "likes": 1,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "clicks": 0,
+    "views": 140,
+    "igReelsAvgWatchTime": 7986,
+    "igReelsVideoViewTotalTime": 982285,
+    "reelsSkipRate": 53.7,
+    "completionRate": 0,
+    "profileViews": 0,
+    "websiteClicks": 0,
+    "replays": 0,
+    "reposts": 0,
+    "videoDurationSeconds": 59,
+    "engagementRate": 0.71,
+    "lastUpdated": "2026-11-04T18:32:36Z"
+   }
+  },
+  {
+   "id": "alien-insta-kurz-07-2",
+   "platform": "instagram",
+   "serie": "der-alien",
+   "zeit": "2026-11-04T02:00:00",
+   "video": "der-alien-kurz/folge-07-teil-2.mp4",
+   "text": "Der Alien – Folge 7: Das falsche Gesicht (Teil 2/2) 👽",
+   "url": "https://www.instagram.com/reel/DfTO0UGGMAi/",
+   "typ": "REELS",
+   "sync": null,
+   "analytics": {
+    "impressions": 236,
+    "reach": 204,
+    "likes": 4,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "clicks": 0,
+    "views": 236,
+    "igReelsAvgWatchTime": 14309,
+    "igReelsVideoViewTotalTime": 2933462,
+    "reelsSkipRate": 38.2,
+    "completionRate": 0,
+    "profileViews": 0,
+    "websiteClicks": 0,
+    "replays": 0,
+    "reposts": 0,
+    "videoDurationSeconds": 59,
+    "engagementRate": 1.69,
+    "lastUpdated": "2026-11-04T18:32:36Z"
+   }
+  },
+  {
+   "id": "alien-insta-kurz-07-1",
+   "platform": "instagram",
+   "serie": "der-alien",
+   "zeit": "2026-11-04T00:00:00",
+   "video": "der-alien-kurz/folge-07-teil-1.mp4",
+   "text": "Der Alien – Folge 7: Das falsche Gesicht (Teil 1/2) 👽",
+   "url": "https://www.instagram.com/reel/DfTBIMJCOfy/",
+   "typ": "REELS",
+   "sync": null,
+   "analytics": {
+    "impressions": 139,
+    "reach": 122,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "clicks": 0,
+    "views": 139,
+    "igReelsAvgWatchTime": 5448,
+    "igReelsVideoViewTotalTime": 686519,
+    "reelsSkipRate": 56.5,
+    "completionRate": 0,
+    "profileViews": 0,
+    "websiteClicks": 0,
+    "replays": 0,
+    "reposts": 0,
+    "videoDurationSeconds": 52,
+    "engagementRate": 0,
+    "lastUpdated": "2026-11-04T18:32:36Z"
+   }
+  },
+  {
+   "id": "alien-insta-kurz-06-2",
+   "platform": "instagram",
+   "serie": "der-alien",
+   "zeit": "2026-11-03T22:00:00",
+   "video": "der-alien-kurz/folge-06-teil-2.mp4",
+   "text": "Der Alien – Folge 6: Raus aus dem Haus (Teil 2/2) 👽",
+   "url": "https://www.instagram.com/reel/DfSzOs9EpQV/",
+   "typ": "REELS",
+   "sync": null,
+   "analytics": {
+    "impressions": 138,
+    "reach": 126,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "clicks": 0,
+    "views": 138,
+    "igReelsAvgWatchTime": 9108,
+    "igReelsVideoViewTotalTime": 1165926,
+    "reelsSkipRate": 60.3,
+    "completionRate": 0,
+    "profileViews": 0,
+    "websiteClicks": 0,
+    "replays": 0,
+    "reposts": 0,
+    "videoDurationSeconds": 57,
+    "engagementRate": 0,
+    "lastUpdated": "2026-11-04T18:32:36Z"
+   }
+  },
+  {
+   "id": "alien-insta-kurz-06-1",
+   "platform": "instagram",
+   "serie": "der-alien",
+   "zeit": "2026-11-03T20:00:00",
+   "video": "der-alien-kurz/folge-06-teil-1.mp4",
+   "text": "Der Alien – Folge 6: Raus aus dem Haus (Teil 1/2) 👽",
+   "url": "https://www.instagram.com/reel/DfSlaJAAFYL/",
+   "typ": "REELS",
+   "sync": null,
+   "analytics": {
+    "impressions": 131,
+    "reach": 117,
+    "likes": 1,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "clicks": 0,
+    "views": 131,
+    "igReelsAvgWatchTime": 7149,
+    "igReelsVideoViewTotalTime": 850734,
+    "reelsSkipRate": 44.9,
+    "completionRate": 0,
+    "profileViews": 0,
+    "websiteClicks": 0,
+    "replays": 0,
+    "reposts": 0,
+    "videoDurationSeconds": 51,
+    "engagementRate": 0.76,
+    "lastUpdated": "2026-11-04T18:32:36Z"
+   }
+  },
+  {
+   "id": "mann-tiktok-teil-2",
+   "platform": "tiktok",
+   "serie": "der-letzte-mann",
+   "zeit": "2026-11-03T20:00:00",
+   "video": "der-letzte-mann-tiktok/teil-2.mp4",
+   "text": "Der letzte Mann – Teil 2/4 (Folge 4–5) 👤 Die falsche Rettung · Unter deiner Woh",
+   "url": "https://www.tiktok.com/@storys4you.de1/video/7704022431538662689?utm_campaign=tt4d_open_api&utm_source=7608030276714774544",
+   "typ": "video",
+   "sync": null,
+   "analytics": {
+    "impressions": 0,
+    "reach": 0,
+    "likes": 29,
+    "comments": 0,
+    "shares": 0,
+    "saves": 3,
+    "clicks": 0,
+    "views": 777,
+    "follows": 0,
+    "igReelsAvgWatchTime": 18500,
+    "igReelsVideoViewTotalTime": 14840000,
+    "reelsSkipRate": 0,
+    "completionRate": 0.0237,
+    "profileViews": 0,
+    "websiteClicks": 0,
+    "impressionSources.other": 0.004,
+    "impressionSources.personalProfile": 0.014,
+    "impressionSources.search": 0.009,
+    "impressionSources.sound": 0,
+    "impressionSources.directMessage": 0,
+    "impressionSources.follow": 0.001,
+    "impressionSources.forYou": 0.972,
+    "audienceTypes.follower": 0.02,
+    "audienceTypes.newViewer": 0,
+    "audienceTypes.nonFollower": 0.98,
+    "audienceTypes.returnViewer": 0,
+    "retentionCurve.0": 1,
+    "retentionCurve.4": 0.47,
+    "retentionCurve.8": 0.28,
+    "retentionCurve.12": 0.2,
+    "retentionCurve.16": 0.17,
+    "retentionCurve.20": 0.16,
+    "retentionCurve.24": 0.14,
+    "retentionCurve.28": 0.12,
+    "retentionCurve.32": 0.12,
+    "retentionCurve.36": 0.11,
+    "retentionCurve.40": 0.11,
+    "retentionCurve.44": 0.1,
+    "retentionCurve.48": 0.1,
+    "retentionCurve.52": 0.1,
+    "retentionCurve.56": 0.09,
+    "retentionCurve.60": 0.08,
+    "retentionCurve.64": 0.08,
+    "retentionCurve.68": 0.07,
+    "retentionCurve.72": 0.07,
+    "retentionCurve.76": 0.07,
+    "retentionCurve.80": 0.07,
+    "retentionCurve.84": 0.06,
+    "retentionCurve.88": 0.06,
+    "retentionCurve.92": 0.06,
+    "retentionCurve.96": 0.06,
+    "retentionCurve.100": 0.05,
+    "retentionCurve.104": 0.04,
+    "retentionCurve.108": 0.04,
+    "retentionCurve.112": 0.04,
+    "retentionCurve.116": 0.04,
+    "retentionCurve.120": 0.03,
+    "retentionCurve.124": 0.03,
+    "retentionCurve.128": 0.03,
+    "retentionCurve.132": 0.02,
+    "retentionCurve.136": 0.02,
+    "retentionCurve.140": 0.02,
+    "retentionCurve.144": 0.02,
+    "retentionCurve.148": 0.02,
+    "retentionCurve.152": 0.02,
+    "retentionCurve.156": 0.02,
+    "retentionCurve.160": 0.02,
+    "retentionCurve.164": 0.02,
+    "retentionCurve.168": 0.02,
+    "retentionCurve.172": 0.02,
+    "retentionCurve.176": 0.02,
+    "retentionCurve.180": 0.02,
+    "retentionCurve.184": 0.02,
+    "retentionCurve.188": 0.02,
+    "replays": 0,
+    "reposts": 0,
+    "engagementRate": 4.12,
+    "lastUpdated": "2026-11-04T18:32:30Z"
+   }
+  },
   {
    "id": "alien-insta-kurz-05-2",
    "platform": "instagram",
@@ -142,25 +781,25 @@
    "typ": "REELS",
    "sync": null,
    "analytics": {
-    "impressions": 116,
-    "reach": 106,
+    "impressions": 133,
+    "reach": 123,
     "likes": 1,
     "comments": 0,
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 116,
-    "igReelsAvgWatchTime": 7408,
-    "igReelsVideoViewTotalTime": 807532,
-    "reelsSkipRate": 55,
+    "views": 133,
+    "igReelsAvgWatchTime": 7360,
+    "igReelsVideoViewTotalTime": 927449,
+    "reelsSkipRate": 56,
     "completionRate": 0,
     "profileViews": 0,
     "websiteClicks": 0,
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 54,
-    "engagementRate": 0.86,
-    "lastUpdated": "2026-11-03T18:36:02Z"
+    "engagementRate": 0.75,
+    "lastUpdated": "2026-11-04T18:32:36Z"
    }
   },
   {
@@ -174,25 +813,25 @@
    "typ": "REELS",
    "sync": null,
    "analytics": {
-    "impressions": 149,
-    "reach": 120,
+    "impressions": 158,
+    "reach": 125,
     "likes": 1,
     "comments": 0,
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 149,
-    "igReelsAvgWatchTime": 12287,
-    "igReelsVideoViewTotalTime": 1548254,
-    "reelsSkipRate": 44,
+    "views": 158,
+    "igReelsAvgWatchTime": 13179,
+    "igReelsVideoViewTotalTime": 1726458,
+    "reelsSkipRate": 44.6,
     "completionRate": 0,
     "profileViews": 0,
     "websiteClicks": 0,
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 54,
-    "engagementRate": 0.67,
-    "lastUpdated": "2026-11-03T18:36:02Z"
+    "engagementRate": 0.63,
+    "lastUpdated": "2026-11-04T18:32:36Z"
    }
   },
   {
@@ -206,25 +845,25 @@
    "typ": "REELS",
    "sync": null,
    "analytics": {
-    "impressions": 147,
-    "reach": 126,
+    "impressions": 154,
+    "reach": 132,
     "likes": 1,
     "comments": 0,
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 147,
-    "igReelsAvgWatchTime": 7839,
-    "igReelsVideoViewTotalTime": 1011282,
-    "reelsSkipRate": 53.1,
+    "views": 154,
+    "igReelsAvgWatchTime": 7629,
+    "igReelsVideoViewTotalTime": 1029937,
+    "reelsSkipRate": 53.7,
     "completionRate": 0,
     "profileViews": 0,
     "websiteClicks": 0,
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 55,
-    "engagementRate": 0.68,
-    "lastUpdated": "2026-11-03T18:36:02Z"
+    "engagementRate": 0.65,
+    "lastUpdated": "2026-11-04T18:32:36Z"
    }
   },
   {
@@ -238,25 +877,25 @@
    "typ": "REELS",
    "sync": null,
    "analytics": {
-    "impressions": 145,
-    "reach": 134,
+    "impressions": 148,
+    "reach": 136,
     "likes": 1,
     "comments": 0,
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 145,
-    "igReelsAvgWatchTime": 7722,
-    "igReelsVideoViewTotalTime": 1027097,
-    "reelsSkipRate": 42.9,
+    "views": 148,
+    "igReelsAvgWatchTime": 7618,
+    "igReelsVideoViewTotalTime": 1028452,
+    "reelsSkipRate": 43.7,
     "completionRate": 0,
     "profileViews": 0,
     "websiteClicks": 0,
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 55,
-    "engagementRate": 0.69,
-    "lastUpdated": "2026-11-03T18:36:02Z"
+    "engagementRate": 0.68,
+    "lastUpdated": "2026-11-04T18:32:36Z"
    }
   },
   {
@@ -270,25 +909,25 @@
    "typ": "REELS",
    "sync": null,
    "analytics": {
-    "impressions": 164,
-    "reach": 147,
+    "impressions": 169,
+    "reach": 151,
     "likes": 1,
     "comments": 0,
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 164,
-    "igReelsAvgWatchTime": 7984,
-    "igReelsVideoViewTotalTime": 1181762,
-    "reelsSkipRate": 66,
+    "views": 169,
+    "igReelsAvgWatchTime": 7807,
+    "igReelsVideoViewTotalTime": 1186722,
+    "reelsSkipRate": 66.9,
     "completionRate": 0,
     "profileViews": 0,
     "websiteClicks": 0,
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 53,
-    "engagementRate": 0.61,
-    "lastUpdated": "2026-11-03T18:36:02Z"
+    "engagementRate": 0.59,
+    "lastUpdated": "2026-11-04T18:32:36Z"
    }
   },
   {
@@ -302,16 +941,16 @@
    "typ": "REELS",
    "sync": null,
    "analytics": {
-    "impressions": 161,
-    "reach": 143,
+    "impressions": 163,
+    "reach": 145,
     "likes": 1,
     "comments": 0,
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 161,
-    "igReelsAvgWatchTime": 10217,
-    "igReelsVideoViewTotalTime": 1471351,
+    "views": 163,
+    "igReelsAvgWatchTime": 10104,
+    "igReelsVideoViewTotalTime": 1475196,
     "reelsSkipRate": 44.8,
     "completionRate": 0,
     "profileViews": 0,
@@ -319,8 +958,8 @@
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 58,
-    "engagementRate": 0.62,
-    "lastUpdated": "2026-11-03T18:36:02Z"
+    "engagementRate": 0.61,
+    "lastUpdated": "2026-11-04T18:32:36Z"
    }
   },
   {
@@ -336,38 +975,38 @@
    "analytics": {
     "impressions": 0,
     "reach": 0,
-    "likes": 52,
+    "likes": 57,
     "comments": 0,
     "shares": 0,
     "saves": 4,
     "clicks": 0,
-    "views": 945,
-    "follows": 4,
-    "igReelsAvgWatchTime": 47090,
-    "igReelsVideoViewTotalTime": 45773000,
+    "views": 1025,
+    "follows": 5,
+    "igReelsAvgWatchTime": 46660,
+    "igReelsVideoViewTotalTime": 49505000,
     "reelsSkipRate": 0,
-    "completionRate": 0.0514,
+    "completionRate": 0.0528,
     "profileViews": 0,
     "websiteClicks": 0,
-    "impressionSources.forYou": 0.96,
-    "impressionSources.other": 0.003,
-    "impressionSources.personalProfile": 0.01,
-    "impressionSources.search": 0.026,
+    "impressionSources.other": 0.012,
+    "impressionSources.personalProfile": 0.027,
+    "impressionSources.search": 0.042,
     "impressionSources.sound": 0,
     "impressionSources.directMessage": 0,
     "impressionSources.follow": 0.001,
-    "audienceTypes.follower": 0.01,
+    "impressionSources.forYou": 0.918,
+    "audienceTypes.follower": 0.02,
     "audienceTypes.newViewer": 0,
-    "audienceTypes.nonFollower": 0.99,
+    "audienceTypes.nonFollower": 0.98,
     "audienceTypes.returnViewer": 0,
     "retentionCurve.0": 1,
     "retentionCurve.5": 0.46,
-    "retentionCurve.10": 0.38,
-    "retentionCurve.15": 0.34,
-    "retentionCurve.20": 0.32,
-    "retentionCurve.25": 0.31,
+    "retentionCurve.10": 0.37,
+    "retentionCurve.15": 0.33,
+    "retentionCurve.20": 0.31,
+    "retentionCurve.25": 0.3,
     "retentionCurve.30": 0.29,
-    "retentionCurve.35": 0.28,
+    "retentionCurve.35": 0.27,
     "retentionCurve.40": 0.26,
     "retentionCurve.45": 0.25,
     "retentionCurve.50": 0.24,
@@ -386,15 +1025,15 @@
     "retentionCurve.115": 0.09,
     "retentionCurve.120": 0.08,
     "retentionCurve.125": 0.08,
-    "retentionCurve.130": 0.07,
+    "retentionCurve.130": 0.08,
     "retentionCurve.135": 0.07,
     "retentionCurve.140": 0.07,
-    "retentionCurve.145": 0.06,
+    "retentionCurve.145": 0.07,
     "retentionCurve.150": 0.06,
     "retentionCurve.155": 0.06,
     "retentionCurve.160": 0.06,
-    "retentionCurve.165": 0.05,
-    "retentionCurve.170": 0.05,
+    "retentionCurve.165": 0.06,
+    "retentionCurve.170": 0.06,
     "retentionCurve.175": 0.05,
     "retentionCurve.180": 0.05,
     "retentionCurve.185": 0.05,
@@ -418,8 +1057,8 @@
     "retentionCurve.275": 0.02,
     "replays": 0,
     "reposts": 0,
-    "engagementRate": 5.93,
-    "lastUpdated": "2026-11-03T18:36:30Z"
+    "engagementRate": 5.95,
+    "lastUpdated": "2026-11-04T18:32:30Z"
    }
   },
   {
@@ -433,25 +1072,25 @@
    "typ": "REELS",
    "sync": null,
    "analytics": {
-    "impressions": 200,
-    "reach": 180,
+    "impressions": 210,
+    "reach": 190,
     "likes": 1,
     "comments": 0,
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 200,
-    "igReelsAvgWatchTime": 11042,
-    "igReelsVideoViewTotalTime": 2009782,
-    "reelsSkipRate": 38.7,
+    "views": 210,
+    "igReelsAvgWatchTime": 11139,
+    "igReelsVideoViewTotalTime": 2138824,
+    "reelsSkipRate": 39.3,
     "completionRate": 0,
     "profileViews": 0,
     "websiteClicks": 0,
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 55,
-    "engagementRate": 0.5,
-    "lastUpdated": "2026-11-03T18:36:02Z"
+    "engagementRate": 0.48,
+    "lastUpdated": "2026-11-04T18:32:36Z"
    }
   },
   {
@@ -465,25 +1104,25 @@
    "typ": "REELS",
    "sync": null,
    "analytics": {
-    "impressions": 309,
-    "reach": 248,
+    "impressions": 325,
+    "reach": 265,
     "likes": 2,
     "comments": 0,
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 309,
-    "igReelsAvgWatchTime": 14269,
-    "igReelsVideoViewTotalTime": 3610225,
-    "reelsSkipRate": 38.3,
+    "views": 325,
+    "igReelsAvgWatchTime": 13885,
+    "igReelsVideoViewTotalTime": 3749099,
+    "reelsSkipRate": 39,
     "completionRate": 0,
     "profileViews": 0,
     "websiteClicks": 0,
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 58,
-    "engagementRate": 0.65,
-    "lastUpdated": "2026-11-03T18:36:02Z"
+    "engagementRate": 0.62,
+    "lastUpdated": "2026-11-04T18:32:36Z"
    }
   },
   {
@@ -515,7 +1154,7 @@
     "reposts": 0,
     "videoDurationSeconds": 57,
     "engagementRate": 0,
-    "lastUpdated": "2026-11-03T18:36:02Z"
+    "lastUpdated": "2026-11-04T18:32:36Z"
    }
   },
   {
@@ -529,25 +1168,25 @@
    "typ": "REELS",
    "sync": null,
    "analytics": {
-    "impressions": 199,
+    "impressions": 200,
     "reach": 169,
     "likes": 4,
     "comments": 0,
     "shares": 0,
     "saves": 1,
     "clicks": 0,
-    "views": 199,
-    "igReelsAvgWatchTime": 9537,
-    "igReelsVideoViewTotalTime": 1640409,
-    "reelsSkipRate": 36.8,
+    "views": 200,
+    "igReelsAvgWatchTime": 9488,
+    "igReelsVideoViewTotalTime": 1641595,
+    "reelsSkipRate": 37.2,
     "completionRate": 0,
     "profileViews": 0,
     "websiteClicks": 0,
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 46,
-    "engagementRate": 2.51,
-    "lastUpdated": "2026-11-03T18:36:02Z"
+    "engagementRate": 2.5,
+    "lastUpdated": "2026-11-04T18:32:36Z"
    }
   },
   {
@@ -561,25 +1200,25 @@
    "typ": "REELS",
    "sync": null,
    "analytics": {
-    "impressions": 308,
-    "reach": 281,
+    "impressions": 316,
+    "reach": 287,
     "likes": 3,
     "comments": 0,
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 308,
-    "igReelsAvgWatchTime": 15018,
-    "igReelsVideoViewTotalTime": 4310405,
-    "reelsSkipRate": 40,
+    "views": 316,
+    "igReelsAvgWatchTime": 14721,
+    "igReelsVideoViewTotalTime": 4328074,
+    "reelsSkipRate": 40.8,
     "completionRate": 0,
     "profileViews": 0,
     "websiteClicks": 0,
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 56,
-    "engagementRate": 0.97,
-    "lastUpdated": "2026-11-03T18:36:02Z"
+    "engagementRate": 0.95,
+    "lastUpdated": "2026-11-04T18:32:36Z"
    }
   },
   {
@@ -611,7 +1250,7 @@
     "reposts": 0,
     "videoDurationSeconds": 59,
     "engagementRate": 0.69,
-    "lastUpdated": "2026-11-03T18:36:02Z"
+    "lastUpdated": "2026-11-04T18:32:36Z"
    }
   },
   {
@@ -626,31 +1265,42 @@
    "sync": null,
    "analytics": {
     "impressions": 0,
-    "reach": 0,
+    "reach": 306,
     "likes": 39,
     "comments": 1,
     "shares": 0,
     "saves": 5,
     "clicks": 0,
-    "views": 757,
+    "views": 767,
     "follows": 0,
-    "igReelsAvgWatchTime": 22820,
-    "igReelsVideoViewTotalTime": 17801000,
+    "igReelsAvgWatchTime": 23060,
+    "igReelsVideoViewTotalTime": 18221000,
     "reelsSkipRate": 0,
-    "completionRate": 0.0205,
+    "completionRate": 0.0215,
     "profileViews": 0,
     "websiteClicks": 0,
-    "impressionSources.other": 0,
-    "impressionSources.personalProfile": 0.022,
     "impressionSources.search": 0,
     "impressionSources.sound": 0,
     "impressionSources.directMessage": 0,
     "impressionSources.follow": 0.001,
-    "impressionSources.forYou": 0.977,
-    "audienceTypes.nonFollower": 0.97,
-    "audienceTypes.returnViewer": 0,
-    "audienceTypes.follower": 0.03,
-    "audienceTypes.newViewer": 0,
+    "impressionSources.forYou": 0.966,
+    "impressionSources.other": 0,
+    "impressionSources.personalProfile": 0.033,
+    "audienceTypes.nonFollower": 0.96,
+    "audienceTypes.returnViewer": 0.4,
+    "audienceTypes.follower": 0.04,
+    "audienceTypes.newViewer": 0.6,
+    "audienceCountries.DE": 0.848,
+    "audienceCountries.AT": 0.071,
+    "audienceCountries.CH": 0.035,
+    "audienceCountries.LU": 0.008,
+    "audienceCountries.IT": 0.006,
+    "audienceCountries.US": 0.005,
+    "audienceCountries.ES": 0.004,
+    "audienceCountries.SI": 0.003,
+    "audienceCountries.GB": 0.003,
+    "audienceCountries.EG": 0.001,
+    "audienceCountries.other": 0.016,
     "retentionCurve.0": 1,
     "retentionCurve.7": 0.26,
     "retentionCurve.14": 0.17,
@@ -658,19 +1308,19 @@
     "retentionCurve.28": 0.09,
     "retentionCurve.35": 0.09,
     "retentionCurve.42": 0.09,
-    "retentionCurve.49": 0.08,
+    "retentionCurve.49": 0.09,
     "retentionCurve.56": 0.08,
     "retentionCurve.63": 0.07,
     "retentionCurve.70": 0.07,
     "retentionCurve.77": 0.07,
-    "retentionCurve.84": 0.06,
-    "retentionCurve.91": 0.06,
+    "retentionCurve.84": 0.07,
+    "retentionCurve.91": 0.07,
     "retentionCurve.98": 0.06,
     "retentionCurve.105": 0.06,
     "retentionCurve.112": 0.05,
     "retentionCurve.119": 0.05,
-    "retentionCurve.126": 0.04,
-    "retentionCurve.133": 0.04,
+    "retentionCurve.126": 0.05,
+    "retentionCurve.133": 0.05,
     "retentionCurve.140": 0.04,
     "retentionCurve.147": 0.04,
     "retentionCurve.154": 0.04,
@@ -683,8 +1333,8 @@
     "retentionCurve.203": 0.04,
     "retentionCurve.210": 0.03,
     "retentionCurve.217": 0.03,
-    "retentionCurve.224": 0.02,
-    "retentionCurve.231": 0.02,
+    "retentionCurve.224": 0.03,
+    "retentionCurve.231": 0.03,
     "retentionCurve.238": 0.02,
     "retentionCurve.245": 0.02,
     "retentionCurve.252": 0.02,
@@ -712,8 +1362,8 @@
     "retentionCurve.406": 0.01,
     "replays": 0,
     "reposts": 0,
-    "engagementRate": 5.94,
-    "lastUpdated": "2026-11-03T18:36:30Z"
+    "engagementRate": 14.71,
+    "lastUpdated": "2026-11-04T18:32:30Z"
    }
   },
   {
@@ -727,25 +1377,25 @@
    "typ": "REELS",
    "sync": null,
    "analytics": {
-    "impressions": 246,
-    "reach": 206,
+    "impressions": 247,
+    "reach": 207,
     "likes": 3,
     "comments": 0,
     "shares": 0,
     "saves": 1,
     "clicks": 0,
-    "views": 246,
-    "igReelsAvgWatchTime": 15515,
-    "igReelsVideoViewTotalTime": 3351414,
-    "reelsSkipRate": 39.5,
+    "views": 247,
+    "igReelsAvgWatchTime": 15470,
+    "igReelsVideoViewTotalTime": 3357045,
+    "reelsSkipRate": 39.4,
     "completionRate": 0,
     "profileViews": 0,
     "websiteClicks": 0,
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 57,
-    "engagementRate": 1.63,
-    "lastUpdated": "2026-11-03T18:36:02Z"
+    "engagementRate": 1.62,
+    "lastUpdated": "2026-11-04T18:32:36Z"
    }
   },
   {
@@ -777,7 +1427,7 @@
     "reposts": 0,
     "videoDurationSeconds": 49,
     "engagementRate": 2.42,
-    "lastUpdated": "2026-11-03T18:36:02Z"
+    "lastUpdated": "2026-11-04T18:32:36Z"
    }
   },
   {
@@ -809,7 +1459,7 @@
     "reposts": 0,
     "videoDurationSeconds": 48,
     "engagementRate": 0.59,
-    "lastUpdated": "2026-11-03T18:36:02Z"
+    "lastUpdated": "2026-11-04T18:32:36Z"
    }
   },
   {
@@ -841,7 +1491,7 @@
     "reposts": 0,
     "videoDurationSeconds": 57,
     "engagementRate": 3.25,
-    "lastUpdated": "2026-11-03T18:36:02Z"
+    "lastUpdated": "2026-11-04T18:32:36Z"
    }
   },
   {
@@ -873,7 +1523,7 @@
     "reposts": 0,
     "videoDurationSeconds": 56,
     "engagementRate": 0.62,
-    "lastUpdated": "2026-11-03T18:36:02Z"
+    "lastUpdated": "2026-11-04T18:32:36Z"
    }
   },
   {
@@ -888,31 +1538,42 @@
    "sync": null,
    "analytics": {
     "impressions": 0,
-    "reach": 0,
-    "likes": 36,
+    "reach": 660,
+    "likes": 37,
     "comments": 0,
     "shares": 0,
     "saves": 2,
     "clicks": 0,
-    "views": 782,
+    "views": 787,
     "follows": 0,
-    "igReelsAvgWatchTime": 17950,
-    "igReelsVideoViewTotalTime": 14416000,
+    "igReelsAvgWatchTime": 17850,
+    "igReelsVideoViewTotalTime": 14420000,
     "reelsSkipRate": 0,
-    "completionRate": 0.0112,
+    "completionRate": 0.0111,
     "profileViews": 0,
     "websiteClicks": 0,
-    "impressionSources.search": 0,
     "impressionSources.sound": 0,
     "impressionSources.directMessage": 0,
     "impressionSources.follow": 0,
-    "impressionSources.forYou": 0.965,
+    "impressionSources.forYou": 0.959,
     "impressionSources.other": 0.001,
-    "impressionSources.personalProfile": 0.034,
-    "audienceTypes.nonFollower": 0.97,
-    "audienceTypes.returnViewer": 0,
+    "impressionSources.personalProfile": 0.04,
+    "impressionSources.search": 0,
     "audienceTypes.follower": 0.03,
-    "audienceTypes.newViewer": 0,
+    "audienceTypes.newViewer": 0.8,
+    "audienceTypes.nonFollower": 0.97,
+    "audienceTypes.returnViewer": 0.2,
+    "audienceCountries.DE": 0.869,
+    "audienceCountries.AT": 0.08,
+    "audienceCountries.CH": 0.021,
+    "audienceCountries.NL": 0.004,
+    "audienceCountries.LU": 0.004,
+    "audienceCountries.IT": 0.002,
+    "audienceCountries.JP": 0.002,
+    "audienceCountries.US": 0.002,
+    "audienceCountries.CA": 0.002,
+    "audienceCountries.FR": 0.002,
+    "audienceCountries.other": 0.012,
     "retentionCurve.0": 1,
     "retentionCurve.7": 0.29,
     "retentionCurve.14": 0.15,
@@ -976,8 +1637,8 @@
     "retentionCurve.420": 0.01,
     "replays": 0,
     "reposts": 0,
-    "engagementRate": 4.86,
-    "lastUpdated": "2026-11-03T18:36:30Z"
+    "engagementRate": 5.91,
+    "lastUpdated": "2026-11-04T18:32:30Z"
    }
   },
   {
@@ -1009,7 +1670,7 @@
     "reposts": 0,
     "videoDurationSeconds": 52,
     "engagementRate": 1.72,
-    "lastUpdated": "2026-11-03T18:36:02Z"
+    "lastUpdated": "2026-11-04T18:32:36Z"
    }
   },
   {
@@ -1031,8 +1692,8 @@
     "saves": 2,
     "clicks": 0,
     "views": 976,
-    "igReelsAvgWatchTime": 17704,
-    "igReelsVideoViewTotalTime": 15296442,
+    "igReelsAvgWatchTime": 17684,
+    "igReelsVideoViewTotalTime": 15297021,
     "reelsSkipRate": 36.2,
     "completionRate": 0,
     "profileViews": 0,
@@ -1041,7 +1702,7 @@
     "reposts": 0,
     "videoDurationSeconds": 50,
     "engagementRate": 2.15,
-    "lastUpdated": "2026-11-03T18:36:02Z"
+    "lastUpdated": "2026-11-04T18:32:36Z"
    }
   },
   {
@@ -1073,7 +1734,7 @@
     "reposts": 0,
     "videoDurationSeconds": 57,
     "engagementRate": 1.28,
-    "lastUpdated": "2026-11-03T18:36:02Z"
+    "lastUpdated": "2026-11-04T18:32:36Z"
    }
   },
   {
@@ -1088,41 +1749,41 @@
    "sync": null,
    "analytics": {
     "impressions": 0,
-    "reach": 280,
-    "likes": 29,
+    "reach": 683,
+    "likes": 30,
     "comments": 0,
     "shares": 0,
     "saves": 3,
     "clicks": 0,
-    "views": 764,
+    "views": 771,
     "follows": 0,
-    "igReelsAvgWatchTime": 25400,
-    "igReelsVideoViewTotalTime": 20068000,
+    "igReelsAvgWatchTime": 25190,
+    "igReelsVideoViewTotalTime": 20074000,
     "reelsSkipRate": 0,
-    "completionRate": 0.0253,
+    "completionRate": 0.0251,
     "profileViews": 0,
     "websiteClicks": 0,
-    "impressionSources.other": 0.01,
-    "impressionSources.personalProfile": 0.041,
-    "impressionSources.search": 0.001,
+    "impressionSources.personalProfile": 0.048,
+    "impressionSources.search": 0.003,
     "impressionSources.sound": 0,
     "impressionSources.directMessage": 0,
     "impressionSources.follow": 0.003,
-    "impressionSources.forYou": 0.945,
+    "impressionSources.forYou": 0.936,
+    "impressionSources.other": 0.01,
+    "audienceTypes.returnViewer": 0.3,
     "audienceTypes.follower": 0.04,
-    "audienceTypes.newViewer": 0.65,
+    "audienceTypes.newViewer": 0.7,
     "audienceTypes.nonFollower": 0.96,
-    "audienceTypes.returnViewer": 0.35,
-    "audienceCountries.DE": 0.838,
-    "audienceCountries.AT": 0.099,
+    "audienceCountries.DE": 0.837,
+    "audienceCountries.AT": 0.098,
     "audienceCountries.CH": 0.028,
-    "audienceCountries.US": 0.006,
+    "audienceCountries.US": 0.008,
     "audienceCountries.IT": 0.005,
     "audienceCountries.ES": 0.004,
     "audienceCountries.LU": 0.004,
+    "audienceCountries.DK": 0.001,
     "audienceCountries.NO": 0.001,
     "audienceCountries.BE": 0.001,
-    "audienceCountries.DK": 0.001,
     "audienceCountries.other": 0.013,
     "retentionCurve.0": 1,
     "retentionCurve.7": 0.29,
@@ -1145,7 +1806,7 @@
     "retentionCurve.126": 0.05,
     "retentionCurve.133": 0.05,
     "retentionCurve.140": 0.05,
-    "retentionCurve.147": 0.05,
+    "retentionCurve.147": 0.04,
     "retentionCurve.154": 0.04,
     "retentionCurve.161": 0.04,
     "retentionCurve.168": 0.04,
@@ -1185,8 +1846,8 @@
     "retentionCurve.406": 0.02,
     "replays": 0,
     "reposts": 0,
-    "engagementRate": 11.43,
-    "lastUpdated": "2026-11-03T18:36:30Z"
+    "engagementRate": 4.83,
+    "lastUpdated": "2026-11-04T18:32:30Z"
    }
   },
   {
@@ -1218,7 +1879,7 @@
     "reposts": 0,
     "videoDurationSeconds": 48,
     "engagementRate": 1.51,
-    "lastUpdated": "2026-11-03T18:36:02Z"
+    "lastUpdated": "2026-11-04T18:32:36Z"
    }
   },
   {
@@ -1250,7 +1911,7 @@
     "reposts": 0,
     "videoDurationSeconds": 59,
     "engagementRate": 1.75,
-    "lastUpdated": "2026-11-03T18:36:02Z"
+    "lastUpdated": "2026-11-04T18:32:36Z"
    }
   },
   {
@@ -1264,25 +1925,25 @@
    "typ": "REELS",
    "sync": null,
    "analytics": {
-    "impressions": 1637,
-    "reach": 1397,
+    "impressions": 1638,
+    "reach": 1398,
     "likes": 19,
     "comments": 0,
     "shares": 0,
     "saves": 4,
     "clicks": 0,
-    "views": 1637,
-    "igReelsAvgWatchTime": 21198,
-    "igReelsVideoViewTotalTime": 29698662,
-    "reelsSkipRate": 37.1,
+    "views": 1638,
+    "igReelsAvgWatchTime": 21184,
+    "igReelsVideoViewTotalTime": 29700253,
+    "reelsSkipRate": 37.2,
     "completionRate": 0,
     "profileViews": 0,
     "websiteClicks": 0,
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 54,
-    "engagementRate": 1.41,
-    "lastUpdated": "2026-11-03T18:36:02Z"
+    "engagementRate": 1.4,
+    "lastUpdated": "2026-11-04T18:32:36Z"
    }
   },
   {
@@ -1297,41 +1958,41 @@
    "sync": null,
    "analytics": {
     "impressions": 0,
-    "reach": 708,
-    "likes": 27,
+    "reach": 722,
+    "likes": 28,
     "comments": 1,
     "shares": 0,
     "saves": 4,
     "clicks": 0,
-    "views": 837,
+    "views": 844,
     "follows": 1,
-    "igReelsAvgWatchTime": 22710,
-    "igReelsVideoViewTotalTime": 19532000,
+    "igReelsAvgWatchTime": 22640,
+    "igReelsVideoViewTotalTime": 19629000,
     "reelsSkipRate": 0,
-    "completionRate": 0.0233,
+    "completionRate": 0.0231,
     "profileViews": 0,
     "websiteClicks": 0,
-    "impressionSources.directMessage": 0,
-    "impressionSources.follow": 0.002,
-    "impressionSources.forYou": 0.932,
+    "impressionSources.follow": 0.003,
+    "impressionSources.forYou": 0.925,
     "impressionSources.other": 0.003,
-    "impressionSources.personalProfile": 0.062,
+    "impressionSources.personalProfile": 0.068,
     "impressionSources.search": 0.001,
     "impressionSources.sound": 0,
+    "impressionSources.directMessage": 0,
     "audienceTypes.follower": 0.03,
-    "audienceTypes.newViewer": 0.76,
+    "audienceTypes.newViewer": 0.74,
     "audienceTypes.nonFollower": 0.97,
-    "audienceTypes.returnViewer": 0.24,
-    "audienceCountries.DE": 0.884,
-    "audienceCountries.AT": 0.071,
+    "audienceTypes.returnViewer": 0.26,
+    "audienceCountries.DE": 0.885,
+    "audienceCountries.AT": 0.07,
     "audienceCountries.CH": 0.023,
     "audienceCountries.SK": 0.003,
     "audienceCountries.US": 0.003,
-    "audienceCountries.LU": 0.002,
-    "audienceCountries.IT": 0.002,
     "audienceCountries.SE": 0.002,
     "audienceCountries.FR": 0.002,
+    "audienceCountries.LU": 0.002,
     "audienceCountries.NL": 0.002,
+    "audienceCountries.IT": 0.002,
     "audienceCountries.other": 0.006,
     "retentionCurve.0": 1,
     "retentionCurve.7": 0.24,
@@ -1353,7 +2014,7 @@
     "retentionCurve.119": 0.05,
     "retentionCurve.126": 0.05,
     "retentionCurve.133": 0.05,
-    "retentionCurve.140": 0.05,
+    "retentionCurve.140": 0.04,
     "retentionCurve.147": 0.04,
     "retentionCurve.154": 0.04,
     "retentionCurve.161": 0.04,
@@ -1394,8 +2055,8 @@
     "retentionCurve.406": 0.01,
     "replays": 0,
     "reposts": 0,
-    "engagementRate": 4.52,
-    "lastUpdated": "2026-11-03T18:36:30Z"
+    "engagementRate": 4.57,
+    "lastUpdated": "2026-11-04T18:32:30Z"
    }
   },
   {
@@ -1427,7 +2088,7 @@
     "reposts": 0,
     "videoDurationSeconds": 50,
     "engagementRate": 0.33,
-    "lastUpdated": "2026-11-03T18:36:02Z"
+    "lastUpdated": "2026-11-04T18:32:36Z"
    }
   },
   {
@@ -1459,7 +2120,7 @@
     "reposts": 0,
     "videoDurationSeconds": 59,
     "engagementRate": 1.19,
-    "lastUpdated": "2026-11-03T18:36:02Z"
+    "lastUpdated": "2026-11-04T18:32:36Z"
    }
   },
   {
@@ -1491,7 +2152,7 @@
     "reposts": 0,
     "videoDurationSeconds": 47,
     "engagementRate": 0.39,
-    "lastUpdated": "2026-11-03T18:36:02Z"
+    "lastUpdated": "2026-11-04T18:32:36Z"
    }
   },
   {
@@ -1506,49 +2167,49 @@
    "sync": null,
    "analytics": {
     "impressions": 0,
-    "reach": 762,
-    "likes": 27,
+    "reach": 772,
+    "likes": 28,
     "comments": 1,
     "shares": 1,
     "saves": 7,
     "clicks": 0,
-    "views": 900,
+    "views": 909,
     "follows": 3,
-    "igReelsAvgWatchTime": 37160,
-    "igReelsVideoViewTotalTime": 34487000,
+    "igReelsAvgWatchTime": 37290,
+    "igReelsVideoViewTotalTime": 34938000,
     "reelsSkipRate": 0,
-    "completionRate": 0.0366,
+    "completionRate": 0.0363,
     "profileViews": 0,
     "websiteClicks": 0,
-    "impressionSources.personalProfile": 0.08,
+    "impressionSources.follow": 0,
+    "impressionSources.forYou": 0.913,
+    "impressionSources.other": 0.002,
+    "impressionSources.personalProfile": 0.085,
     "impressionSources.search": 0,
     "impressionSources.sound": 0,
     "impressionSources.directMessage": 0,
-    "impressionSources.follow": 0,
-    "impressionSources.forYou": 0.918,
-    "impressionSources.other": 0.002,
     "audienceTypes.follower": 0.04,
-    "audienceTypes.newViewer": 0.73,
+    "audienceTypes.newViewer": 0.72,
     "audienceTypes.nonFollower": 0.96,
-    "audienceTypes.returnViewer": 0.27,
-    "audienceCountries.DE": 0.887,
+    "audienceTypes.returnViewer": 0.28,
+    "audienceCountries.DE": 0.889,
     "audienceCountries.AT": 0.042,
-    "audienceCountries.CH": 0.024,
+    "audienceCountries.CH": 0.023,
     "audienceCountries.IT": 0.004,
-    "audienceCountries.US": 0.004,
     "audienceCountries.TR": 0.004,
-    "audienceCountries.SK": 0.003,
-    "audienceCountries.HR": 0.003,
+    "audienceCountries.US": 0.004,
     "audienceCountries.HU": 0.003,
     "audienceCountries.LU": 0.003,
-    "audienceCountries.other": 0.023,
+    "audienceCountries.SK": 0.003,
+    "audienceCountries.HR": 0.003,
+    "audienceCountries.other": 0.022,
     "retentionCurve.0": 1,
     "retentionCurve.7": 0.38,
     "retentionCurve.14": 0.27,
     "retentionCurve.21": 0.18,
     "retentionCurve.28": 0.13,
     "retentionCurve.35": 0.12,
-    "retentionCurve.42": 0.11,
+    "retentionCurve.42": 0.12,
     "retentionCurve.49": 0.11,
     "retentionCurve.56": 0.11,
     "retentionCurve.63": 0.1,
@@ -1558,7 +2219,7 @@
     "retentionCurve.91": 0.09,
     "retentionCurve.98": 0.09,
     "retentionCurve.105": 0.09,
-    "retentionCurve.112": 0.08,
+    "retentionCurve.112": 0.09,
     "retentionCurve.119": 0.08,
     "retentionCurve.126": 0.08,
     "retentionCurve.133": 0.08,
@@ -1569,8 +2230,8 @@
     "retentionCurve.168": 0.07,
     "retentionCurve.175": 0.07,
     "retentionCurve.182": 0.07,
-    "retentionCurve.189": 0.06,
-    "retentionCurve.196": 0.06,
+    "retentionCurve.189": 0.07,
+    "retentionCurve.196": 0.07,
     "retentionCurve.203": 0.06,
     "retentionCurve.210": 0.05,
     "retentionCurve.217": 0.05,
@@ -1603,8 +2264,8 @@
     "retentionCurve.406": 0.03,
     "replays": 0,
     "reposts": 0,
-    "engagementRate": 4.72,
-    "lastUpdated": "2026-11-03T18:36:30Z"
+    "engagementRate": 4.79,
+    "lastUpdated": "2026-11-04T18:32:30Z"
    }
   },
   {
@@ -1636,7 +2297,7 @@
     "reposts": 0,
     "videoDurationSeconds": 51,
     "engagementRate": 0.57,
-    "lastUpdated": "2026-11-03T18:36:02Z"
+    "lastUpdated": "2026-11-04T18:32:36Z"
    }
   },
   {
@@ -1668,7 +2329,7 @@
     "reposts": 0,
     "videoDurationSeconds": 41,
     "engagementRate": 1.14,
-    "lastUpdated": "2026-11-03T18:36:02Z"
+    "lastUpdated": "2026-11-04T18:32:36Z"
    }
   },
   {
@@ -1700,7 +2361,7 @@
     "reposts": 0,
     "videoDurationSeconds": 51,
     "engagementRate": 1.87,
-    "lastUpdated": "2026-11-03T18:36:02Z"
+    "lastUpdated": "2026-11-04T18:32:36Z"
    }
   },
   {
@@ -1714,17 +2375,17 @@
    "typ": "REELS",
    "sync": null,
    "analytics": {
-    "impressions": 2129,
-    "reach": 1549,
+    "impressions": 2131,
+    "reach": 1550,
     "likes": 22,
     "comments": 0,
     "shares": 0,
     "saves": 4,
     "clicks": 0,
-    "views": 2129,
-    "igReelsAvgWatchTime": 18553,
-    "igReelsVideoViewTotalTime": 28794352,
-    "reelsSkipRate": 33,
+    "views": 2131,
+    "igReelsAvgWatchTime": 18548,
+    "igReelsVideoViewTotalTime": 28806176,
+    "reelsSkipRate": 32.9,
     "completionRate": 0,
     "profileViews": 0,
     "websiteClicks": 0,
@@ -1732,7 +2393,7 @@
     "reposts": 0,
     "videoDurationSeconds": 41,
     "engagementRate": 1.22,
-    "lastUpdated": "2026-11-03T18:36:02Z"
+    "lastUpdated": "2026-11-04T18:32:36Z"
    }
   },
   {
@@ -1764,7 +2425,7 @@
     "reposts": 0,
     "videoDurationSeconds": 39,
     "engagementRate": 0.77,
-    "lastUpdated": "2026-11-03T18:36:02Z"
+    "lastUpdated": "2026-11-04T18:32:36Z"
    }
   },
   {
@@ -1779,33 +2440,33 @@
    "sync": null,
    "analytics": {
     "impressions": 0,
-    "reach": 779,
-    "likes": 45,
+    "reach": 786,
+    "likes": 46,
     "comments": 1,
     "shares": 1,
-    "saves": 6,
+    "saves": 5,
     "clicks": 0,
-    "views": 968,
+    "views": 979,
     "follows": 3,
-    "igReelsAvgWatchTime": 26820,
-    "igReelsVideoViewTotalTime": 26818000,
+    "igReelsAvgWatchTime": 26960,
+    "igReelsVideoViewTotalTime": 27229000,
     "reelsSkipRate": 0,
-    "completionRate": 0.033,
+    "completionRate": 0.0337,
     "profileViews": 0,
     "websiteClicks": 0,
-    "impressionSources.follow": 0.001,
-    "impressionSources.forYou": 0.883,
-    "impressionSources.other": 0.004,
-    "impressionSources.personalProfile": 0.105,
-    "impressionSources.search": 0.007,
-    "impressionSources.sound": 0,
     "impressionSources.directMessage": 0,
-    "audienceTypes.follower": 0.05,
+    "impressionSources.follow": 0.001,
+    "impressionSources.forYou": 0.877,
+    "impressionSources.other": 0.005,
+    "impressionSources.personalProfile": 0.106,
+    "impressionSources.search": 0.011,
+    "impressionSources.sound": 0,
     "audienceTypes.newViewer": 0.73,
     "audienceTypes.nonFollower": 0.95,
     "audienceTypes.returnViewer": 0.27,
-    "audienceCountries.DE": 0.738,
-    "audienceCountries.AT": 0.058,
+    "audienceTypes.follower": 0.05,
+    "audienceCountries.DE": 0.74,
+    "audienceCountries.AT": 0.057,
     "audienceCountries.CH": 0.045,
     "audienceCountries.GB": 0.03,
     "audienceCountries.PL": 0.021,
@@ -1814,16 +2475,16 @@
     "audienceCountries.IT": 0.007,
     "audienceCountries.NL": 0.007,
     "audienceCountries.DK": 0.006,
-    "audienceCountries.other": 0.064,
+    "audienceCountries.other": 0.063,
     "retentionCurve.0": 1,
     "retentionCurve.4": 0.39,
     "retentionCurve.8": 0.26,
     "retentionCurve.12": 0.21,
-    "retentionCurve.16": 0.18,
+    "retentionCurve.16": 0.19,
     "retentionCurve.20": 0.17,
     "retentionCurve.24": 0.15,
     "retentionCurve.28": 0.14,
-    "retentionCurve.32": 0.13,
+    "retentionCurve.32": 0.14,
     "retentionCurve.36": 0.13,
     "retentionCurve.40": 0.13,
     "retentionCurve.44": 0.12,
@@ -1867,8 +2528,8 @@
     "retentionCurve.196": 0.02,
     "replays": 0,
     "reposts": 0,
-    "engagementRate": 6.8,
-    "lastUpdated": "2026-11-03T18:36:30Z"
+    "engagementRate": 6.74,
+    "lastUpdated": "2026-11-04T18:32:30Z"
    }
   },
   {
@@ -1900,7 +2561,7 @@
     "reposts": 0,
     "videoDurationSeconds": 40,
     "engagementRate": 1.51,
-    "lastUpdated": "2026-11-03T18:36:02Z"
+    "lastUpdated": "2026-11-04T18:32:36Z"
    }
   },
   {
@@ -1915,41 +2576,41 @@
    "sync": null,
    "analytics": {
     "impressions": 0,
-    "reach": 761,
-    "likes": 41,
+    "reach": 766,
+    "likes": 42,
     "comments": 0,
     "shares": 0,
     "saves": 3,
     "clicks": 0,
-    "views": 906,
+    "views": 908,
     "follows": 1,
-    "igReelsAvgWatchTime": 27890,
-    "igReelsVideoViewTotalTime": 26190000,
+    "igReelsAvgWatchTime": 28030,
+    "igReelsVideoViewTotalTime": 26371000,
     "reelsSkipRate": 0,
-    "completionRate": 0.0447,
+    "completionRate": 0.0446,
     "profileViews": 0,
     "websiteClicks": 0,
+    "impressionSources.other": 0.002,
+    "impressionSources.personalProfile": 0.113,
+    "impressionSources.search": 0.001,
     "impressionSources.sound": 0,
     "impressionSources.directMessage": 0,
     "impressionSources.follow": 0.003,
-    "impressionSources.forYou": 0.882,
-    "impressionSources.other": 0.002,
-    "impressionSources.personalProfile": 0.112,
-    "impressionSources.search": 0.001,
-    "audienceTypes.nonFollower": 0.96,
-    "audienceTypes.returnViewer": 0.27,
+    "impressionSources.forYou": 0.881,
     "audienceTypes.follower": 0.04,
-    "audienceTypes.newViewer": 0.73,
-    "audienceCountries.DE": 0.813,
-    "audienceCountries.AT": 0.075,
+    "audienceTypes.newViewer": 0.72,
+    "audienceTypes.nonFollower": 0.96,
+    "audienceTypes.returnViewer": 0.28,
+    "audienceCountries.DE": 0.814,
+    "audienceCountries.AT": 0.074,
     "audienceCountries.CH": 0.043,
     "audienceCountries.GB": 0.01,
     "audienceCountries.IT": 0.007,
     "audienceCountries.US": 0.006,
     "audienceCountries.NL": 0.006,
     "audienceCountries.PL": 0.005,
-    "audienceCountries.BG": 0.003,
     "audienceCountries.HU": 0.003,
+    "audienceCountries.BG": 0.003,
     "audienceCountries.other": 0.029,
     "retentionCurve.0": 1,
     "retentionCurve.3": 0.47,
@@ -1981,7 +2642,7 @@
     "retentionCurve.81": 0.11,
     "retentionCurve.84": 0.11,
     "retentionCurve.87": 0.11,
-    "retentionCurve.90": 0.1,
+    "retentionCurve.90": 0.11,
     "retentionCurve.93": 0.1,
     "retentionCurve.96": 0.09,
     "retentionCurve.99": 0.09,
@@ -1998,15 +2659,15 @@
     "retentionCurve.132": 0.08,
     "retentionCurve.135": 0.08,
     "retentionCurve.138": 0.08,
-    "retentionCurve.141": 0.07,
-    "retentionCurve.144": 0.07,
-    "retentionCurve.147": 0.07,
+    "retentionCurve.141": 0.08,
+    "retentionCurve.144": 0.08,
+    "retentionCurve.147": 0.08,
     "retentionCurve.150": 0.07,
     "retentionCurve.153": 0.07,
     "retentionCurve.156": 0.07,
     "retentionCurve.159": 0.07,
-    "retentionCurve.162": 0.06,
-    "retentionCurve.165": 0.06,
+    "retentionCurve.162": 0.07,
+    "retentionCurve.165": 0.07,
     "retentionCurve.168": 0.06,
     "retentionCurve.171": 0.06,
     "retentionCurve.174": 0.06,
@@ -2014,8 +2675,8 @@
     "retentionCurve.180": 0.05,
     "replays": 0,
     "reposts": 0,
-    "engagementRate": 5.78,
-    "lastUpdated": "2026-11-03T18:36:30Z"
+    "engagementRate": 5.87,
+    "lastUpdated": "2026-11-04T18:32:30Z"
    }
   },
   {
@@ -2029,16 +2690,16 @@
    "typ": "REELS",
    "sync": null,
    "analytics": {
-    "impressions": 2241,
-    "reach": 1580,
+    "impressions": 2242,
+    "reach": 1582,
     "likes": 18,
     "comments": 0,
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 2241,
-    "igReelsAvgWatchTime": 24246,
-    "igReelsVideoViewTotalTime": 38284882,
+    "views": 2242,
+    "igReelsAvgWatchTime": 24233,
+    "igReelsVideoViewTotalTime": 38289155,
     "reelsSkipRate": 32.7,
     "completionRate": 0,
     "profileViews": 0,
@@ -2047,7 +2708,7 @@
     "reposts": 0,
     "videoDurationSeconds": 49,
     "engagementRate": 0.8,
-    "lastUpdated": "2026-11-03T18:36:02Z"
+    "lastUpdated": "2026-11-04T18:32:36Z"
    }
   },
   {
@@ -2079,7 +2740,7 @@
     "reposts": 0,
     "videoDurationSeconds": 51,
     "engagementRate": 1.2,
-    "lastUpdated": "2026-11-03T18:36:02Z"
+    "lastUpdated": "2026-11-04T18:32:36Z"
    }
   },
   {
@@ -2093,16 +2754,16 @@
    "typ": "REELS",
    "sync": null,
    "analytics": {
-    "impressions": 1529,
-    "reach": 1126,
+    "impressions": 1531,
+    "reach": 1127,
     "likes": 15,
     "comments": 0,
     "shares": 0,
     "saves": 5,
     "clicks": 0,
-    "views": 1529,
-    "igReelsAvgWatchTime": 16838,
-    "igReelsVideoViewTotalTime": 18926580,
+    "views": 1531,
+    "igReelsAvgWatchTime": 16826,
+    "igReelsVideoViewTotalTime": 18930332,
     "reelsSkipRate": 38,
     "completionRate": 0,
     "profileViews": 0,
@@ -2111,7 +2772,7 @@
     "reposts": 0,
     "videoDurationSeconds": 44,
     "engagementRate": 1.31,
-    "lastUpdated": "2026-11-03T18:36:02Z"
+    "lastUpdated": "2026-11-04T18:32:36Z"
    }
   },
   {
@@ -2143,7 +2804,7 @@
     "reposts": 0,
     "videoDurationSeconds": 44,
     "engagementRate": 0.65,
-    "lastUpdated": "2026-11-03T18:36:02Z"
+    "lastUpdated": "2026-11-04T18:32:36Z"
    }
   },
   {
@@ -2158,27 +2819,27 @@
    "sync": null,
    "analytics": {
     "impressions": 0,
-    "reach": 921,
-    "likes": 57,
+    "reach": 929,
+    "likes": 58,
     "comments": 4,
     "shares": 4,
-    "saves": 9,
+    "saves": 8,
     "clicks": 0,
-    "views": 1107,
+    "views": 1112,
     "follows": 3,
-    "igReelsAvgWatchTime": 31270,
-    "igReelsVideoViewTotalTime": 35930000,
+    "igReelsAvgWatchTime": 31230,
+    "igReelsVideoViewTotalTime": 36034000,
     "reelsSkipRate": 0,
-    "completionRate": 0.0557,
+    "completionRate": 0.0555,
     "profileViews": 0,
     "websiteClicks": 0,
+    "impressionSources.other": 0.008,
     "impressionSources.personalProfile": 0.13,
-    "impressionSources.search": 0.009,
+    "impressionSources.search": 0.01,
     "impressionSources.sound": 0,
     "impressionSources.directMessage": 0.002,
     "impressionSources.follow": 0,
-    "impressionSources.forYou": 0.852,
-    "impressionSources.other": 0.007,
+    "impressionSources.forYou": 0.85,
     "audienceTypes.returnViewer": 0.23,
     "audienceTypes.follower": 0.04,
     "audienceTypes.newViewer": 0.77,
@@ -2187,12 +2848,12 @@
     "audienceCountries.AT": 0.077,
     "audienceCountries.CH": 0.036,
     "audienceCountries.GB": 0.015,
+    "audienceCountries.ES": 0.009,
     "audienceCountries.BY": 0.009,
     "audienceCountries.PL": 0.009,
-    "audienceCountries.ES": 0.009,
     "audienceCountries.SE": 0.005,
-    "audienceCountries.NL": 0.003,
     "audienceCountries.LU": 0.003,
+    "audienceCountries.NL": 0.003,
     "audienceCountries.other": 0.04,
     "retentionCurve.0": 1,
     "retentionCurve.4": 0.45,
@@ -2202,7 +2863,7 @@
     "retentionCurve.20": 0.2,
     "retentionCurve.24": 0.18,
     "retentionCurve.28": 0.17,
-    "retentionCurve.32": 0.16,
+    "retentionCurve.32": 0.17,
     "retentionCurve.36": 0.16,
     "retentionCurve.40": 0.16,
     "retentionCurve.44": 0.15,
@@ -2226,7 +2887,7 @@
     "retentionCurve.116": 0.09,
     "retentionCurve.120": 0.09,
     "retentionCurve.124": 0.09,
-    "retentionCurve.128": 0.09,
+    "retentionCurve.128": 0.08,
     "retentionCurve.132": 0.08,
     "retentionCurve.136": 0.08,
     "retentionCurve.140": 0.08,
@@ -2243,8 +2904,8 @@
     "retentionCurve.184": 0.07,
     "replays": 0,
     "reposts": 0,
-    "engagementRate": 8.03,
-    "lastUpdated": "2026-11-03T18:36:30Z"
+    "engagementRate": 7.97,
+    "lastUpdated": "2026-11-04T18:32:30Z"
    }
   },
   {
@@ -2291,27 +2952,27 @@
    "sync": null,
    "analytics": {
     "impressions": 0,
-    "reach": 831,
-    "likes": 45,
+    "reach": 833,
+    "likes": 46,
     "comments": 3,
     "shares": 0,
     "saves": 9,
     "clicks": 0,
-    "views": 980,
+    "views": 985,
     "follows": 3,
-    "igReelsAvgWatchTime": 31210,
-    "igReelsVideoViewTotalTime": 31053000,
+    "igReelsAvgWatchTime": 31060,
+    "igReelsVideoViewTotalTime": 31063000,
     "reelsSkipRate": 0,
-    "completionRate": 0.0442,
+    "completionRate": 0.044,
     "profileViews": 0,
     "websiteClicks": 0,
+    "impressionSources.other": 0.005,
+    "impressionSources.personalProfile": 0.12,
+    "impressionSources.search": 0.01,
+    "impressionSources.sound": 0,
     "impressionSources.directMessage": 0,
     "impressionSources.follow": 0,
-    "impressionSources.forYou": 0.868,
-    "impressionSources.other": 0.005,
-    "impressionSources.personalProfile": 0.119,
-    "impressionSources.search": 0.008,
-    "impressionSources.sound": 0,
+    "impressionSources.forYou": 0.865,
     "audienceTypes.nonFollower": 0.96,
     "audienceTypes.returnViewer": 0.24,
     "audienceTypes.follower": 0.04,
@@ -2322,10 +2983,10 @@
     "audienceCountries.PL": 0.012,
     "audienceCountries.US": 0.007,
     "audienceCountries.NL": 0.005,
-    "audienceCountries.ES": 0.003,
     "audienceCountries.DK": 0.003,
-    "audienceCountries.SG": 0.003,
     "audienceCountries.LU": 0.003,
+    "audienceCountries.SG": 0.003,
+    "audienceCountries.ES": 0.003,
     "audienceCountries.other": 0.021,
     "retentionCurve.0": 1,
     "retentionCurve.4": 0.43,
@@ -2333,15 +2994,15 @@
     "retentionCurve.12": 0.28,
     "retentionCurve.16": 0.24,
     "retentionCurve.20": 0.2,
-    "retentionCurve.24": 0.2,
+    "retentionCurve.24": 0.19,
     "retentionCurve.28": 0.19,
     "retentionCurve.32": 0.18,
     "retentionCurve.36": 0.17,
-    "retentionCurve.40": 0.17,
-    "retentionCurve.44": 0.16,
+    "retentionCurve.40": 0.16,
+    "retentionCurve.44": 0.15,
     "retentionCurve.48": 0.15,
     "retentionCurve.52": 0.15,
-    "retentionCurve.56": 0.15,
+    "retentionCurve.56": 0.14,
     "retentionCurve.60": 0.14,
     "retentionCurve.64": 0.14,
     "retentionCurve.68": 0.13,
@@ -2353,10 +3014,10 @@
     "retentionCurve.92": 0.12,
     "retentionCurve.96": 0.11,
     "retentionCurve.100": 0.1,
-    "retentionCurve.104": 0.1,
+    "retentionCurve.104": 0.09,
     "retentionCurve.108": 0.09,
     "retentionCurve.112": 0.09,
-    "retentionCurve.116": 0.09,
+    "retentionCurve.116": 0.08,
     "retentionCurve.120": 0.08,
     "retentionCurve.124": 0.08,
     "retentionCurve.128": 0.08,
@@ -2378,18 +3039,18 @@
     "retentionCurve.192": 0.05,
     "replays": 0,
     "reposts": 0,
-    "engagementRate": 6.86,
-    "lastUpdated": "2026-11-03T18:36:30Z"
+    "engagementRate": 6.96,
+    "lastUpdated": "2026-11-04T18:32:30Z"
    }
   },
   {
-   "id": "alien-yt-kurz-05-2",
+   "id": "mann-yt-kurz-03",
    "platform": "youtube",
-   "serie": "der-alien",
-   "zeit": "2026-11-03T18:30:00",
-   "video": "der-alien-kurz/folge-05-teil-2.mp4",
-   "text": "Der Alien – Folge 5: Was Nox gestohlen hat (Teil 2/2) 👽 #shorts",
-   "url": "https://www.youtube.com/watch?v=tjMCU0CUHIM",
+   "serie": "der-letzte-mann",
+   "zeit": "2026-11-04T20:30:00",
+   "video": "der-letzte-mann-kurz/folge-03.mp4",
+   "text": "Der letzte Mann – Folge 3: Sie kennen deinen Namen 👤 #shorts",
+   "url": "https://www.youtube.com/watch?v=DXAhzB1c9Rs",
    "typ": "video",
    "sync": null,
    "analytics": {
@@ -2400,7 +3061,7 @@
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 1,
+    "views": 0,
     "follows": 0,
     "igReelsAvgWatchTime": 0,
     "igReelsVideoViewTotalTime": 0,
@@ -2410,19 +3071,151 @@
     "websiteClicks": 0,
     "replays": 0,
     "reposts": 0,
-    "videoDurationSeconds": 55,
+    "videoDurationSeconds": 52,
     "engagementRate": 0,
-    "lastUpdated": "2026-11-03T19:27:44Z"
+    "lastUpdated": "2026-11-04T20:24:20Z"
    }
   },
   {
-   "id": "alien-yt-kurz-05-1",
+   "id": "mann-yt-kurz-02",
+   "platform": "youtube",
+   "serie": "der-letzte-mann",
+   "zeit": "2026-11-04T18:30:00",
+   "video": "der-letzte-mann-kurz/folge-02.mp4",
+   "text": "Der letzte Mann – Folge 2: Bleib vom Fenster weg 👤 #shorts",
+   "url": "https://www.youtube.com/watch?v=ycO7AePF2i4",
+   "typ": "video",
+   "sync": null,
+   "analytics": {
+    "impressions": 0,
+    "reach": 0,
+    "likes": 1,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "clicks": 0,
+    "views": 6,
+    "follows": 0,
+    "igReelsAvgWatchTime": 0,
+    "igReelsVideoViewTotalTime": 0,
+    "reelsSkipRate": 0,
+    "completionRate": 0,
+    "profileViews": 0,
+    "websiteClicks": 0,
+    "replays": 0,
+    "reposts": 0,
+    "videoDurationSeconds": 50,
+    "engagementRate": 16.67,
+    "lastUpdated": "2026-11-04T20:24:20Z"
+   }
+  },
+  {
+   "id": "mann-yt-kurz-01",
+   "platform": "youtube",
+   "serie": "der-letzte-mann",
+   "zeit": "2026-11-04T16:30:00",
+   "video": "der-letzte-mann-kurz/folge-01.mp4",
+   "text": "Der letzte Mann – Folge 1: Außer dir 👤 #shorts",
+   "url": "https://www.youtube.com/watch?v=gwygyoV496Q",
+   "typ": "video",
+   "sync": null,
+   "analytics": {
+    "impressions": 0,
+    "reach": 0,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "clicks": 0,
+    "views": 8,
+    "follows": 0,
+    "igReelsAvgWatchTime": 0,
+    "igReelsVideoViewTotalTime": 0,
+    "reelsSkipRate": 0,
+    "completionRate": 0,
+    "profileViews": 0,
+    "websiteClicks": 0,
+    "replays": 0,
+    "reposts": 0,
+    "videoDurationSeconds": 46,
+    "engagementRate": 0,
+    "lastUpdated": "2026-11-04T20:24:20Z"
+   }
+  },
+  {
+   "id": "alien-yt-kurz-10-2",
    "platform": "youtube",
    "serie": "der-alien",
-   "zeit": "2026-11-03T16:30:00",
-   "video": "der-alien-kurz/folge-05-teil-1.mp4",
-   "text": "Der Alien – Folge 5: Was Nox gestohlen hat (Teil 1/2) 👽 #shorts",
-   "url": "https://www.youtube.com/watch?v=nfgsylGHrog",
+   "zeit": "2026-11-04T14:30:00",
+   "video": "der-alien-kurz/folge-10-teil-2.mp4",
+   "text": "Der Alien – Folge 10: Wieder zu Hause (Teil 2/2) 👽 #shorts",
+   "url": "https://www.youtube.com/watch?v=SNAg_uF2LGY",
+   "typ": "video",
+   "sync": null,
+   "analytics": {
+    "impressions": 0,
+    "reach": 0,
+    "likes": 1,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "clicks": 0,
+    "views": 5,
+    "follows": 0,
+    "igReelsAvgWatchTime": 0,
+    "igReelsVideoViewTotalTime": 0,
+    "reelsSkipRate": 0,
+    "completionRate": 0,
+    "profileViews": 0,
+    "websiteClicks": 0,
+    "replays": 0,
+    "reposts": 0,
+    "videoDurationSeconds": 47,
+    "engagementRate": 20,
+    "lastUpdated": "2026-11-04T20:24:20Z"
+   }
+  },
+  {
+   "id": "alien-yt-kurz-10-1",
+   "platform": "youtube",
+   "serie": "der-alien",
+   "zeit": "2026-11-04T12:30:00",
+   "video": "der-alien-kurz/folge-10-teil-1.mp4",
+   "text": "Der Alien – Folge 10: Wieder zu Hause (Teil 1/2) 👽 #shorts",
+   "url": "https://www.youtube.com/watch?v=4mWSgUYAAqg",
+   "typ": "video",
+   "sync": null,
+   "analytics": {
+    "impressions": 0,
+    "reach": 0,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "clicks": 0,
+    "views": 7,
+    "follows": 0,
+    "igReelsAvgWatchTime": 0,
+    "igReelsVideoViewTotalTime": 0,
+    "reelsSkipRate": 0,
+    "completionRate": 0,
+    "profileViews": 0,
+    "websiteClicks": 0,
+    "replays": 0,
+    "reposts": 0,
+    "videoDurationSeconds": 60,
+    "engagementRate": 0,
+    "lastUpdated": "2026-11-04T20:24:20Z"
+   }
+  },
+  {
+   "id": "alien-yt-kurz-09-2",
+   "platform": "youtube",
+   "serie": "der-alien",
+   "zeit": "2026-11-04T10:30:00",
+   "video": "der-alien-kurz/folge-09-teil-2.mp4",
+   "text": "Der Alien – Folge 9: Auf dem Dach (Teil 2/2) 👽 #shorts",
+   "url": "https://www.youtube.com/watch?v=-hkarp9IVhA",
    "typ": "video",
    "sync": null,
    "analytics": {
@@ -2443,96 +3236,30 @@
     "websiteClicks": 0,
     "replays": 0,
     "reposts": 0,
-    "videoDurationSeconds": 55,
+    "videoDurationSeconds": 56,
     "engagementRate": 0,
-    "lastUpdated": "2026-11-03T19:27:44Z"
+    "lastUpdated": "2026-11-04T20:24:20Z"
    }
   },
   {
-   "id": "alien-yt-kurz-04-2",
+   "id": "alien-yt-kurz-09-1",
    "platform": "youtube",
    "serie": "der-alien",
-   "zeit": "2026-11-03T14:30:00",
-   "video": "der-alien-kurz/folge-04-teil-2.mp4",
-   "text": "Der Alien – Folge 4: Das Versprechen (Teil 2/2) 👽 #shorts",
-   "url": "https://www.youtube.com/watch?v=vsA9YEUtN1g",
+   "zeit": "2026-11-04T08:30:00",
+   "video": "der-alien-kurz/folge-09-teil-1.mp4",
+   "text": "Der Alien – Folge 9: Auf dem Dach (Teil 1/2) 👽 #shorts",
+   "url": "https://www.youtube.com/watch?v=dOdGqiqOljM",
    "typ": "video",
    "sync": null,
    "analytics": {
     "impressions": 0,
     "reach": 0,
-    "likes": 1,
+    "likes": 5,
     "comments": 0,
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 8,
-    "follows": 0,
-    "igReelsAvgWatchTime": 0,
-    "igReelsVideoViewTotalTime": 0,
-    "reelsSkipRate": 0,
-    "completionRate": 0,
-    "profileViews": 0,
-    "websiteClicks": 0,
-    "replays": 0,
-    "reposts": 0,
-    "videoDurationSeconds": 56,
-    "engagementRate": 12.5,
-    "lastUpdated": "2026-11-03T19:27:44Z"
-   }
-  },
-  {
-   "id": "alien-yt-kurz-04-1",
-   "platform": "youtube",
-   "serie": "der-alien",
-   "zeit": "2026-11-03T12:30:00",
-   "video": "der-alien-kurz/folge-04-teil-1.mp4",
-   "text": "Der Alien – Folge 4: Das Versprechen (Teil 1/2) 👽 #shorts",
-   "url": "https://www.youtube.com/watch?v=pO3DHtBzjjs",
-   "typ": "video",
-   "sync": null,
-   "analytics": {
-    "impressions": 0,
-    "reach": 0,
-    "likes": 1,
-    "comments": 0,
-    "shares": 0,
-    "saves": 0,
-    "clicks": 0,
-    "views": 8,
-    "follows": 0,
-    "igReelsAvgWatchTime": 0,
-    "igReelsVideoViewTotalTime": 0,
-    "reelsSkipRate": 0,
-    "completionRate": 0,
-    "profileViews": 0,
-    "websiteClicks": 0,
-    "replays": 0,
-    "reposts": 0,
-    "videoDurationSeconds": 56,
-    "engagementRate": 12.5,
-    "lastUpdated": "2026-11-03T19:27:44Z"
-   }
-  },
-  {
-   "id": "alien-yt-kurz-03-2",
-   "platform": "youtube",
-   "serie": "der-alien",
-   "zeit": "2026-11-03T10:30:00",
-   "video": "der-alien-kurz/folge-03-teil-2.mp4",
-   "text": "Der Alien – Folge 3: Deine Nachbarin (Teil 2/2) 👽 #shorts",
-   "url": "https://www.youtube.com/watch?v=QgD7LCWXiq0",
-   "typ": "video",
-   "sync": null,
-   "analytics": {
-    "impressions": 0,
-    "reach": 0,
-    "likes": 1,
-    "comments": 0,
-    "shares": 0,
-    "saves": 0,
-    "clicks": 0,
-    "views": 9,
+    "views": 64,
     "follows": 0,
     "igReelsAvgWatchTime": 0,
     "igReelsVideoViewTotalTime": 0,
@@ -2543,18 +3270,18 @@
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 54,
-    "engagementRate": 11.11,
-    "lastUpdated": "2026-11-03T19:27:44Z"
+    "engagementRate": 7.81,
+    "lastUpdated": "2026-11-04T20:24:20Z"
    }
   },
   {
-   "id": "alien-yt-kurz-03-1",
+   "id": "alien-yt-kurz-08-2",
    "platform": "youtube",
    "serie": "der-alien",
-   "zeit": "2026-11-03T08:30:00",
-   "video": "der-alien-kurz/folge-03-teil-1.mp4",
-   "text": "Der Alien – Folge 3: Deine Nachbarin (Teil 1/2) 👽 #shorts",
-   "url": "https://www.youtube.com/watch?v=kyyGtNYHzjA",
+   "zeit": "2026-11-04T06:30:00",
+   "video": "der-alien-kurz/folge-08-teil-2.mp4",
+   "text": "Der Alien – Folge 8: Du oder er (Teil 2/2) 👽 #shorts",
+   "url": "https://www.youtube.com/watch?v=mgiGQrQhsUY",
    "typ": "video",
    "sync": null,
    "analytics": {
@@ -2565,7 +3292,7 @@
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 14,
+    "views": 67,
     "follows": 0,
     "igReelsAvgWatchTime": 0,
     "igReelsVideoViewTotalTime": 0,
@@ -2575,19 +3302,19 @@
     "websiteClicks": 0,
     "replays": 0,
     "reposts": 0,
-    "videoDurationSeconds": 59,
-    "engagementRate": 7.14,
-    "lastUpdated": "2026-11-03T19:27:44Z"
+    "videoDurationSeconds": 44,
+    "engagementRate": 1.49,
+    "lastUpdated": "2026-11-04T20:24:20Z"
    }
   },
   {
-   "id": "alien-yt-kurz-02-2",
+   "id": "alien-yt-kurz-08-1",
    "platform": "youtube",
    "serie": "der-alien",
-   "zeit": "2026-11-03T06:30:00",
-   "video": "der-alien-kurz/folge-02-teil-2.mp4",
-   "text": "Der Alien – Folge 2: Nur bis morgen (Teil 2/2) 👽 #shorts",
-   "url": "https://www.youtube.com/watch?v=JY2LzB-78-A",
+   "zeit": "2026-11-04T04:30:00",
+   "video": "der-alien-kurz/folge-08-teil-1.mp4",
+   "text": "Der Alien – Folge 8: Du oder er (Teil 1/2) 👽 #shorts",
+   "url": "https://www.youtube.com/watch?v=YZyqUqvDD-o",
    "typ": "video",
    "sync": null,
    "analytics": {
@@ -2598,7 +3325,7 @@
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 106,
+    "views": 89,
     "follows": 0,
     "igReelsAvgWatchTime": 0,
     "igReelsVideoViewTotalTime": 0,
@@ -2608,118 +3335,19 @@
     "websiteClicks": 0,
     "replays": 0,
     "reposts": 0,
-    "videoDurationSeconds": 56,
-    "engagementRate": 2.83,
-    "lastUpdated": "2026-11-03T19:27:44Z"
+    "videoDurationSeconds": 60,
+    "engagementRate": 3.37,
+    "lastUpdated": "2026-11-04T20:24:20Z"
    }
   },
   {
-   "id": "alien-yt-kurz-02-1",
+   "id": "alien-yt-kurz-07-1",
    "platform": "youtube",
    "serie": "der-alien",
-   "zeit": "2026-11-03T04:30:00",
-   "video": "der-alien-kurz/folge-02-teil-1.mp4",
-   "text": "Der Alien – Folge 2: Nur bis morgen (Teil 1/2) 👽 #shorts",
-   "url": "https://www.youtube.com/watch?v=vLr_lAACM4Q",
-   "typ": "video",
-   "sync": null,
-   "analytics": {
-    "impressions": 0,
-    "reach": 0,
-    "likes": 26,
-    "comments": 0,
-    "shares": 0,
-    "saves": 0,
-    "clicks": 0,
-    "views": 1139,
-    "follows": 0,
-    "igReelsAvgWatchTime": 0,
-    "igReelsVideoViewTotalTime": 0,
-    "reelsSkipRate": 0,
-    "completionRate": 0,
-    "profileViews": 0,
-    "websiteClicks": 0,
-    "replays": 0,
-    "reposts": 0,
-    "videoDurationSeconds": 59,
-    "engagementRate": 2.28,
-    "lastUpdated": "2026-11-03T19:27:44Z"
-   }
-  },
-  {
-   "id": "alien-yt-kurz-01-2",
-   "platform": "youtube",
-   "serie": "der-alien",
-   "zeit": "2026-11-03T02:30:00",
-   "video": "der-alien-kurz/folge-01-teil-2.mp4",
-   "text": "Der Alien – Folge 1: Im Badezimmer (Teil 2/2) 👽 #shorts",
-   "url": "https://www.youtube.com/watch?v=SFqqgcjda_k",
-   "typ": "video",
-   "sync": null,
-   "analytics": {
-    "impressions": 0,
-    "reach": 0,
-    "likes": 44,
-    "comments": 0,
-    "shares": 0,
-    "saves": 0,
-    "clicks": 0,
-    "views": 1239,
-    "follows": 0,
-    "igReelsAvgWatchTime": 0,
-    "igReelsVideoViewTotalTime": 0,
-    "reelsSkipRate": 0,
-    "completionRate": 0,
-    "profileViews": 0,
-    "websiteClicks": 0,
-    "replays": 0,
-    "reposts": 0,
-    "videoDurationSeconds": 58,
-    "engagementRate": 3.55,
-    "lastUpdated": "2026-11-03T19:27:44Z"
-   }
-  },
-  {
-   "id": "alien-yt-kurz-01-1",
-   "platform": "youtube",
-   "serie": "der-alien",
-   "zeit": "2026-11-03T00:30:00",
-   "video": "der-alien-kurz/folge-01-teil-1.mp4",
-   "text": "Der Alien – Folge 1: Im Badezimmer (Teil 1/2) 👽 #shorts",
-   "url": "https://www.youtube.com/watch?v=M4k33xNG5gg",
-   "typ": "video",
-   "sync": null,
-   "analytics": {
-    "impressions": 0,
-    "reach": 0,
-    "likes": 1,
-    "comments": 0,
-    "shares": 0,
-    "saves": 0,
-    "clicks": 0,
-    "views": 26,
-    "follows": 0,
-    "igReelsAvgWatchTime": 0,
-    "igReelsVideoViewTotalTime": 0,
-    "reelsSkipRate": 0,
-    "completionRate": 0,
-    "profileViews": 0,
-    "websiteClicks": 0,
-    "replays": 0,
-    "reposts": 0,
-    "videoDurationSeconds": 47,
-    "engagementRate": 3.85,
-    "lastUpdated": "2026-11-03T19:27:44Z"
-   }
-  },
-  {
-   "id": "stock-yt-kurz-10-2",
-   "platform": "youtube",
-   "serie": "24-stock",
-   "zeit": "2026-11-02T22:30:00",
-   "video": "24-stock-kurz/folge-10-teil-2.mp4",
-   "text": "24. Stock – Folge 10: Das Dach (Teil 2/2) 🧟 #shorts",
-   "url": "https://www.youtube.com/watch?v=v_XEnaXkaX0",
+   "zeit": "2026-11-04T00:30:00",
+   "video": "der-alien-kurz/folge-07-teil-1.mp4",
+   "text": "Der Alien – Folge 7: Das falsche Gesicht (Teil 1/2) 👽 #shorts",
+   "url": "https://www.youtube.com/watch?v=zMkWZmpYL80",
    "typ": "video",
    "sync": null,
    "analytics": {
@@ -2740,52 +3368,19 @@
     "websiteClicks": 0,
     "replays": 0,
     "reposts": 0,
-    "videoDurationSeconds": 57,
+    "videoDurationSeconds": 53,
     "engagementRate": 0,
-    "lastUpdated": "2026-11-03T19:27:44Z"
+    "lastUpdated": "2026-11-04T20:24:20Z"
    }
   },
   {
-   "id": "stock-yt-kurz-10-1",
+   "id": "alien-yt-kurz-06-2",
    "platform": "youtube",
-   "serie": "24-stock",
-   "zeit": "2026-11-02T20:30:00",
-   "video": "24-stock-kurz/folge-10-teil-1.mp4",
-   "text": "24. Stock – Folge 10: Das Dach (Teil 1/2) 🧟 #shorts",
-   "url": "https://www.youtube.com/watch?v=GtzOfYb2M1Y",
-   "typ": "video",
-   "sync": null,
-   "analytics": {
-    "impressions": 0,
-    "reach": 0,
-    "likes": 0,
-    "comments": 0,
-    "shares": 0,
-    "saves": 0,
-    "clicks": 0,
-    "views": 31,
-    "follows": 0,
-    "igReelsAvgWatchTime": 0,
-    "igReelsVideoViewTotalTime": 0,
-    "reelsSkipRate": 0,
-    "completionRate": 0,
-    "profileViews": 0,
-    "websiteClicks": 0,
-    "replays": 0,
-    "reposts": 0,
-    "videoDurationSeconds": 60,
-    "engagementRate": 0,
-    "lastUpdated": "2026-11-03T19:27:44Z"
-   }
-  },
-  {
-   "id": "stock-yt-kurz-09-2",
-   "platform": "youtube",
-   "serie": "24-stock",
-   "zeit": "2026-11-02T18:30:00",
-   "video": "24-stock-kurz/folge-09-teil-2.mp4",
-   "text": "24. Stock – Folge 9: Die Horde (Teil 2/2) 🧟 #shorts",
-   "url": "https://www.youtube.com/watch?v=9gmP3d7MBzM",
+   "serie": "der-alien",
+   "zeit": "2026-11-03T22:30:00",
+   "video": "der-alien-kurz/folge-06-teil-2.mp4",
+   "text": "Der Alien – Folge 6: Raus aus dem Haus (Teil 2/2) 👽 #shorts",
+   "url": "https://www.youtube.com/watch?v=8cwdsM-cRGk",
    "typ": "video",
    "sync": null,
    "analytics": {
@@ -2796,7 +3391,7 @@
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 28,
+    "views": 9,
     "follows": 0,
     "igReelsAvgWatchTime": 0,
     "igReelsVideoViewTotalTime": 0,
@@ -2807,18 +3402,150 @@
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 58,
-    "engagementRate": 3.57,
-    "lastUpdated": "2026-11-03T19:27:44Z"
+    "engagementRate": 11.11,
+    "lastUpdated": "2026-11-04T20:24:20Z"
    }
   },
   {
-   "id": "stock-yt-kurz-09-1",
+   "id": "alien-yt-kurz-06-1",
    "platform": "youtube",
-   "serie": "24-stock",
-   "zeit": "2026-11-02T16:30:00",
-   "video": "24-stock-kurz/folge-09-teil-1.mp4",
-   "text": "24. Stock – Folge 9: Die Horde (Teil 1/2) 🧟 #shorts",
-   "url": "https://www.youtube.com/watch?v=bPo0KGl1MSo",
+   "serie": "der-alien",
+   "zeit": "2026-11-03T20:30:00",
+   "video": "der-alien-kurz/folge-06-teil-1.mp4",
+   "text": "Der Alien – Folge 6: Raus aus dem Haus (Teil 1/2) 👽 #shorts",
+   "url": "https://www.youtube.com/watch?v=IoS9wp5APpc",
+   "typ": "video",
+   "sync": null,
+   "analytics": {
+    "impressions": 0,
+    "reach": 0,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "clicks": 0,
+    "views": 14,
+    "follows": 0,
+    "igReelsAvgWatchTime": 0,
+    "igReelsVideoViewTotalTime": 0,
+    "reelsSkipRate": 0,
+    "completionRate": 0,
+    "profileViews": 0,
+    "websiteClicks": 0,
+    "replays": 0,
+    "reposts": 0,
+    "videoDurationSeconds": 52,
+    "engagementRate": 0,
+    "lastUpdated": "2026-11-04T20:24:20Z"
+   }
+  },
+  {
+   "id": "alien-yt-kurz-05-2",
+   "platform": "youtube",
+   "serie": "der-alien",
+   "zeit": "2026-11-03T18:30:00",
+   "video": "der-alien-kurz/folge-05-teil-2.mp4",
+   "text": "Der Alien – Folge 5: Was Nox gestohlen hat (Teil 2/2) 👽 #shorts",
+   "url": "https://www.youtube.com/watch?v=tjMCU0CUHIM",
+   "typ": "video",
+   "sync": null,
+   "analytics": {
+    "impressions": 0,
+    "reach": 0,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "clicks": 0,
+    "views": 10,
+    "follows": 0,
+    "igReelsAvgWatchTime": 0,
+    "igReelsVideoViewTotalTime": 0,
+    "reelsSkipRate": 0,
+    "completionRate": 0,
+    "profileViews": 0,
+    "websiteClicks": 0,
+    "replays": 0,
+    "reposts": 0,
+    "videoDurationSeconds": 55,
+    "engagementRate": 0,
+    "lastUpdated": "2026-11-04T20:24:20Z"
+   }
+  },
+  {
+   "id": "alien-yt-kurz-05-1",
+   "platform": "youtube",
+   "serie": "der-alien",
+   "zeit": "2026-11-03T16:30:00",
+   "video": "der-alien-kurz/folge-05-teil-1.mp4",
+   "text": "Der Alien – Folge 5: Was Nox gestohlen hat (Teil 1/2) 👽 #shorts",
+   "url": "https://www.youtube.com/watch?v=nfgsylGHrog",
+   "typ": "video",
+   "sync": null,
+   "analytics": {
+    "impressions": 0,
+    "reach": 0,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "clicks": 0,
+    "views": 13,
+    "follows": 0,
+    "igReelsAvgWatchTime": 0,
+    "igReelsVideoViewTotalTime": 0,
+    "reelsSkipRate": 0,
+    "completionRate": 0,
+    "profileViews": 0,
+    "websiteClicks": 0,
+    "replays": 0,
+    "reposts": 0,
+    "videoDurationSeconds": 55,
+    "engagementRate": 0,
+    "lastUpdated": "2026-11-04T20:24:20Z"
+   }
+  },
+  {
+   "id": "alien-yt-kurz-04-2",
+   "platform": "youtube",
+   "serie": "der-alien",
+   "zeit": "2026-11-03T14:30:00",
+   "video": "der-alien-kurz/folge-04-teil-2.mp4",
+   "text": "Der Alien – Folge 4: Das Versprechen (Teil 2/2) 👽 #shorts",
+   "url": "https://www.youtube.com/watch?v=vsA9YEUtN1g",
+   "typ": "video",
+   "sync": null,
+   "analytics": {
+    "impressions": 0,
+    "reach": 0,
+    "likes": 2,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "clicks": 0,
+    "views": 17,
+    "follows": 0,
+    "igReelsAvgWatchTime": 0,
+    "igReelsVideoViewTotalTime": 0,
+    "reelsSkipRate": 0,
+    "completionRate": 0,
+    "profileViews": 0,
+    "websiteClicks": 0,
+    "replays": 0,
+    "reposts": 0,
+    "videoDurationSeconds": 56,
+    "engagementRate": 11.76,
+    "lastUpdated": "2026-11-04T20:24:20Z"
+   }
+  },
+  {
+   "id": "alien-yt-kurz-04-1",
+   "platform": "youtube",
+   "serie": "der-alien",
+   "zeit": "2026-11-03T12:30:00",
+   "video": "der-alien-kurz/folge-04-teil-1.mp4",
+   "text": "Der Alien – Folge 4: Das Versprechen (Teil 1/2) 👽 #shorts",
+   "url": "https://www.youtube.com/watch?v=pO3DHtBzjjs",
    "typ": "video",
    "sync": null,
    "analytics": {
@@ -2829,7 +3556,7 @@
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 31,
+    "views": 15,
     "follows": 0,
     "igReelsAvgWatchTime": 0,
     "igReelsVideoViewTotalTime": 0,
@@ -2839,19 +3566,52 @@
     "websiteClicks": 0,
     "replays": 0,
     "reposts": 0,
-    "videoDurationSeconds": 50,
-    "engagementRate": 3.23,
-    "lastUpdated": "2026-11-03T19:27:44Z"
+    "videoDurationSeconds": 56,
+    "engagementRate": 6.67,
+    "lastUpdated": "2026-11-04T20:24:20Z"
    }
   },
   {
-   "id": "stock-yt-kurz-08-2",
+   "id": "alien-yt-kurz-03-2",
    "platform": "youtube",
-   "serie": "24-stock",
-   "zeit": "2026-11-02T14:30:00",
-   "video": "24-stock-kurz/folge-08-teil-2.mp4",
-   "text": "24. Stock – Folge 8: Die Apotheke (Teil 2/2) 🧟 #shorts",
-   "url": "https://www.youtube.com/watch?v=Qg2jNpus_g4",
+   "serie": "der-alien",
+   "zeit": "2026-11-03T10:30:00",
+   "video": "der-alien-kurz/folge-03-teil-2.mp4",
+   "text": "Der Alien – Folge 3: Deine Nachbarin (Teil 2/2) 👽 #shorts",
+   "url": "https://www.youtube.com/watch?v=QgD7LCWXiq0",
+   "typ": "video",
+   "sync": null,
+   "analytics": {
+    "impressions": 0,
+    "reach": 0,
+    "likes": 1,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "clicks": 0,
+    "views": 18,
+    "follows": 0,
+    "igReelsAvgWatchTime": 0,
+    "igReelsVideoViewTotalTime": 0,
+    "reelsSkipRate": 0,
+    "completionRate": 0,
+    "profileViews": 0,
+    "websiteClicks": 0,
+    "replays": 0,
+    "reposts": 0,
+    "videoDurationSeconds": 54,
+    "engagementRate": 5.56,
+    "lastUpdated": "2026-11-04T20:24:20Z"
+   }
+  },
+  {
+   "id": "alien-yt-kurz-03-1",
+   "platform": "youtube",
+   "serie": "der-alien",
+   "zeit": "2026-11-03T08:30:00",
+   "video": "der-alien-kurz/folge-03-teil-1.mp4",
+   "text": "Der Alien – Folge 3: Deine Nachbarin (Teil 1/2) 👽 #shorts",
+   "url": "https://www.youtube.com/watch?v=kyyGtNYHzjA",
    "typ": "video",
    "sync": null,
    "analytics": {
@@ -2872,9 +3632,306 @@
     "websiteClicks": 0,
     "replays": 0,
     "reposts": 0,
-    "videoDurationSeconds": 49,
+    "videoDurationSeconds": 59,
     "engagementRate": 4.17,
-    "lastUpdated": "2026-11-03T19:27:44Z"
+    "lastUpdated": "2026-11-04T20:24:20Z"
+   }
+  },
+  {
+   "id": "alien-yt-kurz-02-2",
+   "platform": "youtube",
+   "serie": "der-alien",
+   "zeit": "2026-11-03T06:30:00",
+   "video": "der-alien-kurz/folge-02-teil-2.mp4",
+   "text": "Der Alien – Folge 2: Nur bis morgen (Teil 2/2) 👽 #shorts",
+   "url": "https://www.youtube.com/watch?v=JY2LzB-78-A",
+   "typ": "video",
+   "sync": null,
+   "analytics": {
+    "impressions": 0,
+    "reach": 0,
+    "likes": 3,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "clicks": 0,
+    "views": 113,
+    "follows": 0,
+    "igReelsAvgWatchTime": 0,
+    "igReelsVideoViewTotalTime": 0,
+    "reelsSkipRate": 0,
+    "completionRate": 0,
+    "profileViews": 0,
+    "websiteClicks": 0,
+    "replays": 0,
+    "reposts": 0,
+    "videoDurationSeconds": 56,
+    "engagementRate": 2.65,
+    "lastUpdated": "2026-11-04T20:24:20Z"
+   }
+  },
+  {
+   "id": "alien-yt-kurz-02-1",
+   "platform": "youtube",
+   "serie": "der-alien",
+   "zeit": "2026-11-03T04:30:00",
+   "video": "der-alien-kurz/folge-02-teil-1.mp4",
+   "text": "Der Alien – Folge 2: Nur bis morgen (Teil 1/2) 👽 #shorts",
+   "url": "https://www.youtube.com/watch?v=vLr_lAACM4Q",
+   "typ": "video",
+   "sync": null,
+   "analytics": {
+    "impressions": 0,
+    "reach": 0,
+    "likes": 26,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "clicks": 0,
+    "views": 1165,
+    "follows": 0,
+    "igReelsAvgWatchTime": 0,
+    "igReelsVideoViewTotalTime": 0,
+    "reelsSkipRate": 0,
+    "completionRate": 0,
+    "profileViews": 0,
+    "websiteClicks": 0,
+    "replays": 0,
+    "reposts": 0,
+    "videoDurationSeconds": 59,
+    "engagementRate": 2.23,
+    "lastUpdated": "2026-11-04T20:24:20Z"
+   }
+  },
+  {
+   "id": "alien-yt-kurz-01-2",
+   "platform": "youtube",
+   "serie": "der-alien",
+   "zeit": "2026-11-03T02:30:00",
+   "video": "der-alien-kurz/folge-01-teil-2.mp4",
+   "text": "Der Alien – Folge 1: Im Badezimmer (Teil 2/2) 👽 #shorts",
+   "url": "https://www.youtube.com/watch?v=SFqqgcjda_k",
+   "typ": "video",
+   "sync": null,
+   "analytics": {
+    "impressions": 0,
+    "reach": 0,
+    "likes": 42,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "clicks": 0,
+    "views": 1347,
+    "follows": 0,
+    "igReelsAvgWatchTime": 0,
+    "igReelsVideoViewTotalTime": 0,
+    "reelsSkipRate": 0,
+    "completionRate": 0,
+    "profileViews": 0,
+    "websiteClicks": 0,
+    "replays": 0,
+    "reposts": 0,
+    "videoDurationSeconds": 58,
+    "engagementRate": 3.12,
+    "lastUpdated": "2026-11-04T20:24:20Z"
+   }
+  },
+  {
+   "id": "alien-yt-kurz-01-1",
+   "platform": "youtube",
+   "serie": "der-alien",
+   "zeit": "2026-11-03T00:30:00",
+   "video": "der-alien-kurz/folge-01-teil-1.mp4",
+   "text": "Der Alien – Folge 1: Im Badezimmer (Teil 1/2) 👽 #shorts",
+   "url": "https://www.youtube.com/watch?v=M4k33xNG5gg",
+   "typ": "video",
+   "sync": null,
+   "analytics": {
+    "impressions": 0,
+    "reach": 0,
+    "likes": 2,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "clicks": 0,
+    "views": 34,
+    "follows": 0,
+    "igReelsAvgWatchTime": 0,
+    "igReelsVideoViewTotalTime": 0,
+    "reelsSkipRate": 0,
+    "completionRate": 0,
+    "profileViews": 0,
+    "websiteClicks": 0,
+    "replays": 0,
+    "reposts": 0,
+    "videoDurationSeconds": 47,
+    "engagementRate": 5.88,
+    "lastUpdated": "2026-11-04T20:24:20Z"
+   }
+  },
+  {
+   "id": "stock-yt-kurz-10-2",
+   "platform": "youtube",
+   "serie": "24-stock",
+   "zeit": "2026-11-02T22:30:00",
+   "video": "24-stock-kurz/folge-10-teil-2.mp4",
+   "text": "24. Stock – Folge 10: Das Dach (Teil 2/2) 🧟 #shorts",
+   "url": "https://www.youtube.com/watch?v=v_XEnaXkaX0",
+   "typ": "video",
+   "sync": null,
+   "analytics": {
+    "impressions": 0,
+    "reach": 0,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "clicks": 0,
+    "views": 22,
+    "follows": 0,
+    "igReelsAvgWatchTime": 0,
+    "igReelsVideoViewTotalTime": 0,
+    "reelsSkipRate": 0,
+    "completionRate": 0,
+    "profileViews": 0,
+    "websiteClicks": 0,
+    "replays": 0,
+    "reposts": 0,
+    "videoDurationSeconds": 57,
+    "engagementRate": 0,
+    "lastUpdated": "2026-11-04T20:24:20Z"
+   }
+  },
+  {
+   "id": "stock-yt-kurz-10-1",
+   "platform": "youtube",
+   "serie": "24-stock",
+   "zeit": "2026-11-02T20:30:00",
+   "video": "24-stock-kurz/folge-10-teil-1.mp4",
+   "text": "24. Stock – Folge 10: Das Dach (Teil 1/2) 🧟 #shorts",
+   "url": "https://www.youtube.com/watch?v=GtzOfYb2M1Y",
+   "typ": "video",
+   "sync": null,
+   "analytics": {
+    "impressions": 0,
+    "reach": 0,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "clicks": 0,
+    "views": 35,
+    "follows": 0,
+    "igReelsAvgWatchTime": 0,
+    "igReelsVideoViewTotalTime": 0,
+    "reelsSkipRate": 0,
+    "completionRate": 0,
+    "profileViews": 0,
+    "websiteClicks": 0,
+    "replays": 0,
+    "reposts": 0,
+    "videoDurationSeconds": 60,
+    "engagementRate": 0,
+    "lastUpdated": "2026-11-04T20:24:20Z"
+   }
+  },
+  {
+   "id": "stock-yt-kurz-09-2",
+   "platform": "youtube",
+   "serie": "24-stock",
+   "zeit": "2026-11-02T18:30:00",
+   "video": "24-stock-kurz/folge-09-teil-2.mp4",
+   "text": "24. Stock – Folge 9: Die Horde (Teil 2/2) 🧟 #shorts",
+   "url": "https://www.youtube.com/watch?v=9gmP3d7MBzM",
+   "typ": "video",
+   "sync": null,
+   "analytics": {
+    "impressions": 0,
+    "reach": 0,
+    "likes": 1,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "clicks": 0,
+    "views": 31,
+    "follows": 0,
+    "igReelsAvgWatchTime": 0,
+    "igReelsVideoViewTotalTime": 0,
+    "reelsSkipRate": 0,
+    "completionRate": 0,
+    "profileViews": 0,
+    "websiteClicks": 0,
+    "replays": 0,
+    "reposts": 0,
+    "videoDurationSeconds": 58,
+    "engagementRate": 3.23,
+    "lastUpdated": "2026-11-04T20:24:20Z"
+   }
+  },
+  {
+   "id": "stock-yt-kurz-09-1",
+   "platform": "youtube",
+   "serie": "24-stock",
+   "zeit": "2026-11-02T16:30:00",
+   "video": "24-stock-kurz/folge-09-teil-1.mp4",
+   "text": "24. Stock – Folge 9: Die Horde (Teil 1/2) 🧟 #shorts",
+   "url": "https://www.youtube.com/watch?v=bPo0KGl1MSo",
+   "typ": "video",
+   "sync": null,
+   "analytics": {
+    "impressions": 0,
+    "reach": 0,
+    "likes": 1,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "clicks": 0,
+    "views": 33,
+    "follows": 0,
+    "igReelsAvgWatchTime": 0,
+    "igReelsVideoViewTotalTime": 0,
+    "reelsSkipRate": 0,
+    "completionRate": 0,
+    "profileViews": 0,
+    "websiteClicks": 0,
+    "replays": 0,
+    "reposts": 0,
+    "videoDurationSeconds": 50,
+    "engagementRate": 3.03,
+    "lastUpdated": "2026-11-04T20:24:20Z"
+   }
+  },
+  {
+   "id": "stock-yt-kurz-08-2",
+   "platform": "youtube",
+   "serie": "24-stock",
+   "zeit": "2026-11-02T14:30:00",
+   "video": "24-stock-kurz/folge-08-teil-2.mp4",
+   "text": "24. Stock – Folge 8: Die Apotheke (Teil 2/2) 🧟 #shorts",
+   "url": "https://www.youtube.com/watch?v=Qg2jNpus_g4",
+   "typ": "video",
+   "sync": null,
+   "analytics": {
+    "impressions": 0,
+    "reach": 0,
+    "likes": 1,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "clicks": 0,
+    "views": 26,
+    "follows": 0,
+    "igReelsAvgWatchTime": 0,
+    "igReelsVideoViewTotalTime": 0,
+    "reelsSkipRate": 0,
+    "completionRate": 0,
+    "profileViews": 0,
+    "websiteClicks": 0,
+    "replays": 0,
+    "reposts": 0,
+    "videoDurationSeconds": 49,
+    "engagementRate": 3.85,
+    "lastUpdated": "2026-11-04T20:24:20Z"
    }
   },
   {
@@ -2890,12 +3947,12 @@
    "analytics": {
     "impressions": 0,
     "reach": 0,
-    "likes": 20,
+    "likes": 22,
     "comments": 0,
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 1295,
+    "views": 1416,
     "follows": 0,
     "igReelsAvgWatchTime": 0,
     "igReelsVideoViewTotalTime": 0,
@@ -2906,8 +3963,8 @@
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 58,
-    "engagementRate": 1.54,
-    "lastUpdated": "2026-11-03T19:27:44Z"
+    "engagementRate": 1.55,
+    "lastUpdated": "2026-11-04T20:24:20Z"
    }
   },
   {
@@ -2923,12 +3980,12 @@
    "analytics": {
     "impressions": 0,
     "reach": 0,
-    "likes": 22,
+    "likes": 24,
     "comments": 0,
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 811,
+    "views": 949,
     "follows": 0,
     "igReelsAvgWatchTime": 0,
     "igReelsVideoViewTotalTime": 0,
@@ -2939,8 +3996,8 @@
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 57,
-    "engagementRate": 2.71,
-    "lastUpdated": "2026-11-03T19:27:44Z"
+    "engagementRate": 2.53,
+    "lastUpdated": "2026-11-04T20:24:20Z"
    }
   },
   {
@@ -2956,12 +4013,12 @@
    "analytics": {
     "impressions": 0,
     "reach": 0,
-    "likes": 24,
+    "likes": 26,
     "comments": 0,
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 1136,
+    "views": 1207,
     "follows": 0,
     "igReelsAvgWatchTime": 0,
     "igReelsVideoViewTotalTime": 0,
@@ -2972,8 +4029,8 @@
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 53,
-    "engagementRate": 2.11,
-    "lastUpdated": "2026-11-03T19:27:44Z"
+    "engagementRate": 2.15,
+    "lastUpdated": "2026-11-04T20:24:20Z"
    }
   },
   {
@@ -2994,7 +4051,7 @@
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 47,
+    "views": 51,
     "follows": 0,
     "igReelsAvgWatchTime": 0,
     "igReelsVideoViewTotalTime": 0,
@@ -3006,7 +4063,7 @@
     "reposts": 0,
     "videoDurationSeconds": 51,
     "engagementRate": 0,
-    "lastUpdated": "2026-11-03T19:27:44Z"
+    "lastUpdated": "2026-11-04T20:24:20Z"
    }
   },
   {
@@ -3027,7 +4084,7 @@
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 61,
+    "views": 68,
     "follows": 0,
     "igReelsAvgWatchTime": 0,
     "igReelsVideoViewTotalTime": 0,
@@ -3038,8 +4095,8 @@
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 58,
-    "engagementRate": 1.64,
-    "lastUpdated": "2026-11-03T19:27:44Z"
+    "engagementRate": 1.47,
+    "lastUpdated": "2026-11-04T20:24:20Z"
    }
   },
   {
@@ -3060,7 +4117,7 @@
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 66,
+    "views": 67,
     "follows": 0,
     "igReelsAvgWatchTime": 0,
     "igReelsVideoViewTotalTime": 0,
@@ -3071,8 +4128,8 @@
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 49,
-    "engagementRate": 3.03,
-    "lastUpdated": "2026-11-03T19:27:44Z"
+    "engagementRate": 2.99,
+    "lastUpdated": "2026-11-04T20:24:20Z"
    }
   },
   {
@@ -3088,12 +4145,12 @@
    "analytics": {
     "impressions": 0,
     "reach": 0,
-    "likes": 22,
+    "likes": 23,
     "comments": 0,
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 935,
+    "views": 942,
     "follows": 0,
     "igReelsAvgWatchTime": 0,
     "igReelsVideoViewTotalTime": 0,
@@ -3104,8 +4161,8 @@
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 60,
-    "engagementRate": 2.35,
-    "lastUpdated": "2026-11-03T19:27:44Z"
+    "engagementRate": 2.44,
+    "lastUpdated": "2026-11-04T20:24:20Z"
    }
   },
   {
@@ -3126,7 +4183,7 @@
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 931,
+    "views": 936,
     "follows": 0,
     "igReelsAvgWatchTime": 0,
     "igReelsVideoViewTotalTime": 0,
@@ -3137,8 +4194,8 @@
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 55,
-    "engagementRate": 3.44,
-    "lastUpdated": "2026-11-03T19:27:44Z"
+    "engagementRate": 3.42,
+    "lastUpdated": "2026-11-04T20:24:20Z"
    }
   },
   {
@@ -3159,7 +4216,7 @@
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 1361,
+    "views": 1426,
     "follows": 0,
     "igReelsAvgWatchTime": 0,
     "igReelsVideoViewTotalTime": 0,
@@ -3170,8 +4227,8 @@
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 51,
-    "engagementRate": 1.91,
-    "lastUpdated": "2026-11-03T19:27:44Z"
+    "engagementRate": 1.82,
+    "lastUpdated": "2026-11-04T20:24:20Z"
    }
   },
   {
@@ -3187,12 +4244,12 @@
    "analytics": {
     "impressions": 0,
     "reach": 0,
-    "likes": 2,
+    "likes": 3,
     "comments": 0,
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 72,
+    "views": 73,
     "follows": 0,
     "igReelsAvgWatchTime": 0,
     "igReelsVideoViewTotalTime": 0,
@@ -3203,8 +4260,8 @@
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 60,
-    "engagementRate": 2.78,
-    "lastUpdated": "2026-11-03T19:27:44Z"
+    "engagementRate": 4.11,
+    "lastUpdated": "2026-11-04T20:24:20Z"
    }
   },
   {
@@ -3237,7 +4294,7 @@
     "reposts": 0,
     "videoDurationSeconds": 48,
     "engagementRate": 1.32,
-    "lastUpdated": "2026-11-03T19:27:44Z"
+    "lastUpdated": "2026-11-04T20:24:20Z"
    }
   },
   {
@@ -3270,7 +4327,7 @@
     "reposts": 0,
     "videoDurationSeconds": 52,
     "engagementRate": 1.3,
-    "lastUpdated": "2026-11-03T19:27:44Z"
+    "lastUpdated": "2026-11-04T20:24:20Z"
    }
   },
   {
@@ -3291,7 +4348,7 @@
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 1405,
+    "views": 1418,
     "follows": 0,
     "igReelsAvgWatchTime": 0,
     "igReelsVideoViewTotalTime": 0,
@@ -3302,8 +4359,8 @@
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 42,
-    "engagementRate": 0.64,
-    "lastUpdated": "2026-11-03T19:27:44Z"
+    "engagementRate": 0.63,
+    "lastUpdated": "2026-11-04T20:24:20Z"
    }
   },
   {
@@ -3324,7 +4381,7 @@
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 1207,
+    "views": 1213,
     "follows": 0,
     "igReelsAvgWatchTime": 0,
     "igReelsVideoViewTotalTime": 0,
@@ -3336,7 +4393,7 @@
     "reposts": 0,
     "videoDurationSeconds": 52,
     "engagementRate": 0.99,
-    "lastUpdated": "2026-11-03T19:27:44Z"
+    "lastUpdated": "2026-11-04T20:24:20Z"
    }
   },
   {
@@ -3357,7 +4414,7 @@
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 2488,
+    "views": 2505,
     "follows": 0,
     "igReelsAvgWatchTime": 0,
     "igReelsVideoViewTotalTime": 0,
@@ -3368,8 +4425,8 @@
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 42,
-    "engagementRate": 1.33,
-    "lastUpdated": "2026-11-03T19:27:44Z"
+    "engagementRate": 1.32,
+    "lastUpdated": "2026-11-04T20:24:20Z"
    }
   },
   {
@@ -3402,7 +4459,7 @@
     "reposts": 0,
     "videoDurationSeconds": 40,
     "engagementRate": 2.63,
-    "lastUpdated": "2026-11-03T19:27:44Z"
+    "lastUpdated": "2026-11-04T20:24:20Z"
    }
   },
   {
@@ -3435,7 +4492,7 @@
     "reposts": 0,
     "videoDurationSeconds": 41,
     "engagementRate": 2.04,
-    "lastUpdated": "2026-11-03T19:27:44Z"
+    "lastUpdated": "2026-11-04T20:24:20Z"
    }
   },
   {
@@ -3468,7 +4525,7 @@
     "reposts": 0,
     "videoDurationSeconds": 50,
     "engagementRate": 0,
-    "lastUpdated": "2026-11-03T19:27:44Z"
+    "lastUpdated": "2026-11-04T20:24:20Z"
    }
   },
   {
@@ -3489,7 +4546,7 @@
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 2014,
+    "views": 2021,
     "follows": 0,
     "igReelsAvgWatchTime": 0,
     "igReelsVideoViewTotalTime": 0,
@@ -3501,7 +4558,7 @@
     "reposts": 0,
     "videoDurationSeconds": 52,
     "engagementRate": 1.29,
-    "lastUpdated": "2026-11-03T19:27:44Z"
+    "lastUpdated": "2026-11-04T20:24:20Z"
    }
   },
   {
@@ -3522,7 +4579,7 @@
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 2318,
+    "views": 2321,
     "follows": 0,
     "igReelsAvgWatchTime": 0,
     "igReelsVideoViewTotalTime": 0,
@@ -3534,7 +4591,7 @@
     "reposts": 0,
     "videoDurationSeconds": 45,
     "engagementRate": 1.38,
-    "lastUpdated": "2026-11-03T19:27:44Z"
+    "lastUpdated": "2026-11-04T20:24:20Z"
    }
   },
   {
@@ -3567,7 +4624,7 @@
     "reposts": 0,
     "videoDurationSeconds": 45,
     "engagementRate": 1.83,
-    "lastUpdated": "2026-11-03T19:27:44Z"
+    "lastUpdated": "2026-11-04T20:24:20Z"
    }
   },
   {
@@ -3610,7 +4667,7 @@
     {
      "day_of_week": 1,
      "hour": 15,
-     "avg_engagement": 395,
+     "avg_engagement": 397,
      "post_count": 1
     },
     {
@@ -3622,7 +4679,7 @@
     {
      "day_of_week": 1,
      "hour": 16,
-     "avg_engagement": 75,
+     "avg_engagement": 76,
      "post_count": 1
     },
     {
@@ -3640,25 +4697,19 @@
     {
      "day_of_week": 2,
      "hour": 18,
-     "avg_engagement": 68,
-     "post_count": 1
-    },
-    {
-     "day_of_week": 1,
-     "hour": 19,
-     "avg_engagement": 66,
-     "post_count": 1
-    },
-    {
-     "day_of_week": 3,
-     "hour": 17,
-     "avg_engagement": 57,
+     "avg_engagement": 69,
      "post_count": 1
     },
     {
      "day_of_week": 1,
      "hour": 7,
-     "avg_engagement": 56,
+     "avg_engagement": 61,
+     "post_count": 1
+    },
+    {
+     "day_of_week": 3,
+     "hour": 17,
+     "avg_engagement": 58,
      "post_count": 1
     },
     {
@@ -3668,37 +4719,49 @@
      "post_count": 1
     },
     {
+     "day_of_week": 1,
+     "hour": 19,
+     "avg_engagement": 49,
+     "post_count": 2
+    },
+    {
+     "day_of_week": 4,
+     "hour": 16,
+     "avg_engagement": 45,
+     "post_count": 1
+    },
+    {
      "day_of_week": 0,
      "hour": 19,
      "avg_engagement": 45,
      "post_count": 1
     },
     {
-     "day_of_week": 4,
-     "hour": 16,
-     "avg_engagement": 44,
-     "post_count": 1
-    },
-    {
      "day_of_week": 0,
      "hour": 7,
-     "avg_engagement": 38,
+     "avg_engagement": 39,
      "post_count": 1
     },
     {
      "day_of_week": 5,
      "hour": 19,
-     "avg_engagement": 36,
+     "avg_engagement": 37,
      "post_count": 1
     },
     {
      "day_of_week": 6,
      "hour": 19,
-     "avg_engagement": 32,
+     "avg_engagement": 33,
      "post_count": 1
     },
     {
      "day_of_week": 6,
+     "hour": 7,
+     "avg_engagement": 33,
+     "post_count": 1
+    },
+    {
+     "day_of_week": 2,
      "hour": 7,
      "avg_engagement": 32,
      "post_count": 1
@@ -3768,6 +4831,12 @@
      "post_count": 1
     },
     {
+     "day_of_week": 2,
+     "hour": 9,
+     "avg_engagement": 5,
+     "post_count": 1
+    },
+    {
      "day_of_week": 0,
      "hour": 23,
      "avg_engagement": 5,
@@ -3780,12 +4849,6 @@
      "post_count": 1
     },
     {
-     "day_of_week": 0,
-     "hour": 17,
-     "avg_engagement": 4,
-     "post_count": 1
-    },
-    {
      "day_of_week": 6,
      "hour": 15,
      "avg_engagement": 4,
@@ -3794,6 +4857,12 @@
     {
      "day_of_week": 0,
      "hour": 15,
+     "avg_engagement": 4,
+     "post_count": 1
+    },
+    {
+     "day_of_week": 2,
+     "hour": 1,
      "avg_engagement": 4,
      "post_count": 1
     },
@@ -3805,8 +4874,8 @@
     },
     {
      "day_of_week": 0,
-     "hour": 21,
-     "avg_engagement": 3,
+     "hour": 17,
+     "avg_engagement": 4,
      "post_count": 1
     },
     {
@@ -3816,8 +4885,20 @@
      "post_count": 1
     },
     {
-     "day_of_week": 3,
-     "hour": 20,
+     "day_of_week": 0,
+     "hour": 21,
+     "avg_engagement": 3,
+     "post_count": 1
+    },
+    {
+     "day_of_week": 4,
+     "hour": 6,
+     "avg_engagement": 2,
+     "post_count": 1
+    },
+    {
+     "day_of_week": 4,
+     "hour": 23,
      "avg_engagement": 2,
      "post_count": 1
     },
@@ -3828,8 +4909,8 @@
      "post_count": 1
     },
     {
-     "day_of_week": 4,
-     "hour": 23,
+     "day_of_week": 3,
+     "hour": 20,
      "avg_engagement": 2,
      "post_count": 1
     },
@@ -3840,25 +4921,19 @@
      "post_count": 1
     },
     {
-     "day_of_week": 4,
-     "hour": 6,
+     "day_of_week": 2,
+     "hour": 13,
+     "avg_engagement": 2,
+     "post_count": 1
+    },
+    {
+     "day_of_week": 2,
+     "hour": 11,
      "avg_engagement": 2,
      "post_count": 1
     },
     {
      "day_of_week": 0,
-     "hour": 13,
-     "avg_engagement": 1,
-     "post_count": 1
-    },
-    {
-     "day_of_week": 1,
-     "hour": 11,
-     "avg_engagement": 1,
-     "post_count": 1
-    },
-    {
-     "day_of_week": 0,
      "hour": 19,
      "avg_engagement": 1,
      "post_count": 1
@@ -3866,36 +4941,6 @@
     {
      "day_of_week": 5,
      "hour": 15,
-     "avg_engagement": 1,
-     "post_count": 1
-    },
-    {
-     "day_of_week": 5,
-     "hour": 19,
-     "avg_engagement": 1,
-     "post_count": 1
-    },
-    {
-     "day_of_week": 1,
-     "hour": 15,
-     "avg_engagement": 1,
-     "post_count": 1
-    },
-    {
-     "day_of_week": 6,
-     "hour": 3,
-     "avg_engagement": 1,
-     "post_count": 1
-    },
-    {
-     "day_of_week": 1,
-     "hour": 17,
-     "avg_engagement": 1,
-     "post_count": 1
-    },
-    {
-     "day_of_week": 1,
-     "hour": 9,
      "avg_engagement": 1,
      "post_count": 1
     },
@@ -3907,19 +4952,109 @@
     },
     {
      "day_of_week": 1,
-     "hour": 13,
-     "avg_engagement": 1,
-     "post_count": 1
-    },
-    {
-     "day_of_week": 1,
      "hour": 7,
      "avg_engagement": 1,
      "post_count": 1
     },
     {
      "day_of_week": 1,
+     "hour": 11,
+     "avg_engagement": 1,
+     "post_count": 1
+    },
+    {
+     "day_of_week": 6,
+     "hour": 3,
+     "avg_engagement": 1,
+     "post_count": 1
+    },
+    {
+     "day_of_week": 2,
+     "hour": 15,
+     "avg_engagement": 1,
+     "post_count": 1
+    },
+    {
+     "day_of_week": 1,
+     "hour": 17,
+     "avg_engagement": 1,
+     "post_count": 1
+    },
+    {
+     "day_of_week": 1,
+     "hour": 13,
+     "avg_engagement": 1,
+     "post_count": 1
+    },
+    {
+     "day_of_week": 1,
+     "hour": 19,
+     "avg_engagement": 1,
+     "post_count": 1
+    },
+    {
+     "day_of_week": 2,
+     "hour": 5,
+     "avg_engagement": 1,
+     "post_count": 1
+    },
+    {
+     "day_of_week": 2,
+     "hour": 17,
+     "avg_engagement": 1,
+     "post_count": 1
+    },
+    {
+     "day_of_week": 5,
+     "hour": 19,
+     "avg_engagement": 1,
+     "post_count": 1
+    },
+    {
+     "day_of_week": 1,
+     "hour": 15,
+     "avg_engagement": 1,
+     "post_count": 1
+    },
+    {
+     "day_of_week": 2,
+     "hour": 3,
+     "avg_engagement": 1,
+     "post_count": 1
+    },
+    {
+     "day_of_week": 1,
+     "hour": 9,
+     "avg_engagement": 1,
+     "post_count": 1
+    },
+    {
+     "day_of_week": 0,
+     "hour": 13,
+     "avg_engagement": 1,
+     "post_count": 1
+    },
+    {
+     "day_of_week": 2,
+     "hour": 7,
+     "avg_engagement": 0,
+     "post_count": 1
+    },
+    {
+     "day_of_week": 1,
+     "hour": 23,
+     "avg_engagement": 0,
+     "post_count": 1
+    },
+    {
+     "day_of_week": 1,
      "hour": 1,
+     "avg_engagement": 0,
+     "post_count": 1
+    },
+    {
+     "day_of_week": 1,
+     "hour": 21,
      "avg_engagement": 0,
      "post_count": 1
     }
@@ -3930,7 +5065,7 @@
     {
      "day_of_week": 1,
      "hour": 1,
-     "avg_engagement": 44,
+     "avg_engagement": 42,
      "post_count": 1
     },
     {
@@ -3953,12 +5088,12 @@
     },
     {
      "day_of_week": 1,
-     "hour": 19,
-     "avg_engagement": 28,
+     "hour": 3,
+     "avg_engagement": 26,
      "post_count": 1
     },
     {
-     "day_of_week": 1,
+     "day_of_week": 0,
      "hour": 3,
      "avg_engagement": 26,
      "post_count": 1
@@ -3967,31 +5102,31 @@
      "day_of_week": 6,
      "hour": 3,
      "avg_engagement": 26,
-     "post_count": 1
-    },
-    {
-     "day_of_week": 0,
-     "hour": 3,
-     "avg_engagement": 24,
      "post_count": 1
     },
     {
      "day_of_week": 0,
      "hour": 7,
-     "avg_engagement": 22,
+     "avg_engagement": 24,
      "post_count": 1
     },
     {
      "day_of_week": 6,
      "hour": 11,
-     "avg_engagement": 22,
+     "avg_engagement": 23,
      "post_count": 1
     },
     {
      "day_of_week": 0,
      "hour": 11,
-     "avg_engagement": 20,
+     "avg_engagement": 22,
      "post_count": 1
+    },
+    {
+     "day_of_week": 1,
+     "hour": 19,
+     "avg_engagement": 14,
+     "post_count": 2
     },
     {
      "day_of_week": 5,
@@ -4006,12 +5141,24 @@
      "post_count": 1
     },
     {
+     "day_of_week": 2,
+     "hour": 7,
+     "avg_engagement": 5,
+     "post_count": 1
+    },
+    {
      "day_of_week": 1,
      "hour": 5,
      "avg_engagement": 3,
      "post_count": 1
     },
     {
+     "day_of_week": 2,
+     "hour": 3,
+     "avg_engagement": 3,
+     "post_count": 1
+    },
+    {
      "day_of_week": 4,
      "hour": 23,
      "avg_engagement": 3,
@@ -4020,7 +5167,7 @@
     {
      "day_of_week": 5,
      "hour": 23,
-     "avg_engagement": 2,
+     "avg_engagement": 3,
      "post_count": 1
     },
     {
@@ -4030,44 +5177,26 @@
      "post_count": 1
     },
     {
+     "day_of_week": 1,
+     "hour": 13,
+     "avg_engagement": 2,
+     "post_count": 1
+    },
+    {
+     "day_of_week": 0,
+     "hour": 23,
+     "avg_engagement": 2,
+     "post_count": 1
+    },
+    {
      "day_of_week": 6,
      "hour": 15,
      "avg_engagement": 2,
      "post_count": 1
     },
     {
-     "day_of_week": 0,
-     "hour": 13,
-     "avg_engagement": 1,
-     "post_count": 1
-    },
-    {
      "day_of_week": 1,
-     "hour": 11,
-     "avg_engagement": 1,
-     "post_count": 1
-    },
-    {
-     "day_of_week": 6,
-     "hour": 19,
-     "avg_engagement": 1,
-     "post_count": 1
-    },
-    {
-     "day_of_week": 5,
-     "hour": 15,
-     "avg_engagement": 1,
-     "post_count": 1
-    },
-    {
-     "day_of_week": 0,
-     "hour": 15,
-     "avg_engagement": 1,
-     "post_count": 1
-    },
-    {
-     "day_of_week": 5,
-     "hour": 19,
+     "hour": 21,
      "avg_engagement": 1,
      "post_count": 1
     },
@@ -4078,20 +5207,62 @@
      "post_count": 1
     },
     {
+     "day_of_week": 1,
+     "hour": 11,
+     "avg_engagement": 1,
+     "post_count": 1
+    },
+    {
+     "day_of_week": 5,
+     "hour": 15,
+     "avg_engagement": 1,
+     "post_count": 1
+    },
+    {
+     "day_of_week": 0,
+     "hour": 13,
+     "avg_engagement": 1,
+     "post_count": 1
+    },
+    {
+     "day_of_week": 2,
+     "hour": 17,
+     "avg_engagement": 1,
+     "post_count": 1
+    },
+    {
+     "day_of_week": 6,
+     "hour": 19,
+     "avg_engagement": 1,
+     "post_count": 1
+    },
+    {
+     "day_of_week": 2,
+     "hour": 13,
+     "avg_engagement": 1,
+     "post_count": 1
+    },
+    {
+     "day_of_week": 2,
+     "hour": 5,
+     "avg_engagement": 1,
+     "post_count": 1
+    },
+    {
      "day_of_week": 0,
      "hour": 17,
      "avg_engagement": 1,
      "post_count": 1
     },
     {
-     "day_of_week": 0,
-     "hour": 23,
+     "day_of_week": 5,
+     "hour": 19,
      "avg_engagement": 1,
      "post_count": 1
     },
     {
-     "day_of_week": 1,
-     "hour": 13,
+     "day_of_week": 0,
+     "hour": 15,
      "avg_engagement": 1,
      "post_count": 1
     },
@@ -4102,26 +5273,14 @@
      "post_count": 1
     },
     {
-     "day_of_week": 0,
-     "hour": 19,
-     "avg_engagement": 0,
-     "post_count": 1
-    },
-    {
-     "day_of_week": 4,
-     "hour": 14,
-     "avg_engagement": 0,
-     "post_count": 1
-    },
-    {
      "day_of_week": 6,
      "hour": 23,
      "avg_engagement": 0,
      "post_count": 1
     },
     {
-     "day_of_week": 1,
-     "hour": 17,
+     "day_of_week": 2,
+     "hour": 19,
      "avg_engagement": 0,
      "post_count": 1
     },
@@ -4132,8 +5291,26 @@
      "post_count": 1
     },
     {
+     "day_of_week": 1,
+     "hour": 23,
+     "avg_engagement": 0,
+     "post_count": 1
+    },
+    {
+     "day_of_week": 4,
+     "hour": 14,
+     "avg_engagement": 0,
+     "post_count": 1
+    },
+    {
      "day_of_week": 4,
      "hour": 17,
+     "avg_engagement": 0,
+     "post_count": 1
+    },
+    {
+     "day_of_week": 2,
+     "hour": 9,
      "avg_engagement": 0,
      "post_count": 1
     },
@@ -4142,23 +5319,54 @@
      "hour": 21,
      "avg_engagement": 0,
      "post_count": 1
+    },
+    {
+     "day_of_week": 1,
+     "hour": 17,
+     "avg_engagement": 0,
+     "post_count": 1
+    },
+    {
+     "day_of_week": 2,
+     "hour": 15,
+     "avg_engagement": 0,
+     "post_count": 1
+    },
+    {
+     "day_of_week": 2,
+     "hour": 11,
+     "avg_engagement": 0,
+     "post_count": 1
+    },
+    {
+     "day_of_week": 0,
+     "hour": 19,
+     "avg_engagement": 0,
+     "post_count": 1
     }
    ]
   }
  },
  "fehler": [
+  "youtube: Insights HTTP 429",
   "youtube: Insights HTTP 429"
  ],
  "ueberblick_haupt": {
-  "totalPosts": 53,
-  "publishedPosts": 53,
+  "totalPosts": 67,
+  "publishedPosts": 67,
   "scheduledPosts": 0,
   "dataStaleness.staleAccountCount": 2
  },
  "ueberblick_yt": {
-  "totalPosts": 37,
-  "publishedPosts": 37,
+  "totalPosts": 49,
+  "publishedPosts": 49,
   "scheduledPosts": 0,
-  "dataStaleness.staleAccountCount": 0
+  "dataStaleness.staleAccountCount": 1
+ },
+ "ueberblick_drei": {
+  "totalPosts": 0,
+  "publishedPosts": 0,
+  "scheduledPosts": 0,
+  "dataStaleness.staleAccountCount": 2
  }
 }

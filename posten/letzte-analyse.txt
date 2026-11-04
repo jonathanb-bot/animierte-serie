@@ -1,9 +1,13 @@
-Verbundene Konten: tiktok:storys4you.de1, instagram:sto.rys4you, youtube:sto.rys4you (2. Zernio-Konto), tiktok:storys4you_eng (2. Zernio-Konto)
-Konto tiktok:storys4you.de1 Follower=63 Insights ok
-Konto instagram:sto.rys4you Follower=6 Insights ok
-Konto youtube:sto.rys4you Follower=48 Insights HTTP 429 {"error":"YouTube Analytics daily quota exhausted. Analytics requests succeed again after midnight Pacific Time.","type":"rate_limit_error","code":"rate_limited","platform":"google","details":{"quotaExhausted":true,"quotaScope":"DEVELOPER",
+Verbundene Konten: tiktok:storys4you.de1, instagram:sto.rys4you, youtube:sto.rys4you (2. Zernio-Konto), tiktok:storys4you_eng (2. Zernio-Konto), youtube:storys4you_eng (3. Zernio-Konto), instagram:sory4you_eng (3. Zernio-Konto)
+Konto tiktok:storys4you.de1 Follower=65 Insights ok
+Konto instagram:sto.rys4you Follower=7 Insights ok
+Konto youtube:sto.rys4you Follower=52 Insights HTTP 429 {"error":"YouTube Analytics daily quota exhausted. Analytics requests succeed again after midnight Pacific Time.","type":"rate_limit_error","code":"rate_limited","platform":"google","details":{"quotaExhausted":true,"quotaScope":"DEVELOPER",
 Konto tiktok:storys4you_eng Follower=0 Insights ok
-Posts (haupt) Seite 1: 53
-Posts (yt) Seite 1: 37
-Fertig: 4 Konten, 84 Posts (84 mit Zahlen), 1 Fehler → posten/analyse.json
+Konto youtube:storys4you_eng Follower=0 Insights HTTP 429 {"error":"YouTube Analytics daily quota exhausted. Analytics requests succeed again after midnight Pacific Time.","type":"rate_limit_error","code":"rate_limited","platform":"google","details":{"quotaExhausted":true,"quotaScope":"DEVELOPER",
+Konto instagram:sory4you_eng Follower=0 Insights ok
+Posts (haupt) Seite 1: 67
+Posts (yt) Seite 1: 49
+Posts (drei) Seite 1: 0
+Fertig: 6 Konten, 110 Posts (110 mit Zahlen), 2 Fehler → posten/analyse.json
+  Fehler: youtube: Insights HTTP 429
   Fehler: youtube: Insights HTTP 429
