@@ -4,6 +4,15 @@ Jonathans Wunsch vom 1.11.2026: Vor jeder Staffel gründlich auswerten, **was be
 
 Feste Regeln (Issues mit Label `dringlich`, `taeglich/FORMAT.md`) gehen immer vor: Eine Analyse darf nie dazu führen, dass Videos kürzer als 1 Minute werden, Fragen ans Publikum bekommen oder „Fortsetzung folgt“ zeigen.
 
+## Test- und Analysephase bis 22.11.2026 (Jonathans Vorgabe 4.11., Issue #22)
+
+Bis zum 22. November wird **alles sehr genau** analysiert und viel ausprobiert. Dafür gilt bei jeder Analyse zusätzlich:
+- **Protokoll:** `taeglich/analyse/experimente.md` fortschreiben: Abschnitt „Ergebnisse“ mit Datum, das Ergebnis jedes Experiments (E1, E2, …) in die Tabelle eintragen (Zahlen, Anzahl Posts, Tendenz/belastbar).
+- **Genau auswerten:** jede Dimension aus `analyse_auswerten.py` lesen (Längenband, Folgenzahl, Hook-Text, Staffel, **Welt/Hauptort, Genre, Erzählform, Hook-Art, Vorbild, Cliffhanger-Art, Kulisse**), dazu die Bindungskurven (3 s, 7 s, Mitte, Ende) und je Plattform Top 5/Flop 5 mit Begründung. Immer Posts nennen, Anzahl und Median, nie nur Eindrücke.
+- **Vielfalt vorgeben:** In `aktuell.md` steht unter „Themenvorschläge“ immer, **welche Welt, welches Genre, welche Erzählform und welche Hook-Art** noch nicht oder selten getestet wurden (aus den Tabellen in `experimente.md`). Die Vorschläge unterscheiden sich deutlich voneinander und von den letzten beiden Staffeln. Gleich bleiben nur Stimme und Stil.
+- **Kein Gewinner vor dem 22.11.:** Gute Ergebnisse werden „Tendenz“ und wiederholt geprüft. Erst nach 2 Staffeln mit ähnlichem Ergebnis wird es eine Regel.
+- **Am 22.11.:** Abschlussbericht `taeglich/analyse/2026-11-22-abschluss.md`: Gewinner und Verlierer je Dimension mit Zahlen, was sicher ist und was nicht, Empfehlung für das Format danach. Jonathan per PushNotification Bescheid geben.
+
 ## Datenquellen
 
 1. **Zernio: eigene Zahlen von TikTok, Instagram und YouTube, kostenlos.** Den Workflow „Posts einplanen“ mit `analyse=true` starten (`mcp__github__actions_run_trigger`, `run_workflow`, `posten.yml`, ref `main`, inputs `{"analyse": "true"}`). Warten, bis `posten/analyse.json` auf `main` ein neues `erstellt` hat (ca. 2–5 min; `git fetch origin main`), dann lesen. Für jeden veröffentlichten Post stehen dort die Analytics (Aufrufe, Likes, Kommentare, Shares, Saves, Reichweite, bei Reels Wiedergabezeit und Abbruchquote) und für jedes Konto die Zahlen der letzten 30 Tage. Fehler stehen unter `fehler`. Läuft gerade ein anderer Posting-Lauf, wartet der Analyse-Lauf in der Warteschlange.
@@ -27,7 +36,7 @@ Feste Regeln (Issues mit Label `dringlich`, `taeglich/FORMAT.md`) gehen immer vo
 2. `taeglich/analyse/aktuell.md`: **kurze, verbindliche Vorgaben für die nächste Staffel** (höchstens 12 Punkte) in vier Abschnitten:
    - **Mehr davon:** was gut ankam, zum Beispiel „Hooks mit einer Zahl über dein Leben“, „Stimmung warm + Großstadt bei Nacht“, „Familie-Folgen“
    - **Weniger davon:** was schwach lief
-   - **Ausprobieren:** genau 1 Experiment pro Staffel, damit wir dazulernen
+   - **Ausprobieren:** genau 1 Experiment pro Staffel, damit wir dazulernen (mit Hypothese, Variante, Messgröße; in `experimente.md` als neue Zeile E…)
    - **Themenvorschläge:** 2–3 Staffel-Ideen, die zu den Ergebnissen passen. **Immer auch mindestens ein „Was wäre wenn“-Thema für Folgen von 1–3 Minuten** (Jonathans Wunsch 2.11.): ein Gedankenexperiment aus dem echten Leben, das Schritt für Schritt eskaliert und dich direkt betrifft. Der Hook ist eine Aussage, keine Frage ans Publikum (#8), z. B. „Ab heute Nacht gibt es in ganz Europa keinen Strom.“
 3. `taeglich/kennzahlen.json`: Verlauf (Datum, Follower/Abonnenten je Plattform, Summen der letzten 30 Tage) und `meilensteine`. Ist eine Schwelle erreicht (TikTok 10.000 = Creator Rewards, YouTube 1.000, Instagram 10.000), sofort eine PushNotification an Jonathan.
 4. Branch `taeglich` committen und pushen. Eine PushNotification sonst nur bei etwas Auffälligem (Meilenstein, starker Absturz, Posting-Fehler bei Zernio).

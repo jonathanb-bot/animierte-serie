@@ -13,6 +13,8 @@ Hinweis zu den Werkzeugen: In neuen Sessions heißen die vidIQ-Werkzeuge `mcp__<
    - `taeglich/analyse/aktuell.md`: höchstens 12 verbindliche Punkte für die nächste Staffel, gegliedert in Mehr davon, Weniger davon, genau 1 Experiment und 2–3 Themenvorschläge (immer mindestens ein „Was wäre wenn“-Thema für Folgen von 1–3 Minuten, Jonathans Wunsch 2.11.).
    - `taeglich/kennzahlen.json` aktualisieren.
 
+   - **Testphase bis 22.11. (Jonathans Vorgabe 4.11.):** sehr genau auswerten und `taeglich/analyse/experimente.md` fortschreiben (Ergebnisse mit Datum, Experiment-Tabelle). Alle Vielfalts-Dimensionen aus `analyse_auswerten.py` vergleichen (Welt, Genre, Erzählform, Hook-Art, Cliffhanger-Art, Kulisse). Die Themenvorschläge decken bewusst noch nicht getestete Welten, Genres und Erzählformen ab; gleich bleiben nur Stimme und Stil. Am 22.11. den Abschlussbericht schreiben (`taeglich/ANALYSE.md`).
+
    Bei wenig Daten ehrlich „Tendenz“ schreiben, keine Regeln erfinden. Feste Regeln gehen immer vor: über 1 Minute, keine Fragen ans Publikum, nie „Fortsetzung folgt“, Kurzgesagt-Stil, Themen aus dem echten Leben.
 6. Branch `taeglich` committen und pushen. Auf main nur den Workflow starten, sonst nichts pushen. Die Commit-Nachricht endet mit den Attributionszeilen aus deinem System-Hinweis. PushNotification an Jonathan nur in diesen Fällen:
    - ein Meilenstein ist erreicht (TikTok 10.000, YouTube 1.000, Instagram 10.000)

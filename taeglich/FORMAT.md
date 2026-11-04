@@ -18,6 +18,16 @@ Diese Datei ist verbindlich für die geplante Aufgabe „Kurzvideo-Staffel alle 
 - **Analyse jeden Abend um 21:39** (Zernio kostenlos), vidIQ nach Credit-Plan nur jeden 2. Abend.
 - In `staffeln.json` bekommt jede Staffel `datum` (JJJJ-MM-TT), sonst erkennt `vorrat.py` sie nicht.
 
+## Test- und Analysephase bis 22.11.2026 (Jonathans Vorgabe 4.11.)
+
+Bis zum 22. November wird viel ausprobiert und alles genau ausgewertet. **Möglichst viel Vielfalt bei Kulissen, Welten, Geschichten, Genres, Erzählformen, Figuren, Hooks und Längen. Gleich bleiben nur die Stimme (Gemini „Orus“, `@vortrag lebendig`) und der Stil („leuchtend“, Kurzgesagt-Richtung, Figuren aus `figuren.json`).** Regeln und Ideen-Vorrat: `taeglich/analyse/experimente.md`.
+- Jede Staffel spielt in einer **neuen Welt**: Hauptort und mindestens 60 % der Kulissen-Einstellungen (ohne `gesicht`/`handy`) überschneiden sich nicht mit den beiden Staffeln davor.
+- **Genre und Erzählform** wechseln gegenüber der Staffel davor, kein Genre zweimal in 3 Staffeln. Hook-Art und Figuren-Fokus ebenfalls abwechseln.
+- **Pro Staffel 1–2 neue Kulissen** für die neue Welt (mindestens 1 im Stil „leuchtend“, Skill `serien-stil`).
+- Genau **1 Haupt-Experiment** pro Staffel (eine Sache verändern, Hypothese und Messgröße in `experimente.md`).
+- In `staffeln.json` bekommt jede Staffel `vielfalt` (`welt`, `genre`, `erzaehlform`, `hook_art`, `vorbild_kurz`, `figuren_fokus`, `laenge`, `folgen`, `tiktok`, `experiment`, `neue_kulissen`) und `cliffhanger` (Art je Folge). Die Analyse vergleicht danach.
+- Die Format-Rotation unten läuft weiter. **Ab s07 bis 22.11. wird nicht auf einen Gewinner festgelegt**, sondern weiter abgewechselt (Folgenzahl 6–12, Länge 62–120 s, TikTok einzeln oder Sammelteile).
+
 ## Abwechslung bei Länge und Folgenzahl (Jonathans Wunsch 2.11., Issue #13)
 
 Damit die Analyse herausfinden kann, was am besten ankommt, ändert sich das Format **von Staffel zu Staffel** nach einer festen Rotation. Feste Grenzen bleiben: jede Folge **62–90 s** (über 1 Minute, #12; bis 90 s ein Post auf Instagram/YouTube, Jonathans Vorgabe 2.11.), TikTok-Teile höchstens 10 min.
@@ -30,7 +40,7 @@ Damit die Analyse herausfinden kann, was am besten ankommt, ändert sich das For
 | s04 | 6 | **XL** 90–120 s (bis 2 min) | 240–310 | 24–30 | **jede Folge ein eigener Post** |
 | s05 | 10 | **mittel** 70–80 s | 195–210 | 20–24 | 4 Sammelteile |
 | s06 | 10 | **gemischt**: 3 Folgen ~60 s, 4 ~80 s, 3 ~110 s | je nach Länge | | jede Folge ein eigener Post |
-| ab s07 | nach Analyse | Gewinner aus „Format-Vergleich“, jede 3. Staffel wieder etwas anderes | | | |
+| ab s07 | bis 22.11. weiter abwechseln (Testphase), danach nach Abschlussbericht | Gewinner erst ab 22.11. festlegen | | | |
 
 Jonathans Wunsch vom 2.11. abends: Abwechslung, auch **Kurzvideos von 1 bis 2 Minuten** und solche mit **höchstens 90 s**, und schauen, wie sie ankommen. Dazu testen wir auf TikTok **einzelne Folgen** statt Sammelteile: die Zahlen vom 2.11. zeigen, dass bei den 7-Minuten-Teilen nach einem Viertel nur noch 3–9 % zuschauen.
 - **Instagram/YouTube:** jede Folge ist ein Post, auch die XL-Folgen bis 2 min (beide Plattformen erlauben das). Nie in Teile unter 1 Minute schneiden (#12).

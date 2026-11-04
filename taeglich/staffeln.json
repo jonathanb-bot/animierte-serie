@@ -168,7 +168,34 @@
     "folgen": 10,
     "laengenband": "frei (65–85 s, Standard vor der Format-Rotation)",
     "tiktok_teile": 4
-   }
+   },
+   "vielfalt": {
+    "welt": "Großstadt bei Nacht (Netzausfall)",
+    "genre": "Überleben/Mysterium",
+    "erzaehlform": "chronologisch, 3 Tage",
+    "hook_art": "Rätsel mit Gefahr/Verlust",
+    "vorbild_kurz": "Infographics Show",
+    "figuren_fokus": "Schwester, Opa, Funker",
+    "laenge": "frei 66–79 s",
+    "folgen": 10,
+    "tiktok": "4 Sammelteile",
+    "experiment": "Hook-Text in allen Folgen",
+    "neue_kulissen": [
+     "polarlicht"
+    ]
+   },
+   "cliffhanger": [
+    "Entdeckung",
+    "Gefahr",
+    "Ankunft",
+    "Geständnis",
+    "Gefahr",
+    "Gefahr",
+    "Gefahr",
+    "Entdeckung",
+    "Geständnis",
+    "Schluss"
+   ]
   },
   {
    "id": "s02",
@@ -406,6 +433,21 @@
     "taeglich-yt-s02-f06": "2026-11-06T20:30:00",
     "taeglich-yt-s02-f07": "2026-11-06T22:30:00",
     "taeglich-yt-s02-f08": "2026-11-07T00:30:00"
+   },
+   "vielfalt": {
+    "welt": "Heimatstadt: Kiosk, Schule, Esstisch",
+    "genre": "Was wäre wenn / Alltagsdrama",
+    "erzaehlform": "chronologisch, 1 Woche",
+    "hook_art": "kühne Prämisse („Stell dir vor …“)",
+    "vorbild_kurz": "Dhar Mann",
+    "figuren_fokus": "beste Freundin, Opa",
+    "laenge": "kurz 65–81 s",
+    "folgen": 8,
+    "tiktok": "jede Folge einzeln",
+    "experiment": "Hook-Text A/B (ungerade mit, gerade ohne)",
+    "neue_kulissen": [
+     "kiosk"
+    ]
    }
   }
  ]

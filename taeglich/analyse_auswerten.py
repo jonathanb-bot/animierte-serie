@@ -21,6 +21,7 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 
 ROOT = Path(__file__).resolve().parent.parent
+STAFFELN_DATEI = ROOT / "taeglich" / "staffeln.json"
 BERLIN = ZoneInfo("Europe/Berlin")
 # bevorzugte Namen je Kennzahl (letztes Pfadstück, klein geschrieben, ohne _)
 KENNZAHLEN = {
@@ -165,6 +166,12 @@ def main(argv=None) -> int:
         v = v.split("youtube-upload/")[-1]
         return vd.get(v)
     format_gruppen = {"Längenband": defaultdict(list), "Folgen pro Staffel": defaultdict(list), "Hook-Text": defaultdict(list), "Staffel": defaultdict(list)}
+    # Test- und Analysephase bis 22.11. (Jonathans Vorgabe 4.11.): Vielfalt je Staffel/Folge vergleichen.
+    # Quelle: staffeln.json → vielfalt {welt, genre, erzaehlform, hook_art, …} und cliffhanger (Liste je Folge).
+    st_info = {x["id"]: x for x in json.loads(STAFFELN_DATEI.read_text(encoding="utf-8")).get("staffeln", [])} if STAFFELN_DATEI.exists() else {}
+    VIELFALT = {"welt": "Welt/Hauptort", "genre": "Genre", "erzaehlform": "Erzählform", "hook_art": "Hook-Art", "vorbild_kurz": "Vorbild"}
+    for titel in list(VIELFALT.values()) + ["Cliffhanger-Art", "Kulisse (Video enthält)"]:
+        format_gruppen[titel] = defaultdict(list)
     for p in posts:
         v = vdaten(p)
         if not v or p["alter_h"] < 12:
@@ -176,6 +183,16 @@ def main(argv=None) -> int:
         format_gruppen["Folgen pro Staffel"][(p["platform"], str(v.get("folgen_in_staffel")))].append(eintrag)
         format_gruppen["Hook-Text"][(p["platform"], "ja" if v.get("hooktext") else "nein")].append(eintrag)
         format_gruppen["Staffel"][(p["platform"], v["staffel"])].append(eintrag)
+        si = st_info.get(v["staffel"], {})
+        for k, titel in VIELFALT.items():
+            if (si.get("vielfalt") or {}).get(k):
+                format_gruppen[titel][(p["platform"], str(si["vielfalt"][k]))].append(eintrag)
+        nr = v.get("folge") or (v.get("folgen") or [None])[0]
+        ch = si.get("cliffhanger") or []
+        if nr and len(ch) >= nr and (v["art"] != "tiktok_teil" or len(v.get("folgen") or []) == 1):
+            format_gruppen["Cliffhanger-Art"][(p["platform"], ch[nr - 1])].append(eintrag)
+        for kul in v.get("kulissen") or []:
+            format_gruppen["Kulisse (Video enthält)"][(p["platform"], kul)].append(eintrag)
     if any(format_gruppen[g] for g in format_gruppen):
         md = lambda xs: statistics.median(xs) if xs else None
         for name, g in format_gruppen.items():
