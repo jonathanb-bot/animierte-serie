@@ -1,12 +1,12 @@
 {
- "dauer": 67.922,
+ "dauer": 73.778,
  "einstellungen": [
   {
    "nr": 1,
    "typ": "auge",
    "kapitel": 1,
    "start": 0.0,
-   "dauer": 5.126,
+   "dauer": 5.774,
    "emotion": "erzaehlend",
    "text": "Somewhere in your town, there's a secret millionaire. And everyone's hunting for him."
   },
@@ -14,8 +14,8 @@
    "nr": 2,
    "typ": "gesicht",
    "kapitel": 1,
-   "start": 5.126,
-   "dauer": 1.694,
+   "start": 5.774,
+   "dauer": 1.766,
    "emotion": "ernst",
    "text": "“Hey. Was that you?”"
   },
@@ -23,8 +23,8 @@
    "nr": 3,
    "typ": "gesicht",
    "kapitel": 1,
-   "start": 6.82,
-   "dauer": 4.862,
+   "start": 7.54,
+   "dauer": 5.006,
    "emotion": "froh",
    "text": "“Me? I've got eleven bucks in my account.” You laugh. Way too loud."
   },
@@ -32,8 +32,8 @@
    "nr": 4,
    "typ": "klassenzimmer",
    "kapitel": 2,
-   "start": 11.682,
-   "dauer": 3.326,
+   "start": 12.546,
+   "dauer": 3.782,
    "emotion": "erzaehlend",
    "text": "On Monday, the whole school is talking about the kiosk."
   },
@@ -41,8 +41,8 @@
    "nr": 5,
    "typ": "gesicht",
    "kapitel": 2,
-   "start": 15.008,
-   "dauer": 3.494,
+   "start": 16.328,
+   "dauer": 3.782,
    "emotion": "erzaehlend",
    "text": "“If it was me, I'd buy an island. With penguins.”"
   },
@@ -50,8 +50,8 @@
    "nr": 6,
    "typ": "gesicht",
    "kapitel": 2,
-   "start": 18.502,
-   "dauer": 3.686,
+   "start": 20.11,
+   "dauer": 3.878,
    "emotion": "ernst",
    "text": "You laugh along. Your laugh sounds like a broken alarm clock."
   },
@@ -59,8 +59,8 @@
    "nr": 7,
    "typ": "netz",
    "kapitel": 2,
-   "start": 22.188,
-   "dauer": 5.318,
+   "start": 23.988,
+   "dauer": 5.75,
    "emotion": "erzaehlend",
    "text": "In the class group chat, everyone's guessing who it could be. Twenty-eight messages in one hour."
   },
@@ -68,8 +68,8 @@
    "nr": 8,
    "typ": "haltestelle",
    "kapitel": 3,
-   "start": 27.506,
-   "dauer": 3.974,
+   "start": 29.738,
+   "dauer": 4.166,
    "emotion": "erzaehlend",
    "text": "At the bus stop, a man you've never seen before starts talking to you."
   },
@@ -77,8 +77,8 @@
    "nr": 9,
    "typ": "gesicht",
    "kapitel": 3,
-   "start": 31.48,
-   "dauer": 1.814,
+   "start": 33.904,
+   "dauer": 2.27,
    "emotion": "erzaehlend",
    "text": "“You live over by Linden Street, right?”"
   },
@@ -86,8 +86,8 @@
    "nr": 10,
    "typ": "handy",
    "kapitel": 3,
-   "start": 33.294,
-   "dauer": 3.302,
+   "start": 36.174,
+   "dauer": 3.806,
    "emotion": "erzaehlend",
    "text": "That night, you get a text from a cousin you didn't even know existed."
   },
@@ -95,8 +95,8 @@
    "nr": 11,
    "typ": "gesicht",
    "kapitel": 3,
-   "start": 36.596,
-   "dauer": 3.662,
+   "start": 39.98,
+   "dauer": 3.782,
    "emotion": "ernst",
    "text": "Ralph just wants to talk about family. And about a little loan."
   },
@@ -104,8 +104,8 @@
    "nr": 12,
    "typ": "zimmer",
    "kapitel": 3,
-   "start": 40.258,
-   "dauer": 5.486,
+   "start": 43.762,
+   "dauer": 6.206,
    "emotion": "erzaehlend",
    "text": "At three in the morning, you're wide awake. Every car outside sounds like it's stopping at your house."
   },
@@ -113,8 +113,8 @@
    "nr": 13,
    "typ": "gesicht",
    "kapitel": 3,
-   "start": 45.744,
-   "dauer": 3.326,
+   "start": 49.968,
+   "dauer": 3.206,
    "emotion": "ruhig",
    "text": "Thirty million. And you're sleeping worse than ever."
   },
@@ -122,8 +122,8 @@
    "nr": 14,
    "typ": "grossstadt",
    "kapitel": 4,
-   "start": 49.07,
-   "dauer": 2.894,
+   "start": 53.174,
+   "dauer": 3.302,
    "emotion": "erzaehlend",
    "text": "By the next morning, the rumor isn't a rumor anymore."
   },
@@ -131,8 +131,8 @@
    "nr": 15,
    "typ": "weltall",
    "kapitel": 4,
-   "start": 51.964,
-   "dauer": 2.558,
+   "start": 56.476,
+   "dauer": 3.014,
    "emotion": "erzaehlend",
    "text": "A photo only takes seconds to be everywhere."
   },
@@ -140,8 +140,8 @@
    "nr": 16,
    "typ": "handy",
    "kapitel": 4,
-   "start": 54.522,
-   "dauer": 5.486,
+   "start": 59.49,
+   "dauer": 5.99,
    "emotion": "erzaehlend",
    "text": "Someone posted a picture. The kiosk, Saturday night. And standing in front of it is you."
   },
@@ -149,8 +149,8 @@
    "nr": 17,
    "typ": "kiosk",
    "kapitel": 4,
-   "start": 60.008,
-   "dauer": 2.654,
+   "start": 65.48,
+   "dauer": 2.894,
    "emotion": "erzaehlend",
    "text": "It's blurry. But everyone knows that jacket."
   },
@@ -158,8 +158,8 @@
    "nr": 18,
    "typ": "gesicht",
    "kapitel": 5,
-   "start": 62.662,
-   "dauer": 1.454,
+   "start": 68.374,
+   "dauer": 1.574,
    "emotion": "spannend",
    "text": "Then a message pops up."
   },
@@ -167,8 +167,8 @@
    "nr": 19,
    "typ": "handy",
    "kapitel": 5,
-   "start": 64.116,
-   "dauer": 3.806,
+   "start": 69.948,
+   "dauer": 3.83,
    "emotion": "erzaehlend",
    "text": "From Mia. “I asked you. You lied right to my face.”"
   }
