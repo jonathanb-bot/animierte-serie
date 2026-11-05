@@ -32,12 +32,14 @@ STIL = ("Lies den folgenden deutschen Text als Erzähler einer düsteren Kurzges
         "Nur den Text sprechen:\n\n")
 # Für die Kurzvideos (taeglich/): `@stimmung <name>` im Drehbuch wählt den Vortrag. Gleiche Stimme „Orus“, nur die Erzählweise
 # ändert sich. Ohne @stimmung bleibt STIL wie oben (alle bisherigen Serien).
+# 5.11.: Rahmen „ruhiger Erzähler einer späten Radiosendung … tiefe, warme, volle Männerstimme, entspannt“ trifft den
+# Grundton (~106 Hz) von selbst; „zügig/angespannt/lebendig“ trieb Orus 2–3 Halbtöne höher (musste stark heruntergepitcht werden).
 STIMMUNGEN = {
-    "duester": "einer düsteren Kurzgeschichte für TikTok vor: tiefe, trockene, nahe Männerstimme, zügig, ruhig bedrohlich",
-    "spannend": "einer spannenden Kurzgeschichte für TikTok vor: tiefe, nahe Männerstimme, zügig, angespannt, mit Druck",
-    "traurig": "einer traurigen, berührenden Kurzgeschichte vor: tiefe, warme, nahe Männerstimme, ruhig und leise, mit Gefühl, nie kitschig",
-    "freudig": "einer fröhlichen, mitreißenden Kurzgeschichte vor: tiefe, warme Männerstimme, lebendig, mit einem Lächeln in der Stimme, zügig",
-    "warm": "einer nachdenklichen, warmherzigen Kurzgeschichte vor: tiefe, warme, nahe Männerstimme, ruhig und ehrlich, wie ein guter Freund",
+    "duester": "ruhiger Erzähler einer späten Radiosendung, der eine düstere Geschichte erzählt: tiefe, warme, volle Männerstimme, entspannt, natürlich, trocken, ruhig bedrohlich",
+    "spannend": "ruhiger Erzähler einer späten Radiosendung, der eine spannende Geschichte erzählt: tiefe, warme, volle Männerstimme, entspannt, natürlich, leise packend",
+    "traurig": "ruhiger Erzähler einer späten Radiosendung, der eine traurige, berührende Geschichte erzählt: tiefe, warme, volle Männerstimme, entspannt, natürlich, leise, nie kitschig",
+    "freudig": "ruhiger Erzähler einer späten Radiosendung, der eine schöne, fröhliche Geschichte erzählt: tiefe, warme, volle Männerstimme, entspannt, natürlich, mit einem leisen Lächeln",
+    "warm": "ruhiger Erzähler einer späten Radiosendung, der eine warmherzige Geschichte erzählt: tiefe, warme, volle Männerstimme, entspannt, natürlich, ehrlich, wie ein guter Freund",
 }
 
 
@@ -70,7 +72,7 @@ def stimmung_setzen(name: str | None, lebendig: bool = False, sprache: str = "de
                 + (LEBENDIG_EN if lebendig else "") + ", a short pause after each line. Speak only the text:\n\n")
         return
     if name and name in STIMMUNGEN:
-        STIL = ("Lies den folgenden deutschen Text als Erzähler " + STIMMUNGEN[name] + (LEBENDIG if lebendig else "") +
+        STIL = ("Lies den folgenden deutschen Text als " + STIMMUNGEN[name] + (LEBENDIG if lebendig else "") +
                 ", nach jeder Zeile eine kurze Pause. Nur den Text sprechen:\n\n")
 
 
