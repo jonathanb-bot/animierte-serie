@@ -263,8 +263,7 @@ def bauen(drehbuch: str, nur_stimme=False, drone=False, stimme="edge", anfragen=
             f.unlink()
 
     # Erzählstimme auf die Referenz aus „24. Stock“ angleichen (Gemini schwankt in der Tonhöhe)
-    # Englisch nicht (5.11.): heruntergepitcht klang Orus auf Englisch unnatürlich tief, dort bleibt die Originalhöhe.
-    if stimme.startswith("gemini") and not (sp and sp.group(1) == "en"):
+    if stimme.startswith("gemini"):
         from .angleichen import angleichen
         angleichen(audio_dir, log=log)
 

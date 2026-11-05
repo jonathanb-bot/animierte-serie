@@ -3,6 +3,8 @@ YouTube (3. Zernio-Konto, Jonathans Wunsch 3.11.).
 
     python taeglich/staffel_englisch.py s02            # alles
     python taeglich/staffel_englisch.py s02 --probe    # prüfen und vorbereiten, nichts pushen
+    python taeglich/staffel_englisch.py s02 --ersetzen v2   # neu gerenderte Fassung: alte englische Posts zurückziehen
+                                                            # (plan.loeschen) und alles neu einplanen, IDs mit „-v2“
 
 - Nur TikTok, Account storys4you_eng (2. Zernio-Konto). Sammelteile wie auf Deutsch (Issue #7), gleiche Teilgrenzen.
 - Takt: 1 Teil pro Tag um 01:00 Uhr Berlin (= 19:00 New York, 16:00 Los Angeles, 00:00 London: Abendspitze der
@@ -26,6 +28,7 @@ from __future__ import annotations
 import argparse
 import datetime as dt
 import json
+import re
 import shutil
 import sys
 from pathlib import Path
@@ -53,7 +56,7 @@ def zeiten_en(plan: dict, loeschen: set, staffel: str, teile: list, frueh: dt.da
     en = sorted((z, i) for i, z in zeit.items() if i.startswith("taeglich-tiktok-en-"))
     letzte = en[-1][0] if en else None
     # einmal eingeholt, bleibt es dabei: der letzte englische Teil lief zur Zeit seines deutschen Gegenstücks
-    eingeholt = bool(en) and zeit.get(en[-1][1].replace("tiktok-en-", "tiktok-")) == letzte
+    eingeholt = bool(en) and zeit.get(re.sub(r"-v\d+$", "", en[-1][1]).replace("tiktok-en-", "tiktok-")) == letzte
     out = []
     for t in teile:
         de = zeit.get(f"taeglich-tiktok-{staffel}-teil-{t['k']}")
@@ -73,6 +76,7 @@ def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("staffel")
     ap.add_argument("--probe", action="store_true")
+    ap.add_argument("--ersetzen", metavar="SUFFIX", help="alte englische Posts der Staffel zurückziehen, neue IDs mit -SUFFIX")
     a = ap.parse_args(argv)
 
     daten = json.loads(S.STAFFELN.read_text(encoding="utf-8"))
@@ -141,12 +145,18 @@ def main(argv=None) -> int:
     plan_datei = repo_main / "posten" / "plan.json"
     plan = json.loads(plan_datei.read_text(encoding="utf-8"))
     loeschen, ids = set(plan.get("loeschen") or []), {p["id"] for p in plan["posts"]}
+    endung = f"-{a.ersetzen}" if a.ersetzen else ""
+    if a.ersetzen:  # 5.11.: Stimme neu – alte Fassung überall zurückziehen, auch schon gelaufene Teile
+        alt = [p["id"] for p in plan["posts"] if p.get("serie") == "taeglich-en" and p["id"] not in loeschen
+               and re.match(rf"taeglich-(tiktok|insta|yt)-en-{a.staffel}-", p["id"]) and not p["id"].endswith(endung)]
+        plan.setdefault("loeschen", []).extend(alt); loeschen |= set(alt)
+        print(f"  {len(alt)} alte englische Posts zurückgezogen")
     frueh = dt.datetime.now(V.BERLIN).replace(tzinfo=None, second=0, microsecond=0) + S.VORLAUF
     tags_txt, em = " ".join(en["hashtags"]), st.get("emoji", "")
-    neu_teile = [t for t in teile if f"taeglich-tiktok-en-{a.staffel}-teil-{t['k']}" not in ids]
+    neu_teile = [t for t in teile if f"taeglich-tiktok-en-{a.staffel}-teil-{t['k']}{endung}" not in ids]
     neu = []
     for t, z in zip(neu_teile, zeiten_en(plan, loeschen, a.staffel, neu_teile, frueh)):
-        post = {"id": f"taeglich-tiktok-en-{a.staffel}-teil-{t['k']}", "platform": "tiktok", "konto": KONTO_EN,
+        post = {"id": f"taeglich-tiktok-en-{a.staffel}-teil-{t['k']}{endung}", "platform": "tiktok", "konto": KONTO_EN,
                 "zeit": z.strftime("%Y-%m-%dT%H:%M:00"), "serie": "taeglich-en", "video": S.RAW.format(pfad=t["pfad"]),
                 "text": (f"{en['titel']} – Part {t['k']}/{len(teile)} (Episode {t['folgen'][0]}–{t['folgen'][-1]}) {em}\n"
                          + " · ".join(en["folgen"][n - 1] for n in t["folgen"])
@@ -160,7 +170,7 @@ def main(argv=None) -> int:
             print(f"{platform} englisch: noch kein Konto eingetragen (KONTO_EN_{kurz.upper()}), übersprungen"); continue
         letzte = S.letzte_zeit(plan["posts"], loeschen, platform, konto)
         for f in folgen:
-            pid = f"taeglich-{kurz}-en-{f['id']}"
+            pid = f"taeglich-{kurz}-en-{f['id']}{endung}"
             if pid in ids:
                 continue
             start = max(letzte, frueh) if letzte else frueh
@@ -189,6 +199,8 @@ def main(argv=None) -> int:
         print("(Probe) main: Commit vorbereitet, nicht gepusht"); return 0
     V.pushen(repo_main, "main")
     print("Plan gepusht – der Workflow „Posts einplanen“ plant bei Zernio auf den englischen Konten ein.")
+    if a.ersetzen:
+        en["ersetzt"] = {**(en.get("ersetzt") or {}), **(en.get("veroeffentlicht") or {})}
     en["veroeffentlicht"] = {p["id"]: p["zeit"] for p in neu}
     S.STAFFELN.write_text(json.dumps(daten, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     print("staffeln.json aktualisiert – jetzt den Branch „taeglich“ committen und pushen.")

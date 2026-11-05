@@ -48,12 +48,14 @@ LEBENDIG = (", betone die entscheidenden Wörter deutlich, folge der Spannung mi
 
 # Englische Fassung (`@sprache en`, Jonathans Wunsch 3.11.: jede Staffel auch auf Englisch für TikTok @storys4you_eng)
 SPRACHE = "de"
-STIMMUNGEN_EN = {  # 5.11.: ohne „deep“ – Jonathan fand die tiefe englische Stimme unnatürlich
-    "duester": "a dark short story for TikTok: natural, relaxed male voice at its normal pitch, close and dry, quietly menacing",
-    "spannend": "a gripping short story for TikTok: natural, relaxed male voice at its normal pitch, close, tense, with pressure",
-    "traurig": "a sad, moving short story: natural, warm male voice at its normal pitch, calm and soft, with feeling, never cheesy",
-    "freudig": "a joyful, sweeping short story: natural, warm male voice at its normal pitch, lively, with a smile in the voice",
-    "warm": "a thoughtful, warm-hearted short story: natural, warm male voice at its normal pitch, calm and honest, like a good friend",
+# 5.11.: Rahmen „late-night radio narrator … low, warm, resonant, relaxed“ trifft auf Englisch von selbst den deutschen
+# Grundton (~106 Hz). Mit „deep … brisk“ lag Orus englisch 3–6 Halbtöne höher und musste stark heruntergepitcht werden.
+STIMMUNGEN_EN = {
+    "duester": "a calm late-night radio narrator telling a dark story: low, warm, resonant male voice, relaxed, natural, dry, quietly menacing",
+    "spannend": "a calm late-night radio narrator telling a tense story: low, warm, resonant male voice, relaxed, natural, quietly gripping",
+    "traurig": "a calm late-night radio narrator telling a sad, moving story: low, warm, resonant male voice, relaxed, natural, soft, never cheesy",
+    "freudig": "a calm late-night radio narrator telling a joyful story: low, warm, resonant male voice, relaxed, natural",
+    "warm": "a calm late-night radio narrator telling a warm-hearted story: low, warm, resonant male voice, relaxed, natural, honest, like a good friend",
 }
 LEBENDIG_EN = (", stress the key words clearly, follow the tension with pace and volume: faster and more urgent in "
                "danger, slower and softer with emotion, a short pause before every twist, never over the top")
@@ -64,7 +66,7 @@ def stimmung_setzen(name: str | None, lebendig: bool = False, sprache: str = "de
     global STIL, SPRACHE
     SPRACHE = sprache
     if sprache == "en":
-        STIL = ("Read the following English text as the narrator of " + STIMMUNGEN_EN.get(name or "", STIMMUNGEN_EN["spannend"])
+        STIL = ("Read the following English text as " + STIMMUNGEN_EN.get(name or "", STIMMUNGEN_EN["spannend"])
                 + (LEBENDIG_EN if lebendig else "") + ", a short pause after each line. Speak only the text:\n\n")
         return
     if name and name in STIMMUNGEN:
@@ -72,6 +74,8 @@ def stimmung_setzen(name: str | None, lebendig: bool = False, sprache: str = "de
                 ", nach jeder Zeile eine kurze Pause. Nur den Text sprechen:\n\n")
 
 
+MAX_HT = 1.5       # Englisch: so weit darf Gemini vom deutschen Grundton abweichen, sonst neu anfragen
+VERSUCHE_EN = 3
 MAX_PAUSE = 0.6    # längere Pausen werden darauf gekürzt
 TEMPO = 1.0
 _WHISPER = None
@@ -137,12 +141,28 @@ def _anfrage(text: str, stimme: str) -> np.ndarray:
 
 def _block_audio(zeilen: list[str], stimme: str, log=print) -> np.ndarray:
     text = "\n".join(zeilen)
-    h = hashlib.sha1(f"{MODELL}|{stimme}|{STIL}|{text}".encode()).hexdigest()[:20]
+    h = hashlib.sha1(f"{MODELL}|{stimme}|{STIL}|{text}{'|ton2' if SPRACHE == 'en' else ''}".encode()).hexdigest()[:20]
     ziel = CACHE / f"gemini_{h}.f32"
     if ziel.exists():
         return np.fromfile(ziel, np.float32)
     log(f"    Gemini ({stimme}): {len(zeilen)} Zeilen …")
     x = _anfrage(text, stimme)
+    if SPRACHE == "en":
+        # 5.11. (Jonathan): Englisch soll genau so hoch klingen wie Deutsch (106 Hz), aber ohne starkes
+        # Nachpitchen (das klang unnatürlich). Liegt Gemini mehr als MAX_HT daneben, neu anfragen und die
+        # natürlich passendste Fassung nehmen; den kleinen Rest gleicht ton.angleichen aus.
+        from .angleichen import ZIEL_HZ, grundton_array
+        abw = lambda y: abs(12 * np.log2(ZIEL_HZ / max(1.0, grundton_array(y, A.SR))))
+        beste, d = x, abw(x)
+        for n in range(VERSUCHE_EN - 1):
+            if d <= MAX_HT:
+                break
+            log(f"    Tonhöhe {d:.1f} Halbtöne neben dem Deutschen – neuer Versuch {n + 2}/{VERSUCHE_EN} …")
+            y = _anfrage(text, stimme)
+            if abw(y) < d:
+                beste, d = y, abw(y)
+        log(f"    Tonhöhe: {d:.1f} Halbtöne Abstand zum Deutschen")
+        x = beste
     CACHE.mkdir(parents=True, exist_ok=True)
     x.tofile(ziel)
     return x

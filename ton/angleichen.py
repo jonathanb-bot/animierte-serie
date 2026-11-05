@@ -23,7 +23,18 @@ def _lesen(p: Path, sr=16000) -> np.ndarray:
 
 def grundton(p: Path) -> float:
     """Median-Grundton (Hz) der stimmhaften Abschnitte, einfache Autokorrelation."""
-    x, sr, n = _lesen(p), 16000, 640
+    return _grundton(_lesen(p))
+
+
+def grundton_array(x: np.ndarray, sr: int) -> float:
+    """Wie grundton(), für ein Signal im Speicher (float, -1..1)."""
+    from scipy.signal import resample_poly
+    g = np.gcd(sr, 16000)
+    return _grundton(resample_poly(x, 16000 // g, sr // g).astype(np.float32) * 32768)
+
+
+def _grundton(x: np.ndarray) -> float:
+    sr, n = 16000, 640
     werte = []
     for i in range(0, len(x) - n, 320):
         fr = x[i:i + n]
