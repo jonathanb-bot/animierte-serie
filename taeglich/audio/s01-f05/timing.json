@@ -1,12 +1,12 @@
 {
- "dauer": 78.252,
+ "dauer": 76.452,
  "einstellungen": [
   {
    "nr": 1,
    "typ": "weltall",
    "kapitel": 1,
    "start": 0.0,
-   "dauer": 4.886,
+   "dauer": 5.678,
    "emotion": "erzaehlend",
    "text": "Die Sonne hat die Erde getroffen. Und der zweite Schlag kommt noch."
   },
@@ -14,8 +14,8 @@
    "nr": 2,
    "typ": "gesicht",
    "kapitel": 1,
-   "start": 4.886,
-   "dauer": 4.166,
+   "start": 5.678,
+   "dauer": 4.406,
    "emotion": "ernst",
    "text": "Das sagt der alte Mann. In seiner Wohnung voller Kabel und Funkgeräte."
   },
@@ -23,8 +23,8 @@
    "nr": 3,
    "typ": "wohnzimmer",
    "kapitel": 2,
-   "start": 9.052,
-   "dauer": 6.182,
+   "start": 10.084,
+   "dauer": 5.558,
    "emotion": "erzaehlend",
    "text": "Ihr sitzt bei ihm im Wohnzimmer. Kein Strom. Aber sein Funkgerät läuft mit Batterie."
   },
@@ -32,8 +32,8 @@
    "nr": 4,
    "typ": "objekt",
    "kapitel": 2,
-   "start": 15.234,
-   "dauer": 6.014,
+   "start": 15.642,
+   "dauer": 5.966,
    "emotion": "erklaerend",
    "text": "Über Kurzwelle reden Funker auf der ganzen Welt miteinander. Ohne Internet. Ohne Handymast."
   },
@@ -41,8 +41,8 @@
    "nr": 5,
    "typ": "gesicht",
    "kapitel": 2,
-   "start": 21.248,
-   "dauer": 4.742,
+   "start": 21.608,
+   "dauer": 5.03,
    "emotion": "ernst",
    "text": "„Ein Sonnensturm. Ein riesiger. Alle reden heute Nacht nur darüber.“"
   },
@@ -50,8 +50,8 @@
    "nr": 6,
    "typ": "weltall",
    "kapitel": 3,
-   "start": 25.99,
-   "dauer": 5.27,
+   "start": 26.638,
+   "dauer": 4.814,
    "emotion": "erzaehlend",
    "text": "Bei einem Sonnensturm schleudert die Sonne Wolken aus geladenen Teilchen ins All."
   },
@@ -59,8 +59,8 @@
    "nr": 7,
    "typ": "netz",
    "kapitel": 3,
-   "start": 31.26,
-   "dauer": 4.286,
+   "start": 31.452,
+   "dauer": 4.238,
    "emotion": "erzaehlend",
    "text": "Treffen sie die Erde, stören sie Satelliten, Funk und Stromnetze."
   },
@@ -68,8 +68,8 @@
    "nr": 8,
    "typ": "titel",
    "kapitel": 3,
-   "start": 35.546,
-   "dauer": 5.462,
+   "start": 35.69,
+   "dauer": 5.318,
    "emotion": "erzaehlend",
    "text": "Im Jahr achtzehnhundertneunundfünfzig sprühten nach so einem Sturm Telegrafenleitungen Funken."
   },
@@ -78,7 +78,7 @@
    "typ": "titel",
    "kapitel": 3,
    "start": 41.008,
-   "dauer": 5.702,
+   "dauer": 5.942,
    "emotion": "erzaehlend",
    "text": "Und neunzehnhundertneunundachtzig hatten Millionen Menschen in Kanada neun Stunden keinen Strom."
   },
@@ -86,8 +86,8 @@
    "nr": 10,
    "typ": "rechenzentrum",
    "kapitel": 3,
-   "start": 46.71,
-   "dauer": 5.486,
+   "start": 46.95,
+   "dauer": 4.91,
    "emotion": "erzaehlend",
    "text": "Heute hängt fast alles an Satelliten und Rechenzentren. Viel mehr als damals."
   },
@@ -95,8 +95,8 @@
    "nr": 11,
    "typ": "gesicht",
    "kapitel": 3,
-   "start": 52.196,
-   "dauer": 3.014,
+   "start": 51.86,
+   "dauer": 2.558,
    "emotion": "spannend",
    "text": "Ben flüstert: „Und der zweite Schlag?“"
   },
@@ -104,8 +104,8 @@
    "nr": 12,
    "typ": "gesicht",
    "kapitel": 4,
-   "start": 55.21,
-   "dauer": 2.966,
+   "start": 54.418,
+   "dauer": 2.99,
    "emotion": "ernst",
    "text": "„Heute Nacht. Vielleicht stärker als der erste.“"
   },
@@ -113,8 +113,8 @@
    "nr": 13,
    "typ": "gesicht",
    "kapitel": 4,
-   "start": 58.176,
-   "dauer": 4.022,
+   "start": 57.408,
+   "dauer": 3.638,
    "emotion": "ernst",
    "text": "Du denkst an Mama und Papa. Die suchen Lina immer noch."
   },
@@ -122,8 +122,8 @@
    "nr": 14,
    "typ": "gesicht",
    "kapitel": 4,
-   "start": 62.198,
-   "dauer": 2.75,
+   "start": 61.046,
+   "dauer": 2.51,
    "emotion": "froh",
    "text": "Der Funker schreibt eine Nachricht auf einen Zettel."
   },
@@ -131,8 +131,8 @@
    "nr": 15,
    "typ": "grossstadt",
    "kapitel": 4,
-   "start": 64.948,
-   "dauer": 5.438,
+   "start": 63.556,
+   "dauer": 4.814,
    "emotion": "erzaehlend",
    "text": "Ein Nachbar radelt damit zu euch nach Hause. Damit deine Eltern wissen: Lina ist da."
   },
@@ -140,8 +140,8 @@
    "nr": 16,
    "typ": "gesicht",
    "kapitel": 4,
-   "start": 70.386,
-   "dauer": 1.67,
+   "start": 68.37,
+   "dauer": 1.526,
    "emotion": "spannend",
    "text": "Da wird Lina ganz blass."
   },
@@ -149,8 +149,8 @@
    "nr": 17,
    "typ": "gesicht",
    "kapitel": 5,
-   "start": 72.056,
-   "dauer": 2.606,
+   "start": 69.896,
+   "dauer": 2.534,
    "emotion": "spannend",
    "text": "„Opa nimmt jeden Abend seine Herztabletten.“"
   },
@@ -158,8 +158,8 @@
    "nr": 18,
    "typ": "landschaft",
    "kapitel": 5,
-   "start": 74.662,
-   "dauer": 3.59,
+   "start": 72.43,
+   "dauer": 4.022,
    "emotion": "erzaehlend",
    "text": "„Und er hat mir letzte Woche gesagt: Die Packung ist fast leer.“"
   }
