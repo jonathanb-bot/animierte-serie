@@ -66,6 +66,7 @@ Reihenfolge als Vorschlag; die Analyse darf tauschen, aber jedes Genre kommt bis
 | E2 | s02 | Hook-Text wirkt im direkten Vergleich innerhalb einer Staffel | ungerade Folgen mit, gerade ohne | TikTok Bindung 3 s/7 s, Aufrufe/h Instagram | offen (Posts ab 6.11.) |
 | – | s02 | (Format-Rotation) TikTok-Einzelposts statt Sammelteile | 8 Einzelposts | Wiedergabe in % der Länge, Aufrufe/h | offen |
 | E3 | s03 | Wer nur eine Folge sieht, bleibt länger, wenn der erste Satz die Grund-Regel der Welt enthält (späte Teile ohne sie verlieren zwischen 5 und 30 s die Hälfte) | Folge 1 und 3 mit Grund-Prämisse + neuer Lage, Folge 2 und 4 nur neue Lage | TikTok Bindung 10 s/30 s, Ø Wiedergabe, Follows; Instagram Ø Wiedergabe (F3 gegen F2/F4) | offen |
+| E4 | s03 | Ohne Untertitel wirkt das Bild ruhiger und cleaner, die Leute schauen genauer hin und bleiben trotzdem (Jonathans Test-Wunsch 5.11.) | ganze Staffel `@untertitel aus` (Hook-Text, `gross=` und Schrift im Bild bleiben) | TikTok Bindung 3 s/10 s, Ø Wiedergabe in % der Länge, Instagram Ø Wiedergabe – gegen s01/s02 (mit Untertiteln); E3 innerhalb von s03 bleibt davon unberührt | offen |
 
 ## Ergebnisse (je Analyse ergänzen, mit Datum)
 

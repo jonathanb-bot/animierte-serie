@@ -66,6 +66,7 @@ export function parse(text, cast = {}) {
       else if (cmd === "serie") ep.serie = rest.join(" ");
       else if (cmd === "qualitaet") ep.qualitaet = rest[0]; // "hoch": verlustfreie Einzelbilder, bessere Kodierung (Kurzvideos); "max": zusätzlich 60 fps, doppelte Auflösung, Ausgabe 1440×2560
       else if (cmd === "mund") ep.mund = rest[0];
+      else if (cmd === "untertitel") ep.untertitel = rest[0] !== "aus"; // `@untertitel aus`: keine Untertitel (Test ab s03, Jonathan 5.11.)
       else if (cmd === "musik_lautstaerke") ep.musik_lautstaerke = Number(rest[0]);
       else if (cmd === "whoosh") ep.whoosh = rest[0] !== "aus";
       else if (cmd === "zeit") zeit = rest[0];
