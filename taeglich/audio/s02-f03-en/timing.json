@@ -1,12 +1,12 @@
 {
- "dauer": 72.026,
+ "dauer": 70.778,
  "einstellungen": [
   {
    "nr": 1,
    "typ": "park",
    "kapitel": 1,
    "start": 0.0,
-   "dauer": 6.494,
+   "dauer": 5.366,
    "emotion": "erzaehlend",
    "text": "You have thirty million dollars. And the first thing you treat yourself to is pizza."
   },
@@ -14,8 +14,8 @@
    "nr": 2,
    "typ": "gesicht",
    "kapitel": 1,
-   "start": 6.494,
-   "dauer": 3.71,
+   "start": 5.366,
+   "dauer": 3.446,
    "emotion": "froh",
    "text": "“You're paying? Who are you, and what did you do with my friend?”"
   },
@@ -23,8 +23,8 @@
    "nr": 3,
    "typ": "gesicht",
    "kapitel": 1,
-   "start": 10.204,
-   "dauer": 4.646,
+   "start": 8.812,
+   "dauer": 3.83,
    "emotion": "froh",
    "text": "“I've been saving.” You have never saved a dime in your life."
   },
@@ -32,8 +32,8 @@
    "nr": 4,
    "typ": "landschaft",
    "kapitel": 1,
-   "start": 14.85,
-   "dauer": 3.35,
+   "start": 12.642,
+   "dauer": 3.782,
    "emotion": "erzaehlend",
    "text": "It's been three days. Nobody knows. Just you."
   },
@@ -41,8 +41,8 @@
    "nr": 5,
    "typ": "gesicht",
    "kapitel": 2,
-   "start": 18.2,
-   "dauer": 4.022,
+   "start": 16.424,
+   "dauer": 4.214,
    "emotion": "froh",
    "text": "Mia laughs at Ben's joke. She's got tomato sauce on her chin."
   },
@@ -50,8 +50,8 @@
    "nr": 6,
    "typ": "park",
    "kapitel": 2,
-   "start": 22.222,
-   "dauer": 3.734,
+   "start": 20.638,
+   "dauer": 3.998,
    "emotion": "erzaehlend",
    "text": "Then you race to the bus. You lose. Like always."
   },
@@ -59,8 +59,8 @@
    "nr": 7,
    "typ": "gesicht",
    "kapitel": 2,
-   "start": 25.956,
-   "dauer": 3.134,
+   "start": 24.636,
+   "dauer": 2.342,
    "emotion": "froh",
    "text": "“You run like a penguin with a backpack.”"
   },
@@ -68,7 +68,7 @@
    "nr": 8,
    "typ": "objekt",
    "kapitel": 3,
-   "start": 29.09,
+   "start": 26.978,
    "dauer": 3.038,
    "emotion": "erklaerend",
    "text": "You barely spend anything. You don't dare."
@@ -77,8 +77,8 @@
    "nr": 9,
    "typ": "zimmer",
    "kapitel": 3,
-   "start": 32.128,
-   "dauer": 5.054,
+   "start": 30.016,
+   "dauer": 5.558,
    "emotion": "erzaehlend",
    "text": "At night, you pull the tin box out from under your bed. Just to check the ticket's still there."
   },
@@ -86,8 +86,8 @@
    "nr": 10,
    "typ": "wohnzimmer",
    "kapitel": 3,
-   "start": 37.182,
-   "dauer": 5.702,
+   "start": 35.574,
+   "dauer": 5.414,
    "emotion": "froh",
    "text": "But Lina's bike has been broken for weeks. So one morning, a new one is waiting by the door."
   },
@@ -95,8 +95,8 @@
    "nr": 11,
    "typ": "gesicht",
    "kapitel": 3,
-   "start": 42.884,
-   "dauer": 3.158,
+   "start": 40.988,
+   "dauer": 3.302,
    "emotion": "ernst",
    "text": "“Who just gives away a bike? Did you rob someone?”"
   },
@@ -104,8 +104,8 @@
    "nr": 12,
    "typ": "gesicht",
    "kapitel": 3,
-   "start": 46.042,
-   "dauer": 5.102,
+   "start": 44.29,
+   "dauer": 5.534,
    "emotion": "ernst",
    "text": "“Coupon. Contest.” You're lying again. And it gets easier every time."
   },
@@ -113,8 +113,8 @@
    "nr": 13,
    "typ": "grossstadt",
    "kapitel": 4,
-   "start": 51.144,
-   "dauer": 4.814,
+   "start": 49.824,
+   "dauer": 4.862,
    "emotion": "erzaehlend",
    "text": "In the evening, you sit on the roof of Mia's building. The city hums below you."
   },
@@ -122,8 +122,8 @@
    "nr": 14,
    "typ": "gesicht",
    "kapitel": 4,
-   "start": 55.958,
-   "dauer": 2.678,
+   "start": 54.686,
+   "dauer": 3.038,
    "emotion": "erzaehlend",
    "text": "“You've been different since Saturday. Quieter.”"
   },
@@ -131,8 +131,8 @@
    "nr": 15,
    "typ": "weltall",
    "kapitel": 4,
-   "start": 58.636,
-   "dauer": 3.11,
+   "start": 57.724,
+   "dauer": 3.35,
    "emotion": "erzaehlend",
    "text": "You could tell her right now. Just one sentence."
   },
@@ -140,8 +140,8 @@
    "nr": 16,
    "typ": "gesicht",
    "kapitel": 4,
-   "start": 61.746,
-   "dauer": 1.142,
+   "start": 61.074,
+   "dauer": 1.094,
    "emotion": "ernst",
    "text": "You take a breath."
   },
@@ -149,8 +149,8 @@
    "nr": 17,
    "typ": "handy",
    "kapitel": 5,
-   "start": 62.888,
-   "dauer": 2.702,
+   "start": 62.168,
+   "dauer": 2.39,
    "emotion": "erzaehlend",
    "text": "Then both your phones buzz at the same time."
   },
@@ -158,8 +158,8 @@
    "nr": 18,
    "typ": "kiosk",
    "kapitel": 5,
-   "start": 65.59,
-   "dauer": 3.398,
+   "start": 64.558,
+   "dauer": 3.35,
    "emotion": "erzaehlend",
    "text": "The kiosk on Linden Street. Your kiosk."
   },
@@ -167,8 +167,8 @@
    "nr": 19,
    "typ": "gesicht",
    "kapitel": 5,
-   "start": 68.988,
-   "dauer": 3.038,
+   "start": 67.908,
+   "dauer": 2.87,
    "emotion": "ernst",
    "text": "Mia doesn't look at her phone. She looks at you."
   }
