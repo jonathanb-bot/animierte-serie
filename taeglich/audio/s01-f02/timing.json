@@ -1,12 +1,12 @@
 {
- "dauer": 73.86,
+ "dauer": 79.308,
  "einstellungen": [
   {
    "nr": 1,
    "typ": "grossstadt",
    "kapitel": 1,
    "start": 0.0,
-   "dauer": 5.846,
+   "dauer": 6.326,
    "emotion": "erzaehlend",
    "text": "Ein Kind ist allein in der Stadt. Ohne Handy. Und niemand kann es anrufen."
   },
@@ -14,8 +14,8 @@
    "nr": 2,
    "typ": "gesicht",
    "kapitel": 1,
-   "start": 5.846,
-   "dauer": 4.046,
+   "start": 6.326,
+   "dauer": 4.262,
    "emotion": "spannend",
    "text": "Es ist deine kleine Schwester. Und du hältst ihr Handy in der Hand."
   },
@@ -23,8 +23,8 @@
    "nr": 3,
    "typ": "gesicht",
    "kapitel": 2,
-   "start": 9.892,
-   "dauer": 3.974,
+   "start": 10.588,
+   "dauer": 4.382,
    "emotion": "ernst",
    "text": "Papa sagt: „Früher hat man sich auch gefunden. Ohne Handy.“"
   },
@@ -32,8 +32,8 @@
    "nr": 4,
    "typ": "haltestelle",
    "kapitel": 2,
-   "start": 13.866,
-   "dauer": 3.974,
+   "start": 14.97,
+   "dauer": 4.406,
    "emotion": "erzaehlend",
    "text": "Eine Nachbarin hat sie gesehen. „Die sind heute Nacht los. Zum Bahnhof.“"
   },
@@ -41,7 +41,7 @@
    "nr": 5,
    "typ": "netz",
    "kapitel": 2,
-   "start": 17.84,
+   "start": 19.376,
    "dauer": 5.99,
    "emotion": "erzaehlend",
    "text": "Ohne Netz bleibt dir nur, was früher alle hatten. Augen. Füße. Und Glück."
@@ -50,8 +50,8 @@
    "nr": 6,
    "typ": "bahnhof",
    "kapitel": 3,
-   "start": 23.83,
-   "dauer": 4.718,
+   "start": 25.366,
+   "dauer": 5.198,
    "emotion": "erzaehlend",
    "text": "Am Bahnhof stehen Tausende. Kein Zug fährt. Die Stellwerke sind ohne Daten."
   },
@@ -59,8 +59,8 @@
    "nr": 7,
    "typ": "gesicht",
    "kapitel": 3,
-   "start": 28.548,
-   "dauer": 4.358,
+   "start": 30.564,
+   "dauer": 4.382,
    "emotion": "ernst",
    "text": "Du rufst ihren Namen. Hundert Gesichter. Keins davon ist Lina."
   },
@@ -68,8 +68,8 @@
    "nr": 8,
    "typ": "gesicht",
    "kapitel": 3,
-   "start": 32.906,
-   "dauer": 3.974,
+   "start": 34.946,
+   "dauer": 4.358,
    "emotion": "froh",
    "text": "Dann packt dich jemand an der Schulter. Ben. Dein bester Freund."
   },
@@ -77,8 +77,8 @@
    "nr": 9,
    "typ": "gesicht",
    "kapitel": 3,
-   "start": 36.88,
-   "dauer": 3.494,
+   "start": 39.304,
+   "dauer": 3.758,
    "emotion": "ernst",
    "text": "„Ich konnte dich nicht erreichen. Also bin ich einfach hergeradelt.“"
   },
@@ -86,8 +86,8 @@
    "nr": 10,
    "typ": "gesicht",
    "kapitel": 3,
-   "start": 40.374,
-   "dauer": 3.566,
+   "start": 43.062,
+   "dauer": 4.238,
    "emotion": "froh",
    "text": "Kein Anruf. Keine Nachricht. Er ist einfach gekommen."
   },
@@ -95,8 +95,8 @@
    "nr": 11,
    "typ": "grossstadt",
    "kapitel": 3,
-   "start": 43.94,
-   "dauer": 3.158,
+   "start": 47.3,
+   "dauer": 3.686,
    "emotion": "erzaehlend",
    "text": "Und genau so sucht man ohne Netz. Zusammen."
   },
@@ -104,7 +104,7 @@
    "nr": 12,
    "typ": "objekt",
    "kapitel": 4,
-   "start": 47.098,
+   "start": 50.986,
    "dauer": 4.358,
    "emotion": "erklaerend",
    "text": "An der Bahnhofswand hängen Hunderte Zettel. Menschen suchen Menschen."
@@ -113,8 +113,8 @@
    "nr": 13,
    "typ": "gesicht",
    "kapitel": 4,
-   "start": 51.456,
-   "dauer": 3.806,
+   "start": 55.344,
+   "dauer": 3.878,
    "emotion": "erzaehlend",
    "text": "Ihr lest jeden einzelnen. Zehn Minuten. Zwanzig."
   },
@@ -122,8 +122,8 @@
    "nr": 14,
    "typ": "gesicht",
    "kapitel": 4,
-   "start": 55.262,
-   "dauer": 2.39,
+   "start": 59.222,
+   "dauer": 2.486,
    "emotion": "spannend",
    "text": "„Warte mal. Das ist doch ihre Schrift!“"
   },
@@ -131,8 +131,8 @@
    "nr": 15,
    "typ": "objekt",
    "kapitel": 4,
-   "start": 57.652,
-   "dauer": 5.198,
+   "start": 61.708,
+   "dauer": 4.958,
    "emotion": "erklaerend",
    "text": "Ein Zettel, mit Glitzerstift geschrieben. „Bin zu Opa gelaufen. Lina.“"
   },
@@ -140,8 +140,8 @@
    "nr": 16,
    "typ": "gesicht",
    "kapitel": 4,
-   "start": 62.85,
-   "dauer": 3.686,
+   "start": 66.666,
+   "dauer": 4.286,
    "emotion": "froh",
    "text": "Für einen Moment atmest du auf. Sie lebt. Sie hat einen Plan."
   },
@@ -149,8 +149,8 @@
    "nr": 17,
    "typ": "auge",
    "kapitel": 5,
-   "start": 66.536,
-   "dauer": 1.646,
+   "start": 70.952,
+   "dauer": 1.502,
    "emotion": "erzaehlend",
    "text": "Dann rechnest du nach."
   },
@@ -158,8 +158,8 @@
    "nr": 18,
    "typ": "landschaft",
    "kapitel": 5,
-   "start": 68.182,
-   "dauer": 5.678,
+   "start": 72.454,
+   "dauer": 6.854,
    "emotion": "erzaehlend",
    "text": "Opa wohnt zwölf Kilometer entfernt. Quer durch die ganze Stadt. Und in einer Stunde wird es dunkel."
   }
