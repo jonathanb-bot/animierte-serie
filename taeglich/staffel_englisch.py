@@ -61,9 +61,9 @@ def zeiten_en(plan: dict, loeschen: set, staffel: str, teile: list, frueh: dt.da
     for t in teile:
         de = zeit.get(f"taeglich-tiktok-{staffel}-teil-{t['k']}")
         start = max(letzte, frueh) if letzte else frueh
-        taeglich = S.naechste_slots("tiktok", start, 1, TAKT_START)[0]
+        taeglich = V.streuen(S.naechste_slots("tiktok", start, 1, TAKT_START)[0])  # ±30 min (5.11.)
         if de and (eingeholt or de <= taeglich):  # Deutsch hat aufgeholt → gleich oft wie Deutsch
-            z = de if de > start else S.naechste_slots("tiktok", start, 1)[0]
+            z = de if de > start else V.streuen(S.naechste_slots("tiktok", start, 1)[0])
             art, eingeholt = "eingeholt, Takt wie Deutsch", z == de
         else:
             z, art = taeglich, "1 pro Tag"
@@ -177,7 +177,7 @@ def main(argv=None) -> int:
             de = zeit_de.get(f"taeglich-{kurz}-{f['id']}")
             if de and de > start:
                 start = de - dt.timedelta(minutes=1)  # frühestens zur Zeit des deutschen Gegenstücks
-            z = S.naechste_slots(platform, start, 1)[0]
+            z = V.streuen(S.naechste_slots(platform, start, 1)[0])  # ±30 min (5.11.)
             nr, n = f["nr"], len(folgen)
             weiter = ("Follow for the next season." if nr >= n else f"Episode {nr + 1} is up next. Follow so you don't miss it.")
             post = {"id": pid, "platform": platform, "konto": konto, "zeit": z.strftime("%Y-%m-%dT%H:%M:00"), "serie": "taeglich-en",

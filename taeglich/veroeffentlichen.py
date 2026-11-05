@@ -18,6 +18,7 @@ import argparse
 import datetime as dt
 import json
 import os
+import random
 import re
 import shutil
 import subprocess
@@ -161,6 +162,18 @@ def freie_zeit(posts: list, loeschen: set, platform: str, zeit: dt.datetime) -> 
     return zeit
 
 
+# Zufällige Uhrzeiten (Jonathans Vorgabe 5.11.): jeder Post weicht 0–30 Minuten vom Takt ab,
+# mal früher, mal später, damit nicht jeden Tag exakt dieselben Uhrzeiten laufen.
+STREUUNG_MIN = 30
+_zufall = random.SystemRandom()
+
+
+def streuen(z: dt.datetime, frueh: dt.datetime | None = None) -> dt.datetime:
+    """Takt-Zeit `z` um zufällig −30 … +30 Minuten verschieben (nie vor `frueh`)."""
+    neu = z + dt.timedelta(minutes=_zufall.randint(-STREUUNG_MIN, STREUUNG_MIN))
+    return max(neu, frueh) if frueh else neu
+
+
 def einplanen(vid: str, eintrag: dict, zeit: dt.datetime, yt_zeit: dt.datetime, url: str, probe: bool,
               endung: str = "", plattformen: tuple = ("tiktok", "instagram", "youtube")) -> dict:
     nr = vid.split("-")[-1]
@@ -180,7 +193,7 @@ def einplanen(vid: str, eintrag: dict, zeit: dt.datetime, yt_zeit: dt.datetime, 
         if pid in ids:
             print(f"{pid} steht schon im Plan – übersprungen")
             continue
-        z = freie_zeit(plan["posts"], loeschen, platform, z)
+        z = streuen(freie_zeit(plan["posts"], loeschen, platform, z))
         post = {"id": pid, "platform": platform, "zeit": z.strftime("%Y-%m-%dT%H:%M:00"), "serie": "taeglich", "video": url}
         if platform == "tiktok":
             post["text"] = f"{kopf}\n{eintrag['beschreibung']}\n{'Folg mir, dann verpasst du keine Geschichte!' if endung else 'Folg mir für die nächste Geschichte!'}\n\n{tags_txt} #fyp"

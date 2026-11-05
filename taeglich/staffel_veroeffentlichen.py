@@ -5,7 +5,7 @@
 
 Jonathans Vorgaben:
 - Posten: alles hinten anhängen (1.11.). Pro Plattform geht es direkt nach dem letzten geplanten Post weiter, im festen
-  Takt: TikTok 08:00, 12:00, 16:00, 20:00, Instagram alle 4 Stunden (0, 4, 8, 12, 16, 20 Uhr), YouTube jeweils :30. Nie parallel.
+  Takt: TikTok 08:00, 12:00, 16:00, 20:00, Instagram alle 2 Stunden, YouTube jeweils :30, jeder Post zufällig 0–30 min früher oder später (5.11.). Nie parallel.
 - TikTok (Issue #7): Folgen zu wenigen Sammelteilen zusammenschneiden (10 Folgen → 4 Teile, jeder höchstens 10 min).
 - Nie „Fortsetzung folgt“ (Issue #11, 1.11.): Die Folgen enden mit dem Cliffhanger. Steht doch eine solche Karte am Ende,
   wird sie überall herausgeschnitten (in der einzelnen Folge und im TikTok-Teil).
@@ -96,7 +96,11 @@ def letzte_zeit(posts: list, loeschen: set, platform: str, konto: str | None = N
 
 
 def naechste_slots(platform: str, nach: dt.datetime, anzahl: int, takt: list | None = None) -> list[dt.datetime]:
-    """Die nächsten `anzahl` Takt-Zeiten strikt nach `nach`."""
+    """Die nächsten `anzahl` Takt-Zeiten (ohne Streuung) mehr als 30 min nach `nach`.
+
+    `nach` ist meist ein schon gestreuter Post (±30 min, Vorgabe 5.11.). Der Puffer sorgt dafür,
+    dass dessen eigene Takt-Zeit nicht noch einmal vergeben wird und gestreute Zeiten nie vor `nach` liegen."""
+    nach = nach + dt.timedelta(minutes=V.STREUUNG_MIN)
     out, tag = [], nach.replace(hour=0, minute=0, second=0, microsecond=0)
     while len(out) < anzahl:
         for h, m in (takt or TAKT[platform]):
@@ -209,6 +213,7 @@ def main(argv=None) -> int:
         letzte = letzte_zeit(plan["posts"], loeschen, platform)
         start = max(letzte, frueh) if letzte else frueh
         for e, z in zip(eintraege, naechste_slots(platform, start, len(eintraege))):
+            z = V.streuen(z)  # 0–30 min früher oder später (Vorgabe 5.11.)
             post = {"id": e.pop("id"), "platform": platform, "zeit": z.strftime("%Y-%m-%dT%H:%M:00"), "serie": "taeglich", **e}
             plan["posts"].append(post); neu.append(post)
 
