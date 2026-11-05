@@ -1,12 +1,12 @@
 {
- "dauer": 46.17,
+ "dauer": 47.394,
  "einstellungen": [
   {
    "nr": 1,
    "typ": "esstisch",
    "kapitel": 1,
    "start": 0.0,
-   "dauer": 4.838,
+   "dauer": 5.51,
    "emotion": "erzaehlend",
    "text": "Du hast deine Eltern schon fast so oft gesehen, wie du sie *jemals* sehen wirst."
   },
@@ -14,8 +14,8 @@
    "nr": 2,
    "typ": "gesicht",
    "kapitel": 1,
-   "start": 4.838,
-   "dauer": 2.654,
+   "start": 5.51,
+   "dauer": 2.798,
    "emotion": "ernst",
    "text": "Klingt verrückt. Du siehst sie doch jeden Tag."
   },
@@ -23,8 +23,8 @@
    "nr": 3,
    "typ": "gesicht",
    "kapitel": 2,
-   "start": 7.492,
-   "dauer": 1.67,
+   "start": 8.308,
+   "dauer": 1.886,
    "emotion": "froh",
    "text": "„Essen ist fertig!“"
   },
@@ -32,8 +32,8 @@
    "nr": 4,
    "typ": "zimmer",
    "kapitel": 2,
-   "start": 9.162,
-   "dauer": 3.974,
+   "start": 10.194,
+   "dauer": 4.022,
    "emotion": "erzaehlend",
    "text": "Und du rufst: „*Gleich!*“ Noch ein Video. Noch eins."
   },
@@ -41,7 +41,7 @@
    "nr": 5,
    "typ": "esstisch",
    "kapitel": 2,
-   "start": 13.136,
+   "start": 14.216,
    "dauer": 3.35,
    "emotion": "ruhig",
    "text": "Dein Platz bleibt leer. Nur ein Abend, denkst du."
@@ -50,8 +50,8 @@
    "nr": 6,
    "typ": "objekt",
    "kapitel": 3,
-   "start": 16.486,
-   "dauer": 4.526,
+   "start": 17.566,
+   "dauer": 3.974,
    "emotion": "erklaerend",
    "text": "Aber rechne mal. Bis du achtzehn bist, seht ihr euch fast *jeden Tag*."
   },
@@ -59,8 +59,8 @@
    "nr": 7,
    "typ": "wohnzimmer",
    "kapitel": 3,
-   "start": 21.012,
-   "dauer": 3.758,
+   "start": 21.54,
+   "dauer": 4.142,
    "emotion": "erzaehlend",
    "text": "Dann ziehst du aus. Ausbildung, Studium, eigene Wohnung."
   },
@@ -68,8 +68,8 @@
    "nr": 8,
    "typ": "haltestelle",
    "kapitel": 3,
-   "start": 24.77,
-   "dauer": 3.71,
+   "start": 25.682,
+   "dauer": 4.694,
    "emotion": "traurig",
    "text": "Danach siehst du sie an Weihnachten. Und an ein paar Wochenenden."
   },
@@ -77,8 +77,8 @@
    "nr": 9,
    "typ": "objekt",
    "kapitel": 3,
-   "start": 28.48,
-   "dauer": 2.27,
+   "start": 30.376,
+   "dauer": 1.862,
    "emotion": "erklaerend",
    "text": "Vielleicht zehn Tage im Jahr."
   },
@@ -86,8 +86,8 @@
    "nr": 10,
    "typ": "titel",
    "kapitel": 3,
-   "start": 30.75,
-   "dauer": 5.342,
+   "start": 32.238,
+   "dauer": 5.318,
    "emotion": "erzaehlend",
    "text": "Wenn es so kommt, hast du mit achtzehn über *neunzig Prozent* eurer gemeinsamen Tage schon erlebt."
   },
@@ -95,8 +95,8 @@
    "nr": 11,
    "typ": "park",
    "kapitel": 4,
-   "start": 36.092,
-   "dauer": 2.03,
+   "start": 37.556,
+   "dauer": 2.414,
    "emotion": "erzaehlend",
    "text": "Das heißt nicht, dass es zu spät ist."
   },
@@ -104,8 +104,8 @@
    "nr": 12,
    "typ": "gesicht",
    "kapitel": 4,
-   "start": 38.122,
-   "dauer": 3.326,
+   "start": 39.97,
+   "dauer": 3.35,
    "emotion": "froh",
    "text": "Es heißt nur: Die Tage *jetzt* sind die wertvollsten."
   },
@@ -113,8 +113,8 @@
    "nr": 13,
    "typ": "gesicht",
    "kapitel": 4,
-   "start": 41.448,
-   "dauer": 1.814,
+   "start": 43.32,
+   "dauer": 1.31,
    "emotion": "froh",
    "text": "„Essen ist fertig!“"
   },
@@ -122,8 +122,8 @@
    "nr": 14,
    "typ": "zimmer",
    "kapitel": 4,
-   "start": 43.262,
-   "dauer": 1.766,
+   "start": 44.63,
+   "dauer": 1.574,
    "emotion": "ernst",
    "text": "Also leg das Handy weg."
   },
@@ -131,8 +131,8 @@
    "nr": 15,
    "typ": "esstisch",
    "kapitel": 4,
-   "start": 45.028,
-   "dauer": 1.142,
+   "start": 46.204,
+   "dauer": 1.19,
    "emotion": "froh",
    "text": "Und komm *sofort*."
   }
