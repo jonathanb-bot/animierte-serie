@@ -1,12 +1,12 @@
 {
- "dauer": 72.564,
+ "dauer": 72.012,
  "einstellungen": [
   {
    "nr": 1,
    "typ": "landschaft",
    "kapitel": 1,
    "start": 0.0,
-   "dauer": 4.91,
+   "dauer": 5.054,
    "emotion": "erzaehlend",
    "text": "Mitten in der Nacht antwortet jemand auf ein Zeichen, das nur zwei Menschen kennen."
   },
@@ -14,8 +14,8 @@
    "nr": 2,
    "typ": "gesicht",
    "kapitel": 1,
-   "start": 4.91,
-   "dauer": 4.07,
+   "start": 5.054,
+   "dauer": 4.022,
    "emotion": "ernst",
    "text": "Du rennst los. Durch nasses Laub, quer über den Rasen."
   },
@@ -23,8 +23,8 @@
    "nr": 3,
    "typ": "park",
    "kapitel": 2,
-   "start": 8.98,
-   "dauer": 5.726,
+   "start": 9.076,
+   "dauer": 5.438,
    "emotion": "erzaehlend",
    "text": "Unter dem Dach vom alten Pavillon brennt eine Kerze. Daneben ein alter Mann mit Decke."
   },
@@ -32,7 +32,7 @@
    "nr": 4,
    "typ": "gesicht",
    "kapitel": 2,
-   "start": 14.706,
+   "start": 14.514,
    "dauer": 2.63,
    "emotion": "froh",
    "text": "Und unter der Decke: Lina."
@@ -41,7 +41,7 @@
    "nr": 5,
    "typ": "park",
    "kapitel": 2,
-   "start": 17.336,
+   "start": 17.144,
    "dauer": 2.678,
    "emotion": "erzaehlend",
    "text": "Du hältst sie so fest, dass sie lachen muss."
@@ -50,8 +50,8 @@
    "nr": 6,
    "typ": "gesicht",
    "kapitel": 2,
-   "start": 20.014,
-   "dauer": 1.67,
+   "start": 19.822,
+   "dauer": 1.43,
    "emotion": "froh",
    "text": "„Du zerquetschst mich!“"
   },
@@ -59,8 +59,8 @@
    "nr": 7,
    "typ": "gesicht",
    "kapitel": 2,
-   "start": 21.684,
-   "dauer": 3.806,
+   "start": 21.252,
+   "dauer": 3.59,
    "emotion": "froh",
    "text": "Ben dreht sich weg. Er sagt, es ist nur der Regen."
   },
@@ -68,8 +68,8 @@
    "nr": 8,
    "typ": "gesicht",
    "kapitel": 3,
-   "start": 25.49,
-   "dauer": 3.614,
+   "start": 24.842,
+   "dauer": 4.046,
    "emotion": "traurig",
    "text": "„Opa ist doch ganz allein. Ich wollte nur nachsehen, ob es ihm gut geht.“"
   },
@@ -77,8 +77,8 @@
    "nr": 9,
    "typ": "gesicht",
    "kapitel": 3,
-   "start": 29.104,
-   "dauer": 4.742,
+   "start": 28.888,
+   "dauer": 4.574,
    "emotion": "traurig",
    "text": "Und du merkst: Sie hat an Opa gedacht. Du nicht ein einziges Mal."
   },
@@ -86,8 +86,8 @@
    "nr": 10,
    "typ": "gesicht",
    "kapitel": 3,
-   "start": 33.846,
-   "dauer": 6.47,
+   "start": 33.462,
+   "dauer": 5.75,
    "emotion": "froh",
    "text": "Der alte Mann hat sie im Dunkeln weinen hören. „Ich hab gesagt: Wir warten zusammen. Bis es hell wird.“"
   },
@@ -95,8 +95,8 @@
    "nr": 11,
    "typ": "objekt",
    "kapitel": 3,
-   "start": 40.316,
-   "dauer": 4.838,
+   "start": 39.212,
+   "dauer": 5.342,
    "emotion": "erklaerend",
    "text": "Er hat alles dabei. Kerze, Decke. Und ein altes Funkgerät."
   },
@@ -104,8 +104,8 @@
    "nr": 12,
    "typ": "landschaft",
    "kapitel": 3,
-   "start": 45.154,
-   "dauer": 3.902,
+   "start": 44.554,
+   "dauer": 4.046,
    "emotion": "erzaehlend",
    "text": "Ihr wartet zusammen. Und dann geht über den Dächern die Sonne auf."
   },
@@ -113,8 +113,8 @@
    "nr": 13,
    "typ": "grossstadt",
    "kapitel": 3,
-   "start": 49.056,
-   "dauer": 3.686,
+   "start": 48.6,
+   "dauer": 4.07,
    "emotion": "erzaehlend",
    "text": "Die Stadt hat immer noch keinen Strom. Aber gerade ist dir das egal."
   },
@@ -122,8 +122,8 @@
    "nr": 14,
    "typ": "gesicht",
    "kapitel": 4,
-   "start": 52.742,
-   "dauer": 6.326,
+   "start": 52.67,
+   "dauer": 5.894,
    "emotion": "froh",
    "text": "Lina teilt ihren letzten Keks in drei Teile. Für dich, für Ben, für den alten Mann."
   },
@@ -131,8 +131,8 @@
    "nr": 15,
    "typ": "gesicht",
    "kapitel": 4,
-   "start": 59.068,
-   "dauer": 2.726,
+   "start": 58.564,
+   "dauer": 2.966,
    "emotion": "froh",
    "text": "Zum ersten Mal seit einem Tag lachst du."
   },
@@ -140,8 +140,8 @@
    "nr": 16,
    "typ": "gesicht",
    "kapitel": 4,
-   "start": 61.794,
-   "dauer": 4.214,
+   "start": 61.53,
+   "dauer": 4.022,
    "emotion": "ernst",
    "text": "Nur der alte Mann lacht nicht mit. Er hält das Funkgerät ans Ohr."
   },
@@ -149,8 +149,8 @@
    "nr": 17,
    "typ": "netz",
    "kapitel": 5,
-   "start": 66.008,
-   "dauer": 4.262,
+   "start": 65.552,
+   "dauer": 4.286,
    "emotion": "erzaehlend",
    "text": "„Ich war vierzig Jahre Funker. Ich weiß, was heute Nacht passiert ist.“"
   },
@@ -158,8 +158,8 @@
    "nr": 18,
    "typ": "weltall",
    "kapitel": 5,
-   "start": 70.27,
-   "dauer": 2.294,
+   "start": 69.838,
+   "dauer": 2.174,
    "emotion": "erzaehlend",
    "text": "„Und das war erst der Anfang.“"
   }
