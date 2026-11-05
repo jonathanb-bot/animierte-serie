@@ -1,34 +1,25 @@
-Verbundene Konten: tiktok:storys4you.de1, instagram:sto.rys4you, youtube:sto.rys4you (2. Zernio-Konto), tiktok:storys4you_eng (2. Zernio-Konto), youtube:Storys4You_Eng (3. Zernio-Konto), instagram:sory4you_eng (3. Zernio-Konto)
-  taeglich-insta-en-s02-f01: Prüfung ok (Bild, Ton, Lautstärke)
-✓ taeglich-insta-en-s02-f01 eingeplant für 2026-11-06T10:00:00 (6aeb064b2390576761d689be)
-  taeglich-insta-en-s02-f02: Prüfung ok (Bild, Ton, Lautstärke)
-✓ taeglich-insta-en-s02-f02 eingeplant für 2026-11-06T12:00:00 (6aeb064e861aa415e9d23d5b)
-  taeglich-insta-en-s02-f03: Prüfung ok (Bild, Ton, Lautstärke)
-✓ taeglich-insta-en-s02-f03 eingeplant für 2026-11-06T14:00:00 (6aeb0652861aa415e9d23d72)
-  taeglich-insta-en-s02-f04: Prüfung ok (Bild, Ton, Lautstärke)
-✓ taeglich-insta-en-s02-f04 eingeplant für 2026-11-06T16:00:00 (6aeb0655861aa415e9d23d92)
-  taeglich-insta-en-s02-f05: Prüfung ok (Bild, Ton, Lautstärke)
-✓ taeglich-insta-en-s02-f05 eingeplant für 2026-11-06T18:00:00 (6aeb0658861aa415e9d23da1)
-  taeglich-insta-en-s02-f06: Prüfung ok (Bild, Ton, Lautstärke)
-✓ taeglich-insta-en-s02-f06 eingeplant für 2026-11-06T20:00:00 (6aeb065c861aa415e9d23dc2)
-  taeglich-insta-en-s02-f07: Prüfung ok (Bild, Ton, Lautstärke)
-✓ taeglich-insta-en-s02-f07 eingeplant für 2026-11-06T22:00:00 (6aeb065f861aa415e9d23dd3)
-  taeglich-insta-en-s02-f08: Prüfung ok (Bild, Ton, Lautstärke)
-✓ taeglich-insta-en-s02-f08 eingeplant für 2026-11-07T00:00:00 (6aeb0662861aa415e9d23de3)
-  taeglich-yt-en-s02-f01: Prüfung ok (Bild, Ton, Lautstärke)
-✓ taeglich-yt-en-s02-f01 eingeplant für 2026-11-06T10:30:00 (6aeb0665861aa415e9d23de7)
-  taeglich-yt-en-s02-f02: Prüfung ok (Bild, Ton, Lautstärke)
-✓ taeglich-yt-en-s02-f02 eingeplant für 2026-11-06T12:30:00 (6aeb0667861aa415e9d23df3)
-  taeglich-yt-en-s02-f03: Prüfung ok (Bild, Ton, Lautstärke)
-✓ taeglich-yt-en-s02-f03 eingeplant für 2026-11-06T14:30:00 (6aeb066a861aa415e9d23e07)
-  taeglich-yt-en-s02-f04: Prüfung ok (Bild, Ton, Lautstärke)
-✓ taeglich-yt-en-s02-f04 eingeplant für 2026-11-06T16:30:00 (6aeb066c861aa415e9d23e15)
-  taeglich-yt-en-s02-f05: Prüfung ok (Bild, Ton, Lautstärke)
-✓ taeglich-yt-en-s02-f05 eingeplant für 2026-11-06T18:30:00 (6aeb066f861aa415e9d23e19)
-  taeglich-yt-en-s02-f06: Prüfung ok (Bild, Ton, Lautstärke)
-✓ taeglich-yt-en-s02-f06 eingeplant für 2026-11-06T20:30:00 (6aeb0672861aa415e9d23e25)
-  taeglich-yt-en-s02-f07: Prüfung ok (Bild, Ton, Lautstärke)
-✓ taeglich-yt-en-s02-f07 eingeplant für 2026-11-06T22:30:00 (6aeb0675861aa415e9d23e2f)
-  taeglich-yt-en-s02-f08: Prüfung ok (Bild, Ton, Lautstärke)
-✓ taeglich-yt-en-s02-f08 eingeplant für 2026-11-07T00:30:00 (6aeb0677861aa415e9d23e3b)
-Fertig: 16 neu eingeplant, 0 Fehler.
+Verbundene Konten: tiktok:storys4you.de1, instagram:sto.rys4you, youtube:sto.rys4you (2. Zernio-Konto), tiktok:storys4you_eng (2. Zernio-Konto), youtube:storys4you_eng (3. Zernio-Konto), instagram:sory4you_eng (3. Zernio-Konto)
+🗑 taeglich-tiktok-en-s02-teil-2 zurückgezogen
+🗑 taeglich-tiktok-en-s02-teil-3 zurückgezogen
+🗑 taeglich-tiktok-en-s02-teil-4 zurückgezogen
+🗑 taeglich-tiktok-en-s02-teil-5 zurückgezogen
+🗑 taeglich-tiktok-en-s02-teil-6 zurückgezogen
+🗑 taeglich-tiktok-en-s02-teil-7 zurückgezogen
+🗑 taeglich-tiktok-en-s02-teil-8 zurückgezogen
+🗑 taeglich-insta-en-s02-f01 zurückgezogen
+🗑 taeglich-insta-en-s02-f02 zurückgezogen
+🗑 taeglich-insta-en-s02-f03 zurückgezogen
+🗑 taeglich-insta-en-s02-f04 zurückgezogen
+🗑 taeglich-insta-en-s02-f05 zurückgezogen
+🗑 taeglich-insta-en-s02-f06 zurückgezogen
+🗑 taeglich-insta-en-s02-f07 zurückgezogen
+🗑 taeglich-insta-en-s02-f08 zurückgezogen
+🗑 taeglich-yt-en-s02-f01 zurückgezogen
+🗑 taeglich-yt-en-s02-f02 zurückgezogen
+🗑 taeglich-yt-en-s02-f03 zurückgezogen
+🗑 taeglich-yt-en-s02-f04 zurückgezogen
+🗑 taeglich-yt-en-s02-f05 zurückgezogen
+🗑 taeglich-yt-en-s02-f06 zurückgezogen
+🗑 taeglich-yt-en-s02-f07 zurückgezogen
+🗑 taeglich-yt-en-s02-f08 zurückgezogen
+Fertig: 0 neu eingeplant, 0 Fehler.
