@@ -25,12 +25,12 @@ Hinweis zu den Werkzeugen: In neuen Sessions heißen die vidIQ-Werkzeuge `mcp__<
    - `taeglich/FORMAT.md` (verbindlich)
    - die Skills `serien-stil` (vor jedem Kulissenbau) und `serien-analytics`
 4. **Analyse lesen:** `taeglich/analyse/aktuell.md` und den neuesten Bericht in `taeglich/analyse/`. Setze die Punkte um: Mehr davon, Weniger davon, genau 1 Experiment, einen der Themenvorschläge. Feste Regeln gehen vor.
-5. **Planen:** Thema, Hauptstimmung und Hauptvorbild wählen. Sie sollen sich von den letzten Staffeln unterscheiden und auf der Analyse aufbauen.
+5. **Planen:** Ab s04 die nächste Staffel aus `taeglich/analyse/staffelplan-s04-s12.md` nehmen (Jonathans Plan 5.11.): Thema, Figuren, Folgen, Hooks und Cliffhanger stehen dort; Analyse-Punkte und feste Regeln einarbeiten. Sonst Thema, Hauptstimmung und Hauptvorbild wählen. Sie sollen sich von den letzten Staffeln unterscheiden und auf der Analyse aufbauen.
    - **Genre-Plan (Jonathans Wunsch 4.11., Issues #23/#24):** jedes Genre einmal, s03 ist der Horror-Test (4 Folgen à 2–3 min, ohne Blut, eigenes Wesen, Regeln in FORMAT.md → „Horror-Geschichten“). Keine reine Komödie, keine Romantik, kein Abenteuer/Reise.
    - **Zitat-Video (Issue #24):** macht der eigene Lauf `taeglich/laeufe/zitate.md` am Morgen danach, nicht die Produktion.
    - **Testphase bis 22.11. (Jonathans Vorgabe 4.11.):** `taeglich/analyse/experimente.md` lesen. Neue Welt/Hauptort, anderes Genre und andere Erzählform als die Staffel davor, Hook-Art und Figuren-Fokus abwechseln, 1–2 neue Kulissen für die neue Welt, genau 1 Haupt-Experiment. Gleich bleiben nur Stimme und Stil. Steckbrief in `experimente.md` und `staffeln.json` → `vielfalt` + `cliffhanger` eintragen, das Experiment als neue Zeile E… mit Hypothese und Messgröße.
 6. **Eintragen und schreiben:** Die Staffel in `staffeln.json` eintragen, mit `datum` (Nachtdatum JJJJ-MM-TT: Start vor 6 Uhr früh zählt zum Vortag) und `analyse` (welche Punkte umgesetzt wurden). Dann alle 10 Drehbücher schreiben (`taeglich/episoden/sNN-f01.txt` … `f10.txt`):
-   - **s03: zusätzlich `@untertitel aus`** (Test ohne Untertitel, Jonathans Wunsch 5.11., Experiment E4 in `experimente.md`)
+   - **Untertitel im Wechsel (Jonathan 5.11., E4):** ungerade Staffeln `@untertitel aus`, gerade mit Untertiteln (auch Englisch und Zitat-Video)
    - Kopf mit `@qualitaet max`, `@vortrag lebendig`, `@look 0`, `@kino 0.35`, `@stil leuchtend` und `@palette …` (Stil „leuchtend“, Issue #17, Tabelle in FORMAT.md); jede Einstellung mit passender `palette=…`
    - Folgenzahl und Längenband nach der Rotation in `FORMAT.md` („Abwechslung bei Länge und Folgenzahl“), in `staffeln.json` → `format` eintragen; Wörter und Einstellungen pro Folge laut Tabelle dort (immer über 1 Minute)
    - jede Folge endet mit dem Cliffhanger als letzter Zeile: nie „Fortsetzung folgt“, keine Endkarte, keine Fragen ans Publikum, nie „Echter Fakt“, kein `@hud` (keine Statusanzeige oben links, Issue #19)
