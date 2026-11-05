@@ -1,25 +1,27 @@
 Verbundene Konten: tiktok:storys4you.de1, instagram:sto.rys4you, youtube:sto.rys4you (2. Zernio-Konto), tiktok:storys4you_eng (2. Zernio-Konto), youtube:storys4you_eng (3. Zernio-Konto), instagram:sory4you_eng (3. Zernio-Konto)
-🗑 taeglich-tiktok-en-s02-teil-2 zurückgezogen
-🗑 taeglich-tiktok-en-s02-teil-3 zurückgezogen
-🗑 taeglich-tiktok-en-s02-teil-4 zurückgezogen
-🗑 taeglich-tiktok-en-s02-teil-5 zurückgezogen
-🗑 taeglich-tiktok-en-s02-teil-6 zurückgezogen
-🗑 taeglich-tiktok-en-s02-teil-7 zurückgezogen
-🗑 taeglich-tiktok-en-s02-teil-8 zurückgezogen
-🗑 taeglich-insta-en-s02-f01 zurückgezogen
-🗑 taeglich-insta-en-s02-f02 zurückgezogen
-🗑 taeglich-insta-en-s02-f03 zurückgezogen
-🗑 taeglich-insta-en-s02-f04 zurückgezogen
-🗑 taeglich-insta-en-s02-f05 zurückgezogen
-🗑 taeglich-insta-en-s02-f06 zurückgezogen
-🗑 taeglich-insta-en-s02-f07 zurückgezogen
-🗑 taeglich-insta-en-s02-f08 zurückgezogen
-🗑 taeglich-yt-en-s02-f01 zurückgezogen
-🗑 taeglich-yt-en-s02-f02 zurückgezogen
-🗑 taeglich-yt-en-s02-f03 zurückgezogen
-🗑 taeglich-yt-en-s02-f04 zurückgezogen
-🗑 taeglich-yt-en-s02-f05 zurückgezogen
-🗑 taeglich-yt-en-s02-f06 zurückgezogen
-🗑 taeglich-yt-en-s02-f07 zurückgezogen
-🗑 taeglich-yt-en-s02-f08 zurückgezogen
+✗ taeglich-tiktok-001 konnte nicht zurückgezogen werden: HTTP 400 {"error":"Published posts cannot be deleted","type":"invalid_request_error","code":"invalid_resource_state"}
+✗ taeglich-tiktok-s01-teil-1 konnte nicht zurückgezogen werden: HTTP 400 {"error":"Published posts cannot be deleted","type":"invalid_request_error","code":"invalid_resource_state"}
+🗑 taeglich-tiktok-s01-teil-2 zurückgezogen
+🗑 taeglich-tiktok-s01-teil-3 zurückgezogen
+🗑 taeglich-tiktok-s01-teil-4 zurückgezogen
+🗑 taeglich-insta-s01-f01 zurückgezogen
+🗑 taeglich-insta-s01-f02 zurückgezogen
+🗑 taeglich-insta-s01-f03 zurückgezogen
+🗑 taeglich-insta-s01-f04 zurückgezogen
+🗑 taeglich-insta-s01-f05 zurückgezogen
+🗑 taeglich-insta-s01-f06 zurückgezogen
+🗑 taeglich-insta-s01-f07 zurückgezogen
+🗑 taeglich-insta-s01-f08 zurückgezogen
+🗑 taeglich-insta-s01-f09 zurückgezogen
+🗑 taeglich-insta-s01-f10 zurückgezogen
+🗑 taeglich-yt-s01-f01 zurückgezogen
+🗑 taeglich-yt-s01-f02 zurückgezogen
+🗑 taeglich-yt-s01-f03 zurückgezogen
+🗑 taeglich-yt-s01-f04 zurückgezogen
+🗑 taeglich-yt-s01-f05 zurückgezogen
+🗑 taeglich-yt-s01-f06 zurückgezogen
+🗑 taeglich-yt-s01-f07 zurückgezogen
+🗑 taeglich-yt-s01-f08 zurückgezogen
+🗑 taeglich-yt-s01-f09 zurückgezogen
+🗑 taeglich-yt-s01-f10 zurückgezogen
 Fertig: 0 neu eingeplant, 0 Fehler.
