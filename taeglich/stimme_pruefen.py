@@ -61,7 +61,15 @@ def norm(t: str) -> list[str]:
     t = re.sub(r"\$(\d+)\.(\d\d)", r"\1 dollars and \2 cents", t)  # Whisper: „$11.40“
     t = re.sub(r"\$(\d+)", r"\1 dollars", t)
     t = re.sub(r"(\d),(\d)", r"\1\2", t)
+    t = re.sub(r"(\d)[.:](\d\d)\b", r"\1 \2", t)  # Whisper: „23.20 Uhr“
+    # zusammengesetzte Zahlwörter: „dreiundzwanzig“ → „23“ (Whisper schreibt Ziffern)
+    einer = "ein eins zwei drei vier fünf sechs sieben acht neun".split()
+    zehner = {"zwanzig": 20, "dreißig": 30, "vierzig": 40, "fünfzig": 50, "sechzig": 60, "siebzig": 70, "achtzig": 80, "neunzig": 90}
+    t = re.sub(r"\b(" + "|".join(einer) + r")und(" + "|".join(zehner) + r")\b",
+               lambda m: str(max(1, einer.index(m.group(1))) + zehner[m.group(2)]), t)
     t = re.sub(r"[^a-z0-9äöüß ]+", " ", t)
+    # „Uhr“ steht bei Whisper hinter der Uhrzeit, im Drehbuch dazwischen („dreiundzwanzig Uhr zwanzig“)
+    t = re.sub(r"\buhr\b", " ", t)
     w = t.split()
     if {"hundred", "thousand", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"} & set(w):
         w = en_zahlen(w)

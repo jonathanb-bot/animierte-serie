@@ -1,0 +1,248 @@
+{
+ "dauer": 118.962,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "waldnacht",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 7.238,
+   "emotion": "erzaehlend",
+   "text": "Es ist elf Uhr nachts, der Strom ist weg, und vor deiner Hütte steht etwas mit der Stimme deiner Mutter."
+  },
+  {
+   "nr": 2,
+   "typ": "wohnzimmer",
+   "kapitel": 2,
+   "start": 7.238,
+   "dauer": 5.294,
+   "emotion": "erzaehlend",
+   "text": "Das Licht ist um dreiundzwanzig Uhr einfach ausgegangen. Jetzt leuchtet nur noch die Glut im Kamin."
+  },
+  {
+   "nr": 3,
+   "typ": "wohnzimmer",
+   "kapitel": 2,
+   "start": 12.532,
+   "dauer": 5.222,
+   "emotion": "erzaehlend",
+   "text": "Ihr schiebt den Schrank vor die Tür. Er ist schwerer als gedacht. Ben flucht leise."
+  },
+  {
+   "nr": 4,
+   "typ": "waldnacht",
+   "kapitel": 2,
+   "start": 17.754,
+   "dauer": 4.862,
+   "emotion": "erzaehlend",
+   "text": "Durch einen Spalt im Fensterladen siehst du den Nebel. Er zieht gegen den Wind."
+  },
+  {
+   "nr": 5,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 22.616,
+   "dauer": 3.662,
+   "emotion": "spannend",
+   "text": "„Okay. Ich hab jetzt offiziell Angst. Und Hunger.“"
+  },
+  {
+   "nr": 6,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 26.278,
+   "dauer": 6.038,
+   "emotion": "ernst",
+   "text": "Draußen ist es still. Aber du weißt, dass es noch da ist. Das Klicken hört nie ganz auf."
+  },
+  {
+   "nr": 7,
+   "typ": "handy",
+   "kapitel": 2,
+   "start": 32.316,
+   "dauer": 3.926,
+   "emotion": "erzaehlend",
+   "text": "Ben findet mit einem einzigen Balken Netz tatsächlich etwas."
+  },
+  {
+   "nr": 8,
+   "typ": "titel",
+   "kapitel": 3,
+   "start": 36.242,
+   "dauer": 7.622,
+   "emotion": "erzaehlend",
+   "text": "In Australien lebt ein Vogel, der Leierschwanz. Er ahmt Kettensägen nach. Kameras. Sogar Autoalarme."
+  },
+  {
+   "nr": 9,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 43.864,
+   "dauer": 4.43,
+   "emotion": "ernst",
+   "text": "„Vielleicht ist es ja ein Vogel. Ein sehr großer, sehr unhöflicher Vogel.“"
+  },
+  {
+   "nr": 10,
+   "typ": "waldnacht",
+   "kapitel": 3,
+   "start": 48.294,
+   "dauer": 4.598,
+   "emotion": "erzaehlend",
+   "text": "Aber kein Vogel ahmt ganze Sätze nach. Und kein Vogel ist so groß wie ein Baum."
+  },
+  {
+   "nr": 11,
+   "typ": "objekt",
+   "kapitel": 3,
+   "start": 52.892,
+   "dauer": 5.174,
+   "emotion": "erklaerend",
+   "text": "Ihr macht drei Regeln. Nicht antworten. Die Tür bleibt zu. Die Lampe bleibt an."
+  },
+  {
+   "nr": 12,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 58.066,
+   "dauer": 3.038,
+   "emotion": "ernst",
+   "text": "„Regel vier: Das letzte Toastbrot gehört mir.“"
+  },
+  {
+   "nr": 13,
+   "typ": "waldnacht",
+   "kapitel": 3,
+   "start": 61.104,
+   "dauer": 2.846,
+   "emotion": "erzaehlend",
+   "text": "Um dreiundzwanzig Uhr zwanzig ruft es wieder."
+  },
+  {
+   "nr": 14,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 63.95,
+   "dauer": 3.902,
+   "emotion": "froh",
+   "text": "„Hast du dir die Zähne geputzt? Die oben links auch?“"
+  },
+  {
+   "nr": 15,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 67.852,
+   "dauer": 4.934,
+   "emotion": "spannend",
+   "text": "Das hat Mama heute Morgen am Auto gesagt. Wörtlich. Draußen. Wo der Wald anfängt."
+  },
+  {
+   "nr": 16,
+   "typ": "wohnzimmer",
+   "kapitel": 3,
+   "start": 72.786,
+   "dauer": 4.094,
+   "emotion": "erzaehlend",
+   "text": "Es denkt sich nichts aus. Es hört zu. Und es merkt sich alles."
+  },
+  {
+   "nr": 17,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 76.88,
+   "dauer": 3.326,
+   "emotion": "ernst",
+   "text": "Du gehst im Kopf jeden Satz durch, den du heute draußen gesagt hast."
+  },
+  {
+   "nr": 18,
+   "typ": "waldnacht",
+   "kapitel": 3,
+   "start": 80.206,
+   "dauer": 4.598,
+   "emotion": "erzaehlend",
+   "text": "Dann hörst du aus dem Wald deine eigene Stimme. „Mama, ich hab echt keinen Bock auf Wald.“"
+  },
+  {
+   "nr": 19,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 84.804,
+   "dauer": 4.07,
+   "emotion": "spannend",
+   "text": "Das hast du heute Nachmittag gesagt. Beim Aussteigen. Es übt."
+  },
+  {
+   "nr": 20,
+   "typ": "handy",
+   "kapitel": 4,
+   "start": 88.874,
+   "dauer": 5.03,
+   "emotion": "erzaehlend",
+   "text": "Kurz vor Mitternacht kommt endlich eine Nachricht. Sie ist unterwegs."
+  },
+  {
+   "nr": 21,
+   "typ": "handy",
+   "kapitel": 4,
+   "start": 93.904,
+   "dauer": 4.574,
+   "emotion": "erzaehlend",
+   "text": "Dein Akku hat noch neunzehn Prozent. Bens Handy ist schon aus."
+  },
+  {
+   "nr": 22,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 98.478,
+   "dauer": 5.27,
+   "emotion": "ernst",
+   "text": "Ben pfeift leise vor sich hin. Drei kurze Pfiffe. Das macht er immer, wenn er nervös ist."
+  },
+  {
+   "nr": 23,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 103.748,
+   "dauer": 2.15,
+   "emotion": "spannend",
+   "text": "„Sorry. Das geht von allein.“"
+  },
+  {
+   "nr": 24,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 105.898,
+   "dauer": 1.718,
+   "emotion": "spannend",
+   "text": "„Ben. Nicht.“"
+  },
+  {
+   "nr": 25,
+   "typ": "waldnacht",
+   "kapitel": 4,
+   "start": 107.616,
+   "dauer": 1.574,
+   "emotion": "erzaehlend",
+   "text": "Zu spät."
+  },
+  {
+   "nr": 26,
+   "typ": "waldnacht",
+   "kapitel": 5,
+   "start": 109.19,
+   "dauer": 4.694,
+   "emotion": "erzaehlend",
+   "text": "Aus dem Wald kommen drei kurze Pfiffe zurück. Genau Bens Melodie."
+  },
+  {
+   "nr": 27,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 113.884,
+   "dauer": 5.078,
+   "emotion": "spannend",
+   "text": "Ben hört auf zu pfeifen. Aber draußen pfeift es weiter. Und es kommt näher."
+  }
+ ]
+}

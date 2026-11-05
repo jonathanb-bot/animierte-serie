@@ -1,0 +1,239 @@
+{
+ "dauer": 122.692,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "waldnacht",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 8.798,
+   "emotion": "erzaehlend",
+   "text": "Etwas in diesem Wald ahmt Stimmen nach. Um Mitternacht ruft es mit der Stimme von Bens Opa. Und Bens Opa ist seit einem Jahr tot."
+  },
+  {
+   "nr": 2,
+   "typ": "titel",
+   "kapitel": 2,
+   "start": 8.798,
+   "dauer": 4.286,
+   "emotion": "erzaehlend",
+   "text": "Es ist Mitternacht. Mama müsste jetzt da sein. Ist sie nicht."
+  },
+  {
+   "nr": 3,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 13.084,
+   "dauer": 5.078,
+   "emotion": "ernst",
+   "text": "Draußen ist es seit zwanzig Minuten still. Das ist schlimmer als jedes Klicken."
+  },
+  {
+   "nr": 4,
+   "typ": "wohnzimmer",
+   "kapitel": 2,
+   "start": 18.162,
+   "dauer": 4.502,
+   "emotion": "erzaehlend",
+   "text": "Ihr sitzt mit einer Decke auf dem Sofa. Die Taschenlampe zeigt auf die Tür."
+  },
+  {
+   "nr": 5,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 22.664,
+   "dauer": 5.14,
+   "emotion": "ernst",
+   "text": "Ben zählt die Holzscheite neben dem Kamin. Elf. Er zählt sie dreimal."
+  },
+  {
+   "nr": 6,
+   "typ": "landschaft",
+   "kapitel": 2,
+   "start": 27.804,
+   "dauer": 3.769,
+   "emotion": "erzaehlend",
+   "text": "Dann kommt die Stimme vom See. Ruhig. Ein bisschen heiser."
+  },
+  {
+   "nr": 7,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 31.572,
+   "dauer": 3.71,
+   "emotion": "froh",
+   "text": "„Benni! Komm, wir gehen angeln. Die Barsche beißen.“"
+  },
+  {
+   "nr": 8,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 35.282,
+   "dauer": 3.854,
+   "emotion": "traurig",
+   "text": "Ben bewegt sich nicht mehr. Nur einer hat ihn je Benni genannt."
+  },
+  {
+   "nr": 9,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 39.136,
+   "dauer": 3.254,
+   "emotion": "traurig",
+   "text": "„Wir waren jeden Sonntag hier. Genau an diesem See.“"
+  },
+  {
+   "nr": 10,
+   "typ": "landschaft",
+   "kapitel": 3,
+   "start": 42.39,
+   "dauer": 5.198,
+   "emotion": "erzaehlend",
+   "text": "Opa hat ihm hier das Schwimmen beigebracht. Und wie man einen Wurm aufspießt, ohne zu heulen."
+  },
+  {
+   "nr": 11,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 47.588,
+   "dauer": 4.118,
+   "emotion": "traurig",
+   "text": "„Er hat immer gesagt: Zeit hat man nicht. Zeit nimmt man sich.“"
+  },
+  {
+   "nr": 12,
+   "typ": "see",
+   "kapitel": 3,
+   "start": 51.706,
+   "dauer": 6.926,
+   "emotion": "erzaehlend",
+   "text": "Letzten Sommer hat Opa noch einmal gefragt. Ben hatte keine Zeit. Training, Freunde, irgendwas."
+  },
+  {
+   "nr": 13,
+   "typ": "krankenhaus",
+   "kapitel": 3,
+   "start": 58.632,
+   "dauer": 6.086,
+   "emotion": "erzaehlend",
+   "text": "Zwei Wochen später lag Opa im Krankenhaus. Ben wollte zurückrufen. Morgen. Dann übermorgen."
+  },
+  {
+   "nr": 14,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 64.718,
+   "dauer": 1.55,
+   "emotion": "traurig",
+   "text": "„Ich hab nie zurückgerufen.“"
+  },
+  {
+   "nr": 15,
+   "typ": "objekt",
+   "kapitel": 3,
+   "start": 66.268,
+   "dauer": 4.91,
+   "emotion": "erklaerend",
+   "text": "An Bens Handgelenk tickt Opas alte Uhr. Er hat sie seit der Beerdigung nicht abgenommen."
+  },
+  {
+   "nr": 16,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 71.178,
+   "dauer": 6.518,
+   "emotion": "traurig",
+   "text": "Du denkst an Mama. Wann wart ihr das letzte Mal einfach so zusammen? Ohne Handy. Ohne Eile."
+  },
+  {
+   "nr": 17,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 77.696,
+   "dauer": 1.934,
+   "emotion": "traurig",
+   "text": "„Benni. Ich warte.“"
+  },
+  {
+   "nr": 18,
+   "typ": "wohnzimmer",
+   "kapitel": 4,
+   "start": 79.63,
+   "dauer": 4.43,
+   "emotion": "erzaehlend",
+   "text": "Ben steht auf. Er geht zur Tür. Du hältst ihn am Ärmel fest."
+  },
+  {
+   "nr": 19,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 84.06,
+   "dauer": 1.574,
+   "emotion": "ernst",
+   "text": "„Das ist er nicht, Ben.“"
+  },
+  {
+   "nr": 20,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 85.634,
+   "dauer": 2.894,
+   "emotion": "traurig",
+   "text": "„Ich weiß. Ich wollte ihn nur noch einmal hören.“"
+  },
+  {
+   "nr": 21,
+   "typ": "wohnzimmer",
+   "kapitel": 4,
+   "start": 88.528,
+   "dauer": 6.686,
+   "emotion": "erzaehlend",
+   "text": "Ihr setzt euch wieder. Ben drückt das Gesicht in die Decke. Draußen ruft es noch dreimal. Dann ist Ruhe."
+  },
+  {
+   "nr": 22,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 95.214,
+   "dauer": 3.134,
+   "emotion": "traurig",
+   "text": "„Wenn wir hier rauskommen, ruf ich alle an. Wirklich alle.“"
+  },
+  {
+   "nr": 23,
+   "typ": "waldnacht",
+   "kapitel": 4,
+   "start": 98.348,
+   "dauer": 7.766,
+   "emotion": "erzaehlend",
+   "text": "Und plötzlich verstehst du, was das heißt. Es kennt Opas Stimme. Also war es schon letzten Sommer hier. Es hat zugehört."
+  },
+  {
+   "nr": 24,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 106.114,
+   "dauer": 3.71,
+   "emotion": "spannend",
+   "text": "Wer weiß, wie viele Stimmen es schon gesammelt hat. Sommer für Sommer."
+  },
+  {
+   "nr": 25,
+   "typ": "handy",
+   "kapitel": 5,
+   "start": 109.824,
+   "dauer": 8.342,
+   "emotion": "erzaehlend",
+   "text": "Um null Uhr siebenundvierzig schreibt Mama. Ein Baum liegt auf der Straße. Sie läuft den Rest. Zu Fuß. Durch den Wald."
+  },
+  {
+   "nr": 26,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 118.166,
+   "dauer": 4.526,
+   "emotion": "ernst",
+   "text": "Sie weiß nicht, was da draußen wartet. Du schon. Du ziehst deine Jacke an."
+  }
+ ]
+}
