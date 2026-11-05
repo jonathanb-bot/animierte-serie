@@ -1,0 +1,83 @@
+# The Mimic – Episode 1: Click
+@musik musik/s03-f01-en.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung spannend
+@vortrag lebendig
+@mund zitate
+@qualitaet max
+@look 0.75
+@kino 0.5
+@stil leuchtend
+@palette blau
+@zeit nacht
+@untertitel aus
+@sprache en
+
+== Hook ==
+// Wald bei Nacht, ganz oben zwischen den Bäumen zwei lange, helle Augen
+[waldnacht augen=1 palette=blau palette_staerke=0.6 zoom-rein hooktext="IT COPIES VOICES"] In this forest, there's something that copies voices. And tonight, it knows yours.
+
+== Wiedererkennen ==
+// Hütte am See, warmes Fenster, du und Ben davor
+[waldnacht huette see du ben palette=blau palette_staerke=0.6 schwenk-rechts] You're at your mom's old cabin by the lake with Ben. Two days, no Wi-Fi, one fireplace.
+// See bei Nacht, dahinter der Wald
+[landschaft zeit=nacht see zoom-raus palette=blau palette_staerke=0.6] Outside, the lake lies black and smooth like a phone screen. Behind it, the forest begins. Miles and miles of it.
+// Nahaufnahme: du erinnerst dich
+[gesicht du ort=wohnzimmer zeit=nacht froh palette=blau palette_staerke=0.6] The last time you were here, you were ten. Back then, Mom read to you every night until you fell asleep.
+// Hütte innen, Kamin, ihr auf dem Sofa
+[wohnzimmer du ben sofa_sitzen licht=an zeit=nacht palette=blau palette_staerke=0.6 zoom-rein] The wood crackles in the fireplace. Everything smells like pine sap and wet socks.
+// Handy: Mama ruft an
+[handy ort=wohnzimmer zeit=nacht netz=1 akku=41 uhrzeit="10:04" von="Mom" nachricht="Grocery run in the village. Back by midnight." palette=blau palette_staerke=0.6] Mom drove into the village. She wants to be back by midnight.
+// Nahaufnahme: Mama am Telefon, ruhig
+[gesicht mama ort=wohnzimmer zeit=nacht entschlossen palette=blau palette_staerke=0.6] “Door shut, lights on. And if anything happens: Lighthouse.”
+// Nahaufnahme: du
+[gesicht du ort=wohnzimmer zeit=nacht froh palette=blau palette_staerke=0.6] Lighthouse is your word from when you were little. Whoever calls it gets a sign back.
+// Nahaufnahme: Ben grinst
+[gesicht ben ort=wohnzimmer zeit=nacht froh palette=blau palette_staerke=0.6] “Lighthouse? Are you two a secret agency with a cabin?”
+// Hütte innen, Kartenspiel
+[wohnzimmer du ben sofa_sitzen licht=an zeit=nacht schwenk-rechts palette=blau palette_staerke=0.6] Ben loses at cards for the fourth time. He claims the cards are damp.
+
+== Steigerung ==
+// Uhr an der Wand, Infokarte
+[titel oben="It's" gross="10:41 PM" unten="Mom is still in the village" farbe=#0e1630 akzent=#9fd0ff groesse=170 hud=false zoom-rein] At ten forty-one, you hear it for the first time.
+// Wald, Nebel zieht, nichts zu sehen
+[waldnacht palette=blau palette_staerke=0.6 wackeln=0.2 zoom-rein] A sound comes from the forest. Click. Click. Like two stones knocked together.
+// Nahaufnahme: Ben grinst
+[gesicht ben ort=wohnzimmer zeit=nacht froh palette=blau palette_staerke=0.6] “A deer. Or a bear with castanets.”
+// Nahaufnahme: du, ernst
+[gesicht du ort=wohnzimmer zeit=nacht besorgt palette=blau palette_staerke=0.6] You don't laugh. Deer don't click. And the sound comes from high up.
+// Nahaufnahme: du horchst
+[gesicht du ort=wohnzimmer zeit=nacht besorgt palette=blau palette_staerke=0.6] Then everything goes quiet. Even the crickets stop.
+// Wald, eine Stimme ruft
+[waldnacht huette palette=blau palette_staerke=0.6 zoom-raus] And then someone calls. In your mom's voice.
+// Nahaufnahme: Mama, aber im Dunkeln
+[gesicht mama ort=waldnacht froh palette=blau palette_staerke=0.6] “Honey? Come out here. I need help with the bags.”
+// Nahaufnahme: Ben steht auf
+[gesicht ben ort=wohnzimmer zeit=nacht neugierig palette=blau palette_staerke=0.6] “There you go. Your mom's fast.”
+// Nahaufnahme: du, unsicher
+[gesicht du ort=wohnzimmer zeit=nacht besorgt palette=blau palette_staerke=0.6] You're already getting up. It sounds so much like her. Even the little sigh at the end.
+// Handy: letzte Nachricht von Mama
+[handy ort=wohnzimmer zeit=nacht netz=1 akku=38 uhrzeit="10:43" von="Mom" nachricht="Still in line at the store. Gonna be a while." palette=blau palette_staerke=0.6 zoom-rein] But two minutes ago, Mom texted. She's still in line at the store. Twelve miles from here.
+// Nahaufnahme: du, kalter Schreck
+[gesicht du ort=wohnzimmer zeit=nacht angst palette=blau palette_staerke=0.6] There's no car outside. No headlights. Just that voice.
+
+== Wendung ==
+// Wald: du an der Tür mit der Taschenlampe
+[waldnacht du lampe palette=blau palette_staerke=0.6 zoom-rein] You grab the flashlight. You don't open the door. You only shine it through the window.
+// Wald mit Nebel, niemand da
+[waldnacht lampe zoom-rein palette=blau palette_staerke=0.6] Nobody's standing outside the cabin. Just fog, hanging between the trunks like wet laundry.
+// Handy: Anruf bei Mama
+[handy ort=wohnzimmer zeit=nacht netz=1 akku=36 uhrzeit="10:46" von="Mom" nachricht="Call failed" palette=blau palette_staerke=0.6] You call Mom. One bar. The call drops.
+// Stimme ruft wieder
+[gesicht mama ort=waldnacht traurig palette=blau palette_staerke=0.6] “Honey, open up. I'm cold.” Exactly the way she always says it.
+// Schreckmoment: Augen weit oben, Umriss so hoch wie die Bäume
+[waldnacht augen=2 lampe palette=lila palette_staerke=0.6 wackeln=0.4 zoom-rein] The beam climbs up the trees. And at the very top, way too high, two long eyes shine back.
+// Nur Wald, die Augen sind weg
+[waldnacht lampe palette=blau palette_staerke=0.6 zoom-raus] You blink. Gone.
+
+== Cliffhanger ==
+// Hütte innen, ihr erstarrt
+[wohnzimmer du ben licht=an zeit=nacht palette=blau palette_staerke=0.6 wackeln=0.2] The clicking isn't in the forest anymore. It's right outside the window.
+// Nahaufnahme: du starrst auf die Scheibe
+[gesicht du ort=wohnzimmer zeit=nacht angst palette=blau palette_staerke=0.6 zoom-rein] And then something knocks on the glass. Three times. Exactly the way Mom always knocks.

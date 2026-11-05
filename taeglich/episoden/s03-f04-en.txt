@@ -1,0 +1,85 @@
+# The Mimic – Episode 4: Lighthouse
+@musik musik/s03-f04-en.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung warm
+@vortrag lebendig
+@mund zitate
+@qualitaet max
+@look 0.75
+@kino 0.5
+@stil leuchtend
+@palette blau
+@zeit nacht
+@untertitel aus
+@sprache en
+
+== Hook ==
+// Wald, du und Ben mit Taschenlampe auf dem Weg
+[waldnacht du ben lampe palette=blau palette_staerke=0.6 zoom-rein hooktext="YOU GO OUTSIDE"] Your mom is walking alone through a dark forest right now. And you're going out to meet her.
+
+== Wiedererkennen ==
+// Nahaufnahme: Ben, entschlossen
+[gesicht ben ort=waldnacht entschlossen palette=blau palette_staerke=0.6] “I'm staying right behind you. If I scream, it's not a joke.”
+// Infokarte: Regeln für draußen
+[objekt objekte="ohr:Don't answer|herz:Stay together|taschenlampe:Keep moving" gross="Rules for Outside" farbe=#0e1630 palette=blau palette_staerke=0.6] Out here, there are new rules. Don't answer. Don't split up. Don't stop.
+// Wald, Lampe zittert
+[waldnacht du ben lampe wackeln=0.2 zoom-rein palette=blau palette_staerke=0.6] The beam is shaking because your hand is shaking. Ben is holding on to your backpack.
+// Wald mit Nebel, Lampe
+[waldnacht du lampe palette=blau palette_staerke=0.6 schwenk-links] It's one in the morning. The ground is wet. Every time a branch snaps, your heart stops for a second.
+// Wald, Augen schwach
+[waldnacht augen=1 palette=blau palette_staerke=0.6 zoom-rein] Somewhere up in the trees: click. Click. It's following you.
+
+== Steigerung ==
+// Wald links: eine Stimme
+[waldnacht palette=blau palette_staerke=0.6 schwenk-links] Then Mom calls. From the left.
+// Nahaufnahme: Mama
+[gesicht mama ort=waldnacht froh palette=blau palette_staerke=0.6] “Honey! I'm over here!”
+// Wald rechts: noch eine Stimme
+[waldnacht palette=blau palette_staerke=0.6 schwenk-rechts] And then Mom calls again. From the right.
+// Nahaufnahme: Mama, gleiche Stimme
+[gesicht mama ort=waldnacht besorgt palette=blau palette_staerke=0.6] “Honey, not that way! Over here!”
+// Nahaufnahme: Ben
+[gesicht ben ort=waldnacht angst palette=blau palette_staerke=0.6] “Which one? Which one is it?”
+// Nahaufnahme: du, zwischen beiden
+[gesicht du ort=waldnacht angst palette=blau palette_staerke=0.6 wackeln=0.3] Two voices. Both sound exactly like her. One of them is not your mother.
+// Infokarte: das Wort
+[titel oben="Your word" gross="Lighthouse" unten="and the old sign" farbe=#0e1630 akzent=#ffd38a groesse=150 hud=false zoom-rein] You take a deep breath. And you shout the one word only the two of you know.
+// Nahaufnahme: du rufst
+[gesicht du ort=waldnacht entschlossen palette=blau palette_staerke=0.6 zoom-rein] “Lighthouse!”
+
+== Wendung ==
+// Wald links
+[waldnacht palette=blau palette_staerke=0.6 wackeln=0.2] From the left, the voice answers right away. “Lighthouse! Lighthouse!” It just repeats your word.
+// Wald rechts, ein kleines Licht blinkt dreimal
+[waldnacht lampe palette=blau palette_staerke=0.6 zoom-rein] From the right, there's no answer. Instead, a small light blinks. Three times. Like a lighthouse.
+// Nahaufnahme: du verstehst
+[gesicht du ort=waldnacht froh palette=blau palette_staerke=0.6] That's the sign. A voice can be copied. A light can't.
+// Wald: du rennst, Mama, Umarmung
+[waldnacht du mama ben palette=blau palette_staerke=0.6 zoom-rein] You run. Mom is standing in the fog with her phone light. Her jacket smells like rain and gasoline.
+// Nahaufnahme: Mama
+[gesicht mama ort=waldnacht froh palette=blau palette_staerke=0.6] “I'm here. I'm right here.”
+// Nahaufnahme: du weinst und lachst
+[gesicht du ort=waldnacht traurig palette=blau palette_staerke=0.6] You hold her so tight she laughs. And you laugh too, even though you're crying.
+// Wald: der Weg zurück
+[waldnacht du mama ben lampe schwenk-links palette=blau palette_staerke=0.6] On the way back, nobody talks. Mom holds your hand. Like back when you were little.
+
+== Zuhause ==
+// Hütte innen, alle drei, Kamin
+[wohnzimmer du mama ben licht=an zeit=nacht palette=blau palette_staerke=0.6 zoom-rein] Just before two, the three of you sit by the fireplace. The door is locked twice.
+// Nahaufnahme: Mama
+[gesicht mama ort=wohnzimmer zeit=nacht froh palette=blau palette_staerke=0.6] “From now on, we go grocery shopping together. All of us.”
+// Nahaufnahme: Mama erinnert sich
+[gesicht mama ort=wohnzimmer zeit=nacht froh palette=blau palette_staerke=0.6] “Remember? You used to yell Lighthouse every night. Just so I'd come back in.”
+// Nahaufnahme: du
+[gesicht du ort=wohnzimmer zeit=nacht froh palette=blau palette_staerke=0.6] “Yeah. Every night.”
+// Nahaufnahme: du
+[gesicht du ort=wohnzimmer zeit=nacht froh palette=blau palette_staerke=0.6] You realize how long it's been since you hugged her this tight. Years, maybe.
+
+== Cliffhanger ==
+// Hütte von außen, Nebel
+[waldnacht huette palette=blau palette_staerke=0.6 wackeln=0.2 zoom-rein] Then someone calls from outside. In Ben's voice. “Hey! Open up! I'm still out here!”
+// Nahaufnahme: Ben auf dem Sofa, regungslos
+[gesicht ben ort=wohnzimmer zeit=nacht froh palette=blau palette_staerke=0.6 zoom-rein] You look next to you. Ben is sitting on the couch. He hasn't said a word since you got back.
+// Nahaufnahme: du, Erkenntnis
+[gesicht du ort=wohnzimmer zeit=nacht angst palette=blau palette_staerke=0.6 zoom-rein] Grandpa's watch on his wrist has stopped ticking.

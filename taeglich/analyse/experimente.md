@@ -57,6 +57,7 @@ Reihenfolge als Vorschlag; die Analyse darf tauschen, aber jedes Genre kommt bis
 |---|---|---|---|---|---|---|---|---|
 | s01 Funkstille | Großstadt bei Nacht | Überleben/Mysterium | chronologisch, 3 Tage | Rätsel mit Gefahr | Schwester, Opa | 66–79 s / 10 / 4 Sammelteile | polarlicht | Hook-Text in allen Folgen |
 | s02 Der Hauptgewinn | Heimatstadt (Kiosk, Schule, Esstisch) | Was wäre wenn/Alltagsdrama | chronologisch, 1 Woche | kühne Prämisse | beste Freundin, Opa | 65–81 s / 8 / einzeln | kiosk | Hook-Text A/B (ungerade mit, gerade ohne) |
+| s03 Der Nachahmer | Wald und Hütte am See bei Nacht | Horror ohne Blut | eine Nacht in Echtzeit (22–2 Uhr) | Regel/Warnung | Mutter, bester Freund, Bens Opa | 120–180 s / 4 / einzeln | waldnacht | E3 Grund-Regel F1/F3 (+ E4 ohne Untertitel) |
 
 ## Experimente (Hypothese → Ergebnis)
 
