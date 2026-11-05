@@ -1,12 +1,12 @@
 {
- "dauer": 67.432,
+ "dauer": 69.52,
  "einstellungen": [
   {
    "nr": 1,
    "typ": "netz",
    "kapitel": 1,
    "start": 0.0,
-   "dauer": 4.214,
+   "dauer": 3.566,
    "emotion": "erzaehlend",
    "text": "Das Internet ist weg. Und deine Schwester ist nicht nach Hause gekommen."
   },
@@ -14,8 +14,8 @@
    "nr": 2,
    "typ": "zimmer",
    "kapitel": 1,
-   "start": 4.214,
-   "dauer": 2.966,
+   "start": 3.566,
+   "dauer": 3.182,
    "emotion": "spannend",
    "text": "Sechs Uhr früh. Mama reißt deine Tür auf."
   },
@@ -23,7 +23,7 @@
    "nr": 3,
    "typ": "gesicht",
    "kapitel": 1,
-   "start": 7.18,
+   "start": 6.748,
    "dauer": 2.294,
    "emotion": "spannend",
    "text": "„Lina ist nicht da. Ihr Bett ist leer.“"
@@ -32,7 +32,7 @@
    "nr": 4,
    "typ": "handy",
    "kapitel": 1,
-   "start": 9.474,
+   "start": 9.042,
    "dauer": 3.422,
    "emotion": "erzaehlend",
    "text": "Du greifst zum Handy. Kein Balken. Kein WLAN."
@@ -41,8 +41,8 @@
    "nr": 5,
    "typ": "wohnzimmer",
    "kapitel": 2,
-   "start": 12.896,
-   "dauer": 3.47,
+   "start": 12.464,
+   "dauer": 3.59,
    "emotion": "ernst",
    "text": "Lina hat bei einer Freundin übernachtet. Am anderen Ende der Stadt."
   },
@@ -50,8 +50,8 @@
    "nr": 6,
    "typ": "gesicht",
    "kapitel": 2,
-   "start": 16.366,
-   "dauer": 3.542,
+   "start": 16.054,
+   "dauer": 3.254,
    "emotion": "ernst",
    "text": "Papa ruft an. Nichts. Nicht mal ein Freizeichen."
   },
@@ -59,8 +59,8 @@
    "nr": 7,
    "typ": "weltall",
    "kapitel": 2,
-   "start": 19.908,
-   "dauer": 4.406,
+   "start": 19.308,
+   "dauer": 4.886,
    "emotion": "erzaehlend",
    "text": "Und das nicht nur bei euch. In dieser Nacht ist auf der ganzen Welt das Netz zusammengebrochen."
   },
@@ -68,8 +68,8 @@
    "nr": 8,
    "typ": "netz",
    "kapitel": 2,
-   "start": 24.314,
-   "dauer": 3.59,
+   "start": 24.194,
+   "dauer": 4.262,
    "emotion": "erzaehlend",
    "text": "Keine Nachricht. Kein Anruf. Keine Karte, die dir den Weg zeigt."
   },
@@ -77,8 +77,8 @@
    "nr": 9,
    "typ": "gesicht",
    "kapitel": 3,
-   "start": 27.904,
-   "dauer": 2.894,
+   "start": 28.456,
+   "dauer": 3.374,
    "emotion": "ernst",
    "text": "Papa greift nach dem Schlüssel. „Wir holen sie. Jetzt.“"
   },
@@ -86,8 +86,8 @@
    "nr": 10,
    "typ": "grossstadt",
    "kapitel": 3,
-   "start": 30.798,
-   "dauer": 3.134,
+   "start": 31.83,
+   "dauer": 2.99,
    "emotion": "erzaehlend",
    "text": "Die Stadt ist seltsam still. Ampeln blinken gelb."
   },
@@ -95,8 +95,8 @@
    "nr": 11,
    "typ": "haltestelle",
    "kapitel": 3,
-   "start": 33.932,
-   "dauer": 4.238,
+   "start": 34.82,
+   "dauer": 4.358,
    "emotion": "erzaehlend",
    "text": "An der Haltestelle starren alle auf ihre Handys. Als würde das irgendwas ändern."
   },
@@ -104,7 +104,7 @@
    "nr": 12,
    "typ": "objekt",
    "kapitel": 3,
-   "start": 38.17,
+   "start": 39.178,
    "dauer": 4.214,
    "emotion": "erklaerend",
    "text": "Keine Kartenzahlung. Kein Online-Ticket. Fast alles hängt am Netz."
@@ -113,8 +113,8 @@
    "nr": 13,
    "typ": "gesicht",
    "kapitel": 3,
-   "start": 42.384,
-   "dauer": 4.838,
+   "start": 43.392,
+   "dauer": 5.51,
    "emotion": "ernst",
    "text": "Im Auto zählst du die Minuten. Lina ist zwölf. Sie war noch nie allein nachts in der Stadt."
   },
@@ -122,8 +122,8 @@
    "nr": 14,
    "typ": "grossstadt",
    "kapitel": 3,
-   "start": 47.222,
-   "dauer": 2.078,
+   "start": 48.902,
+   "dauer": 1.886,
    "emotion": "erzaehlend",
    "text": "Zwanzig Minuten später seid ihr da."
   },
@@ -131,8 +131,8 @@
    "nr": 15,
    "typ": "wohnzimmer",
    "kapitel": 4,
-   "start": 49.3,
-   "dauer": 2.87,
+   "start": 50.788,
+   "dauer": 3.254,
    "emotion": "erzaehlend",
    "text": "Die Haustür ist nur angelehnt. „Hallo? Lina?“"
   },
@@ -140,8 +140,8 @@
    "nr": 16,
    "typ": "gesicht",
    "kapitel": 4,
-   "start": 52.17,
-   "dauer": 3.35,
+   "start": 54.042,
+   "dauer": 3.542,
    "emotion": "ernst",
    "text": "Keine Antwort. Die Jacken fehlen. Die Schuhe fehlen."
   },
@@ -149,8 +149,8 @@
    "nr": 17,
    "typ": "esstisch",
    "kapitel": 4,
-   "start": 55.52,
-   "dauer": 4.286,
+   "start": 57.584,
+   "dauer": 3.902,
    "emotion": "erzaehlend",
    "text": "Auf dem Tisch stehen noch die Teller. Als wären alle mitten in der Nacht aufgebrochen."
   },
@@ -158,8 +158,8 @@
    "nr": 18,
    "typ": "gesicht",
    "kapitel": 4,
-   "start": 59.806,
-   "dauer": 1.31,
+   "start": 61.486,
+   "dauer": 1.526,
    "emotion": "spannend",
    "text": "Papa wird ganz blass."
   },
@@ -167,8 +167,8 @@
    "nr": 19,
    "typ": "gesicht",
    "kapitel": 5,
-   "start": 61.116,
-   "dauer": 1.238,
+   "start": 63.012,
+   "dauer": 1.07,
    "emotion": "spannend",
    "text": "Dann siehst du es."
   },
@@ -176,8 +176,8 @@
    "nr": 20,
    "typ": "handy",
    "kapitel": 5,
-   "start": 62.354,
-   "dauer": 5.078,
+   "start": 64.082,
+   "dauer": 5.438,
    "emotion": "erzaehlend",
    "text": "Mitten auf dem Tisch liegt Linas Handy. Sie ist ohne es los. Mitten in der Nacht."
   }
