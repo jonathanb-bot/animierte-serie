@@ -2,7 +2,241 @@ Verbundene Konten: tiktok:storys4you.de1, instagram:sto.rys4you, youtube:sto.rys
 ✗ taeglich-tiktok-001 konnte nicht zurückgezogen werden: HTTP 400 {"error":"Published posts cannot be deleted","type":"invalid_request_error","code":"invalid_resource_state"}
 ✗ taeglich-tiktok-s01-teil-1 konnte nicht zurückgezogen werden: HTTP 400 {"error":"Published posts cannot be deleted","type":"invalid_request_error","code":"invalid_resource_state"}
 ✗ taeglich-tiktok-en-s02-teil-1 konnte nicht zurückgezogen werden: HTTP 400 {"error":"Published posts cannot be deleted","type":"invalid_request_error","code":"invalid_resource_state"}
-  taeglich-tiktok-001-v2: Prüfung ok (Bild, Ton, Lautstärke)
-✓ taeglich-tiktok-001-v2 eingeplant für 2026-11-09T12:00:00 (6aecaea9767af43b4659c406)
+↻ taeglich-tiktok-s02-teil-1: 2026-11-06T12:00:00 → 2026-11-06T12:04:00
+  taeglich-tiktok-s02-teil-1: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-tiktok-s02-teil-1 eingeplant für 2026-11-06T12:04:00 (6aecedc7c7e775e8e1355592)
   KI-Kennzeichnung laut Zernio: "videoMadeWithAi":false, "videoMadeWithAi":false
-Fertig: 1 neu eingeplant, 0 Fehler.
+↻ taeglich-tiktok-s02-teil-2: 2026-11-06T16:00:00 → 2026-11-06T16:27:00
+  taeglich-tiktok-s02-teil-2: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-tiktok-s02-teil-2 eingeplant für 2026-11-06T16:27:00 (6aecedcabc9c38cc37a49ccb)
+  KI-Kennzeichnung laut Zernio: "videoMadeWithAi":false, "videoMadeWithAi":false
+↻ taeglich-tiktok-s02-teil-3: 2026-11-06T20:00:00 → 2026-11-06T19:36:00
+  taeglich-tiktok-s02-teil-3: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-tiktok-s02-teil-3 eingeplant für 2026-11-06T19:36:00 (6aecedcdbc9c38cc37a49ce6)
+  KI-Kennzeichnung laut Zernio: "videoMadeWithAi":false, "videoMadeWithAi":false
+↻ taeglich-tiktok-s02-teil-4: 2026-11-07T08:00:00 → 2026-11-07T08:13:00
+  taeglich-tiktok-s02-teil-4: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-tiktok-s02-teil-4 eingeplant für 2026-11-07T08:13:00 (6aecedd0bc9c38cc37a49cf6)
+  KI-Kennzeichnung laut Zernio: "videoMadeWithAi":false, "videoMadeWithAi":false
+↻ taeglich-tiktok-s02-teil-5: 2026-11-07T12:00:00 → 2026-11-07T11:46:00
+  taeglich-tiktok-s02-teil-5: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-tiktok-s02-teil-5 eingeplant für 2026-11-07T11:46:00 (6aecedd3bc9c38cc37a49d22)
+  KI-Kennzeichnung laut Zernio: "videoMadeWithAi":false, "videoMadeWithAi":false
+↻ taeglich-tiktok-s02-teil-6: 2026-11-07T16:00:00 → 2026-11-07T16:19:00
+  taeglich-tiktok-s02-teil-6: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-tiktok-s02-teil-6 eingeplant für 2026-11-07T16:19:00 (6aecedd6bc9c38cc37a49d39)
+  KI-Kennzeichnung laut Zernio: "videoMadeWithAi":false, "videoMadeWithAi":false
+↻ taeglich-tiktok-s02-teil-7: 2026-11-07T20:00:00 → 2026-11-07T20:12:00
+  taeglich-tiktok-s02-teil-7: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-tiktok-s02-teil-7 eingeplant für 2026-11-07T20:12:00 (6aeceddabc9c38cc37a49d5f)
+  KI-Kennzeichnung laut Zernio: "videoMadeWithAi":false, "videoMadeWithAi":false
+↻ taeglich-tiktok-s02-teil-8: 2026-11-08T08:00:00 → 2026-11-08T08:27:00
+  taeglich-tiktok-s02-teil-8: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-tiktok-s02-teil-8 eingeplant für 2026-11-08T08:27:00 (6aeceddfbc9c38cc37a49dc3)
+  KI-Kennzeichnung laut Zernio: "videoMadeWithAi":false, "videoMadeWithAi":false
+↻ taeglich-insta-s02-f01: 2026-11-06T10:00:00 → 2026-11-06T09:35:00
+  taeglich-insta-s02-f01: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-insta-s02-f01 eingeplant für 2026-11-06T09:35:00 (6aecede2bc9c38cc37a49dd5)
+↻ taeglich-insta-s02-f02: 2026-11-06T12:00:00 → 2026-11-06T11:43:00
+  taeglich-insta-s02-f02: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-insta-s02-f02 eingeplant für 2026-11-06T11:43:00 (6aecede5c7e775e8e13555ba)
+↻ taeglich-insta-s02-f03: 2026-11-06T14:00:00 → 2026-11-06T13:33:00
+  taeglich-insta-s02-f03: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-insta-s02-f03 eingeplant für 2026-11-06T13:33:00 (6aecede8bc9c38cc37a49e00)
+↻ taeglich-insta-s02-f04: 2026-11-06T16:00:00 → 2026-11-06T15:35:00
+  taeglich-insta-s02-f04: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-insta-s02-f04 eingeplant für 2026-11-06T15:35:00 (6aecedebbc9c38cc37a49e14)
+↻ taeglich-insta-s02-f05: 2026-11-06T18:00:00 → 2026-11-06T17:50:00
+  taeglich-insta-s02-f05: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-insta-s02-f05 eingeplant für 2026-11-06T17:50:00 (6aecedeebc9c38cc37a49e37)
+↻ taeglich-insta-s02-f06: 2026-11-06T20:00:00 → 2026-11-06T20:15:00
+  taeglich-insta-s02-f06: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-insta-s02-f06 eingeplant für 2026-11-06T20:15:00 (6aecedf1bc9c38cc37a49e4a)
+↻ taeglich-insta-s02-f07: 2026-11-06T22:00:00 → 2026-11-06T21:59:00
+  taeglich-insta-s02-f07: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-insta-s02-f07 eingeplant für 2026-11-06T21:59:00 (6aecedf4bc9c38cc37a49e5e)
+↻ taeglich-insta-s02-f08: 2026-11-07T00:00:00 → 2026-11-06T23:39:00
+  taeglich-insta-s02-f08: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-insta-s02-f08 eingeplant für 2026-11-06T23:39:00 (6aecedf7bc9c38cc37a49e80)
+↻ taeglich-yt-s02-f01: 2026-11-06T10:30:00 → 2026-11-06T10:59:00
+  taeglich-yt-s02-f01: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-yt-s02-f01 eingeplant für 2026-11-06T10:59:00 (6aecedfabc9c38cc37a49ea0)
+↻ taeglich-yt-s02-f02: 2026-11-06T12:30:00 → 2026-11-06T12:15:00
+  taeglich-yt-s02-f02: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-yt-s02-f02 eingeplant für 2026-11-06T12:15:00 (6aecedfdc7e775e8e13555e5)
+↻ taeglich-yt-s02-f03: 2026-11-06T14:30:00 → 2026-11-06T14:59:00
+  taeglich-yt-s02-f03: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-yt-s02-f03 eingeplant für 2026-11-06T14:59:00 (6aecedffbc9c38cc37a49eab)
+↻ taeglich-yt-s02-f04: 2026-11-06T16:30:00 → 2026-11-06T16:16:00
+  taeglich-yt-s02-f04: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-yt-s02-f04 eingeplant für 2026-11-06T16:16:00 (6aecee02c7e775e8e13555e9)
+↻ taeglich-yt-s02-f05: 2026-11-06T18:30:00 → 2026-11-06T18:26:00
+  taeglich-yt-s02-f05: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-yt-s02-f05 eingeplant für 2026-11-06T18:26:00 (6aecee05bc9c38cc37a49ed1)
+↻ taeglich-yt-s02-f06: 2026-11-06T20:30:00 → 2026-11-06T20:28:00
+  taeglich-yt-s02-f06: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-yt-s02-f06 eingeplant für 2026-11-06T20:28:00 (6aecee07bc9c38cc37a49edf)
+↻ taeglich-yt-s02-f07: 2026-11-06T22:30:00 → 2026-11-06T22:29:00
+  taeglich-yt-s02-f07: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-yt-s02-f07 eingeplant für 2026-11-06T22:29:00 (6aecee0ac7e775e8e13555fe)
+↻ taeglich-yt-s02-f08: 2026-11-07T00:30:00 → 2026-11-07T00:15:00
+  taeglich-yt-s02-f08: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-yt-s02-f08 eingeplant für 2026-11-07T00:15:00 (6aecee0dbc9c38cc37a49f1f)
+↻ taeglich-tiktok-en-s02-teil-1-v2: 2026-11-06T01:00:00 → 2026-11-06T00:53:00
+  taeglich-tiktok-en-s02-teil-1-v2: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-tiktok-en-s02-teil-1-v2 eingeplant für 2026-11-06T00:53:00 (6aecee10bc9c38cc37a49f31)
+  KI-Kennzeichnung laut Zernio: "videoMadeWithAi":false, "videoMadeWithAi":false
+↻ taeglich-tiktok-en-s02-teil-2-v2: 2026-11-06T16:00:00 → 2026-11-06T15:48:00
+  taeglich-tiktok-en-s02-teil-2-v2: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-tiktok-en-s02-teil-2-v2 eingeplant für 2026-11-06T15:48:00 (6aecee13bc9c38cc37a49f46)
+  KI-Kennzeichnung laut Zernio: "videoMadeWithAi":false, "videoMadeWithAi":false
+↻ taeglich-tiktok-en-s02-teil-3-v2: 2026-11-06T20:00:00 → 2026-11-06T20:27:00
+  taeglich-tiktok-en-s02-teil-3-v2: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-tiktok-en-s02-teil-3-v2 eingeplant für 2026-11-06T20:27:00 (6aecee16bc9c38cc37a49f60)
+  KI-Kennzeichnung laut Zernio: "videoMadeWithAi":false, "videoMadeWithAi":false
+↻ taeglich-tiktok-en-s02-teil-4-v2: 2026-11-07T08:00:00 → 2026-11-07T08:19:00
+  taeglich-tiktok-en-s02-teil-4-v2: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-tiktok-en-s02-teil-4-v2 eingeplant für 2026-11-07T08:19:00 (6aecee19bc9c38cc37a49f7e)
+  KI-Kennzeichnung laut Zernio: "videoMadeWithAi":false, "videoMadeWithAi":false
+↻ taeglich-tiktok-en-s02-teil-5-v2: 2026-11-07T12:00:00 → 2026-11-07T12:04:00
+  taeglich-tiktok-en-s02-teil-5-v2: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-tiktok-en-s02-teil-5-v2 eingeplant für 2026-11-07T12:04:00 (6aecee1cbc9c38cc37a49fa8)
+  KI-Kennzeichnung laut Zernio: "videoMadeWithAi":false, "videoMadeWithAi":false
+↻ taeglich-tiktok-en-s02-teil-6-v2: 2026-11-07T16:00:00 → 2026-11-07T16:20:00
+  taeglich-tiktok-en-s02-teil-6-v2: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-tiktok-en-s02-teil-6-v2 eingeplant für 2026-11-07T16:20:00 (6aecee20bc9c38cc37a49feb)
+  KI-Kennzeichnung laut Zernio: "videoMadeWithAi":false, "videoMadeWithAi":false
+↻ taeglich-tiktok-en-s02-teil-7-v2: 2026-11-07T20:00:00 → 2026-11-07T19:33:00
+  taeglich-tiktok-en-s02-teil-7-v2: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-tiktok-en-s02-teil-7-v2 eingeplant für 2026-11-07T19:33:00 (6aecee23c7e775e8e135563c)
+  KI-Kennzeichnung laut Zernio: "videoMadeWithAi":false, "videoMadeWithAi":false
+↻ taeglich-tiktok-en-s02-teil-8-v2: 2026-11-08T08:00:00 → 2026-11-08T08:01:00
+  taeglich-tiktok-en-s02-teil-8-v2: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-tiktok-en-s02-teil-8-v2 eingeplant für 2026-11-08T08:01:00 (6aecee26bc9c38cc37a4a04d)
+  KI-Kennzeichnung laut Zernio: "videoMadeWithAi":false, "videoMadeWithAi":false
+↻ taeglich-insta-en-s02-f01-v2: 2026-11-06T10:00:00 → 2026-11-06T10:02:00
+  taeglich-insta-en-s02-f01-v2: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-insta-en-s02-f01-v2 eingeplant für 2026-11-06T10:02:00 (6aecee29bc9c38cc37a4a064)
+↻ taeglich-insta-en-s02-f02-v2: 2026-11-06T12:00:00 → 2026-11-06T12:24:00
+  taeglich-insta-en-s02-f02-v2: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-insta-en-s02-f02-v2 eingeplant für 2026-11-06T12:24:00 (6aecee2cbc9c38cc37a4a08c)
+↻ taeglich-insta-en-s02-f03-v2: 2026-11-06T14:00:00 → 2026-11-06T13:43:00
+  taeglich-insta-en-s02-f03-v2: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-insta-en-s02-f03-v2 eingeplant für 2026-11-06T13:43:00 (6aecee2fbc9c38cc37a4a0a5)
+↻ taeglich-insta-en-s02-f04-v2: 2026-11-06T16:00:00 → 2026-11-06T15:54:00
+  taeglich-insta-en-s02-f04-v2: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-insta-en-s02-f04-v2 eingeplant für 2026-11-06T15:54:00 (6aecee31bc9c38cc37a4a0c4)
+↻ taeglich-insta-en-s02-f05-v2: 2026-11-06T18:00:00 → 2026-11-06T17:40:00
+  taeglich-insta-en-s02-f05-v2: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-insta-en-s02-f05-v2 eingeplant für 2026-11-06T17:40:00 (6aecee35bc9c38cc37a4a0e2)
+↻ taeglich-insta-en-s02-f06-v2: 2026-11-06T20:00:00 → 2026-11-06T19:34:00
+  taeglich-insta-en-s02-f06-v2: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-insta-en-s02-f06-v2 eingeplant für 2026-11-06T19:34:00 (6aecee38bc9c38cc37a4a104)
+↻ taeglich-insta-en-s02-f07-v2: 2026-11-06T22:00:00 → 2026-11-06T21:37:00
+  taeglich-insta-en-s02-f07-v2: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-insta-en-s02-f07-v2 eingeplant für 2026-11-06T21:37:00 (6aecee3bbc9c38cc37a4a126)
+↻ taeglich-insta-en-s02-f08-v2: 2026-11-07T00:00:00 → 2026-11-06T23:40:00
+  taeglich-insta-en-s02-f08-v2: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-insta-en-s02-f08-v2 eingeplant für 2026-11-06T23:40:00 (6aecee3fbc9c38cc37a4a152)
+↻ taeglich-yt-en-s02-f01-v2: 2026-11-06T10:30:00 → 2026-11-06T10:23:00
+  taeglich-yt-en-s02-f01-v2: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-yt-en-s02-f01-v2 eingeplant für 2026-11-06T10:23:00 (6aecee41bc9c38cc37a4a161)
+↻ taeglich-yt-en-s02-f02-v2: 2026-11-06T12:30:00 → 2026-11-06T12:59:00
+  taeglich-yt-en-s02-f02-v2: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-yt-en-s02-f02-v2 eingeplant für 2026-11-06T12:59:00 (6aecee44bc9c38cc37a4a183)
+↻ taeglich-yt-en-s02-f03-v2: 2026-11-06T14:30:00 → 2026-11-06T14:11:00
+  taeglich-yt-en-s02-f03-v2: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-yt-en-s02-f03-v2 eingeplant für 2026-11-06T14:11:00 (6aecee46c7e775e8e13556b0)
+↻ taeglich-yt-en-s02-f04-v2: 2026-11-06T16:30:00 → 2026-11-06T16:20:00
+  taeglich-yt-en-s02-f04-v2: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-yt-en-s02-f04-v2 eingeplant für 2026-11-06T16:20:00 (6aecee49fe59dd43e210c225)
+↻ taeglich-yt-en-s02-f05-v2: 2026-11-06T18:30:00 → 2026-11-06T18:46:00
+  taeglich-yt-en-s02-f05-v2: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-yt-en-s02-f05-v2 eingeplant für 2026-11-06T18:46:00 (6aecee4cbc9c38cc37a4a1b9)
+↻ taeglich-yt-en-s02-f06-v2: 2026-11-06T20:30:00 → 2026-11-06T20:32:00
+  taeglich-yt-en-s02-f06-v2: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-yt-en-s02-f06-v2 eingeplant für 2026-11-06T20:32:00 (6aecee4ebc9c38cc37a4a1cc)
+↻ taeglich-yt-en-s02-f07-v2: 2026-11-06T22:30:00 → 2026-11-06T22:55:00
+  taeglich-yt-en-s02-f07-v2: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-yt-en-s02-f07-v2 eingeplant für 2026-11-06T22:55:00 (6aecee51c7e775e8e13556c2)
+↻ taeglich-yt-en-s02-f08-v2: 2026-11-07T00:30:00 → 2026-11-07T00:22:00
+  taeglich-yt-en-s02-f08-v2: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-yt-en-s02-f08-v2 eingeplant für 2026-11-07T00:22:00 (6aecee55c7e775e8e13556eb)
+↻ taeglich-tiktok-s01-teil-1-v2: 2026-11-08T12:00:00 → 2026-11-08T11:49:00
+  taeglich-tiktok-s01-teil-1-v2: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-tiktok-s01-teil-1-v2 eingeplant für 2026-11-08T11:49:00 (6aecee5a09c4c92cce491472)
+  KI-Kennzeichnung laut Zernio: "videoMadeWithAi":false, "videoMadeWithAi":false
+↻ taeglich-tiktok-s01-teil-2-v2: 2026-11-08T16:00:00 → 2026-11-08T16:18:00
+  taeglich-tiktok-s01-teil-2-v2: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-tiktok-s01-teil-2-v2 eingeplant für 2026-11-08T16:18:00 (6aecee5f9b5bccb3a94e5ef7)
+  KI-Kennzeichnung laut Zernio: "videoMadeWithAi":false, "videoMadeWithAi":false
+↻ taeglich-tiktok-s01-teil-3-v2: 2026-11-08T20:00:00 → 2026-11-08T19:51:00
+  taeglich-tiktok-s01-teil-3-v2: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-tiktok-s01-teil-3-v2 eingeplant für 2026-11-08T19:51:00 (6aecee6609c4c92cce4914eb)
+  KI-Kennzeichnung laut Zernio: "videoMadeWithAi":false, "videoMadeWithAi":false
+↻ taeglich-tiktok-s01-teil-4-v2: 2026-11-09T08:00:00 → 2026-11-09T08:28:00
+  taeglich-tiktok-s01-teil-4-v2: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-tiktok-s01-teil-4-v2 eingeplant für 2026-11-09T08:28:00 (6aecee6bc7e775e8e1355730)
+  KI-Kennzeichnung laut Zernio: "videoMadeWithAi":false, "videoMadeWithAi":false
+↻ taeglich-insta-s01-f01-v2: 2026-11-07T02:00:00 → 2026-11-07T01:47:00
+  taeglich-insta-s01-f01-v2: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-insta-s01-f01-v2 eingeplant für 2026-11-07T01:47:00 (6aecee6ff40d2b222fd93f6f)
+↻ taeglich-insta-s01-f02-v2: 2026-11-07T04:00:00 → 2026-11-07T03:46:00
+  taeglich-insta-s01-f02-v2: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-insta-s01-f02-v2 eingeplant für 2026-11-07T03:46:00 (6aecee729b5bccb3a94e5fa8)
+↻ taeglich-insta-s01-f03-v2: 2026-11-07T06:00:00 → 2026-11-07T06:29:00
+  taeglich-insta-s01-f03-v2: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-insta-s01-f03-v2 eingeplant für 2026-11-07T06:29:00 (6aecee769b5bccb3a94e5fcc)
+↻ taeglich-insta-s01-f04-v2: 2026-11-07T08:00:00 → 2026-11-07T07:50:00
+  taeglich-insta-s01-f04-v2: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-insta-s01-f04-v2 eingeplant für 2026-11-07T07:50:00 (6aecee79f40d2b222fd93fd3)
+↻ taeglich-insta-s01-f05-v2: 2026-11-07T10:00:00 → 2026-11-07T10:10:00
+  taeglich-insta-s01-f05-v2: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-insta-s01-f05-v2 eingeplant für 2026-11-07T10:10:00 (6aecee7ef40d2b222fd94003)
+↻ taeglich-insta-s01-f06-v2: 2026-11-07T12:00:00 → 2026-11-07T12:02:00
+  taeglich-insta-s01-f06-v2: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-insta-s01-f06-v2 eingeplant für 2026-11-07T12:02:00 (6aecee840de06023bb45043f)
+↻ taeglich-insta-s01-f07-v2: 2026-11-07T14:00:00 → 2026-11-07T14:18:00
+  taeglich-insta-s01-f07-v2: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-insta-s01-f07-v2 eingeplant für 2026-11-07T14:18:00 (6aecee890959cd021580d592)
+↻ taeglich-insta-s01-f08-v2: 2026-11-07T16:00:00 → 2026-11-07T16:07:00
+  taeglich-insta-s01-f08-v2: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-insta-s01-f08-v2 eingeplant für 2026-11-07T16:07:00 (6aecee8ea9341cd8c66bb0b4)
+↻ taeglich-insta-s01-f09-v2: 2026-11-07T18:00:00 → 2026-11-07T17:30:00
+  taeglich-insta-s01-f09-v2: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-insta-s01-f09-v2 eingeplant für 2026-11-07T17:30:00 (6aecee929c674b22342b6e27)
+↻ taeglich-insta-s01-f10-v2: 2026-11-07T20:00:00 → 2026-11-07T20:28:00
+  taeglich-insta-s01-f10-v2: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-insta-s01-f10-v2 eingeplant für 2026-11-07T20:28:00 (6aecee9525d739434d6ad690)
+↻ taeglich-yt-s01-f01-v2: 2026-11-07T02:30:00 → 2026-11-07T02:20:00
+  taeglich-yt-s01-f01-v2: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-yt-s01-f01-v2 eingeplant für 2026-11-07T02:20:00 (6aecee98c5456884fcd59940)
+↻ taeglich-yt-s01-f02-v2: 2026-11-07T04:30:00 → 2026-11-07T04:38:00
+  taeglich-yt-s01-f02-v2: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-yt-s01-f02-v2 eingeplant für 2026-11-07T04:38:00 (6aecee9b9c674b22342b6e47)
+↻ taeglich-yt-s01-f03-v2: 2026-11-07T06:30:00 → 2026-11-07T06:34:00
+  taeglich-yt-s01-f03-v2: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-yt-s01-f03-v2 eingeplant für 2026-11-07T06:34:00 (6aecee9ec5456884fcd5995e)
+↻ taeglich-yt-s01-f04-v2: 2026-11-07T08:30:00 → 2026-11-07T08:47:00
+  taeglich-yt-s01-f04-v2: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-yt-s01-f04-v2 eingeplant für 2026-11-07T08:47:00 (6aeceea2d658d96b8204f09f)
+↻ taeglich-yt-s01-f05-v2: 2026-11-07T10:30:00 → 2026-11-07T10:48:00
+  taeglich-yt-s01-f05-v2: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-yt-s01-f05-v2 eingeplant für 2026-11-07T10:48:00 (6aeceea7f61656bf3d9a67c4)
+↻ taeglich-yt-s01-f06-v2: 2026-11-07T12:30:00 → 2026-11-07T12:59:00
+  taeglich-yt-s01-f06-v2: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-yt-s01-f06-v2 eingeplant für 2026-11-07T12:59:00 (6aeceeaac5456884fcd5999f)
+↻ taeglich-yt-s01-f07-v2: 2026-11-07T14:30:00 → 2026-11-07T14:04:00
+  taeglich-yt-s01-f07-v2: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-yt-s01-f07-v2 eingeplant für 2026-11-07T14:04:00 (6aeceead25d739434d6ad702)
+↻ taeglich-yt-s01-f08-v2: 2026-11-07T16:30:00 → 2026-11-07T16:20:00
+  taeglich-yt-s01-f08-v2: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-yt-s01-f08-v2 eingeplant für 2026-11-07T16:20:00 (6aeceeafa9341cd8c66bb10b)
+↻ taeglich-yt-s01-f09-v2: 2026-11-07T18:30:00 → 2026-11-07T18:47:00
+  taeglich-yt-s01-f09-v2: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-yt-s01-f09-v2 eingeplant für 2026-11-07T18:47:00 (6aeceeb20de06023bb450547)
+↻ taeglich-tiktok-001-v2: 2026-11-09T12:00:00 → 2026-11-09T11:45:00
+  taeglich-tiktok-001-v2: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-tiktok-001-v2 eingeplant für 2026-11-09T11:45:00 (6aeceeb50959cd021580d62f)
+  KI-Kennzeichnung laut Zernio: "videoMadeWithAi":false, "videoMadeWithAi":false
+Fertig: 72 neu eingeplant, 0 Fehler.
