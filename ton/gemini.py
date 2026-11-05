@@ -48,12 +48,12 @@ LEBENDIG = (", betone die entscheidenden Wörter deutlich, folge der Spannung mi
 
 # Englische Fassung (`@sprache en`, Jonathans Wunsch 3.11.: jede Staffel auch auf Englisch für TikTok @storys4you_eng)
 SPRACHE = "de"
-STIMMUNGEN_EN = {
-    "duester": "a dark short story for TikTok: deep, dry, close male voice, brisk, quietly menacing",
-    "spannend": "a gripping short story for TikTok: deep, close male voice, brisk, tense, with pressure",
-    "traurig": "a sad, moving short story: deep, warm, close male voice, calm and soft, with feeling, never cheesy",
-    "freudig": "a joyful, sweeping short story: deep, warm male voice, lively, with a smile in the voice, brisk",
-    "warm": "a thoughtful, warm-hearted short story: deep, warm, close male voice, calm and honest, like a good friend",
+STIMMUNGEN_EN = {  # 5.11.: ohne „deep“ – Jonathan fand die tiefe englische Stimme unnatürlich
+    "duester": "a dark short story for TikTok: natural, relaxed male voice at its normal pitch, close and dry, quietly menacing",
+    "spannend": "a gripping short story for TikTok: natural, relaxed male voice at its normal pitch, close, tense, with pressure",
+    "traurig": "a sad, moving short story: natural, warm male voice at its normal pitch, calm and soft, with feeling, never cheesy",
+    "freudig": "a joyful, sweeping short story: natural, warm male voice at its normal pitch, lively, with a smile in the voice",
+    "warm": "a thoughtful, warm-hearted short story: natural, warm male voice at its normal pitch, calm and honest, like a good friend",
 }
 LEBENDIG_EN = (", stress the key words clearly, follow the tension with pace and volume: faster and more urgent in "
                "danger, slower and softer with emotion, a short pause before every twist, never over the top")
