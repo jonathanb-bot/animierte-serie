@@ -141,14 +141,14 @@ def _anfrage(text: str, stimme: str) -> np.ndarray:
 
 def _block_audio(zeilen: list[str], stimme: str, log=print) -> np.ndarray:
     text = "\n".join(zeilen)
-    h = hashlib.sha1(f"{MODELL}|{stimme}|{STIL}|{text}{'|ton2' if SPRACHE == 'en' else ''}".encode()).hexdigest()[:20]
+    h = hashlib.sha1(f"{MODELL}|{stimme}|{STIL}|{text}|ton2".encode()).hexdigest()[:20]
     ziel = CACHE / f"gemini_{h}.f32"
     if ziel.exists():
         return np.fromfile(ziel, np.float32)
     log(f"    Gemini ({stimme}): {len(zeilen)} Zeilen …")
     x = _anfrage(text, stimme)
-    if SPRACHE == "en":
-        # 5.11. (Jonathan): Englisch soll genau so hoch klingen wie Deutsch (106 Hz), aber ohne starkes
+    if True:  # Deutsch und Englisch (5.11.)
+        # 5.11. (Jonathan): die Stimme soll überall gleich hoch klingen (106 Hz), aber ohne starkes
         # Nachpitchen (das klang unnatürlich). Liegt Gemini mehr als MAX_HT daneben, neu anfragen und die
         # natürlich passendste Fassung nehmen; den kleinen Rest gleicht ton.angleichen aus.
         from .angleichen import ZIEL_HZ, grundton_array

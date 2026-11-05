@@ -111,6 +111,7 @@ def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("staffel", help="z. B. s01")
     ap.add_argument("--probe", action="store_true", help="alles prüfen und vorbereiten, aber nichts pushen")
+    ap.add_argument("--ersetzen", metavar="SUFFIX", help="neu vertonte Fassung: neue Post-IDs mit -SUFFIX (die alten vorher in plan.loeschen eintragen)")
     a = ap.parse_args(argv)
 
     daten = json.loads(STAFFELN.read_text(encoding="utf-8"))
@@ -196,6 +197,7 @@ def main(argv=None) -> int:
     plan_datei = repo_main / "posten" / "plan.json"
     plan = json.loads(plan_datei.read_text(encoding="utf-8"))
     loeschen, ids = set(plan.get("loeschen") or []), {p["id"] for p in plan["posts"]}
+    endung = f"-{a.ersetzen}" if a.ersetzen else ""
     frueh = dt.datetime.now(V.BERLIN).replace(tzinfo=None, second=0, microsecond=0) + VORLAUF
     em, tags_txt, titel = st.get("emoji", ""), " ".join(st["hashtags"]), st["titel"]
     neu = []
@@ -220,16 +222,16 @@ def main(argv=None) -> int:
                 else f"Folge {f['nr'] + 1} kommt als Nächstes. Abonnier den Kanal, damit du sie nicht verpasst.")
 
     anhaengen("tiktok", [{
-        "id": f"taeglich-tiktok-{a.staffel}-teil-{t['k']}",
+        "id": f"taeglich-tiktok-{a.staffel}-teil-{t['k']}{endung}",
         "video": RAW.format(pfad=f"taeglich-tiktok/{a.staffel}-teil-{t['k']}.mp4"),
         "text": (f"{titel} – Teil {t['k']}/{len(teile)} (Folge {t['folgen'][0]}–{t['folgen'][-1]}) {em}\n"
                  + " · ".join(st["folgen"][n - 1]["titel"] for n in t["folgen"])
                  + f"\n{st['beschreibung']}\nFolg mir, damit du keinen Teil verpasst!\n\n{tags_txt} #fyp")} for t in teile])
     anhaengen("instagram", [{
-        "id": f"taeglich-insta-{f['id']}", "video": RAW.format(pfad=f"taeglich/{f['id']}.mp4"),
+        "id": f"taeglich-insta-{f['id']}{endung}", "video": RAW.format(pfad=f"taeglich/{f['id']}.mp4"),
         "text": f"{titel} – Folge {f['nr']}: {f['titel']} {em}\n{f.get('beschreibung') or st['beschreibung']}\n{weiter(f, '@sto.rys4you')}\n\n{tags_txt} #reels"} for f in folgen])
     anhaengen("youtube", [{
-        "id": f"taeglich-yt-{f['id']}", "video": RAW.format(pfad=f"taeglich/{f['id']}.mp4"),
+        "id": f"taeglich-yt-{f['id']}{endung}", "video": RAW.format(pfad=f"taeglich/{f['id']}.mp4"),
         "titel": f"{titel} – Folge {f['nr']}: {f['titel']} {em} #shorts"[:100],
         "tags": (st.get("tags") or ["animation", "story"]) + ["shorts"],
         "text": f"{f.get('beschreibung') or st['beschreibung']}\n{weiter(f, None)}\n\n{tags_txt} #shorts"} for f in folgen])
@@ -252,6 +254,8 @@ def main(argv=None) -> int:
     V.pushen(repo_main, "main")
     print("Plan gepusht – der Workflow „Posts einplanen“ prüft jedes Video und plant bei Zernio ein. Bis er fertig ist, nichts auf main pushen.")
 
+    if a.ersetzen:
+        st["ersetzt"] = {**(st.get("ersetzt") or {}), **(st.get("veroeffentlicht") or {})}
     st["veroeffentlicht"] = {p["id"]: p["zeit"] for p in neu}
     STAFFELN.write_text(json.dumps(daten, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     print("staffeln.json aktualisiert – jetzt den Branch „taeglich“ committen und pushen.")
