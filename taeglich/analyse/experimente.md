@@ -68,6 +68,7 @@ Reihenfolge als Vorschlag; die Analyse darf tauschen, aber jedes Genre kommt bis
 | – | s02 | (Format-Rotation) TikTok-Einzelposts statt Sammelteile | 8 Einzelposts | Wiedergabe in % der Länge, Aufrufe/h | offen |
 | E3 | s03 | Wer nur eine Folge sieht, bleibt länger, wenn der erste Satz die Grund-Regel der Welt enthält (späte Teile ohne sie verlieren zwischen 5 und 30 s die Hälfte) | Folge 1 und 3 mit Grund-Prämisse + neuer Lage, Folge 2 und 4 nur neue Lage | TikTok Bindung 10 s/30 s, Ø Wiedergabe, Follows; Instagram Ø Wiedergabe (F3 gegen F2/F4) | offen |
 | E4 | s03 | Ohne Untertitel wirkt das Bild ruhiger und cleaner, die Leute schauen genauer hin und bleiben trotzdem (Jonathans Test-Wunsch 5.11.) | ganze Staffel `@untertitel aus` (Hook-Text, `gross=` und Schrift im Bild bleiben) | TikTok Bindung 3 s/10 s, Ø Wiedergabe in % der Länge, Instagram Ø Wiedergabe – gegen s01/s02 (mit Untertiteln); E3 innerhalb von s03 bleibt davon unberührt | offen |
+| E5 | s04 | Ein Hook „Ende zuerst“ (das Ende der Folge im ersten Satz, dann Rücksprung) hält Fremde länger als der direkte Einstieg in die Lage | ungerade Folgen Ende zuerst, gerade Folgen direkte Lage (Fall + Ort + Uhrzeit), sonst gleich, ±5 s | Instagram/YouTube Ø Wiedergabe und Abbruch je Folge (6 gegen 6), TikTok Bindung 4 s/12 s je Sammelteil nach Art der ersten Folge | offen (vorgeschlagen 5.11.) |
 
 ## Ergebnisse (je Analyse ergänzen, mit Datum)
 
@@ -77,4 +78,10 @@ Reihenfolge als Vorschlag; die Analyse darf tauschen, aber jedes Genre kommt bis
   - **Hook-Art (alte Serien, je 1–3 Posts, Tendenz):** kühne Prämisse (mann-teil-1) 46,7 s > Rätsel mit Gefahr (alien-teil-1) 37,3 s > 24. Stock 27–31 s. Instagram: Prämissen-Serie 14,6–16,0 s gegen Rätsel-Serie Median ca. 8 s (2 gegen 14 Posts, gleiche Takt-Lage).
   - **YouTube 4.11.:** kein neuer Short über 89 Aufrufe (am 3.11. zwei über 1.100); Kanal trotzdem +3.470 Aufrufe. Am 5.11. mit vidIQ prüfen.
   - Welt, Genre, Erzählform, Cliffhanger-Art, Kulisse: noch keine Werte (s01 ab 5.11., s02 ab 6.11.). E1, E2 weiter offen.
+- **5.11. (126 Posts, noch keine Zahlen aus s01/s02; Bericht `2026-11-05.md`):**
+  - **Teil-1-Effekt bestätigt (3. Datenpunkt, 9 TikTok-Posts, Tendenz):** mann-teil-4 (F9–10, Einstieg mit Vorwissen) hat den schwächsten Start aller TikToks: 36 % nach 4 s, 19 % nach 12 s, Ø 14,4 s, 1 Follow; mann-teil-1 46 %/37 %/Ø 47,0 s/5 Follows. TikTok-Aufrufe streuen kaum (768–1.115), der Unterschied liegt nur in Bindung und Follows.
+  - **YouTube-Reichweite neuer Shorts eingebrochen (starker Absturz):** Median je Post 1.477 (30.10.) → 505 (1.11.) → 18 (3.11.) → 13 (4.11.) → 3 (5.11., jung); Kanal je Tag laut vidIQ 4.126–5.704 (30.10.–2.11.) → 1.700 (3.11.). Bindung der neuen Shorts gut (64–86 %), also eher Ausspielung als Inhalt. Ursache nicht trennbar: 12 Uploads/Tag (#14) und späte Teile ohne Einstieg. Jonathan informiert.
+  - **Instagram:** Tagessumme stabil (ca. 2.100), Median je Reel seit 2-h-Takt 135–233 (vorher 949–1.531).
+  - **Genre Lebenszeit (1. Datenpunkt, 1 Post):** video-001 „Die Zeit, die dir bleibt“ auf Instagram 381 Aufrufe in 9 h = 39,2/h, Ø 16,1 s, Abbruch 31,8 %, 2 Saves – 6–10 × alle anderen Reels der Woche (2,0–6,8/h). YouTube 2 Aufrufe (Takt-Problem). Tendenz, im Genre-Plan s10 prüfen, ggf. früher.
+  - Welt, Erzählform, Hook-Art, Cliffhanger-Art, Kulisse, E1–E4: weiter offen (TikTok-Zahlen für s01 ab 6.11., Instagram/YouTube s01 ab 6.–7.11.).
 

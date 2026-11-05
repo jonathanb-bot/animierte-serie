@@ -158,6 +158,57 @@
    },
    "erkenntnis": "Nur Teil 1 einer Serie hält: spätere Teile verlieren zwischen 5 und 30 s die Hälfte, weil ihre Prämisse Vorwissen braucht → jede Folge braucht die Grund-Regel der Welt im ersten Satz (E3 in s03).",
    "vidiq_credits_danach": 139
+  },
+  {
+   "datum": "2026-11-05T21:50",
+   "quelle": "Analyse vor der Staffel (Zernio 126 Posts + vidIQ channel_analytics je Video/Tag + Ausreißer)",
+   "tiktok": {
+    "follower": 67,
+    "follower_metrik": 68,
+    "follower_30_tage": "+16/-0",
+    "likes_30_tage": 1411,
+    "videos": 19,
+    "mann_teil_4": "36 % nach 4 s, 19 % nach 12 s, Ø 14,4 s, 1 Follow",
+    "aufrufe_spanne": "768–1.115",
+    "fuer_dich": "94–97 %"
+   },
+   "tiktok_eng": {
+    "konto": "storys4you_eng",
+    "follower": 0,
+    "videos": 0
+   },
+   "instagram": {
+    "follower": 7,
+    "aufrufe_30_tage": 27677,
+    "reichweite_30_tage": 14172,
+    "aktive_konten": 244,
+    "interaktionen_30_tage": 352,
+    "median_je_reel_2h_takt": "135–233",
+    "video_001": "381 Aufrufe, 39,2/h, Ø 16,1 s, 2 Saves"
+   },
+   "youtube": {
+    "abonnenten": 54,
+    "aufrufe_gesamt_vidiq": 22078,
+    "videos": 54,
+    "aufrufe_30_tage_zernio": 21198,
+    "abos_30_tage": "+49/-7",
+    "kanal_je_tag_vidiq": {
+     "2026-10-30": 4469,
+     "2026-10-31": 5704,
+     "2026-11-01": 4126,
+     "2026-11-02": 5491,
+     "2026-11-03": 1700
+    },
+    "median_neue_shorts": {
+     "2026-11-01": 505,
+     "2026-11-03": 18,
+     "2026-11-04": 13,
+     "2026-11-05": 3
+    }
+   },
+   "erkenntnis": "YouTube spielt neue Shorts seit 3.11. kaum noch aus (Median 13 bzw. 3, Bindung gut) – Takt 12/Tag und späte Teile ohne Einstieg; Teil-1-Effekt auf TikTok zum 3. Mal bestätigt; video-001 (Lebenszeit) bestes Instagram-Reel der Woche.",
+   "posting_fehler": 0,
+   "vidiq_credits_danach": 124
   }
  ],
  "letzte_analyse": "taeglich/analyse/2026-11-04.md"
