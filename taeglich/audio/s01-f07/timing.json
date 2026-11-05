@@ -1,12 +1,12 @@
 {
- "dauer": 82.356,
+ "dauer": 80.484,
  "einstellungen": [
   {
    "nr": 1,
    "typ": "netz",
    "kapitel": 1,
    "start": 0.0,
-   "dauer": 5.39,
+   "dauer": 5.51,
    "emotion": "erzaehlend",
    "text": "Ein Mensch braucht sofort einen Arzt. Und kein Telefon der Welt funktioniert."
   },
@@ -14,8 +14,8 @@
    "nr": 2,
    "typ": "wohnzimmer",
    "kapitel": 1,
-   "start": 5.39,
-   "dauer": 4.67,
+   "start": 5.51,
+   "dauer": 4.862,
    "emotion": "erzaehlend",
    "text": "Opa atmet flach. Lina hält seine Hand. Ben rennt im Kreis."
   },
@@ -23,8 +23,8 @@
    "nr": 3,
    "typ": "gesicht",
    "kapitel": 2,
-   "start": 10.06,
-   "dauer": 4.262,
+   "start": 10.372,
+   "dauer": 4.334,
    "emotion": "spannend",
    "text": "Du willst die Eins-Eins-Zwei wählen. Aus Gewohnheit. Kein Balken."
   },
@@ -32,8 +32,8 @@
    "nr": 4,
    "typ": "gesicht",
    "kapitel": 2,
-   "start": 14.322,
-   "dauer": 5.462,
+   "start": 14.706,
+   "dauer": 5.078,
    "emotion": "ernst",
    "text": "Da klappt der alte Funker sein Gerät auf. „Ganz ruhig. Dafür ist das hier da.“"
   },
@@ -42,7 +42,7 @@
    "typ": "objekt",
    "kapitel": 2,
    "start": 19.784,
-   "dauer": 5.942,
+   "dauer": 5.51,
    "emotion": "erklaerend",
    "text": "Bei großen Ausfällen helfen Funkamateure, Nachrichten weiterzugeben. Ganz ohne Netz."
   },
@@ -50,8 +50,8 @@
    "nr": 6,
    "typ": "grossstadt",
    "kapitel": 2,
-   "start": 25.726,
-   "dauer": 5.75,
+   "start": 25.294,
+   "dauer": 5.582,
    "emotion": "erzaehlend",
    "text": "Sein Ruf geht von Funker zu Funker. Quer durch die ganze Stadt. Bis zur Feuerwehr."
   },
@@ -59,8 +59,8 @@
    "nr": 7,
    "typ": "gesicht",
    "kapitel": 3,
-   "start": 31.476,
-   "dauer": 3.998,
+   "start": 30.876,
+   "dauer": 3.782,
    "emotion": "erzaehlend",
    "text": "Dann knackt es. „Wagen ist unterwegs. Zehn Minuten.“"
   },
@@ -68,8 +68,8 @@
    "nr": 8,
    "typ": "gesicht",
    "kapitel": 3,
-   "start": 35.474,
-   "dauer": 4.958,
+   "start": 34.658,
+   "dauer": 5.15,
    "emotion": "ruhig",
    "text": "Zehn Minuten können sehr lang sein. Opa drückt deine Hand. Ganz schwach."
   },
@@ -77,8 +77,8 @@
    "nr": 9,
    "typ": "landschaft",
    "kapitel": 3,
-   "start": 40.432,
-   "dauer": 4.79,
+   "start": 39.808,
+   "dauer": 4.334,
    "emotion": "erzaehlend",
    "text": "Dann siehst du es. Blaulicht. Mitten in einer Stadt ohne Licht."
   },
@@ -86,8 +86,8 @@
    "nr": 10,
    "typ": "krankenhaus",
    "kapitel": 3,
-   "start": 45.222,
-   "dauer": 5.534,
+   "start": 44.142,
+   "dauer": 5.87,
    "emotion": "erzaehlend",
    "text": "Das Krankenhaus läuft mit Notstrom. Große Generatoren im Keller, die anspringen, wenn das Netz ausfällt."
   },
@@ -95,8 +95,8 @@
    "nr": 11,
    "typ": "gesicht",
    "kapitel": 3,
-   "start": 50.756,
-   "dauer": 3.974,
+   "start": 50.012,
+   "dauer": 3.758,
    "emotion": "ernst",
    "text": "Die Ärzte arbeiten mit Papier und Kugelschreiber. Wie früher."
   },
@@ -104,8 +104,8 @@
    "nr": 12,
    "typ": "krankenhaus",
    "kapitel": 4,
-   "start": 54.73,
-   "dauer": 5.486,
+   "start": 53.77,
+   "dauer": 5.174,
    "emotion": "erzaehlend",
    "text": "Und dann geht die Tür auf. Mama. Papa. Der Zettel vom Funker hat sie gefunden."
   },
@@ -113,8 +113,8 @@
    "nr": 13,
    "typ": "gesicht",
    "kapitel": 4,
-   "start": 60.216,
-   "dauer": 4.19,
+   "start": 58.944,
+   "dauer": 3.974,
    "emotion": "froh",
    "text": "Mama sagt kein Wort. Sie hält euch einfach fest. Alle beide."
   },
@@ -122,8 +122,8 @@
    "nr": 14,
    "typ": "gesicht",
    "kapitel": 4,
-   "start": 64.406,
-   "dauer": 3.638,
+   "start": 62.918,
+   "dauer": 3.422,
    "emotion": "traurig",
    "text": "Papa setzt sich zu Opa. „Wir hätten viel öfter kommen sollen.“"
   },
@@ -131,8 +131,8 @@
    "nr": 15,
    "typ": "gesicht",
    "kapitel": 4,
-   "start": 68.044,
-   "dauer": 2.51,
+   "start": 66.34,
+   "dauer": 2.462,
    "emotion": "froh",
    "text": "Opa lächelt. „Jetzt seid ihr ja da.“"
   },
@@ -140,8 +140,8 @@
    "nr": 16,
    "typ": "krankenhaus",
    "kapitel": 4,
-   "start": 70.554,
-   "dauer": 3.23,
+   "start": 68.802,
+   "dauer": 3.254,
    "emotion": "erzaehlend",
    "text": "Der Arzt sagt: Er ist stabil. Ihr dürft bleiben."
   },
@@ -149,8 +149,8 @@
    "nr": 17,
    "typ": "polarlicht",
    "kapitel": 5,
-   "start": 73.784,
-   "dauer": 3.758,
+   "start": 72.056,
+   "dauer": 4.022,
    "emotion": "erzaehlend",
    "text": "Durchs Fenster siehst du, wie sich der Himmel langsam grün färbt."
   },
@@ -158,8 +158,8 @@
    "nr": 18,
    "typ": "gesicht",
    "kapitel": 5,
-   "start": 77.542,
-   "dauer": 4.814,
+   "start": 76.078,
+   "dauer": 4.406,
    "emotion": "spannend",
    "text": "Der zweite Sturm ist da. Und im ganzen Krankenhaus gehen die Lichter aus."
   }
