@@ -1,0 +1,76 @@
+# Der Nachahmer – Folge 3: Benni
+@musik musik/s03-f03.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung traurig
+@vortrag lebendig
+@mund zitate
+@qualitaet max
+@look 0.75
+@kino 0.5
+@stil leuchtend
+@palette blau
+@zeit nacht
+@untertitel aus
+
+== Hook ==
+// See bei Nacht, Nebel über dem Wasser
+[waldnacht see palette=blau palette_staerke=0.6 zoom-rein hooktext="ER IST SEIT EINEM JAHR TOT"] Etwas in diesem Wald ahmt Stimmen nach. Um Mitternacht ruft es mit der Stimme von Bens Opa. Und Bens Opa ist seit einem Jahr tot.
+
+== Wiedererkennen ==
+// Infokarte: Mitternacht
+[titel oben="Es ist" gross="00:00" unten="Mama ist noch nicht da" farbe=#0e1630 akzent=#9fd0ff groesse=170 hud=false zoom-rein] Es ist Mitternacht. Mama müsste jetzt da sein. Ist sie nicht.
+// Nahaufnahme: du horchst
+[gesicht du ort=wohnzimmer zeit=nacht besorgt palette=blau palette_staerke=0.6] Draußen ist es seit zwanzig Minuten still. Das ist schlimmer als jedes Klicken.
+// Hütte innen, ihr sitzt dicht zusammen
+[wohnzimmer du ben sofa_sitzen zeit=nacht palette=blau palette_staerke=0.6 zoom-rein] Ihr sitzt mit einer Decke auf dem Sofa. Die Taschenlampe zeigt auf die Tür.
+// Nahaufnahme: Ben zählt
+[gesicht ben ort=wohnzimmer zeit=nacht besorgt palette=blau palette_staerke=0.6] Ben zählt die Holzscheite neben dem Kamin. Elf. Er zählt sie dreimal.
+// Landschaft: See im Mondlicht
+[landschaft zeit=nacht see palette=blau palette_staerke=0.6 zoom-raus] Dann kommt die Stimme vom See. Ruhig. Ein bisschen heiser.
+// Nahaufnahme: Opa, freundlich
+[gesicht opa ort=see zeit=nacht froh palette=blau palette_staerke=0.6] „Benni! Komm, wir gehen angeln. Die Barsche beißen.“
+// Nahaufnahme: Ben erstarrt
+[gesicht ben ort=wohnzimmer zeit=nacht traurig palette=blau palette_staerke=0.6 zoom-rein] Ben bewegt sich nicht mehr. Nur einer hat ihn je Benni genannt.
+
+== Steigerung ==
+// Nahaufnahme: Ben erzählt leise
+[gesicht ben ort=wohnzimmer zeit=nacht traurig palette=blau palette_staerke=0.6] „Wir waren jeden Sonntag hier. Genau an diesem See.“
+// See bei Abend, Steg
+[landschaft zeit=abend see schwenk-rechts palette=blau palette_staerke=0.6] Opa hat ihm hier das Schwimmen beigebracht. Und wie man einen Wurm aufspießt, ohne zu heulen.
+// Nahaufnahme: Ben lächelt traurig
+[gesicht ben ort=wohnzimmer zeit=nacht traurig palette=blau palette_staerke=0.6] „Er hat immer gesagt: Zeit hat man nicht. Zeit nimmt man sich.“
+// Landschaft am See, früher, Tag
+[see opa ben sitzen zeit=abend palette=blau palette_staerke=0.6 schwenk-rechts] Letzten Sommer hat Opa noch einmal gefragt. Ben hatte keine Zeit. Training, Freunde, irgendwas.
+// Krankenhaus
+[krankenhaus patient=opa monitor=flach palette=blau palette_staerke=0.6 zoom-rein] Zwei Wochen später lag Opa im Krankenhaus. Ben wollte zurückrufen. Morgen. Dann übermorgen.
+// Nahaufnahme: Ben, Tränen
+[gesicht ben ort=wohnzimmer zeit=nacht traurig palette=blau palette_staerke=0.6] „Ich hab nie zurückgerufen.“
+// Infokarte: Opas Uhr
+[objekt objekte="uhr:Opas Uhr" gross="Tickt noch" farbe=#0e1630] An Bens Handgelenk tickt Opas alte Uhr. Er hat sie seit der Beerdigung nicht abgenommen.
+// Nahaufnahme: du denkst an Mama
+[gesicht du ort=wohnzimmer zeit=nacht traurig palette=blau palette_staerke=0.6] Du denkst an Mama. Wann wart ihr das letzte Mal einfach so zusammen? Ohne Handy. Ohne Eile.
+
+== Wendung ==
+// Opa ruft wieder
+[gesicht opa ort=see zeit=nacht traurig palette=blau palette_staerke=0.6] „Benni. Ich warte.“
+// Wohnzimmer: Ben steht auf, geht zur Tür
+[wohnzimmer du ben zeit=nacht palette=blau palette_staerke=0.6 zoom-rein] Ben steht auf. Er geht zur Tür. Du hältst ihn am Ärmel fest.
+// Nahaufnahme: du
+[gesicht du ort=wohnzimmer zeit=nacht entschlossen palette=blau palette_staerke=0.6] „Das ist er nicht, Ben.“
+// Nahaufnahme: Ben
+[gesicht ben ort=wohnzimmer zeit=nacht traurig palette=blau palette_staerke=0.6] „Ich weiß. Ich wollte ihn nur noch einmal hören.“
+// Wohnzimmer: ihr sitzt wieder
+[wohnzimmer du ben sofa_sitzen zeit=nacht zoom-rein palette=blau palette_staerke=0.6] Ihr setzt euch wieder. Ben drückt das Gesicht in die Decke. Draußen ruft es noch dreimal. Dann ist Ruhe.
+// Nahaufnahme: Ben
+[gesicht ben ort=wohnzimmer zeit=nacht traurig palette=blau palette_staerke=0.6] „Wenn wir hier rauskommen, ruf ich alle an. Wirklich alle.“
+// Wald, Augen ganz schwach am See
+[waldnacht see augen=1 palette=blau palette_staerke=0.6 zoom-raus] Und plötzlich verstehst du, was das heißt. Es kennt Opas Stimme. Also war es schon letzten Sommer hier. Es hat zugehört.
+// Nahaufnahme: du, Angst
+[gesicht du ort=wohnzimmer zeit=nacht angst palette=blau palette_staerke=0.6] Wer weiß, wie viele Stimmen es schon gesammelt hat. Sommer für Sommer.
+
+== Cliffhanger ==
+// Handy: Nachricht von Mama
+[handy ort=wohnzimmer zeit=nacht netz=1 akku=9 uhrzeit="00:47" von="Mama" nachricht="Baum auf der Straße. Auto steht. Ich lauf den Rest." palette=blau palette_staerke=0.6 zoom-rein] Um null Uhr siebenundvierzig schreibt Mama. Ein Baum liegt auf der Straße. Sie läuft den Rest. Zu Fuß. Durch den Wald.
+// Nahaufnahme: du, Entscheidung
+[gesicht du ort=wohnzimmer zeit=nacht entschlossen palette=blau palette_staerke=0.6 zoom-rein] Sie weiß nicht, was da draußen wartet. Du schon. Du ziehst deine Jacke an.

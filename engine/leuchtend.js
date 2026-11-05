@@ -217,4 +217,100 @@
     });
     A._dunkel = 0;
   };
+
+  // =====================================================================
+  // WALDNACHT – Wald bei Nacht (s03 Horror-Test): Mond im Dunst, Stämme in 4 Ebenen mit Tiefenunschärfe, Nebelbänder,
+  // Mondstrahlen, Waldboden mit Farnen, Pilzen und Wurzeln, Glühwürmchen. Kein Blut, kein Wesen in voller Gestalt.
+  // (lampe = Taschenlampenstrahl von unten, huette = Hütte mit Licht im Fenster, see = Seeufer mit Spiegelung,
+  //  augen = zwei lange, helle Augen weit oben zwischen den Bäumen (1 = schwach, 2 = deutlich), gross, figur_y)
+  // =====================================================================
+  SZ.waldnacht = (s, t) => {
+    const P = { oben: "#070b22", mitte: "#13204a", horizont: "#2b4a7a", mond: "#eef4ff", nebel: "#8fb0d8",
+      stamm: ["#24365e", "#1a284a", "#121c38", "#0b1228"], boden: "#0f1a34", gruen: "#1f3a52", lampe: "#fff1c8", fenster: "#ffc66a" };
+    const mx = 820, my = 330;
+    // Himmel und Mond
+    ctx.fillStyle = lgrad(0, -700, 0, 1200, [[0, P.oben], [0.6, P.mitte], [1, P.horizont]]); ctx.fillRect(-1500, -1500, 4080, 3200);
+    { const r = rnd(101); for (let i = 0; i < 90; i++) { const x = -200 + r() * 1500, y = -300 + r() * 900, a = 0.4 + 0.5 * Math.sin(t * (0.4 + r()) + i * 2.1); circle(x, y, 1.2 + r() * 2.2, rgba("#dfe8ff", 0.55 * a)); } }
+    glut(mx, my, 700, "#6f8fd0", 0.45); glut(mx, my, 220, "#dfe9ff", 0.8); circle(mx, my, 70, P.mond);
+    circle(mx - 22, my - 12, 14, rgba("#b8c6e6", 0.5)); circle(mx + 18, my + 20, 10, rgba("#b8c6e6", 0.45)); circle(mx + 10, my - 30, 7, rgba("#b8c6e6", 0.4));
+    A.licht(mx, my, 700, "#a8c0ff", 0.8);
+    // Wolkenschleier vor dem Mond
+    { const wx = 700 + Math.sin(t * 0.08) * 60; for (const [dx, dy, rx] of [[0, 0, 220], [180, 30, 160], [-160, 40, 140]]) ellipse(wx + dx, my + 70 + dy, rx, 26, rgba("#5a74a8", 0.35)); }
+    // Stamm mit Ästen, Randlicht von rechts (Mond)
+    const stamm = (x, y0, b, h, farbe, r, licht) => {
+      ctx.beginPath(); ctx.moveTo(x - b * 0.5, y0); ctx.lineTo(x - b * 0.32, y0 - h); ctx.lineTo(x + b * 0.32, y0 - h); ctx.lineTo(x + b * 0.5, y0);
+      ctx.quadraticCurveTo(x + b * 0.9, y0 + 12, x + b * 1.1, y0 + 30); ctx.lineTo(x - b * 1.1, y0 + 30); ctx.quadraticCurveTo(x - b * 0.9, y0 + 12, x - b * 0.5, y0); ctx.closePath();
+      ctx.fillStyle = farbe; ctx.fill();
+      box(x + b * 0.12, y0 - h, b * 0.2, h, b * 0.1, rgba(licht, 0.18));
+      for (let k = 0; k < 3; k++) { const ay = y0 - h * (0.45 + r() * 0.4), s0 = r() < 0.5 ? -1 : 1, al = b * (1.5 + r() * 2);
+        ctx.beginPath(); ctx.moveTo(x, ay); ctx.quadraticCurveTo(x + s0 * al * 0.5, ay - al * 0.2, x + s0 * al, ay - al * 0.5); ctx.lineWidth = b * 0.18; ctx.strokeStyle = farbe; ctx.lineCap = "round"; ctx.stroke(); }
+      for (let k = 0; k < 4; k++) { const ry = y0 - r() * h * 0.8; line(x - b * 0.2 + r() * b * 0.3, ry, x - b * 0.2 + r() * b * 0.3, ry + 30 + r() * 60, 3, rgba("#000010", 0.18)); }
+    };
+    // Ebenen: hinten hell und dunstig, vorne dunkel und scharf
+    for (const [name, unsch, y0, farbe, n, bmin, seed, hell] of [["w1", 5, 1080, P.stamm[0], 16, 26, 103, 0.5], ["w2", 3, 1160, P.stamm[1], 11, 40, 107, 0.35], ["w3", 1.2, 1260, P.stamm[2], 8, 62, 109, 0.25]]) {
+      ebene(name, unsch, () => {
+        const r = rnd(seed);
+        ctx.fillStyle = mix(farbe, P.horizont, hell * 0.6); ctx.fillRect(-1500, y0 - 10, 4080, 1400);
+        let x = -260 + r() * 80; while (x < 1360) { const b = bmin + r() * bmin * 0.8; stamm(x, y0, b, y0 + 600, mix(farbe, P.horizont, hell * 0.5), r, P.mond); x += 1300 / n + r() * 90; }
+        // Nebelband vor dieser Ebene
+        ctx.fillStyle = lgrad(0, y0 - 220, 0, y0 + 40, [[0, rgba(P.nebel, 0)], [0.6, rgba(P.nebel, 0.22 * (1 + hell))], [1, rgba(P.nebel, 0.08)]]); ctx.fillRect(-1500, y0 - 220, 4080, 260);
+      });
+      // ziehende Nebelschwaden
+      { const r = rnd(seed + 5); for (let i = 0; i < 4; i++) { const x = ((r() * 1800 + t * (12 + r() * 10)) % 1800) - 400; ellipse(x, y0 - 60 - r() * 80, 260 + r() * 200, 34 + r() * 20, rgba(P.nebel, 0.08 + r() * 0.06)); } }
+    }
+    // Mondstrahlen durch die Bäume
+    ctx.save(); ctx.globalCompositeOperation = "screen";
+    for (const [w, b, a] of [[0.42, 60, 0.12], [0.62, 40, 0.09], [0.85, 90, 0.07], [0.25, 30, 0.08]]) {
+      ctx.save(); ctx.translate(mx, my); ctx.rotate(w); ctx.fillStyle = lgrad(0, 0, 0, 1600, [[0, rgba("#bcd0ff", a)], [1, rgba("#bcd0ff", 0)]]); poly([[-b * 0.2, 0], [b * 0.2, 0], [b, 1600], [-b, 1600]]); ctx.fill(); ctx.restore(); }
+    ctx.restore();
+    // Augen weit oben zwischen den Bäumen (nie die ganze Gestalt): lang, hell, blinzeln selten
+    if (s.augen) {
+      const st = Number(s.augen) >= 2 ? 1 : 0.55, ax = 560, ay = 640, zu = (Math.sin(t * 0.9) > 0.985) ? 0.15 : 1;
+      ebene("umriss", 12, () => { box(ax - 90, ay - 70, 180, 1000, 90, rgba("#03050f", 0.55 * st)); }); // nur ein Umriss im Dunst, so hoch wie die Bäume
+      glut(ax, ay, 260, "#9fd0ff", 0.35 * st);
+      for (const dx of [-46, 46]) { glut(ax + dx, ay, 70, "#e8f4ff", 0.7 * st); ellipse(ax + dx, ay, 10, 34 * zu, rgba("#f4fbff", 0.95 * st)); }
+    }
+    // Hütte auf der Lichtung mit warmem Fenster
+    if (s.huette) {
+      const hx = 620, hy = 1290, hb = 360, hh = 230;
+      ellipse(hx + hb / 2, hy + 8, hb * 0.7, 24, rgba("#02040e", 0.5));
+      box(hx, hy - hh, hb, hh, 6, "#1d2a4a"); for (let k = 0; k < 6; k++) box(hx, hy - hh + 10 + k * 38, hb, 6, 2, rgba("#000010", 0.25));
+      poly([[hx - 40, hy - hh + 4], [hx + hb / 2, hy - hh - 150], [hx + hb + 40, hy - hh + 4]], "#141d36"); line(hx + hb / 2, hy - hh - 150, hx + hb + 40, hy - hh + 4, 6, rgba(P.mond, 0.25));
+      box(hx + hb * 0.7, hy - hh - 120, 34, 80, 4, "#141d36");
+      const fx = hx + 60, fy = hy - hh + 70; box(fx - 6, fy - 6, 102, 92, 6, "#0f1630"); box(fx, fy, 90, 80, 4, P.fenster); line(fx + 45, fy, fx + 45, fy + 80, 6, "#0f1630"); line(fx, fy + 40, fx + 90, fy + 40, 6, "#0f1630");
+      glut(fx + 45, fy + 40, 320, P.fenster, 0.4 * (0.92 + 0.08 * Math.sin(t * 3.1))); A.licht(fx + 45, fy + 40, 300, P.fenster, 0.8);
+      box(hx + 220, hy - 150, 80, 150, 6, "#0f1630");
+    }
+    // Boden: Lichtung, Weg, Wurzeln, Farne, Pilze
+    ctx.fillStyle = lgrad(0, 1260, 0, 2200, [[0, mix(P.boden, P.horizont, 0.35)], [1, shade(P.boden, -0.3)]]); ctx.fillRect(-1500, 1260, 4080, 1400);
+    if (s.see) { ellipse(560, 1420, 760, 110, "#16305a"); ellipse(560, 1416, 700, 90, "#1f4278");
+      for (let k = 0; k < 6; k++) box(mx - 140 + Math.sin(t + k) * 10, 1360 + k * 16, 280 - k * 36, 5, 2, rgba("#dfe9ff", 0.35 - k * 0.04)); }
+    { const r = rnd(121);
+      ctx.beginPath(); ctx.moveTo(420, 2200); ctx.bezierCurveTo(470, 1700, 640, 1500, 560, 1300); ctx.lineTo(620, 1300); ctx.bezierCurveTo(740, 1500, 760, 1800, 820, 2200); ctx.closePath(); ctx.fillStyle = rgba("#3a5280", 0.35); ctx.fill();
+      for (let i = 0; i < 7; i++) { const x = -60 + r() * 1200, y = 1400 + r() * 500; ctx.beginPath(); ctx.moveTo(x, y); ctx.quadraticCurveTo(x + 60, y - 30, x + 140 + r() * 60, y + 10); ctx.lineWidth = 12; ctx.strokeStyle = "#0b1328"; ctx.lineCap = "round"; ctx.stroke(); }
+      for (let i = 0; i < 9; i++) farn(-40 + r() * 1180, 1500 + r() * 450, 80 + r() * 90, (r() - 0.5) * 0.7, P.gruen, mix(P.gruen, "#5a8ab0", 0.35));
+      for (let i = 0; i < 5; i++) { const x = 80 + r() * 940, y = 1560 + r() * 360, g = 10 + r() * 12; ellipse(x, y + g * 0.9, g * 1.3, g * 0.3, rgba("#000010", 0.3)); box(x - g * 0.2, y, g * 0.4, g * 0.9, 3, "#c8d4ee"); ellipse(x, y, g, g * 0.6, "#5a7ac0"); circle(x - g * 0.3, y - g * 0.1, g * 0.15, rgba("#ffffff", 0.6)); }
+      for (let i = 0; i < 14; i++) buesch(-50 + r() * 1180, 1450 + r() * 600, 22 + r() * 26, shade(P.gruen, -0.1 + r() * 0.2), r); }
+    // Taschenlampe: Lichtkegel von unten ins Bild, Staub im Strahl
+    if (s.lampe) {
+      ctx.save(); ctx.globalCompositeOperation = "screen";
+      const lx = 560, ly = 2150, zx = 600 + Math.sin(t * 0.6) * 40, zy = 1180;
+      ctx.fillStyle = lgrad(0, ly, 0, zy, [[0, rgba(P.lampe, 0.8)], [1, rgba(P.lampe, 0.12)]]); poly([[lx - 40, ly], [lx + 40, ly], [zx + 260, zy], [zx - 260, zy]]); ctx.fill();
+      ellipse(zx, zy + 40, 300, 70, rgba(P.lampe, 0.12));
+      { const r = rnd(131); for (let i = 0; i < 40; i++) { const f = r(), x = lerp(lx, zx, f) + (r() - 0.5) * 400 * f, y = lerp(ly, zy, f) + Math.sin(t * 1.2 + i) * 8; circle(x, y, 2 + r() * 2, rgba("#ffffff", 0.35 * (0.6 + 0.4 * Math.sin(t * 2 + i)))); } }
+      ctx.restore();
+    }
+    // Glühwürmchen
+    { const r = rnd(141); for (let i = 0; i < 22; i++) { const x = -60 + r() * 1200 + Math.sin(t * 0.7 + i) * 20, y = 1150 + r() * 700 + Math.cos(t * 0.5 + i) * 14, a = 0.5 + 0.5 * Math.sin(t * (1.5 + r()) + i); glut(x, y, 18, "#cfe8ff", 0.5 * a); circle(x, y, 2.5, rgba("#f4fbff", 0.9 * a)); } }
+    // Figuren
+    A.figurenZeigen(s, t, s.figur_y ?? (s.gross ? 1640 : 1420), s.gross ? 0.95 : 0.62);
+    // Vordergrund: dunkle, unscharfe Stämme und Farne an den Rändern
+    ebene("wnvorne", 14, () => {
+      const d = "#040714";
+      box(-140, -400, 230, 3000, 40, d); box(1010, -400, 260, 3000, 40, d);
+      farn(-60, 2200, 820, 0.55, shade(d, 0.08), d); farn(1150, 2220, 900, -0.5, shade(d, 0.08), d);
+      for (const [x, y, r0] of [[-40, 2080, 240], [1140, 2060, 260], [260, 2240, 180], [900, 2260, 170]]) circle(x, y, r0, d);
+    });
+    A._dunkel = 0;
+  };
 })();

@@ -1,0 +1,78 @@
+# Der Nachahmer – Folge 2: Die Regeln
+@musik musik/s03-f02.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung duester
+@vortrag lebendig
+@mund zitate
+@qualitaet max
+@look 0.75
+@kino 0.5
+@stil leuchtend
+@palette blau
+@zeit nacht
+@untertitel aus
+
+== Hook ==
+// Hütte im Wald, das Fensterlicht flackert und geht aus
+[waldnacht huette palette=blau palette_staerke=0.6 wackeln=0.2 zoom-rein hooktext="NICHT ANTWORTEN"] Es ist elf Uhr nachts, der Strom ist weg, und vor deiner Hütte steht etwas mit der Stimme deiner Mutter.
+
+== Wiedererkennen ==
+// Hütte innen, dunkel, nur Kaminglut
+[wohnzimmer du ben sofa_sitzen zeit=nacht palette=blau palette_staerke=0.6 zoom-rein] Das Licht ist um dreiundzwanzig Uhr einfach ausgegangen. Jetzt leuchtet nur noch die Glut im Kamin.
+// Wohnzimmer: Schrank vor die Tür
+[wohnzimmer du ben zeit=nacht zoom-rein palette=blau palette_staerke=0.6] Ihr schiebt den Schrank vor die Tür. Er ist schwerer als gedacht. Ben flucht leise.
+// Wald durch den Fensterspalt
+[waldnacht lampe zoom-rein palette=blau palette_staerke=0.6] Durch einen Spalt im Fensterladen siehst du den Nebel. Er zieht gegen den Wind.
+// Nahaufnahme: Ben flüstert
+[gesicht ben ort=wohnzimmer zeit=nacht angst palette=blau palette_staerke=0.6] „Okay. Ich hab jetzt offiziell Angst. Und Hunger.“
+// Nahaufnahme: du, Taschenlampe im Gesicht
+[gesicht du ort=wohnzimmer zeit=nacht besorgt palette=blau palette_staerke=0.6] Draußen ist es still. Aber du weißt, dass es noch da ist. Das Klicken hört nie ganz auf.
+// Handy: Ben sucht im Netz
+[handy ort=wohnzimmer zeit=nacht netz=1 akku=29 uhrzeit="23:09" von="Suche" nachricht="Tiere, die Stimmen nachahmen" palette=blau palette_staerke=0.6] Ben findet mit einem einzigen Balken Netz tatsächlich etwas.
+
+== Steigerung ==
+// Infokarte: der Leierschwanz
+[titel oben="In Australien lebt der" gross="Leierschwanz" unten="er ahmt Kettensägen nach" farbe=#0e1630 akzent=#9fd0ff groesse=150 hud=false zoom-rein] In Australien lebt ein Vogel, der Leierschwanz. Er ahmt Kettensägen nach. Kameras. Sogar Autoalarme.
+// Nahaufnahme: Ben, trocken
+[gesicht ben ort=wohnzimmer zeit=nacht besorgt palette=blau palette_staerke=0.6] „Vielleicht ist es ja ein Vogel. Ein sehr großer, sehr unhöflicher Vogel.“
+// Wald, Nebel
+[waldnacht palette=blau palette_staerke=0.6 zoom-raus] Aber kein Vogel ahmt ganze Sätze nach. Und kein Vogel ist so groß wie ein Baum.
+// Infokarte: eure Regeln
+[objekt objekte="ohr:Nicht antworten|schluessel:Tür bleibt zu|taschenlampe:Lampe bleibt an" gross="Eure Regeln" farbe=#0e1630] Ihr macht drei Regeln. Nicht antworten. Die Tür bleibt zu. Die Lampe bleibt an.
+// Nahaufnahme: Ben
+[gesicht ben ort=wohnzimmer zeit=nacht besorgt palette=blau palette_staerke=0.6] „Regel vier: Das letzte Toastbrot gehört mir.“
+// Wald, die Stimme kommt wieder
+[waldnacht huette palette=blau palette_staerke=0.6 wackeln=0.2] Um dreiundzwanzig Uhr zwanzig ruft es wieder.
+// Nahaufnahme: Mamas Stimme
+[gesicht mama ort=waldnacht froh palette=blau palette_staerke=0.6] „Hast du dir die Zähne geputzt? Die oben links auch?“
+// Nahaufnahme: du, es trifft dich
+[gesicht du ort=wohnzimmer zeit=nacht angst palette=blau palette_staerke=0.6 zoom-rein] Das hat Mama heute Morgen am Auto gesagt. Wörtlich. Draußen. Wo der Wald anfängt.
+// Wohnzimmer, du verstehst es
+[wohnzimmer du ben zeit=nacht palette=blau palette_staerke=0.6 zoom-rein] Es denkt sich nichts aus. Es hört zu. Und es merkt sich alles.
+// Nahaufnahme: du denkst nach
+[gesicht du ort=wohnzimmer zeit=nacht besorgt palette=blau palette_staerke=0.6] Du gehst im Kopf jeden Satz durch, den du heute draußen gesagt hast.
+// Wald, Nebel, eine Stimme
+[waldnacht wackeln=0.2 zoom-rein palette=blau palette_staerke=0.6] Dann hörst du aus dem Wald deine eigene Stimme. „Mama, ich hab echt keinen Bock auf Wald.“
+// Nahaufnahme: du, eiskalt
+[gesicht du ort=wohnzimmer zeit=nacht angst zoom-rein palette=blau palette_staerke=0.6] Das hast du heute Nachmittag gesagt. Beim Aussteigen. Es übt.
+
+== Wendung ==
+// Handy: Nachricht an Mama
+[handy ort=wohnzimmer zeit=nacht netz=1 akku=21 uhrzeit="23:47" von="Mama" nachricht="Bin unterwegs. Bleibt drin. Macht niemandem auf." palette=blau palette_staerke=0.6] Kurz vor Mitternacht kommt endlich eine Nachricht. Sie ist unterwegs.
+// Handy: Akku
+[handy ort=wohnzimmer zeit=nacht netz=1 akku=19 uhrzeit="23:49" von="Akku" nachricht="Noch neunzehn Prozent" palette=blau palette_staerke=0.6] Dein Akku hat noch neunzehn Prozent. Bens Handy ist schon aus.
+// Nahaufnahme: Ben pfeift leise
+[gesicht ben ort=wohnzimmer zeit=nacht besorgt palette=blau palette_staerke=0.6] Ben pfeift leise vor sich hin. Drei kurze Pfiffe. Das macht er immer, wenn er nervös ist.
+// Nahaufnahme: Ben merkt es nicht
+[gesicht ben ort=wohnzimmer zeit=nacht angst palette=blau palette_staerke=0.6] „Sorry. Das geht von allein.“
+// Nahaufnahme: du hältst ihm den Mund zu
+[gesicht du ort=wohnzimmer zeit=nacht angst palette=blau palette_staerke=0.6] „Ben. Nicht.“
+// Wald, Augen ganz schwach zwischen den Bäumen
+[waldnacht augen=1 palette=blau palette_staerke=0.6 zoom-rein] Zu spät.
+
+== Cliffhanger ==
+// Hütte von außen, Nebel
+[waldnacht huette palette=blau palette_staerke=0.6 wackeln=0.3 zoom-rein] Aus dem Wald kommen drei kurze Pfiffe zurück. Genau Bens Melodie.
+// Nahaufnahme: Ben, kreidebleich
+[gesicht ben ort=wohnzimmer zeit=nacht angst palette=blau palette_staerke=0.6 zoom-rein] Ben hört auf zu pfeifen. Aber draußen pfeift es weiter. Und es kommt näher.

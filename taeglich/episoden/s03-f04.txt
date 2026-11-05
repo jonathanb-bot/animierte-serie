@@ -1,0 +1,84 @@
+# Der Nachahmer – Folge 4: Leuchtturm
+@musik musik/s03-f04.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung warm
+@vortrag lebendig
+@mund zitate
+@qualitaet max
+@look 0.75
+@kino 0.5
+@stil leuchtend
+@palette blau
+@zeit nacht
+@untertitel aus
+
+== Hook ==
+// Wald, du und Ben mit Taschenlampe auf dem Weg
+[waldnacht du ben lampe palette=blau palette_staerke=0.6 zoom-rein hooktext="DU GEHST RAUS"] Deine Mutter läuft gerade allein durch einen dunklen Wald. Und du gehst ihr entgegen.
+
+== Wiedererkennen ==
+// Nahaufnahme: Ben, entschlossen
+[gesicht ben ort=waldnacht entschlossen palette=blau palette_staerke=0.6] „Ich bleib direkt hinter dir. Wenn ich schreie, ist das kein Witz.“
+// Infokarte: Regeln für draußen
+[objekt objekte="ohr:Nicht antworten|herz:Nicht trennen|taschenlampe:Weitergehen" gross="Regeln für draußen" farbe=#0e1630 palette=blau palette_staerke=0.6] Draußen gelten neue Regeln. Nicht antworten. Nicht trennen. Nicht stehen bleiben.
+// Wald, Lampe zittert
+[waldnacht du ben lampe wackeln=0.2 zoom-rein palette=blau palette_staerke=0.6] Der Lichtstrahl zittert, weil deine Hand zittert. Ben hält sich an deinem Rucksack fest.
+// Wald mit Nebel, Lampe
+[waldnacht du lampe palette=blau palette_staerke=0.6 schwenk-links] Es ist ein Uhr. Der Boden ist nass. Bei jedem Schritt knackt ein Ast, und jedes Mal bleibt dein Herz kurz stehen.
+// Wald, Augen schwach
+[waldnacht augen=1 palette=blau palette_staerke=0.6 zoom-rein] Irgendwo oben in den Bäumen: Klick. Klick. Es läuft mit.
+
+== Steigerung ==
+// Wald links: eine Stimme
+[waldnacht palette=blau palette_staerke=0.6 schwenk-links] Dann ruft Mama. Von links.
+// Nahaufnahme: Mama
+[gesicht mama ort=waldnacht froh palette=blau palette_staerke=0.6] „Schatz! Hier bin ich!“
+// Wald rechts: noch eine Stimme
+[waldnacht palette=blau palette_staerke=0.6 schwenk-rechts] Und dann ruft Mama noch einmal. Von rechts.
+// Nahaufnahme: Mama, gleiche Stimme
+[gesicht mama ort=waldnacht besorgt palette=blau palette_staerke=0.6] „Schatz, nicht da lang! Hier!“
+// Nahaufnahme: Ben
+[gesicht ben ort=waldnacht angst palette=blau palette_staerke=0.6] „Welche? Welche ist es?“
+// Nahaufnahme: du, zwischen beiden
+[gesicht du ort=waldnacht angst palette=blau palette_staerke=0.6 wackeln=0.3] Zwei Stimmen. Beide klingen genau wie sie. Eine davon ist nicht deine Mutter.
+// Infokarte: das Wort
+[titel oben="Euer Wort" gross="Leuchtturm" unten="und das Zeichen von früher" farbe=#0e1630 akzent=#ffd38a groesse=150 hud=false zoom-rein] Du holst tief Luft. Und du rufst das einzige Wort, das nur ihr beide kennt.
+// Nahaufnahme: du rufst
+[gesicht du ort=waldnacht entschlossen palette=blau palette_staerke=0.6 zoom-rein] „Leuchtturm!“
+
+== Wendung ==
+// Wald links
+[waldnacht palette=blau palette_staerke=0.6 wackeln=0.2] Von links kommt sofort die Stimme zurück. „Leuchtturm! Leuchtturm!“ Es wiederholt nur dein Wort.
+// Wald rechts, ein kleines Licht blinkt dreimal
+[waldnacht lampe palette=blau palette_staerke=0.6 zoom-rein] Von rechts kommt keine Antwort. Stattdessen blinkt ein kleines Licht. Dreimal. Wie ein Leuchtturm.
+// Nahaufnahme: du verstehst
+[gesicht du ort=waldnacht froh palette=blau palette_staerke=0.6] Das war das Zeichen. Eine Stimme kann es nachmachen. Ein Licht nicht.
+// Wald: du rennst, Mama, Umarmung
+[waldnacht du mama ben palette=blau palette_staerke=0.6 zoom-rein] Du rennst. Mama steht im Nebel, mit ihrer Handylampe. Ihre Jacke riecht nach Regen und Benzin.
+// Nahaufnahme: Mama
+[gesicht mama ort=waldnacht froh palette=blau palette_staerke=0.6] „Ich bin da. Ich bin ja da.“
+// Nahaufnahme: du weinst und lachst
+[gesicht du ort=waldnacht traurig palette=blau palette_staerke=0.6] Du hältst sie so fest, dass sie lacht. Und du lachst mit, obwohl dir die Tränen kommen.
+// Wald: der Weg zurück
+[waldnacht du mama ben lampe schwenk-links palette=blau palette_staerke=0.6] Auf dem Weg zurück redet keiner. Mama hält deine Hand. Wie früher, als du klein warst.
+
+== Zuhause ==
+// Hütte innen, alle drei, Kamin
+[wohnzimmer du mama ben licht=an zeit=nacht palette=blau palette_staerke=0.6 zoom-rein] Um kurz vor zwei sitzt ihr zu dritt vor dem Kamin. Die Tür ist zweimal abgeschlossen.
+// Nahaufnahme: Mama
+[gesicht mama ort=wohnzimmer zeit=nacht froh palette=blau palette_staerke=0.6] „Ab jetzt fahren wir zusammen einkaufen. Alle.“
+// Nahaufnahme: Mama erinnert sich
+[gesicht mama ort=wohnzimmer zeit=nacht froh palette=blau palette_staerke=0.6] „Weißt du noch? Früher hast du jeden Abend Leuchtturm gerufen. Nur damit ich noch mal reinkomme.“
+// Nahaufnahme: du
+[gesicht du ort=wohnzimmer zeit=nacht froh palette=blau palette_staerke=0.6] „Ja. Jeden Abend.“
+// Nahaufnahme: du
+[gesicht du ort=wohnzimmer zeit=nacht froh palette=blau palette_staerke=0.6] Du merkst, wie lange du sie nicht mehr so fest umarmt hast. Jahre vielleicht.
+
+== Cliffhanger ==
+// Hütte von außen, Nebel
+[waldnacht huette palette=blau palette_staerke=0.6 wackeln=0.2 zoom-rein] Dann ruft draußen jemand. Mit Bens Stimme. „Hey! Macht auf! Ich bin noch draußen!“
+// Nahaufnahme: Ben auf dem Sofa, regungslos
+[gesicht ben ort=wohnzimmer zeit=nacht froh palette=blau palette_staerke=0.6 zoom-rein] Du schaust neben dich. Ben sitzt auf dem Sofa. Seit ihr zurück seid, hat er kein Wort gesagt.
+// Nahaufnahme: du, Erkenntnis
+[gesicht du ort=wohnzimmer zeit=nacht angst palette=blau palette_staerke=0.6 zoom-rein] Opas Uhr an seinem Handgelenk tickt nicht mehr.

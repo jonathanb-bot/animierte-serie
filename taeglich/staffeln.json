@@ -526,6 +526,139 @@
     "Und wenn du heute nur eine Sache machst:",
     "Ruf deinen Opa an. Nicht morgen. Heute."
    ]
+  },
+  {
+   "id": "s03",
+   "datum": "2026-11-05",
+   "titel": "Der Nachahmer",
+   "beschreibung": "In diesem Wald gibt es etwas, das Stimmen nachahmt. Eine Nacht in der Hütte am See, und es kennt die Stimme deiner Mutter.",
+   "thema": "Horror ohne Blut (Issue #23): ein eigenes Wesen, das Stimmen nachahmt; eine Nacht in Echtzeit (22–2 Uhr) mit Ben in Mamas Hütte am See; Mama, Bens toter Opa, das Codewort „Leuchtturm“",
+   "hauptstimmung": "duester",
+   "vorbild": "Creepypasta-/Kryptiden-Aufbau (eine Regel, Stille, Stimme, nie die ganze Gestalt) mit Zack-D.-Films-Tempo (alle 15–20 s ein neues Element)",
+   "hashtags": [
+    "#horror",
+    "#gruselgeschichte",
+    "#animation",
+    "#geschichte",
+    "#storytime",
+    "#creepy",
+    "#deutsch"
+   ],
+   "tags": [
+    "animation",
+    "horror",
+    "gruselgeschichte",
+    "creepypasta",
+    "geschichte",
+    "story",
+    "deutsch"
+   ],
+   "emoji": "🌲",
+   "kulissen_neu": [
+    "waldnacht"
+   ],
+   "analyse": {
+    "quelle": "taeglich/analyse/aktuell.md (4.11.2026, 21:45)",
+    "mehr_davon": [
+     "1: erster Satz = Regel des Wesens bzw. neue Lage, die ein Fremder versteht (F1 „In diesem Wald gibt es etwas, das Stimmen nachahmt“)",
+     "2: Sekunde 5–30: Hütte, Kamin, Mamas Anruf, Codewort in schnellen Bildern; danach alle 15–20 s ein neues Element (Klicken, Stimme, Nachricht, Augen)",
+     "3: Wesen nur als Augen und Umriss, nie die ganze Gestalt",
+     "4: Figuren-Fokus Mutter und bester Freund (neu), Mamas Stimme wird nachgeahmt; F3/F4 über Zeit mit Familie",
+     "5: jede Folge trägt allein, Cliffhanger in der letzten Zeile, Arten wechseln"
+    ],
+    "weniger_davon": [
+     "6: keine Titelkarte, kein Serienname, kein „Folge X“, kein Rückblick",
+     "7: kein Atmosphäre-Einstieg ohne Lage im ersten Satz",
+     "8: nur palette=blau (lila nur im Schreckmoment F1), kein Blut, keine Verletzung, eigenes Wesen"
+    ],
+    "experiment": "9 (E3): F1 und F3 beginnen mit der Grund-Regel der Welt plus neuer Lage, F2 und F4 nur mit der neuen Lage. Messen: TikTok Bindung 10 s/30 s, Ø Wiedergabe, Follows; Instagram Ø Wiedergabe (F3 gegen F2/F4). Dazu Jonathans Test E4: ganze Staffel ohne Untertitel (@untertitel aus).",
+    "thema": "10: „Der Nachahmer“ (empfohlen)"
+   },
+   "boegen": [
+    "Codewort „Leuchtturm“, wer es ruft, bekommt ein Zeichen (F1) → zwei Mamas, nur eine antwortet mit Licht statt Stimme (F4)",
+    "Bens drei kurze Pfiffe, wenn er nervös ist (F2) → das Wesen pfeift sie nach (F2) → Ende offen: wer sitzt auf dem Sofa? (F4)",
+    "Opas Uhr tickt an Bens Handgelenk (F3) → „Opas Uhr tickt nicht mehr“ (F4)",
+    "Klicken vor jedem Ruf (F1) → es läuft oben mit (F4)",
+    "Mama klopft immer dreimal (F1, Cliffhanger)"
+   ],
+   "cliffhanger": [
+    "Entdeckung",
+    "Gefahr",
+    "Entscheidung",
+    "falsche Fährte/Rätsel"
+   ],
+   "folgen": [
+    {
+     "nr": 1,
+     "titel": "Klick",
+     "stimmung": "spannend",
+     "beschreibung": "In diesem Wald gibt es etwas, das Stimmen nachahmt. Und heute Nacht ruft es mit der Stimme deiner Mutter.",
+     "familie": true,
+     "hooktext": true,
+     "grundregel": true
+    },
+    {
+     "nr": 2,
+     "titel": "Die Regeln",
+     "stimmung": "duester",
+     "beschreibung": "Der Strom ist weg, und draußen steht etwas, das sich jeden Satz merkt.",
+     "familie": true,
+     "hooktext": true,
+     "grundregel": false
+    },
+    {
+     "nr": 3,
+     "titel": "Benni",
+     "stimmung": "traurig",
+     "beschreibung": "Um Mitternacht ruft es mit der Stimme von Bens Opa. Und Bens Opa ist seit einem Jahr tot.",
+     "familie": true,
+     "hooktext": true,
+     "grundregel": true
+    },
+    {
+     "nr": 4,
+     "titel": "Leuchtturm",
+     "stimmung": "warm",
+     "beschreibung": "Zwei Stimmen rufen mit Mamas Stimme. Nur eine davon ist sie.",
+     "familie": true,
+     "hooktext": true,
+     "grundregel": false
+    }
+   ],
+   "tiktok_teile": [
+    [
+     1
+    ],
+    [
+     2
+    ],
+    [
+     3
+    ],
+    [
+     4
+    ]
+   ],
+   "format": {
+    "folgen": 4,
+    "laengenband": "horror 2–3 min (120–180 s)",
+    "tiktok_teile": 4
+   },
+   "vielfalt": {
+    "welt": "Wald und Hütte am See bei Nacht",
+    "genre": "Horror ohne Blut",
+    "erzaehlform": "eine Nacht in Echtzeit, jede Folge eine Stunde (22–2 Uhr)",
+    "hook_art": "Regel/Warnung",
+    "vorbild_kurz": "Creepypasta + Zack D. Films",
+    "figuren_fokus": "Mutter, bester Freund (Ben), Bens Opa",
+    "laenge": "120–180 s",
+    "folgen": 4,
+    "tiktok": "jede Folge ein Post",
+    "experiment": "E3 Grund-Regel in F1/F3 (+ E4 ohne Untertitel)",
+    "neue_kulissen": [
+     "waldnacht"
+    ]
+   }
   }
  ]
 }

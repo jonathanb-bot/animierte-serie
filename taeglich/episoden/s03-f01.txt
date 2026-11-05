@@ -1,0 +1,82 @@
+# Der Nachahmer – Folge 1: Klick
+@musik musik/s03-f01.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung spannend
+@vortrag lebendig
+@mund zitate
+@qualitaet max
+@look 0.75
+@kino 0.5
+@stil leuchtend
+@palette blau
+@zeit nacht
+@untertitel aus
+
+== Hook ==
+// Wald bei Nacht, ganz oben zwischen den Bäumen zwei lange, helle Augen
+[waldnacht augen=1 palette=blau palette_staerke=0.6 zoom-rein hooktext="ES AHMT STIMMEN NACH"] In diesem Wald gibt es etwas, das Stimmen nachahmt. Und heute Nacht kennt es deine.
+
+== Wiedererkennen ==
+// Hütte am See, warmes Fenster, du und Ben davor
+[waldnacht huette see du ben palette=blau palette_staerke=0.6 schwenk-rechts] Du bist mit Ben in Mamas alter Hütte am See. Zwei Tage, kein WLAN, ein Kamin.
+// See bei Nacht, dahinter der Wald
+[landschaft zeit=nacht see zoom-raus palette=blau palette_staerke=0.6] Draußen liegt der See schwarz und glatt wie ein Handydisplay. Dahinter fängt der Wald an. Kilometer um Kilometer.
+// Nahaufnahme: du erinnerst dich
+[gesicht du ort=wohnzimmer zeit=nacht froh palette=blau palette_staerke=0.6] Du warst zuletzt mit zehn hier. Damals hat Mama dir jeden Abend vorgelesen, bis du eingeschlafen bist.
+// Hütte innen, Kamin, ihr auf dem Sofa
+[wohnzimmer du ben sofa_sitzen licht=an zeit=nacht palette=blau palette_staerke=0.6 zoom-rein] Das Holz knackt im Kamin. Alles riecht nach Harz und nassen Socken.
+// Handy: Mama ruft an
+[handy ort=wohnzimmer zeit=nacht netz=1 akku=41 uhrzeit="22:04" von="Mama" nachricht="Bin im Dorf einkaufen. Um zwölf bin ich da." palette=blau palette_staerke=0.6] Mama ist ins Dorf gefahren. Um Mitternacht will sie zurück sein.
+// Nahaufnahme: Mama am Telefon, ruhig
+[gesicht mama ort=wohnzimmer zeit=nacht entschlossen palette=blau palette_staerke=0.6] „Tür zu, Licht an. Und wenn was ist: Leuchtturm.“
+// Nahaufnahme: du
+[gesicht du ort=wohnzimmer zeit=nacht froh palette=blau palette_staerke=0.6] Leuchtturm ist euer Wort von früher. Wer es ruft, bekommt ein Zeichen zurück.
+// Nahaufnahme: Ben grinst
+[gesicht ben ort=wohnzimmer zeit=nacht froh palette=blau palette_staerke=0.6] „Leuchtturm? Seid ihr ein Geheimdienst mit Hütte?“
+// Hütte innen, Kartenspiel
+[wohnzimmer du ben sofa_sitzen licht=an zeit=nacht schwenk-rechts palette=blau palette_staerke=0.6] Ben verliert beim Kartenspielen zum vierten Mal. Er behauptet, die Karten seien feucht.
+
+== Steigerung ==
+// Uhr an der Wand, Infokarte
+[titel oben="Es ist" gross="22:41" unten="Mama ist noch im Dorf" farbe=#0e1630 akzent=#9fd0ff groesse=170 hud=false zoom-rein] Um zweiundzwanzig Uhr einundvierzig hört ihr es zum ersten Mal.
+// Wald, Nebel zieht, nichts zu sehen
+[waldnacht palette=blau palette_staerke=0.6 wackeln=0.2 zoom-rein] Aus dem Wald kommt ein Geräusch. Klick. Klick. Wie zwei Steine, die man aneinanderschlägt.
+// Nahaufnahme: Ben grinst
+[gesicht ben ort=wohnzimmer zeit=nacht froh palette=blau palette_staerke=0.6] „Ein Reh. Oder ein Bär mit Kastagnetten.“
+// Nahaufnahme: du, ernst
+[gesicht du ort=wohnzimmer zeit=nacht besorgt palette=blau palette_staerke=0.6] Du lachst nicht. Rehe klicken nicht. Und das Geräusch kommt von weit oben.
+// Nahaufnahme: du horchst
+[gesicht du ort=wohnzimmer zeit=nacht besorgt palette=blau palette_staerke=0.6] Dann wird es still. Sogar die Grillen hören auf.
+// Wald, eine Stimme ruft
+[waldnacht huette palette=blau palette_staerke=0.6 zoom-raus] Und dann ruft jemand. Mit Mamas Stimme.
+// Nahaufnahme: Mama, aber im Dunkeln
+[gesicht mama ort=waldnacht froh palette=blau palette_staerke=0.6] „Schatz? Komm mal raus. Ich brauch Hilfe mit den Taschen.“
+// Nahaufnahme: Ben steht auf
+[gesicht ben ort=wohnzimmer zeit=nacht neugierig palette=blau palette_staerke=0.6] „Na also. Deine Mama ist schnell.“
+// Nahaufnahme: du, unsicher
+[gesicht du ort=wohnzimmer zeit=nacht besorgt palette=blau palette_staerke=0.6] Du willst schon aufstehen. Es klingt so sehr nach ihr. Sogar das kleine Seufzen am Ende.
+// Handy: letzte Nachricht von Mama
+[handy ort=wohnzimmer zeit=nacht netz=1 akku=38 uhrzeit="22:43" von="Mama" nachricht="Stehe noch an der Kasse. Dauert." palette=blau palette_staerke=0.6 zoom-rein] Aber vor zwei Minuten hat Mama geschrieben. Sie steht noch an der Kasse. Zwanzig Kilometer von hier.
+// Nahaufnahme: du, kalter Schreck
+[gesicht du ort=wohnzimmer zeit=nacht angst palette=blau palette_staerke=0.6] Draußen ist kein Auto. Kein Licht. Nur diese Stimme.
+
+== Wendung ==
+// Wald: du an der Tür mit der Taschenlampe
+[waldnacht du lampe palette=blau palette_staerke=0.6 zoom-rein] Du nimmst die Taschenlampe. Du machst die Tür nicht auf. Du leuchtest nur durchs Fenster.
+// Wald mit Nebel, niemand da
+[waldnacht lampe zoom-rein palette=blau palette_staerke=0.6] Vor der Hütte steht niemand. Nur Nebel, der zwischen den Stämmen hängt wie nasse Wäsche.
+// Handy: Anruf bei Mama
+[handy ort=wohnzimmer zeit=nacht netz=1 akku=36 uhrzeit="22:46" von="Mama" nachricht="Anruf fehlgeschlagen" palette=blau palette_staerke=0.6] Du rufst Mama an. Ein Balken Netz. Der Anruf bricht ab.
+// Stimme ruft wieder
+[gesicht mama ort=waldnacht traurig palette=blau palette_staerke=0.6] „Schatz, mach auf. Mir ist kalt.“ Genau so, wie sie es immer sagt.
+// Schreckmoment: Augen weit oben, Umriss so hoch wie die Bäume
+[waldnacht augen=2 lampe palette=lila palette_staerke=0.6 wackeln=0.4 zoom-rein] Der Lichtstrahl wandert die Bäume hoch. Und ganz oben, viel zu weit oben, leuchten zwei lange Augen zurück.
+// Nur Wald, die Augen sind weg
+[waldnacht lampe palette=blau palette_staerke=0.6 zoom-raus] Du blinzelst. Weg.
+
+== Cliffhanger ==
+// Hütte innen, ihr erstarrt
+[wohnzimmer du ben licht=an zeit=nacht palette=blau palette_staerke=0.6 wackeln=0.2] Das Klicken ist jetzt nicht mehr im Wald. Es ist direkt am Fenster.
+// Nahaufnahme: du starrst auf die Scheibe
+[gesicht du ort=wohnzimmer zeit=nacht angst palette=blau palette_staerke=0.6 zoom-rein] Und dann klopft es an die Scheibe. Dreimal. Genau so, wie Mama immer klopft.
