@@ -1,12 +1,12 @@
 {
- "dauer": 77.652,
+ "dauer": 72.036,
  "einstellungen": [
   {
    "nr": 1,
    "typ": "bahnhof",
    "kapitel": 1,
    "start": 0.0,
-   "dauer": 4.262,
+   "dauer": 3.542,
    "emotion": "erzaehlend",
    "text": "Your best friend let her train leave without her. For you."
   },
@@ -14,8 +14,8 @@
    "nr": 2,
    "typ": "gesicht",
    "kapitel": 1,
-   "start": 4.262,
-   "dauer": 3.278,
+   "start": 3.542,
+   "dauer": 2.75,
    "emotion": "ernst",
    "text": "“I don't care about the money. I care about the lie.”"
   },
@@ -23,8 +23,8 @@
    "nr": 3,
    "typ": "gesicht",
    "kapitel": 1,
-   "start": 7.54,
-   "dauer": 2.702,
+   "start": 6.292,
+   "dauer": 2.726,
    "emotion": "traurig",
    "text": "“I know. I was scared everything would change.”"
   },
@@ -32,8 +32,8 @@
    "nr": 4,
    "typ": "grossstadt",
    "kapitel": 2,
-   "start": 10.242,
-   "dauer": 5.03,
+   "start": 9.018,
+   "dauer": 4.262,
    "emotion": "erzaehlend",
    "text": "You walk home together. Mia pulls her suitcase, you carry her bag."
   },
@@ -41,8 +41,8 @@
    "nr": 5,
    "typ": "gesicht",
    "kapitel": 2,
-   "start": 15.272,
-   "dauer": 3.398,
+   "start": 13.28,
+   "dauer": 3.59,
    "emotion": "froh",
    "text": "“Well, it did. You've gotten really bad at lying.”"
   },
@@ -50,8 +50,8 @@
    "nr": 6,
    "typ": "see",
    "kapitel": 2,
-   "start": 18.67,
-   "dauer": 5.222,
+   "start": 16.87,
+   "dauer": 4.502,
    "emotion": "erzaehlend",
    "text": "At the lake, she skips a stone. Five times. Yours sinks again."
   },
@@ -59,8 +59,8 @@
    "nr": 7,
    "typ": "esstisch",
    "kapitel": 3,
-   "start": 23.892,
-   "dauer": 8.702,
+   "start": 21.372,
+   "dauer": 7.958,
    "emotion": "erzaehlend",
    "text": "Sunday. Grandpa's birthday. He's at the head of the table with his crutches. And for the first time in eight months, every chair is taken."
   },
@@ -68,8 +68,8 @@
    "nr": 8,
    "typ": "gesicht",
    "kapitel": 3,
-   "start": 32.594,
-   "dauer": 4.382,
+   "start": 29.33,
+   "dauer": 4.094,
    "emotion": "ernst",
    "text": "You stand up. Your heart is pounding harder than at the lottery office."
   },
@@ -77,8 +77,8 @@
    "nr": 9,
    "typ": "objekt",
    "kapitel": 3,
-   "start": 36.976,
-   "dauer": 2.99,
+   "start": 33.424,
+   "dauer": 2.462,
    "emotion": "erklaerend",
    "text": "“Grandpa won. With your birthdays.”"
   },
@@ -86,8 +86,8 @@
    "nr": 10,
    "typ": "gesicht",
    "kapitel": 3,
-   "start": 39.966,
-   "dauer": 3.062,
+   "start": 35.886,
+   "dauer": 2.966,
    "emotion": "spannend",
    "text": "Dad drops his fork. Grandma chokes on her cake."
   },
@@ -95,8 +95,8 @@
    "nr": 11,
    "typ": "gesicht",
    "kapitel": 3,
-   "start": 43.028,
-   "dauer": 1.574,
+   "start": 38.852,
+   "dauer": 2.174,
    "emotion": "froh",
    "text": "“So do I get a pony now?”"
   },
@@ -104,8 +104,8 @@
    "nr": 12,
    "typ": "gesicht",
    "kapitel": 3,
-   "start": 44.602,
-   "dauer": 3.182,
+   "start": 41.026,
+   "dauer": 2.918,
    "emotion": "froh",
    "text": "Grandpa doesn't say a word. He just winks at you."
   },
@@ -113,8 +113,8 @@
    "nr": 13,
    "typ": "esstisch",
    "kapitel": 4,
-   "start": 47.784,
-   "dauer": 6.542,
+   "start": 43.944,
+   "dauer": 6.23,
    "emotion": "froh",
    "text": "You split it. For all of us, just like the ticket said. And Grandpa wants only one thing in return."
   },
@@ -122,8 +122,8 @@
    "nr": 14,
    "typ": "gesicht",
    "kapitel": 4,
-   "start": 54.326,
-   "dauer": 4.454,
+   "start": 50.174,
+   "dauer": 4.262,
    "emotion": "froh",
    "text": "“Every Sunday. Here. Everyone. No excuses.”"
   },
@@ -131,8 +131,8 @@
    "nr": 15,
    "typ": "gesicht",
    "kapitel": 4,
-   "start": 58.78,
-   "dauer": 1.526,
+   "start": 54.436,
+   "dauer": 1.43,
    "emotion": "froh",
    "text": "Best deal of your life."
   },
@@ -140,8 +140,8 @@
    "nr": 16,
    "typ": "lebenszeit",
    "kapitel": 4,
-   "start": 60.306,
-   "dauer": 6.302,
+   "start": 55.866,
+   "dauer": 5.174,
    "emotion": "erzaehlend",
    "text": "If all goes well, that's still a few hundred Sundays. Each one worth more than the jackpot."
   },
@@ -149,8 +149,8 @@
    "nr": 17,
    "typ": "polarlicht",
    "kapitel": 5,
-   "start": 66.608,
-   "dauer": 3.71,
+   "start": 61.04,
+   "dauer": 3.926,
    "emotion": "erzaehlend",
    "text": "Later, you stand at the window with Mia. The city is glowing."
   },
@@ -158,8 +158,8 @@
    "nr": 18,
    "typ": "kiosk",
    "kapitel": 5,
-   "start": 70.318,
-   "dauer": 7.334,
+   "start": 64.966,
+   "dauer": 7.07,
    "emotion": "froh",
    "text": "And on Saturday, Grandpa limps to the kiosk. Same numbers. Like always. Because he never played to win."
   }
