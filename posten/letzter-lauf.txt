@@ -3,5 +3,6 @@ Verbundene Konten: tiktok:storys4you.de1, instagram:sto.rys4you, youtube:sto.rys
 ✗ taeglich-tiktok-s01-teil-1 konnte nicht zurückgezogen werden: HTTP 400 {"error":"Published posts cannot be deleted","type":"invalid_request_error","code":"invalid_resource_state"}
 ✗ taeglich-tiktok-en-s02-teil-1 konnte nicht zurückgezogen werden: HTTP 400 {"error":"Published posts cannot be deleted","type":"invalid_request_error","code":"invalid_resource_state"}
   taeglich-tiktok-en-s02-teil-1-v2: Prüfung ok (Bild, Ton, Lautstärke)
-✗ taeglich-tiktok-en-s02-teil-1-v2: HTTP 409 {"error":"This exact content is already scheduled, publishing, or was posted to this account within the last 24 hours.","details":{"accountId":"6aea36412390dc40e8732aec","platform":"tiktok","existingPostId":"6aeabad6a6d51a788cdc5993"}}
-Fertig: 0 neu eingeplant, 1 Fehler.
+✓ taeglich-tiktok-en-s02-teil-1-v2 eingeplant für 2026-11-06T01:00:00 (6aec9d54afd6623de75ae4a6)
+  KI-Kennzeichnung laut Zernio: "videoMadeWithAi":false, "videoMadeWithAi":false
+Fertig: 1 neu eingeplant, 0 Fehler.

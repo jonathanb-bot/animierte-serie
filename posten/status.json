@@ -4264,15 +4264,14 @@
   "loeschHttp": 200
  },
  "taeglich-tiktok-en-s02-teil-1-v2": {
-  "ok": false,
-  "zeit": "2026-11-06T12:00:00",
-  "zernioId": null,
+  "ok": true,
+  "zeit": "2026-11-06T01:00:00",
+  "zernioId": "6aec9d54afd6623de75ae4a6",
   "yt": true,
   "k": 1,
   "konto": "storys4you_eng",
-  "http": 409,
-  "antwort": "{\"error\":\"This exact content is already scheduled, publishing, or was posted to this account within the last 24 hours.\",\"details\":{\"accountId\":\"6aea36412390dc40e8732aec\",\"platform\":\"tiktok\",\"existingPostId\":\"6aeabad6a6d51a788cdc5993\"}}",
-  "am": "2026-11-05T15:13:32.784Z"
+  "http": 201,
+  "am": "2026-11-05T15:14:28.843Z"
  },
  "taeglich-tiktok-en-s02-teil-2-v2": {
   "ok": true,
