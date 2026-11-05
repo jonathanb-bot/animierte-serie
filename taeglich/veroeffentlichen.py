@@ -161,7 +161,8 @@ def freie_zeit(posts: list, loeschen: set, platform: str, zeit: dt.datetime) -> 
     return zeit
 
 
-def einplanen(vid: str, eintrag: dict, zeit: dt.datetime, yt_zeit: dt.datetime, url: str, probe: bool) -> dict:
+def einplanen(vid: str, eintrag: dict, zeit: dt.datetime, yt_zeit: dt.datetime, url: str, probe: bool,
+              endung: str = "", plattformen: tuple = ("tiktok", "instagram", "youtube")) -> dict:
     nr = vid.split("-")[-1]
     repo_main = klonen("main", ["/posten/"], "main")
     plan_datei = repo_main / "posten" / "plan.json"
@@ -173,14 +174,16 @@ def einplanen(vid: str, eintrag: dict, zeit: dt.datetime, yt_zeit: dt.datetime, 
     kopf = f"{titel} {em}".strip()
     neu = []
     for platform, z in (("tiktok", zeit), ("instagram", zeit), ("youtube", yt_zeit)):
-        pid = f"taeglich-{KURZ[platform]}-{nr}"
+        if platform not in plattformen:
+            continue
+        pid = f"taeglich-{KURZ[platform]}-{nr}{endung}"
         if pid in ids:
             print(f"{pid} steht schon im Plan – übersprungen")
             continue
         z = freie_zeit(plan["posts"], loeschen, platform, z)
         post = {"id": pid, "platform": platform, "zeit": z.strftime("%Y-%m-%dT%H:%M:00"), "serie": "taeglich", "video": url}
         if platform == "tiktok":
-            post["text"] = f"{kopf}\n{eintrag['beschreibung']}\nFolg mir für die nächste Geschichte!\n\n{tags_txt} #fyp"
+            post["text"] = f"{kopf}\n{eintrag['beschreibung']}\n{'Folg mir, dann verpasst du keine Geschichte!' if endung else 'Folg mir für die nächste Geschichte!'}\n\n{tags_txt} #fyp"
         elif platform == "instagram":
             post["text"] = f"{kopf}\n{eintrag['beschreibung']}\n\n{tags_txt} #reels"
         else:
@@ -210,6 +213,8 @@ def main(argv=None) -> int:
     ap.add_argument("--zeit", required=True, help="TikTok + Instagram, Europe/Berlin, z. B. 2026-11-01T18:00")
     ap.add_argument("--yt-zeit", help="YouTube (Standard: 30 Minuten nach --zeit)")
     ap.add_argument("--probe", action="store_true", help="alles prüfen und vorbereiten, aber nichts pushen")
+    ap.add_argument("--ersetzen", metavar="SUFFIX", help="neu vertonte Fassung: neue Post-IDs mit -SUFFIX, Text leicht anders (5.11.)")
+    ap.add_argument("--plattformen", default="tiktok,instagram,youtube", help="nur diese Plattformen, z. B. tiktok")
     a = ap.parse_args(argv)
 
     verlauf = json.loads(VERLAUF.read_text(encoding="utf-8"))
@@ -239,7 +244,8 @@ def main(argv=None) -> int:
     url = RAW.format(id=a.id)
     if not a.probe:
         warten_auf_raw(url, fertig.stat().st_size)
-    geplant = einplanen(a.id, eintrag, zeit, yt_zeit, url, a.probe)
+    geplant = einplanen(a.id, eintrag, zeit, yt_zeit, url, a.probe, f"-{a.ersetzen}" if a.ersetzen else "",
+                        tuple(a.plattformen.split(",")))
 
     if not a.probe:
         eintrag["veroeffentlicht"] = {"video": url, "geplant": geplant, "lufs": ergebnis["lufs"], "dauer_s": ergebnis["bild_s"]}

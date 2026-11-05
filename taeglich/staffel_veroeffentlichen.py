@@ -226,7 +226,10 @@ def main(argv=None) -> int:
         "video": RAW.format(pfad=f"taeglich-tiktok/{a.staffel}-teil-{t['k']}.mp4"),
         "text": (f"{titel} – Teil {t['k']}/{len(teile)} (Folge {t['folgen'][0]}–{t['folgen'][-1]}) {em}\n"
                  + " · ".join(st["folgen"][n - 1]["titel"] for n in t["folgen"])
-                 + f"\n{st['beschreibung']}\nFolg mir, damit du keinen Teil verpasst!\n\n{tags_txt} #fyp")} for t in teile])
+                 + f"\n{st['beschreibung']}\n"
+                 # neue Fassung: Text leicht anders, Zernio sperrt identischen Inhalt 24 h (5.11.)
+                 + ("Folg mir, damit du den nächsten Teil nicht verpasst!" if endung else "Folg mir, damit du keinen Teil verpasst!")
+                 + f"\n\n{tags_txt} #fyp")} for t in teile])
     anhaengen("instagram", [{
         "id": f"taeglich-insta-{f['id']}{endung}", "video": RAW.format(pfad=f"taeglich/{f['id']}.mp4"),
         "text": f"{titel} – Folge {f['nr']}: {f['titel']} {em}\n{f.get('beschreibung') or st['beschreibung']}\n{weiter(f, '@sto.rys4you')}\n\n{tags_txt} #reels"} for f in folgen])
