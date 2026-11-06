@@ -23,6 +23,8 @@
 [wohnzimmer du ben sofa_sitzen zeit=nacht palette=blau palette_staerke=0.6 zoom-rein] At eleven sharp, the lights just died. Now the only light is the glow from the fireplace.
 // Wohnzimmer: Schrank vor die Tür
 [wohnzimmer du ben zeit=nacht zoom-rein palette=blau palette_staerke=0.6] You push the cabinet in front of the door. It's heavier than it looks. Ben swears under his breath.
+// Nahaufnahme: du lauschst, Herz klopft
+[gesicht du ort=wohnzimmer zeit=nacht besorgt palette=blau palette_staerke=0.6 zoom-rein] It smells like smoke and wet wood. Your heart is pounding so hard you can hear it in your ears.
 // Wald durch den Fensterspalt
 [waldnacht lampe zoom-rein palette=blau palette_staerke=0.6] Through a gap in the shutters, you see the fog. It's drifting against the wind.
 // Nahaufnahme: Ben flüstert

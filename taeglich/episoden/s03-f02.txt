@@ -22,6 +22,8 @@
 [wohnzimmer du ben sofa_sitzen zeit=nacht palette=blau palette_staerke=0.6 zoom-rein] Das Licht ist um dreiundzwanzig Uhr einfach ausgegangen. Jetzt leuchtet nur noch die Glut im Kamin.
 // Wohnzimmer: Schrank vor die Tür
 [wohnzimmer du ben zeit=nacht zoom-rein palette=blau palette_staerke=0.6] Ihr schiebt den Schrank vor die Tür. Er ist schwerer als gedacht. Ben flucht leise.
+// Nahaufnahme: du lauschst, Herz klopft
+[gesicht du ort=wohnzimmer zeit=nacht besorgt palette=blau palette_staerke=0.6 zoom-rein] Es riecht nach Rauch und nassem Holz. Dein Herz schlägt so laut, dass du es in den Ohren hörst.
 // Wald durch den Fensterspalt
 [waldnacht lampe zoom-rein palette=blau palette_staerke=0.6] Durch einen Spalt im Fensterladen siehst du den Nebel. Er zieht gegen den Wind.
 // Nahaufnahme: Ben flüstert

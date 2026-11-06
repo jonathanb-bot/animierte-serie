@@ -66,6 +66,8 @@
 == Zuhause ==
 // Hütte innen, alle drei, Kamin
 [wohnzimmer du mama ben licht=an zeit=nacht palette=blau palette_staerke=0.6 zoom-rein] Um kurz vor zwei sitzt ihr zu dritt vor dem Kamin. Die Tür ist zweimal abgeschlossen.
+// Nahaufnahme: Ben, still
+[gesicht ben ort=wohnzimmer zeit=nacht besorgt palette=blau palette_staerke=0.6] Ben sitzt ganz still daneben. Er rührt nicht mal das letzte Toastbrot an.
 // Nahaufnahme: Mama
 [gesicht mama ort=wohnzimmer zeit=nacht froh palette=blau palette_staerke=0.6] „Ab jetzt fahren wir zusammen einkaufen. Alle.“
 // Nahaufnahme: Mama erinnert sich

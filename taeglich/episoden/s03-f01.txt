@@ -33,7 +33,7 @@
 // Nahaufnahme: du
 [gesicht du ort=wohnzimmer zeit=nacht froh palette=blau palette_staerke=0.6] Leuchtturm ist euer Wort von früher. Wer es ruft, bekommt ein Zeichen zurück.
 // Nahaufnahme: Ben grinst
-[gesicht ben ort=wohnzimmer zeit=nacht froh palette=blau palette_staerke=0.6] „Leuchtturm? Seid ihr ein Geheimdienst mit Hütte?“
+[gesicht ben ort=wohnzimmer zeit=nacht froh palette=blau palette_staerke=0.6] „Leuchtturm? Seid ihr etwa ein Geheimdienst? Mit Hütte?“
 // Hütte innen, Kartenspiel
 [wohnzimmer du ben sofa_sitzen licht=an zeit=nacht schwenk-rechts palette=blau palette_staerke=0.6] Ben verliert beim Kartenspielen zum vierten Mal. Er behauptet, die Karten seien feucht.
 
@@ -53,7 +53,7 @@
 // Nahaufnahme: Mama, aber im Dunkeln
 [gesicht mama ort=waldnacht froh palette=blau palette_staerke=0.6] „Schatz? Komm mal raus. Ich brauch Hilfe mit den Taschen.“
 // Nahaufnahme: Ben steht auf
-[gesicht ben ort=wohnzimmer zeit=nacht neugierig palette=blau palette_staerke=0.6] „Na also. Deine Mama ist schnell.“
+[gesicht ben ort=wohnzimmer zeit=nacht neugierig palette=blau palette_staerke=0.6] „Na also. Deine Mama ist aber schnell zurück.“
 // Nahaufnahme: du, unsicher
 [gesicht du ort=wohnzimmer zeit=nacht besorgt palette=blau palette_staerke=0.6] Du willst schon aufstehen. Es klingt so sehr nach ihr. Sogar das kleine Seufzen am Ende.
 // Handy: letzte Nachricht von Mama

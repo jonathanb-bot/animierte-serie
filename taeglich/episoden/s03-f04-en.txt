@@ -67,6 +67,8 @@
 == Zuhause ==
 // Hütte innen, alle drei, Kamin
 [wohnzimmer du mama ben licht=an zeit=nacht palette=blau palette_staerke=0.6 zoom-rein] Just before two, the three of you sit by the fireplace. The door is locked twice.
+// Nahaufnahme: Ben, still
+[gesicht ben ort=wohnzimmer zeit=nacht besorgt palette=blau palette_staerke=0.6] Ben sits very still next to you. He doesn't even touch the last slice of toast.
 // Nahaufnahme: Mama
 [gesicht mama ort=wohnzimmer zeit=nacht froh palette=blau palette_staerke=0.6] “From now on, we go grocery shopping together. All of us.”
 // Nahaufnahme: Mama erinnert sich
