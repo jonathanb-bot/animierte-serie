@@ -254,6 +254,7 @@ git add -A taeglich engine && git commit && git push -u origin taeglich         
 ```
 
 - Kopf jedes Drehbuchs: `# <Staffeltitel> – Folge N: <Folgentitel>`, `@stimmung …`, `@vortrag lebendig`, `@mund zitate`, `@qualitaet max`, dazu der Stil „leuchtend“ (siehe oben), `@zeit …`. Über jeder Zeile steht ein `// Bildbeschreibung`.
+- **Kein schwarzes erstes Bild (Jonathans Vorgabe 6.11.):** Jedes neue Drehbuch hat im Kopf `@einblenden aus`. Dann ist schon das allererste Bild die Hook-Einstellung mit Hook-Text, und die Vorschau auf TikTok, Instagram und YouTube ist nie schwarz. Ohne die Angabe blendet die Engine wie bisher 0,5 s aus Schwarz ein (alte Serien bleiben pixelgleich).
 - **Untertitel im Wechsel (Jonathans Vorgabe 5.11., Experiment E4):** jede zweite Staffel ohne Untertitel (`@untertitel aus`): ungerade Staffeln (s03, s05, s07, s09, s11) **aus**, gerade (s04, s06, s08, s10, s12) **an**. Hook-Text, `gross=` und Schrift im Bild bleiben immer. Das Zitat-Video und die englische Fassung folgen ihrer Staffel. Die Analyse vergleicht beide Gruppen; entschieden wird erst nach dem 22.11.
 - **Staffelplan s04–s12** (Jonathan über ChatGPT, 5.11.): `taeglich/analyse/staffelplan-s04-s12.md` ist die Vorlage für Thema, Figuren, Folgen, Hooks und Cliffhanger. Die Produktion schreibt daraus die Drehbücher; feste Regeln gehen vor.
 - Gemini: 5 Schlüssel (Proxy + `GEMINI_API_KEY_2` … `_5`), je ca. 10 Anfragen am Tag. Sind alle erschöpft: nichts posten, die fertigen Folgen sichern, Jonathan Bescheid geben. Beim nächsten Lauf geht es mit dieser Staffel weiter.

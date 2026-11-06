@@ -156,7 +156,7 @@ if (flag("bilder")) {
   if (SS !== 1) { await page.addInitScript(`window.SS = ${SS};`); await page.addInitScript({ path: path.join(ROOT, "engine", "ss.js") }); }
   await page.goto("file://" + path.join(ROOT, "engine", "index.html"));
   await page.evaluate(async () => { await document.fonts.load("900 80px Titel"); await document.fonts.load("700 40px HUD"); });
-  await page.evaluate(d => window.init(d), { W, H, dauer: gesamt, figuren: ep.figuren, untertitel_y: ep.untertitel_y, untertitel: ep.untertitel, mund: ep.mund, szenen });
+  await page.evaluate(d => window.init(d), { W, H, dauer: gesamt, figuren: ep.figuren, untertitel_y: ep.untertitel_y, untertitel: ep.untertitel, einblenden: ep.einblenden, mund: ep.mund, szenen });
   const nur = opt("nur", null); // z.B. --nur 1-12
   const [na, nb] = nur ? nur.split("-").map(Number) : [1, szenen.length];
   fs.rmSync(dir, { recursive: true, force: true }); fs.mkdirSync(dir, { recursive: true });
@@ -229,7 +229,7 @@ const page = await browser.newPage({ viewport: { width: W, height: H } });
 if (SS !== 1) { await page.addInitScript(`window.SS = ${SS};`); await page.addInitScript({ path: path.join(ROOT, "engine", "ss.js") }); }
 await page.goto("file://" + path.join(ROOT, "engine", "index.html"));
 await page.evaluate(async () => { await document.fonts.load("900 80px Titel"); await document.fonts.load("700 40px HUD"); });
-await page.evaluate(d => window.init(d), { W, H, dauer: gesamt, figuren: ep.figuren, untertitel_y: ep.untertitel_y, untertitel: ep.untertitel, mund: ep.mund, szenen });
+await page.evaluate(d => window.init(d), { W, H, dauer: gesamt, figuren: ep.figuren, untertitel_y: ep.untertitel_y, untertitel: ep.untertitel, einblenden: ep.einblenden, mund: ep.mund, szenen });
 
 const schreib = buf => new Promise(r => (ff.stdin.write(buf) ? r() : ff.stdin.once("drain", r)));
 const t0 = Date.now();

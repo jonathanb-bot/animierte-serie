@@ -180,7 +180,8 @@
     untertitel(s, t);
     if (s.blitz && t < 0.3) { ctx.fillStyle = `rgba(255,255,255,${1 - t / 0.3})`; ctx.fillRect(0, 0, W, H); }
     // Blenden
-    const b = Math.max(clamp(1 - T / 0.5, 0, 1), clamp((T - (D.dauer - 0.8)) / 0.8, 0, 1), s.uebergang === "blende" ? clamp(1 - t / 0.35, 0, 1) : 0);
+    const b = Math.max(D.einblenden === false ? 0 : clamp(1 - T / 0.5, 0, 1), // `@einblenden aus`: erstes Bild sofort sichtbar (Vorschau, Jonathan 6.11.)
+       clamp((T - (D.dauer - 0.8)) / 0.8, 0, 1), s.uebergang === "blende" ? clamp(1 - t / 0.35, 0, 1) : 0);
     if (b > 0) { ctx.fillStyle = `rgba(0,0,0,${b})`; ctx.fillRect(0, 0, W, H); }
   };
 

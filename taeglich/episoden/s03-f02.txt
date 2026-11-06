@@ -5,6 +5,7 @@
 @stimmung duester
 @vortrag lebendig
 @mund zitate
+@einblenden aus
 @qualitaet max
 @look 0.75
 @kino 0.5
