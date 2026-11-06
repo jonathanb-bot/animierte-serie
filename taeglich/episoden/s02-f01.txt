@@ -5,6 +5,7 @@
 @stimmung freudig
 @vortrag lebendig
 @mund zitate
+@einblenden aus
 @qualitaet max
 @look 0
 @kino 0.35
