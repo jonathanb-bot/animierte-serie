@@ -205,9 +205,11 @@ def main(argv=None) -> int:
     loeschen, ids = set(plan.get("loeschen") or []), {p["id"] for p in plan["posts"]}
     endung = f"-{a.ersetzen}" if a.ersetzen else ""
     # neue Fassung: Text leicht anders, sonst lehnt Zernio den Post als Doppel ab (gleicher Inhalt innerhalb von 24 h, 5./6.11.)
-    neu_txt = "\nJetzt mit neuer Stimme." if a.ersetzen else ""
+    neu_txt = ""
     frueh = dt.datetime.now(V.BERLIN).replace(tzinfo=None, second=0, microsecond=0) + VORLAUF
     em, tags_txt, titel = st.get("emoji", ""), " ".join(st["hashtags"]), st["titel"]
+    if a.ersetzen:  # neue Fassung: Text leicht anders, sonst sperrt Zernio den gleichen Inhalt 24 h
+        tags_txt += " #serie"
     neu = []
 
     def anhaengen(platform: str, eintraege: list[dict]) -> None:
