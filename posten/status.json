@@ -4023,16 +4023,6 @@
   "geloescht": true,
   "loeschHttp": 200
  },
- "taeglich-yt-s01-f10-v2": {
-  "ok": true,
-  "zeit": "2026-11-07T20:30:00",
-  "zernioId": "6aecadf489a94f22e0661f57",
-  "yt": true,
-  "k": 1,
-  "konto": "sto.rys4you",
-  "http": 201,
-  "am": "2026-11-05T16:25:24.488Z"
- },
  "taeglich-tiktok-s02-teil-1": {
   "ok": true,
   "zeit": "2026-11-06T12:04:00",
@@ -4752,5 +4742,15 @@
   "konto": "storys4you.de1",
   "http": 201,
   "am": "2026-11-05T21:01:41.531Z"
+ },
+ "taeglich-yt-s01-f10-v2": {
+  "ok": true,
+  "zeit": "2026-11-07T20:43:00",
+  "zernioId": "6aed96f3d3c0b9cb2d047f6a",
+  "yt": true,
+  "k": 1,
+  "konto": "sto.rys4you",
+  "http": 201,
+  "am": "2026-11-06T08:59:31.205Z"
  }
 }
