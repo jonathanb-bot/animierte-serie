@@ -116,6 +116,7 @@ def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("staffel", help="z. B. s01")
     ap.add_argument("--probe", action="store_true", help="alles prüfen und vorbereiten, aber nichts pushen")
+    ap.add_argument("--ab", type=int, default=1, help="nur Folgen ab dieser Nummer posten (z. B. 2: Folge 1 bleibt, Jonathan 6.11.)")
     ap.add_argument("--ersetzen", metavar="SUFFIX", help="neu vertonte Fassung: neue Post-IDs mit -SUFFIX (die alten vorher in plan.loeschen eintragen)")
     a = ap.parse_args(argv)
 
@@ -240,15 +241,15 @@ def main(argv=None) -> int:
                  + f"\n{st['beschreibung']}\n"
                  # neue Fassung: Text leicht anders, Zernio sperrt identischen Inhalt 24 h (5.11.)
                  + ("Folg mir, damit du den nächsten Teil nicht verpasst!" if endung else "Folg mir, damit du keinen Teil verpasst!")
-                 + f"\n\n{tags_txt} #fyp")} for t in teile])
+                 + f"\n\n{tags_txt} #fyp")} for t in teile if t["folgen"][0] >= a.ab])
     anhaengen("instagram", [{
         "id": f"taeglich-insta-{f['id']}{endung}", "video": RAW.format(pfad=f"taeglich/{f['id']}.mp4"),
-        "text": f"{titel} – Folge {f['nr']}: {f['titel']} {em}\n{f.get('beschreibung') or st['beschreibung']}\n{weiter(f, '@sto.rys4you')}{neu_txt}\n\n{tags_txt} #reels"} for f in folgen])
+        "text": f"{titel} – Folge {f['nr']}: {f['titel']} {em}\n{f.get('beschreibung') or st['beschreibung']}\n{weiter(f, '@sto.rys4you')}{neu_txt}\n\n{tags_txt} #reels"} for f in folgen if f["nr"] >= a.ab])
     anhaengen("youtube", [{
         "id": f"taeglich-yt-{f['id']}{endung}", "video": RAW.format(pfad=f"taeglich/{f['id']}.mp4"),
         "titel": f"{titel} – Folge {f['nr']}: {f['titel']} {em} #shorts"[:100],
         "tags": (st.get("tags") or ["animation", "story"]) + ["shorts"],
-        "text": f"{f.get('beschreibung') or st['beschreibung']}\n{weiter(f, None)}{neu_txt}\n\n{tags_txt} #shorts"} for f in folgen])
+        "text": f"{f.get('beschreibung') or st['beschreibung']}\n{weiter(f, None)}{neu_txt}\n\n{tags_txt} #shorts"} for f in folgen if f["nr"] >= a.ab])
 
     for p in neu:
         print(f"  {p['id']}: {p['zeit']}")
