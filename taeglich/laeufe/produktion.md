@@ -18,6 +18,7 @@ Hinweis zu den Werkzeugen: In neuen Sessions heißen die vidIQ-Werkzeuge `mcp__<
    - `cd /home/user/animierte-serie && git fetch origin taeglich main && git checkout -B taeglich origin/taeglich`
    - `pip install -q -r requirements.txt && npm ci --ignore-scripts --no-audit --no-fund`
    - `export CHROMIUM=/opt/pw-browsers/chromium`
+2a. **Vorübergehend (6./7.11.):** s03 „Der Nachahmer“ **deutsch** macht die Prüf-Session `session_01GwfrtpfWn5wbp2rAp28rqA` fertig (Stimme F01/F02/F04, Rendern, Veröffentlichen am 7.11. ab 09:05). s03 englisch und s02 deutsch (neu vertonen) macht `session_01GwfrtmxrjBn6wsajTsd6ri`. Diese Teile **nicht anfassen**, auch wenn s03 halb fertig aussieht. Gemini-Reihenfolge am 7.11.: s03 deutsch → s03 englisch → s02 deutsch → neue Staffel. Eine neue Staffel (s04) darf geschrieben werden, die Stimme erst danach. Diesen Punkt löscht die Prüf-Session, sobald s03 deutsch eingeplant ist.
 2. **Vorrat prüfen:** `python taeglich/vorrat.py`. Lautet die letzte Zeile AUSSETZEN, sofort aufhören: kurz notieren, wie viele Tage Vorrat da sind, keine PushNotification. PRODUZIEREN kommt, sobald der TikTok-Vorrat unter 2 Tagen liegt (Issue #16). Ist eine Staffel halb fertig (etwa wegen des Gemini-Kontingents), diese zu Ende bringen. Das gilt auch für die englische Fassung (Schritt 10b): Fehlt sie bei der letzten Staffel noch (`staffeln.json` → `en.veroeffentlicht` leer), sie zuerst fertig machen, auch wenn AUSSETZEN kommt.
 3. **Regeln lesen:**
    - offene Issues mit Label `dringlich` (mcp__github__list_issues)
