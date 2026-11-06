@@ -1,0 +1,68 @@
+# Die zwölfte Quittung – Folge 2: Der fehlende Durchschlag
+@musik musik/s04-f02.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung duester
+@vortrag lebendig
+@mund zitate
+@einblenden aus
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette blau
+@zeit tag
+
+== Hook ==
+// Archiv, Röhre flackert, du erschrocken vor dem Bündel
+[archiv du:schreck buendel flackern palette=blau zoom-rein hooktext="DIE ZWÖLFTE QUITTUNG FEHLT"] Fünfzehn Uhr. Elf Quittungen hängen an der Schnur. Die zwölfte fehlt.
+// Zwei Quittungen, dazwischen die Lücke
+[objekt objekte="quittung:Nr. 11|quittung:Nr. 13" gross="NR. 12 FEHLT" palette=blau zoom-rein] Und genau die zwölfte könnte deinen besten Freund retten.
+// Nahaufnahme: du, besorgt
+[gesicht du ort=archiv besorgt palette=blau zoom-rein] Jemand hat Samis Namen auf die Kassen-Quittung geschrieben. Das weißt du. Beweisen kannst du es nicht.
+
+== Wiedererkennen ==
+// Archiv im Seitenlicht, Staub
+[archiv du licht=seite palette=blau schwenk-links] Die Leuchtröhre flackert. Der Staub kratzt dir im Hals.
+// Bündel nah
+[archiv du buendel flackern palette=blau zoom-rein] Elf Blätter, sauber nummeriert. Dazwischen eine Lücke, so breit wie ein Daumen.
+// Nahaufnahme: du denkst
+[gesicht du ort=archiv denkt palette=blau] Vielleicht steht auf dem Durchschlag die Wahrheit.
+// Ausgaberaum, Rike gibt Anweisungen
+[fundhaus s04_rike du zeit=tag uhr="14:17" uhr_steht palette=orange zoom-rein] Vorne im Ausgaberaum gibt Rike gerade Anweisungen.
+// Nahaufnahme: Rike
+[gesicht s04_rike ort=fundhaus zeit=tag entschlossen palette=orange] „Das alte Papier geht um sechzehn Uhr raus.“
+
+== Steigerung ==
+// Uhr groß: Countdown
+[objekt objekte="uhr:16 Uhr" gross="NOCH 60 MINUTEN" palette=orange zoom-rein] Um sechzehn Uhr holt die Papierabfuhr alles ab. Auch die Bündel aus dem Archiv.
+// Archiv: Bündel, so weit das Auge reicht
+[archiv du buendel palette=blau zoom-rein] Hundert Bündel, jedes verknotet. Die Papierschnur knirscht, wenn du daran ziehst.
+// Nahaufnahme: du entschlossen
+[gesicht du ort=archiv entschlossen palette=blau] Alle durchsuchen schaffst du nicht. Nicht in einer Stunde.
+// Archiv im Seitenlicht: roter Zettel auf dem Bündel
+[archiv du buendel licht=seite palette=blau zoom-rein] Also klebst du einen roten Zettel auf das Bündel vom Vormittag.
+// Ausgaberaum: Papa kommt mit Werkzeug
+[fundhaus papa du zeit=tag uhr="14:17" uhr_steht palette=orange schwenk-rechts] Dein Papa ist hier Hausmeister. Er redet wenig. Aber er hört zu.
+// Nahaufnahme: Papa
+[gesicht papa ort=fundhaus zeit=tag neutral palette=orange] „Rot heißt bleiben?“
+// Nahaufnahme: du
+[gesicht du ort=fundhaus zeit=tag froh palette=orange] „Rot heißt bleiben. Bitte, Papa.“
+// Nahaufnahme: Papa nickt
+[gesicht papa ort=fundhaus zeit=tag froh palette=orange zoom-rein] Er nickt einmal. Bei ihm ist das ein Versprechen.
+
+== Wendung ==
+// Sami allein im Ausgaberaum, Kamera fährt zurück
+[fundhaus s04_sami zeit=tag uhr="14:17" uhr_steht palette=orange zoom-raus] Sami sitzt auf der Treppe zum Hof. Seit einer Stunde kein einziger Witz.
+// Nahaufnahme: Sami traurig
+[gesicht s04_sami ort=fundhaus zeit=tag traurig palette=orange] „Ohne die Quittung war ich's. So einfach.“
+// Nahaufnahme: du
+[gesicht du ort=fundhaus zeit=tag traurig palette=orange zoom-rein] Du willst ihm sagen, dass alles gut wird. Aber du versprichst nichts Falsches.
+// Stadt: ein Laster fährt vor
+[grossstadt zeit=tag du palette=blau zoom-raus] Fünfzehn Uhr fünfzig. Draußen hält ein Laster mit laufendem Motor.
+
+== Cliffhanger ==
+// Archiv: Sackkarre rollt durch die Gasse
+[archiv sackkarre buendel flackern palette=blau zoom-rein wackeln=0.2] Im Archiv rollt eine Sackkarre quietschend durch die Gasse.
+// Du erschrocken, die Karre am Bündel
+[archiv du:schreck sackkarre buendel palette=blau zoom-rein] Und sie nimmt ausgerechnet das Bündel mit deinem roten Zettel mit.

@@ -1,0 +1,66 @@
+# Die zwölfte Quittung – Folge 8: Jemand kommt zurück
+@musik musik/s04-f08.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung warm
+@vortrag lebendig
+@mund zitate
+@einblenden aus
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette rosa
+@zeit abend
+
+== Hook ==
+// Ausgaberaum: Sami und eine Fremde im Eingang
+[fundhaus du:froh s04_sami s04_frau zeit=abend uhr="18:00" palette=rosa zoom-rein hooktext="ER KOMMT ZURÜCK"] Achtzehn Uhr. Dein bester Freund kommt zurück. Mit einer Fremden.
+// Nahaufnahme: du
+[gesicht du ort=fundhaus zeit=abend froh palette=rosa] Vorhin hast du ihn im Regen gehen lassen.
+
+== Wiedererkennen ==
+// Ausgaberaum, du allein
+[fundhaus du zeit=abend uhr="17:40" palette=rosa schwenk-links] Um siebzehn Uhr vierzig sitzt du allein an der Theke.
+// Handy: kein Anschluss
+[handy ort=fundhaus zeit=abend netz=4 akku=38 uhrzeit="17:42" von="Lindner" nachricht="Kein Anschluss unter dieser Nummer" palette=rosa] Die Dose gehört einer Frau Lindner. Du rufst ihre Nummer an.
+// Nahaufnahme: du
+[gesicht du ort=fundhaus zeit=abend traurig palette=rosa] Kein Anschluss. Die Spur endet in einem Piepton.
+// Handy: Nachricht von Sami
+[handy ort=fundhaus zeit=abend netz=4 akku=37 uhrzeit="17:51" von="Sami" nachricht="Gemeinschaftsgarten. Komm." palette=rosa] Dann vibriert dein Handy. Sami.
+
+== Steigerung ==
+// Garten am Abend, weit
+[park du jahreszeit=herbst zeit=abend palette=rosa zoom-raus] Der Gemeinschaftsgarten liegt zwei Straßen weiter. Deine Schuhe knirschen im nassen Kies.
+// Garten: Sami und Frau Lindner
+[park du s04_sami s04_frau jahreszeit=herbst zeit=abend palette=rosa zoom-rein] Unter dem Torbogen steht Sami. Neben ihm eine ältere Frau mit Gartenhandschuhen.
+// Nahaufnahme: Sami
+[gesicht s04_sami ort=park jahreszeit=herbst zeit=abend froh palette=rosa] „Ich gieße hier mittwochs. Ich kenn jeden.“
+// Nahaufnahme: du
+[gesicht du ort=park jahreszeit=herbst zeit=abend froh palette=rosa zoom-rein] Das wusstest du nicht. Zwölf Jahre, und er überrascht dich noch.
+// Nahaufnahme: Frau Lindner
+[gesicht s04_frau ort=park jahreszeit=herbst zeit=abend froh palette=rosa] Frau Lindner drückt dir einen warmen Teebecher in die Hand. Es riecht nach Minze.
+// Nahaufnahme: du
+[gesicht du ort=park jahreszeit=herbst zeit=abend froh palette=rosa zoom-rein] Du willst sofort alles fragen. Stattdessen sagst du: „Erzähl du, Sami.“
+// Garten, Schwenk
+[park s04_sami s04_frau jahreszeit=herbst zeit=abend palette=rosa schwenk-rechts] Und Sami erzählt. Ruhig, ohne einen einzigen Witz.
+// Nahaufnahme: Frau Lindner
+[gesicht s04_frau ort=park jahreszeit=herbst zeit=abend besorgt palette=rosa] „Meine Dose? Die hat mein Mann im Bus verloren.“
+// Dose mit Delle
+[objekt objekte="blechdose" gross="DIE DELLE" palette=rosa zoom-rein] Auf ihrem Foto: eine schwarze Dose mit Halbmond. Und einer Delle an der Ecke.
+
+== Wendung ==
+// Nahaufnahme: Frau Lindner traurig
+[gesicht s04_frau ort=park jahreszeit=herbst zeit=abend traurig palette=rosa zoom-rein] „Er ist letztes Jahr gestorben. Da drin sind seine Briefe.“
+// Nahaufnahme: Sami
+[gesicht s04_sami ort=park jahreszeit=herbst zeit=abend traurig palette=rosa] Sami legt ihr die Hand auf den Arm. Er weiß, wie sich das anfühlt.
+// Nahaufnahme: du
+[gesicht du ort=park jahreszeit=herbst zeit=abend traurig palette=rosa zoom-rein] Und du merkst, wie viel du heute fast verloren hättest. Für ein Stück Papier.
+// Stadt am Abend, ihr drei klein
+[grossstadt zeit=abend du s04_sami s04_frau palette=rosa zoom-raus] Zu dritt lauft ihr zurück zum Fundhaus. Die Straßenlaternen gehen an.
+
+== Cliffhanger ==
+// Frau Lindner im Ausgaberaum
+[fundhaus s04_frau du s04_sami zeit=abend uhr="18:00" palette=rosa zoom-rein] Frau Lindner bleibt im Türrahmen stehen und schaut auf die Fächer.
+// Nahaufnahme: Frau Lindner erschrocken
+[gesicht s04_frau ort=fundhaus zeit=abend schreck palette=rosa zoom-rein] „Abgeholt? Nein. Meine Dose ist noch hier.“

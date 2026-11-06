@@ -1,0 +1,68 @@
+# Die zwölfte Quittung – Folge 1: Ein Fach zu wenig
+@musik musik/s04-f01.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung spannend
+@vortrag lebendig
+@mund zitate
+@einblenden aus
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette orange
+@zeit tag
+
+== Hook ==
+// Ausgaberaum, Fach zwölf leer und beleuchtet, du erschrocken, Sami daneben
+[fundhaus du:schreck s04_sami zeit=tag uhr="14:17" uhr_steht leer=12 palette=orange zoom-rein hooktext="IN 80 SEKUNDEN WEISST DU ES"] In achtzig Sekunden weißt du: Jemand will deinen besten Freund reinlegen.
+// Die Spendenkasse groß, darüber die Summe
+[objekt objekte="kasse:Spenden" gross="4.000 EURO WEG" palette=orange zoom-rein] Aber zuerst verschwinden viertausend Euro.
+// Nahaufnahme: Sami, besorgt
+[gesicht s04_sami ort=fundhaus zeit=tag besorgt palette=orange zoom-rein] Das ist Sami, dein bester Freund. Er macht Witze, wenn er Angst hat.
+// Nahaufnahme: Sami grinst schief
+[gesicht s04_sami ort=fundhaus zeit=tag froh palette=orange] „Vielleicht hat die Kasse einfach gekündigt.“
+
+== Wiedererkennen ==
+// Stadt am Tag, ihr zwei klein auf dem Dach
+[grossstadt zeit=tag du s04_sami palette=orange schwenk-rechts] Vierzehn Uhr dreißig. Ihr zwei helft jeden Samstag im Fundhaus der Stadt.
+// Ausgaberaum: Fächerwand mit Fundstücken
+[fundhaus du s04_sami zeit=tag uhr="14:17" uhr_steht palette=orange schwenk-links] Vierundzwanzig Fächer. Regenschirme, Teddys, ein einzelner Schuh. Es riecht nach feuchter Pappe.
+// Fach zwölf leuchtet leer
+[fundhaus du zeit=tag uhr="14:17" uhr_steht leer=12 palette=orange zoom-rein] In Fach zwölf stand heute Morgen die Spendenkasse für den Jugendtreff.
+// Rike kommt dazu, Schlüsselbund am Gürtel
+[fundhaus s04_rike du s04_sami zeit=tag uhr="14:17" uhr_steht palette=orange zoom-rein] Rike leitet das Fundhaus. Ihr Schlüsselbund scheppert bei jedem Schritt.
+
+== Steigerung ==
+// Quittung groß: die Regel
+[objekt objekte="quittung:Abholer|quittung:Archiv" gross="ZWEI QUITTUNGEN" palette=orange] Hier bekommt jede Ausgabe zwei Quittungen. Eine für den Abholer, eine fürs Archiv.
+// Nahaufnahme: Rike liest vor
+[gesicht s04_rike ort=fundhaus zeit=tag misstrauisch palette=orange zoom-rein] „Abgeholt um vierzehn Uhr siebzehn. Von Sami.“
+// Quittung mit Samis Namen
+[objekt objekte="quittung:Sami" gross="ABGEHOLT: SAMI" palette=orange zoom-rein] Da steht sein Name. Mit seiner Unterschrift.
+// Nahaufnahme: Sami blass
+[gesicht s04_sami ort=fundhaus zeit=tag schreck palette=orange] Sami wird blass. Der nächste Witz bleibt ihm im Hals stecken.
+// Nahaufnahme: Rike entschlossen
+[gesicht s04_rike ort=fundhaus zeit=tag entschlossen palette=orange] „Ab heute hilfst du hier nicht mehr.“
+// Du vor Rike, die Kamera wackelt leicht
+[fundhaus du:entschlossen s04_rike zeit=tag uhr="14:17" uhr_steht palette=orange wackeln=0.2] Du willst schreien: Er war das nicht. Aber Schreien beweist nichts.
+
+== Wendung ==
+// Nahaufnahme: du denkst nach
+[gesicht du ort=fundhaus zeit=tag denkt palette=orange zoom-rein] Zwei Quittungen. Also muss irgendwo noch eine zweite liegen.
+// Archiv: blaue Regalgasse, Fensterlicht
+[archiv du licht=seite palette=blau zoom-rein] Im Archiv stehen blaue Regale bis unter die Decke. Eine Leuchtröhre summt.
+// Archiv: Bündel an roter Schnur
+[archiv du buendel palette=blau schwenk-rechts] Die Kopien hängen an einer roten Schnur, sortiert nach Uhrzeit.
+// Die Original-Quittung im Licht
+[objekt objekte="quittung:Original" palette=blau zoom-rein] Du hältst Rikes Original gegen das Licht. Das Papier ist kalt und glatt.
+// Nahaufnahme: du entdeckst etwas
+[gesicht du ort=archiv neugierig palette=blau zoom-rein] Hinter Samis Namen sitzt ein winziger blauer Fingerabdruck.
+// Nahaufnahme: Sami verwirrt
+[gesicht s04_sami ort=archiv besorgt palette=blau] „Blau? Ich hatte heute nur Bleistift.“
+
+== Cliffhanger ==
+// Archiv: ihr zwei im schrägen Licht
+[archiv du s04_sami licht=seite palette=blau zoom-rein] Du kippst das Blatt ins Licht.
+// Quittung groß, Text darüber
+[objekt objekte="quittung:Sami" gross="NACHTRÄGLICH" palette=blau zoom-rein] Der Abdruck liegt unter der Schrift. Jemand hat Samis Namen erst später daraufgeschrieben.

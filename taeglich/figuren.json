@@ -84,5 +84,28 @@
   "hose": "#33302c",
   "brille": "#2a2a2e",
   "bart": "#cfcac2"
+ },
+ "s04_sami": {
+  "haar": "wuschel",
+  "haare": "#6a3e22",
+  "haut": "#d9a57e",
+  "jacke": "#4f9a5a",
+  "hose": "#2e3441",
+  "brille": "#2a2a2e"
+ },
+ "s04_rike": {
+  "haar": "lang",
+  "haare": "#a9a6a2",
+  "haut": "#efcfb4",
+  "jacke": "#2c3a6a",
+  "hose": "#2b2f36"
+ },
+ "s04_frau": {
+  "haar": "kurz",
+  "haare": "#e6e2dc",
+  "haut": "#c58f6a",
+  "jacke": "#b0703a",
+  "hose": "#3a3a45",
+  "brille": "#2a2a2e"
  }
 }

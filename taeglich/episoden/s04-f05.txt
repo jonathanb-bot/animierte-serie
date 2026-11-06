@@ -1,0 +1,68 @@
+# Die zwölfte Quittung – Folge 5: Papas Fach
+@musik musik/s04-f05.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung warm
+@vortrag lebendig
+@mund zitate
+@einblenden aus
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette orange
+@zeit abend
+
+== Hook ==
+// Ausgaberaum am Abend, du besorgt, Papa
+[fundhaus du:besorgt papa zeit=abend uhr="16:30" palette=orange zoom-rein hooktext="VERDACHT GEGEN PAPA"] In einer Minute legst du deinem eigenen Papa einen Verdacht auf den Tisch. Und er lacht nicht.
+// Quittung mit durchschimmernder Nummer
+[objekt objekte="quittung:Kasse" gross="W7" palette=orange zoom-rein] Unter der überschriebenen Zeile schimmert eine Nummer durch. W sieben.
+// Nahaufnahme: du erschrocken
+[gesicht du ort=fundhaus zeit=abend schreck palette=orange] W sieben ist Papas Werkzeugfach.
+
+== Wiedererkennen ==
+// Ausgaberaum, die Uhr läuft wieder
+[fundhaus du s04_sami zeit=abend uhr="16:30" palette=orange schwenk-rechts] Sechzehn Uhr dreißig. Die Wanduhr läuft wieder.
+// Nahaufnahme: Sami misstrauisch
+[gesicht s04_sami ort=fundhaus zeit=abend misstrauisch palette=orange] Sami sieht dich lange an. Das ist schlimmer als jeder Witz.
+// Nahaufnahme: Sami
+[gesicht s04_sami ort=fundhaus zeit=abend traurig palette=orange zoom-rein] „Bei deinem Papa guckst du nicht so genau.“
+// Nahaufnahme: du
+[gesicht du ort=fundhaus zeit=abend traurig palette=orange] Das trifft. Weil ein Teil von dir genau das will.
+// Nahaufnahme: du entschlossen
+[gesicht du ort=fundhaus zeit=abend entschlossen palette=orange zoom-rein] Aber gleiche Regeln für alle. Sonst ist nichts davon fair.
+
+== Steigerung ==
+// Ausgaberaum: Papa hinten an der Werkbank
+[fundhaus papa zeit=abend uhr="16:31" palette=orange zoom-raus] Papa sitzt im Hof an der Werkbank. Der Wind klappert mit dem Blechdach. Es riecht nach Holzleim.
+// Ihr drei an der Theke
+[fundhaus papa du s04_sami zeit=abend uhr="16:32" palette=orange zoom-rein] Du legst ihm beide Papiere hin. Offen, vor Sami.
+// Nahaufnahme: du
+[gesicht du ort=fundhaus zeit=abend neutral palette=orange] „Papa. Hier steht dein Fach.“
+// Nahaufnahme: Papa liest
+[gesicht papa ort=fundhaus zeit=abend denkt palette=orange zoom-rein] Er liest langsam. Seine großen Hände halten das Papier wie etwas Zerbrechliches.
+// Nahaufnahme: Papa
+[gesicht papa ort=fundhaus zeit=abend froh palette=orange] „Gut, dass du fragst. Genau so.“
+// Stempel groß
+[objekt objekte="stempel" gross="KAPUTT" palette=orange zoom-rein] In einer Schale liegt ein zerlegter Stempel. Die Feder ist gebrochen.
+// Nahaufnahme: Papa
+[gesicht papa ort=fundhaus zeit=abend neutral palette=orange] „Den hab ich heute aus Fach sieben geholt.“
+// Papas Beleg
+[objekt objekte="quittung:Papa" gross="W7: STEMPEL" palette=orange zoom-rein] Dazu sein eigener Beleg: W sieben, ein Stempel, zur Reparatur.
+
+== Wendung ==
+// Nahaufnahme: Sami atmet aus
+[gesicht s04_sami ort=fundhaus zeit=abend froh palette=orange zoom-rein] Sami atmet aus. Dann grinst er schief.
+// Nahaufnahme: Sami
+[gesicht s04_sami ort=fundhaus zeit=abend froh palette=orange] „Okay. Du guckst bei allen gleich genau.“
+// Esstisch zu Hause, Erinnerung
+[esstisch papa du kerzen zeit=abend palette=orange zoom-raus] Abends am Esstisch schaut ihr meistens nur auf eure Teller.
+// Nahaufnahme: Papa lächelt
+[gesicht papa ort=fundhaus zeit=abend froh palette=orange zoom-rein] Heute hat er mehr gesagt als die ganze Woche. Das tut gut.
+
+== Cliffhanger ==
+// Quittung und Stempel
+[objekt objekte="quittung:Kasse|stempel" palette=orange zoom-rein] Du legst Papas Beleg neben die Kassen-Quittung.
+// Nahaufnahme: du erschrocken
+[gesicht du ort=fundhaus zeit=abend schreck palette=orange zoom-rein] Die Nummer gehört zu einem Stempel. Nicht zur Kasse. Jemand hat dich auf eine falsche Spur geschickt.

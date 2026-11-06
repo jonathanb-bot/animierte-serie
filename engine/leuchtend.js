@@ -313,4 +313,209 @@
     });
     A._dunkel = 0;
   };
+
+  // =====================================================================
+  // FUNDHAUS – Ausgaberaum des städtischen Fundhauses (s04 „Die zwölfte Quittung“): senfgelbe Wand mit 24 nummerierten
+  // Fächern voller Fundstücke, hohes Fenster mit Lichtstrahlen und Staub, Wanduhr, Hängelampen, lange Theke mit
+  // Klingel, Stempel und Quittungsblock, Linoleumboden, unscharfe Garderobe und Schirmständer vorne.
+  // (zeit=tag|abend|nacht, uhr="14:17" (Zeiger), uhr_steht (Sekundenzeiger zuckt auf der Stelle), leer=N (Fach N leer,
+  //  mit Lichtkegel), fach=N (Fach N leuchtet), dose (schwarze Blechdose mit Halbmond in Fach 24), kasse (Spendenkasse
+  //  auf der Theke), gross, figur_y)
+  // =====================================================================
+  SZ.fundhaus = (s, t) => {
+    const zeit = s.zeit || "tag";
+    const P = zeit === "abend" ? { wand: "#d98f3a", wandS: "#9a5a2a", fach: "#5a3220", himmel: ["#5a3a8a", "#f2875a"], licht: "#ffc27a", boden: "#7a4a36" }
+      : zeit === "nacht" ? { wand: "#9a7a3e", wandS: "#5a4430", fach: "#3a2a22", himmel: ["#0e1440", "#2a3a7a"], licht: "#ffe1a0", boden: "#4a3430" }
+      : { wand: "#e3ad42", wandS: "#a8742c", fach: "#6a3e22", himmel: ["#5fc4e0", "#d8f2f0"], licht: "#fff2c0", boden: "#8a5638" };
+    // Wand mit weichem Verlauf und Sockelleiste
+    ctx.fillStyle = lgrad(0, -600, 0, 1400, [[0, shade(P.wand, -0.18)], [0.45, P.wand], [1, shade(P.wand, -0.08)]]); ctx.fillRect(-1500, -1500, 4080, 2900);
+    for (let i = 0; i < 14; i++) box(-400 + i * 120, -600, 4, 2000, 2, rgba(P.wandS, 0.08));
+    // Fenster links mit Himmel, Kreuz, Fensterbank, Topfpflanze
+    const fx = 40, fy = 250, fb = 270, fh = 760;
+    box(fx - 18, fy - 18, fb + 36, fh + 36, 14, shade(P.wand, -0.35));
+    ctx.fillStyle = lgrad(0, fy, 0, fy + fh, [[0, P.himmel[0]], [1, P.himmel[1]]]); A.rr(fx, fy, fb, fh, 8); ctx.fill();
+    { const r = rnd(201); ctx.save(); A.rr(fx, fy, fb, fh, 8); ctx.clip();
+      if (zeit === "nacht") for (let i = 0; i < 20; i++) circle(fx + r() * fb, fy + r() * fh * 0.6, 2 + r() * 2, rgba("#ffffff", 0.6));
+      for (let i = 0; i < 6; i++) { const bx = fx - 20 + i * 52, bh = 120 + r() * 200; box(bx, fy + fh - bh, 48, bh + 10, 4, rgba(shade(P.himmel[1], -0.35), 0.8)); for (let k = 0; k < 4; k++) if (r() < 0.6) box(bx + 10 + (k % 2) * 18, fy + fh - bh + 20 + Math.floor(k / 2) * 34, 10, 14, 2, rgba(P.licht, zeit === "tag" ? 0.25 : 0.8)); }
+      ctx.restore(); }
+    line(fx + fb / 2, fy, fx + fb / 2, fy + fh, 14, shade(P.wand, -0.35)); line(fx, fy + fh * 0.42, fx + fb, fy + fh * 0.42, 14, shade(P.wand, -0.35));
+    box(fx - 30, fy + fh + 4, fb + 60, 26, 8, shade(P.wand, -0.25)); box(fx - 30, fy + fh + 4, fb + 60, 6, 3, rgba("#ffffff", 0.25));
+    box(fx + 180, fy + fh - 60, 60, 64, 10, "#b8553a"); for (let k = 0; k < 5; k++) ellipse(fx + 210 + Math.sin(k * 1.3) * 34, fy + fh - 80 - k * 14, 26, 11, k % 2 ? "#3f7a4a" : "#5a9a5a", k * 0.6 - 1.2);
+    glut(fx + fb / 2, fy + fh / 2, 520, P.licht, zeit === "nacht" ? 0.15 : 0.35);
+    // Wanduhr über dem Fenster
+    { const ux = fx + fb / 2, uy = 140, [hh, mm] = String(s.uhr || "10:10").split(":").map(Number);
+      ellipse(ux + 6, uy + 10, 82, 82, rgba(P.wandS, 0.35)); circle(ux, uy, 80, "#2d2a30"); circle(ux, uy, 68, "#fbf4e4");
+      for (let k = 0; k < 12; k++) { const a = k / 12 * Math.PI * 2; line(ux + Math.sin(a) * 56, uy - Math.cos(a) * 56, ux + Math.sin(a) * 62, uy - Math.cos(a) * 62, k % 3 ? 3 : 6, "#2d2a30"); }
+      const ah = ((hh % 12) + mm / 60) / 12 * Math.PI * 2, am = mm / 60 * Math.PI * 2;
+      line(ux, uy, ux + Math.sin(ah) * 34, uy - Math.cos(ah) * 34, 8, "#2d2a30"); line(ux, uy, ux + Math.sin(am) * 52, uy - Math.cos(am) * 52, 5, "#2d2a30");
+      const as = s.uhr_steht ? 0.6 + Math.sin(t * 6.3) * 0.04 * (Math.sin(t * 6.3) > 0 ? 1 : 0) : t * 0.105;
+      line(ux, uy, ux + Math.sin(as) * 58, uy - Math.cos(as) * 58, 2.5, "#d8443a"); circle(ux, uy, 6, "#d8443a"); }
+    // Fächerwand: 4 × 6 nummerierte Fächer mit Fundstücken
+    const gx = 380, gy = 200, cb = 162, ch = 150, sp = 8;
+    box(gx - 16, gy - 16, 4 * (cb + sp) + 24, 6 * (ch + sp) + 24, 12, shade(P.wand, -0.3));
+    box(gx - 16, gy - 16, 4 * (cb + sp) + 24, 8, 4, rgba("#ffffff", 0.2));
+    const farben = ["#d8443a", "#3f7ac8", "#4f9a5a", "#e8b43a", "#8a5ab8", "#e07a3a", "#3aa8a8", "#f0e6d8"];
+    const ding = (art, x, y, r) => {
+      const f1 = farben[Math.floor(r() * farben.length)], f2 = farben[Math.floor(r() * farben.length)];
+      ellipse(x, y + 46, 52, 8, rgba("#1a0e08", 0.35));
+      switch (art) {
+        case 0: poly([[x - 50, y + 10], [x, y - 40], [x + 50, y + 10]], f1); line(x, y + 10, x, y + 44, 5, "#3a2a22"); ctx.beginPath(); ctx.arc(x - 8, y + 44, 8, 0, Math.PI); ctx.lineWidth = 5; ctx.strokeStyle = "#3a2a22"; ctx.stroke(); break; // Schirm
+        case 1: circle(x, y + 16, 30, f1); circle(x, y - 22, 22, f1); circle(x - 18, y - 38, 9, f1); circle(x + 18, y - 38, 9, f1); circle(x - 7, y - 24, 3, "#2a1a14"); circle(x + 7, y - 24, 3, "#2a1a14"); break; // Teddy
+        case 2: box(x - 46, y + 14, 92, 30, 14, f1); box(x - 46, y - 8, 40, 40, 12, f1); box(x - 46, y + 34, 92, 10, 4, shade(f1, -0.3)); break; // Schuh
+        case 3: ctx.beginPath(); ctx.arc(x, y + 30, 44, Math.PI, 0); ctx.closePath(); A.fill(f1); box(x - 50, y + 26, 100, 12, 6, shade(f1, -0.25)); box(x - 6, y - 12, 12, 30, 5, rgba("#ffffff", 0.35)); break; // Helm
+        case 4: circle(x, y + 10, 36, f1); ctx.beginPath(); ctx.arc(x, y + 10, 36, 0.4, 2.6); ctx.lineWidth = 6; ctx.strokeStyle = f2; ctx.stroke(); break; // Ball
+        case 5: box(x - 44, y - 10, 88, 56, 12, f1); ctx.beginPath(); ctx.arc(x, y - 10, 22, Math.PI, 0); ctx.lineWidth = 7; ctx.strokeStyle = shade(f1, -0.3); ctx.stroke(); box(x - 10, y + 6, 20, 10, 3, "#e8c44a"); break; // Tasche
+        case 6: for (let k = 0; k < 3; k++) box(x - 44 + k * 4, y + 22 - k * 22, 88 - k * 8, 20, 4, [f1, f2, "#f0e6d8"][k]); break; // Bücher
+        default: ctx.beginPath(); ctx.moveTo(x - 46, y - 10); ctx.quadraticCurveTo(x, y + 30, x + 46, y - 10); ctx.lineWidth = 18; ctx.strokeStyle = f1; ctx.stroke(); box(x + 24, y - 12, 18, 52, 6, f1); for (let k = 0; k < 3; k++) line(x + 26 + k * 6, y + 40, x + 26 + k * 6, y + 52, 3, shade(f1, -0.2)); // Schal
+      }
+    };
+    for (let rI = 0; rI < 6; rI++) for (let c = 0; c < 4; c++) {
+      const n = rI * 4 + c + 1, x = gx + c * (cb + sp), y = gy + rI * (ch + sp), r = rnd(300 + n);
+      ctx.fillStyle = lgrad(0, y, 0, y + ch, [[0, shade(P.fach, -0.25)], [1, P.fach]]); A.rr(x, y, cb, ch, 8); ctx.fill();
+      box(x, y, cb, 12, 4, rgba("#000000", 0.18)); box(x + cb - 14, y, 14, ch, 4, rgba("#000000", 0.12));
+      const leer = Number(s.leer) === n;
+      if (s.dose && n === 24) { box(x + 40, y + 50, 82, 70, 10, "#1e1c22"); box(x + 36, y + 46, 90, 16, 6, "#2e2c34"); ctx.beginPath(); ctx.arc(x + 81, y + 88, 18, 0.5 * Math.PI, 1.5 * Math.PI); ctx.arc(x + 88, y + 88, 14, 1.5 * Math.PI, 0.5 * Math.PI, true); ctx.closePath(); A.fill("#e8d8a0"); box(x + 46, y + 52, 10, 60, 4, rgba("#ffffff", 0.12)); }
+      else if (!leer) ding(Math.floor(r() * 8), x + cb / 2, y + ch / 2 - 6, r);
+      if (leer) { ctx.save(); ctx.globalCompositeOperation = "screen"; ctx.fillStyle = rgrad(x + cb / 2, y + ch / 2, 0, 120, [[0, rgba(P.licht, 0.35 * (0.85 + 0.15 * Math.sin(t * 2)))], [1, rgba(P.licht, 0)]]); ctx.fillRect(x - 40, y - 40, cb + 80, ch + 80); ctx.restore(); }
+      if (Number(s.fach) === n || leer) { ctx.lineWidth = 6; ctx.strokeStyle = rgba("#fff2b0", 0.7 + 0.3 * Math.sin(t * 3)); A.rr(x - 3, y - 3, cb + 6, ch + 6, 10); ctx.stroke(); glut(x + cb / 2, y + ch / 2, 200, "#ffe08a", 0.25); }
+      // Nummernschild
+      box(x + cb / 2 - 26, y + ch - 30, 52, 26, 6, "#f6eedc"); A.text(String(n), x + cb / 2, y + ch - 17, 20, "#3a2a22", "center", 900);
+    }
+    // Hängelampen
+    for (const lx of [560, 930]) { line(lx, -400, lx, 60, 4, "#3a2a22"); ctx.beginPath(); ctx.moveTo(lx - 60, 120); ctx.quadraticCurveTo(lx, 30, lx + 60, 120); ctx.closePath(); A.fill("#2f5a52");
+      ellipse(lx, 122, 54, 10, "#fff2c8"); glut(lx, 140, 340, P.licht, zeit === "tag" ? 0.35 : 0.6); A.licht(lx, 140, 360, P.licht, 0.8); }
+    // Lichtstrahlen aus dem Fenster mit Staub (schräg nach rechts unten)
+    if (zeit !== "nacht") { ctx.save(); ctx.globalCompositeOperation = "screen";
+      for (const [x0, b, a] of [[fx + 40, 120, 0.16], [fx + 150, 90, 0.12], [fx + 230, 60, 0.1]]) { ctx.fillStyle = lgrad(fx, fy, 900, 1500, [[0, rgba(P.licht, a)], [1, rgba(P.licht, 0)]]); poly([[x0, fy + 40], [x0 + b, fy + 40], [x0 + b + 760, fy + 1180], [x0 + 520, fy + 1180]]); ctx.fill(); }
+      { const r = rnd(211); for (let i = 0; i < 46; i++) { const f = r(), x = fx + 80 + f * 700 + Math.sin(t * 0.4 + i) * 20, y = fy + 120 + f * 900 + (r() - 0.5) * 200 + Math.cos(t * 0.3 + i) * 14; circle(x, y, 2 + r() * 2.5, rgba("#fffbe8", 0.5 * (0.5 + 0.5 * Math.sin(t * 1.4 + i)))); } }
+      ctx.restore(); }
+    // Boden (Linoleum mit Fliesenfugen in Perspektive)
+    const by = 1330;
+    ctx.fillStyle = lgrad(0, by, 0, 2100, [[0, shade(P.boden, 0.12)], [1, shade(P.boden, -0.3)]]); ctx.fillRect(-1500, by, 4080, 1600);
+    for (let k = -8; k <= 8; k++) line(540 + k * 90, by, 540 + k * 300, 2200, 3, rgba("#000000", 0.12));
+    for (let k = 1; k < 7; k++) { const y = by + Math.pow(k / 7, 1.6) * 900; line(-1500, y, 2600, y, 3, rgba("#000000", 0.1)); }
+    ellipse(540, by + 300, 600, 90, rgba(P.licht, 0.12));
+    // Theke
+    { const ty = 1190; ellipse(540, ty + 190, 760, 40, rgba("#1a0e08", 0.4));
+      box(-120, ty + 30, 1320, 160, 10, "#b8553a"); box(-120, ty + 30, 1320, 160, 10, rgba("#000000", 0.0));
+      for (let k = 0; k < 9; k++) box(-100 + k * 150, ty + 50, 130, 120, 8, shade("#b8553a", -0.12));
+      box(-140, ty, 1360, 40, 10, "#e8d6b8"); box(-140, ty, 1360, 8, 4, rgba("#ffffff", 0.5)); box(-140, ty + 32, 1360, 8, 0, rgba("#000000", 0.15));
+      // Klingel
+      ellipse(170, ty + 4, 44, 10, "#6a5a4a"); ctx.beginPath(); ctx.arc(170, ty, 36, Math.PI, 0); A.fill("#d8c070"); circle(170, ty - 40, 8, "#d8c070"); ellipse(158, ty - 18, 10, 6, rgba("#ffffff", 0.5));
+      // Quittungsblock mit roter Schnur
+      box(300, ty - 26, 150, 28, 4, "#fbf6ea"); box(304, ty - 34, 142, 10, 3, "#f0e6d0"); for (let k = 0; k < 4; k++) line(314, ty - 18 + k * 5, 420 - k * 12, ty - 18 + k * 5, 2, rgba("#3a2a22", 0.35));
+      ctx.beginPath(); ctx.moveTo(445, ty - 20); ctx.bezierCurveTo(480, ty - 10, 470, ty + 30, 500, ty + 60); ctx.lineWidth = 4; ctx.strokeStyle = "#d8443a"; ctx.stroke();
+      // Stempel
+      box(560, ty - 20, 70, 22, 6, "#2d2a30"); box(580, ty - 62, 30, 44, 8, "#8a5a3a"); circle(595, ty - 68, 18, "#8a5a3a");
+      // Spendenkasse
+      if (s.kasse) { box(720, ty - 90, 200, 92, 10, "#3f8a5a"); box(720, ty - 90, 200, 20, 8, shade("#3f8a5a", 0.15)); box(790, ty - 82, 60, 8, 4, "#1e3a2a"); box(808, ty - 50, 24, 30, 4, "#e8c44a"); glut(820, ty - 40, 180, "#9fe0a8", 0.2); }
+      else { for (let k = 0; k < 3; k++) box(760 + k * 14, ty - 60 + k * 18, 160, 18, 3, ["#f0e6d8", "#e8d6b8", "#fbf6ea"][k]); }
+    }
+    // Figuren vor der Theke
+    A.figurenZeigen(s, t, s.figur_y ?? (s.gross ? 1660 : 1560), s.gross ? 0.95 : 0.8);
+    // Vordergrund: unscharfe Garderobe mit Mänteln links, Schirmständer rechts
+    ebene("fhvorne", 14, () => {
+      const d = shade(P.boden, -0.6);
+      box(-60, 600, 40, 1700, 16, d); for (const [dx, dy, rx, ry] of [[0, 900, 150, 300], [-40, 1100, 130, 320], [60, 1300, 120, 280]]) ellipse(-40 + dx, dy, rx, ry, shade(d, 0.05));
+      box(960, 1700, 200, 520, 30, d); for (let k = 0; k < 3; k++) line(1000 + k * 50, 1700, 980 + k * 60, 1300 - k * 60, 22, shade(d, 0.08));
+      circle(1100, 2100, 260, shade(d, -0.05));
+    });
+    A._dunkel = 0;
+  };
+
+  // =====================================================================
+  // ARCHIV – Papierarchiv des Fundhauses (s04): blaue Regalgasse in Fluchtperspektive, Kartons und Papierbündel mit
+  // Schnur, Leuchtröhren mit Lichtkegeln und Staub, kleines Fenster am Ende, gebündelte Stapel vorne.
+  // (flackern = eine Röhre flackert, buendel = großer Stapel mit roter Markierung vorne, sackkarre = Sackkarre rollt
+  //  auf den Stapel zu, licht=seite (schräges Fensterlicht von rechts), gross, figur_y)
+  // =====================================================================
+  SZ.archiv = (s, t) => {
+    const P = { wand: "#1c2a5a", regal: "#2c4486", regalS: "#1a2a5c", karton: ["#c89a5a", "#d8b070", "#b8844a", "#e0c48a"], papier: "#eef2fa", roehre: "#e8f4ff", boden: "#18224a", fenster: "#a8d8ff" };
+    const vx = 540, vy = 860;
+    ctx.fillStyle = lgrad(0, -600, 0, 2000, [[0, shade(P.wand, -0.3)], [0.45, P.wand], [1, shade(P.wand, -0.2)]]); ctx.fillRect(-1500, -1500, 4080, 3600);
+    // Ende der Gasse: Wand mit kleinem Fenster
+    box(vx - 150, vy - 260, 300, 380, 6, shade(P.wand, 0.12));
+    box(vx - 60, vy - 200, 120, 150, 6, P.fenster); line(vx, vy - 200, vx, vy - 50, 6, shade(P.wand, 0.12)); glut(vx, vy - 125, 380, P.fenster, 0.5); A.licht(vx, vy - 125, 320, P.fenster, 0.8);
+    // Boden der Gasse
+    ctx.fillStyle = lgrad(0, vy + 120, 0, 2100, [[0, shade(P.boden, 0.25)], [1, shade(P.boden, -0.2)]]); poly([[vx - 150, vy + 120], [vx + 150, vy + 120], [1600, 2400], [-520, 2400]]); ctx.fill();
+    for (let k = 1; k < 9; k++) { const f = Math.pow(k / 9, 1.8), y = lerp(vy + 120, 2300, f), w = lerp(150, 1060, f); line(vx - w, y, vx + w, y, 3, rgba("#000010", 0.15)); }
+    ctx.save(); ctx.globalCompositeOperation = "screen"; ctx.fillStyle = lgrad(0, vy + 120, 0, 1800, [[0, rgba(P.fenster, 0.25)], [1, rgba(P.fenster, 0)]]); poly([[vx - 60, vy + 120], [vx + 60, vy + 120], [vx + 260, 1800], [vx - 260, 1800]]); ctx.fill(); ctx.restore();
+    // Regalwände links und rechts in Perspektive
+    const seite = (sg) => {
+      const nahX = sg < 0 ? -80 : 1160, ferX = vx + sg * 150, oben = (f) => lerp(-100, vy - 260, f), unten = (f) => lerp(2050, vy + 120, f), X = (f) => lerp(nahX, ferX, f);
+      poly([[X(0), oben(0)], [X(1), oben(1)], [X(1), unten(1)], [X(0), unten(0)]], P.regal);
+      const r = rnd(sg < 0 ? 401 : 409);
+      // Fächer: 7 Böden, Kartons und Bündel dazwischen
+      const boeden = 7, spalten = 9;
+      for (let j = 0; j < spalten; j++) {
+        const f0 = Math.pow(j / spalten, 0.75), f1 = Math.pow((j + 1) / spalten, 0.75);
+        for (let b = 0; b < boeden; b++) {
+          const g0 = b / boeden, g1 = (b + 1) / boeden, yA = (f) => lerp(oben(f), unten(f), g0), yB = (f) => lerp(oben(f), unten(f), g1);
+          const d = 0.12, h = 0.82;
+          const qa = [[X(f0 + (f1 - f0) * d), lerp(yA(f0), yB(f0), 1 - h)], [X(f1 - (f1 - f0) * d), lerp(yA(f1), yB(f1), 1 - h)], [X(f1 - (f1 - f0) * d), yB(f1)], [X(f0 + (f1 - f0) * d), yB(f0)]];
+          const art = r();
+          if (art < 0.55) { const fc = P.karton[Math.floor(r() * 4)]; poly(qa, mix(fc, P.regal, 0.25 + f0 * 0.4)); const mx0 = (qa[0][0] + qa[1][0]) / 2, my0 = (qa[0][1] + qa[3][1]) / 2; line(mx0 - 12 * (1 - f0), my0, mx0 + 12 * (1 - f0), my0, 6 * (1 - f0) + 1, rgba("#ffffff", 0.5)); }
+          else if (art < 0.9) { for (let k = 0; k < 4; k++) { const u = k / 4, v = (k + 1) / 4; poly([[lerp(qa[3][0], qa[2][0], 0), lerp(qa[0][1], qa[3][1], u)], [lerp(qa[3][0], qa[2][0], 1), lerp(qa[1][1], qa[2][1], u)], [qa[2][0], lerp(qa[1][1], qa[2][1], v)], [qa[3][0], lerp(qa[0][1], qa[3][1], v)]], mix(k % 2 ? P.papier : "#d8e0f0", P.regal, 0.2 + f0 * 0.5)); }
+            line((qa[0][0] + qa[1][0]) / 2, qa[0][1], (qa[3][0] + qa[2][0]) / 2, qa[3][1], 3 * (1 - f0) + 1, rgba("#d8443a", 0.7)); }
+        }
+        // Regalpfosten
+        line(X(f0), oben(f0), X(f0), unten(f0), 14 * (1 - f0) + 2, P.regalS);
+      }
+      for (let b = 0; b <= boeden; b++) { const g = b / boeden; line(X(0), lerp(oben(0), unten(0), g), X(1), lerp(oben(1), unten(1), g), 12, shade(P.regal, 0.18)); }
+      // Kantenlicht
+      line(X(0), oben(0), X(1), oben(1), 4, rgba(P.roehre, 0.2));
+    };
+    seite(-1); seite(1);
+    // Leuchtröhren an der Decke (in Perspektive), eine flackert
+    for (let k = 0; k < 4; k++) {
+      const f = Math.pow(k / 4, 0.8), y = lerp(-60, vy - 300, f), w = lerp(220, 50, f);
+      const an = s.flackern && k === 1 ? (Math.sin(t * 23) > 0.2 || Math.sin(t * 1.3) > 0.4 ? 1 : 0.25) : 1;
+      line(vx, y - 120, vx, y - 10, 3, "#0e1430"); box(vx - w, y - 12, w * 2, 22 * (1 - f) + 6, 10, rgba(P.roehre, 0.4 + 0.6 * an));
+      glut(vx, y, 420 * (1 - f * 0.6), "#bfe0ff", 0.4 * an); if (an > 0.5) A.licht(vx, y, 380 * (1 - f * 0.6), "#bfe0ff", 0.6);
+      if (k < 2) { ctx.save(); ctx.globalCompositeOperation = "screen"; ctx.fillStyle = lgrad(0, y, 0, y + 1500, [[0, rgba("#bfe0ff", 0.14 * an)], [1, rgba("#bfe0ff", 0)]]); poly([[vx - w, y], [vx + w, y], [vx + w * 2.8, y + 1500], [vx - w * 2.8, y + 1500]]); ctx.fill(); ctx.restore(); }
+    }
+    // Seitliches Fensterlicht (schräg)
+    if (s.licht === "seite") { ctx.save(); ctx.globalCompositeOperation = "screen"; ctx.fillStyle = lgrad(1100, 300, 300, 1500, [[0, rgba("#ffe6b0", 0.35)], [1, rgba("#ffe6b0", 0)]]); poly([[1200, 200], [1200, 520], [200, 1700], [-100, 1500]]); ctx.fill(); ctx.restore(); }
+    // Staub
+    { const r = rnd(421); for (let i = 0; i < 60; i++) { const x = 200 + r() * 700 + Math.sin(t * 0.3 + i) * 24, y = 100 + ((r() * 1500 + t * 12) % 1500), a = 0.5 + 0.5 * Math.sin(t * 1.6 + i * 2); circle(x, y, 1.8 + r() * 2.4, rgba("#e8f2ff", 0.4 * a)); } }
+    // Bündel vorne (Papierstapel mit Schnur, einer mit roter Markierung)
+    if (s.buendel) { const bx = 860, byy = 1500;
+      ellipse(bx, byy + 10, 180, 30, rgba("#000010", 0.4));
+      for (let k = 0; k < 6; k++) { const w = 150 - (k % 2) * 12, y = byy - 40 - k * 44; box(bx - w, y, w * 2, 44, 6, k % 2 ? "#e4eaf6" : P.papier); for (let q = 0; q < 3; q++) line(bx - w + 8, y + 12 + q * 10, bx + w - 8, y + 12 + q * 10, 2, rgba("#8a9ac0", 0.35)); }
+      line(bx, byy - 300, bx, byy - 4, 6, "#c89a5a"); line(bx - 150, byy - 160, bx + 150, byy - 160, 6, "#c89a5a");
+      box(bx + 70, byy - 330, 70, 90, 6, "#d8443a"); glut(bx + 105, byy - 285, 140, "#ff7a6a", 0.3 * (0.8 + 0.2 * Math.sin(t * 3))); }
+    if (s.sackkarre) { const kx = 140 + Math.min(t * 45, 360), ky = 1640;
+      ellipse(kx + 60, ky + 12, 110, 14, rgba("#000010", 0.4)); line(kx, ky - 420, kx + 40, ky, 14, "#8a96b0"); line(kx + 30, ky - 420, kx + 70, ky, 0.1, "#8a96b0");
+      box(kx + 30, ky - 16, 140, 16, 4, "#8a96b0"); circle(kx + 40, ky, 30, "#1a1a24"); circle(kx + 40, ky, 12, "#5a6680"); line(kx - 20, ky - 440, kx + 20, ky - 420, 14, "#d8443a"); }
+    // Figuren
+    A.figurenZeigen(s, t, s.figur_y ?? (s.gross ? 1660 : 1580), s.gross ? 0.95 : 0.78);
+    // Vordergrund: unscharfe Kartons an den Rändern
+    ebene("arvorne", 14, () => { const d = "#0a1030";
+      box(-160, 1700, 420, 360, 20, d); box(-120, 1480, 300, 240, 16, shade(d, 0.05)); box(900, 1760, 360, 320, 20, d); box(980, 1560, 240, 220, 16, shade(d, 0.05));
+    });
+    A._dunkel = 0;
+  };
+
+  // ---- Icons für s04 (Quittung, Spendenkasse, Stoffvogel, Stempel, Blechdose, Armbanduhr) ----
+  Object.assign(A.I, {
+    quittung(t) { ctx.save(); ctx.rotate(-0.06); box(-120, -170, 240, 340, 10, "#fbf6ea"); box(-120, -170, 240, 50, 10, "#e8b43a");
+      for (let k = 0; k < 8; k++) box(-90, -90 + k * 30, k % 3 === 2 ? 110 : 180, 9, 4, A.rgba("#5a4a3a", 0.35));
+      box(30, 110, 70, 28, 6, A.rgba("#3f7ac8", 0.25)); ctx.beginPath(); ctx.moveTo(-80, 130); ctx.bezierCurveTo(-50, 100, -20, 150, 20, 120); ctx.lineWidth = 6; ctx.strokeStyle = "#2c3a6a"; ctx.stroke();
+      circle(-95, -145, 9, "#7a5a3a"); ctx.beginPath(); ctx.moveTo(-95, -145); ctx.bezierCurveTo(-160, -200, -170, -60, -200, -20); ctx.lineWidth = 5; ctx.strokeStyle = "#d8443a"; ctx.stroke(); ctx.restore(); },
+    kasse(t) { box(-150, -70, 300, 150, 18, "#3f8a5a"); box(-150, -90, 300, 50, 16, A.shade("#3f8a5a", 0.12)); box(-50, -78, 100, 12, 6, "#1e3a2a"); box(-20, -10, 40, 50, 6, "#e8c44a"); circle(0, 8, 8, "#7a5a1a");
+      box(-140, -84, 20, 150, 8, A.rgba("#ffffff", 0.15)); for (let k = 0; k < 3; k++) { const a = 0.5 + 0.5 * Math.sin(t * 3 + k * 2); circle(-110 + k * 110, -110, 6, A.rgba("#ffffff", 0.7 * a)); } },
+    stoffvogel(t) { const w = Math.sin(t * 2) * 0.06; ellipse(0, 20, 110, 85, "#d8443a"); circle(70, -50, 55, "#d8443a"); poly([[115, -55], [160, -42], [115, -30]], "#e8b43a"); circle(85, -60, 9, "#2a1a14");
+      ctx.save(); ctx.translate(-10, 0); ctx.rotate(-0.4 + w); ellipse(-60, -20, 80, 36, "#b8302a"); ctx.restore();
+      ctx.save(); ctx.translate(10, 10); ctx.rotate(0.3 - w); ellipse(-40, 30, 56, 30, "#e07a5a"); for (let k = 0; k < 5; k++) line(-80 + k * 18, 22, -72 + k * 18, 38, 4, "#f6eedc"); ctx.restore();
+      poly([[-100, 20], [-170, 0], [-160, 50]], "#b8302a"); ellipse(-20, 50, 50, 20, A.rgba("#ffffff", 0.12)); },
+    stempel(t) { box(-110, 40, 220, 60, 14, "#2d2a30"); box(-100, 90, 200, 16, 6, "#3f7ac8"); box(-40, -60, 80, 110, 18, "#8a5a3a"); circle(0, -90, 52, "#8a5a3a"); ellipse(-14, -104, 18, 10, A.rgba("#ffffff", 0.3));
+      line(-60, 70, 60, 70, 6, A.rgba("#ffffff", 0.2)); },
+    blechdose(t) { box(-110, -80, 220, 180, 22, "#1e1c22"); box(-120, -100, 240, 44, 16, "#2e2c34"); box(-90, -60, 26, 140, 10, A.rgba("#ffffff", 0.1));
+      ctx.beginPath(); ctx.arc(0, 20, 50, 0.5 * Math.PI, 1.5 * Math.PI); ctx.arc(20, 20, 38, 1.5 * Math.PI, 0.5 * Math.PI, true); ctx.closePath(); A.fill("#e8d8a0");
+      ellipse(70, -60, 14, 6, A.rgba("#000000", 0.4)); },
+    armbanduhr(t) { box(-46, -190, 92, 380, 30, "#5a3a26"); for (let k = 0; k < 6; k++) circle(0, -150 + k * 60 + (k > 2 ? 60 : 0), 5, "#3a2418"); circle(0, 0, 100, "#c8ccd4"); circle(0, 0, 84, "#f6f2e8");
+      for (let k = 0; k < 12; k++) { const a = k / 12 * Math.PI * 2; line(Math.sin(a) * 66, -Math.cos(a) * 66, Math.sin(a) * 74, -Math.cos(a) * 74, 4, "#2d2a30"); }
+      line(0, 0, 30, -30, 8, "#2d2a30"); line(0, 0, -10, -60, 6, "#2d2a30"); ctx.save(); ctx.rotate(t * 1.05); line(0, 12, 0, -70, 3, "#d8443a"); ctx.restore(); circle(0, 0, 7, "#d8443a"); box(96, -14, 22, 28, 6, "#c8ccd4"); },
+  });
+  for (const n of ["quittung", "kasse", "stoffvogel", "stempel", "blechdose", "armbanduhr"]) if (!A.ICONS.includes(n)) A.ICONS.push(n);
 })();

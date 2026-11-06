@@ -1,0 +1,66 @@
+# Die zwölfte Quittung – Folge 6: Papier vergisst nicht
+@musik musik/s04-f06.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung spannend
+@vortrag lebendig
+@mund zitate
+@einblenden aus
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette tuerkis
+@zeit abend
+
+== Hook ==
+// Archiv im Seitenlicht, du neugierig am Bündel
+[archiv du:neugierig buendel licht=seite palette=tuerkis zoom-rein hooktext="DAS LEERE BLATT VERRÄT ES"] Siebzehn Uhr. Ein leeres Blatt verrät, was wirklich auf der Quittung stand.
+// Leeres Blatt mit Druckspuren
+[objekt objekte="quittung:leer" gross="DRUCKSPUREN" palette=tuerkis zoom-rein] Wer fest schreibt, drückt durch. Bis aufs nächste Blatt.
+// Nahaufnahme: du
+[gesicht du ort=archiv entschlossen palette=tuerkis] Und im geretteten Bündel muss das Blatt liegen, das unter der Kassen-Quittung lag.
+
+== Wiedererkennen ==
+// Archiv: ihr zwei kniet am Bündel
+[archiv du s04_sami buendel palette=tuerkis schwenk-rechts] Du und Sami kniet im Archiv. Das Dünnpapier raschelt bei jeder Bewegung. Draußen schlägt eine Kirchturmuhr fünf.
+// Archiv, Röhre flackert
+[archiv du buendel flackern palette=tuerkis zoom-rein] Ihr zählt die Blätter. Hunderteinundzwanzig. Hundertzweiundzwanzig.
+// Nahaufnahme: Sami
+[gesicht s04_sami ort=archiv froh palette=tuerkis] „Wenn wir's finden, geb ich dir ein Eis aus.“
+// Nahaufnahme: du
+[gesicht du ort=archiv froh palette=tuerkis zoom-rein] „Zwei Kugeln.“
+
+== Steigerung ==
+// Archiv: das Blatt
+[archiv du buendel palette=tuerkis zoom-rein] Da. Ein Blatt ohne Tinte. Aber mit feinen Rillen, wie eine Landkarte.
+// Nahaufnahme: du denkst
+[gesicht du ort=archiv denkt palette=tuerkis] Von vorne siehst du nichts. Das Licht kommt zu gerade.
+// Archiv: Fenster am Ende der Gasse
+[archiv du licht=seite palette=tuerkis zoom-rein] Also gehst du zum kleinen Fenster am Ende der Gasse. Ein Sonnenstrahl fällt schräg herein.
+// Archiv: ihr zwei im Licht
+[archiv du s04_sami licht=seite palette=tuerkis zoom-rein] Du hältst das Blatt flach ins Licht. Der raue Karton darunter kratzt an deinen Fingern.
+// Blatt mit Schatten
+[objekt objekte="quittung:Druckspur" gross="SCHATTEN" palette=tuerkis zoom-rein] Plötzlich werfen die Rillen Schatten. Buchstaben tauchen auf.
+// Nahaufnahme: Sami hält die Luft an
+[gesicht s04_sami ort=archiv schreck palette=tuerkis zoom-rein] Sami hält die Luft an.
+// Fach 24
+[objekt objekte="quittung:Fach 24" gross="FACH 24" palette=tuerkis zoom-rein] Fach vierundzwanzig. Ausgabe an: Lindner. Die Uhrzeit ist frei gelassen.
+// Nahaufnahme: du neugierig
+[gesicht du ort=archiv neugierig palette=tuerkis] Und in der Zeile für den Gegenstand steht nicht Spendenkasse.
+
+== Wendung ==
+// Blechdose groß
+[objekt objekte="blechdose" gross="SCHWARZE BLECHDOSE" palette=tuerkis zoom-rein] Da steht: schwarze Blechdose.
+// Nahaufnahme: du denkst
+[gesicht du ort=archiv denkt palette=tuerkis zoom-rein] Jemand hat einen Schein für eine Dose vorbereitet. Und daraus dann die Kassen-Quittung gemacht.
+// Ausgaberaum am Abend
+[fundhaus du s04_sami zeit=abend uhr="17:10" palette=orange zoom-raus] Ihr lauft nach vorne in den Ausgaberaum. Die Sonne steht schon tief und färbt die Fächer golden.
+// Nahaufnahme: Sami
+[gesicht s04_sami ort=fundhaus zeit=abend besorgt palette=orange] „Dann hat das jemand vorher geplant.“
+
+== Cliffhanger ==
+// Nahaufnahme: du
+[gesicht du ort=fundhaus zeit=abend schreck palette=orange zoom-rein] Und das ist kein Zufall mehr.
+// Quittung und Dose
+[objekt objekte="quittung:Kasse|blechdose" gross="AUS DOSE WURDE KASSE" palette=orange zoom-rein] Die falsche Quittung wurde aus einem Abholschein für eine schwarze Dose gemacht.

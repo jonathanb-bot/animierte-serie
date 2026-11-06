@@ -1,0 +1,66 @@
+# Die zwölfte Quittung – Folge 9: Das hinterste Fach
+@musik musik/s04-f09.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung duester
+@vortrag lebendig
+@mund zitate
+@einblenden aus
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette lila
+@zeit nacht
+
+== Hook ==
+// Ausgaberaum nachts, Fach 24 leuchtet, du erschrocken, Rike
+[fundhaus du:schreck s04_rike zeit=nacht uhr="18:30" fach=24 dose palette=lila zoom-rein hooktext="DU FINDEST DAS GELD"] In achtzig Sekunden findest du die viertausend Euro. Und hinter dir wird es still.
+// Geld groß
+[objekt objekte="geld" gross="4.000 EURO" palette=lila zoom-rein] Viertausend Euro für den Jugendtreff. Für ein neues Dach und eine Tischtennisplatte.
+
+== Wiedererkennen ==
+// Ausgaberaum nachts
+[fundhaus du s04_frau s04_sami zeit=nacht uhr="18:30" dose palette=lila schwenk-rechts] Achtzehn Uhr dreißig. Draußen ist es dunkel geworden. Im Ausgaberaum brennt nur noch eine Lampe.
+// Fach 24 mit der Dose
+[fundhaus du zeit=nacht uhr="18:31" fach=24 dose palette=lila zoom-rein] Im letzten Fach unten rechts steht eine schwarze Dose mit Halbmond.
+// Nahaufnahme: Frau Lindner
+[gesicht s04_frau ort=fundhaus zeit=nacht froh palette=lila] „Die Delle. Das ist sie.“
+// Rike kommt aus dem Büro
+[fundhaus s04_rike du zeit=nacht uhr="18:32" palette=lila zoom-rein] Rike kommt aus dem Büro. Ihr Schlüsselbund klappert.
+// Nahaufnahme: Rike
+[gesicht s04_rike ort=fundhaus zeit=nacht misstrauisch palette=lila] „Fach vierundzwanzig? Da kommt Sami doch auch dran.“
+
+== Steigerung ==
+// Nahaufnahme: Sami blass
+[gesicht s04_sami ort=fundhaus zeit=nacht schreck palette=lila zoom-rein] Sami wird blass. Schon wieder er. Schon wieder sein Name.
+// Nahaufnahme: du
+[gesicht du ort=fundhaus zeit=nacht entschlossen palette=lila] Du sagst nichts. Du streckst nur die Hand aus.
+// Zwei Schlüssel
+[objekt objekte="schluessel:Helfer|schluessel:Leitung" gross="ZWEI SCHLÜSSEL" palette=lila zoom-rein] Samis Helferschlüssel öffnet die vorderen Fächer. Ab Fach zwanzig passt nur einer: Rikes.
+// Sami am Fach
+[fundhaus du s04_sami zeit=nacht uhr="18:33" fach=24 dose palette=lila zoom-rein] Sami probiert es trotzdem, vor allen. Der Schlüssel dreht sich keinen Millimeter.
+// Nahaufnahme: Rike wütend
+[gesicht s04_rike ort=fundhaus zeit=nacht wuetend palette=lila] „Dann hat er es eben irgendwie aufbekommen.“
+// Nahaufnahme: du
+[gesicht du ort=fundhaus zeit=nacht neutral palette=lila zoom-rein] „Dann öffnen wir es. Jetzt. Mit Frau Lindner.“
+// Rike, du und Frau Lindner
+[fundhaus s04_rike du s04_frau zeit=nacht uhr="18:35" fach=24 dose palette=lila zoom-rein] Frau Lindner nickt. Vor der Besitzerin kann Rike nicht Nein sagen.
+// Nahaufnahme: Rike
+[gesicht s04_rike ort=fundhaus zeit=nacht angst palette=lila] Ihre Hand zittert, als sie aufschließt. Das Scharnier quietscht.
+
+== Wendung ==
+// Fach offen
+[fundhaus du zeit=nacht uhr="18:36" fach=24 palette=lila zoom-rein] Ein kalter Luftzug kommt aus dem Fach. Es riecht nach altem Lack.
+// Dose groß
+[objekt objekte="blechdose" palette=lila zoom-rein] Frau Lindner hebt die Dose heraus und öffnet vorsichtig den Deckel. Papier raschelt.
+// Nahaufnahme: Frau Lindner
+[gesicht s04_frau ort=fundhaus zeit=nacht froh palette=lila] „Seine Briefe. Alle noch da.“
+// Nahaufnahme: du
+[gesicht du ort=fundhaus zeit=nacht neugierig palette=lila zoom-rein] Hinter der Dose, ganz hinten im Fach, liegt etwas unter braunem Packpapier.
+
+== Cliffhanger ==
+// Kasse groß
+[objekt objekte="kasse:Spenden" gross="DIE KASSE" palette=lila zoom-rein] Du ziehst das Papier zur Seite. Eine grüne Ecke. Die Spendenkasse.
+// Nahaufnahme: du erschrocken
+[gesicht du ort=fundhaus zeit=nacht schreck palette=lila zoom-rein] Und hinter dir hört Rikes Schlüsselbund auf zu klappern.

@@ -58,6 +58,7 @@ Reihenfolge als Vorschlag; die Analyse darf tauschen, aber jedes Genre kommt bis
 | s01 Funkstille | Großstadt bei Nacht | Überleben/Mysterium | chronologisch, 3 Tage | Rätsel mit Gefahr | Schwester, Opa | 66–79 s / 10 / 4 Sammelteile | polarlicht | Hook-Text in allen Folgen |
 | s02 Der Hauptgewinn | Heimatstadt (Kiosk, Schule, Esstisch) | Was wäre wenn/Alltagsdrama | chronologisch, 1 Woche | kühne Prämisse | beste Freundin, Opa | 65–81 s / 8 / einzeln | kiosk | Hook-Text A/B (ungerade mit, gerade ohne) |
 | s03 Der Nachahmer | Wald und Hütte am See bei Nacht | Horror ohne Blut | eine Nacht in Echtzeit (22–2 Uhr) | Regel/Warnung | Mutter, bester Freund, Bens Opa | 120–180 s / 4 / einzeln | waldnacht | E3 Grund-Regel F1/F3 (+ E4 ohne Untertitel) |
+| s04 Die zwölfte Quittung | städtisches Fundhaus (Ausgaberaum, Papierarchiv, Gemeinschaftsgarten) | Krimi/Rätsel | Rätsel, das jede Folge ein Stück löst, an einem Nachmittag (14:30–19:30) | Ende zuerst (ungerade) / direkte Lage mit Uhrzeit (gerade) | bester Freund unter Verdacht, Vater | 80–90 s / 12 / 5 Sammelteile | fundhaus, archiv | E5 Ende zuerst (+ E4 mit Untertiteln) |
 
 ## Experimente (Hypothese → Ergebnis)
 
@@ -68,7 +69,7 @@ Reihenfolge als Vorschlag; die Analyse darf tauschen, aber jedes Genre kommt bis
 | – | s02 | (Format-Rotation) TikTok-Einzelposts statt Sammelteile | 8 Einzelposts | Wiedergabe in % der Länge, Aufrufe/h | offen |
 | E3 | s03 | Wer nur eine Folge sieht, bleibt länger, wenn der erste Satz die Grund-Regel der Welt enthält (späte Teile ohne sie verlieren zwischen 5 und 30 s die Hälfte) | Folge 1 und 3 mit Grund-Prämisse + neuer Lage, Folge 2 und 4 nur neue Lage | TikTok Bindung 10 s/30 s, Ø Wiedergabe, Follows; Instagram Ø Wiedergabe (F3 gegen F2/F4) | offen |
 | E4 | s03–s12 | Ohne Untertitel wirkt das Bild ruhiger und cleaner, die Leute schauen genauer hin und bleiben trotzdem (Jonathans Wunsch 5.11.) | im Wechsel: ungerade Staffeln `@untertitel aus`, gerade mit (Hook-Text, `gross=` und Schrift im Bild bleiben) | TikTok Bindung 3 s/10 s, Ø Wiedergabe in % der Länge, Instagram Ø Wiedergabe – Staffeln ohne gegen Staffeln mit Untertiteln (läuft neben dem Haupt-Experiment jeder Staffel) | offen |
-| E5 | s04 | Ein Hook „Ende zuerst“ (das Ende der Folge im ersten Satz, dann Rücksprung) hält Fremde länger als der direkte Einstieg in die Lage | ungerade Folgen Ende zuerst, gerade Folgen direkte Lage (Fall + Ort + Uhrzeit), sonst gleich, ±5 s | Instagram/YouTube Ø Wiedergabe und Abbruch je Folge (6 gegen 6), TikTok Bindung 4 s/12 s je Sammelteil nach Art der ersten Folge | offen (vorgeschlagen 5.11.) |
+| E5 | s04 | Ein Hook „Ende zuerst“ (das Ende der Folge im ersten Satz, dann Rücksprung) hält Fremde länger als der direkte Einstieg in die Lage | ungerade Folgen Ende zuerst, gerade Folgen direkte Lage (Fall + Ort + Uhrzeit), sonst gleich, ±5 s | Instagram/YouTube Ø Wiedergabe und Abbruch je Folge (6 gegen 6), TikTok Bindung 4 s/12 s je Sammelteil nach Art der ersten Folge | offen; s04 umgesetzt (Nacht 6./7.11.): F1, F3, F5, F7, F9, F11 Ende zuerst, F2, F4, F6, F8, F10, F12 direkte Lage mit Uhrzeit, alle 213–217 Wörter, 21–22 Einstellungen, Hook-Text überall |
 
 ## Ergebnisse (je Analyse ergänzen, mit Datum)
 

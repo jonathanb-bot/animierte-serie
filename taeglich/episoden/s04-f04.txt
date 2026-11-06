@@ -1,0 +1,66 @@
+# Die zwölfte Quittung – Folge 4: Vierzehn Uhr siebzehn
+@musik musik/s04-f04.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung spannend
+@vortrag lebendig
+@mund zitate
+@einblenden aus
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette lila
+@zeit tag
+
+== Hook ==
+// Ausgaberaum, die stehende Wanduhr, du erschrocken
+[fundhaus du:schreck zeit=tag uhr="14:17" uhr_steht palette=lila zoom-rein hooktext="VIERMAL 14:17"] Vierzehn Uhr siebzehn. Diese Uhrzeit steht auf vier Quittungen. Dabei liegen Stunden dazwischen.
+// Drei Quittungen mit derselben Zeit
+[objekt objekte="quittung:14.17 Uhr|quittung:14.17 Uhr|quittung:14.17 Uhr" gross="DIESELBE MINUTE" palette=lila] Ein Schirm, ein Helm, eine Kasse. Alles in derselben Minute.
+// Nahaufnahme: du denkst
+[gesicht du ort=fundhaus zeit=tag denkt palette=lila] Und eine davon soll beweisen, dass dein bester Freund ein Dieb ist.
+
+== Wiedererkennen ==
+// Ausgaberaum, Schwenk
+[fundhaus du s04_sami zeit=tag uhr="14:17" uhr_steht palette=lila schwenk-rechts] Sechzehn Uhr fünf. Im Ausgaberaum brummt der alte Kühlschrank.
+// Wanduhr groß
+[objekt objekte="uhr:14.17 Uhr" gross="DER ZEIGER ZUCKT" palette=lila zoom-rein] Der Sekundenzeiger der Wanduhr zuckt. Und springt zurück. Immer an derselben Stelle.
+// Nahaufnahme: Sami grinst
+[gesicht s04_sami ort=fundhaus zeit=tag froh palette=lila] „Die Uhr macht mehr Pause als ich.“
+// Ausgaberaum: unter der Uhr
+[fundhaus du zeit=tag uhr="14:17" uhr_steht palette=lila zoom-rein] Darunter liegt eine leere Batteriepackung.
+
+== Steigerung ==
+// Nahaufnahme: du
+[gesicht du ort=fundhaus zeit=tag neugierig palette=lila] Die Batterie ist leer. Die Uhr steht seit dem Vormittag.
+// Nahaufnahme: Rike
+[gesicht s04_rike ort=fundhaus zeit=tag misstrauisch palette=lila zoom-rein] Rike hat die Zeit trotzdem jedes Mal abgeschrieben.
+// Nahaufnahme: Rike wütend
+[gesicht s04_rike ort=fundhaus zeit=tag wuetend palette=lila] „Ich habe Wichtigeres zu tun als Batterien.“
+// Nahaufnahme: du entschlossen
+[gesicht du ort=fundhaus zeit=tag entschlossen palette=lila zoom-rein] Die Uhrzeit auf Samis Quittung ist also wertlos.
+// Handy: Fotos von heute
+[handy ort=fundhaus zeit=tag netz=4 akku=61 uhrzeit="16:07" von="Fotos" nachricht="Heute: 11:42 · 14:58" palette=lila] Dein Handy. Zwei Fotos von heute. Um elf Uhr zweiundvierzig steht die Kasse noch im Fach.
+// Ausgaberaum mit Kasse im Hintergrund
+[fundhaus du zeit=tag uhr="14:17" uhr_steht kasse palette=orange zoom-rein] Im Hintergrund die grüne Kasse. Von Sami keine Spur.
+// Stadt: ihr zwei unterwegs
+[grossstadt zeit=tag du s04_sami palette=orange zoom-raus] Um diese Zeit war Sami mit dir beim Bäcker. Bitterer Tee, weil der Kakao aus war.
+// Nahaufnahme: du freust dich
+[gesicht du ort=fundhaus zeit=tag froh palette=lila] Das zweite Foto, vierzehn Uhr achtundfünfzig: Das Fach ist leer.
+// Zwei Uhren
+[objekt objekte="uhr:11.42 Uhr|uhr:14.58 Uhr" gross="11:42 BIS 14:58" palette=lila] Dazwischen verschwand die Kasse. Und fast die ganze Zeit hat Sami einen Zeugen: dich.
+
+== Wendung ==
+// Nahaufnahme: du besorgt
+[gesicht du ort=fundhaus zeit=tag besorgt palette=lila] Das entlastet ihn nicht ganz. Aber die Quittung lügt.
+// Ausgaberaum am späten Nachmittag
+[fundhaus du zeit=abend uhr="14:17" uhr_steht palette=lila zoom-rein] Ein warmer Lichtfleck wandert über die Quittungen.
+// Drei Quittungen
+[objekt objekte="quittung:Schirm|quittung:Helm|quittung:Kasse" palette=lila zoom-rein] Bei zweien ist alles in einem Zug geschrieben.
+
+== Cliffhanger ==
+// Nahaufnahme: du erschrocken
+[gesicht du ort=fundhaus zeit=abend schreck palette=lila zoom-rein] Bei der Kassen-Quittung ist eine Zeile dicker als der Rest.
+// Kassen-Quittung groß
+[objekt objekte="quittung:Kasse" gross="ÜBERSCHRIEBEN" palette=lila zoom-rein] Die Uhr ist erklärt. Aber auf genau diesem Beleg wurde der Gegenstand überschrieben.

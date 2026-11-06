@@ -1,0 +1,68 @@
+# Die zwölfte Quittung – Folge 11: Vor allen
+@musik musik/s04-f11.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung freudig
+@vortrag lebendig
+@mund zitate
+@einblenden aus
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette orange
+@zeit abend
+
+== Hook ==
+// Ausgaberaum im Abendlicht, du und Papa
+[fundhaus du:froh papa zeit=abend uhr="19:00" palette=orange zoom-rein hooktext="EINE QUITTUNG VON VOR 12 JAHREN"] In achtzig Sekunden bekommst du eine Quittung, die zwölf Jahre alt ist. Und sie gehört dir.
+// Nahaufnahme: du
+[gesicht du ort=fundhaus zeit=abend froh palette=orange] Aber erst muss jemand vor allen die Wahrheit sagen.
+
+== Wiedererkennen ==
+// Ausgaberaum mit Kasse
+[fundhaus s04_rike du s04_sami zeit=abend uhr="19:00" kasse palette=orange schwenk-rechts] Neunzehn Uhr. Die Kasse ist gezählt. Viertausend Euro, kein Cent fehlt.
+// Kasse und Geld
+[objekt objekte="kasse:Gezählt|geld:4.000 €" gross="ALLES ZURÜCK" palette=orange zoom-rein] Frau Lindner hat ihre Dose. Der Jugendtreff bekommt sein Geld.
+// Nahaufnahme: Rike
+[gesicht s04_rike ort=fundhaus zeit=abend traurig palette=orange] „Ich entschuldige mich bei Sami. Unter vier Augen.“
+// Nahaufnahme: du
+[gesicht du ort=fundhaus zeit=abend misstrauisch palette=orange zoom-rein] Unter vier Augen. Dabei hat sie ihn vor allen beschuldigt.
+
+== Steigerung ==
+// Nahaufnahme: Sami
+[gesicht s04_sami ort=fundhaus zeit=abend neutral palette=orange] Sami schaut dich an. Diesmal wartet er, was du sagst.
+// Nahaufnahme: du
+[gesicht du ort=fundhaus zeit=abend entschlossen palette=orange zoom-rein] „Vor allen. So wie die Beschuldigung.“
+// Nahaufnahme: Sami
+[gesicht s04_sami ort=fundhaus zeit=abend entschlossen palette=orange] „Ja. Vor allen.“
+// Ausgaberaum: alle Helfer
+[fundhaus s04_rike du s04_sami papa zeit=abend uhr="19:10" palette=orange zoom-raus] Zehn Minuten später scharren Stühle. Alle Helfer sind da. Es riecht nach Filterkaffee.
+// Rike vor den Fächern
+[fundhaus s04_rike zeit=abend uhr="19:11" palette=orange zoom-rein] Rike steht vor den Fächern. Das Abendlicht fällt ihr ins Gesicht.
+// Nahaufnahme: Rike
+[gesicht s04_rike ort=fundhaus zeit=abend traurig palette=orange zoom-rein] „Sami hat nichts gestohlen. Ich war es.“
+// Aushang
+[objekt objekte="quittung:Richtigstellung" gross="RICHTIGSTELLUNG" palette=orange zoom-rein] Der Aushang mit Samis Namen fliegt von der Pinnwand. Ein neuer Zettel hängt dort.
+// Rike gibt Kasse und Schlüssel ab
+[fundhaus s04_rike papa zeit=abend uhr="19:13" kasse palette=orange zoom-rein] Rike gibt Kasse und Schlüssel ab. Niemand klatscht. Es ist trotzdem richtig.
+
+== Wendung ==
+// Nahaufnahme: Sami lacht
+[gesicht s04_sami ort=fundhaus zeit=abend froh palette=orange zoom-rein] Sami lacht zum ersten Mal seit Stunden. Ein echtes Lachen, kein Witz.
+// Ihr zwei an der Theke
+[fundhaus du s04_sami zeit=abend uhr="19:15" palette=orange zoom-rein] Ihr sitzt wieder nebeneinander auf der Theke. Wie jeden Samstag.
+// Nahaufnahme: du
+[gesicht du ort=fundhaus zeit=abend froh palette=orange] „Du schuldest mir noch zwei Kugeln.“
+// Nahaufnahme: Sami
+[gesicht s04_sami ort=fundhaus zeit=abend froh palette=orange zoom-rein] „Ich zahl dir drei.“
+// Stadt im Abendlicht
+[grossstadt zeit=abend du s04_sami palette=orange zoom-raus] Draußen färbt die Sonne die Dächer orange. Der lange Nachmittag ist vorbei.
+
+== Cliffhanger ==
+// Papa kommt aus dem Archiv
+[fundhaus papa du zeit=abend uhr="19:20" palette=orange zoom-rein] Dann kommt Papa aus dem Archiv. In der Hand ein vergilbtes Blatt.
+// Alte Quittung
+[objekt objekte="quittung:Nr. 12" gross="VOR 12 JAHREN" palette=orange zoom-rein] Eine alte Quittung. Die Schrift ist verblasst. Ganz unten: eine Kinderunterschrift.
+// Nahaufnahme: Papa
+[gesicht papa ort=fundhaus zeit=abend froh palette=orange zoom-rein] „Die hab ich aufgehoben. Die gehört zu dir.“

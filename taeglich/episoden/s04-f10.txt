@@ -1,0 +1,66 @@
+# Die zwölfte Quittung – Folge 10: Die gute Ausrede
+@musik musik/s04-f10.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung traurig
+@vortrag lebendig
+@mund zitate
+@einblenden aus
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette blau
+@zeit nacht
+
+== Hook ==
+// Ausgaberaum nachts, Kasse auf der Theke, Rike
+[fundhaus s04_rike:traurig du zeit=nacht uhr="18:40" kasse palette=blau zoom-rein hooktext="DIE LEITERIN GESTEHT"] Achtzehn Uhr vierzig. Die Leiterin des Fundhauses gesteht. Und es klingt fast vernünftig.
+// Nahaufnahme: du
+[gesicht du ort=fundhaus zeit=nacht neutral palette=blau] Genau das macht es so schwer.
+
+== Wiedererkennen ==
+// Ausgaberaum, Kasse auf der Theke
+[fundhaus s04_rike du kasse zeit=nacht uhr="18:41" palette=blau schwenk-rechts] Die Münzen in der Kasse klirren, als Rike sich setzt.
+// Nahaufnahme: Rike
+[gesicht s04_rike ort=fundhaus zeit=nacht traurig palette=blau zoom-rein] „Das Dach ist undicht. Seit drei Wintern.“
+// Angebote
+[objekt objekte="regen|geld" gross="3 REPARATUREN" palette=blau zoom-rein] Sie schiebt dir Reparaturangebote hin. Dach, Heizung, Fenster. Keines bezahlt.
+// Nahaufnahme: Rike
+[gesicht s04_rike ort=fundhaus zeit=nacht traurig palette=blau] „Ich wollte es nur leihen. Für das Haus.“
+
+== Steigerung ==
+// Archiv, Röhre flackert
+[archiv s04_rike flackern palette=blau zoom-rein] Heute Mittag hat sie die Kasse aus Fach zwölf genommen. Dann kam eine Gruppe Helfer herein.
+// Nahaufnahme: Rike ängstlich
+[gesicht s04_rike ort=fundhaus zeit=nacht angst palette=blau zoom-rein] „Da hab ich die Nerven verloren.“
+// Fach 24 mit Dose
+[fundhaus zeit=nacht uhr="18:42" fach=24 dose palette=blau zoom-rein] Sie versteckte die Kasse hinter der Dose. In dem Fach, an das nur sie herankommt.
+// Zwei Quittungen
+[objekt objekte="quittung:Dose|quittung:Kasse" gross="AUS DOSE WIRD KASSE" palette=blau zoom-rein] Den Schein für die Dose schrieb sie um. Dann Samis Namen dazu. Und seine Unterschrift.
+// Archiv: Sackkarre und Bündel
+[archiv sackkarre buendel palette=blau zoom-rein] Den Durchschlag steckte sie ins Altpapier. Und Papas Fachnummer ließ sie durchscheinen, falls jemand genau hinsieht.
+// Nahaufnahme: du wütend
+[gesicht du ort=fundhaus zeit=nacht wuetend palette=blau] Die Heizungsluft ist warm. Dir ist trotzdem kalt.
+// Nahaufnahme: du
+[gesicht du ort=fundhaus zeit=nacht neutral palette=blau zoom-rein] Du hörst zu. Das Dach ist wirklich kaputt. Das glaubst du ihr.
+// Nahaufnahme: du entschlossen
+[gesicht du ort=fundhaus zeit=nacht entschlossen palette=blau] Aber ein kaputtes Dach macht aus Stehlen kein Leihen.
+// Nahaufnahme: du
+[gesicht du ort=fundhaus zeit=nacht entschlossen palette=blau zoom-rein] „Und was hat Sami mit Ihrem Dach zu tun?“
+
+== Wendung ==
+// Ausgaberaum, Rike allein
+[fundhaus s04_rike zeit=nacht uhr="18:44" palette=blau zoom-raus] Rike löst langsam den Schlüsselbund vom Gürtel. Das Neonlicht summt.
+// Schlüssel groß
+[objekt objekte="schluessel" gross="ABGEGEBEN" palette=blau zoom-rein] Sie legt ihn auf die Theke. Zwölf Schlüssel. Fünfzehn Jahre Fundhaus.
+// Sami an der Tür
+[fundhaus s04_sami zeit=nacht uhr="18:44" palette=blau zoom-rein] An der Tür zum Archiv steht Sami. Keiner hat ihn kommen hören.
+// Nahaufnahme: Sami
+[gesicht s04_sami ort=archiv traurig palette=blau] Er hört alles. Jedes Wort.
+
+== Cliffhanger ==
+// Nahaufnahme: Rike
+[gesicht s04_rike ort=fundhaus zeit=nacht besorgt palette=blau zoom-rein] Rike sieht zu ihm. „Ich habe deinen Namen benutzt, Sami.“
+// Nahaufnahme: Rike
+[gesicht s04_rike ort=fundhaus zeit=nacht traurig palette=blau zoom-rein] „Weil ich dachte, dir glaubt sowieso niemand.“

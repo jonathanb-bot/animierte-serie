@@ -1,0 +1,68 @@
+# Die zwölfte Quittung – Folge 7: Gemeinsam falsch
+@musik musik/s04-f07.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung traurig
+@vortrag lebendig
+@mund zitate
+@einblenden aus
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette blau
+@zeit abend
+
+== Hook ==
+// Haltestelle im Regen, Sami geht
+[haltestelle du s04_sami regen palette=blau zoom-rein hooktext="DU LÄSST IHN GEHEN"] In achtzig Sekunden lässt du deinen besten Freund allein in den Regen gehen.
+// Nahaufnahme: du
+[gesicht du ort=haltestelle regen traurig palette=blau] Und es ist das Richtige. Auch wenn es sich anfühlt wie Verrat.
+
+== Wiedererkennen ==
+// Ausgaberaum am Abend, Regen
+[fundhaus du s04_sami zeit=abend uhr="17:30" palette=blau schwenk-rechts] Siebzehn Uhr dreißig. Draußen prasselt Regen aufs Vordach.
+// Rike und Sami
+[fundhaus s04_rike s04_sami zeit=abend uhr="17:31" palette=blau zoom-rein] Rike fragt Sami zum dritten Mal, wo er mittags war.
+// Nahaufnahme: Rike
+[gesicht s04_rike ort=fundhaus zeit=abend misstrauisch palette=blau] „Ich frage so lange, bis es stimmt.“
+// Nahaufnahme: Sami wütend
+[gesicht s04_sami ort=fundhaus zeit=abend wuetend palette=blau zoom-rein] Sami hat keine Witze mehr übrig.
+
+== Steigerung ==
+// Beide Quittungen
+[objekt objekte="quittung:Uhr|quittung:Kasse" palette=blau zoom-rein] Er nimmt beide Quittungen von der Theke. Seine Finger an den Ecken.
+// Nahaufnahme: Sami
+[gesicht s04_sami ort=fundhaus zeit=abend traurig palette=blau zoom-rein] „Ohne Papier gibt's nichts mehr zu verhören.“
+// Nahaufnahme: du erschrocken
+[gesicht du ort=fundhaus zeit=abend schreck palette=blau] Er will sie zerreißen. Beide. Auch die, die ihn retten könnte.
+// Nahaufnahme: du
+[gesicht du ort=fundhaus zeit=abend entschlossen palette=blau zoom-rein] „Sami. Ohne Papier glauben alle Rike.“
+// Nahaufnahme: Sami
+[gesicht s04_sami ort=fundhaus zeit=abend traurig palette=blau] „Mir glaubt sowieso keiner. Nicht mal du.“
+// Nahaufnahme: du traurig
+[gesicht du ort=fundhaus zeit=abend traurig palette=blau zoom-rein] Das stimmt nicht. Aber heute hast du ihn angesehen wie einen Verdächtigen.
+// Armbanduhr groß
+[objekt objekte="armbanduhr" gross="JONAS" palette=blau zoom-rein] Du schiebst ihm Jonas' Uhr über die Theke. Sie tickt immer noch.
+// Nahaufnahme: du
+[gesicht du ort=fundhaus zeit=abend traurig palette=blau] „Die gehört dir. Die Papiere bleiben hier.“
+
+== Wendung ==
+// Ausgaberaum, Stille
+[fundhaus du s04_sami zeit=abend uhr="17:34" palette=blau zoom-rein] Lange passiert nichts. Nur der Regen und das Ticken.
+// Nahaufnahme: Sami
+[gesicht s04_sami ort=fundhaus zeit=abend traurig palette=blau zoom-rein] Dann legt er die Quittungen hin. Und nimmt die Uhr.
+// Haltestelle, Sami allein im Regen
+[haltestelle s04_sami regen palette=blau zoom-raus] Er geht ohne Schirm. Seine grüne Jacke wird dunkel vom Regen.
+// Nahaufnahme: du
+[gesicht du ort=haltestelle regen traurig palette=blau zoom-rein] Deine Ärmel sind kalt und nass. Du hast ihm nicht mal Tschüss gesagt.
+// Park im Herbstregen, weit
+[park jahreszeit=herbst zeit=abend regen palette=blau zoom-raus] Ihr kennt euch seit zwölf Jahren. Noch nie ist er so gegangen.
+// Ausgaberaum: leerer Platz neben dir
+[fundhaus du zeit=abend uhr="17:40" palette=blau zoom-rein] Drinnen riecht es nach Seife. Neben dir steht ein leerer Stuhl.
+
+== Cliffhanger ==
+// Nahaufnahme: du denkst
+[gesicht du ort=fundhaus zeit=abend denkt palette=blau] Du könntest ihm nachrennen. Alles liegen lassen.
+// Quittung als Beweisstück
+[objekt objekte="quittung:Sami" gross="BEWEISSTÜCK" palette=blau zoom-rein] Stattdessen legst du seine Quittung zu den Beweisen. Und lässt ihn gehen.

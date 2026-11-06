@@ -701,6 +701,234 @@
      "Lighthouse"
     ]
    }
+  },
+  {
+   "id": "s04",
+   "datum": "2026-11-06",
+   "titel": "Die zwölfte Quittung",
+   "beschreibung": "Aus dem Fundhaus verschwinden viertausend Euro. Auf der Quittung steht der Name deines besten Freundes. Ein Nachmittag, zwölf Quittungen, eine Wahrheit.",
+   "thema": "Krimi/Rätsel (Genre-Plan #24): Spendenkasse im städtischen Fundhaus verschwindet, bester Freund Sami unter Verdacht, Papa als Hausmeister, die Leiterin Rike hat gefälscht; warmes Ende mit dem Stoffvogel (Staffelplan s04, Jonathan 5.11.)",
+   "hauptstimmung": "spannend",
+   "vorbild": "Krimi-Kurzserie mit Zack-D.-Films-Tempo (alle 3–4 s neues Bild) und Dhar-Mann-Aufbau (Entscheidung → Folge → Wendung, nie belehrend)",
+   "hashtags": [
+    "#krimi",
+    "#rätsel",
+    "#animation",
+    "#geschichte",
+    "#storytime",
+    "#freundschaft",
+    "#deutsch"
+   ],
+   "tags": [
+    "animation",
+    "krimi",
+    "rätsel",
+    "geschichte",
+    "story",
+    "freundschaft",
+    "deutsch"
+   ],
+   "emoji": "🧾",
+   "kulissen_neu": [
+    "fundhaus",
+    "archiv"
+   ],
+   "analyse": {
+    "quelle": "taeglich/analyse/aktuell.md (6.11.2026, 21:45)",
+    "mehr_davon": [
+     "1: erster Satz konkrete Lage mit Zahl/Uhrzeit, höchstens ca. 12 Wörter, Quittungsregel erst ab Satz 2 (F1: „In achtzig Sekunden weißt du: Jemand will deinen besten Freund reinlegen.“ → „Aber zuerst verschwinden viertausend Euro.“)",
+     "2: Einstellung 1 mit zoom-rein, Figur mit starker Mimik, Fall-Gegenstand groß in Einstellung 2; bis Sekunde 10 drei Bildwechsel",
+     "3: Hook-Text in allen 12 Folgen, kurz und mit Zahl/Uhrzeit, wo es passt",
+     "4: ein Fall, „kleine Antwort + neue Frage“, Hinweise erst im Bild (Abdruck, stehende Uhr, Druckspuren, Delle, Schlüssel), faire Auflösung",
+     "5: warme Momente (F5 Papa, F8 Sami/Frau Lindner, F11/F12 Freundschaft), 6 Folgen mit Freunde/Familie"
+    ],
+    "weniger_davon": [
+     "6: kein Vorwissen im Einstieg, keine Titelkarte, kein Serienname, kein Rückblick",
+     "7: keine Regelsätze über 15 Wörter am Anfang, kein Mitrate-Aufruf",
+     "8: neue Welt Fundhaus/Archiv (nicht Großstadt, Kiosk oder Wald), keine Faktenkarte, keine Nebenhandlung"
+    ],
+    "experiment": "9 (E5): ungerade Folgen „Ende zuerst“ (das Ende der Folge im ersten Satz, dann Rücksprung), gerade Folgen direkte Lage mit Uhrzeit; sonst gleich gebaut (213–217 Wörter, 21–22 Einstellungen). Messen: Instagram/YouTube Ø Wiedergabe und Abbruch je Folge (6 gegen 6), TikTok Bindung 4 s/12 s je Sammelteil nach Art der ersten Folge. Dazu E4: gerade Staffel mit Untertiteln.",
+    "thema": "10: „Die zwölfte Quittung“ (empfohlen, Staffelplan s04)"
+   },
+   "boegen": [
+    "blauer Fingerabdruck unter Samis Namen (F1) → Rike hat den Namen nachgetragen (F10)",
+    "„Rot heißt bleiben“ – roter Zettel aufs Bündel, Papas Versprechen (F2) → Papa hält die Sackkarre auf (F3), das Bündel liefert die Druckspuren (F6)",
+    "stehende Wanduhr 14:17 (F1) → leere Batterie erklärt die gleichen Zeiten (F4)",
+    "Jonas' Armbanduhr (F3) → du gibst sie Sami zurück, die Papiere bleiben (F7)",
+    "Samis Eis-Versprechen „zwei Kugeln“ (F6) → „Ich zahl dir drei“ (F11)",
+    "Fach zwölf leer (F1) → als Kind hast du den Stoffvogel in Fach zwölf abgegeben, Sami trägt ihn seit zwölf Jahren (F12)",
+    "Helferschlüssel nur für vordere Fächer (F6/F9) → nur Rike kommt an Fach 24 (F9/F10)"
+   ],
+   "ueberraschung": "Die Leiterin Rike selbst hat gefälscht (angedeutet: sie übernimmt ungeprüft Zeiten, will das Altpapier schnell loswerden, Fach 24 nur mit Leitungsschlüssel); dazu die alte Quittung, auf der Sami und du euch kennengelernt habt.",
+   "cliffhanger": [
+    "Entdeckung",
+    "Gefahr",
+    "Geständnis",
+    "Rätsel",
+    "falsche Fährte",
+    "Entdeckung",
+    "Entscheidung",
+    "Ankunft",
+    "Gefahr",
+    "Geständnis",
+    "Rätsel",
+    "Wiedersehen"
+   ],
+   "folgen": [
+    {
+     "nr": 1,
+     "titel": "Ein Fach zu wenig",
+     "stimmung": "spannend",
+     "beschreibung": "In achtzig Sekunden weißt du: Jemand will deinen besten Freund reinlegen.",
+     "familie": false,
+     "hooktext": true,
+     "hook": "ende_zuerst"
+    },
+    {
+     "nr": 2,
+     "titel": "Der fehlende Durchschlag",
+     "stimmung": "duester",
+     "beschreibung": "Fünfzehn Uhr. Elf Quittungen hängen an der Schnur. Die zwölfte fehlt.",
+     "familie": true,
+     "hooktext": true,
+     "hook": "direkte_lage"
+    },
+    {
+     "nr": 3,
+     "titel": "Die Uhr deines Freundes",
+     "stimmung": "traurig",
+     "beschreibung": "In einer Minute gesteht dir dein bester Freund eine Lüge. Und trotzdem ist er kein Dieb.",
+     "familie": true,
+     "hooktext": true,
+     "hook": "ende_zuerst"
+    },
+    {
+     "nr": 4,
+     "titel": "Vierzehn Uhr siebzehn",
+     "stimmung": "spannend",
+     "beschreibung": "Vierzehn Uhr siebzehn. Diese Uhrzeit steht auf vier Quittungen.",
+     "familie": false,
+     "hooktext": true,
+     "hook": "direkte_lage"
+    },
+    {
+     "nr": 5,
+     "titel": "Papas Fach",
+     "stimmung": "warm",
+     "beschreibung": "In einer Minute legst du deinem eigenen Papa einen Verdacht auf den Tisch.",
+     "familie": true,
+     "hooktext": true,
+     "hook": "ende_zuerst"
+    },
+    {
+     "nr": 6,
+     "titel": "Papier vergisst nicht",
+     "stimmung": "spannend",
+     "beschreibung": "Siebzehn Uhr. Ein leeres Blatt verrät, was wirklich auf der Quittung stand.",
+     "familie": false,
+     "hooktext": true,
+     "hook": "direkte_lage"
+    },
+    {
+     "nr": 7,
+     "titel": "Gemeinsam falsch",
+     "stimmung": "traurig",
+     "beschreibung": "In achtzig Sekunden lässt du deinen besten Freund allein in den Regen gehen.",
+     "familie": true,
+     "hooktext": true,
+     "hook": "ende_zuerst"
+    },
+    {
+     "nr": 8,
+     "titel": "Jemand kommt zurück",
+     "stimmung": "warm",
+     "beschreibung": "Achtzehn Uhr. Dein bester Freund kommt zurück. Mit einer Fremden.",
+     "familie": true,
+     "hooktext": true,
+     "hook": "direkte_lage"
+    },
+    {
+     "nr": 9,
+     "titel": "Das hinterste Fach",
+     "stimmung": "duester",
+     "beschreibung": "In achtzig Sekunden findest du die viertausend Euro. Und hinter dir wird es still.",
+     "familie": false,
+     "hooktext": true,
+     "hook": "ende_zuerst"
+    },
+    {
+     "nr": 10,
+     "titel": "Die gute Ausrede",
+     "stimmung": "traurig",
+     "beschreibung": "Achtzehn Uhr vierzig. Die Leiterin des Fundhauses gesteht.",
+     "familie": false,
+     "hooktext": true,
+     "hook": "direkte_lage"
+    },
+    {
+     "nr": 11,
+     "titel": "Vor allen",
+     "stimmung": "freudig",
+     "beschreibung": "In achtzig Sekunden bekommst du eine Quittung, die zwölf Jahre alt ist.",
+     "familie": false,
+     "hooktext": true,
+     "hook": "ende_zuerst"
+    },
+    {
+     "nr": 12,
+     "titel": "Was wirklich zurückkommt",
+     "stimmung": "warm",
+     "beschreibung": "Vor zwölf Jahren hast du hier einen roten Stoffvogel abgegeben.",
+     "familie": true,
+     "hooktext": true,
+     "hook": "direkte_lage"
+    }
+   ],
+   "tiktok_teile": [
+    [
+     1,
+     2,
+     3
+    ],
+    [
+     4,
+     5
+    ],
+    [
+     6,
+     7
+    ],
+    [
+     8,
+     9,
+     10
+    ],
+    [
+     11,
+     12
+    ]
+   ],
+   "format": {
+    "folgen": 12,
+    "laengenband": "lang 80–90 s",
+    "tiktok_teile": 5
+   },
+   "vielfalt": {
+    "welt": "städtisches Fundhaus (Ausgaberaum, Papierarchiv, Gemeinschaftsgarten)",
+    "genre": "Krimi/Rätsel",
+    "erzaehlform": "Rätsel, das jede Folge ein Stück löst, an einem Nachmittag (14:30–19:30)",
+    "hook_art": "Ende zuerst (ungerade) / direkte Lage mit Uhrzeit (gerade)",
+    "vorbild_kurz": "Zack D. Films + Dhar Mann",
+    "figuren_fokus": "bester Freund unter Verdacht (Sami), Vater (Hausmeister)",
+    "laenge": "80–90 s",
+    "folgen": 12,
+    "tiktok": "5 Sammelteile",
+    "experiment": "E5 Ende zuerst (+ E4 mit Untertiteln)",
+    "neue_kulissen": [
+     "fundhaus",
+     "archiv"
+    ]
+   }
   }
  ]
 }

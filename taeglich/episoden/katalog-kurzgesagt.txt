@@ -20,3 +20,5 @@
 [esstisch mama papa du lina kerzen zeit=abend] Esstisch mit Kino-Look.
 [polarlicht du lina] Polarlicht über Bergen und Stadt (farbe=#hex, stadt=false, see).
 [kiosk du zeit=nacht palette=rosa] Lotto-Kiosk an der Straßenecke bei Nacht (leuchtend, neu in s02; zeit=abend, regen, gross).
+[fundhaus du s04_sami zeit=tag uhr="14:17" leer=12 palette=orange] Ausgaberaum des Fundhauses (leuchtend, neu in s04; zeit=tag|abend|nacht, uhr, uhr_steht, leer=N, fach=N, dose, kasse, gross).
+[archiv du buendel flackern palette=blau] Papierarchiv mit blauer Regalgasse (leuchtend, neu in s04; flackern, buendel, sackkarre, licht=seite, gross).

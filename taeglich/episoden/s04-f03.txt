@@ -1,0 +1,68 @@
+# Die zwölfte Quittung – Folge 3: Die Uhr deines Freundes
+@musik musik/s04-f03.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung traurig
+@vortrag lebendig
+@mund zitate
+@einblenden aus
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette blau
+@zeit tag
+
+== Hook ==
+// Ausgaberaum, du und Sami
+[fundhaus du s04_sami zeit=tag uhr="14:17" uhr_steht palette=blau zoom-rein hooktext="DEIN BESTER FREUND HAT GELOGEN"] In einer Minute gesteht dir dein bester Freund eine Lüge. Und trotzdem ist er kein Dieb.
+// Archiv: du rennst der Sackkarre hinterher
+[archiv du:rennt sackkarre buendel palette=blau wackeln=0.3] Fünfzehn Uhr zweiundfünfzig. Du rennst der Sackkarre hinterher.
+// Nahaufnahme: du rufst
+[gesicht du ort=archiv schreck palette=blau] „Stopp! Das Rote bleibt hier!“
+
+== Wiedererkennen ==
+// Archiv: Papa stellt sich vor das Bündel
+[archiv papa du buendel palette=blau zoom-rein] Papa stellt sich einfach davor. Breite Schultern, kein Wort. Die Karre hält.
+// Nahaufnahme: Papa
+[gesicht papa ort=archiv froh palette=blau] „Rot heißt bleiben.“
+// Ausgaberaum: Sami am Fenster
+[fundhaus du s04_sami zeit=tag uhr="14:17" uhr_steht palette=blau schwenk-rechts] Gerettet. Aber Sami steht am Fenster und knetet seine Jackentasche.
+// Nahaufnahme: du, misstrauisch
+[gesicht du ort=fundhaus zeit=tag misstrauisch palette=blau zoom-rein] Du kennst ihn seit zwölf Jahren. Er versteckt etwas.
+// Nahaufnahme: du sprichst
+[gesicht du ort=fundhaus zeit=tag neutral palette=blau] „Zeig mir deine eigene Quittung, Sami.“
+
+== Steigerung ==
+// Nahaufnahme: Sami
+[gesicht s04_sami ort=fundhaus zeit=tag angst palette=blau] Sein Atem stockt. Dann zieht er ein gefaltetes Papier heraus.
+// Zweite Quittung
+[objekt objekte="quittung:Sami" gross="ABGEHOLT: ARMBANDUHR" palette=blau zoom-rein] Eine zweite Quittung. Auch mit seinem Namen. Abgeholt: eine Armbanduhr.
+// Armbanduhr groß
+[objekt objekte="armbanduhr" palette=blau zoom-rein] Die Uhr ist viel zu groß für sein schmales Handgelenk. Sie tickt leise.
+// Nahaufnahme: Sami traurig
+[gesicht s04_sami ort=fundhaus zeit=tag traurig palette=blau] „Die war von Jonas. Meinem Bruder.“
+// Landschaft am Abend, weit und still
+[landschaft zeit=abend palette=blau zoom-raus] Jonas ist vor zwei Jahren gestorben. Seine Mutter hat die Uhr gespendet. Sie konnte sie nicht mehr ansehen.
+// Nahaufnahme: Sami
+[gesicht s04_sami ort=fundhaus zeit=tag traurig palette=blau zoom-rein] „Ich wollte sie nur zurück. Ohne dass jemand fragt.“
+// Ausgaberaum: ihr zwei an der Theke
+[fundhaus du s04_sami zeit=tag uhr="14:17" uhr_steht palette=blau zoom-rein] Seine Hand ist warm und feucht, als er dir die Uhr hinhält.
+// Wohnzimmer: Erinnerung an Abende bei Sami
+[wohnzimmer du s04_sami sofa_sitzen licht=an zeit=abend palette=orange zoom-rein] Früher hat Jonas euch immer Pommes gemacht. Zu salzig, jedes Mal.
+
+== Wendung ==
+// Nahaufnahme: du traurig
+[gesicht du ort=fundhaus zeit=tag traurig palette=blau] Sami hat gelogen. Er hat heimlich etwas mitgenommen.
+// Nahaufnahme: du denkst
+[gesicht du ort=fundhaus zeit=tag denkt palette=blau zoom-rein] Und genau das würde Rike gegen ihn benutzen.
+// Nahaufnahme: du entschlossen
+[gesicht du ort=fundhaus zeit=tag entschlossen palette=blau] Du schreibst trotzdem alles auf. Ehrlich. Eine Lüge über eine Uhr ist noch kein Diebstahl.
+
+== Cliffhanger ==
+// Zwei Quittungen nebeneinander
+[objekt objekte="quittung:Uhr|quittung:Kasse" palette=blau zoom-rein] Zwei Quittungen mit Samis Namen liegen nebeneinander.
+// Nahaufnahme: Sami erschrocken
+[gesicht s04_sami ort=fundhaus zeit=tag schreck palette=blau zoom-rein] Sami beugt sich vor. Sein Finger zittert über der zweiten.
+// Kassen-Quittung groß
+[objekt objekte="quittung:Kasse" gross="FALSCHE UNTERSCHRIFT" palette=blau zoom-rein] „Die Uhr hab ich unterschrieben. Die Kasse nicht.“

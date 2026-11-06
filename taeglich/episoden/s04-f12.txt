@@ -1,0 +1,68 @@
+# Die zwölfte Quittung – Folge 12: Was wirklich zurückkommt
+@musik musik/s04-f12.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung warm
+@vortrag lebendig
+@mund zitate
+@einblenden aus
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette rosa
+@zeit abend
+
+== Hook ==
+// Ausgaberaum im warmen Licht, du und Papa
+[fundhaus du:froh papa zeit=abend uhr="19:25" palette=rosa zoom-rein hooktext="DEIN ERSTER FUND"] Vor zwölf Jahren hast du hier einen roten Stoffvogel abgegeben.
+// Stoffvogel groß
+[objekt objekte="stoffvogel" gross="GEFUNDEN" palette=rosa zoom-rein] Du warst fünf. Und du erinnerst dich an nichts.
+
+== Wiedererkennen ==
+// Alte Quittung
+[objekt objekte="quittung:Nr. 12" gross="VOR 12 JAHREN" palette=rosa zoom-rein] Papa legt die alte Quittung vor dich hin. Das Papier ist weich wie Stoff.
+// Nahaufnahme: Papa
+[gesicht papa ort=fundhaus zeit=abend froh palette=rosa] „Du hast ihn im Park gefunden. Im Regen.“
+// Park im Sommer, weit
+[park du jahreszeit=sommer zeit=abend palette=rosa zoom-raus] Ein roter Vogel aus Samt. Ein Flügel kleiner als der andere, schief angenäht, mit dicken Stichen.
+// Nahaufnahme: Papa
+[gesicht papa ort=fundhaus zeit=abend froh palette=rosa zoom-rein] „Du wolltest ihn nicht hergeben. Du hast geweint.“
+// Nahaufnahme: du lachst
+[gesicht du ort=fundhaus zeit=abend froh palette=rosa] Das klingt ziemlich nach dir.
+// Fach 12 leuchtet
+[fundhaus du zeit=abend uhr="19:26" fach=12 palette=rosa zoom-rein] Aber du hast ihn abgegeben. In Fach zwölf. Ausgerechnet.
+
+== Steigerung ==
+// Nahaufnahme: Papa
+[gesicht papa ort=fundhaus zeit=abend neutral palette=rosa] „Am nächsten Tag kam ein kleiner Junge. Mit Brille.“
+// Zwei Unterschriften
+[objekt objekte="quittung:Finder|quittung:Abholer" gross="ZWEI UNTERSCHRIFTEN" palette=rosa zoom-rein] Darauf stehen zwei Kinderunterschriften. Deine, als Finder. Und darunter, krumm und riesig: Sami.
+// Nahaufnahme: du
+[gesicht du ort=fundhaus zeit=abend schreck palette=rosa zoom-rein] Hier hast du ihn kennengelernt. Genau an dieser Theke.
+// Nahaufnahme: Papa
+[gesicht papa ort=fundhaus zeit=abend froh palette=rosa] „Ihr habt den ganzen Nachmittag zusammen gespielt.“
+// Wohnzimmer, Erinnerungen
+[wohnzimmer du s04_sami licht=an zeit=abend palette=orange zoom-raus] Seitdem: jeder Geburtstag, jede Klassenfahrt, jeder schlechte Tag.
+// Nahaufnahme: du
+[gesicht du ort=fundhaus zeit=abend froh palette=rosa zoom-rein] Und heute hättest du ihn fast verloren. An ein Stück Papier.
+
+== Wendung ==
+// Zwei Quittungen
+[objekt objekte="quittung:Damals|quittung:Heute" palette=rosa zoom-rein] Heute stand sein Name auf einer falschen Quittung. Damals auf seiner ersten echten.
+// Ihr drei an der Theke
+[fundhaus du s04_sami papa zeit=abend uhr="19:30" palette=rosa zoom-rein] Du legst beide nebeneinander unter die Glasplatte der Theke. Dort bleiben sie.
+// Nahaufnahme: Papa
+[gesicht papa ort=fundhaus zeit=abend froh palette=rosa] „Manche Sachen findet man zweimal.“
+// Ihr zwei
+[fundhaus du s04_sami zeit=abend uhr="19:31" palette=rosa zoom-rein] Sami steht neben dir. Er ist ganz still. Das Licht im Hof wird orange.
+// Nahaufnahme: Sami
+[gesicht s04_sami ort=fundhaus zeit=abend froh palette=rosa zoom-rein] „Ich hab mich nie bedankt. Fürs Finden.“
+// Nahaufnahme: du
+[gesicht du ort=fundhaus zeit=abend froh palette=rosa] „Doch. Heute. Du bist zurückgekommen.“
+
+== Cliffhanger ==
+// Nahaufnahme: Sami
+[gesicht s04_sami ort=fundhaus zeit=abend froh palette=rosa zoom-rein] Dann greift er in seine Jackentasche.
+// Stoffvogel groß
+[objekt objekte="stoffvogel" gross="SEIT 12 JAHREN" palette=rosa zoom-rein] Ein roter Stoffvogel. Ein Flügel kleiner als der andere. Er trägt ihn seit zwölf Jahren bei sich.
