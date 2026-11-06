@@ -102,7 +102,9 @@ def _post(body: dict) -> dict:
         # Schlüssel als URL-Parameter: einen x-goog-api-key-Header ersetzt der Proxy durch seinen eigenen
         kopf = {"Content-Type": "application/json"}
         try:
-            for versuch in range(4):
+            # 6.11.: Gemini meldet bei hoher Last oft minutenlang 502/503 – deshalb bis zu 8 Versuche
+            # mit wachsender Pause (15 s … 2 min, zusammen ca. 9 min), bevor aufgegeben wird.
+            for versuch in range(8):
                 try:
                     req = urllib.request.Request(url + (f"?key={schluessel}" if schluessel else ""),
                                                  data=json.dumps(body).encode(), headers=kopf)
@@ -112,9 +114,9 @@ def _post(body: dict) -> dict:
                     if e.code == 429 and ("per day" in info.lower() or "PerDay" in info):
                         raise KontingentErschoepft(
                             f"Gemini-Tageskontingent aufgebraucht (Schlüssel {_aktiv + 1} von {len(SCHLUESSEL)}).") from e
-                    if versuch == 3 or e.code not in (429, 500, 502, 503, 504):
+                    if versuch == 7 or e.code not in (429, 500, 502, 503, 504):
                         raise RuntimeError(f"Gemini-TTS: HTTP {e.code}: {info[:300]}") from e
-                    time.sleep(15 * (versuch + 1))
+                    time.sleep(min(120, 15 * (versuch + 1)))
             raise RuntimeError("Gemini-TTS: keine Antwort")
         except KontingentErschoepft:
             if _aktiv + 1 >= len(SCHLUESSEL):

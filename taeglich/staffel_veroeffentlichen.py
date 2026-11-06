@@ -38,6 +38,7 @@ TAKT = {"tiktok": [(8, 0), (12, 0), (16, 0), (20, 0)],  # 4× am Tag (Jonathans 
 MIN_DAUER = 62.0   # jedes Video über 1 Minute (Issue #12), mit kleinem Puffer
 MAX_FOLGE = 90.0   # bis 90 s: ein Post auf Instagram/YouTube (Jonathans Vorgabe 2.11.)
 MAX_XL = 125.0     # Format „XL“/„gemischt“: Folgen bis ca. 2 min (Jonathans Wunsch 2.11.)
+MIN_HORROR = 120.0 # Format „horror“: jede Folge mindestens 2 min (FORMAT.md, 120–180 s)
 MAX_HORROR = 185.0 # Format „horror“: Folgen 2–3 min (Jonathans Wunsch 4.11., Issue #23); Reels/Shorts erlauben bis 3 min
 MAX_TEIL = 600.0
 VORLAUF = dt.timedelta(minutes=60)
@@ -129,6 +130,7 @@ def main(argv=None) -> int:
     # XL-Staffeln (Format-Rotation, Jonathans Wunsch 2.11.): Folgen bis 2 min, ungeteilt auf allen Plattformen
     band = str((st.get("format") or {}).get("laengenband", "")).lower()
     max_folge = MAX_HORROR if band.startswith(("horror", "lang-2-3")) else MAX_XL if band.startswith(("xl", "gemischt")) else MAX_FOLGE
+    min_folge = MIN_HORROR if band.startswith("horror") else MIN_DAUER
     # 1) Jede Folge: Lautheit angleichen, prüfen
     folgen, fehler = [], []
     for f in st["folgen"]:
@@ -138,7 +140,7 @@ def main(argv=None) -> int:
             fehler.append(f"{fid}: nicht gerendert"); continue
         fertig = ROOT / "ausgabe" / f"taeglich-{fid}-fertig.mp4"
         V.angleichen(roh, fertig)
-        erg = V.pruefe(fertig, max_dauer=max_folge, min_dauer=MIN_DAUER)
+        erg = V.pruefe(fertig, max_dauer=max_folge, min_dauer=min_folge)
         print(f"{fid}: {json.dumps(erg, ensure_ascii=False)}")
         if not erg["ok"]:
             fehler.append(f"{fid}: {erg['grund']}")

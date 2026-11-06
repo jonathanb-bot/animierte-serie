@@ -170,8 +170,12 @@ _zufall = random.SystemRandom()
 
 def streuen(z: dt.datetime, frueh: dt.datetime | None = None) -> dt.datetime:
     """Takt-Zeit `z` um zufällig −30 … +30 Minuten verschieben (nie vor `frueh`)."""
-    neu = z + dt.timedelta(minutes=_zufall.randint(-STREUUNG_MIN, STREUUNG_MIN))
-    return max(neu, frueh) if frueh else neu
+    # nie 0: kein Post genau zur Takt-Zeit (Issue #26; 6.11. lag yt-s01-f10-v2 so exakt auf 20:30)
+    versatz = _zufall.choice([m for m in range(-STREUUNG_MIN, STREUUNG_MIN + 1) if m])
+    neu = z + dt.timedelta(minutes=versatz)
+    if frueh and neu < frueh:
+        neu = frueh if frueh != z else frueh + dt.timedelta(minutes=_zufall.randint(1, STREUUNG_MIN))
+    return neu
 
 
 def einplanen(vid: str, eintrag: dict, zeit: dt.datetime, yt_zeit: dt.datetime, url: str, probe: bool,
