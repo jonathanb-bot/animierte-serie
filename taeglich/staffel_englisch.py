@@ -13,7 +13,7 @@ YouTube (3. Zernio-Konto, Jonathans Wunsch 3.11.).
   „Funkstille“ Teil 5), postet er genauso oft wie der deutsche, also jeden Teil zur selben Zeit wie das deutsche Gegenstück.
   Ein englischer Teil kommt nie vor seinem deutschen Gegenstück.
 - Instagram + YouTube englisch (3. Zernio-Konto, Secret ZERNIO_API_KEY_3): jede Folge ein Post wie auf Deutsch,
-  eigene Warteschlange, Takt wie Deutsch (Instagram alle 2 Stunden, YouTube :30), nie vor dem deutschen Gegenstück.
+  eigene Warteschlange, Takt wie Deutsch (Instagram 5× am Tag 08/11/14/17/20, YouTube :30, seit 6.11.), nie vor dem deutschen Gegenstück.
   Konto: "zernio:3" (das Instagram- bzw. YouTube-Konto im 3. Zernio-Konto, ohne Namen). Fehlt der Schlüssel noch,
   meldet der Workflow „kein Konto verbunden“ und versucht es beim nächsten Lauf wieder.
 - Alle Regeln der deutschen Staffel gelten: über 1 Minute, Prüfung von Bild/Ton/Lautheit, nie „Fortsetzung folgt“,

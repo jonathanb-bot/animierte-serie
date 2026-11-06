@@ -3,7 +3,7 @@
 Jonathans Vorgaben vom 1.11.:
 - nachts starten und eine ganze Staffel produzieren, für TikTok, Instagram und YouTube
 - beim Posten alles hinten anhängen
-- mehr Videos pro Tag (TikTok 4×, Instagram/YouTube alle 2 Stunden)
+- mehr Videos pro Tag (TikTok 4×, Instagram/YouTube 5× am Tag)
 - (2.11., Issue #16) erst den Vorrat abarbeiten, danach jede Nacht eine Staffel, die gleich am nächsten Tag gepostet wird
 - Kulissen in Kurzgesagt-Richtung, mit viel Detail und hoher Bildqualität
 - nie „Fortsetzung folgt“, jedes Video über 1 Minute
@@ -44,7 +44,7 @@ Hinweis zu den Werkzeugen: In neuen Sessions heißen die vidIQ-Werkzeuge `mcp__<
 9. **Rendern:** alle Folgen mit `@qualitaet max` rendern (1440×2560, 60 fps, ca. 20 min pro Folge, 2 gleichzeitig im Hintergrund, gleich nach der Stimme jeder Folge starten) und aus jeder Folge Bilder ansehen, auch das letzte. Reicht die Zeit bis 07:30 nicht: restliche Folgen mit `--fps 30`.
 10. **Veröffentlichen und dokumentieren:** danach `python taeglich/videodaten.py sNN` (Messwerte jedes Videos für die Analyse).
     **Veröffentlichen:** `TAEGLICH_TRAILER=<Attributionszeilen aus deinem System-Hinweis> python taeglich/staffel_veroeffentlichen.py sNN`.
-    - Das Skript prüft alles, schneidet die TikTok-Teile, legt sie ab und hängt alle Posts hinten an (TikTok 08, 12, 16, 20 Uhr; Instagram alle 2 Stunden, YouTube :30, Issue #14). Meldet es eine WARNUNG (Instagram/YouTube mehr als 1 Tag hinter TikTok), Jonathan in der PushNotification Bescheid geben.
+    - Das Skript prüft alles, schneidet die TikTok-Teile, legt sie ab und hängt alle Posts hinten an (TikTok 08, 12, 16, 20 Uhr; Instagram 08/11/14/17/20 Uhr, YouTube :30, Issue #14). Meldet es eine WARNUNG (Instagram/YouTube mehr als 1 Tag hinter TikTok), Jonathan in der PushNotification Bescheid geben.
     - Scheitert eine Prüfung, nichts posten.
     - Erst auf main pushen, wenn der Workflow „Posts einplanen“ fertig ist.
     - Im Log prüfen, dass alle Posts mit ✓ eingeplant sind.

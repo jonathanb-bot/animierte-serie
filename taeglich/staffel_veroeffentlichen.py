@@ -5,7 +5,7 @@
 
 Jonathans Vorgaben:
 - Posten: alles hinten anhängen (1.11.). Pro Plattform geht es direkt nach dem letzten geplanten Post weiter, im festen
-  Takt: TikTok 08:00, 12:00, 16:00, 20:00, Instagram alle 2 Stunden, YouTube jeweils :30, jeder Post zufällig 0–30 min früher oder später (5.11.). Nie parallel.
+  Takt: TikTok 08:00, 12:00, 16:00, 20:00, Instagram 08/11/14/17/20 Uhr, YouTube jeweils :30 danach (5× am Tag, 6.11.), jeder Post zufällig 0–30 min früher oder später (5.11.). Nie parallel.
 - TikTok (Issue #7): Folgen zu wenigen Sammelteilen zusammenschneiden (10 Folgen → 4 Teile, jeder höchstens 10 min).
 - Nie „Fortsetzung folgt“ (Issue #11, 1.11.): Die Folgen enden mit dem Cliffhanger. Steht doch eine solche Karte am Ende,
   wird sie überall herausgeschnitten (in der einzelnen Folge und im TikTok-Teil).
@@ -33,8 +33,8 @@ ROOT = V.ROOT
 STAFFELN = ROOT / "taeglich" / "staffeln.json"
 RAW = "https://raw.githubusercontent.com/jonathanb-bot/animierte-serie/youtube-upload/{pfad}"
 TAKT = {"tiktok": [(8, 0), (12, 0), (16, 0), (20, 0)],  # 4× am Tag (Jonathans Vorgabe 1.11.: mehr Videos pro Tag)
-         # Instagram/YouTube alle 2 Stunden: höchstens 1 Tag hinter TikTok (Jonathans Vorgabe 2.11., Issue #14)
-         "instagram": [(h, 0) for h in range(0, 24, 2)], "youtube": [(h, 30) for h in range(0, 24, 2)]}
+         # Instagram/YouTube 5× am Tag (Jonathans Vorgabe 6.11., ersetzt „alle 2 Stunden“ aus Issue #14)
+         "instagram": [(8, 0), (11, 0), (14, 0), (17, 0), (20, 0)], "youtube": [(8, 30), (11, 30), (14, 30), (17, 30), (20, 30)]}
 MIN_DAUER = 62.0   # jedes Video über 1 Minute (Issue #12), mit kleinem Puffer
 MAX_FOLGE = 90.0   # bis 90 s: ein Post auf Instagram/YouTube (Jonathans Vorgabe 2.11.)
 MAX_XL = 125.0     # Format „XL“/„gemischt“: Folgen bis ca. 2 min (Jonathans Wunsch 2.11.)
