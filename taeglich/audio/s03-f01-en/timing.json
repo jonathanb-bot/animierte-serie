@@ -1,0 +1,266 @@
+{
+ "dauer": 139.99,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "waldnacht",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 7.19,
+   "emotion": "erzaehlend",
+   "text": "In this forest, there's something that copies voices. And tonight, it knows yours."
+  },
+  {
+   "nr": 2,
+   "typ": "waldnacht",
+   "kapitel": 2,
+   "start": 7.19,
+   "dauer": 6.71,
+   "emotion": "erzaehlend",
+   "text": "You're at your mom's old cabin by the lake with Ben. Two days, no Wi-Fi, one fireplace."
+  },
+  {
+   "nr": 3,
+   "typ": "landschaft",
+   "kapitel": 2,
+   "start": 13.9,
+   "dauer": 10.118,
+   "emotion": "erzaehlend",
+   "text": "Outside, the lake lies black and smooth like a phone screen. Behind it, the forest begins. Miles and miles of it."
+  },
+  {
+   "nr": 4,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 24.018,
+   "dauer": 6.518,
+   "emotion": "froh",
+   "text": "The last time you were here, you were ten. Back then, Mom read to you every night until you fell asleep."
+  },
+  {
+   "nr": 5,
+   "typ": "wohnzimmer",
+   "kapitel": 2,
+   "start": 30.536,
+   "dauer": 5.846,
+   "emotion": "erzaehlend",
+   "text": "The wood crackles in the fireplace. Everything smells like pine sap and wet socks."
+  },
+  {
+   "nr": 6,
+   "typ": "handy",
+   "kapitel": 2,
+   "start": 36.382,
+   "dauer": 3.47,
+   "emotion": "erzaehlend",
+   "text": "Mom drove into the village. She wants to be back by midnight."
+  },
+  {
+   "nr": 7,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 39.852,
+   "dauer": 4.934,
+   "emotion": "ernst",
+   "text": "“Door shut, lights on. And if anything happens: Lighthouse.”"
+  },
+  {
+   "nr": 8,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 44.786,
+   "dauer": 4.574,
+   "emotion": "froh",
+   "text": "Lighthouse is your word from when you were little. Whoever calls it gets a sign back."
+  },
+  {
+   "nr": 9,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 49.36,
+   "dauer": 3.446,
+   "emotion": "froh",
+   "text": "“Lighthouse? Are you two a secret agency with a cabin?”"
+  },
+  {
+   "nr": 10,
+   "typ": "wohnzimmer",
+   "kapitel": 2,
+   "start": 52.806,
+   "dauer": 5.366,
+   "emotion": "erzaehlend",
+   "text": "Ben loses at cards for the fourth time. He claims the cards are damp."
+  },
+  {
+   "nr": 11,
+   "typ": "titel",
+   "kapitel": 3,
+   "start": 58.172,
+   "dauer": 3.134,
+   "emotion": "erzaehlend",
+   "text": "At ten forty-one, you hear it for the first time."
+  },
+  {
+   "nr": 12,
+   "typ": "waldnacht",
+   "kapitel": 3,
+   "start": 61.306,
+   "dauer": 5.99,
+   "emotion": "erzaehlend",
+   "text": "A sound comes from the forest. Click. Click. Like two stones knocked together."
+  },
+  {
+   "nr": 13,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 67.296,
+   "dauer": 3.062,
+   "emotion": "froh",
+   "text": "“A deer. Or a bear with castanets.”"
+  },
+  {
+   "nr": 14,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 70.358,
+   "dauer": 5.15,
+   "emotion": "ernst",
+   "text": "You don't laugh. Deer don't click. And the sound comes from high up."
+  },
+  {
+   "nr": 15,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 75.508,
+   "dauer": 3.254,
+   "emotion": "ernst",
+   "text": "Then everything goes quiet. Even the crickets stop."
+  },
+  {
+   "nr": 16,
+   "typ": "waldnacht",
+   "kapitel": 3,
+   "start": 78.762,
+   "dauer": 3.062,
+   "emotion": "erzaehlend",
+   "text": "And then someone calls. In your mom's voice."
+  },
+  {
+   "nr": 17,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 81.824,
+   "dauer": 3.182,
+   "emotion": "froh",
+   "text": "“Honey? Come out here. I need help with the bags.”"
+  },
+  {
+   "nr": 18,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 85.006,
+   "dauer": 2.246,
+   "emotion": "erzaehlend",
+   "text": "“There you go. Your mom's fast.”"
+  },
+  {
+   "nr": 19,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 87.252,
+   "dauer": 5.414,
+   "emotion": "ernst",
+   "text": "You're already getting up. It sounds so much like her. Even the little sigh at the end."
+  },
+  {
+   "nr": 20,
+   "typ": "handy",
+   "kapitel": 3,
+   "start": 92.666,
+   "dauer": 5.702,
+   "emotion": "erzaehlend",
+   "text": "But two minutes ago, Mom texted. She's still in line at the store. Twelve miles from here."
+  },
+  {
+   "nr": 21,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 98.368,
+   "dauer": 3.998,
+   "emotion": "spannend",
+   "text": "There's no car outside. No headlights. Just that voice."
+  },
+  {
+   "nr": 22,
+   "typ": "waldnacht",
+   "kapitel": 4,
+   "start": 102.366,
+   "dauer": 5.102,
+   "emotion": "erzaehlend",
+   "text": "You grab the flashlight. You don't open the door. You only shine it through the window."
+  },
+  {
+   "nr": 23,
+   "typ": "waldnacht",
+   "kapitel": 4,
+   "start": 107.468,
+   "dauer": 5.798,
+   "emotion": "erzaehlend",
+   "text": "Nobody's standing outside the cabin. Just fog, hanging between the trunks like wet laundry."
+  },
+  {
+   "nr": 24,
+   "typ": "handy",
+   "kapitel": 4,
+   "start": 113.266,
+   "dauer": 3.374,
+   "emotion": "erzaehlend",
+   "text": "You call Mom. One bar. The call drops."
+  },
+  {
+   "nr": 25,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 116.64,
+   "dauer": 5.054,
+   "emotion": "traurig",
+   "text": "“Honey, open up. I'm cold.” Exactly the way she always says it."
+  },
+  {
+   "nr": 26,
+   "typ": "waldnacht",
+   "kapitel": 4,
+   "start": 121.694,
+   "dauer": 7.43,
+   "emotion": "erzaehlend",
+   "text": "The beam climbs up the trees. And at the very top, way too high, two long eyes shine back."
+  },
+  {
+   "nr": 27,
+   "typ": "waldnacht",
+   "kapitel": 4,
+   "start": 129.124,
+   "dauer": 1.694,
+   "emotion": "erzaehlend",
+   "text": "You blink. Gone."
+  },
+  {
+   "nr": 28,
+   "typ": "wohnzimmer",
+   "kapitel": 5,
+   "start": 130.818,
+   "dauer": 3.926,
+   "emotion": "erzaehlend",
+   "text": "The clicking isn't in the forest anymore. It's right outside the window."
+  },
+  {
+   "nr": 29,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 134.744,
+   "dauer": 5.246,
+   "emotion": "spannend",
+   "text": "And then something knocks on the glass. Three times. Exactly the way Mom always knocks."
+  }
+ ]
+}
