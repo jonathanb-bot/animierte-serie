@@ -1,0 +1,57 @@
+# Radio Silence – Episode 10: Every Sunday
+@musik musik/s01-f10-en.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung freudig
+@mund zitate
+@sprache en
+@qualitaet hoch
+@look 0.15
+@kino 1
+@zeit tag
+
+== Hook ==
+// Landschaft mit See am Tag, Sonne, Vögel
+[landschaft zeit=tag see wackeln=0.2 zoom-rein hooktext="HE THINKS NO ONE WAITS FOR HIM"] An old man believes nobody is waiting for him. And he couldn't be more wrong.
+// Krankenhaus: Opa sitzt auf dem Bett, du davor
+[krankenhaus patient=opa du lina zeit=tag ruhig] You sit down next to your grandpa on the hospital bed.
+
+== Wiedererkennen ==
+// Nahaufnahme: du, fest
+[gesicht du ort=krankenhaus zeit=tag entschlossen] “We are, Grandpa. We're waiting. Every Sunday from now on.”
+// Nahaufnahme: Opa, ungläubig
+[gesicht opa ort=krankenhaus zeit=tag misstrauisch] Grandpa looks at you for a long time. “Every Sunday? You've all got so much going on.”
+// Nahaufnahme: Lina, frech
+[gesicht lina ort=krankenhaus zeit=tag froh] Lina crosses her arms. “You have no idea how boring the internet is.”
+// Nahaufnahme: Opa lacht
+[gesicht opa ort=krankenhaus zeit=tag froh] Grandpa laughs so loud the nurse sticks her head in the door.
+
+== Steigerung ==
+// Lebenszeit: viele helle Kästchen
+[lebenszeit jahre=16 markiert="16-26" oben="Every Sunday" zoom-raus] Forty afternoons, you thought. If you come every Sunday, that turns into hundreds.
+// Esstisch am Tag: Opa, Torte, alle
+[esstisch opa du mama papa torte zeit=tag zoom-rein] The first Sunday. Mom bakes. Dad burns the potatoes. Grandpa eats three plates anyway.
+// Nahaufnahme: Mama
+[gesicht mama ort=esstisch zeit=tag froh] The phones stay in the fruit bowl. Nobody misses them.
+// Esstisch: es klingelt, Ben und der Funker kommen dazu
+[esstisch opa du ben s01_funker torte zeit=tag ruhig] The second Sunday, Ben brings his mom. And the old radio man comes too.
+// Nahaufnahme: der Funker, gerührt
+[gesicht s01_funker ort=esstisch zeit=tag froh] He says his Sunday hasn't been this full in twenty years.
+// Nahaufnahme: Opa und Funker
+[gesicht opa ort=esstisch zeit=tag froh] Grandpa and him start arguing about soccer right away. Like two old friends.
+
+== Wendung ==
+// See am Tag: ihr alle am Ufer
+[see du lina opa zeit=tag lichter schwenk-rechts] In the summer, you all go to the lake together. Grandpa tells stories you've never heard before.
+// Nahaufnahme: du, glücklich
+[gesicht du ort=see zeit=tag froh] And you realize: you almost missed every single one of them.
+// Wald im Sonnenlicht
+[wald zeit=tag schwenk-links] Not because of a storm. Because of one single word. Later.
+// Landschaft am Abend, alle auf dem Hügel
+[landschaft zeit=abend du lina opa ben zoom-raus] The network has been back for a long time now. But Sunday stays.
+
+== Schluss ==
+// Weltall: die Erde bei Nacht, alle Lichter leuchten wieder
+[weltall satellit mond zoom-raus] For three days, the whole world went quiet.
+// Esstisch am Abend, Kerzen, alle lachen
+[esstisch opa mama papa du lina kerzen zeit=abend zoom-raus] And that's exactly when you started talking to each other again.

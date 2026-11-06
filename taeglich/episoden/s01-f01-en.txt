@@ -1,0 +1,61 @@
+# Radio Silence – Episode 1: No Signal
+@musik musik/s01-f01-en.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung spannend
+@mund zitate
+@sprache en
+@qualitaet hoch
+@look 0.6
+@kino 1
+@zeit morgen
+
+== Hook ==
+// Netz der Welt, rote Knoten erlöschen, du in der Mitte
+[netz mitte=du farbe=#ff5a3d wackeln=0.4 zoom-rein hooktext="YOUR SISTER ISN'T HOME"] The internet is gone. And your sister never came home.
+// Zimmer früh am Morgen: du schreckst im Bett hoch
+[zimmer im_bett=du du:schreck zeit=morgen lichterkette] Six in the morning. Mom bursts through your door.
+// Nahaufnahme: Mama, voller Angst
+[gesicht mama ort=wohnzimmer angst] “Lina's not here. Her bed is empty.”
+// Handy: kein Balken, Nachricht nicht gesendet
+[handy ort=zimmer netz=0 akku=81 uhrzeit="6:02" von="You to Lina" nachricht="Not delivered: When are you coming?"] You grab your phone. No bars. No Wi-Fi.
+
+== Wiedererkennen ==
+// Wohnzimmer: Papa vor dem Fernseher mit Standbild
+[wohnzimmer papa:denkt mama:besorgt tv licht=an zeit=morgen] Lina slept over at a friend's place. All the way across town.
+// Nahaufnahme: Papa versucht anzurufen
+[gesicht papa ort=wohnzimmer besorgt] Dad tries calling. Nothing. Not even a dial tone.
+// Weltall: die Nachtseite der Erde, ein Satellit
+[weltall satellit zoom-raus] And it's not just you. Last night, the network went down all over the world.
+// Netz: Impulse reißen ab
+[netz farbe=#ff5a3d schwenk-links] No texts. No calls. No map to show you the way.
+
+== Steigerung ==
+// Nahaufnahme: Papa mit dem Autoschlüssel
+[gesicht papa ort=wohnzimmer entschlossen] Dad grabs the car keys. “We're getting her. Now.”
+// Großstadt am Morgen, still und grau
+[grossstadt zeit=morgen schwenk-rechts] The city is strangely quiet. The traffic lights just blink yellow.
+// Haltestelle: Leute starren auf ihre Handys
+[haltestelle fremder mia regen zeit=morgen] At the bus stop, everyone is staring at their phones. Like that's going to change anything.
+// Infokarte: nur noch Bargeld
+[objekt objekte="batterie:Cash only|funkgeraet:No calls|schluessel:No tickets" gross="No Network" farbe=#2f3d5c] No card payments. No online tickets. Almost everything runs on the network.
+// Nahaufnahme: du im Auto, die Gedanken rasen
+[gesicht du ort=grossstadt zeit=morgen besorgt] In the car, you count the minutes. Lina is twelve. She's never been alone in the city at night.
+// Großstadt: ihr kommt an
+[grossstadt zeit=morgen zoom-rein] Twenty minutes later, you're there.
+
+== Wendung ==
+// Fremdes Wohnzimmer, Licht aus, Vorhänge halb zu
+[wohnzimmer du papa:taschenlampe licht=aus zeit=morgen ruhig] The front door is open a crack. “Hello? Lina?”
+// Nahaufnahme: du, angespannt
+[gesicht du ort=wohnzimmer lauscht besorgt] No answer. The jackets are gone. The shoes are gone.
+// Esstisch: halb leere Teller, Stühle weggeschoben
+[esstisch leer=4 gedeckt zeit=morgen zoom-rein] The plates are still on the table. Like everyone left in the middle of the night.
+// Nahaufnahme: Papa, blass
+[gesicht papa ort=esstisch angst] Dad goes completely pale.
+
+== Cliffhanger ==
+// Nahaufnahme: du entdeckst etwas auf dem Tisch
+[gesicht du ort=esstisch schreck zoom-rein] Then you see it.
+// Handy mit Glitzerhülle auf dem Tisch, ein Akku-Rest
+[handy ort=esstisch netz=0 akku=9 uhrzeit="6:41" von="Lina" nachricht="Taking the last bus. See you soon!"] Right in the middle of the table is Lina's phone. She left without it. In the middle of the night.

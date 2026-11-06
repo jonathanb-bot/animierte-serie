@@ -1,0 +1,57 @@
+# Radio Silence – Episode 6: Nobody Rings My Bell Anyway
+@musik musik/s01-f06-en.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung traurig
+@mund zitate
+@sprache en
+@qualitaet hoch
+@look 0.5
+@kino 1
+@zeit abend
+
+== Hook ==
+// Landschaft am Abend: ein einzelnes Haus mit einem kleinen Licht
+[landschaft zeit=abend wackeln=0.2 zoom-rein hooktext="HE SITS ALONE IN THE DARK"] An old man has been sitting alone in the dark for two days. And nobody has checked on him.
+// Nahaufnahme: du, außer Atem, vor der Tür
+[gesicht du ort=landschaft zeit=abend besorgt] It's your grandpa. You walked all day to get to him.
+
+== Wiedererkennen ==
+// Wohnzimmer bei Opa: Licht aus, Opa im Sessel
+[wohnzimmer opa sofa_sitzen licht=aus zeit=abend foto=opa,oma ruhig] Grandpa is sitting in the living room. One candle. One crossword puzzle. That's it.
+// Nahaufnahme: Opa, überrascht
+[gesicht opa ort=wohnzimmer zeit=abend schreck] He looks up. “You came?”
+// Wohnzimmer: Lina fällt ihm um den Hals
+[wohnzimmer opa lina:umarmt du licht=aus zeit=abend zoom-rein] Lina throws her arms around his neck. Grandpa laughs. And coughs. And laughs again.
+// Nahaufnahme: Opa, leise
+[gesicht opa ort=wohnzimmer zeit=abend traurig] “Oh, kids. Radio silence is nothing new for me.”
+
+== Steigerung ==
+// Nahaufnahme: Opa, traurig lächelnd
+[gesicht opa ort=wohnzimmer zeit=abend traurig] “Nobody rings for me anyway. Not the phone. Not the doorbell either.”
+// Nahaufnahme: du, getroffen
+[gesicht du ort=wohnzimmer zeit=abend traurig] That hits you right in the chest. Because he's right.
+// Infokarte: Kalender
+[objekt objekte="herz:Birthdays|kerze:Christmas|uhr:Easter" gross="When You See Grandpa" farbe=#2a2f45] You see him on birthdays. At Christmas. Maybe at Easter.
+// Titelkarte: vielleicht noch 40 Mal
+[titel oben="If nothing changes" gross="40 TIMES" unten="is maybe all you'll see him" farbe=#1d2840 akzent=#e9b866 groesse=170 hud=false] If things stay like this, you might see him forty more times. Forty afternoons. That's it.
+// Lebenszeit: deine Wochen, gelebt und offen
+[lebenszeit jahre=16 markiert="16-30" oben="Your life in weeks" zoom-raus] And every week that goes by never comes back. Not for Grandpa either.
+// Landschaft am Abend, Nebel im Tal
+[landschaft zeit=abend schwenk-links] Outside, it's getting dark. The second storm isn't far off.
+
+== Wendung ==
+// Nahaufnahme: Lina fragt nach den Tabletten
+[gesicht lina ort=wohnzimmer zeit=abend besorgt] Lina asks about the heart pills. Grandpa waves it off. “I've got two left. That's enough.”
+// Infokarte: Medizin, zwei Tabletten
+[objekt objekte="medizin:Two pills left" gross="Today and Tomorrow" farbe=#2a2f45] Two pills. Today and tomorrow. And without computers, the pharmacies are closed.
+// Nahaufnahme: Ben, still
+[gesicht ben ort=wohnzimmer zeit=abend traurig] Ben doesn't say anything. But he's thinking the same thing you are.
+// Wohnzimmer: alle zusammen, Kerze, warmes Licht
+[wohnzimmer opa du lina ben licht=aus zeit=abend ruhig] You sit down with him. Grandpa tells stories from the old days.
+
+== Cliffhanger ==
+// Nahaufnahme: Opa, plötzlich grau
+[gesicht opa ort=wohnzimmer zeit=abend angst zoom-rein] In the middle of a sentence, he stops talking.
+// Nahaufnahme: du, erschrocken
+[gesicht du ort=wohnzimmer zeit=abend schreck zoom-rein] His face turns gray. He grabs his chest. And slowly sinks into the armchair.

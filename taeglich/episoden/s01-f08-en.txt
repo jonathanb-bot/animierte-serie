@@ -1,0 +1,57 @@
+# Radio Silence – Episode 8: The Green Sky
+@musik musik/s01-f08-en.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung freudig
+@mund zitate
+@sprache en
+@qualitaet hoch
+@look 0.2
+@kino 1
+@zeit nacht
+
+== Hook ==
+// Polarlicht über der Stadt, grüne Vorhänge
+[polarlicht wackeln=0.3 zoom-rein hooktext="THE SKY TURNS GREEN"] The whole hospital suddenly goes dark. And outside, the sky is glowing green.
+// Krankenhaus: dunkel, nur der Monitor
+[krankenhaus patient=opa mama papa lina zeit=nacht wackeln=0.3] Three seconds. Four. You can hear your own heartbeat.
+
+== Wiedererkennen ==
+// Nahaufnahme: du, angespannt
+[gesicht du ort=krankenhaus zeit=nacht angst] Then something rumbles deep down in the basement.
+// Krankenhaus: Licht wieder an, Monitor piept
+[krankenhaus patient=opa mama papa lina zeit=nacht zoom-raus] The generators kick in. The lights flicker back on. Grandpa's monitor starts beeping again.
+// Nahaufnahme: Mama atmet aus
+[gesicht mama ort=krankenhaus zeit=nacht froh] Mom laughs. A little too loud. Out of pure relief.
+
+== Steigerung ==
+// Polarlicht mit See, Spiegelung
+[polarlicht see schwenk-rechts] And then you all look out the window.
+// Weltall: Erde, Nachtseite mit grünem Leuchten am Rand
+[weltall erde_y=1500 zoom-raus] When a solar storm hits the Earth, the air starts to glow. Northern lights.
+// Infokarte: Mai 2024
+[titel oben="May 2024" gross="NORTHERN LIGHTS" unten="all over Germany" farbe=#0c1d2a akzent=#5dffb0 groesse=130 hud=false] Normally you only see them far up north. But two years ago, in May, you could see them all over Germany.
+// Nahaufnahme: Lina, staunend
+[gesicht lina ort=krankenhaus zeit=nacht froh] Lina presses her nose against the glass. “That's the most beautiful thing I've ever seen.”
+// Nahaufnahme: Opa wacht auf
+[gesicht opa ort=krankenhaus zeit=nacht neugierig] Then Grandpa opens his eyes. He turns his head toward the window.
+// Nahaufnahme: Opa, gerührt
+[gesicht opa ort=krankenhaus zeit=nacht froh] “I wanted to see that my whole life. And now I get to see it with you.”
+
+== Wendung ==
+// Krankenhaus: alle um das Bett
+[krankenhaus patient=opa mama papa du lina zeit=nacht ruhig] Nobody looks at their phone. There isn't one that works anyway.
+// Nahaufnahme: Papa grinst
+[gesicht papa ort=krankenhaus zeit=nacht froh] Dad tells you how Grandpa taught him to ride a bike. Backwards. By accident.
+// Nahaufnahme: du lachst
+[gesicht du ort=krankenhaus zeit=nacht froh] You laugh until your stomach hurts. Right in the middle of the hospital.
+// Polarlicht: ihr zu dritt auf dem Hügel draußen
+[polarlicht du lina ben zoom-rein] Later, you're standing outside with Lina and Ben on the hill behind the hospital.
+// Nahaufnahme: Ben, leise
+[gesicht ben ort=polarlicht froh] Ben says, “Without the outage, we would've missed this.”
+
+== Cliffhanger ==
+// Nahaufnahme: du spürst etwas in der Tasche
+[gesicht du ort=polarlicht schreck zoom-rein] Then something vibrates in your jacket pocket.
+// Handy: ein Balken, eine Nachricht kommt an
+[handy ort=polarlicht netz=0 netz_bis=1 akku=6 uhrzeit="3:12" von="Grandpa" nachricht="1 new message"] Your phone. One single bar. And a message that's been stuck for three days.

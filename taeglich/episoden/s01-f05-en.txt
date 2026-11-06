@@ -1,0 +1,57 @@
+# Radio Silence – Episode 5: What the Radio Man Heard
+@musik musik/s01-f05-en.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung duester
+@mund zitate
+@sprache en
+@qualitaet hoch
+@look 0.85
+@kino 1
+@zeit morgen
+
+== Hook ==
+// Weltall: die Sonne schleudert Licht, die Erde klein
+[weltall sonne erde_y=1950 fokus=760,640 wackeln=0.4 zoom-rein hooktext="THE SUN STRUCK"] The sun hit the Earth. And the second blow is still coming.
+// Nahaufnahme: der alte Funker, ernst
+[gesicht s01_funker ort=wohnzimmer zeit=morgen besorgt] That's what the old man says. In his apartment full of cables and radios.
+
+== Wiedererkennen ==
+// Wohnzimmer: Lina, Ben, du und der Funker
+[wohnzimmer du lina ben s01_funker licht=aus zeit=morgen ruhig] You're sitting in his living room. No power. But his radio runs on batteries.
+// Infokarte: Funkgerät
+[objekt objekte="funkgeraet:Shortwave|batterie:Battery" gross="Radio Still Works" farbe=#3a2a2a] Over shortwave, radio operators all over the world talk to each other. No internet. No cell towers.
+// Nahaufnahme: Funker erklärt
+[gesicht s01_funker ort=wohnzimmer zeit=morgen entschlossen] “A solar storm. A huge one. It's all anyone's been talking about tonight.”
+
+== Steigerung ==
+// Weltall: Sonne, Erde, Satellit
+[weltall sonne satellit erde_y=1800 fokus=700,700 schwenk-links] In a solar storm, the sun hurls clouds of charged particles into space.
+// Netz: rote Knoten, Störungen
+[netz farbe=#ff5a3d zoom-rein] When they hit the Earth, they mess with satellites, radio, and power grids.
+// Infokarte: 1859
+[titel oben="In the year" gross="1859" unten="telegraphs threw sparks" farbe=#1d1a2a akzent=#ff8a5a groesse=170 hud=false] In eighteen fifty-nine, after a storm like that, telegraph lines threw sparks.
+// Infokarte: 1989
+[titel oben="Canada, 1989" gross="9 HOURS" unten="without power" farbe=#1d1a2a akzent=#ff8a5a groesse=150 hud=false] And in nineteen eighty-nine, millions of people in Canada lost power for nine hours.
+// Rechenzentrum mit rotem Kern
+[rechenzentrum kern farbe=#ff5a3d schwenk-rechts] Today, almost everything depends on satellites and data centers. Way more than back then.
+// Nahaufnahme: Ben, leise
+[gesicht ben ort=wohnzimmer zeit=morgen angst] Ben whispers, “And the second blow?”
+
+== Wendung ==
+// Nahaufnahme: Funker
+[gesicht s01_funker ort=wohnzimmer zeit=morgen besorgt] “Tonight. Maybe stronger than the first.”
+// Nahaufnahme: du, besorgt
+[gesicht du ort=wohnzimmer zeit=morgen besorgt] You think about Mom and Dad. They're still out looking for Lina.
+// Nahaufnahme: der Funker lächelt kurz
+[gesicht s01_funker ort=wohnzimmer zeit=morgen froh] The radio man writes a message on a slip of paper.
+// Großstadt am Morgen, ein Radfahrer in der Ferne
+[grossstadt zeit=morgen schwenk-links] A neighbor bikes it over to your house. So your parents know: Lina is here.
+// Nahaufnahme: Lina, plötzlich blass
+[gesicht lina ort=wohnzimmer zeit=morgen schreck] Then Lina goes completely pale.
+
+== Cliffhanger ==
+// Nahaufnahme: Lina flüstert
+[gesicht lina ort=wohnzimmer zeit=morgen angst zoom-rein] “Grandpa takes his heart pills every night.”
+// Landschaft am Abend, ein einsames Haus mit Licht
+[landschaft zeit=abend zoom-rein] “And last week he told me: the pack is almost empty.”

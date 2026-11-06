@@ -1,0 +1,57 @@
+# Radio Silence – Episode 7: Emergency Radio
+@musik musik/s01-f07-en.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung spannend
+@mund zitate
+@sprache en
+@qualitaet hoch
+@look 0.6
+@kino 1
+@zeit nacht
+
+== Hook ==
+// Netz: ein einziger blauer Knoten sendet in die Dunkelheit
+[netz farbe=#59c7ff wackeln=0.4 zoom-rein hooktext="NO 911. ANYWHERE."] Someone needs a doctor right now. And not a single phone in the world works.
+// Wohnzimmer: Opa im Sessel, ihr um ihn herum
+[wohnzimmer opa sofa_sitzen du lina ben licht=aus zeit=nacht wackeln=0.3] Grandpa's breathing is shallow. Lina is holding his hand. Ben is pacing in circles.
+
+== Wiedererkennen ==
+// Nahaufnahme: du, Panik
+[gesicht du ort=wohnzimmer zeit=nacht angst] You go to dial the emergency number. Out of habit. No bars.
+// Nahaufnahme: der Funker, ruhig
+[gesicht s01_funker ort=wohnzimmer zeit=nacht entschlossen] Then the old radio man opens up his set. “Stay calm. This is what this is for.”
+// Infokarte: Funkgerät
+[objekt objekte="funkgeraet:Emergency radio" gross="When Everything Fails" farbe=#1d2840] During big outages, ham radio operators help pass messages along. No network needed.
+// Großstadt bei Nacht, dunkel, ein Funkspruch wandert
+[grossstadt zeit=nacht schwenk-rechts] His call goes from operator to operator. Right across the city. All the way to the fire department.
+
+== Steigerung ==
+// Nahaufnahme: Funker lauscht
+[gesicht s01_funker ort=wohnzimmer zeit=nacht lauscht] Then it crackles. “Ambulance is on the way. Ten minutes.”
+// Nahaufnahme: Opa, schwach lächelnd
+[gesicht opa ort=wohnzimmer zeit=nacht muede] Ten minutes can be a very long time. Grandpa squeezes your hand. Very weakly.
+// Landschaft bei Nacht, blaues Licht am Horizont
+[landschaft zeit=nacht zoom-rein] Then you see it. Flashing blue lights. In the middle of a city with no lights.
+// Krankenhaus: Opa im Bett, Monitor
+[krankenhaus patient=opa du lina zeit=nacht ruhig] The hospital runs on emergency power. Big generators in the basement that kick in when the grid goes down.
+// Nahaufnahme: du am Bett
+[gesicht du ort=krankenhaus zeit=nacht besorgt] The doctors are working with paper and ballpoint pens. Like the old days.
+
+== Wendung ==
+// Krankenhaus: Mama und Papa stürzen herein
+[krankenhaus patient=opa mama papa du lina zeit=nacht zoom-raus] And then the door opens. Mom. Dad. The radio man's note found them.
+// Nahaufnahme: Mama, weinend vor Erleichterung
+[gesicht mama ort=krankenhaus zeit=nacht froh] Mom doesn't say a word. She just holds on to you. Both of you.
+// Nahaufnahme: Papa, zu Opa
+[gesicht papa ort=krankenhaus zeit=nacht traurig] Dad sits down next to Grandpa. “We should have come so much more often.”
+// Nahaufnahme: Opa, matt
+[gesicht opa ort=krankenhaus zeit=nacht froh] Grandpa smiles. “Well, you're here now.”
+// Krankenhaus: alle zusammen
+[krankenhaus patient=opa mama papa lina zeit=nacht ruhig] The doctor says: he's stable. You can stay.
+
+== Cliffhanger ==
+// Polarlicht: der Himmel färbt sich grün
+[polarlicht zoom-raus] Through the window, you watch the sky slowly turn green.
+// Nahaufnahme: du, erschrocken im plötzlichen Dunkel
+[gesicht du ort=krankenhaus zeit=nacht schreck zoom-rein] The second storm is here. And all over the hospital, the lights go out.
