@@ -204,6 +204,8 @@ def main(argv=None) -> int:
     plan = json.loads(plan_datei.read_text(encoding="utf-8"))
     loeschen, ids = set(plan.get("loeschen") or []), {p["id"] for p in plan["posts"]}
     endung = f"-{a.ersetzen}" if a.ersetzen else ""
+    # neue Fassung: Text leicht anders, sonst lehnt Zernio den Post als Doppel ab (gleicher Inhalt innerhalb von 24 h, 5./6.11.)
+    neu_txt = "\nJetzt mit neuer Stimme." if a.ersetzen else ""
     frueh = dt.datetime.now(V.BERLIN).replace(tzinfo=None, second=0, microsecond=0) + VORLAUF
     em, tags_txt, titel = st.get("emoji", ""), " ".join(st["hashtags"]), st["titel"]
     neu = []
@@ -239,12 +241,12 @@ def main(argv=None) -> int:
                  + f"\n\n{tags_txt} #fyp")} for t in teile])
     anhaengen("instagram", [{
         "id": f"taeglich-insta-{f['id']}{endung}", "video": RAW.format(pfad=f"taeglich/{f['id']}.mp4"),
-        "text": f"{titel} – Folge {f['nr']}: {f['titel']} {em}\n{f.get('beschreibung') or st['beschreibung']}\n{weiter(f, '@sto.rys4you')}\n\n{tags_txt} #reels"} for f in folgen])
+        "text": f"{titel} – Folge {f['nr']}: {f['titel']} {em}\n{f.get('beschreibung') or st['beschreibung']}\n{weiter(f, '@sto.rys4you')}{neu_txt}\n\n{tags_txt} #reels"} for f in folgen])
     anhaengen("youtube", [{
         "id": f"taeglich-yt-{f['id']}{endung}", "video": RAW.format(pfad=f"taeglich/{f['id']}.mp4"),
         "titel": f"{titel} – Folge {f['nr']}: {f['titel']} {em} #shorts"[:100],
         "tags": (st.get("tags") or ["animation", "story"]) + ["shorts"],
-        "text": f"{f.get('beschreibung') or st['beschreibung']}\n{weiter(f, None)}\n\n{tags_txt} #shorts"} for f in folgen])
+        "text": f"{f.get('beschreibung') or st['beschreibung']}\n{weiter(f, None)}{neu_txt}\n\n{tags_txt} #shorts"} for f in folgen])
 
     for p in neu:
         print(f"  {p['id']}: {p['zeit']}")
