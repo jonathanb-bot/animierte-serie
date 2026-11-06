@@ -63,8 +63,8 @@ Reihenfolge als Vorschlag; die Analyse darf tauschen, aber jedes Genre kommt bis
 
 | Nr | Staffel | Hypothese | Variante | Messgröße | Ergebnis (Analyse trägt ein) |
 |---|---|---|---|---|---|
-| E1 | s01 | Großer Hook-Text in den ersten 2,5 s hält mehr Leute | `hooktext` in allen Folgen | TikTok Bindung 3 s, Faktor Instagram/YouTube | offen (Posts ab 5.11.) |
-| E2 | s02 | Hook-Text wirkt im direkten Vergleich innerhalb einer Staffel | ungerade Folgen mit, gerade ohne | TikTok Bindung 3 s/7 s, Aufrufe/h Instagram | offen (Posts ab 6.11.) |
+| E1 | s01 | Großer Hook-Text in den ersten 2,5 s hält mehr Leute | `hooktext` in allen Folgen | TikTok Bindung 3 s, Faktor Instagram/YouTube | offen; 6.11.: s01-teil-1-v2 erst 1,5 h alt (23 % nach 4 s), Instagram/YouTube s01 ab 6.11. 20 Uhr – noch keine Werte |
+| E2 | s02 | Hook-Text wirkt im direkten Vergleich innerhalb einer Staffel | ungerade Folgen mit, gerade ohne | TikTok Bindung 3 s/7 s, Aufrufe/h Instagram | offen; 6.11.: nur F1 (mit Hook-Text) hat Zahlen – Instagram 47,4/h, Ø 29,9 s; TikTok 41 % nach 2 s, 30 % nach 4 s. Vergleich ab F2 (ohne) |
 | – | s02 | (Format-Rotation) TikTok-Einzelposts statt Sammelteile | 8 Einzelposts | Wiedergabe in % der Länge, Aufrufe/h | offen |
 | E3 | s03 | Wer nur eine Folge sieht, bleibt länger, wenn der erste Satz die Grund-Regel der Welt enthält (späte Teile ohne sie verlieren zwischen 5 und 30 s die Hälfte) | Folge 1 und 3 mit Grund-Prämisse + neuer Lage, Folge 2 und 4 nur neue Lage | TikTok Bindung 10 s/30 s, Ø Wiedergabe, Follows; Instagram Ø Wiedergabe (F3 gegen F2/F4) | offen |
 | E4 | s03–s12 | Ohne Untertitel wirkt das Bild ruhiger und cleaner, die Leute schauen genauer hin und bleiben trotzdem (Jonathans Wunsch 5.11.) | im Wechsel: ungerade Staffeln `@untertitel aus`, gerade mit (Hook-Text, `gross=` und Schrift im Bild bleiben) | TikTok Bindung 3 s/10 s, Ø Wiedergabe in % der Länge, Instagram Ø Wiedergabe – Staffeln ohne gegen Staffeln mit Untertiteln (läuft neben dem Haupt-Experiment jeder Staffel) | offen |
@@ -84,4 +84,10 @@ Reihenfolge als Vorschlag; die Analyse darf tauschen, aber jedes Genre kommt bis
   - **Instagram:** Tagessumme stabil (ca. 2.100), Median je Reel seit 2-h-Takt 135–233 (vorher 949–1.531).
   - **Genre Lebenszeit (1. Datenpunkt, 1 Post):** video-001 „Die Zeit, die dir bleibt“ auf Instagram 381 Aufrufe in 9 h = 39,2/h, Ø 16,1 s, Abbruch 31,8 %, 2 Saves – 6–10 × alle anderen Reels der Woche (2,0–6,8/h). YouTube 2 Aufrufe (Takt-Problem). Tendenz, im Genre-Plan s10 prüfen, ggf. früher.
   - Welt, Erzählform, Hook-Art, Cliffhanger-Art, Kulisse, E1–E4: weiter offen (TikTok-Zahlen für s01 ab 6.11., Instagram/YouTube s01 ab 6.–7.11.).
-
+- **6.11. (132 Posts, erste Zahlen aus den Kurzvideo-Staffeln nach der Neuvertonung; Bericht `2026-11-06.md`):**
+  - **Instagram, s02-f01 (1 Post, Tendenz):** 574 Aufrufe in 12 h = **47,4/h**, Ø **29,9 s (41 % von 73 s)**, Abbruch 38,6 %, 24 Likes – stärkstes Reel pro Stunde in der Geschichte des Kontos (alte Serien seit 2.11.: 0,1–6,8/h, Ø 7–24 s). Erster Post im 5er-Takt (#27), Takt und Inhalt lassen sich nicht trennen. Mit video-001 (39,2/h) liegen jetzt beide Kurzvideo-Reels 6–15 × über allen anderen Reels der Woche.
+  - **TikTok, s02-teil-1 (72 s, 9 h alt, 255 Aufrufe):** 41 % nach 2 s, 30 % nach 4 s, 21 % nach 10 s, **19 % nach 30 s (Kurve ab 10 s flach)**, 12 % nach 60 s, Abschluss **14,8 %** (Sammelteile 1–5,5 %), 0 Follows. Verlust liegt fast ganz in 0–4 s. Englisch s02-teil-1: 839 Aufrufe/21 h, 45 %/29 %/17 % nach 2/4/10 s.
+  - **Welt Heimatstadt / Genre Was wäre wenn / Hook-Art kühne Prämisse + Zahl / Erzählform chronologisch 1 Woche:** je 1 Post (s02-f01), Instagram 47,4/h. Hook-Art „kühne Prämisse“ damit zum 4. Mal vor „Rätsel mit Gefahr“ (alien Median 2,2/h, Ø 8,9 s auf Instagram). Tendenz.
+  - **Länge:** einzelne Folge 72 s gegen Sammelteile 3–7 min auf TikTok: Abschluss 14,8 % gegen 1–5,5 %, Ø 16,1 s (22 %) gegen 14–47 s (5–17 %). Erst ab mehreren Posts vergleichbar.
+  - **YouTube:** Kanal +168 Aufrufe an einem Tag (30.10.–2.11.: 4.100–5.700/Tag); s02-f01 28 Aufrufe in 10 h. Takt seit 6.11. 5/Tag (#27) – Erholung frühestens 8./9.11. prüfen.
+  - Erzählform, Cliffhanger-Art, Kulisse, E3–E5: weiter offen (s03 noch nicht gepostet).

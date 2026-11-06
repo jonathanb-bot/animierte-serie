@@ -209,6 +209,43 @@
    "erkenntnis": "YouTube spielt neue Shorts seit 3.11. kaum noch aus (Median 13 bzw. 3, Bindung gut) – Takt 12/Tag und späte Teile ohne Einstieg; Teil-1-Effekt auf TikTok zum 3. Mal bestätigt; video-001 (Lebenszeit) bestes Instagram-Reel der Woche.",
    "posting_fehler": 0,
    "vidiq_credits_danach": 124
+  },
+  {
+   "datum": "2026-11-06T21:45",
+   "quelle": "Analyse vor der Staffel (Zernio 132 Posts, YouTube-Analytics 429; vidIQ nur kostenlos)",
+   "tiktok": {
+    "follower": 68,
+    "follower_30_tage": "+17/-0",
+    "likes_30_tage": 1420,
+    "videos": 21,
+    "s02_teil_1": "72 s, 255 Aufrufe in 9 h, 41 %/30 %/21 %/19 % nach 2/4/10/30 s, Ø 16,1 s, Abschluss 14,8 %, 0 Follows"
+   },
+   "tiktok_eng": {
+    "konto": "storys4you_eng",
+    "follower": 1,
+    "likes_30_tage": 14,
+    "videos": 3,
+    "s02_teil_1": "839 Aufrufe in 21 h, Ø 10,3 s"
+   },
+   "instagram": {
+    "follower": 7,
+    "aufrufe_30_tage": 29866,
+    "reichweite_30_tage": 15156,
+    "aktive_konten": 272,
+    "interaktionen_30_tage": 401,
+    "s02_f01": "574 Aufrufe in 12 h, 47,4/h, Ø 29,9 s (41 %), Abbruch 38,6 %, 24 Likes"
+   },
+   "youtube": {
+    "abonnenten": 54,
+    "aufrufe_gesamt_vidiq": 22246,
+    "videos": 56,
+    "aufrufe_letzter_tag": 168,
+    "s02_f01": "28 Aufrufe in 10 h",
+    "zernio_analytics": "HTTP 429, Kontingent erschöpft"
+   },
+   "erkenntnis": "Erste Kurzvideo-Folge (s02-f01, kühne Prämisse + Zahl) ist das stärkste Instagram-Reel pro Stunde (47,4/h, Ø 30 s); auf TikTok flacht ihre Kurve nach 10 s ab, der Verlust liegt in 0–4 s; YouTube weiter fast ohne Ausspielung.",
+   "posting_fehler": 0,
+   "vidiq_credits_danach": 124
   }
  ],
  "letzte_analyse": "taeglich/analyse/2026-11-04.md"
