@@ -1,0 +1,266 @@
+{
+ "dauer": 121.51,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "waldnacht",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 6.038,
+   "emotion": "erzaehlend",
+   "text": "Deine Mutter läuft gerade allein durch einen dunklen Wald. Und du gehst ihr entgegen."
+  },
+  {
+   "nr": 2,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 6.038,
+   "dauer": 3.662,
+   "emotion": "ernst",
+   "text": "„Ich bleib direkt hinter dir. Wenn ich schreie, ist das kein Witz.“"
+  },
+  {
+   "nr": 3,
+   "typ": "objekt",
+   "kapitel": 2,
+   "start": 9.7,
+   "dauer": 5.702,
+   "emotion": "erklaerend",
+   "text": "Draußen gelten neue Regeln. Nicht antworten. Nicht trennen. Nicht stehen bleiben."
+  },
+  {
+   "nr": 4,
+   "typ": "waldnacht",
+   "kapitel": 2,
+   "start": 15.402,
+   "dauer": 4.358,
+   "emotion": "erzaehlend",
+   "text": "Der Lichtstrahl zittert, weil deine Hand zittert. Ben hält sich an deinem Rucksack fest."
+  },
+  {
+   "nr": 5,
+   "typ": "waldnacht",
+   "kapitel": 2,
+   "start": 19.76,
+   "dauer": 7.094,
+   "emotion": "erzaehlend",
+   "text": "Es ist ein Uhr. Der Boden ist nass. Bei jedem Schritt knackt ein Ast, und jedes Mal bleibt dein Herz kurz stehen."
+  },
+  {
+   "nr": 6,
+   "typ": "waldnacht",
+   "kapitel": 2,
+   "start": 26.854,
+   "dauer": 4.454,
+   "emotion": "erzaehlend",
+   "text": "Irgendwo oben in den Bäumen: Klick. Klick. Es läuft mit."
+  },
+  {
+   "nr": 7,
+   "typ": "waldnacht",
+   "kapitel": 3,
+   "start": 31.308,
+   "dauer": 2.606,
+   "emotion": "erzaehlend",
+   "text": "Dann ruft Mama. Von links."
+  },
+  {
+   "nr": 8,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 33.914,
+   "dauer": 1.958,
+   "emotion": "froh",
+   "text": "„Schatz! Hier bin ich!“"
+  },
+  {
+   "nr": 9,
+   "typ": "waldnacht",
+   "kapitel": 3,
+   "start": 35.872,
+   "dauer": 2.75,
+   "emotion": "erzaehlend",
+   "text": "Und dann ruft Mama noch einmal. Von rechts."
+  },
+  {
+   "nr": 10,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 38.622,
+   "dauer": 2.486,
+   "emotion": "ernst",
+   "text": "„Schatz, nicht da lang! Hier!“"
+  },
+  {
+   "nr": 11,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 41.108,
+   "dauer": 1.742,
+   "emotion": "spannend",
+   "text": "„Welche? Welche ist es?“"
+  },
+  {
+   "nr": 12,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 42.85,
+   "dauer": 4.742,
+   "emotion": "spannend",
+   "text": "Zwei Stimmen. Beide klingen genau wie sie. Eine davon ist nicht deine Mutter."
+  },
+  {
+   "nr": 13,
+   "typ": "titel",
+   "kapitel": 3,
+   "start": 47.592,
+   "dauer": 4.334,
+   "emotion": "erzaehlend",
+   "text": "Du holst tief Luft. Und du rufst das einzige Wort, das nur ihr beide kennt."
+  },
+  {
+   "nr": 14,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 51.926,
+   "dauer": 0.998,
+   "emotion": "ernst",
+   "text": "„Leuchtturm!“"
+  },
+  {
+   "nr": 15,
+   "typ": "waldnacht",
+   "kapitel": 4,
+   "start": 52.924,
+   "dauer": 6.278,
+   "emotion": "erzaehlend",
+   "text": "Von links kommt sofort die Stimme zurück. „Leuchtturm! Leuchtturm!“ Es wiederholt nur dein Wort."
+  },
+  {
+   "nr": 16,
+   "typ": "waldnacht",
+   "kapitel": 4,
+   "start": 59.202,
+   "dauer": 7.07,
+   "emotion": "erzaehlend",
+   "text": "Von rechts kommt keine Antwort. Stattdessen blinkt ein kleines Licht. Dreimal. Wie ein Leuchtturm."
+  },
+  {
+   "nr": 17,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 66.272,
+   "dauer": 4.166,
+   "emotion": "froh",
+   "text": "Das war das Zeichen. Eine Stimme kann es nachmachen. Ein Licht nicht."
+  },
+  {
+   "nr": 18,
+   "typ": "waldnacht",
+   "kapitel": 4,
+   "start": 70.438,
+   "dauer": 5.966,
+   "emotion": "erzaehlend",
+   "text": "Du rennst. Mama steht im Nebel, mit ihrer Handylampe. Ihre Jacke riecht nach Regen und Benzin."
+  },
+  {
+   "nr": 19,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 76.404,
+   "dauer": 2.102,
+   "emotion": "froh",
+   "text": "„Ich bin da. Ich bin ja da.“"
+  },
+  {
+   "nr": 20,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 78.506,
+   "dauer": 4.766,
+   "emotion": "traurig",
+   "text": "Du hältst sie so fest, dass sie lacht. Und du lachst mit, obwohl dir die Tränen kommen."
+  },
+  {
+   "nr": 21,
+   "typ": "waldnacht",
+   "kapitel": 4,
+   "start": 83.272,
+   "dauer": 5.318,
+   "emotion": "erzaehlend",
+   "text": "Auf dem Weg zurück redet keiner. Mama hält deine Hand. Wie früher, als du klein warst."
+  },
+  {
+   "nr": 22,
+   "typ": "wohnzimmer",
+   "kapitel": 5,
+   "start": 88.59,
+   "dauer": 4.646,
+   "emotion": "erzaehlend",
+   "text": "Um kurz vor zwei sitzt ihr zu dritt vor dem Kamin. Die Tür ist zweimal abgeschlossen."
+  },
+  {
+   "nr": 23,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 93.236,
+   "dauer": 2.87,
+   "emotion": "froh",
+   "text": "„Ab jetzt fahren wir zusammen einkaufen. Alle.“"
+  },
+  {
+   "nr": 24,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 96.106,
+   "dauer": 5.03,
+   "emotion": "froh",
+   "text": "„Weißt du noch? Früher hast du jeden Abend Leuchtturm gerufen. Nur damit ich noch mal reinkomme.“"
+  },
+  {
+   "nr": 25,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 101.136,
+   "dauer": 1.814,
+   "emotion": "froh",
+   "text": "„Ja. Jeden Abend.“"
+  },
+  {
+   "nr": 26,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 102.95,
+   "dauer": 4.79,
+   "emotion": "froh",
+   "text": "Du merkst, wie lange du sie nicht mehr so fest umarmt hast. Jahre vielleicht."
+  },
+  {
+   "nr": 27,
+   "typ": "waldnacht",
+   "kapitel": 6,
+   "start": 107.74,
+   "dauer": 5.822,
+   "emotion": "erzaehlend",
+   "text": "Dann ruft draußen jemand. Mit Bens Stimme. „Hey! Macht auf! Ich bin noch draußen!“"
+  },
+  {
+   "nr": 28,
+   "typ": "gesicht",
+   "kapitel": 6,
+   "start": 113.562,
+   "dauer": 5.102,
+   "emotion": "froh",
+   "text": "Du schaust neben dich. Ben sitzt auf dem Sofa. Seit ihr zurück seid, hat er kein Wort gesagt."
+  },
+  {
+   "nr": 29,
+   "typ": "gesicht",
+   "kapitel": 6,
+   "start": 118.664,
+   "dauer": 2.846,
+   "emotion": "spannend",
+   "text": "Opas Uhr an seinem Handgelenk tickt nicht mehr."
+  }
+ ]
+}
