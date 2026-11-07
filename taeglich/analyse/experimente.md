@@ -7,7 +7,7 @@ Diese Datei schreibt **jede Analyse** (Abschnitt „Ergebnisse“) und **jede Pr
 ## Regeln für die Testphase
 
 1. **Jede Staffel spielt in einer neuen Welt.** Der Hauptort und mindestens 60 % der Kulissen-Einstellungen dürfen sich nicht mit den beiden Staffeln davor überschneiden. Nahaufnahmen (`gesicht`, `handy`) zählen dabei nicht.
-2. **Jede Staffel wechselt Genre und Erzählform** gegenüber der Staffel davor (Tabellen unten). Kein Genre zweimal in 3 Staffeln.
+2. **Jede Staffel wechselt Genre und Erzählform** gegenüber der Staffel davor (Tabellen unten). Kein Genre zweimal in 3 Staffeln. (Ausnahme: s05 Horror kurz, von Jonathan am 7.11. direkt nach s03/s04 eingeschoben.)
 3. **Pro Staffel 1–2 neue Kulissen** (mindestens 1 im Stil „leuchtend“) für die neue Welt. Ziel bis 22.11.: mindestens 12 neue Kulissen, sodass am Ende jede Welt der Liste unten mindestens einmal vorkam.
 4. **Genau 1 Haupt-Experiment pro Staffel**, das nur eine Sache verändert (Hypothese, Variante, Messgröße, Vergleich). Alles andere wird bewusst vielfältig gewählt, aber **notiert**, damit die Analyse es auseinanderhalten kann (`staffeln.json` → `vielfalt`).
 5. **Fest bleiben:** Stimme Orus, Stil „leuchtend“ (#17), Qualität (#20), Du-Form, über 1 Minute (#12), keine Fragen ans Publikum (#8), nie „Fortsetzung folgt“ (#11), nie „Echter Fakt“ (#2), kein `@hud` (#19), KI-Haken aus (#15), englische Fassung (#21), Themen aus dem echten Leben regelmäßig.
@@ -27,7 +27,7 @@ Diese Datei schreibt **jede Analyse** (Abschnitt „Ergebnisse“) und **jede Pr
 
 **Figuren-Fokus:** Schwester ✓ · Opa ✓ · beste Freundin ✓ · bester Freund · Eltern · Oma · ein Fremder wird Freund · ein Tier · Lehrerin · neue Staffel-Figur (`sNN_…` in `figuren.json`)
 
-**Format (Rotation FORMAT.md):** s03 Horror-Test 4 × 2–3 min · s04 lang 12 Folgen · s05 XL 6 Folgen · s06 mittel 10 · s07 gemischt · danach bis 22.11. weiter abwechseln (Folgenzahl 6–12, Länge 62–120 s, TikTok einzeln oder Sammelteile).
+**Format (Rotation FORMAT.md):** s03 Horror-Test 4 × 2–3 min · s04 lang 12 Folgen · s05 Horror kurz 8 × 63–70 s (eingeschoben 7.11.) · s06 XL 6 Folgen · s07 mittel 10 · s08 gemischt · danach bis 22.11. weiter abwechseln (Folgenzahl 6–12, Länge 62–120 s, TikTok einzeln oder Sammelteile).
 
 ## Genre-Plan bis 22.11. (Jonathans Wunsch 4.11.: jedes Genre einmal ausprobieren, „lustig jetzt nicht“, mehr Horror)
 
@@ -37,10 +37,10 @@ Reihenfolge als Vorschlag; die Analyse darf tauschen, aber jedes Genre kommt bis
 |---|---|---|---|
 | s03 | **Horror ohne Blut** (eigenes Wesen, Creepypasta-Stil), düsterer Look (`@look 0.75`, nur `blau`) | horror: 4 × 2–3 min | Wald bei Nacht, Feldweg mit Strommasten, Hütte am See |
 | s04 | Krimi / Rätsel | lang 12 × 80–90 s | Museum bei Nacht, Kleinstadt |
-| s05 | Sci-Fi / Zukunft | XL 6 × 90–120 s | Zukunftsstadt 2080, Raumstation |
-| s06 | Psychologie über dich | mittel 10 × 70–80 s | Schule, Großstadt, Gedankenwelt |
-| s07 | Naturgewalt | gemischt | Vulkaninsel, Sturm auf See |
-| s08 | Horror ohne Blut, 2. Durchgang (anderes Wesen, andere Welt) | horror | Schneesturm, Berghütte, Funkmast |
+| s05 | **Horror, kurz** (eingeschoben von Jonathan 7.11., nach einem Vorbild-Video: normaler Ort nach Feierabend, eine unmögliche Kleinigkeit, Zeuge wird kreidebleich, Uhrzeit läuft mit) | kurz 8 × 63–70 s, TikTok einzeln | Nachtbus, Haltestelle im Nebel, Staumauer |
+| s06 | Sci-Fi / Zukunft | XL 6 × 90–120 s | Zukunftsstadt 2080, Raumstation |
+| s07 | Psychologie über dich | mittel 10 × 70–80 s | Schule, Großstadt, Gedankenwelt |
+| s08 | Naturgewalt | gemischt | Vulkaninsel, Sturm auf See |
 | s09 | Familiengeheimnis | nach Analyse | Bauernhof, Dachboden, altes Haus |
 | s10 | Lebenszeit / Philosophie (Kurzgesagt) | nach Analyse | Weltall, Lebenszeit, Landschaft |
 | s11 | Tierfreundschaft | nach Analyse | Dschungel, Tierheim, Wald |
@@ -70,6 +70,7 @@ Reihenfolge als Vorschlag; die Analyse darf tauschen, aber jedes Genre kommt bis
 | E3 | s03 | Wer nur eine Folge sieht, bleibt länger, wenn der erste Satz die Grund-Regel der Welt enthält (späte Teile ohne sie verlieren zwischen 5 und 30 s die Hälfte) | Folge 1 und 3 mit Grund-Prämisse + neuer Lage, Folge 2 und 4 nur neue Lage | TikTok Bindung 10 s/30 s, Ø Wiedergabe, Follows; Instagram Ø Wiedergabe (F3 gegen F2/F4) | offen |
 | E4 | s03–s12 | Ohne Untertitel wirkt das Bild ruhiger und cleaner, die Leute schauen genauer hin und bleiben trotzdem (Jonathans Wunsch 5.11.) | im Wechsel: ungerade Staffeln `@untertitel aus`, gerade mit (Hook-Text, `gross=` und Schrift im Bild bleiben) | TikTok Bindung 3 s/10 s, Ø Wiedergabe in % der Länge, Instagram Ø Wiedergabe – Staffeln ohne gegen Staffeln mit Untertiteln (läuft neben dem Haupt-Experiment jeder Staffel) | offen |
 | E5 | s04 | Ein Hook „Ende zuerst“ (das Ende der Folge im ersten Satz, dann Rücksprung) hält Fremde länger als der direkte Einstieg in die Lage | ungerade Folgen Ende zuerst, gerade Folgen direkte Lage (Fall + Ort + Uhrzeit), sonst gleich, ±5 s | Instagram/YouTube Ø Wiedergabe und Abbruch je Folge (6 gegen 6), TikTok Bindung 4 s/12 s je Sammelteil nach Art der ersten Folge | offen; s04 umgesetzt (Nacht 6./7.11.): F1, F3, F5, F7, F9, F11 Ende zuerst, F2, F4, F6, F8, F10, F12 direkte Lage mit Uhrzeit, alle 213–217 Wörter, 21–22 Einstellungen, Hook-Text überall |
+| E6 | s05 | Kurzer Horror (63–70 s, 8 Folgen, Machart nach Jonathans Vorbild-Video vom 7.11.) hält in % der Länge besser und bringt mehr Aufrufe/h als langer Horror (s03: 2–3 min, 4 Folgen) | ganze Staffel kurz, sonst Horror-Regeln wie s03 | TikTok Bindung 3 s/10 s, Ø Wiedergabe in % der Länge, Aufrufe/h je Plattform, Serien-Durchhalten F1→F8, Vergleich mit s03 | offen |
 
 ## Ergebnisse (je Analyse ergänzen, mit Datum)
 

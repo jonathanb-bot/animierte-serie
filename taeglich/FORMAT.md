@@ -30,12 +30,14 @@ Bis zum 22. November wird viel ausprobiert und alles genau ausgewertet. **Mögli
 
 ## Horror-Geschichten (Jonathans Wunsch 4.11., Issue #23)
 
-Jonathan möchte mehr Horror testen, **ohne Blut**: unheimliche Wesen im Stil moderner Internet-Gruselgeschichten (Creepypasta, Kryptiden), kurz als Test mit Folgen von **2–3 Minuten**, um zu sehen, ob es die Leute packt.
+Jonathan möchte mehr Horror testen, **ohne echte Gewalt** (Blut höchstens angedeutet, Jonathan 7.11.): unheimliche Wesen im Stil moderner Internet-Gruselgeschichten (Creepypasta, Kryptiden), kurz als Test mit Folgen von **2–3 Minuten**, um zu sehen, ob es die Leute packt.
 - **Format „horror“:** 3–5 Folgen à 120–180 s (330–430 Wörter, 30–40 Einstellungen), TikTok jede Folge ein eigener Post, Instagram/YouTube jede Folge ein Post (Reels und Shorts erlauben bis 3 min; `staffel_veroeffentlichen.py` erlaubt bei `laengenband` „horror …“ bis 185 s). In `staffeln.json` → `format.laengenband` mit „horror“ beginnen. Stimme bei Folgen über 2 min mit `--anfragen 2`.
-- **Gruseln statt Gewalt:** kein Blut, keine Verletzungen, keine Leichen, keine Gewalt gegen Kinder, nie Suizid. Die Angst entsteht aus Stille, Geräuschen, einer Stimme, die jemanden nachahmt, Licht, das ausgeht, und dem Wesen, das man nie ganz sieht (nur Umriss, Augen, Schatten). Am Ende jeder Folge der Cliffhanger, die letzte Folge darf offen und unheimlich enden.
+- **Gruseln statt Gewalt:** Blut höchstens angedeutet (Jonathan 7.11.: dunkler Fleck im Schnee, roter Abdruck an einer Tür, Kratzspuren), keine Wunden, keine Gewalt im Bild, keine Leichen, keine Gewalt gegen Kinder, nie Suizid. Die Angst entsteht aus Stille, Geräuschen, einer Stimme, die jemanden nachahmt, Licht, das ausgeht, und dem Wesen, das man nie ganz sieht (nur Umriss, Augen, Schatten). Am Ende jeder Folge der Cliffhanger, die letzte Folge darf offen und unheimlich enden.
 - **Nur eigene Wesen:** keine bekannten Figuren nachbauen (z. B. nicht Siren Head, der Figur eines Künstlers, und nicht den Skinwalker aus der Navajo-Überlieferung), sondern eigene Wesen nach dem gleichen Prinzip, z. B. etwas, das Stimmen deiner Familie nachahmt, ein Wesen so hoch wie die Strommasten am Feldrand, ein Ruf aus dem Wald, der näher kommt. Name und Aussehen sind neu.
 - **Düsterer, nicht so farbenfroh (Jonathans Wunsch 4.11.):** Stil „leuchtend“ bleibt, aber Kopf mit `@look 0.75`, `@kino 0.5`, `@palette blau`, jede Einstellung `palette=blau palette_staerke=0.6` (fast einfarbig, dunkel). `lila` nur sparsam für einen einzelnen Schreckmoment, keine warmen Paletten (`orange`, `rosa`, `gruen`). Licht nur aus Taschenlampe, Mond, einem Fenster. Geprüft 4.11.: Figuren bleiben gut sichtbar (Maske), der Hintergrund wird dunkel.
-- **Stimme bleibt:** Orus, `@vortrag lebendig` (leise, langsamer, Pausen vor der Wendung). Du-Form, keine Fragen ans Publikum.
+- **Stimme bleibt:** Orus, `@vortrag lebendig` (langsamer, Pausen vor der Wendung). Du-Form, keine Fragen ans Publikum.
+- **Nie flüstern, nie verzerren (Jonathan 7.11.):** Die Stimme ist immer die normale, volle Sprechstimme in gleicher Lautstärke, auch in Gruselmomenten. Kein Flüstern, kein Hall, kein Effekt, keine Verzerrung auf der Stimme. Flüstert eine Figur in der Handlung, steht das im Text („sagt er leise“), gesprochen wird normal. `ton/gemini.py` sagt das Gemini bei jeder Anfrage. Beim Abhören jeder Folge darauf achten: klingt eine Zeile geflüstert oder gehaucht, Zeile neu vertonen.
+- **Horror kurz (Jonathan 7.11., s05):** auch kurze Horror-Staffeln mit 63–70 s pro Folge (165–180 Wörter, 18–22 Einstellungen, TikTok jede Folge ein Post). Machart: normaler Ort, an dem eigentlich alles vorbei ist; eine unmögliche Kleinigkeit ohne Erklärung; ein konkretes Detail (Name, Jahreszahl, Uhrzeit); eine Figur, die mehr weiß und kreidebleich wird; die Uhrzeit läuft mit (gesprochen und im Bild, nie `@hud`); je Satz eine neue Information, erste Wendung nach spätestens 15 s.
 - **Kulissen dafür (neu bauen, Stil „leuchtend“):** Wald bei Nacht mit Nebel und Taschenlampe, Feldweg mit Strommasten, Hütte oder Camping am See, verlassene Tankstelle, Funkmast. Höchstens 2 neue pro Staffel.
 
 ## Jedes Genre einmal ausprobieren (Jonathans Wunsch 4.11.)
@@ -61,10 +63,11 @@ Damit die Analyse herausfinden kann, was am besten ankommt, ändert sich das For
 | s02 (fertig) | 8 | **kurz** 60–70 s (65–81 s gemessen) | 189–201 | 18–20 | **jede Folge ein eigener Post** |
 | s03 **Horror-Test** (Jonathans Wunsch 4.11., Issue #23) | 4 | **horror** 2–3 min (120–180 s) | 330–430 | 30–40 | **jede Folge ein eigener Post** |
 | s04 | 12 | **lang** 80–90 s | 215–230 | 22–26 | 5 Sammelteile |
-| s05 | 6 | **XL** 90–120 s (bis 2 min) | 240–310 | 24–30 | **jede Folge ein eigener Post** |
-| s06 | 10 | **mittel** 70–80 s | 195–210 | 20–24 | 4 Sammelteile |
-| s07 | 10 | **gemischt**: 3 Folgen ~60 s, 4 ~80 s, 3 ~110 s | je nach Länge | | jede Folge ein eigener Post |
-| ab s08 | bis 22.11. weiter abwechseln (Testphase), danach nach Abschlussbericht | Gewinner erst ab 22.11. festlegen | | | |
+| s05 **Horror kurz** (eingeschoben von Jonathan 7.11.) | 8 | **kurz** 63–70 s | 165–180 | 18–22 | **jede Folge ein eigener Post** |
+| s06 | 6 | **XL** 90–120 s (bis 2 min) | 240–310 | 24–30 | **jede Folge ein eigener Post** |
+| s07 | 10 | **mittel** 70–80 s | 195–210 | 20–24 | 4 Sammelteile |
+| s08 | 10 | **gemischt**: 3 Folgen ~60 s, 4 ~80 s, 3 ~110 s | je nach Länge | | jede Folge ein eigener Post |
+| ab s09 | bis 22.11. weiter abwechseln (Testphase), danach nach Abschlussbericht | Gewinner erst ab 22.11. festlegen | | | |
 
 Jonathans Wunsch vom 2.11. abends: Abwechslung, auch **Kurzvideos von 1 bis 2 Minuten** und solche mit **höchstens 90 s**, und schauen, wie sie ankommen. Dazu testen wir auf TikTok **einzelne Folgen** statt Sammelteile: die Zahlen vom 2.11. zeigen, dass bei den 7-Minuten-Teilen nach einem Viertel nur noch 3–9 % zuschauen.
 - **Instagram/YouTube:** jede Folge ist ein Post, auch die XL-Folgen bis 2 min (beide Plattformen erlauben das). Nie in Teile unter 1 Minute schneiden (#12).
@@ -161,7 +164,7 @@ Gilt für alle neuen Folgen. Die alten Serien und schon gerenderte Videos bleibe
 - **Cliffhanger abwechseln:** nicht nur Gefahr, auch Entdeckung, Entscheidung, Ankunft, Geständnis, Wiedersehen. Zwei Folgen hintereinander nie dieselbe Art.
 - **Mindestens eine echte Überraschung pro Staffel**, die vorher fair angedeutet war.
 - **Streichprobe vor der Stimme:** jedes Drehbuch einmal von oben lesen und jede Zeile streichen oder ersetzen, die nichts Neues bringt (keine Wiederholung dessen, was das Bild schon zeigt).
-- **Vortrag:** `@vortrag lebendig` (`ton/gemini.py`): gleiche Stimme „Orus“, aber Schlüsselwörter betont, schneller bei Gefahr, leiser bei Gefühl, kleine Pause vor jeder Wendung. Die Tonhöhe gleicht `ton.folge` wie immer an. Klingt eine Folge übertrieben: Zeile entschärfen und neu vertonen.
+- **Vortrag:** `@vortrag lebendig` (`ton/gemini.py`): gleiche Stimme „Orus“, aber Schlüsselwörter betont, schneller bei Gefahr, langsamer bei Gefühl, kleine Pause vor jeder Wendung, nie flüstern (Jonathan 7.11.: immer normale, volle Sprechstimme in gleicher Lautstärke, keine Verzerrung). Die Tonhöhe gleicht `ton.folge` wie immer an. Klingt eine Folge übertrieben: Zeile entschärfen und neu vertonen.
 
 ## Look: Kurzgesagt-Richtung, viel Detail, hohe Bildqualität
 

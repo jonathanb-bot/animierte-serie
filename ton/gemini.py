@@ -44,8 +44,11 @@ STIMMUNGEN = {
 
 
 # `@vortrag lebendig` (neue Folgen ab 3.11., Jonathans Wunsch nach mehr Qualität): ausdrucksvoller erzählen, gleiche Stimme.
-LEBENDIG = (", betone die entscheidenden Wörter deutlich, folge der Spannung mit Tempo und Lautstärke: schneller und "
-            "drängender bei Gefahr, langsamer und leiser bei Gefühl, eine kleine Pause vor jeder Wendung, nie übertrieben")
+LEBENDIG = (", betone die entscheidenden Wörter deutlich, folge der Spannung mit dem Tempo: schneller und "
+            "drängender bei Gefahr, langsamer bei Gefühl, eine kleine Pause vor jeder Wendung, nie übertrieben")
+# 7.11. (Jonathans Vorgabe): Die Stimme bleibt immer normal. Gerade bei Grusel flüsterte/hauchte Gemini sonst manchmal.
+NORMAL = (", immer mit normaler, voller Sprechstimme in gleichbleibender Lautstärke, niemals flüstern oder hauchen, "
+          "auch nicht in leisen oder unheimlichen Momenten")
 
 
 # Englische Fassung (`@sprache en`, Jonathans Wunsch 3.11.: jede Staffel auch auf Englisch für TikTok @storys4you_eng)
@@ -59,8 +62,10 @@ STIMMUNGEN_EN = {
     "freudig": "a calm late-night radio narrator telling a joyful story: low, warm, resonant male voice, relaxed, natural",
     "warm": "a calm late-night radio narrator telling a warm-hearted story: low, warm, resonant male voice, relaxed, natural, honest, like a good friend",
 }
-LEBENDIG_EN = (", stress the key words clearly, follow the tension with pace and volume: faster and more urgent in "
-               "danger, slower and softer with emotion, a short pause before every twist, never over the top")
+LEBENDIG_EN = (", stress the key words clearly, follow the tension with pace: faster and more urgent in "
+               "danger, slower with emotion, a short pause before every twist, never over the top")
+NORMAL_EN = (", always in a normal, full speaking voice at a steady volume, never whisper or breathe the words, "
+             "not even in quiet or creepy moments")
 
 
 def stimmung_setzen(name: str | None, lebendig: bool = False, sprache: str = "de"):
@@ -69,10 +74,10 @@ def stimmung_setzen(name: str | None, lebendig: bool = False, sprache: str = "de
     SPRACHE = sprache
     if sprache == "en":
         STIL = ("Read the following English text as " + STIMMUNGEN_EN.get(name or "", STIMMUNGEN_EN["spannend"])
-                + (LEBENDIG_EN if lebendig else "") + ", a short pause after each line. Speak only the text:\n\n")
+                + (LEBENDIG_EN if lebendig else "") + NORMAL_EN + ", a short pause after each line. Speak only the text:\n\n")
         return
     if name and name in STIMMUNGEN:
-        STIL = ("Lies den folgenden deutschen Text als " + STIMMUNGEN[name] + (LEBENDIG if lebendig else "") +
+        STIL = ("Lies den folgenden deutschen Text als " + STIMMUNGEN[name] + (LEBENDIG if lebendig else "") + NORMAL +
                 ", nach jeder Zeile eine kurze Pause. Nur den Text sprechen:\n\n")
 
 

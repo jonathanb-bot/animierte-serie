@@ -1,12 +1,14 @@
-# Staffelplan s04–s12 (von Jonathan über ChatGPT, 5.11.2026)
+# Staffelplan s04–s12 (von Jonathan über ChatGPT, 5.11.2026; s05 eingeschoben 7.11.)
 
 Verbindliche Grundlage für die Produktion der Staffeln s04–s12 (Prompt: `chatgpt-prompt.md`). Die Angaben sind Treatments, keine fertigen Sprechertexte: Die Produktion schreibt daraus die Drehbücher nach `FORMAT.md` und baut Sinneseindrücke in Handlung und Ton ein. Feste Regeln (Issues `dringlich`, `FORMAT.md`) gehen vor.
 
 **Untertitel (Jonathans Vorgabe 5.11., Experiment E4):** jede zweite Staffel ohne Untertitel (`@untertitel aus`), im Wechsel: s03 aus · **s04 an** · s05 aus · **s06 an** · s07 aus · **s08 an** · s09 aus · **s10 an** · s11 aus · **s12 an**. Das Zitat-Video einer Staffel folgt ihrer Einstellung. Die englische Fassung genauso.
 
+**Änderung 7.11. (Jonathan):** s05 „Haltestelle Mühlenweg“ (kurzer Horror nach einem Vorbild-Video) ist eingeschoben. Dafür ist der 2. Horror-Durchgang „Der Saum im Schnee“ (alt s08) gestrichen; die alten s05–s07 sind jetzt s06–s08, ab s09 bleibt alles gleich.
+
 **Hinweise für die Produktion:**
 - Die Du-Figur bleibt `du` aus `taeglich/figuren.json` (keinen Namen sprechen; der Name aus dem Plan dient nur zur Orientierung). Neue Figuren mit Staffel-Vorsilbe (z. B. `s04_sami`, `s04_rike`); wo es passt, die Grundbesetzung nutzen (Mama, Papa, Oma, Opa, Lina, Ben, Mia).
-- Fakten nur, wenn sie stimmen; die angegebenen Quellen (s06, s10) vor dem Schreiben kurz prüfen, nichts als Tatsache erfinden.
+- Fakten nur, wenn sie stimmen; die angegebenen Quellen (s07, s10) vor dem Schreiben kurz prüfen, nichts als Tatsache erfinden.
 - Kulissen: pro Staffel höchstens 2 neue (`engine/leuchtend.js`), sonst vorhandene mit `palette=…`.
 
 ────────
@@ -41,9 +43,52 @@ Krimi / Rätsel · 12 Folgen · 80–90 s (215–230 Wörter) · Untertitel **an
 
 ────────
 
-## s05 – Ein Zimmer weniger / One Room Less
+## s05 – Haltestelle Mühlenweg / The Stop That Isn't There
 
-Sci-Fi / Zukunft · 6 Folgen · 90–120 s (240–310 Wörter) · Untertitel **aus** · Stationstechnik ausdrücklich erfunden.
+**Eingeschoben von Jonathan am 7.11.** (ersetzt den 2. Horror-Durchgang „Der Saum im Schnee“; die alten s05–s07 rücken eine Nummer nach). Vorbild für **Machart und Handlung** (nicht für die Kulisse): ein kurzes Grusel-Video mit einer Bergstation nach der letzten Talfahrt. Nur den Aufbau übernehmen, nie die Inhalte (keine Gondel, keine Seilbahn, keine Nummer 7).
+
+Horror · 8 Folgen · **kurz 63–70 s** (165–180 Wörter, 18–22 Einstellungen) · TikTok jede Folge ein eigener Post · Untertitel **aus** · Horror-Look aus `FORMAT.md` (`@look 0.75`, `@kino 0.5`, nur `palette=blau`, `lila` nur für einen Schreckmoment).
+
+**Was wir vom Vorbild übernehmen (Machart):**
+1. **Normaler Ort, an dem eigentlich alles vorbei ist:** der letzte Nachtbus, leer, der Fahrer will Feierabend. In den ersten 3 s ist klar: Hier dürfte jetzt nichts mehr passieren.
+2. **Eine unmögliche Kleinigkeit, ohne Erklärung:** Die Anzeige im Bus zeigt einen Halt, den es nicht mehr gibt. Nicht erklären, nur zeigen.
+3. **Ein konkretes Detail macht es unheimlich:** Name, Jahreszahl, Uhrzeit (0:12, 1998, „Mühlenweg“). Das Publikum soll den Rest selbst ahnen.
+4. **Eine Figur, die mehr weiß als du:** Der Busfahrer wird kreidebleich. Seine Angst erzählt mehr als jeder Satz.
+5. **Die Uhrzeit läuft mit:** jede Folge nennt die Uhrzeit (gesprochen und als Uhr/Anzeige **im Bild**, z. B. die Fahrgastanzeige im Bus). **Kein `@hud`** (Issue #19).
+6. **Sehr knapp:** kurze Sätze, je Satz eine neue Information, nach spätestens 15 s die erste Wendung, kein Rückblick, keine Erklärung. Lieber 65 s als 70 s.
+
+**Stimme (Jonathan 7.11.):** Orus wie immer, **immer normale, volle Sprechstimme, nie flüstern, keine Verzerrung, kein Hall und kein Effekt auf der Stimme**, auch nicht, wenn eine Figur im Text flüstert oder ein Wesen spricht (dann schreibt der Erzähler „sagt er leise“, gesprochen wird normal). Das Wesen spricht nicht.
+
+**Logline:** Du sitzt im letzten Nachtbus nach Hause. Um 0:12 zeigt die Anzeige einen Halt, den es seit 1998 nicht mehr gibt: Mühlenweg, das Dorf, das unter dem Stausee liegt. Der Fahrer wird kreidebleich, und der Bus bremst von selbst.
+**Grundregel:** Wer am Mühlenweg einsteigt, ist nur in der dunklen Scheibe zu sehen. Dreh dich nicht nach ihnen um. Schau nur in die Scheibe.
+**Welt:** Innenraum eines leeren Nachtbusses (gelbe Haltegriffe, Fahrgastanzeige, beschlagene Scheiben, die Nacht als Spiegel); Wartehäuschen im Nebel mit altem Schild; Straße auf der Staumauer, schwarzes Wasser, eine Laterne. Höchstens 2 neue Kulissen (Vorschlag: `nachtbus` innen, `staumauer`), sonst vorhandene (`alltag.js` hat eine Bushaltestelle).
+**Wesen:** „Die Nassen“: Fahrgäste aus dem gefluteten Dorf. Nur als Spiegelbild in der Scheibe: alte Kleidung, nasse Haare, kein deutliches Gesicht. Im echten Bus nur Spuren: nasse Fußabdrücke, Tropfen auf den Sitzen, ein Polster, das sich eindrückt, ein Finger, der in die beschlagene Scheibe schreibt.
+**Figuren:** Du (17, auf dem Heimweg vom Geburtstag deines besten Freundes) · Henrik, 61 (Busfahrer, fährt die Linie seit 30 Jahren, wortkarg; grauer Schnauzer, dunkelblaue Uniformjacke) · Paul (Junge aus dem Dorf, 1998 zwölf Jahre alt, nur in der Scheibe: nasse Haare, roter Schulranzen) · Ben (bester Freund, Grundbesetzung) · Mama (Grundbesetzung) · Opa (Grundbesetzung, ist am Mühlenweg aufgewachsen).
+**Bogen:** Henrik hat in der letzten Nacht vor der Flutung, am 8.11.1998, Paul an der Haltestelle stehen lassen, weil er früher Feierabend wollte. Seitdem hält der Bus in jener Nacht wieder dort. Du verstehst, dass Paul nur das will, was er damals nicht bekam: dass jemand für ihn hält. Du drückst den Halteknopf, Henrik hält, Paul steigt aus und geht nach Hause, ins Wasser. Am Morgen ist alles normal, bis auf dein Ticket.
+
+**Freunde/Familie (mindestens 2×):** Ben bringt dich zum Bus (F1) und schreibt in F5. Mama ruft an (F3). Opa am Frühstückstisch (F8).
+**Blut (Jonathan 7.11., Issue #23):** höchstens angedeutet, hier nicht nötig: Die Angst kommt aus Wasser, Spiegelbild und Stille.
+
+| F | Titel | Stimmung | Hook (erster Satz, ≤ 12 Wörter) | Inhalt | Cliffhanger (Art) |
+|---|---|---|---|---|---|
+| 1 | Der letzte Bus / The Last Bus | spannend | „Um null Uhr zwölf zeigt dein Nachtbus einen Halt, den es nicht gibt.“ | 0:07, Ben winkt dir nach, du erwischst den letzten Bus. Leer, nur Henrik, er will Feierabend. Die Scheiben beschlagen. 0:12 springt die Anzeige: „Nächster Halt: Mühlenweg“. Henrik schaut in den Spiegel und wird kreidebleich: „Den Mühlenweg gibt es seit 1998 nicht mehr.“ | Der Bus bremst von selbst. Die Türen gehen auf. (Gefahr) |
+| 2 | Mühlenweg / Millbrook Lane | düster | „Die Türen gehen auf. Draußen steht ein Schild, das unter Wasser liegt.“ | Wartehäuschen im Nebel, rostiges Schild, eine Laterne. Niemand steigt ein. Aber die Stufe knarrt. Einmal. Zweimal. Dreimal. Der Bus senkt sich, als wäre er schwerer. Henrik, ohne sich umzudrehen: „Schau nicht nach hinten. Schau nur in die Scheibe.“ | In der dunklen Scheibe sitzen hinter dir drei Leute. Im Bus: leere Sitze. (Entdeckung) |
+| 3 | Die Scheibe / The Window | spannend | „Im Bus sind die Sitze leer. In der Scheibe nicht.“ | Nasse Fußabdrücke auf dem Boden, Wasser tropft von den Sitzen. Mama ruft an, die Leitung rauscht: „Wo bist du?“ – „Mühlenweg.“ – Pause. „Da ist Opa aufgewachsen. Das Dorf liegt unter dem Stausee.“ Die Leitung bricht ab. | Ein Finger schreibt von innen in die beschlagene Scheibe. Deinen Namen. (Gefahr) |
+| 4 | Henriks Linie / Henrik's Route | traurig, dann düster | „Der Fahrer kennt den Halt. Er hat dort einmal jemanden stehen lassen.“ | Henrik gesteht: 8.11.1998, letzte Nacht vor der Flutung, er wollte früher Feierabend und fuhr am Mühlenweg vorbei. Ein Junge stand im Regen und winkte. Heute ist der 8. November. | Die Anzeige springt weiter: „Endstation: Staumauer“. Diese Linie fährt da gar nicht hin. (Rätsel) |
+| 5 | Umleitung / Detour | spannend | „Das Lenkrad dreht sich unter Henriks Händen. Der Bus fährt allein.“ | Henrik bremst, nichts passiert. Du schlägst mit dem Nothammer gegen die Tür, sie bleibt zu. Draußen nur noch schwarzes Wasser links und rechts. Ben schreibt: „Bist du zu Hause? Dein Standort zeigt mitten im Stausee.“ | In der Scheibe ist der Platz neben dir jetzt besetzt. Ein Junge mit nassen Haaren. (Ankunft) |
+| 6 | Der Junge / The Boy | düster, traurig | „Neben dir sitzt ein Junge, den es nur in der Scheibe gibt.“ | Du schaust nur in die Scheibe. Er hält ein altes Busticket: 8.11.1998, Mühlenweg, 0:12, nie abgestempelt. Henrik sieht ihn im Spiegel, die Hände zittern: „Paul?“ Der Junge schaut nicht dich an, sondern den Halteknopf. | Das Polster neben dir drückt sich ein. Paul sitzt jetzt auch im echten Bus. (Gefahr) |
+| 7 | Staumauer / The Dam | spannend, dann warm | „Null Uhr vierundzwanzig. Der Bus hält auf der Staumauer.“ | Nasse Spuren führen zur Tür. Henrik steht auf: „Er will, dass ich mitkomme. Ich hab ihn damals stehen lassen.“ Du verstehst: Paul will nicht Henrik, Paul will, dass jemand für ihn hält. Du drückst den Halteknopf. Das „Halt“-Licht leuchtet. | Henrik öffnet die Tür und steigt aus. (Entscheidung) |
+| 8 | Hin und zurück / There and Back | warm, dann unheimlich | „Henrik steht am Rand der Staumauer. Und Paul winkt.“ | Paul nimmt in der Scheibe sein Ticket, Henrik stempelt es mit zitternden Händen ab. Paul geht in den Nebel, die Spuren hören am Wasser auf. 0:31, die Anzeige ist normal, Henrik fährt dich nach Hause. Morgens: Mama nimmt dich in den Arm, Opa erzählt von Paul, seinem Nachbarsjungen. | Auf deinem eigenen Ticket von heute Nacht steht ein Stempel: „Mühlenweg, 0:12. Hin und zurück.“ (Schluss, offen und unheimlich) |
+
+**Haupt-Experiment E6:** Kurze Horror-Folgen (63–70 s, 8 Folgen) gegen den Horror-Test s03 (2–3 min, 4 Folgen): Hält der Grusel in kurzer Form genauso, und bringt er mehr Aufrufe pro Stunde und eine höhere Wiedergabe in % der Länge? Messgrößen: TikTok Bindung 3 s/10 s, Ø Wiedergabe in % der Länge, Aufrufe/h auf allen Plattformen, Serien-Durchhalten F1→F8.
+
+**Zitat-Video s05 – Wer für dich hält / Someone Who Stops for You:** Manche warten ihr ganzes Leben auf einen Halt. · Halt an, wenn jemand winkt. · Feierabend kann warten. · Ein Fehler wird nicht kleiner, wenn du wegschaust. · Er wird kleiner, wenn du zurückfährst. · Manche Wege fährt man nur einmal. · Sag es heute. Nicht morgen. · Und wenn du zu spät bist: Halt trotzdem an.
+
+────────
+
+## s06 – Ein Zimmer weniger / One Room Less
+
+Sci-Fi / Zukunft · 6 Folgen · 90–120 s (240–310 Wörter) · Untertitel **an** · Stationstechnik ausdrücklich erfunden.
 
 **Logline:** Eure alternde Raumstation kann sich reparieren, aber dafür muss sie andere Räume vollständig zerlegen. Als die Schäden zunehmen, musst du mit deiner Mutter entscheiden, welche Teile eures Zuhauses verschwinden dürfen und wie alle trotzdem einen Platz behalten.
 **Grundregel:** Die Station kann Bauteile nur aus einem freiwillig freigegebenen, zuvor geräumten Zimmer gewinnen; jeder Umbau kostet unwiederbringlich diesen Raum und dessen eingebaute Einrichtung.
@@ -61,13 +106,13 @@ Sci-Fi / Zukunft · 6 Folgen · 90–120 s (240–310 Wörter) · Untertitel **a
 | 5 | Platz für alle / Room for Everyone | spannend | „Deine Raumstation repariert sich nur mit den Teilen anderer Zimmer – doch ein Bewohner hält die letzte Freigabe noch zurück.“ | Ren verweigert seine Freigabe, weil kein ruhiger Schlafplatz für eine lärmempfindliche Bewohnerin vorgesehen ist. Du gibst Werkstattfläche ab, er stimmt zu, die letzte Gruppe zieht in die Kuppel. | Leitungsklopfen, wanderndes Warnlicht, kalter Schweiß | grüner Raum im grauen Ring; Trennwand schafft eine ruhige Nische; letzte Familie tritt durch die Kuppeltür | „Bo kommt als Letzter herein – mit einer verschlossenen Kiste, die du noch nie gesehen hast.“ (Ankunft) |
 | 6 | Die Stadt unter dem Tisch / The Town Under the Table | freudig, warm | „Deine Raumstation repariert sich nur mit den Teilen anderer Zimmer – nun ist sie stabil, und ihr müsst lernen, im geretteten Raum zu leben.“ | Die Technik läuft, doch der Gemeinschaftsraum wirkt fremd. Du verbringst den Abend ohne Umbauplanung am Tisch; Bo öffnet seine Kiste mit Modellen aller verlorenen Zimmer. | Lüftungssummen, frisches Brot, weiches Kuppellicht | alter Ring dunkel, Kuppel hell; Bos Pappzimmer als Stadt unter dem Tisch; grüner Keimling zwischen den Modellen | „In Bos Stadt steht schon ein Zimmer, das es nie gab – auf seinem Schild steht dein Name und das Wort morgen.“ (Rätsel) |
 
-**Zitat-Video s05 – Was ein Zuhause trägt / What Holds a Home Together:** Du kannst einen Ort verlieren, ohne alles zu verlieren. · Erinnerungen brauchen nicht immer eine Wand. · Manchmal brauchen sie jemanden, der zuhört. · Auch Erwachsene halten zu lange fest. · Loslassen darf traurig sein. · Ein neuer Anfang muss nicht sofort schön aussehen. · Platz entsteht auch, wenn du etwas teilst. · Du musst nicht alles retten. · Aber du darfst mitentscheiden, was bleibt.
+**Zitat-Video s06 – Was ein Zuhause trägt / What Holds a Home Together:** Du kannst einen Ort verlieren, ohne alles zu verlieren. · Erinnerungen brauchen nicht immer eine Wand. · Manchmal brauchen sie jemanden, der zuhört. · Auch Erwachsene halten zu lange fest. · Loslassen darf traurig sein. · Ein neuer Anfang muss nicht sofort schön aussehen. · Platz entsteht auch, wenn du etwas teilst. · Du musst nicht alles retten. · Aber du darfst mitentscheiden, was bleibt.
 
 ────────
 
-## s06 – Du warst dir sicher / You Were So Sure
+## s07 – Du warst dir sicher / You Were So Sure
 
-Psychologie in einer Geschichte · 10 Folgen · 70–80 s (195–210 Wörter) · Untertitel **an** · keine Diagnosegeschichte, keine Behauptung, Denken sei grundsätzlich unzuverlässig.
+Psychologie in einer Geschichte · 10 Folgen · 70–80 s (195–210 Wörter) · Untertitel **aus** · keine Diagnosegeschichte, keine Behauptung, Denken sei grundsätzlich unzuverlässig.
 
 **Logline:** Du sollst mit deiner besten Freundin eine Schulausstellung über Wahrnehmung eröffnen und willst keinen einzigen Fehler machen. Ausgerechnet dieser Anspruch gefährdet Ausstellung und Freundschaft.
 **Grundregel:** Deine Wahrnehmung oder Erinnerung kann sich überzeugend anfühlen und trotzdem irren; überprüfen kannst du sie durch Beobachtungen, Aufzeichnungen und andere Perspektiven.
@@ -90,13 +135,13 @@ Psychologie in einer Geschichte · 10 Folgen · 70–80 s (195–210 Wörter) ·
 | 9 | Die perfekte Eröffnung fällt aus / The Perfect Opening Is Cancelled | spannend | „Dein Kopf kann vergangene Arbeit zu wichtig machen – jetzt hältst du an einer perfekten Vorführung fest, deren Projektor gerade ausfällt.“ | Der Projektor fällt beim Einlass aus. Du nimmst mit Eda Karten und Zeichnungen und erklärst offen, warum der Plan ausfällt. | verstummender Lüfter, dunkle Leinwand, feuchte Hände | Projektorbild schrumpft zum Punkt; wartende Schuhe hinter der Tür; handgeschriebenes Fehlerschild | „Du gehst ohne die perfekte Präsentation ans Mikrofon.“ (Entscheidung) |
 | 10 | Das weiß ich noch nicht / I Don't Know Yet | freudig | „Dein Kopf kann irren – heute zeigst du vor allen, wie du einen Irrtum bemerkst und korrigierst.“ | Bei einer Frage, die du nicht sicher beantworten kannst, markierst du sie offen statt zu improvisieren; Eda trägt ihren Teil gleichberechtigt vor. | Mikrofonhall, Bühnenlicht, frisches Papier | falsches Wort sichtbar durchgestrichen; Platz unter einer Frage; Frau Sen hängt ihre korrigierte Karte neben deine | „Auf Frau Sens alter Karte steht derselbe Satz, den du fast gesagt hättest: Ich darf keinen Fehler machen.“ (Entdeckung) |
 
-**Zitat-Video s06 – Sicher ist nicht immer wahr / Certain Doesn't Always Mean True:** Du musst nicht jeden Gedanken glauben. · Ein starkes Gefühl ersetzt keinen Beweis. · Du darfst deine Meinung verändern. · Ein Fehler nimmt dir nicht deinen Wert. · Manche Erinnerungen brauchen eine Ergänzung. · Verlorene Mühe verpflichtet dich nicht zu neuer. · Du darfst etwas noch nicht wissen. · Zuhören kann klüger sein als Gewinnen. · Und ehrlich zu zweifeln kann mutig sein.
+**Zitat-Video s07 – Sicher ist nicht immer wahr / Certain Doesn't Always Mean True:** Du musst nicht jeden Gedanken glauben. · Ein starkes Gefühl ersetzt keinen Beweis. · Du darfst deine Meinung verändern. · Ein Fehler nimmt dir nicht deinen Wert. · Manche Erinnerungen brauchen eine Ergänzung. · Verlorene Mühe verpflichtet dich nicht zu neuer. · Du darfst etwas noch nicht wissen. · Zuhören kann klüger sein als Gewinnen. · Und ehrlich zu zweifeln kann mutig sein.
 
 ────────
 
-## s07 – Bis zur oberen Stufe / To the Top Step
+## s08 – Bis zur oberen Stufe / To the Top Step
 
-Naturgewalt / Flut · 10 Folgen gemischt: F1, F4, F8 ca. 60 s (155–175 Wörter; **für #12 auf über 62 s bringen**), F2, F5, F7, F10 ca. 80 s (205–220), F3, F6, F9 ca. 110 s (280–305) · Untertitel **aus**
+Naturgewalt / Flut · 10 Folgen gemischt: F1, F4, F8 ca. 60 s (155–175 Wörter; **für #12 auf über 62 s bringen**), F2, F5, F7, F10 ca. 80 s (205–220), F3, F6, F9 ca. 110 s (280–305) · Untertitel **an**
 
 **Logline:** Eine Flut schneidet eure Siedlung ab, während du in der Turnhalle bei der Versorgung der Evakuierten hilfst. Du kannst das Wasser nicht stoppen, aber verhindern, dass Menschen mit ihrer Angst allein bleiben.
 **Grundregel:** Während die Flut die Siedlung abschneidet, bleibt die freigegebene Turnhalle euer Sammelpunkt; Wege und Ortswechsel bestimmen die Einsatzkräfte, nicht einzelne Helfer.
@@ -118,30 +163,7 @@ Naturgewalt / Flut · 10 Folgen gemischt: F1, F4, F8 ca. 60 s (155–175 Wörter
 | 9 | Alle da / Everyone Is Here | 110 s · traurig, warm | „Die Flut hat deine Siedlung abgeschnitten – jetzt ist deine Familie wieder zusammen, aber euer Haus bleibt unbewohnbar.“ | Uwe berichtet nur Bestätigtes: alle sicher, euer Erdgeschoss überflutet. Ihr zeigt ihm die Zeichnungen und malt seinen Umriss aus. | raue Umarmung durch nasse Jacken, Schluchzen, Heizlüfterluft | drei Köpfe über einer Matte; Papas Schlüssel vor gezeichneter Haustür; letzter Umriss bekommt Farbe | „Uwe erkennt auf eurem Blatt Falks Gartenzeichnung und schaut zu dem Mann, dem ihr gestern einen Platz gegeben habt.“ (Wiedersehen) |
 | 10 | Ein Schlüssel ohne Versprechen / A Key Without Promises | 80 s · freudig, warm | „Die Flut hat deine Siedlung abgeschnitten – ihr seid sicher, aber für die kommenden Nächte fehlt euch noch ein Zuhause.“ | Niemand weiß, wann das Haus bewohnbar wird; Uwe zögert, Hilfe anzunehmen. Ihr hört Falks Angebot gemeinsam an; ein sicherer Weg wird für später bestätigt. | klimpernder Schlüssel, Brotduft, blasses Sonnenlicht | Falk legt einen zweiten Schlüssel auf den gezeichneten Tisch; Uwe schiebt den Zettel weg; Linas Bild bekommt ein Fenster mit Licht | „Falk schiebt euch den Schlüssel hin: Das leere Haus gehört mir – und ich möchte heute nicht wieder allein hineingehen.“ (Geständnis) |
 
-**Zitat-Video s07 – Bleiben ist auch Mut / Staying Can Be Courage:** Du musst nicht gegen alles gewinnen. · Manches ist stärker als du. · Du darfst Hilfe brauchen. · Du darfst eine Aufgabe abgeben. · Für einen Gegenstand musst du dich nicht verlieren. · Trauer um ein Zuhause ist echte Trauer. · Ein sicherer Platz löst nicht jedes Problem. · Aber er gibt dir Luft für den nächsten Schritt. · Und manchmal beginnt Hilfe mit einem freien Stuhl.
-
-────────
-
-## s08 – Der Saum im Schnee / The Rim in the Snow
-
-Atmosphärischer Horror ohne Blut · 4 Folgen · 2–3 min (330–430 Wörter) · Untertitel **an** · Horror-Regeln aus `FORMAT.md` (`@look 0.75`, `@kino 0.5`, nur `palette=blau`). Je Folge vier getrennte Spielmomente und kurze Hörpausen; Spannung durch räumliche Veränderung, keine zusätzlichen Monsterregeln.
-
-**Logline:** In einer eingeschneiten Wetterwarte erscheint ein beweglicher Ring im Schnee. Er nähert sich jeder Quelle, die sein dreiteiliges Klopfen vollständig wiederholt, und eure klappernde Heizung beginnt genau diesen Takt zu erzeugen.
-**Grundregel:** Der Saum bewegt sich jeweils einen Schritt auf die zuletzt hörbare Quelle seines vollständig wiederholten Dreierklopfens zu; Stimmen, andere Rhythmen und unvollständige Folgen zählen nicht, eine Lautsprecherwiedergabe des vollständigen Takts dagegen schon.
-**Welt:** Niedrige Wetterwarte mit Gemeinschaftsraum; beheizter Maschinenvorraum; umzäunter Versorgungshof, durch breite Scheiben einsehbar, mit Materialseilbahn. Niemand geht ungesichert in den Sturm.
-**Wesen:** Der Saum ist eine flache, breite ringförmige Vertiefung im Schnee, deren Innenkante sich wie dicker Stoff aufrollt. Kein Gesicht, keine Gliedmaßen; je näher er kommt, desto stärker drücken Schneekanten gegen Türen und Scheiben. Spricht nicht, kennt keine Erinnerungen. Herkunft rätselhaft, Bewegungsregel klar.
-**Figuren:** Du (Ari, 20: neuer Messhelfer, beobachtet geduldig; lockige Haare, orange Fleecejacke) · Ivo, 21 (bester Freund und Kollege, überspielt Angst mit Eile; rundes Gesicht, grüner Schal) · Tess, 43 (anfangs fremde Wartungstechnikerin, nüchtern; rasierter Hinterkopf, dunkelrote Latzhose).
-**Erzählform / Hook:** Fast durchgehende Nacht mit enger Raumkontinuität; die Regel wird beobachtet, geprüft, gezielt genutzt.
-**Bogen:** Du beantwortest ein vermeintliches Ankunftssignal und holst den Saum näher. Mit Ivo und Tess erkennst du die Regel und trennst die Wärmequelle vom gefährlichen Rhythmus. Ihr lockt den Saum mit einem Lautsprecher zu einem leeren Hofschacht, beendet die Wiederholungen und werdet am Morgen abgeholt; alte Spuren zeigen, dass ihr nicht die Ersten wart.
-
-| F | Titel | Stimmung | Hook | Inhalt | Sinne | Bilder | Cliffhanger (Art) |
-|---|---|---|---|---|---|---|---|
-| 1 | Drei Schläge zurück / Three Knocks Back | düster, spannend | „Im Schneesturm folgt der Saum jeder vollständigen Antwort auf sein Dreierklopfen – und du hast gerade zurückgeklopft.“ | Du hältst drei Schläge an der Scheibe für das Signal der Technikerin; nach deiner Antwort rückt ein Schneerand näher, Tess kommt über den Vorraum und sagt, sie habe nicht geklopft. Ihr markiert die Positionen des Rings; Ivos zwei Schläge bewegen ihn nicht, dein versehentliches vollständiges Klopfen schon. | dumpfes Dreierklopfen, Kälte am Fensterrand, orange Notbeleuchtung, feuchte Wolle | dunkler Kreis im weißen Hof; zwei Striche auf der Scheibe; eingerollter Schneesaum hebt sich wie Stoff | „Der Ring steht jetzt an deiner Markierung – und die Heizung klopft dreimal hintereinander.“ (Gefahr) |
-| 2 | Dein Freund macht keinen Laut / Your Friend Goes Quiet | traurig, warm, gespannt | „Im Schneesturm folgt der Saum jeder vollständigen Antwort auf sein Dreierklopfen – deshalb hat dein bester Freund Angst, überhaupt noch zu sprechen.“ | Ivo macht sich Vorwürfe; ihr sprecht bewusst und seht, dass der Saum stehen bleibt. Du hältst die Beobachtung fest statt ein Schweigeverbot zu erfinden und gibst Ivo das Markieren. Als die Heizung den Rhythmus erzeugt, wendet sich der Ring zur Maschinenwand. | Ivos flacher Atem, Wolldecke, Rohrknacken, blauer Schneereflex | Ivo hält die Hand vor den Mund; zwei harmlose Rhythmuskarten neben einer dreiteiligen; Spur zur Heizungswand | „Der Saum sucht nicht eure Stimmen – er folgt jetzt der klopfenden Heizung.“ (Entdeckung) |
-| 3 | Wärme hat einen Preis / The Price of Warmth | warm, dann spannend | „Im Schneesturm folgt der Saum jeder vollständigen Antwort auf sein Dreierklopfen – und eure warme Heizung gibt ihm immer neue Antworten.“ | Tess legt den Rohrabschnitt still und versorgt den kleinen Raum mit einem separaten Heizgerät; ihr rückt zusammen. Ihr nehmt einen Dreiertakt für den Hoflautsprecher auf; ein Test aus der Materialkiste lässt den Ring die Richtung wechseln. Ihr nutzt die Seilbahn zur Ablenkung. | verstummende Rohre, Heizluft, Wolldecken, knarzende Seilrolle | drei Stühle um ein Heizgerät; Lautsprecher in einer Kiste; Schneespur knickt vom Haus weg | „Du gibst Tess das Zeichen, eure einzige lockende Geräuschquelle über den leeren Hof zu schicken.“ (Entscheidung) |
-| 4 | Was unter dem Kreis liegt / Beneath the Circle | spannend, dann erleichtert und unheimlich | „Im Schneesturm folgt der Saum jeder vollständigen Antwort auf sein Dreierklopfen – diesmal kommt sie aus einer Kiste weit weg vom Haus.“ | Die Kiste stockt am Eis, Ivo hilft Tess an der Innenkurbel statt panisch zu klopfen. Am Ziel schaltest du den Lautsprecher stumm; der Saum bleibt am leeren Schneeschacht. Am Morgen holen Einsatzkräfte euch über den rückwärtigen Zugang ab. | knackendes Eis, drei kleine Lautsprecherschläge, stille Schneeluft, Fahrzeuggebläse | Kiste über dunklem Schacht; Saum rollt sich um den Rand; drei Gerettete hinter beschlagener Scheibe | „Als der Hof geräumt wird, erscheinen unter eurem frischen Kreis Hunderte ältere Ringe im Boden.“ (Rätsel) |
-
-**Zitat-Video s08 – Du musst nicht antworten / You Don't Have to Answer:** Nicht jedes Geräusch verlangt eine Antwort. · Nicht jede Angst erklärt dir die Gefahr. · Du darfst erst beobachten. · Du darfst jemanden näher zu dir lassen. · Still sein und allein sein sind verschiedene Dinge. · Mut kann ganz leise sprechen. · Ein Fehler muss nicht dein letzter Schritt bleiben. · Manchmal rettet dich jemand, den du gestern nicht kanntest. · Und manchmal reicht es, gemeinsam bis zum Morgen zu bleiben.
+**Zitat-Video s08 – Bleiben ist auch Mut / Staying Can Be Courage:** Du musst nicht gegen alles gewinnen. · Manches ist stärker als du. · Du darfst Hilfe brauchen. · Du darfst eine Aufgabe abgeben. · Für einen Gegenstand musst du dich nicht verlieren. · Trauer um ein Zuhause ist echte Trauer. · Ein sicherer Platz löst nicht jedes Problem. · Aber er gibt dir Luft für den nächsten Schritt. · Und manchmal beginnt Hilfe mit einem freien Stuhl.
 
 ────────
 
