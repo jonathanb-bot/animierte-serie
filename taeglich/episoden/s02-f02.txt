@@ -25,7 +25,7 @@
 
 == Wiedererkennen ==
 // Infokarte: Ratschläge
-[objekt objekte="schluessel:Anonym bleiben|uhr:Erst mal warten|herz:Wenige einweihen" gross="DIE REGELN" palette=blau] Deinen Namen veröffentlicht hier niemand. Das ist in Deutschland so üblich.
+[objekt objekte="schluessel:Anonym bleiben|uhr:Abwarten|herz:Wenige wissen" gross="DIE REGELN" palette=blau] Deinen Namen veröffentlicht hier niemand. Das ist in Deutschland so üblich.
 // Nahaufnahme: du nickst, viel zu ernst
 [gesicht du ort=rechenzentrum entschlossen palette=blau] Du nickst. Sehr ernst. Wie ein Geheimagent mit Schulrucksack.
 // Netz: Gerüchte verbreiten sich von Knoten zu Knoten
