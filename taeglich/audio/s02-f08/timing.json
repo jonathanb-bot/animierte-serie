@@ -1,12 +1,12 @@
 {
- "dauer": 72.996,
+ "dauer": 72.828,
  "einstellungen": [
   {
    "nr": 1,
    "typ": "bahnhof",
    "kapitel": 1,
    "start": 0.0,
-   "dauer": 4.094,
+   "dauer": 4.07,
    "emotion": "erzaehlend",
    "text": "Deine beste Freundin hat ihren Zug sausen lassen. Für dich."
   },
@@ -14,8 +14,8 @@
    "nr": 2,
    "typ": "gesicht",
    "kapitel": 1,
-   "start": 4.094,
-   "dauer": 2.846,
+   "start": 4.07,
+   "dauer": 2.558,
    "emotion": "ernst",
    "text": "„Das Geld ist mir egal. Die Lüge nicht.“"
   },
@@ -23,8 +23,8 @@
    "nr": 3,
    "typ": "gesicht",
    "kapitel": 1,
-   "start": 6.94,
-   "dauer": 2.966,
+   "start": 6.628,
+   "dauer": 3.134,
    "emotion": "traurig",
    "text": "„Ich weiß. Ich hatte Angst, dass sich alles ändert.“"
   },
@@ -32,8 +32,8 @@
    "nr": 4,
    "typ": "grossstadt",
    "kapitel": 1,
-   "start": 9.906,
-   "dauer": 4.862,
+   "start": 9.762,
+   "dauer": 4.382,
    "emotion": "erzaehlend",
    "text": "Ihr lauft zu Fuß nach Hause. Mia zieht ihren Koffer, du trägst ihre Tasche."
   },
@@ -41,8 +41,8 @@
    "nr": 5,
    "typ": "gesicht",
    "kapitel": 2,
-   "start": 14.768,
-   "dauer": 3.35,
+   "start": 14.144,
+   "dauer": 3.158,
    "emotion": "froh",
    "text": "„Hat es ja auch. Du bist ein schlechter Lügner geworden.“"
   },
@@ -50,8 +50,8 @@
    "nr": 6,
    "typ": "see",
    "kapitel": 2,
-   "start": 18.118,
-   "dauer": 4.91,
+   "start": 17.302,
+   "dauer": 4.454,
    "emotion": "erzaehlend",
    "text": "Am See lässt sie einen Stein springen. Fünfmal. Deiner geht wieder unter."
   },
@@ -59,8 +59,8 @@
    "nr": 7,
    "typ": "esstisch",
    "kapitel": 3,
-   "start": 23.028,
-   "dauer": 7.862,
+   "start": 21.756,
+   "dauer": 8.102,
    "emotion": "erzaehlend",
    "text": "Sonntag. Opas Geburtstag. Er sitzt mit Krücken am Kopfende. Und zum ersten Mal seit acht Monaten ist jeder Stuhl besetzt."
   },
@@ -68,8 +68,8 @@
    "nr": 8,
    "typ": "gesicht",
    "kapitel": 3,
-   "start": 30.89,
-   "dauer": 4.118,
+   "start": 29.858,
+   "dauer": 4.046,
    "emotion": "ernst",
    "text": "Du stehst auf. Dein Herz klopft lauter als bei der Lottozentrale."
   },
@@ -77,8 +77,8 @@
    "nr": 9,
    "typ": "objekt",
    "kapitel": 3,
-   "start": 35.008,
-   "dauer": 3.134,
+   "start": 33.904,
+   "dauer": 3.014,
    "emotion": "erklaerend",
    "text": "„Opa hat gewonnen. Mit euren Geburtstagen.“"
   },
@@ -86,8 +86,8 @@
    "nr": 10,
    "typ": "gesicht",
    "kapitel": 3,
-   "start": 38.142,
-   "dauer": 3.47,
+   "start": 36.918,
+   "dauer": 3.278,
    "emotion": "spannend",
    "text": "Papa lässt die Gabel fallen. Oma verschluckt sich am Kuchen."
   },
@@ -95,7 +95,7 @@
    "nr": 11,
    "typ": "gesicht",
    "kapitel": 3,
-   "start": 41.612,
+   "start": 40.196,
    "dauer": 1.478,
    "emotion": "froh",
    "text": "„Krieg ich jetzt ein Pferd?“"
@@ -104,7 +104,7 @@
    "nr": 12,
    "typ": "gesicht",
    "kapitel": 3,
-   "start": 43.09,
+   "start": 41.674,
    "dauer": 2.918,
    "emotion": "froh",
    "text": "Opa sagt gar nichts. Er zwinkert dir nur zu."
@@ -113,8 +113,8 @@
    "nr": 13,
    "typ": "esstisch",
    "kapitel": 4,
-   "start": 46.008,
-   "dauer": 5.222,
+   "start": 44.592,
+   "dauer": 5.606,
    "emotion": "froh",
    "text": "Ihr teilt es. Für uns alle, wie auf dem Schein. Und Opa will nur eins dafür."
   },
@@ -122,8 +122,8 @@
    "nr": 14,
    "typ": "gesicht",
    "kapitel": 4,
-   "start": 51.23,
-   "dauer": 4.19,
+   "start": 50.198,
+   "dauer": 4.262,
    "emotion": "froh",
    "text": "„Jeden Sonntag. Hier. Alle. Ohne Ausrede.“"
   },
@@ -131,8 +131,8 @@
    "nr": 15,
    "typ": "gesicht",
    "kapitel": 4,
-   "start": 55.42,
-   "dauer": 1.67,
+   "start": 54.46,
+   "dauer": 1.91,
    "emotion": "froh",
    "text": "Der beste Deal deines Lebens."
   },
@@ -140,8 +140,8 @@
    "nr": 16,
    "typ": "lebenszeit",
    "kapitel": 4,
-   "start": 57.09,
-   "dauer": 5.462,
+   "start": 56.37,
+   "dauer": 5.918,
    "emotion": "erzaehlend",
    "text": "Wenn alles gut geht, sind das noch ein paar Hundert Sonntage. Jeder einzelne mehr wert als der Gewinn."
   },
@@ -149,8 +149,8 @@
    "nr": 17,
    "typ": "polarlicht",
    "kapitel": 5,
-   "start": 62.552,
-   "dauer": 3.686,
+   "start": 62.288,
+   "dauer": 3.302,
    "emotion": "erzaehlend",
    "text": "Später stehst du mit Mia am Fenster. Die Stadt leuchtet."
   },
@@ -158,8 +158,8 @@
    "nr": 18,
    "typ": "kiosk",
    "kapitel": 5,
-   "start": 66.238,
-   "dauer": 6.758,
+   "start": 65.59,
+   "dauer": 7.238,
    "emotion": "froh",
    "text": "Und am Samstag humpelt Opa zum Kiosk. Dieselben Zahlen. Wie immer. Weil er nie gespielt hat, um zu gewinnen."
   }
