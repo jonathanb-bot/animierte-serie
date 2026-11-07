@@ -428,7 +428,10 @@
   "http": 201,
   "am": "2026-10-30T08:25:46.171Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "insta-07-4": {
   "ok": false,
@@ -437,7 +440,10 @@
   "http": 201,
   "am": "2026-10-30T08:25:49.012Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "insta-08-1": {
   "ok": false,
@@ -446,7 +452,10 @@
   "http": 201,
   "am": "2026-10-30T08:25:51.883Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "insta-08-2": {
   "ok": false,
@@ -455,7 +464,10 @@
   "http": 201,
   "am": "2026-10-30T08:25:54.656Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "insta-08-3": {
   "ok": false,
@@ -464,7 +476,10 @@
   "http": 201,
   "am": "2026-10-30T08:25:57.279Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "insta-08-4": {
   "ok": false,
@@ -473,7 +488,10 @@
   "http": 201,
   "am": "2026-10-30T08:25:59.958Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "insta-09-1": {
   "ok": false,
@@ -482,7 +500,10 @@
   "http": 201,
   "am": "2026-10-30T08:26:02.817Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "insta-09-2": {
   "ok": false,
@@ -491,7 +512,10 @@
   "http": 201,
   "am": "2026-10-30T08:26:05.572Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "insta-09-3": {
   "ok": false,
@@ -500,7 +524,10 @@
   "http": 201,
   "am": "2026-10-30T08:26:08.226Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "insta-09-4": {
   "ok": false,
@@ -509,7 +536,10 @@
   "http": 201,
   "am": "2026-10-30T08:26:10.813Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "insta-10-1": {
   "ok": false,
@@ -518,7 +548,10 @@
   "http": 201,
   "am": "2026-10-30T08:26:13.425Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "insta-10-2": {
   "ok": false,
@@ -527,7 +560,10 @@
   "http": 201,
   "am": "2026-10-30T08:26:16.086Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "insta-10-3": {
   "ok": false,
@@ -536,7 +572,10 @@
   "http": 201,
   "am": "2026-10-30T08:26:18.954Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "insta-10-4": {
   "ok": false,
@@ -545,7 +584,10 @@
   "http": 201,
   "am": "2026-10-30T08:26:21.585Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "yt-02-1": {
   "ok": true,
@@ -842,7 +884,10 @@
   "http": 201,
   "am": "2026-10-30T08:27:23.121Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "yt-07-4": {
   "ok": false,
@@ -851,7 +896,10 @@
   "http": 201,
   "am": "2026-10-30T08:27:25.473Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "yt-08-1": {
   "ok": false,
@@ -860,7 +908,10 @@
   "http": 201,
   "am": "2026-10-30T08:27:27.877Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "yt-08-2": {
   "ok": false,
@@ -869,7 +920,10 @@
   "http": 201,
   "am": "2026-10-30T08:27:30.245Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "yt-08-3": {
   "ok": false,
@@ -878,7 +932,10 @@
   "http": 201,
   "am": "2026-10-30T08:27:32.781Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "yt-08-4": {
   "ok": false,
@@ -887,7 +944,10 @@
   "http": 201,
   "am": "2026-10-30T08:27:35.177Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "yt-09-1": {
   "ok": false,
@@ -896,7 +956,10 @@
   "http": 201,
   "am": "2026-10-30T08:27:37.595Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "yt-09-2": {
   "ok": false,
@@ -905,7 +968,10 @@
   "http": 201,
   "am": "2026-10-30T08:27:39.989Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "yt-09-3": {
   "ok": false,
@@ -914,7 +980,10 @@
   "http": 201,
   "am": "2026-10-30T08:27:42.368Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "yt-09-4": {
   "ok": false,
@@ -923,7 +992,10 @@
   "http": 201,
   "am": "2026-10-30T08:27:44.765Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "yt-10-1": {
   "ok": false,
@@ -932,7 +1004,10 @@
   "http": 201,
   "am": "2026-10-30T08:27:47.154Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "yt-10-2": {
   "ok": false,
@@ -941,7 +1016,10 @@
   "http": 201,
   "am": "2026-10-30T08:27:49.486Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "yt-10-3": {
   "ok": false,
@@ -950,7 +1028,10 @@
   "http": 201,
   "am": "2026-10-30T08:27:51.951Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "yt-10-4": {
   "ok": false,
@@ -959,7 +1040,10 @@
   "http": 201,
   "am": "2026-10-30T08:27:54.460Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "alien-tiktok-01": {
   "ok": false,
@@ -1052,7 +1136,10 @@
   "http": 201,
   "am": "2026-10-30T09:10:47.450Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "alien-tiktok-09": {
   "ok": false,
@@ -1061,7 +1148,10 @@
   "http": 201,
   "am": "2026-10-30T09:10:51.307Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "alien-tiktok-10": {
   "ok": false,
@@ -1070,7 +1160,10 @@
   "http": 201,
   "am": "2026-10-30T09:10:55.301Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "alien-insta-01-1": {
   "ok": false,
@@ -1079,7 +1172,10 @@
   "http": 201,
   "am": "2026-10-30T09:10:57.853Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "alien-insta-01-2": {
   "ok": false,
@@ -1088,7 +1184,10 @@
   "http": 201,
   "am": "2026-10-30T09:11:00.478Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "alien-insta-01-3": {
   "ok": false,
@@ -1097,7 +1196,10 @@
   "http": 201,
   "am": "2026-10-30T09:11:03.089Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "alien-insta-01-4": {
   "ok": false,
@@ -1106,7 +1208,10 @@
   "http": 201,
   "am": "2026-10-30T09:11:06.498Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "alien-insta-01-5": {
   "ok": false,
@@ -1115,7 +1220,10 @@
   "http": 201,
   "am": "2026-10-30T09:11:09.144Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "alien-insta-02-1": {
   "ok": false,
@@ -1124,7 +1232,10 @@
   "http": 201,
   "am": "2026-10-30T09:11:11.871Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "alien-insta-02-2": {
   "ok": false,
@@ -1133,7 +1244,10 @@
   "http": 201,
   "am": "2026-10-30T09:11:14.558Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "alien-insta-02-3": {
   "ok": false,
@@ -1142,7 +1256,10 @@
   "http": 201,
   "am": "2026-10-30T09:11:17.181Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 44 seconds."
+  }
  },
  "alien-insta-02-4": {
   "ok": false,
@@ -1151,7 +1268,10 @@
   "http": 201,
   "am": "2026-10-30T09:11:19.870Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 44 seconds."
+  }
  },
  "alien-insta-02-5": {
   "ok": false,
@@ -1160,7 +1280,10 @@
   "http": 201,
   "am": "2026-10-30T09:11:22.678Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 43 seconds."
+  }
  },
  "alien-insta-02-6": {
   "ok": false,
@@ -1511,7 +1634,10 @@
   "http": 201,
   "am": "2026-10-30T09:13:06.549Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "alien-yt-01-2": {
   "ok": false,
@@ -1520,7 +1646,10 @@
   "http": 201,
   "am": "2026-10-30T09:13:08.801Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "alien-yt-01-3": {
   "ok": false,
@@ -1529,7 +1658,10 @@
   "http": 201,
   "am": "2026-10-30T09:13:10.948Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "alien-yt-01-4": {
   "ok": false,
@@ -1538,7 +1670,10 @@
   "http": 201,
   "am": "2026-10-30T09:13:13.294Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "alien-yt-01-5": {
   "ok": false,
@@ -1547,7 +1682,10 @@
   "http": 201,
   "am": "2026-10-30T09:13:15.552Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "alien-yt-02-1": {
   "ok": false,
@@ -1556,7 +1694,10 @@
   "http": 201,
   "am": "2026-10-30T09:13:17.862Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "alien-yt-02-2": {
   "ok": false,
@@ -1565,7 +1706,10 @@
   "http": 201,
   "am": "2026-10-30T09:13:20.204Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "alien-yt-02-3": {
   "ok": false,
@@ -1574,7 +1718,10 @@
   "http": 201,
   "am": "2026-10-30T09:13:22.396Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "alien-yt-02-4": {
   "ok": false,
@@ -1583,7 +1730,10 @@
   "http": 201,
   "am": "2026-10-30T09:13:24.752Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "alien-yt-02-5": {
   "ok": false,
@@ -1955,9 +2105,7 @@
   "http": 201,
   "am": "2026-10-30T14:12:20.820Z",
   "ergebnis": {
-   "status": "published",
-   "plattform": "published",
-   "url": "https://www.instagram.com/reel/DfIEz1pkaIW/"
+   "fehler": "Rate limit exceeded. Please retry after 39 seconds."
   }
  },
  "mann-yt-01-1": {
@@ -1991,7 +2139,10 @@
   "http": 201,
   "am": "2026-10-30T18:54:27.096Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 41 seconds."
+  }
  },
  "mann-tiktok-02": {
   "ok": false,
@@ -2001,7 +2152,10 @@
   "http": 201,
   "am": "2026-10-30T18:54:30.337Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 41 seconds."
+  }
  },
  "mann-tiktok-03": {
   "ok": false,
@@ -2011,7 +2165,10 @@
   "http": 201,
   "am": "2026-10-30T18:54:33.493Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 41 seconds."
+  }
  },
  "mann-tiktok-04": {
   "ok": false,
@@ -2021,7 +2178,10 @@
   "http": 201,
   "am": "2026-10-30T18:54:36.656Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 41 seconds."
+  }
  },
  "mann-tiktok-05": {
   "ok": false,
@@ -2031,7 +2191,10 @@
   "http": 201,
   "am": "2026-10-30T18:54:40.158Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "mann-tiktok-06": {
   "ok": false,
@@ -2536,9 +2699,7 @@
   "http": 201,
   "am": "2026-10-31T11:42:03.380Z",
   "ergebnis": {
-   "status": "published",
-   "plattform": "published",
-   "url": "https://www.instagram.com/reel/DfK3M0fCNwa/"
+   "fehler": "Rate limit exceeded. Please retry after 39 seconds."
   }
  },
  "stock-yt-kurz-03-1": {
@@ -2560,9 +2721,7 @@
   "http": 201,
   "am": "2026-10-31T11:42:08.986Z",
   "ergebnis": {
-   "status": "published",
-   "plattform": "published",
-   "url": "https://www.instagram.com/reel/DfLSw86DEgB/"
+   "fehler": "Rate limit exceeded. Please retry after 39 seconds."
   }
  },
  "stock-yt-kurz-03-2": {
@@ -2608,9 +2767,7 @@
   "http": 201,
   "am": "2026-10-31T11:42:18.396Z",
   "ergebnis": {
-   "status": "published",
-   "plattform": "published",
-   "url": "https://www.instagram.com/reel/DfMJvcMiHtF/"
+   "fehler": "Rate limit exceeded. Please retry after 38 seconds."
   }
  },
  "stock-yt-kurz-04-2": {
@@ -2632,9 +2789,7 @@
   "http": 201,
   "am": "2026-10-31T11:42:23.043Z",
   "ergebnis": {
-   "status": "published",
-   "plattform": "published",
-   "url": "https://www.instagram.com/reel/DfMlGhJDS88/"
+   "fehler": "Rate limit exceeded. Please retry after 37 seconds."
   }
  },
  "stock-yt-kurz-05-1": {
@@ -2656,9 +2811,7 @@
   "http": 201,
   "am": "2026-10-31T11:42:27.824Z",
   "ergebnis": {
-   "status": "published",
-   "plattform": "published",
-   "url": "https://www.instagram.com/reel/DfNAZD1lNIT/"
+   "fehler": "Rate limit exceeded. Please retry after 37 seconds."
   }
  },
  "stock-yt-kurz-05-2": {
@@ -2680,9 +2833,7 @@
   "http": 201,
   "am": "2026-10-31T11:42:32.369Z",
   "ergebnis": {
-   "status": "published",
-   "plattform": "published",
-   "url": "https://www.instagram.com/reel/DfNb9glgVOZ/"
+   "fehler": "Rate limit exceeded. Please retry after 37 seconds."
   }
  },
  "stock-yt-kurz-06-1": {
@@ -2716,9 +2867,7 @@
   "http": 201,
   "am": "2026-10-31T11:42:39.010Z",
   "ergebnis": {
-   "status": "published",
-   "plattform": "published",
-   "url": "https://www.youtube.com/watch?v=ZYIlHn-DHrM"
+   "fehler": "Rate limit exceeded. Please retry after 36 seconds."
   }
  },
  "stock-insta-kurz-07-1": {
@@ -2728,9 +2877,7 @@
   "http": 201,
   "am": "2026-10-31T11:42:42.537Z",
   "ergebnis": {
-   "status": "published",
-   "plattform": "published",
-   "url": "https://www.instagram.com/reel/DfOS4XuAeNm/"
+   "fehler": "Rate limit exceeded. Please retry after 36 seconds."
   }
  },
  "stock-yt-kurz-07-1": {
@@ -2740,9 +2887,7 @@
   "http": 201,
   "am": "2026-10-31T11:42:44.654Z",
   "ergebnis": {
-   "status": "published",
-   "plattform": "published",
-   "url": "https://www.youtube.com/watch?v=iS7C7M0DFXk"
+   "fehler": "Rate limit exceeded. Please retry after 36 seconds."
   }
  },
  "stock-insta-kurz-07-2": {
@@ -2752,9 +2897,7 @@
   "http": 201,
   "am": "2026-10-31T11:42:48.169Z",
   "ergebnis": {
-   "status": "published",
-   "plattform": "published",
-   "url": "https://www.instagram.com/reel/DfOub2QHEsf/"
+   "fehler": "Rate limit exceeded. Please retry after 35 seconds."
   }
  },
  "stock-yt-kurz-07-2": {
@@ -2764,9 +2907,7 @@
   "http": 201,
   "am": "2026-10-31T11:42:50.291Z",
   "ergebnis": {
-   "status": "published",
-   "plattform": "published",
-   "url": "https://www.youtube.com/watch?v=SznTmGcL-J4"
+   "fehler": "Rate limit exceeded. Please retry after 35 seconds."
   }
  },
  "stock-insta-kurz-08-1": {
@@ -2776,9 +2917,7 @@
   "http": 201,
   "am": "2026-10-31T11:42:53.499Z",
   "ergebnis": {
-   "status": "published",
-   "plattform": "published",
-   "url": "https://www.instagram.com/reel/DfPJ53cjkBF/"
+   "fehler": "Rate limit exceeded. Please retry after 35 seconds."
   }
  },
  "stock-yt-kurz-08-1": {
@@ -2788,9 +2927,7 @@
   "http": 201,
   "am": "2026-10-31T11:42:55.683Z",
   "ergebnis": {
-   "status": "published",
-   "plattform": "published",
-   "url": "https://www.youtube.com/watch?v=wLvSc2f1vq8"
+   "fehler": "Rate limit exceeded. Please retry after 35 seconds."
   }
  },
  "stock-insta-kurz-08-2": {
@@ -2800,9 +2937,7 @@
   "http": 201,
   "am": "2026-11-02T10:13:30.555Z",
   "ergebnis": {
-   "status": "published",
-   "plattform": "published",
-   "url": "https://www.instagram.com/reel/DfPXnlLAgqI/"
+   "fehler": "Rate limit exceeded. Please retry after 35 seconds."
   }
  },
  "stock-yt-kurz-08-2": {
@@ -2812,9 +2947,7 @@
   "http": 201,
   "am": "2026-11-02T10:13:33.196Z",
   "ergebnis": {
-   "status": "published",
-   "plattform": "published",
-   "url": "https://www.youtube.com/watch?v=Qg2jNpus_g4"
+   "fehler": "Rate limit exceeded. Please retry after 34 seconds."
   }
  },
  "stock-insta-kurz-09-1": {
@@ -2836,9 +2969,7 @@
   "http": 201,
   "am": "2026-11-02T10:13:38.744Z",
   "ergebnis": {
-   "status": "published",
-   "plattform": "published",
-   "url": "https://www.youtube.com/watch?v=bPo0KGl1MSo"
+   "fehler": "Rate limit exceeded. Please retry after 34 seconds."
   }
  },
  "stock-insta-kurz-09-2": {
@@ -2848,9 +2979,7 @@
   "http": 201,
   "am": "2026-11-02T10:13:41.712Z",
   "ergebnis": {
-   "status": "published",
-   "plattform": "published",
-   "url": "https://www.instagram.com/reel/DfPzOobkgyo/"
+   "fehler": "Rate limit exceeded. Please retry after 34 seconds."
   }
  },
  "stock-yt-kurz-09-2": {
@@ -2860,9 +2989,7 @@
   "http": 201,
   "am": "2026-11-02T10:13:44.530Z",
   "ergebnis": {
-   "status": "published",
-   "plattform": "published",
-   "url": "https://www.youtube.com/watch?v=9gmP3d7MBzM"
+   "fehler": "Rate limit exceeded. Please retry after 34 seconds."
   }
  },
  "stock-insta-kurz-10-1": {
@@ -2872,9 +2999,7 @@
   "http": 201,
   "am": "2026-11-02T10:13:47.350Z",
   "ergebnis": {
-   "status": "published",
-   "plattform": "published",
-   "url": "https://www.instagram.com/reel/DfQA8CygoSj/"
+   "fehler": "Rate limit exceeded. Please retry after 34 seconds."
   }
  },
  "stock-yt-kurz-10-1": {
@@ -2884,9 +3009,7 @@
   "http": 201,
   "am": "2026-11-02T10:13:49.960Z",
   "ergebnis": {
-   "status": "published",
-   "plattform": "published",
-   "url": "https://www.youtube.com/watch?v=GtzOfYb2M1Y"
+   "fehler": "Rate limit exceeded. Please retry after 33 seconds."
   }
  },
  "stock-insta-kurz-10-2": {
@@ -2896,7 +3019,7 @@
   "http": 201,
   "am": "2026-11-02T10:13:52.951Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 57 seconds."
+   "fehler": "Rate limit exceeded. Please retry after 33 seconds."
   }
  },
  "stock-yt-kurz-10-2": {
@@ -2906,9 +3029,7 @@
   "http": 201,
   "am": "2026-11-02T10:13:55.689Z",
   "ergebnis": {
-   "status": "published",
-   "plattform": "published",
-   "url": "https://www.youtube.com/watch?v=v_XEnaXkaX0"
+   "fehler": "Rate limit exceeded. Please retry after 33 seconds."
   }
  },
  "alien-insta-kurz-01-1": {
@@ -2918,9 +3039,7 @@
   "http": 201,
   "am": "2026-11-02T10:13:58.589Z",
   "ergebnis": {
-   "status": "published",
-   "plattform": "published",
-   "url": "https://www.instagram.com/reel/DfQcUvnl2H3/"
+   "fehler": "Rate limit exceeded. Please retry after 33 seconds."
   }
  },
  "alien-yt-kurz-01-1": {
@@ -2930,9 +3049,7 @@
   "http": 201,
   "am": "2026-11-02T10:14:01.148Z",
   "ergebnis": {
-   "status": "published",
-   "plattform": "published",
-   "url": "https://www.youtube.com/watch?v=M4k33xNG5gg"
+   "fehler": "Rate limit exceeded. Please retry after 33 seconds."
   }
  },
  "alien-insta-kurz-01-2": {
@@ -2942,7 +3059,7 @@
   "http": 201,
   "am": "2026-11-02T10:14:04.222Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 55 seconds."
+   "fehler": "Rate limit exceeded. Please retry after 33 seconds."
   }
  },
  "alien-yt-kurz-01-2": {
@@ -2952,9 +3069,7 @@
   "http": 201,
   "am": "2026-11-02T10:14:06.866Z",
   "ergebnis": {
-   "status": "published",
-   "plattform": "published",
-   "url": "https://www.youtube.com/watch?v=SFqqgcjda_k"
+   "fehler": "Rate limit exceeded. Please retry after 32 seconds."
   }
  },
  "alien-insta-kurz-02-1": {
@@ -2976,9 +3091,7 @@
   "http": 201,
   "am": "2026-11-02T10:14:12.770Z",
   "ergebnis": {
-   "status": "published",
-   "plattform": "published",
-   "url": "https://www.youtube.com/watch?v=vLr_lAACM4Q"
+   "fehler": "Rate limit exceeded. Please retry after 32 seconds."
   }
  },
  "alien-insta-kurz-02-2": {
@@ -2988,9 +3101,7 @@
   "http": 201,
   "am": "2026-11-02T10:14:15.794Z",
   "ergebnis": {
-   "status": "published",
-   "plattform": "published",
-   "url": "https://www.instagram.com/reel/DfRFVTzkqHz/"
+   "fehler": "Rate limit exceeded. Please retry after 32 seconds."
   }
  },
  "alien-yt-kurz-02-2": {
@@ -3000,9 +3111,7 @@
   "http": 201,
   "am": "2026-11-02T10:14:18.392Z",
   "ergebnis": {
-   "status": "published",
-   "plattform": "published",
-   "url": "https://www.youtube.com/watch?v=JY2LzB-78-A"
+   "fehler": "Rate limit exceeded. Please retry after 32 seconds."
   }
  },
  "alien-insta-kurz-03-1": {
@@ -3012,7 +3121,7 @@
   "http": 201,
   "am": "2026-11-02T10:14:21.235Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 53 seconds."
+   "fehler": "Rate limit exceeded. Please retry after 31 seconds."
   }
  },
  "alien-yt-kurz-03-1": {
@@ -3022,9 +3131,7 @@
   "http": 201,
   "am": "2026-11-02T10:14:23.824Z",
   "ergebnis": {
-   "status": "published",
-   "plattform": "published",
-   "url": "https://www.youtube.com/watch?v=kyyGtNYHzjA"
+   "fehler": "Rate limit exceeded. Please retry after 31 seconds."
   }
  },
  "alien-insta-kurz-03-2": {
@@ -3034,9 +3141,7 @@
   "http": 201,
   "am": "2026-11-02T10:14:26.656Z",
   "ergebnis": {
-   "status": "published",
-   "plattform": "published",
-   "url": "https://www.instagram.com/reel/DfRg7q6DAlr/"
+   "fehler": "Rate limit exceeded. Please retry after 31 seconds."
   }
  },
  "alien-yt-kurz-03-2": {
@@ -3046,9 +3151,7 @@
   "http": 201,
   "am": "2026-11-02T10:14:29.327Z",
   "ergebnis": {
-   "status": "published",
-   "plattform": "published",
-   "url": "https://www.youtube.com/watch?v=QgD7LCWXiq0"
+   "fehler": "Rate limit exceeded. Please retry after 31 seconds."
   }
  },
  "alien-insta-kurz-04-1": {
@@ -3058,7 +3161,7 @@
   "http": 201,
   "am": "2026-11-02T10:14:32.826Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 52 seconds."
+   "fehler": "Rate limit exceeded. Please retry after 31 seconds."
   }
  },
  "alien-yt-kurz-04-1": {
@@ -3068,9 +3171,7 @@
   "http": 201,
   "am": "2026-11-02T10:14:35.461Z",
   "ergebnis": {
-   "status": "published",
-   "plattform": "published",
-   "url": "https://www.youtube.com/watch?v=pO3DHtBzjjs"
+   "fehler": "Rate limit exceeded. Please retry after 31 seconds."
   }
  },
  "alien-insta-kurz-04-2": {
@@ -3092,9 +3193,7 @@
   "http": 201,
   "am": "2026-11-02T10:14:41.086Z",
   "ergebnis": {
-   "status": "published",
-   "plattform": "published",
-   "url": "https://www.youtube.com/watch?v=vsA9YEUtN1g"
+   "fehler": "Rate limit exceeded. Please retry after 30 seconds."
   }
  },
  "alien-insta-kurz-05-1": {
@@ -3104,9 +3203,7 @@
   "http": 201,
   "am": "2026-11-02T10:14:44.132Z",
   "ergebnis": {
-   "status": "published",
-   "plattform": "published",
-   "url": "https://www.instagram.com/reel/DfSJ700jqVW/"
+   "fehler": "Rate limit exceeded. Please retry after 30 seconds."
   }
  },
  "alien-yt-kurz-05-1": {
@@ -3116,9 +3213,7 @@
   "http": 201,
   "am": "2026-11-02T10:14:46.974Z",
   "ergebnis": {
-   "status": "published",
-   "plattform": "published",
-   "url": "https://www.youtube.com/watch?v=nfgsylGHrog"
+   "fehler": "Rate limit exceeded. Please retry after 30 seconds."
   }
  },
  "alien-insta-kurz-05-2": {
@@ -3128,7 +3223,7 @@
   "http": 201,
   "am": "2026-11-02T10:14:49.902Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 51 seconds."
+   "fehler": "Rate limit exceeded. Please retry after 30 seconds."
   }
  },
  "alien-yt-kurz-05-2": {
@@ -3138,9 +3233,7 @@
   "http": 201,
   "am": "2026-11-02T10:14:52.676Z",
   "ergebnis": {
-   "status": "published",
-   "plattform": "published",
-   "url": "https://www.youtube.com/watch?v=tjMCU0CUHIM"
+   "fehler": "Rate limit exceeded. Please retry after 29 seconds."
   }
  },
  "alien-insta-kurz-06-1": {
@@ -3150,9 +3243,7 @@
   "http": 201,
   "am": "2026-11-02T10:14:55.562Z",
   "ergebnis": {
-   "status": "published",
-   "plattform": "published",
-   "url": "https://www.instagram.com/reel/DfSlaJAAFYL/"
+   "fehler": "Rate limit exceeded. Please retry after 29 seconds."
   }
  },
  "alien-yt-kurz-06-1": {
@@ -3162,9 +3253,7 @@
   "http": 201,
   "am": "2026-11-02T10:14:58.201Z",
   "ergebnis": {
-   "status": "published",
-   "plattform": "published",
-   "url": "https://www.youtube.com/watch?v=IoS9wp5APpc"
+   "fehler": "Rate limit exceeded. Please retry after 29 seconds."
   }
  },
  "alien-insta-kurz-06-2": {
@@ -3172,280 +3261,408 @@
   "zeit": "2026-11-03T22:00:00",
   "zernioId": "6ae862a4e56ee1d4a45b6aea",
   "http": 201,
-  "am": "2026-11-02T10:15:01.099Z"
+  "am": "2026-11-02T10:15:01.099Z",
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 29 seconds."
+  }
  },
  "alien-yt-kurz-06-2": {
   "ok": true,
   "zeit": "2026-11-03T22:30:00",
   "zernioId": "6ae862a74bf04970a01b538b",
   "http": 201,
-  "am": "2026-11-02T10:15:03.897Z"
+  "am": "2026-11-02T10:15:03.897Z",
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 29 seconds."
+  }
  },
  "alien-insta-kurz-07-1": {
   "ok": true,
   "zeit": "2026-11-04T00:00:00",
   "zernioId": "6ae862aa12d5a2c855d1269e",
   "http": 201,
-  "am": "2026-11-02T10:15:06.754Z"
+  "am": "2026-11-02T10:15:06.754Z",
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 29 seconds."
+  }
  },
  "alien-yt-kurz-07-1": {
   "ok": true,
   "zeit": "2026-11-04T00:30:00",
   "zernioId": "6ae862ad4bf04970a01b53a0",
   "http": 201,
-  "am": "2026-11-02T10:15:09.429Z"
+  "am": "2026-11-02T10:15:09.429Z",
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 28 seconds."
+  }
  },
  "alien-insta-kurz-07-2": {
   "ok": true,
   "zeit": "2026-11-04T02:00:00",
   "zernioId": "6ae862b0e56ee1d4a45b6b6f",
   "http": 201,
-  "am": "2026-11-02T10:15:12.332Z"
+  "am": "2026-11-02T10:15:12.332Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfTO0UGGMAi/"
+  }
  },
  "alien-yt-kurz-07-2": {
   "ok": true,
   "zeit": "2026-11-04T02:30:00",
   "zernioId": "6ae862b2e56ee1d4a45b6b87",
   "http": 201,
-  "am": "2026-11-02T10:15:15.000Z"
+  "am": "2026-11-02T10:15:15.000Z",
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 28 seconds."
+  }
  },
  "alien-insta-kurz-08-1": {
   "ok": true,
   "zeit": "2026-11-04T04:00:00",
   "zernioId": "6ae862b5e56ee1d4a45b6ba2",
   "http": 201,
-  "am": "2026-11-02T10:15:17.960Z"
+  "am": "2026-11-02T10:15:17.960Z",
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 28 seconds."
+  }
  },
  "alien-yt-kurz-08-1": {
   "ok": true,
   "zeit": "2026-11-04T04:30:00",
   "zernioId": "6ae862b8e56ee1d4a45b6bb5",
   "http": 201,
-  "am": "2026-11-02T10:15:20.611Z"
+  "am": "2026-11-02T10:15:20.611Z",
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 28 seconds."
+  }
  },
  "alien-insta-kurz-08-2": {
   "ok": true,
   "zeit": "2026-11-04T06:00:00",
   "zernioId": "6ae862bbe56ee1d4a45b6bd7",
   "http": 201,
-  "am": "2026-11-02T10:15:23.938Z"
+  "am": "2026-11-02T10:15:23.938Z",
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 27 seconds."
+  }
  },
  "alien-yt-kurz-08-2": {
   "ok": true,
   "zeit": "2026-11-04T06:30:00",
   "zernioId": "6ae862bee56ee1d4a45b6bf1",
   "http": 201,
-  "am": "2026-11-02T10:15:26.606Z"
+  "am": "2026-11-02T10:15:26.606Z",
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 27 seconds."
+  }
  },
  "alien-insta-kurz-09-1": {
   "ok": true,
   "zeit": "2026-11-04T08:00:00",
   "zernioId": "6ae862c14bf04970a01b53ea",
   "http": 201,
-  "am": "2026-11-02T10:15:29.976Z"
+  "am": "2026-11-02T10:15:29.976Z",
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 27 seconds."
+  }
  },
  "alien-yt-kurz-09-1": {
   "ok": true,
   "zeit": "2026-11-04T08:30:00",
   "zernioId": "6ae862c512d5a2c855d126ad",
   "http": 201,
-  "am": "2026-11-02T10:15:33.129Z"
+  "am": "2026-11-02T10:15:33.129Z",
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 27 seconds."
+  }
  },
  "alien-insta-kurz-09-2": {
   "ok": true,
   "zeit": "2026-11-04T10:00:00",
   "zernioId": "6ae862c74bf04970a01b5409",
   "http": 201,
-  "am": "2026-11-02T10:15:36.078Z"
+  "am": "2026-11-02T10:15:36.078Z",
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 27 seconds."
+  }
  },
  "alien-yt-kurz-09-2": {
   "ok": true,
   "zeit": "2026-11-04T10:30:00",
   "zernioId": "6ae862cae56ee1d4a45b6c61",
   "http": 201,
-  "am": "2026-11-02T10:15:38.754Z"
+  "am": "2026-11-02T10:15:38.754Z",
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 27 seconds."
+  }
  },
  "alien-insta-kurz-10-1": {
   "ok": true,
   "zeit": "2026-11-04T12:00:00",
   "zernioId": "6ae862cde56ee1d4a45b6c91",
   "http": 201,
-  "am": "2026-11-02T10:15:42.084Z"
+  "am": "2026-11-02T10:15:42.084Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfUTs5bETLs/"
+  }
  },
  "alien-yt-kurz-10-1": {
   "ok": true,
   "zeit": "2026-11-04T12:30:00",
   "zernioId": "6ae862d0e56ee1d4a45b6cae",
   "http": 201,
-  "am": "2026-11-02T10:15:44.864Z"
+  "am": "2026-11-02T10:15:44.864Z",
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 26 seconds."
+  }
  },
  "alien-insta-kurz-10-2": {
   "ok": true,
   "zeit": "2026-11-04T14:00:00",
   "zernioId": "6ae862d34bf04970a01b5449",
   "http": 201,
-  "am": "2026-11-02T10:15:47.829Z"
+  "am": "2026-11-02T10:15:47.829Z",
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 26 seconds."
+  }
  },
  "alien-yt-kurz-10-2": {
   "ok": true,
   "zeit": "2026-11-04T14:30:00",
   "zernioId": "6ae862d6e56ee1d4a45b6cf0",
   "http": 201,
-  "am": "2026-11-02T10:15:50.460Z"
+  "am": "2026-11-02T10:15:50.460Z",
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 26 seconds."
+  }
  },
  "mann-insta-kurz-01": {
   "ok": true,
   "zeit": "2026-11-04T16:00:00",
   "zernioId": "6ae862d94bf04970a01b5460",
   "http": 201,
-  "am": "2026-11-02T10:15:53.316Z"
+  "am": "2026-11-02T10:15:53.316Z",
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 25 seconds."
+  }
  },
  "mann-yt-kurz-01": {
   "ok": true,
   "zeit": "2026-11-04T16:30:00",
   "zernioId": "6ae862dbe56ee1d4a45b6d23",
   "http": 201,
-  "am": "2026-11-02T10:15:55.889Z"
+  "am": "2026-11-02T10:15:55.889Z",
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 25 seconds."
+  }
  },
  "mann-insta-kurz-02": {
   "ok": true,
   "zeit": "2026-11-04T18:00:00",
   "zernioId": "6ae862dfe56ee1d4a45b6d44",
   "http": 201,
-  "am": "2026-11-02T10:15:59.187Z"
+  "am": "2026-11-02T10:15:59.187Z",
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 25 seconds."
+  }
  },
  "mann-yt-kurz-02": {
   "ok": true,
   "zeit": "2026-11-04T18:30:00",
   "zernioId": "6ae862e112d5a2c855d126c3",
   "http": 201,
-  "am": "2026-11-02T10:16:01.857Z"
+  "am": "2026-11-02T10:16:01.857Z",
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 25 seconds."
+  }
  },
  "mann-insta-kurz-03": {
   "ok": true,
   "zeit": "2026-11-04T20:00:00",
   "zernioId": "6ae862e412d5a2c855d126c7",
   "http": 201,
-  "am": "2026-11-02T10:16:04.794Z"
+  "am": "2026-11-02T10:16:04.794Z",
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 25 seconds."
+  }
  },
  "mann-yt-kurz-03": {
   "ok": true,
   "zeit": "2026-11-04T20:30:00",
   "zernioId": "6ae862e7e56ee1d4a45b6d99",
   "http": 201,
-  "am": "2026-11-02T10:16:07.426Z"
+  "am": "2026-11-02T10:16:07.426Z",
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 25 seconds."
+  }
  },
  "mann-insta-kurz-04": {
   "ok": true,
   "zeit": "2026-11-04T22:00:00",
   "zernioId": "6ae862eae56ee1d4a45b6dca",
   "http": 201,
-  "am": "2026-11-02T10:16:10.605Z"
+  "am": "2026-11-02T10:16:10.605Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfVYB-cAQvF/"
+  }
  },
  "mann-yt-kurz-04": {
   "ok": true,
   "zeit": "2026-11-04T22:30:00",
   "zernioId": "6ae862ede56ee1d4a45b6de5",
   "http": 201,
-  "am": "2026-11-02T10:16:13.168Z"
+  "am": "2026-11-02T10:16:13.168Z",
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 24 seconds."
+  }
  },
  "mann-insta-kurz-05": {
   "ok": true,
   "zeit": "2026-11-05T00:00:00",
   "zernioId": "6ae862f0e56ee1d4a45b6e09",
   "http": 201,
-  "am": "2026-11-02T10:16:16.126Z"
+  "am": "2026-11-02T10:16:16.126Z",
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 24 seconds."
+  }
  },
  "mann-yt-kurz-05": {
   "ok": true,
   "zeit": "2026-11-05T00:30:00",
   "zernioId": "6ae862f3e56ee1d4a45b6e21",
   "http": 201,
-  "am": "2026-11-02T10:16:19.620Z"
+  "am": "2026-11-02T10:16:19.620Z",
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 23 seconds."
+  }
  },
  "mann-insta-kurz-06": {
   "ok": true,
   "zeit": "2026-11-05T02:00:00",
   "zernioId": "6ae862f6e56ee1d4a45b6e30",
   "http": 201,
-  "am": "2026-11-02T10:16:22.550Z"
+  "am": "2026-11-02T10:16:22.550Z",
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 23 seconds."
+  }
  },
  "mann-yt-kurz-06": {
   "ok": true,
   "zeit": "2026-11-05T02:30:00",
   "zernioId": "6ae862f8e56ee1d4a45b6e41",
   "http": 201,
-  "am": "2026-11-02T10:16:25.082Z"
+  "am": "2026-11-02T10:16:25.082Z",
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 23 seconds."
+  }
  },
  "mann-insta-kurz-07": {
   "ok": true,
   "zeit": "2026-11-05T04:00:00",
   "zernioId": "6ae862fb4bf04970a01b54de",
   "http": 201,
-  "am": "2026-11-02T10:16:27.832Z"
+  "am": "2026-11-02T10:16:27.832Z",
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 23 seconds."
+  }
  },
  "mann-yt-kurz-07": {
   "ok": true,
   "zeit": "2026-11-05T04:30:00",
   "zernioId": "6ae862fee56ee1d4a45b6e70",
   "http": 201,
-  "am": "2026-11-02T10:16:30.595Z"
+  "am": "2026-11-02T10:16:30.595Z",
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 23 seconds."
+  }
  },
  "mann-insta-kurz-08": {
   "ok": true,
   "zeit": "2026-11-05T06:00:00",
   "zernioId": "6ae86301e56ee1d4a45b6e8b",
   "http": 201,
-  "am": "2026-11-02T10:16:33.569Z"
+  "am": "2026-11-02T10:16:33.569Z",
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 23 seconds."
+  }
  },
  "mann-yt-kurz-08": {
   "ok": true,
   "zeit": "2026-11-05T06:30:00",
   "zernioId": "6ae86304e56ee1d4a45b6e96",
   "http": 201,
-  "am": "2026-11-02T10:16:36.127Z"
+  "am": "2026-11-02T10:16:36.127Z",
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 22 seconds."
+  }
  },
  "mann-insta-kurz-09": {
   "ok": true,
   "zeit": "2026-11-05T08:00:00",
   "zernioId": "6ae8630612d5a2c855d126f8",
   "http": 201,
-  "am": "2026-11-02T10:16:39.031Z"
+  "am": "2026-11-02T10:16:39.031Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfWctOaHF5p/"
+  }
  },
  "mann-yt-kurz-09": {
   "ok": true,
   "zeit": "2026-11-05T08:30:00",
   "zernioId": "6ae86309e56ee1d4a45b6eb8",
   "http": 201,
-  "am": "2026-11-02T10:16:41.572Z"
+  "am": "2026-11-02T10:16:41.572Z",
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 22 seconds."
+  }
  },
  "mann-insta-kurz-10": {
   "ok": true,
   "zeit": "2026-11-05T10:00:00",
   "zernioId": "6ae8630c12d5a2c855d12703",
   "http": 201,
-  "am": "2026-11-02T10:16:44.556Z"
+  "am": "2026-11-02T10:16:44.556Z",
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 22 seconds."
+  }
  },
  "mann-yt-kurz-10": {
   "ok": true,
   "zeit": "2026-11-05T10:30:00",
   "zernioId": "6ae8630f4bf04970a01b5518",
   "http": 201,
-  "am": "2026-11-02T10:16:47.192Z"
+  "am": "2026-11-02T10:16:47.192Z",
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 22 seconds."
+  }
  },
  "taeglich-insta-001": {
   "ok": true,
   "zeit": "2026-11-05T12:00:00",
   "zernioId": "6ae86311e56ee1d4a45b6efb",
   "http": 201,
-  "am": "2026-11-02T10:16:49.855Z"
+  "am": "2026-11-02T10:16:49.855Z",
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 21 seconds."
+  }
  },
  "taeglich-yt-001": {
   "ok": true,
   "zeit": "2026-11-05T12:30:00",
   "zernioId": "6ae863144bf04970a01b5546",
   "http": 201,
-  "am": "2026-11-02T10:16:52.352Z"
+  "am": "2026-11-02T10:16:52.352Z",
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 21 seconds."
+  }
  },
  "taeglich-insta-s01-f01": {
   "ok": false,
@@ -3454,7 +3671,10 @@
   "http": 201,
   "am": "2026-11-02T10:16:55.549Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "taeglich-insta-s01-f02": {
   "ok": false,
@@ -3463,7 +3683,10 @@
   "http": 201,
   "am": "2026-11-02T10:16:58.754Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 20 seconds."
+  }
  },
  "taeglich-insta-s01-f03": {
   "ok": false,
@@ -3472,7 +3695,10 @@
   "http": 201,
   "am": "2026-11-02T10:17:02.405Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 20 seconds."
+  }
  },
  "taeglich-insta-s01-f04": {
   "ok": false,
@@ -3481,7 +3707,10 @@
   "http": 201,
   "am": "2026-11-02T10:17:05.817Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 20 seconds."
+  }
  },
  "taeglich-insta-s01-f05": {
   "ok": false,
@@ -3490,7 +3719,10 @@
   "http": 201,
   "am": "2026-11-02T10:17:09.057Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 20 seconds."
+  }
  },
  "taeglich-insta-s01-f06": {
   "ok": false,
@@ -3499,7 +3731,10 @@
   "http": 201,
   "am": "2026-11-02T10:17:12.586Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 19 seconds."
+  }
  },
  "taeglich-insta-s01-f07": {
   "ok": false,
@@ -3508,7 +3743,10 @@
   "http": 201,
   "am": "2026-11-02T10:17:16.018Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 19 seconds."
+  }
  },
  "taeglich-insta-s01-f08": {
   "ok": false,
@@ -3517,7 +3755,10 @@
   "http": 201,
   "am": "2026-11-02T10:17:19.885Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 19 seconds."
+  }
  },
  "taeglich-insta-s01-f09": {
   "ok": false,
@@ -3526,7 +3767,10 @@
   "http": 201,
   "am": "2026-11-02T10:17:23.056Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 19 seconds."
+  }
  },
  "taeglich-insta-s01-f10": {
   "ok": false,
@@ -3535,7 +3779,10 @@
   "http": 201,
   "am": "2026-11-02T10:17:26.391Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 19 seconds."
+  }
  },
  "taeglich-yt-s01-f01": {
   "ok": false,
@@ -3544,7 +3791,10 @@
   "http": 201,
   "am": "2026-11-02T10:17:29.079Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 19 seconds."
+  }
  },
  "taeglich-yt-s01-f02": {
   "ok": false,
@@ -3553,7 +3803,10 @@
   "http": 201,
   "am": "2026-11-02T10:17:31.987Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 18 seconds."
+  }
  },
  "taeglich-yt-s01-f03": {
   "ok": false,
@@ -3562,7 +3815,10 @@
   "http": 201,
   "am": "2026-11-02T10:17:34.660Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 18 seconds."
+  }
  },
  "taeglich-yt-s01-f04": {
   "ok": false,
@@ -3571,7 +3827,10 @@
   "http": 201,
   "am": "2026-11-02T10:17:37.870Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 18 seconds."
+  }
  },
  "taeglich-yt-s01-f05": {
   "ok": false,
@@ -3580,7 +3839,10 @@
   "http": 201,
   "am": "2026-11-02T10:17:40.570Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 18 seconds."
+  }
  },
  "taeglich-yt-s01-f06": {
   "ok": false,
@@ -3589,7 +3851,10 @@
   "http": 201,
   "am": "2026-11-02T10:17:43.326Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 18 seconds."
+  }
  },
  "taeglich-yt-s01-f07": {
   "ok": false,
@@ -3598,7 +3863,10 @@
   "http": 201,
   "am": "2026-11-02T10:17:46.048Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 17 seconds."
+  }
  },
  "taeglich-yt-s01-f08": {
   "ok": false,
@@ -3607,7 +3875,10 @@
   "http": 201,
   "am": "2026-11-02T10:17:48.779Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 17 seconds."
+  }
  },
  "taeglich-yt-s01-f09": {
   "ok": false,
@@ -3616,7 +3887,10 @@
   "http": 201,
   "am": "2026-11-02T10:17:51.599Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 17 seconds."
+  }
  },
  "taeglich-yt-s01-f10": {
   "ok": false,
@@ -3625,7 +3899,10 @@
   "http": 201,
   "am": "2026-11-02T10:17:55.108Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 17 seconds."
+  }
  },
  "alien-tiktok-teil-5": {
   "ok": true,
@@ -3648,9 +3925,7 @@
   "http": 201,
   "am": "2026-11-02T10:21:07.414Z",
   "ergebnis": {
-   "status": "published",
-   "plattform": "published",
-   "url": "https://www.tiktok.com/@storys4you.de1/video/7703837035445914913"
+   "fehler": "Rate limit exceeded. Please retry after 40 seconds."
   }
  },
  "mann-tiktok-teil-2": {
@@ -3661,9 +3936,7 @@
   "http": 201,
   "am": "2026-11-03T07:44:16.650Z",
   "ergebnis": {
-   "status": "published",
-   "plattform": "published",
-   "url": "https://www.tiktok.com/@storys4you.de1/video/7704022431538662689"
+   "fehler": "Rate limit exceeded. Please retry after 40 seconds."
   }
  },
  "mann-tiktok-teil-3": {
@@ -3672,7 +3945,10 @@
   "fassung": 3,
   "zernioId": "6ae990d5fb116dbf0dcaae04",
   "http": 201,
-  "am": "2026-11-03T07:44:21.667Z"
+  "am": "2026-11-03T07:44:21.667Z",
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 40 seconds."
+  }
  },
  "mann-tiktok-teil-4": {
   "ok": true,
@@ -3680,7 +3956,10 @@
   "fassung": 3,
   "zernioId": "6ae990d96d903e4b46f2703b",
   "http": 201,
-  "am": "2026-11-03T07:44:25.892Z"
+  "am": "2026-11-03T07:44:25.892Z",
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 40 seconds."
+  }
  },
  "taeglich-tiktok-001": {
   "ok": false,
@@ -3691,7 +3970,10 @@
   "am": "2026-11-03T07:44:28.498Z",
   "geloescht": false,
   "loeschHttp": 400,
-  "loeschAntwort": "{\"error\":\"Published posts cannot be deleted\",\"type\":\"invalid_request_error\",\"code\":\"invalid_resource_state\"}"
+  "loeschAntwort": "{\"error\":\"Published posts cannot be deleted\",\"type\":\"invalid_request_error\",\"code\":\"invalid_resource_state\"}",
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 22 seconds."
+  }
  },
  "taeglich-tiktok-s01-teil-1": {
   "ok": false,
@@ -3702,7 +3984,10 @@
   "am": "2026-11-03T07:44:32.878Z",
   "geloescht": false,
   "loeschHttp": 400,
-  "loeschAntwort": "{\"error\":\"Published posts cannot be deleted\",\"type\":\"invalid_request_error\",\"code\":\"invalid_resource_state\"}"
+  "loeschAntwort": "{\"error\":\"Published posts cannot be deleted\",\"type\":\"invalid_request_error\",\"code\":\"invalid_resource_state\"}",
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 21 seconds."
+  }
  },
  "taeglich-tiktok-s01-teil-2": {
   "ok": false,
@@ -3712,7 +3997,10 @@
   "http": 201,
   "am": "2026-11-03T07:44:36.880Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 21 seconds."
+  }
  },
  "taeglich-tiktok-s01-teil-3": {
   "ok": false,
@@ -3722,7 +4010,10 @@
   "http": 201,
   "am": "2026-11-03T07:44:41.298Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 21 seconds."
+  }
  },
  "taeglich-tiktok-s01-teil-4": {
   "ok": false,
@@ -3732,7 +4023,10 @@
   "http": 201,
   "am": "2026-11-03T07:44:45.437Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 21 seconds."
+  }
  },
  "taeglich-tiktok-en-s02-teil-1": {
   "ok": false,
@@ -3745,7 +4039,10 @@
   "am": "2026-11-04T04:55:50.807Z",
   "geloescht": false,
   "loeschHttp": 400,
-  "loeschAntwort": "{\"error\":\"Published posts cannot be deleted\",\"type\":\"invalid_request_error\",\"code\":\"invalid_resource_state\"}"
+  "loeschAntwort": "{\"error\":\"Published posts cannot be deleted\",\"type\":\"invalid_request_error\",\"code\":\"invalid_resource_state\"}",
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 13 seconds."
+  }
  },
  "taeglich-tiktok-en-s02-teil-2": {
   "ok": false,
@@ -3757,7 +4054,10 @@
   "http": 201,
   "am": "2026-11-04T04:55:53.767Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 12 seconds."
+  }
  },
  "taeglich-tiktok-en-s02-teil-3": {
   "ok": false,
@@ -3769,7 +4069,10 @@
   "http": 201,
   "am": "2026-11-04T04:55:56.782Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 12 seconds."
+  }
  },
  "taeglich-tiktok-en-s02-teil-4": {
   "ok": false,
@@ -3781,7 +4084,10 @@
   "http": 201,
   "am": "2026-11-04T04:55:59.733Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 12 seconds."
+  }
  },
  "taeglich-tiktok-en-s02-teil-5": {
   "ok": false,
@@ -3793,7 +4099,10 @@
   "http": 201,
   "am": "2026-11-04T04:56:03.121Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 12 seconds."
+  }
  },
  "taeglich-tiktok-en-s02-teil-6": {
   "ok": false,
@@ -3805,7 +4114,10 @@
   "http": 201,
   "am": "2026-11-04T04:56:06.524Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 12 seconds."
+  }
  },
  "taeglich-tiktok-en-s02-teil-7": {
   "ok": false,
@@ -3817,7 +4129,10 @@
   "http": 201,
   "am": "2026-11-04T04:56:09.503Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 11 seconds."
+  }
  },
  "taeglich-tiktok-en-s02-teil-8": {
   "ok": false,
@@ -3841,7 +4156,10 @@
   "http": 201,
   "am": "2026-11-04T10:17:47.595Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "taeglich-insta-en-s02-f02": {
   "ok": false,
@@ -3853,7 +4171,10 @@
   "http": 201,
   "am": "2026-11-04T10:17:51.083Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "taeglich-insta-en-s02-f03": {
   "ok": false,
@@ -3865,7 +4186,10 @@
   "http": 201,
   "am": "2026-11-04T10:17:54.427Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "taeglich-insta-en-s02-f04": {
   "ok": false,
@@ -3877,7 +4201,10 @@
   "http": 201,
   "am": "2026-11-04T10:17:57.786Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "taeglich-insta-en-s02-f05": {
   "ok": false,
@@ -3889,7 +4216,10 @@
   "http": 201,
   "am": "2026-11-04T10:18:00.966Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "taeglich-insta-en-s02-f06": {
   "ok": false,
@@ -3901,7 +4231,10 @@
   "http": 201,
   "am": "2026-11-04T10:18:04.246Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "taeglich-insta-en-s02-f07": {
   "ok": false,
@@ -3913,7 +4246,10 @@
   "http": 201,
   "am": "2026-11-04T10:18:07.677Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "taeglich-insta-en-s02-f08": {
   "ok": false,
@@ -3925,7 +4261,10 @@
   "http": 201,
   "am": "2026-11-04T10:18:10.923Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "taeglich-yt-en-s02-f01": {
   "ok": false,
@@ -3937,7 +4276,10 @@
   "http": 201,
   "am": "2026-11-04T10:18:13.401Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "taeglich-yt-en-s02-f02": {
   "ok": false,
@@ -3949,7 +4291,10 @@
   "http": 201,
   "am": "2026-11-04T10:18:15.929Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "taeglich-yt-en-s02-f03": {
   "ok": false,
@@ -3961,7 +4306,10 @@
   "http": 201,
   "am": "2026-11-04T10:18:18.606Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "taeglich-yt-en-s02-f04": {
   "ok": false,
@@ -3973,7 +4321,10 @@
   "http": 201,
   "am": "2026-11-04T10:18:21.042Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "taeglich-yt-en-s02-f05": {
   "ok": false,
@@ -3985,7 +4336,10 @@
   "http": 201,
   "am": "2026-11-04T10:18:23.504Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "taeglich-yt-en-s02-f06": {
   "ok": false,
@@ -3997,7 +4351,10 @@
   "http": 201,
   "am": "2026-11-04T10:18:26.755Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "taeglich-yt-en-s02-f07": {
   "ok": false,
@@ -4009,7 +4366,10 @@
   "http": 201,
   "am": "2026-11-04T10:18:29.296Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "taeglich-yt-en-s02-f08": {
   "ok": false,
@@ -4021,7 +4381,10 @@
   "http": 201,
   "am": "2026-11-04T10:18:31.828Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "taeglich-tiktok-s02-teil-1": {
   "ok": true,
@@ -4031,7 +4394,12 @@
   "k": 0,
   "konto": "storys4you.de1",
   "http": 201,
-  "am": "2026-11-05T20:57:43.829Z"
+  "am": "2026-11-05T20:57:43.829Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.tiktok.com/@storys4you.de1/video/7705012861382282529"
+  }
  },
  "taeglich-tiktok-s02-teil-2": {
   "ok": true,
@@ -4041,7 +4409,10 @@
   "k": 0,
   "konto": "storys4you.de1",
   "http": 201,
-  "am": "2026-11-05T20:57:47.040Z"
+  "am": "2026-11-05T20:57:47.040Z",
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 17 seconds."
+  }
  },
  "taeglich-tiktok-s02-teil-3": {
   "ok": false,
@@ -4053,7 +4424,10 @@
   "http": 201,
   "am": "2026-11-05T20:57:49.965Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "taeglich-tiktok-s02-teil-4": {
   "ok": false,
@@ -4065,7 +4439,10 @@
   "http": 201,
   "am": "2026-11-05T20:57:52.945Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 16 seconds."
+  }
  },
  "taeglich-tiktok-s02-teil-5": {
   "ok": false,
@@ -4077,7 +4454,10 @@
   "http": 201,
   "am": "2026-11-05T20:57:56.062Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 16 seconds."
+  }
  },
  "taeglich-tiktok-s02-teil-6": {
   "ok": false,
@@ -4089,7 +4469,10 @@
   "http": 201,
   "am": "2026-11-05T20:57:59.085Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 16 seconds."
+  }
  },
  "taeglich-tiktok-s02-teil-7": {
   "ok": false,
@@ -4101,7 +4484,10 @@
   "http": 201,
   "am": "2026-11-05T20:58:02.116Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 16 seconds."
+  }
  },
  "taeglich-tiktok-s02-teil-8": {
   "ok": false,
@@ -4123,7 +4509,10 @@
   "k": 0,
   "konto": "sto.rys4you",
   "http": 201,
-  "am": "2026-11-05T20:58:11.060Z"
+  "am": "2026-11-05T20:58:11.060Z",
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 16 seconds."
+  }
  },
  "taeglich-insta-s02-f02": {
   "ok": true,
@@ -4133,7 +4522,10 @@
   "k": 0,
   "konto": "sto.rys4you",
   "http": 201,
-  "am": "2026-11-05T20:58:13.962Z"
+  "am": "2026-11-05T20:58:13.962Z",
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 15 seconds."
+  }
  },
  "taeglich-insta-s02-f03": {
   "ok": true,
@@ -4143,7 +4535,10 @@
   "k": 0,
   "konto": "sto.rys4you",
   "http": 201,
-  "am": "2026-11-05T20:58:16.858Z"
+  "am": "2026-11-05T20:58:16.858Z",
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 15 seconds."
+  }
  },
  "taeglich-yt-s02-f01": {
   "ok": true,
@@ -4153,7 +4548,10 @@
   "k": 1,
   "konto": "sto.rys4you",
   "http": 201,
-  "am": "2026-11-05T20:58:34.450Z"
+  "am": "2026-11-05T20:58:34.450Z",
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 14 seconds."
+  }
  },
  "taeglich-yt-s02-f02": {
   "ok": true,
@@ -4163,7 +4561,10 @@
   "k": 1,
   "konto": "sto.rys4you",
   "http": 201,
-  "am": "2026-11-05T20:58:37.167Z"
+  "am": "2026-11-05T20:58:37.167Z",
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 14 seconds."
+  }
  },
  "taeglich-yt-s02-f03": {
   "ok": true,
@@ -4173,7 +4574,10 @@
   "k": 1,
   "konto": "sto.rys4you",
   "http": 201,
-  "am": "2026-11-05T20:58:39.835Z"
+  "am": "2026-11-05T20:58:39.835Z",
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 14 seconds."
+  }
  },
  "taeglich-tiktok-en-s02-teil-1-v2": {
   "ok": true,
@@ -4183,7 +4587,10 @@
   "k": 1,
   "konto": "storys4you_eng",
   "http": 201,
-  "am": "2026-11-05T20:58:56.202Z"
+  "am": "2026-11-05T20:58:56.202Z",
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 8 seconds."
+  }
  },
  "taeglich-tiktok-en-s02-teil-2-v2": {
   "ok": true,
@@ -4193,7 +4600,10 @@
   "k": 1,
   "konto": "storys4you_eng",
   "http": 201,
-  "am": "2026-11-05T20:58:59.266Z"
+  "am": "2026-11-05T20:58:59.266Z",
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 8 seconds."
+  }
  },
  "taeglich-tiktok-en-s02-teil-3-v2": {
   "ok": true,
@@ -4203,7 +4613,10 @@
   "k": 1,
   "konto": "storys4you_eng",
   "http": 201,
-  "am": "2026-11-05T20:59:02.244Z"
+  "am": "2026-11-05T20:59:02.244Z",
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 8 seconds."
+  }
  },
  "taeglich-tiktok-en-s02-teil-4-v2": {
   "ok": true,
@@ -4213,7 +4626,10 @@
   "k": 1,
   "konto": "storys4you_eng",
   "http": 201,
-  "am": "2026-11-05T20:59:05.369Z"
+  "am": "2026-11-05T20:59:05.369Z",
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 8 seconds."
+  }
  },
  "taeglich-tiktok-en-s02-teil-5-v2": {
   "ok": true,
@@ -4223,7 +4639,10 @@
   "k": 1,
   "konto": "storys4you_eng",
   "http": 201,
-  "am": "2026-11-05T20:59:09.554Z"
+  "am": "2026-11-05T20:59:09.554Z",
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 7 seconds."
+  }
  },
  "taeglich-tiktok-en-s02-teil-6-v2": {
   "ok": true,
@@ -4233,7 +4652,10 @@
   "k": 1,
   "konto": "storys4you_eng",
   "http": 201,
-  "am": "2026-11-05T20:59:12.441Z"
+  "am": "2026-11-05T20:59:12.441Z",
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 7 seconds."
+  }
  },
  "taeglich-tiktok-en-s02-teil-7-v2": {
   "ok": true,
@@ -4243,7 +4665,10 @@
   "k": 1,
   "konto": "storys4you_eng",
   "http": 201,
-  "am": "2026-11-05T20:59:15.304Z"
+  "am": "2026-11-05T20:59:15.304Z",
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 7 seconds."
+  }
  },
  "taeglich-tiktok-en-s02-teil-8-v2": {
   "ok": true,
@@ -4263,7 +4688,12 @@
   "k": 2,
   "konto": "sory4you_eng",
   "http": 201,
-  "am": "2026-11-05T20:59:21.207Z"
+  "am": "2026-11-05T20:59:21.207Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfZPUrUiBtD/"
+  }
  },
  "taeglich-insta-en-s02-f02-v2": {
   "ok": true,
@@ -4273,7 +4703,12 @@
   "k": 2,
   "konto": "sory4you_eng",
   "http": 201,
-  "am": "2026-11-05T20:59:24.245Z"
+  "am": "2026-11-05T20:59:24.245Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfZfkoODety/"
+  }
  },
  "taeglich-insta-en-s02-f03-v2": {
   "ok": true,
@@ -4283,7 +4718,12 @@
   "k": 2,
   "konto": "sory4you_eng",
   "http": 201,
-  "am": "2026-11-05T20:59:27.186Z"
+  "am": "2026-11-05T20:59:27.186Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfZom5EjBNN/"
+  }
  },
  "taeglich-yt-en-s02-f01-v2": {
   "ok": true,
@@ -4293,7 +4733,12 @@
   "k": 2,
   "konto": "storys4you_eng",
   "http": 201,
-  "am": "2026-11-05T20:59:45.763Z"
+  "am": "2026-11-05T20:59:45.763Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=YN11-dTSguM"
+  }
  },
  "taeglich-yt-en-s02-f02-v2": {
   "ok": true,
@@ -4303,7 +4748,12 @@
   "k": 2,
   "konto": "storys4you_eng",
   "http": 201,
-  "am": "2026-11-05T20:59:48.399Z"
+  "am": "2026-11-05T20:59:48.399Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=IrDIq297prw"
+  }
  },
  "taeglich-yt-en-s02-f03-v2": {
   "ok": true,
@@ -4313,7 +4763,12 @@
   "k": 2,
   "konto": "storys4you_eng",
   "http": 201,
-  "am": "2026-11-05T20:59:51.032Z"
+  "am": "2026-11-05T20:59:51.032Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=966oZShbPDM"
+  }
  },
  "taeglich-insta-s02-f04": {
   "ok": true,
@@ -4323,7 +4778,10 @@
   "k": 0,
   "konto": "sto.rys4you",
   "http": 201,
-  "am": "2026-11-06T13:38:27.075Z"
+  "am": "2026-11-06T13:38:27.075Z",
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 15 seconds."
+  }
  },
  "taeglich-insta-s02-f05": {
   "ok": false,
@@ -4335,7 +4793,10 @@
   "http": 201,
   "am": "2026-11-06T13:38:30.744Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 15 seconds."
+  }
  },
  "taeglich-insta-s02-f06": {
   "ok": false,
@@ -4347,7 +4808,10 @@
   "http": 201,
   "am": "2026-11-06T13:38:34.142Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 15 seconds."
+  }
  },
  "taeglich-insta-s02-f07": {
   "ok": false,
@@ -4359,7 +4823,10 @@
   "http": 201,
   "am": "2026-11-06T13:38:37.531Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Post not found"
+  }
  },
  "taeglich-insta-s02-f08": {
   "ok": false,
@@ -4371,7 +4838,10 @@
   "http": 201,
   "am": "2026-11-06T13:38:40.889Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 14 seconds."
+  }
  },
  "taeglich-yt-s02-f04": {
   "ok": true,
@@ -4381,7 +4851,10 @@
   "k": 1,
   "konto": "sto.rys4you",
   "http": 201,
-  "am": "2026-11-06T13:38:43.775Z"
+  "am": "2026-11-06T13:38:43.775Z",
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 14 seconds."
+  }
  },
  "taeglich-yt-s02-f05": {
   "ok": false,
@@ -4393,7 +4866,10 @@
   "http": 201,
   "am": "2026-11-06T13:38:46.495Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 13 seconds."
+  }
  },
  "taeglich-yt-s02-f06": {
   "ok": false,
@@ -4405,7 +4881,10 @@
   "http": 201,
   "am": "2026-11-06T13:38:49.365Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 13 seconds."
+  }
  },
  "taeglich-yt-s02-f07": {
   "ok": false,
@@ -4417,7 +4896,10 @@
   "http": 201,
   "am": "2026-11-06T13:38:51.986Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 13 seconds."
+  }
  },
  "taeglich-yt-s02-f08": {
   "ok": false,
@@ -4429,7 +4911,10 @@
   "http": 201,
   "am": "2026-11-06T13:38:55.071Z",
   "geloescht": true,
-  "loeschHttp": 200
+  "loeschHttp": 200,
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 13 seconds."
+  }
  },
  "taeglich-insta-en-s02-f04-v2": {
   "ok": true,
@@ -4439,7 +4924,12 @@
   "k": 2,
   "konto": "sory4you_eng",
   "http": 201,
-  "am": "2026-11-06T13:38:58.481Z"
+  "am": "2026-11-06T13:38:58.481Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfaVlc9lSOP/"
+  }
  },
  "taeglich-insta-en-s02-f05-v2": {
   "ok": true,
@@ -4449,7 +4939,12 @@
   "k": 2,
   "konto": "sory4you_eng",
   "http": 201,
-  "am": "2026-11-06T13:39:02.600Z"
+  "am": "2026-11-06T13:39:02.600Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/Dfbi5amiaYE/"
+  }
  },
  "taeglich-insta-en-s02-f06-v2": {
   "ok": true,
@@ -4459,7 +4954,12 @@
   "k": 2,
   "konto": "sory4you_eng",
   "http": 201,
-  "am": "2026-11-06T13:39:06.324Z"
+  "am": "2026-11-06T13:39:06.324Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/Dfb5QVeicUj/"
+  }
  },
  "taeglich-insta-en-s02-f07-v2": {
   "ok": true,
@@ -4469,7 +4969,12 @@
   "k": 2,
   "konto": "sory4you_eng",
   "http": 201,
-  "am": "2026-11-06T13:39:09.868Z"
+  "am": "2026-11-06T13:39:09.868Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfcRw4jj_Xa/"
+  }
  },
  "taeglich-insta-en-s02-f08-v2": {
   "ok": true,
@@ -4479,7 +4984,12 @@
   "k": 2,
   "konto": "sory4you_eng",
   "http": 201,
-  "am": "2026-11-06T13:39:13.573Z"
+  "am": "2026-11-06T13:39:13.573Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfckmApIFRQ/"
+  }
  },
  "taeglich-yt-en-s02-f04-v2": {
   "ok": true,
@@ -4489,7 +4999,12 @@
   "k": 2,
   "konto": "storys4you_eng",
   "http": 201,
-  "am": "2026-11-06T13:39:16.452Z"
+  "am": "2026-11-06T13:39:16.452Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=M2GoW5ZTINk"
+  }
  },
  "taeglich-yt-en-s02-f05-v2": {
   "ok": true,
@@ -4499,7 +5014,12 @@
   "k": 2,
   "konto": "storys4you_eng",
   "http": 201,
-  "am": "2026-11-06T13:39:19.243Z"
+  "am": "2026-11-06T13:39:19.243Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=ODnpdImYvzI"
+  }
  },
  "taeglich-yt-en-s02-f06-v2": {
   "ok": true,
@@ -4509,7 +5029,12 @@
   "k": 2,
   "konto": "storys4you_eng",
   "http": 201,
-  "am": "2026-11-06T13:39:21.867Z"
+  "am": "2026-11-06T13:39:21.867Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=1lEr_EyZx60"
+  }
  },
  "taeglich-yt-en-s02-f07-v2": {
   "ok": true,
@@ -4519,7 +5044,12 @@
   "k": 2,
   "konto": "storys4you_eng",
   "http": 201,
-  "am": "2026-11-06T13:39:24.556Z"
+  "am": "2026-11-06T13:39:24.556Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=2ydJ023jwtU"
+  }
  },
  "taeglich-yt-en-s02-f08-v2": {
   "ok": true,
@@ -4529,7 +5059,12 @@
   "k": 2,
   "konto": "storys4you_eng",
   "http": 201,
-  "am": "2026-11-06T13:39:27.236Z"
+  "am": "2026-11-06T13:39:27.236Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=BgL1gshy4Zg"
+  }
  },
  "taeglich-tiktok-s01-teil-1-v2": {
   "ok": true,
@@ -4539,7 +5074,12 @@
   "k": 0,
   "konto": "storys4you.de1",
   "http": 201,
-  "am": "2026-11-06T17:29:46.779Z"
+  "am": "2026-11-06T17:29:46.779Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.tiktok.com/@storys4you.de1/video/7705127921660333345"
+  }
  },
  "taeglich-tiktok-s01-teil-2-v2": {
   "ok": true,
@@ -4549,7 +5089,12 @@
   "k": 0,
   "konto": "storys4you.de1",
   "http": 201,
-  "am": "2026-11-06T17:29:51.950Z"
+  "am": "2026-11-06T17:29:51.950Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.tiktok.com/@storys4you.de1/video/7705314584843930912"
+  }
  },
  "taeglich-tiktok-s01-teil-3-v2": {
   "ok": true,
@@ -4559,7 +5104,12 @@
   "k": 0,
   "konto": "storys4you.de1",
   "http": 201,
-  "am": "2026-11-06T17:30:20.379Z"
+  "am": "2026-11-06T17:30:20.379Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.tiktok.com/@storys4you.de1/video/7705387073523420449"
+  }
  },
  "taeglich-tiktok-s01-teil-4-v2": {
   "ok": true,
@@ -4569,7 +5119,12 @@
   "k": 0,
   "konto": "storys4you.de1",
   "http": 201,
-  "am": "2026-11-06T17:30:25.541Z"
+  "am": "2026-11-06T17:30:25.541Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.tiktok.com/@storys4you.de1/video/7705440134086380832"
+  }
  },
  "taeglich-insta-s01-f01-v2": {
   "ok": true,
@@ -4579,7 +5134,12 @@
   "k": 0,
   "konto": "sto.rys4you",
   "http": 201,
-  "am": "2026-11-06T17:30:28.999Z"
+  "am": "2026-11-06T17:30:28.999Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfaWY0eE649/"
+  }
  },
  "taeglich-insta-s01-f02-v2": {
   "ok": true,
@@ -4589,7 +5149,12 @@
   "k": 0,
   "konto": "sto.rys4you",
   "http": 201,
-  "am": "2026-11-06T17:30:32.823Z"
+  "am": "2026-11-06T17:30:32.823Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfbkOqhkaHF/"
+  }
  },
  "taeglich-insta-s01-f03-v2": {
   "ok": true,
@@ -4599,7 +5164,10 @@
   "k": 0,
   "konto": "sto.rys4you",
   "http": 201,
-  "am": "2026-11-06T17:30:36.218Z"
+  "am": "2026-11-06T17:30:36.218Z",
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 2 seconds."
+  }
  },
  "taeglich-insta-s01-f04-v2": {
   "ok": true,
@@ -4609,7 +5177,10 @@
   "k": 0,
   "konto": "sto.rys4you",
   "http": 201,
-  "am": "2026-11-06T17:30:39.478Z"
+  "am": "2026-11-06T17:30:39.478Z",
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 2 seconds."
+  }
  },
  "taeglich-insta-s01-f05-v2": {
   "ok": true,
@@ -4619,7 +5190,10 @@
   "k": 0,
   "konto": "sto.rys4you",
   "http": 201,
-  "am": "2026-11-06T17:30:42.668Z"
+  "am": "2026-11-06T17:30:42.668Z",
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 2 seconds."
+  }
  },
  "taeglich-insta-s01-f06-v2": {
   "ok": true,
@@ -4629,7 +5203,10 @@
   "k": 0,
   "konto": "sto.rys4you",
   "http": 201,
-  "am": "2026-11-06T17:30:46.686Z"
+  "am": "2026-11-06T17:30:46.686Z",
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 1 seconds."
+  }
  },
  "taeglich-insta-s01-f07-v2": {
   "ok": true,
@@ -4679,7 +5256,10 @@
   "k": 1,
   "konto": "sto.rys4you",
   "http": 201,
-  "am": "2026-11-06T17:31:06.582Z"
+  "am": "2026-11-06T17:31:06.582Z",
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 1 seconds."
+  }
  },
  "taeglich-yt-s01-f02-v2": {
   "ok": true,
@@ -4689,7 +5269,10 @@
   "k": 1,
   "konto": "sto.rys4you",
   "http": 201,
-  "am": "2026-11-06T17:31:11.423Z"
+  "am": "2026-11-06T17:31:11.423Z",
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 1 seconds."
+  }
  },
  "taeglich-yt-s01-f03-v2": {
   "ok": true,
@@ -4699,7 +5282,10 @@
   "k": 1,
   "konto": "sto.rys4you",
   "http": 201,
-  "am": "2026-11-06T17:31:15.592Z"
+  "am": "2026-11-06T17:31:15.592Z",
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 1 seconds."
+  }
  },
  "taeglich-yt-s01-f04-v2": {
   "ok": true,
@@ -4709,7 +5295,10 @@
   "k": 1,
   "konto": "sto.rys4you",
   "http": 201,
-  "am": "2026-11-06T17:31:19.575Z"
+  "am": "2026-11-06T17:31:19.575Z",
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 1 seconds."
+  }
  },
  "taeglich-yt-s01-f05-v2": {
   "ok": true,
@@ -4719,7 +5308,10 @@
   "k": 1,
   "konto": "sto.rys4you",
   "http": 201,
-  "am": "2026-11-06T17:31:23.542Z"
+  "am": "2026-11-06T17:31:23.542Z",
+  "ergebnis": {
+   "fehler": "Rate limit exceeded. Please retry after 1 seconds."
+  }
  },
  "taeglich-yt-s01-f06-v2": {
   "ok": true,
@@ -4779,7 +5371,12 @@
   "k": 0,
   "konto": "storys4you.de1",
   "http": 201,
-  "am": "2026-11-06T17:31:48.600Z"
+  "am": "2026-11-06T17:31:48.600Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.tiktok.com/@storys4you.de1/video/7705503496283426080"
+  }
  },
  "taeglich-tiktok-s03-teil-1": {
   "ok": true,
