@@ -1,0 +1,212 @@
+{
+ "dauer": 78.898,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "haltestelle",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 5.246,
+   "emotion": "erzaehlend",
+   "text": "In achtzig Sekunden lässt du deinen besten Freund allein in den Regen gehen."
+  },
+  {
+   "nr": 2,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 5.246,
+   "dauer": 3.518,
+   "emotion": "traurig",
+   "text": "Und es ist das Richtige. Auch wenn es sich anfühlt wie Verrat."
+  },
+  {
+   "nr": 3,
+   "typ": "fundhaus",
+   "kapitel": 2,
+   "start": 8.764,
+   "dauer": 4.55,
+   "emotion": "erzaehlend",
+   "text": "Siebzehn Uhr dreißig. Draußen prasselt Regen aufs Vordach."
+  },
+  {
+   "nr": 4,
+   "typ": "fundhaus",
+   "kapitel": 2,
+   "start": 13.314,
+   "dauer": 3.206,
+   "emotion": "erzaehlend",
+   "text": "Rike fragt Sami zum dritten Mal, wo er mittags war."
+  },
+  {
+   "nr": 5,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 16.52,
+   "dauer": 2.054,
+   "emotion": "ernst",
+   "text": "„Ich frage so lange, bis es stimmt.“"
+  },
+  {
+   "nr": 6,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 18.574,
+   "dauer": 1.91,
+   "emotion": "wuetend",
+   "text": "Sami hat keine Witze mehr übrig."
+  },
+  {
+   "nr": 7,
+   "typ": "objekt",
+   "kapitel": 3,
+   "start": 20.484,
+   "dauer": 4.022,
+   "emotion": "erklaerend",
+   "text": "Er nimmt beide Quittungen von der Theke. Seine Finger an den Ecken."
+  },
+  {
+   "nr": 8,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 24.506,
+   "dauer": 2.414,
+   "emotion": "traurig",
+   "text": "„Ohne Papier gibt's nichts mehr zu verhören.“"
+  },
+  {
+   "nr": 9,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 26.92,
+   "dauer": 3.734,
+   "emotion": "spannend",
+   "text": "Er will sie zerreißen. Beide. Auch die, die ihn retten könnte."
+  },
+  {
+   "nr": 10,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 30.654,
+   "dauer": 2.822,
+   "emotion": "ernst",
+   "text": "„Sami. Ohne Papier glauben alle Rike.“"
+  },
+  {
+   "nr": 11,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 33.476,
+   "dauer": 2.414,
+   "emotion": "traurig",
+   "text": "„Mir glaubt sowieso keiner. Nicht mal du.“"
+  },
+  {
+   "nr": 12,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 35.89,
+   "dauer": 3.734,
+   "emotion": "traurig",
+   "text": "Das stimmt nicht. Aber heute hast du ihn angesehen wie einen Verdächtigen."
+  },
+  {
+   "nr": 13,
+   "typ": "objekt",
+   "kapitel": 3,
+   "start": 39.624,
+   "dauer": 3.71,
+   "emotion": "erklaerend",
+   "text": "Du schiebst ihm Jonas' Uhr über die Theke. Sie tickt immer noch."
+  },
+  {
+   "nr": 14,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 43.334,
+   "dauer": 2.63,
+   "emotion": "traurig",
+   "text": "„Die gehört dir. Die Papiere bleiben hier.“"
+  },
+  {
+   "nr": 15,
+   "typ": "fundhaus",
+   "kapitel": 4,
+   "start": 45.964,
+   "dauer": 3.254,
+   "emotion": "erzaehlend",
+   "text": "Lange passiert nichts. Nur der Regen und das Ticken."
+  },
+  {
+   "nr": 16,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 49.218,
+   "dauer": 3.782,
+   "emotion": "traurig",
+   "text": "Dann legt er die Quittungen auf die Theke. Und nimmt nur die Uhr."
+  },
+  {
+   "nr": 17,
+   "typ": "haltestelle",
+   "kapitel": 4,
+   "start": 53.0,
+   "dauer": 3.638,
+   "emotion": "erzaehlend",
+   "text": "Er geht ohne Schirm. Seine grüne Jacke wird dunkel vom Regen."
+  },
+  {
+   "nr": 18,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 56.638,
+   "dauer": 3.878,
+   "emotion": "traurig",
+   "text": "Deine Ärmel sind kalt und nass. Du hast ihm nicht mal Tschüss gesagt."
+  },
+  {
+   "nr": 19,
+   "typ": "park",
+   "kapitel": 4,
+   "start": 60.516,
+   "dauer": 3.23,
+   "emotion": "erzaehlend",
+   "text": "Ihr kennt euch seit zwölf Jahren. Noch nie ist er so gegangen."
+  },
+  {
+   "nr": 20,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 63.746,
+   "dauer": 4.502,
+   "emotion": "traurig",
+   "text": "Am ersten Schultag hat er dir seinen halben Apfel gegeben, weil du deinen vergessen hattest."
+  },
+  {
+   "nr": 21,
+   "typ": "fundhaus",
+   "kapitel": 4,
+   "start": 68.248,
+   "dauer": 3.59,
+   "emotion": "erzaehlend",
+   "text": "Drinnen riecht es nach Seife. Neben dir steht ein leerer Stuhl."
+  },
+  {
+   "nr": 22,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 71.838,
+   "dauer": 2.918,
+   "emotion": "erzaehlend",
+   "text": "Du könntest ihm nachrennen. Alles liegen lassen."
+  },
+  {
+   "nr": 23,
+   "typ": "objekt",
+   "kapitel": 5,
+   "start": 74.756,
+   "dauer": 4.142,
+   "emotion": "erklaerend",
+   "text": "Stattdessen legst du seine Quittung zu den Beweisen. Und lässt ihn gehen."
+  }
+ ]
+}
