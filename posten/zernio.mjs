@@ -180,12 +180,23 @@ if (args.includes("--status")) {
   const iso = d => d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0") + "T" + String(d.getHours()).padStart(2, "0") + ":" + String(d.getMinutes()).padStart(2, "0");
   for (const post of plan.posts) {
     const st = status[post.id];
-    if (!st?.zernioId || post.zeit.slice(0, 16) > iso(jetzt)) continue;
-    const r = await api("GET", `/posts/${st.zernioId}`, null, keyVon(post, st));
+    if (!st?.zernioId || st.geloescht || post.zeit.slice(0, 16) > iso(jetzt)) continue;
+    // schon veröffentlicht mit Link: nicht erneut fragen (sonst drosselt Zernio mit 429, 7.11.)
+    if (String(st.ergebnis?.status || "").startsWith("pub") && st.ergebnis?.url) continue;
+    let r;
+    for (let versuch = 0; versuch < 4; versuch++) {
+      r = await api("GET", `/posts/${st.zernioId}`, null, keyVon(post, st));
+      if (r.status !== 429) break;
+      const s = Number(/retry after (\d+)/i.exec(JSON.stringify(r.json))?.[1] || 20);
+      await new Promise(res => setTimeout(res, (s + 2) * 1000));
+    }
+    await new Promise(res => setTimeout(res, 300));
     const p = r.json?.post || r.json || {};
     const pl = (p.platforms || [])[0] || {};
     const info = { status: p.status, plattform: pl.status, url: pl.platformPostUrl || pl.url || pl.publishedUrl, fehler: pl.errorMessage || pl.error || p.error };
-    st.ergebnis = info; speichern();
+    // eine fehlgeschlagene Abfrage überschreibt kein gutes Ergebnis
+    if (r.ok || !st.ergebnis?.status) st.ergebnis = r.ok ? info : { fehler: info.fehler || `HTTP ${r.status}` };
+    speichern();
     console.log(`${post.id} (${post.zeit}): ${JSON.stringify(info)}${r.ok ? "" : " HTTP " + r.status + " " + JSON.stringify(r.json).slice(0, 300)}`);
   }
   process.exit(0);
