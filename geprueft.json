@@ -1464,6 +1464,54 @@
    "bild_s": 72.03,
    "ton_s": 72.02,
    "lufs": -14.5
+  },
+  "taeglich/s03-f01.mp4": {
+   "ok": true,
+   "bild_s": 130.48,
+   "ton_s": 130.47,
+   "lufs": -14.6
+  },
+  "taeglich/s03-f02.mp4": {
+   "ok": true,
+   "bild_s": 129.22,
+   "ton_s": 129.22,
+   "lufs": -14.6
+  },
+  "taeglich/s03-f03.mp4": {
+   "ok": true,
+   "bild_s": 122.7,
+   "ton_s": 122.73,
+   "lufs": -14.6
+  },
+  "taeglich/s03-f04.mp4": {
+   "ok": true,
+   "bild_s": 122.07,
+   "ton_s": 122.09,
+   "lufs": -14.7
+  },
+  "taeglich-tiktok/s03-teil-1.mp4": {
+   "ok": true,
+   "bild_s": 130.48,
+   "ton_s": 130.47,
+   "lufs": -14.6
+  },
+  "taeglich-tiktok/s03-teil-2.mp4": {
+   "ok": true,
+   "bild_s": 129.22,
+   "ton_s": 129.22,
+   "lufs": -14.6
+  },
+  "taeglich-tiktok/s03-teil-3.mp4": {
+   "ok": true,
+   "bild_s": 122.7,
+   "ton_s": 122.71,
+   "lufs": -14.5
+  },
+  "taeglich-tiktok/s03-teil-4.mp4": {
+   "ok": true,
+   "bild_s": 122.07,
+   "ton_s": 122.07,
+   "lufs": -14.6
   }
  },
  "serien": {
@@ -1706,6 +1754,24 @@
     ],
     [
      8
+    ]
+   ]
+  },
+  "s03": {
+   "titel": "Der Nachahmer",
+   "folgen": 4,
+   "tiktok_teile": [
+    [
+     1
+    ],
+    [
+     2
+    ],
+    [
+     3
+    ],
+    [
+     4
     ]
    ]
   }
