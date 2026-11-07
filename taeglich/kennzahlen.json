@@ -246,7 +246,54 @@
    "erkenntnis": "Erste Kurzvideo-Folge (s02-f01, kühne Prämisse + Zahl) ist das stärkste Instagram-Reel pro Stunde (47,4/h, Ø 30 s); auf TikTok flacht ihre Kurve nach 10 s ab, der Verlust liegt in 0–4 s; YouTube weiter fast ohne Ausspielung.",
    "posting_fehler": 0,
    "vidiq_credits_danach": 124
+  },
+  {
+   "datum": "2026-11-07T21:50",
+   "quelle": "Analyse vor der Staffel (Zernio 167 Posts, 0 Fehler; vidIQ channel_analytics top_videos 30.10.–7.11., 5 Credits)",
+   "tiktok": {
+    "follower": 69,
+    "follower_30_tage": "+18/-0",
+    "likes_30_tage": 1472,
+    "videos": 25,
+    "taeglich_de": "s01-Teile 1–4 und s02-Teil 1: 245–281 Aufrufe je Post (Test-Topf, keine 2. Welle), 29–31 % nach 4 s",
+    "video_001_v2": "210 Aufrufe in 1 h, 25 Likes, 71/55/49 % nach 1/2/4 s, 33 % nach 10 s (bester Start aller TikToks, sehr jung)"
+   },
+   "tiktok_eng": {
+    "konto": "storys4you_eng",
+    "follower": 1,
+    "likes_30_tage": 33,
+    "videos": 7,
+    "s02": "260–956 Aufrufe je Teil, 55–65 % nach 2 s"
+   },
+   "instagram": {
+    "follower": 8,
+    "aufrufe_30_tage": 31649,
+    "reichweite_30_tage": 16161,
+    "aktive_konten": 296,
+    "interaktionen_30_tage": 427,
+    "s02_f01": "1.654 Aufrufe in 36 h, 45,8/h, Ø 39,9 s (55 %), Abbruch 33,9 %, 47 Likes",
+    "s01_f01_f06": "124–177 Aufrufe je Reel, Ø 7–16 s, Abbruch 44–68 %"
+   },
+   "instagram_eng": {
+    "follower": 1,
+    "aufrufe_30_tage": 608,
+    "hinweis": "s02-f01–f04 1–5 Aufrufe, ab f05 65–168"
+   },
+   "youtube": {
+    "abonnenten": 53,
+    "aufrufe_gesamt_vidiq": 22474,
+    "aufrufe_30_tage_zernio": 23514,
+    "aufrufe_letzter_tag": 228,
+    "taeglich_de": "s02-f01 39, s01-f01–f05 4–178 Aufrufe"
+   },
+   "youtube_eng": {
+    "abonnenten": 10,
+    "s02": "f02 1.254, f03 1.107, f05–f07 184–296 Aufrufe"
+   },
+   "erkenntnis": "s02-f01 bleibt auf Instagram über 36 h bei 45,8/h und Ø 40 s, s01 (Rätsel-Einstieg) bleibt im Test-Topf; video-001 (Aussage über dein Leben) hat den stärksten TikTok-Start aller Posts; englisches YouTube wird ausgespielt, deutsches nicht.",
+   "posting_fehler": 0,
+   "vidiq_credits_danach": 109
   }
  ],
- "letzte_analyse": "taeglich/analyse/2026-11-04.md"
+ "letzte_analyse": "taeglich/analyse/2026-11-07.md"
 }
