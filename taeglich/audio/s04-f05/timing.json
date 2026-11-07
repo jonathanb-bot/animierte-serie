@@ -1,0 +1,203 @@
+{
+ "dauer": 85.868,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "fundhaus",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 6.302,
+   "emotion": "ernst",
+   "text": "In einer Minute legst du deinem eigenen Papa einen Verdacht auf den Tisch. Und er lacht nicht."
+  },
+  {
+   "nr": 2,
+   "typ": "objekt",
+   "kapitel": 1,
+   "start": 6.302,
+   "dauer": 4.958,
+   "emotion": "erklaerend",
+   "text": "Unter der überschriebenen Zeile schimmert eine Nummer durch. W sieben."
+  },
+  {
+   "nr": 3,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 11.26,
+   "dauer": 2.63,
+   "emotion": "spannend",
+   "text": "W sieben ist Papas Werkzeugfach."
+  },
+  {
+   "nr": 4,
+   "typ": "fundhaus",
+   "kapitel": 2,
+   "start": 13.89,
+   "dauer": 3.278,
+   "emotion": "erzaehlend",
+   "text": "Sechzehn Uhr dreißig. Die Wanduhr läuft wieder."
+  },
+  {
+   "nr": 5,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 17.168,
+   "dauer": 4.022,
+   "emotion": "ernst",
+   "text": "Sami sieht dich lange an. Das ist schlimmer als jeder Witz."
+  },
+  {
+   "nr": 6,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 21.19,
+   "dauer": 2.222,
+   "emotion": "traurig",
+   "text": "„Bei deinem Papa guckst du nicht so genau.“"
+  },
+  {
+   "nr": 7,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 23.412,
+   "dauer": 3.758,
+   "emotion": "traurig",
+   "text": "Das trifft. Weil ein Teil von dir genau das will."
+  },
+  {
+   "nr": 8,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 27.17,
+   "dauer": 3.926,
+   "emotion": "ernst",
+   "text": "Aber gleiche Regeln für alle. Sonst ist nichts davon fair."
+  },
+  {
+   "nr": 9,
+   "typ": "fundhaus",
+   "kapitel": 3,
+   "start": 31.096,
+   "dauer": 6.398,
+   "emotion": "erzaehlend",
+   "text": "Papa sitzt im Hof an der Werkbank. Der Wind klappert mit dem Blechdach. Es riecht nach Holzleim."
+  },
+  {
+   "nr": 10,
+   "typ": "fundhaus",
+   "kapitel": 3,
+   "start": 37.494,
+   "dauer": 3.686,
+   "emotion": "erzaehlend",
+   "text": "Du legst ihm beide Papiere hin. Offen, vor Sami."
+  },
+  {
+   "nr": 11,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 41.18,
+   "dauer": 2.51,
+   "emotion": "erzaehlend",
+   "text": "„Papa. Hier steht dein Fach.“"
+  },
+  {
+   "nr": 12,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 43.69,
+   "dauer": 4.814,
+   "emotion": "erzaehlend",
+   "text": "Er liest langsam. Seine großen Hände halten das Papier wie etwas Zerbrechliches."
+  },
+  {
+   "nr": 13,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 48.504,
+   "dauer": 2.558,
+   "emotion": "froh",
+   "text": "„Gut, dass du fragst. Genau so.“"
+  },
+  {
+   "nr": 14,
+   "typ": "objekt",
+   "kapitel": 3,
+   "start": 51.062,
+   "dauer": 4.742,
+   "emotion": "erklaerend",
+   "text": "In einer Schale liegt ein zerlegter Stempel. Die Feder ist gebrochen."
+  },
+  {
+   "nr": 15,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 55.804,
+   "dauer": 2.438,
+   "emotion": "erzaehlend",
+   "text": "„Den hab ich heute aus Fach sieben geholt.“"
+  },
+  {
+   "nr": 16,
+   "typ": "objekt",
+   "kapitel": 3,
+   "start": 58.242,
+   "dauer": 5.438,
+   "emotion": "erklaerend",
+   "text": "Dazu Papas eigener Beleg. Fach W sieben. Abgestempelt, zur Reparatur."
+  },
+  {
+   "nr": 17,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 63.68,
+   "dauer": 2.966,
+   "emotion": "froh",
+   "text": "Sami atmet aus. Dann grinst er schief."
+  },
+  {
+   "nr": 18,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 66.646,
+   "dauer": 2.99,
+   "emotion": "froh",
+   "text": "„Okay. Du guckst bei allen gleich genau.“"
+  },
+  {
+   "nr": 19,
+   "typ": "esstisch",
+   "kapitel": 4,
+   "start": 69.636,
+   "dauer": 3.83,
+   "emotion": "erzaehlend",
+   "text": "Abends am Esstisch schaut ihr meistens nur auf eure Teller."
+  },
+  {
+   "nr": 20,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 73.466,
+   "dauer": 3.59,
+   "emotion": "froh",
+   "text": "Heute hat er mehr gesagt als die ganze Woche. Das tut gut."
+  },
+  {
+   "nr": 21,
+   "typ": "objekt",
+   "kapitel": 5,
+   "start": 77.056,
+   "dauer": 2.99,
+   "emotion": "erklaerend",
+   "text": "Du legst Papas Beleg neben die Kassen-Quittung."
+  },
+  {
+   "nr": 22,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 80.046,
+   "dauer": 5.822,
+   "emotion": "spannend",
+   "text": "Die Nummer gehört zu einem Stempel. Nicht zur Kasse. Jemand hat dich auf eine falsche Spur geschickt."
+  }
+ ]
+}
