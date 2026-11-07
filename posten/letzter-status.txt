@@ -1,340 +1,113 @@
 Verbundene Konten: tiktok:storys4you.de1, instagram:sto.rys4you, youtube:sto.rys4you (2. Zernio-Konto), tiktok:storys4you_eng (2. Zernio-Konto), youtube:storys4you_eng (3. Zernio-Konto), instagram:sory4you_eng (3. Zernio-Konto)
-tiktok-08 (2026-10-29T22:30:00): {"status":"published","plattform":"published","url":"https://www.tiktok.com/@storys4you.de1/video/7702205955043298592"}
-tiktok-09 (2026-10-30T17:00:00): {"status":"published","plattform":"published","url":"https://www.tiktok.com/@storys4you.de1/video/7702491881803910433"}
-tiktok-10 (2026-10-30T20:10:00): {"status":"published","plattform":"published","url":"https://www.tiktok.com/@storys4you.de1/video/7702540513945095456"}
-insta-01-1 (2026-10-30T07:00:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfG5PZyEXqk/"}
-insta-01-2 (2026-10-30T09:35:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfHKtKtEhWy/"}
-insta-01-3 (2026-10-30T09:45:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfHL2X2DCWs/"}
-insta-01-4 (2026-10-30T15:00:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfHv5vwjfMz/"}
-insta-01-5 (2026-10-30T20:00:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfISeYJgBjN/"}
-insta-02-1 (2026-10-31T00:00:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfIuABIiQAN/"}
-insta-02-2 (2026-10-31T04:00:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfJJQ9Nj7Eg/"}
-insta-02-3 (2026-10-31T08:00:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfJk16cCRX4/"}
-insta-02-4 (2026-10-31T12:00:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfKAXGhlTXi/"}
-insta-02-5 (2026-10-31T16:00:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfKb0lelIx8/"}
-insta-03-1 (2026-10-31T20:00:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-insta-03-2 (2026-11-01T00:00:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-insta-03-3 (2026-11-01T04:00:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-insta-03-4 (2026-11-01T08:00:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-insta-04-1 (2026-11-01T12:00:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-insta-04-2 (2026-11-01T16:00:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-insta-04-3 (2026-11-01T20:00:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-insta-04-4 (2026-11-02T00:00:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-insta-05-1 (2026-11-02T04:00:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-insta-05-2 (2026-11-02T08:00:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-insta-05-3 (2026-11-02T12:00:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-insta-05-4 (2026-11-02T16:00:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-insta-06-1 (2026-11-02T20:00:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-insta-06-2 (2026-11-03T00:00:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-insta-06-3 (2026-11-03T04:00:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-insta-06-4 (2026-11-03T08:00:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-insta-06-5 (2026-11-03T12:00:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-insta-07-1 (2026-11-03T16:00:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-insta-07-2 (2026-11-03T20:00:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-insta-07-3 (2026-11-04T00:00:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-insta-07-4 (2026-11-04T04:00:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-insta-08-1 (2026-11-04T08:00:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-insta-08-2 (2026-11-04T12:00:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-insta-08-3 (2026-11-04T16:00:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-insta-08-4 (2026-11-04T20:00:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-insta-09-1 (2026-11-05T00:00:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-insta-09-2 (2026-11-05T04:00:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-insta-09-3 (2026-11-05T08:00:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-insta-09-4 (2026-11-05T12:00:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-insta-10-1 (2026-11-05T16:00:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-insta-10-2 (2026-11-05T20:00:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-insta-10-3 (2026-11-06T00:00:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-insta-10-4 (2026-11-06T04:00:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-yt-01-1 (2026-10-30T09:35:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=HjLnypE1Bqg"}
-yt-01-2 (2026-10-30T09:40:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=1eKgUKI4iSQ"}
-yt-01-3 (2026-10-30T09:45:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=x_VVxnQeaWY"}
-yt-01-4 (2026-10-30T15:30:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=5940kUfNa18"}
-yt-01-5 (2026-10-30T20:30:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=fCOKvyvcYrA"}
-yt-02-1 (2026-10-31T00:30:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=DuBr7jnrTnU"}
-yt-02-2 (2026-10-31T04:30:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=HwNV4WFrPuw"}
-yt-02-3 (2026-10-31T08:30:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=YaY-lcTQD-Q"}
-yt-02-4 (2026-10-31T12:30:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=7CbbFlofL1s"}
-yt-02-5 (2026-10-31T16:30:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=lKGxf_YwJ7M"}
-yt-03-1 (2026-10-31T20:30:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-yt-03-2 (2026-11-01T00:30:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-yt-03-3 (2026-11-01T04:30:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-yt-03-4 (2026-11-01T08:30:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-yt-04-1 (2026-11-01T12:30:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-yt-04-2 (2026-11-01T16:30:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-yt-04-3 (2026-11-01T20:30:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-yt-04-4 (2026-11-02T00:30:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-yt-05-1 (2026-11-02T04:30:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-yt-05-2 (2026-11-02T08:30:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-yt-05-3 (2026-11-02T12:30:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-yt-05-4 (2026-11-02T16:30:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-yt-06-1 (2026-11-02T20:30:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-yt-06-2 (2026-11-03T00:30:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-yt-06-3 (2026-11-03T04:30:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-yt-06-4 (2026-11-03T08:30:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-yt-06-5 (2026-11-03T12:30:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-yt-07-1 (2026-11-03T16:30:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-yt-07-2 (2026-11-03T20:30:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-yt-07-3 (2026-11-04T00:30:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-yt-07-4 (2026-11-04T04:30:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-yt-08-1 (2026-11-04T08:30:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-yt-08-2 (2026-11-04T12:30:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-yt-08-3 (2026-11-04T16:30:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-yt-08-4 (2026-11-04T20:30:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-yt-09-1 (2026-11-05T00:30:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-yt-09-2 (2026-11-05T04:30:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-yt-09-3 (2026-11-05T08:30:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-yt-09-4 (2026-11-05T12:30:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-yt-10-1 (2026-11-05T16:30:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-yt-10-2 (2026-11-05T20:30:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-yt-10-3 (2026-11-06T00:30:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-yt-10-4 (2026-11-06T04:30:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-alien-tiktok-01 (2026-10-31T20:00:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-alien-tiktok-02 (2026-11-01T08:00:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-alien-tiktok-03 (2026-11-01T20:00:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-alien-tiktok-04 (2026-11-02T08:00:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-alien-tiktok-05 (2026-11-02T20:00:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-alien-tiktok-06 (2026-11-03T08:00:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-alien-tiktok-07 (2026-11-03T20:00:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-alien-tiktok-08 (2026-11-04T08:00:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-alien-tiktok-09 (2026-11-04T20:00:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-alien-tiktok-10 (2026-11-05T08:00:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-alien-tiktok-teil-1 (2026-10-31T20:00:00): {"status":"published","plattform":"published","url":"https://www.tiktok.com/@storys4you.de1/video/7702909537983925536"}
-alien-tiktok-teil-2 (2026-11-01T08:00:00): {"status":"published","plattform":"published","url":"https://www.tiktok.com/@storys4you.de1/video/7703095037210463521"}
-alien-tiktok-teil-3 (2026-11-01T20:00:00): {"status":"published","plattform":"published","url":"https://www.tiktok.com/@storys4you.de1/video/7703280546016693536"}
-alien-tiktok-teil-4 (2026-11-02T08:00:00): {"status":"published","plattform":"published","url":"https://www.tiktok.com/@storys4you.de1/video/7703465960258227489"}
-alien-tiktok-teil-5 (2026-11-02T20:00:00): {"status":"published","plattform":"published","url":"https://www.tiktok.com/@storys4you.de1/video/7703651825014082848"}
-alien-insta-01-1 (2026-11-06T08:00:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-alien-insta-01-2 (2026-11-06T12:00:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-alien-insta-01-3 (2026-11-06T16:00:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-alien-insta-01-4 (2026-11-06T20:00:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-alien-insta-01-5 (2026-11-07T00:00:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-alien-insta-02-1 (2026-11-07T04:00:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-alien-insta-02-2 (2026-11-07T08:00:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-alien-insta-02-3 (2026-11-07T12:00:00): {"fehler":"Rate limit exceeded. Please retry after 44 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 44 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":44}}
-alien-insta-02-4 (2026-11-07T16:00:00): {"fehler":"Rate limit exceeded. Please retry after 44 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 44 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":44}}
-alien-insta-02-5 (2026-11-07T20:00:00): {"fehler":"Rate limit exceeded. Please retry after 43 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 43 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":43}}
-alien-yt-01-1 (2026-11-06T08:30:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-alien-yt-01-2 (2026-11-06T12:30:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-alien-yt-01-3 (2026-11-06T16:30:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-alien-yt-01-4 (2026-11-06T20:30:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-alien-yt-01-5 (2026-11-07T00:30:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-alien-yt-02-1 (2026-11-07T04:30:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-alien-yt-02-2 (2026-11-07T08:30:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-alien-yt-02-3 (2026-11-07T12:30:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-alien-yt-02-4 (2026-11-07T16:30:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-mann-tiktok-01 (2026-10-30T18:00:00): {"status":"published","plattform":"published","url":"https://www.tiktok.com/@storys4you.de1/video/7702507522141211936"}
-mann-tiktok-01b (2026-11-05T20:00:00): {"fehler":"Rate limit exceeded. Please retry after 41 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 41 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":41}}
-mann-tiktok-02 (2026-11-06T08:00:00): {"fehler":"Rate limit exceeded. Please retry after 41 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 41 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":41}}
-mann-tiktok-03 (2026-11-06T20:00:00): {"fehler":"Rate limit exceeded. Please retry after 41 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 41 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":41}}
-mann-tiktok-04 (2026-11-07T08:00:00): {"fehler":"Rate limit exceeded. Please retry after 41 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 41 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":41}}
-mann-tiktok-05 (2026-11-07T20:00:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-mann-tiktok-teil-1 (2026-11-03T08:00:00): {"fehler":"Rate limit exceeded. Please retry after 40 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 40 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":40}}
-mann-tiktok-teil-2 (2026-11-03T20:00:00): {"fehler":"Rate limit exceeded. Please retry after 40 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 40 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":40}}
-mann-tiktok-teil-3 (2026-11-04T08:00:00): {"fehler":"Rate limit exceeded. Please retry after 40 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 40 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":40}}
-mann-tiktok-teil-4 (2026-11-04T20:00:00): {"fehler":"Rate limit exceeded. Please retry after 40 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 40 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":40}}
-mann-insta-01-1 (2026-10-30T18:00:00): {"fehler":"Rate limit exceeded. Please retry after 39 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 39 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":39}}
-mann-yt-01-1 (2026-10-30T18:30:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=EUDldQykteQ"}
-stock-insta-kurz-03-1 (2026-10-31T20:00:00): {"fehler":"Rate limit exceeded. Please retry after 39 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 39 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":39}}
-stock-yt-kurz-03-1 (2026-10-31T20:30:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=Y-nMgCnrgDA"}
-stock-insta-kurz-03-2 (2026-11-01T00:00:00): {"fehler":"Rate limit exceeded. Please retry after 39 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 39 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":39}}
-stock-yt-kurz-03-2 (2026-11-01T00:30:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=xt5gMXmA1H4"}
-stock-insta-kurz-04-1 (2026-11-01T04:00:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfLt8BSCFk3/"}
-stock-yt-kurz-04-1 (2026-11-01T04:30:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=NU-MMtPxdys"}
-stock-insta-kurz-04-2 (2026-11-01T08:00:00): {"fehler":"Rate limit exceeded. Please retry after 38 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 38 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":38}}
-stock-yt-kurz-04-2 (2026-11-01T08:30:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=iCe50k7SVdE"}
-stock-insta-kurz-05-1 (2026-11-01T12:00:00): {"fehler":"Rate limit exceeded. Please retry after 37 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 37 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":37}}
-stock-yt-kurz-05-1 (2026-11-01T12:30:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=xTwGL5By72s"}
-stock-insta-kurz-05-2 (2026-11-01T16:00:00): {"fehler":"Rate limit exceeded. Please retry after 37 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 37 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":37}}
-stock-yt-kurz-05-2 (2026-11-01T16:30:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=U5iF6W0qdsc"}
-stock-insta-kurz-06-1 (2026-11-01T20:00:00): {"fehler":"Rate limit exceeded. Please retry after 37 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 37 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":37}}
-stock-yt-kurz-06-1 (2026-11-01T20:30:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=CuOTaKGhJ9A"}
-stock-insta-kurz-06-2 (2026-11-02T00:00:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfN3SsigYEn/"}
-stock-yt-kurz-06-2 (2026-11-02T00:30:00): {"fehler":"Rate limit exceeded. Please retry after 36 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 36 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":36}}
-stock-insta-kurz-07-1 (2026-11-02T04:00:00): {"fehler":"Rate limit exceeded. Please retry after 36 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 36 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":36}}
-stock-yt-kurz-07-1 (2026-11-02T04:30:00): {"fehler":"Rate limit exceeded. Please retry after 36 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 36 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":36}}
-stock-insta-kurz-07-2 (2026-11-02T08:00:00): {"fehler":"Rate limit exceeded. Please retry after 35 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 35 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":35}}
-stock-yt-kurz-07-2 (2026-11-02T08:30:00): {"fehler":"Rate limit exceeded. Please retry after 35 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 35 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":35}}
-stock-insta-kurz-08-1 (2026-11-02T12:00:00): {"fehler":"Rate limit exceeded. Please retry after 35 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 35 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":35}}
-stock-yt-kurz-08-1 (2026-11-02T12:30:00): {"fehler":"Rate limit exceeded. Please retry after 35 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 35 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":35}}
-stock-insta-kurz-08-2 (2026-11-02T14:00:00): {"fehler":"Rate limit exceeded. Please retry after 35 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 35 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":35}}
-stock-yt-kurz-08-2 (2026-11-02T14:30:00): {"fehler":"Rate limit exceeded. Please retry after 34 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 34 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":34}}
-stock-insta-kurz-09-1 (2026-11-02T16:00:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfPlrP-E1_Q/"}
-stock-yt-kurz-09-1 (2026-11-02T16:30:00): {"fehler":"Rate limit exceeded. Please retry after 34 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 34 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":34}}
-stock-insta-kurz-09-2 (2026-11-02T18:00:00): {"fehler":"Rate limit exceeded. Please retry after 34 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 34 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":34}}
-stock-yt-kurz-09-2 (2026-11-02T18:30:00): {"fehler":"Rate limit exceeded. Please retry after 34 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 34 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":34}}
-stock-insta-kurz-10-1 (2026-11-02T20:00:00): {"fehler":"Rate limit exceeded. Please retry after 34 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 34 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":34}}
-stock-yt-kurz-10-1 (2026-11-02T20:30:00): {"fehler":"Rate limit exceeded. Please retry after 33 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 33 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":33}}
-stock-insta-kurz-10-2 (2026-11-02T22:00:00): {"fehler":"Rate limit exceeded. Please retry after 33 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 33 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":33}}
-stock-yt-kurz-10-2 (2026-11-02T22:30:00): {"fehler":"Rate limit exceeded. Please retry after 33 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 33 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":33}}
-alien-insta-kurz-01-1 (2026-11-03T00:00:00): {"fehler":"Rate limit exceeded. Please retry after 33 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 33 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":33}}
-alien-yt-kurz-01-1 (2026-11-03T00:30:00): {"fehler":"Rate limit exceeded. Please retry after 33 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 33 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":33}}
-alien-insta-kurz-01-2 (2026-11-03T02:00:00): {"fehler":"Rate limit exceeded. Please retry after 33 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 33 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":33}}
-alien-yt-kurz-01-2 (2026-11-03T02:30:00): {"fehler":"Rate limit exceeded. Please retry after 32 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 32 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":32}}
-alien-insta-kurz-02-1 (2026-11-03T04:00:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfQ3oQxDngb/"}
-alien-yt-kurz-02-1 (2026-11-03T04:30:00): {"fehler":"Rate limit exceeded. Please retry after 32 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 32 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":32}}
-alien-insta-kurz-02-2 (2026-11-03T06:00:00): {"fehler":"Rate limit exceeded. Please retry after 32 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 32 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":32}}
-alien-yt-kurz-02-2 (2026-11-03T06:30:00): {"fehler":"Rate limit exceeded. Please retry after 32 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 32 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":32}}
-alien-insta-kurz-03-1 (2026-11-03T08:00:00): {"fehler":"Rate limit exceeded. Please retry after 31 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 31 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":31}}
-alien-yt-kurz-03-1 (2026-11-03T08:30:00): {"fehler":"Rate limit exceeded. Please retry after 31 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 31 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":31}}
-alien-insta-kurz-03-2 (2026-11-03T10:00:00): {"fehler":"Rate limit exceeded. Please retry after 31 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 31 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":31}}
-alien-yt-kurz-03-2 (2026-11-03T10:30:00): {"fehler":"Rate limit exceeded. Please retry after 31 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 31 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":31}}
-alien-insta-kurz-04-1 (2026-11-03T12:00:00): {"fehler":"Rate limit exceeded. Please retry after 31 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 31 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":31}}
-alien-yt-kurz-04-1 (2026-11-03T12:30:00): {"fehler":"Rate limit exceeded. Please retry after 31 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 31 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":31}}
-alien-insta-kurz-04-2 (2026-11-03T14:00:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfR8jxblU2C/"}
-alien-yt-kurz-04-2 (2026-11-03T14:30:00): {"fehler":"Rate limit exceeded. Please retry after 30 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 30 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":30}}
-alien-insta-kurz-05-1 (2026-11-03T16:00:00): {"fehler":"Rate limit exceeded. Please retry after 30 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 30 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":30}}
-alien-yt-kurz-05-1 (2026-11-03T16:30:00): {"fehler":"Rate limit exceeded. Please retry after 30 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 30 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":30}}
-alien-insta-kurz-05-2 (2026-11-03T18:00:00): {"fehler":"Rate limit exceeded. Please retry after 30 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 30 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":30}}
-alien-yt-kurz-05-2 (2026-11-03T18:30:00): {"fehler":"Rate limit exceeded. Please retry after 29 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 29 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":29}}
-alien-insta-kurz-06-1 (2026-11-03T20:00:00): {"fehler":"Rate limit exceeded. Please retry after 29 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 29 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":29}}
-alien-yt-kurz-06-1 (2026-11-03T20:30:00): {"fehler":"Rate limit exceeded. Please retry after 29 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 29 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":29}}
-alien-insta-kurz-06-2 (2026-11-03T22:00:00): {"fehler":"Rate limit exceeded. Please retry after 29 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 29 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":29}}
-alien-yt-kurz-06-2 (2026-11-03T22:30:00): {"fehler":"Rate limit exceeded. Please retry after 29 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 29 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":29}}
-alien-insta-kurz-07-1 (2026-11-04T00:00:00): {"fehler":"Rate limit exceeded. Please retry after 29 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 29 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":29}}
-alien-yt-kurz-07-1 (2026-11-04T00:30:00): {"fehler":"Rate limit exceeded. Please retry after 28 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 28 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":28}}
-alien-insta-kurz-07-2 (2026-11-04T02:00:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfTO0UGGMAi/"}
-alien-yt-kurz-07-2 (2026-11-04T02:30:00): {"fehler":"Rate limit exceeded. Please retry after 28 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 28 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":28}}
-alien-insta-kurz-08-1 (2026-11-04T04:00:00): {"fehler":"Rate limit exceeded. Please retry after 28 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 28 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":28}}
-alien-yt-kurz-08-1 (2026-11-04T04:30:00): {"fehler":"Rate limit exceeded. Please retry after 28 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 28 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":28}}
-alien-insta-kurz-08-2 (2026-11-04T06:00:00): {"fehler":"Rate limit exceeded. Please retry after 27 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 27 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":27}}
-alien-yt-kurz-08-2 (2026-11-04T06:30:00): {"fehler":"Rate limit exceeded. Please retry after 27 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 27 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":27}}
-alien-insta-kurz-09-1 (2026-11-04T08:00:00): {"fehler":"Rate limit exceeded. Please retry after 27 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 27 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":27}}
-alien-yt-kurz-09-1 (2026-11-04T08:30:00): {"fehler":"Rate limit exceeded. Please retry after 27 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 27 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":27}}
-alien-insta-kurz-09-2 (2026-11-04T10:00:00): {"fehler":"Rate limit exceeded. Please retry after 27 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 27 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":27}}
-alien-yt-kurz-09-2 (2026-11-04T10:30:00): {"fehler":"Rate limit exceeded. Please retry after 27 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 27 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":27}}
-alien-insta-kurz-10-1 (2026-11-04T12:00:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfUTs5bETLs/"}
-alien-yt-kurz-10-1 (2026-11-04T12:30:00): {"fehler":"Rate limit exceeded. Please retry after 26 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 26 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":26}}
-alien-insta-kurz-10-2 (2026-11-04T14:00:00): {"fehler":"Rate limit exceeded. Please retry after 26 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 26 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":26}}
-alien-yt-kurz-10-2 (2026-11-04T14:30:00): {"fehler":"Rate limit exceeded. Please retry after 26 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 26 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":26}}
-mann-insta-kurz-01 (2026-11-04T16:00:00): {"fehler":"Rate limit exceeded. Please retry after 25 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 25 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":25}}
-mann-yt-kurz-01 (2026-11-04T16:30:00): {"fehler":"Rate limit exceeded. Please retry after 25 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 25 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":25}}
-mann-insta-kurz-02 (2026-11-04T18:00:00): {"fehler":"Rate limit exceeded. Please retry after 25 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 25 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":25}}
-mann-yt-kurz-02 (2026-11-04T18:30:00): {"fehler":"Rate limit exceeded. Please retry after 25 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 25 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":25}}
-mann-insta-kurz-03 (2026-11-04T20:00:00): {"fehler":"Rate limit exceeded. Please retry after 25 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 25 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":25}}
-mann-yt-kurz-03 (2026-11-04T20:30:00): {"fehler":"Rate limit exceeded. Please retry after 25 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 25 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":25}}
-mann-insta-kurz-04 (2026-11-04T22:00:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfVYB-cAQvF/"}
-mann-yt-kurz-04 (2026-11-04T22:30:00): {"fehler":"Rate limit exceeded. Please retry after 24 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 24 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":24}}
-mann-insta-kurz-05 (2026-11-05T00:00:00): {"fehler":"Rate limit exceeded. Please retry after 24 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 24 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":24}}
-mann-yt-kurz-05 (2026-11-05T00:30:00): {"fehler":"Rate limit exceeded. Please retry after 23 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 23 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":23}}
-mann-insta-kurz-06 (2026-11-05T02:00:00): {"fehler":"Rate limit exceeded. Please retry after 23 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 23 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":23}}
-mann-yt-kurz-06 (2026-11-05T02:30:00): {"fehler":"Rate limit exceeded. Please retry after 23 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 23 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":23}}
-mann-insta-kurz-07 (2026-11-05T04:00:00): {"fehler":"Rate limit exceeded. Please retry after 23 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 23 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":23}}
-mann-yt-kurz-07 (2026-11-05T04:30:00): {"fehler":"Rate limit exceeded. Please retry after 23 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 23 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":23}}
-mann-insta-kurz-08 (2026-11-05T06:00:00): {"fehler":"Rate limit exceeded. Please retry after 23 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 23 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":23}}
-mann-yt-kurz-08 (2026-11-05T06:30:00): {"fehler":"Rate limit exceeded. Please retry after 22 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 22 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":22}}
-mann-insta-kurz-09 (2026-11-05T08:00:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfWctOaHF5p/"}
-mann-yt-kurz-09 (2026-11-05T08:30:00): {"fehler":"Rate limit exceeded. Please retry after 22 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 22 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":22}}
-mann-insta-kurz-10 (2026-11-05T10:00:00): {"fehler":"Rate limit exceeded. Please retry after 22 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 22 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":22}}
-mann-yt-kurz-10 (2026-11-05T10:30:00): {"fehler":"Rate limit exceeded. Please retry after 22 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 22 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":22}}
-taeglich-tiktok-001 (2026-11-05T08:00:00): {"fehler":"Rate limit exceeded. Please retry after 22 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 22 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":22}}
-taeglich-insta-001 (2026-11-05T12:00:00): {"fehler":"Rate limit exceeded. Please retry after 21 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 21 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":21}}
-taeglich-yt-001 (2026-11-05T12:30:00): {"fehler":"Rate limit exceeded. Please retry after 21 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 21 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":21}}
-taeglich-tiktok-s01-teil-1 (2026-11-05T12:00:00): {"fehler":"Rate limit exceeded. Please retry after 21 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 21 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":21}}
-taeglich-tiktok-s01-teil-2 (2026-11-05T16:00:00): {"fehler":"Rate limit exceeded. Please retry after 21 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 21 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":21}}
-taeglich-tiktok-s01-teil-3 (2026-11-05T20:00:00): {"fehler":"Rate limit exceeded. Please retry after 21 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 21 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":21}}
-taeglich-tiktok-s01-teil-4 (2026-11-06T08:00:00): {"fehler":"Rate limit exceeded. Please retry after 21 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 21 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":21}}
-taeglich-insta-s01-f01 (2026-11-05T14:00:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-taeglich-insta-s01-f02 (2026-11-05T16:00:00): {"fehler":"Rate limit exceeded. Please retry after 20 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 20 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":20}}
-taeglich-insta-s01-f03 (2026-11-05T18:00:00): {"fehler":"Rate limit exceeded. Please retry after 20 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 20 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":20}}
-taeglich-insta-s01-f04 (2026-11-05T20:00:00): {"fehler":"Rate limit exceeded. Please retry after 20 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 20 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":20}}
-taeglich-insta-s01-f05 (2026-11-05T22:00:00): {"fehler":"Rate limit exceeded. Please retry after 20 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 20 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":20}}
-taeglich-insta-s01-f06 (2026-11-06T00:00:00): {"fehler":"Rate limit exceeded. Please retry after 19 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 19 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":19}}
-taeglich-insta-s01-f07 (2026-11-06T02:00:00): {"fehler":"Rate limit exceeded. Please retry after 19 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 19 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":19}}
-taeglich-insta-s01-f08 (2026-11-06T04:00:00): {"fehler":"Rate limit exceeded. Please retry after 19 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 19 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":19}}
-taeglich-insta-s01-f09 (2026-11-06T06:00:00): {"fehler":"Rate limit exceeded. Please retry after 19 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 19 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":19}}
-taeglich-insta-s01-f10 (2026-11-06T08:00:00): {"fehler":"Rate limit exceeded. Please retry after 19 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 19 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":19}}
-taeglich-yt-s01-f01 (2026-11-05T14:30:00): {"fehler":"Rate limit exceeded. Please retry after 19 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 19 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":19}}
-taeglich-yt-s01-f02 (2026-11-05T16:30:00): {"fehler":"Rate limit exceeded. Please retry after 18 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 18 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":18}}
-taeglich-yt-s01-f03 (2026-11-05T18:30:00): {"fehler":"Rate limit exceeded. Please retry after 18 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 18 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":18}}
-taeglich-yt-s01-f04 (2026-11-05T20:30:00): {"fehler":"Rate limit exceeded. Please retry after 18 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 18 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":18}}
-taeglich-yt-s01-f05 (2026-11-05T22:30:00): {"fehler":"Rate limit exceeded. Please retry after 18 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 18 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":18}}
-taeglich-yt-s01-f06 (2026-11-06T00:30:00): {"fehler":"Rate limit exceeded. Please retry after 18 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 18 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":18}}
-taeglich-yt-s01-f07 (2026-11-06T02:30:00): {"fehler":"Rate limit exceeded. Please retry after 17 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 17 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":17}}
-taeglich-yt-s01-f08 (2026-11-06T04:30:00): {"fehler":"Rate limit exceeded. Please retry after 17 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 17 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":17}}
-taeglich-yt-s01-f09 (2026-11-06T06:30:00): {"fehler":"Rate limit exceeded. Please retry after 17 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 17 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":17}}
-taeglich-yt-s01-f10 (2026-11-06T08:30:00): {"fehler":"Rate limit exceeded. Please retry after 17 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 17 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":17}}
-taeglich-tiktok-s02-teil-1 (2026-11-06T12:04:00): {"status":"published","plattform":"published","url":"https://www.tiktok.com/@storys4you.de1/video/7705012861382282529"}
-taeglich-tiktok-s02-teil-2 (2026-11-06T16:27:00): {"fehler":"Rate limit exceeded. Please retry after 17 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 17 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":17}}
-taeglich-tiktok-s02-teil-3 (2026-11-06T19:36:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-taeglich-tiktok-s02-teil-4 (2026-11-07T08:13:00): {"fehler":"Rate limit exceeded. Please retry after 16 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 16 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":16}}
-taeglich-tiktok-s02-teil-5 (2026-11-07T11:46:00): {"fehler":"Rate limit exceeded. Please retry after 16 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 16 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":16}}
-taeglich-tiktok-s02-teil-6 (2026-11-07T16:19:00): {"fehler":"Rate limit exceeded. Please retry after 16 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 16 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":16}}
-taeglich-tiktok-s02-teil-7 (2026-11-07T20:12:00): {"fehler":"Rate limit exceeded. Please retry after 16 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 16 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":16}}
-taeglich-insta-s02-f01 (2026-11-06T09:35:00): {"fehler":"Rate limit exceeded. Please retry after 16 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 16 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":16}}
-taeglich-insta-s02-f02 (2026-11-06T11:43:00): {"fehler":"Rate limit exceeded. Please retry after 15 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 15 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":15}}
-taeglich-insta-s02-f03 (2026-11-06T13:33:00): {"fehler":"Rate limit exceeded. Please retry after 15 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 15 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":15}}
-taeglich-insta-s02-f04 (2026-11-06T16:50:00): {"fehler":"Rate limit exceeded. Please retry after 15 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 15 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":15}}
-taeglich-insta-s02-f05 (2026-11-06T19:56:00): {"fehler":"Rate limit exceeded. Please retry after 15 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 15 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":15}}
-taeglich-insta-s02-f06 (2026-11-07T08:09:00): {"fehler":"Rate limit exceeded. Please retry after 15 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 15 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":15}}
-taeglich-insta-s02-f07 (2026-11-07T11:09:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-taeglich-insta-s02-f08 (2026-11-07T13:32:00): {"fehler":"Rate limit exceeded. Please retry after 14 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 14 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":14}}
-taeglich-yt-s02-f01 (2026-11-06T10:59:00): {"fehler":"Rate limit exceeded. Please retry after 14 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 14 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":14}}
-taeglich-yt-s02-f02 (2026-11-06T12:15:00): {"fehler":"Rate limit exceeded. Please retry after 14 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 14 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":14}}
-taeglich-yt-s02-f03 (2026-11-06T14:59:00): {"fehler":"Rate limit exceeded. Please retry after 14 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 14 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":14}}
-taeglich-yt-s02-f04 (2026-11-06T17:11:00): {"fehler":"Rate limit exceeded. Please retry after 14 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 14 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":14}}
-taeglich-yt-s02-f05 (2026-11-06T20:17:00): {"fehler":"Rate limit exceeded. Please retry after 13 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 13 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":13}}
-taeglich-yt-s02-f06 (2026-11-07T08:14:00): {"fehler":"Rate limit exceeded. Please retry after 13 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 13 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":13}}
-taeglich-yt-s02-f07 (2026-11-07T11:55:00): {"fehler":"Rate limit exceeded. Please retry after 13 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 13 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":13}}
-taeglich-yt-s02-f08 (2026-11-07T14:26:00): {"fehler":"Rate limit exceeded. Please retry after 13 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 13 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":13}}
-taeglich-tiktok-en-s02-teil-1 (2026-11-05T01:00:00): {"fehler":"Rate limit exceeded. Please retry after 13 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 13 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":13}}
-taeglich-tiktok-en-s02-teil-2 (2026-11-06T01:00:00): {"fehler":"Rate limit exceeded. Please retry after 12 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 12 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":12}}
-taeglich-tiktok-en-s02-teil-3 (2026-11-06T20:00:00): {"fehler":"Rate limit exceeded. Please retry after 12 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 12 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":12}}
-taeglich-tiktok-en-s02-teil-4 (2026-11-07T08:00:00): {"fehler":"Rate limit exceeded. Please retry after 12 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 12 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":12}}
-taeglich-tiktok-en-s02-teil-5 (2026-11-07T12:00:00): {"fehler":"Rate limit exceeded. Please retry after 12 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 12 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":12}}
-taeglich-tiktok-en-s02-teil-6 (2026-11-07T16:00:00): {"fehler":"Rate limit exceeded. Please retry after 12 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 12 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":12}}
-taeglich-tiktok-en-s02-teil-7 (2026-11-07T20:00:00): {"fehler":"Rate limit exceeded. Please retry after 11 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 11 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":11}}
-taeglich-insta-en-s02-f01 (2026-11-06T10:00:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-taeglich-insta-en-s02-f02 (2026-11-06T12:00:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-taeglich-insta-en-s02-f03 (2026-11-06T14:00:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-taeglich-insta-en-s02-f04 (2026-11-06T16:00:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-taeglich-insta-en-s02-f05 (2026-11-06T18:00:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-taeglich-insta-en-s02-f06 (2026-11-06T20:00:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-taeglich-insta-en-s02-f07 (2026-11-06T22:00:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-taeglich-insta-en-s02-f08 (2026-11-07T00:00:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-taeglich-yt-en-s02-f01 (2026-11-06T10:30:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-taeglich-yt-en-s02-f02 (2026-11-06T12:30:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-taeglich-yt-en-s02-f03 (2026-11-06T14:30:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-taeglich-yt-en-s02-f04 (2026-11-06T16:30:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-taeglich-yt-en-s02-f05 (2026-11-06T18:30:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-taeglich-yt-en-s02-f06 (2026-11-06T20:30:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-taeglich-yt-en-s02-f07 (2026-11-06T22:30:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-taeglich-yt-en-s02-f08 (2026-11-07T00:30:00): {"fehler":"Post not found"} HTTP 404 {"error":"Post not found","type":"not_found","code":"post_not_found"}
-taeglich-tiktok-en-s02-teil-1-v2 (2026-11-06T00:53:00): {"fehler":"Rate limit exceeded. Please retry after 8 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 8 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":8}}
-taeglich-tiktok-en-s02-teil-2-v2 (2026-11-06T15:48:00): {"fehler":"Rate limit exceeded. Please retry after 8 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 8 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":8}}
-taeglich-tiktok-en-s02-teil-3-v2 (2026-11-06T20:27:00): {"fehler":"Rate limit exceeded. Please retry after 8 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 8 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":8}}
-taeglich-tiktok-en-s02-teil-4-v2 (2026-11-07T08:19:00): {"fehler":"Rate limit exceeded. Please retry after 8 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 8 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":8}}
-taeglich-tiktok-en-s02-teil-5-v2 (2026-11-07T12:04:00): {"fehler":"Rate limit exceeded. Please retry after 7 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 7 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":7}}
-taeglich-tiktok-en-s02-teil-6-v2 (2026-11-07T16:20:00): {"fehler":"Rate limit exceeded. Please retry after 7 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 7 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":7}}
-taeglich-tiktok-en-s02-teil-7-v2 (2026-11-07T19:33:00): {"fehler":"Rate limit exceeded. Please retry after 7 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 7 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":7}}
-taeglich-insta-en-s02-f01-v2 (2026-11-06T10:02:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfZPUrUiBtD/"}
-taeglich-insta-en-s02-f02-v2 (2026-11-06T12:24:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfZfkoODety/"}
-taeglich-insta-en-s02-f03-v2 (2026-11-06T13:43:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfZom5EjBNN/"}
-taeglich-insta-en-s02-f04-v2 (2026-11-06T20:16:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfaVlc9lSOP/"}
-taeglich-insta-en-s02-f05-v2 (2026-11-07T07:31:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/Dfbi5amiaYE/"}
-taeglich-insta-en-s02-f06-v2 (2026-11-07T10:47:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/Dfb5QVeicUj/"}
-taeglich-insta-en-s02-f07-v2 (2026-11-07T14:21:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfcRw4jj_Xa/"}
-taeglich-insta-en-s02-f08-v2 (2026-11-07T17:05:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfckmApIFRQ/"}
-taeglich-yt-en-s02-f01-v2 (2026-11-06T10:23:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=YN11-dTSguM"}
-taeglich-yt-en-s02-f02-v2 (2026-11-06T12:59:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=IrDIq297prw"}
-taeglich-yt-en-s02-f03-v2 (2026-11-06T14:11:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=966oZShbPDM"}
-taeglich-yt-en-s02-f04-v2 (2026-11-06T20:35:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=M2GoW5ZTINk"}
-taeglich-yt-en-s02-f05-v2 (2026-11-07T08:15:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=ODnpdImYvzI"}
-taeglich-yt-en-s02-f06-v2 (2026-11-07T11:11:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=1lEr_EyZx60"}
-taeglich-yt-en-s02-f07-v2 (2026-11-07T14:03:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=2ydJ023jwtU"}
-taeglich-yt-en-s02-f08-v2 (2026-11-07T17:59:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=BgL1gshy4Zg"}
-taeglich-tiktok-s01-teil-1-v2 (2026-11-06T19:30:00): {"status":"published","plattform":"published","url":"https://www.tiktok.com/@storys4you.de1/video/7705127921660333345"}
-taeglich-tiktok-s01-teil-2-v2 (2026-11-07T07:35:00): {"status":"published","plattform":"published","url":"https://www.tiktok.com/@storys4you.de1/video/7705314584843930912"}
-taeglich-tiktok-s01-teil-3-v2 (2026-11-07T12:16:00): {"status":"published","plattform":"published","url":"https://www.tiktok.com/@storys4you.de1/video/7705387073523420449"}
-taeglich-tiktok-s01-teil-4-v2 (2026-11-07T15:42:00): {"status":"published","plattform":"published","url":"https://www.tiktok.com/@storys4you.de1/video/7705440134086380832"}
-taeglich-insta-s01-f01-v2 (2026-11-06T20:23:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfaWY0eE649/"}
-taeglich-insta-s01-f02-v2 (2026-11-07T07:43:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfbkOqhkaHF/"}
-taeglich-insta-s01-f03-v2 (2026-11-07T10:43:00): {"fehler":"Rate limit exceeded. Please retry after 2 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 2 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":2}}
-taeglich-insta-s01-f04-v2 (2026-11-07T13:45:00): {"fehler":"Rate limit exceeded. Please retry after 2 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 2 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":2}}
-taeglich-insta-s01-f05-v2 (2026-11-07T17:23:00): {"fehler":"Rate limit exceeded. Please retry after 2 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 2 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":2}}
-taeglich-insta-s01-f06-v2 (2026-11-07T19:59:00): {"fehler":"Rate limit exceeded. Please retry after 1 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 1 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":1}}
-taeglich-yt-s01-f01-v2 (2026-11-06T20:00:00): {"fehler":"Rate limit exceeded. Please retry after 1 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 1 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":1}}
-taeglich-yt-s01-f02-v2 (2026-11-07T08:32:00): {"fehler":"Rate limit exceeded. Please retry after 1 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 1 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":1}}
-taeglich-yt-s01-f03-v2 (2026-11-07T11:27:00): {"fehler":"Rate limit exceeded. Please retry after 1 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 1 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":1}}
-taeglich-yt-s01-f04-v2 (2026-11-07T14:42:00): {"fehler":"Rate limit exceeded. Please retry after 1 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 1 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":1}}
-taeglich-yt-s01-f05-v2 (2026-11-07T17:02:00): {"fehler":"Rate limit exceeded. Please retry after 1 seconds."} HTTP 429 {"error":"Rate limit exceeded. Please retry after 1 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":1}}
-taeglich-tiktok-001-v2 (2026-11-07T19:48:00): {"status":"published","plattform":"published","url":"https://www.tiktok.com/@storys4you.de1/video/7705503496283426080"}
+mann-tiktok-teil-1 (2026-11-03T08:00:00): {"status":"published","plattform":"published","url":"https://www.tiktok.com/@storys4you.de1/video/7703837035445914913"}
+mann-tiktok-teil-2 (2026-11-03T20:00:00): {"status":"published","plattform":"published","url":"https://www.tiktok.com/@storys4you.de1/video/7704022431538662689"}
+mann-tiktok-teil-3 (2026-11-04T08:00:00): {"status":"published","plattform":"published","url":"https://www.tiktok.com/@storys4you.de1/video/7704207851434036513"}
+mann-tiktok-teil-4 (2026-11-04T20:00:00): {"status":"published","plattform":"published","url":"https://www.tiktok.com/@storys4you.de1/video/7704393613060427040"}
+mann-insta-01-1 (2026-10-30T18:00:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfIEz1pkaIW/"}
+stock-insta-kurz-03-1 (2026-10-31T20:00:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfK3M0fCNwa/"}
+stock-insta-kurz-03-2 (2026-11-01T00:00:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfLSw86DEgB/"}
+stock-insta-kurz-04-2 (2026-11-01T08:00:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfMJvcMiHtF/"}
+stock-insta-kurz-05-1 (2026-11-01T12:00:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfMlGhJDS88/"}
+stock-insta-kurz-05-2 (2026-11-01T16:00:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfNAZD1lNIT/"}
+stock-insta-kurz-06-1 (2026-11-01T20:00:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfNb9glgVOZ/"}
+stock-yt-kurz-06-2 (2026-11-02T00:30:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=ZYIlHn-DHrM"}
+stock-insta-kurz-07-1 (2026-11-02T04:00:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfOS4XuAeNm/"}
+stock-yt-kurz-07-1 (2026-11-02T04:30:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=iS7C7M0DFXk"}
+stock-insta-kurz-07-2 (2026-11-02T08:00:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfOub2QHEsf/"}
+stock-yt-kurz-07-2 (2026-11-02T08:30:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=SznTmGcL-J4"}
+stock-insta-kurz-08-1 (2026-11-02T12:00:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfPJ53cjkBF/"}
+stock-yt-kurz-08-1 (2026-11-02T12:30:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=wLvSc2f1vq8"}
+stock-insta-kurz-08-2 (2026-11-02T14:00:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfPXnlLAgqI/"}
+stock-yt-kurz-08-2 (2026-11-02T14:30:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=Qg2jNpus_g4"}
+stock-yt-kurz-09-1 (2026-11-02T16:30:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=bPo0KGl1MSo"}
+stock-insta-kurz-09-2 (2026-11-02T18:00:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfPzOobkgyo/"}
+stock-yt-kurz-09-2 (2026-11-02T18:30:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=9gmP3d7MBzM"}
+stock-insta-kurz-10-1 (2026-11-02T20:00:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfQA8CygoSj/"}
+stock-yt-kurz-10-1 (2026-11-02T20:30:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=GtzOfYb2M1Y"}
+stock-insta-kurz-10-2 (2026-11-02T22:00:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfQObrHj69V/"}
+stock-yt-kurz-10-2 (2026-11-02T22:30:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=v_XEnaXkaX0"}
+alien-insta-kurz-01-1 (2026-11-03T00:00:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfQcUvnl2H3/"}
+alien-yt-kurz-01-1 (2026-11-03T00:30:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=M4k33xNG5gg"}
+alien-insta-kurz-01-2 (2026-11-03T02:00:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfQp_IQoQKH/"}
+alien-yt-kurz-01-2 (2026-11-03T02:30:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=SFqqgcjda_k"}
+alien-yt-kurz-02-1 (2026-11-03T04:30:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=vLr_lAACM4Q"}
+alien-insta-kurz-02-2 (2026-11-03T06:00:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfRFVTzkqHz/"}
+alien-yt-kurz-02-2 (2026-11-03T06:30:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=JY2LzB-78-A"}
+alien-insta-kurz-03-1 (2026-11-03T08:00:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfRTHX7DkSh/"}
+alien-yt-kurz-03-1 (2026-11-03T08:30:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=kyyGtNYHzjA"}
+alien-insta-kurz-03-2 (2026-11-03T10:00:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfRg7q6DAlr/"}
+alien-yt-kurz-03-2 (2026-11-03T10:30:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=QgD7LCWXiq0"}
+alien-insta-kurz-04-1 (2026-11-03T12:00:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfRusLBAMh_/"}
+alien-yt-kurz-04-1 (2026-11-03T12:30:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=pO3DHtBzjjs"}
+alien-yt-kurz-04-2 (2026-11-03T14:30:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=vsA9YEUtN1g"}
+alien-insta-kurz-05-1 (2026-11-03T16:00:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfSJ700jqVW/"}
+alien-yt-kurz-05-1 (2026-11-03T16:30:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=nfgsylGHrog"}
+alien-insta-kurz-05-2 (2026-11-03T18:00:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfSYBmtjK5P/"}
+alien-yt-kurz-05-2 (2026-11-03T18:30:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=tjMCU0CUHIM"}
+alien-insta-kurz-06-1 (2026-11-03T20:00:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfSlaJAAFYL/"}
+alien-yt-kurz-06-1 (2026-11-03T20:30:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=IoS9wp5APpc"}
+alien-insta-kurz-06-2 (2026-11-03T22:00:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfSzOs9EpQV/"}
+alien-yt-kurz-06-2 (2026-11-03T22:30:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=8cwdsM-cRGk"}
+alien-insta-kurz-07-1 (2026-11-04T00:00:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfTBIMJCOfy/"}
+alien-yt-kurz-07-1 (2026-11-04T00:30:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=zMkWZmpYL80"}
+alien-yt-kurz-07-2 (2026-11-04T02:30:00): {"status":"failed","plattform":"failed","fehler":"YouTube upload session initialization failed: 400 {\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"The user has exceeded the number of videos they may upload.\",\n    \"errors\": [\n      {\n        \"message\": \"The user has exceeded the number of videos they may upload.\",\n        \"domain\": \"youtube.video\",\n        \"reason\": \"uploadLimitExceeded\"\n      }\n    ]\n  }\n}\n"}
+alien-insta-kurz-08-1 (2026-11-04T04:00:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfTcbNiIaX5/"}
+alien-yt-kurz-08-1 (2026-11-04T04:30:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=YZyqUqvDD-o"}
+alien-insta-kurz-08-2 (2026-11-04T06:00:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfTqOUFiOWo/"}
+alien-yt-kurz-08-2 (2026-11-04T06:30:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=mgiGQrQhsUY"}
+alien-insta-kurz-09-1 (2026-11-04T08:00:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfT3x_tjc-G/"}
+alien-yt-kurz-09-1 (2026-11-04T08:30:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=dOdGqiqOljM"}
+alien-insta-kurz-09-2 (2026-11-04T10:00:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfUFjdzjtR_/"}
+alien-yt-kurz-09-2 (2026-11-04T10:30:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=-hkarp9IVhA"}
+alien-yt-kurz-10-1 (2026-11-04T12:30:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=4mWSgUYAAqg"}
+alien-insta-kurz-10-2 (2026-11-04T14:00:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfUhJkaCR4B/"}
+alien-yt-kurz-10-2 (2026-11-04T14:30:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=SNAg_uF2LGY"}
+mann-insta-kurz-01 (2026-11-04T16:00:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfUu0reAnDu/"}
+mann-yt-kurz-01 (2026-11-04T16:30:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=gwygyoV496Q"}
+mann-insta-kurz-02 (2026-11-04T18:00:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfU8e4UDP_2/"}
+mann-yt-kurz-02 (2026-11-04T18:30:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=ycO7AePF2i4"}
+mann-insta-kurz-03 (2026-11-04T20:00:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfVKMT8jzRv/"}
+mann-yt-kurz-03 (2026-11-04T20:30:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=DXAhzB1c9Rs"}
+mann-yt-kurz-04 (2026-11-04T22:30:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=HYNpe4gzdvA"}
+mann-insta-kurz-05 (2026-11-05T00:00:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfVl2QVEfPK/"}
+mann-yt-kurz-05 (2026-11-05T00:30:00): {"status":"failed","plattform":"failed","fehler":"YouTube upload session initialization failed: 400 {\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"The user has exceeded the number of videos they may upload.\",\n    \"errors\": [\n      {\n        \"message\": \"The user has exceeded the number of videos they may upload.\",\n        \"domain\": \"youtube.video\",\n        \"reason\": \"uploadLimitExceeded\"\n      }\n    ]\n  }\n}\n"}
+mann-insta-kurz-06 (2026-11-05T02:00:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfVzis8DL0A/"}
+mann-yt-kurz-06 (2026-11-05T02:30:00): {"status":"failed","plattform":"failed","fehler":"YouTube upload session initialization failed: 400 {\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"The user has exceeded the number of videos they may upload.\",\n    \"errors\": [\n      {\n        \"message\": \"The user has exceeded the number of videos they may upload.\",\n        \"domain\": \"youtube.video\",\n        \"reason\": \"uploadLimitExceeded\"\n      }\n    ]\n  }\n}\n"}
+mann-insta-kurz-07 (2026-11-05T04:00:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfWBN6hnNW9/"}
+mann-yt-kurz-07 (2026-11-05T04:30:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=zG9LYqN78kM"}
+mann-insta-kurz-08 (2026-11-05T06:00:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfWPD8lgkFQ/"}
+mann-yt-kurz-08 (2026-11-05T06:30:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=kolQJueMHPk"}
+mann-yt-kurz-09 (2026-11-05T08:30:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=tvD2btYcK9g"}
+mann-insta-kurz-10 (2026-11-05T10:00:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfWqhQVD9t7/"}
+mann-yt-kurz-10 (2026-11-05T10:30:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=sMLwahGXmG4"}
+taeglich-tiktok-001 (2026-11-05T08:00:00): {"status":"published","plattform":"published","url":"https://www.tiktok.com/@storys4you.de1/video/7704579252708019488"}
+taeglich-insta-001 (2026-11-05T12:00:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfW4Nu3gjq0/"}
+taeglich-yt-001 (2026-11-05T12:30:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=YNM8dWbbws0"}
+taeglich-tiktok-s01-teil-1 (2026-11-05T12:00:00): {"status":"published","plattform":"published","url":"https://www.tiktok.com/@storys4you.de1/video/7704640819566775584"}
+taeglich-tiktok-s02-teil-2 (2026-11-06T16:27:00): {"status":"published","plattform":"published","url":"https://www.tiktok.com/@storys4you.de1/video/7705080626969382176"}
+taeglich-insta-s02-f01 (2026-11-06T09:35:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfZMOzajvQk/"}
+taeglich-insta-s02-f02 (2026-11-06T11:43:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfZa5l-gdhu/"}
+taeglich-insta-s02-f03 (2026-11-06T13:33:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfZneKnD5RD/"}
+taeglich-insta-s02-f04 (2026-11-06T16:50:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfZ-BawFOLp/"}
+taeglich-yt-s02-f01 (2026-11-06T10:59:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=bCdOm1wLK0k"}
+taeglich-yt-s02-f02 (2026-11-06T12:15:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=FFVgNpZ6rSY"}
+taeglich-yt-s02-f03 (2026-11-06T14:59:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=m2_egMo62iw"}
+taeglich-yt-s02-f04 (2026-11-06T17:11:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=dzeNSvKlUik"}
+taeglich-tiktok-en-s02-teil-1 (2026-11-05T01:00:00): {"status":"published","plattform":"published","url":"https://www.tiktok.com/@storys4you_eng/video/7704470859171237152"}
+taeglich-tiktok-en-s02-teil-1-v2 (2026-11-06T00:53:00): {"status":"published","plattform":"published","url":"https://www.tiktok.com/@storys4you_eng/video/7704839908120169760"}
+taeglich-tiktok-en-s02-teil-2-v2 (2026-11-06T15:48:00): {"status":"published","plattform":"published","url":"https://www.tiktok.com/@storys4you_eng/video/7705070581053426976"}
+taeglich-tiktok-en-s02-teil-3-v2 (2026-11-06T20:27:00): {"status":"published","plattform":"published","url":"https://www.tiktok.com/@storys4you_eng/video/7705142496766020896"}
+taeglich-tiktok-en-s02-teil-4-v2 (2026-11-07T08:19:00): {"status":"published","plattform":"published","url":"https://www.tiktok.com/@storys4you_eng/video/7705325865659321632"}
+taeglich-tiktok-en-s02-teil-5-v2 (2026-11-07T12:04:00): {"status":"published","plattform":"published","url":"https://www.tiktok.com/@storys4you_eng/video/7705383928638541088"}
+taeglich-tiktok-en-s02-teil-6-v2 (2026-11-07T16:20:00): {"status":"published","plattform":"published","url":"https://www.tiktok.com/@storys4you_eng/video/7705449924644687137"}
+taeglich-tiktok-en-s02-teil-7-v2 (2026-11-07T19:33:00): {"status":"published","plattform":"published","url":"https://www.tiktok.com/@storys4you_eng/video/7705499667143986464"}
+taeglich-insta-s01-f03-v2 (2026-11-07T10:43:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/Dfb4zYrlbdo/"}
+taeglich-insta-s01-f04-v2 (2026-11-07T13:45:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfcNvI8FIbJ/"}
+taeglich-insta-s01-f05-v2 (2026-11-07T17:23:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfcmlSfidNY/"}
+taeglich-insta-s01-f06-v2 (2026-11-07T19:59:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/Dfc4eyXFPa8/"}
+taeglich-yt-s01-f01-v2 (2026-11-06T20:00:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=yriOje8Nd_Y"}
+taeglich-yt-s01-f02-v2 (2026-11-07T08:32:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=lwmIHErRbUg"}
+taeglich-yt-s01-f03-v2 (2026-11-07T11:27:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=V4y-G29Mhww"}
+taeglich-yt-s01-f04-v2 (2026-11-07T14:42:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=1g6RCEJoddM"}
+taeglich-yt-s01-f05-v2 (2026-11-07T17:02:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=I2vFDVQnlOI"}
+taeglich-yt-s01-f06-v2 (2026-11-07T20:27:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=4hiKpIfg7_o"}

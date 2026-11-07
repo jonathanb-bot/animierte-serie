@@ -2105,7 +2105,9 @@
   "http": 201,
   "am": "2026-10-30T14:12:20.820Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 39 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfIEz1pkaIW/"
   }
  },
  "mann-yt-01-1": {
@@ -2699,7 +2701,9 @@
   "http": 201,
   "am": "2026-10-31T11:42:03.380Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 39 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfK3M0fCNwa/"
   }
  },
  "stock-yt-kurz-03-1": {
@@ -2721,7 +2725,9 @@
   "http": 201,
   "am": "2026-10-31T11:42:08.986Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 39 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfLSw86DEgB/"
   }
  },
  "stock-yt-kurz-03-2": {
@@ -2767,7 +2773,9 @@
   "http": 201,
   "am": "2026-10-31T11:42:18.396Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 38 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfMJvcMiHtF/"
   }
  },
  "stock-yt-kurz-04-2": {
@@ -2789,7 +2797,9 @@
   "http": 201,
   "am": "2026-10-31T11:42:23.043Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 37 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfMlGhJDS88/"
   }
  },
  "stock-yt-kurz-05-1": {
@@ -2811,7 +2821,9 @@
   "http": 201,
   "am": "2026-10-31T11:42:27.824Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 37 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfNAZD1lNIT/"
   }
  },
  "stock-yt-kurz-05-2": {
@@ -2833,7 +2845,9 @@
   "http": 201,
   "am": "2026-10-31T11:42:32.369Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 37 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfNb9glgVOZ/"
   }
  },
  "stock-yt-kurz-06-1": {
@@ -2867,7 +2881,9 @@
   "http": 201,
   "am": "2026-10-31T11:42:39.010Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 36 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=ZYIlHn-DHrM"
   }
  },
  "stock-insta-kurz-07-1": {
@@ -2877,7 +2893,9 @@
   "http": 201,
   "am": "2026-10-31T11:42:42.537Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 36 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfOS4XuAeNm/"
   }
  },
  "stock-yt-kurz-07-1": {
@@ -2887,7 +2905,9 @@
   "http": 201,
   "am": "2026-10-31T11:42:44.654Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 36 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=iS7C7M0DFXk"
   }
  },
  "stock-insta-kurz-07-2": {
@@ -2897,7 +2917,9 @@
   "http": 201,
   "am": "2026-10-31T11:42:48.169Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 35 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfOub2QHEsf/"
   }
  },
  "stock-yt-kurz-07-2": {
@@ -2907,7 +2929,9 @@
   "http": 201,
   "am": "2026-10-31T11:42:50.291Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 35 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=SznTmGcL-J4"
   }
  },
  "stock-insta-kurz-08-1": {
@@ -2917,7 +2941,9 @@
   "http": 201,
   "am": "2026-10-31T11:42:53.499Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 35 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfPJ53cjkBF/"
   }
  },
  "stock-yt-kurz-08-1": {
@@ -2927,7 +2953,9 @@
   "http": 201,
   "am": "2026-10-31T11:42:55.683Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 35 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=wLvSc2f1vq8"
   }
  },
  "stock-insta-kurz-08-2": {
@@ -2937,7 +2965,9 @@
   "http": 201,
   "am": "2026-11-02T10:13:30.555Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 35 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfPXnlLAgqI/"
   }
  },
  "stock-yt-kurz-08-2": {
@@ -2947,7 +2977,9 @@
   "http": 201,
   "am": "2026-11-02T10:13:33.196Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 34 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=Qg2jNpus_g4"
   }
  },
  "stock-insta-kurz-09-1": {
@@ -2969,7 +3001,9 @@
   "http": 201,
   "am": "2026-11-02T10:13:38.744Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 34 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=bPo0KGl1MSo"
   }
  },
  "stock-insta-kurz-09-2": {
@@ -2979,7 +3013,9 @@
   "http": 201,
   "am": "2026-11-02T10:13:41.712Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 34 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfPzOobkgyo/"
   }
  },
  "stock-yt-kurz-09-2": {
@@ -2989,7 +3025,9 @@
   "http": 201,
   "am": "2026-11-02T10:13:44.530Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 34 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=9gmP3d7MBzM"
   }
  },
  "stock-insta-kurz-10-1": {
@@ -2999,7 +3037,9 @@
   "http": 201,
   "am": "2026-11-02T10:13:47.350Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 34 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfQA8CygoSj/"
   }
  },
  "stock-yt-kurz-10-1": {
@@ -3009,7 +3049,9 @@
   "http": 201,
   "am": "2026-11-02T10:13:49.960Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 33 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=GtzOfYb2M1Y"
   }
  },
  "stock-insta-kurz-10-2": {
@@ -3019,7 +3061,9 @@
   "http": 201,
   "am": "2026-11-02T10:13:52.951Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 33 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfQObrHj69V/"
   }
  },
  "stock-yt-kurz-10-2": {
@@ -3029,7 +3073,9 @@
   "http": 201,
   "am": "2026-11-02T10:13:55.689Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 33 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=v_XEnaXkaX0"
   }
  },
  "alien-insta-kurz-01-1": {
@@ -3039,7 +3085,9 @@
   "http": 201,
   "am": "2026-11-02T10:13:58.589Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 33 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfQcUvnl2H3/"
   }
  },
  "alien-yt-kurz-01-1": {
@@ -3049,7 +3097,9 @@
   "http": 201,
   "am": "2026-11-02T10:14:01.148Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 33 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=M4k33xNG5gg"
   }
  },
  "alien-insta-kurz-01-2": {
@@ -3059,7 +3109,9 @@
   "http": 201,
   "am": "2026-11-02T10:14:04.222Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 33 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfQp_IQoQKH/"
   }
  },
  "alien-yt-kurz-01-2": {
@@ -3069,7 +3121,9 @@
   "http": 201,
   "am": "2026-11-02T10:14:06.866Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 32 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=SFqqgcjda_k"
   }
  },
  "alien-insta-kurz-02-1": {
@@ -3091,7 +3145,9 @@
   "http": 201,
   "am": "2026-11-02T10:14:12.770Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 32 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=vLr_lAACM4Q"
   }
  },
  "alien-insta-kurz-02-2": {
@@ -3101,7 +3157,9 @@
   "http": 201,
   "am": "2026-11-02T10:14:15.794Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 32 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfRFVTzkqHz/"
   }
  },
  "alien-yt-kurz-02-2": {
@@ -3111,7 +3169,9 @@
   "http": 201,
   "am": "2026-11-02T10:14:18.392Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 32 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=JY2LzB-78-A"
   }
  },
  "alien-insta-kurz-03-1": {
@@ -3121,7 +3181,9 @@
   "http": 201,
   "am": "2026-11-02T10:14:21.235Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 31 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfRTHX7DkSh/"
   }
  },
  "alien-yt-kurz-03-1": {
@@ -3131,7 +3193,9 @@
   "http": 201,
   "am": "2026-11-02T10:14:23.824Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 31 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=kyyGtNYHzjA"
   }
  },
  "alien-insta-kurz-03-2": {
@@ -3141,7 +3205,9 @@
   "http": 201,
   "am": "2026-11-02T10:14:26.656Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 31 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfRg7q6DAlr/"
   }
  },
  "alien-yt-kurz-03-2": {
@@ -3151,7 +3217,9 @@
   "http": 201,
   "am": "2026-11-02T10:14:29.327Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 31 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=QgD7LCWXiq0"
   }
  },
  "alien-insta-kurz-04-1": {
@@ -3161,7 +3229,9 @@
   "http": 201,
   "am": "2026-11-02T10:14:32.826Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 31 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfRusLBAMh_/"
   }
  },
  "alien-yt-kurz-04-1": {
@@ -3171,7 +3241,9 @@
   "http": 201,
   "am": "2026-11-02T10:14:35.461Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 31 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=pO3DHtBzjjs"
   }
  },
  "alien-insta-kurz-04-2": {
@@ -3193,7 +3265,9 @@
   "http": 201,
   "am": "2026-11-02T10:14:41.086Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 30 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=vsA9YEUtN1g"
   }
  },
  "alien-insta-kurz-05-1": {
@@ -3203,7 +3277,9 @@
   "http": 201,
   "am": "2026-11-02T10:14:44.132Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 30 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfSJ700jqVW/"
   }
  },
  "alien-yt-kurz-05-1": {
@@ -3213,7 +3289,9 @@
   "http": 201,
   "am": "2026-11-02T10:14:46.974Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 30 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=nfgsylGHrog"
   }
  },
  "alien-insta-kurz-05-2": {
@@ -3223,7 +3301,9 @@
   "http": 201,
   "am": "2026-11-02T10:14:49.902Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 30 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfSYBmtjK5P/"
   }
  },
  "alien-yt-kurz-05-2": {
@@ -3233,7 +3313,9 @@
   "http": 201,
   "am": "2026-11-02T10:14:52.676Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 29 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=tjMCU0CUHIM"
   }
  },
  "alien-insta-kurz-06-1": {
@@ -3243,7 +3325,9 @@
   "http": 201,
   "am": "2026-11-02T10:14:55.562Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 29 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfSlaJAAFYL/"
   }
  },
  "alien-yt-kurz-06-1": {
@@ -3253,7 +3337,9 @@
   "http": 201,
   "am": "2026-11-02T10:14:58.201Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 29 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=IoS9wp5APpc"
   }
  },
  "alien-insta-kurz-06-2": {
@@ -3263,7 +3349,9 @@
   "http": 201,
   "am": "2026-11-02T10:15:01.099Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 29 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfSzOs9EpQV/"
   }
  },
  "alien-yt-kurz-06-2": {
@@ -3273,7 +3361,9 @@
   "http": 201,
   "am": "2026-11-02T10:15:03.897Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 29 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=8cwdsM-cRGk"
   }
  },
  "alien-insta-kurz-07-1": {
@@ -3283,7 +3373,9 @@
   "http": 201,
   "am": "2026-11-02T10:15:06.754Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 29 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfTBIMJCOfy/"
   }
  },
  "alien-yt-kurz-07-1": {
@@ -3293,7 +3385,9 @@
   "http": 201,
   "am": "2026-11-02T10:15:09.429Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 28 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=zMkWZmpYL80"
   }
  },
  "alien-insta-kurz-07-2": {
@@ -3315,7 +3409,9 @@
   "http": 201,
   "am": "2026-11-02T10:15:15.000Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 28 seconds."
+   "status": "failed",
+   "plattform": "failed",
+   "fehler": "YouTube upload session initialization failed: 400 {\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"The user has exceeded the number of videos they may upload.\",\n    \"errors\": [\n      {\n        \"message\": \"The user has exceeded the number of videos they may upload.\",\n        \"domain\": \"youtube.video\",\n        \"reason\": \"uploadLimitExceeded\"\n      }\n    ]\n  }\n}\n"
   }
  },
  "alien-insta-kurz-08-1": {
@@ -3325,7 +3421,9 @@
   "http": 201,
   "am": "2026-11-02T10:15:17.960Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 28 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfTcbNiIaX5/"
   }
  },
  "alien-yt-kurz-08-1": {
@@ -3335,7 +3433,9 @@
   "http": 201,
   "am": "2026-11-02T10:15:20.611Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 28 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=YZyqUqvDD-o"
   }
  },
  "alien-insta-kurz-08-2": {
@@ -3345,7 +3445,9 @@
   "http": 201,
   "am": "2026-11-02T10:15:23.938Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 27 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfTqOUFiOWo/"
   }
  },
  "alien-yt-kurz-08-2": {
@@ -3355,7 +3457,9 @@
   "http": 201,
   "am": "2026-11-02T10:15:26.606Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 27 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=mgiGQrQhsUY"
   }
  },
  "alien-insta-kurz-09-1": {
@@ -3365,7 +3469,9 @@
   "http": 201,
   "am": "2026-11-02T10:15:29.976Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 27 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfT3x_tjc-G/"
   }
  },
  "alien-yt-kurz-09-1": {
@@ -3375,7 +3481,9 @@
   "http": 201,
   "am": "2026-11-02T10:15:33.129Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 27 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=dOdGqiqOljM"
   }
  },
  "alien-insta-kurz-09-2": {
@@ -3385,7 +3493,9 @@
   "http": 201,
   "am": "2026-11-02T10:15:36.078Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 27 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfUFjdzjtR_/"
   }
  },
  "alien-yt-kurz-09-2": {
@@ -3395,7 +3505,9 @@
   "http": 201,
   "am": "2026-11-02T10:15:38.754Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 27 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=-hkarp9IVhA"
   }
  },
  "alien-insta-kurz-10-1": {
@@ -3417,7 +3529,9 @@
   "http": 201,
   "am": "2026-11-02T10:15:44.864Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 26 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=4mWSgUYAAqg"
   }
  },
  "alien-insta-kurz-10-2": {
@@ -3427,7 +3541,9 @@
   "http": 201,
   "am": "2026-11-02T10:15:47.829Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 26 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfUhJkaCR4B/"
   }
  },
  "alien-yt-kurz-10-2": {
@@ -3437,7 +3553,9 @@
   "http": 201,
   "am": "2026-11-02T10:15:50.460Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 26 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=SNAg_uF2LGY"
   }
  },
  "mann-insta-kurz-01": {
@@ -3447,7 +3565,9 @@
   "http": 201,
   "am": "2026-11-02T10:15:53.316Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 25 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfUu0reAnDu/"
   }
  },
  "mann-yt-kurz-01": {
@@ -3457,7 +3577,9 @@
   "http": 201,
   "am": "2026-11-02T10:15:55.889Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 25 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=gwygyoV496Q"
   }
  },
  "mann-insta-kurz-02": {
@@ -3467,7 +3589,9 @@
   "http": 201,
   "am": "2026-11-02T10:15:59.187Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 25 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfU8e4UDP_2/"
   }
  },
  "mann-yt-kurz-02": {
@@ -3477,7 +3601,9 @@
   "http": 201,
   "am": "2026-11-02T10:16:01.857Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 25 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=ycO7AePF2i4"
   }
  },
  "mann-insta-kurz-03": {
@@ -3487,7 +3613,9 @@
   "http": 201,
   "am": "2026-11-02T10:16:04.794Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 25 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfVKMT8jzRv/"
   }
  },
  "mann-yt-kurz-03": {
@@ -3497,7 +3625,9 @@
   "http": 201,
   "am": "2026-11-02T10:16:07.426Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 25 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=DXAhzB1c9Rs"
   }
  },
  "mann-insta-kurz-04": {
@@ -3519,7 +3649,9 @@
   "http": 201,
   "am": "2026-11-02T10:16:13.168Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 24 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=HYNpe4gzdvA"
   }
  },
  "mann-insta-kurz-05": {
@@ -3529,7 +3661,9 @@
   "http": 201,
   "am": "2026-11-02T10:16:16.126Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 24 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfVl2QVEfPK/"
   }
  },
  "mann-yt-kurz-05": {
@@ -3539,7 +3673,9 @@
   "http": 201,
   "am": "2026-11-02T10:16:19.620Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 23 seconds."
+   "status": "failed",
+   "plattform": "failed",
+   "fehler": "YouTube upload session initialization failed: 400 {\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"The user has exceeded the number of videos they may upload.\",\n    \"errors\": [\n      {\n        \"message\": \"The user has exceeded the number of videos they may upload.\",\n        \"domain\": \"youtube.video\",\n        \"reason\": \"uploadLimitExceeded\"\n      }\n    ]\n  }\n}\n"
   }
  },
  "mann-insta-kurz-06": {
@@ -3549,7 +3685,9 @@
   "http": 201,
   "am": "2026-11-02T10:16:22.550Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 23 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfVzis8DL0A/"
   }
  },
  "mann-yt-kurz-06": {
@@ -3559,7 +3697,9 @@
   "http": 201,
   "am": "2026-11-02T10:16:25.082Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 23 seconds."
+   "status": "failed",
+   "plattform": "failed",
+   "fehler": "YouTube upload session initialization failed: 400 {\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"The user has exceeded the number of videos they may upload.\",\n    \"errors\": [\n      {\n        \"message\": \"The user has exceeded the number of videos they may upload.\",\n        \"domain\": \"youtube.video\",\n        \"reason\": \"uploadLimitExceeded\"\n      }\n    ]\n  }\n}\n"
   }
  },
  "mann-insta-kurz-07": {
@@ -3569,7 +3709,9 @@
   "http": 201,
   "am": "2026-11-02T10:16:27.832Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 23 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfWBN6hnNW9/"
   }
  },
  "mann-yt-kurz-07": {
@@ -3579,7 +3721,9 @@
   "http": 201,
   "am": "2026-11-02T10:16:30.595Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 23 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=zG9LYqN78kM"
   }
  },
  "mann-insta-kurz-08": {
@@ -3589,7 +3733,9 @@
   "http": 201,
   "am": "2026-11-02T10:16:33.569Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 23 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfWPD8lgkFQ/"
   }
  },
  "mann-yt-kurz-08": {
@@ -3599,7 +3745,9 @@
   "http": 201,
   "am": "2026-11-02T10:16:36.127Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 22 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=kolQJueMHPk"
   }
  },
  "mann-insta-kurz-09": {
@@ -3621,7 +3769,9 @@
   "http": 201,
   "am": "2026-11-02T10:16:41.572Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 22 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=tvD2btYcK9g"
   }
  },
  "mann-insta-kurz-10": {
@@ -3631,7 +3781,9 @@
   "http": 201,
   "am": "2026-11-02T10:16:44.556Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 22 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfWqhQVD9t7/"
   }
  },
  "mann-yt-kurz-10": {
@@ -3641,7 +3793,9 @@
   "http": 201,
   "am": "2026-11-02T10:16:47.192Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 22 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=sMLwahGXmG4"
   }
  },
  "taeglich-insta-001": {
@@ -3651,7 +3805,9 @@
   "http": 201,
   "am": "2026-11-02T10:16:49.855Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 21 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfW4Nu3gjq0/"
   }
  },
  "taeglich-yt-001": {
@@ -3661,7 +3817,9 @@
   "http": 201,
   "am": "2026-11-02T10:16:52.352Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 21 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=YNM8dWbbws0"
   }
  },
  "taeglich-insta-s01-f01": {
@@ -3925,7 +4083,9 @@
   "http": 201,
   "am": "2026-11-02T10:21:07.414Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 40 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.tiktok.com/@storys4you.de1/video/7703837035445914913"
   }
  },
  "mann-tiktok-teil-2": {
@@ -3936,7 +4096,9 @@
   "http": 201,
   "am": "2026-11-03T07:44:16.650Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 40 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.tiktok.com/@storys4you.de1/video/7704022431538662689"
   }
  },
  "mann-tiktok-teil-3": {
@@ -3947,7 +4109,9 @@
   "http": 201,
   "am": "2026-11-03T07:44:21.667Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 40 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.tiktok.com/@storys4you.de1/video/7704207851434036513"
   }
  },
  "mann-tiktok-teil-4": {
@@ -3958,7 +4122,9 @@
   "http": 201,
   "am": "2026-11-03T07:44:25.892Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 40 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.tiktok.com/@storys4you.de1/video/7704393613060427040"
   }
  },
  "taeglich-tiktok-001": {
@@ -3972,7 +4138,9 @@
   "loeschHttp": 400,
   "loeschAntwort": "{\"error\":\"Published posts cannot be deleted\",\"type\":\"invalid_request_error\",\"code\":\"invalid_resource_state\"}",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 22 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.tiktok.com/@storys4you.de1/video/7704579252708019488"
   }
  },
  "taeglich-tiktok-s01-teil-1": {
@@ -3986,7 +4154,9 @@
   "loeschHttp": 400,
   "loeschAntwort": "{\"error\":\"Published posts cannot be deleted\",\"type\":\"invalid_request_error\",\"code\":\"invalid_resource_state\"}",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 21 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.tiktok.com/@storys4you.de1/video/7704640819566775584"
   }
  },
  "taeglich-tiktok-s01-teil-2": {
@@ -4041,7 +4211,9 @@
   "loeschHttp": 400,
   "loeschAntwort": "{\"error\":\"Published posts cannot be deleted\",\"type\":\"invalid_request_error\",\"code\":\"invalid_resource_state\"}",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 13 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.tiktok.com/@storys4you_eng/video/7704470859171237152"
   }
  },
  "taeglich-tiktok-en-s02-teil-2": {
@@ -4411,7 +4583,9 @@
   "http": 201,
   "am": "2026-11-05T20:57:47.040Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 17 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.tiktok.com/@storys4you.de1/video/7705080626969382176"
   }
  },
  "taeglich-tiktok-s02-teil-3": {
@@ -4511,7 +4685,9 @@
   "http": 201,
   "am": "2026-11-05T20:58:11.060Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 16 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfZMOzajvQk/"
   }
  },
  "taeglich-insta-s02-f02": {
@@ -4524,7 +4700,9 @@
   "http": 201,
   "am": "2026-11-05T20:58:13.962Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 15 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfZa5l-gdhu/"
   }
  },
  "taeglich-insta-s02-f03": {
@@ -4537,7 +4715,9 @@
   "http": 201,
   "am": "2026-11-05T20:58:16.858Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 15 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfZneKnD5RD/"
   }
  },
  "taeglich-yt-s02-f01": {
@@ -4550,7 +4730,9 @@
   "http": 201,
   "am": "2026-11-05T20:58:34.450Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 14 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=bCdOm1wLK0k"
   }
  },
  "taeglich-yt-s02-f02": {
@@ -4563,7 +4745,9 @@
   "http": 201,
   "am": "2026-11-05T20:58:37.167Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 14 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=FFVgNpZ6rSY"
   }
  },
  "taeglich-yt-s02-f03": {
@@ -4576,7 +4760,9 @@
   "http": 201,
   "am": "2026-11-05T20:58:39.835Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 14 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=m2_egMo62iw"
   }
  },
  "taeglich-tiktok-en-s02-teil-1-v2": {
@@ -4589,7 +4775,9 @@
   "http": 201,
   "am": "2026-11-05T20:58:56.202Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 8 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.tiktok.com/@storys4you_eng/video/7704839908120169760"
   }
  },
  "taeglich-tiktok-en-s02-teil-2-v2": {
@@ -4602,7 +4790,9 @@
   "http": 201,
   "am": "2026-11-05T20:58:59.266Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 8 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.tiktok.com/@storys4you_eng/video/7705070581053426976"
   }
  },
  "taeglich-tiktok-en-s02-teil-3-v2": {
@@ -4615,7 +4805,9 @@
   "http": 201,
   "am": "2026-11-05T20:59:02.244Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 8 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.tiktok.com/@storys4you_eng/video/7705142496766020896"
   }
  },
  "taeglich-tiktok-en-s02-teil-4-v2": {
@@ -4628,7 +4820,9 @@
   "http": 201,
   "am": "2026-11-05T20:59:05.369Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 8 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.tiktok.com/@storys4you_eng/video/7705325865659321632"
   }
  },
  "taeglich-tiktok-en-s02-teil-5-v2": {
@@ -4641,7 +4835,9 @@
   "http": 201,
   "am": "2026-11-05T20:59:09.554Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 7 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.tiktok.com/@storys4you_eng/video/7705383928638541088"
   }
  },
  "taeglich-tiktok-en-s02-teil-6-v2": {
@@ -4654,7 +4850,9 @@
   "http": 201,
   "am": "2026-11-05T20:59:12.441Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 7 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.tiktok.com/@storys4you_eng/video/7705449924644687137"
   }
  },
  "taeglich-tiktok-en-s02-teil-7-v2": {
@@ -4667,7 +4865,9 @@
   "http": 201,
   "am": "2026-11-05T20:59:15.304Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 7 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.tiktok.com/@storys4you_eng/video/7705499667143986464"
   }
  },
  "taeglich-tiktok-en-s02-teil-8-v2": {
@@ -4780,7 +4980,9 @@
   "http": 201,
   "am": "2026-11-06T13:38:27.075Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 15 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfZ-BawFOLp/"
   }
  },
  "taeglich-insta-s02-f05": {
@@ -4853,7 +5055,9 @@
   "http": 201,
   "am": "2026-11-06T13:38:43.775Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 14 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=dzeNSvKlUik"
   }
  },
  "taeglich-yt-s02-f05": {
@@ -5166,7 +5370,9 @@
   "http": 201,
   "am": "2026-11-06T17:30:36.218Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 2 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/Dfb4zYrlbdo/"
   }
  },
  "taeglich-insta-s01-f04-v2": {
@@ -5179,7 +5385,9 @@
   "http": 201,
   "am": "2026-11-06T17:30:39.478Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 2 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfcNvI8FIbJ/"
   }
  },
  "taeglich-insta-s01-f05-v2": {
@@ -5192,7 +5400,9 @@
   "http": 201,
   "am": "2026-11-06T17:30:42.668Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 2 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfcmlSfidNY/"
   }
  },
  "taeglich-insta-s01-f06-v2": {
@@ -5205,7 +5415,9 @@
   "http": 201,
   "am": "2026-11-06T17:30:46.686Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 1 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/Dfc4eyXFPa8/"
   }
  },
  "taeglich-insta-s01-f07-v2": {
@@ -5258,7 +5470,9 @@
   "http": 201,
   "am": "2026-11-06T17:31:06.582Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 1 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=yriOje8Nd_Y"
   }
  },
  "taeglich-yt-s01-f02-v2": {
@@ -5271,7 +5485,9 @@
   "http": 201,
   "am": "2026-11-06T17:31:11.423Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 1 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=lwmIHErRbUg"
   }
  },
  "taeglich-yt-s01-f03-v2": {
@@ -5284,7 +5500,9 @@
   "http": 201,
   "am": "2026-11-06T17:31:15.592Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 1 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=V4y-G29Mhww"
   }
  },
  "taeglich-yt-s01-f04-v2": {
@@ -5297,7 +5515,9 @@
   "http": 201,
   "am": "2026-11-06T17:31:19.575Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 1 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=1g6RCEJoddM"
   }
  },
  "taeglich-yt-s01-f05-v2": {
@@ -5310,7 +5530,9 @@
   "http": 201,
   "am": "2026-11-06T17:31:23.542Z",
   "ergebnis": {
-   "fehler": "Rate limit exceeded. Please retry after 1 seconds."
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=I2vFDVQnlOI"
   }
  },
  "taeglich-yt-s01-f06-v2": {
@@ -5321,7 +5543,12 @@
   "k": 1,
   "konto": "sto.rys4you",
   "http": 201,
-  "am": "2026-11-06T17:31:27.249Z"
+  "am": "2026-11-06T17:31:27.249Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=4hiKpIfg7_o"
+  }
  },
  "taeglich-yt-s01-f07-v2": {
   "ok": true,
