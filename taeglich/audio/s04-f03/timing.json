@@ -1,0 +1,203 @@
+{
+ "dauer": 80.996,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "fundhaus",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 5.942,
+   "emotion": "erzaehlend",
+   "text": "In einer Minute gesteht dir dein bester Freund eine Lüge. Und trotzdem ist er kein Dieb."
+  },
+  {
+   "nr": 2,
+   "typ": "archiv",
+   "kapitel": 1,
+   "start": 5.942,
+   "dauer": 4.046,
+   "emotion": "erzaehlend",
+   "text": "Fünfzehn Uhr zweiundfünfzig. Du rennst der Sackkarre hinterher."
+  },
+  {
+   "nr": 3,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 9.988,
+   "dauer": 2.246,
+   "emotion": "spannend",
+   "text": "„Stopp! Das Rote bleibt hier!“"
+  },
+  {
+   "nr": 4,
+   "typ": "archiv",
+   "kapitel": 2,
+   "start": 12.234,
+   "dauer": 5.078,
+   "emotion": "erzaehlend",
+   "text": "Papa stellt sich einfach davor. Breite Schultern, kein Wort. Die Karre hält."
+  },
+  {
+   "nr": 5,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 17.312,
+   "dauer": 1.526,
+   "emotion": "froh",
+   "text": "„Rot heißt bleiben.“"
+  },
+  {
+   "nr": 6,
+   "typ": "fundhaus",
+   "kapitel": 2,
+   "start": 18.838,
+   "dauer": 4.598,
+   "emotion": "erzaehlend",
+   "text": "Gerettet. Aber Sami steht am Fenster und knetet seine Jackentasche."
+  },
+  {
+   "nr": 7,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 23.436,
+   "dauer": 2.966,
+   "emotion": "ernst",
+   "text": "Du kennst ihn seit zwölf Jahren. Er versteckt etwas."
+  },
+  {
+   "nr": 8,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 26.402,
+   "dauer": 2.174,
+   "emotion": "erzaehlend",
+   "text": "„Zeig mir deine eigene Quittung, Sami.“"
+  },
+  {
+   "nr": 9,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 28.576,
+   "dauer": 3.902,
+   "emotion": "spannend",
+   "text": "Sein Atem stockt. Dann zieht er ein gefaltetes Papier heraus."
+  },
+  {
+   "nr": 10,
+   "typ": "objekt",
+   "kapitel": 3,
+   "start": 32.478,
+   "dauer": 5.222,
+   "emotion": "erklaerend",
+   "text": "Eine zweite Quittung. Auch mit seinem Namen. Abgeholt: eine Armbanduhr."
+  },
+  {
+   "nr": 11,
+   "typ": "objekt",
+   "kapitel": 3,
+   "start": 37.7,
+   "dauer": 4.046,
+   "emotion": "erklaerend",
+   "text": "Die Uhr ist viel zu groß für sein schmales Handgelenk. Sie tickt leise."
+  },
+  {
+   "nr": 12,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 41.746,
+   "dauer": 2.222,
+   "emotion": "traurig",
+   "text": "„Die war von Jonas. Meinem Bruder.“"
+  },
+  {
+   "nr": 13,
+   "typ": "landschaft",
+   "kapitel": 3,
+   "start": 43.968,
+   "dauer": 6.23,
+   "emotion": "erzaehlend",
+   "text": "Jonas ist vor zwei Jahren gestorben. Seine Mutter hat die Uhr gespendet. Sie konnte sie nicht mehr ansehen."
+  },
+  {
+   "nr": 14,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 50.198,
+   "dauer": 3.062,
+   "emotion": "traurig",
+   "text": "„Ich wollte sie nur zurück. Ohne dass jemand fragt.“"
+  },
+  {
+   "nr": 15,
+   "typ": "fundhaus",
+   "kapitel": 3,
+   "start": 53.26,
+   "dauer": 3.278,
+   "emotion": "erzaehlend",
+   "text": "Seine Hand ist warm und feucht, als er dir die Uhr hinhält."
+  },
+  {
+   "nr": 16,
+   "typ": "wohnzimmer",
+   "kapitel": 3,
+   "start": 56.538,
+   "dauer": 3.902,
+   "emotion": "erzaehlend",
+   "text": "Früher hat Jonas euch immer Pommes gemacht. Zu salzig, jedes Mal."
+  },
+  {
+   "nr": 17,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 60.44,
+   "dauer": 3.086,
+   "emotion": "traurig",
+   "text": "Sami hat gelogen. Er hat heimlich etwas mitgenommen."
+  },
+  {
+   "nr": 18,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 63.526,
+   "dauer": 2.654,
+   "emotion": "erzaehlend",
+   "text": "Und genau das würde Rike gegen ihn benutzen."
+  },
+  {
+   "nr": 19,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 66.18,
+   "dauer": 5.702,
+   "emotion": "ernst",
+   "text": "Du schreibst trotzdem alles auf. Ehrlich. Eine Lüge über eine Uhr ist noch kein Diebstahl."
+  },
+  {
+   "nr": 20,
+   "typ": "objekt",
+   "kapitel": 5,
+   "start": 71.882,
+   "dauer": 2.918,
+   "emotion": "erklaerend",
+   "text": "Zwei Quittungen mit Samis Namen liegen nebeneinander."
+  },
+  {
+   "nr": 21,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 74.8,
+   "dauer": 3.374,
+   "emotion": "spannend",
+   "text": "Sami beugt sich vor. Sein Finger zittert über der zweiten."
+  },
+  {
+   "nr": 22,
+   "typ": "objekt",
+   "kapitel": 5,
+   "start": 78.174,
+   "dauer": 2.822,
+   "emotion": "erklaerend",
+   "text": "„Die Uhr hab ich unterschrieben. Die Kasse nicht.“"
+  }
+ ]
+}

@@ -1,0 +1,203 @@
+{
+ "dauer": 85.436,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "fundhaus",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 5.51,
+   "emotion": "spannend",
+   "text": "In achtzig Sekunden weißt du: Jemand will deinen besten Freund reinlegen."
+  },
+  {
+   "nr": 2,
+   "typ": "objekt",
+   "kapitel": 1,
+   "start": 5.51,
+   "dauer": 2.99,
+   "emotion": "erklaerend",
+   "text": "Aber zuerst verschwinden viertausend Euro."
+  },
+  {
+   "nr": 3,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 8.5,
+   "dauer": 3.998,
+   "emotion": "ernst",
+   "text": "Das ist Sami, dein bester Freund. Er macht Witze, wenn er Angst hat."
+  },
+  {
+   "nr": 4,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 12.498,
+   "dauer": 2.726,
+   "emotion": "froh",
+   "text": "„Vielleicht hat die Kasse einfach gekündigt.“"
+  },
+  {
+   "nr": 5,
+   "typ": "grossstadt",
+   "kapitel": 2,
+   "start": 15.224,
+   "dauer": 4.646,
+   "emotion": "erzaehlend",
+   "text": "Vierzehn Uhr dreißig. Ihr zwei helft jeden Samstag im Fundhaus der Stadt."
+  },
+  {
+   "nr": 6,
+   "typ": "fundhaus",
+   "kapitel": 2,
+   "start": 19.87,
+   "dauer": 6.254,
+   "emotion": "erzaehlend",
+   "text": "Vierundzwanzig Fächer. Regenschirme, Teddys, ein einzelner Schuh. Es riecht nach feuchter Pappe."
+  },
+  {
+   "nr": 7,
+   "typ": "fundhaus",
+   "kapitel": 2,
+   "start": 26.124,
+   "dauer": 4.07,
+   "emotion": "erzaehlend",
+   "text": "In Fach zwölf stand heute Morgen die Spendenkasse für den Jugendtreff."
+  },
+  {
+   "nr": 8,
+   "typ": "fundhaus",
+   "kapitel": 2,
+   "start": 30.194,
+   "dauer": 4.814,
+   "emotion": "erzaehlend",
+   "text": "Rike leitet das Fundhaus. Ihr Schlüsselbund scheppert bei jedem Schritt."
+  },
+  {
+   "nr": 9,
+   "typ": "objekt",
+   "kapitel": 3,
+   "start": 35.008,
+   "dauer": 5.246,
+   "emotion": "erklaerend",
+   "text": "Hier bekommt jede Ausgabe zwei Quittungen. Eine für den Abholer, eine fürs Archiv."
+  },
+  {
+   "nr": 10,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 40.254,
+   "dauer": 3.302,
+   "emotion": "ernst",
+   "text": "„Abgeholt um vierzehn Uhr siebzehn. Von Sami.“"
+  },
+  {
+   "nr": 11,
+   "typ": "objekt",
+   "kapitel": 3,
+   "start": 43.556,
+   "dauer": 2.678,
+   "emotion": "erklaerend",
+   "text": "Da steht sein Name. Mit seiner Unterschrift."
+  },
+  {
+   "nr": 12,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 46.234,
+   "dauer": 3.59,
+   "emotion": "spannend",
+   "text": "Sami wird blass. Der nächste Witz bleibt ihm im Hals stecken."
+  },
+  {
+   "nr": 13,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 49.824,
+   "dauer": 1.79,
+   "emotion": "ernst",
+   "text": "„Ab heute hilfst du hier nicht mehr.“"
+  },
+  {
+   "nr": 14,
+   "typ": "fundhaus",
+   "kapitel": 3,
+   "start": 51.614,
+   "dauer": 4.286,
+   "emotion": "ernst",
+   "text": "Du willst schreien: Er war das nicht. Aber Schreien beweist nichts."
+  },
+  {
+   "nr": 15,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 55.9,
+   "dauer": 3.806,
+   "emotion": "erzaehlend",
+   "text": "Zwei Quittungen. Also muss irgendwo noch eine zweite liegen."
+  },
+  {
+   "nr": 16,
+   "typ": "archiv",
+   "kapitel": 4,
+   "start": 59.706,
+   "dauer": 4.646,
+   "emotion": "erzaehlend",
+   "text": "Im Archiv stehen blaue Regale bis unter die Decke. Eine Leuchtröhre summt."
+  },
+  {
+   "nr": 17,
+   "typ": "archiv",
+   "kapitel": 4,
+   "start": 64.352,
+   "dauer": 3.614,
+   "emotion": "erzaehlend",
+   "text": "Die Kopien hängen an einer roten Schnur, sortiert nach Uhrzeit."
+  },
+  {
+   "nr": 18,
+   "typ": "objekt",
+   "kapitel": 4,
+   "start": 67.966,
+   "dauer": 4.262,
+   "emotion": "erklaerend",
+   "text": "Du hältst Rikes Original gegen das Licht. Das Papier ist kalt und glatt."
+  },
+  {
+   "nr": 19,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 72.228,
+   "dauer": 3.662,
+   "emotion": "erzaehlend",
+   "text": "Hinter Samis Namen sitzt ein winziger blauer Fingerabdruck."
+  },
+  {
+   "nr": 20,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 75.89,
+   "dauer": 2.558,
+   "emotion": "ernst",
+   "text": "„Blau? Ich hatte heute nur Bleistift.“"
+  },
+  {
+   "nr": 21,
+   "typ": "archiv",
+   "kapitel": 5,
+   "start": 78.448,
+   "dauer": 1.694,
+   "emotion": "erzaehlend",
+   "text": "Du kippst das Blatt ins Licht."
+  },
+  {
+   "nr": 22,
+   "typ": "objekt",
+   "kapitel": 5,
+   "start": 80.142,
+   "dauer": 5.294,
+   "emotion": "erklaerend",
+   "text": "Der Abdruck liegt unter der Schrift. Jemand hat Samis Namen erst später daraufgeschrieben."
+  }
+ ]
+}

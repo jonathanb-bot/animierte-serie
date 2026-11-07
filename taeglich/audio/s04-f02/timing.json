@@ -1,0 +1,203 @@
+{
+ "dauer": 86.804,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "archiv",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 6.278,
+   "emotion": "spannend",
+   "text": "Fünfzehn Uhr. Elf Quittungen hängen an der Schnur. Die zwölfte fehlt."
+  },
+  {
+   "nr": 2,
+   "typ": "objekt",
+   "kapitel": 1,
+   "start": 6.278,
+   "dauer": 3.422,
+   "emotion": "erklaerend",
+   "text": "Und genau die zwölfte könnte deinen besten Freund retten."
+  },
+  {
+   "nr": 3,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 9.7,
+   "dauer": 6.014,
+   "emotion": "ernst",
+   "text": "Jemand hat Samis Namen auf die Kassen-Quittung geschrieben. Das weißt du. Beweisen kannst du es nicht."
+  },
+  {
+   "nr": 4,
+   "typ": "archiv",
+   "kapitel": 2,
+   "start": 15.714,
+   "dauer": 3.734,
+   "emotion": "erzaehlend",
+   "text": "Die Leuchtröhre flackert. Der Staub kratzt dir im Hals."
+  },
+  {
+   "nr": 5,
+   "typ": "archiv",
+   "kapitel": 2,
+   "start": 19.448,
+   "dauer": 5.27,
+   "emotion": "erzaehlend",
+   "text": "Elf Blätter, sauber nummeriert. Dazwischen eine Lücke, so breit wie ein Daumen."
+  },
+  {
+   "nr": 6,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 24.718,
+   "dauer": 2.654,
+   "emotion": "erzaehlend",
+   "text": "Vielleicht steht auf dem Durchschlag die Wahrheit."
+  },
+  {
+   "nr": 7,
+   "typ": "fundhaus",
+   "kapitel": 2,
+   "start": 27.372,
+   "dauer": 3.662,
+   "emotion": "erzaehlend",
+   "text": "Vorne im Ausgaberaum gibt Rike gerade Anweisungen."
+  },
+  {
+   "nr": 8,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 31.034,
+   "dauer": 2.534,
+   "emotion": "ernst",
+   "text": "„Das alte Papier geht um sechzehn Uhr raus.“"
+  },
+  {
+   "nr": 9,
+   "typ": "objekt",
+   "kapitel": 3,
+   "start": 33.568,
+   "dauer": 5.246,
+   "emotion": "erklaerend",
+   "text": "Um sechzehn Uhr holt die Papierabfuhr alles ab. Auch die Bündel aus dem Archiv."
+  },
+  {
+   "nr": 10,
+   "typ": "archiv",
+   "kapitel": 3,
+   "start": 38.814,
+   "dauer": 5.294,
+   "emotion": "erzaehlend",
+   "text": "Hundert Bündel, jedes verknotet. Die Papierschnur knirscht, wenn du daran ziehst."
+  },
+  {
+   "nr": 11,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 44.108,
+   "dauer": 3.446,
+   "emotion": "ernst",
+   "text": "Alle durchsuchen schaffst du nicht. Nicht in einer Stunde."
+  },
+  {
+   "nr": 12,
+   "typ": "archiv",
+   "kapitel": 3,
+   "start": 47.554,
+   "dauer": 4.046,
+   "emotion": "erzaehlend",
+   "text": "Also klebst du einen roten Zettel auf das Bündel vom Vormittag."
+  },
+  {
+   "nr": 13,
+   "typ": "fundhaus",
+   "kapitel": 3,
+   "start": 51.6,
+   "dauer": 4.502,
+   "emotion": "erzaehlend",
+   "text": "Dein Papa ist hier Hausmeister. Er redet wenig. Aber er hört zu."
+  },
+  {
+   "nr": 14,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 56.102,
+   "dauer": 1.382,
+   "emotion": "erzaehlend",
+   "text": "„Rot heißt bleiben?“"
+  },
+  {
+   "nr": 15,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 57.484,
+   "dauer": 2.558,
+   "emotion": "froh",
+   "text": "„Rot heißt bleiben. Bitte, Papa.“"
+  },
+  {
+   "nr": 16,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 60.042,
+   "dauer": 2.822,
+   "emotion": "froh",
+   "text": "Er nickt einmal. Bei ihm ist das ein Versprechen."
+  },
+  {
+   "nr": 17,
+   "typ": "fundhaus",
+   "kapitel": 4,
+   "start": 62.864,
+   "dauer": 4.934,
+   "emotion": "erzaehlend",
+   "text": "Sami sitzt auf der Treppe zum Hof. Seit einer Stunde kein einziger Witz."
+  },
+  {
+   "nr": 18,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 67.798,
+   "dauer": 2.87,
+   "emotion": "traurig",
+   "text": "„Ohne die Quittung war ich's. So einfach.“"
+  },
+  {
+   "nr": 19,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 70.668,
+   "dauer": 4.166,
+   "emotion": "traurig",
+   "text": "Du willst ihm sagen, dass alles gut wird. Aber du versprichst nichts Falsches."
+  },
+  {
+   "nr": 20,
+   "typ": "grossstadt",
+   "kapitel": 4,
+   "start": 74.834,
+   "dauer": 4.43,
+   "emotion": "erzaehlend",
+   "text": "Fünfzehn Uhr fünfzig. Draußen hält ein Laster mit laufendem Motor."
+  },
+  {
+   "nr": 21,
+   "typ": "archiv",
+   "kapitel": 5,
+   "start": 79.264,
+   "dauer": 3.206,
+   "emotion": "erzaehlend",
+   "text": "Im Archiv rollt eine Sackkarre quietschend durch die Gasse."
+  },
+  {
+   "nr": 22,
+   "typ": "archiv",
+   "kapitel": 5,
+   "start": 82.47,
+   "dauer": 4.334,
+   "emotion": "spannend",
+   "text": "Und sie nimmt ausgerechnet das Bündel mit deinem roten Zettel mit."
+  }
+ ]
+}
