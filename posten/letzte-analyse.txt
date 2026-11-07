@@ -5,7 +5,7 @@ Konto youtube:sto.rys4you Follower=53 Insights ok
 Konto tiktok:storys4you_eng Follower=1 Insights ok
 Konto youtube:storys4you_eng Follower=10 Insights ok
 Konto instagram:sory4you_eng Follower=1 Insights ok
-Posts (haupt) Seite 1: 84
-Posts (yt) Seite 1: 64
-Posts (drei) Seite 1: 13
-Fertig: 6 Konten, 155 Posts (155 mit Zahlen), 0 Fehler → posten/analyse.json
+Posts (haupt) Seite 1: 88
+Posts (yt) Seite 1: 69
+Posts (drei) Seite 1: 16
+Fertig: 6 Konten, 167 Posts (167 mit Zahlen), 0 Fehler → posten/analyse.json
