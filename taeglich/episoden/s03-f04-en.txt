@@ -45,7 +45,7 @@
 // Nahaufnahme: du, zwischen beiden
 [gesicht du ort=waldnacht angst palette=blau palette_staerke=0.6 wackeln=0.3] Two voices. Both sound exactly like her. One of them is not your mother.
 // Infokarte: das Wort
-[titel oben="Your word" gross="Lighthouse" unten="and the old sign" farbe=#0e1630 akzent=#ffd38a groesse=150 hud=false zoom-rein] You take a deep breath. And you shout the one word only the two of you know.
+[titel oben="Your word" gross="Lighthouse" unten="and the old sign" farbe=#0e1630 akzent=#ffd38a groesse=118 hud=false zoom-rein] You take a deep breath. And you shout the one word only the two of you know.
 // Nahaufnahme: du rufst
 [gesicht du ort=waldnacht entschlossen palette=blau palette_staerke=0.6 zoom-rein] “Lighthouse!”
 
