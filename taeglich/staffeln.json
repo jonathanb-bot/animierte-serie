@@ -485,6 +485,44 @@
     }
    },
    "veroeffentlicht": {
+    "taeglich-tiktok-s02-teil-2-v2": "2026-11-09T07:39:00",
+    "taeglich-tiktok-s02-teil-3-v2": "2026-11-09T11:52:00",
+    "taeglich-tiktok-s02-teil-4-v2": "2026-11-09T15:38:00",
+    "taeglich-tiktok-s02-teil-5-v2": "2026-11-09T20:29:00",
+    "taeglich-tiktok-s02-teil-6-v2": "2026-11-10T08:30:00",
+    "taeglich-tiktok-s02-teil-7-v2": "2026-11-10T12:15:00",
+    "taeglich-tiktok-s02-teil-8-v2": "2026-11-10T16:19:00",
+    "taeglich-insta-s02-f02-v2": "2026-11-09T16:33:00",
+    "taeglich-insta-s02-f03-v2": "2026-11-09T19:51:00",
+    "taeglich-insta-s02-f04-v2": "2026-11-10T07:49:00",
+    "taeglich-insta-s02-f05-v2": "2026-11-10T10:43:00",
+    "taeglich-insta-s02-f06-v2": "2026-11-10T14:07:00",
+    "taeglich-insta-s02-f07-v2": "2026-11-10T17:24:00",
+    "taeglich-insta-s02-f08-v2": "2026-11-10T20:16:00",
+    "taeglich-yt-s02-f02-v2": "2026-11-09T17:02:00",
+    "taeglich-yt-s02-f03-v2": "2026-11-09T20:29:00",
+    "taeglich-yt-s02-f04-v2": "2026-11-10T08:53:00",
+    "taeglich-yt-s02-f05-v2": "2026-11-10T11:00:00",
+    "taeglich-yt-s02-f06-v2": "2026-11-10T14:40:00",
+    "taeglich-yt-s02-f07-v2": "2026-11-10T17:31:00",
+    "taeglich-yt-s02-f08-v2": "2026-11-10T20:54:00"
+   },
+   "vielfalt": {
+    "welt": "Heimatstadt: Kiosk, Schule, Esstisch",
+    "genre": "Was wäre wenn / Alltagsdrama",
+    "erzaehlform": "chronologisch, 1 Woche",
+    "hook_art": "kühne Prämisse („Stell dir vor …“)",
+    "vorbild_kurz": "Dhar Mann",
+    "figuren_fokus": "beste Freundin, Opa",
+    "laenge": "kurz 65–81 s",
+    "folgen": 8,
+    "tiktok": "jede Folge einzeln",
+    "experiment": "Hook-Text A/B (ungerade mit, gerade ohne)",
+    "neue_kulissen": [
+     "kiosk"
+    ]
+   },
+   "ersetzt": {
     "taeglich-tiktok-s02-teil-1": "2026-11-06T12:00:00",
     "taeglich-tiktok-s02-teil-2": "2026-11-06T16:00:00",
     "taeglich-tiktok-s02-teil-3": "2026-11-06T20:00:00",
@@ -509,21 +547,6 @@
     "taeglich-yt-s02-f06": "2026-11-06T20:30:00",
     "taeglich-yt-s02-f07": "2026-11-06T22:30:00",
     "taeglich-yt-s02-f08": "2026-11-07T00:30:00"
-   },
-   "vielfalt": {
-    "welt": "Heimatstadt: Kiosk, Schule, Esstisch",
-    "genre": "Was wäre wenn / Alltagsdrama",
-    "erzaehlform": "chronologisch, 1 Woche",
-    "hook_art": "kühne Prämisse („Stell dir vor …“)",
-    "vorbild_kurz": "Dhar Mann",
-    "figuren_fokus": "beste Freundin, Opa",
-    "laenge": "kurz 65–81 s",
-    "folgen": 8,
-    "tiktok": "jede Folge einzeln",
-    "experiment": "Hook-Text A/B (ungerade mit, gerade ohne)",
-    "neue_kulissen": [
-     "kiosk"
-    ]
    }
   },
   {
