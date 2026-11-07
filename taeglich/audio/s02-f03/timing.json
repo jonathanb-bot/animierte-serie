@@ -1,12 +1,12 @@
 {
- "dauer": 69.266,
+ "dauer": 74.066,
  "einstellungen": [
   {
    "nr": 1,
    "typ": "park",
    "kapitel": 1,
    "start": 0.0,
-   "dauer": 5.102,
+   "dauer": 5.414,
    "emotion": "erzaehlend",
    "text": "Du hast dreißig Millionen. Und das Erste, was du dir gönnst, ist Pizza."
   },
@@ -14,8 +14,8 @@
    "nr": 2,
    "typ": "gesicht",
    "kapitel": 1,
-   "start": 5.102,
-   "dauer": 4.046,
+   "start": 5.414,
+   "dauer": 4.406,
    "emotion": "froh",
    "text": "„Du zahlst? Wer bist du, und was hast du mit meinem Freund gemacht?“"
   },
@@ -23,8 +23,8 @@
    "nr": 3,
    "typ": "gesicht",
    "kapitel": 1,
-   "start": 9.148,
-   "dauer": 4.358,
+   "start": 9.82,
+   "dauer": 3.902,
    "emotion": "froh",
    "text": "„Ich hab gespart.“ Du hast in deinem Leben noch nie gespart."
   },
@@ -32,8 +32,8 @@
    "nr": 4,
    "typ": "landschaft",
    "kapitel": 1,
-   "start": 13.506,
-   "dauer": 3.206,
+   "start": 13.722,
+   "dauer": 3.614,
    "emotion": "erzaehlend",
    "text": "Drei Tage ist es her. Keiner weiß davon. Nur du."
   },
@@ -41,8 +41,8 @@
    "nr": 5,
    "typ": "gesicht",
    "kapitel": 2,
-   "start": 16.712,
-   "dauer": 3.854,
+   "start": 17.336,
+   "dauer": 4.286,
    "emotion": "froh",
    "text": "Mia lacht über den Witz von Ben. Sie hat Tomatensoße am Kinn."
   },
@@ -50,8 +50,8 @@
    "nr": 6,
    "typ": "park",
    "kapitel": 2,
-   "start": 20.566,
-   "dauer": 3.182,
+   "start": 21.622,
+   "dauer": 3.374,
    "emotion": "erzaehlend",
    "text": "Dann rennt ihr zum Bus. Du verlierst. Wie immer."
   },
@@ -59,8 +59,8 @@
    "nr": 7,
    "typ": "gesicht",
    "kapitel": 2,
-   "start": 23.748,
-   "dauer": 2.438,
+   "start": 24.996,
+   "dauer": 2.63,
    "emotion": "froh",
    "text": "„Du rennst wie ein Pinguin mit Rucksack.“"
   },
@@ -68,8 +68,8 @@
    "nr": 8,
    "typ": "objekt",
    "kapitel": 3,
-   "start": 26.186,
-   "dauer": 2.702,
+   "start": 27.626,
+   "dauer": 3.182,
    "emotion": "erklaerend",
    "text": "Du gibst kaum etwas aus. Du traust dich nicht."
   },
@@ -77,8 +77,8 @@
    "nr": 9,
    "typ": "zimmer",
    "kapitel": 3,
-   "start": 28.888,
-   "dauer": 6.086,
+   "start": 30.808,
+   "dauer": 5.918,
    "emotion": "erzaehlend",
    "text": "Nachts holst du die Blechdose unter dem Bett hervor. Nur um nachzusehen, ob der Schein noch da ist."
   },
@@ -86,8 +86,8 @@
    "nr": 10,
    "typ": "wohnzimmer",
    "kapitel": 3,
-   "start": 34.974,
-   "dauer": 4.406,
+   "start": 36.726,
+   "dauer": 4.838,
    "emotion": "froh",
    "text": "Nur Linas Fahrrad ist seit Wochen kaputt. Also steht morgens ein neues vor der Tür."
   },
@@ -95,8 +95,8 @@
    "nr": 11,
    "typ": "gesicht",
    "kapitel": 3,
-   "start": 39.38,
-   "dauer": 3.71,
+   "start": 41.564,
+   "dauer": 3.662,
    "emotion": "ernst",
    "text": "„Wer schenkt einfach so ein Fahrrad? Hast du jemanden ausgeraubt?“"
   },
@@ -104,8 +104,8 @@
    "nr": 12,
    "typ": "gesicht",
    "kapitel": 3,
-   "start": 43.09,
-   "dauer": 4.91,
+   "start": 45.226,
+   "dauer": 5.486,
    "emotion": "ernst",
    "text": "„Gutschein. Gewinnspiel.“ Du lügst schon wieder. Und es wird jedes Mal leichter."
   },
@@ -113,8 +113,8 @@
    "nr": 13,
    "typ": "grossstadt",
    "kapitel": 4,
-   "start": 48.0,
-   "dauer": 4.262,
+   "start": 50.712,
+   "dauer": 4.766,
    "emotion": "erzaehlend",
    "text": "Abends sitzt ihr auf dem Dach von Mias Haus. Die Stadt summt unter euch."
   },
@@ -122,8 +122,8 @@
    "nr": 14,
    "typ": "gesicht",
    "kapitel": 4,
-   "start": 52.262,
-   "dauer": 3.062,
+   "start": 55.478,
+   "dauer": 3.59,
    "emotion": "erzaehlend",
    "text": "„Du bist anders seit Samstag. Irgendwie leiser.“"
   },
@@ -131,8 +131,8 @@
    "nr": 15,
    "typ": "weltall",
    "kapitel": 4,
-   "start": 55.324,
-   "dauer": 4.262,
+   "start": 59.068,
+   "dauer": 4.31,
    "emotion": "erzaehlend",
    "text": "Du könntest es ihr jetzt sagen. Ein einziger Satz würde reichen."
   },
@@ -140,8 +140,8 @@
    "nr": 16,
    "typ": "gesicht",
    "kapitel": 4,
-   "start": 59.586,
-   "dauer": 1.214,
+   "start": 63.378,
+   "dauer": 1.19,
    "emotion": "ernst",
    "text": "Du holst Luft."
   },
@@ -149,8 +149,8 @@
    "nr": 17,
    "typ": "handy",
    "kapitel": 5,
-   "start": 60.8,
-   "dauer": 2.582,
+   "start": 64.568,
+   "dauer": 3.038,
    "emotion": "erzaehlend",
    "text": "Da vibrieren plötzlich beide Handys gleichzeitig."
   },
@@ -158,8 +158,8 @@
    "nr": 18,
    "typ": "kiosk",
    "kapitel": 5,
-   "start": 63.382,
-   "dauer": 2.966,
+   "start": 67.606,
+   "dauer": 3.182,
    "emotion": "erzaehlend",
    "text": "Der Kiosk in der Lindenstraße. Dein Kiosk."
   },
@@ -167,8 +167,8 @@
    "nr": 19,
    "typ": "gesicht",
    "kapitel": 5,
-   "start": 66.348,
-   "dauer": 2.918,
+   "start": 70.788,
+   "dauer": 3.278,
    "emotion": "ernst",
    "text": "Mia schaut nicht auf ihr Handy. Sie schaut dich an."
   }
