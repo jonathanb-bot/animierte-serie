@@ -54,7 +54,7 @@
 // Wohnzimmer, du verstehst es
 [wohnzimmer du ben zeit=nacht palette=blau palette_staerke=0.6 zoom-rein] Es denkt sich nichts aus. Es hört zu. Und es merkt sich alles.
 // Nahaufnahme: du denkst nach
-[gesicht du ort=wohnzimmer zeit=nacht besorgt palette=blau palette_staerke=0.6] Du gehst im Kopf jeden Satz durch, den du heute draußen gesagt hast.
+[gesicht du ort=wohnzimmer zeit=nacht besorgt palette=blau palette_staerke=0.6] Im Kopf gehst du jeden Satz durch, den du heute draußen gesagt hast.
 // Wald, Nebel, eine Stimme
 [waldnacht wackeln=0.2 zoom-rein palette=blau palette_staerke=0.6] Dann hörst du aus dem Wald deine eigene Stimme. „Mama, ich hab echt keinen Bock auf Wald.“
 // Nahaufnahme: du, eiskalt
