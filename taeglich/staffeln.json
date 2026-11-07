@@ -699,7 +699,21 @@
      "The Rules",
      "Benny",
      "Lighthouse"
-    ]
+    ],
+    "veroeffentlicht": {
+     "taeglich-tiktok-en-s03-teil-1": "2026-11-08T08:04:00",
+     "taeglich-tiktok-en-s03-teil-2": "2026-11-08T12:27:00",
+     "taeglich-tiktok-en-s03-teil-3": "2026-11-08T16:16:00",
+     "taeglich-tiktok-en-s03-teil-4": "2026-11-08T20:28:00",
+     "taeglich-insta-en-s03-f01": "2026-11-09T08:26:00",
+     "taeglich-insta-en-s03-f02": "2026-11-09T10:45:00",
+     "taeglich-insta-en-s03-f03": "2026-11-09T14:10:00",
+     "taeglich-insta-en-s03-f04": "2026-11-09T17:19:00",
+     "taeglich-yt-en-s03-f01": "2026-11-09T08:38:00",
+     "taeglich-yt-en-s03-f02": "2026-11-09T11:22:00",
+     "taeglich-yt-en-s03-f03": "2026-11-09T14:00:00",
+     "taeglich-yt-en-s03-f04": "2026-11-09T17:13:00"
+    }
    },
    "veroeffentlicht": {
     "taeglich-tiktok-s03-teil-1": "2026-11-08T08:04:00",
