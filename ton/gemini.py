@@ -167,6 +167,10 @@ def _block_audio(zeilen: list[str], stimme: str, log=print) -> np.ndarray:
                 beste, d = y, abw(y)
         log(f"    Tonhöhe: {d:.1f} Halbtöne Abstand zum Deutschen")
         x = beste
+        if d > MAX_HT:
+            # 7.11.: nicht zwischenspeichern, sonst liefert ein neuer Versuch genau diese Fassung wieder (Issue #25)
+            log(f"    WARNUNG: Tonhöhe {d:.1f} Halbtöne über {MAX_HT} – diese Folge noch einmal vertonen (nicht im Cache)")
+            return x
     CACHE.mkdir(parents=True, exist_ok=True)
     x.tofile(ziel)
     return x
