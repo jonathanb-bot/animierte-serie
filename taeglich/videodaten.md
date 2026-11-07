@@ -48,3 +48,19 @@ Automatisch aus `python taeglich/videodaten.py`. Grundlage für die Analyse (Lä
 | 7 | 7–7 | 65.13 | 11-07T20:00 |
 | 8 | 8–8 | 73.0 | 11-08T08:00 |
 
+## s03 „Der Nachahmer“ (4 Folgen, Format-Längenband: horror 2–3 min (120–180 s))
+
+| Video | Länge s | Band | Wörter | Wörter/s | Einst. | Kurzgesagt-Einst. | Nah | Fakten | Stimmung | Hook-Text | Instagram | YouTube |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| F1 Klick | 130.48 | zu lang | 354 | 2.71 | 29 | 9 | 13 | 1 | spannend | ES AHMT STIMMEN NACH |  |  |
+| F2 Die Regeln | 129.22 | zu lang | 338 | 2.62 | 28 | 7 | 13 | 2 | duester | NICHT ANTWORTEN |  |  |
+| F3 Benni | 122.72 | xl | 332 | 2.71 | 26 | 4 | 14 | 2 | traurig | ER IST SEIT EINEM JAHR TOT |  |  |
+| F4 Leuchtturm | 122.08 | xl | 343 | 2.81 | 30 | 11 | 16 | 2 | warm | DU GEHST RAUS |  |  |
+
+| TikTok-Teil | Folgen | Länge s | Termin |
+|---|---|---|---|
+| 1 | 1–1 | 130.48 |  |
+| 2 | 2–2 | 129.22 |  |
+| 3 | 3–3 | 122.72 |  |
+| 4 | 4–4 | 122.08 |  |
+

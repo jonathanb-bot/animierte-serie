@@ -269,6 +269,74 @@
    }
   }
  },
+ "taeglich-tiktok/s03-teil-1.mp4": {
+  "art": "tiktok_teil",
+  "staffel": "s03",
+  "staffel_titel": "Der Nachahmer",
+  "teil": 1,
+  "teile_in_staffel": 4,
+  "folgen": [
+   1
+  ],
+  "folgen_in_staffel": 4,
+  "format_laengenband": "horror 2–3 min (120–180 s)",
+  "dauer_s": 130.48,
+  "hook_satz": "In diesem Wald gibt es etwas, das Stimmen nachahmt.",
+  "hooktext": "ES AHMT STIMMEN NACH",
+  "stimmung": "spannend",
+  "posts": {}
+ },
+ "taeglich-tiktok/s03-teil-2.mp4": {
+  "art": "tiktok_teil",
+  "staffel": "s03",
+  "staffel_titel": "Der Nachahmer",
+  "teil": 2,
+  "teile_in_staffel": 4,
+  "folgen": [
+   2
+  ],
+  "folgen_in_staffel": 4,
+  "format_laengenband": "horror 2–3 min (120–180 s)",
+  "dauer_s": 129.22,
+  "hook_satz": "Es ist elf Uhr nachts, der Strom ist weg, und vor deiner Hütte steht etwas mit der Stimme deiner Mutter.",
+  "hooktext": "NICHT ANTWORTEN",
+  "stimmung": "duester",
+  "posts": {}
+ },
+ "taeglich-tiktok/s03-teil-3.mp4": {
+  "art": "tiktok_teil",
+  "staffel": "s03",
+  "staffel_titel": "Der Nachahmer",
+  "teil": 3,
+  "teile_in_staffel": 4,
+  "folgen": [
+   3
+  ],
+  "folgen_in_staffel": 4,
+  "format_laengenband": "horror 2–3 min (120–180 s)",
+  "dauer_s": 122.72,
+  "hook_satz": "Etwas in diesem Wald ahmt Stimmen nach.",
+  "hooktext": "ER IST SEIT EINEM JAHR TOT",
+  "stimmung": "traurig",
+  "posts": {}
+ },
+ "taeglich-tiktok/s03-teil-4.mp4": {
+  "art": "tiktok_teil",
+  "staffel": "s03",
+  "staffel_titel": "Der Nachahmer",
+  "teil": 4,
+  "teile_in_staffel": 4,
+  "folgen": [
+   4
+  ],
+  "folgen_in_staffel": 4,
+  "format_laengenband": "horror 2–3 min (120–180 s)",
+  "dauer_s": 122.08,
+  "hook_satz": "Deine Mutter läuft gerade allein durch einen dunklen Wald.",
+  "hooktext": "DU GEHST RAUS",
+  "stimmung": "warm",
+  "posts": {}
+ },
  "taeglich/s01-f01.mp4": {
   "art": "folge",
   "staffel": "s01",
@@ -1286,5 +1354,169 @@
     "zeit": "2026-11-07T00:30:00"
    }
   }
+ },
+ "taeglich/s03-f01.mp4": {
+  "art": "folge",
+  "staffel": "s03",
+  "staffel_titel": "Der Nachahmer",
+  "folge": 1,
+  "titel": "Klick",
+  "folgen_in_staffel": 4,
+  "format_laengenband": "horror 2–3 min (120–180 s)",
+  "dauer_s": 130.48,
+  "laengenband": "zu lang",
+  "woerter_pro_s": 2.71,
+  "familie_freunde": true,
+  "woerter": 354,
+  "einstellungen": 29,
+  "stimmung": "spannend",
+  "look": 0.75,
+  "hook_satz": "In diesem Wald gibt es etwas, das Stimmen nachahmt.",
+  "hooktext": "ES AHMT STIMMEN NACH",
+  "kulissen": [
+   "gesicht",
+   "handy",
+   "landschaft",
+   "titel",
+   "waldnacht",
+   "wohnzimmer"
+  ],
+  "kurzgesagt_einstellungen": 9,
+  "kurzgesagt_kulissen": [
+   "landschaft",
+   "waldnacht"
+  ],
+  "nahaufnahmen": 13,
+  "faktenkarten": 1,
+  "figuren": [
+   "ben",
+   "du",
+   "mama"
+  ],
+  "letzte_zeile": "Und dann klopft es an die Scheibe. Dreimal. Genau so, wie Mama immer klopft.",
+  "posts": {}
+ },
+ "taeglich/s03-f02.mp4": {
+  "art": "folge",
+  "staffel": "s03",
+  "staffel_titel": "Der Nachahmer",
+  "folge": 2,
+  "titel": "Die Regeln",
+  "folgen_in_staffel": 4,
+  "format_laengenband": "horror 2–3 min (120–180 s)",
+  "dauer_s": 129.22,
+  "laengenband": "zu lang",
+  "woerter_pro_s": 2.62,
+  "familie_freunde": true,
+  "woerter": 338,
+  "einstellungen": 28,
+  "stimmung": "duester",
+  "look": 0.75,
+  "hook_satz": "Es ist elf Uhr nachts, der Strom ist weg, und vor deiner Hütte steht etwas mit der Stimme deiner Mutter.",
+  "hooktext": "NICHT ANTWORTEN",
+  "kulissen": [
+   "gesicht",
+   "handy",
+   "objekt",
+   "titel",
+   "waldnacht",
+   "wohnzimmer"
+  ],
+  "kurzgesagt_einstellungen": 7,
+  "kurzgesagt_kulissen": [
+   "waldnacht"
+  ],
+  "nahaufnahmen": 13,
+  "faktenkarten": 2,
+  "figuren": [
+   "ben",
+   "du",
+   "mama"
+  ],
+  "letzte_zeile": "Ben hört auf zu pfeifen. Aber draußen pfeift es weiter. Und es kommt näher.",
+  "posts": {}
+ },
+ "taeglich/s03-f03.mp4": {
+  "art": "folge",
+  "staffel": "s03",
+  "staffel_titel": "Der Nachahmer",
+  "folge": 3,
+  "titel": "Benni",
+  "folgen_in_staffel": 4,
+  "format_laengenband": "horror 2–3 min (120–180 s)",
+  "dauer_s": 122.72,
+  "laengenband": "xl",
+  "woerter_pro_s": 2.71,
+  "familie_freunde": true,
+  "woerter": 332,
+  "einstellungen": 26,
+  "stimmung": "traurig",
+  "look": 0.75,
+  "hook_satz": "Etwas in diesem Wald ahmt Stimmen nach.",
+  "hooktext": "ER IST SEIT EINEM JAHR TOT",
+  "kulissen": [
+   "gesicht",
+   "handy",
+   "krankenhaus",
+   "landschaft",
+   "objekt",
+   "see",
+   "titel",
+   "waldnacht",
+   "wohnzimmer"
+  ],
+  "kurzgesagt_einstellungen": 4,
+  "kurzgesagt_kulissen": [
+   "landschaft",
+   "waldnacht"
+  ],
+  "nahaufnahmen": 14,
+  "faktenkarten": 2,
+  "figuren": [
+   "ben",
+   "du",
+   "opa"
+  ],
+  "letzte_zeile": "Sie weiß nicht, was da draußen wartet. Du schon. Du ziehst deine Jacke an.",
+  "posts": {}
+ },
+ "taeglich/s03-f04.mp4": {
+  "art": "folge",
+  "staffel": "s03",
+  "staffel_titel": "Der Nachahmer",
+  "folge": 4,
+  "titel": "Leuchtturm",
+  "folgen_in_staffel": 4,
+  "format_laengenband": "horror 2–3 min (120–180 s)",
+  "dauer_s": 122.08,
+  "laengenband": "xl",
+  "woerter_pro_s": 2.81,
+  "familie_freunde": true,
+  "woerter": 343,
+  "einstellungen": 30,
+  "stimmung": "warm",
+  "look": 0.75,
+  "hook_satz": "Deine Mutter läuft gerade allein durch einen dunklen Wald.",
+  "hooktext": "DU GEHST RAUS",
+  "kulissen": [
+   "gesicht",
+   "objekt",
+   "titel",
+   "waldnacht",
+   "wohnzimmer"
+  ],
+  "kurzgesagt_einstellungen": 11,
+  "kurzgesagt_kulissen": [
+   "waldnacht"
+  ],
+  "nahaufnahmen": 16,
+  "faktenkarten": 2,
+  "figuren": [
+   "ben",
+   "du",
+   "mama"
+  ],
+  "letzte_zeile": "Opas Uhr an seinem Handgelenk tickt nicht mehr.",
+  "posts": {}
  }
 }
