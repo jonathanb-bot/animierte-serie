@@ -51,13 +51,15 @@
 // Ausgaberaum, Stille
 [fundhaus du s04_sami zeit=abend uhr="17:34" palette=blau zoom-rein] Lange passiert nichts. Nur der Regen und das Ticken.
 // Nahaufnahme: Sami
-[gesicht s04_sami ort=fundhaus zeit=abend traurig palette=blau zoom-rein] Dann legt er die Quittungen hin. Und nimmt die Uhr.
+[gesicht s04_sami ort=fundhaus zeit=abend traurig palette=blau zoom-rein] Dann legt er die Quittungen auf die Theke. Und nimmt nur die Uhr.
 // Haltestelle, Sami allein im Regen
 [haltestelle s04_sami regen palette=blau zoom-raus] Er geht ohne Schirm. Seine grüne Jacke wird dunkel vom Regen.
 // Nahaufnahme: du
 [gesicht du ort=haltestelle regen traurig palette=blau zoom-rein] Deine Ärmel sind kalt und nass. Du hast ihm nicht mal Tschüss gesagt.
 // Park im Herbstregen, weit
 [park jahreszeit=herbst zeit=abend regen palette=blau zoom-raus] Ihr kennt euch seit zwölf Jahren. Noch nie ist er so gegangen.
+// Nahaufnahme: du erinnerst dich
+[gesicht du ort=fundhaus zeit=abend traurig palette=blau zoom-rein] Am ersten Schultag hat er dir seinen halben Apfel gegeben, weil du deinen vergessen hattest.
 // Ausgaberaum: leerer Platz neben dir
 [fundhaus du zeit=abend uhr="17:40" palette=blau zoom-rein] Drinnen riecht es nach Seife. Neben dir steht ein leerer Stuhl.
 

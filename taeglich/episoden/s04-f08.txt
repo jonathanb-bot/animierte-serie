@@ -43,7 +43,7 @@
 // Nahaufnahme: du
 [gesicht du ort=park jahreszeit=herbst zeit=abend froh palette=rosa zoom-rein] Du willst sofort alles fragen. Stattdessen sagst du: „Erzähl du, Sami.“
 // Garten, Schwenk
-[park s04_sami s04_frau jahreszeit=herbst zeit=abend palette=rosa schwenk-rechts] Und Sami erzählt. Ruhig, ohne einen einzigen Witz.
+[park s04_sami s04_frau jahreszeit=herbst zeit=abend palette=rosa schwenk-rechts] Und Sami erzählt. Ganz ruhig. Ohne einen einzigen Witz.
 // Nahaufnahme: Frau Lindner
 [gesicht s04_frau ort=park jahreszeit=herbst zeit=abend besorgt palette=rosa] „Meine Dose? Die hat mein Mann im Bus verloren.“
 // Dose mit Delle
@@ -53,7 +53,7 @@
 // Nahaufnahme: Frau Lindner traurig
 [gesicht s04_frau ort=park jahreszeit=herbst zeit=abend traurig palette=rosa zoom-rein] „Er ist letztes Jahr gestorben. Da drin sind seine Briefe.“
 // Nahaufnahme: Sami
-[gesicht s04_sami ort=park jahreszeit=herbst zeit=abend traurig palette=rosa] Sami legt ihr die Hand auf den Arm. Er weiß, wie sich das anfühlt.
+[gesicht s04_sami ort=park jahreszeit=herbst zeit=abend traurig palette=rosa] Sami legt ihr sanft die Hand auf den Arm. Er weiß, wie sich das anfühlt.
 // Nahaufnahme: du
 [gesicht du ort=park jahreszeit=herbst zeit=abend traurig palette=rosa zoom-rein] Und du merkst, wie viel du heute fast verloren hättest. Für ein Stück Papier.
 // Stadt am Abend, ihr drei klein

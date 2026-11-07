@@ -1,0 +1,194 @@
+{
+ "dauer": 83.046,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "archiv",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 5.486,
+   "emotion": "erzaehlend",
+   "text": "Siebzehn Uhr. Ein leeres Blatt verrät, was wirklich auf der Quittung stand."
+  },
+  {
+   "nr": 2,
+   "typ": "objekt",
+   "kapitel": 1,
+   "start": 5.486,
+   "dauer": 4.118,
+   "emotion": "erklaerend",
+   "text": "Wer fest schreibt, drückt durch. Bis aufs nächste Blatt."
+  },
+  {
+   "nr": 3,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 9.604,
+   "dauer": 4.31,
+   "emotion": "ernst",
+   "text": "Und im geretteten Bündel muss das Blatt liegen, das unter der Kassen-Quittung lag."
+  },
+  {
+   "nr": 4,
+   "typ": "archiv",
+   "kapitel": 2,
+   "start": 13.914,
+   "dauer": 7.79,
+   "emotion": "erzaehlend",
+   "text": "Du und Sami kniet im Archiv. Das Dünnpapier raschelt bei jeder Bewegung. Draußen schlägt eine Kirchturmuhr fünf."
+  },
+  {
+   "nr": 5,
+   "typ": "archiv",
+   "kapitel": 2,
+   "start": 21.704,
+   "dauer": 4.31,
+   "emotion": "erzaehlend",
+   "text": "Ihr zählt die Blätter. Hunderteinundzwanzig. Hundertzweiundzwanzig."
+  },
+  {
+   "nr": 6,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 26.014,
+   "dauer": 2.318,
+   "emotion": "froh",
+   "text": "„Wenn wir's finden, geb ich dir ein Eis aus.“"
+  },
+  {
+   "nr": 7,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 28.332,
+   "dauer": 1.094,
+   "emotion": "froh",
+   "text": "„Zwei Kugeln.“"
+  },
+  {
+   "nr": 8,
+   "typ": "archiv",
+   "kapitel": 3,
+   "start": 29.426,
+   "dauer": 5.294,
+   "emotion": "erzaehlend",
+   "text": "Da. Ein Blatt ohne Tinte. Aber mit feinen Rillen, wie eine Landkarte."
+  },
+  {
+   "nr": 9,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 34.72,
+   "dauer": 3.062,
+   "emotion": "erzaehlend",
+   "text": "Von vorne siehst du nichts. Das Licht kommt zu gerade."
+  },
+  {
+   "nr": 10,
+   "typ": "archiv",
+   "kapitel": 3,
+   "start": 37.782,
+   "dauer": 5.222,
+   "emotion": "erzaehlend",
+   "text": "Also gehst du zum kleinen Fenster am Ende der Gasse. Ein Sonnenstrahl fällt schräg herein."
+  },
+  {
+   "nr": 11,
+   "typ": "archiv",
+   "kapitel": 3,
+   "start": 43.004,
+   "dauer": 4.766,
+   "emotion": "erzaehlend",
+   "text": "Du hältst das Blatt flach ins Licht. Der raue Karton darunter kratzt an deinen Fingern."
+  },
+  {
+   "nr": 12,
+   "typ": "objekt",
+   "kapitel": 3,
+   "start": 47.77,
+   "dauer": 3.902,
+   "emotion": "erklaerend",
+   "text": "Plötzlich werfen die Rillen Schatten. Buchstaben tauchen auf."
+  },
+  {
+   "nr": 13,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 51.672,
+   "dauer": 1.622,
+   "emotion": "spannend",
+   "text": "Sami hält die Luft an."
+  },
+  {
+   "nr": 14,
+   "typ": "objekt",
+   "kapitel": 3,
+   "start": 53.294,
+   "dauer": 5.558,
+   "emotion": "erklaerend",
+   "text": "Fach vierundzwanzig. Ausgabe an: Lindner. Die Uhrzeit ist frei gelassen."
+  },
+  {
+   "nr": 15,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 58.852,
+   "dauer": 3.518,
+   "emotion": "erzaehlend",
+   "text": "Und in der Zeile für den Gegenstand steht nicht Spendenkasse."
+  },
+  {
+   "nr": 16,
+   "typ": "objekt",
+   "kapitel": 4,
+   "start": 62.37,
+   "dauer": 2.846,
+   "emotion": "erklaerend",
+   "text": "Da steht: schwarze Blechdose."
+  },
+  {
+   "nr": 17,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 65.216,
+   "dauer": 5.414,
+   "emotion": "erzaehlend",
+   "text": "Jemand hat einen Schein für eine Dose vorbereitet. Und daraus dann die Kassen-Quittung gemacht."
+  },
+  {
+   "nr": 18,
+   "typ": "fundhaus",
+   "kapitel": 4,
+   "start": 70.63,
+   "dauer": 4.598,
+   "emotion": "erzaehlend",
+   "text": "Ihr lauft nach vorne in den Ausgaberaum. Die Sonne steht schon tief und färbt die Fächer golden."
+  },
+  {
+   "nr": 19,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 75.228,
+   "dauer": 2.078,
+   "emotion": "ernst",
+   "text": "„Dann hat das jemand vorher geplant.“"
+  },
+  {
+   "nr": 20,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 77.306,
+   "dauer": 1.598,
+   "emotion": "spannend",
+   "text": "Und das ist kein Zufall mehr."
+  },
+  {
+   "nr": 21,
+   "typ": "objekt",
+   "kapitel": 5,
+   "start": 78.904,
+   "dauer": 4.142,
+   "emotion": "erklaerend",
+   "text": "Die falsche Quittung wurde aus einem Abholschein für eine schwarze Dose gemacht."
+  }
+ ]
+}

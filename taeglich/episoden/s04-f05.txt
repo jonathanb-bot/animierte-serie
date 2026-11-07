@@ -49,7 +49,7 @@
 // Nahaufnahme: Papa
 [gesicht papa ort=fundhaus zeit=abend neutral palette=orange] „Den hab ich heute aus Fach sieben geholt.“
 // Papas Beleg
-[objekt objekte="quittung:Papa" gross="W7: STEMPEL" palette=orange zoom-rein] Dazu sein eigener Beleg: W sieben, ein Stempel, zur Reparatur.
+[objekt objekte="quittung:Papa" gross="W7: STEMPEL" palette=orange zoom-rein] Dazu Papas eigener Beleg. Fach W sieben. Abgestempelt, zur Reparatur.
 
 == Wendung ==
 // Nahaufnahme: Sami atmet aus

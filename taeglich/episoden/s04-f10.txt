@@ -61,6 +61,6 @@
 
 == Cliffhanger ==
 // Nahaufnahme: Rike
-[gesicht s04_rike ort=fundhaus zeit=nacht besorgt palette=blau zoom-rein] Rike sieht zu ihm. „Ich habe deinen Namen benutzt, Sami.“
+[gesicht s04_rike ort=fundhaus zeit=nacht besorgt palette=blau zoom-rein] Dann sieht Rike zu ihm. „Ich habe deinen Namen benutzt, Sami.“
 // Nahaufnahme: Rike
 [gesicht s04_rike ort=fundhaus zeit=nacht traurig palette=blau zoom-rein] „Weil ich dachte, dir glaubt sowieso niemand.“

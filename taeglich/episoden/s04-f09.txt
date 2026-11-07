@@ -25,7 +25,7 @@
 // Fach 24 mit der Dose
 [fundhaus du zeit=nacht uhr="18:31" fach=24 dose palette=lila zoom-rein] Im letzten Fach unten rechts steht eine schwarze Dose mit Halbmond.
 // Nahaufnahme: Frau Lindner
-[gesicht s04_frau ort=fundhaus zeit=nacht froh palette=lila] „Die Delle. Das ist sie.“
+[gesicht s04_frau ort=fundhaus zeit=nacht froh palette=lila] „Die Delle da. Das ist sie.“
 // Rike kommt aus dem Büro
 [fundhaus s04_rike du zeit=nacht uhr="18:32" palette=lila zoom-rein] Rike kommt aus dem Büro. Ihr Schlüsselbund klappert.
 // Nahaufnahme: Rike

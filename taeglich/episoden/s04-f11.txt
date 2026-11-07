@@ -35,13 +35,13 @@
 // Nahaufnahme: du
 [gesicht du ort=fundhaus zeit=abend entschlossen palette=orange zoom-rein] „Vor allen. So wie die Beschuldigung.“
 // Nahaufnahme: Sami
-[gesicht s04_sami ort=fundhaus zeit=abend entschlossen palette=orange] „Ja. Vor allen.“
+[gesicht s04_sami ort=fundhaus zeit=abend entschlossen palette=orange] „Ja. Vor allen Leuten.“
 // Ausgaberaum: alle Helfer
 [fundhaus s04_rike du s04_sami papa zeit=abend uhr="19:10" palette=orange zoom-raus] Zehn Minuten später scharren Stühle. Alle Helfer sind da. Es riecht nach Filterkaffee.
 // Rike vor den Fächern
 [fundhaus s04_rike zeit=abend uhr="19:11" palette=orange zoom-rein] Rike steht vor den Fächern. Das Abendlicht fällt ihr ins Gesicht.
 // Nahaufnahme: Rike
-[gesicht s04_rike ort=fundhaus zeit=abend traurig palette=orange zoom-rein] „Sami hat nichts gestohlen. Ich war es.“
+[gesicht s04_rike ort=fundhaus zeit=abend traurig palette=orange zoom-rein] „Sami hat nichts gestohlen. Ich war das.“
 // Aushang
 [objekt objekte="quittung:Richtigstellung" gross="RICHTIGSTELLUNG" palette=orange zoom-rein] Der Aushang mit Samis Namen fliegt von der Pinnwand. Ein neuer Zettel hängt dort.
 // Rike gibt Kasse und Schlüssel ab
