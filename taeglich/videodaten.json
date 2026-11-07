@@ -108,12 +108,7 @@
   "hook_satz": "Stell dir vor, du hast gerade dreißig Millionen gewonnen.",
   "hooktext": "DU HAST 30 MILLIONEN GEWONNEN",
   "stimmung": "freudig",
-  "posts": {
-   "tiktok": {
-    "id": "taeglich-tiktok-s02-teil-1",
-    "zeit": "2026-11-06T12:00:00"
-   }
-  }
+  "posts": {}
  },
  "taeglich-tiktok/s02-teil-2.mp4": {
   "art": "tiktok_teil",
@@ -126,16 +121,11 @@
   ],
   "folgen_in_staffel": 8,
   "format_laengenband": "kurz 60–70 s (immer über 62 s)",
-  "dauer_s": 67.28,
+  "dauer_s": 68.93,
   "hook_satz": "Ab heute bist du Millionär.",
   "hooktext": null,
   "stimmung": "spannend",
-  "posts": {
-   "tiktok": {
-    "id": "taeglich-tiktok-s02-teil-2",
-    "zeit": "2026-11-06T16:00:00"
-   }
-  }
+  "posts": {}
  },
  "taeglich-tiktok/s02-teil-3.mp4": {
   "art": "tiktok_teil",
@@ -148,16 +138,11 @@
   ],
   "folgen_in_staffel": 8,
   "format_laengenband": "kurz 60–70 s (immer über 62 s)",
-  "dauer_s": 69.27,
+  "dauer_s": 74.07,
   "hook_satz": "Du hast dreißig Millionen.",
   "hooktext": "DU ZAHLST. DIESMAL ALLES.",
   "stimmung": "freudig",
-  "posts": {
-   "tiktok": {
-    "id": "taeglich-tiktok-s02-teil-3",
-    "zeit": "2026-11-06T20:00:00"
-   }
-  }
+  "posts": {}
  },
  "taeglich-tiktok/s02-teil-4.mp4": {
   "art": "tiktok_teil",
@@ -170,16 +155,11 @@
   ],
   "folgen_in_staffel": 8,
   "format_laengenband": "kurz 60–70 s (immer über 62 s)",
-  "dauer_s": 68.71,
+  "dauer_s": 79.2,
   "hook_satz": "Irgendwo in deiner Stadt läuft ein Millionär herum.",
   "hooktext": null,
   "stimmung": "duester",
-  "posts": {
-   "tiktok": {
-    "id": "taeglich-tiktok-s02-teil-4",
-    "zeit": "2026-11-07T08:00:00"
-   }
-  }
+  "posts": {}
  },
  "taeglich-tiktok/s02-teil-5.mp4": {
   "art": "tiktok_teil",
@@ -192,16 +172,11 @@
   ],
   "folgen_in_staffel": 8,
   "format_laengenband": "kurz 60–70 s (immer über 62 s)",
-  "dauer_s": 68.03,
+  "dauer_s": 69.97,
   "hook_satz": "Du kannst dir jetzt alles kaufen.",
   "hooktext": "30 MILLIONEN. NIEMAND REDET MIT DIR.",
   "stimmung": "traurig",
-  "posts": {
-   "tiktok": {
-    "id": "taeglich-tiktok-s02-teil-5",
-    "zeit": "2026-11-07T12:00:00"
-   }
-  }
+  "posts": {}
  },
  "taeglich-tiktok/s02-teil-6.mp4": {
   "art": "tiktok_teil",
@@ -214,16 +189,11 @@
   ],
   "folgen_in_staffel": 8,
   "format_laengenband": "kurz 60–70 s (immer über 62 s)",
-  "dauer_s": 80.7,
+  "dauer_s": 75.38,
   "hook_satz": "Dein Opa liegt im Krankenhaus.",
   "hooktext": null,
   "stimmung": "warm",
-  "posts": {
-   "tiktok": {
-    "id": "taeglich-tiktok-s02-teil-6",
-    "zeit": "2026-11-07T16:00:00"
-   }
-  }
+  "posts": {}
  },
  "taeglich-tiktok/s02-teil-7.mp4": {
   "art": "tiktok_teil",
@@ -236,16 +206,11 @@
   ],
   "folgen_in_staffel": 8,
   "format_laengenband": "kurz 60–70 s (immer über 62 s)",
-  "dauer_s": 65.13,
+  "dauer_s": 71.7,
   "hook_satz": "Du bist Millionär.",
   "hooktext": "NOCH 14 MINUTEN",
   "stimmung": "spannend",
-  "posts": {
-   "tiktok": {
-    "id": "taeglich-tiktok-s02-teil-7",
-    "zeit": "2026-11-07T20:00:00"
-   }
-  }
+  "posts": {}
  },
  "taeglich-tiktok/s02-teil-8.mp4": {
   "art": "tiktok_teil",
@@ -258,16 +223,11 @@
   ],
   "folgen_in_staffel": 8,
   "format_laengenband": "kurz 60–70 s (immer über 62 s)",
-  "dauer_s": 73.0,
+  "dauer_s": 72.83,
   "hook_satz": "Deine beste Freundin hat ihren Zug sausen lassen.",
   "hooktext": null,
   "stimmung": "warm",
-  "posts": {
-   "tiktok": {
-    "id": "taeglich-tiktok-s02-teil-8",
-    "zeit": "2026-11-08T08:00:00"
-   }
-  }
+  "posts": {}
  },
  "taeglich-tiktok/s03-teil-1.mp4": {
   "art": "tiktok_teil",
@@ -280,11 +240,16 @@
   ],
   "folgen_in_staffel": 4,
   "format_laengenband": "horror 2–3 min (120–180 s)",
-  "dauer_s": 130.48,
+  "dauer_s": 1.0,
   "hook_satz": "In diesem Wald gibt es etwas, das Stimmen nachahmt.",
   "hooktext": "ES AHMT STIMMEN NACH",
   "stimmung": "spannend",
-  "posts": {}
+  "posts": {
+   "tiktok": {
+    "id": "taeglich-tiktok-s03-teil-1",
+    "zeit": "2026-11-08T08:04:00"
+   }
+  }
  },
  "taeglich-tiktok/s03-teil-2.mp4": {
   "art": "tiktok_teil",
@@ -297,11 +262,16 @@
   ],
   "folgen_in_staffel": 4,
   "format_laengenband": "horror 2–3 min (120–180 s)",
-  "dauer_s": 129.22,
+  "dauer_s": 60.22,
   "hook_satz": "Es ist elf Uhr nachts, der Strom ist weg, und vor deiner Hütte steht etwas mit der Stimme deiner Mutter.",
   "hooktext": "NICHT ANTWORTEN",
   "stimmung": "duester",
-  "posts": {}
+  "posts": {
+   "tiktok": {
+    "id": "taeglich-tiktok-s03-teil-2",
+    "zeit": "2026-11-08T12:27:00"
+   }
+  }
  },
  "taeglich-tiktok/s03-teil-3.mp4": {
   "art": "tiktok_teil",
@@ -314,11 +284,16 @@
   ],
   "folgen_in_staffel": 4,
   "format_laengenband": "horror 2–3 min (120–180 s)",
-  "dauer_s": 122.72,
+  "dauer_s": 64.72,
   "hook_satz": "Etwas in diesem Wald ahmt Stimmen nach.",
   "hooktext": "ER IST SEIT EINEM JAHR TOT",
   "stimmung": "traurig",
-  "posts": {}
+  "posts": {
+   "tiktok": {
+    "id": "taeglich-tiktok-s03-teil-3",
+    "zeit": "2026-11-08T16:16:00"
+   }
+  }
  },
  "taeglich-tiktok/s03-teil-4.mp4": {
   "art": "tiktok_teil",
@@ -335,7 +310,13 @@
   "hook_satz": "Deine Mutter läuft gerade allein durch einen dunklen Wald.",
   "hooktext": "DU GEHST RAUS",
   "stimmung": "warm",
-  "posts": {}
+  "posts": {
+   "tiktok": {
+    "id": "taeglich-tiktok-s03-teil-4",
+    "zeit": "2026-11-08T20:28:00"
+   }
+  },
+  "laengenband": "xl"
  },
  "taeglich/s01-f01.mp4": {
   "art": "folge",
@@ -939,16 +920,7 @@
    "opa"
   ],
   "letzte_zeile": "Auf der Rückseite steht, in Opas krakeliger Schrift: „Für uns alle.“",
-  "posts": {
-   "instagram": {
-    "id": "taeglich-insta-s02-f01",
-    "zeit": "2026-11-06T10:00:00"
-   },
-   "youtube": {
-    "id": "taeglich-yt-s02-f01",
-    "zeit": "2026-11-06T10:30:00"
-   }
-  }
+  "posts": {}
  },
  "taeglich/s02-f02.mp4": {
   "art": "folge",
@@ -958,9 +930,9 @@
   "titel": "Niemand darf es wissen",
   "folgen_in_staffel": 8,
   "format_laengenband": "kurz 60–70 s (immer über 62 s)",
-  "dauer_s": 67.31,
+  "dauer_s": 68.95,
   "laengenband": "kurz",
-  "woerter_pro_s": 2.81,
+  "woerter_pro_s": 2.74,
   "familie_freunde": true,
   "woerter": 189,
   "einstellungen": 19,
@@ -996,16 +968,7 @@
    "papa"
   ],
   "letzte_zeile": "Es wird die schlimmste Entscheidung deines Jahres.",
-  "posts": {
-   "instagram": {
-    "id": "taeglich-insta-s02-f02",
-    "zeit": "2026-11-06T12:00:00"
-   },
-   "youtube": {
-    "id": "taeglich-yt-s02-f02",
-    "zeit": "2026-11-06T12:30:00"
-   }
-  }
+  "posts": {}
  },
  "taeglich/s02-f03.mp4": {
   "art": "folge",
@@ -1015,9 +978,9 @@
   "titel": "Reich sein ist komisch",
   "folgen_in_staffel": 8,
   "format_laengenband": "kurz 60–70 s (immer über 62 s)",
-  "dauer_s": 69.27,
-  "laengenband": "kurz",
-  "woerter_pro_s": 2.84,
+  "dauer_s": 74.07,
+  "laengenband": "mittel",
+  "woerter_pro_s": 2.66,
   "familie_freunde": true,
   "woerter": 197,
   "einstellungen": 19,
@@ -1053,16 +1016,7 @@
    "mia"
   ],
   "letzte_zeile": "Mia schaut nicht auf ihr Handy. Sie schaut dich an.",
-  "posts": {
-   "instagram": {
-    "id": "taeglich-insta-s02-f03",
-    "zeit": "2026-11-06T14:00:00"
-   },
-   "youtube": {
-    "id": "taeglich-yt-s02-f03",
-    "zeit": "2026-11-06T14:30:00"
-   }
-  }
+  "posts": {}
  },
  "taeglich/s02-f04.mp4": {
   "art": "folge",
@@ -1072,9 +1026,9 @@
   "titel": "Das Gerücht",
   "folgen_in_staffel": 8,
   "format_laengenband": "kurz 60–70 s (immer über 62 s)",
-  "dauer_s": 68.71,
-  "laengenband": "kurz",
-  "woerter_pro_s": 2.97,
+  "dauer_s": 79.2,
+  "laengenband": "mittel",
+  "woerter_pro_s": 2.58,
   "familie_freunde": true,
   "woerter": 204,
   "einstellungen": 19,
@@ -1112,16 +1066,7 @@
    "mia"
   ],
   "letzte_zeile": "Von Mia. „Ich hab dich gefragt. Du hast mir ins Gesicht gelogen.“",
-  "posts": {
-   "instagram": {
-    "id": "taeglich-insta-s02-f04",
-    "zeit": "2026-11-06T16:00:00"
-   },
-   "youtube": {
-    "id": "taeglich-yt-s02-f04",
-    "zeit": "2026-11-06T16:30:00"
-   }
-  }
+  "posts": {}
  },
  "taeglich/s02-f05.mp4": {
   "art": "folge",
@@ -1131,9 +1076,9 @@
   "titel": "Allein mit dreißig Millionen",
   "folgen_in_staffel": 8,
   "format_laengenband": "kurz 60–70 s (immer über 62 s)",
-  "dauer_s": 68.03,
+  "dauer_s": 69.97,
   "laengenband": "kurz",
-  "woerter_pro_s": 2.94,
+  "woerter_pro_s": 2.86,
   "familie_freunde": true,
   "woerter": 200,
   "einstellungen": 18,
@@ -1174,16 +1119,7 @@
    "opa"
   ],
   "letzte_zeile": "Opa öffnet die Augen. Und das Erste, was er flüstert, ist: „Du hast es also gefunden.“",
-  "posts": {
-   "instagram": {
-    "id": "taeglich-insta-s02-f05",
-    "zeit": "2026-11-06T18:00:00"
-   },
-   "youtube": {
-    "id": "taeglich-yt-s02-f05",
-    "zeit": "2026-11-06T18:30:00"
-   }
-  }
+  "posts": {}
  },
  "taeglich/s02-f06.mp4": {
   "art": "folge",
@@ -1193,9 +1129,9 @@
   "titel": "Opas Zahlen",
   "folgen_in_staffel": 8,
   "format_laengenband": "kurz 60–70 s (immer über 62 s)",
-  "dauer_s": 80.72,
-  "laengenband": "lang",
-  "woerter_pro_s": 2.47,
+  "dauer_s": 75.38,
+  "laengenband": "mittel",
+  "woerter_pro_s": 2.64,
   "familie_freunde": true,
   "woerter": 199,
   "einstellungen": 19,
@@ -1231,16 +1167,7 @@
    "papa"
   ],
   "letzte_zeile": "Also rennst du. Wie ein Pinguin mit Rucksack. Direkt zu Mia.",
-  "posts": {
-   "instagram": {
-    "id": "taeglich-insta-s02-f06",
-    "zeit": "2026-11-06T20:00:00"
-   },
-   "youtube": {
-    "id": "taeglich-yt-s02-f06",
-    "zeit": "2026-11-06T20:30:00"
-   }
-  }
+  "posts": {}
  },
  "taeglich/s02-f07.mp4": {
   "art": "folge",
@@ -1250,9 +1177,9 @@
   "titel": "Gleis drei",
   "folgen_in_staffel": 8,
   "format_laengenband": "kurz 60–70 s (immer über 62 s)",
-  "dauer_s": 65.13,
-  "laengenband": "kurz",
-  "woerter_pro_s": 2.86,
+  "dauer_s": 71.72,
+  "laengenband": "mittel",
+  "woerter_pro_s": 2.59,
   "familie_freunde": true,
   "woerter": 186,
   "einstellungen": 19,
@@ -1285,16 +1212,7 @@
    "mia"
   ],
   "letzte_zeile": "„Du rennst echt immer noch wie ein Pinguin.“",
-  "posts": {
-   "instagram": {
-    "id": "taeglich-insta-s02-f07",
-    "zeit": "2026-11-06T22:00:00"
-   },
-   "youtube": {
-    "id": "taeglich-yt-s02-f07",
-    "zeit": "2026-11-06T22:30:00"
-   }
-  }
+  "posts": {}
  },
  "taeglich/s02-f08.mp4": {
   "art": "folge",
@@ -1304,9 +1222,9 @@
   "titel": "Für uns alle",
   "folgen_in_staffel": 8,
   "format_laengenband": "kurz 60–70 s (immer über 62 s)",
-  "dauer_s": 73.0,
+  "dauer_s": 72.83,
   "laengenband": "mittel",
-  "woerter_pro_s": 2.71,
+  "woerter_pro_s": 2.72,
   "familie_freunde": true,
   "woerter": 198,
   "einstellungen": 18,
@@ -1344,16 +1262,7 @@
    "papa"
   ],
   "letzte_zeile": "Und am Samstag humpelt Opa zum Kiosk. Dieselben Zahlen. Wie immer. Weil er nie gespielt hat, um zu gewinnen.",
-  "posts": {
-   "instagram": {
-    "id": "taeglich-insta-s02-f08",
-    "zeit": "2026-11-07T00:00:00"
-   },
-   "youtube": {
-    "id": "taeglich-yt-s02-f08",
-    "zeit": "2026-11-07T00:30:00"
-   }
-  }
+  "posts": {}
  },
  "taeglich/s03-f01.mp4": {
   "art": "folge",
@@ -1363,9 +1272,9 @@
   "titel": "Klick",
   "folgen_in_staffel": 4,
   "format_laengenband": "horror 2–3 min (120–180 s)",
-  "dauer_s": 130.48,
-  "laengenband": "zu lang",
-  "woerter_pro_s": 2.71,
+  "dauer_s": 1.0,
+  "laengenband": "zu kurz",
+  "woerter_pro_s": 354.0,
   "familie_freunde": true,
   "woerter": 354,
   "einstellungen": 29,
@@ -1394,7 +1303,16 @@
    "mama"
   ],
   "letzte_zeile": "Und dann klopft es an die Scheibe. Dreimal. Genau so, wie Mama immer klopft.",
-  "posts": {}
+  "posts": {
+   "instagram": {
+    "id": "taeglich-insta-s03-f01",
+    "zeit": "2026-11-08T19:42:00"
+   },
+   "youtube": {
+    "id": "taeglich-yt-s03-f01",
+    "zeit": "2026-11-08T20:27:00"
+   }
+  }
  },
  "taeglich/s03-f02.mp4": {
   "art": "folge",
@@ -1404,9 +1322,9 @@
   "titel": "Die Regeln",
   "folgen_in_staffel": 4,
   "format_laengenband": "horror 2–3 min (120–180 s)",
-  "dauer_s": 129.22,
-  "laengenband": "zu lang",
-  "woerter_pro_s": 2.62,
+  "dauer_s": 60.22,
+  "laengenband": "kurz",
+  "woerter_pro_s": 5.61,
   "familie_freunde": true,
   "woerter": 338,
   "einstellungen": 28,
@@ -1434,7 +1352,16 @@
    "mama"
   ],
   "letzte_zeile": "Ben hört auf zu pfeifen. Aber draußen pfeift es weiter. Und es kommt näher.",
-  "posts": {}
+  "posts": {
+   "instagram": {
+    "id": "taeglich-insta-s03-f02",
+    "zeit": "2026-11-09T07:44:00"
+   },
+   "youtube": {
+    "id": "taeglich-yt-s03-f02",
+    "zeit": "2026-11-09T08:16:00"
+   }
+  }
  },
  "taeglich/s03-f03.mp4": {
   "art": "folge",
@@ -1444,9 +1371,9 @@
   "titel": "Benni",
   "folgen_in_staffel": 4,
   "format_laengenband": "horror 2–3 min (120–180 s)",
-  "dauer_s": 122.72,
-  "laengenband": "xl",
-  "woerter_pro_s": 2.71,
+  "dauer_s": 64.72,
+  "laengenband": "kurz",
+  "woerter_pro_s": 5.13,
   "familie_freunde": true,
   "woerter": 332,
   "einstellungen": 26,
@@ -1478,7 +1405,16 @@
    "opa"
   ],
   "letzte_zeile": "Sie weiß nicht, was da draußen wartet. Du schon. Du ziehst deine Jacke an.",
-  "posts": {}
+  "posts": {
+   "instagram": {
+    "id": "taeglich-insta-s03-f03",
+    "zeit": "2026-11-09T11:09:00"
+   },
+   "youtube": {
+    "id": "taeglich-yt-s03-f03",
+    "zeit": "2026-11-09T11:47:00"
+   }
+  }
  },
  "taeglich/s03-f04.mp4": {
   "art": "folge",
@@ -1490,7 +1426,7 @@
   "format_laengenband": "horror 2–3 min (120–180 s)",
   "dauer_s": 122.08,
   "laengenband": "xl",
-  "woerter_pro_s": 2.81,
+  "woerter_pro_s": null,
   "familie_freunde": true,
   "woerter": 343,
   "einstellungen": 30,
@@ -1517,6 +1453,15 @@
    "mama"
   ],
   "letzte_zeile": "Opas Uhr an seinem Handgelenk tickt nicht mehr.",
-  "posts": {}
+  "posts": {
+   "instagram": {
+    "id": "taeglich-insta-s03-f04",
+    "zeit": "2026-11-09T13:46:00"
+   },
+   "youtube": {
+    "id": "taeglich-yt-s03-f04",
+    "zeit": "2026-11-09T14:13:00"
+   }
+  }
  }
 }

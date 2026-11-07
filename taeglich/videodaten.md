@@ -28,39 +28,39 @@ Automatisch aus `python taeglich/videodaten.py`. Grundlage für die Analyse (Lä
 
 | Video | Länge s | Band | Wörter | Wörter/s | Einst. | Kurzgesagt-Einst. | Nah | Fakten | Stimmung | Hook-Text | Instagram | YouTube |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| F1 Sechs Richtige | 73.54 | mittel | 194 | 2.64 | 20 | 7 | 6 | 3 | freudig | DU HAST 30 MILLIONEN GEWONNEN | 11-06T10:00 | 11-06T10:30 |
-| F2 Niemand darf es wissen | 67.31 | kurz | 189 | 2.81 | 19 | 5 | 8 | 1 | spannend |  | 11-06T12:00 | 11-06T12:30 |
-| F3 Reich sein ist komisch | 69.27 | kurz | 197 | 2.84 | 19 | 4 | 9 | 1 | freudig | DU ZAHLST. DIESMAL ALLES. | 11-06T14:00 | 11-06T14:30 |
-| F4 Das Gerücht | 68.71 | kurz | 204 | 2.97 | 19 | 5 | 8 | 0 | duester |  | 11-06T16:00 | 11-06T16:30 |
-| F5 Allein mit dreißig Millionen | 68.03 | kurz | 200 | 2.94 | 18 | 5 | 7 | 0 | traurig | 30 MILLIONEN. NIEMAND REDET MIT DIR. | 11-06T18:00 | 11-06T18:30 |
-| F6 Opas Zahlen | 80.72 | lang | 199 | 2.47 | 19 | 4 | 10 | 1 | warm |  | 11-06T20:00 | 11-06T20:30 |
-| F7 Gleis drei | 65.13 | kurz | 186 | 2.86 | 19 | 5 | 8 | 0 | spannend | NOCH 14 MINUTEN | 11-06T22:00 | 11-06T22:30 |
-| F8 Für uns alle | 73.0 | mittel | 198 | 2.71 | 18 | 4 | 9 | 1 | warm |  | 11-07T00:00 | 11-07T00:30 |
+| F1 Sechs Richtige | 73.54 | mittel | 194 | 2.64 | 20 | 7 | 6 | 3 | freudig | DU HAST 30 MILLIONEN GEWONNEN |  |  |
+| F2 Niemand darf es wissen | 68.95 | kurz | 189 | 2.74 | 19 | 5 | 8 | 1 | spannend |  |  |  |
+| F3 Reich sein ist komisch | 74.07 | mittel | 197 | 2.66 | 19 | 4 | 9 | 1 | freudig | DU ZAHLST. DIESMAL ALLES. |  |  |
+| F4 Das Gerücht | 79.2 | mittel | 204 | 2.58 | 19 | 5 | 8 | 0 | duester |  |  |  |
+| F5 Allein mit dreißig Millionen | 69.97 | kurz | 200 | 2.86 | 18 | 5 | 7 | 0 | traurig | 30 MILLIONEN. NIEMAND REDET MIT DIR. |  |  |
+| F6 Opas Zahlen | 75.38 | mittel | 199 | 2.64 | 19 | 4 | 10 | 1 | warm |  |  |  |
+| F7 Gleis drei | 71.72 | mittel | 186 | 2.59 | 19 | 5 | 8 | 0 | spannend | NOCH 14 MINUTEN |  |  |
+| F8 Für uns alle | 72.83 | mittel | 198 | 2.72 | 18 | 4 | 9 | 1 | warm |  |  |  |
 
 | TikTok-Teil | Folgen | Länge s | Termin |
 |---|---|---|---|
-| 1 | 1–1 | 73.54 | 11-06T12:00 |
-| 2 | 2–2 | 67.28 | 11-06T16:00 |
-| 3 | 3–3 | 69.27 | 11-06T20:00 |
-| 4 | 4–4 | 68.71 | 11-07T08:00 |
-| 5 | 5–5 | 68.03 | 11-07T12:00 |
-| 6 | 6–6 | 80.7 | 11-07T16:00 |
-| 7 | 7–7 | 65.13 | 11-07T20:00 |
-| 8 | 8–8 | 73.0 | 11-08T08:00 |
+| 1 | 1–1 | 73.54 |  |
+| 2 | 2–2 | 68.93 |  |
+| 3 | 3–3 | 74.07 |  |
+| 4 | 4–4 | 79.2 |  |
+| 5 | 5–5 | 69.97 |  |
+| 6 | 6–6 | 75.38 |  |
+| 7 | 7–7 | 71.7 |  |
+| 8 | 8–8 | 72.83 |  |
 
 ## s03 „Der Nachahmer“ (4 Folgen, Format-Längenband: horror 2–3 min (120–180 s))
 
 | Video | Länge s | Band | Wörter | Wörter/s | Einst. | Kurzgesagt-Einst. | Nah | Fakten | Stimmung | Hook-Text | Instagram | YouTube |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| F1 Klick | 130.48 | zu lang | 354 | 2.71 | 29 | 9 | 13 | 1 | spannend | ES AHMT STIMMEN NACH |  |  |
-| F2 Die Regeln | 129.22 | zu lang | 338 | 2.62 | 28 | 7 | 13 | 2 | duester | NICHT ANTWORTEN |  |  |
-| F3 Benni | 122.72 | xl | 332 | 2.71 | 26 | 4 | 14 | 2 | traurig | ER IST SEIT EINEM JAHR TOT |  |  |
-| F4 Leuchtturm | 122.08 | xl | 343 | 2.81 | 30 | 11 | 16 | 2 | warm | DU GEHST RAUS |  |  |
+| F1 Klick | 1.0 | zu kurz | 354 | 354.0 | 29 | 9 | 13 | 1 | spannend | ES AHMT STIMMEN NACH | 11-08T19:42 | 11-08T20:27 |
+| F2 Die Regeln | 60.22 | kurz | 338 | 5.61 | 28 | 7 | 13 | 2 | duester | NICHT ANTWORTEN | 11-09T07:44 | 11-09T08:16 |
+| F3 Benni | 64.72 | kurz | 332 | 5.13 | 26 | 4 | 14 | 2 | traurig | ER IST SEIT EINEM JAHR TOT | 11-09T11:09 | 11-09T11:47 |
+| F4 Leuchtturm | 122.08 | xl | 343 | None | 30 | 11 | 16 | 2 | warm | DU GEHST RAUS | 11-09T13:46 | 11-09T14:13 |
 
 | TikTok-Teil | Folgen | Länge s | Termin |
 |---|---|---|---|
-| 1 | 1–1 | 130.48 |  |
-| 2 | 2–2 | 129.22 |  |
-| 3 | 3–3 | 122.72 |  |
-| 4 | 4–4 | 122.08 |  |
+| 1 | 1–1 | 1.0 | 11-08T08:04 |
+| 2 | 2–2 | 60.22 | 11-08T12:27 |
+| 3 | 3–3 | 64.72 | 11-08T16:16 |
+| 4 | 4–4 | 122.08 | 11-08T20:28 |
 
