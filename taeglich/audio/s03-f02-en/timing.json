@@ -1,0 +1,257 @@
+{
+ "dauer": 127.88,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "waldnacht",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 6.614,
+   "emotion": "erzaehlend",
+   "text": "It's eleven at night, the power's out, and outside your cabin stands something with your mother's voice."
+  },
+  {
+   "nr": 2,
+   "typ": "wohnzimmer",
+   "kapitel": 2,
+   "start": 6.614,
+   "dauer": 5.678,
+   "emotion": "erzaehlend",
+   "text": "At eleven sharp, the lights just died. Now the only light is the glow from the fireplace."
+  },
+  {
+   "nr": 3,
+   "typ": "wohnzimmer",
+   "kapitel": 2,
+   "start": 12.292,
+   "dauer": 5.894,
+   "emotion": "erzaehlend",
+   "text": "You push the cabinet in front of the door. It's heavier than it looks. Ben swears under his breath."
+  },
+  {
+   "nr": 4,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 18.186,
+   "dauer": 6.014,
+   "emotion": "ernst",
+   "text": "It smells like smoke and wet wood. Your heart is pounding so hard you can hear it in your ears."
+  },
+  {
+   "nr": 5,
+   "typ": "waldnacht",
+   "kapitel": 2,
+   "start": 24.2,
+   "dauer": 4.598,
+   "emotion": "erzaehlend",
+   "text": "Through a gap in the shutters, you see the fog. It's drifting against the wind."
+  },
+  {
+   "nr": 6,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 28.798,
+   "dauer": 4.166,
+   "emotion": "spannend",
+   "text": "“Okay. I'm officially scared now. And hungry.”"
+  },
+  {
+   "nr": 7,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 32.964,
+   "dauer": 5.486,
+   "emotion": "ernst",
+   "text": "It's quiet outside. But you know it's still there. The clicking never fully stops."
+  },
+  {
+   "nr": 8,
+   "typ": "handy",
+   "kapitel": 2,
+   "start": 38.45,
+   "dauer": 3.422,
+   "emotion": "erzaehlend",
+   "text": "With a single bar of signal, Ben actually finds something."
+  },
+  {
+   "nr": 9,
+   "typ": "titel",
+   "kapitel": 3,
+   "start": 41.872,
+   "dauer": 7.07,
+   "emotion": "erzaehlend",
+   "text": "In Australia, there's a bird called the lyrebird. It imitates chainsaws. Cameras. Even car alarms."
+  },
+  {
+   "nr": 10,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 48.942,
+   "dauer": 5.078,
+   "emotion": "ernst",
+   "text": "“Maybe it's a bird. A really big, really rude bird.”"
+  },
+  {
+   "nr": 11,
+   "typ": "waldnacht",
+   "kapitel": 3,
+   "start": 54.02,
+   "dauer": 5.102,
+   "emotion": "erzaehlend",
+   "text": "But no bird copies whole sentences. And no bird is as tall as a tree."
+  },
+  {
+   "nr": 12,
+   "typ": "objekt",
+   "kapitel": 3,
+   "start": 59.122,
+   "dauer": 5.846,
+   "emotion": "erklaerend",
+   "text": "You make three rules. Don't answer. The door stays shut. The flashlight stays on."
+  },
+  {
+   "nr": 13,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 64.968,
+   "dauer": 3.11,
+   "emotion": "ernst",
+   "text": "“Rule four: the last slice of toast is mine.”"
+  },
+  {
+   "nr": 14,
+   "typ": "waldnacht",
+   "kapitel": 3,
+   "start": 68.078,
+   "dauer": 2.39,
+   "emotion": "erzaehlend",
+   "text": "At eleven twenty, it calls again."
+  },
+  {
+   "nr": 15,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 70.468,
+   "dauer": 2.966,
+   "emotion": "froh",
+   "text": "“Did you brush your teeth? The top left ones too?”"
+  },
+  {
+   "nr": 16,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 73.434,
+   "dauer": 5.846,
+   "emotion": "spannend",
+   "text": "Mom said that this morning by the car. Word for word. Outside. Where the forest starts."
+  },
+  {
+   "nr": 17,
+   "typ": "wohnzimmer",
+   "kapitel": 3,
+   "start": 79.28,
+   "dauer": 4.622,
+   "emotion": "erzaehlend",
+   "text": "It doesn't make anything up. It listens. And it remembers everything."
+  },
+  {
+   "nr": 18,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 83.902,
+   "dauer": 3.518,
+   "emotion": "ernst",
+   "text": "In your head, you go through every sentence you said outside today."
+  },
+  {
+   "nr": 19,
+   "typ": "waldnacht",
+   "kapitel": 3,
+   "start": 87.42,
+   "dauer": 5.102,
+   "emotion": "erzaehlend",
+   "text": "Then you hear your own voice from the forest. “Mom, I really don't want to do the woods.”"
+  },
+  {
+   "nr": 20,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 92.522,
+   "dauer": 4.31,
+   "emotion": "spannend",
+   "text": "You said that this afternoon. Getting out of the car. It's practicing."
+  },
+  {
+   "nr": 21,
+   "typ": "handy",
+   "kapitel": 4,
+   "start": 96.832,
+   "dauer": 5.03,
+   "emotion": "erzaehlend",
+   "text": "Just before midnight, a text finally comes through. She's on her way."
+  },
+  {
+   "nr": 22,
+   "typ": "handy",
+   "kapitel": 4,
+   "start": 101.862,
+   "dauer": 4.406,
+   "emotion": "erzaehlend",
+   "text": "Your battery's at nineteen percent. Ben's phone is already dead."
+  },
+  {
+   "nr": 23,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 106.268,
+   "dauer": 6.038,
+   "emotion": "ernst",
+   "text": "Ben whistles quietly to himself. Three short whistles. He always does that when he's nervous."
+  },
+  {
+   "nr": 24,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 112.306,
+   "dauer": 2.126,
+   "emotion": "spannend",
+   "text": "“Sorry. It just happens.”"
+  },
+  {
+   "nr": 25,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 114.432,
+   "dauer": 1.526,
+   "emotion": "spannend",
+   "text": "“Ben. Don't.”"
+  },
+  {
+   "nr": 26,
+   "typ": "waldnacht",
+   "kapitel": 4,
+   "start": 115.958,
+   "dauer": 0.974,
+   "emotion": "erzaehlend",
+   "text": "Too late."
+  },
+  {
+   "nr": 27,
+   "typ": "waldnacht",
+   "kapitel": 5,
+   "start": 116.932,
+   "dauer": 5.27,
+   "emotion": "erzaehlend",
+   "text": "From the forest, three short whistles come back. Exactly Ben's tune."
+  },
+  {
+   "nr": 28,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 122.202,
+   "dauer": 5.678,
+   "emotion": "spannend",
+   "text": "Ben stops whistling. But outside, the whistling keeps going. And it's getting closer."
+  }
+ ]
+}
