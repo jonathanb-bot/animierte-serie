@@ -1,0 +1,203 @@
+{
+ "dauer": 85.916,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "fundhaus",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 6.95,
+   "emotion": "froh",
+   "text": "In achtzig Sekunden bekommst du eine Quittung, die zwölf Jahre alt ist. Und sie gehört dir."
+  },
+  {
+   "nr": 2,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 6.95,
+   "dauer": 3.206,
+   "emotion": "froh",
+   "text": "Aber erst muss jemand vor allen die Wahrheit sagen."
+  },
+  {
+   "nr": 3,
+   "typ": "fundhaus",
+   "kapitel": 2,
+   "start": 10.156,
+   "dauer": 5.318,
+   "emotion": "erzaehlend",
+   "text": "Neunzehn Uhr. Die Kasse ist gezählt. Viertausend Euro, kein Cent fehlt."
+  },
+  {
+   "nr": 4,
+   "typ": "objekt",
+   "kapitel": 2,
+   "start": 15.474,
+   "dauer": 3.782,
+   "emotion": "erklaerend",
+   "text": "Frau Lindner hat ihre Dose. Der Jugendtreff bekommt sein Geld."
+  },
+  {
+   "nr": 5,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 19.256,
+   "dauer": 3.35,
+   "emotion": "traurig",
+   "text": "„Ich entschuldige mich bei Sami. Unter vier Augen.“"
+  },
+  {
+   "nr": 6,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 22.606,
+   "dauer": 3.95,
+   "emotion": "ernst",
+   "text": "Unter vier Augen. Dabei hat sie ihn vor allen beschuldigt."
+  },
+  {
+   "nr": 7,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 26.556,
+   "dauer": 3.638,
+   "emotion": "erzaehlend",
+   "text": "Sami schaut dich an. Diesmal wartet er, was du sagst."
+  },
+  {
+   "nr": 8,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 30.194,
+   "dauer": 2.846,
+   "emotion": "ernst",
+   "text": "„Vor allen. So wie die Beschuldigung.“"
+  },
+  {
+   "nr": 9,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 33.04,
+   "dauer": 1.91,
+   "emotion": "ernst",
+   "text": "„Ja. Vor allen Leuten.“"
+  },
+  {
+   "nr": 10,
+   "typ": "fundhaus",
+   "kapitel": 3,
+   "start": 34.95,
+   "dauer": 5.39,
+   "emotion": "erzaehlend",
+   "text": "Zehn Minuten später scharren Stühle. Alle Helfer sind da. Es riecht nach Filterkaffee."
+  },
+  {
+   "nr": 11,
+   "typ": "fundhaus",
+   "kapitel": 3,
+   "start": 40.34,
+   "dauer": 3.734,
+   "emotion": "erzaehlend",
+   "text": "Rike steht vor den Fächern. Das Abendlicht fällt ihr ins Gesicht."
+  },
+  {
+   "nr": 12,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 44.074,
+   "dauer": 2.99,
+   "emotion": "traurig",
+   "text": "„Sami hat nichts gestohlen. Ich war das.“"
+  },
+  {
+   "nr": 13,
+   "typ": "objekt",
+   "kapitel": 3,
+   "start": 47.064,
+   "dauer": 4.478,
+   "emotion": "erklaerend",
+   "text": "Der Aushang mit Samis Namen fliegt von der Pinnwand. Ein neuer Zettel hängt dort."
+  },
+  {
+   "nr": 14,
+   "typ": "fundhaus",
+   "kapitel": 3,
+   "start": 51.542,
+   "dauer": 5.414,
+   "emotion": "erzaehlend",
+   "text": "Rike gibt Kasse und Schlüssel ab. Niemand klatscht. Es ist trotzdem richtig."
+  },
+  {
+   "nr": 15,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 56.956,
+   "dauer": 4.598,
+   "emotion": "froh",
+   "text": "Sami lacht zum ersten Mal seit Stunden. Ein echtes Lachen, kein Witz."
+  },
+  {
+   "nr": 16,
+   "typ": "fundhaus",
+   "kapitel": 4,
+   "start": 61.554,
+   "dauer": 4.238,
+   "emotion": "erzaehlend",
+   "text": "Ihr sitzt wieder nebeneinander auf der Theke. Wie jeden Samstag."
+  },
+  {
+   "nr": 17,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 65.792,
+   "dauer": 1.862,
+   "emotion": "froh",
+   "text": "„Du schuldest mir noch zwei Kugeln.“"
+  },
+  {
+   "nr": 18,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 67.654,
+   "dauer": 1.238,
+   "emotion": "froh",
+   "text": "„Ich zahl dir drei.“"
+  },
+  {
+   "nr": 19,
+   "typ": "grossstadt",
+   "kapitel": 4,
+   "start": 68.892,
+   "dauer": 4.454,
+   "emotion": "erzaehlend",
+   "text": "Draußen färbt die Sonne die Dächer orange. Der lange Nachmittag ist vorbei."
+  },
+  {
+   "nr": 20,
+   "typ": "fundhaus",
+   "kapitel": 5,
+   "start": 73.346,
+   "dauer": 4.214,
+   "emotion": "erzaehlend",
+   "text": "Dann kommt Papa aus dem Archiv. In der Hand ein vergilbtes Blatt."
+  },
+  {
+   "nr": 21,
+   "typ": "objekt",
+   "kapitel": 5,
+   "start": 77.56,
+   "dauer": 5.654,
+   "emotion": "erklaerend",
+   "text": "Eine alte Quittung. Die Schrift ist verblasst. Ganz unten: eine Kinderunterschrift."
+  },
+  {
+   "nr": 22,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 83.214,
+   "dauer": 2.702,
+   "emotion": "froh",
+   "text": "„Die hab ich aufgehoben. Die gehört zu dir.“"
+  }
+ ]
+}
