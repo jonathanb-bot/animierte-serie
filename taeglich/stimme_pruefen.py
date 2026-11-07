@@ -56,6 +56,45 @@ def en_zahlen(woerter: list[str]) -> list[str]:
     return out
 
 
+_DE_TEILE = sorted([("null", 0), ("eins", 1), ("ein", 1), ("eine", 1), ("zwei", 2), ("drei", 3), ("vier", 4), ("fünf", 5),
+                    ("sechs", 6), ("sieben", 7), ("acht", 8), ("neun", 9), ("zehn", 10), ("elf", 11), ("zwölf", 12),
+                    ("sechzehn", 16), ("siebzehn", 17), ("zwanzig", 20), ("dreißig", 30), ("vierzig", 40), ("fünfzig", 50),
+                    ("sechzig", 60), ("siebzig", 70), ("achtzig", 80), ("neunzig", 90)], key=lambda x: -len(x[0]))
+
+
+def de_zahl(w: str) -> int | None:
+    """Deutsches Zahlwort in einem Stück → Zahl: „viertausend“ → 4000, „zweihundertfünfzig“ → 250 (7.11.:
+    Whisper schreibt „4000 Euro“, das Drehbuch „viertausend Euro“). Kein Zahlwort → None."""
+    def unter_100(t: str) -> int | None:
+        if not t:
+            return 0
+        if "und" in t and not t.startswith("und"):
+            a, _, b = t.partition("und")
+            x, y = unter_100(a), unter_100(b)
+            return x + y if x is not None and y is not None and 0 < x < 10 and y >= 20 else None
+        for name, wert in _DE_TEILE:
+            if t == name:
+                return wert
+            if t.endswith("zehn") and t[:-4] in ("drei", "vier", "fünf", "acht", "neun"):
+                return 10 + dict(_DE_TEILE)[t[:-4]]
+        return None
+
+    def unter_1000(t: str) -> int | None:
+        if "hundert" in t:
+            a, _, b = t.partition("hundert")
+            x, y = (unter_100(a) if a else 1), unter_100(b)
+            return x * 100 + y if x is not None and y is not None and 0 < x < 10 else None
+        return unter_100(t)
+
+    if not w or not re.fullmatch(r"[a-zäöüß]+", w) or not any(k in w for k in ("tausend", "hundert", "zig", "ßig", "zehn", "und")):
+        return None
+    if "tausend" in w:
+        a, _, b = w.partition("tausend")
+        x, y = (unter_1000(a) if a else 1), unter_1000(b)
+        return x * 1000 + y if x is not None and y is not None and x > 0 else None
+    return unter_1000(w)
+
+
 def norm(t: str) -> list[str]:
     t = t.lower().replace("%", " prozent")
     t = re.sub(r"\$(\d+)\.(\d\d)", r"\1 dollars and \2 cents", t)  # Whisper: „$11.40“
@@ -74,6 +113,7 @@ def norm(t: str) -> list[str]:
     if {"hundred", "thousand", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"} & set(w):
         w = en_zahlen(w)
     # Zahlwörter wie Ziffern behandeln (Whisper schreibt „18“, das Drehbuch „achtzehn“)
+    w = [str(z) if (z := de_zahl(x)) is not None else x for x in w]
     return [ZAHLEN.get(x, x).replace("ß", "ss") for x in w]
 
 
