@@ -35,7 +35,7 @@
 // Lebenszeit: einundvierzig Jahre in Wochen, jeder Samstag markiert
 [lebenszeit jahre=41 markiert="0-41" oben="Jeden Samstag seit 41 Jahren" palette=orange zoom-raus] Opa hat einundvierzig Jahre lang jeden Samstag dieselben Zahlen gespielt.
 // Infokarte: die Zahlen sind Geburtstage
-[objekt objekte="herz:Omas Geburtstag|herz:Mamas Geburtstag|herz:Dein Geburtstag" gross="OPAS ZAHLEN" palette=rosa] Es sind keine Glückszahlen. Es sind Geburtstage. Oma, Mama, Papa, Lina. Und deiner.
+[objekt objekte="herz:Oma|herz:Mama|herz:Du" gross="OPAS ZAHLEN" palette=rosa] Es sind keine Glückszahlen. Es sind Geburtstage. Oma, Mama, Papa, Lina. Und deiner.
 // Nahaufnahme: Opa
 [gesicht opa ort=krankenhaus zeit=nacht ruhig palette=orange] „Ich wollte nie gewinnen. Ich wollte nur jede Woche an euch denken.“
 // Esstisch in der Erinnerung, die ganze Familie, Kerzen
