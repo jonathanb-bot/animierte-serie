@@ -1,12 +1,12 @@
 {
- "dauer": 128.134,
+ "dauer": 130.486,
  "einstellungen": [
   {
    "nr": 1,
    "typ": "waldnacht",
    "kapitel": 1,
    "start": 0.0,
-   "dauer": 5.846,
+   "dauer": 5.798,
    "emotion": "erzaehlend",
    "text": "In diesem Wald gibt es etwas, das Stimmen nachahmt. Und heute Nacht kennt es deine."
   },
@@ -14,8 +14,8 @@
    "nr": 2,
    "typ": "waldnacht",
    "kapitel": 2,
-   "start": 5.846,
-   "dauer": 5.294,
+   "start": 5.798,
+   "dauer": 5.966,
    "emotion": "erzaehlend",
    "text": "Du bist mit Ben in Mamas alter Hütte am See. Zwei Tage, kein WLAN, ein Kamin."
   },
@@ -23,8 +23,8 @@
    "nr": 3,
    "typ": "landschaft",
    "kapitel": 2,
-   "start": 11.14,
-   "dauer": 7.022,
+   "start": 11.764,
+   "dauer": 7.286,
    "emotion": "erzaehlend",
    "text": "Draußen liegt der See schwarz und glatt wie ein Handydisplay. Dahinter fängt der Wald an. Kilometer um Kilometer."
   },
@@ -32,8 +32,8 @@
    "nr": 4,
    "typ": "gesicht",
    "kapitel": 2,
-   "start": 18.162,
-   "dauer": 5.63,
+   "start": 19.05,
+   "dauer": 5.678,
    "emotion": "froh",
    "text": "Du warst zuletzt mit zehn hier. Damals hat Mama dir jeden Abend vorgelesen, bis du eingeschlafen bist."
   },
@@ -41,8 +41,8 @@
    "nr": 5,
    "typ": "wohnzimmer",
    "kapitel": 2,
-   "start": 23.792,
-   "dauer": 4.094,
+   "start": 24.728,
+   "dauer": 4.67,
    "emotion": "erzaehlend",
    "text": "Das Holz knackt im Kamin. Alles riecht nach Harz und nassen Socken."
   },
@@ -50,8 +50,8 @@
    "nr": 6,
    "typ": "handy",
    "kapitel": 2,
-   "start": 27.886,
-   "dauer": 3.302,
+   "start": 29.398,
+   "dauer": 3.542,
    "emotion": "erzaehlend",
    "text": "Mama ist ins Dorf gefahren. Um Mitternacht will sie zurück sein."
   },
@@ -59,8 +59,8 @@
    "nr": 7,
    "typ": "gesicht",
    "kapitel": 2,
-   "start": 31.188,
-   "dauer": 3.422,
+   "start": 32.94,
+   "dauer": 3.782,
    "emotion": "ernst",
    "text": "„Tür zu, Licht an. Und wenn was ist: Leuchtturm.“"
   },
@@ -68,8 +68,8 @@
    "nr": 8,
    "typ": "gesicht",
    "kapitel": 2,
-   "start": 34.61,
-   "dauer": 4.19,
+   "start": 36.722,
+   "dauer": 4.31,
    "emotion": "froh",
    "text": "Leuchtturm ist euer Wort von früher. Wer es ruft, bekommt ein Zeichen zurück."
   },
@@ -77,17 +77,17 @@
    "nr": 9,
    "typ": "gesicht",
    "kapitel": 2,
-   "start": 38.8,
-   "dauer": 3.086,
+   "start": 41.032,
+   "dauer": 3.782,
    "emotion": "froh",
-   "text": "„Leuchtturm? Seid ihr ein Geheimdienst mit Hütte?“"
+   "text": "„Leuchtturm? Seid ihr etwa ein Geheimdienst? Mit Hütte?“"
   },
   {
    "nr": 10,
    "typ": "wohnzimmer",
    "kapitel": 2,
-   "start": 41.886,
-   "dauer": 4.814,
+   "start": 44.814,
+   "dauer": 5.006,
    "emotion": "erzaehlend",
    "text": "Ben verliert beim Kartenspielen zum vierten Mal. Er behauptet, die Karten seien feucht."
   },
@@ -95,8 +95,8 @@
    "nr": 11,
    "typ": "titel",
    "kapitel": 3,
-   "start": 46.7,
-   "dauer": 3.734,
+   "start": 49.82,
+   "dauer": 3.422,
    "emotion": "erzaehlend",
    "text": "Um zweiundzwanzig Uhr einundvierzig hört ihr es zum ersten Mal."
   },
@@ -104,8 +104,8 @@
    "nr": 12,
    "typ": "waldnacht",
    "kapitel": 3,
-   "start": 50.434,
-   "dauer": 5.726,
+   "start": 53.242,
+   "dauer": 5.75,
    "emotion": "erzaehlend",
    "text": "Aus dem Wald kommt ein Geräusch. Klick. Klick. Wie zwei Steine, die man aneinanderschlägt."
   },
@@ -113,8 +113,8 @@
    "nr": 13,
    "typ": "gesicht",
    "kapitel": 3,
-   "start": 56.16,
-   "dauer": 2.726,
+   "start": 58.992,
+   "dauer": 2.678,
    "emotion": "froh",
    "text": "„Ein Reh. Oder ein Bär mit Kastagnetten.“"
   },
@@ -122,8 +122,8 @@
    "nr": 14,
    "typ": "gesicht",
    "kapitel": 3,
-   "start": 58.886,
-   "dauer": 4.478,
+   "start": 61.67,
+   "dauer": 4.67,
    "emotion": "ernst",
    "text": "Du lachst nicht. Rehe klicken nicht. Und das Geräusch kommt von weit oben."
   },
@@ -131,8 +131,8 @@
    "nr": 15,
    "typ": "gesicht",
    "kapitel": 3,
-   "start": 63.364,
-   "dauer": 2.846,
+   "start": 66.34,
+   "dauer": 2.966,
    "emotion": "ernst",
    "text": "Dann wird es still. Sogar die Grillen hören auf."
   },
@@ -140,8 +140,8 @@
    "nr": 16,
    "typ": "waldnacht",
    "kapitel": 3,
-   "start": 66.21,
-   "dauer": 2.606,
+   "start": 69.306,
+   "dauer": 2.798,
    "emotion": "erzaehlend",
    "text": "Und dann ruft jemand. Mit Mamas Stimme."
   },
@@ -149,8 +149,8 @@
    "nr": 17,
    "typ": "gesicht",
    "kapitel": 3,
-   "start": 68.816,
-   "dauer": 3.374,
+   "start": 72.104,
+   "dauer": 3.158,
    "emotion": "froh",
    "text": "„Schatz? Komm mal raus. Ich brauch Hilfe mit den Taschen.“"
   },
@@ -158,17 +158,17 @@
    "nr": 18,
    "typ": "gesicht",
    "kapitel": 3,
-   "start": 72.19,
-   "dauer": 2.198,
+   "start": 75.262,
+   "dauer": 2.75,
    "emotion": "erzaehlend",
-   "text": "„Na also. Deine Mama ist schnell.“"
+   "text": "„Na also. Deine Mama ist aber schnell zurück.“"
   },
   {
    "nr": 19,
    "typ": "gesicht",
    "kapitel": 3,
-   "start": 74.388,
-   "dauer": 4.886,
+   "start": 78.012,
+   "dauer": 5.174,
    "emotion": "ernst",
    "text": "Du willst schon aufstehen. Es klingt so sehr nach ihr. Sogar das kleine Seufzen am Ende."
   },
@@ -176,8 +176,8 @@
    "nr": 20,
    "typ": "handy",
    "kapitel": 3,
-   "start": 79.274,
-   "dauer": 5.15,
+   "start": 83.186,
+   "dauer": 5.39,
    "emotion": "erzaehlend",
    "text": "Aber vor zwei Minuten hat Mama geschrieben. Sie steht noch an der Kasse. Zwanzig Kilometer von hier."
   },
@@ -185,8 +185,8 @@
    "nr": 21,
    "typ": "gesicht",
    "kapitel": 3,
-   "start": 84.424,
-   "dauer": 3.518,
+   "start": 88.576,
+   "dauer": 4.142,
    "emotion": "spannend",
    "text": "Draußen ist kein Auto. Kein Licht. Nur diese Stimme."
   },
@@ -194,8 +194,8 @@
    "nr": 22,
    "typ": "waldnacht",
    "kapitel": 4,
-   "start": 87.942,
-   "dauer": 6.446,
+   "start": 92.718,
+   "dauer": 5.822,
    "emotion": "erzaehlend",
    "text": "Du nimmst die Taschenlampe. Du machst die Tür nicht auf. Du leuchtest nur durchs Fenster."
   },
@@ -203,8 +203,8 @@
    "nr": 23,
    "typ": "waldnacht",
    "kapitel": 4,
-   "start": 94.388,
-   "dauer": 5.534,
+   "start": 98.54,
+   "dauer": 5.63,
    "emotion": "erzaehlend",
    "text": "Vor der Hütte steht niemand. Nur Nebel, der zwischen den Stämmen hängt wie nasse Wäsche."
   },
@@ -212,8 +212,8 @@
    "nr": 24,
    "typ": "handy",
    "kapitel": 4,
-   "start": 99.922,
-   "dauer": 4.43,
+   "start": 104.17,
+   "dauer": 4.142,
    "emotion": "erzaehlend",
    "text": "Du rufst Mama an. Ein Balken Netz. Der Anruf bricht ab."
   },
@@ -221,8 +221,8 @@
    "nr": 25,
    "typ": "gesicht",
    "kapitel": 4,
-   "start": 104.352,
-   "dauer": 4.238,
+   "start": 108.312,
+   "dauer": 4.574,
    "emotion": "traurig",
    "text": "„Schatz, mach auf. Mir ist kalt.“ Genau so, wie sie es immer sagt."
   },
@@ -230,8 +230,8 @@
    "nr": 26,
    "typ": "waldnacht",
    "kapitel": 4,
-   "start": 108.59,
-   "dauer": 8.078,
+   "start": 112.886,
+   "dauer": 7.046,
    "emotion": "erzaehlend",
    "text": "Der Lichtstrahl wandert die Bäume hoch. Und ganz oben, viel zu weit oben, leuchten zwei lange Augen zurück."
   },
@@ -239,7 +239,7 @@
    "nr": 27,
    "typ": "waldnacht",
    "kapitel": 4,
-   "start": 116.668,
+   "start": 119.932,
    "dauer": 1.838,
    "emotion": "erzaehlend",
    "text": "Du blinzelst. Weg."
@@ -248,8 +248,8 @@
    "nr": 28,
    "typ": "wohnzimmer",
    "kapitel": 5,
-   "start": 118.506,
-   "dauer": 4.334,
+   "start": 121.77,
+   "dauer": 3.878,
    "emotion": "erzaehlend",
    "text": "Das Klicken ist jetzt nicht mehr im Wald. Es ist direkt am Fenster."
   },
@@ -257,8 +257,8 @@
    "nr": 29,
    "typ": "gesicht",
    "kapitel": 5,
-   "start": 122.84,
-   "dauer": 5.294,
+   "start": 125.648,
+   "dauer": 4.838,
    "emotion": "spannend",
    "text": "Und dann klopft es an die Scheibe. Dreimal. Genau so, wie Mama immer klopft."
   }
