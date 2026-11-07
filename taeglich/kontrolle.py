@@ -91,7 +91,8 @@ def main():
     zeilen = ["# Abend-Kontrolle", ""]
     probleme = []
     for name, plat, konto, sprache in KONTEN:
-        posts = [p for p in plan if p["platform"] == plat and p.get("konto") == konto]
+        # absichtlich zurückgezogene Posts (plan.loeschen) zählen nicht
+        posts = [p for p in plan if p["platform"] == plat and p.get("konto") == konto and not (status.get(p["id"]) or {}).get("geloescht")]
         fertig = [p for p in posts if str(((status.get(p["id"]) or {}).get("ergebnis") or {}).get("status", "")).startswith("pub")]
         fehler = [p for p in posts if (status.get(p["id"]) or {}).get("ergebnis", {}) and "fehler" in ((status.get(p["id"]) or {}).get("ergebnis") or {})]
         fertig.sort(key=lambda p: p["zeit"])
@@ -101,6 +102,8 @@ def main():
         for p in fehler[-3:]:
             if p["zeit"] > (fertig[-1]["zeit"] if fertig else ""):
                 f = status[p["id"]]["ergebnis"]["fehler"]
+                if re.search(r"rate limit|HTTP 429", str(f), re.I):
+                    f = f"Status-Abfrage gedrosselt, Stand unbekannt ({f})"
                 probleme.append(f"{name}: {p['id']} ({p['zeit']}) Fehler bei Zernio: {f}")
                 zeilen.append(f"- ✗ {p['id']} ({p['zeit']}): Fehler bei Zernio: {f}")
         for p in fertig[-a.anzahl:]:
