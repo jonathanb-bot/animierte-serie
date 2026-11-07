@@ -66,7 +66,7 @@ export function parse(text, cast = {}) {
       else if (cmd === "serie") ep.serie = rest.join(" ");
       else if (cmd === "qualitaet") ep.qualitaet = rest[0]; // "hoch": verlustfreie Einzelbilder, bessere Kodierung (Kurzvideos); "max": zusätzlich 60 fps, doppelte Auflösung, Ausgabe 1440×2560
       else if (cmd === "mund") ep.mund = rest[0];
-      else if (cmd === "einblenden") ep.einblenden = rest[0] !== "aus"; // `@einblenden aus`: kein Schwarz am Anfang (Vorschaubild, 6.11.)
+      else if (cmd === "einblenden") ep.einblenden = rest[0] !== "aus", ep.einblendenGesetzt = true; // `@einblenden aus`: kein Schwarz am Anfang (Vorschaubild, 6.11.)
       else if (cmd === "untertitel") ep.untertitel = rest[0] !== "aus"; // `@untertitel aus`: keine Untertitel (Test ab s03, Jonathan 5.11.)
       else if (cmd === "musik_lautstaerke") ep.musik_lautstaerke = Number(rest[0]);
       else if (cmd === "whoosh") ep.whoosh = rest[0] !== "aus";
@@ -140,5 +140,9 @@ export function parse(text, cast = {}) {
     s.kamera = kameraFuer(s, preset, i);
     ep.szenen.push(s); i++;
   }
+  // 7.11. (Jonathan): Bei allen neuen Kurzvideos (Stil „leuchtend“) ist das erste Bild nie schwarz, auch wenn
+  // `@einblenden aus` im Kopf fehlt (englische Fassungen, Zitat-Videos). `@einblenden an` erzwingt die alte Blende.
+  if (!ep.einblendenGesetzt && stil === "leuchtend") ep.einblenden = false;
+  delete ep.einblendenGesetzt;
   return ep;
 }

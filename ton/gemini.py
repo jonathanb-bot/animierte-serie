@@ -69,7 +69,7 @@ NORMAL_EN = (", always in a normal, full speaking voice at a steady volume, neve
 
 
 def figur_setzen(beschreibung: str, sprache: str = "de"):
-    """STIL für eine Figurenstimme (sprecher=… im Drehbuch, Jonathans Wunsch 7.11.): natürlich, nie flüstern."""
+    """STIL für eine Figurenstimme (figurstimme=… im Drehbuch, Jonathans Wunsch 7.11.): natürlich, nie flüstern."""
     global STIL, SPRACHE, TONHOEHE_PRUEFEN
     SPRACHE = sprache
     TONHOEHE_PRUEFEN = False
@@ -92,7 +92,7 @@ def stimmung_setzen(name: str | None, lebendig: bool = False, sprache: str = "de
                 ", nach jeder Zeile eine kurze Pause. Nur den Text sprechen:\n\n")
 
 
-TONHOEHE_PRUEFEN = True  # nur für die Erzählstimme Orus; Figurenstimmen (sprecher=…) haben ihre eigene Tonhöhe
+TONHOEHE_PRUEFEN = True  # nur für die Erzählstimme Orus; Figurenstimmen (figurstimme=…) haben ihre eigene Tonhöhe
 MAX_HT = 1.5       # Englisch: so weit darf Gemini vom deutschen Grundton abweichen, sonst neu anfragen
 VERSUCHE_EN = 3
 MAX_PAUSE = 0.6    # längere Pausen werden darauf gekürzt

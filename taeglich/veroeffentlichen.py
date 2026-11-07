@@ -64,6 +64,16 @@ def lufs(f: Path) -> float | None:
     return float(m.group(1)) if m else None
 
 
+def helligkeit_start(f: Path) -> float | None:
+    """Mittlere Helligkeit (0–255) des ersten Bildes (Jonathan 6./7.11.: das erste Bild darf nie schwarz sein)."""
+    out = subprocess.run(["ffmpeg", "-v", "error", "-i", str(f), "-frames:v", "1", "-vf", "scale=90:160,format=gray",
+                          "-f", "rawvideo", "-"], capture_output=True).stdout
+    return sum(out) / len(out) if out else None
+
+
+MIN_HELL_START = 12  # wie taeglich/kontrolle.py („erstes Bild schwarz“)
+
+
 def pruefe(f: Path, max_dauer: float = MAX_DAUER, min_dauer: float = 0.0) -> dict:
     """Gleiche Regel wie pruefen.py auf youtube-upload, dazu die Höchstdauer."""
     v, a = dauer(f, "v:0"), dauer(f, "a:0")
@@ -75,6 +85,8 @@ def pruefe(f: Path, max_dauer: float = MAX_DAUER, min_dauer: float = 0.0) -> dic
     elif l is None: grund = "Lautheit nicht messbar"
     elif l < -24: grund = "zu leise, Stimme fehlt vermutlich"
     elif v > max_dauer: grund = f"zu lang ({v:.1f} s, höchstens {max_dauer:.0f} s)"
+    elif (h := helligkeit_start(f)) is not None and h < MIN_HELL_START:
+        grund = f"erstes Bild schwarz (Helligkeit {h:.0f}, mindestens {MIN_HELL_START}) – `@einblenden aus` im Drehbuchkopf"
     elif v < min_dauer: grund = f"zu kurz ({v:.1f} s, mindestens {min_dauer:.0f} s – Videos müssen über 1 Minute sein)"
     return {"ok": grund is None, "bild_s": round(v, 2), "ton_s": round(a, 2), "lufs": l, **({"grund": grund} if grund else {})}
 

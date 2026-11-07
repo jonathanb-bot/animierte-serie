@@ -243,21 +243,21 @@ def bauen(drehbuch: str, nur_stimme=False, drone=False, stimme="edge", anfragen=
             gemini.stimmung_setzen(m.group(1), lebendig)
             log(f"Stimmung: {m.group(1)}{' (lebendig)' if lebendig else ''}")
         name = stimme.split(":", 1)[1] if ":" in stimme else "Orus"
-        # Figurenstimmen (Jonathans Wunsch 7.11.): Einstellungen mit sprecher=<rolle> spricht eine eigene
+        # Figurenstimmen (Jonathans Wunsch 7.11.): Einstellungen mit figurstimme=<rolle> spricht eine eigene
         # Gemini-Stimme aus ton/figurenstimmen.json, alles andere der Erzähler.
         rollen = json.loads((Path(__file__).parent / "figurenstimmen.json").read_text(encoding="utf-8"))
-        erz = [e for e in sprechend if not e.attr.get("sprecher")]
+        erz = [e for e in sprechend if not e.attr.get("figurstimme")]
         stil_erz, sprache = gemini.STIL, gemini.SPRACHE
         ergebnis = dict(zip([e.nr for e in erz], gemini.sprechen(
             [re.sub(r"[„“\"»«]", "", e.text) for e in erz], [e.kapitel for e in erz], name, anfragen=anfragen,
             log=log) if erz else []))
         figuren = {}
         for e in sprechend:
-            if e.attr.get("sprecher"):
-                if e.attr["sprecher"] not in rollen or e.attr["sprecher"].startswith("_"):
-                    raise SystemExit(f"Einstellung {e.nr}: sprecher={e.attr['sprecher']} unbekannt "
+            if e.attr.get("figurstimme"):
+                if e.attr["figurstimme"] not in rollen or e.attr["figurstimme"].startswith("_"):
+                    raise SystemExit(f"Einstellung {e.nr}: figurstimme={e.attr['figurstimme']} unbekannt "
                                      f"(möglich: {', '.join(k for k in rollen if not k.startswith('_'))})")
-                figuren.setdefault(e.attr["sprecher"], []).append(e)
+                figuren.setdefault(e.attr["figurstimme"], []).append(e)
         for rolle, es in figuren.items():
             r = rollen[rolle]
             gemini.figur_setzen(r["en" if sprache == "en" else "de"], sprache)
@@ -267,7 +267,7 @@ def bauen(drehbuch: str, nur_stimme=False, drone=False, stimme="edge", anfragen=
                 ergebnis[e.nr] = g
         gemini.STIL, gemini.TONHOEHE_PRUEFEN = stil_erz, True
         (audio_dir / "figurenstimmen.json").write_text(json.dumps(
-            {f"{e.nr:03d}": e.attr["sprecher"] for es in figuren.values() for e in es}, ensure_ascii=False),
+            {f"{e.nr:03d}": e.attr["figurstimme"] for es in figuren.values() for e in es}, ensure_ascii=False),
             encoding="utf-8")
         gesprochen = [ergebnis[e.nr] for e in sprechend]
     else:
