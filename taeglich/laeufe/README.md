@@ -4,7 +4,7 @@ Jonathans Vorgabe vom 1.11.2026: **Jeder Lauf bekommt einen neuen Chat**, damit 
 
 So funktioniert es:
 
-1. Vier geplante Aufgaben wecken eine kleine **Starter-Session**: „Analyse vor der Staffel“ täglich um 21:39, „Kurzvideo-Staffel“ täglich um 23:44 und „Zitat-Video“ täglich um 08:47 und „Abend-Kontrolle“ täglich um 20:13 (Europe/Berlin).
+1. Vier geplante Aufgaben wecken eine kleine **Starter-Session**: „Analyse vor der Staffel“ täglich um 21:39, „Kurzvideo-Staffel“ täglich um 23:44, „Zitat-Video“ täglich um 08:47 und „Abend-Kontrolle“ täglich um 20:13 (Europe/Berlin).
 2. Die Starter-Session macht nur eins: Sie legt mit `create_session` eine **neue Session** an, mit Repo `jonathanb-bot/animierte-serie`, Branch `taeglich` und Modell Opus. Die neue Session bekommt den kurzen Auftrag „Lies `taeglich/laeufe/<lauf>.md` und führe es aus“. Danach ist die Starter-Session fertig.
 3. Die neue Session arbeitet alles ab (pushen, GitHub, vidIQ, Gemini, PushNotification gehen dort) und endet.
 
