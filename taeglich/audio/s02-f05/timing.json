@@ -1,12 +1,12 @@
 {
- "dauer": 68.028,
+ "dauer": 69.972,
  "einstellungen": [
   {
    "nr": 1,
    "typ": "landschaft",
    "kapitel": 1,
    "start": 0.0,
-   "dauer": 5.99,
+   "dauer": 5.486,
    "emotion": "erzaehlend",
    "text": "Du kannst dir jetzt alles kaufen. Nur nicht die eine Person, die nicht mehr mit dir redet."
   },
@@ -14,8 +14,8 @@
    "nr": 2,
    "typ": "handy",
    "kapitel": 1,
-   "start": 5.99,
-   "dauer": 2.894,
+   "start": 5.486,
+   "dauer": 2.726,
    "emotion": "erzaehlend",
    "text": "Elf Nachrichten an Mia. Keine gelesen."
   },
@@ -23,8 +23,8 @@
    "nr": 3,
    "typ": "park",
    "kapitel": 1,
-   "start": 8.884,
-   "dauer": 2.63,
+   "start": 8.212,
+   "dauer": 2.918,
    "emotion": "erzaehlend",
    "text": "Seit vier Tagen sitzt du allein auf eurer Bank."
   },
@@ -32,8 +32,8 @@
    "nr": 4,
    "typ": "gesicht",
    "kapitel": 2,
-   "start": 11.514,
-   "dauer": 4.766,
+   "start": 11.13,
+   "dauer": 4.646,
    "emotion": "traurig",
    "text": "Du hast immer gedacht, Geld macht Probleme kleiner. Bisher macht es nur dich kleiner."
   },
@@ -41,8 +41,8 @@
    "nr": 5,
    "typ": "lebenszeit",
    "kapitel": 2,
-   "start": 16.28,
-   "dauer": 3.302,
+   "start": 15.776,
+   "dauer": 4.19,
    "emotion": "erzaehlend",
    "text": "Zwölf Jahre seid ihr befreundet. Seit dem ersten Schultag."
   },
@@ -50,8 +50,8 @@
    "nr": 6,
    "typ": "klassenzimmer",
    "kapitel": 2,
-   "start": 19.582,
-   "dauer": 3.566,
+   "start": 19.966,
+   "dauer": 3.926,
    "emotion": "erzaehlend",
    "text": "In der Schule sitzt Mia jetzt neben Jonas. Jonas!"
   },
@@ -59,8 +59,8 @@
    "nr": 7,
    "typ": "gesicht",
    "kapitel": 2,
-   "start": 23.148,
-   "dauer": 4.214,
+   "start": 23.892,
+   "dauer": 4.79,
    "emotion": "ernst",
    "text": "„Alter. Sie ist nicht sauer wegen dem Geld. Sie ist sauer wegen dir.“"
   },
@@ -68,8 +68,8 @@
    "nr": 8,
    "typ": "gesicht",
    "kapitel": 2,
-   "start": 27.362,
-   "dauer": 2.63,
+   "start": 28.682,
+   "dauer": 2.606,
    "emotion": "traurig",
    "text": "Ben hat recht. Und das ist das Schlimmste."
   },
@@ -77,8 +77,8 @@
    "nr": 9,
    "typ": "see",
    "kapitel": 3,
-   "start": 29.992,
-   "dauer": 4.334,
+   "start": 31.288,
+   "dauer": 4.478,
    "emotion": "erzaehlend",
    "text": "Am Abend gehst du zum See. Da, wo ihr früher Steine habt hüpfen lassen."
   },
@@ -86,8 +86,8 @@
    "nr": 10,
    "typ": "gesicht",
    "kapitel": 3,
-   "start": 34.326,
-   "dauer": 3.206,
+   "start": 35.766,
+   "dauer": 3.686,
    "emotion": "traurig",
    "text": "Du wirfst einen flachen Stein. Er geht sofort unter."
   },
@@ -95,8 +95,8 @@
    "nr": 11,
    "typ": "weltall",
    "kapitel": 3,
-   "start": 37.532,
-   "dauer": 4.07,
+   "start": 39.452,
+   "dauer": 4.238,
    "emotion": "erzaehlend",
    "text": "Dreißig Millionen Euro. Und es gibt niemanden, dem du es sagen kannst."
   },
@@ -104,8 +104,8 @@
    "nr": 12,
    "typ": "wald",
    "kapitel": 3,
-   "start": 41.602,
-   "dauer": 3.95,
+   "start": 43.69,
+   "dauer": 3.518,
    "emotion": "erzaehlend",
    "text": "Du nimmst den langen Weg durch den Wald. Nur damit du nicht nach Hause musst."
   },
@@ -113,8 +113,8 @@
    "nr": 13,
    "typ": "grossstadt",
    "kapitel": 3,
-   "start": 45.552,
-   "dauer": 4.406,
+   "start": 47.208,
+   "dauer": 4.502,
    "emotion": "erzaehlend",
    "text": "Auf dem Heimweg siehst du in die Fenster. Überall sitzen Leute zusammen am Tisch."
   },
@@ -122,8 +122,8 @@
    "nr": 14,
    "typ": "wohnzimmer",
    "kapitel": 4,
-   "start": 49.958,
-   "dauer": 4.358,
+   "start": 51.71,
+   "dauer": 4.142,
    "emotion": "spannend",
    "text": "Zu Hause ist das Licht an. Mama steht mit halb angezogener Jacke im Flur."
   },
@@ -131,8 +131,8 @@
    "nr": 15,
    "typ": "gesicht",
    "kapitel": 4,
-   "start": 54.316,
-   "dauer": 2.51,
+   "start": 55.852,
+   "dauer": 2.726,
    "emotion": "spannend",
    "text": "„Opa ist gestürzt. In der Küche.“"
   },
@@ -140,8 +140,8 @@
    "nr": 16,
    "typ": "gesicht",
    "kapitel": 4,
-   "start": 56.826,
-   "dauer": 1.574,
+   "start": 58.578,
+   "dauer": 1.67,
    "emotion": "spannend",
    "text": "Dir wird plötzlich eiskalt."
   },
@@ -149,8 +149,8 @@
    "nr": 17,
    "typ": "krankenhaus",
    "kapitel": 5,
-   "start": 58.4,
-   "dauer": 4.31,
+   "start": 60.248,
+   "dauer": 4.622,
    "emotion": "erzaehlend",
    "text": "Zwanzig Minuten später stehst du im Krankenhaus. Der Monitor piept leise."
   },
@@ -158,8 +158,8 @@
    "nr": 18,
    "typ": "gesicht",
    "kapitel": 5,
-   "start": 62.71,
-   "dauer": 5.318,
+   "start": 64.87,
+   "dauer": 5.102,
    "emotion": "ruhig",
    "text": "Opa öffnet die Augen. Und das Erste, was er flüstert, ist: „Du hast es also gefunden.“"
   }
