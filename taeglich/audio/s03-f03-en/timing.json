@@ -1,0 +1,239 @@
+{
+ "dauer": 122.596,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "waldnacht",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 9.23,
+   "emotion": "erzaehlend",
+   "text": "Something in this forest copies voices. At midnight, it calls out in the voice of Ben's grandpa. And Ben's grandpa died a year ago."
+  },
+  {
+   "nr": 2,
+   "typ": "titel",
+   "kapitel": 2,
+   "start": 9.23,
+   "dauer": 3.758,
+   "emotion": "erzaehlend",
+   "text": "It's midnight. Mom should be here by now. She isn't."
+  },
+  {
+   "nr": 3,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 12.988,
+   "dauer": 4.598,
+   "emotion": "ernst",
+   "text": "It's been quiet outside for twenty minutes. That's worse than any clicking."
+  },
+  {
+   "nr": 4,
+   "typ": "wohnzimmer",
+   "kapitel": 2,
+   "start": 17.586,
+   "dauer": 4.478,
+   "emotion": "erzaehlend",
+   "text": "You're sitting on the couch under a blanket. The flashlight is pointed at the door."
+  },
+  {
+   "nr": 5,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 22.064,
+   "dauer": 4.79,
+   "emotion": "ernst",
+   "text": "Ben counts the logs by the fireplace. Eleven. He counts them three times."
+  },
+  {
+   "nr": 6,
+   "typ": "landschaft",
+   "kapitel": 2,
+   "start": 26.854,
+   "dauer": 4.19,
+   "emotion": "erzaehlend",
+   "text": "Then the voice comes from the lake. Calm. A little hoarse."
+  },
+  {
+   "nr": 7,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 31.044,
+   "dauer": 4.046,
+   "emotion": "froh",
+   "text": "“Benny! Come on, let's go fishing. The perch are biting.”"
+  },
+  {
+   "nr": 8,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 35.09,
+   "dauer": 3.566,
+   "emotion": "traurig",
+   "text": "Ben freezes. Only one person ever called him Benny."
+  },
+  {
+   "nr": 9,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 38.656,
+   "dauer": 3.278,
+   "emotion": "traurig",
+   "text": "“We came here every Sunday. To this exact lake.”"
+  },
+  {
+   "nr": 10,
+   "typ": "landschaft",
+   "kapitel": 3,
+   "start": 41.934,
+   "dauer": 4.43,
+   "emotion": "erzaehlend",
+   "text": "Grandpa taught him to swim here. And how to put a worm on a hook without crying."
+  },
+  {
+   "nr": 11,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 46.364,
+   "dauer": 3.614,
+   "emotion": "traurig",
+   "text": "“He always said: you don't have time. You make time.”"
+  },
+  {
+   "nr": 12,
+   "typ": "see",
+   "kapitel": 3,
+   "start": 49.978,
+   "dauer": 6.374,
+   "emotion": "erzaehlend",
+   "text": "Last summer, Grandpa asked one more time. Ben didn't have time. Practice, friends, whatever."
+  },
+  {
+   "nr": 13,
+   "typ": "krankenhaus",
+   "kapitel": 3,
+   "start": 56.352,
+   "dauer": 6.734,
+   "emotion": "erzaehlend",
+   "text": "Two weeks later, Grandpa was in the hospital. Ben meant to call him back. Tomorrow. Then the day after."
+  },
+  {
+   "nr": 14,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 63.086,
+   "dauer": 1.382,
+   "emotion": "traurig",
+   "text": "“I never called him back.”"
+  },
+  {
+   "nr": 15,
+   "typ": "objekt",
+   "kapitel": 3,
+   "start": 64.468,
+   "dauer": 5.294,
+   "emotion": "erklaerend",
+   "text": "On Ben's wrist, Grandpa's old watch is ticking. He hasn't taken it off since the funeral."
+  },
+  {
+   "nr": 16,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 69.762,
+   "dauer": 6.182,
+   "emotion": "traurig",
+   "text": "You think about Mom. When was the last time you two just hung out? No phones. No rush."
+  },
+  {
+   "nr": 17,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 75.944,
+   "dauer": 2.366,
+   "emotion": "traurig",
+   "text": "“Benny. I'm waiting.”"
+  },
+  {
+   "nr": 18,
+   "typ": "wohnzimmer",
+   "kapitel": 4,
+   "start": 78.31,
+   "dauer": 4.166,
+   "emotion": "erzaehlend",
+   "text": "Ben gets up. He walks to the door. You grab his sleeve."
+  },
+  {
+   "nr": 19,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 82.476,
+   "dauer": 1.334,
+   "emotion": "ernst",
+   "text": "“That's not him, Ben.”"
+  },
+  {
+   "nr": 20,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 83.81,
+   "dauer": 2.942,
+   "emotion": "traurig",
+   "text": "“I know. I just wanted to hear him one more time.”"
+  },
+  {
+   "nr": 21,
+   "typ": "wohnzimmer",
+   "kapitel": 4,
+   "start": 86.752,
+   "dauer": 7.838,
+   "emotion": "erzaehlend",
+   "text": "You sit back down. Ben buries his face in the blanket. Outside, it calls three more times. Then silence."
+  },
+  {
+   "nr": 22,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 94.59,
+   "dauer": 3.902,
+   "emotion": "traurig",
+   "text": "“If we get out of here, I'm calling everyone. Seriously, everyone.”"
+  },
+  {
+   "nr": 23,
+   "typ": "waldnacht",
+   "kapitel": 4,
+   "start": 98.492,
+   "dauer": 7.406,
+   "emotion": "erzaehlend",
+   "text": "And suddenly you realize what that means. It knows Grandpa's voice. So it was here last summer too. It was listening."
+  },
+  {
+   "nr": 24,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 105.898,
+   "dauer": 4.07,
+   "emotion": "spannend",
+   "text": "Who knows how many voices it's collected. Summer after summer."
+  },
+  {
+   "nr": 25,
+   "typ": "handy",
+   "kapitel": 5,
+   "start": 109.968,
+   "dauer": 8.438,
+   "emotion": "erzaehlend",
+   "text": "At twelve forty-seven, Mom texts. A tree is down across the road. She's walking the rest. On foot. Through the forest."
+  },
+  {
+   "nr": 26,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 118.406,
+   "dauer": 4.19,
+   "emotion": "ernst",
+   "text": "She doesn't know what's waiting out there. You do. You put on your jacket."
+  }
+ ]
+}
