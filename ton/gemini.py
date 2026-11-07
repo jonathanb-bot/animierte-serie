@@ -68,6 +68,17 @@ NORMAL_EN = (", always in a normal, full speaking voice at a steady volume, neve
              "not even in quiet or creepy moments")
 
 
+def figur_setzen(beschreibung: str, sprache: str = "de"):
+    """STIL für eine Figurenstimme (sprecher=… im Drehbuch, Jonathans Wunsch 7.11.): natürlich, nie flüstern."""
+    global STIL, SPRACHE, TONHOEHE_PRUEFEN
+    SPRACHE = sprache
+    TONHOEHE_PRUEFEN = False
+    if sprache == "en":
+        STIL = ("Say the following English line as " + beschreibung + NORMAL_EN + ". Speak only the text:\n\n")
+    else:
+        STIL = ("Sprich den folgenden deutschen Text als " + beschreibung + NORMAL + ". Nur den Text sprechen:\n\n")
+
+
 def stimmung_setzen(name: str | None, lebendig: bool = False, sprache: str = "de"):
     """STIL für eine Stimmung aus STIMMUNGEN setzen (unbekannt oder leer: unverändert)."""
     global STIL, SPRACHE
@@ -81,6 +92,7 @@ def stimmung_setzen(name: str | None, lebendig: bool = False, sprache: str = "de
                 ", nach jeder Zeile eine kurze Pause. Nur den Text sprechen:\n\n")
 
 
+TONHOEHE_PRUEFEN = True  # nur für die Erzählstimme Orus; Figurenstimmen (sprecher=…) haben ihre eigene Tonhöhe
 MAX_HT = 1.5       # Englisch: so weit darf Gemini vom deutschen Grundton abweichen, sonst neu anfragen
 VERSUCHE_EN = 3
 MAX_PAUSE = 0.6    # längere Pausen werden darauf gekürzt
@@ -156,7 +168,7 @@ def _block_audio(zeilen: list[str], stimme: str, log=print) -> np.ndarray:
         return np.fromfile(ziel, np.float32)
     log(f"    Gemini ({stimme}): {len(zeilen)} Zeilen …")
     x = _anfrage(text, stimme)
-    if True:  # Deutsch und Englisch (5.11.)
+    if TONHOEHE_PRUEFEN:  # Deutsch und Englisch (5.11.), nur Erzähler
         # 5.11. (Jonathan): die Stimme soll überall gleich hoch klingen (106 Hz), aber ohne starkes
         # Nachpitchen (das klang unnatürlich). Liegt Gemini mehr als MAX_HT daneben, neu anfragen und die
         # natürlich passendste Fassung nehmen; den kleinen Rest gleicht ton.angleichen aus.

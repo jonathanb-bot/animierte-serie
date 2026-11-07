@@ -51,6 +51,12 @@ def _grundton(x: np.ndarray) -> float:
 
 def angleichen(ordner: Path, nur_messen=False, log=print) -> float:
     dateien = sorted(Path(ordner).glob("[0-9][0-9][0-9].mp3"))
+    # Figurenstimmen (sprecher=…, 7.11.) behalten ihre eigene Tonhöhe: nicht messen, nicht verschieben
+    fs = Path(ordner) / "figurenstimmen.json"
+    if fs.exists():
+        import json
+        figuren = set(json.loads(fs.read_text(encoding="utf-8")))
+        dateien = [d for d in dateien if d.stem not in figuren]
     werte = [g for g in (grundton(d) for d in dateien) if g > 0]
     if not werte:
         log(f"{ordner}: keine Stimme gefunden")

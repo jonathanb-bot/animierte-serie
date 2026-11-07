@@ -1,0 +1,6 @@
+{
+ "_info": "Eigene Gemini-Stimmen für Figuren (Jonathans Wunsch 7.11.). Im Drehbuch eine Einstellung mit sprecher=<rolle>: ihr ganzer Text wird von dieser Stimme gesprochen (nur die wörtliche Rede der Figur, ohne Anführungszeichen und ohne „sagt Mama“). Erzähler bleibt Orus. Ausgewählt 7.11. nach Hörproben (Bewertung Natürlichkeit 1-10): Kore 9, Zephyr 8,5, Gacrux 8,5; Sulafat und Despina klangen gehaucht, Leda verstellt.",
+ "frau": {"stimme": "Kore", "de": "eine Frau um die 45, zum Beispiel eine Mutter: warme, natürliche Frauenstimme, wie ein echter Mensch im Alltag, nicht vorgelesen", "en": "a woman in her mid-forties, for example a mother: warm, natural female voice, like a real person in everyday life, not reading aloud"},
+ "kind": {"stimme": "Zephyr", "de": "ein zehnjähriges Kind: helle, kindliche Stimme, natürlich und lebhaft, wie ein echtes Kind im Alltag, nicht vorgelesen", "en": "a ten-year-old child: bright, childlike voice, natural and lively, like a real child in everyday life, not reading aloud"},
+ "mann_alt": {"stimme": "Gacrux", "de": "ein Mann um die 60: tiefe, etwas raue Stimme, natürlich wie ein echter Mensch im Alltag, nicht vorgelesen", "en": "a man around sixty: deep, slightly rough voice, natural like a real person in everyday life, not reading aloud"}
+}

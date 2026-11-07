@@ -59,6 +59,8 @@ Horror · 8 Folgen · **kurz 63–70 s** (165–180 Wörter, 18–22 Einstellung
 
 **Stimme (Jonathan 7.11.):** Orus wie immer, **immer normale, volle Sprechstimme, nie flüstern, keine Verzerrung, kein Hall und kein Effekt auf der Stimme**, auch nicht, wenn eine Figur im Text flüstert oder ein Wesen spricht (dann schreibt der Erzähler „sagt er leise“, gesprochen wird normal). Das Wesen spricht nicht.
 
+**Figurenstimmen (Jonathan 7.11., FORMAT.md → „Figurenstimmen“):** Henrik bekommt `sprecher=mann_alt` (Gacrux), Mama `sprecher=frau` (Kore), je 1–2 kurze Sätze an den Höhepunkten (F1 „Den Mühlenweg gibt es seit 1998 nicht mehr.“, F2 „Schau nur in die Scheibe.“, F3 Mama am Telefon, F6 „Paul?“). Paul spricht nicht (Wesen), höchstens in F8 ein einziges Wort mit `sprecher=kind` (Zephyr). Alles andere erzählt Orus.
+
 **Logline:** Du sitzt im letzten Nachtbus nach Hause. Um 0:12 zeigt die Anzeige einen Halt, den es seit 1998 nicht mehr gibt: Mühlenweg, das Dorf, das unter dem Stausee liegt. Der Fahrer wird kreidebleich, und der Bus bremst von selbst.
 **Grundregel:** Wer am Mühlenweg einsteigt, ist nur in der dunklen Scheibe zu sehen. Dreh dich nicht nach ihnen um. Schau nur in die Scheibe.
 **Welt:** Innenraum eines leeren Nachtbusses (gelbe Haltegriffe, Fahrgastanzeige, beschlagene Scheiben, die Nacht als Spiegel); Wartehäuschen im Nebel mit altem Schild; Straße auf der Staumauer, schwarzes Wasser, eine Laterne. Höchstens 2 neue Kulissen (Vorschlag: `nachtbus` innen, `staumauer`), sonst vorhandene (`alltag.js` hat eine Bushaltestelle).

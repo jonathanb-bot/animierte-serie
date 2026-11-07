@@ -40,6 +40,14 @@ Jonathan möchte mehr Horror testen, **ohne echte Gewalt** (Blut höchstens ange
 - **Horror kurz (Jonathan 7.11., s05):** auch kurze Horror-Staffeln mit 63–70 s pro Folge (165–180 Wörter, 18–22 Einstellungen, TikTok jede Folge ein Post). Machart: normaler Ort, an dem eigentlich alles vorbei ist; eine unmögliche Kleinigkeit ohne Erklärung; ein konkretes Detail (Name, Jahreszahl, Uhrzeit); eine Figur, die mehr weiß und kreidebleich wird; die Uhrzeit läuft mit (gesprochen und im Bild, nie `@hud`); je Satz eine neue Information, erste Wendung nach spätestens 15 s.
 - **Kulissen dafür (neu bauen, Stil „leuchtend“):** Wald bei Nacht mit Nebel und Taschenlampe, Feldweg mit Strommasten, Hütte oder Camping am See, verlassene Tankstelle, Funkmast. Höchstens 2 neue pro Staffel.
 
+## Figurenstimmen (Jonathans Wunsch 7.11.)
+
+Neben dem Erzähler Orus dürfen Figuren eine **eigene Gemini-Stimme** bekommen, wenn sie sehr natürlich klingt. Ausgewählt nach Hörproben (Natürlichkeit 1–10): **Frau** `Kore` (9), **Kind** `Zephyr` (8,5), **älterer Mann** `Gacrux` (8,5). Nicht nehmen: `Sulafat`, `Despina` (gehaucht), `Leda` (klingt verstellt). Zuordnung und Regieanweisung in `ton/figurenstimmen.json` (weitere Rollen nur nach Hörprobe ergänzen).
+- **Im Drehbuch:** wörtliche Rede einer Figur in eine eigene Einstellung mit `sprecher=frau|kind|mann_alt`, Text nur die Worte der Figur (Anführungszeichen erlaubt), ohne „sagt Mama“. Das sagt der Erzähler davor in seiner eigenen Einstellung, z. B. `[handy] Mama ruft an.` → `[handy sprecher=frau] „Wo bist du?“`.
+- **Sparsam:** höchstens 1–3 kurze Figurenzeilen pro Folge (zusammen unter einem Viertel der Sprechzeit), die Geschichte erzählt weiter Orus in Du-Form. Eine Figurenzeile ist ein Höhepunkt, kein Hörspiel.
+- **Technik:** `ton.folge` spricht diese Einstellungen mit der Figurenstimme (je Rolle 1 Gemini-Anfrage pro Folge zusätzlich), schreibt `audio/<folge>/figurenstimmen.json` und nimmt sie von der Tonhöhen-Angleichung aus (eine Frau oder ein Kind bleibt so hoch, wie sie klingt). Englisch (`@sprache en`) nutzt dieselben Stimmen mit englischer Regieanweisung.
+- **Immer natürlich und normal:** auch Figuren nie flüstern, nie verzerren, kein Effekt auf der Stimme. Beim Abhören jede Figurenzeile prüfen; klingt sie gespielt oder verstellt, die Zeile dem Erzähler geben.
+
 ## Jedes Genre einmal ausprobieren (Jonathans Wunsch 4.11.)
 
 Bis zum 22.11. bekommt möglichst **jedes Genre** eine eigene Staffel (Plan in `taeglich/analyse/experimente.md`): Horror (ohne Blut, zweimal), Krimi/Rätsel, Sci-Fi/Zukunft, Psychologie über dich, Naturgewalt, Familiengeheimnis, Lebenszeit/Philosophie, Tierfreundschaft, Wettlauf gegen die Zeit. **Nicht:** reine Komödie („lustig jetzt nicht“), Romantik und Abenteuer/Reise (Jonathan 4.11.: „raus“). Ein trockener Satz pro Folge bleibt.
