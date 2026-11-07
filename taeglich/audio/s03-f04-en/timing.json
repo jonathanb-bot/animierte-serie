@@ -1,0 +1,275 @@
+{
+ "dauer": 128.676,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "waldnacht",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 4.622,
+   "emotion": "erzaehlend",
+   "text": "Your mom is walking alone through a dark forest right now. And you're going out to meet her."
+  },
+  {
+   "nr": 2,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 4.622,
+   "dauer": 3.926,
+   "emotion": "ernst",
+   "text": "“I'm staying right behind you. If I scream, it's not a joke.”"
+  },
+  {
+   "nr": 3,
+   "typ": "objekt",
+   "kapitel": 2,
+   "start": 8.548,
+   "dauer": 5.414,
+   "emotion": "erklaerend",
+   "text": "Out here, there are new rules. Don't answer. Don't split up. Don't stop."
+  },
+  {
+   "nr": 4,
+   "typ": "waldnacht",
+   "kapitel": 2,
+   "start": 13.962,
+   "dauer": 4.742,
+   "emotion": "erzaehlend",
+   "text": "The beam is shaking because your hand is shaking. Ben is holding on to your backpack."
+  },
+  {
+   "nr": 5,
+   "typ": "waldnacht",
+   "kapitel": 2,
+   "start": 18.704,
+   "dauer": 6.086,
+   "emotion": "erzaehlend",
+   "text": "It's one in the morning. The ground is wet. Every time a branch snaps, your heart stops for a second."
+  },
+  {
+   "nr": 6,
+   "typ": "waldnacht",
+   "kapitel": 2,
+   "start": 24.79,
+   "dauer": 4.382,
+   "emotion": "erzaehlend",
+   "text": "Somewhere up in the trees: click. Click. It's following you."
+  },
+  {
+   "nr": 7,
+   "typ": "waldnacht",
+   "kapitel": 3,
+   "start": 29.172,
+   "dauer": 2.294,
+   "emotion": "erzaehlend",
+   "text": "Then Mom calls. From the left."
+  },
+  {
+   "nr": 8,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 31.466,
+   "dauer": 1.91,
+   "emotion": "froh",
+   "text": "“Honey! I'm over here!”"
+  },
+  {
+   "nr": 9,
+   "typ": "waldnacht",
+   "kapitel": 3,
+   "start": 33.376,
+   "dauer": 2.534,
+   "emotion": "erzaehlend",
+   "text": "And then Mom calls again. From the right."
+  },
+  {
+   "nr": 10,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 35.91,
+   "dauer": 2.558,
+   "emotion": "ernst",
+   "text": "“Honey, not that way! Over here!”"
+  },
+  {
+   "nr": 11,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 38.468,
+   "dauer": 2.582,
+   "emotion": "spannend",
+   "text": "“Which one? Which one is it?”"
+  },
+  {
+   "nr": 12,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 41.05,
+   "dauer": 4.694,
+   "emotion": "spannend",
+   "text": "Two voices. Both sound exactly like her. One of them is not your mother."
+  },
+  {
+   "nr": 13,
+   "typ": "titel",
+   "kapitel": 3,
+   "start": 45.744,
+   "dauer": 4.382,
+   "emotion": "erzaehlend",
+   "text": "You take a deep breath. And you shout the one word only the two of you know."
+  },
+  {
+   "nr": 14,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 50.126,
+   "dauer": 1.022,
+   "emotion": "ernst",
+   "text": "“Lighthouse!”"
+  },
+  {
+   "nr": 15,
+   "typ": "waldnacht",
+   "kapitel": 4,
+   "start": 51.148,
+   "dauer": 7.19,
+   "emotion": "erzaehlend",
+   "text": "From the left, the voice answers right away. “Lighthouse! Lighthouse!” It just repeats your word."
+  },
+  {
+   "nr": 16,
+   "typ": "waldnacht",
+   "kapitel": 4,
+   "start": 58.338,
+   "dauer": 7.838,
+   "emotion": "erzaehlend",
+   "text": "From the right, there's no answer. Instead, a small light blinks. Three times. Like a lighthouse."
+  },
+  {
+   "nr": 17,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 66.176,
+   "dauer": 4.262,
+   "emotion": "froh",
+   "text": "That's the sign. A voice can be copied. A light can't."
+  },
+  {
+   "nr": 18,
+   "typ": "waldnacht",
+   "kapitel": 4,
+   "start": 70.438,
+   "dauer": 6.542,
+   "emotion": "erzaehlend",
+   "text": "You run. Mom is standing in the fog with her phone light. Her jacket smells like rain and gasoline."
+  },
+  {
+   "nr": 19,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 76.98,
+   "dauer": 2.294,
+   "emotion": "froh",
+   "text": "“I'm here. I'm right here.”"
+  },
+  {
+   "nr": 20,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 79.274,
+   "dauer": 4.718,
+   "emotion": "traurig",
+   "text": "You hold her so tight she laughs. And you laugh too, even though you're crying."
+  },
+  {
+   "nr": 21,
+   "typ": "waldnacht",
+   "kapitel": 4,
+   "start": 83.992,
+   "dauer": 5.366,
+   "emotion": "erzaehlend",
+   "text": "On the way back, nobody talks. Mom holds your hand. Like back when you were little."
+  },
+  {
+   "nr": 22,
+   "typ": "wohnzimmer",
+   "kapitel": 5,
+   "start": 89.358,
+   "dauer": 5.438,
+   "emotion": "erzaehlend",
+   "text": "Just before two, the three of you sit by the fireplace. The door is locked twice."
+  },
+  {
+   "nr": 23,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 94.796,
+   "dauer": 4.766,
+   "emotion": "ernst",
+   "text": "Ben sits very still next to you. He doesn't even touch the last slice of toast."
+  },
+  {
+   "nr": 24,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 99.562,
+   "dauer": 3.854,
+   "emotion": "froh",
+   "text": "“From now on, we go grocery shopping together. All of us.”"
+  },
+  {
+   "nr": 25,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 103.416,
+   "dauer": 4.838,
+   "emotion": "froh",
+   "text": "“Remember? You used to yell Lighthouse every night. Just so I'd come back in.”"
+  },
+  {
+   "nr": 26,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 108.254,
+   "dauer": 1.742,
+   "emotion": "froh",
+   "text": "“Yeah. Every night.”"
+  },
+  {
+   "nr": 27,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 109.996,
+   "dauer": 4.358,
+   "emotion": "froh",
+   "text": "You realize how long it's been since you hugged her this tight. Years, maybe."
+  },
+  {
+   "nr": 28,
+   "typ": "waldnacht",
+   "kapitel": 6,
+   "start": 114.354,
+   "dauer": 6.398,
+   "emotion": "erzaehlend",
+   "text": "Then someone calls from outside. In Ben's voice. “Hey! Open up! I'm still out here!”"
+  },
+  {
+   "nr": 29,
+   "typ": "gesicht",
+   "kapitel": 6,
+   "start": 120.752,
+   "dauer": 5.102,
+   "emotion": "froh",
+   "text": "You look next to you. Ben is sitting on the couch. He hasn't said a word since you got back."
+  },
+  {
+   "nr": 30,
+   "typ": "gesicht",
+   "kapitel": 6,
+   "start": 125.854,
+   "dauer": 2.822,
+   "emotion": "spannend",
+   "text": "Grandpa's watch on his wrist has stopped ticking."
+  }
+ ]
+}
