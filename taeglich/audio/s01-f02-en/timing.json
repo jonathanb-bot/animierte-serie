@@ -1,0 +1,167 @@
+{
+ "dauer": 77.508,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "grossstadt",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 5.006,
+   "emotion": "erzaehlend",
+   "text": "A kid is alone in the city. No phone. And nobody can call her."
+  },
+  {
+   "nr": 2,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 5.006,
+   "dauer": 3.302,
+   "emotion": "spannend",
+   "text": "It's your little sister. And you're holding her phone."
+  },
+  {
+   "nr": 3,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 8.308,
+   "dauer": 3.758,
+   "emotion": "ernst",
+   "text": "Dad says, “People found each other before phones, too.”"
+  },
+  {
+   "nr": 4,
+   "typ": "haltestelle",
+   "kapitel": 2,
+   "start": 12.066,
+   "dauer": 4.598,
+   "emotion": "erzaehlend",
+   "text": "A neighbor saw her. “They left last night. Headed for the train station.”"
+  },
+  {
+   "nr": 5,
+   "typ": "netz",
+   "kapitel": 2,
+   "start": 16.664,
+   "dauer": 6.926,
+   "emotion": "erzaehlend",
+   "text": "Without the network, all you've got is what everyone used to have. Eyes. Feet. And luck."
+  },
+  {
+   "nr": 6,
+   "typ": "bahnhof",
+   "kapitel": 3,
+   "start": 23.59,
+   "dauer": 6.854,
+   "emotion": "erzaehlend",
+   "text": "Thousands of people are packed into the train station. No trains are running. The signal boxes have no data."
+  },
+  {
+   "nr": 7,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 30.444,
+   "dauer": 4.886,
+   "emotion": "ernst",
+   "text": "You shout her name. A hundred faces. None of them is Lina."
+  },
+  {
+   "nr": 8,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 35.33,
+   "dauer": 4.286,
+   "emotion": "froh",
+   "text": "Then someone grabs your shoulder. Ben. Your best friend."
+  },
+  {
+   "nr": 9,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 39.616,
+   "dauer": 3.038,
+   "emotion": "ernst",
+   "text": "“I couldn't reach you. So I just rode my bike over.”"
+  },
+  {
+   "nr": 10,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 42.654,
+   "dauer": 3.422,
+   "emotion": "froh",
+   "text": "No call. No text. He just showed up."
+  },
+  {
+   "nr": 11,
+   "typ": "grossstadt",
+   "kapitel": 3,
+   "start": 46.076,
+   "dauer": 3.974,
+   "emotion": "erzaehlend",
+   "text": "And that's exactly how you search without a network. Together."
+  },
+  {
+   "nr": 12,
+   "typ": "objekt",
+   "kapitel": 4,
+   "start": 50.05,
+   "dauer": 4.502,
+   "emotion": "erklaerend",
+   "text": "Hundreds of notes are stuck to the station wall. People looking for people."
+  },
+  {
+   "nr": 13,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 54.552,
+   "dauer": 3.83,
+   "emotion": "erzaehlend",
+   "text": "You read every single one. Ten minutes. Twenty."
+  },
+  {
+   "nr": 14,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 58.382,
+   "dauer": 2.102,
+   "emotion": "spannend",
+   "text": "“Wait. That's her handwriting!”"
+  },
+  {
+   "nr": 15,
+   "typ": "objekt",
+   "kapitel": 4,
+   "start": 60.484,
+   "dauer": 4.31,
+   "emotion": "erklaerend",
+   "text": "A note written in glitter pen. “Walked to Grandpa's. Lina.”"
+  },
+  {
+   "nr": 16,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 64.794,
+   "dauer": 4.814,
+   "emotion": "froh",
+   "text": "For a second, you can breathe again. She's alive. She has a plan."
+  },
+  {
+   "nr": 17,
+   "typ": "auge",
+   "kapitel": 5,
+   "start": 69.608,
+   "dauer": 1.574,
+   "emotion": "erzaehlend",
+   "text": "Then you do the math."
+  },
+  {
+   "nr": 18,
+   "typ": "landschaft",
+   "kapitel": 5,
+   "start": 71.182,
+   "dauer": 6.326,
+   "emotion": "erzaehlend",
+   "text": "Grandpa lives seven miles away. Right across the whole city. And in an hour, it'll be dark."
+  }
+ ]
+}
