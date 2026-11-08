@@ -1,0 +1,167 @@
+{
+ "dauer": 78.132,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "weltall",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 4.406,
+   "emotion": "erzaehlend",
+   "text": "The sun hit the Earth. And the second blow is still coming."
+  },
+  {
+   "nr": 2,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 4.406,
+   "dauer": 5.15,
+   "emotion": "ernst",
+   "text": "That's what the old man says. In his apartment full of cables and radios."
+  },
+  {
+   "nr": 3,
+   "typ": "wohnzimmer",
+   "kapitel": 2,
+   "start": 9.556,
+   "dauer": 5.078,
+   "emotion": "erzaehlend",
+   "text": "You're sitting in his living room. No power. But his radio runs on batteries."
+  },
+  {
+   "nr": 4,
+   "typ": "objekt",
+   "kapitel": 2,
+   "start": 14.634,
+   "dauer": 7.262,
+   "emotion": "erklaerend",
+   "text": "Over shortwave, radio operators all over the world talk to each other. No internet. No cell towers."
+  },
+  {
+   "nr": 5,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 21.896,
+   "dauer": 5.246,
+   "emotion": "ernst",
+   "text": "“A solar storm. A huge one. It's all anyone's been talking about tonight.”"
+  },
+  {
+   "nr": 6,
+   "typ": "weltall",
+   "kapitel": 3,
+   "start": 27.142,
+   "dauer": 5.174,
+   "emotion": "erzaehlend",
+   "text": "In a solar storm, the sun hurls clouds of charged particles into space."
+  },
+  {
+   "nr": 7,
+   "typ": "netz",
+   "kapitel": 3,
+   "start": 32.316,
+   "dauer": 4.454,
+   "emotion": "erzaehlend",
+   "text": "When they hit the Earth, they mess with satellites, radio, and power grids."
+  },
+  {
+   "nr": 8,
+   "typ": "titel",
+   "kapitel": 3,
+   "start": 36.77,
+   "dauer": 5.246,
+   "emotion": "erzaehlend",
+   "text": "In eighteen fifty-nine, after a storm like that, telegraph lines threw sparks."
+  },
+  {
+   "nr": 9,
+   "typ": "titel",
+   "kapitel": 3,
+   "start": 42.016,
+   "dauer": 4.958,
+   "emotion": "erzaehlend",
+   "text": "And in nineteen eighty-nine, millions of people in Canada lost power for nine hours."
+  },
+  {
+   "nr": 10,
+   "typ": "rechenzentrum",
+   "kapitel": 3,
+   "start": 46.974,
+   "dauer": 5.942,
+   "emotion": "erzaehlend",
+   "text": "Today, almost everything depends on satellites and data centers. Way more than back then."
+  },
+  {
+   "nr": 11,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 52.916,
+   "dauer": 2.558,
+   "emotion": "spannend",
+   "text": "Ben whispers, “And the second blow?”"
+  },
+  {
+   "nr": 12,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 55.474,
+   "dauer": 2.798,
+   "emotion": "ernst",
+   "text": "“Tonight. Maybe stronger than the first.”"
+  },
+  {
+   "nr": 13,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 58.272,
+   "dauer": 3.662,
+   "emotion": "ernst",
+   "text": "You think about Mom and Dad. They're still out looking for Lina."
+  },
+  {
+   "nr": 14,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 61.934,
+   "dauer": 3.062,
+   "emotion": "froh",
+   "text": "The radio man writes a message on a slip of paper."
+  },
+  {
+   "nr": 15,
+   "typ": "grossstadt",
+   "kapitel": 4,
+   "start": 64.996,
+   "dauer": 4.934,
+   "emotion": "erzaehlend",
+   "text": "A neighbor bikes it over to your house. So your parents know: Lina is here."
+  },
+  {
+   "nr": 16,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 69.93,
+   "dauer": 2.39,
+   "emotion": "spannend",
+   "text": "Then Lina goes completely pale."
+  },
+  {
+   "nr": 17,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 72.32,
+   "dauer": 2.534,
+   "emotion": "spannend",
+   "text": "“Grandpa takes his heart pills every night.”"
+  },
+  {
+   "nr": 18,
+   "typ": "landschaft",
+   "kapitel": 5,
+   "start": 74.854,
+   "dauer": 3.278,
+   "emotion": "erzaehlend",
+   "text": "“And last week he told me: the pack is almost empty.”"
+  }
+ ]
+}
