@@ -1,0 +1,194 @@
+{
+ "dauer": 78.27,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "fundhaus",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 4.886,
+   "emotion": "froh",
+   "text": "Six o'clock. Your best friend comes back. With a stranger."
+  },
+  {
+   "nr": 2,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 4.886,
+   "dauer": 2.942,
+   "emotion": "froh",
+   "text": "Earlier, you let him walk off into the rain."
+  },
+  {
+   "nr": 3,
+   "typ": "fundhaus",
+   "kapitel": 2,
+   "start": 7.828,
+   "dauer": 2.87,
+   "emotion": "erzaehlend",
+   "text": "At five forty, you're sitting alone at the counter."
+  },
+  {
+   "nr": 4,
+   "typ": "handy",
+   "kapitel": 2,
+   "start": 10.698,
+   "dauer": 4.31,
+   "emotion": "erzaehlend",
+   "text": "The tin box belongs to a Mrs. Lindner. You call her number."
+  },
+  {
+   "nr": 5,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 15.008,
+   "dauer": 3.374,
+   "emotion": "traurig",
+   "text": "Not in service. The trail ends in a beep."
+  },
+  {
+   "nr": 6,
+   "typ": "handy",
+   "kapitel": 2,
+   "start": 18.382,
+   "dauer": 2.294,
+   "emotion": "erzaehlend",
+   "text": "Then your phone buzzes. Sami."
+  },
+  {
+   "nr": 7,
+   "typ": "park",
+   "kapitel": 3,
+   "start": 20.676,
+   "dauer": 4.646,
+   "emotion": "erzaehlend",
+   "text": "The community garden is two blocks away. Wet gravel crunches."
+  },
+  {
+   "nr": 8,
+   "typ": "park",
+   "kapitel": 3,
+   "start": 25.322,
+   "dauer": 5.15,
+   "emotion": "erzaehlend",
+   "text": "Sami stands under the archway. Beside him, an older woman in gardening gloves."
+  },
+  {
+   "nr": 9,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 30.472,
+   "dauer": 2.87,
+   "emotion": "froh",
+   "text": "“I water here on Wednesdays. I know everyone.”"
+  },
+  {
+   "nr": 10,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 33.342,
+   "dauer": 2.798,
+   "emotion": "froh",
+   "text": "Twelve years, and he still surprises you."
+  },
+  {
+   "nr": 11,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 36.14,
+   "dauer": 3.038,
+   "emotion": "froh",
+   "text": "Mrs. Lindner hands you a warm mug of mint tea."
+  },
+  {
+   "nr": 12,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 39.178,
+   "dauer": 4.31,
+   "emotion": "froh",
+   "text": "You want to ask everything. Instead you say: “You tell it, Sami.”"
+  },
+  {
+   "nr": 13,
+   "typ": "park",
+   "kapitel": 3,
+   "start": 43.488,
+   "dauer": 4.022,
+   "emotion": "erzaehlend",
+   "text": "And Sami tells it. Calmly. Without a single joke."
+  },
+  {
+   "nr": 14,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 47.51,
+   "dauer": 3.494,
+   "emotion": "ernst",
+   "text": "“My tin box? My husband lost it on the bus.”"
+  },
+  {
+   "nr": 15,
+   "typ": "objekt",
+   "kapitel": 3,
+   "start": 51.004,
+   "dauer": 5.15,
+   "emotion": "erklaerend",
+   "text": "Her photo: a black tin box with a half moon. And a dented corner."
+  },
+  {
+   "nr": 16,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 56.154,
+   "dauer": 3.398,
+   "emotion": "traurig",
+   "text": "“He passed away last year. His letters are inside.”"
+  },
+  {
+   "nr": 17,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 59.552,
+   "dauer": 3.326,
+   "emotion": "traurig",
+   "text": "Sami gently touches her arm. He knows that feeling."
+  },
+  {
+   "nr": 18,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 62.878,
+   "dauer": 4.622,
+   "emotion": "traurig",
+   "text": "And you realize what you almost lost today. Over a piece of paper."
+  },
+  {
+   "nr": 19,
+   "typ": "grossstadt",
+   "kapitel": 4,
+   "start": 67.5,
+   "dauer": 3.614,
+   "emotion": "erzaehlend",
+   "text": "The three of you walk back. The streetlights flicker on."
+  },
+  {
+   "nr": 20,
+   "typ": "fundhaus",
+   "kapitel": 5,
+   "start": 71.114,
+   "dauer": 3.47,
+   "emotion": "erzaehlend",
+   "text": "Mrs. Lindner stops in the doorway and looks at the shelves."
+  },
+  {
+   "nr": 21,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 74.584,
+   "dauer": 3.686,
+   "emotion": "spannend",
+   "text": "“Picked up? No. My tin box is still here.”"
+  }
+ ]
+}

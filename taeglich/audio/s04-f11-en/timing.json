@@ -1,0 +1,203 @@
+{
+ "dauer": 79.028,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "fundhaus",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 4.91,
+   "emotion": "froh",
+   "text": "In eighty seconds, you get a twelve-year-old receipt. And it's yours."
+  },
+  {
+   "nr": 2,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 4.91,
+   "dauer": 4.502,
+   "emotion": "froh",
+   "text": "But first, someone has to tell the truth in front of everyone."
+  },
+  {
+   "nr": 3,
+   "typ": "fundhaus",
+   "kapitel": 2,
+   "start": 9.412,
+   "dauer": 5.126,
+   "emotion": "erzaehlend",
+   "text": "Seven o'clock. Four thousand euros, counted. Not a cent missing."
+  },
+  {
+   "nr": 4,
+   "typ": "objekt",
+   "kapitel": 2,
+   "start": 14.538,
+   "dauer": 3.71,
+   "emotion": "erklaerend",
+   "text": "Mrs. Lindner has her box. The youth center, its money."
+  },
+  {
+   "nr": 5,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 18.248,
+   "dauer": 2.846,
+   "emotion": "traurig",
+   "text": "“I'll apologize to Sami. In private.”"
+  },
+  {
+   "nr": 6,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 21.094,
+   "dauer": 3.182,
+   "emotion": "ernst",
+   "text": "In private. Though she accused him in front of everyone."
+  },
+  {
+   "nr": 7,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 24.276,
+   "dauer": 3.134,
+   "emotion": "erzaehlend",
+   "text": "Sami looks at you. This time, he waits for you."
+  },
+  {
+   "nr": 8,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 27.41,
+   "dauer": 3.086,
+   "emotion": "ernst",
+   "text": "“In front of everyone. Just like the accusation.”"
+  },
+  {
+   "nr": 9,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 30.496,
+   "dauer": 2.222,
+   "emotion": "ernst",
+   "text": "“Yeah. In front of everybody.”"
+  },
+  {
+   "nr": 10,
+   "typ": "fundhaus",
+   "kapitel": 3,
+   "start": 32.718,
+   "dauer": 4.358,
+   "emotion": "erzaehlend",
+   "text": "Ten minutes later, chairs scrape. Every volunteer is here."
+  },
+  {
+   "nr": 11,
+   "typ": "fundhaus",
+   "kapitel": 3,
+   "start": 37.076,
+   "dauer": 3.902,
+   "emotion": "erzaehlend",
+   "text": "Rike stands before the shelves, evening light on her face."
+  },
+  {
+   "nr": 12,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 40.978,
+   "dauer": 2.966,
+   "emotion": "traurig",
+   "text": "“Sami didn't steal anything. It was me.”"
+  },
+  {
+   "nr": 13,
+   "typ": "objekt",
+   "kapitel": 3,
+   "start": 43.944,
+   "dauer": 3.998,
+   "emotion": "erklaerend",
+   "text": "The notice with Sami's name comes off the board. A new sheet goes up."
+  },
+  {
+   "nr": 14,
+   "typ": "fundhaus",
+   "kapitel": 3,
+   "start": 47.942,
+   "dauer": 5.294,
+   "emotion": "erzaehlend",
+   "text": "Rike hands over the box and her keys. Nobody claps. It's still right."
+  },
+  {
+   "nr": 15,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 53.236,
+   "dauer": 3.902,
+   "emotion": "froh",
+   "text": "Sami laughs for the first time in hours. A real laugh."
+  },
+  {
+   "nr": 16,
+   "typ": "fundhaus",
+   "kapitel": 4,
+   "start": 57.138,
+   "dauer": 3.638,
+   "emotion": "erzaehlend",
+   "text": "You're sitting side by side on the counter again. Like every Saturday."
+  },
+  {
+   "nr": 17,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 60.776,
+   "dauer": 1.622,
+   "emotion": "froh",
+   "text": "“You still owe me two scoops.”"
+  },
+  {
+   "nr": 18,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 62.398,
+   "dauer": 1.214,
+   "emotion": "froh",
+   "text": "“I'll get you three.”"
+  },
+  {
+   "nr": 19,
+   "typ": "grossstadt",
+   "kapitel": 4,
+   "start": 63.612,
+   "dauer": 4.526,
+   "emotion": "erzaehlend",
+   "text": "Outside, the rooftops glow orange. The long afternoon is over."
+  },
+  {
+   "nr": 20,
+   "typ": "fundhaus",
+   "kapitel": 5,
+   "start": 68.138,
+   "dauer": 3.422,
+   "emotion": "erzaehlend",
+   "text": "Then your dad comes out of the archive, holding a yellowed sheet."
+  },
+  {
+   "nr": 21,
+   "typ": "objekt",
+   "kapitel": 5,
+   "start": 71.56,
+   "dauer": 5.078,
+   "emotion": "erklaerend",
+   "text": "An old receipt. The ink has faded. At the bottom: a child's signature."
+  },
+  {
+   "nr": 22,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 76.638,
+   "dauer": 2.39,
+   "emotion": "froh",
+   "text": "“I kept this. It belongs to you.”"
+  }
+ ]
+}

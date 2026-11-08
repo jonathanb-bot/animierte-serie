@@ -1,0 +1,194 @@
+{
+ "dauer": 80.334,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "fundhaus",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 6.566,
+   "emotion": "spannend",
+   "text": "In eighty seconds, you find the four thousand euros. And behind you, it goes quiet."
+  },
+  {
+   "nr": 2,
+   "typ": "objekt",
+   "kapitel": 1,
+   "start": 6.566,
+   "dauer": 4.886,
+   "emotion": "erklaerend",
+   "text": "Four thousand euros for the youth center. A new roof, a ping-pong table."
+  },
+  {
+   "nr": 3,
+   "typ": "fundhaus",
+   "kapitel": 2,
+   "start": 11.452,
+   "dauer": 4.55,
+   "emotion": "erzaehlend",
+   "text": "Six thirty. It's dark outside. Only one lamp is still on."
+  },
+  {
+   "nr": 4,
+   "typ": "fundhaus",
+   "kapitel": 2,
+   "start": 16.002,
+   "dauer": 4.718,
+   "emotion": "erzaehlend",
+   "text": "In the last shelf sits a black tin box with a half moon."
+  },
+  {
+   "nr": 5,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 20.72,
+   "dauer": 2.39,
+   "emotion": "froh",
+   "text": "“That dent there. That's it.”"
+  },
+  {
+   "nr": 6,
+   "typ": "fundhaus",
+   "kapitel": 2,
+   "start": 23.11,
+   "dauer": 3.35,
+   "emotion": "erzaehlend",
+   "text": "Rike comes out of the office. Her key ring jangles."
+  },
+  {
+   "nr": 7,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 26.46,
+   "dauer": 3.566,
+   "emotion": "ernst",
+   "text": "“Shelf twenty-four? Sami can get into that one too.”"
+  },
+  {
+   "nr": 8,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 30.026,
+   "dauer": 3.734,
+   "emotion": "spannend",
+   "text": "Sami goes pale. Him again. His name again."
+  },
+  {
+   "nr": 9,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 33.76,
+   "dauer": 2.87,
+   "emotion": "ernst",
+   "text": "You don't say a word. You just hold out your hand."
+  },
+  {
+   "nr": 10,
+   "typ": "objekt",
+   "kapitel": 3,
+   "start": 36.63,
+   "dauer": 5.702,
+   "emotion": "erklaerend",
+   "text": "Sami's key opens the front shelves. From twenty on, only Rike's fits."
+  },
+  {
+   "nr": 11,
+   "typ": "fundhaus",
+   "kapitel": 3,
+   "start": 42.332,
+   "dauer": 3.182,
+   "emotion": "erzaehlend",
+   "text": "Sami tries anyway. The key won't turn a millimeter."
+  },
+  {
+   "nr": 12,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 45.514,
+   "dauer": 1.814,
+   "emotion": "wuetend",
+   "text": "“Then he got it open somehow.”"
+  },
+  {
+   "nr": 13,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 47.328,
+   "dauer": 3.326,
+   "emotion": "erzaehlend",
+   "text": "“Then let's open it. Right now. With Mrs. Lindner.”"
+  },
+  {
+   "nr": 14,
+   "typ": "fundhaus",
+   "kapitel": 3,
+   "start": 50.654,
+   "dauer": 3.446,
+   "emotion": "erzaehlend",
+   "text": "Mrs. Lindner nods. Rike can't refuse the owner."
+  },
+  {
+   "nr": 15,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 54.1,
+   "dauer": 3.782,
+   "emotion": "spannend",
+   "text": "Her hand shakes as she unlocks it. The hinge squeaks."
+  },
+  {
+   "nr": 16,
+   "typ": "fundhaus",
+   "kapitel": 4,
+   "start": 57.882,
+   "dauer": 3.182,
+   "emotion": "erzaehlend",
+   "text": "A cold draft. It smells like old varnish."
+  },
+  {
+   "nr": 17,
+   "typ": "objekt",
+   "kapitel": 4,
+   "start": 61.064,
+   "dauer": 4.574,
+   "emotion": "erklaerend",
+   "text": "Mrs. Lindner lifts out the box and opens the lid. Paper rustles."
+  },
+  {
+   "nr": 18,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 65.638,
+   "dauer": 2.39,
+   "emotion": "froh",
+   "text": "“His letters. All still here.”"
+  },
+  {
+   "nr": 19,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 68.028,
+   "dauer": 4.334,
+   "emotion": "erzaehlend",
+   "text": "Behind it, at the very back, something lies under brown paper."
+  },
+  {
+   "nr": 20,
+   "typ": "objekt",
+   "kapitel": 5,
+   "start": 72.362,
+   "dauer": 4.454,
+   "emotion": "erklaerend",
+   "text": "You pull the paper aside. A green corner. The donation box."
+  },
+  {
+   "nr": 21,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 76.816,
+   "dauer": 3.518,
+   "emotion": "spannend",
+   "text": "And behind you, Rike's key ring stops jangling."
+  }
+ ]
+}

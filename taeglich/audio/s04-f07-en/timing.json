@@ -1,0 +1,212 @@
+{
+ "dauer": 73.714,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "haltestelle",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 4.358,
+   "emotion": "erzaehlend",
+   "text": "In eighty seconds, you let your best friend walk off into the rain."
+  },
+  {
+   "nr": 2,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 4.358,
+   "dauer": 2.966,
+   "emotion": "traurig",
+   "text": "And it's right. Even if it feels like betrayal."
+  },
+  {
+   "nr": 3,
+   "typ": "fundhaus",
+   "kapitel": 2,
+   "start": 7.324,
+   "dauer": 3.686,
+   "emotion": "erzaehlend",
+   "text": "Five thirty. Outside, rain drums on the awning."
+  },
+  {
+   "nr": 4,
+   "typ": "fundhaus",
+   "kapitel": 2,
+   "start": 11.01,
+   "dauer": 3.518,
+   "emotion": "erzaehlend",
+   "text": "For the third time, Rike asks Sami where he was."
+  },
+  {
+   "nr": 5,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 14.528,
+   "dauer": 1.91,
+   "emotion": "ernst",
+   "text": "“I'll keep asking until it's true.”"
+  },
+  {
+   "nr": 6,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 16.438,
+   "dauer": 1.91,
+   "emotion": "wuetend",
+   "text": "Sami is all out of jokes."
+  },
+  {
+   "nr": 7,
+   "typ": "objekt",
+   "kapitel": 3,
+   "start": 18.348,
+   "dauer": 2.15,
+   "emotion": "erklaerend",
+   "text": "He grabs both receipts off the counter."
+  },
+  {
+   "nr": 8,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 20.498,
+   "dauer": 2.726,
+   "emotion": "traurig",
+   "text": "“No paper, nothing left to interrogate.”"
+  },
+  {
+   "nr": 9,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 23.224,
+   "dauer": 2.75,
+   "emotion": "spannend",
+   "text": "He'll tear them up. Even the one that could save him."
+  },
+  {
+   "nr": 10,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 25.974,
+   "dauer": 3.95,
+   "emotion": "ernst",
+   "text": "“Sami. Without the paper, everyone believes Rike.”"
+  },
+  {
+   "nr": 11,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 29.924,
+   "dauer": 2.798,
+   "emotion": "traurig",
+   "text": "“Nobody believes me anyway. Not even you.”"
+  },
+  {
+   "nr": 12,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 32.722,
+   "dauer": 4.31,
+   "emotion": "traurig",
+   "text": "Not true. But today, you looked at him like a suspect."
+  },
+  {
+   "nr": 13,
+   "typ": "objekt",
+   "kapitel": 3,
+   "start": 37.032,
+   "dauer": 3.662,
+   "emotion": "erklaerend",
+   "text": "You slide Jonas's watch across the counter. It's still ticking."
+  },
+  {
+   "nr": 14,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 40.694,
+   "dauer": 2.75,
+   "emotion": "traurig",
+   "text": "“This is yours. The papers stay here.”"
+  },
+  {
+   "nr": 15,
+   "typ": "fundhaus",
+   "kapitel": 4,
+   "start": 43.444,
+   "dauer": 3.758,
+   "emotion": "erzaehlend",
+   "text": "For a long time, nothing. Just rain and ticking."
+  },
+  {
+   "nr": 16,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 47.202,
+   "dauer": 3.302,
+   "emotion": "traurig",
+   "text": "Then he puts the receipts down. And takes only the watch."
+  },
+  {
+   "nr": 17,
+   "typ": "haltestelle",
+   "kapitel": 4,
+   "start": 50.504,
+   "dauer": 4.022,
+   "emotion": "erzaehlend",
+   "text": "He leaves without an umbrella. His green jacket darkens in the rain."
+  },
+  {
+   "nr": 18,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 54.526,
+   "dauer": 2.846,
+   "emotion": "traurig",
+   "text": "Your sleeves are wet. You didn't even say goodbye."
+  },
+  {
+   "nr": 19,
+   "typ": "park",
+   "kapitel": 4,
+   "start": 57.372,
+   "dauer": 2.942,
+   "emotion": "erzaehlend",
+   "text": "Twelve years, and he's never walked away like this."
+  },
+  {
+   "nr": 20,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 60.314,
+   "dauer": 3.038,
+   "emotion": "traurig",
+   "text": "On your first school day, he gave you half his apple."
+  },
+  {
+   "nr": 21,
+   "typ": "fundhaus",
+   "kapitel": 4,
+   "start": 63.352,
+   "dauer": 3.566,
+   "emotion": "erzaehlend",
+   "text": "Inside, it smells like soap. Next to you is an empty chair."
+  },
+  {
+   "nr": 22,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 66.918,
+   "dauer": 2.654,
+   "emotion": "erzaehlend",
+   "text": "You could run after him. Drop everything."
+  },
+  {
+   "nr": 23,
+   "typ": "objekt",
+   "kapitel": 5,
+   "start": 69.572,
+   "dauer": 4.142,
+   "emotion": "erklaerend",
+   "text": "Instead, you file his receipt as evidence. And let him go."
+  }
+ ]
+}
