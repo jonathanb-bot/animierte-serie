@@ -25,6 +25,17 @@ Jonathans Auftrag vom 1.11.2026:
 
 Diese Datei ist verbindlich für die geplante Aufgabe „Kurzvideo-Staffel alle 2 Tage“. Außerdem gelten alle offenen GitHub-Issues mit Label `dringlich`. **Jeder Lauf startet in einem neuen Chat** (Jonathans Vorgabe 1.11., wegen der Credits); die Abläufe stehen in `taeglich/laeufe/` (siehe README dort).
 
+## Du bist die Hauptfigur (Jonathans feste Vorgabe 8.11., Issue #31)
+
+Jonathan: „Die Hauptperson ist immer man selber, damit man sich direkt betroffen fühlt und direkt in der Geschichte drin ist.“ Gilt für alle künftigen Folgen, Serien und Sprachen.
+
+- **Die Zuschauerin/der Zuschauer ist immer die Hauptfigur:** konsequente Du-Erzählung, „du“ erlebt, entscheidet und fühlt. Keine Geschichte über eine fremde Hauptfigur in der dritten Person („Ein Mann namens …“, „Lena geht …“).
+- **Alle anderen Figuren gehören zu dir:** dein Opa, deine Mutter, deine Schwester, dein bester Freund, deine Lehrerin. Also „In der Nacht hört *dein* Opa …“ statt „In der Nacht hört Opa …“ oder „ein alter Mann“, besonders im Hook und beim ersten Auftritt einer Figur.
+- **Hook immer mit „du“/„dein“:** Der erste Satz macht klar, dass es *dich* betrifft (Beispiel: „Dein Opa sitzt seit zwei Tagen allein im Dunkeln.“ statt „Ein alter Mann sitzt allein im Dunkeln.“). Der Hook-Text im Bild ebenso, wo es passt („DEIN OPA IST ALLEIN“).
+- **Englisch genauso:** „you“, „your grandpa“, „your mom“.
+- **Prüfen vor der Stimme (Streichprobe):** jede Einstellung lesen – kommt eine wichtige Figur ohne „dein/deine“ vor oder erzählt eine Zeile über eine fremde Hauptfigur, umschreiben.
+- Schon fertige Videos bleiben, wie sie sind.
+
 ## Tempo (Jonathans Vorgabe 1.11. abends: bessere Analyse, mehr Videos pro Tag, damit es schneller geht)
 
 - **Posten:** TikTok **4× am Tag (08, 12, 16, 20 Uhr)**, **Instagram 5× am Tag (08, 11, 14, 17, 20 Uhr), YouTube jeweils :30 danach** (Jonathans Vorgabe 6.11., ersetzt „alle 2 Stunden“ aus Issue #14). Neue Posts weiterhin hinten anhängen. **Jeder Termin zufällig 0–30 min früher oder später** (Jonathans Vorgabe 5.11., Issue #26), das macht `staffel_veroeffentlichen.py` automatisch.
