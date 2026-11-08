@@ -1644,6 +1644,108 @@
    "bild_s": 153.8,
    "ton_s": 153.79,
    "lufs": -14.5
+  },
+  "taeglich/s04-f01.mp4": {
+   "ok": true,
+   "bild_s": 85.43,
+   "ton_s": 85.42,
+   "lufs": -14.6
+  },
+  "taeglich/s04-f02.mp4": {
+   "ok": true,
+   "bild_s": 86.8,
+   "ton_s": 86.78,
+   "lufs": -14.6
+  },
+  "taeglich/s04-f03.mp4": {
+   "ok": true,
+   "bild_s": 80.98,
+   "ton_s": 81.0,
+   "lufs": -14.6
+  },
+  "taeglich/s04-f04.mp4": {
+   "ok": true,
+   "bild_s": 85.17,
+   "ton_s": 85.18,
+   "lufs": -14.6
+  },
+  "taeglich/s04-f05.mp4": {
+   "ok": true,
+   "bild_s": 85.87,
+   "ton_s": 85.87,
+   "lufs": -14.5
+  },
+  "taeglich/s04-f06.mp4": {
+   "ok": true,
+   "bild_s": 83.03,
+   "ton_s": 83.05,
+   "lufs": -14.6
+  },
+  "taeglich/s04-f07.mp4": {
+   "ok": true,
+   "bild_s": 78.88,
+   "ton_s": 78.91,
+   "lufs": -14.6
+  },
+  "taeglich/s04-f08.mp4": {
+   "ok": true,
+   "bild_s": 84.98,
+   "ton_s": 84.97,
+   "lufs": -14.6
+  },
+  "taeglich/s04-f09.mp4": {
+   "ok": true,
+   "bild_s": 80.67,
+   "ton_s": 80.66,
+   "lufs": -14.5
+  },
+  "taeglich/s04-f10.mp4": {
+   "ok": true,
+   "bild_s": 82.92,
+   "ton_s": 82.94,
+   "lufs": -14.5
+  },
+  "taeglich/s04-f11.mp4": {
+   "ok": true,
+   "bild_s": 85.9,
+   "ton_s": 85.93,
+   "lufs": -14.6
+  },
+  "taeglich/s04-f12.mp4": {
+   "ok": true,
+   "bild_s": 81.58,
+   "ton_s": 81.6,
+   "lufs": -14.6
+  },
+  "taeglich-tiktok/s04-teil-1.mp4": {
+   "ok": true,
+   "bild_s": 253.22,
+   "ton_s": 253.23,
+   "lufs": -14.6
+  },
+  "taeglich-tiktok/s04-teil-2.mp4": {
+   "ok": true,
+   "bild_s": 171.03,
+   "ton_s": 171.05,
+   "lufs": -14.6
+  },
+  "taeglich-tiktok/s04-teil-3.mp4": {
+   "ok": true,
+   "bild_s": 161.92,
+   "ton_s": 161.92,
+   "lufs": -14.6
+  },
+  "taeglich-tiktok/s04-teil-4.mp4": {
+   "ok": true,
+   "bild_s": 248.57,
+   "ton_s": 248.58,
+   "lufs": -14.5
+  },
+  "taeglich-tiktok/s04-teil-5.mp4": {
+   "ok": true,
+   "bild_s": 167.48,
+   "ton_s": 167.49,
+   "lufs": -14.6
   }
  },
  "serien": {
@@ -1904,6 +2006,34 @@
     ],
     [
      4
+    ]
+   ]
+  },
+  "s04": {
+   "titel": "Die zwölfte Quittung",
+   "folgen": 12,
+   "tiktok_teile": [
+    [
+     1,
+     2,
+     3
+    ],
+    [
+     4,
+     5
+    ],
+    [
+     6,
+     7
+    ],
+    [
+     8,
+     9,
+     10
+    ],
+    [
+     11,
+     12
     ]
    ]
   }
