@@ -1,5 +1,6 @@
 # Hinweise für Claude
 
+- **QUALITÄT VOR QUANTITÄT (Jonathans feste Vorgabe 8.11., Issue #30):** Jedes Video muss maximal gut aussehen und klingen. Lieber weniger Videos, dafür jedes sauber. Mengenziele (jede Nacht eine Staffel, Posts pro Tag) treten immer hinter die Qualität zurück. Vor jedem Veröffentlichen das Qualitäts-Tor in `taeglich/FORMAT.md` (Branch `taeglich`) abhaken: Stimme geprüft, alle Bilder angesehen, starkes erstes Bild, Einblendungen, volle Qualität. Nie mit weniger Qualität rendern, um Zeit zu sparen.
 - Projekt: animierte Serie „24. Stock“ (Zombie-Apokalypse im Hochhaus) für Jonathan. Format und Felder stehen in README.md, die Handlung in serienplan.md.
 - Stil: **clean** Flat-Vektor, keine Konturen, weiche Schattierung. Jonathan legt großen Wert darauf, dass es sauber aussieht.
 - Folgen sind `episoden/folge-XX.txt` (Drehbuch-Format). Ziel ca. 5 Minuten, 10 Kapitel, ~50–65 Einstellungen. Du-Erzählung, Cliffhanger am Ende. Kein „Überlebens-Check“ und keine Fragen ans Publikum mehr (Issue #8).
