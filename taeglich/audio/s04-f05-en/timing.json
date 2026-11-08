@@ -1,0 +1,203 @@
+{
+ "dauer": 84.908,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "fundhaus",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 5.366,
+   "emotion": "ernst",
+   "text": "In one minute, you'll suspect your own dad. And he doesn't laugh."
+  },
+  {
+   "nr": 2,
+   "typ": "objekt",
+   "kapitel": 1,
+   "start": 5.366,
+   "dauer": 5.606,
+   "emotion": "erklaerend",
+   "text": "Under the rewritten line, a number shows through. W seven."
+  },
+  {
+   "nr": 3,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 10.972,
+   "dauer": 2.726,
+   "emotion": "spannend",
+   "text": "W seven is your dad's tool shelf."
+  },
+  {
+   "nr": 4,
+   "typ": "fundhaus",
+   "kapitel": 2,
+   "start": 13.698,
+   "dauer": 3.398,
+   "emotion": "erzaehlend",
+   "text": "Four thirty. The wall clock is running again."
+  },
+  {
+   "nr": 5,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 17.096,
+   "dauer": 3.494,
+   "emotion": "ernst",
+   "text": "Sami gives you a long look. That's worse than any joke."
+  },
+  {
+   "nr": 6,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 20.59,
+   "dauer": 3.062,
+   "emotion": "traurig",
+   "text": "“With your dad, you don't look so closely.”"
+  },
+  {
+   "nr": 7,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 23.652,
+   "dauer": 3.614,
+   "emotion": "traurig",
+   "text": "That hits. Because part of you wants exactly that."
+  },
+  {
+   "nr": 8,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 27.266,
+   "dauer": 4.118,
+   "emotion": "ernst",
+   "text": "But same rules for everyone. Otherwise none of this is fair."
+  },
+  {
+   "nr": 9,
+   "typ": "fundhaus",
+   "kapitel": 3,
+   "start": 31.384,
+   "dauer": 5.078,
+   "emotion": "erzaehlend",
+   "text": "Your dad sits at his workbench in the yard. Wind rattles the tin roof."
+  },
+  {
+   "nr": 10,
+   "typ": "fundhaus",
+   "kapitel": 3,
+   "start": 36.462,
+   "dauer": 4.214,
+   "emotion": "erzaehlend",
+   "text": "You put both papers in front of him. Openly, with Sami watching."
+  },
+  {
+   "nr": 11,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 40.676,
+   "dauer": 2.462,
+   "emotion": "erzaehlend",
+   "text": "“Dad. This is your shelf.”"
+  },
+  {
+   "nr": 12,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 43.138,
+   "dauer": 4.046,
+   "emotion": "erzaehlend",
+   "text": "He reads slowly, holding the paper like something fragile."
+  },
+  {
+   "nr": 13,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 47.184,
+   "dauer": 2.774,
+   "emotion": "froh",
+   "text": "“Good that you asked. Just like that.”"
+  },
+  {
+   "nr": 14,
+   "typ": "objekt",
+   "kapitel": 3,
+   "start": 49.958,
+   "dauer": 3.878,
+   "emotion": "erklaerend",
+   "text": "In a tray lies a broken stamp. The spring snapped."
+  },
+  {
+   "nr": 15,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 53.836,
+   "dauer": 2.27,
+   "emotion": "erzaehlend",
+   "text": "“I took that out of shelf seven today.”"
+  },
+  {
+   "nr": 16,
+   "typ": "objekt",
+   "kapitel": 3,
+   "start": 56.106,
+   "dauer": 5.558,
+   "emotion": "erklaerend",
+   "text": "Plus your dad's own slip. Shelf W seven. Stamped, for repair."
+  },
+  {
+   "nr": 17,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 61.664,
+   "dauer": 3.662,
+   "emotion": "froh",
+   "text": "Sami breathes out. Then grins, crooked."
+  },
+  {
+   "nr": 18,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 65.326,
+   "dauer": 3.374,
+   "emotion": "froh",
+   "text": "“Okay. You look just as closely at everyone.”"
+  },
+  {
+   "nr": 19,
+   "typ": "esstisch",
+   "kapitel": 4,
+   "start": 68.7,
+   "dauer": 3.662,
+   "emotion": "erzaehlend",
+   "text": "At dinner, you two usually just stare at your plates."
+  },
+  {
+   "nr": 20,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 72.362,
+   "dauer": 3.326,
+   "emotion": "froh",
+   "text": "Today he said more than all week. It feels good."
+  },
+  {
+   "nr": 21,
+   "typ": "objekt",
+   "kapitel": 5,
+   "start": 75.688,
+   "dauer": 3.638,
+   "emotion": "erklaerend",
+   "text": "You lay your dad's slip next to the cash box receipt."
+  },
+  {
+   "nr": 22,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 79.326,
+   "dauer": 5.582,
+   "emotion": "spannend",
+   "text": "The number belongs to a stamp. Not the cash box. A false trail."
+  }
+ ]
+}

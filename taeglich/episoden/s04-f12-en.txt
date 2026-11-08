@@ -1,0 +1,70 @@
+# The Twelfth Receipt – Episode 12: What Really Comes Back
+@musik musik/s04-f12-en.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung warm
+@vortrag lebendig
+@mund zitate
+@einblenden aus
+@qualitaet max
+@klang studio
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette rosa
+@zeit abend
+@sprache en
+
+== Hook ==
+// Ausgaberaum im warmen Licht, du und Papa
+[fundhaus du:froh papa zeit=abend uhr="19:25" palette=rosa zoom-rein hooktext="YOUR FIRST FIND"] Twelve years ago, you turned in a red stuffed bird here.
+// Stoffvogel groß
+[objekt objekte="stoffvogel" gross="FOUND" palette=rosa zoom-rein] You were five. And you don't remember any of it.
+
+== Wiedererkennen ==
+// Alte Quittung
+[objekt objekte="quittung:No. 12" gross="12 YEARS AGO" palette=rosa zoom-rein] Your dad hands you the old receipt. The paper is soft as cloth.
+// Nahaufnahme: Papa
+[gesicht papa ort=fundhaus zeit=abend froh palette=rosa] “You found it in the park. In the rain.”
+// Park im Sommer, weit
+[park du jahreszeit=sommer zeit=abend palette=rosa zoom-raus ein="red>RED VELVET BIRD>herz"] A red velvet bird. One wing smaller than the other, sewn on crooked.
+// Nahaufnahme: Papa
+[gesicht papa ort=fundhaus zeit=abend froh palette=rosa zoom-rein] “You didn't want to let go. You cried.”
+// Nahaufnahme: du lachst
+[gesicht du ort=fundhaus zeit=abend froh palette=rosa] That sounds a lot like you.
+// Fach 12 leuchtet
+[fundhaus du zeit=abend uhr="19:26" fach=12 palette=rosa zoom-rein ein="twelve>SHELF 12>auge"] But you turned it in. On shelf twelve. Of all places.
+
+== Steigerung ==
+// Nahaufnahme: Papa
+[gesicht papa ort=fundhaus zeit=abend neutral palette=rosa] “The next day, a little boy came in. With glasses.”
+// Zwei Unterschriften
+[objekt objekte="quittung:Finder|quittung:Pickup" gross="TWO SIGNATURES" palette=rosa zoom-rein ein="Sami>PICKED UP: SAMI"] Two kids' signatures. Yours, as finder. Underneath, huge and crooked: Sami.
+// Nahaufnahme: du
+[gesicht du ort=fundhaus zeit=abend schreck palette=rosa zoom-rein] This is where you met him. At this exact counter.
+// Nahaufnahme: Papa
+[gesicht papa ort=fundhaus zeit=abend froh palette=rosa] “You two played together the whole afternoon.”
+// Wohnzimmer, Erinnerungen
+[wohnzimmer du s04_sami licht=an zeit=abend palette=orange zoom-raus ein="birthday>#12 YEARS OF FRIENDSHIP>herz"] Ever since: every birthday, every school trip, every bad day.
+// Nahaufnahme: du
+[gesicht du ort=fundhaus zeit=abend froh palette=rosa zoom-rein] And today, you almost lost him. Over paper.
+
+== Wendung ==
+// Zwei Quittungen
+[objekt objekte="quittung:Back then|quittung:Today" palette=rosa zoom-rein ein="fake>FAKE|first>HIS FIRST REAL ONE"] Today, his name was on a fake receipt. Back then, his first real one.
+// Ihr drei an der Theke
+[fundhaus du s04_sami papa zeit=abend uhr="19:30" palette=rosa zoom-rein ein="glass>UNDER THE GLASS"] You lay both under the counter glass. There they stay.
+// Nahaufnahme: Papa
+[gesicht papa ort=fundhaus zeit=abend froh palette=rosa] “Some things, you find twice.”
+// Ihr zwei
+[fundhaus du s04_sami zeit=abend uhr="19:31" palette=rosa zoom-rein ein="still>7:31 PM>uhr"] Sami stands next to you, completely still. The yard turns orange.
+// Nahaufnahme: Sami
+[gesicht s04_sami ort=fundhaus zeit=abend froh palette=rosa zoom-rein] “I never thanked you. For finding it.”
+// Nahaufnahme: du
+[gesicht du ort=fundhaus zeit=abend froh palette=rosa] “You did. Today. You came back.”
+
+== Cliffhanger ==
+// Nahaufnahme: Sami
+[gesicht s04_sami ort=fundhaus zeit=abend froh palette=rosa zoom-rein] Then he reaches into his jacket pocket.
+// Stoffvogel groß
+[objekt objekte="stoffvogel" gross="FOR 12 YEARS" palette=rosa zoom-rein] A red stuffed bird. One wing smaller. He's carried it for twelve years.

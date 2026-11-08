@@ -1,0 +1,70 @@
+# The Twelfth Receipt – Episode 11: In Front of Everyone
+@musik musik/s04-f11-en.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung freudig
+@vortrag lebendig
+@mund zitate
+@einblenden aus
+@qualitaet max
+@klang studio
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette orange
+@zeit abend
+@sprache en
+
+== Hook ==
+// Ausgaberaum im Abendlicht, du und Papa
+[fundhaus du:froh papa zeit=abend uhr="19:00" palette=orange zoom-rein hooktext="A RECEIPT FROM 12 YEARS AGO"] In eighty seconds, you get a twelve-year-old receipt. And it's yours.
+// Nahaufnahme: du
+[gesicht du ort=fundhaus zeit=abend froh palette=orange] But first, someone has to tell the truth in front of everyone.
+
+== Wiedererkennen ==
+// Ausgaberaum mit Kasse
+[fundhaus s04_rike du s04_sami zeit=abend uhr="19:00" kasse palette=orange schwenk-rechts ein="Seven>7:00 PM>uhr"] Seven o'clock. Four thousand euros, counted. Not a cent missing.
+// Kasse und Geld
+[objekt objekte="kasse:Counted|geld:€4,000" gross="ALL BACK" palette=orange zoom-rein] Mrs. Lindner has her box. The youth center, its money.
+// Nahaufnahme: Rike
+[gesicht s04_rike ort=fundhaus zeit=abend traurig palette=orange] “I'll apologize to Sami. In private.”
+// Nahaufnahme: du
+[gesicht du ort=fundhaus zeit=abend misstrauisch palette=orange zoom-rein] In private. Though she accused him in front of everyone.
+
+== Steigerung ==
+// Nahaufnahme: Sami
+[gesicht s04_sami ort=fundhaus zeit=abend neutral palette=orange] Sami looks at you. This time, he waits for you.
+// Nahaufnahme: du
+[gesicht du ort=fundhaus zeit=abend entschlossen palette=orange zoom-rein] “In front of everyone. Just like the accusation.”
+// Nahaufnahme: Sami
+[gesicht s04_sami ort=fundhaus zeit=abend entschlossen palette=orange] “Yeah. In front of everybody.”
+// Ausgaberaum: alle Helfer
+[fundhaus s04_rike du s04_sami papa zeit=abend uhr="19:10" palette=orange zoom-raus ein="Ten>7:10 PM>uhr|volunteer>ALL VOLUNTEERS"] Ten minutes later, chairs scrape. Every volunteer is here.
+// Rike vor den Fächern
+[fundhaus s04_rike zeit=abend uhr="19:11" palette=orange zoom-rein] Rike stands before the shelves, evening light on her face.
+// Nahaufnahme: Rike
+[gesicht s04_rike ort=fundhaus zeit=abend traurig palette=orange zoom-rein] “Sami didn't steal anything. It was me.”
+// Aushang
+[objekt objekte="quittung:Correction" gross="CORRECTION" palette=orange zoom-rein ein="notice>SAMI: INNOCENT>herz"] The notice with Sami's name comes off the board. A new sheet goes up.
+// Rike gibt Kasse und Schlüssel ab
+[fundhaus s04_rike papa zeit=abend uhr="19:13" kasse palette=orange zoom-rein ein="keys>KEYS RETURNED>schluessel"] Rike hands over the box and her keys. Nobody claps. It's still right.
+
+== Wendung ==
+// Nahaufnahme: Sami lacht
+[gesicht s04_sami ort=fundhaus zeit=abend froh palette=orange zoom-rein] Sami laughs for the first time in hours. A real laugh.
+// Ihr zwei an der Theke
+[fundhaus du s04_sami zeit=abend uhr="19:15" palette=orange zoom-rein ein="Saturday>LIKE EVERY SATURDAY>herz"] You're sitting side by side on the counter again. Like every Saturday.
+// Nahaufnahme: du
+[gesicht du ort=fundhaus zeit=abend froh palette=orange] “You still owe me two scoops.”
+// Nahaufnahme: Sami
+[gesicht s04_sami ort=fundhaus zeit=abend froh palette=orange zoom-rein] “I'll get you three.”
+// Stadt im Abendlicht
+[grossstadt zeit=abend du s04_sami palette=orange zoom-raus ein="long>CASE CLOSED>herz"] Outside, the rooftops glow orange. The long afternoon is over.
+
+== Cliffhanger ==
+// Papa kommt aus dem Archiv
+[fundhaus papa du zeit=abend uhr="19:20" palette=orange zoom-rein] Then your dad comes out of the archive, holding a yellowed sheet.
+// Alte Quittung
+[objekt objekte="quittung:No. 12" gross="12 YEARS AGO" palette=orange zoom-rein] An old receipt. The ink has faded. At the bottom: a child's signature.
+// Nahaufnahme: Papa
+[gesicht papa ort=fundhaus zeit=abend froh palette=orange zoom-rein] “I kept this. It belongs to you.”

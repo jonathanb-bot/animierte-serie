@@ -1,0 +1,194 @@
+{
+ "dauer": 78.366,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "fundhaus",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 5.126,
+   "emotion": "spannend",
+   "text": "Two seventeen. That time is on four receipts. With hours between them."
+  },
+  {
+   "nr": 2,
+   "typ": "objekt",
+   "kapitel": 1,
+   "start": 5.126,
+   "dauer": 5.126,
+   "emotion": "erklaerend",
+   "text": "An umbrella, a helmet, a cash box. All in the same minute."
+  },
+  {
+   "nr": 3,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 10.252,
+   "dauer": 3.326,
+   "emotion": "erzaehlend",
+   "text": "And one is supposed to prove your best friend is a thief."
+  },
+  {
+   "nr": 4,
+   "typ": "fundhaus",
+   "kapitel": 2,
+   "start": 13.578,
+   "dauer": 3.926,
+   "emotion": "erzaehlend",
+   "text": "Four oh five. At the counter, the old fridge hums."
+  },
+  {
+   "nr": 5,
+   "typ": "objekt",
+   "kapitel": 2,
+   "start": 17.504,
+   "dauer": 4.814,
+   "emotion": "erklaerend",
+   "text": "The second hand twitches. And jumps back. Always at the same spot."
+  },
+  {
+   "nr": 6,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 22.318,
+   "dauer": 2.414,
+   "emotion": "froh",
+   "text": "“That clock takes more breaks than I do.”"
+  },
+  {
+   "nr": 7,
+   "typ": "fundhaus",
+   "kapitel": 2,
+   "start": 24.732,
+   "dauer": 2.894,
+   "emotion": "erzaehlend",
+   "text": "Underneath it lies an empty battery pack."
+  },
+  {
+   "nr": 8,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 27.626,
+   "dauer": 3.11,
+   "emotion": "erzaehlend",
+   "text": "The battery's dead. The clock stopped this morning."
+  },
+  {
+   "nr": 9,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 30.736,
+   "dauer": 3.686,
+   "emotion": "ernst",
+   "text": "And Rike copied that time down anyway. Every time."
+  },
+  {
+   "nr": 10,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 34.422,
+   "dauer": 2.294,
+   "emotion": "wuetend",
+   "text": "“I have better things to do than batteries.”"
+  },
+  {
+   "nr": 11,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 36.716,
+   "dauer": 3.086,
+   "emotion": "ernst",
+   "text": "So the time on Sami's receipt is worthless."
+  },
+  {
+   "nr": 12,
+   "typ": "handy",
+   "kapitel": 3,
+   "start": 39.802,
+   "dauer": 4.382,
+   "emotion": "erzaehlend",
+   "text": "Two photos on your phone. At eleven forty-two, the box is still there."
+  },
+  {
+   "nr": 13,
+   "typ": "fundhaus",
+   "kapitel": 3,
+   "start": 44.184,
+   "dauer": 2.894,
+   "emotion": "erzaehlend",
+   "text": "The green box in the background. No Sami."
+  },
+  {
+   "nr": 14,
+   "typ": "grossstadt",
+   "kapitel": 3,
+   "start": 47.078,
+   "dauer": 4.694,
+   "emotion": "erzaehlend",
+   "text": "Back then, Sami was at the bakery with you. Bitter tea, no cocoa."
+  },
+  {
+   "nr": 15,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 51.772,
+   "dauer": 3.566,
+   "emotion": "froh",
+   "text": "The second photo, two fifty-eight: the shelf is empty."
+  },
+  {
+   "nr": 16,
+   "typ": "objekt",
+   "kapitel": 3,
+   "start": 55.338,
+   "dauer": 6.086,
+   "emotion": "erklaerend",
+   "text": "In between, the box vanished. And most of that time, Sami had a witness: you."
+  },
+  {
+   "nr": 17,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 61.424,
+   "dauer": 3.23,
+   "emotion": "ernst",
+   "text": "That doesn't fully clear him. But the receipt lies."
+  },
+  {
+   "nr": 18,
+   "typ": "fundhaus",
+   "kapitel": 4,
+   "start": 64.654,
+   "dauer": 2.462,
+   "emotion": "erzaehlend",
+   "text": "Warm light drifts across the receipts."
+  },
+  {
+   "nr": 19,
+   "typ": "objekt",
+   "kapitel": 4,
+   "start": 67.116,
+   "dauer": 3.11,
+   "emotion": "erklaerend",
+   "text": "On two of them, everything's written in one go."
+  },
+  {
+   "nr": 20,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 70.226,
+   "dauer": 3.542,
+   "emotion": "spannend",
+   "text": "On the cash box receipt, one line is thicker than the rest."
+  },
+  {
+   "nr": 21,
+   "typ": "objekt",
+   "kapitel": 5,
+   "start": 73.768,
+   "dauer": 4.598,
+   "emotion": "erklaerend",
+   "text": "The clock is explained. But on this slip, the item was written over."
+  }
+ ]
+}

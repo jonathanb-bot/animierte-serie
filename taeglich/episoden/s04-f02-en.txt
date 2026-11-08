@@ -1,0 +1,70 @@
+# The Twelfth Receipt – Episode 2: The Missing Copy
+@musik musik/s04-f02-en.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung duester
+@vortrag lebendig
+@mund zitate
+@einblenden aus
+@qualitaet max
+@klang studio
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette blau
+@zeit tag
+@sprache en
+
+== Hook ==
+// Archiv, Röhre flackert, du erschrocken vor dem Bündel
+[archiv du:schreck buendel flackern palette=blau zoom-rein hooktext="THE 12TH RECEIPT IS GONE"] Three o'clock. Eleven receipts hang on the string. The twelfth is missing.
+// Zwei Quittungen, dazwischen die Lücke
+[objekt objekte="quittung:No. 11|quittung:No. 13" gross="NO. 12 MISSING" palette=blau zoom-rein] And that twelfth one could save your best friend.
+// Nahaufnahme: du, besorgt
+[gesicht du ort=archiv besorgt palette=blau zoom-rein] Someone wrote Sami's name on that receipt. You just can't prove it.
+
+== Wiedererkennen ==
+// Archiv im Seitenlicht, Staub
+[archiv du licht=seite palette=blau schwenk-links ein="fluorescent>3:00 PM>uhr"] The fluorescent light flickers. The dust scratches your throat.
+// Bündel nah
+[archiv du buendel flackern palette=blau zoom-rein ein="Eleven>#11 SHEETS|gap>ONE GAP>auge"] Eleven sheets, numbered. And a gap as wide as your thumb.
+// Nahaufnahme: du denkst
+[gesicht du ort=archiv denkt palette=blau] Maybe the carbon copy tells the truth.
+// Ausgaberaum, Rike gibt Anweisungen
+[fundhaus s04_rike du zeit=tag uhr="14:17" uhr_steht palette=orange zoom-rein] Out front at the counter, Rike is giving orders.
+// Nahaufnahme: Rike
+[gesicht s04_rike ort=fundhaus zeit=tag entschlossen palette=orange] “The old paper goes out at four.”
+
+== Steigerung ==
+// Uhr groß: Countdown
+[objekt objekte="uhr:4 PM" gross="60 MINUTES LEFT" palette=orange zoom-rein] At four, the recycling truck takes it all. Even the archive.
+// Archiv: Bündel, so weit das Auge reicht
+[archiv du buendel palette=blau zoom-rein ein="hundred>#100 BUNDLES"] A hundred bundles, all tied. The string creaks.
+// Nahaufnahme: du entschlossen
+[gesicht du ort=archiv entschlossen palette=blau] You can't search them all. Not in an hour.
+// Archiv im Seitenlicht: roter Zettel auf dem Bündel
+[archiv du buendel licht=seite palette=blau zoom-rein ein="red>RED = STAYS"] So you stick a red note on this morning's bundle.
+// Ausgaberaum: Papa kommt mit Werkzeug
+[fundhaus papa du zeit=tag uhr="14:17" uhr_steht palette=orange schwenk-rechts ein="dad>YOUR DAD, JANITOR>schluessel"] Your dad is the janitor here. He says little. But he listens.
+// Nahaufnahme: Papa
+[gesicht papa ort=fundhaus zeit=tag neutral palette=orange] “Red means it stays?”
+// Nahaufnahme: du
+[gesicht du ort=fundhaus zeit=tag froh palette=orange] “Red means it stays. Please, Dad.”
+// Nahaufnahme: Papa nickt
+[gesicht papa ort=fundhaus zeit=tag froh palette=orange zoom-rein] He nods once. For him, that's a promise.
+
+== Wendung ==
+// Sami allein im Ausgaberaum, Kamera fährt zurück
+[fundhaus s04_sami zeit=tag uhr="14:17" uhr_steht palette=orange zoom-raus] Sami sits on the back steps. No jokes for an hour.
+// Nahaufnahme: Sami traurig
+[gesicht s04_sami ort=fundhaus zeit=tag traurig palette=orange] “Without that receipt, it was me. Simple as that.”
+// Nahaufnahme: du
+[gesicht du ort=fundhaus zeit=tag traurig palette=orange zoom-rein] You want to say it'll be okay. But you don't make empty promises.
+// Stadt: ein Laster fährt vor
+[grossstadt zeit=tag du palette=blau zoom-raus ein="Three>3:50 PM>uhr"] Three fifty. Outside, a truck pulls up, engine running.
+
+== Cliffhanger ==
+// Archiv: Sackkarre rollt durch die Gasse
+[archiv sackkarre buendel flackern palette=blau zoom-rein wackeln=0.2] In the archive, a hand truck squeaks down the aisle.
+// Du erschrocken, die Karre am Bündel
+[archiv du:schreck sackkarre buendel palette=blau zoom-rein] And it takes the bundle with your red note.

@@ -1,0 +1,68 @@
+# The Twelfth Receipt – Episode 4: Two Seventeen
+@musik musik/s04-f04-en.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung spannend
+@vortrag lebendig
+@mund zitate
+@einblenden aus
+@qualitaet max
+@klang studio
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette lila
+@zeit tag
+@sprache en
+
+== Hook ==
+// Ausgaberaum, die stehende Wanduhr, du erschrocken
+[fundhaus du:schreck zeit=tag uhr="14:17" uhr_steht palette=lila zoom-rein hooktext="2:17 PM, FOUR TIMES"] Two seventeen. That time is on four receipts. With hours between them.
+// Drei Quittungen mit derselben Zeit
+[objekt objekte="quittung:2:17 PM|quittung:2:17 PM|quittung:2:17 PM" gross="THE SAME MINUTE" palette=lila] An umbrella, a helmet, a cash box. All in the same minute.
+// Nahaufnahme: du denkst
+[gesicht du ort=fundhaus zeit=tag denkt palette=lila] And one is supposed to prove your best friend is a thief.
+
+== Wiedererkennen ==
+// Ausgaberaum, Schwenk
+[fundhaus du s04_sami zeit=tag uhr="14:17" uhr_steht palette=lila schwenk-rechts ein="Four>4:05 PM>uhr"] Four oh five. At the counter, the old fridge hums.
+// Wanduhr groß
+[objekt objekte="uhr:2:17 PM" gross="THE HAND TWITCHES" palette=lila zoom-rein] The second hand twitches. And jumps back. Always at the same spot.
+// Nahaufnahme: Sami grinst
+[gesicht s04_sami ort=fundhaus zeit=tag froh palette=lila] “That clock takes more breaks than I do.”
+// Ausgaberaum: unter der Uhr
+[fundhaus du zeit=tag uhr="14:17" uhr_steht palette=lila zoom-rein ein="empty>EMPTY BATTERY>batterie"] Underneath it lies an empty battery pack.
+
+== Steigerung ==
+// Nahaufnahme: du
+[gesicht du ort=fundhaus zeit=tag neugierig palette=lila] The battery's dead. The clock stopped this morning.
+// Nahaufnahme: Rike
+[gesicht s04_rike ort=fundhaus zeit=tag misstrauisch palette=lila zoom-rein] And Rike copied that time down anyway. Every time.
+// Nahaufnahme: Rike wütend
+[gesicht s04_rike ort=fundhaus zeit=tag wuetend palette=lila] “I have better things to do than batteries.”
+// Nahaufnahme: du entschlossen
+[gesicht du ort=fundhaus zeit=tag entschlossen palette=lila zoom-rein] So the time on Sami's receipt is worthless.
+// Handy: Fotos von heute
+[handy ort=fundhaus zeit=tag netz=4 akku=61 uhrzeit="4:07" von="Photos" nachricht="Today: 11:42 AM · 2:58 PM" palette=lila] Two photos on your phone. At eleven forty-two, the box is still there.
+// Ausgaberaum mit Kasse im Hintergrund
+[fundhaus du zeit=tag uhr="14:17" uhr_steht kasse palette=orange zoom-rein ein="green>11:42 AM>uhr"] The green box in the background. No Sami.
+// Stadt: ihr zwei unterwegs
+[grossstadt zeit=tag du s04_sami palette=orange zoom-raus ein="bakery>AT THE BAKERY"] Back then, Sami was at the bakery with you. Bitter tea, no cocoa.
+// Nahaufnahme: du freust dich
+[gesicht du ort=fundhaus zeit=tag froh palette=lila] The second photo, two fifty-eight: the shelf is empty.
+// Zwei Uhren
+[objekt objekte="uhr:11:42 AM|uhr:2:58 PM" gross="11:42 TO 2:58" palette=lila ein="witness>WITNESS: YOU>auge"] In between, the box vanished. And most of that time, Sami had a witness: you.
+
+== Wendung ==
+// Nahaufnahme: du besorgt
+[gesicht du ort=fundhaus zeit=tag besorgt palette=lila] That doesn't fully clear him. But the receipt lies.
+// Ausgaberaum am späten Nachmittag
+[fundhaus du zeit=abend uhr="14:17" uhr_steht palette=lila zoom-rein] Warm light drifts across the receipts.
+// Drei Quittungen
+[objekt objekte="quittung:Umbrella|quittung:Helmet|quittung:Cash box" palette=lila zoom-rein ein="two>#2 WRITTEN CLEAN"] On two of them, everything's written in one go.
+
+== Cliffhanger ==
+// Nahaufnahme: du erschrocken
+[gesicht du ort=fundhaus zeit=abend schreck palette=lila zoom-rein] On the cash box receipt, one line is thicker than the rest.
+// Kassen-Quittung groß
+[objekt objekte="quittung:Cash box" gross="WRITTEN OVER" palette=lila zoom-rein] The clock is explained. But on this slip, the item was written over.

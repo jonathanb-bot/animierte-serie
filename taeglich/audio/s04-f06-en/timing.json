@@ -1,0 +1,194 @@
+{
+ "dauer": 74.43,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "archiv",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 4.646,
+   "emotion": "erzaehlend",
+   "text": "Five o'clock. A blank page reveals what the receipt really said."
+  },
+  {
+   "nr": 2,
+   "typ": "objekt",
+   "kapitel": 1,
+   "start": 4.646,
+   "dauer": 3.422,
+   "emotion": "erklaerend",
+   "text": "Write hard, and it presses through to the next sheet."
+  },
+  {
+   "nr": 3,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 8.068,
+   "dauer": 4.574,
+   "emotion": "ernst",
+   "text": "And the rescued bundle holds the sheet that sat under the cash box receipt."
+  },
+  {
+   "nr": 4,
+   "typ": "archiv",
+   "kapitel": 2,
+   "start": 12.642,
+   "dauer": 5.582,
+   "emotion": "erzaehlend",
+   "text": "You and Sami kneel in the archive. Paper rustles. A church bell strikes five."
+  },
+  {
+   "nr": 5,
+   "typ": "archiv",
+   "kapitel": 2,
+   "start": 18.224,
+   "dauer": 4.454,
+   "emotion": "erzaehlend",
+   "text": "You count the sheets. One hundred twenty-one. One hundred twenty-two."
+  },
+  {
+   "nr": 6,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 22.678,
+   "dauer": 2.486,
+   "emotion": "froh",
+   "text": "“If we find it, ice cream's on me.”"
+  },
+  {
+   "nr": 7,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 25.164,
+   "dauer": 1.118,
+   "emotion": "froh",
+   "text": "“Two scoops.”"
+  },
+  {
+   "nr": 8,
+   "typ": "archiv",
+   "kapitel": 3,
+   "start": 26.282,
+   "dauer": 5.15,
+   "emotion": "erzaehlend",
+   "text": "There. A sheet with no ink. Just fine grooves, like a map."
+  },
+  {
+   "nr": 9,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 31.432,
+   "dauer": 3.422,
+   "emotion": "erzaehlend",
+   "text": "From the front, you can't see anything. The light is too straight."
+  },
+  {
+   "nr": 10,
+   "typ": "archiv",
+   "kapitel": 3,
+   "start": 34.854,
+   "dauer": 3.518,
+   "emotion": "erzaehlend",
+   "text": "So you go to the little window. A sunbeam slants in."
+  },
+  {
+   "nr": 11,
+   "typ": "archiv",
+   "kapitel": 3,
+   "start": 38.372,
+   "dauer": 4.502,
+   "emotion": "erzaehlend",
+   "text": "You hold the sheet flat in the light. Rough cardboard scratches your fingers."
+  },
+  {
+   "nr": 12,
+   "typ": "objekt",
+   "kapitel": 3,
+   "start": 42.874,
+   "dauer": 3.518,
+   "emotion": "erklaerend",
+   "text": "Suddenly the grooves cast shadows. Letters appear."
+  },
+  {
+   "nr": 13,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 46.392,
+   "dauer": 1.382,
+   "emotion": "spannend",
+   "text": "Sami holds his breath."
+  },
+  {
+   "nr": 14,
+   "typ": "objekt",
+   "kapitel": 3,
+   "start": 47.774,
+   "dauer": 5.414,
+   "emotion": "erklaerend",
+   "text": "Shelf twenty-four. Released to: Lindner. The time is left blank."
+  },
+  {
+   "nr": 15,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 53.188,
+   "dauer": 2.894,
+   "emotion": "erzaehlend",
+   "text": "And the line for the item doesn't say donation box."
+  },
+  {
+   "nr": 16,
+   "typ": "objekt",
+   "kapitel": 4,
+   "start": 56.082,
+   "dauer": 1.958,
+   "emotion": "erklaerend",
+   "text": "It says: black tin box."
+  },
+  {
+   "nr": 17,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 58.04,
+   "dauer": 4.55,
+   "emotion": "erzaehlend",
+   "text": "Someone wrote a slip for a tin box. Then turned it into the cash box receipt."
+  },
+  {
+   "nr": 18,
+   "typ": "fundhaus",
+   "kapitel": 4,
+   "start": 62.59,
+   "dauer": 4.238,
+   "emotion": "erzaehlend",
+   "text": "You run back to the front counter. The low sun turns the shelves gold."
+  },
+  {
+   "nr": 19,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 66.828,
+   "dauer": 1.934,
+   "emotion": "ernst",
+   "text": "“So somebody planned this ahead of time.”"
+  },
+  {
+   "nr": 20,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 68.762,
+   "dauer": 1.814,
+   "emotion": "spannend",
+   "text": "And that's no coincidence anymore."
+  },
+  {
+   "nr": 21,
+   "typ": "objekt",
+   "kapitel": 5,
+   "start": 70.576,
+   "dauer": 3.854,
+   "emotion": "erklaerend",
+   "text": "The fake receipt was made from a pickup slip for a black tin box."
+  }
+ ]
+}

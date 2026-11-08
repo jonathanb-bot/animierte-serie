@@ -1,0 +1,70 @@
+# The Twelfth Receipt – Episode 1: One Shelf Short
+@musik musik/s04-f01-en.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung spannend
+@vortrag lebendig
+@mund zitate
+@einblenden aus
+@qualitaet max
+@klang studio
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette orange
+@zeit tag
+@sprache en
+
+== Hook ==
+// Ausgaberaum, Fach zwölf leer und beleuchtet, du erschrocken, Sami daneben
+[fundhaus du:schreck s04_sami zeit=tag uhr="14:17" uhr_steht leer=12 palette=orange zoom-rein hooktext="IN 80 SECONDS YOU'LL KNOW"] In eighty seconds, you'll know: someone's framing your best friend.
+// Die Spendenkasse groß, darüber die Summe
+[objekt objekte="kasse:Donations" gross="€4,000 GONE" palette=orange zoom-rein] But first, four thousand euros disappear.
+// Nahaufnahme: Sami, besorgt
+[gesicht s04_sami ort=fundhaus zeit=tag besorgt palette=orange zoom-rein] This is Sami, your best friend. He cracks jokes when he's scared.
+// Nahaufnahme: Sami grinst schief
+[gesicht s04_sami ort=fundhaus zeit=tag froh palette=orange] “Maybe the cash box just quit.”
+
+== Wiedererkennen ==
+// Stadt am Tag, ihr zwei klein auf dem Dach
+[grossstadt zeit=tag du s04_sami palette=orange schwenk-rechts ein="Two>2:30 PM>uhr|Saturday>EVERY SATURDAY"] Two thirty. Every Saturday, you two help at the city lost and found.
+// Ausgaberaum: Fächerwand mit Fundstücken
+[fundhaus du s04_sami zeit=tag uhr="14:17" uhr_steht palette=orange schwenk-links ein="Twenty>#24 SHELVES"] Twenty-four shelves. Umbrellas, teddy bears, one shoe. Damp cardboard smell.
+// Fach zwölf leuchtet leer
+[fundhaus du zeit=tag uhr="14:17" uhr_steht leer=12 palette=orange zoom-rein ein="twelve>SHELF 12: EMPTY>auge"] This morning, shelf twelve held the youth center's donation box.
+// Rike kommt dazu, Schlüsselbund am Gürtel
+[fundhaus s04_rike du s04_sami zeit=tag uhr="14:17" uhr_steht palette=orange zoom-rein ein="Rike>RIKE, THE BOSS>schluessel"] Rike runs the place. Her key ring rattles with every step.
+
+== Steigerung ==
+// Quittung groß: die Regel
+[objekt objekte="quittung:Pickup|quittung:Archive" gross="TWO RECEIPTS" palette=orange] Every pickup gets two receipts. One for the person, one for the archive.
+// Nahaufnahme: Rike liest vor
+[gesicht s04_rike ort=fundhaus zeit=tag misstrauisch palette=orange zoom-rein] “Picked up at two seventeen. By Sami.”
+// Quittung mit Samis Namen
+[objekt objekte="quittung:Sami" gross="PICKED UP: SAMI" palette=orange zoom-rein] There's his name. With his signature.
+// Nahaufnahme: Sami blass
+[gesicht s04_sami ort=fundhaus zeit=tag schreck palette=orange] Sami goes pale. His next joke dies in his throat.
+// Nahaufnahme: Rike entschlossen
+[gesicht s04_rike ort=fundhaus zeit=tag entschlossen palette=orange] “As of today, you don't volunteer here anymore.”
+// Du vor Rike, die Kamera wackelt leicht
+[fundhaus du:entschlossen s04_rike zeit=tag uhr="14:17" uhr_steht palette=orange wackeln=0.2] You want to scream: it wasn't him. But screaming proves nothing.
+
+== Wendung ==
+// Nahaufnahme: du denkst nach
+[gesicht du ort=fundhaus zeit=tag denkt palette=orange zoom-rein] Two receipts. So there's a second one somewhere.
+// Archiv: blaue Regalgasse, Fensterlicht
+[archiv du licht=seite palette=blau zoom-rein ein="archive>THE ARCHIVE"] In the archive, blue shelves reach the ceiling. A light tube hums.
+// Archiv: Bündel an roter Schnur
+[archiv du buendel palette=blau schwenk-rechts ein="red>SORTED BY TIME>uhr"] The copies hang on a red string, sorted by time.
+// Die Original-Quittung im Licht
+[objekt objekte="quittung:Original" palette=blau zoom-rein] You hold Rike's original up to the light. Cold, smooth paper.
+// Nahaufnahme: du entdeckst etwas
+[gesicht du ort=archiv neugierig palette=blau zoom-rein] Behind Sami's name, there's a tiny blue fingerprint.
+// Nahaufnahme: Sami verwirrt
+[gesicht s04_sami ort=archiv besorgt palette=blau] “Blue? I only had a pencil today.”
+
+== Cliffhanger ==
+// Archiv: ihr zwei im schrägen Licht
+[archiv du s04_sami licht=seite palette=blau zoom-rein ein="tilt>BLUE FINGERPRINT>auge"] You tilt the page into the light.
+// Quittung groß, Text darüber
+[objekt objekte="quittung:Sami" gross="ADDED LATER" palette=blau zoom-rein] The print is under the ink. Someone added Sami's name later.

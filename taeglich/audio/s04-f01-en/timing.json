@@ -1,0 +1,203 @@
+{
+ "dauer": 82.772,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "fundhaus",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 5.054,
+   "emotion": "spannend",
+   "text": "In eighty seconds, you'll know: someone's framing your best friend."
+  },
+  {
+   "nr": 2,
+   "typ": "objekt",
+   "kapitel": 1,
+   "start": 5.054,
+   "dauer": 3.662,
+   "emotion": "erklaerend",
+   "text": "But first, four thousand euros disappear."
+  },
+  {
+   "nr": 3,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 8.716,
+   "dauer": 4.19,
+   "emotion": "ernst",
+   "text": "This is Sami, your best friend. He cracks jokes when he's scared."
+  },
+  {
+   "nr": 4,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 12.906,
+   "dauer": 2.174,
+   "emotion": "froh",
+   "text": "“Maybe the cash box just quit.”"
+  },
+  {
+   "nr": 5,
+   "typ": "grossstadt",
+   "kapitel": 2,
+   "start": 15.08,
+   "dauer": 4.55,
+   "emotion": "erzaehlend",
+   "text": "Two thirty. Every Saturday, you two help at the city lost and found."
+  },
+  {
+   "nr": 6,
+   "typ": "fundhaus",
+   "kapitel": 2,
+   "start": 19.63,
+   "dauer": 6.206,
+   "emotion": "erzaehlend",
+   "text": "Twenty-four shelves. Umbrellas, teddy bears, one shoe. Damp cardboard smell."
+  },
+  {
+   "nr": 7,
+   "typ": "fundhaus",
+   "kapitel": 2,
+   "start": 25.836,
+   "dauer": 3.95,
+   "emotion": "erzaehlend",
+   "text": "This morning, shelf twelve held the youth center's donation box."
+  },
+  {
+   "nr": 8,
+   "typ": "fundhaus",
+   "kapitel": 2,
+   "start": 29.786,
+   "dauer": 4.094,
+   "emotion": "erzaehlend",
+   "text": "Rike runs the place. Her key ring rattles with every step."
+  },
+  {
+   "nr": 9,
+   "typ": "objekt",
+   "kapitel": 3,
+   "start": 33.88,
+   "dauer": 4.502,
+   "emotion": "erklaerend",
+   "text": "Every pickup gets two receipts. One for the person, one for the archive."
+  },
+  {
+   "nr": 10,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 38.382,
+   "dauer": 3.422,
+   "emotion": "ernst",
+   "text": "“Picked up at two seventeen. By Sami.”"
+  },
+  {
+   "nr": 11,
+   "typ": "objekt",
+   "kapitel": 3,
+   "start": 41.804,
+   "dauer": 2.726,
+   "emotion": "erklaerend",
+   "text": "There's his name. With his signature."
+  },
+  {
+   "nr": 12,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 44.53,
+   "dauer": 3.446,
+   "emotion": "spannend",
+   "text": "Sami goes pale. His next joke dies in his throat."
+  },
+  {
+   "nr": 13,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 47.976,
+   "dauer": 3.23,
+   "emotion": "ernst",
+   "text": "“As of today, you don't volunteer here anymore.”"
+  },
+  {
+   "nr": 14,
+   "typ": "fundhaus",
+   "kapitel": 3,
+   "start": 51.206,
+   "dauer": 4.166,
+   "emotion": "ernst",
+   "text": "You want to scream: it wasn't him. But screaming proves nothing."
+  },
+  {
+   "nr": 15,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 55.372,
+   "dauer": 2.99,
+   "emotion": "erzaehlend",
+   "text": "Two receipts. So there's a second one somewhere."
+  },
+  {
+   "nr": 16,
+   "typ": "archiv",
+   "kapitel": 4,
+   "start": 58.362,
+   "dauer": 4.526,
+   "emotion": "erzaehlend",
+   "text": "In the archive, blue shelves reach the ceiling. A light tube hums."
+  },
+  {
+   "nr": 17,
+   "typ": "archiv",
+   "kapitel": 4,
+   "start": 62.888,
+   "dauer": 3.182,
+   "emotion": "erzaehlend",
+   "text": "The copies hang on a red string, sorted by time."
+  },
+  {
+   "nr": 18,
+   "typ": "objekt",
+   "kapitel": 4,
+   "start": 66.07,
+   "dauer": 4.31,
+   "emotion": "erklaerend",
+   "text": "You hold Rike's original up to the light. Cold, smooth paper."
+  },
+  {
+   "nr": 19,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 70.38,
+   "dauer": 3.734,
+   "emotion": "erzaehlend",
+   "text": "Behind Sami's name, there's a tiny blue fingerprint."
+  },
+  {
+   "nr": 20,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 74.114,
+   "dauer": 2.438,
+   "emotion": "ernst",
+   "text": "“Blue? I only had a pencil today.”"
+  },
+  {
+   "nr": 21,
+   "typ": "archiv",
+   "kapitel": 5,
+   "start": 76.552,
+   "dauer": 1.838,
+   "emotion": "erzaehlend",
+   "text": "You tilt the page into the light."
+  },
+  {
+   "nr": 22,
+   "typ": "objekt",
+   "kapitel": 5,
+   "start": 78.39,
+   "dauer": 4.382,
+   "emotion": "erklaerend",
+   "text": "The print is under the ink. Someone added Sami's name later."
+  }
+ ]
+}

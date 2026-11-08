@@ -1,0 +1,70 @@
+# The Twelfth Receipt – Episode 5: Dad's Shelf
+@musik musik/s04-f05-en.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung warm
+@vortrag lebendig
+@mund zitate
+@einblenden aus
+@qualitaet max
+@klang studio
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette orange
+@zeit abend
+@sprache en
+
+== Hook ==
+// Ausgaberaum am Abend, du besorgt, Papa
+[fundhaus du:besorgt papa zeit=abend uhr="16:30" palette=orange zoom-rein hooktext="SUSPECT: YOUR DAD"] In one minute, you'll suspect your own dad. And he doesn't laugh.
+// Quittung mit durchschimmernder Nummer
+[objekt objekte="quittung:Cash box" gross="W7" palette=orange zoom-rein] Under the rewritten line, a number shows through. W seven.
+// Nahaufnahme: du erschrocken
+[gesicht du ort=fundhaus zeit=abend schreck palette=orange] W seven is your dad's tool shelf.
+
+== Wiedererkennen ==
+// Ausgaberaum, die Uhr läuft wieder
+[fundhaus du s04_sami zeit=abend uhr="16:30" palette=orange schwenk-rechts ein="Four>4:30 PM>uhr"] Four thirty. The wall clock is running again.
+// Nahaufnahme: Sami misstrauisch
+[gesicht s04_sami ort=fundhaus zeit=abend misstrauisch palette=orange] Sami gives you a long look. That's worse than any joke.
+// Nahaufnahme: Sami
+[gesicht s04_sami ort=fundhaus zeit=abend traurig palette=orange zoom-rein] “With your dad, you don't look so closely.”
+// Nahaufnahme: du
+[gesicht du ort=fundhaus zeit=abend traurig palette=orange] That hits. Because part of you wants exactly that.
+// Nahaufnahme: du entschlossen
+[gesicht du ort=fundhaus zeit=abend entschlossen palette=orange zoom-rein] But same rules for everyone. Otherwise none of this is fair.
+
+== Steigerung ==
+// Ausgaberaum: Papa hinten an der Werkbank
+[fundhaus papa zeit=abend uhr="16:31" palette=orange zoom-raus ein="workbench>DAD'S WORKBENCH>schluessel"] Your dad sits at his workbench in the yard. Wind rattles the tin roof.
+// Ihr drei an der Theke
+[fundhaus papa du s04_sami zeit=abend uhr="16:32" palette=orange zoom-rein ein="both>#2 PAPERS"] You put both papers in front of him. Openly, with Sami watching.
+// Nahaufnahme: du
+[gesicht du ort=fundhaus zeit=abend neutral palette=orange] “Dad. This is your shelf.”
+// Nahaufnahme: Papa liest
+[gesicht papa ort=fundhaus zeit=abend denkt palette=orange zoom-rein] He reads slowly, holding the paper like something fragile.
+// Nahaufnahme: Papa
+[gesicht papa ort=fundhaus zeit=abend froh palette=orange] “Good that you asked. Just like that.”
+// Stempel groß
+[objekt objekte="stempel" gross="BROKEN" palette=orange zoom-rein] In a tray lies a broken stamp. The spring snapped.
+// Nahaufnahme: Papa
+[gesicht papa ort=fundhaus zeit=abend neutral palette=orange] “I took that out of shelf seven today.”
+// Papas Beleg
+[objekt objekte="quittung:Dad" gross="W7: STAMP" palette=orange zoom-rein ein="repair>FOR REPAIR"] Plus your dad's own slip. Shelf W seven. Stamped, for repair.
+
+== Wendung ==
+// Nahaufnahme: Sami atmet aus
+[gesicht s04_sami ort=fundhaus zeit=abend froh palette=orange zoom-rein] Sami breathes out. Then grins, crooked.
+// Nahaufnahme: Sami
+[gesicht s04_sami ort=fundhaus zeit=abend froh palette=orange] “Okay. You look just as closely at everyone.”
+// Esstisch zu Hause, Erinnerung
+[esstisch papa du kerzen zeit=abend palette=orange zoom-raus ein="dinner>DINNER AT HOME>herz"] At dinner, you two usually just stare at your plates.
+// Nahaufnahme: Papa lächelt
+[gesicht papa ort=fundhaus zeit=abend froh palette=orange zoom-rein] Today he said more than all week. It feels good.
+
+== Cliffhanger ==
+// Quittung und Stempel
+[objekt objekte="quittung:Cash box|stempel" palette=orange zoom-rein ein="Dad's>W7 = STAMP"] You lay your dad's slip next to the cash box receipt.
+// Nahaufnahme: du erschrocken
+[gesicht du ort=fundhaus zeit=abend schreck palette=orange zoom-rein] The number belongs to a stamp. Not the cash box. A false trail.

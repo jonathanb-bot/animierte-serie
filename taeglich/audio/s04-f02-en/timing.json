@@ -1,0 +1,203 @@
+{
+ "dauer": 75.212,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "archiv",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 6.086,
+   "emotion": "spannend",
+   "text": "Three o'clock. Eleven receipts hang on the string. The twelfth is missing."
+  },
+  {
+   "nr": 2,
+   "typ": "objekt",
+   "kapitel": 1,
+   "start": 6.086,
+   "dauer": 2.99,
+   "emotion": "erklaerend",
+   "text": "And that twelfth one could save your best friend."
+  },
+  {
+   "nr": 3,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 9.076,
+   "dauer": 4.19,
+   "emotion": "ernst",
+   "text": "Someone wrote Sami's name on that receipt. You just can't prove it."
+  },
+  {
+   "nr": 4,
+   "typ": "archiv",
+   "kapitel": 2,
+   "start": 13.266,
+   "dauer": 3.974,
+   "emotion": "erzaehlend",
+   "text": "The fluorescent light flickers. The dust scratches your throat."
+  },
+  {
+   "nr": 5,
+   "typ": "archiv",
+   "kapitel": 2,
+   "start": 17.24,
+   "dauer": 4.526,
+   "emotion": "erzaehlend",
+   "text": "Eleven sheets, numbered. And a gap as wide as your thumb."
+  },
+  {
+   "nr": 6,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 21.766,
+   "dauer": 2.702,
+   "emotion": "erzaehlend",
+   "text": "Maybe the carbon copy tells the truth."
+  },
+  {
+   "nr": 7,
+   "typ": "fundhaus",
+   "kapitel": 2,
+   "start": 24.468,
+   "dauer": 3.398,
+   "emotion": "erzaehlend",
+   "text": "Out front at the counter, Rike is giving orders."
+  },
+  {
+   "nr": 8,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 27.866,
+   "dauer": 2.51,
+   "emotion": "ernst",
+   "text": "“The old paper goes out at four.”"
+  },
+  {
+   "nr": 9,
+   "typ": "objekt",
+   "kapitel": 3,
+   "start": 30.376,
+   "dauer": 4.43,
+   "emotion": "erklaerend",
+   "text": "At four, the recycling truck takes it all. Even the archive."
+  },
+  {
+   "nr": 10,
+   "typ": "archiv",
+   "kapitel": 3,
+   "start": 34.806,
+   "dauer": 3.878,
+   "emotion": "erzaehlend",
+   "text": "A hundred bundles, all tied. The string creaks."
+  },
+  {
+   "nr": 11,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 38.684,
+   "dauer": 2.678,
+   "emotion": "ernst",
+   "text": "You can't search them all. Not in an hour."
+  },
+  {
+   "nr": 12,
+   "typ": "archiv",
+   "kapitel": 3,
+   "start": 41.362,
+   "dauer": 2.774,
+   "emotion": "erzaehlend",
+   "text": "So you stick a red note on this morning's bundle."
+  },
+  {
+   "nr": 13,
+   "typ": "fundhaus",
+   "kapitel": 3,
+   "start": 44.136,
+   "dauer": 4.022,
+   "emotion": "erzaehlend",
+   "text": "Your dad is the janitor here. He says little. But he listens."
+  },
+  {
+   "nr": 14,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 48.158,
+   "dauer": 1.358,
+   "emotion": "erzaehlend",
+   "text": "“Red means it stays?”"
+  },
+  {
+   "nr": 15,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 49.516,
+   "dauer": 2.486,
+   "emotion": "froh",
+   "text": "“Red means it stays. Please, Dad.”"
+  },
+  {
+   "nr": 16,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 52.002,
+   "dauer": 3.086,
+   "emotion": "froh",
+   "text": "He nods once. For him, that's a promise."
+  },
+  {
+   "nr": 17,
+   "typ": "fundhaus",
+   "kapitel": 4,
+   "start": 55.088,
+   "dauer": 3.35,
+   "emotion": "erzaehlend",
+   "text": "Sami sits on the back steps. No jokes for an hour."
+  },
+  {
+   "nr": 18,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 58.438,
+   "dauer": 3.182,
+   "emotion": "traurig",
+   "text": "“Without that receipt, it was me. Simple as that.”"
+  },
+  {
+   "nr": 19,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 61.62,
+   "dauer": 3.494,
+   "emotion": "traurig",
+   "text": "You want to say it'll be okay. But you don't make empty promises."
+  },
+  {
+   "nr": 20,
+   "typ": "grossstadt",
+   "kapitel": 4,
+   "start": 65.114,
+   "dauer": 4.166,
+   "emotion": "erzaehlend",
+   "text": "Three fifty. Outside, a truck pulls up, engine running."
+  },
+  {
+   "nr": 21,
+   "typ": "archiv",
+   "kapitel": 5,
+   "start": 69.28,
+   "dauer": 3.542,
+   "emotion": "erzaehlend",
+   "text": "In the archive, a hand truck squeaks down the aisle."
+  },
+  {
+   "nr": 22,
+   "typ": "archiv",
+   "kapitel": 5,
+   "start": 72.822,
+   "dauer": 2.39,
+   "emotion": "spannend",
+   "text": "And it takes the bundle with your red note."
+  }
+ ]
+}

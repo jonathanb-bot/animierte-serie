@@ -1,0 +1,68 @@
+# The Twelfth Receipt – Episode 8: Someone Comes Back
+@musik musik/s04-f08-en.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung warm
+@vortrag lebendig
+@mund zitate
+@einblenden aus
+@qualitaet max
+@klang studio
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette rosa
+@zeit abend
+@sprache en
+
+== Hook ==
+// Ausgaberaum: Sami und eine Fremde im Eingang
+[fundhaus du:froh s04_sami s04_frau zeit=abend uhr="18:00" palette=rosa zoom-rein hooktext="HE COMES BACK"] Six o'clock. Your best friend comes back. With a stranger.
+// Nahaufnahme: du
+[gesicht du ort=fundhaus zeit=abend froh palette=rosa] Earlier, you let him walk off into the rain.
+
+== Wiedererkennen ==
+// Ausgaberaum, du allein
+[fundhaus du zeit=abend uhr="17:40" palette=rosa schwenk-links ein="Five>5:40 PM>uhr"] At five forty, you're sitting alone at the counter.
+// Handy: kein Anschluss
+[handy ort=fundhaus zeit=abend netz=4 akku=38 uhrzeit="5:42" von="Lindner" nachricht="This number is not in service" palette=rosa] The tin box belongs to a Mrs. Lindner. You call her number.
+// Nahaufnahme: du
+[gesicht du ort=fundhaus zeit=abend traurig palette=rosa] Not in service. The trail ends in a beep.
+// Handy: Nachricht von Sami
+[handy ort=fundhaus zeit=abend netz=4 akku=37 uhrzeit="5:51" von="Sami" nachricht="Community garden. Come." palette=rosa] Then your phone buzzes. Sami.
+
+== Steigerung ==
+// Garten am Abend, weit
+[park du jahreszeit=herbst zeit=abend palette=rosa zoom-raus ein="community>COMMUNITY GARDEN|two>#2 BLOCKS AWAY"] The community garden is two blocks away. Wet gravel crunches.
+// Garten: Sami und Frau Lindner
+[park du s04_sami s04_frau jahreszeit=herbst zeit=abend palette=rosa zoom-rein ein="older>MRS. LINDNER?"] Sami stands under the archway. Beside him, an older woman in gardening gloves.
+// Nahaufnahme: Sami
+[gesicht s04_sami ort=park jahreszeit=herbst zeit=abend froh palette=rosa] “I water here on Wednesdays. I know everyone.”
+// Nahaufnahme: du
+[gesicht du ort=park jahreszeit=herbst zeit=abend froh palette=rosa zoom-rein] Twelve years, and he still surprises you.
+// Nahaufnahme: Frau Lindner
+[gesicht s04_frau ort=park jahreszeit=herbst zeit=abend froh palette=rosa] Mrs. Lindner hands you a warm mug of mint tea.
+// Nahaufnahme: du
+[gesicht du ort=park jahreszeit=herbst zeit=abend froh palette=rosa zoom-rein] You want to ask everything. Instead you say: “You tell it, Sami.”
+// Garten, Schwenk
+[park s04_sami s04_frau jahreszeit=herbst zeit=abend palette=rosa schwenk-rechts ein="calmly>NO JOKES>herz"] And Sami tells it. Calmly. Without a single joke.
+// Nahaufnahme: Frau Lindner
+[gesicht s04_frau ort=park jahreszeit=herbst zeit=abend besorgt palette=rosa] “My tin box? My husband lost it on the bus.”
+// Dose mit Delle
+[objekt objekte="blechdose" gross="THE DENT" palette=rosa zoom-rein ein="half>HALF MOON + DENT>auge"] Her photo: a black tin box with a half moon. And a dented corner.
+
+== Wendung ==
+// Nahaufnahme: Frau Lindner traurig
+[gesicht s04_frau ort=park jahreszeit=herbst zeit=abend traurig palette=rosa zoom-rein] “He passed away last year. His letters are inside.”
+// Nahaufnahme: Sami
+[gesicht s04_sami ort=park jahreszeit=herbst zeit=abend traurig palette=rosa] Sami gently touches her arm. He knows that feeling.
+// Nahaufnahme: du
+[gesicht du ort=park jahreszeit=herbst zeit=abend traurig palette=rosa zoom-rein] And you realize what you almost lost today. Over a piece of paper.
+// Stadt am Abend, ihr drei klein
+[grossstadt zeit=abend du s04_sami s04_frau palette=rosa zoom-raus ein="three>#3 OF YOU"] The three of you walk back. The streetlights flicker on.
+
+== Cliffhanger ==
+// Frau Lindner im Ausgaberaum
+[fundhaus s04_frau du s04_sami zeit=abend uhr="18:00" palette=rosa zoom-rein ein="doorway>6:00 PM>uhr"] Mrs. Lindner stops in the doorway and looks at the shelves.
+// Nahaufnahme: Frau Lindner erschrocken
+[gesicht s04_frau ort=fundhaus zeit=abend schreck palette=rosa zoom-rein] “Picked up? No. My tin box is still here.”

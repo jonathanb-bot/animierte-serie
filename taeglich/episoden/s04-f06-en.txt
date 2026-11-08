@@ -1,0 +1,68 @@
+# The Twelfth Receipt – Episode 6: Paper Never Forgets
+@musik musik/s04-f06-en.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung spannend
+@vortrag lebendig
+@mund zitate
+@einblenden aus
+@qualitaet max
+@klang studio
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette tuerkis
+@zeit abend
+@sprache en
+
+== Hook ==
+// Archiv im Seitenlicht, du neugierig am Bündel
+[archiv du:neugierig buendel licht=seite palette=tuerkis zoom-rein hooktext="THE BLANK PAGE KNOWS"] Five o'clock. A blank page reveals what the receipt really said.
+// Leeres Blatt mit Druckspuren
+[objekt objekte="quittung:blank" gross="PRESSURE MARKS" palette=tuerkis zoom-rein] Write hard, and it presses through to the next sheet.
+// Nahaufnahme: du
+[gesicht du ort=archiv entschlossen palette=tuerkis] And the rescued bundle holds the sheet that sat under the cash box receipt.
+
+== Wiedererkennen ==
+// Archiv: ihr zwei kniet am Bündel
+[archiv du s04_sami buendel palette=tuerkis schwenk-rechts ein="five>5:00 PM>uhr"] You and Sami kneel in the archive. Paper rustles. A church bell strikes five.
+// Archiv, Röhre flackert
+[archiv du buendel flackern palette=tuerkis zoom-rein ein="One>#122 SHEETS"] You count the sheets. One hundred twenty-one. One hundred twenty-two.
+// Nahaufnahme: Sami
+[gesicht s04_sami ort=archiv froh palette=tuerkis] “If we find it, ice cream's on me.”
+// Nahaufnahme: du
+[gesicht du ort=archiv froh palette=tuerkis zoom-rein] “Two scoops.”
+
+== Steigerung ==
+// Archiv: das Blatt
+[archiv du buendel palette=tuerkis zoom-rein ein="ink>NO INK. JUST GROOVES>auge"] There. A sheet with no ink. Just fine grooves, like a map.
+// Nahaufnahme: du denkst
+[gesicht du ort=archiv denkt palette=tuerkis] From the front, you can't see anything. The light is too straight.
+// Archiv: Fenster am Ende der Gasse
+[archiv du licht=seite palette=tuerkis zoom-rein] So you go to the little window. A sunbeam slants in.
+// Archiv: ihr zwei im Licht
+[archiv du s04_sami licht=seite palette=tuerkis zoom-rein] You hold the sheet flat in the light. Rough cardboard scratches your fingers.
+// Blatt mit Schatten
+[objekt objekte="quittung:Pressure marks" gross="SHADOWS" palette=tuerkis zoom-rein] Suddenly the grooves cast shadows. Letters appear.
+// Nahaufnahme: Sami hält die Luft an
+[gesicht s04_sami ort=archiv schreck palette=tuerkis zoom-rein] Sami holds his breath.
+// Fach 24
+[objekt objekte="quittung:Shelf 24" gross="SHELF 24" palette=tuerkis zoom-rein ein="Lindner>FOR: MRS. LINDNER"] Shelf twenty-four. Released to: Lindner. The time is left blank.
+// Nahaufnahme: du neugierig
+[gesicht du ort=archiv neugierig palette=tuerkis] And the line for the item doesn't say donation box.
+
+== Wendung ==
+// Blechdose groß
+[objekt objekte="blechdose" gross="BLACK TIN BOX" palette=tuerkis zoom-rein] It says: black tin box.
+// Nahaufnahme: du denkst
+[gesicht du ort=archiv denkt palette=tuerkis zoom-rein] Someone wrote a slip for a tin box. Then turned it into the cash box receipt.
+// Ausgaberaum am Abend
+[fundhaus du s04_sami zeit=abend uhr="17:10" palette=orange zoom-raus ein="front>5:10 PM>uhr"] You run back to the front counter. The low sun turns the shelves gold.
+// Nahaufnahme: Sami
+[gesicht s04_sami ort=fundhaus zeit=abend besorgt palette=orange] “So somebody planned this ahead of time.”
+
+== Cliffhanger ==
+// Nahaufnahme: du
+[gesicht du ort=fundhaus zeit=abend schreck palette=orange zoom-rein] And that's no coincidence anymore.
+// Quittung und Dose
+[objekt objekte="quittung:Cash box|blechdose" gross="TIN BOX → CASH BOX" palette=orange zoom-rein ein="fake>PLANNED>auge"] The fake receipt was made from a pickup slip for a black tin box.

@@ -1,0 +1,68 @@
+# The Twelfth Receipt – Episode 9: The Last Shelf
+@musik musik/s04-f09-en.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung duester
+@vortrag lebendig
+@mund zitate
+@einblenden aus
+@qualitaet max
+@klang studio
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette lila
+@zeit nacht
+@sprache en
+
+== Hook ==
+// Ausgaberaum nachts, Fach 24 leuchtet, du erschrocken, Rike
+[fundhaus du:schreck s04_rike zeit=nacht uhr="18:30" fach=24 dose palette=lila zoom-rein hooktext="YOU FIND THE MONEY"] In eighty seconds, you find the four thousand euros. And behind you, it goes quiet.
+// Geld groß
+[objekt objekte="geld" gross="€4,000" palette=lila zoom-rein] Four thousand euros for the youth center. A new roof, a ping-pong table.
+
+== Wiedererkennen ==
+// Ausgaberaum nachts
+[fundhaus du s04_frau s04_sami zeit=nacht uhr="18:30" dose palette=lila schwenk-rechts ein="Six>6:30 PM>uhr"] Six thirty. It's dark outside. Only one lamp is still on.
+// Fach 24 mit der Dose
+[fundhaus du zeit=nacht uhr="18:31" fach=24 dose palette=lila zoom-rein ein="last>SHELF 24>auge"] In the last shelf sits a black tin box with a half moon.
+// Nahaufnahme: Frau Lindner
+[gesicht s04_frau ort=fundhaus zeit=nacht froh palette=lila] “That dent there. That's it.”
+// Rike kommt aus dem Büro
+[fundhaus s04_rike du zeit=nacht uhr="18:32" palette=lila zoom-rein] Rike comes out of the office. Her key ring jangles.
+// Nahaufnahme: Rike
+[gesicht s04_rike ort=fundhaus zeit=nacht misstrauisch palette=lila] “Shelf twenty-four? Sami can get into that one too.”
+
+== Steigerung ==
+// Nahaufnahme: Sami blass
+[gesicht s04_sami ort=fundhaus zeit=nacht schreck palette=lila zoom-rein] Sami goes pale. Him again. His name again.
+// Nahaufnahme: du
+[gesicht du ort=fundhaus zeit=nacht entschlossen palette=lila] You don't say a word. You just hold out your hand.
+// Zwei Schlüssel
+[objekt objekte="schluessel:Helper|schluessel:Manager" gross="TWO KEYS" palette=lila zoom-rein ein="twenty>FROM 20: RIKE ONLY>schluessel"] Sami's key opens the front shelves. From twenty on, only Rike's fits.
+// Sami am Fach
+[fundhaus du s04_sami zeit=nacht uhr="18:33" fach=24 dose palette=lila zoom-rein ein="millimeter>0 MILLIMETERS"] Sami tries anyway. The key won't turn a millimeter.
+// Nahaufnahme: Rike wütend
+[gesicht s04_rike ort=fundhaus zeit=nacht wuetend palette=lila] “Then he got it open somehow.”
+// Nahaufnahme: du
+[gesicht du ort=fundhaus zeit=nacht neutral palette=lila zoom-rein] “Then let's open it. Right now. With Mrs. Lindner.”
+// Rike, du und Frau Lindner
+[fundhaus s04_rike du s04_frau zeit=nacht uhr="18:35" fach=24 dose palette=lila zoom-rein ein="owner>THE OWNER"] Mrs. Lindner nods. Rike can't refuse the owner.
+// Nahaufnahme: Rike
+[gesicht s04_rike ort=fundhaus zeit=nacht angst palette=lila] Her hand shakes as she unlocks it. The hinge squeaks.
+
+== Wendung ==
+// Fach offen
+[fundhaus du zeit=nacht uhr="18:36" fach=24 palette=lila zoom-rein ein="cold>6:36 PM>uhr"] A cold draft. It smells like old varnish.
+// Dose groß
+[objekt objekte="blechdose" palette=lila zoom-rein] Mrs. Lindner lifts out the box and opens the lid. Paper rustles.
+// Nahaufnahme: Frau Lindner
+[gesicht s04_frau ort=fundhaus zeit=nacht froh palette=lila] “His letters. All still here.”
+// Nahaufnahme: du
+[gesicht du ort=fundhaus zeit=nacht neugierig palette=lila zoom-rein] Behind it, at the very back, something lies under brown paper.
+
+== Cliffhanger ==
+// Kasse groß
+[objekt objekte="kasse:Donations" gross="THE CASH BOX" palette=lila zoom-rein ein="green>FOUND>geld"] You pull the paper aside. A green corner. The donation box.
+// Nahaufnahme: du erschrocken
+[gesicht du ort=fundhaus zeit=nacht schreck palette=lila zoom-rein] And behind you, Rike's key ring stops jangling.

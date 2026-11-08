@@ -1,0 +1,72 @@
+# The Twelfth Receipt – Episode 7: Wrong Together
+@musik musik/s04-f07-en.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung traurig
+@vortrag lebendig
+@mund zitate
+@einblenden aus
+@qualitaet max
+@klang studio
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette blau
+@zeit abend
+@sprache en
+
+== Hook ==
+// Haltestelle im Regen, Sami geht
+[haltestelle du s04_sami regen palette=blau zoom-rein hooktext="YOU LET HIM GO"] In eighty seconds, you let your best friend walk off into the rain.
+// Nahaufnahme: du
+[gesicht du ort=haltestelle regen traurig palette=blau] And it's right. Even if it feels like betrayal.
+
+== Wiedererkennen ==
+// Ausgaberaum am Abend, Regen
+[fundhaus du s04_sami zeit=abend uhr="17:30" palette=blau schwenk-rechts ein="Five>5:30 PM>uhr"] Five thirty. Outside, rain drums on the awning.
+// Rike und Sami
+[fundhaus s04_rike s04_sami zeit=abend uhr="17:31" palette=blau zoom-rein ein="third>3RD TIME"] For the third time, Rike asks Sami where he was.
+// Nahaufnahme: Rike
+[gesicht s04_rike ort=fundhaus zeit=abend misstrauisch palette=blau] “I'll keep asking until it's true.”
+// Nahaufnahme: Sami wütend
+[gesicht s04_sami ort=fundhaus zeit=abend wuetend palette=blau zoom-rein] Sami is all out of jokes.
+
+== Steigerung ==
+// Beide Quittungen
+[objekt objekte="quittung:Watch|quittung:Cash box" palette=blau zoom-rein] He grabs both receipts off the counter.
+// Nahaufnahme: Sami
+[gesicht s04_sami ort=fundhaus zeit=abend traurig palette=blau zoom-rein] “No paper, nothing left to interrogate.”
+// Nahaufnahme: du erschrocken
+[gesicht du ort=fundhaus zeit=abend schreck palette=blau] He'll tear them up. Even the one that could save him.
+// Nahaufnahme: du
+[gesicht du ort=fundhaus zeit=abend entschlossen palette=blau zoom-rein] “Sami. Without the paper, everyone believes Rike.”
+// Nahaufnahme: Sami
+[gesicht s04_sami ort=fundhaus zeit=abend traurig palette=blau] “Nobody believes me anyway. Not even you.”
+// Nahaufnahme: du traurig
+[gesicht du ort=fundhaus zeit=abend traurig palette=blau zoom-rein] Not true. But today, you looked at him like a suspect.
+// Armbanduhr groß
+[objekt objekte="armbanduhr" gross="JONAS" palette=blau zoom-rein ein="ticking>STILL TICKING>uhr"] You slide Jonas's watch across the counter. It's still ticking.
+// Nahaufnahme: du
+[gesicht du ort=fundhaus zeit=abend traurig palette=blau] “This is yours. The papers stay here.”
+
+== Wendung ==
+// Ausgaberaum, Stille
+[fundhaus du s04_sami zeit=abend uhr="17:34" palette=blau zoom-rein ein="rain>ONLY RAIN>regen"] For a long time, nothing. Just rain and ticking.
+// Nahaufnahme: Sami
+[gesicht s04_sami ort=fundhaus zeit=abend traurig palette=blau zoom-rein] Then he puts the receipts down. And takes only the watch.
+// Haltestelle, Sami allein im Regen
+[haltestelle s04_sami regen palette=blau zoom-raus ein="umbrella>NO UMBRELLA>regen"] He leaves without an umbrella. His green jacket darkens in the rain.
+// Nahaufnahme: du
+[gesicht du ort=haltestelle regen traurig palette=blau zoom-rein] Your sleeves are wet. You didn't even say goodbye.
+// Park im Herbstregen, weit
+[park jahreszeit=herbst zeit=abend regen palette=blau zoom-raus ein="twelve>#12 YEARS>herz"] Twelve years, and he's never walked away like this.
+// Nahaufnahme: du erinnerst dich
+[gesicht du ort=fundhaus zeit=abend traurig palette=blau zoom-rein] On your first school day, he gave you half his apple.
+// Ausgaberaum: leerer Platz neben dir
+[fundhaus du zeit=abend uhr="17:40" palette=blau zoom-rein ein="empty>AN EMPTY CHAIR"] Inside, it smells like soap. Next to you is an empty chair.
+
+== Cliffhanger ==
+// Nahaufnahme: du denkst
+[gesicht du ort=fundhaus zeit=abend denkt palette=blau] You could run after him. Drop everything.
+// Quittung als Beweisstück
+[objekt objekte="quittung:Sami" gross="EVIDENCE" palette=blau zoom-rein] Instead, you file his receipt as evidence. And let him go.

@@ -1,0 +1,70 @@
+# The Twelfth Receipt – Episode 3: Your Friend's Watch
+@musik musik/s04-f03-en.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung traurig
+@vortrag lebendig
+@mund zitate
+@einblenden aus
+@qualitaet max
+@klang studio
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette blau
+@zeit tag
+@sprache en
+
+== Hook ==
+// Ausgaberaum, du und Sami
+[fundhaus du s04_sami zeit=tag uhr="14:17" uhr_steht palette=blau zoom-rein hooktext="YOUR BEST FRIEND LIED"] In one minute, your best friend confesses a lie. And he's still no thief.
+// Archiv: du rennst der Sackkarre hinterher
+[archiv du:rennt sackkarre buendel palette=blau wackeln=0.3 ein="Three>3:52 PM>uhr"] Three fifty-two. You run after the hand truck.
+// Nahaufnahme: du rufst
+[gesicht du ort=archiv schreck palette=blau] “Stop! The red one stays!”
+
+== Wiedererkennen ==
+// Archiv: Papa stellt sich vor das Bündel
+[archiv papa du buendel palette=blau zoom-rein ein="Dad>DAD BLOCKS IT"] Your dad steps in front of it. Broad shoulders, no words. The cart stops.
+// Nahaufnahme: Papa
+[gesicht papa ort=archiv froh palette=blau] “Red means it stays.”
+// Ausgaberaum: Sami am Fenster
+[fundhaus du s04_sami zeit=tag uhr="14:17" uhr_steht palette=blau schwenk-rechts ein="Saved>BUNDLE SAVED"] Saved. But Sami stands at the window, kneading his jacket pocket.
+// Nahaufnahme: du, misstrauisch
+[gesicht du ort=fundhaus zeit=tag misstrauisch palette=blau zoom-rein] You've known him for twelve years. He's hiding something.
+// Nahaufnahme: du sprichst
+[gesicht du ort=fundhaus zeit=tag neutral palette=blau] “Show me your own receipt, Sami.”
+
+== Steigerung ==
+// Nahaufnahme: Sami
+[gesicht s04_sami ort=fundhaus zeit=tag angst palette=blau] He catches his breath. Then pulls out a folded paper.
+// Zweite Quittung
+[objekt objekte="quittung:Sami" gross="PICKED UP: WATCH" palette=blau zoom-rein] A second receipt. His name again. Picked up: one wristwatch.
+// Armbanduhr groß
+[objekt objekte="armbanduhr" palette=blau zoom-rein ein="ticks>JONAS'S WATCH>uhr"] The watch is too big for his skinny wrist. It ticks softly.
+// Nahaufnahme: Sami traurig
+[gesicht s04_sami ort=fundhaus zeit=tag traurig palette=blau] “It was Jonas's. My brother's.”
+// Landschaft am Abend, weit und still
+[landschaft zeit=abend palette=blau zoom-raus ein="Jonas>JONAS †>herz|two>#2 YEARS AGO"] Jonas died two years ago. His mom donated the watch. She couldn't look at it.
+// Nahaufnahme: Sami
+[gesicht s04_sami ort=fundhaus zeit=tag traurig palette=blau zoom-rein] “I just wanted it back. Without anyone asking.”
+// Ausgaberaum: ihr zwei an der Theke
+[fundhaus du s04_sami zeit=tag uhr="14:17" uhr_steht palette=blau zoom-rein] His hand is warm and damp as he holds out the watch.
+// Wohnzimmer: Erinnerung an Abende bei Sami
+[wohnzimmer du s04_sami sofa_sitzen licht=an zeit=abend palette=orange zoom-rein ein="fries>JONAS'S FRIES>herz"] Jonas used to make you two fries. Always too salty.
+
+== Wendung ==
+// Nahaufnahme: du traurig
+[gesicht du ort=fundhaus zeit=tag traurig palette=blau] Sami lied. He secretly took something.
+// Nahaufnahme: du denkst
+[gesicht du ort=fundhaus zeit=tag denkt palette=blau zoom-rein] And that's exactly what Rike would use against him.
+// Nahaufnahme: du entschlossen
+[gesicht du ort=fundhaus zeit=tag entschlossen palette=blau] You still write it all down. Honestly. A lie about a watch isn't theft.
+
+== Cliffhanger ==
+// Zwei Quittungen nebeneinander
+[objekt objekte="quittung:Watch|quittung:Cash box" palette=blau zoom-rein] Two receipts with Sami's name, side by side.
+// Nahaufnahme: Sami erschrocken
+[gesicht s04_sami ort=fundhaus zeit=tag schreck palette=blau zoom-rein] Sami leans in. His finger trembles over the second one.
+// Kassen-Quittung groß
+[objekt objekte="quittung:Cash box" gross="FAKE SIGNATURE" palette=blau zoom-rein] “I signed for the watch. Not the cash box.”

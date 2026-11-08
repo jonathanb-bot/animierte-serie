@@ -1,0 +1,68 @@
+# The Twelfth Receipt – Episode 10: The Good Excuse
+@musik musik/s04-f10-en.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung traurig
+@vortrag lebendig
+@mund zitate
+@einblenden aus
+@qualitaet max
+@klang studio
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette blau
+@zeit nacht
+@sprache en
+
+== Hook ==
+// Ausgaberaum nachts, Kasse auf der Theke, Rike
+[fundhaus s04_rike:traurig du zeit=nacht uhr="18:40" kasse palette=blau zoom-rein hooktext="THE BOSS CONFESSES"] Six forty. The boss confesses. And it almost sounds reasonable.
+// Nahaufnahme: du
+[gesicht du ort=fundhaus zeit=nacht neutral palette=blau] That's exactly what makes it so hard.
+
+== Wiedererkennen ==
+// Ausgaberaum, Kasse auf der Theke
+[fundhaus s04_rike du kasse zeit=nacht uhr="18:41" palette=blau schwenk-rechts ein="coins>€4,000 BACK>geld"] The coins in the cash box clink as Rike sits down.
+// Nahaufnahme: Rike
+[gesicht s04_rike ort=fundhaus zeit=nacht traurig palette=blau zoom-rein] “The roof leaks. It has for three winters.”
+// Angebote
+[objekt objekte="regen|geld" gross="3 REPAIRS" palette=blau zoom-rein ein="unpaid>ALL UNPAID"] She shows you repair quotes. Roof, heating, windows. All unpaid.
+// Nahaufnahme: Rike
+[gesicht s04_rike ort=fundhaus zeit=nacht traurig palette=blau] “I only wanted to borrow it. For the building.”
+
+== Steigerung ==
+// Archiv, Röhre flackert
+[archiv s04_rike flackern palette=blau zoom-rein ein="noon>AT NOON>uhr"] At noon, she took the box from shelf twelve. Then volunteers walked in.
+// Nahaufnahme: Rike ängstlich
+[gesicht s04_rike ort=fundhaus zeit=nacht angst palette=blau zoom-rein] “That's when I panicked.”
+// Fach 24 mit Dose
+[fundhaus zeit=nacht uhr="18:42" fach=24 dose palette=blau zoom-rein ein="only>ONLY HER KEY>schluessel"] She hid it behind the tin box. In the one shelf only she can open.
+// Zwei Quittungen
+[objekt objekte="quittung:Tin box|quittung:Cash box" gross="TIN BOX → CASH BOX" palette=blau zoom-rein] She rewrote the slip for the tin box. Then added Sami's name. And his signature.
+// Archiv: Sackkarre und Bündel
+[archiv sackkarre buendel palette=blau zoom-rein ein="Dad's>FAKE TRAIL: W7"] She tossed the copy in the recycling. And let your dad's number show through.
+// Nahaufnahme: du wütend
+[gesicht du ort=fundhaus zeit=nacht wuetend palette=blau] The heater is warm. You still feel cold.
+// Nahaufnahme: du
+[gesicht du ort=fundhaus zeit=nacht neutral palette=blau zoom-rein] You listen. The roof really is broken. That part you believe.
+// Nahaufnahme: du entschlossen
+[gesicht du ort=fundhaus zeit=nacht entschlossen palette=blau] But a broken roof doesn't turn stealing into borrowing.
+// Nahaufnahme: du
+[gesicht du ort=fundhaus zeit=nacht entschlossen palette=blau zoom-rein] “And what does Sami have to do with your roof?”
+
+== Wendung ==
+// Ausgaberaum, Rike allein
+[fundhaus s04_rike zeit=nacht uhr="18:44" palette=blau zoom-raus] Rike slowly unhooks her key ring. The light hums.
+// Schlüssel groß
+[objekt objekte="schluessel" gross="HANDED OVER" palette=blau zoom-rein ein="Twelve>#12 KEYS|Fifteen>#15 YEARS"] She sets it on the counter. Twelve keys. Fifteen years.
+// Sami an der Tür
+[fundhaus s04_sami zeit=nacht uhr="18:44" palette=blau zoom-rein] Sami is standing at the archive door. Nobody heard him come in.
+// Nahaufnahme: Sami
+[gesicht s04_sami ort=archiv traurig palette=blau] He hears everything. Every word.
+
+== Cliffhanger ==
+// Nahaufnahme: Rike
+[gesicht s04_rike ort=fundhaus zeit=nacht besorgt palette=blau zoom-rein] Then Rike looks at him. “I used your name, Sami.”
+// Nahaufnahme: Rike
+[gesicht s04_rike ort=fundhaus zeit=nacht traurig palette=blau zoom-rein] “Because I figured nobody would believe you anyway.”
