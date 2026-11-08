@@ -82,7 +82,7 @@ if (args.includes("--kommentare")) {
         const anzahl = feld(p, "commentCount", "comments", "commentsCount") || 0;
         if (!anzahl) continue;
         const pid = feld(p, "postId", "id", "_id", "platformPostId");
-        const c = await api("GET", `/inbox/comments/${encodeURIComponent(pid)}?limit=100`, null, KEYS[k]);
+        const c = await api("GET", `/inbox/comments/${encodeURIComponent(pid)}?limit=100&accountId=${encodeURIComponent(feld(p, "accountId") || "")}`, null, KEYS[k]);
         const liste = c.ok ? (c.json.comments || c.json.data || c.json.items || []) : [];
         if (!c.ok) ergebnis.fehler.push(`${KNAME(k)} ${pid}: HTTP ${c.status} ${JSON.stringify(c.json).slice(0, 300)}`);
         ergebnis.posts.push({ konto: KNAME(k), post: p, kommentare: liste, antwort: c.ok ? undefined : c.json });
