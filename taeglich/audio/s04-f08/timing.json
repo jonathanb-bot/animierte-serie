@@ -1,0 +1,194 @@
+{
+ "dauer": 84.99,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "fundhaus",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 5.342,
+   "emotion": "froh",
+   "text": "Achtzehn Uhr. Dein bester Freund kommt zurück. Mit einer Fremden."
+  },
+  {
+   "nr": 2,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 5.342,
+   "dauer": 2.87,
+   "emotion": "froh",
+   "text": "Vorhin hast du ihn im Regen gehen lassen."
+  },
+  {
+   "nr": 3,
+   "typ": "fundhaus",
+   "kapitel": 2,
+   "start": 8.212,
+   "dauer": 3.542,
+   "emotion": "erzaehlend",
+   "text": "Um siebzehn Uhr vierzig sitzt du allein an der Theke."
+  },
+  {
+   "nr": 4,
+   "typ": "handy",
+   "kapitel": 2,
+   "start": 11.754,
+   "dauer": 3.662,
+   "emotion": "erzaehlend",
+   "text": "Die Dose gehört einer Frau Lindner. Du rufst ihre Nummer an."
+  },
+  {
+   "nr": 5,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 15.416,
+   "dauer": 3.614,
+   "emotion": "traurig",
+   "text": "Kein Anschluss. Die Spur endet in einem Piepton."
+  },
+  {
+   "nr": 6,
+   "typ": "handy",
+   "kapitel": 2,
+   "start": 19.03,
+   "dauer": 2.798,
+   "emotion": "erzaehlend",
+   "text": "Dann vibriert dein Handy. Sami."
+  },
+  {
+   "nr": 7,
+   "typ": "park",
+   "kapitel": 3,
+   "start": 21.828,
+   "dauer": 5.63,
+   "emotion": "erzaehlend",
+   "text": "Der Gemeinschaftsgarten liegt zwei Straßen weiter. Deine Schuhe knirschen im nassen Kies."
+  },
+  {
+   "nr": 8,
+   "typ": "park",
+   "kapitel": 3,
+   "start": 27.458,
+   "dauer": 5.27,
+   "emotion": "erzaehlend",
+   "text": "Unter dem Torbogen steht Sami. Neben ihm eine ältere Frau mit Gartenhandschuhen."
+  },
+  {
+   "nr": 9,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 32.728,
+   "dauer": 2.27,
+   "emotion": "froh",
+   "text": "„Ich gieße hier mittwochs. Ich kenn jeden.“"
+  },
+  {
+   "nr": 10,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 34.998,
+   "dauer": 4.118,
+   "emotion": "froh",
+   "text": "Das wusstest du nicht. Zwölf Jahre, und er überrascht dich noch."
+  },
+  {
+   "nr": 11,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 39.116,
+   "dauer": 4.43,
+   "emotion": "froh",
+   "text": "Frau Lindner drückt dir einen warmen Teebecher in die Hand. Es riecht nach Minze."
+  },
+  {
+   "nr": 12,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 43.546,
+   "dauer": 4.67,
+   "emotion": "froh",
+   "text": "Du willst sofort alles fragen. Stattdessen sagst du: „Erzähl du, Sami.“"
+  },
+  {
+   "nr": 13,
+   "typ": "park",
+   "kapitel": 3,
+   "start": 48.216,
+   "dauer": 4.574,
+   "emotion": "erzaehlend",
+   "text": "Und Sami erzählt. Ganz ruhig. Ohne einen einzigen Witz."
+  },
+  {
+   "nr": 14,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 52.79,
+   "dauer": 3.182,
+   "emotion": "ernst",
+   "text": "„Meine Dose? Die hat mein Mann im Bus verloren.“"
+  },
+  {
+   "nr": 15,
+   "typ": "objekt",
+   "kapitel": 3,
+   "start": 55.972,
+   "dauer": 4.934,
+   "emotion": "erklaerend",
+   "text": "Auf ihrem Foto: eine schwarze Dose mit Halbmond. Und einer Delle an der Ecke."
+  },
+  {
+   "nr": 16,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 60.906,
+   "dauer": 3.254,
+   "emotion": "traurig",
+   "text": "„Er ist letztes Jahr gestorben. Da drin sind seine Briefe.“"
+  },
+  {
+   "nr": 17,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 64.16,
+   "dauer": 4.526,
+   "emotion": "traurig",
+   "text": "Sami legt ihr sanft die Hand auf den Arm. Er weiß, wie sich das anfühlt."
+  },
+  {
+   "nr": 18,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 68.686,
+   "dauer": 5.054,
+   "emotion": "traurig",
+   "text": "Und du merkst, wie viel du heute fast verloren hättest. Für ein Stück Papier."
+  },
+  {
+   "nr": 19,
+   "typ": "grossstadt",
+   "kapitel": 4,
+   "start": 73.74,
+   "dauer": 4.19,
+   "emotion": "erzaehlend",
+   "text": "Zu dritt lauft ihr zurück zum Fundhaus. Die Straßenlaternen gehen an."
+  },
+  {
+   "nr": 20,
+   "typ": "fundhaus",
+   "kapitel": 5,
+   "start": 77.93,
+   "dauer": 3.542,
+   "emotion": "erzaehlend",
+   "text": "Frau Lindner bleibt im Türrahmen stehen und schaut auf die Fächer."
+  },
+  {
+   "nr": 21,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 81.472,
+   "dauer": 3.518,
+   "emotion": "spannend",
+   "text": "„Abgeholt? Nein. Meine Dose ist noch hier.“"
+  }
+ ]
+}
