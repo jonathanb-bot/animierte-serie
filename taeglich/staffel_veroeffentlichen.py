@@ -96,7 +96,14 @@ def letzte_zeit(posts: list, loeschen: set, platform: str, konto: str | None = N
     return max(zeiten) if zeiten else None
 
 
-def naechste_slots(platform: str, nach: dt.datetime, anzahl: int, takt: list | None = None) -> list[dt.datetime]:
+# Test (Jonathan 8.11.): deutsches TikTok nach den schon geplanten Posts 3 Tage lang nur 1 Video am Tag (20 Uhr, gestreut).
+# Gilt nur für die deutsche Warteschlange (staffel_veroeffentlichen), nicht für Englisch und nicht für Instagram/YouTube.
+TIKTOK_EINMAL = {dt.date(2026, 11, 12), dt.date(2026, 11, 13), dt.date(2026, 11, 14)}
+TIKTOK_EINMAL_TAKT = [(20, 0)]
+
+
+def naechste_slots(platform: str, nach: dt.datetime, anzahl: int, takt: list | None = None,
+                   einmal_test: bool = False) -> list[dt.datetime]:
     """Die nächsten `anzahl` Takt-Zeiten (ohne Streuung) mehr als 30 min nach `nach`.
 
     `nach` ist meist ein schon gestreuter Post (±30 min, Vorgabe 5.11.). Der Puffer sorgt dafür,
@@ -104,7 +111,10 @@ def naechste_slots(platform: str, nach: dt.datetime, anzahl: int, takt: list | N
     nach = nach + dt.timedelta(minutes=V.STREUUNG_MIN)
     out, tag = [], nach.replace(hour=0, minute=0, second=0, microsecond=0)
     while len(out) < anzahl:
-        for h, m in (takt or TAKT[platform]):
+        tagestakt = takt or TAKT[platform]
+        if einmal_test and platform == "tiktok" and tag.date() in TIKTOK_EINMAL:
+            tagestakt = TIKTOK_EINMAL_TAKT
+        for h, m in tagestakt:
             z = tag.replace(hour=h, minute=m)
             if z > nach and len(out) < anzahl:
                 out.append(z)
@@ -219,7 +229,7 @@ def main(argv=None) -> int:
             return
         letzte = letzte_zeit(plan["posts"], loeschen, platform)
         start = max(letzte, frueh) if letzte else frueh
-        for e, z in zip(eintraege, naechste_slots(platform, start, len(eintraege))):
+        for e, z in zip(eintraege, naechste_slots(platform, start, len(eintraege), einmal_test=True)):
             z = V.streuen(z)  # 0–30 min früher oder später (Vorgabe 5.11.)
             post = {"id": e.pop("id"), "platform": platform, "zeit": z.strftime("%Y-%m-%dT%H:%M:00"), "serie": "taeglich", **e}
             plan["posts"].append(post); neu.append(post)

@@ -281,6 +281,7 @@ git add -A taeglich engine && git commit && git push -u origin taeglich         
 - die TikTok-Sammelteile schneiden (Standard 10 Folgen → Folge 1–3, 4–5, 6–8, 9–10, einfach aneinandergehängt; eine versehentliche „Fortsetzung folgt“-Karte würde überall herausgeschnitten) und prüfen
 - alles auf `youtube-upload` ablegen (`taeglich/sNN-fXX.mp4`, `taeglich-tiktok/sNN-teil-N.mp4`, `geprueft.json`)
 - alle Posts **pro Plattform hinter den letzten geplanten Post** hängen, im Takt TikTok 08/12/16/20 Uhr, Instagram 08/11/14/17/20 Uhr, YouTube jeweils :30 danach (Issue #14), jede Zeit zufällig ±0–30 min gestreut (Issue #26)
+- **Test 12.–14.11. (Jonathan 8.11.):** deutsches TikTok nach den schon geplanten Posts 3 Tage lang nur **1 Video am Tag** (20 Uhr, gestreut), ab 15.11. wieder 4×. Steht in `staffel_veroeffentlichen.py` (`TIKTOK_EINMAL`). Die Analyse vergleicht Aufrufe pro Post und Follows an diesen Tagen mit den 4×-Tagen davor.
 
 IDs: `taeglich-tiktok-sNN-teil-N`, `taeglich-insta-sNN-fXX`, `taeglich-yt-sNN-fXX`. Bis der Workflow „Posts einplanen“ fertig ist, nichts auf `main` pushen. Danach im Log prüfen, dass alles mit ✓ eingeplant ist.
 
