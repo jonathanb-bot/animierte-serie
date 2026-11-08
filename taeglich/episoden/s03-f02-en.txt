@@ -21,13 +21,13 @@
 
 == Wiedererkennen ==
 // Hütte innen, dunkel, nur Kaminglut
-[wohnzimmer du ben sofa_sitzen zeit=nacht palette=blau palette_staerke=0.6 zoom-rein] At eleven sharp, the lights just died. Now the only light is the glow from the fireplace.
+[wohnzimmer du ben sofa_sitzen zeit=nacht palette=blau palette_staerke=0.6 zoom-rein ein="eleven>POWER OUT>gluehbirne"] At eleven sharp, the lights just died. Now the only light is the glow from the fireplace.
 // Wohnzimmer: Schrank vor die Tür
-[wohnzimmer du ben zeit=nacht zoom-rein palette=blau palette_staerke=0.6] You push the cabinet in front of the door. It's heavier than it looks. Ben swears under his breath.
+[wohnzimmer du ben zeit=nacht zoom-rein palette=blau palette_staerke=0.6 ein="cabinet>DOOR BLOCKED>schluessel"] You push the cabinet in front of the door. It's heavier than it looks. Ben swears under his breath.
 // Nahaufnahme: du lauschst, Herz klopft
 [gesicht du ort=wohnzimmer zeit=nacht besorgt palette=blau palette_staerke=0.6 zoom-rein] It smells like smoke and wet wood. Your heart is pounding so hard you can hear it in your ears.
 // Wald durch den Fensterspalt
-[waldnacht lampe zoom-rein palette=blau palette_staerke=0.6] Through a gap in the shutters, you see the fog. It's drifting against the wind.
+[waldnacht lampe zoom-rein palette=blau palette_staerke=0.6 ein="drifting>AGAINST THE WIND"] Through a gap in the shutters, you see the fog. It's drifting against the wind.
 // Nahaufnahme: Ben flüstert
 [gesicht ben ort=wohnzimmer zeit=nacht angst palette=blau palette_staerke=0.6] “Okay. I'm officially scared now. And hungry.”
 // Nahaufnahme: du, Taschenlampe im Gesicht
@@ -41,19 +41,19 @@
 // Nahaufnahme: Ben, trocken
 [gesicht ben ort=wohnzimmer zeit=nacht besorgt palette=blau palette_staerke=0.6] “Maybe it's a bird. A really big, really rude bird.”
 // Wald, Nebel
-[waldnacht palette=blau palette_staerke=0.6 zoom-raus] But no bird copies whole sentences. And no bird is as tall as a tree.
+[waldnacht palette=blau palette_staerke=0.6 zoom-raus ein="bird>NOT A BIRD"] But no bird copies whole sentences. And no bird is as tall as a tree.
 // Infokarte: eure Regeln
 [objekt objekte="ohr:Don't answer|schluessel:Door stays shut|taschenlampe:Light stays on" gross="Your Rules" farbe=#0e1630] You make three rules. Don't answer. The door stays shut. The flashlight stays on.
 // Nahaufnahme: Ben
 [gesicht ben ort=wohnzimmer zeit=nacht besorgt palette=blau palette_staerke=0.6] “Rule four: the last slice of toast is mine.”
 // Wald, die Stimme kommt wieder
-[waldnacht huette palette=blau palette_staerke=0.6 wackeln=0.2] At eleven twenty, it calls again.
+[waldnacht huette palette=blau palette_staerke=0.6 wackeln=0.2 ein="eleven>11:20 PM>uhr"] At eleven twenty, it calls again.
 // Nahaufnahme: Mamas Stimme
 [gesicht mama ort=waldnacht froh palette=blau palette_staerke=0.6] “Did you brush your teeth? The top left ones too?”
 // Nahaufnahme: du, es trifft dich
 [gesicht du ort=wohnzimmer zeit=nacht angst palette=blau palette_staerke=0.6 zoom-rein] Mom said that this morning by the car. Word for word. Outside. Where the forest starts.
 // Wohnzimmer, du verstehst es
-[wohnzimmer du ben zeit=nacht palette=blau palette_staerke=0.6 zoom-rein] It doesn't make anything up. It listens. And it remembers everything.
+[wohnzimmer du ben zeit=nacht palette=blau palette_staerke=0.6 zoom-rein ein="listens>IT LISTENS>ohr|remembers>IT REMEMBERS"] It doesn't make anything up. It listens. And it remembers everything.
 // Nahaufnahme: du denkst nach
 [gesicht du ort=wohnzimmer zeit=nacht besorgt palette=blau palette_staerke=0.6] In your head, you go through every sentence you said outside today.
 // Wald, Nebel, eine Stimme
@@ -65,7 +65,7 @@
 // Handy: Nachricht an Mama
 [handy ort=wohnzimmer zeit=nacht netz=1 akku=21 uhrzeit="11:47" von="Mom" nachricht="On my way. Stay inside. Don't open for anyone." palette=blau palette_staerke=0.6] Just before midnight, a text finally comes through. She's on her way.
 // Handy: Akku
-[handy ort=wohnzimmer zeit=nacht netz=1 akku=19 uhrzeit="11:49" von="Battery" nachricht="Nineteen percent left" palette=blau palette_staerke=0.6] Your battery's at nineteen percent. Ben's phone is already dead.
+[handy ort=wohnzimmer zeit=nacht netz=1 akku=19 uhrzeit="11:49" von="Battery" nachricht="Nineteen percent left" palette=blau palette_staerke=0.6 ein="nineteen>#19 %>batterie"] Your battery's at nineteen percent. Ben's phone is already dead.
 // Nahaufnahme: Ben pfeift leise
 [gesicht ben ort=wohnzimmer zeit=nacht besorgt palette=blau palette_staerke=0.6] Ben whistles quietly to himself. Three short whistles. He always does that when he's nervous.
 // Nahaufnahme: Ben merkt es nicht
@@ -77,6 +77,6 @@
 
 == Cliffhanger ==
 // Hütte von außen, Nebel
-[waldnacht huette palette=blau palette_staerke=0.6 wackeln=0.3 zoom-rein] From the forest, three short whistles come back. Exactly Ben's tune.
+[waldnacht huette palette=blau palette_staerke=0.6 wackeln=0.3 zoom-rein ein="three>#3 WHISTLES>ohr"] From the forest, three short whistles come back. Exactly Ben's tune.
 // Nahaufnahme: Ben, kreidebleich
 [gesicht ben ort=wohnzimmer zeit=nacht angst palette=blau palette_staerke=0.6 zoom-rein] Ben stops whistling. But outside, the whistling keeps going. And it's getting closer.

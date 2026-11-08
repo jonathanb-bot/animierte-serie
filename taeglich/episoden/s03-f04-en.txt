@@ -25,19 +25,19 @@
 // Infokarte: Regeln für draußen
 [objekt objekte="ohr:Don't answer|herz:Stay together|taschenlampe:Keep moving" gross="Rules for Outside" farbe=#0e1630 palette=blau palette_staerke=0.6] Out here, there are new rules. Don't answer. Don't split up. Don't stop.
 // Wald, Lampe zittert
-[waldnacht du ben lampe wackeln=0.2 zoom-rein palette=blau palette_staerke=0.6] The beam is shaking because your hand is shaking. Ben is holding on to your backpack.
+[waldnacht du ben lampe wackeln=0.2 zoom-rein palette=blau palette_staerke=0.6 ein="shaking>HANDS SHAKING>taschenlampe"] The beam is shaking because your hand is shaking. Ben is holding on to your backpack.
 // Wald mit Nebel, Lampe
-[waldnacht du lampe palette=blau palette_staerke=0.6 schwenk-links] It's one in the morning. The ground is wet. Every time a branch snaps, your heart stops for a second.
+[waldnacht du lampe palette=blau palette_staerke=0.6 schwenk-links ein="one>1:00 AM>uhr"] It's one in the morning. The ground is wet. Every time a branch snaps, your heart stops for a second.
 // Wald, Augen schwach
-[waldnacht augen=1 palette=blau palette_staerke=0.6 zoom-rein] Somewhere up in the trees: click. Click. It's following you.
+[waldnacht augen=1 palette=blau palette_staerke=0.6 zoom-rein ein="click>CLICK. CLICK.>ohr"] Somewhere up in the trees: click. Click. It's following you.
 
 == Steigerung ==
 // Wald links: eine Stimme
-[waldnacht palette=blau palette_staerke=0.6 schwenk-links] Then Mom calls. From the left.
+[waldnacht palette=blau palette_staerke=0.6 schwenk-links ein="calls>FROM THE LEFT"] Then Mom calls. From the left.
 // Nahaufnahme: Mama
 [gesicht mama ort=waldnacht froh palette=blau palette_staerke=0.6] “Honey! I'm over here!”
 // Wald rechts: noch eine Stimme
-[waldnacht palette=blau palette_staerke=0.6 schwenk-rechts] And then Mom calls again. From the right.
+[waldnacht palette=blau palette_staerke=0.6 schwenk-rechts ein="calls>FROM THE RIGHT"] And then Mom calls again. From the right.
 // Nahaufnahme: Mama, gleiche Stimme
 [gesicht mama ort=waldnacht besorgt palette=blau palette_staerke=0.6] “Honey, not that way! Over here!”
 // Nahaufnahme: Ben
@@ -51,13 +51,13 @@
 
 == Wendung ==
 // Wald links
-[waldnacht palette=blau palette_staerke=0.6 wackeln=0.2] From the left, the voice answers right away. “Lighthouse! Lighthouse!” It just repeats your word.
+[waldnacht palette=blau palette_staerke=0.6 wackeln=0.2 ein="voice>IT ONLY COPIES>ohr"] From the left, the voice answers right away. “Lighthouse! Lighthouse!” It just repeats your word.
 // Wald rechts, ein kleines Licht blinkt dreimal
-[waldnacht lampe palette=blau palette_staerke=0.6 zoom-rein] From the right, there's no answer. Instead, a small light blinks. Three times. Like a lighthouse.
+[waldnacht lampe palette=blau palette_staerke=0.6 zoom-rein ein="blinks>#3 BLINKS>gluehbirne"] From the right, there's no answer. Instead, a small light blinks. Three times. Like a lighthouse.
 // Nahaufnahme: du verstehst
 [gesicht du ort=waldnacht froh palette=blau palette_staerke=0.6] That's the sign. A voice can be copied. A light can't.
 // Wald: du rennst, Mama, Umarmung
-[waldnacht du mama ben palette=blau palette_staerke=0.6 zoom-rein] You run. Mom is standing in the fog with her phone light. Her jacket smells like rain and gasoline.
+[waldnacht du mama ben palette=blau palette_staerke=0.6 zoom-rein ein="jacket>RAIN & GASOLINE"] You run. Mom is standing in the fog with her phone light. Her jacket smells like rain and gasoline.
 // Nahaufnahme: Mama
 [gesicht mama ort=waldnacht froh palette=blau palette_staerke=0.6] “I'm here. I'm right here.”
 // Nahaufnahme: du weinst und lachst
@@ -67,7 +67,7 @@
 
 == Zuhause ==
 // Hütte innen, alle drei, Kamin
-[wohnzimmer du mama ben licht=an zeit=nacht palette=blau palette_staerke=0.6 zoom-rein] Just before two, the three of you sit by the fireplace. The door is locked twice.
+[wohnzimmer du mama ben licht=an zeit=nacht palette=blau palette_staerke=0.6 zoom-rein ein="two>LOCKED TWICE>schluessel"] Just before two, the three of you sit by the fireplace. The door is locked twice.
 // Nahaufnahme: Ben, still
 [gesicht ben ort=wohnzimmer zeit=nacht besorgt palette=blau palette_staerke=0.6] Ben sits very still next to you. He doesn't even touch the last slice of toast.
 // Nahaufnahme: Mama

@@ -25,11 +25,11 @@
 // Nahaufnahme: du horchst
 [gesicht du ort=wohnzimmer zeit=nacht besorgt palette=blau palette_staerke=0.6] It's been quiet outside for twenty minutes. That's worse than any clicking.
 // Hütte innen, ihr sitzt dicht zusammen
-[wohnzimmer du ben sofa_sitzen zeit=nacht palette=blau palette_staerke=0.6 zoom-rein] You're sitting on the couch under a blanket. The flashlight is pointed at the door.
+[wohnzimmer du ben sofa_sitzen zeit=nacht palette=blau palette_staerke=0.6 zoom-rein ein="flashlight>EYES ON THE DOOR>taschenlampe"] You're sitting on the couch under a blanket. The flashlight is pointed at the door.
 // Nahaufnahme: Ben zählt
 [gesicht ben ort=wohnzimmer zeit=nacht besorgt palette=blau palette_staerke=0.6] Ben counts the logs by the fireplace. Eleven. He counts them three times.
 // Landschaft: See im Mondlicht
-[landschaft zeit=nacht see palette=blau palette_staerke=0.6 zoom-raus] Then the voice comes from the lake. Calm. A little hoarse.
+[landschaft zeit=nacht see palette=blau palette_staerke=0.6 zoom-raus ein="lake>FROM THE LAKE>ohr"] Then the voice comes from the lake. Calm. A little hoarse.
 // Nahaufnahme: Opa, freundlich
 [gesicht opa ort=see zeit=nacht froh palette=blau palette_staerke=0.6] “Benny! Come on, let's go fishing. The perch are biting.”
 // Nahaufnahme: Ben erstarrt
@@ -39,13 +39,13 @@
 // Nahaufnahme: Ben erzählt leise
 [gesicht ben ort=wohnzimmer zeit=nacht traurig palette=blau palette_staerke=0.6] “We came here every Sunday. To this exact lake.”
 // See bei Abend, Steg
-[landschaft zeit=abend see schwenk-rechts palette=blau palette_staerke=0.6] Grandpa taught him to swim here. And how to put a worm on a hook without crying.
+[landschaft zeit=abend see schwenk-rechts palette=blau palette_staerke=0.6 ein="swim>GRANDPA'S LAKE>herz"] Grandpa taught him to swim here. And how to put a worm on a hook without crying.
 // Nahaufnahme: Ben lächelt traurig
 [gesicht ben ort=wohnzimmer zeit=nacht traurig palette=blau palette_staerke=0.6] “He always said: you don't have time. You make time.”
 // Landschaft am See, früher, Tag
-[see opa ben sitzen zeit=abend palette=blau palette_staerke=0.6 schwenk-rechts] Last summer, Grandpa asked one more time. Ben didn't have time. Practice, friends, whatever.
+[see opa ben sitzen zeit=abend palette=blau palette_staerke=0.6 schwenk-rechts ein="summer>LAST SUMMER"] Last summer, Grandpa asked one more time. Ben didn't have time. Practice, friends, whatever.
 // Krankenhaus
-[krankenhaus patient=opa monitor=flach palette=blau palette_staerke=0.6 zoom-rein] Two weeks later, Grandpa was in the hospital. Ben meant to call him back. Tomorrow. Then the day after.
+[krankenhaus patient=opa monitor=flach palette=blau palette_staerke=0.6 zoom-rein ein="Two>#2 WEEKS LATER>medizin"] Two weeks later, Grandpa was in the hospital. Ben meant to call him back. Tomorrow. Then the day after.
 // Nahaufnahme: Ben, Tränen
 [gesicht ben ort=wohnzimmer zeit=nacht traurig palette=blau palette_staerke=0.6] “I never called him back.”
 // Infokarte: Opas Uhr
@@ -63,16 +63,16 @@
 // Nahaufnahme: Ben
 [gesicht ben ort=wohnzimmer zeit=nacht traurig palette=blau palette_staerke=0.6] “I know. I just wanted to hear him one more time.”
 // Wohnzimmer: ihr sitzt wieder
-[wohnzimmer du ben sofa_sitzen zeit=nacht zoom-rein palette=blau palette_staerke=0.6] You sit back down. Ben buries his face in the blanket. Outside, it calls three more times. Then silence.
+[wohnzimmer du ben sofa_sitzen zeit=nacht zoom-rein palette=blau palette_staerke=0.6 ein="three>#3 MORE CALLS>ohr"] You sit back down. Ben buries his face in the blanket. Outside, it calls three more times. Then silence.
 // Nahaufnahme: Ben
 [gesicht ben ort=wohnzimmer zeit=nacht traurig palette=blau palette_staerke=0.6] “If we get out of here, I'm calling everyone. Seriously, everyone.”
 // Wald, Augen ganz schwach am See
-[waldnacht see augen=1 palette=blau palette_staerke=0.6 zoom-raus] And suddenly you realize what that means. It knows Grandpa's voice. So it was here last summer too. It was listening.
+[waldnacht see augen=1 palette=blau palette_staerke=0.6 zoom-raus ein="summer>IT WAS LISTENING>ohr"] And suddenly you realize what that means. It knows Grandpa's voice. So it was here last summer too. It was listening.
 // Nahaufnahme: du, Angst
 [gesicht du ort=wohnzimmer zeit=nacht angst palette=blau palette_staerke=0.6] Who knows how many voices it's collected. Summer after summer.
 
 == Cliffhanger ==
 // Handy: Nachricht von Mama
-[handy ort=wohnzimmer zeit=nacht netz=1 akku=9 uhrzeit="12:47" von="Mom" nachricht="Tree down on the road. Car's stuck. Walking the rest." palette=blau palette_staerke=0.6 zoom-rein] At twelve forty-seven, Mom texts. A tree is down across the road. She's walking the rest. On foot. Through the forest.
+[handy ort=wohnzimmer zeit=nacht netz=1 akku=9 uhrzeit="12:47" von="Mom" nachricht="Tree down on the road. Car's stuck. Walking the rest." palette=blau palette_staerke=0.6 zoom-rein ein="twelve>12:47 AM>uhr"] At twelve forty-seven, Mom texts. A tree is down across the road. She's walking the rest. On foot. Through the forest.
 // Nahaufnahme: du, Entscheidung
 [gesicht du ort=wohnzimmer zeit=nacht entschlossen palette=blau palette_staerke=0.6 zoom-rein] She doesn't know what's waiting out there. You do. You put on your jacket.
