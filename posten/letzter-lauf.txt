@@ -1,6 +1,34 @@
 Verbundene Konten: tiktok:storys4you.de1, instagram:sto.rys4you, youtube:sto.rys4you (2. Zernio-Konto), tiktok:storys4you_eng (2. Zernio-Konto), youtube:storys4you_eng (3. Zernio-Konto), instagram:sory4you_eng (3. Zernio-Konto)
-  taeglich-insta-002: Prüfung ok (Bild, Ton, Lautstärke)
-✓ taeglich-insta-002 eingeplant für 2026-11-13T14:28:00 (6af0629624c4172c4976f178)
-  taeglich-yt-002: Prüfung ok (Bild, Ton, Lautstärke)
-✓ taeglich-yt-002 eingeplant für 2026-11-13T14:27:00 (6af0629824c4172c4976f188)
-Fertig: 2 neu eingeplant, 0 Fehler.
+🗑 taeglich-insta-en-s03-f01 zurückgezogen
+🗑 taeglich-insta-en-s03-f02 zurückgezogen
+🗑 taeglich-insta-en-s03-f03 zurückgezogen
+🗑 taeglich-insta-en-s03-f04 zurückgezogen
+🗑 taeglich-yt-en-s03-f01 zurückgezogen
+🗑 taeglich-yt-en-s03-f02 zurückgezogen
+🗑 taeglich-yt-en-s03-f03 zurückgezogen
+🗑 taeglich-yt-en-s03-f04 zurückgezogen
+🗑 taeglich-tiktok-en-s01-teil-1 zurückgezogen
+🗑 taeglich-tiktok-en-s01-teil-2 zurückgezogen
+🗑 taeglich-tiktok-en-s01-teil-3 zurückgezogen
+🗑 taeglich-tiktok-en-s01-teil-4 zurückgezogen
+🗑 taeglich-insta-en-s01-f01 zurückgezogen
+🗑 taeglich-insta-en-s01-f02 zurückgezogen
+🗑 taeglich-insta-en-s01-f03 zurückgezogen
+🗑 taeglich-insta-en-s01-f04 zurückgezogen
+🗑 taeglich-insta-en-s01-f05 zurückgezogen
+🗑 taeglich-insta-en-s01-f06 zurückgezogen
+🗑 taeglich-insta-en-s01-f07 zurückgezogen
+🗑 taeglich-insta-en-s01-f08 zurückgezogen
+🗑 taeglich-insta-en-s01-f09 zurückgezogen
+🗑 taeglich-insta-en-s01-f10 zurückgezogen
+🗑 taeglich-yt-en-s01-f01 zurückgezogen
+🗑 taeglich-yt-en-s01-f02 zurückgezogen
+🗑 taeglich-yt-en-s01-f03 zurückgezogen
+🗑 taeglich-yt-en-s01-f04 zurückgezogen
+🗑 taeglich-yt-en-s01-f05 zurückgezogen
+🗑 taeglich-yt-en-s01-f06 zurückgezogen
+🗑 taeglich-yt-en-s01-f07 zurückgezogen
+🗑 taeglich-yt-en-s01-f08 zurückgezogen
+🗑 taeglich-yt-en-s01-f09 zurückgezogen
+🗑 taeglich-yt-en-s01-f10 zurückgezogen
+Fertig: 0 neu eingeplant, 0 Fehler.
