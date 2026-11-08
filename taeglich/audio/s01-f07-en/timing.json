@@ -1,12 +1,12 @@
 {
- "dauer": 83.844,
+ "dauer": 86.412,
  "einstellungen": [
   {
    "nr": 1,
    "typ": "netz",
    "kapitel": 1,
    "start": 0.0,
-   "dauer": 8.27,
+   "dauer": 5.918,
    "emotion": "erzaehlend",
    "text": "Someone needs a doctor right now. And not a single phone in the world works."
   },
@@ -14,8 +14,8 @@
    "nr": 2,
    "typ": "wohnzimmer",
    "kapitel": 1,
-   "start": 8.27,
-   "dauer": 3.326,
+   "start": 5.918,
+   "dauer": 6.086,
    "emotion": "erzaehlend",
    "text": "Grandpa's breathing is shallow. Lina is holding his hand. Ben is pacing in circles."
   },
@@ -23,8 +23,8 @@
    "nr": 3,
    "typ": "gesicht",
    "kapitel": 2,
-   "start": 11.596,
-   "dauer": 4.31,
+   "start": 12.004,
+   "dauer": 4.358,
    "emotion": "spannend",
    "text": "You go to dial the emergency number. Out of habit. No bars."
   },
@@ -32,8 +32,8 @@
    "nr": 4,
    "typ": "gesicht",
    "kapitel": 2,
-   "start": 15.906,
-   "dauer": 5.03,
+   "start": 16.362,
+   "dauer": 5.846,
    "emotion": "ernst",
    "text": "Then the old radio man opens up his set. “Stay calm. This is what this is for.”"
   },
@@ -41,8 +41,8 @@
    "nr": 5,
    "typ": "objekt",
    "kapitel": 2,
-   "start": 20.936,
-   "dauer": 5.798,
+   "start": 22.208,
+   "dauer": 5.582,
    "emotion": "erklaerend",
    "text": "During big outages, ham radio operators help pass messages along. No network needed."
   },
@@ -50,8 +50,8 @@
    "nr": 6,
    "typ": "grossstadt",
    "kapitel": 2,
-   "start": 26.734,
-   "dauer": 5.606,
+   "start": 27.79,
+   "dauer": 5.462,
    "emotion": "erzaehlend",
    "text": "His call goes from operator to operator. Right across the city. All the way to the fire department."
   },
@@ -59,8 +59,8 @@
    "nr": 7,
    "typ": "gesicht",
    "kapitel": 3,
-   "start": 32.34,
-   "dauer": 3.878,
+   "start": 33.252,
+   "dauer": 4.214,
    "emotion": "erzaehlend",
    "text": "Then it crackles. “Ambulance is on the way. Ten minutes.”"
   },
@@ -68,8 +68,8 @@
    "nr": 8,
    "typ": "gesicht",
    "kapitel": 3,
-   "start": 36.218,
-   "dauer": 5.414,
+   "start": 37.466,
+   "dauer": 5.318,
    "emotion": "ruhig",
    "text": "Ten minutes can be a very long time. Grandpa squeezes your hand. Very weakly."
   },
@@ -77,8 +77,8 @@
    "nr": 9,
    "typ": "landschaft",
    "kapitel": 3,
-   "start": 41.632,
-   "dauer": 5.054,
+   "start": 42.784,
+   "dauer": 5.198,
    "emotion": "erzaehlend",
    "text": "Then you see it. Flashing blue lights. In the middle of a city with no lights."
   },
@@ -86,8 +86,8 @@
    "nr": 10,
    "typ": "krankenhaus",
    "kapitel": 3,
-   "start": 46.686,
-   "dauer": 5.87,
+   "start": 47.982,
+   "dauer": 6.014,
    "emotion": "erzaehlend",
    "text": "The hospital runs on emergency power. Big generators in the basement that kick in when the grid goes down."
   },
@@ -95,8 +95,8 @@
    "nr": 11,
    "typ": "gesicht",
    "kapitel": 3,
-   "start": 52.556,
-   "dauer": 4.214,
+   "start": 53.996,
+   "dauer": 4.382,
    "emotion": "ernst",
    "text": "The doctors are working with paper and ballpoint pens. Like the old days."
   },
@@ -104,8 +104,8 @@
    "nr": 12,
    "typ": "krankenhaus",
    "kapitel": 4,
-   "start": 56.77,
-   "dauer": 5.054,
+   "start": 58.378,
+   "dauer": 5.39,
    "emotion": "erzaehlend",
    "text": "And then the door opens. Mom. Dad. The radio man's note found them."
   },
@@ -113,8 +113,8 @@
    "nr": 13,
    "typ": "gesicht",
    "kapitel": 4,
-   "start": 61.824,
-   "dauer": 4.382,
+   "start": 63.768,
+   "dauer": 4.238,
    "emotion": "froh",
    "text": "Mom doesn't say a word. She just holds on to you. Both of you."
   },
@@ -122,8 +122,8 @@
    "nr": 14,
    "typ": "gesicht",
    "kapitel": 4,
-   "start": 66.206,
-   "dauer": 3.902,
+   "start": 68.006,
+   "dauer": 4.094,
    "emotion": "traurig",
    "text": "Dad sits down next to Grandpa. “We should have come so much more often.”"
   },
@@ -131,8 +131,8 @@
    "nr": 15,
    "typ": "gesicht",
    "kapitel": 4,
-   "start": 70.108,
-   "dauer": 3.086,
+   "start": 72.1,
+   "dauer": 3.374,
    "emotion": "froh",
    "text": "Grandpa smiles. “Well, you're here now.”"
   },
@@ -140,8 +140,8 @@
    "nr": 16,
    "typ": "krankenhaus",
    "kapitel": 4,
-   "start": 73.194,
-   "dauer": 3.134,
+   "start": 75.474,
+   "dauer": 3.062,
    "emotion": "erzaehlend",
    "text": "The doctor says: he's stable. You can stay."
   },
@@ -149,8 +149,8 @@
    "nr": 17,
    "typ": "polarlicht",
    "kapitel": 5,
-   "start": 76.328,
-   "dauer": 3.374,
+   "start": 78.536,
+   "dauer": 3.278,
    "emotion": "erzaehlend",
    "text": "Through the window, you watch the sky slowly turn green."
   },
@@ -158,8 +158,8 @@
    "nr": 18,
    "typ": "gesicht",
    "kapitel": 5,
-   "start": 79.702,
-   "dauer": 4.142,
+   "start": 81.814,
+   "dauer": 4.598,
    "emotion": "spannend",
    "text": "The second storm is here. And all over the hospital, the lights go out."
   }
