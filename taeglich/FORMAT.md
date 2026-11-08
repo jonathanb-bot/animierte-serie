@@ -182,7 +182,7 @@ Jonathan: „Die Videos müssen noch aufwendiger werden, mit Einblendungen, an D
   - Höchstens 2 Etiketten pro Einstellung, Höhe mit `ein_y=` (Standard 470; tiefer setzen, wenn oben ein Hook-Text oder ein Gesicht ist).
 - **Wie viele:** pro Folge **mindestens 6 Einstellungen mit `ein=`**, vor allem bei Zahlen, Uhrzeiten, Namen neuer Figuren, Orten, Regeln, Beweisstücken, Gefühlen. Nicht in jeder Einstellung: Ruhe-Bilder bleiben ruhig (Wechsel aus Detail und Ruhe). Nie auf Gesichter legen.
 - **Wie bei Dinge Erklärt:** Zahlen werden gezeigt, nicht nur gesagt. Fakten bekommen ein Icon. Zusammenhänge mit `[objekt …]`-Karten (zwei Dinge nebeneinander, vorher/nachher), Abläufe in Schritten über mehrere Einstellungen.
-- **Studio-Stimme (noch nicht freigegeben):** Kopf `@klang studio` **nur, wenn Jonathan die Hörprobe B gewählt hat** (seine Regel 7.11.: keine Effekte auf der Stimme). Bis dahin ohne `@klang`. Nach Gemini kommen Rumpelfilter, etwas Wärme (170 Hz) und Präsenz (3 kHz), weniger Zischlaute, sanfte Kompression. Stimme bleibt „Orus“, Tonhöhe wie immer unter 1,5 HT.
+- **Studio-Stimme (von Jonathan am 8.11. freigegeben: „Lautstärke und Klang perfekt“):** Kopf immer `@klang studio`. Das ist nur eine saubere Klangbearbeitung, kein Hall, kein Flüstern, keine Verzerrung (Regel 7.11. bleibt). Nach Gemini kommen Rumpelfilter, etwas Wärme (170 Hz) und Präsenz (3 kHz), weniger Zischlaute, sanfte Kompression. Stimme bleibt „Orus“, Tonhöhe wie immer unter 1,5 HT.
 - **Prüfen:** In den Standbildern muss jedes Etikett lesbar sein und darf nichts Wichtiges verdecken.
 
 ## Qualität: schärfer, flüssiger, detailreicher, bessere Geschichten (Jonathans Wunsch 3.11., Issue #20)
