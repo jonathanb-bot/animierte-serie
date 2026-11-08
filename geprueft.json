@@ -1746,6 +1746,12 @@
    "bild_s": 167.48,
    "ton_s": 167.49,
    "lufs": -14.6
+  },
+  "taeglich/video-002.mp4": {
+   "ok": true,
+   "bild_s": 67.4,
+   "ton_s": 67.41,
+   "lufs": -14.6
   }
  },
  "serien": {
@@ -1934,6 +1940,10 @@
   "video-001": {
    "titel": "Die Zeit, die dir bleibt",
    "datei": "taeglich/video-001.mp4"
+  },
+  "video-002": {
+   "titel": "Ein Prozent",
+   "datei": "taeglich/video-002.mp4"
   }
  },
  "taeglich_staffeln": {
