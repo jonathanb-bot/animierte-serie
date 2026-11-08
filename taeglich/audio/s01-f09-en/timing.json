@@ -1,0 +1,167 @@
+{
+ "dauer": 77.364,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "handy",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 4.574,
+   "emotion": "erzaehlend",
+   "text": "A message took three days to reach you. And it's from your grandpa."
+  },
+  {
+   "nr": 2,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 4.574,
+   "dauer": 3.254,
+   "emotion": "traurig",
+   "text": "Grandpa wrote it right before the network went down."
+  },
+  {
+   "nr": 3,
+   "typ": "zimmer",
+   "kapitel": 1,
+   "start": 7.828,
+   "dauer": 4.574,
+   "emotion": "erzaehlend",
+   "text": "And now you remember. You saw that he was typing. And you thought: later."
+  },
+  {
+   "nr": 4,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 12.402,
+   "dauer": 3.278,
+   "emotion": "traurig",
+   "text": "Later. We all say it. Way too often."
+  },
+  {
+   "nr": 5,
+   "typ": "netz",
+   "kapitel": 2,
+   "start": 15.68,
+   "dauer": 5.246,
+   "emotion": "erzaehlend",
+   "text": "The next morning, the network comes back. Node by node. City by city."
+  },
+  {
+   "nr": 6,
+   "typ": "grossstadt",
+   "kapitel": 2,
+   "start": 20.926,
+   "dauer": 5.366,
+   "emotion": "erzaehlend",
+   "text": "The traffic lights come back on. The bakery takes cards again. Like nothing ever happened."
+  },
+  {
+   "nr": 7,
+   "typ": "handy",
+   "kapitel": 2,
+   "start": 26.292,
+   "dauer": 4.526,
+   "emotion": "erzaehlend",
+   "text": "And your phone explodes. More than three hundred messages."
+  },
+  {
+   "nr": 8,
+   "typ": "esstisch",
+   "kapitel": 3,
+   "start": 30.818,
+   "dauer": 4.526,
+   "emotion": "erzaehlend",
+   "text": "That evening, you're all at the dinner table again. And everyone is staring at their phone."
+  },
+  {
+   "nr": 9,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 35.344,
+   "dauer": 5.174,
+   "emotion": "ernst",
+   "text": "You look up. And you see it. It's just like before. Exactly like before."
+  },
+  {
+   "nr": 10,
+   "typ": "lebenszeit",
+   "kapitel": 3,
+   "start": 40.518,
+   "dauer": 5.558,
+   "emotion": "erzaehlend",
+   "text": "Night after night. Week after week. Next to each other, but not together."
+  },
+  {
+   "nr": 11,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 46.076,
+   "dauer": 4.238,
+   "emotion": "ernst",
+   "text": "So you get up. You grab the big fruit bowl. And you put your phone in it."
+  },
+  {
+   "nr": 12,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 50.314,
+   "dauer": 2.702,
+   "emotion": "froh",
+   "text": "Lina puts hers in too. Right away."
+  },
+  {
+   "nr": 13,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 53.016,
+   "dauer": 5.438,
+   "emotion": "froh",
+   "text": "Dad hesitates. Then he drops his in as well. “Fine. Radio silence.”"
+  },
+  {
+   "nr": 14,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 58.454,
+   "dauer": 5.246,
+   "emotion": "froh",
+   "text": "Mom says, “Three days without a network. And we talked more than we have all year.”"
+  },
+  {
+   "nr": 15,
+   "typ": "esstisch",
+   "kapitel": 4,
+   "start": 63.7,
+   "dauer": 4.07,
+   "emotion": "erzaehlend",
+   "text": "You eat. You talk. And nobody wants to be the first to get up."
+  },
+  {
+   "nr": 16,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 67.77,
+   "dauer": 3.038,
+   "emotion": "ernst",
+   "text": "Then Dad says, “Grandpa gets to go home tomorrow.”"
+  },
+  {
+   "nr": 17,
+   "typ": "krankenhaus",
+   "kapitel": 5,
+   "start": 70.808,
+   "dauer": 4.022,
+   "emotion": "erzaehlend",
+   "text": "The next day, you pick him up. But Grandpa doesn't want to get up."
+  },
+  {
+   "nr": 18,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 74.83,
+   "dauer": 2.534,
+   "emotion": "traurig",
+   "text": "“Home? There's nobody waiting for me there.”"
+  }
+ ]
+}
