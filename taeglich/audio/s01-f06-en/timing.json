@@ -1,0 +1,167 @@
+{
+ "dauer": 84.54,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "landschaft",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 5.918,
+   "emotion": "erzaehlend",
+   "text": "An old man has been sitting alone in the dark for two days. And nobody has checked on him."
+  },
+  {
+   "nr": 2,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 5.918,
+   "dauer": 3.758,
+   "emotion": "ernst",
+   "text": "It's your grandpa. You walked all day to get to him."
+  },
+  {
+   "nr": 3,
+   "typ": "wohnzimmer",
+   "kapitel": 2,
+   "start": 9.676,
+   "dauer": 5.942,
+   "emotion": "erzaehlend",
+   "text": "Grandpa is sitting in the living room. One candle. One crossword puzzle. That's it."
+  },
+  {
+   "nr": 4,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 15.618,
+   "dauer": 2.03,
+   "emotion": "spannend",
+   "text": "He looks up. “You came?”"
+  },
+  {
+   "nr": 5,
+   "typ": "wohnzimmer",
+   "kapitel": 2,
+   "start": 17.648,
+   "dauer": 6.446,
+   "emotion": "erzaehlend",
+   "text": "Lina throws her arms around his neck. Grandpa laughs. And coughs. And laughs again."
+  },
+  {
+   "nr": 6,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 24.094,
+   "dauer": 3.926,
+   "emotion": "traurig",
+   "text": "“Oh, kids. Radio silence is nothing new for me.”"
+  },
+  {
+   "nr": 7,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 28.02,
+   "dauer": 4.838,
+   "emotion": "traurig",
+   "text": "“Nobody rings for me anyway. Not the phone. Not the doorbell either.”"
+  },
+  {
+   "nr": 8,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 32.858,
+   "dauer": 3.134,
+   "emotion": "traurig",
+   "text": "That hits you right in the chest. Because he's right."
+  },
+  {
+   "nr": 9,
+   "typ": "objekt",
+   "kapitel": 3,
+   "start": 35.992,
+   "dauer": 4.118,
+   "emotion": "erklaerend",
+   "text": "You see him on birthdays. At Christmas. Maybe at Easter."
+  },
+  {
+   "nr": 10,
+   "typ": "titel",
+   "kapitel": 3,
+   "start": 40.11,
+   "dauer": 6.638,
+   "emotion": "erzaehlend",
+   "text": "If things stay like this, you might see him forty more times. Forty afternoons. That's it."
+  },
+  {
+   "nr": 11,
+   "typ": "lebenszeit",
+   "kapitel": 3,
+   "start": 46.748,
+   "dauer": 4.79,
+   "emotion": "erzaehlend",
+   "text": "And every week that goes by never comes back. Not for Grandpa either."
+  },
+  {
+   "nr": 12,
+   "typ": "landschaft",
+   "kapitel": 3,
+   "start": 51.538,
+   "dauer": 4.67,
+   "emotion": "erzaehlend",
+   "text": "Outside, it's getting dark. The second storm isn't far off."
+  },
+  {
+   "nr": 13,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 56.208,
+   "dauer": 6.11,
+   "emotion": "ernst",
+   "text": "Lina asks about the heart pills. Grandpa waves it off. “I've got two left. That's enough.”"
+  },
+  {
+   "nr": 14,
+   "typ": "objekt",
+   "kapitel": 4,
+   "start": 62.318,
+   "dauer": 5.966,
+   "emotion": "erklaerend",
+   "text": "Two pills. Today and tomorrow. And without computers, the pharmacies are closed."
+  },
+  {
+   "nr": 15,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 68.284,
+   "dauer": 3.83,
+   "emotion": "traurig",
+   "text": "Ben doesn't say anything. But he's thinking the same thing you are."
+  },
+  {
+   "nr": 16,
+   "typ": "wohnzimmer",
+   "kapitel": 4,
+   "start": 72.114,
+   "dauer": 3.926,
+   "emotion": "erzaehlend",
+   "text": "You sit down with him. Grandpa tells stories from the old days."
+  },
+  {
+   "nr": 17,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 76.04,
+   "dauer": 2.918,
+   "emotion": "spannend",
+   "text": "In the middle of a sentence, he stops talking."
+  },
+  {
+   "nr": 18,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 78.958,
+   "dauer": 5.582,
+   "emotion": "spannend",
+   "text": "His face turns gray. He grabs his chest. And slowly sinks into the armchair."
+  }
+ ]
+}
