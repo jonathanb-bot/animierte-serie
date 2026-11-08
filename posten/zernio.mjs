@@ -273,7 +273,7 @@ async function pruefe(url) {
     const r = await fetch(url);
     if (!r.ok) return `Video nicht abrufbar (HTTP ${r.status})`;
     fs.writeFileSync(tmp, Buffer.from(await r.arrayBuffer()));
-    const dauer = s => Number(spawnSync("ffprobe", ["-v", "error", "-select_streams", s, "-show_entries", "stream=duration", "-of", "csv=p=0", tmp]).stdout.toString().trim() || 0);
+    const dauer = s => Number(spawnSync("ffprobe", ["-v", "error", "-select_streams", s, "-show_entries", "stream=duration", "-of", "csv=p=0", tmp]).stdout.toString().trim().split(/[\n,]/)[0] || 0); // nur die erste Zahl (neuere ffmpeg hängen „,“ an)
     const v = dauer("v:0"), a = dauer("a:0");
     if (!v) return "keine Bildspur";
     if (!a) return "keine Tonspur";
