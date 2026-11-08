@@ -293,7 +293,55 @@
    "erkenntnis": "s02-f01 bleibt auf Instagram über 36 h bei 45,8/h und Ø 40 s, s01 (Rätsel-Einstieg) bleibt im Test-Topf; video-001 (Aussage über dein Leben) hat den stärksten TikTok-Start aller Posts; englisches YouTube wird ausgespielt, deutsches nicht.",
    "posting_fehler": 0,
    "vidiq_credits_danach": 109
+  },
+  {
+   "datum": "2026-11-08T21:50",
+   "quelle": "Analyse vor der Staffel (Zernio 181 Posts, 0 Posting-Fehler, YouTube-Analytics HTTP 429 Tageskontingent; vidIQ heute nicht abgefragt)",
+   "tiktok": {
+    "follower": 69,
+    "follower_30_tage": "+18/-0",
+    "likes_30_tage": 1501,
+    "videos": 29,
+    "taeglich_de": "s01-Teile 1–4, s02-Teil 1: 250–284 Aufrufe je Post (Test-Topf)",
+    "s03": "Teil 1 269 Aufrufe (12 h), 34/14/10 % nach 3/6/9 s; Teil 2 163 (7 h), 18/10 % nach 3/6 s – schwächster Start aller Kurzvideos",
+    "video_001_v2": "441 Aufrufe in 24 h, 41 Likes, 3 Saves, 1 Share, 57/46/36 % nach 3/6/10 s, Abschluss 13,1 % (Bestwert bestätigt)"
+   },
+   "tiktok_eng": {
+    "konto": "storys4you_eng",
+    "follower": 1,
+    "likes_30_tage": 74,
+    "videos": 12,
+    "s02": "255–959 Aufrufe je Teil",
+    "s03": "Teil 1 273, 23 % nach 3 s"
+   },
+   "instagram": {
+    "follower": 8,
+    "aufrufe_30_tage": 32542,
+    "reichweite_30_tage": 16623,
+    "aktive_konten": 302,
+    "interaktionen_30_tage": 438,
+    "s02_f01": "1.658 Aufrufe in 58 h (steht), Ø 39,9 s",
+    "s01_f09": "334 Aufrufe in 5 h, 8 Likes (Hook mit „deinem Opa“) – einzige s01-Folge über dem Test-Topf",
+    "s01_rest": "127–178 Aufrufe je Reel, Ø 7–20 s"
+   },
+   "instagram_eng": {
+    "follower": 1,
+    "aufrufe_30_tage": 613
+   },
+   "youtube": {
+    "abonnenten": 53,
+    "aufrufe_gesamt_zernio": 22625,
+    "aufrufe_letzter_tag_ca": 151,
+    "taeglich_de": "s01/s02 Median 17 Aufrufe je Short (1–220)"
+   },
+   "youtube_eng": {
+    "abonnenten": 10,
+    "s02": "Median 252 Aufrufe je Short (4–1.253)"
+   },
+   "erkenntnis": "Horror lang (s03) verliert auf TikTok zwischen 3 und 6 s am meisten (34→14 %), weil nach dem Hook Vorgeschichte kommt; Hooks mit dir und deiner Familie (video-001, s01-f09, s02-f01) halten. YouTube deutsch weiter gedrosselt.",
+   "posting_fehler": 0,
+   "vidiq_credits_danach": 109
   }
  ],
- "letzte_analyse": "taeglich/analyse/2026-11-07.md"
+ "letzte_analyse": "taeglich/analyse/2026-11-08.md"
 }
