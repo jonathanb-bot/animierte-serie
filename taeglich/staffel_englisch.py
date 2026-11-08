@@ -3,7 +3,7 @@ YouTube (3. Zernio-Konto, Jonathans Wunsch 3.11.).
 
     python taeglich/staffel_englisch.py s02            # alles
     python taeglich/staffel_englisch.py s02 --probe    # prüfen und vorbereiten, nichts pushen
-    python taeglich/staffel_englisch.py s02 --ersetzen v2   # neu gerenderte Fassung: alte englische Posts zurückziehen
+    python taeglich/staffel_englisch.py s02 --ersetzen v2 [--ohne-tiktok]   # neu gerenderte Fassung: alte englische Posts zurückziehen
                                                             # (plan.loeschen) und alles neu einplanen, IDs mit „-v2“
 
 - Nur TikTok, Account storys4you_eng (2. Zernio-Konto). Sammelteile wie auf Deutsch (Issue #7), gleiche Teilgrenzen.
@@ -77,6 +77,8 @@ def main(argv=None) -> int:
     ap.add_argument("staffel")
     ap.add_argument("--probe", action="store_true")
     ap.add_argument("--ersetzen", metavar="SUFFIX", help="alte englische Posts der Staffel zurückziehen, neue IDs mit -SUFFIX")
+    ap.add_argument("--ohne-tiktok", action="store_true",
+                    help="TikTok nicht anfassen (z. B. wenn die TikTok-Teile schon gelaufen sind), nur Instagram/YouTube")
     a = ap.parse_args(argv)
 
     daten = json.loads(S.STAFFELN.read_text(encoding="utf-8"))
@@ -148,12 +150,12 @@ def main(argv=None) -> int:
     endung = f"-{a.ersetzen}" if a.ersetzen else ""
     if a.ersetzen:  # 5.11.: Stimme neu – alte Fassung überall zurückziehen, auch schon gelaufene Teile
         alt = [p["id"] for p in plan["posts"] if p.get("serie") == "taeglich-en" and p["id"] not in loeschen
-               and re.match(rf"taeglich-(tiktok|insta|yt)-en-{a.staffel}-", p["id"]) and not p["id"].endswith(endung)]
+               and re.match(rf"taeglich-({'insta|yt' if a.ohne_tiktok else 'tiktok|insta|yt'})-en-{a.staffel}-", p["id"]) and not p["id"].endswith(endung)]
         plan.setdefault("loeschen", []).extend(alt); loeschen |= set(alt)
         print(f"  {len(alt)} alte englische Posts zurückgezogen")
     frueh = dt.datetime.now(V.BERLIN).replace(tzinfo=None, second=0, microsecond=0) + S.VORLAUF
     tags_txt, em = " ".join(en["hashtags"]), st.get("emoji", "")
-    neu_teile = [t for t in teile if f"taeglich-tiktok-en-{a.staffel}-teil-{t['k']}{endung}" not in ids]
+    neu_teile = [] if a.ohne_tiktok else [t for t in teile if f"taeglich-tiktok-en-{a.staffel}-teil-{t['k']}{endung}" not in ids]
     neu = []
     for t, z in zip(neu_teile, zeiten_en(plan, loeschen, a.staffel, neu_teile, frueh)):
         post = {"id": f"taeglich-tiktok-en-{a.staffel}-teil-{t['k']}{endung}", "platform": "tiktok", "konto": KONTO_EN,
