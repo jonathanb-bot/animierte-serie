@@ -1,0 +1,167 @@
+{
+ "dauer": 75.396,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "grossstadt",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 5.774,
+   "emotion": "erzaehlend",
+   "text": "You're standing in the middle of the city. And suddenly, every light goes out."
+  },
+  {
+   "nr": 2,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 5.774,
+   "dauer": 4.334,
+   "emotion": "spannend",
+   "text": "First one street. Then the next one. Then everything."
+  },
+  {
+   "nr": 3,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 10.108,
+   "dauer": 4.646,
+   "emotion": "spannend",
+   "text": "Ben flicks on his bike light. “Okay. Now it's serious.”"
+  },
+  {
+   "nr": 4,
+   "typ": "weltall",
+   "kapitel": 2,
+   "start": 14.754,
+   "dauer": 4.31,
+   "emotion": "erzaehlend",
+   "text": "From above, it would look like someone switched off entire countries."
+  },
+  {
+   "nr": 5,
+   "typ": "netz",
+   "kapitel": 2,
+   "start": 19.064,
+   "dauer": 4.838,
+   "emotion": "erzaehlend",
+   "text": "A lot of cell towers have backup batteries. But they often only last a few hours."
+  },
+  {
+   "nr": 6,
+   "typ": "objekt",
+   "kapitel": 2,
+   "start": 23.902,
+   "dauer": 6.398,
+   "emotion": "erklaerend",
+   "text": "Without power, there are no traffic lights. No registers. And eventually, no water pumps."
+  },
+  {
+   "nr": 7,
+   "typ": "haltestelle",
+   "kapitel": 3,
+   "start": 30.3,
+   "dauer": 4.574,
+   "emotion": "erzaehlend",
+   "text": "You keep walking. Mile after mile. It starts to rain."
+  },
+  {
+   "nr": 8,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 34.874,
+   "dauer": 4.286,
+   "emotion": "ernst",
+   "text": "Somewhere out there is Lina. Alone. In the dark."
+  },
+  {
+   "nr": 9,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 39.16,
+   "dauer": 3.182,
+   "emotion": "ernst",
+   "text": "“She's smart. Smarter than the two of us put together.”"
+  },
+  {
+   "nr": 10,
+   "typ": "park",
+   "kapitel": 3,
+   "start": 42.342,
+   "dauer": 3.95,
+   "emotion": "erzaehlend",
+   "text": "By the park, it's so dark you can barely see your own hand."
+  },
+  {
+   "nr": 11,
+   "typ": "landschaft",
+   "kapitel": 3,
+   "start": 46.292,
+   "dauer": 3.254,
+   "emotion": "erzaehlend",
+   "text": "Then you remember something. From back when Lina was little."
+  },
+  {
+   "nr": 12,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 49.546,
+   "dauer": 4.094,
+   "emotion": "froh",
+   "text": "You two had a signal. Just you two. Three short whistles."
+  },
+  {
+   "nr": 13,
+   "typ": "objekt",
+   "kapitel": 4,
+   "start": 53.64,
+   "dauer": 4.118,
+   "emotion": "erklaerend",
+   "text": "Whoever hears it whistles back. So you'd never lose each other at the mall."
+  },
+  {
+   "nr": 14,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 57.758,
+   "dauer": 4.31,
+   "emotion": "ernst",
+   "text": "You stand in the middle of the park. And you whistle. Three short ones."
+  },
+  {
+   "nr": 15,
+   "typ": "park",
+   "kapitel": 4,
+   "start": 62.068,
+   "dauer": 1.958,
+   "emotion": "erzaehlend",
+   "text": "Nothing. Just the rain."
+  },
+  {
+   "nr": 16,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 64.026,
+   "dauer": 2.75,
+   "emotion": "traurig",
+   "text": "“Come on. Maybe she's already at your grandpa's.”"
+  },
+  {
+   "nr": 17,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 66.776,
+   "dauer": 2.462,
+   "emotion": "erzaehlend",
+   "text": "You turn around. And then you hear it."
+  },
+  {
+   "nr": 18,
+   "typ": "landschaft",
+   "kapitel": 5,
+   "start": 69.238,
+   "dauer": 6.158,
+   "emotion": "erzaehlend",
+   "text": "Out of the dark, someone whistles back. Three short ones. Your signal exactly."
+  }
+ ]
+}
