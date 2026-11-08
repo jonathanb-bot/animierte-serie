@@ -143,6 +143,10 @@ def ablegen(vid: str, datei: Path, ergebnis: dict, eintrag: dict, probe: bool) -
                         '+ sorted((ROOT / "24-stock-kurz").glob("*.mp4")) + sorted((ROOT / "taeglich").glob("*.mp4")):')
         (yu / "pruefen.py").write_text(pp, encoding="utf-8")
     lauf("git", "add", "-A", cwd=yu)
+    # liegt das Video schon unverändert dort (z. B. TikTok und Instagram/YouTube getrennt eingeplant, 8.11.), nichts committen
+    if subprocess.run(["git", "diff", "--cached", "--quiet"], cwd=yu).returncode == 0:
+        print(f"youtube-upload/taeglich/{vid}.mp4 liegt schon unverändert da")
+        return
     lauf("git", "commit", "-q", "-m", commit_text(f"Kurzvideo {vid}: {eintrag['titel']} (geprüft: {ergebnis['lufs']} LUFS, {ergebnis['bild_s']} s)"), cwd=yu)
     if probe:
         print("(Probe) youtube-upload: Commit vorbereitet, nicht gepusht")

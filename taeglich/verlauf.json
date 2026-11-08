@@ -75,7 +75,16 @@
     "animation",
     "deutsch"
    ],
-   "emoji": "📈"
+   "emoji": "📈",
+   "veroeffentlicht": {
+    "video": "https://raw.githubusercontent.com/jonathanb-bot/animierte-serie/youtube-upload/taeglich/video-002.mp4",
+    "geplant": {
+     "instagram": "2026-11-13T14:28:00",
+     "youtube": "2026-11-13T14:27:00"
+    },
+    "lufs": -14.6,
+    "dauer_s": 67.4
+   }
   }
  ]
 }
