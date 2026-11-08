@@ -1,0 +1,167 @@
+{
+ "dauer": 76.476,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "landschaft",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 5.126,
+   "emotion": "erzaehlend",
+   "text": "An old man believes nobody is waiting for him. And he couldn't be more wrong."
+  },
+  {
+   "nr": 2,
+   "typ": "krankenhaus",
+   "kapitel": 1,
+   "start": 5.126,
+   "dauer": 2.966,
+   "emotion": "erzaehlend",
+   "text": "You sit down next to your grandpa on the hospital bed."
+  },
+  {
+   "nr": 3,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 8.092,
+   "dauer": 4.454,
+   "emotion": "ernst",
+   "text": "“We are, Grandpa. We're waiting. Every Sunday from now on.”"
+  },
+  {
+   "nr": 4,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 12.546,
+   "dauer": 5.678,
+   "emotion": "ernst",
+   "text": "Grandpa looks at you for a long time. “Every Sunday? You've all got so much going on.”"
+  },
+  {
+   "nr": 5,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 18.224,
+   "dauer": 4.454,
+   "emotion": "froh",
+   "text": "Lina crosses her arms. “You have no idea how boring the internet is.”"
+  },
+  {
+   "nr": 6,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 22.678,
+   "dauer": 3.254,
+   "emotion": "froh",
+   "text": "Grandpa laughs so loud the nurse sticks her head in the door."
+  },
+  {
+   "nr": 7,
+   "typ": "lebenszeit",
+   "kapitel": 3,
+   "start": 25.932,
+   "dauer": 4.91,
+   "emotion": "erzaehlend",
+   "text": "Forty afternoons, you thought. If you come every Sunday, that turns into hundreds."
+  },
+  {
+   "nr": 8,
+   "typ": "esstisch",
+   "kapitel": 3,
+   "start": 30.842,
+   "dauer": 6.446,
+   "emotion": "erzaehlend",
+   "text": "The first Sunday. Mom bakes. Dad burns the potatoes. Grandpa eats three plates anyway."
+  },
+  {
+   "nr": 9,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 37.288,
+   "dauer": 3.182,
+   "emotion": "froh",
+   "text": "The phones stay in the fruit bowl. Nobody misses them."
+  },
+  {
+   "nr": 10,
+   "typ": "esstisch",
+   "kapitel": 3,
+   "start": 40.47,
+   "dauer": 4.958,
+   "emotion": "erzaehlend",
+   "text": "The second Sunday, Ben brings his mom. And the old radio man comes too."
+  },
+  {
+   "nr": 11,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 45.428,
+   "dauer": 3.326,
+   "emotion": "froh",
+   "text": "He says his Sunday hasn't been this full in twenty years."
+  },
+  {
+   "nr": 12,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 48.754,
+   "dauer": 4.454,
+   "emotion": "froh",
+   "text": "Grandpa and him start arguing about soccer right away. Like two old friends."
+  },
+  {
+   "nr": 13,
+   "typ": "see",
+   "kapitel": 4,
+   "start": 53.208,
+   "dauer": 5.054,
+   "emotion": "erzaehlend",
+   "text": "In the summer, you all go to the lake together. Grandpa tells stories you've never heard before."
+  },
+  {
+   "nr": 14,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 58.262,
+   "dauer": 3.734,
+   "emotion": "froh",
+   "text": "And you realize: you almost missed every single one of them."
+  },
+  {
+   "nr": 15,
+   "typ": "wald",
+   "kapitel": 4,
+   "start": 61.996,
+   "dauer": 4.262,
+   "emotion": "erzaehlend",
+   "text": "Not because of a storm. Because of one single word. Later."
+  },
+  {
+   "nr": 16,
+   "typ": "landschaft",
+   "kapitel": 4,
+   "start": 66.258,
+   "dauer": 4.214,
+   "emotion": "erzaehlend",
+   "text": "The network has been back for a long time now. But Sunday stays."
+  },
+  {
+   "nr": 17,
+   "typ": "weltall",
+   "kapitel": 5,
+   "start": 70.472,
+   "dauer": 2.846,
+   "emotion": "erzaehlend",
+   "text": "For three days, the whole world went quiet."
+  },
+  {
+   "nr": 18,
+   "typ": "esstisch",
+   "kapitel": 5,
+   "start": 73.318,
+   "dauer": 3.158,
+   "emotion": "erzaehlend",
+   "text": "And that's exactly when you started talking to each other again."
+  }
+ ]
+}
