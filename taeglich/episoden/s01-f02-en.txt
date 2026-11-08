@@ -41,13 +41,13 @@
 
 == Wendung ==
 // Bahnhof: eine Wand voller Zettel
-[objekt objekte="rucksack:Looking for Mom|herz:At Aunt Eva's|kreuz:Meet at City Hall" gross="The Wall of Notes" farbe=#3a3346] Hundreds of notes are stuck to the station wall. People looking for people.
+[objekt objekte="rucksack:Looking for Mom|herz:At Aunt Eva's|kreuz:City Hall" gross="The Wall of Notes" farbe=#3a3346] Hundreds of notes are stuck to the station wall. People looking for people.
 // Nahaufnahme: du liest, Ben schaut mit
 [gesicht du ort=bahnhof neugierig] You read every single one. Ten minutes. Twenty.
 // Nahaufnahme: Ben zeigt
 [gesicht ben ort=bahnhof schreck] “Wait. That's her handwriting!”
 // Infokarte: Linas Zettel
-[objekt objekte="herz:Gone to Grandpa's! Lina" gross="Lina's Note" farbe=#3a3346] A note written in glitter pen. “Walked to Grandpa's. Lina.”
+[objekt objekte="herz:At Grandpa's!" gross="Lina's Note" farbe=#3a3346] A note written in glitter pen. “Walked to Grandpa's. Lina.”
 // Nahaufnahme: du atmest auf
 [gesicht du ort=bahnhof froh] For a second, you can breathe again. She's alive. She has a plan.
 

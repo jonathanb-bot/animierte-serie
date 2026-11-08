@@ -31,7 +31,7 @@
 // Weltall: Erde, Nachtseite mit grünem Leuchten am Rand
 [weltall erde_y=1500 zoom-raus] When a solar storm hits the Earth, the air starts to glow. Northern lights.
 // Infokarte: Mai 2024
-[titel oben="May 2024" gross="NORTHERN LIGHTS" unten="all over Germany" farbe=#0c1d2a akzent=#5dffb0 groesse=130 hud=false] Normally you only see them far up north. But two years ago, in May, you could see them all over Germany.
+[titel oben="May 2024" gross="NORTHERN LIGHTS" unten="all over Germany" farbe=#0c1d2a akzent=#5dffb0 groesse=108 hud=false] Normally you only see them far up north. But two years ago, in May, you could see them all over Germany.
 // Nahaufnahme: Lina, staunend
 [gesicht lina ort=krankenhaus zeit=nacht froh] Lina presses her nose against the glass. “That's the most beautiful thing I've ever seen.”
 // Nahaufnahme: Opa wacht auf

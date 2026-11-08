@@ -23,7 +23,7 @@
 // Nahaufnahme: der Funker, ruhig
 [gesicht s01_funker ort=wohnzimmer zeit=nacht entschlossen] Then the old radio man opens up his set. “Stay calm. This is what this is for.”
 // Infokarte: Funkgerät
-[objekt objekte="funkgeraet:Emergency radio" gross="When Everything Fails" farbe=#1d2840] During big outages, ham radio operators help pass messages along. No network needed.
+[objekt objekte="funkgeraet:Emergency radio" gross="If All Fails" farbe=#1d2840] During big outages, ham radio operators help pass messages along. No network needed.
 // Großstadt bei Nacht, dunkel, ein Funkspruch wandert
 [grossstadt zeit=nacht schwenk-rechts] His call goes from operator to operator. Right across the city. All the way to the fire department.
 

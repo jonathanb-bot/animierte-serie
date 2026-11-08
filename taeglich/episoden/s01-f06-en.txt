@@ -33,7 +33,7 @@
 // Nahaufnahme: du, getroffen
 [gesicht du ort=wohnzimmer zeit=abend traurig] That hits you right in the chest. Because he's right.
 // Infokarte: Kalender
-[objekt objekte="herz:Birthdays|kerze:Christmas|uhr:Easter" gross="When You See Grandpa" farbe=#2a2f45] You see him on birthdays. At Christmas. Maybe at Easter.
+[objekt objekte="herz:Birthdays|kerze:Christmas|uhr:Easter" gross="Grandpa Visits" farbe=#2a2f45] You see him on birthdays. At Christmas. Maybe at Easter.
 // Titelkarte: vielleicht noch 40 Mal
 [titel oben="If nothing changes" gross="40 TIMES" unten="is maybe all you'll see him" farbe=#1d2840 akzent=#e9b866 groesse=170 hud=false] If things stay like this, you might see him forty more times. Forty afternoons. That's it.
 // Lebenszeit: deine Wochen, gelebt und offen
@@ -45,7 +45,7 @@
 // Nahaufnahme: Lina fragt nach den Tabletten
 [gesicht lina ort=wohnzimmer zeit=abend besorgt] Lina asks about the heart pills. Grandpa waves it off. “I've got two left. That's enough.”
 // Infokarte: Medizin, zwei Tabletten
-[objekt objekte="medizin:Two pills left" gross="Today and Tomorrow" farbe=#2a2f45] Two pills. Today and tomorrow. And without computers, the pharmacies are closed.
+[objekt objekte="medizin:Two pills left" gross="Two Days Left" farbe=#2a2f45] Two pills. Today and tomorrow. And without computers, the pharmacies are closed.
 // Nahaufnahme: Ben, still
 [gesicht ben ort=wohnzimmer zeit=abend traurig] Ben doesn't say anything. But he's thinking the same thing you are.
 // Wohnzimmer: alle zusammen, Kerze, warmes Licht

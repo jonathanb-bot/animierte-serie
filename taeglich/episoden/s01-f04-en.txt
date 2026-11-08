@@ -37,7 +37,7 @@
 // Nahaufnahme: der alte Mann, freundlich
 [gesicht s01_funker ort=park jahreszeit=herbst zeit=nacht froh] The old man heard her crying in the dark. “I said: we'll wait together. Until it gets light.”
 // Infokarte: Funkgerät, Kerze, Decke
-[objekt objekte="funkgeraet:Radio|kerze:Candle|decke:Blanket" gross="His Emergency Kit" farbe=#2f3d5c] He's got everything with him. A candle, a blanket. And an old radio.
+[objekt objekte="funkgeraet:Radio|kerze:Candle|decke:Blanket" gross="Emergency Kit" farbe=#2f3d5c] He's got everything with him. A candle, a blanket. And an old radio.
 // Landschaft am Morgen, die Sonne geht auf
 [landschaft zeit=morgen du lina ben zoom-raus] You wait together. And then the sun comes up over the rooftops.
 // Großstadt am Morgen, golden
