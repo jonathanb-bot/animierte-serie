@@ -64,3 +64,28 @@ Automatisch aus `python taeglich/videodaten.py`. Grundlage für die Analyse (Lä
 | 3 | 3–3 | 64.72 | 11-08T16:16 |
 | 4 | 4–4 | 122.08 | 11-08T20:28 |
 
+## s04 „Die zwölfte Quittung“ (12 Folgen, Format-Längenband: lang 80–90 s)
+
+| Video | Länge s | Band | Wörter | Wörter/s | Einst. | Kurzgesagt-Einst. | Nah | Fakten | Stimmung | Hook-Text | Instagram | YouTube |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| F1 Ein Fach zu wenig | 85.43 | lang | 213 | 2.49 | 22 | 9 | 8 | 5 | spannend | IN 80 SEKUNDEN WEISST DU ES |  |  |
+| F2 Der fehlende Durchschlag | 86.8 | lang | 216 | 2.49 | 22 | 11 | 9 | 2 | duester | DIE ZWÖLFTE QUITTUNG FEHLT |  |  |
+| F3 Die Uhr deines Freundes | 81.0 | lang | 214 | 2.64 | 22 | 6 | 11 | 4 | traurig | DEIN BESTER FREUND HAT GELOGEN |  |  |
+| F4 Vierzehn Uhr siebzehn | 85.18 | lang | 213 | 2.5 | 21 | 6 | 9 | 5 | spannend | VIERMAL 14:17 |  |  |
+| F5 Papas Fach | 85.87 | lang | 216 | 2.52 | 22 | 4 | 13 | 4 | warm | VERDACHT GEGEN PAPA |  |  |
+| F6 Papier vergisst nicht | 83.05 | lang | 212 | 2.55 | 21 | 7 | 9 | 5 | spannend | DAS LEERE BLATT VERRÄT ES |  |  |
+| F7 Gemeinsam falsch | 78.9 | mittel | 233 | 2.95 | 23 | 4 | 13 | 3 | traurig | DU LÄSST IHN GEHEN |  |  |
+| F8 Jemand kommt zurück | 84.98 | lang | 219 | 2.58 | 21 | 4 | 11 | 1 | warm | ER KOMMT ZURÜCK |  |  |
+| F9 Das hinterste Fach | 80.67 | lang | 215 | 2.67 | 21 | 7 | 10 | 4 | duester | DU FINDEST DAS GELD |  |  |
+| F10 Die gute Ausrede | 82.93 | lang | 216 | 2.6 | 21 | 7 | 11 | 3 | traurig | DIE LEITERIN GESTEHT |  |  |
+| F11 Vor allen | 85.92 | lang | 216 | 2.51 | 22 | 8 | 11 | 3 | freudig | EINE QUITTUNG VON VOR 12 JAHREN |  |  |
+| F12 Was wirklich zurückkommt | 81.6 | lang | 215 | 2.63 | 22 | 4 | 11 | 5 | warm | DEIN ERSTER FUND |  |  |
+
+| TikTok-Teil | Folgen | Länge s | Termin |
+|---|---|---|---|
+| 1 | 1–3 | 253.23 |  |
+| 2 | 4–5 | 171.05 |  |
+| 3 | 6–7 | 161.95 |  |
+| 4 | 8–10 | 248.58 |  |
+| 5 | 11–12 | 167.52 |  |
+

@@ -318,6 +318,98 @@
   },
   "laengenband": "xl"
  },
+ "taeglich-tiktok/s04-teil-1.mp4": {
+  "art": "tiktok_teil",
+  "staffel": "s04",
+  "staffel_titel": "Die zwölfte Quittung",
+  "teil": 1,
+  "teile_in_staffel": 5,
+  "folgen": [
+   1,
+   2,
+   3
+  ],
+  "folgen_in_staffel": 12,
+  "format_laengenband": "lang 80–90 s",
+  "dauer_s": 253.23,
+  "hook_satz": "In achtzig Sekunden weißt du: Jemand will deinen besten Freund reinlegen.",
+  "hooktext": "IN 80 SEKUNDEN WEISST DU ES",
+  "stimmung": "spannend",
+  "posts": {}
+ },
+ "taeglich-tiktok/s04-teil-2.mp4": {
+  "art": "tiktok_teil",
+  "staffel": "s04",
+  "staffel_titel": "Die zwölfte Quittung",
+  "teil": 2,
+  "teile_in_staffel": 5,
+  "folgen": [
+   4,
+   5
+  ],
+  "folgen_in_staffel": 12,
+  "format_laengenband": "lang 80–90 s",
+  "dauer_s": 171.05,
+  "hook_satz": "Vierzehn Uhr siebzehn.",
+  "hooktext": "VIERMAL 14:17",
+  "stimmung": "spannend",
+  "posts": {}
+ },
+ "taeglich-tiktok/s04-teil-3.mp4": {
+  "art": "tiktok_teil",
+  "staffel": "s04",
+  "staffel_titel": "Die zwölfte Quittung",
+  "teil": 3,
+  "teile_in_staffel": 5,
+  "folgen": [
+   6,
+   7
+  ],
+  "folgen_in_staffel": 12,
+  "format_laengenband": "lang 80–90 s",
+  "dauer_s": 161.95,
+  "hook_satz": "Siebzehn Uhr.",
+  "hooktext": "DAS LEERE BLATT VERRÄT ES",
+  "stimmung": "spannend",
+  "posts": {}
+ },
+ "taeglich-tiktok/s04-teil-4.mp4": {
+  "art": "tiktok_teil",
+  "staffel": "s04",
+  "staffel_titel": "Die zwölfte Quittung",
+  "teil": 4,
+  "teile_in_staffel": 5,
+  "folgen": [
+   8,
+   9,
+   10
+  ],
+  "folgen_in_staffel": 12,
+  "format_laengenband": "lang 80–90 s",
+  "dauer_s": 248.58,
+  "hook_satz": "Achtzehn Uhr.",
+  "hooktext": "ER KOMMT ZURÜCK",
+  "stimmung": "warm",
+  "posts": {}
+ },
+ "taeglich-tiktok/s04-teil-5.mp4": {
+  "art": "tiktok_teil",
+  "staffel": "s04",
+  "staffel_titel": "Die zwölfte Quittung",
+  "teil": 5,
+  "teile_in_staffel": 5,
+  "folgen": [
+   11,
+   12
+  ],
+  "folgen_in_staffel": 12,
+  "format_laengenband": "lang 80–90 s",
+  "dauer_s": 167.52,
+  "hook_satz": "In achtzig Sekunden bekommst du eine Quittung, die zwölf Jahre alt ist.",
+  "hooktext": "EINE QUITTUNG VON VOR 12 JAHREN",
+  "stimmung": "freudig",
+  "posts": {}
+ },
  "taeglich/s01-f01.mp4": {
   "art": "folge",
   "staffel": "s01",
@@ -1463,5 +1555,482 @@
     "zeit": "2026-11-09T14:13:00"
    }
   }
+ },
+ "taeglich/s04-f01.mp4": {
+  "art": "folge",
+  "staffel": "s04",
+  "staffel_titel": "Die zwölfte Quittung",
+  "folge": 1,
+  "titel": "Ein Fach zu wenig",
+  "folgen_in_staffel": 12,
+  "format_laengenband": "lang 80–90 s",
+  "dauer_s": 85.43,
+  "laengenband": "lang",
+  "woerter_pro_s": 2.49,
+  "familie_freunde": false,
+  "woerter": 213,
+  "einstellungen": 22,
+  "stimmung": "spannend",
+  "look": 0.0,
+  "hook_satz": "In achtzig Sekunden weißt du: Jemand will deinen besten Freund reinlegen.",
+  "hooktext": "IN 80 SEKUNDEN WEISST DU ES",
+  "kulissen": [
+   "archiv",
+   "fundhaus",
+   "gesicht",
+   "grossstadt",
+   "objekt"
+  ],
+  "kurzgesagt_einstellungen": 9,
+  "kurzgesagt_kulissen": [
+   "archiv",
+   "fundhaus",
+   "grossstadt"
+  ],
+  "nahaufnahmen": 8,
+  "faktenkarten": 5,
+  "figuren": [
+   "du",
+   "s04_rike",
+   "s04_sami"
+  ],
+  "letzte_zeile": "Der Abdruck liegt unter der Schrift. Jemand hat Samis Namen erst später daraufgeschrieben.",
+  "posts": {}
+ },
+ "taeglich/s04-f02.mp4": {
+  "art": "folge",
+  "staffel": "s04",
+  "staffel_titel": "Die zwölfte Quittung",
+  "folge": 2,
+  "titel": "Der fehlende Durchschlag",
+  "folgen_in_staffel": 12,
+  "format_laengenband": "lang 80–90 s",
+  "dauer_s": 86.8,
+  "laengenband": "lang",
+  "woerter_pro_s": 2.49,
+  "familie_freunde": true,
+  "woerter": 216,
+  "einstellungen": 22,
+  "stimmung": "duester",
+  "look": 0.0,
+  "hook_satz": "Fünfzehn Uhr.",
+  "hooktext": "DIE ZWÖLFTE QUITTUNG FEHLT",
+  "kulissen": [
+   "archiv",
+   "fundhaus",
+   "gesicht",
+   "grossstadt",
+   "objekt"
+  ],
+  "kurzgesagt_einstellungen": 11,
+  "kurzgesagt_kulissen": [
+   "archiv",
+   "fundhaus",
+   "grossstadt"
+  ],
+  "nahaufnahmen": 9,
+  "faktenkarten": 2,
+  "figuren": [
+   "du",
+   "papa",
+   "s04_rike",
+   "s04_sami"
+  ],
+  "letzte_zeile": "Und sie nimmt ausgerechnet das Bündel mit deinem roten Zettel mit.",
+  "posts": {}
+ },
+ "taeglich/s04-f03.mp4": {
+  "art": "folge",
+  "staffel": "s04",
+  "staffel_titel": "Die zwölfte Quittung",
+  "folge": 3,
+  "titel": "Die Uhr deines Freundes",
+  "folgen_in_staffel": 12,
+  "format_laengenband": "lang 80–90 s",
+  "dauer_s": 81.0,
+  "laengenband": "lang",
+  "woerter_pro_s": 2.64,
+  "familie_freunde": true,
+  "woerter": 214,
+  "einstellungen": 22,
+  "stimmung": "traurig",
+  "look": 0.0,
+  "hook_satz": "In einer Minute gesteht dir dein bester Freund eine Lüge.",
+  "hooktext": "DEIN BESTER FREUND HAT GELOGEN",
+  "kulissen": [
+   "archiv",
+   "fundhaus",
+   "gesicht",
+   "landschaft",
+   "objekt",
+   "wohnzimmer"
+  ],
+  "kurzgesagt_einstellungen": 6,
+  "kurzgesagt_kulissen": [
+   "archiv",
+   "fundhaus",
+   "landschaft"
+  ],
+  "nahaufnahmen": 11,
+  "faktenkarten": 4,
+  "figuren": [
+   "du",
+   "papa",
+   "s04_sami"
+  ],
+  "letzte_zeile": "„Die Uhr hab ich unterschrieben. Die Kasse nicht.“",
+  "posts": {}
+ },
+ "taeglich/s04-f04.mp4": {
+  "art": "folge",
+  "staffel": "s04",
+  "staffel_titel": "Die zwölfte Quittung",
+  "folge": 4,
+  "titel": "Vierzehn Uhr siebzehn",
+  "folgen_in_staffel": 12,
+  "format_laengenband": "lang 80–90 s",
+  "dauer_s": 85.18,
+  "laengenband": "lang",
+  "woerter_pro_s": 2.5,
+  "familie_freunde": false,
+  "woerter": 213,
+  "einstellungen": 21,
+  "stimmung": "spannend",
+  "look": 0.0,
+  "hook_satz": "Vierzehn Uhr siebzehn.",
+  "hooktext": "VIERMAL 14:17",
+  "kulissen": [
+   "fundhaus",
+   "gesicht",
+   "grossstadt",
+   "handy",
+   "objekt"
+  ],
+  "kurzgesagt_einstellungen": 6,
+  "kurzgesagt_kulissen": [
+   "fundhaus",
+   "grossstadt"
+  ],
+  "nahaufnahmen": 9,
+  "faktenkarten": 5,
+  "figuren": [
+   "du",
+   "s04_rike",
+   "s04_sami"
+  ],
+  "letzte_zeile": "Die Uhr ist erklärt. Aber auf genau diesem Beleg wurde der Gegenstand überschrieben.",
+  "posts": {}
+ },
+ "taeglich/s04-f05.mp4": {
+  "art": "folge",
+  "staffel": "s04",
+  "staffel_titel": "Die zwölfte Quittung",
+  "folge": 5,
+  "titel": "Papas Fach",
+  "folgen_in_staffel": 12,
+  "format_laengenband": "lang 80–90 s",
+  "dauer_s": 85.87,
+  "laengenband": "lang",
+  "woerter_pro_s": 2.52,
+  "familie_freunde": true,
+  "woerter": 216,
+  "einstellungen": 22,
+  "stimmung": "warm",
+  "look": 0.0,
+  "hook_satz": "In einer Minute legst du deinem eigenen Papa einen Verdacht auf den Tisch.",
+  "hooktext": "VERDACHT GEGEN PAPA",
+  "kulissen": [
+   "esstisch",
+   "fundhaus",
+   "gesicht",
+   "objekt"
+  ],
+  "kurzgesagt_einstellungen": 4,
+  "kurzgesagt_kulissen": [
+   "fundhaus"
+  ],
+  "nahaufnahmen": 13,
+  "faktenkarten": 4,
+  "figuren": [
+   "du",
+   "papa",
+   "s04_sami"
+  ],
+  "letzte_zeile": "Die Nummer gehört zu einem Stempel. Nicht zur Kasse. Jemand hat dich auf eine falsche Spur geschickt.",
+  "posts": {}
+ },
+ "taeglich/s04-f06.mp4": {
+  "art": "folge",
+  "staffel": "s04",
+  "staffel_titel": "Die zwölfte Quittung",
+  "folge": 6,
+  "titel": "Papier vergisst nicht",
+  "folgen_in_staffel": 12,
+  "format_laengenband": "lang 80–90 s",
+  "dauer_s": 83.05,
+  "laengenband": "lang",
+  "woerter_pro_s": 2.55,
+  "familie_freunde": false,
+  "woerter": 212,
+  "einstellungen": 21,
+  "stimmung": "spannend",
+  "look": 0.0,
+  "hook_satz": "Siebzehn Uhr.",
+  "hooktext": "DAS LEERE BLATT VERRÄT ES",
+  "kulissen": [
+   "archiv",
+   "fundhaus",
+   "gesicht",
+   "objekt"
+  ],
+  "kurzgesagt_einstellungen": 7,
+  "kurzgesagt_kulissen": [
+   "archiv",
+   "fundhaus"
+  ],
+  "nahaufnahmen": 9,
+  "faktenkarten": 5,
+  "figuren": [
+   "du",
+   "s04_sami"
+  ],
+  "letzte_zeile": "Die falsche Quittung wurde aus einem Abholschein für eine schwarze Dose gemacht.",
+  "posts": {}
+ },
+ "taeglich/s04-f07.mp4": {
+  "art": "folge",
+  "staffel": "s04",
+  "staffel_titel": "Die zwölfte Quittung",
+  "folge": 7,
+  "titel": "Gemeinsam falsch",
+  "folgen_in_staffel": 12,
+  "format_laengenband": "lang 80–90 s",
+  "dauer_s": 78.9,
+  "laengenband": "mittel",
+  "woerter_pro_s": 2.95,
+  "familie_freunde": true,
+  "woerter": 233,
+  "einstellungen": 23,
+  "stimmung": "traurig",
+  "look": 0.0,
+  "hook_satz": "In achtzig Sekunden lässt du deinen besten Freund allein in den Regen gehen.",
+  "hooktext": "DU LÄSST IHN GEHEN",
+  "kulissen": [
+   "fundhaus",
+   "gesicht",
+   "haltestelle",
+   "objekt",
+   "park"
+  ],
+  "kurzgesagt_einstellungen": 4,
+  "kurzgesagt_kulissen": [
+   "fundhaus"
+  ],
+  "nahaufnahmen": 13,
+  "faktenkarten": 3,
+  "figuren": [
+   "du",
+   "s04_rike",
+   "s04_sami"
+  ],
+  "letzte_zeile": "Stattdessen legst du seine Quittung zu den Beweisen. Und lässt ihn gehen.",
+  "posts": {}
+ },
+ "taeglich/s04-f08.mp4": {
+  "art": "folge",
+  "staffel": "s04",
+  "staffel_titel": "Die zwölfte Quittung",
+  "folge": 8,
+  "titel": "Jemand kommt zurück",
+  "folgen_in_staffel": 12,
+  "format_laengenband": "lang 80–90 s",
+  "dauer_s": 84.98,
+  "laengenband": "lang",
+  "woerter_pro_s": 2.58,
+  "familie_freunde": true,
+  "woerter": 219,
+  "einstellungen": 21,
+  "stimmung": "warm",
+  "look": 0.0,
+  "hook_satz": "Achtzehn Uhr.",
+  "hooktext": "ER KOMMT ZURÜCK",
+  "kulissen": [
+   "fundhaus",
+   "gesicht",
+   "grossstadt",
+   "handy",
+   "objekt",
+   "park"
+  ],
+  "kurzgesagt_einstellungen": 4,
+  "kurzgesagt_kulissen": [
+   "fundhaus",
+   "grossstadt"
+  ],
+  "nahaufnahmen": 11,
+  "faktenkarten": 1,
+  "figuren": [
+   "du",
+   "s04_frau",
+   "s04_sami"
+  ],
+  "letzte_zeile": "„Abgeholt? Nein. Meine Dose ist noch hier.“",
+  "posts": {}
+ },
+ "taeglich/s04-f09.mp4": {
+  "art": "folge",
+  "staffel": "s04",
+  "staffel_titel": "Die zwölfte Quittung",
+  "folge": 9,
+  "titel": "Das hinterste Fach",
+  "folgen_in_staffel": 12,
+  "format_laengenband": "lang 80–90 s",
+  "dauer_s": 80.67,
+  "laengenband": "lang",
+  "woerter_pro_s": 2.67,
+  "familie_freunde": false,
+  "woerter": 215,
+  "einstellungen": 21,
+  "stimmung": "duester",
+  "look": 0.0,
+  "hook_satz": "In achtzig Sekunden findest du die viertausend Euro.",
+  "hooktext": "DU FINDEST DAS GELD",
+  "kulissen": [
+   "fundhaus",
+   "gesicht",
+   "objekt"
+  ],
+  "kurzgesagt_einstellungen": 7,
+  "kurzgesagt_kulissen": [
+   "fundhaus"
+  ],
+  "nahaufnahmen": 10,
+  "faktenkarten": 4,
+  "figuren": [
+   "du",
+   "s04_frau",
+   "s04_rike",
+   "s04_sami"
+  ],
+  "letzte_zeile": "Und hinter dir hört Rikes Schlüsselbund auf zu klappern.",
+  "posts": {}
+ },
+ "taeglich/s04-f10.mp4": {
+  "art": "folge",
+  "staffel": "s04",
+  "staffel_titel": "Die zwölfte Quittung",
+  "folge": 10,
+  "titel": "Die gute Ausrede",
+  "folgen_in_staffel": 12,
+  "format_laengenband": "lang 80–90 s",
+  "dauer_s": 82.93,
+  "laengenband": "lang",
+  "woerter_pro_s": 2.6,
+  "familie_freunde": false,
+  "woerter": 216,
+  "einstellungen": 21,
+  "stimmung": "traurig",
+  "look": 0.0,
+  "hook_satz": "Achtzehn Uhr vierzig.",
+  "hooktext": "DIE LEITERIN GESTEHT",
+  "kulissen": [
+   "archiv",
+   "fundhaus",
+   "gesicht",
+   "objekt"
+  ],
+  "kurzgesagt_einstellungen": 7,
+  "kurzgesagt_kulissen": [
+   "archiv",
+   "fundhaus"
+  ],
+  "nahaufnahmen": 11,
+  "faktenkarten": 3,
+  "figuren": [
+   "du",
+   "s04_rike",
+   "s04_sami"
+  ],
+  "letzte_zeile": "„Weil ich dachte, dir glaubt sowieso niemand.“",
+  "posts": {}
+ },
+ "taeglich/s04-f11.mp4": {
+  "art": "folge",
+  "staffel": "s04",
+  "staffel_titel": "Die zwölfte Quittung",
+  "folge": 11,
+  "titel": "Vor allen",
+  "folgen_in_staffel": 12,
+  "format_laengenband": "lang 80–90 s",
+  "dauer_s": 85.92,
+  "laengenband": "lang",
+  "woerter_pro_s": 2.51,
+  "familie_freunde": false,
+  "woerter": 216,
+  "einstellungen": 22,
+  "stimmung": "freudig",
+  "look": 0.0,
+  "hook_satz": "In achtzig Sekunden bekommst du eine Quittung, die zwölf Jahre alt ist.",
+  "hooktext": "EINE QUITTUNG VON VOR 12 JAHREN",
+  "kulissen": [
+   "fundhaus",
+   "gesicht",
+   "grossstadt",
+   "objekt"
+  ],
+  "kurzgesagt_einstellungen": 8,
+  "kurzgesagt_kulissen": [
+   "fundhaus",
+   "grossstadt"
+  ],
+  "nahaufnahmen": 11,
+  "faktenkarten": 3,
+  "figuren": [
+   "du",
+   "papa",
+   "s04_rike",
+   "s04_sami"
+  ],
+  "letzte_zeile": "„Die hab ich aufgehoben. Die gehört zu dir.“",
+  "posts": {}
+ },
+ "taeglich/s04-f12.mp4": {
+  "art": "folge",
+  "staffel": "s04",
+  "staffel_titel": "Die zwölfte Quittung",
+  "folge": 12,
+  "titel": "Was wirklich zurückkommt",
+  "folgen_in_staffel": 12,
+  "format_laengenband": "lang 80–90 s",
+  "dauer_s": 81.6,
+  "laengenband": "lang",
+  "woerter_pro_s": 2.63,
+  "familie_freunde": true,
+  "woerter": 215,
+  "einstellungen": 22,
+  "stimmung": "warm",
+  "look": 0.0,
+  "hook_satz": "Vor zwölf Jahren hast du hier einen roten Stoffvogel abgegeben.",
+  "hooktext": "DEIN ERSTER FUND",
+  "kulissen": [
+   "fundhaus",
+   "gesicht",
+   "objekt",
+   "park",
+   "wohnzimmer"
+  ],
+  "kurzgesagt_einstellungen": 4,
+  "kurzgesagt_kulissen": [
+   "fundhaus"
+  ],
+  "nahaufnahmen": 11,
+  "faktenkarten": 5,
+  "figuren": [
+   "du",
+   "papa",
+   "s04_sami"
+  ],
+  "letzte_zeile": "Ein roter Stoffvogel. Ein Flügel kleiner als der andere. Er trägt ihn seit zwölf Jahren bei sich.",
+  "posts": {}
  }
 }
