@@ -215,6 +215,9 @@ const konto = post => /^zernio:\d+$/.test(post.konto || "")
 for (const pid of plan.loeschen || []) {
   const st = status[pid];
   if (!st?.zernioId || st.geloescht) continue;
+  // schon veröffentlicht: Zernio kann das nicht mehr löschen (HTTP 400 invalid_resource_state). Nicht bei jedem Lauf
+  // erneut versuchen, sonst steht jedes Mal ein ✗ im Log und echte Fehler gehen unter (8.11.). Löschen nur von Hand in der App.
+  if (st.loeschHttp === 400 && /invalid_resource_state|Published posts cannot be deleted/.test(st.loeschAntwort || "")) continue;
   const pp = plan.posts.find(x => x.id === pid);
   const r = await api("DELETE", `/posts/${st.zernioId}`, null, keyVon(pp, st));
   st.geloescht = r.ok; st.ok = false; st.loeschHttp = r.status; st.loeschAntwort = r.ok ? undefined : JSON.stringify(r.json).slice(0, 300);
