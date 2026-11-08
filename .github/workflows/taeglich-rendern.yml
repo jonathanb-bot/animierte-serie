@@ -1,0 +1,67 @@
+name: Kurzvideos rendern (taeglich)
+
+# Rendert Kurzvideo-Folgen vom Branch `taeglich` auf GitHub statt im Claude-Container (Jonathan 8.11.:
+# Repo ist öffentlich, Actions-Minuten kosten nichts). Fertige Videos landen auf dem Branch `taeglich-ausgabe`
+# als <folge>.mp4 (z. B. s04-f01.mp4, s01-f05-en.mp4), dazu <folge>.log mit der Ausgabe von render.mjs.
+on:
+  workflow_dispatch:
+    inputs:
+      folgen:
+        description: "Folgen, durch Komma getrennt, z. B. s04-f01,s04-f02,s01-f05-en"
+        required: true
+      ref:
+        description: "Branch mit den Drehbüchern und der Stimme"
+        required: false
+        default: "taeglich"
+
+permissions:
+  contents: write
+
+jobs:
+  auswahl:
+    runs-on: ubuntu-latest
+    outputs:
+      liste: ${{ steps.w.outputs.liste }}
+    steps:
+      - id: w
+        run: |
+          J=$(echo "${{ github.event.inputs.folgen }}" | tr ', ' '\n\n' | grep . | sort -u | jq -R . | jq -sc .)
+          echo "liste=$J" >> "$GITHUB_OUTPUT"; echo "Rendere: $J"
+
+  rendern:
+    needs: auswahl
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    strategy:
+      fail-fast: false
+      max-parallel: 6
+      matrix:
+        folge: ${{ fromJson(needs.auswahl.outputs.liste) }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.inputs.ref }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Werkzeuge installieren
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+          npm ci --ignore-scripts --no-audit --no-fund
+          npx playwright install --with-deps chromium
+      - name: Rendern
+        run: |
+          f="taeglich/episoden/${{ matrix.folge }}.txt"
+          node taeglich/bibliothek.mjs --fuer "$f" || true
+          node render.mjs "$f" 2>&1 | tee "/tmp/${{ matrix.folge }}.log"
+          ffprobe -v error -show_entries stream=width,height,r_frame_rate -show_entries format=duration -of csv=p=0 "ausgabe/taeglich-${{ matrix.folge }}.mp4" | tee -a "/tmp/${{ matrix.folge }}.log"
+      - name: Auf Branch taeglich-ausgabe ablegen
+        run: |
+          cp "ausgabe/taeglich-${{ matrix.folge }}.mp4" "/tmp/${{ matrix.folge }}.mp4"
+          git config user.name "github-actions"; git config user.email "github-actions@users.noreply.github.com"
+          cd /tmp && rm -rf aus && git clone -q --depth 1 --no-checkout "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" aus && cd aus
+          if git ls-remote --exit-code --heads origin taeglich-ausgabe >/dev/null; then git fetch -q --depth 1 origin taeglich-ausgabe && git checkout -q taeglich-ausgabe; else git checkout -q --orphan taeglich-ausgabe && git rm -rfq . || true; fi
+          cp "/tmp/${{ matrix.folge }}.mp4" "/tmp/${{ matrix.folge }}.log" .
+          git add "${{ matrix.folge }}.mp4" "${{ matrix.folge }}.log"
+          git -c user.name=github-actions -c user.email=github-actions@users.noreply.github.com commit -qm "${{ matrix.folge }} gerendert [skip ci]"
+          for i in 1 2 3 4 5 6; do git push -q origin HEAD:taeglich-ausgabe && break; sleep $((i * 7)); git pull -q --rebase origin taeglich-ausgabe || true; done
