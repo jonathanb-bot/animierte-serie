@@ -45,7 +45,7 @@
 // Nahaufnahme: Papa
 [gesicht papa ort=fundhaus zeit=abend froh palette=rosa] “You two played together the whole afternoon.”
 // Wohnzimmer, Erinnerungen
-[wohnzimmer du s04_sami licht=an zeit=abend palette=orange zoom-raus ein="birthday>#12 YEARS OF FRIENDSHIP>herz"] Ever since: every birthday, every school trip, every bad day.
+[wohnzimmer du s04_sami licht=an zeit=abend palette=orange zoom-raus ein="birthday>BEST FRIENDS>herz"] Ever since: every birthday, every school trip, every bad day.
 // Nahaufnahme: du
 [gesicht du ort=fundhaus zeit=abend froh palette=rosa zoom-rein] And today, you almost lost him. Over paper.
 

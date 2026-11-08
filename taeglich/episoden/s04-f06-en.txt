@@ -65,4 +65,4 @@
 // Nahaufnahme: du
 [gesicht du ort=fundhaus zeit=abend schreck palette=orange zoom-rein] And that's no coincidence anymore.
 // Quittung und Dose
-[objekt objekte="quittung:Cash box|blechdose" gross="TIN BOX → CASH BOX" palette=orange zoom-rein ein="fake>PLANNED>auge"] The fake receipt was made from a pickup slip for a black tin box.
+[objekt objekte="quittung:Cash box|blechdose" gross="TIN → CASH BOX" palette=orange zoom-rein ein="fake>PLANNED>auge"] The fake receipt was made from a pickup slip for a black tin box.

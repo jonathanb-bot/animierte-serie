@@ -39,7 +39,7 @@
 // Fach 24 mit Dose
 [fundhaus zeit=nacht uhr="18:42" fach=24 dose palette=blau zoom-rein ein="only>ONLY HER KEY>schluessel"] She hid it behind the tin box. In the one shelf only she can open.
 // Zwei Quittungen
-[objekt objekte="quittung:Tin box|quittung:Cash box" gross="TIN BOX → CASH BOX" palette=blau zoom-rein] She rewrote the slip for the tin box. Then added Sami's name. And his signature.
+[objekt objekte="quittung:Tin box|quittung:Cash box" gross="TIN → CASH BOX" palette=blau zoom-rein] She rewrote the slip for the tin box. Then added Sami's name. And his signature.
 // Archiv: Sackkarre und Bündel
 [archiv sackkarre buendel palette=blau zoom-rein ein="Dad's>FAKE TRAIL: W7"] She tossed the copy in the recycling. And let your dad's number show through.
 // Nahaufnahme: du wütend
