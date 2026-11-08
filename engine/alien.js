@@ -311,7 +311,7 @@
     },
     walkie_blau(t) { I.walkie(t, true); },
     handy(t) { handyKoerper(); for (let k = 0; k < 4; k++) box(-40 + k * 22, 60 - k * 14, 14, 14 + k * 14, 3, "#7fdc8a"); A.text("23:17", 0, -60, 46, "#ffffff", "center", 700, "HUD"); },
-    handy_netz0(t) { handyKoerper(); for (let k = 0; k < 4; k++) box(-40 + k * 22, 60 - k * 14, 14, 14 + k * 14, 3, "rgba(255,255,255,0.25)"); line(-50, 30, 40, 90, 6, "#ff5a4a"); A.text("KEIN NETZ", 0, -60, 26, "#ff8a7a", "center", 700, "HUD"); },
+    handy_netz0(t) { handyKoerper(); for (let k = 0; k < 4; k++) box(-40 + k * 22, 60 - k * 14, 14, 14 + k * 14, 3, "rgba(255,255,255,0.25)"); line(-50, 30, 40, 90, 6, "#ff5a4a"); A.text(A.sprache === "en" ? "NO SERVICE" : "KEIN NETZ", 0, -60, 26, "#ff8a7a", "center", 700, "HUD"); },
     handy_licht(t) { ctx.fillStyle = rgrad(0, -160, 10, 260, [[0, "rgba(255,250,220,0.9)"], [1, "rgba(255,250,220,0)"]]); ctx.fillRect(-260, -420, 520, 520); handyKoerper(); circle(0, -110, 14, "#fffbe0"); A.licht(0, -160, 420, "#fff4d0", 1.4); },
     handy_karte(t) { handyKoerper(); box(-60, -120, 120, 230, 10, "#cfe3c8"); line(-60, 0, 60, -40, 10, "#ffffff"); line(-20, -120, 10, 110, 10, "#ffffff"); ctx.save(); ctx.translate(5, -10 + Math.sin(t * 4) * 6); ctx.beginPath(); ctx.moveTo(0, 0); ctx.bezierCurveTo(-30, -34, -30, -74, 0, -76); ctx.bezierCurveTo(30, -74, 30, -34, 0, 0); fill("#e0533d"); circle(0, -50, 11, "#fff"); ctx.restore(); },
     kapsel(t, aus = false) {
@@ -913,14 +913,14 @@
     ctx.fillStyle = lgrad(0, -416, 0, 416, [[0, "#2c4466"], [1, "#16202e"]]); ctx.fillRect(-210, -416, 420, 832);
     const netzVon = s.netz ?? 4, netzBis = s.netz_bis ?? netzVon, nz = Math.round(lerp(netzVon, netzBis, clamp(p * 2 - 0.4, 0, 1)));
     for (let k = 0; k < 4; k++) box(-180 + k * 22, -360 - k * 10, 14, 16 + k * 10, 3, k < nz ? "#ffffff" : "rgba(255,255,255,0.25)");
-    if (nz === 0) A.text("KEIN NETZ", -60, -366, 24, "#ff8a7a", "left", 700, "HUD");
+    if (nz === 0) A.text(A.sprache === "en" ? "NO SERVICE" : "KEIN NETZ", -60, -366, 24, "#ff8a7a", "left", 700, "HUD");
     const akku = s.akku ?? 34; box(120, -378, 60, 26, 6, "rgba(255,255,255,0.3)"); box(124, -374, 52 * akku / 100, 18, 4, akku < 25 ? "#ff5a4a" : "#ffffff");
     A.text(s.uhrzeit || "23:19", 0, -230, 120, "#ffffff", "center", 700, "HUD");
     if (s.nachricht) {
       const zeilen = umbrechen(s.nachricht, 300, 32), h = 70 + zeilen.length * 42, ein = E.pop(clamp(t / 0.4, 0, 1));
       ctx.save(); ctx.translate(0, -40); ctx.scale(ein, ein);
       box(-180, -40, 360, h, 26, "rgba(255,255,255,0.92)");
-      A.text(String(s.von || "Unbekannt").toUpperCase(), -150, -10, 24, "#2f6fb5", "left", 700, "HUD");
+      A.text(String(s.von || (A.sprache === "en" ? "Unknown" : "Unbekannt")).toUpperCase(), -150, -10, 24, "#2f6fb5", "left", 700, "HUD");
       zeilen.forEach((z, i) => A.text(z, -150, 34 + i * 42, 32, "#1d2128", "left", 700, "HUD"));
       ctx.restore();
     }

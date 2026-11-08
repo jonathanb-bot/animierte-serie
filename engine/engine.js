@@ -59,7 +59,7 @@
       if (name.toLowerCase() === "netz") {
         const an = clamp(Math.round(wert), 0, max || 4), farbe = an === 0 ? "#ff5a4a" : an === 1 ? "#ffb347" : "#7fdc8a";
         for (let k = 0; k < (max || 4); k++) box(150 + k * 26, y + 12 - (10 + k * 7), 18, 10 + k * 7, 4, k < an ? farbe : "rgba(255,255,255,0.18)");
-        if (an === 0) { ctx.fillStyle = "#ff5a4a"; ctx.fillText("KEIN NETZ", 262, y + 1); }
+        if (an === 0) { ctx.fillStyle = "#ff5a4a"; ctx.fillText(A.sprache === "en" ? "NO SERVICE" : "KEIN NETZ", 262, y + 1); }
         return;
       }
       const laedt = /\+$/.test(einheit || ""); if (laedt) einheit = einheit.slice(0, -1);
@@ -138,7 +138,7 @@
 
   // ---------- API ----------
   window.init = daten => {
-    D = daten; A.cv.width = W; A.cv.height = H;
+    D = daten; A.cv.width = W; A.cv.height = H; A.sprache = D.sprache || "de";
     for (const s of D.szenen) {
       s._gruppen = []; let cur = [];
       const push = () => { if (cur.length) s._gruppen.push({ woerter: cur, start: cur[0].start, ende: cur[cur.length - 1].ende }); cur = []; };
