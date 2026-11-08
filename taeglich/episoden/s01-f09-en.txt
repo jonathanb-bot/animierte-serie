@@ -17,21 +17,21 @@
 // Nahaufnahme: du liest, still
 [gesicht du ort=polarlicht traurig] Grandpa wrote it right before the network went down.
 // Zimmer: Erinnerung, du auf dem Bett mit dem Handy
-[zimmer du du:handy lichterkette zeit=abend schwenk-rechts] And now you remember. You saw that he was typing. And you thought: later.
+[zimmer du du:handy lichterkette zeit=abend schwenk-rechts ein="typing>HE WAS TYPING"] And now you remember. You saw that he was typing. And you thought: later.
 
 == Wiedererkennen ==
 // Nahaufnahme: du, beschämt
 [gesicht du ort=zimmer zeit=abend traurig] Later. We all say it. Way too often.
 // Netz: blaue Impulse kehren zurück
-[netz farbe=#59c7ff mitte=du zoom-raus] The next morning, the network comes back. Node by node. City by city.
+[netz farbe=#59c7ff mitte=du zoom-raus ein="network>NETWORK BACK>funkgeraet"] The next morning, the network comes back. Node by node. City by city.
 // Großstadt am Morgen, Lichter gehen wieder an
-[grossstadt zeit=morgen schwenk-links] The traffic lights come back on. The bakery takes cards again. Like nothing ever happened.
+[grossstadt zeit=morgen schwenk-links ein="traffic>BACK TO NORMAL"] The traffic lights come back on. The bakery takes cards again. Like nothing ever happened.
 // Handy: Nachrichten prasseln herein
-[handy ort=wohnzimmer netz=4 akku=60 uhrzeit="6:30" von="Group chat" nachricht="300+ new messages"] And your phone explodes. More than three hundred messages.
+[handy ort=wohnzimmer netz=4 akku=60 uhrzeit="6:30" von="Group chat" nachricht="300+ new messages" ein="explodes>#300+ MESSAGES"] And your phone explodes. More than three hundred messages.
 
 == Steigerung ==
 // Esstisch am Abend: alle starren auf ihre Handys
-[esstisch mama:handy papa:handy du:handy lina:handy zeit=abend kerzen ruhig] That evening, you're all at the dinner table again. And everyone is staring at their phone.
+[esstisch mama:handy papa:handy du:handy lina:handy zeit=abend kerzen ruhig ein="dinner>EVERYONE ON PHONES"] That evening, you're all at the dinner table again. And everyone is staring at their phone.
 // Nahaufnahme: du schaust auf
 [gesicht du ort=esstisch zeit=abend misstrauisch] You look up. And you see it. It's just like before. Exactly like before.
 // Lebenszeit: Wochen, die vergehen
@@ -47,12 +47,12 @@
 // Nahaufnahme: Mama, warm
 [gesicht mama ort=esstisch zeit=abend froh] Mom says, “Three days without a network. And we talked more than we have all year.”
 // Esstisch: alle reden, Kerzen, Lachen
-[esstisch mama papa du lina zeit=abend kerzen gedeckt zoom-rein] You eat. You talk. And nobody wants to be the first to get up.
+[esstisch mama papa du lina zeit=abend kerzen gedeckt zoom-rein ein="talk>WE TALK AGAIN>herz"] You eat. You talk. And nobody wants to be the first to get up.
 // Nahaufnahme: Papa wird ernst
 [gesicht papa ort=esstisch zeit=abend besorgt] Then Dad says, “Grandpa gets to go home tomorrow.”
 
 == Cliffhanger ==
 // Krankenhaus: Opa im Bett, schaut aus dem Fenster
-[krankenhaus patient=opa du zeit=tag ruhig] The next day, you pick him up. But Grandpa doesn't want to get up.
+[krankenhaus patient=opa du zeit=tag ruhig ein="pick>PICKING HIM UP"] The next day, you pick him up. But Grandpa doesn't want to get up.
 // Nahaufnahme: Opa, leise
 [gesicht opa ort=krankenhaus zeit=tag traurig zoom-rein] “Home? There's nobody waiting for me there.”

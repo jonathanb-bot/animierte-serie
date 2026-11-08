@@ -21,23 +21,23 @@
 // Nahaufnahme: Ben mit Taschenlampe
 [gesicht ben ort=grossstadt zeit=nacht angst] Ben flicks on his bike light. “Okay. Now it's serious.”
 // Weltall: Erde bei Nacht, große Flächen ohne Licht
-[weltall erde_y=1500 zoom-raus] From above, it would look like someone switched off entire countries.
+[weltall erde_y=1500 zoom-raus ein="entire>COUNTRIES DARK>gluehbirne"] From above, it would look like someone switched off entire countries.
 // Netz: die letzten Knoten erlöschen
-[netz farbe=#ff5a3d schwenk-links] A lot of cell towers have backup batteries. But they often only last a few hours.
+[netz farbe=#ff5a3d schwenk-links ein="backup>BACKUP: FEW HOURS>batterie"] A lot of cell towers have backup batteries. But they often only last a few hours.
 // Infokarte: Was ohne Strom stoppt
 [objekt objekte="gluehbirne:No light|tropfen:Little water|batterie:No charging" gross="No Power" farbe=#1d2840] Without power, there are no traffic lights. No registers. And eventually, no water pumps.
 
 == Steigerung ==
 // Haltestelle nachts, Regen, ihr beide
-[haltestelle du ben regen zeit=nacht ton=regen] You keep walking. Mile after mile. It starts to rain.
+[haltestelle du ben regen zeit=nacht ton=regen ein="Mile>MILE AFTER MILE>rucksack"] You keep walking. Mile after mile. It starts to rain.
 // Nahaufnahme: du, nass, entschlossen
 [gesicht du ort=haltestelle zeit=nacht regen entschlossen] Somewhere out there is Lina. Alone. In the dark.
 // Nahaufnahme: Ben, ehrlich
 [gesicht ben ort=haltestelle zeit=nacht besorgt] “She's smart. Smarter than the two of us put together.”
 // Park im Herbst bei Nacht, nasse Blätter
-[park du ben jahreszeit=herbst zeit=nacht regen schwenk-rechts] By the park, it's so dark you can barely see your own hand.
+[park du ben jahreszeit=herbst zeit=nacht regen schwenk-rechts ein="dark>PITCH DARK"] By the park, it's so dark you can barely see your own hand.
 // Landschaft bei Nacht, Glühwürmchen
-[landschaft zeit=nacht du ruhig] Then you remember something. From back when Lina was little.
+[landschaft zeit=nacht du ruhig ein="remember>A MEMORY>herz"] Then you remember something. From back when Lina was little.
 
 == Wendung ==
 // Nahaufnahme: Lina als kleines Kind, lachend (Erinnerung)
@@ -47,7 +47,7 @@
 // Nahaufnahme: du pfeifst
 [gesicht du ort=park jahreszeit=herbst zeit=nacht entschlossen] You stand in the middle of the park. And you whistle. Three short ones.
 // Park: Stille, nur Regen
-[park du ben jahreszeit=herbst zeit=nacht regen ruhig] Nothing. Just the rain.
+[park du ben jahreszeit=herbst zeit=nacht regen ruhig ein="Nothing>NO ANSWER>ohr"] Nothing. Just the rain.
 // Nahaufnahme: Ben, leise
 [gesicht ben ort=park jahreszeit=herbst zeit=nacht traurig] “Come on. Maybe she's already at your grandpa's.”
 
@@ -55,4 +55,4 @@
 // Nahaufnahme: du lauschst
 [gesicht du ort=park jahreszeit=herbst zeit=nacht lauscht zoom-rein] You turn around. And then you hear it.
 // Wald bei Nacht, Nebel, irgendwo ein Licht
-[landschaft zeit=nacht zoom-rein] Out of the dark, someone whistles back. Three short ones. Your signal exactly.
+[landschaft zeit=nacht zoom-rein ein="whistles>#3 WHISTLES>ohr"] Out of the dark, someone whistles back. Three short ones. Your signal exactly.

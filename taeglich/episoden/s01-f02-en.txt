@@ -21,15 +21,15 @@
 // Nahaufnahme: Papa, angespannt
 [gesicht papa ort=esstisch besorgt] Dad says, “People found each other before phones, too.”
 // Haltestelle vor dem Haus: eine Nachbarin zeigt die Straße hinunter
-[haltestelle lehrerin:zeigt du papa zeit=tag] A neighbor saw her. “They left last night. Headed for the train station.”
+[haltestelle lehrerin:zeigt du papa zeit=tag ein="neighbor>TRAIN STATION?"] A neighbor saw her. “They left last night. Headed for the train station.”
 // Netz: dunkel, nur einzelne Knoten
-[netz farbe=#ff5a3d schwenk-rechts] Without the network, all you've got is what everyone used to have. Eyes. Feet. And luck.
+[netz farbe=#ff5a3d schwenk-rechts ein="Eyes>EYES. FEET. LUCK.>auge"] Without the network, all you've got is what everyone used to have. Eyes. Feet. And luck.
 
 == Steigerung ==
 // Bahnhof: überfüllt, die Anzeige ist schwarz
-[bahnhof du papa lehrerin mia zeit=tag anzeige="No trains" ruhig] Thousands of people are packed into the train station. No trains are running. The signal boxes have no data.
+[bahnhof du papa lehrerin mia zeit=tag anzeige="No trains" ruhig ein="Thousands>THOUSANDS STUCK" ein_y=330] Thousands of people are packed into the train station. No trains are running. The signal boxes have no data.
 // Nahaufnahme: du, suchend
-[gesicht du ort=bahnhof besorgt] You shout her name. A hundred faces. None of them is Lina.
+[gesicht du ort=bahnhof besorgt ein="hundred>#100 FACES" ein_y=300] You shout her name. A hundred faces. None of them is Lina.
 // Nahaufnahme: Ben, außer Atem
 [gesicht ben ort=bahnhof froh] Then someone grabs your shoulder. Ben. Your best friend.
 // Nahaufnahme: Ben erklärt
@@ -37,13 +37,13 @@
 // Nahaufnahme: du, gerührt
 [gesicht du ort=bahnhof froh] No call. No text. He just showed up.
 // Großstadt: Leute in den Straßen, Mittag
-[grossstadt zeit=tag du ben schwenk-links] And that's exactly how you search without a network. Together.
+[grossstadt zeit=tag du ben schwenk-links ein="search>SEARCH TOGETHER>herz"] And that's exactly how you search without a network. Together.
 
 == Wendung ==
 // Bahnhof: eine Wand voller Zettel
 [objekt objekte="rucksack:Looking for Mom|herz:At Aunt Eva's|kreuz:City Hall" gross="The Wall of Notes" farbe=#3a3346] Hundreds of notes are stuck to the station wall. People looking for people.
 // Nahaufnahme: du liest, Ben schaut mit
-[gesicht du ort=bahnhof neugierig] You read every single one. Ten minutes. Twenty.
+[gesicht du ort=bahnhof neugierig ein="Ten>#20 MINUTES>uhr" ein_y=300] You read every single one. Ten minutes. Twenty.
 // Nahaufnahme: Ben zeigt
 [gesicht ben ort=bahnhof schreck] “Wait. That's her handwriting!”
 // Infokarte: Linas Zettel
@@ -55,4 +55,4 @@
 // Auge: rot, bedrohlich
 [auge farbe=#ff5a3d zoom-rein] Then you do the math.
 // Landschaft am Abend, Sonne geht unter
-[landschaft zeit=abend zoom-raus] Grandpa lives seven miles away. Right across the whole city. And in an hour, it'll be dark.
+[landschaft zeit=abend zoom-raus ein="seven>#7 MILES>rucksack|hour>DARK IN 1 HOUR>uhr"] Grandpa lives seven miles away. Right across the whole city. And in an hour, it'll be dark.

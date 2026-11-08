@@ -15,15 +15,15 @@
 // Landschaft am Abend: ein einzelnes Haus mit einem kleinen Licht
 [landschaft zeit=abend wackeln=0.2 zoom-rein hooktext="HE SITS ALONE IN THE DARK"] An old man has been sitting alone in the dark for two days. And nobody has checked on him.
 // Nahaufnahme: du, außer Atem, vor der Tür
-[gesicht du ort=landschaft zeit=abend besorgt] It's your grandpa. You walked all day to get to him.
+[gesicht du ort=landschaft zeit=abend besorgt ein="walked>WALKED ALL DAY>rucksack" ein_y=300] It's your grandpa. You walked all day to get to him.
 
 == Wiedererkennen ==
 // Wohnzimmer bei Opa: Licht aus, Opa im Sessel
-[wohnzimmer opa sofa_sitzen licht=aus zeit=abend foto=opa,oma ruhig] Grandpa is sitting in the living room. One candle. One crossword puzzle. That's it.
+[wohnzimmer opa sofa_sitzen licht=aus zeit=abend foto=opa,oma ruhig ein="candle>ONE CANDLE>kerze"] Grandpa is sitting in the living room. One candle. One crossword puzzle. That's it.
 // Nahaufnahme: Opa, überrascht
 [gesicht opa ort=wohnzimmer zeit=abend schreck] He looks up. “You came?”
 // Wohnzimmer: Lina fällt ihm um den Hals
-[wohnzimmer opa lina:umarmt du licht=aus zeit=abend zoom-rein] Lina throws her arms around his neck. Grandpa laughs. And coughs. And laughs again.
+[wohnzimmer opa lina:umarmt du licht=aus zeit=abend zoom-rein ein="coughs>A BAD COUGH>medizin"] Lina throws her arms around his neck. Grandpa laughs. And coughs. And laughs again.
 // Nahaufnahme: Opa, leise
 [gesicht opa ort=wohnzimmer zeit=abend traurig] “Oh, kids. Radio silence is nothing new for me.”
 
@@ -39,17 +39,17 @@
 // Lebenszeit: deine Wochen, gelebt und offen
 [lebenszeit jahre=16 markiert="16-30" oben="Your life in weeks" zoom-raus] And every week that goes by never comes back. Not for Grandpa either.
 // Landschaft am Abend, Nebel im Tal
-[landschaft zeit=abend schwenk-links] Outside, it's getting dark. The second storm isn't far off.
+[landschaft zeit=abend schwenk-links ein="storm>2ND STORM COMING"] Outside, it's getting dark. The second storm isn't far off.
 
 == Wendung ==
 // Nahaufnahme: Lina fragt nach den Tabletten
-[gesicht lina ort=wohnzimmer zeit=abend besorgt] Lina asks about the heart pills. Grandpa waves it off. “I've got two left. That's enough.”
+[gesicht lina ort=wohnzimmer zeit=abend besorgt ein="pills>HEART PILLS>medizin" ein_y=300] Lina asks about the heart pills. Grandpa waves it off. “I've got two left. That's enough.”
 // Infokarte: Medizin, zwei Tabletten
 [objekt objekte="medizin:Two pills left" gross="Two Days Left" farbe=#2a2f45] Two pills. Today and tomorrow. And without computers, the pharmacies are closed.
 // Nahaufnahme: Ben, still
 [gesicht ben ort=wohnzimmer zeit=abend traurig] Ben doesn't say anything. But he's thinking the same thing you are.
 // Wohnzimmer: alle zusammen, Kerze, warmes Licht
-[wohnzimmer opa du lina ben licht=aus zeit=abend ruhig] You sit down with him. Grandpa tells stories from the old days.
+[wohnzimmer opa du lina ben licht=aus zeit=abend ruhig ein="stories>OLD STORIES>herz"] You sit down with him. Grandpa tells stories from the old days.
 
 == Cliffhanger ==
 // Nahaufnahme: Opa, plötzlich grau

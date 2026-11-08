@@ -19,7 +19,7 @@
 
 == Wiedererkennen ==
 // Wohnzimmer: Lina, Ben, du und der Funker
-[wohnzimmer du lina ben s01_funker licht=aus zeit=morgen ruhig] You're sitting in his living room. No power. But his radio runs on batteries.
+[wohnzimmer du lina ben s01_funker licht=aus zeit=morgen ruhig ein="radio>RUNS ON BATTERIES>batterie"] You're sitting in his living room. No power. But his radio runs on batteries.
 // Infokarte: Funkgerät
 [objekt objekte="funkgeraet:Shortwave|batterie:Battery" gross="Radio Works" farbe=#3a2a2a] Over shortwave, radio operators all over the world talk to each other. No internet. No cell towers.
 // Nahaufnahme: Funker erklärt
@@ -27,15 +27,15 @@
 
 == Steigerung ==
 // Weltall: Sonne, Erde, Satellit
-[weltall sonne satellit erde_y=1800 fokus=700,700 schwenk-links] In a solar storm, the sun hurls clouds of charged particles into space.
+[weltall sonne satellit erde_y=1800 fokus=700,700 schwenk-links ein="storm>SOLAR STORM>solar"] In a solar storm, the sun hurls clouds of charged particles into space.
 // Netz: rote Knoten, Störungen
-[netz farbe=#ff5a3d zoom-rein] When they hit the Earth, they mess with satellites, radio, and power grids.
+[netz farbe=#ff5a3d zoom-rein ein="mess>SATELLITES DOWN"] When they hit the Earth, they mess with satellites, radio, and power grids.
 // Infokarte: 1859
 [titel oben="In the year" gross="1859" unten="telegraphs threw sparks" farbe=#1d1a2a akzent=#ff8a5a groesse=170 hud=false] In eighteen fifty-nine, after a storm like that, telegraph lines threw sparks.
 // Infokarte: 1989
 [titel oben="Canada, 1989" gross="9 HOURS" unten="without power" farbe=#1d1a2a akzent=#ff8a5a groesse=150 hud=false] And in nineteen eighty-nine, millions of people in Canada lost power for nine hours.
 // Rechenzentrum mit rotem Kern
-[rechenzentrum kern farbe=#ff5a3d schwenk-rechts] Today, almost everything depends on satellites and data centers. Way more than back then.
+[rechenzentrum kern farbe=#ff5a3d schwenk-rechts ein="Today>MORE AT RISK"] Today, almost everything depends on satellites and data centers. Way more than back then.
 // Nahaufnahme: Ben, leise
 [gesicht ben ort=wohnzimmer zeit=morgen angst] Ben whispers, “And the second blow?”
 
@@ -47,7 +47,7 @@
 // Nahaufnahme: der Funker lächelt kurz
 [gesicht s01_funker ort=wohnzimmer zeit=morgen froh] The radio man writes a message on a slip of paper.
 // Großstadt am Morgen, ein Radfahrer in der Ferne
-[grossstadt zeit=morgen schwenk-links] A neighbor bikes it over to your house. So your parents know: Lina is here.
+[grossstadt zeit=morgen schwenk-links ein="bikes>BY BIKE"] A neighbor bikes it over to your house. So your parents know: Lina is here.
 // Nahaufnahme: Lina, plötzlich blass
 [gesicht lina ort=wohnzimmer zeit=morgen schreck] Then Lina goes completely pale.
 
@@ -55,4 +55,4 @@
 // Nahaufnahme: Lina flüstert
 [gesicht lina ort=wohnzimmer zeit=morgen angst zoom-rein] “Grandpa takes his heart pills every night.”
 // Landschaft am Abend, ein einsames Haus mit Licht
-[landschaft zeit=abend zoom-rein] “And last week he told me: the pack is almost empty.”
+[landschaft zeit=abend zoom-rein ein="week>PACK ALMOST EMPTY>medizin"] “And last week he told me: the pack is almost empty.”

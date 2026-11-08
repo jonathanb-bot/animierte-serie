@@ -19,11 +19,11 @@
 
 == Wiedererkennen ==
 // Park bei Nacht: am Pavillon ein kleines Licht, ein alter Mann, Lina
-[park lina s01_funker jahreszeit=herbst zeit=nacht lichter ruhig] Under the roof of the old gazebo, a candle is burning. Next to it, an old man with a blanket.
+[park lina s01_funker jahreszeit=herbst zeit=nacht lichter ruhig ein="roof>OLD GAZEBO|candle>A CANDLE>kerze"] Under the roof of the old gazebo, a candle is burning. Next to it, an old man with a blanket.
 // Nahaufnahme: Lina, verweint, dann strahlend
 [gesicht lina ort=park jahreszeit=herbst zeit=nacht froh] And under the blanket: Lina.
 // Park: ihr umarmt euch
-[park du:umarmt lina:umarmt jahreszeit=herbst zeit=nacht lichter zoom-rein] You hold her so tight she has to laugh.
+[park du:umarmt lina:umarmt jahreszeit=herbst zeit=nacht lichter zoom-rein ein="tight>FOUND HER!>herz"] You hold her so tight she has to laugh.
 // Nahaufnahme: Lina lacht unter Tränen
 [gesicht lina ort=park jahreszeit=herbst zeit=nacht froh] “You're squishing me!”
 // Nahaufnahme: Ben, erleichtert
@@ -39,9 +39,9 @@
 // Infokarte: Funkgerät, Kerze, Decke
 [objekt objekte="funkgeraet:Radio|kerze:Candle|decke:Blanket" gross="Emergency Kit" farbe=#2f3d5c] He's got everything with him. A candle, a blanket. And an old radio.
 // Landschaft am Morgen, die Sonne geht auf
-[landschaft zeit=morgen du lina ben zoom-raus] You wait together. And then the sun comes up over the rooftops.
+[landschaft zeit=morgen du lina ben zoom-raus ein="sun>SUNRISE"] You wait together. And then the sun comes up over the rooftops.
 // Großstadt am Morgen, golden
-[grossstadt zeit=morgen du lina schwenk-rechts] The city still has no power. But right now, you don't care.
+[grossstadt zeit=morgen du lina schwenk-rechts ein="power>STILL NO POWER>gluehbirne"] The city still has no power. But right now, you don't care.
 
 == Wendung ==
 // Nahaufnahme: Lina lacht
@@ -53,6 +53,6 @@
 
 == Cliffhanger ==
 // Netz: ein einzelner Knoten blinkt
-[netz farbe=#59c7ff mitte=du zoom-rein] “I was a radio operator for forty years. I know what happened last night.”
+[netz farbe=#59c7ff mitte=du zoom-rein ein="forty>#40 YEARS>funkgeraet"] “I was a radio operator for forty years. I know what happened last night.”
 // Weltall mit Sonne, gleißend
-[weltall sonne erde_y=1900 fokus=760,640 zoom-rein] “And that was just the beginning.”
+[weltall sonne erde_y=1900 fokus=760,640 zoom-rein ein="that>JUST THE BEGINNING"] “And that was just the beginning.”
