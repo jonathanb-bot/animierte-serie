@@ -1,0 +1,194 @@
+{
+ "dauer": 80.67,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "fundhaus",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 5.726,
+   "emotion": "spannend",
+   "text": "In achtzig Sekunden findest du die viertausend Euro. Und hinter dir wird es still."
+  },
+  {
+   "nr": 2,
+   "typ": "objekt",
+   "kapitel": 1,
+   "start": 5.726,
+   "dauer": 4.838,
+   "emotion": "erklaerend",
+   "text": "Viertausend Euro für den Jugendtreff. Für ein neues Dach und eine Tischtennisplatte."
+  },
+  {
+   "nr": 3,
+   "typ": "fundhaus",
+   "kapitel": 2,
+   "start": 10.564,
+   "dauer": 5.846,
+   "emotion": "erzaehlend",
+   "text": "Achtzehn Uhr dreißig. Draußen ist es dunkel geworden. Im Ausgaberaum brennt nur noch eine Lampe."
+  },
+  {
+   "nr": 4,
+   "typ": "fundhaus",
+   "kapitel": 2,
+   "start": 16.41,
+   "dauer": 3.974,
+   "emotion": "erzaehlend",
+   "text": "Im letzten Fach unten rechts steht eine schwarze Dose mit Halbmond."
+  },
+  {
+   "nr": 5,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 20.384,
+   "dauer": 1.862,
+   "emotion": "froh",
+   "text": "„Die Delle da. Das ist sie.“"
+  },
+  {
+   "nr": 6,
+   "typ": "fundhaus",
+   "kapitel": 2,
+   "start": 22.246,
+   "dauer": 2.99,
+   "emotion": "erzaehlend",
+   "text": "Rike kommt aus dem Büro. Ihr Schlüsselbund klappert."
+  },
+  {
+   "nr": 7,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 25.236,
+   "dauer": 3.494,
+   "emotion": "ernst",
+   "text": "„Fach vierundzwanzig? Da kommt Sami doch auch dran.“"
+  },
+  {
+   "nr": 8,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 28.73,
+   "dauer": 3.59,
+   "emotion": "spannend",
+   "text": "Sami wird blass. Schon wieder er. Schon wieder sein Name."
+  },
+  {
+   "nr": 9,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 32.32,
+   "dauer": 2.63,
+   "emotion": "ernst",
+   "text": "Du sagst nichts. Du streckst nur die Hand aus."
+  },
+  {
+   "nr": 10,
+   "typ": "objekt",
+   "kapitel": 3,
+   "start": 34.95,
+   "dauer": 5.654,
+   "emotion": "erklaerend",
+   "text": "Samis Helferschlüssel öffnet die vorderen Fächer. Ab Fach zwanzig passt nur einer: Rikes."
+  },
+  {
+   "nr": 11,
+   "typ": "fundhaus",
+   "kapitel": 3,
+   "start": 40.604,
+   "dauer": 4.718,
+   "emotion": "erzaehlend",
+   "text": "Sami probiert es trotzdem, vor allen. Der Schlüssel dreht sich keinen Millimeter."
+  },
+  {
+   "nr": 12,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 45.322,
+   "dauer": 2.27,
+   "emotion": "wuetend",
+   "text": "„Dann hat er es eben irgendwie aufbekommen.“"
+  },
+  {
+   "nr": 13,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 47.592,
+   "dauer": 3.038,
+   "emotion": "erzaehlend",
+   "text": "„Dann öffnen wir es. Jetzt. Mit Frau Lindner.“"
+  },
+  {
+   "nr": 14,
+   "typ": "fundhaus",
+   "kapitel": 3,
+   "start": 50.63,
+   "dauer": 3.758,
+   "emotion": "erzaehlend",
+   "text": "Frau Lindner nickt. Vor der Besitzerin kann Rike nicht Nein sagen."
+  },
+  {
+   "nr": 15,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 54.388,
+   "dauer": 3.566,
+   "emotion": "spannend",
+   "text": "Ihre Hand zittert, als sie aufschließt. Das Scharnier quietscht."
+  },
+  {
+   "nr": 16,
+   "typ": "fundhaus",
+   "kapitel": 4,
+   "start": 57.954,
+   "dauer": 3.566,
+   "emotion": "erzaehlend",
+   "text": "Ein kalter Luftzug kommt aus dem Fach. Es riecht nach altem Lack."
+  },
+  {
+   "nr": 17,
+   "typ": "objekt",
+   "kapitel": 4,
+   "start": 61.52,
+   "dauer": 4.886,
+   "emotion": "erklaerend",
+   "text": "Frau Lindner hebt die Dose heraus und öffnet vorsichtig den Deckel. Papier raschelt."
+  },
+  {
+   "nr": 18,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 66.406,
+   "dauer": 2.27,
+   "emotion": "froh",
+   "text": "„Seine Briefe. Alle noch da.“"
+  },
+  {
+   "nr": 19,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 68.676,
+   "dauer": 4.094,
+   "emotion": "erzaehlend",
+   "text": "Hinter der Dose, ganz hinten im Fach, liegt etwas unter braunem Packpapier."
+  },
+  {
+   "nr": 20,
+   "typ": "objekt",
+   "kapitel": 5,
+   "start": 72.77,
+   "dauer": 4.646,
+   "emotion": "erklaerend",
+   "text": "Du ziehst das Papier zur Seite. Eine grüne Ecke. Die Spendenkasse."
+  },
+  {
+   "nr": 21,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 77.416,
+   "dauer": 3.254,
+   "emotion": "spannend",
+   "text": "Und hinter dir hört Rikes Schlüsselbund auf zu klappern."
+  }
+ ]
+}
