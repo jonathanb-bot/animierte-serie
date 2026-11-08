@@ -6,7 +6,7 @@
 @mund zitate
 @einblenden aus
 @sprache en
-@qualitaet hoch
+@qualitaet max
 @look 0.2
 @kino 1
 @zeit nacht
