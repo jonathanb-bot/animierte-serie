@@ -6970,10 +6970,14 @@
   "am": "2026-11-08T20:14:15.091Z"
  },
  "taeglich-insta-en-s01-f10-v2": {
-  "ok": false,
+  "ok": true,
   "zeit": "2026-11-11T16:30:00",
-  "pruefung": "keine Bildspur",
-  "am": "2026-11-08T20:14:17.870Z"
+  "zernioId": "6af0d8696212a37a9be22166",
+  "yt": false,
+  "k": 2,
+  "konto": "sory4you_eng",
+  "http": 201,
+  "am": "2026-11-08T20:15:38.202Z"
  },
  "taeglich-yt-en-s01-f01-v2": {
   "ok": true,
@@ -7066,9 +7070,13 @@
   "am": "2026-11-08T20:14:39.300Z"
  },
  "taeglich-yt-en-s01-f10-v2": {
-  "ok": false,
+  "ok": true,
   "zeit": "2026-11-11T17:31:00",
-  "pruefung": "keine Bildspur",
-  "am": "2026-11-08T20:14:41.311Z"
+  "zernioId": "6af0d86cdc97c8ff4ad6b536",
+  "yt": false,
+  "k": 2,
+  "konto": "storys4you_eng",
+  "http": 201,
+  "am": "2026-11-08T20:15:40.574Z"
  }
 }
