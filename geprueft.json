@@ -1515,20 +1515,20 @@
   },
   "taeglich-en/s03-f01.mp4": {
    "ok": true,
-   "bild_s": 139.97,
-   "ton_s": 140.01,
+   "bild_s": 139.98,
+   "ton_s": 139.97,
    "lufs": -14.6
   },
   "taeglich-en/s03-f02.mp4": {
    "ok": true,
    "bild_s": 127.87,
    "ton_s": 127.85,
-   "lufs": -14.5
+   "lufs": -14.6
   },
   "taeglich-en/s03-f03.mp4": {
    "ok": true,
-   "bild_s": 122.57,
-   "ton_s": 122.6,
+   "bild_s": 122.58,
+   "ton_s": 122.58,
    "lufs": -14.6
   },
   "taeglich-en/s03-f04.mp4": {
@@ -1539,7 +1539,7 @@
   },
   "taeglich-tiktok-en/s03-teil-1.mp4": {
    "ok": true,
-   "bild_s": 139.97,
+   "bild_s": 139.98,
    "ton_s": 139.97,
    "lufs": -14.6
   },
@@ -1551,7 +1551,7 @@
   },
   "taeglich-tiktok-en/s03-teil-3.mp4": {
    "ok": true,
-   "bild_s": 122.57,
+   "bild_s": 122.58,
    "ton_s": 122.58,
    "lufs": -14.6
   },
