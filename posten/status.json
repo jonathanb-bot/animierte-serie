@@ -4878,7 +4878,12 @@
   "k": 1,
   "konto": "storys4you_eng",
   "http": 201,
-  "am": "2026-11-05T20:59:18.269Z"
+  "am": "2026-11-05T20:59:18.269Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.tiktok.com/@storys4you_eng/video/7705692372067159328"
+  }
  },
  "taeglich-insta-en-s02-f01-v2": {
   "ok": true,
@@ -5428,7 +5433,12 @@
   "k": 0,
   "konto": "sto.rys4you",
   "http": 201,
-  "am": "2026-11-06T17:30:50.457Z"
+  "am": "2026-11-06T17:30:50.457Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfeJlcND9XA/"
+  }
  },
  "taeglich-insta-s01-f08-v2": {
   "ok": true,
@@ -5438,7 +5448,12 @@
   "k": 0,
   "konto": "sto.rys4you",
   "http": 201,
-  "am": "2026-11-06T17:30:54.428Z"
+  "am": "2026-11-06T17:30:54.428Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DfeiAkEFCKX/"
+  }
  },
  "taeglich-insta-s01-f09-v2": {
   "ok": true,
@@ -5448,7 +5463,12 @@
   "k": 0,
   "konto": "sto.rys4you",
   "http": 201,
-  "am": "2026-11-06T17:30:58.265Z"
+  "am": "2026-11-06T17:30:58.265Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/Dfe3AW6EY2g/"
+  }
  },
  "taeglich-insta-s01-f10-v2": {
   "ok": true,
@@ -5458,7 +5478,12 @@
   "k": 0,
   "konto": "sto.rys4you",
   "http": 201,
-  "am": "2026-11-06T17:31:02.582Z"
+  "am": "2026-11-06T17:31:02.582Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DffIDf1Dyh8/"
+  }
  },
  "taeglich-yt-s01-f01-v2": {
   "ok": true,
@@ -5558,7 +5583,12 @@
   "k": 1,
   "konto": "sto.rys4you",
   "http": 201,
-  "am": "2026-11-06T17:31:32.657Z"
+  "am": "2026-11-06T17:31:32.657Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=MByAqYPsN_0"
+  }
  },
  "taeglich-yt-s01-f08-v2": {
   "ok": true,
@@ -5568,7 +5598,12 @@
   "k": 1,
   "konto": "sto.rys4you",
   "http": 201,
-  "am": "2026-11-06T17:31:37.292Z"
+  "am": "2026-11-06T17:31:37.292Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=hl3_oXQGzME"
+  }
  },
  "taeglich-yt-s01-f09-v2": {
   "ok": true,
@@ -5578,7 +5613,12 @@
   "k": 1,
   "konto": "sto.rys4you",
   "http": 201,
-  "am": "2026-11-06T17:31:41.195Z"
+  "am": "2026-11-06T17:31:41.195Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=se5yR1zW9ZU"
+  }
  },
  "taeglich-yt-s01-f10-v2": {
   "ok": true,
@@ -5588,7 +5628,12 @@
   "k": 1,
   "konto": "sto.rys4you",
   "http": 201,
-  "am": "2026-11-06T17:31:45.015Z"
+  "am": "2026-11-06T17:31:45.015Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.youtube.com/watch?v=bw7SXmE9fGM"
+  }
  },
  "taeglich-tiktok-001-v2": {
   "ok": true,
@@ -5613,7 +5658,12 @@
   "k": 0,
   "konto": "storys4you.de1",
   "http": 201,
-  "am": "2026-11-07T10:46:44.557Z"
+  "am": "2026-11-07T10:46:44.557Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.tiktok.com/@storys4you.de1/video/7705693134356761888"
+  }
  },
  "taeglich-tiktok-s03-teil-2": {
   "ok": true,
@@ -5623,7 +5673,12 @@
   "k": 0,
   "konto": "storys4you.de1",
   "http": 201,
-  "am": "2026-11-07T10:46:47.840Z"
+  "am": "2026-11-07T10:46:47.840Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.tiktok.com/@storys4you.de1/video/7705760942717439265"
+  }
  },
  "taeglich-tiktok-s03-teil-3": {
   "ok": true,
@@ -5633,7 +5688,12 @@
   "k": 0,
   "konto": "storys4you.de1",
   "http": 201,
-  "am": "2026-11-07T10:46:51.106Z"
+  "am": "2026-11-07T10:46:51.106Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.tiktok.com/@storys4you.de1/video/7705820003211201825"
+  }
  },
  "taeglich-tiktok-s03-teil-4": {
   "ok": true,
@@ -5653,7 +5713,12 @@
   "k": 0,
   "konto": "sto.rys4you",
   "http": 201,
-  "am": "2026-11-07T10:46:57.681Z"
+  "am": "2026-11-07T10:46:57.681Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.instagram.com/reel/DffbSKfkxmX/"
+  }
  },
  "taeglich-insta-s03-f02": {
   "ok": true,
@@ -5733,7 +5798,12 @@
   "k": 1,
   "konto": "storys4you_eng",
   "http": 201,
-  "am": "2026-11-07T12:46:49.148Z"
+  "am": "2026-11-07T12:46:49.148Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.tiktok.com/@storys4you_eng/video/7705693134033882400"
+  }
  },
  "taeglich-tiktok-en-s03-teil-2": {
   "ok": true,
@@ -5743,7 +5813,12 @@
   "k": 1,
   "konto": "storys4you_eng",
   "http": 201,
-  "am": "2026-11-07T12:46:52.093Z"
+  "am": "2026-11-07T12:46:52.093Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.tiktok.com/@storys4you_eng/video/7705760957988916513"
+  }
  },
  "taeglich-tiktok-en-s03-teil-3": {
   "ok": true,
@@ -5753,7 +5828,12 @@
   "k": 1,
   "konto": "storys4you_eng",
   "http": 201,
-  "am": "2026-11-07T12:46:55.571Z"
+  "am": "2026-11-07T12:46:55.571Z",
+  "ergebnis": {
+   "status": "published",
+   "plattform": "published",
+   "url": "https://www.tiktok.com/@storys4you_eng/video/7705819962828393761"
+  }
  },
  "taeglich-tiktok-en-s03-teil-4": {
   "ok": true,
