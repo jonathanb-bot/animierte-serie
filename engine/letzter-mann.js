@@ -58,8 +58,8 @@
     line(ax + 60, 410, ax + 60, ay, 8, "#2d333d"); line(ax + aw - 60, 410, ax + aw - 60, ay, 8, "#2d333d");
     box(ax - 10, ay - 10, aw + 20, ah + 20, 14, "#2d333d"); box(ax, ay, aw, ah, 8, "#0d1218");
     ctx.save(); ctx.globalAlpha = fl;
-    schrift(s.zug || "08:20   RE 4   Hauptbahnhof", ax + 30, ay + 52, 38, "#f2b35a", "left");
-    schrift(String(s.anzeige || "Fällt aus").toUpperCase(), ax + aw / 2, ay + 132, s.anzeige_gross || 60, "#ffd36b");
+    schrift(s.zug || (A.sprache === "en" ? "08:20   Train 4   Central" : "08:20   RE 4   Hauptbahnhof"), ax + 30, ay + 52, 38, "#f2b35a", "left");
+    schrift(String(s.anzeige || (A.sprache === "en" ? "Cancelled" : "Fällt aus")).toUpperCase(), ax + aw / 2, ay + 132, s.anzeige_gross || 60, "#ffd36b");
     ctx.restore(); A.licht(ax + aw / 2, ay + ah / 2, 380, "#ffb347", 0.6 * fl);
     // Uhr
     const ux = 920, uy = 560; line(ux, 410, ux, uy - 80, 8, "#2d333d"); circle(ux, uy, 84, "#2d333d"); circle(ux, uy, 72, "#f5f2ea");
