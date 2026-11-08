@@ -210,6 +210,17 @@ const tonDatei = path.join(tmp, "ton.wav");
   execFileSync("ffmpeg", ["-y", "-v", "error", ...inputs, "-filter_complex", filter.join(";"), "-map", "[out]", "-ar", "48000", "-ac", "2", tonDatei]);
 }
 
+// --nur-ton: das schon gerenderte Video behalten und nur die Tonspur neu bauen (z. B. nachträglich `@klang studio`).
+// Nur benutzen, wenn sich am Bild nichts geändert hat (gleiche Szenen, gleiche Zeiten).
+if (flag("nur-ton")) {
+  const z = path.join(ROOT, "ausgabe", `${name}.mp4`), neu = path.join(tmp, "neu.mp4");
+  if (!fs.existsSync(z)) { console.error("--nur-ton: kein fertiges Video", path.relative(ROOT, z)); process.exit(1); }
+  execFileSync("ffmpeg", ["-y", "-v", "error", "-i", z, "-i", tonDatei, "-map", "0:v", "-map", "1:a", "-c:v", "copy",
+    "-c:a", "aac", "-b:a", "192k", "-shortest", "-movflags", "+faststart", neu]);
+  fs.copyFileSync(neu, z); fs.rmSync(tmp, { recursive: true, force: true });
+  console.log("Ton erneuert:", path.relative(ROOT, z)); process.exit(0);
+}
+
 // ---------- Bild ----------
 const ziel = path.join(ROOT, "ausgabe", `${name}${vorschau ? "-vorschau" : ""}.mp4`);
 // Hohe Bildqualität (@qualitaet hoch oder --hq): Einzelbilder JPEG 100 (fast verlustfrei, PNG wäre 6× langsamer), x264 slow/crf 16, Animations-Tuning, aq-mode 3 gegen Treppen in Verläufen

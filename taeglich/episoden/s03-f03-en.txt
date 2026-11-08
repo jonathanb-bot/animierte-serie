@@ -7,6 +7,7 @@
 @mund zitate
 @einblenden aus
 @qualitaet max
+@klang studio
 @look 0.75
 @kino 0.5
 @stil leuchtend
