@@ -54,7 +54,9 @@ def commit_text(titel: str) -> str:
 
 def dauer(f: Path, s: str) -> float:
     out = lauf("ffprobe", "-v", "error", "-select_streams", s, "-show_entries", "stream=duration", "-of", "csv=p=0", f, check=False)
-    return float(out) if out else 0.0
+    # nur die erste Zahl: neuere ffmpeg-Versionen (GitHub-Render) hängen ein leeres Feld an („75.78,“)
+    zahl = out.strip().splitlines()[0].split(",")[0].strip() if out and out.strip() else ""
+    return float(zahl) if zahl else 0.0
 
 
 def lufs(f: Path) -> float | None:
