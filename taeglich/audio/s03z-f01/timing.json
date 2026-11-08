@@ -1,0 +1,131 @@
+{
+ "dauer": 64.444,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "waldnacht",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 3.974,
+   "emotion": "erzaehlend",
+   "text": "Die Stimme, die dich heute nervt, wirst du eines Tages vermissen."
+  },
+  {
+   "nr": 2,
+   "typ": "landschaft",
+   "kapitel": 1,
+   "start": 3.974,
+   "dauer": 5.198,
+   "emotion": "erzaehlend",
+   "text": "Jeder hat eine Stimme im Kopf, die nach Zuhause klingt. Ruf sie an, solange sie noch abhebt."
+  },
+  {
+   "nr": 3,
+   "typ": "waldnacht",
+   "kapitel": 2,
+   "start": 9.172,
+   "dauer": 5.966,
+   "emotion": "erzaehlend",
+   "text": "Zeit hat man nicht. Zeit nimmt man sich. Wer wartet, bis sie von allein kommt, wartet zu lange."
+  },
+  {
+   "nr": 4,
+   "typ": "handy",
+   "kapitel": 2,
+   "start": 15.138,
+   "dauer": 3.902,
+   "emotion": "erzaehlend",
+   "text": "„Ich ruf morgen zurück.“ Kaum ein Satz wird später so sehr bereut."
+  },
+  {
+   "nr": 5,
+   "typ": "grossstadt",
+   "kapitel": 2,
+   "start": 19.04,
+   "dauer": 4.67,
+   "emotion": "erzaehlend",
+   "text": "Man kann eine Stimme nachmachen. Aber nicht das Gefühl, wenn sie deinen Namen sagt."
+  },
+  {
+   "nr": 6,
+   "typ": "wohnzimmer",
+   "kapitel": 2,
+   "start": 23.71,
+   "dauer": 4.382,
+   "emotion": "erzaehlend",
+   "text": "Zuhause ist kein Ort. Zuhause ist, wer dir die Tür aufmacht, wenn du klopfst."
+  },
+  {
+   "nr": 7,
+   "typ": "waldnacht",
+   "kapitel": 2,
+   "start": 28.092,
+   "dauer": 5.582,
+   "emotion": "erzaehlend",
+   "text": "Angst ist laut. Liebe ist oft leise. Hör genau hin. Sonst überhörst du sie."
+  },
+  {
+   "nr": 8,
+   "typ": "lebenszeit",
+   "kapitel": 2,
+   "start": 33.674,
+   "dauer": 4.55,
+   "emotion": "erzaehlend",
+   "text": "Die Abende mit deiner Familie sind gezählt. Du weißt nur nicht, welcher der letzte ist."
+  },
+  {
+   "nr": 9,
+   "typ": "haltestelle",
+   "kapitel": 2,
+   "start": 38.224,
+   "dauer": 3.686,
+   "emotion": "erzaehlend",
+   "text": "Sag den Menschen, dass du sie magst. Solange sie es noch hören können."
+  },
+  {
+   "nr": 10,
+   "typ": "weltall",
+   "kapitel": 2,
+   "start": 41.91,
+   "dauer": 5.606,
+   "emotion": "erzaehlend",
+   "text": "Unter Milliarden Stimmen erkennst du eine einzige sofort. Das ist kein Zufall. Das ist Liebe."
+  },
+  {
+   "nr": 11,
+   "typ": "see",
+   "kapitel": 2,
+   "start": 47.516,
+   "dauer": 3.758,
+   "emotion": "erzaehlend",
+   "text": "Ein echter Freund hält dich am Ärmel fest, wenn du in die falsche Richtung gehst."
+  },
+  {
+   "nr": 12,
+   "typ": "waldnacht",
+   "kapitel": 2,
+   "start": 51.274,
+   "dauer": 4.79,
+   "emotion": "erzaehlend",
+   "text": "Nicht jeder, der deinen Namen ruft, meint dich. Die Richtigen erkennst du daran, dass sie bleiben."
+  },
+  {
+   "nr": 13,
+   "typ": "polarlicht",
+   "kapitel": 2,
+   "start": 56.064,
+   "dauer": 3.974,
+   "emotion": "erzaehlend",
+   "text": "Wer dir zuhört, schenkt dir das Wertvollste, was er hat. Seine Zeit."
+  },
+  {
+   "nr": 14,
+   "typ": "handy",
+   "kapitel": 3,
+   "start": 60.038,
+   "dauer": 4.406,
+   "emotion": "erzaehlend",
+   "text": "Und wenn du heute nur eine Sache machst: Ruf deine Mama an. Heute noch."
+  }
+ ]
+}

@@ -1,0 +1,48 @@
+# Der Nachahmer – Zitate: Stimmen, die bleiben
+@musik musik/s03z-f01.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung traurig
+@vortrag lebendig
+@mund zitate
+@einblenden aus
+@qualitaet max
+@look 0.75
+@kino 0.5
+@stil leuchtend
+@palette blau
+@zeit nacht
+
+== Hook ==
+// Wald bei Nacht, ganz oben zwei helle Augen, Nebel
+[waldnacht augen=1 palette=blau palette_staerke=0.6 zoom-rein hooktext="DU WIRST SIE VERMISSEN"] Die Stimme, die dich heute nervt, wirst du eines Tages vermissen.
+// See bei Nacht, du ganz klein am Ufer
+[landschaft zeit=nacht see du palette=blau palette_staerke=0.6 zoom-raus] Jeder hat eine Stimme im Kopf, die nach Zuhause klingt. Ruf sie an, solange sie noch abhebt.
+
+== Zitate ==
+// Hütte am See, ein warmes Fenster im dunklen Wald
+[waldnacht huette see du palette=blau palette_staerke=0.6 schwenk-rechts] Zeit hat man nicht. Zeit nimmt man sich. Wer wartet, bis sie von allein kommt, wartet zu lange.
+// Handy: verpasster Anruf von Opa
+[handy ort=wohnzimmer zeit=nacht netz=1 akku=41 uhrzeit="21:14" von="Opa" nachricht="Verpasster Anruf" palette=blau palette_staerke=0.6 zoom-rein] „Ich ruf morgen zurück.“ Kaum ein Satz wird später so sehr bereut.
+// Großstadt bei Nacht von oben, tausend Fenster
+[grossstadt zeit=nacht palette=blau palette_staerke=0.6 zoom-raus] Man kann eine Stimme nachmachen. Aber nicht das Gefühl, wenn sie deinen Namen sagt.
+// Wohnzimmer mit Kamin, du und Mama auf dem Sofa
+[wohnzimmer du mama licht=an zeit=nacht palette=blau palette_staerke=0.6 zoom-rein] Zuhause ist kein Ort. Zuhause ist, wer dir die Tür aufmacht, wenn du klopfst.
+// Wald, ein Lichtstrahl der Taschenlampe zwischen den Stämmen
+[waldnacht du lampe palette=blau palette_staerke=0.6 zoom-rein] Angst ist laut. Liebe ist oft leise. Hör genau hin. Sonst überhörst du sie.
+// Lebenszeit: dein Leben in Wochen
+[lebenszeit jahre=18 oben="Deine Abende" palette=blau palette_staerke=0.6 zoom-raus] Die Abende mit deiner Familie sind gezählt. Du weißt nur nicht, welcher der letzte ist.
+// Haltestelle bei Nacht im Regen, du allein unter der Laterne
+[haltestelle du regen zeit=nacht palette=blau palette_staerke=0.6 zoom-rein] Sag den Menschen, dass du sie magst. Solange sie es noch hören können.
+// Weltall: die Erde, klein und still
+[weltall mond palette=lila palette_staerke=0.6 zoom-raus] Unter Milliarden Stimmen erkennst du eine einzige sofort. Das ist kein Zufall. Das ist Liebe.
+// See bei Nacht, du und Ben sitzen am Steg
+[see du ben sitzen zeit=nacht palette=blau palette_staerke=0.6 schwenk-rechts] Ein echter Freund hält dich am Ärmel fest, wenn du in die falsche Richtung gehst.
+// Wald am See, Nebel zwischen den Stämmen
+[waldnacht see palette=blau palette_staerke=0.6 zoom-raus] Nicht jeder, der deinen Namen ruft, meint dich. Die Richtigen erkennst du daran, dass sie bleiben.
+// Polarlicht über Bergen, kühles Blau
+[polarlicht farbe=#9fd0ff palette=blau palette_staerke=0.6 zoom-rein] Wer dir zuhört, schenkt dir das Wertvollste, was er hat. Seine Zeit.
+
+== Schluss ==
+// Handy: Anruf bei Mama
+[handy ort=wohnzimmer zeit=nacht netz=4 akku=64 uhrzeit="19:30" von="Mama" nachricht="Anruf wird verbunden …" palette=blau palette_staerke=0.6 zoom-rein] Und wenn du heute nur eine Sache machst: Ruf deine Mama an. Heute noch.
