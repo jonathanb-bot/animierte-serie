@@ -12,6 +12,7 @@
 @stil leuchtend
 @palette blau
 @zeit nacht
+@untertitel aus
 
 == Hook ==
 // Wald bei Nacht, ganz oben zwei helle Augen, Nebel
