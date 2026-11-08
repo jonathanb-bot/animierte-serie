@@ -754,6 +754,32 @@
    }
   },
   {
+   "id": "s03z",
+   "art": "zitate",
+   "zu_staffel": "s03",
+   "titel": "Stimmen, die bleiben",
+   "datum": "2026-11-08",
+   "geliefert": "2026-11-08 08:37",
+   "posten": "manuell (Jonathan, eigener Song)",
+   "dauer_s": 64.5,
+   "saetze": [
+    "Die Stimme, die dich heute nervt, wirst du eines Tages vermissen.",
+    "Jeder hat eine Stimme im Kopf, die nach Zuhause klingt. Ruf sie an, solange sie noch abhebt.",
+    "Zeit hat man nicht. Zeit nimmt man sich. Wer wartet, bis sie von allein kommt, wartet zu lange.",
+    "„Ich ruf morgen zurück.“ Kaum ein Satz wird später so sehr bereut.",
+    "Man kann eine Stimme nachmachen. Aber nicht das Gefühl, wenn sie deinen Namen sagt.",
+    "Zuhause ist kein Ort. Zuhause ist, wer dir die Tür aufmacht, wenn du klopfst.",
+    "Angst ist laut. Liebe ist oft leise. Hör genau hin. Sonst überhörst du sie.",
+    "Die Abende mit deiner Familie sind gezählt. Du weißt nur nicht, welcher der letzte ist.",
+    "Sag den Menschen, dass du sie magst. Solange sie es noch hören können.",
+    "Unter Milliarden Stimmen erkennst du eine einzige sofort. Das ist kein Zufall. Das ist Liebe.",
+    "Ein echter Freund hält dich am Ärmel fest, wenn du in die falsche Richtung gehst.",
+    "Nicht jeder, der deinen Namen ruft, meint dich. Die Richtigen erkennst du daran, dass sie bleiben.",
+    "Wer dir zuhört, schenkt dir das Wertvollste, was er hat. Seine Zeit.",
+    "Und wenn du heute nur eine Sache machst: Ruf deine Mama an. Heute noch."
+   ]
+  },
+  {
    "id": "s04",
    "datum": "2026-11-06",
    "titel": "Die zwölfte Quittung",
