@@ -3,6 +3,7 @@
 //   ZERNIO_API_KEY=... node posten/zernio.mjs            -> alle offenen Posts aus plan.json einplanen
 //   ... node posten/zernio.mjs --nur tiktok-08,insta-01-1 -> nur diese
 //   ... node posten/zernio.mjs --konten                   -> nur verbundene Konten anzeigen
+//   ... node posten/zernio.mjs --kommentare               -> Kommentartexte -> posten/kommentare.json/.txt
 //   ... node posten/zernio.mjs --analyse                  -> Analytics aller veröffentlichten Posts + Konten -> posten/analyse.json
 // Was eingeplant wurde, steht danach in posten/status.json (wird nie doppelt gesendet).
 import fs from "node:fs";
@@ -63,6 +64,45 @@ if (args.includes("--konten")) {
 // --analyse: Auswertung für Claude (Jonathans Wunsch 1.11.: vor jeder Staffel schauen, was gut ankam).
 // Holt die Post-Analytics aller Posts der letzten 60 Tage (GET /analytics, seitenweise), Konto-Insights je Plattform
 // und die besten Posting-Zeiten. Schreibt posten/analyse.json (nur Zahlen und kurze Texte, keine Zugangsdaten).
+// --kommentare: Kommentartexte aller Posts mit Kommentaren holen (Zernio Inbox, Jonathan 8.11.)
+// GET /inbox/comments listet Posts mit commentCount, GET /inbox/comments/{postId} liefert die Kommentare.
+// Ergebnis: posten/kommentare.json (Rohdaten) und posten/kommentare.txt (lesbar, meiste Likes zuerst).
+if (args.includes("--kommentare")) {
+  const ergebnis = { erstellt: new Date().toISOString(), posts: [], fehler: [] };
+  const zeilen = [];
+  const feld = (o, ...ns) => { for (const n of ns) { const v = n.split(".").reduce((x, k) => x?.[k], o); if (v != null && v !== "") return v; } return null; };
+  for (let k = 0; k < KEYS.length; k++) {
+    if (!KEYS[k]) continue;
+    for (let page = 1; page <= 10; page++) {
+      const r = await api("GET", `/inbox/comments?limit=100&page=${page}`, null, KEYS[k]);
+      if (!r.ok) { ergebnis.fehler.push(`${KNAME(k)} Liste: HTTP ${r.status} ${JSON.stringify(r.json).slice(0, 300)}`); console.log(`${KNAME(k)}: HTTP ${r.status} ${JSON.stringify(r.json).slice(0, 300)}`); break; }
+      const posts = r.json.posts || r.json.data || r.json.items || (Array.isArray(r.json) ? r.json : []);
+      if (page === 1) console.log(`${KNAME(k)}: Antwort-Felder ${Object.keys(r.json).join(", ")}; ${posts.length} Posts`);
+      for (const p of posts) {
+        const anzahl = feld(p, "commentCount", "comments", "commentsCount") || 0;
+        if (!anzahl) continue;
+        const pid = feld(p, "postId", "id", "_id", "platformPostId");
+        const c = await api("GET", `/inbox/comments/${encodeURIComponent(pid)}?limit=100`, null, KEYS[k]);
+        const liste = c.ok ? (c.json.comments || c.json.data || c.json.items || []) : [];
+        if (!c.ok) ergebnis.fehler.push(`${KNAME(k)} ${pid}: HTTP ${c.status} ${JSON.stringify(c.json).slice(0, 300)}`);
+        ergebnis.posts.push({ konto: KNAME(k), post: p, kommentare: liste, antwort: c.ok ? undefined : c.json });
+        const titel = String(feld(p, "content", "text", "title", "caption") || "").split("\n")[0].slice(0, 90);
+        zeilen.push(`\n### ${feld(p, "platform") || "?"} · ${KNAME(k)} · ${anzahl} Kommentare · ${feld(p, "platformPostUrl", "url", "permalink") || pid}\n${titel}`);
+        const sortiert = [...liste].sort((x, y) => (feld(y, "likeCount", "likes", "diggCount") || 0) - (feld(x, "likeCount", "likes", "diggCount") || 0));
+        for (const m of sortiert) {
+          zeilen.push(`- (${feld(m, "likeCount", "likes", "diggCount") || 0} Likes) ${feld(m, "author.username", "author.name", "username", "from.username", "authorName") || "?"}: ${String(feld(m, "text", "message", "content", "comment") || "").replace(/\s+/g, " ")}`);
+          for (const a of (m.replies || []).slice(0, 3)) zeilen.push(`    ↳ ${feld(a, "author.username", "username", "authorName") || "?"}: ${String(feld(a, "text", "message", "content") || "").replace(/\s+/g, " ")}`);
+        }
+      }
+      if (posts.length < 100) break;
+    }
+  }
+  fs.writeFileSync(path.join(DIR, "kommentare.json"), JSON.stringify(ergebnis, null, 1) + "\n");
+  fs.writeFileSync(path.join(DIR, "kommentare.txt"), `Kommentare (Stand ${ergebnis.erstellt})\n` + zeilen.join("\n") + (ergebnis.fehler.length ? "\n\nFehler:\n" + ergebnis.fehler.join("\n") : "") + "\n");
+  console.log(`${ergebnis.posts.length} Posts mit Kommentaren, ${ergebnis.posts.reduce((n, p) => n + p.kommentare.length, 0)} Kommentare geladen, ${ergebnis.fehler.length} Fehler`);
+  process.exit(0);
+}
+
 if (args.includes("--analyse")) {
   const zahlen = (o, tiefe = 0, pre = "") => {
     const out = {};
