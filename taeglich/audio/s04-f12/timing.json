@@ -1,0 +1,203 @@
+{
+ "dauer": 81.596,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "fundhaus",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 4.382,
+   "emotion": "froh",
+   "text": "Vor zwölf Jahren hast du hier einen roten Stoffvogel abgegeben."
+  },
+  {
+   "nr": 2,
+   "typ": "objekt",
+   "kapitel": 1,
+   "start": 4.382,
+   "dauer": 3.014,
+   "emotion": "erklaerend",
+   "text": "Du warst fünf. Und du erinnerst dich an nichts."
+  },
+  {
+   "nr": 3,
+   "typ": "objekt",
+   "kapitel": 2,
+   "start": 7.396,
+   "dauer": 4.43,
+   "emotion": "erklaerend",
+   "text": "Papa legt die alte Quittung vor dich hin. Das Papier ist weich wie Stoff."
+  },
+  {
+   "nr": 4,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 11.826,
+   "dauer": 2.87,
+   "emotion": "froh",
+   "text": "„Du hast ihn im Park gefunden. Im Regen.“"
+  },
+  {
+   "nr": 5,
+   "typ": "park",
+   "kapitel": 2,
+   "start": 14.696,
+   "dauer": 6.446,
+   "emotion": "erzaehlend",
+   "text": "Ein roter Vogel aus Samt. Ein Flügel kleiner als der andere, schief angenäht, mit dicken Stichen."
+  },
+  {
+   "nr": 6,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 21.142,
+   "dauer": 2.726,
+   "emotion": "froh",
+   "text": "„Du wolltest ihn nicht hergeben. Du hast geweint.“"
+  },
+  {
+   "nr": 7,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 23.868,
+   "dauer": 1.478,
+   "emotion": "froh",
+   "text": "Das klingt ziemlich nach dir."
+  },
+  {
+   "nr": 8,
+   "typ": "fundhaus",
+   "kapitel": 2,
+   "start": 25.346,
+   "dauer": 3.83,
+   "emotion": "erzaehlend",
+   "text": "Aber du hast ihn abgegeben. In Fach zwölf. Ausgerechnet."
+  },
+  {
+   "nr": 9,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 29.176,
+   "dauer": 3.134,
+   "emotion": "erzaehlend",
+   "text": "„Am nächsten Tag kam ein kleiner Junge. Mit Brille.“"
+  },
+  {
+   "nr": 10,
+   "typ": "objekt",
+   "kapitel": 3,
+   "start": 32.31,
+   "dauer": 6.782,
+   "emotion": "erklaerend",
+   "text": "Darauf stehen zwei Kinderunterschriften. Deine, als Finder. Und darunter, krumm und riesig: Sami."
+  },
+  {
+   "nr": 11,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 39.092,
+   "dauer": 3.038,
+   "emotion": "spannend",
+   "text": "Hier hast du ihn kennengelernt. Genau an dieser Theke."
+  },
+  {
+   "nr": 12,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 42.13,
+   "dauer": 2.414,
+   "emotion": "froh",
+   "text": "„Ihr habt den ganzen Nachmittag zusammen gespielt.“"
+  },
+  {
+   "nr": 13,
+   "typ": "wohnzimmer",
+   "kapitel": 3,
+   "start": 44.544,
+   "dauer": 4.982,
+   "emotion": "erzaehlend",
+   "text": "Seitdem: jeder Geburtstag, jede Klassenfahrt, jeder schlechte Tag."
+  },
+  {
+   "nr": 14,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 49.526,
+   "dauer": 3.302,
+   "emotion": "froh",
+   "text": "Und heute hättest du ihn fast verloren. An ein Stück Papier."
+  },
+  {
+   "nr": 15,
+   "typ": "objekt",
+   "kapitel": 4,
+   "start": 52.828,
+   "dauer": 4.694,
+   "emotion": "erklaerend",
+   "text": "Heute stand sein Name auf einer falschen Quittung. Damals auf seiner ersten echten."
+  },
+  {
+   "nr": 16,
+   "typ": "fundhaus",
+   "kapitel": 4,
+   "start": 57.522,
+   "dauer": 4.382,
+   "emotion": "erzaehlend",
+   "text": "Du legst beide nebeneinander unter die Glasplatte der Theke. Dort bleiben sie."
+  },
+  {
+   "nr": 17,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 61.904,
+   "dauer": 2.222,
+   "emotion": "froh",
+   "text": "„Manche Sachen findet man zweimal.“"
+  },
+  {
+   "nr": 18,
+   "typ": "fundhaus",
+   "kapitel": 4,
+   "start": 64.126,
+   "dauer": 4.238,
+   "emotion": "erzaehlend",
+   "text": "Sami steht neben dir. Er ist ganz still. Das Licht im Hof wird orange."
+  },
+  {
+   "nr": 19,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 68.364,
+   "dauer": 2.414,
+   "emotion": "froh",
+   "text": "„Ich hab mich nie bedankt. Fürs Finden.“"
+  },
+  {
+   "nr": 20,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 70.778,
+   "dauer": 2.702,
+   "emotion": "froh",
+   "text": "„Doch. Heute. Du bist zurückgekommen.“"
+  },
+  {
+   "nr": 21,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 73.48,
+   "dauer": 2.03,
+   "emotion": "froh",
+   "text": "Dann greift er in seine Jackentasche."
+  },
+  {
+   "nr": 22,
+   "typ": "objekt",
+   "kapitel": 5,
+   "start": 75.51,
+   "dauer": 6.086,
+   "emotion": "erklaerend",
+   "text": "Ein roter Stoffvogel. Ein Flügel kleiner als der andere. Er trägt ihn seit zwölf Jahren bei sich."
+  }
+ ]
+}
