@@ -45,6 +45,37 @@
     "lufs": -14.6,
     "dauer_s": 47.37
    }
+  },
+  {
+   "id": "video-002",
+   "datum": "2026-11-08",
+   "titel": "Ein Prozent",
+   "stimmung": "warm",
+   "thema": "Selbstverbesserung: jeden Tag 1 % besser (Zinseszins, 1,01^365 ≈ 37,8; 0,99^365 ≈ 2,6 %)",
+   "stil": "minimal (schwarzer Grund, leuchtende Linien, Strichfiguren) nach Jonathans Vorlage vom 8.11.",
+   "kulissen": [
+    "minimal"
+   ],
+   "vorbild": "Jonathans Vorlage (englisches Erklär-Short „The first $10,000…“): überraschende Behauptung, „die meisten denken“, warum alle aufgeben, „aber“, Schritt für Schritt, Gegenseite, Erkenntnis",
+   "hook": "Jeden Tag ein Prozent besser. Rechnerisch bist du nach einem Jahr siebenunddreißigmal so gut.",
+   "beschreibung": "Jeden Tag nur ein Prozent besser. Nach einem Monat merkst du fast nichts. Nach einem Jahr bist du ein anderer Mensch.",
+   "hashtags": [
+    "#motivation",
+    "#selbstverbesserung",
+    "#gewohnheiten",
+    "#wissen",
+    "#animation",
+    "#deutsch"
+   ],
+   "tags": [
+    "motivation",
+    "selbstverbesserung",
+    "gewohnheiten",
+    "wissen",
+    "animation",
+    "deutsch"
+   ],
+   "emoji": "📈"
   }
  ]
 }

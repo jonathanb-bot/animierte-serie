@@ -17,7 +17,7 @@
 
 == Hook ==
 // Kurve: lange flach, dann steil, Wert zählt hoch
-[minimal motiv=kurve art=exp bis=1 hooktext="1 % JEDEN TAG"] Jeden Tag ein Prozent besser. Rechnerisch bist du nach einem Jahr siebenunddreißigmal so gut.
+[minimal motiv=kurve art=exp von=0.6 bis=1 hooktext="1 % JEDEN TAG"] Jeden Tag ein Prozent besser. Rechnerisch bist du nach einem Jahr siebenunddreißigmal so gut.
 
 == Denkfehler ==
 // ein einzelner leuchtender Punkt: 1 %
