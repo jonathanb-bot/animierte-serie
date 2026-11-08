@@ -1,0 +1,149 @@
+{
+ "dauer": 67.4,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "minimal",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 6.206,
+   "emotion": "erzaehlend",
+   "text": "Jeden Tag ein Prozent besser. Rechnerisch bist du nach einem Jahr siebenunddreißigmal so gut."
+  },
+  {
+   "nr": 2,
+   "typ": "minimal",
+   "kapitel": 2,
+   "start": 6.206,
+   "dauer": 2.822,
+   "emotion": "erzaehlend",
+   "text": "Die meisten denken, ein Prozent ist nichts."
+  },
+  {
+   "nr": 3,
+   "typ": "minimal",
+   "kapitel": 2,
+   "start": 9.028,
+   "dauer": 5.246,
+   "emotion": "erzaehlend",
+   "text": "Sie erwarten, dass Fortschritt wie eine gerade Linie wächst. Jeden Tag ein gleich großes Stück."
+  },
+  {
+   "nr": 4,
+   "typ": "minimal",
+   "kapitel": 2,
+   "start": 14.274,
+   "dauer": 4.862,
+   "emotion": "erzaehlend",
+   "text": "Also fängst du an. Tag eins. Tag zwei. Du merkst gar nichts."
+  },
+  {
+   "nr": 5,
+   "typ": "minimal",
+   "kapitel": 2,
+   "start": 19.136,
+   "dauer": 2.918,
+   "emotion": "erzaehlend",
+   "text": "Nach einem Monat bist du gerade mal ein Drittel besser."
+  },
+  {
+   "nr": 6,
+   "typ": "minimal",
+   "kapitel": 2,
+   "start": 22.054,
+   "dauer": 5.006,
+   "emotion": "erzaehlend",
+   "text": "Und genau hier hören fast alle auf. Weil es sich nach nichts anfühlt."
+  },
+  {
+   "nr": 7,
+   "typ": "minimal",
+   "kapitel": 3,
+   "start": 27.06,
+   "dauer": 5.222,
+   "emotion": "erzaehlend",
+   "text": "Aber ein Prozent rechnet nicht mit dem Anfang. Es rechnet mit allem, was du schon geschafft hast."
+  },
+  {
+   "nr": 8,
+   "typ": "minimal",
+   "kapitel": 3,
+   "start": 32.282,
+   "dauer": 3.758,
+   "emotion": "erzaehlend",
+   "text": "Jede Stufe wird ein kleines bisschen höher als die davor."
+  },
+  {
+   "nr": 9,
+   "typ": "minimal",
+   "kapitel": 3,
+   "start": 36.04,
+   "dauer": 3.254,
+   "emotion": "erzaehlend",
+   "text": "Nach drei Monaten bist du schon fast zweieinhalbmal so gut."
+  },
+  {
+   "nr": 10,
+   "typ": "minimal",
+   "kapitel": 3,
+   "start": 39.294,
+   "dauer": 1.886,
+   "emotion": "erzaehlend",
+   "text": "Nach einem halben Jahr sechsmal."
+  },
+  {
+   "nr": 11,
+   "typ": "minimal",
+   "kapitel": 3,
+   "start": 41.18,
+   "dauer": 3.062,
+   "emotion": "erzaehlend",
+   "text": "Und nach einem Jahr siebenunddreißigmal."
+  },
+  {
+   "nr": 12,
+   "typ": "minimal",
+   "kapitel": 4,
+   "start": 44.242,
+   "dauer": 6.83,
+   "emotion": "erzaehlend",
+   "text": "Umgekehrt gilt das genauso. Wer jeden Tag ein Prozent nachlässt, hat nach einem Jahr keine drei Prozent mehr übrig."
+  },
+  {
+   "nr": 13,
+   "typ": "minimal",
+   "kapitel": 4,
+   "start": 51.072,
+   "dauer": 4.622,
+   "emotion": "erzaehlend",
+   "text": "Am Anfang liegen beide Wege so nah beieinander, dass niemand den Unterschied sieht."
+  },
+  {
+   "nr": 14,
+   "typ": "minimal",
+   "kapitel": 5,
+   "start": 55.694,
+   "dauer": 4.886,
+   "emotion": "erzaehlend",
+   "text": "Zehn Minuten Sport. Eine Seite lesen. Ein neues Wort lernen."
+  },
+  {
+   "nr": 15,
+   "typ": "minimal",
+   "kapitel": 5,
+   "start": 60.58,
+   "dauer": 3.11,
+   "emotion": "erzaehlend",
+   "text": "Klein genug, dass du heute damit anfangen kannst."
+  },
+  {
+   "nr": 16,
+   "typ": "minimal",
+   "kapitel": 5,
+   "start": 63.69,
+   "dauer": 3.71,
+   "emotion": "erzaehlend",
+   "text": "Und groß genug, dass du in einem Jahr ein anderer Mensch bist."
+  }
+ ]
+}

@@ -1,0 +1,57 @@
+# Ein Prozent
+@musik musik/video-002.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung warm
+@vortrag lebendig
+@klang studio
+@mund zitate
+@einblenden aus
+@untertitel aus
+@qualitaet max
+@look 0
+
+// Einzelvideo im Stil „minimal“ (Jonathans Vorlage 8.11.: schwarzer Grund, leuchtende Linien, Strichfiguren,
+// ein Gedanke wird Schritt für Schritt erklärt). Rechnung: 1,01^30 = 1,35 · 1,01^90 = 2,45 · 1,01^180 = 6,0 ·
+// 1,01^365 = 37,8 · 0,99^365 = 0,026
+
+== Hook ==
+// Kurve: lange flach, dann steil, Wert zählt hoch
+[minimal motiv=kurve art=exp bis=1 hooktext="1 % JEDEN TAG"] Jeden Tag ein Prozent besser. Rechnerisch bist du nach einem Jahr siebenunddreißigmal so gut.
+
+== Denkfehler ==
+// ein einzelner leuchtender Punkt: 1 %
+[minimal motiv=punkt wert="1 %" label="FAST NICHTS" ab=Prozent zoom-rein] Die meisten denken, ein Prozent ist nichts.
+// gestrichelte Gerade (was man erwartet) neben der echten Kurve
+[minimal motiv=kurve art=exp gerade bis=1 wert=false tage=false] Sie erwarten, dass Fortschritt wie eine gerade Linie wächst. Jeden Tag ein gleich großes Stück.
+// Kalender zählt Tag 1 → 2, die Figur bleibt gleich
+[minimal motiv=kalender von=1 bis=2 ab=Tag] Also fängst du an. Tag eins. Tag zwei. Du merkst gar nichts.
+// Kurve über den ersten Monat, kaum Anstieg
+[minimal motiv=kurve art=exp bis=0.082 max=38 min=0.9 zoom-rein] Nach einem Monat bist du gerade mal ein Drittel besser.
+// viele Figuren, fast alle drehen ab
+[minimal motiv=menge weg anzahl=9 bleibt=1 ab=hören label="DIE MEISTEN HÖREN AUF"] Und genau hier hören fast alle auf. Weil es sich nach nichts anfühlt.
+
+== Wendung ==
+// Treppe baut sich auf, jede Stufe höher
+[minimal motiv=treppe stufen=9 ab=Aber] Aber ein Prozent rechnet nicht mit dem Anfang. Es rechnet mit allem, was du schon geschafft hast.
+[minimal motiv=treppe stufen=10 faktor=1.36 label="JEDE STUFE ETWAS HÖHER" zoom-raus] Jede Stufe wird ein kleines bisschen höher als die davor.
+// Kurve von Monat 1 bis 3
+[minimal motiv=kurve art=exp von=0.082 bis=0.247 max=7 min=0.9 ab=drei] Nach drei Monaten bist du schon fast zweieinhalbmal so gut.
+// Kurve bis zum halben Jahr
+[minimal motiv=kurve art=exp von=0.247 bis=0.493 max=7 min=0.9 ab=halben] Nach einem halben Jahr sechsmal.
+// Gipfel: Kurve schießt hoch, Lichtstrahlen, Figur oben
+[minimal motiv=gipfel] Und nach einem Jahr siebenunddreißigmal.
+
+== Umgekehrt ==
+// fallende Kurve, Prozent zählt herunter
+[minimal motiv=kurve art=fallen bis=1 ab=Wer] Umgekehrt gilt das genauso. Wer jeden Tag ein Prozent nachlässt, hat nach einem Jahr keine drei Prozent mehr übrig.
+// zwei Wege, die am Anfang fast gleich sind
+[minimal motiv=zwei bis=0.4 zoom-rein] Am Anfang liegen beide Wege so nah beieinander, dass niemand den Unterschied sieht.
+
+== Ende ==
+// Karten erscheinen beim gesprochenen Wort
+[minimal motiv=karten karten="10 MIN SPORT|1 SEITE LESEN|1 NEUES WORT" bei="Sport|Seite|Wort" label="JEDEN TAG"] Zehn Minuten Sport. Eine Seite lesen. Ein neues Wort lernen.
+// Figur geht los
+[minimal motiv=figur gehen label="HEUTE"] Klein genug, dass du heute damit anfangen kannst.
+// Gipfel ohne Zahl
+[minimal motiv=gipfel wert=false zoom-raus] Und groß genug, dass du in einem Jahr ein anderer Mensch bist.

@@ -113,6 +113,15 @@ def norm(t: str) -> list[str]:
     if {"hundred", "thousand", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"} & set(w):
         w = en_zahlen(w)
     # Zahlwörter wie Ziffern behandeln (Whisper schreibt „18“, das Drehbuch „achtzehn“)
+    # „sechsmal“, „siebenunddreißigmal“ → „6 mal“, „37 mal“ (Whisper schreibt „sechs Mal“ bzw. „37 Mal“, 8.11.)
+    getrennt = []
+    for x in w:
+        vorn = x[:-3] if x.endswith("mal") and len(x) > 3 else None
+        if vorn and (vorn in ZAHLEN or de_zahl(vorn) is not None):
+            getrennt += [vorn, "mal"]
+        else:
+            getrennt.append(x)
+    w = getrennt
     w = [str(z) if (z := de_zahl(x)) is not None else x for x in w]
     return [ZAHLEN.get(x, x).replace("ß", "ss") for x in w]
 
