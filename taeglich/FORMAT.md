@@ -146,6 +146,20 @@ Jonathan hat Referenzbilder in Kurzgesagt-Richtung geschickt und die Probe „W�
 - Merkmale, an denen sich neue Kulissen orientieren: eine Farbfamilie, Tiefenunschärfe in Ebenen, dunkle Silhouetten am Rand, Licht (Strahlen, Glühen, Linsenreflexe), Wechsel aus Detail und Ruhe, Panorama mit kleiner Figur. Nie Figuren, Vögel, Logo oder Szenen von Kurzgesagt nachbauen.
 - Die alten Serien (24. Stock, Der Alien, Der letzte Mann, s01) bleiben im bisherigen Look.
 
+## Einblendungen und Studio-Stimme (Jonathans Wunsch 8.11., Issue #29)
+
+Jonathan: „Die Videos müssen noch aufwendiger werden, mit Einblendungen, an Dinge Erklärt orientieren, und die Stimme noch besser.“ Gilt für alle neuen Folgen (auch Englisch und Zitat-Video). Alte Videos bleiben pixelgleich.
+
+- **Einblendungen mit `ein=`:** Ein Etikett mit Icon und Text springt **genau in dem Moment ins Bild, in dem die Stimme das Stichwort sagt**, und bleibt bis zum Ende der Einstellung. Format: `ein="Stichwort>TEXT>icon|Stichwort2>#4.000 €>geld"`.
+  - `Stichwort` ist das erste gesprochene Wort, bei dem das Etikett erscheint (Wortanfang genügt, „Vierzehn“ trifft „vierzehn“).
+  - `TEXT` ist kurz, höchstens ca. 18 Zeichen. Ein `#` davor lässt die Zahl hochzählen (`#24 FÄCHER`, `#4.000 €`).
+  - `icon` ist optional, ein Name aus `engine/objekte.js` (`A.ICONS`, z. B. uhr, geld, schluessel, herz, taschenlampe, quittung).
+  - Höchstens 2 Etiketten pro Einstellung, Höhe mit `ein_y=` (Standard 470; tiefer setzen, wenn oben ein Hook-Text oder ein Gesicht ist).
+- **Wie viele:** pro Folge **mindestens 6 Einstellungen mit `ein=`**, vor allem bei Zahlen, Uhrzeiten, Namen neuer Figuren, Orten, Regeln, Beweisstücken, Gefühlen. Nicht in jeder Einstellung: Ruhe-Bilder bleiben ruhig (Wechsel aus Detail und Ruhe). Nie auf Gesichter legen.
+- **Wie bei Dinge Erklärt:** Zahlen werden gezeigt, nicht nur gesagt. Fakten bekommen ein Icon. Zusammenhänge mit `[objekt …]`-Karten (zwei Dinge nebeneinander, vorher/nachher), Abläufe in Schritten über mehrere Einstellungen.
+- **Studio-Stimme:** Kopf `@klang studio`. Nach Gemini kommen Rumpelfilter, etwas Wärme (170 Hz) und Präsenz (3 kHz), weniger Zischlaute, sanfte Kompression. Stimme bleibt „Orus“, Tonhöhe wie immer unter 1,5 HT.
+- **Prüfen:** In den Standbildern muss jedes Etikett lesbar sein und darf nichts Wichtiges verdecken.
+
 ## Qualität: schärfer, flüssiger, detailreicher, bessere Geschichten (Jonathans Wunsch 3.11., Issue #20)
 
 Gilt für alle neuen Folgen. Die alten Serien und schon gerenderte Videos bleiben, wie sie sind (pixelgleich geprüft).

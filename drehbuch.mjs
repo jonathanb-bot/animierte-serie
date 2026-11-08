@@ -71,6 +71,7 @@ export function parse(text, cast = {}) {
       else if (cmd === "untertitel") ep.untertitel = rest[0] !== "aus"; // `@untertitel aus`: keine Untertitel (Test ab s03, Jonathan 5.11.)
       else if (cmd === "musik_lautstaerke") ep.musik_lautstaerke = Number(rest[0]);
       else if (cmd === "whoosh") ep.whoosh = rest[0] !== "aus";
+      else if (cmd === "klang") ep.klang = rest[0]; // `@klang studio`: Stimme mit Studio-Klang (Wärme, Präsenz, Kompression, weniger Zischlaute; Jonathan 8.11.)
       else if (cmd === "zeit") zeit = rest[0];
       else if (cmd === "look") look = Number(rest[0]); // Farblook für alle folgenden Einstellungen (0 = aus)
       else if (cmd === "kino") kino = Number(rest[0] ?? 1); // Kino-Look (Glühen, Körnung) für die Kurzvideos

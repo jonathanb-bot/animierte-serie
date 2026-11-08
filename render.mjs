@@ -198,11 +198,13 @@ const tonDatei = path.join(tmp, "ton.wav");
     schnitte.forEach((t, i) => { const ms = Math.max(0, Math.round((t - 0.2) * 1000)); filter.push(`[w${i}]adelay=${ms}|${ms}[wd${i}]`); mix.push(`[wd${i}]`); });
     n++;
   }
-  // Stimme
+  // Stimme. `@klang studio` (Jonathan 8.11.: „die Stimme noch besser“): Rumpeln weg, etwas Wärme und Präsenz,
+  // weniger Zischlaute, sanfte Kompression – klingt wie ein Sprecher im Studio. Ohne die Angabe bleibt alles wie bisher.
+  const STUDIO = "highpass=f=75,equalizer=f=170:t=q:w=0.9:g=1.5,equalizer=f=3000:t=q:w=1.1:g=2,equalizer=f=9500:t=q:w=1:g=-1.5,deesser=i=0.35,acompressor=threshold=0.14:ratio=2.5:attack=8:release=140:makeup=1.25,";
   for (const s of szenen) if (s._audio) {
     inputs.push("-i", s._audio);
     const ms = Math.round(s.start * 1000);
-    filter.push(`[${n}:a]aresample=48000,aformat=channel_layouts=stereo,adelay=${ms}|${ms},volume=${ep.stimme_lautstaerke ?? 1.0}[v${n}]`); mix.push(`[v${n}]`); n++;
+    filter.push(`[${n}:a]${ep.klang === "studio" ? STUDIO : ""}aresample=48000,aformat=channel_layouts=stereo,adelay=${ms}|${ms},volume=${ep.stimme_lautstaerke ?? 1.0}[v${n}]`); mix.push(`[v${n}]`); n++;
   }
   filter.push(`${mix.join("")}amix=inputs=${mix.length}:normalize=0:duration=longest,atrim=0:${gesamt},alimiter=limit=0.95[out]`);
   execFileSync("ffmpeg", ["-y", "-v", "error", ...inputs, "-filter_complex", filter.join(";"), "-map", "[out]", "-ar", "48000", "-ac", "2", tonDatei]);

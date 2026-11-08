@@ -108,6 +108,61 @@
     ctx.restore();
   }
 
+  // ---------- Einblendungen (Jonathan 8.11.: „aufwendiger, mit Einblendungen, wie Dinge Erklärt“) ----------
+  // Drehbuch: ein="Stichwort>TEXT>icon|Stichwort2>#4000 €>geld"  (icon optional, „#“ = Zahl zählt hoch)
+  // Das Etikett springt in dem Moment ins Bild, in dem die Stimme das Stichwort sagt, und bleibt bis zum Szenenende.
+  // ein_y= setzt die Höhe (Standard 470, darunter gestapelt). Ohne `ein` wird nichts gezeichnet (alte Folgen pixelgleich).
+  const norm = w => String(w).toLowerCase().replace(/[^a-z0-9äöüß]/g, "");
+  function einblendungen(s, t) {
+    if (!s.ein) return;
+    if (!s._ein) {
+      const woerter = s.woerter || [];
+      s._ein = String(s.ein).split("|").map(x => x.trim()).filter(Boolean).map((teil, i) => {
+        const [wort, text, icon] = teil.split(">").map(x => (x || "").trim());
+        const n = norm(wort.split(/\s+/)[0]);
+        const treffer = n && woerter.find(w => norm(w.w).startsWith(n));
+        const zahl = /^#/.test(text || "") ? (text.slice(1).match(/^([\d.,]+)(.*)$/) || null) : null;
+        return { text: (text || wort).replace(/^#/, ""), icon: icon && A.I[icon] ? icon : null,
+                 start: treffer ? treffer.start : 0.25 + i * 0.5, zahl };
+      });
+    }
+    const y0 = s.ein_y || D.ein_y || 470;
+    s._ein.forEach((e, i) => {
+      const dt = t - e.start;
+      if (dt < 0) return;
+      const p = clamp(dt / 0.35, 0, 1);
+      const sc = p < 1 ? E.pop(p) * (1 + 0.08 * Math.sin(p * Math.PI)) : 1;
+      let txt = e.text.toUpperCase();
+      if (e.zahl) { // hochzählen in 0,8 s, Tausenderpunkte wie im Drehbuch
+        const ziel = Number(e.zahl[1].replace(/\./g, "").replace(",", ".")), q = E.raus ? E.raus(clamp(dt / 0.8, 0, 1)) : clamp(dt / 0.8, 0, 1);
+        const v = Math.round(ziel * q);
+        txt = (e.zahl[1].includes(".") ? v.toLocaleString("de-DE") : String(v)) + e.zahl[2].toUpperCase();
+      }
+      const fs = e.zahl ? 92 : 62;
+      ctx.save();
+      ctx.font = `900 ${fs}px Titel`;
+      const tw = ctx.measureText(txt).width * 0.9, iw = e.icon ? 112 : 0;
+      const bw = tw + iw + 76, bh = Math.max(fs * 1.5, e.icon ? 124 : 0);
+      const y = y0 + i * (bh + 28) + Math.sin(t * 1.3 + i) * 4;
+      ctx.translate(W / 2, y); ctx.scale(sc, sc); ctx.globalAlpha = clamp(dt / 0.15, 0, 1);
+      ctx.shadowColor = "rgba(0,0,0,0.35)"; ctx.shadowBlur = 30; ctx.shadowOffsetY = 8;
+      box(-bw / 2, -bh / 2, bw, bh, bh / 2, "rgba(12,14,34,0.72)");
+      ctx.shadowColor = "transparent";
+      ctx.strokeStyle = "rgba(255,255,255,0.22)"; ctx.lineWidth = 3; rr(-bw / 2, -bh / 2, bw, bh, bh / 2); ctx.stroke();
+      if (e.icon) {
+        circle(-bw / 2 + 38 + iw / 2 - 6, 0, 52, "rgba(255,255,255,0.12)");
+        ctx.save(); ctx.translate(-bw / 2 + 38 + iw / 2 - 6, 0); ctx.scale(0.3, 0.3);
+        A.I[e.icon](t); ctx.restore();
+      }
+      ctx.fillStyle = e.zahl ? "#f2cf7e" : "#ffffff"; ctx.textAlign = "center"; ctx.textBaseline = "middle";
+      ctx.save(); ctx.translate(-bw / 2 + 38 + iw + tw / 2, 3); ctx.scale(0.9, 1); ctx.fillText(txt, 0, 0); ctx.restore();
+      // Akzentlinie wächst unter dem Text
+      const lw = tw * E.raus(clamp((dt - 0.15) / 0.4, 0, 1));
+      if (lw > 1) box(-bw / 2 + 38 + iw, bh / 2 - 22, lw, 6, 3, rgba("#f2cf7e", 0.9));
+      ctx.restore();
+    });
+  }
+
   // Einheitlicher Look (wie „Dinge Erklärt“): helle, graue Flächen (Wände, Rahmen, Himmel) werden dunkel und
   // leicht indigo, kräftige Farben (Lampenlicht, Haut, Akzente) bleiben warm und klar. Pro Bildpunkt.
   function farblook(st = 1) {
@@ -177,6 +232,7 @@
     vignette(s.vignette ?? 0.5);
     if (A.nachbearbeitung) A.nachbearbeitung(s, T); // Kino-Look (alltag.js), nur mit @kino
     hud(s.hud);
+    einblendungen(s, t);
     untertitel(s, t);
     if (s.blitz && t < 0.3) { ctx.fillStyle = `rgba(255,255,255,${1 - t / 0.3})`; ctx.fillRect(0, 0, W, H); }
     // Blenden
