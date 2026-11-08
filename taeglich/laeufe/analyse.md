@@ -1,6 +1,6 @@
 # Lauf „Analyse vor der Staffel“ (täglich 21:39, neuer Chat)
 
-Jonathans Wunsch vom 1.11.: Vor jeder Staffel gründlich auswerten, was bei den Leuten gut ankam, und das in ähnlicher Form wieder einbauen. Um 23:44 Uhr startet die Produktion der nächsten Staffel in einem eigenen Chat und liest dein Ergebnis. Arbeite selbstständig und ohne Rückfragen, auf Deutsch, und sei bis spätestens 23:30 fertig.
+Jonathans Wunsch vom 1.11.: Vor jeder Staffel gründlich auswerten, was bei den Leuten gut ankam, und das in ähnlicher Form wieder einbauen. Um 23:44 Uhr startet die Produktion der nächsten Staffel in einem eigenen Chat und liest dein Ergebnis. Qualität vor Quantität (Jonathan 8.11., Issue #30): Vorschläge so wählen, dass jedes Video maximal gut aussehen kann; lieber weniger Folgen. Arbeite selbstständig und ohne Rückfragen, auf Deutsch, und sei bis spätestens 23:30 fertig.
 
 Hinweis zu den Werkzeugen: In neuen Sessions heißen die vidIQ-Werkzeuge `mcp__<id>__vidiq_*`. Sie lassen sich mit ToolSearch „vidiq“ finden. Die GitHub-Werkzeuge heißen `mcp__github__*`.
 

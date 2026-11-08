@@ -9,6 +9,20 @@ Jonathans Auftrag vom 1.11.2026:
 - Alles in Du-Form, es **betrifft dich direkt**. **Keine Quizze, keine Fragen ans Publikum.**
 - **KI-Haken beim Posten immer aus** (Jonathans Vorgabe 2.11., Issue #15), besonders auf TikTok (`posten/zernio.mjs` auf `main`: `videoMadeWithAi: false`).
 
+## QUALITÄT VOR QUANTITÄT (Jonathans feste Vorgabe 8.11., Issue #30) – gilt vor allem anderen
+
+**Jedes Video muss maximal gut aussehen und klingen. Lieber weniger, dafür jedes sauber.** Mengenziele (jede Nacht eine Staffel, 4 TikToks am Tag, Folgenzahl der Rotation) sind Richtwerte. Sie treten immer hinter die Qualität zurück.
+
+**Qualitäts-Tor vor jedem Veröffentlichen.** Nur posten, wenn alles erfüllt ist, sonst nichts posten und am nächsten Tag fertig machen:
+1. **Stimme:** `stimme_pruefen.py` meldet bei jeder Folge OK, die Tonhöhe liegt unter 1,5 HT, kein Flüstern und kein verschluckter Satz. Bei Zweifel neu vertonen, nie „wird schon passen“.
+2. **Bild:** Alle Standbilder angesehen, dazu pro Folge mindestens 3 Ausschnitte in voller Auflösung und das erste und letzte Bild. Nichts abgeschnitten, keine Überlappung, Text lesbar, Gesichter frei, keine leeren oder halbfertigen Bilder.
+3. **Erstes Bild** ist stark (Vorschau): nie schwarz, nie leer, Hook-Text lesbar.
+4. **Aufwand:** mindestens 3 Wow-Bilder und mindestens 6 Einblendungen (`ein=`) pro Folge, immer Bewegung (#20, #29).
+5. **Technik:** volle Qualität (`@qualitaet max`, 60 fps). **Nie mit weniger Qualität rendern, um Zeit zu sparen.**
+6. **Geschichte:** Die Streichprobe ist gemacht, jede Einstellung trägt etwas bei, keine Füllsätze.
+
+**Wenn Zeit oder Gemini-Kontingent nicht reichen:** weniger Folgen machen, die Staffel am nächsten Tag fertig machen oder eine Nacht aussetzen. Ein Loch im Plan ist besser als ein schwaches Video. Geht eine Lücke absehbar über 1 Tag, sagt die PushNotification Jonathan Bescheid.
+
 Diese Datei ist verbindlich für die geplante Aufgabe „Kurzvideo-Staffel alle 2 Tage“. Außerdem gelten alle offenen GitHub-Issues mit Label `dringlich`. **Jeder Lauf startet in einem neuen Chat** (Jonathans Vorgabe 1.11., wegen der Credits); die Abläufe stehen in `taeglich/laeufe/` (siehe README dort).
 
 ## Tempo (Jonathans Vorgabe 1.11. abends: bessere Analyse, mehr Videos pro Tag, damit es schneller geht)
@@ -157,7 +171,7 @@ Jonathan: „Die Videos müssen noch aufwendiger werden, mit Einblendungen, an D
   - Höchstens 2 Etiketten pro Einstellung, Höhe mit `ein_y=` (Standard 470; tiefer setzen, wenn oben ein Hook-Text oder ein Gesicht ist).
 - **Wie viele:** pro Folge **mindestens 6 Einstellungen mit `ein=`**, vor allem bei Zahlen, Uhrzeiten, Namen neuer Figuren, Orten, Regeln, Beweisstücken, Gefühlen. Nicht in jeder Einstellung: Ruhe-Bilder bleiben ruhig (Wechsel aus Detail und Ruhe). Nie auf Gesichter legen.
 - **Wie bei Dinge Erklärt:** Zahlen werden gezeigt, nicht nur gesagt. Fakten bekommen ein Icon. Zusammenhänge mit `[objekt …]`-Karten (zwei Dinge nebeneinander, vorher/nachher), Abläufe in Schritten über mehrere Einstellungen.
-- **Studio-Stimme:** Kopf `@klang studio`. Nach Gemini kommen Rumpelfilter, etwas Wärme (170 Hz) und Präsenz (3 kHz), weniger Zischlaute, sanfte Kompression. Stimme bleibt „Orus“, Tonhöhe wie immer unter 1,5 HT.
+- **Studio-Stimme (noch nicht freigegeben):** Kopf `@klang studio` **nur, wenn Jonathan die Hörprobe B gewählt hat** (seine Regel 7.11.: keine Effekte auf der Stimme). Bis dahin ohne `@klang`. Nach Gemini kommen Rumpelfilter, etwas Wärme (170 Hz) und Präsenz (3 kHz), weniger Zischlaute, sanfte Kompression. Stimme bleibt „Orus“, Tonhöhe wie immer unter 1,5 HT.
 - **Prüfen:** In den Standbildern muss jedes Etikett lesbar sein und darf nichts Wichtiges verdecken.
 
 ## Qualität: schärfer, flüssiger, detailreicher, bessere Geschichten (Jonathans Wunsch 3.11., Issue #20)

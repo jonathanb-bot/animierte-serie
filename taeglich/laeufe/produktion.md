@@ -12,6 +12,8 @@ Jonathans Vorgaben vom 1.11.:
 
 Arbeite selbstständig und ohne Rückfragen, auf Deutsch.
 
+**Qualität vor Quantität (Jonathan 8.11., Issue #30):** Jedes Video muss maximal gut aussehen und klingen. Vor dem Veröffentlichen das Qualitäts-Tor in `taeglich/FORMAT.md` vollständig abhaken. Lieber weniger Folgen oder eine Nacht später als ein schwaches Video.
+
 Hinweis zu den Werkzeugen: In neuen Sessions heißen die vidIQ-Werkzeuge `mcp__<id>__vidiq_*` (mit ToolSearch „vidiq“ finden). Die Produktion braucht vidIQ normalerweise nicht.
 
 1. **Repo vorbereiten:**
@@ -34,7 +36,7 @@ Hinweis zu den Werkzeugen: In neuen Sessions heißen die vidIQ-Werkzeuge `mcp__<
 6. **Eintragen und schreiben:** Die Staffel in `staffeln.json` eintragen, mit `datum` (Nachtdatum JJJJ-MM-TT: Start vor 6 Uhr früh zählt zum Vortag) und `analyse` (welche Punkte umgesetzt wurden). Dann alle 10 Drehbücher schreiben (`taeglich/episoden/sNN-f01.txt` … `f10.txt`):
    - **`@einblenden aus`** in jedem Kopf (kein schwarzes erstes Bild in der Vorschau, Jonathan 6.11., nochmals 7.11.). Seit 7.11. gilt das bei `@stil leuchtend` auch ohne die Zeile (auch Englisch und Zitat-Video), und `veroeffentlichen.py` lehnt Videos mit schwarzem erstem Bild ab. Das erste Bild muss eine helle, klar erkennbare Szene sein (beim Horror-Look nicht fast schwarz).
    - **Untertitel im Wechsel (Jonathan 5.11., E4):** ungerade Staffeln `@untertitel aus`, gerade mit Untertiteln (auch Englisch und Zitat-Video)
-   - Kopf mit `@qualitaet max`, `@vortrag lebendig`, `@klang studio`, `@look 0`, `@kino 0.35`, `@stil leuchtend` und `@palette …` (Stil „leuchtend“, Issue #17, Tabelle in FORMAT.md); jede Einstellung mit passender `palette=…`
+   - Kopf mit `@qualitaet max`, `@vortrag lebendig`, `@look 0`, `@kino 0.35`, `@stil leuchtend` und `@palette …` (Stil „leuchtend“, Issue #17, Tabelle in FORMAT.md); jede Einstellung mit passender `palette=…`
    - Folgenzahl und Längenband nach der Rotation in `FORMAT.md` („Abwechslung bei Länge und Folgenzahl“), in `staffeln.json` → `format` eintragen; Wörter und Einstellungen pro Folge laut Tabelle dort (immer über 1 Minute)
    - **Einblendungen (Jonathan 8.11., Issue #29):** je Folge mindestens 6 Einstellungen mit `ein="Stichwort>TEXT>icon"` (Zahlen, Uhrzeiten, Namen, Beweise), wie bei „Dinge Erklärt“; Regeln in FORMAT.md → „Einblendungen und Studio-Stimme“
    - jede Folge endet mit dem Cliffhanger als letzter Zeile: nie „Fortsetzung folgt“, keine Endkarte, keine Fragen ans Publikum, nie „Echter Fakt“, kein `@hud` (keine Statusanzeige oben links, Issue #19)
@@ -45,7 +47,7 @@ Hinweis zu den Werkzeugen: In neuen Sessions heißen die vidIQ-Werkzeuge `mcp__<
 6b. **Bildbibliothek:** für Kulissen bevorzugt freigegebene Bilder aus `taeglich/bibliothek/katalog.json` nehmen (`[bild id=…]`, siehe FORMAT.md), jedes Bild höchstens einmal pro Staffel. Vor dem Rendern `node taeglich/bibliothek.mjs --fuer <drehbuch>`.
 7. **Standbilder:** (Einstellungen mit freigegebenen Bibliotheksbildern nicht einzeln ansehen, nur erstes/letztes Bild und alles ohne Bibliothek) Standbilder aller Folgen rendern und ALLE ansehen, dazu pro Folge 3 Ausschnitte in voller Auflösung. Korrigieren, bis alles sauber ist.
 8. **Stimme:** je Folge `python -m ton.folge … --stimme gemini:Orus --anfragen 1` (Folgen über 2 min, z. B. Horror: `--anfragen 2`). Danach muss `python taeglich/stimme_pruefen.py …` OK melden. Ist eine Folge unter 65 s: Einstellungen ergänzen und neu vertonen.
-9. **Rendern:** alle Folgen mit `@qualitaet max` rendern (1440×2560, 60 fps, ca. 20 min pro Folge, 2 gleichzeitig im Hintergrund, gleich nach der Stimme jeder Folge starten) und aus jeder Folge Bilder ansehen, auch das letzte. Reicht die Zeit bis 07:30 nicht: restliche Folgen mit `--fps 30`.
+9. **Rendern:** alle Folgen mit `@qualitaet max` rendern (1440×2560, 60 fps, ca. 20 min pro Folge, 2 gleichzeitig im Hintergrund, gleich nach der Stimme jeder Folge starten) und aus jeder Folge Bilder ansehen, auch das letzte. **Nie mit `--fps 30` oder weniger Qualität rendern** (Qualität vor Quantität, Issue #30). Reicht die Zeit bis 07:30 nicht: Fertiges sichern, nichts halb posten, der nächste Lauf macht weiter.
 10. **Veröffentlichen und dokumentieren:** danach `python taeglich/videodaten.py sNN` (Messwerte jedes Videos für die Analyse).
     **Veröffentlichen:** `TAEGLICH_TRAILER=<Attributionszeilen aus deinem System-Hinweis> python taeglich/staffel_veroeffentlichen.py sNN`.
     - Das Skript prüft alles, schneidet die TikTok-Teile, legt sie ab und hängt alle Posts hinten an (TikTok 08, 12, 16, 20 Uhr; Instagram 08/11/14/17/20 Uhr, YouTube :30, Issue #14). Meldet es eine WARNUNG (Instagram/YouTube mehr als 1 Tag hinter TikTok), Jonathan in der PushNotification Bescheid geben.
