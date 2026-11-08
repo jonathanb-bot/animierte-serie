@@ -1,12 +1,12 @@
 {
- "dauer": 73.14,
+ "dauer": 82.644,
  "einstellungen": [
   {
    "nr": 1,
    "typ": "polarlicht",
    "kapitel": 1,
    "start": 0.0,
-   "dauer": 5.078,
+   "dauer": 7.094,
    "emotion": "erzaehlend",
    "text": "The whole hospital suddenly goes dark. And outside, the sky is glowing green."
   },
@@ -14,8 +14,8 @@
    "nr": 2,
    "typ": "krankenhaus",
    "kapitel": 1,
-   "start": 5.078,
-   "dauer": 3.974,
+   "start": 7.094,
+   "dauer": 4.262,
    "emotion": "erzaehlend",
    "text": "Three seconds. Four. You can hear your own heartbeat."
   },
@@ -23,8 +23,8 @@
    "nr": 3,
    "typ": "gesicht",
    "kapitel": 2,
-   "start": 9.052,
-   "dauer": 2.942,
+   "start": 11.356,
+   "dauer": 3.374,
    "emotion": "spannend",
    "text": "Then something rumbles deep down in the basement."
   },
@@ -32,8 +32,8 @@
    "nr": 4,
    "typ": "krankenhaus",
    "kapitel": 2,
-   "start": 11.994,
-   "dauer": 5.606,
+   "start": 14.73,
+   "dauer": 5.942,
    "emotion": "erzaehlend",
    "text": "The generators kick in. The lights flicker back on. Grandpa's monitor starts beeping again."
   },
@@ -41,8 +41,8 @@
    "nr": 5,
    "typ": "gesicht",
    "kapitel": 2,
-   "start": 17.6,
-   "dauer": 3.974,
+   "start": 20.672,
+   "dauer": 3.83,
    "emotion": "froh",
    "text": "Mom laughs. A little too loud. Out of pure relief."
   },
@@ -50,8 +50,8 @@
    "nr": 6,
    "typ": "polarlicht",
    "kapitel": 3,
-   "start": 21.574,
-   "dauer": 1.79,
+   "start": 24.502,
+   "dauer": 2.558,
    "emotion": "erzaehlend",
    "text": "And then you all look out the window."
   },
@@ -59,8 +59,8 @@
    "nr": 7,
    "typ": "weltall",
    "kapitel": 3,
-   "start": 23.364,
-   "dauer": 5.006,
+   "start": 27.06,
+   "dauer": 5.798,
    "emotion": "erzaehlend",
    "text": "When a solar storm hits the Earth, the air starts to glow. Northern lights."
   },
@@ -68,8 +68,8 @@
    "nr": 8,
    "typ": "titel",
    "kapitel": 3,
-   "start": 28.37,
-   "dauer": 6.182,
+   "start": 32.858,
+   "dauer": 6.926,
    "emotion": "erzaehlend",
    "text": "Normally you only see them far up north. But two years ago, in May, you could see them all over Germany."
   },
@@ -77,8 +77,8 @@
    "nr": 9,
    "typ": "gesicht",
    "kapitel": 3,
-   "start": 34.552,
-   "dauer": 4.766,
+   "start": 39.784,
+   "dauer": 5.63,
    "emotion": "froh",
    "text": "Lina presses her nose against the glass. “That's the most beautiful thing I've ever seen.”"
   },
@@ -86,8 +86,8 @@
    "nr": 10,
    "typ": "gesicht",
    "kapitel": 3,
-   "start": 39.318,
-   "dauer": 3.542,
+   "start": 45.414,
+   "dauer": 4.118,
    "emotion": "erzaehlend",
    "text": "Then Grandpa opens his eyes. He turns his head toward the window."
   },
@@ -95,8 +95,8 @@
    "nr": 11,
    "typ": "gesicht",
    "kapitel": 3,
-   "start": 42.86,
-   "dauer": 3.758,
+   "start": 49.532,
+   "dauer": 4.55,
    "emotion": "froh",
    "text": "“I wanted to see that my whole life. And now I get to see it with you.”"
   },
@@ -104,8 +104,8 @@
    "nr": 12,
    "typ": "krankenhaus",
    "kapitel": 4,
-   "start": 46.618,
-   "dauer": 3.302,
+   "start": 54.082,
+   "dauer": 3.422,
    "emotion": "erzaehlend",
    "text": "Nobody looks at their phone. There isn't one that works anyway."
   },
@@ -113,8 +113,8 @@
    "nr": 13,
    "typ": "gesicht",
    "kapitel": 4,
-   "start": 49.92,
-   "dauer": 4.574,
+   "start": 57.504,
+   "dauer": 5.006,
    "emotion": "froh",
    "text": "Dad tells you how Grandpa taught him to ride a bike. Backwards. By accident."
   },
@@ -122,8 +122,8 @@
    "nr": 14,
    "typ": "gesicht",
    "kapitel": 4,
-   "start": 54.494,
-   "dauer": 3.878,
+   "start": 62.51,
+   "dauer": 4.19,
    "emotion": "froh",
    "text": "You laugh until your stomach hurts. Right in the middle of the hospital."
   },
@@ -131,8 +131,8 @@
    "nr": 15,
    "typ": "polarlicht",
    "kapitel": 4,
-   "start": 58.372,
-   "dauer": 4.046,
+   "start": 66.7,
+   "dauer": 4.478,
    "emotion": "erzaehlend",
    "text": "Later, you're standing outside with Lina and Ben on the hill behind the hospital."
   },
@@ -140,8 +140,8 @@
    "nr": 16,
    "typ": "gesicht",
    "kapitel": 4,
-   "start": 62.418,
-   "dauer": 3.638,
+   "start": 71.178,
+   "dauer": 3.71,
    "emotion": "froh",
    "text": "Ben says, “Without the outage, we would've missed this.”"
   },
@@ -149,8 +149,8 @@
    "nr": 17,
    "typ": "gesicht",
    "kapitel": 5,
-   "start": 66.056,
-   "dauer": 2.294,
+   "start": 74.888,
+   "dauer": 2.39,
    "emotion": "spannend",
    "text": "Then something vibrates in your jacket pocket."
   },
@@ -158,8 +158,8 @@
    "nr": 18,
    "typ": "handy",
    "kapitel": 5,
-   "start": 68.35,
-   "dauer": 4.79,
+   "start": 77.278,
+   "dauer": 5.366,
    "emotion": "erzaehlend",
    "text": "Your phone. One single bar. And a message that's been stuck for three days."
   }
