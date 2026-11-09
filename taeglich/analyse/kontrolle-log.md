@@ -35,3 +35,20 @@ Je Lauf: Datum, je Konto ✓/✗, Mängel, was getan wurde. Ablauf: `taeglich/la
 - **Erstes Bild schwarz** bei 10 Videos (Funkstille s01 F7–F9, The Jackpot s02 F7/F8/Teil 8): alle vor dem 7.11. gerendert, laut Vorgabe nur erwähnt, nicht repariert. Die neuen s03-Videos (Der Nachahmer/The Mimic) starten hell (Helligkeit 36–40).
 - Kosmetisch (s03 Teil 3, de+en): Opa im Krankenhausbett, Kopf sitzt am linken Bettrand, leicht neben dem Kissen. Schon veröffentlicht, kein Löschgrund. Bei künftigen Bett-Szenen auf die Kopfposition achten.
 - Keine Reparatur, keine Benachrichtigung an Jonathan nötig.
+
+## 9.11.2026
+
+| Konto | Ergebnis | geprüft (letzte 4) |
+|---|---|---|
+| TikTok deutsch | ✓ | Der Nachahmer Teil 4, Der Hauptgewinn Teil 2–4 (v2) |
+| Instagram deutsch | ✓ | Der Nachahmer F3/F4, Der Hauptgewinn F2/F3 (v2) |
+| YouTube deutsch | ✓ | Der Nachahmer F2–F4, Der Hauptgewinn F2 (v2) |
+| TikTok englisch | ✓ | The Mimic Teil 2–4, Radio Silence Teil 1 (v2) |
+| Instagram englisch | ✓ | The Mimic F2–F4 (v2), Radio Silence F1 (v2) |
+| YouTube englisch | ✓ | The Mimic F1–F4 (v2) |
+
+- Alle 24 Posts `published` mit Link. Stimme 104–111 Hz (−0,3 bis +0,9 HT), −14,5 bis −14,7 LUFS, Sprache passt zum Konto, gesprochener Anfang passt zur Folge im Post-Text. Erstes Bild bei allen hell (Helligkeit 36–156), keine schwarzen Anfänge mehr.
+- Kontaktbögen: Bilder sauber, Figuren vollständig, kein falschsprachiger Text (en: „Your Rules“, „Don't answer“; de: „Eure Regeln“, „Nicht antworten“). Untertitel passend (s01/s02 mit, s03 ohne).
+- Kosmetisch, schon bekannt: s03 Teil 3 Opa-Kopf neben dem Kissen. Neu kosmetisch: YouTube englisch – alle vier The-Mimic-Folgen haben denselben Beschreibungstext („In this forest, there's something that copies voices …“), deutsch ist er pro Folge verschieden. Für künftige englische Staffeln pro Folge eigene YouTube-Texte. Infokarte en „In Australia lives the lyrebird“ ist holprig (besser „In Australia, there's a bird …“).
+- Technik: `pip install` hing im frischen Container beim Download (av-Wheel); mit `--default-timeout=30 --retries 5` neu gestartet, dann ok.
+- Keine Reparatur, keine Benachrichtigung an Jonathan nötig.
