@@ -85,6 +85,38 @@
     "lufs": -14.6,
     "dauer_s": 67.4
    }
+  },
+  {
+   "id": "welt-w001",
+   "datum": "2026-11-09",
+   "titel": "Deine Welt – Folge 1: Ein Haus",
+   "emoji": "🏝️",
+   "serie": "Deine Welt (Issue #32)",
+   "stimmung": "spannend",
+   "thema": "Start: eine Insel, ein Haus, 140 Einwohner = Follower; Zuschauer bestimmen alles, Ziel: die ganze Welt",
+   "stil": "leichte 3D-Optik (Kulisse reich, isometrisch)",
+   "kulissen": [
+    "reich",
+    "weltall",
+    "gesicht",
+    "objekt",
+    "titel"
+   ],
+   "beschreibung": "Eine Insel. Ein Haus. 140 Einwohner. Jeder Follower ist ein Einwohner deines Reichs. Der Kommentar mit den meisten Likes wird gebaut.",
+   "hashtags": [
+    "#deinewelt",
+    "#animation",
+    "#story",
+    "#storytime",
+    "#deutsch",
+    "#aufbau",
+    "#reich"
+   ],
+   "tags": [
+    "animation",
+    "story",
+    "deine welt"
+   ]
   }
  ]
 }

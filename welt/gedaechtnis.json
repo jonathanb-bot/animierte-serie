@@ -1,0 +1,33 @@
+{
+ "_info": "Weltgedächtnis „Deine Welt“ (Issue #32). Wahrheit über den Zustand des Reichs. Vor jedem Drehbuch lesen, nach jeder Folge aktualisieren. Regeln: welt/serienbibel.md",
+ "folge": 1,
+ "datum": "2026-11-10",
+ "tag": 1,
+ "einwohner": 140,
+ "einwohner_quelle": "Follower aller 6 Konten, posten/analyse.json vom 2026-11-09T20:29Z (TikTok de 68, Instagram de 8, YouTube de 53, TikTok en 1, YouTube en 9, Instagram en 1)",
+ "praesident": "du (Figur du, blaue Jacke, gelbe Schärpe), Gründer und erster Präsident",
+ "bild": {
+  "reich": {
+   "groesse": 9,
+   "bauten": "haus@4,4|baum@1,1|baum@7,2|tanne@0,6|fels@8,7|baum@2,8",
+   "praesident": "4,5",
+   "naechstes_feld": "5,3"
+  }
+ },
+ "bestand": {
+  "haeuser": 1,
+  "betten": 1,
+  "felder_frei": 75,
+  "essen": "nichts angebaut, keine Vorräte erwähnt",
+  "wasser": "Meer ringsum, kein Süßwasser erwähnt",
+  "strom": "keiner"
+ },
+ "community_regeln": [],
+ "entscheidungen": [],
+ "offene_faeden": [
+  "140 Menschen, aber nur 1 Haus mit 1 Bett: alle schlafen draußen, am Meer wird es kalt",
+  "Feld 5,3 neben dem Haus ist markiert: dort wird als Erstes gebaut, was der Top-Kommentar sagt",
+  "Ziel: die ganze Welt soll zum Reich gehören (195 Länder)"
+ ],
+ "schwierigkeit": "leicht (Folge 1–3: jeder Vorschlag klappt sofort)"
+}

@@ -2,6 +2,7 @@
 
 > **Branch `taeglich`: Kurzvideo-Staffeln (Issue #10).** Verbindlich ist `taeglich/FORMAT.md`. Die aktuellen festen Regeln stehen in den offenen Issues mit Label `dringlich` und in `CLAUDE.md` auf `main` (`git show origin/main:CLAUDE.md`). Bei Widersprüchen gilt: Issues > `CLAUDE.md` auf `main` > diese Datei.
 > **QUALITÄT VOR QUANTITÄT (Jonathans feste Vorgabe 8.11., Issue #30):** Jedes Video muss maximal gut aussehen und klingen. Lieber weniger Videos, dafür jedes sauber. Vor jedem Veröffentlichen das Qualitäts-Tor in `taeglich/FORMAT.md` abhaken, nie mit weniger Qualität rendern, um Zeit zu sparen.
+> **„Deine Welt“ (Jonathan 9.11., Issue #32):** Follower = Einwohner, Top-Kommentar bestimmt den nächsten Bau, 3D-Insel (`engine/reich.js`), nur du + einfache Einwohner, eine Folge am Tag bis 15.11. (Lauf `taeglich/laeufe/welt.md`). Verbindlich: `welt/serienbibel.md`. Deutsches TikTok zeigt bis dahin nur diese Serie, Instagram/YouTube laufen weiter.
 > **Nie „Fortsetzung folgt“** (Jonathans feste Vorgabe 1.11., Issue #11): Künftige Folgen enden mit dem Cliffhanger, ohne Endkarte. Die schon eingeplanten Videos der alten Serien bleiben so, wie sie sind (Jonathans Entscheidung 1.11.).
 
 - Projekt: animierte Serie „24. Stock“ (Zombie-Apokalypse im Hochhaus) für Jonathan. Format und Felder stehen in README.md, die Handlung in serienplan.md.
