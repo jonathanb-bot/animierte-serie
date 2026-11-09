@@ -13,4 +13,5 @@ Die Abläufe stehen in diesen Dateien. Wer einen Ablauf ändern will, ändert nu
 - `analyse.md`: Analyse vor der Staffel
 - `produktion.md`: Kurzvideo-Staffel (prüft zuerst den Vorrat)
 - `zitate.md`: Zitat-Video nach jeder veröffentlichten Staffel (Issue #24); schickt die Datei in den Chat, Jonathan postet selbst mit eigenem Song
+- `welt.md`: „Deine Welt“ täglich 13:47 (Issue #32), eine Folge am Tag aus dem Top-Kommentar, Test bis 15.11.
 - `kontrolle.md`: Abend-Kontrolle täglich 20:13, prüft auf allen Konten die letzten 4 Videos (Stimme, Bild, Ton, Status) mit `taeglich/kontrolle.py`
