@@ -1854,6 +1854,12 @@
    "bild_s": 156.9,
    "ton_s": 156.88,
    "lufs": -14.6
+  },
+  "taeglich/welt-w001.mp4": {
+   "ok": true,
+   "bild_s": 76.0,
+   "ton_s": 75.99,
+   "lufs": -14.6
   }
  },
  "serien": {
@@ -2046,6 +2052,10 @@
   "video-002": {
    "titel": "Ein Prozent",
    "datei": "taeglich/video-002.mp4"
+  },
+  "welt-w001": {
+   "titel": "Deine Welt – Folge 1: Ein Haus",
+   "datei": "taeglich/welt-w001.mp4"
   }
  },
  "taeglich_staffeln": {
