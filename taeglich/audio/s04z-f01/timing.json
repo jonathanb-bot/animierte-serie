@@ -1,0 +1,131 @@
+{
+ "dauer": 73.66,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "fundhaus",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 4.79,
+   "emotion": "erzaehlend",
+   "text": "Ein echter Freund glaubt dir, bevor du es beweisen kannst."
+  },
+  {
+   "nr": 2,
+   "typ": "objekt",
+   "kapitel": 1,
+   "start": 4.79,
+   "dauer": 6.998,
+   "emotion": "erklaerend",
+   "text": "Ein Name auf einem Zettel ist schnell geschrieben. Ein guter Ruf braucht Jahre. Und kaputt ist er in einer Minute."
+  },
+  {
+   "nr": 3,
+   "typ": "archiv",
+   "kapitel": 2,
+   "start": 11.788,
+   "dauer": 5.102,
+   "emotion": "erzaehlend",
+   "text": "Die Wahrheit kommt immer ans Licht. Manchmal braucht sie nur jemanden, der genau hinschaut."
+  },
+  {
+   "nr": 4,
+   "typ": "grossstadt",
+   "kapitel": 2,
+   "start": 16.89,
+   "dauer": 6.014,
+   "emotion": "erzaehlend",
+   "text": "Lügen haben kurze Beine. Deshalb holt die Wahrheit sie immer ein. Früher oder später."
+  },
+  {
+   "nr": 5,
+   "typ": "park",
+   "kapitel": 2,
+   "start": 22.904,
+   "dauer": 5.15,
+   "emotion": "erzaehlend",
+   "text": "Vertrauen ist wie Papier. Einmal zerknittert, wird es nie wieder ganz glatt."
+  },
+  {
+   "nr": 6,
+   "typ": "archiv",
+   "kapitel": 2,
+   "start": 28.054,
+   "dauer": 4.622,
+   "emotion": "erzaehlend",
+   "text": "Wer mit dem Finger auf andere zeigt, zeigt mit drei Fingern auf sich selbst."
+  },
+  {
+   "nr": 7,
+   "typ": "polarlicht",
+   "kapitel": 2,
+   "start": 32.676,
+   "dauer": 5.246,
+   "emotion": "erzaehlend",
+   "text": "Schweigen ist leicht, wenn alle schweigen. Mut heißt, trotzdem die Wahrheit zu sagen."
+  },
+  {
+   "nr": 8,
+   "typ": "fundhaus",
+   "kapitel": 2,
+   "start": 37.922,
+   "dauer": 3.638,
+   "emotion": "erzaehlend",
+   "text": "Wer dich vor allen beschuldigt, muss sich auch vor allen entschuldigen."
+  },
+  {
+   "nr": 9,
+   "typ": "objekt",
+   "kapitel": 2,
+   "start": 41.56,
+   "dauer": 5.51,
+   "emotion": "erklaerend",
+   "text": "Geld kann man zurückzahlen. Vertrauen muss man sich zurückverdienen. Jeden Tag ein Stück."
+  },
+  {
+   "nr": 10,
+   "typ": "archiv",
+   "kapitel": 2,
+   "start": 47.07,
+   "dauer": 5.726,
+   "emotion": "erzaehlend",
+   "text": "Deine Eltern heben Dinge auf, die du längst vergessen hast. Weil jedes davon ein Stück von dir ist."
+  },
+  {
+   "nr": 11,
+   "typ": "see",
+   "kapitel": 2,
+   "start": 52.796,
+   "dauer": 5.774,
+   "emotion": "erzaehlend",
+   "text": "Ein Versprechen kann so klein sein wie zwei Kugeln Eis. Wer es hält, dem glaubst du alles."
+  },
+  {
+   "nr": 12,
+   "typ": "duenen",
+   "kapitel": 2,
+   "start": 58.57,
+   "dauer": 5.654,
+   "emotion": "erzaehlend",
+   "text": "Was du gibst, kommt zurück. Nicht immer sofort. Aber oft genau dann, wenn du es brauchst."
+  },
+  {
+   "nr": 13,
+   "typ": "grossstadt",
+   "kapitel": 2,
+   "start": 64.224,
+   "dauer": 4.958,
+   "emotion": "erzaehlend",
+   "text": "Am Ende zählt nicht, wer recht hatte. Sondern wer neben dir saß, als es schwer wurde."
+  },
+  {
+   "nr": 14,
+   "typ": "handy",
+   "kapitel": 3,
+   "start": 69.182,
+   "dauer": 4.478,
+   "emotion": "erzaehlend",
+   "text": "Schreib deinem besten Freund heute nur einen Satz: Ich halte zu dir."
+  }
+ ]
+}

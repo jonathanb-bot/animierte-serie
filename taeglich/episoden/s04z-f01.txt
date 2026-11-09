@@ -1,0 +1,49 @@
+# Die zwölfte Quittung – Zitate: Wer zu dir hält
+@musik musik/s04z-f01.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung warm
+@vortrag lebendig
+@klang studio
+@mund zitate
+@einblenden aus
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette orange
+@zeit abend
+
+== Hook ==
+// Ausgaberaum im Abendlicht, du und Sami nebeneinander
+[fundhaus du s04_sami zeit=abend uhr="19:15" palette=orange zoom-rein hooktext="DEIN FREUND GLAUBT DIR"] Ein echter Freund glaubt dir, bevor du es beweisen kannst.
+// Quittung groß: ein Name auf einem Zettel
+[objekt objekte="quittung:Dein Name" gross="NUR EIN NAME" palette=orange zoom-rein] Ein Name auf einem Zettel ist schnell geschrieben. Ein guter Ruf braucht Jahre. Und kaputt ist er in einer Minute.
+
+== Zitate ==
+// Archiv, Licht fällt seitlich durch die Regale
+[archiv du licht=seite palette=tuerkis zoom-rein ein="Wahrheit>DIE WAHRHEIT>auge"] Die Wahrheit kommt immer ans Licht. Manchmal braucht sie nur jemanden, der genau hinschaut.
+// Stadt im Abendlicht von oben
+[grossstadt zeit=abend du palette=orange zoom-raus ein="Lügen>KURZE BEINE"] Lügen haben kurze Beine. Deshalb holt die Wahrheit sie immer ein. Früher oder später.
+// Park im Herbst, du allein auf dem Weg
+[park du jahreszeit=herbst zeit=abend palette=rosa schwenk-rechts ein="Vertrauen>VERTRAUEN>herz"] Vertrauen ist wie Papier. Einmal zerknittert, wird es nie wieder ganz glatt.
+// Archiv, flackerndes Licht, eine Gestalt zwischen den Regalen
+[archiv s04_rike flackern palette=lila zoom-rein ein="drei>#3 FINGER" ein_y=1700] Wer mit dem Finger auf andere zeigt, zeigt mit drei Fingern auf sich selbst.
+// Polarlicht über Bergen, warmes Rosa
+[polarlicht farbe=#ffb0d0 palette=rosa zoom-raus ein="Mut>MUT>herz"] Schweigen ist leicht, wenn alle schweigen. Mut heißt, trotzdem die Wahrheit zu sagen.
+// Ausgaberaum: du, Sami und Papa, alle Helfer schauen
+[fundhaus du s04_sami papa zeit=abend uhr="19:11" palette=orange zoom-rein ein="allen>VOR ALLEN"] Wer dich vor allen beschuldigt, muss sich auch vor allen entschuldigen.
+// Geld und Herz nebeneinander
+[objekt objekte="geld:Geld|herz:Vertrauen" gross="NICHT DASSELBE" palette=tuerkis zoom-rein] Geld kann man zurückzahlen. Vertrauen muss man sich zurückverdienen. Jeden Tag ein Stück.
+// Archiv: dein Papa zeigt dir das alte Bündel
+[archiv papa du buendel licht=seite palette=orange zoom-rein ein="Stück>EIN STÜCK VON DIR>herz"] Deine Eltern heben Dinge auf, die du längst vergessen hast. Weil jedes davon ein Stück von dir ist.
+// See am Abend, du und Sami sitzen am Steg
+[see du s04_sami sitzen zeit=abend palette=rosa schwenk-rechts ein="zwei>#2 KUGELN EIS"] Ein Versprechen kann so klein sein wie zwei Kugeln Eis. Wer es hält, dem glaubst du alles.
+// Wüste im Abendlicht, du ganz klein vor den Tafelbergen
+[duenen zeit=abend du palette=orange zoom-raus] Was du gibst, kommt zurück. Nicht immer sofort. Aber oft genau dann, wenn du es brauchst.
+// Stadt bei Nacht, du und Sami auf dem Heimweg
+[grossstadt zeit=nacht du s04_sami palette=lila zoom-rein] Am Ende zählt nicht, wer recht hatte. Sondern wer neben dir saß, als es schwer wurde.
+
+== Schluss ==
+// Handy: Nachricht an deinen besten Freund
+[handy ort=wohnzimmer zeit=abend netz=4 akku=72 uhrzeit="19:40" von="An: Sami" nachricht="Ich halte zu dir." palette=orange zoom-rein] Schreib deinem besten Freund heute nur einen Satz: Ich halte zu dir.
