@@ -1,6 +1,6 @@
 /* „Deine Welt“ (Jonathan 9.11., Issue #32): das Reich als realistisch wirkende 3D-Miniatur (isometrisch).
    Sonne von links oben mit weichen Schlagschatten, natürliche Küste mit Strand und Klippen, flaches und tiefes Wasser
-   mit Brandung, Häuser/Bäume mit Licht- und Schattenseite, Tiefenunschärfe oben und unten (Tilt-Shift wie ein Modell).
+   mit Brandung, Häuser/Bäume mit Licht- und Schattenseite, Tiefenunschärfe oben/unten nur mit tiltshift=1 (Standard aus: alles scharf).
    Jedes Element steht auf einem Feld und kann später ersetzt werden (Haus → Hochhaus, Weg → Straße …).
    Nur neue Namen: alle bisherigen Serien bleiben pixelgleich.
 
@@ -280,7 +280,7 @@
     else { ctx.fillStyle = rgrad(540, 860, 300, 1300, [[0, rgba("#000000", 0)], [1, rgba("#000010", 0.35)]]); ctx.fillRect(0, 0, 1080, 1920); }
     { const r = rnd(41); for (let k = 0; k < 3; k++) { const wx = ((r() * 1300 + t * 10) % 1500) - 250, wy = [1700, 1790, 1850][k] + r() * 40, a = zeit === "nacht" ? 0.08 : 0.5;
       for (const [dx, dy, rr] of [[0, 0, 60], [70, -26, 82], [150, 0, 60], [212, 12, 40]]) { ctx.fillStyle = rgrad(wx + dx - rr * 0.3, wy + dy - rr * 0.4, rr * 0.2, rr * 1.1, [[0, rgba("#ffffff", a)], [1, rgba("#e8f0f8", a * 0.6)]]); ctx.beginPath(); ctx.arc(wx + dx, wy + dy, rr, 0, Math.PI * 2); ctx.fill(); } } }
-    if (an(s.tiltshift, true)) {
+    if (an(s.tiltshift, false)) { // Standard aus: Jonathan will die Insel ganz scharf (9.11.)
       const cv = ctx.canvas, c = tafel("reichTilt"), k = cv.width / 1080;
       c.setTransform(1, 0, 0, 1, 0, 0); c.clearRect(0, 0, cv.width, cv.height); c.filter = `blur(${(4.5 * k).toFixed(1)}px)`; c.drawImage(cv, 0, 0); c.filter = "none";
       c.globalCompositeOperation = "destination-in";

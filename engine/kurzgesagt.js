@@ -49,7 +49,7 @@
     f.globalCompositeOperation = "destination-in"; f.drawImage(A.maske, 0, 0); f.globalCompositeOperation = "source-over";
     ctx.save(); ctx.setTransform(1, 0, 0, 1, 0, 0);
     // Tiefe: Hintergrund leicht weich (nicht bei Nahaufnahmen, die sind schon unscharf; tiefe=0 schaltet ab)
-    const tiefe = s.typ === "gesicht" ? 0 : (s.tiefe ?? 1.6);
+    const tiefe = s.typ === "gesicht" ? 0 : (s.tiefe ?? (s.typ === "reich" ? 0 : 1.6)); // „reich“ (Deine Welt): ganz scharf, Jonathan 9.11.
     ctx.filter = `saturate(1.3) contrast(1.06) brightness(1.04)${tiefe > 0 ? ` blur(${tiefe}px)` : ""}`; ctx.drawImage(c.canvas, 0, 0); ctx.filter = "none";
     // Farbfamilie auf den Hintergrund
     const pal = PALETTEN[s.palette];
