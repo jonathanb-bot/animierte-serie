@@ -1752,6 +1752,108 @@
    "bild_s": 67.4,
    "ton_s": 67.41,
    "lufs": -14.6
+  },
+  "taeglich-en/s04-f01.mp4": {
+   "ok": true,
+   "bild_s": 81.95,
+   "ton_s": 81.94,
+   "lufs": -14.6
+  },
+  "taeglich-en/s04-f02.mp4": {
+   "ok": true,
+   "bild_s": 74.42,
+   "ton_s": 74.43,
+   "lufs": -14.5
+  },
+  "taeglich-en/s04-f03.mp4": {
+   "ok": true,
+   "bild_s": 76.47,
+   "ton_s": 76.5,
+   "lufs": -14.6
+  },
+  "taeglich-en/s04-f04.mp4": {
+   "ok": true,
+   "bild_s": 77.58,
+   "ton_s": 77.57,
+   "lufs": -14.6
+  },
+  "taeglich-en/s04-f05.mp4": {
+   "ok": true,
+   "bild_s": 84.08,
+   "ton_s": 84.1,
+   "lufs": -14.5
+  },
+  "taeglich-en/s04-f06.mp4": {
+   "ok": true,
+   "bild_s": 73.68,
+   "ton_s": 73.71,
+   "lufs": -14.6
+  },
+  "taeglich-en/s04-f07.mp4": {
+   "ok": true,
+   "bild_s": 72.82,
+   "ton_s": 72.81,
+   "lufs": -14.6
+  },
+  "taeglich-en/s04-f08.mp4": {
+   "ok": true,
+   "bild_s": 77.5,
+   "ton_s": 77.53,
+   "lufs": -14.6
+  },
+  "taeglich-en/s04-f09.mp4": {
+   "ok": true,
+   "bild_s": 79.58,
+   "ton_s": 79.57,
+   "lufs": -14.6
+  },
+  "taeglich-en/s04-f10.mp4": {
+   "ok": true,
+   "bild_s": 73.83,
+   "ton_s": 73.86,
+   "lufs": -14.6
+  },
+  "taeglich-en/s04-f11.mp4": {
+   "ok": true,
+   "bild_s": 78.27,
+   "ton_s": 78.25,
+   "lufs": -14.6
+  },
+  "taeglich-en/s04-f12.mp4": {
+   "ok": true,
+   "bild_s": 78.63,
+   "ton_s": 78.61,
+   "lufs": -14.6
+  },
+  "taeglich-tiktok-en/s04-teil-1.mp4": {
+   "ok": true,
+   "bild_s": 232.83,
+   "ton_s": 232.85,
+   "lufs": -14.6
+  },
+  "taeglich-tiktok-en/s04-teil-2.mp4": {
+   "ok": true,
+   "bild_s": 161.67,
+   "ton_s": 161.69,
+   "lufs": -14.6
+  },
+  "taeglich-tiktok-en/s04-teil-3.mp4": {
+   "ok": true,
+   "bild_s": 146.5,
+   "ton_s": 146.5,
+   "lufs": -14.6
+  },
+  "taeglich-tiktok-en/s04-teil-4.mp4": {
+   "ok": true,
+   "bild_s": 230.92,
+   "ton_s": 230.93,
+   "lufs": -14.6
+  },
+  "taeglich-tiktok-en/s04-teil-5.mp4": {
+   "ok": true,
+   "bild_s": 156.9,
+   "ton_s": 156.88,
+   "lufs": -14.6
   }
  },
  "serien": {
