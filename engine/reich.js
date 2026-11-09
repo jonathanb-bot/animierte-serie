@@ -282,9 +282,9 @@
       for (const [dx, dy, rr] of [[0, 0, 60], [70, -26, 82], [150, 0, 60], [212, 12, 40]]) { ctx.fillStyle = rgrad(wx + dx - rr * 0.3, wy + dy - rr * 0.4, rr * 0.2, rr * 1.1, [[0, rgba("#ffffff", a)], [1, rgba("#e8f0f8", a * 0.6)]]); ctx.beginPath(); ctx.arc(wx + dx, wy + dy, rr, 0, Math.PI * 2); ctx.fill(); } } }
     if (an(s.tiltshift, true)) {
       const cv = ctx.canvas, c = tafel("reichTilt"), k = cv.width / 1080;
-      c.setTransform(1, 0, 0, 1, 0, 0); c.clearRect(0, 0, cv.width, cv.height); c.filter = `blur(${(7 * k).toFixed(1)}px)`; c.drawImage(cv, 0, 0); c.filter = "none";
+      c.setTransform(1, 0, 0, 1, 0, 0); c.clearRect(0, 0, cv.width, cv.height); c.filter = `blur(${(4.5 * k).toFixed(1)}px)`; c.drawImage(cv, 0, 0); c.filter = "none";
       c.globalCompositeOperation = "destination-in";
-      const m = ctx.getTransform(), oben = m.f + m.d * 520, unten = m.f + m.d * 1560;
+      const oben = cv.height * 0.2, unten = cv.height * 0.9; // fest am Bildrand, unabhängig von Kamerafahrten
       const g = c.createLinearGradient(0, 0, 0, cv.height), st = v => Math.max(0.001, Math.min(0.999, v / cv.height));
       g.addColorStop(0, "rgba(0,0,0,1)"); g.addColorStop(st(oben), "rgba(0,0,0,0)"); g.addColorStop(Math.max(st(oben), st(unten)), "rgba(0,0,0,0)"); g.addColorStop(1, "rgba(0,0,0,1)");
       c.fillStyle = g; c.fillRect(0, 0, cv.width, cv.height); c.globalCompositeOperation = "source-over";
