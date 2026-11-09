@@ -4,7 +4,7 @@ Jonathans Serie vom 9.11. (Issue #32): Die Follower sind die Einwohner eines Rei
 
 1. **Repo vorbereiten:** `cd /home/user/animierte-serie && git fetch origin taeglich main && git checkout -B taeglich origin/taeglich`, dann `pip install --default-timeout=30 --retries 5 -q -r requirements.txt && npm ci --ignore-scripts --no-audit --no-fund`, `export CHROMIUM=/opt/pw-browsers/chromium`.
 2. **Regeln lesen:** offene Issues mit Label `dringlich` (vor allem #32), `welt/serienbibel.md`, `welt/gedaechtnis.json`, `welt/chronik.md`, die Abschnitte „Qualität“ und „Einblendungen“ in `taeglich/FORMAT.md`.
-3. **Ist heute schon eine Folge eingeplant?** Steht in `posten/plan.json` auf `main` schon `taeglich-tiktok-wNNN` mit heutigem Datum, aufhören.
+3. **Ist heute schon eine Folge eingeplant?** Steht in `posten/plan.json` auf `main` schon ein Post, dessen ID mit `taeglich-tiktok-w` beginnt (auch mit Endung wie `-v2`), mit heutigem Datum und nicht in `loeschen`, aufhören.
 4. **Stand holen:** Workflow „Posts einplanen“ (`posten.yml`, `main`) mit `kommentare=true` starten, warten bis fertig (einmal warten, nicht im Sekundentakt nachsehen), dann denselben Workflow mit `analyse=true`, warten, dann `git fetch origin main` und `python welt/stand.py`.
 5. **Top-Kommentar wählen** nach Serienbibel → „Wie Vorschläge umgesetzt werden“. Bei Bedarf echte Zusammenhänge kurz recherchieren (WebSearch). Entscheiden, wie es nachvollziehbar umgesetzt wird, was es kostet und was es auslöst, passend zu Gedächtnis und Schwierigkeit.
 6. **Bauen, was fehlt:** Braucht der Vorschlag ein Element, das `engine/reich.js` noch nicht kann, als neuen Typ in `BAU` oder `BODEN` ergänzen (bestehende nicht ändern), in der Serienbibel eintragen. Mit `welt/test-reich.txt` Standbilder prüfen.
