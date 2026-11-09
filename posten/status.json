@@ -6042,34 +6042,40 @@
   "am": "2026-11-07T13:30:41.865Z"
  },
  "taeglich-tiktok-s02-teil-6-v2": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-10T08:30:00",
   "zernioId": "6aef28047da13a5eb27ad9ea",
   "yt": false,
   "k": 0,
   "konto": "storys4you.de1",
   "http": 201,
-  "am": "2026-11-07T13:30:44.765Z"
+  "am": "2026-11-07T13:30:44.765Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "taeglich-tiktok-s02-teil-7-v2": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-10T12:15:00",
   "zernioId": "6aef280732d16288323c0822",
   "yt": false,
   "k": 0,
   "konto": "storys4you.de1",
   "http": 201,
-  "am": "2026-11-07T13:30:47.605Z"
+  "am": "2026-11-07T13:30:47.605Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "taeglich-tiktok-s02-teil-8-v2": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-10T16:19:00",
   "zernioId": "6aef280a56b3050668c6a2d8",
   "yt": false,
   "k": 0,
   "konto": "storys4you.de1",
   "http": 201,
-  "am": "2026-11-07T13:30:50.667Z"
+  "am": "2026-11-07T13:30:50.667Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "taeglich-insta-s02-f02-v2": {
   "ok": true,
@@ -6102,54 +6108,64 @@
   }
  },
  "taeglich-insta-s02-f04-v2": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-10T07:49:00",
   "zernioId": "6aef2813dee9ed9bb4d595b3",
   "yt": false,
   "k": 0,
   "konto": "sto.rys4you",
   "http": 201,
-  "am": "2026-11-07T13:30:59.791Z"
+  "am": "2026-11-07T13:30:59.791Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "taeglich-insta-s02-f05-v2": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-10T10:43:00",
   "zernioId": "6aef2816b291f2b16425d553",
   "yt": false,
   "k": 0,
   "konto": "sto.rys4you",
   "http": 201,
-  "am": "2026-11-07T13:31:02.853Z"
+  "am": "2026-11-07T13:31:02.853Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "taeglich-insta-s02-f06-v2": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-10T14:07:00",
   "zernioId": "6aef2819b291f2b16425d566",
   "yt": false,
   "k": 0,
   "konto": "sto.rys4you",
   "http": 201,
-  "am": "2026-11-07T13:31:05.759Z"
+  "am": "2026-11-07T13:31:05.759Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "taeglich-insta-s02-f07-v2": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-10T17:24:00",
   "zernioId": "6aef281cb291f2b16425d583",
   "yt": false,
   "k": 0,
   "konto": "sto.rys4you",
   "http": 201,
-  "am": "2026-11-07T13:31:08.654Z"
+  "am": "2026-11-07T13:31:08.654Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "taeglich-insta-s02-f08-v2": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-10T20:16:00",
   "zernioId": "6aef281f7da13a5eb27ada1f",
   "yt": false,
   "k": 0,
   "konto": "sto.rys4you",
   "http": 201,
-  "am": "2026-11-07T13:31:11.627Z"
+  "am": "2026-11-07T13:31:11.627Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "taeglich-yt-s02-f02-v2": {
   "ok": true,
@@ -6177,54 +6193,64 @@
   "am": "2026-11-07T13:31:17.506Z"
  },
  "taeglich-yt-s02-f04-v2": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-10T08:53:00",
   "zernioId": "6aef2827b291f2b16425d5b6",
   "yt": true,
   "k": 1,
   "konto": "sto.rys4you",
   "http": 201,
-  "am": "2026-11-07T13:31:20.136Z"
+  "am": "2026-11-07T13:31:20.136Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "taeglich-yt-s02-f05-v2": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-10T11:00:00",
   "zernioId": "6aef282ab291f2b16425d5da",
   "yt": true,
   "k": 1,
   "konto": "sto.rys4you",
   "http": 201,
-  "am": "2026-11-07T13:31:22.619Z"
+  "am": "2026-11-07T13:31:22.619Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "taeglich-yt-s02-f06-v2": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-10T14:40:00",
   "zernioId": "6aef282db291f2b16425d5e7",
   "yt": true,
   "k": 1,
   "konto": "sto.rys4you",
   "http": 201,
-  "am": "2026-11-07T13:31:25.720Z"
+  "am": "2026-11-07T13:31:25.720Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "taeglich-yt-s02-f07-v2": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-10T17:31:00",
   "zernioId": "6aef283056b3050668c6a3ca",
   "yt": true,
   "k": 1,
   "konto": "sto.rys4you",
   "http": 201,
-  "am": "2026-11-07T13:31:28.462Z"
+  "am": "2026-11-07T13:31:28.462Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "taeglich-yt-s02-f08-v2": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-10T20:54:00",
   "zernioId": "6aef2833dee9ed9bb4d59629",
   "yt": true,
   "k": 1,
   "konto": "sto.rys4you",
   "http": 201,
-  "am": "2026-11-07T13:31:31.142Z"
+  "am": "2026-11-07T13:31:31.142Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "taeglich-tiktok-en-s01-teil-1": {
   "ok": false,
@@ -6515,324 +6541,388 @@
   "loeschHttp": 200
  },
  "taeglich-tiktok-s04-teil-1": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-10T19:33:00",
   "zernioId": "6af050eeeb829f7d2fab72ca",
   "yt": false,
   "k": 0,
   "konto": "storys4you.de1",
   "http": 201,
-  "am": "2026-11-08T10:37:34.828Z"
+  "am": "2026-11-08T10:37:34.828Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "taeglich-tiktok-s04-teil-2": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-11T07:57:00",
   "zernioId": "6af050f2a721019e24de79a8",
   "yt": false,
   "k": 0,
   "konto": "storys4you.de1",
   "http": 201,
-  "am": "2026-11-08T10:37:38.227Z"
+  "am": "2026-11-08T10:37:38.227Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "taeglich-tiktok-s04-teil-3": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-11T11:36:00",
   "zernioId": "6af050f5eb829f7d2fab730b",
   "yt": false,
   "k": 0,
   "konto": "storys4you.de1",
   "http": 201,
-  "am": "2026-11-08T10:37:41.723Z"
+  "am": "2026-11-08T10:37:41.723Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "taeglich-tiktok-s04-teil-4": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-11T15:43:00",
   "zernioId": "6af050f9eb829f7d2fab7335",
   "yt": false,
   "k": 0,
   "konto": "storys4you.de1",
   "http": 201,
-  "am": "2026-11-08T10:37:45.523Z"
+  "am": "2026-11-08T10:37:45.523Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "taeglich-tiktok-s04-teil-5": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-11T20:20:00",
   "zernioId": "6af050fceb829f7d2fab7355",
   "yt": false,
   "k": 0,
   "konto": "storys4you.de1",
   "http": 201,
-  "am": "2026-11-08T10:37:48.829Z"
+  "am": "2026-11-08T10:37:48.829Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "taeglich-insta-s04-f01": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-11T07:58:00",
   "zernioId": "6af050ff6fbbbd9790c6ea66",
   "yt": false,
   "k": 0,
   "konto": "sto.rys4you",
   "http": 201,
-  "am": "2026-11-08T10:37:51.635Z"
+  "am": "2026-11-08T10:37:51.635Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "taeglich-insta-s04-f02": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-11T11:29:00",
   "zernioId": "6af05102eb829f7d2fab7395",
   "yt": false,
   "k": 0,
   "konto": "sto.rys4you",
   "http": 201,
-  "am": "2026-11-08T10:37:54.511Z"
+  "am": "2026-11-08T10:37:54.511Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "taeglich-insta-s04-f03": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-11T13:33:00",
   "zernioId": "6af05105a721019e24de7a03",
   "yt": false,
   "k": 0,
   "konto": "sto.rys4you",
   "http": 201,
-  "am": "2026-11-08T10:37:57.500Z"
+  "am": "2026-11-08T10:37:57.500Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "taeglich-insta-s04-f04": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-11T16:40:00",
   "zernioId": "6af05108eb829f7d2fab73df",
   "yt": false,
   "k": 0,
   "konto": "sto.rys4you",
   "http": 201,
-  "am": "2026-11-08T10:38:00.395Z"
+  "am": "2026-11-08T10:38:00.395Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "taeglich-insta-s04-f05": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-11T19:43:00",
   "zernioId": "6af0510ba721019e24de7a1f",
   "yt": false,
   "k": 0,
   "konto": "sto.rys4you",
   "http": 201,
-  "am": "2026-11-08T10:38:03.414Z"
+  "am": "2026-11-08T10:38:03.414Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "taeglich-insta-s04-f06": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-12T08:12:00",
   "zernioId": "6af0510e6fbbbd9790c6ea7b",
   "yt": false,
   "k": 0,
   "konto": "sto.rys4you",
   "http": 201,
-  "am": "2026-11-08T10:38:06.369Z"
+  "am": "2026-11-08T10:38:06.369Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "taeglich-insta-s04-f07": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-12T10:39:00",
   "zernioId": "6af051116fbbbd9790c6ea81",
   "yt": false,
   "k": 0,
   "konto": "sto.rys4you",
   "http": 201,
-  "am": "2026-11-08T10:38:09.410Z"
+  "am": "2026-11-08T10:38:09.410Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "taeglich-insta-s04-f08": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-12T14:04:00",
   "zernioId": "6af05114a721019e24de7a4c",
   "yt": false,
   "k": 0,
   "konto": "sto.rys4you",
   "http": 201,
-  "am": "2026-11-08T10:38:12.392Z"
+  "am": "2026-11-08T10:38:12.392Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "taeglich-insta-s04-f09": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-12T16:42:00",
   "zernioId": "6af05117eb829f7d2fab7485",
   "yt": false,
   "k": 0,
   "konto": "sto.rys4you",
   "http": 201,
-  "am": "2026-11-08T10:38:15.430Z"
+  "am": "2026-11-08T10:38:15.430Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "taeglich-insta-s04-f10": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-12T20:29:00",
   "zernioId": "6af0511aeb829f7d2fab74ae",
   "yt": false,
   "k": 0,
   "konto": "sto.rys4you",
   "http": 201,
-  "am": "2026-11-08T10:38:18.214Z"
+  "am": "2026-11-08T10:38:18.214Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "taeglich-insta-s04-f11": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-13T07:59:00",
   "zernioId": "6af0511deb829f7d2fab74ce",
   "yt": false,
   "k": 0,
   "konto": "sto.rys4you",
   "http": 201,
-  "am": "2026-11-08T10:38:21.171Z"
+  "am": "2026-11-08T10:38:21.171Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "taeglich-insta-s04-f12": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-13T10:37:00",
   "zernioId": "6af05120a721019e24de7a6c",
   "yt": false,
   "k": 0,
   "konto": "sto.rys4you",
   "http": 201,
-  "am": "2026-11-08T10:38:24.224Z"
+  "am": "2026-11-08T10:38:24.224Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "taeglich-yt-s04-f01": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-11T08:50:00",
   "zernioId": "6af05122eb829f7d2fab7512",
   "yt": true,
   "k": 1,
   "konto": "sto.rys4you",
   "http": 201,
-  "am": "2026-11-08T10:38:26.604Z"
+  "am": "2026-11-08T10:38:26.604Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "taeglich-yt-s04-f02": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-11T11:47:00",
   "zernioId": "6af05124eb829f7d2fab7530",
   "yt": true,
   "k": 1,
   "konto": "sto.rys4you",
   "http": 201,
-  "am": "2026-11-08T10:38:29.096Z"
+  "am": "2026-11-08T10:38:29.096Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "taeglich-yt-s04-f03": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-11T14:51:00",
   "zernioId": "6af051276fbbbd9790c6eab0",
   "yt": true,
   "k": 1,
   "konto": "sto.rys4you",
   "http": 201,
-  "am": "2026-11-08T10:38:31.529Z"
+  "am": "2026-11-08T10:38:31.529Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "taeglich-yt-s04-f04": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-11T17:41:00",
   "zernioId": "6af05129eb829f7d2fab7563",
   "yt": true,
   "k": 1,
   "konto": "sto.rys4you",
   "http": 201,
-  "am": "2026-11-08T10:38:33.911Z"
+  "am": "2026-11-08T10:38:33.911Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "taeglich-yt-s04-f05": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-11T20:35:00",
   "zernioId": "6af0512ca721019e24de7a9f",
   "yt": true,
   "k": 1,
   "konto": "sto.rys4you",
   "http": 201,
-  "am": "2026-11-08T10:38:36.304Z"
+  "am": "2026-11-08T10:38:36.304Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "taeglich-yt-s04-f06": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-12T08:06:00",
   "zernioId": "6af0512ea721019e24de7ab6",
   "yt": true,
   "k": 1,
   "konto": "sto.rys4you",
   "http": 201,
-  "am": "2026-11-08T10:38:38.592Z"
+  "am": "2026-11-08T10:38:38.592Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "taeglich-yt-s04-f07": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-12T11:44:00",
   "zernioId": "6af05130eb829f7d2fab75b3",
   "yt": true,
   "k": 1,
   "konto": "sto.rys4you",
   "http": 201,
-  "am": "2026-11-08T10:38:41.070Z"
+  "am": "2026-11-08T10:38:41.070Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "taeglich-yt-s04-f08": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-12T14:59:00",
   "zernioId": "6af05133eb829f7d2fab75cc",
   "yt": true,
   "k": 1,
   "konto": "sto.rys4you",
   "http": 201,
-  "am": "2026-11-08T10:38:43.525Z"
+  "am": "2026-11-08T10:38:43.525Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "taeglich-yt-s04-f09": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-12T17:49:00",
   "zernioId": "6af05135eb829f7d2fab75f2",
   "yt": true,
   "k": 1,
   "konto": "sto.rys4you",
   "http": 201,
-  "am": "2026-11-08T10:38:45.925Z"
+  "am": "2026-11-08T10:38:45.925Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "taeglich-yt-s04-f10": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-12T20:15:00",
   "zernioId": "6af05138eb829f7d2fab7616",
   "yt": true,
   "k": 1,
   "konto": "sto.rys4you",
   "http": 201,
-  "am": "2026-11-08T10:38:48.270Z"
+  "am": "2026-11-08T10:38:48.270Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "taeglich-yt-s04-f11": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-13T08:14:00",
   "zernioId": "6af0513aeb829f7d2fab7632",
   "yt": true,
   "k": 1,
   "konto": "sto.rys4you",
   "http": 201,
-  "am": "2026-11-08T10:38:50.744Z"
+  "am": "2026-11-08T10:38:50.744Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "taeglich-yt-s04-f12": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-13T11:48:00",
   "zernioId": "6af0513ceb829f7d2fab7658",
   "yt": true,
   "k": 1,
   "konto": "sto.rys4you",
   "http": 201,
-  "am": "2026-11-08T10:38:53.159Z"
+  "am": "2026-11-08T10:38:53.159Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "taeglich-tiktok-002": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-12T20:15:00",
   "zernioId": "6af0602a5823b877f4d07790",
   "yt": false,
   "k": 0,
   "konto": "storys4you.de1",
   "http": 201,
-  "am": "2026-11-08T11:42:34.480Z"
+  "am": "2026-11-08T11:42:34.480Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "taeglich-insta-002": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-13T14:28:00",
   "zernioId": "6af0629624c4172c4976f178",
   "yt": false,
   "k": 0,
   "konto": "sto.rys4you",
   "http": 201,
-  "am": "2026-11-08T11:52:54.355Z"
+  "am": "2026-11-08T11:52:54.355Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "taeglich-yt-002": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-13T14:27:00",
   "zernioId": "6af0629824c4172c4976f188",
   "yt": true,
   "k": 1,
   "konto": "sto.rys4you",
   "http": 201,
-  "am": "2026-11-08T11:52:56.561Z"
+  "am": "2026-11-08T11:52:56.561Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "taeglich-insta-en-s03-f01-v2": {
   "ok": true,
