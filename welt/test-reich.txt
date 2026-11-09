@@ -1,0 +1,16 @@
+# Test – Reich
+@stimmung freudig
+@einblenden aus
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette tuerkis
+@zeit tag
+
+== A ==
+[reich groesse=7 bauten="haus@3,3|baum@1,1|baum@5,1|tanne@0,4|fels@6,5|baum@2,6" praesident=3,4 palette=tuerkis palette_staerke=0.2] Eins.
+[reich groesse=9 bauten="haus@4,4|baum@1,1|baum@6,1|tanne@0,5|fels@8,6|baum@2,7" leute=140 neu=20 praesident=3,4 palette=tuerkis palette_staerke=0.2] Zwei.
+[reich groesse=12 zeit=abend bauten="haus@3,3-5,4|weg@2,6-9,6|feld@8,1-10,3|wasser@0,9-2,11|brunnen@6,7|baum@1,1|baustelle@7,8|laterne@4,7" leute=400 praesident=6,6 markiere=7,8 palette=orange palette_staerke=0.2] Drei.
+[reich groesse=16 zeit=nacht bauten="hochhaus8@6,6|hochhaus5@7,6|hochhaus12@6,7|haus@2,2-4,4|strasse@0,8-15,8|strasse@8,0-8,15|laterne@9,9|wasser@12,12-15,15" leute=1200 praesident=7,9 palette=blau palette_staerke=0.2] Vier.
+[reich groesse=7 bauten="haus@3,3|baum@1,1" praesident=3,4 leute=40 nah=2.2 blick=3,3 palette=tuerkis palette_staerke=0.2] Fünf.
