@@ -1,47 +1,74 @@
 Verbundene Konten: tiktok:storys4you.de1, instagram:sto.rys4you, youtube:sto.rys4you (2. Zernio-Konto), tiktok:storys4you_eng (2. Zernio-Konto), youtube:storys4you_eng (3. Zernio-Konto), instagram:sory4you_eng (3. Zernio-Konto)
-🗑 taeglich-insta-s02-f04-v2 zurückgezogen
-🗑 taeglich-tiktok-s02-teil-6-v2 zurückgezogen
-🗑 taeglich-yt-s02-f04-v2 zurückgezogen
-🗑 taeglich-insta-s02-f05-v2 zurückgezogen
-🗑 taeglich-yt-s02-f05-v2 zurückgezogen
-🗑 taeglich-tiktok-s02-teil-7-v2 zurückgezogen
-🗑 taeglich-insta-s02-f06-v2 zurückgezogen
-🗑 taeglich-yt-s02-f06-v2 zurückgezogen
-🗑 taeglich-tiktok-s02-teil-8-v2 zurückgezogen
-🗑 taeglich-insta-s02-f07-v2 zurückgezogen
-🗑 taeglich-yt-s02-f07-v2 zurückgezogen
-🗑 taeglich-tiktok-s04-teil-1 zurückgezogen
-🗑 taeglich-insta-s02-f08-v2 zurückgezogen
-🗑 taeglich-yt-s02-f08-v2 zurückgezogen
-🗑 taeglich-tiktok-s04-teil-2 zurückgezogen
-🗑 taeglich-insta-s04-f01 zurückgezogen
-🗑 taeglich-yt-s04-f01 zurückgezogen
-🗑 taeglich-insta-s04-f02 zurückgezogen
-🗑 taeglich-tiktok-s04-teil-3 zurückgezogen
-🗑 taeglich-yt-s04-f02 zurückgezogen
-🗑 taeglich-insta-s04-f03 zurückgezogen
-🗑 taeglich-yt-s04-f03 zurückgezogen
-🗑 taeglich-tiktok-s04-teil-4 zurückgezogen
-🗑 taeglich-insta-s04-f04 zurückgezogen
-🗑 taeglich-yt-s04-f04 zurückgezogen
-🗑 taeglich-insta-s04-f05 zurückgezogen
-🗑 taeglich-tiktok-s04-teil-5 zurückgezogen
-🗑 taeglich-yt-s04-f05 zurückgezogen
-🗑 taeglich-yt-s04-f06 zurückgezogen
-🗑 taeglich-insta-s04-f06 zurückgezogen
-🗑 taeglich-insta-s04-f07 zurückgezogen
-🗑 taeglich-yt-s04-f07 zurückgezogen
-🗑 taeglich-insta-s04-f08 zurückgezogen
-🗑 taeglich-yt-s04-f08 zurückgezogen
-🗑 taeglich-insta-s04-f09 zurückgezogen
-🗑 taeglich-yt-s04-f09 zurückgezogen
-🗑 taeglich-yt-s04-f10 zurückgezogen
-🗑 taeglich-tiktok-002 zurückgezogen
-🗑 taeglich-insta-s04-f10 zurückgezogen
-🗑 taeglich-insta-s04-f11 zurückgezogen
-🗑 taeglich-yt-s04-f11 zurückgezogen
-🗑 taeglich-insta-s04-f12 zurückgezogen
-🗑 taeglich-yt-s04-f12 zurückgezogen
-🗑 taeglich-yt-002 zurückgezogen
-🗑 taeglich-insta-002 zurückgezogen
-Fertig: 0 neu eingeplant, 0 Fehler.
+  taeglich-insta-s02-f04-v2-v3: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-insta-s02-f04-v2-v3 eingeplant für 2026-11-10T07:49:00 (6af22f130dfc8cef70fd7ee7)
+  taeglich-yt-s02-f04-v2-v3: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-yt-s02-f04-v2-v3 eingeplant für 2026-11-10T08:53:00 (6af22f16c29d6715c28806a5)
+  taeglich-insta-s02-f05-v2-v3: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-insta-s02-f05-v2-v3 eingeplant für 2026-11-10T10:43:00 (6af22f1ae71ba8587aef3b40)
+  taeglich-yt-s02-f05-v2-v3: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-yt-s02-f05-v2-v3 eingeplant für 2026-11-10T11:00:00 (6af22f1c06f415c72d5e11b0)
+  taeglich-insta-s02-f06-v2-v3: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-insta-s02-f06-v2-v3 eingeplant für 2026-11-10T14:07:00 (6af22f1f06f415c72d5e1211)
+  taeglich-yt-s02-f06-v2-v3: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-yt-s02-f06-v2-v3 eingeplant für 2026-11-10T14:40:00 (6af22f2206f415c72d5e1241)
+  taeglich-insta-s02-f07-v2-v3: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-insta-s02-f07-v2-v3 eingeplant für 2026-11-10T17:24:00 (6af22f2a0dfc8cef70fd7f97)
+  taeglich-yt-s02-f07-v2-v3: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-yt-s02-f07-v2-v3 eingeplant für 2026-11-10T17:31:00 (6af22f2d06f415c72d5e12e8)
+  taeglich-insta-s02-f08-v2-v3: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-insta-s02-f08-v2-v3 eingeplant für 2026-11-10T20:16:00 (6af22f300dfc8cef70fd7fba)
+  taeglich-yt-s02-f08-v2-v3: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-yt-s02-f08-v2-v3 eingeplant für 2026-11-10T20:54:00 (6af22f3306f415c72d5e133e)
+  taeglich-insta-s04-f01-v3: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-insta-s04-f01-v3 eingeplant für 2026-11-11T07:58:00 (6af22f3706f415c72d5e1389)
+  taeglich-yt-s04-f01-v3: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-yt-s04-f01-v3 eingeplant für 2026-11-11T08:50:00 (6af22f3a06f415c72d5e13cc)
+  taeglich-insta-s04-f02-v3: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-insta-s04-f02-v3 eingeplant für 2026-11-11T11:29:00 (6af22f3d06f415c72d5e140e)
+  taeglich-yt-s04-f02-v3: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-yt-s04-f02-v3 eingeplant für 2026-11-11T11:47:00 (6af22f4006f415c72d5e142f)
+  taeglich-insta-s04-f03-v3: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-insta-s04-f03-v3 eingeplant für 2026-11-11T13:33:00 (6af22f440dfc8cef70fd8034)
+  taeglich-yt-s04-f03-v3: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-yt-s04-f03-v3 eingeplant für 2026-11-11T14:51:00 (6af22f4606f415c72d5e14a7)
+  taeglich-insta-s04-f04-v3: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-insta-s04-f04-v3 eingeplant für 2026-11-11T16:40:00 (6af22f4a0dfc8cef70fd8087)
+  taeglich-yt-s04-f04-v3: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-yt-s04-f04-v3 eingeplant für 2026-11-11T17:41:00 (6af22f4c06f415c72d5e1504)
+  taeglich-insta-s04-f05-v3: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-insta-s04-f05-v3 eingeplant für 2026-11-11T19:43:00 (6af22f500dfc8cef70fd80c1)
+  taeglich-yt-s04-f05-v3: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-yt-s04-f05-v3 eingeplant für 2026-11-11T20:35:00 (6af22f5206f415c72d5e155a)
+  taeglich-yt-s04-f06-v3: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-yt-s04-f06-v3 eingeplant für 2026-11-12T08:06:00 (6af22f5606f415c72d5e1586)
+  taeglich-insta-s04-f06-v3: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-insta-s04-f06-v3 eingeplant für 2026-11-12T08:12:00 (6af22f5806f415c72d5e15a6)
+  taeglich-insta-s04-f07-v3: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-insta-s04-f07-v3 eingeplant für 2026-11-12T10:39:00 (6af22f5b29166468fef57d25)
+  taeglich-yt-s04-f07-v3: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-yt-s04-f07-v3 eingeplant für 2026-11-12T11:44:00 (6af22f5e29166468fef57d35)
+  taeglich-insta-s04-f08-v3: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-insta-s04-f08-v3 eingeplant für 2026-11-12T14:04:00 (6af22f6229166468fef57d63)
+  taeglich-yt-s04-f08-v3: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-yt-s04-f08-v3 eingeplant für 2026-11-12T14:59:00 (6af22f6429166468fef57d8a)
+  taeglich-insta-s04-f09-v3: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-insta-s04-f09-v3 eingeplant für 2026-11-12T16:42:00 (6af22f6729166468fef57dc5)
+  taeglich-yt-s04-f09-v3: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-yt-s04-f09-v3 eingeplant für 2026-11-12T17:49:00 (6af22f6a29166468fef57df1)
+  taeglich-yt-s04-f10-v3: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-yt-s04-f10-v3 eingeplant für 2026-11-12T20:15:00 (6af22f6e0dfc8cef70fd812f)
+  taeglich-insta-s04-f10-v3: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-insta-s04-f10-v3 eingeplant für 2026-11-12T20:29:00 (6af22f7129166468fef57e6a)
+  taeglich-insta-s04-f11-v3: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-insta-s04-f11-v3 eingeplant für 2026-11-13T07:59:00 (6af22f7529166468fef57e91)
+  taeglich-yt-s04-f11-v3: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-yt-s04-f11-v3 eingeplant für 2026-11-13T08:14:00 (6af22f7729166468fef57eb5)
+  taeglich-insta-s04-f12-v3: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-insta-s04-f12-v3 eingeplant für 2026-11-13T10:37:00 (6af22f7b29166468fef57ee6)
+  taeglich-yt-s04-f12-v3: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-yt-s04-f12-v3 eingeplant für 2026-11-13T11:48:00 (6af22f7d29166468fef57f06)
+  taeglich-yt-002-v3: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-yt-002-v3 eingeplant für 2026-11-13T14:27:00 (6af22f800dfc8cef70fd81c7)
+  taeglich-insta-002-v3: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-insta-002-v3 eingeplant für 2026-11-13T14:28:00 (6af22f820dfc8cef70fd81de)
+Fertig: 36 neu eingeplant, 0 Fehler.

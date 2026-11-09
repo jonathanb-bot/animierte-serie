@@ -7583,5 +7583,365 @@
   "konto": "storys4you_eng",
   "http": 201,
   "am": "2026-11-09T03:16:39.693Z"
+ },
+ "taeglich-insta-s02-f04-v2-v3": {
+  "ok": true,
+  "zeit": "2026-11-10T07:49:00",
+  "zernioId": "6af22f130dfc8cef70fd7ee7",
+  "yt": false,
+  "k": 0,
+  "konto": "sto.rys4you",
+  "http": 201,
+  "am": "2026-11-09T20:37:40.143Z"
+ },
+ "taeglich-yt-s02-f04-v2-v3": {
+  "ok": true,
+  "zeit": "2026-11-10T08:53:00",
+  "zernioId": "6af22f16c29d6715c28806a5",
+  "yt": true,
+  "k": 1,
+  "konto": "sto.rys4you",
+  "http": 201,
+  "am": "2026-11-09T20:37:43.195Z"
+ },
+ "taeglich-insta-s02-f05-v2-v3": {
+  "ok": true,
+  "zeit": "2026-11-10T10:43:00",
+  "zernioId": "6af22f1ae71ba8587aef3b40",
+  "yt": false,
+  "k": 0,
+  "konto": "sto.rys4you",
+  "http": 201,
+  "am": "2026-11-09T20:37:46.529Z"
+ },
+ "taeglich-yt-s02-f05-v2-v3": {
+  "ok": true,
+  "zeit": "2026-11-10T11:00:00",
+  "zernioId": "6af22f1c06f415c72d5e11b0",
+  "yt": true,
+  "k": 1,
+  "konto": "sto.rys4you",
+  "http": 201,
+  "am": "2026-11-09T20:37:48.928Z"
+ },
+ "taeglich-insta-s02-f06-v2-v3": {
+  "ok": true,
+  "zeit": "2026-11-10T14:07:00",
+  "zernioId": "6af22f1f06f415c72d5e1211",
+  "yt": false,
+  "k": 0,
+  "konto": "sto.rys4you",
+  "http": 201,
+  "am": "2026-11-09T20:37:52.055Z"
+ },
+ "taeglich-yt-s02-f06-v2-v3": {
+  "ok": true,
+  "zeit": "2026-11-10T14:40:00",
+  "zernioId": "6af22f2206f415c72d5e1241",
+  "yt": true,
+  "k": 1,
+  "konto": "sto.rys4you",
+  "http": 201,
+  "am": "2026-11-09T20:37:54.541Z"
+ },
+ "taeglich-insta-s02-f07-v2-v3": {
+  "ok": true,
+  "zeit": "2026-11-10T17:24:00",
+  "zernioId": "6af22f2a0dfc8cef70fd7f97",
+  "yt": false,
+  "k": 0,
+  "konto": "sto.rys4you",
+  "http": 201,
+  "am": "2026-11-09T20:38:03.047Z"
+ },
+ "taeglich-yt-s02-f07-v2-v3": {
+  "ok": true,
+  "zeit": "2026-11-10T17:31:00",
+  "zernioId": "6af22f2d06f415c72d5e12e8",
+  "yt": true,
+  "k": 1,
+  "konto": "sto.rys4you",
+  "http": 201,
+  "am": "2026-11-09T20:38:05.444Z"
+ },
+ "taeglich-insta-s02-f08-v2-v3": {
+  "ok": true,
+  "zeit": "2026-11-10T20:16:00",
+  "zernioId": "6af22f300dfc8cef70fd7fba",
+  "yt": false,
+  "k": 0,
+  "konto": "sto.rys4you",
+  "http": 201,
+  "am": "2026-11-09T20:38:08.719Z"
+ },
+ "taeglich-yt-s02-f08-v2-v3": {
+  "ok": true,
+  "zeit": "2026-11-10T20:54:00",
+  "zernioId": "6af22f3306f415c72d5e133e",
+  "yt": true,
+  "k": 1,
+  "konto": "sto.rys4you",
+  "http": 201,
+  "am": "2026-11-09T20:38:11.325Z"
+ },
+ "taeglich-insta-s04-f01-v3": {
+  "ok": true,
+  "zeit": "2026-11-11T07:58:00",
+  "zernioId": "6af22f3706f415c72d5e1389",
+  "yt": false,
+  "k": 0,
+  "konto": "sto.rys4you",
+  "http": 201,
+  "am": "2026-11-09T20:38:15.562Z"
+ },
+ "taeglich-yt-s04-f01-v3": {
+  "ok": true,
+  "zeit": "2026-11-11T08:50:00",
+  "zernioId": "6af22f3a06f415c72d5e13cc",
+  "yt": true,
+  "k": 1,
+  "konto": "sto.rys4you",
+  "http": 201,
+  "am": "2026-11-09T20:38:18.304Z"
+ },
+ "taeglich-insta-s04-f02-v3": {
+  "ok": true,
+  "zeit": "2026-11-11T11:29:00",
+  "zernioId": "6af22f3d06f415c72d5e140e",
+  "yt": false,
+  "k": 0,
+  "konto": "sto.rys4you",
+  "http": 201,
+  "am": "2026-11-09T20:38:22.122Z"
+ },
+ "taeglich-yt-s04-f02-v3": {
+  "ok": true,
+  "zeit": "2026-11-11T11:47:00",
+  "zernioId": "6af22f4006f415c72d5e142f",
+  "yt": true,
+  "k": 1,
+  "konto": "sto.rys4you",
+  "http": 201,
+  "am": "2026-11-09T20:38:24.636Z"
+ },
+ "taeglich-insta-s04-f03-v3": {
+  "ok": true,
+  "zeit": "2026-11-11T13:33:00",
+  "zernioId": "6af22f440dfc8cef70fd8034",
+  "yt": false,
+  "k": 0,
+  "konto": "sto.rys4you",
+  "http": 201,
+  "am": "2026-11-09T20:38:28.618Z"
+ },
+ "taeglich-yt-s04-f03-v3": {
+  "ok": true,
+  "zeit": "2026-11-11T14:51:00",
+  "zernioId": "6af22f4606f415c72d5e14a7",
+  "yt": true,
+  "k": 1,
+  "konto": "sto.rys4you",
+  "http": 201,
+  "am": "2026-11-09T20:38:31.175Z"
+ },
+ "taeglich-insta-s04-f04-v3": {
+  "ok": true,
+  "zeit": "2026-11-11T16:40:00",
+  "zernioId": "6af22f4a0dfc8cef70fd8087",
+  "yt": false,
+  "k": 0,
+  "konto": "sto.rys4you",
+  "http": 201,
+  "am": "2026-11-09T20:38:34.430Z"
+ },
+ "taeglich-yt-s04-f04-v3": {
+  "ok": true,
+  "zeit": "2026-11-11T17:41:00",
+  "zernioId": "6af22f4c06f415c72d5e1504",
+  "yt": true,
+  "k": 1,
+  "konto": "sto.rys4you",
+  "http": 201,
+  "am": "2026-11-09T20:38:37.013Z"
+ },
+ "taeglich-insta-s04-f05-v3": {
+  "ok": true,
+  "zeit": "2026-11-11T19:43:00",
+  "zernioId": "6af22f500dfc8cef70fd80c1",
+  "yt": false,
+  "k": 0,
+  "konto": "sto.rys4you",
+  "http": 201,
+  "am": "2026-11-09T20:38:40.403Z"
+ },
+ "taeglich-yt-s04-f05-v3": {
+  "ok": true,
+  "zeit": "2026-11-11T20:35:00",
+  "zernioId": "6af22f5206f415c72d5e155a",
+  "yt": true,
+  "k": 1,
+  "konto": "sto.rys4you",
+  "http": 201,
+  "am": "2026-11-09T20:38:43.025Z"
+ },
+ "taeglich-yt-s04-f06-v3": {
+  "ok": true,
+  "zeit": "2026-11-12T08:06:00",
+  "zernioId": "6af22f5606f415c72d5e1586",
+  "yt": true,
+  "k": 1,
+  "konto": "sto.rys4you",
+  "http": 201,
+  "am": "2026-11-09T20:38:46.232Z"
+ },
+ "taeglich-insta-s04-f06-v3": {
+  "ok": true,
+  "zeit": "2026-11-12T08:12:00",
+  "zernioId": "6af22f5806f415c72d5e15a6",
+  "yt": false,
+  "k": 0,
+  "konto": "sto.rys4you",
+  "http": 201,
+  "am": "2026-11-09T20:38:48.614Z"
+ },
+ "taeglich-insta-s04-f07-v3": {
+  "ok": true,
+  "zeit": "2026-11-12T10:39:00",
+  "zernioId": "6af22f5b29166468fef57d25",
+  "yt": false,
+  "k": 0,
+  "konto": "sto.rys4you",
+  "http": 201,
+  "am": "2026-11-09T20:38:52.042Z"
+ },
+ "taeglich-yt-s04-f07-v3": {
+  "ok": true,
+  "zeit": "2026-11-12T11:44:00",
+  "zernioId": "6af22f5e29166468fef57d35",
+  "yt": true,
+  "k": 1,
+  "konto": "sto.rys4you",
+  "http": 201,
+  "am": "2026-11-09T20:38:54.780Z"
+ },
+ "taeglich-insta-s04-f08-v3": {
+  "ok": true,
+  "zeit": "2026-11-12T14:04:00",
+  "zernioId": "6af22f6229166468fef57d63",
+  "yt": false,
+  "k": 0,
+  "konto": "sto.rys4you",
+  "http": 201,
+  "am": "2026-11-09T20:38:58.199Z"
+ },
+ "taeglich-yt-s04-f08-v3": {
+  "ok": true,
+  "zeit": "2026-11-12T14:59:00",
+  "zernioId": "6af22f6429166468fef57d8a",
+  "yt": true,
+  "k": 1,
+  "konto": "sto.rys4you",
+  "http": 201,
+  "am": "2026-11-09T20:39:00.809Z"
+ },
+ "taeglich-insta-s04-f09-v3": {
+  "ok": true,
+  "zeit": "2026-11-12T16:42:00",
+  "zernioId": "6af22f6729166468fef57dc5",
+  "yt": false,
+  "k": 0,
+  "konto": "sto.rys4you",
+  "http": 201,
+  "am": "2026-11-09T20:39:04.136Z"
+ },
+ "taeglich-yt-s04-f09-v3": {
+  "ok": true,
+  "zeit": "2026-11-12T17:49:00",
+  "zernioId": "6af22f6a29166468fef57df1",
+  "yt": true,
+  "k": 1,
+  "konto": "sto.rys4you",
+  "http": 201,
+  "am": "2026-11-09T20:39:06.638Z"
+ },
+ "taeglich-yt-s04-f10-v3": {
+  "ok": true,
+  "zeit": "2026-11-12T20:15:00",
+  "zernioId": "6af22f6e0dfc8cef70fd812f",
+  "yt": true,
+  "k": 1,
+  "konto": "sto.rys4you",
+  "http": 201,
+  "am": "2026-11-09T20:39:11.171Z"
+ },
+ "taeglich-insta-s04-f10-v3": {
+  "ok": true,
+  "zeit": "2026-11-12T20:29:00",
+  "zernioId": "6af22f7129166468fef57e6a",
+  "yt": false,
+  "k": 0,
+  "konto": "sto.rys4you",
+  "http": 201,
+  "am": "2026-11-09T20:39:13.790Z"
+ },
+ "taeglich-insta-s04-f11-v3": {
+  "ok": true,
+  "zeit": "2026-11-13T07:59:00",
+  "zernioId": "6af22f7529166468fef57e91",
+  "yt": false,
+  "k": 0,
+  "konto": "sto.rys4you",
+  "http": 201,
+  "am": "2026-11-09T20:39:17.471Z"
+ },
+ "taeglich-yt-s04-f11-v3": {
+  "ok": true,
+  "zeit": "2026-11-13T08:14:00",
+  "zernioId": "6af22f7729166468fef57eb5",
+  "yt": true,
+  "k": 1,
+  "konto": "sto.rys4you",
+  "http": 201,
+  "am": "2026-11-09T20:39:20.135Z"
+ },
+ "taeglich-insta-s04-f12-v3": {
+  "ok": true,
+  "zeit": "2026-11-13T10:37:00",
+  "zernioId": "6af22f7b29166468fef57ee6",
+  "yt": false,
+  "k": 0,
+  "konto": "sto.rys4you",
+  "http": 201,
+  "am": "2026-11-09T20:39:23.526Z"
+ },
+ "taeglich-yt-s04-f12-v3": {
+  "ok": true,
+  "zeit": "2026-11-13T11:48:00",
+  "zernioId": "6af22f7d29166468fef57f06",
+  "yt": true,
+  "k": 1,
+  "konto": "sto.rys4you",
+  "http": 201,
+  "am": "2026-11-09T20:39:26.132Z"
+ },
+ "taeglich-yt-002-v3": {
+  "ok": true,
+  "zeit": "2026-11-13T14:27:00",
+  "zernioId": "6af22f800dfc8cef70fd81c7",
+  "yt": true,
+  "k": 1,
+  "konto": "sto.rys4you",
+  "http": 201,
+  "am": "2026-11-09T20:39:28.855Z"
+ },
+ "taeglich-insta-002-v3": {
+  "ok": true,
+  "zeit": "2026-11-13T14:28:00",
+  "zernioId": "6af22f820dfc8cef70fd81de",
+  "yt": false,
+  "k": 0,
+  "konto": "sto.rys4you",
+  "http": 201,
+  "am": "2026-11-09T20:39:31.122Z"
  }
 }
