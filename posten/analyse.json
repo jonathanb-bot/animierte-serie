@@ -1,10 +1,10 @@
 {
- "erstellt": "2026-11-08T20:42:55.166Z",
+ "erstellt": "2026-11-09T20:29:59.602Z",
  "konten": [
   {
    "platform": "tiktok",
    "username": "storys4you.de1",
-   "follower": 69,
+   "follower": 68,
    "konto": {
     "profileId.name": "Default",
     "platform": "tiktok",
@@ -13,16 +13,16 @@
     "displayName": "Storys4You",
     "metadata.expires_in": 86400,
     "metadata.profileData.username": "storys4you.de1",
-    "metadata.profileData.extraData.likesCount": 1480,
-    "metadata.profileData.extraData.videoCount": 26,
+    "metadata.profileData.extraData.likesCount": 1532,
+    "metadata.profileData.extraData.videoCount": 30,
     "metadata.profileData.extraData.followingCount": 5,
-    "metadata.profileData.followersCount": 69,
+    "metadata.profileData.followersCount": 68,
     "metadata.profileData.displayName": "Storys4You",
     "platformStatus": "active",
-    "followersCount": 69,
-    "followersLastUpdated": "2026-11-08T08:16:43.863Z",
+    "followersCount": 68,
+    "followersLastUpdated": "2026-11-09T08:30:36.687Z",
     "rateLimitCount": 0,
-    "updatedAt": "2026-11-08T08:16:43.863Z",
+    "updatedAt": "2026-11-09T08:30:36.687Z",
     "tiktokAccountType": "personal",
     "adsStatus": "not_connected",
     "_k": 0
@@ -30,11 +30,11 @@
    "insights_30_tage": {
     "platform": "tiktok",
     "metricType": "total_value",
-    "metrics.follower_count.total": 68,
-    "metrics.likes_count.total": 1501,
-    "metrics.video_count.total": 29,
+    "metrics.follower_count.total": 69,
+    "metrics.likes_count.total": 1581,
+    "metrics.video_count.total": 34,
     "metrics.followers_gained.total": 18,
-    "metrics.followers_lost.total": 0
+    "metrics.followers_lost.total": 1
    }
   },
   {
@@ -49,26 +49,26 @@
     "displayName": "Storys4You",
     "metadata.expires_in": 5184000,
     "metadata.profileData.username": "sto.rys4you",
-    "metadata.profileData.extraData.mediaCount": 63,
+    "metadata.profileData.extraData.mediaCount": 68,
     "metadata.profileData.extraData.accountType": "MEDIA_CREATOR",
     "metadata.profileData.extraData.followsCount": 1,
     "metadata.profileData.followersCount": 8,
     "metadata.profileData.displayName": "Storys4You",
     "platformStatus": "active",
     "followersCount": 8,
-    "followersLastUpdated": "2026-11-08T08:16:47.735Z",
+    "followersLastUpdated": "2026-11-09T08:30:48.974Z",
     "rateLimitCount": 0,
-    "updatedAt": "2026-11-08T08:16:47.735Z",
+    "updatedAt": "2026-11-09T08:30:48.975Z",
     "adsStatus": "connected",
     "_k": 0
    },
    "insights_30_tage": {
     "platform": "instagram",
     "metricType": "total_value",
-    "metrics.reach.total": 16623,
-    "metrics.views.total": 32542,
-    "metrics.accounts_engaged.total": 302,
-    "metrics.total_interactions.total": 438
+    "metrics.reach.total": 17086,
+    "metrics.views.total": 33522,
+    "metrics.accounts_engaged.total": 310,
+    "metrics.total_interactions.total": 447
    }
   },
   {
@@ -83,15 +83,15 @@
     "displayName": "Storys4you",
     "metadata.expires_in": 3599,
     "metadata.profileData.username": "sto.rys4you",
-    "metadata.profileData.extraData.totalViews": 22625,
-    "metadata.profileData.extraData.videoCount": 62,
+    "metadata.profileData.extraData.totalViews": 22872,
+    "metadata.profileData.extraData.videoCount": 67,
     "metadata.profileData.followersCount": 53,
     "metadata.profileData.displayName": "Storys4you",
     "platformStatus": "active",
     "followersCount": 53,
-    "followersLastUpdated": "2026-11-08T08:19:34.389Z",
+    "followersLastUpdated": "2026-11-09T08:33:18.308Z",
     "rateLimitCount": 0,
-    "updatedAt": "2026-11-08T19:07:10.029Z",
+    "updatedAt": "2026-11-09T20:17:42.070Z",
     "adsStatus": "not_available",
     "_k": 1
    },
@@ -109,16 +109,16 @@
     "displayName": "Storys4You",
     "metadata.expires_in": 86400,
     "metadata.profileData.username": "storys4you_eng",
-    "metadata.profileData.extraData.likesCount": 51,
-    "metadata.profileData.extraData.videoCount": 9,
+    "metadata.profileData.extraData.likesCount": 106,
+    "metadata.profileData.extraData.videoCount": 13,
     "metadata.profileData.extraData.followingCount": 0,
     "metadata.profileData.followersCount": 1,
     "metadata.profileData.displayName": "Storys4You",
     "platformStatus": "active",
     "followersCount": 1,
-    "followersLastUpdated": "2026-11-08T08:46:45.137Z",
+    "followersLastUpdated": "2026-11-09T09:12:22.573Z",
     "rateLimitCount": 0,
-    "updatedAt": "2026-11-08T08:46:45.137Z",
+    "updatedAt": "2026-11-09T09:12:22.573Z",
     "tiktokAccountType": "personal",
     "adsStatus": "not_connected",
     "_k": 1
@@ -127,8 +127,8 @@
     "platform": "tiktok",
     "metricType": "total_value",
     "metrics.follower_count.total": 1,
-    "metrics.likes_count.total": 74,
-    "metrics.video_count.total": 12,
+    "metrics.likes_count.total": 120,
+    "metrics.video_count.total": 13,
     "metrics.followers_gained.total": 1,
     "metrics.followers_lost.total": 0
    }
@@ -136,7 +136,7 @@
   {
    "platform": "youtube",
    "username": "storys4you_eng",
-   "follower": 10,
+   "follower": 9,
    "konto": {
     "profileId.name": "Default",
     "platform": "youtube",
@@ -145,15 +145,15 @@
     "displayName": "Storys4You_Eng",
     "metadata.expires_in": 3599,
     "metadata.profileData.username": "storys4you_eng",
-    "metadata.profileData.extraData.totalViews": 3415,
-    "metadata.profileData.extraData.videoCount": 8,
-    "metadata.profileData.followersCount": 10,
+    "metadata.profileData.extraData.totalViews": 3414,
+    "metadata.profileData.extraData.videoCount": 9,
+    "metadata.profileData.followersCount": 9,
     "metadata.profileData.displayName": "Storys4You_Eng",
     "platformStatus": "active",
-    "followersCount": 10,
-    "followersLastUpdated": "2026-11-08T08:46:47.896Z",
+    "followersCount": 9,
+    "followersLastUpdated": "2026-11-09T09:11:21.116Z",
     "rateLimitCount": 0,
-    "updatedAt": "2026-11-08T20:05:18.017Z",
+    "updatedAt": "2026-11-09T18:56:59.428Z",
     "adsStatus": "not_available",
     "_k": 2
    },
@@ -171,30 +171,592 @@
     "displayName": "Story You",
     "metadata.expires_in": 5184000,
     "metadata.profileData.username": "sory4you_eng",
-    "metadata.profileData.extraData.mediaCount": 8,
+    "metadata.profileData.extraData.mediaCount": 9,
     "metadata.profileData.extraData.accountType": "MEDIA_CREATOR",
     "metadata.profileData.extraData.followsCount": 0,
     "metadata.profileData.followersCount": 1,
     "metadata.profileData.displayName": "Story You",
     "platformStatus": "active",
     "followersCount": 1,
-    "followersLastUpdated": "2026-11-08T08:48:36.034Z",
+    "followersLastUpdated": "2026-11-09T09:17:28.323Z",
     "rateLimitCount": 0,
-    "updatedAt": "2026-11-08T08:48:36.035Z",
+    "updatedAt": "2026-11-09T09:17:28.323Z",
     "adsStatus": "connected",
     "_k": 2
    },
    "insights_30_tage": {
     "platform": "instagram",
     "metricType": "total_value",
-    "metrics.reach.total": 475,
-    "metrics.views.total": 613,
-    "metrics.accounts_engaged.total": 6,
-    "metrics.total_interactions.total": 12
+    "metrics.reach.total": 749,
+    "metrics.views.total": 967,
+    "metrics.accounts_engaged.total": 8,
+    "metrics.total_interactions.total": 14
    }
   }
  ],
  "posts": [
+  {
+   "id": "taeglich-tiktok-s02-teil-5-v2",
+   "platform": "tiktok",
+   "serie": "taeglich",
+   "zeit": "2026-11-09T20:29:00",
+   "video": "taeglich-tiktok/s02-teil-5.mp4",
+   "text": "Der Hauptgewinn – Teil 5/8 (Folge 5–5) 🎟️ Allein mit dreißig Millionen Du wirst",
+   "url": "https://www.tiktok.com/@storys4you.de1/video/7706256293287267617?utm_campaign=tt4d_open_api&utm_source=7608030276714774544",
+   "typ": "video",
+   "sync": null,
+   "analytics": {
+    "impressions": 0,
+    "reach": 0,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "clicks": 0,
+    "views": 54,
+    "follows": 0,
+    "igReelsAvgWatchTime": 0,
+    "igReelsVideoViewTotalTime": 0,
+    "reelsSkipRate": 0,
+    "completionRate": 0,
+    "profileViews": 0,
+    "websiteClicks": 0,
+    "impressionSources.search": 0,
+    "impressionSources.sound": 0,
+    "impressionSources.directMessage": 0,
+    "impressionSources.follow": 0,
+    "impressionSources.forYou": 1,
+    "impressionSources.other": 0,
+    "impressionSources.personalProfile": 0,
+    "replays": 0,
+    "reposts": 0,
+    "videoDurationSeconds": 70,
+    "engagementRate": 0,
+    "lastUpdated": "2026-11-09T19:41:20Z"
+   }
+  },
+  {
+   "id": "taeglich-insta-s02-f03-v2",
+   "platform": "instagram",
+   "serie": "taeglich",
+   "zeit": "2026-11-09T19:51:00",
+   "video": "taeglich/s02-f03.mp4",
+   "text": "Der Hauptgewinn – Folge 3: Reich sein ist komisch 🎟️",
+   "url": "https://www.instagram.com/reel/DfiBHEugOIJ/",
+   "typ": "REELS",
+   "sync": null,
+   "analytics": {
+    "impressions": 73,
+    "reach": 45,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "clicks": 0,
+    "views": 73,
+    "igReelsAvgWatchTime": 12004,
+    "igReelsVideoViewTotalTime": 504182,
+    "reelsSkipRate": 40.3,
+    "completionRate": 0,
+    "profileViews": 0,
+    "websiteClicks": 0,
+    "replays": 0,
+    "reposts": 0,
+    "videoDurationSeconds": 74,
+    "engagementRate": 0,
+    "lastUpdated": "2026-11-09T19:40:46Z"
+   }
+  },
+  {
+   "id": "taeglich-insta-s02-f02-v2",
+   "platform": "instagram",
+   "serie": "taeglich",
+   "zeit": "2026-11-09T16:33:00",
+   "video": "taeglich/s02-f02.mp4",
+   "text": "Der Hauptgewinn – Folge 2: Niemand darf es wissen 🎟️",
+   "url": "https://www.instagram.com/reel/DfhqjOGiOEV/",
+   "typ": "REELS",
+   "sync": null,
+   "analytics": {
+    "impressions": 201,
+    "reach": 130,
+    "likes": 1,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "clicks": 0,
+    "views": 201,
+    "igReelsAvgWatchTime": 28786,
+    "igReelsVideoViewTotalTime": 3770983,
+    "reelsSkipRate": 34.3,
+    "completionRate": 0,
+    "profileViews": 0,
+    "websiteClicks": 0,
+    "replays": 0,
+    "reposts": 0,
+    "videoDurationSeconds": 68,
+    "engagementRate": 0.5,
+    "lastUpdated": "2026-11-09T19:40:46Z"
+   }
+  },
+  {
+   "id": "taeglich-tiktok-s02-teil-4-v2",
+   "platform": "tiktok",
+   "serie": "taeglich",
+   "zeit": "2026-11-09T15:38:00",
+   "video": "taeglich-tiktok/s02-teil-4.mp4",
+   "text": "Der Hauptgewinn – Teil 4/8 (Folge 4–4) 🎟️ Das Gerücht Du wirst 18, Opa schenkt ",
+   "url": "https://www.tiktok.com/@storys4you.de1/video/7706181259143253280?utm_campaign=tt4d_open_api&utm_source=7608030276714774544",
+   "typ": "video",
+   "sync": null,
+   "analytics": {
+    "impressions": 0,
+    "reach": 0,
+    "likes": 18,
+    "comments": 0,
+    "shares": 0,
+    "saves": 1,
+    "clicks": 0,
+    "views": 247,
+    "follows": 0,
+    "igReelsAvgWatchTime": 16450,
+    "igReelsVideoViewTotalTime": 4195000,
+    "reelsSkipRate": 0,
+    "completionRate": 0.1569,
+    "profileViews": 0,
+    "websiteClicks": 0,
+    "impressionSources.follow": 0.008,
+    "impressionSources.forYou": 0.937,
+    "impressionSources.other": 0,
+    "impressionSources.personalProfile": 0.047,
+    "impressionSources.search": 0.008,
+    "impressionSources.sound": 0,
+    "impressionSources.directMessage": 0,
+    "audienceTypes.nonFollower": 0.98,
+    "audienceTypes.returnViewer": 0,
+    "audienceTypes.follower": 0.02,
+    "audienceTypes.newViewer": 0,
+    "retentionCurve.0": 1,
+    "retentionCurve.2": 0.57,
+    "retentionCurve.4": 0.44,
+    "retentionCurve.6": 0.34,
+    "retentionCurve.8": 0.3,
+    "retentionCurve.10": 0.27,
+    "retentionCurve.12": 0.24,
+    "retentionCurve.14": 0.22,
+    "retentionCurve.16": 0.22,
+    "retentionCurve.18": 0.21,
+    "retentionCurve.20": 0.2,
+    "retentionCurve.22": 0.2,
+    "retentionCurve.24": 0.2,
+    "retentionCurve.26": 0.17,
+    "retentionCurve.28": 0.17,
+    "retentionCurve.30": 0.16,
+    "retentionCurve.32": 0.16,
+    "retentionCurve.34": 0.16,
+    "retentionCurve.36": 0.15,
+    "retentionCurve.38": 0.14,
+    "retentionCurve.40": 0.14,
+    "retentionCurve.42": 0.12,
+    "retentionCurve.44": 0.11,
+    "retentionCurve.46": 0.11,
+    "retentionCurve.48": 0.1,
+    "retentionCurve.50": 0.1,
+    "retentionCurve.52": 0.1,
+    "retentionCurve.54": 0.1,
+    "retentionCurve.56": 0.1,
+    "retentionCurve.58": 0.1,
+    "retentionCurve.60": 0.1,
+    "retentionCurve.62": 0.1,
+    "retentionCurve.64": 0.09,
+    "retentionCurve.66": 0.09,
+    "retentionCurve.68": 0.09,
+    "retentionCurve.70": 0.09,
+    "retentionCurve.72": 0.09,
+    "retentionCurve.74": 0.09,
+    "retentionCurve.76": 0.09,
+    "retentionCurve.78": 0.08,
+    "replays": 0,
+    "reposts": 0,
+    "videoDurationSeconds": 79.234,
+    "engagementRate": 7.69,
+    "lastUpdated": "2026-11-09T19:41:20Z"
+   }
+  },
+  {
+   "id": "taeglich-insta-s03-f04",
+   "platform": "instagram",
+   "serie": "taeglich",
+   "zeit": "2026-11-09T13:46:00",
+   "video": "taeglich/s03-f04.mp4",
+   "text": "Der Nachahmer – Folge 4: Leuchtturm 🌲",
+   "url": "https://www.instagram.com/reel/DfhXWDMmbia/",
+   "typ": "REELS",
+   "sync": null,
+   "analytics": {
+    "impressions": 168,
+    "reach": 139,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "clicks": 0,
+    "views": 168,
+    "igReelsAvgWatchTime": 21450,
+    "igReelsVideoViewTotalTime": 3003130,
+    "reelsSkipRate": 39.3,
+    "completionRate": 0,
+    "profileViews": 0,
+    "websiteClicks": 0,
+    "replays": 0,
+    "reposts": 0,
+    "videoDurationSeconds": 122,
+    "engagementRate": 0,
+    "lastUpdated": "2026-11-09T19:40:46Z"
+   }
+  },
+  {
+   "id": "taeglich-tiktok-s02-teil-3-v2",
+   "platform": "tiktok",
+   "serie": "taeglich",
+   "zeit": "2026-11-09T11:52:00",
+   "video": "taeglich-tiktok/s02-teil-3.mp4",
+   "text": "Der Hauptgewinn – Teil 3/8 (Folge 3–3) 🎟️ Reich sein ist komisch Du wirst 18, O",
+   "url": "https://www.tiktok.com/@storys4you.de1/video/7706122979448507681?utm_campaign=tt4d_open_api&utm_source=7608030276714774544",
+   "typ": "video",
+   "sync": null,
+   "analytics": {
+    "impressions": 0,
+    "reach": 0,
+    "likes": 11,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "clicks": 0,
+    "views": 295,
+    "follows": 0,
+    "igReelsAvgWatchTime": 17400,
+    "igReelsVideoViewTotalTime": 5220000,
+    "reelsSkipRate": 0,
+    "completionRate": 0.1467,
+    "profileViews": 0,
+    "websiteClicks": 0,
+    "impressionSources.personalProfile": 0.087,
+    "impressionSources.search": 0,
+    "impressionSources.sound": 0,
+    "impressionSources.directMessage": 0,
+    "impressionSources.follow": 0.003,
+    "impressionSources.forYou": 0.91,
+    "impressionSources.other": 0,
+    "audienceTypes.newViewer": 0,
+    "audienceTypes.nonFollower": 0.97,
+    "audienceTypes.returnViewer": 0,
+    "audienceTypes.follower": 0.03,
+    "retentionCurve.0": 1,
+    "retentionCurve.2": 0.6,
+    "retentionCurve.4": 0.45,
+    "retentionCurve.6": 0.41,
+    "retentionCurve.8": 0.37,
+    "retentionCurve.10": 0.34,
+    "retentionCurve.12": 0.29,
+    "retentionCurve.14": 0.27,
+    "retentionCurve.16": 0.25,
+    "retentionCurve.18": 0.24,
+    "retentionCurve.20": 0.22,
+    "retentionCurve.22": 0.21,
+    "retentionCurve.24": 0.21,
+    "retentionCurve.26": 0.2,
+    "retentionCurve.28": 0.18,
+    "retentionCurve.30": 0.17,
+    "retentionCurve.32": 0.17,
+    "retentionCurve.34": 0.17,
+    "retentionCurve.36": 0.16,
+    "retentionCurve.38": 0.16,
+    "retentionCurve.40": 0.15,
+    "retentionCurve.42": 0.14,
+    "retentionCurve.44": 0.13,
+    "retentionCurve.46": 0.12,
+    "retentionCurve.48": 0.12,
+    "retentionCurve.50": 0.11,
+    "retentionCurve.52": 0.1,
+    "retentionCurve.54": 0.1,
+    "retentionCurve.56": 0.1,
+    "retentionCurve.58": 0.09,
+    "retentionCurve.60": 0.09,
+    "retentionCurve.62": 0.09,
+    "retentionCurve.64": 0.08,
+    "retentionCurve.66": 0.08,
+    "retentionCurve.68": 0.08,
+    "retentionCurve.70": 0.07,
+    "retentionCurve.72": 0.07,
+    "retentionCurve.74": 0.07,
+    "replays": 0,
+    "reposts": 0,
+    "videoDurationSeconds": 74.1,
+    "engagementRate": 3.73,
+    "lastUpdated": "2026-11-09T19:41:20Z"
+   }
+  },
+  {
+   "id": "taeglich-insta-s03-f03",
+   "platform": "instagram",
+   "serie": "taeglich",
+   "zeit": "2026-11-09T11:09:00",
+   "video": "taeglich/s03-f03.mp4",
+   "text": "Der Nachahmer – Folge 3: Benni 🌲",
+   "url": "https://www.instagram.com/reel/DfhFamOjHkO/",
+   "typ": "REELS",
+   "sync": null,
+   "analytics": {
+    "impressions": 131,
+    "reach": 114,
+    "likes": 3,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "clicks": 0,
+    "views": 131,
+    "igReelsAvgWatchTime": 19708,
+    "igReelsVideoViewTotalTime": 2286140,
+    "reelsSkipRate": 35.3,
+    "completionRate": 0,
+    "profileViews": 0,
+    "websiteClicks": 0,
+    "replays": 0,
+    "reposts": 0,
+    "videoDurationSeconds": 122,
+    "engagementRate": 2.29,
+    "lastUpdated": "2026-11-09T19:40:46Z"
+   }
+  },
+  {
+   "id": "taeglich-insta-s03-f02",
+   "platform": "instagram",
+   "serie": "taeglich",
+   "zeit": "2026-11-09T07:44:00",
+   "video": "taeglich/s03-f02.mp4",
+   "text": "Der Nachahmer – Folge 2: Die Regeln 🌲",
+   "url": "https://www.instagram.com/reel/Dfgt-BpEehB/",
+   "typ": "REELS",
+   "sync": null,
+   "analytics": {
+    "impressions": 222,
+    "reach": 178,
+    "likes": 4,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "clicks": 0,
+    "views": 222,
+    "igReelsAvgWatchTime": 24419,
+    "igReelsVideoViewTotalTime": 4444365,
+    "reelsSkipRate": 49.5,
+    "completionRate": 0,
+    "profileViews": 0,
+    "websiteClicks": 0,
+    "replays": 0,
+    "reposts": 0,
+    "videoDurationSeconds": 129,
+    "engagementRate": 1.8,
+    "lastUpdated": "2026-11-09T19:40:46Z"
+   }
+  },
+  {
+   "id": "taeglich-tiktok-s02-teil-2-v2",
+   "platform": "tiktok",
+   "serie": "taeglich",
+   "zeit": "2026-11-09T07:39:00",
+   "video": "taeglich-tiktok/s02-teil-2.mp4",
+   "text": "Der Hauptgewinn – Teil 2/8 (Folge 2–2) 🎟️ Niemand darf es wissen Du wirst 18, O",
+   "url": "https://www.tiktok.com/@storys4you.de1/video/7706057822190046496?utm_campaign=tt4d_open_api&utm_source=7608030276714774544",
+   "typ": "video",
+   "sync": null,
+   "analytics": {
+    "impressions": 0,
+    "reach": 0,
+    "likes": 32,
+    "comments": 0,
+    "shares": 1,
+    "saves": 2,
+    "clicks": 0,
+    "views": 400,
+    "follows": 1,
+    "igReelsAvgWatchTime": 27200,
+    "igReelsVideoViewTotalTime": 10960000,
+    "reelsSkipRate": 0,
+    "completionRate": 0.2953,
+    "profileViews": 0,
+    "websiteClicks": 0,
+    "impressionSources.other": 0,
+    "impressionSources.personalProfile": 0.045,
+    "impressionSources.search": 0.015,
+    "impressionSources.sound": 0,
+    "impressionSources.directMessage": 0,
+    "impressionSources.follow": 0.005,
+    "impressionSources.forYou": 0.935,
+    "audienceTypes.nonFollower": 0.99,
+    "audienceTypes.returnViewer": 0,
+    "audienceTypes.follower": 0.01,
+    "audienceTypes.newViewer": 0,
+    "retentionCurve.0": 1,
+    "retentionCurve.2": 0.68,
+    "retentionCurve.4": 0.52,
+    "retentionCurve.6": 0.46,
+    "retentionCurve.8": 0.41,
+    "retentionCurve.10": 0.38,
+    "retentionCurve.12": 0.37,
+    "retentionCurve.14": 0.37,
+    "retentionCurve.16": 0.35,
+    "retentionCurve.18": 0.34,
+    "retentionCurve.20": 0.33,
+    "retentionCurve.22": 0.33,
+    "retentionCurve.24": 0.32,
+    "retentionCurve.26": 0.31,
+    "retentionCurve.28": 0.3,
+    "retentionCurve.30": 0.3,
+    "retentionCurve.32": 0.3,
+    "retentionCurve.34": 0.29,
+    "retentionCurve.36": 0.29,
+    "retentionCurve.38": 0.27,
+    "retentionCurve.40": 0.26,
+    "retentionCurve.42": 0.25,
+    "retentionCurve.44": 0.25,
+    "retentionCurve.46": 0.24,
+    "retentionCurve.48": 0.23,
+    "retentionCurve.50": 0.23,
+    "retentionCurve.52": 0.23,
+    "retentionCurve.54": 0.22,
+    "retentionCurve.56": 0.21,
+    "retentionCurve.58": 0.21,
+    "retentionCurve.60": 0.2,
+    "retentionCurve.62": 0.2,
+    "retentionCurve.64": 0.19,
+    "retentionCurve.66": 0.19,
+    "retentionCurve.68": 0.19,
+    "replays": 0,
+    "reposts": 0,
+    "videoDurationSeconds": 68.967,
+    "engagementRate": 8.75,
+    "lastUpdated": "2026-11-09T19:41:20Z"
+   }
+  },
+  {
+   "id": "taeglich-tiktok-s03-teil-4",
+   "platform": "tiktok",
+   "serie": "taeglich",
+   "zeit": "2026-11-08T20:28:00",
+   "video": "taeglich-tiktok/s03-teil-4.mp4",
+   "text": "Der Nachahmer – Teil 4/4 (Folge 4–4) 🌲 Leuchtturm In diesem Wald gibt es etwas,",
+   "url": "https://www.tiktok.com/@storys4you.de1/video/7705884927643913505?utm_campaign=tt4d_open_api&utm_source=7608030276714774544",
+   "typ": "video",
+   "sync": null,
+   "analytics": {
+    "impressions": 0,
+    "reach": 0,
+    "likes": 7,
+    "comments": 0,
+    "shares": 0,
+    "saves": 1,
+    "clicks": 0,
+    "views": 327,
+    "follows": 0,
+    "igReelsAvgWatchTime": 11120,
+    "igReelsVideoViewTotalTime": 3714000,
+    "reelsSkipRate": 0,
+    "completionRate": 0.0449,
+    "profileViews": 0,
+    "websiteClicks": 0,
+    "impressionSources.directMessage": 0,
+    "impressionSources.follow": 0,
+    "impressionSources.forYou": 0.931,
+    "impressionSources.other": 0.003,
+    "impressionSources.personalProfile": 0.066,
+    "impressionSources.search": 0,
+    "impressionSources.sound": 0,
+    "audienceTypes.follower": 0.04,
+    "audienceTypes.newViewer": 0,
+    "audienceTypes.nonFollower": 0.96,
+    "audienceTypes.returnViewer": 0,
+    "retentionCurve.0": 1,
+    "retentionCurve.3": 0.32,
+    "retentionCurve.6": 0.21,
+    "retentionCurve.9": 0.15,
+    "retentionCurve.12": 0.13,
+    "retentionCurve.15": 0.11,
+    "retentionCurve.18": 0.09,
+    "retentionCurve.21": 0.08,
+    "retentionCurve.24": 0.07,
+    "retentionCurve.27": 0.07,
+    "retentionCurve.30": 0.07,
+    "retentionCurve.33": 0.07,
+    "retentionCurve.36": 0.07,
+    "retentionCurve.39": 0.07,
+    "retentionCurve.42": 0.07,
+    "retentionCurve.45": 0.06,
+    "retentionCurve.48": 0.06,
+    "retentionCurve.51": 0.06,
+    "retentionCurve.54": 0.06,
+    "retentionCurve.57": 0.06,
+    "retentionCurve.60": 0.06,
+    "retentionCurve.63": 0.06,
+    "retentionCurve.66": 0.06,
+    "retentionCurve.69": 0.06,
+    "retentionCurve.72": 0.05,
+    "retentionCurve.75": 0.05,
+    "retentionCurve.78": 0.05,
+    "retentionCurve.81": 0.05,
+    "retentionCurve.84": 0.05,
+    "retentionCurve.87": 0.05,
+    "retentionCurve.90": 0.05,
+    "retentionCurve.93": 0.05,
+    "retentionCurve.96": 0.05,
+    "retentionCurve.99": 0.05,
+    "retentionCurve.102": 0.04,
+    "retentionCurve.105": 0.04,
+    "retentionCurve.108": 0.04,
+    "retentionCurve.111": 0.04,
+    "retentionCurve.114": 0.04,
+    "retentionCurve.117": 0.04,
+    "retentionCurve.120": 0.04,
+    "replays": 0,
+    "reposts": 0,
+    "videoDurationSeconds": 122.1,
+    "engagementRate": 2.45,
+    "lastUpdated": "2026-11-09T19:41:20Z"
+   }
+  },
+  {
+   "id": "taeglich-insta-s03-f01",
+   "platform": "instagram",
+   "serie": "taeglich",
+   "zeit": "2026-11-08T19:42:00",
+   "video": "taeglich/s03-f01.mp4",
+   "text": "Der Nachahmer – Folge 1: Klick 🌲",
+   "url": "https://www.instagram.com/reel/DffbSKfkxmX/",
+   "typ": "REELS",
+   "sync": null,
+   "analytics": {
+    "impressions": 134,
+    "reach": 124,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "clicks": 0,
+    "views": 134,
+    "igReelsAvgWatchTime": 11215,
+    "igReelsVideoViewTotalTime": 1401926,
+    "reelsSkipRate": 56,
+    "completionRate": 0,
+    "profileViews": 0,
+    "websiteClicks": 0,
+    "replays": 0,
+    "reposts": 0,
+    "videoDurationSeconds": 130,
+    "engagementRate": 0,
+    "lastUpdated": "2026-11-09T19:40:46Z"
+   }
+  },
   {
    "id": "taeglich-insta-s01-f10-v2",
    "platform": "instagram",
@@ -206,25 +768,25 @@
    "typ": "REELS",
    "sync": null,
    "analytics": {
-    "impressions": 148,
-    "reach": 116,
+    "impressions": 152,
+    "reach": 119,
     "likes": 2,
     "comments": 0,
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 148,
-    "igReelsAvgWatchTime": 20005,
-    "igReelsVideoViewTotalTime": 2340585,
-    "reelsSkipRate": 41,
+    "views": 152,
+    "igReelsAvgWatchTime": 19526,
+    "igReelsVideoViewTotalTime": 2362657,
+    "reelsSkipRate": 41.3,
     "completionRate": 0,
     "profileViews": 0,
     "websiteClicks": 0,
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 80,
-    "engagementRate": 1.35,
-    "lastUpdated": "2026-11-08T18:10:42Z"
+    "engagementRate": 1.32,
+    "lastUpdated": "2026-11-09T19:40:46Z"
    }
   },
   {
@@ -240,50 +802,167 @@
    "analytics": {
     "impressions": 0,
     "reach": 0,
-    "likes": 3,
+    "likes": 11,
     "comments": 0,
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 98,
+    "views": 281,
     "follows": 0,
-    "igReelsAvgWatchTime": 6560,
-    "igReelsVideoViewTotalTime": 649000,
+    "igReelsAvgWatchTime": 8910,
+    "igReelsVideoViewTotalTime": 2529000,
     "reelsSkipRate": 0,
-    "completionRate": 0.0202,
+    "completionRate": 0.0282,
     "profileViews": 0,
     "websiteClicks": 0,
-    "impressionSources.personalProfile": 0.071,
-    "impressionSources.search": 0,
     "impressionSources.sound": 0,
     "impressionSources.directMessage": 0,
-    "impressionSources.follow": 0,
-    "impressionSources.forYou": 0.919,
-    "impressionSources.other": 0.01,
+    "impressionSources.follow": 0.004,
+    "impressionSources.forYou": 0.922,
+    "impressionSources.other": 0.004,
+    "impressionSources.personalProfile": 0.063,
+    "impressionSources.search": 0.007,
+    "audienceTypes.follower": 0.04,
     "audienceTypes.newViewer": 0,
-    "audienceTypes.nonFollower": 0.98,
+    "audienceTypes.nonFollower": 0.96,
     "audienceTypes.returnViewer": 0,
-    "audienceTypes.follower": 0.02,
     "retentionCurve.0": 1,
-    "retentionCurve.3": 0.28,
-    "retentionCurve.6": 0.13,
-    "retentionCurve.9": 0.07,
-    "retentionCurve.12": 0.06,
-    "retentionCurve.15": 0.04,
-    "retentionCurve.18": 0.04,
-    "retentionCurve.21": 0.04,
-    "retentionCurve.24": 0.04,
-    "retentionCurve.27": 0.03,
-    "retentionCurve.30": 0.03,
-    "retentionCurve.33": 0.03,
-    "retentionCurve.36": 0.03,
-    "retentionCurve.39": 0.03,
-    "retentionCurve.42": 0.03,
-    "retentionCurve.45": 0.03,
-    "retentionCurve.48": 0.03,
-    "retentionCurve.51": 0.03,
-    "retentionCurve.54": 0.03,
-    "retentionCurve.57": 0.03,
+    "retentionCurve.3": 0.31,
+    "retentionCurve.6": 0.16,
+    "retentionCurve.9": 0.12,
+    "retentionCurve.12": 0.09,
+    "retentionCurve.15": 0.09,
+    "retentionCurve.18": 0.08,
+    "retentionCurve.21": 0.08,
+    "retentionCurve.24": 0.08,
+    "retentionCurve.27": 0.07,
+    "retentionCurve.30": 0.06,
+    "retentionCurve.33": 0.06,
+    "retentionCurve.36": 0.06,
+    "retentionCurve.39": 0.05,
+    "retentionCurve.42": 0.05,
+    "retentionCurve.45": 0.05,
+    "retentionCurve.48": 0.04,
+    "retentionCurve.51": 0.04,
+    "retentionCurve.54": 0.04,
+    "retentionCurve.57": 0.04,
+    "retentionCurve.60": 0.04,
+    "retentionCurve.63": 0.04,
+    "retentionCurve.66": 0.04,
+    "retentionCurve.69": 0.04,
+    "retentionCurve.72": 0.04,
+    "retentionCurve.75": 0.04,
+    "retentionCurve.78": 0.03,
+    "retentionCurve.81": 0.03,
+    "retentionCurve.84": 0.03,
+    "retentionCurve.87": 0.03,
+    "retentionCurve.90": 0.03,
+    "retentionCurve.93": 0.03,
+    "retentionCurve.96": 0.03,
+    "retentionCurve.99": 0.03,
+    "retentionCurve.102": 0.03,
+    "retentionCurve.105": 0.03,
+    "retentionCurve.108": 0.03,
+    "retentionCurve.111": 0.03,
+    "retentionCurve.114": 0.03,
+    "retentionCurve.117": 0.03,
+    "retentionCurve.120": 0.02,
+    "replays": 0,
+    "reposts": 0,
+    "videoDurationSeconds": 122.734,
+    "engagementRate": 3.91,
+    "lastUpdated": "2026-11-09T19:41:20Z"
+   }
+  },
+  {
+   "id": "taeglich-insta-s01-f09-v2",
+   "platform": "instagram",
+   "serie": "taeglich",
+   "zeit": "2026-11-08T14:25:00",
+   "video": "taeglich/s01-f09.mp4",
+   "text": "Funkstille – Folge 9: Drei Tage zu spät 📡",
+   "url": "https://www.instagram.com/reel/Dfe3AW6EY2g/",
+   "typ": "REELS",
+   "sync": null,
+   "analytics": {
+    "impressions": 378,
+    "reach": 301,
+    "likes": 9,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "clicks": 0,
+    "views": 378,
+    "igReelsAvgWatchTime": 17281,
+    "igReelsVideoViewTotalTime": 5305430,
+    "reelsSkipRate": 45,
+    "completionRate": 0,
+    "profileViews": 0,
+    "websiteClicks": 0,
+    "replays": 0,
+    "reposts": 0,
+    "videoDurationSeconds": 77,
+    "engagementRate": 2.38,
+    "lastUpdated": "2026-11-09T19:40:46Z"
+   }
+  },
+  {
+   "id": "taeglich-tiktok-s03-teil-2",
+   "platform": "tiktok",
+   "serie": "taeglich",
+   "zeit": "2026-11-08T12:27:00",
+   "video": "taeglich-tiktok/s03-teil-2.mp4",
+   "text": "Der Nachahmer – Teil 2/4 (Folge 2–2) 🌲 Die Regeln In diesem Wald gibt es etwas,",
+   "url": "https://www.tiktok.com/@storys4you.de1/video/7705760942717439265?utm_campaign=tt4d_open_api&utm_source=7608030276714774544",
+   "typ": "video",
+   "sync": null,
+   "analytics": {
+    "impressions": 0,
+    "reach": 0,
+    "likes": 2,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "clicks": 0,
+    "views": 274,
+    "follows": 0,
+    "igReelsAvgWatchTime": 8140,
+    "igReelsVideoViewTotalTime": 2270000,
+    "reelsSkipRate": 0,
+    "completionRate": 0.0287,
+    "profileViews": 0,
+    "websiteClicks": 0,
+    "impressionSources.directMessage": 0,
+    "impressionSources.follow": 0.007,
+    "impressionSources.forYou": 0.893,
+    "impressionSources.other": 0,
+    "impressionSources.personalProfile": 0.057,
+    "impressionSources.search": 0.043,
+    "impressionSources.sound": 0,
+    "audienceTypes.follower": 0.04,
+    "audienceTypes.newViewer": 0,
+    "audienceTypes.nonFollower": 0.96,
+    "audienceTypes.returnViewer": 0,
+    "retentionCurve.0": 1,
+    "retentionCurve.3": 0.2,
+    "retentionCurve.6": 0.12,
+    "retentionCurve.9": 0.1,
+    "retentionCurve.12": 0.09,
+    "retentionCurve.15": 0.09,
+    "retentionCurve.18": 0.08,
+    "retentionCurve.21": 0.08,
+    "retentionCurve.24": 0.07,
+    "retentionCurve.27": 0.07,
+    "retentionCurve.30": 0.07,
+    "retentionCurve.33": 0.07,
+    "retentionCurve.36": 0.05,
+    "retentionCurve.39": 0.05,
+    "retentionCurve.42": 0.05,
+    "retentionCurve.45": 0.05,
+    "retentionCurve.48": 0.05,
+    "retentionCurve.51": 0.04,
+    "retentionCurve.54": 0.04,
+    "retentionCurve.57": 0.04,
     "retentionCurve.60": 0.03,
     "retentionCurve.63": 0.03,
     "retentionCurve.66": 0.03,
@@ -304,123 +983,6 @@
     "retentionCurve.111": 0.03,
     "retentionCurve.114": 0.03,
     "retentionCurve.117": 0.03,
-    "retentionCurve.120": 0.02,
-    "replays": 0,
-    "reposts": 0,
-    "videoDurationSeconds": 122.734,
-    "engagementRate": 3.06,
-    "lastUpdated": "2026-11-08T18:10:45Z"
-   }
-  },
-  {
-   "id": "taeglich-insta-s01-f09-v2",
-   "platform": "instagram",
-   "serie": "taeglich",
-   "zeit": "2026-11-08T14:25:00",
-   "video": "taeglich/s01-f09.mp4",
-   "text": "Funkstille – Folge 9: Drei Tage zu spät 📡",
-   "url": "https://www.instagram.com/reel/Dfe3AW6EY2g/",
-   "typ": "REELS",
-   "sync": null,
-   "analytics": {
-    "impressions": 334,
-    "reach": 269,
-    "likes": 8,
-    "comments": 0,
-    "shares": 0,
-    "saves": 0,
-    "clicks": 0,
-    "views": 334,
-    "igReelsAvgWatchTime": 16890,
-    "igReelsVideoViewTotalTime": 4644894,
-    "reelsSkipRate": 45.8,
-    "completionRate": 0,
-    "profileViews": 0,
-    "websiteClicks": 0,
-    "replays": 0,
-    "reposts": 0,
-    "videoDurationSeconds": 77,
-    "engagementRate": 2.4,
-    "lastUpdated": "2026-11-08T18:10:42Z"
-   }
-  },
-  {
-   "id": "taeglich-tiktok-s03-teil-2",
-   "platform": "tiktok",
-   "serie": "taeglich",
-   "zeit": "2026-11-08T12:27:00",
-   "video": "taeglich-tiktok/s03-teil-2.mp4",
-   "text": "Der Nachahmer – Teil 2/4 (Folge 2–2) 🌲 Die Regeln In diesem Wald gibt es etwas,",
-   "url": "https://www.tiktok.com/@storys4you.de1/video/7705760942717439265?utm_campaign=tt4d_open_api&utm_source=7608030276714774544",
-   "typ": "video",
-   "sync": null,
-   "analytics": {
-    "impressions": 0,
-    "reach": 0,
-    "likes": 2,
-    "comments": 0,
-    "shares": 0,
-    "saves": 1,
-    "clicks": 0,
-    "views": 163,
-    "follows": 0,
-    "igReelsAvgWatchTime": 8310,
-    "igReelsVideoViewTotalTime": 1370000,
-    "reelsSkipRate": 0,
-    "completionRate": 0.0303,
-    "profileViews": 0,
-    "websiteClicks": 0,
-    "impressionSources.directMessage": 0,
-    "impressionSources.follow": 0.006,
-    "impressionSources.forYou": 0.928,
-    "impressionSources.other": 0,
-    "impressionSources.personalProfile": 0.03,
-    "impressionSources.search": 0.036,
-    "impressionSources.sound": 0,
-    "audienceTypes.nonFollower": 0.96,
-    "audienceTypes.returnViewer": 0,
-    "audienceTypes.follower": 0.04,
-    "audienceTypes.newViewer": 0,
-    "retentionCurve.0": 1,
-    "retentionCurve.3": 0.18,
-    "retentionCurve.6": 0.1,
-    "retentionCurve.9": 0.09,
-    "retentionCurve.12": 0.08,
-    "retentionCurve.15": 0.08,
-    "retentionCurve.18": 0.08,
-    "retentionCurve.21": 0.07,
-    "retentionCurve.24": 0.06,
-    "retentionCurve.27": 0.06,
-    "retentionCurve.30": 0.06,
-    "retentionCurve.33": 0.06,
-    "retentionCurve.36": 0.06,
-    "retentionCurve.39": 0.06,
-    "retentionCurve.42": 0.06,
-    "retentionCurve.45": 0.06,
-    "retentionCurve.48": 0.06,
-    "retentionCurve.51": 0.05,
-    "retentionCurve.54": 0.05,
-    "retentionCurve.57": 0.05,
-    "retentionCurve.60": 0.04,
-    "retentionCurve.63": 0.04,
-    "retentionCurve.66": 0.04,
-    "retentionCurve.69": 0.04,
-    "retentionCurve.72": 0.04,
-    "retentionCurve.75": 0.04,
-    "retentionCurve.78": 0.04,
-    "retentionCurve.81": 0.04,
-    "retentionCurve.84": 0.04,
-    "retentionCurve.87": 0.04,
-    "retentionCurve.90": 0.04,
-    "retentionCurve.93": 0.04,
-    "retentionCurve.96": 0.04,
-    "retentionCurve.99": 0.04,
-    "retentionCurve.102": 0.03,
-    "retentionCurve.105": 0.03,
-    "retentionCurve.108": 0.03,
-    "retentionCurve.111": 0.03,
-    "retentionCurve.114": 0.03,
-    "retentionCurve.117": 0.03,
     "retentionCurve.120": 0.03,
     "retentionCurve.123": 0.03,
     "retentionCurve.126": 0.03,
@@ -428,8 +990,8 @@
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 129.267,
-    "engagementRate": 1.84,
-    "lastUpdated": "2026-11-08T18:10:45Z"
+    "engagementRate": 0.73,
+    "lastUpdated": "2026-11-09T19:41:20Z"
    }
   },
   {
@@ -443,25 +1005,25 @@
    "typ": "REELS",
    "sync": null,
    "analytics": {
-    "impressions": 136,
-    "reach": 113,
+    "impressions": 144,
+    "reach": 119,
     "likes": 1,
     "comments": 0,
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 136,
-    "igReelsAvgWatchTime": 16575,
-    "igReelsVideoViewTotalTime": 1873026,
-    "reelsSkipRate": 48.7,
+    "views": 144,
+    "igReelsAvgWatchTime": 16920,
+    "igReelsVideoViewTotalTime": 2030402,
+    "reelsSkipRate": 47.5,
     "completionRate": 0,
     "profileViews": 0,
     "websiteClicks": 0,
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 79,
-    "engagementRate": 0.74,
-    "lastUpdated": "2026-11-08T18:10:42Z"
+    "engagementRate": 0.69,
+    "lastUpdated": "2026-11-09T19:40:46Z"
    }
   },
   {
@@ -477,79 +1039,79 @@
    "analytics": {
     "impressions": 0,
     "reach": 0,
-    "likes": 5,
+    "likes": 6,
     "comments": 0,
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 269,
+    "views": 294,
     "follows": 1,
-    "igReelsAvgWatchTime": 9370,
-    "igReelsVideoViewTotalTime": 2549000,
+    "igReelsAvgWatchTime": 10650,
+    "igReelsVideoViewTotalTime": 3161000,
     "reelsSkipRate": 0,
-    "completionRate": 0.0404,
+    "completionRate": 0.0471,
     "profileViews": 0,
     "websiteClicks": 0,
-    "impressionSources.personalProfile": 0.011,
-    "impressionSources.search": 0.007,
-    "impressionSources.sound": 0,
     "impressionSources.directMessage": 0,
     "impressionSources.follow": 0,
-    "impressionSources.forYou": 0.982,
+    "impressionSources.forYou": 0.929,
     "impressionSources.other": 0,
-    "audienceTypes.nonFollower": 0.97,
+    "impressionSources.personalProfile": 0.044,
+    "impressionSources.search": 0.027,
+    "impressionSources.sound": 0,
     "audienceTypes.returnViewer": 0,
-    "audienceTypes.follower": 0.03,
+    "audienceTypes.follower": 0.04,
     "audienceTypes.newViewer": 0,
+    "audienceTypes.nonFollower": 0.96,
     "retentionCurve.0": 1,
-    "retentionCurve.3": 0.34,
-    "retentionCurve.6": 0.14,
-    "retentionCurve.9": 0.1,
-    "retentionCurve.12": 0.08,
+    "retentionCurve.3": 0.35,
+    "retentionCurve.6": 0.15,
+    "retentionCurve.9": 0.11,
+    "retentionCurve.12": 0.09,
     "retentionCurve.15": 0.08,
-    "retentionCurve.18": 0.07,
-    "retentionCurve.21": 0.07,
+    "retentionCurve.18": 0.08,
+    "retentionCurve.21": 0.08,
     "retentionCurve.24": 0.06,
-    "retentionCurve.27": 0.05,
-    "retentionCurve.30": 0.05,
-    "retentionCurve.33": 0.05,
-    "retentionCurve.36": 0.05,
-    "retentionCurve.39": 0.05,
-    "retentionCurve.42": 0.05,
-    "retentionCurve.45": 0.05,
-    "retentionCurve.48": 0.05,
-    "retentionCurve.51": 0.05,
-    "retentionCurve.54": 0.04,
-    "retentionCurve.57": 0.04,
-    "retentionCurve.60": 0.04,
-    "retentionCurve.63": 0.04,
-    "retentionCurve.66": 0.04,
-    "retentionCurve.69": 0.04,
-    "retentionCurve.72": 0.04,
-    "retentionCurve.75": 0.04,
-    "retentionCurve.78": 0.04,
-    "retentionCurve.81": 0.04,
-    "retentionCurve.84": 0.04,
-    "retentionCurve.87": 0.04,
-    "retentionCurve.90": 0.04,
-    "retentionCurve.93": 0.04,
-    "retentionCurve.96": 0.04,
-    "retentionCurve.99": 0.04,
-    "retentionCurve.102": 0.04,
-    "retentionCurve.105": 0.04,
-    "retentionCurve.108": 0.04,
-    "retentionCurve.111": 0.04,
-    "retentionCurve.114": 0.04,
-    "retentionCurve.117": 0.04,
+    "retentionCurve.27": 0.06,
+    "retentionCurve.30": 0.06,
+    "retentionCurve.33": 0.06,
+    "retentionCurve.36": 0.06,
+    "retentionCurve.39": 0.06,
+    "retentionCurve.42": 0.06,
+    "retentionCurve.45": 0.06,
+    "retentionCurve.48": 0.06,
+    "retentionCurve.51": 0.06,
+    "retentionCurve.54": 0.05,
+    "retentionCurve.57": 0.05,
+    "retentionCurve.60": 0.05,
+    "retentionCurve.63": 0.05,
+    "retentionCurve.66": 0.05,
+    "retentionCurve.69": 0.05,
+    "retentionCurve.72": 0.05,
+    "retentionCurve.75": 0.05,
+    "retentionCurve.78": 0.05,
+    "retentionCurve.81": 0.05,
+    "retentionCurve.84": 0.05,
+    "retentionCurve.87": 0.05,
+    "retentionCurve.90": 0.05,
+    "retentionCurve.93": 0.05,
+    "retentionCurve.96": 0.05,
+    "retentionCurve.99": 0.05,
+    "retentionCurve.102": 0.05,
+    "retentionCurve.105": 0.05,
+    "retentionCurve.108": 0.05,
+    "retentionCurve.111": 0.05,
+    "retentionCurve.114": 0.05,
+    "retentionCurve.117": 0.05,
     "retentionCurve.120": 0.04,
     "retentionCurve.123": 0.04,
     "retentionCurve.126": 0.04,
-    "retentionCurve.129": 0.03,
+    "retentionCurve.129": 0.04,
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 130.533,
-    "engagementRate": 1.86,
-    "lastUpdated": "2026-11-08T18:10:45Z"
+    "engagementRate": 2.04,
+    "lastUpdated": "2026-11-09T19:41:20Z"
    }
   },
   {
@@ -563,17 +1125,17 @@
    "typ": "REELS",
    "sync": null,
    "analytics": {
-    "impressions": 136,
-    "reach": 118,
+    "impressions": 137,
+    "reach": 119,
     "likes": 0,
     "comments": 0,
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 136,
-    "igReelsAvgWatchTime": 8984,
-    "igReelsVideoViewTotalTime": 1096072,
-    "reelsSkipRate": 62.3,
+    "views": 137,
+    "igReelsAvgWatchTime": 8917,
+    "igReelsVideoViewTotalTime": 1096792,
+    "reelsSkipRate": 62.6,
     "completionRate": 0,
     "profileViews": 0,
     "websiteClicks": 0,
@@ -581,7 +1143,7 @@
     "reposts": 0,
     "videoDurationSeconds": 80,
     "engagementRate": 0,
-    "lastUpdated": "2026-11-08T18:10:42Z"
+    "lastUpdated": "2026-11-09T19:40:46Z"
    }
   },
   {
@@ -595,16 +1157,16 @@
    "typ": "REELS",
    "sync": null,
    "analytics": {
-    "impressions": 127,
-    "reach": 116,
+    "impressions": 129,
+    "reach": 118,
     "likes": 0,
     "comments": 0,
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 127,
-    "igReelsAvgWatchTime": 15940,
-    "igReelsVideoViewTotalTime": 1817190,
+    "views": 129,
+    "igReelsAvgWatchTime": 16088,
+    "igReelsVideoViewTotalTime": 1866265,
     "reelsSkipRate": 47.4,
     "completionRate": 0,
     "profileViews": 0,
@@ -613,7 +1175,7 @@
     "reposts": 0,
     "videoDurationSeconds": 83,
     "engagementRate": 0,
-    "lastUpdated": "2026-11-08T18:10:42Z"
+    "lastUpdated": "2026-11-09T19:40:46Z"
    }
   },
   {
@@ -628,39 +1190,50 @@
    "sync": null,
    "analytics": {
     "impressions": 0,
-    "reach": 0,
+    "reach": 281,
     "likes": 41,
     "comments": 2,
     "shares": 1,
     "saves": 3,
     "clicks": 0,
-    "views": 441,
+    "views": 452,
     "follows": 0,
-    "igReelsAvgWatchTime": 15810,
-    "igReelsVideoViewTotalTime": 7131000,
+    "igReelsAvgWatchTime": 15690,
+    "igReelsVideoViewTotalTime": 7247000,
     "reelsSkipRate": 0,
-    "completionRate": 0.1308,
+    "completionRate": 0.1299,
     "profileViews": 0,
     "websiteClicks": 0,
+    "impressionSources.follow": 0.004,
+    "impressionSources.forYou": 0.968,
+    "impressionSources.other": 0.002,
+    "impressionSources.personalProfile": 0.024,
     "impressionSources.search": 0.002,
     "impressionSources.sound": 0,
     "impressionSources.directMessage": 0,
-    "impressionSources.follow": 0.004,
-    "impressionSources.forYou": 0.988,
-    "impressionSources.other": 0.002,
-    "impressionSources.personalProfile": 0.004,
     "audienceTypes.follower": 0.02,
-    "audienceTypes.newViewer": 0,
+    "audienceTypes.newViewer": 0.75,
     "audienceTypes.nonFollower": 0.98,
-    "audienceTypes.returnViewer": 0,
+    "audienceTypes.returnViewer": 0.25,
+    "audienceCountries.DE": 0.928,
+    "audienceCountries.AT": 0.026,
+    "audienceCountries.CH": 0.024,
+    "audienceCountries.BR": 0.006,
+    "audienceCountries.US": 0.004,
+    "audienceCountries.SI": 0.002,
+    "audienceCountries.BG": 0.002,
+    "audienceCountries.IT": 0.002,
+    "audienceCountries.AL": 0.002,
+    "audienceCountries.LU": 0.002,
+    "audienceCountries.other": 0.002,
     "retentionCurve.0": 1,
-    "retentionCurve.1": 0.77,
+    "retentionCurve.1": 0.76,
     "retentionCurve.2": 0.62,
     "retentionCurve.3": 0.57,
     "retentionCurve.4": 0.54,
     "retentionCurve.5": 0.5,
-    "retentionCurve.6": 0.46,
-    "retentionCurve.7": 0.41,
+    "retentionCurve.6": 0.45,
+    "retentionCurve.7": 0.4,
     "retentionCurve.8": 0.39,
     "retentionCurve.9": 0.37,
     "retentionCurve.10": 0.36,
@@ -671,7 +1244,7 @@
     "retentionCurve.15": 0.3,
     "retentionCurve.16": 0.29,
     "retentionCurve.17": 0.28,
-    "retentionCurve.18": 0.28,
+    "retentionCurve.18": 0.27,
     "retentionCurve.19": 0.27,
     "retentionCurve.20": 0.26,
     "retentionCurve.21": 0.26,
@@ -704,8 +1277,8 @@
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 47.403,
-    "engagementRate": 10.66,
-    "lastUpdated": "2026-11-08T18:10:45Z"
+    "engagementRate": 16.73,
+    "lastUpdated": "2026-11-09T19:41:20Z"
    }
   },
   {
@@ -719,17 +1292,17 @@
    "typ": "REELS",
    "sync": null,
    "analytics": {
-    "impressions": 135,
-    "reach": 125,
+    "impressions": 137,
+    "reach": 127,
     "likes": 0,
     "comments": 0,
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 135,
-    "igReelsAvgWatchTime": 7077,
-    "igReelsVideoViewTotalTime": 877592,
-    "reelsSkipRate": 65.3,
+    "views": 137,
+    "igReelsAvgWatchTime": 6991,
+    "igReelsVideoViewTotalTime": 880935,
+    "reelsSkipRate": 65.9,
     "completionRate": 0,
     "profileViews": 0,
     "websiteClicks": 0,
@@ -737,7 +1310,7 @@
     "reposts": 0,
     "videoDurationSeconds": 74,
     "engagementRate": 0,
-    "lastUpdated": "2026-11-08T18:10:42Z"
+    "lastUpdated": "2026-11-09T19:40:46Z"
    }
   },
   {
@@ -752,31 +1325,42 @@
    "sync": null,
    "analytics": {
     "impressions": 0,
-    "reach": 0,
-    "likes": 5,
+    "reach": 222,
+    "likes": 6,
     "comments": 0,
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 256,
+    "views": 263,
     "follows": 0,
-    "igReelsAvgWatchTime": 11490,
-    "igReelsVideoViewTotalTime": 2986000,
+    "igReelsAvgWatchTime": 12150,
+    "igReelsVideoViewTotalTime": 3255000,
     "reelsSkipRate": 0,
-    "completionRate": 0.0154,
+    "completionRate": 0.0187,
     "profileViews": 0,
     "websiteClicks": 0,
-    "impressionSources.follow": 0.004,
-    "impressionSources.forYou": 0.976,
-    "impressionSources.other": 0,
-    "impressionSources.personalProfile": 0.012,
-    "impressionSources.search": 0.008,
     "impressionSources.sound": 0,
     "impressionSources.directMessage": 0,
-    "audienceTypes.nonFollower": 0.98,
-    "audienceTypes.returnViewer": 0,
-    "audienceTypes.follower": 0.02,
-    "audienceTypes.newViewer": 0,
+    "impressionSources.follow": 0.004,
+    "impressionSources.forYou": 0.952,
+    "impressionSources.other": 0,
+    "impressionSources.personalProfile": 0.037,
+    "impressionSources.search": 0.007,
+    "audienceTypes.nonFollower": 0.97,
+    "audienceTypes.returnViewer": 0.27,
+    "audienceTypes.follower": 0.03,
+    "audienceTypes.newViewer": 0.73,
+    "audienceCountries.DE": 0.809,
+    "audienceCountries.AT": 0.082,
+    "audienceCountries.CH": 0.063,
+    "audienceCountries.US": 0.015,
+    "audienceCountries.LU": 0.007,
+    "audienceCountries.IT": 0.004,
+    "audienceCountries.PT": 0.004,
+    "audienceCountries.CZ": 0.004,
+    "audienceCountries.GB": 0.004,
+    "audienceCountries.NO": 0.004,
+    "audienceCountries.other": 0.004,
     "retentionCurve.0": 1,
     "retentionCurve.3": 0.29,
     "retentionCurve.6": 0.22,
@@ -786,13 +1370,13 @@
     "retentionCurve.18": 0.12,
     "retentionCurve.21": 0.1,
     "retentionCurve.24": 0.09,
-    "retentionCurve.27": 0.08,
-    "retentionCurve.30": 0.08,
-    "retentionCurve.33": 0.08,
+    "retentionCurve.27": 0.09,
+    "retentionCurve.30": 0.09,
+    "retentionCurve.33": 0.09,
     "retentionCurve.36": 0.08,
     "retentionCurve.39": 0.08,
     "retentionCurve.42": 0.08,
-    "retentionCurve.45": 0.07,
+    "retentionCurve.45": 0.08,
     "retentionCurve.48": 0.07,
     "retentionCurve.51": 0.07,
     "retentionCurve.54": 0.07,
@@ -801,40 +1385,40 @@
     "retentionCurve.63": 0.06,
     "retentionCurve.66": 0.06,
     "retentionCurve.69": 0.06,
-    "retentionCurve.72": 0.05,
+    "retentionCurve.72": 0.06,
     "retentionCurve.75": 0.05,
     "retentionCurve.78": 0.05,
     "retentionCurve.81": 0.05,
     "retentionCurve.84": 0.04,
-    "retentionCurve.87": 0.03,
-    "retentionCurve.90": 0.03,
-    "retentionCurve.93": 0.03,
+    "retentionCurve.87": 0.04,
+    "retentionCurve.90": 0.04,
+    "retentionCurve.93": 0.04,
     "retentionCurve.96": 0.03,
     "retentionCurve.99": 0.03,
     "retentionCurve.102": 0.03,
     "retentionCurve.105": 0.03,
     "retentionCurve.108": 0.03,
-    "retentionCurve.111": 0.02,
+    "retentionCurve.111": 0.03,
     "retentionCurve.114": 0.02,
     "retentionCurve.117": 0.02,
     "retentionCurve.120": 0.02,
     "retentionCurve.123": 0.02,
     "retentionCurve.126": 0.02,
     "retentionCurve.129": 0.02,
-    "retentionCurve.132": 0.01,
-    "retentionCurve.135": 0.01,
-    "retentionCurve.138": 0.01,
-    "retentionCurve.141": 0.01,
-    "retentionCurve.144": 0.01,
-    "retentionCurve.147": 0.01,
-    "retentionCurve.150": 0.01,
-    "retentionCurve.153": 0.01,
-    "retentionCurve.156": 0.01,
+    "retentionCurve.132": 0.02,
+    "retentionCurve.135": 0.02,
+    "retentionCurve.138": 0.02,
+    "retentionCurve.141": 0.02,
+    "retentionCurve.144": 0.02,
+    "retentionCurve.147": 0.02,
+    "retentionCurve.150": 0.02,
+    "retentionCurve.153": 0.02,
+    "retentionCurve.156": 0.02,
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 157.611,
-    "engagementRate": 1.95,
-    "lastUpdated": "2026-11-08T18:10:45Z"
+    "engagementRate": 2.7,
+    "lastUpdated": "2026-11-09T19:41:20Z"
    }
   },
   {
@@ -848,25 +1432,25 @@
    "typ": "REELS",
    "sync": null,
    "analytics": {
-    "impressions": 127,
-    "reach": 116,
+    "impressions": 128,
+    "reach": 117,
     "likes": 1,
     "comments": 0,
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 127,
-    "igReelsAvgWatchTime": 9193,
-    "igReelsVideoViewTotalTime": 1075614,
-    "reelsSkipRate": 44.4,
+    "views": 128,
+    "igReelsAvgWatchTime": 9119,
+    "igReelsVideoViewTotalTime": 1076109,
+    "reelsSkipRate": 44.9,
     "completionRate": 0,
     "profileViews": 0,
     "websiteClicks": 0,
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 72,
-    "engagementRate": 0.79,
-    "lastUpdated": "2026-11-08T18:10:42Z"
+    "engagementRate": 0.78,
+    "lastUpdated": "2026-11-09T19:40:46Z"
    }
   },
   {
@@ -881,65 +1465,75 @@
    "sync": null,
    "analytics": {
     "impressions": 0,
-    "reach": 0,
+    "reach": 230,
     "likes": 6,
     "comments": 0,
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 252,
+    "views": 257,
     "follows": 0,
-    "igReelsAvgWatchTime": 12290,
-    "igReelsVideoViewTotalTime": 3157000,
+    "igReelsAvgWatchTime": 13240,
+    "igReelsVideoViewTotalTime": 3468000,
     "reelsSkipRate": 0,
-    "completionRate": 0.0078,
+    "completionRate": 0.0115,
     "profileViews": 0,
     "websiteClicks": 0,
-    "impressionSources.forYou": 0.98,
-    "impressionSources.other": 0,
-    "impressionSources.personalProfile": 0.008,
-    "impressionSources.search": 0.008,
     "impressionSources.sound": 0,
     "impressionSources.directMessage": 0,
     "impressionSources.follow": 0.004,
-    "audienceTypes.newViewer": 0,
-    "audienceTypes.nonFollower": 0.98,
-    "audienceTypes.returnViewer": 0,
-    "audienceTypes.follower": 0.02,
+    "impressionSources.forYou": 0.965,
+    "impressionSources.other": 0,
+    "impressionSources.personalProfile": 0.023,
+    "impressionSources.search": 0.008,
+    "audienceTypes.follower": 0.03,
+    "audienceTypes.newViewer": 0.77,
+    "audienceTypes.nonFollower": 0.97,
+    "audienceTypes.returnViewer": 0.23,
+    "audienceCountries.DE": 0.911,
+    "audienceCountries.AT": 0.038,
+    "audienceCountries.CH": 0.019,
+    "audienceCountries.IT": 0.008,
+    "audienceCountries.CA": 0.004,
+    "audienceCountries.US": 0.004,
+    "audienceCountries.FR": 0.004,
+    "audienceCountries.BG": 0.004,
+    "audienceCountries.LV": 0.004,
+    "audienceCountries.NA": 0.004,
     "retentionCurve.0": 1,
-    "retentionCurve.4": 0.29,
+    "retentionCurve.4": 0.3,
     "retentionCurve.8": 0.18,
-    "retentionCurve.12": 0.15,
-    "retentionCurve.16": 0.14,
-    "retentionCurve.20": 0.13,
-    "retentionCurve.24": 0.12,
+    "retentionCurve.12": 0.16,
+    "retentionCurve.16": 0.15,
+    "retentionCurve.20": 0.14,
+    "retentionCurve.24": 0.13,
     "retentionCurve.28": 0.12,
     "retentionCurve.32": 0.11,
-    "retentionCurve.36": 0.09,
+    "retentionCurve.36": 0.1,
     "retentionCurve.40": 0.09,
     "retentionCurve.44": 0.09,
-    "retentionCurve.48": 0.07,
+    "retentionCurve.48": 0.08,
     "retentionCurve.52": 0.07,
     "retentionCurve.56": 0.07,
     "retentionCurve.60": 0.06,
     "retentionCurve.64": 0.06,
     "retentionCurve.68": 0.05,
     "retentionCurve.72": 0.05,
-    "retentionCurve.76": 0.04,
+    "retentionCurve.76": 0.05,
     "retentionCurve.80": 0.04,
     "retentionCurve.84": 0.04,
     "retentionCurve.88": 0.04,
-    "retentionCurve.92": 0.03,
-    "retentionCurve.96": 0.03,
-    "retentionCurve.100": 0.03,
-    "retentionCurve.104": 0.03,
+    "retentionCurve.92": 0.04,
+    "retentionCurve.96": 0.04,
+    "retentionCurve.100": 0.04,
+    "retentionCurve.104": 0.04,
     "retentionCurve.108": 0.03,
     "retentionCurve.112": 0.03,
     "retentionCurve.116": 0.03,
-    "retentionCurve.120": 0.02,
+    "retentionCurve.120": 0.03,
     "retentionCurve.124": 0.02,
-    "retentionCurve.128": 0.01,
-    "retentionCurve.132": 0.01,
+    "retentionCurve.128": 0.02,
+    "retentionCurve.132": 0.02,
     "retentionCurve.136": 0.01,
     "retentionCurve.140": 0.01,
     "retentionCurve.144": 0.01,
@@ -956,22 +1550,22 @@
     "retentionCurve.188": 0.01,
     "retentionCurve.192": 0.01,
     "retentionCurve.196": 0.01,
-    "retentionCurve.200": 0,
-    "retentionCurve.204": 0,
-    "retentionCurve.208": 0,
-    "retentionCurve.212": 0,
-    "retentionCurve.216": 0,
-    "retentionCurve.220": 0,
-    "retentionCurve.224": 0,
-    "retentionCurve.228": 0,
-    "retentionCurve.232": 0,
-    "retentionCurve.236": 0,
-    "retentionCurve.240": 0,
+    "retentionCurve.200": 0.01,
+    "retentionCurve.204": 0.01,
+    "retentionCurve.208": 0.01,
+    "retentionCurve.212": 0.01,
+    "retentionCurve.216": 0.01,
+    "retentionCurve.220": 0.01,
+    "retentionCurve.224": 0.01,
+    "retentionCurve.228": 0.01,
+    "retentionCurve.232": 0.01,
+    "retentionCurve.236": 0.01,
+    "retentionCurve.240": 0.01,
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 243.585,
-    "engagementRate": 2.38,
-    "lastUpdated": "2026-11-08T18:10:45Z"
+    "engagementRate": 2.61,
+    "lastUpdated": "2026-11-09T19:41:20Z"
    }
   },
   {
@@ -985,17 +1579,17 @@
    "typ": "REELS",
    "sync": null,
    "analytics": {
-    "impressions": 133,
-    "reach": 123,
+    "impressions": 134,
+    "reach": 124,
     "likes": 0,
     "comments": 0,
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 133,
-    "igReelsAvgWatchTime": 7088,
-    "igReelsVideoViewTotalTime": 871932,
-    "reelsSkipRate": 68.3,
+    "views": 134,
+    "igReelsAvgWatchTime": 7033,
+    "igReelsVideoViewTotalTime": 872165,
+    "reelsSkipRate": 68.5,
     "completionRate": 0,
     "profileViews": 0,
     "websiteClicks": 0,
@@ -1003,7 +1597,7 @@
     "reposts": 0,
     "videoDurationSeconds": 81,
     "engagementRate": 0,
-    "lastUpdated": "2026-11-08T18:10:42Z"
+    "lastUpdated": "2026-11-09T19:40:46Z"
    }
   },
   {
@@ -1017,17 +1611,17 @@
    "typ": "REELS",
    "sync": null,
    "analytics": {
-    "impressions": 178,
-    "reach": 148,
+    "impressions": 179,
+    "reach": 149,
     "likes": 2,
     "comments": 0,
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 178,
-    "igReelsAvgWatchTime": 10011,
-    "igReelsVideoViewTotalTime": 1491712,
-    "reelsSkipRate": 48.3,
+    "views": 179,
+    "igReelsAvgWatchTime": 9946,
+    "igReelsVideoViewTotalTime": 1491993,
+    "reelsSkipRate": 48.7,
     "completionRate": 0,
     "profileViews": 0,
     "websiteClicks": 0,
@@ -1035,7 +1629,7 @@
     "reposts": 0,
     "videoDurationSeconds": 79,
     "engagementRate": 1.12,
-    "lastUpdated": "2026-11-08T18:10:42Z"
+    "lastUpdated": "2026-11-09T19:40:46Z"
    }
   },
   {
@@ -1050,34 +1644,45 @@
    "sync": null,
    "analytics": {
     "impressions": 0,
-    "reach": 0,
-    "likes": 5,
+    "reach": 247,
+    "likes": 6,
     "comments": 0,
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 284,
+    "views": 291,
     "follows": 0,
-    "igReelsAvgWatchTime": 9360,
-    "igReelsVideoViewTotalTime": 2667000,
+    "igReelsAvgWatchTime": 9680,
+    "igReelsVideoViewTotalTime": 2827000,
     "reelsSkipRate": 0,
-    "completionRate": 0.014,
+    "completionRate": 0.0171,
     "profileViews": 0,
     "websiteClicks": 0,
-    "impressionSources.other": 0,
-    "impressionSources.personalProfile": 0.011,
-    "impressionSources.search": 0.025,
+    "impressionSources.personalProfile": 0.024,
+    "impressionSources.search": 0.034,
     "impressionSources.sound": 0,
     "impressionSources.directMessage": 0,
     "impressionSources.follow": 0,
-    "impressionSources.forYou": 0.964,
-    "audienceTypes.follower": 0.03,
-    "audienceTypes.newViewer": 0,
+    "impressionSources.forYou": 0.942,
+    "impressionSources.other": 0,
+    "audienceTypes.newViewer": 0.77,
     "audienceTypes.nonFollower": 0.97,
-    "audienceTypes.returnViewer": 0,
+    "audienceTypes.returnViewer": 0.23,
+    "audienceTypes.follower": 0.03,
+    "audienceCountries.DE": 0.89,
+    "audienceCountries.AT": 0.058,
+    "audienceCountries.CH": 0.024,
+    "audienceCountries.IT": 0.007,
+    "audienceCountries.FR": 0.003,
+    "audienceCountries.AL": 0.003,
+    "audienceCountries.US": 0.003,
+    "audienceCountries.BA": 0.003,
+    "audienceCountries.BE": 0.003,
+    "audienceCountries.PL": 0.003,
+    "audienceCountries.other": 0.003,
     "retentionCurve.0": 1,
     "retentionCurve.3": 0.38,
-    "retentionCurve.6": 0.24,
+    "retentionCurve.6": 0.23,
     "retentionCurve.9": 0.14,
     "retentionCurve.12": 0.12,
     "retentionCurve.15": 0.11,
@@ -1092,7 +1697,7 @@
     "retentionCurve.42": 0.06,
     "retentionCurve.45": 0.06,
     "retentionCurve.48": 0.06,
-    "retentionCurve.51": 0.05,
+    "retentionCurve.51": 0.06,
     "retentionCurve.54": 0.05,
     "retentionCurve.57": 0.05,
     "retentionCurve.60": 0.05,
@@ -1100,35 +1705,35 @@
     "retentionCurve.66": 0.04,
     "retentionCurve.69": 0.04,
     "retentionCurve.72": 0.04,
-    "retentionCurve.75": 0.03,
-    "retentionCurve.78": 0.03,
-    "retentionCurve.81": 0.03,
-    "retentionCurve.84": 0.03,
+    "retentionCurve.75": 0.04,
+    "retentionCurve.78": 0.04,
+    "retentionCurve.81": 0.04,
+    "retentionCurve.84": 0.04,
     "retentionCurve.87": 0.03,
     "retentionCurve.90": 0.03,
-    "retentionCurve.93": 0.02,
-    "retentionCurve.96": 0.02,
-    "retentionCurve.99": 0.02,
-    "retentionCurve.102": 0.02,
-    "retentionCurve.105": 0.02,
+    "retentionCurve.93": 0.03,
+    "retentionCurve.96": 0.03,
+    "retentionCurve.99": 0.03,
+    "retentionCurve.102": 0.03,
+    "retentionCurve.105": 0.03,
     "retentionCurve.108": 0.02,
     "retentionCurve.111": 0.02,
     "retentionCurve.114": 0.02,
     "retentionCurve.117": 0.02,
-    "retentionCurve.120": 0.01,
-    "retentionCurve.123": 0.01,
-    "retentionCurve.126": 0.01,
-    "retentionCurve.129": 0.01,
-    "retentionCurve.132": 0.01,
-    "retentionCurve.135": 0.01,
+    "retentionCurve.120": 0.02,
+    "retentionCurve.123": 0.02,
+    "retentionCurve.126": 0.02,
+    "retentionCurve.129": 0.02,
+    "retentionCurve.132": 0.02,
+    "retentionCurve.135": 0.02,
     "retentionCurve.138": 0.01,
     "retentionCurve.141": 0.01,
     "retentionCurve.144": 0.01,
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 146.283,
-    "engagementRate": 1.76,
-    "lastUpdated": "2026-11-08T18:10:45Z"
+    "engagementRate": 2.43,
+    "lastUpdated": "2026-11-09T19:41:20Z"
    }
   },
   {
@@ -1142,17 +1747,17 @@
    "typ": "REELS",
    "sync": null,
    "analytics": {
-    "impressions": 159,
-    "reach": 131,
+    "impressions": 160,
+    "reach": 132,
     "likes": 0,
     "comments": 0,
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 159,
-    "igReelsAvgWatchTime": 12858,
-    "igReelsVideoViewTotalTime": 1671590,
-    "reelsSkipRate": 52.3,
+    "views": 160,
+    "igReelsAvgWatchTime": 12761,
+    "igReelsVideoViewTotalTime": 1671801,
+    "reelsSkipRate": 52.7,
     "completionRate": 0,
     "profileViews": 0,
     "websiteClicks": 0,
@@ -1160,7 +1765,7 @@
     "reposts": 0,
     "videoDurationSeconds": 72,
     "engagementRate": 0,
-    "lastUpdated": "2026-11-08T18:10:42Z"
+    "lastUpdated": "2026-11-09T19:40:46Z"
    }
   },
   {
@@ -1175,54 +1780,54 @@
    "sync": null,
    "analytics": {
     "impressions": 0,
-    "reach": 150,
+    "reach": 233,
     "likes": 11,
     "comments": 1,
     "shares": 0,
     "saves": 1,
     "clicks": 0,
-    "views": 250,
+    "views": 258,
     "follows": 0,
-    "igReelsAvgWatchTime": 20450,
-    "igReelsVideoViewTotalTime": 5256000,
+    "igReelsAvgWatchTime": 19920,
+    "igReelsVideoViewTotalTime": 5279000,
     "reelsSkipRate": 0,
-    "completionRate": 0.0467,
+    "completionRate": 0.0453,
     "profileViews": 0,
     "websiteClicks": 0,
-    "impressionSources.search": 0.008,
+    "impressionSources.forYou": 0.939,
+    "impressionSources.other": 0.008,
+    "impressionSources.personalProfile": 0.034,
+    "impressionSources.search": 0.011,
     "impressionSources.sound": 0,
     "impressionSources.directMessage": 0.004,
     "impressionSources.follow": 0.004,
-    "impressionSources.forYou": 0.964,
-    "impressionSources.other": 0.004,
-    "impressionSources.personalProfile": 0.016,
-    "audienceTypes.follower": 0.05,
-    "audienceTypes.newViewer": 0.61,
-    "audienceTypes.nonFollower": 0.95,
-    "audienceTypes.returnViewer": 0.39,
-    "audienceCountries.DE": 0.874,
-    "audienceCountries.AT": 0.074,
-    "audienceCountries.CH": 0.012,
-    "audienceCountries.US": 0.012,
+    "audienceTypes.follower": 0.06,
+    "audienceTypes.newViewer": 0.62,
+    "audienceTypes.nonFollower": 0.94,
+    "audienceTypes.returnViewer": 0.38,
+    "audienceCountries.DE": 0.878,
+    "audienceCountries.AT": 0.072,
+    "audienceCountries.CH": 0.011,
+    "audienceCountries.US": 0.011,
     "audienceCountries.LU": 0.008,
     "audienceCountries.EG": 0.004,
     "audienceCountries.NL": 0.004,
-    "audienceCountries.SK": 0.004,
-    "audienceCountries.FI": 0.004,
     "audienceCountries.KZ": 0.004,
+    "audienceCountries.FI": 0.004,
+    "audienceCountries.SK": 0.004,
     "retentionCurve.0": 1,
-    "retentionCurve.4": 0.31,
-    "retentionCurve.8": 0.19,
+    "retentionCurve.4": 0.3,
+    "retentionCurve.8": 0.18,
     "retentionCurve.12": 0.16,
     "retentionCurve.16": 0.15,
-    "retentionCurve.20": 0.15,
+    "retentionCurve.20": 0.14,
     "retentionCurve.24": 0.13,
     "retentionCurve.28": 0.12,
     "retentionCurve.32": 0.11,
     "retentionCurve.36": 0.11,
     "retentionCurve.40": 0.11,
     "retentionCurve.44": 0.11,
-    "retentionCurve.48": 0.11,
+    "retentionCurve.48": 0.1,
     "retentionCurve.52": 0.1,
     "retentionCurve.56": 0.1,
     "retentionCurve.60": 0.09,
@@ -1230,8 +1835,8 @@
     "retentionCurve.68": 0.09,
     "retentionCurve.72": 0.09,
     "retentionCurve.76": 0.08,
-    "retentionCurve.80": 0.08,
-    "retentionCurve.84": 0.07,
+    "retentionCurve.80": 0.07,
+    "retentionCurve.84": 0.06,
     "retentionCurve.88": 0.06,
     "retentionCurve.92": 0.06,
     "retentionCurve.96": 0.06,
@@ -1243,13 +1848,13 @@
     "retentionCurve.120": 0.05,
     "retentionCurve.124": 0.05,
     "retentionCurve.128": 0.05,
-    "retentionCurve.132": 0.05,
-    "retentionCurve.136": 0.05,
-    "retentionCurve.140": 0.05,
-    "retentionCurve.144": 0.05,
-    "retentionCurve.148": 0.05,
-    "retentionCurve.152": 0.05,
-    "retentionCurve.156": 0.05,
+    "retentionCurve.132": 0.04,
+    "retentionCurve.136": 0.04,
+    "retentionCurve.140": 0.04,
+    "retentionCurve.144": 0.04,
+    "retentionCurve.148": 0.04,
+    "retentionCurve.152": 0.04,
+    "retentionCurve.156": 0.04,
     "retentionCurve.160": 0.04,
     "retentionCurve.164": 0.04,
     "retentionCurve.168": 0.04,
@@ -1258,22 +1863,22 @@
     "retentionCurve.180": 0.04,
     "retentionCurve.184": 0.04,
     "retentionCurve.188": 0.04,
-    "retentionCurve.192": 0.04,
-    "retentionCurve.196": 0.04,
-    "retentionCurve.200": 0.04,
-    "retentionCurve.204": 0.04,
-    "retentionCurve.208": 0.04,
-    "retentionCurve.212": 0.04,
-    "retentionCurve.216": 0.04,
-    "retentionCurve.220": 0.04,
-    "retentionCurve.224": 0.04,
-    "retentionCurve.228": 0.04,
-    "retentionCurve.232": 0.04,
+    "retentionCurve.192": 0.03,
+    "retentionCurve.196": 0.03,
+    "retentionCurve.200": 0.03,
+    "retentionCurve.204": 0.03,
+    "retentionCurve.208": 0.03,
+    "retentionCurve.212": 0.03,
+    "retentionCurve.216": 0.03,
+    "retentionCurve.220": 0.03,
+    "retentionCurve.224": 0.03,
+    "retentionCurve.228": 0.03,
+    "retentionCurve.232": 0.03,
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 233.174,
-    "engagementRate": 8.67,
-    "lastUpdated": "2026-11-08T18:10:45Z"
+    "engagementRate": 5.58,
+    "lastUpdated": "2026-11-09T19:41:20Z"
    }
   },
   {
@@ -1288,45 +1893,45 @@
    "sync": null,
    "analytics": {
     "impressions": 0,
-    "reach": 242,
-    "likes": 6,
+    "reach": 246,
+    "likes": 7,
     "comments": 0,
     "shares": 0,
     "saves": 1,
     "clicks": 0,
-    "views": 263,
+    "views": 267,
     "follows": 0,
-    "igReelsAvgWatchTime": 16100,
-    "igReelsVideoViewTotalTime": 4362000,
+    "igReelsAvgWatchTime": 16430,
+    "igReelsVideoViewTotalTime": 4518000,
     "reelsSkipRate": 0,
-    "completionRate": 0.1476,
+    "completionRate": 0.1527,
     "profileViews": 0,
     "websiteClicks": 0,
-    "impressionSources.other": 0,
-    "impressionSources.personalProfile": 0.018,
     "impressionSources.search": 0,
     "impressionSources.sound": 0,
     "impressionSources.directMessage": 0,
     "impressionSources.follow": 0,
-    "impressionSources.forYou": 0.982,
-    "audienceTypes.follower": 0.03,
-    "audienceTypes.newViewer": 0.74,
-    "audienceTypes.nonFollower": 0.97,
+    "impressionSources.forYou": 0.967,
+    "impressionSources.other": 0,
+    "impressionSources.personalProfile": 0.033,
+    "audienceTypes.nonFollower": 0.96,
     "audienceTypes.returnViewer": 0.26,
-    "audienceCountries.DE": 0.892,
-    "audienceCountries.AT": 0.052,
+    "audienceTypes.follower": 0.04,
+    "audienceTypes.newViewer": 0.74,
+    "audienceCountries.DE": 0.893,
+    "audienceCountries.AT": 0.051,
     "audienceCountries.CH": 0.018,
-    "audienceCountries.FR": 0.007,
     "audienceCountries.IT": 0.007,
-    "audienceCountries.LI": 0.004,
+    "audienceCountries.FR": 0.007,
+    "audienceCountries.AL": 0.004,
     "audienceCountries.BE": 0.004,
     "audienceCountries.CZ": 0.004,
+    "audienceCountries.LI": 0.004,
     "audienceCountries.US": 0.004,
-    "audienceCountries.AL": 0.004,
     "audienceCountries.other": 0.004,
     "retentionCurve.0": 1,
     "retentionCurve.2": 0.42,
-    "retentionCurve.4": 0.3,
+    "retentionCurve.4": 0.31,
     "retentionCurve.6": 0.26,
     "retentionCurve.8": 0.23,
     "retentionCurve.10": 0.21,
@@ -1335,37 +1940,37 @@
     "retentionCurve.16": 0.2,
     "retentionCurve.18": 0.2,
     "retentionCurve.20": 0.2,
-    "retentionCurve.22": 0.19,
+    "retentionCurve.22": 0.2,
     "retentionCurve.24": 0.19,
     "retentionCurve.26": 0.19,
     "retentionCurve.28": 0.19,
     "retentionCurve.30": 0.19,
     "retentionCurve.32": 0.18,
-    "retentionCurve.34": 0.17,
-    "retentionCurve.36": 0.17,
-    "retentionCurve.38": 0.17,
-    "retentionCurve.40": 0.15,
-    "retentionCurve.42": 0.14,
-    "retentionCurve.44": 0.14,
-    "retentionCurve.46": 0.14,
+    "retentionCurve.34": 0.18,
+    "retentionCurve.36": 0.18,
+    "retentionCurve.38": 0.18,
+    "retentionCurve.40": 0.16,
+    "retentionCurve.42": 0.15,
+    "retentionCurve.44": 0.15,
+    "retentionCurve.46": 0.15,
     "retentionCurve.48": 0.14,
-    "retentionCurve.50": 0.13,
-    "retentionCurve.52": 0.13,
-    "retentionCurve.54": 0.13,
-    "retentionCurve.56": 0.13,
-    "retentionCurve.58": 0.12,
+    "retentionCurve.50": 0.14,
+    "retentionCurve.52": 0.14,
+    "retentionCurve.54": 0.14,
+    "retentionCurve.56": 0.14,
+    "retentionCurve.58": 0.13,
     "retentionCurve.60": 0.12,
-    "retentionCurve.62": 0.11,
-    "retentionCurve.64": 0.11,
+    "retentionCurve.62": 0.12,
+    "retentionCurve.64": 0.12,
     "retentionCurve.66": 0.11,
     "retentionCurve.68": 0.11,
-    "retentionCurve.70": 0.1,
+    "retentionCurve.70": 0.11,
     "retentionCurve.72": 0.1,
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 73.567,
-    "engagementRate": 2.89,
-    "lastUpdated": "2026-11-08T18:10:45Z"
+    "engagementRate": 3.25,
+    "lastUpdated": "2026-11-09T19:41:20Z"
    }
   },
   {
@@ -1379,25 +1984,25 @@
    "typ": "REELS",
    "sync": null,
    "analytics": {
-    "impressions": 1658,
-    "reach": 1093,
+    "impressions": 1661,
+    "reach": 1095,
     "likes": 47,
     "comments": 0,
     "shares": 0,
     "saves": 1,
     "clicks": 0,
-    "views": 1658,
-    "igReelsAvgWatchTime": 39931,
-    "igReelsVideoViewTotalTime": 43845317,
-    "reelsSkipRate": 33.9,
+    "views": 1661,
+    "igReelsAvgWatchTime": 39860,
+    "igReelsVideoViewTotalTime": 43846845,
+    "reelsSkipRate": 34,
     "completionRate": 0,
     "profileViews": 0,
     "websiteClicks": 0,
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 73,
-    "engagementRate": 2.9,
-    "lastUpdated": "2026-11-08T18:10:42Z"
+    "engagementRate": 2.89,
+    "lastUpdated": "2026-11-09T19:40:46Z"
    }
   },
   {
@@ -1411,17 +2016,17 @@
    "typ": "REELS",
    "sync": null,
    "analytics": {
-    "impressions": 17,
-    "reach": 12,
+    "impressions": 18,
+    "reach": 13,
     "likes": 0,
     "comments": 0,
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 17,
-    "igReelsAvgWatchTime": 18885,
-    "igReelsVideoViewTotalTime": 302163,
-    "reelsSkipRate": 66.7,
+    "views": 18,
+    "igReelsAvgWatchTime": 17815,
+    "igReelsVideoViewTotalTime": 302867,
+    "reelsSkipRate": 69.2,
     "completionRate": 0,
     "profileViews": 0,
     "websiteClicks": 0,
@@ -1429,7 +2034,7 @@
     "reposts": 0,
     "videoDurationSeconds": 51,
     "engagementRate": 0,
-    "lastUpdated": "2026-11-08T18:10:42Z"
+    "lastUpdated": "2026-11-09T19:40:46Z"
    }
   },
   {
@@ -1461,7 +2066,7 @@
     "reposts": 0,
     "videoDurationSeconds": 50,
     "engagementRate": 0,
-    "lastUpdated": "2026-11-08T18:10:42Z"
+    "lastUpdated": "2026-11-09T19:40:46Z"
    }
   },
   {
@@ -1493,7 +2098,7 @@
     "reposts": 0,
     "videoDurationSeconds": 51,
     "engagementRate": 0,
-    "lastUpdated": "2026-11-08T18:10:42Z"
+    "lastUpdated": "2026-11-09T19:40:46Z"
    }
   },
   {
@@ -1525,7 +2130,7 @@
     "reposts": 0,
     "videoDurationSeconds": 48,
     "engagementRate": 0,
-    "lastUpdated": "2026-11-08T18:10:42Z"
+    "lastUpdated": "2026-11-09T19:40:46Z"
    }
   },
   {
@@ -1557,7 +2162,7 @@
     "reposts": 0,
     "videoDurationSeconds": 52,
     "engagementRate": 0,
-    "lastUpdated": "2026-11-08T18:10:42Z"
+    "lastUpdated": "2026-11-09T19:40:46Z"
    }
   },
   {
@@ -1589,7 +2194,7 @@
     "reposts": 0,
     "videoDurationSeconds": 52,
     "engagementRate": 0,
-    "lastUpdated": "2026-11-08T18:10:42Z"
+    "lastUpdated": "2026-11-09T19:40:46Z"
    }
   },
   {
@@ -1621,7 +2226,7 @@
     "reposts": 0,
     "videoDurationSeconds": 50,
     "engagementRate": 1.16,
-    "lastUpdated": "2026-11-08T18:10:42Z"
+    "lastUpdated": "2026-11-09T19:40:46Z"
    }
   },
   {
@@ -1636,41 +2241,41 @@
    "sync": null,
    "analytics": {
     "impressions": 0,
-    "reach": 716,
-    "likes": 18,
+    "reach": 725,
+    "likes": 19,
     "comments": 0,
     "shares": 0,
     "saves": 1,
     "clicks": 0,
-    "views": 804,
+    "views": 812,
     "follows": 1,
-    "igReelsAvgWatchTime": 18170,
-    "igReelsVideoViewTotalTime": 14989000,
+    "igReelsAvgWatchTime": 18250,
+    "igReelsVideoViewTotalTime": 15218000,
     "reelsSkipRate": 0,
-    "completionRate": 0.0206,
+    "completionRate": 0.0216,
     "profileViews": 0,
     "websiteClicks": 0,
+    "impressionSources.follow": 0,
+    "impressionSources.forYou": 0.938,
     "impressionSources.other": 0,
-    "impressionSources.personalProfile": 0.027,
-    "impressionSources.search": 0.025,
+    "impressionSources.personalProfile": 0.03,
+    "impressionSources.search": 0.032,
     "impressionSources.sound": 0,
     "impressionSources.directMessage": 0,
-    "impressionSources.follow": 0,
-    "impressionSources.forYou": 0.948,
-    "audienceTypes.newViewer": 0.75,
-    "audienceTypes.nonFollower": 0.98,
+    "audienceTypes.nonFollower": 0.97,
     "audienceTypes.returnViewer": 0.25,
-    "audienceTypes.follower": 0.02,
+    "audienceTypes.follower": 0.03,
+    "audienceTypes.newViewer": 0.75,
     "audienceCountries.DE": 0.819,
-    "audienceCountries.AT": 0.085,
-    "audienceCountries.CH": 0.057,
-    "audienceCountries.IT": 0.005,
+    "audienceCountries.AT": 0.084,
+    "audienceCountries.CH": 0.056,
+    "audienceCountries.IT": 0.007,
     "audienceCountries.BR": 0.004,
     "audienceCountries.LU": 0.004,
     "audienceCountries.US": 0.004,
-    "audienceCountries.GB": 0.002,
-    "audienceCountries.IR": 0.002,
     "audienceCountries.BG": 0.002,
+    "audienceCountries.IR": 0.002,
+    "audienceCountries.GB": 0.002,
     "audienceCountries.other": 0.016,
     "retentionCurve.0": 1,
     "retentionCurve.4": 0.36,
@@ -1680,7 +2285,7 @@
     "retentionCurve.20": 0.13,
     "retentionCurve.24": 0.12,
     "retentionCurve.28": 0.11,
-    "retentionCurve.32": 0.09,
+    "retentionCurve.32": 0.1,
     "retentionCurve.36": 0.09,
     "retentionCurve.40": 0.07,
     "retentionCurve.44": 0.07,
@@ -1722,8 +2327,8 @@
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 186.07,
-    "engagementRate": 2.65,
-    "lastUpdated": "2026-11-08T18:10:45Z"
+    "engagementRate": 2.76,
+    "lastUpdated": "2026-11-09T19:41:20Z"
    }
   },
   {
@@ -1755,7 +2360,7 @@
     "reposts": 0,
     "videoDurationSeconds": 49,
     "engagementRate": 1.92,
-    "lastUpdated": "2026-11-08T18:10:42Z"
+    "lastUpdated": "2026-11-09T19:40:46Z"
    }
   },
   {
@@ -1787,7 +2392,7 @@
     "reposts": 0,
     "videoDurationSeconds": 45,
     "engagementRate": 0.56,
-    "lastUpdated": "2026-11-08T18:10:42Z"
+    "lastUpdated": "2026-11-09T19:40:46Z"
    }
   },
   {
@@ -1819,7 +2424,7 @@
     "reposts": 0,
     "videoDurationSeconds": 46,
     "engagementRate": 1.36,
-    "lastUpdated": "2026-11-08T18:10:42Z"
+    "lastUpdated": "2026-11-09T19:40:46Z"
    }
   },
   {
@@ -1851,7 +2456,7 @@
     "reposts": 0,
     "videoDurationSeconds": 59,
     "engagementRate": 1.57,
-    "lastUpdated": "2026-11-08T18:10:42Z"
+    "lastUpdated": "2026-11-09T19:40:46Z"
    }
   },
   {
@@ -1883,7 +2488,7 @@
     "reposts": 0,
     "videoDurationSeconds": 55,
     "engagementRate": 3.36,
-    "lastUpdated": "2026-11-08T18:10:42Z"
+    "lastUpdated": "2026-11-09T19:40:46Z"
    }
   },
   {
@@ -1915,7 +2520,7 @@
     "reposts": 0,
     "videoDurationSeconds": 53,
     "engagementRate": 0,
-    "lastUpdated": "2026-11-08T18:10:42Z"
+    "lastUpdated": "2026-11-09T19:40:46Z"
    }
   },
   {
@@ -1930,44 +2535,44 @@
    "sync": null,
    "analytics": {
     "impressions": 0,
-    "reach": 737,
+    "reach": 743,
     "likes": 34,
     "comments": 0,
     "shares": 1,
     "saves": 0,
     "clicks": 0,
-    "views": 801,
+    "views": 811,
     "follows": 0,
-    "igReelsAvgWatchTime": 17260,
-    "igReelsVideoViewTotalTime": 14184000,
+    "igReelsAvgWatchTime": 17070,
+    "igReelsVideoViewTotalTime": 14205000,
     "reelsSkipRate": 0,
-    "completionRate": 0.0097,
+    "completionRate": 0.0096,
     "profileViews": 0,
     "websiteClicks": 0,
-    "impressionSources.personalProfile": 0.027,
-    "impressionSources.search": 0.067,
+    "impressionSources.forYou": 0.893,
+    "impressionSources.other": 0.001,
+    "impressionSources.personalProfile": 0.029,
+    "impressionSources.search": 0.076,
     "impressionSources.sound": 0,
     "impressionSources.directMessage": 0,
     "impressionSources.follow": 0.001,
-    "impressionSources.forYou": 0.904,
-    "impressionSources.other": 0.001,
     "audienceTypes.follower": 0.02,
     "audienceTypes.newViewer": 0.77,
     "audienceTypes.nonFollower": 0.98,
     "audienceTypes.returnViewer": 0.23,
-    "audienceCountries.DE": 0.843,
+    "audienceCountries.DE": 0.844,
     "audienceCountries.AT": 0.069,
-    "audienceCountries.CH": 0.043,
-    "audienceCountries.LU": 0.009,
-    "audienceCountries.CZ": 0.005,
+    "audienceCountries.CH": 0.042,
+    "audienceCountries.LU": 0.008,
     "audienceCountries.BE": 0.005,
+    "audienceCountries.CZ": 0.005,
     "audienceCountries.IT": 0.004,
-    "audienceCountries.NL": 0.004,
     "audienceCountries.US": 0.004,
+    "audienceCountries.NL": 0.004,
     "audienceCountries.SI": 0.002,
-    "audienceCountries.other": 0.012,
+    "audienceCountries.other": 0.013,
     "retentionCurve.0": 1,
-    "retentionCurve.5": 0.4,
+    "retentionCurve.5": 0.39,
     "retentionCurve.10": 0.24,
     "retentionCurve.15": 0.18,
     "retentionCurve.20": 0.16,
@@ -2026,8 +2631,8 @@
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 283.009,
-    "engagementRate": 4.75,
-    "lastUpdated": "2026-11-08T18:10:45Z"
+    "engagementRate": 4.71,
+    "lastUpdated": "2026-11-09T19:41:20Z"
    }
   },
   {
@@ -2059,7 +2664,7 @@
     "reposts": 0,
     "videoDurationSeconds": 43,
     "engagementRate": 0.72,
-    "lastUpdated": "2026-11-08T18:10:42Z"
+    "lastUpdated": "2026-11-09T19:40:46Z"
    }
   },
   {
@@ -2091,7 +2696,7 @@
     "reposts": 0,
     "videoDurationSeconds": 59,
     "engagementRate": 0.71,
-    "lastUpdated": "2026-11-08T18:10:42Z"
+    "lastUpdated": "2026-11-09T19:40:46Z"
    }
   },
   {
@@ -2123,7 +2728,7 @@
     "reposts": 0,
     "videoDurationSeconds": 59,
     "engagementRate": 1.63,
-    "lastUpdated": "2026-11-08T18:10:42Z"
+    "lastUpdated": "2026-11-09T19:40:46Z"
    }
   },
   {
@@ -2155,7 +2760,7 @@
     "reposts": 0,
     "videoDurationSeconds": 52,
     "engagementRate": 0,
-    "lastUpdated": "2026-11-08T18:10:42Z"
+    "lastUpdated": "2026-11-09T19:40:46Z"
    }
   },
   {
@@ -2187,7 +2792,7 @@
     "reposts": 0,
     "videoDurationSeconds": 57,
     "engagementRate": 0,
-    "lastUpdated": "2026-11-08T18:10:42Z"
+    "lastUpdated": "2026-11-09T19:40:46Z"
    }
   },
   {
@@ -2219,7 +2824,7 @@
     "reposts": 0,
     "videoDurationSeconds": 51,
     "engagementRate": 0.76,
-    "lastUpdated": "2026-11-08T18:10:42Z"
+    "lastUpdated": "2026-11-09T19:40:46Z"
    }
   },
   {
@@ -2234,42 +2839,42 @@
    "sync": null,
    "analytics": {
     "impressions": 0,
-    "reach": 731,
+    "reach": 734,
     "likes": 30,
     "comments": 0,
     "shares": 0,
     "saves": 3,
     "clicks": 0,
-    "views": 814,
+    "views": 819,
     "follows": 0,
-    "igReelsAvgWatchTime": 18540,
-    "igReelsVideoViewTotalTime": 15607000,
+    "igReelsAvgWatchTime": 18440,
+    "igReelsVideoViewTotalTime": 15622000,
     "reelsSkipRate": 0,
-    "completionRate": 0.0261,
+    "completionRate": 0.026,
     "profileViews": 0,
     "websiteClicks": 0,
+    "impressionSources.search": 0.043,
     "impressionSources.sound": 0,
     "impressionSources.directMessage": 0,
     "impressionSources.follow": 0.002,
-    "impressionSources.forYou": 0.928,
+    "impressionSources.forYou": 0.921,
     "impressionSources.other": 0.004,
-    "impressionSources.personalProfile": 0.027,
-    "impressionSources.search": 0.039,
-    "audienceTypes.newViewer": 0.77,
-    "audienceTypes.nonFollower": 0.97,
+    "impressionSources.personalProfile": 0.03,
     "audienceTypes.returnViewer": 0.23,
     "audienceTypes.follower": 0.03,
-    "audienceCountries.DE": 0.817,
-    "audienceCountries.AT": 0.097,
-    "audienceCountries.CH": 0.042,
+    "audienceTypes.newViewer": 0.77,
+    "audienceTypes.nonFollower": 0.97,
+    "audienceCountries.DE": 0.815,
+    "audienceCountries.AT": 0.098,
+    "audienceCountries.CH": 0.041,
     "audienceCountries.LU": 0.008,
     "audienceCountries.IT": 0.006,
     "audienceCountries.NL": 0.004,
-    "audienceCountries.TR": 0.002,
     "audienceCountries.RS": 0.002,
+    "audienceCountries.US": 0.002,
     "audienceCountries.KZ": 0.002,
     "audienceCountries.BG": 0.002,
-    "audienceCountries.other": 0.018,
+    "audienceCountries.other": 0.02,
     "retentionCurve.0": 1,
     "retentionCurve.4": 0.46,
     "retentionCurve.8": 0.27,
@@ -2321,8 +2926,8 @@
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 189.44,
-    "engagementRate": 4.51,
-    "lastUpdated": "2026-11-08T18:10:45Z"
+    "engagementRate": 4.5,
+    "lastUpdated": "2026-11-09T19:41:20Z"
    }
   },
   {
@@ -2354,7 +2959,7 @@
     "reposts": 0,
     "videoDurationSeconds": 54,
     "engagementRate": 0.75,
-    "lastUpdated": "2026-11-08T18:10:42Z"
+    "lastUpdated": "2026-11-09T19:40:46Z"
    }
   },
   {
@@ -2386,7 +2991,7 @@
     "reposts": 0,
     "videoDurationSeconds": 54,
     "engagementRate": 0.63,
-    "lastUpdated": "2026-11-08T18:10:42Z"
+    "lastUpdated": "2026-11-09T19:40:46Z"
    }
   },
   {
@@ -2418,7 +3023,7 @@
     "reposts": 0,
     "videoDurationSeconds": 55,
     "engagementRate": 0.64,
-    "lastUpdated": "2026-11-08T18:10:42Z"
+    "lastUpdated": "2026-11-09T19:40:46Z"
    }
   },
   {
@@ -2450,7 +3055,7 @@
     "reposts": 0,
     "videoDurationSeconds": 55,
     "engagementRate": 0.67,
-    "lastUpdated": "2026-11-08T18:10:42Z"
+    "lastUpdated": "2026-11-09T19:40:46Z"
    }
   },
   {
@@ -2482,7 +3087,7 @@
     "reposts": 0,
     "videoDurationSeconds": 53,
     "engagementRate": 0.58,
-    "lastUpdated": "2026-11-08T18:10:42Z"
+    "lastUpdated": "2026-11-09T19:40:46Z"
    }
   },
   {
@@ -2514,7 +3119,7 @@
     "reposts": 0,
     "videoDurationSeconds": 58,
     "engagementRate": 0.61,
-    "lastUpdated": "2026-11-08T18:10:42Z"
+    "lastUpdated": "2026-11-09T19:40:46Z"
    }
   },
   {
@@ -2529,42 +3134,42 @@
    "sync": null,
    "analytics": {
     "impressions": 0,
-    "reach": 917,
+    "reach": 924,
     "likes": 58,
     "comments": 0,
     "shares": 0,
     "saves": 4,
     "clicks": 0,
-    "views": 1080,
+    "views": 1087,
     "follows": 5,
-    "igReelsAvgWatchTime": 46450,
-    "igReelsVideoViewTotalTime": 52119000,
+    "igReelsAvgWatchTime": 46500,
+    "igReelsVideoViewTotalTime": 52547000,
     "reelsSkipRate": 0,
-    "completionRate": 0.0535,
+    "completionRate": 0.054,
     "profileViews": 0,
     "websiteClicks": 0,
-    "impressionSources.search": 0.067,
     "impressionSources.sound": 0,
     "impressionSources.directMessage": 0,
     "impressionSources.follow": 0.001,
-    "impressionSources.forYou": 0.875,
+    "impressionSources.forYou": 0.868,
     "impressionSources.other": 0.018,
-    "impressionSources.personalProfile": 0.039,
-    "audienceTypes.follower": 0.02,
+    "impressionSources.personalProfile": 0.042,
+    "impressionSources.search": 0.071,
     "audienceTypes.newViewer": 0.83,
     "audienceTypes.nonFollower": 0.98,
     "audienceTypes.returnViewer": 0.17,
-    "audienceCountries.DE": 0.88,
+    "audienceTypes.follower": 0.02,
+    "audienceCountries.DE": 0.878,
     "audienceCountries.AT": 0.048,
     "audienceCountries.CH": 0.023,
     "audienceCountries.EG": 0.006,
     "audienceCountries.PL": 0.005,
+    "audienceCountries.US": 0.004,
     "audienceCountries.FR": 0.004,
     "audienceCountries.JP": 0.004,
-    "audienceCountries.US": 0.004,
     "audienceCountries.LU": 0.003,
     "audienceCountries.SE": 0.003,
-    "audienceCountries.other": 0.02,
+    "audienceCountries.other": 0.022,
     "retentionCurve.0": 1,
     "retentionCurve.5": 0.45,
     "retentionCurve.10": 0.37,
@@ -2580,7 +3185,7 @@
     "retentionCurve.60": 0.22,
     "retentionCurve.65": 0.2,
     "retentionCurve.70": 0.19,
-    "retentionCurve.75": 0.18,
+    "retentionCurve.75": 0.19,
     "retentionCurve.80": 0.18,
     "retentionCurve.85": 0.17,
     "retentionCurve.90": 0.16,
@@ -2592,7 +3197,7 @@
     "retentionCurve.120": 0.08,
     "retentionCurve.125": 0.08,
     "retentionCurve.130": 0.08,
-    "retentionCurve.135": 0.07,
+    "retentionCurve.135": 0.08,
     "retentionCurve.140": 0.07,
     "retentionCurve.145": 0.07,
     "retentionCurve.150": 0.07,
@@ -2604,7 +3209,7 @@
     "retentionCurve.180": 0.05,
     "retentionCurve.185": 0.05,
     "retentionCurve.190": 0.05,
-    "retentionCurve.195": 0.04,
+    "retentionCurve.195": 0.05,
     "retentionCurve.200": 0.04,
     "retentionCurve.205": 0.04,
     "retentionCurve.210": 0.04,
@@ -2624,8 +3229,8 @@
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 277.782,
-    "engagementRate": 6.76,
-    "lastUpdated": "2026-11-08T18:10:45Z"
+    "engagementRate": 6.71,
+    "lastUpdated": "2026-11-09T19:41:20Z"
    }
   },
   {
@@ -2657,7 +3262,7 @@
     "reposts": 0,
     "videoDurationSeconds": 55,
     "engagementRate": 0.47,
-    "lastUpdated": "2026-11-08T18:10:42Z"
+    "lastUpdated": "2026-11-09T19:40:46Z"
    }
   },
   {
@@ -2689,7 +3294,7 @@
     "reposts": 0,
     "videoDurationSeconds": 58,
     "engagementRate": 0.61,
-    "lastUpdated": "2026-11-08T18:10:42Z"
+    "lastUpdated": "2026-11-09T19:40:46Z"
    }
   },
   {
@@ -2721,7 +3326,7 @@
     "reposts": 0,
     "videoDurationSeconds": 57,
     "engagementRate": 0,
-    "lastUpdated": "2026-11-08T18:10:42Z"
+    "lastUpdated": "2026-11-09T19:40:46Z"
    }
   },
   {
@@ -2753,7 +3358,7 @@
     "reposts": 0,
     "videoDurationSeconds": 46,
     "engagementRate": 2.49,
-    "lastUpdated": "2026-11-08T18:10:42Z"
+    "lastUpdated": "2026-11-09T19:40:46Z"
    }
   },
   {
@@ -2785,7 +3390,7 @@
     "reposts": 0,
     "videoDurationSeconds": 56,
     "engagementRate": 0.95,
-    "lastUpdated": "2026-11-08T18:10:42Z"
+    "lastUpdated": "2026-11-09T19:40:46Z"
    }
   },
   {
@@ -2817,7 +3422,7 @@
     "reposts": 0,
     "videoDurationSeconds": 59,
     "engagementRate": 0.69,
-    "lastUpdated": "2026-11-08T18:10:42Z"
+    "lastUpdated": "2026-11-09T16:18:35Z"
    }
   },
   {
@@ -2838,25 +3443,25 @@
     "shares": 0,
     "saves": 5,
     "clicks": 0,
-    "views": 769,
+    "views": 771,
     "follows": 0,
-    "igReelsAvgWatchTime": 23450,
-    "igReelsVideoViewTotalTime": 18572000,
+    "igReelsAvgWatchTime": 23390,
+    "igReelsVideoViewTotalTime": 18574000,
     "reelsSkipRate": 0,
-    "completionRate": 0.0215,
+    "completionRate": 0.0214,
     "profileViews": 0,
     "websiteClicks": 0,
-    "impressionSources.directMessage": 0,
-    "impressionSources.follow": 0.001,
-    "impressionSources.forYou": 0.964,
-    "impressionSources.other": 0,
-    "impressionSources.personalProfile": 0.035,
     "impressionSources.search": 0,
     "impressionSources.sound": 0,
+    "impressionSources.directMessage": 0,
+    "impressionSources.follow": 0.001,
+    "impressionSources.forYou": 0.961,
+    "impressionSources.other": 0,
+    "impressionSources.personalProfile": 0.038,
+    "audienceTypes.follower": 0.04,
     "audienceTypes.newViewer": 0.65,
     "audienceTypes.nonFollower": 0.96,
     "audienceTypes.returnViewer": 0.35,
-    "audienceTypes.follower": 0.04,
     "audienceCountries.DE": 0.848,
     "audienceCountries.AT": 0.071,
     "audienceCountries.CH": 0.035,
@@ -2864,8 +3469,8 @@
     "audienceCountries.IT": 0.006,
     "audienceCountries.US": 0.005,
     "audienceCountries.ES": 0.004,
-    "audienceCountries.SI": 0.003,
     "audienceCountries.GB": 0.003,
+    "audienceCountries.SI": 0.003,
     "audienceCountries.EG": 0.001,
     "audienceCountries.other": 0.016,
     "retentionCurve.0": 1,
@@ -2931,7 +3536,7 @@
     "reposts": 0,
     "videoDurationSeconds": 406.614,
     "engagementRate": 6.6,
-    "lastUpdated": "2026-11-08T18:10:45Z"
+    "lastUpdated": "2026-11-09T16:18:41Z"
    }
   },
   {
@@ -2963,7 +3568,7 @@
     "reposts": 0,
     "videoDurationSeconds": 57,
     "engagementRate": 1.61,
-    "lastUpdated": "2026-11-08T18:10:42Z"
+    "lastUpdated": "2026-11-09T16:18:35Z"
    }
   },
   {
@@ -2995,7 +3600,7 @@
     "reposts": 0,
     "videoDurationSeconds": 49,
     "engagementRate": 2.41,
-    "lastUpdated": "2026-11-08T18:10:42Z"
+    "lastUpdated": "2026-11-09T12:56:44Z"
    }
   },
   {
@@ -3027,7 +3632,7 @@
     "reposts": 0,
     "videoDurationSeconds": 48,
     "engagementRate": 0.59,
-    "lastUpdated": "2026-11-08T18:10:42Z"
+    "lastUpdated": "2026-11-09T12:56:44Z"
    }
   },
   {
@@ -3059,7 +3664,7 @@
     "reposts": 0,
     "videoDurationSeconds": 57,
     "engagementRate": 3.23,
-    "lastUpdated": "2026-11-08T18:10:42Z"
+    "lastUpdated": "2026-11-09T09:34:28Z"
    }
   },
   {
@@ -3091,7 +3696,7 @@
     "reposts": 0,
     "videoDurationSeconds": 56,
     "engagementRate": 0.61,
-    "lastUpdated": "2026-11-08T18:10:42Z"
+    "lastUpdated": "2026-11-09T06:12:35Z"
    }
   },
   {
@@ -3112,35 +3717,35 @@
     "shares": 0,
     "saves": 2,
     "clicks": 0,
-    "views": 791,
+    "views": 793,
     "follows": 0,
-    "igReelsAvgWatchTime": 18540,
-    "igReelsVideoViewTotalTime": 15051000,
+    "igReelsAvgWatchTime": 18490,
+    "igReelsVideoViewTotalTime": 15052000,
     "reelsSkipRate": 0,
     "completionRate": 0.0123,
     "profileViews": 0,
     "websiteClicks": 0,
-    "impressionSources.search": 0,
     "impressionSources.sound": 0,
     "impressionSources.directMessage": 0,
     "impressionSources.follow": 0,
-    "impressionSources.forYou": 0.957,
+    "impressionSources.forYou": 0.955,
     "impressionSources.other": 0.001,
-    "impressionSources.personalProfile": 0.042,
-    "audienceTypes.follower": 0.04,
-    "audienceTypes.newViewer": 0.79,
+    "impressionSources.personalProfile": 0.044,
+    "impressionSources.search": 0,
     "audienceTypes.nonFollower": 0.96,
     "audienceTypes.returnViewer": 0.21,
+    "audienceTypes.follower": 0.04,
+    "audienceTypes.newViewer": 0.79,
     "audienceCountries.DE": 0.869,
     "audienceCountries.AT": 0.08,
     "audienceCountries.CH": 0.021,
     "audienceCountries.LU": 0.004,
     "audienceCountries.NL": 0.004,
-    "audienceCountries.CA": 0.002,
-    "audienceCountries.US": 0.002,
     "audienceCountries.IT": 0.002,
-    "audienceCountries.FR": 0.002,
+    "audienceCountries.US": 0.002,
+    "audienceCountries.CA": 0.002,
     "audienceCountries.JP": 0.002,
+    "audienceCountries.FR": 0.002,
     "audienceCountries.other": 0.012,
     "retentionCurve.0": 1,
     "retentionCurve.7": 0.29,
@@ -3207,7 +3812,7 @@
     "reposts": 0,
     "videoDurationSeconds": 421.334,
     "engagementRate": 5.66,
-    "lastUpdated": "2026-11-08T18:10:45Z"
+    "lastUpdated": "2026-11-09T06:12:42Z"
    }
   },
   {
@@ -3239,7 +3844,7 @@
     "reposts": 0,
     "videoDurationSeconds": 52,
     "engagementRate": 1.71,
-    "lastUpdated": "2026-11-08T18:10:42Z"
+    "lastUpdated": "2026-11-09T02:50:08Z"
    }
   },
   {
@@ -3271,7 +3876,7 @@
     "reposts": 0,
     "videoDurationSeconds": 50,
     "engagementRate": 2.15,
-    "lastUpdated": "2026-11-08T18:10:42Z"
+    "lastUpdated": "2026-11-08T20:43:03Z"
    }
   },
   {
@@ -3303,7 +3908,7 @@
     "reposts": 0,
     "videoDurationSeconds": 57,
     "engagementRate": 1.27,
-    "lastUpdated": "2026-11-08T18:10:42Z"
+    "lastUpdated": "2026-11-09T19:40:46Z"
    }
   },
   {
@@ -3318,49 +3923,48 @@
    "sync": null,
    "analytics": {
     "impressions": 0,
-    "reach": 692,
+    "reach": 693,
     "likes": 31,
     "comments": 0,
     "shares": 0,
     "saves": 3,
     "clicks": 0,
-    "views": 780,
+    "views": 783,
     "follows": 0,
-    "igReelsAvgWatchTime": 25910,
-    "igReelsVideoViewTotalTime": 20881000,
+    "igReelsAvgWatchTime": 24650,
+    "igReelsVideoViewTotalTime": 19795000,
     "reelsSkipRate": 0,
-    "completionRate": 0.0261,
+    "completionRate": 0.0262,
     "profileViews": 0,
     "websiteClicks": 0,
-    "impressionSources.follow": 0.002,
-    "impressionSources.forYou": 0.93,
-    "impressionSources.other": 0.01,
-    "impressionSources.personalProfile": 0.053,
-    "impressionSources.search": 0.005,
+    "impressionSources.search": 0.004,
     "impressionSources.sound": 0,
-    "impressionSources.directMessage": 0,
-    "audienceTypes.returnViewer": 0.3,
-    "audienceTypes.follower": 0.04,
+    "impressionSources.follow": 0.002,
+    "impressionSources.forYou": 0.933,
+    "impressionSources.other": 0.01,
+    "impressionSources.personalProfile": 0.051,
+    "audienceTypes.follower": 0.03,
     "audienceTypes.newViewer": 0.7,
-    "audienceTypes.nonFollower": 0.96,
-    "audienceCountries.DE": 0.839,
-    "audienceCountries.AT": 0.097,
+    "audienceTypes.nonFollower": 0.97,
+    "audienceTypes.returnViewer": 0.3,
+    "audienceCountries.DE": 0.807,
+    "audienceCountries.AT": 0.09,
     "audienceCountries.CH": 0.029,
-    "audienceCountries.US": 0.007,
-    "audienceCountries.IT": 0.005,
+    "audienceCountries.IN": 0.019,
+    "audienceCountries.US": 0.011,
+    "audienceCountries.GB": 0.005,
+    "audienceCountries.ZA": 0.005,
+    "audienceCountries.IT": 0.004,
     "audienceCountries.LU": 0.004,
-    "audienceCountries.ES": 0.004,
-    "audienceCountries.NO": 0.001,
-    "audienceCountries.DK": 0.001,
-    "audienceCountries.BE": 0.001,
-    "audienceCountries.other": 0.012,
+    "audienceCountries.DK": 0.004,
+    "audienceCountries.other": 0.022,
     "retentionCurve.0": 1,
     "retentionCurve.7": 0.29,
-    "retentionCurve.14": 0.21,
-    "retentionCurve.21": 0.14,
-    "retentionCurve.28": 0.12,
-    "retentionCurve.35": 0.11,
-    "retentionCurve.42": 0.1,
+    "retentionCurve.14": 0.2,
+    "retentionCurve.21": 0.13,
+    "retentionCurve.28": 0.11,
+    "retentionCurve.35": 0.1,
+    "retentionCurve.42": 0.09,
     "retentionCurve.49": 0.09,
     "retentionCurve.56": 0.08,
     "retentionCurve.63": 0.08,
@@ -3375,7 +3979,7 @@
     "retentionCurve.126": 0.05,
     "retentionCurve.133": 0.05,
     "retentionCurve.140": 0.05,
-    "retentionCurve.147": 0.04,
+    "retentionCurve.147": 0.05,
     "retentionCurve.154": 0.04,
     "retentionCurve.161": 0.04,
     "retentionCurve.168": 0.04,
@@ -3417,7 +4021,7 @@
     "reposts": 0,
     "videoDurationSeconds": 409.153,
     "engagementRate": 4.91,
-    "lastUpdated": "2026-11-08T18:10:45Z"
+    "lastUpdated": "2026-11-09T19:41:20Z"
    }
   },
   {
@@ -3449,7 +4053,7 @@
     "reposts": 0,
     "videoDurationSeconds": 48,
     "engagementRate": 1.5,
-    "lastUpdated": "2026-11-08T13:14:36Z"
+    "lastUpdated": "2026-11-09T16:18:35Z"
    }
   },
   {
@@ -3481,7 +4085,7 @@
     "reposts": 0,
     "videoDurationSeconds": 59,
     "engagementRate": 1.75,
-    "lastUpdated": "2026-11-08T09:54:07Z"
+    "lastUpdated": "2026-11-09T12:56:44Z"
    }
   },
   {
@@ -3513,7 +4117,7 @@
     "reposts": 0,
     "videoDurationSeconds": 54,
     "engagementRate": 1.4,
-    "lastUpdated": "2026-11-08T06:33:47Z"
+    "lastUpdated": "2026-11-09T09:34:28Z"
    }
   },
   {
@@ -3528,13 +4132,13 @@
    "sync": null,
    "analytics": {
     "impressions": 0,
-    "reach": 732,
+    "reach": 733,
     "likes": 29,
     "comments": 1,
     "shares": 0,
-    "saves": 4,
+    "saves": 3,
     "clicks": 0,
-    "views": 850,
+    "views": 857,
     "follows": 1,
     "igReelsAvgWatchTime": 22500,
     "igReelsVideoViewTotalTime": 19638000,
@@ -3542,26 +4146,26 @@
     "completionRate": 0.0229,
     "profileViews": 0,
     "websiteClicks": 0,
+    "impressionSources.follow": 0.003,
+    "impressionSources.forYou": 0.919,
     "impressionSources.other": 0.003,
     "impressionSources.personalProfile": 0.074,
     "impressionSources.search": 0.001,
     "impressionSources.sound": 0,
     "impressionSources.directMessage": 0,
-    "impressionSources.follow": 0.003,
-    "impressionSources.forYou": 0.919,
     "audienceTypes.follower": 0.04,
-    "audienceTypes.newViewer": 0.74,
+    "audienceTypes.newViewer": 0.73,
     "audienceTypes.nonFollower": 0.96,
-    "audienceTypes.returnViewer": 0.26,
+    "audienceTypes.returnViewer": 0.27,
     "audienceCountries.DE": 0.884,
     "audienceCountries.AT": 0.07,
     "audienceCountries.CH": 0.024,
-    "audienceCountries.US": 0.003,
     "audienceCountries.SK": 0.003,
-    "audienceCountries.NL": 0.002,
-    "audienceCountries.IT": 0.002,
+    "audienceCountries.US": 0.003,
     "audienceCountries.FR": 0.002,
+    "audienceCountries.IT": 0.002,
     "audienceCountries.LU": 0.002,
+    "audienceCountries.NL": 0.002,
     "audienceCountries.SE": 0.002,
     "audienceCountries.other": 0.006,
     "retentionCurve.0": 1,
@@ -3626,8 +4230,8 @@
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 408.043,
-    "engagementRate": 4.64,
-    "lastUpdated": "2026-11-08T06:34:59Z"
+    "engagementRate": 4.5,
+    "lastUpdated": "2026-11-09T09:34:34Z"
    }
   },
   {
@@ -3659,7 +4263,7 @@
     "reposts": 0,
     "videoDurationSeconds": 50,
     "engagementRate": 0.32,
-    "lastUpdated": "2026-11-07T23:53:31Z"
+    "lastUpdated": "2026-11-09T02:50:08Z"
    }
   },
   {
@@ -3691,7 +4295,7 @@
     "reposts": 0,
     "videoDurationSeconds": 59,
     "engagementRate": 1.19,
-    "lastUpdated": "2026-11-07T20:33:33Z"
+    "lastUpdated": "2026-11-08T20:43:03Z"
    }
   },
   {
@@ -3723,7 +4327,7 @@
     "reposts": 0,
     "videoDurationSeconds": 47,
     "engagementRate": 0.39,
-    "lastUpdated": "2026-11-08T18:10:42Z"
+    "lastUpdated": "2026-11-09T19:40:46Z"
    }
   },
   {
@@ -3744,36 +4348,35 @@
     "shares": 1,
     "saves": 7,
     "clicks": 0,
-    "views": 920,
+    "views": 922,
     "follows": 3,
-    "igReelsAvgWatchTime": 36990,
-    "igReelsVideoViewTotalTime": 34955000,
+    "igReelsAvgWatchTime": 35590,
+    "igReelsVideoViewTotalTime": 33628000,
     "reelsSkipRate": 0,
     "completionRate": 0.036,
     "profileViews": 0,
     "websiteClicks": 0,
-    "impressionSources.directMessage": 0,
     "impressionSources.follow": 0,
     "impressionSources.forYou": 0.905,
     "impressionSources.other": 0.002,
     "impressionSources.personalProfile": 0.093,
     "impressionSources.search": 0,
     "impressionSources.sound": 0,
-    "audienceTypes.nonFollower": 0.96,
-    "audienceTypes.returnViewer": 0.28,
-    "audienceTypes.follower": 0.04,
+    "audienceTypes.follower": 0.03,
     "audienceTypes.newViewer": 0.72,
-    "audienceCountries.DE": 0.888,
-    "audienceCountries.AT": 0.041,
-    "audienceCountries.CH": 0.025,
+    "audienceTypes.nonFollower": 0.97,
+    "audienceTypes.returnViewer": 0.28,
+    "audienceCountries.DE": 0.854,
+    "audienceCountries.AT": 0.038,
+    "audienceCountries.CH": 0.023,
+    "audienceCountries.IN": 0.017,
+    "audienceCountries.GB": 0.013,
+    "audienceCountries.US": 0.011,
     "audienceCountries.TR": 0.004,
-    "audienceCountries.US": 0.004,
-    "audienceCountries.IT": 0.004,
     "audienceCountries.SK": 0.003,
-    "audienceCountries.HR": 0.003,
-    "audienceCountries.LU": 0.003,
-    "audienceCountries.HU": 0.003,
-    "audienceCountries.other": 0.022,
+    "audienceCountries.NL": 0.003,
+    "audienceCountries.BG": 0.002,
+    "audienceCountries.other": 0.032,
     "retentionCurve.0": 1,
     "retentionCurve.7": 0.38,
     "retentionCurve.14": 0.27,
@@ -3790,7 +4393,7 @@
     "retentionCurve.91": 0.09,
     "retentionCurve.98": 0.09,
     "retentionCurve.105": 0.09,
-    "retentionCurve.112": 0.08,
+    "retentionCurve.112": 0.09,
     "retentionCurve.119": 0.08,
     "retentionCurve.126": 0.08,
     "retentionCurve.133": 0.08,
@@ -3837,7 +4440,7 @@
     "reposts": 0,
     "videoDurationSeconds": 412.48,
     "engagementRate": 4.95,
-    "lastUpdated": "2026-11-08T18:10:45Z"
+    "lastUpdated": "2026-11-09T19:41:20Z"
    }
   },
   {
@@ -3869,7 +4472,7 @@
     "reposts": 0,
     "videoDurationSeconds": 51,
     "engagementRate": 0.57,
-    "lastUpdated": "2026-11-08T16:35:30Z"
+    "lastUpdated": "2026-11-09T19:40:46Z"
    }
   },
   {
@@ -3901,7 +4504,7 @@
     "reposts": 0,
     "videoDurationSeconds": 41,
     "engagementRate": 1.14,
-    "lastUpdated": "2026-11-08T13:14:36Z"
+    "lastUpdated": "2026-11-09T16:18:35Z"
    }
   },
   {
@@ -3933,7 +4536,7 @@
     "reposts": 0,
     "videoDurationSeconds": 51,
     "engagementRate": 1.87,
-    "lastUpdated": "2026-11-08T06:33:47Z"
+    "lastUpdated": "2026-11-09T09:34:28Z"
    }
   },
   {
@@ -3965,7 +4568,7 @@
     "reposts": 0,
     "videoDurationSeconds": 41,
     "engagementRate": 1.22,
-    "lastUpdated": "2026-11-08T03:13:37Z"
+    "lastUpdated": "2026-11-09T06:12:35Z"
    }
   },
   {
@@ -3997,7 +4600,7 @@
     "reposts": 0,
     "videoDurationSeconds": 39,
     "engagementRate": 0.77,
-    "lastUpdated": "2026-11-07T23:53:31Z"
+    "lastUpdated": "2026-11-09T02:50:08Z"
    }
   },
   {
@@ -4018,36 +4621,35 @@
     "shares": 1,
     "saves": 5,
     "clicks": 0,
-    "views": 993,
+    "views": 996,
     "follows": 3,
-    "igReelsAvgWatchTime": 26860,
-    "igReelsVideoViewTotalTime": 27374000,
+    "igReelsAvgWatchTime": 26170,
+    "igReelsVideoViewTotalTime": 26723000,
     "reelsSkipRate": 0,
-    "completionRate": 0.0334,
+    "completionRate": 0.0343,
     "profileViews": 0,
     "websiteClicks": 0,
-    "impressionSources.personalProfile": 0.11,
     "impressionSources.search": 0.015,
     "impressionSources.sound": 0,
-    "impressionSources.directMessage": 0,
     "impressionSources.follow": 0.001,
-    "impressionSources.forYou": 0.869,
+    "impressionSources.forYou": 0.867,
     "impressionSources.other": 0.005,
-    "audienceTypes.newViewer": 0.73,
-    "audienceTypes.nonFollower": 0.95,
-    "audienceTypes.returnViewer": 0.27,
-    "audienceTypes.follower": 0.05,
-    "audienceCountries.DE": 0.74,
-    "audienceCountries.AT": 0.057,
-    "audienceCountries.CH": 0.046,
-    "audienceCountries.GB": 0.029,
-    "audienceCountries.PL": 0.021,
+    "impressionSources.personalProfile": 0.112,
+    "audienceTypes.nonFollower": 0.96,
+    "audienceTypes.returnViewer": 0.28,
+    "audienceTypes.follower": 0.04,
+    "audienceTypes.newViewer": 0.72,
+    "audienceCountries.DE": 0.715,
+    "audienceCountries.AT": 0.053,
+    "audienceCountries.CH": 0.045,
+    "audienceCountries.GB": 0.032,
+    "audienceCountries.PL": 0.02,
+    "audienceCountries.IN": 0.017,
     "audienceCountries.SE": 0.016,
+    "audienceCountries.US": 0.01,
     "audienceCountries.NO": 0.008,
-    "audienceCountries.NL": 0.007,
-    "audienceCountries.IT": 0.007,
-    "audienceCountries.DK": 0.006,
-    "audienceCountries.other": 0.063,
+    "audienceCountries.HR": 0.008,
+    "audienceCountries.other": 0.076,
     "retentionCurve.0": 1,
     "retentionCurve.4": 0.39,
     "retentionCurve.8": 0.26,
@@ -4102,7 +4704,7 @@
     "reposts": 0,
     "videoDurationSeconds": 196.467,
     "engagementRate": 6.97,
-    "lastUpdated": "2026-11-08T18:10:45Z"
+    "lastUpdated": "2026-11-09T19:41:20Z"
    }
   },
   {
@@ -4134,7 +4736,7 @@
     "reposts": 0,
     "videoDurationSeconds": 40,
     "engagementRate": 1.51,
-    "lastUpdated": "2026-11-08T18:10:42Z"
+    "lastUpdated": "2026-11-09T19:40:46Z"
    }
   },
   {
@@ -4155,24 +4757,24 @@
     "shares": 0,
     "saves": 3,
     "clicks": 0,
-    "views": 919,
+    "views": 926,
     "follows": 1,
-    "igReelsAvgWatchTime": 26850,
-    "igReelsVideoViewTotalTime": 25453000,
+    "igReelsAvgWatchTime": 26820,
+    "igReelsVideoViewTotalTime": 25455000,
     "reelsSkipRate": 0,
     "completionRate": 0.0443,
     "profileViews": 0,
     "websiteClicks": 0,
-    "impressionSources.search": 0.001,
-    "impressionSources.sound": 0,
-    "impressionSources.follow": 0.003,
-    "impressionSources.forYou": 0.877,
     "impressionSources.other": 0.002,
     "impressionSources.personalProfile": 0.117,
-    "audienceTypes.follower": 0.04,
-    "audienceTypes.newViewer": 0.72,
+    "impressionSources.search": 0.002,
+    "impressionSources.sound": 0,
+    "impressionSources.follow": 0.003,
+    "impressionSources.forYou": 0.876,
     "audienceTypes.nonFollower": 0.96,
     "audienceTypes.returnViewer": 0.28,
+    "audienceTypes.follower": 0.04,
+    "audienceTypes.newViewer": 0.72,
     "audienceCountries.DE": 0.788,
     "audienceCountries.AT": 0.072,
     "audienceCountries.CH": 0.041,
@@ -4249,7 +4851,7 @@
     "reposts": 0,
     "videoDurationSeconds": 182.667,
     "engagementRate": 5.93,
-    "lastUpdated": "2026-11-08T16:37:38Z"
+    "lastUpdated": "2026-11-09T19:41:20Z"
    }
   },
   {
@@ -4281,7 +4883,7 @@
     "reposts": 0,
     "videoDurationSeconds": 49,
     "engagementRate": 0.8,
-    "lastUpdated": "2026-11-08T16:35:30Z"
+    "lastUpdated": "2026-11-09T19:40:46Z"
    }
   },
   {
@@ -4313,7 +4915,7 @@
     "reposts": 0,
     "videoDurationSeconds": 51,
     "engagementRate": 1.2,
-    "lastUpdated": "2026-11-08T09:54:07Z"
+    "lastUpdated": "2026-11-09T12:56:44Z"
    }
   },
   {
@@ -4345,7 +4947,7 @@
     "reposts": 0,
     "videoDurationSeconds": 44,
     "engagementRate": 1.31,
-    "lastUpdated": "2026-11-08T09:54:07Z"
+    "lastUpdated": "2026-11-09T12:56:44Z"
    }
   },
   {
@@ -4377,7 +4979,7 @@
     "reposts": 0,
     "videoDurationSeconds": 44,
     "engagementRate": 0.65,
-    "lastUpdated": "2026-11-08T06:33:47Z"
+    "lastUpdated": "2026-11-09T09:34:28Z"
    }
   },
   {
@@ -4398,7 +5000,7 @@
     "shares": 4,
     "saves": 8,
     "clicks": 0,
-    "views": 1122,
+    "views": 1128,
     "follows": 3,
     "igReelsAvgWatchTime": 29800,
     "igReelsVideoViewTotalTime": 34655000,
@@ -4412,10 +5014,10 @@
     "impressionSources.sound": 0,
     "impressionSources.follow": 0,
     "impressionSources.forYou": 0.846,
-    "audienceTypes.newViewer": 0.77,
     "audienceTypes.nonFollower": 0.97,
     "audienceTypes.returnViewer": 0.23,
     "audienceTypes.follower": 0.03,
+    "audienceTypes.newViewer": 0.77,
     "audienceCountries.DE": 0.785,
     "audienceCountries.AT": 0.073,
     "audienceCountries.CH": 0.036,
@@ -4478,7 +5080,7 @@
     "reposts": 0,
     "videoDurationSeconds": 187.798,
     "engagementRate": 7.95,
-    "lastUpdated": "2026-11-07T23:54:39Z"
+    "lastUpdated": "2026-11-09T02:50:20Z"
    }
   },
   {
@@ -4525,40 +5127,40 @@
    "sync": null,
    "analytics": {
     "impressions": 0,
-    "reach": 840,
+    "reach": 841,
     "likes": 46,
     "comments": 3,
     "shares": 0,
     "saves": 9,
     "clicks": 0,
-    "views": 1003,
+    "views": 1005,
     "follows": 3,
-    "igReelsAvgWatchTime": 30390,
-    "igReelsVideoViewTotalTime": 30728000,
+    "igReelsAvgWatchTime": 30400,
+    "igReelsVideoViewTotalTime": 30760000,
     "reelsSkipRate": 0,
     "completionRate": 0.0435,
     "profileViews": 0,
     "websiteClicks": 0,
-    "impressionSources.forYou": 0.857,
     "impressionSources.other": 0.005,
-    "impressionSources.personalProfile": 0.126,
+    "impressionSources.personalProfile": 0.125,
     "impressionSources.search": 0.012,
     "impressionSources.sound": 0,
     "impressionSources.follow": 0,
+    "impressionSources.forYou": 0.858,
+    "audienceTypes.follower": 0.03,
     "audienceTypes.newViewer": 0.76,
     "audienceTypes.nonFollower": 0.97,
     "audienceTypes.returnViewer": 0.24,
-    "audienceTypes.follower": 0.03,
     "audienceCountries.DE": 0.835,
     "audienceCountries.AT": 0.07,
     "audienceCountries.CH": 0.02,
     "audienceCountries.IN": 0.016,
     "audienceCountries.US": 0.014,
     "audienceCountries.PL": 0.012,
-    "audienceCountries.GB": 0.004,
     "audienceCountries.NL": 0.004,
-    "audienceCountries.LU": 0.003,
+    "audienceCountries.GB": 0.004,
     "audienceCountries.SE": 0.003,
+    "audienceCountries.LU": 0.003,
     "audienceCountries.other": 0.019,
     "retentionCurve.0": 1,
     "retentionCurve.4": 0.43,
@@ -4613,17 +5215,17 @@
     "reposts": 0,
     "videoDurationSeconds": 194.262,
     "engagementRate": 6.9,
-    "lastUpdated": "2026-11-08T18:10:45Z"
+    "lastUpdated": "2026-11-09T19:41:20Z"
    }
   },
   {
-   "id": "taeglich-yt-s01-f10-v2",
+   "id": "taeglich-yt-s02-f03-v2",
    "platform": "youtube",
    "serie": "taeglich",
-   "zeit": "2026-11-08T17:50:00",
-   "video": "taeglich/s01-f10.mp4",
-   "text": "Funkstille – Folge 10: Jeden Sonntag 📡 #shorts",
-   "url": "https://www.youtube.com/watch?v=bw7SXmE9fGM",
+   "zeit": "2026-11-09T20:29:00",
+   "video": "taeglich/s02-f03.mp4",
+   "text": "Der Hauptgewinn – Folge 3: Reich sein ist komisch 🎟️ #shorts",
+   "url": "https://www.youtube.com/watch?v=nvkuzxhlZv4",
    "typ": "video",
    "sync": null,
    "analytics": {
@@ -4644,9 +5246,481 @@
     "websiteClicks": 0,
     "replays": 0,
     "reposts": 0,
-    "videoDurationSeconds": 81,
+    "videoDurationSeconds": 75,
     "engagementRate": 0,
-    "lastUpdated": "2026-11-08T17:50:47Z"
+    "lastUpdated": "2026-11-09T20:17:43Z"
+   }
+  },
+  {
+   "id": "taeglich-yt-s02-f02-v2",
+   "platform": "youtube",
+   "serie": "taeglich",
+   "zeit": "2026-11-09T17:02:00",
+   "video": "taeglich/s02-f02.mp4",
+   "text": "Der Hauptgewinn – Folge 2: Niemand darf es wissen 🎟️ #shorts",
+   "url": "https://www.youtube.com/watch?v=v0A6he2Ho1I",
+   "typ": "video",
+   "sync": null,
+   "analytics": {
+    "impressions": 0,
+    "reach": 0,
+    "likes": 2,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "clicks": 0,
+    "views": 3,
+    "follows": 0,
+    "igReelsAvgWatchTime": 0,
+    "igReelsVideoViewTotalTime": 0,
+    "reelsSkipRate": 0,
+    "completionRate": 0,
+    "profileViews": 0,
+    "websiteClicks": 0,
+    "replays": 0,
+    "reposts": 0,
+    "videoDurationSeconds": 69,
+    "engagementRate": 66.67,
+    "lastUpdated": "2026-11-09T20:17:43Z"
+   }
+  },
+  {
+   "id": "taeglich-yt-s03-f04",
+   "platform": "youtube",
+   "serie": "taeglich",
+   "zeit": "2026-11-09T14:13:00",
+   "video": "taeglich/s03-f04.mp4",
+   "text": "Der Nachahmer – Folge 4: Leuchtturm 🌲 #shorts",
+   "url": "https://www.youtube.com/watch?v=_YTKOe4RDbs",
+   "typ": "video",
+   "sync": null,
+   "analytics": {
+    "impressions": 0,
+    "reach": 0,
+    "likes": 2,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "clicks": 0,
+    "views": 32,
+    "follows": 0,
+    "igReelsAvgWatchTime": 0,
+    "igReelsVideoViewTotalTime": 0,
+    "reelsSkipRate": 0,
+    "completionRate": 0,
+    "profileViews": 0,
+    "websiteClicks": 0,
+    "replays": 0,
+    "reposts": 0,
+    "videoDurationSeconds": 123,
+    "engagementRate": 6.25,
+    "lastUpdated": "2026-11-09T20:17:43Z"
+   }
+  },
+  {
+   "id": "taeglich-yt-s03-f03",
+   "platform": "youtube",
+   "serie": "taeglich",
+   "zeit": "2026-11-09T11:47:00",
+   "video": "taeglich/s03-f03.mp4",
+   "text": "Der Nachahmer – Folge 3: Benni 🌲 #shorts",
+   "url": "https://www.youtube.com/watch?v=fhh9A9_2Dz0",
+   "typ": "video",
+   "sync": null,
+   "analytics": {
+    "impressions": 0,
+    "reach": 0,
+    "likes": 8,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "clicks": 0,
+    "views": 207,
+    "follows": 0,
+    "igReelsAvgWatchTime": 0,
+    "igReelsVideoViewTotalTime": 0,
+    "reelsSkipRate": 0,
+    "completionRate": 0,
+    "profileViews": 0,
+    "websiteClicks": 0,
+    "replays": 0,
+    "reposts": 0,
+    "videoDurationSeconds": 123,
+    "engagementRate": 3.86,
+    "lastUpdated": "2026-11-09T20:17:43Z"
+   }
+  },
+  {
+   "id": "taeglich-yt-s03-f02",
+   "platform": "youtube",
+   "serie": "taeglich",
+   "zeit": "2026-11-09T08:16:00",
+   "video": "taeglich/s03-f02.mp4",
+   "text": "Der Nachahmer – Folge 2: Die Regeln 🌲 #shorts",
+   "url": "https://www.youtube.com/watch?v=BKAn5Ri3pGs",
+   "typ": "video",
+   "sync": null,
+   "analytics": {
+    "impressions": 0,
+    "reach": 0,
+    "likes": 2,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "clicks": 0,
+    "views": 9,
+    "follows": 0,
+    "igReelsAvgWatchTime": 0,
+    "igReelsVideoViewTotalTime": 0,
+    "reelsSkipRate": 0,
+    "completionRate": 0,
+    "profileViews": 0,
+    "websiteClicks": 0,
+    "replays": 0,
+    "reposts": 0,
+    "videoDurationSeconds": 130,
+    "engagementRate": 22.22,
+    "lastUpdated": "2026-11-09T20:17:43Z"
+   }
+  },
+  {
+   "id": "taeglich-tiktok-en-s01-teil-1-v2",
+   "platform": "tiktok",
+   "serie": "taeglich-en",
+   "zeit": "2026-11-09T00:40:00",
+   "video": "taeglich-tiktok-en/s01-teil-1.mp4",
+   "text": "Radio Silence – Part 1/4 (Episode 1–3) 📡 No Signal · The Wall of Notes · The Ni",
+   "url": "https://www.tiktok.com/@storys4you_eng/video/7705949849643994401?utm_campaign=tt4d_open_api&utm_source=7608030276714774544",
+   "typ": "video",
+   "sync": null,
+   "analytics": {
+    "impressions": 0,
+    "reach": 0,
+    "likes": 9,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "clicks": 0,
+    "views": 279,
+    "follows": 0,
+    "igReelsAvgWatchTime": 15880,
+    "igReelsVideoViewTotalTime": 4366000,
+    "reelsSkipRate": 0,
+    "completionRate": 0.0145,
+    "profileViews": 0,
+    "websiteClicks": 0,
+    "impressionSources.personalProfile": 0.007,
+    "impressionSources.search": 0,
+    "impressionSources.sound": 0,
+    "impressionSources.directMessage": 0,
+    "impressionSources.follow": 0,
+    "impressionSources.forYou": 0.993,
+    "impressionSources.other": 0,
+    "audienceTypes.follower": 0,
+    "audienceTypes.newViewer": 0,
+    "audienceTypes.nonFollower": 1,
+    "audienceTypes.returnViewer": 0,
+    "retentionCurve.0": 1,
+    "retentionCurve.4": 0.41,
+    "retentionCurve.8": 0.21,
+    "retentionCurve.12": 0.17,
+    "retentionCurve.16": 0.15,
+    "retentionCurve.20": 0.13,
+    "retentionCurve.24": 0.12,
+    "retentionCurve.28": 0.11,
+    "retentionCurve.32": 0.11,
+    "retentionCurve.36": 0.11,
+    "retentionCurve.40": 0.1,
+    "retentionCurve.44": 0.09,
+    "retentionCurve.48": 0.08,
+    "retentionCurve.52": 0.07,
+    "retentionCurve.56": 0.07,
+    "retentionCurve.60": 0.07,
+    "retentionCurve.64": 0.07,
+    "retentionCurve.68": 0.06,
+    "retentionCurve.72": 0.06,
+    "retentionCurve.76": 0.06,
+    "retentionCurve.80": 0.05,
+    "retentionCurve.84": 0.04,
+    "retentionCurve.88": 0.04,
+    "retentionCurve.92": 0.04,
+    "retentionCurve.96": 0.04,
+    "retentionCurve.100": 0.03,
+    "retentionCurve.104": 0.03,
+    "retentionCurve.108": 0.03,
+    "retentionCurve.112": 0.03,
+    "retentionCurve.116": 0.03,
+    "retentionCurve.120": 0.03,
+    "retentionCurve.124": 0.02,
+    "retentionCurve.128": 0.02,
+    "retentionCurve.132": 0.02,
+    "retentionCurve.136": 0.02,
+    "retentionCurve.140": 0.02,
+    "retentionCurve.144": 0.02,
+    "retentionCurve.148": 0.02,
+    "retentionCurve.152": 0.02,
+    "retentionCurve.156": 0.02,
+    "retentionCurve.160": 0.02,
+    "retentionCurve.164": 0.02,
+    "retentionCurve.168": 0.02,
+    "retentionCurve.172": 0.02,
+    "retentionCurve.176": 0.02,
+    "retentionCurve.180": 0.01,
+    "retentionCurve.184": 0.01,
+    "retentionCurve.188": 0.01,
+    "retentionCurve.192": 0.01,
+    "retentionCurve.196": 0.01,
+    "retentionCurve.200": 0.01,
+    "retentionCurve.204": 0.01,
+    "retentionCurve.208": 0.01,
+    "retentionCurve.212": 0.01,
+    "retentionCurve.216": 0.01,
+    "retentionCurve.220": 0.01,
+    "retentionCurve.224": 0.01,
+    "retentionCurve.228": 0.01,
+    "replays": 0,
+    "reposts": 0,
+    "videoDurationSeconds": 228.567,
+    "engagementRate": 3.23,
+    "lastUpdated": "2026-11-09T20:17:55Z"
+   }
+  },
+  {
+   "id": "taeglich-tiktok-en-s03-teil-4",
+   "platform": "tiktok",
+   "serie": "taeglich-en",
+   "zeit": "2026-11-08T20:28:00",
+   "video": "taeglich-tiktok-en/s03-teil-4.mp4",
+   "text": "The Mimic – Part 4/4 (Episode 4–4) 🌲 Lighthouse In this forest, there's somethi",
+   "url": "https://www.tiktok.com/@storys4you_eng/video/7705884923030195488?utm_campaign=tt4d_open_api&utm_source=7608030276714774544",
+   "typ": "video",
+   "sync": null,
+   "analytics": {
+    "impressions": 0,
+    "reach": 0,
+    "likes": 19,
+    "comments": 0,
+    "shares": 0,
+    "saves": 1,
+    "clicks": 0,
+    "views": 721,
+    "follows": 0,
+    "igReelsAvgWatchTime": 7520,
+    "igReelsVideoViewTotalTime": 5522000,
+    "reelsSkipRate": 0,
+    "completionRate": 0.0259,
+    "profileViews": 0,
+    "websiteClicks": 0,
+    "impressionSources.search": 0.007,
+    "impressionSources.sound": 0,
+    "impressionSources.directMessage": 0,
+    "impressionSources.follow": 0,
+    "impressionSources.forYou": 0.989,
+    "impressionSources.other": 0,
+    "impressionSources.personalProfile": 0.004,
+    "audienceTypes.returnViewer": 0,
+    "audienceTypes.follower": 0,
+    "audienceTypes.newViewer": 0,
+    "audienceTypes.nonFollower": 1,
+    "retentionCurve.0": 1,
+    "retentionCurve.3": 0.29,
+    "retentionCurve.6": 0.14,
+    "retentionCurve.9": 0.1,
+    "retentionCurve.12": 0.09,
+    "retentionCurve.15": 0.08,
+    "retentionCurve.18": 0.07,
+    "retentionCurve.21": 0.06,
+    "retentionCurve.24": 0.06,
+    "retentionCurve.27": 0.05,
+    "retentionCurve.30": 0.05,
+    "retentionCurve.33": 0.05,
+    "retentionCurve.36": 0.05,
+    "retentionCurve.39": 0.05,
+    "retentionCurve.42": 0.04,
+    "retentionCurve.45": 0.04,
+    "retentionCurve.48": 0.04,
+    "retentionCurve.51": 0.04,
+    "retentionCurve.54": 0.03,
+    "retentionCurve.57": 0.03,
+    "retentionCurve.60": 0.03,
+    "retentionCurve.63": 0.03,
+    "retentionCurve.66": 0.03,
+    "retentionCurve.69": 0.03,
+    "retentionCurve.72": 0.03,
+    "retentionCurve.75": 0.03,
+    "retentionCurve.78": 0.03,
+    "retentionCurve.81": 0.03,
+    "retentionCurve.84": 0.03,
+    "retentionCurve.87": 0.03,
+    "retentionCurve.90": 0.02,
+    "retentionCurve.93": 0.02,
+    "retentionCurve.96": 0.02,
+    "retentionCurve.99": 0.02,
+    "retentionCurve.102": 0.02,
+    "retentionCurve.105": 0.02,
+    "retentionCurve.108": 0.02,
+    "retentionCurve.111": 0.02,
+    "retentionCurve.114": 0.02,
+    "retentionCurve.117": 0.02,
+    "retentionCurve.120": 0.02,
+    "retentionCurve.123": 0.02,
+    "retentionCurve.126": 0.02,
+    "replays": 0,
+    "reposts": 0,
+    "videoDurationSeconds": 128.699,
+    "engagementRate": 2.77,
+    "lastUpdated": "2026-11-09T20:17:55Z"
+   }
+  },
+  {
+   "id": "taeglich-yt-s03-f01",
+   "platform": "youtube",
+   "serie": "taeglich",
+   "zeit": "2026-11-08T20:27:00",
+   "video": "taeglich/s03-f01.mp4",
+   "text": "Der Nachahmer – Folge 1: Klick 🌲 #shorts",
+   "url": "https://www.youtube.com/watch?v=htzR_6W5eWk",
+   "typ": "video",
+   "sync": null,
+   "analytics": {
+    "impressions": 0,
+    "reach": 0,
+    "likes": 1,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "clicks": 0,
+    "views": 8,
+    "follows": 0,
+    "igReelsAvgWatchTime": 0,
+    "igReelsVideoViewTotalTime": 0,
+    "reelsSkipRate": 0,
+    "completionRate": 0,
+    "profileViews": 0,
+    "websiteClicks": 0,
+    "replays": 0,
+    "reposts": 0,
+    "videoDurationSeconds": 131,
+    "engagementRate": 12.5,
+    "lastUpdated": "2026-11-09T20:17:43Z"
+   }
+  },
+  {
+   "id": "taeglich-yt-s01-f10-v2",
+   "platform": "youtube",
+   "serie": "taeglich",
+   "zeit": "2026-11-08T17:50:00",
+   "video": "taeglich/s01-f10.mp4",
+   "text": "Funkstille – Folge 10: Jeden Sonntag 📡 #shorts",
+   "url": "https://www.youtube.com/watch?v=bw7SXmE9fGM",
+   "typ": "video",
+   "sync": null,
+   "analytics": {
+    "impressions": 0,
+    "reach": 0,
+    "likes": 1,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "clicks": 0,
+    "views": 6,
+    "follows": 0,
+    "igReelsAvgWatchTime": 0,
+    "igReelsVideoViewTotalTime": 0,
+    "reelsSkipRate": 0,
+    "completionRate": 0,
+    "profileViews": 0,
+    "websiteClicks": 0,
+    "replays": 0,
+    "reposts": 0,
+    "videoDurationSeconds": 81,
+    "engagementRate": 16.67,
+    "lastUpdated": "2026-11-09T20:17:43Z"
+   }
+  },
+  {
+   "id": "taeglich-tiktok-en-s03-teil-3",
+   "platform": "tiktok",
+   "serie": "taeglich-en",
+   "zeit": "2026-11-08T16:16:00",
+   "video": "taeglich-tiktok-en/s03-teil-3.mp4",
+   "text": "The Mimic – Part 3/4 (Episode 3–3) 🌲 Benny In this forest, there's something th",
+   "url": "https://www.tiktok.com/@storys4you_eng/video/7705819962828393761?utm_campaign=tt4d_open_api&utm_source=7608030276714774544",
+   "typ": "video",
+   "sync": null,
+   "analytics": {
+    "impressions": 0,
+    "reach": 0,
+    "likes": 5,
+    "comments": 0,
+    "shares": 0,
+    "saves": 2,
+    "clicks": 0,
+    "views": 302,
+    "follows": 0,
+    "igReelsAvgWatchTime": 6640,
+    "igReelsVideoViewTotalTime": 2031000,
+    "reelsSkipRate": 0,
+    "completionRate": 0.0261,
+    "profileViews": 0,
+    "websiteClicks": 0,
+    "impressionSources.sound": 0,
+    "impressionSources.directMessage": 0,
+    "impressionSources.follow": 0,
+    "impressionSources.forYou": 0.993,
+    "impressionSources.other": 0,
+    "impressionSources.personalProfile": 0.007,
+    "impressionSources.search": 0,
+    "audienceTypes.newViewer": 0,
+    "audienceTypes.nonFollower": 1,
+    "audienceTypes.returnViewer": 0,
+    "audienceTypes.follower": 0,
+    "retentionCurve.0": 1,
+    "retentionCurve.3": 0.37,
+    "retentionCurve.6": 0.14,
+    "retentionCurve.9": 0.09,
+    "retentionCurve.12": 0.08,
+    "retentionCurve.15": 0.06,
+    "retentionCurve.18": 0.05,
+    "retentionCurve.21": 0.05,
+    "retentionCurve.24": 0.05,
+    "retentionCurve.27": 0.04,
+    "retentionCurve.30": 0.04,
+    "retentionCurve.33": 0.04,
+    "retentionCurve.36": 0.04,
+    "retentionCurve.39": 0.04,
+    "retentionCurve.42": 0.04,
+    "retentionCurve.45": 0.03,
+    "retentionCurve.48": 0.03,
+    "retentionCurve.51": 0.03,
+    "retentionCurve.54": 0.03,
+    "retentionCurve.57": 0.03,
+    "retentionCurve.60": 0.03,
+    "retentionCurve.63": 0.03,
+    "retentionCurve.66": 0.02,
+    "retentionCurve.69": 0.02,
+    "retentionCurve.72": 0.02,
+    "retentionCurve.75": 0.02,
+    "retentionCurve.78": 0.02,
+    "retentionCurve.81": 0.02,
+    "retentionCurve.84": 0.02,
+    "retentionCurve.87": 0.02,
+    "retentionCurve.90": 0.02,
+    "retentionCurve.93": 0.02,
+    "retentionCurve.96": 0.02,
+    "retentionCurve.99": 0.02,
+    "retentionCurve.102": 0.02,
+    "retentionCurve.105": 0.02,
+    "retentionCurve.108": 0.02,
+    "retentionCurve.111": 0.02,
+    "retentionCurve.114": 0.02,
+    "retentionCurve.117": 0.02,
+    "retentionCurve.120": 0.02,
+    "replays": 0,
+    "reposts": 0,
+    "videoDurationSeconds": 122.582,
+    "engagementRate": 2.32,
+    "lastUpdated": "2026-11-09T20:17:55Z"
    }
   },
   {
@@ -4662,12 +5736,12 @@
    "analytics": {
     "impressions": 0,
     "reach": 0,
-    "likes": 1,
+    "likes": 2,
     "comments": 0,
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 11,
+    "views": 23,
     "follows": 0,
     "igReelsAvgWatchTime": 0,
     "igReelsVideoViewTotalTime": 0,
@@ -4678,8 +5752,8 @@
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 78,
-    "engagementRate": 9.09,
-    "lastUpdated": "2026-11-08T17:50:47Z"
+    "engagementRate": 8.7,
+    "lastUpdated": "2026-11-09T20:17:43Z"
    }
   },
   {
@@ -4695,78 +5769,78 @@
    "analytics": {
     "impressions": 0,
     "reach": 0,
-    "likes": 0,
+    "likes": 12,
     "comments": 0,
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 33,
+    "views": 744,
     "follows": 0,
-    "igReelsAvgWatchTime": 2820,
-    "igReelsVideoViewTotalTime": 70000,
+    "igReelsAvgWatchTime": 5830,
+    "igReelsVideoViewTotalTime": 4428000,
     "reelsSkipRate": 0,
-    "completionRate": 0,
+    "completionRate": 0.0158,
     "profileViews": 0,
     "websiteClicks": 0,
-    "impressionSources.forYou": 1,
-    "impressionSources.other": 0,
-    "impressionSources.personalProfile": 0,
-    "impressionSources.search": 0,
+    "impressionSources.search": 0.007,
     "impressionSources.sound": 0,
     "impressionSources.directMessage": 0,
     "impressionSources.follow": 0,
-    "audienceTypes.follower": 0,
-    "audienceTypes.newViewer": 0,
+    "impressionSources.forYou": 0.988,
+    "impressionSources.other": 0.001,
+    "impressionSources.personalProfile": 0.004,
     "audienceTypes.nonFollower": 1,
     "audienceTypes.returnViewer": 0,
+    "audienceTypes.follower": 0,
+    "audienceTypes.newViewer": 0,
     "retentionCurve.0": 1,
-    "retentionCurve.3": 0.08,
-    "retentionCurve.6": 0.08,
-    "retentionCurve.9": 0.08,
-    "retentionCurve.12": 0.08,
-    "retentionCurve.15": 0.04,
-    "retentionCurve.18": 0.04,
+    "retentionCurve.3": 0.19,
+    "retentionCurve.6": 0.1,
+    "retentionCurve.9": 0.07,
+    "retentionCurve.12": 0.06,
+    "retentionCurve.15": 0.05,
+    "retentionCurve.18": 0.05,
     "retentionCurve.21": 0.04,
     "retentionCurve.24": 0.04,
     "retentionCurve.27": 0.04,
-    "retentionCurve.30": 0,
-    "retentionCurve.33": 0,
-    "retentionCurve.36": 0,
-    "retentionCurve.39": 0,
-    "retentionCurve.42": 0,
-    "retentionCurve.45": 0,
-    "retentionCurve.48": 0,
-    "retentionCurve.51": 0,
-    "retentionCurve.54": 0,
-    "retentionCurve.57": 0,
-    "retentionCurve.60": 0,
-    "retentionCurve.63": 0,
-    "retentionCurve.66": 0,
-    "retentionCurve.69": 0,
-    "retentionCurve.72": 0,
-    "retentionCurve.75": 0,
-    "retentionCurve.78": 0,
-    "retentionCurve.81": 0,
-    "retentionCurve.84": 0,
-    "retentionCurve.87": 0,
-    "retentionCurve.90": 0,
-    "retentionCurve.93": 0,
-    "retentionCurve.96": 0,
-    "retentionCurve.99": 0,
-    "retentionCurve.102": 0,
-    "retentionCurve.105": 0,
-    "retentionCurve.108": 0,
-    "retentionCurve.111": 0,
-    "retentionCurve.114": 0,
-    "retentionCurve.117": 0,
-    "retentionCurve.120": 0,
-    "retentionCurve.123": 0,
-    "retentionCurve.126": 0,
+    "retentionCurve.30": 0.04,
+    "retentionCurve.33": 0.04,
+    "retentionCurve.36": 0.04,
+    "retentionCurve.39": 0.04,
+    "retentionCurve.42": 0.03,
+    "retentionCurve.45": 0.03,
+    "retentionCurve.48": 0.03,
+    "retentionCurve.51": 0.03,
+    "retentionCurve.54": 0.03,
+    "retentionCurve.57": 0.03,
+    "retentionCurve.60": 0.03,
+    "retentionCurve.63": 0.03,
+    "retentionCurve.66": 0.03,
+    "retentionCurve.69": 0.02,
+    "retentionCurve.72": 0.02,
+    "retentionCurve.75": 0.02,
+    "retentionCurve.78": 0.02,
+    "retentionCurve.81": 0.02,
+    "retentionCurve.84": 0.02,
+    "retentionCurve.87": 0.02,
+    "retentionCurve.90": 0.02,
+    "retentionCurve.93": 0.02,
+    "retentionCurve.96": 0.02,
+    "retentionCurve.99": 0.02,
+    "retentionCurve.102": 0.01,
+    "retentionCurve.105": 0.01,
+    "retentionCurve.108": 0.01,
+    "retentionCurve.111": 0.01,
+    "retentionCurve.114": 0.01,
+    "retentionCurve.117": 0.01,
+    "retentionCurve.120": 0.01,
+    "retentionCurve.123": 0.01,
+    "retentionCurve.126": 0.01,
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 127.867,
-    "engagementRate": 0,
-    "lastUpdated": "2026-11-08T11:59:46Z"
+    "engagementRate": 1.61,
+    "lastUpdated": "2026-11-09T20:17:55Z"
    }
   },
   {
@@ -4787,7 +5861,7 @@
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 12,
+    "views": 20,
     "follows": 0,
     "igReelsAvgWatchTime": 0,
     "igReelsVideoViewTotalTime": 0,
@@ -4798,8 +5872,8 @@
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 80,
-    "engagementRate": 16.67,
-    "lastUpdated": "2026-11-08T17:50:47Z"
+    "engagementRate": 10,
+    "lastUpdated": "2026-11-09T20:17:43Z"
    }
   },
   {
@@ -4820,7 +5894,7 @@
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 79,
+    "views": 94,
     "follows": 0,
     "igReelsAvgWatchTime": 0,
     "igReelsVideoViewTotalTime": 0,
@@ -4831,8 +5905,8 @@
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 81,
-    "engagementRate": 2.53,
-    "lastUpdated": "2026-11-08T17:50:47Z"
+    "engagementRate": 2.13,
+    "lastUpdated": "2026-11-09T20:17:43Z"
    }
   },
   {
@@ -4848,40 +5922,40 @@
    "analytics": {
     "impressions": 0,
     "reach": 0,
-    "likes": 2,
+    "likes": 5,
     "comments": 0,
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 273,
+    "views": 783,
     "follows": 0,
-    "igReelsAvgWatchTime": 4570,
-    "igReelsVideoViewTotalTime": 1219000,
+    "igReelsAvgWatchTime": 5130,
+    "igReelsVideoViewTotalTime": 4064000,
     "reelsSkipRate": 0,
-    "completionRate": 0.0037,
+    "completionRate": 0.0063,
     "profileViews": 0,
     "websiteClicks": 0,
-    "impressionSources.other": 0,
-    "impressionSources.personalProfile": 0,
-    "impressionSources.search": 0,
     "impressionSources.sound": 0,
     "impressionSources.directMessage": 0,
     "impressionSources.follow": 0,
-    "impressionSources.forYou": 1,
+    "impressionSources.forYou": 0.986,
+    "impressionSources.other": 0,
+    "impressionSources.personalProfile": 0.005,
+    "impressionSources.search": 0.009,
     "audienceTypes.returnViewer": 0,
     "audienceTypes.follower": 0,
     "audienceTypes.newViewer": 0,
     "audienceTypes.nonFollower": 1,
     "retentionCurve.0": 1,
     "retentionCurve.3": 0.23,
-    "retentionCurve.6": 0.1,
-    "retentionCurve.9": 0.06,
+    "retentionCurve.6": 0.11,
+    "retentionCurve.9": 0.07,
     "retentionCurve.12": 0.05,
-    "retentionCurve.15": 0.04,
-    "retentionCurve.18": 0.04,
+    "retentionCurve.15": 0.05,
+    "retentionCurve.18": 0.05,
     "retentionCurve.21": 0.04,
     "retentionCurve.24": 0.04,
-    "retentionCurve.27": 0.03,
+    "retentionCurve.27": 0.04,
     "retentionCurve.30": 0.03,
     "retentionCurve.33": 0.03,
     "retentionCurve.36": 0.03,
@@ -4889,11 +5963,11 @@
     "retentionCurve.42": 0.03,
     "retentionCurve.45": 0.02,
     "retentionCurve.48": 0.02,
-    "retentionCurve.51": 0.01,
-    "retentionCurve.54": 0.01,
-    "retentionCurve.57": 0.01,
-    "retentionCurve.60": 0.01,
-    "retentionCurve.63": 0.01,
+    "retentionCurve.51": 0.02,
+    "retentionCurve.54": 0.02,
+    "retentionCurve.57": 0.02,
+    "retentionCurve.60": 0.02,
+    "retentionCurve.63": 0.02,
     "retentionCurve.66": 0.01,
     "retentionCurve.69": 0.01,
     "retentionCurve.72": 0.01,
@@ -4922,8 +5996,8 @@
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 139.969,
-    "engagementRate": 0.73,
-    "lastUpdated": "2026-11-08T11:59:46Z"
+    "engagementRate": 0.64,
+    "lastUpdated": "2026-11-09T20:17:55Z"
    }
   },
   {
@@ -4939,58 +6013,58 @@
    "analytics": {
     "impressions": 0,
     "reach": 0,
-    "likes": 0,
+    "likes": 8,
     "comments": 0,
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 255,
+    "views": 691,
     "follows": 0,
-    "igReelsAvgWatchTime": 8140,
-    "igReelsVideoViewTotalTime": 1995000,
+    "igReelsAvgWatchTime": 7870,
+    "igReelsVideoViewTotalTime": 5543000,
     "reelsSkipRate": 0,
-    "completionRate": 0.0449,
+    "completionRate": 0.0369,
     "profileViews": 0,
     "websiteClicks": 0,
-    "impressionSources.directMessage": 0,
-    "impressionSources.follow": 0,
-    "impressionSources.forYou": 0.992,
-    "impressionSources.other": 0,
-    "impressionSources.personalProfile": 0.008,
+    "impressionSources.personalProfile": 0.004,
     "impressionSources.search": 0,
     "impressionSources.sound": 0,
+    "impressionSources.directMessage": 0,
+    "impressionSources.follow": 0,
+    "impressionSources.forYou": 0.996,
+    "impressionSources.other": 0,
+    "audienceTypes.returnViewer": 0,
     "audienceTypes.follower": 0,
     "audienceTypes.newViewer": 0,
     "audienceTypes.nonFollower": 1,
-    "audienceTypes.returnViewer": 0,
     "retentionCurve.0": 1,
-    "retentionCurve.2": 0.61,
-    "retentionCurve.4": 0.36,
-    "retentionCurve.6": 0.28,
-    "retentionCurve.8": 0.21,
-    "retentionCurve.10": 0.15,
-    "retentionCurve.12": 0.12,
-    "retentionCurve.14": 0.1,
+    "retentionCurve.2": 0.58,
+    "retentionCurve.4": 0.37,
+    "retentionCurve.6": 0.29,
+    "retentionCurve.8": 0.22,
+    "retentionCurve.10": 0.16,
+    "retentionCurve.12": 0.11,
+    "retentionCurve.14": 0.09,
     "retentionCurve.16": 0.08,
     "retentionCurve.18": 0.08,
-    "retentionCurve.20": 0.08,
-    "retentionCurve.22": 0.08,
-    "retentionCurve.24": 0.08,
-    "retentionCurve.26": 0.07,
-    "retentionCurve.28": 0.07,
+    "retentionCurve.20": 0.07,
+    "retentionCurve.22": 0.07,
+    "retentionCurve.24": 0.07,
+    "retentionCurve.26": 0.06,
+    "retentionCurve.28": 0.06,
     "retentionCurve.30": 0.06,
-    "retentionCurve.32": 0.06,
-    "retentionCurve.34": 0.06,
+    "retentionCurve.32": 0.05,
+    "retentionCurve.34": 0.05,
     "retentionCurve.36": 0.05,
     "retentionCurve.38": 0.05,
-    "retentionCurve.40": 0.05,
+    "retentionCurve.40": 0.04,
     "retentionCurve.42": 0.04,
     "retentionCurve.44": 0.04,
     "retentionCurve.46": 0.04,
-    "retentionCurve.48": 0.04,
-    "retentionCurve.50": 0.04,
-    "retentionCurve.52": 0.04,
-    "retentionCurve.54": 0.04,
+    "retentionCurve.48": 0.03,
+    "retentionCurve.50": 0.03,
+    "retentionCurve.52": 0.03,
+    "retentionCurve.54": 0.03,
     "retentionCurve.56": 0.03,
     "retentionCurve.58": 0.03,
     "retentionCurve.60": 0.03,
@@ -4999,12 +6073,12 @@
     "retentionCurve.66": 0.03,
     "retentionCurve.68": 0.03,
     "retentionCurve.70": 0.03,
-    "retentionCurve.72": 0.03,
+    "retentionCurve.72": 0.02,
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 72.034,
-    "engagementRate": 0,
-    "lastUpdated": "2026-11-08T11:59:46Z"
+    "engagementRate": 1.16,
+    "lastUpdated": "2026-11-09T20:17:55Z"
    }
   },
   {
@@ -5037,7 +6111,7 @@
     "reposts": 0,
     "videoDurationSeconds": 84,
     "engagementRate": 25,
-    "lastUpdated": "2026-11-08T17:50:47Z"
+    "lastUpdated": "2026-11-09T20:17:43Z"
    }
   },
   {
@@ -5052,48 +6126,59 @@
    "sync": null,
    "analytics": {
     "impressions": 0,
-    "reach": 0,
-    "likes": 16,
+    "reach": 248,
+    "likes": 17,
     "comments": 0,
     "shares": 0,
     "saves": 1,
     "clicks": 0,
-    "views": 688,
+    "views": 762,
     "follows": 0,
-    "igReelsAvgWatchTime": 11420,
-    "igReelsVideoViewTotalTime": 7960000,
+    "igReelsAvgWatchTime": 11360,
+    "igReelsVideoViewTotalTime": 8874000,
     "reelsSkipRate": 0,
-    "completionRate": 0.0588,
+    "completionRate": 0.0576,
     "profileViews": 0,
     "websiteClicks": 0,
-    "impressionSources.personalProfile": 0.004,
+    "impressionSources.follow": 0,
+    "impressionSources.forYou": 0.995,
+    "impressionSources.other": 0,
+    "impressionSources.personalProfile": 0.005,
     "impressionSources.search": 0,
     "impressionSources.sound": 0,
     "impressionSources.directMessage": 0,
-    "impressionSources.follow": 0,
-    "impressionSources.forYou": 0.996,
-    "impressionSources.other": 0,
-    "audienceTypes.newViewer": 0,
     "audienceTypes.nonFollower": 1,
-    "audienceTypes.returnViewer": 0,
+    "audienceTypes.returnViewer": 0.39,
     "audienceTypes.follower": 0,
+    "audienceTypes.newViewer": 0.61,
+    "audienceCountries.DE": 0.68,
+    "audienceCountries.AT": 0.156,
+    "audienceCountries.CH": 0.086,
+    "audienceCountries.GB": 0.019,
+    "audienceCountries.IT": 0.012,
+    "audienceCountries.BR": 0.01,
+    "audienceCountries.ES": 0.008,
+    "audienceCountries.BE": 0.006,
+    "audienceCountries.CZ": 0.006,
+    "audienceCountries.FR": 0.003,
+    "audienceCountries.other": 0.014,
     "retentionCurve.0": 1,
     "retentionCurve.2": 0.66,
-    "retentionCurve.4": 0.51,
-    "retentionCurve.6": 0.42,
+    "retentionCurve.4": 0.52,
+    "retentionCurve.6": 0.43,
     "retentionCurve.8": 0.32,
     "retentionCurve.10": 0.26,
     "retentionCurve.12": 0.21,
-    "retentionCurve.14": 0.19,
-    "retentionCurve.16": 0.17,
+    "retentionCurve.14": 0.2,
+    "retentionCurve.16": 0.18,
     "retentionCurve.18": 0.15,
-    "retentionCurve.20": 0.13,
+    "retentionCurve.20": 0.14,
     "retentionCurve.22": 0.13,
     "retentionCurve.24": 0.12,
     "retentionCurve.26": 0.11,
     "retentionCurve.28": 0.1,
     "retentionCurve.30": 0.08,
-    "retentionCurve.32": 0.07,
+    "retentionCurve.32": 0.08,
     "retentionCurve.34": 0.07,
     "retentionCurve.36": 0.07,
     "retentionCurve.38": 0.06,
@@ -5104,18 +6189,18 @@
     "retentionCurve.48": 0.05,
     "retentionCurve.50": 0.05,
     "retentionCurve.52": 0.05,
-    "retentionCurve.54": 0.05,
+    "retentionCurve.54": 0.04,
     "retentionCurve.56": 0.04,
     "retentionCurve.58": 0.04,
     "retentionCurve.60": 0.04,
     "retentionCurve.62": 0.04,
     "retentionCurve.64": 0.04,
-    "retentionCurve.66": 0.04,
+    "retentionCurve.66": 0.03,
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 67.969,
-    "engagementRate": 2.47,
-    "lastUpdated": "2026-11-08T11:59:46Z"
+    "engagementRate": 7.26,
+    "lastUpdated": "2026-11-09T20:17:55Z"
    }
   },
   {
@@ -5136,7 +6221,7 @@
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 6,
+    "views": 4,
     "follows": 0,
     "igReelsAvgWatchTime": 0,
     "igReelsVideoViewTotalTime": 0,
@@ -5147,8 +6232,8 @@
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 75,
-    "engagementRate": 16.67,
-    "lastUpdated": "2026-11-08T17:50:47Z"
+    "engagementRate": 25,
+    "lastUpdated": "2026-11-09T20:17:43Z"
    }
   },
   {
@@ -5163,51 +6248,62 @@
    "sync": null,
    "analytics": {
     "impressions": 0,
-    "reach": 0,
-    "likes": 7,
+    "reach": 320,
+    "likes": 12,
     "comments": 0,
     "shares": 0,
     "saves": 1,
     "clicks": 0,
-    "views": 561,
+    "views": 729,
     "follows": 0,
-    "igReelsAvgWatchTime": 11100,
-    "igReelsVideoViewTotalTime": 6247000,
+    "igReelsAvgWatchTime": 11660,
+    "igReelsVideoViewTotalTime": 8660000,
     "reelsSkipRate": 0,
-    "completionRate": 0.0497,
+    "completionRate": 0.0552,
     "profileViews": 0,
     "websiteClicks": 0,
+    "impressionSources.forYou": 0.992,
+    "impressionSources.other": 0.001,
+    "impressionSources.personalProfile": 0.007,
     "impressionSources.search": 0,
     "impressionSources.sound": 0,
     "impressionSources.directMessage": 0,
     "impressionSources.follow": 0,
-    "impressionSources.forYou": 0.995,
-    "impressionSources.other": 0,
-    "impressionSources.personalProfile": 0.005,
-    "audienceTypes.returnViewer": 0,
-    "audienceTypes.follower": 0,
-    "audienceTypes.newViewer": 0,
+    "audienceTypes.newViewer": 0.71,
     "audienceTypes.nonFollower": 1,
+    "audienceTypes.returnViewer": 0.29,
+    "audienceTypes.follower": 0,
+    "audienceCountries.DE": 0.66,
+    "audienceCountries.AT": 0.151,
+    "audienceCountries.CH": 0.07,
+    "audienceCountries.GB": 0.03,
+    "audienceCountries.IT": 0.013,
+    "audienceCountries.BR": 0.012,
+    "audienceCountries.US": 0.009,
+    "audienceCountries.PL": 0.007,
+    "audienceCountries.ES": 0.007,
+    "audienceCountries.BE": 0.005,
+    "audienceCountries.other": 0.036,
     "retentionCurve.0": 1,
     "retentionCurve.2": 0.55,
-    "retentionCurve.4": 0.37,
-    "retentionCurve.6": 0.3,
-    "retentionCurve.8": 0.24,
-    "retentionCurve.10": 0.21,
-    "retentionCurve.12": 0.19,
-    "retentionCurve.14": 0.18,
-    "retentionCurve.16": 0.17,
-    "retentionCurve.18": 0.15,
-    "retentionCurve.20": 0.14,
-    "retentionCurve.22": 0.13,
-    "retentionCurve.24": 0.12,
+    "retentionCurve.4": 0.39,
+    "retentionCurve.6": 0.32,
+    "retentionCurve.8": 0.26,
+    "retentionCurve.10": 0.23,
+    "retentionCurve.12": 0.21,
+    "retentionCurve.14": 0.2,
+    "retentionCurve.16": 0.18,
+    "retentionCurve.18": 0.17,
+    "retentionCurve.20": 0.15,
+    "retentionCurve.22": 0.15,
+    "retentionCurve.24": 0.13,
     "retentionCurve.26": 0.12,
-    "retentionCurve.28": 0.1,
-    "retentionCurve.30": 0.1,
+    "retentionCurve.28": 0.11,
+    "retentionCurve.30": 0.11,
     "retentionCurve.32": 0.1,
     "retentionCurve.34": 0.1,
     "retentionCurve.36": 0.1,
-    "retentionCurve.38": 0.09,
+    "retentionCurve.38": 0.1,
     "retentionCurve.40": 0.09,
     "retentionCurve.42": 0.09,
     "retentionCurve.44": 0.09,
@@ -5216,10 +6312,10 @@
     "retentionCurve.50": 0.07,
     "retentionCurve.52": 0.07,
     "retentionCurve.54": 0.07,
-    "retentionCurve.56": 0.06,
-    "retentionCurve.58": 0.06,
+    "retentionCurve.56": 0.07,
+    "retentionCurve.58": 0.07,
     "retentionCurve.60": 0.06,
-    "retentionCurve.62": 0.05,
+    "retentionCurve.62": 0.06,
     "retentionCurve.64": 0.05,
     "retentionCurve.66": 0.05,
     "retentionCurve.68": 0.04,
@@ -5227,8 +6323,8 @@
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 71.638,
-    "engagementRate": 1.43,
-    "lastUpdated": "2026-11-08T11:59:46Z"
+    "engagementRate": 4.06,
+    "lastUpdated": "2026-11-09T20:17:55Z"
    }
   },
   {
@@ -5249,7 +6345,7 @@
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 45,
+    "views": 48,
     "follows": 0,
     "igReelsAvgWatchTime": 0,
     "igReelsVideoViewTotalTime": 0,
@@ -5260,8 +6356,8 @@
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 73,
-    "engagementRate": 4.44,
-    "lastUpdated": "2026-11-08T17:50:47Z"
+    "engagementRate": 4.17,
+    "lastUpdated": "2026-11-09T20:17:43Z"
    }
   },
   {
@@ -5276,31 +6372,42 @@
    "sync": null,
    "analytics": {
     "impressions": 0,
-    "reach": 0,
+    "reach": 442,
     "likes": 3,
     "comments": 0,
     "shares": 0,
-    "saves": 2,
+    "saves": 1,
     "clicks": 0,
-    "views": 662,
+    "views": 734,
     "follows": 0,
-    "igReelsAvgWatchTime": 7860,
-    "igReelsVideoViewTotalTime": 5338000,
+    "igReelsAvgWatchTime": 7740,
+    "igReelsVideoViewTotalTime": 5830000,
     "reelsSkipRate": 0,
-    "completionRate": 0.0309,
+    "completionRate": 0.0305,
     "profileViews": 0,
     "websiteClicks": 0,
-    "impressionSources.forYou": 0.992,
-    "impressionSources.other": 0,
-    "impressionSources.personalProfile": 0.007,
-    "impressionSources.search": 0.001,
-    "impressionSources.sound": 0,
     "impressionSources.directMessage": 0,
     "impressionSources.follow": 0,
-    "audienceTypes.returnViewer": 0,
+    "impressionSources.forYou": 0.986,
+    "impressionSources.other": 0.005,
+    "impressionSources.personalProfile": 0.008,
+    "impressionSources.search": 0.001,
+    "impressionSources.sound": 0,
     "audienceTypes.follower": 0,
-    "audienceTypes.newViewer": 0,
+    "audienceTypes.newViewer": 0.64,
     "audienceTypes.nonFollower": 1,
+    "audienceTypes.returnViewer": 0.36,
+    "audienceCountries.DE": 0.697,
+    "audienceCountries.AT": 0.165,
+    "audienceCountries.CH": 0.082,
+    "audienceCountries.BR": 0.008,
+    "audienceCountries.LU": 0.007,
+    "audienceCountries.ES": 0.005,
+    "audienceCountries.IT": 0.005,
+    "audienceCountries.GB": 0.004,
+    "audienceCountries.US": 0.004,
+    "audienceCountries.BE": 0.003,
+    "audienceCountries.other": 0.02,
     "retentionCurve.0": 1,
     "retentionCurve.2": 0.56,
     "retentionCurve.4": 0.41,
@@ -5309,11 +6416,11 @@
     "retentionCurve.10": 0.17,
     "retentionCurve.12": 0.14,
     "retentionCurve.14": 0.12,
-    "retentionCurve.16": 0.1,
-    "retentionCurve.18": 0.09,
-    "retentionCurve.20": 0.09,
-    "retentionCurve.22": 0.08,
-    "retentionCurve.24": 0.07,
+    "retentionCurve.16": 0.09,
+    "retentionCurve.18": 0.08,
+    "retentionCurve.20": 0.08,
+    "retentionCurve.22": 0.07,
+    "retentionCurve.24": 0.06,
     "retentionCurve.26": 0.06,
     "retentionCurve.28": 0.06,
     "retentionCurve.30": 0.06,
@@ -5340,8 +6447,8 @@
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 70.145,
-    "engagementRate": 0.76,
-    "lastUpdated": "2026-11-08T11:59:46Z"
+    "engagementRate": 0.9,
+    "lastUpdated": "2026-11-09T20:17:55Z"
    }
   },
   {
@@ -5362,7 +6469,7 @@
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 21,
+    "views": 31,
     "follows": 0,
     "igReelsAvgWatchTime": 0,
     "igReelsVideoViewTotalTime": 0,
@@ -5373,8 +6480,8 @@
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 82,
-    "engagementRate": 9.52,
-    "lastUpdated": "2026-11-08T17:50:47Z"
+    "engagementRate": 6.45,
+    "lastUpdated": "2026-11-09T20:17:43Z"
    }
   },
   {
@@ -5395,7 +6502,7 @@
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 61,
+    "views": 64,
     "follows": 0,
     "igReelsAvgWatchTime": 0,
     "igReelsVideoViewTotalTime": 0,
@@ -5406,8 +6513,8 @@
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 80,
-    "engagementRate": 1.64,
-    "lastUpdated": "2026-11-08T17:50:47Z"
+    "engagementRate": 1.56,
+    "lastUpdated": "2026-11-09T20:17:43Z"
    }
   },
   {
@@ -5422,7 +6529,7 @@
    "sync": null,
    "analytics": {
     "impressions": 0,
-    "reach": 0,
+    "reach": 685,
     "likes": 7,
     "comments": 0,
     "shares": 0,
@@ -5444,9 +6551,20 @@
     "impressionSources.follow": 0,
     "impressionSources.forYou": 0.991,
     "audienceTypes.follower": 0,
-    "audienceTypes.newViewer": 0,
+    "audienceTypes.newViewer": 0.64,
     "audienceTypes.nonFollower": 1,
-    "audienceTypes.returnViewer": 0,
+    "audienceTypes.returnViewer": 0.36,
+    "audienceCountries.DE": 0.623,
+    "audienceCountries.AT": 0.228,
+    "audienceCountries.CH": 0.093,
+    "audienceCountries.IT": 0.011,
+    "audienceCountries.US": 0.009,
+    "audienceCountries.BR": 0.008,
+    "audienceCountries.ES": 0.005,
+    "audienceCountries.BE": 0.004,
+    "audienceCountries.LU": 0.004,
+    "audienceCountries.CZ": 0.004,
+    "audienceCountries.other": 0.011,
     "retentionCurve.0": 1,
     "retentionCurve.2": 0.65,
     "retentionCurve.4": 0.41,
@@ -5487,8 +6605,8 @@
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 73.767,
-    "engagementRate": 0.96,
-    "lastUpdated": "2026-11-08T11:59:46Z"
+    "engagementRate": 1.02,
+    "lastUpdated": "2026-11-09T20:17:55Z"
    }
   },
   {
@@ -5503,7 +6621,7 @@
    "sync": null,
    "analytics": {
     "impressions": 0,
-    "reach": 234,
+    "reach": 245,
     "likes": 2,
     "comments": 0,
     "shares": 0,
@@ -5517,27 +6635,27 @@
     "completionRate": 0.1037,
     "profileViews": 0,
     "websiteClicks": 0,
+    "impressionSources.sound": 0,
     "impressionSources.directMessage": 0,
     "impressionSources.follow": 0,
     "impressionSources.forYou": 0.959,
     "impressionSources.other": 0,
     "impressionSources.personalProfile": 0.037,
     "impressionSources.search": 0.004,
-    "impressionSources.sound": 0,
-    "audienceTypes.follower": 0,
-    "audienceTypes.newViewer": 0.99,
     "audienceTypes.nonFollower": 1,
-    "audienceTypes.returnViewer": 0.01,
+    "audienceTypes.returnViewer": 0.02,
+    "audienceTypes.follower": 0,
+    "audienceTypes.newViewer": 0.98,
     "audienceCountries.DE": 0.517,
     "audienceCountries.AT": 0.211,
     "audienceCountries.CH": 0.1,
     "audienceCountries.NO": 0.022,
     "audienceCountries.GB": 0.022,
-    "audienceCountries.NL": 0.011,
-    "audienceCountries.RO": 0.011,
     "audienceCountries.IT": 0.011,
-    "audienceCountries.DK": 0.007,
+    "audienceCountries.RO": 0.011,
+    "audienceCountries.NL": 0.011,
     "audienceCountries.LU": 0.007,
+    "audienceCountries.DK": 0.007,
     "audienceCountries.other": 0.081,
     "retentionCurve.0": 1,
     "retentionCurve.2": 0.57,
@@ -5578,8 +6696,8 @@
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 70.767,
-    "engagementRate": 0.85,
-    "lastUpdated": "2026-11-08T11:59:46Z"
+    "engagementRate": 0.82,
+    "lastUpdated": "2026-11-09T20:17:55Z"
    }
   },
   {
@@ -5600,7 +6718,7 @@
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 220,
+    "views": 230,
     "follows": 0,
     "igReelsAvgWatchTime": 0,
     "igReelsVideoViewTotalTime": 0,
@@ -5611,8 +6729,8 @@
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 73,
-    "engagementRate": 0.91,
-    "lastUpdated": "2026-11-08T17:50:47Z"
+    "engagementRate": 0.87,
+    "lastUpdated": "2026-11-09T20:17:43Z"
    }
   },
   {
@@ -5627,39 +6745,39 @@
    "sync": null,
    "analytics": {
     "impressions": 0,
-    "reach": 456,
+    "reach": 881,
     "likes": 12,
     "comments": 0,
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 959,
+    "views": 960,
     "follows": 1,
-    "igReelsAvgWatchTime": 13040,
-    "igReelsVideoViewTotalTime": 12712000,
+    "igReelsAvgWatchTime": 13030,
+    "igReelsVideoViewTotalTime": 12713000,
     "reelsSkipRate": 0,
-    "completionRate": 0.0923,
+    "completionRate": 0.0922,
     "profileViews": 0,
     "websiteClicks": 0,
-    "impressionSources.follow": 0,
-    "impressionSources.forYou": 0.987,
+    "impressionSources.forYou": 0.986,
     "impressionSources.other": 0,
-    "impressionSources.personalProfile": 0.013,
+    "impressionSources.personalProfile": 0.014,
     "impressionSources.search": 0,
     "impressionSources.sound": 0,
     "impressionSources.directMessage": 0,
-    "audienceTypes.returnViewer": 0,
+    "impressionSources.follow": 0,
+    "audienceTypes.returnViewer": 0.1,
     "audienceTypes.follower": 0,
-    "audienceTypes.newViewer": 1,
+    "audienceTypes.newViewer": 0.9,
     "audienceTypes.nonFollower": 1,
     "audienceCountries.DE": 0.696,
     "audienceCountries.AT": 0.163,
     "audienceCountries.CH": 0.086,
     "audienceCountries.US": 0.008,
-    "audienceCountries.LU": 0.005,
     "audienceCountries.IT": 0.005,
-    "audienceCountries.LV": 0.004,
+    "audienceCountries.LU": 0.005,
     "audienceCountries.ES": 0.004,
+    "audienceCountries.LV": 0.004,
     "audienceCountries.CZ": 0.003,
     "audienceCountries.NO": 0.002,
     "audienceCountries.other": 0.024,
@@ -5702,8 +6820,8 @@
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 71.1,
-    "engagementRate": 2.63,
-    "lastUpdated": "2026-11-08T11:59:46Z"
+    "engagementRate": 1.36,
+    "lastUpdated": "2026-11-09T20:17:55Z"
    }
   },
   {
@@ -5736,7 +6854,7 @@
     "reposts": 0,
     "videoDurationSeconds": 74,
     "engagementRate": 2.04,
-    "lastUpdated": "2026-11-08T17:50:47Z"
+    "lastUpdated": "2026-11-09T20:17:43Z"
    }
   },
   {
@@ -5751,7 +6869,7 @@
    "sync": null,
    "analytics": {
     "impressions": 0,
-    "reach": 852,
+    "reach": 855,
     "likes": 9,
     "comments": 0,
     "shares": 0,
@@ -5765,17 +6883,17 @@
     "completionRate": 0.072,
     "profileViews": 0,
     "websiteClicks": 0,
-    "impressionSources.follow": 0,
-    "impressionSources.forYou": 0.987,
     "impressionSources.other": 0,
     "impressionSources.personalProfile": 0.013,
     "impressionSources.search": 0,
     "impressionSources.sound": 0,
     "impressionSources.directMessage": 0,
-    "audienceTypes.nonFollower": 1,
-    "audienceTypes.returnViewer": 0,
+    "impressionSources.follow": 0,
+    "impressionSources.forYou": 0.987,
+    "audienceTypes.returnViewer": 0.01,
     "audienceTypes.follower": 0,
-    "audienceTypes.newViewer": 1,
+    "audienceTypes.newViewer": 0.99,
+    "audienceTypes.nonFollower": 1,
     "audienceCountries.DE": 0.472,
     "audienceCountries.AT": 0.149,
     "audienceCountries.GB": 0.096,
@@ -5827,8 +6945,8 @@
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 73.734,
-    "engagementRate": 1.06,
-    "lastUpdated": "2026-11-08T11:59:46Z"
+    "engagementRate": 1.05,
+    "lastUpdated": "2026-11-09T20:17:55Z"
    }
   },
   {
@@ -5861,7 +6979,7 @@
     "reposts": 0,
     "videoDurationSeconds": 46,
     "engagementRate": 0,
-    "lastUpdated": "2026-11-08T17:50:47Z"
+    "lastUpdated": "2026-11-09T20:17:43Z"
    }
   },
   {
@@ -5894,7 +7012,7 @@
     "reposts": 0,
     "videoDurationSeconds": 59,
     "engagementRate": 16.67,
-    "lastUpdated": "2026-11-08T17:50:47Z"
+    "lastUpdated": "2026-11-09T20:17:43Z"
    }
   },
   {
@@ -5915,7 +7033,7 @@
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 22,
+    "views": 20,
     "follows": 0,
     "igReelsAvgWatchTime": 0,
     "igReelsVideoViewTotalTime": 0,
@@ -5926,8 +7044,8 @@
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 52,
-    "engagementRate": 9.09,
-    "lastUpdated": "2026-11-08T17:50:47Z"
+    "engagementRate": 10,
+    "lastUpdated": "2026-11-09T20:17:43Z"
    }
   },
   {
@@ -5960,7 +7078,7 @@
     "reposts": 0,
     "videoDurationSeconds": 51,
     "engagementRate": 25,
-    "lastUpdated": "2026-11-08T17:50:47Z"
+    "lastUpdated": "2026-11-09T20:17:43Z"
    }
   },
   {
@@ -5993,7 +7111,7 @@
     "reposts": 0,
     "videoDurationSeconds": 52,
     "engagementRate": 6.06,
-    "lastUpdated": "2026-11-08T17:50:47Z"
+    "lastUpdated": "2026-11-09T20:17:43Z"
    }
   },
   {
@@ -6014,7 +7132,7 @@
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 9,
+    "views": 10,
     "follows": 0,
     "igReelsAvgWatchTime": 0,
     "igReelsVideoViewTotalTime": 0,
@@ -6025,8 +7143,8 @@
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 53,
-    "engagementRate": 11.11,
-    "lastUpdated": "2026-11-08T17:50:47Z"
+    "engagementRate": 10,
+    "lastUpdated": "2026-11-09T20:17:43Z"
    }
   },
   {
@@ -6059,7 +7177,7 @@
     "reposts": 0,
     "videoDurationSeconds": 52,
     "engagementRate": 0,
-    "lastUpdated": "2026-11-08T17:50:47Z"
+    "lastUpdated": "2026-11-09T20:17:43Z"
    }
   },
   {
@@ -6092,7 +7210,7 @@
     "reposts": 0,
     "videoDurationSeconds": 50,
     "engagementRate": 5.56,
-    "lastUpdated": "2026-11-08T17:50:47Z"
+    "lastUpdated": "2026-11-09T20:17:43Z"
    }
   },
   {
@@ -6125,7 +7243,7 @@
     "reposts": 0,
     "videoDurationSeconds": 46,
     "engagementRate": 0,
-    "lastUpdated": "2026-11-08T17:50:47Z"
+    "lastUpdated": "2026-11-09T20:17:43Z"
    }
   },
   {
@@ -6158,7 +7276,7 @@
     "reposts": 0,
     "videoDurationSeconds": 47,
     "engagementRate": 8.33,
-    "lastUpdated": "2026-11-08T17:50:47Z"
+    "lastUpdated": "2026-11-09T20:17:43Z"
    }
   },
   {
@@ -6191,7 +7309,7 @@
     "reposts": 0,
     "videoDurationSeconds": 60,
     "engagementRate": 0,
-    "lastUpdated": "2026-11-08T17:50:47Z"
+    "lastUpdated": "2026-11-09T20:17:43Z"
    }
   },
   {
@@ -6224,7 +7342,7 @@
     "reposts": 0,
     "videoDurationSeconds": 56,
     "engagementRate": 0,
-    "lastUpdated": "2026-11-08T17:50:47Z"
+    "lastUpdated": "2026-11-09T20:17:43Z"
    }
   },
   {
@@ -6257,7 +7375,7 @@
     "reposts": 0,
     "videoDurationSeconds": 54,
     "engagementRate": 6.49,
-    "lastUpdated": "2026-11-08T17:50:47Z"
+    "lastUpdated": "2026-11-09T20:17:43Z"
    }
   },
   {
@@ -6290,7 +7408,7 @@
     "reposts": 0,
     "videoDurationSeconds": 44,
     "engagementRate": 2.91,
-    "lastUpdated": "2026-11-08T17:50:47Z"
+    "lastUpdated": "2026-11-09T20:17:43Z"
    }
   },
   {
@@ -6323,7 +7441,7 @@
     "reposts": 0,
     "videoDurationSeconds": 60,
     "engagementRate": 2.73,
-    "lastUpdated": "2026-11-08T17:50:47Z"
+    "lastUpdated": "2026-11-09T20:17:43Z"
    }
   },
   {
@@ -6356,7 +7474,7 @@
     "reposts": 0,
     "videoDurationSeconds": 53,
     "engagementRate": 0,
-    "lastUpdated": "2026-11-08T17:50:47Z"
+    "lastUpdated": "2026-11-09T20:17:43Z"
    }
   },
   {
@@ -6389,7 +7507,7 @@
     "reposts": 0,
     "videoDurationSeconds": 58,
     "engagementRate": 11.11,
-    "lastUpdated": "2026-11-08T17:50:47Z"
+    "lastUpdated": "2026-11-09T20:17:43Z"
    }
   },
   {
@@ -6422,7 +7540,7 @@
     "reposts": 0,
     "videoDurationSeconds": 52,
     "engagementRate": 0,
-    "lastUpdated": "2026-11-08T17:50:47Z"
+    "lastUpdated": "2026-11-09T20:17:43Z"
    }
   },
   {
@@ -6455,7 +7573,7 @@
     "reposts": 0,
     "videoDurationSeconds": 55,
     "engagementRate": 0,
-    "lastUpdated": "2026-11-08T17:50:47Z"
+    "lastUpdated": "2026-11-09T20:17:43Z"
    }
   },
   {
@@ -6488,7 +7606,7 @@
     "reposts": 0,
     "videoDurationSeconds": 55,
     "engagementRate": 0,
-    "lastUpdated": "2026-11-08T17:50:47Z"
+    "lastUpdated": "2026-11-09T20:17:43Z"
    }
   },
   {
@@ -6521,7 +7639,7 @@
     "reposts": 0,
     "videoDurationSeconds": 56,
     "engagementRate": 11.76,
-    "lastUpdated": "2026-11-08T17:50:47Z"
+    "lastUpdated": "2026-11-09T20:17:43Z"
    }
   },
   {
@@ -6554,7 +7672,7 @@
     "reposts": 0,
     "videoDurationSeconds": 56,
     "engagementRate": 6.67,
-    "lastUpdated": "2026-11-08T17:50:47Z"
+    "lastUpdated": "2026-11-09T20:17:43Z"
    }
   },
   {
@@ -6587,7 +7705,7 @@
     "reposts": 0,
     "videoDurationSeconds": 54,
     "engagementRate": 5.56,
-    "lastUpdated": "2026-11-08T17:50:47Z"
+    "lastUpdated": "2026-11-09T20:17:43Z"
    }
   },
   {
@@ -6620,7 +7738,7 @@
     "reposts": 0,
     "videoDurationSeconds": 59,
     "engagementRate": 4.17,
-    "lastUpdated": "2026-11-08T17:50:47Z"
+    "lastUpdated": "2026-11-09T20:17:43Z"
    }
   },
   {
@@ -6653,7 +7771,7 @@
     "reposts": 0,
     "videoDurationSeconds": 56,
     "engagementRate": 2.61,
-    "lastUpdated": "2026-11-08T17:50:47Z"
+    "lastUpdated": "2026-11-09T20:17:43Z"
    }
   },
   {
@@ -6686,7 +7804,7 @@
     "reposts": 0,
     "videoDurationSeconds": 59,
     "engagementRate": 2.22,
-    "lastUpdated": "2026-11-08T17:50:47Z"
+    "lastUpdated": "2026-11-09T20:17:43Z"
    }
   },
   {
@@ -6707,7 +7825,7 @@
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 1424,
+    "views": 1425,
     "follows": 0,
     "igReelsAvgWatchTime": 0,
     "igReelsVideoViewTotalTime": 0,
@@ -6719,7 +7837,7 @@
     "reposts": 0,
     "videoDurationSeconds": 58,
     "engagementRate": 2.95,
-    "lastUpdated": "2026-11-08T17:50:47Z"
+    "lastUpdated": "2026-11-09T20:17:43Z"
    }
   },
   {
@@ -6752,7 +7870,7 @@
     "reposts": 0,
     "videoDurationSeconds": 47,
     "engagementRate": 5.56,
-    "lastUpdated": "2026-11-08T17:50:47Z"
+    "lastUpdated": "2026-11-09T20:17:43Z"
    }
   },
   {
@@ -6785,7 +7903,7 @@
     "reposts": 0,
     "videoDurationSeconds": 57,
     "engagementRate": 0,
-    "lastUpdated": "2026-11-08T17:50:47Z"
+    "lastUpdated": "2026-11-09T20:17:43Z"
    }
   },
   {
@@ -6818,7 +7936,7 @@
     "reposts": 0,
     "videoDurationSeconds": 60,
     "engagementRate": 0,
-    "lastUpdated": "2026-11-08T17:50:47Z"
+    "lastUpdated": "2026-11-09T16:54:57Z"
    }
   },
   {
@@ -6851,7 +7969,7 @@
     "reposts": 0,
     "videoDurationSeconds": 58,
     "engagementRate": 3.23,
-    "lastUpdated": "2026-11-08T17:50:47Z"
+    "lastUpdated": "2026-11-09T16:54:57Z"
    }
   },
   {
@@ -6884,7 +8002,7 @@
     "reposts": 0,
     "videoDurationSeconds": 50,
     "engagementRate": 2.94,
-    "lastUpdated": "2026-11-08T17:50:47Z"
+    "lastUpdated": "2026-11-09T13:32:52Z"
    }
   },
   {
@@ -6917,7 +8035,7 @@
     "reposts": 0,
     "videoDurationSeconds": 49,
     "engagementRate": 3.85,
-    "lastUpdated": "2026-11-08T17:50:47Z"
+    "lastUpdated": "2026-11-09T10:10:59Z"
    }
   },
   {
@@ -6938,7 +8056,7 @@
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 1533,
+    "views": 1532,
     "follows": 0,
     "igReelsAvgWatchTime": 0,
     "igReelsVideoViewTotalTime": 0,
@@ -6950,7 +8068,7 @@
     "reposts": 0,
     "videoDurationSeconds": 58,
     "engagementRate": 1.5,
-    "lastUpdated": "2026-11-08T17:50:47Z"
+    "lastUpdated": "2026-11-09T10:10:59Z"
    }
   },
   {
@@ -6983,7 +8101,7 @@
     "reposts": 0,
     "videoDurationSeconds": 57,
     "engagementRate": 2.46,
-    "lastUpdated": "2026-11-08T17:50:47Z"
+    "lastUpdated": "2026-11-09T06:48:49Z"
    }
   },
   {
@@ -7016,7 +8134,7 @@
     "reposts": 0,
     "videoDurationSeconds": 53,
     "engagementRate": 2.11,
-    "lastUpdated": "2026-11-08T17:50:47Z"
+    "lastUpdated": "2026-11-09T03:26:45Z"
    }
   },
   {
@@ -7049,7 +8167,7 @@
     "reposts": 0,
     "videoDurationSeconds": 51,
     "engagementRate": 0,
-    "lastUpdated": "2026-11-08T17:50:47Z"
+    "lastUpdated": "2026-11-08T20:43:05Z"
    }
   },
   {
@@ -7070,7 +8188,7 @@
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 69,
+    "views": 70,
     "follows": 0,
     "igReelsAvgWatchTime": 0,
     "igReelsVideoViewTotalTime": 0,
@@ -7081,8 +8199,8 @@
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 58,
-    "engagementRate": 2.9,
-    "lastUpdated": "2026-11-08T17:50:47Z"
+    "engagementRate": 2.86,
+    "lastUpdated": "2026-11-09T20:17:43Z"
    }
   },
   {
@@ -7115,7 +8233,7 @@
     "reposts": 0,
     "videoDurationSeconds": 49,
     "engagementRate": 2.94,
-    "lastUpdated": "2026-11-08T15:20:17Z"
+    "lastUpdated": "2026-11-09T16:54:57Z"
    }
   },
   {
@@ -7148,7 +8266,7 @@
     "reposts": 0,
     "videoDurationSeconds": 60,
     "engagementRate": 2.44,
-    "lastUpdated": "2026-11-08T08:38:42Z"
+    "lastUpdated": "2026-11-09T10:10:59Z"
    }
   },
   {
@@ -7181,7 +8299,7 @@
     "reposts": 0,
     "videoDurationSeconds": 55,
     "engagementRate": 3.41,
-    "lastUpdated": "2026-11-08T05:18:16Z"
+    "lastUpdated": "2026-11-09T06:48:49Z"
    }
   },
   {
@@ -7214,7 +8332,7 @@
     "reposts": 0,
     "videoDurationSeconds": 51,
     "engagementRate": 1.78,
-    "lastUpdated": "2026-11-08T01:58:04Z"
+    "lastUpdated": "2026-11-09T03:26:45Z"
    }
   },
   {
@@ -7247,7 +8365,7 @@
     "reposts": 0,
     "videoDurationSeconds": 60,
     "engagementRate": 4.11,
-    "lastUpdated": "2026-11-07T22:38:00Z"
+    "lastUpdated": "2026-11-09T00:04:47Z"
    }
   },
   {
@@ -7280,7 +8398,7 @@
     "reposts": 0,
     "videoDurationSeconds": 48,
     "engagementRate": 1.32,
-    "lastUpdated": "2026-11-07T18:24:51Z"
+    "lastUpdated": "2026-11-08T20:43:05Z"
    }
   },
   {
@@ -7313,7 +8431,7 @@
     "reposts": 0,
     "videoDurationSeconds": 52,
     "engagementRate": 1.3,
-    "lastUpdated": "2026-11-08T15:20:17Z"
+    "lastUpdated": "2026-11-09T16:54:57Z"
    }
   },
   {
@@ -7346,7 +8464,7 @@
     "reposts": 0,
     "videoDurationSeconds": 42,
     "engagementRate": 0.63,
-    "lastUpdated": "2026-11-08T11:59:42Z"
+    "lastUpdated": "2026-11-09T13:32:52Z"
    }
   },
   {
@@ -7379,7 +8497,7 @@
     "reposts": 0,
     "videoDurationSeconds": 52,
     "engagementRate": 0.99,
-    "lastUpdated": "2026-11-08T08:38:42Z"
+    "lastUpdated": "2026-11-09T10:10:59Z"
    }
   },
   {
@@ -7400,7 +8518,7 @@
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 2521,
+    "views": 2522,
     "follows": 0,
     "igReelsAvgWatchTime": 0,
     "igReelsVideoViewTotalTime": 0,
@@ -7412,7 +8530,7 @@
     "reposts": 0,
     "videoDurationSeconds": 42,
     "engagementRate": 1.31,
-    "lastUpdated": "2026-11-08T05:18:16Z"
+    "lastUpdated": "2026-11-09T06:48:49Z"
    }
   },
   {
@@ -7445,7 +8563,7 @@
     "reposts": 0,
     "videoDurationSeconds": 40,
     "engagementRate": 2.61,
-    "lastUpdated": "2026-11-08T01:58:04Z"
+    "lastUpdated": "2026-11-09T03:26:45Z"
    }
   },
   {
@@ -7478,7 +8596,7 @@
     "reposts": 0,
     "videoDurationSeconds": 41,
     "engagementRate": 2.04,
-    "lastUpdated": "2026-11-07T20:34:01Z"
+    "lastUpdated": "2026-11-08T20:43:05Z"
    }
   },
   {
@@ -7511,7 +8629,7 @@
     "reposts": 0,
     "videoDurationSeconds": 50,
     "engagementRate": 0,
-    "lastUpdated": "2026-11-08T15:20:17Z"
+    "lastUpdated": "2026-11-09T16:54:57Z"
    }
   },
   {
@@ -7544,7 +8662,7 @@
     "reposts": 0,
     "videoDurationSeconds": 52,
     "engagementRate": 1.33,
-    "lastUpdated": "2026-11-08T11:59:42Z"
+    "lastUpdated": "2026-11-09T13:32:52Z"
    }
   },
   {
@@ -7577,7 +8695,7 @@
     "reposts": 0,
     "videoDurationSeconds": 45,
     "engagementRate": 1.38,
-    "lastUpdated": "2026-11-08T11:59:42Z"
+    "lastUpdated": "2026-11-09T13:32:52Z"
    }
   },
   {
@@ -7610,7 +8728,7 @@
     "reposts": 0,
     "videoDurationSeconds": 45,
     "engagementRate": 1.83,
-    "lastUpdated": "2026-11-08T11:59:42Z"
+    "lastUpdated": "2026-11-09T13:32:52Z"
    }
   },
   {
@@ -7647,6 +8765,331 @@
    }
   },
   {
+   "id": "taeglich-yt-en-s01-f01-v2",
+   "platform": "youtube",
+   "serie": "taeglich-en",
+   "zeit": "2026-11-09T20:20:00",
+   "video": "taeglich-en/s01-f01.mp4",
+   "text": "Radio Silence – Episode 1: No Signal 📡 #shorts",
+   "url": "https://www.youtube.com/watch?v=HQ65TPvLr3o",
+   "typ": "video",
+   "sync": null,
+   "analytics": {
+    "impressions": 0,
+    "reach": 0,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "clicks": 0,
+    "views": 0,
+    "follows": 0,
+    "igReelsAvgWatchTime": 0,
+    "igReelsVideoViewTotalTime": 0,
+    "reelsSkipRate": 0,
+    "completionRate": 0,
+    "profileViews": 0,
+    "websiteClicks": 0,
+    "replays": 0,
+    "reposts": 0,
+    "videoDurationSeconds": 76,
+    "engagementRate": 0,
+    "lastUpdated": "2026-11-09T19:39:35Z"
+   }
+  },
+  {
+   "id": "taeglich-insta-en-s01-f01-v2",
+   "platform": "instagram",
+   "serie": "taeglich-en",
+   "zeit": "2026-11-09T19:37:00",
+   "video": "taeglich-en/s01-f01.mp4",
+   "text": "Radio Silence – Episode 1: No Signal 📡",
+   "url": "https://www.instagram.com/reel/Dfh_lhxGeRs/",
+   "typ": "REELS",
+   "sync": null,
+   "analytics": {
+    "impressions": 82,
+    "reach": 63,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "clicks": 0,
+    "views": 82,
+    "igReelsAvgWatchTime": 11223,
+    "igReelsVideoViewTotalTime": 695866,
+    "reelsSkipRate": 26.8,
+    "completionRate": 0,
+    "profileViews": 0,
+    "websiteClicks": 0,
+    "replays": 0,
+    "reposts": 0,
+    "videoDurationSeconds": 75,
+    "engagementRate": 0,
+    "lastUpdated": "2026-11-09T19:38:43Z"
+   }
+  },
+  {
+   "id": "taeglich-yt-en-s03-f04-v2",
+   "platform": "youtube",
+   "serie": "taeglich-en",
+   "zeit": "2026-11-09T17:23:00",
+   "video": "taeglich-en/s03-f04.mp4",
+   "text": "The Mimic – Episode 4: Lighthouse 🌲 #shorts",
+   "url": "https://www.youtube.com/watch?v=-tqQAFEnfVY",
+   "typ": "video",
+   "sync": null,
+   "analytics": {
+    "impressions": 0,
+    "reach": 0,
+    "likes": 1,
+    "comments": 1,
+    "shares": 0,
+    "saves": 0,
+    "clicks": 0,
+    "views": 4,
+    "follows": 0,
+    "igReelsAvgWatchTime": 0,
+    "igReelsVideoViewTotalTime": 0,
+    "reelsSkipRate": 0,
+    "completionRate": 0,
+    "profileViews": 0,
+    "websiteClicks": 0,
+    "replays": 0,
+    "reposts": 0,
+    "videoDurationSeconds": 129,
+    "engagementRate": 50,
+    "lastUpdated": "2026-11-09T19:39:35Z"
+   }
+  },
+  {
+   "id": "taeglich-insta-en-s03-f04-v2",
+   "platform": "instagram",
+   "serie": "taeglich-en",
+   "zeit": "2026-11-09T17:05:00",
+   "video": "taeglich-en/s03-f04.mp4",
+   "text": "The Mimic – Episode 4: Lighthouse 🌲",
+   "url": "https://www.instagram.com/reel/DfhuI4ZgmsT/",
+   "typ": "REELS",
+   "sync": null,
+   "analytics": {
+    "impressions": 105,
+    "reach": 92,
+    "likes": 1,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "clicks": 0,
+    "views": 105,
+    "igReelsAvgWatchTime": 75189,
+    "igReelsVideoViewTotalTime": 6992650,
+    "reelsSkipRate": 47.3,
+    "completionRate": 0,
+    "profileViews": 0,
+    "websiteClicks": 0,
+    "replays": 0,
+    "reposts": 0,
+    "videoDurationSeconds": 128,
+    "engagementRate": 0.95,
+    "lastUpdated": "2026-11-09T19:38:43Z"
+   }
+  },
+  {
+   "id": "taeglich-yt-en-s03-f03-v2",
+   "platform": "youtube",
+   "serie": "taeglich-en",
+   "zeit": "2026-11-09T14:36:00",
+   "video": "taeglich-en/s03-f03.mp4",
+   "text": "The Mimic – Episode 3: Benny 🌲 #shorts",
+   "url": "https://www.youtube.com/watch?v=oKvzPFly5GU",
+   "typ": "video",
+   "sync": null,
+   "analytics": {
+    "impressions": 0,
+    "reach": 0,
+    "likes": 7,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "clicks": 0,
+    "views": 214,
+    "follows": 0,
+    "igReelsAvgWatchTime": 0,
+    "igReelsVideoViewTotalTime": 0,
+    "reelsSkipRate": 0,
+    "completionRate": 0,
+    "profileViews": 0,
+    "websiteClicks": 0,
+    "replays": 0,
+    "reposts": 0,
+    "videoDurationSeconds": 123,
+    "engagementRate": 3.27,
+    "lastUpdated": "2026-11-09T19:39:35Z"
+   }
+  },
+  {
+   "id": "taeglich-insta-en-s03-f03-v2",
+   "platform": "instagram",
+   "serie": "taeglich-en",
+   "zeit": "2026-11-09T13:38:00",
+   "video": "taeglich-en/s03-f03.mp4",
+   "text": "The Mimic – Episode 3: Benny 🌲",
+   "url": "https://www.instagram.com/reel/DfhWbYQioql/",
+   "typ": "REELS",
+   "sync": null,
+   "analytics": {
+    "impressions": 0,
+    "reach": 0,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "clicks": 0,
+    "views": 0,
+    "igReelsAvgWatchTime": 0,
+    "igReelsVideoViewTotalTime": 0,
+    "reelsSkipRate": 0,
+    "completionRate": 0,
+    "profileViews": 0,
+    "websiteClicks": 0,
+    "replays": 0,
+    "reposts": 0,
+    "videoDurationSeconds": 122,
+    "engagementRate": 0,
+    "lastUpdated": "2026-11-09T19:38:43Z"
+   }
+  },
+  {
+   "id": "taeglich-yt-en-s03-f02-v2",
+   "platform": "youtube",
+   "serie": "taeglich-en",
+   "zeit": "2026-11-09T11:48:00",
+   "video": "taeglich-en/s03-f02.mp4",
+   "text": "The Mimic – Episode 2: The Rules 🌲 #shorts",
+   "url": "https://www.youtube.com/watch?v=2k8T-d82O7s",
+   "typ": "video",
+   "sync": null,
+   "analytics": {
+    "impressions": 0,
+    "reach": 0,
+    "likes": 16,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "clicks": 0,
+    "views": 571,
+    "follows": 0,
+    "igReelsAvgWatchTime": 0,
+    "igReelsVideoViewTotalTime": 0,
+    "reelsSkipRate": 0,
+    "completionRate": 0,
+    "profileViews": 0,
+    "websiteClicks": 0,
+    "replays": 0,
+    "reposts": 0,
+    "videoDurationSeconds": 128,
+    "engagementRate": 2.8,
+    "lastUpdated": "2026-11-09T19:39:35Z"
+   }
+  },
+  {
+   "id": "taeglich-insta-en-s03-f02-v2",
+   "platform": "instagram",
+   "serie": "taeglich-en",
+   "zeit": "2026-11-09T10:45:00",
+   "video": "taeglich-en/s03-f02.mp4",
+   "text": "The Mimic – Episode 2: The Rules 🌲",
+   "url": "https://www.instagram.com/reel/DfhCuczjf2S/",
+   "typ": "REELS",
+   "sync": null,
+   "analytics": {
+    "impressions": 131,
+    "reach": 112,
+    "likes": 1,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "clicks": 0,
+    "views": 131,
+    "igReelsAvgWatchTime": 22371,
+    "igReelsVideoViewTotalTime": 2483238,
+    "reelsSkipRate": 42.3,
+    "completionRate": 0,
+    "profileViews": 0,
+    "websiteClicks": 0,
+    "replays": 0,
+    "reposts": 0,
+    "videoDurationSeconds": 127,
+    "engagementRate": 0.76,
+    "lastUpdated": "2026-11-09T19:38:43Z"
+   }
+  },
+  {
+   "id": "taeglich-yt-en-s03-f01-v2",
+   "platform": "youtube",
+   "serie": "taeglich-en",
+   "zeit": "2026-11-09T08:46:00",
+   "video": "taeglich-en/s03-f01.mp4",
+   "text": "The Mimic – Episode 1: Click 🌲 #shorts",
+   "url": "https://www.youtube.com/watch?v=WRPyD-s6oY8",
+   "typ": "video",
+   "sync": null,
+   "analytics": {
+    "impressions": 0,
+    "reach": 0,
+    "likes": 1,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "clicks": 0,
+    "views": 22,
+    "follows": 0,
+    "igReelsAvgWatchTime": 0,
+    "igReelsVideoViewTotalTime": 0,
+    "reelsSkipRate": 0,
+    "completionRate": 0,
+    "profileViews": 0,
+    "websiteClicks": 0,
+    "replays": 0,
+    "reposts": 0,
+    "videoDurationSeconds": 140,
+    "engagementRate": 4.55,
+    "lastUpdated": "2026-11-09T19:39:35Z"
+   }
+  },
+  {
+   "id": "taeglich-insta-en-s03-f01-v2",
+   "platform": "instagram",
+   "serie": "taeglich-en",
+   "zeit": "2026-11-09T08:10:00",
+   "video": "taeglich-en/s03-f01.mp4",
+   "text": "The Mimic – Episode 1: Click 🌲",
+   "url": "https://www.instagram.com/reel/Dfgw450gTEO/",
+   "typ": "REELS",
+   "sync": null,
+   "analytics": {
+    "impressions": 4,
+    "reach": 1,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "clicks": 0,
+    "views": 4,
+    "igReelsAvgWatchTime": 145309,
+    "igReelsVideoViewTotalTime": 145309,
+    "reelsSkipRate": 0,
+    "completionRate": 0,
+    "profileViews": 0,
+    "websiteClicks": 0,
+    "replays": 0,
+    "reposts": 0,
+    "videoDurationSeconds": 139,
+    "engagementRate": 0,
+    "lastUpdated": "2026-11-09T19:38:43Z"
+   }
+  },
+  {
    "id": "taeglich-yt-en-s02-f08-v2",
    "platform": "youtube",
    "serie": "taeglich-en",
@@ -7664,7 +9107,7 @@
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 4,
+    "views": 6,
     "follows": 0,
     "igReelsAvgWatchTime": 0,
     "igReelsVideoViewTotalTime": 0,
@@ -7676,7 +9119,7 @@
     "reposts": 0,
     "videoDurationSeconds": 73,
     "engagementRate": 0,
-    "lastUpdated": "2026-11-08T20:05:18Z"
+    "lastUpdated": "2026-11-09T19:39:35Z"
    }
   },
   {
@@ -7690,17 +9133,17 @@
    "typ": "REELS",
    "sync": null,
    "analytics": {
-    "impressions": 174,
-    "reach": 148,
+    "impressions": 175,
+    "reach": 149,
     "likes": 1,
     "comments": 0,
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 174,
-    "igReelsAvgWatchTime": 26231,
-    "igReelsVideoViewTotalTime": 3908429,
-    "reelsSkipRate": 29.5,
+    "views": 175,
+    "igReelsAvgWatchTime": 26074,
+    "igReelsVideoViewTotalTime": 3911142,
+    "reelsSkipRate": 30,
     "completionRate": 0,
     "profileViews": 0,
     "websiteClicks": 0,
@@ -7708,7 +9151,7 @@
     "reposts": 0,
     "videoDurationSeconds": 72,
     "engagementRate": 0.57,
-    "lastUpdated": "2026-11-08T20:05:03Z"
+    "lastUpdated": "2026-11-09T19:38:43Z"
    }
   },
   {
@@ -7740,7 +9183,7 @@
     "reposts": 0,
     "videoDurationSeconds": 68,
     "engagementRate": 1.18,
-    "lastUpdated": "2026-11-08T20:05:03Z"
+    "lastUpdated": "2026-11-09T19:38:43Z"
    }
   },
   {
@@ -7761,7 +9204,7 @@
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 245,
+    "views": 246,
     "follows": 0,
     "igReelsAvgWatchTime": 0,
     "igReelsVideoViewTotalTime": 0,
@@ -7773,7 +9216,7 @@
     "reposts": 0,
     "videoDurationSeconds": 69,
     "engagementRate": 1.22,
-    "lastUpdated": "2026-11-08T20:05:18Z"
+    "lastUpdated": "2026-11-09T19:39:35Z"
    }
   },
   {
@@ -7794,7 +9237,7 @@
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 309,
+    "views": 310,
     "follows": 0,
     "igReelsAvgWatchTime": 0,
     "igReelsVideoViewTotalTime": 0,
@@ -7806,7 +9249,7 @@
     "reposts": 0,
     "videoDurationSeconds": 72,
     "engagementRate": 1.94,
-    "lastUpdated": "2026-11-08T20:05:18Z"
+    "lastUpdated": "2026-11-09T19:39:35Z"
    }
   },
   {
@@ -7820,25 +9263,25 @@
    "typ": "REELS",
    "sync": null,
    "analytics": {
-    "impressions": 144,
-    "reach": 120,
+    "impressions": 145,
+    "reach": 121,
     "likes": 2,
     "comments": 0,
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 144,
-    "igReelsAvgWatchTime": 16595,
-    "igReelsVideoViewTotalTime": 1991466,
-    "reelsSkipRate": 43.3,
+    "views": 145,
+    "igReelsAvgWatchTime": 16466,
+    "igReelsVideoViewTotalTime": 1992491,
+    "reelsSkipRate": 43.8,
     "completionRate": 0,
     "profileViews": 0,
     "websiteClicks": 0,
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 71,
-    "engagementRate": 1.39,
-    "lastUpdated": "2026-11-08T20:05:03Z"
+    "engagementRate": 1.38,
+    "lastUpdated": "2026-11-09T19:38:43Z"
    }
   },
   {
@@ -7859,7 +9302,7 @@
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 260,
+    "views": 261,
     "follows": 0,
     "igReelsAvgWatchTime": 0,
     "igReelsVideoViewTotalTime": 0,
@@ -7870,8 +9313,8 @@
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 71,
-    "engagementRate": 1.54,
-    "lastUpdated": "2026-11-08T20:05:18Z"
+    "engagementRate": 1.53,
+    "lastUpdated": "2026-11-09T19:39:35Z"
    }
   },
   {
@@ -7903,7 +9346,7 @@
     "reposts": 0,
     "videoDurationSeconds": 70,
     "engagementRate": 0,
-    "lastUpdated": "2026-11-08T20:05:03Z"
+    "lastUpdated": "2026-11-09T19:38:43Z"
    }
   },
   {
@@ -7936,7 +9379,7 @@
     "reposts": 0,
     "videoDurationSeconds": 74,
     "engagementRate": 0,
-    "lastUpdated": "2026-11-08T20:05:18Z"
+    "lastUpdated": "2026-11-09T19:39:35Z"
    }
   },
   {
@@ -7968,7 +9411,7 @@
     "reposts": 0,
     "videoDurationSeconds": 73,
     "engagementRate": 0,
-    "lastUpdated": "2026-11-08T20:05:03Z"
+    "lastUpdated": "2026-11-09T19:38:43Z"
    }
   },
   {
@@ -7989,7 +9432,7 @@
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 1107,
+    "views": 1108,
     "follows": 0,
     "igReelsAvgWatchTime": 0,
     "igReelsVideoViewTotalTime": 0,
@@ -8001,7 +9444,7 @@
     "reposts": 0,
     "videoDurationSeconds": 71,
     "engagementRate": 1.81,
-    "lastUpdated": "2026-11-08T20:05:18Z"
+    "lastUpdated": "2026-11-09T19:39:35Z"
    }
   },
   {
@@ -8015,16 +9458,16 @@
    "typ": "REELS",
    "sync": null,
    "analytics": {
-    "impressions": 2,
-    "reach": 1,
+    "impressions": 3,
+    "reach": 2,
     "likes": 1,
     "comments": 0,
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 2,
-    "igReelsAvgWatchTime": 527,
-    "igReelsVideoViewTotalTime": 1055,
+    "views": 3,
+    "igReelsAvgWatchTime": 803,
+    "igReelsVideoViewTotalTime": 2409,
     "reelsSkipRate": 100,
     "completionRate": 0,
     "profileViews": 0,
@@ -8032,8 +9475,8 @@
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 70,
-    "engagementRate": 50,
-    "lastUpdated": "2026-11-08T20:05:03Z"
+    "engagementRate": 33.33,
+    "lastUpdated": "2026-11-09T19:38:43Z"
    }
   },
   {
@@ -8054,7 +9497,7 @@
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 1253,
+    "views": 1254,
     "follows": 0,
     "igReelsAvgWatchTime": 0,
     "igReelsVideoViewTotalTime": 0,
@@ -8066,7 +9509,7 @@
     "reposts": 0,
     "videoDurationSeconds": 72,
     "engagementRate": 1.36,
-    "lastUpdated": "2026-11-08T20:05:18Z"
+    "lastUpdated": "2026-11-09T19:39:35Z"
    }
   },
   {
@@ -8080,25 +9523,25 @@
    "typ": "REELS",
    "sync": null,
    "analytics": {
-    "impressions": 3,
-    "reach": 1,
+    "impressions": 4,
+    "reach": 2,
     "likes": 1,
     "comments": 0,
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 3,
-    "igReelsAvgWatchTime": 2921,
-    "igReelsVideoViewTotalTime": 5843,
-    "reelsSkipRate": 100,
+    "views": 4,
+    "igReelsAvgWatchTime": 3218,
+    "igReelsVideoViewTotalTime": 9654,
+    "reelsSkipRate": 66.7,
     "completionRate": 0,
     "profileViews": 0,
     "websiteClicks": 0,
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 71,
-    "engagementRate": 33.33,
-    "lastUpdated": "2026-11-08T20:05:03Z"
+    "engagementRate": 25,
+    "lastUpdated": "2026-11-09T19:38:43Z"
    }
   },
   {
@@ -8114,12 +9557,12 @@
    "analytics": {
     "impressions": 0,
     "reach": 0,
-    "likes": 3,
+    "likes": 4,
     "comments": 0,
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 228,
+    "views": 229,
     "follows": 0,
     "igReelsAvgWatchTime": 0,
     "igReelsVideoViewTotalTime": 0,
@@ -8130,8 +9573,8 @@
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 74,
-    "engagementRate": 1.32,
-    "lastUpdated": "2026-11-08T20:05:18Z"
+    "engagementRate": 1.75,
+    "lastUpdated": "2026-11-09T19:39:35Z"
    }
   },
   {
@@ -8145,25 +9588,25 @@
    "typ": "REELS",
    "sync": null,
    "analytics": {
-    "impressions": 5,
-    "reach": 2,
+    "impressions": 6,
+    "reach": 3,
     "likes": 1,
     "comments": 0,
     "shares": 0,
     "saves": 0,
     "clicks": 0,
-    "views": 5,
-    "igReelsAvgWatchTime": 19118,
-    "igReelsVideoViewTotalTime": 57354,
-    "reelsSkipRate": 66.7,
+    "views": 6,
+    "igReelsAvgWatchTime": 15170,
+    "igReelsVideoViewTotalTime": 60682,
+    "reelsSkipRate": 50,
     "completionRate": 0,
     "profileViews": 0,
     "websiteClicks": 0,
     "replays": 0,
     "reposts": 0,
     "videoDurationSeconds": 73,
-    "engagementRate": 20,
-    "lastUpdated": "2026-11-08T20:05:03Z"
+    "engagementRate": 16.67,
+    "lastUpdated": "2026-11-09T19:38:43Z"
    }
   }
  ],
@@ -8209,7 +9652,7 @@
     {
      "day_of_week": 2,
      "hour": 18,
-     "avg_engagement": 70,
+     "avg_engagement": 68,
      "post_count": 1
     },
     {
@@ -8243,12 +9686,6 @@
      "post_count": 1
     },
     {
-     "day_of_week": 0,
-     "hour": 19,
-     "avg_engagement": 46,
-     "post_count": 1
-    },
-    {
      "day_of_week": 4,
      "hour": 16,
      "avg_engagement": 46,
@@ -8267,15 +9704,33 @@
      "post_count": 1
     },
     {
+     "day_of_week": 0,
+     "hour": 6,
+     "avg_engagement": 35,
+     "post_count": 1
+    },
+    {
      "day_of_week": 2,
      "hour": 7,
      "avg_engagement": 35,
      "post_count": 1
     },
     {
+     "day_of_week": 0,
+     "hour": 19,
+     "avg_engagement": 23,
+     "post_count": 2
+    },
+    {
      "day_of_week": 6,
      "hour": 19,
-     "avg_engagement": 34,
+     "avg_engagement": 21,
+     "post_count": 2
+    },
+    {
+     "day_of_week": 2,
+     "hour": 19,
+     "avg_engagement": 20,
      "post_count": 1
     },
     {
@@ -8285,8 +9740,8 @@
      "post_count": 2
     },
     {
-     "day_of_week": 2,
-     "hour": 19,
+     "day_of_week": 0,
+     "hour": 14,
      "avg_engagement": 19,
      "post_count": 1
     },
@@ -8294,6 +9749,18 @@
      "day_of_week": 4,
      "hour": 18,
      "avg_engagement": 13,
+     "post_count": 1
+    },
+    {
+     "day_of_week": 0,
+     "hour": 10,
+     "avg_engagement": 11,
+     "post_count": 1
+    },
+    {
+     "day_of_week": 6,
+     "hour": 15,
+     "avg_engagement": 11,
      "post_count": 1
     },
     {
@@ -8305,7 +9772,13 @@
     {
      "day_of_week": 4,
      "hour": 11,
-     "avg_engagement": 7,
+     "avg_engagement": 8,
+     "post_count": 1
+    },
+    {
+     "day_of_week": 5,
+     "hour": 14,
+     "avg_engagement": 6,
      "post_count": 1
     },
     {
@@ -8316,26 +9789,14 @@
     },
     {
      "day_of_week": 5,
-     "hour": 14,
-     "avg_engagement": 5,
-     "post_count": 1
-    },
-    {
-     "day_of_week": 5,
      "hour": 6,
-     "avg_engagement": 5,
+     "avg_engagement": 6,
      "post_count": 1
     },
     {
      "day_of_week": 6,
      "hour": 11,
-     "avg_engagement": 3,
-     "post_count": 1
-    },
-    {
-     "day_of_week": 6,
-     "hour": 15,
-     "avg_engagement": 3,
+     "avg_engagement": 2,
      "post_count": 1
     },
     {
@@ -8409,14 +9870,14 @@
      "post_count": 1
     },
     {
-     "day_of_week": 3,
-     "hour": 11,
-     "avg_engagement": 8,
+     "day_of_week": 6,
+     "hour": 13,
+     "avg_engagement": 9,
      "post_count": 1
     },
     {
-     "day_of_week": 6,
-     "hour": 13,
+     "day_of_week": 3,
+     "hour": 11,
      "avg_engagement": 8,
      "post_count": 1
     },
@@ -8434,7 +9895,7 @@
     },
     {
      "day_of_week": 0,
-     "hour": 11,
+     "hour": 23,
      "avg_engagement": 5,
      "post_count": 1
     },
@@ -8446,19 +9907,13 @@
     },
     {
      "day_of_week": 0,
-     "hour": 23,
+     "hour": 11,
      "avg_engagement": 5,
      "post_count": 1
     },
     {
-     "day_of_week": 0,
+     "day_of_week": 2,
      "hour": 17,
-     "avg_engagement": 4,
-     "post_count": 1
-    },
-    {
-     "day_of_week": 0,
-     "hour": 15,
      "avg_engagement": 4,
      "post_count": 1
     },
@@ -8470,14 +9925,26 @@
     },
     {
      "day_of_week": 0,
+     "hour": 6,
+     "avg_engagement": 4,
+     "post_count": 1
+    },
+    {
+     "day_of_week": 0,
+     "hour": 17,
+     "avg_engagement": 4,
+     "post_count": 1
+    },
+    {
+     "day_of_week": 0,
      "hour": 3,
      "avg_engagement": 4,
      "post_count": 1
     },
     {
-     "day_of_week": 2,
-     "hour": 17,
-     "avg_engagement": 4,
+     "day_of_week": 0,
+     "hour": 10,
+     "avg_engagement": 3,
      "post_count": 1
     },
     {
@@ -8499,14 +9966,14 @@
      "post_count": 1
     },
     {
-     "day_of_week": 2,
-     "hour": 13,
-     "avg_engagement": 2,
-     "post_count": 1
+     "day_of_week": 0,
+     "hour": 15,
+     "avg_engagement": 2.5,
+     "post_count": 2
     },
     {
-     "day_of_week": 2,
-     "hour": 11,
+     "day_of_week": 3,
+     "hour": 20,
      "avg_engagement": 2,
      "post_count": 1
     },
@@ -8517,20 +9984,14 @@
      "post_count": 1
     },
     {
-     "day_of_week": 4,
-     "hour": 12,
-     "avg_engagement": 2,
-     "post_count": 1
-    },
-    {
-     "day_of_week": 1,
-     "hour": 3,
-     "avg_engagement": 2,
-     "post_count": 1
-    },
-    {
      "day_of_week": 5,
      "hour": 6,
+     "avg_engagement": 2,
+     "post_count": 1
+    },
+    {
+     "day_of_week": 4,
+     "hour": 12,
      "avg_engagement": 2,
      "post_count": 1
     },
@@ -8547,8 +10008,20 @@
      "post_count": 1
     },
     {
-     "day_of_week": 3,
-     "hour": 20,
+     "day_of_week": 2,
+     "hour": 11,
+     "avg_engagement": 2,
+     "post_count": 1
+    },
+    {
+     "day_of_week": 2,
+     "hour": 13,
+     "avg_engagement": 2,
+     "post_count": 1
+    },
+    {
+     "day_of_week": 1,
+     "hour": 3,
      "avg_engagement": 2,
      "post_count": 1
     },
@@ -8559,8 +10032,8 @@
      "post_count": 1
     },
     {
-     "day_of_week": 2,
-     "hour": 5,
+     "day_of_week": 5,
+     "hour": 12,
      "avg_engagement": 1,
      "post_count": 1
     },
@@ -8577,14 +10050,26 @@
      "post_count": 1
     },
     {
+     "day_of_week": 0,
+     "hour": 19,
+     "avg_engagement": 1,
+     "post_count": 1
+    },
+    {
      "day_of_week": 1,
      "hour": 13,
      "avg_engagement": 1,
      "post_count": 1
     },
     {
-     "day_of_week": 0,
-     "hour": 19,
+     "day_of_week": 2,
+     "hour": 3,
+     "avg_engagement": 1,
+     "post_count": 1
+    },
+    {
+     "day_of_week": 6,
+     "hour": 10,
      "avg_engagement": 1,
      "post_count": 1
     },
@@ -8601,20 +10086,20 @@
      "post_count": 1
     },
     {
-     "day_of_week": 6,
-     "hour": 10,
+     "day_of_week": 2,
+     "hour": 15,
+     "avg_engagement": 1,
+     "post_count": 1
+    },
+    {
+     "day_of_week": 1,
+     "hour": 15,
      "avg_engagement": 1,
      "post_count": 1
     },
     {
      "day_of_week": 1,
      "hour": 5,
-     "avg_engagement": 1,
-     "post_count": 1
-    },
-    {
-     "day_of_week": 2,
-     "hour": 15,
      "avg_engagement": 1,
      "post_count": 1
     },
@@ -8631,26 +10116,14 @@
      "post_count": 1
     },
     {
-     "day_of_week": 2,
-     "hour": 3,
-     "avg_engagement": 1,
-     "post_count": 1
-    },
-    {
-     "day_of_week": 1,
-     "hour": 15,
-     "avg_engagement": 1,
-     "post_count": 1
-    },
-    {
      "day_of_week": 1,
      "hour": 9,
      "avg_engagement": 1,
      "post_count": 1
     },
     {
-     "day_of_week": 5,
-     "hour": 12,
+     "day_of_week": 2,
+     "hour": 5,
      "avg_engagement": 1,
      "post_count": 1
     },
@@ -8680,6 +10153,12 @@
     },
     {
      "day_of_week": 1,
+     "hour": 23,
+     "avg_engagement": 0,
+     "post_count": 1
+    },
+    {
+     "day_of_week": 1,
      "hour": 1,
      "avg_engagement": 0,
      "post_count": 1
@@ -8691,20 +10170,26 @@
      "post_count": 1
     },
     {
-     "day_of_week": 1,
-     "hour": 23,
-     "avg_engagement": 0,
-     "post_count": 1
-    },
-    {
-     "day_of_week": 6,
-     "hour": 6,
+     "day_of_week": 0,
+     "hour": 18,
      "avg_engagement": 0,
      "post_count": 1
     },
     {
      "day_of_week": 3,
      "hour": 7,
+     "avg_engagement": 0,
+     "post_count": 1
+    },
+    {
+     "day_of_week": 6,
+     "hour": 18,
+     "avg_engagement": 0,
+     "post_count": 1
+    },
+    {
+     "day_of_week": 6,
+     "hour": 6,
      "avg_engagement": 0,
      "post_count": 1
     },
@@ -8717,6 +10202,12 @@
     {
      "day_of_week": 4,
      "hour": 15,
+     "avg_engagement": 0,
+     "post_count": 1
+    },
+    {
+     "day_of_week": 0,
+     "hour": 12,
      "avg_engagement": 0,
      "post_count": 1
     },
@@ -8773,6 +10264,12 @@
      "post_count": 3
     },
     {
+     "day_of_week": 6,
+     "hour": 3,
+     "avg_engagement": 26,
+     "post_count": 1
+    },
+    {
      "day_of_week": 1,
      "hour": 3,
      "avg_engagement": 26,
@@ -8782,18 +10279,6 @@
      "day_of_week": 0,
      "hour": 3,
      "avg_engagement": 26,
-     "post_count": 1
-    },
-    {
-     "day_of_week": 6,
-     "hour": 3,
-     "avg_engagement": 26,
-     "post_count": 1
-    },
-    {
-     "day_of_week": 0,
-     "hour": 7,
-     "avg_engagement": 24,
      "post_count": 1
     },
     {
@@ -8821,9 +10306,21 @@
      "post_count": 2
     },
     {
+     "day_of_week": 0,
+     "hour": 7,
+     "avg_engagement": 13,
+     "post_count": 2
+    },
+    {
      "day_of_week": 5,
      "hour": 11,
      "avg_engagement": 9,
+     "post_count": 1
+    },
+    {
+     "day_of_week": 0,
+     "hour": 10,
+     "avg_engagement": 8,
      "post_count": 1
     },
     {
@@ -8839,7 +10336,7 @@
      "post_count": 1
     },
     {
-     "day_of_week": 1,
+     "day_of_week": 2,
      "hour": 5,
      "avg_engagement": 3,
      "post_count": 1
@@ -8851,7 +10348,7 @@
      "post_count": 1
     },
     {
-     "day_of_week": 2,
+     "day_of_week": 1,
      "hour": 5,
      "avg_engagement": 3,
      "post_count": 1
@@ -8869,6 +10366,18 @@
      "post_count": 1
     },
     {
+     "day_of_week": 0,
+     "hour": 16,
+     "avg_engagement": 2,
+     "post_count": 1
+    },
+    {
+     "day_of_week": 5,
+     "hour": 13,
+     "avg_engagement": 2,
+     "post_count": 1
+    },
+    {
      "day_of_week": 3,
      "hour": 3,
      "avg_engagement": 2,
@@ -8881,38 +10390,26 @@
      "post_count": 1
     },
     {
-     "day_of_week": 6,
-     "hour": 15,
-     "avg_engagement": 2,
-     "post_count": 1
-    },
-    {
-     "day_of_week": 5,
-     "hour": 13,
-     "avg_engagement": 2,
-     "post_count": 1
-    },
-    {
-     "day_of_week": 6,
-     "hour": 19,
-     "avg_engagement": 2,
-     "post_count": 1
-    },
-    {
      "day_of_week": 3,
      "hour": 7,
      "avg_engagement": 2,
      "post_count": 1
     },
     {
-     "day_of_week": 1,
+     "day_of_week": 6,
      "hour": 13,
      "avg_engagement": 2,
      "post_count": 1
     },
     {
-     "day_of_week": 0,
-     "hour": 23,
+     "day_of_week": 6,
+     "hour": 15,
+     "avg_engagement": 2,
+     "post_count": 1
+    },
+    {
+     "day_of_week": 6,
+     "hour": 10,
      "avg_engagement": 2,
      "post_count": 1
     },
@@ -8923,10 +10420,28 @@
      "post_count": 2
     },
     {
-     "day_of_week": 6,
-     "hour": 10,
+     "day_of_week": 0,
+     "hour": 23,
      "avg_engagement": 2,
      "post_count": 1
+    },
+    {
+     "day_of_week": 1,
+     "hour": 13,
+     "avg_engagement": 2,
+     "post_count": 1
+    },
+    {
+     "day_of_week": 6,
+     "hour": 19,
+     "avg_engagement": 1.5,
+     "post_count": 2
+    },
+    {
+     "day_of_week": 0,
+     "hour": 13,
+     "avg_engagement": 1.5,
+     "post_count": 2
     },
     {
      "day_of_week": 1,
@@ -8937,6 +10452,84 @@
     {
      "day_of_week": 0,
      "hour": 15,
+     "avg_engagement": 1,
+     "post_count": 1
+    },
+    {
+     "day_of_week": 5,
+     "hour": 15,
+     "avg_engagement": 1,
+     "post_count": 1
+    },
+    {
+     "day_of_week": 1,
+     "hour": 11,
+     "avg_engagement": 1,
+     "post_count": 1
+    },
+    {
+     "day_of_week": 1,
+     "hour": 21,
+     "avg_engagement": 1,
+     "post_count": 1
+    },
+    {
+     "day_of_week": 3,
+     "hour": 9,
+     "avg_engagement": 1,
+     "post_count": 1
+    },
+    {
+     "day_of_week": 3,
+     "hour": 5,
+     "avg_engagement": 1,
+     "post_count": 1
+    },
+    {
+     "day_of_week": 2,
+     "hour": 21,
+     "avg_engagement": 1,
+     "post_count": 1
+    },
+    {
+     "day_of_week": 2,
+     "hour": 17,
+     "avg_engagement": 1,
+     "post_count": 1
+    },
+    {
+     "day_of_week": 6,
+     "hour": 16,
+     "avg_engagement": 1,
+     "post_count": 1
+    },
+    {
+     "day_of_week": 4,
+     "hour": 9,
+     "avg_engagement": 1,
+     "post_count": 1
+    },
+    {
+     "day_of_week": 1,
+     "hour": 9,
+     "avg_engagement": 1,
+     "post_count": 1
+    },
+    {
+     "day_of_week": 5,
+     "hour": 19,
+     "avg_engagement": 1,
+     "post_count": 2
+    },
+    {
+     "day_of_week": 2,
+     "hour": 13,
+     "avg_engagement": 1,
+     "post_count": 1
+    },
+    {
+     "day_of_week": 0,
+     "hour": 17,
      "avg_engagement": 1,
      "post_count": 1
     },
@@ -8947,98 +10540,8 @@
      "post_count": 1
     },
     {
-     "day_of_week": 1,
-     "hour": 21,
-     "avg_engagement": 1,
-     "post_count": 1
-    },
-    {
-     "day_of_week": 0,
-     "hour": 13,
-     "avg_engagement": 1,
-     "post_count": 1
-    },
-    {
-     "day_of_week": 3,
-     "hour": 5,
-     "avg_engagement": 1,
-     "post_count": 1
-    },
-    {
-     "day_of_week": 1,
-     "hour": 11,
-     "avg_engagement": 1,
-     "post_count": 1
-    },
-    {
-     "day_of_week": 2,
-     "hour": 21,
-     "avg_engagement": 1,
-     "post_count": 1
-    },
-    {
-     "day_of_week": 3,
-     "hour": 9,
-     "avg_engagement": 1,
-     "post_count": 1
-    },
-    {
-     "day_of_week": 2,
-     "hour": 17,
-     "avg_engagement": 1,
-     "post_count": 1
-    },
-    {
-     "day_of_week": 1,
-     "hour": 9,
-     "avg_engagement": 1,
-     "post_count": 1
-    },
-    {
-     "day_of_week": 0,
-     "hour": 17,
-     "avg_engagement": 1,
-     "post_count": 1
-    },
-    {
-     "day_of_week": 4,
-     "hour": 9,
-     "avg_engagement": 1,
-     "post_count": 1
-    },
-    {
-     "day_of_week": 2,
-     "hour": 13,
-     "avg_engagement": 1,
-     "post_count": 1
-    },
-    {
      "day_of_week": 6,
-     "hour": 13,
-     "avg_engagement": 1,
-     "post_count": 1
-    },
-    {
-     "day_of_week": 5,
-     "hour": 19,
-     "avg_engagement": 1,
-     "post_count": 2
-    },
-    {
-     "day_of_week": 5,
-     "hour": 15,
-     "avg_engagement": 1,
-     "post_count": 1
-    },
-    {
-     "day_of_week": 4,
-     "hour": 17,
-     "avg_engagement": 0,
-     "post_count": 1
-    },
-    {
-     "day_of_week": 2,
-     "hour": 9,
+     "hour": 23,
      "avg_engagement": 0,
      "post_count": 1
     },
@@ -9049,7 +10552,7 @@
      "post_count": 1
     },
     {
-     "day_of_week": 6,
+     "day_of_week": 1,
      "hour": 23,
      "avg_engagement": 0,
      "post_count": 1
@@ -9073,8 +10576,14 @@
      "post_count": 1
     },
     {
-     "day_of_week": 1,
-     "hour": 23,
+     "day_of_week": 4,
+     "hour": 17,
+     "avg_engagement": 0,
+     "post_count": 1
+    },
+    {
+     "day_of_week": 2,
+     "hour": 9,
      "avg_engagement": 0,
      "post_count": 1
     },
@@ -9097,12 +10606,6 @@
      "post_count": 1
     },
     {
-     "day_of_week": 6,
-     "hour": 16,
-     "avg_engagement": 0,
-     "post_count": 1
-    },
-    {
      "day_of_week": 4,
      "hour": 13,
      "avg_engagement": 0,
@@ -9130,7 +10633,7 @@
      "day_of_week": 0,
      "hour": 19,
      "avg_engagement": 0,
-     "post_count": 1
+     "post_count": 2
     }
    ]
   }
@@ -9140,20 +10643,20 @@
   "youtube: Insights HTTP 429"
  ],
  "ueberblick_haupt": {
-  "totalPosts": 95,
-  "publishedPosts": 95,
+  "totalPosts": 106,
+  "publishedPosts": 106,
   "scheduledPosts": 0,
-  "dataStaleness.staleAccountCount": 2
+  "dataStaleness.staleAccountCount": 0
  },
  "ueberblick_yt": {
-  "totalPosts": 76,
-  "publishedPosts": 76,
+  "totalPosts": 85,
+  "publishedPosts": 85,
   "scheduledPosts": 0,
-  "dataStaleness.staleAccountCount": 2
+  "dataStaleness.staleAccountCount": 0
  },
  "ueberblick_drei": {
-  "totalPosts": 16,
-  "publishedPosts": 16,
+  "totalPosts": 26,
+  "publishedPosts": 26,
   "scheduledPosts": 0,
   "dataStaleness.staleAccountCount": 0
  }
