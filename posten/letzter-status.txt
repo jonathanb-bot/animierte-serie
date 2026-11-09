@@ -2,19 +2,28 @@ Verbundene Konten: tiktok:storys4you.de1, instagram:sto.rys4you, youtube:sto.rys
 alien-yt-kurz-07-2 (2026-11-04T02:30:00): {"status":"failed","plattform":"failed","fehler":"YouTube upload session initialization failed: 400 {\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"The user has exceeded the number of videos they may upload.\",\n    \"errors\": [\n      {\n        \"message\": \"The user has exceeded the number of videos they may upload.\",\n        \"domain\": \"youtube.video\",\n        \"reason\": \"uploadLimitExceeded\"\n      }\n    ]\n  }\n}\n"}
 mann-yt-kurz-05 (2026-11-05T00:30:00): {"status":"failed","plattform":"failed","fehler":"YouTube upload session initialization failed: 400 {\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"The user has exceeded the number of videos they may upload.\",\n    \"errors\": [\n      {\n        \"message\": \"The user has exceeded the number of videos they may upload.\",\n        \"domain\": \"youtube.video\",\n        \"reason\": \"uploadLimitExceeded\"\n      }\n    ]\n  }\n}\n"}
 mann-yt-kurz-06 (2026-11-05T02:30:00): {"status":"failed","plattform":"failed","fehler":"YouTube upload session initialization failed: 400 {\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"The user has exceeded the number of videos they may upload.\",\n    \"errors\": [\n      {\n        \"message\": \"The user has exceeded the number of videos they may upload.\",\n        \"domain\": \"youtube.video\",\n        \"reason\": \"uploadLimitExceeded\"\n      }\n    ]\n  }\n}\n"}
-taeglich-tiktok-en-s02-teil-8-v2 (2026-11-08T08:01:00): {"status":"published","plattform":"published","url":"https://www.tiktok.com/@storys4you_eng/video/7705692372067159328"}
-taeglich-insta-s01-f07-v2 (2026-11-08T07:48:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfeJlcND9XA/"}
-taeglich-insta-s01-f08-v2 (2026-11-08T11:21:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfeiAkEFCKX/"}
-taeglich-insta-s01-f09-v2 (2026-11-08T14:25:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/Dfe3AW6EY2g/"}
-taeglich-insta-s01-f10-v2 (2026-11-08T16:54:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DffIDf1Dyh8/"}
-taeglich-yt-s01-f07-v2 (2026-11-08T08:45:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=MByAqYPsN_0"}
-taeglich-yt-s01-f08-v2 (2026-11-08T11:23:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=hl3_oXQGzME"}
-taeglich-yt-s01-f09-v2 (2026-11-08T14:17:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=se5yR1zW9ZU"}
-taeglich-yt-s01-f10-v2 (2026-11-08T17:50:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=bw7SXmE9fGM"}
-taeglich-tiktok-s03-teil-1 (2026-11-08T08:04:00): {"status":"published","plattform":"published","url":"https://www.tiktok.com/@storys4you.de1/video/7705693134356761888"}
-taeglich-tiktok-s03-teil-2 (2026-11-08T12:27:00): {"status":"published","plattform":"published","url":"https://www.tiktok.com/@storys4you.de1/video/7705760942717439265"}
-taeglich-tiktok-s03-teil-3 (2026-11-08T16:16:00): {"status":"published","plattform":"published","url":"https://www.tiktok.com/@storys4you.de1/video/7705820003211201825"}
-taeglich-insta-s03-f01 (2026-11-08T19:42:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DffbSKfkxmX/"}
-taeglich-tiktok-en-s03-teil-1 (2026-11-08T08:04:00): {"status":"published","plattform":"published","url":"https://www.tiktok.com/@storys4you_eng/video/7705693134033882400"}
-taeglich-tiktok-en-s03-teil-2 (2026-11-08T12:27:00): {"status":"published","plattform":"published","url":"https://www.tiktok.com/@storys4you_eng/video/7705760957988916513"}
-taeglich-tiktok-en-s03-teil-3 (2026-11-08T16:16:00): {"status":"published","plattform":"published","url":"https://www.tiktok.com/@storys4you_eng/video/7705819962828393761"}
+taeglich-tiktok-s03-teil-4 (2026-11-08T20:28:00): {"status":"published","plattform":"published","url":"https://www.tiktok.com/@storys4you.de1/video/7705884927643913505"}
+taeglich-insta-s03-f02 (2026-11-09T07:44:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/Dfgt-BpEehB/"}
+taeglich-insta-s03-f03 (2026-11-09T11:09:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfhFamOjHkO/"}
+taeglich-insta-s03-f04 (2026-11-09T13:46:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfhXWDMmbia/"}
+taeglich-yt-s03-f01 (2026-11-08T20:27:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=htzR_6W5eWk"}
+taeglich-yt-s03-f02 (2026-11-09T08:16:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=BKAn5Ri3pGs"}
+taeglich-yt-s03-f03 (2026-11-09T11:47:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=fhh9A9_2Dz0"}
+taeglich-yt-s03-f04 (2026-11-09T14:13:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=_YTKOe4RDbs"}
+taeglich-tiktok-en-s03-teil-4 (2026-11-08T20:28:00): {"status":"published","plattform":"published","url":"https://www.tiktok.com/@storys4you_eng/video/7705884923030195488"}
+taeglich-tiktok-s02-teil-2-v2 (2026-11-09T07:39:00): {"status":"published","plattform":"published","url":"https://www.tiktok.com/@storys4you.de1/video/7706057822190046496"}
+taeglich-tiktok-s02-teil-3-v2 (2026-11-09T11:52:00): {"status":"published","plattform":"published","url":"https://www.tiktok.com/@storys4you.de1/video/7706122979448507681"}
+taeglich-tiktok-s02-teil-4-v2 (2026-11-09T15:38:00): {"status":"published","plattform":"published","url":"https://www.tiktok.com/@storys4you.de1/video/7706181259143253280"}
+taeglich-insta-s02-f02-v2 (2026-11-09T16:33:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfhqjOGiOEV/"}
+taeglich-insta-s02-f03-v2 (2026-11-09T19:51:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfiBHEugOIJ/"}
+taeglich-yt-s02-f02-v2 (2026-11-09T17:02:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=v0A6he2Ho1I"}
+taeglich-insta-en-s03-f01-v2 (2026-11-09T08:10:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/Dfgw450gTEO/"}
+taeglich-insta-en-s03-f02-v2 (2026-11-09T10:45:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfhCuczjf2S/"}
+taeglich-insta-en-s03-f03-v2 (2026-11-09T13:38:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfhWbYQioql/"}
+taeglich-insta-en-s03-f04-v2 (2026-11-09T17:05:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/DfhuI4ZgmsT/"}
+taeglich-yt-en-s03-f01-v2 (2026-11-09T08:46:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=WRPyD-s6oY8"}
+taeglich-yt-en-s03-f02-v2 (2026-11-09T11:48:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=2k8T-d82O7s"}
+taeglich-yt-en-s03-f03-v2 (2026-11-09T14:36:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=oKvzPFly5GU"}
+taeglich-yt-en-s03-f04-v2 (2026-11-09T17:23:00): {"status":"published","plattform":"published","url":"https://www.youtube.com/watch?v=-tqQAFEnfVY"}
+taeglich-tiktok-en-s01-teil-1-v2 (2026-11-09T00:40:00): {"status":"published","plattform":"published","url":"https://www.tiktok.com/@storys4you_eng/video/7705949849643994401"}
+taeglich-insta-en-s01-f01-v2 (2026-11-09T19:37:00): {"status":"published","plattform":"published","url":"https://www.instagram.com/reel/Dfh_lhxGeRs/"}
