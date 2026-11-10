@@ -27,7 +27,15 @@
  "offene_faeden": [
   "140 Menschen, aber nur 1 Haus mit 1 Bett: alle schlafen draußen, am Meer wird es kalt",
   "Feld 5,3 neben dem Haus ist markiert: dort wird als Erstes gebaut, was der Top-Kommentar sagt",
-  "Ziel: die ganze Welt soll zum Reich gehören (195 Länder)"
+  "Ziel: die ganze Welt soll zum Reich gehören (195 Länder)",
+  "Bei 200 Einwohnern wird die Insel ein Dorf mit eigenem Namen (in Folge 1 versprochen)"
  ],
- "schwierigkeit": "leicht (Folge 1–3: jeder Vorschlag klappt sofort)"
+ "schwierigkeit": "leicht (Folge 1–3: jeder Vorschlag klappt sofort)",
+ "meilensteine": {
+  "200": "Dorf mit eigenem Namen",
+  "500": "Stadt",
+  "1000": "Hafen und erstes Schiff",
+  "2500": "zweite Insel",
+  "10000": "Großstadt"
+ }
 }

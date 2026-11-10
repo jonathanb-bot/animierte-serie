@@ -67,3 +67,20 @@ Es gelten zusätzlich alle offenen Issues mit Label `dringlich`, `CLAUDE.md` und
 - Look (Jonathan 9.11.: „realistischer“): Miniatur-Optik mit Sonne von links oben, Schlagschatten, natürlicher Küste (`form=rund`, Standard), Klippen, flachem Wasser und Brandung, **immer gestochen scharf** (Jonathan 9.11.): keine Hintergrund-Unschärfe bei `reich` (ist im Engine-Code abgeschaltet), keine Tiefenunschärfe (`tiltshift=1` nur auf ausdrücklichen Wunsch). Neue Typen im selben Stil bauen: Licht- und Schattenseite, Kontaktschatten, Eintrag in `SCHATTEN`. Ein späterer Eintrag auf demselben Feld ersetzt den früheren.
 - Neue Bauten, die die Community beschließt, kommen als neue Typen in `BAU` bzw. `BODEN` dazu (bestehende nicht verändern).
 - Icons für Einblendungen: `einwohner`, `haus`, `kristall`, `aehre`, `axt` (engine/welt.js) und alle aus `engine/objekte.js`.
+
+## Erkenntnisse aus der Recherche (10.11., Bericht `reports/Kommentargesteuerte Kurzvideo Serien.md`)
+
+Belegte Fälle (Twitch Plays Pokémon, r/place, The Button, Boaty McBoatface, Homestuck, Battle for Dream Island) und Plattformregeln, umgesetzt so:
+
+1. **Ergebnis zuerst, Regel in den ersten 3 Sekunden.** Ab Folge 2 zeigt das erste Bild das Neugebaute, der Hook-Text trägt den Stand („TAG 3 · 152 EINWOHNER“), Satz 1 sagt, was gebaut wurde (mit „du/dein“). Die Regel „1 Follower = 1 Einwohner“ kommt in jeder Folge einmal kurz vor, als Tatsache der Welt, **nie als Aufforderung** („Folge, damit …“ ist tabu, TikTok wertet das als manipulierte Follows).
+2. **Neuheit trägt nur Tage.** Jede Folge braucht eine eigene Spannung (Problem, Wendung, Preis), die nicht davon abhängt, was gewählt wurde. Die Zuschauer entscheiden **was gebaut wird**, die Erzählung bleibt bei uns.
+3. **Fortschritt sichtbar machen (Goal-Gradient):** Meilensteine nach Einwohnern: **200 = Dorf mit Namen, 500 = Stadt, 1.000 = Hafen und erstes Schiff, 2.500 = zweite Insel, 10.000 = Großstadt.** In jeder Folge „X von Y bis zum nächsten Meilenstein“ (Einblendung). Rückgänge nie als Strafe erzählen.
+4. **Gebautes bleibt (IKEA-Effekt).** Nichts wird gelöscht. Katastrophen beschädigen höchstens, und das wird repariert.
+5. **Mitmachen leicht machen:** Im Post-Text 2–3 konkrete Bauideen plus „oder etwas ganz anderes“ (Vorlage statt leeres Blatt). Keine Aufforderungen wie „Like den Kommentar, den du willst“, keine Codes („kommentiere 1 oder 2“).
+6. **Fester Stichtag:** gezählt wird, was bis zum Start des täglichen Laufs (13:47) vorliegt, alle drei Plattformen zusammen, meiste Likes; bei Gleichstand mehr Antworten, dann der frühere. Den TikTok-„Top“-Kommentar nicht ungeprüft übernehmen, die Like-Zahlen zählen (`welt/stand.py`).
+7. **Witz-Sieger** („Boaty McBoatface“) werden mit „Ja, aber …“ in die Welt übersetzt, nicht abgelehnt. Unzulässiges (Beleidigung, Gewalt, Sexuelles, Politik, echte Personen, Werbung) wird kommentarlos übersprungen.
+8. **Kaltstart:** Bei 140 Followern sind sehr wenige Kommentare normal. Ersatzkette: passender Kommentar → wenn keiner: ein Ereignis der Welt (Sturm, Fremder am Strand, Fund) zwingt eine Entscheidung → die Einwohner entscheiden selbst. Keine erfundenen Kommentare, keine Fake-Konten.
+9. **Keine Nutzernamen, keine Screenshots** von Kommentaren (DSGVO, Zitatrecht, minderjährige Kommentierende). Nur die Idee in eigenen Worten.
+10. **Jede Folge auch ohne Vorwissen verständlich:** Neue kommen über den Algorithmus, nicht über Folge 1.
+11. **Sichtbare Abwechslung** (YouTube-Regel gegen massenproduzierte Inhalte): Tageszeit, Wetter, Kameraweg, Ereignisse von Folge zu Folge ändern.
+12. **Offene Punkte für Jonathan:** Issue #8 (keine Fragen ans Publikum) gegen den Kern der Serie (Ausnahme festhalten?); Issue #15 (KI-Haken aus) gegen TikToks Kennzeichnungspflicht für KI-Inhalte (KI-Stimme unklar).
