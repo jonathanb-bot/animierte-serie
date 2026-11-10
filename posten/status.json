@@ -7981,33 +7981,39 @@
   "loeschHttp": 200
  },
  "taeglich-tiktok-w001-v2": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-10T18:49:00",
   "zernioId": "6af25717af824ccb465aed36",
   "yt": false,
   "k": 0,
   "konto": "storys4you.de1",
   "http": 201,
-  "am": "2026-11-09T23:28:24.067Z"
+  "am": "2026-11-09T23:28:24.067Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "taeglich-insta-w001-v2": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-10T18:28:00",
   "zernioId": "6af2571a197daf567415531f",
   "yt": false,
   "k": 0,
   "konto": "sto.rys4you",
   "http": 201,
-  "am": "2026-11-09T23:28:26.628Z"
+  "am": "2026-11-09T23:28:26.628Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "taeglich-yt-w001-v2": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-10T18:58:00",
   "zernioId": "6af2571c197daf5674155332",
   "yt": true,
   "k": 1,
   "konto": "sto.rys4you",
   "http": 201,
-  "am": "2026-11-09T23:28:28.953Z"
+  "am": "2026-11-09T23:28:28.953Z",
+  "geloescht": true,
+  "loeschHttp": 200
  }
 }
