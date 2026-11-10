@@ -15,36 +15,30 @@
 @zeit tag
 
 == Hook ==
-// Nah an der Insel: ein kleines Haus, du davor, sonst nur Gras
-[reich groesse=9 bauten="haus@4,4|baum@1,1|baum@7,2|tanne@0,6|fels@8,7|baum@2,8" praesident=4,5 nah=2 blick=4,4 palette=tuerkis palette_staerke=0.2 zoom-rein hooktext="DEIN REICH: 1 HAUS"] Das ist dein Reich. Ein Haus. Und du.
-// Die ganze Insel von weiter weg, mitten im Meer
-[reich groesse=9 bauten="haus@4,4|baum@1,1|baum@7,2|tanne@0,6|fels@8,7|baum@2,8" praesident=4,5 palette=tuerkis palette_staerke=0.2 zoom-raus ein="Insel>#81 FELDER>pfeil"] Eine kleine Insel mitten im Meer. Einundachtzig Felder Gras.
-// Nah: leere Wiese neben dem Haus, Wind im Gras
-[reich groesse=9 bauten="haus@4,4|baum@1,1|baum@7,2|tanne@0,6|fels@8,7|baum@2,8" praesident=4,5 nah=1.6 blick=5,5 palette=tuerkis palette_staerke=0.2 schwenk-links] Kein Laden, keine Straße, kein Strom. Nur Wind und Meer.
-// Nahaufnahme: du, stolz
-[gesicht du ort=reich froh palette=tuerkis] Du bist der Gründer. Und der erste Präsident.
-// Titelkarte
-[titel oben="Folge 1" gross="DEINE WELT" unten="Ein Haus" farbe=#123a4a akzent=#7fe0e8 groesse=170 hud=false palette=tuerkis zoom-rein] Aber ein Reich ohne Menschen ist nur eine Insel.
-
-== Die Einwohner ==
-// Die Insel füllt sich: alle Einwohner leuchten neu auf
-[reich groesse=9 bauten="haus@4,4|baum@1,1|baum@7,2|tanne@0,6|fels@8,7|baum@2,8" leute=140 neu=140 praesident=4,5 palette=tuerkis palette_staerke=0.2 zoom-rein ein="folgt>1 FOLLOWER>einwohner|Insel>= 1 EINWOHNER>haus"] Deshalb gilt hier eine Regel: Jeder, der diesem Kanal folgt, zieht auf deine Insel.
-// Infokarte: Einwohnerzahl
-[objekt objekte="einwohner:Einwohner" gross="140 EINWOHNER" palette=tuerkis zoom-rein] Heute sind das hundertvierzig Menschen.
-// Nah am Haus, ringsum Gedränge
-[reich groesse=9 bauten="haus@4,4|baum@1,1|baum@7,2|tanne@0,6|fels@8,7|baum@2,8" leute=140 praesident=4,5 nah=2.2 blick=4,4 palette=tuerkis palette_staerke=0.2 schwenk-rechts ein="Haus>1 HAUS>haus|Bett>1 BETT"] Hundertvierzig Leute. Ein Haus. Mit genau einem Bett.
+// Nah an der Insel: das Haus, du davor, ringsum leuchten 140 Einwohner auf
+[reich groesse=9 bauten="haus@4,4|baum@1,1|baum@7,2|tanne@0,6|fels@8,7|baum@2,8" leute=140 neu=140 praesident=4,5 nah=1.7 blick=4,4 palette=tuerkis palette_staerke=0.2 zoom-rein hooktext="1 FOLLOWER = 1 EINWOHNER"] Jeder, der diesem Kanal folgt, lebt ab heute auf deiner Insel.
+// Ganz nah am Haus, ringsum Gedränge
+[reich groesse=9 bauten="haus@4,4|baum@1,1|baum@7,2|tanne@0,6|fels@8,7|baum@2,8" leute=140 praesident=4,5 nah=2.3 blick=4,4 palette=tuerkis palette_staerke=0.2 schwenk-rechts ein="Hundertvierzig>#140 EINWOHNER>einwohner|Haus>1 HAUS>haus"] Hundertvierzig Menschen. Ein Haus. Mit genau einem Bett.
 // Nahaufnahme: du, etwas überfordert
-[gesicht du ort=reich froh palette=tuerkis] „Okay. Das wird eng.“
+[gesicht du ort=reich froh palette=tuerkis palette_staerke=0.2] „Okay. Das wird richtig eng hier.“
+// Die ganze Insel von weiter weg, mitten im Meer
+[reich groesse=9 bauten="haus@4,4|baum@1,1|baum@7,2|tanne@0,6|fels@8,7|baum@2,8" leute=140 praesident=4,5 palette=tuerkis palette_staerke=0.2 zoom-raus ein="Insel>#81 FELDER>pfeil"] Eine kleine Insel mitten im Meer. Kein Laden, keine Straße, kein Strom. Nur Wind, Gras und Meer.
+// Nahaufnahme: du, stolz
+[gesicht du ort=reich froh palette=tuerkis palette_staerke=0.2] Du bist der Gründer. Und der erste Präsident. Ganz ohne Wahl.
+// Titelkarte
+[titel oben="Folge 1" gross="DEINE WELT" unten="Ein Haus" farbe=#123a4a akzent=#7fe0e8 groesse=170 hud=false palette=tuerkis zoom-rein] Aber was hier gebaut wird, bestimmt ihr.
 
 == Die Regeln ==
 // Infokarte: was man bauen kann
-[objekt objekte="haus:Häuser|aehre:Felder|gluehbirne:Strom" gross="IHR BESTIMMT ALLES" palette=tuerkis zoom-rein] Was hier gebaut wird, bestimmt ihr. Häuser, Felder, Straßen, Hochhäuser. Alles, was ihr wollt.
+[objekt objekte="haus:Häuser|aehre:Felder|gluehbirne:Strom" gross="IHR BESTIMMT ALLES" palette=tuerkis zoom-rein] Häuser, Felder, Straßen, Hochhäuser. Alles, was ihr wollt.
 // Nah auf das freie Feld mit Baustelle
-[reich groesse=9 bauten="haus@4,4|baum@1,1|baum@7,2|tanne@0,6|fels@8,7|baum@2,8|baustelle@5,3" leute=60 praesident=4,5 markiere=5,3 nah=2 blick=5,3 palette=tuerkis palette_staerke=0.2 zoom-rein ein="Brunnen>BRUNNEN>eimer|Flughafen>FLUGHAFEN>pfeil"] Ein Brunnen, eine Burg, ein Flughafen. Ihr sagt es, und es wird gebaut.
+[reich groesse=9 bauten="haus@4,4|baum@1,1|baum@7,2|tanne@0,6|fels@8,7|baum@2,8|baustelle@5,3" leute=60 praesident=4,5 markiere=5,3 nah=2 blick=5,3 palette=tuerkis palette_staerke=0.2 zoom-rein ein="Brunnen>BRUNNEN>eimer|Flughafen>FLUGHAFEN>pfeil"] Ein Brunnen, eine Burg, ein Flughafen, ein Zoo. Ihr sagt es, und es wird gebaut.
 // Die Insel am Abend mit einer Baustelle und markiertem Feld
 [reich groesse=9 zeit=abend bauten="haus@4,4|baum@1,1|baum@7,2|tanne@0,6|fels@8,7|baum@2,8|baustelle@5,3" leute=140 praesident=4,5 markiere=5,3 palette=orange palette_staerke=0.2 zoom-rein ein="Likes>TOP-KOMMENTAR>herz|Tag>1 SCHRITT PRO TAG>uhr"] Der Kommentar mit den meisten Likes wird gebaut. Jeden Tag ein Schritt.
+// Infokarte: erster Meilenstein
+[objekt objekte="einwohner:Heute 140|haus:Bei 200" gross="200 = EIN DORF" palette=tuerkis zoom-rein] Und bei zweihundert Einwohnern wird aus deiner Insel ein richtiges Dorf. Mit eigenem Namen.
 // Erde im Weltall
-[weltall palette=tuerkis zoom-raus ein="Welt>ZIEL: GANZE WELT>weltuhr"] Und das Ziel ist groß. Am Ende soll die ganze Welt zu deinem Reich gehören.
+[weltall palette=tuerkis zoom-raus ein="Welt>ZIEL: GANZE WELT>weltuhr"] Das große Ziel: Am Ende soll die ganze Welt zu deinem Reich gehören.
 // Erde näher, Lichter der Städte
 [weltall palette=blau zoom-rein ein="Land>#195 LÄNDER"] Jedes Land. Jedes Meer. Jede Insel da draußen.
 // Infokarte: Schwierigkeit steigt

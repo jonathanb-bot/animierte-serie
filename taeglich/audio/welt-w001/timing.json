@@ -1,165 +1,147 @@
 {
- "dauer": 76.668,
+ "dauer": 77.768,
  "einstellungen": [
   {
    "nr": 1,
    "typ": "reich",
    "kapitel": 1,
    "start": 0.0,
-   "dauer": 4.046,
+   "dauer": 5.03,
    "emotion": "erzaehlend",
-   "text": "Das ist dein Reich. Ein Haus. Und du."
+   "text": "Jeder, der diesem Kanal folgt, lebt ab heute auf deiner Insel."
   },
   {
    "nr": 2,
    "typ": "reich",
    "kapitel": 1,
-   "start": 4.046,
-   "dauer": 4.142,
+   "start": 5.03,
+   "dauer": 5.318,
    "emotion": "erzaehlend",
-   "text": "Eine kleine Insel mitten im Meer. Einundachtzig Felder Gras."
+   "text": "Hundertvierzig Menschen. Ein Haus. Mit genau einem Bett."
   },
   {
    "nr": 3,
-   "typ": "reich",
+   "typ": "gesicht",
    "kapitel": 1,
-   "start": 8.188,
-   "dauer": 4.526,
-   "emotion": "erzaehlend",
-   "text": "Kein Laden, keine Straße, kein Strom. Nur Wind und Meer."
+   "start": 10.348,
+   "dauer": 2.414,
+   "emotion": "froh",
+   "text": "„Okay. Das wird richtig eng hier.“"
   },
   {
    "nr": 4,
-   "typ": "gesicht",
+   "typ": "reich",
    "kapitel": 1,
-   "start": 12.714,
-   "dauer": 3.038,
-   "emotion": "froh",
-   "text": "Du bist der Gründer. Und der erste Präsident."
+   "start": 12.762,
+   "dauer": 7.838,
+   "emotion": "erzaehlend",
+   "text": "Eine kleine Insel mitten im Meer. Kein Laden, keine Straße, kein Strom. Nur Wind, Gras und Meer."
   },
   {
    "nr": 5,
-   "typ": "titel",
+   "typ": "gesicht",
    "kapitel": 1,
-   "start": 15.752,
-   "dauer": 3.23,
-   "emotion": "erzaehlend",
-   "text": "Aber ein Reich ohne Menschen ist nur eine Insel."
+   "start": 20.6,
+   "dauer": 4.814,
+   "emotion": "froh",
+   "text": "Du bist der Gründer. Und der erste Präsident. Ganz ohne Wahl."
   },
   {
    "nr": 6,
-   "typ": "reich",
-   "kapitel": 2,
-   "start": 18.982,
-   "dauer": 4.934,
+   "typ": "titel",
+   "kapitel": 1,
+   "start": 25.414,
+   "dauer": 3.11,
    "emotion": "erzaehlend",
-   "text": "Deshalb gilt hier eine Regel: Jeder, der diesem Kanal folgt, zieht auf deine Insel."
+   "text": "Aber was hier gebaut wird, bestimmt ihr."
   },
   {
    "nr": 7,
    "typ": "objekt",
    "kapitel": 2,
-   "start": 23.916,
-   "dauer": 2.27,
+   "start": 28.524,
+   "dauer": 4.406,
    "emotion": "erklaerend",
-   "text": "Heute sind das hundertvierzig Menschen."
+   "text": "Häuser, Felder, Straßen, Hochhäuser. Alles, was ihr wollt."
   },
   {
    "nr": 8,
    "typ": "reich",
    "kapitel": 2,
-   "start": 26.186,
-   "dauer": 4.046,
+   "start": 32.93,
+   "dauer": 5.87,
    "emotion": "erzaehlend",
-   "text": "Hundertvierzig Leute. Ein Haus. Mit genau einem Bett."
+   "text": "Ein Brunnen, eine Burg, ein Flughafen, ein Zoo. Ihr sagt es, und es wird gebaut."
   },
   {
    "nr": 9,
-   "typ": "gesicht",
+   "typ": "reich",
    "kapitel": 2,
-   "start": 30.232,
-   "dauer": 1.91,
-   "emotion": "froh",
-   "text": "„Okay. Das wird eng.“"
-  },
-  {
-   "nr": 10,
-   "typ": "objekt",
-   "kapitel": 3,
-   "start": 32.142,
-   "dauer": 6.854,
-   "emotion": "erklaerend",
-   "text": "Was hier gebaut wird, bestimmt ihr. Häuser, Felder, Straßen, Hochhäuser. Alles, was ihr wollt."
-  },
-  {
-   "nr": 11,
-   "typ": "reich",
-   "kapitel": 3,
-   "start": 38.996,
-   "dauer": 5.15,
-   "emotion": "erzaehlend",
-   "text": "Ein Brunnen, eine Burg, ein Flughafen. Ihr sagt es, und es wird gebaut."
-  },
-  {
-   "nr": 12,
-   "typ": "reich",
-   "kapitel": 3,
-   "start": 44.146,
-   "dauer": 4.43,
+   "start": 38.8,
+   "dauer": 5.102,
    "emotion": "erzaehlend",
    "text": "Der Kommentar mit den meisten Likes wird gebaut. Jeden Tag ein Schritt."
   },
   {
-   "nr": 13,
-   "typ": "weltall",
-   "kapitel": 3,
-   "start": 48.576,
-   "dauer": 5.054,
-   "emotion": "erzaehlend",
-   "text": "Und das Ziel ist groß. Am Ende soll die ganze Welt zu deinem Reich gehören."
+   "nr": 10,
+   "typ": "objekt",
+   "kapitel": 2,
+   "start": 43.902,
+   "dauer": 6.326,
+   "emotion": "erklaerend",
+   "text": "Und bei zweihundert Einwohnern wird aus deiner Insel ein richtiges Dorf. Mit eigenem Namen."
   },
   {
-   "nr": 14,
+   "nr": 11,
    "typ": "weltall",
-   "kapitel": 3,
-   "start": 53.63,
-   "dauer": 3.998,
+   "kapitel": 2,
+   "start": 50.228,
+   "dauer": 4.622,
+   "emotion": "erzaehlend",
+   "text": "Das große Ziel: Am Ende soll die ganze Welt zu deinem Reich gehören."
+  },
+  {
+   "nr": 12,
+   "typ": "weltall",
+   "kapitel": 2,
+   "start": 54.85,
+   "dauer": 3.59,
    "emotion": "erzaehlend",
    "text": "Jedes Land. Jedes Meer. Jede Insel da draußen."
   },
   {
-   "nr": 15,
+   "nr": 13,
    "typ": "objekt",
-   "kapitel": 3,
-   "start": 57.628,
-   "dauer": 4.886,
+   "kapitel": 2,
+   "start": 58.44,
+   "dauer": 4.838,
    "emotion": "erklaerend",
    "text": "Am Anfang ist es leicht. Aber je größer dein Reich wird, desto schwerer wird es."
   },
   {
-   "nr": 16,
+   "nr": 14,
    "typ": "reich",
-   "kapitel": 4,
-   "start": 62.514,
-   "dauer": 5.606,
+   "kapitel": 3,
+   "start": 63.278,
+   "dauer": 5.918,
    "emotion": "erzaehlend",
    "text": "Die erste Nacht. Hundertvierzig Menschen schlafen unter freiem Himmel. Am Meer wird es kalt."
   },
   {
-   "nr": 17,
+   "nr": 15,
    "typ": "gesicht",
-   "kapitel": 4,
-   "start": 68.12,
-   "dauer": 3.254,
+   "kapitel": 3,
+   "start": 69.196,
+   "dauer": 3.614,
    "emotion": "erzaehlend",
    "text": "Und du liegst wach und schaust auf dein einziges Haus."
   },
   {
-   "nr": 18,
+   "nr": 16,
    "typ": "reich",
-   "kapitel": 4,
-   "start": 71.374,
-   "dauer": 5.294,
+   "kapitel": 3,
+   "start": 72.81,
+   "dauer": 4.958,
    "emotion": "erzaehlend",
    "text": "Morgen wird das erste freie Feld bebaut. Was dort entsteht, entscheidet ihr."
   }
