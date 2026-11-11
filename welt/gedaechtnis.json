@@ -1,36 +1,56 @@
 {
  "_info": "Weltgedächtnis „Deine Welt“ (Issue #32). Wahrheit über den Zustand des Reichs. Vor jedem Drehbuch lesen, nach jeder Folge aktualisieren. Regeln: welt/serienbibel.md",
- "folge": 1,
- "datum": "2026-11-10",
- "tag": 1,
- "einwohner": 140,
- "einwohner_quelle": "Follower aller 6 Konten, posten/analyse.json vom 2026-11-09T20:29Z (TikTok de 68, Instagram de 8, YouTube de 53, TikTok en 1, YouTube en 9, Instagram en 1)",
+ "folge": 2,
+ "datum": "2026-11-11",
+ "tag": 2,
+ "einwohner": 162,
+ "einwohner_quelle": "Follower aller 6 Konten, posten/analyse.json vom 2026-11-11T12:52Z (TikTok de 72, Instagram de 13, YouTube de 55, TikTok en 1, YouTube en 19, Instagram en 2)",
  "praesident": "du (Figur du, blaue Jacke, gelbe Schärpe), Gründer und erster Präsident",
  "bild": {
   "reich": {
    "groesse": 9,
-   "bauten": "haus@4,4|baum@1,1|baum@7,2|tanne@0,6|fels@8,7|baum@2,8",
-   "praesident": "4,5",
-   "naechstes_feld": "5,3"
+   "bauten": "haus@4,4|baum@1,1|baum@7,2|tanne@0,6|fels@8,7|baum@2,8|gericht@5,3",
+   "praesident": "3,5",
+   "naechstes_feld": "3,4"
   }
  },
  "bestand": {
   "haeuser": 1,
   "betten": 1,
-  "felder_frei": 75,
+  "felder_frei": 74,
   "essen": "nichts angebaut, keine Vorräte erwähnt",
   "wasser": "Meer ringsum, kein Süßwasser erwähnt",
-  "strom": "keiner"
+  "strom": "keiner",
+  "gerichte": 1,
+  "richter": "ein einfacher Einwohner (namenlos), seit Tag 2 erster Richter"
  },
- "community_regeln": [],
- "entscheidungen": [],
- "offene_faeden": [
-  "140 Menschen, aber nur 1 Haus mit 1 Bett: alle schlafen draußen, am Meer wird es kalt",
-  "Feld 5,3 neben dem Haus ist markiert: dort wird als Erstes gebaut, was der Top-Kommentar sagt",
-  "Ziel: die ganze Welt soll zum Reich gehören (195 Länder)",
-  "Bei 200 Einwohnern wird die Insel ein Dorf mit eigenem Namen (in Folge 1 versprochen)"
+ "community_regeln": [
+  "Niemand steht über dem Gesetz, auch der Präsident nicht (erstes Urteil des Gerichts, Tag 2)",
+  "Das einzige Bett wird jeden Abend verlost (Urteil Tag 2); du schläfst wie alle draußen"
  ],
- "schwierigkeit": "leicht (Folge 1–3: jeder Vorschlag klappt sofort)",
+ "entscheidungen": [
+  {
+   "folge": 2,
+   "tag": 2,
+   "kommentar": "Ein Gericht ich werde Richter",
+   "likes": 2,
+   "antworten": 0,
+   "plattform": "tiktok",
+   "weitere": "Ein Hotel (1 Like, YouTube); Ein Raketensilo (0 Likes, TikTok)",
+   "umsetzung": "Gericht (Säulenbau mit Giebel, goldener Waage, Fahne) auf Feld 5,3; der erste Richter ist ein einfacher Einwohner (der Wunsch „ich werde Richter“ ohne Namen)",
+   "preis": "ein ganzer Tag Arbeit aller Einwohner (Steine vom Strand), keine Hütte gebaut, noch eine Nacht ohne Dach",
+   "folgen": "erstes Urteil: niemand steht über dem Gesetz; das Bett wird verlost, du schläfst draußen"
+  }
+ ],
+ "offene_faeden": [
+  "162 Menschen, nur 1 Haus mit 1 Bett: zweiter Fall beim Richter – alle brauchen ein Dach",
+  "Feld 3,4 links vom Haus ist markiert: dort wird als Nächstes gebaut, was der Top-Kommentar sagt",
+  "Noch kein Essen und kein Süßwasser erwähnt",
+  "Bei 200 Einwohnern wird die Insel ein Dorf mit eigenem Namen (noch 38)",
+  "Ziel: die ganze Welt soll zum Reich gehören (195 Länder)",
+  "Vorschläge, die schon da waren: Hotel, Raketensilo (später als großes Projekt denkbar)"
+ ],
+ "schwierigkeit": "leicht (Folge 1–3: jeder Vorschlag klappt sofort; Preis Tag 2: eine Nacht ohne Dach)",
  "meilensteine": {
   "200": "Dorf mit eigenem Namen",
   "500": "Stadt",

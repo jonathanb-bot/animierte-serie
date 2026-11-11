@@ -127,6 +127,37 @@
     "lufs": -14.6,
     "dauer_s": 77.17
    }
+  },
+  {
+   "id": "welt-w002",
+   "datum": "2026-11-11",
+   "titel": "Deine Welt – Folge 2: Das Gericht",
+   "emoji": "⚖️",
+   "serie": "Deine Welt (Issue #32)",
+   "stimmung": "spannend",
+   "thema": "Top-Kommentar: ein Gericht, ein Einwohner wird Richter; erstes Urteil: niemand steht über dem Gesetz, das einzige Bett wird verlost, du schläfst draußen",
+   "stil": "leichte 3D-Optik (Kulisse reich, isometrisch)",
+   "kulissen": [
+    "reich",
+    "gesicht",
+    "objekt",
+    "titel"
+   ],
+   "beschreibung": "Tag 2: Auf deiner Insel steht ein Gericht – und das erste Urteil trifft dich selbst. Jeder Follower ist ein Einwohner. Der Kommentar mit den meisten Likes wird gebaut. Ideen fürs nächste Feld: Hütten für alle, ein Feld mit Essen, ein Brunnen oder etwas ganz anderes.",
+   "hashtags": [
+    "#deinewelt",
+    "#animation",
+    "#story",
+    "#storytime",
+    "#deutsch",
+    "#aufbau",
+    "#reich"
+   ],
+   "tags": [
+    "animation",
+    "story",
+    "deine welt"
+   ]
   }
  ]
 }
