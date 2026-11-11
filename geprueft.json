@@ -1860,6 +1860,12 @@
    "bild_s": 77.17,
    "ton_s": 77.16,
    "lufs": -14.6
+  },
+  "taeglich/welt-w002.mp4": {
+   "ok": true,
+   "bild_s": 79.03,
+   "ton_s": 79.02,
+   "lufs": -14.5
   }
  },
  "serien": {
@@ -2056,6 +2062,10 @@
   "welt-w001": {
    "titel": "Deine Welt – Folge 1: Ein Haus",
    "datei": "taeglich/welt-w001.mp4"
+  },
+  "welt-w002": {
+   "titel": "Deine Welt – Folge 2: Das Gericht",
+   "datei": "taeglich/welt-w002.mp4"
   }
  },
  "taeglich_staffeln": {
