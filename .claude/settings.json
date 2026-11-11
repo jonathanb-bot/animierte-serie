@@ -1,18 +1,14 @@
 {
-  "extraKnownMarketplaces": {
-    "claude-video": {
-      "source": { "source": "github", "repo": "bradautomates/claude-video", "ref": "v0.3.2" }
-    }
-  },
-  "enabledPlugins": {
-    "watch@claude-video": true
-  },
   "hooks": {
     "SessionStart": [
       {
         "matcher": "",
         "hooks": [
-          { "type": "command", "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/watch-einrichten.sh\"", "timeout": 120 }
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/watch-einrichten.sh\"",
+            "timeout": 120
+          }
         ]
       }
     ]

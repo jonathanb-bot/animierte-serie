@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# /watch (Plugin bradautomates/claude-video, Jonathans Wunsch 11.11.): Videos Bild für Bild ansehen,
+# /watch (Skill .claude/skills/watch aus bradautomates/claude-video, Jonathans Wunsch 11.11.): Videos Bild für Bild ansehen,
 # auch aus Cloud-Sitzungen vom Handy. Nur in Cloud-Sitzungen: yt-dlp nachinstallieren und die
 # Einstellungen setzen, damit /watch ohne Einrichtungsfragen startet.
 # Lokaler Modus (Bilder + Untertitel). Der Gemini-Modus des Plugins scheitert am Proxy (HTTP 502, getestet 11.11.).
