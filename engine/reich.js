@@ -9,7 +9,7 @@
    - groesse: Kantenlänge der Insel in Feldern (wächst mit dem Reich); form=rund (Standard) rundet die Küste natürlich ab
    - bauten: typ@i,j (oder typ@i1,j1-i2,j2 für ein Rechteck). Ein späterer Eintrag ersetzt einen früheren auf demselben
      Feld (so wird aus einem Haus ein Hochhaus). Typen: BAU (haus, hochhausN, baum, tanne, fels, brunnen, laterne,
-     baustelle, boot) und BODEN (weg, strasse, feld, wasser, platz, sand)
+     baustelle, boot, gericht) und BODEN (weg, strasse, feld, wasser, platz, sand)
    - leute: Einwohner = Follower (einfache Figuren, höchstens 3 pro freiem Feld sichtbar), neu: so viele leuchten auf
    - praesident: Feld des Gründers (du, blaue Jacke, gelbe Schärpe), markiere: pulsierender Ring auf einem Feld
    - nah/blick: Ausschnitt um ein Feld (nah=2 = doppelt so groß); `fokus`/`zoom` sind Kamera-Angaben der Engine
@@ -157,6 +157,50 @@
   BAU.boot = (x, y, ei, ej, TW, P, t, r, idx) => { const b = Math.sin(t * 1.5 + idx) * TW * 0.01, Z = Pt(x, y + b, ei, ej);
     poly([Z(-0.35, -0.08), Z(0.35, -0.08), Z(0.45, 0), Z(0.35, 0.08), Z(-0.35, 0.08)], "#8a5a3a");
     const m = Z(0, 0, 0); line(m[0], m[1], m[0], m[1] - TW * 0.4, TW * 0.012, "#5a3a26"); poly([[m[0], m[1] - TW * 0.38], [m[0] + TW * 0.2, m[1] - TW * 0.12], [m[0], m[1] - TW * 0.1]], "#f4f0e6"); };
+
+  // Folge 2 (11.11., Top-Kommentar): Gericht, kleiner Säulenbau mit Giebel, goldener Waage und Fahne
+  BAU.gericht = (x, y, ei, ej, TW, P, t, r, idx) => {
+    const stein = mix(P.wand[0], "#d8d6d0", 0.55), dach = mix(P.dach[3], "#4e6274", 0.55), nacht = P.sonne < 0.5, Z = Pt(x, y, ei, ej);
+    quader(x, y, ei, ej, 0.84, 0.84, TW * 0.03, shade(stein, -0.14), null, P);
+    quader(x, y - TW * 0.03, ei, ej, 0.78, 0.78, TW * 0.03, shade(stein, -0.06), null, P);
+    const z0 = TW * 0.06, h = TW * 0.3, w = 0.62, dT = 0.68, dk = 0.48, ob = -dT / 2 + dk / 2;
+    const c = Z(0, ob, z0), q = quader(c[0], c[1], ei, ej, w, dk, h, stein, null, P), { D, C, B } = q.fl;
+    const t0 = [lerp(D[0], C[0], 0.38), lerp(D[1], C[1], 0.38)], t1 = [lerp(D[0], C[0], 0.62), lerp(D[1], C[1], 0.62)], th = h * 0.6;
+    poly([t0, t1, [t1[0], t1[1] - th], [t0[0], t0[1] - th]], nacht ? P.glasN : "#6a4a36");
+    if (nacht) glut((t0[0] + t1[0]) / 2, t0[1] - th / 2, TW * 0.35, P.glasN, 0.35);
+    line((t0[0] + t1[0]) / 2, (t0[1] + t1[1]) / 2, (t0[0] + t1[0]) / 2, (t0[1] + t1[1]) / 2 - th, 1.2, rgba("#000000", 0.25));
+    fenster(B, C, h * 0.3, h * 0.42, 2, P, r, nacht, true);
+    for (let k = 0; k < 4; k++) { // Säulen vor der Front
+      const a = -w / 2 + 0.05 + k * (w - 0.1) / 3, u = Z(a, dT / 2 - 0.05, z0), o = Z(a, dT / 2 - 0.05, z0 + h), cw = TW * 0.026;
+      ellipse(u[0], u[1], cw * 1.5, cw * 0.6, rgba(P.schatten, 0.3));
+      ctx.fillStyle = lgrad(u[0] - cw, 0, u[0] + cw, 0, [[0, shade(stein, 0.12)], [0.45, stein], [1, shade(stein, -0.3)]]); ctx.fillRect(u[0] - cw, o[1], cw * 2, u[1] - o[1]);
+      box(o[0] - cw * 1.5, o[1] - TW * 0.012, cw * 3, TW * 0.02, 1, shade(stein, 0.06)); box(u[0] - cw * 1.5, u[1] - TW * 0.014, cw * 3, TW * 0.016, 1, shade(stein, -0.08));
+    }
+    const W = w + 0.1, Dd = dT + 0.08, za = z0 + h, ha = TW * 0.045;
+    const g = Z(0, 0, za); quader(g[0], g[1], ei, ej, W, Dd, ha, shade(stein, 0.04), null, P);
+    const zr = za + ha, hr = TW * 0.17;
+    const a0 = Z(-W / 2, -Dd / 2, zr), b0 = Z(W / 2, -Dd / 2, zr), c0 = Z(W / 2, Dd / 2, zr), d0 = Z(-W / 2, Dd / 2, zr), f1 = Z(0, -Dd / 2, zr + hr), f2 = Z(0, Dd / 2, zr + hr);
+    poly([a0, d0, f2, f1], shade(dach, 0.12));
+    ctx.fillStyle = lgrad(f1[0], f1[1], c0[0], c0[1], [[0, shade(dach, -0.02)], [1, shade(dach, -0.2)]]); poly([b0, c0, f2, f1]); ctx.fill();
+    for (let k = 1; k < 4; k++) { const a = k / 4; line(lerp(f1[0], b0[0], a), lerp(f1[1], b0[1], a), lerp(f2[0], c0[0], a), lerp(f2[1], c0[1], a), 1.2, rgba(shade(dach, -0.4), 0.45)); }
+    poly([d0, c0, f2], shade(stein, 0.08));
+    const m = [(d0[0] + c0[0]) / 2, (d0[1] + c0[1]) / 2], ins = (p, k) => [lerp(p[0], (d0[0] + c0[0] + f2[0]) / 3, k), lerp(p[1], (d0[1] + c0[1] + f2[1]) / 3, k)];
+    poly([ins(d0, 0.2), ins(c0, 0.2), ins(f2, 0.2)], shade(stein, -0.06));
+    line(f1[0], f1[1], f2[0], f2[1], TW * 0.016, shade(dach, 0.3));
+    line(d0[0], d0[1], f2[0], f2[1], 1.4, rgba("#ffffff", 0.45)); line(d0[0], d0[1], c0[0], c0[1], TW * 0.01, rgba("#000000", 0.2));
+    // goldene Waage im Giebel
+    const gz = [lerp(m[0], f2[0], 0.42), lerp(m[1], f2[1], 0.42)], gs = TW * 0.05, gold = nacht ? "#c8a44a" : "#f0c45a", kipp = Math.sin(t * 1.2) * 0.08;
+    line(gz[0], gz[1] - gs * 0.9, gz[0], gz[1] + gs * 0.5, TW * 0.008, gold);
+    const l = [gz[0] - gs * Math.cos(kipp), gz[1] - gs * 0.7 - gs * Math.sin(kipp)], rr = [gz[0] + gs * Math.cos(kipp), gz[1] - gs * 0.7 + gs * Math.sin(kipp)];
+    line(l[0], l[1], rr[0], rr[1], TW * 0.008, gold);
+    for (const p of [l, rr]) { line(p[0], p[1], p[0], p[1] + gs * 0.45, 1, gold); ellipse(p[0], p[1] + gs * 0.5, gs * 0.32, gs * 0.12, gold); }
+    if (nacht) glut(gz[0], gz[1], TW * 0.12, "#ffd27a", 0.25);
+    // Fahne auf dem First
+    const fp = f1, fh = TW * 0.32; line(fp[0], fp[1], fp[0], fp[1] - fh, TW * 0.01, "#4a4e5a");
+    const wv = k => Math.sin(t * 4 + k * 3) * TW * 0.012;
+    poly([[fp[0], fp[1] - fh], [fp[0] + TW * 0.09, fp[1] - fh + wv(0.5)], [fp[0] + TW * 0.18, fp[1] - fh + TW * 0.02 + wv(1)], [fp[0] + TW * 0.18, fp[1] - fh + TW * 0.1 + wv(1)], [fp[0] + TW * 0.09, fp[1] - fh + TW * 0.08 + wv(0.5)], [fp[0], fp[1] - fh + TW * 0.09]], nacht ? "#3a8a9a" : "#3ec8d0");
+  };
+  SCHATTEN.gericht = TW => ({ w: 0.78, d: 0.78, h: TW * 0.56 });
 
   const ecken = (x, y, TW, TH, s = 1) => [[x, y - TH / 2 * s], [x + TW / 2 * s, y], [x, y + TH / 2 * s], [x - TW / 2 * s, y]];
   const BODEN = {

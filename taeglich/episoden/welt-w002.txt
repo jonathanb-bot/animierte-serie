@@ -1,0 +1,55 @@
+# Deine Welt – Folge 2: Das Gericht
+@musik musik/welt-w002.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung spannend
+@vortrag lebendig
+@klang studio
+@mund zitate
+@einblenden aus
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette tuerkis
+@zeit tag
+
+== Hook ==
+// Ergebnis zuerst: das fertige Gericht im Abendlicht, ringsum die Einwohner
+[reich groesse=9 zeit=abend bauten="haus@4,4|baum@1,1|baum@7,2|tanne@0,6|fels@8,7|baum@2,8|gericht@5,3" leute=162 praesident=4,5 nah=2.3 blick=5,3 palette=orange palette_staerke=0.2 zoom-rein hooktext="TAG 2 · 162 EINWOHNER"] Auf deiner Insel steht jetzt ein Gericht. Noch vor dem zweiten Haus.
+// Nahaufnahme: du, staunend
+[gesicht du ort=reich zeit=abend froh palette=orange palette_staerke=0.2] „Ein Gericht. Na gut. Dann eben Gesetze.“
+// Titelkarte
+[titel oben="Folge 2" gross="DEINE WELT" unten="Das Gericht" farbe=#123a4a akzent=#7fe0e8 groesse=170 hud=false palette=tuerkis zoom-rein] Ihr habt entschieden: ein Gericht. Und einer von euch wird Richter.
+
+== Der Bau ==
+// Morgen: Baustelle auf dem markierten Feld, alle tragen Steine
+[reich groesse=9 bauten="haus@4,4|baum@1,1|baum@7,2|tanne@0,6|fels@8,7|baum@2,8|baustelle@5,3" leute=162 praesident=5,4 markiere=5,3 nah=2.1 blick=5,3 palette=tuerkis palette_staerke=0.2 schwenk-rechts ein="Steine>STEINE VOM STRAND>pfeil|Tag>#1 TAG ARBEIT>uhr"] Am Morgen schleppen alle Steine vom Strand hoch. Den ganzen Tag, in der prallen Sonne.
+// Ganz nah an der Baustelle
+[reich groesse=9 bauten="haus@4,4|baum@1,1|baum@7,2|tanne@0,6|fels@8,7|baum@2,8|baustelle@5,3" leute=162 praesident=5,4 nah=2.8 blick=5,3 palette=tuerkis palette_staerke=0.2 zoom-rein ein="Preis>PREIS: KEINE HÜTTE>haus"] Der Preis: Keiner baut heute an einer Hütte. Wieder schläft fast jeder draußen.
+// Abend: das Gericht ist fertig
+[reich groesse=9 zeit=abend bauten="haus@4,4|baum@1,1|baum@7,2|tanne@0,6|fels@8,7|baum@2,8|gericht@5,3" leute=162 praesident=4,5 nah=2.6 blick=5,3 palette=orange palette_staerke=0.2 zoom-raus ein="Säulen>#4 SÄULEN|Waage>GOLDENE WAAGE>waage"] Am Abend steht es. Vier weiße Säulen, ein Giebel, oben eine goldene Waage.
+// Die ganze Insel, neue Einwohner leuchten auf
+[reich groesse=9 zeit=abend bauten="haus@4,4|baum@1,1|baum@7,2|tanne@0,6|fels@8,7|baum@2,8|gericht@5,3" leute=162 neu=22 praesident=4,5 palette=orange palette_staerke=0.2 zoom-rein ein="Zweiundzwanzig>#22 NEUE>einwohner"] Mit dem Boot kommen zweiundzwanzig Neue an. Jeder Follower ist hier ein Einwohner.
+// Infokarte: der erste Richter
+[objekt objekte="waage:Richter|einwohner:Einwohner" gross="ERSTER RICHTER" palette=tuerkis zoom-rein] Der erste Richter ist einer von ihnen. Kein Präsident, ein ganz normaler Einwohner.
+
+== Der erste Fall ==
+// Nah auf das einzige Haus
+[reich groesse=9 zeit=abend bauten="haus@4,4|baum@1,1|baum@7,2|tanne@0,6|fels@8,7|baum@2,8|gericht@5,3" leute=162 praesident=4,5 nah=2.5 blick=4,4 palette=orange palette_staerke=0.2 schwenk-links ein="Bett>#1 BETT>haus"] Und der erste Fall kommt sofort. Es gibt immer noch genau ein Haus. Mit einem Bett.
+// Nahaufnahme: du, selbstsicher
+[gesicht du ort=reich zeit=abend froh palette=orange palette_staerke=0.2] „Das Bett gehört natürlich dem Präsidenten.“
+// Nah auf das Gericht, Fenster leuchten
+[reich groesse=9 zeit=nacht bauten="haus@4,4|baum@1,1|baum@7,2|tanne@0,6|fels@8,7|baum@2,8|gericht@5,3" leute=162 praesident=5,4 nah=2.8 blick=5,3 palette=blau palette_staerke=0.2 zoom-rein ein="Urteil>URTEIL>waage"] Der Richter schaut dich lange an. Im Saal ist es ganz still. Dann das Urteil.
+// Infokarte: das erste Gesetz
+[objekt objekte="waage:Gesetz|einwohner:Auch du" gross="ALLE GLEICH" palette=blau zoom-rein] Niemand steht über dem Gesetz. Auch du nicht.
+// Nacht: das Haus, ein Fenster leuchtet
+[reich groesse=9 zeit=nacht bauten="haus@4,4|baum@1,1|baum@7,2|tanne@0,6|fels@8,7|baum@2,8|gericht@5,3" leute=162 praesident=3,5 nah=2.4 blick=4,4 palette=blau palette_staerke=0.2 schwenk-rechts ein="verlost>DAS LOS ENTSCHEIDET>herz"] Ab jetzt wird das Bett jeden Abend verlost. Heute gewinnt jemand aus dem ersten Boot.
+// Nahaufnahme: du, draußen im Gras
+[gesicht du ort=reich zeit=nacht ruhig palette=blau] Und du liegst draußen. Zwischen deinen Leuten, auf dem kalten, nassen Gras.
+
+== Tag 2 ==
+// Die ganze Insel bei Nacht
+[reich groesse=9 zeit=nacht bauten="haus@4,4|baum@1,1|baum@7,2|tanne@0,6|fels@8,7|baum@2,8|gericht@5,3" leute=162 praesident=3,5 palette=blau palette_staerke=0.2 zoom-raus ein="Hundertzweiundsechzig>#162 EINWOHNER>einwohner|Dorf>38 BIS ZUM DORF>haus"] Tag zwei. Hundertzweiundsechzig Einwohner, ein Haus, ein Gericht. Noch achtunddreißig bis zum Dorf mit eigenem Namen.
+// Nah auf das nächste freie Feld
+[reich groesse=9 zeit=nacht bauten="haus@4,4|baum@1,1|baum@7,2|tanne@0,6|fels@8,7|baum@2,8|gericht@5,3" leute=162 praesident=3,5 markiere=3,4 nah=2.3 blick=3,4 palette=blau palette_staerke=0.2 zoom-rein] Beim Richter liegt schon der zweite Fall: hundertzweiundsechzig Menschen ohne Dach. Morgen wird das nächste Feld bebaut.

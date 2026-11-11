@@ -1,0 +1,149 @@
+{
+ "dauer": 79.64,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "reich",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 5.174,
+   "emotion": "erzaehlend",
+   "text": "Auf deiner Insel steht jetzt ein Gericht. Noch vor dem zweiten Haus."
+  },
+  {
+   "nr": 2,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 5.174,
+   "dauer": 2.99,
+   "emotion": "froh",
+   "text": "„Ein Gericht. Na gut. Dann eben Gesetze.“"
+  },
+  {
+   "nr": 3,
+   "typ": "titel",
+   "kapitel": 1,
+   "start": 8.164,
+   "dauer": 4.262,
+   "emotion": "erzaehlend",
+   "text": "Ihr habt entschieden: ein Gericht. Und einer von euch wird Richter."
+  },
+  {
+   "nr": 4,
+   "typ": "reich",
+   "kapitel": 2,
+   "start": 12.426,
+   "dauer": 4.934,
+   "emotion": "erzaehlend",
+   "text": "Am Morgen schleppen alle Steine vom Strand hoch. Den ganzen Tag, in der prallen Sonne."
+  },
+  {
+   "nr": 5,
+   "typ": "reich",
+   "kapitel": 2,
+   "start": 17.36,
+   "dauer": 5.198,
+   "emotion": "erzaehlend",
+   "text": "Der Preis: Keiner baut heute an einer Hütte. Wieder schläft fast jeder draußen."
+  },
+  {
+   "nr": 6,
+   "typ": "reich",
+   "kapitel": 2,
+   "start": 22.558,
+   "dauer": 5.966,
+   "emotion": "erzaehlend",
+   "text": "Am Abend steht es. Vier weiße Säulen, ein Giebel, oben eine goldene Waage."
+  },
+  {
+   "nr": 7,
+   "typ": "reich",
+   "kapitel": 2,
+   "start": 28.524,
+   "dauer": 5.318,
+   "emotion": "erzaehlend",
+   "text": "Mit dem Boot kommen zweiundzwanzig Neue an. Jeder Follower ist hier ein Einwohner."
+  },
+  {
+   "nr": 8,
+   "typ": "objekt",
+   "kapitel": 2,
+   "start": 33.842,
+   "dauer": 4.838,
+   "emotion": "erklaerend",
+   "text": "Der erste Richter ist einer von ihnen. Kein Präsident, ein ganz normaler Einwohner."
+  },
+  {
+   "nr": 9,
+   "typ": "reich",
+   "kapitel": 3,
+   "start": 38.68,
+   "dauer": 5.318,
+   "emotion": "erzaehlend",
+   "text": "Und der erste Fall kommt sofort. Es gibt immer noch genau ein Haus. Mit einem Bett."
+  },
+  {
+   "nr": 10,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 43.998,
+   "dauer": 2.534,
+   "emotion": "froh",
+   "text": "„Das Bett gehört natürlich dem Präsidenten.“"
+  },
+  {
+   "nr": 11,
+   "typ": "reich",
+   "kapitel": 3,
+   "start": 46.532,
+   "dauer": 4.574,
+   "emotion": "erzaehlend",
+   "text": "Der Richter schaut dich lange an. Im Saal ist es ganz still. Dann das Urteil."
+  },
+  {
+   "nr": 12,
+   "typ": "objekt",
+   "kapitel": 3,
+   "start": 51.106,
+   "dauer": 3.398,
+   "emotion": "erklaerend",
+   "text": "Niemand steht über dem Gesetz. Auch du nicht."
+  },
+  {
+   "nr": 13,
+   "typ": "reich",
+   "kapitel": 3,
+   "start": 54.504,
+   "dauer": 4.862,
+   "emotion": "erzaehlend",
+   "text": "Ab jetzt wird das Bett jeden Abend verlost. Heute gewinnt jemand aus dem ersten Boot."
+  },
+  {
+   "nr": 14,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 59.366,
+   "dauer": 5.414,
+   "emotion": "erzaehlend",
+   "text": "Und du liegst draußen. Zwischen deinen Leuten, auf dem kalten, nassen Gras."
+  },
+  {
+   "nr": 15,
+   "typ": "reich",
+   "kapitel": 4,
+   "start": 64.78,
+   "dauer": 8.054,
+   "emotion": "erzaehlend",
+   "text": "Tag zwei. Hundertzweiundsechzig Einwohner, ein Haus, ein Gericht. Noch achtunddreißig bis zum Dorf mit eigenem Namen."
+  },
+  {
+   "nr": 16,
+   "typ": "reich",
+   "kapitel": 4,
+   "start": 72.834,
+   "dauer": 6.806,
+   "emotion": "erzaehlend",
+   "text": "Beim Richter liegt schon der zweite Fall: hundertzweiundsechzig Menschen ohne Dach. Morgen wird das nächste Feld bebaut."
+  }
+ ]
+}

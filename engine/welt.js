@@ -251,6 +251,11 @@
     I.kristall = t => { const p = 0.8 + 0.2 * Math.sin(t * 2); glut(0, 0, 150, "#7af0ff", 0.5 * p); poly([[0, -120], [55, -30], [30, 110], [-30, 110], [-55, -30]], "#5ad8f0"); poly([[0, -120], [55, -30], [0, 0]], "#b8f8ff"); poly([[0, 0], [30, 110], [-30, 110]], "#3ab0d0"); };
     I.aehre = t => { line(0, 110, 0, -90, 10, "#c89a3a"); for (let k = 0; k < 5; k++) for (const s of [-1, 1]) { ctx.save(); ctx.translate(0, -70 + k * 30); ctx.rotate(s * 0.6); ellipse(s * 22, 0, 26, 12, "#e8c25a"); ctx.restore(); } ellipse(0, -100, 12, 22, "#f2d06a"); };
     I.axt = t => { ctx.save(); ctx.rotate(-0.5); box(-10, -100, 20, 220, 8, "#8a5a3a"); poly([[-10, -100], [-90, -120], [-100, -40], [-10, -50]], "#b8c4d0"); line(-90, -118, -100, -42, 8, "#e8f0f8"); ctx.restore(); };
+    I.waage = t => { const k = Math.sin(t * 1.5) * 0.08, g = "#f0c45a", gd = "#c8963a"; // Gericht (Deine Welt, Folge 2)
+      box(-70, 110, 140, 22, 8, gd); box(-12, -100, 24, 215, 8, g); circle(0, -112, 18, g);
+      ctx.save(); ctx.translate(0, -80); ctx.rotate(k); box(-125, -9, 250, 18, 9, g);
+      for (const s of [-1, 1]) { line(s * 115, 0, s * 80, 80, 5, gd); line(s * 115, 0, s * 150, 80, 5, gd); ctx.save(); ctx.translate(s * 115, 82); ctx.rotate(-k); ellipse(0, 0, 50, 15, g); ellipse(0, -4, 40, 9, "#f8dc8a"); ctx.restore(); }
+      ctx.restore(); };
     A.ICONS = Object.keys(I);
   }
 })();
