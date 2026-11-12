@@ -168,6 +168,37 @@
     "lufs": -14.5,
     "dauer_s": 79.03
    }
+  },
+  {
+   "id": "welt-w003",
+   "datum": "2026-11-12",
+   "titel": "Deine Welt – Folge 3: Ein Dach für alle",
+   "emoji": "⛺",
+   "serie": "Deine Welt (Issue #32)",
+   "stimmung": "spannend",
+   "thema": "Kein Kommentar unter Folge 2 – der zweite Fall beim Richter erzwingt die Entscheidung: zwei Häuser, 20 Zelte, ein Brunnen; dazu die offenen Wünsche von gestern: Werkstatt als erster Schritt zum Raketensilo, Feld fürs Hotel abgesteckt (Kasse reicht noch nicht)",
+   "stil": "leichte 3D-Optik (Kulisse reich, isometrisch), Spielstand-Leiste mit Kasse",
+   "kulissen": [
+    "reich",
+    "gesicht",
+    "objekt",
+    "titel"
+   ],
+   "beschreibung": "Tag 3: Auf deiner Insel schläft keiner mehr draußen – und fürs Hotel fehlen noch 215.200 €. Jeder Follower ist ein Einwohner. Der Kommentar mit den meisten Likes wird gebaut. Ideen: ein Feld mit Essen, ein Imbiss, ein Hafen fürs erste Boot oder etwas ganz anderes.",
+   "hashtags": [
+    "#deinewelt",
+    "#animation",
+    "#story",
+    "#storytime",
+    "#deutsch",
+    "#aufbau",
+    "#insel"
+   ],
+   "tags": [
+    "animation",
+    "story",
+    "deine welt"
+   ]
   }
  ]
 }

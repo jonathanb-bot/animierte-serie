@@ -1,34 +1,43 @@
 {
  "_info": "Weltgedächtnis „Deine Welt“ (Issue #32). Wahrheit über den Zustand des Reichs. Vor jedem Drehbuch lesen, nach jeder Folge aktualisieren. Regeln: welt/serienbibel.md",
- "folge": 2,
- "datum": "2026-11-11",
- "tag": 2,
+ "folge": 3,
+ "datum": "2026-11-12",
+ "tag": 3,
  "einwohner": 162,
- "einwohner_quelle": "Follower aller 6 Konten, posten/analyse.json vom 2026-11-11T12:52Z (TikTok de 72, Instagram de 13, YouTube de 55, TikTok en 1, YouTube en 19, Instagram en 2)",
+ "einwohner_quelle": "Follower aller 6 Konten, posten/analyse.json vom 2026-11-12T12:53Z (TikTok de 71, Instagram de 13, YouTube de 55, TikTok en 1, YouTube en 19, Instagram en 3) – keine Veränderung zu gestern",
  "praesident": "du (Figur du, blaue Jacke, gelbe Schärpe), Gründer und erster Präsident",
  "bild": {
   "reich": {
    "groesse": 9,
-   "bauten": "haus@4,4|baum@1,1|baum@7,2|tanne@0,6|fels@8,7|baum@2,8|gericht@5,3",
-   "praesident": "3,5",
-   "naechstes_feld": "3,4"
+   "bauten": "haus@4,4|baum@1,1|baum@7,2|tanne@0,6|fels@8,7|baum@2,8|gericht@5,3|haus@3,4|haus@3,3|zelt@4,6-5,8|zelt@6,6-7,7|brunnen@4,5|werkstatt@2,4",
+   "praesident": "5,6",
+   "naechstes_feld": "2,6",
+   "schilder": "5,3:Richter · @robbe9354|2,4:Werkstatt · @rylly_killer|2,6:Hotel · @EllenZaum",
+   "hinweis": "Feld 2,6 ist fürs Hotel abgesteckt (noch keine Baustelle)"
   }
  },
  "bestand": {
-  "haeuser": 1,
-  "betten": 1,
-  "felder_frei": 74,
+  "haeuser": 3,
+  "betten": 9,
+  "zelte": 20,
+  "zeltplaetze": 160,
+  "schlafen_im_zelt": 153,
+  "schlafen_draussen": 0,
+  "felder_frei": "ca. 60",
   "essen": "nichts angebaut, keine Vorräte erwähnt",
-  "wasser": "Meer ringsum, kein Süßwasser erwähnt",
+  "wasser": "ein Brunnen (Feld 4,5), erstes Süßwasser seit Tag 3",
   "strom": "keiner",
   "gerichte": 1,
-  "richter": "ein einfacher Einwohner (namenlos), seit Tag 2 erster Richter",
-  "zelte": 0,
-  "schlafen_draussen": 161
+  "werkstaetten": 1,
+  "richter": "@robbe9354 (seit Tag 2), im Video „Richter Robbe“",
+  "offene_rollen": [
+   "Mechaniker für die Werkstatt"
+  ]
  },
  "community_regeln": [
   "Niemand steht über dem Gesetz, auch der Präsident nicht (erstes Urteil des Gerichts, Tag 2)",
-  "Das einzige Bett wird jeden Abend verlost (Urteil Tag 2); du schläfst wie alle draußen"
+  "Die Betten werden jeden Abend verlost (Urteil Tag 2); auch der Präsident nimmt am Los teil – Tag 3: du schläfst in Zelt Nr. 20",
+  "Ab Tag 3 schläft niemand mehr im Freien (zweites Urteil des Richters)"
  ],
  "entscheidungen": [
   {
@@ -42,17 +51,28 @@
    "umsetzung": "Gericht (Säulenbau mit Giebel, goldener Waage, Fahne) auf Feld 5,3; der erste Richter ist ein einfacher Einwohner (der Wunsch „ich werde Richter“ ohne Namen)",
    "preis": "ein ganzer Tag Arbeit aller Einwohner (Steine vom Strand), keine Hütte gebaut, noch eine Nacht ohne Dach",
    "folgen": "erstes Urteil: niemand steht über dem Gesetz; das Bett wird verlost, du schläfst draußen"
+  },
+  {
+   "folge": 3,
+   "tag": 3,
+   "kommentar": null,
+   "hinweis": "Unter Folge 2 gab es auf keiner Plattform einen Kommentar (TikTok 8 Likes, 0 Kommentare; Instagram und YouTube 0/0). Ersatzkette: der offene Faden „zweiter Fall beim Richter: 162 Menschen ohne Dach“ zwingt die Entscheidung; du entscheidest das Nötigste. Dazu als Nebenbauten die zwei echten, noch offenen Wünsche unter Folge 1 (mit Sprechblase und Namensschild).",
+   "umsetzung": "2 Häuser à 4 Betten (Felder 3,4 und 3,3), 20 große Zelte à 8 Plätze (Zeltfeld 4,6–5,8 und 6,6–7,7), Brunnen (4,5) für Süßwasser; Wunsch „Ein Raketensilo“ (TikTok, 1 Like) → erster Schritt Werkstatt (2,4), sucht einen Mechaniker; Wunsch „Ein Hotel 😊“ (YouTube, 1 Like) → Feld 2,6 abgesteckt, Kasse reicht noch nicht",
+   "kasse_rechnung": "162.000 (Start) + 0 neue Einwohner + 8 Likes × 100 (800) + 0 Kommentare = 162.800; − 80.000 (2 Häuser) − 10.000 (20 Zelte) − 8.000 (Brunnen) − 30.000 (Werkstatt) = 34.800 €",
+   "preis": "128.000 € aus der Kasse; fürs Hotel fehlen 215.200 €",
+   "folgen": "niemand schläft mehr draußen; 9 Betten, 153 im Zelt; Betten werden weiter verlost, du verlierst und schläfst in Zelt 20"
   }
  ],
  "offene_faeden": [
-  "162 Menschen, nur 1 Haus mit 1 Bett: zweiter Fall beim Richter – alle brauchen ein Dach",
-  "Feld 3,4 links vom Haus ist markiert: dort wird als Nächstes gebaut, was der Top-Kommentar sagt",
-  "Noch kein Essen und kein Süßwasser erwähnt",
+  "Hotel für @EllenZaum: Feld 2,6 abgesteckt, kostet 250.000 €, in der Kasse 34.800 € (es fehlen 215.200 €)",
+  "Raketensilo für @rylly_killer: Werkstatt steht (erster Schritt), sucht noch einen Mechaniker",
+  "153 schlafen im Zelt, nur 9 Betten – mehr Häuser oder ein Hochhaus wären der nächste Schritt",
+  "Noch kein Essen angebaut (Feld/Imbiss wurde im Post-Text vorgeschlagen)",
   "Bei 200 Einwohnern wird die Insel ein Dorf mit eigenem Namen (noch 38)",
-  "Ziel: die ganze Welt soll zum Reich gehören (195 Länder)",
-  "Vorschläge, die schon da waren: Hotel, Raketensilo (später als großes Projekt denkbar)"
+  "Du als Präsident hast noch kein eigenes Bett (Los entscheidet jeden Abend)",
+  "Ziel: die ganze Welt soll zum Reich gehören (195 Länder)"
  ],
- "schwierigkeit": "leicht (Folge 1–3: jeder Vorschlag klappt sofort; Preis Tag 2: eine Nacht ohne Dach)",
+ "schwierigkeit": "leicht (Folge 1–3); ab Folge 4 mittel: Platz wird knapp (ca. 60 freie Felder), Projekte brauchen Voraussetzungen (Hotel braucht Geld, Raketensilo Werkstatt + Mechaniker)",
  "meilensteine": {
   "200": "Dorf mit eigenem Namen",
   "500": "Stadt",
@@ -60,7 +80,7 @@
   "2500": "zweite Insel",
   "10000": "Großstadt"
  },
- "kasse": 162000,
+ "kasse": 34800,
  "kasse_info": "Seit 12.11. (Jonathan). Startkapital nach Folge 2: 1.000 € je Einwohner (162), Haus und Gericht waren Gründungsbauten ohne Kosten. Ab Folge 3: +1.000 € je neuem Einwohner, +100 € je Like, +500 € je Kommentar unter der letzten Folge, minus Baukosten (Richtwerte in der Serienbibel).",
  "bewohner": [
   {
@@ -68,21 +88,22 @@
    "plattform": "tiktok",
    "rolle": "erster Richter (Gericht auf Feld 5,3)",
    "seit_folge": 2,
-   "hinweis": "in Folge 2 noch ohne Namen gezeigt; ab Folge 3 mit Namen am Gericht"
-  }
- ],
- "vorschlaege_offen": [
-  {
-   "nutzer": "@EllenZaum",
-   "plattform": "youtube",
-   "text": "Ein Hotel 😊",
-   "likes": 1
+   "hinweis": "Folge 3: als „Richter Robbe“ mit Namensschild am Gericht, zweites Urteil: niemand schläft mehr draußen"
   },
   {
    "nutzer": "@rylly_killer",
    "plattform": "tiktok",
-   "text": "Ein Raketensilo",
-   "likes": 0
+   "rolle": "Werkstatt (Feld 2,4) – erster Schritt zu seinem Raketensilo",
+   "seit_folge": 3,
+   "hinweis": "Kommentar „Ein Raketensilo“ unter Folge 1; Name nicht gesprochen"
+  },
+  {
+   "nutzer": "@EllenZaum",
+   "plattform": "youtube",
+   "rolle": "künftiges Hotel (Feld 2,6 abgesteckt)",
+   "seit_folge": 3,
+   "hinweis": "Kommentar „Ein Hotel 😊“ unter Folge 1; im Video „Ellen“"
   }
- ]
+ ],
+ "vorschlaege_offen": []
 }
