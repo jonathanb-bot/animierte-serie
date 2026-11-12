@@ -1866,6 +1866,12 @@
    "bild_s": 79.03,
    "ton_s": 79.02,
    "lufs": -14.5
+  },
+  "taeglich/welt-w003.mp4": {
+   "ok": true,
+   "bild_s": 71.93,
+   "ton_s": 71.96,
+   "lufs": -14.6
   }
  },
  "serien": {
@@ -2066,6 +2072,10 @@
   "welt-w002": {
    "titel": "Deine Welt – Folge 2: Das Gericht",
    "datei": "taeglich/welt-w002.mp4"
+  },
+  "welt-w003": {
+   "titel": "Deine Welt – Folge 3: Ein Dach für alle",
+   "datei": "taeglich/welt-w003.mp4"
   }
  },
  "taeglich_staffeln": {
