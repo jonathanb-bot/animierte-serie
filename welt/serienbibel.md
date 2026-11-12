@@ -63,7 +63,7 @@ Es gelten zusätzlich alle offenen Issues mit Label `dringlich`, `CLAUDE.md` und
 ## Kulisse `reich` (engine/reich.js)
 
 `[reich groesse=9 zeit=tag|abend|nacht bauten="haus@4,4|baum@1,2|weg@4,5-4,8" leute=140 neu=12 praesident=4,5 markiere=5,4 nah=1.6 blick=4,4 palette_staerke=0.2]`
-- Bauten: `haus`, `hochhausN` (N Stockwerke), `baum`, `tanne`, `fels`, `brunnen`, `laterne`, `baustelle`, `boot`, `gericht` (Folge 2: Säulenbau mit Giebel, goldener Waage und Fahne); Bodenbeläge `weg`, `strasse`, `feld`, `wasser`, `platz`, `sand`.
+- Bauten: `haus`, `hochhausN` (N Stockwerke), `baum`, `tanne`, `fels`, `brunnen`, `laterne`, `baustelle`, `boot`, `gericht` (Folge 2: Säulenbau mit Giebel, goldener Waage und Fahne), `zelt` (2 Zelte pro Feld, Einwohner ohne Dach), `laden` (kleiner Laden mit gestreifter Markise und Schild, Farbe wechselt); Bodenbeläge `weg`, `strasse`, `feld`, `wasser`, `platz`, `sand`.
 - Look (Jonathan 9.11.: „realistischer“): Miniatur-Optik mit Sonne von links oben, Schlagschatten, natürlicher Küste (`form=rund`, Standard), Klippen, flachem Wasser und Brandung, **immer gestochen scharf** (Jonathan 9.11.): keine Hintergrund-Unschärfe bei `reich` (ist im Engine-Code abgeschaltet), keine Tiefenunschärfe (`tiltshift=1` nur auf ausdrücklichen Wunsch). Neue Typen im selben Stil bauen: Licht- und Schattenseite, Kontaktschatten, Eintrag in `SCHATTEN`. Ein späterer Eintrag auf demselben Feld ersetzt den früheren.
 - Neue Bauten, die die Community beschließt, kommen als neue Typen in `BAU` bzw. `BODEN` dazu (bestehende nicht verändern).
 - Icons für Einblendungen: `einwohner`, `haus`, `kristall`, `aehre`, `axt`, `waage` (engine/welt.js) und alle aus `engine/objekte.js`.
@@ -84,3 +84,17 @@ Belegte Fälle (Twitch Plays Pokémon, r/place, The Button, Boaty McBoatface, Ho
 10. **Jede Folge auch ohne Vorwissen verständlich:** Neue kommen über den Algorithmus, nicht über Folge 1.
 11. **Sichtbare Abwechslung** (YouTube-Regel gegen massenproduzierte Inhalte): Tageszeit, Wetter, Kameraweg, Ereignisse von Folge zu Folge ändern.
 12. **Offene Punkte für Jonathan:** Issue #8 (keine Fragen ans Publikum) gegen den Kern der Serie (Ausnahme festhalten?); Issue #15 (KI-Haken aus) gegen TikToks Kennzeichnungspflicht für KI-Inhalte (KI-Stimme unklar).
+
+## Ab Folge 3 (Analyse Timi-Insel, 12.11., `welt/analyse-timi-insel.md`)
+
+Ein Vergleichsvideo mit derselben Idee lief deutlich besser. Was wir übernehmen, ohne bestehende Regeln zu brechen (gilt vor „Format einer Folge“, wo es sich widerspricht):
+
+1. **Mehrere Kommentare bauen.** Der Top-Kommentar ist der Hauptbau („Ihr habt entschieden: …“). Dazu bis zu 4 weitere umsetzbare Kommentare (in Like-Reihenfolge, gleiche Prüfung wie oben) als kleine Bauten im Schnelldurchlauf, je eine Einstellung von ca. 3 s mit Preis-Einblendung. Ist einer zu groß, wird der erste Schritt gebaut („Für das Raketensilo braucht ihr erst eine Werkstatt“). In Gedächtnis und Chronik alle festhalten.
+2. **Tempo.** Alle 3–4 s ein neuer Bau oder eine neue Zahl. Weniger erklärende Sätze, die Kamera springt von Bau zu Bau (`nah=… blick=…`). Eine Wendung und der Cliffhanger bleiben, aber kürzer.
+3. **Spielstand in jeder Folge** (als `ein=`-Einblendungen, keine Leiste oben, Issue #19): Einwohner, Tag, Betten/Dächer und **„X schlafen im Zelt“** (Zeltfeld mit `zelt` zeigen), Kosten jedes Baus (Tage, Hände, Material, Felder).
+4. **Hook = Wachstum:** „Gestern X, heute Y Einwohner“ mit hochzählender Zahl (`#`), gleich danach das Neugebaute.
+5. **Modern und nahbar:** Die Insel darf schnell zu einem modernen Ort werden (Läden, Imbiss, Werkstatt, Tierheim, Arztpraxis, Hochhäuser, Straßen), sobald es nachvollziehbar ist. Keine Marken: „Modeladen“ statt Markenname.
+6. **Offene Rollen als Aussage:** „Der Laden sucht noch einen Bäcker.“ „Das Tierheim braucht noch drei Helfer.“ Nie als Frage, nie als Aufforderung.
+7. **Witz der Hauptfigur:** Du darfst eigene Wünsche haben, über die die Einwohner entscheiden („Und was ist mit dir? Das entscheiden deine Einwohner.“).
+
+Offen bei Jonathan (bis zur Entscheidung gelten die alten Regeln): Namen auf Gebäuden / Kommentare im Bild, Aufrufe am Ende, Spielstand-Leiste mit Kasse.

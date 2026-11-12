@@ -9,7 +9,7 @@
    - groesse: Kantenlänge der Insel in Feldern (wächst mit dem Reich); form=rund (Standard) rundet die Küste natürlich ab
    - bauten: typ@i,j (oder typ@i1,j1-i2,j2 für ein Rechteck). Ein späterer Eintrag ersetzt einen früheren auf demselben
      Feld (so wird aus einem Haus ein Hochhaus). Typen: BAU (haus, hochhausN, baum, tanne, fels, brunnen, laterne,
-     baustelle, boot, gericht) und BODEN (weg, strasse, feld, wasser, platz, sand)
+     baustelle, boot, gericht, zelt, laden) und BODEN (weg, strasse, feld, wasser, platz, sand)
    - leute: Einwohner = Follower (einfache Figuren, höchstens 3 pro freiem Feld sichtbar), neu: so viele leuchten auf
    - praesident: Feld des Gründers (du, blaue Jacke, gelbe Schärpe), markiere: pulsierender Ring auf einem Feld
    - nah/blick: Ausschnitt um ein Feld (nah=2 = doppelt so groß); `fokus`/`zoom` sind Kamera-Angaben der Engine
@@ -201,6 +201,40 @@
     poly([[fp[0], fp[1] - fh], [fp[0] + TW * 0.09, fp[1] - fh + wv(0.5)], [fp[0] + TW * 0.18, fp[1] - fh + TW * 0.02 + wv(1)], [fp[0] + TW * 0.18, fp[1] - fh + TW * 0.1 + wv(1)], [fp[0] + TW * 0.09, fp[1] - fh + TW * 0.08 + wv(0.5)], [fp[0], fp[1] - fh + TW * 0.09]], nacht ? "#3a8a9a" : "#3ec8d0");
   };
   SCHATTEN.gericht = TW => ({ w: 0.78, d: 0.78, h: TW * 0.56 });
+
+  // Vorbereitung 12.11. (Analyse Timi-Insel): Zelte für Einwohner ohne Dach, kleine Läden mit Markise
+  BAU.zelt = (x, y, ei, ej, TW, P, t, r, idx) => { // zwei Zelte pro Feld, Farbe wechselt
+    const F = ["#e0784e", "#4a9ad0", "#e8b84a", "#7a6ac8", "#4aa878", "#d8564a"], Z = Pt(x, y, ei, ej), nacht = P.sonne < 0.5;
+    for (const [a, b, k] of [[-0.16, -0.12, 0], [0.18, 0.14, 1]]) {
+      const f = nacht ? mix(F[(idx * 2 + k) % 6], "#2a3050", 0.55) : F[(idx * 2 + k) % 6], w = 0.17, d = 0.22, h = TW * 0.2;
+      const v0 = Z(a - w, b + d), v1 = Z(a + w, b + d), h0 = Z(a - w, b - d), h1 = Z(a + w, b - d), s0 = Z(a, b + d, h), s1 = Z(a, b - d, h);
+      ellipse(...Z(a, b), TW * 0.2, TW * 0.08, rgba(P.schatten, 0.25));
+      poly([h1, v1, s0, s1], shade(f, -0.22)); poly([h0, v0, s0, s1], shade(f, 0.08));
+      poly([v0, v1, s0], shade(f, -0.06)); const e = [lerp(v0[0], v1[0], 0.5), lerp(v0[1], v1[1], 0.5)];
+      poly([[e[0] - TW * 0.025, e[1]], [e[0] + TW * 0.025, e[1]], [lerp(e[0], s0[0], 0.6), lerp(e[1], s0[1], 0.6)]], nacht ? "#ffd27a" : shade(f, -0.45));
+      line(s0[0], s0[1], s1[0], s1[1], 1.4, rgba("#ffffff", 0.4));
+    }
+  };
+  SCHATTEN.zelt = TW => ({ w: 0.5, d: 0.5, h: TW * 0.16 });
+  BAU.laden = (x, y, ei, ej, TW, P, t, r, idx) => { // kleiner Laden mit gestreifter Markise und Schild
+    const M = ["#d8564a", "#3a8ad0", "#3aa878", "#e8a83a", "#8a6ac8"], m = M[idx % 5], wand = P.wand[(idx + 1) % 4], nacht = P.sonne < 0.5;
+    const h = TW * 0.24, w = 0.62, d = 0.5;
+    quader(x, y, ei, ej, w + 0.04, d + 0.04, TW * 0.03, P.sockel, null, P);
+    const q = quader(x, y - TW * 0.03, ei, ej, w, d, h, wand, shade(wand, -0.08), P), { D, C, B } = q.fl, Z = q.Z;
+    const sf = (a, b, z) => [lerp(D[0], C[0], a), lerp(D[1], C[1], a) - z];
+    poly([sf(0.08, 0, h * 0.08), sf(0.62, 0, h * 0.08), sf(0.62, 0, h * 0.62), sf(0.08, 0, h * 0.62)], nacht ? P.glasN : shade(P.glas, 0.05));
+    if (nacht) glut(...sf(0.35, 0, h * 0.35), TW * 0.4, P.glasN, 0.3);
+    poly([sf(0.7, 0, 0), sf(0.9, 0, 0), sf(0.9, 0, h * 0.62), sf(0.7, 0, h * 0.62)], shade(m, -0.35));
+    fenster(B, C, h * 0.3, h * 0.38, 1, P, r, nacht, true);
+    const ma = h * 0.66, mv = 0.14, n = 6; // Markise: schräg nach vorn
+    for (let k = 0; k < n; k++) { const a0 = k / n, a1 = (k + 1) / n;
+      const o0 = Z(-w / 2 + w * a0, d / 2, ma + TW * 0.06), o1 = Z(-w / 2 + w * a1, d / 2, ma + TW * 0.06), u1 = Z(-w / 2 + w * a1, d / 2 + mv, ma - TW * 0.02), u0 = Z(-w / 2 + w * a0, d / 2 + mv, ma - TW * 0.02);
+      poly([o0, o1, u1, u0], k % 2 ? "#f6f0e6" : m); }
+    const s0 = Z(-w / 2 + 0.08, d / 2, h * 1.02), s1 = Z(w / 2 - 0.08, d / 2, h * 1.02);
+    poly([s0, s1, [s1[0], s1[1] - TW * 0.07], [s0[0], s0[1] - TW * 0.07]], "#2a2e3a");
+    for (let k = 0; k < 5; k++) { const a = 0.18 + k * 0.15; const p = [lerp(s0[0], s1[0], a), lerp(s0[1], s1[1], a) - TW * 0.035]; box(p[0] - TW * 0.02, p[1] - TW * 0.008, TW * 0.04, TW * 0.016, 2, rgba(k % 2 ? "#ffd27a" : "#ffffff", 0.85)); }
+  };
+  SCHATTEN.laden = TW => ({ w: 0.66, d: 0.6, h: TW * 0.36 });
 
   const ecken = (x, y, TW, TH, s = 1) => [[x, y - TH / 2 * s], [x + TW / 2 * s, y], [x, y + TH / 2 * s], [x - TW / 2 * s, y]];
   const BODEN = {
