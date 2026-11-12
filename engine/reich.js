@@ -15,7 +15,7 @@
    - nah/blick: Ausschnitt um ein Feld (nah=2 = doppelt so groß); `fokus`/`zoom` sind Kamera-Angaben der Engine
 */
 (() => {
-  const { box, circle, ellipse, poly, line, shade, rgba, lgrad, rgrad, mix, lerp } = A;
+  const { box, circle, ellipse, poly, line, shade, rgba, lgrad, rgrad, mix, lerp, clamp, E } = A;
   const SZ = A.SZ;
   const rnd = seed => A.rnd(seed + (A._kgVar || 0) * 7919);
   const glut = (x, y, r, farbe, a = 1) => { ctx.fillStyle = rgrad(x, y, 0, r, [[0, rgba(farbe, 0.9 * a)], [0.25, rgba(farbe, 0.4 * a)], [1, rgba(farbe, 0)]]); ctx.fillRect(x - r, y - r, r * 2, r * 2); };
@@ -260,6 +260,55 @@
   };
   const typVon = name => { const m = /^([a-z]+)(\d*)$/.exec(name); return m ? [m[1], m[2] ? Number(m[2]) : undefined] : [name, undefined]; };
 
+  // ---------- Spielstand und Kommentare (Jonathan 12.11.: wie ein Aufbauspiel, Kommentierende mit Namen) ----------
+  // spielstand="kasse=165.000>145.000|einwohner=162|tag=3|betten=1/162|zelt=161"   (a>b zählt in der Szene von a nach b)
+  // kommentar="@name|Text des Kommentars|2"  (Name, Text, Likes)  kommentar_y=1180
+  const zahlLesen = v => Number(String(v).replace(/[^\d,-]/g, "").replace(",", ".")) || 0;
+  const fmt = n => Math.round(n).toLocaleString("de-DE");
+  const pille = (x, y, w, h, rot) => { ctx.save(); ctx.shadowColor = "rgba(0,0,0,0.3)"; ctx.shadowBlur = 18; ctx.shadowOffsetY = 5;
+    box(x, y, w, h, h / 2.4, rot ? "rgba(120,24,30,0.86)" : "rgba(12,14,34,0.78)"); ctx.restore();
+    ctx.strokeStyle = rot ? "rgba(255,140,130,0.55)" : "rgba(255,255,255,0.18)"; ctx.lineWidth = 2.5; ctx.beginPath(); A.rr(x, y, w, h, h / 2.4); ctx.stroke(); };
+  const ikon = (art, x, y, r) => { circle(x, y, r, art === "kasse" ? "#f2c14e" : "rgba(255,255,255,0.14)");
+    if (art === "kasse") { circle(x, y, r * 0.72, "#e0a83a"); ctx.fillStyle = "#fff6d8"; ctx.font = `900 ${r * 1.1}px Titel`; ctx.textAlign = "center"; ctx.textBaseline = "middle"; ctx.fillText("€", x, y + r * 0.06); }
+    else if (art === "einwohner") { circle(x, y - r * 0.28, r * 0.3, "#f4d2b0"); ctx.beginPath(); ctx.ellipse(x, y + r * 0.42, r * 0.52, r * 0.34, 0, Math.PI, 0); ctx.fillStyle = "#7fe0e8"; ctx.fill(); }
+    else if (art === "betten") { poly([[x - r * 0.55, y - r * 0.02], [x, y - r * 0.55], [x + r * 0.55, y - r * 0.02]], "#e8705a"); box(x - r * 0.4, y - r * 0.05, r * 0.8, r * 0.5, 3, "#f2e2c4"); }
+    else if (art === "zelt") { poly([[x - r * 0.6, y + r * 0.42], [x, y - r * 0.5], [x + r * 0.6, y + r * 0.42]], "#ff9a7a"); poly([[x - r * 0.12, y + r * 0.42], [x, y + r * 0.05], [x + r * 0.12, y + r * 0.42]], "#5a1a20"); } };
+  A.weltOverlay = (s, t) => {
+    if (s.spielstand) {
+      const v = {}; String(s.spielstand).split("|").forEach(q => { const [k, w] = q.split("="); if (k && w !== undefined) v[k.trim()] = w.trim(); });
+      const wert = k => { const w = v[k]; if (w === undefined) return null; const [a, b] = w.split(">"); if (b === undefined) return { txt: a, n: zahlLesen(a), z: false };
+        const q = E.raus(clamp((t - 0.5) / 0.9, 0, 1)); const n = lerp(zahlLesen(a), zahlLesen(b), q); return { txt: fmt(n), n, z: t > 0.5 && t < 1.6, runter: zahlLesen(b) < zahlLesen(a) }; };
+      const y = 128, h = 104; let x = 44;
+      const feldZ = (art, titel, w, breite) => { if (!w) return; pille(x, y, breite, h, false); ikon(art, x + 54, y + h / 2, 30);
+        ctx.fillStyle = "rgba(255,255,255,0.62)"; ctx.font = "700 24px HUD"; ctx.textAlign = "left"; ctx.textBaseline = "alphabetic"; ctx.fillText(titel, x + 100, y + 38);
+        ctx.fillStyle = w.z ? (w.runter ? "#ff8a7a" : "#8af0a8") : "#ffffff"; ctx.font = "900 46px Titel"; ctx.fillText(art === "kasse" ? w.txt + " €" : w.txt, x + 100, y + 84); x += breite + 16; };
+      feldZ("kasse", "KASSE", wert("kasse"), 352); feldZ("einwohner", "EINWOHNER", wert("einwohner"), 268);
+      const tg = wert("tag"); if (tg) { ctx.save(); ctx.shadowColor = "rgba(0,0,0,0.3)"; ctx.shadowBlur = 18; box(x, y, 136, h, h / 2.4, "#1fa5b0"); ctx.restore();
+        ctx.fillStyle = "rgba(255,255,255,0.8)"; ctx.font = "700 24px HUD"; ctx.textAlign = "center"; ctx.fillText("TAG", x + 68, y + 38); ctx.fillStyle = "#ffffff"; ctx.font = "900 50px Titel"; ctx.fillText(tg.txt, x + 68, y + 88); }
+      const bt = v.betten, ze = wert("zelt"), y2 = y + h + 14, h2 = 64; x = 44;
+      if (bt) { pille(x, y2, 300, h2, false); ikon("betten", x + 38, y2 + h2 / 2, 22); ctx.fillStyle = "rgba(255,255,255,0.62)"; ctx.font = "700 22px HUD"; ctx.textAlign = "left"; ctx.fillText("BETTEN", x + 70, y2 + 41);
+        ctx.fillStyle = "#ffffff"; ctx.font = "900 34px Titel"; ctx.fillText(bt.replace("/", " / "), x + 168, y2 + 44); x += 316; }
+      if (ze && ze.n > 0) { const txt = `${ze.txt} SCHLAFEN IM ZELT`; ctx.font = "900 30px Titel"; const w = ctx.measureText(txt).width + 92; pille(x, y2, w, h2, true); ikon("zelt", x + 38, y2 + h2 / 2, 22);
+        ctx.fillStyle = "#ffd8d0"; ctx.textAlign = "left"; ctx.fillText(txt, x + 70, y2 + 43); }
+    }
+    if (s.kommentar) {
+      const [name, text, likes] = String(s.kommentar).split("|").map(q => (q || "").trim()), d = t - Number(s.kommentar_ab || 0.3);
+      if (d >= 0) { const p = clamp(d / 0.32, 0, 1), sc = p < 1 ? E.pop(p) : 1, yb = Number(s.kommentar_y) || 1100, w = 860;
+        ctx.save(); ctx.font = "700 40px HUD"; const zeilen = [], worte = text.split(/\s+/); let z = "";
+        for (const wo of worte) { const tz = z ? z + " " + wo : wo; if (ctx.measureText(tz).width > w - 190 && z) { zeilen.push(z); z = wo; } else z = tz; } if (z) zeilen.push(z);
+        const h = 118 + zeilen.length * 52; ctx.translate(540, yb); ctx.scale(sc, sc); ctx.rotate(-0.012); ctx.globalAlpha = clamp(d / 0.12, 0, 1);
+        ctx.shadowColor = "rgba(0,0,0,0.35)"; ctx.shadowBlur = 36; ctx.shadowOffsetY = 10; box(-w / 2, -h / 2, w, h, 34, "#ffffff"); ctx.shadowColor = "transparent";
+        poly([[-w / 2 + 90, h / 2 - 2], [-w / 2 + 150, h / 2 - 2], [-w / 2 + 96, h / 2 + 40]], "#ffffff");
+        let hsh = 0; for (const c of name) hsh = (hsh * 31 + c.charCodeAt(0)) % 997; const fa = ["#e8705a", "#4a9ad0", "#4aa878", "#8a6ac8", "#e8a83a", "#d85a8a"][hsh % 6];
+        circle(-w / 2 + 78, -h / 2 + 76, 46, fa); ctx.fillStyle = "#ffffff"; ctx.font = "900 46px Titel"; ctx.textAlign = "center"; ctx.textBaseline = "middle"; ctx.fillText((name.replace(/^@/, "")[0] || "?").toUpperCase(), -w / 2 + 78, -h / 2 + 79);
+        ctx.textAlign = "left"; ctx.textBaseline = "alphabetic"; ctx.fillStyle = "#6a6e7a"; ctx.font = "700 32px HUD"; ctx.fillText(name, -w / 2 + 146, -h / 2 + 62);
+        ctx.fillStyle = "#1a1c24"; ctx.font = "700 40px HUD"; zeilen.forEach((zl, i) => ctx.fillText(zl, -w / 2 + 146, -h / 2 + 118 + i * 52));
+        if (likes) { const lx = w / 2 - 70, ly = -h / 2 + 58; ctx.fillStyle = "#e8465a"; ctx.beginPath(); ctx.moveTo(lx, ly + 12); ctx.bezierCurveTo(lx - 30, ly - 8, lx - 14, ly - 30, lx, ly - 14); ctx.bezierCurveTo(lx + 14, ly - 30, lx + 30, ly - 8, lx, ly + 12); ctx.fill();
+          ctx.fillStyle = "#6a6e7a"; ctx.font = "700 28px HUD"; ctx.textAlign = "center"; ctx.fillText(likes, lx, ly + 46); }
+        ctx.restore(); }
+    }
+  };
+
   SZ.reich = (s, t) => {
     const zeit = ["abend", "nacht"].includes(s.zeit) ? s.zeit : "tag", P = PAL[zeit];
     const G = Math.max(3, Math.min(60, Number(s.groesse) || 9));
@@ -353,6 +402,18 @@
         mensch(x, y, g, p.farbe, p.haar, hop); }
       else { const [x, y] = feld(o.i, o.j), g = TW * 0.4; glut(x, y - g * 0.6, g * 1.5, "#ffe27a", 0.28); mensch(x, y, g, "#3f7f8c", "#4a3324", 0, true); }
     }
+    // Namens- und Preisschilder über Feldern (Jonathan 12.11.): schild="5,3:@name|3,4:Laden von @x"  preis="5,3:-20.000 €"
+    const schilder = (v, art) => String(v || "").split("|").map(q => q.trim()).filter(Boolean).forEach((q, k) => {
+      const m = /^(\d+),(\d+):(.*)$/.exec(q); if (!m) return; const [x, y] = feld(Number(m[1]), Number(m[2])), txt = m[3].trim();
+      const d = t - 0.35 - k * 0.25; if (d < 0) return; const p = Math.min(1, d / 0.3), sc = p < 1 ? A.E.pop(p) : 1;
+      const fs = TW * (art === "preis" ? 0.2 : 0.15), hy = y - TW * (art === "preis" ? 0.6 + Math.min(d, 1.5) * 0.05 : 0.78);
+      ctx.save(); ctx.translate(x, hy); ctx.scale(sc, sc); ctx.font = `${art === "preis" ? 900 : 700} ${fs}px ${art === "preis" ? "Titel" : "HUD"}`;
+      const tw = ctx.measureText(txt).width, bw = tw + fs * 1.1, bh = fs * 1.6;
+      ctx.shadowColor = "rgba(0,0,0,0.35)"; ctx.shadowBlur = fs * 0.6; ctx.shadowOffsetY = fs * 0.15;
+      box(-bw / 2, -bh / 2, bw, bh, bh / 2, art === "preis" ? (txt.startsWith("+") ? "#2f9a5e" : "#d8463c") : "rgba(12,14,34,0.82)"); ctx.shadowColor = "transparent";
+      if (art !== "preis") poly([[-fs * 0.3, bh / 2 - 1], [fs * 0.3, bh / 2 - 1], [0, bh / 2 + fs * 0.4]], "rgba(12,14,34,0.82)");
+      ctx.fillStyle = "#ffffff"; ctx.textAlign = "center"; ctx.textBaseline = "middle"; ctx.fillText(txt, 0, fs * 0.06); ctx.restore(); });
+    schilder(s.schild, "schild"); schilder(s.preis, "preis");
     ctx.restore();
     if (P.sonne > 0) { ctx.save(); ctx.globalCompositeOperation = "screen"; ctx.fillStyle = rgrad(120, 80, 0, 1300, [[0, rgba(P.licht, 0.35 * P.sonne)], [1, rgba(P.licht, 0)]]); ctx.fillRect(0, 0, 1080, 1920); ctx.restore(); }
     else { ctx.fillStyle = rgrad(540, 860, 300, 1300, [[0, rgba("#000000", 0)], [1, rgba("#000010", 0.35)]]); ctx.fillRect(0, 0, 1080, 1920); }

@@ -22,7 +22,9 @@
   "wasser": "Meer ringsum, kein Süßwasser erwähnt",
   "strom": "keiner",
   "gerichte": 1,
-  "richter": "ein einfacher Einwohner (namenlos), seit Tag 2 erster Richter"
+  "richter": "ein einfacher Einwohner (namenlos), seit Tag 2 erster Richter",
+  "zelte": 0,
+  "schlafen_draussen": 161
  },
  "community_regeln": [
   "Niemand steht über dem Gesetz, auch der Präsident nicht (erstes Urteil des Gerichts, Tag 2)",
@@ -57,5 +59,30 @@
   "1000": "Hafen und erstes Schiff",
   "2500": "zweite Insel",
   "10000": "Großstadt"
- }
+ },
+ "kasse": 162000,
+ "kasse_info": "Seit 12.11. (Jonathan). Startkapital nach Folge 2: 1.000 € je Einwohner (162), Haus und Gericht waren Gründungsbauten ohne Kosten. Ab Folge 3: +1.000 € je neuem Einwohner, +100 € je Like, +500 € je Kommentar unter der letzten Folge, minus Baukosten (Richtwerte in der Serienbibel).",
+ "bewohner": [
+  {
+   "nutzer": "@robbe9354",
+   "plattform": "tiktok",
+   "rolle": "erster Richter (Gericht auf Feld 5,3)",
+   "seit_folge": 2,
+   "hinweis": "in Folge 2 noch ohne Namen gezeigt; ab Folge 3 mit Namen am Gericht"
+  }
+ ],
+ "vorschlaege_offen": [
+  {
+   "nutzer": "@EllenZaum",
+   "plattform": "youtube",
+   "text": "Ein Hotel 😊",
+   "likes": 1
+  },
+  {
+   "nutzer": "@rylly_killer",
+   "plattform": "tiktok",
+   "text": "Ein Raketensilo",
+   "likes": 0
+  }
+ ]
 }

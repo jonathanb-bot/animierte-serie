@@ -232,6 +232,7 @@
     vignette(s.vignette ?? 0.5);
     if (A.nachbearbeitung) A.nachbearbeitung(s, T); // Kino-Look (alltag.js), nur mit @kino
     hud(s.hud);
+    if (A.weltOverlay && (s.spielstand || s.kommentar)) A.weltOverlay(s, t); // „Deine Welt“ (12.11.): Spielstand + Kommentar, sonst nichts
     einblendungen(s, t);
     untertitel(s, t);
     if (s.blitz && t < 0.3) { ctx.fillStyle = `rgba(255,255,255,${1 - t / 0.3})`; ctx.fillRect(0, 0, W, H); }

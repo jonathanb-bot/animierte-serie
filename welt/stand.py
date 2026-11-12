@@ -12,7 +12,7 @@ Quellen (beide auf `main`, vorher frisch holen):
 
 Das Skript sortiert nur. Ob ein Kommentar in die Welt passt (Weltregeln, Ressourcen, keine Beleidigung,
 keine Gewalt, keine Werbung), entscheidet Claude beim Planen nach `welt/serienbibel.md` → „Top-Kommentar umsetzen“.
-Nutzernamen kommen nie ins Video.
+Seit 12.11. (Jonathan) kommen Nutzernamen ins Video: Schild am Gebäude und Kommentar-Sprechblase.
 """
 from __future__ import annotations
 
@@ -49,15 +49,19 @@ def kommentare() -> dict:
     if not posts:
         return {"stand": k.get("erstellt"), "folge": None, "kandidaten": []}
     letzte = max((folgen_nr(p["post"]["content"]) or 0) for p in posts)
-    kand = []
+    kand, gesehen = [], set()
     for p in posts:
         if (folgen_nr(p["post"]["content"]) or 0) != letzte:
             continue
         for c in p.get("kommentare", []):
-            if (c.get("from") or {}).get("isOwner"):
+            von = c.get("from") or {}
+            if von.get("isOwner") or c.get("id") in gesehen:  # gleicher Kommentar unter mehreren Post-Fassungen nur einmal
                 continue
+            gesehen.add(c.get("id"))
             kand.append({"likes": int(c.get("likeCount") or 0), "antworten": int(c.get("replyCount") or 0), "text": c.get("message", ""),
-                         "plattform": p["post"]["platform"], "zeit": c.get("createdTime")})
+                         "plattform": p["post"]["platform"], "zeit": c.get("createdTime"),
+                         # Jonathan 12.11.: Namen kommen ins Video (Schild am Gebäude + Kommentar-Sprechblase)
+                         "nutzer": von.get("username") or "", "name": von.get("name") or ""})
     kand.sort(key=lambda c: (-c["likes"], -c["antworten"], c["zeit"] or ""))
     return {"stand": k.get("erstellt"), "folge": letzte, "kandidaten": kand}
 
@@ -80,7 +84,8 @@ def main(argv=None) -> int:
     if not k["kandidaten"]:
         print("  keine – dann entscheidet die Welt selbst (serienbibel.md → „Kein Kommentar“)")
     for i, c in enumerate(k["kandidaten"][:15], 1):
-        print(f"  {i:2}. ({c['likes']} Likes, {c['antworten']} Antworten, {c['plattform']}) {c['text'][:200]}")
+        wer = f"@{c['nutzer']}" if c.get("nutzer") else (c.get("name") or "?")
+        print(f"  {i:2}. ({c['likes']} Likes, {c['antworten']} Antworten, {c['plattform']}, {wer}) {c['text'][:200]}")
     return 0
 
 

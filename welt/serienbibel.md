@@ -12,8 +12,8 @@ Es gelten zusätzlich alle offenen Issues mit Label `dringlich`, `CLAUDE.md` und
 - **Figuren sehr simpel:** Es gibt nur **den Gründer und Präsidenten (du, die blaue Figur `du`)** und die **Einwohner** (einfache kleine Figuren, eine pro Follower). **Keine anderen Personen**, keine Familie, keine Nebenfiguren. Nahaufnahmen nur von dir (`gesicht du`).
 - **Keine Vorgaben von uns.** Wir starten mit **einem kleinen Haus** und versuchen, das Reich auszubauen. Was passiert, bestimmen **nur die Zuschauer**. Am Anfang ist es leicht („Pille-Palle“), später wird es **schwerer** (siehe „Schwierigkeit“).
 - **Ziel des Reichs:** expandieren, bis **die ganze Welt zu diesem Reich gehört**.
-- **Folge 1 sagt ausdrücklich**, dass die Zuschauer alles gestalten können, was sie wollen, und dass das Ziel die ganze Welt ist. Ab Folge 2: „Ihr habt entschieden: …“ (ohne Nutzernamen).
-- **Keine Nutzernamen im Video.**
+- **Folge 1 sagt ausdrücklich**, dass die Zuschauer alles gestalten können, was sie wollen, und dass das Ziel die ganze Welt ist. Ab Folge 2: „Ihr habt entschieden: …“; ab Folge 3 mit Namen und Kommentar im Bild.
+- ~~Keine Nutzernamen im Video.~~ **Seit 12.11. (Jonathan): Nutzernamen und Kommentare kommen ins Video** (siehe „Ab Folge 3“).
 - **Eine Folge am Tag**, Test vom 10. bis 15.11. Danach entscheidet Jonathan nach den Zahlen.
 - **Posten:** Deutsches TikTok zeigt in dieser Zeit nur diese Serie (die anderen deutschen TikToks sind pausiert, `posten/plan.json` → `_pausiert`). Instagram und YouTube laufen normal weiter, die Welt-Folge kommt dort dazu, ohne Überschneidung (mindestens 1 Stunde Abstand zu anderen Posts derselben Plattform).
 
@@ -72,7 +72,7 @@ Es gelten zusätzlich alle offenen Issues mit Label `dringlich`, `CLAUDE.md` und
 
 Belegte Fälle (Twitch Plays Pokémon, r/place, The Button, Boaty McBoatface, Homestuck, Battle for Dream Island) und Plattformregeln, umgesetzt so:
 
-1. **Ergebnis zuerst, Regel in den ersten 3 Sekunden.** Ab Folge 2 zeigt das erste Bild das Neugebaute, der Hook-Text trägt den Stand („TAG 3 · 152 EINWOHNER“), Satz 1 sagt, was gebaut wurde (mit „du/dein“). Die Regel „1 Follower = 1 Einwohner“ kommt in jeder Folge einmal kurz vor, als Tatsache der Welt, **nie als Aufforderung** („Folge, damit …“ ist tabu, TikTok wertet das als manipulierte Follows).
+1. **Ergebnis zuerst, Regel in den ersten 3 Sekunden.** Ab Folge 2 zeigt das erste Bild das Neugebaute, der Hook-Text trägt den Stand („TAG 3 · 152 EINWOHNER“), Satz 1 sagt, was gebaut wurde (mit „du/dein“). Die Regel „1 Follower = 1 Einwohner“ kommt in jeder Folge einmal kurz vor, als Tatsache der Welt, ~~nie als Aufforderung~~ (seit 12.11. erlaubt Jonathan den Aufruf am Ende, siehe „Ab Folge 3“).
 2. **Neuheit trägt nur Tage.** Jede Folge braucht eine eigene Spannung (Problem, Wendung, Preis), die nicht davon abhängt, was gewählt wurde. Die Zuschauer entscheiden **was gebaut wird**, die Erzählung bleibt bei uns.
 3. **Fortschritt sichtbar machen (Goal-Gradient):** Meilensteine nach Einwohnern: **200 = Dorf mit Namen, 500 = Stadt, 1.000 = Hafen und erstes Schiff, 2.500 = zweite Insel, 10.000 = Großstadt.** In jeder Folge „X von Y bis zum nächsten Meilenstein“ (Einblendung). Rückgänge nie als Strafe erzählen.
 4. **Gebautes bleibt (IKEA-Effekt).** Nichts wird gelöscht. Katastrophen beschädigen höchstens, und das wird repariert.
@@ -80,7 +80,7 @@ Belegte Fälle (Twitch Plays Pokémon, r/place, The Button, Boaty McBoatface, Ho
 6. **Fester Stichtag:** gezählt wird, was bis zum Start des täglichen Laufs (13:47) vorliegt, alle drei Plattformen zusammen, meiste Likes; bei Gleichstand mehr Antworten, dann der frühere. Den TikTok-„Top“-Kommentar nicht ungeprüft übernehmen, die Like-Zahlen zählen (`welt/stand.py`).
 7. **Witz-Sieger** („Boaty McBoatface“) werden mit „Ja, aber …“ in die Welt übersetzt, nicht abgelehnt. Unzulässiges (Beleidigung, Gewalt, Sexuelles, Politik, echte Personen, Werbung) wird kommentarlos übersprungen.
 8. **Kaltstart:** Bei 140 Followern sind sehr wenige Kommentare normal. Ersatzkette: passender Kommentar → wenn keiner: ein Ereignis der Welt (Sturm, Fremder am Strand, Fund) zwingt eine Entscheidung → die Einwohner entscheiden selbst. Keine erfundenen Kommentare, keine Fake-Konten.
-9. **Keine Nutzernamen, keine Screenshots** von Kommentaren (DSGVO, Zitatrecht, minderjährige Kommentierende). Nur die Idee in eigenen Worten.
+9. ~~Keine Nutzernamen, keine Screenshots~~ – **überholt 12.11. (Jonathan):** Name + Kommentar als eigene Sprechblase im Bild (kein Screenshot, kein Profilbild, nur Anfangsbuchstabe). Kommentare mit Beleidigung, Sexuellem, Werbung oder persönlichen Daten (echter Name + Ort, Telefonnummer) nie zeigen.
 10. **Jede Folge auch ohne Vorwissen verständlich:** Neue kommen über den Algorithmus, nicht über Folge 1.
 11. **Sichtbare Abwechslung** (YouTube-Regel gegen massenproduzierte Inhalte): Tageszeit, Wetter, Kameraweg, Ereignisse von Folge zu Folge ändern.
 12. **Offene Punkte für Jonathan:** Issue #8 (keine Fragen ans Publikum) gegen den Kern der Serie (Ausnahme festhalten?); Issue #15 (KI-Haken aus) gegen TikToks Kennzeichnungspflicht für KI-Inhalte (KI-Stimme unklar).
@@ -97,4 +97,11 @@ Ein Vergleichsvideo mit derselben Idee lief deutlich besser. Was wir übernehmen
 6. **Offene Rollen als Aussage:** „Der Laden sucht noch einen Bäcker.“ „Das Tierheim braucht noch drei Helfer.“ Nie als Frage, nie als Aufforderung.
 7. **Witz der Hauptfigur:** Du darfst eigene Wünsche haben, über die die Einwohner entscheiden („Und was ist mit dir? Das entscheiden deine Einwohner.“).
 
-Offen bei Jonathan (bis zur Entscheidung gelten die alten Regeln): Namen auf Gebäuden / Kommentare im Bild, Aufrufe am Ende, Spielstand-Leiste mit Kasse.
+
+### Jonathans Entscheidungen vom 12.11. (gelten ab Folge 3, gehen allem anderen in dieser Bibel vor)
+
+8. **Name + Kommentar im Bild (wie im Vergleichsvideo).** Jeder umgesetzte Kommentar erscheint als Sprechblase (`kommentar="@nutzer|Text wörtlich|Likes"`, Text wie geschrieben, nur offensichtliche Tippfehler nicht korrigieren), und das Gebäude bekommt ein Namensschild (`schild="i,j:Laden · @nutzer"`). Der Hauptbau sagt dazu „Ihr habt entschieden“ bzw. „Der Kommentar mit den meisten Likes kam von …“. Kommentierende werden zu Einwohnern mit Rolle (Richter, Ladenbesitzerin, Bäcker …) und können in späteren Folgen wieder vorkommen (in `gedaechtnis.json` → `bewohner` notieren). Namen aus `python welt/stand.py` (TikTok-Nutzername, bei YouTube der Anzeigename). Gesprochen wird der Name nur, wenn er gut aussprechbar ist, sonst „sie“/„er“/„dieser Einwohner“.
+9. **Aufruf am Ende erlaubt** (Ausnahme von Issue #8 nur für diese Serie): letzte Einstellung z. B. „Jeder neue Follower zieht auf deine Insel. Was bauen wir als Nächstes? Schreib es in die Kommentare.“ Der Cliffhanger bleibt davor. Nie „Fortsetzung folgt“.
+10. **Spielstand-Leiste oben mit Kasse** (Ausnahme von Issue #19 nur für diese Serie): in jeder `reich`- und `gesicht`-Einstellung `spielstand="kasse=…|einwohner=…|tag=…|betten=…/…|zelt=…"`; bei einem Bau `kasse=alt>neu` (zählt sichtbar herunter) plus `preis="i,j:-20.000 €"` über dem Gebäude. `ein_y` nicht über 470 setzen (Leiste endet bei ca. 320). Kommentar-Sprechblase standardmäßig bei y 1100 (über den Untertiteln).
+
+**Kasse (Regel der Welt):** Jeder neue Einwohner bringt 1.000 €, jeder Like unter der letzten Folge 100 €, jeder Kommentar 500 € (alle Plattformen, Zahlen aus `posten/analyse.json`). Gebaute Dinge kosten (Richtwerte): Zelt 500 €, Laden/Imbiss 20.000 €, Haus mit 4 Betten 40.000 €, Werkstatt 30.000 €, Straße pro Feld 5.000 €, Brunnen 8.000 €, Feld 3.000 €, Hochhaus pro Stockwerk 60.000 € (je 12 Betten), Hotel 250.000 €, Hafen 1.000.000 €. Reicht das Geld nicht, wird gespart oder ein kleinerer erster Schritt gebaut. Stand in `gedaechtnis.json` → `kasse`, Rechnung in `entscheidungen`.
