@@ -9,7 +9,7 @@
    - groesse: Kantenlänge der Insel in Feldern (wächst mit dem Reich); form=rund (Standard) rundet die Küste natürlich ab
    - bauten: typ@i,j (oder typ@i1,j1-i2,j2 für ein Rechteck). Ein späterer Eintrag ersetzt einen früheren auf demselben
      Feld (so wird aus einem Haus ein Hochhaus). Typen: BAU (haus, hochhausN, baum, tanne, fels, brunnen, laterne,
-     baustelle, boot, gericht, zelt, laden) und BODEN (weg, strasse, feld, wasser, platz, sand)
+     baustelle, boot, gericht, zelt, laden, werkstatt) und BODEN (weg, strasse, feld, wasser, platz, sand)
    - leute: Einwohner = Follower (einfache Figuren, höchstens 3 pro freiem Feld sichtbar), neu: so viele leuchten auf
    - praesident: Feld des Gründers (du, blaue Jacke, gelbe Schärpe), markiere: pulsierender Ring auf einem Feld
    - nah/blick: Ausschnitt um ein Feld (nah=2 = doppelt so groß); `fokus`/`zoom` sind Kamera-Angaben der Engine
@@ -235,6 +235,40 @@
     for (let k = 0; k < 5; k++) { const a = 0.18 + k * 0.15; const p = [lerp(s0[0], s1[0], a), lerp(s0[1], s1[1], a) - TW * 0.035]; box(p[0] - TW * 0.02, p[1] - TW * 0.008, TW * 0.04, TW * 0.016, 2, rgba(k % 2 ? "#ffd27a" : "#ffffff", 0.85)); }
   };
   SCHATTEN.laden = TW => ({ w: 0.66, d: 0.6, h: TW * 0.36 });
+
+  // Folge 3 (12.11.): Werkstatt, flache Halle mit Pultdach, großem Rolltor, Zahnrad-Schild und Kisten davor
+  BAU.werkstatt = (x, y, ei, ej, TW, P, t, r, idx) => {
+    const wand = mix("#9aa4ae", P.wand[2], 0.25), dach = "#5a6470", nacht = P.sonne < 0.5;
+    const h = TW * 0.27, w = 0.7, d = 0.6;
+    quader(x, y, ei, ej, w + 0.06, d + 0.06, TW * 0.03, P.sockel, null, P);
+    const q = quader(x, y - TW * 0.03, ei, ej, w, d, h, wand, shade(dach, 0.1), P), { D, C, B } = q.fl, Z = q.Z;
+    const sf = (a, z) => [lerp(D[0], C[0], a), lerp(D[1], C[1], a) - z];
+    // Wellblech-Rillen auf der Front
+    for (let k = 1; k < 12; k++) { const a = k / 12; line(...sf(a, 0), ...sf(a, h), 1, rgba("#000000", 0.07)); }
+    // Rolltor (halb offen, drinnen Licht)
+    const t0 = 0.12, t1 = 0.62, th = h * 0.78, of = h * 0.42;
+    poly([sf(t0, 0), sf(t1, 0), sf(t1, th), sf(t0, th)], nacht ? "#ffcf7a" : "#3a3228");
+    if (nacht) glut(...sf((t0 + t1) / 2, th * 0.4), TW * 0.5, "#ffcf7a", 0.35);
+    else poly([sf(t0, 0), sf(t1, 0), sf(t1, of * 0.5), sf(t0, of * 0.5)], rgba("#ffcf7a", 0.25));
+    poly([sf(t0, of), sf(t1, of), sf(t1, th), sf(t0, th)], "#e0a83a");
+    for (let k = 1; k < 6; k++) { const z = of + (th - of) * k / 6; line(...sf(t0, z), ...sf(t1, z), 1.3, rgba("#7a4a10", 0.45)); }
+    line(...sf(t0, of), ...sf(t1, of), TW * 0.01, rgba("#000000", 0.35));
+    // Seitenfenster und Tür
+    fenster(sf(0.68, 0), sf(0.95, 0), h * 0.36, h * 0.3, 1, P, r, nacht, false);
+    fenster(B, C, h * 0.4, h * 0.3, 2, P, r, nacht, true);
+    // Zahnrad-Schild über dem Tor
+    const g = sf((t0 + t1) / 2, h * 0.9), gr = TW * 0.05, wink = t * 0.6;
+    ctx.save(); ctx.translate(g[0], g[1]); ctx.rotate(wink);
+    for (let k = 0; k < 8; k++) { const a = k * Math.PI / 4; box(Math.cos(a) * gr - gr * 0.22, Math.sin(a) * gr - gr * 0.22, gr * 0.44, gr * 0.44, 1, "#f0c45a"); }
+    circle(0, 0, gr * 0.85, "#f0c45a"); circle(0, 0, gr * 0.35, "#2a2e3a"); ctx.restore();
+    // Kisten und eine Werkbank vor der Halle
+    const k1 = Z(w / 2 - 0.05, d / 2 + 0.16); quader(k1[0], k1[1], ei, ej, 0.12, 0.12, TW * 0.08, "#b8844a", "#d8a46a", P);
+    const k2 = Z(w / 2 - 0.2, d / 2 + 0.18); quader(k2[0], k2[1], ei, ej, 0.1, 0.1, TW * 0.06, "#a8743a", "#c8945a", P);
+    // Schornstein mit leichtem Dampf
+    const s0 = Z(-w * 0.28, -d * 0.2, h + TW * 0.03); quader(s0[0], s0[1], ei, ej, 0.08, 0.08, TW * 0.16, "#6a5a50", null, P);
+    for (let k = 0; k < 4; k++) { const p = (t * 0.25 + k / 4 + idx * 0.21) % 1; circle(s0[0] + p * TW * 0.2, s0[1] - TW * 0.18 - p * TW * 0.55, TW * (0.02 + p * 0.06), rgba(nacht ? "#9aa4c0" : "#ffffff", 0.35 * (1 - p))); }
+  };
+  SCHATTEN.werkstatt = TW => ({ w: 0.76, d: 0.66, h: TW * 0.4 });
 
   const ecken = (x, y, TW, TH, s = 1) => [[x, y - TH / 2 * s], [x + TW / 2 * s, y], [x, y + TH / 2 * s], [x - TW / 2 * s, y]];
   const BODEN = {

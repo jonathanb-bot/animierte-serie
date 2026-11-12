@@ -1,0 +1,57 @@
+# Deine Welt – Folge 3: Ein Dach für alle
+@musik musik/welt-w003.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung spannend
+@vortrag lebendig
+@klang studio
+@mund zitate
+@einblenden aus
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette tuerkis
+@zeit tag
+
+== Hook ==
+// Ergebnis zuerst: die ganze Insel mit zwei neuen Häusern, Zeltfeld, Brunnen und Werkstatt, Spielstand oben
+[reich groesse=9 bauten="haus@4,4|baum@1,1|baum@7,2|tanne@0,6|fels@8,7|baum@2,8|gericht@5,3|haus@3,4|haus@3,3|zelt@4,6-5,8|zelt@6,6-7,7|brunnen@4,5|werkstatt@2,4" leute=162 praesident=3,5 nah=1.3 blick=4,5 palette=tuerkis palette_staerke=0.2 zoom-rein spielstand="kasse=34.800|einwohner=162|tag=3|betten=9/162|zelt=153" ein="Gestern>#161 DRAUSSEN>einwohner|Heute>0 DRAUSSEN>haus"] Gestern haben auf deiner Insel noch hunderteinundsechzig Leute draußen geschlafen. Heute kein Einziger.
+// Titelkarte
+[titel oben="Folge 3" gross="DEINE WELT" unten="Ein Dach für alle" farbe=#123a4a akzent=#7fe0e8 groesse=170 hud=false palette=tuerkis zoom-rein] Das kam so.
+
+== Der Fall ==
+// Morgen: nah am Gericht, Namensschild des Richters
+[reich groesse=9 bauten="haus@4,4|baum@1,1|baum@7,2|tanne@0,6|fels@8,7|baum@2,8|gericht@5,3" leute=162 praesident=4,5 nah=2.6 blick=5,3 palette=tuerkis palette_staerke=0.2 schwenk-rechts schild="5,3:Richter · @robbe9354" spielstand="kasse=162.000|einwohner=162|tag=3|betten=1/162" ein="Bett>NUR 1 BETT>haus"] Richter Robbe hat einen neuen Fall: hundertzweiundsechzig Menschen, ein Bett.
+// Infokarte: das Urteil
+[objekt objekte="waage:Urteil|haus:Ein Dach" gross="KEINER DRAUSSEN" palette=tuerkis zoom-rein] Das Urteil: Ab heute Abend schläft niemand mehr im Freien.
+// Kasse: die Likes von gestern kommen dazu
+[reich groesse=9 bauten="haus@4,4|baum@1,1|baum@7,2|tanne@0,6|fels@8,7|baum@2,8|gericht@5,3" leute=162 praesident=4,5 nah=1.4 blick=4,4 palette=tuerkis palette_staerke=0.2 zoom-raus spielstand="kasse=162.000>162.800|einwohner=162|tag=3|betten=1/162" ein="tausend>1.000 € JE EINWOHNER>einwohner|hundert>+800 € LIKES>herz"] Jeder Einwohner bringt tausend Euro mit, jeder Like hundert.
+
+== Bauen ==
+// Zwei neue Häuser auf dem markierten Feld und daneben
+[reich groesse=9 bauten="haus@4,4|baum@1,1|baum@7,2|tanne@0,6|fels@8,7|baum@2,8|gericht@5,3|haus@3,4|haus@3,3" leute=162 praesident=3,5 nah=2.6 blick=3,3 palette=tuerkis palette_staerke=0.2 zoom-rein preis="3,3:-80.000 €" spielstand="kasse=162.800>82.800|einwohner=162|tag=3|betten=9/162|zelt=161" ein="vier>#8 NEUE BETTEN>haus"] Zwei neue Häuser mit je vier Betten. Achtzigtausend Euro.
+// Zeltfeld
+[reich groesse=9 bauten="haus@4,4|baum@1,1|baum@7,2|tanne@0,6|fels@8,7|baum@2,8|gericht@5,3|haus@3,4|haus@3,3|zelt@4,6-5,8|zelt@6,6-7,7" leute=162 praesident=3,5 nah=2.3 blick=5,7 palette=tuerkis palette_staerke=0.2 schwenk-links preis="5,7:-10.000 €" spielstand="kasse=82.800>72.800|einwohner=162|tag=3|betten=9/162|zelt=153" ein="zwanzig>#20 ZELTE"] Für alle anderen: zwanzig große Zelte, zehntausend Euro.
+// Brunnen
+[reich groesse=9 bauten="haus@4,4|baum@1,1|baum@7,2|tanne@0,6|fels@8,7|baum@2,8|gericht@5,3|haus@3,4|haus@3,3|zelt@4,6-5,8|zelt@6,6-7,7|brunnen@4,5" leute=162 praesident=3,5 nah=3 blick=4,5 palette=tuerkis palette_staerke=0.2 zoom-rein preis="4,5:-8.000 €" spielstand="kasse=72.800>64.800|einwohner=162|tag=3|betten=9/162|zelt=153" ein="Süßwasser>SÜSSWASSER>tropfen"] Und weil es noch kein Süßwasser gibt: ein Brunnen. Achttausend.
+// Werkstatt mit Kommentar von gestern
+[reich groesse=9 bauten="haus@4,4|baum@1,1|baum@7,2|tanne@0,6|fels@8,7|baum@2,8|gericht@5,3|haus@3,4|haus@3,3|zelt@4,6-5,8|zelt@6,6-7,7|brunnen@4,5|werkstatt@2,4" leute=162 praesident=3,5 nah=2.8 blick=2,4 palette=tuerkis palette_staerke=0.2 zoom-rein preis="2,4:-30.000 €" kommentar="@rylly_killer|Ein Raketensilo|1" spielstand="kasse=64.800>34.800|einwohner=162|tag=3|betten=9/162|zelt=153"] Zwei Wünsche von gestern sind noch offen. Ein Raketensilo? Dafür braucht ihr erst eine Werkstatt. Dreißigtausend.
+// Werkstatt von der anderen Seite, offene Rolle
+[reich groesse=9 bauten="haus@4,4|baum@1,1|baum@7,2|tanne@0,6|fels@8,7|baum@2,8|gericht@5,3|haus@3,4|haus@3,3|zelt@4,6-5,8|zelt@6,6-7,7|brunnen@4,5|werkstatt@2,4" leute=162 praesident=3,4 nah=3.4 blick=2,4 palette=tuerkis palette_staerke=0.2 schwenk-rechts schild="2,4:Werkstatt · @rylly_killer" spielstand="kasse=34.800|einwohner=162|tag=3|betten=9/162|zelt=153" ein="Mechaniker>MECHANIKER GESUCHT>schluessel"] Für die Werkstatt fehlt noch ein Mechaniker.
+// Hotel: Feld abgesteckt, Kommentar von gestern
+[reich groesse=9 bauten="haus@4,4|baum@1,1|baum@7,2|tanne@0,6|fels@8,7|baum@2,8|gericht@5,3|haus@3,4|haus@3,3|zelt@4,6-5,8|zelt@6,6-7,7|brunnen@4,5|werkstatt@2,4" leute=162 praesident=3,5 markiere=2,6 nah=2.6 blick=2,6 palette=tuerkis palette_staerke=0.2 zoom-rein schild="2,6:Hotel · @EllenZaum" kommentar="@EllenZaum|Ein Hotel 😊|1" spielstand="kasse=34.800|einwohner=162|tag=3|betten=9/162|zelt=153"] Und Ellen wünscht sich ein Hotel. Das kostet zweihundertfünfzigtausend Euro. Das Feld ist schon abgesteckt.
+
+== Und du? ==
+// Nahaufnahme: du, am Abend
+[gesicht du ort=reich zeit=abend froh palette=orange palette_staerke=0.2 spielstand="kasse=34.800|einwohner=162|tag=3|betten=9/162|zelt=153"] „Und mein Bett? Bekommt der Präsident jetzt eins?“
+// Abend: die Häuser, Fenster leuchten
+[reich groesse=9 zeit=abend bauten="haus@4,4|baum@1,1|baum@7,2|tanne@0,6|fels@8,7|baum@2,8|gericht@5,3|haus@3,4|haus@3,3|zelt@4,6-5,8|zelt@6,6-7,7|brunnen@4,5|werkstatt@2,4" leute=162 praesident=4,6 nah=2.2 blick=4,5 palette=orange palette_staerke=0.2 schwenk-links spielstand="kasse=34.800|einwohner=162|tag=3|betten=9/162|zelt=153" ein="Los>DAS LOS ENTSCHEIDET>herz"] Das entscheiden deine Einwohner. Das Los fällt auf jemand anderen. Du schläfst in Zelt Nummer zwanzig.
+
+== Tag 3 ==
+// Die ganze Insel bei Nacht
+[reich groesse=9 zeit=nacht bauten="haus@4,4|baum@1,1|baum@7,2|tanne@0,6|fels@8,7|baum@2,8|gericht@5,3|haus@3,4|haus@3,3|zelt@4,6-5,8|zelt@6,6-7,7|brunnen@4,5|werkstatt@2,4" leute=162 praesident=5,6 palette=blau palette_staerke=0.2 zoom-raus spielstand="kasse=34.800|einwohner=162|tag=3|betten=9/162|zelt=153" ein="hundertzweiundsechzig>#162 EINWOHNER>einwohner|achtunddreißig>38 BIS ZUM DORF>haus"] Tag drei: hundertzweiundsechzig Einwohner, drei Häuser, zwanzig Zelte. Noch achtunddreißig bis zum Dorf mit eigenem Namen.
+// Nah auf das abgesteckte Hotelfeld
+[reich groesse=9 zeit=nacht bauten="haus@4,4|baum@1,1|baum@7,2|tanne@0,6|fels@8,7|baum@2,8|gericht@5,3|haus@3,4|haus@3,3|zelt@4,6-5,8|zelt@6,6-7,7|brunnen@4,5|werkstatt@2,4" leute=162 praesident=5,6 markiere=2,6 nah=2.8 blick=2,6 palette=blau palette_staerke=0.2 zoom-rein schild="2,6:Hotel · @EllenZaum" spielstand="kasse=34.800|einwohner=162|tag=3|betten=9/162|zelt=153" ein="fehlen>215.200 € FEHLEN>geld"] Fürs Hotel fehlen noch zweihundertfünfzehntausend Euro. Und jeder neue Einwohner bringt tausend.
+// Aufruf: die ganze Insel bei Nacht von oben
+[reich groesse=9 zeit=nacht bauten="haus@4,4|baum@1,1|baum@7,2|tanne@0,6|fels@8,7|baum@2,8|gericht@5,3|haus@3,4|haus@3,3|zelt@4,6-5,8|zelt@6,6-7,7|brunnen@4,5|werkstatt@2,4" leute=162 praesident=5,6 nah=1.3 blick=4,4 palette=blau palette_staerke=0.2 schwenk-rechts spielstand="kasse=34.800|einwohner=162|tag=3|betten=9/162|zelt=153"] Jeder neue Follower zieht auf deine Insel. Was bauen wir als Nächstes? Schreib es in die Kommentare.

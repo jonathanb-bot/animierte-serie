@@ -1,0 +1,149 @@
+{
+ "dauer": 72.512,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "reich",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 6.566,
+   "emotion": "erzaehlend",
+   "text": "Gestern haben auf deiner Insel noch hunderteinundsechzig Leute draußen geschlafen. Heute kein Einziger."
+  },
+  {
+   "nr": 2,
+   "typ": "titel",
+   "kapitel": 1,
+   "start": 6.566,
+   "dauer": 1.022,
+   "emotion": "erzaehlend",
+   "text": "Das kam so."
+  },
+  {
+   "nr": 3,
+   "typ": "reich",
+   "kapitel": 2,
+   "start": 7.588,
+   "dauer": 4.598,
+   "emotion": "erzaehlend",
+   "text": "Richter Robbe hat einen neuen Fall: hundertzweiundsechzig Menschen, ein Bett."
+  },
+  {
+   "nr": 4,
+   "typ": "objekt",
+   "kapitel": 2,
+   "start": 12.186,
+   "dauer": 3.758,
+   "emotion": "erklaerend",
+   "text": "Das Urteil: Ab heute Abend schläft niemand mehr im Freien."
+  },
+  {
+   "nr": 5,
+   "typ": "reich",
+   "kapitel": 2,
+   "start": 15.944,
+   "dauer": 3.614,
+   "emotion": "erzaehlend",
+   "text": "Jeder Einwohner bringt tausend Euro mit, jeder Like hundert."
+  },
+  {
+   "nr": 6,
+   "typ": "reich",
+   "kapitel": 3,
+   "start": 19.558,
+   "dauer": 4.022,
+   "emotion": "erzaehlend",
+   "text": "Zwei neue Häuser mit je vier Betten. Achtzigtausend Euro."
+  },
+  {
+   "nr": 7,
+   "typ": "reich",
+   "kapitel": 3,
+   "start": 23.58,
+   "dauer": 4.022,
+   "emotion": "erzaehlend",
+   "text": "Für alle anderen: zwanzig große Zelte, zehntausend Euro."
+  },
+  {
+   "nr": 8,
+   "typ": "reich",
+   "kapitel": 3,
+   "start": 27.602,
+   "dauer": 3.902,
+   "emotion": "erzaehlend",
+   "text": "Und weil es noch kein Süßwasser gibt: ein Brunnen. Achttausend."
+  },
+  {
+   "nr": 9,
+   "typ": "reich",
+   "kapitel": 3,
+   "start": 31.504,
+   "dauer": 6.326,
+   "emotion": "erzaehlend",
+   "text": "Zwei Wünsche von gestern sind noch offen. Ein Raketensilo? Dafür braucht ihr erst eine Werkstatt. Dreißigtausend."
+  },
+  {
+   "nr": 10,
+   "typ": "reich",
+   "kapitel": 3,
+   "start": 37.83,
+   "dauer": 2.198,
+   "emotion": "erzaehlend",
+   "text": "Für die Werkstatt fehlt noch ein Mechaniker."
+  },
+  {
+   "nr": 11,
+   "typ": "reich",
+   "kapitel": 3,
+   "start": 40.028,
+   "dauer": 6.062,
+   "emotion": "erzaehlend",
+   "text": "Und Ellen wünscht sich ein Hotel. Das kostet zweihundertfünfzigtausend Euro. Das Feld ist schon abgesteckt."
+  },
+  {
+   "nr": 12,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 46.09,
+   "dauer": 3.038,
+   "emotion": "froh",
+   "text": "„Und mein Bett? Bekommt der Präsident jetzt eins?“"
+  },
+  {
+   "nr": 13,
+   "typ": "reich",
+   "kapitel": 4,
+   "start": 49.128,
+   "dauer": 5.846,
+   "emotion": "erzaehlend",
+   "text": "Das entscheiden deine Einwohner. Das Los fällt auf jemand anderen. Du schläfst in Zelt Nummer zwanzig."
+  },
+  {
+   "nr": 14,
+   "typ": "reich",
+   "kapitel": 5,
+   "start": 54.974,
+   "dauer": 7.07,
+   "emotion": "erzaehlend",
+   "text": "Tag drei: hundertzweiundsechzig Einwohner, drei Häuser, zwanzig Zelte. Noch achtunddreißig bis zum Dorf mit eigenem Namen."
+  },
+  {
+   "nr": 15,
+   "typ": "reich",
+   "kapitel": 5,
+   "start": 62.044,
+   "dauer": 5.582,
+   "emotion": "erzaehlend",
+   "text": "Fürs Hotel fehlen noch zweihundertfünfzehntausend Euro. Und jeder neue Einwohner bringt tausend."
+  },
+  {
+   "nr": 16,
+   "typ": "reich",
+   "kapitel": 5,
+   "start": 67.626,
+   "dauer": 4.886,
+   "emotion": "erzaehlend",
+   "text": "Jeder neue Follower zieht auf deine Insel. Was bauen wir als Nächstes? Schreib es in die Kommentare."
+  }
+ ]
+}
