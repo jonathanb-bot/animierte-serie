@@ -1,12 +1,13 @@
 Verbundene Konten: tiktok:storys4you.de1, instagram:sto.rys4you, youtube:sto.rys4you (2. Zernio-Konto), tiktok:storys4you_eng (2. Zernio-Konto), youtube:storys4you_eng (3. Zernio-Konto), instagram:sory4you_eng (3. Zernio-Konto)
-Konto tiktok:storys4you.de1 Follower=72 Insights ok
+Konto tiktok:storys4you.de1 Follower=71 Insights ok
 Konto instagram:sto.rys4you Follower=13 Insights ok
 Konto youtube:sto.rys4you Follower=55 Insights ok
 Konto tiktok:storys4you_eng Follower=1 Insights ok
 Konto youtube:storys4you_eng Follower=19 Insights ok
-Konto instagram:sory4you_eng Follower=2 Insights ok
+Konto instagram:sory4you_eng Follower=3 Insights ok
 Posts (haupt) Seite 1: 100
-Posts (haupt) Seite 2: 16
-Posts (yt) Seite 1: 95
-Posts (drei) Seite 1: 40
-Fertig: 6 Konten, 244 Posts (244 mit Zahlen), 0 Fehler → posten/analyse.json
+Posts (haupt) Seite 2: 23
+Posts (yt) Seite 1: 100
+Posts (yt) Seite 2: 2
+Posts (drei) Seite 1: 49
+Fertig: 6 Konten, 267 Posts (267 mit Zahlen), 0 Fehler → posten/analyse.json
