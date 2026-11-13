@@ -169,7 +169,7 @@ def _block_audio(zeilen: list[str], stimme: str, log=print) -> np.ndarray:
     log(f"    Gemini ({stimme}): {len(zeilen)} Zeilen …")
     x = _anfrage(text, stimme)
     if TONHOEHE_PRUEFEN:  # Deutsch und Englisch (5.11.), nur Erzähler
-        # 5.11. (Jonathan): die Stimme soll überall gleich hoch klingen (106 Hz), aber ohne starkes
+        # 5.11. (Jonathan): die Stimme soll überall gleich hoch klingen (seit 13.11. 118 Hz, vorher 106 Hz), aber ohne starkes
         # Nachpitchen (das klang unnatürlich). Liegt Gemini mehr als MAX_HT daneben, neu anfragen und die
         # natürlich passendste Fassung nehmen; den kleinen Rest gleicht ton.angleichen aus.
         from .angleichen import ZIEL_HZ, grundton_array

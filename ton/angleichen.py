@@ -1,5 +1,5 @@
 """Erzählstimme angleichen: Gemini liest dieselbe Stimme („Orus“) mal tiefer, mal höher.
-Referenz ist die Stimme aus den ersten Folgen von „24. Stock“ (Grundton ca. 106 Hz).
+Ziel seit 13.11. (Jonathan: „zu tief“): Grundton ca. 118 Hz; bis 12.11. war es die Stimme aus den ersten Folgen von „24. Stock“ (106 Hz).
 Pro Folge wird der mittlere Grundton gemessen und die ganze Folge einheitlich auf die Referenz
 verschoben (Tempo und Klangfarbe bleiben, Wortzeiten in den .json-Dateien bleiben gültig).
 
@@ -11,7 +11,9 @@ from pathlib import Path
 
 import numpy as np
 
-ZIEL_HZ = 106.0      # Grundton der Erzählstimme in „24. Stock“, Folge 1–3
+ZIEL_HZ = 118.0      # Jonathan 13.11.: „Die Stimme ist zu tief“ – neue Folgen ca. 2 Halbtöne höher als „24. Stock“ (106 Hz),
+                     # etwa dort, wo Gemini „Orus“ (lebendig) von selbst spricht; so wird kaum noch nachgepitcht
+REFERENZ_ALT_HZ = 106.0  # Grundton der fertigen Folgen bis 12.11. (24. Stock, Folge 1–3); alte Folgen bleiben so
 TOLERANZ_HT = 0.5    # kleinere Abweichungen (Halbtöne) bleiben unangetastet
 
 

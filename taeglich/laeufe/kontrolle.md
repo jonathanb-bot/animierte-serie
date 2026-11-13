@@ -14,7 +14,7 @@ Jonathans Wunsch vom 7.11.2026: Jeden Abend auf allen Konten die **letzten 4 Vid
    - Untertitel passend zur Staffel (ungerade Staffeln ab s03 ohne, gerade mit)
    - erstes Bild nicht schwarz. **Ausnahme:** Videos, die vor dem 7.11. gerendert wurden, blenden noch ein (Jonathan: nur für die Zukunft ändern). Das nur erwähnen, nicht reparieren.
 6. Messwerte aus dem Bericht prüfen:
-   - **Stimme:** Grundton 106 Hz, höchstens 1,5 Halbtöne daneben (Issue #25). Sprache passt zum Konto.
+   - **Stimme:** Grundton ca. 118 Hz (seit 13.11., Jonathan: „zu tief“; Folgen bis 12.11. haben 106 Hz), höchstens 1,5 Halbtöne daneben (Issue #25). Sprache passt zum Konto.
    - **Gesprochener Anfang** passt zur Folge im Post-Text (richtige Folge, richtige Sprache, keine alte Stimme).
    - Lautheit ca. −15 LUFS (zwischen −18,5 und −12 ist ok).
    - Status bei Zernio `published` mit Link. Fehler bei Zernio (z. B. 429, abgelehnt) sind ein Mangel.

@@ -6,7 +6,7 @@ lädt die Videos (dieselbe Datei, die Zernio hochgeladen hat) und misst:
 
 - Status bei Zernio (published / Fehler) und Link
 - Länge, erstes Bild nicht schwarz, schwarze Strecken
-- Lautheit (Ziel ca. -15 LUFS), Grundton der Stimme (Ziel 106 Hz, höchstens 1.5 Halbtöne daneben)
+- Lautheit (Ziel ca. -15 LUFS), Grundton der Stimme (Ziel 118 Hz seit 13.11., ältere Videos 106 Hz; höchstens 1.5 Halbtöne daneben)
 - Sprache und Anfang des gesprochenen Texts (Whisper), damit man ihn mit dem Post vergleichen kann
 - Kontaktbogen mit 6 Standbildern je Video (zum Ansehen)
 
@@ -30,7 +30,8 @@ KONTEN = [  # (Name, Plattform, konto-Feld im Plan, Sprache)
     ("Instagram englisch", "instagram", "zernio:3", "en"),
     ("YouTube englisch", "youtube", "zernio:3", "en"),
 ]
-ZIEL_HZ, MAX_HT, ZIEL_LUFS = 106.0, 1.5, -15.0
+ZIEL_HZ, MAX_HT, ZIEL_LUFS = 118.0, 1.5, -15.0
+ZIEL_HZ_ALT = 106.0  # Videos, die vor dem 13.11. vertont wurden (Jonathan 13.11.: neue Stimme höher, alte bleiben)
 
 
 def git_json(pfad):
@@ -121,7 +122,8 @@ def main():
             lu = lufs(datei)
             x = audio16k(datei)
             hz = grundton_array(x, 16000)
-            ht = 12 * math.log2(hz / ZIEL_HZ) if hz > 0 else float("nan")
+            # näheres der beiden Ziele: alte Videos (106 Hz) bleiben gültig, neue sollen bei 118 Hz liegen
+            ht = min((12 * math.log2(hz / z) for z in (ZIEL_HZ, ZIEL_HZ_ALT)), key=abs) if hz > 0 else float("nan")
             segs, info = modell.transcribe(audio16k(datei, 25), beam_size=5)
             text = " ".join(s.text.strip() for s in segs)
             kontaktbogen(datei, aus / (p["id"] + ".png"), d)
