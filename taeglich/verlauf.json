@@ -209,6 +209,37 @@
     "lufs": -14.6,
     "dauer_s": 71.93
    }
+  },
+  {
+   "id": "welt-w004",
+   "datum": "2026-11-13",
+   "titel": "Deine Welt – Folge 4: Ein Dach aus Holz",
+   "emoji": "🏕️",
+   "serie": "Deine Welt (Issue #32)",
+   "stimmung": "spannend",
+   "thema": "Top-Kommentar von @EllenZaum (Gartenlauben als Steigerung zum Zelt) umgesetzt: 6 Gartenlauben (neuer Bautyp laube, je 4 Betten, 36.000 €). Wendung: erster Herbstregen – 24 trocken, 131 noch im Zelt. Cliffhanger: ein Hochhaus für alle auf einmal wäre der nächste Schritt.",
+   "stil": "leichte 3D-Optik (Kulisse reich, isometrisch), Spielstand-Leiste mit Kasse, Namensschild + Kommentar-Sprechblase",
+   "kulissen": [
+    "reich",
+    "objekt",
+    "gesicht",
+    "titel"
+   ],
+   "beschreibung": "Tag 4: Ihr habt Gartenlauben gebaut – echtes Holz statt Zelt. Dann kommt der erste Herbstregen: 24 schlafen trocken, 131 noch im Zelt. Jeder Follower ist ein Einwohner. Der Kommentar mit den meisten Likes wird gebaut. Ideen: ein Hochhaus für alle auf einmal, ein Feld mit Essen, ein Imbiss oder etwas ganz anderes.",
+   "hashtags": [
+    "#deinewelt",
+    "#animation",
+    "#story",
+    "#storytime",
+    "#deutsch",
+    "#aufbau",
+    "#insel"
+   ],
+   "tags": [
+    "animation",
+    "story",
+    "deine welt"
+   ]
   }
  ]
 }
