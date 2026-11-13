@@ -1,0 +1,113 @@
+{
+ "dauer": 70.8,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "reich",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 8.918,
+   "emotion": "erzaehlend",
+   "text": "Gestern haben auf deiner Insel noch hundertzweiundsechzig Menschen gelebt. Heute sind es hundertvierundsechzig. Und die Ersten schlafen nicht mehr im Zelt."
+  },
+  {
+   "nr": 2,
+   "typ": "titel",
+   "kapitel": 1,
+   "start": 8.918,
+   "dauer": 1.07,
+   "emotion": "erzaehlend",
+   "text": "Das kam so."
+  },
+  {
+   "nr": 3,
+   "typ": "reich",
+   "kapitel": 2,
+   "start": 9.988,
+   "dauer": 6.446,
+   "emotion": "erzaehlend",
+   "text": "Ihr habt entschieden: Gartenlauben. Kleine Holzhütten statt Zelte. Der Kommentar mit den meisten Likes kam von Ellen."
+  },
+  {
+   "nr": 4,
+   "typ": "reich",
+   "kapitel": 2,
+   "start": 16.434,
+   "dauer": 8.39,
+   "emotion": "erzaehlend",
+   "text": "Jeder neue Einwohner bringt tausend Euro, jeder Like hundert, jeder Kommentar fünfhundert. Die Kasse steht bei achtunddreißigtausendzweihundert."
+  },
+  {
+   "nr": 5,
+   "typ": "reich",
+   "kapitel": 3,
+   "start": 24.824,
+   "dauer": 6.062,
+   "emotion": "erzaehlend",
+   "text": "Sechs Gartenlauben, jede mit vier Betten. Echtes Holz, ein Dach, ein Fenster. Sechsunddreißigtausend Euro."
+  },
+  {
+   "nr": 6,
+   "typ": "reich",
+   "kapitel": 3,
+   "start": 30.886,
+   "dauer": 5.318,
+   "emotion": "erzaehlend",
+   "text": "Dazu ein Blumenkasten am Fenster. Vierundzwanzig Menschen ziehen aus dem Zelt in eine eigene Hütte."
+  },
+  {
+   "nr": 7,
+   "typ": "objekt",
+   "kapitel": 4,
+   "start": 36.204,
+   "dauer": 2.966,
+   "emotion": "erklaerend",
+   "text": "Und dann, am Abend, kommt der erste Herbstregen."
+  },
+  {
+   "nr": 8,
+   "typ": "reich",
+   "kapitel": 4,
+   "start": 39.17,
+   "dauer": 4.118,
+   "emotion": "erzaehlend",
+   "text": "In den sechs Lauben bleibt es trocken. In den Zelten tropft es durch."
+  },
+  {
+   "nr": 9,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 43.288,
+   "dauer": 2.702,
+   "emotion": "erzaehlend",
+   "text": "„Und der Präsident? Der hat immer noch kein Bett.“"
+  },
+  {
+   "nr": 10,
+   "typ": "reich",
+   "kapitel": 5,
+   "start": 45.99,
+   "dauer": 11.51,
+   "emotion": "erzaehlend",
+   "text": "Du liegst in Zelt zwanzig und hörst den Regen aufs Dach. Tag vier: hundertvierundsechzig Einwohner, drei Häuser, sechs Lauben. Noch sechsunddreißig bis zum Dorf mit eigenem Namen."
+  },
+  {
+   "nr": 11,
+   "typ": "reich",
+   "kapitel": 5,
+   "start": 57.5,
+   "dauer": 7.982,
+   "emotion": "erzaehlend",
+   "text": "Dreiunddreißig feste Dächer stehen. Hunderteinunddreißig Zelte noch im Regen. Ein Haus für alle auf einmal, ein Hochhaus, wäre der nächste Schritt."
+  },
+  {
+   "nr": 12,
+   "typ": "reich",
+   "kapitel": 5,
+   "start": 65.482,
+   "dauer": 5.318,
+   "emotion": "erzaehlend",
+   "text": "Jeder neue Follower zieht auf deine Insel. Was bauen wir als Nächstes? Schreib es in die Kommentare."
+  }
+ ]
+}

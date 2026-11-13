@@ -1,0 +1,49 @@
+# Deine Welt – Folge 4: Ein Dach aus Holz
+@musik musik/welt-w004.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung spannend
+@vortrag lebendig
+@klang studio
+@mund zitate
+@einblenden aus
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette tuerkis
+@zeit tag
+
+== Hook ==
+// Ergebnis zuerst: die ganze Insel mit sechs neuen Gartenlauben, Spielstand oben, Einwohner zählt hoch
+[reich groesse=9 bauten="haus@4,4|baum@1,1|baum@7,2|tanne@0,6|fels@8,7|baum@2,8|gericht@5,3|haus@3,4|haus@3,3|zelt@4,6-5,8|zelt@6,6-7,7|brunnen@4,5|werkstatt@2,4|laube@6,3|laube@6,4|laube@6,5|laube@7,3|laube@7,4|laube@7,5" leute=164 praesident=3,5 nah=1.3 blick=5,4 palette=tuerkis palette_staerke=0.2 zoom-rein spielstand="kasse=2.200|einwohner=164|tag=4|betten=33/164|zelt=131" ein="Gestern>#162 EINWOHNER>einwohner|Heute>#164 EINWOHNER>einwohner"] Gestern haben auf deiner Insel noch hundertzweiundsechzig Menschen gelebt. Heute sind es hundertvierundsechzig. Und die Ersten schlafen nicht mehr im Zelt.
+// Titelkarte
+[titel oben="Folge 4" gross="DEINE WELT" unten="Ein Dach aus Holz" farbe=#123a4a akzent=#7fe0e8 groesse=170 hud=false palette=tuerkis zoom-rein] Das kam so.
+
+== Ihr habt entschieden ==
+// Kommentar-Sprechblase: der Wunsch von Ellen
+[reich groesse=9 bauten="haus@4,4|baum@1,1|baum@7,2|tanne@0,6|fels@8,7|baum@2,8|gericht@5,3|haus@3,4|haus@3,3|zelt@4,6-5,8|zelt@6,6-7,7|brunnen@4,5|werkstatt@2,4" leute=164 praesident=3,5 nah=2.2 blick=5,7 palette=tuerkis palette_staerke=0.2 schwenk-links kommentar="@EllenZaum|Wohnwagen oder kleine Gartenlauben zum schlafen. Eine Steigerung zum Zelt 😊|0" spielstand="kasse=38.200|einwohner=164|tag=4|betten=9/164|zelt=153"] Ihr habt entschieden: Gartenlauben. Kleine Holzhütten statt Zelte. Der Kommentar mit den meisten Likes kam von Ellen.
+// Kasse: das Geld von gestern kommt dazu
+[reich groesse=9 bauten="haus@4,4|baum@1,1|baum@7,2|tanne@0,6|fels@8,7|baum@2,8|gericht@5,3|haus@3,4|haus@3,3|zelt@4,6-5,8|zelt@6,6-7,7|brunnen@4,5|werkstatt@2,4" leute=164 praesident=3,5 nah=1.4 blick=4,4 palette=tuerkis palette_staerke=0.2 zoom-raus spielstand="kasse=34.800>38.200|einwohner=164|tag=4|betten=9/164|zelt=153" ein="tausend>+2.000 € EINWOHNER>einwohner|geld>+1.400 € LIKES & KOMMENTARE>geld"] Jeder neue Einwohner bringt tausend Euro, jeder Like hundert, jeder Kommentar fünfhundert. Die Kasse steht bei achtunddreißigtausendzweihundert.
+
+== Bauen ==
+// Sechs Gartenlauben auf freiem Feld, Namensschild
+[reich groesse=9 bauten="haus@4,4|baum@1,1|baum@7,2|tanne@0,6|fels@8,7|baum@2,8|gericht@5,3|haus@3,4|haus@3,3|zelt@4,6-5,8|zelt@6,6-7,7|brunnen@4,5|werkstatt@2,4|laube@6,3|laube@6,4|laube@6,5|laube@7,3|laube@7,4|laube@7,5" leute=164 praesident=3,5 nah=2.4 blick=6,4 palette=tuerkis palette_staerke=0.2 zoom-rein preis="6,4:-36.000 €" spielstand="kasse=38.200>2.200|einwohner=164|tag=4|betten=33/164|zelt=131" ein="vier>#24 FESTE BETTEN>haus"] Sechs Gartenlauben, jede mit vier Betten. Echtes Holz, ein Dach, ein Fenster. Sechsunddreißigtausend Euro.
+// Nah auf eine Laube: der Blumenkasten
+[reich groesse=9 bauten="haus@4,4|baum@1,1|baum@7,2|tanne@0,6|fels@8,7|baum@2,8|gericht@5,3|haus@3,4|haus@3,3|zelt@4,6-5,8|zelt@6,6-7,7|brunnen@4,5|werkstatt@2,4|laube@6,3|laube@6,4|laube@6,5|laube@7,3|laube@7,4|laube@7,5" leute=164 praesident=6,2 nah=3.4 blick=6,4 palette=tuerkis palette_staerke=0.2 schwenk-rechts schild="6,4:Gartenlauben · @EllenZaum" spielstand="kasse=2.200|einwohner=164|tag=4|betten=33/164|zelt=131" ein="Blumen>EIN BLUMENKASTEN>herz"] Dazu ein Blumenkasten am Fenster. Vierundzwanzig Menschen ziehen aus dem Zelt in eine eigene Hütte.
+
+== Der Regen ==
+// Wendung: der erste Herbstregen
+[objekt objekte="regen:Herbstregen|tropfen:Erste Nacht" gross="ES REGNET" palette=tuerkis zoom-rein] Und dann, am Abend, kommt der erste Herbstregen.
+// Abend: Kontrast Lauben trocken, Zelte nass
+[reich groesse=9 zeit=abend bauten="haus@4,4|baum@1,1|baum@7,2|tanne@0,6|fels@8,7|baum@2,8|gericht@5,3|haus@3,4|haus@3,3|zelt@4,6-5,8|zelt@6,6-7,7|brunnen@4,5|werkstatt@2,4|laube@6,3|laube@6,4|laube@6,5|laube@7,3|laube@7,4|laube@7,5" leute=164 praesident=6,4 nah=2.1 blick=6,6 palette=orange palette_staerke=0.2 schwenk-links spielstand="kasse=2.200|einwohner=164|tag=4|betten=33/164|zelt=131" ein="trocken>24 TROCKEN>haus|nass>131 IM ZELT>tropfen"] In den sechs Lauben bleibt es trocken. In den Zelten tropft es durch.
+// Nahaufnahme: du, im Zelt, hörst den Regen
+[gesicht du ort=reich zeit=nacht palette=blau palette_staerke=0.2 spielstand="kasse=2.200|einwohner=164|tag=4|betten=33/164|zelt=131"] „Und der Präsident? Der hat immer noch kein Bett.“
+
+== Tag 4 ==
+// Die ganze Insel bei Nacht, Lauben leuchten
+[reich groesse=9 zeit=nacht bauten="haus@4,4|baum@1,1|baum@7,2|tanne@0,6|fels@8,7|baum@2,8|gericht@5,3|haus@3,4|haus@3,3|zelt@4,6-5,8|zelt@6,6-7,7|brunnen@4,5|werkstatt@2,4|laube@6,3|laube@6,4|laube@6,5|laube@7,3|laube@7,4|laube@7,5" leute=164 praesident=6,4 palette=blau palette_staerke=0.2 zoom-raus spielstand="kasse=2.200|einwohner=164|tag=4|betten=33/164|zelt=131" ein="hundertvierundsechzig>#164 EINWOHNER>einwohner|sechsunddreißig>36 BIS ZUM DORF>haus"] Du liegst in Zelt zwanzig und hörst den Regen aufs Dach. Tag vier: hundertvierundsechzig Einwohner, drei Häuser, sechs Lauben. Noch sechsunddreißig bis zum Dorf mit eigenem Namen.
+// Cliffhanger als Aussage: Hochhaus als nächster Schritt
+[reich groesse=9 zeit=nacht bauten="haus@4,4|baum@1,1|baum@7,2|tanne@0,6|fels@8,7|baum@2,8|gericht@5,3|haus@3,4|haus@3,3|zelt@4,6-5,8|zelt@6,6-7,7|brunnen@4,5|werkstatt@2,4|laube@6,3|laube@6,4|laube@6,5|laube@7,3|laube@7,4|laube@7,5" leute=164 praesident=6,4 markiere=3,6 nah=2.4 blick=4,7 palette=blau palette_staerke=0.2 zoom-rein spielstand="kasse=2.200|einwohner=164|tag=4|betten=33/164|zelt=131" ein="fest>33 FESTE DÄCHER>haus|Regen>131 IM REGEN>tropfen"] Dreiunddreißig feste Dächer stehen. Hunderteinunddreißig Zelte noch im Regen. Ein Haus für alle auf einmal, ein Hochhaus, wäre der nächste Schritt.
+// Aufruf: die ganze Insel bei Nacht von oben
+[reich groesse=9 zeit=nacht bauten="haus@4,4|baum@1,1|baum@7,2|tanne@0,6|fels@8,7|baum@2,8|gericht@5,3|haus@3,4|haus@3,3|zelt@4,6-5,8|zelt@6,6-7,7|brunnen@4,5|werkstatt@2,4|laube@6,3|laube@6,4|laube@6,5|laube@7,3|laube@7,4|laube@7,5" leute=164 praesident=6,4 nah=1.3 blick=4,4 palette=blau palette_staerke=0.2 schwenk-rechts spielstand="kasse=2.200|einwohner=164|tag=4|betten=33/164|zelt=131"] Jeder neue Follower zieht auf deine Insel. Was bauen wir als Nächstes? Schreib es in die Kommentare.

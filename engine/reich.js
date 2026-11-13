@@ -9,7 +9,7 @@
    - groesse: Kantenlänge der Insel in Feldern (wächst mit dem Reich); form=rund (Standard) rundet die Küste natürlich ab
    - bauten: typ@i,j (oder typ@i1,j1-i2,j2 für ein Rechteck). Ein späterer Eintrag ersetzt einen früheren auf demselben
      Feld (so wird aus einem Haus ein Hochhaus). Typen: BAU (haus, hochhausN, baum, tanne, fels, brunnen, laterne,
-     baustelle, boot, gericht, zelt, laden, werkstatt) und BODEN (weg, strasse, feld, wasser, platz, sand)
+     baustelle, boot, gericht, zelt, laden, werkstatt, laube) und BODEN (weg, strasse, feld, wasser, platz, sand)
    - leute: Einwohner = Follower (einfache Figuren, höchstens 3 pro freiem Feld sichtbar), neu: so viele leuchten auf
    - praesident: Feld des Gründers (du, blaue Jacke, gelbe Schärpe), markiere: pulsierender Ring auf einem Feld
    - nah/blick: Ausschnitt um ein Feld (nah=2 = doppelt so groß); `fokus`/`zoom` sind Kamera-Angaben der Engine
@@ -269,6 +269,42 @@
     for (let k = 0; k < 4; k++) { const p = (t * 0.25 + k / 4 + idx * 0.21) % 1; circle(s0[0] + p * TW * 0.2, s0[1] - TW * 0.18 - p * TW * 0.55, TW * (0.02 + p * 0.06), rgba(nacht ? "#9aa4c0" : "#ffffff", 0.35 * (1 - p))); }
   };
   SCHATTEN.werkstatt = TW => ({ w: 0.76, d: 0.66, h: TW * 0.4 });
+
+  // Folge 4 (13.11.): Gartenlaube, kleine Holzhütte als Steigerung zum Zelt (eigenes Satteldach, Tür, Fenster mit Blumenkasten)
+  BAU.laube = (x, y, ei, ej, TW, P, t, r, idx) => {
+    const HOLZ = ["#b07a44", "#9c8a56", "#86986a", "#a86a48", "#7e8a98"];
+    const holz = HOLZ[idx % 5], dach = shade(mix(holz, "#4a3626", 0.45), -0.04), nacht = P.sonne < 0.5;
+    const h = TW * 0.19, w = 0.42, d = 0.4;
+    quader(x, y, ei, ej, w + 0.05, d + 0.05, TW * 0.025, P.sockel, null, P);
+    const q = quader(x, y - TW * 0.025, ei, ej, w, d, h, holz, shade(holz, -0.1), P), { D, C, B } = q.fl, Z = q.Z;
+    // Bretter-Fugen auf der Front
+    for (let k = 1; k < 5; k++) { const z = h * k / 5; line(D[0], D[1] - z, C[0], C[1] - z, 1, rgba("#000000", 0.08)); }
+    const sf = (a, z) => [lerp(D[0], C[0], a), lerp(D[1], C[1], a) - z];
+    // Tür (links)
+    poly([sf(0.12, 0), sf(0.4, 0), sf(0.4, h * 0.74), sf(0.12, h * 0.74)], shade(dach, nacht ? 0.12 : -0.14));
+    line(...sf(0.26, 0), ...sf(0.26, h * 0.74), 1, rgba("#000000", 0.18));
+    circle(...sf(0.36, h * 0.36), TW * 0.012, "#e8c86a");
+    // Fenster (rechts) mit Blumenkasten
+    const f0 = sf(0.56, h * 0.3), f1 = sf(0.86, h * 0.3);
+    poly([f0, f1, [f1[0], f1[1] - h * 0.32], [f0[0], f0[1] - h * 0.32]], nacht ? P.glasN : shade(P.glas, 0.05));
+    line((f0[0] + f1[0]) / 2, (f0[1] + f1[1]) / 2, (f0[0] + f1[0]) / 2, (f0[1] + f1[1]) / 2 - h * 0.32, 1, rgba(P.rahmen, 0.7));
+    if (nacht) glut(...sf(0.71, h * 0.46), TW * 0.28, P.glasN, 0.32);
+    poly([[f0[0], f0[1] + h * 0.02], [f1[0], f1[1] + h * 0.02], [f1[0], f1[1] - h * 0.04], [f0[0], f0[1] - h * 0.04]], "#6a4a2a");
+    for (let k = 0; k < 3; k++) circle(...sf(0.6 + k * 0.1, h * 0.34), TW * 0.014, ["#e8697a", "#f0b84a", "#d85a9a"][k]);
+    // rechte Seite: kleines Fenster
+    fenster(B, C, h * 0.34, h * 0.26, 1, P, r, nacht, true);
+    // Satteldach mit Überstand
+    const ue = 0.06, hr = h + TW * 0.15;
+    const a0 = Z(-w / 2 - ue, -d / 2 - ue, h), b0 = Z(w / 2 + ue, -d / 2 - ue, h), c0 = Z(w / 2 + ue, d / 2 + ue, h), dd = Z(-w / 2 - ue, d / 2 + ue, h);
+    const f1r = Z(-w / 2 - ue, 0, hr), f2r = Z(w / 2 + ue, 0, hr);
+    poly([a0, b0, f2r, f1r], shade(dach, 0.12));
+    poly([Z(w / 2, -d / 2, h), Z(w / 2, d / 2, h), f2r], shade(dach, -0.22));
+    ctx.fillStyle = lgrad(f1r[0], f1r[1], dd[0], dd[1], [[0, shade(dach, 0.06)], [1, shade(dach, -0.12)]]); poly([dd, c0, f2r, f1r]); ctx.fill();
+    for (let k = 1; k < 4; k++) { const a = k / 4; line(lerp(f1r[0], dd[0], a), lerp(f1r[1], dd[1], a), lerp(f2r[0], c0[0], a), lerp(f2r[1], c0[1], a), 1, rgba(shade(dach, -0.3), 0.4)); }
+    line(f1r[0], f1r[1], f2r[0], f2r[1], TW * 0.016, shade(dach, 0.3));
+    line(dd[0], dd[1], c0[0], c0[1], 1.1, rgba("#000000", 0.2));
+  };
+  SCHATTEN.laube = TW => ({ w: 0.52, d: 0.5, h: TW * 0.34 });
 
   const ecken = (x, y, TW, TH, s = 1) => [[x, y - TH / 2 * s], [x + TW / 2 * s, y], [x, y + TH / 2 * s], [x - TW / 2 * s, y]];
   const BODEN = {
