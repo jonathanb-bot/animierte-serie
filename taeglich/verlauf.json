@@ -239,7 +239,17 @@
     "animation",
     "story",
     "deine welt"
-   ]
+   ],
+   "veroeffentlicht": {
+    "video": "https://raw.githubusercontent.com/jonathanb-bot/animierte-serie/youtube-upload/taeglich/welt-w004.mp4",
+    "geplant": {
+     "tiktok": "2026-11-13T19:10:00",
+     "instagram": "2026-11-13T18:33:00",
+     "youtube": "2026-11-13T19:18:00"
+    },
+    "lufs": -14.6,
+    "dauer_s": 70.38
+   }
   }
  ]
 }
