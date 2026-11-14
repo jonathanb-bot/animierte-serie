@@ -40,6 +40,8 @@ STIMMUNGEN = {
     "traurig": "ruhiger Erzähler einer späten Radiosendung, der eine traurige, berührende Geschichte erzählt: tiefe, warme, volle Männerstimme, entspannt, natürlich, leise, nie kitschig",
     "freudig": "ruhiger Erzähler einer späten Radiosendung, der eine schöne, fröhliche Geschichte erzählt: tiefe, warme, volle Männerstimme, entspannt, natürlich, mit einem leisen Lächeln",
     "warm": "ruhiger Erzähler einer späten Radiosendung, der eine warmherzige Geschichte erzählt: tiefe, warme, volle Männerstimme, entspannt, natürlich, ehrlich, wie ein guter Freund",
+    # 14.11. (Jonathan, nur „Deine Welt“ mit Stimme „Puck“): schnell, anregend, nicht monoton – „Hey, na?“
+    "aufbau": "gut gelaunter junger Erzähler eines TikTok-Aufbauvideos: zügig, locker und nahbar, mit viel Energie und Betonung, lebendige Sprachmelodie, wie ein Freund, der etwas Aufregendes zeigt",
 }
 
 

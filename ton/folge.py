@@ -287,8 +287,9 @@ def bauen(drehbuch: str, nur_stimme=False, drone=False, stimme="edge", anfragen=
         if f.stem not in gueltig:
             f.unlink()
 
-    # Erzählstimme auf die Referenz aus „24. Stock“ angleichen (Gemini schwankt in der Tonhöhe)
-    if stimme.startswith("gemini"):
+    # Erzählstimme auf die Referenz aus „24. Stock“ angleichen (Gemini schwankt in der Tonhöhe).
+    # Nur für Orus: andere Stimmen (z. B. „Puck“ bei „Deine Welt“, 14.11.) haben ihre eigene Tonlage und würden sonst verzerrt.
+    if stimme.startswith("gemini") and stimme.split(":", 1)[-1] in ("gemini", "Orus"):
         from .angleichen import angleichen
         angleichen(audio_dir, log=log)
 

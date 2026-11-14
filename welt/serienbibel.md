@@ -55,7 +55,8 @@ Es gelten zusätzlich alle offenen Issues mit Label `dringlich`, `CLAUDE.md` und
 ## Format einer Folge
 
 - **62–90 s** (#12), ca. 180–210 Wörter, 16–22 Einstellungen. TikTok, Instagram und YouTube je ein Post.
-- **Kopf:** `@qualitaet max`, `@vortrag lebendig`, `@klang studio`, `@mund zitate`, `@einblenden aus`, `@look 0`, `@kino 0.35`, `@stil leuchtend`, `@palette tuerkis`, Untertitel an. In der Kulisse `reich` immer `palette_staerke=0.2` (die Insel behält ihre Farben).
+- **Stimme (Jonathan 14.11.):** Gemini **„Puck“** statt Orus, nur für diese Serie, Vortrag `@stimmung aufbau` (zügig, locker, gut gelaunt, nicht monoton). Figurenstimmen und alle anderen Serien bleiben bei Orus.
+- **Kopf:** `@qualitaet max`, `@vortrag lebendig`, `@stimmung aufbau`, `@klang studio`, `@mund zitate`, `@einblenden aus`, `@look 0`, `@kino 0.35`, `@stil leuchtend`, `@palette tuerkis`, Untertitel an. In der Kulisse `reich` immer `palette_staerke=0.2` (die Insel behält ihre Farben).
 - **Bauplan:** Hook mit „du/dein“ und dem Stand des Reichs → „Ihr habt entschieden: …“ (ab Folge 2) → Bau mit Hindernis und Preis → eine Wendung → die ganze Insel mit dem neuen Stand und der Einwohnerzahl → **Cliffhanger**: ein offenes Feld, ein Problem oder eine Chance, über die als Nächstes entschieden wird (als Aussage, nicht als Frage).
 - **Mindestens 6 Einblendungen** (Einwohner, Tag, Kosten, neue Gebäude …), Kulisse `reich` am Anfang und am Ende, Zoom auf das, was gebaut wird (`nah=… blick=i,j`), Markierung des nächsten Felds (`markiere=i,j`).
 - **Posten:** `python taeglich/veroeffentlichen.py welt-wNNN --zeit <Datum>T18:45` (Eintrag in `taeglich/verlauf.json` mit `"titel": "Deine Welt – Folge N: …"`, damit `welt/stand.py` die Kommentare findet). Post-Text: ein Satz zur Folge und „Jeder Follower ist ein Einwohner. Der Kommentar mit den meisten Likes wird gebaut.“
