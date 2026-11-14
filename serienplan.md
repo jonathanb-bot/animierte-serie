@@ -1,5 +1,7 @@
 # Staffel 1: „24. Stock“ – Zombie-Apokalypse im Hochhaus
 
+> **Große Analyse-Auswertung am 22.11.2026 (Jonathan 14.11.):** An diesem Tag werden alle bisherigen Projekte gründlich ausgewertet (24. Stock, Der Alien, Der letzte Mann, Kurzvideo-Staffeln inkl. Englisch und Zitat-Videos, Deine Welt, Bis zum Mond). Ablauf `taeglich/laeufe/analyse-22-11.md` (Branch `taeglich`), Bericht `taeglich/analyse/2026-11-22-abschluss.md`. Bis dahin alle Zahlen, Beobachtungen und Experimente sauber festhalten.
+
 **Prämisse:** Die Zombie-Apokalypse bricht aus, und **du** wohnst im obersten Stock eines Hochhauses mitten in der Stadt, im 24. Stock des Lindenhof-Turms. Erzählt wird in der Du-Form. Jede Folge erklärt echte Überlebensfaktoren (Wasser, Lärm, Licht, Treppenhaus, Strom, Hygiene, Nahrung, Signale) und endet mit einem Cliffhanger.
 
 **Figuren** (fest in `figuren.json`, sehen in jeder Folge gleich aus):
