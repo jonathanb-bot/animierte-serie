@@ -1,6 +1,6 @@
 # Bis zum Mond – Serienbibel (Entwurf, Jonathans Idee 14.11.2026)
 
-Angelehnt an ein Vergleichsvideo (TikTok „meine.inselwelt“: Städte bauen Türme um die Wette), aber mit eigener Grafik, eigener Erzählung und eigenen Regeln. **Folge 1 „Der Startschuss“** liegt in `taeglich/episoden/mond-m001.txt`. Ob und wann gepostet wird, entscheidet Jonathan.
+Angelehnt an ein Vergleichsvideo (TikTok „meine.inselwelt“: Städte bauen Türme um die Wette), aber mit eigener Grafik, eigener Erzählung und eigenen Regeln. **Folge 1 „Der Startschuss“** liegt in `taeglich/episoden/mond-m001.txt`. Folge 1 gepostet am 14.11. (TikTok 20:46, Instagram 21:20, YouTube 21:34; Jonathan: „Einplanen bitte“).
 
 ## Idee
 Jede Stadt bekommt einen Bauplatz auf einem schwebenden Turmplatz. Die Zuschauer bauen den Turm ihrer Stadt mit Kommentaren. Ziel: bis zum Mond.
@@ -13,7 +13,8 @@ Jede Stadt bekommt einen Bauplatz auf einem schwebenden Turmplatz. Die Zuschauer
 - Nichts Beleidigendes, keine Politik, keine Werbung. Nutzernamen dürfen wie bei „Deine Welt“ (Jonathan 12.11.) eingeblendet werden.
 
 ## Format
-- 62–90 s, Stimme Gemini **„Fenrir“** mit `@stimmung aufbau`, `@vortrag lebendig` (schnell, anregend). Kopf wie „Deine Welt“ (`@qualitaet max`, `@stil leuchtend`, `@look 0`, `@kino 0.35`, `@einblenden aus`).
+- **Stimme verbindlich (Jonathan 14.11.): Gemini „Fenrir“ für alle Folgen dieser Serie**, mit `@stimmung aufbau`, `@vortrag lebendig`: `python -m ton.folge taeglich/episoden/mond-mNNN.txt --stimme gemini:Fenrir --anfragen 1`, danach `python taeglich/stimme_pruefen.py …` (muss OK melden). Fenrir wird nicht auf Orus' Tonhöhe angeglichen; die Tonhöhen-Warnung von `ton.folge` bezieht sich auf Orus und gilt hier nicht.
+- 62–90 s. Kopf wie „Deine Welt“ (`@qualitaet max`, `@stil leuchtend`, `@look 0`, `@kino 0.35`, `@einblenden aus`).
 - Ab Folge 2: Hook mit dem Stand („Tag 2: 14 Städte, München vorne mit 41 Stockwerken“), Wachstum der Türme (`tuerme="München:12>41|…"`), Rangliste der Top 3, eine Fahrt am höchsten Turm hoch (`modus=hoehe`), nächstes Ziel, Aufruf „Kommentier deine Stadt!“.
 
 ## Kulisse `turm` (engine/turm.js)

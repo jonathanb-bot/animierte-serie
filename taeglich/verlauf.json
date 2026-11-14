@@ -291,6 +291,49 @@
     "lufs": -14.6,
     "dauer_s": 84.1
    }
+  },
+  {
+   "id": "mond-m001",
+   "datum": "2026-11-14",
+   "titel": "Bis zum Mond – Folge 1: Der Startschuss",
+   "emoji": "🌕",
+   "serie": "Bis zum Mond (Jonathans Idee 14.11.)",
+   "stimmung": "aufbau",
+   "stimme": "Fenrir",
+   "thema": "Städte bauen Türme um die Wette: Kommentar mit deiner Stadt = 1 Stockwerk, Like auf den Kommentar = 1 Stockwerk, Ziel: der Mond",
+   "stil": "leuchtend, Kulisse turm (Turmplatz, Fahrt bis zum Mond, Zielkarte)",
+   "kulissen": [
+    "turm",
+    "titel",
+    "objekt",
+    "gesicht"
+   ],
+   "beschreibung": "Deine Stadt gegen alle: Jeder Kommentar mit deiner Stadt ist ein Stockwerk, jedes Like darauf noch eins. Ab 333 Stockwerken seid ihr in den Wolken – das Ziel ist der Mond. Kommentier deine Stadt!",
+   "hashtags": [
+    "#biszummond",
+    "#deinestadt",
+    "#animation",
+    "#turm",
+    "#deutsch",
+    "#mond",
+    "#fyp"
+   ],
+   "tags": [
+    "animation",
+    "bis zum mond",
+    "turm",
+    "stadt"
+   ],
+   "veroeffentlicht": {
+    "video": "https://raw.githubusercontent.com/jonathanb-bot/animierte-serie/youtube-upload/taeglich/mond-m001.mp4",
+    "geplant": {
+     "tiktok": "2026-11-14T20:46:00",
+     "instagram": "2026-11-14T21:20:00",
+     "youtube": "2026-11-14T21:34:00"
+    },
+    "lufs": -14.6,
+    "dauer_s": 67.23
+   }
   }
  ]
 }
