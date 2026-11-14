@@ -15,3 +15,5 @@ Die Abläufe stehen in diesen Dateien. Wer einen Ablauf ändern will, ändert nu
 - `zitate.md`: Zitat-Video nach jeder veröffentlichten Staffel (Issue #24); schickt die Datei in den Chat, Jonathan postet selbst mit eigenem Song
 - `welt.md`: „Deine Welt“ täglich 13:47 (Issue #32), eine Folge am Tag aus dem Top-Kommentar, Test bis 15.11.
 - `kontrolle.md`: Abend-Kontrolle täglich 20:13, prüft auf allen Konten die letzten 4 Videos (Stimme, Bild, Ton, Status) mit `taeglich/kontrolle.py`
+- `mond.md`: „Bis zum Mond“ täglich 15:17 (Jonathan 14.11.), eine Folge am Tag aus den Städte-Kommentaren (`mond/stand.py`), Stimme Fenrir, bis 22.11.
+- `analyse-22-11.md`: **große Analyse-Auswertung aller Projekte am 22.11.2026 um 10:23** (einmalig, Issue #34)
