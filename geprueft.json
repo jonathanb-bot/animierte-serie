@@ -1878,6 +1878,12 @@
    "bild_s": 70.38,
    "ton_s": 70.4,
    "lufs": -14.6
+  },
+  "taeglich/welt-w005.mp4": {
+   "ok": true,
+   "bild_s": 84.1,
+   "ton_s": 84.1,
+   "lufs": -14.6
   }
  },
  "serien": {
@@ -2086,6 +2092,10 @@
   "welt-w004": {
    "titel": "Deine Welt – Folge 4: Ein Dach aus Holz",
    "datei": "taeglich/welt-w004.mp4"
+  },
+  "welt-w005": {
+   "titel": "Deine Welt – Folge 5: Die Halle",
+   "datei": "taeglich/welt-w005.mp4"
   }
  },
  "taeglich_staffeln": {
