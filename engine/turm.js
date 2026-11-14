@@ -78,16 +78,46 @@
     const z = Number(s.nah) || 1, bl = s.blick ? String(s.blick).split(",").map(Number) : null;
     ctx.save();
     if (z !== 1 || bl) { const fp = bl ? feld(bl[0], bl[1]) : [cx, cy + (G - 1) * TH / 2]; ctx.translate(540, 960); ctx.scale(z, z); ctx.translate(-fp[0], -fp[1]); }
-    // schwebende Platte mit Fels darunter
-    const o = feld(-0.6, -0.6), r_ = feld(G - 0.4, -0.6), u = feld(G - 0.4, G - 0.4), l = feld(-0.6, G - 0.4), dick = TW * 0.7;
-    const sp = (t * 0.6) % 1; ctx.fillStyle = rgrad(u[0], u[1] + dick * 1.6, 10, TW * G * 0.6, [[0, rgba("#000000", 0.18)], [1, rgba("#000000", 0)]]); ctx.fillRect(0, 0, 1080, 1920);
-    poly([l, u, [u[0], u[1] + dick], [l[0], l[1] + dick]], P.rand); poly([u, r_, [r_[0], r_[1] + dick], [u[0], u[1] + dick]], P.randS);
-    poly([[l[0], l[1] + dick], [u[0], u[1] + dick], [u[0], u[1] + dick * 2.6]], shade(P.rand, -0.15));
-    poly([[u[0], u[1] + dick], [r_[0], r_[1] + dick], [u[0], u[1] + dick * 2.6]], shade(P.randS, -0.15));
-    for (let k = 0; k < 3; k++) { const a = (k + 0.5) / 3; line(lerp(l[0], u[0], a), lerp(l[1], u[1], a), lerp(l[0], u[0], a), lerp(l[1], u[1], a) + dick, 2, rgba("#000000", 0.08)); }
-    poly([o, r_, u, l], P.gras); const ins = (p, k) => [lerp(p[0], cx, k), lerp(p[1], cy + (G - 1) * TH / 2, k)];
-    poly([ins(o, 0.03), ins(r_, 0.03), ins(u, 0.03), ins(l, 0.03)], P.platz);
-    for (let i = 0; i <= G; i++) { const a = feld(i - 0.5, -0.5), b = feld(i - 0.5, G - 0.5), c = feld(-0.5, i - 0.5), d = feld(G - 0.5, i - 0.5); line(a[0], a[1], b[0], b[1], 1.6, P.fuge); line(c[0], c[1], d[0], d[1], 1.6, P.fuge); }
+    // schwebende Insel-Platte: Grasrand mit Bäumen, gepflasterter Platz, Felsunterbau mit Wasserfall (Detail-Durchgang 14.11.)
+    const R0 = -1.35, R1 = G + 0.35, o = feld(R0, R0), r_ = feld(R1, R0), u = feld(R1, R1), l = feld(R0, R1), erde = TW * 0.22, nacht = P.licht < 0.5;
+    const rf = rnd(61), stufe = (a, k) => 0.55 + 0.45 * Math.sin(a * Math.PI) + (rf() - 0.5) * 0.18 * k;
+    // Fels: zackige Unterseite, links hell, rechts dunkel
+    const fl = [], fr = []; for (let k = 0; k <= 12; k++) { const a = k / 12; fl.push([lerp(l[0], u[0], a), lerp(l[1], u[1], a) + erde + TW * 2.6 * stufe(a, 1)]); }
+    for (let k = 0; k <= 12; k++) { const a = k / 12; fr.push([lerp(u[0], r_[0], a), lerp(u[1], r_[1], a) + erde + TW * 2.6 * stufe(1 - a, 1)]); }
+    const felsL = shade(P.rand, -0.05), felsR = shade(P.randS, -0.05);
+    ctx.fillStyle = lgrad(0, l[1], 0, u[1] + TW * 3, [[0, felsL], [1, shade(felsL, -0.25)]]); poly([[l[0], l[1] + erde], [u[0], u[1] + erde]].concat(fl.slice().reverse())); ctx.fill();
+    ctx.fillStyle = lgrad(0, r_[1], 0, u[1] + TW * 3, [[0, felsR], [1, shade(felsR, -0.25)]]); poly([[u[0], u[1] + erde], [r_[0], r_[1] + erde]].concat(fr.slice().reverse())); ctx.fill();
+    for (let k = 1; k < 4; k++) { const q = k * 0.22; ctx.beginPath(); fl.forEach((pt, n) => { const a = n / 12, top = [lerp(l[0], u[0], a), lerp(l[1], u[1], a) + erde]; const y = lerp(top[1], pt[1], q); n ? ctx.lineTo(pt[0], y) : ctx.moveTo(pt[0], y); });
+      ctx.lineWidth = 2; ctx.strokeStyle = rgba("#000000", 0.07); ctx.stroke();
+      ctx.beginPath(); fr.forEach((pt, n) => { const a = n / 12, top = [lerp(u[0], r_[0], a), lerp(u[1], r_[1], a) + erde]; const y = lerp(top[1], pt[1], q); n ? ctx.lineTo(pt[0], y) : ctx.moveTo(pt[0], y); }); ctx.stroke(); }
+    // Erdschicht unter dem Gras
+    poly([l, u, [u[0], u[1] + erde], [l[0], l[1] + erde]], shade(P.rand, 0.08)); poly([u, r_, [r_[0], r_[1] + erde], [u[0], u[1] + erde]], shade(P.randS, 0.04));
+    // Wasserfall an der rechten Kante
+    { const a = 0.38, w0 = TW * 0.32, x0 = lerp(u[0], r_[0], a), y0 = lerp(u[1], r_[1], a), wf = nacht ? "#5a7ac8" : "#8fd8f0";
+      ctx.fillStyle = lgrad(0, y0, 0, y0 + 1300, [[0, rgba(wf, 0.95)], [0.6, rgba(wf, 0.6)], [1, rgba(wf, 0)]]); ctx.fillRect(x0 - w0 / 2, y0 - 2, w0, 1300);
+      for (let k = 0; k < 9; k++) { const ph = (t * 1.6 + k / 9) % 1, yy = y0 + ph * 1100; box(x0 - w0 / 2 + (k % 3) * w0 / 3 + 4, yy, w0 / 3 - 8, 40 + k * 4, 6, rgba("#ffffff", 0.35 * (1 - ph))); }
+      poly([[x0 - w0 / 2 - 6, y0 - 4], [x0 + w0 / 2 + 6, y0 - 4 - TW * 0.1], [x0 + w0 / 2 + 6, y0 + 4 - TW * 0.1], [x0 - w0 / 2 - 6, y0 + 4]], rgba("#ffffff", 0.7)); }
+    // Moos-Tropfen an der Oberkante
+    for (const [p0, p1] of [[l, u], [u, r_]]) for (let k = 0; k < 14; k++) { const a = (k + rf()) / 14, x = lerp(p0[0], p1[0], a), y = lerp(p0[1], p1[1], a) + erde - 2, h = TW * (0.06 + rf() * 0.16); box(x - TW * 0.03, y, TW * 0.06, h, TW * 0.03, shade(P.gras, -0.12)); }
+    // Grasfläche mit Kante, Platz mit Randstein und leicht unterschiedlichen Platten
+    poly([o, r_, u, l], P.gras); line(l[0], l[1], u[0], u[1], 3, rgba("#ffffff", 0.35)); line(u[0], u[1], r_[0], r_[1], 2, rgba("#ffffff", 0.2));
+    { const rg = rnd(71); for (let k = 0; k < 90; k++) { const i2 = R0 + rg() * (R1 - R0), j2 = R0 + rg() * (R1 - R0); if (i2 > -0.6 && i2 < G - 0.4 && j2 > -0.6 && j2 < G - 0.4) continue; const [gx, gy] = feld(i2, j2); line(gx, gy, gx - 2, gy - TW * 0.07, 2, shade(P.gras, -0.15)); line(gx + 3, gy, gx + 5, gy - TW * 0.06, 2, shade(P.gras, 0.1)); } }
+    const ro = feld(-0.62, -0.62), rr2 = feld(G - 0.38, -0.62), ru = feld(G - 0.38, G - 0.38), rl = feld(-0.62, G - 0.38);
+    poly([ro, rr2, ru, rl], shade(P.platz, -0.12)); poly([rl, ru, [ru[0], ru[1] + 5], [rl[0], rl[1] + 5]], shade(P.platz, -0.3)); poly([ru, rr2, [rr2[0], rr2[1] + 5], [ru[0], ru[1] + 5]], shade(P.platz, -0.38));
+    for (let i = 0; i < G; i++) for (let j = 0; j < G; j++) { const [x, y] = feld(i, j), v = (Math.sin(i * 12.9898 + j * 78.233) * 43758.5453 % 1 + 1) % 1, k2 = 0.47;
+      poly([[x - TW * k2, y], [x, y - TH * k2], [x + TW * k2, y], [x, y + TH * k2]], shade(P.platz, (v - 0.5) * 0.06));
+      line(x - TW * k2, y, x, y - TH * k2, 1.2, rgba("#ffffff", 0.25)); }
+    // Laternen an den Ecken des Platzes
+    const laternen = [[-0.75, -0.75], [G - 0.25, -0.75], [-0.75, G - 0.25], [G - 0.25, G - 0.25]].map(([a, b]) => feld(a, b));
+    const laterne = ([x, y]) => { line(x, y, x, y - TW * 0.55, 3, "#3a3e4a"); box(x - 6, y - TW * 0.62, 12, 14, 3, "#3a3e4a"); circle(x, y - TW * 0.56, 5, nacht || P.licht < 0.8 ? "#ffd27a" : "#f4f0e0"); if (P.licht < 0.8) glut(x, y - TW * 0.56, TW * 0.7, "#ffd27a", 0.4); };
+    // Bäume auf dem Grasrand (hinten vor den Türmen, vorne danach)
+    const baeume = []; { const rb = rnd(83); for (let k = 0; k < 26; k++) { const seite = k % 4, a = (Math.floor(k / 4) + 0.3 + rb() * 0.4) / 6.5, d = -1.0 - rb() * 0.2;
+      const [i2, j2] = seite === 0 ? [lerp(-0.5, G - 0.5, a), d] : seite === 1 ? [d, lerp(-0.5, G - 0.5, a)] : seite === 2 ? [lerp(-0.5, G - 0.5, a), G - 1 - d] : [G - 1 - d, lerp(-0.5, G - 0.5, a)];
+      baeume.push({ i: i2, j: j2, g: 0.8 + rb() * 0.5, f: rb() }); } }
+    const baum = b => { const [x, y] = feld(b.i, b.j), g = TW * 0.22 * b.g, f = nacht ? ["#22443c", "#2a4c42"] : ["#4a9a4e", "#5aa854", "#3f8a48"];
+      ellipse(x + g * 0.5, y + 2, g * 0.9, g * 0.32, rgba("#1a2030", 0.18)); box(x - g * 0.08, y - g * 0.9, g * 0.16, g * 0.9, 2, "#6e4a34");
+      const c = f[Math.floor(b.f * f.length)]; circle(x - g * 0.3, y - g * 1.05, g * 0.5, shade(c, -0.08)); circle(x + g * 0.3, y - g * 1.1, g * 0.48, shade(c, -0.15)); circle(x, y - g * 1.4, g * 0.55, c); circle(x - g * 0.15, y - g * 1.55, g * 0.22, rgba("#ffffff", 0.18)); };
+    for (const b of baeume.filter(b => b.i < 0 || b.j < 0)) baum(b); laterne(laternen[0]); laterne(laternen[1]); laterne(laternen[2]);
     // Plätze: spiralförmig von der Mitte nach außen, Reihenfolge der Städte = Platz
     const plaetze = []; for (let i = 0; i < G; i++) for (let j = 0; j < G; j++) plaetze.push([i, j]);
     const c0 = (G - 1) / 2; plaetze.sort((a, b) => Math.hypot(a[0] - c0, a[1] - c0) - Math.hypot(b[0] - c0, b[1] - c0) || a[0] - b[0]);
@@ -95,15 +125,21 @@
     if (s.markiere) { const [mi, mj] = String(s.markiere).split(",").map(Number), [x, y] = feld(mi, mj), p = 0.5 + 0.5 * Math.sin(t * 4);
       glut(x, y, TW * 0.9, "#ffe27a", 0.35 * p); ctx.beginPath(); ctx.ellipse(x, y, TW * 0.46, TH * 0.46, 0, 0, Math.PI * 2); ctx.lineWidth = TW * 0.04; ctx.strokeStyle = rgba("#ffe27a", 0.7 + 0.3 * p); ctx.stroke();
       if (s.grundstein !== "0") s._grundstein = [x, y]; }
-    const zuZeichnen = plaetze.map((pl, k) => ({ pl, k, turm: tuerme[k] })).sort((a, b) => (a.pl[0] + a.pl[1]) - (b.pl[0] + b.pl[1]));
+    const leute = []; { const rp = rnd(91); const n = Number(s.leute ?? 18); for (let k = 0; k < n; k++) { const quer = rp() < 0.5, bahn = Math.floor(rp() * G) + 0.5 - 1, v = (0.12 + rp() * 0.12) * (rp() < 0.5 ? 1 : -1), st = rp() * G;
+      const pos = ((st + v * t) % G + G) % G - 0.5; leute.push({ i: quer ? pos : bahn, j: quer ? bahn : pos, f: FARBEN[k % FARBEN.length], ph: rp() * 6 }); } }
+    const zuZeichnen = plaetze.map((pl, k) => ({ pl, k, turm: tuerme[k] })).concat(leute.map(m => ({ mensch: m, pl: [m.i + 0.45, m.j + 0.45] }))).sort((a, b) => (a.pl[0] + a.pl[1]) - (b.pl[0] + b.pl[1]));
     const schilder = [];
-    for (const e of zuZeichnen) { const [x, y] = feld(e.pl[0], e.pl[1]);
+    for (const e of zuZeichnen) { if (e.mensch) { const m = e.mensch, [x, y] = feld(m.i, m.j), g = TW * 0.2, hop = Math.abs(Math.sin(t * 6 + m.ph)) * g * 0.06;
+        ellipse(x, y, g * 0.22, g * 0.08, rgba("#1a2030", 0.25)); box(x - g * 0.1, y - g * 0.4 - hop, g * 0.2, g * 0.4, g * 0.06, "#3a3e4c");
+        box(x - g * 0.15, y - g * 0.82 - hop, g * 0.3, g * 0.46, g * 0.12, m.f); circle(x, y - g * 0.96 - hop, g * 0.14, "#f2c8a4"); continue; }
+      const [x, y] = feld(e.pl[0], e.pl[1]);
       if (e.turm) { const st = Math.round(e.turm.stock), topY = turmBauen(x, y, TW, TH, st, FARBEN[e.k % FARBEN.length], P, t, e.k, e.turm.name); schilder.push([x, topY, `${e.turm.name} · ${fmt(st)}`, FARBEN[e.k % FARBEN.length]]); }
       else { turmBauen(x, y, TW, TH, 0, "#888", P, t, e.k); if (e.k < tuerme.length + (Number(s.leer_zeigen) || 0)) { line(x, y - 4, x, y - TW * 0.3, 2, "#6a5a4a"); schild(x, y - TW * 0.3, String(s.leer ?? "?"), TW * 0.25, false); } } }
     if (s._grundstein && !tuerme.length) { const [x, y] = s._grundstein, w = TW * 0.16, h = TW * 0.13, yy = y - 6 + Math.sin(t * 2) * 1.5;
       glut(x, yy - h, TW * 0.5, "#ffe27a", 0.35);
       poly([[x - w, yy], [x, yy + w / 2], [x, yy + w / 2 - h], [x - w, yy - h]], "#d8ccb4"); poly([[x + w, yy], [x, yy + w / 2], [x, yy + w / 2 - h], [x + w, yy - h]], "#b8aa90");
       poly([[x - w, yy - h], [x, yy - w / 2 - h], [x + w, yy - h], [x, yy + w / 2 - h]], "#efe6d2"); line(x - w * 0.5, yy - h + 2, x + w * 0.5, yy - h + 2, 1.5, rgba("#8a7a5a", 0.6)); }
+    for (const b of baeume.filter(b => !(b.i < 0 || b.j < 0))) baum(b); laterne(laternen[3]);
     for (const [x, y, txt, f] of schilder) schild(x, y, txt, TW * 0.27, true, f);
     ctx.restore();
   };
