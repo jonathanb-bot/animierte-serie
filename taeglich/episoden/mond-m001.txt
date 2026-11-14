@@ -16,7 +16,7 @@
 
 == Start ==
 // Wow-Bild zuerst: ein Turm ragt durchs Weltall bis zum Mond
-[turm modus=hoehe hoehe=3000000>384400000 stadt="Deine Stadt" palette=tuerkis palette_staerke=0.2 kamera=ruhig hooktext="DEINE STADT GEGEN ALLE"] Deine Stadt gegen alle anderen. Wer baut den höchsten Turm der Welt?
+[turm modus=hoehe hoehe=60000000>384400000 stadt="Deine Stadt" palette=tuerkis palette_staerke=0.2 kamera=ruhig hooktext="DEINE STADT GEGEN ALLE"] Deine Stadt gegen alle anderen. Wer baut den höchsten Turm der Welt?
 // Der schwebende Turmplatz, leere Bauplätze mit Fragezeichen
 [turm modus=feld nah=1.3 leer_zeigen=8 palette=tuerkis palette_staerke=0.2 zoom-rein] Alles beginnt hier, auf einem Platz hoch über den Wolken.
 // Nah auf einen freien Platz in der Mitte
