@@ -1,0 +1,59 @@
+# Bis zum Mond – Folge 1: Der Startschuss
+@musik musik/mond-m001.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung aufbau
+@vortrag lebendig
+@klang studio
+@mund zitate
+@einblenden aus
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette tuerkis
+@zeit tag
+
+== Start ==
+// Wow-Bild zuerst: ein Turm ragt durchs Weltall bis zum Mond
+[turm modus=hoehe hoehe=3000000>384400000 stadt="Deine Stadt" palette=tuerkis palette_staerke=0.2 kamera=ruhig hooktext="DEINE STADT GEGEN ALLE"] Deine Stadt gegen alle anderen. Wer baut den höchsten Turm der Welt?
+// Der schwebende Turmplatz, leere Bauplätze mit Fragezeichen
+[turm modus=feld nah=1.3 leer_zeigen=8 palette=tuerkis palette_staerke=0.2 zoom-rein] Alles beginnt hier, auf einem Platz hoch über den Wolken.
+// Nah auf einen freien Platz in der Mitte
+[turm modus=feld nah=2.1 blick=3,3 markiere=3,3 leer="Deine Stadt?" leer_zeigen=1 palette=tuerkis palette_staerke=0.2 zoom-rein ein="vierundsechzig>#64 BAUPLÄTZE"] Auf diesem Platz ist Raum für vierundsechzig Türme. Einer davon gehört deiner Stadt.
+// Titelkarte
+[titel oben="Folge 1" gross="BIS ZUM MOND" unten="Der Startschuss" farbe=#123a4a akzent=#7fe0e8 groesse=150 hud=false palette=tuerkis zoom-rein] Und das Ziel? Der Mond.
+
+== Die Regeln ==
+// Infokarte: Kommentar = Stockwerk
+[objekt objekte="zettel:Kommentar|pfeil:1 Stockwerk" gross="SO GEHT ES" palette=tuerkis zoom-rein] Schreib deine Stadt in die Kommentare. Jeder Kommentar ist ein Stockwerk.
+// Infokarte: Likes zählen mit
+[objekt objekte="herz:Like|pfeil:1 Stockwerk" gross="LIKES ZÄHLEN" palette=tuerkis zoom-rein] Und jedes Like auf deinen Kommentar baut noch ein Stockwerk obendrauf.
+// Beispiel: ein Turm wächst auf zwölf Stockwerke
+[turm modus=feld tuerme="Deine Stadt:0>12" wachsen_dauer=2.4 nah=1.9 blick=3,3 palette=tuerkis palette_staerke=0.2 zoom-rein ein="Zwölf>#12 STOCKWERKE" ein_y=1180] Zwölf Kommentare? Zwölf Stockwerke. So einfach ist das.
+
+== Bis zum Mond ==
+// Kamerafahrt am Turm hoch: die ersten Meter
+[turm modus=hoehe hoehe=3>300 stadt="Deine Stadt" palette=tuerkis palette_staerke=0.2 kamera=ruhig ein="drei>1 STOCKWERK = 3 M"] Ein Stockwerk sind drei Meter. Klingt nach wenig.
+// Durch die Wolken
+[turm modus=hoehe hoehe=300>1300 stadt="Deine Stadt" palette=tuerkis palette_staerke=0.2 kamera=ruhig ein="dreihundertdreiunddreißig>#333 STOCKWERKE"] Aber ab dreihundertdreiunddreißig Stockwerken steckt dein Turm in den Wolken.
+// Flugzeuge
+[turm modus=hoehe hoehe=1300>3300 stadt="Deine Stadt" palette=tuerkis palette_staerke=0.2 kamera=ruhig ein="tausend>#1.000 STOCKWERKE"] Ab tausend fliegen Flugzeuge an deinem Fenster vorbei.
+// Höher als der Everest
+[turm modus=hoehe hoehe=3300>9800 stadt="Deine Stadt" palette=tuerkis palette_staerke=0.2 kamera=ruhig ein="zweitausendneunhundertfünfzig>#2.950 STOCKWERKE"] Bei zweitausendneunhundertfünfzig bist du höher als der Mount Everest.
+// Das Weltall beginnt
+[turm modus=hoehe hoehe=9800>140000 stadt="Deine Stadt" palette=tuerkis palette_staerke=0.2 kamera=ruhig ein="dreiunddreißigtausend>#33.333 STOCKWERKE"] Ab dreiunddreißigtausend Stockwerken beginnt das Weltall.
+// Bis zum Mond
+[turm modus=hoehe hoehe=140000>384400000 palette=tuerkis palette_staerke=0.2 kamera=ruhig ein="Millionen>128 MIO. STOCKWERKE"] Und bis zum Mond sind es hundertachtundzwanzig Millionen Stockwerke.
+// Nahaufnahme: du, grinsend
+[gesicht du ort=reich zeit=nacht froh palette=blau] „Hundertachtundzwanzig Millionen. Na dann, los!“
+
+== Die Ziele ==
+// Zielkarte
+[turm modus=ziele palette=tuerkis palette_staerke=0.2 kamera=ruhig] Das sind die Ziele. Jeden Tag siehst du hier, welche Stadt vorne liegt und wie hoch ihr Turm schon ist.
+
+== Der erste Stein ==
+// Der ganze Platz am Abend, noch leer
+[turm modus=feld zeit=abend nah=1.3 leer_zeigen=8 palette=orange palette_staerke=0.2 zoom-raus ein="kein>#0 TÜRME"] Heute steht noch kein einziger Turm. Alle Plätze sind leer.
+// Nah auf den ersten Platz, markiert
+[turm modus=feld zeit=abend nah=2.3 blick=3,3 markiere=3,3 leer="Deine Stadt?" leer_zeigen=1 palette=orange palette_staerke=0.2 zoom-rein] Der erste Kommentar legt den Grundstein. Welche Stadt ist als Erstes in den Wolken? Kommentier deine Stadt!

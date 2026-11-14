@@ -1,0 +1,158 @@
+{
+ "dauer": 67.822,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "turm",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 4.574,
+   "emotion": "erzaehlend",
+   "text": "Deine Stadt gegen alle anderen. Wer baut den höchsten Turm der Welt?"
+  },
+  {
+   "nr": 2,
+   "typ": "turm",
+   "kapitel": 1,
+   "start": 4.574,
+   "dauer": 3.542,
+   "emotion": "erzaehlend",
+   "text": "Alles beginnt hier, auf einem Platz hoch über den Wolken."
+  },
+  {
+   "nr": 3,
+   "typ": "turm",
+   "kapitel": 1,
+   "start": 8.116,
+   "dauer": 4.958,
+   "emotion": "erzaehlend",
+   "text": "Auf diesem Platz ist Raum für vierundsechzig Türme. Einer davon gehört deiner Stadt."
+  },
+  {
+   "nr": 4,
+   "typ": "titel",
+   "kapitel": 1,
+   "start": 13.074,
+   "dauer": 1.886,
+   "emotion": "erzaehlend",
+   "text": "Und das Ziel? Der Mond."
+  },
+  {
+   "nr": 5,
+   "typ": "objekt",
+   "kapitel": 2,
+   "start": 14.96,
+   "dauer": 3.95,
+   "emotion": "erklaerend",
+   "text": "Schreib deine Stadt in die Kommentare. Jeder Kommentar ist ein Stockwerk."
+  },
+  {
+   "nr": 6,
+   "typ": "objekt",
+   "kapitel": 2,
+   "start": 18.91,
+   "dauer": 3.734,
+   "emotion": "erklaerend",
+   "text": "Und jedes Like auf deinen Kommentar baut noch ein Stockwerk obendrauf."
+  },
+  {
+   "nr": 7,
+   "typ": "turm",
+   "kapitel": 2,
+   "start": 22.644,
+   "dauer": 3.614,
+   "emotion": "erzaehlend",
+   "text": "Zwölf Kommentare? Zwölf Stockwerke. So einfach ist das."
+  },
+  {
+   "nr": 8,
+   "typ": "turm",
+   "kapitel": 3,
+   "start": 26.258,
+   "dauer": 3.566,
+   "emotion": "erzaehlend",
+   "text": "Ein Stockwerk sind drei Meter. Klingt nach wenig."
+  },
+  {
+   "nr": 9,
+   "typ": "turm",
+   "kapitel": 3,
+   "start": 29.824,
+   "dauer": 4.07,
+   "emotion": "erzaehlend",
+   "text": "Aber ab dreihundertdreiunddreißig Stockwerken steckt dein Turm in den Wolken."
+  },
+  {
+   "nr": 10,
+   "typ": "turm",
+   "kapitel": 3,
+   "start": 33.894,
+   "dauer": 3.662,
+   "emotion": "erzaehlend",
+   "text": "Ab tausend fliegen Flugzeuge an deinem Fenster vorbei."
+  },
+  {
+   "nr": 11,
+   "typ": "turm",
+   "kapitel": 3,
+   "start": 37.556,
+   "dauer": 4.286,
+   "emotion": "erzaehlend",
+   "text": "Bei zweitausendneunhundertfünfzig bist du höher als der Mount Everest."
+  },
+  {
+   "nr": 12,
+   "typ": "turm",
+   "kapitel": 3,
+   "start": 41.842,
+   "dauer": 3.35,
+   "emotion": "erzaehlend",
+   "text": "Ab dreiunddreißigtausend Stockwerken beginnt das Weltall."
+  },
+  {
+   "nr": 13,
+   "typ": "turm",
+   "kapitel": 3,
+   "start": 45.192,
+   "dauer": 4.358,
+   "emotion": "erzaehlend",
+   "text": "Und bis zum Mond sind es hundertachtundzwanzig Millionen Stockwerke."
+  },
+  {
+   "nr": 14,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 49.55,
+   "dauer": 3.59,
+   "emotion": "froh",
+   "text": "„Hundertachtundzwanzig Millionen. Na dann, los!“"
+  },
+  {
+   "nr": 15,
+   "typ": "turm",
+   "kapitel": 4,
+   "start": 53.14,
+   "dauer": 5.558,
+   "emotion": "erzaehlend",
+   "text": "Das sind die Ziele. Jeden Tag siehst du hier, welche Stadt vorne liegt und wie hoch ihr Turm schon ist."
+  },
+  {
+   "nr": 16,
+   "typ": "turm",
+   "kapitel": 5,
+   "start": 58.698,
+   "dauer": 3.182,
+   "emotion": "erzaehlend",
+   "text": "Heute steht noch kein einziger Turm. Alle Plätze sind leer."
+  },
+  {
+   "nr": 17,
+   "typ": "turm",
+   "kapitel": 5,
+   "start": 61.88,
+   "dauer": 5.942,
+   "emotion": "erzaehlend",
+   "text": "Der erste Kommentar legt den Grundstein. Welche Stadt ist als Erstes in den Wolken? Kommentier deine Stadt!"
+  }
+ ]
+}
