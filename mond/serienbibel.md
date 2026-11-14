@@ -1,5 +1,7 @@
 # Bis zum Mond – Serienbibel (Entwurf, Jonathans Idee 14.11.2026)
 
+> **Große Analyse-Auswertung am 22.11.2026 (Jonathan 14.11.):** An diesem Tag werden alle bisherigen Projekte gründlich ausgewertet (24. Stock, Der Alien, Der letzte Mann, Kurzvideo-Staffeln inkl. Englisch und Zitat-Videos, Deine Welt, Bis zum Mond). Ablauf `taeglich/laeufe/analyse-22-11.md` (Branch `taeglich`), Bericht `taeglich/analyse/2026-11-22-abschluss.md`. Bis dahin alle Zahlen, Beobachtungen und Experimente sauber festhalten.
+
 Angelehnt an ein Vergleichsvideo (TikTok „meine.inselwelt“: Städte bauen Türme um die Wette), aber mit eigener Grafik, eigener Erzählung und eigenen Regeln. **Folge 1 „Der Startschuss“** liegt in `taeglich/episoden/mond-m001.txt`. Folge 1 gepostet am 14.11. (TikTok 20:46, Instagram 21:20, YouTube 21:34; Jonathan: „Einplanen bitte“).
 
 ## Idee
@@ -21,4 +23,8 @@ Jede Stadt bekommt einen Bauplatz auf einem schwebenden Turmplatz. Die Zuschauer
 - `[turm modus=feld tuerme="Stadt:alt>neu|…" nah=… blick=i,j markiere=i,j leer="Deine Stadt?" leer_zeigen=N zeit=tag|abend|nacht]` – Turmplatz 8×8, Städte in Reihenfolge von der Mitte nach außen.
 - `[turm modus=hoehe hoehe=von>bis stadt="…" farbe=#…]` – Kamerafahrt am Turm hoch (logarithmisch, Wolken, Ballon, Flugzeug, Everest, Raumstation, Satellit, Mond), Höhenanzeige in Metern und Stockwerken.
 - `[turm modus=ziele]` – Zielkarte.
-- Noch zu bauen für Folge 2: Rangliste (`modus=rangliste`).
+- `[turm modus=rangliste rangliste="München#0:12>41|Wien#1:30" ziel=333 ziel_name=Wolken]` – Rangliste (Top 5) mit Balken bis zum nächsten Ziel; `#n` = fester Platz, gleiche Farbe wie der Turm.
+
+## Zählen und täglicher Lauf
+- `python mond/stand.py` zählt Städte und Stockwerke aus allen Kommentaren (Städteliste mit Schreibvarianten in `mond/staedte.json`, unbekannte Orte werden gemeldet) und schlägt `tuerme=` und `rangliste=` vor; `--speichern` schreibt den Stand in `mond/gedaechtnis.json`.
+- Täglicher Lauf `taeglich/laeufe/mond.md` (15:17, Post ca. 21:00) bis zur großen Analyse am 22.11.

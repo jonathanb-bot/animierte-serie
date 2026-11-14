@@ -1,5 +1,7 @@
 # Test- und Analysephase bis 22.11.2026 – Experiment- und Vielfalts-Protokoll
 
+> **Große Analyse-Auswertung am 22.11.2026 (Jonathan 14.11.):** An diesem Tag werden alle bisherigen Projekte gründlich ausgewertet (24. Stock, Der Alien, Der letzte Mann, Kurzvideo-Staffeln inkl. Englisch und Zitat-Videos, Deine Welt, Bis zum Mond). Ablauf `taeglich/laeufe/analyse-22-11.md` (Branch `taeglich`), Bericht `taeglich/analyse/2026-11-22-abschluss.md`. Bis dahin alle Zahlen, Beobachtungen und Experimente sauber festhalten.
+
 **Jonathans Vorgabe (4.11., Issue #22):** Bis zum 22. November wird alles genau analysiert und viel ausprobiert. Die Analyse wird sehr genau genommen und hier festgehalten. Bei den Ideen soll es **möglichst viel Vielfalt** geben: Kulissen, Welten, Geschichten, Genres, Erzählweisen, Figuren, Hooks, Längen. **Gleich bleiben nur die Stimme (Gemini „Orus“, `@vortrag lebendig`) und der Stil** (Stil „leuchtend“, Kurzgesagt-Richtung, Figuren aus `figuren.json`).
 
 Diese Datei schreibt **jede Analyse** (Abschnitt „Ergebnisse“) und **jede Produktion** (Abschnitt „Steckbriefe“) fort. Am **22.11.** entsteht daraus der Abschlussbericht `taeglich/analyse/2026-11-22-abschluss.md` mit den Gewinnern je Dimension und der Empfehlung für danach.

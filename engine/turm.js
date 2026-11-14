@@ -7,6 +7,7 @@
      - leer: Text auf den Schildern freier Plätze (Standard „?“), leer_zeigen=N: so viele freie Plätze (die nächsten) bekommen ein Schild
    [turm modus=hoehe hoehe=0>1000 stadt="Deine Stadt"]   Kamerafahrt am Turm hoch (Meter, 1 Stockwerk = 3 m)
    [turm modus=ziele bis=5]                                Zielkarte (Wolken … Mond), bis = wie viele Ziele schon sichtbar
+   [turm modus=rangliste rangliste="München#0:12>41|Wien#1:30" ziel=333 ziel_name=Wolken]  (#n = Platz/Farbe wie im Feld)  Rangliste mit Balken bis zum nächsten Ziel
 */
 (() => {
   const { box, circle, ellipse, poly, line, shade, rgba, lgrad, rgrad, mix, lerp, clamp, E } = A;
@@ -17,7 +18,8 @@
   const zahl = v => Number(String(v).replace(/[^\d,.-]/g, "").replace(/\./g, "").replace(",", ".")) || 0;
   const bereich = (v, t, dauer = 1.6, ab = 0.4) => { const [a, b] = String(v ?? 0).split(">"); if (b === undefined) return zahl(a);
     return lerp(zahl(a), zahl(b), E.raus(clamp((t - ab) / dauer, 0, 1))); };
-  const FARBEN = ["#e8705a", "#4a9ad0", "#f2c14e", "#7a6ac8", "#4aa878", "#e07aa0", "#3fb8c0", "#d8564a", "#8ab84a", "#c87a3a"];
+  const FARBEN = ["#e8705a", "#4a9ad0", "#f2c14e", "#7a6ac8", "#4aa878", "#e07aa0", "#3fb8c0", "#d8564a", "#a8c84a", "#c87a3a", "#5a6ad8", "#b85ac8"];
+  const farbeVon = name => { let h = 7; for (const c of String(name)) h = (h * 31 + c.charCodeAt(0)) % 9973; return FARBEN[h % FARBEN.length]; }; // gleiche Stadt = gleiche Farbe (Turm, Rangliste)
 
   const HIMMEL = {
     tag: { oben: "#5aa8e0", unten: "#bfe6f4", sonne: "#fff6d8", platz: "#e8dcc4", fuge: "#cbbd9f", rand: "#b89a72", randS: "#8a6e52", gras: "#7fbf62", licht: 1 },
@@ -140,7 +142,10 @@
       poly([[x - w, yy], [x, yy + w / 2], [x, yy + w / 2 - h], [x - w, yy - h]], "#d8ccb4"); poly([[x + w, yy], [x, yy + w / 2], [x, yy + w / 2 - h], [x + w, yy - h]], "#b8aa90");
       poly([[x - w, yy - h], [x, yy - w / 2 - h], [x + w, yy - h], [x, yy + w / 2 - h]], "#efe6d2"); line(x - w * 0.5, yy - h + 2, x + w * 0.5, yy - h + 2, 1.5, rgba("#8a7a5a", 0.6)); }
     for (const b of baeume.filter(b => !(b.i < 0 || b.j < 0))) baum(b); laterne(laternen[3]);
-    for (const [x, y, txt, f] of schilder) schild(x, y, txt, TW * 0.27, true, f);
+    { const fs = TW * 0.27, gesetzt = []; ctx.font = `700 ${fs}px HUD`;
+      for (const sc of schilder.slice().sort((a, b) => a[1] - b[1])) { const w = ctx.measureText(sc[2]).width + fs * 1.4, h = fs * 1.6; let y = sc[1];
+        for (let n = 0; n < 12; n++) { const k = gesetzt.find(g => Math.abs(g.x - sc[0]) < (g.w + w) / 2 && Math.abs(g.y - y) < h); if (!k) break; y = k.y - h - 4; }
+        gesetzt.push({ x: sc[0], y, w }); if (y < sc[1] - 4) line(sc[0], sc[1], sc[0], y, 2, rgba("#1a2030", 0.5)); schild(sc[0], y, sc[2], fs, true, sc[3]); } }
     ctx.restore();
   };
 
@@ -216,5 +221,30 @@
       ctx.fillStyle = "rgba(255,255,255,0.5)"; ctx.font = "700 24px HUD"; ctx.fillText("Stockwerke", x0 + w - 50, y + 40); ctx.restore(); });
   };
 
-  SZ.turm = (s, t) => { const m = s.modus || "feld"; if (m === "hoehe") hoeheModus(s, t); else if (m === "ziele") zieleModus(s, t); else feldModus(s, t); };
+  // ---------- Rangliste: rangliste="München:12>41|Wien:30|Graz:3>12" ziel=333 ziel_name="Wolken" ----------
+  const ranglisteModus = (s, t) => {
+    ctx.fillStyle = lgrad(0, 0, 0, 1920, [[0, "#0c1638"], [1, "#1f3d6a"]]); ctx.fillRect(0, 0, 1080, 1920);
+    const r = rnd(13); for (let k = 0; k < 90; k++) circle(r() * 1080, r() * 1920, 1 + r() * 1.6, rgba("#ffffff", 0.3 + 0.3 * Math.abs(Math.sin(t + k))));
+    const ziel = zahl(s.ziel || 333), zname = s.ziel_name || "Wolken";
+    const eintraege = String(s.rangliste || "").split("|").map(q => q.trim()).filter(Boolean).slice(0, 5).map(q => { const [n, v] = q.split(":"); const [nm, idx] = n.trim().split("#"); return { name: nm.trim(), idx: idx === undefined ? null : Number(idx), v: String(v || "0") }; });
+    const x0 = 90, y0 = 240, w = 900, dy = 142, h = 240 + Math.max(1, eintraege.length) * dy;
+    ctx.save(); ctx.shadowColor = "rgba(0,0,0,0.4)"; ctx.shadowBlur = 40; box(x0, y0, w, h, 44, "rgba(10,14,36,0.9)"); ctx.restore();
+    ctx.strokeStyle = "rgba(127,224,232,0.45)"; ctx.lineWidth = 3; ctx.beginPath(); A.rr(x0, y0, w, h, 44); ctx.stroke();
+    ctx.textAlign = "center"; ctx.fillStyle = "#7fe0e8"; ctx.font = "900 70px Titel"; ctx.fillText(s.titel_text || "RANGLISTE", 540, y0 + 115);
+    ctx.fillStyle = "rgba(255,255,255,0.7)"; ctx.font = "700 34px HUD"; ctx.fillText(s.unter || `Nächstes Ziel: ${zname} · ${fmt(ziel)} Stockwerke`, 540, y0 + 168);
+    const MED = ["#f2c14e", "#c8d0dc", "#d8925a"];
+    eintraege.forEach((e, k) => { const y = y0 + 250 + k * dy, d = t - 0.25 - k * 0.3; if (d < 0) return; const p = clamp(d / 0.3, 0, 1);
+      const v = bereich(e.v, t, 1.4, 0.5 + k * 0.3), f = e.idx === null ? farbeVon(e.name) : FARBEN[e.idx % FARBEN.length]; // „Stadt#3“ = Platz 3 auf dem Turmplatz, gleiche Farbe wie der Turm
+      ctx.save(); ctx.globalAlpha = p; ctx.translate((1 - E.raus(p)) * 60, 0);
+      circle(x0 + 80, y + 10, 40, k < 3 ? MED[k] : "rgba(255,255,255,0.14)"); ctx.fillStyle = k < 3 ? "#1a1c2a" : "#ffffff"; ctx.font = "900 44px Titel"; ctx.textAlign = "center"; ctx.fillText(String(k + 1), x0 + 80, y + 26);
+      ctx.textAlign = "left"; ctx.fillStyle = "#ffffff"; ctx.font = "900 52px Titel"; ctx.fillText(e.name, x0 + 150, y);
+      ctx.textAlign = "right"; ctx.fillStyle = "#f2cf7e"; ctx.font = "900 52px Titel"; ctx.fillText(fmt(v), x0 + w - 50, y);
+      const bx = x0 + 150, bw = w - 200, by = y + 26; box(bx, by, bw, 22, 11, "rgba(255,255,255,0.1)");
+      const q = clamp(v / ziel, 0, 1); if (q > 0) { box(bx, by, Math.max(22, bw * q), 22, 11, f); box(bx, by, Math.max(22, bw * q), 8, 4, rgba("#ffffff", 0.25)); }
+      ctx.fillStyle = "rgba(255,255,255,0.5)"; ctx.font = "700 24px HUD"; ctx.fillText(q >= 1 ? `${zname} erreicht!` : `noch ${fmt(Math.max(0, ziel - v))} bis ${zname}`, x0 + w - 50, by + 54);
+      ctx.restore(); });
+    if (!eintraege.length) { ctx.textAlign = "center"; ctx.fillStyle = "rgba(255,255,255,0.6)"; ctx.font = "700 40px HUD"; ctx.fillText("Noch keine Stadt", 540, y0 + 300); }
+  };
+
+  SZ.turm = (s, t) => { const m = s.modus || "feld"; if (m === "hoehe") hoeheModus(s, t); else if (m === "ziele") zieleModus(s, t); else if (m === "rangliste") ranglisteModus(s, t); else feldModus(s, t); };
 })();

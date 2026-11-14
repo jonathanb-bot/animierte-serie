@@ -1,0 +1,13 @@
+{
+ "_info": "Weltgedächtnis „Bis zum Mond“. tuerme = Stockwerke pro Stadt beim letzten Video (für alt>neu), reihenfolge = feste Plätze auf dem Turmplatz. Nach jeder Folge mit `python mond/stand.py --speichern` aktualisieren. gesperrt = Kommentar-IDs, die nicht zählen (Beleidigung, Politik, Werbung).",
+ "folge": 1,
+ "datum": "2026-11-14",
+ "tag": 1,
+ "tuerme": {},
+ "reihenfolge": [],
+ "gesperrt": [],
+ "erreichte_ziele": [],
+ "chronik": [
+  "Folge 1 „Der Startschuss“ (14.11.): Regeln, Ziele bis zum Mond, Platz noch leer. Stimme Fenrir."
+ ]
+}

@@ -1,5 +1,7 @@
 # Der letzte Mann – Serienbibel Staffel 1
 
+> **Große Analyse-Auswertung am 22.11.2026 (Jonathan 14.11.):** An diesem Tag werden alle bisherigen Projekte gründlich ausgewertet (24. Stock, Der Alien, Der letzte Mann, Kurzvideo-Staffeln inkl. Englisch und Zitat-Videos, Deine Welt, Bis zum Mond). Ablauf `taeglich/laeufe/analyse-22-11.md` (Branch `taeglich`), Bericht `taeglich/analyse/2026-11-22-abschluss.md`. Bis dahin alle Zahlen, Beobachtungen und Experimente sauber festhalten.
+
 Dritte, eigenständige Serie im Projekt. Sie ist keine Fortsetzung von „24. Stock“ oder „Der Alien“. Alles hier ist verbindlich. Änderungen kommen zuerst hierher und erst danach in Storylines und Drehbücher.
 
 ## Grundidee

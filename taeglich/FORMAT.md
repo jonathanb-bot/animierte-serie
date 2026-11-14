@@ -1,5 +1,7 @@
 # Kurzvideo-Staffeln („taeglich“) – Format
 
+> **Große Analyse-Auswertung am 22.11.2026 (Jonathan 14.11.):** An diesem Tag werden alle bisherigen Projekte gründlich ausgewertet (24. Stock, Der Alien, Der letzte Mann, Kurzvideo-Staffeln inkl. Englisch und Zitat-Videos, Deine Welt, Bis zum Mond). Ablauf `taeglich/laeufe/analyse-22-11.md` (Branch `taeglich`), Bericht `taeglich/analyse/2026-11-22-abschluss.md`. Bis dahin alle Zahlen, Beobachtungen und Experimente sauber festhalten.
+
 Jonathans Auftrag vom 1.11.2026:
 - **Alle 2 Tage**, gestartet **nachts zwischen 23 und 1 Uhr**, entsteht **eine ganze Staffel**, nicht nur ein Video.
 - **Posten:** alles **hinten an die bestehende Warteschlange anhängen**. Nichts läuft parallel.

@@ -1,5 +1,7 @@
 # Deine Welt – Serienbibel (verbindlich)
 
+> **Große Analyse-Auswertung am 22.11.2026 (Jonathan 14.11.):** An diesem Tag werden alle bisherigen Projekte gründlich ausgewertet (24. Stock, Der Alien, Der letzte Mann, Kurzvideo-Staffeln inkl. Englisch und Zitat-Videos, Deine Welt, Bis zum Mond). Ablauf `taeglich/laeufe/analyse-22-11.md` (Branch `taeglich`), Bericht `taeglich/analyse/2026-11-22-abschluss.md`. Bis dahin alle Zahlen, Beobachtungen und Experimente sauber festhalten.
+
 Jonathans Idee vom 9.11.2026 (Issue #32): **Die Follower sind die Einwohner eines wachsenden Reichs.** Jeder Follower ist ein Mensch in deinem Reich. Der **Top-Kommentar** unter der letzten Folge bestimmt, was als Nächstes gebaut wird oder passiert. Alles hat **dauerhafte Folgen** und steht im **Weltgedächtnis**.
 
 Es gelten zusätzlich alle offenen Issues mit Label `dringlich`, `CLAUDE.md` und `taeglich/FORMAT.md` (Stimme Orus, Qualität vor Quantität, Du-Erzählung, nie „Fortsetzung folgt“, nie „Echter Fakt“, kein `@hud`). Was hier steht, geht für diese Serie vor.
