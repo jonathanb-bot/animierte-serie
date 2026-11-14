@@ -1884,6 +1884,12 @@
    "bild_s": 84.1,
    "ton_s": 84.1,
    "lufs": -14.6
+  },
+  "taeglich/mond-m001.mp4": {
+   "ok": true,
+   "bild_s": 67.23,
+   "ton_s": 67.22,
+   "lufs": -14.6
   }
  },
  "serien": {
@@ -2096,6 +2102,10 @@
   "welt-w005": {
    "titel": "Deine Welt – Folge 5: Die Halle",
    "datei": "taeglich/welt-w005.mp4"
+  },
+  "mond-m001": {
+   "titel": "Bis zum Mond – Folge 1: Der Startschuss",
+   "datei": "taeglich/mond-m001.mp4"
   }
  },
  "taeglich_staffeln": {
