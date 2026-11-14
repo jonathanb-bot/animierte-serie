@@ -9,7 +9,7 @@
    - groesse: Kantenlänge der Insel in Feldern (wächst mit dem Reich); form=rund (Standard) rundet die Küste natürlich ab
    - bauten: typ@i,j (oder typ@i1,j1-i2,j2 für ein Rechteck). Ein späterer Eintrag ersetzt einen früheren auf demselben
      Feld (so wird aus einem Haus ein Hochhaus). Typen: BAU (haus, hochhausN, baum, tanne, fels, brunnen, laterne,
-     baustelle, boot, gericht, zelt, laden, werkstatt, laube) und BODEN (weg, strasse, feld, wasser, platz, sand)
+     baustelle, boot, gericht, zelt, laden, werkstatt, laube, halle) und BODEN (weg, strasse, feld, wasser, platz, sand)
    - leute: Einwohner = Follower (einfache Figuren, höchstens 3 pro freiem Feld sichtbar), neu: so viele leuchten auf
    - praesident: Feld des Gründers (du, blaue Jacke, gelbe Schärpe), markiere: pulsierender Ring auf einem Feld
    - nah/blick: Ausschnitt um ein Feld (nah=2 = doppelt so groß); `fokus`/`zoom` sind Kamera-Angaben der Engine
@@ -305,6 +305,60 @@
     line(dd[0], dd[1], c0[0], c0[1], 1.1, rgba("#000000", 0.2));
   };
   SCHATTEN.laube = TW => ({ w: 0.52, d: 0.5, h: TW * 0.34 });
+
+  // Folge 5 (14.11.): Gemeinschaftshalle als Übergangs-Unterkunft (Bogendach aus Wellblech, Doppeltür, Duschen + Küche:
+  // Wassertank an der Seite, Küchenrohr mit Dampf, Schild mit Tropfen und Flamme)
+  BAU.halle = (x, y, ei, ej, TW, P, t, r, idx) => {
+    const wand = mix("#e8dcc4", P.wand[idx % 4], 0.4), blech = mix("#8fa6b4", P.wand[1], 0.15), nacht = P.sonne < 0.5;
+    const h = TW * 0.16, w = 0.8, d = 0.7, hb = TW * 0.26;
+    quader(x, y, ei, ej, w + 0.06, d + 0.06, TW * 0.03, P.sockel, null, P);
+    const y0 = y - TW * 0.03, Z = Pt(x, y0, ei, ej);
+    const q = quader(x, y0, ei, ej, w, d, h, wand, wand, P), { D, C, B } = q.fl;
+    fenster(B, C, h * 0.3, h * 0.42, 3, P, r, nacht, true);
+    // Bogendach: Streifen von hinten links nach vorn rechts, Licht von links
+    const N = 14, bog = k => { const th = Math.PI * k / N; return [-Math.cos(th) * w / 2, h + Math.sin(th) * hb]; };
+    for (let k = 0; k < N; k++) {
+      const [a0, z0] = bog(k), [a1, z1] = bog(k + 1), m = (k + 0.5) / N;
+      const f = shade(blech, 0.16 - m * 0.42);
+      poly([Z(a0, -d / 2, z0), Z(a1, -d / 2, z1), Z(a1, d / 2, z1), Z(a0, d / 2, z0)], f);
+      if (k % 2) line(...Z(a1, -d / 2, z1), ...Z(a1, d / 2, z1), 1, rgba("#000000", 0.1));
+    }
+    // Lichtkante am Scheitel
+    line(...Z(0, -d / 2, h + hb), ...Z(0, d / 2, h + hb), 1.4, rgba("#ffffff", 0.3));
+    // Küchenrohr mit Dampf (auf der Lichtseite des Bogens)
+    const [ar, zr] = bog(4), rp = Z(ar, -d * 0.15, zr);
+    quader(rp[0], rp[1], ei, ej, 0.06, 0.06, TW * 0.13, "#5a5e66", null, P);
+    for (let k = 0; k < 5; k++) { const p = (t * 0.25 + k / 5 + idx * 0.19) % 1; circle(rp[0] - p * TW * 0.12, rp[1] - TW * 0.15 - p * TW * 0.6, TW * (0.02 + p * 0.06), rgba(nacht ? "#9aa4c0" : "#ffffff", 0.38 * (1 - p))); }
+    // Vordere Giebelwand mit Bogen
+    const giebel = [Z(-w / 2, d / 2, 0), Z(w / 2, d / 2, 0)];
+    for (let k = N; k >= 0; k--) { const [a, z] = bog(k); giebel.push(Z(a, d / 2, z)); }
+    ctx.fillStyle = lgrad(0, D[1] - h - hb, 0, D[1], [[0, shade(wand, 0.06)], [1, shade(wand, -0.08)]]); poly(giebel); ctx.fill();
+    for (let k = 0; k <= N; k++) { const [a, z] = bog(k); if (k) { const [a2, z2] = bog(k - 1); line(...Z(a2, d / 2, z2), ...Z(a, d / 2, z), 1.6, rgba(shade(blech, -0.3), 0.8)); } }
+    const sf = (a, z) => Z(-w / 2 + w * a, d / 2, z);
+    // Doppeltür in der Mitte, drinnen warmes Licht
+    const t0 = 0.38, t1 = 0.62, th = h * 1.25;
+    poly([sf(t0 - 0.02, 0), sf(t1 + 0.02, 0), sf(t1 + 0.02, th + h * 0.08), sf(t0 - 0.02, th + h * 0.08)], shade(wand, -0.3));
+    poly([sf(t0, 0), sf(t1, 0), sf(t1, th), sf(t0, th)], nacht ? "#ffcf7a" : "#4a6a7a");
+    if (nacht) glut(...sf(0.5, th * 0.5), TW * 0.5, "#ffcf7a", 0.35);
+    else poly([sf(t0, 0), sf(0.47, 0), sf(0.47, th), sf(t0, th)], rgba("#ffffff", 0.12));
+    line(...sf(0.5, 0), ...sf(0.5, th), 1.3, rgba("#000000", 0.3));
+    // Fenster links und rechts der Tür
+    fenster(sf(0.04, 0), sf(0.34, 0), h * 0.35, h * 0.45, 2, P, r, nacht, false);
+    fenster(sf(0.66, 0), sf(0.96, 0), h * 0.35, h * 0.45, 2, P, r, nacht, false);
+    // Rundes Schild im Bogen: Wassertropfen (Duschen) und Flamme (Küche)
+    const s = sf(0.5, h + hb * 0.52), sr = TW * 0.055;
+    circle(s[0], s[1] + 1.5, sr * 1.05, rgba("#000000", 0.18)); circle(s[0], s[1], sr, "#2a3a4e");
+    const tr = (cx, cy, g, f) => { ctx.fillStyle = f; ctx.beginPath(); ctx.moveTo(cx, cy - g); ctx.quadraticCurveTo(cx + g * 0.75, cy + g * 0.1, cx, cy + g * 0.55); ctx.quadraticCurveTo(cx - g * 0.75, cy + g * 0.1, cx, cy - g); ctx.fill(); };
+    tr(s[0] - sr * 0.36, s[1] - sr * 0.02, sr * 0.5, "#5ac8f0");
+    tr(s[0] + sr * 0.36, s[1] - sr * 0.02, sr * 0.5, "#f0a03a"); tr(s[0] + sr * 0.36, s[1] + sr * 0.12, sr * 0.26, "#ffe08a");
+    // Wassertank auf Stelzen an der rechten Seite (Duschen)
+    const wt = Z(w / 2 + 0.1, -d * 0.22), tw = TW * 0.075, tz = TW * 0.12, tH = TW * 0.13;
+    line(wt[0] - tw * 0.7, wt[1], wt[0] - tw * 0.7, wt[1] - tz, TW * 0.012, "#5a5e66"); line(wt[0] + tw * 0.7, wt[1], wt[0] + tw * 0.7, wt[1] - tz, TW * 0.012, "#5a5e66");
+    ctx.fillStyle = lgrad(wt[0] - tw, 0, wt[0] + tw, 0, [[0, shade("#4a8ac0", 0.18)], [1, shade("#4a8ac0", -0.25)]]);
+    ctx.fillRect(wt[0] - tw, wt[1] - tz - tH, tw * 2, tH); ellipse(wt[0], wt[1] - tz, tw, tw * 0.45, shade("#4a8ac0", -0.2)); ellipse(wt[0], wt[1] - tz - tH, tw, tw * 0.45, shade("#4a8ac0", 0.3));
+    line(wt[0] - tw, wt[1] - tz - tH * 0.5, wt[0] + tw, wt[1] - tz - tH * 0.5, 1, rgba("#ffffff", 0.3));
+  };
+  SCHATTEN.halle = TW => ({ w: 0.84, d: 0.74, h: TW * 0.46 });
 
   const ecken = (x, y, TW, TH, s = 1) => [[x, y - TH / 2 * s], [x + TW / 2 * s, y], [x, y + TH / 2 * s], [x - TW / 2 * s, y]];
   const BODEN = {

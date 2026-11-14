@@ -1,0 +1,149 @@
+{
+ "dauer": 84.656,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "reich",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 8.294,
+   "emotion": "erzaehlend",
+   "text": "Gestern hatte deine Insel hundertvierundsechzig Einwohner. Heute kommen drei dazu. Und mittendrin steht eine Halle."
+  },
+  {
+   "nr": 2,
+   "typ": "titel",
+   "kapitel": 1,
+   "start": 8.294,
+   "dauer": 0.974,
+   "emotion": "erzaehlend",
+   "text": "Das kam so."
+  },
+  {
+   "nr": 3,
+   "typ": "reich",
+   "kapitel": 2,
+   "start": 9.268,
+   "dauer": 6.782,
+   "emotion": "erzaehlend",
+   "text": "Ihr habt entschieden: eine Halle zum Einziehen, mit Duschen und einer Küche. Der Vorschlag kam wieder von Ellen."
+  },
+  {
+   "nr": 4,
+   "typ": "reich",
+   "kapitel": 2,
+   "start": 16.05,
+   "dauer": 6.518,
+   "emotion": "erzaehlend",
+   "text": "Drei neue Einwohner, elf Likes, ein Kommentar. In der Kasse liegen sechstausend achthundert Euro."
+  },
+  {
+   "nr": 5,
+   "typ": "reich",
+   "kapitel": 2,
+   "start": 22.568,
+   "dauer": 6.302,
+   "emotion": "erzaehlend",
+   "text": "Ein Hochhaus kostet sechzigtausend Euro pro Stockwerk. Das reicht nicht mal für die Treppe."
+  },
+  {
+   "nr": 6,
+   "typ": "reich",
+   "kapitel": 3,
+   "start": 28.87,
+   "dauer": 4.838,
+   "emotion": "erzaehlend",
+   "text": "Also zahlt ihr mit euren Händen. Alle packen mit an, einen ganzen Tag."
+  },
+  {
+   "nr": 7,
+   "typ": "reich",
+   "kapitel": 3,
+   "start": 33.708,
+   "dauer": 7.598,
+   "emotion": "erzaehlend",
+   "text": "Die Kasse zahlt nur, was man nicht selbst bauen kann: sechzig Feldbetten, Duschen, einen Herd. Sechstausend Euro."
+  },
+  {
+   "nr": 8,
+   "typ": "reich",
+   "kapitel": 3,
+   "start": 41.306,
+   "dauer": 5.222,
+   "emotion": "erzaehlend",
+   "text": "Ein Schlauch vom Brunnen füllt den Tank. Zum ersten Mal seit fünf Tagen duscht jemand."
+  },
+  {
+   "nr": 9,
+   "typ": "reich",
+   "kapitel": 3,
+   "start": 46.528,
+   "dauer": 5.054,
+   "emotion": "erzaehlend",
+   "text": "Sechzig Menschen ziehen aus dem Zelt in die Halle. Vierundsiebzig bleiben im Zelt."
+  },
+  {
+   "nr": 10,
+   "typ": "objekt",
+   "kapitel": 4,
+   "start": 51.582,
+   "dauer": 2.75,
+   "emotion": "erklaerend",
+   "text": "Am Abend wird der Herd zum ersten Mal angemacht."
+  },
+  {
+   "nr": 11,
+   "typ": "reich",
+   "kapitel": 4,
+   "start": 54.332,
+   "dauer": 4.574,
+   "emotion": "erzaehlend",
+   "text": "Die Töpfe sind voll Wasser. Aber auf deiner Insel wächst noch kein einziges Korn."
+  },
+  {
+   "nr": 12,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 58.906,
+   "dauer": 2.894,
+   "emotion": "erzaehlend",
+   "text": "„Eine Küche ohne Essen. Na super.“"
+  },
+  {
+   "nr": 13,
+   "typ": "reich",
+   "kapitel": 4,
+   "start": 61.8,
+   "dauer": 5.39,
+   "emotion": "erzaehlend",
+   "text": "Und das Los für die Feldbetten? Du ziehst Zelt zwanzig. Schon wieder."
+  },
+  {
+   "nr": 14,
+   "typ": "reich",
+   "kapitel": 5,
+   "start": 67.19,
+   "dauer": 7.166,
+   "emotion": "erzaehlend",
+   "text": "Tag fünf. Dreiundneunzig Schlafplätze unter einem festen Dach. Noch dreiunddreißig bis zum Dorf mit eigenem Namen."
+  },
+  {
+   "nr": 15,
+   "typ": "reich",
+   "kapitel": 5,
+   "start": 74.356,
+   "dauer": 4.766,
+   "emotion": "erzaehlend",
+   "text": "Achthundert Euro in der Kasse. Und eine ganze Insel, die morgen früh Hunger hat."
+  },
+  {
+   "nr": 16,
+   "typ": "reich",
+   "kapitel": 5,
+   "start": 79.122,
+   "dauer": 5.534,
+   "emotion": "erzaehlend",
+   "text": "Jeder neue Follower zieht auf deine Insel. Was bauen wir als Nächstes? Schreib es in die Kommentare."
+  }
+ ]
+}

@@ -1,0 +1,57 @@
+# Deine Welt – Folge 5: Die Halle
+@musik musik/welt-w005.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung spannend
+@vortrag lebendig
+@klang studio
+@mund zitate
+@einblenden aus
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette tuerkis
+@zeit tag
+
+== Hook ==
+// Ergebnis zuerst: die neue Halle mit Bogendach, drei Neue kommen an, Einwohner zählt hoch
+[reich groesse=9 bauten="haus@4,4|baum@1,1|baum@7,2|tanne@0,6|fels@8,7|baum@2,8|gericht@5,3|haus@3,4|haus@3,3|zelt@4,6-5,8|zelt@6,6-7,7|brunnen@4,5|werkstatt@2,4|laube@6,3|laube@6,4|laube@6,5|laube@7,3|laube@7,4|laube@7,5|halle@3,7" leute=167 neu=3 praesident=3,6 nah=1.9 blick=3,6 palette=tuerkis palette_staerke=0.2 zoom-rein spielstand="kasse=800|einwohner=167|tag=5|betten=93/167|zelt=74" ein="Gestern>#164 EINWOHNER>einwohner|Heute>#167 EINWOHNER>einwohner"] Gestern hatte deine Insel hundertvierundsechzig Einwohner. Heute kommen drei dazu. Und mittendrin steht eine Halle.
+// Titelkarte
+[titel oben="Folge 5" gross="DEINE WELT" unten="Die Halle" farbe=#123a4a akzent=#7fe0e8 groesse=170 hud=false palette=tuerkis zoom-rein] Das kam so.
+
+== Ihr habt entschieden ==
+// Kommentar-Sprechblase: Ellens Wunsch
+[reich groesse=9 bauten="haus@4,4|baum@1,1|baum@7,2|tanne@0,6|fels@8,7|baum@2,8|gericht@5,3|haus@3,4|haus@3,3|zelt@4,6-5,8|zelt@6,6-7,7|brunnen@4,5|werkstatt@2,4|laube@6,3|laube@6,4|laube@6,5|laube@7,3|laube@7,4|laube@7,5" leute=167 praesident=3,6 nah=2.3 blick=4,7 palette=tuerkis palette_staerke=0.2 schwenk-links kommentar="@EllenZaum|Eine kleine Halle,da könnte man einziehen bis man mehr Wohnmöglichkeiten hat.Mit Duschen und Kochgelegenheit.|0" spielstand="kasse=6.800|einwohner=167|tag=5|betten=33/167|zelt=134"] Ihr habt entschieden: eine Halle zum Einziehen, mit Duschen und einer Küche. Der Vorschlag kam wieder von Ellen.
+// Kasse: das Geld von gestern
+[reich groesse=9 bauten="haus@4,4|baum@1,1|baum@7,2|tanne@0,6|fels@8,7|baum@2,8|gericht@5,3|haus@3,4|haus@3,3|zelt@4,6-5,8|zelt@6,6-7,7|brunnen@4,5|werkstatt@2,4|laube@6,3|laube@6,4|laube@6,5|laube@7,3|laube@7,4|laube@7,5" leute=167 neu=3 praesident=3,6 nah=1.4 blick=4,4 palette=tuerkis palette_staerke=0.2 zoom-raus spielstand="kasse=2.200>6.800|einwohner=167|tag=5|betten=33/167|zelt=134" ein="drei>+3.000 € EINWOHNER>einwohner|Likes>+1.600 € LIKES & KOMMENTAR>geld"] Drei neue Einwohner, elf Likes, ein Kommentar. In der Kasse liegen sechstausend achthundert Euro.
+// Das Problem: Hochhaus zu teuer
+[reich groesse=9 bauten="haus@4,4|baum@1,1|baum@7,2|tanne@0,6|fels@8,7|baum@2,8|gericht@5,3|haus@3,4|haus@3,3|zelt@4,6-5,8|zelt@6,6-7,7|brunnen@4,5|werkstatt@2,4|laube@6,3|laube@6,4|laube@6,5|laube@7,3|laube@7,4|laube@7,5" leute=167 praesident=3,6 markiere=3,6 nah=2.6 blick=3,6 palette=tuerkis palette_staerke=0.2 schwenk-rechts spielstand="kasse=6.800|einwohner=167|tag=5|betten=33/167|zelt=134" ein="Stockwerk>60.000 € PRO STOCKWERK>haus|sechstausend>6.800 € IN DER KASSE>geld"] Ein Hochhaus kostet sechzigtausend Euro pro Stockwerk. Das reicht nicht mal für die Treppe.
+
+== Bauen ==
+// Baustelle: alle packen mit an
+[reich groesse=9 bauten="haus@4,4|baum@1,1|baum@7,2|tanne@0,6|fels@8,7|baum@2,8|gericht@5,3|haus@3,4|haus@3,3|zelt@4,6-5,8|zelt@6,6-7,7|brunnen@4,5|werkstatt@2,4|laube@6,3|laube@6,4|laube@6,5|laube@7,3|laube@7,4|laube@7,5|baustelle@3,7" leute=167 praesident=2,6 nah=3 blick=3,7 palette=tuerkis palette_staerke=0.2 zoom-rein spielstand="kasse=6.800|einwohner=167|tag=5|betten=33/167|zelt=134" ein="Hände>334 HÄNDE>einwohner|Tag>1 TAG ARBEIT>axt"] Also zahlt ihr mit euren Händen. Alle packen mit an, einen ganzen Tag.
+// Die fertige Halle mit Preis und Namensschild
+[reich groesse=9 bauten="haus@4,4|baum@1,1|baum@7,2|tanne@0,6|fels@8,7|baum@2,8|gericht@5,3|haus@3,4|haus@3,3|zelt@4,6-5,8|zelt@6,6-7,7|brunnen@4,5|werkstatt@2,4|laube@6,3|laube@6,4|laube@6,5|laube@7,3|laube@7,4|laube@7,5|halle@3,7" leute=167 praesident=2,6 nah=3.3 blick=3,7 palette=tuerkis palette_staerke=0.2 schwenk-links preis="3,7:-6.000 €" spielstand="kasse=6.800>800|einwohner=167|tag=5|betten=93/167|zelt=74" ein="Feldbetten>#60 FELDBETTEN>haus"] Die Kasse zahlt nur, was man nicht selbst bauen kann: sechzig Feldbetten, Duschen, einen Herd. Sechstausend Euro.
+// Der Wassertank: Duschen vom Brunnen
+[reich groesse=9 bauten="haus@4,4|baum@1,1|baum@7,2|tanne@0,6|fels@8,7|baum@2,8|gericht@5,3|haus@3,4|haus@3,3|zelt@4,6-5,8|zelt@6,6-7,7|brunnen@4,5|werkstatt@2,4|laube@6,3|laube@6,4|laube@6,5|laube@7,3|laube@7,4|laube@7,5|halle@3,7" leute=167 praesident=4,6 nah=3.4 blick=2,6 palette=tuerkis palette_staerke=0.2 zoom-rein schild="3,7:Halle · @EllenZaum" spielstand="kasse=800|einwohner=167|tag=5|betten=93/167|zelt=74" ein="Brunnen>WASSER VOM BRUNNEN>tropfen|fünf>ERSTE DUSCHE>tropfen"] Ein Schlauch vom Brunnen füllt den Tank. Zum ersten Mal seit fünf Tagen duscht jemand.
+// Zahlen: 60 ziehen ein
+[reich groesse=9 bauten="haus@4,4|baum@1,1|baum@7,2|tanne@0,6|fels@8,7|baum@2,8|gericht@5,3|haus@3,4|haus@3,3|zelt@4,6-5,8|zelt@6,6-7,7|brunnen@4,5|werkstatt@2,4|laube@6,3|laube@6,4|laube@6,5|laube@7,3|laube@7,4|laube@7,5|halle@3,7" leute=167 praesident=4,6 nah=1.6 blick=4,6 palette=tuerkis palette_staerke=0.2 zoom-raus spielstand="kasse=800|einwohner=167|tag=5|betten=93/167|zelt=74" ein="sechzig>60 ZIEHEN EIN>einwohner|vierundsiebzig>74 IM ZELT>decke"] Sechzig Menschen ziehen aus dem Zelt in die Halle. Vierundsiebzig bleiben im Zelt.
+
+== Die Küche ==
+// Wendung: die Küche ist fertig
+[objekt objekte="topf:Der Herd|kocher:Die Küche" gross="LEERE TÖPFE" palette=orange zoom-rein] Am Abend wird der Herd zum ersten Mal angemacht.
+// Abend: Topf leer, Rauch aus dem Rohr
+[reich groesse=9 zeit=abend bauten="haus@4,4|baum@1,1|baum@7,2|tanne@0,6|fels@8,7|baum@2,8|gericht@5,3|haus@3,4|haus@3,3|zelt@4,6-5,8|zelt@6,6-7,7|brunnen@4,5|werkstatt@2,4|laube@6,3|laube@6,4|laube@6,5|laube@7,3|laube@7,4|laube@7,5|halle@3,7" leute=167 praesident=3,6 nah=3 blick=3,7 palette=orange palette_staerke=0.2 schwenk-rechts spielstand="kasse=800|einwohner=167|tag=5|betten=93/167|zelt=74" ein="Topf>DER TOPF IST LEER>topf|Korn>0 FELDER>aehre"] Die Töpfe sind voll Wasser. Aber auf deiner Insel wächst noch kein einziges Korn.
+// Nahaufnahme: du
+[gesicht du ort=reich zeit=abend palette=orange palette_staerke=0.2 spielstand="kasse=800|einwohner=167|tag=5|betten=93/167|zelt=74"] „Eine Küche ohne Essen. Na super.“
+// Das Los: du wieder im Zelt
+[reich groesse=9 zeit=nacht bauten="haus@4,4|baum@1,1|baum@7,2|tanne@0,6|fels@8,7|baum@2,8|gericht@5,3|haus@3,4|haus@3,3|zelt@4,6-5,8|zelt@6,6-7,7|brunnen@4,5|werkstatt@2,4|laube@6,3|laube@6,4|laube@6,5|laube@7,3|laube@7,4|laube@7,5|halle@3,7" leute=167 praesident=5,7 nah=2.6 blick=5,7 palette=blau palette_staerke=0.2 zoom-rein spielstand="kasse=800|einwohner=167|tag=5|betten=93/167|zelt=74" ein="Los>DAS LOS: ZELT 20>decke"] Und das Los für die Feldbetten? Du ziehst Zelt zwanzig. Schon wieder.
+
+== Tag 5 ==
+// Die ganze Insel bei Nacht
+[reich groesse=9 zeit=nacht bauten="haus@4,4|baum@1,1|baum@7,2|tanne@0,6|fels@8,7|baum@2,8|gericht@5,3|haus@3,4|haus@3,3|zelt@4,6-5,8|zelt@6,6-7,7|brunnen@4,5|werkstatt@2,4|laube@6,3|laube@6,4|laube@6,5|laube@7,3|laube@7,4|laube@7,5|halle@3,7" leute=167 praesident=5,7 nah=1.2 blick=4,4 palette=blau palette_staerke=0.2 zoom-raus spielstand="kasse=800|einwohner=167|tag=5|betten=93/167|zelt=74" ein="hundertsiebenundsechzig>#167 EINWOHNER>einwohner|dreiunddreißig>33 BIS ZUM DORF>haus"] Tag fünf. Dreiundneunzig Schlafplätze unter einem festen Dach. Noch dreiunddreißig bis zum Dorf mit eigenem Namen.
+// Cliffhanger: das freie Feld für Essen
+[reich groesse=9 zeit=nacht bauten="haus@4,4|baum@1,1|baum@7,2|tanne@0,6|fels@8,7|baum@2,8|gericht@5,3|haus@3,4|haus@3,3|zelt@4,6-5,8|zelt@6,6-7,7|brunnen@4,5|werkstatt@2,4|laube@6,3|laube@6,4|laube@6,5|laube@7,3|laube@7,4|laube@7,5|halle@3,7" leute=167 praesident=5,7 markiere=1,5 nah=2.4 blick=1,5 palette=blau palette_staerke=0.2 schwenk-links spielstand="kasse=800|einwohner=167|tag=5|betten=93/167|zelt=74" ein="Feld>FREIES FELD>aehre|Kasse>800 € IN DER KASSE>geld"] Achthundert Euro in der Kasse. Und eine ganze Insel, die morgen früh Hunger hat.
+// Aufruf
+[reich groesse=9 zeit=nacht bauten="haus@4,4|baum@1,1|baum@7,2|tanne@0,6|fels@8,7|baum@2,8|gericht@5,3|haus@3,4|haus@3,3|zelt@4,6-5,8|zelt@6,6-7,7|brunnen@4,5|werkstatt@2,4|laube@6,3|laube@6,4|laube@6,5|laube@7,3|laube@7,4|laube@7,5|halle@3,7" leute=167 praesident=5,7 nah=1.3 blick=4,4 palette=blau palette_staerke=0.2 schwenk-rechts spielstand="kasse=800|einwohner=167|tag=5|betten=93/167|zelt=74"] Jeder neue Follower zieht auf deine Insel. Was bauen wir als Nächstes? Schreib es in die Kommentare.
