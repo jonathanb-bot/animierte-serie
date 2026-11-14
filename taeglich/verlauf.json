@@ -250,6 +250,37 @@
     "lufs": -14.6,
     "dauer_s": 70.38
    }
+  },
+  {
+   "id": "welt-w005",
+   "datum": "2026-11-14",
+   "titel": "Deine Welt – Folge 5: Die Halle",
+   "emoji": "🏠",
+   "serie": "Deine Welt (Issue #32)",
+   "stimmung": "spannend",
+   "thema": "Top-Kommentar von @EllenZaum (eine Halle zum Einziehen mit Duschen und Kochgelegenheit) umgesetzt: Gemeinschaftshalle (neuer Bautyp halle, 60 Feldbetten) auf Feld 3,7. Kasse 6.800 € reicht nicht für ein Hochhaus (60.000 €/Stockwerk), deshalb bauen die Einwohner selbst, die Kasse zahlt nur Feldbetten, Duschen und Herd (6.000 €). Wendung: Der Herd ist fertig, aber auf der Insel wächst noch nichts. Cliffhanger: 800 € in der Kasse und morgen früh Hunger.",
+   "stil": "leichte 3D-Optik (Kulisse reich, isometrisch), Spielstand-Leiste mit Kasse, Namensschild + Kommentar-Sprechblase",
+   "kulissen": [
+    "reich",
+    "objekt",
+    "gesicht",
+    "titel"
+   ],
+   "beschreibung": "Tag 5: Ihr habt eine Halle gebaut – 60 Feldbetten, Duschen und eine Küche. Nur: Auf der Insel wächst noch nichts zu essen. Jeder Follower ist ein Einwohner. Der Kommentar mit den meisten Likes wird gebaut. Ideen: ein Feld mit Kartoffeln, ein Fischerboot, ein Gemüsegarten oder etwas ganz anderes.",
+   "hashtags": [
+    "#deinewelt",
+    "#animation",
+    "#story",
+    "#storytime",
+    "#deutsch",
+    "#aufbau",
+    "#insel"
+   ],
+   "tags": [
+    "animation",
+    "story",
+    "deine welt"
+   ]
   }
  ]
 }

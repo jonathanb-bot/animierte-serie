@@ -1,19 +1,19 @@
 {
  "_info": "Weltgedächtnis „Deine Welt“ (Issue #32). Wahrheit über den Zustand des Reichs. Vor jedem Drehbuch lesen, nach jeder Folge aktualisieren. Regeln: welt/serienbibel.md",
- "folge": 4,
- "datum": "2026-11-13",
- "tag": 4,
- "einwohner": 164,
- "einwohner_quelle": "Follower aller 6 Konten, posten/analyse.json vom 2026-11-13 (TikTok de 71, Instagram de 13, YouTube de 55, TikTok en 2, YouTube en 19, Instagram en 4) = 164 (+2 seit Folge 3)",
+ "folge": 5,
+ "datum": "2026-11-14",
+ "tag": 5,
+ "einwohner": 167,
+ "einwohner_quelle": "Follower aller 6 Konten, posten/analyse.json vom 2026-11-14 (TikTok de 72, Instagram de 13, YouTube de 56, TikTok en 3, YouTube en 19, Instagram en 4) = 167 (+3 seit Folge 4)",
  "praesident": "du (Figur du, blaue Jacke, gelbe Schärpe), Gründer und erster Präsident",
  "bild": {
   "reich": {
    "groesse": 9,
-   "bauten": "haus@4,4|baum@1,1|baum@7,2|tanne@0,6|fels@8,7|baum@2,8|gericht@5,3|haus@3,4|haus@3,3|zelt@4,6-5,8|zelt@6,6-7,7|brunnen@4,5|werkstatt@2,4|laube@6,3|laube@6,4|laube@6,5|laube@7,3|laube@7,4|laube@7,5",
-   "praesident": "5,8",
-   "naechstes_feld": "3,6",
-   "schilder": "5,3:Richter · @robbe9354|2,4:Werkstatt · @rylly_killer|2,6:Hotel · @EllenZaum|6,4:Gartenlauben · @EllenZaum",
-   "hinweis": "Feld 3,6 ist fürs mögliche Hochhaus markiert (noch keine Baustelle); Feld 2,6 weiter fürs Hotel abgesteckt"
+   "bauten": "haus@4,4|baum@1,1|baum@7,2|tanne@0,6|fels@8,7|baum@2,8|gericht@5,3|haus@3,4|haus@3,3|zelt@4,6-5,8|zelt@6,6-7,7|brunnen@4,5|werkstatt@2,4|laube@6,3|laube@6,4|laube@6,5|laube@7,3|laube@7,4|laube@7,5|halle@3,7",
+   "praesident": "5,7",
+   "naechstes_feld": "1,5",
+   "schilder": "5,3:Richter · @robbe9354|2,4:Werkstatt · @rylly_killer|2,6:Hotel · @EllenZaum|6,4:Gartenlauben · @EllenZaum|3,7:Halle · @EllenZaum",
+   "hinweis": "Feld 1,5 markiert (freies Feld, z. B. für Essen); Feld 3,6 weiter fürs mögliche Hochhaus, Feld 2,6 fürs Hotel"
   }
  },
  "bestand": {
@@ -21,26 +21,31 @@
   "betten": 9,
   "lauben": 6,
   "laubenbetten": 24,
-  "feste_daecher": 33,
+  "feste_daecher": 93,
   "zelte": 20,
   "zeltplaetze": 160,
-  "schlafen_im_zelt": 131,
+  "schlafen_im_zelt": 74,
   "schlafen_draussen": 0,
-  "felder_frei": "ca. 54",
-  "essen": "nichts angebaut, keine Vorräte erwähnt",
-  "wasser": "ein Brunnen (Feld 4,5)",
+  "felder_frei": "ca. 53",
+  "essen": "nichts angebaut – die Küche in der Halle ist fertig, aber die Töpfe sind leer (Folge 5)",
+  "wasser": "ein Brunnen (Feld 4,5), Schlauch zum Wassertank der Halle (Duschen)",
   "strom": "keiner",
   "gerichte": 1,
   "werkstaetten": 1,
   "richter": "@robbe9354 (seit Tag 2), im Video „Richter Robbe“",
   "offene_rollen": [
    "Mechaniker für die Werkstatt"
-  ]
+  ],
+  "hallen": 1,
+  "hallenbetten": 60,
+  "kuechen": 1,
+  "duschen": "in der Halle"
  },
  "community_regeln": [
   "Niemand steht über dem Gesetz, auch der Präsident nicht (erstes Urteil des Gerichts, Tag 2)",
   "Die Betten werden jeden Abend verlost (Urteil Tag 2); auch der Präsident nimmt am Los teil – Tag 3: du schläfst in Zelt Nr. 20",
-  "Ab Tag 3 schläft niemand mehr im Freien (zweites Urteil des Richters)"
+  "Ab Tag 3 schläft niemand mehr im Freien (zweites Urteil des Richters)",
+  "Tag 5: auch die Feldbetten in der Halle werden verlost – du ziehst wieder Zelt 20"
  ],
  "entscheidungen": [
   {
@@ -78,19 +83,34 @@
    "kasse_rechnung": "34.800 (Start Folge 3) + 2 neue Einwohner × 1.000 (2.000) + 4 Likes × 100 (400) + 2 Kommentare × 500 (1.000) = 38.200; − 36.000 (6 Lauben à 6.000 €) = 2.200 €",
    "preis": "36.000 € aus der Kasse; in der Kasse bleiben 2.200 €",
    "folgen": "24 ziehen aus dem Zelt in eine feste Hütte; am Abend erster Herbstregen – in den Lauben trocken, in 131 Zelten nass. 33 feste Dächer, 131 noch im Zelt."
+  },
+  {
+   "folge": 5,
+   "tag": 5,
+   "kommentar": "Eine kleine Halle,da könnte man einziehen bis man mehr Wohnmöglichkeiten hat.Mit Duschen und Kochgelegenheit.",
+   "likes": 0,
+   "antworten": 0,
+   "plattform": "youtube",
+   "nutzer": "@EllenZaum",
+   "weitere": "Keine weiteren Kommentare unter Folge 4 (einziger Kommentar auf allen Plattformen).",
+   "umsetzung": "Gemeinschaftshalle (neuer Bautyp halle: Bogendach aus Wellblech, Doppeltür, Schild mit Tropfen und Flamme, Wassertank für Duschen, Küchenrohr) auf Feld 3,7 mit 60 Feldbetten, Duschen (Schlauch vom Brunnen) und Herd. Für ein Hochhaus reichte das Geld nicht (60.000 €/Stockwerk), deshalb bauen alle Einwohner die Halle einen Tag lang selbst; die Kasse zahlt nur, was man nicht selbst bauen kann. Namensschild „Halle · @EllenZaum“.",
+   "kasse_rechnung": "2.200 (Start Folge 4) + 3 neue Einwohner × 1.000 (3.000) + 11 Likes × 100 (1.100; TikTok 10, YouTube 1, Instagram 0) + 1 Kommentar × 500 = 6.800; − 6.000 (60 Feldbetten, Duschen, Herd) = 800 €",
+   "preis": "6.000 € aus der Kasse und ein ganzer Tag Arbeit aller Einwohner; in der Kasse bleiben 800 €",
+   "folgen": "60 ziehen aus dem Zelt in die Halle, erste Dusche seit fünf Tagen; Herd ist fertig, aber es gibt nichts zu kochen (noch kein Feld). 93 feste Schlafplätze, 74 im Zelt; du verlierst das Los und schläfst in Zelt 20."
   }
  ],
  "offene_faeden": [
-  "Hotel für @EllenZaum: Feld 2,6 abgesteckt, kostet 250.000 €, in der Kasse 2.200 € (es fehlen 247.800 €)",
+  "Essen: Die Küche steht, aber auf der Insel wächst noch nichts – morgen früh hat die ganze Insel Hunger (Feld 1,5 markiert)",
+  "Kasse fast leer (800 €)",
+  "Hotel für @EllenZaum: Feld 2,6 abgesteckt, kostet 250.000 € (es fehlen 249.200 €)",
   "Raketensilo für @rylly_killer: Werkstatt steht (erster Schritt), sucht noch einen Mechaniker",
-  "131 schlafen noch im Zelt (nur 33 feste Dächer) – ein Hochhaus (Feld 3,6 markiert) würde viele auf einmal unterbringen, pro Stockwerk 60.000 €/12 Betten",
-  "Der Herbstregen hat begonnen (Wetter als neue Schwierigkeit)",
-  "Noch kein Essen angebaut (Feld/Imbiss im Post-Text vorgeschlagen)",
-  "Bei 200 Einwohnern wird die Insel ein Dorf mit eigenem Namen (noch 36)",
+  "74 schlafen noch im Zelt (93 feste Schlafplätze) – Hochhaus (Feld 3,6) kostet 60.000 € pro Stockwerk",
+  "Herbstregen seit Tag 4 (Wetter als Schwierigkeit)",
+  "Bei 200 Einwohnern wird die Insel ein Dorf mit eigenem Namen (noch 33)",
   "Du als Präsident hast noch kein eigenes Bett (Los entscheidet jeden Abend, du schläfst in Zelt 20)",
   "Ziel: die ganze Welt soll zum Reich gehören (195 Länder)"
  ],
- "schwierigkeit": "mittel (ab Folge 4): Platz wird knapp (ca. 54 freie Felder), das Budget reicht nur für einen Teil (6 Lauben statt Dächer für alle), und das Wetter (Herbstregen) macht erstmals einen Strich durch die Rechnung",
+ "schwierigkeit": "mittel: Geld reicht nicht mehr für große Bauten (Hochhaus unbezahlbar, Halle in Eigenarbeit), Kasse fast leer, und das Grundbedürfnis Essen ist offen; Wetter (Herbstregen) bleibt",
  "meilensteine": {
   "200": "Dorf mit eigenem Namen",
   "500": "Stadt",
@@ -98,7 +118,7 @@
   "2500": "zweite Insel",
   "10000": "Großstadt"
  },
- "kasse": 2200,
+ "kasse": 800,
  "kasse_info": "Seit 12.11. (Jonathan). Startkapital nach Folge 2: 1.000 € je Einwohner (162), Haus und Gericht waren Gründungsbauten ohne Kosten. Ab Folge 3: +1.000 € je neuem Einwohner, +100 € je Like, +500 € je Kommentar unter der letzten Folge, minus Baukosten (Richtwerte in der Serienbibel).",
  "bewohner": [
   {
@@ -118,9 +138,9 @@
   {
    "nutzer": "@EllenZaum",
    "plattform": "youtube",
-   "rolle": "Gartenlauben (Felder 6,3–7,5, Folge 4) und künftiges Hotel (Feld 2,6 abgesteckt)",
+   "rolle": "Gartenlauben (Felder 6,3–7,5, Folge 4), Halle (Feld 3,7, Folge 5) und künftiges Hotel (Feld 2,6 abgesteckt)",
    "seit_folge": 3,
-   "hinweis": "Kommentar „Ein Hotel 😊“ unter Folge 1 (Hotel abgesteckt) und Top-Kommentar „Wohnwagen oder kleine Gartenlauben“ unter Folge 3 (Folge 4 gebaut); im Video „Ellen“"
+   "hinweis": "Kommentar „Ein Hotel 😊“ unter Folge 1 (Hotel abgesteckt) und Top-Kommentar „Wohnwagen oder kleine Gartenlauben“ unter Folge 3 (Folge 4 gebaut); im Video „Ellen“; Folge 5: Top-Kommentar „Eine kleine Halle … Mit Duschen und Kochgelegenheit“ gebaut („Der Vorschlag kam wieder von Ellen“)"
   }
  ],
  "vorschlaege_offen": []
