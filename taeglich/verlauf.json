@@ -375,6 +375,38 @@
     "lufs": -14.6,
     "dauer_s": 80.43
    }
+  },
+  {
+   "id": "mond-m002",
+   "datum": "2026-11-15",
+   "titel": "Bis zum Mond – Folge 2: Hildesheim legt vor",
+   "emoji": "🌕",
+   "serie": "Bis zum Mond (Jonathans Idee 14.11.)",
+   "stimmung": "aufbau",
+   "stimme": "Fenrir",
+   "thema": "Tag 2: 15 Städte, 27 Stockwerke aus echten Kommentaren. Hildesheim vorne (6), Duell Freiburg/Stuttgart (je 3), Dorf Leimersheim auf Platz 4, Ebensee aus Österreich, 57 Feuer-Emojis zählen nicht",
+   "stil": "leuchtend, Kulisse turm (Turmplatz mit 15 Türmen, Nahaufnahmen mit Kommentar-Sprechblasen, Rangliste, Fahrt bis zu den Wolken); neu: schilder=, schild_px=, stock_hoehe=",
+   "kulissen": [
+    "turm",
+    "titel"
+   ],
+   "beschreibung": "Tag 2: Fünfzehn Städte bauen schon mit – und Hildesheim liegt vorne. Freiburg und Stuttgart sind nur drei Stockwerke dahinter. Jeder Kommentar mit deiner Stadt ist ein Stockwerk, jedes Like darauf noch eins. Kommentier deine Stadt!",
+   "hashtags": [
+    "#biszummond",
+    "#deinestadt",
+    "#hildesheim",
+    "#animation",
+    "#turm",
+    "#deutsch",
+    "#fyp"
+   ],
+   "tags": [
+    "animation",
+    "bis zum mond",
+    "turm",
+    "stadt",
+    "hildesheim"
+   ]
   }
  ]
 }
