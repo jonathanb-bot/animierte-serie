@@ -1896,6 +1896,12 @@
    "bild_s": 80.43,
    "ton_s": 80.45,
    "lufs": -14.6
+  },
+  "taeglich/mond-m002.mp4": {
+   "ok": true,
+   "bild_s": 64.08,
+   "ton_s": 64.11,
+   "lufs": -14.6
   }
  },
  "serien": {
@@ -2116,6 +2122,10 @@
   "welt-w006": {
    "titel": "Deine Welt – Folge 6: Kartoffeln",
    "datei": "taeglich/welt-w006.mp4"
+  },
+  "mond-m002": {
+   "titel": "Bis zum Mond – Folge 2: Hildesheim legt vor",
+   "datei": "taeglich/mond-m002.mp4"
   }
  },
  "taeglich_staffeln": {
