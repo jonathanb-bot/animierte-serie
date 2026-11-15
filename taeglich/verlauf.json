@@ -406,7 +406,17 @@
     "turm",
     "stadt",
     "hildesheim"
-   ]
+   ],
+   "veroeffentlicht": {
+    "video": "https://raw.githubusercontent.com/jonathanb-bot/animierte-serie/youtube-upload/taeglich/mond-m002.mp4",
+    "geplant": {
+     "tiktok": "2026-11-15T21:38:00",
+     "instagram": "2026-11-15T21:37:00",
+     "youtube": "2026-11-15T21:53:00"
+    },
+    "lufs": -14.6,
+    "dauer_s": 64.08
+   }
   }
  ]
 }

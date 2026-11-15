@@ -1,13 +1,47 @@
 {
  "_info": "Weltgedächtnis „Bis zum Mond“. tuerme = Stockwerke pro Stadt beim letzten Video (für alt>neu), reihenfolge = feste Plätze auf dem Turmplatz. Nach jeder Folge mit `python mond/stand.py --speichern` aktualisieren. gesperrt = Kommentar-IDs, die nicht zählen (Beleidigung, Politik, Werbung).",
- "folge": 1,
- "datum": "2026-11-14",
- "tag": 1,
- "tuerme": {},
- "reihenfolge": [],
+ "folge": 2,
+ "datum": "2026-11-15",
+ "tag": 2,
+ "tuerme": {
+  "Hildesheim": 6,
+  "Freiburg": 3,
+  "Stuttgart": 3,
+  "Leimersheim": 2,
+  "Plauen": 2,
+  "Rastatt": 2,
+  "Ulm": 2,
+  "Augsburg": 1,
+  "Berlin": 1,
+  "Ebensee": 1,
+  "Freilassing": 1,
+  "Hamm": 1,
+  "Meuselwitz": 1,
+  "Oldenburg": 1,
+  "Ronnenberg": 1
+ },
+ "reihenfolge": [
+  "Hildesheim",
+  "Freiburg",
+  "Stuttgart",
+  "Leimersheim",
+  "Plauen",
+  "Rastatt",
+  "Ulm",
+  "Augsburg",
+  "Berlin",
+  "Ebensee",
+  "Freilassing",
+  "Hamm",
+  "Meuselwitz",
+  "Oldenburg",
+  "Ronnenberg"
+ ],
  "gesperrt": [],
  "erreichte_ziele": [],
  "chronik": [
-  "Folge 1 „Der Startschuss“ (14.11.): Regeln, Ziele bis zum Mond, Platz noch leer. Stimme Fenrir."
- ]
+  "Folge 1 „Der Startschuss“ (14.11.): Regeln, Ziele bis zum Mond, Platz noch leer. Stimme Fenrir.",
+  "Folge 2 „Hildesheim legt vor“ (15.11.): 15 Städte, 27 Stockwerke. Hildesheim 6 (@jaron.krk, 3 Kommentare), Freiburg und Stuttgart je 3, Dorf Leimersheim Platz 4, Ebensee (AT) dabei, 57 Feuer-Emojis zählen nicht. Noch kein Ziel erreicht (Wolken 333). Neu in engine/turm.js: schilder=, schild_px=, stock_hoehe= (Folge 2 mit 2.5)."
+ ],
+ "stand_kommentare": "2026-11-15T14:19:39.606Z"
 }
