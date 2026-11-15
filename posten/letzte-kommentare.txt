@@ -1,6 +1,4 @@
 Verbundene Konten: tiktok:storys4you.de1, instagram:sto.rys4you, youtube:sto.rys4you (2. Zernio-Konto), tiktok:storys4you_eng (2. Zernio-Konto), youtube:storys4you_eng (3. Zernio-Konto), instagram:sory4you_eng (3. Zernio-Konto)
 Hauptkonto: Antwort-Felder data, pagination, meta; 100 Posts
-Hauptkonto: HTTP 429 {"error":"Rate limit exceeded. Please retry after 4 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":4}}
+Hauptkonto: HTTP 429 {"error":"Rate limit exceeded. Please retry after 32 seconds.","details":{"currentCount":61,"limit":60,"retryAfterSeconds":32}}
 2. Zernio-Konto: Antwort-Felder data, pagination, meta; 100 Posts
-3. Zernio-Konto: Antwort-Felder data, pagination, meta; 68 Posts
-85 Posts mit Kommentaren, 98 Kommentare geladen, 5 Fehler
