@@ -334,6 +334,37 @@
     "lufs": -14.6,
     "dauer_s": 67.23
    }
+  },
+  {
+   "id": "welt-w006",
+   "datum": "2026-11-15",
+   "titel": "Deine Welt – Folge 6: Kartoffeln",
+   "emoji": "🥔",
+   "serie": "Deine Welt (Issue #32)",
+   "stimmung": "aufbau",
+   "thema": "Top-Kommentar von @EllenZaum (Kartoffeln und Hochbeete für jeden, 2 Likes) als Hauptbau: Kartoffelacker auf 3 Feldern (neuer Bodentyp acker, −9.000 €) und 8 Hochbeete (neuer Bautyp hochbeet, −4.000 €). Zweiter Kommentar von @mark_mffr (Katze gegen 30.000 € Spende, 1 Like): Katzenhaus mit Katze (neuer Bautyp katze), Spende in die Kasse. Wendung: Kartoffeln brauchen rund 90 Tage, bis dahin kommt Essen per Boot für 1.700 €/Tag. Cliffhanger: Die Kasse (18.500 €) reicht knapp 11 Tage – die Insel braucht etwas, das Geld verdient. Erste Folge mit Stimme Puck.",
+   "stil": "leichte 3D-Optik (Kulisse reich, isometrisch), Spielstand-Leiste mit Kasse, Namensschilder + 2 Kommentar-Sprechblasen",
+   "kulissen": [
+    "reich",
+    "objekt",
+    "gesicht",
+    "titel"
+   ],
+   "beschreibung": "Tag 6: Ihr habt Kartoffeln und Hochbeete gepflanzt, und Mark bekommt eine Katze. Nur: Bis zur Ernte dauert es 90 Tage, und das Geld reicht für 11. Jeder Follower ist ein Einwohner. Der Kommentar mit den meisten Likes wird gebaut. Ideen: ein Fischerboot, ein Markt, ein Imbiss am Strand oder etwas ganz anderes.",
+   "hashtags": [
+    "#deinewelt",
+    "#animation",
+    "#story",
+    "#storytime",
+    "#deutsch",
+    "#aufbau",
+    "#insel"
+   ],
+   "tags": [
+    "animation",
+    "story",
+    "deine welt"
+   ]
   }
  ]
 }

@@ -1,19 +1,19 @@
 {
  "_info": "Weltgedächtnis „Deine Welt“ (Issue #32). Wahrheit über den Zustand des Reichs. Vor jedem Drehbuch lesen, nach jeder Folge aktualisieren. Regeln: welt/serienbibel.md",
- "folge": 5,
- "datum": "2026-11-14",
- "tag": 5,
+ "folge": 6,
+ "datum": "2026-11-15",
+ "tag": 6,
  "einwohner": 167,
- "einwohner_quelle": "Follower aller 6 Konten, posten/analyse.json vom 2026-11-14 (TikTok de 72, Instagram de 13, YouTube de 56, TikTok en 3, YouTube en 19, Instagram en 4) = 167 (+3 seit Folge 4)",
+ "einwohner_quelle": "Follower aller 6 Konten, posten/analyse.json vom 2026-11-15 (TikTok de 72, Instagram de 13, YouTube de 56, TikTok en 3, YouTube en 19, Instagram en 4) = 167 (±0 seit Folge 5)",
  "praesident": "du (Figur du, blaue Jacke, gelbe Schärpe), Gründer und erster Präsident",
  "bild": {
   "reich": {
    "groesse": 9,
-   "bauten": "haus@4,4|baum@1,1|baum@7,2|tanne@0,6|fels@8,7|baum@2,8|gericht@5,3|haus@3,4|haus@3,3|zelt@4,6-5,8|zelt@6,6-7,7|brunnen@4,5|werkstatt@2,4|laube@6,3|laube@6,4|laube@6,5|laube@7,3|laube@7,4|laube@7,5|halle@3,7",
+   "bauten": "haus@4,4|baum@1,1|baum@7,2|tanne@0,6|fels@8,7|baum@2,8|gericht@5,3|haus@3,4|haus@3,3|zelt@4,6-5,8|zelt@6,6-7,7|brunnen@4,5|werkstatt@2,4|laube@6,3|laube@6,4|laube@6,5|laube@7,3|laube@7,4|laube@7,5|halle@3,7|acker@1,4-1,6|hochbeet@5,1|hochbeet@6,1|katze@0,4",
    "praesident": "5,7",
-   "naechstes_feld": "1,5",
-   "schilder": "5,3:Richter · @robbe9354|2,4:Werkstatt · @rylly_killer|2,6:Hotel · @EllenZaum|6,4:Gartenlauben · @EllenZaum|3,7:Halle · @EllenZaum",
-   "hinweis": "Feld 1,5 markiert (freies Feld, z. B. für Essen); Feld 3,6 weiter fürs mögliche Hochhaus, Feld 2,6 fürs Hotel"
+   "naechstes_feld": "2,6",
+   "schilder": "5,3:Richter · @robbe9354|2,4:Werkstatt · @rylly_killer|2,6:Hotel · @EllenZaum|6,4:Gartenlauben · @EllenZaum|3,7:Halle · @EllenZaum|1,4:Kartoffeln · @EllenZaum|5,1:Hochbeete · @EllenZaum|0,4:Katze · @mark_mffr",
+   "hinweis": "Feld 2,6 markiert (Hotel-Feld, etwas, das Geld verdient); Feld 3,6 weiter fürs mögliche Hochhaus"
   }
  },
  "bestand": {
@@ -26,8 +26,8 @@
   "zeltplaetze": 160,
   "schlafen_im_zelt": 74,
   "schlafen_draussen": 0,
-  "felder_frei": "ca. 53",
-  "essen": "nichts angebaut – die Küche in der Halle ist fertig, aber die Töpfe sind leer (Folge 5)",
+  "felder_frei": "ca. 47",
+  "essen": "Kartoffelacker (3 Felder, 600 Saatkartoffeln, Ernte in ca. 90 Tagen) und 8 Hochbeete (Kräuter, Salat, Radieschen – erste Radieschen nach ca. 4 Wochen); bis dahin Essen per Boot vom Festland, 10 € pro Kopf und Tag = ca. 1.700 €/Tag aus der Kasse (Folge 6)",
   "wasser": "ein Brunnen (Feld 4,5), Schlauch zum Wassertank der Halle (Duschen)",
   "strom": "keiner",
   "gerichte": 1,
@@ -39,13 +39,17 @@
   "hallen": 1,
   "hallenbetten": 60,
   "kuechen": 1,
-  "duschen": "in der Halle"
+  "duschen": "in der Halle",
+  "aecker": 3,
+  "hochbeete": 8,
+  "katzen": 1
  },
  "community_regeln": [
   "Niemand steht über dem Gesetz, auch der Präsident nicht (erstes Urteil des Gerichts, Tag 2)",
   "Die Betten werden jeden Abend verlost (Urteil Tag 2); auch der Präsident nimmt am Los teil – Tag 3: du schläfst in Zelt Nr. 20",
   "Ab Tag 3 schläft niemand mehr im Freien (zweites Urteil des Richters)",
-  "Tag 5: auch die Feldbetten in der Halle werden verlost – du ziehst wieder Zelt 20"
+  "Tag 5: auch die Feldbetten in der Halle werden verlost – du ziehst wieder Zelt 20",
+  "Tag 6: Essen wird bis zur ersten Ernte mit dem Boot vom Festland gekauft – 10 € pro Einwohner und Tag (ca. 1.700 €/Tag) gehen jeden Tag von der Kasse ab"
  ],
  "entscheidungen": [
   {
@@ -97,20 +101,35 @@
    "kasse_rechnung": "2.200 (Start Folge 4) + 3 neue Einwohner × 1.000 (3.000) + 11 Likes × 100 (1.100; TikTok 10, YouTube 1, Instagram 0) + 1 Kommentar × 500 = 6.800; − 6.000 (60 Feldbetten, Duschen, Herd) = 800 €",
    "preis": "6.000 € aus der Kasse und ein ganzer Tag Arbeit aller Einwohner; in der Kasse bleiben 800 €",
    "folgen": "60 ziehen aus dem Zelt in die Halle, erste Dusche seit fünf Tagen; Herd ist fertig, aber es gibt nichts zu kochen (noch kein Feld). 93 feste Schlafplätze, 74 im Zelt; du verlierst das Los und schläfst in Zelt 20."
+  },
+  {
+   "folge": 6,
+   "tag": 6,
+   "kommentar": "Habe abonniert,finde Kartoffeln richtig gut,und Hochbeete für jeden der sowas möchte um Gemüse und Kräuter anzubauen.",
+   "likes": 2,
+   "antworten": 0,
+   "plattform": "youtube",
+   "nutzer": "@EllenZaum",
+   "weitere": "Zweiter Kommentar „bekomme ich eine Katze und ich Spende 30k“ (@mark_mffr, tiktok, 1 Like) im Schnelldurchlauf umgesetzt: Katze (wohnte schon zwischen den Kisten der Werkstatt) mit Katzenhaus auf Feld 0,4 gehört ab jetzt Mark (0 €), seine Spende von 30.000 € geht in die Kasse („Ja, aber“-Regel, Witz-Vorschlag in die Welt übersetzt).",
+   "umsetzung": "Kartoffelacker auf den Feldern 1,4–1,6 (neuer Bodentyp acker: dunkle Erde mit Dämmen und Kartoffelpflanzen), von Hand umgegraben, 600 Saatkartoffeln; 8 Hochbeete auf den Feldern 5,1 und 6,1 (neuer Bautyp hochbeet: je 4 Holzkästen mit Salat, Kräutern, Radieschen, Möhren) für jeden, der will; Katzenhaus mit Katze auf Feld 0,4 (neuer Bautyp katze). Namensschilder „Kartoffeln · @EllenZaum“, „Hochbeete · @EllenZaum“, „Katze · @mark_mffr“.",
+   "kasse_rechnung": "800 (Start Folge 5) + 0 neue Einwohner + 14 Likes × 100 (1.400; TikTok 9, Instagram 2, YouTube 3) + 2 Kommentare × 500 (1.000) + 30.000 Spende @mark_mffr = 33.200; − 9.000 (Acker, 3 Felder à 3.000) − 4.000 (8 Hochbeete, 2 Felder à 2.000) = 20.200; − 1.700 (erster Tag Essen per Boot) = 18.500 €",
+   "preis": "13.000 € für Acker und Hochbeete, ab heute ca. 1.700 € pro Tag für Essen vom Festland; in der Kasse bleiben 18.500 €",
+   "folgen": "Zum ersten Mal wächst Essen auf der Insel, aber die Kartoffeln brauchen ca. 90 Tage, die Radieschen ca. 4 Wochen. Bis dahin kommt Essen mit dem Boot (1.700 €/Tag) – die Kasse reicht knapp 11 Tage. Du ziehst wieder Zelt 20, aber Marks Katze schläft heute Nacht bei dir."
   }
  ],
  "offene_faeden": [
-  "Essen: Die Küche steht, aber auf der Insel wächst noch nichts – morgen früh hat die ganze Insel Hunger (Feld 1,5 markiert)",
-  "Kasse fast leer (800 €)",
-  "Hotel für @EllenZaum: Feld 2,6 abgesteckt, kostet 250.000 € (es fehlen 249.200 €)",
+  "Geld: Die Kasse (18.500 €) reicht für knapp 11 Tage Essen (1.700 €/Tag), bis zur Kartoffelernte sind es ca. 90 Tage – die Insel braucht etwas, das Geld verdient (Cliffhanger Folge 6, Feld 2,6 markiert)",
+  "Erste Radieschen aus den Hochbeeten in ca. 4 Wochen (ca. Tag 34), Kartoffelernte in ca. 90 Tagen (ca. Tag 96)",
+  "Hotel für @EllenZaum: Feld 2,6 abgesteckt, kostet 250.000 € (es fehlen 231.500 €) – würde Geld verdienen",
   "Raketensilo für @rylly_killer: Werkstatt steht (erster Schritt), sucht noch einen Mechaniker",
+  "Marks Katze (@mark_mffr) wohnt im Katzenhaus auf Feld 0,4 und hat in Nacht 6 bei dir im Zelt geschlafen",
   "74 schlafen noch im Zelt (93 feste Schlafplätze) – Hochhaus (Feld 3,6) kostet 60.000 € pro Stockwerk",
   "Herbstregen seit Tag 4 (Wetter als Schwierigkeit)",
   "Bei 200 Einwohnern wird die Insel ein Dorf mit eigenem Namen (noch 33)",
   "Du als Präsident hast noch kein eigenes Bett (Los entscheidet jeden Abend, du schläfst in Zelt 20)",
   "Ziel: die ganze Welt soll zum Reich gehören (195 Länder)"
  ],
- "schwierigkeit": "mittel: Geld reicht nicht mehr für große Bauten (Hochhaus unbezahlbar, Halle in Eigenarbeit), Kasse fast leer, und das Grundbedürfnis Essen ist offen; Wetter (Herbstregen) bleibt",
+ "schwierigkeit": "mittel → schwer: laufende Kosten (Essen 1.700 €/Tag) fressen die Kasse auf, die eigene Ernte dauert 90 Tage, also braucht die Insel ein Einkommen; 74 noch im Zelt; Wetter (Herbstregen) bleibt",
  "meilensteine": {
   "200": "Dorf mit eigenem Namen",
   "500": "Stadt",
@@ -118,7 +137,7 @@
   "2500": "zweite Insel",
   "10000": "Großstadt"
  },
- "kasse": 800,
+ "kasse": 18500,
  "kasse_info": "Seit 12.11. (Jonathan). Startkapital nach Folge 2: 1.000 € je Einwohner (162), Haus und Gericht waren Gründungsbauten ohne Kosten. Ab Folge 3: +1.000 € je neuem Einwohner, +100 € je Like, +500 € je Kommentar unter der letzten Folge, minus Baukosten (Richtwerte in der Serienbibel).",
  "bewohner": [
   {
@@ -138,9 +157,16 @@
   {
    "nutzer": "@EllenZaum",
    "plattform": "youtube",
-   "rolle": "Gartenlauben (Felder 6,3–7,5, Folge 4), Halle (Feld 3,7, Folge 5) und künftiges Hotel (Feld 2,6 abgesteckt)",
+   "rolle": "Gartenlauben (Felder 6,3–7,5, Folge 4), Halle (Feld 3,7, Folge 5) und künftiges Hotel (Feld 2,6 abgesteckt); Kartoffelacker (Felder 1,4–1,6) und Hochbeete (5,1/6,1, Folge 6)",
    "seit_folge": 3,
-   "hinweis": "Kommentar „Ein Hotel 😊“ unter Folge 1 (Hotel abgesteckt) und Top-Kommentar „Wohnwagen oder kleine Gartenlauben“ unter Folge 3 (Folge 4 gebaut); im Video „Ellen“; Folge 5: Top-Kommentar „Eine kleine Halle … Mit Duschen und Kochgelegenheit“ gebaut („Der Vorschlag kam wieder von Ellen“)"
+   "hinweis": "Kommentar „Ein Hotel 😊“ unter Folge 1 (Hotel abgesteckt) und Top-Kommentar „Wohnwagen oder kleine Gartenlauben“ unter Folge 3 (Folge 4 gebaut); im Video „Ellen“; Folge 5: Top-Kommentar „Eine kleine Halle … Mit Duschen und Kochgelegenheit“ gebaut („Der Vorschlag kam wieder von Ellen“); Folge 6: Top-Kommentar „Kartoffeln … Hochbeete für jeden“ (2 Likes) gebaut, hat abonniert"
+  },
+  {
+   "nutzer": "@mark_mffr",
+   "plattform": "tiktok",
+   "rolle": "Besitzer der Katze (Katzenhaus auf Feld 0,4), Spender von 30.000 € für die Kasse",
+   "seit_folge": 6,
+   "hinweis": "Kommentar „bekomme ich eine Katze und ich Spende 30k“ unter Folge 5; im Video „Mark“"
   }
  ],
  "vorschlaege_offen": []
