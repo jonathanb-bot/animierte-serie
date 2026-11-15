@@ -15,10 +15,10 @@
 @zeit tag
 
 == Start ==
-// Wow-Bild zuerst: der Turmplatz, fünfzehn Türme wachsen aus dem Boden
-[turm modus=feld stock_hoehe=2.5 schilder="Hildesheim,Freiburg,Stuttgart" schild_px=34 tuerme="Hildesheim:0>6|Freiburg:0>3|Stuttgart:0>3|Leimersheim:0>2|Plauen:0>2|Rastatt:0>2|Ulm:0>2|Augsburg:0>1|Berlin:0>1|Ebensee:0>1|Freilassing:0>1|Hamm:0>1|Meuselwitz:0>1|Oldenburg:0>1|Ronnenberg:0>1" wachsen_dauer=2.6 nah=1.55 palette=tuerkis palette_staerke=0.2 zoom-rein hooktext="TAG 2 · HILDESHEIM VORNE" ein="fünfzehn>#15 STÄDTE" ein_y=600] Gestern war dein Turmplatz noch leer. Heute stehen hier schon fünfzehn Türme.
-// Der ganze Platz von etwas weiter weg
-[turm modus=feld stock_hoehe=2.5 schilder="Hildesheim,Freiburg,Stuttgart" schild_px=34 tuerme="Hildesheim:6|Freiburg:3|Stuttgart:3|Leimersheim:2|Plauen:2|Rastatt:2|Ulm:2|Augsburg:1|Berlin:1|Ebensee:1|Freilassing:1|Hamm:1|Meuselwitz:1|Oldenburg:1|Ronnenberg:1" nah=1.2 palette=tuerkis palette_staerke=0.2 zoom-raus ein="siebenundzwanzig>#27 STOCKWERKE"] Siebenundzwanzig Stockwerke, gebaut nur aus euren Kommentaren.
+// Wow-Bild zuerst: der Turmplatz mit fünfzehn Türmen, Hildesheim vorne
+[turm modus=feld stock_hoehe=2.5 schilder="Hildesheim,Freiburg,Stuttgart" schild_px=34 tuerme="Hildesheim:6|Freiburg:3|Stuttgart:3|Leimersheim:2|Plauen:2|Rastatt:2|Ulm:2|Augsburg:1|Berlin:1|Ebensee:1|Freilassing:1|Hamm:1|Meuselwitz:1|Oldenburg:1|Ronnenberg:1" nah=1.9 blick=3.5,3.5 palette=tuerkis palette_staerke=0.2 zoom-rein hooktext="TAG 2 · HILDESHEIM VORNE" ein="fünfzehn>#15 STÄDTE" ein_y=1200] Gestern war dein Turmplatz noch leer. Heute stehen hier schon fünfzehn Türme.
+// Alle Türme wachsen aus dem Boden, etwas weiter weg
+[turm modus=feld stock_hoehe=2.5 schilder="Hildesheim,Freiburg,Stuttgart" schild_px=34 tuerme="Hildesheim:0>6|Freiburg:0>3|Stuttgart:0>3|Leimersheim:0>2|Plauen:0>2|Rastatt:0>2|Ulm:0>2|Augsburg:0>1|Berlin:0>1|Ebensee:0>1|Freilassing:0>1|Hamm:0>1|Meuselwitz:0>1|Oldenburg:0>1|Ronnenberg:0>1" wachsen_dauer=2.6 nah=1.2 palette=tuerkis palette_staerke=0.2 zoom-raus ein="siebenundzwanzig>#27 STOCKWERKE"] Siebenundzwanzig Stockwerke, gebaut nur aus euren Kommentaren.
 // Titelkarte
 [titel oben="Folge 2" gross="BIS ZUM MOND" unten="Hildesheim legt vor" farbe=#123a4a akzent=#7fe0e8 groesse=150 hud=false palette=tuerkis zoom-rein] Und eine Stadt hat sich schon abgesetzt.
 
