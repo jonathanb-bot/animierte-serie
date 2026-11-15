@@ -1,0 +1,123 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>html,body{margin:0;background:transparent}canvas{display:block}</style>
+<script type="importmap">{"imports":{"three":"./node_modules/three/build/three.module.js","three/addons/":"./node_modules/three/examples/jsm/"}}</script>
+</head><body>
+<script type="module">
+import * as THREE from "three";
+import { RoomEnvironment } from "three/addons/environments/RoomEnvironment.js";
+import { mergeVertices } from "three/addons/utils/BufferGeometryUtils.js";
+
+const S = 1200;
+const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, preserveDrawingBuffer: true });
+renderer.setPixelRatio(1); renderer.setSize(S, S);
+renderer.outputColorSpace = THREE.SRGBColorSpace; renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.toneMappingExposure = 0.78;
+renderer.shadowMap.enabled = true; renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+document.body.appendChild(renderer.domElement);
+const scene = new THREE.Scene();
+const pmrem = new THREE.PMREMGenerator(renderer);
+scene.environment = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
+const camera = new THREE.PerspectiveCamera(26, 1, 0.1, 100);
+camera.position.set(0, 2.6, 6.6); camera.lookAt(0, 0.25, 0.25);
+
+// ---------- Texturen (prozedural) ----------
+const leinwand = (w, h, fn) => { const c = document.createElement("canvas"); c.width = w; c.height = h; fn(c.getContext("2d"), w, h); return c; };
+const rnd = (() => { let s = 7; return () => (s = (s * 16807) % 2147483647) / 2147483647; })();
+// GG-Canvas: beige Grund, dunkelbraune verschränkte G-Paare in Rautenrapport, feine Webstruktur
+const ggCanvas = leinwand(2048, 2048, (g, w, h) => {
+  g.fillStyle = "#b8a07c"; g.fillRect(0, 0, w, h);
+  for (let i = 0; i < 90000; i++) { const x = rnd() * w, y = rnd() * h, a = rnd() * 0.08; g.fillStyle = rnd() < 0.5 ? `rgba(255,248,230,${a})` : `rgba(80,60,40,${a})`; g.fillRect(x, y, 2 + rnd() * 3, 1); }
+  const zelle = 200;
+  const G = (cx, cy, r, flip) => { // stilisiertes G: offener Ring mit Querbalken
+    g.save(); g.translate(cx, cy); if (flip) g.scale(-1, 1);
+    g.lineWidth = r * 0.34; g.strokeStyle = "#3e2a1d"; g.lineCap = "butt";
+    g.beginPath(); g.arc(0, 0, r, Math.PI * 0.18, Math.PI * 1.92); g.stroke();
+    g.beginPath(); g.moveTo(r * 0.98, r * 0.22); g.lineTo(r * 0.18, r * 0.22); g.stroke();
+    g.restore(); };
+  for (let y = -zelle; y < h + zelle; y += zelle) for (let x = -zelle; x < w + zelle; x += zelle) {
+    const ox = ((y / zelle) % 2) * zelle / 2;
+    G(x + ox - 20, y, 40, false); G(x + ox + 20, y + 8, 40, true);
+    g.fillStyle = "rgba(62,42,29,0.9)"; g.beginPath(); g.arc(x + ox + zelle / 2, y + zelle / 2, 8, 0, Math.PI * 2); g.fill();
+  }
+  // Webstruktur
+  g.globalAlpha = 0.07; for (let y = 0; y < h; y += 3) { g.fillStyle = y % 6 ? "#000" : "#fff"; g.fillRect(0, y, w, 1); } for (let x = 0; x < w; x += 3) { g.fillStyle = x % 6 ? "#000" : "#fff"; g.fillRect(x, 0, 1, h); } g.globalAlpha = 1;
+});
+const weave = leinwand(512, 512, (g, w, h) => { g.fillStyle = "#8080ff"; g.fillRect(0, 0, w, h);
+  for (let y = 0; y < h; y += 4) for (let x = 0; x < w; x += 4) { const v = ((x + y) / 4) % 2; g.fillStyle = v ? "#9a80ff" : "#6680ff"; g.fillRect(x, y, 4, 2); g.fillStyle = v ? "#8096ff" : "#806aff"; g.fillRect(x, y + 2, 4, 2); } });
+const tex = c => { const t = new THREE.CanvasTexture(c); t.wrapS = t.wrapT = THREE.RepeatWrapping; t.anisotropy = 8; return t; };
+const ggTex = tex(ggCanvas); ggTex.colorSpace = THREE.SRGBColorSpace; ggTex.repeat.set(1.5, 1.0);
+const nTex = tex(weave); nTex.repeat.set(26, 18);
+const stoff = new THREE.MeshPhysicalMaterial({ map: ggTex, normalMap: nTex, normalScale: new THREE.Vector2(0.35, 0.35), roughness: 0.88, sheen: 0.35, sheenRoughness: 0.8, sheenColor: new THREE.Color("#f2e2c4"), side: THREE.DoubleSide });
+const leder = new THREE.MeshPhysicalMaterial({ color: "#16110e", roughness: 0.38, clearcoat: 0.5, clearcoatRoughness: 0.35 });
+const innen = new THREE.MeshStandardMaterial({ color: "#2a211b", roughness: 0.9, side: THREE.BackSide });
+const naht = new THREE.MeshStandardMaterial({ color: "#3e2c20", roughness: 0.7 });
+const webCanvas = leinwand(64, 512, (g, w, h) => { const f = ["#0d5a35", "#0d5a35", "#b0141e", "#b0141e", "#0d5a35", "#0d5a35"]; f.forEach((c, i) => { g.fillStyle = c; g.fillRect(i * w / 6, 0, w / 6 + 1, h); });
+  g.globalAlpha = 0.12; for (let y = 0; y < h; y += 2) { g.fillStyle = y % 4 ? "#000" : "#fff"; g.fillRect(0, y, w, 1); } });
+const webTex = tex(webCanvas); webTex.colorSpace = THREE.SRGBColorSpace;
+const web = new THREE.MeshPhysicalMaterial({ map: webTex, roughness: 0.55, sheen: 0.8, sheenColor: new THREE.Color("#ffffff"), side: THREE.DoubleSide });
+
+const cap = new THREE.Group(); scene.add(cap);
+// ---------- Krone: Lathe-Profil, vorne etwas höher ----------
+const R = 1.0, H = 0.92;
+const krone = (() => {
+  const g = new THREE.SphereGeometry(1, 160, 80, 0, Math.PI * 2, 0, Math.PI * 0.5);
+  const p = g.attributes.position, v = new THREE.Vector3();
+  for (let i = 0; i < p.count; i++) { v.fromBufferAttribute(p, i);
+    const vorne = Math.max(0, v.z); const y = Math.pow(v.y, 0.82) * H * (1 + 0.1 * vorne - 0.12 * Math.max(0, -v.z));
+    const r = Math.sqrt(v.x * v.x + v.z * v.z);
+    // Krone leicht eckiger (6 Bahnen), vorne flacher
+    const ang = Math.atan2(v.x, v.z), bahn = 1 + 0.018 * Math.cos(ang * 6);
+    p.setXYZ(i, v.x * R * bahn * 1.0, y, v.z * R * bahn * 1.08 * (v.z > 0 ? 0.97 : 1)); }
+  g.computeVertexNormals(); return g; })();
+const kroneM = new THREE.Mesh(krone, stoff); kroneM.castShadow = true; kroneM.receiveShadow = true; cap.add(kroneM);
+const kroneI = new THREE.Mesh(krone, innen); kroneI.scale.setScalar(0.985); cap.add(kroneI);
+// Nähte (6 Meridiane) und Web-Streifen an den Seiten
+const meridian = (ang, rad, mat, breite) => { const pts = []; for (let k = 0; k <= 60; k++) { const th = (k / 60) * Math.PI * 0.5;
+    const x = Math.sin(th) * Math.sin(ang), z = Math.sin(th) * Math.cos(ang), y = Math.cos(th);
+    const bahn = 1 + 0.018 * Math.cos(ang * 6), vorne = Math.max(0, z);
+    pts.push(new THREE.Vector3(x * R * bahn * rad, Math.pow(y, 0.82) * H * (1 + 0.1 * vorne - 0.12 * Math.max(0, -z)) * rad + 0.0, z * R * bahn * 1.08 * (z > 0 ? 0.97 : 1) * rad)); }
+  return new THREE.Mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3(pts), 80, breite, 8, false), mat); };
+for (let k = 0; k < 6; k++) cap.add(meridian((k / 6) * Math.PI * 2 + Math.PI / 6, 1.004, naht, 0.006));
+// Web-Streifen als Band über die Seitenbahn
+const band = (seite) => { const pts = [], ang = seite * Math.PI / 2; const g = new THREE.BufferGeometry(); const pos = [], uv = [], idx = []; const N = 60, bw = 0.16;
+  for (let k = 0; k <= N; k++) { const th = Math.PI * 0.5 * (1 - k / N) * 0.62 + Math.PI * 0.5 * 0.36; for (const s of [-1, 1]) { const a = ang + s * bw / Math.max(0.25, Math.sin(th));
+      const x = Math.sin(th) * Math.sin(a), z = Math.sin(th) * Math.cos(a), y = Math.cos(th), bahn = 1 + 0.018 * Math.cos(a * 6), vorne = Math.max(0, z);
+      pos.push(x * R * bahn * 1.006, Math.pow(y, 0.82) * H * (1 + 0.1 * vorne - 0.12 * Math.max(0, -z)) * 1.006, z * R * bahn * 1.08 * (z > 0 ? 0.97 : 1) * 1.006); uv.push(s < 0 ? 0 : 1, k / N); } }
+  for (let k = 0; k < N; k++) { const a = k * 2; idx.push(a, a + 1, a + 2, a + 1, a + 3, a + 2); }
+  g.setAttribute("position", new THREE.Float32BufferAttribute(pos, 3)); g.setAttribute("uv", new THREE.Float32BufferAttribute(uv, 2)); g.setIndex(idx); g.computeVertexNormals();
+  const m = new THREE.Mesh(g, web); m.castShadow = true; return m; };
+cap.add(band(1)); cap.add(band(-1));
+// Knopf und Luftlöcher
+const knopf = new THREE.Mesh(new THREE.SphereGeometry(0.075, 32, 16), stoff); knopf.scale.y = 0.45; knopf.position.y = H * 1.0 + 0.01; cap.add(knopf);
+for (let k = 0; k < 6; k++) { const ang = (k / 6) * Math.PI * 2, th = 0.62; const x = Math.sin(th) * Math.sin(ang), z = Math.sin(th) * Math.cos(ang), y = Math.cos(th);
+  const o = new THREE.Mesh(new THREE.TorusGeometry(0.028, 0.009, 8, 24), naht); const pnt = new THREE.Vector3(x * R * 1.003, Math.pow(y, 0.82) * H * (1 + 0.1 * Math.max(0, z) - 0.12 * Math.max(0, -z)) * 1.003, z * R * 1.08 * (z > 0 ? 0.97 : 1) * 1.003);
+  o.position.copy(pnt); o.lookAt(pnt.clone().multiplyScalar(2)); cap.add(o); }
+// Lederband unten und Lasche hinten
+
+const lasche = new THREE.Mesh(new THREE.BoxGeometry(0.36, 0.1, 0.03), leder); lasche.position.set(0, 0.1, -R * 1.07); lasche.rotation.x = -0.15; cap.add(lasche);
+// ---------- Schirm: gebogene Fläche vorne ----------
+const schirm = (() => { const NX = 90, NZ = 30, g = new THREE.BufferGeometry(), pos = [], uv = [], idx = [];
+  for (let j = 0; j <= NZ; j++) for (let i = 0; i <= NX; i++) { const u = i / NX * 2 - 1, v = j / NZ; // u quer, v nach vorne
+    const uu = u * 0.84, halb = Math.sqrt(Math.max(0, 1 - uu * uu)); const innenZ = R * 1.04 * 0.995 * halb, aussen = innenZ + 0.74 * Math.pow(Math.max(0, 1 - u * u), 0.6);
+    const z = innenZ + (aussen - innenZ) * v; const x = uu * R * (1 + 0.02 * v);
+    const y = 0.03 - 0.07 * v - 0.03 * v * v - 0.2 * u * u * (0.2 + v); pos.push(x, y, z); uv.push((u + 1) * 1.2, v * 0.8); }
+  for (let j = 0; j < NZ; j++) for (let i = 0; i < NX; i++) { const a = j * (NX + 1) + i; idx.push(a, a + NX + 1, a + 1, a + 1, a + NX + 1, a + NX + 2); }
+  g.setAttribute("position", new THREE.Float32BufferAttribute(pos, 3)); g.setAttribute("uv", new THREE.Float32BufferAttribute(uv, 2)); g.setIndex(idx); g.computeVertexNormals(); return g; })();
+const schirmTex = ggTex.clone(); schirmTex.repeat.set(0.9, 0.7); schirmTex.needsUpdate = true;
+const schirmM = new THREE.Mesh(schirm, stoff.clone()); schirmM.material.map = schirmTex; schirmM.castShadow = true; cap.add(schirmM);
+const schirmU = new THREE.Mesh(schirm, new THREE.MeshStandardMaterial({ color: "#1b1512", roughness: 0.9, side: THREE.BackSide })); schirmU.position.y = -0.012; cap.add(schirmU);
+// Lederkante am Schirm
+{ const pts = []; for (let i = 0; i <= 120; i++) { const u = i / 120 * 2 - 1, uu = u * 0.84, innenZ = R * 1.04 * 0.995 * Math.sqrt(Math.max(0, 1 - uu * uu)), z = innenZ + 0.74 * Math.pow(Math.max(0, 1 - u * u), 0.6); pts.push(new THREE.Vector3(uu * R * 1.02, 0.03 - 0.1 - 0.2 * u * u * 1.2, z)); }
+  cap.add(new THREE.Mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3(pts), 160, 0.018, 10, false), leder)); }
+// leichte Neigung wie auf einem Produktfoto
+cap.rotation.x = -0.04; cap.position.y = -0.0;
+// ---------- Licht ----------
+const key = new THREE.DirectionalLight("#fff6ea", 1.9); key.position.set(-3, 5, 4); key.castShadow = true; key.shadow.mapSize.set(2048, 2048); key.shadow.radius = 8;
+key.shadow.camera.left = -3; key.shadow.camera.right = 3; key.shadow.camera.top = 3; key.shadow.camera.bottom = -3; scene.add(key);
+const rim = new THREE.DirectionalLight("#cfe0ff", 1.4); rim.position.set(4, 2, -4); scene.add(rim);
+scene.add(new THREE.AmbientLight("#ffffff", 0.15));
+const boden = new THREE.Mesh(new THREE.PlaneGeometry(10, 10), new THREE.ShadowMaterial({ opacity: 0.35 })); boden.rotation.x = -Math.PI / 2; boden.position.y = -0.32; boden.receiveShadow = true; scene.add(boden);
+
+window.bild = winkel => { cap.rotation.y = winkel; renderer.render(scene, camera); return renderer.domElement.toDataURL("image/png"); };
+window.bereit = true;
+</script></body></html>
