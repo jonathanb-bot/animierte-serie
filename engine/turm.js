@@ -28,8 +28,8 @@
   };
 
   // ---------- Turmplatz (isometrisch) ----------
-  const turmBauen = (x, y, TW, TH, stock, farbe, P, t, idx, name) => {
-    const fh = TW * 0.085, h = Math.max(0, stock) * fh, w = 0.36, nacht = P.licht < 0.5;
+  const turmBauen = (x, y, TW, TH, stock, farbe, P, t, idx, name, sh = 1) => {
+    const fh = TW * 0.085 * sh, h = Math.max(0, stock) * fh, w = 0.36, nacht = P.licht < 0.5;
     const L = [x - TW * w, y], R = [x + TW * w, y], V = [x, y + TH * w], H = [x, y - TH * w], up = p => [p[0], p[1] - h];
     // Fundament
     poly([[x - TW * 0.44, y], [x, y - TH * 0.44], [x + TW * 0.44, y], [x, y + TH * 0.44]], shade(P.platz, -0.18));
@@ -131,18 +131,20 @@
       const pos = ((st + v * t) % G + G) % G - 0.5; leute.push({ i: quer ? pos : bahn, j: quer ? bahn : pos, f: FARBEN[k % FARBEN.length], ph: rp() * 6 }); } }
     const zuZeichnen = plaetze.map((pl, k) => ({ pl, k, turm: tuerme[k] })).concat(leute.map(m => ({ mensch: m, pl: [m.i + 0.45, m.j + 0.45] }))).sort((a, b) => (a.pl[0] + a.pl[1]) - (b.pl[0] + b.pl[1]));
     const schilder = [];
+    // neu 15.11.: schilder="Hildesheim,Freiburg" nur diese Türme beschriftet; schild_px=34 Schilder in fester Bildschirmgröße (unabhängig von nah); stock_hoehe=2 höhere Stockwerke
+    const nurSchild = s.schilder ? new Set(String(s.schilder).split(",").map(q => q.trim()).filter(Boolean)) : null, festPx = Number(s.schild_px) || 0;
     for (const e of zuZeichnen) { if (e.mensch) { const m = e.mensch, [x, y] = feld(m.i, m.j), g = TW * 0.2, hop = Math.abs(Math.sin(t * 6 + m.ph)) * g * 0.06;
         ellipse(x, y, g * 0.22, g * 0.08, rgba("#1a2030", 0.25)); box(x - g * 0.1, y - g * 0.4 - hop, g * 0.2, g * 0.4, g * 0.06, "#3a3e4c");
         box(x - g * 0.15, y - g * 0.82 - hop, g * 0.3, g * 0.46, g * 0.12, m.f); circle(x, y - g * 0.96 - hop, g * 0.14, "#f2c8a4"); continue; }
       const [x, y] = feld(e.pl[0], e.pl[1]);
-      if (e.turm) { const st = Math.round(e.turm.stock), topY = turmBauen(x, y, TW, TH, st, FARBEN[e.k % FARBEN.length], P, t, e.k, e.turm.name); schilder.push([x, topY, `${e.turm.name} · ${fmt(st)}`, FARBEN[e.k % FARBEN.length]]); }
-      else { turmBauen(x, y, TW, TH, 0, "#888", P, t, e.k); if (e.k < tuerme.length + (Number(s.leer_zeigen) || 0)) { line(x, y - 4, x, y - TW * 0.3, 2, "#6a5a4a"); schild(x, y - TW * 0.3, String(s.leer ?? "?"), TW * 0.25, false); } } }
+      if (e.turm) { const st = Math.round(e.turm.stock), topY = turmBauen(x, y, TW, TH, st, FARBEN[e.k % FARBEN.length], P, t, e.k, e.turm.name, Number(s.stock_hoehe) || 1); if (!nurSchild || nurSchild.has(e.turm.name)) schilder.push([x, topY, `${e.turm.name} · ${fmt(st)}`, FARBEN[e.k % FARBEN.length]]); }
+      else { turmBauen(x, y, TW, TH, 0, "#888", P, t, e.k); if (e.k < tuerme.length + (Number(s.leer_zeigen) || 0)) { line(x, y - 4, x, y - TW * 0.3, 2, "#6a5a4a"); schild(x, y - TW * 0.3, String(s.leer ?? "?"), festPx ? festPx * 1.15 / z : TW * 0.25, false); } } }
     if (s._grundstein && !tuerme.length) { const [x, y] = s._grundstein, w = TW * 0.16, h = TW * 0.13, yy = y - 6 + Math.sin(t * 2) * 1.5;
       glut(x, yy - h, TW * 0.5, "#ffe27a", 0.35);
       poly([[x - w, yy], [x, yy + w / 2], [x, yy + w / 2 - h], [x - w, yy - h]], "#d8ccb4"); poly([[x + w, yy], [x, yy + w / 2], [x, yy + w / 2 - h], [x + w, yy - h]], "#b8aa90");
       poly([[x - w, yy - h], [x, yy - w / 2 - h], [x + w, yy - h], [x, yy + w / 2 - h]], "#efe6d2"); line(x - w * 0.5, yy - h + 2, x + w * 0.5, yy - h + 2, 1.5, rgba("#8a7a5a", 0.6)); }
     for (const b of baeume.filter(b => !(b.i < 0 || b.j < 0))) baum(b); laterne(laternen[3]);
-    { const fs = TW * 0.27, gesetzt = []; ctx.font = `700 ${fs}px HUD`;
+    { const fs = festPx ? festPx / z : TW * 0.27, gesetzt = []; ctx.font = `700 ${fs}px HUD`;
       for (const sc of schilder.slice().sort((a, b) => a[1] - b[1])) { const w = ctx.measureText(sc[2]).width + fs * 1.4, h = fs * 1.6; let y = sc[1];
         for (let n = 0; n < 12; n++) { const k = gesetzt.find(g => Math.abs(g.x - sc[0]) < (g.w + w) / 2 && Math.abs(g.y - y) < h); if (!k) break; y = k.y - h - 4; }
         gesetzt.push({ x: sc[0], y, w }); if (y < sc[1] - 4) line(sc[0], sc[1], sc[0], y, 2, rgba("#1a2030", 0.5)); schild(sc[0], y, sc[2], fs, true, sc[3]); } }

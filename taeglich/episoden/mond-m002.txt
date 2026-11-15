@@ -1,0 +1,55 @@
+# Bis zum Mond – Folge 2: Hildesheim legt vor
+@musik musik/mond-m002.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung aufbau
+@vortrag lebendig
+@klang studio
+@mund zitate
+@einblenden aus
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette tuerkis
+@zeit tag
+
+== Start ==
+// Wow-Bild zuerst: der Turmplatz, fünfzehn Türme wachsen aus dem Boden
+[turm modus=feld stock_hoehe=2.5 schilder="Hildesheim,Freiburg,Stuttgart" schild_px=34 tuerme="Hildesheim:0>6|Freiburg:0>3|Stuttgart:0>3|Leimersheim:0>2|Plauen:0>2|Rastatt:0>2|Ulm:0>2|Augsburg:0>1|Berlin:0>1|Ebensee:0>1|Freilassing:0>1|Hamm:0>1|Meuselwitz:0>1|Oldenburg:0>1|Ronnenberg:0>1" wachsen_dauer=2.6 nah=1.55 palette=tuerkis palette_staerke=0.2 zoom-rein hooktext="TAG 2 · HILDESHEIM VORNE" ein="fünfzehn>#15 STÄDTE" ein_y=600] Gestern war dein Turmplatz noch leer. Heute stehen hier schon fünfzehn Türme.
+// Der ganze Platz von etwas weiter weg
+[turm modus=feld stock_hoehe=2.5 schilder="Hildesheim,Freiburg,Stuttgart" schild_px=34 tuerme="Hildesheim:6|Freiburg:3|Stuttgart:3|Leimersheim:2|Plauen:2|Rastatt:2|Ulm:2|Augsburg:1|Berlin:1|Ebensee:1|Freilassing:1|Hamm:1|Meuselwitz:1|Oldenburg:1|Ronnenberg:1" nah=1.2 palette=tuerkis palette_staerke=0.2 zoom-raus ein="siebenundzwanzig>#27 STOCKWERKE"] Siebenundzwanzig Stockwerke, gebaut nur aus euren Kommentaren.
+// Titelkarte
+[titel oben="Folge 2" gross="BIS ZUM MOND" unten="Hildesheim legt vor" farbe=#123a4a akzent=#7fe0e8 groesse=150 hud=false palette=tuerkis zoom-rein] Und eine Stadt hat sich schon abgesetzt.
+
+== Der Spitzenreiter ==
+// Nah auf Hildesheim, Jarons Kommentar
+[turm modus=feld stock_hoehe=2.5 schilder="Hildesheim" schild_px=40 tuerme="Hildesheim:6|Freiburg:3|Stuttgart:3|Leimersheim:2|Plauen:2|Rastatt:2|Ulm:2|Augsburg:1|Berlin:1|Ebensee:1|Freilassing:1|Hamm:1|Meuselwitz:1|Oldenburg:1|Ronnenberg:1" nah=2.5 blick=3,3 markiere=3,3 grundstein=0 palette=tuerkis palette_staerke=0.2 zoom-rein kommentar="@jaron.krk|Hildesheim|1" kommentar_y=1200 ein="sechs>#6 STOCKWERKE" ein_y=420] Hildesheim! Jaron hat seine Stadt gleich dreimal kommentiert. Drei Kommentare, drei Likes, macht sechs Stockwerke.
+
+== Die Verfolger ==
+// Freiburg
+[turm modus=feld stock_hoehe=2.5 schilder="Freiburg" schild_px=40 tuerme="Hildesheim:6|Freiburg:3|Stuttgart:3|Leimersheim:2|Plauen:2|Rastatt:2|Ulm:2|Augsburg:1|Berlin:1|Ebensee:1|Freilassing:1|Hamm:1|Meuselwitz:1|Oldenburg:1|Ronnenberg:1" nah=2.6 blick=3,4 palette=tuerkis palette_staerke=0.2 schwenk-links kommentar="@hallomvo7g2|freiburg|2" kommentar_y=1200 ein="Duell>DAS DUELL" ein_y=420] Dahinter wird es spannend. Freiburg hat drei Stockwerke …
+// Stuttgart
+[turm modus=feld stock_hoehe=2.5 schilder="Stuttgart" schild_px=40 tuerme="Hildesheim:6|Freiburg:3|Stuttgart:3|Leimersheim:2|Plauen:2|Rastatt:2|Ulm:2|Augsburg:1|Berlin:1|Ebensee:1|Freilassing:1|Hamm:1|Meuselwitz:1|Oldenburg:1|Ronnenberg:1" nah=2.6 blick=4,3 palette=tuerkis palette_staerke=0.2 schwenk-rechts kommentar="@jonas27859|Stuttgart|2" kommentar_y=1200 ein="zwei>#2 LIKES>herz" ein_y=420] … und Stuttgart genauso. Beide Kommentare haben zwei Likes.
+// Leimersheim, das Dorf auf Platz vier
+[turm modus=feld stock_hoehe=2.5 schilder="Leimersheim" schild_px=40 tuerme="Hildesheim:6|Freiburg:3|Stuttgart:3|Leimersheim:2|Plauen:2|Rastatt:2|Ulm:2|Augsburg:1|Berlin:1|Ebensee:1|Freilassing:1|Hamm:1|Meuselwitz:1|Oldenburg:1|Ronnenberg:1" nah=2.6 blick=4,4 palette=tuerkis palette_staerke=0.2 zoom-rein ein="Platz>PLATZ 4" ein_y=420] Und auf Platz vier? Kein Großstadtturm, sondern Leimersheim, ein Dorf in der Pfalz.
+// Ebensee aus Österreich
+[turm modus=feld stock_hoehe=2.5 schilder="Ebensee" schild_px=40 tuerme="Hildesheim:6|Freiburg:3|Stuttgart:3|Leimersheim:2|Plauen:2|Rastatt:2|Ulm:2|Augsburg:1|Berlin:1|Ebensee:1|Freilassing:1|Hamm:1|Meuselwitz:1|Oldenburg:1|Ronnenberg:1" nah=2.6 blick=4,5 palette=tuerkis palette_staerke=0.2 schwenk-links ein="Österreich>AUS ÖSTERREICH" ein_y=420] Sogar Österreich baut mit: Ebensee am Traunsee hat sein erstes Stockwerk.
+// Freier Platz: Emojis bauen nichts
+[turm modus=feld stock_hoehe=2.5 schilder="-" schild_px=40 tuerme="Hildesheim:6|Freiburg:3|Stuttgart:3|Leimersheim:2|Plauen:2|Rastatt:2|Ulm:2|Augsburg:1|Berlin:1|Ebensee:1|Freilassing:1|Hamm:1|Meuselwitz:1|Oldenburg:1|Ronnenberg:1" nah=2.4 blick=5,5 markiere=5,5 leer="?" leer_zeigen=1 palette=tuerkis palette_staerke=0.2 zoom-rein ein="siebenundfünfzig>#57 EMOJIS>feuer|nichts>#0 STOCKWERKE" ein_y=420] Und siebenundfünfzig Feuer-Emojis? Die bauen leider nichts. Nur Städte zählen.
+
+== Die Rangliste ==
+// Rangliste mit Balken bis zu den Wolken
+[turm modus=rangliste rangliste="Hildesheim#0:0>6|Freiburg#1:0>3|Stuttgart#2:0>3|Leimersheim#3:0>2|Plauen#4:0>2" ziel=333 ziel_name=Wolken titel_text="TAG 2" palette=tuerkis palette_staerke=0.2 zoom-rein] Die Rangliste nach Tag zwei: Hildesheim vorne, Freiburg und Stuttgart dicht dahinter.
+
+== Bis zu den Wolken ==
+// Fahrt am Turm von Hildesheim hoch
+[turm modus=hoehe hoehe=0>18 stadt="Hildesheim" farbe=#e8705a palette=tuerkis palette_staerke=0.2 kamera=ruhig ein="achtzehn>#18 METER"] So hoch ist Hildesheim schon: achtzehn Meter. Etwa so hoch wie ein Haus mit sechs Etagen.
+// Weiter bis zu den Wolken
+[turm modus=hoehe hoehe=18>1000 stadt="Hildesheim" farbe=#e8705a palette=tuerkis palette_staerke=0.2 kamera=ruhig ein="dreihundertsiebenundzwanzig>NOCH #327 STOCKWERKE"] Bis zu den Wolken fehlen noch dreihundertsiebenundzwanzig Stockwerke.
+
+== Das Rennen ==
+// Der ganze Platz am Abend, freie Plätze mit Schild
+[turm modus=feld stock_hoehe=2.5 schilder="Hildesheim,Freiburg,Stuttgart" schild_px=34 zeit=abend tuerme="Hildesheim:6|Freiburg:3|Stuttgart:3|Leimersheim:2|Plauen:2|Rastatt:2|Ulm:2|Augsburg:1|Berlin:1|Ebensee:1|Freilassing:1|Hamm:1|Meuselwitz:1|Oldenburg:1|Ronnenberg:1" nah=1.3 leer="Deine Stadt?" leer_zeigen=1 palette=orange palette_staerke=0.2 zoom-raus ein="drei>#3 LIKES>herz"] Und das Rennen ist knapp. Ein Kommentar mit drei Likes für Freiburg oder Stuttgart, und Hildesheim ist die Spitze los.
+// Nah auf den nächsten freien Platz
+[turm modus=feld stock_hoehe=2.5 schilder="-" schild_px=40 zeit=abend tuerme="Hildesheim:6|Freiburg:3|Stuttgart:3|Leimersheim:2|Plauen:2|Rastatt:2|Ulm:2|Augsburg:1|Berlin:1|Ebensee:1|Freilassing:1|Hamm:1|Meuselwitz:1|Oldenburg:1|Ronnenberg:1" nah=2.4 blick=5,5 markiere=5,5 leer="Deine Stadt?" leer_zeigen=1 palette=orange palette_staerke=0.2 zoom-rein] Fehlt deine Stadt noch? Dann kommentier sie jetzt. Jedes Like darauf baut ein Stockwerk mehr.

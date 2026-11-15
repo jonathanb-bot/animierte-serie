@@ -215,7 +215,13 @@
   "Oberösterreich": "Region",
   "Niederösterreich": "Region",
   "Burgenland": "Region",
-  "Ruhrgebiet": "Region"
+  "Ruhrgebiet": "Region",
+  "Leimersheim": "DE",
+  "Freilassing": "DE",
+  "Ebensee": "AT",
+  "Meuselwitz": "DE",
+  "Ronnenberg": "DE",
+  "Rastatt": "DE"
  },
  "aliase": {
   "munich": "München",
@@ -266,6 +272,7 @@
   "ooe": "Oberösterreich",
   "oö": "Oberösterreich",
   "noe": "Niederösterreich",
-  "nö": "Niederösterreich"
+  "nö": "Niederösterreich",
+  "ebensee am traunsee": "Ebensee"
  }
 }

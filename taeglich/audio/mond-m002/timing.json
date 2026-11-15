@@ -1,0 +1,131 @@
+{
+ "dauer": 64.588,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "turm",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 4.838,
+   "emotion": "erzaehlend",
+   "text": "Gestern war dein Turmplatz noch leer. Heute stehen hier schon fünfzehn Türme."
+  },
+  {
+   "nr": 2,
+   "typ": "turm",
+   "kapitel": 1,
+   "start": 4.838,
+   "dauer": 3.758,
+   "emotion": "erzaehlend",
+   "text": "Siebenundzwanzig Stockwerke, gebaut nur aus euren Kommentaren."
+  },
+  {
+   "nr": 3,
+   "typ": "titel",
+   "kapitel": 1,
+   "start": 8.596,
+   "dauer": 2.222,
+   "emotion": "erzaehlend",
+   "text": "Und eine Stadt hat sich schon abgesetzt."
+  },
+  {
+   "nr": 4,
+   "typ": "turm",
+   "kapitel": 2,
+   "start": 10.818,
+   "dauer": 6.878,
+   "emotion": "erzaehlend",
+   "text": "Hildesheim! Jaron hat seine Stadt gleich dreimal kommentiert. Drei Kommentare, drei Likes, macht sechs Stockwerke."
+  },
+  {
+   "nr": 5,
+   "typ": "turm",
+   "kapitel": 3,
+   "start": 17.696,
+   "dauer": 3.518,
+   "emotion": "erzaehlend",
+   "text": "Dahinter wird es spannend. Freiburg hat drei Stockwerke …"
+  },
+  {
+   "nr": 6,
+   "typ": "turm",
+   "kapitel": 3,
+   "start": 21.214,
+   "dauer": 3.71,
+   "emotion": "erzaehlend",
+   "text": "… und Stuttgart genauso. Beide Kommentare haben zwei Likes."
+  },
+  {
+   "nr": 7,
+   "typ": "turm",
+   "kapitel": 3,
+   "start": 24.924,
+   "dauer": 5.342,
+   "emotion": "erzaehlend",
+   "text": "Und auf Platz vier? Kein Großstadtturm, sondern Leimersheim, ein Dorf in der Pfalz."
+  },
+  {
+   "nr": 8,
+   "typ": "turm",
+   "kapitel": 3,
+   "start": 30.266,
+   "dauer": 4.67,
+   "emotion": "erzaehlend",
+   "text": "Sogar Österreich baut mit: Ebensee am Traunsee hat sein erstes Stockwerk."
+  },
+  {
+   "nr": 9,
+   "typ": "turm",
+   "kapitel": 3,
+   "start": 34.936,
+   "dauer": 4.718,
+   "emotion": "erzaehlend",
+   "text": "Und siebenundfünfzig Feuer-Emojis? Die bauen leider nichts. Nur Städte zählen."
+  },
+  {
+   "nr": 10,
+   "typ": "turm",
+   "kapitel": 4,
+   "start": 39.654,
+   "dauer": 4.934,
+   "emotion": "erzaehlend",
+   "text": "Die Rangliste nach Tag zwei: Hildesheim vorne, Freiburg und Stuttgart dicht dahinter."
+  },
+  {
+   "nr": 11,
+   "typ": "turm",
+   "kapitel": 5,
+   "start": 44.588,
+   "dauer": 5.39,
+   "emotion": "erzaehlend",
+   "text": "So hoch ist Hildesheim schon: achtzehn Meter. Etwa so hoch wie ein Haus mit sechs Etagen."
+  },
+  {
+   "nr": 12,
+   "typ": "turm",
+   "kapitel": 5,
+   "start": 49.978,
+   "dauer": 3.566,
+   "emotion": "erzaehlend",
+   "text": "Bis zu den Wolken fehlen noch dreihundertsiebenundzwanzig Stockwerke."
+  },
+  {
+   "nr": 13,
+   "typ": "turm",
+   "kapitel": 6,
+   "start": 53.544,
+   "dauer": 6.35,
+   "emotion": "erzaehlend",
+   "text": "Und das Rennen ist knapp. Ein Kommentar mit drei Likes für Freiburg oder Stuttgart, und Hildesheim ist die Spitze los."
+  },
+  {
+   "nr": 14,
+   "typ": "turm",
+   "kapitel": 6,
+   "start": 59.894,
+   "dauer": 4.694,
+   "emotion": "erzaehlend",
+   "text": "Fehlt deine Stadt noch? Dann kommentier sie jetzt. Jedes Like darauf baut ein Stockwerk mehr."
+  }
+ ]
+}
