@@ -1,0 +1,149 @@
+{
+ "dauer": 81.056,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "reich",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 7.262,
+   "emotion": "erzaehlend",
+   "text": "Gestern hatte deine Insel hundertsiebenundsechzig Einwohner. Heute genauso viele. Aber zum ersten Mal wächst hier etwas."
+  },
+  {
+   "nr": 2,
+   "typ": "titel",
+   "kapitel": 1,
+   "start": 7.262,
+   "dauer": 1.07,
+   "emotion": "erzaehlend",
+   "text": "Das kam so."
+  },
+  {
+   "nr": 3,
+   "typ": "reich",
+   "kapitel": 2,
+   "start": 8.332,
+   "dauer": 5.822,
+   "emotion": "erzaehlend",
+   "text": "Ihr habt entschieden: Kartoffeln und Hochbeete für alle. Der Kommentar mit den meisten Likes kam wieder von Ellen."
+  },
+  {
+   "nr": 4,
+   "typ": "reich",
+   "kapitel": 2,
+   "start": 14.154,
+   "dauer": 4.454,
+   "emotion": "erzaehlend",
+   "text": "Und Mark schreibt: Er will eine Katze, dafür spendet er dreißigtausend Euro."
+  },
+  {
+   "nr": 5,
+   "typ": "reich",
+   "kapitel": 2,
+   "start": 18.608,
+   "dauer": 5.27,
+   "emotion": "erzaehlend",
+   "text": "Vierzehn Likes, zwei Kommentare und Marks Spende. In der Kasse liegen dreiunddreißigtausend Euro."
+  },
+  {
+   "nr": 6,
+   "typ": "reich",
+   "kapitel": 3,
+   "start": 23.878,
+   "dauer": 5.678,
+   "emotion": "erzaehlend",
+   "text": "Die Katze kostet nichts. Sie schläft seit Tagen zwischen den Kisten der Werkstatt. Ab heute gehört sie Mark."
+  },
+  {
+   "nr": 7,
+   "typ": "reich",
+   "kapitel": 3,
+   "start": 29.556,
+   "dauer": 3.278,
+   "emotion": "erzaehlend",
+   "text": "Dann der Acker. Drei Felder, von Hand umgegraben."
+  },
+  {
+   "nr": 8,
+   "typ": "reich",
+   "kapitel": 3,
+   "start": 32.834,
+   "dauer": 4.406,
+   "emotion": "erzaehlend",
+   "text": "Am Nachmittag liegen sechshundert Saatkartoffeln in der Erde. Neuntausend Euro."
+  },
+  {
+   "nr": 9,
+   "typ": "reich",
+   "kapitel": 3,
+   "start": 37.24,
+   "dauer": 6.158,
+   "emotion": "erzaehlend",
+   "text": "Dazu acht Hochbeete für jeden, der will. Kräuter, Salat, Radieschen. Die sind schon nach vier Wochen reif."
+  },
+  {
+   "nr": 10,
+   "typ": "objekt",
+   "kapitel": 4,
+   "start": 43.398,
+   "dauer": 3.998,
+   "emotion": "erklaerend",
+   "text": "Nur die Kartoffeln lassen sich Zeit. Rund neunzig Tage bis zur Ernte."
+  },
+  {
+   "nr": 11,
+   "typ": "reich",
+   "kapitel": 4,
+   "start": 47.396,
+   "dauer": 5.678,
+   "emotion": "erzaehlend",
+   "text": "Bis dahin kommt das Essen mit dem Boot vom Festland. Zehn Euro pro Kopf, siebzehnhundert Euro am Tag."
+  },
+  {
+   "nr": 12,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 53.074,
+   "dauer": 2.87,
+   "emotion": "erzaehlend",
+   "text": "„Neunzig Tage. Ich hab jetzt Hunger.“"
+  },
+  {
+   "nr": 13,
+   "typ": "reich",
+   "kapitel": 4,
+   "start": 55.944,
+   "dauer": 5.462,
+   "emotion": "erzaehlend",
+   "text": "Das Los für die Betten: wieder Zelt Nummer zwanzig. Aber heute Nacht kommt Marks Katze zu dir rein."
+  },
+  {
+   "nr": 14,
+   "typ": "reich",
+   "kapitel": 5,
+   "start": 61.406,
+   "dauer": 7.142,
+   "emotion": "erzaehlend",
+   "text": "Tag sechs. Hundertsiebenundsechzig Einwohner, und das erste Essen wächst. Noch dreiunddreißig bis zum Dorf mit eigenem Namen."
+  },
+  {
+   "nr": 15,
+   "typ": "reich",
+   "kapitel": 5,
+   "start": 68.548,
+   "dauer": 6.806,
+   "emotion": "erzaehlend",
+   "text": "Das Geld in der Kasse reicht für knapp elf Tage Essen. Bis zur Ernte sind es neunzig. Deine Insel braucht etwas, das Geld verdient."
+  },
+  {
+   "nr": 16,
+   "typ": "reich",
+   "kapitel": 5,
+   "start": 75.354,
+   "dauer": 5.702,
+   "emotion": "erzaehlend",
+   "text": "Jeder neue Follower zieht auf deine Insel. Was bauen wir als Nächstes? Schreib es in die Kommentare."
+  }
+ ]
+}

@@ -9,7 +9,7 @@
    - groesse: Kantenlänge der Insel in Feldern (wächst mit dem Reich); form=rund (Standard) rundet die Küste natürlich ab
    - bauten: typ@i,j (oder typ@i1,j1-i2,j2 für ein Rechteck). Ein späterer Eintrag ersetzt einen früheren auf demselben
      Feld (so wird aus einem Haus ein Hochhaus). Typen: BAU (haus, hochhausN, baum, tanne, fels, brunnen, laterne,
-     baustelle, boot, gericht, zelt, laden, werkstatt, laube, halle) und BODEN (weg, strasse, feld, wasser, platz, sand)
+     baustelle, boot, gericht, zelt, laden, werkstatt, laube, halle, hochbeet, katze) und BODEN (weg, strasse, feld, wasser, platz, sand, acker)
    - leute: Einwohner = Follower (einfache Figuren, höchstens 3 pro freiem Feld sichtbar), neu: so viele leuchten auf
    - praesident: Feld des Gründers (du, blaue Jacke, gelbe Schärpe), markiere: pulsierender Ring auf einem Feld
    - nah/blick: Ausschnitt um ein Feld (nah=2 = doppelt so groß); `fokus`/`zoom` sind Kamera-Angaben der Engine
@@ -360,6 +360,82 @@
   };
   SCHATTEN.halle = TW => ({ w: 0.84, d: 0.74, h: TW * 0.46 });
 
+  // Folge 6 (15.11., Kommentar @EllenZaum): Hochbeete – vier Holzkästen mit Erde, Salat, Kräutern, Radieschen und Möhrengrün
+  BAU.hochbeet = (x, y, ei, ej, TW, P, t, r, idx) => {
+    const HOLZ = ["#a8743e", "#9a6a3a", "#b0804a", "#8e6a44"], nacht = P.sonne < 0.5, Z0 = Pt(x, y, ei, ej);
+    const kaesten = [[-0.2, -0.2], [0.2, -0.2], [-0.2, 0.2], [0.2, 0.2]];
+    for (let k = 0; k < 4; k++) {
+      const [a, b] = kaesten[k], p = Z0(a, b), holz = HOLZ[(idx + k) % 4], h = TW * 0.075;
+      const q = quader(p[0], p[1], ei, ej, 0.32, 0.32, h, holz, shade(P.erde, -0.12), P), Z = q.Z, { D, C } = q.fl;
+      // Bretterfuge auf der Front
+      line(D[0], D[1] - h * 0.5, C[0], C[1] - h * 0.5, 1, rgba("#000000", 0.12));
+      // Erde mit Krümeln
+      for (let m = 0; m < 4; m++) circle(...Z((r() - 0.5) * 0.24, (r() - 0.5) * 0.24, h), TW * 0.006, rgba(shade(P.erde, -0.35), 0.6));
+      const art = (idx + k) % 4, wind = Math.sin(t * 1.6 + k + idx) * TW * 0.003;
+      if (art === 0) { // Salatköpfe
+        for (const [u, v] of [[-0.07, -0.07], [0.07, -0.07], [-0.07, 0.07], [0.07, 0.07]]) { const s = Z(u, v, h); circle(s[0], s[1] - TW * 0.012, TW * 0.034, shade("#6ab84a", -0.18)); circle(s[0] - TW * 0.006, s[1] - TW * 0.018, TW * 0.024, "#8ad25a"); circle(s[0] - TW * 0.01, s[1] - TW * 0.022, TW * 0.01, rgba("#e8ffb0", 0.6)); }
+      } else if (art === 1) { // Kräuter: kleine Büschel in verschiedenen Grüntönen
+        for (let m = 0; m < 6; m++) { const s = Z(-0.09 + (m % 3) * 0.09, -0.06 + Math.floor(m / 3) * 0.12, h), g = ["#4a9a5a", "#7aa84a", "#5aa87a"][m % 3];
+          for (let n = 0; n < 5; n++) { const w = (n - 2) * 0.35; line(s[0], s[1], s[0] + Math.sin(w) * TW * 0.03 + wind, s[1] - Math.cos(w) * TW * 0.04, TW * 0.007, g); } }
+      } else if (art === 2) { // Radieschen: Blätter mit roten Knollen
+        for (let m = 0; m < 6; m++) { const s = Z(-0.09 + (m % 3) * 0.09, -0.06 + Math.floor(m / 3) * 0.12, h);
+          circle(s[0], s[1], TW * 0.011, "#d8405a"); circle(s[0] - TW * 0.004, s[1] - TW * 0.003, TW * 0.004, rgba("#ffffff", 0.5));
+          ellipse(s[0] - TW * 0.012 + wind, s[1] - TW * 0.02, TW * 0.012, TW * 0.007, "#5aa848"); ellipse(s[0] + TW * 0.012 + wind, s[1] - TW * 0.022, TW * 0.012, TW * 0.007, "#4a9a40"); }
+      } else { // Möhrengrün: feine Fächer
+        for (let m = 0; m < 5; m++) { const s = Z(-0.1 + m * 0.05, (m % 2 ? 0.06 : -0.05), h); circle(s[0], s[1], TW * 0.007, "#f0882a");
+          for (let n = 0; n < 4; n++) { const w = (n - 1.5) * 0.3; line(s[0], s[1], s[0] + Math.sin(w) * TW * 0.03 + wind, s[1] - Math.cos(w) * TW * 0.05, TW * 0.005, "#5ab04a"); } }
+      }
+      if (nacht) ellipse(...Z(0, 0, h), TW * 0.1, TW * 0.05, rgba("#0a1430", 0.25));
+    }
+    // kleines Schild mit Gießkanne vorne
+    const g = Z0(0.42, 0.36); quader(g[0], g[1], ei, ej, 0.08, 0.05, TW * 0.05, "#4a8ac0", null, P);
+    line(g[0] + TW * 0.03, g[1] - TW * 0.04, g[0] + TW * 0.07, g[1] - TW * 0.07, TW * 0.008, "#4a8ac0");
+  };
+  SCHATTEN.hochbeet = TW => ({ w: 0.76, d: 0.76, h: TW * 0.1 });
+
+  // Folge 6 (15.11., Kommentar @mark_mffr): Katze mit Katzenhaus – kleine Holzhütte mit rundem Eingang, rotes Dach,
+  // davor eine getigerte Katze mit wedelndem Schwanz und ein Napf
+  BAU.katze = (x, y, ei, ej, TW, P, t, r, idx) => {
+    const nacht = P.sonne < 0.5, holz = "#c89a62", dach = "#c2553f";
+    quader(x, y, ei, ej, 0.5, 0.46, TW * 0.02, P.sockel, null, P);
+    const hp = Pt(x, y - TW * 0.02, ei, ej)(-0.06, -0.08);
+    const w = 0.3, d = 0.28, h = TW * 0.14;
+    const q = quader(hp[0], hp[1], ei, ej, w, d, h, holz, null, P), { D, C } = q.fl, Z = q.Z;
+    // runder Eingang
+    const m = [lerp(D[0], C[0], 0.5), lerp(D[1], C[1], 0.5) - h * 0.4];
+    ellipse(m[0], m[1], TW * 0.04, TW * 0.045, "#2a1e18"); ellipse(m[0], m[1] + TW * 0.01, TW * 0.04, TW * 0.03, "#2a1e18");
+    if (nacht) glut(m[0], m[1], TW * 0.12, "#ffd27a", 0.2);
+    // Satteldach
+    const ue = 0.04, hr = h + TW * 0.1;
+    const a0 = Z(-w / 2 - ue, -d / 2 - ue, h), b0 = Z(w / 2 + ue, -d / 2 - ue, h), c0 = Z(w / 2 + ue, d / 2 + ue, h), dd = Z(-w / 2 - ue, d / 2 + ue, h);
+    const f1 = Z(-w / 2 - ue, 0, hr), f2 = Z(w / 2 + ue, 0, hr);
+    poly([a0, b0, f2, f1], shade(dach, 0.12)); poly([Z(w / 2, -d / 2, h), Z(w / 2, d / 2, h), f2], shade(dach, -0.25));
+    poly([dd, c0, f2, f1], shade(dach, -0.05)); line(f1[0], f1[1], f2[0], f2[1], TW * 0.012, shade(dach, 0.3));
+    // Napf
+    const n = Pt(x, y, ei, ej)(0.26, 0.2); ellipse(n[0], n[1], TW * 0.035, TW * 0.016, "#3a7ac8"); ellipse(n[0], n[1] - TW * 0.004, TW * 0.026, TW * 0.01, "#e8dcc0");
+    // Katze (sitzend, getigert, orange) vor dem Haus
+    const k = Pt(x, y, ei, ej)(0.1, 0.3), g = TW * 0.085, fell = nacht ? "#a8784a" : "#e8964a", fellS = shade(fell, -0.25);
+    ellipse(k[0], k[1] + g * 0.15, g * 0.8, g * 0.25, rgba(P.schatten, 0.3));
+    const sw = Math.sin(t * 2.2 + idx) * 0.5; // Schwanz wedelt
+    ctx.strokeStyle = fellS; ctx.lineWidth = g * 0.28; ctx.lineCap = "round"; ctx.beginPath(); ctx.moveTo(k[0] + g * 0.4, k[1] - g * 0.1);
+    ctx.quadraticCurveTo(k[0] + g * 1.1, k[1] - g * 0.2, k[0] + g * (0.9 + sw * 0.4), k[1] - g * (1.0 + sw * 0.2)); ctx.stroke();
+    ellipse(k[0], k[1] - g * 0.45, g * 0.55, g * 0.62, fell); // Körper
+    ellipse(k[0] - g * 0.12, k[1] - g * 0.35, g * 0.25, g * 0.35, shade(fell, 0.15)); // Brust hell
+    for (let s = 0; s < 3; s++) line(k[0] + g * 0.15, k[1] - g * (0.25 + s * 0.22), k[0] + g * 0.45, k[1] - g * (0.3 + s * 0.22), g * 0.08, fellS);
+    const kp = [k[0] - g * 0.05, k[1] - g * 1.15];
+    circle(kp[0], kp[1], g * 0.42, fell);
+    poly([[kp[0] - g * 0.38, kp[1] - g * 0.15], [kp[0] - g * 0.3, kp[1] - g * 0.62], [kp[0] - g * 0.05, kp[1] - g * 0.35]], fell);
+    poly([[kp[0] + g * 0.36, kp[1] - g * 0.15], [kp[0] + g * 0.3, kp[1] - g * 0.62], [kp[0] + g * 0.05, kp[1] - g * 0.35]], fell);
+    poly([[kp[0] - g * 0.31, kp[1] - g * 0.22], [kp[0] - g * 0.28, kp[1] - g * 0.48], [kp[0] - g * 0.12, kp[1] - g * 0.32]], "#f0a8a0");
+    line(kp[0], kp[1] - g * 0.4, kp[0], kp[1] - g * 0.2, g * 0.07, fellS);
+    const blink = (t * 0.5 + idx * 0.3) % 1 < 0.04;
+    if (blink) { line(kp[0] - g * 0.22, kp[1] - g * 0.02, kp[0] - g * 0.08, kp[1] - g * 0.02, g * 0.05, "#2a2a2a"); line(kp[0] + g * 0.08, kp[1] - g * 0.02, kp[0] + g * 0.22, kp[1] - g * 0.02, g * 0.05, "#2a2a2a"); }
+    else { circle(kp[0] - g * 0.15, kp[1] - g * 0.02, g * 0.07, "#2a2a2a"); circle(kp[0] + g * 0.15, kp[1] - g * 0.02, g * 0.07, "#2a2a2a"); }
+    circle(kp[0], kp[1] + g * 0.12, g * 0.05, "#d87a7a");
+    line(k[0] - g * 0.22, k[1] - g * 0.02, k[0] - g * 0.22, k[1] - g * 0.2, g * 0.12, shade(fell, 0.1)); line(k[0] + g * 0.05, k[1] - g * 0.02, k[0] + g * 0.05, k[1] - g * 0.2, g * 0.12, shade(fell, 0.1));
+  };
+  SCHATTEN.katze = TW => ({ w: 0.36, d: 0.34, h: TW * 0.2 });
+
   const ecken = (x, y, TW, TH, s = 1) => [[x, y - TH / 2 * s], [x + TW / 2 * s, y], [x, y + TH / 2 * s], [x - TW / 2 * s, y]];
   const BODEN = {
     weg: (x, y, TW, TH, P, i, t, r) => { poly(ecken(x, y, TW, TH, 0.98), P.weg); for (let k = 0; k < 6; k++) circle(x + (r() - 0.5) * TW * 0.5, y + (r() - 0.5) * TH * 0.5, TW * 0.01 + r() * TW * 0.012, rgba(shade(P.weg, -0.25), 0.5)); },
@@ -371,6 +447,20 @@
     platz: (x, y, TW, TH, P) => { const k = ecken(x, y, TW, TH, 0.98), f = mix(P.weg, P.fels, 0.45); poly(k, f);
       for (let q = 1; q < 4; q++) { const a = q / 4; line(lerp(k[0][0], k[3][0], a), lerp(k[0][1], k[3][1], a), lerp(k[1][0], k[2][0], a), lerp(k[1][1], k[2][1], a), 1, rgba("#000000", 0.12)); line(lerp(k[0][0], k[1][0], a), lerp(k[0][1], k[1][1], a), lerp(k[3][0], k[2][0], a), lerp(k[3][1], k[2][1], a), 1, rgba("#000000", 0.12)); } },
     sand: (x, y, TW, TH, P) => poly(ecken(x, y, TW, TH, 1.0), P.sand),
+  };
+  // Folge 6 (15.11., Kommentar @EllenZaum): Kartoffelacker – dunkle Erde mit Dämmen und buschigen Kartoffelpflanzen (kleine Blüten)
+  BODEN.acker = (x, y, TW, TH, P, i, t) => {
+    const k = ecken(x, y, TW, TH, 0.94), nacht = P.sonne < 0.5;
+    poly(ecken(x, y, TW, TH, 0.98), shade(P.erde, -0.3)); poly(k, shade(P.erde, -0.08));
+    const R = 5;
+    for (let q = 0; q < R; q++) {
+      const a = (q + 0.5) / R, l = [lerp(k[0][0], k[3][0], a), lerp(k[0][1], k[3][1], a)], rr = [lerp(k[1][0], k[2][0], a), lerp(k[1][1], k[2][1], a)];
+      line(l[0], l[1] + TW * 0.008, rr[0], rr[1] + TW * 0.008, TW * 0.03, shade(P.erde, -0.28)); // Furche
+      line(l[0], l[1], rr[0], rr[1], TW * 0.024, shade(P.erde, 0.12)); // Damm im Licht
+      for (let m = 0; m < 4; m++) { const b = (m + 0.5) / 4, px = lerp(l[0], rr[0], b), py = lerp(l[1], rr[1], b), s = TW * 0.028, w = Math.sin(t * 1.3 + q + m + i) * TW * 0.002;
+        circle(px + w, py - s * 0.7, s, shade(nacht ? "#2e5a3e" : "#4a9a48", -0.12)); circle(px - s * 0.35 + w, py - s * 0.95, s * 0.7, nacht ? "#3a6a4a" : "#6ab858"); circle(px + s * 0.4 + w, py - s * 0.85, s * 0.6, nacht ? "#34624a" : "#5aaa50");
+        if ((q + m + i) % 3 === 0) circle(px + w, py - s * 1.45, s * 0.22, (q + m) % 2 ? "#f4f0ff" : "#c8a8e8"); }
+    }
   };
 
   const liste = v => {
@@ -496,7 +586,7 @@
         const basis = [Z(-w / 2, -d / 2), Z(w / 2, -d / 2), Z(w / 2, d / 2), Z(-w / 2, d / 2)];
         poly(huelle(basis.concat(basis.map(([u, v]) => [u + sv[0] * h, v + sv[1] * h]))), P.schatten); }
       ctx.restore(); }
-    const frei = []; for (let i = 0; i < G; i++) for (let j = 0; j < G; j++) { if (!land(i, j)) continue; const b = aufFeld[i + "," + j]; if (!b || BODEN[b.typ] && b.typ !== "wasser") frei.push([i, j]); }
+    const frei = []; for (let i = 0; i < G; i++) for (let j = 0; j < G; j++) { if (!land(i, j)) continue; const b = aufFeld[i + "," + j]; if (!b || BODEN[b.typ] && b.typ !== "wasser" && b.typ !== "acker") frei.push([i, j]); }
     const nL = Math.max(0, Math.round(Number(s.leute) || 0)), zeigen = Math.min(nL, 900, frei.length * 3), nNeu = Math.max(0, Math.min(zeigen, Math.round(Number(s.neu) || 0)));
     const leute = [], rl = rnd(17);
     const freiS = frei.slice().sort((a, b) => Math.hypot(a[0] - c0, a[1] - c0) - Math.hypot(b[0] - c0, b[1] - c0));

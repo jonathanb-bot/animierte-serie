@@ -1,0 +1,57 @@
+# Deine Welt – Folge 6: Kartoffeln
+@musik musik/welt-w006.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung aufbau
+@vortrag lebendig
+@klang studio
+@mund zitate
+@einblenden aus
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette tuerkis
+@zeit tag
+
+== Hook ==
+// Ergebnis zuerst: der neue Kartoffelacker, Hochbeete und Katzenhaus, Einwohner zählt hoch
+[reich groesse=9 bauten="haus@4,4|baum@1,1|baum@7,2|tanne@0,6|fels@8,7|baum@2,8|gericht@5,3|haus@3,4|haus@3,3|zelt@4,6-5,8|zelt@6,6-7,7|brunnen@4,5|werkstatt@2,4|laube@6,3|laube@6,4|laube@6,5|laube@7,3|laube@7,4|laube@7,5|halle@3,7|acker@1,4-1,6|hochbeet@5,1|hochbeet@6,1|katze@0,4" leute=167 palette_staerke=0.2 praesident=2,5 nah=1.9 blick=2,4 palette=tuerkis zoom-rein spielstand="kasse=18.500|einwohner=167|tag=6|betten=93/167|zelt=74" ein="Gestern>GESTERN: 167>einwohner|Heute>HEUTE: 167>einwohner"] Gestern hatte deine Insel hundertsiebenundsechzig Einwohner. Heute genauso viele. Aber zum ersten Mal wächst hier etwas.
+// Titelkarte
+[titel oben="Folge 6" gross="DEINE WELT" unten="Kartoffeln" farbe=#123a4a akzent=#7fe0e8 groesse=170 hud=false palette=tuerkis zoom-rein] Das kam so.
+
+== Ihr habt entschieden ==
+// Kommentar-Sprechblase: Ellens Wunsch, das freie Feld
+[reich groesse=9 bauten="haus@4,4|baum@1,1|baum@7,2|tanne@0,6|fels@8,7|baum@2,8|gericht@5,3|haus@3,4|haus@3,3|zelt@4,6-5,8|zelt@6,6-7,7|brunnen@4,5|werkstatt@2,4|laube@6,3|laube@6,4|laube@6,5|laube@7,3|laube@7,4|laube@7,5|halle@3,7" leute=167 palette_staerke=0.2 praesident=2,5 markiere=1,5 nah=2.3 blick=1,5 palette=tuerkis schwenk-links kommentar="@EllenZaum|Habe abonniert,finde Kartoffeln richtig gut,und Hochbeete für jeden der sowas möchte um Gemüse und Kräuter anzubauen.|2" spielstand="kasse=800|einwohner=167|tag=6|betten=93/167|zelt=74"] Ihr habt entschieden: Kartoffeln und Hochbeete für alle. Der Kommentar mit den meisten Likes kam wieder von Ellen.
+// Zweiter Kommentar: Mark und die Katze
+[reich groesse=9 bauten="haus@4,4|baum@1,1|baum@7,2|tanne@0,6|fels@8,7|baum@2,8|gericht@5,3|haus@3,4|haus@3,3|zelt@4,6-5,8|zelt@6,6-7,7|brunnen@4,5|werkstatt@2,4|laube@6,3|laube@6,4|laube@6,5|laube@7,3|laube@7,4|laube@7,5|halle@3,7" leute=167 palette_staerke=0.2 praesident=2,5 nah=2.6 blick=1,3 palette=tuerkis zoom-rein kommentar="@mark_mffr|bekomme ich eine Katze und ich Spende 30k|1" spielstand="kasse=800|einwohner=167|tag=6|betten=93/167|zelt=74"] Und Mark schreibt: Er will eine Katze, dafür spendet er dreißigtausend Euro.
+// Kasse: Likes, Kommentare, Spende
+[reich groesse=9 bauten="haus@4,4|baum@1,1|baum@7,2|tanne@0,6|fels@8,7|baum@2,8|gericht@5,3|haus@3,4|haus@3,3|zelt@4,6-5,8|zelt@6,6-7,7|brunnen@4,5|werkstatt@2,4|laube@6,3|laube@6,4|laube@6,5|laube@7,3|laube@7,4|laube@7,5|halle@3,7" leute=167 palette_staerke=0.2 praesident=2,5 nah=1.4 blick=4,4 palette=tuerkis zoom-raus spielstand="kasse=800>33.200|einwohner=167|tag=6|betten=93/167|zelt=74" ein="Likes>+2.400 € LIKES & KOMMENTARE>geld|Marks>+30.000 € SPENDE>herz"] Vierzehn Likes, zwei Kommentare und Marks Spende. In der Kasse liegen dreiunddreißigtausend Euro.
+
+== Bauen ==
+// Die Katze: gratis, sie wohnte schon in der Werkstatt
+[reich groesse=9 bauten="haus@4,4|baum@1,1|baum@7,2|tanne@0,6|fels@8,7|baum@2,8|gericht@5,3|haus@3,4|haus@3,3|zelt@4,6-5,8|zelt@6,6-7,7|brunnen@4,5|werkstatt@2,4|laube@6,3|laube@6,4|laube@6,5|laube@7,3|laube@7,4|laube@7,5|halle@3,7|katze@0,4" leute=167 palette_staerke=0.2 praesident=2,5 nah=3.2 blick=-1,3 palette=tuerkis schwenk-rechts schild="0,4:Katze · @mark_mffr" spielstand="kasse=33.200|einwohner=167|tag=6|betten=93/167|zelt=74" ein="Katze>KATZE FÜR MARK>herz|gratis>0 €>geld"] Die Katze kostet nichts. Sie schläft seit Tagen zwischen den Kisten der Werkstatt. Ab heute gehört sie Mark.
+// Baustelle: der Acker wird umgegraben
+[reich groesse=9 bauten="haus@4,4|baum@1,1|baum@7,2|tanne@0,6|fels@8,7|baum@2,8|gericht@5,3|haus@3,4|haus@3,3|zelt@4,6-5,8|zelt@6,6-7,7|brunnen@4,5|werkstatt@2,4|laube@6,3|laube@6,4|laube@6,5|laube@7,3|laube@7,4|laube@7,5|halle@3,7|baustelle@1,4-1,6|katze@0,4" leute=167 palette_staerke=0.2 praesident=2,5 nah=3 blick=1,5 palette=tuerkis zoom-rein spielstand="kasse=33.200|einwohner=167|tag=6|betten=93/167|zelt=74" ein="drei>3 FELDER>aehre|Hand>VON HAND UMGEGRABEN>axt"] Dann der Acker. Drei Felder, von Hand umgegraben.
+// Der fertige Acker mit Preis und Namensschild
+[reich groesse=9 bauten="haus@4,4|baum@1,1|baum@7,2|tanne@0,6|fels@8,7|baum@2,8|gericht@5,3|haus@3,4|haus@3,3|zelt@4,6-5,8|zelt@6,6-7,7|brunnen@4,5|werkstatt@2,4|laube@6,3|laube@6,4|laube@6,5|laube@7,3|laube@7,4|laube@7,5|halle@3,7|acker@1,4-1,6|katze@0,4" leute=167 palette_staerke=0.2 praesident=2,6 nah=2.8 blick=0,4 palette=tuerkis schwenk-links preis="1,5:-9.000 €" schild="1,4:Kartoffeln · @EllenZaum" spielstand="kasse=33.200>24.200|einwohner=167|tag=6|betten=93/167|zelt=74" ein="sechshundert>#600 KARTOFFELN>aehre"] Am Nachmittag liegen sechshundert Saatkartoffeln in der Erde. Neuntausend Euro.
+// Hochbeete
+[reich groesse=9 bauten="haus@4,4|baum@1,1|baum@7,2|tanne@0,6|fels@8,7|baum@2,8|gericht@5,3|haus@3,4|haus@3,3|zelt@4,6-5,8|zelt@6,6-7,7|brunnen@4,5|werkstatt@2,4|laube@6,3|laube@6,4|laube@6,5|laube@7,3|laube@7,4|laube@7,5|halle@3,7|acker@1,4-1,6|hochbeet@5,1|hochbeet@6,1|katze@0,4" leute=167 palette_staerke=0.2 praesident=4,2 nah=3.2 blick=4,0 palette=tuerkis zoom-rein preis="6,1:-4.000 €" schild="5,1:Hochbeete · @EllenZaum" spielstand="kasse=24.200>20.200|einwohner=167|tag=6|betten=93/167|zelt=74" ein="acht>8 HOCHBEETE>aehre|Radieschen>REIF IN 4 WOCHEN>uhr"] Dazu acht Hochbeete für jeden, der will. Kräuter, Salat, Radieschen. Die sind schon nach vier Wochen reif.
+
+== Neunzig Tage ==
+// Wendung: Kartoffeln brauchen lange
+[objekt objekte="uhr:Bis zur Ernte|topf:Essen kaufen" gross="90 TAGE" palette=orange zoom-rein] Nur die Kartoffeln lassen sich Zeit. Rund neunzig Tage bis zur Ernte.
+// Abend: Essen kommt mit dem Boot
+[reich groesse=9 bauten="haus@4,4|baum@1,1|baum@7,2|tanne@0,6|fels@8,7|baum@2,8|gericht@5,3|haus@3,4|haus@3,3|zelt@4,6-5,8|zelt@6,6-7,7|brunnen@4,5|werkstatt@2,4|laube@6,3|laube@6,4|laube@6,5|laube@7,3|laube@7,4|laube@7,5|halle@3,7|acker@1,4-1,6|hochbeet@5,1|hochbeet@6,1|katze@0,4" leute=167 palette_staerke=0.2 zeit=abend praesident=1,3 nah=2.2 blick=1,4 palette=orange schwenk-rechts spielstand="kasse=20.200>18.500|einwohner=167|tag=6|betten=93/167|zelt=74" ein="Zehn>10 € PRO KOPF>geld|siebzehnhundert>1.700 € AM TAG>topf"] Bis dahin kommt das Essen mit dem Boot vom Festland. Zehn Euro pro Kopf, siebzehnhundert Euro am Tag.
+// Nahaufnahme: du
+[gesicht du ort=reich zeit=abend palette=orange palette_staerke=0.2 spielstand="kasse=18.500|einwohner=167|tag=6|betten=93/167|zelt=74"] „Neunzig Tage. Ich hab jetzt Hunger.“
+// Das Los: Zelt 20, aber nicht allein
+[reich groesse=9 bauten="haus@4,4|baum@1,1|baum@7,2|tanne@0,6|fels@8,7|baum@2,8|gericht@5,3|haus@3,4|haus@3,3|zelt@4,6-5,8|zelt@6,6-7,7|brunnen@4,5|werkstatt@2,4|laube@6,3|laube@6,4|laube@6,5|laube@7,3|laube@7,4|laube@7,5|halle@3,7|acker@1,4-1,6|hochbeet@5,1|hochbeet@6,1|katze@0,4" leute=167 palette_staerke=0.2 zeit=nacht praesident=5,7 nah=2.6 blick=5,7 palette=blau zoom-rein spielstand="kasse=18.500|einwohner=167|tag=6|betten=93/167|zelt=74" ein="Los>DAS LOS: ZELT 20>decke|Katze>BESUCH VON DER KATZE>herz"] Das Los für die Betten: wieder Zelt Nummer zwanzig. Aber heute Nacht kommt Marks Katze zu dir rein.
+
+== Tag 6 ==
+// Die ganze Insel bei Nacht
+[reich groesse=9 bauten="haus@4,4|baum@1,1|baum@7,2|tanne@0,6|fels@8,7|baum@2,8|gericht@5,3|haus@3,4|haus@3,3|zelt@4,6-5,8|zelt@6,6-7,7|brunnen@4,5|werkstatt@2,4|laube@6,3|laube@6,4|laube@6,5|laube@7,3|laube@7,4|laube@7,5|halle@3,7|acker@1,4-1,6|hochbeet@5,1|hochbeet@6,1|katze@0,4" leute=167 palette_staerke=0.2 zeit=nacht praesident=5,7 nah=1.2 blick=4,4 palette=blau zoom-raus spielstand="kasse=18.500|einwohner=167|tag=6|betten=93/167|zelt=74" ein="hundertsiebenundsechzig>#167 EINWOHNER>einwohner|dreiunddreißig>33 BIS ZUM DORF>haus"] Tag sechs. Hundertsiebenundsechzig Einwohner, und das erste Essen wächst. Noch dreiunddreißig bis zum Dorf mit eigenem Namen.
+// Cliffhanger: das Geld reicht nicht bis zur Ernte, Feld 2,6 (Hotel) markiert
+[reich groesse=9 bauten="haus@4,4|baum@1,1|baum@7,2|tanne@0,6|fels@8,7|baum@2,8|gericht@5,3|haus@3,4|haus@3,3|zelt@4,6-5,8|zelt@6,6-7,7|brunnen@4,5|werkstatt@2,4|laube@6,3|laube@6,4|laube@6,5|laube@7,3|laube@7,4|laube@7,5|halle@3,7|acker@1,4-1,6|hochbeet@5,1|hochbeet@6,1|katze@0,4" leute=167 palette_staerke=0.2 zeit=nacht praesident=5,7 markiere=2,6 nah=2.4 blick=2,6 palette=blau schwenk-links spielstand="kasse=18.500|einwohner=167|tag=6|betten=93/167|zelt=74" ein="Tage>REICHT FÜR 11 TAGE>geld|neunzig>90 TAGE BIS ZUR ERNTE>aehre"] Das Geld in der Kasse reicht für knapp elf Tage Essen. Bis zur Ernte sind es neunzig. Deine Insel braucht etwas, das Geld verdient.
+// Aufruf
+[reich groesse=9 bauten="haus@4,4|baum@1,1|baum@7,2|tanne@0,6|fels@8,7|baum@2,8|gericht@5,3|haus@3,4|haus@3,3|zelt@4,6-5,8|zelt@6,6-7,7|brunnen@4,5|werkstatt@2,4|laube@6,3|laube@6,4|laube@6,5|laube@7,3|laube@7,4|laube@7,5|halle@3,7|acker@1,4-1,6|hochbeet@5,1|hochbeet@6,1|katze@0,4" leute=167 palette_staerke=0.2 zeit=nacht praesident=5,7 nah=1.3 blick=4,4 palette=blau schwenk-rechts spielstand="kasse=18.500|einwohner=167|tag=6|betten=93/167|zelt=74"] Jeder neue Follower zieht auf deine Insel. Was bauen wir als Nächstes? Schreib es in die Kommentare.
