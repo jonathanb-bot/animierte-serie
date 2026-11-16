@@ -129,7 +129,7 @@ function bauen(W, H) {
     const bremsS = new THREE.Mesh(new THREE.BoxGeometry(0.06, 0.16, 0.12), new THREE.MeshStandardMaterial({ color: '#c81a1a' })); bremsS.position.set(x > 0 ? 0.1 : -0.1, 0.12, 0.1); r.add(bremsS);
     r.position.set(x, 0.36, z); auto.add(r); raeder.push(r);
   }
-  const rotGlow = new THREE.MeshBasicMaterial({ color: new THREE.Color('#ff0606').multiplyScalar(2.8) });
+  const rotGlow = new THREE.MeshBasicMaterial({ color: new THREE.Color('#ff0505').multiplyScalar(5.5) });
   const leiste = new THREE.Mesh(new THREE.BoxGeometry(1.82, 0.04, 0.05), rotGlow); leiste.position.set(0, 0.98, 2.57); auto.add(leiste);
   for (const sx of [-1, 1]) for (let k = 0; k < 6; k++) { const seg = new THREE.Mesh(new THREE.BoxGeometry(0.05, 0.12, 0.05), rotGlow); seg.position.set(sx * (0.56 + k * 0.065), 0.99, 2.575); auto.add(seg); } // LED-Segmente
   for (const x of [-0.72, 0.72]) { const e = new THREE.Mesh(new THREE.BoxGeometry(0.38, 0.14, 0.05), rotGlow); e.position.set(x, 0.98, 2.57); auto.add(e); }
@@ -145,7 +145,7 @@ function bauen(W, H) {
     for (const x of [-0.72, 0.72]) { const ein = new THREE.Mesh(new THREE.BoxGeometry(0.34, 0.2, 0.06), schwarz); ein.position.set(x, 0.42, -2.52); auto.add(ein); } }
   { const c = document.createElement('canvas'); c.width = c.height = 128; const g = c.getContext('2d'); const r = g.createRadialGradient(64, 64, 0, 64, 64, 64); r.addColorStop(0, 'rgba(255,40,20,0.9)'); r.addColorStop(0.35, 'rgba(255,20,10,0.35)'); r.addColorStop(1, 'rgba(255,0,0,0)'); g.fillStyle = r; g.fillRect(0, 0, 128, 128);
     const sm = new THREE.SpriteMaterial({ map: new THREE.CanvasTexture(c), blending: THREE.AdditiveBlending, depthWrite: false, transparent: true });
-    for (const [x, sx] of [[-0.72, 1.3], [0.72, 1.3], [0, 2.6]]) { const sp = new THREE.Sprite(sm); sp.position.set(x, 0.98, 2.75); sp.scale.set(sx, 0.55, 1); auto.add(sp); deko.push(sp); } }
+    for (const [x, sx] of [[-0.72, 1.6], [0.72, 1.6], [0, 3.0]]) { const sp = new THREE.Sprite(sm); sp.position.set(x, 0.98, 2.75); sp.scale.set(sx, 0.75, 1); auto.add(sp); deko.push(sp); } }
   const bremse = new THREE.Mesh(new THREE.BoxGeometry(0.6, 0.04, 0.05), rotGlow); bremse.position.set(0, 1.4, 2.42); auto.add(bremse);
   const weissGlow = new THREE.MeshBasicMaterial({ color: new THREE.Color('#e8f0ff').multiplyScalar(10) });
   for (const x of [-0.7, 0.7]) { const s = new THREE.Mesh(new THREE.BoxGeometry(0.42, 0.08, 0.05), weissGlow); s.position.set(x, 0.78, -2.5); auto.add(s);

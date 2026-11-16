@@ -15,7 +15,7 @@
 // Serie „Der Fluchtwagen“ (Jonathan 16.11.): echte 3D-Kulisse `drei` (engine/flucht.js, Quelle drei/flucht/szene.js). Bibel: flucht/serienbibel.md
 == Die Nacht ==
 // Wow-Bild: Verfolgerkamera hinter dem roten Kombi
-[drei einstellung=verfolger filmtitel="Der|Fluchtwagen|TEIL 1" ein="Drei>03:12 UHR>uhr" ein_y=1240] Drei Uhr nachts. Du sitzt am Steuer eines roten Kombis. Und die Polizei sucht genau dieses Auto.
+[drei einstellung=verfolger filmtitel="Der|Fluchtwagen|TEIL 1" ein="Drei>03:12 UHR>uhr" ein_y=760] Drei Uhr nachts. Du sitzt am Steuer eines roten Kombis. Und die Polizei sucht genau dieses Auto.
 // Seitlich mitfahren: Laternen fliegen vorbei
 [drei einstellung=seite ein="zwei>2 FREMDE IM AUTO" ein_y=420] Neben dir sitzen zwei Männer, die du erst seit einer Stunde kennst. Auf dem Rücksitz liegt eine Tasche, über die keiner spricht.
 
@@ -23,7 +23,7 @@
 // Vom Straßenrand nach oben: Hubschrauber mit Suchscheinwerfer
 [drei einstellung=boden strahl=1 ton=hubschrauber ein="Hubschrauber>POLIZEI-HUBSCHRAUBER" ein_y=420] Dann hörst du ihn. Ein Polizeihubschrauber, direkt über der Autobahn.
 // Verfolger mit Strahl auf dem Dach
-[drei einstellung=verfolger strahl=1 ton=hubschrauber ein="Licht>SUCHSCHEINWERFER" ein_y=1240] Sein Licht legt sich auf dein Dach und bleibt dort.
+[drei einstellung=verfolger strahl=1 ton=hubschrauber ein="Licht>SUCHSCHEINWERFER" ein_y=760] Sein Licht legt sich auf dein Dach und bleibt dort.
 // Wärmebild aus dem Hubschrauber
 [drei einstellung=waerme ein="Motor>HEISSER MOTOR" ein_y=1240] Und wenn du es abschüttelst? Egal. Seine Wärmebildkamera sieht deinen heißen Motor auch im Dunkeln.
 // Wärmebild, Funkspruch

@@ -22,7 +22,8 @@
       ctx.fillStyle = fertig ? "#f2a64a" : "#ffffff"; ctx.font = "700 92px HUD"; ctx.fillText(`${v}${fertig ? "+" : ""} PS`, 540, y0 + 156); ctx.globalAlpha = 1; }
     if (!s._kino) { s._kino = []; let cur = []; const push = () => { if (cur.length) s._kino.push({ woerter: cur, start: cur[0].start, ende: cur[cur.length - 1].ende }); cur = []; };
       for (const w of s.woerter || []) { const len = cur.reduce((a, b) => a + b.w.length + 1, 0) + w.w.length; if (cur.length && len > 30) push(); cur.push(w); if (/[.!?…:]$/.test(w.w) || (/,$/.test(w.w) && len > 18)) push(); }
-      push(); for (let i = 0; i < s._kino.length - 1; i++) s._kino[i].ende = Math.min(s._kino[i + 1].start, s._kino[i].ende + 0.5); if (s._kino.length) s._kino[s._kino.length - 1].ende += 0.5; }
+      push(); for (let i = s._kino.length - 1; i > 0; i--) { const g = s._kino[i], v = s._kino[i - 1]; const lv = v.woerter.map(w => w.w).join(' ').length; if (g.woerter.length === 1 && lv + g.woerter[0].w.length < 40 && !/[.!?…:]$/.test(v.woerter[v.woerter.length - 1].w)) { v.woerter.push(...g.woerter); v.ende = g.ende; s._kino.splice(i, 1); } }
+      for (let i = 0; i < s._kino.length - 1; i++) s._kino[i].ende = Math.min(s._kino[i + 1].start, s._kino[i].ende + 0.5); if (s._kino.length) s._kino[s._kino.length - 1].ende += 0.5; }
     const g = s._kino.find(x => t >= x.start - 0.05 && t < x.ende);
     if (g) { const txt = g.woerter.map(w => w.w).join(" ").replace(/[„“"]/g, ""), zitat = g.woerter.some(w => w.zitat);
       schatten(); const y = 1590;
