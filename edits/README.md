@@ -14,6 +14,7 @@ Kurze Lyric-Edits zu Liedern, die Jonathan schickt: jedes Wort erscheint genau d
 
 ## Wünsche von Jonathan für künftige Edits (Stand 16.11.)
 - **Auch Videos von Instagram verwenden, nicht nur Bilder** (Jonathan 16.11., nach „Film“): kurze Clips (1–2 s) aus Reels/Snippets der Künstler (Apify `apify/instagram-scraper` liefert `videoUrl`), als Hintergrund oder in einer Handy-Karte, auf den Beat geschnitten, farblich an den Look angepasst. Mischung etwa halb Video, halb Foto. Chromium im Container hat evtl. kein H.264: Clips vorher nach VP9/WebM wandeln oder als Bildfolge ausschneiden.
+- **Ton aus Insta-Reels bei Teasern** (Jonathan 16.11.): Teasert ein Künstler einen Song per Reel, darf der Ton direkt aus dem Reel genommen werden (`instagram-scraper` → `videoUrl`/`audioUrl`, mit ffmpeg die Tonspur ziehen). Lyrics dann meist aus der Spracherkennung (unsichere Wörter Jonathan nennen). Zum Posten die Version ohne Ton liefern, Jonathan legt den Original-Sound in der App drüber. Fertig veröffentlichte Lieder weiter nicht aus dem Netz laden, sondern MP3 von Jonathan.
 - Bilder der Künstler gern von Instagram und Genius; Fotos, die genau zur Zeile passen (z. B. Kino-Leuchttafel bei „Film“, Porsche-Plakette bei „Carrera S“).
 - Der Ausschnitt richtet sich nach Jonathans Angabe (z. B. „von Ralphs Part zu Lucios Part“), 30–45 s sind gut.
 - **Liefern:** volle Qualität direkt im Chat (SendUserFile), zusätzlich Download-Link auf Branch `edits-download` (dort unter 100 MB, sonst zweipassig auf ca. 15 Mbit/s komprimieren).
