@@ -1,0 +1,491 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face { font-family: "Titel"; src: url("assets/InterDisplay-Black.otf"); font-weight: 900; }
+@font-face { font-family: "UI"; src: url("assets/Inter-Bold.otf"); font-weight: 700; }
+html,body{margin:0;background:#000}canvas{display:block}
+</style></head><body>
+<canvas id="c"></canvas>
+<script>
+// „Film“ (Gangsta Ralph & Lucio101) – Edit: Ende Part Ralph → Hook → Part Lucio. Kino-Look, Lyrics in Handy-Karten, Wörter auf dem 16tel-Raster.
+const W = 1080, H = 1920, K = 1440 / 1080;
+const cv = document.getElementById("c"); cv.width = W * K; cv.height = H * K; let ctx = cv.getContext("2d"); const HAUPT = ctx;
+const PUF = [0, 1].map(() => { const c = document.createElement("canvas"); c.width = W * K; c.height = H * K; return c; });
+let ZL = null; const IMG = {}; const KORN = [];
+const lade = src => new Promise(r => { const i = new Image(); i.onload = () => r(i); i.onerror = () => { console.error("fehlt " + src); r(null); }; i.src = src; });
+const clamp = (v, a, b) => Math.max(a, Math.min(b, v)), lerp = (a, b, t) => a + (b - a) * t;
+const raus = p => 1 - Math.pow(1 - clamp(p, 0, 1), 3), weich = p => { p = clamp(p, 0, 1); return p * p * (3 - 2 * p); };
+const zurueck = p => { p = clamp(p, 0, 1); const c1 = 1.4, c3 = c1 + 1; return 1 + c3 * Math.pow(p - 1, 3) + c1 * Math.pow(p - 1, 2); };
+const rr = (x, y, w, h, r) => { ctx.beginPath(); ctx.roundRect(x, y, w, h, r); };
+// Text bis zur aktuellen Songzeit „tippen“: Wörter erscheinen mit ihrem Einsatz, Buchstaben laufen innerhalb des Worts mit
+function getippt(T, woerter, ab = 0) {
+  let s = ""; for (const w of woerter.slice(ab)) { if (T < w.a - 0.03) break; const n = Math.max(1, Math.round(clamp((T - w.a + 0.03) / 0.07, 0, 1) * w.w.length)); s += (s ? " " : "") + w.w.slice(0, n); }
+  return s;
+}
+function umbruch(text, maxB) { const z = []; let r = ""; for (const w of text.split(" ")) { const t = r ? r + " " + w : w; if (ctx.measureText(t).width > maxB && r) { z.push(r); r = w; } else r = t; } if (r) z.push(r); return z; }
+// schwebende Karte mit 3D-Anmutung (Drehung um Y über Breite + Scherung), weicher Schatten, Bewegungsunschärfe aus Geschwindigkeit
+function karte(o, inhalt) {
+  const { x, y, w, h, r = 46, rotY = 0, rotZ = 0, sk = 0, alpha = 1, schatten = 0.28, vx = 0, vy = 0, hell = true } = o;
+  const zeichne = (dx, dy, a) => {
+    ctx.save(); ctx.globalAlpha = a; ctx.translate(x + dx, y + dy); ctx.rotate(rotZ); ctx.transform(Math.cos(rotY), Math.sin(rotY) * 0.18 + sk, 0, 1, 0, 0);
+    ctx.shadowColor = `rgba(0,0,0,${schatten})`; ctx.shadowBlur = 70; ctx.shadowOffsetY = 34; rr(-w / 2, -h / 2, w, h, r); ctx.fillStyle = hell ? "#ffffff" : "#1c1c1e"; ctx.fill(); ctx.shadowColor = "transparent";
+    ctx.save(); rr(-w / 2, -h / 2, w, h, r); ctx.clip(); inhalt(-w / 2, -h / 2, w, h); ctx.restore(); ctx.restore(); };
+  const v = Math.hypot(vx, vy);
+  if (v > 2) { const n = 5; for (let k = n; k >= 1; k--) zeichne(-vx * k * 0.35, -vy * k * 0.35, alpha * 0.12); }
+  zeichne(0, 0, alpha);
+}
+// Bewegung einer Karte: fliegt von (x0,y0) mit Schwung ein, schwingt leicht nach, fliegt am Ende raus
+function flug(T, a, e, ziel, von, nach) { nach = { ...ziel, ...(nach || {}) };
+  const ein = zurueck((T - a) / 0.42), aus = 0;
+  const x = lerp(lerp(von.x, ziel.x, ein), nach.x, aus), y = lerp(lerp(von.y, ziel.y, ein), nach.y, aus);
+  const vx = (1 - clamp((T - a) / 0.42, 0, 1)) * (ziel.x - von.x) * 0.06 + aus * (nach.x - ziel.x) * 0.06, vy = (1 - clamp((T - a) / 0.42, 0, 1)) * (ziel.y - von.y) * 0.06 + aus * (nach.y - ziel.y) * 0.06;
+  const rotY = lerp(lerp(von.rotY ?? 0.6, ziel.rotY ?? 0, ein), nach.rotY ?? -0.6, aus), rotZ = lerp(lerp(von.rotZ ?? 0.1, ziel.rotZ ?? -0.04, ein), nach.rotZ ?? -0.1, aus);
+  return { x, y, vx, vy, rotY: rotY + Math.sin(T * 1.6) * 0.03, rotZ: rotZ + Math.sin(T * 1.1) * 0.01 };
+}
+function hintergrund(T, dunkel = false) {
+  const g = ctx.createLinearGradient(0, 0, 0, H);
+  if (dunkel) { g.addColorStop(0, "#0d0d12"); g.addColorStop(1, "#1b1622"); } else { g.addColorStop(0, "#f7f7f9"); g.addColorStop(1, "#e9e9ee"); }
+  ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+}
+function bildIn(img, x, y, w, h, zoom = 1, oy = 0) { if (!img) return; const s = Math.max(w / img.width, h / img.height) * zoom; ctx.save(); ctx.beginPath(); ctx.rect(x, y, w, h); ctx.clip(); ctx.drawImage(img, x + w / 2 - img.width * s / 2, y + h / 2 - img.height * s / 2 + oy, img.width * s, img.height * s); ctx.restore(); }
+function blase(x, y, w, text, farbe = "#0a84ff", schrift = "#fff", fs = 44) {
+  ctx.font = `700 ${fs}px UI`; const z = umbruch(text, w - 60); const h = 36 + z.length * fs * 1.25;
+  rr(x, y, w, h, 40); ctx.fillStyle = farbe; ctx.fill(); ctx.beginPath(); ctx.moveTo(x + w - 40, y + h - 30); ctx.quadraticCurveTo(x + w + 10, y + h + 4, x + w + 18, y + h - 2); ctx.quadraticCurveTo(x + w - 6, y + h - 8, x + w - 14, y + h - 30); ctx.fill();
+  ctx.fillStyle = schrift; ctx.textBaseline = "alphabetic"; z.forEach((l, i) => ctx.fillText(l, x + 30, y + 20 + fs + i * fs * 1.25)); return h;
+}
+function cursor(T, x, y, h) { if (Math.floor(T * 3.2) % 2 === 0) { ctx.fillStyle = "#0a84ff"; ctx.fillRect(x + 4, y - h * 0.82, 4, h); } }
+
+const wort = (z, i) => z.woerter[Math.min(i, z.woerter.length - 1)].a;
+function gross(T, woerter, x0, y0, fs, farbe, max = W - 160, glow = null) {
+  // Wörter links ausgerichtet, eins nach dem anderen, mit Nachzieh-Echo
+  ctx.save(); ctx.font = `900 ${fs}px Titel`; ctx.textBaseline = "alphabetic"; let x = x0, y = y0;
+  for (const w of woerter) { const t = w.w.toUpperCase(), wb = ctx.measureText(t).width * 0.9; if (x > x0 && x + wb > x0 + max) { x = x0; y += fs * 1.0; }
+    const d = T - w.a + 0.03; if (d >= 0) { const p = raus(d / 0.16);
+      for (let k = 3; k >= 1; k--) { ctx.save(); ctx.globalAlpha = 0.12 * (1 - p); ctx.translate(x + (1 - p) * 50 * k, y); ctx.scale(0.9, 1); ctx.fillStyle = farbe; ctx.fillText(t, 0, 0); ctx.restore(); }
+      ctx.save(); ctx.globalAlpha = clamp(d / 0.04, 0, 1); ctx.translate(x + (1 - p) * 36, y); ctx.scale(0.9, 1); ctx.fillStyle = farbe; if (glow) { ctx.shadowColor = glow; ctx.shadowBlur = 36; } ctx.fillText(t, 0, 0); ctx.restore(); }
+    x += wb + fs * 0.24; }
+  ctx.restore();
+}
+function dunkel(T, a = "#0c0c10", b = "#17141c") { const g = ctx.createLinearGradient(0, 0, 0, H); g.addColorStop(0, a); g.addColorStop(1, b); ctx.fillStyle = g; ctx.fillRect(0, 0, W, H); }
+function etikett(x, y, text, bg = "rgba(255,255,255,0.14)", fg = "#fff", fs = 28) { ctx.font = `700 ${fs}px UI`; const b = ctx.measureText(text).width + 36; rr(x, y, b, fs + 22, (fs + 22) / 2); ctx.fillStyle = bg; ctx.fill(); ctx.fillStyle = fg; ctx.fillText(text, x + 18, y + fs + 4); return b; }
+
+// ---------- Intro in vier Teilen ----------
+const IW = () => ZL.intro;
+function introWort(T, i) { return T > ZL.intro[i].a - 0.03; }
+function sticker(T, t0, text, x, y, rot, farbe, fs = 150) { const d = T - t0 + 0.03; if (d < 0) return; const q = zurueck(d / 0.28);
+  ctx.save(); ctx.translate(x, y); ctx.rotate(rot); ctx.scale(q, q); ctx.font = `900 ${fs}px Titel`; const b = ctx.measureText(text).width * 0.9 + 70;
+  ctx.shadowColor = "rgba(0,0,0,0.35)"; ctx.shadowBlur = 30; ctx.shadowOffsetY = 12; rr(-b / 2, -fs * 0.62, b, fs * 1.08, 28); ctx.fillStyle = farbe; ctx.fill(); ctx.shadowColor = "transparent";
+  ctx.fillStyle = farbe === "#fff" ? "#111" : "#fff"; ctx.textAlign = "center"; ctx.scale(0.9, 1); ctx.fillText(text, 0, fs * 0.33); ctx.restore(); }
+function klappe(T, t0, x, y, w, h, alt, neu) { const d = T - t0, q = clamp(d / 0.22, 0, 1), zeichen = q < 0.5 ? alt : neu;
+  rr(x, y, w, h, 24); ctx.fillStyle = "#16181a"; ctx.fill(); ctx.save(); rr(x, y, w, h, 24); ctx.clip(); ctx.fillStyle = "#fff"; ctx.font = `900 ${h * 0.8}px Titel`; ctx.textAlign = "center";
+  const sy = Math.abs(Math.cos(q * Math.PI)); ctx.translate(x + w / 2, y + h / 2); ctx.scale(1, Math.max(0.03, sy)); ctx.fillText(zeichen, 0, h * 0.29); ctx.restore();
+  ctx.fillStyle = "rgba(0,0,0,0.6)"; ctx.fillRect(x, y + h / 2 - 3, w, 6); }
+const ROT = "#e0283c", GOLD = "#e9c46a", EIS = "#9fd3ff";
+async function init() {
+  ZL = await (await fetch("zeitleiste.json")).json();
+  const D = { cover: "cover.png", auto: "gangs-21-0.jpg", stern: "gangs-21-2.jpg", gelb: "diffu-01-0.jpg", gruen: "gangs-02-0.jpg", nacht: "gangs-02-2.jpg", milan: "gangs-03-1.jpg",
+    gruppe: "gangs-03-2.jpg", uhr: "gangs-14-0.jpg", spain: "gangs-16-0.jpg", kino: "gangs-18-0.jpg", lila: "gangs-24-0.jpg", tuer: "gangs-13-0.jpg",
+    porsche: "lucio-04-0.jpg", porsche2: "lucio-04-1.jpg", badge: "lucio-04-2.jpg", lwatch: "lucio-06-0.jpg", taschen: "lucio-26-1.jpg", lnacht: "lucio-27-0.jpg",
+    geld: "lucio-25-0.jpg", bett: "lucio-17-0.jpg", graffiti: "gshoc-08-0.jpg", duo: "lucio-29-2.jpg", studio: "lucio-34-0.jpg" };
+  for (const [k, v] of Object.entries(D)) IMG[k] = await lade("assets/" + v);
+  await document.fonts.load('900 100px "Titel"'); await document.fonts.load('700 40px "UI"');
+  for (let k = 0; k < 6; k++) { const g = document.createElement("canvas"); g.width = 540; g.height = 960; const c = g.getContext("2d"), d = c.createImageData(540, 960);
+    for (let i = 0; i < d.data.length; i += 4) { const v = Math.random() * 255; d.data[i] = d.data[i + 1] = d.data[i + 2] = v; d.data[i + 3] = 18; } c.putImageData(d, 0, 0); KORN.push(g); }
+  window.bereit = true;
+}
+// ---------- Bausteine für den Kino-Look ----------
+// Vollbild-Foto mit langsamer Fahrt (Ken Burns), abgedunkelt, optional entsättigt
+function vollbild(img, T, a, o = {}) { if (!img) return; const { zoom = 1.12, fahrt = 0.035, dx = 0, dy = 0, dunkel: dk = 0.35, filter = "none", oy = 0 } = o;
+  const d = T - a, s = Math.max(W / img.width, H / img.height) * (zoom + d * fahrt);
+  ctx.save(); ctx.filter = filter; ctx.drawImage(img, W / 2 - img.width * s / 2 + dx * d, H / 2 - img.height * s / 2 + dy * d + oy, img.width * s, img.height * s); ctx.restore();
+  const g = ctx.createLinearGradient(0, 0, 0, H); g.addColorStop(0, `rgba(0,0,0,${dk * 0.8})`); g.addColorStop(0.45, `rgba(0,0,0,${dk * 0.5})`); g.addColorStop(1, `rgba(0,0,0,${Math.min(0.92, dk + 0.4)})`); ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+  const v = ctx.createRadialGradient(W / 2, H / 2, H * 0.3, W / 2, H / 2, H * 0.75); v.addColorStop(0, "rgba(0,0,0,0)"); v.addColorStop(1, "rgba(0,0,0,0.55)"); ctx.fillStyle = v; ctx.fillRect(0, 0, W, H); }
+// Kino-Balken oben/unten (q 0…1)
+function balken(q, h = 190) { if (q <= 0) return; ctx.fillStyle = "#000"; ctx.fillRect(0, 0, W, h * q); ctx.fillRect(0, H - h * q, W, h * q); }
+// große Lyrics unten, Wort für Wort getippt, max. 3 Zeilen
+function zeilenText(T, woerter, y, fs = 84, farbe = "#fff", glow = null, max = 930) { const t = getippt(T, woerter); if (!t) return;
+  ctx.save(); ctx.font = `900 ${fs}px Titel`; ctx.textBaseline = "alphabetic"; const z = umbruch(t.toUpperCase(), max / 0.9).slice(-3);
+  if (glow) { ctx.shadowColor = glow; ctx.shadowBlur = 34; } ctx.fillStyle = farbe;
+  z.forEach((l, i) => { ctx.save(); ctx.translate(75, y + (i - z.length + 1) * fs * 1.02); ctx.scale(0.9, 1); ctx.fillText(l, 0, 0); ctx.restore(); }); ctx.restore(); }
+// Kino-Untertitel (zentriert, gelblich-weiß, wie im Film)
+function untertitel(T, woerter, y = 1560, fs = 60) { const t = getippt(T, woerter); if (!t) return; ctx.save(); ctx.font = `700 ${fs}px UI`; ctx.textAlign = "center"; const z = umbruch(t, 900).slice(-2);
+  z.forEach((l, i) => { const yy = y + (i - z.length + 1) * fs * 1.25; ctx.lineWidth = 10; ctx.strokeStyle = "rgba(0,0,0,0.75)"; ctx.lineJoin = "round"; ctx.strokeText(l, W / 2, yy); ctx.fillStyle = "#fff6d8"; ctx.fillText(l, W / 2, yy); }); ctx.restore(); }
+function blitz(T, t0, farbe = "255,255,255", st = 0.5, dauer = 0.2) { const d = T - t0; if (d > 0 && d < dauer) { ctx.fillStyle = `rgba(${farbe},${st * (1 - d / dauer)})`; ctx.fillRect(0, 0, W, H); } }
+function wackeln(T, t0, st = 18) { const d = T - t0; if (d < 0 || d > 0.35) return; const e = Math.exp(-d / 0.08) * st; ctx.translate(Math.sin(d * 90) * e, Math.cos(d * 70) * e * 0.6); }
+function rec(T, text = "REC") { ctx.save(); ctx.font = "700 30px UI"; ctx.fillStyle = "rgba(255,255,255,0.85)"; if (Math.floor(T * 2) % 2 === 0) { ctx.beginPath(); ctx.arc(92, 248, 12, 0, Math.PI * 2); ctx.fillStyle = ROT; ctx.fill(); }
+  ctx.fillStyle = "rgba(255,255,255,0.85)"; ctx.fillText(text, 116, 259); const s = T + 3600 * 0 + 31.2, f = Math.floor((s % 1) * 24);
+  ctx.textAlign = "right"; ctx.fillText(`00:00:${String(Math.floor(s)).padStart(2, "0")}:${String(f).padStart(2, "0")}`, W - 80, 259); ctx.restore(); }
+function wortZeit(z, i) { return z.woerter[Math.min(i, z.woerter.length - 1)].a; }
+// Polizei-Absperrband quer durchs Bild
+function band(T, t0, y, rot, dir = 1) { const d = T - t0; if (d < 0) return; const q = raus(d / 0.22);
+  ctx.save(); ctx.translate(W / 2, y); ctx.rotate(rot); ctx.translate(dir * (1 - q) * 1600, 0); ctx.shadowColor = "rgba(0,0,0,0.5)"; ctx.shadowBlur = 24; ctx.fillStyle = "#f5c518"; ctx.fillRect(-1100, -52, 2200, 104); ctx.shadowColor = "transparent";
+  ctx.fillStyle = "#111"; ctx.font = "900 54px Titel"; ctx.textBaseline = "middle"; const t = "TATORT · BETRETEN VERBOTEN · "; let x = -1100 - ((T * 160) % 900);
+  while (x < 1100) { ctx.save(); ctx.translate(x, 2); ctx.scale(0.9, 1); ctx.fillText(t, 0, 0); ctx.restore(); x += ctx.measureText(t).width * 0.9; } ctx.restore(); }
+
+// ---------- Szenen (eine pro Zeile) ----------
+// 0 Fahr' vor und mach' den Ku'damm zu 'nem Tatort
+function tatort(T, z) {
+  vollbild(IMG.auto, T, z.a, { zoom: 1.0, fahrt: 0.03, dx: -14, dk: 0.3 });
+  const tT = wortZeit(z, 8), pr = clamp((T - z.a) / (tT - z.a), 0, 1);
+  { const f = flug(T, z.a - 0.1, z.e, { x: W / 2, y: 610, rotY: 0.12, rotZ: -0.035 }, { x: W / 2 + 900, y: 570, rotY: 1, rotZ: 0.2 }, {});
+    karte({ ...f, w: 900, h: 560, r: 50, hell: false, schatten: 0.55 }, (x, y, w, h) => { ctx.fillStyle = "#1b1d22"; ctx.fillRect(x, y, w, h);
+      ctx.strokeStyle = "rgba(255,255,255,0.07)"; ctx.lineWidth = 16; for (let k = 0; k < 6; k++) { ctx.beginPath(); ctx.moveTo(x - 40, y + 60 + k * 100); ctx.lineTo(x + w + 40, y + 20 + k * 110); ctx.stroke(); }
+      for (let k = 0; k < 7; k++) { ctx.beginPath(); ctx.moveTo(x + 40 + k * 140, y - 40); ctx.lineTo(x + k * 150, y + h + 40); ctx.stroke(); }
+      // Ku'damm als breite Achse
+      const ax = x + 60, ay = y + h - 120, bx = x + w - 120, by = y + 210; ctx.strokeStyle = "rgba(255,255,255,0.22)"; ctx.lineWidth = 30; ctx.lineCap = "round"; ctx.beginPath(); ctx.moveTo(ax, ay); ctx.lineTo(bx, by); ctx.stroke();
+      ctx.strokeStyle = ROT; ctx.lineWidth = 14; ctx.beginPath(); ctx.moveTo(ax, ay); ctx.lineTo(lerp(ax, bx, pr), lerp(ay, by, pr)); ctx.stroke();
+      ctx.beginPath(); ctx.arc(bx, by, 20, 0, Math.PI * 2); ctx.fillStyle = T > tT ? ROT : "rgba(255,255,255,0.6)"; ctx.fill();
+      if (T > tT) { const q = (T - tT) % 0.8 / 0.8; ctx.beginPath(); ctx.arc(bx, by, 20 + q * 70, 0, Math.PI * 2); ctx.strokeStyle = `rgba(224,40,60,${1 - q})`; ctx.lineWidth = 6; ctx.stroke(); }
+      ctx.beginPath(); ctx.arc(lerp(ax, bx, pr), lerp(ay, by, pr), 26, 0, Math.PI * 2); ctx.fillStyle = "#fff"; ctx.fill(); ctx.beginPath(); ctx.arc(lerp(ax, bx, pr), lerp(ay, by, pr), 16, 0, Math.PI * 2); ctx.fillStyle = "#0a84ff"; ctx.fill();
+      rr(x + 30, y + 30, w - 60, 120, 32); ctx.fillStyle = "rgba(14,14,16,0.92)"; ctx.fill(); ctx.fillStyle = "#fff"; ctx.font = "900 46px Titel"; ctx.fillText("Kurfürstendamm", x + 66, y + 104);
+      ctx.fillStyle = T > tT ? ROT : "rgba(255,255,255,0.6)"; ctx.font = "700 30px UI"; ctx.textAlign = "right"; ctx.fillText(T > tT ? "Tatort" : Math.max(0, (1.8 - pr * 1.8)).toFixed(1).replace(".", ",") + " km", x + w - 66, y + 102); ctx.textAlign = "left"; }); }
+  ctx.save(); wackeln(T, tT, 16);
+  band(T, tT, 1180, -0.16, 1); band(T, tT + 0.07, 1330, 0.11, -1);
+  ctx.restore();
+  zeilenText(T, z.woerter, 1700, 86, "#fff");
+  if (T > tT) { const p = Math.floor((T - tT) * 6) % 2; ctx.fillStyle = p ? "rgba(224,40,60,0.12)" : "rgba(10,132,255,0.12)"; ctx.fillRect(0, 0, W, H); }
+  blitz(T, tT, "255,255,255", 0.45);
+  rec(T);
+}
+// 1 Die Straßen lieben mich, denn ich bin ihr Sprachrohr – Sprachmemo
+function sprachrohr(T, z) {
+  vollbild(IMG.gelb, T, z.a, { zoom: 1.04, fahrt: 0.04, dy: -10, dk: 0.32 });
+  const tL = wortZeit(z, 2), tS = wortZeit(z, 8);
+  // Herzen steigen auf „lieben“
+  for (let k = 0; k < 14; k++) { const d = T - tL - k * 0.06; if (d < 0) continue; const y = 1500 - d * 520 - (k % 3) * 40, x = 160 + ((k * 263) % 760) + Math.sin(d * 4 + k) * 30, a = clamp(1 - d / 1.6, 0, 1);
+    ctx.save(); ctx.globalAlpha = a; ctx.translate(x, y); ctx.scale(0.6 + (k % 3) * 0.25, 0.6 + (k % 3) * 0.25); ctx.fillStyle = k % 4 ? ROT : "#ff8fa3"; ctx.beginPath(); ctx.moveTo(0, 30); ctx.bezierCurveTo(-60, -10, -30, -60, 0, -30); ctx.bezierCurveTo(30, -60, 60, -10, 0, 30); ctx.fill(); ctx.restore(); }
+  const f = flug(T, z.a, z.e, { x: W / 2, y: 1020, rotY: -0.12, rotZ: 0.03 }, { x: -700, y: 1000, rotY: -1, rotZ: -0.2 }, {});
+  karte({ ...f, w: 900, h: 440, r: 50, hell: false, schatten: 0.55 }, (x, y, w, h) => { ctx.fillStyle = "rgba(26,26,28,0.96)"; ctx.fillRect(x, y, w, h);
+    ctx.beginPath(); ctx.arc(x + 80, y + 85, 16, 0, Math.PI * 2); ctx.fillStyle = Math.floor(T * 2) % 2 ? ROT : "rgba(224,40,60,0.45)"; ctx.fill();
+    ctx.fillStyle = "#fff"; ctx.font = "700 40px UI"; ctx.fillText("Sprachmemo · Ralle", x + 112, y + 99); ctx.fillStyle = "rgba(255,255,255,0.5)"; ctx.font = "700 30px UI"; ctx.textAlign = "right";
+    const s = Math.max(0, T - z.a); ctx.fillText(`0:${String(Math.floor(s)).padStart(2, "0")},${Math.floor((s % 1) * 10)}`, x + w - 50, y + 99); ctx.textAlign = "left";
+    // Wellenform: Ausschlag stärker auf den Worteinsätzen
+    for (let b = 0; b < 44; b++) { const bx = x + 50 + b * 18.5, tb = T - (43 - b) * 0.03; let amp = 0.12 + 0.1 * Math.abs(Math.sin(tb * 9 + b));
+      for (const w2 of z.woerter) { const dd = tb - w2.a; if (dd > 0 && dd < 0.3) amp = Math.max(amp, Math.exp(-dd / 0.12) * (0.75 + 0.25 * Math.sin(b * 3.1))); }
+      const hh = 16 + amp * 180; rr(bx, y + 250 - hh / 2, 10, hh, 5); ctx.fillStyle = b > 40 ? "#fff" : (tb < z.a ? "rgba(255,255,255,0.25)" : ROT); ctx.fill(); }
+    ctx.fillStyle = "rgba(255,255,255,0.75)"; ctx.font = "700 32px UI"; const t = getippt(T, z.woerter); umbruch(t, w - 100).slice(-1).forEach(l => ctx.fillText(l, x + 50, y + h - 50)); });
+  if (T > tS - 0.03) { const q = zurueck((T - tS + 0.03) / 0.3); ctx.save(); ctx.translate(W / 2, 1640); ctx.scale(q, q); ctx.font = "900 150px Titel"; ctx.textAlign = "center"; ctx.fillStyle = GOLD; ctx.shadowColor = "rgba(233,196,106,0.5)"; ctx.shadowBlur = 40; ctx.scale(0.9, 1); ctx.fillText("SPRACHROHR", 0, 0); ctx.restore(); }
+  else zeilenText(T, z.woerter.slice(0, 4), 1660, 96);
+  rec(T);
+}
+// 2 … Gangster Ralle Hardcore – Fotos schlagen ein, drei große Wörter
+function hardcore(T, z) {
+  dunkel(T, "#0b0506", "#1e080b");
+  const g = ctx.createRadialGradient(W / 2, 1000, 50, W / 2, 1000, 1000); g.addColorStop(0, "rgba(224,40,60,0.28)"); g.addColorStop(1, "rgba(224,40,60,0)"); ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+  const FO = [["lila", -0.09, -210, 620], ["gruen", 0.07, 220, 700], ["uhr", -0.03, 0, 900]], t0 = [z.a + 0.05, z.a + 0.45, z.a + 0.85];
+  FO.forEach(([k, rz, dx, y], i) => { if (T < t0[i]) return; const d = T - t0[i], q = zurueck(d / 0.32), puls = 1 + Math.exp(-d / 0.08) * 0.05;
+    ctx.save(); ctx.translate(W / 2 + dx, y); ctx.scale(puls, puls); ctx.translate(-(W / 2 + dx), -y);
+    karte({ x: lerp(W / 2 + dx + (i % 2 ? 900 : -900), W / 2 + dx, q), y, w: 520, h: 720, r: 30, rotZ: lerp(rz * 4, rz, q) + Math.sin(T * 1.3 + i) * 0.01, rotY: 0, schatten: 0.6, hell: false }, (x, y2, w, h) => bildIn(IMG[k], x, y2, w, h, 1.05 + d * 0.04, 0));
+    ctx.restore(); });
+  const ws = z.woerter.slice(5), tH = wortZeit(z, 7);
+  ctx.save(); wackeln(T, ws[0].a, 12); wackeln(T, tH, 20);
+  ws.forEach((w2, i) => { const d = T - w2.a + 0.03; if (d < 0) return; const q = zurueck(d / 0.2), y = 1290 + i * 170, rot = [-0.04, 0.03, -0.02][i];
+    ctx.save(); ctx.translate(W / 2, y); ctx.rotate(rot); ctx.scale(q, q); ctx.font = `900 ${i === 2 ? 190 : 160}px Titel`; ctx.textAlign = "center";
+    if (i === 2) { ctx.shadowColor = "rgba(224,40,60,0.9)"; ctx.shadowBlur = 50; ctx.fillStyle = ROT; } else ctx.fillStyle = "#fff"; ctx.scale(0.9, 1); ctx.fillText(w2.w.toUpperCase(), 0, 0); ctx.restore(); });
+  ctx.restore();
+  ws.forEach(w2 => blitz(T, w2.a, "255,255,255", 0.25, 0.14)); blitz(T, tH, "224,40,60", 0.35, 0.3);
+  // Übergang in die Hook: Balken schließen sich etwas
+  balken(raus((T - (z.e - 0.4)) / 0.4));
+}
+// 3 Trage Maske … mein Leben Film – Babylon-Kino, Filmklappe auf „Film“
+function klappeZeichnen(T, t0, x, y, s) { const d = T - t0, auf = d < 0 ? 0.55 : lerp(0.55, 0, raus(d / 0.09)), wk = d > 0 && d < 0.3 ? Math.exp(-d / 0.06) * 0.06 : 0;
+  ctx.save(); ctx.translate(x, y); ctx.scale(s, s); ctx.rotate(-0.06 + wk);
+  ctx.shadowColor = "rgba(0,0,0,0.6)"; ctx.shadowBlur = 40; ctx.shadowOffsetY = 20; rr(-260, -40, 520, 330, 18); ctx.fillStyle = "#151515"; ctx.fill(); ctx.shadowColor = "transparent";
+  ctx.fillStyle = "#fff"; ctx.font = "700 34px UI"; ctx.fillText("SZENE", -220, 40); ctx.fillText("TAKE", 40, 40); ctx.font = "900 72px Titel"; ctx.fillText("219", -220, 120); ctx.fillText("1", 40, 120);
+  ctx.fillStyle = "rgba(255,255,255,0.3)"; ctx.fillRect(-230, 150, 460, 3); ctx.fillStyle = "#fff"; ctx.font = "900 88px Titel"; ctx.textAlign = "center"; ctx.fillText("FILM", 0, 250); ctx.textAlign = "left";
+  const streifen = yy => { for (let k = 0; k < 6; k++) { ctx.fillStyle = k % 2 ? "#fff" : "#151515"; ctx.beginPath(); ctx.moveTo(-260 + k * 90, yy); ctx.lineTo(-200 + k * 90, yy); ctx.lineTo(-170 + k * 90, yy + 60); ctx.lineTo(-230 + k * 90, yy + 60); ctx.fill(); } };
+  ctx.save(); rr(-260, -100, 520, 60, 8); ctx.clip(); ctx.fillStyle = "#151515"; ctx.fillRect(-260, -100, 520, 60); streifen(-100); ctx.restore();
+  ctx.save(); ctx.translate(-260, -100); ctx.rotate(-auf); ctx.translate(260, 0); ctx.save(); rr(-260, -64, 520, 60, 8); ctx.clip(); ctx.fillStyle = "#151515"; ctx.fillRect(-260, -64, 520, 60); streifen(-64); ctx.restore(); ctx.restore();
+  ctx.restore(); }
+function kino(T, z) {
+  vollbild(IMG.kino, T, z.a, { zoom: 1.06, fahrt: 0.05, dk: 0.25, oy: 120 });
+  balken(1);
+  const tF = wortZeit(z, 8);
+  untertitel(T, z.woerter, 1640, 62);
+  if (T > tF - 0.35) { const q = zurueck((T - tF + 0.35) / 0.25); klappeZeichnen(T, tF - 0.02, lerp(W + 400, W / 2 + 20, q), 760, 1.15); }
+  blitz(T, tF, "255,255,255", 0.6, 0.18);
+  ctx.save(); ctx.globalAlpha = raus((T - z.a) / 0.3); ctx.fillStyle = "rgba(255,246,216,0.8)"; ctx.font = "700 30px UI"; ctx.textAlign = "center"; ctx.fillText("GANGSTA RALPH · LUCIO101 · FILM", W / 2, 120); ctx.restore();
+}
+// 4 Siehst du mich nicht auf der Straße, ja, dann bin ich drinn'n – Standort + Gitter
+function drinn(T, z) {
+  vollbild(IMG.tuer, T, z.a, { zoom: 1.08, fahrt: 0.06, dk: 0.3 });
+  const tD = wortZeit(z, 11);
+  { const f = flug(T, z.a, z.e, { x: W / 2, y: 720, rotY: 0.12, rotZ: -0.03 }, { x: W / 2 + 900, y: 700, rotY: 1, rotZ: 0.2 }, {});
+    karte({ ...f, w: 880, h: 520, r: 50, hell: false, schatten: 0.55 }, (x, y, w, h) => { ctx.fillStyle = "#1c1d21"; ctx.fillRect(x, y, w, h);
+      ctx.strokeStyle = "rgba(255,255,255,0.06)"; ctx.lineWidth = 14; for (let k = 0; k < 7; k++) { ctx.beginPath(); ctx.moveTo(x + k * 150, y); ctx.lineTo(x + k * 150 - 80, y + h); ctx.stroke(); ctx.beginPath(); ctx.moveTo(x, y + k * 90); ctx.lineTo(x + w, y + k * 90 + 40); ctx.stroke(); }
+      const cx = x + w / 2, cy = y + 250, weg = T > tD - 0.03;
+      if (!weg) { const q = (T % 1); ctx.beginPath(); ctx.arc(cx, cy, 30 + q * 90, 0, Math.PI * 2); ctx.strokeStyle = `rgba(10,132,255,${1 - q})`; ctx.lineWidth = 6; ctx.stroke(); }
+      ctx.save(); ctx.beginPath(); ctx.arc(cx, cy, 60, 0, Math.PI * 2); ctx.fillStyle = "#fff"; ctx.fill(); ctx.beginPath(); ctx.arc(cx, cy, 52, 0, Math.PI * 2); ctx.clip(); ctx.filter = weg ? "grayscale(1) brightness(0.6)" : "none"; bildIn(IMG.gruen, cx - 52, cy - 52, 104, 104, 1.6, 30); ctx.restore();
+      ctx.fillStyle = "#fff"; ctx.font = "900 46px Titel"; ctx.fillText("Ralle", x + 50, y + 100); ctx.font = "700 30px UI"; ctx.fillStyle = weg ? ROT : "rgba(255,255,255,0.6)";
+      ctx.fillText(weg ? "Standort nicht verfügbar" : (T > wortZeit(z, 6) - 0.03 ? "Straße · gerade eben" : "Wird gesucht …"), x + 50, y + 146);
+      rr(x + 40, y + h - 120, w - 80, 84, 26); ctx.fillStyle = "rgba(255,255,255,0.08)"; ctx.fill(); ctx.fillStyle = "#0a84ff"; ctx.font = "700 32px UI"; ctx.textAlign = "center"; ctx.fillText(weg ? "Zuletzt gesehen: vor 2 Std." : "Route", x + w / 2, y + h - 66); ctx.textAlign = "left"; }); }
+  // Gitterstäbe fallen auf „drinn'n“
+  if (T > tD - 0.03) { const q = raus((T - tD + 0.03) / 0.16); ctx.save(); ctx.translate(0, lerp(-H, 0, q)); wackeln(T, tD + 0.13, 10);
+    for (let k = 0; k < 9; k++) { const x = 40 + k * 125, g = ctx.createLinearGradient(x - 18, 0, x + 18, 0); g.addColorStop(0, "#2a2a2e"); g.addColorStop(0.45, "#8a8a92"); g.addColorStop(1, "#1a1a1d"); ctx.fillStyle = g; ctx.shadowColor = "rgba(0,0,0,0.6)"; ctx.shadowBlur = 20; ctx.fillRect(x - 16, 0, 32, H); }
+    ctx.fillStyle = "#3a3a40"; ctx.fillRect(0, 300, W, 30); ctx.fillRect(0, 1240, W, 30); ctx.restore(); blitz(T, tD + 0.13, "255,255,255", 0.3, 0.15); }
+  zeilenText(T, z.woerter, 1700, 84);
+}
+// 5 Abgefuckt, Straftaten bis die Akte platzt – Akte füllt sich und platzt
+function akteZeichnen(T, x, y, w, h, n, platzt) { // n = Seitenzahl
+  ctx.save(); ctx.translate(x, y);
+  ctx.shadowColor = "rgba(0,0,0,0.6)"; ctx.shadowBlur = 50; ctx.shadowOffsetY = 26; rr(-w / 2, -h / 2, w, h, 16); ctx.fillStyle = "#b38b4d"; ctx.fill(); ctx.shadowColor = "transparent";
+  for (let k = 0; k < n; k++) { const ox = Math.sin(k * 7.3) * 14, oy = -k * 5, r = Math.sin(k * 3.1) * 0.03; ctx.save(); ctx.translate(ox, oy); ctx.rotate(r); rr(-w / 2 + 30, -h / 2 + 20, w - 60, h - 40, 6); ctx.fillStyle = k % 2 ? "#f4f1ea" : "#ebe6dc"; ctx.fill();
+    ctx.fillStyle = "rgba(0,0,0,0.18)"; for (let l = 0; l < 9; l++) ctx.fillRect(-w / 2 + 70, -h / 2 + 90 + l * 52, (w - 160) * (0.5 + 0.5 * Math.abs(Math.sin(l * 2.3 + k))), 12); ctx.restore(); }
+  rr(-w / 2, -h / 2 + h * 0.18, w, h * 0.82, 16); ctx.fillStyle = "#c9a066"; ctx.fill(); rr(-w / 2 + 50, -h / 2 + h * 0.3, 360, 110, 10); ctx.fillStyle = "#f4f1ea"; ctx.fill();
+  ctx.fillStyle = "#222"; ctx.font = "900 54px Titel"; ctx.fillText("AKTE · 219", -w / 2 + 80, -h / 2 + h * 0.3 + 72); ctx.font = "700 30px UI"; ctx.fillStyle = "rgba(0,0,0,0.6)"; ctx.fillText("Az. 219 Js 1019/26", -w / 2 + 60, h / 2 - 50);
+  if (platzt) { ctx.save(); ctx.rotate(-0.2); ctx.strokeStyle = ROT; ctx.lineWidth = 8; rr(-200, -20, 400, 110, 10); ctx.stroke(); ctx.fillStyle = ROT; ctx.font = "900 70px Titel"; ctx.textAlign = "center"; ctx.fillText("VOLL", 0, 64); ctx.restore(); }
+  ctx.restore(); }
+function akte(T, z) {
+  vollbild(IMG.nacht, T, z.a, { zoom: 1.1, fahrt: 0.03, dk: 0.55, filter: "saturate(0.7)" });
+  const tP = wortZeit(z, 5), n = z.woerter.filter(w2 => T > w2.a - 0.03).length * 3 + Math.floor(clamp(T - z.a, 0, 2) * 4), weg = T > tP - 0.02;
+  ctx.save(); wackeln(T, tP, 24);
+  const f = flug(T, z.a, z.e, { x: W / 2, y: 820, rotY: -0.1, rotZ: 0.03 }, { x: W / 2, y: 2300, rotY: 0.4, rotZ: 0.2 }, {});
+  const puls = weg ? 1 + Math.exp(-(T - tP) / 0.1) * 0.08 : 1 + (n % 3 === 0 ? 0.01 : 0);
+  ctx.translate(f.x, f.y); ctx.scale(puls, puls); ctx.rotate(f.rotZ); akteZeichnen(T, 0, 0, 760, 900, Math.min(n, 22), weg); ctx.restore();
+  // Blätter fliegen beim Platzen
+  if (weg) for (let k = 0; k < 18; k++) { const d = T - tP, a = k * 2.1 + 0.3, v = 900 + (k % 5) * 260, x = W / 2 + Math.cos(a) * v * d, y = 820 + Math.sin(a) * v * d * 0.8 + 600 * d * d, r = d * (k % 2 ? 6 : -5);
+    ctx.save(); ctx.globalAlpha = clamp(1.4 - d, 0, 1); ctx.translate(x, y); ctx.rotate(r); ctx.shadowColor = "rgba(0,0,0,0.4)"; ctx.shadowBlur = 16; ctx.fillStyle = "#f4f1ea"; ctx.fillRect(-90, -120, 180, 240); ctx.shadowColor = "transparent";
+    ctx.fillStyle = "rgba(0,0,0,0.2)"; for (let l = 0; l < 6; l++) ctx.fillRect(-70, -95 + l * 34, 120 - (l % 3) * 25, 9); ctx.restore(); }
+  // Zähler oben
+  ctx.save(); ctx.font = "700 32px UI"; ctx.fillStyle = "rgba(255,255,255,0.7)"; ctx.fillText("STRAFTATEN", 80, 250); ctx.font = "900 110px Titel"; ctx.fillStyle = weg ? ROT : "#fff"; ctx.fillText(weg ? "99+" : String(n), 76, 360); ctx.restore();
+  zeilenText(T, z.woerter, 1720, 92, "#fff", weg ? "rgba(224,40,60,0.7)" : null);
+  blitz(T, tP, "224,40,60", 0.4, 0.3);
+}
+// 6 Mein Abi hat für ganze Nachbarschaft Haps gemacht – Gruppenchat + Essen
+function haps(T, z) {
+  vollbild(IMG.spain, T, z.a, { zoom: 1.04, fahrt: 0.04, dk: 0.3, oy: -60 });
+  const tH = wortZeit(z, 6), tN = wortZeit(z, 5);
+  const f = flug(T, z.a, z.e, { x: W / 2, y: 760, rotY: 0.12, rotZ: -0.03 }, { x: -700, y: 760, rotY: -1, rotZ: -0.2 }, {});
+  karte({ ...f, w: 880, h: 820, r: 50, schatten: 0.5 }, (x, y, w, h) => { ctx.fillStyle = "#efeae2"; ctx.fillRect(x, y, w, h); ctx.fillStyle = "#fff"; ctx.fillRect(x, y, w, 140);
+    ctx.fillStyle = "#075e54"; ctx.font = "700 40px UI"; ctx.fillText("‹", x + 30, y + 88); ctx.beginPath(); ctx.arc(x + 112, y + 72, 42, 0, Math.PI * 2); ctx.fillStyle = "#d9d3c7"; ctx.fill(); ctx.font = "700 44px UI"; ctx.textAlign = "center"; ctx.fillText("🏠", x + 112, y + 88); ctx.textAlign = "left";
+    ctx.fillStyle = "#111"; ctx.font = "700 40px UI"; ctx.fillText("Nachbarschaft 219", x + 176, y + 70); ctx.fillStyle = "rgba(0,0,0,0.45)"; ctx.font = "700 26px UI";
+    const mit = T > tN - 0.03 ? Math.round(lerp(12, 248, raus((T - tN) / 0.6))) : 12; ctx.fillText(`Abi, Ralle, Lucio und ${mit} weitere`, x + 176, y + 110);
+    const B = (yy, txt, wer, t0, rechts = false) => { const q = zurueck((T - t0) / 0.25); if (q <= 0) return; ctx.save(); ctx.font = "700 42px UI"; const bw = Math.max(ctx.measureText(txt).width, 160) + 70, bx = rechts ? x + w - 40 - bw : x + 40;
+      ctx.translate(bx + bw / 2, yy + 60); ctx.scale(q, q); ctx.translate(-(bx + bw / 2), -(yy + 60)); rr(bx, yy, bw, wer ? 126 : 92, 26); ctx.fillStyle = rechts ? "#d9fdd3" : "#fff"; ctx.fill();
+      if (wer) { ctx.fillStyle = "#c2185b"; ctx.font = "700 26px UI"; ctx.fillText(wer, bx + 34, yy + 38); ctx.font = "700 42px UI"; ctx.fillStyle = "#111"; ctx.fillText(txt, bx + 34, yy + 94); } else { ctx.fillStyle = "#111"; ctx.fillText(txt, bx + 34, yy + 60); } ctx.restore(); };
+    B(y + 180, "Essen ist fertig", "Abi", z.a + 0.08); B(y + 330, "kommt alle runter", "Abi", wortZeit(z, 3)); B(y + 480, "für die ganze Straße", "Abi", tN);
+    if (T > tH - 0.03) { B(y + 640, "🙏🔥 Ehre Abi", null, tH + 0.1, true); } });
+  // Essen-Emojis springen auf „Haps“
+  if (T > tH - 0.03) { const E = ["🍗", "🥙", "🍕", "🍟", "🥘", "🍢", "🍔", "🌯"]; E.forEach((e, k) => { const d = T - tH - k * 0.03; if (d < 0) return; const a = -Math.PI / 2 + (k - 3.5) * 0.33, v = 1200;
+    const x = W / 2 + Math.cos(a) * v * d * 0.8, y = 1300 + Math.sin(a) * v * d + 1800 * d * d; ctx.save(); ctx.globalAlpha = clamp(1.3 - d, 0, 1); ctx.font = "120px UI"; ctx.textAlign = "center"; ctx.translate(x, y); ctx.rotate(d * (k % 2 ? 3 : -3)); ctx.fillText(e, 0, 40); ctx.restore(); }); }
+  zeilenText(T, z.woerter, 1720, 84);
+}
+// 7 (Hook 2) Trage Maske … Film – Filmstreifen mit Ralph-Fotos rauscht durch, bleibt auf „Film“ stehen
+function streifen(T, z) {
+  dunkel(T, "#080606", "#120c0c");
+  const tF = wortZeit(z, 8), FO = ["gruen", "milan", "lila", "uhr", "nacht", "gelb", "gruppe"];
+  const v = T < tF ? lerp(5200, 900, raus((T - z.a) / (tF - z.a))) : 0, pos = T < tF ? (T - z.a) * 2600 - Math.pow(Math.max(0, T - z.a), 2) * 400 : null;
+  const sw = 760, fh = 560, x0 = W / 2 - sw / 2; const off = T < tF ? ((T - z.a) * 3000 * (1 - 0.45 * clamp((T - z.a) / (tF - z.a), 0, 1))) : null;
+  const endOff = (tF - z.a) * 3000 * 0.55, o = off === null ? endOff + Math.sin((T - tF) * 30) * Math.exp(-(T - tF) / 0.08) * 20 : off;
+  const tot = (fh + 40) * FO.length, mitte = 860;
+  ctx.save(); ctx.fillStyle = "#0d0d0d"; ctx.fillRect(x0 - 70, 0, sw + 140, H);
+  for (let y = -((o) % 70) - 70; y < H + 70; y += 70) { rr(x0 - 52, y, 30, 40, 6); ctx.fillStyle = "#e9e3d6"; ctx.fill(); rr(x0 + sw + 22, y, 30, 40, 6); ctx.fill(); }
+  for (let k = -2; k < 6; k++) { const idx = ((Math.floor(o / (fh + 40)) + k) % FO.length + FO.length) % FO.length, yy = mitte - fh / 2 + k * (fh + 40) - (o % (fh + 40));
+    const vb = T < tF ? clamp((5200 - 900) / 4300, 0, 1) : 0; ctx.save(); ctx.filter = T < tF ? `blur(${clamp((1 - (T - z.a) / (tF - z.a)) * 6, 0, 6)}px)` : "none"; bildIn(IMG[FO[idx]], x0, yy, sw, fh, 1.05, 0); ctx.restore(); }
+  ctx.restore();
+  blitz(T, tF, "255,255,255", 0.55, 0.2);
+  if (T > tF - 0.03) { const q = zurueck((T - tF + 0.03) / 0.3); ctx.save(); ctx.translate(W / 2, 1300); ctx.scale(q, q); ctx.font = "900 260px Titel"; ctx.textAlign = "center"; ctx.fillStyle = "#fff6d8"; ctx.shadowColor = "rgba(255,200,120,0.6)"; ctx.shadowBlur = 50; ctx.scale(0.9, 1); ctx.fillText("FILM", 0, 0); ctx.restore(); }
+  balken(1, 150);
+  untertitel(T, z.woerter, 1690, 58);
+  ctx.save(); ctx.fillStyle = "rgba(255,246,216,0.75)"; ctx.font = "700 28px UI"; ctx.fillText("KODAK 5219 · 24 FPS", 80, 110); ctx.textAlign = "right"; ctx.fillText(`${(T * 24 | 0)} F`, W - 80, 110); ctx.restore();
+}
+// 8 Siehst du mich nicht … drinn'n – Flur, Türen schlagen zu
+function tueren(T, z) {
+  vollbild(IMG.milan, T, z.a, { zoom: 1.02, fahrt: 0.09, dk: 0.25 });
+  const tD = wortZeit(z, 11), tS = wortZeit(z, 6);
+  if (T > tS - 0.03 && T < tD) { ctx.save(); const q = zurueck((T - tS + 0.03) / 0.25); ctx.translate(W / 2, 520); ctx.scale(q, q); etikett(-170, 0, "📍 Straße · Berlin", "rgba(20,20,22,0.85)", "#fff", 40); ctx.restore(); }
+  if (T > tD - 0.12) { const q = raus((T - tD + 0.12) / 0.14);
+    ctx.save(); wackeln(T, tD + 0.02, 22);
+    for (const s of [-1, 1]) { const x = s < 0 ? lerp(-W / 2, 0, q) : lerp(W, W / 2, q), g = ctx.createLinearGradient(x, 0, x + W / 2, 0); g.addColorStop(0, "#1d1f22"); g.addColorStop(0.5, "#33363b"); g.addColorStop(1, "#18191c"); ctx.fillStyle = g; ctx.fillRect(x, 0, W / 2, H);
+      ctx.fillStyle = "rgba(255,255,255,0.06)"; for (let k = 0; k < 5; k++) ctx.fillRect(x + 60, 200 + k * 340, W / 2 - 120, 8); rr(x + (s < 0 ? W / 2 - 110 : 60), 860, 50, 200, 12); ctx.fillStyle = "#6b6e74"; ctx.fill(); }
+    ctx.fillStyle = "#000"; ctx.fillRect(W / 2 - 4, 0, 8 * q, H); ctx.restore();
+    if (T > tD + 0.02) { const q2 = zurueck((T - tD - 0.02) / 0.25); ctx.save(); ctx.translate(W / 2, 960); ctx.rotate(-0.08); ctx.scale(q2, q2); ctx.strokeStyle = ROT; ctx.lineWidth = 12; rr(-330, -110, 660, 200, 18); ctx.stroke(); ctx.fillStyle = ROT; ctx.font = "900 150px Titel"; ctx.textAlign = "center"; ctx.scale(0.9, 1); ctx.fillText("DRINN'N", 0, 50); ctx.restore(); }
+    blitz(T, tD + 0.02, "255,255,255", 0.35, 0.15); }
+  if (T < tD + 0.02) zeilenText(T, z.woerter, 1720, 84);
+}
+// 9 Abgefuckt, Straftaten … Akte platzt – Polizei-Terminal, Vorgänge laufen über, Bildschirm springt
+function terminal(T, z) {
+  vollbild(IMG.uhr, T, z.a, { zoom: 1.0, fahrt: 0.05, dk: 0.5, filter: "saturate(0.6)" });
+  const tP = wortZeit(z, 5), weg = T > tP - 0.02;
+  ctx.save(); wackeln(T, tP, 26);
+  const f = flug(T, z.a, z.e, { x: W / 2, y: 820, rotY: 0.1, rotZ: -0.025 }, { x: W / 2 + 900, y: 800, rotY: 1 }, {});
+  karte({ ...f, w: 900, h: 1060, r: 40, hell: false, schatten: 0.6 }, (x, y, w, h) => { ctx.fillStyle = "#0b1410"; ctx.fillRect(x, y, w, h);
+    ctx.fillStyle = "#1f3a2c"; ctx.fillRect(x, y, w, 110); ctx.fillStyle = "#7dffb0"; ctx.font = "700 34px UI"; ctx.fillText("POLIZEI · VORGANGSABFRAGE", x + 40, y + 70);
+    ctx.font = "700 30px UI"; ctx.fillStyle = "rgba(125,255,176,0.6)"; ctx.fillText("Name: G. RALPH   ·   Maske: JA", x + 40, y + 170);
+    const n = Math.floor(clamp((T - z.a) / (tP - z.a), 0, 1) * 26), sl = Math.max(0, n - 18);
+    for (let k = sl; k < n; k++) { const yy = y + 230 + (k - sl) * 44; ctx.fillStyle = k === n - 1 ? "#ffffff" : "rgba(125,255,176,0.85)"; ctx.fillText(`#${String(21900 + k * 37).padStart(6, "0")}  Vorgang ${["offen", "offen", "laufend", "offen"][k % 4]}`, x + 40, yy); }
+    ctx.fillStyle = weg ? ROT : "#7dffb0"; ctx.font = "900 64px Titel"; ctx.fillText(weg ? "SPEICHER VOLL" : `${n} Treffer`, x + 40, y + h - 60);
+    if (weg) { ctx.strokeStyle = "rgba(255,255,255,0.8)"; ctx.lineWidth = 3; const cx = x + w * 0.62, cy = y + h * 0.45; for (let k = 0; k < 9; k++) { const a = k * 0.7 + 0.2; ctx.beginPath(); ctx.moveTo(cx, cy); let px = cx, py = cy; for (let s = 1; s < 5; s++) { px += Math.cos(a + Math.sin(s * k) * 0.4) * 90; py += Math.sin(a + Math.sin(s * k) * 0.4) * 90; ctx.lineTo(px, py); } ctx.stroke(); }
+      ctx.fillStyle = `rgba(224,40,60,${0.25 + 0.1 * Math.sin(T * 40)})`; ctx.fillRect(x, y, w, h); } });
+  ctx.restore();
+  if (weg) for (let k = 0; k < 8; k++) { const yy = (k * 263 + Math.floor(T * 30) * 97) % H; ctx.fillStyle = `rgba(255,255,255,${0.08 * clamp(1 - (T - tP) / 0.5, 0, 1)})`; ctx.fillRect(0, yy, W, 6 + (k % 3) * 10); }
+  zeilenText(T, z.woerter, 1730, 92, "#fff", weg ? "rgba(224,40,60,0.7)" : null);
+  blitz(T, tP, "224,40,60", 0.45, 0.3);
+}
+// 10 Mein Abi hat für ganze Nachbarschaft Haps gemacht – Tisch mit allen, dann Übergang zu Lucio
+function nachbarn(T, z) {
+  vollbild(IMG.gruppe, T, z.a, { zoom: 1.0, fahrt: 0.05, dk: 0.25, dx: 10 });
+  const tN = wortZeit(z, 5), tH = wortZeit(z, 6);
+  if (T > tN - 0.03) { const n = Math.round(lerp(1, 219, raus((T - tN) / 0.5))); ctx.save(); const q = zurueck((T - tN + 0.03) / 0.3); ctx.translate(W - 80, 330); ctx.scale(q, q); ctx.font = "900 120px Titel"; ctx.textAlign = "right"; ctx.fillStyle = GOLD; ctx.fillText(String(n), 0, 0); ctx.font = "700 32px UI"; ctx.fillStyle = "rgba(255,255,255,0.8)"; ctx.fillText("SATT GEWORDEN", 0, 52); ctx.restore(); }
+  gross(T, z.woerter, 80, 1420, 112, "#fff", W - 160, T > tH ? "rgba(233,196,106,0.5)" : null);
+  // letzte halbe Sekunde: Name von Lucio wird angekündigt
+  const tl = z.e - 0.45; if (T > tl) { const q = raus((T - tl) / 0.3); ctx.fillStyle = `rgba(0,0,0,${0.7 * q})`; ctx.fillRect(0, 0, W, H);
+    ctx.save(); ctx.globalAlpha = q; ctx.translate(W / 2, 980); ctx.scale(0.9 + q * 0.1, 0.9 + q * 0.1); ctx.font = "900 190px Titel"; ctx.textAlign = "center"; ctx.fillStyle = "#fff"; ctx.shadowColor = "rgba(159,211,255,0.8)"; ctx.shadowBlur = 50; ctx.scale(0.9, 1); ctx.fillText("LUCIO101", 0, 0); ctx.restore(); }
+}
+// 11 Weh, ich warte nicht auf „GTA 6“ – Graffiti-Foto, Spiel-Kachel mit „NEIN“
+function gta(T, z) {
+  vollbild(IMG.graffiti, T, z.a, { zoom: 1.0, fahrt: 0.035, dk: 0.12, oy: -40 });
+  const tN = wortZeit(z, 3), t6 = wortZeit(z, 6), tW = wortZeit(z, 1);
+  if (T < tW - 0.05) { const q = raus((T - z.a) / 0.25); ctx.save(); ctx.globalAlpha = q; ctx.font = "900 220px Titel"; ctx.fillStyle = "#fff"; ctx.textAlign = "center"; ctx.translate(W / 2, 1650); ctx.scale(0.9, 1); ctx.fillText("WEH", 0, 0); ctx.restore(); return; }
+  { const f = flug(T, tW - 0.1, z.e, { x: W / 2, y: 1240, rotY: -0.12, rotZ: 0.035 }, { x: W / 2 + 900, y: 1300, rotY: 1, rotZ: 0.2 }, {});
+    karte({ ...f, w: 860, h: 520, r: 50, hell: false, schatten: 0.6 }, (x, y, w, h) => { ctx.fillStyle = "#141218"; ctx.fillRect(x, y, w, h);
+      const g = ctx.createLinearGradient(x + 40, y + 40, x + 320, y + 320); g.addColorStop(0, "#ff4f9a"); g.addColorStop(0.5, "#ff8a3d"); g.addColorStop(1, "#7b3cff"); rr(x + 40, y + 40, 280, 280, 40); ctx.fillStyle = g; ctx.fill();
+      ctx.fillStyle = "#fff"; ctx.font = "900 150px Titel"; ctx.textAlign = "center"; ctx.fillText(T > t6 - 0.03 ? "VI" : "", x + 180, y + 235); ctx.textAlign = "left";
+      ctx.fillStyle = "#fff"; ctx.font = "900 54px Titel"; ctx.fillText("GTA 6", x + 360, y + 110); ctx.fillStyle = "rgba(255,255,255,0.55)"; ctx.font = "700 30px UI"; ctx.fillText("Release · 19.11.", x + 360, y + 160);
+      const pr = clamp((T - z.a) / (z.e - z.a), 0, 1); rr(x + 360, y + 210, 440, 14, 7); ctx.fillStyle = "rgba(255,255,255,0.15)"; ctx.fill(); rr(x + 360, y + 210, 440 * (0.6 + pr * 0.3), 14, 7); ctx.fillStyle = "#ff4f9a"; ctx.fill();
+      ctx.fillStyle = "rgba(255,255,255,0.55)"; ctx.font = "700 26px UI"; ctx.fillText("Wartezeit: 2 Tage", x + 360, y + 270);
+      rr(x + 40, y + h - 140, w - 80, 100, 30); ctx.fillStyle = "rgba(255,255,255,0.1)"; ctx.fill(); ctx.fillStyle = "#fff"; ctx.font = "700 36px UI"; ctx.textAlign = "center"; ctx.fillText("Warteliste beitreten", x + w / 2, y + h - 76); ctx.textAlign = "left";
+      if (T > tN - 0.03) { const q = zurueck((T - tN + 0.03) / 0.22); ctx.save(); ctx.translate(x + w / 2, y + h / 2); ctx.rotate(-0.16); ctx.scale(q, q); ctx.strokeStyle = ROT; ctx.lineWidth = 14; rr(-250, -95, 500, 190, 20); ctx.stroke(); ctx.fillStyle = ROT; ctx.font = "900 150px Titel"; ctx.textAlign = "center"; ctx.scale(0.9, 1); ctx.fillText("NEIN", 0, 55); ctx.restore(); } }); }
+  zeilenText(T, z.woerter, 1720, 84, "#fff", "rgba(159,211,255,0.5)");
+  blitz(T, tN, "255,255,255", 0.25, 0.14);
+}
+// 12 In der Trap und ich warte auf Pakete und Packs – Sendungsverfolgung
+function pakete(T, z) {
+  vollbild(IMG.lnacht, T, z.a, { zoom: 1.0, fahrt: 0.04, dk: 0.3 });
+  const tP = wortZeit(z, 7), tK = wortZeit(z, 9);
+  const f = flug(T, z.a, z.e, { x: W / 2, y: 760, rotY: 0.12, rotZ: -0.03 }, { x: -700, y: 760, rotY: -1, rotZ: -0.2 }, {});
+  karte({ ...f, w: 880, h: 700, r: 50, schatten: 0.5 }, (x, y, w, h) => { ctx.fillStyle = "#fff"; ctx.fillRect(x, y, w, h); ctx.fillStyle = "#ffcc00"; ctx.fillRect(x, y, w, 130);
+    ctx.fillStyle = "#d40511"; ctx.font = "900 50px Titel"; ctx.fillText("Sendungen", x + 50, y + 85); ctx.fillStyle = "#111"; ctx.font = "700 30px UI"; ctx.textAlign = "right"; ctx.fillText(T > tK - 0.03 ? "3 unterwegs" : "1 unterwegs", x + w - 50, y + 82); ctx.textAlign = "left";
+    const ST = ["Abgeholt", "Unterwegs", "In Zustellung", "Zugestellt"], pr = clamp((T - z.a) / (z.e - z.a - 0.3), 0, 1) * 2.6;
+    ctx.strokeStyle = "#e5e5ea"; ctx.lineWidth = 10; ctx.beginPath(); ctx.moveTo(x + 100, y + 220); ctx.lineTo(x + 100, y + 220 + 3 * 120); ctx.stroke();
+    ctx.strokeStyle = "#d40511"; ctx.beginPath(); ctx.moveTo(x + 100, y + 220); ctx.lineTo(x + 100, y + 220 + Math.min(3, pr) * 120); ctx.stroke();
+    ST.forEach((s, k) => { const an = pr >= k - 0.02, yy = y + 220 + k * 120; ctx.beginPath(); ctx.arc(x + 100, yy, 24, 0, Math.PI * 2); ctx.fillStyle = an ? "#d40511" : "#e5e5ea"; ctx.fill(); if (an) { ctx.fillStyle = "#fff"; ctx.font = "700 26px UI"; ctx.textAlign = "center"; ctx.fillText("✓", x + 100, yy + 9); ctx.textAlign = "left"; }
+      ctx.fillStyle = an ? "#111" : "rgba(0,0,0,0.35)"; ctx.font = "700 40px UI"; ctx.fillText(s, x + 160, yy + 14); });
+    // Pakete zählen hoch
+    const n = T > tK - 0.03 ? 3 : (T > tP - 0.03 ? 1 : 0); for (let k = 0; k < n; k++) { const d = T - (k === 0 ? tP : tK + k * 0.06), q = zurueck(d / 0.25); ctx.save(); ctx.translate(x + w - 170 + k * 40, y + 330 - k * 26); ctx.scale(q, q); ctx.rotate(-0.06 + k * 0.05);
+      rr(-90, -70, 180, 140, 10); ctx.fillStyle = "#c8a165"; ctx.fill(); ctx.fillStyle = "#a9834a"; ctx.fillRect(-14, -70, 28, 140); ctx.fillStyle = "rgba(255,255,255,0.8)"; ctx.fillRect(-70, 20, 60, 30); ctx.restore(); } });
+  zeilenText(T, z.woerter, 1720, 84);
+}
+// 13 Sie ist sauer, weil ich hab' sie versetzt – Chat + verpasste Anrufe
+function sauer(T, z) {
+  vollbild(IMG.bett, T, z.a, { zoom: 1.02, fahrt: 0.05, dk: 0.3 });
+  const tS = wortZeit(z, 2), tV = wortZeit(z, 7);
+  const f = flug(T, z.a - 0.1, z.e, { x: W / 2, y: 740, rotY: -0.1, rotZ: 0.03 }, { x: W / 2 + 900, y: 760, rotY: 1, rotZ: 0.2 }, {});
+  karte({ ...f, w: 860, h: 760, r: 50, schatten: 0.5 }, (x, y, w, h) => { ctx.fillStyle = "#fff"; ctx.fillRect(x, y, w, h); ctx.fillStyle = "#f6f6f8"; ctx.fillRect(x, y, w, 150);
+    ctx.beginPath(); ctx.arc(x + w / 2, y + 62, 38, 0, Math.PI * 2); ctx.fillStyle = "#ff8fa3"; ctx.fill(); ctx.fillStyle = "#fff"; ctx.font = "700 40px UI"; ctx.textAlign = "center"; ctx.fillText("❤️", x + w / 2, y + 76); ctx.fillStyle = "#111"; ctx.font = "700 28px UI"; ctx.fillText("Sie", x + w / 2, y + 132); ctx.textAlign = "left";
+    const B = (yy, txt, t0, rot = false) => { const q = zurueck((T - t0) / 0.22); if (q <= 0) return; ctx.save(); ctx.font = "700 44px UI"; const bw = ctx.measureText(txt).width + 70, bx = x + 40;
+      ctx.translate(bx, yy + 46); ctx.scale(q, q); ctx.translate(-bx, -(yy + 46)); rr(bx, yy, bw, 92, 40); ctx.fillStyle = rot ? "#ff3b30" : "#e9e9eb"; ctx.fill(); ctx.fillStyle = rot ? "#fff" : "#111"; ctx.fillText(txt, bx + 35, yy + 61); ctx.restore(); };
+    B(y + 190, "wo bist du??", z.a + 0.02); B(y + 300, "ich warte seit 1 std", z.a + 0.3); B(y + 410, "😡😡😡", tS, true); B(y + 520, "vergiss es einfach", tV);
+    if (T > tV + 0.15) { ctx.fillStyle = "rgba(0,0,0,0.4)"; ctx.font = "700 26px UI"; ctx.fillText("Gelesen 23:41", x + 44, y + 650); } });
+  if (T > tS - 0.03) { const q = zurueck((T - tS + 0.03) / 0.3); karte({ x: W / 2, y: lerp(-150, 180, q), w: 900, h: 150, r: 40, hell: false, schatten: 0.5, rotY: 0, rotZ: 0 }, (x, y, w, h) => { ctx.fillStyle = "rgba(36,36,40,0.95)"; ctx.fillRect(x, y, w, h);
+    ctx.font = "700 50px UI"; ctx.fillText("📞", x + 34, y + 94); ctx.fillStyle = "#fff"; ctx.font = "700 36px UI"; ctx.fillText("12 verpasste Anrufe", x + 120, y + 70); ctx.fillStyle = "rgba(255,255,255,0.6)"; ctx.font = "700 28px UI"; ctx.fillText("❤️ Sie · gerade eben", x + 120, y + 116); }); }
+  zeilenText(T, z.woerter, 1720, 84);
+}
+// 14 Ich hab' ADHS, lass' ein K bei Hermès – Kassenbon, „1K“
+function hermes(T, z) {
+  vollbild(IMG.taschen, T, z.a, { zoom: 1.0, fahrt: 0.04, dk: 0.3 });
+  const tA = wortZeit(z, 2), tK = wortZeit(z, 5), tH = wortZeit(z, 7);
+  if (T > tA - 0.03) sticker(T, tA, "ADHS", 300, 360, -0.1, "#ffd60a", 130);
+  const f = flug(T, z.a + 0.1, z.e, { x: W / 2 + 40, y: 960, rotY: -0.12, rotZ: 0.04 }, { x: W / 2, y: 2400, rotY: 0.3, rotZ: 0.2 }, {});
+  karte({ ...f, w: 680, h: 900, r: 18, schatten: 0.55 }, (x, y, w, h) => { ctx.fillStyle = "#fbfaf7"; ctx.fillRect(x, y, w, h); ctx.fillStyle = "#f37021"; ctx.fillRect(x, y, w, 150);
+    ctx.fillStyle = "#fff"; ctx.font = "900 60px Titel"; ctx.textAlign = "center"; ctx.fillText("HERMÈS", x + w / 2, y + 90); ctx.font = "700 24px UI"; ctx.fillText("PARIS · BERLIN", x + w / 2, y + 128); ctx.textAlign = "left";
+    const P = [["Ceinture H", "690,00"], ["Écharpe", "290,00"], ["Bracelet", "20,00"]]; ctx.font = "700 32px UI";
+    P.forEach(([a, b], k) => { if (T < z.a + 0.25 + k * 0.25) return; ctx.fillStyle = "#222"; ctx.fillText(a, x + 50, y + 240 + k * 70); ctx.textAlign = "right"; ctx.fillText(b + " €", x + w - 50, y + 240 + k * 70); ctx.textAlign = "left"; });
+    ctx.setLineDash([10, 10]); ctx.strokeStyle = "rgba(0,0,0,0.3)"; ctx.lineWidth = 3; ctx.beginPath(); ctx.moveTo(x + 40, y + 470); ctx.lineTo(x + w - 40, y + 470); ctx.stroke(); ctx.setLineDash([]);
+    ctx.fillStyle = "#111"; ctx.font = "900 50px Titel"; ctx.fillText("SUMME", x + 50, y + 560); ctx.textAlign = "right"; const s = T > tK - 0.03 ? Math.round(1000 * raus((T - tK) / 0.35)) : 0; ctx.fillText(s.toLocaleString("de-DE") + ",00 €", x + w - 50, y + 560); ctx.textAlign = "left";
+    for (let k = 0; k < 26; k++) { ctx.fillStyle = "#111"; ctx.fillRect(x + 80 + k * 20, y + 680, k % 3 ? 6 : 12, 120); } });
+  if (T > tK - 0.03) { const q = zurueck((T - tK + 0.03) / 0.25); ctx.save(); ctx.translate(W - 230, 1360); ctx.rotate(0.12); ctx.scale(q, q); ctx.font = "900 260px Titel"; ctx.textAlign = "center"; ctx.fillStyle = "#f37021"; ctx.shadowColor = "rgba(243,112,33,0.6)"; ctx.shadowBlur = 40; ctx.scale(0.9, 1); ctx.fillText("1K", 0, 0); ctx.restore(); }
+  zeilenText(T, z.woerter, 1740, 84);
+  blitz(T, tK, "255,170,90", 0.25, 0.2);
+}
+// 15 Wir sind auf Straße vernetzt, Telefone und Audemars sind besetzt – Netz + Uhr
+function vernetzt(T, z) {
+  vollbild(IMG.lwatch, T, z.a, { zoom: 1.02, fahrt: 0.05, dk: 0.32 });
+  const tV = wortZeit(z, 4), tT = wortZeit(z, 5), tA = wortZeit(z, 7), tB = wortZeit(z, 9);
+  // Netz aus Knoten über der Stadt
+  const N = [[200, 360], [520, 280], [860, 400], [330, 640], [700, 600], [150, 900], [930, 820], [520, 900]];
+  const L = [[0, 1], [1, 2], [0, 3], [1, 4], [2, 4], [3, 4], [3, 5], [4, 6], [4, 7], [5, 7], [6, 7], [2, 6]];
+  L.forEach(([a, b], k) => { const t0 = z.a + 0.1 + k * 0.07, q = clamp((T - t0) / 0.25, 0, 1); if (q <= 0) return; const [x1, y1] = N[a], [x2, y2] = N[b];
+    ctx.strokeStyle = T > tV ? "rgba(159,211,255,0.85)" : "rgba(255,255,255,0.5)"; ctx.lineWidth = 4; ctx.beginPath(); ctx.moveTo(x1, y1); ctx.lineTo(lerp(x1, x2, q), lerp(y1, y2, q)); ctx.stroke();
+    if (T > tV) { const p = ((T - tV) * 1.2 + k * 0.13) % 1; ctx.beginPath(); ctx.arc(lerp(x1, x2, p), lerp(y1, y2, p), 7, 0, Math.PI * 2); ctx.fillStyle = "#fff"; ctx.fill(); } });
+  N.forEach(([x, y], k) => { const q = zurueck((T - z.a - k * 0.06) / 0.25); if (q <= 0) return; ctx.save(); ctx.translate(x, y); ctx.scale(q, q); ctx.beginPath(); ctx.arc(0, 0, 34, 0, Math.PI * 2); ctx.fillStyle = "rgba(20,24,30,0.9)"; ctx.fill(); ctx.strokeStyle = EIS; ctx.lineWidth = 4; ctx.stroke();
+    ctx.font = "34px UI"; ctx.textAlign = "center"; ctx.fillText(T > tT - 0.03 ? "📱" : "", 0, 12); ctx.restore(); });
+  // Anrufkarte „besetzt“
+  if (T > tT - 0.03) { const q = zurueck((T - tT + 0.03) / 0.3); karte({ x: lerp(-500, W / 2, q), y: 1200, w: 880, h: 260, r: 50, hell: false, schatten: 0.55, rotY: 0.1, rotZ: -0.03 }, (x, y, w, h) => { ctx.fillStyle = "rgba(28,28,30,0.96)"; ctx.fillRect(x, y, w, h);
+    ctx.save(); ctx.beginPath(); ctx.arc(x + 110, y + 130, 70, 0, Math.PI * 2); ctx.clip(); bildIn(IMG.lwatch, x + 40, y + 60, 140, 140, 1.3, -10); ctx.restore();
+    ctx.fillStyle = "#fff"; ctx.font = "700 44px UI"; ctx.fillText(T > tA - 0.03 ? "Audemars Piguet" : "Lucio", x + 210, y + 110); const bes = T > tB - 0.03;
+    ctx.fillStyle = bes ? "#ff453a" : "rgba(255,255,255,0.6)"; ctx.font = "700 32px UI"; ctx.fillText(bes ? "Besetzt" : "Wählt …", x + 210, y + 162);
+    for (const [cx, c] of [[x + w - 200, "#ff453a"], [x + w - 80, bes ? "rgba(255,255,255,0.15)" : "#30d158"]]) { ctx.beginPath(); ctx.arc(cx, y + 130, 46, 0, Math.PI * 2); ctx.fillStyle = c; ctx.fill(); } }); }
+  if (T > tA - 0.03) { const q = zurueck((T - tA + 0.03) / 0.25); ctx.save(); ctx.translate(80, 1460); ctx.scale(q, q); etikett(0, 0, "ROYAL OAK · 41 MM", "rgba(159,211,255,0.2)", EIS, 30); ctx.restore(); }
+  zeilenText(T, z.woerter, 1740, 80);
+  blitz(T, tB, "255,69,58", 0.25, 0.2);
+}
+// 16 Der Kommissar hält mich fest – Blaulicht, dann Standbild „PAUSE“
+function kommissar(T, z) {
+  const tF = wortZeit(z, 4), fest = T > tF - 0.02, Tb = fest ? tF - 0.02 : T;
+  vollbild(IMG.geld, Tb, z.a, { zoom: 1.04, fahrt: 0.08, dk: 0.3, filter: fest ? "grayscale(0.85) contrast(1.15)" : "none" });
+  if (!fest) { const p = Math.floor((T - z.a) / 0.15) % 2, g = ctx.createRadialGradient(p ? 150 : W - 150, 300, 50, p ? 150 : W - 150, 300, 1100); g.addColorStop(0, p ? "rgba(0,80,255,0.45)" : "rgba(255,30,40,0.45)"); g.addColorStop(1, "rgba(0,0,0,0)"); ctx.fillStyle = g; ctx.fillRect(0, 0, W, H); }
+  gross(T, z.woerter, 80, 1420, 130, "#fff", W - 160, fest ? null : "rgba(80,140,255,0.6)");
+  if (fest) { const d = T - tF; ctx.save(); ctx.globalAlpha = raus(d / 0.1); ctx.fillStyle = "rgba(255,255,255,0.9)"; ctx.fillRect(W / 2 - 70, 760, 40, 150); ctx.fillRect(W / 2 + 30, 760, 40, 150);
+    ctx.font = "700 34px UI"; ctx.textAlign = "center"; ctx.fillText("PAUSE", W / 2, 970); ctx.restore(); blitz(T, tF, "255,255,255", 0.5, 0.15);
+    ctx.save(); ctx.globalCompositeOperation = "overlay"; ctx.drawImage(KORN[Math.floor(T * 48) % KORN.length], 0, 0, W, H); ctx.drawImage(KORN[(Math.floor(T * 48) + 3) % KORN.length], 0, 0, W, H); ctx.restore(); }
+  rec(T, fest ? "STANDBILD" : "REC");
+}
+// 17 Damals hatt' ich kein'n Cent, heute zahl'n wir mit Checks – schwarz-weiß → Farbe, Konto springt
+function checks(T, z) {
+  const tH = wortZeit(z, 5), tC = wortZeit(z, 9), heute = T > tH - 0.03;
+  vollbild(IMG.studio, T, z.a, { zoom: 1.0, fahrt: 0.05, dk: 0.25, filter: heute ? "none" : "grayscale(1) brightness(0.8)" });
+  if (!heute) { ctx.save(); ctx.font = "700 34px UI"; ctx.fillStyle = "rgba(255,255,255,0.8)"; ctx.fillText("DAMALS · 2015", 80, 250); ctx.restore(); }
+  else { ctx.save(); ctx.globalAlpha = raus((T - tH) / 0.2); ctx.font = "700 34px UI"; ctx.fillStyle = EIS; ctx.fillText("HEUTE · 2026", 80, 250); ctx.restore(); }
+  const f = flug(T, z.a, z.e, { x: W / 2, y: 820, rotY: 0.1, rotZ: -0.03 }, { x: -700, y: 820, rotY: -1, rotZ: -0.2 }, {});
+  karte({ ...f, w: 880, h: 480, r: 50, hell: false, schatten: 0.55 }, (x, y, w, h) => { const g = ctx.createLinearGradient(x, y, x + w, y + h); g.addColorStop(0, heute ? "#14324a" : "#2a2a2a"); g.addColorStop(1, heute ? "#0a1622" : "#151515"); ctx.fillStyle = g; ctx.fillRect(x, y, w, h);
+    ctx.fillStyle = "rgba(255,255,255,0.6)"; ctx.font = "700 30px UI"; ctx.fillText("Kontostand", x + 50, y + 80);
+    const b = T > tC - 0.03 ? Math.round(250000 * raus((T - tC) / 0.5) / 100) * 100 : 0; ctx.fillStyle = b ? "#fff" : (T > wortZeit(z, 4) - 0.03 ? "#ff453a" : "#fff"); ctx.font = "900 120px Titel"; ctx.fillText(b.toLocaleString("de-DE") + ",00 €", x + 50, y + 230);
+    if (b) etikett(x + 50, y + 290, "+ Scheck eingelöst", "rgba(159,211,255,0.18)", EIS, 30); else if (T > wortZeit(z, 4) - 0.03) etikett(x + 50, y + 290, "kein Cent", "rgba(255,69,58,0.2)", "#ff8a80", 30); });
+  // Scheck fliegt rein
+  if (T > tC - 0.15) { const q = zurueck((T - tC + 0.15) / 0.35); karte({ x: lerp(W + 600, W / 2 + 40, q), y: 1290, w: 860, h: 360, r: 14, schatten: 0.5, rotY: -0.08, rotZ: 0.05 }, (x, y, w, h) => { ctx.fillStyle = "#f3efe2"; ctx.fillRect(x, y, w, h);
+    ctx.strokeStyle = "rgba(20,60,90,0.25)"; ctx.lineWidth = 2; for (let k = 0; k < 18; k++) { ctx.beginPath(); ctx.moveTo(x, y + k * 22); ctx.lineTo(x + w, y + k * 22 + 40); ctx.stroke(); }
+    ctx.fillStyle = "#143c5a"; ctx.font = "900 44px Titel"; ctx.fillText("SCHECK", x + 40, y + 70); ctx.font = "700 28px UI"; ctx.fillText("Zahlen Sie gegen diesen Scheck", x + 40, y + 140);
+    ctx.font = "900 64px Titel"; ctx.textAlign = "right"; ctx.fillText("250.000 €", x + w - 40, y + 230); ctx.textAlign = "left"; ctx.font = "700 40px UI"; ctx.fillText("Lucio", x + 40, y + 310); ctx.fillRect(x + 40, y + 322, 300, 3); }); }
+  zeilenText(T, z.woerter, 1760, 80);
+}
+// 18 Lasse … brenn'n in mei'm Carrera S – Porsche, Plakette, Ende mit Cover und Kino-Balken
+function carrera(T, z) {
+  const tC = wortZeit(z, 5), tS = wortZeit(z, 6), nah = T > tC - 0.03;
+  if (!nah) vollbild(IMG.porsche2, T, z.a, { zoom: 1.0, fahrt: 0.05, dk: 0.25 });
+  else vollbild(IMG.badge, T, tC, { zoom: 1.3, fahrt: 0.25, dk: 0.2, oy: -420 });
+  if (nah) { const q = zurueck((T - tS + 0.03) / 0.3); if (T > tS - 0.03) { ctx.save(); ctx.translate(W / 2, 1580); ctx.scale(q, q); ctx.font = "900 190px Titel"; ctx.textAlign = "center"; ctx.fillStyle = "#fff"; ctx.shadowColor = "rgba(159,211,255,0.7)"; ctx.shadowBlur = 40; ctx.scale(0.9, 1); ctx.fillText("CARRERA S", 0, 0); ctx.restore(); } }
+  if (!nah) zeilenText(T, z.woerter, 1720, 84);
+  blitz(T, tC, "255,255,255", 0.4, 0.15);
+  const r = ZL.ende - T; if (r < 0.4) balken(raus(1 - r / 0.4), H / 2);
+}
+const SZENEN = () => [tatort, sprachrohr, hardcore, kino, drinn, akte, haps, streifen, tueren, terminal, nachbarn, gta, pakete, sauer, hermes, vernetzt, kommissar, checks, carrera];
+let GRENZEN = null, ZS = null;
+function vorbereiten() { const Z = ZL.zeilen; GRENZEN = Z.map(z => z.a); GRENZEN[0] = 0; GRENZEN[2] = 4.80; GRENZEN.push(ZL.ende + 1);
+  ZS = SZENEN().map((f, i) => ({ f, z: { ...Z[i], a: GRENZEN[i], e: GRENZEN[i + 1] } })); }
+function szeneIn(nr, T, puf) { const alt = ctx; ctx = puf.getContext("2d"); ctx.setTransform(K, 0, 0, K, 0, 0); ctx.filter = "none"; ctx.globalAlpha = 1; ctx.fillStyle = "#000"; ctx.fillRect(0, 0, W, H);
+  const s = ZS[clamp(nr, 0, ZS.length - 1)]; s.f(T, s.z); ctx = alt; }
+const RICHT = [[0, 1], [1, 0], [0, -1], [-1, 0], [0, 1], [1, 0], [-1, 0], [0, -1], [1, 0], [-1, 0], [0, 1], [1, 0], [0, -1], [-1, 0], [1, 0], [0, 1], [-1, 0], [0, -1], [1, 0]];
+// Harte Schnitte (ohne Wisch) an diesen Grenzen: in die Hook und auf Lucios Einsatz
+const HART = new Set([3, 11]);
+function stossJetzt(T) { let st = 0; for (const k of ZL.kicks) { const ph = T - k; if (ph >= 0 && ph < 0.4) st = Math.max(st, Math.exp(-ph / 0.09) * 0.022); } return st; }
+window.zeichne = T => {
+  if (!ZS) vorbereiten();
+  ctx = HAUPT; ctx.setTransform(K, 0, 0, K, 0, 0); ctx.filter = "none"; ctx.globalAlpha = 1; ctx.fillStyle = "#000"; ctx.fillRect(0, 0, W, H);
+  const GR = GRENZEN; let nr = 0; for (let i = 0; i < ZS.length; i++) if (T >= GR[i]) nr = i;
+  const UE = 0.12; let g = -1; for (let i = 1; i < ZS.length; i++) if (Math.abs(T - GR[i]) < UE && !HART.has(i)) g = i;
+  const st = stossJetzt(T);
+  const male = (puf, dx, dy, a = 1) => { ctx.save(); ctx.globalAlpha = a; ctx.translate(W / 2 + dx, H / 2 + dy); ctx.scale(1 + st, 1 + st); ctx.drawImage(puf, -W / 2, -H / 2, W, H); ctx.restore(); };
+  if (g < 0) { szeneIn(nr, T, PUF[0]); male(PUF[0], 0, 0); }
+  else {
+    const p = (T - (GR[g] - UE)) / (2 * UE), e = p < 0.5 ? 4 * p * p * p : 1 - Math.pow(-2 * p + 2, 3) / 2, [rx, ry] = RICHT[g % RICHT.length], v = Math.sin(Math.PI * clamp(p, 0, 1));
+    szeneIn(g - 1, Math.min(T, GR[g] - 0.001), PUF[0]); szeneIn(g, Math.max(T, GR[g]), PUF[1]);
+    for (const [puf, off] of [[PUF[0], -e], [PUF[1], 1 - e]]) { const dx = off * W * rx, dy = off * H * ry; if (Math.abs(off) >= 1) continue;
+      male(puf, dx, dy, 1); for (let s2 = 1; s2 <= 4; s2++) male(puf, dx - rx * s2 * 30 * v, dy - ry * s2 * 52 * v, 0.14 * v); }
+  }
+  // harter Schnitt: kurzer Weißblitz
+  for (const i of HART) { const d = T - GR[i]; if (d >= 0 && d < 0.12) { ctx.fillStyle = `rgba(255,255,255,${0.5 * (1 - d / 0.12)})`; ctx.fillRect(0, 0, W, H); } }
+  ctx.save(); ctx.globalCompositeOperation = "overlay"; ctx.drawImage(KORN[Math.floor(T * 24) % KORN.length], 0, 0, W, H); ctx.restore();
+};
+init();
+</script></body></html>
