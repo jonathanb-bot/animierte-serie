@@ -1902,6 +1902,12 @@
    "bild_s": 64.08,
    "ton_s": 64.11,
    "lufs": -14.6
+  },
+  "taeglich/video-003.mp4": {
+   "ok": true,
+   "bild_s": 88.42,
+   "ton_s": 88.45,
+   "lufs": -14.6
   }
  },
  "serien": {
@@ -2126,6 +2132,10 @@
   "mond-m002": {
    "titel": "Bis zum Mond – Folge 2: Hildesheim legt vor",
    "datei": "taeglich/mond-m002.mp4"
+  },
+  "video-003": {
+   "titel": "Der Schmetterlingseffekt",
+   "datei": "taeglich/video-003.mp4"
   }
  },
  "taeglich_staffeln": {
