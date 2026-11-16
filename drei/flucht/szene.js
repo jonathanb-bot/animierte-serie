@@ -16,6 +16,7 @@ import { AfterimagePass } from 'three/addons/postprocessing/AfterimagePass.js';
 import { ShaderPass } from 'three/addons/postprocessing/ShaderPass.js';
 import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
+import { bauRS6 } from './rs6.js';
 
 let welt = null;
 
@@ -101,62 +102,15 @@ function bauen(W, H) {
       const rand = new THREE.Mesh(new THREE.BoxGeometry(5.6, 0.08, 0.12), weiss); rand.position.set(x, 9.3, z + 0.02); scene.add(rand); }
   }
 
-  // ---------- Auto: Sportkombi (RS-Form), dunkelrot ----------
-  const auto = new THREE.Group(); scene.add(auto); const deko = [];
-  const lack = new THREE.MeshPhysicalMaterial({ color: '#6a0d12', metalness: 0.6, roughness: 0.32, clearcoat: 1, clearcoatRoughness: 0.08, envMap: umgebung, envMapIntensity: 0.25 });
-  const glas = new THREE.MeshPhysicalMaterial({ color: '#05070a', metalness: 0.2, roughness: 0.05, clearcoat: 1, envMap: umgebung, envMapIntensity: 0.2 });
+  // ---------- Auto: Audi-RS-6-Avant-Nachbau (C8), dunkelrot – siehe rs6.js ----------
   const schwarz = new THREE.MeshStandardMaterial({ color: '#0b0c0e', roughness: 0.5 });
-  const profil = (pts) => { const s = new THREE.Shape(); s.moveTo(pts[0][0], pts[0][1]); for (const p of pts.slice(1)) s.lineTo(p[0], p[1]); return s; };
-  const einziehen = (g, ab = 0.92) => { const a = g.attributes.position; for (let i = 0; i < a.count; i++) { const y = a.getY(i); if (y > ab) a.setZ(i, a.getZ(i) * (1 - 0.24 * Math.min(1, (y - ab) / 0.52))); } g.computeVertexNormals(); };
-  const karosse = profil([[0.05, 0.32], [0.0, 0.95], [0.12, 1.32], [0.45, 1.44], [2.95, 1.46], [3.55, 1.02], [4.75, 0.86], [4.95, 0.62], [4.9, 0.3], [4.2, 0.28], [4.05, 0.55], [3.35, 0.55], [3.2, 0.28], [1.6, 0.28], [1.45, 0.55], [0.75, 0.55], [0.6, 0.3]]);
-  const geo = new THREE.ExtrudeGeometry(karosse, { depth: 1.86, bevelEnabled: true, bevelThickness: 0.08, bevelSize: 0.06, bevelSegments: 4, curveSegments: 4 }); geo.translate(-2.47, 0, -0.93); einziehen(geo);
-  const koerper = new THREE.Mesh(geo, lack); koerper.rotation.y = Math.PI / 2; auto.add(koerper);
-  const fgeo = new THREE.ExtrudeGeometry(profil([[0.3, 1.0], [0.42, 1.32], [0.6, 1.4], [2.9, 1.42], [3.42, 1.04]]), { depth: 1.9, bevelEnabled: false }); fgeo.translate(-2.47, 0, -0.95); einziehen(fgeo);
-  const fm = new THREE.Mesh(fgeo, glas); fm.rotation.y = Math.PI / 2; auto.add(fm);
-  // Fensterholm (B-Säule) und Seitenlinie
-  for (const x of [-0.93, 0.93]) { const b = new THREE.Mesh(new THREE.BoxGeometry(0.02, 0.4, 0.1), schwarz); b.position.set(x * 0.86, 1.2, 0.0); auto.add(b);
-    const sl = new THREE.Mesh(new THREE.BoxGeometry(0.02, 0.03, 3.6), new THREE.MeshStandardMaterial({ color: '#2a0508', roughness: 0.4 })); sl.position.set(x * 1.0, 0.72, 0.1); auto.add(sl); }
-  for (const x of [-0.62, 0.62]) { const reling = new THREE.Mesh(new THREE.BoxGeometry(0.05, 0.05, 2.5), new THREE.MeshStandardMaterial({ color: '#111216', metalness: 0.8, roughness: 0.3 })); reling.position.set(x, 1.5, 0.25); auto.add(reling);
-    const sp = new THREE.Mesh(new THREE.BoxGeometry(0.22, 0.14, 0.12), lack); sp.position.set(x * 1.68, 1.06, -0.95); auto.add(sp); }
-  for (const [x, z] of [[-0.93, -1.27], [0.93, -1.27], [-0.93, 1.47], [0.93, 1.47]]) { const bog = new THREE.Mesh(new THREE.TorusGeometry(0.43, 0.06, 6, 16, Math.PI), new THREE.MeshStandardMaterial({ color: '#0d0e10', roughness: 0.6 })); bog.rotation.y = Math.PI / 2; bog.position.set(x * 1.02, 0.36, z); auto.add(bog); }
-  const reifen = new THREE.CylinderGeometry(0.36, 0.36, 0.3, 28); reifen.rotateZ(Math.PI / 2);
-  const felgeMat = new THREE.MeshStandardMaterial({ color: '#1a1c20', metalness: 0.9, roughness: 0.25 });
-  const raeder = [];
-  for (const [x, z] of [[-0.86, -1.27], [0.86, -1.27], [-0.86, 1.47], [0.86, 1.47]]) {
-    const r = new THREE.Group(); r.add(new THREE.Mesh(reifen, schwarz));
-    const felge = new THREE.Mesh(new THREE.CylinderGeometry(0.25, 0.25, 0.32, 10).rotateZ(Math.PI / 2), felgeMat); r.add(felge);
-    for (let k = 0; k < 5; k++) { const sp = new THREE.Mesh(new THREE.BoxGeometry(0.34, 0.05, 0.05), new THREE.MeshStandardMaterial({ color: '#8a8e96', metalness: 1, roughness: 0.2 })); sp.rotation.x = k * Math.PI / 5; sp.position.x = x > 0 ? 0.13 : -0.13; sp.rotation.z = Math.PI / 2; sp.geometry.rotateX(0); r.add(sp); }
-    const bremsS = new THREE.Mesh(new THREE.BoxGeometry(0.06, 0.16, 0.12), new THREE.MeshStandardMaterial({ color: '#c81a1a' })); bremsS.position.set(x > 0 ? 0.1 : -0.1, 0.12, 0.1); r.add(bremsS);
-    r.position.set(x, 0.36, z); auto.add(r); raeder.push(r);
-  }
-  const rotGlow = new THREE.MeshBasicMaterial({ color: new THREE.Color('#ff0505').multiplyScalar(5.5) });
-  const leiste = new THREE.Mesh(new THREE.BoxGeometry(1.82, 0.04, 0.05), rotGlow); leiste.position.set(0, 0.98, 2.57); auto.add(leiste);
-  for (const sx of [-1, 1]) for (let k = 0; k < 6; k++) { const seg = new THREE.Mesh(new THREE.BoxGeometry(0.05, 0.12, 0.05), rotGlow); seg.position.set(sx * (0.56 + k * 0.065), 0.99, 2.575); auto.add(seg); } // LED-Segmente
-  for (const x of [-0.72, 0.72]) { const e = new THREE.Mesh(new THREE.BoxGeometry(0.38, 0.14, 0.05), rotGlow); e.position.set(x, 0.98, 2.57); auto.add(e); }
-  { const hs = new THREE.Mesh(new THREE.BoxGeometry(1.25, 0.32, 0.04), new THREE.MeshStandardMaterial({ color: '#040506', roughness: 0.35, metalness: 0.1 })); hs.position.set(0, 1.24, 2.48); hs.rotation.x = -0.25; auto.add(hs);
-    const dif = new THREE.Mesh(new THREE.BoxGeometry(1.9, 0.24, 0.12), schwarz); dif.position.set(0, 0.42, 2.5); auto.add(dif);
-    const rohrMat = new THREE.MeshStandardMaterial({ color: '#2a2a2e', metalness: 1, roughness: 0.3 });
-    for (const x of [-0.72, -0.5, 0.5, 0.72]) { const r = new THREE.Mesh(new THREE.CylinderGeometry(0.07, 0.07, 0.1, 16), rohrMat); r.rotation.x = Math.PI / 2; r.scale.set(1.3, 1, 0.8); r.position.set(x, 0.4, 2.57); auto.add(r); }
-    const kz = new THREE.Mesh(new THREE.BoxGeometry(0.52, 0.12, 0.02), new THREE.MeshStandardMaterial({ color: '#d8dce0', roughness: 0.6 })); kz.position.set(0, 0.68, 2.56); auto.add(kz);
-    const kzv = kz.clone(); kzv.position.set(0, 0.42, -2.56); auto.add(kzv);
-    // Front: schwarzer Wabengrill mit Rahmen, Lufteinlässe
-    const grill = new THREE.Mesh(new THREE.BoxGeometry(1.0, 0.36, 0.06), schwarz); grill.position.set(0, 0.52, -2.53); auto.add(grill);
-    const rahmen = new THREE.Mesh(new THREE.BoxGeometry(1.06, 0.4, 0.04), new THREE.MeshStandardMaterial({ color: '#2a2c30', metalness: 0.8, roughness: 0.3 })); rahmen.position.set(0, 0.52, -2.51); auto.add(rahmen);
-    for (const x of [-0.72, 0.72]) { const ein = new THREE.Mesh(new THREE.BoxGeometry(0.34, 0.2, 0.06), schwarz); ein.position.set(x, 0.42, -2.52); auto.add(ein); } }
-  { const c = document.createElement('canvas'); c.width = c.height = 128; const g = c.getContext('2d'); const r = g.createRadialGradient(64, 64, 0, 64, 64, 64); r.addColorStop(0, 'rgba(255,40,20,0.9)'); r.addColorStop(0.35, 'rgba(255,20,10,0.35)'); r.addColorStop(1, 'rgba(255,0,0,0)'); g.fillStyle = r; g.fillRect(0, 0, 128, 128);
-    const sm = new THREE.SpriteMaterial({ map: new THREE.CanvasTexture(c), blending: THREE.AdditiveBlending, depthWrite: false, transparent: true });
-    for (const [x, sx] of [[-0.72, 1.6], [0.72, 1.6], [0, 3.0]]) { const sp = new THREE.Sprite(sm); sp.position.set(x, 0.98, 2.75); sp.scale.set(sx, 0.75, 1); auto.add(sp); deko.push(sp); } }
-  const bremse = new THREE.Mesh(new THREE.BoxGeometry(0.6, 0.04, 0.05), rotGlow); bremse.position.set(0, 1.4, 2.42); auto.add(bremse);
-  const weissGlow = new THREE.MeshBasicMaterial({ color: new THREE.Color('#e8f0ff').multiplyScalar(10) });
-  for (const x of [-0.7, 0.7]) { const s = new THREE.Mesh(new THREE.BoxGeometry(0.42, 0.08, 0.05), weissGlow); s.position.set(x, 0.78, -2.5); auto.add(s);
-    const tfl = new THREE.Mesh(new THREE.BoxGeometry(0.36, 0.025, 0.05), weissGlow); tfl.position.set(x, 0.7, -2.5); tfl.rotation.z = x > 0 ? 0.2 : -0.2; auto.add(tfl); }
-  { const c = document.createElement('canvas'); c.width = c.height = 128; const g = c.getContext('2d'); const r = g.createRadialGradient(64, 64, 0, 64, 64, 64); r.addColorStop(0, 'rgba(235,242,255,1)'); r.addColorStop(0.3, 'rgba(200,220,255,0.35)'); r.addColorStop(1, 'rgba(200,220,255,0)'); g.fillStyle = r; g.fillRect(0, 0, 128, 128);
-    const sm = new THREE.SpriteMaterial({ map: new THREE.CanvasTexture(c), blending: THREE.AdditiveBlending, depthWrite: false, transparent: true });
-    for (const x of [-0.7, 0.7]) { const sp = new THREE.Sprite(sm); sp.position.set(x, 0.78, -2.75); sp.scale.set(0.9, 0.55, 1); auto.add(sp); deko.push(sp); } }
-  const scheinwerfer = []; for (const x of [-0.7, 0.7]) { const sp = new THREE.SpotLight('#eef3ff', 14, 70, 0.38, 0.5, 1.2); sp.position.set(x, 0.8, -2.4); sp.target.position.set(x * 2, 0, -40); auto.add(sp, sp.target); scheinwerfer.push(sp); }
+  const rs6 = bauRS6({ umgebung });
+  const { auto, koerper, raeder, lack, deko, rotGlow } = rs6; scene.add(auto); void rotGlow;
+  const thermoTeile = []; auto.traverse(o => { if (o.userData && o.userData.thermo) thermoTeile.push(o); });
+  const scheinwerfer = []; for (const p of rs6.scheinwerferPos) { const sp = new THREE.SpotLight('#eef3ff', 14, 70, 0.38, 0.5, 1.2); sp.position.copy(p); sp.target.position.set(p.x * 2, 0, -40); auto.add(sp, sp.target); scheinwerfer.push(sp); }
   const rueck = new THREE.PointLight('#ff2020', 1.2, 6, 1.5); rueck.position.set(0, 0.9, 3.2); auto.add(rueck);
   const streifTex = (() => { const c = document.createElement('canvas'); c.width = 64; c.height = 512; const g = c.getContext('2d'); const l = g.createLinearGradient(0, 0, 0, 512); l.addColorStop(0, 'rgba(255,40,30,0.9)'); l.addColorStop(1, 'rgba(255,40,30,0)'); g.fillStyle = l; g.fillRect(0, 0, 64, 512); const r = g.createLinearGradient(0, 0, 64, 0); g.globalCompositeOperation = 'destination-in'; r.addColorStop(0, 'rgba(0,0,0,0)'); r.addColorStop(0.5, 'rgba(0,0,0,1)'); r.addColorStop(1, 'rgba(0,0,0,0)'); g.fillStyle = r; g.fillRect(0, 0, 64, 512); return new THREE.CanvasTexture(c); })();
-  for (const x of [-0.72, 0.72]) { const s = new THREE.Mesh(new THREE.PlaneGeometry(0.6, 6), new THREE.MeshBasicMaterial({ map: streifTex, transparent: true, depthWrite: false, blending: THREE.AdditiveBlending, opacity: 0.45 })); s.rotation.x = -Math.PI / 2; s.position.set(x, 0.02, 2.6 + 3); auto.add(s); deko.push(s); }
+  for (const x of [-0.66, 0.66]) { const s = new THREE.Mesh(new THREE.PlaneGeometry(0.6, 6), new THREE.MeshBasicMaterial({ map: streifTex, transparent: true, depthWrite: false, blending: THREE.AdditiveBlending, opacity: 0.45 })); s.rotation.x = -Math.PI / 2; s.position.set(x, 0.02, 2.6 + 3); auto.add(s); deko.push(s); }
   const kegelW = new THREE.Mesh(new THREE.PlaneGeometry(9, 40), new THREE.MeshBasicMaterial({ map: pfuetzeTex, transparent: true, depthWrite: false, blending: THREE.AdditiveBlending, opacity: 0.35, color: '#c8d8ff' }));
   kegelW.rotation.x = -Math.PI / 2; kegelW.position.set(0, 0.03, -22); auto.add(kegelW); deko.push(kegelW);
   const heissMat = new THREE.MeshBasicMaterial({ color: '#ffffff' }), warmMat = new THREE.MeshBasicMaterial({ color: '#b8b8b8' });
@@ -190,6 +144,8 @@ function bauen(W, H) {
   const strahl = new THREE.Mesh(new THREE.CylinderGeometry(0.4, 4.5, 1, 32, 1, true), kegelMat.clone()); strahl.material.uniforms = { farbe: { value: new THREE.Color('#dfe8ff') }, staerke: { value: 0.16 } }; scene.add(strahl);
   const fleck = new THREE.Mesh(new THREE.CircleGeometry(4.5, 48), new THREE.MeshBasicMaterial({ map: pfuetzeTex, transparent: true, depthWrite: false, blending: THREE.AdditiveBlending, color: '#e8f0ff' })); fleck.rotation.x = -Math.PI / 2; scene.add(fleck);
 
+  const studio = new THREE.DirectionalLight('#ffffff', 0); studio.position.set(6, 8, -4); scene.add(studio, studio.target); // nur zum Prüfen (einstellung=studio)
+
   // ---------- Nachbearbeitung ----------
   const composer = new EffectComposer(renderer);
   composer.addPass(new RenderPass(scene, camera));
@@ -211,7 +167,7 @@ function bauen(W, H) {
   composer.addPass(waerme);
   composer.addPass(new OutputPass());
 
-  return { scheinwerfer, tempoBlur, verkehr, navR, navG, blau, canvas, renderer, scene, camera, composer, bloom, nach, waerme, auto, koerper, raeder, schwarz, lack, heissMat, warmMat, deko, lampen, lampenDeko,
+  return { scheinwerfer, tempoBlur, verkehr, navR, navG, blau, canvas, renderer, scene, camera, composer, bloom, nach, waerme, auto, koerper, raeder, schwarz, lack, heissMat, warmMat, thermoTeile, studio, deko, lampen, lampenDeko,
     heli, rotor, blink, such, strahl, fleck, kegelW };
 }
 let welt_sterne = null;
@@ -234,7 +190,7 @@ export function zeichnen(s, t, W, H) {
   w.auto.visible = autoDa; w.auto.position.set(1.8 + wob, 0, z); w.auto.rotation.y = Math.cos(t * 1.3) * 0.015;
   for (const r of w.raeder) r.rotation.x = -weg / 0.36;
   const thermo = art === 'waerme';
-  for (const v of w.verkehr) { v.g.position.set(v.x, 0, 40 - 34 * t - v.ab); v.g.visible = !thermo || true; }
+  for (const v of w.verkehr) { v.g.position.set(v.x, 0, 40 - 34 * t - v.ab); v.g.visible = art !== 'studio'; }
   w.navR.visible = w.navG.visible = (t * 1.1) % 1 < 0.7; w.blau.visible = (t * 2.3) % 1 < 0.3;
   const blur = s.blur !== undefined ? Number(s.blur) : ({ verfolger: 0.5, seite: 0.7, front: 0.45, weg: gas ? 0.9 : 0.5, totale: 0.15, boden: 0.2, waerme: 0 })[art] ?? 0.3;
   w.tempoBlur.uniforms.staerke.value = blur * (1 + (gas ? clamp01(t / 2) : 0));
@@ -256,9 +212,9 @@ export function zeichnen(s, t, W, H) {
   for (const dd of w.deko) dd.visible = !thermo;
   for (const dd of w.lampenDeko) dd.visible = !thermo;
   { const ref = autoDa ? z : hz - 34; const n = Math.round((ref - 180) / -42); w.lampen.forEach((l, i) => { l.position.set(-7.4, 10, 180 - 42 * (n - 1 + i)); }); }
-  w.koerper.material = thermo ? w.heissMat : w.lack; for (const r of w.raeder) r.children[0].material = thermo ? w.warmMat : w.schwarz;
+  for (const m of w.thermoTeile) m.material = thermo ? (m.userData.thermo === 'heiss' ? w.heissMat : w.warmMat) : m.userData.mat;
   w.waerme.uniforms.an.value = thermo ? 1 : 0; w.waerme.uniforms.zeit.value = t;
-  w.bloom.strength = thermo ? 0.25 : art === 'front' ? 0.35 : 0.75; w.scene.fog.density = thermo ? 0.004 : 0.012;
+  w.bloom.strength = thermo ? 0.25 : art === 'front' ? 0.35 : art === 'studio' ? 0.2 : 0.75; w.scene.fog.density = thermo ? 0.004 : 0.012;
   for (const sp of w.scheinwerfer) sp.intensity = art === 'front' ? 1.2 : art === 'boden' ? 3 : 14;
   const ax = w.auto.position.x;
   const ruck = (a, f) => Math.sin(t * f) * a;
@@ -277,9 +233,13 @@ export function zeichnen(s, t, W, H) {
     cam.fov = 18 - 4 * clamp01(t / 4); cam.position.copy(von); cam.lookAt(autoDa && verloren < 1 ? ax : ziel.x, 0, autoDa && verloren < 1 ? z - 1 : ziel.z);
   } else if (art === 'weg') { // feste Kamera hinter dem Auto, das davonzieht
     cam.fov = 40; cam.position.set(2.2, 1.4, 40 + 14); cam.lookAt(1.8, 0.9, 40 - 60);
+  } else if (art === 'studio') { // Prüfansicht: Kamera kreist um das Auto (winkel in Grad, hoehe, abstand)
+    const a = Number(s.winkel || 0) * Math.PI / 180, r = Number(s.abstand || 7.5);
+    cam.fov = 30; cam.position.set(ax + Math.sin(a) * r, Number(s.hoehe || 1.2), z + Math.cos(a) * r); cam.lookAt(ax, 0.7, z);
   } else if (art === 'totale') { // hoch und weit: Autobahn, Lichterkette, Hubschrauber und Auto
     cam.fov = 45; cam.position.set(-40, 38, z + 60 - t * 4); cam.lookAt(ax, 0, z - 30);
   }
+  w.studio.intensity = art === 'studio' ? 2.2 : 0; w.studio.target.position.copy(w.auto.position); w.studio.position.copy(cam.position).add(new THREE.Vector3(3, 6, 0));
   cam.aspect = W / H; cam.updateProjectionMatrix();
   w.composer.render();
   w.nach.uniforms.damp.value = thermo ? 0.2 : 0.3;

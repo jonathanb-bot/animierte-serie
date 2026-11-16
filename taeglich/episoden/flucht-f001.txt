@@ -35,7 +35,7 @@
 // Verfolger, PS zählen hoch
 [drei einstellung=verfolger strahl=1 chip="600>900"] Über neunhundert PS. Und bis jetzt bist du nicht einmal Vollgas gefahren.
 // Das Auto zieht davon
-[drei einstellung=weg strahl=1 strahl_aus=1.6 gas=1 ein="zweihundertfünfzig>HELI: CA. #250 KM/H" ein_y=420] Ein Polizeihubschrauber schafft etwa zweihundertfünfzig Kilometer pro Stunde. Du trittst das Pedal durch.
+[drei einstellung=weg strahl=1 strahl_aus=1.6 gas=1 ein="zweihundertfünfzig>HELI: CA. 250 KM/H" ein_y=420] Ein Polizeihubschrauber schafft etwa zweihundertfünfzig Kilometer pro Stunde. Du trittst das Pedal durch.
 
 == Kontakt verloren ==
 // Totale: der Strahl sucht die leere Straße
