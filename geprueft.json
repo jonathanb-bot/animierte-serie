@@ -1914,6 +1914,12 @@
    "bild_s": 66.62,
    "ton_s": 66.6,
    "lufs": -14.6
+  },
+  "taeglich/raub-r001.mp4": {
+   "ok": true,
+   "bild_s": 74.12,
+   "ton_s": 74.13,
+   "lufs": -14.6
   }
  },
  "serien": {
@@ -2146,6 +2152,10 @@
   "mond-m003": {
    "titel": "Bis zum Mond – Folge 3: Die Jagd beginnt",
    "datei": "taeglich/mond-m003.mp4"
+  },
+  "raub-r001": {
+   "titel": "Der letzte Raub – Folge 1: Acht Millionen. Eine Schwester.",
+   "datei": "taeglich/raub-r001.mp4"
   }
  },
  "taeglich_staffeln": {
