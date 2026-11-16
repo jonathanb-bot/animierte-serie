@@ -111,3 +111,7 @@ Reihenfolge als Vorschlag; die Analyse darf tauschen, aber jedes Genre kommt bis
   - **YouTube:** deutsch s01/s02 Median 17 Aufrufe je Short, englisch gleiche Videos Median 252 (4–1.253) → Ausspielung, nicht Inhalt (3. Tag in Folge).
   - **Cliffhanger-Art:** Entdeckung (2 IG-Posts) 15,4/h, Ø 26 s gegen Gefahr (4) 4,9/h, Ø 9,5 s – überlagert vom Hook der jeweils nächsten Folge, kein Urteil.
   - Erzählform „eine Nacht in Echtzeit“, Welt Wald/Hütte: nur die schwachen s03-Starts, noch nicht von Hook und Länge zu trennen. Krimi (s04), E5, E6: offen.
+
+## Der letzte Raub – Ihr entscheidet (ab 16.11., Issue #35)
+- **Experiment:** Mitmach-Thriller mit A/B-Abstimmung über den Top-Kommentar (Erzählform „interaktiv“), Stimme Orus, eigene Kulissen `engine/raub.js`, du immer von hinten. Zu messen: Anteil Kommentare mit A/B, Likes auf dem Top-Kommentar, Durchhalten von Folge zu Folge, Kommentare pro 1.000 Aufrufe im Vergleich zu „Bis zum Mond“ und „Deine Welt“.
+- Folge 1 (16.11.): 75,6 s, 13 Einstellungen, Entscheidung „Wahrheit sagen / Ziel für dich behalten“. Zahlen folgen im Lauf am 17.11.
