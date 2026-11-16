@@ -2,6 +2,8 @@
 
 > **Große Analyse-Auswertung am 22.11.2026 (Jonathan 14.11.):** An diesem Tag werden alle bisherigen Projekte gründlich ausgewertet (24. Stock, Der Alien, Der letzte Mann, Kurzvideo-Staffeln inkl. Englisch und Zitat-Videos, Deine Welt, Bis zum Mond). Ablauf `taeglich/laeufe/analyse-22-11.md` (Branch `taeglich`), Bericht `taeglich/analyse/2026-11-22-abschluss.md`. Bis dahin alle Zahlen, Beobachtungen und Experimente sauber festhalten.
 
+> **Song-Edits (Jonathan 14.–16.11.):** Schickt Jonathan im Chat nur eine MP3 oder einen Reel-Link (evtl. mit kurzer Notiz), ist das ein Edit-Auftrag: ohne Rückfragen nach `edits/README.md` → „Standard-Auftrag“ bauen und das Video in voller Qualität im Chat liefern. Läuft auf einem anderen Konto, unabhängig von der Analyse.
+
 > **Branch `taeglich`: Kurzvideo-Staffeln (Issue #10).** Verbindlich ist `taeglich/FORMAT.md`. Die aktuellen festen Regeln stehen in den offenen Issues mit Label `dringlich` und in `CLAUDE.md` auf `main` (`git show origin/main:CLAUDE.md`). Bei Widersprüchen gilt: Issues > `CLAUDE.md` auf `main` > diese Datei.
 > **QUALITÄT VOR QUANTITÄT (Jonathans feste Vorgabe 8.11., Issue #30):** Jedes Video muss maximal gut aussehen und klingen. Lieber weniger Videos, dafür jedes sauber. Vor jedem Veröffentlichen das Qualitäts-Tor in `taeglich/FORMAT.md` abhaken, nie mit weniger Qualität rendern, um Zeit zu sparen.
 > **„Der letzte Raub – Ihr entscheidet“ (Jonathan 16.11., Issue #35):** Mitmachserie (Banküberfall-Thriller), 10 Folgen à 62–89 s, Stimme Orus, Top-Kommentar entscheidet A/B, eine Folge am Tag (Lauf `taeglich/laeufe/raub.md`, 16:47). Verbindlich: `raub/serienbibel.md`, `raub/folgenplan.md`, `raub/gedaechtnis.json`.
