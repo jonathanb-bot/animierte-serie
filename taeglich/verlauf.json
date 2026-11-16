@@ -489,7 +489,17 @@
     "stadt",
     "stuttgart",
     "hildesheim"
-   ]
+   ],
+   "veroeffentlicht": {
+    "video": "https://raw.githubusercontent.com/jonathanb-bot/animierte-serie/youtube-upload/taeglich/mond-m003.mp4",
+    "geplant": {
+     "tiktok": "2026-11-16T20:56:00",
+     "instagram": "2026-11-16T21:54:00",
+     "youtube": "2026-11-16T22:26:00"
+    },
+    "lufs": -14.6,
+    "dauer_s": 66.62
+   }
   }
  ]
 }

@@ -1,21 +1,22 @@
 {
  "_info": "Weltgedächtnis „Bis zum Mond“. tuerme = Stockwerke pro Stadt beim letzten Video (für alt>neu), reihenfolge = feste Plätze auf dem Turmplatz. Nach jeder Folge mit `python mond/stand.py --speichern` aktualisieren. gesperrt = Kommentar-IDs, die nicht zählen (Beleidigung, Politik, Werbung).",
- "folge": 2,
- "datum": "2026-11-15",
- "tag": 2,
+ "folge": 3,
+ "datum": "2026-11-16",
+ "tag": 3,
  "tuerme": {
   "Hildesheim": 6,
+  "Stuttgart": 4,
   "Freiburg": 3,
-  "Stuttgart": 3,
+  "Hamm": 3,
   "Leimersheim": 2,
   "Plauen": 2,
   "Rastatt": 2,
   "Ulm": 2,
   "Augsburg": 1,
+  "Baden-Baden": 1,
   "Berlin": 1,
   "Ebensee": 1,
   "Freilassing": 1,
-  "Hamm": 1,
   "Meuselwitz": 1,
   "Oldenburg": 1,
   "Ronnenberg": 1
@@ -35,13 +36,15 @@
   "Hamm",
   "Meuselwitz",
   "Oldenburg",
-  "Ronnenberg"
+  "Ronnenberg",
+  "Baden-Baden"
  ],
  "gesperrt": [],
  "erreichte_ziele": [],
  "chronik": [
   "Folge 1 „Der Startschuss“ (14.11.): Regeln, Ziele bis zum Mond, Platz noch leer. Stimme Fenrir.",
-  "Folge 2 „Hildesheim legt vor“ (15.11.): 15 Städte, 27 Stockwerke. Hildesheim 6 (@jaron.krk, 3 Kommentare), Freiburg und Stuttgart je 3, Dorf Leimersheim Platz 4, Ebensee (AT) dabei, 57 Feuer-Emojis zählen nicht. Noch kein Ziel erreicht (Wolken 333). Neu in engine/turm.js: schilder=, schild_px=, stock_hoehe= (Folge 2 mit 2.5)."
+  "Folge 2 „Hildesheim legt vor“ (15.11.): 15 Städte, 27 Stockwerke. Hildesheim 6 (@jaron.krk, 3 Kommentare), Freiburg und Stuttgart je 3, Dorf Leimersheim Platz 4, Ebensee (AT) dabei, 57 Feuer-Emojis zählen nicht. Noch kein Ziel erreicht (Wolken 333). Neu in engine/turm.js: schilder=, schild_px=, stock_hoehe= (Folge 2 mit 2.5).",
+  "Folge 3 „Die Jagd beginnt“ (16.11.): 16 Städte, 31 Stockwerke. Stuttgart 4 (Platz 2, @jonas27859 jetzt 3 Likes), nur 2 hinter Hildesheim 6 (seit gestern +0). Hamm 1→3 (Platz 13→4, @joejanjac132 kommentierte unter Folge 2 nochmal „hamm“; stand.py zählt seitdem mehrdeutige Orte auch kleingeschrieben, wenn sie allein den Kommentar bilden). Baden-Baden neu (@EllenZaum „mein Geburtsort“, Baden-Baden in staedte.json ergänzt). Noch kein Ziel erreicht. Neu in engine/turm.js: modus=duell. Post: TikTok 20:56, Instagram 21:54, YouTube 22:26."
  ],
- "stand_kommentare": "2026-11-15T14:19:39.606Z"
+ "stand_kommentare": "2026-11-16T14:24:44.812Z"
 }

@@ -23,6 +23,7 @@ Jede Stadt bekommt einen Bauplatz auf einem schwebenden Turmplatz. Die Zuschauer
 - `[turm modus=feld tuerme="Stadt:alt>neu|…" nah=… blick=i,j markiere=i,j leer="Deine Stadt?" leer_zeigen=N zeit=tag|abend|nacht]` – Turmplatz 8×8, Städte in Reihenfolge von der Mitte nach außen.
 - `[turm modus=hoehe hoehe=von>bis stadt="…" farbe=#…]` – Kamerafahrt am Turm hoch (logarithmisch, Wolken, Ballon, Flugzeug, Everest, Raumstation, Satellit, Mond), Höhenanzeige in Metern und Stockwerken.
 - `[turm modus=ziele]` – Zielkarte.
+- `[turm modus=duell duell="Hildesheim#0:6|Stuttgart#2:3>4" zeit=abend titel_text="DAS DUELL"]` – (neu 16.11., Folge 3) zwei Türme groß nebeneinander, Abstand als Klammer mit „−2 Stockwerke“, Tafeln mit Name und Zahl unter den Untertiteln.
 - `[turm modus=rangliste rangliste="München#0:12>41|Wien#1:30" ziel=333 ziel_name=Wolken]` – Rangliste (Top 5) mit Balken bis zum nächsten Ziel; `#n` = fester Platz, gleiche Farbe wie der Turm.
 
 ## Zählen und täglicher Lauf
