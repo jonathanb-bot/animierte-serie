@@ -23,7 +23,7 @@ ROOT = Path(__file__).resolve().parent.parent
 GED = ROOT / "mond" / "gedaechtnis.json"
 STAEDTE = ROOT / "mond" / "staedte.json"
 SERIE = "Bis zum Mond"
-# Orte, die auch normale Wörter sind: zählen nur, wenn sie im Kommentar großgeschrieben stehen
+# Orte, die auch normale Wörter sind: zählen nur, wenn sie großgeschrieben stehen oder allein den ganzen Kommentar bilden
 MEHRDEUTIG = {"essen", "halle", "baden", "hamm", "zug", "marl", "wels", "traun", "thun", "biel", "hagen", "worms", "celle", "unna", "moers", "bern"}
 
 
@@ -59,7 +59,7 @@ def stadt_finden(text: str, lx: dict) -> str | None:
                 continue
             k = " ".join(toks[i:i + n])
             if k in lx:
-                if n == 1 and k in MEHRDEUTIG and not toks_orig[i][:1].isupper():
+                if n == 1 and k in MEHRDEUTIG and not toks_orig[i][:1].isupper() and len(toks) > 1:  # Kommentar nur „hamm“ = Stadt
                     continue
                 if best is None or n > best[1] or (n == best[1] and i < best[0]):
                     best = (i, n, lx[k])

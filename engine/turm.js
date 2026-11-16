@@ -7,6 +7,7 @@
      - leer: Text auf den Schildern freier Plätze (Standard „?“), leer_zeigen=N: so viele freie Plätze (die nächsten) bekommen ein Schild
    [turm modus=hoehe hoehe=0>1000 stadt="Deine Stadt"]   Kamerafahrt am Turm hoch (Meter, 1 Stockwerk = 3 m)
    [turm modus=ziele bis=5]                                Zielkarte (Wolken … Mond), bis = wie viele Ziele schon sichtbar
+   [turm modus=duell duell="Hildesheim#0:6|Stuttgart#2:3>4" zeit=abend titel_text="DAS DUELL"]  (neu 16.11.) zwei Türme groß nebeneinander mit Abstand-Klammer
    [turm modus=rangliste rangliste="München#0:12>41|Wien#1:30" ziel=333 ziel_name=Wolken]  (#n = Platz/Farbe wie im Feld)  Rangliste mit Balken bis zum nächsten Ziel
 */
 (() => {
@@ -248,5 +249,51 @@
     if (!eintraege.length) { ctx.textAlign = "center"; ctx.fillStyle = "rgba(255,255,255,0.6)"; ctx.font = "700 40px HUD"; ctx.fillText("Noch keine Stadt", 540, y0 + 300); }
   };
 
-  SZ.turm = (s, t) => { const m = s.modus || "feld"; if (m === "hoehe") hoeheModus(s, t); else if (m === "ziele") zieleModus(s, t); else if (m === "rangliste") ranglisteModus(s, t); else feldModus(s, t); };
+  // ---------- Duell (neu 16.11.): duell="Hildesheim#0:6|Stuttgart#2:3>4" zeit=tag|abend titel_text="DAS DUELL" ----------
+  // Zwei Türme groß nebeneinander, Stockwerke zählen hoch, Klammer zeigt den Abstand („noch 2 Stockwerke“).
+  const duellModus = (s, t) => {
+    const P = HIMMEL[s.zeit] || HIMMEL.abend;
+    ctx.fillStyle = lgrad(0, 0, 0, 1920, [[0, P.oben], [0.75, P.unten], [1, P.unten]]); ctx.fillRect(0, 0, 1080, 1920);
+    glut(540, 1180, 760, P.sonne, 0.55); circle(540, 1180, 120, rgba(P.sonne, 0.9));
+    { const r = rnd(5); for (let k = 0; k < 4; k++) { const wx = ((r() * 1400 + t * (10 + k * 4)) % 1500) - 220, wy = 360 + k * 36 + r() * 30, s2 = 0.45 + r() * 0.35;
+      for (const [dx, dy, rr] of [[0, 0, 60], [70, -26, 78], [150, 0, 60], [210, 14, 42]]) circle(wx + dx * s2, wy + dy * s2, rr * s2, rgba("#ffffff", 0.32)); } }
+    const yb = 1300; // Boden (darunter Platz für die Untertitel)
+    { const r = rnd(29); for (let k = 0; k < 34; k++) { const bx = r() * 1080, bh2 = 40 + r() * 150; box(bx, yb - bh2, 30 + r() * 40, bh2 + 20, 3, rgba(mix(P.oben, "#ffffff", 0.35 + r() * 0.2), 0.55)); } }
+    ctx.fillStyle = lgrad(0, yb, 0, 1920, [[0, P.gras], [1, shade(P.gras, -0.35)]]); ctx.fillRect(0, yb, 1080, 1920 - yb);
+    box(0, yb - 6, 1080, 16, 0, shade(P.platz, -0.1)); box(0, yb + 10, 1080, 70, 0, rgba(shade(P.platz, -0.25), 0.55)); for (let x = 20; x < 1080; x += 120) box(x, yb + 42, 60, 6, 3, rgba("#ffffff", 0.35));
+    const ee = String(s.duell || "").split("|").map(q => q.trim()).filter(Boolean).slice(0, 2).map(q => { const [n, v] = q.split(":"); const [nm, idx] = n.trim().split("#"); return { name: nm.trim(), idx: idx === undefined ? null : Number(idx), v: String(v || "0") }; });
+    if (ee.length < 2) return;
+    const end = ee.map(e => { const p = e.v.split(">"); return zahl(p[p.length - 1]); }), maxS = Math.max(1, ...end);
+    const fh = Math.min(110, 640 / maxS), tw = 230, xs = [270, 810];
+    const namen = []; // Namensschilder zuletzt, damit die Abstandslinie sie nicht kreuzt
+    const tops = ee.map((e, k) => {
+      const v = bereich(e.v, t, Number(s.wachsen_dauer) || 1.6, 0.5), st = Math.round(v), h = v * fh, x = xs[k], f = e.idx === null ? farbeVon(e.name) : FARBEN[e.idx % FARBEN.length], top = yb - h;
+      ellipse(x + tw * 0.35, yb + 10, tw * 0.75, 22, rgba("#1a2030", 0.22));
+      if (h > 1) {
+        ctx.fillStyle = lgrad(x - tw / 2, 0, x + tw / 2, 0, [[0, shade(f, 0.14)], [0.62, f], [0.63, shade(f, -0.2)], [1, shade(f, -0.3)]]); ctx.fillRect(x - tw / 2, top, tw, h);
+        box(x - tw / 2 - 8, top - 14, tw + 16, 18, 4, shade(f, -0.38));
+        for (let q = 0; q < st; q++) { const y = yb - (q + 1) * fh + fh * 0.28; for (const [x0, a] of [[x - tw / 2 + 22, 0.42], [x - 40, 0.42], [x + 32, 0.2], [x + tw / 2 - 52, 0.2]]) box(x0, y, Math.min(30, tw * 0.13), fh * 0.42, 3, rgba(P.licht < 0.8 ? "#ffd27a" : "#ffffff", a)); }
+        line(x - tw / 2, yb - fh * Math.floor(v) + 0.5, x - tw / 2, yb, 2, rgba("#ffffff", 0.3));
+      }
+      // Fahne
+      const fy = top - 14; line(x, fy, x, fy - 120, 4, "#3a3e4a"); const wv = Math.sin(t * 4 + k * 2) * 5;
+      poly([[x, fy - 120], [x + 70, fy - 108 + wv], [x + 70, fy - 74 + wv], [x, fy - 82]], f);
+      namen.push([x, st, e.name, f]);
+      return { top, st, v, x, f };
+    });
+    // Abstand: gestrichelte Linie von der höheren Spitze, Klammer am niedrigeren Turm
+    const [a, b] = tops, diff = Math.round(a.v) - Math.round(b.v), hi = diff >= 0 ? a : b, lo = diff >= 0 ? b : a, p = clamp((t - 2.2) / 0.5, 0, 1);
+    if (diff !== 0 && p > 0) { ctx.save(); ctx.globalAlpha = p; ctx.setLineDash([16, 12]); line(hi.x + (lo.x > hi.x ? tw / 2 : -tw / 2), hi.top, lo.x + (lo.x > hi.x ? tw / 2 + 30 : -tw / 2 - 30), hi.top, 4, rgba("#ffffff", 0.85)); ctx.setLineDash([]);
+      const bx = lo.x + (lo.x > hi.x ? tw / 2 + 30 : -tw / 2 - 30); line(bx, hi.top, bx, lo.top, 5, "#ffe27a"); line(bx - 14, hi.top, bx + 14, hi.top, 5, "#ffe27a"); line(bx - 14, lo.top, bx + 14, lo.top, 5, "#ffe27a");
+      const n = Math.abs(diff), my = (hi.top + lo.top) / 2; ctx.textAlign = "center"; ctx.shadowColor = "rgba(0,0,0,0.45)"; ctx.shadowBlur = 16;
+      ctx.fillStyle = "#ffe27a"; ctx.font = "900 92px Titel"; ctx.fillText(`−${n}`, 540, my + 20); ctx.font = "700 30px HUD"; ctx.fillStyle = "#ffffff"; ctx.fillText(n === 1 ? "Stockwerk" : "Stockwerke", 540, my + 62); ctx.restore(); }
+    for (const [x, st, nm, f] of namen) { const y = 1480, w = 330, h = 250; // Tafel unter dem Turm, unterhalb der Untertitel
+      ctx.save(); ctx.shadowColor = "rgba(0,0,0,0.35)"; ctx.shadowBlur = 26; box(x - w / 2, y, w, h, 36, "rgba(12,14,34,0.82)"); ctx.restore();
+      box(x - w / 2, y, w, 14, 7, f); ctx.save(); ctx.textAlign = "center"; ctx.fillStyle = "#ffffff"; ctx.font = "900 42px Titel"; ctx.fillText(nm, x, y + 70);
+      ctx.fillStyle = "#f2cf7e"; ctx.font = "900 96px Titel"; ctx.fillText(fmt(st), x, y + 172); ctx.fillStyle = rgba("#ffffff", 0.7); ctx.font = "700 28px HUD"; ctx.fillText(st === 1 ? "Stockwerk" : "Stockwerke", x, y + 216); ctx.restore(); }
+    // Titel
+    ctx.save(); ctx.textAlign = "center"; ctx.font = "900 84px Titel"; ctx.fillStyle = "#ffffff"; ctx.shadowColor = "rgba(0,0,0,0.4)"; ctx.shadowBlur = 24; ctx.fillText(s.titel_text || "DAS DUELL", 540, 300); ctx.restore();
+  };
+
+  SZ.turm = (s, t) => { const m = s.modus || "feld"; if (m === "hoehe") hoeheModus(s, t); else if (m === "ziele") zieleModus(s, t); else if (m === "rangliste") ranglisteModus(s, t); else if (m === "duell") duellModus(s, t); else feldModus(s, t); };
 })();

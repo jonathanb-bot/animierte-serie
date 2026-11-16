@@ -1,0 +1,122 @@
+{
+ "dauer": 67.07,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "turm",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 5.582,
+   "emotion": "erzaehlend",
+   "text": "Tag drei auf deinem Turmplatz. Sechzehn Städte bauen mit, und an der Spitze wird es eng."
+  },
+  {
+   "nr": 2,
+   "typ": "turm",
+   "kapitel": 1,
+   "start": 5.582,
+   "dauer": 3.11,
+   "emotion": "erzaehlend",
+   "text": "Einunddreißig Stockwerke, alle aus euren Kommentaren."
+  },
+  {
+   "nr": 3,
+   "typ": "titel",
+   "kapitel": 1,
+   "start": 8.692,
+   "dauer": 2.414,
+   "emotion": "erzaehlend",
+   "text": "Und eine Stadt greift an."
+  },
+  {
+   "nr": 4,
+   "typ": "turm",
+   "kapitel": 2,
+   "start": 11.106,
+   "dauer": 6.278,
+   "emotion": "erzaehlend",
+   "text": "Stuttgart! Der Kommentar von Jonas hat jetzt drei Likes. Das macht vier Stockwerke und Platz zwei."
+  },
+  {
+   "nr": 5,
+   "typ": "turm",
+   "kapitel": 2,
+   "start": 17.384,
+   "dauer": 5.39,
+   "emotion": "erzaehlend",
+   "text": "Gestern lagen noch drei Stockwerke dazwischen. Jetzt hat Hildesheim sechs, und Stuttgart fehlen nur noch zwei."
+  },
+  {
+   "nr": 6,
+   "typ": "turm",
+   "kapitel": 3,
+   "start": 22.774,
+   "dauer": 4.382,
+   "emotion": "erzaehlend",
+   "text": "Dann Hamm. Gestern noch Platz dreizehn, mit einem einzigen Stockwerk."
+  },
+  {
+   "nr": 7,
+   "typ": "turm",
+   "kapitel": 3,
+   "start": 27.156,
+   "dauer": 6.038,
+   "emotion": "erzaehlend",
+   "text": "Aber derselbe Fan hat unter Folge zwei noch mal Hamm geschrieben. Ein Like dazu, und Hamm springt auf Platz vier."
+  },
+  {
+   "nr": 8,
+   "typ": "turm",
+   "kapitel": 4,
+   "start": 33.194,
+   "dauer": 7.094,
+   "emotion": "erzaehlend",
+   "text": "Und ganz neu am Rand: Baden-Baden. Ellen schreibt: mein Geburtsort. Vorher hat sie schon für Rastatt gebaut."
+  },
+  {
+   "nr": 9,
+   "typ": "turm",
+   "kapitel": 5,
+   "start": 40.288,
+   "dauer": 5.774,
+   "emotion": "erzaehlend",
+   "text": "Die Rangliste nach Tag drei: Hildesheim vorne, Stuttgart neu auf zwei, Freiburg und Hamm gleichauf."
+  },
+  {
+   "nr": 10,
+   "typ": "turm",
+   "kapitel": 6,
+   "start": 46.062,
+   "dauer": 6.95,
+   "emotion": "erzaehlend",
+   "text": "Hildesheim steht bei achtzehn Metern, so hoch wie ein Haus mit sechs Etagen. Aber seit gestern kein einziges neues Stockwerk."
+  },
+  {
+   "nr": 11,
+   "typ": "turm",
+   "kapitel": 6,
+   "start": 53.012,
+   "dauer": 3.638,
+   "emotion": "erzaehlend",
+   "text": "Und bis zu den Wolken? Noch über dreihundert Stockwerke."
+  },
+  {
+   "nr": 12,
+   "typ": "turm",
+   "kapitel": 7,
+   "start": 56.65,
+   "dauer": 5.054,
+   "emotion": "erzaehlend",
+   "text": "Zwei Likes auf Stuttgart, und es steht unentschieden. Drei, und Hildesheim verliert die Spitze."
+  },
+  {
+   "nr": 13,
+   "typ": "turm",
+   "kapitel": 7,
+   "start": 61.704,
+   "dauer": 5.366,
+   "emotion": "erzaehlend",
+   "text": "Fehlt deine Stadt noch? Dann kommentier sie jetzt. Jedes Like darauf baut ein Stockwerk mehr."
+  }
+ ]
+}

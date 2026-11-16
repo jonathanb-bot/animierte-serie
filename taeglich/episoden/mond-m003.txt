@@ -1,0 +1,54 @@
+# Bis zum Mond – Folge 3: Die Jagd beginnt
+@musik musik/mond-m003.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung aufbau
+@vortrag lebendig
+@klang studio
+@mund zitate
+@einblenden aus
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette tuerkis
+@zeit tag
+
+== Start ==
+// Wow-Bild zuerst: der Turmplatz, Stuttgart direkt hinter Hildesheim
+[turm modus=feld stock_hoehe=2.5 palette=tuerkis palette_staerke=0.2 schilder="Hildesheim,Stuttgart" schild_px=34 tuerme="Hildesheim:6|Freiburg:3|Stuttgart:4|Leimersheim:2|Plauen:2|Rastatt:2|Ulm:2|Augsburg:1|Berlin:1|Ebensee:1|Freilassing:1|Hamm:3|Meuselwitz:1|Oldenburg:1|Ronnenberg:1|Baden-Baden:1" nah=1.9 blick=3.5,3.3 zoom-rein hooktext="TAG 3 · STUTTGART JAGT HILDESHEIM" ein="sechzehn>#16 STÄDTE" ein_y=1200] Tag drei auf deinem Turmplatz. Sechzehn Städte bauen mit, und an der Spitze wird es eng.
+// Die neuen Stockwerke wachsen, etwas weiter weg
+[turm modus=feld stock_hoehe=2.5 palette=tuerkis palette_staerke=0.2 schilder="Stuttgart,Hamm,Baden-Baden" schild_px=34 tuerme="Hildesheim:6|Freiburg:3|Stuttgart:3>4|Leimersheim:2|Plauen:2|Rastatt:2|Ulm:2|Augsburg:1|Berlin:1|Ebensee:1|Freilassing:1|Hamm:1>3|Meuselwitz:1|Oldenburg:1|Ronnenberg:1|Baden-Baden:0>1" wachsen_dauer=2.4 nah=1.2 zoom-raus ein="einunddreißig>#31 STOCKWERKE"] Einunddreißig Stockwerke, alle aus euren Kommentaren.
+// Titelkarte
+[titel oben="Folge 3" gross="BIS ZUM MOND" unten="Die Jagd beginnt" farbe=#123a4a akzent=#7fe0e8 groesse=150 hud=false palette=tuerkis zoom-rein] Und eine Stadt greift an.
+
+== Der Angriff ==
+// Nah auf Stuttgart, Jonas' Kommentar
+[turm modus=feld stock_hoehe=2.5 palette=tuerkis palette_staerke=0.2 schilder="Stuttgart" schild_px=40 tuerme="Hildesheim:6|Freiburg:3|Stuttgart:3>4|Leimersheim:2|Plauen:2|Rastatt:2|Ulm:2|Augsburg:1|Berlin:1|Ebensee:1|Freilassing:1|Hamm:3|Meuselwitz:1|Oldenburg:1|Ronnenberg:1|Baden-Baden:1" wachsen_dauer=1.2 nah=2.5 blick=4,3 markiere=4,3 grundstein=0 zoom-rein kommentar="@jonas27859|Stuttgart|3" kommentar_y=1200 ein="drei>#3 LIKES>herz" ein_y=250] Stuttgart! Der Kommentar von Jonas hat jetzt drei Likes. Das macht vier Stockwerke und Platz zwei.
+// Das Duell, groß nebeneinander
+[turm modus=duell duell="Hildesheim#0:6|Stuttgart#2:3>4" zeit=abend titel_text="DAS DUELL" palette=tuerkis palette_staerke=0.15 zoom-rein] Gestern lagen noch drei Stockwerke dazwischen. Jetzt hat Hildesheim sechs, und Stuttgart fehlen nur noch zwei.
+
+== Der Sprung ==
+// Hamm, gestern ganz hinten
+[turm modus=feld stock_hoehe=2.5 palette=tuerkis palette_staerke=0.2 schilder="Hamm" schild_px=40 tuerme="Hildesheim:6|Freiburg:3|Stuttgart:4|Leimersheim:2|Plauen:2|Rastatt:2|Ulm:2|Augsburg:1|Berlin:1|Ebensee:1|Freilassing:1|Hamm:1|Meuselwitz:1|Oldenburg:1|Ronnenberg:1" nah=2.6 blick=5,4 schwenk-links ein="dreizehn>PLATZ 13" ein_y=420] Dann Hamm. Gestern noch Platz dreizehn, mit einem einzigen Stockwerk.
+// Hamm wächst
+[turm modus=feld stock_hoehe=2.5 palette=tuerkis palette_staerke=0.2 schilder="Hamm" schild_px=40 tuerme="Hildesheim:6|Freiburg:3|Stuttgart:4|Leimersheim:2|Plauen:2|Rastatt:2|Ulm:2|Augsburg:1|Berlin:1|Ebensee:1|Freilassing:1|Hamm:1>3|Meuselwitz:1|Oldenburg:1|Ronnenberg:1" wachsen_dauer=2 nah=2.6 blick=5,4 markiere=5,4 grundstein=0 zoom-rein kommentar="@joejanjac132|hamm|1" kommentar_y=1200 ein="vier>PLATZ 4" ein_y=420] Aber derselbe Fan hat unter Folge zwei noch mal Hamm geschrieben. Ein Like dazu, und Hamm springt auf Platz vier.
+
+== Neu dabei ==
+// Baden-Baden bekommt sein erstes Stockwerk
+[turm modus=feld stock_hoehe=2.5 palette=tuerkis palette_staerke=0.2 schilder="Baden-Baden" schild_px=40 tuerme="Hildesheim:6|Freiburg:3|Stuttgart:3>4|Leimersheim:2|Plauen:2|Rastatt:2|Ulm:2|Augsburg:1|Berlin:1|Ebensee:1|Freilassing:1|Hamm:1>3|Meuselwitz:1|Oldenburg:1|Ronnenberg:1|Baden-Baden:0>1" wachsen_dauer=1.6 nah=2.6 blick=5,5 markiere=5,5 grundstein=0 schwenk-rechts kommentar="@EllenZaum|Baden-Baden mein Geburtsort|0" kommentar_y=1200 ein="Baden>NEU DABEI" ein_y=420] Und ganz neu am Rand: Baden-Baden. Ellen schreibt: mein Geburtsort. Vorher hat sie schon für Rastatt gebaut.
+
+== Die Rangliste ==
+[turm modus=rangliste rangliste="Hildesheim#0:6>6|Stuttgart#2:3>4|Freiburg#1:3>3|Hamm#11:1>3|Leimersheim#3:2>2" ziel=333 ziel_name=Wolken titel_text="TAG 3" palette=tuerkis palette_staerke=0.2 zoom-rein] Die Rangliste nach Tag drei: Hildesheim vorne, Stuttgart neu auf zwei, Freiburg und Hamm gleichauf.
+
+== Bis zu den Wolken ==
+// Fahrt am Turm von Hildesheim hoch
+[turm modus=hoehe hoehe=0>18 stadt="Hildesheim" farbe=#e8705a palette=tuerkis palette_staerke=0.2 kamera=ruhig ein="achtzehn>#18 METER|kein>+0 SEIT GESTERN"] Hildesheim steht bei achtzehn Metern, so hoch wie ein Haus mit sechs Etagen. Aber seit gestern kein einziges neues Stockwerk.
+// Weiter bis zu den Wolken
+[turm modus=hoehe hoehe=18>1000 stadt="Hildesheim" farbe=#e8705a palette=tuerkis palette_staerke=0.2 kamera=ruhig ein="dreihundert>NOCH #327 STOCKWERKE"] Und bis zu den Wolken? Noch über dreihundert Stockwerke.
+
+== Das Rennen ==
+// Der ganze Platz am Abend
+[turm modus=feld stock_hoehe=2.5 palette=orange palette_staerke=0.2 schilder="Hildesheim,Stuttgart" schild_px=34 zeit=abend tuerme="Hildesheim:6|Freiburg:3|Stuttgart:4|Leimersheim:2|Plauen:2|Rastatt:2|Ulm:2|Augsburg:1|Berlin:1|Ebensee:1|Freilassing:1|Hamm:3|Meuselwitz:1|Oldenburg:1|Ronnenberg:1|Baden-Baden:1" nah=1.3 zoom-raus ein="Zwei>#2 LIKES>herz"] Zwei Likes auf Stuttgart, und es steht unentschieden. Drei, und Hildesheim verliert die Spitze.
+// Nah auf den nächsten freien Platz
+[turm modus=feld stock_hoehe=2.5 palette=orange palette_staerke=0.2 schilder="-" schild_px=40 zeit=abend tuerme="Hildesheim:6|Freiburg:3|Stuttgart:4|Leimersheim:2|Plauen:2|Rastatt:2|Ulm:2|Augsburg:1|Berlin:1|Ebensee:1|Freilassing:1|Hamm:3|Meuselwitz:1|Oldenburg:1|Ronnenberg:1|Baden-Baden:1" nah=2.4 blick=1,3 markiere=1,3 leer="Deine Stadt?" leer_zeigen=1 zoom-rein] Fehlt deine Stadt noch? Dann kommentier sie jetzt. Jedes Like darauf baut ein Stockwerk mehr.
