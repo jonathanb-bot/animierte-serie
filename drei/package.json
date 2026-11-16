@@ -1,7 +1,0 @@
-{
-  "name": "drei",
-  "private": true,
-  "description": "3D-Kulissen (three.js), gebündelt nach engine/drei.js",
-  "scripts": { "bauen": "esbuild flucht/eintrag.js --bundle --format=iife --minify --target=chrome120 --outfile=../engine/drei.js" },
-  "devDependencies": { "three": "0.170.0", "esbuild": "0.24.0" }
-}
