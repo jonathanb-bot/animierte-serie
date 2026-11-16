@@ -1,0 +1,32 @@
+# Der Fluchtwagen – Teil 3: Die Tasche
+@musik musik/flucht-f003.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung spannend
+@vortrag lebendig
+@klang studio
+@mund zitate
+@einblenden aus
+@qualitaet max
+@look 0
+@kino 0.2
+
+// Serie „Der Fluchtwagen“. NEU ZU BAUEN vor dem Rendern: Einstellung raststaette (siehe flucht/serienbibel.md).
+== Ankunft ==
+[drei einstellung=raststaette hooktext="DU SOLLST AUSSTEIGEN" ein="vier>04:02 UHR>uhr" ein_y=1240] Vier Uhr nachts. Eine leere Raststätte, ein flackerndes Neonschild. Hier sollst du aussteigen. Kasper hat dir nicht gesagt, wie du von hier nach Hause kommst.
+[drei einstellung=raststaette ein="Toilette>2 MINUTEN" ein_y=420] Kasper geht zur Kasse, Dario zur Toilette. Zwei Minuten bist du allein mit dem Auto.
+[drei einstellung=raststaette] Und mit der Tasche auf dem Rücksitz, über die seit drei Stunden keiner ein Wort verliert.
+
+== Der Blick ==
+[drei einstellung=raststaette ein="Geld>KEIN GELD" ein_y=420] Du öffnest den Reißverschluss. Kein Geld. Keine Beute.
+[drei einstellung=raststaette ein="Licht>GRÜNES LICHT" ein_y=1240] Nur ein kleines schwarzes Gerät mit einem grünen Licht, das langsam blinkt.
+[drei einstellung=raststaette] Ein Ortungsgerät. Jemand weiß in jeder Sekunde, wo diese Tasche ist. Und damit auch, wo du bist.
+
+== Die Analyse ==
+[drei einstellung=totale auto=0 ein="Hubschrauber>HELI VERLOREN" ein_y=420] Der Hubschrauber hat euch verloren. Aber das war nie die Gefahr, vor der Kasper Angst hatte.
+[drei einstellung=raststaette ein="zweite>DER ZWEITE VERFOLGER" ein_y=420] Es gibt einen zweiten Verfolger. Einen, der kein Blaulicht braucht und sich an keine Regeln hält.
+
+== Die Scheinwerfer ==
+[drei einstellung=raststaette ein="Geländewagen>SCHWARZER GELÄNDEWAGEN" ein_y=420] Da rollt ein schwarzer Geländewagen auf den Parkplatz. Ohne Licht. Ganz langsam. Direkt auf euch zu.
+[drei einstellung=raststaette] Dario kommt zurückgerannt. „Fahr! Sofort!“
+[drei einstellung=verfolger gas=1] Und du sitzt am Steuer eines Autos mit neunhundert PS.

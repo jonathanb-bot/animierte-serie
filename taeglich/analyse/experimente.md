@@ -115,3 +115,6 @@ Reihenfolge als Vorschlag; die Analyse darf tauschen, aber jedes Genre kommt bis
 ## Der letzte Raub – Ihr entscheidet (ab 16.11., Issue #35)
 - **Experiment:** Mitmach-Thriller mit A/B-Abstimmung über den Top-Kommentar (Erzählform „interaktiv“), Stimme Orus, eigene Kulissen `engine/raub.js`, du immer von hinten. Zu messen: Anteil Kommentare mit A/B, Likes auf dem Top-Kommentar, Durchhalten von Folge zu Folge, Kommentare pro 1.000 Aufrufe im Vergleich zu „Bis zum Mond“ und „Deine Welt“.
 - Folge 1 (16.11.): 75,6 s, 13 Einstellungen, Entscheidung „Wahrheit sagen / Ziel für dich behalten“. Zahlen folgen im Lauf am 17.11.
+
+## Der Fluchtwagen (ab 17.11.)
+- **Experiment:** erstmals echtes 3D (three.js) statt 2D-Vektor, dunkler Nacht-Look statt „leuchtend“, Aufbau nach Jonathans Vorbild-Video (Verfolgung, Wärmebild, PS-Zahl). Zu messen gegen die 2D-Serien: Hook-Bindung nach 3 s, Ø Wiedergabe, Shares.

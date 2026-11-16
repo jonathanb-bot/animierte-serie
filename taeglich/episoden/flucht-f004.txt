@@ -1,0 +1,32 @@
+# Der Fluchtwagen – Teil 4: Der zweite Verfolger
+@musik musik/flucht-f004.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung spannend
+@vortrag lebendig
+@klang studio
+@mund zitate
+@einblenden aus
+@qualitaet max
+@look 0
+@kino 0.2
+
+// Serie „Der Fluchtwagen“. NEU ZU BAUEN vor dem Rendern: Einstellung suv (zweiter Verfolger, siehe flucht/serienbibel.md).
+== Die Jagd ==
+[drei einstellung=suv hooktext="DIESMAL IST ES NICHT DIE POLIZEI" ein="Scheinwerfer>2 SCHEINWERFER" ein_y=1240] Hinter dir gehen zwei Scheinwerfer an. Diesmal ist es nicht die Polizei. Diesmal ist es jemand, der seine Tasche zurückwill.
+[drei einstellung=verfolger gas=1 ein="neunhundert>#900 PS" ein_y=1240] Neunhundert PS gegen einen schweren Geländewagen. Auf gerader Strecke kein Vergleich. Nach einer Minute ist der Abstand riesig.
+[drei einstellung=suv] Aber die Autobahn bleibt nicht gerade.
+
+== Die Baustelle ==
+[drei einstellung=verfolger ein="achtzig>BAUSTELLE · #80 KM/H" ein_y=1240] Eine Baustelle. Zwei enge Spuren, achtzig Kilometer pro Stunde.
+[drei einstellung=seite] Hier zählt nicht mehr, wer mehr PS hat. Hier zählt nur, wer weniger Angst hat.
+[drei einstellung=suv ein="Meter>#10 METER" ein_y=1240] Der Geländewagen kommt näher. Zehn Meter. Fünf. Das Licht füllt dein ganzes Auto.
+
+== Die Analyse ==
+[drei einstellung=front ein="Vorteil>DEIN VORTEIL WEG" ein_y=420] Das ist der Moment, in dem dein größter Vorteil nichts mehr wert ist.
+[drei einstellung=weg gas=1] Erst am Ende der Baustelle trittst du durch. Und die Scheinwerfer im Spiegel werden kleiner, bis sie ganz verschwinden.
+
+== Allein ==
+[drei einstellung=totale heli=0] Auf dem nächsten Parkplatz reißt Kasper die Tür auf. Dario nimmt die Tasche.
+[drei einstellung=seite] „Du hast uns nie gesehen.“ Dann verschwinden beide in der Dunkelheit.
+[drei einstellung=verfolger ein="allein>ALLEIN" ein_y=1240] Und du sitzt allein in einem Auto, das die Polizei sucht. Mit einem Kennzeichen, das gerade jemand überprüft.

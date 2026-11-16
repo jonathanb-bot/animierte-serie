@@ -546,6 +546,36 @@
     "lufs": -14.6,
     "dauer_s": 74.12
    }
+  },
+  {
+   "id": "flucht-f001",
+   "datum": "2026-11-16",
+   "titel": "Der Fluchtwagen – Teil 1: 900 PS",
+   "emoji": "🚗",
+   "serie": "Der Fluchtwagen (Jonathan 16.11., 3D-Serie nach Vorbild „Das perfekte Fluchtfahrzeug“)",
+   "stimmung": "spannend",
+   "stimme": "Orus",
+   "thema": "Du fährst nachts einen roten Kombi, ein Polizeihubschrauber mit Wärmebild erfasst dich, mit über 900 PS ziehst du davon (Hubschrauber ca. 250 km/h). Cliffhanger: Das Kennzeichen wurde aufgezeichnet",
+   "stil": "echtes 3D (three.js, engine/drei.js + engine/flucht.js): Autobahn bei Nacht, Sportkombi, Hubschrauber mit Suchscheinwerfer, Wärmebild-Ansicht mit HUD",
+   "kulissen": [
+    "drei"
+   ],
+   "beschreibung": "Drei Uhr nachts, ein Polizeihubschrauber mit Wärmebildkamera über der Autobahn. Und unter deiner Haube stecken über 900 PS.",
+   "hashtags": [
+    "#fluchtwagen",
+    "#animation",
+    "#3d",
+    "#verfolgungsjagd",
+    "#story",
+    "#deutsch"
+   ],
+   "tags": [
+    "animation",
+    "3d",
+    "fluchtwagen",
+    "story",
+    "verfolgungsjagd"
+   ]
   }
  ]
 }
