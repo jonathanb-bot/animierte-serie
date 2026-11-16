@@ -34,6 +34,14 @@
       }
     } else if (f.haar === "dutt") {
       circle(0, -1.12 * R, 0.36 * R, shade(f.haare, -0.08));
+    } else if (f.haar === "bob") { // neu 16.11.: kinnlanger Bob
+      ctx.beginPath(); ctx.moveTo(-1.12 * R, -0.3 * R); ctx.bezierCurveTo(-1.22 * R, 0.5 * R, -1.1 * R, 0.82 * R, -0.78 * R, 0.86 * R);
+      ctx.lineTo(0.78 * R, 0.86 * R); ctx.bezierCurveTo(1.1 * R, 0.82 * R, 1.22 * R, 0.5 * R, 1.12 * R, -0.3 * R); ctx.closePath(); ctx.fill();
+    } else if (f.haar === "locken") { // neu 16.11.: dunkle Locken
+      for (const [x, y, r] of [[-1.0, -0.1, 0.34], [1.0, -0.1, 0.34], [-0.95, 0.3, 0.28], [0.95, 0.3, 0.28], [-0.7, -0.95, 0.4], [0.7, -0.95, 0.4], [0, -1.15, 0.42]]) circle(x * R, y * R, r * R, shade(f.haare, -0.1));
+    } else if (f.haar === "zopf") { // neu 16.11.: geflochtener Zopf über die Schulter
+      for (let k = 0; k < 5; k++) ellipse(0.86 * R + Math.sin(k * 1.4) * 0.05 * R, (0.35 + k * 0.32) * R, 0.2 * R, 0.19 * R, shade(f.haare, k % 2 ? -0.18 : -0.06), 0.3);
+      circle(0.9 * R, 2.0 * R, 0.08 * R, "#e8d24a");
     }
   }
 
@@ -68,6 +76,14 @@
       let px = 1.03, py = 0;
       for (const [x, y] of pts) { ctx.quadraticCurveTo(((px + x) / 2) * R, ((py + y) / 2 - 0.12) * R, x * R, y * R); px = x; py = y; }
       ctx.lineTo(-1.03 * R, 0);
+    } else if (f.haar === "bob") { // gerader Pony
+      ctx.moveTo(-1.1 * R, 0.1 * R); ctx.bezierCurveTo(-1.16 * R, -1.5 * R, 1.16 * R, -1.5 * R, 1.1 * R, 0.1 * R);
+      ctx.lineTo(0.92 * R, 0.1 * R); ctx.quadraticCurveTo(0.92 * R, -0.42 * R, 0.6 * R, -0.42 * R); ctx.lineTo(-0.7 * R, -0.42 * R); ctx.quadraticCurveTo(-0.95 * R, -0.42 * R, -0.95 * R, 0.1 * R);
+    } else if (f.haar === "locken") {
+      dome(-0.1, 1.5); ctx.lineTo(1.03 * R, -0.1 * R);
+      for (const [x, y, r] of [[-0.75, -0.6, 0.3], [-0.35, -0.72, 0.3], [0.05, -0.75, 0.3], [0.45, -0.7, 0.3], [0.8, -0.55, 0.28], [-1.0, -0.25, 0.24], [1.0, -0.2, 0.24]]) { ctx.moveTo((x + r) * R, y * R); ctx.arc(x * R, y * R, r * R, 0, Math.PI * 2); }
+    } else if (f.haar === "zopf") { // straff nach hinten, Seitenscheitel
+      dome(0.0, 1.46); ctx.quadraticCurveTo(0.95 * R, -0.62 * R, 0.4 * R, -0.75 * R); ctx.quadraticCurveTo(-0.5 * R, -0.7 * R, -1.03 * R, 0.0);
     } else { // lang, kind, dutt: Mittelscheitel
       ctx.moveTo(-1.06 * R, 0.25 * R);
       ctx.bezierCurveTo(-1.14 * R, -1.48 * R, 1.14 * R, -1.48 * R, 1.06 * R, 0.25 * R);
@@ -90,6 +106,13 @@
     ctx.save(); ctx.translate(x, y); ctx.rotate(o.neigung || 0);
     // Schatten des Kopfes auf Hals
     ellipse(0, 0.95 * R, 0.55 * R, 0.16 * R, rgba(A.SCHATTEN, 0.18));
+    if (o.hinten) { // neu 16.11.: Figur von hinten (Gesicht nie sichtbar, „Der letzte Raub“: du)
+      for (const s of [-1, 1]) ellipse(s * 0.97 * R, 0.1 * R, 0.15 * R, 0.2 * R, shade(f.haut, -0.1));
+      ctx.beginPath(); ctx.ellipse(0, -0.05 * R, 1.04 * R, 1.0 * R, 0, 0, Math.PI * 2); ctx.moveTo(0.8 * R, 0.45 * R); ctx.ellipse(0, 0.45 * R, 0.8 * R, 0.55 * R, 0, 0, Math.PI * 2); fill(shade(f.haare, -0.05));
+      schattiere(-R, R, 0.25); haareHinten(f, R);
+      ctx.save(); ctx.beginPath(); ctx.arc(0.1 * R, -0.1 * R, 0.8 * R, 1.15 * Math.PI, 1.45 * Math.PI); ctx.lineWidth = 0.07 * R; ctx.lineCap = "round"; ctx.strokeStyle = rgba(shade(f.haare, 0.4), 0.5); ctx.stroke(); ctx.restore();
+      ctx.restore(); return;
+    }
     haareHinten(f, R);
     // Ohren
     for (const s of [-1, 1]) {
@@ -196,7 +219,7 @@
     }
     if (f.brille) {
       ctx.lineWidth = 0.045 * R; ctx.strokeStyle = f.brille;
-      for (const s of [-1, 1]) { A.rr(fx + s * 0.35 * R - 0.25 * R, -0.2 * R, 0.5 * R, 0.38 * R, 0.14 * R); ctx.fillStyle = "rgba(220,235,255,0.12)"; ctx.fill(); ctx.stroke(); }
+      for (const s of [-1, 1]) { A.rr(fx + s * 0.35 * R - 0.25 * R, -0.2 * R, 0.5 * R, 0.38 * R, f.brille_eckig ? 0.04 * R : 0.14 * R); ctx.fillStyle = "rgba(220,235,255,0.12)"; ctx.fill(); ctx.stroke(); }
       A.line(fx - 0.1 * R, -0.05 * R, fx + 0.1 * R, -0.05 * R, 0.045 * R, f.brille);
     }
     ctx.restore();
@@ -293,13 +316,19 @@
     } else {
       A.line(0, -380, 0, -205, 4, shade(f.jacke, -0.2));
     }
+    if (f.anzug) { // neu 16.11.: Hemd mit Revers (Voss)
+      A.poly([[-30, -390], [0, -300], [30, -390]], f.hemd || "#f4f2ee"); A.line(0, -372, 0, -300, 7, f.krawatte || "#6a7a8a");
+      A.poly([[-40, -388], [-4, -296], [-24, -282], [-66, -372]], shade(f.jacke, -0.14)); A.poly([[40, -388], [4, -296], [24, -282], [66, -372]], shade(f.jacke, -0.08));
+    }
+    if (f.streifen) { A.box(56, -366, 9, 170, 4, f.streifen); A.box(-74, -214, 148, 7, 3, f.streifen); } // neu 16.11.: schmales Detail an der Jacke
+    if (f.nadel) { circle(-44, -340, 8, f.nadel); circle(-46, -342, 3, rgba("#ffffff", 0.7)); if (A.licht) A.licht(-44, -340, 40, f.nadel, 0.25); } // neu 16.11.: goldene Anstecknadel
     // Kragen / Kapuze
     if (f.kapuze) { ctx.beginPath(); ctx.ellipse(0, -378, 66, 26, 0, 0, Math.PI * 2); fill(shade(f.jacke, -0.15)); }
     else { ctx.beginPath(); ctx.moveTo(-46, -385); ctx.quadraticCurveTo(0, -350, 46, -385); ctx.lineTo(36, -396); ctx.quadraticCurveTo(0, -372, -36, -396); ctx.closePath(); fill(shade(f.jacke, -0.1)); }
     if (f.rucksack) { for (const sx of [-1, 1]) A.box(sx * 52 - 9, -380, 18, 150, 8, f.rucksack); }
     if (f.schal) { A.box(-50, -404, 100, 34, 16, f.schal); A.box(14, -388, 30, 92, 12, shade(f.schal, -0.1)); }
     // Kopf
-    A.kopf(0, -490, 102, f, { t, ausdruck: o.ausdruck, spricht: o.spricht, blick: o.blick, drehung: o.drehung, neigung: P.neig + (o.neigung || 0), seed: o.seed ?? Math.round(ph * 10), leuchten: o.leuchten });
+    A.kopf(0, -490, 102, f, { t, ausdruck: o.ausdruck, spricht: o.spricht, blick: o.blick, drehung: o.drehung, neigung: P.neig + (o.neigung || 0), seed: o.seed ?? Math.round(ph * 10), leuchten: o.leuchten, hinten: o.hinten });
     // Arme
     const sch = [[-74, -360], [74, -360]];
     const haende = [P.hl, P.hr];

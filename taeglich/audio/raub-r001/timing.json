@@ -1,0 +1,122 @@
+{
+ "dauer": 74.582,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "bankfassade",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 8.03,
+   "emotion": "erzaehlend",
+   "text": "Du willst acht Millionen aus einer Bank holen. Aber der eigentliche Grund sitzt seit elf Monaten unschuldig im Gefängnis."
+  },
+  {
+   "nr": 2,
+   "typ": "raubdetail",
+   "kapitel": 1,
+   "start": 8.03,
+   "dauer": 7.886,
+   "emotion": "erzaehlend",
+   "text": "Deine Schwester Lea. Sie hat bei der AUREON-Bank verdächtige Geschäfte entdeckt. Danach war plötzlich sie die Betrügerin."
+  },
+  {
+   "nr": 3,
+   "typ": "titel",
+   "kapitel": 1,
+   "start": 15.916,
+   "dauer": 2.222,
+   "emotion": "erzaehlend",
+   "text": "Heute Nacht willst du das ändern."
+  },
+  {
+   "nr": 4,
+   "typ": "versteck",
+   "kapitel": 2,
+   "start": 18.138,
+   "dauer": 4.934,
+   "emotion": "erzaehlend",
+   "text": "Mara hat früher mit Lea gearbeitet. Jetzt schiebt sie dir eine Akte über den Tisch."
+  },
+  {
+   "nr": 5,
+   "typ": "raubdetail",
+   "kapitel": 2,
+   "start": 23.072,
+   "dauer": 5.294,
+   "emotion": "erzaehlend",
+   "text": "ATLAS. Ein interner Bericht der Bank. Aber nur drei Seiten von einundvierzig."
+  },
+  {
+   "nr": 6,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 28.366,
+   "dauer": 4.622,
+   "emotion": "erzaehlend",
+   "text": "Dann sagt sie nur einen Satz. „Das Original liegt noch im Tresor.“"
+  },
+  {
+   "nr": 7,
+   "typ": "raubdetail",
+   "kapitel": 3,
+   "start": 32.988,
+   "dauer": 4.958,
+   "emotion": "erzaehlend",
+   "text": "Im selben Tresor liegen gerade acht Millionen Euro. Nur bis Freitag."
+  },
+  {
+   "nr": 8,
+   "typ": "raubdetail",
+   "kapitel": 3,
+   "start": 37.946,
+   "dauer": 6.182,
+   "emotion": "erzaehlend",
+   "text": "Die leere Tasche steht schon neben deinen Füßen. Acht Millionen würden alles ändern. Auch für dich."
+  },
+  {
+   "nr": 9,
+   "typ": "versteck",
+   "kapitel": 4,
+   "start": 44.128,
+   "dauer": 5.654,
+   "emotion": "erzaehlend",
+   "text": "Also holst du Jona, deinen ältesten Freund. Und Karo, die euch danach aus der Stadt bringt."
+  },
+  {
+   "nr": 10,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 49.782,
+   "dauer": 3.71,
+   "emotion": "ernst",
+   "text": "Karo hat nur eine Bedingung. „Niemand bleibt zurück.“"
+  },
+  {
+   "nr": 11,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 53.492,
+   "dauer": 4.646,
+   "emotion": "froh",
+   "text": "Jona redet nur noch über die Beute. Von Lea weiß am Tisch keiner etwas."
+  },
+  {
+   "nr": 12,
+   "typ": "bankhalle",
+   "kapitel": 4,
+   "start": 58.138,
+   "dauer": 8.006,
+   "emotion": "erzaehlend",
+   "text": "Und in der leeren Bank steht um diese Zeit noch jemand. Heller Anzug, goldene Nadel am Revers. Er wartet."
+  },
+  {
+   "nr": 13,
+   "typ": "entscheidung",
+   "kapitel": 5,
+   "start": 66.144,
+   "dauer": 8.438,
+   "emotion": "erzaehlend",
+   "text": "Erzählst du der Gruppe jetzt die ganze Wahrheit, oder behältst du dein Ziel für dich? Kommentiere A oder B. Der Top-Kommentar entscheidet."
+  }
+ ]
+}

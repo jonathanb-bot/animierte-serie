@@ -275,6 +275,7 @@
         spricht, blick: [blickX, 0], drehung: n > 1 ? blickX * 0.35 : (s.drehung || 0), seed: i * 5 + 2, halt: halt[name],
         leuchten: f.art === "nox" ? (s.leuchten === true ? 1 : s.leuchten || 0) : f.augenleuchten ? A.augenWert(s, t) : 0,
         stoerung: f.mantel ? s.stoerung || 0 : 0, spiegeln: (s.spiegeln || "").split(",").includes(name),
+        hinten: s.hinten ? String(s.hinten).split(",").map(q => q.trim()).includes(name) : false, // neu 16.11.: hinten=r_du („Der letzte Raub“)
       });
     });
     if (A.nachFiguren) A.nachFiguren(s, t);

@@ -1,0 +1,51 @@
+# Der letzte Raub – Folge 1: Acht Millionen. Eine Schwester.
+@musik musik/raub-r001.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung spannend
+@vortrag lebendig
+@klang studio
+@mund zitate
+@einblenden aus
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette blau
+
+// Serienbibel: raub/serienbibel.md · Folgenplan: raub/folgenplan.md · Weltgedächtnis: raub/gedaechtnis.json
+== Der Grund ==
+// Wow-Bild: AUREON-Bank bei Nacht im Regen, du von hinten im Vordergrund
+[bankfassade r_du hinten=r_du gross figur_y=1820 zoom-rein palette=blau palette_staerke=0.15 ton=regen hooktext="8 MILLIONEN. EINE SCHWESTER." ein="acht>#8.000.000 €>geld" ein_y=430] Du willst acht Millionen aus einer Bank holen. Aber der eigentliche Grund sitzt seit elf Monaten unschuldig im Gefängnis.
+// Leitmotiv: Leas Foto
+[raubdetail motiv=foto aufschrift="Lea" palette=orange palette_staerke=0.15 zoom-rein ein="Lea>LEA · 11 MONATE IN HAFT" ein_y=330] Deine Schwester Lea. Sie hat bei der AUREON-Bank verdächtige Geschäfte entdeckt. Danach war plötzlich sie die Betrügerin.
+// Titelkarte
+[titel oben="Folge 1" gross="DER LETZTE RAUB" unten="Ihr entscheidet" farbe=#0b1530 akzent=#e8b84a groesse=140 hud=false palette=blau zoom-rein] Heute Nacht willst du das ändern.
+
+== Die Akte ==
+// Vorbereitungsraum: Mara gegenüber, du von hinten
+[versteck mara r_du hinten=r_du figur_y=1530 skala_figur=1.25 palette=orange palette_staerke=0.15 schwenk-rechts ton=regen ein="Mara>MARA · LEAS KOLLEGIN" ein_y=330] Mara hat früher mit Lea gearbeitet. Jetzt schiebt sie dir eine Akte über den Tisch.
+// Leitmotiv: der ATLAS-Auszug
+[raubdetail motiv=akte aufschrift="AUSZUG · SEITE 3 VON 41" palette=orange palette_staerke=0.15 zoom-rein ton=papier ein="drei>#3 VON 41 SEITEN" ein_y=330] ATLAS. Ein interner Bericht der Bank. Aber nur drei Seiten von einundvierzig.
+// Mara, Nahaufnahme
+[gesicht mara ort=versteck palette=orange palette_staerke=0.15 zoom-rein] Dann sagt sie nur einen Satz. „Das Original liegt noch im Tresor.“
+
+== Die Beute ==
+// Acht Millionen im goldenen Licht
+[raubdetail motiv=geld palette=orange palette_staerke=0.1 zoom-rein ein="Freitag>NUR BIS FREITAG>uhr" ein_y=330] Im selben Tresor liegen gerade acht Millionen Euro. Nur bis Freitag.
+// Leitmotiv: die leere Tasche
+[raubdetail motiv=tasche palette=blau palette_staerke=0.15 zoom-raus ton=rucksack ein="dich>AUCH FÜR DICH" ein_y=330] Die leere Tasche steht schon neben deinen Füßen. Acht Millionen würden alles ändern. Auch für dich.
+
+== Die Gruppe ==
+// Die ganze Gruppe am Tisch
+[versteck jona mara karo r_du hinten=r_du figur_y=1530 skala_figur=1.15 palette=orange palette_staerke=0.15 zoom-raus ein="Jona>JONA · BRAUCHT GELD|Karo>KARO · DIE ABREISE" ein_y=330] Also holst du Jona, deinen ältesten Freund. Und Karo, die euch danach aus der Stadt bringt.
+// Karo, Nahaufnahme
+[gesicht karo entschlossen ort=versteck palette=orange palette_staerke=0.15 zoom-rein] Karo hat nur eine Bedingung. „Niemand bleibt zurück.“
+// Jona, Nahaufnahme
+[gesicht jona froh ort=versteck palette=orange palette_staerke=0.15 schwenk-links ein="Lea>KEINER WEISS VON LEA" ein_y=330] Jona redet nur noch über die Beute. Von Lea weiß am Tisch keiner etwas.
+// Die Bankhalle: jemand steht noch dort
+[bankhalle voss gross palette=tuerkis palette_staerke=0.15 zoom-rein ton=schritte] Und in der leeren Bank steht um diese Zeit noch jemand. Heller Anzug, goldene Nadel am Revers. Er wartet.
+
+== Deine Entscheidung ==
+// A/B-Karten
+[entscheidung a="Sag der Gruppe / die ganze Wahrheit" b="Behalte dein Ziel / vorerst für dich" frage="Die Gruppe wartet auf deinen Plan." palette=blau palette_staerke=0.1] Erzählst du der Gruppe jetzt die ganze Wahrheit, oder behältst du dein Ziel für dich? Kommentiere A oder B. Der Top-Kommentar entscheidet.

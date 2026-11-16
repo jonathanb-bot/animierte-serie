@@ -107,5 +107,55 @@
   "jacke": "#b0703a",
   "hose": "#3a3a45",
   "brille": "#2a2a2e"
+ },
+ "r_du": {
+  "haar": "kurz",
+  "haare": "#2a2420",
+  "haut": "#e8c2a0",
+  "jacke": "#1f3358",
+  "hose": "#232a38",
+  "streifen": "#f08a3a"
+ },
+ "mara": {
+  "haar": "bob",
+  "haare": "#1e1a1c",
+  "haut": "#efcdb2",
+  "jacke": "#2aa3a6",
+  "hose": "#26303c",
+  "brille": "#1c1e24",
+  "brille_eckig": true
+ },
+ "jona": {
+  "haar": "locken",
+  "haare": "#2a1d18",
+  "haut": "#c9946c",
+  "jacke": "#b5502e",
+  "hose": "#2b2f36"
+ },
+ "karo": {
+  "haar": "zopf",
+  "haare": "#5a3a22",
+  "haut": "#d9a882",
+  "jacke": "#e8b82e",
+  "hose": "#2a2c34"
+ },
+ "voss": {
+  "haar": "seite",
+  "haare": "#c8ccd4",
+  "haut": "#efcfb6",
+  "jacke": "#e4ded2",
+  "hose": "#cfc8ba",
+  "anzug": true,
+  "hemd": "#f6f4ef",
+  "krawatte": "#5a6676",
+  "nadel": "#e8b83a",
+  "schuhe": "#3a2e26"
+ },
+ "lea": {
+  "haar": "lang",
+  "haare": "#2e2420",
+  "haut": "#ecc6a6",
+  "jacke": "#7a8a9a",
+  "hose": "#3a3f4a"
  }
 }
