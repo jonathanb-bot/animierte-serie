@@ -1,0 +1,296 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face { font-family: "Titel"; src: url("assets/InterDisplay-Black.otf"); font-weight: 900; }
+@font-face { font-family: "UI"; src: url("assets/Inter-Bold.otf"); font-weight: 700; }
+html,body{margin:0;background:#000}canvas{display:block}
+</style></head><body>
+<canvas id="c"></canvas>
+<script>
+// „Walter White“ (Nizi19) – Edit im Stil von „Lounge City“ v4: Lyrics in schwebenden Handy-Karten, Wörter auf dem 16tel-Raster, Wisch-Übergänge.
+const W = 1080, H = 1920, K = 1440 / 1080;
+const cv = document.getElementById("c"); cv.width = W * K; cv.height = H * K; let ctx = cv.getContext("2d"); const HAUPT = ctx;
+const PUF = [0, 1].map(() => { const c = document.createElement("canvas"); c.width = W * K; c.height = H * K; return c; });
+let ZL = null; const IMG = {}; const KORN = [];
+const lade = src => new Promise(r => { const i = new Image(); i.onload = () => r(i); i.onerror = () => { console.error("fehlt " + src); r(null); }; i.src = src; });
+const clamp = (v, a, b) => Math.max(a, Math.min(b, v)), lerp = (a, b, t) => a + (b - a) * t;
+const raus = p => 1 - Math.pow(1 - clamp(p, 0, 1), 3), weich = p => { p = clamp(p, 0, 1); return p * p * (3 - 2 * p); };
+const zurueck = p => { p = clamp(p, 0, 1); const c1 = 1.4, c3 = c1 + 1; return 1 + c3 * Math.pow(p - 1, 3) + c1 * Math.pow(p - 1, 2); };
+const GRUEN = "#3fa34d";
+async function init() {
+  ZL = await (await fetch("zeitleiste.json")).json();
+  const D = { uhr: "31567870.jpg", uhr2: "14569229.jpg", bike: "2591990.jpg", bike2: "30705458.jpg", f1: "28680795.jpg", f1b: "17555047.jpg", sprite: "sprite.png", album: "cover.png",
+    foto: "nizi-foto.png", maka: "nizi-maka.png", treppe: "nizi-treppe.png", gucci: "nizi-gucci.png", risiken: "nizi-risiken.png" };
+  for (const [k, v] of Object.entries(D)) IMG[k] = await lade("assets/" + v);
+  await document.fonts.load('900 100px "Titel"'); await document.fonts.load('700 40px "UI"');
+  for (let k = 0; k < 6; k++) { const g = document.createElement("canvas"); g.width = 540; g.height = 960; const c = g.getContext("2d"), d = c.createImageData(540, 960);
+    for (let i = 0; i < d.data.length; i += 4) { const v = Math.random() * 255; d.data[i] = d.data[i + 1] = d.data[i + 2] = v; d.data[i + 3] = 16; } c.putImageData(d, 0, 0); KORN.push(g); }
+  { const c = document.createElement("canvas"); c.width = 540; c.height = 960; const o = c.getContext("2d"); o.filter = "blur(16px) brightness(0.8) saturate(1.25)"; const im = IMG.maka, sc = Math.max(600 / im.width, 1020 / im.height); o.drawImage(im, 270 - im.width * sc / 2, 480 - im.height * sc / 2, im.width * sc, im.height * sc); IMG.sperr = c; }
+  window.bereit = true;
+}
+// ---------- Grundbausteine ----------
+const rr = (x, y, w, h, r) => { ctx.beginPath(); ctx.roundRect(x, y, w, h, r); };
+// Text bis zur aktuellen Songzeit „tippen“: Wörter erscheinen mit ihrem Einsatz, Buchstaben laufen innerhalb des Worts mit
+function getippt(T, woerter, ab = 0) {
+  let s = ""; for (const w of woerter.slice(ab)) { if (T < w.a - 0.03) break; const n = Math.max(1, Math.round(clamp((T - w.a + 0.03) / 0.07, 0, 1) * w.w.length)); s += (s ? " " : "") + w.w.slice(0, n); }
+  return s;
+}
+function umbruch(text, maxB) { const z = []; let r = ""; for (const w of text.split(" ")) { const t = r ? r + " " + w : w; if (ctx.measureText(t).width > maxB && r) { z.push(r); r = w; } else r = t; } if (r) z.push(r); return z; }
+// schwebende Karte mit 3D-Anmutung (Drehung um Y über Breite + Scherung), weicher Schatten, Bewegungsunschärfe aus Geschwindigkeit
+function karte(o, inhalt) {
+  const { x, y, w, h, r = 46, rotY = 0, rotZ = 0, sk = 0, alpha = 1, schatten = 0.28, vx = 0, vy = 0, hell = true } = o;
+  const zeichne = (dx, dy, a) => {
+    ctx.save(); ctx.globalAlpha = a; ctx.translate(x + dx, y + dy); ctx.rotate(rotZ); ctx.transform(Math.cos(rotY), Math.sin(rotY) * 0.18 + sk, 0, 1, 0, 0);
+    ctx.shadowColor = `rgba(0,0,0,${schatten})`; ctx.shadowBlur = 70; ctx.shadowOffsetY = 34; rr(-w / 2, -h / 2, w, h, r); ctx.fillStyle = hell ? "#ffffff" : "#1c1c1e"; ctx.fill(); ctx.shadowColor = "transparent";
+    ctx.save(); rr(-w / 2, -h / 2, w, h, r); ctx.clip(); inhalt(-w / 2, -h / 2, w, h); ctx.restore(); ctx.restore(); };
+  const v = Math.hypot(vx, vy);
+  if (v > 2) { const n = 5; for (let k = n; k >= 1; k--) zeichne(-vx * k * 0.35, -vy * k * 0.35, alpha * 0.12); }
+  zeichne(0, 0, alpha);
+}
+// Bewegung einer Karte: fliegt von (x0,y0) mit Schwung ein, schwingt leicht nach, fliegt am Ende raus
+function flug(T, a, e, ziel, von, nach) { nach = { ...ziel, ...(nach || {}) };
+  const ein = zurueck((T - a) / 0.42), aus = 0;
+  const x = lerp(lerp(von.x, ziel.x, ein), nach.x, aus), y = lerp(lerp(von.y, ziel.y, ein), nach.y, aus);
+  const vx = (1 - clamp((T - a) / 0.42, 0, 1)) * (ziel.x - von.x) * 0.06 + aus * (nach.x - ziel.x) * 0.06, vy = (1 - clamp((T - a) / 0.42, 0, 1)) * (ziel.y - von.y) * 0.06 + aus * (nach.y - ziel.y) * 0.06;
+  const rotY = lerp(lerp(von.rotY ?? 0.6, ziel.rotY ?? 0, ein), nach.rotY ?? -0.6, aus), rotZ = lerp(lerp(von.rotZ ?? 0.1, ziel.rotZ ?? -0.04, ein), nach.rotZ ?? -0.1, aus);
+  return { x, y, vx, vy, rotY: rotY + Math.sin(T * 1.6) * 0.03, rotZ: rotZ + Math.sin(T * 1.1) * 0.01 };
+}
+function hintergrund(T, dunkel = false) {
+  const g = ctx.createLinearGradient(0, 0, 0, H);
+  if (dunkel) { g.addColorStop(0, "#0d0d12"); g.addColorStop(1, "#1b1622"); } else { g.addColorStop(0, "#f7f7f9"); g.addColorStop(1, "#e9e9ee"); }
+  ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+}
+function bildIn(img, x, y, w, h, zoom = 1, oy = 0) { if (!img) return; const s = Math.max(w / img.width, h / img.height) * zoom; ctx.save(); ctx.beginPath(); ctx.rect(x, y, w, h); ctx.clip(); ctx.drawImage(img, x + w / 2 - img.width * s / 2, y + h / 2 - img.height * s / 2 + oy, img.width * s, img.height * s); ctx.restore(); }
+function blase(x, y, w, text, farbe = "#0a84ff", schrift = "#fff", fs = 44) {
+  ctx.font = `700 ${fs}px UI`; const z = umbruch(text, w - 60); const h = 36 + z.length * fs * 1.25;
+  rr(x, y, w, h, 40); ctx.fillStyle = farbe; ctx.fill(); ctx.beginPath(); ctx.moveTo(x + w - 40, y + h - 30); ctx.quadraticCurveTo(x + w + 10, y + h + 4, x + w + 18, y + h - 2); ctx.quadraticCurveTo(x + w - 6, y + h - 8, x + w - 14, y + h - 30); ctx.fill();
+  ctx.fillStyle = schrift; ctx.textBaseline = "alphabetic"; z.forEach((l, i) => ctx.fillText(l, x + 30, y + 20 + fs + i * fs * 1.25)); return h;
+}
+function cursor(T, x, y, h) { if (Math.floor(T * 3.2) % 2 === 0) { ctx.fillStyle = "#0a84ff"; ctx.fillRect(x + 4, y - h * 0.82, 4, h); } }
+
+// ---------- Szenen ----------
+function player(T, a, e, titel, untertitel, fortschritt, dunkel = true) {
+  const f = flug(T, a, e + 0.25, { x: W / 2, y: 1130, rotY: 0.12, rotZ: -0.05 }, { x: W / 2 + 700, y: 1100, rotY: 0.9, rotZ: 0.2 }, { x: W / 2, y: 900 });
+  const zoom = T > 5.5 && T < 6.6 ? 1 + weich((T - 5.5) / 1.08) * 0.6 : 1;
+  ctx.save(); ctx.translate(W / 2, 900); ctx.scale(zoom, zoom); ctx.translate(-W / 2, -900);
+  karte({ ...f, w: 900, h: 400, r: 56, hell: !dunkel, schatten: 0.45 }, (x, y, w, h) => {
+    ctx.fillStyle = dunkel ? "#1c1c1e" : "#fff"; ctx.fillRect(x, y, w, h);
+    ctx.save(); rr(x + 40, y + 40, 150, 150, 22); ctx.clip(); ctx.drawImage(IMG.album, x + 40, y + 40, 150, 150); ctx.restore();
+    ctx.fillStyle = dunkel ? "#fff" : "#111"; ctx.font = "700 46px UI"; ctx.textBaseline = "alphabetic"; ctx.fillText(titel, x + 220, y + 100);
+    ctx.fillStyle = dunkel ? "rgba(255,255,255,0.55)" : "rgba(0,0,0,0.5)"; ctx.font = "700 32px UI"; ctx.fillText(untertitel, x + 220, y + 150);
+    const bx = x + 40, by = y + 238, bw = w - 80; rr(bx, by, bw, 10, 5); ctx.fillStyle = dunkel ? "rgba(255,255,255,0.22)" : "rgba(0,0,0,0.12)"; ctx.fill(); rr(bx, by, bw * fortschritt, 10, 5); ctx.fillStyle = dunkel ? "#fff" : "#111"; ctx.fill();
+    ctx.font = "700 24px UI"; ctx.fillStyle = dunkel ? "rgba(255,255,255,0.5)" : "rgba(0,0,0,0.45)"; const s = Math.floor(fortschritt * 118); ctx.fillText(`${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`, bx, by + 46); ctx.textAlign = "right"; ctx.fillText(`-${Math.floor((118 - s) / 60)}:${String((118 - s) % 60).padStart(2, "0")}`, bx + bw, by + 46); ctx.textAlign = "left";
+    ctx.fillStyle = dunkel ? "#fff" : "#111"; const cx = x + w / 2, cy = y + 335;
+    for (const s2 of [-1, 1]) { ctx.save(); ctx.translate(cx + s2 * 150, cy); ctx.scale(s2, 1); for (const dx of [0, 34]) { ctx.beginPath(); ctx.moveTo(dx - 10, -22); ctx.lineTo(dx + 22, 0); ctx.lineTo(dx - 10, 22); ctx.fill(); } ctx.restore(); }
+    ctx.fillRect(cx - 22, cy - 28, 14, 56); ctx.fillRect(cx + 8, cy - 28, 14, 56);
+  });
+  ctx.restore();
+}
+// ---------- Szenen ----------
+const wort = (z, i) => z.woerter[Math.min(i, z.woerter.length - 1)].a;
+function gross(T, woerter, x0, y0, fs, farbe, max = W - 160, glow = null) {
+  // Wörter links ausgerichtet, eins nach dem anderen, mit Nachzieh-Echo
+  ctx.save(); ctx.font = `900 ${fs}px Titel`; ctx.textBaseline = "alphabetic"; let x = x0, y = y0;
+  for (const w of woerter) { const t = w.w.toUpperCase(), wb = ctx.measureText(t).width * 0.9; if (x > x0 && x + wb > x0 + max) { x = x0; y += fs * 1.0; }
+    const d = T - w.a + 0.03; if (d >= 0) { const p = raus(d / 0.16);
+      for (let k = 3; k >= 1; k--) { ctx.save(); ctx.globalAlpha = 0.12 * (1 - p); ctx.translate(x + (1 - p) * 50 * k, y); ctx.scale(0.9, 1); ctx.fillStyle = farbe; ctx.fillText(t, 0, 0); ctx.restore(); }
+      ctx.save(); ctx.globalAlpha = clamp(d / 0.04, 0, 1); ctx.translate(x + (1 - p) * 36, y); ctx.scale(0.9, 1); ctx.fillStyle = farbe; if (glow) { ctx.shadowColor = glow; ctx.shadowBlur = 36; } ctx.fillText(t, 0, 0); ctx.restore(); }
+    x += wb + fs * 0.24; }
+  ctx.restore();
+}
+function dunkel(T, a = "#0c0c10", b = "#17141c") { const g = ctx.createLinearGradient(0, 0, 0, H); g.addColorStop(0, a); g.addColorStop(1, b); ctx.fillStyle = g; ctx.fillRect(0, 0, W, H); }
+function etikett(x, y, text, bg = "rgba(255,255,255,0.14)", fg = "#fff", fs = 28) { ctx.font = `700 ${fs}px UI`; const b = ctx.measureText(text).width + 36; rr(x, y, b, fs + 22, (fs + 22) / 2); ctx.fillStyle = bg; ctx.fill(); ctx.fillStyle = fg; ctx.fillText(text, x + 18, y + fs + 4); return b; }
+
+// Intro: Sperrbildschirm, Fotos von Nizi fliegen auf die Kicks
+const TREFFER = [1.24, 2.116, 2.946, 3.649, 4.421, 5.175];
+function intro(T) {
+  const zoom = 1.08 + T * 0.012; ctx.save(); ctx.translate(W / 2, H / 2); ctx.scale(zoom, zoom); ctx.rotate(Math.sin(T * 0.7) * 0.01); ctx.translate(-W / 2, -H / 2);
+  ctx.drawImage(IMG.sperr, -40, -60, W + 80, H + 120); ctx.restore();
+  const ein = raus(T / 0.4);
+  ctx.save(); ctx.globalAlpha = ein; ctx.fillStyle = "rgba(255,255,255,0.85)"; ctx.textAlign = "center"; ctx.font = "700 40px UI"; ctx.fillText("Freitag, 13. November", W / 2, 250 - (1 - ein) * 30);
+  ctx.font = "900 250px Titel"; ctx.fillStyle = "rgba(255,255,255,0.94)"; ctx.fillText("00:19", W / 2, 480 - (1 - ein) * 40); ctx.restore();
+  { const d = T - 0.12; if (d > 0) { const y = lerp(-200, 600, zurueck(d / 0.45));
+    karte({ x: W / 2, y, w: 920, h: 170, r: 44, hell: false, schatten: 0.4, rotY: 0, rotZ: 0 }, (x, y2, w, h) => { ctx.fillStyle = "rgba(40,40,44,0.92)"; ctx.fillRect(x, y2, w, h);
+      ctx.save(); rr(x + 30, y2 + 35, 100, 100, 24); ctx.clip(); ctx.drawImage(IMG.album, x + 30, y2 + 35, 100, 100); ctx.restore();
+      ctx.fillStyle = "rgba(255,255,255,0.55)"; ctx.font = "700 26px UI"; ctx.fillText("MUSIK · jetzt", x + 160, y2 + 62); ctx.fillStyle = "#fff"; ctx.font = "700 40px UI"; ctx.fillText("Nizi19 – Walter White", x + 160, y2 + 108); ctx.fillStyle = "rgba(255,255,255,0.7)"; ctx.font = "700 30px UI"; ctx.fillText("Neue Single · jetzt hören", x + 160, y2 + 146); }); } }
+  const FOTOS = [["maka", -0.13, -170], ["treppe", 0.1, 150], ["gucci", -0.05, -60], ["foto", 0.07, 40]];
+  FOTOS.forEach(([k, rz, dx], i) => { const t0 = TREFFER[i + 1]; if (T < t0 - 0.02) return; const d = T - t0, q = zurueck(d / 0.36);
+    const x = lerp(W / 2 + (i % 2 ? 900 : -900), W / 2 + dx, q), y = lerp(1500, 1180 - i * 18, q), puls = 1 + Math.exp(-d / 0.09) * 0.05;
+    ctx.save(); ctx.translate(x, y); ctx.scale(puls, puls); ctx.translate(-x, -y);
+    karte({ x, y, w: 560, h: 700, r: 36, rotZ: lerp(rz * 3, rz, q) + Math.sin(T * 1.3 + i) * 0.01, rotY: lerp(i % 2 ? 0.9 : -0.9, 0, q), schatten: 0.5, vx: (1 - clamp(d / 0.36, 0, 1)) * (i % 2 ? -40 : 40), vy: 0 },
+      (x2, y2, w, h) => bildIn(IMG[k], x2, y2, w, h, 1.04 + d * 0.03, 0));
+    ctx.restore(); });
+  { const d = T - TREFFER[0]; if (d > 0) { const y = lerp(2300, 1720, zurueck(d / 0.5)), voll = "Walter White", n = Math.round(clamp((T - 1.4) / 0.8, 0, 1) * voll.length);
+    karte({ x: W / 2, y, w: 920, h: 240, r: 50, hell: false, schatten: 0.5, rotY: 0, rotZ: 0 }, (x, y2, w, h) => { ctx.fillStyle = "rgba(28,28,30,0.94)"; ctx.fillRect(x, y2, w, h);
+      ctx.save(); rr(x + 34, y2 + 34, 120, 120, 20); ctx.clip(); ctx.drawImage(IMG.album, x + 34, y2 + 34, 120, 120); ctx.restore();
+      ctx.fillStyle = "#fff"; ctx.font = "700 46px UI"; ctx.fillText(voll.slice(0, n) + (n < voll.length && Math.floor(T * 6) % 2 ? "|" : ""), x + 184, y2 + 92); ctx.fillStyle = "rgba(255,255,255,0.55)"; ctx.font = "700 30px UI"; ctx.fillText("Nizi19", x + 184, y2 + 138);
+      rr(x + 34, y2 + 192, w - 68, 8, 4); ctx.fillStyle = "rgba(255,255,255,0.2)"; ctx.fill(); rr(x + 34, y2 + 192, (w - 68) * ((T + 8.9) / 111), 8, 4); ctx.fillStyle = "#fff"; ctx.fill();
+      for (let b = 0; b < 4; b++) { const hh = 14 + 30 * Math.abs(Math.sin(T * 7.6 + b * 1.7)); rr(x + w - 120 + b * 20, y2 + 100 - hh / 2, 12, hh, 6); ctx.fillStyle = GRUEN; ctx.fill(); } }); } }
+  // Pre-Drop (Kick setzt aus): „LASS ALLES, AKH“ groß, Bild wird dunkler
+  if (T > 3.55) { const q = clamp((T - 5.9) / 0.8, 0, 1); ctx.fillStyle = `rgba(0,0,0,${0.55 * q})`; ctx.fillRect(0, 0, W, H); }
+  for (const t0 of TREFFER) { const d = T - t0; if (d > 0 && d < 0.18) { ctx.fillStyle = `rgba(140,255,160,${0.12 * (1 - d / 0.18)})`; ctx.fillRect(0, 0, W, H); } }
+  if (T > 5.85) { const q = raus((T - 5.85) / 0.25); ctx.save(); ctx.globalAlpha = q; ctx.font = "900 150px Titel"; ctx.fillStyle = "#fff"; ctx.textAlign = "center"; ctx.shadowColor = "rgba(120,255,140,0.7)"; ctx.shadowBlur = 40;
+    ctx.translate(W / 2, 1000); ctx.scale((0.9 + (1 - q) * 0.2) * (1 + (T - 5.85) * 0.05), 1 + (1 - q) * 0.2 + (T - 5.85) * 0.05); ctx.fillText("19", 0, 0); ctx.restore(); }
+}
+// 0 Vollgold Sky-Dweller, Chocolate Dial – Uhr groß, Produktkarte
+function uhr(T, z) {
+  dunkel(T, "#120d07", "#2a1d0c");
+  const d = T - z.a;
+  { const f = flug(T, z.a, z.e, { x: W / 2, y: 820, rotY: -0.14, rotZ: 0.04 }, { x: W / 2 + 900, y: 900, rotY: 1, rotZ: 0.2 }, {});
+    const puls = 1 + Math.exp(-Math.max(0, T - wort(z, 3)) / 0.1) * (T > wort(z, 3) ? 0.04 : 0);
+    ctx.save(); ctx.translate(f.x, f.y); ctx.scale(puls, puls); ctx.translate(-f.x, -f.y);
+    karte({ ...f, w: 780, h: 1080, r: 50, schatten: 0.6 }, (x, y, w, h) => { bildIn(IMG.uhr, x, y, w, h, 1.25 + d * 0.06, 120);
+      const g = ctx.createLinearGradient(0, y + h - 330, 0, y + h); g.addColorStop(0, "rgba(0,0,0,0)"); g.addColorStop(1, "rgba(0,0,0,0.8)"); ctx.fillStyle = g; ctx.fillRect(x, y + h - 330, w, 330);
+      // Glanz, der über das Gold läuft
+      const gx = x + ((d * 900) % (w + 600)) - 300, gl = ctx.createLinearGradient(gx - 120, 0, gx + 120, 0); gl.addColorStop(0, "rgba(255,230,160,0)"); gl.addColorStop(0.5, "rgba(255,230,160,0.22)"); gl.addColorStop(1, "rgba(255,230,160,0)"); ctx.fillStyle = gl; ctx.fillRect(x, y, w, h);
+      ctx.fillStyle = "#e9c46a"; ctx.font = "700 26px UI"; ctx.fillText("VOLLGOLD · 18 KT", x + 44, y + h - 150);
+      ctx.fillStyle = "#fff"; ctx.font = "900 64px Titel"; ctx.fillText(T > wort(z, 1) - 0.03 ? "Sky-Dweller" : " ", x + 44, y + h - 80);
+      if (T > wort(z, 2) - 0.03) etikett(x + 44, y + h - 56, "Chocolate Dial", "#5a3a22", "#f3dcc0", 24); });
+    ctx.restore(); }
+  gross(T, z.woerter.slice(0, 1), 80, 1640, 150, "#e9c46a", W, "rgba(233,196,106,0.6)");
+  if (T > wort(z, 3)) { const q = raus((T - wort(z, 3)) / 0.2); ctx.save(); ctx.globalAlpha = q; ctx.font = "900 92px Titel"; ctx.fillStyle = "#f3dcc0"; ctx.textAlign = "right"; ctx.translate(W - 70, 1780); ctx.scale(0.9, 1); ctx.fillText("CHOCOLATE DIAL", 0, 0); ctx.restore(); }
+}
+// 1 Glocks in Box … – nur Text, groß, schwarz-grün
+function glocks(T, z) { dunkel(T, "#07120a", "#0d1f12"); gross(T, z.woerter, 80, 640, 150, "#fff", W - 170, "rgba(90,255,120,0.35)");
+  const d = T - wort(z, 3); if (d > 0) { ctx.save(); ctx.font = "900 420px Titel"; ctx.fillStyle = `rgba(90,255,120,${0.08 * raus(d / 0.3)})`; ctx.textAlign = "center"; ctx.fillText("100", W / 2, 1650); ctx.restore(); } }
+// 2 19, mix' die Wock mit Sprite – Dose schwebt, iMessage
+function sprite(T, z) {
+  const g = ctx.createLinearGradient(0, 0, 0, H); g.addColorStop(0, "#f4fbf3"); g.addColorStop(1, "#d9efd6"); ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+  ctx.save(); ctx.font = "900 900px Titel"; ctx.fillStyle = "rgba(63,163,77,0.10)"; ctx.textAlign = "center"; ctx.translate(W / 2 + Math.sin(T) * 20, 1150); ctx.scale(0.9, 1); ctx.fillText("19", 0, 0); ctx.restore();
+  const tS = wort(z, 5), d = T - z.a, auf = zurueck(d / 0.45), cx = W / 2 + Math.sin(T * 1.7) * 14, cy = lerp(2300, 980, auf) + Math.sin(T * 2.3) * 12;
+  const sk = T > tS ? 1 + Math.exp(-(T - tS) / 0.1) * 0.08 : 1, im = IMG.sprite, sc = 820 / im.height * sk, w = im.width * sc, h = im.height * sc, rot = lerp(-0.5, -0.12, auf) + Math.sin(T * 1.3) * 0.04;
+  // Schatten + Bläschen
+  ctx.save(); ctx.fillStyle = "rgba(0,0,0,0.16)"; ctx.beginPath(); ctx.ellipse(W / 2, 1460, 220, 36, 0, 0, Math.PI * 2); ctx.filter = "blur(18px)"; ctx.fill(); ctx.restore();
+  for (let b = 0; b < 26; b++) { const ph = (T * (0.35 + (b % 5) * 0.08) + b * 0.137) % 1, bx = W / 2 + Math.sin(b * 12.7) * 380, by = 1500 - ph * 1300, r = 6 + (b % 4) * 5; ctx.beginPath(); ctx.arc(bx + Math.sin(T * 3 + b) * 10, by, r, 0, Math.PI * 2); ctx.strokeStyle = `rgba(63,163,77,${0.35 * (1 - ph)})`; ctx.lineWidth = 3; ctx.stroke(); }
+  ctx.save(); ctx.translate(cx, cy); ctx.rotate(rot); ctx.shadowColor = "rgba(0,60,10,0.35)"; ctx.shadowBlur = 60; ctx.shadowOffsetY = 30; ctx.drawImage(im, -w / 2, -h / 2, w, h); ctx.restore();
+  const t = getippt(T, z.woerter); if (t) { ctx.save(); ctx.shadowColor = "rgba(0,0,0,0.15)"; ctx.shadowBlur = 30; ctx.shadowOffsetY = 14; blase(110, 1560, 860, t, GRUEN, "#fff", 48); ctx.restore(); }
+  ctx.save(); ctx.font = "700 28px UI"; ctx.fillStyle = "rgba(0,0,0,0.4)"; ctx.textAlign = "center"; ctx.fillText(T > tS ? "Zugestellt" : "", W / 2, 1530); ctx.restore();
+}
+// 3 Fünfzighundert … Sommerzeit – Bank-Karte zählt, Wetter springt auf Sommer
+function sommer(T, z) {
+  hintergrund(T);
+  const tS = wort(z, 6), betrag = Math.round(5000 * raus((T - wort(z, 0)) / 0.5) / 10) * 10;
+  { const f = flug(T, z.a, z.e, { x: W / 2, y: 560, rotY: 0.12, rotZ: -0.04 }, { x: -600, y: 500, rotY: -1 }, {});
+    karte({ ...f, w: 880, h: 520, r: 50, hell: false, schatten: 0.45 }, (x, y, w, h) => { const g = ctx.createLinearGradient(x, y, x + w, y + h); g.addColorStop(0, "#17361d"); g.addColorStop(1, "#0d1a10"); ctx.fillStyle = g; ctx.fillRect(x, y, w, h);
+      ctx.fillStyle = "rgba(255,255,255,0.6)"; ctx.font = "700 30px UI"; ctx.fillText("Kontostand", x + 50, y + 80); ctx.fillStyle = "#fff"; ctx.font = "900 120px Titel"; ctx.fillText(betrag.toLocaleString("de-DE") + " €", x + 50, y + 220);
+      etikett(x + 50, y + 260, "+ 5.000 € eingegangen", "rgba(90,255,120,0.18)", "#8dffa0", 28);
+      ctx.fillStyle = "rgba(255,255,255,0.5)"; ctx.font = "700 28px UI"; const t = getippt(T, z.woerter).split(" ").slice(1, 4).join(" "); ctx.fillText(t ? "Verwendungszweck: " + t : "", x + 50, y + 420); }); }
+  { const f = flug(T, z.a + 0.25, z.e, { x: W / 2, y: 1270, rotY: -0.12, rotZ: 0.03 }, { x: W + 600, y: 1300, rotY: 1 }, {});
+    const som = T > tS - 0.03, q = raus((T - tS) / 0.3), temp = som ? Math.round(lerp(14, 31, q)) : 14;
+    karte({ ...f, w: 880, h: 520, r: 50, schatten: 0.35 }, (x, y, w, h) => { const g = ctx.createLinearGradient(0, y, 0, y + h); g.addColorStop(0, som ? "#ffb347" : "#5b7fa6"); g.addColorStop(1, som ? "#ff7a1a" : "#2f4b6e"); ctx.fillStyle = g; ctx.fillRect(x, y, w, h);
+      ctx.fillStyle = "#fff"; ctx.font = "700 38px UI"; ctx.fillText("Berlin", x + 50, y + 80); ctx.font = "900 170px Titel"; ctx.fillText(temp + "°", x + 44, y + 260); ctx.font = "700 34px UI"; ctx.fillText(som ? "Sommerzeit · sonnig" : "Bewölkt", x + 50, y + 320);
+      // Sonne
+      if (som) { ctx.save(); ctx.translate(x + w - 170, y + 160); ctx.rotate(T); ctx.fillStyle = "#fff6c4"; for (let k = 0; k < 12; k++) { ctx.rotate(Math.PI / 6); ctx.fillRect(70 * q, -6, 40, 12); } ctx.beginPath(); ctx.arc(0, 0, 60 * q, 0, Math.PI * 2); ctx.fill(); ctx.restore(); }
+      for (let k = 0; k < 6; k++) { const tk = som ? Math.round(lerp(14, 31, q)) - (k % 3) : 13 + (k % 2); ctx.fillStyle = "rgba(255,255,255,0.75)"; ctx.font = "700 26px UI"; ctx.textAlign = "center"; ctx.fillText(["Jetzt", "1 Uhr", "2 Uhr", "3 Uhr", "4 Uhr", "5 Uhr"][k], x + 100 + k * 136, y + 400); ctx.font = "700 36px UI"; ctx.fillStyle = "#fff"; ctx.fillText(tk + "°", x + 100 + k * 136, y + 460); ctx.textAlign = "left"; } }); }
+  if (T > tS) { const q = clamp((T - tS) / 0.25, 0, 1); ctx.fillStyle = `rgba(255,170,60,${0.12 * (1 - q)})`; ctx.fillRect(0, 0, W, H); }
+}
+// 4 Schick' ihn auf Mission … Mountainbike – Karten-App mit Route + Bike-Foto
+function mission(T, z) {
+  dunkel(T, "#0b0f14", "#121a24");
+  const tB = wort(z, 9), d = T - z.a, pr = clamp((T - z.a) / (z.e - z.a - 0.2), 0, 1);
+  { const f = flug(T, z.a, z.e, { x: W / 2, y: 760, rotY: 0.14, rotZ: -0.03 }, { x: W / 2, y: 2400, rotY: 0.4 }, {});
+    karte({ ...f, w: 900, h: 1060, r: 54, hell: false, schatten: 0.6 }, (x, y, w, h) => { ctx.fillStyle = "#1b222c"; ctx.fillRect(x, y, w, h);
+      // Straßennetz
+      ctx.strokeStyle = "rgba(255,255,255,0.08)"; ctx.lineWidth = 18; for (let k = 0; k < 9; k++) { ctx.beginPath(); ctx.moveTo(x - 50, y + 80 + k * 120 + Math.sin(k) * 30); ctx.lineTo(x + w + 50, y + 40 + k * 120 - Math.cos(k) * 40); ctx.stroke(); }
+      for (let k = 0; k < 7; k++) { ctx.beginPath(); ctx.moveTo(x + 60 + k * 140, y - 50); ctx.lineTo(x + 20 + k * 150, y + h + 50); ctx.stroke(); }
+      const P = [[0.15, 0.82], [0.28, 0.66], [0.42, 0.7], [0.5, 0.5], [0.66, 0.42], [0.72, 0.26], [0.86, 0.18]].map(([a, b]) => [x + a * w, y + b * h]);
+      const n = (P.length - 1) * pr, k0 = Math.floor(n); ctx.strokeStyle = GRUEN; ctx.lineWidth = 14; ctx.lineCap = "round"; ctx.lineJoin = "round"; ctx.beginPath(); ctx.moveTo(...P[0]);
+      for (let k = 1; k <= k0; k++) ctx.lineTo(...P[k]); const pk = k0 < P.length - 1 ? [lerp(P[k0][0], P[k0 + 1][0], n - k0), lerp(P[k0][1], P[k0 + 1][1], n - k0)] : P[P.length - 1]; ctx.lineTo(...pk); ctx.stroke();
+      ctx.beginPath(); ctx.arc(...P[P.length - 1], 22, 0, Math.PI * 2); ctx.fillStyle = "#ff375f"; ctx.fill();
+      ctx.beginPath(); ctx.arc(...pk, 30, 0, Math.PI * 2); ctx.fillStyle = "#fff"; ctx.fill(); ctx.beginPath(); ctx.arc(...pk, 20, 0, Math.PI * 2); ctx.fillStyle = GRUEN; ctx.fill();
+      rr(x + 30, y + 30, w - 60, 130, 34); ctx.fillStyle = "rgba(20,20,24,0.92)"; ctx.fill(); ctx.fillStyle = "#fff"; ctx.font = "900 50px Titel"; ctx.fillText("Mission", x + 70, y + 108);
+      ctx.fillStyle = "rgba(255,255,255,0.6)"; ctx.font = "700 30px UI"; ctx.textAlign = "right"; ctx.fillText((4 - pr * 3.6).toFixed(1).replace(".", ",") + " km · 🚲 " + Math.max(1, Math.round(9 - pr * 8)) + " Min", x + w - 70, y + 106); ctx.textAlign = "left"; }); }
+  if (T > tB - 0.05) { const q = zurueck((T - tB + 0.05) / 0.35); karte({ x: lerp(W + 500, W / 2 + 120, q), y: 1480, w: 760, h: 430, r: 40, rotY: -0.1, rotZ: 0.04, schatten: 0.5, vx: (1 - clamp((T - tB) / 0.35, 0, 1)) * -50, vy: 0 }, (x, y, w, h) => bildIn(IMG.bike, x, y, w, h, 1.1, 0)); }
+  const t = getippt(T, z.woerter); ctx.save(); ctx.font = "900 72px Titel"; ctx.fillStyle = "#fff"; umbruch(t.toUpperCase(), 960).slice(-2).forEach((l, i) => { ctx.save(); ctx.translate(70, 1790 + i * 78 - 78 * (Math.min(2, umbruch(t.toUpperCase(), 960).length) - 1)); ctx.scale(0.9, 1); ctx.fillText(l, 0, 0); ctx.restore(); }); ctx.restore();
+}
+// 5 In mein' Zula … Counter-Strike – Spiel-Oberfläche
+function zula(T, z) {
+  dunkel(T, "#0d0f0a", "#1a1d12");
+  const tC = wort(z, 7), d = T - z.a;
+  { const f = flug(T, z.a, z.e, { x: W / 2, y: 840, rotY: -0.16, rotZ: 0.04 }, { x: -700, y: 900, rotY: -1 }, {});
+    karte({ ...f, w: 920, h: 1180, r: 40, hell: false, schatten: 0.6 }, (x, y, w, h) => { const g = ctx.createLinearGradient(0, y, 0, y + h); g.addColorStop(0, "#2a2f22"); g.addColorStop(1, "#14170f"); ctx.fillStyle = g; ctx.fillRect(x, y, w, h);
+      // Kopfzeile Runde
+      rr(x + w / 2 - 230, y + 40, 460, 120, 20); ctx.fillStyle = "rgba(0,0,0,0.55)"; ctx.fill(); ctx.textAlign = "center"; ctx.fillStyle = "#e7c35a"; ctx.font = "900 72px Titel"; ctx.fillText("19", x + w / 2 - 140, y + 128); ctx.fillStyle = "#8fb7ff"; ctx.fillText("10", x + w / 2 + 140, y + 128);
+      const sek = Math.max(0, 115 - Math.floor(d * 6)); ctx.fillStyle = "#fff"; ctx.font = "700 44px UI"; ctx.fillText(`${Math.floor(sek / 60)}:${String(sek % 60).padStart(2, "0")}`, x + w / 2, y + 118); ctx.textAlign = "left";
+      // Zula-Inventar als Raster
+      ctx.fillStyle = "rgba(255,255,255,0.55)"; ctx.font = "700 28px UI"; ctx.fillText("ZULA · INVENTAR", x + 50, y + 240);
+      const SL = ["Kevlar + Helm", "Defuse-Kit", "Rauchgranate", "Blendgranate", "$16.000", "Funkgerät"];
+      SL.forEach((s, k) => { const t0 = z.a + 0.12 + k * 0.12, q = raus((T - t0) / 0.2); if (q <= 0) return; const cx = x + 50 + (k % 2) * 420, cy = y + 270 + Math.floor(k / 2) * 190;
+        ctx.save(); ctx.globalAlpha = q; ctx.translate(0, (1 - q) * 30); rr(cx, cy, 400, 160, 22); ctx.fillStyle = k === 4 ? "rgba(90,255,120,0.14)" : "rgba(255,255,255,0.07)"; ctx.fill(); ctx.strokeStyle = k === 4 ? "#5aff78" : "rgba(255,255,255,0.18)"; ctx.lineWidth = 3; ctx.stroke();
+        ctx.fillStyle = k === 4 ? "#8dffa0" : "#fff"; ctx.font = k === 4 ? "900 56px Titel" : "700 36px UI"; ctx.fillText(s, cx + 30, cy + 98); ctx.restore(); });
+      if (T > tC - 0.03) { const q = zurueck((T - tC + 0.03) / 0.3); rr(x + 50, y + h - 220, w - 100, 160, 26); ctx.fillStyle = `rgba(231,195,90,${0.9 * clamp(q, 0, 1)})`; ctx.fill(); ctx.fillStyle = "#14170f"; ctx.font = "900 70px Titel"; ctx.textAlign = "center"; ctx.save(); ctx.translate(x + w / 2, y + h - 115); ctx.scale(q, q); ctx.fillText("COUNTER-STRIKE", 0, 0); ctx.restore(); ctx.textAlign = "left"; } }); }
+  const t = getippt(T, z.woerter); ctx.save(); ctx.font = "900 70px Titel"; ctx.fillStyle = "#fff"; umbruch(t.toUpperCase(), 960).forEach((l, i) => { ctx.save(); ctx.translate(70, 1640 + i * 76); ctx.scale(0.9, 1); ctx.fillText(l, 0, 0); ctx.restore(); }); ctx.restore();
+}
+// 6 … Crystal so wie Walter White – Serien-App: „Wer schaut gerade?“
+function walter(T, z) {
+  dunkel(T, "#04140a", "#0b2414");
+  const tW = wort(z, 7), d = T - z.a;
+  { const f = flug(T, z.a, z.e, { x: W / 2, y: 900, rotY: 0.14, rotZ: -0.04 }, { x: W / 2 + 900, y: 900, rotY: 1 }, {});
+    karte({ ...f, w: 900, h: 1240, r: 50, hell: false, schatten: 0.6 }, (x, y, w, h) => { ctx.fillStyle = "#0f1612"; ctx.fillRect(x, y, w, h);
+      ctx.fillStyle = "#fff"; ctx.font = "900 52px Titel"; ctx.textAlign = "center"; ctx.fillText("Wer schaut gerade?", x + w / 2, y + 120);
+      // Profile
+      const PR = [["Partner", "#2e6b3a"], ["Akh", "#6b4a2e"], ["19", "#2e4a6b"]];
+      PR.forEach(([n, c], k) => { const cx = x + 180 + k * 270, cy = y + 300; rr(cx - 100, cy - 100, 200, 200, 30); ctx.fillStyle = c; ctx.fill(); ctx.fillStyle = "#fff"; ctx.font = "900 80px Titel"; ctx.fillText(n[0], cx, cy + 28); ctx.font = "700 32px UI"; ctx.fillStyle = "rgba(255,255,255,0.7)"; ctx.fillText(n, cx, cy + 150); });
+      // Hauptprofil Walter White mit Br/Ba-Kacheln
+      const q = T > tW - 0.03 ? zurueck((T - tW + 0.03) / 0.35) : 0;
+      ctx.save(); ctx.translate(x + w / 2, y + 760); ctx.scale(0.6 + 0.4 * q, 0.6 + 0.4 * q); ctx.globalAlpha = 0.35 + 0.65 * clamp(q, 0, 1);
+      for (const [s, nr, dx] of [["Br", "35", -130], ["Ba", "56", 130]]) { rr(dx - 120, -150, 240, 240, 14); const g = ctx.createLinearGradient(0, -150, 0, 90); g.addColorStop(0, "#3c8d3f"); g.addColorStop(1, "#1d5a24"); ctx.fillStyle = g; ctx.fill(); ctx.strokeStyle = "rgba(255,255,255,0.6)"; ctx.lineWidth = 4; ctx.stroke();
+        ctx.fillStyle = "#fff"; ctx.font = "900 140px Titel"; ctx.fillText(s, dx, 40); ctx.font = "700 30px UI"; ctx.textAlign = "left"; ctx.fillText(nr, dx - 100, -105); ctx.textAlign = "center"; }
+      ctx.restore();
+      ctx.fillStyle = "#fff"; ctx.font = "900 86px Titel"; const nm = T > wort(z, 7) - 0.03 ? (T > wort(z, 8) - 0.03 ? "Walter White" : "Walter") : ""; ctx.fillText(nm, x + w / 2, y + 1000);
+      const t = getippt(T, z.woerter.slice(0, 7)); ctx.fillStyle = "rgba(255,255,255,0.6)"; ctx.font = "700 34px UI"; ctx.fillText(t, x + w / 2, y + 1100); ctx.textAlign = "left";
+      if (q > 0) { const gl = clamp((T - tW) / 0.2, 0, 1); ctx.fillStyle = `rgba(140,255,160,${0.15 * (1 - gl)})`; ctx.fillRect(x, y, w, h); } }); }
+  if (T > wort(z, 8)) { const q = zurueck((T - wort(z, 8)) / 0.3); karte({ x: lerp(-400, 230, q), y: 1620, w: 300, h: 300, r: 30, rotZ: -0.1, rotY: 0.2, schatten: 0.5 }, (x, y, w, h) => ctx.drawImage(IMG.album, x, y, w, h)); }
+}
+// 7 Ich geh' niemals Knast, fahr' die Flucht … Formel 1 – F1-Foto + Rundenzeit + Tacho
+function formel(T, z) {
+  dunkel(T, "#140707", "#250d0d");
+  const tF = wort(z, 10), d = T - z.a, kmh = Math.round(lerp(80, 338, raus((T - wort(z, 4)) / 1.0)));
+  { const f = flug(T, z.a, z.e + 1, { x: W / 2, y: 620, rotY: -0.12, rotZ: 0.03 }, { x: -700, y: 600, rotY: -1 }, {});
+    karte({ ...f, w: 920, h: 640, r: 46, schatten: 0.6, vx: Math.sin(T * 30) * 2 }, (x, y, w, h) => { bildIn(IMG.f1, x, y, w, h, 1.15 + d * 0.08, 0);
+      // Speed-Linien
+      ctx.save(); ctx.globalAlpha = 0.25 * clamp((kmh - 150) / 150, 0, 1); ctx.strokeStyle = "#fff"; ctx.lineWidth = 3; for (let k = 0; k < 14; k++) { const yy = y + ((k * 97 + T * 1200) % h), xx = x + ((k * 173) % w); ctx.beginPath(); ctx.moveTo(xx, yy); ctx.lineTo(xx - 220, yy); ctx.stroke(); } ctx.restore();
+      etikett(x + 34, y + 34, "LIVE · P1", "#e10600", "#fff", 28); }); }
+  { const f = flug(T, z.a + 0.2, z.e + 1, { x: W / 2, y: 1270, rotY: 0.12, rotZ: -0.03 }, { x: W + 700, y: 1300, rotY: 1 }, {});
+    karte({ ...f, w: 920, h: 520, r: 46, hell: false, schatten: 0.6 }, (x, y, w, h) => { ctx.fillStyle = "#16161a"; ctx.fillRect(x, y, w, h);
+      ctx.fillStyle = "rgba(255,255,255,0.55)"; ctx.font = "700 30px UI"; ctx.fillText("RUNDE 19 / 19 · FLUCHT", x + 50, y + 80);
+      const zeit = Math.max(0, d) * 1.0, s = 79 + zeit; ctx.fillStyle = "#fff"; ctx.font = "900 120px Titel"; ctx.fillText(`1:${(s - 60).toFixed(3).padStart(6, "0")}`, x + 44, y + 220);
+      // Tacho
+      const cx = x + w - 190, cy = y + 330, r = 130, a0 = Math.PI * 0.8, a1 = Math.PI * 2.2, aw = lerp(a0, a1, kmh / 360);
+      ctx.lineCap = "round"; ctx.lineWidth = 22; ctx.strokeStyle = "rgba(255,255,255,0.12)"; ctx.beginPath(); ctx.arc(cx, cy, r, a0, a1); ctx.stroke(); ctx.strokeStyle = "#e10600"; ctx.beginPath(); ctx.arc(cx, cy, r, a0, aw); ctx.stroke();
+      ctx.fillStyle = "#fff"; ctx.font = "900 70px Titel"; ctx.textAlign = "center"; ctx.fillText(kmh, cx, cy + 20); ctx.font = "700 26px UI"; ctx.fillStyle = "rgba(255,255,255,0.6)"; ctx.fillText("km/h", cx, cy + 60); ctx.textAlign = "left";
+      const t = getippt(T, z.woerter.slice(0, 4)); ctx.fillStyle = "#8dffa0"; ctx.font = "700 36px UI"; ctx.fillText(t, x + 50, y + 320);
+      ctx.fillStyle = "rgba(255,255,255,0.75)"; ctx.font = "700 34px UI"; const t2 = getippt(T, z.woerter.slice(4, 7)); ctx.fillText(t2, x + 50, y + 400); }); }
+  gross(T, z.woerter.slice(7), 70, 1720, 120, "#fff", 1000, T > tF ? "rgba(225,6,0,0.8)" : null);
+  if (T > tF) { const q = clamp((T - tF) / 0.25, 0, 1); ctx.fillStyle = `rgba(225,6,0,${0.18 * (1 - q)})`; ctx.fillRect(0, 0, W, H); }
+}
+// Ende: „Ah, ja, okay“ – Player
+function ende(T) {
+  ctx.drawImage(IMG.sperr, 0, 0, W, H);
+  const z = { a: ZL.zeilen[7].e, e: ZL.ende };
+  player(T, z.a, z.e + 1, "Walter White", "Nizi19", (T + 8.9) / 111);
+  const r = ZL.ende - T; if (r < 0.35) { ctx.fillStyle = `rgba(0,0,0,${1 - r / 0.35})`; ctx.fillRect(0, 0, W, H); }
+}
+const SZ = [uhr, glocks, sprite, sommer, mission, zula, walter, formel];
+function szeneIn(nr, T, puf) { const alt = ctx; ctx = puf.getContext("2d"); ctx.setTransform(K, 0, 0, K, 0, 0); ctx.filter = "none"; ctx.globalAlpha = 1; ctx.fillStyle = "#fff"; ctx.fillRect(0, 0, W, H);
+  if (nr < 0) intro(T); else if (nr >= SZ.length) ende(T); else SZ[nr](T, ZL.zeilen[nr]); ctx = alt; }
+const RICHT = [[0, 1], [1, 0], [-1, 0], [0, -1], [1, 0], [-1, 0], [0, 1], [1, 0], [0, -1]];
+function stossJetzt(T) { if (T < 6.6) return 0; let st = 0; for (const k of ZL.kicks) { const ph = T - k; if (ph >= 0 && ph < 0.4) st = Math.max(st, Math.exp(-ph / 0.09) * 0.028); } return st; }
+window.zeichne = T => {
+  ctx = HAUPT; ctx.setTransform(K, 0, 0, K, 0, 0); ctx.filter = "none"; ctx.globalAlpha = 1; ctx.fillStyle = "#000"; ctx.fillRect(0, 0, W, H);
+  const Z = ZL.zeilen, GR = Z.map(z => z.a).concat([Z[Z.length - 1].e]); // Grenzen: Intro|0|1…|7|Ende
+  let nr = -1; for (let i = 0; i < GR.length; i++) if (T >= GR[i]) nr = i; // -1 Intro, 0..7, 8 Ende
+  const UE = 0.12; let g = -1; for (let i = 0; i < GR.length; i++) if (Math.abs(T - GR[i]) < UE) g = i;
+  const st = stossJetzt(T);
+  const male = (puf, dx, dy, a = 1) => { ctx.save(); ctx.globalAlpha = a; ctx.translate(W / 2 + dx, H / 2 + dy); ctx.scale(1 + st, 1 + st); ctx.drawImage(puf, -W / 2, -H / 2, W, H); ctx.restore(); };
+  if (g < 0) { szeneIn(nr, T, PUF[0]); male(PUF[0], 0, 0); }
+  else {
+    const p = (T - (GR[g] - UE)) / (2 * UE), e = p < 0.5 ? 4 * p * p * p : 1 - Math.pow(-2 * p + 2, 3) / 2, [rx, ry] = RICHT[g], v = Math.sin(Math.PI * clamp(p, 0, 1));
+    szeneIn(g - 1, Math.min(T, GR[g] - 0.001), PUF[0]); szeneIn(g, Math.max(T, GR[g]), PUF[1]);
+    for (const [puf, off] of [[PUF[0], -e], [PUF[1], 1 - e]]) { const dx = off * W * rx, dy = off * H * ry; if (Math.abs(off) >= 1) continue;
+      male(puf, dx, dy, 1); for (let s2 = 1; s2 <= 4; s2++) male(puf, dx - rx * s2 * 30 * v, dy - ry * s2 * 52 * v, 0.14 * v); }
+  }
+  ctx.save(); ctx.globalCompositeOperation = "overlay"; ctx.drawImage(KORN[Math.floor(T * 24) % KORN.length], 0, 0, W, H); ctx.restore();
+};
+init();
+</script></body></html>
