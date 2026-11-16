@@ -10,11 +10,12 @@
 @qualitaet max
 @look 0
 @kino 0.2
+@untertitel aus
 
 // Serie „Der Fluchtwagen“ (Jonathan 16.11.): echte 3D-Kulisse `drei` (engine/flucht.js, Quelle drei/flucht/szene.js). Bibel: flucht/serienbibel.md
 == Die Nacht ==
 // Wow-Bild: Verfolgerkamera hinter dem roten Kombi
-[drei einstellung=verfolger hooktext="3 UHR NACHTS · DIE POLIZEI SUCHT DICH" ein="Drei>03:12 UHR>uhr" ein_y=1240] Drei Uhr nachts. Du sitzt am Steuer eines roten Kombis. Und die Polizei sucht genau dieses Auto.
+[drei einstellung=verfolger filmtitel="Der|Fluchtwagen|TEIL 1" ein="Drei>03:12 UHR>uhr" ein_y=1240] Drei Uhr nachts. Du sitzt am Steuer eines roten Kombis. Und die Polizei sucht genau dieses Auto.
 // Seitlich mitfahren: Laternen fliegen vorbei
 [drei einstellung=seite ein="zwei>2 FREMDE IM AUTO" ein_y=420] Neben dir sitzen zwei Männer, die du erst seit einer Stunde kennst. Auf dem Rücksitz liegt eine Tasche, über die keiner spricht.
 
@@ -26,13 +27,13 @@
 // Wärmebild aus dem Hubschrauber
 [drei einstellung=waerme ein="Motor>HEISSER MOTOR" ein_y=1240] Und wenn du es abschüttelst? Egal. Seine Wärmebildkamera sieht deinen heißen Motor auch im Dunkeln.
 // Wärmebild, Funkspruch
-[drei einstellung=waerme hud_oben="POL-HELI 2|ZIEL ERFASST"] Im Funk sagt der Pilot nur einen Satz. „Zielfahrzeug erfasst. Der kommt nicht weg.“
+[drei einstellung=waerme hud_oben="POL-HELI 2|ZIEL ERFASST" sprecher_label="Polizeifunk"] Im Funk sagt der Pilot nur einen Satz. „Zielfahrzeug erfasst. Der kommt nicht weg.“
 
 == Die 900 PS ==
 // Front: das Auto kommt auf die Kamera zu
-[drei einstellung=front strahl=1] Was er nicht weiß: Unter deiner Haube steckt kein normaler Motor. Jemand hat ihn umgebaut.
+[drei einstellung=front] Was er nicht weiß: Unter deiner Haube steckt kein normaler Motor. Jemand hat ihn umgebaut.
 // Verfolger, PS zählen hoch
-[drei einstellung=verfolger strahl=1 ein="neunhundert>#900 PS" ein_y=1240] Über neunhundert PS. Und bis jetzt bist du nicht einmal Vollgas gefahren.
+[drei einstellung=verfolger strahl=1 chip="600>900"] Über neunhundert PS. Und bis jetzt bist du nicht einmal Vollgas gefahren.
 // Das Auto zieht davon
 [drei einstellung=weg strahl=1 strahl_aus=1.6 gas=1 ein="zweihundertfünfzig>HELI: CA. #250 KM/H" ein_y=420] Ein Polizeihubschrauber schafft etwa zweihundertfünfzig Kilometer pro Stunde. Du trittst das Pedal durch.
 
@@ -40,6 +41,6 @@
 // Totale: der Strahl sucht die leere Straße
 [drei einstellung=totale strahl=1 strahl_aus=0 auto=0 ein="Zwanzig>#20 SEKUNDEN" ein_y=420] Zwanzig Sekunden später sucht der Lichtkegel nur noch leere Straße. Nicht weil du klüger warst. Sondern einfach schneller.
 // Wärmebild ohne Auto
-[drei einstellung=waerme auto=0 strahl=1 hud_oben="POL-HELI 2|SICHTKONTAKT VERLOREN" ein="verloren>KONTAKT VERLOREN" ein_y=1240] „Sichtkontakt verloren.“
+[drei einstellung=waerme auto=0 strahl=1 hud_oben="POL-HELI 2|SICHTKONTAKT VERLOREN" ein="verloren>KONTAKT VERLOREN" ein_y=1240 sprecher_label="Pilot"] „Sichtkontakt verloren.“
 // Cliffhanger
 [drei einstellung=seite gas=0 ein="Kennzeichen>KENNZEICHEN GESPEICHERT" ein_y=420] Du hast es geschafft, denkst du. Aber die Kamera im Hubschrauber hat alles aufgezeichnet. Auch dein Kennzeichen.

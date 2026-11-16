@@ -42,7 +42,7 @@ function bauen(W, H) {
 
   // ---------- Straße ----------
   const LEN = 3200, Z0 = 200;
-  const asphalt = new THREE.MeshStandardMaterial({ color: '#15171c', roughness: 0.42, metalness: 0.15 });
+  const asphalt = new THREE.MeshStandardMaterial({ color: '#121418', roughness: 0.3, metalness: 0.25 }); // feucht glänzend
   const road = new THREE.Mesh(new THREE.PlaneGeometry(22, LEN), asphalt); road.rotation.x = -Math.PI / 2; road.position.z = Z0 - LEN / 2; scene.add(road);
   const gras = new THREE.Mesh(new THREE.PlaneGeometry(600, LEN), new THREE.MeshStandardMaterial({ color: '#080c0a', roughness: 1 }));
   gras.rotation.x = -Math.PI / 2; gras.position.set(0, -0.02, Z0 - LEN / 2); scene.add(gras);
@@ -65,6 +65,8 @@ function bauen(W, H) {
   const radial = (stops) => { const c = document.createElement('canvas'); c.width = c.height = 256; const g = c.getContext('2d'); const r = g.createRadialGradient(128, 128, 0, 128, 128, 128); for (const [o, col] of stops) r.addColorStop(o, col); g.fillStyle = r; g.fillRect(0, 0, 256, 256); return new THREE.CanvasTexture(c); };
   const pfuetzeTex = radial([[0, 'rgba(255,220,170,1)'], [0.4, 'rgba(255,200,140,.35)'], [1, 'rgba(255,200,140,0)']]);
   const pfuetzeMat = new THREE.MeshBasicMaterial({ map: pfuetzeTex, transparent: true, depthWrite: false, blending: THREE.AdditiveBlending, opacity: 0.55 });
+  const spiegelTex = (() => { const c = document.createElement('canvas'); c.width = 64; c.height = 512; const g = c.getContext('2d'); const l = g.createLinearGradient(0, 0, 0, 512); l.addColorStop(0, 'rgba(255,215,160,0.0)'); l.addColorStop(0.45, 'rgba(255,215,160,0.55)'); l.addColorStop(1, 'rgba(255,215,160,0)'); g.fillStyle = l; g.fillRect(0, 0, 64, 512); const q = g.createLinearGradient(0, 0, 64, 0); g.globalCompositeOperation = 'destination-in'; q.addColorStop(0, 'rgba(0,0,0,0)'); q.addColorStop(0.5, 'rgba(0,0,0,1)'); q.addColorStop(1, 'rgba(0,0,0,0)'); g.fillStyle = q; g.fillRect(0, 0, 64, 512); return new THREE.CanvasTexture(c); })();
+  const spiegelMat = new THREE.MeshBasicMaterial({ map: spiegelTex, transparent: true, depthWrite: false, blending: THREE.AdditiveBlending, opacity: 0.5 });
   const mastMat = new THREE.MeshStandardMaterial({ color: '#2a2d33', roughness: 0.6, metalness: 0.5 });
   const kopfMat = new THREE.MeshBasicMaterial({ color: new THREE.Color('#ffe6c0').multiplyScalar(6) });
   const lampenDeko = [];
@@ -75,11 +77,22 @@ function bauen(W, H) {
     const kopf = new THREE.Mesh(new THREE.BoxGeometry(1.0, 0.18, 0.4), kopfMat); kopf.position.set(x + 4.2, h - 0.12, z); scene.add(kopf);
     const kegel = new THREE.Mesh(new THREE.ConeGeometry(4.2, h, 24, 1, true), kegelMat); kegel.position.set(x + 4.2, h / 2, z); scene.add(kegel); lampenDeko.push(kegel);
     const p = new THREE.Mesh(new THREE.PlaneGeometry(12, 12), pfuetzeMat); p.rotation.x = -Math.PI / 2; p.position.set(x + 4.2, 0.02, z); scene.add(p); lampenDeko.push(p);
+    const sp = new THREE.Mesh(new THREE.PlaneGeometry(1.4, 22), spiegelMat); sp.rotation.x = -Math.PI / 2; sp.position.set(x + 4.2, 0.025, z + 11); scene.add(sp); lampenDeko.push(sp); // Spiegelung (nasser Asphalt)
   }
   const baumMat = new THREE.MeshStandardMaterial({ color: '#05080a', roughness: 1 });
   { let s = 7; const r = () => (s = (s * 16807) % 2147483647) / 2147483647;
     for (let i = 0; i < 420; i++) { const side = i % 2 ? 1 : -1, x = side * (16 + r() * 60), z = Z0 - r() * LEN, h = 6 + r() * 10;
       const b = new THREE.Mesh(new THREE.ConeGeometry(2 + r() * 2, h, 6), baumMat); b.position.set(x, h / 2, z); scene.add(b); } }
+  // Stadt am Rand: Wohnblöcke mit erleuchteten Fenstern (Fensterbild als Textur)
+  { const fensterTex = (seed) => { const c = document.createElement('canvas'); c.width = 128; c.height = 256; const g = c.getContext('2d'); g.fillStyle = '#0d1018'; g.fillRect(0, 0, 128, 256); let s = seed; const r = () => (s = (s * 16807) % 2147483647) / 2147483647;
+      for (let y = 8; y < 250; y += 18) for (let x = 6; x < 124; x += 16) { const an = r(); g.fillStyle = an < 0.38 ? (r() < 0.8 ? '#ffd890' : '#bfe0ff') : '#161b26'; g.fillRect(x, y, 9, 11); }
+      const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; return t; };
+    const texs = [1, 2, 3, 4].map(k => fensterTex(k * 977));
+    let s = 11; const r = () => (s = (s * 16807) % 2147483647) / 2147483647;
+    for (let i = 0; i < 90; i++) { const side = i % 2 ? 1 : -1, b = 14 + r() * 22, h = 18 + r() * 40, d = 12 + r() * 10;
+      const x = side * (70 + r() * 90), z = Z0 - 200 - r() * (LEN - 400);
+      const m = new THREE.MeshBasicMaterial({ map: texs[i % 4], color: '#c8c8c8' }); m.map.wrapS = m.map.wrapT = THREE.RepeatWrapping;
+      const haus = new THREE.Mesh(new THREE.BoxGeometry(d, h, b), m); haus.position.set(x, h / 2, z); scene.add(haus); } }
   // Schilderbrücke alle 600 m (blaue Autobahnschilder ohne Text)
   for (let z = Z0 - 300; z > Z0 - LEN; z -= 600) {
     for (const x of [-12.2, 12.2]) { const p = new THREE.Mesh(new THREE.BoxGeometry(0.3, 7, 0.3), mastMat); p.position.set(x, 3.5, z); scene.add(p); }
@@ -103,6 +116,9 @@ function bauen(W, H) {
   // Fensterholm (B-Säule) und Seitenlinie
   for (const x of [-0.93, 0.93]) { const b = new THREE.Mesh(new THREE.BoxGeometry(0.02, 0.4, 0.1), schwarz); b.position.set(x * 0.86, 1.2, 0.0); auto.add(b);
     const sl = new THREE.Mesh(new THREE.BoxGeometry(0.02, 0.03, 3.6), new THREE.MeshStandardMaterial({ color: '#2a0508', roughness: 0.4 })); sl.position.set(x * 1.0, 0.72, 0.1); auto.add(sl); }
+  for (const x of [-0.62, 0.62]) { const reling = new THREE.Mesh(new THREE.BoxGeometry(0.05, 0.05, 2.5), new THREE.MeshStandardMaterial({ color: '#111216', metalness: 0.8, roughness: 0.3 })); reling.position.set(x, 1.5, 0.25); auto.add(reling);
+    const sp = new THREE.Mesh(new THREE.BoxGeometry(0.22, 0.14, 0.12), lack); sp.position.set(x * 1.68, 1.06, -0.95); auto.add(sp); }
+  for (const [x, z] of [[-0.93, -1.27], [0.93, -1.27], [-0.93, 1.47], [0.93, 1.47]]) { const bog = new THREE.Mesh(new THREE.TorusGeometry(0.43, 0.06, 6, 16, Math.PI), new THREE.MeshStandardMaterial({ color: '#0d0e10', roughness: 0.6 })); bog.rotation.y = Math.PI / 2; bog.position.set(x * 1.02, 0.36, z); auto.add(bog); }
   const reifen = new THREE.CylinderGeometry(0.36, 0.36, 0.3, 28); reifen.rotateZ(Math.PI / 2);
   const felgeMat = new THREE.MeshStandardMaterial({ color: '#1a1c20', metalness: 0.9, roughness: 0.25 });
   const raeder = [];
@@ -113,8 +129,9 @@ function bauen(W, H) {
     const bremsS = new THREE.Mesh(new THREE.BoxGeometry(0.06, 0.16, 0.12), new THREE.MeshStandardMaterial({ color: '#c81a1a' })); bremsS.position.set(x > 0 ? 0.1 : -0.1, 0.12, 0.1); r.add(bremsS);
     r.position.set(x, 0.36, z); auto.add(r); raeder.push(r);
   }
-  const rotGlow = new THREE.MeshBasicMaterial({ color: new THREE.Color('#ff1006').multiplyScalar(3.2) });
-  const leiste = new THREE.Mesh(new THREE.BoxGeometry(1.82, 0.07, 0.05), rotGlow); leiste.position.set(0, 0.98, 2.57); auto.add(leiste);
+  const rotGlow = new THREE.MeshBasicMaterial({ color: new THREE.Color('#ff0606').multiplyScalar(2.8) });
+  const leiste = new THREE.Mesh(new THREE.BoxGeometry(1.82, 0.04, 0.05), rotGlow); leiste.position.set(0, 0.98, 2.57); auto.add(leiste);
+  for (const sx of [-1, 1]) for (let k = 0; k < 6; k++) { const seg = new THREE.Mesh(new THREE.BoxGeometry(0.05, 0.12, 0.05), rotGlow); seg.position.set(sx * (0.56 + k * 0.065), 0.99, 2.575); auto.add(seg); } // LED-Segmente
   for (const x of [-0.72, 0.72]) { const e = new THREE.Mesh(new THREE.BoxGeometry(0.38, 0.14, 0.05), rotGlow); e.position.set(x, 0.98, 2.57); auto.add(e); }
   { const hs = new THREE.Mesh(new THREE.BoxGeometry(1.25, 0.32, 0.04), new THREE.MeshStandardMaterial({ color: '#040506', roughness: 0.35, metalness: 0.1 })); hs.position.set(0, 1.24, 2.48); hs.rotation.x = -0.25; auto.add(hs);
     const dif = new THREE.Mesh(new THREE.BoxGeometry(1.9, 0.24, 0.12), schwarz); dif.position.set(0, 0.42, 2.5); auto.add(dif);
@@ -136,13 +153,25 @@ function bauen(W, H) {
   { const c = document.createElement('canvas'); c.width = c.height = 128; const g = c.getContext('2d'); const r = g.createRadialGradient(64, 64, 0, 64, 64, 64); r.addColorStop(0, 'rgba(235,242,255,1)'); r.addColorStop(0.3, 'rgba(200,220,255,0.35)'); r.addColorStop(1, 'rgba(200,220,255,0)'); g.fillStyle = r; g.fillRect(0, 0, 128, 128);
     const sm = new THREE.SpriteMaterial({ map: new THREE.CanvasTexture(c), blending: THREE.AdditiveBlending, depthWrite: false, transparent: true });
     for (const x of [-0.7, 0.7]) { const sp = new THREE.Sprite(sm); sp.position.set(x, 0.78, -2.75); sp.scale.set(0.9, 0.55, 1); auto.add(sp); deko.push(sp); } }
-  for (const x of [-0.7, 0.7]) { const sp = new THREE.SpotLight('#eef3ff', 14, 70, 0.38, 0.5, 1.2); sp.position.set(x, 0.8, -2.4); sp.target.position.set(x * 2, 0, -40); auto.add(sp, sp.target); }
+  const scheinwerfer = []; for (const x of [-0.7, 0.7]) { const sp = new THREE.SpotLight('#eef3ff', 14, 70, 0.38, 0.5, 1.2); sp.position.set(x, 0.8, -2.4); sp.target.position.set(x * 2, 0, -40); auto.add(sp, sp.target); scheinwerfer.push(sp); }
   const rueck = new THREE.PointLight('#ff2020', 1.2, 6, 1.5); rueck.position.set(0, 0.9, 3.2); auto.add(rueck);
   const streifTex = (() => { const c = document.createElement('canvas'); c.width = 64; c.height = 512; const g = c.getContext('2d'); const l = g.createLinearGradient(0, 0, 0, 512); l.addColorStop(0, 'rgba(255,40,30,0.9)'); l.addColorStop(1, 'rgba(255,40,30,0)'); g.fillStyle = l; g.fillRect(0, 0, 64, 512); const r = g.createLinearGradient(0, 0, 64, 0); g.globalCompositeOperation = 'destination-in'; r.addColorStop(0, 'rgba(0,0,0,0)'); r.addColorStop(0.5, 'rgba(0,0,0,1)'); r.addColorStop(1, 'rgba(0,0,0,0)'); g.fillStyle = r; g.fillRect(0, 0, 64, 512); return new THREE.CanvasTexture(c); })();
   for (const x of [-0.72, 0.72]) { const s = new THREE.Mesh(new THREE.PlaneGeometry(0.6, 6), new THREE.MeshBasicMaterial({ map: streifTex, transparent: true, depthWrite: false, blending: THREE.AdditiveBlending, opacity: 0.45 })); s.rotation.x = -Math.PI / 2; s.position.set(x, 0.02, 2.6 + 3); auto.add(s); deko.push(s); }
   const kegelW = new THREE.Mesh(new THREE.PlaneGeometry(9, 40), new THREE.MeshBasicMaterial({ map: pfuetzeTex, transparent: true, depthWrite: false, blending: THREE.AdditiveBlending, opacity: 0.35, color: '#c8d8ff' }));
   kegelW.rotation.x = -Math.PI / 2; kegelW.position.set(0, 0.03, -22); auto.add(kegelW); deko.push(kegelW);
   const heissMat = new THREE.MeshBasicMaterial({ color: '#ffffff' }), warmMat = new THREE.MeshBasicMaterial({ color: '#b8b8b8' });
+
+  // ---------- Verkehr ----------
+  const verkehr = [];
+  { const farben = ['#2a2f3a', '#3a3a40', '#1e2a3a', '#4a4a50'];
+    const rot = new THREE.MeshBasicMaterial({ color: new THREE.Color('#ff1a0a').multiplyScalar(2.4) });
+    const spm = (() => { const c = document.createElement('canvas'); c.width = c.height = 64; const g = c.getContext('2d'); const q = g.createRadialGradient(32, 32, 0, 32, 32, 32); q.addColorStop(0, 'rgba(255,40,20,0.8)'); q.addColorStop(1, 'rgba(255,0,0,0)'); g.fillStyle = q; g.fillRect(0, 0, 64, 64); return new THREE.SpriteMaterial({ map: new THREE.CanvasTexture(c), blending: THREE.AdditiveBlending, depthWrite: false, transparent: true }); })();
+    const daten = [[-5.4, 30, 0, 1], [5.4, 80, 1, 0], [-5.4, 150, 2, 0], [5.4, 230, 3, 1], [-1.8, 330, 0, 0], [5.4, 420, 1, 0]];
+    for (const [x, ab, f, lkw] of daten) { const g = new THREE.Group(); const L = lkw ? 12 : 4.6, Hh = lkw ? 3.6 : 1.4, B = lkw ? 2.5 : 1.8;
+      const k = new THREE.Mesh(new THREE.BoxGeometry(B, Hh, L), new THREE.MeshStandardMaterial({ color: lkw ? '#8a8e96' : farben[f], roughness: 0.4, metalness: 0.4 })); k.position.y = Hh / 2 + 0.3; g.add(k);
+      for (const sx of [-1, 1]) { const l = new THREE.Mesh(new THREE.BoxGeometry(0.3, 0.12, 0.05), rot); l.position.set(sx * (B / 2 - 0.25), lkw ? 0.9 : 0.9, L / 2 + 0.03); g.add(l); const sp = new THREE.Sprite(spm); sp.position.set(sx * (B / 2 - 0.25), 0.9, L / 2 + 0.2); sp.scale.set(0.9, 0.5, 1); g.add(sp); }
+      if (lkw) for (let k2 = 0; k2 < 5; k2++) { const m = new THREE.Mesh(new THREE.BoxGeometry(0.08, 0.08, 0.08), new THREE.MeshBasicMaterial({ color: new THREE.Color('#ffaa30').multiplyScalar(3) })); m.position.set(B / 2 + 0.02, 0.6, L / 2 - 1 - k2 * 2.4); g.add(m); }
+      scene.add(g); verkehr.push({ g, x, ab }); } }
 
   // ---------- Hubschrauber ----------
   const heli = new THREE.Group(); scene.add(heli);
@@ -154,6 +183,9 @@ function bauen(W, H) {
   for (const x of [-0.9, 0.9]) { const k = new THREE.Mesh(new THREE.BoxGeometry(0.1, 0.1, 3), heliMat); k.position.set(x, -1.2, 0); heli.add(k); }
   const rotor = new THREE.Mesh(new THREE.CircleGeometry(4.8, 32), new THREE.MeshBasicMaterial({ color: '#30343c', transparent: true, opacity: 0.25, side: THREE.DoubleSide })); rotor.rotation.x = -Math.PI / 2; rotor.position.y = 1.3; heli.add(rotor);
   const blink = new THREE.Mesh(new THREE.SphereGeometry(0.18, 8, 8), new THREE.MeshBasicMaterial({ color: new THREE.Color('#ff2020').multiplyScalar(8) })); blink.position.set(0, -1.0, 0); heli.add(blink);
+  const navR = new THREE.Mesh(new THREE.SphereGeometry(0.14, 8, 8), new THREE.MeshBasicMaterial({ color: new THREE.Color('#ff3030').multiplyScalar(6) })); navR.position.set(-1.3, 0, 0); heli.add(navR);
+  const navG = new THREE.Mesh(new THREE.SphereGeometry(0.14, 8, 8), new THREE.MeshBasicMaterial({ color: new THREE.Color('#30ff70').multiplyScalar(6) })); navG.position.set(1.3, 0, 0); heli.add(navG);
+  const blau = new THREE.Mesh(new THREE.SphereGeometry(0.2, 8, 8), new THREE.MeshBasicMaterial({ color: new THREE.Color('#3a7aff').multiplyScalar(9) })); blau.position.set(0, 0.9, 1.2); heli.add(blau);
   const such = new THREE.SpotLight('#f4f8ff', 6, 0, 0.09, 0.4, 0); such.position.set(0, -1.2, -0.5); heli.add(such); scene.add(such.target);
   const strahl = new THREE.Mesh(new THREE.CylinderGeometry(0.4, 4.5, 1, 32, 1, true), kegelMat.clone()); strahl.material.uniforms = { farbe: { value: new THREE.Color('#dfe8ff') }, staerke: { value: 0.16 } }; scene.add(strahl);
   const fleck = new THREE.Mesh(new THREE.CircleGeometry(4.5, 48), new THREE.MeshBasicMaterial({ map: pfuetzeTex, transparent: true, depthWrite: false, blending: THREE.AdditiveBlending, color: '#e8f0ff' })); fleck.rotation.x = -Math.PI / 2; scene.add(fleck);
@@ -170,10 +202,16 @@ function bauen(W, H) {
       void main(){ vec4 c=texture2D(tDiffuse,vUv); float l=dot(c.rgb,vec3(.3,.5,.2)); float w=clamp(pow(l*1.6,0.7),0.,1.);
         vec3 g=vec3(w*0.92+0.04); g+=(h(vUv*aufl+zeit)-.5)*0.07; float vig=smoothstep(0.95,0.35,length(vUv-.5));
         vec4 o=vec4(mix(c.rgb,g*vig,an),1.); o.rgb-=step(0.5,fract(vUv.y*aufl.y*0.25))*0.04*an; gl_FragColor=o; }` });
+  const tempoBlur = new ShaderPass({ uniforms: { tDiffuse: { value: null }, staerke: { value: 0 }, mitte: { value: new THREE.Vector2(0.5, 0.48) } },
+    vertexShader: 'varying vec2 vUv; void main(){ vUv=uv; gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.); }',
+    fragmentShader: `uniform sampler2D tDiffuse; uniform float staerke; uniform vec2 mitte; varying vec2 vUv;
+      void main(){ vec2 d=vUv-mitte; float m=smoothstep(0.12,0.55,length(d*vec2(0.6,1.0))); vec4 c=vec4(0.); float n=0.;
+        for(int i=0;i<10;i++){ float f=float(i)/9.; c+=texture2D(tDiffuse,vUv-d*f*staerke*m*0.09); n+=1.; } gl_FragColor=c/n; }` });
+  composer.addPass(tempoBlur);
   composer.addPass(waerme);
   composer.addPass(new OutputPass());
 
-  return { canvas, renderer, scene, camera, composer, bloom, nach, waerme, auto, koerper, raeder, schwarz, lack, heissMat, warmMat, deko, lampen, lampenDeko,
+  return { scheinwerfer, tempoBlur, verkehr, navR, navG, blau, canvas, renderer, scene, camera, composer, bloom, nach, waerme, auto, koerper, raeder, schwarz, lack, heissMat, warmMat, deko, lampen, lampenDeko,
     heli, rotor, blink, such, strahl, fleck, kegelW };
 }
 let welt_sterne = null;
@@ -196,6 +234,10 @@ export function zeichnen(s, t, W, H) {
   w.auto.visible = autoDa; w.auto.position.set(1.8 + wob, 0, z); w.auto.rotation.y = Math.cos(t * 1.3) * 0.015;
   for (const r of w.raeder) r.rotation.x = -weg / 0.36;
   const thermo = art === 'waerme';
+  for (const v of w.verkehr) { v.g.position.set(v.x, 0, 40 - 34 * t - v.ab); v.g.visible = !thermo || true; }
+  w.navR.visible = w.navG.visible = (t * 1.1) % 1 < 0.7; w.blau.visible = (t * 2.3) % 1 < 0.3;
+  const blur = s.blur !== undefined ? Number(s.blur) : ({ verfolger: 0.5, seite: 0.7, front: 0.45, weg: gas ? 0.9 : 0.5, totale: 0.15, boden: 0.2, waerme: 0 })[art] ?? 0.3;
+  w.tempoBlur.uniforms.staerke.value = blur * (1 + (gas ? clamp01(t / 2) : 0));
   // Hubschrauber schräg hinten oben, fällt bei gas=1 zurück
   const hz = 40 - tempo * t + 30 - t * 1.5;
   w.heli.visible = s.heli !== 0 && s.heli !== '0';
@@ -216,7 +258,8 @@ export function zeichnen(s, t, W, H) {
   { const ref = autoDa ? z : hz - 34; const n = Math.round((ref - 180) / -42); w.lampen.forEach((l, i) => { l.position.set(-7.4, 10, 180 - 42 * (n - 1 + i)); }); }
   w.koerper.material = thermo ? w.heissMat : w.lack; for (const r of w.raeder) r.children[0].material = thermo ? w.warmMat : w.schwarz;
   w.waerme.uniforms.an.value = thermo ? 1 : 0; w.waerme.uniforms.zeit.value = t;
-  w.bloom.strength = thermo ? 0.25 : 0.75; w.scene.fog.density = thermo ? 0.004 : 0.012;
+  w.bloom.strength = thermo ? 0.25 : art === 'front' ? 0.35 : 0.75; w.scene.fog.density = thermo ? 0.004 : 0.012;
+  for (const sp of w.scheinwerfer) sp.intensity = art === 'front' ? 1.2 : art === 'boden' ? 3 : 14;
   const ax = w.auto.position.x;
   const ruck = (a, f) => Math.sin(t * f) * a;
   if (art === 'verfolger') { // tiefe Verfolgerkamera
