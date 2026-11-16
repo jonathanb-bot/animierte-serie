@@ -1908,6 +1908,12 @@
    "bild_s": 88.42,
    "ton_s": 88.45,
    "lufs": -14.6
+  },
+  "taeglich/mond-m003.mp4": {
+   "ok": true,
+   "bild_s": 66.62,
+   "ton_s": 66.6,
+   "lufs": -14.6
   }
  },
  "serien": {
@@ -2136,6 +2142,10 @@
   "video-003": {
    "titel": "Der Schmetterlingseffekt",
    "datei": "taeglich/video-003.mp4"
+  },
+  "mond-m003": {
+   "titel": "Bis zum Mond – Folge 3: Die Jagd beginnt",
+   "datei": "taeglich/mond-m003.mp4"
   }
  },
  "taeglich_staffeln": {
