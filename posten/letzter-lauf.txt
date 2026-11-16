@@ -1,29 +1,9 @@
 Verbundene Konten: tiktok:storys4you.de1, instagram:sto.rys4you, youtube:sto.rys4you (2. Zernio-Konto), tiktok:storys4you_eng (2. Zernio-Konto), youtube:storys4you_eng (3. Zernio-Konto), instagram:sory4you_eng (3. Zernio-Konto)
-  taeglich-tiktok-s02-teil-6-v3: Prüfung ok (Bild, Ton, Lautstärke)
-✓ taeglich-tiktok-s02-teil-6-v3 eingeplant für 2026-11-16T08:03:00 (6afa430a114b13b4f80e0660)
+  taeglich-tiktok-003: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-tiktok-003 eingeplant für 2026-11-17T18:26:00 (6afa4cb4f2aeb6c3b893a7d9)
   KI-Kennzeichnung laut Zernio: "videoMadeWithAi":false, "videoMadeWithAi":false
-  taeglich-tiktok-s02-teil-7-v3: Prüfung ok (Bild, Ton, Lautstärke)
-✓ taeglich-tiktok-s02-teil-7-v3 eingeplant für 2026-11-16T11:32:00 (6afa430d114b13b4f80e0678)
-  KI-Kennzeichnung laut Zernio: "videoMadeWithAi":false, "videoMadeWithAi":false
-  taeglich-tiktok-s02-teil-8-v3: Prüfung ok (Bild, Ton, Lautstärke)
-✓ taeglich-tiktok-s02-teil-8-v3 eingeplant für 2026-11-16T15:32:00 (6afa430fb023aba88ce0cf67)
-  KI-Kennzeichnung laut Zernio: "videoMadeWithAi":false, "videoMadeWithAi":false
-  taeglich-tiktok-s04-teil-1-v3: Prüfung ok (Bild, Ton, Lautstärke)
-✓ taeglich-tiktok-s04-teil-1-v3 eingeplant für 2026-11-17T07:35:00 (6afa4313114b13b4f80e06c2)
-  KI-Kennzeichnung laut Zernio: "videoMadeWithAi":false, "videoMadeWithAi":false
-  taeglich-tiktok-s04-teil-2-v3: Prüfung ok (Bild, Ton, Lautstärke)
-✓ taeglich-tiktok-s04-teil-2-v3 eingeplant für 2026-11-17T12:04:00 (6afa4316114b13b4f80e06db)
-  KI-Kennzeichnung laut Zernio: "videoMadeWithAi":false, "videoMadeWithAi":false
-  taeglich-tiktok-s04-teil-3-v3: Prüfung ok (Bild, Ton, Lautstärke)
-✓ taeglich-tiktok-s04-teil-3-v3 eingeplant für 2026-11-17T15:58:00 (6afa431a114b13b4f80e0703)
-  KI-Kennzeichnung laut Zernio: "videoMadeWithAi":false, "videoMadeWithAi":false
-  taeglich-tiktok-s04-teil-4-v3: Prüfung ok (Bild, Ton, Lautstärke)
-✓ taeglich-tiktok-s04-teil-4-v3 eingeplant für 2026-11-18T07:56:00 (6afa431d114b13b4f80e071e)
-  KI-Kennzeichnung laut Zernio: "videoMadeWithAi":false, "videoMadeWithAi":false
-  taeglich-tiktok-s04-teil-5-v3: Prüfung ok (Bild, Ton, Lautstärke)
-✓ taeglich-tiktok-s04-teil-5-v3 eingeplant für 2026-11-18T12:10:00 (6afa4321fc7114075e0ae49a)
-  KI-Kennzeichnung laut Zernio: "videoMadeWithAi":false, "videoMadeWithAi":false
-  taeglich-tiktok-002-v3: Prüfung ok (Bild, Ton, Lautstärke)
-✓ taeglich-tiktok-002-v3 eingeplant für 2026-11-18T15:47:00 (6afa4324114b13b4f80e075e)
-  KI-Kennzeichnung laut Zernio: "videoMadeWithAi":false, "videoMadeWithAi":false
-Fertig: 9 neu eingeplant, 0 Fehler.
+  taeglich-insta-003: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-insta-003 eingeplant für 2026-11-17T18:45:00 (6afa4cb7c117d9ebf40f7f01)
+  taeglich-yt-003: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-yt-003 eingeplant für 2026-11-17T19:11:00 (6afa4cb9c117d9ebf40f7f13)
+Fertig: 3 neu eingeplant, 0 Fehler.
