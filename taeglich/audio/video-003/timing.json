@@ -1,0 +1,131 @@
+{
+ "dauer": 88.972,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "minimal",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 7.694,
+   "emotion": "erzaehlend",
+   "text": "Du reist in die Vergangenheit und zertrittst nur einen einzigen Schmetterling. Und deine ganze Gegenwart ist eine andere."
+  },
+  {
+   "nr": 2,
+   "typ": "minimal",
+   "kapitel": 2,
+   "start": 7.694,
+   "dauer": 6.59,
+   "emotion": "erzaehlend",
+   "text": "Die Idee stammt aus einer Geschichte von neunzehnhundertzweiundfünfzig. Ein Zeitreisender tritt bei den Dinosauriern vom Weg."
+  },
+  {
+   "nr": 3,
+   "typ": "minimal",
+   "kapitel": 2,
+   "start": 14.284,
+   "dauer": 4.526,
+   "emotion": "erzaehlend",
+   "text": "Zurück im Jahr zweitausendfünfundfünfzig hat ein anderer Mann die Wahl gewonnen."
+  },
+  {
+   "nr": 4,
+   "typ": "minimal",
+   "kapitel": 3,
+   "start": 18.81,
+   "dauer": 8.942,
+   "emotion": "erzaehlend",
+   "text": "Neun Jahre später passiert das wirklich. Edward Lorenz lässt einen Computer Wetter rechnen, tippt eine Zahl gerundet ein und holt sich einen Kaffee."
+  },
+  {
+   "nr": 5,
+   "typ": "minimal",
+   "kapitel": 3,
+   "start": 27.752,
+   "dauer": 3.014,
+   "emotion": "erzaehlend",
+   "text": "Als er zurückkommt, sieht das Wetter völlig anders aus."
+  },
+  {
+   "nr": 6,
+   "typ": "minimal",
+   "kapitel": 3,
+   "start": 30.766,
+   "dauer": 5.702,
+   "emotion": "erzaehlend",
+   "text": "Der winzige Fehler verdoppelt sich ungefähr alle vier Tage. Nach zwei Monaten ist nichts mehr gleich."
+  },
+  {
+   "nr": 7,
+   "typ": "minimal",
+   "kapitel": 4,
+   "start": 36.468,
+   "dauer": 7.502,
+   "emotion": "erzaehlend",
+   "text": "Darum rechnet das europäische Wetterzentrum jede Vorhersage einundfünfzigmal. Weiter als etwa zwei Wochen sieht keiner."
+  },
+  {
+   "nr": 8,
+   "typ": "minimal",
+   "kapitel": 5,
+   "start": 43.97,
+   "dauer": 8.438,
+   "emotion": "erzaehlend",
+   "text": "Eigentlich sprach Lorenz von einer Möwe. Erst ein Vortragstitel machte daraus den Schmetterling in Brasilien und den Tornado in Texas."
+  },
+  {
+   "nr": 9,
+   "typ": "minimal",
+   "kapitel": 5,
+   "start": 52.408,
+   "dauer": 7.55,
+   "emotion": "erzaehlend",
+   "text": "Aber ein Schmetterling macht keinen Sturm. Sein Flügelschlag kann einen Tornado genauso gut verhindern. Er stellt nur die Weiche."
+  },
+  {
+   "nr": 10,
+   "typ": "minimal",
+   "kapitel": 6,
+   "start": 59.958,
+   "dauer": 5.078,
+   "emotion": "erzaehlend",
+   "text": "Und bei Zeitreisen? Verhinderst du, dass sich deine Großeltern kennenlernen, gibt es dich nicht mehr."
+  },
+  {
+   "nr": 11,
+   "typ": "minimal",
+   "kapitel": 6,
+   "start": 65.036,
+   "dauer": 5.75,
+   "emotion": "erzaehlend",
+   "text": "Eine Idee: Die Vergangenheit lässt sich gar nicht ändern. Alles, was du tust, ist schon passiert."
+  },
+  {
+   "nr": 12,
+   "typ": "minimal",
+   "kapitel": 6,
+   "start": 70.786,
+   "dauer": 4.718,
+   "emotion": "erzaehlend",
+   "text": "Eine andere: Du landest in einer neuen Zeitlinie, deine alte bleibt."
+  },
+  {
+   "nr": 13,
+   "typ": "minimal",
+   "kapitel": 6,
+   "start": 75.504,
+   "dauer": 5.846,
+   "emotion": "erzaehlend",
+   "text": "Und auf einem Quantencomputer blieb eine kleine Störung in der simulierten Vergangenheit klein."
+  },
+  {
+   "nr": 14,
+   "typ": "minimal",
+   "kapitel": 7,
+   "start": 81.35,
+   "dauer": 7.622,
+   "emotion": "erzaehlend",
+   "text": "Bewiesen ist davon nichts. Sicher ist nur: Ein winziger Unterschied von heute kann entscheiden, ob es in zwei Wochen stürmt."
+  }
+ ]
+}

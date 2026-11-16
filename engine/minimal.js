@@ -192,4 +192,133 @@
       if (s.label) pille(s.label, W / 2, 1120, 34);
     },
   };
+
+  // ---------- Neu 15.11. („Schmetterlingseffekt und Zeitreisen“): nur neue Motive, alles Bisherige bleibt gleich ----------
+  // Schmetterling als leuchtende Linie, Flügel schlagen. art=moewe zeichnet stattdessen eine Möwe. x/y/gr Position und Größe.
+  const schmetterling = (x, y, g, t, alpha = 1, schlag = 1) => {
+    const f = 0.35 + 0.65 * Math.abs(Math.cos(t * 5.2 * schlag));
+    ctx.save(); ctx.globalAlpha *= alpha; ctx.translate(x, y); glow(1.1);
+    ctx.lineWidth = 5; ctx.strokeStyle = WEISS; ctx.lineJoin = "round"; ctx.lineCap = "round";
+    for (const sx of [-1, 1]) {
+      ctx.save(); ctx.scale(sx * f, 1);
+      ctx.beginPath(); ctx.moveTo(4, -10); ctx.bezierCurveTo(g * 0.55, -g * 1.15, g * 1.25, -g * 0.75, g * 0.95, -g * 0.08); ctx.bezierCurveTo(g * 0.8, g * 0.1, g * 0.3, g * 0.05, 4, 0); ctx.stroke();
+      ctx.fillStyle = "rgba(244,244,242,0.10)"; ctx.fill();
+      ctx.beginPath(); ctx.moveTo(4, 4); ctx.bezierCurveTo(g * 0.7, g * 0.15, g * 0.85, g * 0.75, g * 0.35, g * 0.8); ctx.bezierCurveTo(g * 0.15, g * 0.82, 8, g * 0.4, 4, 4); ctx.stroke(); ctx.fill();
+      ctx.restore();
+    }
+    A.box(-7, -g * 0.22, 14, g * 0.62, 7, WEISS);
+    ctx.beginPath(); ctx.moveTo(-3, -g * 0.2); ctx.quadraticCurveTo(-g * 0.1, -g * 0.5, -g * 0.22, -g * 0.55); ctx.moveTo(3, -g * 0.2); ctx.quadraticCurveTo(g * 0.1, -g * 0.5, g * 0.22, -g * 0.55); ctx.lineWidth = 3; ctx.stroke();
+    ohneGlow(); ctx.restore();
+  };
+  const moewe = (x, y, g, t) => {
+    const f = Math.sin(t * 4) * 0.35;
+    ctx.save(); ctx.translate(x, y); glow(1.1); ctx.lineWidth = 7; ctx.strokeStyle = WEISS; ctx.lineCap = "round";
+    ctx.beginPath(); ctx.moveTo(-g, -g * (0.25 + f)); ctx.quadraticCurveTo(-g * 0.45, -g * (0.55 + f), 0, 0); ctx.quadraticCurveTo(g * 0.45, -g * (0.55 + f), g, -g * (0.25 + f)); ctx.stroke();
+    ohneGlow(); ctx.restore();
+  };
+  // Lorenz-Gleichungen (σ=10, ρ=28, β=8/3), einfach integriert – für Kurven und den Attraktor
+  const lorenzBahn = (x0, n, dt = 0.01) => { let [x, y, z] = x0; const o = [];
+    for (let i = 0; i < n; i++) { for (let k = 0; k < 2; k++) { const h = dt / 2, dx = 10 * (y - x), dy = x * (28 - z) - y, dz = x * y - 8 / 3 * z; x += dx * h; y += dy * h; z += dz * h; } o.push([x, y, z]); }
+    return o; };
+  const BAHN_A = lorenzBahn([1, 1, 20.506127], 1400, 0.02), BAHN_B = lorenzBahn([1, 1, 20.506], 1400, 0.02), ATTR = lorenzBahn([0.1, 0, 0], 9000, 0.008);
+  const nummer = (txt, x, y, a = 1) => { ctx.save(); ctx.globalAlpha *= a; pille(txt, x, y, 34); ctx.restore(); };
+  Object.assign(MOTIVE, {
+    // [minimal motiv=schmetterling art=moewe|tornado label=…]  großer Schmetterling, Lichtstaub
+    schmetterling(s, t) {
+      const r = A.rnd(11);
+      for (let i = 0; i < 26; i++) { const a = r() * Math.PI * 2, d = 160 + ((t * 40 + r() * 400) % 420); kreis(W / 2 + Math.cos(a) * d, 900 + Math.sin(a) * d * 0.7, 2 + r() * 2.5, `rgba(255,255,255,${0.35 * (1 - (d - 160) / 420)})`); }
+      const y = 900 + Math.sin(t * 1.3) * 18;
+      if (s.art === "moewe") { const q = clamp((t - wortZeit(s, s.ab, s.dauer * 0.5)) / 0.6, 0, 1);
+        ctx.save(); ctx.globalAlpha = 1 - q; moewe(W / 2, y, 230, t); ctx.restore(); schmetterling(W / 2, y, 220, t, q); }
+      else schmetterling(W / 2, y, Number(s.gr) || 240, t);
+      if (s.art === "tornado") { const q = clamp((t - wortZeit(s, s.ab, s.dauer * 0.4)) / 1.2, 0, 1); ctx.save(); ctx.globalAlpha = q; glow(0.8);
+        for (let i = 0; i < 9; i++) { const yy = 1300 + i * 26, w = 150 - i * 15, ph = t * 6 + i; linie([[W / 2 - w + Math.sin(ph) * 10, yy], [W / 2 + w + Math.sin(ph) * 10, yy]], 5); }
+        ohneGlow(); ctx.restore(); }
+      if (s.label) pille(s.label, W / 2, s.art === "tornado" ? 1600 : 1420, 34);
+    },
+    // [minimal motiv=pfad ab=Wort]  schwebender Weg, Figur tritt daneben, Schmetterling erlischt
+    pfad(s, t) {
+      const yP = 1240, ab = wortZeit(s, s.ab, s.dauer * 0.5);
+      const r = A.rnd(5); ctx.save(); ohneGlow(); for (let i = 0; i < 46; i++) { const x = r() * W, h = 40 + r() * 90; linie([[x, 1420], [x + Math.sin(t + i) * 6, 1420 - h]], 3, GRAU); } ctx.restore();
+      glow(0.8); linie([[90, yP], [990, yP]], 8); for (let x = 140; x < 990; x += 170) linie([[x, yP], [x, yP + 60]], 3, GRAU); ohneGlow();
+      const q = clamp((t - ab) / 0.7, 0, 1), x = lerp(260, 640, clamp(t / Math.max(0.5, ab), 0, 1));
+      figur(x + q * 60, yP + q * 170, 0.9, 1, q < 1 && t < ab ? t * 7 : 0);
+      const ba = q < 1 ? 1 : Math.max(0.15, 1 - (t - ab - 0.7) * 0.8);
+      schmetterling(x + 110, 1405 - (1 - q) * 40, 46, q < 1 ? t : 0, ba, 1);
+      if (s.label) pille(s.label, W / 2, 1620, 34);
+    },
+    // [minimal motiv=lorenz bis=1 von=0]  zwei Wetter-Kurven aus fast gleichen Startwerten, laufen auseinander
+    lorenz(s, t) {
+      const start = wortZeit(s, s.ab, 0.2), q = lerp(s.von ?? 0, s.bis ?? 1, E.sanft(clamp((t - start) / Math.max(1, (s.dauer - start) * 0.85), 0, 1)));
+      const n = Math.max(2, Math.floor(q * 1300)), Xs = 120, Xe = 960, yM = 1000, sk = 17;
+      const pts = b => b.slice(0, n).map((v, i) => [lerp(Xs, Xe, i / 1300), yM - v[0] * sk]);
+      achsenLinie(yM);
+      kurveP(pts(BAHN_B), "rgba(244,244,242,0.55)", 5); kurveP(pts(BAHN_A), WEISS, 6);
+      if (s.zahlen !== false) { nummer("0,506127", 300, 520); nummer("0,506", 300, 610, 0.75); }
+      if (q > 0.62 && s.label) { const a = clamp((q - 0.62) * 6, 0, 1); ctx.save(); ctx.globalAlpha = a; pille(s.label, W / 2, 1500, 36); ctx.restore(); }
+    },
+    // [minimal motiv=attraktor]  Lorenz-Attraktor wird gezeichnet
+    attraktor(s, t) {
+      const q = E.sanft(clamp(t / Math.max(1, s.dauer * 0.9), 0, 1)), n = Math.max(2, Math.floor(q * ATTR.length));
+      const P = v => [W / 2 + v[0] * 19, 1380 - v[2] * 19];
+      ctx.save(); ctx.globalAlpha = 0.9; glow(0.6); ctx.beginPath(); ATTR.slice(0, n).forEach((v, i) => { const [x, y] = P(v); i ? ctx.lineTo(x, y) : ctx.moveTo(x, y); });
+      ctx.lineWidth = 2.2; ctx.strokeStyle = WEISS; ctx.stroke(); ohneGlow(); ctx.restore();
+      const [x, y] = P(ATTR[n - 1]); glow(1.4); kreis(x, y, 10); ohneGlow();
+      if (s.label) pille(s.label, W / 2, 1500, 34);
+    },
+    // [minimal motiv=verdoppeln]  ein Fehler-Punkt verdoppelt sich, bis das Raster voll ist; TAG zählt mit (alle 4 Tage ×2)
+    verdoppeln(s, t) {
+      const start = wortZeit(s, s.ab, 0.3), q = clamp((t - start) / Math.max(1, (s.dauer - start) * 0.85), 0, 1);
+      const k = Math.floor(q * 8.999), anz = Math.pow(2, k), cols = 16, d = 50, x0 = W / 2 - (cols - 1) * d / 2, y0 = 640;
+      for (let i = 0; i < 256; i++) { const cx = x0 + (i % cols) * d, cy = y0 + Math.floor(i / cols) * d, an = i < anz;
+        if (an) { glow(0.8); kreis(cx, cy, 13); ohneGlow(); } else kreis(cx, cy, 5, "rgba(244,244,242,0.16)"); }
+      text(`×${anz}`, W / 2, 500, 96);
+      pille(`TAG ${k * 4}`, W / 2, 1560, 34);
+      if (s.label) pille(s.label, W / 2, 1660, 30);
+    },
+    // [minimal motiv=faecher anzahl=51 label=…]  viele Vorhersagen aus fast demselben Start fächern auf
+    faecher(s, t) {
+      const q = E.sanft(clamp((t - wortZeit(s, s.ab, 0.2)) / Math.max(1, s.dauer * 0.75), 0, 1)), n = s.anzahl || 51, Xs = 140, Xe = 940, yM = 1000;
+      achsenLinie(yM + 380);
+      const r = A.rnd(23);
+      for (let j = 0; j < n; j++) { const pts = [], ph = r() * 6, amp = (r() - 0.5) * 2;
+        for (let i = 0; i <= 120 * q; i++) { const u = i / 120; pts.push([lerp(Xs, Xe, u), yM + Math.sin(u * 7 + ph * u) * 30 * u + amp * 330 * Math.pow(u, 2.2)]); }
+        if (pts.length > 1) { ctx.save(); ctx.globalAlpha = j === 0 ? 1 : 0.32; if (j === 0) glow(0.9); linie(pts, j === 0 ? 5 : 2.5); ohneGlow(); ctx.restore(); } }
+      glow(1.2); kreis(Xs, yM, 12); ohneGlow();
+      text("HEUTE", Xs + 20, yM + 450, 30, GRAU, 800); text(s.ende || "IN 2 WOCHEN", Xe - 90, yM + 450, 30, GRAU, 800);
+      if (s.label) pille(s.label, W / 2, 560, 34);
+    },
+    // [minimal motiv=weiche]  Schmetterling an einer Weiche: der Sturm nimmt mal diesen, mal jenen Weg
+    weiche(s, t) {
+      const xK = 470, yK = 1000, ziele = [[900, 700, "HIER"], [900, 1000, "DORT"], [900, 1300, "GAR NICHT"]];
+      glow(0.7); linie([[120, yK], [xK, yK]], 6); for (const [x, y] of ziele) linie([[xK, yK], [x - 120, y]], 4, GRAU); ohneGlow();
+      ziele.forEach(([x, y, l]) => text(l, x - 70, y - 50, 34, WEISS, 800));
+      const zyk = 2.2, z = Math.floor(t / zyk) % 3, u = (t % zyk) / zyk, [zx, zy] = ziele[z];
+      const pt = u < 0.45 ? [lerp(120, xK, u / 0.45), yK] : [lerp(xK, zx - 120, (u - 0.45) / 0.55), lerp(yK, zy, (u - 0.45) / 0.55)];
+      glow(1.4); kreis(pt[0], pt[1], 20); kreis(pt[0], pt[1], 38, "rgba(255,255,255,0.14)"); ohneGlow();
+      schmetterling(xK, yK - 80, 54, t);
+      if (s.label) pille(s.label, W / 2, 1560, 34);
+    },
+    // [minimal motiv=foto ab=Wort]  Familienfoto: drei Figuren, die rechte (du) verblasst
+    foto(s, t) {
+      const q = clamp((t - wortZeit(s, s.ab, s.dauer * 0.5)) / 1.4, 0, 1);
+      glow(0.7); ctx.strokeStyle = WEISS; ctx.lineWidth = 6; A.rr(200, 640, 680, 760, 24); ctx.stroke(); ohneGlow();
+      figur(380, 1250, 1.0); figur(560, 1250, 1.0); figur(740, 1250, 0.72, 1 - 0.92 * q);
+      if (s.label) pille(s.label, W / 2, 1520, 34);
+    },
+    // [minimal motiv=zeitlinie art=riss|zweig|delle]  Zeitstrahl: Riss schließt sich / neuer Zweig / Störung wird kleiner
+    zeitlinie(s, t) {
+      const y = 1000, xm = 540, ab = wortZeit(s, s.ab, s.dauer * 0.35), q = clamp((t - ab) / Math.max(1, (s.dauer - ab) * 0.7), 0, 1);
+      text("VERGANGENHEIT", 220, y + 90, 26, GRAU, 800); text("GEGENWART", 860, y + 90, 26, GRAU, 800);
+      if (s.art === "zweig") { glow(0.8); linie([[100, y], [980, y]], 6); const pts = []; for (let i = 0; i <= 40 * q; i++) { const u = i / 40; pts.push([lerp(xm - 120, 980, u), y - 330 * Math.sin(u * Math.PI / 2)]); } if (pts.length > 1) linie(pts, 6); ohneGlow();
+        const fx = pts.length > 1 ? pts[pts.length - 1] : [xm - 120, y]; figur(fx[0], fx[1], 0.55); text("NEUE ZEITLINIE", 760, y - 420, 30, WEISS, 800); text("DEINE ALTE", 820, y - 50, 26, GRAU, 800); }
+      else if (s.art === "delle") { const pts = []; for (let i = 0; i <= 200; i++) { const x = lerp(100, 980, i / 200), dx = x - (xm - 150); pts.push([x, y - (dx > 0 ? 140 * Math.exp(-dx / (80 + 240 * q)) * Math.max(0.08, 1 - q * 0.9) * Math.exp(-dx / 260) : 0)]); }
+        glow(0.8); linie(pts, 6); ohneGlow(); }
+      else { const gap = 90 * Math.sin(Math.PI * clamp(q, 0, 1)) * (q < 1 ? 1 : 0); glow(0.8); linie([[100, y], [xm - gap, y]], 6); linie([[xm + gap, y], [980, y]], 6); ohneGlow();
+        if (gap > 2) { ctx.save(); ctx.globalAlpha = gap / 90; for (let i = 0; i < 6; i++) kreis(xm + (i - 2.5) * 22, y + Math.sin(t * 8 + i) * 30, 4); ctx.restore(); } }
+      if (s.label) pille(s.label, W / 2, 1520, 34);
+    },
+  });
+  function achsenLinie(y) { ctx.save(); ohneGlow(); ctx.setLineDash([14, 16]); linie([[100, y], [980, y]], 3, GRAU); ctx.restore(); }
+  function kurveP(pts, farbe, b) { if (farbe === WEISS) glow(); linie(pts, b, farbe); ohneGlow(); }
 })();

@@ -1,0 +1,60 @@
+# Der Schmetterlingseffekt
+@musik musik/video-003.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung warm
+@vortrag lebendig
+@klang studio
+@mund zitate
+@einblenden aus
+@untertitel aus
+@qualitaet max
+@look 0
+
+// Einzelvideo im Stil „minimal“ wie video-002 (Jonathans Idee 15.11.: Schmetterlingseffekt und Zeitreisen genau erklärt).
+// Fakten aus reports/Schmetterlingseffekt und Zeitreisen.md: Bradbury 1952 (Collier's, Jahr 2055, Wahl Keith/Deutscher),
+// Lorenz 1961 (gerundete Werte, Kaffeepause, Fehler verdoppelt sich ca. alle 4 Tage, nach 2 Monaten keine Ähnlichkeit),
+// Wettergrenze ca. 2 Wochen, 10× genauer messen bringt höchstens ca. 5 Tage (Zhang 2019), ECMWF-Ensemble 51 Läufe,
+// Vortragstitel 1972 (Merilees), vorher Möwe (1963), Lorenz: Flügelschlag kann Tornado genauso gut verhindern,
+// Großvater-Paradoxon (gewaltfrei), Novikov, Viele Welten (Deutsch 1991), Los Alamos 2020 (Simulation, Störung bleibt klein).
+
+== Hook ==
+// Wow-Bild: großer leuchtender Schmetterling
+[minimal motiv=schmetterling hooktext="EIN SCHMETTERLING" zoom-rein] Du reist in die Vergangenheit und zertrittst nur einen einzigen Schmetterling. Und deine ganze Gegenwart ist eine andere.
+
+== Bradbury ==
+// schwebender Weg über dem Urwald, Figur tritt daneben
+[minimal motiv=pfad ab=tritt label="1952 · RAY BRADBURY"] Die Idee stammt aus einer Geschichte von neunzehnhundertzweiundfünfzig. Ein Zeitreisender tritt bei den Dinosauriern vom Weg.
+// drei Karten: was sich in 2055 geändert hat
+[minimal motiv=karten karten="2055|ANDERE WAHL" bei="Zurück|anderer"] Zurück im Jahr zweitausendfünfundfünfzig hat ein anderer Mann die Wahl gewonnen.
+
+== Lorenz ==
+// zwei Kurven, fast gleiche Startwerte, laufen auseinander
+[minimal motiv=lorenz bis=0.35 label="EIN WINZIGER UNTERSCHIED"] Neun Jahre später passiert das wirklich. Edward Lorenz lässt einen Computer Wetter rechnen, tippt eine Zahl gerundet ein und holt sich einen Kaffee.
+[minimal motiv=lorenz von=0.35 bis=1 label="VÖLLIG ANDERES WETTER"] Als er zurückkommt, sieht das Wetter völlig anders aus.
+// Fehler verdoppelt sich
+[minimal motiv=verdoppeln ab=verdoppelt label="ALLE 4 TAGE ×2"] Der winzige Fehler verdoppelt sich ungefähr alle vier Tage. Nach zwei Monaten ist nichts mehr gleich.
+
+== Wetter ==
+// 51 Vorhersagen fächern auf
+[minimal motiv=faecher label="51 VORHERSAGEN" zoom-rein] Darum rechnet das europäische Wetterzentrum jede Vorhersage einundfünfzigmal. Weiter als etwa zwei Wochen sieht keiner.
+
+== Der Name ==
+// Möwe wird zum Schmetterling
+[minimal motiv=schmetterling art=moewe ab=Schmetterling label="BRASILIEN → TEXAS"] Eigentlich sprach Lorenz von einer Möwe. Erst ein Vortragstitel machte daraus den Schmetterling in Brasilien und den Tornado in Texas.
+// Weiche: hier, dort, gar nicht
+[minimal motiv=weiche] Aber ein Schmetterling macht keinen Sturm. Sein Flügelschlag kann einen Tornado genauso gut verhindern. Er stellt nur die Weiche.
+
+== Zeitreise ==
+// Familienfoto, du verblasst
+[minimal motiv=foto ab=gibt label="GROSSVATER-PARADOXON"] Und bei Zeitreisen? Verhinderst du, dass sich deine Großeltern kennenlernen, gibt es dich nicht mehr.
+// Riss in der Zeitlinie schließt sich
+[minimal motiv=zeitlinie art=riss ab=lässt label="IDEE 1 · NICHTS ÄNDERT SICH"] Eine Idee: Die Vergangenheit lässt sich gar nicht ändern. Alles, was du tust, ist schon passiert.
+// neuer Zweig
+[minimal motiv=zeitlinie art=zweig ab=landest label="IDEE 2 · VIELE WELTEN"] Eine andere: Du landest in einer neuen Zeitlinie, deine alte bleibt.
+// Störung wird kleiner
+[minimal motiv=zeitlinie art=delle ab=Störung label="2020 · NUR SIMULIERT"] Und auf einem Quantencomputer blieb eine kleine Störung in der simulierten Vergangenheit klein.
+
+== Ende ==
+// Lorenz-Attraktor zeichnet sich
+[minimal motiv=attraktor label="LORENZ-GLEICHUNGEN"] Bewiesen ist davon nichts. Sicher ist nur: Ein winziger Unterschied von heute kann entscheiden, ob es in zwei Wochen stürmt.
