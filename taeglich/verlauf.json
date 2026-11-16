@@ -417,6 +417,37 @@
     "lufs": -14.6,
     "dauer_s": 64.08
    }
+  },
+  {
+   "id": "video-003",
+   "datum": "2026-11-16",
+   "titel": "Der Schmetterlingseffekt",
+   "stimmung": "warm",
+   "stimme": "Orus",
+   "thema": "Schmetterlingseffekt und Zeitreisen: Bradbury 1952, Lorenz 1961 (gerundete Zahl, Kaffeepause), Fehler verdoppelt sich alle ~4 Tage, Wettergrenze ~2 Wochen, Möwe→Schmetterling (Vortragstitel 1972), Flügelschlag kann Tornado auch verhindern, Großvater-Paradoxon, Novikov, Viele Welten, Los-Alamos-Simulation 2020",
+   "stil": "minimal (wie video-002), neue Motive schmetterling, pfad, lorenz, verdoppeln, faecher, weiche, foto, zeitlinie, attraktor",
+   "kulissen": [
+    "minimal"
+   ],
+   "vorbild": "Jonathans Idee 15.11.: wie „Ein Prozent“, vorher Deep Research (reports/Schmetterlingseffekt und Zeitreisen.md)",
+   "hook": "Du reist in die Vergangenheit und zertrittst nur einen einzigen Schmetterling. Und deine ganze Gegenwart ist eine andere.",
+   "beschreibung": "Ein zertretener Schmetterling, und deine ganze Gegenwart ist anders? Was hinter dem Schmetterlingseffekt wirklich steckt – vom Wetter bis zur Zeitreise.",
+   "hashtags": [
+    "#schmetterlingseffekt",
+    "#zeitreise",
+    "#wissen",
+    "#chaostheorie",
+    "#animation",
+    "#deutsch"
+   ],
+   "tags": [
+    "schmetterlingseffekt",
+    "zeitreise",
+    "wissen",
+    "chaostheorie",
+    "animation"
+   ],
+   "emoji": "🦋"
   }
  ]
 }
