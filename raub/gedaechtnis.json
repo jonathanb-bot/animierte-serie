@@ -3,22 +3,77 @@
  "folge": 1,
  "datum": "2026-11-16",
  "entscheidungen": [],
- "offene_entscheidung": {"folge": 1, "a": "Der Gruppe die ganze Wahrheit sagen", "b": "Das eigentliche Ziel vorerst für dich behalten", "auswertung": "2026-11-17 Lauf 16:47"},
- "wissen": {
-  "du": ["Lea ist unschuldig", "ATLAS-Auszug (3 von 41 Seiten) beweist allein nichts", "Original ATLAS liegt im Tresor der AUREON-Bank", "8 Mio. € liegen bis Freitag im selben Tresor"],
-  "mara": ["Lea ist unschuldig", "ATLAS-Auszug", "Original ATLAS im Tresor", "du machst wegen Lea mit"],
-  "jona": ["8 Mio. € im Tresor", "Plan: Banküberfall"],
-  "karo": ["8 Mio. € im Tresor", "Plan: Banküberfall", "sie organisiert die Abreise"],
-  "voss": ["kennt den Plan (Zuschauer ahnen es nur: er wartet in der leeren Bank)"]
+ "offene_entscheidung": {
+  "folge": 1,
+  "a": "Der Gruppe die ganze Wahrheit sagen",
+  "b": "Das eigentliche Ziel vorerst für dich behalten",
+  "auswertung": "2026-11-17 Lauf 16:47"
  },
- "vertrauen": {"du→mara": "mittel", "du→jona": "hoch (ältester Freund)", "du→karo": "neu", "mara→du": "hoch", "jona→du": "hoch", "karo→gruppe": "abwartend"},
- "besitz": {"du": ["Leas Foto", "leere Tasche"], "mara": ["ATLAS-Auszug (zeigt ihn dir, behält das Blatt)"], "voss": ["goldene Anstecknadel"], "tresor": ["ATLAS-Original (roter Koffer)", "8 Mio. €"]},
+ "wissen": {
+  "du": [
+   "Lea ist unschuldig",
+   "ATLAS-Auszug (3 von 41 Seiten) beweist allein nichts",
+   "Original ATLAS liegt im Tresor der AUREON-Bank",
+   "8 Mio. € liegen bis Freitag im selben Tresor"
+  ],
+  "mara": [
+   "Lea ist unschuldig",
+   "ATLAS-Auszug",
+   "Original ATLAS im Tresor",
+   "du machst wegen Lea mit"
+  ],
+  "jona": [
+   "8 Mio. € im Tresor",
+   "Plan: Banküberfall"
+  ],
+  "karo": [
+   "8 Mio. € im Tresor",
+   "Plan: Banküberfall",
+   "sie organisiert die Abreise"
+  ],
+  "voss": [
+   "kennt den Plan (Zuschauer ahnen es nur: er wartet in der leeren Bank)"
+  ]
+ },
+ "vertrauen": {
+  "du→mara": "mittel",
+  "du→jona": "hoch (ältester Freund)",
+  "du→karo": "neu",
+  "mara→du": "hoch",
+  "jona→du": "hoch",
+  "karo→gruppe": "abwartend"
+ },
+ "besitz": {
+  "du": [
+   "Leas Foto",
+   "leere Tasche"
+  ],
+  "mara": [
+   "ATLAS-Auszug (zeigt ihn dir, behält das Blatt)"
+  ],
+  "voss": [
+   "goldene Anstecknadel"
+  ],
+  "tresor": [
+   "ATLAS-Original (roter Koffer)",
+   "8 Mio. €"
+  ]
+ },
  "verletzungen_verluste": [],
  "oeffentlich": [],
- "versprechen": [{"wer": "karo", "was": "Niemand bleibt zurück (ihre Bedingung)", "status": "gegeben"}],
- "geheimnisse": ["du hast der Gruppe (außer Mara) noch nicht gesagt, dass es dir um Lea geht", "Voss hat Jona heimlich ein Angebot gemacht (noch nicht gezeigt)"],
+ "versprechen": [
+  {
+   "wer": "karo",
+   "was": "Niemand bleibt zurück (ihre Bedingung)",
+   "status": "gegeben"
+  }
+ ],
+ "geheimnisse": [
+  "du hast der Gruppe (außer Mara) noch nicht gesagt, dass es dir um Lea geht",
+  "Voss hat Jona heimlich ein Angebot gemacht (noch nicht gezeigt)"
+ ],
  "gesperrt": [],
  "chronik": [
-  "Folge 1 „Acht Millionen. Eine Schwester.“ (16.11.): Mara zeigt den ATLAS-Auszug, Original im Tresor, 8 Mio. bis Freitag, Gruppe mit Jona und Karo, Karos Bedingung, Voss wartet in der leeren Bank. Entscheidung A Wahrheit / B Geheimnis. Stimme Orus, 75,6 s."
+  "Folge 1 „Acht Millionen. Eine Schwester.“ (16.11.): Mara zeigt den ATLAS-Auszug, Original im Tresor, 8 Mio. bis Freitag, Gruppe mit Jona und Karo, Karos Bedingung, Voss wartet in der leeren Bank. Entscheidung A Wahrheit / B Geheimnis. Stimme Orus, 75,6 s. Gepostet: TikTok 22:21, Instagram 22:45, YouTube 23:43."
  ]
 }
