@@ -8415,5 +8415,25 @@
   "konto": "storys4you.de1",
   "http": 201,
   "am": "2026-11-16T17:15:39.219Z"
+ },
+ "taeglich-insta-r001": {
+  "ok": true,
+  "zeit": "2026-11-16T22:45:00",
+  "zernioId": "6afb3b0e9e2bf2c743f57276",
+  "yt": false,
+  "k": 0,
+  "konto": "sto.rys4you",
+  "http": 201,
+  "am": "2026-11-16T17:19:10.386Z"
+ },
+ "taeglich-yt-r001": {
+  "ok": true,
+  "zeit": "2026-11-16T23:43:00",
+  "zernioId": "6afb3b10a2cc46cb1fa53ce7",
+  "yt": true,
+  "k": 1,
+  "konto": "sto.rys4you",
+  "http": 201,
+  "am": "2026-11-16T17:19:13.313Z"
  }
 }
