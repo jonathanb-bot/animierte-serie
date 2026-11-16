@@ -22,6 +22,7 @@ async function init() {
   const D = { uhr: "31567870.jpg", uhr2: "14569229.jpg", bike: "2591990.jpg", bike2: "30705458.jpg", f1: "28680795.jpg", f1b: "17555047.jpg", sprite: "sprite.png", album: "cover.png",
     foto: "nizi-foto.png", maka: "nizi-maka.png", treppe: "nizi-treppe.png", gucci: "nizi-gucci.png", risiken: "nizi-risiken.png" };
   for (const [k, v] of Object.entries(D)) IMG[k] = await lade("assets/" + v);
+  IMG.uhrV = []; for (let i = 0; i < 8; i++) { const im = await lade(`ansichten/uhr${i}.png`); if (!im) { IMG.uhrV = null; break; } IMG.uhrV.push(im); }
   await document.fonts.load('900 100px "Titel"'); await document.fonts.load('700 40px "UI"');
   for (let k = 0; k < 6; k++) { const g = document.createElement("canvas"); g.width = 540; g.height = 960; const c = g.getContext("2d"), d = c.createImageData(540, 960);
     for (let i = 0; i < d.data.length; i += 4) { const v = Math.random() * 255; d.data[i] = d.data[i + 1] = d.data[i + 2] = v; d.data[i + 3] = 16; } c.putImageData(d, 0, 0); KORN.push(g); }
@@ -101,41 +102,89 @@ function gross(T, woerter, x0, y0, fs, farbe, max = W - 160, glow = null) {
 function dunkel(T, a = "#0c0c10", b = "#17141c") { const g = ctx.createLinearGradient(0, 0, 0, H); g.addColorStop(0, a); g.addColorStop(1, b); ctx.fillStyle = g; ctx.fillRect(0, 0, W, H); }
 function etikett(x, y, text, bg = "rgba(255,255,255,0.14)", fg = "#fff", fs = 28) { ctx.font = `700 ${fs}px UI`; const b = ctx.measureText(text).width + 36; rr(x, y, b, fs + 22, (fs + 22) / 2); ctx.fillStyle = bg; ctx.fill(); ctx.fillStyle = fg; ctx.fillText(text, x + 18, y + fs + 4); return b; }
 
-// Intro: Sperrbildschirm, Fotos von Nizi fliegen auf die Kicks
-const TREFFER = [1.24, 2.116, 2.946, 3.649, 4.421, 5.175];
-function intro(T) {
-  const zoom = 1.08 + T * 0.012; ctx.save(); ctx.translate(W / 2, H / 2); ctx.scale(zoom, zoom); ctx.rotate(Math.sin(T * 0.7) * 0.01); ctx.translate(-W / 2, -H / 2);
+// ---------- Intro in vier Teilen ----------
+const IW = () => ZL.intro;
+function introWort(T, i) { return T > ZL.intro[i].a - 0.03; }
+function sticker(T, t0, text, x, y, rot, farbe, fs = 150) { const d = T - t0 + 0.03; if (d < 0) return; const q = zurueck(d / 0.28);
+  ctx.save(); ctx.translate(x, y); ctx.rotate(rot); ctx.scale(q, q); ctx.font = `900 ${fs}px Titel`; const b = ctx.measureText(text).width * 0.9 + 70;
+  ctx.shadowColor = "rgba(0,0,0,0.35)"; ctx.shadowBlur = 30; ctx.shadowOffsetY = 12; rr(-b / 2, -fs * 0.62, b, fs * 1.08, 28); ctx.fillStyle = farbe; ctx.fill(); ctx.shadowColor = "transparent";
+  ctx.fillStyle = farbe === "#fff" ? "#111" : "#fff"; ctx.textAlign = "center"; ctx.scale(0.9, 1); ctx.fillText(text, 0, fs * 0.33); ctx.restore(); }
+// A „Ah, ja, okay“: Cover dreht sich in 3D rein, Sticker auf jedes Wort
+function introA(T, z) {
+  dunkel(T, "#06100a", "#0c1f13");
+  const g = ctx.createRadialGradient(W / 2, 900, 50, W / 2, 900, 900); g.addColorStop(0, "rgba(63,163,77,0.35)"); g.addColorStop(1, "rgba(63,163,77,0)"); ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+  // Cover als Karte, die sich um die Hochachse dreht und auf „Ah“ einrastet
+  const d = T, dreh = lerp(Math.PI * 3, 0, raus(clamp((d - 0.05) / 1.1, 0, 1))) + Math.sin(T * 1.2) * 0.12, c = Math.cos(dreh), s2 = 760, y = 860 + Math.sin(T * 1.5) * 10;
+  ctx.save(); ctx.translate(W / 2, y); ctx.scale(Math.max(0.02, Math.abs(c)), 1); ctx.transform(1, Math.sin(dreh) * 0.12, 0, 1, 0, 0);
+  ctx.shadowColor = "rgba(0,0,0,0.5)"; ctx.shadowBlur = 80; ctx.shadowOffsetY = 40; rr(-s2 / 2, -s2 / 2, s2, s2, 36); ctx.fillStyle = "#fff"; ctx.fill(); ctx.shadowColor = "transparent";
+  if (c > 0) { ctx.save(); rr(-s2 / 2, -s2 / 2, s2, s2, 36); ctx.clip(); ctx.drawImage(IMG.album, -s2 / 2, -s2 / 2, s2, s2); ctx.restore(); }
+  else { rr(-s2 / 2, -s2 / 2, s2, s2, 36); ctx.fillStyle = "#0f1a12"; ctx.fill(); ctx.fillStyle = GRUEN; ctx.font = "900 300px Titel"; ctx.textAlign = "center"; ctx.fillText("19", 0, 100); }
+  ctx.restore();
+  // Glanz über dem Cover
+  sticker(T, ZL.intro[0].a, "AH", 250, 1480, -0.12, GRUEN, 140);
+  sticker(T, ZL.intro[1].a, "JA", 560, 1560, 0.08, "#fff", 140);
+  sticker(T, ZL.intro[2].a, "OKAY", 760, 1400, -0.05, "#e9c46a", 140);
+  ctx.save(); ctx.globalAlpha = raus(T / 0.6); ctx.fillStyle = "rgba(255,255,255,0.7)"; ctx.font = "700 34px UI"; ctx.textAlign = "center"; ctx.fillText("NIZI19 · WALTER WHITE", W / 2, 300); ctx.restore();
+}
+// B „Ah, 19, okay“: Fallblatt-„19“ + Fotoraster von Nizi
+function klappe(T, t0, x, y, w, h, alt, neu) { const d = T - t0, q = clamp(d / 0.22, 0, 1), zeichen = q < 0.5 ? alt : neu;
+  rr(x, y, w, h, 24); ctx.fillStyle = "#16181a"; ctx.fill(); ctx.save(); rr(x, y, w, h, 24); ctx.clip(); ctx.fillStyle = "#fff"; ctx.font = `900 ${h * 0.8}px Titel`; ctx.textAlign = "center";
+  const sy = Math.abs(Math.cos(q * Math.PI)); ctx.translate(x + w / 2, y + h / 2); ctx.scale(1, Math.max(0.03, sy)); ctx.fillText(zeichen, 0, h * 0.29); ctx.restore();
+  ctx.fillStyle = "rgba(0,0,0,0.6)"; ctx.fillRect(x, y + h / 2 - 3, w, 6); }
+function introB(T, z) {
+  dunkel(T, "#0a0a0c", "#141418");
+  const FO = ["maka", "gucci", "treppe", "foto"], d = T - z.a;
+  FO.forEach((k, i) => { const t0 = z.a + 0.05 + i * 0.12, q = zurueck((T - t0) / 0.4); if (T < t0) return; const cx = 290 + (i % 2) * 500, cy = 360 + Math.floor(i / 2) * 560;
+    karte({ x: lerp(cx + (i % 2 ? 600 : -600), cx, q), y: cy, w: 470, h: 520, r: 30, rotZ: (i % 2 ? 0.04 : -0.04) * (2 - q), rotY: 0, schatten: 0.5 }, (x, y, w, h) => bildIn(IMG[k], x, y, w, h, 1.05 + d * 0.05, 0)); });
+  // Fallblatt „19“ auf „19“
+  const t19 = ZL.intro[4].a, ta = ZL.intro[3].a, to = ZL.intro[5].a;
+  ctx.save(); ctx.fillStyle = "rgba(0,0,0,0.45)"; ctx.fillRect(0, 1250, W, 520); ctx.restore();
+  klappe(T, t19 - 0.1, 200, 1300, 320, 420, "0", "1"); klappe(T, t19, 560, 1300, 320, 420, "0", "9");
+  if (T > ta) { ctx.save(); ctx.globalAlpha = raus((T - ta) / 0.15); ctx.fillStyle = "#fff"; ctx.font = "700 40px UI"; ctx.textAlign = "center"; ctx.fillText(T > to ? "AH · 19 · OKAY" : "AH", W / 2, 1830); ctx.restore(); }
+}
+// C „Woah, okay, phew“: Sperrbildschirm, Fotos fächern auf den Kicks
+const TREFFER = [6.41, 7.337, 8.016, 8.846, 9.0];
+function introC(T, z) {
+  const zoom = 1.08 + (T - z.a) * 0.02; ctx.save(); ctx.translate(W / 2, H / 2); ctx.scale(zoom, zoom); ctx.rotate(Math.sin(T * 0.7) * 0.01); ctx.translate(-W / 2, -H / 2);
   ctx.drawImage(IMG.sperr, -40, -60, W + 80, H + 120); ctx.restore();
-  const ein = raus(T / 0.4);
-  ctx.save(); ctx.globalAlpha = ein; ctx.fillStyle = "rgba(255,255,255,0.85)"; ctx.textAlign = "center"; ctx.font = "700 40px UI"; ctx.fillText("Freitag, 13. November", W / 2, 250 - (1 - ein) * 30);
-  ctx.font = "900 250px Titel"; ctx.fillStyle = "rgba(255,255,255,0.94)"; ctx.fillText("00:19", W / 2, 480 - (1 - ein) * 40); ctx.restore();
-  { const d = T - 0.12; if (d > 0) { const y = lerp(-200, 600, zurueck(d / 0.45));
+  const ein = raus((T - z.a) / 0.35);
+  ctx.save(); ctx.globalAlpha = ein; ctx.fillStyle = "rgba(255,255,255,0.85)"; ctx.textAlign = "center"; ctx.font = "700 40px UI"; ctx.fillText("Freitag, 13. November", W / 2, 250);
+  ctx.font = "900 250px Titel"; ctx.fillStyle = "rgba(255,255,255,0.94)"; ctx.fillText("00:19", W / 2, 480); ctx.restore();
+  { const d = T - z.a - 0.05; if (d > 0) { const y = lerp(-200, 600, zurueck(d / 0.4));
     karte({ x: W / 2, y, w: 920, h: 170, r: 44, hell: false, schatten: 0.4, rotY: 0, rotZ: 0 }, (x, y2, w, h) => { ctx.fillStyle = "rgba(40,40,44,0.92)"; ctx.fillRect(x, y2, w, h);
       ctx.save(); rr(x + 30, y2 + 35, 100, 100, 24); ctx.clip(); ctx.drawImage(IMG.album, x + 30, y2 + 35, 100, 100); ctx.restore();
       ctx.fillStyle = "rgba(255,255,255,0.55)"; ctx.font = "700 26px UI"; ctx.fillText("MUSIK · jetzt", x + 160, y2 + 62); ctx.fillStyle = "#fff"; ctx.font = "700 40px UI"; ctx.fillText("Nizi19 – Walter White", x + 160, y2 + 108); ctx.fillStyle = "rgba(255,255,255,0.7)"; ctx.font = "700 30px UI"; ctx.fillText("Neue Single · jetzt hören", x + 160, y2 + 146); }); } }
-  const FOTOS = [["maka", -0.13, -170], ["treppe", 0.1, 150], ["gucci", -0.05, -60], ["foto", 0.07, 40]];
-  FOTOS.forEach(([k, rz, dx], i) => { const t0 = TREFFER[i + 1]; if (T < t0 - 0.02) return; const d = T - t0, q = zurueck(d / 0.36);
+  const FOTOS = [["maka", -0.13, -170], ["treppe", 0.1, 150], ["gucci", -0.05, -60]];
+  FOTOS.forEach(([k, rz, dx], i) => { const t0 = TREFFER[i + 1]; if (T < t0 - 0.02) return; const d = T - t0, q = zurueck(d / 0.34);
     const x = lerp(W / 2 + (i % 2 ? 900 : -900), W / 2 + dx, q), y = lerp(1500, 1180 - i * 18, q), puls = 1 + Math.exp(-d / 0.09) * 0.05;
     ctx.save(); ctx.translate(x, y); ctx.scale(puls, puls); ctx.translate(-x, -y);
-    karte({ x, y, w: 560, h: 700, r: 36, rotZ: lerp(rz * 3, rz, q) + Math.sin(T * 1.3 + i) * 0.01, rotY: lerp(i % 2 ? 0.9 : -0.9, 0, q), schatten: 0.5, vx: (1 - clamp(d / 0.36, 0, 1)) * (i % 2 ? -40 : 40), vy: 0 },
+    karte({ x, y, w: 560, h: 700, r: 36, rotZ: lerp(rz * 3, rz, q) + Math.sin(T * 1.3 + i) * 0.01, rotY: lerp(i % 2 ? 0.9 : -0.9, 0, q), schatten: 0.5, vx: (1 - clamp(d / 0.34, 0, 1)) * (i % 2 ? -40 : 40), vy: 0 },
       (x2, y2, w, h) => bildIn(IMG[k], x2, y2, w, h, 1.04 + d * 0.03, 0));
     ctx.restore(); });
-  { const d = T - TREFFER[0]; if (d > 0) { const y = lerp(2300, 1720, zurueck(d / 0.5)), voll = "Walter White", n = Math.round(clamp((T - 1.4) / 0.8, 0, 1) * voll.length);
+  { const d = T - z.a - 0.25; if (d > 0) { const y = lerp(2300, 1720, zurueck(d / 0.45)), voll = "Walter White", n = Math.round(clamp((d - 0.1) / 0.7, 0, 1) * voll.length);
     karte({ x: W / 2, y, w: 920, h: 240, r: 50, hell: false, schatten: 0.5, rotY: 0, rotZ: 0 }, (x, y2, w, h) => { ctx.fillStyle = "rgba(28,28,30,0.94)"; ctx.fillRect(x, y2, w, h);
       ctx.save(); rr(x + 34, y2 + 34, 120, 120, 20); ctx.clip(); ctx.drawImage(IMG.album, x + 34, y2 + 34, 120, 120); ctx.restore();
       ctx.fillStyle = "#fff"; ctx.font = "700 46px UI"; ctx.fillText(voll.slice(0, n) + (n < voll.length && Math.floor(T * 6) % 2 ? "|" : ""), x + 184, y2 + 92); ctx.fillStyle = "rgba(255,255,255,0.55)"; ctx.font = "700 30px UI"; ctx.fillText("Nizi19", x + 184, y2 + 138);
-      rr(x + 34, y2 + 192, w - 68, 8, 4); ctx.fillStyle = "rgba(255,255,255,0.2)"; ctx.fill(); rr(x + 34, y2 + 192, (w - 68) * ((T + 8.9) / 111), 8, 4); ctx.fillStyle = "#fff"; ctx.fill();
+      rr(x + 34, y2 + 192, w - 68, 8, 4); ctx.fillStyle = "rgba(255,255,255,0.2)"; ctx.fill(); rr(x + 34, y2 + 192, (w - 68) * ((T + 3) / 111), 8, 4); ctx.fillStyle = "#fff"; ctx.fill();
       for (let b = 0; b < 4; b++) { const hh = 14 + 30 * Math.abs(Math.sin(T * 7.6 + b * 1.7)); rr(x + w - 120 + b * 20, y2 + 100 - hh / 2, 12, hh, 6); ctx.fillStyle = GRUEN; ctx.fill(); } }); } }
-  // Pre-Drop (Kick setzt aus): „LASS ALLES, AKH“ groß, Bild wird dunkler
-  if (T > 3.55) { const q = clamp((T - 5.9) / 0.8, 0, 1); ctx.fillStyle = `rgba(0,0,0,${0.55 * q})`; ctx.fillRect(0, 0, W, H); }
-  for (const t0 of TREFFER) { const d = T - t0; if (d > 0 && d < 0.18) { ctx.fillStyle = `rgba(140,255,160,${0.12 * (1 - d / 0.18)})`; ctx.fillRect(0, 0, W, H); } }
-  if (T > 5.85) { const q = raus((T - 5.85) / 0.25); ctx.save(); ctx.globalAlpha = q; ctx.font = "900 150px Titel"; ctx.fillStyle = "#fff"; ctx.textAlign = "center"; ctx.shadowColor = "rgba(120,255,140,0.7)"; ctx.shadowBlur = 40;
-    ctx.translate(W / 2, 1000); ctx.scale((0.9 + (1 - q) * 0.2) * (1 + (T - 5.85) * 0.05), 1 + (1 - q) * 0.2 + (T - 5.85) * 0.05); ctx.fillText("19", 0, 0); ctx.restore(); }
+  for (const t0 of TREFFER.slice(1, 4)) { const d = T - t0; if (d > 0 && d < 0.18) { ctx.fillStyle = `rgba(140,255,160,${0.12 * (1 - d / 0.18)})`; ctx.fillRect(0, 0, W, H); } }
+}
+// D „Lass alles, Akh“ + Pre-Drop: große Wörter, dann „19“ glüht, Uhr blitzt kurz auf
+function introD(T, z) {
+  dunkel(T, "#050806", "#0b140d");
+  const ws = ZL.intro.slice(9, 12).map(w => ({ w: w.w + (w.w === "alles" ? "," : ""), a: w.a }));
+  gross(T, ws, 80, 820, 190, "#fff", W - 160, "rgba(90,255,120,0.4)");
+  const tp = 11.78; // Kick setzt aus
+  if (T > tp) { const q = raus((T - tp) / 0.4); ctx.fillStyle = `rgba(5,8,6,${0.92 * q})`; ctx.fillRect(0, 0, W, H);
+    ctx.save(); ctx.globalAlpha = q; ctx.font = "900 520px Titel"; ctx.fillStyle = "#fff"; ctx.textAlign = "center"; ctx.shadowColor = "rgba(120,255,140,0.8)"; ctx.shadowBlur = 60;
+    const sc = 0.85 + (T - tp) * 0.25; ctx.translate(W / 2, 1150); ctx.scale(sc * 0.9, sc); ctx.fillText("19", 0, 0); ctx.restore(); }
+  if (T > z.a + 0.6 && T < tp) { const d = T - z.a - 0.6; karte({ x: lerp(W + 400, 780, zurueck(d / 0.4)), y: 1500, w: 420, h: 520, r: 30, rotZ: 0.06, rotY: -0.2, schatten: 0.5 }, (x, y, w, h) => bildIn(IMG.uhr, x, y, w, h, 1.6, 140)); }
 }
 // 0 Vollgold Sky-Dweller, Chocolate Dial – Uhr groß, Produktkarte
 function uhr(T, z) {
   dunkel(T, "#120d07", "#2a1d0c");
   const d = T - z.a;
+  if (IMG.uhrV) return uhrDreh(T, z);
   { const f = flug(T, z.a, z.e, { x: W / 2, y: 820, rotY: -0.14, rotZ: 0.04 }, { x: W / 2 + 900, y: 900, rotY: 1, rotZ: 0.2 }, {});
     const puls = 1 + Math.exp(-Math.max(0, T - wort(z, 3)) / 0.1) * (T > wort(z, 3) ? 0.04 : 0);
     ctx.save(); ctx.translate(f.x, f.y); ctx.scale(puls, puls); ctx.translate(-f.x, -f.y);
@@ -264,28 +313,72 @@ function formel(T, z) {
   gross(T, z.woerter.slice(7), 70, 1720, 120, "#fff", 1000, T > tF ? "rgba(225,6,0,0.8)" : null);
   if (T > tF) { const q = clamp((T - tF) / 0.25, 0, 1); ctx.fillStyle = `rgba(225,6,0,${0.18 * (1 - q)})`; ctx.fillRect(0, 0, W, H); }
 }
-// Ende: „Ah, ja, okay“ – Player
-function ende(T) {
-  ctx.drawImage(IMG.sperr, 0, 0, W, H);
-  const z = { a: ZL.zeilen[7].e, e: ZL.ende };
-  player(T, z.a, z.e + 1, "Walter White", "Nizi19", (T + 8.9) / 111);
+function uhrZeichnen(w, tempo, cx, cy, breite) {
+  const V = IMG.uhrV, pos = ((w / (Math.PI * 2)) % 1 + 1) % 1 * 8, i = Math.floor(pos) % 8, f = pos - Math.floor(pos), sm = x => x * x * (3 - 2 * x), mix = sm(clamp((f - 0.2) / 0.6, 0, 1)), unsch = clamp(tempo * 2.2, 0, 9);
+  const a = V[i], b = V[(i + 1) % 8], s = breite / a.width, w2 = a.width * s, h2 = a.height * s;
+  const g = ctx.createRadialGradient(cx, cy + h2 * 0.46, 10, cx, cy + h2 * 0.46, w2 * 0.5); g.addColorStop(0, "rgba(0,0,0,0.45)"); g.addColorStop(1, "rgba(0,0,0,0)");
+  ctx.save(); ctx.translate(cx, cy + h2 * 0.46); ctx.scale(1, 0.16); ctx.translate(-cx, -(cy + h2 * 0.46)); ctx.fillStyle = g; ctx.fillRect(cx - w2, cy, w2 * 2, h2); ctx.restore();
+  for (const [img, al] of [[a, 1 - mix], [b, mix]]) { if (al < 0.01) continue; ctx.save(); ctx.globalAlpha = al; if (unsch > 0.5) ctx.filter = `blur(${unsch.toFixed(1)}px)`; ctx.drawImage(img, cx - w2 / 2, cy - h2 / 2, w2, h2); ctx.restore(); }
+}
+function uhrDreh(T, z) {
+  const d = T - z.a, t2 = wort(z, 2), dA = t2 - z.a; let w, tempo;
+  if (T < t2) { const q = clamp(d / (dA * 0.9), 0, 1); w = raus(q) * Math.PI * 2 * 1.5; tempo = (1 - q) * (1 - q) * 3.2; } else { const q = raus(clamp((T - t2) / 0.4, 0, 1)); w = Math.PI * 2 * 1.5 + q * Math.PI * 0.5; tempo = (1 - q) * 1.4; }
+  const g = ctx.createRadialGradient(W / 2, 900, 40, W / 2, 900, 800); g.addColorStop(0, "rgba(233,196,106,0.28)"); g.addColorStop(1, "rgba(233,196,106,0)"); ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+  uhrZeichnen(w, tempo, W / 2, 900 + Math.sin(T * 2) * 8, 860);
+  gross(T, z.woerter.slice(0, 2), 80, 1560, 120, "#e9c46a", W - 160, "rgba(233,196,106,0.6)");
+  if (T > wort(z, 2) - 0.03) etikett(80, 1700, "Chocolate Dial", "#5a3a22", "#f3dcc0", 40);
+  ctx.save(); ctx.globalAlpha = raus(d / 0.4); ctx.fillStyle = "#e9c46a"; ctx.font = "700 30px UI"; ctx.fillText("VOLLGOLD · 18 KT GELBGOLD", 80, 260); ctx.restore();
+}
+// 8 Sag' mein' Akh: „Bis gleich“ … – Chat mit Akh, dann große Schrift
+function akh(T, z) {
+  hintergrund(T);
+  { const f = flug(T, z.a, z.e, { x: W / 2, y: 780, rotY: 0.12, rotZ: -0.03 }, { x: -700, y: 800, rotY: -1 }, {});
+    karte({ ...f, w: 900, h: 980, r: 54, schatten: 0.35 }, (x, y, w, h) => { ctx.fillStyle = "#efeae2"; ctx.fillRect(x, y, w, h);
+      ctx.fillStyle = "#fff"; ctx.fillRect(x, y, w, 150); ctx.fillStyle = "#075e54"; ctx.font = "700 34px UI"; ctx.fillText("‹", x + 34, y + 92);
+      ctx.save(); ctx.beginPath(); ctx.arc(x + 120, y + 78, 44, 0, Math.PI * 2); ctx.clip(); bildIn(IMG.treppe, x + 76, y + 34, 88, 88, 1, 0); ctx.restore();
+      ctx.fillStyle = "#111"; ctx.font = "700 40px UI"; ctx.fillText("Akh 🤝", x + 190, y + 76); ctx.fillStyle = "rgba(0,0,0,0.45)"; ctx.font = "700 26px UI"; ctx.fillText(T > wort(z, 3) - 0.03 ? "schreibt …" : "online", x + 190, y + 114);
+      const B = (yy, txt, rechts, t0) => { const q = zurueck((T - t0) / 0.25); if (q <= 0) return; ctx.save(); ctx.font = "700 44px UI"; const bw = ctx.measureText(txt).width + 70, bx = rechts ? x + w - 40 - bw : x + 40;
+        ctx.translate(bx + bw / 2, yy + 45); ctx.scale(q, q); ctx.translate(-(bx + bw / 2), -(yy + 45)); rr(bx, yy, bw, 92, 26); ctx.fillStyle = rechts ? "#d9fdd3" : "#fff"; ctx.shadowColor = "rgba(0,0,0,0.08)"; ctx.shadowBlur = 8; ctx.fill(); ctx.shadowColor = "transparent";
+        ctx.fillStyle = "#111"; ctx.fillText(txt, bx + 35, yy + 61); ctx.font = "700 22px UI"; ctx.fillStyle = "rgba(0,0,0,0.4)"; ctx.restore(); };
+      B(y + 210, "Wo bist du?", false, z.a + 0.05); B(y + 330, "Komm runter", false, z.a + 0.2);
+      B(y + 470, "Bis gleich", true, wort(z, 3) - 0.03);
+      if (T > wort(z, 3) + 0.2) { ctx.fillStyle = "#53bdeb"; ctx.font = "700 30px UI"; ctx.textAlign = "right"; ctx.fillText("✓✓ 00:19", x + w - 50, y + 600); ctx.textAlign = "left"; } }); }
+  gross(T, z.woerter.slice(5), 80, 1600, 150, "#111", W - 160);
+}
+// 9 Einunddreißig Kugeln vollgeladen keine Duracells – Zähler + Akku
+function duracell(T, z) {
+  dunkel(T, "#0c0c0c", "#1a1712");
+  const n = Math.round(31 * raus((T - wort(z, 0)) / 0.45)), tk = wort(z, 3);
+  ctx.save(); ctx.font = "900 560px Titel"; ctx.textAlign = "center"; ctx.fillStyle = "#fff"; ctx.translate(W / 2, 900); ctx.scale(0.9, 1); ctx.fillText(String(n), 0, 0); ctx.restore();
+  ctx.save(); ctx.font = "700 40px UI"; ctx.fillStyle = "rgba(255,255,255,0.6)"; ctx.textAlign = "center"; ctx.fillText(T > wort(z, 2) - 0.03 ? "VOLLGELADEN" : (T > wort(z, 1) - 0.03 ? "KUGELN" : ""), W / 2, 1000); ctx.restore();
+  // Akku-Widget
+  { const f = flug(T, z.a + 0.15, z.e, { x: W / 2, y: 1380, rotY: -0.1, rotZ: 0.03 }, { x: W / 2, y: 2400, rotY: 0.5 }, {});
+    karte({ ...f, w: 860, h: 300, r: 46, hell: false, schatten: 0.5 }, (x, y, w, h) => { ctx.fillStyle = "#1c1c1e"; ctx.fillRect(x, y, w, h);
+      const lad = clamp((T - z.a - 0.2) / 0.8, 0, 1); rr(x + 50, y + 90, 380, 130, 26); ctx.strokeStyle = "rgba(255,255,255,0.5)"; ctx.lineWidth = 6; ctx.stroke(); rr(x + 436, y + 130, 18, 50, 6); ctx.fillStyle = "rgba(255,255,255,0.5)"; ctx.fill();
+      rr(x + 62, y + 102, 356 * lad, 106, 18); ctx.fillStyle = "#30d158"; ctx.fill();
+      ctx.fillStyle = "#fff"; ctx.font = "900 80px Titel"; ctx.fillText(Math.round(lad * 100) + " %", x + 500, y + 175);
+      if (T > tk - 0.03) { const q = clamp((T - tk) / 0.2, 0, 1); ctx.strokeStyle = "#ff375f"; ctx.lineWidth = 12; ctx.lineCap = "round"; ctx.beginPath(); ctx.moveTo(x + 40, y + 240); ctx.lineTo(x + 40 + (w - 80) * q, y + 60); ctx.stroke(); } }); }
+  gross(T, z.woerter.slice(3), 80, 1720, 120, "#fff", W - 160, T > tk ? "rgba(255,55,95,0.6)" : null);
   const r = ZL.ende - T; if (r < 0.35) { ctx.fillStyle = `rgba(0,0,0,${1 - r / 0.35})`; ctx.fillRect(0, 0, W, H); }
 }
-const SZ = [uhr, glocks, sprite, sommer, mission, zula, walter, formel];
+const SZENEN = () => [introA, introB, introC, introD, uhr, glocks, sprite, sommer, mission, zula, walter, formel, akh, duracell];
+let GRENZEN = null, ZS = null;
+function vorbereiten() { const Z = ZL.zeilen; GRENZEN = [0, 3.6875, 5.9, 9.22].concat(Z.map(z => z.a)); GRENZEN.push(ZL.ende + 1);
+  ZS = SZENEN().map((f, i) => ({ f, z: i < 4 ? { a: GRENZEN[i], e: GRENZEN[i + 1] } : Z[i - 4] })); }
 function szeneIn(nr, T, puf) { const alt = ctx; ctx = puf.getContext("2d"); ctx.setTransform(K, 0, 0, K, 0, 0); ctx.filter = "none"; ctx.globalAlpha = 1; ctx.fillStyle = "#fff"; ctx.fillRect(0, 0, W, H);
-  if (nr < 0) intro(T); else if (nr >= SZ.length) ende(T); else SZ[nr](T, ZL.zeilen[nr]); ctx = alt; }
-const RICHT = [[0, 1], [1, 0], [-1, 0], [0, -1], [1, 0], [-1, 0], [0, 1], [1, 0], [0, -1]];
-function stossJetzt(T) { if (T < 6.6) return 0; let st = 0; for (const k of ZL.kicks) { const ph = T - k; if (ph >= 0 && ph < 0.4) st = Math.max(st, Math.exp(-ph / 0.09) * 0.028); } return st; }
+  const s = ZS[clamp(nr, 0, ZS.length - 1)]; s.f(T, s.z); ctx = alt; }
+const RICHT = [[0, 1], [1, 0], [0, -1], [-1, 0], [0, 1], [1, 0], [-1, 0], [0, -1], [1, 0], [-1, 0], [0, 1], [1, 0], [0, -1], [-1, 0]];
+function stossJetzt(T) { if (T < 7.3 || (T > 11.78 && T < 12.6)) return 0; let st = 0; for (const k of ZL.kicks) { const ph = T - k; if (ph >= 0 && ph < 0.4) st = Math.max(st, Math.exp(-ph / 0.09) * 0.028); } return st; }
 window.zeichne = T => {
+  if (!ZS) vorbereiten();
   ctx = HAUPT; ctx.setTransform(K, 0, 0, K, 0, 0); ctx.filter = "none"; ctx.globalAlpha = 1; ctx.fillStyle = "#000"; ctx.fillRect(0, 0, W, H);
-  const Z = ZL.zeilen, GR = Z.map(z => z.a).concat([Z[Z.length - 1].e]); // Grenzen: Intro|0|1…|7|Ende
-  let nr = -1; for (let i = 0; i < GR.length; i++) if (T >= GR[i]) nr = i; // -1 Intro, 0..7, 8 Ende
-  const UE = 0.12; let g = -1; for (let i = 0; i < GR.length; i++) if (Math.abs(T - GR[i]) < UE) g = i;
+  const GR = GRENZEN; let nr = 0; for (let i = 0; i < ZS.length; i++) if (T >= GR[i]) nr = i;
+  const UE = 0.12; let g = -1; for (let i = 1; i < ZS.length; i++) if (Math.abs(T - GR[i]) < UE) g = i;
   const st = stossJetzt(T);
   const male = (puf, dx, dy, a = 1) => { ctx.save(); ctx.globalAlpha = a; ctx.translate(W / 2 + dx, H / 2 + dy); ctx.scale(1 + st, 1 + st); ctx.drawImage(puf, -W / 2, -H / 2, W, H); ctx.restore(); };
   if (g < 0) { szeneIn(nr, T, PUF[0]); male(PUF[0], 0, 0); }
   else {
-    const p = (T - (GR[g] - UE)) / (2 * UE), e = p < 0.5 ? 4 * p * p * p : 1 - Math.pow(-2 * p + 2, 3) / 2, [rx, ry] = RICHT[g], v = Math.sin(Math.PI * clamp(p, 0, 1));
+    const p = (T - (GR[g] - UE)) / (2 * UE), e = p < 0.5 ? 4 * p * p * p : 1 - Math.pow(-2 * p + 2, 3) / 2, [rx, ry] = RICHT[g % RICHT.length], v = Math.sin(Math.PI * clamp(p, 0, 1));
     szeneIn(g - 1, Math.min(T, GR[g] - 0.001), PUF[0]); szeneIn(g, Math.max(T, GR[g]), PUF[1]);
     for (const [puf, off] of [[PUF[0], -e], [PUF[1], 1 - e]]) { const dx = off * W * rx, dy = off * H * ry; if (Math.abs(off) >= 1) continue;
       male(puf, dx, dy, 1); for (let s2 = 1; s2 <= 4; s2++) male(puf, dx - rx * s2 * 30 * v, dy - ry * s2 * 52 * v, 0.14 * v); }
