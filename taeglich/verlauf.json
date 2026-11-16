@@ -458,6 +458,38 @@
     "lufs": -14.6,
     "dauer_s": 88.42
    }
+  },
+  {
+   "id": "mond-m003",
+   "datum": "2026-11-16",
+   "titel": "Bis zum Mond – Folge 3: Die Jagd beginnt",
+   "emoji": "🌕",
+   "serie": "Bis zum Mond (Jonathans Idee 14.11.)",
+   "stimmung": "aufbau",
+   "stimme": "Fenrir",
+   "thema": "Tag 3: 16 Städte, 31 Stockwerke. Stuttgart holt auf (4, Platz 2, nur 2 hinter Hildesheim mit 6), Hamm springt von Platz 13 auf 4 (zweiter Kommentar unter Folge 2), Baden-Baden neu (Ellen: „mein Geburtsort“). Hildesheim seit gestern +0. Cliffhanger: 2 Likes auf Stuttgart = Gleichstand",
+   "stil": "leuchtend, Kulisse turm (Turmplatz mit 16 Türmen, Nahaufnahmen mit Kommentar-Sprechblasen, Rangliste, Fahrt bis zu den Wolken); neu: modus=duell (zwei Türme groß nebeneinander mit Abstand-Klammer und Tafeln)",
+   "kulissen": [
+    "turm",
+    "titel"
+   ],
+   "beschreibung": "Tag 3: Stuttgart holt auf – nur noch zwei Stockwerke hinter Hildesheim. Hamm springt von Platz 13 auf Platz 4, und Baden-Baden ist neu dabei. Jeder Kommentar mit deiner Stadt ist ein Stockwerk, jedes Like darauf noch eins. Kommentier deine Stadt!",
+   "hashtags": [
+    "#biszummond",
+    "#deinestadt",
+    "#stuttgart",
+    "#hildesheim",
+    "#animation",
+    "#deutsch"
+   ],
+   "tags": [
+    "animation",
+    "bis zum mond",
+    "turm",
+    "stadt",
+    "stuttgart",
+    "hildesheim"
+   ]
   }
  ]
 }
