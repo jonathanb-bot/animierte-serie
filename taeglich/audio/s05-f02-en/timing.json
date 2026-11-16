@@ -1,0 +1,158 @@
+{
+ "dauer": 69.046,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "haltestelle",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 5.654,
+   "emotion": "erzaehlend",
+   "text": "The doors of your bus open. Outside stands a sign that's been underwater for years."
+  },
+  {
+   "nr": 2,
+   "typ": "nachtbus",
+   "kapitel": 2,
+   "start": 5.654,
+   "dauer": 4.838,
+   "emotion": "erzaehlend",
+   "text": "Twelve thirteen. A bus shelter in the fog. One single streetlight."
+  },
+  {
+   "nr": 3,
+   "typ": "titel",
+   "kapitel": 2,
+   "start": 10.492,
+   "dauer": 5.198,
+   "emotion": "erzaehlend",
+   "text": "The rusty sign says: Millbrook Lane. Last bus, twelve twelve."
+  },
+  {
+   "nr": 4,
+   "typ": "haltestelle",
+   "kapitel": 2,
+   "start": 15.69,
+   "dauer": 2.798,
+   "emotion": "erzaehlend",
+   "text": "Nobody's waiting there. Nobody gets on."
+  },
+  {
+   "nr": 5,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 18.488,
+   "dauer": 4.382,
+   "emotion": "ernst",
+   "text": "Cold air drifts in. It smells like wet leaves and a basement."
+  },
+  {
+   "nr": 6,
+   "typ": "nachtbus",
+   "kapitel": 3,
+   "start": 22.87,
+   "dauer": 2.39,
+   "emotion": "erzaehlend",
+   "text": "Then the step creaks. Once."
+  },
+  {
+   "nr": 7,
+   "typ": "nachtbus",
+   "kapitel": 3,
+   "start": 25.26,
+   "dauer": 5.27,
+   "emotion": "erzaehlend",
+   "text": "Twice. Three times. Like someone is getting on, someone you can't see."
+  },
+  {
+   "nr": 8,
+   "typ": "nachtbus",
+   "kapitel": 3,
+   "start": 30.53,
+   "dauer": 2.966,
+   "emotion": "erzaehlend",
+   "text": "The bus sinks a little. Like it just got heavier."
+  },
+  {
+   "nr": 9,
+   "typ": "nachtbus",
+   "kapitel": 3,
+   "start": 33.496,
+   "dauer": 3.758,
+   "emotion": "erzaehlend",
+   "text": "Henrik stares straight ahead. His hands are glued to the wheel."
+  },
+  {
+   "nr": 10,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 37.254,
+   "dauer": 3.854,
+   "emotion": "spannend",
+   "text": "You want to turn around. To the back, to the empty seats."
+  },
+  {
+   "nr": 11,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 41.108,
+   "dauer": 2.462,
+   "emotion": "spannend",
+   "text": "Henrik says it without turning around."
+  },
+  {
+   "nr": 12,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 43.57,
+   "dauer": 3.062,
+   "emotion": "spannend",
+   "text": "“Don't look back. Only look at the window.”"
+  },
+  {
+   "nr": 13,
+   "typ": "nachtbus",
+   "kapitel": 4,
+   "start": 46.632,
+   "dauer": 4.262,
+   "emotion": "erzaehlend",
+   "text": "The doors close. The bus pulls away again. Very slowly."
+  },
+  {
+   "nr": 14,
+   "typ": "nachtbus",
+   "kapitel": 4,
+   "start": 50.894,
+   "dauer": 5.534,
+   "emotion": "erzaehlend",
+   "text": "Twelve fourteen. Behind you, something drips. Steady, like a faucet."
+  },
+  {
+   "nr": 15,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 56.428,
+   "dauer": 3.158,
+   "emotion": "spannend",
+   "text": "Your heart is pounding so hard you can hear it in your ears."
+  },
+  {
+   "nr": 16,
+   "typ": "nachtbus",
+   "kapitel": 4,
+   "start": 59.586,
+   "dauer": 3.542,
+   "emotion": "erzaehlend",
+   "text": "Slowly, you raise your eyes. To the dark window next to you."
+  },
+  {
+   "nr": 17,
+   "typ": "nachtbus",
+   "kapitel": 5,
+   "start": 63.128,
+   "dauer": 5.918,
+   "emotion": "erzaehlend",
+   "text": "In the window, three people are sitting behind you. On the bus, every seat is empty."
+  }
+ ]
+}

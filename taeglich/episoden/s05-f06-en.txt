@@ -46,7 +46,7 @@
 
 == Wendung ==
 // Paul reagiert nicht
-[nachtbus anzeige_oben="Next stop" du sitzen paul=1 draussen=wasser palette=blau palette_staerke=0.6 schwenk-links ein="Henrik>NO REACTION" ein_y=1720] Paul doesn't look at Henrik. Or at you.
+[nachtbus anzeige_oben="Next stop" du sitzen paul=1 draussen=wasser palette=blau palette_staerke=0.6 schwenk-links ein="Henrik>NO REACTION" ein_y=1720] Paul doesn't look at Henrik. And he doesn't look at you.
 // Halteknopf
 [nachtbus anzeige_oben="Next stop" du sitzen paul=1 knopf draussen=wasser palette=blau palette_staerke=0.6 zoom-rein ein="button>STOP BUTTON>halteknopf" ein_y=1720] He's staring at one spot. The red button on the pole.
 // Du verstehst nicht

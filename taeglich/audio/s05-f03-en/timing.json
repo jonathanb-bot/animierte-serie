@@ -1,0 +1,149 @@
+{
+ "dauer": 68.528,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "nachtbus",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 5.75,
+   "emotion": "erzaehlend",
+   "text": "Twelve fifteen. On your bus, the seats are empty. In the window, they're not."
+  },
+  {
+   "nr": 2,
+   "typ": "nachtbus",
+   "kapitel": 2,
+   "start": 5.75,
+   "dauer": 5.054,
+   "emotion": "erzaehlend",
+   "text": "Three figures. Old coats. Wet hair hanging down over their faces."
+  },
+  {
+   "nr": 3,
+   "typ": "nachtbus",
+   "kapitel": 2,
+   "start": 10.804,
+   "dauer": 3.734,
+   "emotion": "erzaehlend",
+   "text": "Wet footprints shine on the floor. They lead in from the door."
+  },
+  {
+   "nr": 4,
+   "typ": "nachtbus",
+   "kapitel": 2,
+   "start": 14.538,
+   "dauer": 3.734,
+   "emotion": "erzaehlend",
+   "text": "Water drips from the seats behind you. Cold and dark."
+  },
+  {
+   "nr": 5,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 18.272,
+   "dauer": 5.822,
+   "emotion": "spannend",
+   "text": "You hold your breath. Your breathing is the only sound on the bus. You only look at the window."
+  },
+  {
+   "nr": 6,
+   "typ": "handy",
+   "kapitel": 3,
+   "start": 24.094,
+   "dauer": 2.726,
+   "emotion": "erzaehlend",
+   "text": "Your phone buzzes. Your mom is calling."
+  },
+  {
+   "nr": 7,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 26.82,
+   "dauer": 3.782,
+   "emotion": "ernst",
+   "text": "“Where are you? It's already past midnight.”"
+  },
+  {
+   "nr": 8,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 30.602,
+   "dauer": 3.086,
+   "emotion": "ernst",
+   "text": "You say just two words: Millbrook Lane."
+  },
+  {
+   "nr": 9,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 33.688,
+   "dauer": 3.518,
+   "emotion": "ernst",
+   "text": "On the other end, it goes quiet. The line crackles."
+  },
+  {
+   "nr": 10,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 37.206,
+   "dauer": 4.358,
+   "emotion": "traurig",
+   "text": "“That's where your grandpa grew up. The village is under the reservoir.”"
+  },
+  {
+   "nr": 11,
+   "typ": "landschaft",
+   "kapitel": 3,
+   "start": 41.564,
+   "dauer": 6.734,
+   "emotion": "erzaehlend",
+   "text": "In nineteen ninety-eight, they flooded the valley. Houses, church, school. All underwater."
+  },
+  {
+   "nr": 12,
+   "typ": "handy",
+   "kapitel": 3,
+   "start": 48.298,
+   "dauer": 2.246,
+   "emotion": "erzaehlend",
+   "text": "Then the call drops. No signal."
+  },
+  {
+   "nr": 13,
+   "typ": "nachtbus",
+   "kapitel": 4,
+   "start": 50.544,
+   "dauer": 4.334,
+   "emotion": "erzaehlend",
+   "text": "The window fogs up. From the bottom up, like someone is breathing on it."
+  },
+  {
+   "nr": 14,
+   "typ": "nachtbus",
+   "kapitel": 4,
+   "start": 54.878,
+   "dauer": 3.782,
+   "emotion": "erzaehlend",
+   "text": "In the window, one of the figures leans forward. Toward you."
+  },
+  {
+   "nr": 15,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 58.66,
+   "dauer": 3.926,
+   "emotion": "spannend",
+   "text": "A cold breath brushes the back of your neck. Like an open fridge."
+  },
+  {
+   "nr": 16,
+   "typ": "nachtbus",
+   "kapitel": 5,
+   "start": 62.586,
+   "dauer": 5.942,
+   "emotion": "erzaehlend",
+   "text": "Then a finger writes on the foggy glass, from the inside. Four letters. Stop."
+  }
+ ]
+}

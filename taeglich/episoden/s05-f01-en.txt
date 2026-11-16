@@ -18,7 +18,7 @@
 
 == Hook ==
 // Wow-Bild: Nachtbus innen, Anzeige springt auf Mühlenweg
-[nachtbus anzeige_y=560 du sitzen anzeige="Millbrook Lane" anzeige_blink uhr="12:12" draussen=nebel palette=blau palette_staerke=0.6 zoom-rein hooktext="12:12 AM – STOP: MILLBROOK LANE" ton=ui_ding] At twelve twelve AM, your night bus shows a stop that doesn't exist.
+[nachtbus anzeige_oben="Next stop" anzeige_y=560 du sitzen anzeige="Millbrook Lane" anzeige_blink uhr="12:12" draussen=nebel palette=blau palette_staerke=0.6 zoom-rein hooktext="12:12 AM – STOP: MILLBROOK LANE" ton=ui_ding] At twelve twelve AM, your night bus shows a stop that doesn't exist.
 // Henrik schaut in den Spiegel
 [nachtbus anzeige_oben="Next stop" blick=vorne s05_henrik draussen=nebel anzeige="Millbrook Lane" uhr="12:12" palette=blau palette_staerke=0.6 zoom-rein ein="Henrik>HENRIK · YOUR DRIVER" ein_y=420] Your driver, Henrik, glances in the rearview mirror. At the sign. Then at you.
 // Henrik kreidebleich
@@ -44,7 +44,7 @@
 
 == Steigerung ==
 // Die Anzeige springt
-[nachtbus anzeige_oben="Next stop" du sitzen anzeige="Millbrook Lane" anzeige_blink uhr="12:12" draussen=stadt palette=blau palette_staerke=0.6 zoom-rein ton=ui_ding ein="flips>MILLBROOK LANE?>auge" ein_y=1720] Then it's twelve twelve. The sign flips.
+[nachtbus anzeige_oben="Next stop" du sitzen anzeige="Millbrook Lane" anzeige_blink uhr="12:12" draussen=stadt palette=blau palette_staerke=0.6 zoom-rein ton=ui_ding ein="display>MILLBROOK LANE?>auge" ein_y=1720] Then it's twelve twelve. And the display changes.
 // Du, besorgt
 [gesicht du ort=nachtbus besorgt palette=blau palette_staerke=0.6] You know every stop on this route. There is no Millbrook Lane.
 // Draußen plötzlich Nebel

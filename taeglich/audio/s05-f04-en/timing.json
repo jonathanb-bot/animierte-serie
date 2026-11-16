@@ -1,0 +1,149 @@
+{
+ "dauer": 77.6,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "nachtbus",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 5.966,
+   "emotion": "erzaehlend",
+   "text": "Twelve eighteen. Your bus driver once left someone behind at Millbrook Lane."
+  },
+  {
+   "nr": 2,
+   "typ": "nachtbus",
+   "kapitel": 2,
+   "start": 5.966,
+   "dauer": 6.086,
+   "emotion": "erzaehlend",
+   "text": "The word stop slowly runs down the glass. You walk up front, to Henrik."
+  },
+  {
+   "nr": 3,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 12.052,
+   "dauer": 3.854,
+   "emotion": "traurig",
+   "text": "He talks quietly, without taking his eyes off the road."
+  },
+  {
+   "nr": 4,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 15.906,
+   "dauer": 4.214,
+   "emotion": "traurig",
+   "text": "“I've seen this once before. Just once.”"
+  },
+  {
+   "nr": 5,
+   "typ": "titel",
+   "kapitel": 2,
+   "start": 20.12,
+   "dauer": 5.726,
+   "emotion": "erzaehlend",
+   "text": "November eighth, nineteen ninety-eight. The last night before they flooded the valley."
+  },
+  {
+   "nr": 6,
+   "typ": "haltestelle",
+   "kapitel": 3,
+   "start": 25.846,
+   "dauer": 5.462,
+   "emotion": "erzaehlend",
+   "text": "It's pouring rain. Henrik is young and tired. He wants to clock out early."
+  },
+  {
+   "nr": 7,
+   "typ": "haltestelle",
+   "kapitel": 3,
+   "start": 31.308,
+   "dauer": 6.278,
+   "emotion": "erzaehlend",
+   "text": "At Millbrook Lane, a boy is standing in the shelter. With a red schoolbag. He waves."
+  },
+  {
+   "nr": 8,
+   "typ": "nachtbus",
+   "kapitel": 3,
+   "start": 37.586,
+   "dauer": 3.998,
+   "emotion": "erzaehlend",
+   "text": "Henrik drives past. He thinks: he'll catch the next bus."
+  },
+  {
+   "nr": 9,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 41.584,
+   "dauer": 5.27,
+   "emotion": "traurig",
+   "text": "There was no next bus. By morning the village was empty. Then the water came."
+  },
+  {
+   "nr": 10,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 46.854,
+   "dauer": 3.374,
+   "emotion": "ernst",
+   "text": "You ask what happened to the boy. Henrik doesn't answer."
+  },
+  {
+   "nr": 11,
+   "typ": "handy",
+   "kapitel": 3,
+   "start": 50.228,
+   "dauer": 3.998,
+   "emotion": "erzaehlend",
+   "text": "You check your phone. Twelve nineteen. November eighth."
+  },
+  {
+   "nr": 12,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 54.226,
+   "dauer": 3.422,
+   "emotion": "spannend",
+   "text": "It's the exact same night. Twenty-eight years later."
+  },
+  {
+   "nr": 13,
+   "typ": "nachtbus",
+   "kapitel": 4,
+   "start": 57.648,
+   "dauer": 4.958,
+   "emotion": "erzaehlend",
+   "text": "In the window, the three figures sit perfectly still. Like they're waiting."
+  },
+  {
+   "nr": 14,
+   "typ": "nachtbus",
+   "kapitel": 4,
+   "start": 62.606,
+   "dauer": 5.054,
+   "emotion": "erzaehlend",
+   "text": "The lights flicker. The bus turns, even though Henrik holds the wheel straight."
+  },
+  {
+   "nr": 15,
+   "typ": "nachtbus",
+   "kapitel": 4,
+   "start": 67.66,
+   "dauer": 4.31,
+   "emotion": "erzaehlend",
+   "text": "The road gets narrow. Water on the left. Water on the right."
+  },
+  {
+   "nr": 16,
+   "typ": "nachtbus",
+   "kapitel": 5,
+   "start": 71.97,
+   "dauer": 5.63,
+   "emotion": "erzaehlend",
+   "text": "The sign flips again. Last stop: The Dam. This route doesn't even go there."
+  }
+ ]
+}

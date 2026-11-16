@@ -1,0 +1,149 @@
+{
+ "dauer": 65.936,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "nachtbus",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 3.878,
+   "emotion": "erzaehlend",
+   "text": "Next to you sits a boy who only exists in the window."
+  },
+  {
+   "nr": 2,
+   "typ": "nachtbus",
+   "kapitel": 2,
+   "start": 3.878,
+   "dauer": 6.734,
+   "emotion": "erzaehlend",
+   "text": "On the bus, the seat is empty. Just a dark, wet spot on the cushion. You don't turn your head an inch."
+  },
+  {
+   "nr": 3,
+   "typ": "nachtbus",
+   "kapitel": 2,
+   "start": 10.612,
+   "dauer": 5.582,
+   "emotion": "erzaehlend",
+   "text": "In the window, he sits completely still. Maybe twelve. His schoolbag is dripping."
+  },
+  {
+   "nr": 4,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 16.194,
+   "dauer": 4.358,
+   "emotion": "traurig",
+   "text": "He doesn't look evil. He looks like he's been waiting a very long time."
+  },
+  {
+   "nr": 5,
+   "typ": "nachtbus",
+   "kapitel": 3,
+   "start": 20.552,
+   "dauer": 4.406,
+   "emotion": "erzaehlend",
+   "text": "He's holding something. Very slowly, he turns it toward the glass."
+  },
+  {
+   "nr": 6,
+   "typ": "objekt",
+   "kapitel": 3,
+   "start": 24.958,
+   "dauer": 6.038,
+   "emotion": "erklaerend",
+   "text": "An old bus ticket. November eighth, nineteen ninety-eight. Millbrook Lane, twelve twelve."
+  },
+  {
+   "nr": 7,
+   "typ": "objekt",
+   "kapitel": 3,
+   "start": 30.996,
+   "dauer": 4.118,
+   "emotion": "erklaerend",
+   "text": "The box for the stamp is empty. Nobody ever stamped this ticket."
+  },
+  {
+   "nr": 8,
+   "typ": "nachtbus",
+   "kapitel": 3,
+   "start": 35.114,
+   "dauer": 4.406,
+   "emotion": "erzaehlend",
+   "text": "Up front, Henrik looks in the rearview mirror. He sees the boy too."
+  },
+  {
+   "nr": 9,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 39.52,
+   "dauer": 1.982,
+   "emotion": "traurig",
+   "text": "His hands are shaking on the wheel."
+  },
+  {
+   "nr": 10,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 41.502,
+   "dauer": 1.478,
+   "emotion": "traurig",
+   "text": "“Paul?”"
+  },
+  {
+   "nr": 11,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 42.98,
+   "dauer": 3.806,
+   "emotion": "ernst",
+   "text": "Henrik knows his name. He's known it for twenty-eight years."
+  },
+  {
+   "nr": 12,
+   "typ": "nachtbus",
+   "kapitel": 4,
+   "start": 46.786,
+   "dauer": 3.038,
+   "emotion": "erzaehlend",
+   "text": "Paul doesn't look at Henrik. And he doesn't look at you."
+  },
+  {
+   "nr": 13,
+   "typ": "nachtbus",
+   "kapitel": 4,
+   "start": 49.824,
+   "dauer": 3.71,
+   "emotion": "erzaehlend",
+   "text": "He's staring at one spot. The red button on the pole."
+  },
+  {
+   "nr": 14,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 53.534,
+   "dauer": 3.038,
+   "emotion": "ernst",
+   "text": "You don't understand what he wants. Not yet."
+  },
+  {
+   "nr": 15,
+   "typ": "nachtbus",
+   "kapitel": 4,
+   "start": 56.572,
+   "dauer": 4.31,
+   "emotion": "erzaehlend",
+   "text": "Then it turns ice cold beside you. The air smells like lake weed."
+  },
+  {
+   "nr": 16,
+   "typ": "nachtbus",
+   "kapitel": 5,
+   "start": 60.882,
+   "dauer": 5.054,
+   "emotion": "erzaehlend",
+   "text": "The cushion next to you slowly sinks in. Paul is sitting on the real bus now."
+  }
+ ]
+}

@@ -1,0 +1,140 @@
+{
+ "dauer": 68.898,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "see",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 4.43,
+   "emotion": "erzaehlend",
+   "text": "Your bus driver is standing at the edge of the dam. And Paul is waving."
+  },
+  {
+   "nr": 2,
+   "typ": "nachtbus",
+   "kapitel": 2,
+   "start": 4.43,
+   "dauer": 5.294,
+   "emotion": "erzaehlend",
+   "text": "You only see him in the window. Tiny next to Henrik, his schoolbag on his back."
+  },
+  {
+   "nr": 3,
+   "typ": "objekt",
+   "kapitel": 2,
+   "start": 9.724,
+   "dauer": 2.27,
+   "emotion": "erklaerend",
+   "text": "Paul holds out his old ticket to Henrik."
+  },
+  {
+   "nr": 4,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 11.994,
+   "dauer": 5.366,
+   "emotion": "traurig",
+   "text": "Henrik pulls his stamp out of his jacket. His hands shake so hard, he has to try twice."
+  },
+  {
+   "nr": 5,
+   "typ": "objekt",
+   "kapitel": 2,
+   "start": 17.36,
+   "dauer": 5.558,
+   "emotion": "erklaerend",
+   "text": "Click. Twelve twelve, Millbrook Lane. Stamped. After twenty-eight years."
+  },
+  {
+   "nr": 6,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 22.918,
+   "dauer": 3.062,
+   "emotion": "traurig",
+   "text": "“I'm sorry I didn't stop for you.”"
+  },
+  {
+   "nr": 7,
+   "typ": "see",
+   "kapitel": 3,
+   "start": 25.98,
+   "dauer": 4.886,
+   "emotion": "erzaehlend",
+   "text": "Paul turns around and walks into the fog. Toward the water. Toward the village."
+  },
+  {
+   "nr": 8,
+   "typ": "nachtbus",
+   "kapitel": 3,
+   "start": 30.866,
+   "dauer": 4.526,
+   "emotion": "erzaehlend",
+   "text": "His wet footprints go all the way to the edge. And there, they just stop."
+  },
+  {
+   "nr": 9,
+   "typ": "nachtbus",
+   "kapitel": 3,
+   "start": 35.392,
+   "dauer": 5.078,
+   "emotion": "erzaehlend",
+   "text": "Twelve thirty-one. The sign is back to normal. Outside, streetlights glow."
+  },
+  {
+   "nr": 10,
+   "typ": "nachtbus",
+   "kapitel": 3,
+   "start": 40.47,
+   "dauer": 4.238,
+   "emotion": "erzaehlend",
+   "text": "Henrik drives you all the way to your front door. Neither of you says a word."
+  },
+  {
+   "nr": 11,
+   "typ": "esstisch",
+   "kapitel": 4,
+   "start": 44.708,
+   "dauer": 4.55,
+   "emotion": "erzaehlend",
+   "text": "In the morning, your mom hugs you. For a long time. She doesn't ask."
+  },
+  {
+   "nr": 12,
+   "typ": "esstisch",
+   "kapitel": 4,
+   "start": 49.258,
+   "dauer": 5.318,
+   "emotion": "erzaehlend",
+   "text": "Your grandpa is at the breakfast table. You say just two words: Paul. Millbrook."
+  },
+  {
+   "nr": 13,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 54.576,
+   "dauer": 5.582,
+   "emotion": "traurig",
+   "text": "Your grandpa sets down his coffee. Paul was his neighbor's kid. No one has seen him since that night."
+  },
+  {
+   "nr": 14,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 60.158,
+   "dauer": 3.398,
+   "emotion": "ernst",
+   "text": "You reach into your jacket pocket. Your ticket from last night."
+  },
+  {
+   "nr": 15,
+   "typ": "objekt",
+   "kapitel": 5,
+   "start": 63.556,
+   "dauer": 5.342,
+   "emotion": "erklaerend",
+   "text": "There's a stamp on it you never got. Millbrook Lane, twelve twelve. Round trip."
+  }
+ ]
+}

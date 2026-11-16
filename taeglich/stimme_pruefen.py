@@ -100,6 +100,16 @@ def de_zahl(w: str) -> int | None:
 
 def norm(t: str) -> list[str]:
     t = t.lower().replace("%", " prozent")
+    # Englisch (16.11.): Ordnungszahlen („eighth“, „8th“ → 8), Jahre („nineteen ninety-eight“ → 1998),
+    # Uhrzeiten als Ziffern („1219“ → „12 19“), damit Whisper-Ziffern zum ausgeschriebenen Drehbuch passen
+    t = re.sub(r"\b(\d+)(st|nd|rd|th)\b", r"\1", t)
+    for i, w in enumerate("first second third fourth fifth sixth seventh eighth ninth tenth eleventh twelfth".split(), 1):
+        t = re.sub(rf"\b{w}\b", str(i), t)
+    _e = {w: i for i, w in enumerate("zero one two three four five six seven eight nine".split())}
+    _z = {"ninety": 90, "eighty": 80, "seventy": 70, "sixty": 60}
+    t = re.sub(r"\bnineteen (ninety|eighty|seventy|sixty)(?:[- ](one|two|three|four|five|six|seven|eight|nine))?\b",
+               lambda m: str(1900 + _z[m.group(1)] + (_e[m.group(2)] if m.group(2) else 0)), t)
+    t = re.sub(r"\b(1[0-2]|[1-9])([0-5]\d)\b", lambda m: m.group(0) if m.group(0).startswith(("19", "20")) and len(m.group(0)) == 4 else f"{m.group(1)} {m.group(2)}", t)
     t = re.sub(r"\$(\d+)\.(\d\d)", r"\1 dollars and \2 cents", t)  # Whisper: „$11.40“
     t = re.sub(r"\$(\d+)", r"\1 dollars", t)
     t = re.sub(r"(\d),(\d)", r"\1\2", t)

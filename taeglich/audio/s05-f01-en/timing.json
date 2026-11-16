@@ -1,0 +1,158 @@
+{
+ "dauer": 80.014,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "nachtbus",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 6.398,
+   "emotion": "erzaehlend",
+   "text": "At twelve twelve AM, your night bus shows a stop that doesn't exist."
+  },
+  {
+   "nr": 2,
+   "typ": "nachtbus",
+   "kapitel": 1,
+   "start": 6.398,
+   "dauer": 6.158,
+   "emotion": "erzaehlend",
+   "text": "Your driver, Henrik, glances in the rearview mirror. At the sign. Then at you."
+  },
+  {
+   "nr": 3,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 12.556,
+   "dauer": 2.654,
+   "emotion": "spannend",
+   "text": "His face goes white as chalk."
+  },
+  {
+   "nr": 4,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 15.21,
+   "dauer": 4.382,
+   "emotion": "spannend",
+   "text": "“Millbrook Lane hasn't existed since nineteen ninety-eight.”"
+  },
+  {
+   "nr": 5,
+   "typ": "titel",
+   "kapitel": 1,
+   "start": 19.592,
+   "dauer": 3.614,
+   "emotion": "erzaehlend",
+   "text": "He says it like he's thought those words a thousand times."
+  },
+  {
+   "nr": 6,
+   "typ": "haltestelle",
+   "kapitel": 2,
+   "start": 23.206,
+   "dauer": 7.886,
+   "emotion": "erzaehlend",
+   "text": "Five minutes earlier, twelve oh seven. Your best friend Ben walks you from his birthday party to the last bus."
+  },
+  {
+   "nr": 7,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 31.092,
+   "dauer": 2.846,
+   "emotion": "froh",
+   "text": "“Text me when you're home. Or I'm calling your mom.”"
+  },
+  {
+   "nr": 8,
+   "typ": "nachtbus",
+   "kapitel": 2,
+   "start": 33.938,
+   "dauer": 4.214,
+   "emotion": "erzaehlend",
+   "text": "The bus is empty. Just you and the hum of the lights."
+  },
+  {
+   "nr": 9,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 38.152,
+   "dauer": 4.742,
+   "emotion": "ruhig",
+   "text": "Henrik has driven this route for thirty years. All he wants now is to clock out."
+  },
+  {
+   "nr": 10,
+   "typ": "nachtbus",
+   "kapitel": 2,
+   "start": 42.894,
+   "dauer": 4.766,
+   "emotion": "erzaehlend",
+   "text": "The windows fog up. Outside, the city melts into single lights."
+  },
+  {
+   "nr": 11,
+   "typ": "handy",
+   "kapitel": 2,
+   "start": 47.66,
+   "dauer": 5.582,
+   "emotion": "erzaehlend",
+   "text": "Ben texts one more time: thanks for coming. Your battery is at twenty-three percent."
+  },
+  {
+   "nr": 12,
+   "typ": "nachtbus",
+   "kapitel": 3,
+   "start": 53.242,
+   "dauer": 3.47,
+   "emotion": "erzaehlend",
+   "text": "Then it's twelve twelve. And the display changes."
+  },
+  {
+   "nr": 13,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 56.712,
+   "dauer": 4.358,
+   "emotion": "ernst",
+   "text": "You know every stop on this route. There is no Millbrook Lane."
+  },
+  {
+   "nr": 14,
+   "typ": "nachtbus",
+   "kapitel": 3,
+   "start": 61.07,
+   "dauer": 5.582,
+   "emotion": "erzaehlend",
+   "text": "Outside, there's suddenly fog. No more houses. No more streetlights."
+  },
+  {
+   "nr": 15,
+   "typ": "nachtbus",
+   "kapitel": 4,
+   "start": 66.652,
+   "dauer": 4.43,
+   "emotion": "erzaehlend",
+   "text": "Nobody pressed the button. But up front, the red stop light is glowing."
+  },
+  {
+   "nr": 16,
+   "typ": "nachtbus",
+   "kapitel": 4,
+   "start": 71.082,
+   "dauer": 4.838,
+   "emotion": "erzaehlend",
+   "text": "Henrik's foot isn't on the brake. And still the bus is slowing down."
+  },
+  {
+   "nr": 17,
+   "typ": "nachtbus",
+   "kapitel": 5,
+   "start": 75.92,
+   "dauer": 4.094,
+   "emotion": "erzaehlend",
+   "text": "The bus stops. All on its own. And the doors open."
+  }
+ ]
+}

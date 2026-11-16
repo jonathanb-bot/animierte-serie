@@ -1,0 +1,140 @@
+{
+ "dauer": 68.154,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "nachtbus",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 5.102,
+   "emotion": "erzaehlend",
+   "text": "The wheel turns under Henrik's hands. Your bus is driving itself."
+  },
+  {
+   "nr": 2,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 5.102,
+   "dauer": 4.382,
+   "emotion": "spannend",
+   "text": "Henrik stomps on the brake with everything he's got. Nothing happens."
+  },
+  {
+   "nr": 3,
+   "typ": "nachtbus",
+   "kapitel": 2,
+   "start": 9.484,
+   "dauer": 5.774,
+   "emotion": "erzaehlend",
+   "text": "The bus doesn't speed up and doesn't slow down. Exactly thirty, right on schedule."
+  },
+  {
+   "nr": 4,
+   "typ": "nachtbus",
+   "kapitel": 2,
+   "start": 15.258,
+   "dauer": 4.19,
+   "emotion": "erzaehlend",
+   "text": "You run to the door and pull the emergency handle. The door stays shut."
+  },
+  {
+   "nr": 5,
+   "typ": "nachtbus",
+   "kapitel": 2,
+   "start": 19.448,
+   "dauer": 5.438,
+   "emotion": "erzaehlend",
+   "text": "You grab the emergency hammer and hit the window. The glass holds. Not one scratch."
+  },
+  {
+   "nr": 6,
+   "typ": "nachtbus",
+   "kapitel": 3,
+   "start": 24.886,
+   "dauer": 5.126,
+   "emotion": "erzaehlend",
+   "text": "Outside there's only black water now. No shore. No lights."
+  },
+  {
+   "nr": 7,
+   "typ": "landschaft",
+   "kapitel": 3,
+   "start": 30.012,
+   "dauer": 4.238,
+   "emotion": "erzaehlend",
+   "text": "From above, it would look like a glowing bus driving across the lake."
+  },
+  {
+   "nr": 8,
+   "typ": "handy",
+   "kapitel": 3,
+   "start": 34.25,
+   "dauer": 5.774,
+   "emotion": "erzaehlend",
+   "text": "Your phone buzzes. Ben. You home? Your location says middle of the reservoir."
+  },
+  {
+   "nr": 9,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 40.024,
+   "dauer": 5.222,
+   "emotion": "ernst",
+   "text": "You've shared locations since you were twelve. Ben never asked before. Tonight he does."
+  },
+  {
+   "nr": 10,
+   "typ": "handy",
+   "kapitel": 3,
+   "start": 45.246,
+   "dauer": 3.422,
+   "emotion": "erzaehlend",
+   "text": "You type: help me. The message stays gray."
+  },
+  {
+   "nr": 11,
+   "typ": "nachtbus",
+   "kapitel": 4,
+   "start": 48.668,
+   "dauer": 2.558,
+   "emotion": "erzaehlend",
+   "text": "You sit back down and look into the window."
+  },
+  {
+   "nr": 12,
+   "typ": "nachtbus",
+   "kapitel": 4,
+   "start": 51.226,
+   "dauer": 3.614,
+   "emotion": "erzaehlend",
+   "text": "The figures have moved closer. But now there are only two."
+  },
+  {
+   "nr": 13,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 54.84,
+   "dauer": 1.382,
+   "emotion": "spannend",
+   "text": "The third one is gone."
+  },
+  {
+   "nr": 14,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 56.222,
+   "dauer": 5.342,
+   "emotion": "spannend",
+   "text": "Next to you, it turns cold. Your sleeve gets wet, though nothing is touching it."
+  },
+  {
+   "nr": 15,
+   "typ": "nachtbus",
+   "kapitel": 5,
+   "start": 61.564,
+   "dauer": 6.59,
+   "emotion": "erzaehlend",
+   "text": "In the window, the seat next to you is taken. A boy. Wet hair. A red schoolbag."
+  }
+ ]
+}

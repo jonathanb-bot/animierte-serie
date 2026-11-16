@@ -18,7 +18,7 @@
 
 == Hook ==
 // Wow-Bild: Bus auf der Staumauer, Endstation
-[nachtbus anzeige_y=560 du draussen=staumauer anzeige="The Dam" anzeige_oben="Last stop" uhr="12:24" palette=blau palette_staerke=0.6 zoom-rein hooktext="12:24 AM – LAST STOP: THE DAM" ton=tuer_zu ein="twenty>12:24 AM>uhr" ein_y=1720] Twelve twenty-four. Your bus stops on top of the dam.
+[nachtbus anzeige_y=560 du draussen=staumauer anzeige="The Dam" anzeige_oben="Last stop" uhr="12:24" palette=blau palette_staerke=0.6 zoom-rein hooktext="12:24 AM – LAST STOP: THE DAM" ton=tuer_zu ein="twenty>12:24 AM>uhr" ein_y=1720] Twelve twenty-four. Your bus comes to a stop on top of the dam.
 
 == Wiedererkennen ==
 // Wow-Bild: Stausee, Mauer, Laterne

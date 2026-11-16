@@ -18,7 +18,7 @@
 
 == Hook ==
 // Wow-Bild: drei Gestalten in der Scheibe
-[nachtbus anzeige_y=560 du sitzen spiegel=3 anzeige="Central Station" uhr="12:15" draussen=nebel palette=blau palette_staerke=0.6 zoom-rein hooktext="12:15 AM – ONLY LOOK AT THE WINDOW" ton=summen] Twelve fifteen. On your bus, the seats are empty. In the window, they're not.
+[nachtbus anzeige_oben="Next stop" anzeige_y=560 du sitzen spiegel=3 anzeige="Central Station" uhr="12:15" draussen=nebel palette=blau palette_staerke=0.6 zoom-rein hooktext="12:15 AM – ONLY LOOK AT THE WINDOW" ton=summen] Twelve fifteen. On your bus, the seats are empty. In the window, they're not.
 
 == Wiedererkennen ==
 // Die Gestalten
@@ -34,7 +34,7 @@
 // Handy: Mama ruft an
 [handy ort=nachtbus netz=1 akku=19 uhrzeit="12:16" von="Mom" nachricht="Incoming call" ton=handy_vibration palette=blau palette_staerke=0.6 ein="mom>MOM IS CALLING>handy" ein_y=1500] Your phone buzzes. Your mom is calling.
 // Mama, Figurenstimme
-[gesicht mama ort=wohnzimmer zeit=nacht besorgt figurstimme=frau sprecher=mama palette=blau palette_staerke=0.6] “Where are you? It's past midnight.”
+[gesicht mama ort=wohnzimmer zeit=nacht besorgt figurstimme=frau sprecher=mama palette=blau palette_staerke=0.6] “Where are you? It's already past midnight.”
 // Du antwortest
 [gesicht du ort=nachtbus besorgt palette=blau palette_staerke=0.6] You say just two words: Millbrook Lane.
 // Stille in der Leitung
