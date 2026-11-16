@@ -102,6 +102,26 @@ TIKTOK_EINMAL = {dt.date(2026, 11, 12), dt.date(2026, 11, 13), dt.date(2026, 11,
 TIKTOK_EINMAL_TAKT = [(20, 0)]
 
 
+# Masse-Test bis zur großen Analyse (Jonathans Vorgabe 16.11.): 8–10 Videos am Tag auf jeder Plattform. Jede Folge einzeln
+# (auch TikTok, keine Sammelteile), hinten angehängt im dichten Takt, Posts nur bis einschließlich 21.11. (22.11. Stopp).
+# 9 Takt-Zeiten + „Bis zum Mond“ um 21 Uhr = 10 am Tag; ±30 min gestreut (Issue #26) bleiben es über 30 min Abstand.
+MASSE_BIS = dt.date(2026, 11, 21)
+MASSE_TAKT = [(7, 30), (9, 0), (10, 30), (12, 0), (13, 30), (15, 0), (16, 30), (18, 0), (19, 30)]
+# Englisch: Abend in den USA (Berlin 14:00–02:00), eigene Warteschlangen je Konto
+MASSE_TAKT_EN = [(14, 0), (15, 30), (17, 0), (18, 30), (20, 0), (21, 30), (23, 0), (0, 30), (2, 0)]
+
+
+def masse_zeiten(platform: str, start: dt.datetime, anzahl: int, takt: list | None = None) -> list[dt.datetime]:
+    """Bis zu `anzahl` gestreute Zeiten im Masse-Takt nach `start`, nur bis MASSE_BIS (Rest bleibt ungeplant)."""
+    out, vorher = [], start
+    for z in naechste_slots(platform, start, anzahl, takt or MASSE_TAKT):
+        if z.date() > MASSE_BIS:
+            break
+        z = max(V.streuen(z), vorher + dt.timedelta(minutes=25))  # zwei Posts einer Warteschlange immer über 20 min auseinander
+        out.append(z); vorher = z
+    return out
+
+
 def naechste_slots(platform: str, nach: dt.datetime, anzahl: int, takt: list | None = None,
                    einmal_test: bool = False) -> list[dt.datetime]:
     """Die nächsten `anzahl` Takt-Zeiten (ohne Streuung) mehr als 30 min nach `nach`.
@@ -127,6 +147,7 @@ def main(argv=None) -> int:
     ap.add_argument("staffel", help="z. B. s01")
     ap.add_argument("--probe", action="store_true", help="alles prüfen und vorbereiten, aber nichts pushen")
     ap.add_argument("--ab", type=int, default=1, help="nur Folgen ab dieser Nummer posten (z. B. 2: Folge 1 bleibt, Jonathan 6.11.)")
+    ap.add_argument("--masse", action="store_true", help="Masse-Test bis 21.11. (16.11.): jede Folge einzeln, auch TikTok, 9× am Tag")
     ap.add_argument("--ersetzen", metavar="SUFFIX", help="neu vertonte Fassung: neue Post-IDs mit -SUFFIX (die alten vorher in plan.loeschen eintragen)")
     a = ap.parse_args(argv)
 
@@ -170,7 +191,7 @@ def main(argv=None) -> int:
                 print(f"NICHT veröffentlicht: {f['id']}: {f['pruefung']['grund']}"); return 1
 
     # 2) TikTok-Sammelteile
-    teile_def = st.get("tiktok_teile") or tiktok_teile_standard(len(folgen))
+    teile_def = [] if a.masse else (st.get("tiktok_teile") or tiktok_teile_standard(len(folgen)))
     teile = []
     for k, nrn in enumerate(teile_def, 1):
         ziel = ROOT / "ausgabe" / f"taeglich-{a.staffel}-tiktok-teil-{k}.mp4"
@@ -229,8 +250,11 @@ def main(argv=None) -> int:
             return
         letzte = letzte_zeit(plan["posts"], loeschen, platform)
         start = max(letzte, frueh) if letzte else frueh
-        for e, z in zip(eintraege, naechste_slots(platform, start, len(eintraege), einmal_test=True)):
-            z = V.streuen(z)  # 0–30 min früher oder später (Vorgabe 5.11.)
+        zeiten = (masse_zeiten(platform, start, len(eintraege)) if a.masse
+                  else [V.streuen(z) for z in naechste_slots(platform, start, len(eintraege), einmal_test=True)])  # ±30 min (5.11.)
+        for e in eintraege[len(zeiten):]:
+            print(f"  {e['id']}: kein Platz mehr bis {MASSE_BIS:%d.%m.} – bleibt ungeplant (nach der Analyse posten)")
+        for e, z in zip(eintraege, zeiten):
             post = {"id": e.pop("id"), "platform": platform, "zeit": z.strftime("%Y-%m-%dT%H:%M:00"), "serie": "taeglich", **e}
             plan["posts"].append(post); neu.append(post)
 
@@ -243,7 +267,12 @@ def main(argv=None) -> int:
         return ("Abonnier den Kanal für die nächste Staffel." if letzte
                 else f"Folge {f['nr'] + 1} kommt als Nächstes. Abonnier den Kanal, damit du sie nicht verpasst.")
 
-    anhaengen("tiktok", [{
+    if a.masse:
+        anhaengen("tiktok", [{
+            "id": f"taeglich-tiktok-{f['id']}{endung}", "video": RAW.format(pfad=f"taeglich/{f['id']}.mp4"),
+            "text": f"{titel} – Folge {f['nr']}: {f['titel']} {em}\n{f.get('beschreibung') or st['beschreibung']}\n{weiter(f, 'mir')}\n\n{tags_txt} #fyp"}
+            for f in folgen if f["nr"] >= a.ab])
+    else: anhaengen("tiktok", [{
         "id": f"taeglich-tiktok-{a.staffel}-teil-{t['k']}{endung}",
         "video": RAW.format(pfad=f"taeglich-tiktok/{a.staffel}-teil-{t['k']}.mp4"),
         "text": (f"{titel} – Teil {t['k']}/{len(teile)} (Folge {t['folgen'][0]}–{t['folgen'][-1]}) {em}\n"

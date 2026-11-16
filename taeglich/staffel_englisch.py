@@ -77,6 +77,7 @@ def main(argv=None) -> int:
     ap.add_argument("staffel")
     ap.add_argument("--probe", action="store_true")
     ap.add_argument("--ersetzen", metavar="SUFFIX", help="alte englische Posts der Staffel zurückziehen, neue IDs mit -SUFFIX")
+    ap.add_argument("--masse", action="store_true", help="Masse-Test bis 21.11. (16.11.): jede Folge einzeln, auch TikTok, 9× am Tag (US-Abend)")
     ap.add_argument("--ohne-tiktok", action="store_true",
                     help="TikTok nicht anfassen (z. B. wenn die TikTok-Teile schon gelaufen sind), nur Instagram/YouTube")
     a = ap.parse_args(argv)
@@ -107,7 +108,7 @@ def main(argv=None) -> int:
     if fehler:
         print("NICHT veröffentlicht:\n  " + "\n  ".join(fehler)); return 1
 
-    teile_def = st.get("tiktok_teile") or S.tiktok_teile_standard(len(folgen))
+    teile_def = [] if a.masse else (st.get("tiktok_teile") or S.tiktok_teile_standard(len(folgen)))
     teile = []
     for k, nrn in enumerate(teile_def, 1):
         ziel = ROOT / "ausgabe" / f"taeglich-{a.staffel}-tiktok-en-teil-{k}.mp4"
@@ -118,7 +119,7 @@ def main(argv=None) -> int:
             print("NICHT veröffentlicht."); return 1
         teile.append({"k": k, "folgen": nrn, "datei": ziel, "pruefung": erg})
 
-    mit_folgen = bool(KONTO_EN_INSTA or KONTO_EN_YT)
+    mit_folgen = bool(KONTO_EN_INSTA or KONTO_EN_YT) or a.masse
     yu = V.klonen("youtube-upload", ["/geprueft.json", "/pruefen.py", "/README.md", "/taeglich-tiktok-en/", "/taeglich-en/"], "youtube-upload")
     g = json.loads((yu / "geprueft.json").read_text(encoding="utf-8"))
     for f in (folgen if mit_folgen else []):  # jede Folge einzeln für Instagram/YouTube englisch
@@ -167,7 +168,10 @@ def main(argv=None) -> int:
 
     # Instagram + YouTube englisch: jede Folge ein Post, eigene Warteschlange je Konto, nie vor dem deutschen Gegenstück
     zeit_de = {p["id"]: dt.datetime.fromisoformat(p["zeit"]) for p in plan["posts"] if p["id"] not in loeschen}
-    for platform, konto, kurz in (("instagram", KONTO_EN_INSTA, "insta"), ("youtube", KONTO_EN_YT, "yt")):
+    plattformen = [("instagram", KONTO_EN_INSTA, "insta"), ("youtube", KONTO_EN_YT, "yt")]
+    if a.masse and not a.ohne_tiktok:
+        plattformen.insert(0, ("tiktok", KONTO_EN, "tiktok"))
+    for platform, konto, kurz in plattformen:
         if not konto:
             print(f"{platform} englisch: noch kein Konto eingetragen (KONTO_EN_{kurz.upper()}), übersprungen"); continue
         letzte = S.letzte_zeit(plan["posts"], loeschen, platform, konto)
@@ -179,7 +183,13 @@ def main(argv=None) -> int:
             de = zeit_de.get(f"taeglich-{kurz}-{f['id']}")
             if de and de > start:
                 start = de - dt.timedelta(minutes=1)  # frühestens zur Zeit des deutschen Gegenstücks
-            z = V.streuen(S.naechste_slots(platform, start, 1)[0])  # ±30 min (5.11.)
+            if a.masse:
+                zz = S.masse_zeiten(platform, start, 1, S.MASSE_TAKT_EN)
+                if not zz:
+                    print(f"  {pid}: kein Platz mehr bis {S.MASSE_BIS:%d.%m.} – bleibt ungeplant"); continue
+                z = zz[0]
+            else:
+                z = V.streuen(S.naechste_slots(platform, start, 1)[0])  # ±30 min (5.11.)
             nr, n = f["nr"], len(folgen)
             weiter = ("Follow for the next season." if nr >= n else f"Episode {nr + 1} is up next. Follow so you don't miss it.")
             post = {"id": pid, "platform": platform, "konto": konto, "zeit": z.strftime("%Y-%m-%dT%H:%M:00"), "serie": "taeglich-en",
@@ -188,6 +198,8 @@ def main(argv=None) -> int:
                 post["titel"] = f"{en['titel']} – Episode {nr}: {en['folgen'][nr - 1]} {em} #shorts"[:100]
                 post["tags"] = (en.get("tags") or ["animation", "story"]) + ["shorts"]
                 post["text"] = f"{en['beschreibung']}\n{weiter}\n\n{tags_txt} #shorts"
+            elif platform == "tiktok":
+                post["text"] = f"{en['titel']} – Episode {nr}: {en['folgen'][nr - 1]} {em}\n{en['beschreibung']}\n{weiter}\n\n{tags_txt} #fyp"
             else:
                 post["text"] = f"{en['titel']} – Episode {nr}: {en['folgen'][nr - 1]} {em}\n{en['beschreibung']}\n{weiter}\n\n{tags_txt} #reels"
             plan["posts"].append(post); neu.append(post); letzte = z; print(f"  {pid}: {post['zeit']}")
