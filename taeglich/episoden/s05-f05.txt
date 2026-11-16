@@ -1,0 +1,56 @@
+# Haltestelle Mühlenweg – Folge 5: Umleitung
+@musik musik/s05-f05.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung spannend
+@vortrag lebendig
+@klang studio
+@mund zitate
+@einblenden aus
+@qualitaet max
+@look 0.75
+@kino 0.5
+@stil leuchtend
+@palette blau
+@zeit nacht
+@untertitel aus
+
+== Hook ==
+// Wow-Bild: Bus fährt allein übers Wasser
+[nachtbus blick=vorne s05_henrik draussen=wasser anzeige="Staumauer" uhr="0:22" palette=blau palette_staerke=0.6 zoom-rein hooktext="0:22 – DER BUS FÄHRT ALLEIN" ton=wind] Das Lenkrad dreht sich unter Henriks Händen. Dein Bus fährt allein.
+
+== Wiedererkennen ==
+// Henrik bremst
+[gesicht s05_henrik ort=nachtbus angst palette=blau palette_staerke=0.6 zoom-rein] Henrik tritt mit voller Kraft auf die Bremse. Nichts passiert.
+// Tempo
+[nachtbus du anzeige="Staumauer" anzeige_oben="Endstation" uhr="0:22" draussen=wasser palette=blau palette_staerke=0.6 schwenk-links ein="fünfzig>50 KM/H" ein_y=1720] Der Bus wird nicht schneller und nicht langsamer. Genau fünfzig, wie nach Fahrplan.
+// Tür, Notgriff
+[nachtbus du knopf anzeige="Staumauer" anzeige_oben="Endstation" uhr="0:22" draussen=wasser palette=blau palette_staerke=0.6 zoom-rein] Du rennst zur Tür und ziehst am Notgriff. Die Tür bleibt zu.
+// Nothammer
+[nachtbus du knopf anzeige="Staumauer" anzeige_oben="Endstation" uhr="0:23" draussen=wasser palette=blau palette_staerke=0.6 wackeln=0.3 ton=haemmern ein="Nothammer>NOTHAMMER" ein_y=1720] Du nimmst den Nothammer und schlägst gegen die Scheibe. Das Glas hält. Kein einziger Kratzer.
+
+== Steigerung ==
+// Nur Wasser draußen
+[nachtbus du draussen=wasser palette=blau palette_staerke=0.6 schwenk-rechts] Draußen nur noch schwarzes Wasser. Kein Ufer. Kein Licht.
+// Wow-Bild: Stausee von oben
+[landschaft zeit=nacht see palette=blau palette_staerke=0.6 zoom-raus ein="Stausee>MITTEN IM STAUSEE" ein_y=420] Von oben sähe es aus, als würde ein leuchtender Bus über den See fahren.
+// Ben schreibt
+[handy ort=nachtbus netz=1 akku=15 uhrzeit="0:23" von="Ben" nachricht="Bist du zu Hause? Dein Standort zeigt mitten im Stausee." ton=handy_vibration palette=blau palette_staerke=0.6 ein="Ben>BEN SCHREIBT>handy" ein_y=1500] Dein Handy vibriert. Ben. Bist du zu Hause? Dein Standort zeigt mitten im Stausee.
+// Ben besorgt
+[gesicht ben ort=zimmer zeit=nacht besorgt palette=blau palette_staerke=0.6] Ihr teilt euren Standort, seit ihr zwölf seid. Ben hat nie nachgefragt. Heute schon.
+// Nicht gesendet
+[handy ort=nachtbus netz=0 akku=14 uhrzeit="0:23" von="Du an Ben" nachricht="Nicht gesendet: Hilf mir" ton=kein_netz palette=blau palette_staerke=0.6 ein="grau>NICHT GESENDET>handy_netz0" ein_y=1500] Du tippst: Hilf mir. Die Nachricht bleibt grau.
+
+== Wendung ==
+// Zurück auf den Sitz
+[nachtbus du sitzen spiegel=3 draussen=wasser palette=blau palette_staerke=0.6 zoom-rein] Du setzt dich wieder und schaust in die Scheibe.
+// Zwei Gestalten näher
+[nachtbus du sitzen spiegel=2 draussen=wasser palette=blau palette_staerke=0.6 zoom-rein ein="Zwei>NUR NOCH 2" ein_y=1720] Die Gestalten sind näher gerückt. Aber es sind nur noch zwei.
+// Wo ist die dritte?
+[gesicht du ort=nachtbus angst palette=blau palette_staerke=0.6] Die dritte fehlt.
+// Ärmel wird nass
+[gesicht du ort=nachtbus schreck palette=blau palette_staerke=0.6 zoom-rein ton=tropfen] Neben dir wird es kalt. Dein Ärmel wird nass, obwohl ihn nichts berührt.
+
+== Cliffhanger ==
+// Junge in der Scheibe
+[nachtbus du sitzen paul=1 spiegel=2 draussen=wasser palette=blau palette_staerke=0.6 zoom-rein ton=hit] In der Scheibe ist der Platz neben dir besetzt. Ein Junge. Nasse Haare. Ein roter Schulranzen.

@@ -1,0 +1,58 @@
+# Haltestelle Mühlenweg – Folge 6: Der Junge
+@musik musik/s05-f06.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung duester
+@vortrag lebendig
+@klang studio
+@mund zitate
+@einblenden aus
+@qualitaet max
+@look 0.75
+@kino 0.5
+@stil leuchtend
+@palette blau
+@zeit nacht
+@untertitel aus
+
+== Hook ==
+// Wow-Bild: Paul in der Scheibe
+[nachtbus anzeige_y=560 du sitzen paul=1 draussen=wasser anzeige="Staumauer" anzeige_oben="Endstation" uhr="0:23" palette=blau palette_staerke=0.6 zoom-rein hooktext="0:23 – NUR IN DER SCHEIBE"] Neben dir sitzt ein Junge, den es nur in der Scheibe gibt.
+
+== Wiedererkennen ==
+// Echter Sitz leer
+[nachtbus du sitzen draussen=wasser anzeige="Staumauer" anzeige_oben="Endstation" uhr="0:23" palette=blau palette_staerke=0.6 schwenk-rechts] Im Bus ist der Sitz leer. Nur ein dunkler, nasser Fleck auf dem Polster. Du drehst den Kopf keinen Zentimeter.
+// Paul nah
+[nachtbus du sitzen paul=1 draussen=wasser palette=blau palette_staerke=0.6 zoom-rein ton=tropfen ein="zwölf>ETWA 12 JAHRE" ein_y=1720] In der Scheibe sitzt er ganz still. Vielleicht zwölf. Sein Ranzen tropft.
+// Du, traurig
+[gesicht du ort=nachtbus traurig palette=blau palette_staerke=0.6] Er wirkt nicht böse. Er wirkt, als würde er schon sehr lange warten.
+
+== Steigerung ==
+// Er dreht etwas zur Scheibe
+[nachtbus du sitzen paul=1 draussen=wasser palette=blau palette_staerke=0.6 zoom-rein] Er hält etwas in der Hand. Ganz langsam dreht er es zur Scheibe.
+// Das Ticket
+[objekt objekte="busticket:8.11.1998" gross="MÜHLENWEG · 0:12" palette=blau palette_staerke=0.6 zoom-rein ton=papier ein="Mühlenweg>LINIE 14>busticket" ein_y=1500] Ein altes Busticket. Achter November neunzehnhundertachtundneunzig. Mühlenweg, null Uhr zwölf.
+// Nie abgestempelt
+[objekt objekte="busticket:KEIN STEMPEL" gross="NIE ABGESTEMPELT" palette=blau palette_staerke=0.6 zoom-rein ein="nie>KEIN STEMPEL>stempel" ein_y=1500] Das Feld für den Stempel ist leer. Dieses Ticket hat nie jemand abgestempelt.
+// Henrik im Rückspiegel
+[nachtbus blick=vorne s05_henrik draussen=wasser uhr="0:24" palette=blau palette_staerke=0.6 zoom-rein] Vorne schaut Henrik in den Rückspiegel. Er sieht den Jungen auch.
+// Henrik zittert
+[gesicht s05_henrik ort=nachtbus traurig palette=blau palette_staerke=0.6 zoom-rein] Seine Hände zittern am Lenkrad.
+// Figurenstimme: Paul?
+[gesicht s05_henrik ort=nachtbus traurig figurstimme=mann_alt sprecher=s05_henrik palette=blau palette_staerke=0.6] „Paul?“
+// Henrik kennt den Namen
+[gesicht du ort=nachtbus besorgt palette=blau palette_staerke=0.6 ein="Paul>PAUL" ein_y=1500] Henrik kennt seinen Namen. Er kennt ihn seit achtundzwanzig Jahren.
+
+== Wendung ==
+// Paul reagiert nicht
+[nachtbus du sitzen paul=1 draussen=wasser palette=blau palette_staerke=0.6 schwenk-links ein="weder>KEINE REAKTION" ein_y=1720] Paul schaut weder Henrik an noch dich.
+// Halteknopf
+[nachtbus du sitzen paul=1 knopf draussen=wasser palette=blau palette_staerke=0.6 zoom-rein ein="Knopf>HALTEKNOPF>halteknopf" ein_y=1720] Er schaut nur auf eine Stelle. Auf den roten Knopf an der Stange.
+// Du verstehst nicht
+[gesicht du ort=nachtbus besorgt palette=blau palette_staerke=0.6] Du verstehst nicht, was er will. Noch nicht.
+// Kälte, Seegras
+[nachtbus du sitzen draussen=wasser palette=blau palette_staerke=0.6 zoom-rein ton=wind] Dann wird es neben dir eiskalt. Die Luft riecht nach Seegras.
+
+== Cliffhanger ==
+// Polster drückt sich ein
+[nachtbus du sitzen eindruck tropfen draussen=wasser palette=lila palette_staerke=0.6 zoom-rein ton=hit] Das Polster neben dir drückt sich langsam ein. Paul sitzt jetzt auch im echten Bus.

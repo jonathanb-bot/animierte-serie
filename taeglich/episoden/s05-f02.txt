@@ -1,0 +1,60 @@
+# Haltestelle Mühlenweg – Folge 2: Mühlenweg
+@musik musik/s05-f02.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung duester
+@vortrag lebendig
+@klang studio
+@mund zitate
+@einblenden aus
+@qualitaet max
+@look 0.75
+@kino 0.5
+@stil leuchtend
+@palette blau
+@zeit nacht
+@untertitel aus
+
+== Hook ==
+// Wow-Bild: Wartehäuschen im Nebel vor der offenen Tür
+[haltestelle zeit=nacht regen palette=blau palette_staerke=0.6 zoom-rein hooktext="0:13 – DER HALT UNTER WASSER" ton=wind] Die Türen deines Busses gehen auf. Draußen steht ein Schild, das unter Wasser liegt.
+
+== Wiedererkennen ==
+// Du im Bus, Anzeige 0:13
+[nachtbus du sitzen anzeige="Mühlenweg" uhr="0:13" draussen=nebel palette=blau palette_staerke=0.6 schwenk-rechts ein="dreizehn>0:13 UHR>uhr" ein_y=1720] Null Uhr dreizehn. Ein Wartehäuschen im Nebel. Eine einzige Laterne.
+// Schild
+[titel oben="Haltestelle" gross="MÜHLENWEG" unten="Linie 14 · letzte Fahrt 0:12" farbe=#0a1230 akzent=#9fc4ff groesse=140 hud=false zoom-rein] Auf dem rostigen Schild steht: Mühlenweg. Letzte Fahrt null Uhr zwölf.
+// Leere Haltestelle
+[haltestelle zeit=nacht palette=blau palette_staerke=0.6 zoom-raus ein="Niemand>0 FAHRGÄSTE" ein_y=380] Niemand steht dort. Niemand steigt ein.
+// Du, kalte Luft
+[gesicht du ort=nachtbus besorgt palette=blau palette_staerke=0.6 ton=wind] Kalte Luft zieht herein. Sie riecht nach nassem Laub und nach Keller.
+
+== Steigerung ==
+// Stufe knarrt
+[nachtbus draussen=steht anzeige="Mühlenweg" uhr="0:13" palette=blau palette_staerke=0.6 zoom-rein ton=schritte ein="Einmal>KNARR · 1" ein_y=1720] Dann knarrt die Stufe. Einmal.
+// Zweimal, dreimal
+[nachtbus spuren draussen=steht anzeige="Mühlenweg" uhr="0:13" palette=blau palette_staerke=0.6 zoom-rein ton=schritte ein="Dreimal>3 SCHRITTE" ein_y=1720] Zweimal. Dreimal. Als würde jemand einsteigen, den du nicht siehst.
+// Bus senkt sich
+[nachtbus du sitzen draussen=steht anzeige="Mühlenweg" uhr="0:13" palette=blau palette_staerke=0.6 wackeln=0.3] Der Bus senkt sich ein Stück. Als wäre er plötzlich schwerer.
+// Henrik starr
+[nachtbus blick=vorne s05_henrik draussen=nebel anzeige="Mühlenweg" uhr="0:13" palette=blau palette_staerke=0.6 zoom-rein] Henrik starrt nach vorn. Seine Hände kleben am Lenkrad.
+// Du willst dich umdrehen
+[gesicht du ort=nachtbus angst palette=blau palette_staerke=0.6] Du willst dich umdrehen. Nach hinten, zu den leeren Sitzen.
+// Henrik sagt es
+[gesicht s05_henrik ort=nachtbus angst palette=blau palette_staerke=0.6] Henrik sagt es, ohne sich umzudrehen.
+// Figurenstimme Henrik
+[gesicht s05_henrik ort=nachtbus angst figurstimme=mann_alt sprecher=s05_henrik palette=blau palette_staerke=0.6 ein="Scheibe>REGEL: NUR IN DIE SCHEIBE>auge" ein_y=1500] „Schau nicht nach hinten. Schau nur in die Scheibe.“
+
+== Wendung ==
+// Türen zu, Bus fährt
+[nachtbus du sitzen anzeige="Hauptbahnhof" uhr="0:14" draussen=nebel palette=blau palette_staerke=0.6 schwenk-links ton=tuer_zu] Die Türen schließen sich. Der Bus fährt wieder an. Ganz langsam.
+// Licht flackert
+[nachtbus du sitzen flackern anzeige="Hauptbahnhof" uhr="0:14" draussen=nebel palette=blau palette_staerke=0.6 ton=tropfen ein="vierzehn>0:14 UHR>uhr" ein_y=1720] Null Uhr vierzehn. Hinter dir tropft es. Gleichmäßig, wie ein Wasserhahn.
+// Herzschlag
+[gesicht du ort=nachtbus angst palette=blau palette_staerke=0.6 zoom-rein ton=herzschlag ein="Herz>PULS 140>herz" ein_y=1500] Dein Herz schlägt so laut, dass du es in den Ohren hörst.
+// Blick in die Scheibe
+[nachtbus du sitzen anzeige="Hauptbahnhof" uhr="0:14" draussen=nebel palette=blau palette_staerke=0.6 zoom-rein] Langsam hebst du den Blick. Zur dunklen Scheibe neben dir.
+
+== Cliffhanger ==
+// Drei Gestalten in der Scheibe
+[nachtbus du sitzen spiegel=3 anzeige="Hauptbahnhof" uhr="0:14" draussen=nebel palette=blau palette_staerke=0.6 zoom-rein ton=hit] In der Scheibe sitzen hinter dir drei Leute. Im Bus sind alle Sitze leer.

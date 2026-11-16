@@ -1,0 +1,61 @@
+# The Stop That Isn't There – Episode 2: Millbrook Lane
+@musik musik/s05-f02-en.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung duester
+@vortrag lebendig
+@klang studio
+@mund zitate
+@einblenden aus
+@qualitaet max
+@look 0.75
+@kino 0.5
+@stil leuchtend
+@palette blau
+@zeit nacht
+@untertitel aus
+@sprache en
+
+== Hook ==
+// Wow-Bild: Wartehäuschen im Nebel vor der offenen Tür
+[haltestelle zeit=nacht regen palette=blau palette_staerke=0.6 zoom-rein hooktext="12:13 AM – A STOP UNDER WATER" ton=wind] The doors of your bus open. Outside stands a sign that's been underwater for years.
+
+== Wiedererkennen ==
+// Du im Bus, Anzeige 0:13
+[nachtbus anzeige_oben="Next stop" du sitzen anzeige="Millbrook Lane" uhr="12:13" draussen=nebel palette=blau palette_staerke=0.6 schwenk-rechts ein="thirteen>12:13 AM>uhr" ein_y=1720] Twelve thirteen. A bus shelter in the fog. One single streetlight.
+// Schild
+[titel oben="Bus stop" gross="MILLBROOK LANE" unten="Route 14 · last bus 12:12 AM" farbe=#0a1230 akzent=#9fc4ff groesse=140 hud=false zoom-rein] The rusty sign says: Millbrook Lane. Last bus, twelve twelve.
+// Leere Haltestelle
+[haltestelle zeit=nacht palette=blau palette_staerke=0.6 zoom-raus ein="Nobody>0 PASSENGERS" ein_y=380] Nobody's waiting there. Nobody gets on.
+// Du, kalte Luft
+[gesicht du ort=nachtbus besorgt palette=blau palette_staerke=0.6 ton=wind] Cold air drifts in. It smells like wet leaves and a basement.
+
+== Steigerung ==
+// Stufe knarrt
+[nachtbus anzeige_oben="Next stop" draussen=steht anzeige="Millbrook Lane" uhr="12:13" palette=blau palette_staerke=0.6 zoom-rein ton=schritte ein="Once>CREAK · 1" ein_y=1720] Then the step creaks. Once.
+// Zweimal, dreimal
+[nachtbus anzeige_oben="Next stop" spuren draussen=steht anzeige="Millbrook Lane" uhr="12:13" palette=blau palette_staerke=0.6 zoom-rein ton=schritte ein="Three>3 STEPS" ein_y=1720] Twice. Three times. Like someone is getting on, someone you can't see.
+// Bus senkt sich
+[nachtbus anzeige_oben="Next stop" du sitzen draussen=steht anzeige="Millbrook Lane" uhr="12:13" palette=blau palette_staerke=0.6 wackeln=0.3] The bus sinks a little. Like it just got heavier.
+// Henrik starr
+[nachtbus anzeige_oben="Next stop" blick=vorne s05_henrik draussen=nebel anzeige="Millbrook Lane" uhr="12:13" palette=blau palette_staerke=0.6 zoom-rein] Henrik stares straight ahead. His hands are glued to the wheel.
+// Du willst dich umdrehen
+[gesicht du ort=nachtbus angst palette=blau palette_staerke=0.6] You want to turn around. To the back, to the empty seats.
+// Henrik sagt es
+[gesicht s05_henrik ort=nachtbus angst palette=blau palette_staerke=0.6] Henrik says it without turning around.
+// Figurenstimme Henrik
+[gesicht s05_henrik ort=nachtbus angst figurstimme=mann_alt sprecher=s05_henrik palette=blau palette_staerke=0.6 ein="window>RULE: ONLY THE WINDOW>auge" ein_y=1500] “Don't look back. Only look at the window.”
+
+== Wendung ==
+// Türen zu, Bus fährt
+[nachtbus anzeige_oben="Next stop" du sitzen anzeige="Central Station" uhr="12:14" draussen=nebel palette=blau palette_staerke=0.6 schwenk-links ton=tuer_zu] The doors close. The bus pulls away again. Very slowly.
+// Licht flackert
+[nachtbus anzeige_oben="Next stop" du sitzen flackern anzeige="Central Station" uhr="12:14" draussen=nebel palette=blau palette_staerke=0.6 ton=tropfen ein="fourteen>12:14 AM>uhr" ein_y=1720] Twelve fourteen. Behind you, something drips. Steady, like a faucet.
+// Herzschlag
+[gesicht du ort=nachtbus angst palette=blau palette_staerke=0.6 zoom-rein ton=herzschlag ein="heart>PULSE 140>herz" ein_y=1500] Your heart is pounding so hard you can hear it in your ears.
+// Blick in die Scheibe
+[nachtbus anzeige_oben="Next stop" du sitzen anzeige="Central Station" uhr="12:14" draussen=nebel palette=blau palette_staerke=0.6 zoom-rein] Slowly, you raise your eyes. To the dark window next to you.
+
+== Cliffhanger ==
+// Drei Gestalten in der Scheibe
+[nachtbus anzeige_oben="Next stop" du sitzen spiegel=3 anzeige="Central Station" uhr="12:14" draussen=nebel palette=blau palette_staerke=0.6 zoom-rein ton=hit] In the window, three people are sitting behind you. On the bus, every seat is empty.

@@ -1,0 +1,158 @@
+{
+ "dauer": 76.702,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "nachtbus",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 4.502,
+   "emotion": "erzaehlend",
+   "text": "Null Uhr vierundzwanzig. Dein Bus hält auf der Staumauer."
+  },
+  {
+   "nr": 2,
+   "typ": "landschaft",
+   "kapitel": 2,
+   "start": 4.502,
+   "dauer": 7.214,
+   "emotion": "erzaehlend",
+   "text": "Eine schmale Straße auf der Mauer. Links geht es steil hinunter. Rechts liegt der See, schwarz und glatt."
+  },
+  {
+   "nr": 3,
+   "typ": "nachtbus",
+   "kapitel": 2,
+   "start": 11.716,
+   "dauer": 5.03,
+   "emotion": "erzaehlend",
+   "text": "Die Türen gehen auf. Nasse Spuren führen vom Sitz neben dir zur Tür."
+  },
+  {
+   "nr": 4,
+   "typ": "nachtbus",
+   "kapitel": 2,
+   "start": 16.746,
+   "dauer": 4.526,
+   "emotion": "erzaehlend",
+   "text": "Henrik steht auf und zieht seine Jacke gerade. Wie vor einer Kontrolle."
+  },
+  {
+   "nr": 5,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 21.272,
+   "dauer": 3.662,
+   "emotion": "traurig",
+   "text": "„Er will, dass ich mitkomme. Ich hab ihn damals stehen lassen.“"
+  },
+  {
+   "nr": 6,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 24.934,
+   "dauer": 4.862,
+   "emotion": "spannend",
+   "text": "Langsam geht Henrik zur offenen Tür. Draußen nur Nebel und Wasser."
+  },
+  {
+   "nr": 7,
+   "typ": "nachtbus",
+   "kapitel": 3,
+   "start": 29.796,
+   "dauer": 4.214,
+   "emotion": "erzaehlend",
+   "text": "In der Scheibe steht Paul an der Tür. Aber er geht nicht hinaus."
+  },
+  {
+   "nr": 8,
+   "typ": "nachtbus",
+   "kapitel": 3,
+   "start": 34.01,
+   "dauer": 3.326,
+   "emotion": "erzaehlend",
+   "text": "Er schaut wieder auf den Halteknopf. Genau wie vorhin."
+  },
+  {
+   "nr": 9,
+   "typ": "objekt",
+   "kapitel": 3,
+   "start": 37.336,
+   "dauer": 4.406,
+   "emotion": "erklaerend",
+   "text": "Ein Ticket, das nie gestempelt wurde. Ein Wort in der Scheibe: Halt."
+  },
+  {
+   "nr": 10,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 41.742,
+   "dauer": 2.006,
+   "emotion": "ernst",
+   "text": "Und plötzlich verstehst du es."
+  },
+  {
+   "nr": 11,
+   "typ": "nachtbus",
+   "kapitel": 3,
+   "start": 43.748,
+   "dauer": 4.718,
+   "emotion": "erzaehlend",
+   "text": "Paul will Henrik nicht mitnehmen. Er will nur, was er damals nicht bekommen hat."
+  },
+  {
+   "nr": 12,
+   "typ": "titel",
+   "kapitel": 3,
+   "start": 48.466,
+   "dauer": 2.318,
+   "emotion": "erzaehlend",
+   "text": "Dass jemand für ihn hält."
+  },
+  {
+   "nr": 13,
+   "typ": "nachtbus",
+   "kapitel": 4,
+   "start": 50.784,
+   "dauer": 4.814,
+   "emotion": "erzaehlend",
+   "text": "Du stehst auf. Deine Finger sind eiskalt. Du drückst den Halteknopf."
+  },
+  {
+   "nr": 14,
+   "typ": "nachtbus",
+   "kapitel": 4,
+   "start": 55.598,
+   "dauer": 6.59,
+   "emotion": "erzaehlend",
+   "text": "Vorne leuchtet das rote Halt. Ein heller Gong. Die Anzeige springt zurück: Mühlenweg."
+  },
+  {
+   "nr": 15,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 62.188,
+   "dauer": 5.63,
+   "emotion": "traurig",
+   "text": "Henrik dreht sich um. Er sieht das Licht. Er sieht dich. Seine Augen werden nass."
+  },
+  {
+   "nr": 16,
+   "typ": "nachtbus",
+   "kapitel": 4,
+   "start": 67.818,
+   "dauer": 4.382,
+   "emotion": "erzaehlend",
+   "text": "In der Scheibe hebt Paul den Kopf. Zum ersten Mal sieht er dich an."
+  },
+  {
+   "nr": 17,
+   "typ": "nachtbus",
+   "kapitel": 5,
+   "start": 72.2,
+   "dauer": 4.502,
+   "emotion": "erzaehlend",
+   "text": "Henrik nickt dir zu. Dann öffnet er die Tür und geht hinaus."
+  }
+ ]
+}

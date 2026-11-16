@@ -157,5 +157,13 @@
   "haut": "#ecc6a6",
   "jacke": "#7a8a9a",
   "hose": "#3a3f4a"
+ },
+ "s05_henrik": {
+  "haar": "kurz",
+  "haare": "#a9a7a4",
+  "haut": "#e2b996",
+  "jacke": "#22345e",
+  "hose": "#1e2434",
+  "bart": "#b4b2ae"
  }
 }

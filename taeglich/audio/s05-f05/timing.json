@@ -1,0 +1,140 @@
+{
+ "dauer": 67.77,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "nachtbus",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 5.798,
+   "emotion": "erzaehlend",
+   "text": "Das Lenkrad dreht sich unter Henriks Händen. Dein Bus fährt allein."
+  },
+  {
+   "nr": 2,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 5.798,
+   "dauer": 3.878,
+   "emotion": "spannend",
+   "text": "Henrik tritt mit voller Kraft auf die Bremse. Nichts passiert."
+  },
+  {
+   "nr": 3,
+   "typ": "nachtbus",
+   "kapitel": 2,
+   "start": 9.676,
+   "dauer": 5.678,
+   "emotion": "erzaehlend",
+   "text": "Der Bus wird nicht schneller und nicht langsamer. Genau fünfzig, wie nach Fahrplan."
+  },
+  {
+   "nr": 4,
+   "typ": "nachtbus",
+   "kapitel": 2,
+   "start": 15.354,
+   "dauer": 4.334,
+   "emotion": "erzaehlend",
+   "text": "Du rennst zur Tür und ziehst am Notgriff. Die Tür bleibt zu."
+  },
+  {
+   "nr": 5,
+   "typ": "nachtbus",
+   "kapitel": 2,
+   "start": 19.688,
+   "dauer": 5.846,
+   "emotion": "erzaehlend",
+   "text": "Du nimmst den Nothammer und schlägst gegen die Scheibe. Das Glas hält. Kein einziger Kratzer."
+  },
+  {
+   "nr": 6,
+   "typ": "nachtbus",
+   "kapitel": 3,
+   "start": 25.534,
+   "dauer": 4.094,
+   "emotion": "erzaehlend",
+   "text": "Draußen nur noch schwarzes Wasser. Kein Ufer. Kein Licht."
+  },
+  {
+   "nr": 7,
+   "typ": "landschaft",
+   "kapitel": 3,
+   "start": 29.628,
+   "dauer": 4.718,
+   "emotion": "erzaehlend",
+   "text": "Von oben sähe es aus, als würde ein leuchtender Bus über den See fahren."
+  },
+  {
+   "nr": 8,
+   "typ": "handy",
+   "kapitel": 3,
+   "start": 34.346,
+   "dauer": 6.086,
+   "emotion": "erzaehlend",
+   "text": "Dein Handy vibriert. Ben. Bist du zu Hause? Dein Standort zeigt mitten im Stausee."
+  },
+  {
+   "nr": 9,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 40.432,
+   "dauer": 5.03,
+   "emotion": "ernst",
+   "text": "Ihr teilt euren Standort, seit ihr zwölf seid. Ben hat nie nachgefragt. Heute schon."
+  },
+  {
+   "nr": 10,
+   "typ": "handy",
+   "kapitel": 3,
+   "start": 45.462,
+   "dauer": 3.614,
+   "emotion": "erzaehlend",
+   "text": "Du tippst: Hilf mir. Die Nachricht bleibt grau."
+  },
+  {
+   "nr": 11,
+   "typ": "nachtbus",
+   "kapitel": 4,
+   "start": 49.076,
+   "dauer": 2.606,
+   "emotion": "erzaehlend",
+   "text": "Du setzt dich wieder und schaust in die Scheibe."
+  },
+  {
+   "nr": 12,
+   "typ": "nachtbus",
+   "kapitel": 4,
+   "start": 51.682,
+   "dauer": 4.214,
+   "emotion": "erzaehlend",
+   "text": "Die Gestalten sind näher gerückt. Aber es sind nur noch zwei."
+  },
+  {
+   "nr": 13,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 55.896,
+   "dauer": 1.286,
+   "emotion": "spannend",
+   "text": "Die dritte fehlt."
+  },
+  {
+   "nr": 14,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 57.182,
+   "dauer": 4.31,
+   "emotion": "spannend",
+   "text": "Neben dir wird es kalt. Dein Ärmel wird nass, obwohl ihn nichts berührt."
+  },
+  {
+   "nr": 15,
+   "typ": "nachtbus",
+   "kapitel": 5,
+   "start": 61.492,
+   "dauer": 6.278,
+   "emotion": "erzaehlend",
+   "text": "In der Scheibe ist der Platz neben dir besetzt. Ein Junge. Nasse Haare. Ein roter Schulranzen."
+  }
+ ]
+}

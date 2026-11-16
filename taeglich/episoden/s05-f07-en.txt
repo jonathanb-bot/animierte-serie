@@ -1,0 +1,61 @@
+# The Stop That Isn't There – Episode 7: The Dam
+@musik musik/s05-f07-en.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung spannend
+@vortrag lebendig
+@klang studio
+@mund zitate
+@einblenden aus
+@qualitaet max
+@look 0.75
+@kino 0.5
+@stil leuchtend
+@palette blau
+@zeit nacht
+@untertitel aus
+@sprache en
+
+== Hook ==
+// Wow-Bild: Bus auf der Staumauer, Endstation
+[nachtbus anzeige_y=560 du draussen=staumauer anzeige="The Dam" anzeige_oben="Last stop" uhr="12:24" palette=blau palette_staerke=0.6 zoom-rein hooktext="12:24 AM – LAST STOP: THE DAM" ton=tuer_zu ein="twenty>12:24 AM>uhr" ein_y=1720] Twelve twenty-four. Your bus stops on top of the dam.
+
+== Wiedererkennen ==
+// Wow-Bild: Stausee, Mauer, Laterne
+[landschaft zeit=nacht see palette=blau palette_staerke=0.6 zoom-raus ton=wind] A narrow road along the wall. On the left, a steep drop. On the right, the lake, black and still.
+// Nasse Spuren zur Tür
+[nachtbus spuren draussen=staumauer anzeige="The Dam" anzeige_oben="Last stop" uhr="12:24" palette=blau palette_staerke=0.6 zoom-rein ein="footprints>FOOTPRINTS TO THE DOOR>tropfen" ein_y=1720] The doors open. Wet footprints lead from the seat next to you to the door.
+// Henrik steht auf
+[nachtbus anzeige_oben="Next stop" blick=vorne s05_henrik draussen=staumauer uhr="12:24" palette=blau palette_staerke=0.6 zoom-rein] Henrik stands up and straightens his jacket. Like before an inspection.
+// Figurenstimme Henrik
+[gesicht s05_henrik ort=nachtbus traurig figurstimme=mann_alt sprecher=s05_henrik palette=blau palette_staerke=0.6] “He wants me to come with him. I left him behind that night.”
+
+== Steigerung ==
+// Du, besorgt
+[gesicht du ort=nachtbus angst palette=blau palette_staerke=0.6] Henrik walks to the door. Outside, only fog and water.
+// Paul an der Tür
+[nachtbus anzeige_oben="Next stop" du paul=1 paul_x=560 draussen=staumauer palette=blau palette_staerke=0.6 zoom-rein] In the window, Paul is standing by the door. But he doesn't step out.
+// Wieder der Knopf
+[nachtbus anzeige_oben="Next stop" du knopf draussen=staumauer palette=blau palette_staerke=0.6 zoom-rein ein="button>THE BUTTON AGAIN>halteknopf" ein_y=1720] He's looking at the stop button again. Just like before.
+// Ticket und Schrift
+[objekt objekte="busticket:NEVER STAMPED|halteknopf:STOP" gross="WHAT HE WANTS" palette=blau palette_staerke=0.6 zoom-rein ein="word>STOP" ein_y=1500] A ticket that was never stamped. A word on the window: stop.
+// Du begreifst
+[gesicht du ort=nachtbus besorgt palette=blau palette_staerke=0.6 zoom-rein] And suddenly, you get it.
+// Paul will etwas anderes
+[nachtbus anzeige_oben="Next stop" du paul=1 paul_x=560 draussen=staumauer palette=blau palette_staerke=0.6 schwenk-rechts] Paul doesn't want to take Henrik. He only wants what he didn't get back then.
+// Karte
+[titel oben="Paul only wants one thing" gross="SOMEONE STOPS" unten="for him" farbe=#0a1230 akzent=#9fc4ff groesse=150 hud=false zoom-rein] For someone to stop for him.
+
+== Wendung ==
+// Du drückst den Knopf
+[nachtbus anzeige_oben="Next stop" du knopf halt halt_text="STOP" draussen=staumauer palette=blau palette_staerke=0.6 zoom-rein ton=ui_ding ein="press>STOP PRESSED>halteknopf" ein_y=1720] You stand up. Your fingers are ice cold. You press the stop button.
+// Halt leuchtet, Anzeige springt
+[nachtbus anzeige_oben="Next stop" du halt halt_text="STOP" anzeige="Millbrook Lane" uhr="12:25" draussen=staumauer palette=blau palette_staerke=0.6 zoom-rein ein="Millbrook>MILLBROOK LANE" ein_y=1720] Up front, the red stop light glows. A bright chime. The sign flips back: Millbrook Lane.
+// Henrik sieht dich
+[gesicht s05_henrik ort=nachtbus traurig palette=blau palette_staerke=0.6 zoom-rein] Henrik turns around. He sees the light. He sees you. His eyes fill with tears.
+// Paul lächelt
+[nachtbus anzeige_oben="Next stop" du paul=1 paul_x=560 halt halt_text="STOP" draussen=staumauer palette=blau palette_staerke=0.6 zoom-rein] In the window, Paul lifts his head. For the first time, he looks at you.
+
+== Cliffhanger ==
+// Henrik steigt aus
+[nachtbus anzeige_oben="Next stop" blick=vorne s05_henrik draussen=staumauer uhr="12:25" palette=blau palette_staerke=0.6 zoom-raus ton=tuer_zu] Henrik gives you a nod. Then he opens the door and steps outside.

@@ -1,0 +1,59 @@
+# The Stop That Isn't There – Episode 4: Henrik's Route
+@musik musik/s05-f04-en.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung traurig
+@vortrag lebendig
+@klang studio
+@mund zitate
+@einblenden aus
+@qualitaet max
+@look 0.75
+@kino 0.5
+@stil leuchtend
+@palette blau
+@zeit nacht
+@untertitel aus
+@sprache en
+
+== Hook ==
+// Wow-Bild: Henrik am Steuer im Nebel
+[nachtbus anzeige_oben="Next stop" blick=vorne s05_henrik draussen=nebel anzeige="Central Station" uhr="12:18" palette=blau palette_staerke=0.6 zoom-rein hooktext="12:18 AM – HE LEFT HIM THERE"] Twelve eighteen. Your bus driver once left someone behind at Millbrook Lane.
+
+== Wiedererkennen ==
+// HALT läuft aus
+[nachtbus anzeige_oben="Next stop" du schrift="STOP" anzeige="Central Station" uhr="12:18" draussen=nebel palette=blau palette_staerke=0.6 schwenk-rechts] The word stop slowly runs down the glass. You walk up front, to Henrik.
+// Henrik leise
+[gesicht s05_henrik ort=nachtbus traurig palette=blau palette_staerke=0.6] He talks quietly, without taking his eyes off the road.
+// Figurenstimme Henrik
+[gesicht s05_henrik ort=nachtbus traurig figurstimme=mann_alt sprecher=s05_henrik palette=blau palette_staerke=0.6] “I've seen this once before. Just once.”
+// Infokarte: Datum
+[titel oben="The last night before the flood" gross="11/8/1998" unten="Route 14 · Millbrook Lane" farbe=#0a1230 akzent=#9fc4ff groesse=150 hud=false zoom-rein] November eighth, nineteen ninety-eight. The last night before they flooded the valley.
+
+== Steigerung ==
+// Rückblick: Regen an der Haltestelle
+[haltestelle zeit=nacht regen palette=blau palette_staerke=0.6 zoom-rein ton=regen ein="clock>CLOCKING OUT EARLY>uhr" ein_y=380] It's pouring rain. Henrik is young and tired. He wants to clock out early.
+// Rückblick: Bus kommt, Junge winkt
+[haltestelle zeit=nacht regen bus=kommt palette=blau palette_staerke=0.6 schwenk-links ein="red>RED SCHOOLBAG" ein_y=380] At Millbrook Lane, a boy is standing in the shelter. With a red schoolbag. He waves.
+// Henrik fährt vorbei
+[nachtbus anzeige_oben="Next stop" blick=vorne s05_henrik draussen=nebel uhr="12:12" palette=blau palette_staerke=0.6 zoom-raus ein="drives>DROVE PAST" ein_y=420] Henrik drives past. He thinks: he'll catch the next bus.
+// Henrik schwer
+[gesicht s05_henrik ort=nachtbus traurig palette=blau palette_staerke=0.6 zoom-rein] There was no next bus. By morning the village was empty. Then the water came.
+// Du fragst
+[gesicht du ort=nachtbus besorgt palette=blau palette_staerke=0.6] You ask what happened to the boy. Henrik doesn't answer.
+// Handy: Datum
+[handy ort=nachtbus netz=0 akku=17 uhrzeit="12:19" von="Today" nachricht="November 8" ton=ui_ding palette=blau palette_staerke=0.6 ein="November>TODAY: NOVEMBER 8>uhr" ein_y=1500] You check your phone. Twelve nineteen. November eighth.
+// Du begreifst
+[gesicht du ort=nachtbus angst palette=blau palette_staerke=0.6 zoom-rein ein="Twenty>#28 YEARS LATER" ein_y=1500] It's the exact same night. Twenty-eight years later.
+
+== Wendung ==
+// Gestalten warten
+[nachtbus anzeige_oben="Next stop" du spiegel=3 anzeige="Central Station" uhr="12:20" draussen=nebel palette=blau palette_staerke=0.6 schwenk-rechts] In the window, the three figures sit perfectly still. Like they're waiting.
+// Licht flackert, Bus biegt ab
+[nachtbus anzeige_oben="Next stop" du flackern anzeige="Central Station" uhr="12:20" draussen=nebel palette=blau palette_staerke=0.6 wackeln=0.3] The lights flicker. The bus turns, even though Henrik holds the wheel straight.
+// Straße zwischen Wasser
+[nachtbus anzeige_oben="Next stop" blick=vorne s05_henrik draussen=wasser uhr="12:21" palette=blau palette_staerke=0.6 zoom-rein ton=wind ein="Water>WATER ON BOTH SIDES" ein_y=420] The road gets narrow. Water on the left. Water on the right.
+
+== Cliffhanger ==
+// Anzeige: Endstation Staumauer
+[nachtbus du anzeige="The Dam" anzeige_oben="Last stop" anzeige_blink uhr="12:21" draussen=wasser palette=blau palette_staerke=0.6 zoom-rein ton=hit] The sign flips again. Last stop: The Dam. This route doesn't even go there.

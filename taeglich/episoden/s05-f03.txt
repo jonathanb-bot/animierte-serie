@@ -1,0 +1,58 @@
+# Haltestelle Mühlenweg – Folge 3: Die Scheibe
+@musik musik/s05-f03.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung spannend
+@vortrag lebendig
+@klang studio
+@mund zitate
+@einblenden aus
+@qualitaet max
+@look 0.75
+@kino 0.5
+@stil leuchtend
+@palette blau
+@zeit nacht
+@untertitel aus
+
+== Hook ==
+// Wow-Bild: drei Gestalten in der Scheibe
+[nachtbus anzeige_y=560 du sitzen spiegel=3 anzeige="Hauptbahnhof" uhr="0:15" draussen=nebel palette=blau palette_staerke=0.6 zoom-rein hooktext="0:15 – SCHAU NUR IN DIE SCHEIBE" ton=summen] Null Uhr fünfzehn. In deinem Bus sind die Sitze leer. In der Scheibe nicht.
+
+== Wiedererkennen ==
+// Die Gestalten
+[nachtbus du sitzen spiegel=3 anzeige="Hauptbahnhof" uhr="0:15" draussen=nebel palette=blau palette_staerke=0.6 schwenk-rechts ein="Drei>3 FAHRGÄSTE" ein_y=1720] Drei Gestalten. Alte Mäntel. Nasse Haare, die ihnen ins Gesicht hängen.
+// Nasse Spuren
+[nachtbus spuren draussen=nebel anzeige="Hauptbahnhof" uhr="0:15" palette=blau palette_staerke=0.6 zoom-rein ein="Spuren>NASSE SPUREN>tropfen" ein_y=1720] Auf dem Boden glänzen nasse Fußabdrücke. Sie kommen von der Tür.
+// Tropfende Sitze
+[nachtbus tropfen draussen=nebel anzeige="Hauptbahnhof" uhr="0:15" palette=blau palette_staerke=0.6 zoom-rein ton=tropfen] Von den Sitzen hinter dir tropft Wasser. Kalt und dunkel.
+// Du hältst die Luft an
+[gesicht du ort=nachtbus angst palette=blau palette_staerke=0.6] Du hältst die Luft an. Dein Atem ist das einzige Geräusch im Bus. Du schaust nur in die Scheibe.
+
+== Steigerung ==
+// Handy: Mama ruft an
+[handy ort=nachtbus netz=1 akku=19 uhrzeit="0:16" von="Mama" nachricht="Eingehender Anruf" ton=handy_vibration palette=blau palette_staerke=0.6 ein="Mama>MAMA RUFT AN>handy" ein_y=1500] Dein Handy vibriert. Deine Mama ruft an.
+// Mama, Figurenstimme
+[gesicht mama ort=wohnzimmer zeit=nacht besorgt figurstimme=frau sprecher=mama palette=blau palette_staerke=0.6] „Wo bist du? Es ist nach Mitternacht.“
+// Du antwortest
+[gesicht du ort=nachtbus besorgt palette=blau palette_staerke=0.6] Du sagst nur ein Wort: Mühlenweg.
+// Stille in der Leitung
+[gesicht mama ort=wohnzimmer zeit=nacht besorgt palette=blau palette_staerke=0.6 ton=funk_rauschen] Am anderen Ende wird es still. Die Leitung rauscht.
+// Mama erklärt, Figurenstimme
+[gesicht mama ort=wohnzimmer zeit=nacht traurig figurstimme=frau sprecher=mama palette=blau palette_staerke=0.6] „Da ist dein Opa aufgewachsen. Das Dorf liegt unter dem Stausee.“
+// Wow-Bild: Stausee bei Nacht
+[landschaft zeit=nacht see palette=blau palette_staerke=0.6 zoom-raus ein="neunzehnhundert>1998 GEFLUTET" ein_y=420] Neunzehnhundertachtundneunzig wurde das Tal geflutet. Häuser, Kirche, Schule. Alles unter Wasser.
+// Kein Netz
+[handy ort=nachtbus netz=0 akku=18 uhrzeit="0:17" von="Mama" nachricht="Anruf beendet" ton=kein_netz palette=blau palette_staerke=0.6 ein="Netz>KEIN NETZ>handy_netz0" ein_y=1500] Dann bricht die Leitung ab. Kein Netz.
+
+== Wendung ==
+// Scheibe beschlägt
+[nachtbus du sitzen beschlagen spiegel=3 anzeige="Hauptbahnhof" uhr="0:17" draussen=nebel palette=blau palette_staerke=0.6 zoom-rein ein="atmen>SCHEIBE BESCHLÄGT" ein_y=1720] Die Scheibe beschlägt. Von unten nach oben, als würde jemand dagegen atmen.
+// Eine Gestalt beugt sich vor
+[nachtbus du sitzen beschlagen spiegel=1 anzeige="Hauptbahnhof" uhr="0:17" draussen=nebel palette=blau palette_staerke=0.6 zoom-rein] In der Scheibe beugt sich eine der Gestalten nach vorn. Zu dir.
+// Kalter Hauch
+[gesicht du ort=nachtbus angst palette=blau palette_staerke=0.6 ton=wind] Ein kalter Hauch streift deinen Nacken. Wie aus einem offenen Kühlschrank.
+
+== Cliffhanger ==
+// Finger schreibt HALT
+[nachtbus du sitzen schrift="HALT" anzeige="Hauptbahnhof" uhr="0:17" draussen=nebel palette=lila palette_staerke=0.6 zoom-rein ton=hit] Dann schreibt ein Finger von innen in die beschlagene Scheibe. Vier Buchstaben. Halt.

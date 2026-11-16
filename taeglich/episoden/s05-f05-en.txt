@@ -1,0 +1,57 @@
+# The Stop That Isn't There – Episode 5: Detour
+@musik musik/s05-f05-en.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung spannend
+@vortrag lebendig
+@klang studio
+@mund zitate
+@einblenden aus
+@qualitaet max
+@look 0.75
+@kino 0.5
+@stil leuchtend
+@palette blau
+@zeit nacht
+@untertitel aus
+@sprache en
+
+== Hook ==
+// Wow-Bild: Bus fährt allein übers Wasser
+[nachtbus anzeige_oben="Next stop" blick=vorne s05_henrik draussen=wasser anzeige="The Dam" uhr="12:22" palette=blau palette_staerke=0.6 zoom-rein hooktext="12:22 AM – THE BUS DRIVES ITSELF" ton=wind] The wheel turns under Henrik's hands. Your bus is driving itself.
+
+== Wiedererkennen ==
+// Henrik bremst
+[gesicht s05_henrik ort=nachtbus angst palette=blau palette_staerke=0.6 zoom-rein] Henrik stomps on the brake with everything he's got. Nothing happens.
+// Tempo
+[nachtbus du anzeige="The Dam" anzeige_oben="Last stop" uhr="12:22" draussen=wasser palette=blau palette_staerke=0.6 schwenk-links ein="thirty>30 MPH" ein_y=1720] The bus doesn't speed up and doesn't slow down. Exactly thirty, right on schedule.
+// Tür, Notgriff
+[nachtbus du knopf anzeige="The Dam" anzeige_oben="Last stop" uhr="12:22" draussen=wasser palette=blau palette_staerke=0.6 zoom-rein] You run to the door and pull the emergency handle. The door stays shut.
+// Nothammer
+[nachtbus du knopf anzeige="The Dam" anzeige_oben="Last stop" uhr="12:23" draussen=wasser palette=blau palette_staerke=0.6 wackeln=0.3 ton=haemmern ein="hammer>EMERGENCY HAMMER" ein_y=1720] You grab the emergency hammer and hit the window. The glass holds. Not one scratch.
+
+== Steigerung ==
+// Nur Wasser draußen
+[nachtbus anzeige_oben="Next stop" du draussen=wasser palette=blau palette_staerke=0.6 schwenk-rechts] Outside there's only black water now. No shore. No lights.
+// Wow-Bild: Stausee von oben
+[landschaft zeit=nacht see palette=blau palette_staerke=0.6 zoom-raus ein="lake>IN THE MIDDLE OF THE LAKE" ein_y=420] From above, it would look like a glowing bus driving across the lake.
+// Ben schreibt
+[handy ort=nachtbus netz=1 akku=15 uhrzeit="12:23" von="Ben" nachricht="You home? Your location says middle of the reservoir." ton=handy_vibration palette=blau palette_staerke=0.6 ein="Ben>BEN TEXTS>handy" ein_y=1500] Your phone buzzes. Ben. You home? Your location says middle of the reservoir.
+// Ben besorgt
+[gesicht ben ort=zimmer zeit=nacht besorgt palette=blau palette_staerke=0.6] You've shared locations since you were twelve. Ben never asked before. Tonight he does.
+// Nicht gesendet
+[handy ort=nachtbus netz=0 akku=14 uhrzeit="12:23" von="You to Ben" nachricht="Not delivered: Help me" ton=kein_netz palette=blau palette_staerke=0.6 ein="gray>NOT DELIVERED>handy_netz0" ein_y=1500] You type: help me. The message stays gray.
+
+== Wendung ==
+// Zurück auf den Sitz
+[nachtbus anzeige_oben="Next stop" du sitzen spiegel=3 draussen=wasser palette=blau palette_staerke=0.6 zoom-rein] You sit back down and look into the window.
+// Zwei Gestalten näher
+[nachtbus anzeige_oben="Next stop" du sitzen spiegel=2 draussen=wasser palette=blau palette_staerke=0.6 zoom-rein ein="two>ONLY 2 LEFT" ein_y=1720] The figures have moved closer. But now there are only two.
+// Wo ist die dritte?
+[gesicht du ort=nachtbus angst palette=blau palette_staerke=0.6] The third one is gone.
+// Ärmel wird nass
+[gesicht du ort=nachtbus schreck palette=blau palette_staerke=0.6 zoom-rein ton=tropfen] Next to you, it turns cold. Your sleeve gets wet, though nothing is touching it.
+
+== Cliffhanger ==
+// Junge in der Scheibe
+[nachtbus anzeige_oben="Next stop" du sitzen paul=1 spiegel=2 draussen=wasser palette=blau palette_staerke=0.6 zoom-rein ton=hit] In the window, the seat next to you is taken. A boy. Wet hair. A red schoolbag.

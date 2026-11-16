@@ -1183,6 +1183,189 @@
     "Am Ende zählt nicht, wer recht hatte. Sondern wer neben dir saß, als es schwer wurde.",
     "Schreib deinem besten Freund heute nur einen Satz: Ich halte zu dir."
    ]
+  },
+  {
+   "id": "s05",
+   "datum": "2026-11-16",
+   "titel": "Haltestelle Mühlenweg",
+   "beschreibung": "Um 0:12 zeigt dein Nachtbus einen Halt, den es seit 1998 nicht mehr gibt. Der Fahrer wird kreidebleich. Und wer dort einsteigt, ist nur in der Scheibe zu sehen.",
+   "thema": "Horror kurz ohne Blut (eingeschoben von Jonathan 7.11., Staffelplan s05): letzter Nachtbus, Haltestelle im gefluteten Dorf, Busfahrer Henrik hat 1998 den Jungen Paul stehen lassen; du drückst den Halteknopf für ihn",
+   "hauptstimmung": "duester",
+   "vorbild": "Jonathans Vorbild-Video vom 7.11. (Grusel nach der letzten Talfahrt): nur die Machart – normaler Ort nach Feierabend, unmögliche Kleinigkeit, konkretes Detail, kreidebleicher Zeuge, Uhrzeit läuft mit",
+   "hashtags": [
+    "#horror",
+    "#gruselgeschichte",
+    "#animation",
+    "#geschichte",
+    "#storytime",
+    "#nachtbus",
+    "#deutsch"
+   ],
+   "tags": [
+    "animation",
+    "horror",
+    "gruselgeschichte",
+    "geschichte",
+    "story",
+    "nachtbus",
+    "deutsch"
+   ],
+   "emoji": "🚌",
+   "kulissen_neu": [
+    "nachtbus"
+   ],
+   "analyse": {
+    "quelle": "taeglich/analyse/aktuell.md (8.11.2026, 21:50)",
+    "mehr_davon": [
+     "1: Satz 1 mit du/dein und Uhrzeit, höchstens ca. 12 Wörter (F3/F4/F7 mit Uhrzeit, F4 nach Vorschlag umgeschrieben)",
+     "2: F1 ohne Vorgeschichte vor der ersten Wendung: Hook → Henrik kreidebleich → „seit 1998 nicht mehr“ (ca. 12 s), Ben/Heimweg erst danach als Rückblick",
+     "3: erstes Bild = Fahrgastanzeige MÜHLENWEG · 0:12 groß mit zoom-rein, Henriks Gesicht als 3. Bild",
+     "4: jede Folge nennt wer/wo/wann in Satz 1–2",
+     "5: Familie: Ben (F1, F5), Mama (F3, Figurenstimme Kore), Mama + Opa am Frühstückstisch (F8)",
+     "6: Hook-Text in allen 8 Folgen mit Uhrzeit (0:12 – HALT MÜHLENWEG …)"
+    ],
+    "weniger_davon": [
+     "7: kein Einstieg mit Ort oder fremder Person",
+     "8: keine Aufzählung im ersten Satz",
+     "9: das Wesen wird nie erklärt, nur Spiegelbild, Tropfen, Spuren, eingedrücktes Polster"
+    ],
+    "experiment": "10 (E6): Horror kurz (8 × ca. 63–75 s, TikTok jede Folge einzeln) gegen Horror lang s03 (Basis TikTok F1 34 %/14 % nach 3/6 s, Ø 8–9 s). Dazu E4: ungerade Staffel ohne Untertitel. Masse-Test (E-Masse, 16.11.): jede Folge einzeln, 9 Posts am Tag.",
+    "thema": "Staffelplan s05 (Jonathan 7.11.)"
+   },
+   "boegen": [
+    "„Schau nur in die Scheibe“ (F2) → alles Unheimliche passiert nur im Spiegelbild, bis das Polster sich eindrückt (F6)",
+    "Finger schreibt HALT in die Scheibe (F3) → Paul will nur, dass jemand hält (F7)",
+    "Pauls Ticket nie abgestempelt (F6) → Henrik stempelt es ab (F8) → dein eigenes Ticket trägt denselben Stempel (F8)",
+    "roter Halteknopf, auf den Paul schaut (F6) → du drückst ihn (F7)",
+    "Mama: „Da ist dein Opa aufgewachsen“ (F3) → Opa kannte Paul als Nachbarsjungen (F8)"
+   ],
+   "ueberraschung": "Paul will Henrik nicht holen, sondern nur, dass jemand für ihn hält (angedeutet: HALT in der Scheibe, Blick auf den Knopf, nie gestempeltes Ticket).",
+   "cliffhanger": [
+    "Gefahr",
+    "Entdeckung",
+    "Rätsel",
+    "Rätsel",
+    "Ankunft",
+    "Gefahr",
+    "Entscheidung",
+    "Schluss offen und unheimlich"
+   ],
+   "folgen": [
+    {
+     "nr": 1,
+     "titel": "Der letzte Bus",
+     "stimmung": "spannend",
+     "beschreibung": "Um null Uhr zwölf zeigt dein Nachtbus einen Halt, den es nicht gibt.",
+     "familie": true,
+     "hooktext": true,
+     "hook": "du_mit_uhrzeit"
+    },
+    {
+     "nr": 2,
+     "titel": "Mühlenweg",
+     "stimmung": "duester",
+     "beschreibung": "Die Türen deines Busses gehen auf. Draußen steht ein Schild, das unter Wasser liegt.",
+     "familie": false,
+     "hooktext": true,
+     "hook": "du_mit_uhrzeit"
+    },
+    {
+     "nr": 3,
+     "titel": "Die Scheibe",
+     "stimmung": "spannend",
+     "beschreibung": "Null Uhr fünfzehn. In deinem Bus sind die Sitze leer. In der Scheibe nicht.",
+     "familie": true,
+     "hooktext": true,
+     "hook": "du_mit_uhrzeit"
+    },
+    {
+     "nr": 4,
+     "titel": "Henriks Linie",
+     "stimmung": "traurig",
+     "beschreibung": "Null Uhr achtzehn. Dein Busfahrer hat am Mühlenweg einmal jemanden stehen lassen.",
+     "familie": false,
+     "hooktext": true,
+     "hook": "du_mit_uhrzeit"
+    },
+    {
+     "nr": 5,
+     "titel": "Umleitung",
+     "stimmung": "spannend",
+     "beschreibung": "Das Lenkrad dreht sich unter Henriks Händen. Dein Bus fährt allein.",
+     "familie": true,
+     "hooktext": true,
+     "hook": "du_mit_uhrzeit"
+    },
+    {
+     "nr": 6,
+     "titel": "Der Junge",
+     "stimmung": "duester",
+     "beschreibung": "Neben dir sitzt ein Junge, den es nur in der Scheibe gibt.",
+     "familie": false,
+     "hooktext": true,
+     "hook": "du_mit_uhrzeit"
+    },
+    {
+     "nr": 7,
+     "titel": "Staumauer",
+     "stimmung": "spannend",
+     "beschreibung": "Null Uhr vierundzwanzig. Dein Bus hält auf der Staumauer.",
+     "familie": false,
+     "hooktext": true,
+     "hook": "du_mit_uhrzeit"
+    },
+    {
+     "nr": 8,
+     "titel": "Hin und zurück",
+     "stimmung": "warm",
+     "beschreibung": "Dein Busfahrer steht am Rand der Staumauer. Und Paul winkt.",
+     "familie": true,
+     "hooktext": true,
+     "hook": "du_mit_uhrzeit"
+    }
+   ],
+   "format": {
+    "folgen": 8,
+    "laengenband": "kurz 63–75 s (Horror kurz)",
+    "tiktok_teile": "einzeln (Masse-Test)"
+   },
+   "vielfalt": {
+    "welt": "letzter Nachtbus, Wartehäuschen im Nebel, Staumauer über dem gefluteten Dorf",
+    "genre": "Horror ohne Blut (kurz)",
+    "erzaehlform": "eine Nacht fast in Echtzeit (0:07–0:38), Uhrzeit läuft im Bild mit",
+    "hook_art": "direkte Lage mit du/dein und Uhrzeit",
+    "vorbild_kurz": "Jonathans Grusel-Vorbild (Machart)",
+    "figuren_fokus": "Busfahrer Henrik (Zeuge mit Schuld), Junge Paul nur im Spiegelbild, Mama/Opa/Ben",
+    "laenge": "ca. 63–75 s",
+    "folgen": 8,
+    "tiktok": "einzeln",
+    "experiment": "E6 Horror kurz (+ E4 ohne Untertitel, Masse-Test)",
+    "neue_kulissen": [
+     "nachtbus"
+    ]
+   },
+   "en": {
+    "titel": "The Stop That Isn't There",
+    "beschreibung": "At 12:12 AM, your night bus shows a stop that hasn't existed since 1998. The driver goes white as chalk. And whoever gets on there only shows up in the window.",
+    "hashtags": [
+     "#horror",
+     "#scarystories",
+     "#animation",
+     "#story",
+     "#storytime",
+     "#nightbus"
+    ],
+    "folgen": [
+     "The Last Bus",
+     "Millbrook Lane",
+     "The Window",
+     "Henrik's Route",
+     "Detour",
+     "The Boy",
+     "The Dam",
+     "There and Back"
+    ]
+   }
   }
  ]
 }

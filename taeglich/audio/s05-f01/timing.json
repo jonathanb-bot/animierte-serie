@@ -1,0 +1,158 @@
+{
+ "dauer": 70.99,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "nachtbus",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 5.126,
+   "emotion": "erzaehlend",
+   "text": "Um null Uhr zwölf zeigt dein Nachtbus einen Halt, den es nicht gibt."
+  },
+  {
+   "nr": 2,
+   "typ": "nachtbus",
+   "kapitel": 1,
+   "start": 5.126,
+   "dauer": 4.934,
+   "emotion": "erzaehlend",
+   "text": "Dein Fahrer Henrik schaut in den Rückspiegel. Auf die Anzeige. Dann zu dir."
+  },
+  {
+   "nr": 3,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 10.06,
+   "dauer": 2.054,
+   "emotion": "spannend",
+   "text": "Sein Gesicht wird kreidebleich."
+  },
+  {
+   "nr": 4,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 12.114,
+   "dauer": 5.126,
+   "emotion": "spannend",
+   "text": "„Den Mühlenweg gibt es seit neunzehnhundertachtundneunzig nicht mehr.“"
+  },
+  {
+   "nr": 5,
+   "typ": "titel",
+   "kapitel": 1,
+   "start": 17.24,
+   "dauer": 3.782,
+   "emotion": "erzaehlend",
+   "text": "Er sagt es, als hätte er diesen Satz schon tausendmal gedacht."
+  },
+  {
+   "nr": 6,
+   "typ": "haltestelle",
+   "kapitel": 2,
+   "start": 21.022,
+   "dauer": 6.758,
+   "emotion": "erzaehlend",
+   "text": "Fünf Minuten vorher, null Uhr sieben. Dein bester Freund Ben bringt dich von seinem Geburtstag zum letzten Bus."
+  },
+  {
+   "nr": 7,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 27.78,
+   "dauer": 2.702,
+   "emotion": "froh",
+   "text": "„Schreib, wenn du da bist. Sonst ruf ich deine Mama an.“"
+  },
+  {
+   "nr": 8,
+   "typ": "nachtbus",
+   "kapitel": 2,
+   "start": 30.482,
+   "dauer": 3.59,
+   "emotion": "erzaehlend",
+   "text": "Der Bus ist leer. Nur du und das Summen der Lampen."
+  },
+  {
+   "nr": 9,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 34.072,
+   "dauer": 3.974,
+   "emotion": "ruhig",
+   "text": "Henrik fährt diese Linie seit dreißig Jahren. Er will nur noch Feierabend."
+  },
+  {
+   "nr": 10,
+   "typ": "nachtbus",
+   "kapitel": 2,
+   "start": 38.046,
+   "dauer": 4.142,
+   "emotion": "erzaehlend",
+   "text": "Die Scheiben beschlagen. Draußen wird die Stadt zu einzelnen Lichtern."
+  },
+  {
+   "nr": 11,
+   "typ": "handy",
+   "kapitel": 2,
+   "start": 42.188,
+   "dauer": 4.454,
+   "emotion": "erzaehlend",
+   "text": "Ben schreibt noch: Danke fürs Kommen. Dein Akku hat dreiundzwanzig Prozent."
+  },
+  {
+   "nr": 12,
+   "typ": "nachtbus",
+   "kapitel": 3,
+   "start": 46.642,
+   "dauer": 3.47,
+   "emotion": "erzaehlend",
+   "text": "Dann null Uhr zwölf. Die Anzeige springt um."
+  },
+  {
+   "nr": 13,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 50.112,
+   "dauer": 4.838,
+   "emotion": "ernst",
+   "text": "Du kennst jede Haltestelle dieser Linie. Einen Mühlenweg gibt es nicht."
+  },
+  {
+   "nr": 14,
+   "typ": "nachtbus",
+   "kapitel": 3,
+   "start": 54.95,
+   "dauer": 4.574,
+   "emotion": "erzaehlend",
+   "text": "Draußen ist plötzlich Nebel. Keine Häuser mehr. Keine Laternen."
+  },
+  {
+   "nr": 15,
+   "typ": "nachtbus",
+   "kapitel": 4,
+   "start": 59.524,
+   "dauer": 3.734,
+   "emotion": "erzaehlend",
+   "text": "Niemand hat gedrückt. Trotzdem leuchtet vorne das rote Halt."
+  },
+  {
+   "nr": 16,
+   "typ": "nachtbus",
+   "kapitel": 4,
+   "start": 63.258,
+   "dauer": 3.758,
+   "emotion": "erzaehlend",
+   "text": "Henrik hat den Fuß nicht auf der Bremse. Trotzdem wird der Bus langsamer."
+  },
+  {
+   "nr": 17,
+   "typ": "nachtbus",
+   "kapitel": 5,
+   "start": 67.016,
+   "dauer": 3.974,
+   "emotion": "erzaehlend",
+   "text": "Der Bus hält. Ganz von allein. Und die Türen gehen auf."
+  }
+ ]
+}

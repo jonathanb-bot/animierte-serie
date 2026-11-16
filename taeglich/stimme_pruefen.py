@@ -62,6 +62,9 @@ _DE_TEILE = sorted([("null", 0), ("eins", 1), ("ein", 1), ("eine", 1), ("zwei", 
                     ("sechzig", 60), ("siebzig", 70), ("achtzig", 80), ("neunzig", 90)], key=lambda x: -len(x[0]))
 
 
+ORDNUNG = {w: str(i) for i, w in enumerate("erster zweiter dritter vierter fünfter sechster siebter achter neunter zehnter elfter zwölfter".split(), 1)}
+
+
 def de_zahl(w: str) -> int | None:
     """Deutsches Zahlwort in einem Stück → Zahl: „viertausend“ → 4000, „zweihundertfünfzig“ → 250 (7.11.:
     Whisper schreibt „4000 Euro“, das Drehbuch „viertausend Euro“). Kein Zahlwort → None."""
@@ -83,7 +86,7 @@ def de_zahl(w: str) -> int | None:
         if "hundert" in t:
             a, _, b = t.partition("hundert")
             x, y = (unter_100(a) if a else 1), unter_100(b)
-            return x * 100 + y if x is not None and y is not None and 0 < x < 10 else None
+            return x * 100 + y if x is not None and y is not None and 0 < x < 100 else None  # auch Jahreszahlen „neunzehnhundertachtundneunzig“ (16.11.)
         return unter_100(t)
 
     if not w or not re.fullmatch(r"[a-zäöüß]+", w) or not any(k in w for k in ("tausend", "hundert", "zig", "ßig", "zehn", "und")):
@@ -122,6 +125,8 @@ def norm(t: str) -> list[str]:
         else:
             getrennt.append(x)
     w = getrennt
+    # Ordnungszahlen im Datum: „achter November“ → „8“ (Whisper schreibt „8. November“, 16.11.)
+    w = [ORDNUNG.get(x, x) for x in w]
     w = [str(z) if (z := de_zahl(x)) is not None else x for x in w]
     return [ZAHLEN.get(x, x).replace("ß", "ss") for x in w]
 

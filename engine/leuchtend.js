@@ -496,6 +496,159 @@
     A._dunkel = 0;
   };
 
+  // =====================================================================
+  // NACHTBUS – Innenraum des letzten Nachtbusses (s05 „Haltestelle Mühlenweg“): große dunkle Scheiben als Spiegel,
+  // draußen ziehende Nacht in Tiefenunschärfe, gelbe Haltestangen und Halteschlaufen, Leuchtband an der Decke,
+  // Fahrgastanzeige mit LED-Schrift und Uhrzeit, blaue Sitzreihe, gerippter Boden.
+  // (anzeige="Mühlenweg" (Text nach „Nächster Halt“), anzeige_oben="Nächster Halt", uhr="0:12", halt (rotes HALT leuchtet),
+  //  draussen=stadt|nebel|wasser|staumauer|steht (Standard stadt), beschlagen (Scheiben beschlagen), schrift="TEXT"
+  //  (mit dem Finger in die beschlagene Scheibe geschrieben), spiegel=N (N Gestalten nur im Spiegelbild, ohne Gesicht),
+  //  paul=1 (Junge mit nassen Haaren und rotem Ranzen im Spiegelbild neben dir), eindruck (Polster neben dir eingedrückt),
+  //  spuren (nasse Fußabdrücke zur Tür), tropfen (Wasser tropft von den Sitzen), knopf (großer Halteknopf vorne im Bild),
+  //  flackern (Leuchtband flackert), sitzen (Figuren sitzen), blick=vorne (Fahrerplatz: Frontscheibe, Lenkrad, Straße
+  //  im Scheinwerferlicht, Figur hinter dem Lenkrad), gross, figur_y)
+  // =====================================================================
+  SZ.nachtbus = (s, t) => {
+    const P = { nacht: "#060a1c", nacht2: "#0e1838", glas: "#0b1430", rahmen: "#1a2440", decke: "#141c34", band: "#dff0ff",
+      gelb: "#e8b830", sitz: "#2a4a8a", sitzM: "#3a64b0", boden: "#1c2236", led: "#ffb23a", wasser: "#7fb8ff" };
+    const draussen = s.draussen || "stadt", faehrt = draussen !== "steht" && draussen !== "staumauer" ? 1 : 0;
+    const fl = s.flackern ? (Math.sin(t * 23) > 0.6 || Math.sin(t * 7.3) > 0.93 ? 0.35 : 1) : 1;
+    // ---- Draußen (unscharf, zieht vorbei) ----
+    const draussenMalen = (y0, y1, breit) => {
+      ctx.fillStyle = lgrad(0, y0, 0, y1, [[0, P.nacht], [1, P.nacht2]]); ctx.fillRect(-1500, y0, 4080, y1 - y0);
+      const v = faehrt ? t * 260 : 0, r = rnd(311);
+      if (draussen === "stadt") {
+        for (let i = 0; i < 30; i++) { const x = ((r() * 2400 - v * (0.6 + r() * 0.6)) % 2400 + 2400) % 2400 - 700, y = y0 + 60 + r() * (y1 - y0 - 120);
+          const c = r() < 0.6 ? "#ffcf7a" : "#9fd0ff"; glut(x, y, 60 + r() * 90, c, 0.85); circle(x, y, 6 + r() * 6, rgba("#ffffff", 0.8)); }
+        for (let i = 0; i < 8; i++) { const x = ((r() * 2400 - v) % 2400 + 2400) % 2400 - 700; box(x, y0 + (y1 - y0) * 0.35, 180 + r() * 160, (y1 - y0), 6, rgba("#020512", 0.6)); }
+      } else if (draussen === "nebel") {
+        for (let i = 0; i < 6; i++) { const x = ((r() * 2000 - v * 0.5) % 2000 + 2000) % 2000 - 500; ellipse(x, y0 + (y1 - y0) * (0.4 + r() * 0.4), 420, 50, rgba("#8fb0d8", 0.1)); }
+        for (const off of [0, 1100]) { const lx2 = ((300 + off - v * 0.7) % 2200 + 2200) % 2200 - 600; line(lx2, y1, lx2, y0 + 120, 10, "#050816"); glut(lx2 + 30, y0 + 120, 260, "#ffe6b0", 0.8); circle(lx2 + 30, y0 + 120, 12, "#fff6dc"); }
+        const lx = ((900 - v * 0.7) % 2200 + 2200) % 2200 - 600; line(lx, y1, lx, y0 + 80, 10, "#050816"); glut(lx + 30, y0 + 80, 220, "#ffe6b0", 0.7);
+        ctx.fillStyle = rgba("#9fb8e0", 0.16); ctx.fillRect(-1500, y0, 4080, y1 - y0);
+      } else if (draussen === "wasser" || draussen === "staumauer") {
+        const hy = y0 + (y1 - y0) * 0.42;
+        ctx.fillStyle = lgrad(0, hy, 0, y1, [[0, "#0a1834"], [1, "#03060f"]]); ctx.fillRect(-1500, hy, 4080, y1 - hy);
+        for (let i = 0; i < 18; i++) { const x = ((r() * 2400 - v * 0.4) % 2400 + 2400) % 2400 - 700, y = hy + 20 + r() * (y1 - hy - 30); box(x, y, 60 + r() * 140, 4, 2, rgba("#9fc4ff", 0.12 + 0.12 * Math.sin(t * 2 + i))); }
+        glut(760, y0 + 70, 260, "#c8d8ff", 0.35); circle(760, y0 + 70, 26, "#e8f0ff");
+        if (draussen === "staumauer") { for (let x = -200; x < 1400; x += 90) line(x, hy - 40, x, hy + 30, 8, "#0a1024"); line(-200, hy - 40, 1400, hy - 40, 10, "#0a1024");
+          line(300, hy + 30, 300, y0 + 40, 12, "#050816"); glut(330, y0 + 50, 240, "#ffe6b0", 0.75); }
+        ctx.fillStyle = rgba("#8fb0d8", 0.1); ctx.fillRect(-1500, hy - 60, 4080, 90);
+      }
+    };
+    if (s.blick === "vorne") {
+      // Frontscheibe
+      ebene("nbfront", 2.5, () => {
+        draussenMalen(-200, 1250, true);
+        // Straße im Scheinwerferlicht
+        const hy = 760; ctx.fillStyle = "#11182c"; poly([[470, hy], [610, hy], [1500, 1250], [-420, 1250]]); ctx.fill();
+        ctx.save(); ctx.globalCompositeOperation = "screen"; ctx.fillStyle = lgrad(0, 1250, 0, hy, [[0, rgba("#fff1c8", 0.55)], [1, rgba("#fff1c8", 0)]]); poly([[-200, 1250], [1280, 1250], [640, hy], [440, hy]]); ctx.fill(); ctx.restore();
+        for (let k = 0; k < 7; k++) { const f = ((k / 7 + (faehrt ? t * 0.6 : 0)) % 1), y = lerp(hy, 1250, f * f), w = lerp(4, 40, f * f); box(540 - w / 2, y, w, lerp(10, 90, f * f), 3, rgba("#f2eee0", 0.7)); }
+        if (draussen === "nebel") { ctx.fillStyle = rgba("#a8c0e8", 0.22); ctx.fillRect(-1500, 500, 4080, 750); }
+      });
+      // Rahmen, Rückspiegel, Armaturen
+      box(-1500, -400, 4080, 380, 0, P.decke); box(-1500, 1420, 4080, 1200, 0, "#0c1226"); box(-1500, 1420, 4080, 14, 0, rgba("#9fc4ff", 0.25));
+      for (const x of [-60, 1060]) box(x - 50, -400, 100, 1900, 30, P.rahmen);
+      box(560, 30, 340, 130, 30, "#0a0f20"); box(574, 42, 312, 106, 24, "#1e2c50"); ellipse(660, 85, 70, 18, rgba("#9fc4ff", 0.25));
+      A.figurenZeigen(s, t, s.figur_y ?? 2080, s.gross ? 1.45 : 1.3, [330]);
+      // Lenkrad vor der Figur
+      ctx.save(); ctx.translate(330, 1900); ctx.rotate(faehrt ? Math.sin(t * 0.7) * 0.08 : (s.lenkrad_dreht ? t * 0.9 : 0));
+      ctx.beginPath(); ctx.arc(0, 0, 250, 0, Math.PI * 2); ctx.lineWidth = 48; ctx.strokeStyle = "#1a2342"; ctx.stroke();
+      ctx.beginPath(); ctx.arc(0, 0, 250, 3.6, 5.2); ctx.lineWidth = 10; ctx.strokeStyle = rgba("#9fc4ff", 0.35); ctx.stroke();
+      line(-240, 0, 240, 0, 36, "#1a2342"); line(0, 0, 0, 240, 36, "#1a2342"); circle(0, 0, 66, "#243058"); ctx.restore();
+      // Armaturen rechts: Linienanzeige, Uhr, Lämpchen
+      if (s.anzeige) { box(600, 1470, 420, 110, 18, "#05070f"); A.text(String(s.anzeige).toUpperCase(), 810, 1527, 50, P.led, "center", 800, "Titel", 380); glut(810, 1527, 240, P.led, 0.35 * fl); }
+      if (s.uhr) { box(680, 1610, 260, 100, 18, "#05070f"); A.text(String(s.uhr), 810, 1662, 62, "#7fe0ff", "center", 800); }
+      for (let k = 0; k < 5; k++) circle(660 + k * 75, 1770, 15, k % 3 ? rgba("#59c7ff", 0.8) : rgba("#ff8a3a", 0.85));
+      ebene("nbfvorne", 12, () => { box(-200, -400, 200, 3000, 40, "#03050c"); box(1060, -400, 220, 3000, 40, "#03050c"); });
+      A._dunkel = 0; return;
+    }
+    // ---- Seitenblick: Fenster ----
+    const wy0 = 330, wy1 = 1130;
+    ebene("nbdraussen", 4, () => draussenMalen(wy0 - 40, wy1 + 40));
+    // Glas: dunkle Spiegelung
+    ctx.fillStyle = rgba(P.glas, 0.3); ctx.fillRect(-1500, wy0, 4080, wy1 - wy0);
+    // Spiegelbild des Innenraums (Leuchtband, Sitzlehnen)
+    ctx.save(); ctx.globalAlpha = 0.22; box(-1500, wy0 + 30, 4080, 18, 9, P.band);
+    for (let x = -340; x < 1500; x += 300) box(x, wy1 - 260, 220, 260, 40, "#4a6ab0"); ctx.restore();
+    // Gestalten nur im Spiegelbild (ohne Gesicht, nasses Haar, alte Kleidung)
+    const gestalt = (x, y, k, farbe, ranzen) => {
+      ctx.save(); ctx.globalAlpha = 0.62 + 0.08 * Math.sin(t * 1.3 + x);
+      const hy = y - 250 * k;
+      box(x - 115 * k, y - 175 * k, 230 * k, 260 * k, 70 * k, farbe); // Mantel/Schultern
+      if (ranzen) { box(x + 60 * k, y - 175 * k, 110 * k, 140 * k, 22 * k, "#ff6a5a"); box(x + 72 * k, y - 160 * k, 86 * k, 24 * k, 10 * k, "#ffb0a0"); }
+      ellipse(x, hy, 66 * k, 80 * k, "#a8c0e8"); // Kopf, kein Gesicht
+      // nasses Haar: Kappe oben, an den Seiten bis unters Kinn, zwei Strähnen übers Gesicht
+      ctx.beginPath(); ctx.moveTo(x - 78 * k, hy + 70 * k); ctx.quadraticCurveTo(x - 92 * k, hy - 95 * k, x, hy - 92 * k); ctx.quadraticCurveTo(x + 92 * k, hy - 95 * k, x + 78 * k, hy + 70 * k);
+      ctx.lineTo(x + 50 * k, hy + 75 * k); ctx.quadraticCurveTo(x + 50 * k, hy - 30 * k, x, hy - 40 * k); ctx.quadraticCurveTo(x - 50 * k, hy - 30 * k, x - 50 * k, hy + 75 * k); ctx.closePath(); ctx.fillStyle = "#16233f"; ctx.fill();
+      for (const dx of [-18, 14]) line(x + dx * k, hy - 40 * k, x + dx * 1.3 * k, hy + 40 * k, 10 * k, "#16233f");
+      for (let j = 0; j < 3; j++) { const ty = y - 120 * k + ((t * 60 + j * 70) % 220) * k; ellipse(x - 50 * k + j * 50 * k, ty, 5 * k, 9 * k, rgba("#dff0ff", 0.85)); }
+      glut(x, hy, 160 * k, "#bcd6ff", 0.18);
+      ctx.restore();
+    };
+    const nG = Number(s.spiegel || 0);
+    const gx = s.paul ? [120, 330, 560] : [170, 560, 930]; for (let i = 0; i < nG; i++) gestalt(gx[i % 3], wy1 - 20, 0.95 - (i % 3) * 0.08, ["#5a6e98", "#6a5e88", "#4e6a8a"][i % 3], false);
+    if (s.paul) gestalt(s.paul_x ? Number(s.paul_x) : 800, wy1 - 30, 0.92, "#7a9ad8", true);
+    // beschlagen + Schrift
+    if (s.beschlagen || s.schrift) {
+      ebene("nbbeschlag", 10, () => { ctx.fillStyle = rgba("#c8d8f0", 0.28); ctx.fillRect(-1500, wy0, 4080, wy1 - wy0); for (let i = 0; i < 20; i++) { const r = rnd(321 + i); ellipse(r() * 1100, wy0 + r() * (wy1 - wy0), 120, 60, rgba("#e0ecff", 0.08)); } });
+      if (s.schrift) { const txt = String(s.schrift), n = txt.length, zeig = Math.max(1, Math.min(n, Math.floor(t * 3.2) + 1)), shown = txt.slice(0, zeig);
+        ctx.save(); ctx.globalCompositeOperation = "destination-out"; ctx.restore();
+        A.text(shown, 540, 700, 150, rgba("#04081a", 0.85), "center", 700, "Titel", 900);
+        A.text(shown, 540, 700, 150, rgba("#9fc4ff", 0.18), "center", 700, "Titel", 900);
+        for (let j = 0; j < Math.min(zeig, 8); j++) { const dx = 540 - (n * 45) + j * 95, dl = ((t * 40 + j * 37) % 140); box(dx, 760, 7, 30 + dl, 3, rgba("#04081a", 0.7)); } }
+    }
+    // Fensterrahmen und Holme
+    box(-1500, wy0 - 30, 4080, 34, 0, P.rahmen); box(-1500, wy1, 4080, 40, 0, P.rahmen);
+    for (const x of [-120, 380, 880, 1380]) box(x - 26, wy0 - 30, 52, wy1 - wy0 + 70, 10, P.rahmen);
+    // Decke, Leuchtband, Halteschlaufen
+    ctx.fillStyle = lgrad(0, -400, 0, wy0 - 30, [[0, "#070b18"], [1, P.decke]]); ctx.fillRect(-1500, -400, 4080, wy0 + 370);
+    box(-1500, 40, 4080, 26, 13, rgba(P.band, 0.95 * fl)); glut(540, 54, 900, "#bcdcff", 0.35 * fl);
+    ctx.save(); ctx.globalCompositeOperation = "screen"; ctx.fillStyle = lgrad(0, 66, 0, 700, [[0, rgba("#cfe6ff", 0.18 * fl)], [1, rgba("#cfe6ff", 0)]]); ctx.fillRect(-1500, 66, 4080, 640); ctx.restore();
+    line(-1500, 190, 2600, 190, 16, P.gelb);
+    for (let x = -60; x < 1200; x += 170) { const sw = Math.sin(t * 1.6 + x) * (faehrt ? 0.08 : 0.02); ctx.save(); ctx.translate(x, 190); ctx.rotate(sw); line(0, 0, 0, 90, 8, "#2a3350"); ctx.beginPath(); ctx.arc(0, 120, 30, 0, Math.PI * 2); ctx.lineWidth = 10; ctx.strokeStyle = P.gelb; ctx.stroke(); ctx.restore(); }
+    // Fahrgastanzeige
+    if (s.anzeige || s.uhr) {
+      const ax = 140, ay = s.anzeige_y != null ? Number(s.anzeige_y) : 210, aw = 800, ah = 130;
+      box(ax - 10, ay - 10, aw + 20, ah + 20, 18, "#0a0e1c"); box(ax, ay, aw, ah, 12, "#03050b");
+      for (let yy = ay + 8; yy < ay + ah; yy += 8) box(ax + 6, yy, aw - 12, 1.5, 0, rgba("#ffffff", 0.03));
+      const oben = s.anzeige_oben ?? "Nächster Halt";
+      A.text(String(oben), ax + 30, ay + 36, 30, rgba(P.led, 0.75), "left", 700);
+      if (s.anzeige) { const blink = s.anzeige_blink ? (Math.sin(t * 5) > -0.2 ? 1 : 0.25) : 1; A.text(String(s.anzeige), ax + 30, ay + 88, 56, rgba(P.led, blink), "left", 800, "Titel", s.uhr ? 540 : 740); }
+      if (s.uhr) A.text(String(s.uhr), ax + aw - 30, ay + 66, 64, "#7fe0ff", "right", 800);
+      glut(540, ay + 70, 520, P.led, 0.22 * fl);
+      if (s.halt) { box(ax + aw - 200, ay + ah + 20, 200, 60, 12, "#3a0a0a"); A.text(String(s.halt_text || "HALT"), ax + aw - 100, ay + ah + 50, 40, "#ff4a3a", "center", 900); glut(ax + aw - 100, ay + ah + 50, 200, "#ff3a2a", 0.6 * (0.8 + 0.2 * Math.sin(t * 6))); }
+    }
+    // Sitzreihe
+    const sy = 1150;
+    box(-1500, wy1 + 40, 4080, 70, 0, "#121a30");
+    const sitzX = [-250, 120, 490, 860, 1230];
+    sitzX.forEach((x, i) => {
+      box(x - 160, sy - 10, 320, 330, 46, shade(P.sitz, -0.15)); box(x - 145, sy, 290, 300, 40, P.sitz);
+      const r = rnd(331 + i); for (let k = 0; k < 10; k++) { const px = x - 120 + r() * 240, py = sy + 30 + r() * 240; box(px, py, 22, 8, 4, rgba(P.sitzM, 0.8)); box(px + 6, py + 14, 8, 8, 4, rgba("#e8b830", 0.35)); }
+      box(x - 170, sy + 300, 340, 90, 30, shade(P.sitz, -0.05)); box(x - 160, sy + 300, 320, 24, 12, rgba("#ffffff", 0.08));
+      box(x - 140, sy - 40, 280, 40, 18, "#2a3350"); box(x - 30, sy - 70, 60, 40, 14, P.gelb);
+    });
+    if (s.eindruck) { const x = s.eindruck_x ? Number(s.eindruck_x) : 860; const k = clamp(t / 2.5, 0, 1); ellipse(x, sy + 330, 110 * k, 26 * k, rgba("#050a1a", 0.6)); ellipse(x, sy + 318, 120 * k, 10 * k, rgba("#ffffff", 0.06)); }
+    if (s.tropfen) { const r = rnd(341); for (let i = 0; i < 14; i++) { const x = sitzX[1 + (i % 3)] - 120 + r() * 240, y0 = sy + 390, d = (t * (120 + r() * 80) + r() * 300) % 300; ellipse(x, y0 + d, 5, 9, rgba(P.wasser, 0.85 * (1 - d / 300))); }
+      for (const x of [120, 490, 860]) ellipse(x, sy + 330, 90, 14, rgba(P.wasser, 0.25)); }
+    // Boden
+    ctx.fillStyle = lgrad(0, sy + 390, 0, 2300, [[0, P.boden], [1, "#0a0e1c"]]); ctx.fillRect(-1500, sy + 390, 4080, 1100);
+    for (let y = sy + 420; y < 2300; y += 34) line(-1500, y, 2600, y, 4, rgba("#000000", 0.25));
+    if (s.spuren) { for (let i = 0; i < 7; i++) { const x = 980 - i * 150 + (i % 2) * 40, y = 1720 - i * 22, a = clamp(t * 1.2 - i * 0.25, 0, 1);
+      ctx.save(); ctx.translate(x, y); ctx.rotate(-0.2); ellipse(0, 0, 32 * a, 64 * a, rgba(P.wasser, 0.32)); ellipse(-6, -10, 14 * a, 26 * a, rgba("#e0f0ff", 0.25)); ctx.restore(); } }
+    // Figuren
+    const figY = s.figur_y ?? (s.sitzen ? sy + 330 : 1840);
+    if (s.sitzen) { const namen = s.figuren || []; namen.forEach((name, i) => { const f = A.fig(name), xs = s.pos ? String(s.pos).split(",").map(Number) : [490, 860];
+      A.figur(xs[i] ?? xs[0], figY, s.gross ? 0.95 : 0.78, f, { t: t + i, pose: "sitzt", ausdruck: (s.ausdruecke || {})[name] || s.ausdruck, spricht: s._spricht && s.sprecher === name, blick: [0, 0], seed: i * 5 + 2 }); }); }
+    else A.figurenZeigen(s, t, figY, s.gross ? 1.0 : 0.85);
+    // Haltestangen vorne
+    for (const x of [40, 1040]) { box(x - 14, -400, 28, 2800, 14, P.gelb); box(x - 8, -400, 8, 2800, 4, rgba("#ffffff", 0.3)); }
+    if (s.knopf) { const kx = 930, ky = 980; box(kx - 12, -400, 24, 2800, 12, P.gelb); const an0 = 0, an = s.halt ? 1 : 0.0; box(kx - 70, ky - 90, 140, 180, 30, "#e8e2d0"); circle(kx, ky - 10, 54, s.halt ? "#ff4a3a" : "#c8302a"); A.text("STOP", kx, ky + 66, 30, "#2a3350", "center", 900); if (an) glut(kx, ky - 10, 260, "#ff3a2a", 0.7 * (0.85 + 0.15 * Math.sin(t * 6))); }
+    ebene("nbvorne", 14, () => { const d = "#03050e"; box(-200, 1700, 420, 900, 60, d); box(900, 1760, 420, 900, 60, d); });
+    A._dunkel = 0;
+  };
+
   // ---- Icons für s04 (Quittung, Spendenkasse, Stoffvogel, Stempel, Blechdose, Armbanduhr) ----
   Object.assign(A.I, {
     quittung(t) { ctx.save(); ctx.rotate(-0.06); box(-120, -170, 240, 340, 10, "#fbf6ea"); box(-120, -170, 240, 50, 10, "#e8b43a");
@@ -518,4 +671,13 @@
       line(0, 0, 30, -30, 8, "#2d2a30"); line(0, 0, -10, -60, 6, "#2d2a30"); ctx.save(); ctx.rotate(t * 1.05); line(0, 12, 0, -70, 3, "#d8443a"); ctx.restore(); circle(0, 0, 7, "#d8443a"); box(96, -14, 22, 28, 6, "#c8ccd4"); },
   });
   for (const n of ["quittung", "kasse", "stoffvogel", "stempel", "blechdose", "armbanduhr"]) if (!A.ICONS.includes(n)) A.ICONS.push(n);
+  // ---- Icons für s05 (Busticket, Halteknopf) ----
+  Object.assign(A.I, {
+    busticket(t) { ctx.save(); ctx.rotate(-0.08); box(-150, -95, 300, 190, 14, "#f2ead2"); box(-150, -95, 300, 44, 14, "#2f6fb5"); A.text("TICKET", 0, -72, 30, "#ffffff", "center", 900);
+      for (let k = 0; k < 3; k++) box(-120, -30 + k * 32, k === 2 ? 120 : 200, 10, 4, A.rgba("#3a3a4a", 0.35));
+      ctx.beginPath(); ctx.arc(80, 40, 44, 0, Math.PI * 2); ctx.lineWidth = 7; ctx.strokeStyle = A.rgba("#c8302a", 0.8); ctx.stroke(); box(50, 32, 60, 14, 4, A.rgba("#c8302a", 0.8)); ctx.restore(); },
+    halteknopf(t) { box(-100, -130, 200, 260, 40, "#e8e2d0"); circle(0, -20, 76, "#c8302a"); circle(-20, -40, 22, A.rgba("#ffffff", 0.35)); A.text("STOP", 0, 92, 40, "#2a3350", "center", 900);
+      const a = 0.5 + 0.5 * Math.sin(t * 5); ctx.fillStyle = A.rgrad(0, -20, 0, 200, [[0, A.rgba("#ff4a3a", 0.5 * a)], [1, A.rgba("#ff4a3a", 0)]]); ctx.fillRect(-200, -220, 400, 400); },
+  });
+  for (const n of ["busticket", "halteknopf"]) if (!A.ICONS.includes(n)) A.ICONS.push(n);
 })();

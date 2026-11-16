@@ -1,0 +1,149 @@
+{
+ "dauer": 76.976,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "nachtbus",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 6.206,
+   "emotion": "erzaehlend",
+   "text": "Null Uhr achtzehn. Dein Busfahrer hat am Mühlenweg einmal jemanden stehen lassen."
+  },
+  {
+   "nr": 2,
+   "typ": "nachtbus",
+   "kapitel": 2,
+   "start": 6.206,
+   "dauer": 5.966,
+   "emotion": "erzaehlend",
+   "text": "Das Wort Halt läuft langsam die Scheibe hinunter. Du gehst nach vorn, zu Henrik."
+  },
+  {
+   "nr": 3,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 12.172,
+   "dauer": 3.35,
+   "emotion": "traurig",
+   "text": "Er spricht leise, ohne den Blick von der Straße zu nehmen."
+  },
+  {
+   "nr": 4,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 15.522,
+   "dauer": 4.142,
+   "emotion": "traurig",
+   "text": "„Ich hab das schon mal gesehen. Ein einziges Mal.“"
+  },
+  {
+   "nr": 5,
+   "typ": "titel",
+   "kapitel": 2,
+   "start": 19.664,
+   "dauer": 6.254,
+   "emotion": "erzaehlend",
+   "text": "Achter November neunzehnhundertachtundneunzig. Die letzte Nacht, bevor das Tal geflutet wurde."
+  },
+  {
+   "nr": 6,
+   "typ": "haltestelle",
+   "kapitel": 3,
+   "start": 25.918,
+   "dauer": 5.15,
+   "emotion": "erzaehlend",
+   "text": "Es regnet in Strömen. Henrik ist jung und müde. Er will früher Feierabend machen."
+  },
+  {
+   "nr": 7,
+   "typ": "haltestelle",
+   "kapitel": 3,
+   "start": 31.068,
+   "dauer": 5.726,
+   "emotion": "erzaehlend",
+   "text": "Am Mühlenweg steht ein Junge im Wartehäuschen. Mit einem roten Schulranzen. Er winkt."
+  },
+  {
+   "nr": 8,
+   "typ": "nachtbus",
+   "kapitel": 3,
+   "start": 36.794,
+   "dauer": 4.07,
+   "emotion": "erzaehlend",
+   "text": "Henrik fährt vorbei. Er denkt: Der nimmt den nächsten Bus."
+  },
+  {
+   "nr": 9,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 40.864,
+   "dauer": 4.886,
+   "emotion": "traurig",
+   "text": "Es gab keinen nächsten. Am Morgen war das Dorf leer. Dann kam das Wasser."
+  },
+  {
+   "nr": 10,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 45.75,
+   "dauer": 3.95,
+   "emotion": "ernst",
+   "text": "Du fragst, was mit dem Jungen passiert ist. Henrik antwortet nicht."
+  },
+  {
+   "nr": 11,
+   "typ": "handy",
+   "kapitel": 3,
+   "start": 49.7,
+   "dauer": 4.598,
+   "emotion": "erzaehlend",
+   "text": "Du schaust auf dein Handy. Null Uhr neunzehn. Achter November."
+  },
+  {
+   "nr": 12,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 54.298,
+   "dauer": 3.854,
+   "emotion": "spannend",
+   "text": "Es ist genau dieselbe Nacht. Achtundzwanzig Jahre später."
+  },
+  {
+   "nr": 13,
+   "typ": "nachtbus",
+   "kapitel": 4,
+   "start": 58.152,
+   "dauer": 4.214,
+   "emotion": "erzaehlend",
+   "text": "In der Scheibe sitzen die drei Gestalten still. Als würden sie warten."
+  },
+  {
+   "nr": 14,
+   "typ": "nachtbus",
+   "kapitel": 4,
+   "start": 62.366,
+   "dauer": 4.742,
+   "emotion": "erzaehlend",
+   "text": "Das Licht flackert. Der Bus biegt ab, obwohl Henrik das Lenkrad geradeaus hält."
+  },
+  {
+   "nr": 15,
+   "typ": "nachtbus",
+   "kapitel": 4,
+   "start": 67.108,
+   "dauer": 4.022,
+   "emotion": "erzaehlend",
+   "text": "Die Straße wird schmal. Links Wasser. Rechts Wasser."
+  },
+  {
+   "nr": 16,
+   "typ": "nachtbus",
+   "kapitel": 5,
+   "start": 71.13,
+   "dauer": 5.846,
+   "emotion": "erzaehlend",
+   "text": "Die Anzeige springt weiter. Endstation: Staumauer. Diese Linie fährt dort gar nicht hin."
+  }
+ ]
+}

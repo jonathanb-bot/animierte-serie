@@ -1,0 +1,61 @@
+# The Stop That Isn't There – Episode 1: The Last Bus
+@musik musik/s05-f01-en.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung spannend
+@vortrag lebendig
+@klang studio
+@mund zitate
+@einblenden aus
+@qualitaet max
+@look 0.75
+@kino 0.5
+@stil leuchtend
+@palette blau
+@zeit nacht
+@untertitel aus
+@sprache en
+
+== Hook ==
+// Wow-Bild: Nachtbus innen, Anzeige springt auf Mühlenweg
+[nachtbus anzeige_y=560 du sitzen anzeige="Millbrook Lane" anzeige_blink uhr="12:12" draussen=nebel palette=blau palette_staerke=0.6 zoom-rein hooktext="12:12 AM – STOP: MILLBROOK LANE" ton=ui_ding] At twelve twelve AM, your night bus shows a stop that doesn't exist.
+// Henrik schaut in den Spiegel
+[nachtbus anzeige_oben="Next stop" blick=vorne s05_henrik draussen=nebel anzeige="Millbrook Lane" uhr="12:12" palette=blau palette_staerke=0.6 zoom-rein ein="Henrik>HENRIK · YOUR DRIVER" ein_y=420] Your driver, Henrik, glances in the rearview mirror. At the sign. Then at you.
+// Henrik kreidebleich
+[gesicht s05_henrik ort=nachtbus schreck palette=blau palette_staerke=0.6 zoom-rein ton=herzschlag] His face goes white as chalk.
+// Henrik spricht (Figurenstimme)
+[gesicht s05_henrik ort=nachtbus schreck figurstimme=mann_alt sprecher=s05_henrik palette=blau palette_staerke=0.6] “Millbrook Lane hasn't existed since nineteen ninety-eight.”
+// Infokarte 1998
+[titel oben="Millbrook Lane" gross="1998" unten="no stop here since then" farbe=#0a1230 akzent=#9fc4ff groesse=170 hud=false zoom-rein] He says it like he's thought those words a thousand times.
+
+== Rückblick ==
+// Haltestelle im Regen, Bus kommt, Ben bringt dich hin
+[haltestelle du ben zeit=nacht regen bus=kommt palette=blau palette_staerke=0.6 schwenk-rechts ton=regen ein="seven>12:07 AM>uhr" ein_y=380] Five minutes earlier, twelve oh seven. Your best friend Ben walks you from his birthday party to the last bus.
+// Ben grinst
+[gesicht ben ort=haltestelle froh palette=blau palette_staerke=0.6] “Text me when you're home. Or I'm calling your mom.”
+// Leerer Bus innen
+[nachtbus anzeige_oben="Next stop" du sitzen anzeige="Market Square" uhr="12:08" draussen=stadt palette=blau palette_staerke=0.6 schwenk-links ton=summen ein="empty>0 PASSENGERS" ein_y=1720] The bus is empty. Just you and the hum of the lights.
+// Henrik müde
+[gesicht s05_henrik ort=nachtbus muede palette=blau palette_staerke=0.6 ein="thirty>#30 YEARS ON ROUTE 14" ein_y=1500] Henrik has driven this route for thirty years. All he wants now is to clock out.
+// Scheiben beschlagen, Stadt zieht vorbei
+[nachtbus anzeige_oben="Next stop" du sitzen beschlagen anzeige="Linden Square" uhr="12:10" draussen=stadt palette=blau palette_staerke=0.6 zoom-raus] The windows fog up. Outside, the city melts into single lights.
+// Handy: Ben schreibt
+[handy ort=nachtbus netz=1 akku=23 uhrzeit="12:11" von="Ben" nachricht="Thanks for coming! Text me when you get home." ton=handy_vibration palette=blau palette_staerke=0.6 ein="twenty>#23 % BATTERY>handy" ein_y=1500] Ben texts one more time: thanks for coming. Your battery is at twenty-three percent.
+
+== Steigerung ==
+// Die Anzeige springt
+[nachtbus anzeige_oben="Next stop" du sitzen anzeige="Millbrook Lane" anzeige_blink uhr="12:12" draussen=stadt palette=blau palette_staerke=0.6 zoom-rein ton=ui_ding ein="flips>MILLBROOK LANE?>auge" ein_y=1720] Then it's twelve twelve. The sign flips.
+// Du, besorgt
+[gesicht du ort=nachtbus besorgt palette=blau palette_staerke=0.6] You know every stop on this route. There is no Millbrook Lane.
+// Draußen plötzlich Nebel
+[nachtbus anzeige_oben="Next stop" du sitzen anzeige="Millbrook Lane" uhr="12:12" draussen=nebel palette=blau palette_staerke=0.6 schwenk-rechts ton=wind] Outside, there's suddenly fog. No more houses. No more streetlights.
+
+== Wendung ==
+// HALT leuchtet von selbst
+[nachtbus anzeige_oben="Next stop" du sitzen halt halt_text="STOP" anzeige="Millbrook Lane" uhr="12:12" draussen=nebel palette=blau palette_staerke=0.6 zoom-rein ein="Nobody>NOBODY PRESSED IT" ein_y=1720] Nobody pressed the button. But up front, the red stop light is glowing.
+// Henriks Füße weg von der Bremse
+[nachtbus anzeige_oben="Next stop" blick=vorne s05_henrik draussen=nebel anzeige="Millbrook Lane" uhr="12:12" palette=blau palette_staerke=0.6 wackeln=0.2] Henrik's foot isn't on the brake. And still the bus is slowing down.
+
+== Cliffhanger ==
+// Bus steht, Türen auf
+[nachtbus anzeige_oben="Next stop" du sitzen halt halt_text="STOP" anzeige="Millbrook Lane" uhr="12:12" draussen=steht palette=blau palette_staerke=0.6 zoom-rein ton=tuer_zu] The bus stops. All on its own. And the doors open.

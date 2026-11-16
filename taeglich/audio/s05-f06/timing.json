@@ -1,0 +1,149 @@
+{
+ "dauer": 64.904,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "nachtbus",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 4.406,
+   "emotion": "erzaehlend",
+   "text": "Neben dir sitzt ein Junge, den es nur in der Scheibe gibt."
+  },
+  {
+   "nr": 2,
+   "typ": "nachtbus",
+   "kapitel": 2,
+   "start": 4.406,
+   "dauer": 6.998,
+   "emotion": "erzaehlend",
+   "text": "Im Bus ist der Sitz leer. Nur ein dunkler, nasser Fleck auf dem Polster. Du drehst den Kopf keinen Zentimeter."
+  },
+  {
+   "nr": 3,
+   "typ": "nachtbus",
+   "kapitel": 2,
+   "start": 11.404,
+   "dauer": 4.934,
+   "emotion": "erzaehlend",
+   "text": "In der Scheibe sitzt er ganz still. Vielleicht zwölf. Sein Ranzen tropft."
+  },
+  {
+   "nr": 4,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 16.338,
+   "dauer": 3.974,
+   "emotion": "traurig",
+   "text": "Er wirkt nicht böse. Er wirkt, als würde er schon sehr lange warten."
+  },
+  {
+   "nr": 5,
+   "typ": "nachtbus",
+   "kapitel": 3,
+   "start": 20.312,
+   "dauer": 4.094,
+   "emotion": "erzaehlend",
+   "text": "Er hält etwas in der Hand. Ganz langsam dreht er es zur Scheibe."
+  },
+  {
+   "nr": 6,
+   "typ": "objekt",
+   "kapitel": 3,
+   "start": 24.406,
+   "dauer": 6.518,
+   "emotion": "erklaerend",
+   "text": "Ein altes Busticket. Achter November neunzehnhundertachtundneunzig. Mühlenweg, null Uhr zwölf."
+  },
+  {
+   "nr": 7,
+   "typ": "objekt",
+   "kapitel": 3,
+   "start": 30.924,
+   "dauer": 4.766,
+   "emotion": "erklaerend",
+   "text": "Das Feld für den Stempel ist leer. Dieses Ticket hat nie jemand abgestempelt."
+  },
+  {
+   "nr": 8,
+   "typ": "nachtbus",
+   "kapitel": 3,
+   "start": 35.69,
+   "dauer": 4.262,
+   "emotion": "erzaehlend",
+   "text": "Vorne schaut Henrik in den Rückspiegel. Er sieht den Jungen auch."
+  },
+  {
+   "nr": 9,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 39.952,
+   "dauer": 1.79,
+   "emotion": "traurig",
+   "text": "Seine Hände zittern am Lenkrad."
+  },
+  {
+   "nr": 10,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 41.742,
+   "dauer": 1.334,
+   "emotion": "traurig",
+   "text": "„Paul?“"
+  },
+  {
+   "nr": 11,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 43.076,
+   "dauer": 3.59,
+   "emotion": "ernst",
+   "text": "Henrik kennt seinen Namen. Er kennt ihn seit achtundzwanzig Jahren."
+  },
+  {
+   "nr": 12,
+   "typ": "nachtbus",
+   "kapitel": 4,
+   "start": 46.666,
+   "dauer": 2.726,
+   "emotion": "erzaehlend",
+   "text": "Paul schaut weder Henrik an noch dich."
+  },
+  {
+   "nr": 13,
+   "typ": "nachtbus",
+   "kapitel": 4,
+   "start": 49.392,
+   "dauer": 3.59,
+   "emotion": "erzaehlend",
+   "text": "Er schaut nur auf eine Stelle. Auf den roten Knopf an der Stange."
+  },
+  {
+   "nr": 14,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 52.982,
+   "dauer": 2.582,
+   "emotion": "ernst",
+   "text": "Du verstehst nicht, was er will. Noch nicht."
+  },
+  {
+   "nr": 15,
+   "typ": "nachtbus",
+   "kapitel": 4,
+   "start": 55.564,
+   "dauer": 3.902,
+   "emotion": "erzaehlend",
+   "text": "Dann wird es neben dir eiskalt. Die Luft riecht nach Seegras."
+  },
+  {
+   "nr": 16,
+   "typ": "nachtbus",
+   "kapitel": 5,
+   "start": 59.466,
+   "dauer": 5.438,
+   "emotion": "erzaehlend",
+   "text": "Das Polster neben dir drückt sich langsam ein. Paul sitzt jetzt auch im echten Bus."
+  }
+ ]
+}

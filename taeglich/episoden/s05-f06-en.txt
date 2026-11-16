@@ -1,0 +1,59 @@
+# The Stop That Isn't There – Episode 6: The Boy
+@musik musik/s05-f06-en.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung duester
+@vortrag lebendig
+@klang studio
+@mund zitate
+@einblenden aus
+@qualitaet max
+@look 0.75
+@kino 0.5
+@stil leuchtend
+@palette blau
+@zeit nacht
+@untertitel aus
+@sprache en
+
+== Hook ==
+// Wow-Bild: Paul in der Scheibe
+[nachtbus anzeige_y=560 du sitzen paul=1 draussen=wasser anzeige="The Dam" anzeige_oben="Last stop" uhr="12:23" palette=blau palette_staerke=0.6 zoom-rein hooktext="12:23 AM – ONLY IN THE WINDOW"] Next to you sits a boy who only exists in the window.
+
+== Wiedererkennen ==
+// Echter Sitz leer
+[nachtbus du sitzen draussen=wasser anzeige="The Dam" anzeige_oben="Last stop" uhr="12:23" palette=blau palette_staerke=0.6 schwenk-rechts] On the bus, the seat is empty. Just a dark, wet spot on the cushion. You don't turn your head an inch.
+// Paul nah
+[nachtbus anzeige_oben="Next stop" du sitzen paul=1 draussen=wasser palette=blau palette_staerke=0.6 zoom-rein ton=tropfen ein="twelve>ABOUT 12 YEARS OLD" ein_y=1720] In the window, he sits completely still. Maybe twelve. His schoolbag is dripping.
+// Du, traurig
+[gesicht du ort=nachtbus traurig palette=blau palette_staerke=0.6] He doesn't look evil. He looks like he's been waiting a very long time.
+
+== Steigerung ==
+// Er dreht etwas zur Scheibe
+[nachtbus anzeige_oben="Next stop" du sitzen paul=1 draussen=wasser palette=blau palette_staerke=0.6 zoom-rein] He's holding something. Very slowly, he turns it toward the glass.
+// Das Ticket
+[objekt objekte="busticket:11/8/1998" gross="MILLBROOK LANE · 12:12 AM" palette=blau palette_staerke=0.6 zoom-rein ton=papier ein="Millbrook>ROUTE 14>busticket" ein_y=1500] An old bus ticket. November eighth, nineteen ninety-eight. Millbrook Lane, twelve twelve.
+// Nie abgestempelt
+[objekt objekte="busticket:NO STAMP" gross="NEVER STAMPED" palette=blau palette_staerke=0.6 zoom-rein ein="nobody>NO STAMP>stempel" ein_y=1500] The box for the stamp is empty. Nobody ever stamped this ticket.
+// Henrik im Rückspiegel
+[nachtbus anzeige_oben="Next stop" blick=vorne s05_henrik draussen=wasser uhr="12:24" palette=blau palette_staerke=0.6 zoom-rein] Up front, Henrik looks in the rearview mirror. He sees the boy too.
+// Henrik zittert
+[gesicht s05_henrik ort=nachtbus traurig palette=blau palette_staerke=0.6 zoom-rein] His hands are shaking on the wheel.
+// Figurenstimme: Paul?
+[gesicht s05_henrik ort=nachtbus traurig figurstimme=mann_alt sprecher=s05_henrik palette=blau palette_staerke=0.6] “Paul?”
+// Henrik kennt den Namen
+[gesicht du ort=nachtbus besorgt palette=blau palette_staerke=0.6 ein="name>PAUL" ein_y=1500] Henrik knows his name. He's known it for twenty-eight years.
+
+== Wendung ==
+// Paul reagiert nicht
+[nachtbus anzeige_oben="Next stop" du sitzen paul=1 draussen=wasser palette=blau palette_staerke=0.6 schwenk-links ein="Henrik>NO REACTION" ein_y=1720] Paul doesn't look at Henrik. Or at you.
+// Halteknopf
+[nachtbus anzeige_oben="Next stop" du sitzen paul=1 knopf draussen=wasser palette=blau palette_staerke=0.6 zoom-rein ein="button>STOP BUTTON>halteknopf" ein_y=1720] He's staring at one spot. The red button on the pole.
+// Du verstehst nicht
+[gesicht du ort=nachtbus besorgt palette=blau palette_staerke=0.6] You don't understand what he wants. Not yet.
+// Kälte, Seegras
+[nachtbus anzeige_oben="Next stop" du sitzen draussen=wasser palette=blau palette_staerke=0.6 zoom-rein ton=wind] Then it turns ice cold beside you. The air smells like lake weed.
+
+== Cliffhanger ==
+// Polster drückt sich ein
+[nachtbus anzeige_oben="Next stop" du sitzen eindruck tropfen draussen=wasser palette=lila palette_staerke=0.6 zoom-rein ton=hit] The cushion next to you slowly sinks in. Paul is sitting on the real bus now.

@@ -1,0 +1,140 @@
+{
+ "dauer": 68.778,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "see",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 4.814,
+   "emotion": "erzaehlend",
+   "text": "Dein Busfahrer steht am Rand der Staumauer. Und Paul winkt."
+  },
+  {
+   "nr": 2,
+   "typ": "nachtbus",
+   "kapitel": 2,
+   "start": 4.814,
+   "dauer": 4.694,
+   "emotion": "erzaehlend",
+   "text": "Du siehst ihn nur in der Scheibe. Ganz klein neben Henrik, den Ranzen auf dem Rücken."
+  },
+  {
+   "nr": 3,
+   "typ": "objekt",
+   "kapitel": 2,
+   "start": 9.508,
+   "dauer": 2.294,
+   "emotion": "erklaerend",
+   "text": "Paul hält Henrik sein altes Ticket hin."
+  },
+  {
+   "nr": 4,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 11.802,
+   "dauer": 5.246,
+   "emotion": "traurig",
+   "text": "Henrik holt seinen Stempel aus der Jacke. Seine Hände zittern so sehr, dass er zweimal ansetzen muss."
+  },
+  {
+   "nr": 5,
+   "typ": "objekt",
+   "kapitel": 2,
+   "start": 17.048,
+   "dauer": 5.822,
+   "emotion": "erklaerend",
+   "text": "Klack. Null Uhr zwölf, Mühlenweg. Abgestempelt. Nach achtundzwanzig Jahren."
+  },
+  {
+   "nr": 6,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 22.87,
+   "dauer": 3.014,
+   "emotion": "traurig",
+   "text": "„Entschuldige, dass ich nicht gehalten hab.“"
+  },
+  {
+   "nr": 7,
+   "typ": "see",
+   "kapitel": 3,
+   "start": 25.884,
+   "dauer": 4.67,
+   "emotion": "erzaehlend",
+   "text": "Paul dreht sich um und geht in den Nebel. Richtung Wasser. Richtung Dorf."
+  },
+  {
+   "nr": 8,
+   "typ": "nachtbus",
+   "kapitel": 3,
+   "start": 30.554,
+   "dauer": 4.046,
+   "emotion": "erzaehlend",
+   "text": "Seine nassen Spuren führen bis an den Rand. Dort hören sie einfach auf."
+  },
+  {
+   "nr": 9,
+   "typ": "nachtbus",
+   "kapitel": 3,
+   "start": 34.6,
+   "dauer": 5.294,
+   "emotion": "erzaehlend",
+   "text": "Null Uhr einunddreißig. Die Anzeige ist wieder normal. Draußen leuchten Straßenlaternen."
+  },
+  {
+   "nr": 10,
+   "typ": "nachtbus",
+   "kapitel": 3,
+   "start": 39.894,
+   "dauer": 4.022,
+   "emotion": "erzaehlend",
+   "text": "Henrik fährt dich bis vor deine Haustür. Ihr sagt kein einziges Wort."
+  },
+  {
+   "nr": 11,
+   "typ": "esstisch",
+   "kapitel": 4,
+   "start": 43.916,
+   "dauer": 4.238,
+   "emotion": "erzaehlend",
+   "text": "Am Morgen nimmt dich deine Mama in den Arm. Lange. Sie fragt nichts."
+  },
+  {
+   "nr": 12,
+   "typ": "esstisch",
+   "kapitel": 4,
+   "start": 48.154,
+   "dauer": 5.606,
+   "emotion": "erzaehlend",
+   "text": "Dein Opa sitzt am Frühstückstisch. Du sagst nur zwei Wörter: Paul. Mühlenweg."
+  },
+  {
+   "nr": 13,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 53.76,
+   "dauer": 5.702,
+   "emotion": "traurig",
+   "text": "Dein Opa stellt den Kaffee ab. Paul war sein Nachbarsjunge. Seit jener Nacht hat ihn niemand mehr gesehen."
+  },
+  {
+   "nr": 14,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 59.462,
+   "dauer": 3.59,
+   "emotion": "ernst",
+   "text": "Du greifst in deine Jackentasche. Dein Ticket von gestern Nacht."
+  },
+  {
+   "nr": 15,
+   "typ": "objekt",
+   "kapitel": 5,
+   "start": 63.052,
+   "dauer": 5.726,
+   "emotion": "erklaerend",
+   "text": "Darauf ist ein Stempel, den du nie bekommen hast. Mühlenweg, null Uhr zwölf. Hin und zurück."
+  }
+ ]
+}

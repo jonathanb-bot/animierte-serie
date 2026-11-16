@@ -1,0 +1,60 @@
+# Haltestelle Mühlenweg – Folge 7: Staumauer
+@musik musik/s05-f07.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung spannend
+@vortrag lebendig
+@klang studio
+@mund zitate
+@einblenden aus
+@qualitaet max
+@look 0.75
+@kino 0.5
+@stil leuchtend
+@palette blau
+@zeit nacht
+@untertitel aus
+
+== Hook ==
+// Wow-Bild: Bus auf der Staumauer, Endstation
+[nachtbus anzeige_y=560 du draussen=staumauer anzeige="Staumauer" anzeige_oben="Endstation" uhr="0:24" palette=blau palette_staerke=0.6 zoom-rein hooktext="0:24 – ENDSTATION STAUMAUER" ton=tuer_zu ein="vierundzwanzig>0:24 UHR>uhr" ein_y=1720] Null Uhr vierundzwanzig. Dein Bus hält auf der Staumauer.
+
+== Wiedererkennen ==
+// Wow-Bild: Stausee, Mauer, Laterne
+[landschaft zeit=nacht see palette=blau palette_staerke=0.6 zoom-raus ton=wind] Eine schmale Straße auf der Mauer. Links geht es steil hinunter. Rechts liegt der See, schwarz und glatt.
+// Nasse Spuren zur Tür
+[nachtbus spuren draussen=staumauer anzeige="Staumauer" anzeige_oben="Endstation" uhr="0:24" palette=blau palette_staerke=0.6 zoom-rein ein="Spuren>SPUREN ZUR TÜR>tropfen" ein_y=1720] Die Türen gehen auf. Nasse Spuren führen vom Sitz neben dir zur Tür.
+// Henrik steht auf
+[nachtbus blick=vorne s05_henrik draussen=staumauer uhr="0:24" palette=blau palette_staerke=0.6 zoom-rein] Henrik steht auf und zieht seine Jacke gerade. Wie vor einer Kontrolle.
+// Figurenstimme Henrik
+[gesicht s05_henrik ort=nachtbus traurig figurstimme=mann_alt sprecher=s05_henrik palette=blau palette_staerke=0.6] „Er will, dass ich mitkomme. Ich hab ihn damals stehen lassen.“
+
+== Steigerung ==
+// Du, besorgt
+[gesicht du ort=nachtbus angst palette=blau palette_staerke=0.6] Langsam geht Henrik zur offenen Tür. Draußen nur Nebel und Wasser.
+// Paul an der Tür
+[nachtbus du paul=1 paul_x=560 draussen=staumauer palette=blau palette_staerke=0.6 zoom-rein] In der Scheibe steht Paul an der Tür. Aber er geht nicht hinaus.
+// Wieder der Knopf
+[nachtbus du knopf draussen=staumauer palette=blau palette_staerke=0.6 zoom-rein ein="Knopf>WIEDER DER KNOPF>halteknopf" ein_y=1720] Er schaut wieder auf den Halteknopf. Genau wie vorhin.
+// Ticket und Schrift
+[objekt objekte="busticket:NIE GESTEMPELT|halteknopf:HALT" gross="WAS ER WILL" palette=blau palette_staerke=0.6 zoom-rein ein="Wort>HALT" ein_y=1500] Ein Ticket, das nie gestempelt wurde. Ein Wort in der Scheibe: Halt.
+// Du begreifst
+[gesicht du ort=nachtbus besorgt palette=blau palette_staerke=0.6 zoom-rein] Und plötzlich verstehst du es.
+// Paul will etwas anderes
+[nachtbus du paul=1 paul_x=560 draussen=staumauer palette=blau palette_staerke=0.6 schwenk-rechts] Paul will Henrik nicht mitnehmen. Er will nur, was er damals nicht bekommen hat.
+// Karte
+[titel oben="Paul will nur eins" gross="JEMAND HÄLT" unten="für ihn" farbe=#0a1230 akzent=#9fc4ff groesse=150 hud=false zoom-rein] Dass jemand für ihn hält.
+
+== Wendung ==
+// Du drückst den Knopf
+[nachtbus du knopf halt draussen=staumauer palette=blau palette_staerke=0.6 zoom-rein ton=ui_ding ein="drückst>HALT GEDRÜCKT>halteknopf" ein_y=1720] Du stehst auf. Deine Finger sind eiskalt. Du drückst den Halteknopf.
+// Halt leuchtet, Anzeige springt
+[nachtbus du halt anzeige="Mühlenweg" uhr="0:25" draussen=staumauer palette=blau palette_staerke=0.6 zoom-rein ein="Mühlenweg>MÜHLENWEG" ein_y=1720] Vorne leuchtet das rote Halt. Ein heller Gong. Die Anzeige springt zurück: Mühlenweg.
+// Henrik sieht dich
+[gesicht s05_henrik ort=nachtbus traurig palette=blau palette_staerke=0.6 zoom-rein] Henrik dreht sich um. Er sieht das Licht. Er sieht dich. Seine Augen werden nass.
+// Paul lächelt
+[nachtbus du paul=1 paul_x=560 halt draussen=staumauer palette=blau palette_staerke=0.6 zoom-rein] In der Scheibe hebt Paul den Kopf. Zum ersten Mal sieht er dich an.
+
+== Cliffhanger ==
+// Henrik steigt aus
+[nachtbus blick=vorne s05_henrik draussen=staumauer uhr="0:25" palette=blau palette_staerke=0.6 zoom-raus ton=tuer_zu] Henrik nickt dir zu. Dann öffnet er die Tür und geht hinaus.

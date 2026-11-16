@@ -1,0 +1,60 @@
+# Haltestelle Mühlenweg – Folge 1: Der letzte Bus
+@musik musik/s05-f01.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung spannend
+@vortrag lebendig
+@klang studio
+@mund zitate
+@einblenden aus
+@qualitaet max
+@look 0.75
+@kino 0.5
+@stil leuchtend
+@palette blau
+@zeit nacht
+@untertitel aus
+
+== Hook ==
+// Wow-Bild: Nachtbus innen, Anzeige springt auf Mühlenweg
+[nachtbus anzeige_y=560 du sitzen anzeige="Mühlenweg" anzeige_blink uhr="0:12" draussen=nebel palette=blau palette_staerke=0.6 zoom-rein hooktext="0:12 – HALT MÜHLENWEG" ton=ui_ding] Um null Uhr zwölf zeigt dein Nachtbus einen Halt, den es nicht gibt.
+// Henrik schaut in den Spiegel
+[nachtbus blick=vorne s05_henrik draussen=nebel anzeige="Mühlenweg" uhr="0:12" palette=blau palette_staerke=0.6 zoom-rein ein="Henrik>HENRIK · DEIN FAHRER" ein_y=420] Dein Fahrer Henrik schaut in den Rückspiegel. Auf die Anzeige. Dann zu dir.
+// Henrik kreidebleich
+[gesicht s05_henrik ort=nachtbus schreck palette=blau palette_staerke=0.6 zoom-rein ton=herzschlag] Sein Gesicht wird kreidebleich.
+// Henrik spricht (Figurenstimme)
+[gesicht s05_henrik ort=nachtbus schreck figurstimme=mann_alt sprecher=s05_henrik palette=blau palette_staerke=0.6] „Den Mühlenweg gibt es seit neunzehnhundertachtundneunzig nicht mehr.“
+// Infokarte 1998
+[titel oben="Mühlenweg" gross="1998" unten="seitdem keine Haltestelle mehr" farbe=#0a1230 akzent=#9fc4ff groesse=170 hud=false zoom-rein] Er sagt es, als hätte er diesen Satz schon tausendmal gedacht.
+
+== Rückblick ==
+// Haltestelle im Regen, Bus kommt, Ben bringt dich hin
+[haltestelle du ben zeit=nacht regen bus=kommt palette=blau palette_staerke=0.6 schwenk-rechts ton=regen ein="sieben>0:07 UHR>uhr" ein_y=380] Fünf Minuten vorher, null Uhr sieben. Dein bester Freund Ben bringt dich von seinem Geburtstag zum letzten Bus.
+// Ben grinst
+[gesicht ben ort=haltestelle froh palette=blau palette_staerke=0.6] „Schreib, wenn du da bist. Sonst ruf ich deine Mama an.“
+// Leerer Bus innen
+[nachtbus du sitzen anzeige="Am Markt" uhr="0:08" draussen=stadt palette=blau palette_staerke=0.6 schwenk-links ton=summen ein="leer>0 FAHRGÄSTE" ein_y=1720] Der Bus ist leer. Nur du und das Summen der Lampen.
+// Henrik müde
+[gesicht s05_henrik ort=nachtbus muede palette=blau palette_staerke=0.6 ein="dreißig>#30 JAHRE LINIE 14" ein_y=1500] Henrik fährt diese Linie seit dreißig Jahren. Er will nur noch Feierabend.
+// Scheiben beschlagen, Stadt zieht vorbei
+[nachtbus du sitzen beschlagen anzeige="Lindenplatz" uhr="0:10" draussen=stadt palette=blau palette_staerke=0.6 zoom-raus] Die Scheiben beschlagen. Draußen wird die Stadt zu einzelnen Lichtern.
+// Handy: Ben schreibt
+[handy ort=nachtbus netz=1 akku=23 uhrzeit="0:11" von="Ben" nachricht="Danke fürs Kommen! Schreib, wenn du da bist." ton=handy_vibration palette=blau palette_staerke=0.6 ein="dreiundzwanzig>#23 % AKKU>handy" ein_y=1500] Ben schreibt noch: Danke fürs Kommen. Dein Akku hat dreiundzwanzig Prozent.
+
+== Steigerung ==
+// Die Anzeige springt
+[nachtbus du sitzen anzeige="Mühlenweg" anzeige_blink uhr="0:12" draussen=stadt palette=blau palette_staerke=0.6 zoom-rein ton=ui_ding ein="Mühlenweg>MÜHLENWEG?>auge" ein_y=1720] Dann null Uhr zwölf. Die Anzeige springt um.
+// Du, besorgt
+[gesicht du ort=nachtbus besorgt palette=blau palette_staerke=0.6] Du kennst jede Haltestelle dieser Linie. Einen Mühlenweg gibt es nicht.
+// Draußen plötzlich Nebel
+[nachtbus du sitzen anzeige="Mühlenweg" uhr="0:12" draussen=nebel palette=blau palette_staerke=0.6 schwenk-rechts ton=wind] Draußen ist plötzlich Nebel. Keine Häuser mehr. Keine Laternen.
+
+== Wendung ==
+// HALT leuchtet von selbst
+[nachtbus du sitzen halt anzeige="Mühlenweg" uhr="0:12" draussen=nebel palette=blau palette_staerke=0.6 zoom-rein ein="Halt>NIEMAND HAT GEDRÜCKT" ein_y=1720] Niemand hat gedrückt. Trotzdem leuchtet vorne das rote Halt.
+// Henriks Füße weg von der Bremse
+[nachtbus blick=vorne s05_henrik draussen=nebel anzeige="Mühlenweg" uhr="0:12" palette=blau palette_staerke=0.6 wackeln=0.2] Henrik hat den Fuß nicht auf der Bremse. Trotzdem wird der Bus langsamer.
+
+== Cliffhanger ==
+// Bus steht, Türen auf
+[nachtbus du sitzen halt anzeige="Mühlenweg" uhr="0:12" draussen=steht palette=blau palette_staerke=0.6 zoom-rein ton=tuer_zu] Der Bus hält. Ganz von allein. Und die Türen gehen auf.

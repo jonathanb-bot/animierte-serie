@@ -1,0 +1,59 @@
+# The Stop That Isn't There – Episode 3: The Window
+@musik musik/s05-f03-en.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung spannend
+@vortrag lebendig
+@klang studio
+@mund zitate
+@einblenden aus
+@qualitaet max
+@look 0.75
+@kino 0.5
+@stil leuchtend
+@palette blau
+@zeit nacht
+@untertitel aus
+@sprache en
+
+== Hook ==
+// Wow-Bild: drei Gestalten in der Scheibe
+[nachtbus anzeige_y=560 du sitzen spiegel=3 anzeige="Central Station" uhr="12:15" draussen=nebel palette=blau palette_staerke=0.6 zoom-rein hooktext="12:15 AM – ONLY LOOK AT THE WINDOW" ton=summen] Twelve fifteen. On your bus, the seats are empty. In the window, they're not.
+
+== Wiedererkennen ==
+// Die Gestalten
+[nachtbus anzeige_oben="Next stop" du sitzen spiegel=3 anzeige="Central Station" uhr="12:15" draussen=nebel palette=blau palette_staerke=0.6 schwenk-rechts ein="Three>3 PASSENGERS" ein_y=1720] Three figures. Old coats. Wet hair hanging down over their faces.
+// Nasse Spuren
+[nachtbus anzeige_oben="Next stop" spuren draussen=nebel anzeige="Central Station" uhr="12:15" palette=blau palette_staerke=0.6 zoom-rein ein="footprints>WET FOOTPRINTS>tropfen" ein_y=1720] Wet footprints shine on the floor. They lead in from the door.
+// Tropfende Sitze
+[nachtbus anzeige_oben="Next stop" tropfen draussen=nebel anzeige="Central Station" uhr="12:15" palette=blau palette_staerke=0.6 zoom-rein ton=tropfen] Water drips from the seats behind you. Cold and dark.
+// Du hältst die Luft an
+[gesicht du ort=nachtbus angst palette=blau palette_staerke=0.6] You hold your breath. Your breathing is the only sound on the bus. You only look at the window.
+
+== Steigerung ==
+// Handy: Mama ruft an
+[handy ort=nachtbus netz=1 akku=19 uhrzeit="12:16" von="Mom" nachricht="Incoming call" ton=handy_vibration palette=blau palette_staerke=0.6 ein="mom>MOM IS CALLING>handy" ein_y=1500] Your phone buzzes. Your mom is calling.
+// Mama, Figurenstimme
+[gesicht mama ort=wohnzimmer zeit=nacht besorgt figurstimme=frau sprecher=mama palette=blau palette_staerke=0.6] “Where are you? It's past midnight.”
+// Du antwortest
+[gesicht du ort=nachtbus besorgt palette=blau palette_staerke=0.6] You say just two words: Millbrook Lane.
+// Stille in der Leitung
+[gesicht mama ort=wohnzimmer zeit=nacht besorgt palette=blau palette_staerke=0.6 ton=funk_rauschen] On the other end, it goes quiet. The line crackles.
+// Mama erklärt, Figurenstimme
+[gesicht mama ort=wohnzimmer zeit=nacht traurig figurstimme=frau sprecher=mama palette=blau palette_staerke=0.6] “That's where your grandpa grew up. The village is under the reservoir.”
+// Wow-Bild: Stausee bei Nacht
+[landschaft zeit=nacht see palette=blau palette_staerke=0.6 zoom-raus ein="nineteen>FLOODED IN 1998" ein_y=420] In nineteen ninety-eight, they flooded the valley. Houses, church, school. All underwater.
+// Kein Netz
+[handy ort=nachtbus netz=0 akku=18 uhrzeit="12:17" von="Mom" nachricht="Call ended" ton=kein_netz palette=blau palette_staerke=0.6 ein="signal>NO SIGNAL>handy_netz0" ein_y=1500] Then the call drops. No signal.
+
+== Wendung ==
+// Scheibe beschlägt
+[nachtbus anzeige_oben="Next stop" du sitzen beschlagen spiegel=3 anzeige="Central Station" uhr="12:17" draussen=nebel palette=blau palette_staerke=0.6 zoom-rein ein="breathing>WINDOW FOGS UP" ein_y=1720] The window fogs up. From the bottom up, like someone is breathing on it.
+// Eine Gestalt beugt sich vor
+[nachtbus anzeige_oben="Next stop" du sitzen beschlagen spiegel=1 anzeige="Central Station" uhr="12:17" draussen=nebel palette=blau palette_staerke=0.6 zoom-rein] In the window, one of the figures leans forward. Toward you.
+// Kalter Hauch
+[gesicht du ort=nachtbus angst palette=blau palette_staerke=0.6 ton=wind] A cold breath brushes the back of your neck. Like an open fridge.
+
+== Cliffhanger ==
+// Finger schreibt HALT
+[nachtbus anzeige_oben="Next stop" du sitzen schrift="STOP" anzeige="Central Station" uhr="12:17" draussen=nebel palette=lila palette_staerke=0.6 zoom-rein ton=hit] Then a finger writes on the foggy glass, from the inside. Four letters. Stop.

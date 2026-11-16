@@ -1,0 +1,158 @@
+{
+ "dauer": 68.23,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "haltestelle",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 5.966,
+   "emotion": "erzaehlend",
+   "text": "Die Türen deines Busses gehen auf. Draußen steht ein Schild, das unter Wasser liegt."
+  },
+  {
+   "nr": 2,
+   "typ": "nachtbus",
+   "kapitel": 2,
+   "start": 5.966,
+   "dauer": 4.838,
+   "emotion": "erzaehlend",
+   "text": "Null Uhr dreizehn. Ein Wartehäuschen im Nebel. Eine einzige Laterne."
+  },
+  {
+   "nr": 3,
+   "typ": "titel",
+   "kapitel": 2,
+   "start": 10.804,
+   "dauer": 5.006,
+   "emotion": "erzaehlend",
+   "text": "Auf dem rostigen Schild steht: Mühlenweg. Letzte Fahrt null Uhr zwölf."
+  },
+  {
+   "nr": 4,
+   "typ": "haltestelle",
+   "kapitel": 2,
+   "start": 15.81,
+   "dauer": 2.51,
+   "emotion": "erzaehlend",
+   "text": "Niemand steht dort. Niemand steigt ein."
+  },
+  {
+   "nr": 5,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 18.32,
+   "dauer": 4.358,
+   "emotion": "ernst",
+   "text": "Kalte Luft zieht herein. Sie riecht nach nassem Laub und nach Keller."
+  },
+  {
+   "nr": 6,
+   "typ": "nachtbus",
+   "kapitel": 3,
+   "start": 22.678,
+   "dauer": 2.774,
+   "emotion": "erzaehlend",
+   "text": "Dann knarrt die Stufe. Einmal."
+  },
+  {
+   "nr": 7,
+   "typ": "nachtbus",
+   "kapitel": 3,
+   "start": 25.452,
+   "dauer": 4.526,
+   "emotion": "erzaehlend",
+   "text": "Zweimal. Dreimal. Als würde jemand einsteigen, den du nicht siehst."
+  },
+  {
+   "nr": 8,
+   "typ": "nachtbus",
+   "kapitel": 3,
+   "start": 29.978,
+   "dauer": 3.518,
+   "emotion": "erzaehlend",
+   "text": "Der Bus senkt sich ein Stück. Als wäre er plötzlich schwerer."
+  },
+  {
+   "nr": 9,
+   "typ": "nachtbus",
+   "kapitel": 3,
+   "start": 33.496,
+   "dauer": 3.638,
+   "emotion": "erzaehlend",
+   "text": "Henrik starrt nach vorn. Seine Hände kleben am Lenkrad."
+  },
+  {
+   "nr": 10,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 37.134,
+   "dauer": 3.614,
+   "emotion": "spannend",
+   "text": "Du willst dich umdrehen. Nach hinten, zu den leeren Sitzen."
+  },
+  {
+   "nr": 11,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 40.748,
+   "dauer": 2.366,
+   "emotion": "spannend",
+   "text": "Henrik sagt es, ohne sich umzudrehen."
+  },
+  {
+   "nr": 12,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 43.114,
+   "dauer": 4.142,
+   "emotion": "spannend",
+   "text": "„Schau nicht nach hinten. Schau nur in die Scheibe.“"
+  },
+  {
+   "nr": 13,
+   "typ": "nachtbus",
+   "kapitel": 4,
+   "start": 47.256,
+   "dauer": 4.166,
+   "emotion": "erzaehlend",
+   "text": "Die Türen schließen sich. Der Bus fährt wieder an. Ganz langsam."
+  },
+  {
+   "nr": 14,
+   "typ": "nachtbus",
+   "kapitel": 4,
+   "start": 51.422,
+   "dauer": 4.934,
+   "emotion": "erzaehlend",
+   "text": "Null Uhr vierzehn. Hinter dir tropft es. Gleichmäßig, wie ein Wasserhahn."
+  },
+  {
+   "nr": 15,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 56.356,
+   "dauer": 3.11,
+   "emotion": "spannend",
+   "text": "Dein Herz schlägt so laut, dass du es in den Ohren hörst."
+  },
+  {
+   "nr": 16,
+   "typ": "nachtbus",
+   "kapitel": 4,
+   "start": 59.466,
+   "dauer": 3.638,
+   "emotion": "erzaehlend",
+   "text": "Langsam hebst du den Blick. Zur dunklen Scheibe neben dir."
+  },
+  {
+   "nr": 17,
+   "typ": "nachtbus",
+   "kapitel": 5,
+   "start": 63.104,
+   "dauer": 5.126,
+   "emotion": "erzaehlend",
+   "text": "In der Scheibe sitzen hinter dir drei Leute. Im Bus sind alle Sitze leer."
+  }
+ ]
+}
