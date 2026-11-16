@@ -461,7 +461,7 @@ function goldgraeber(T, z) {
 const SZENEN = () => [intro, rosenthal, concorde, sport, wagen, omar, vvs, lidl, touareg, emblem, fremd, niemals, flucht, zaeune, bett, baelle, versteck, taschen, kohle, sprachen, runden, nummer, lyca, designer, hunderteins, goldgraeber];
 const SZ_CLIP = [null, "rosenthal", null, null, "wagen", "omar", null, null, "touareg", null, "fremd", null, "flucht", null, null, "nacht", null, null, null, null, null, null, null, null, null, null];
 let GRENZEN = null, ZS = null;
-function vorbereiten() { const Z = ZL.zeilen; GRENZEN = [0].concat(Z.map(z => z.a)); GRENZEN.push(ZL.ende + 1);
+function vorbereiten() { const Z = ZL.zeilen; GRENZEN = [0].concat(Z.map(z => z.a)); GRENZEN.push(ZL.ende + 1); if (window.START) GRENZEN[1] = window.START;
   ZS = SZENEN().map((f, i) => ({ f, z: i === 0 ? { a: 0, e: GRENZEN[1], woerter: [] } : { ...Z[i - 1], a: GRENZEN[i], e: GRENZEN[i + 1] } })); }
 function szeneNr(T) { let nr = 0; for (let i = 0; i < ZS.length; i++) if (T >= GRENZEN[i]) nr = i; return nr; }
 // vor jedem Bild: Clips der aktuellen und der Nachbarszenen laden, alle anderen freigeben
@@ -486,7 +486,7 @@ window.zeichne = T => {
     for (const [puf, off] of [[PUF[0], -e], [PUF[1], 1 - e]]) { const dx = off * W * rx, dy = off * H * ry; if (Math.abs(off) >= 1) continue;
       male(puf, dx, dy, 1); for (let s2 = 1; s2 <= 4; s2++) male(puf, dx - rx * s2 * 30 * v, dy - ry * s2 * 52 * v, 0.14 * v); }
   }
-  for (const i of HART) { const d = T - GR[i]; if (d >= 0 && d < 0.12) { ctx.fillStyle = `rgba(255,255,255,${0.5 * (1 - d / 0.12)})`; ctx.fillRect(0, 0, W, H); } }
+  for (const i of HART) { if (window.START) break; const d = T - GR[i]; if (d >= 0 && d < 0.12) { ctx.fillStyle = `rgba(255,255,255,${0.5 * (1 - d / 0.12)})`; ctx.fillRect(0, 0, W, H); } }
   ctx.save(); ctx.globalCompositeOperation = "overlay"; ctx.drawImage(KORN[Math.floor(T * 24) % KORN.length], 0, 0, W, H); ctx.restore();
 };
 init();
