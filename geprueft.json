@@ -1920,6 +1920,54 @@
    "bild_s": 74.12,
    "ton_s": 74.13,
    "lufs": -14.6
+  },
+  "taeglich/s05-f01.mp4": {
+   "ok": true,
+   "bild_s": 70.37,
+   "ton_s": 70.36,
+   "lufs": -14.6
+  },
+  "taeglich/s05-f02.mp4": {
+   "ok": true,
+   "bild_s": 67.63,
+   "ton_s": 67.63,
+   "lufs": -14.6
+  },
+  "taeglich/s05-f03.mp4": {
+   "ok": true,
+   "bild_s": 63.6,
+   "ton_s": 63.62,
+   "lufs": -14.6
+  },
+  "taeglich/s05-f04.mp4": {
+   "ok": true,
+   "bild_s": 76.42,
+   "ton_s": 76.42,
+   "lufs": -14.7
+  },
+  "taeglich/s05-f05.mp4": {
+   "ok": true,
+   "bild_s": 67.2,
+   "ton_s": 67.2,
+   "lufs": -14.6
+  },
+  "taeglich/s05-f06.mp4": {
+   "ok": true,
+   "bild_s": 64.33,
+   "ton_s": 64.36,
+   "lufs": -14.6
+  },
+  "taeglich/s05-f07.mp4": {
+   "ok": true,
+   "bild_s": 76.03,
+   "ton_s": 76.05,
+   "lufs": -14.6
+  },
+  "taeglich/s05-f08.mp4": {
+   "ok": true,
+   "bild_s": 68.2,
+   "ton_s": 68.18,
+   "lufs": -14.6
   }
  },
  "serien": {
@@ -2258,6 +2306,11 @@
      12
     ]
    ]
+  },
+  "s05": {
+   "titel": "Haltestelle Mühlenweg",
+   "folgen": 8,
+   "tiktok_teile": []
   }
  }
 }
