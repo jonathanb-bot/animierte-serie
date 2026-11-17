@@ -23,6 +23,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "taeglich"))
 import veroeffentlichen as V  # noqa: E402
+sys.path.insert(0, str(ROOT / "quer"))
+from kapitel import kapitel  # noqa: E402
 
 REPO = "jonathanb-bot/animierte-serie"
 TAGE = (0, 2, 4)  # Mo, Mi, Fr
@@ -109,7 +111,7 @@ def main(argv=None) -> int:
             zeit = dt.datetime.fromisoformat(de["zeit"]) + dt.timedelta(hours=6)
     post = {"id": pid, "platform": "youtube", "zeit": zeit.strftime("%Y-%m-%dT%H:%M:00"), "serie": serie, "video": url,
             "titel": m["titel"][:100], "tags": m["tags"],
-            "text": m["beschreibung"] + ("\n\nSubscribe for the next story." if a.en else "\n\nAbonnier den Kanal für die nächste Geschichte.")}
+            "text": m["beschreibung"] + ("\n\nChapters:\n" if a.en else "\n\nKapitel:\n") + "\n".join(kapitel(rid)) + ("\n\nSubscribe for the next story." if a.en else "\n\nAbonnier den Kanal für die nächste Geschichte.")}
     if a.en:
         post["konto"] = "zernio:3"
     plan["posts"].append(post)

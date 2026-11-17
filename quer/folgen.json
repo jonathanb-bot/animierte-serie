@@ -1,11 +1,61 @@
 {
  "_info": "Querformat-Serie (Jonathan 17.11., Issue #37). Pro Folge: id, titel/beschreibung/tags (deutsch) und en{titel,beschreibung,tags}. Reihenfolge = Produktionsreihenfolge, Vorlage-Muster aus quer/vorlagen.md.",
  "folgen": [
-  {"id": "q01", "arbeitstitel": "Du wachst auf und bist der LETZTE Mensch in deiner Stadt", "muster": "Du-Prämisse letzter Mensch (Strich Erklärt 138-fach, Team Laki 134 Tsd.)", "kapitel": "Minute 0 · Stunde 1 · Stunde 6 · Tag 2 · Tag 5 · Tag 9 · Tag 14"},
-  {"id": "q02", "arbeitstitel": "72 Stunden im Hochhaus eingeschlossen (Stunde für Stunde)", "muster": "Ich/Du-Überleben + Zeitgerüst (Infographics „Trapped Underwater“)"},
-  {"id": "q03", "arbeitstitel": "Du wachst nachts allein im Wald auf – würdest du bis zum Morgen überleben?", "muster": "Du wachst … auf – würdest du überleben? (Leicht Erklärt 151-fach)"},
-  {"id": "q04", "arbeitstitel": "Was wäre, wenn du deinen Opa mit 17 treffen könntest?", "muster": "Was wäre, wenn du … + Familie"},
-  {"id": "q05", "arbeitstitel": "Du wachst 1000 Jahre in der Zukunft auf", "muster": "Was wäre, wenn du … (Vergessene Welten 11-fach, 20.000 Jahre)"},
-  {"id": "q06", "arbeitstitel": "Dein Handy zeigt, wie viele Abende du noch mit deinen Eltern hast (Minute für Minute)", "muster": "Lebenszeit, stärkster TikTok-Start (video-001) + Zeitgerüst"}
+  {
+   "id": "q01",
+   "arbeitstitel": "Du wachst auf und bist der LETZTE Mensch in deiner Stadt",
+   "muster": "Du-Prämisse letzter Mensch (Strich Erklärt 138-fach, Team Laki 134 Tsd.)",
+   "kapitel": "Minute 0 · Stunde 1 · Stunde 6 · Tag 2 · Tag 5 · Tag 9 · Tag 14",
+   "titel": "Du wachst auf und bist der LETZTE Mensch in deiner Stadt (14 Tage allein)",
+   "beschreibung": "Dein Wecker klingelt nicht. Der Kaffee deiner Mama ist noch warm, aber sie ist weg. Wie alle. 14 Tage allein in einer Stadt für eine Million Menschen: kein Strom, kein Netz, kein Mensch. Bis im Radio etwas klopft.",
+   "tags": [
+    "was wäre wenn",
+    "letzter mensch",
+    "animation",
+    "geschichte",
+    "überleben",
+    "du allein",
+    "story",
+    "deutsch"
+   ],
+   "en": {
+    "titel": "You Wake Up and You're the LAST Person in Your City (14 Days Alone)",
+    "beschreibung": "Your alarm doesn't go off. Your mom's coffee is still warm, but she's gone. Like everyone. 14 days alone in a city built for a million people: no power, no signal, no people. Until something knocks on the radio.",
+    "tags": [
+     "what if",
+     "last person on earth",
+     "animation",
+     "story",
+     "survival",
+     "alone",
+     "storytime"
+    ]
+   }
+  },
+  {
+   "id": "q02",
+   "arbeitstitel": "72 Stunden im Hochhaus eingeschlossen (Stunde für Stunde)",
+   "muster": "Ich/Du-Überleben + Zeitgerüst (Infographics „Trapped Underwater“)"
+  },
+  {
+   "id": "q03",
+   "arbeitstitel": "Du wachst nachts allein im Wald auf – würdest du bis zum Morgen überleben?",
+   "muster": "Du wachst … auf – würdest du überleben? (Leicht Erklärt 151-fach)"
+  },
+  {
+   "id": "q04",
+   "arbeitstitel": "Was wäre, wenn du deinen Opa mit 17 treffen könntest?",
+   "muster": "Was wäre, wenn du … + Familie"
+  },
+  {
+   "id": "q05",
+   "arbeitstitel": "Du wachst 1000 Jahre in der Zukunft auf",
+   "muster": "Was wäre, wenn du … (Vergessene Welten 11-fach, 20.000 Jahre)"
+  },
+  {
+   "id": "q06",
+   "arbeitstitel": "Dein Handy zeigt, wie viele Abende du noch mit deinen Eltern hast (Minute für Minute)",
+   "muster": "Lebenszeit, stärkster TikTok-Start (video-001) + Zeitgerüst"
+  }
  ]
 }
