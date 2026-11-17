@@ -589,6 +589,40 @@
     "lufs": -14.6,
     "dauer_s": 63.42
    }
+  },
+  {
+   "id": "raub-r002",
+   "datum": "2026-11-17",
+   "titel": "Der letzte Raub – Folge 2: Die erste Warnung",
+   "emoji": "🏦",
+   "serie": "Der letzte Raub – Ihr entscheidet (Jonathans Auftrag 16.11., Issue #35)",
+   "stimmung": "spannend",
+   "stimme": "Orus",
+   "thema": "Keine Entscheidung zu Folge 1 (kein Kommentar): Du schweigst, Karo verlangt bis morgen die Wahrheit, nur Mara kennt deinen Grund. Nachts steht jemand oben in der Bank, morgens liegt ein Umschlag vor deiner Tür: Foto eurer Gruppe aus einem Bankfenster, eine goldene Nadel spiegelt sich, Rückseite „Einer von euch wurde bereits bezahlt.“ Jona dreht sein Handy um. Entscheidung A allen das Foto zeigen / B dich zuerst nur Mara anvertrauen",
+   "stil": "leuchtend, engine/raub.js neu: raubdetail motiv=umschlag/fotonah/fotorueck, bankfassade beobachter=1",
+   "kulissen": [
+    "versteck",
+    "gesicht",
+    "bankfassade",
+    "raubdetail",
+    "entscheidung"
+   ],
+   "beschreibung": "Du hast geschwiegen. Jetzt liegt ein Foto von euch vor deiner Tür, aufgenommen aus der Bank. Und auf der Rückseite steht: Einer von euch wurde bereits bezahlt. Ihr entscheidet: Kommentiere A oder B, der Top-Kommentar bestimmt die nächste Folge.",
+   "hashtags": [
+    "#derletzteraub",
+    "#ihrentscheidet",
+    "#thriller",
+    "#animation",
+    "#story",
+    "#deutsch"
+   ],
+   "tags": [
+    "animation",
+    "der letzte raub",
+    "thriller",
+    "story",
+    "ihr entscheidet"
+   ]
   }
  ]
 }
