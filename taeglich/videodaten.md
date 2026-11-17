@@ -89,3 +89,19 @@ Automatisch aus `python taeglich/videodaten.py`. Grundlage für die Analyse (Lä
 | 4 | 8–10 | 248.58 |  |
 | 5 | 11–12 | 167.52 |  |
 
+## s05 „Haltestelle Mühlenweg“ (8 Folgen, Format-Längenband: kurz 63–75 s (Horror kurz))
+
+| Video | Länge s | Band | Wörter | Wörter/s | Einst. | Kurzgesagt-Einst. | Nah | Fakten | Stimmung | Hook-Text | Instagram | YouTube |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| F1 Der letzte Bus | 70.37 | mittel | 183 | 2.6 | 17 | 0 | 5 | 1 | spannend | 0:12 – HALT MÜHLENWEG |  |  |
+| F2 Mühlenweg | 67.63 | kurz | 171 | 2.53 | 17 | 0 | 5 | 1 | duester | 0:13 – DER HALT UNTER WASSER |  |  |
+| F3 Die Scheibe | 63.61 | kurz | 171 | 2.69 | 16 | 1 | 6 | 0 | spannend | 0:15 – SCHAU NUR IN DIE SCHEIBE |  |  |
+| F4 Henriks Linie | 76.42 | mittel | 183 | 2.39 | 16 | 0 | 5 | 1 | traurig | 0:18 – ER HAT IHN STEHEN LASSEN |  |  |
+| F5 Umleitung | 67.2 | kurz | 172 | 2.56 | 15 | 1 | 4 | 0 | spannend | 0:22 – DER BUS FÄHRT ALLEIN |  |  |
+| F6 Der Junge | 64.34 | kurz | 174 | 2.7 | 16 | 0 | 5 | 2 | duester | 0:23 – NUR IN DER SCHEIBE |  |  |
+| F7 Staumauer | 76.05 | mittel | 197 | 2.59 | 17 | 1 | 4 | 2 | spannend | 0:24 – ENDSTATION STAUMAUER |  |  |
+| F8 Hin und zurück | 68.2 | kurz | 183 | 2.68 | 15 | 0 | 4 | 3 | warm | 0:26 – PAUL WINKT |  |  |
+
+| TikTok-Teil | Folgen | Länge s | Termin |
+|---|---|---|---|
+
