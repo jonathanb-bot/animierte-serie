@@ -1,0 +1,15 @@
+# Querformat-Test
+@format quer
+@qualitaet max
+@einblenden aus
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette blau
+@whoosh aus
+
+== Minute 0 ==
+[landschaft zeit=abend see du palette=orange zoom-rein hooktext="TEST QUERFORMAT" ein="Eins>0:00 UHR>uhr"] Eins zwei drei vier fünf sechs sieben acht neun zehn.
+[grossstadt zeit=nacht du palette=lila schwenk-rechts] Eins zwei drei vier fünf sechs sieben acht neun zehn.
+[nachtbus du sitzen anzeige_y=520 anzeige="Mühlenweg" uhr="0:12" draussen=stadt palette=blau] Eins zwei drei vier fünf sechs sieben acht neun zehn.
+[gesicht du ort=wohnzimmer froh palette=orange] Eins zwei drei vier fünf sechs sieben acht neun zehn.
