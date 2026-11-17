@@ -1,8 +1,8 @@
 # Du wachst auf und bist der LETZTE Mensch in deiner Stadt
-@format quer
 @musik musik/quer-q01.mp3
 @musik_lautstaerke 1
 @whoosh aus
+@format quer
 @stimmung spannend
 @vortrag lebendig
 @klang studio
