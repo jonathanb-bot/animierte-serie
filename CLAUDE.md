@@ -1,5 +1,6 @@
 # Hinweise für Claude
 
+> **Querformat lang + Vorlage-Kanäle (Jonathan 17.11., Issue #37):** 8–12-min-Videos 16:9 auf YouTube (DE + EN), 3× pro Woche (Mo/Mi/Fr), getrennt von der Analyse (Serie `quer`). Aufbau aus erfolgreichen Vorlage-Kanälen (nur Aufbau, nie Inhalte): `quer/vorlagen.md`. Verbindlich `quer/FORMAT.md`, Lauf `taeglich/laeufe/quer.md` (So/Di/Do 21:23), Engine `@format quer`, Rendern über den Workflow `quer-rendern.yml` (Release).
 > **Große Analyse-Auswertung am 22.11.2026 (Jonathan 14.11.):** An diesem Tag werden alle bisherigen Projekte gründlich ausgewertet (24. Stock, Der Alien, Der letzte Mann, Kurzvideo-Staffeln inkl. Englisch und Zitat-Videos, Deine Welt, Bis zum Mond). Ablauf `taeglich/laeufe/analyse-22-11.md` (Branch `taeglich`), Bericht `taeglich/analyse/2026-11-22-abschluss.md`. Bis dahin alle Zahlen, Beobachtungen und Experimente sauber festhalten.
 
 > **Song-Edits (Jonathan 14.–16.11.):** Schickt Jonathan im Chat nur eine MP3 oder einen Reel-Link (evtl. mit kurzer Notiz), ist das ein Edit-Auftrag: ohne Rückfragen nach `edits/README.md` → „Standard-Auftrag“ bauen und das Video in voller Qualität im Chat liefern. Läuft auf einem anderen Konto, unabhängig von der Analyse.
