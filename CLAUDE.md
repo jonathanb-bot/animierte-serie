@@ -2,6 +2,7 @@
 
 > **Große Analyse-Auswertung am 22.11.2026 (Jonathan 14.11.):** An diesem Tag werden alle bisherigen Projekte gründlich ausgewertet (24. Stock, Der Alien, Der letzte Mann, Kurzvideo-Staffeln inkl. Englisch und Zitat-Videos, Deine Welt, Bis zum Mond). Ablauf `taeglich/laeufe/analyse-22-11.md` (Branch `taeglich`), Bericht `taeglich/analyse/2026-11-22-abschluss.md`. Bis dahin alle Zahlen, Beobachtungen und Experimente sauber festhalten.
 
+- **Querformat lang + Vorlage-Kanäle (Jonathan 17.11., Issue #37):** lange 16:9-Videos (8–12 min, DE + EN) 3× pro Woche auf YouTube, getrennt von der Analyse. Verbindlich `quer/FORMAT.md` auf Branch `taeglich`, Lauf `taeglich/laeufe/quer.md`, Workflow `quer-rendern.yml`.
 - **QUALITÄT VOR QUANTITÄT (Jonathans feste Vorgabe 8.11., Issue #30):** Jedes Video muss maximal gut aussehen und klingen. Lieber weniger Videos, dafür jedes sauber. Mengenziele (jede Nacht eine Staffel, Posts pro Tag) treten immer hinter die Qualität zurück. Vor jedem Veröffentlichen das Qualitäts-Tor in `taeglich/FORMAT.md` (Branch `taeglich`) abhaken: Stimme geprüft, alle Bilder angesehen, starkes erstes Bild, Einblendungen, volle Qualität. Nie mit weniger Qualität rendern, um Zeit zu sparen.
 - Projekt: animierte Serie „24. Stock“ (Zombie-Apokalypse im Hochhaus) für Jonathan. Format und Felder stehen in README.md, die Handlung in serienplan.md.
 - Stil: **clean** Flat-Vektor, keine Konturen, weiche Schattierung. Jonathan legt großen Wert darauf, dass es sauber aussieht.
