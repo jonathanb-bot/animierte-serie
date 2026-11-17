@@ -699,11 +699,15 @@
       poly([[620, 1040], [960, 1040], [920, 820], [660, 820]], "#1a1d22"); box(660, 760, 260, 60, 6, "#4a4e58"); A.text("GARAGE", 790, 790, 34, "#d9d6cc");
       box(980, 760, 110, 280, 6, "#5d6b74"); box(1065, 900, 12, 30, 4, "#c3cad1"); A.licht(1035, 760, 200, "#ffd9a0", 0.7);
     }
-    box(-400, 1030, 1900, 50, 0, "#5c6068");
-    box(-400, 1080, 1900, 430, 0, "#33363d");
+    // Querformat (17.11.): Häuserreihe und Straße bis an den Bildrand verlängern, Hochkant bleibt pixelgleich
+    const QX = A.QUER ? -1500 : -400, QB = A.QUER ? 4080 : 1900;
+    if (A.QUER && !s.eingang) { const rq = rnd(77); for (const [x0, x1] of [[-1500, -110], [1210, 2580]]) for (let x = x0; x < x1;) { const w = 160 + rq() * 160, h = 500 + rq() * 300; box(x, 1040 - h, w, h + 10, 2, nacht ? "#2a3040" : "#8a91a0"); for (let yy = 1040 - h + 30; yy < 1000; yy += 70) for (let xx = x + 20; xx < x + w - 40; xx += 55) { const v = rq(); box(xx, yy, 30, 40, 3, nacht ? (v < (s.fenster_an ? 0.75 : 0.25) ? "#e9b866" : "#1c2130") : rgba("#ffffff", 0.2)); } x += w + 10; } }
+    else if (A.QUER) { box(-1500, 250, 1100, 800, 0, "#2f3442"); box(1560, 250, 1020, 800, 0, "#2f3442"); }
+    box(QX, 1030, QB, 50, 0, "#5c6068");
+    box(QX, 1080, QB, 430, 0, "#33363d");
     if (!s.eingang) for (let k = 0; k < 6; k++) box(380, 1100 + k * 68, 320, 36, 4, "#d9d6cc");
     else for (let k = -2; k < 8; k++) box(k * 200, 1290, 110, 12, 4, "#d7d08a");
-    box(-400, 1510, 1900, 600, 0, "#55595f"); box(-400, 1506, 1900, 14, 0, "#8a8e95");
+    box(QX, 1510, QB, A.QUER ? 1200 : 600, 0, "#55595f"); box(QX, 1506, QB, 14, 0, "#8a8e95");
     // Laternen
     const laterne = (x, y0, y1, an = true) => { line(x, y1, x, y0, 12, "#2b2f36"); box(x - 50, y0 - 20, 100, 28, 10, "#2b2f36"); if (an) { ellipse(x, y0 + 10, 40, 10, "#ffe7b0"); ctx.save(); ctx.globalCompositeOperation = "screen"; ctx.fillStyle = lgrad(0, y0, 0, y1, [[0, "rgba(255,225,170,0.35)"], [1, "rgba(255,225,170,0.04)"]]); poly([[x - 30, y0 + 10], [x + 30, y0 + 10], [x + 160, y1], [x - 160, y1]]); ctx.fill(); ctx.restore(); A.licht(x, y0 + 60, 480, "#ffd9a0", 1.1); } };
     if (!s.eingang) laterne(s.gx ?? 230, 560, 1040); else { ellipse(540, 600, 50, 12, "#ffe7b0"); A.licht(540, 680, 420, "#ffd9a0", 1); }

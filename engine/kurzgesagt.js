@@ -392,7 +392,7 @@
     ctx.save(); ctx.globalCompositeOperation = "screen";
     const baender = [[mix(gruen, "#b98cff", 0.55), 260, 3.1, 0.6], [mix(gruen, "#4fd8ff", 0.5), 470, 1.7, 0.8], [gruen, 640, 0.0, 1.0]];
     for (const [farbe, y0, ph, st] of baender) {
-      for (let x = -600; x < 1700; x += 9) {
+      for (let x = A.QUER ? -1302 : -600; x < (A.QUER ? 2400 : 1700); x += 9) { // Querformat (17.11.): breiter
         const welle = Math.sin(x * 0.004 + t * 0.35 + ph) * 120 + Math.sin(x * 0.011 - t * 0.6 + ph * 2) * 40;
         const y = y0 + welle, h = 300 + 200 * (0.5 + 0.5 * Math.sin(x * 0.02 + t * 0.9 + ph)), a = st * (0.3 + 0.16 * Math.sin(x * 0.05 + t * 1.3 + ph));
         ctx.fillStyle = lgrad(0, y - h, 0, y + 40, [[0, rgba(farbe, 0)], [0.7, rgba(farbe, a)], [0.92, rgba(mix(farbe, "#ffffff", 0.4), a * 1.6)], [1, rgba(farbe, 0)]]);
@@ -404,15 +404,16 @@
     // ferne Berge in Schichten, hinten heller und dunstiger, mit grünem Randlicht von oben
     const schichten = [[960, "#1d3550", 0.9, 3], [1060, "#142740", 0.6, 7], [1170, "#0c1a2c", 0.35, 11]];
     for (const [basis, farbe, dunst, seed] of schichten) {
-      const r = rnd(seed), pk = []; for (let x = -700; x <= 1800; x += 130 + r() * 110) pk.push([x, basis - 60 - r() * 200]);
-      ctx.beginPath(); ctx.moveTo(-700, 2400); for (const [x, y] of pk) ctx.lineTo(x, y); ctx.lineTo(1800, 2400); ctx.closePath(); ctx.fillStyle = farbe; ctx.fill();
+      const bl = A.QUER ? -1500 : -700, br = A.QUER ? 2600 : 1800; // Querformat: Berge bis an den Rand
+      const r = rnd(seed), pk = []; for (let x = bl; x <= br; x += 130 + r() * 110) pk.push([x, basis - 60 - r() * 200]);
+      ctx.beginPath(); ctx.moveTo(bl, 2400); for (const [x, y] of pk) ctx.lineTo(x, y); ctx.lineTo(br, 2400); ctx.closePath(); ctx.fillStyle = farbe; ctx.fill();
       for (let k = 0; k < pk.length - 1; k++) line(pk[k][0], pk[k][1], pk[k + 1][0], pk[k + 1][1], 3, rgba(gruen, 0.18 * dunst));
       nebel(basis + 20, 70, "#6fa0c0", 0.16 * dunst);
     }
     // Stadtlichter am Horizont (Notstrom: nur wenige Fenster)
     if (s.stadt !== false) {
       const r = rnd(29);
-      for (let i = 0; i < 26; i++) { const x = -60 + i * 46 + r() * 20, h = 50 + r() * 150; box(x, 1240 - h, 38, h + 40, 3, "#0a1424"); for (let k = 0; k < 5; k++) if (r() < 0.22) { const wx = x + 6 + Math.floor(r() * 3) * 10, wy = 1240 - h + 10 + r() * (h - 10); box(wx, wy, 6, 8, 1, "#ffd27a"); glut(wx + 3, wy + 4, 22, "#ffc66b", 0.35); } }
+      for (let i = A.QUER ? -22 : 0; i < (A.QUER ? 48 : 26); i++) { const x = -60 + i * 46 + r() * 20, h = 50 + r() * 150; box(x, 1240 - h, 38, h + 40, 3, "#0a1424"); for (let k = 0; k < 5; k++) if (r() < 0.22) { const wx = x + 6 + Math.floor(r() * 3) * 10, wy = 1240 - h + 10 + r() * (h - 10); box(wx, wy, 6, 8, 1, "#ffd27a"); glut(wx + 3, wy + 4, 22, "#ffc66b", 0.35); } }
       { const x = 760; box(x, 1000, 16, 240, 3, "#0a1424"); circle(x + 8, 990, 6, Math.sin(t * 3) > 0 ? "#ff5b4d" : "#5a1f1a"); glut(x + 8, 990, 40, "#ff5b4d", Math.sin(t * 3) > 0 ? 0.5 : 0); } // Funkturm mit Warnlicht
       nebel(1250, 60, "#4a7090", 0.25);
     }
