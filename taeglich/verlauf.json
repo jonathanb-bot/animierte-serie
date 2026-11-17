@@ -546,6 +546,49 @@
     "lufs": -14.6,
     "dauer_s": 74.12
    }
+  },
+  {
+   "id": "mond-m004",
+   "datum": "2026-11-17",
+   "titel": "Bis zum Mond – Folge 4: Die neue Nummer eins",
+   "emoji": "🌕",
+   "serie": "Bis zum Mond (Jonathans Idee 14.11.)",
+   "stimmung": "aufbau",
+   "stimme": "Fenrir",
+   "thema": "Tag 4: 21 Städte, 56 Stockwerke (gestern 31). Stuttgart überholt Hildesheim: 4→13 (@leeon_112 „Stuttgart“ mit 6 Likes), 7 Stockwerke Vorsprung. Bremen neu und gleich Platz 2 mit 6 (Lukas schreibt sechsmal Bremen), gleichauf mit Hildesheim (seit zwei Tagen +0). Neu: Bern (erste Stadt aus der Schweiz, jetzt 3 Länder), Görlitz, Wermsdorf, Friedeburg. Cliffhanger: ein Kommentar mit vielen Likes, und die Krone wechselt wieder",
+   "stil": "leuchtend, Kulisse turm (Turmplatz mit 21 Türmen, Nahaufnahmen mit Kommentar-Sprechblasen, zwei Duelle, Rangliste, Fahrt bis zu den Wolken); neu: krone= (goldene Krone über dem Spitzenreiter)",
+   "kulissen": [
+    "turm",
+    "titel"
+   ],
+   "beschreibung": "Tag 4: Stuttgart überholt Hildesheim und trägt die Krone – sieben Stockwerke Vorsprung. Bremen ist neu und springt direkt auf Platz 2, Bern bringt die Schweiz dazu. Jeder Kommentar mit deiner Stadt ist ein Stockwerk, jedes Like darauf noch eins. Kommentier deine Stadt!",
+   "hashtags": [
+    "#biszummond",
+    "#deinestadt",
+    "#stuttgart",
+    "#bremen",
+    "#animation",
+    "#deutsch"
+   ],
+   "tags": [
+    "animation",
+    "bis zum mond",
+    "turm",
+    "stadt",
+    "stuttgart",
+    "bremen",
+    "hildesheim"
+   ],
+   "veroeffentlicht": {
+    "video": "https://raw.githubusercontent.com/jonathanb-bot/animierte-serie/youtube-upload/taeglich/mond-m004.mp4",
+    "geplant": {
+     "tiktok": "2026-11-17T20:57:00",
+     "instagram": "2026-11-17T21:25:00",
+     "youtube": "2026-11-17T21:32:00"
+    },
+    "lufs": -14.6,
+    "dauer_s": 63.42
+   }
   }
  ]
 }
