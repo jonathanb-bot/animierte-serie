@@ -1,0 +1,140 @@
+{
+ "dauer": 67.074,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "wohnring",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 5.174,
+   "emotion": "erzaehlend",
+   "text": "Three in the morning. Five red lights are blinking in your home."
+  },
+  {
+   "nr": 2,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 5.174,
+   "dauer": 4.55,
+   "emotion": "ruhig",
+   "text": "Your mom hasn't slept in two days. Her glasses sit crooked."
+  },
+  {
+   "nr": 3,
+   "typ": "wohnring",
+   "kapitel": 1,
+   "start": 9.724,
+   "dauer": 8.678,
+   "emotion": "erzaehlend",
+   "text": "Your old space station only patches itself with empty rooms. Thirty-one people live here. The yellow room is already gone."
+  },
+  {
+   "nr": 4,
+   "typ": "rechenzentrum",
+   "kapitel": 2,
+   "start": 18.402,
+   "dauer": 5.03,
+   "emotion": "erzaehlend",
+   "text": "You walk the ring. First the air filters. They hum like they've got a fever."
+  },
+  {
+   "nr": 5,
+   "typ": "wohnring",
+   "kapitel": 2,
+   "start": 23.432,
+   "dauer": 3.278,
+   "emotion": "erzaehlend",
+   "text": "Then the water. It drips from the ceiling into a bucket."
+  },
+  {
+   "nr": 6,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 26.71,
+   "dauer": 3.614,
+   "emotion": "ernst",
+   "text": "You hold the lamp. Your fingers are stiff with cold."
+  },
+  {
+   "nr": 7,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 30.324,
+   "dauer": 3.23,
+   "emotion": "ernst",
+   "text": "\"A small room won't cover all five.\""
+  },
+  {
+   "nr": 8,
+   "typ": "wohnring",
+   "kapitel": 3,
+   "start": 33.554,
+   "dauer": 5.438,
+   "emotion": "erzaehlend",
+   "text": "Ren comes down the hall. Your gardener. Green cloak, dirt under his fingernails."
+  },
+  {
+   "nr": 9,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 38.992,
+   "dauer": 3.158,
+   "emotion": "ernst",
+   "text": "\"You need a big room. You know which one.\""
+  },
+  {
+   "nr": 10,
+   "typ": "wohnring",
+   "kapitel": 3,
+   "start": 42.15,
+   "dauer": 4.046,
+   "emotion": "erzaehlend",
+   "text": "On the model, a green segment starts blinking. The garden."
+  },
+  {
+   "nr": 11,
+   "typ": "wohnring",
+   "kapitel": 3,
+   "start": 46.196,
+   "dauer": 3.734,
+   "emotion": "erzaehlend",
+   "text": "Your mom planted it when you were little. With the crooked tree in the middle."
+  },
+  {
+   "nr": 12,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 49.93,
+   "dauer": 4.742,
+   "emotion": "traurig",
+   "text": "Under that tree, you learned to walk. At three, barefoot in the dirt."
+  },
+  {
+   "nr": 13,
+   "typ": "wohnring",
+   "kapitel": 4,
+   "start": 54.672,
+   "dauer": 3.59,
+   "emotion": "erzaehlend",
+   "text": "Your mom turns away. She says one word. No."
+  },
+  {
+   "nr": 14,
+   "typ": "wohnring",
+   "kapitel": 4,
+   "start": 58.262,
+   "dauer": 4.91,
+   "emotion": "erzaehlend",
+   "text": "The red lights blink faster. The station runs the numbers. Six hours left."
+  },
+  {
+   "nr": 15,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 63.172,
+   "dauer": 3.902,
+   "emotion": "traurig",
+   "text": "Then she presses the release into your hand. It's your call."
+  }
+ ]
+}
