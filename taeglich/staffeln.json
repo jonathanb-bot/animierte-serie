@@ -1418,6 +1418,186 @@
     "taeglich-yt-s05-f07": "2026-11-18T16:06:00",
     "taeglich-yt-s05-f08": "2026-11-18T17:48:00"
    }
+  },
+  {
+   "id": "s06",
+   "datum": "2026-11-17",
+   "titel": "Ein Zimmer weniger",
+   "beschreibung": "Eure alte Raumstation repariert sich nur aus leeren Zimmern. Heute verschwindet das Zimmer deines kleinen Bruders. Und es bleibt nicht das letzte.",
+   "thema": "Sci-Fi / Zukunft (Staffelplan s06, für den Masse-Test auf 10 Folgen erweitert): alternder Wohnring einer Raumstation über einem orangefarbenen Planeten, jede Reparatur kostet ein freigegebenes, leeres Zimmer; du, deine Mutter (Stationsmechanikerin), dein kleiner Bruder Bo und Gärtner Ren bauen aus den Zimmern eine Gemeinschaftskuppel",
+   "hauptstimmung": "traurig",
+   "vorbild": "Dinge Erklärt – Kurzgesagt (Zukunftsszenario, Zahlen im Bild, Hoffnung am Ende), dazu illumeably (persönlicher, konkreter Moment)",
+   "hashtags": [
+    "#scifi",
+    "#animation",
+    "#geschichte",
+    "#storytime",
+    "#raumstation",
+    "#familie",
+    "#deutsch"
+   ],
+   "tags": [
+    "animation",
+    "scifi",
+    "geschichte",
+    "story",
+    "raumstation",
+    "familie",
+    "deutsch"
+   ],
+   "emoji": "🪐",
+   "kulissen_neu": [
+    "wohnring"
+   ],
+   "analyse": {
+    "quelle": "taeglich/analyse/aktuell.md (8.11.2026) – allgemeine Punkte und Punkt 11 für s06",
+    "mehr_davon": [
+     "1/11: Satz 1 nennt deinen Verlust mit du/dein (Zimmer deines Bruders, Garten deiner Mutter, deine Wohnung), die Stationsregel erst in Satz 2–3",
+     "2: sofortige Steigerung in Satz 2–3 (Figur/Gesicht + Folge), keine Vorgeschichte",
+     "3: erstes Bild = der bedrohte Raum groß mit zoom-rein und Hook-Text, Gesicht als 2. Bild",
+     "4: jede Folge erklärt Station und Regel in einem Satz (Fremde verstehen jede Folge)",
+     "5: Familie als Herz: Mutter, Bruder Bo, Küchentisch (F3, F6, F7, F10)",
+     "6: Hook-Text in allen 10 Folgen"
+    ],
+    "weniger_davon": [
+     "7: kein Einstieg mit Technik oder Regel",
+     "8: keine Aufzählung im ersten Satz"
+    ],
+    "experiment": "E7: Sci-Fi-Zukunftswelt (Raumstation, erfundene Technik) mit Familienkern gegen Alltags-/Horrorwelten der Staffeln davor. Dazu E4 (gerade Staffel mit Untertiteln) und E-Masse (jede Folge einzeln, 9 Posts am Tag).",
+    "thema": "Staffelplan s06 (Jonathan 5.11.), auf 10 × 62–75 s erweitert (Masse-Test 16.11.)"
+   },
+   "boegen": [
+    "Bos Größenstriche auf dem Klebeband (F1) → Bo nimmt nur das Band mit (F6) → achter Strich am Tisch in der Kuppel (F10)",
+    "Saatgut und Setzlinge aus dem Garten (F3) → grüner Keimling zwischen Bos Modellen (F10)",
+    "Kratzer im Küchentisch von dir mit sechs (F6) → der Tisch ist das eine Möbelstück für alle (F7) → Bos Pappküche mit den Kratzern (F10)",
+    "Abdruck einer Kiste unter deinem Bett (F6) → Bo bringt die verschlossene Kiste (F9) → Pappmodelle aller verlorenen Zimmer (F10)",
+    "Kürzel A. auf dem alten Plan (F4) → Geständnis deiner Mutter (F4/F5)"
+   ],
+   "ueberraschung": "Bo hat jedes verlorene Zimmer aus dem Gedächtnis in Pappe nachgebaut, dazu ein Zimmer, das es nie gab, mit deinem Namen (angedeutet: Bo zeichnet aus dem Kopf, Kistenabdruck, verschlossene Kiste).",
+   "cliffhanger": [
+    "Gefahr",
+    "Entscheidung",
+    "Entdeckung",
+    "Geständnis",
+    "Entscheidung",
+    "Rätsel",
+    "Entscheidung",
+    "Gefahr",
+    "Ankunft",
+    "Schluss mit Rätsel"
+   ],
+   "folgen": [
+    {
+     "nr": 1,
+     "titel": "Das gelbe Kinderzimmer",
+     "stimmung": "spannend",
+     "beschreibung": "Heute Nacht löst sich das Zimmer deines kleinen Bruders auf. Für immer.",
+     "familie": true,
+     "hooktext": true,
+     "hook": "dein_verlust"
+    },
+    {
+     "nr": 2,
+     "titel": "Fünf rote Lichter",
+     "stimmung": "duester",
+     "beschreibung": "Drei Uhr nachts. In deinem Zuhause blinken fünf rote Lichter.",
+     "familie": true,
+     "hooktext": true,
+     "hook": "dein_verlust"
+    },
+    {
+     "nr": 3,
+     "titel": "Ein Garten passt in eine Hand",
+     "stimmung": "traurig",
+     "beschreibung": "Du musst den Garten deiner Mutter aufgeben. Bis sechs Uhr früh.",
+     "familie": true,
+     "hooktext": true,
+     "hook": "dein_verlust"
+    },
+    {
+     "nr": 4,
+     "titel": "Der alte Plan",
+     "stimmung": "spannend",
+     "beschreibung": "Dein Zuhause hätte schon vor elf Jahren verschrottet werden sollen.",
+     "familie": false,
+     "hooktext": true,
+     "hook": "dein_verlust"
+    },
+    {
+     "nr": 5,
+     "titel": "Der verschobene Abschied",
+     "stimmung": "duester",
+     "beschreibung": "Deine Mutter wusste seit drei Jahren, dass euer Zuhause stirbt.",
+     "familie": true,
+     "hooktext": true,
+     "hook": "dein_verlust"
+    },
+    {
+     "nr": 6,
+     "titel": "Eine Kiste pro Person",
+     "stimmung": "traurig",
+     "beschreibung": "Morgen wird deine Wohnung zerlegt. Du darfst eine Kiste mitnehmen.",
+     "familie": true,
+     "hooktext": true,
+     "hook": "dein_verlust"
+    },
+    {
+     "nr": 7,
+     "titel": "Der Tisch bleibt",
+     "stimmung": "warm",
+     "beschreibung": "Von deiner ganzen Wohnung darfst du nur ein Möbelstück retten.",
+     "familie": true,
+     "hooktext": true,
+     "hook": "dein_verlust"
+    },
+    {
+     "nr": 8,
+     "titel": "Der Tag der Zerlegung",
+     "stimmung": "spannend",
+     "beschreibung": "Heute siehst du zu, wie deine Wohnung in Kacheln zerfällt.",
+     "familie": false,
+     "hooktext": true,
+     "hook": "dein_verlust"
+    },
+    {
+     "nr": 9,
+     "titel": "Platz für alle",
+     "stimmung": "warm",
+     "beschreibung": "Noch sechs Stunden Luft. Und euer Gärtner gibt sein Zimmer nicht her.",
+     "familie": false,
+     "hooktext": true,
+     "hook": "dein_verlust"
+    },
+    {
+     "nr": 10,
+     "titel": "Die Stadt unter dem Tisch",
+     "stimmung": "freudig",
+     "beschreibung": "Deine Station ist gerettet. Aber nichts hier fühlt sich nach Zuhause an.",
+     "familie": true,
+     "hooktext": true,
+     "hook": "dein_verlust"
+    }
+   ],
+   "format": {
+    "folgen": 10,
+    "laengenband": "masse 62–75 s",
+    "tiktok_teile": "einzeln (Masse-Test)"
+   },
+   "vielfalt": {
+    "welt": "Wohnring einer alternden Raumstation über einem orangefarbenen Planeten, Werkstatt mit Hologramm, Gemeinschaftskuppel",
+    "genre": "Sci-Fi / Zukunft",
+    "erzaehlform": "Reparaturetappen über zwei Tage und eine Nacht, jede Folge ein Raum, der verschwindet",
+    "hook_art": "direkte Aussage über deinen Verlust",
+    "vorbild_kurz": "Kurzgesagt + illumeably",
+    "figuren_fokus": "Familie: deine Mutter, dein kleiner Bruder Bo, Gärtner Ren, Frau Ilse",
+    "laenge": "ca. 62–75 s",
+    "folgen": 10,
+    "tiktok": "einzeln",
+    "experiment": "E7 Sci-Fi-Welt (+ E4 mit Untertiteln, E-Masse)",
+    "neue_kulissen": [
+     "wohnring"
+    ]
+   }
   }
  ]
 }

@@ -1,0 +1,57 @@
+# Ein Zimmer weniger – Folge 9: Platz für alle
+@musik musik/s06-f09.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung warm
+@vortrag lebendig
+@klang studio
+@mund zitate
+@einblenden aus
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette gruen
+@zeit nacht
+
+== Hook ==
+// Wow-Bild: Ring-Gang mit rotem Alarm
+[wohnring grau=1,2,3,4 warn=10 alarm s06_ren du palette=lila zoom-rein hooktext="NOCH 6 STUNDEN LUFT" ton=sirene_fern] Noch sechs Stunden Luft. Und euer Gärtner gibt sein Zimmer nicht her.
+// Station außen
+[wohnring ansicht=aussen grau=9 palette=orange zoom-raus ein="Zimmer>NUR LEERE ZIMMER>schluessel" ein_y=1500] Eure Raumstation braucht ein letztes leeres Zimmer. Rens Zimmer.
+// Kalter Schweiß
+[gesicht du ort=wohnring warn=10 angst palette=lila zoom-rein ton=herzschlag] Kalter Schweiß läuft dir den Rücken herunter. Du klopfst an seine Tür.
+
+== Wiedererkennen ==
+// Rens Zimmer: Pflanzen, Ruhe
+[wohnring ansicht=zimmer farbe=#3a8a7a beete du s06_ren palette=tuerkis zoom-rein ein="still>DER LEISESTE RAUM" ein_y=420] Drinnen ist es still. Nur das Summen der Pflanzenlampen.
+// Ren, Figurenstimme
+[gesicht s06_ren ort=wohnring ansicht=zimmer farbe=#3a8a7a beete traurig figurstimme=mann_alt sprecher=s06_ren palette=tuerkis] „Wo schläft Ilse, wenn hier alles weg ist?“
+// Frau Ilse
+[wohnring ansicht=zimmer farbe=#3a8a7a beete s06_ilse palette=tuerkis schwenk-rechts ein="Ilse>FRAU ILSE · 81" ein_y=420] Frau Ilse ist einundachtzig. Jedes Geräusch tut ihr in den Ohren weh.
+// Ilse
+[gesicht s06_ilse ort=wohnring ansicht=zimmer farbe=#3a8a7a beete traurig palette=tuerkis] Nur hier, zwischen Rens Pflanzen, kann sie seit Jahren schlafen.
+
+== Steigerung ==
+// Kuppelplan ohne ruhigen Platz
+[wohnring ansicht=plan grau=1,2,3,4,5,6,7,8,9 markiert=10 palette=blau zoom-rein ein="ruhigen>KEIN RUHIGER PLATZ" ein_y=420] Du schaust auf den Kuppelplan. Er hat recht. Für Ilse gibt es keinen ruhigen Platz.
+// Deine Werkbank-Ecke
+[wohnring ansicht=kuppel nischen tisch du palette=orange zoom-rein ein="Werkbank>DEINE WERKBANK" ein_y=420] Dann denkst du an deine Ecke. Die mit deiner Werkbank, hinten am Glas.
+// Du entscheidest
+[gesicht du ort=wohnring ansicht=kuppel entschlossen palette=orange] Du hast sie dir gewünscht, seit du zwölf bist.
+// Du gibst sie her
+[objekt objekte="schluessel:Deine Ecke|herz:Ilses Nische" gross="DU GIBST SIE HER" palette=orange zoom-rein] Du gibst sie her. Für eine ruhige Nische.
+// Trennwand
+[wohnring ansicht=kuppel nischen pflanzen du s06_ren palette=gruen zoom-rein ein="Trennwand>DOPPELTE WAND" ein_y=420 ton=haemmern] Ihr baut eine doppelte Trennwand. Dahinter ist es leise wie im Garten.
+
+== Wendung ==
+// Ren gibt frei
+[gesicht s06_ren ort=wohnring ansicht=kuppel froh figurstimme=mann_alt sprecher=s06_ren palette=gruen] „Dann gehört mein Zimmer euch.“
+// Plan alles grau, Licht grün
+[wohnring ansicht=plan grau=1,2,3,4,5,6,7,8,9,10 palette=tuerkis zoom-rein ein="grün>ALLES GRÜN" ein_y=420 ton=strom_an] Das letzte Feld wird grau. Und alle roten Lichter werden grün.
+// Wow-Bild: Kuppel, alle ziehen ein
+[wohnring ansicht=kuppel tisch nischen lichter pflanzen mama s06_ilse palette=orange zoom-raus ein="einunddreißig>#31 IN DER KUPPEL" ein_y=420 ton=schritte] Die letzte Familie tritt durch die Kuppeltür. Einunddreißig Menschen an einem Ort.
+
+== Cliffhanger ==
+// Bo kommt mit der Kiste
+[wohnring ansicht=kuppel tisch nischen s06_bo palette=orange zoom-rein ton=hit ein="Kiste>BOS KISTE>kiste" ein_y=420] Als Letzter kommt Bo. Mit der verschlossenen Kiste, die unter deinem Bett stand.

@@ -1,0 +1,55 @@
+# Ein Zimmer weniger – Folge 7: Der Tisch bleibt
+@musik musik/s06-f07.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung warm
+@vortrag lebendig
+@klang studio
+@mund zitate
+@einblenden aus
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette orange
+@zeit nacht
+
+== Hook ==
+// Wow-Bild: Wohnung, Möbel, Bullauge
+[wohnring ansicht=zimmer farbe=#e8685a tisch kratzer kisten du mama palette=orange zoom-rein hooktext="NUR 1 MÖBELSTÜCK DARF BLEIBEN" ton=summen] Von deiner ganzen Wohnung darfst du nur ein Möbelstück retten.
+// Station außen
+[wohnring ansicht=aussen grau=3 palette=orange zoom-raus ein="Möbel>1 MÖBEL PRO FAMILIE" ein_y=1500] Eure Raumstation baut aus euren Zimmern die neue Kuppel. Für Möbel ist kaum Platz.
+// Bo will alles
+[gesicht s06_bo ort=wohnring ansicht=zimmer farbe=#e8685a kisten wuetend figurstimme=kind sprecher=s06_bo palette=orange] „Ich nehm die Schranktüren. Alle.“
+
+== Wiedererkennen ==
+// Schranktüren
+[wohnring ansicht=zimmer farbe=#e8685a kisten s06_bo palette=orange schwenk-rechts ein="Schranktüren>#6 SCHRANKTÜREN" ein_y=420] Auf die Schranktüren hat Bo jedes Jahr Sterne geklebt.
+// Mama braucht Arbeitsfläche
+[wohnring ansicht=zimmer farbe=#e8685a tisch mama palette=orange zoom-rein ein="Werkbank>WERKBANK?" ein_y=420] Deine Mutter braucht ihre Werkbank. Ohne die repariert keiner mehr etwas.
+// Nachbarn in der Kuppel
+[wohnring ansicht=kuppel lichter s06_ren s06_ilse palette=orange schwenk-links ein="Familien>#9 FAMILIEN" ein_y=420 ton=schritte] Und in der Kuppel warten neun Familien. Jede will auch etwas retten.
+
+== Steigerung ==
+// Du schaust auf den Tisch
+[gesicht du ort=wohnring ansicht=zimmer farbe=#e8685a tisch kratzer froh palette=orange] Dann schaust du auf den Küchentisch. Auf die Kratzer von dir mit sechs.
+// Suppe am Tisch, Erinnerung
+[wohnring ansicht=zimmer farbe=#e8685a tisch kratzer suppe du mama s06_bo sitzen palette=orange zoom-rein ein="jeden>JEDEN ABEND>herz" ein_y=420] An diesem Tisch habt ihr jeden Abend gegessen. Es riecht immer noch nach Suppe.
+// Du sagst es
+[gesicht du ort=wohnring ansicht=zimmer farbe=#e8685a tisch entschlossen palette=orange] Du sagst nur: Der Tisch bleibt. Für alle.
+// Tisch durch die Tür
+[wohnring grau=1,2,3 du mama palette=orange schwenk-rechts ein="schiebt>DER TISCH BLEIBT" ein_y=420 ton=moebel_ruecken] Zu dritt schiebt ihr ihn durch den Ring. Die Beine schaben über den Boden.
+// Wow-Bild: Kuppel mit Tisch und Nischen
+[wohnring ansicht=kuppel tisch nischen lichter pflanzen palette=orange zoom-raus ein="Schlafnischen>#31 SCHLAFNISCHEN" ein_y=420] In der Kuppel spannt ihr Stoffbahnen. Einunddreißig Schlafnischen um einen Tisch.
+
+== Wendung ==
+// Regeln mit den Nachbarn
+[objekt objekte="herz:Eine Nische|uhr:Ruhe ab 22 Uhr|schluessel:Tisch für alle" gross="EURE REGELN" palette=orange zoom-rein] Mit den Nachbarn legt ihr Regeln fest. Eine Nische pro Person. Ruhe ab zweiundzwanzig Uhr. Der Tisch gehört allen.
+// Bo zeichnet unter dem Tisch
+[wohnring ansicht=kuppel tisch nischen s06_bo palette=orange zoom-rein ein="Zimmer>BO ZEICHNET SEIN ZIMMER" ein_y=420 ton=papier] Bo kriecht unter den Tisch und zeichnet sein gelbes Zimmer. Aus dem Kopf.
+// Mama legt den Arm um dich
+[wohnring ansicht=kuppel tisch nischen du mama palette=orange schwenk-links] Deine Mutter legt den Arm um dich. Ihr sagt beide nichts.
+
+== Cliffhanger ==
+// Freigabe, Wohnung wird grau
+[wohnring ansicht=plan grau=1,2,3 markiert=4 du palette=blau zoom-rein ton=hit ein="grau>EURE WOHNUNG: GRAU" ein_y=420] Dann setzt du deine Freigabe neben den Namen deiner Mutter. Eure Wohnung wird im Plan grau.

@@ -1,0 +1,55 @@
+# Ein Zimmer weniger – Folge 6: Eine Kiste pro Person
+@musik musik/s06-f06.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung traurig
+@vortrag lebendig
+@klang studio
+@mund zitate
+@einblenden aus
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette rosa
+@zeit nacht
+
+== Hook ==
+// Wow-Bild: Wohnung mit Kisten, Bullauge
+[wohnring ansicht=zimmer farbe=#e8685a tisch kisten du palette=rosa zoom-rein hooktext="EINE KISTE. DEIN GANZES LEBEN." ton=summen] Morgen wird deine Wohnung zerlegt. Du darfst eine Kiste mitnehmen.
+// Kiste
+[objekt objekte="kiste:Deine Kiste" gross="60 × 40 CM" palette=rosa zoom-rein ein="eine>1 KISTE PRO PERSON>kiste" ein_y=1500] Eine Kiste pro Person. Mehr Platz hat die Kuppel nicht.
+// Station außen
+[wohnring ansicht=aussen grau=2 palette=orange zoom-raus ein="Zimmer>NUR LEERE ZIMMER>schluessel" ein_y=1500] Eure Raumstation braucht leere Zimmer, um zu überleben. Jetzt ist eures dran.
+
+== Wiedererkennen ==
+// Du hältst Sachen in der Hand
+[gesicht du ort=wohnring ansicht=zimmer farbe=#e8685a kisten traurig palette=rosa] Du nimmst etwas in die Hand. Legst es weg. Nimmst es wieder.
+// Bilder an der Wand
+[wohnring ansicht=zimmer farbe=#e8685a bilder kisten du palette=rosa schwenk-rechts ein="Zeichnungen>#43 ZEICHNUNGEN" ein_y=420] Dreiundvierzig Zeichnungen von dir. Dein erster Raumanzug-Aufnäher. Der Becher mit dem Sprung.
+// Bo packt schnell
+[wohnring ansicht=zimmer farbe=#e8685a kisten s06_bo palette=rosa zoom-rein ein="Bo>BO: FERTIG" ein_y=420 ton=papier] Bo ist nach fünf Minuten fertig. Er hat sein Band. Mehr will er nicht.
+// Mama packt Werkzeug
+[wohnring ansicht=zimmer farbe=#e8685a kisten mama palette=rosa schwenk-links ein="Werkzeug>NUR WERKZEUG" ein_y=420] Deine Mutter packt nur Werkzeug. Als hätte sie das Abschiednehmen geübt.
+
+== Steigerung ==
+// Du sitzt am Küchentisch
+[wohnring ansicht=zimmer farbe=#e8685a tisch kratzer du sitzen palette=rosa zoom-rein ein="Kratzer>KRATZER IM TISCH" ein_y=420] Um Mitternacht sitzt du allein am Küchentisch. Unter deinen Fingern raue Kratzer.
+// Erinnerung
+[gesicht du ort=wohnring ansicht=zimmer farbe=#e8685a tisch traurig palette=rosa] Die hast du mit sechs reingeritzt. Deine Mutter hat geschimpft und dann gelacht.
+// Mama kommt dazu
+[wohnring ansicht=zimmer farbe=#e8685a tisch kratzer mama du sitzen palette=orange zoom-rein ton=schritte] Deine Mutter setzt sich zu dir. Sie bringt zwei Becher Tee.
+// Mama, Figurenstimme
+[gesicht mama ort=wohnring ansicht=zimmer farbe=#e8685a tisch traurig figurstimme=frau sprecher=mama palette=orange] „Ich will auch alles behalten. Jedes Ding.“
+// Ihr redet
+[wohnring ansicht=zimmer farbe=#e8685a tisch du mama sitzen palette=orange schwenk-rechts ein="Stunden>ZWEI STUNDEN>herz" ein_y=420] Ihr redet zwei Stunden. So lange wie seit Monaten nicht.
+
+== Wendung ==
+// Du gehst zu Bos Zimmer
+[wohnring grau=1,2 palette=lila zoom-rein ton=tuer_zu] Danach willst du nach Bo sehen. Seit sein Zimmer weg ist, schläft er bei dir.
+// Staub unter deinem Bett
+[wohnring ansicht=zimmer farbe=#5aa8f2 bett palette=blau zoom-rein ein="Abdruck>ABDRUCK IM STAUB" ein_y=420] Bo schläft. Unter deinem Bett ist ein Abdruck im Staub. Ein sauberes Rechteck.
+
+== Cliffhanger ==
+// Leere Stelle
+[gesicht du ort=wohnring ansicht=zimmer farbe=#5aa8f2 misstrauisch palette=blau zoom-rein ton=hit] Da stand eine Kiste von Bo. Eine, die du nie gesehen hast. Und jetzt ist sie weg.

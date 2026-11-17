@@ -1,0 +1,55 @@
+# Ein Zimmer weniger – Folge 2: Fünf rote Lichter
+@musik musik/s06-f02.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung duester
+@vortrag lebendig
+@klang studio
+@mund zitate
+@einblenden aus
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette lila
+@zeit nacht
+
+== Hook ==
+// Wow-Bild: Ring-Gang mit fünf Warnlichtern
+[wohnring grau=1 warn=2,3,4,5,6 alarm palette=lila zoom-rein hooktext="5 ROTE LICHTER IN DEINEM ZUHAUSE" ton=sirene_fern] Drei Uhr nachts. In deinem Zuhause blinken fünf rote Lichter.
+// Mama mit Werkzeug
+[gesicht mama ort=wohnring warn=3 muede palette=lila zoom-rein] Deine Mutter hat seit zwei Tagen nicht geschlafen. Ihre Brille sitzt schief.
+// Station außen, ein Segment grau
+[wohnring ansicht=aussen grau=1 palette=orange zoom-raus ein="Zimmern>NUR LEERE ZIMMER>schluessel" ein_y=1500] Eure alte Raumstation flickt sich nur aus leeren Zimmern. Das gelbe ist schon weg.
+
+== Wiedererkennen ==
+// Lebenserhaltung
+[rechenzentrum kern farbe=#ff5a3d palette=lila schwenk-rechts ein="Luft>LUFTFILTER: 61 %" ein_y=420 ton=summen] Ihr lauft den Ring ab. Zuerst die Luftfilter. Sie brummen, als hätten sie Fieber.
+// Wasserleitung tropft
+[wohnring warn=4 grau=1 palette=blau zoom-rein ein="Wasser>WASSER: LECK>tropfen" ton=tropfen] Dann das Wasser. Aus der Decke tropft es in einen Eimer.
+// Du hältst die Lampe
+[gesicht du ort=wohnring warn=4 besorgt palette=blau] Du hältst die Lampe. Deine Finger sind steif vor Kälte.
+// Mama, Figurenstimme
+[gesicht mama ort=wohnring besorgt figurstimme=frau sprecher=mama palette=blau] „Für alle fünf Schäden reicht kein kleines Zimmer.“
+
+== Steigerung ==
+// Ren kommt dazu
+[wohnring du mama s06_ren grau=1 warn=5 palette=lila schwenk-links ein="Ren>REN · EUER GÄRTNER" ein_y=420 ton=schritte] Ren kommt den Gang herunter. Euer Gärtner. Grüner Umhang, Erde unter den Fingernägeln.
+// Ren, Figurenstimme
+[gesicht s06_ren ort=wohnring entschlossen figurstimme=mann_alt sprecher=s06_ren palette=lila] „Ihr braucht einen großen Raum. Ihr wisst, welchen.“
+// Hologramm: grünes Feld blinkt
+[wohnring ansicht=plan grau=1 markiert=2 palette=blau zoom-rein ein="Garten>DER GARTEN" ein_y=420 ton=ui_ding] Im Modell blinkt ein grünes Feld. Der Garten.
+// Wow-Bild: Garten unter Pflanzenlicht
+[wohnring ansicht=zimmer farbe=#2e6a4a beete baum palette=gruen zoom-raus ein="Baum>DEIN KINDERBAUM" ein_y=420] Den hat deine Mutter gepflanzt, als du klein warst. Mit dem krummen Baum in der Mitte.
+// Unter dem Baum
+[gesicht du ort=wohnring ansicht=zimmer farbe=#2e6a4a beete baum traurig palette=gruen] Unter diesem Baum hast du laufen gelernt. Mit drei, barfuß in der Erde.
+
+== Wendung ==
+// Mama dreht sich weg
+[wohnring ansicht=zimmer farbe=#2e6a4a beete baum mama palette=gruen schwenk-rechts ein="Nein>NICHT DER GARTEN" ein_y=420] Deine Mutter dreht sich weg. Sie sagt nur ein Wort. Nein.
+// Warnlicht wird schneller
+[wohnring grau=1 warn=2,3,4,5,6 alarm palette=lila zoom-rein ein="sechs>NOCH 6 STUNDEN>uhr" ein_y=420 ton=herzschlag] Die roten Lichter blinken schneller. Die Station rechnet. Noch sechs Stunden.
+
+== Cliffhanger ==
+// Mama schiebt dir das Tablett hin
+[gesicht mama ort=wohnring ansicht=zimmer farbe=#2e6a4a beete baum traurig palette=gruen zoom-rein ton=hit] Dann drückt sie dir die Freigabe in die Hand. Du sollst entscheiden.

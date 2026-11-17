@@ -1,0 +1,59 @@
+# Ein Zimmer weniger – Folge 10: Die Stadt unter dem Tisch
+@musik musik/s06-f10.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung freudig
+@vortrag lebendig
+@klang studio
+@mund zitate
+@einblenden aus
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette orange
+@zeit nacht
+
+== Hook ==
+// Wow-Bild: Kuppel am Abend
+[wohnring ansicht=kuppel tisch nischen lichter pflanzen du palette=orange zoom-rein hooktext="GERETTET. ABER NICHT ZUHAUSE." ton=summen] Deine Station ist gerettet. Aber nichts hier fühlt sich nach Zuhause an.
+// Station außen, Kuppel hell
+[wohnring ansicht=aussen grau=10 kuppel_hell palette=orange zoom-raus ein="Kuppel>ALLE IN DER KUPPEL" ein_y=1500] Euer alter Ring ist dunkel. Nur die Kuppel leuchtet.
+// Du in deiner Nische
+[gesicht du ort=wohnring ansicht=kuppel nischen traurig palette=orange] Deine Nische riecht nach fremdem Stoff. Du kannst nicht schlafen.
+
+== Wiedererkennen ==
+// Brot auf dem Tisch
+[wohnring ansicht=kuppel tisch brot nischen lichter mama s06_ren palette=orange zoom-rein ein="Brot>FRISCHES BROT" ein_y=420] Am Abend backt Ren Brot. Der Duft zieht durch die ganze Kuppel.
+// Du isst
+[gesicht du ort=wohnring ansicht=kuppel froh palette=orange] Du reißt ein Stück ab. Es ist noch warm und knackt.
+// Kein Umbauplan
+[wohnring ansicht=kuppel tisch brot du mama sitzen palette=orange schwenk-rechts ein="Plan>HEUTE KEIN PLAN>herz" ein_y=420] Heute plant niemand etwas. Ihr sitzt einfach am Tisch.
+// Mama, Figurenstimme
+[gesicht mama ort=wohnring ansicht=kuppel froh figurstimme=frau sprecher=mama palette=orange] „Zum ersten Mal seit Jahren repariere ich nichts.“
+
+== Steigerung ==
+// Bo öffnet die Kiste
+[objekt objekte="kiste:Bos Kiste" gross="ENDLICH OFFEN" palette=orange zoom-rein ton=schloss] Dann stellt Bo seine Kiste auf den Tisch. Er öffnet das Schloss.
+// Wow-Bild: Pappstadt unter dem Tisch
+[wohnring ansicht=kuppel tisch stadt lichter nischen palette=orange zoom-raus ein="Zimmer>#10 ZIMMER AUS PAPPE" ein_y=420] Darin sind Zimmer. Aus Pappe. Jedes verlorene Zimmer der Station.
+// Gelbes Zimmer
+[wohnring ansicht=zimmer farbe=#f2c23a striche bett bilder palette=orange zoom-rein ein="gelbe>DAS GELBE ZIMMER" ein_y=420] Sein gelbes Zimmer. Der Garten. Eure rote Küche mit den Kratzern im Tisch.
+// Bo, Figurenstimme
+[gesicht s06_bo ort=wohnring ansicht=kuppel froh figurstimme=kind sprecher=s06_bo palette=orange] „Ich hab sie gemalt, bevor sie weg waren.“
+// Mama lacht und weint
+[gesicht mama ort=wohnring ansicht=kuppel traurig palette=orange] Deine Mutter lacht und weint gleichzeitig.
+// Ihr baut die Stadt
+[wohnring ansicht=kuppel tisch stadt lichter du mama s06_bo palette=orange schwenk-links ein="Stadt>EINE STADT>herz" ein_y=420 ton=papier] Ihr stellt die Zimmer unter den Tisch. Eine kleine Stadt.
+
+== Wendung ==
+// Keimling
+[wohnring ansicht=kuppel tisch stadt keimling palette=gruen zoom-rein ein="Keimling>ERSTER KEIMLING" ein_y=420] Dazwischen steht ein Becher aus dem Garten. Ein grüner Keimling.
+// Bo misst sich am Band
+[objekt objekte="messband:Bos Band" gross="ACHTER STRICH" palette=orange zoom-rein ein="acht>STRICH NR. 8" ein_y=1500] Bo hängt sein Band an den Tisch. Du malst den achten Strich.
+// Du schaust genauer
+[gesicht du ort=wohnring ansicht=kuppel misstrauisch palette=orange zoom-rein] Dann siehst du noch ein Zimmer.
+
+== Cliffhanger ==
+// Zimmer mit deinem Namen
+[wohnring ansicht=kuppel tisch stadt keimling lichter palette=rosa zoom-rein ton=hit ein="morgen>„MORGEN“" ein_y=420] Eins, das es nie gab. Auf dem Schild steht dein Name. Und das Wort: morgen.

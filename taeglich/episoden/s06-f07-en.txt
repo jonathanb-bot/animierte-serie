@@ -1,0 +1,56 @@
+# One Room Less – Episode 7: The Table Stays
+@musik musik/s06-f07-en.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung warm
+@vortrag lebendig
+@klang studio
+@mund zitate
+@einblenden aus
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette orange
+@zeit nacht
+@sprache en
+
+== Hook ==
+// Wow-Bild: Wohnung, Möbel, Bullauge
+[wohnring ansicht=zimmer farbe=#e8685a tisch kratzer kisten du mama palette=orange zoom-rein hooktext="ONLY 1 PIECE OF FURNITURE STAYS" ton=summen] Out of your whole apartment, you can save one piece of furniture.
+// Station außen
+[wohnring ansicht=aussen grau=3 palette=orange zoom-raus ein="furniture>1 PIECE PER FAMILY" ein_y=1500] Your space station is building the new dome out of your rooms. There's hardly space for furniture.
+// Bo will alles
+[gesicht s06_bo ort=wohnring ansicht=zimmer farbe=#e8685a kisten wuetend figurstimme=kind sprecher=s06_bo palette=orange] "I'm taking the closet doors. All of them."
+
+== Wiedererkennen ==
+// Schranktüren
+[wohnring ansicht=zimmer farbe=#e8685a kisten s06_bo palette=orange schwenk-rechts ein="closet>#6 CLOSET DOORS" ein_y=420] Every year, Bo stuck stars on those closet doors.
+// Mama braucht Arbeitsfläche
+[wohnring ansicht=zimmer farbe=#e8685a tisch mama palette=orange zoom-rein ein="workbench>WORKBENCH?" ein_y=420] Your mom needs her workbench. Without it, nobody fixes anything anymore.
+// Nachbarn in der Kuppel
+[wohnring ansicht=kuppel lichter s06_ren s06_ilse palette=orange schwenk-links ein="families>#9 FAMILIES" ein_y=420 ton=schritte] And in the dome, nine families are waiting. Every one of them wants to save something too.
+
+== Steigerung ==
+// Du schaust auf den Tisch
+[gesicht du ort=wohnring ansicht=zimmer farbe=#e8685a tisch kratzer froh palette=orange] Then you look at the kitchen table. At the scratches you made when you were six.
+// Suppe am Tisch, Erinnerung
+[wohnring ansicht=zimmer farbe=#e8685a tisch kratzer suppe du mama s06_bo sitzen palette=orange zoom-rein ein="every>EVERY NIGHT>herz" ein_y=420] You ate at this table every night. It still smells like soup.
+// Du sagst es
+[gesicht du ort=wohnring ansicht=zimmer farbe=#e8685a tisch entschlossen palette=orange] All you say is: The table stays. For everyone.
+// Tisch durch die Tür
+[wohnring grau=1,2,3 du mama palette=orange schwenk-rechts ein="push>THE TABLE STAYS" ein_y=420 ton=moebel_ruecken] The three of you push it along the ring. The legs scrape across the floor.
+// Wow-Bild: Kuppel mit Tisch und Nischen
+[wohnring ansicht=kuppel tisch nischen lichter pflanzen palette=orange zoom-raus ein="sleeping>#31 SLEEPING NOOKS" ein_y=420] In the dome, you hang fabric panels. Thirty-one sleeping nooks around one table.
+
+== Wendung ==
+// Regeln mit den Nachbarn
+[objekt objekte="herz:One nook|uhr:Quiet after 10|schluessel:Table for all" gross="YOUR RULES" palette=orange zoom-rein] With the neighbors, you set the rules. One nook per person. Quiet after ten. The table belongs to everyone.
+// Bo zeichnet unter dem Tisch
+[wohnring ansicht=kuppel tisch nischen s06_bo palette=orange zoom-rein ein="room>BO DRAWS HIS ROOM" ein_y=420 ton=papier] Bo crawls under the table and draws his yellow room. From memory.
+// Mama legt den Arm um dich
+[wohnring ansicht=kuppel tisch nischen du mama palette=orange schwenk-links] Your mom puts her arm around you. Neither of you says a word.
+
+== Cliffhanger ==
+// Freigabe, Wohnung wird grau
+[wohnring ansicht=plan grau=1,2,3 markiert=4 du palette=blau zoom-rein ton=hit ein="gray>YOUR HOME: GRAY" ein_y=420] Then you sign your release next to your mom's name. On the plan, your apartment turns gray.

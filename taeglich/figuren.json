@@ -165,5 +165,30 @@
   "jacke": "#22345e",
   "hose": "#1e2434",
   "bart": "#b4b2ae"
+ },
+ "s06_bo": {
+  "haar": "wuschel",
+  "haare": "#2a2420",
+  "haut": "#e9c09a",
+  "jacke": "#f2c23a",
+  "hose": "#3a4f8a",
+  "groesse": 0.72
+ },
+ "s06_ren": {
+  "haar": "seite",
+  "haare": "#d8d4cf",
+  "haut": "#c99a74",
+  "jacke": "#3f8a4a",
+  "hose": "#3a3a35",
+  "bart": "#d8d4cf",
+  "mantel": "#2f6e3c"
+ },
+ "s06_ilse": {
+  "haar": "dutt",
+  "haare": "#cfc8c0",
+  "haut": "#efcfb4",
+  "jacke": "#7a5aa8",
+  "hose": "#33363f",
+  "brille": "#2a2a2e"
  }
 }

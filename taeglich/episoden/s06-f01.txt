@@ -1,0 +1,59 @@
+# Ein Zimmer weniger – Folge 1: Das gelbe Kinderzimmer
+@musik musik/s06-f01.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung spannend
+@vortrag lebendig
+@klang studio
+@mund zitate
+@einblenden aus
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette orange
+@zeit nacht
+
+== Hook ==
+// Wow-Bild: Bos gelbes Zimmer mit Bullauge und Planet
+[wohnring ansicht=zimmer farbe=#f2c23a striche bett bilder du s06_bo palette=orange zoom-rein hooktext="HEUTE NACHT VERSCHWINDET SEIN ZIMMER" ton=summen] Heute Nacht löst sich das Zimmer deines kleinen Bruders auf. Für immer.
+// Bo hält sich am Türrahmen fest
+[gesicht s06_bo ort=wohnring ansicht=zimmer farbe=#f2c23a traurig palette=orange zoom-rein] Bo ist neun. Er hält sich am Türrahmen fest, als würde das Zimmer sonst wegfliegen.
+// Mama, Figurenstimme
+[gesicht mama ort=wohnring besorgt figurstimme=frau sprecher=mama palette=lila] „Der Wärmeregler ist kaputt. Wir brauchen seine Wand.“
+// Titelkarte
+[titel oben="Folge 1" gross="EIN ZIMMER WENIGER" unten="Das gelbe Kinderzimmer" farbe=#1a0e2e akzent=#f2c23a hud=false dauer=1] Deine Mutter ist die Mechanikerin der Station.
+
+== Wiedererkennen ==
+// Wow-Bild: Station von außen
+[wohnring ansicht=aussen palette=orange zoom-raus ein="Zwölf>12 ZIMMER>schluessel" ein_y=1500] Ihr lebt im Wohnring einer alten Raumstation. Zwölf Zimmer im Kreis, über einem orangefarbenen Planeten.
+// Ring-Gang mit Warnlicht
+[wohnring du mama warn=1 palette=lila schwenk-rechts ein="zwei>48 STUNDEN>uhr"] Ohne den Regler kühlt der Ring in zwei Tagen aus.
+// Hologramm: die Regel
+[wohnring ansicht=plan markiert=1 palette=blau zoom-rein ein="leer>NUR LEERE ZIMMER>schluessel" ein_y=420] Die Station kann sich selbst reparieren. Aber nur mit einem Zimmer, das ihr leer räumt und freigebt.
+
+== Steigerung ==
+// Größenstriche an der Wand
+[wohnring ansicht=zimmer farbe=#f2c23a striche s06_bo palette=orange zoom-rein ein="sieben>7 STRICHE" ein_y=420] An Bos Wand stehen sieben Striche. Jeder Geburtstag einer.
+// Bo, Figurenstimme
+[gesicht s06_bo ort=wohnring ansicht=zimmer farbe=#f2c23a wuetend figurstimme=kind sprecher=s06_bo palette=orange] „Die Wand bleibt. Und ich bleib auch.“
+// Du kniest dich hin
+[gesicht du ort=wohnring ansicht=zimmer farbe=#f2c23a entschlossen palette=orange] Der Boden ist kalt unter deinen Knien. Du hast eine Idee.
+// Klebeband
+[objekt objekte="messband:Bos Band" gross="JEDER STRICH" palette=orange zoom-rein] Ihr klebt ein langes Band an die Wand und malt jeden Strich nach. Mit Datum.
+// Bo zieht das Band ab
+[wohnring ansicht=zimmer farbe=#f2c23a striche du s06_bo palette=orange schwenk-links ein="Hosentasche>WAND IN DER TASCHE>herz" ein_y=420] Bo rollt es auf. Jetzt passt seine Wand in seine Hosentasche.
+
+== Wendung ==
+// Leeres Zimmer, Mama gibt frei
+[wohnring ansicht=zimmer farbe=#f2c23a kisten mama palette=orange zoom-rein ein="Freigabe>FREIGEGEBEN>schluessel" ein_y=420 ton=ui_ding] Deine Mutter prüft das leere Zimmer. Dann tippt sie auf Freigabe.
+// Wow-Bild: Wand zerfällt in Kacheln
+[wohnring ansicht=zimmer farbe=#f2c23a zerfall=1 palette=orange ton=riser] Die gelben Wände zerfallen in leuchtende Kacheln. Es riecht nach warmem Plastik.
+// Hologramm: gelbes Feld wird grau
+[wohnring ansicht=plan grau=1 palette=blau zoom-rein ein="grau>ZIMMER 1: GRAU" ein_y=420] Im Modell wird der gelbe Kreis grau.
+// Regler grün
+[objekt objekte="regler:Wärmeregler" gross="WIEDER GRÜN" palette=lila zoom-rein ton=strom_an] Der Regler springt auf Grün. Warme Luft strömt über den Boden.
+
+== Cliffhanger ==
+// Fünf Warnlichter im Ring
+[wohnring grau=1 warn=2,3,4,5,6 palette=lila zoom-rein ton=hit ein="fünf>5 NEUE SCHÄDEN" ein_y=420] Und gleich daneben melden fünf weitere Räume Schäden.

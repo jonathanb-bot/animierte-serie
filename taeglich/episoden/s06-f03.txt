@@ -1,0 +1,57 @@
+# Ein Zimmer weniger – Folge 3: Ein Garten passt in eine Hand
+@musik musik/s06-f03.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung traurig
+@vortrag lebendig
+@klang studio
+@mund zitate
+@einblenden aus
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette gruen
+@zeit nacht
+
+== Hook ==
+// Wow-Bild: Garten mit dem krummen Baum
+[wohnring ansicht=zimmer farbe=#2e6a4a beete baum du palette=gruen zoom-rein hooktext="DU MUSST DEN GARTEN AUFGEBEN" ton=summen] Du musst den Garten deiner Mutter aufgeben. Bis sechs Uhr früh.
+// Mama unter dem Baum
+[gesicht mama ort=wohnring ansicht=zimmer farbe=#2e6a4a beete baum traurig palette=gruen zoom-rein] Deine Mutter sitzt unter dem krummen Baum. Sie hat die Hand auf der Rinde.
+// Station außen
+[wohnring ansicht=aussen grau=1 palette=orange zoom-raus ein="leeren>NUR LEERE ZIMMER>schluessel" ein_y=1500] Eure Raumstation repariert sich nur aus leeren Zimmern. Fünf Schäden. Ein großer Raum.
+
+== Wiedererkennen ==
+// Erde, Pflanzenlicht
+[wohnring ansicht=zimmer farbe=#2e6a4a beete palette=gruen schwenk-rechts ein="Erde>FEUCHTE ERDE" ein_y=420] Es riecht nach feuchter Erde. Die Blätter rascheln im Luftstrom.
+// Du schaust auf die Beete
+[gesicht du ort=wohnring ansicht=zimmer farbe=#2e6a4a beete traurig palette=gruen] Die schweren Beete passen nirgends hin. Nicht in die Gänge. Nicht in die Kuppel.
+// Ren mit Tablett
+[wohnring ansicht=zimmer farbe=#2e6a4a beete du s06_ren palette=gruen zoom-rein ein="Ren>REN HAT EINEN PLAN" ein_y=420 ton=schritte] Ren kommt mit leeren Tabletts.
+// Ren, Figurenstimme
+[gesicht s06_ren ort=wohnring ansicht=zimmer farbe=#2e6a4a beete froh figurstimme=mann_alt sprecher=s06_ren palette=gruen] „Ein Garten passt auch in eine Hand.“
+
+== Steigerung ==
+// Saatgut
+[objekt objekte="saatgut:Tomaten|saatgut:Bohnen" gross="200 TÜTEN SAAT" palette=gruen zoom-rein ein="zweihundert>#200 TÜTEN" ein_y=1500] Ihr füllt zweihundert kleine Tüten mit Samen. Tomaten, Bohnen, Kresse.
+// Setzlinge auf dem Tablett
+[wohnring ansicht=zimmer farbe=#2e6a4a beete du s06_ren s06_bo palette=gruen schwenk-links ein="Setzlinge>#64 SETZLINGE" ein_y=420] Dazu vierundsechzig Setzlinge. Bo trägt seine Schale, als wäre sie aus Glas.
+// Bo, Figurenstimme
+[gesicht s06_bo ort=wohnring ansicht=zimmer farbe=#2e6a4a beete froh figurstimme=kind sprecher=s06_bo palette=gruen] „Die heißt Erbse. Die kommt mit.“
+// Mama markiert den Baum
+[wohnring ansicht=zimmer farbe=#2e6a4a beete baum markierung mama palette=gruen zoom-rein ein="Zwei>2,40 METER" ein_y=1500] Deine Mutter misst den Baum. Zwei Meter vierzig. Sie schreibt die Zahl an die Wand.
+// Mama nimmt Abschied
+[gesicht mama ort=wohnring ansicht=zimmer farbe=#2e6a4a beete baum traurig palette=gruen] Den Baum kann keiner tragen. Sie lässt ihn stehen.
+
+== Wendung ==
+// Wow-Bild: Kuppel, Tabletts mit Pflanzen
+[wohnring ansicht=kuppel pflanzen du mama s06_bo palette=orange zoom-raus ein="Kuppel>IN DIE KUPPEL" ein_y=420] Ihr tragt alles in die Kuppel. Dort, wo der Planet durchs Glas leuchtet.
+// Mama trägt Bos Schale
+[wohnring ansicht=kuppel pflanzen mama s06_bo palette=orange zoom-rein ein="Schale>ERBSE KOMMT MIT>herz" ein_y=420] Auf dem Rückweg trägt deine Mutter Bos Schale. Sie lächelt zum ersten Mal seit Tagen.
+// Ren gräbt die Beete leer
+[wohnring ansicht=zimmer farbe=#2e6a4a beete s06_ren palette=tuerkis schwenk-rechts ton=papier] Ren gräbt das letzte Beet leer. Dann hört er auf.
+
+== Cliffhanger ==
+// Alter Plan unter den Beeten
+[wohnring ansicht=plan ersatz palette=blau zoom-rein ton=hit ein="ersetzt>ERSATZRING" ein_y=420] Unter der Erde liegt ein alter Plan. Euer Wohnring sollte längst ersetzt sein.

@@ -1,0 +1,60 @@
+# One Room Less – Episode 8: The Day They Take It Apart
+@musik musik/s06-f08-en.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung spannend
+@vortrag lebendig
+@klang studio
+@mund zitate
+@einblenden aus
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette lila
+@zeit nacht
+@sprache en
+
+== Hook ==
+// Wow-Bild: Ring-Gang, eure Tür zerfällt
+[wohnring grau=1,2,3 zerfall=4 du palette=lila zoom-rein hooktext="TODAY YOUR HOME FALLS APART" ton=riser] Today, you watch your apartment break into tiles.
+// Du stehst im Gang
+[gesicht du ort=wohnring grau=1,2,3 traurig palette=lila zoom-rein] You stand in the hallway, holding on to your one box.
+// Station außen
+[wohnring ansicht=aussen grau=4 palette=orange zoom-raus ein="empty>BUILT FROM EMPTY ROOMS>schluessel" ein_y=1500] Your space station is building a safe dome out of empty rooms. Today it begins.
+
+== Wiedererkennen ==
+// Countdown
+[objekt objekte="uhr:Start" gross="6:00 AM" palette=lila zoom-rein ein="Six>START 6:00 AM>uhr" ein_y=1500 ton=ui_ding] Six in the morning. One room after another.
+// Wow-Bild: Wohnung zerfällt
+[wohnring ansicht=zimmer farbe=#e8685a zerfall=1 palette=rosa ton=riser] Your red kitchen. The walls dissolve into glowing tiles. They fly into the station's ribs.
+// Mama schaut nicht weg
+[gesicht mama ort=wohnring grau=1,2,3 traurig palette=lila] Your mom doesn't look away. She quietly counts along.
+// Bo hält das Band
+[gesicht s06_bo ort=wohnring grau=1,2,3 entschlossen palette=lila] Bo holds his tape in both hands.
+// Ihr drei im Gang
+[wohnring grau=1,2,3,4 du mama s06_bo palette=lila schwenk-rechts] The three of you stand side by side. Nobody speaks until the last tile is gone.
+
+== Steigerung ==
+// Plan: Zimmer werden grau
+[wohnring ansicht=plan grau=1,2,3,4,5,6,7,8,9 palette=blau zoom-rein ein="nine>9 OF 10 DONE" ein_y=420] By noon, nine rooms are gray. The dome grows layer by layer.
+// Luftfilter
+[rechenzentrum kern farbe=#5ad08a palette=tuerkis schwenk-rechts ein="air>AIR: 88%" ein_y=420 ton=strom_an] The air filters breathe calmly again. Eighty-eight percent.
+// Du atmest auf
+[gesicht du ort=wohnring ansicht=kuppel froh palette=orange] For the first time in days, you laugh. It's working.
+// Ein Raum fehlt
+[wohnring ansicht=plan grau=1,2,3,4,5,6,7,8,9 markiert=10 palette=blau zoom-rein ein="Room>ROOM 10 MISSING" ein_y=420 ton=hit] Then one segment blinks. Room ten. It's still missing.
+// Rens Zimmer
+[wohnring grau=1,2,3,4 warn=10 palette=lila schwenk-links ein="Ren>REN'S ROOM" ein_y=420] That room belongs to Ren. Your gardener helped all day.
+
+== Wendung ==
+// Ren vor seiner Tür
+[wohnring grau=1,2,3,4 warn=10 s06_ren palette=lila zoom-rein ton=schritte] Now he's standing at his own door. His hand on the handle.
+// Ren, Figurenstimme
+[gesicht s06_ren ort=wohnring warn=10 wuetend figurstimme=mann_alt sprecher=s06_ren palette=lila] "Not mine. Not yet."
+// Leitungen klopfen
+[wohnring grau=1,2,3,4 warn=10 alarm palette=lila zoom-rein ein="knocking>PIPES KNOCKING" ein_y=420 ton=haemmern] Something starts knocking in the pipes. Soft at first, then like a fist.
+
+== Cliffhanger ==
+// Letztes Licht springt auf Rot
+[wohnring grau=1,2,3,4 warn=2,6,10 alarm palette=lila zoom-rein ton=sirene_fern ein="six>AIR FOR 6 HOURS>uhr" ein_y=420] And in the ring, the last light flips to red. Air for six hours.

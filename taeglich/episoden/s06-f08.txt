@@ -1,0 +1,59 @@
+# Ein Zimmer weniger – Folge 8: Der Tag der Zerlegung
+@musik musik/s06-f08.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung spannend
+@vortrag lebendig
+@klang studio
+@mund zitate
+@einblenden aus
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette lila
+@zeit nacht
+
+== Hook ==
+// Wow-Bild: Ring-Gang, eure Tür zerfällt
+[wohnring grau=1,2,3 zerfall=4 du palette=lila zoom-rein hooktext="DEINE WOHNUNG ZERFÄLLT HEUTE" ton=riser] Heute siehst du zu, wie deine Wohnung in Kacheln zerfällt.
+// Du stehst im Gang
+[gesicht du ort=wohnring grau=1,2,3 traurig palette=lila zoom-rein] Du stehst im Gang und hältst deine eine Kiste fest.
+// Station außen
+[wohnring ansicht=aussen grau=4 palette=orange zoom-raus ein="leeren>AUS LEEREN ZIMMERN>schluessel" ein_y=1500] Eure Raumstation baut sich aus leeren Zimmern eine sichere Kuppel. Heute geht es los.
+
+== Wiedererkennen ==
+// Countdown
+[objekt objekte="uhr:Start" gross="06:00 UHR" palette=lila zoom-rein ein="sechs>START 06:00>uhr" ein_y=1500 ton=ui_ding] Sechs Uhr früh. Ein Zimmer nach dem anderen.
+// Wow-Bild: Wohnung zerfällt
+[wohnring ansicht=zimmer farbe=#e8685a zerfall=1 palette=rosa ton=riser] Eure rote Küche. Die Wände lösen sich in leuchtende Kacheln. Sie fliegen in die Rippen der Station.
+// Mama schaut nicht weg
+[gesicht mama ort=wohnring grau=1,2,3 traurig palette=lila] Deine Mutter schaut nicht weg. Sie zählt leise mit.
+// Bo hält das Band
+[gesicht s06_bo ort=wohnring grau=1,2,3 entschlossen palette=lila] Bo hält sein Band in beiden Händen.
+// Ihr drei im Gang
+[wohnring grau=1,2,3,4 du mama s06_bo palette=lila schwenk-rechts] Ihr drei steht nebeneinander. Keiner sagt etwas, bis die letzte Kachel weg ist.
+
+== Steigerung ==
+// Plan: Zimmer werden grau
+[wohnring ansicht=plan grau=1,2,3,4,5,6,7,8,9 palette=blau zoom-rein ein="neun>9 VON 10 FERTIG" ein_y=420] Mittags sind neun Zimmer grau. Die Kuppel wächst Schicht um Schicht.
+// Luftfilter
+[rechenzentrum kern farbe=#5ad08a palette=tuerkis schwenk-rechts ein="Luft>LUFT: 88 %" ein_y=420 ton=strom_an] Die Luftfilter atmen wieder ruhig. Achtundachtzig Prozent.
+// Du atmest auf
+[gesicht du ort=wohnring ansicht=kuppel froh palette=orange] Zum ersten Mal seit Tagen lachst du. Es geht.
+// Ein Raum fehlt
+[wohnring ansicht=plan grau=1,2,3,4,5,6,7,8,9 markiert=10 palette=blau zoom-rein ein="Zimmer zehn>ZIMMER 10 FEHLT" ein_y=420 ton=hit] Dann blinkt ein Feld. Zimmer zehn. Es fehlt noch.
+// Rens Zimmer
+[wohnring grau=1,2,3,4 warn=10 palette=lila schwenk-links ein="Ren>RENS ZIMMER" ein_y=420] Das Zimmer gehört Ren. Euer Gärtner hat den ganzen Tag geholfen.
+
+== Wendung ==
+// Ren vor seiner Tür
+[wohnring grau=1,2,3,4 warn=10 s06_ren palette=lila zoom-rein ton=schritte] Jetzt steht er vor seiner eigenen Tür. Die Hand auf dem Griff.
+// Ren, Figurenstimme
+[gesicht s06_ren ort=wohnring warn=10 wuetend figurstimme=mann_alt sprecher=s06_ren palette=lila] „Meins nicht. Noch nicht.“
+// Leitungen klopfen
+[wohnring grau=1,2,3,4 warn=10 alarm palette=lila zoom-rein ein="klopft>LEITUNGEN KLOPFEN" ein_y=420 ton=haemmern] In den Leitungen klopft es. Erst leise, dann wie eine Faust.
+
+== Cliffhanger ==
+// Letztes Licht springt auf Rot
+[wohnring grau=1,2,3,4 warn=2,6,10 alarm palette=lila zoom-rein ton=sirene_fern ein="sechs>LUFT FÜR 6 STUNDEN>uhr" ein_y=420] Und im Ring springt das letzte Licht auf Rot. Luft für sechs Stunden.

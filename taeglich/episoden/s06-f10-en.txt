@@ -1,0 +1,60 @@
+# One Room Less – Episode 10: The Town Under the Table
+@musik musik/s06-f10-en.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung freudig
+@vortrag lebendig
+@klang studio
+@mund zitate
+@einblenden aus
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette orange
+@zeit nacht
+@sprache en
+
+== Hook ==
+// Wow-Bild: Kuppel am Abend
+[wohnring ansicht=kuppel tisch nischen lichter pflanzen du palette=orange zoom-rein hooktext="SAVED. BUT NOT HOME." ton=summen] Your station is saved. But nothing here feels like home.
+// Station außen, Kuppel hell
+[wohnring ansicht=aussen grau=10 kuppel_hell palette=orange zoom-raus ein="dome>EVERYONE IN THE DOME" ein_y=1500] Your old ring is dark. Only the dome is glowing.
+// Du in deiner Nische
+[gesicht du ort=wohnring ansicht=kuppel nischen traurig palette=orange] Your nook smells like someone else's fabric. You can't sleep.
+
+== Wiedererkennen ==
+// Brot auf dem Tisch
+[wohnring ansicht=kuppel tisch brot nischen lichter mama s06_ren palette=orange zoom-rein ein="bread>FRESH BREAD" ein_y=420] In the evening, Ren bakes bread. The smell drifts through the whole dome.
+// Du isst
+[gesicht du ort=wohnring ansicht=kuppel froh palette=orange] You tear off a piece. It's still warm and it crackles.
+// Kein Umbauplan
+[wohnring ansicht=kuppel tisch brot du mama sitzen palette=orange schwenk-rechts ein="plans>NO PLANS TONIGHT>herz" ein_y=420] Tonight, nobody plans anything. You just sit at the table.
+// Mama, Figurenstimme
+[gesicht mama ort=wohnring ansicht=kuppel froh figurstimme=frau sprecher=mama palette=orange] "For the first time in years, I'm not fixing anything."
+
+== Steigerung ==
+// Bo öffnet die Kiste
+[objekt objekte="kiste:Bo's box" gross="FINALLY OPEN" palette=orange zoom-rein ton=schloss] Then Bo puts his box on the table. He opens the lock.
+// Wow-Bild: Pappstadt unter dem Tisch
+[wohnring ansicht=kuppel tisch stadt lichter nischen palette=orange zoom-raus ein="rooms>#10 CARDBOARD ROOMS" ein_y=420] Inside are rooms. Made of cardboard. Every room the station lost.
+// Gelbes Zimmer
+[wohnring ansicht=zimmer farbe=#f2c23a striche bett bilder palette=orange zoom-rein ein="yellow>THE YELLOW ROOM" ein_y=420] His yellow bedroom. The garden. Your red kitchen with the scratches in the table.
+// Bo, Figurenstimme
+[gesicht s06_bo ort=wohnring ansicht=kuppel froh figurstimme=kind sprecher=s06_bo palette=orange] "I drew them before they were gone."
+// Mama lacht und weint
+[gesicht mama ort=wohnring ansicht=kuppel traurig palette=orange] Your mom laughs and cries at the same time.
+// Ihr baut die Stadt
+[wohnring ansicht=kuppel tisch stadt lichter du mama s06_bo palette=orange schwenk-links ein="town>A TOWN>herz" ein_y=420 ton=papier] You set the rooms under the table. A tiny town.
+
+== Wendung ==
+// Keimling
+[wohnring ansicht=kuppel tisch stadt keimling palette=gruen zoom-rein ein="sprout>FIRST SPROUT" ein_y=420] In between sits a cup from the garden. A green sprout.
+// Bo misst sich am Band
+[objekt objekte="messband:Bo's tape" gross="MARK NUMBER 8" palette=orange zoom-rein ein="eighth>MARK NO. 8" ein_y=1500] Bo hangs his tape on the table. You draw the eighth mark.
+// Du schaust genauer
+[gesicht du ort=wohnring ansicht=kuppel misstrauisch palette=orange zoom-rein] Then you notice one more room.
+
+== Cliffhanger ==
+// Zimmer mit deinem Namen
+[wohnring ansicht=kuppel tisch stadt keimling lichter palette=rosa zoom-rein ton=hit ein="tomorrow>TOMORROW" ein_y=420] One that never existed. The sign has your name on it. And one word: tomorrow.

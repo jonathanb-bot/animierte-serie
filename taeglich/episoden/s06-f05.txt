@@ -1,0 +1,59 @@
+# Ein Zimmer weniger – Folge 5: Der verschobene Abschied
+@musik musik/s06-f05.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung duester
+@vortrag lebendig
+@klang studio
+@mund zitate
+@einblenden aus
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette blau
+@zeit nacht
+
+== Hook ==
+// Mama in der Werkstatt, blaues Licht
+[gesicht mama ort=wohnring ansicht=plan traurig palette=blau zoom-rein hooktext="SIE WUSSTE ES SEIT 3 JAHREN" ton=summen] Deine Mutter wusste seit drei Jahren, dass euer Zuhause stirbt.
+// Hologramm Ersatzring
+[wohnring ansicht=plan ersatz grau=1,2 du mama palette=blau schwenk-rechts ein="geschwiegen>3 JAHRE GESCHWIEGEN" ein_y=420] Eure Raumstation flickt sich aus leeren Zimmern. Und sie hat geschwiegen.
+// Mama nimmt die Brille ab
+[gesicht mama ort=wohnring ansicht=plan muede figurstimme=frau sprecher=mama palette=blau] „Ich wollte euch eure Zimmer noch ein bisschen lassen.“
+
+== Wiedererkennen ==
+// Brille auf dem Tisch
+[objekt objekte="uhr:Lieferung 1|uhr:Lieferung 2|uhr:Lieferung 3" gross="IMMER VERSCHOBEN" palette=blau zoom-rein] Jedes Mal, wenn eine Lieferung ausfiel, hat sie den Umbau verschoben. Aus Angst.
+// Du bist wütend
+[gesicht du ort=wohnring ansicht=plan wuetend palette=blau] Du willst wütend sein. Aber ihre Hände zittern.
+// Bo kommt dazu
+[wohnring ansicht=plan ersatz du mama s06_bo palette=blau zoom-rein ein="Bo>BO HÄLT DICH FEST>herz" ein_y=420] Bo schiebt seine Hand in deine. Ganz fest.
+// Bos Daumen auf dem Band
+[gesicht s06_bo ort=wohnring ansicht=plan besorgt palette=blau] Sein Daumen streicht über das aufgerollte Band in seiner Tasche.
+
+== Steigerung ==
+// Wow-Bild: Kuppel, alle Bewohner
+[wohnring ansicht=kuppel lichter du mama s06_ren s06_ilse palette=orange zoom-raus ein="einunddreißig>#31 BEWOHNER" ein_y=420 ton=schritte] Du rufst alle in die Kuppel. Einunddreißig Bewohner. Über ihnen leuchtet der Planet.
+// Du sprichst
+[gesicht du ort=wohnring ansicht=kuppel entschlossen palette=orange] Du sagst die Wahrheit. Ohne etwas wegzulassen.
+// Stille in der Kuppel
+[wohnring ansicht=kuppel lichter s06_ren s06_ilse palette=orange schwenk-links ein="still>STILLE" ein_y=420] Danach ist es so still, dass man die Lüftung hört.
+// Ren prüft die Kuppel
+[wohnring ansicht=aussen grau=2 kuppel_hell palette=orange zoom-rein ein="Kuppel>KUPPEL: STABIL" ein_y=1500] Ren prüft die Kuppel. Sie ist das Stärkste an der ganzen Station.
+// Ren, Figurenstimme
+[gesicht s06_ren ort=wohnring ansicht=kuppel entschlossen figurstimme=mann_alt sprecher=s06_ren palette=orange] „Da passen alle rein. Wenn wir sie ausbauen.“
+// Hände gehen hoch
+[wohnring ansicht=kuppel lichter s06_ilse s06_ren palette=orange zoom-rein ein="Hand>ALLE DAFÜR>herz" ein_y=420] Einer nach dem anderen hebt die Hand. Zuletzt die alte Frau Ilse.
+
+== Wendung ==
+// Plan: fast alles grau
+[wohnring ansicht=plan grau=1,2,3,4,5,6,7,8,9,10 palette=blau zoom-rein ein="zehn>10 VON 12 ZIMMERN" ein_y=420 ton=ui_ding] Dafür müssten zehn von zwölf Zimmern verschwinden.
+// Ring-Gang, alle Türen
+[wohnring grau=1,2 palette=lila schwenk-rechts] Du gehst den Ring zurück. Vorbei an jeder Tür, hinter der jemand wohnt.
+// Eure Wohnungstür
+[wohnring ansicht=zimmer farbe=#e8685a tisch kratzer palette=rosa zoom-rein ein="Tür>EURE WOHNUNG" ein_y=420] Vor eurer roten Tür bleibst du stehen.
+
+== Cliffhanger ==
+// Mama schiebt den Freigabeplan hin
+[wohnring ansicht=zimmer farbe=#e8685a tisch kratzer mama palette=rosa zoom-rein ton=hit ein="Wohnung>FREIGABE: EURE WOHNUNG>schluessel" ein_y=420] Deine Mutter schiebt dir den Plan hin. Für die Kuppel braucht ihr auch eure Wohnung.

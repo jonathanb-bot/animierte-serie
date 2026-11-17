@@ -1,0 +1,59 @@
+# Ein Zimmer weniger – Folge 4: Der alte Plan
+@musik musik/s06-f04.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung spannend
+@vortrag lebendig
+@klang studio
+@mund zitate
+@einblenden aus
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette blau
+@zeit nacht
+
+== Hook ==
+// Wow-Bild: Hologramm mit gestricheltem Ersatzring
+[wohnring ansicht=plan ersatz palette=blau zoom-rein hooktext="DEIN ZUHAUSE HÄTTE LÄNGST WEG SEIN SOLLEN" ton=summen] Dein Zuhause hätte schon vor elf Jahren verschrottet werden sollen.
+// Du und Ren am Plan
+[wohnring ansicht=plan ersatz du s06_ren palette=blau schwenk-rechts ein="Plan>VOR 11 JAHREN" ein_y=420] Das steht auf dem Plan, den euer Gärtner Ren unter dem Garten gefunden hat.
+// Station außen
+[wohnring ansicht=aussen grau=2 palette=orange zoom-raus ein="leeren>NUR LEERE ZIMMER>schluessel" ein_y=1500] Eure Station repariert sich nur aus leeren Zimmern. Zwei sind schon weg.
+
+== Wiedererkennen ==
+// Werkstatt, Projektor klickt
+[wohnring ansicht=plan ersatz du palette=blau zoom-rein ein="zweiter>ERSATZRING" ein_y=420 ton=funk_klick] Der Projektor klickt. Ein zweiter Ring erscheint, gestrichelt, um euren herum.
+// Du liest
+[gesicht du ort=wohnring ansicht=plan besorgt palette=blau] Deine Lippen sind trocken. Du liest jede Zeile zweimal.
+// Lebensdauer
+[objekt objekte="uhr:Gebaut für|uhr:Jetzt" gross="25 JAHRE · JETZT 36" palette=blau zoom-rein ein="fünfundzwanzig>#25 JAHRE>uhr" ein_y=1500] Euer Ring war für fünfundzwanzig Jahre gebaut. Er ist sechsunddreißig.
+// Station außen, Farbe blättert
+[wohnring ansicht=aussen grau=2 palette=orange zoom-rein] Von außen sieht man es auch. Die Farbe an den Segmenten blättert ab wie alte Haut.
+
+== Steigerung ==
+// Ren, Figurenstimme
+[gesicht s06_ren ort=wohnring ansicht=plan besorgt figurstimme=mann_alt sprecher=s06_ren palette=blau] „Jede Reparatur kauft nur Zeit.“
+// Drei Lieferungen abgesagt
+[wohnring ansicht=plan ersatz markiert=5 palette=blau zoom-rein ein="dreimal>3× ABGESAGT" ein_y=420 ton=hit] Der neue Ring sollte geliefert werden. Dreimal. Dreimal steht daneben: abgesagt.
+// Ring-Gang, alles alt
+[wohnring grau=1,2 warn=6 palette=lila schwenk-links ein="Risse>RISSE IN 9 RÄUMEN" ein_y=420] Du denkst an die kleinen Risse in den Türen. An das Klopfen in den Leitungen.
+// Du verstehst
+[gesicht du ort=wohnring grau=1,2 angst palette=lila zoom-rein ton=herzschlag] Das hier ist kein Schaden. Euer ganzer Ring stirbt. Langsam.
+// Bo an der Tür
+[wohnring ansicht=plan ersatz s06_bo palette=blau zoom-rein ein="Bo>BO HÖRT ALLES" ein_y=420] An der Werkstatttür steht Bo. Er hat alles gehört.
+// Bo, Figurenstimme
+[gesicht s06_bo ort=wohnring ansicht=plan angst figurstimme=kind sprecher=s06_bo palette=blau] „Müssen wir dann alle Zimmer abgeben?“
+// Du zögerst
+[gesicht du ort=wohnring ansicht=plan besorgt palette=blau] Du willst Nein sagen. Aber du weißt es nicht.
+
+== Wendung ==
+// Unterschrift auf dem Plan
+[objekt objekte="quittung:Prüfbericht" gross="GEPRÜFT · A." palette=blau zoom-rein ein="Kürzel>KÜRZEL: A." ein_y=1500] Unten auf dem Plan steht ein Kürzel. Ein einzelner Buchstabe. A.
+// Du drehst dich um
+[gesicht du ort=wohnring ansicht=plan schreck palette=blau ton=tuer_zu] Du kennst diese Schrift. Hinter dir geht die Tür.
+
+== Cliffhanger ==
+// Mama in der Tür
+[gesicht mama ort=wohnring ansicht=plan traurig figurstimme=frau sprecher=mama palette=blau zoom-rein] „Ich weiß es seit drei Jahren.“

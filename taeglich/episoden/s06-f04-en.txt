@@ -1,0 +1,60 @@
+# One Room Less – Episode 4: The Old Blueprint
+@musik musik/s06-f04-en.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung spannend
+@vortrag lebendig
+@klang studio
+@mund zitate
+@einblenden aus
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette blau
+@zeit nacht
+@sprache en
+
+== Hook ==
+// Wow-Bild: Hologramm mit gestricheltem Ersatzring
+[wohnring ansicht=plan ersatz palette=blau zoom-rein hooktext="YOUR HOME SHOULD BE GONE ALREADY" ton=summen] Your home should have been scrapped eleven years ago.
+// Du und Ren am Plan
+[wohnring ansicht=plan ersatz du s06_ren palette=blau schwenk-rechts ein="blueprint>11 YEARS AGO" ein_y=420] That's what it says on the blueprint your gardener Ren found under the garden.
+// Station außen
+[wohnring ansicht=aussen grau=2 palette=orange zoom-raus ein="empty>EMPTY ROOMS ONLY>schluessel" ein_y=1500] Your station only repairs itself with empty rooms. Two are already gone.
+
+== Wiedererkennen ==
+// Werkstatt, Projektor klickt
+[wohnring ansicht=plan ersatz du palette=blau zoom-rein ein="second>REPLACEMENT RING" ein_y=420 ton=funk_klick] The projector clicks. A second ring appears, dotted, around yours.
+// Du liest
+[gesicht du ort=wohnring ansicht=plan besorgt palette=blau] Your lips are dry. You read every line twice.
+// Lebensdauer
+[objekt objekte="uhr:Built for|uhr:Now" gross="25 YEARS · NOW 36" palette=blau zoom-rein ein="twenty>#25 YEARS>uhr" ein_y=1500] Your ring was built to last twenty-five years. It's thirty-six.
+// Station außen, Farbe blättert
+[wohnring ansicht=aussen grau=2 palette=orange zoom-rein] You can see it from the outside too. The paint on the segments is peeling like old skin.
+
+== Steigerung ==
+// Ren, Figurenstimme
+[gesicht s06_ren ort=wohnring ansicht=plan besorgt figurstimme=mann_alt sprecher=s06_ren palette=blau] "Every repair just buys time."
+// Drei Lieferungen abgesagt
+[wohnring ansicht=plan ersatz markiert=5 palette=blau zoom-rein ein="Three>3× CANCELED" ein_y=420 ton=hit] The new ring was supposed to be delivered. Three times. And three times, someone wrote: canceled.
+// Ring-Gang, alles alt
+[wohnring grau=1,2 warn=6 palette=lila schwenk-links ein="cracks>CRACKS IN 9 ROOMS" ein_y=420] You think about the little cracks in the doors. The knocking in the pipes.
+// Du verstehst
+[gesicht du ort=wohnring grau=1,2 angst palette=lila zoom-rein ton=herzschlag] This isn't damage. Your whole ring is dying. Slowly.
+// Bo an der Tür
+[wohnring ansicht=plan ersatz s06_bo palette=blau zoom-rein ein="Bo>BO HEARD EVERYTHING" ein_y=420] Bo is standing in the workshop door. He heard everything.
+// Bo, Figurenstimme
+[gesicht s06_bo ort=wohnring ansicht=plan angst figurstimme=kind sprecher=s06_bo palette=blau] "Do we have to give up every room?"
+// Du zögerst
+[gesicht du ort=wohnring ansicht=plan besorgt palette=blau] You want to say no. But you don't know.
+
+== Wendung ==
+// Unterschrift auf dem Plan
+[objekt objekte="quittung:Inspection" gross="CHECKED · A." palette=blau zoom-rein ein="initial>INITIAL: A." ein_y=1500] At the bottom of the blueprint, there's an initial. A single letter. A.
+// Du drehst dich um
+[gesicht du ort=wohnring ansicht=plan schreck palette=blau ton=tuer_zu] You know that handwriting. Behind you, the door opens.
+
+== Cliffhanger ==
+// Mama in der Tür
+[gesicht mama ort=wohnring ansicht=plan traurig figurstimme=frau sprecher=mama palette=blau zoom-rein] "I've known for three years."

@@ -1,0 +1,56 @@
+# One Room Less – Episode 2: Five Red Lights
+@musik musik/s06-f02-en.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung duester
+@vortrag lebendig
+@klang studio
+@mund zitate
+@einblenden aus
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette lila
+@zeit nacht
+@sprache en
+
+== Hook ==
+// Wow-Bild: Ring-Gang mit fünf Warnlichtern
+[wohnring grau=1 warn=2,3,4,5,6 alarm palette=lila zoom-rein hooktext="5 RED LIGHTS IN YOUR HOME" ton=sirene_fern] Three in the morning. Five red lights are blinking in your home.
+// Mama mit Werkzeug
+[gesicht mama ort=wohnring warn=3 muede palette=lila zoom-rein] Your mom hasn't slept in two days. Her glasses sit crooked.
+// Station außen, ein Segment grau
+[wohnring ansicht=aussen grau=1 palette=orange zoom-raus ein="people>31 PEOPLE" ein_y=1500] Your old space station only patches itself with empty rooms. Thirty-one people live here. The yellow room is already gone.
+
+== Wiedererkennen ==
+// Lebenserhaltung
+[rechenzentrum kern farbe=#ff5a3d palette=lila schwenk-rechts ein="air>AIR FILTERS: 61%" ein_y=420 ton=summen] You walk the ring. First the air filters. They hum like they've got a fever.
+// Wasserleitung tropft
+[wohnring warn=4 grau=1 palette=blau zoom-rein ein="water>WATER: LEAK>tropfen" ton=tropfen] Then the water. It drips from the ceiling into a bucket.
+// Du hältst die Lampe
+[gesicht du ort=wohnring warn=4 besorgt palette=blau] You hold the lamp. Your fingers are stiff with cold.
+// Mama, Figurenstimme
+[gesicht mama ort=wohnring besorgt figurstimme=frau sprecher=mama palette=blau] "A small room won't cover all five."
+
+== Steigerung ==
+// Ren kommt dazu
+[wohnring du mama s06_ren grau=1 warn=5 palette=lila schwenk-links ein="Ren>REN · YOUR GARDENER" ein_y=420 ton=schritte] Ren comes down the hall. Your gardener. Green cloak, dirt under his fingernails.
+// Ren, Figurenstimme
+[gesicht s06_ren ort=wohnring entschlossen figurstimme=mann_alt sprecher=s06_ren palette=lila] "You need a big room. You know which one."
+// Hologramm: grünes Feld blinkt
+[wohnring ansicht=plan grau=1 markiert=2 palette=blau zoom-rein ein="garden>THE GARDEN" ein_y=420 ton=ui_ding] On the model, a green segment starts blinking. The garden.
+// Wow-Bild: Garten unter Pflanzenlicht
+[wohnring ansicht=zimmer farbe=#2e6a4a beete baum palette=gruen zoom-raus ein="tree>YOUR CHILDHOOD TREE" ein_y=420] Your mom planted it when you were little. With the crooked tree in the middle.
+// Unter dem Baum
+[gesicht du ort=wohnring ansicht=zimmer farbe=#2e6a4a beete baum traurig palette=gruen] Under that tree, you learned to walk. At three, barefoot in the dirt.
+
+== Wendung ==
+// Mama dreht sich weg
+[wohnring ansicht=zimmer farbe=#2e6a4a beete baum mama palette=gruen schwenk-rechts ein="No>NOT THE GARDEN" ein_y=420] Your mom turns away. She says one word. No.
+// Warnlicht wird schneller
+[wohnring grau=1 warn=2,3,4,5,6 alarm palette=lila zoom-rein ein="six>6 HOURS LEFT>uhr" ein_y=420 ton=herzschlag] The red lights blink faster. The station runs the numbers. Six hours left.
+
+== Cliffhanger ==
+// Mama schiebt dir das Tablett hin
+[gesicht mama ort=wohnring ansicht=zimmer farbe=#2e6a4a beete baum traurig palette=gruen zoom-rein ton=hit] Then she presses the release into your hand. It's your call.

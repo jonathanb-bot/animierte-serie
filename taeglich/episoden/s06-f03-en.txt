@@ -1,0 +1,58 @@
+# One Room Less – Episode 3: A Garden in Your Hand
+@musik musik/s06-f03-en.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung traurig
+@vortrag lebendig
+@klang studio
+@mund zitate
+@einblenden aus
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette gruen
+@zeit nacht
+@sprache en
+
+== Hook ==
+// Wow-Bild: Garten mit dem krummen Baum
+[wohnring ansicht=zimmer farbe=#2e6a4a beete baum du palette=gruen zoom-rein hooktext="YOU HAVE TO GIVE UP THE GARDEN" ton=summen] You have to give up your mom's garden. By six in the morning.
+// Mama unter dem Baum
+[gesicht mama ort=wohnring ansicht=zimmer farbe=#2e6a4a beete baum traurig palette=gruen zoom-rein] Your mom is sitting under the crooked tree. Her hand rests on the bark.
+// Station außen
+[wohnring ansicht=aussen grau=1 palette=orange zoom-raus ein="empty>EMPTY ROOMS ONLY>schluessel" ein_y=1500] Your space station only repairs itself with empty rooms. Five failures. One big room.
+
+== Wiedererkennen ==
+// Erde, Pflanzenlicht
+[wohnring ansicht=zimmer farbe=#2e6a4a beete palette=gruen schwenk-rechts ein="earth>DAMP EARTH" ein_y=420] It smells like damp earth. The leaves rustle in the air vents.
+// Du schaust auf die Beete
+[gesicht du ort=wohnring ansicht=zimmer farbe=#2e6a4a beete traurig palette=gruen] The heavy beds won't fit anywhere. Not in the halls. Not in the dome.
+// Ren mit Tablett
+[wohnring ansicht=zimmer farbe=#2e6a4a beete du s06_ren palette=gruen zoom-rein ein="Ren>REN HAS A PLAN" ein_y=420 ton=schritte] Ren shows up with empty trays.
+// Ren, Figurenstimme
+[gesicht s06_ren ort=wohnring ansicht=zimmer farbe=#2e6a4a beete froh figurstimme=mann_alt sprecher=s06_ren palette=gruen] "A garden fits in your hand too."
+
+== Steigerung ==
+// Saatgut
+[objekt objekte="saatgut:Tomatoes|saatgut:Beans" gross="200 SEED PACKS" palette=gruen zoom-rein ein="two>#200 PACKS" ein_y=1500] You fill two hundred little packets with seeds. Tomatoes, beans, cress.
+// Setzlinge auf dem Tablett
+[wohnring ansicht=zimmer farbe=#2e6a4a beete du s06_ren s06_bo palette=gruen schwenk-links ein="seedlings>#64 SEEDLINGS" ein_y=420] Plus sixty-four seedlings. Bo carries his little bowl like it's made of glass.
+// Bo, Figurenstimme
+[gesicht s06_bo ort=wohnring ansicht=zimmer farbe=#2e6a4a beete froh figurstimme=kind sprecher=s06_bo palette=gruen] "This one's called Pea. Pea's coming."
+// Mama markiert den Baum
+[wohnring ansicht=zimmer farbe=#2e6a4a beete baum markierung mama palette=gruen zoom-rein ein="Eight>8 FEET TALL" ein_y=1500] Your mom measures the tree. Eight feet. She writes the number on the wall.
+// Mama nimmt Abschied
+[gesicht mama ort=wohnring ansicht=zimmer farbe=#2e6a4a beete baum traurig palette=gruen] Nobody can carry the tree. She leaves it standing.
+
+== Wendung ==
+// Wow-Bild: Kuppel, Tabletts mit Pflanzen
+[wohnring ansicht=kuppel pflanzen du mama s06_bo palette=orange zoom-raus ein="dome>INTO THE DOME" ein_y=420] You carry everything into the dome. Where the planet glows through the glass.
+// Mama trägt Bos Schale
+[wohnring ansicht=kuppel pflanzen mama s06_bo palette=orange zoom-rein ein="bowl>PEA IS COMING>herz" ein_y=420] On the way back, your mom carries Bo's bowl. She smiles for the first time in days.
+// Ren gräbt die Beete leer
+[wohnring ansicht=zimmer farbe=#2e6a4a beete s06_ren palette=tuerkis schwenk-rechts ton=papier] Ren digs out the last bed. Then he stops.
+
+== Cliffhanger ==
+// Alter Plan unter den Beeten
+[wohnring ansicht=plan ersatz palette=blau zoom-rein ton=hit ein="replaced>REPLACEMENT RING" ein_y=420] Under the soil lies an old blueprint. Your living ring should have been replaced long ago.

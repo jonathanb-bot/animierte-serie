@@ -1,0 +1,56 @@
+# One Room Less – Episode 6: One Box Each
+@musik musik/s06-f06-en.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung traurig
+@vortrag lebendig
+@klang studio
+@mund zitate
+@einblenden aus
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette rosa
+@zeit nacht
+@sprache en
+
+== Hook ==
+// Wow-Bild: Wohnung mit Kisten, Bullauge
+[wohnring ansicht=zimmer farbe=#e8685a tisch kisten du palette=rosa zoom-rein hooktext="ONE BOX. YOUR WHOLE LIFE." ton=summen] Tomorrow, your apartment gets taken apart. You can bring one box.
+// Kiste
+[objekt objekte="kiste:Your box" gross="2 × 1 FEET" palette=rosa zoom-rein ein="One>1 BOX EACH>kiste" ein_y=1500] One box per person. The dome doesn't have more room.
+// Station außen
+[wohnring ansicht=aussen grau=2 palette=orange zoom-raus ein="rooms>EMPTY ROOMS ONLY>schluessel" ein_y=1500] Your space station needs empty rooms to survive. Now it's your turn.
+
+== Wiedererkennen ==
+// Du hältst Sachen in der Hand
+[gesicht du ort=wohnring ansicht=zimmer farbe=#e8685a kisten traurig palette=rosa] You pick something up. Put it down. Pick it up again.
+// Bilder an der Wand
+[wohnring ansicht=zimmer farbe=#e8685a bilder kisten du palette=rosa schwenk-rechts ein="drawings>#43 DRAWINGS" ein_y=420] Forty-three of your drawings. Your first space suit patch. The mug with the crack.
+// Bo packt schnell
+[wohnring ansicht=zimmer farbe=#e8685a kisten s06_bo palette=rosa zoom-rein ein="Bo>BO: DONE" ein_y=420 ton=papier] Bo is done in five minutes. He's got his tape. That's all he wants.
+// Mama packt Werkzeug
+[wohnring ansicht=zimmer farbe=#e8685a kisten mama palette=rosa schwenk-links ein="tools>JUST TOOLS" ein_y=420] Your mom packs only tools. Like she's practiced saying goodbye.
+
+== Steigerung ==
+// Du sitzt am Küchentisch
+[wohnring ansicht=zimmer farbe=#e8685a tisch kratzer du sitzen palette=rosa zoom-rein ein="scratches>SCRATCHES IN THE TABLE" ein_y=420] At midnight you sit alone at the kitchen table. Rough scratches under your fingers.
+// Erinnerung
+[gesicht du ort=wohnring ansicht=zimmer farbe=#e8685a tisch traurig palette=rosa] You carved those when you were six. Your mom yelled, and then she laughed.
+// Mama kommt dazu
+[wohnring ansicht=zimmer farbe=#e8685a tisch kratzer mama du sitzen palette=orange zoom-rein ton=schritte] Your mom sits down next to you. She brings two mugs of tea.
+// Mama, Figurenstimme
+[gesicht mama ort=wohnring ansicht=zimmer farbe=#e8685a tisch traurig figurstimme=frau sprecher=mama palette=orange] "I want to keep everything too. Every single thing."
+// Ihr redet
+[wohnring ansicht=zimmer farbe=#e8685a tisch du mama sitzen palette=orange schwenk-rechts ein="hours>TWO HOURS>herz" ein_y=420] You talk for two hours. Longer than you have in months.
+
+== Wendung ==
+// Du gehst zu Bos Zimmer
+[wohnring grau=1,2 palette=lila zoom-rein ton=tuer_zu] Afterward, you go check on Bo. Since his room's been gone, he sleeps in yours.
+// Staub unter deinem Bett
+[wohnring ansicht=zimmer farbe=#5aa8f2 bett palette=blau zoom-rein ein="print>PRINT IN THE DUST" ein_y=420] Bo is asleep. Under your bed there's a print in the dust. A clean rectangle.
+
+== Cliffhanger ==
+// Leere Stelle
+[gesicht du ort=wohnring ansicht=zimmer farbe=#5aa8f2 misstrauisch palette=blau zoom-rein ton=hit] A box of Bo's was sitting there. One you've never seen. And now it's gone.

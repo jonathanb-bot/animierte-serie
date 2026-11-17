@@ -1,0 +1,60 @@
+# One Room Less – Episode 5: The Goodbye She Put Off
+@musik musik/s06-f05-en.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung duester
+@vortrag lebendig
+@klang studio
+@mund zitate
+@einblenden aus
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette blau
+@zeit nacht
+@sprache en
+
+== Hook ==
+// Mama in der Werkstatt, blaues Licht
+[gesicht mama ort=wohnring ansicht=plan traurig palette=blau zoom-rein hooktext="SHE KNEW FOR 3 YEARS" ton=summen] Your mom knew for three years that your home was dying.
+// Hologramm Ersatzring
+[wohnring ansicht=plan ersatz grau=1,2 du mama palette=blau schwenk-rechts ein="silent>3 YEARS OF SILENCE" ein_y=420] Your space station patches itself with empty rooms. And she stayed silent.
+// Mama nimmt die Brille ab
+[gesicht mama ort=wohnring ansicht=plan muede figurstimme=frau sprecher=mama palette=blau] "I wanted you to keep your rooms a little longer."
+
+== Wiedererkennen ==
+// Lieferungen
+[objekt objekte="uhr:Delivery 1|uhr:Delivery 2|uhr:Delivery 3" gross="ALWAYS POSTPONED" palette=blau zoom-rein] Every time a delivery fell through, she put off the rebuild. Out of fear.
+// Du bist wütend
+[gesicht du ort=wohnring ansicht=plan wuetend palette=blau] You want to be angry. But her hands are shaking.
+// Bo kommt dazu
+[wohnring ansicht=plan ersatz du mama s06_bo palette=blau zoom-rein ein="Bo>BO HOLDS ON TO YOU>herz" ein_y=420] Bo slips his hand into yours. Tight.
+// Bos Daumen auf dem Band
+[gesicht s06_bo ort=wohnring ansicht=plan besorgt palette=blau] His thumb rubs the rolled-up tape in his pocket.
+
+== Steigerung ==
+// Wow-Bild: Kuppel, alle Bewohner
+[wohnring ansicht=kuppel lichter du mama s06_ren s06_ilse palette=orange zoom-raus ein="Thirty>#31 PEOPLE" ein_y=420 ton=schritte] You call everyone into the dome. Thirty-one people. The planet glows above them.
+// Du sprichst
+[gesicht du ort=wohnring ansicht=kuppel entschlossen palette=orange] You tell them the truth. You leave nothing out.
+// Stille in der Kuppel
+[wohnring ansicht=kuppel lichter s06_ren s06_ilse palette=orange schwenk-links ein="quiet>SILENCE" ein_y=420] After that, it's so quiet you can hear the vents.
+// Ren prüft die Kuppel
+[wohnring ansicht=aussen grau=2 kuppel_hell palette=orange zoom-rein ein="dome>DOME: STABLE" ein_y=1500] Ren checks the dome. It's the strongest part of the whole station.
+// Ren, Figurenstimme
+[gesicht s06_ren ort=wohnring ansicht=kuppel entschlossen figurstimme=mann_alt sprecher=s06_ren palette=orange] "Everyone fits in there. If we build it out."
+// Hände gehen hoch
+[wohnring ansicht=kuppel lichter s06_ilse s06_ren palette=orange zoom-rein ein="hand>EVERYONE AGREES>herz" ein_y=420] One by one, they raise a hand. Old Mrs. Ilse is the last.
+
+== Wendung ==
+// Plan: fast alles grau
+[wohnring ansicht=plan grau=1,2,3,4,5,6,7,8,9,10 palette=blau zoom-rein ein="ten>10 OF 12 ROOMS" ein_y=420 ton=ui_ding] For that, ten of the twelve rooms would have to disappear.
+// Ring-Gang, alle Türen
+[wohnring grau=1,2 palette=lila schwenk-rechts] You walk back along the ring. Past every door with someone living behind it.
+// Eure Wohnungstür
+[wohnring ansicht=zimmer farbe=#e8685a tisch kratzer palette=rosa zoom-rein ein="door>YOUR APARTMENT" ein_y=420] You stop in front of your red door.
+
+== Cliffhanger ==
+// Mama schiebt den Freigabeplan hin
+[wohnring ansicht=zimmer farbe=#e8685a tisch kratzer mama palette=rosa zoom-rein ton=hit ein="apartment>RELEASE: YOUR HOME>schluessel" ein_y=420] Your mom slides the plan over to you. The dome needs your apartment too.
