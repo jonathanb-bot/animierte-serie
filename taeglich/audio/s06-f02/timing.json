@@ -1,0 +1,140 @@
+{
+ "dauer": 64.89,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "wohnring",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 4.766,
+   "emotion": "erzaehlend",
+   "text": "Drei Uhr nachts. In deinem Zuhause blinken fünf rote Lichter."
+  },
+  {
+   "nr": 2,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 4.766,
+   "dauer": 4.478,
+   "emotion": "ruhig",
+   "text": "Deine Mutter hat seit zwei Tagen nicht geschlafen. Ihre Brille sitzt schief."
+  },
+  {
+   "nr": 3,
+   "typ": "wohnring",
+   "kapitel": 1,
+   "start": 9.244,
+   "dauer": 5.438,
+   "emotion": "erzaehlend",
+   "text": "Eure alte Raumstation flickt sich nur aus leeren Zimmern. Das gelbe ist schon weg."
+  },
+  {
+   "nr": 4,
+   "typ": "rechenzentrum",
+   "kapitel": 2,
+   "start": 14.682,
+   "dauer": 5.15,
+   "emotion": "erzaehlend",
+   "text": "Ihr lauft den Ring ab. Zuerst die Luftfilter. Sie brummen, als hätten sie Fieber."
+  },
+  {
+   "nr": 5,
+   "typ": "wohnring",
+   "kapitel": 2,
+   "start": 19.832,
+   "dauer": 3.59,
+   "emotion": "erzaehlend",
+   "text": "Dann das Wasser. Aus der Decke tropft es in einen Eimer."
+  },
+  {
+   "nr": 6,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 23.422,
+   "dauer": 3.446,
+   "emotion": "ernst",
+   "text": "Du hältst die Lampe. Deine Finger sind steif vor Kälte."
+  },
+  {
+   "nr": 7,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 26.868,
+   "dauer": 3.518,
+   "emotion": "ernst",
+   "text": "„Für alle fünf Schäden reicht kein kleines Zimmer.“"
+  },
+  {
+   "nr": 8,
+   "typ": "wohnring",
+   "kapitel": 3,
+   "start": 30.386,
+   "dauer": 5.894,
+   "emotion": "erzaehlend",
+   "text": "Ren kommt den Gang herunter. Euer Gärtner. Grüner Umhang, Erde unter den Fingernägeln."
+  },
+  {
+   "nr": 9,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 36.28,
+   "dauer": 3.758,
+   "emotion": "ernst",
+   "text": "„Ihr braucht einen großen Raum. Ihr wisst, welchen.“"
+  },
+  {
+   "nr": 10,
+   "typ": "wohnring",
+   "kapitel": 3,
+   "start": 40.038,
+   "dauer": 3.086,
+   "emotion": "erzaehlend",
+   "text": "Im Modell blinkt ein grünes Feld. Der Garten."
+  },
+  {
+   "nr": 11,
+   "typ": "wohnring",
+   "kapitel": 3,
+   "start": 43.124,
+   "dauer": 4.502,
+   "emotion": "erzaehlend",
+   "text": "Den hat deine Mutter gepflanzt, als du klein warst. Mit dem krummen Baum in der Mitte."
+  },
+  {
+   "nr": 12,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 47.626,
+   "dauer": 5.03,
+   "emotion": "traurig",
+   "text": "Unter diesem Baum hast du laufen gelernt. Mit drei, barfuß in der Erde."
+  },
+  {
+   "nr": 13,
+   "typ": "wohnring",
+   "kapitel": 4,
+   "start": 52.656,
+   "dauer": 3.83,
+   "emotion": "erzaehlend",
+   "text": "Deine Mutter dreht sich weg. Sie sagt nur ein Wort. Nein."
+  },
+  {
+   "nr": 14,
+   "typ": "wohnring",
+   "kapitel": 4,
+   "start": 56.486,
+   "dauer": 4.622,
+   "emotion": "erzaehlend",
+   "text": "Die roten Lichter blinken schneller. Die Station rechnet. Noch sechs Stunden."
+  },
+  {
+   "nr": 15,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 61.108,
+   "dauer": 3.782,
+   "emotion": "traurig",
+   "text": "Dann drückt sie dir die Freigabe in die Hand. Du sollst entscheiden."
+  }
+ ]
+}

@@ -1,0 +1,158 @@
+{
+ "dauer": 68.782,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "wohnring",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 4.694,
+   "emotion": "erzaehlend",
+   "text": "Dein Zuhause hätte schon vor elf Jahren verschrottet werden sollen."
+  },
+  {
+   "nr": 2,
+   "typ": "wohnring",
+   "kapitel": 1,
+   "start": 4.694,
+   "dauer": 4.502,
+   "emotion": "erzaehlend",
+   "text": "Das steht auf dem Plan, den euer Gärtner Ren unter dem Garten gefunden hat."
+  },
+  {
+   "nr": 3,
+   "typ": "wohnring",
+   "kapitel": 1,
+   "start": 9.196,
+   "dauer": 4.67,
+   "emotion": "erzaehlend",
+   "text": "Eure Station repariert sich nur aus leeren Zimmern. Zwei sind schon weg."
+  },
+  {
+   "nr": 4,
+   "typ": "wohnring",
+   "kapitel": 2,
+   "start": 13.866,
+   "dauer": 5.342,
+   "emotion": "erzaehlend",
+   "text": "Der Projektor klickt. Ein zweiter Ring erscheint, gestrichelt, um euren herum."
+  },
+  {
+   "nr": 5,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 19.208,
+   "dauer": 3.398,
+   "emotion": "ernst",
+   "text": "Deine Lippen sind trocken. Du liest jede Zeile zweimal."
+  },
+  {
+   "nr": 6,
+   "typ": "objekt",
+   "kapitel": 2,
+   "start": 22.606,
+   "dauer": 4.238,
+   "emotion": "erklaerend",
+   "text": "Euer Ring war für fünfundzwanzig Jahre gebaut. Er ist sechsunddreißig."
+  },
+  {
+   "nr": 7,
+   "typ": "wohnring",
+   "kapitel": 2,
+   "start": 26.844,
+   "dauer": 4.886,
+   "emotion": "erzaehlend",
+   "text": "Von außen sieht man es auch. Die Farbe an den Segmenten blättert ab wie alte Haut."
+  },
+  {
+   "nr": 8,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 31.73,
+   "dauer": 3.23,
+   "emotion": "ernst",
+   "text": "„Jede Reparatur kauft nur Zeit.“"
+  },
+  {
+   "nr": 9,
+   "typ": "wohnring",
+   "kapitel": 3,
+   "start": 34.96,
+   "dauer": 5.582,
+   "emotion": "erzaehlend",
+   "text": "Der neue Ring sollte geliefert werden. Dreimal. Dreimal steht daneben: abgesagt."
+  },
+  {
+   "nr": 10,
+   "typ": "wohnring",
+   "kapitel": 3,
+   "start": 40.542,
+   "dauer": 4.238,
+   "emotion": "erzaehlend",
+   "text": "Du denkst an die kleinen Risse in den Türen. An das Klopfen in den Leitungen."
+  },
+  {
+   "nr": 11,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 44.78,
+   "dauer": 4.406,
+   "emotion": "spannend",
+   "text": "Das hier ist kein Schaden. Euer ganzer Ring stirbt. Langsam."
+  },
+  {
+   "nr": 12,
+   "typ": "wohnring",
+   "kapitel": 3,
+   "start": 49.186,
+   "dauer": 3.326,
+   "emotion": "erzaehlend",
+   "text": "An der Werkstatttür steht Bo. Er hat alles gehört."
+  },
+  {
+   "nr": 13,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 52.512,
+   "dauer": 3.206,
+   "emotion": "spannend",
+   "text": "„Müssen wir dann alle Zimmer abgeben?“"
+  },
+  {
+   "nr": 14,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 55.718,
+   "dauer": 2.87,
+   "emotion": "ernst",
+   "text": "Du willst Nein sagen. Aber du weißt es nicht."
+  },
+  {
+   "nr": 15,
+   "typ": "objekt",
+   "kapitel": 4,
+   "start": 58.588,
+   "dauer": 4.646,
+   "emotion": "erklaerend",
+   "text": "Unten auf dem Plan steht ein Kürzel. Ein einzelner Buchstabe. A."
+  },
+  {
+   "nr": 16,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 63.234,
+   "dauer": 2.918,
+   "emotion": "spannend",
+   "text": "Du kennst diese Schrift. Hinter dir geht die Tür."
+  },
+  {
+   "nr": 17,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 66.152,
+   "dauer": 2.63,
+   "emotion": "traurig",
+   "text": "„Ich weiß es seit drei Jahren.“"
+  }
+ ]
+}

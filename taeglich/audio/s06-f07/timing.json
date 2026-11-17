@@ -1,0 +1,140 @@
+{
+ "dauer": 64.77,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "wohnring",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 4.718,
+   "emotion": "erzaehlend",
+   "text": "Von deiner ganzen Wohnung darfst du nur ein Möbelstück retten."
+  },
+  {
+   "nr": 2,
+   "typ": "wohnring",
+   "kapitel": 1,
+   "start": 4.718,
+   "dauer": 5.006,
+   "emotion": "erzaehlend",
+   "text": "Eure Raumstation baut aus euren Zimmern die neue Kuppel. Für Möbel ist kaum Platz."
+  },
+  {
+   "nr": 3,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 9.724,
+   "dauer": 2.678,
+   "emotion": "wuetend",
+   "text": "„Ich nehm die Schranktüren. Alle.“"
+  },
+  {
+   "nr": 4,
+   "typ": "wohnring",
+   "kapitel": 2,
+   "start": 12.402,
+   "dauer": 4.022,
+   "emotion": "erzaehlend",
+   "text": "Auf die Schranktüren hat Bo jedes Jahr Sterne geklebt."
+  },
+  {
+   "nr": 5,
+   "typ": "wohnring",
+   "kapitel": 2,
+   "start": 16.424,
+   "dauer": 4.142,
+   "emotion": "erzaehlend",
+   "text": "Deine Mutter braucht ihre Werkbank. Ohne die repariert keiner mehr etwas."
+  },
+  {
+   "nr": 6,
+   "typ": "wohnring",
+   "kapitel": 2,
+   "start": 20.566,
+   "dauer": 4.334,
+   "emotion": "erzaehlend",
+   "text": "Und in der Kuppel warten neun Familien. Jede will auch etwas retten."
+  },
+  {
+   "nr": 7,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 24.9,
+   "dauer": 3.998,
+   "emotion": "froh",
+   "text": "Dann schaust du auf den Küchentisch. Auf die Kratzer von dir mit sechs."
+  },
+  {
+   "nr": 8,
+   "typ": "wohnring",
+   "kapitel": 3,
+   "start": 28.898,
+   "dauer": 4.118,
+   "emotion": "erzaehlend",
+   "text": "An diesem Tisch habt ihr jeden Abend gegessen. Es riecht immer noch nach Suppe."
+  },
+  {
+   "nr": 9,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 33.016,
+   "dauer": 3.422,
+   "emotion": "ernst",
+   "text": "Du sagst nur: Der Tisch bleibt. Für alle."
+  },
+  {
+   "nr": 10,
+   "typ": "wohnring",
+   "kapitel": 3,
+   "start": 36.438,
+   "dauer": 3.758,
+   "emotion": "erzaehlend",
+   "text": "Zu dritt schiebt ihr ihn durch den Ring. Die Beine schaben über den Boden."
+  },
+  {
+   "nr": 11,
+   "typ": "wohnring",
+   "kapitel": 3,
+   "start": 40.196,
+   "dauer": 4.91,
+   "emotion": "erzaehlend",
+   "text": "In der Kuppel spannt ihr Stoffbahnen. Einunddreißig Schlafnischen um einen Tisch."
+  },
+  {
+   "nr": 12,
+   "typ": "objekt",
+   "kapitel": 4,
+   "start": 45.106,
+   "dauer": 6.95,
+   "emotion": "erklaerend",
+   "text": "Mit den Nachbarn legt ihr Regeln fest. Eine Nische pro Person. Ruhe ab zweiundzwanzig Uhr. Der Tisch gehört allen."
+  },
+  {
+   "nr": 13,
+   "typ": "wohnring",
+   "kapitel": 4,
+   "start": 52.056,
+   "dauer": 4.166,
+   "emotion": "erzaehlend",
+   "text": "Bo kriecht unter den Tisch und zeichnet sein gelbes Zimmer. Aus dem Kopf."
+  },
+  {
+   "nr": 14,
+   "typ": "wohnring",
+   "kapitel": 4,
+   "start": 56.222,
+   "dauer": 3.182,
+   "emotion": "erzaehlend",
+   "text": "Deine Mutter legt den Arm um dich. Ihr sagt beide nichts."
+  },
+  {
+   "nr": 15,
+   "typ": "wohnring",
+   "kapitel": 5,
+   "start": 59.404,
+   "dauer": 5.366,
+   "emotion": "erzaehlend",
+   "text": "Dann setzt du deine Freigabe neben den Namen deiner Mutter. Eure Wohnung wird im Plan grau."
+  }
+ ]
+}

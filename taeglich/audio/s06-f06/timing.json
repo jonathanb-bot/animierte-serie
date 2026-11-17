@@ -1,0 +1,140 @@
+{
+ "dauer": 67.146,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "wohnring",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 4.934,
+   "emotion": "erzaehlend",
+   "text": "Morgen wird deine Wohnung zerlegt. Du darfst eine Kiste mitnehmen."
+  },
+  {
+   "nr": 2,
+   "typ": "objekt",
+   "kapitel": 1,
+   "start": 4.934,
+   "dauer": 3.398,
+   "emotion": "erklaerend",
+   "text": "Eine Kiste pro Person. Mehr Platz hat die Kuppel nicht."
+  },
+  {
+   "nr": 3,
+   "typ": "wohnring",
+   "kapitel": 1,
+   "start": 8.332,
+   "dauer": 4.862,
+   "emotion": "erzaehlend",
+   "text": "Eure Raumstation braucht leere Zimmer, um zu überleben. Jetzt ist eures dran."
+  },
+  {
+   "nr": 4,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 13.194,
+   "dauer": 4.286,
+   "emotion": "traurig",
+   "text": "Du nimmst etwas in die Hand. Legst es weg. Nimmst es wieder."
+  },
+  {
+   "nr": 5,
+   "typ": "wohnring",
+   "kapitel": 2,
+   "start": 17.48,
+   "dauer": 5.918,
+   "emotion": "erzaehlend",
+   "text": "Dreiundvierzig Zeichnungen von dir. Dein erster Raumanzug-Aufnäher. Der Becher mit dem Sprung."
+  },
+  {
+   "nr": 6,
+   "typ": "wohnring",
+   "kapitel": 2,
+   "start": 23.398,
+   "dauer": 4.766,
+   "emotion": "erzaehlend",
+   "text": "Bo ist nach fünf Minuten fertig. Er hat sein Band. Mehr will er nicht."
+  },
+  {
+   "nr": 7,
+   "typ": "wohnring",
+   "kapitel": 2,
+   "start": 28.164,
+   "dauer": 4.19,
+   "emotion": "erzaehlend",
+   "text": "Deine Mutter packt nur Werkzeug. Als hätte sie das Abschiednehmen geübt."
+  },
+  {
+   "nr": 8,
+   "typ": "wohnring",
+   "kapitel": 3,
+   "start": 32.354,
+   "dauer": 4.79,
+   "emotion": "erzaehlend",
+   "text": "Um Mitternacht sitzt du allein am Küchentisch. Unter deinen Fingern raue Kratzer."
+  },
+  {
+   "nr": 9,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 37.144,
+   "dauer": 4.286,
+   "emotion": "traurig",
+   "text": "Die hast du mit sechs reingeritzt. Deine Mutter hat geschimpft und dann gelacht."
+  },
+  {
+   "nr": 10,
+   "typ": "wohnring",
+   "kapitel": 3,
+   "start": 41.43,
+   "dauer": 3.518,
+   "emotion": "erzaehlend",
+   "text": "Deine Mutter setzt sich zu dir. Sie bringt zwei Becher Tee."
+  },
+  {
+   "nr": 11,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 44.948,
+   "dauer": 3.806,
+   "emotion": "traurig",
+   "text": "„Ich will auch alles behalten. Jedes Ding.“"
+  },
+  {
+   "nr": 12,
+   "typ": "wohnring",
+   "kapitel": 3,
+   "start": 48.754,
+   "dauer": 3.638,
+   "emotion": "erzaehlend",
+   "text": "Ihr redet zwei Stunden. So lange wie seit Monaten nicht."
+  },
+  {
+   "nr": 13,
+   "typ": "wohnring",
+   "kapitel": 4,
+   "start": 52.392,
+   "dauer": 4.358,
+   "emotion": "erzaehlend",
+   "text": "Danach willst du nach Bo sehen. Seit sein Zimmer weg ist, schläft er bei dir."
+  },
+  {
+   "nr": 14,
+   "typ": "wohnring",
+   "kapitel": 4,
+   "start": 56.75,
+   "dauer": 5.222,
+   "emotion": "erzaehlend",
+   "text": "Bo schläft. Unter deinem Bett ist ein Abdruck im Staub. Ein sauberes Rechteck."
+  },
+  {
+   "nr": 15,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 61.972,
+   "dauer": 5.174,
+   "emotion": "ernst",
+   "text": "Da stand eine Kiste von Bo. Eine, die du nie gesehen hast. Und jetzt ist sie weg."
+  }
+ ]
+}

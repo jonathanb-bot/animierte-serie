@@ -1,0 +1,158 @@
+{
+ "dauer": 68.998,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "wohnring",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 4.286,
+   "emotion": "erzaehlend",
+   "text": "Heute siehst du zu, wie deine Wohnung in Kacheln zerfällt."
+  },
+  {
+   "nr": 2,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 4.286,
+   "dauer": 3.878,
+   "emotion": "traurig",
+   "text": "Du stehst im Gang und hältst deine eine Kiste fest."
+  },
+  {
+   "nr": 3,
+   "typ": "wohnring",
+   "kapitel": 1,
+   "start": 8.164,
+   "dauer": 5.198,
+   "emotion": "erzaehlend",
+   "text": "Eure Raumstation baut sich aus leeren Zimmern eine sichere Kuppel. Heute geht es los."
+  },
+  {
+   "nr": 4,
+   "typ": "objekt",
+   "kapitel": 2,
+   "start": 13.362,
+   "dauer": 3.206,
+   "emotion": "erklaerend",
+   "text": "Sechs Uhr früh. Ein Zimmer nach dem anderen."
+  },
+  {
+   "nr": 5,
+   "typ": "wohnring",
+   "kapitel": 2,
+   "start": 16.568,
+   "dauer": 6.614,
+   "emotion": "erzaehlend",
+   "text": "Eure rote Küche. Die Wände lösen sich in leuchtende Kacheln. Sie fliegen in die Rippen der Station."
+  },
+  {
+   "nr": 6,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 23.182,
+   "dauer": 3.158,
+   "emotion": "traurig",
+   "text": "Deine Mutter schaut nicht weg. Sie zählt leise mit."
+  },
+  {
+   "nr": 7,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 26.34,
+   "dauer": 2.39,
+   "emotion": "ernst",
+   "text": "Bo hält sein Band in beiden Händen."
+  },
+  {
+   "nr": 8,
+   "typ": "wohnring",
+   "kapitel": 2,
+   "start": 28.73,
+   "dauer": 5.318,
+   "emotion": "erzaehlend",
+   "text": "Ihr drei steht nebeneinander. Keiner sagt etwas, bis die letzte Kachel weg ist."
+  },
+  {
+   "nr": 9,
+   "typ": "wohnring",
+   "kapitel": 3,
+   "start": 34.048,
+   "dauer": 4.094,
+   "emotion": "erzaehlend",
+   "text": "Mittags sind neun Zimmer grau. Die Kuppel wächst Schicht um Schicht."
+  },
+  {
+   "nr": 10,
+   "typ": "rechenzentrum",
+   "kapitel": 3,
+   "start": 38.142,
+   "dauer": 3.494,
+   "emotion": "erzaehlend",
+   "text": "Die Luftfilter atmen wieder ruhig. Achtundachtzig Prozent."
+  },
+  {
+   "nr": 11,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 41.636,
+   "dauer": 3.254,
+   "emotion": "froh",
+   "text": "Zum ersten Mal seit Tagen lachst du. Es geht."
+  },
+  {
+   "nr": 12,
+   "typ": "wohnring",
+   "kapitel": 3,
+   "start": 44.89,
+   "dauer": 3.782,
+   "emotion": "erzaehlend",
+   "text": "Dann blinkt ein Feld. Zimmer zehn. Es fehlt noch."
+  },
+  {
+   "nr": 13,
+   "typ": "wohnring",
+   "kapitel": 3,
+   "start": 48.672,
+   "dauer": 3.854,
+   "emotion": "erzaehlend",
+   "text": "Das Zimmer gehört Ren. Euer Gärtner hat den ganzen Tag geholfen."
+  },
+  {
+   "nr": 14,
+   "typ": "wohnring",
+   "kapitel": 4,
+   "start": 52.526,
+   "dauer": 4.262,
+   "emotion": "erzaehlend",
+   "text": "Jetzt steht er vor seiner eigenen Tür. Die Hand auf dem Griff."
+  },
+  {
+   "nr": 15,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 56.788,
+   "dauer": 3.206,
+   "emotion": "wuetend",
+   "text": "„Meins nicht. Noch nicht.“"
+  },
+  {
+   "nr": 16,
+   "typ": "wohnring",
+   "kapitel": 4,
+   "start": 59.994,
+   "dauer": 4.358,
+   "emotion": "erzaehlend",
+   "text": "In den Leitungen klopft es. Erst leise, dann wie eine Faust."
+  },
+  {
+   "nr": 17,
+   "typ": "wohnring",
+   "kapitel": 5,
+   "start": 64.352,
+   "dauer": 4.646,
+   "emotion": "erzaehlend",
+   "text": "Und im Ring springt das letzte Licht auf Rot. Luft für sechs Stunden."
+  }
+ ]
+}

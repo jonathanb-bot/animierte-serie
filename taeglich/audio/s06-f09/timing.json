@@ -1,0 +1,149 @@
+{
+ "dauer": 67.424,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "wohnring",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 5.27,
+   "emotion": "erzaehlend",
+   "text": "Noch sechs Stunden Luft. Und euer Gärtner gibt sein Zimmer nicht her."
+  },
+  {
+   "nr": 2,
+   "typ": "wohnring",
+   "kapitel": 1,
+   "start": 5.27,
+   "dauer": 5.198,
+   "emotion": "erzaehlend",
+   "text": "Eure Raumstation braucht ein letztes leeres Zimmer. Rens Zimmer."
+  },
+  {
+   "nr": 3,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 10.468,
+   "dauer": 3.998,
+   "emotion": "spannend",
+   "text": "Kalter Schweiß läuft dir den Rücken herunter. Du klopfst an seine Tür."
+  },
+  {
+   "nr": 4,
+   "typ": "wohnring",
+   "kapitel": 2,
+   "start": 14.466,
+   "dauer": 3.83,
+   "emotion": "erzaehlend",
+   "text": "Drinnen ist es still. Nur das Summen der Pflanzenlampen."
+  },
+  {
+   "nr": 5,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 18.296,
+   "dauer": 3.278,
+   "emotion": "traurig",
+   "text": "„Wo schläft Ilse, wenn hier alles weg ist?“"
+  },
+  {
+   "nr": 6,
+   "typ": "wohnring",
+   "kapitel": 2,
+   "start": 21.574,
+   "dauer": 4.742,
+   "emotion": "erzaehlend",
+   "text": "Frau Ilse ist einundachtzig. Jedes Geräusch tut ihr in den Ohren weh."
+  },
+  {
+   "nr": 7,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 26.316,
+   "dauer": 4.118,
+   "emotion": "traurig",
+   "text": "Nur hier, zwischen Rens Pflanzen, kann sie seit Jahren schlafen."
+  },
+  {
+   "nr": 8,
+   "typ": "wohnring",
+   "kapitel": 3,
+   "start": 30.434,
+   "dauer": 5.894,
+   "emotion": "erzaehlend",
+   "text": "Du schaust auf den Kuppelplan. Er hat recht. Für Ilse gibt es keinen ruhigen Platz."
+  },
+  {
+   "nr": 9,
+   "typ": "wohnring",
+   "kapitel": 3,
+   "start": 36.328,
+   "dauer": 5.222,
+   "emotion": "erzaehlend",
+   "text": "Dann denkst du an deine Ecke. Die mit deiner Werkbank, hinten am Glas."
+  },
+  {
+   "nr": 10,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 41.55,
+   "dauer": 2.534,
+   "emotion": "ernst",
+   "text": "Du hast sie dir gewünscht, seit du zwölf bist."
+  },
+  {
+   "nr": 11,
+   "typ": "objekt",
+   "kapitel": 3,
+   "start": 44.084,
+   "dauer": 2.678,
+   "emotion": "erklaerend",
+   "text": "Du gibst sie her. Für eine ruhige Nische."
+  },
+  {
+   "nr": 12,
+   "typ": "wohnring",
+   "kapitel": 3,
+   "start": 46.762,
+   "dauer": 4.67,
+   "emotion": "erzaehlend",
+   "text": "Ihr baut eine doppelte Trennwand. Dahinter ist es leise wie im Garten."
+  },
+  {
+   "nr": 13,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 51.432,
+   "dauer": 1.862,
+   "emotion": "froh",
+   "text": "„Dann gehört mein Zimmer euch.“"
+  },
+  {
+   "nr": 14,
+   "typ": "wohnring",
+   "kapitel": 4,
+   "start": 53.294,
+   "dauer": 3.998,
+   "emotion": "erzaehlend",
+   "text": "Das letzte Feld wird grau. Und alle roten Lichter werden grün."
+  },
+  {
+   "nr": 15,
+   "typ": "wohnring",
+   "kapitel": 4,
+   "start": 57.292,
+   "dauer": 5.222,
+   "emotion": "erzaehlend",
+   "text": "Die letzte Familie tritt durch die Kuppeltür. Einunddreißig Menschen an einem Ort."
+  },
+  {
+   "nr": 16,
+   "typ": "wohnring",
+   "kapitel": 5,
+   "start": 62.514,
+   "dauer": 4.91,
+   "emotion": "erzaehlend",
+   "text": "Als Letzter kommt Bo. Mit der verschlossenen Kiste, die unter deinem Bett stand."
+  }
+ ]
+}

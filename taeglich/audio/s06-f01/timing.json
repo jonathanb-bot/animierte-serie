@@ -1,0 +1,158 @@
+{
+ "dauer": 65.784,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "wohnring",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 5.318,
+   "emotion": "erzaehlend",
+   "text": "Heute Nacht löst sich das Zimmer deines kleinen Bruders auf. Für immer."
+  },
+  {
+   "nr": 2,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 5.318,
+   "dauer": 5.102,
+   "emotion": "traurig",
+   "text": "Bo ist neun. Er hält sich am Türrahmen fest, als würde das Zimmer sonst wegfliegen."
+  },
+  {
+   "nr": 3,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 10.42,
+   "dauer": 3.926,
+   "emotion": "ernst",
+   "text": "„Der Wärmeregler ist kaputt. Wir brauchen seine Wand.“"
+  },
+  {
+   "nr": 4,
+   "typ": "titel",
+   "kapitel": 1,
+   "start": 14.346,
+   "dauer": 1.0,
+   "emotion": "erzaehlend",
+   "text": "Deine Mutter ist die Mechanikerin der Station."
+  },
+  {
+   "nr": 5,
+   "typ": "wohnring",
+   "kapitel": 2,
+   "start": 15.346,
+   "dauer": 6.566,
+   "emotion": "erzaehlend",
+   "text": "Ihr lebt im Wohnring einer alten Raumstation. Zwölf Zimmer im Kreis, über einem orangefarbenen Planeten."
+  },
+  {
+   "nr": 6,
+   "typ": "wohnring",
+   "kapitel": 2,
+   "start": 21.912,
+   "dauer": 3.014,
+   "emotion": "erzaehlend",
+   "text": "Ohne den Regler kühlt der Ring in zwei Tagen aus."
+  },
+  {
+   "nr": 7,
+   "typ": "wohnring",
+   "kapitel": 2,
+   "start": 24.926,
+   "dauer": 5.51,
+   "emotion": "erzaehlend",
+   "text": "Die Station kann sich selbst reparieren. Aber nur mit einem Zimmer, das ihr leer räumt und freigebt."
+  },
+  {
+   "nr": 8,
+   "typ": "wohnring",
+   "kapitel": 3,
+   "start": 30.436,
+   "dauer": 3.542,
+   "emotion": "erzaehlend",
+   "text": "An Bos Wand stehen sieben Striche. Jeder Geburtstag einer."
+  },
+  {
+   "nr": 9,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 33.978,
+   "dauer": 3.59,
+   "emotion": "wuetend",
+   "text": "„Die Wand bleibt. Und ich bleib auch.“"
+  },
+  {
+   "nr": 10,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 37.568,
+   "dauer": 3.278,
+   "emotion": "ernst",
+   "text": "Der Boden ist kalt unter deinen Knien. Du hast eine Idee."
+  },
+  {
+   "nr": 11,
+   "typ": "objekt",
+   "kapitel": 3,
+   "start": 40.846,
+   "dauer": 4.286,
+   "emotion": "erklaerend",
+   "text": "Ihr klebt ein langes Band an die Wand und malt jeden Strich nach. Mit Datum."
+  },
+  {
+   "nr": 12,
+   "typ": "wohnring",
+   "kapitel": 3,
+   "start": 45.132,
+   "dauer": 3.758,
+   "emotion": "erzaehlend",
+   "text": "Bo rollt es auf. Jetzt passt seine Wand in seine Hosentasche."
+  },
+  {
+   "nr": 13,
+   "typ": "wohnring",
+   "kapitel": 4,
+   "start": 48.89,
+   "dauer": 3.614,
+   "emotion": "erzaehlend",
+   "text": "Deine Mutter prüft das leere Zimmer. Dann tippt sie auf Freigabe."
+  },
+  {
+   "nr": 14,
+   "typ": "wohnring",
+   "kapitel": 4,
+   "start": 52.504,
+   "dauer": 4.478,
+   "emotion": "erzaehlend",
+   "text": "Die gelben Wände zerfallen in leuchtende Kacheln. Es riecht nach warmem Plastik."
+  },
+  {
+   "nr": 15,
+   "typ": "wohnring",
+   "kapitel": 4,
+   "start": 56.982,
+   "dauer": 2.102,
+   "emotion": "erzaehlend",
+   "text": "Im Modell wird der gelbe Kreis grau."
+  },
+  {
+   "nr": 16,
+   "typ": "objekt",
+   "kapitel": 4,
+   "start": 59.084,
+   "dauer": 3.614,
+   "emotion": "erklaerend",
+   "text": "Der Regler springt auf Grün. Warme Luft strömt über den Boden."
+  },
+  {
+   "nr": 17,
+   "typ": "wohnring",
+   "kapitel": 5,
+   "start": 62.698,
+   "dauer": 3.086,
+   "emotion": "erzaehlend",
+   "text": "Und gleich daneben melden fünf weitere Räume Schäden."
+  }
+ ]
+}

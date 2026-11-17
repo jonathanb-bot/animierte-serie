@@ -1,0 +1,158 @@
+{
+ "dauer": 69.742,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "wohnring",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 5.27,
+   "emotion": "erzaehlend",
+   "text": "Deine Station ist gerettet. Aber nichts hier fühlt sich nach Zuhause an."
+  },
+  {
+   "nr": 2,
+   "typ": "wohnring",
+   "kapitel": 1,
+   "start": 5.27,
+   "dauer": 3.278,
+   "emotion": "erzaehlend",
+   "text": "Euer alter Ring ist dunkel. Nur die Kuppel leuchtet."
+  },
+  {
+   "nr": 3,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 8.548,
+   "dauer": 4.19,
+   "emotion": "traurig",
+   "text": "Deine Nische riecht nach fremdem Stoff. Du kannst nicht schlafen."
+  },
+  {
+   "nr": 4,
+   "typ": "wohnring",
+   "kapitel": 2,
+   "start": 12.738,
+   "dauer": 4.79,
+   "emotion": "erzaehlend",
+   "text": "Am Abend backt Ren Brot. Der Duft zieht durch die ganze Kuppel."
+  },
+  {
+   "nr": 5,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 17.528,
+   "dauer": 3.806,
+   "emotion": "froh",
+   "text": "Du reißt ein Stück ab. Es ist noch warm und knackt."
+  },
+  {
+   "nr": 6,
+   "typ": "wohnring",
+   "kapitel": 2,
+   "start": 21.334,
+   "dauer": 3.878,
+   "emotion": "erzaehlend",
+   "text": "Heute plant niemand etwas. Ihr sitzt einfach am Tisch."
+  },
+  {
+   "nr": 7,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 25.212,
+   "dauer": 4.382,
+   "emotion": "froh",
+   "text": "„Zum ersten Mal seit Jahren repariere ich nichts.“"
+  },
+  {
+   "nr": 8,
+   "typ": "objekt",
+   "kapitel": 3,
+   "start": 29.594,
+   "dauer": 3.998,
+   "emotion": "erklaerend",
+   "text": "Dann stellt Bo seine Kiste auf den Tisch. Er öffnet das Schloss."
+  },
+  {
+   "nr": 9,
+   "typ": "wohnring",
+   "kapitel": 3,
+   "start": 33.592,
+   "dauer": 5.03,
+   "emotion": "erzaehlend",
+   "text": "Darin sind Zimmer. Aus Pappe. Jedes verlorene Zimmer der Station."
+  },
+  {
+   "nr": 10,
+   "typ": "wohnring",
+   "kapitel": 3,
+   "start": 38.622,
+   "dauer": 5.366,
+   "emotion": "erzaehlend",
+   "text": "Sein gelbes Zimmer. Der Garten. Eure rote Küche mit den Kratzern im Tisch."
+  },
+  {
+   "nr": 11,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 43.988,
+   "dauer": 3.542,
+   "emotion": "froh",
+   "text": "„Ich hab sie gemalt, bevor sie weg waren.“"
+  },
+  {
+   "nr": 12,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 47.53,
+   "dauer": 2.966,
+   "emotion": "traurig",
+   "text": "Deine Mutter lacht und weint gleichzeitig."
+  },
+  {
+   "nr": 13,
+   "typ": "wohnring",
+   "kapitel": 3,
+   "start": 50.496,
+   "dauer": 3.398,
+   "emotion": "erzaehlend",
+   "text": "Ihr stellt die Zimmer unter den Tisch. Eine kleine Stadt."
+  },
+  {
+   "nr": 14,
+   "typ": "wohnring",
+   "kapitel": 4,
+   "start": 53.894,
+   "dauer": 4.046,
+   "emotion": "erzaehlend",
+   "text": "Dazwischen steht ein Becher aus dem Garten. Ein grüner Keimling."
+  },
+  {
+   "nr": 15,
+   "typ": "objekt",
+   "kapitel": 4,
+   "start": 57.94,
+   "dauer": 4.118,
+   "emotion": "erklaerend",
+   "text": "Bo hängt sein Band an den Tisch. Du malst den achten Strich."
+  },
+  {
+   "nr": 16,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 62.058,
+   "dauer": 1.766,
+   "emotion": "ernst",
+   "text": "Dann siehst du noch ein Zimmer."
+  },
+  {
+   "nr": 17,
+   "typ": "wohnring",
+   "kapitel": 5,
+   "start": 63.824,
+   "dauer": 5.918,
+   "emotion": "erzaehlend",
+   "text": "Eins, das es nie gab. Auf dem Schild steht dein Name. Und das Wort: morgen."
+  }
+ ]
+}

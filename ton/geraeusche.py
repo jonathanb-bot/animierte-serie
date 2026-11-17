@@ -82,6 +82,8 @@ def _einfuegen(ziel, quelle, t):
     s = A.sek(t)
     if s >= len(ziel):
         return ziel
+    if s < 0:  # leicht negativer Zufallsversatz am Anfang (vorher Absturz)
+        quelle, s = quelle[-s:], 0
     e = min(len(ziel), s + len(quelle))
     ziel[s:e] += quelle[: e - s]
     return ziel

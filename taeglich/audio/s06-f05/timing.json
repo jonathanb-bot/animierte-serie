@@ -1,0 +1,158 @@
+{
+ "dauer": 62.35,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 4.19,
+   "emotion": "traurig",
+   "text": "Deine Mutter wusste seit drei Jahren, dass euer Zuhause stirbt."
+  },
+  {
+   "nr": 2,
+   "typ": "wohnring",
+   "kapitel": 1,
+   "start": 4.19,
+   "dauer": 4.238,
+   "emotion": "erzaehlend",
+   "text": "Eure Raumstation flickt sich aus leeren Zimmern. Und sie hat geschwiegen."
+  },
+  {
+   "nr": 3,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 8.428,
+   "dauer": 3.182,
+   "emotion": "ruhig",
+   "text": "„Ich wollte euch eure Zimmer noch ein bisschen lassen.“"
+  },
+  {
+   "nr": 4,
+   "typ": "objekt",
+   "kapitel": 2,
+   "start": 11.61,
+   "dauer": 5.102,
+   "emotion": "erklaerend",
+   "text": "Jedes Mal, wenn eine Lieferung ausfiel, hat sie den Umbau verschoben. Aus Angst."
+  },
+  {
+   "nr": 5,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 16.712,
+   "dauer": 3.446,
+   "emotion": "wuetend",
+   "text": "Du willst wütend sein. Aber ihre Hände zittern."
+  },
+  {
+   "nr": 6,
+   "typ": "wohnring",
+   "kapitel": 2,
+   "start": 20.158,
+   "dauer": 3.158,
+   "emotion": "erzaehlend",
+   "text": "Bo schiebt seine Hand in deine. Ganz fest."
+  },
+  {
+   "nr": 7,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 23.316,
+   "dauer": 3.614,
+   "emotion": "ernst",
+   "text": "Sein Daumen streicht über das aufgerollte Band in seiner Tasche."
+  },
+  {
+   "nr": 8,
+   "typ": "wohnring",
+   "kapitel": 3,
+   "start": 26.93,
+   "dauer": 5.078,
+   "emotion": "erzaehlend",
+   "text": "Du rufst alle in die Kuppel. Einunddreißig Bewohner. Über ihnen leuchtet der Planet."
+  },
+  {
+   "nr": 9,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 32.008,
+   "dauer": 3.062,
+   "emotion": "ernst",
+   "text": "Du sagst die Wahrheit. Ohne etwas wegzulassen."
+  },
+  {
+   "nr": 10,
+   "typ": "wohnring",
+   "kapitel": 3,
+   "start": 35.07,
+   "dauer": 2.678,
+   "emotion": "erzaehlend",
+   "text": "Danach ist es so still, dass man die Lüftung hört."
+  },
+  {
+   "nr": 11,
+   "typ": "wohnring",
+   "kapitel": 3,
+   "start": 37.748,
+   "dauer": 3.926,
+   "emotion": "erzaehlend",
+   "text": "Ren prüft die Kuppel. Sie ist das Stärkste an der ganzen Station."
+  },
+  {
+   "nr": 12,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 41.674,
+   "dauer": 3.326,
+   "emotion": "ernst",
+   "text": "„Da passen alle rein. Wenn wir sie ausbauen.“"
+  },
+  {
+   "nr": 13,
+   "typ": "wohnring",
+   "kapitel": 3,
+   "start": 45.0,
+   "dauer": 3.782,
+   "emotion": "erzaehlend",
+   "text": "Einer nach dem anderen hebt die Hand. Zuletzt die alte Frau Ilse."
+  },
+  {
+   "nr": 14,
+   "typ": "wohnring",
+   "kapitel": 4,
+   "start": 48.782,
+   "dauer": 2.726,
+   "emotion": "erzaehlend",
+   "text": "Dafür müssten zehn von zwölf Zimmern verschwinden."
+  },
+  {
+   "nr": 15,
+   "typ": "wohnring",
+   "kapitel": 4,
+   "start": 51.508,
+   "dauer": 4.166,
+   "emotion": "erzaehlend",
+   "text": "Du gehst den Ring zurück. Vorbei an jeder Tür, hinter der jemand wohnt."
+  },
+  {
+   "nr": 16,
+   "typ": "wohnring",
+   "kapitel": 4,
+   "start": 55.674,
+   "dauer": 2.126,
+   "emotion": "erzaehlend",
+   "text": "Vor eurer roten Tür bleibst du stehen."
+  },
+  {
+   "nr": 17,
+   "typ": "wohnring",
+   "kapitel": 5,
+   "start": 57.8,
+   "dauer": 4.55,
+   "emotion": "erzaehlend",
+   "text": "Deine Mutter schiebt dir den Plan hin. Für die Kuppel braucht ihr auch eure Wohnung."
+  }
+ ]
+}

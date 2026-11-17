@@ -1,0 +1,149 @@
+{
+ "dauer": 67.616,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "wohnring",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 4.406,
+   "emotion": "erzaehlend",
+   "text": "Du musst den Garten deiner Mutter aufgeben. Bis sechs Uhr früh."
+  },
+  {
+   "nr": 2,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 4.406,
+   "dauer": 4.31,
+   "emotion": "traurig",
+   "text": "Deine Mutter sitzt unter dem krummen Baum. Sie hat die Hand auf der Rinde."
+  },
+  {
+   "nr": 3,
+   "typ": "wohnring",
+   "kapitel": 1,
+   "start": 8.716,
+   "dauer": 5.87,
+   "emotion": "erzaehlend",
+   "text": "Eure Raumstation repariert sich nur aus leeren Zimmern. Fünf Schäden. Ein großer Raum."
+  },
+  {
+   "nr": 4,
+   "typ": "wohnring",
+   "kapitel": 2,
+   "start": 14.586,
+   "dauer": 3.998,
+   "emotion": "erzaehlend",
+   "text": "Es riecht nach feuchter Erde. Die Blätter rascheln im Luftstrom."
+  },
+  {
+   "nr": 5,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 18.584,
+   "dauer": 4.742,
+   "emotion": "traurig",
+   "text": "Die schweren Beete passen nirgends hin. Nicht in die Gänge. Nicht in die Kuppel."
+  },
+  {
+   "nr": 6,
+   "typ": "wohnring",
+   "kapitel": 2,
+   "start": 23.326,
+   "dauer": 3.134,
+   "emotion": "erzaehlend",
+   "text": "Dann kommt Ren, euer Gärtner, mit leeren Tabletts."
+  },
+  {
+   "nr": 7,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 26.46,
+   "dauer": 3.254,
+   "emotion": "froh",
+   "text": "„Ein Garten passt auch in eine Hand.“"
+  },
+  {
+   "nr": 8,
+   "typ": "objekt",
+   "kapitel": 3,
+   "start": 29.714,
+   "dauer": 5.102,
+   "emotion": "erklaerend",
+   "text": "Ihr füllt zweihundert kleine Tüten mit Samen. Tomaten, Bohnen, Kresse."
+  },
+  {
+   "nr": 9,
+   "typ": "wohnring",
+   "kapitel": 3,
+   "start": 34.816,
+   "dauer": 4.982,
+   "emotion": "erzaehlend",
+   "text": "Dazu vierundsechzig Setzlinge. Bo trägt seine Schale, als wäre sie aus Glas."
+  },
+  {
+   "nr": 10,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 39.798,
+   "dauer": 2.87,
+   "emotion": "froh",
+   "text": "„Die heißt Erbse. Die kommt mit.“"
+  },
+  {
+   "nr": 11,
+   "typ": "wohnring",
+   "kapitel": 3,
+   "start": 42.668,
+   "dauer": 4.79,
+   "emotion": "erzaehlend",
+   "text": "Deine Mutter misst den Baum. Zwei Meter vierzig. Sie schreibt die Zahl an die Wand."
+  },
+  {
+   "nr": 12,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 47.458,
+   "dauer": 3.254,
+   "emotion": "traurig",
+   "text": "Den Baum kann keiner tragen. Sie lässt ihn stehen."
+  },
+  {
+   "nr": 13,
+   "typ": "wohnring",
+   "kapitel": 4,
+   "start": 50.712,
+   "dauer": 4.022,
+   "emotion": "erzaehlend",
+   "text": "Ihr tragt alles in die Kuppel. Dort, wo der Planet durchs Glas leuchtet."
+  },
+  {
+   "nr": 14,
+   "typ": "wohnring",
+   "kapitel": 4,
+   "start": 54.734,
+   "dauer": 5.006,
+   "emotion": "erzaehlend",
+   "text": "Auf dem Rückweg trägt deine Mutter Bos Schale. Sie lächelt zum ersten Mal seit Tagen."
+  },
+  {
+   "nr": 15,
+   "typ": "wohnring",
+   "kapitel": 4,
+   "start": 59.74,
+   "dauer": 3.422,
+   "emotion": "erzaehlend",
+   "text": "Ren gräbt das letzte Beet leer. Dann hört er auf."
+  },
+  {
+   "nr": 16,
+   "typ": "wohnring",
+   "kapitel": 5,
+   "start": 63.162,
+   "dauer": 4.454,
+   "emotion": "erzaehlend",
+   "text": "Unter der Erde liegt ein alter Plan. Euer Wohnring sollte längst ersetzt sein."
+  }
+ ]
+}
