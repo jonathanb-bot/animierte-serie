@@ -105,3 +105,21 @@ Automatisch aus `python taeglich/videodaten.py`. Grundlage für die Analyse (Lä
 | TikTok-Teil | Folgen | Länge s | Termin |
 |---|---|---|---|
 
+## s06 „Ein Zimmer weniger“ (10 Folgen, Format-Längenband: masse 62–75 s)
+
+| Video | Länge s | Band | Wörter | Wörter/s | Einst. | Kurzgesagt-Einst. | Nah | Fakten | Stimmung | Hook-Text | Instagram | YouTube |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| F1 Das gelbe Kinderzimmer | 65.23 | kurz | 186 | 2.85 | 17 | 0 | 4 | 3 | spannend | HEUTE NACHT VERSCHWINDET SEIN ZIMMER |  |  |
+| F2 Fünf rote Lichter | 64.37 | kurz | 171 | 2.66 | 15 | 1 | 6 | 0 | duester | 5 ROTE LICHTER IN DEINEM ZUHAUSE |  |  |
+| F3 Ein Garten passt in eine Hand | 67.0 | kurz | 180 | 2.69 | 16 | 0 | 5 | 1 | traurig | DU MUSST DEN GARTEN AUFGEBEN |  |  |
+| F4 Der alte Plan | 68.16 | kurz | 173 | 2.54 | 17 | 0 | 7 | 2 | spannend | DEIN ZUHAUSE HÄTTE LÄNGST WEG SEIN SOLLEN |  |  |
+| F5 Der verschobene Abschied | 68.45 | kurz | 177 | 2.59 | 17 | 0 | 6 | 1 | duester | SIE WUSSTE ES SEIT 3 JAHREN |  |  |
+| F6 Eine Kiste pro Person | 66.6 | kurz | 179 | 2.69 | 15 | 0 | 4 | 1 | traurig | EINE KISTE. DEIN GANZES LEBEN. |  |  |
+| F7 Der Tisch bleibt | 64.21 | kurz | 180 | 2.8 | 15 | 0 | 3 | 1 | warm | NUR 1 MÖBELSTÜCK DARF BLEIBEN |  |  |
+| F8 Der Tag der Zerlegung | 68.43 | kurz | 175 | 2.56 | 17 | 1 | 5 | 1 | spannend | DEINE WOHNUNG ZERFÄLLT HEUTE |  |  |
+| F9 Platz für alle | 66.85 | kurz | 170 | 2.54 | 16 | 0 | 5 | 1 | warm | NOCH 6 STUNDEN LUFT |  |  |
+| F10 Die Stadt unter dem Tisch | 69.16 | kurz | 173 | 2.5 | 17 | 0 | 6 | 2 | freudig | GERETTET. ABER NICHT ZUHAUSE. |  |  |
+
+| TikTok-Teil | Folgen | Länge s | Termin |
+|---|---|---|---|
+
