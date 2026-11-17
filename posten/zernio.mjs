@@ -68,17 +68,16 @@ if (args.includes("--konten")) {
 // GET /inbox/comments listet Posts mit commentCount, GET /inbox/comments/{postId} liefert die Kommentare.
 // Ergebnis: posten/kommentare.json (Rohdaten) und posten/kommentare.txt (lesbar, meiste Likes zuerst).
 if (args.includes("--kommentare")) {
-  const apiRoh = api;
   const ergebnis = { erstellt: new Date().toISOString(), posts: [], fehler: [] };
   const zeilen = [];
   const feld = (o, ...ns) => { for (const n of ns) { const v = n.split(".").reduce((x, k) => x?.[k], o); if (v != null && v !== "") return v; } return null; };
   // Zernio drosselt bei über 60 Anfragen pro Minute (HTTP 429): warten und bis zu 6-mal neu versuchen (17.11., sonst fehlen Posts in der Abstimmung)
-  const api = async (...a) => { let r; for (let v = 0; v < 6; v++) { r = await apiRoh(...a); if (r.status !== 429) return r;
+  const apiW = async (...a) => { let r; for (let v = 0; v < 6; v++) { r = await api(...a); if (r.status !== 429) return r;
     const s = Number(/retry after (\d+)/i.exec(JSON.stringify(r.json))?.[1] || 20); await new Promise(z => setTimeout(z, (s + 2) * 1000)); } return r; };
   for (let k = 0; k < KEYS.length; k++) {
     if (!KEYS[k]) continue;
     for (let page = 1; page <= 10; page++) {
-      const r = await api("GET", `/inbox/comments?limit=100&page=${page}`, null, KEYS[k]);
+      const r = await apiW("GET", `/inbox/comments?limit=100&page=${page}`, null, KEYS[k]);
       if (!r.ok) { ergebnis.fehler.push(`${KNAME(k)} Liste: HTTP ${r.status} ${JSON.stringify(r.json).slice(0, 300)}`); console.log(`${KNAME(k)}: HTTP ${r.status} ${JSON.stringify(r.json).slice(0, 300)}`); break; }
       const posts = r.json.posts || r.json.data || r.json.items || (Array.isArray(r.json) ? r.json : []);
       if (page === 1) console.log(`${KNAME(k)}: Antwort-Felder ${Object.keys(r.json).join(", ")}; ${posts.length} Posts`);
@@ -86,7 +85,7 @@ if (args.includes("--kommentare")) {
         const anzahl = feld(p, "commentCount", "comments", "commentsCount") || 0;
         if (!anzahl) continue;
         const pid = feld(p, "postId", "id", "_id", "platformPostId");
-        const c = await api("GET", `/inbox/comments/${encodeURIComponent(pid)}?limit=100&accountId=${encodeURIComponent(feld(p, "accountId") || "")}`, null, KEYS[k]);
+        const c = await apiW("GET", `/inbox/comments/${encodeURIComponent(pid)}?limit=100&accountId=${encodeURIComponent(feld(p, "accountId") || "")}`, null, KEYS[k]);
         const liste = c.ok ? (c.json.comments || c.json.data || c.json.items || []) : [];
         if (!c.ok) ergebnis.fehler.push(`${KNAME(k)} ${pid}: HTTP ${c.status} ${JSON.stringify(c.json).slice(0, 300)}`);
         ergebnis.posts.push({ konto: KNAME(k), post: p, kommentare: liste, antwort: c.ok ? undefined : c.json });
