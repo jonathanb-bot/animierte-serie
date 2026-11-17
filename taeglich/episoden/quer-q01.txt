@@ -1,0 +1,113 @@
+# Du wachst auf und bist der LETZTE Mensch in deiner Stadt
+@format quer
+@musik musik/quer-q01.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung spannend
+@vortrag lebendig
+@klang studio
+@mund zitate
+@einblenden aus
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette tuerkis
+@zeit morgen
+
+== Minute 0 ==
+// Wow-Bild zum Einstieg: leere Stadt im Morgenlicht, du klein in der Mitte
+[grossstadt zeit=tag du palette=tuerkis zoom-rein hooktext="DU BIST DER LETZTE MENSCH" ton=wind] Normalerweise weckt dich der Lärm der Straße. Heute weckt dich die Stille.
+[zimmer im_bett=du licht=aus palette=tuerkis zoom-rein ein="Sieben>7:12 UHR>wecker"] Sieben Uhr zwölf. Dein Wecker hat nicht geklingelt. Kein Bus, keine Hupe, kein Nachbar, der die Treppe herunterpoltert.
+[handy ort=zimmer netz=1 akku=64 uhrzeit="7:12" von="Keine Mitteilungen" nachricht="Du bist auf dem neuesten Stand" palette=tuerkis ein="null>0 NACHRICHTEN>handy"] Du greifst nach deinem Handy. Null Nachrichten. Nicht mal der Familien-Chat, in dem deine Mama sonst schon um sieben die Wettervorhersage schickt.
+[zimmer du licht=aus palette=tuerkis schwenk-rechts] Du gehst ans Fenster. Unten auf der Straße steht ein Auto mit laufendem Scheibenwischer. Aber niemand sitzt am Steuer.
+[gesicht du ort=zimmer neugierig palette=tuerkis] Du rufst nach ihr. „Mama?“ Keine Antwort.
+[kueche du palette=orange schwenk-rechts ein="Kaffee>KAFFEE NOCH WARM>tasse"] In der Küche steht ihre Tasse auf dem Tisch. Der Kaffee ist noch warm. Daneben ihr Schlüsselbund. Ihre Jacke hängt an der Tür.
+[gesicht du ort=kueche besorgt palette=orange] Ohne Schlüssel geht deine Mama nirgendwohin. Nie.
+[wohnzimmer du licht=aus palette=orange zoom-raus ton=stille_raum] Der Fernseher im Wohnzimmer läuft noch. Aber auf jedem Sender steht nur ein Standbild. Kein Moderator, keine Werbung, nichts.
+[gesicht du ort=wohnzimmer besorgt palette=orange] Du klopfst bei den Nachbarn. Bei Frau Kessler, die jeden Morgen um sieben staubsaugt. Die Tür ist nur angelehnt. Ihre Wohnung ist leer.
+[titel oben="Was wäre, wenn …" gross="… DU ALLEIN WÄRST?" unten="14 Tage. Eine Stadt. Nur du." farbe=#0a1a30 akzent=#7fe0d8 groesse=130 hud=false zoom-rein] Was du in den nächsten vierzehn Tagen erlebst, hat noch kein Mensch erlebt. Und am Ende findest du heraus, warum ausgerechnet du übrig bist.
+
+== Stunde 1 ==
+[titel oben="Tag 1" gross="8:20 UHR" unten="eine Stunde allein" farbe=#0a1a30 akzent=#7fe0d8 groesse=170 hud=false zoom-rein] Acht Uhr zwanzig.
+[grossstadt zeit=tag du palette=tuerkis schwenk-links ton=wind] Du gehst auf die Straße. Die Ampeln schalten brav von Rot auf Grün. Für niemanden.
+[grossstadt zeit=tag du palette=tuerkis zoom-rein ein="Menschen>0 MENSCHEN>auge"] Du läufst die ganze Hauptstraße entlang. Kein Mensch. Kein Jogger, kein Paketbote, kein Kind auf dem Weg zur Schule.
+[kreuzung du zeit=tag palette=tuerkis zoom-raus ein="Autos>0 AUTOS>pfeil"] Mitten auf der Kreuzung steht ein Bus. Die Türen offen, der Motor aus. Kein Fahrer. Keine Fahrgäste.
+[gesicht du ort=kreuzung zeit=tag angst palette=tuerkis] Kein Unfall. Kein Chaos. Es sieht aus, als hätten alle Menschen in derselben Sekunde einfach aufgehört zu existieren.
+[handy ort=kreuzung netz=1 akku=61 uhrzeit="8:31" von="Opa" nachricht="Anruf … keine Antwort" palette=tuerkis ton=handy_vibration ein="Opa>OPA GEHT NICHT RAN>telefon_alt"] Du rufst deinen Opa an. Er geht immer ran, sogar beim Zahnarzt. Heute klingelt es ins Leere.
+[handy ort=kreuzung netz=1 akku=60 uhrzeit="8:34" von="Notruf 112" nachricht="Wählen …" palette=tuerkis ein="Notruf>112 – KEINER GEHT RAN>telefon_alt"] Du wählst den Notruf. Eins, eins, zwei. Es klingelt zehnmal, zwanzigmal. In der Leitstelle sitzt niemand mehr, der abnehmen könnte.
+[gesicht du ort=kreuzung zeit=tag angst palette=tuerkis] Das ist der Moment, in dem dir zum ersten Mal richtig kalt wird. Mitten im Sommer.
+[supermarkt du palette=orange zoom-rein] Im Supermarkt an der Ecke läuft noch das Radio. Ein Lied über den Sommer. Die Kassen sind leer, die Einkaufswagen stehen mitten im Gang.
+[supermarkt du palette=orange schwenk-rechts ein="Kasse>KASSE OFFEN>geld"] Eine Kasse ist offen. Du könntest alles nehmen.
+[supermarkt du palette=orange zoom-raus] Aber du stehst nur da und hörst dem Lied zu, weil es das einzige Geräusch in der ganzen Stadt ist.
+[gesicht du ort=supermarkt traurig palette=orange] Dann ist das Lied zu Ende. Und danach kommt nur noch Rauschen.
+
+== Stunde 6 ==
+[titel oben="Tag 1" gross="13:40 UHR" unten="sechs Stunden allein" farbe=#0a1a30 akzent=#7fe0d8 groesse=170 hud=false zoom-rein] Dreizehn Uhr vierzig.
+[bahnhof du palette=tuerkis zoom-raus ein="Zug>NÄCHSTER ZUG: —>uhr"] Am Bahnhof zeigt die Anzeige noch die Abfahrten von heute Morgen. Kein Zug ist gefahren. Die große Uhr tickt trotzdem weiter.
+[bahnhof du palette=tuerkis schwenk-links] Du schreist. So laut du kannst. Dein Echo kommt dreimal zurück. Sonst nichts.
+[krankenhaus palette=tuerkis zoom-raus ein="Krankenhaus>KRANKENHAUS LEER>kreuz"] Du läufst zum Krankenhaus. Wenn irgendwo Menschen sein müssen, dann dort. Die Betten sind gemacht, die Monitore piepsen. Aber niemand liegt darin.
+[gesicht du ort=krankenhaus traurig palette=tuerkis] Auf einem Nachttisch liegt eine halb gelöste Rätselzeitschrift. Der Stift liegt noch quer über dem letzten Wort.
+[handy ort=bahnhof netz=1 akku=48 uhrzeit="13:52" von="Du an alle" nachricht="Ist da irgendwer? Bitte antwortet." palette=tuerkis] Du schreibst in jede Gruppe, die du hast. Klasse, Fußball, Familie. Ist da irgendwer? Bitte antwortet.
+[gesicht du ort=bahnhof besorgt palette=tuerkis] Die Nachricht geht raus. Aber kein einziger Haken wird blau.
+[grossstadt zeit=abend du palette=orange zoom-raus] Was du jetzt noch nicht weißt: Das Handynetz hält nicht ewig. Viele Mobilfunkmasten haben nur Batterien für ein paar Stunden.
+[grossstadt zeit=abend du palette=orange zoom-rein ein="Notstrom>NOTSTROM: STUNDEN>batterie"] Wenn niemand die Kraftwerke überwacht, gehen ihnen nacheinander die Reserven aus.
+[grossstadt zeit=nacht du palette=blau zoom-rein ton=stromausfall] Um zweiundzwanzig Uhr geht das erste Viertel aus. Dann das nächste. Wie eine Welle aus Dunkelheit, die auf dich zurollt.
+[zimmer du licht=aus palette=blau zoom-rein] Du liegst in deinem Bett und zählst die Fenster gegenüber. Kein einziges Licht.
+[gesicht du ort=zimmer zeit=nacht traurig palette=blau] Zum ersten Mal in deinem Leben ist es so still, dass du dein eigenes Herz hörst.
+
+== Tag 2 ==
+[titel oben="Tag 2" gross="KEIN STROM" unten="kein Netz · kein Internet" farbe=#0a1a30 akzent=#7fe0d8 groesse=150 hud=false zoom-rein] Tag zwei.
+[handy ort=zimmer netz=0 akku=19 uhrzeit="9:03" von="System" nachricht="Kein Netz" palette=tuerkis ton=kein_netz ein="Netz>KEIN NETZ>handy_netz0"] Kein Netz mehr. Dein Handy ist jetzt nur noch eine Uhr mit Fotos.
+[kueche du palette=orange zoom-rein ein="vier>4 STUNDEN KÜHLSCHRANK>uhr"] Der Kühlschrank ist still. Ohne Strom bleibt Essen darin nur ungefähr vier Stunden sicher kühl, wenn man die Tür zulässt. Du hast sie zehnmal aufgemacht.
+[kueche du palette=orange schwenk-rechts] Du sortierst. Konserven, Nudeln, Zwieback, Erdnussbutter. Dinge, die nicht schlecht werden.
+[supermarkt du palette=orange zoom-raus ein="Jahre>KONSERVEN: JAHRE>dose"] Konserven halten Jahre. Frisches Brot schimmelt schon nach etwa einer Woche. Du verstehst plötzlich, warum dein Opa im Keller immer ein Regal voller Dosen hatte.
+[gesicht du ort=supermarkt froh palette=orange] Du hast dich über ihn lustig gemacht. Jetzt würdest du alles geben, um dich bei ihm zu entschuldigen.
+[wohnzimmer du licht=aus palette=orange zoom-rein ein="Wasser>WASSER WIRD WENIGER>wasserflasche"] Am Abend kommt aus dem Wasserhahn nur noch ein dünner Strahl. Pumpen brauchen Strom. Ohne Strom fällt der Druck.
+[kueche du palette=orange zoom-rein] Zum Kochen nimmst du den alten Campingkocher vom letzten Sommerurlaub. Nudeln mit Tomatensoße aus der Dose.
+[kueche du palette=orange schwenk-rechts ein="Gas>CAMPINGKOCHER>kocher"] Es schmeckt wie damals am See, nur ohne die Stimmen deiner Familie.
+[wohnzimmer du licht=aus palette=orange schwenk-links] Du füllst jede Flasche, jeden Topf und die Badewanne. Mama hätte das als Erstes gemacht.
+
+== Tag 5 ==
+[titel oben="Tag 5" gross="DIE STADT VERÄNDERT SICH" unten="" farbe=#0a1a30 akzent=#7fe0d8 groesse=110 hud=false zoom-rein] Tag fünf.
+[park du jahreszeit=herbst palette=gruen zoom-raus ton=wind] Die Stadt fängt an, sich zu verändern. Im Park laufen Rehe über die Wiese, als wäre das schon immer ihr Zuhause gewesen.
+[park du jahreszeit=herbst palette=gruen schwenk-rechts ein="Hunde>HUNDE IN RUDELN>hund"] Hunde, die keiner mehr füttert, laufen in kleinen Gruppen durch die Straßen. Sie sind nicht böse. Sie haben einfach Hunger. Genau wie du.
+[gesicht du ort=park angst palette=gruen] Du gehst nur noch tagsüber raus. Und du gehst nie ohne eine Tüte Hundefutter.
+[dach du palette=orange zoom-raus] Vom Dach eures Hauses kannst du an klaren Tagen weit sehen. Du suchst nach Rauch.
+[dach du palette=orange zoom-rein ein="Kilometer>BIS ZU 30 KM SICHT>auge"] Nach Licht. Nach irgendeinem Zeichen, dass da draußen noch jemand ist.
+[skyline palette=orange zoom-raus] Nichts. Nur Dächer, Kräne und ein Himmel, der ohne Flugzeuge seltsam leer aussieht.
+[zimmer du licht=aus palette=blau zoom-rein] In der Nacht schreibst du Tagebuch. Nicht für dich. Für den Menschen, der es vielleicht eines Tages findet.
+[grossstadt zeit=nacht du palette=blau zoom-raus ein="Sterne>MILCHSTRASSE SICHTBAR>auge"] Ohne Straßenlaternen siehst du über der Stadt zum ersten Mal die Milchstraße. Tausende Sterne, die immer da waren.
+[grossstadt zeit=nacht du palette=blau zoom-rein] Man konnte sie nur nicht sehen, weil alle Lichter an waren.
+[gesicht du ort=zimmer zeit=nacht traurig palette=blau] Tag fünf. Ich habe heute laut mit mir selbst geredet. Zwei Stunden lang. Ich glaube, das ist normal, wenn man allein ist. Hoffe ich.
+
+== Tag 9 ==
+[titel oben="Tag 9" gross="EIN ZEICHEN" unten="" farbe=#0a1a30 akzent=#7fe0d8 groesse=150 hud=false zoom-rein] Tag neun.
+[wohnzimmer du licht=aus palette=orange zoom-rein ein="Radio>KURBELRADIO>funkgeraet"] Im Schrank deines Opas findest du ein altes Kurbelradio. Kein Strom nötig. Du drehst die Kurbel, bis dein Arm brennt.
+[gesicht du ort=wohnzimmer neugierig palette=orange ton=funk_rauschen] Rauschen auf jedem Sender. Du drehst langsam weiter. Millimeter für Millimeter.
+[wohnzimmer du licht=aus palette=orange zoom-rein ein="einundneunzig>91,4 MHZ>funkgeraet"] Bei einundneunzig Komma vier hörst du es. Ganz leise. Ein Klopfen. Drei kurz. Drei lang. Drei kurz.
+[gesicht du ort=wohnzimmer schreck palette=orange] Du hältst die Luft an. Das Klopfen hört auf. Und fängt wieder von vorne an. Immer gleich. Immer im selben Rhythmus.
+[titel oben="Morsezeichen" gross="··· ––– ···" unten="SOS" farbe=#0a1a30 akzent=#ffcf7a groesse=150 hud=false zoom-rein] Das ist kein Zufall. Das ist ein Mensch.
+[gesicht du ort=wohnzimmer froh palette=orange] Du lachst. Und du weinst. Beides gleichzeitig. Nach neun Tagen Stille ist das schönste Geräusch der Welt ein Klopfen im Radio.
+[dach du palette=blau zoom-raus ein="Taschenlampe>SIGNAL ZURÜCK>taschenlampe"] Du rennst aufs Dach und blinkst mit der Taschenlampe in die Nacht. Drei kurz. Drei lang. Drei kurz.
+[skyline palette=blau zoom-rein] Lange passiert nichts. Dann, ganz weit hinten, am Fernsehturm, blinkt ein Licht zurück.
+
+== Tag 14 ==
+[titel oben="Tag 14" gross="DER FERNSEHTURM" unten="12 Kilometer" farbe=#0a1a30 akzent=#7fe0d8 groesse=140 hud=false zoom-rein] Tag vierzehn.
+[grossstadt zeit=morgen du palette=tuerkis zoom-raus ein="zwölf>#12 KM>pfeil"] Fünf Nächte lang habt ihr euch Zeichen gegeben. Jetzt läufst du los. Zwölf Kilometer durch eine Stadt, die dir ganz allein gehört.
+[kreuzung du zeit=tag palette=tuerkis schwenk-rechts] Vorbei an deiner Schule. Am Kino, in dem du mit deinem besten Freund jeden Film gesehen hast, egal wie schlecht er war.
+[gesicht du ort=kreuzung zeit=tag besorgt palette=tuerkis] Was, wenn es eine Falle ist? Was, wenn da oben niemand ist und das Licht nur ein kaputter Automat war?
+[park du jahreszeit=herbst palette=gruen zoom-raus] Im Park kommt dir ein Hund entgegen. Er knurrt nicht.
+[park du jahreszeit=herbst palette=gruen zoom-rein] Er läuft einfach neben dir her, als hätte er auch beschlossen, nicht mehr allein zu sein.
+[skyline palette=orange zoom-rein ein="dreihundert>368 STUFEN>treppe"] Am Fuß des Turms ist die Tür offen. Du steigst die Treppe hoch. Stufe für Stufe. Dein Atem ist das Lauteste im ganzen Turm.
+[grossstadt zeit=abend du ben palette=orange zoom-rein] Oben, am Fenster, steht jemand mit einer Taschenlampe in der Hand. Er dreht sich um.
+[gesicht ben ort=grossstadt froh palette=orange] Es ist dein bester Freund Ben. Abgemagert, ungewaschen, mit genau dem schiefen Grinsen, das du so vermisst hast.
+[gesicht ben ort=grossstadt froh palette=orange] „Du hast echt fünf Tage gebraucht, um zwölf Kilometer zu laufen?“
+[gesicht du ort=grossstadt froh palette=orange] Du lachst so laut, dass es durch den ganzen Turm hallt.
+[grossstadt zeit=abend du ben palette=orange zoom-raus ein="zwei>#2 MENSCHEN>herz"] Ben hat auch ein Tagebuch. Auch sein Kaffee war noch warm. Auch seine Familie war einfach weg. Und auch er hat nachts am Radio gesessen.
+[gesicht du ort=grossstadt denkt palette=orange] Und dann merkst du, warum ausgerechnet ihr übrig seid. In der Nacht, bevor alle verschwanden, habt ihr beide nicht geschlafen.
+[gesicht du ort=grossstadt denkt palette=orange] Ihr habt bis vier Uhr telefoniert. Über nichts. Über alles.
+[polarlicht du ben palette=tuerkis zoom-raus] Was auch immer in dieser Nacht passiert ist: Es hat alle erwischt, die geschlafen haben.
+[polarlicht du ben palette=tuerkis zoom-rein] Nur nicht die zwei, die wach geblieben sind, weil sie einander etwas zu erzählen hatten.
+[grossstadt zeit=nacht du ben palette=blau zoom-raus] Zwei Menschen in einer Stadt für eine Million. Morgen fangt ihr an, nach den anderen zu suchen.
+[grossstadt zeit=nacht du ben palette=blau zoom-rein] Aber heute Nacht seid ihr zum ersten Mal seit vierzehn Tagen nicht allein.
