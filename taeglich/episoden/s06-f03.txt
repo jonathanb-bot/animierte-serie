@@ -28,7 +28,7 @@
 // Du schaust auf die Beete
 [gesicht du ort=wohnring ansicht=zimmer farbe=#2e6a4a beete traurig palette=gruen] Die schweren Beete passen nirgends hin. Nicht in die Gänge. Nicht in die Kuppel.
 // Ren mit Tablett
-[wohnring ansicht=zimmer farbe=#2e6a4a beete du s06_ren palette=gruen zoom-rein ein="Ren>REN HAT EINEN PLAN" ein_y=420 ton=schritte] Ren kommt mit leeren Tabletts.
+[wohnring ansicht=zimmer farbe=#2e6a4a beete du s06_ren palette=gruen zoom-rein ein="Ren>REN HAT EINEN PLAN" ein_y=420 ton=schritte] Dann kommt Ren, euer Gärtner, mit leeren Tabletts.
 // Ren, Figurenstimme
 [gesicht s06_ren ort=wohnring ansicht=zimmer farbe=#2e6a4a beete froh figurstimme=mann_alt sprecher=s06_ren palette=gruen] „Ein Garten passt auch in eine Hand.“
 
