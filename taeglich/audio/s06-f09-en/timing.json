@@ -1,0 +1,149 @@
+{
+ "dauer": 62.936,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "wohnring",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 4.43,
+   "emotion": "erzaehlend",
+   "text": "Six hours of air left. And your gardener won't give up his room."
+  },
+  {
+   "nr": 2,
+   "typ": "wohnring",
+   "kapitel": 1,
+   "start": 4.43,
+   "dauer": 4.214,
+   "emotion": "erzaehlend",
+   "text": "Your space station needs one last empty room. Ren's room."
+  },
+  {
+   "nr": 3,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 8.644,
+   "dauer": 3.542,
+   "emotion": "spannend",
+   "text": "Cold sweat runs down your back. You knock on his door."
+  },
+  {
+   "nr": 4,
+   "typ": "wohnring",
+   "kapitel": 2,
+   "start": 12.186,
+   "dauer": 3.974,
+   "emotion": "erzaehlend",
+   "text": "Inside, it's quiet. Just the hum of the grow lights."
+  },
+  {
+   "nr": 5,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 16.16,
+   "dauer": 3.782,
+   "emotion": "traurig",
+   "text": "\"Where will Ilse sleep when all this is gone?\""
+  },
+  {
+   "nr": 6,
+   "typ": "wohnring",
+   "kapitel": 2,
+   "start": 19.942,
+   "dauer": 4.046,
+   "emotion": "erzaehlend",
+   "text": "Mrs. Ilse is eighty-one. Every sound hurts her ears."
+  },
+  {
+   "nr": 7,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 23.988,
+   "dauer": 4.742,
+   "emotion": "traurig",
+   "text": "Only here, between Ren's plants, has she been able to sleep for years."
+  },
+  {
+   "nr": 8,
+   "typ": "wohnring",
+   "kapitel": 3,
+   "start": 28.73,
+   "dauer": 4.694,
+   "emotion": "erzaehlend",
+   "text": "You look at the dome plan. He's right. There's no quiet spot for Ilse."
+  },
+  {
+   "nr": 9,
+   "typ": "wohnring",
+   "kapitel": 3,
+   "start": 33.424,
+   "dauer": 4.526,
+   "emotion": "erzaehlend",
+   "text": "Then you think of your corner. The one with your workbench, back by the glass."
+  },
+  {
+   "nr": 10,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 37.95,
+   "dauer": 2.198,
+   "emotion": "ernst",
+   "text": "You've wanted it since you were twelve."
+  },
+  {
+   "nr": 11,
+   "typ": "objekt",
+   "kapitel": 3,
+   "start": 40.148,
+   "dauer": 2.414,
+   "emotion": "erklaerend",
+   "text": "You give it up. For a quiet nook."
+  },
+  {
+   "nr": 12,
+   "typ": "wohnring",
+   "kapitel": 3,
+   "start": 42.562,
+   "dauer": 4.358,
+   "emotion": "erzaehlend",
+   "text": "You build a double wall. Behind it, it's as quiet as the garden."
+  },
+  {
+   "nr": 13,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 46.92,
+   "dauer": 2.006,
+   "emotion": "froh",
+   "text": "\"Then my room is yours.\""
+  },
+  {
+   "nr": 14,
+   "typ": "wohnring",
+   "kapitel": 4,
+   "start": 48.926,
+   "dauer": 4.022,
+   "emotion": "erzaehlend",
+   "text": "The last segment turns gray. And every red light turns green."
+  },
+  {
+   "nr": 15,
+   "typ": "wohnring",
+   "kapitel": 4,
+   "start": 52.948,
+   "dauer": 5.126,
+   "emotion": "erzaehlend",
+   "text": "The last family steps through the dome door. Thirty-one people in one place."
+  },
+  {
+   "nr": 16,
+   "typ": "wohnring",
+   "kapitel": 5,
+   "start": 58.074,
+   "dauer": 4.862,
+   "emotion": "erzaehlend",
+   "text": "Bo comes in last. Carrying the locked box that used to sit under your bed."
+  }
+ ]
+}

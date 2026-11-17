@@ -1,0 +1,140 @@
+{
+ "dauer": 64.146,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "wohnring",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 4.238,
+   "emotion": "erzaehlend",
+   "text": "Tomorrow, your apartment gets taken apart. You can bring one box."
+  },
+  {
+   "nr": 2,
+   "typ": "objekt",
+   "kapitel": 1,
+   "start": 4.238,
+   "dauer": 3.47,
+   "emotion": "erklaerend",
+   "text": "One box per person. The dome doesn't have more room."
+  },
+  {
+   "nr": 3,
+   "typ": "wohnring",
+   "kapitel": 1,
+   "start": 7.708,
+   "dauer": 3.95,
+   "emotion": "erzaehlend",
+   "text": "Your space station needs empty rooms to survive. Now it's your turn."
+  },
+  {
+   "nr": 4,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 11.658,
+   "dauer": 3.566,
+   "emotion": "traurig",
+   "text": "You pick something up. Put it down. Pick it up again."
+  },
+  {
+   "nr": 5,
+   "typ": "wohnring",
+   "kapitel": 2,
+   "start": 15.224,
+   "dauer": 5.126,
+   "emotion": "erzaehlend",
+   "text": "Forty-three of your drawings. Your first space suit patch. The mug with the crack."
+  },
+  {
+   "nr": 6,
+   "typ": "wohnring",
+   "kapitel": 2,
+   "start": 20.35,
+   "dauer": 4.718,
+   "emotion": "erzaehlend",
+   "text": "Bo is done in five minutes. He's got his tape. That's all he wants."
+  },
+  {
+   "nr": 7,
+   "typ": "wohnring",
+   "kapitel": 2,
+   "start": 25.068,
+   "dauer": 3.998,
+   "emotion": "erzaehlend",
+   "text": "Your mom packs only tools. Like she's practiced saying goodbye."
+  },
+  {
+   "nr": 8,
+   "typ": "wohnring",
+   "kapitel": 3,
+   "start": 29.066,
+   "dauer": 4.574,
+   "emotion": "erzaehlend",
+   "text": "At midnight you sit alone at the kitchen table. Rough scratches under your fingers."
+  },
+  {
+   "nr": 9,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 33.64,
+   "dauer": 4.214,
+   "emotion": "traurig",
+   "text": "You carved those when you were six. Your mom yelled, and then she laughed."
+  },
+  {
+   "nr": 10,
+   "typ": "wohnring",
+   "kapitel": 3,
+   "start": 37.854,
+   "dauer": 3.47,
+   "emotion": "erzaehlend",
+   "text": "Your mom sits down next to you. She brings two mugs of tea."
+  },
+  {
+   "nr": 11,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 41.324,
+   "dauer": 4.958,
+   "emotion": "traurig",
+   "text": "\"I want to keep everything too. Every single thing.\""
+  },
+  {
+   "nr": 12,
+   "typ": "wohnring",
+   "kapitel": 3,
+   "start": 46.282,
+   "dauer": 3.374,
+   "emotion": "erzaehlend",
+   "text": "You talk for two hours. Longer than you have in months."
+  },
+  {
+   "nr": 13,
+   "typ": "wohnring",
+   "kapitel": 4,
+   "start": 49.656,
+   "dauer": 5.126,
+   "emotion": "erzaehlend",
+   "text": "Afterward, you go check on Bo. Since his room's been gone, he sleeps in yours."
+  },
+  {
+   "nr": 14,
+   "typ": "wohnring",
+   "kapitel": 4,
+   "start": 54.782,
+   "dauer": 4.814,
+   "emotion": "erzaehlend",
+   "text": "Bo is asleep. Under your bed there's a print in the dust. A clean rectangle."
+  },
+  {
+   "nr": 15,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 59.596,
+   "dauer": 4.55,
+   "emotion": "ernst",
+   "text": "A box of Bo's was sitting there. One you've never seen. And now it's gone."
+  }
+ ]
+}

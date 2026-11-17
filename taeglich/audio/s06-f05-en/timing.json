@@ -1,0 +1,158 @@
+{
+ "dauer": 65.062,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 3.566,
+   "emotion": "traurig",
+   "text": "Your mom knew for three years that your home was dying."
+  },
+  {
+   "nr": 2,
+   "typ": "wohnring",
+   "kapitel": 1,
+   "start": 3.566,
+   "dauer": 5.246,
+   "emotion": "erzaehlend",
+   "text": "Your space station patches itself with empty rooms. And she stayed silent."
+  },
+  {
+   "nr": 3,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 8.812,
+   "dauer": 3.518,
+   "emotion": "ruhig",
+   "text": "\"I wanted you to keep your rooms a little longer.\""
+  },
+  {
+   "nr": 4,
+   "typ": "objekt",
+   "kapitel": 2,
+   "start": 12.33,
+   "dauer": 4.574,
+   "emotion": "erklaerend",
+   "text": "Every time a delivery fell through, she put off the rebuild. Out of fear."
+  },
+  {
+   "nr": 5,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 16.904,
+   "dauer": 3.134,
+   "emotion": "wuetend",
+   "text": "You want to be angry. But her hands are shaking."
+  },
+  {
+   "nr": 6,
+   "typ": "wohnring",
+   "kapitel": 2,
+   "start": 20.038,
+   "dauer": 2.918,
+   "emotion": "erzaehlend",
+   "text": "Bo slips his hand into yours. Tight."
+  },
+  {
+   "nr": 7,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 22.956,
+   "dauer": 2.918,
+   "emotion": "ernst",
+   "text": "His thumb rubs the rolled-up tape in his pocket."
+  },
+  {
+   "nr": 8,
+   "typ": "wohnring",
+   "kapitel": 3,
+   "start": 25.874,
+   "dauer": 5.246,
+   "emotion": "erzaehlend",
+   "text": "You call everyone into the dome. Thirty-one people. The planet glows above them."
+  },
+  {
+   "nr": 9,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 31.12,
+   "dauer": 2.798,
+   "emotion": "ernst",
+   "text": "You tell them the truth. You leave nothing out."
+  },
+  {
+   "nr": 10,
+   "typ": "wohnring",
+   "kapitel": 3,
+   "start": 33.918,
+   "dauer": 3.446,
+   "emotion": "erzaehlend",
+   "text": "After that, it's so quiet you can hear the vents."
+  },
+  {
+   "nr": 11,
+   "typ": "wohnring",
+   "kapitel": 3,
+   "start": 37.364,
+   "dauer": 3.83,
+   "emotion": "erzaehlend",
+   "text": "Ren checks the dome. It's the strongest part of the whole station."
+  },
+  {
+   "nr": 12,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 41.194,
+   "dauer": 4.214,
+   "emotion": "ernst",
+   "text": "\"Everyone fits in there. If we build it out.\""
+  },
+  {
+   "nr": 13,
+   "typ": "wohnring",
+   "kapitel": 3,
+   "start": 45.408,
+   "dauer": 4.55,
+   "emotion": "erzaehlend",
+   "text": "One by one, they raise a hand. Old Mrs. Ilse is the last."
+  },
+  {
+   "nr": 14,
+   "typ": "wohnring",
+   "kapitel": 4,
+   "start": 49.958,
+   "dauer": 3.566,
+   "emotion": "erzaehlend",
+   "text": "For that, ten of the twelve rooms would have to disappear."
+  },
+  {
+   "nr": 15,
+   "typ": "wohnring",
+   "kapitel": 4,
+   "start": 53.524,
+   "dauer": 4.598,
+   "emotion": "erzaehlend",
+   "text": "You walk back along the ring. Past every door with someone living behind it."
+  },
+  {
+   "nr": 16,
+   "typ": "wohnring",
+   "kapitel": 4,
+   "start": 58.122,
+   "dauer": 2.174,
+   "emotion": "erzaehlend",
+   "text": "You stop in front of your red door."
+  },
+  {
+   "nr": 17,
+   "typ": "wohnring",
+   "kapitel": 5,
+   "start": 60.296,
+   "dauer": 4.766,
+   "emotion": "erzaehlend",
+   "text": "Your mom slides the plan over to you. The dome needs your apartment too."
+  }
+ ]
+}

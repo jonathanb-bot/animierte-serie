@@ -1,0 +1,158 @@
+{
+ "dauer": 64.318,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "wohnring",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 2.894,
+   "emotion": "erzaehlend",
+   "text": "Your home should have been scrapped eleven years ago."
+  },
+  {
+   "nr": 2,
+   "typ": "wohnring",
+   "kapitel": 1,
+   "start": 2.894,
+   "dauer": 3.638,
+   "emotion": "erzaehlend",
+   "text": "That's what it says on the blueprint your gardener Ren found under the garden."
+  },
+  {
+   "nr": 3,
+   "typ": "wohnring",
+   "kapitel": 1,
+   "start": 6.532,
+   "dauer": 4.598,
+   "emotion": "erzaehlend",
+   "text": "Your station only repairs itself with empty rooms. Two are already gone."
+  },
+  {
+   "nr": 4,
+   "typ": "wohnring",
+   "kapitel": 2,
+   "start": 11.13,
+   "dauer": 4.262,
+   "emotion": "erzaehlend",
+   "text": "The projector clicks. A second ring appears, dotted, around yours."
+  },
+  {
+   "nr": 5,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 15.392,
+   "dauer": 3.254,
+   "emotion": "ernst",
+   "text": "Your lips are dry. You read every line twice."
+  },
+  {
+   "nr": 6,
+   "typ": "objekt",
+   "kapitel": 2,
+   "start": 18.646,
+   "dauer": 4.022,
+   "emotion": "erklaerend",
+   "text": "Your ring was built to last twenty-five years. It's thirty-six."
+  },
+  {
+   "nr": 7,
+   "typ": "wohnring",
+   "kapitel": 2,
+   "start": 22.668,
+   "dauer": 4.598,
+   "emotion": "erzaehlend",
+   "text": "You can see it from the outside too. The paint on the segments is peeling like old skin."
+  },
+  {
+   "nr": 8,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 27.266,
+   "dauer": 3.662,
+   "emotion": "ernst",
+   "text": "\"Every repair just buys time.\""
+  },
+  {
+   "nr": 9,
+   "typ": "wohnring",
+   "kapitel": 3,
+   "start": 30.928,
+   "dauer": 5.798,
+   "emotion": "erzaehlend",
+   "text": "The new ring was supposed to be delivered. Three times. And three times, someone wrote: canceled."
+  },
+  {
+   "nr": 10,
+   "typ": "wohnring",
+   "kapitel": 3,
+   "start": 36.726,
+   "dauer": 3.758,
+   "emotion": "erzaehlend",
+   "text": "You think about the little cracks in the doors. The knocking in the pipes."
+  },
+  {
+   "nr": 11,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 40.484,
+   "dauer": 3.926,
+   "emotion": "spannend",
+   "text": "This isn't damage. Your whole ring is dying. Slowly."
+  },
+  {
+   "nr": 12,
+   "typ": "wohnring",
+   "kapitel": 3,
+   "start": 44.41,
+   "dauer": 3.182,
+   "emotion": "erzaehlend",
+   "text": "Bo is standing in the workshop door. He heard everything."
+  },
+  {
+   "nr": 13,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 47.592,
+   "dauer": 2.918,
+   "emotion": "spannend",
+   "text": "\"Do we have to give up every room?\""
+  },
+  {
+   "nr": 14,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 50.51,
+   "dauer": 2.51,
+   "emotion": "ernst",
+   "text": "You want to say no. But you don't know."
+  },
+  {
+   "nr": 15,
+   "typ": "objekt",
+   "kapitel": 4,
+   "start": 53.02,
+   "dauer": 4.478,
+   "emotion": "erklaerend",
+   "text": "At the bottom of the blueprint, there's an initial. A single letter. A."
+  },
+  {
+   "nr": 16,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 57.498,
+   "dauer": 3.734,
+   "emotion": "spannend",
+   "text": "You know that handwriting. Behind you, the door opens."
+  },
+  {
+   "nr": 17,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 61.232,
+   "dauer": 3.086,
+   "emotion": "traurig",
+   "text": "\"I've known for three years.\""
+  }
+ ]
+}

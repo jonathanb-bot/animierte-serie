@@ -1,0 +1,149 @@
+{
+ "dauer": 65.744,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "wohnring",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 3.59,
+   "emotion": "erzaehlend",
+   "text": "You have to give up your mom's garden. By six in the morning."
+  },
+  {
+   "nr": 2,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 3.59,
+   "dauer": 4.214,
+   "emotion": "traurig",
+   "text": "Your mom is sitting under the crooked tree. Her hand rests on the bark."
+  },
+  {
+   "nr": 3,
+   "typ": "wohnring",
+   "kapitel": 1,
+   "start": 7.804,
+   "dauer": 6.206,
+   "emotion": "erzaehlend",
+   "text": "Your space station only repairs itself with empty rooms. Five failures. One big room."
+  },
+  {
+   "nr": 4,
+   "typ": "wohnring",
+   "kapitel": 2,
+   "start": 14.01,
+   "dauer": 3.854,
+   "emotion": "erzaehlend",
+   "text": "It smells like damp earth. The leaves rustle in the air vents."
+  },
+  {
+   "nr": 5,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 17.864,
+   "dauer": 4.502,
+   "emotion": "traurig",
+   "text": "The heavy beds won't fit anywhere. Not in the halls. Not in the dome."
+  },
+  {
+   "nr": 6,
+   "typ": "wohnring",
+   "kapitel": 2,
+   "start": 22.366,
+   "dauer": 2.102,
+   "emotion": "erzaehlend",
+   "text": "Ren shows up with empty trays."
+  },
+  {
+   "nr": 7,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 24.468,
+   "dauer": 3.35,
+   "emotion": "froh",
+   "text": "\"A garden fits in your hand too.\""
+  },
+  {
+   "nr": 8,
+   "typ": "objekt",
+   "kapitel": 3,
+   "start": 27.818,
+   "dauer": 5.486,
+   "emotion": "erklaerend",
+   "text": "You fill two hundred little packets with seeds. Tomatoes, beans, cress."
+  },
+  {
+   "nr": 9,
+   "typ": "wohnring",
+   "kapitel": 3,
+   "start": 33.304,
+   "dauer": 4.598,
+   "emotion": "erzaehlend",
+   "text": "Plus sixty-four seedlings. Bo carries his little bowl like it's made of glass."
+  },
+  {
+   "nr": 10,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 37.902,
+   "dauer": 2.87,
+   "emotion": "froh",
+   "text": "\"This one's called Pea. Pea's coming.\""
+  },
+  {
+   "nr": 11,
+   "typ": "wohnring",
+   "kapitel": 3,
+   "start": 40.772,
+   "dauer": 4.622,
+   "emotion": "erzaehlend",
+   "text": "Your mom measures the tree. Eight feet. She writes the number on the wall."
+  },
+  {
+   "nr": 12,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 45.394,
+   "dauer": 3.23,
+   "emotion": "traurig",
+   "text": "Nobody can carry the tree. She leaves it standing."
+  },
+  {
+   "nr": 13,
+   "typ": "wohnring",
+   "kapitel": 4,
+   "start": 48.624,
+   "dauer": 4.118,
+   "emotion": "erzaehlend",
+   "text": "You carry everything into the dome. Where the planet glows through the glass."
+  },
+  {
+   "nr": 14,
+   "typ": "wohnring",
+   "kapitel": 4,
+   "start": 52.742,
+   "dauer": 5.126,
+   "emotion": "erzaehlend",
+   "text": "On the way back, your mom carries Bo's bowl. She smiles for the first time in days."
+  },
+  {
+   "nr": 15,
+   "typ": "wohnring",
+   "kapitel": 4,
+   "start": 57.868,
+   "dauer": 3.062,
+   "emotion": "erzaehlend",
+   "text": "Ren digs out the last bed. Then he stops."
+  },
+  {
+   "nr": 16,
+   "typ": "wohnring",
+   "kapitel": 5,
+   "start": 60.93,
+   "dauer": 4.814,
+   "emotion": "erzaehlend",
+   "text": "Under the soil lies an old blueprint. Your living ring should have been replaced long ago."
+  }
+ ]
+}
