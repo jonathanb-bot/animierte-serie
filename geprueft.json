@@ -2142,6 +2142,12 @@
    "bild_s": 63.42,
    "ton_s": 63.4,
    "lufs": -14.6
+  },
+  "taeglich/raub-r002.mp4": {
+   "ok": true,
+   "bild_s": 67.22,
+   "ton_s": 67.24,
+   "lufs": -14.6
   }
  },
  "serien": {
@@ -2382,6 +2388,10 @@
   "mond-m004": {
    "titel": "Bis zum Mond – Folge 4: Die neue Nummer eins",
    "datei": "taeglich/mond-m004.mp4"
+  },
+  "raub-r002": {
+   "titel": "Der letzte Raub – Folge 2: Die erste Warnung",
+   "datei": "taeglich/raub-r002.mp4"
   }
  },
  "taeglich_staffeln": {
