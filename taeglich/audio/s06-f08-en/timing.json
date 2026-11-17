@@ -1,12 +1,12 @@
 {
- "dauer": 68.518,
+ "dauer": 65.206,
  "einstellungen": [
   {
    "nr": 1,
    "typ": "wohnring",
    "kapitel": 1,
    "start": 0.0,
-   "dauer": 3.782,
+   "dauer": 3.758,
    "emotion": "erzaehlend",
    "text": "Today, you watch your apartment break into tiles."
   },
@@ -14,8 +14,8 @@
    "nr": 2,
    "typ": "gesicht",
    "kapitel": 1,
-   "start": 3.782,
-   "dauer": 3.806,
+   "start": 3.758,
+   "dauer": 3.158,
    "emotion": "traurig",
    "text": "You stand in the hallway, holding on to your one box."
   },
@@ -23,8 +23,8 @@
    "nr": 3,
    "typ": "wohnring",
    "kapitel": 1,
-   "start": 7.588,
-   "dauer": 6.062,
+   "start": 6.916,
+   "dauer": 4.91,
    "emotion": "erzaehlend",
    "text": "Your space station is building a safe dome out of empty rooms. Today it begins."
   },
@@ -32,8 +32,8 @@
    "nr": 4,
    "typ": "objekt",
    "kapitel": 2,
-   "start": 13.65,
-   "dauer": 3.158,
+   "start": 11.826,
+   "dauer": 2.654,
    "emotion": "erklaerend",
    "text": "Six in the morning. One room after another."
   },
@@ -41,8 +41,8 @@
    "nr": 5,
    "typ": "wohnring",
    "kapitel": 2,
-   "start": 16.808,
-   "dauer": 6.11,
+   "start": 14.48,
+   "dauer": 5.486,
    "emotion": "erzaehlend",
    "text": "Your red kitchen. The walls dissolve into glowing tiles. They fly into the station's ribs."
   },
@@ -50,8 +50,8 @@
    "nr": 6,
    "typ": "gesicht",
    "kapitel": 2,
-   "start": 22.918,
-   "dauer": 4.118,
+   "start": 19.966,
+   "dauer": 3.278,
    "emotion": "traurig",
    "text": "Your mom doesn't look away. She quietly counts along."
   },
@@ -59,17 +59,17 @@
    "nr": 7,
    "typ": "gesicht",
    "kapitel": 2,
-   "start": 27.036,
-   "dauer": 2.198,
+   "start": 23.244,
+   "dauer": 2.534,
    "emotion": "ernst",
-   "text": "Bo holds his tape in both hands."
+   "text": "Your brother Bo holds his tape in both hands."
   },
   {
    "nr": 8,
    "typ": "wohnring",
    "kapitel": 2,
-   "start": 29.234,
-   "dauer": 5.222,
+   "start": 25.778,
+   "dauer": 4.718,
    "emotion": "erzaehlend",
    "text": "The three of you stand side by side. Nobody speaks until the last tile is gone."
   },
@@ -77,8 +77,8 @@
    "nr": 9,
    "typ": "wohnring",
    "kapitel": 3,
-   "start": 34.456,
-   "dauer": 4.934,
+   "start": 30.496,
+   "dauer": 4.07,
    "emotion": "erzaehlend",
    "text": "By noon, nine rooms are gray. The dome grows layer by layer."
   },
@@ -86,8 +86,8 @@
    "nr": 10,
    "typ": "rechenzentrum",
    "kapitel": 3,
-   "start": 39.39,
-   "dauer": 3.71,
+   "start": 34.566,
+   "dauer": 3.734,
    "emotion": "erzaehlend",
    "text": "The air filters breathe calmly again. Eighty-eight percent."
   },
@@ -95,8 +95,8 @@
    "nr": 11,
    "typ": "gesicht",
    "kapitel": 3,
-   "start": 43.1,
-   "dauer": 3.614,
+   "start": 38.3,
+   "dauer": 2.942,
    "emotion": "froh",
    "text": "For the first time in days, you laugh. It's working."
   },
@@ -104,8 +104,8 @@
    "nr": 12,
    "typ": "wohnring",
    "kapitel": 3,
-   "start": 46.714,
-   "dauer": 4.118,
+   "start": 41.242,
+   "dauer": 4.814,
    "emotion": "erzaehlend",
    "text": "Then one segment blinks. Room ten. It's still missing."
   },
@@ -113,8 +113,8 @@
    "nr": 13,
    "typ": "wohnring",
    "kapitel": 3,
-   "start": 50.832,
-   "dauer": 3.83,
+   "start": 46.056,
+   "dauer": 3.35,
    "emotion": "erzaehlend",
    "text": "That room belongs to Ren. Your gardener helped all day."
   },
@@ -122,8 +122,8 @@
    "nr": 14,
    "typ": "wohnring",
    "kapitel": 4,
-   "start": 54.662,
-   "dauer": 3.542,
+   "start": 49.406,
+   "dauer": 3.254,
    "emotion": "erzaehlend",
    "text": "Now he's standing at his own door. His hand on the handle."
   },
@@ -131,17 +131,17 @@
    "nr": 15,
    "typ": "gesicht",
    "kapitel": 4,
-   "start": 58.204,
-   "dauer": 0.614,
+   "start": 52.66,
+   "dauer": 3.638,
    "emotion": "wuetend",
-   "text": "\"Not mine. Not yet.\""
+   "text": "\"Not my room. Not yet.\""
   },
   {
    "nr": 16,
    "typ": "wohnring",
    "kapitel": 4,
-   "start": 58.818,
-   "dauer": 5.006,
+   "start": 56.298,
+   "dauer": 4.526,
    "emotion": "erzaehlend",
    "text": "Something starts knocking in the pipes. Soft at first, then like a fist."
   },
@@ -149,8 +149,8 @@
    "nr": 17,
    "typ": "wohnring",
    "kapitel": 5,
-   "start": 63.824,
-   "dauer": 4.694,
+   "start": 60.824,
+   "dauer": 4.382,
    "emotion": "erzaehlend",
    "text": "And in the ring, the last light flips to red. Air for six hours."
   }

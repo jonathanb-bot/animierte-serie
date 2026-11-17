@@ -1,12 +1,12 @@
 {
- "dauer": 67.578,
+ "dauer": 69.954,
  "einstellungen": [
   {
    "nr": 1,
    "typ": "wohnring",
    "kapitel": 1,
    "start": 0.0,
-   "dauer": 4.19,
+   "dauer": 4.454,
    "emotion": "erzaehlend",
    "text": "Out of your whole apartment, you can save one piece of furniture."
   },
@@ -14,8 +14,8 @@
    "nr": 2,
    "typ": "wohnring",
    "kapitel": 1,
-   "start": 4.19,
-   "dauer": 5.534,
+   "start": 4.454,
+   "dauer": 5.39,
    "emotion": "erzaehlend",
    "text": "Your space station is building the new dome out of your rooms. There's hardly space for furniture."
   },
@@ -23,7 +23,7 @@
    "nr": 3,
    "typ": "gesicht",
    "kapitel": 1,
-   "start": 9.724,
+   "start": 9.844,
    "dauer": 3.71,
    "emotion": "wuetend",
    "text": "\"I'm taking the closet doors. All of them.\""
@@ -32,8 +32,8 @@
    "nr": 4,
    "typ": "wohnring",
    "kapitel": 2,
-   "start": 13.434,
-   "dauer": 3.71,
+   "start": 13.554,
+   "dauer": 3.638,
    "emotion": "erzaehlend",
    "text": "Every year, Bo stuck stars on those closet doors."
   },
@@ -41,8 +41,8 @@
    "nr": 5,
    "typ": "wohnring",
    "kapitel": 2,
-   "start": 17.144,
-   "dauer": 4.79,
+   "start": 17.192,
+   "dauer": 5.126,
    "emotion": "erzaehlend",
    "text": "Your mom needs her workbench. Without it, nobody fixes anything anymore."
   },
@@ -50,8 +50,8 @@
    "nr": 6,
    "typ": "wohnring",
    "kapitel": 2,
-   "start": 21.934,
-   "dauer": 5.27,
+   "start": 22.318,
+   "dauer": 5.63,
    "emotion": "erzaehlend",
    "text": "And in the dome, nine families are waiting. Every one of them wants to save something too."
   },
@@ -59,8 +59,8 @@
    "nr": 7,
    "typ": "gesicht",
    "kapitel": 3,
-   "start": 27.204,
-   "dauer": 4.19,
+   "start": 27.948,
+   "dauer": 4.502,
    "emotion": "froh",
    "text": "Then you look at the kitchen table. At the scratches you made when you were six."
   },
@@ -68,8 +68,8 @@
    "nr": 8,
    "typ": "wohnring",
    "kapitel": 3,
-   "start": 31.394,
-   "dauer": 3.926,
+   "start": 32.45,
+   "dauer": 4.07,
    "emotion": "erzaehlend",
    "text": "You ate at this table every night. It still smells like soup."
   },
@@ -77,8 +77,8 @@
    "nr": 9,
    "typ": "gesicht",
    "kapitel": 3,
-   "start": 35.32,
-   "dauer": 3.614,
+   "start": 36.52,
+   "dauer": 3.782,
    "emotion": "ernst",
    "text": "All you say is: The table stays. For everyone."
   },
@@ -86,8 +86,8 @@
    "nr": 10,
    "typ": "wohnring",
    "kapitel": 3,
-   "start": 38.934,
-   "dauer": 4.118,
+   "start": 40.302,
+   "dauer": 4.166,
    "emotion": "erzaehlend",
    "text": "The three of you push it along the ring. The legs scrape across the floor."
   },
@@ -95,17 +95,17 @@
    "nr": 11,
    "typ": "wohnring",
    "kapitel": 3,
-   "start": 43.052,
-   "dauer": 4.934,
+   "start": 44.468,
+   "dauer": 5.462,
    "emotion": "erzaehlend",
-   "text": "In the dome, you hang fabric panels. Thirty-one sleeping nooks around one table."
+   "text": "In the dome, you put up fabric panels. Thirty-one sleeping nooks around one table."
   },
   {
    "nr": 12,
    "typ": "objekt",
    "kapitel": 4,
-   "start": 47.986,
-   "dauer": 6.638,
+   "start": 49.93,
+   "dauer": 7.07,
    "emotion": "erklaerend",
    "text": "With the neighbors, you set the rules. One nook per person. Quiet after ten. The table belongs to everyone."
   },
@@ -113,17 +113,17 @@
    "nr": 13,
    "typ": "wohnring",
    "kapitel": 4,
-   "start": 54.624,
-   "dauer": 3.878,
+   "start": 57.0,
+   "dauer": 3.998,
    "emotion": "erzaehlend",
-   "text": "Bo crawls under the table and draws his yellow room. From memory."
+   "text": "Bo crawls under the table. He draws his yellow room from memory."
   },
   {
    "nr": 14,
    "typ": "wohnring",
    "kapitel": 4,
-   "start": 58.502,
-   "dauer": 3.302,
+   "start": 60.998,
+   "dauer": 3.446,
    "emotion": "erzaehlend",
    "text": "Your mom puts her arm around you. Neither of you says a word."
   },
@@ -131,8 +131,8 @@
    "nr": 15,
    "typ": "wohnring",
    "kapitel": 5,
-   "start": 61.804,
-   "dauer": 5.774,
+   "start": 64.444,
+   "dauer": 5.51,
    "emotion": "erzaehlend",
    "text": "Then you sign your release next to your mom's name. On the plan, your apartment turns gray."
   }
