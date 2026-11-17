@@ -2,10 +2,10 @@
    Grundfarben Dunkelblau und Türkis, Gold für Bank und Geld, Korallrot für Gefahr. Nur neue Kulissen-Namen:
    alle bisherigen Serien bleiben pixelgleich. Verbindlich: raub/serienbibel.md.
 
-   [bankfassade regen=1 schild="AUREON"]           AUREON-Bank bei Nacht im Regen: goldene Bögen, türkisfarbenes Glas, nasse Straße mit Spiegelung
+   [bankfassade regen=1 schild="AUREON" beobachter=1]     AUREON-Bank bei Nacht im Regen: goldene Bögen, türkisfarbenes Glas, nasse Straße mit Spiegelung
    [bankhalle leute=6 alarm=0]                     Schalterhalle: hohe goldene Bögen, dunkler Steinboden mit Spiegelung, türkisfarbene Glasflächen
    [versteck regen=1]                               warmer, enger Vorbereitungsraum: Hängelampe, Tisch, Pinnwand, Fenster mit Regen
-   [raubdetail motiv=foto|akte|tasche|geld|umschlag|nadel|koffer text="…"]   Nahaufnahme eines Leitmotivs auf dem Tisch (Lampenlicht)
+   [raubdetail motiv=foto|akte|tasche|geld|umschlag|fotonah|fotorueck|nadel|koffer aufschrift="…"]   Nahaufnahme eines Leitmotivs auf dem Tisch (Lampenlicht)
    [entscheidung a="Geld mitnehmen" b="ATLAS mitnehmen" frage="…"]          A/B-Karten am Ende jeder Entscheidungsfolge
    Alle Kulissen zeigen Figuren wie gewohnt (`r_du mara jona karo voss`, `hinten=r_du`, `gross`, `figur_y=`).
 */
@@ -48,6 +48,10 @@
       ctx.save(); ctx.globalAlpha = 0.18; poly([[bx - 70, fuss], [bx - 20, top + 200], [bx + 10, top + 200], [bx - 40, fuss]], "#ffffff"); ctx.restore();
       glut(bx, fuss - 200, 260, F.goldH, 0.25 + 0.05 * Math.sin(t * 2 + bx));
     }
+    // neu Folge 2: Beobachter im mittleren Bogen (Silhouette hinter dem Glas, goldene Nadel blinkt)
+    if (s.beobachter) { const by = top + 330, g = 0.6 + 0.4 * Math.sin(t * 3);
+      ctx.save(); ctx.globalAlpha = 0.92; ellipse(540, by + 150, 78, 70, "#0a1424"); circle(540, by + 40, 46, "#0a1424"); box(462, by + 150, 156, 200, 20, "#0a1424"); ctx.restore();
+      glut(512, by + 128, 60, F.goldH, 0.7 * g); circle(512, by + 128, 7, F.gold); }
     // Säulen zwischen den Bögen
     for (const sx of [x0 + 20, 295 + 20, 785 - 20, x1 - 20]) { box(sx - 22, top + 30, 44, fuss - top - 30, 6, "#2a3048"); box(sx - 22, top + 30, 12, fuss - top - 30, 4, rgba("#ffffff", 0.06)); box(sx - 30, top + 20, 60, 22, 4, F.goldD); }
     // Schriftzug
@@ -136,6 +140,24 @@
       ctx.save(); ctx.translate(680, 1510); ctx.rotate(0.1); box(-60, -36, 120, 76, 4, F.koralle); box(-60, -36, 120, 14, 4, shade(F.koralle, -0.2)); ctx.restore(); }
   };
 
+  // Foto eurer Gruppe, von oben durch ein Fenster der Bank aufgenommen; im Glas spiegelt sich eine goldene Nadel (Folge 2)
+  const raubFoto = t => {
+    ctx.shadowColor = "rgba(0,0,0,0.5)"; ctx.shadowBlur = 40; box(-300, -360, 600, 640, 8, "#f6f2ea"); ctx.shadowColor = "transparent";
+    ctx.save(); ctx.beginPath(); ctx.rect(-270, -330, 540, 500); ctx.clip();
+    ctx.fillStyle = lgrad(0, -330, 0, 170, [[0, "#1a2a4c"], [1, "#0e1a34"]]); ctx.fillRect(-270, -330, 540, 500);
+    // nasser Gehweg von oben, Laternenschein, Pflasterfugen
+    for (let k = 0; k < 9; k++) line(-300 + k * 80, -330, -380 + k * 100, 170, 2, rgba("#7fa0c8", 0.12));
+    glut(-150, -120, 260, "#ffd98a", 0.35); circle(-150, -120, 16, "#ffe9b0");
+    // ihr vier, klein, von schräg oben
+    const leute = [["jona", -135], ["mara", -45], ["karo", 45], ["r_du", 135]];
+    for (const [n, x] of leute) { ellipse(x, 130, 46, 14, rgba("#000000", 0.35)); A.figur(x, 140, 0.36, A.fig(n), { t: 0, seed: 3, hinten: n === "r_du" }); }
+    // Fensterkreuz und Spiegelung im Glas
+    ctx.fillStyle = lgrad(-270, -330, 270, 170, [[0, "rgba(160,220,230,0.18)"], [0.5, "rgba(160,220,230,0)"], [1, "rgba(160,220,230,0.12)"]]); ctx.fillRect(-270, -330, 540, 500);
+    box(-270, -250, 540, 22, 2, rgba("#0a1020", 0.85)); box(-262, -330, 26, 500, 2, rgba("#0a1020", 0.85)); box(236, -330, 26, 500, 2, rgba("#0a1020", 0.85));
+    const g = 0.7 + 0.3 * Math.sin(t * 4); glut(150, -170, 120, "#ffd98a", 0.55 * g); circle(150, -170, 24, rgba("#e8b84a", 0.8)); poly([[150, -186], [164, -160], [136, -160]], rgba("#ffe9b0", 0.85)); circle(143, -177, 6, rgba("#ffffff", 0.8 * g));
+    ctx.restore();
+  };
+
   // ---------- Nahaufnahme eines Leitmotivs ----------
   SZ.raubdetail = (s, t) => {
     const m = s.motiv || "foto";
@@ -173,9 +195,21 @@
       ellipse(0, -40, 340, 90, "#0a0f1c"); ellipse(0, -52, 300, 64, "#05080f");
       ctx.lineWidth = 16; ctx.strokeStyle = "#2a3a58"; ctx.beginPath(); ctx.moveTo(-200, -60); ctx.quadraticCurveTo(0, -380, 200, -60); ctx.stroke();
       line(-330, -30, 330, -30, 6, rgba(F.goldD, 0.8));
-    } else if (m === "umschlag") { // brauner Umschlag mit Foto
-      ctx.rotate(-0.06); ctx.shadowColor = "rgba(0,0,0,0.5)"; ctx.shadowBlur = 40; box(-330, -230, 660, 460, 8, "#c89a5a"); ctx.shadowColor = "transparent";
-      poly([[-330, -230], [0, 30], [330, -230]], "#b8884a"); ctx.save(); ctx.translate(0, -120 - auf * 120); ctx.rotate(0.05); box(-220, -150, 440, 300, 6, "#f6f2ea"); box(-200, -130, 400, 220, 4, "#2a3a5a"); ctx.restore();
+    } else if (m === "umschlag") { // brauner Umschlag, das Foto eurer Gruppe gleitet heraus (Folge 2)
+      ctx.rotate(-0.06); ctx.shadowColor = "rgba(0,0,0,0.5)"; ctx.shadowBlur = 40; box(-330, 60, 660, 460, 8, "#c89a5a"); ctx.shadowColor = "transparent";
+      const raus = E.raus(clamp((t - 0.3) / 1.4, 0, 1));
+      ctx.save(); ctx.translate(0, 200 - raus * 300); ctx.rotate(0.05 - raus * 0.07); raubFoto(t);
+      ctx.restore();
+      poly([[-330, 64], [0, 300], [330, 64], [330, 512], [-330, 512]], "#c08f50"); poly([[-330, 64], [0, 300], [330, 64], [330, 92], [0, 330], [-330, 92]], rgba("#8a5a24", 0.35));
+    } else if (m === "fotonah") { // Nahaufnahme des Fotos: die goldene Nadel spiegelt sich im Glas
+      const z = 1.7 + 0.25 * E.raus(clamp(t / 3, 0, 1)); ctx.scale(z, z); ctx.translate(-110, 140); ctx.rotate(-0.02); raubFoto(t);
+      const d = E.raus(clamp((t - 0.6) / 0.6, 0, 1)); if (d > 0) { ctx.save(); ctx.globalAlpha = d; ctx.strokeStyle = F.koralle; ctx.lineWidth = 5 / z; ctx.beginPath(); ctx.arc(150, -172, 44 + (1 - d) * 40, 0, Math.PI * 2); ctx.stroke(); ctx.restore(); }
+    } else if (m === "fotorueck") { // Rückseite des Fotos mit der Warnung
+      ctx.rotate(0.04); ctx.shadowColor = "rgba(0,0,0,0.5)"; ctx.shadowBlur = 40; box(-380, -300, 760, 600, 10, "#efe9dc"); ctx.shadowColor = "transparent";
+      for (let k = 0; k < 6; k++) line(-330, -160 + k * 70, 330, -160 + k * 70, 2, rgba("#8aa0b8", 0.25));
+      const zeilen = String(s.aufschrift || "Einer von euch/wurde bereits/bezahlt.").split("/"), n = Math.ceil(zeilen.join("").length * clamp(t / 1.6, 0, 1));
+      ctx.fillStyle = "#1d2a48"; ctx.font = "italic 800 64px HUD"; ctx.textAlign = "center"; let rest = n;
+      zeilen.forEach((z, i) => { const sicht = z.slice(0, Math.max(0, rest)); rest -= z.length; ctx.fillText(sicht, 0, -100 + i * 110); });
     } else if (m === "nadel") { // Voss' goldene Anstecknadel
       ctx.fillStyle = "#e4ded2"; ctx.fillRect(-600, -1000, 1200, 2000); ctx.fillStyle = lgrad(-300, 0, 300, 0, [[0, "rgba(0,0,0,0.12)"], [1, "rgba(0,0,0,0)"]]); ctx.fillRect(-600, -1000, 1200, 2000);
       glut(0, 0, 300, F.goldH, 0.6 + 0.2 * Math.sin(t * 3)); circle(0, 0, 90, F.gold); circle(0, 0, 70, F.goldD); poly([[0, -50], [44, 30], [-44, 30]], F.goldH); circle(-26, -30, 14, rgba("#ffffff", 0.8));

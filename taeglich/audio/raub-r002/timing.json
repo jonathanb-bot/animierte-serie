@@ -1,0 +1,104 @@
+{
+ "dauer": 67.618,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "versteck",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 6.71,
+   "emotion": "erzaehlend",
+   "text": "Alle am Tisch schauen dich an. Du könntest ihnen jetzt von Lea erzählen. Aber du sagst nichts."
+  },
+  {
+   "nr": 2,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 6.71,
+   "dauer": 3.422,
+   "emotion": "ernst",
+   "text": "Karo verschränkt die Arme. „Bis morgen will ich die Wahrheit.“"
+  },
+  {
+   "nr": 3,
+   "typ": "versteck",
+   "kapitel": 1,
+   "start": 10.132,
+   "dauer": 4.886,
+   "emotion": "erzaehlend",
+   "text": "Nur Mara weiß, warum du wirklich mitmachst. Sie senkt den Blick und schweigt mit dir."
+  },
+  {
+   "nr": 4,
+   "typ": "bankfassade",
+   "kapitel": 2,
+   "start": 15.018,
+   "dauer": 5.894,
+   "emotion": "erzaehlend",
+   "text": "Während du zögerst, nutzt jemand anderes die Nacht. In der AUREON-Bank brennt um drei Uhr noch Licht."
+  },
+  {
+   "nr": 5,
+   "typ": "raubdetail",
+   "kapitel": 2,
+   "start": 20.912,
+   "dauer": 8.894,
+   "emotion": "erzaehlend",
+   "text": "Am Morgen liegt ein Umschlag vor deiner Tür. Kein Absender. Darin ein Foto von euch vieren, von oben aufgenommen. Aus einem Fenster der Bank."
+  },
+  {
+   "nr": 6,
+   "typ": "raubdetail",
+   "kapitel": 2,
+   "start": 29.806,
+   "dauer": 7.622,
+   "emotion": "erzaehlend",
+   "text": "Im Glas spiegelt sich etwas Kleines, Goldenes. Eine Anstecknadel. Wer das Foto gemacht hat, stand ganz nah am Fenster."
+  },
+  {
+   "nr": 7,
+   "typ": "raubdetail",
+   "kapitel": 2,
+   "start": 37.428,
+   "dauer": 4.934,
+   "emotion": "erzaehlend",
+   "text": "Auf der Rückseite steht ein einziger Satz. Einer von euch wurde bereits bezahlt."
+  },
+  {
+   "nr": 8,
+   "typ": "versteck",
+   "kapitel": 3,
+   "start": 42.362,
+   "dauer": 5.582,
+   "emotion": "erzaehlend",
+   "text": "Am Abend sitzt ihr wieder zusammen. Das Foto steckt in deiner Jacke. Es wiegt schwerer als acht Millionen."
+  },
+  {
+   "nr": 9,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 47.944,
+   "dauer": 5.678,
+   "emotion": "froh",
+   "text": "Jona verteilt schon gut gelaunt die Beute. Dann summt sein Handy. Er dreht es um, Bildschirm nach unten."
+  },
+  {
+   "nr": 10,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 53.622,
+   "dauer": 5.702,
+   "emotion": "erzaehlend",
+   "text": "Mara will die Warnung offen besprechen. Aber wer über Verrat redet, wird gefragt, warum er selbst hier sitzt."
+  },
+  {
+   "nr": 11,
+   "typ": "entscheidung",
+   "kapitel": 4,
+   "start": 59.324,
+   "dauer": 8.294,
+   "emotion": "erzaehlend",
+   "text": "Zeigst du allen das Foto und stellst die Gruppe zur Rede, oder vertraust du dich zuerst nur Mara an? Kommentiere A oder B. Der Top-Kommentar entscheidet."
+  }
+ ]
+}

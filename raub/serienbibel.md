@@ -2,6 +2,7 @@
 
 > Auftrag von Jonathan vom 16.11.2026: eine animierte Mitmachserie über einen Banküberfall für storys4you. Diese Datei ist verbindlich.
 > **Produktionsstand 16.11.:** Folge 1 ist fertig geschrieben, mit Orus vertont, und die Bilder sind gebaut (`taeglich/episoden/raub-r001.txt`).
+> **17.11.:** Folge 2 „Die erste Warnung“ fertig (keine Entscheidung zu Folge 1, kein Kommentar → du zögerst, Voss nutzt die Nacht; Karos Frist „bis morgen“).
 > Folgen 2–10 entstehen erst, wenn die jeweilige Abstimmung feststeht. Ablauf: `taeglich/laeufe/raub.md`.
 
 ## Feste Regeln
@@ -54,6 +55,8 @@ Du stellst eine Gruppe zusammen (Mara, Jona, Karo). **Direktor Voss** weiß von 
 | Schalterhalle | `bankhalle` | drei goldene Bogenreihen in die Tiefe, dunkler Steinboden mit Spiegelung, zwei goldene Schalter links/rechts, zwei Hängelampen | `tuerkis`, Alarm `alarm=1` (korallrot) |
 | Vorbereitungsraum | `versteck` | Ziegelwand, Pinnwand links mit roten Fäden, Fenster rechts mit Regen und fernem Goldlicht der Bank, Hängelampe, Holztisch | `orange` |
 | Nahaufnahmen | `raubdetail` | Holztisch im Lampenlicht | `orange`/`blau` |
+| Umschlag-Foto (Folge 2) | `raubdetail motiv=umschlag` / `fotonah` / `fotorueck` | Foto eurer Gruppe von oben durch ein Bankfenster (Fensterkreuz, ihr vier klein, du von hinten), goldene Nadel spiegelt sich im Glas; Nahaufnahme mit korallrotem Kreis; Rückseite mit der Warnung (`aufschrift="Zeile/Zeile"`) | `orange` |
+| Beobachter (Folge 2) | `bankfassade beobachter=1` | dunkle Silhouette hinter dem mittleren Bogen, goldene Nadel blinkt | `blau` |
 | Entscheidung | `entscheidung` | dunkelblau, A türkis, B gold | `blau` |
 | noch zu bauen | – | kühler Archivbereich (Folge 3/6), monumentaler Tresorraum (Folge 6), regennasse Straßen mit Blaulicht (Folge 8), stilles Flussufer im Morgengrauen (Folge 9/10) | `blau`, `tuerkis` |
 

@@ -1,0 +1,46 @@
+# Der letzte Raub – Folge 2: Die erste Warnung
+@musik musik/raub-r002.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung spannend
+@vortrag lebendig
+@klang studio
+@mund zitate
+@einblenden aus
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette blau
+
+// Serienbibel: raub/serienbibel.md · Folgenplan: raub/folgenplan.md · Weltgedächtnis: raub/gedaechtnis.json
+// Abstimmung Folge 1 (Lauf 17.11.): kein Kommentar unter den drei Posts → KEINE Entscheidung (Bibel): du zögerst, Voss nutzt die Zeit. Kein „Ihr habt … gewählt“.
+== Das Schweigen ==
+// Hook: die Gruppe wartet auf deine Antwort, du von hinten
+[versteck jona mara karo r_du hinten=r_du figur_y=1530 skala_figur=1.15 palette=orange palette_staerke=0.15 zoom-rein ton=regen hooktext="DU SCHWEIGST" ein="nichts>KEINE ANTWORT" ein_y=430] Alle am Tisch schauen dich an. Du könntest ihnen jetzt von Lea erzählen. Aber du sagst nichts.
+// Karo, Nahaufnahme: ihre Frist
+[gesicht karo entschlossen ort=versteck palette=orange palette_staerke=0.15 zoom-rein] Karo verschränkt die Arme. „Bis morgen will ich die Wahrheit.“
+// Mara und du: sie trägt dein Geheimnis mit
+[versteck mara r_du hinten=r_du figur_y=1530 skala_figur=1.25 palette=orange palette_staerke=0.15 schwenk-rechts ton=regen ein="Mara>NUR MARA WEISS ES" ein_y=330] Nur Mara weiß, warum du wirklich mitmachst. Sie senkt den Blick und schweigt mit dir.
+
+== Die Nacht ==
+// Wow-Bild: die Bank um drei Uhr, oben steht jemand hinter dem Glas
+[bankfassade beobachter=1 palette=blau palette_staerke=0.15 zoom-rein ton=regen ein="drei>03:00 UHR>uhr" ein_y=330] Während du zögerst, nutzt jemand anderes die Nacht. In der AUREON-Bank brennt um drei Uhr noch Licht.
+// Leitmotiv: der Umschlag mit dem Foto
+[raubdetail motiv=umschlag palette=orange palette_staerke=0.15 zoom-rein ton=papier ein="Absender>KEIN ABSENDER|Bank>AUS DER BANK" ein_y=270] Am Morgen liegt ein Umschlag vor deiner Tür. Kein Absender. Darin ein Foto von euch vieren, von oben aufgenommen. Aus einem Fenster der Bank.
+// Leitmotiv: die goldene Nadel spiegelt sich im Glas (Nahaufnahme des Fotos)
+[raubdetail motiv=fotonah palette=orange palette_staerke=0.1 zoom-rein ein="Anstecknadel>GOLDENE NADEL" ein_y=330] Im Glas spiegelt sich etwas Kleines, Goldenes. Eine Anstecknadel. Wer das Foto gemacht hat, stand ganz nah am Fenster.
+// Rückseite des Fotos
+[raubdetail motiv=fotorueck palette=orange palette_staerke=0.15 zoom-rein ton=papier] Auf der Rückseite steht ein einziger Satz. Einer von euch wurde bereits bezahlt.
+
+== Am Tisch ==
+// Wow-Bild: die Gruppe am Abend, die Lampe schwingt
+[versteck jona mara karo r_du hinten=r_du figur_y=1530 skala_figur=1.15 palette=orange palette_staerke=0.15 zoom-raus ton=regen ein="Abend>20:40 UHR>uhr" ein_y=330] Am Abend sitzt ihr wieder zusammen. Das Foto steckt in deiner Jacke. Es wiegt schwerer als acht Millionen.
+// Jona, Nahaufnahme: das umgedrehte Handy
+[gesicht jona froh ort=versteck palette=orange palette_staerke=0.15 schwenk-links ein="Handy>HANDY UMGEDREHT" ein_y=330] Jona verteilt schon gut gelaunt die Beute. Dann summt sein Handy. Er dreht es um, Bildschirm nach unten.
+// Mara, Nahaufnahme: sie will reden
+[gesicht mara ort=versteck palette=orange palette_staerke=0.15 zoom-rein] Mara will die Warnung offen besprechen. Aber wer über Verrat redet, wird gefragt, warum er selbst hier sitzt.
+
+== Deine Entscheidung ==
+// A/B-Karten
+[entscheidung a="Zeig allen das Foto / und stell sie zur Rede" b="Vertrau dich zuerst / nur Mara an" frage="Das Foto steckt in deiner Jacke." palette=blau palette_staerke=0.1] Zeigst du allen das Foto und stellst die Gruppe zur Rede, oder vertraust du dich zuerst nur Mara an? Kommentiere A oder B. Der Top-Kommentar entscheidet.
