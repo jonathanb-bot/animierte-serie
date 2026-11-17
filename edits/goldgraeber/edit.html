@@ -1,0 +1,284 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face { font-family: "Titel"; src: url("assets/InterDisplay-Black.otf"); font-weight: 900; }
+@font-face { font-family: "UI"; src: url("assets/Inter-Bold.otf"); font-weight: 700; }
+html,body{margin:0;background:#000}canvas{display:block}
+</style></head><body>
+<canvas id="c"></canvas>
+<script>
+// „Goldgräber“ (Big Toe & Nizi, 2017) – Edit: Nizis Part, alte Insta-Posts 2017–2021 im Archiv-Look, Lyrics in Handy-Karten, Wörter auf dem 16tel-Raster.
+const W = 1080, H = 1920, K = 1440 / 1080;
+const cv = document.getElementById("c"); cv.width = W * K; cv.height = H * K; let ctx = cv.getContext("2d"); const HAUPT = ctx;
+const PUF = [0, 1].map(() => { const c = document.createElement("canvas"); c.width = W * K; c.height = H * K; return c; });
+let ZL = null; const IMG = {}; const KORN = [];
+const lade = src => new Promise(r => { const i = new Image(); i.onload = () => r(i); i.onerror = () => { console.error("fehlt " + src); r(null); }; i.src = src; });
+const clamp = (v, a, b) => Math.max(a, Math.min(b, v)), lerp = (a, b, t) => a + (b - a) * t;
+const raus = p => 1 - Math.pow(1 - clamp(p, 0, 1), 3), weich = p => { p = clamp(p, 0, 1); return p * p * (3 - 2 * p); };
+const zurueck = p => { p = clamp(p, 0, 1); const c1 = 1.4, c3 = c1 + 1; return 1 + c3 * Math.pow(p - 1, 3) + c1 * Math.pow(p - 1, 2); };
+const rr = (x, y, w, h, r) => { ctx.beginPath(); ctx.roundRect(x, y, w, h, r); };
+// Text bis zur aktuellen Songzeit „tippen“: Wörter erscheinen mit ihrem Einsatz, Buchstaben laufen innerhalb des Worts mit
+function getippt(T, woerter, ab = 0) {
+  let s = ""; for (const w of woerter.slice(ab)) { if (T < w.a - 0.03) break; const n = Math.max(1, Math.round(clamp((T - w.a + 0.03) / 0.07, 0, 1) * w.w.length)); s += (s ? " " : "") + w.w.slice(0, n); }
+  return s;
+}
+function umbruch(text, maxB) { const z = []; let r = ""; for (const w of text.split(" ")) { const t = r ? r + " " + w : w; if (ctx.measureText(t).width > maxB && r) { z.push(r); r = w; } else r = t; } if (r) z.push(r); return z; }
+// schwebende Karte mit 3D-Anmutung (Drehung um Y über Breite + Scherung), weicher Schatten, Bewegungsunschärfe aus Geschwindigkeit
+function karte(o, inhalt) {
+  const { x, y, w, h, r = 46, rotY = 0, rotZ = 0, sk = 0, alpha = 1, schatten = 0.28, vx = 0, vy = 0, hell = true } = o;
+  const zeichne = (dx, dy, a) => {
+    ctx.save(); ctx.globalAlpha = a; ctx.translate(x + dx, y + dy); ctx.rotate(rotZ); ctx.transform(Math.cos(rotY), Math.sin(rotY) * 0.18 + sk, 0, 1, 0, 0);
+    ctx.shadowColor = `rgba(0,0,0,${schatten})`; ctx.shadowBlur = 70; ctx.shadowOffsetY = 34; rr(-w / 2, -h / 2, w, h, r); ctx.fillStyle = hell ? "#ffffff" : "#1c1c1e"; ctx.fill(); ctx.shadowColor = "transparent";
+    ctx.save(); rr(-w / 2, -h / 2, w, h, r); ctx.clip(); inhalt(-w / 2, -h / 2, w, h); ctx.restore(); ctx.restore(); };
+  const v = Math.hypot(vx, vy);
+  if (v > 2) { const n = 5; for (let k = n; k >= 1; k--) zeichne(-vx * k * 0.35, -vy * k * 0.35, alpha * 0.12); }
+  zeichne(0, 0, alpha);
+}
+// Bewegung einer Karte: fliegt von (x0,y0) mit Schwung ein, schwingt leicht nach, fliegt am Ende raus
+function flug(T, a, e, ziel, von, nach) { nach = { ...ziel, ...(nach || {}) };
+  const ein = zurueck((T - a) / 0.42), aus = 0;
+  const x = lerp(lerp(von.x, ziel.x, ein), nach.x, aus), y = lerp(lerp(von.y, ziel.y, ein), nach.y, aus);
+  const vx = (1 - clamp((T - a) / 0.42, 0, 1)) * (ziel.x - von.x) * 0.06 + aus * (nach.x - ziel.x) * 0.06, vy = (1 - clamp((T - a) / 0.42, 0, 1)) * (ziel.y - von.y) * 0.06 + aus * (nach.y - ziel.y) * 0.06;
+  const rotY = lerp(lerp(von.rotY ?? 0.6, ziel.rotY ?? 0, ein), nach.rotY ?? -0.6, aus), rotZ = lerp(lerp(von.rotZ ?? 0.1, ziel.rotZ ?? -0.04, ein), nach.rotZ ?? -0.1, aus);
+  return { x, y, vx, vy, rotY: rotY + Math.sin(T * 1.6) * 0.03, rotZ: rotZ + Math.sin(T * 1.1) * 0.01 };
+}
+function hintergrund(T, dunkel = false) {
+  const g = ctx.createLinearGradient(0, 0, 0, H);
+  if (dunkel) { g.addColorStop(0, "#0d0d12"); g.addColorStop(1, "#1b1622"); } else { g.addColorStop(0, "#f7f7f9"); g.addColorStop(1, "#e9e9ee"); }
+  ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+}
+function bildIn(img, x, y, w, h, zoom = 1, oy = 0) { if (!img) return; const s = Math.max(w / img.width, h / img.height) * zoom; ctx.save(); ctx.beginPath(); ctx.rect(x, y, w, h); ctx.clip(); ctx.drawImage(img, x + w / 2 - img.width * s / 2, y + h / 2 - img.height * s / 2 + oy, img.width * s, img.height * s); ctx.restore(); }
+function blase(x, y, w, text, farbe = "#0a84ff", schrift = "#fff", fs = 44) {
+  ctx.font = `700 ${fs}px UI`; const z = umbruch(text, w - 60); const h = 36 + z.length * fs * 1.25;
+  rr(x, y, w, h, 40); ctx.fillStyle = farbe; ctx.fill(); ctx.beginPath(); ctx.moveTo(x + w - 40, y + h - 30); ctx.quadraticCurveTo(x + w + 10, y + h + 4, x + w + 18, y + h - 2); ctx.quadraticCurveTo(x + w - 6, y + h - 8, x + w - 14, y + h - 30); ctx.fill();
+  ctx.fillStyle = schrift; ctx.textBaseline = "alphabetic"; z.forEach((l, i) => ctx.fillText(l, x + 30, y + 20 + fs + i * fs * 1.25)); return h;
+}
+function cursor(T, x, y, h) { if (Math.floor(T * 3.2) % 2 === 0) { ctx.fillStyle = "#0a84ff"; ctx.fillRect(x + 4, y - h * 0.82, 4, h); } }
+
+const wort = (z, i) => z.woerter[Math.min(i, z.woerter.length - 1)].a;
+function gross(T, woerter, x0, y0, fs, farbe, max = W - 160, glow = null) {
+  // Wörter links ausgerichtet, eins nach dem anderen, mit Nachzieh-Echo
+  ctx.save(); ctx.font = `900 ${fs}px Titel`; ctx.textBaseline = "alphabetic"; let x = x0, y = y0;
+  for (const w of woerter) { const t = w.w.toUpperCase(), wb = ctx.measureText(t).width * 0.9; if (x > x0 && x + wb > x0 + max) { x = x0; y += fs * 1.0; }
+    const d = T - w.a + 0.03; if (d >= 0) { const p = raus(d / 0.16);
+      for (let k = 3; k >= 1; k--) { ctx.save(); ctx.globalAlpha = 0.12 * (1 - p); ctx.translate(x + (1 - p) * 50 * k, y); ctx.scale(0.9, 1); ctx.fillStyle = farbe; ctx.fillText(t, 0, 0); ctx.restore(); }
+      ctx.save(); ctx.globalAlpha = clamp(d / 0.04, 0, 1); ctx.translate(x + (1 - p) * 36, y); ctx.scale(0.9, 1); ctx.fillStyle = farbe; if (glow) { ctx.shadowColor = glow; ctx.shadowBlur = 36; } ctx.fillText(t, 0, 0); ctx.restore(); }
+    x += wb + fs * 0.24; }
+  ctx.restore();
+}
+function dunkel(T, a = "#0c0c10", b = "#17141c") { const g = ctx.createLinearGradient(0, 0, 0, H); g.addColorStop(0, a); g.addColorStop(1, b); ctx.fillStyle = g; ctx.fillRect(0, 0, W, H); }
+function etikett(x, y, text, bg = "rgba(255,255,255,0.14)", fg = "#fff", fs = 28) { ctx.font = `700 ${fs}px UI`; const b = ctx.measureText(text).width + 36; rr(x, y, b, fs + 22, (fs + 22) / 2); ctx.fillStyle = bg; ctx.fill(); ctx.fillStyle = fg; ctx.fillText(text, x + 18, y + fs + 4); return b; }
+
+// ---------- Intro in vier Teilen ----------
+const IW = () => ZL.intro;
+function introWort(T, i) { return T > ZL.intro[i].a - 0.03; }
+function sticker(T, t0, text, x, y, rot, farbe, fs = 150) { const d = T - t0 + 0.03; if (d < 0) return; const q = zurueck(d / 0.28);
+  ctx.save(); ctx.translate(x, y); ctx.rotate(rot); ctx.scale(q, q); ctx.font = `900 ${fs}px Titel`; const b = ctx.measureText(text).width * 0.9 + 70;
+  ctx.shadowColor = "rgba(0,0,0,0.35)"; ctx.shadowBlur = 30; ctx.shadowOffsetY = 12; rr(-b / 2, -fs * 0.62, b, fs * 1.08, 28); ctx.fillStyle = farbe; ctx.fill(); ctx.shadowColor = "transparent";
+  ctx.fillStyle = farbe === "#fff" ? "#111" : "#fff"; ctx.textAlign = "center"; ctx.scale(0.9, 1); ctx.fillText(text, 0, fs * 0.33); ctx.restore(); }
+function klappe(T, t0, x, y, w, h, alt, neu) { const d = T - t0, q = clamp(d / 0.22, 0, 1), zeichen = q < 0.5 ? alt : neu;
+  rr(x, y, w, h, 24); ctx.fillStyle = "#16181a"; ctx.fill(); ctx.save(); rr(x, y, w, h, 24); ctx.clip(); ctx.fillStyle = "#fff"; ctx.font = `900 ${h * 0.8}px Titel`; ctx.textAlign = "center";
+  const sy = Math.abs(Math.cos(q * Math.PI)); ctx.translate(x + w / 2, y + h / 2); ctx.scale(1, Math.max(0.03, sy)); ctx.fillText(zeichen, 0, h * 0.29); ctx.restore();
+  ctx.fillStyle = "rgba(0,0,0,0.6)"; ctx.fillRect(x, y + h / 2 - 3, w, 6); }
+const ROT = "#e0283c", GOLD = "#e9c46a", AMBER = "#ffb347";
+const CLIPS = { auto1: 78, auto2: 78, auto3: 72, auto4: 78, kripo: 78, zimmer: 84, uhr: 37, party: 78, graffiti: 78 };
+const CL = {}; for (const k in CLIPS) CL[k] = { n: CLIPS[k], img: null };
+async function clipLaden(k) { const c = CL[k]; if (c.img) return; c.img = await Promise.all(Array.from({ length: c.n }, (_, i) => lade(`clips/${k}/${String(i + 1).padStart(3, "0")}.jpg`))); }
+function clipBild(k, T, t0, tempo = 1) { const c = CL[k]; if (!c.img) return null; return c.img[clamp(Math.floor((T - t0) * 30 * tempo), 0, c.n - 1)]; }
+async function init() {
+  ZL = await (await fetch("zeitleiste.json")).json();
+  const D = { yt: "2017-08-11-BXp2CLgAVX3-0", selfie: "2017-08-15-BX007YCgd5--0", hof18: "2018-08-23-Bm0ylzSF7wq-0", crew19: "2019-02-09-BtqqhozCUdo-0", sw19: "2019-07-19-B0GZWPGou3v-0",
+    graff19: "2019-10-30-B4P_6UWiAzn-0", tuer19: "2019-12-31-B6vmYHZIWiw-0", van20: "2020-11-01-CHDaGuSAM6z-1", flur20: "2020-11-01-CHDaGuSAM6z-2", trikot: "2020-11-21-CH25MgeAQqd-2", kartons: "2020-11-25-CIBk_FAgzwu-0" };
+  for (const [k, v] of Object.entries(D)) IMG[k] = await lade("assets/" + v + ".jpg");
+  await document.fonts.load('900 100px "Titel"'); await document.fonts.load('700 40px "UI"');
+  for (let k = 0; k < 6; k++) { const g = document.createElement("canvas"); g.width = 540; g.height = 960; const c = g.getContext("2d"), d = c.createImageData(540, 960);
+    for (let i = 0; i < d.data.length; i += 4) { const v = Math.random() * 255; d.data[i] = d.data[i + 1] = d.data[i + 2] = v; d.data[i + 3] = 22; } c.putImageData(d, 0, 0); KORN.push(g); }
+  window.bereit = true;
+}
+// ---------- Bausteine für den Kino-Look ----------
+// Vollbild-Foto mit langsamer Fahrt (Ken Burns), abgedunkelt, optional entsättigt
+function vollbild(img, T, a, o = {}) { if (!img) return; const { zoom = 1.12, fahrt = 0.035, dx = 0, dy = 0, dunkel: dk = 0.35, filter = "none", oy = 0 } = o;
+  const d = T - a, s = Math.max(W / img.width, H / img.height) * (zoom + d * fahrt);
+  ctx.save(); ctx.filter = filter; ctx.drawImage(img, W / 2 - img.width * s / 2 + dx * d, H / 2 - img.height * s / 2 + dy * d + oy, img.width * s, img.height * s); ctx.restore();
+  const g = ctx.createLinearGradient(0, 0, 0, H); g.addColorStop(0, `rgba(0,0,0,${dk * 0.8})`); g.addColorStop(0.45, `rgba(0,0,0,${dk * 0.5})`); g.addColorStop(1, `rgba(0,0,0,${Math.min(0.92, dk + 0.4)})`); ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+  const v = ctx.createRadialGradient(W / 2, H / 2, H * 0.3, W / 2, H / 2, H * 0.75); v.addColorStop(0, "rgba(0,0,0,0)"); v.addColorStop(1, "rgba(0,0,0,0.55)"); ctx.fillStyle = v; ctx.fillRect(0, 0, W, H); }
+// Kino-Balken oben/unten (q 0…1)
+function balken(q, h = 190) { if (q <= 0) return; ctx.fillStyle = "#000"; ctx.fillRect(0, 0, W, h * q); ctx.fillRect(0, H - h * q, W, h * q); }
+// große Lyrics unten, Wort für Wort getippt, max. 3 Zeilen
+function zeilenText(T, woerter, y, fs = 84, farbe = "#fff", glow = null, max = 930) { const t = getippt(T, woerter); if (!t) return;
+  ctx.save(); ctx.font = `900 ${fs}px Titel`; ctx.textBaseline = "alphabetic"; const z = umbruch(t.toUpperCase(), max / 0.9).slice(-3);
+  if (glow) { ctx.shadowColor = glow; ctx.shadowBlur = 34; } ctx.fillStyle = farbe;
+  z.forEach((l, i) => { ctx.save(); ctx.translate(75, y + (i - z.length + 1) * fs * 1.02); ctx.scale(0.9, 1); ctx.fillText(l, 0, 0); ctx.restore(); }); ctx.restore(); }
+// Kino-Untertitel (zentriert, gelblich-weiß, wie im Film)
+function untertitel(T, woerter, y = 1560, fs = 60) { const t = getippt(T, woerter); if (!t) return; ctx.save(); ctx.font = `700 ${fs}px UI`; ctx.textAlign = "center"; const z = umbruch(t, 900).slice(-2);
+  z.forEach((l, i) => { const yy = y + (i - z.length + 1) * fs * 1.25; ctx.lineWidth = 10; ctx.strokeStyle = "rgba(0,0,0,0.75)"; ctx.lineJoin = "round"; ctx.strokeText(l, W / 2, yy); ctx.fillStyle = "#fff6d8"; ctx.fillText(l, W / 2, yy); }); ctx.restore(); }
+function blitz(T, t0, farbe = "255,255,255", st = 0.5, dauer = 0.2) { const d = T - t0; if (d > 0 && d < dauer) { ctx.fillStyle = `rgba(${farbe},${st * (1 - d / dauer)})`; ctx.fillRect(0, 0, W, H); } }
+function wackeln(T, t0, st = 18) { const d = T - t0; if (d < 0 || d > 0.35) return; const e = Math.exp(-d / 0.08) * st; ctx.translate(Math.sin(d * 90) * e, Math.cos(d * 70) * e * 0.6); }
+function rec(T, text = "REC") { ctx.save(); ctx.font = "700 30px UI"; ctx.fillStyle = "rgba(255,255,255,0.85)"; if (Math.floor(T * 2) % 2 === 0) { ctx.beginPath(); ctx.arc(92, 248, 12, 0, Math.PI * 2); ctx.fillStyle = ROT; ctx.fill(); }
+  ctx.fillStyle = "rgba(255,255,255,0.85)"; ctx.fillText(text, 116, 259); const s = T + 3600 * 0 + 31.2, f = Math.floor((s % 1) * 24);
+  ctx.textAlign = "right"; ctx.fillText(`00:00:${String(Math.floor(s)).padStart(2, "0")}:${String(f).padStart(2, "0")}`, W - 80, 259); ctx.restore(); }
+function wortZeit(z, i) { return z.woerter[Math.min(i, z.woerter.length - 1)].a; }
+// Polizei-Absperrband quer durchs Bild
+function band(T, t0, y, rot, dir = 1) { const d = T - t0; if (d < 0) return; const q = raus(d / 0.22);
+  ctx.save(); ctx.translate(W / 2, y); ctx.rotate(rot); ctx.translate(dir * (1 - q) * 1600, 0); ctx.shadowColor = "rgba(0,0,0,0.5)"; ctx.shadowBlur = 24; ctx.fillStyle = "#f5c518"; ctx.fillRect(-1100, -52, 2200, 104); ctx.shadowColor = "transparent";
+  ctx.fillStyle = "#111"; ctx.font = "900 54px Titel"; ctx.textBaseline = "middle"; const t = "TATORT · BETRETEN VERBOTEN · "; let x = -1100 - ((T * 160) % 900);
+  while (x < 1100) { ctx.save(); ctx.translate(x, 2); ctx.scale(0.9, 1); ctx.fillText(t, 0, 0); ctx.restore(); x += ctx.measureText(t).width * 0.9; } ctx.restore(); }
+
+// ---------- Archiv-Look: Camcorder-Datum, Scanlines, leichte Farbverschiebung ----------
+function wz(z, i) { return z.woerter[Math.min(i, z.woerter.length - 1)].a; }
+function vollclip(k, T, t0, o = {}) { const im = clipBild(k, T, t0, o.tempo || 1); if (im) vollbild(im, T, t0, { fahrt: 0.03, dk: 0.25, ...o }); }
+function archiv(T, datum) {
+  ctx.save(); ctx.globalAlpha = 0.07; ctx.fillStyle = "#000"; for (let y = (T * 40) % 6; y < H; y += 6) ctx.fillRect(0, y, W, 2); ctx.restore();
+  const g = ctx.createRadialGradient(W / 2, H / 2, H * 0.3, W / 2, H / 2, H * 0.78); g.addColorStop(0, "rgba(0,0,0,0)"); g.addColorStop(1, "rgba(20,10,0,0.5)"); ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+  ctx.save(); ctx.font = "700 40px UI"; ctx.fillStyle = AMBER; ctx.shadowColor = "rgba(255,150,40,0.8)"; ctx.shadowBlur = 14; ctx.letterSpacing = "4px";
+  if (Math.floor(T * 1.6) % 2 === 0) { ctx.beginPath(); ctx.arc(92, 236, 13, 0, Math.PI * 2); ctx.fill(); } ctx.fillText("PLAY ▶", 118, 250);
+  ctx.textAlign = "right"; ctx.fillText(datum, W - 70, 250); ctx.restore(); }
+function anzeige(T, z, y = 1720, fs = 84, glow = null) { zeilenText(T, z.anzeige, y, fs, "#fff", glow); }
+function stempel(T, t0, text, x, y, rot, farbe = ROT, fs = 120) { const d = T - t0 + 0.03; if (d < 0) return; const q = zurueck(d / 0.22); ctx.save(); ctx.translate(x, y); ctx.rotate(rot); ctx.scale(q, q);
+  ctx.font = `900 ${fs}px Titel`; const b = ctx.measureText(text).width * 0.9 + 70; ctx.strokeStyle = farbe; ctx.lineWidth = 12; rr(-b / 2, -fs * 0.72, b, fs * 1.0, 18); ctx.stroke(); ctx.fillStyle = farbe; ctx.textAlign = "center"; ctx.scale(0.9, 1); ctx.fillText(text, 0, fs * 0.08); ctx.restore(); }
+// Polaroid-Rahmen für Fotos (alte Bilder schweben als Abzug)
+function polaroid(img, T, t0, x, y, w, h, rot, unten = "") { const q = zurueck((T - t0) / 0.35); ctx.save(); ctx.translate(lerp(x + 700, x, q), y); ctx.rotate(lerp(rot * 3, rot, q) + Math.sin(T * 1.2) * 0.01);
+  ctx.shadowColor = "rgba(0,0,0,0.55)"; ctx.shadowBlur = 50; ctx.shadowOffsetY = 24; ctx.fillStyle = "#f4efe4"; ctx.fillRect(-w / 2 - 26, -h / 2 - 26, w + 52, h + 130); ctx.shadowColor = "transparent";
+  ctx.save(); ctx.beginPath(); ctx.rect(-w / 2, -h / 2, w, h); ctx.clip(); const s = Math.max(w / img.width, h / img.height) * (1.03 + (T - t0) * 0.02); ctx.filter = "sepia(0.25) contrast(1.05)"; ctx.drawImage(img, -img.width * s / 2, -img.height * s / 2, img.width * s, img.height * s); ctx.restore();
+  ctx.fillStyle = "#3a3026"; ctx.font = "700 34px UI"; ctx.textAlign = "center"; ctx.fillText(unten, 0, h / 2 + 72); ctx.restore(); }
+// Päckchen (in Folie, mit Klebeband)
+function paeckchen(x, y, s, rot, t = "1 KG") { ctx.save(); ctx.translate(x, y); ctx.rotate(rot); ctx.scale(s, s); ctx.shadowColor = "rgba(0,0,0,0.5)"; ctx.shadowBlur = 30; ctx.shadowOffsetY = 14;
+  rr(-130, -80, 260, 160, 18); ctx.fillStyle = "#d9d2c3"; ctx.fill(); ctx.shadowColor = "transparent"; ctx.fillStyle = "rgba(255,255,255,0.35)"; rr(-120, -72, 240, 40, 14); ctx.fill();
+  ctx.fillStyle = "#c9a14a"; ctx.fillRect(-130, -14, 260, 28); ctx.fillRect(-14, -80, 28, 160); ctx.fillStyle = "#111"; ctx.font = "900 34px Titel"; ctx.textAlign = "center"; ctx.fillText(t, 70, 62); ctx.restore(); }
+// Hanfblatt (vereinfacht)
+function blatt(x, y, s, farbe = "#5fbf4a") { ctx.save(); ctx.translate(x, y); ctx.scale(s, s); ctx.fillStyle = farbe; for (const [a, l] of [[0, 1], [-0.5, 0.85], [0.5, 0.85], [-1.0, 0.6], [1.0, 0.6], [-1.45, 0.38], [1.45, 0.38]]) { ctx.save(); ctx.rotate(a); ctx.beginPath(); ctx.moveTo(0, 0); ctx.quadraticCurveTo(-26 * l, -90 * l, 0, -170 * l); ctx.quadraticCurveTo(26 * l, -90 * l, 0, 0); ctx.fill(); ctx.restore(); }
+  ctx.strokeStyle = farbe; ctx.lineWidth = 8; ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(0, 60); ctx.stroke(); ctx.restore(); }
+// Maschinenpistole als flache Silhouette
+function tek(x, y, s, rot) { ctx.save(); ctx.translate(x, y); ctx.rotate(rot); ctx.scale(s, s); ctx.fillStyle = "#16181b"; ctx.strokeStyle = "rgba(255,255,255,0.25)"; ctx.lineWidth = 3;
+  ctx.beginPath(); ctx.moveTo(-200, -40); ctx.lineTo(120, -40); ctx.lineTo(120, -60); ctx.lineTo(220, -60); ctx.lineTo(220, -30); ctx.lineTo(140, -20); ctx.lineTo(140, 10); ctx.lineTo(-20, 10); ctx.lineTo(-40, 120); ctx.lineTo(-90, 120); ctx.lineTo(-70, 10); ctx.lineTo(-200, 10); ctx.closePath(); ctx.fill(); ctx.stroke();
+  ctx.fillRect(20, 10, 40, 150); ctx.strokeRect(20, 10, 40, 150); ctx.beginPath(); ctx.arc(-5, 30, 22, 0, Math.PI); ctx.stroke(); ctx.restore(); }
+// ---------- Szenen (eine pro Zeile) ----------
+// 1 Meine Generation … wie Scheibenwischer – Screenshot aus dem Goldgräber-Video 2017, Wischer fegt drüber
+function s01(T, z) { blauGrund(); const im = IMG.yt; vollbild(im, T, z.a, { zoom: 1.0, fahrt: 0.02, dk: 0.55, filter: "blur(18px)" });
+  polaroid(im, T, z.a - 0.2, W / 2, 760, 860, 560, -0.03, "Goldgräber · 2017");
+  const tS = wz(z, 7); if (T > tS - 0.25) { const p = clamp((T - tS + 0.25) / 0.6, 0, 1), a = lerp(-1.2, 1.2, Math.sin(p * Math.PI * 2) * 0.5 + 0.5);
+    ctx.save(); ctx.translate(W / 2, 1330); ctx.rotate(a); ctx.strokeStyle = "#111"; ctx.lineWidth = 22; ctx.lineCap = "round"; ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(0, -900); ctx.stroke(); ctx.strokeStyle = "#333"; ctx.lineWidth = 10; ctx.beginPath(); ctx.moveTo(0, -200); ctx.lineTo(0, -900); ctx.stroke(); ctx.restore(); }
+  archiv(T, "AUG 11 2017"); anzeige(T, z); }
+function blauGrund() { ctx.fillStyle = "#0d0b09"; ctx.fillRect(0, 0, W, H); }
+// 2 Wer will wissen, was geht? … – Autofahrt 2017
+function s02(T, z) { vollclip("auto1", T, z.a, { zoom: 1.02 }); archiv(T, "AUG 30 2017"); anzeige(T, z, 1720, 78); }
+// 3 Du weißt ganz genau … Dicker – Selfie 2017
+function s03(T, z) { blauGrund(); vollbild(IMG.selfie, T, z.a, { zoom: 1.0, fahrt: 0.02, dk: 0.55, filter: "blur(18px)" }); polaroid(IMG.selfie, T, z.a, W / 2, 780, 860, 640, 0.03, "2017"); archiv(T, "AUG 15 2017"); anzeige(T, z); }
+// 4 Meine Jungs sind Polizeiticker – Crew 2019
+function s04(T, z) { vollbild(IMG.crew19, T, z.a, { zoom: 1.02, fahrt: 0.05, dk: 0.25 }); archiv(T, "FEB 09 2019"); anzeige(T, z, 1720, 92); }
+// 5 Hier jagt die Kripo, Polizeiticker – Überwachungsbild, Nachrichten-Laufband
+function s05(T, z) { vollclip("kripo", T, z.a, { zoom: 1.0, filter: "grayscale(1) contrast(1.2)" });
+  const tP = wz(z, 4); if (T > z.a + 0.1) { const q = raus((T - z.a - 0.1) / 0.3); ctx.save(); ctx.translate(0, lerp(120, 0, q)); ctx.fillStyle = ROT; ctx.fillRect(0, 1180, W, 92); ctx.fillStyle = "#fff"; ctx.fillRect(0, 1180, 240, 92); ctx.fillStyle = ROT; ctx.font = "900 46px Titel"; ctx.fillText("EILMELDUNG", 18, 1243);
+    ctx.save(); ctx.beginPath(); ctx.rect(240, 1180, W - 240, 92); ctx.clip(); ctx.fillStyle = "#fff"; ctx.font = "700 40px UI"; const t = "POLIZEITICKER +++ KRIPO SUCHT IM KIEZ +++ POLIZEITICKER +++ "; ctx.fillText(t + t, 260 - ((T - z.a) * 320) % 1100, 1240); ctx.restore(); ctx.restore(); }
+  if (T > tP - 0.03) stempel(T, tP, "KRIPO", W / 2, 560, -0.08, ROT, 150);
+  archiv(T, "MAR 06 2021"); anzeige(T, z, 1720, 92); }
+// 6 So war's und so bleibt es immer – Schwarz-Weiß 2019
+function s06(T, z) { vollbild(IMG.sw19, T, z.a, { zoom: 1.02, fahrt: 0.04, dk: 0.25, filter: "grayscale(1)" }); const tI = wz(z, 6); if (T > tI - 0.03) { ctx.save(); ctx.globalAlpha = raus((T - tI) / 0.3); ctx.font = "900 260px Titel"; ctx.textAlign = "center"; ctx.fillStyle = "rgba(255,255,255,0.9)"; ctx.translate(W / 2, 760); ctx.scale(0.9, 1); ctx.fillText("∞", 0, 0); ctx.restore(); } archiv(T, "JUL 19 2019"); anzeige(T, z); }
+// 7 Packen Ware ab in ein Kleinzimmer – Zimmer-Clip, nur Schrift
+function s07(T, z) { vollclip("zimmer", T, z.a, { zoom: 1.02 }); const tW = wz(z, 1);
+  for (let k = 0; k < 4; k++) { const t0 = tW - 0.05 + k * 0.16; if (T < t0) continue; const q = zurueck((T - t0) / 0.3); paeckchen(W / 2 + (k % 2 ? 90 : -90), lerp(-200, 1180 - k * 120, q), 1.2, (k % 2 ? 0.08 : -0.06)); }
+  archiv(T, "JUL 04 2021"); anzeige(T, z, 1720, 92); }
+// 8 Spielen wir Poker … Blackjack – Graffiti 2019, Karten fächern auf
+function s08(T, z) { vollbild(IMG.graff19, T, z.a, { zoom: 1.02, fahrt: 0.04, dk: 0.3 }); const tB = wz(z, 4);
+  [["A", "♠"], ["K", "♥"], ["10", "♦"]].forEach(([w, s], k) => { const t0 = wz(z, 2) - 0.05 + k * 0.1; if (T < t0) return; const q = zurueck((T - t0) / 0.3); ctx.save(); ctx.translate(W / 2, 980); ctx.rotate((k - 1) * 0.25 * q); ctx.translate(0, -300 * q);
+    ctx.shadowColor = "rgba(0,0,0,0.5)"; ctx.shadowBlur = 30; rr(-120, -170, 240, 340, 20); ctx.fillStyle = "#fff"; ctx.fill(); ctx.shadowColor = "transparent"; ctx.fillStyle = s === "♠" ? "#111" : ROT; ctx.font = "900 70px Titel"; ctx.fillText(w, -100, -95); ctx.font = "120px UI"; ctx.textAlign = "center"; ctx.fillText(s, 0, 50); ctx.restore(); });
+  if (T > tB - 0.03) stempel(T, tB, "21", W / 2, 1300, -0.08, GOLD, 150); archiv(T, "OCT 30 2019"); anzeige(T, z, 1720, 92); }
+// 9 … nicht auf Snapchat – Hinterhof 2018, Snapchat-Geist durchgestrichen
+function s09(T, z) { vollbild(IMG.hof18, T, z.a, { zoom: 1.02, fahrt: 0.04, dk: 0.25 }); const tS = wz(z, 3);
+  if (T > z.a + 0.1) { const q = zurueck((T - z.a - 0.1) / 0.3); ctx.save(); ctx.translate(W / 2, 760); ctx.scale(q, q); rr(-150, -150, 300, 300, 70); ctx.fillStyle = "#fffc00"; ctx.fill(); ctx.fillStyle = "#fff"; ctx.strokeStyle = "#111"; ctx.lineWidth = 8;
+    ctx.beginPath(); ctx.moveTo(-70, 70); ctx.quadraticCurveTo(-80, -100, 0, -100); ctx.quadraticCurveTo(80, -100, 70, 70); ctx.lineTo(40, 55); ctx.lineTo(15, 80); ctx.lineTo(-15, 55); ctx.lineTo(-40, 80); ctx.closePath(); ctx.fill(); ctx.stroke();
+    if (T > tS - 0.03) { const p = clamp((T - tS + 0.03) / 0.15, 0, 1); ctx.strokeStyle = ROT; ctx.lineWidth = 22; ctx.lineCap = "round"; ctx.beginPath(); ctx.moveTo(-170, -170); ctx.lineTo(-170 + 340 * p, -170 + 340 * p); ctx.stroke(); } ctx.restore(); }
+  archiv(T, "AUG 23 2018"); anzeige(T, z, 1720, 92); }
+// 10 … links, rechts … – Hände am Lenkrad 2017, Bild schwenkt links/rechts
+function s10(T, z) { const tL = wz(z, 2), tR = wz(z, 3), sh = T > tR ? 60 : T > tL ? -60 : 0; ctx.save(); ctx.translate(sh * raus(((T > tR ? T - tR : T - tL)) / 0.15), 0); vollclip("auto2", T, z.a, { zoom: 1.12 }); ctx.restore();
+  const tH = wz(z, 1), tT = wz(z, 8);
+  if (T > tH - 0.03 && T < tL) { const q = zurueck((T - tH + 0.03) / 0.25); for (let k = 0; k < 7; k++) { const ph = ((T - tH) * 0.5 + k * 0.14) % 1, x = W / 2 + Math.sin(k * 2.1) * 260, y = 820 - ph * 300, r = 90 + ph * 160; const g = ctx.createRadialGradient(x, y, 0, x, y, r); g.addColorStop(0, `rgba(190,230,170,${0.25 * (1 - ph)})`); g.addColorStop(1, "rgba(190,230,170,0)"); ctx.fillStyle = g; ctx.fillRect(x - r, y - r, r * 2, r * 2); } ctx.save(); ctx.translate(W / 2, 760); ctx.scale(q, q); blatt(0, 40, 1.4); ctx.restore(); }
+  if (T > tL - 0.03 && T < tT) stempel(T, tL, "←", 270, 760, 0, "#fff", 160); if (T > tR - 0.03 && T < tT) stempel(T, tR, "→", 810, 760, 0, "#fff", 160);
+  if (T > tT - 0.08) { const q = zurueck((T - tT + 0.08) / 0.25); tek(lerp(W + 400, W / 2, q), 760, 1.7, -0.1); blitz(T, tT, "255,255,255", 0.3, 0.12); }
+  archiv(T, "AUG 30 2017"); anzeige(T, z, 1720, 96); }
+// 11 Trage meine Taschen immer full auf der 050 – Uhr-Clip (Zeitlupe)
+function s11(T, z) { vollclip("uhr", T, z.a, { zoom: 1.04, tempo: 0.55 }); const t5 = wz(z, 7); if (T > t5 - 0.03) { const q = zurueck((T - t5 + 0.03) / 0.25); ctx.save(); ctx.translate(W / 2, 700); ctx.scale(q, q); etikett(-110, -40, "050", "rgba(20,16,10,0.9)", AMBER, 70); ctx.restore(); }
+  if (T > wz(z, 4) - 0.03) stempel(T, wz(z, 4), "FULL", W / 2, 480, -0.08, "#30d158", 130); archiv(T, "AUG 25 2021"); anzeige(T, z); }
+// 12 Lassen Rauch aufgeh'n, während die Zeit verfliegt – Straße 2017, Rauch und Uhr
+function s12(T, z) { vollclip("auto4", T, z.a, { zoom: 1.02 });
+  for (let k = 0; k < 10; k++) { const ph = ((T - z.a) * 0.35 + k * 0.1) % 1, x = W / 2 + Math.sin(k * 2.3 + T) * 300, y = 1300 - ph * 900, r = 80 + ph * 260; const g = ctx.createRadialGradient(x, y, 0, x, y, r); g.addColorStop(0, `rgba(230,230,230,${0.18 * (1 - ph)})`); g.addColorStop(1, "rgba(230,230,230,0)"); ctx.fillStyle = g; ctx.fillRect(x - r, y - r, r * 2, r * 2); }
+  const tZ = wz(z, 5); if (T > tZ - 0.03) { const q = zurueck((T - tZ + 0.03) / 0.25); ctx.save(); ctx.translate(W / 2, 640); ctx.scale(q, q); ctx.beginPath(); ctx.arc(0, 0, 130, 0, Math.PI * 2); ctx.fillStyle = "rgba(255,255,255,0.9)"; ctx.fill(); ctx.strokeStyle = "#111"; ctx.lineWidth = 10; ctx.lineCap = "round";
+    const a = (T - tZ) * 14; ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(Math.sin(a) * 100, -Math.cos(a) * 100); ctx.stroke(); ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(Math.sin(a / 12) * 65, -Math.cos(a / 12) * 65); ctx.stroke(); ctx.restore(); }
+  archiv(T, "AUG 30 2017"); anzeige(T, z); }
+// 13 Tag für Tag … dass uns keiner sieht – Tür 2019, Kalender blättert
+function s13(T, z) { vollbild(IMG.tuer19, T, z.a, { zoom: 1.02, fahrt: 0.05, dk: 0.3 }); const d = T - z.a, tag = 1 + Math.floor(clamp(d / 2.2, 0, 1) * 30);
+  karte({ x: 830, y: 420, w: 260, h: 300, r: 22, schatten: 0.5, rotY: 0, rotZ: 0.06 }, (x, y, w, h) => { ctx.fillStyle = "#fff"; ctx.fillRect(x, y, w, h); ctx.fillStyle = ROT; ctx.fillRect(x, y, w, 80); ctx.fillStyle = "#fff"; ctx.font = "900 40px Titel"; ctx.textAlign = "center"; ctx.fillText("DEZ", x + w / 2, y + 56); ctx.fillStyle = "#111"; ctx.font = "900 140px Titel"; ctx.fillText(String(tag), x + w / 2, y + 240); ctx.textAlign = "left"; });
+  archiv(T, "DEC 31 2019"); anzeige(T, z); }
+// 14 So wie … und Al Majeed – grüner Flur 2020
+function s14(T, z) { vollbild(IMG.flur20, T, z.a, { zoom: 1.02, fahrt: 0.05, dk: 0.25 }); const tB = wz(z, 2); if (T > tB - 0.03) { const q = zurueck((T - tB + 0.03) / 0.25); ctx.save(); ctx.translate(W / 2, 400); ctx.rotate(0.04); ctx.scale(q, q); etikett(-250, -45, "BRATE TOESKI", "rgba(10,10,10,0.88)", "#fff", 76); ctx.restore(); }
+  const tA = wz(z, 5); if (T > tA - 0.03) { const q = zurueck((T - tA + 0.03) / 0.25); ctx.save(); ctx.translate(W / 2, 540); ctx.rotate(-0.04); ctx.scale(q, q); etikett(-230, -45, "AL MAJEED", "rgba(10,10,10,0.88)", GOLD, 76); ctx.restore(); }
+  archiv(T, "NOV 01 2020"); anzeige(T, z, 1720, 96); }
+// 15 Ein Spieler, der die Scheine liebt – Graffiti-Clip 2020, Scheine fallen
+function s15(T, z) { vollclip("graffiti", T, z.a, { zoom: 1.02 }); const tS = wz(z, 4);
+  if (T > tS - 0.1) for (let k = 0; k < 16; k++) { const d = T - tS + 0.1 - k * 0.04; if (d < 0) continue; const x = 80 + (k * 211) % (W - 160), y = -120 + d * 700, r = Math.sin(d * 3 + k) * 0.6; ctx.save(); ctx.translate(x, y); ctx.rotate(r); ctx.scale(1, Math.abs(Math.cos(d * 4 + k)) * 0.8 + 0.2);
+    ctx.fillStyle = k % 2 ? "#7fbf7f" : "#e8a24a"; ctx.fillRect(-90, -45, 180, 90); ctx.strokeStyle = "rgba(255,255,255,0.6)"; ctx.lineWidth = 3; ctx.strokeRect(-80, -36, 160, 72); ctx.fillStyle = "#fff"; ctx.font = "900 40px Titel"; ctx.textAlign = "center"; ctx.fillText(k % 2 ? "100" : "50", 0, 14); ctx.restore(); }
+  archiv(T, "JUN 02 2020"); anzeige(T, z, 1720, 92); }
+// 16 Deswegen werden Kassetten … verteilt im Kiez – Straßenszene 2020, Kassette
+function s16(T, z) { vollclip("party", T, z.a, { zoom: 1.02 }); const tK = wz(z, 2);
+  if (T > tK - 0.1) { const q = zurueck((T - tK + 0.1) / 0.35); ctx.save(); ctx.translate(lerp(-500, W / 2, q), 720); ctx.rotate(-0.08 + Math.sin(T * 1.5) * 0.02); ctx.shadowColor = "rgba(0,0,0,0.5)"; ctx.shadowBlur = 40;
+    rr(-300, -190, 600, 380, 26); ctx.fillStyle = "#1c1c1c"; ctx.fill(); ctx.shadowColor = "transparent"; rr(-260, -160, 520, 170, 14); ctx.fillStyle = "#f2e6c9"; ctx.fill(); ctx.fillStyle = "#c0392b"; ctx.fillRect(-260, -110, 520, 24);
+    ctx.fillStyle = "#1c1c1c"; ctx.font = "900 46px Titel"; ctx.textAlign = "center"; ctx.fillText("1019 · GOLDGRÄBER", 0, -40); ctx.font = "700 26px UI"; ctx.fillText("SEITE A · 2017", 0, -2);
+    for (const s of [-1, 1]) { const cx = s * 130, cy = 95; ctx.beginPath(); ctx.arc(cx, cy, 52, 0, Math.PI * 2); ctx.fillStyle = "#f2e6c9"; ctx.fill(); ctx.save(); ctx.translate(cx, cy); ctx.rotate(T * 4); ctx.fillStyle = "#1c1c1c"; for (let k = 0; k < 6; k++) { ctx.rotate(Math.PI / 3); ctx.fillRect(-6, -34, 12, 18); } ctx.restore(); }
+    ctx.restore(); }
+  archiv(T, "APR 11 2020"); anzeige(T, z, 1720, 80); }
+// 17 Und ich bleib aktiv … – Trikot „NIZI 19“, grüner Online-Punkt
+function s17(T, z) { vollbild(IMG.trikot, T, z.a, { zoom: 1.02, fahrt: 0.05, dk: 0.2 }); const tA = wz(z, 3);
+  if (T > tA - 0.03) { const q = zurueck((T - tA + 0.03) / 0.25); karte({ x: W / 2, y: lerp(-150, 330, q), w: 760, h: 150, r: 40, hell: false, schatten: 0.5, rotY: 0, rotZ: 0 }, (x, y, w, h) => { ctx.fillStyle = "rgba(20,20,22,0.94)"; ctx.fillRect(x, y, w, h);
+    ctx.beginPath(); ctx.arc(x + 75, y + 75, 26, 0, Math.PI * 2); ctx.fillStyle = "#30d158"; ctx.fill(); ctx.fillStyle = "#fff"; ctx.font = "700 44px UI"; ctx.fillText("nizi_1neun", x + 130, y + 70); ctx.fillStyle = "#30d158"; ctx.font = "700 30px UI"; ctx.fillText("Jetzt aktiv", x + 130, y + 112); }); }
+  const tM = wz(z, 7); if (T > tM - 0.03) { const q = zurueck((T - tM + 0.03) / 0.25); for (let k = 0; k < 8; k++) { const ph = ((T - tM) * 0.6 + k * 0.12) % 1, x = W / 2 + Math.sin(k * 1.9 + T) * 200, y = 1250 - ph * 700, r = 70 + ph * 180; const g = ctx.createRadialGradient(x, y, 0, x, y, r); g.addColorStop(0, `rgba(90,170,255,${0.3 * (1 - ph)})`); g.addColorStop(1, "rgba(90,170,255,0)"); ctx.fillStyle = g; ctx.fillRect(x - r, y - r, r * 2, r * 2); }
+    ctx.save(); ctx.translate(W / 2, 1300); ctx.scale(q, q); ctx.font = "900 150px Titel"; ctx.textAlign = "center"; ctx.fillStyle = "#9fd3ff"; ctx.shadowColor = "rgba(90,170,255,0.9)"; ctx.shadowBlur = 40; ctx.scale(0.9, 1); ctx.fillText("MARID", 0, 0); ctx.restore(); }
+  archiv(T, "NOV 21 2020"); if (T < tM - 0.03) anzeige(T, z, 1720, 96); }
+// 18 Komm vorbei … kriegst du 'nen Schock – roter Transporter nachts 2020, Schock-Blitz
+function s18(T, z) { const tS = wz(z, 11); ctx.save(); wackeln(T, tS, 18); vollbild(IMG.van20, T, z.a, { zoom: 1.8, fahrt: 0.05, dk: 0.3, oy: -760 }); ctx.restore(); blitz(T, tS, "255,255,255", 0.7, 0.2);
+  if (T > tS - 0.03) { const q = zurueck((T - tS + 0.03) / 0.22); ctx.save(); ctx.translate(W / 2, 760); ctx.rotate(-0.06); ctx.scale(q, q); ctx.font = "900 220px Titel"; ctx.textAlign = "center"; ctx.fillStyle = "#ffd60a"; ctx.shadowColor = "rgba(255,214,10,0.7)"; ctx.shadowBlur = 40; ctx.scale(0.9, 1); ctx.fillText("SHOT", 0, 0); ctx.restore();
+    const g2 = zurueck((T - tS) / 0.3); ctx.save(); ctx.translate(W / 2, 1120); ctx.scale(g2, g2); ctx.fillStyle = "rgba(255,255,255,0.25)"; ctx.strokeStyle = "#fff"; ctx.lineWidth = 6; ctx.beginPath(); ctx.moveTo(-80, -120); ctx.lineTo(80, -120); ctx.lineTo(60, 110); ctx.lineTo(-60, 110); ctx.closePath(); ctx.fill(); ctx.stroke(); ctx.fillStyle = "rgba(233,160,60,0.85)"; ctx.beginPath(); ctx.moveTo(-70, -40); ctx.lineTo(70, -40); ctx.lineTo(58, 100); ctx.lineTo(-58, 100); ctx.closePath(); ctx.fill(); ctx.restore(); }
+  archiv(T, "NOV 01 2020"); anzeige(T, z, 1720, 80); }
+// 19 Achui, hier werden die Kilos gekocht – Autofahrt 2017, nur Schrift
+function s19(T, z) { vollclip("auto3", T, z.a, { zoom: 1.04 }); const tK = wz(z, 4);
+  if (T > tK - 0.1) { const q = zurueck((T - tK + 0.1) / 0.3); ctx.save(); ctx.translate(W / 2, lerp(H + 300, 900, q));
+    for (let k = 0; k < 6; k++) { const ph = ((T - tK) * 0.8 + k * 0.17) % 1, x = Math.sin(k * 2.4 + T * 2) * 120, y = -200 - ph * 380, r = 50 + ph * 120; const g = ctx.createRadialGradient(x, y, 0, x, y, r); g.addColorStop(0, `rgba(240,240,240,${0.35 * (1 - ph)})`); g.addColorStop(1, "rgba(240,240,240,0)"); ctx.fillStyle = g; ctx.fillRect(x - r, y - r, r * 2, r * 2); }
+    ctx.shadowColor = "rgba(0,0,0,0.5)"; ctx.shadowBlur = 40; const g = ctx.createLinearGradient(-260, 0, 260, 0); g.addColorStop(0, "#5c6066"); g.addColorStop(0.5, "#c7ccd2"); g.addColorStop(1, "#4a4e54"); ctx.fillStyle = g; rr(-260, -180, 520, 300, 40); ctx.fill(); ctx.shadowColor = "transparent";
+    ctx.fillStyle = "#3a3d42"; ctx.fillRect(-320, -150, 70, 30); ctx.fillRect(250, -150, 70, 30); ctx.fillStyle = "#2a2c30"; rr(-280, -200, 560, 40, 20); ctx.fill();
+    ctx.fillStyle = "#fff"; ctx.font = "900 110px Titel"; ctx.textAlign = "center"; ctx.fillText("KG", 0, 30); ctx.restore(); }
+  archiv(T, "AUG 30 2017"); anzeige(T, z, 1720, 96); }
+// 20 … Lieferungsstopp – Kartons 2020, Sendung „ohne Stopp“, Schluss mit Goldgräber 2017
+function s20(T, z) { vollbild(IMG.kartons, T, z.a, { zoom: 1.02, fahrt: 0.05, dk: 0.3 }); const tL = wz(z, 7);
+  karte({ x: W / 2, y: lerp(-300, 460, zurueck((T - z.a) / 0.3)), w: 820, h: 300, r: 40, schatten: 0.5, rotY: 0, rotZ: -0.02 }, (x, y, w, h) => { ctx.fillStyle = "#fff"; ctx.fillRect(x, y, w, h); ctx.fillStyle = "#ffcc00"; ctx.fillRect(x, y, w, 90);
+    ctx.fillStyle = "#d40511"; ctx.font = "900 44px Titel"; ctx.fillText("Sendung 1019", x + 40, y + 62); ctx.fillStyle = "#111"; ctx.font = "700 36px UI"; ctx.fillText("Status:", x + 40, y + 160); ctx.fillStyle = T > tL - 0.03 ? "#30d158" : "#111"; ctx.font = "900 52px Titel"; ctx.fillText(T > tL - 0.03 ? "kein Stopp" : "unterwegs …", x + 40, y + 240); });
+  const tO = wz(z, 2); if (T > tO - 0.03 && T < tL + 0.7) { const q = zurueck((T - tO + 0.03) / 0.25); ctx.save(); ctx.translate(W / 2 + 280, 900); ctx.rotate(0.12); ctx.scale(q, q); ctx.shadowColor = "rgba(0,0,0,0.5)"; ctx.shadowBlur = 30; rr(-120, -150, 240, 300, 16); ctx.fillStyle = "rgba(235,240,245,0.85)"; ctx.fill(); ctx.shadowColor = "transparent"; ctx.fillStyle = "#d33"; ctx.fillRect(-120, -150, 240, 26); blatt(0, 40, 0.8, "#3f8f3a"); ctx.restore(); }
+  if (T > tL - 0.03) { ctx.save(); const q = zurueck((T - tL + 0.03) / 0.25); ctx.translate(W / 2, 1180); ctx.scale(q, q); ctx.font = "900 120px Titel"; ctx.textAlign = "center"; ctx.fillStyle = GOLD; ctx.shadowColor = "rgba(233,196,106,0.7)"; ctx.shadowBlur = 30; ctx.scale(0.9, 1); ctx.fillText("LIEFERUNGSSTOPP", 0, 0); ctx.restore(); }
+  else anzeige(T, z);
+  const tE = tL + 0.7; if (T > tE) { const d = T - tE, q = zurueck(d / 0.35); ctx.fillStyle = `rgba(0,0,0,${0.8 * raus(d / 0.2)})`; ctx.fillRect(0, 0, W, H); polaroid(IMG.yt, T, tE, W / 2, 820, 860 * q + 1, 560 * q + 1, -0.03, "Goldgräber · 2017");
+    ctx.save(); ctx.globalAlpha = raus(d / 0.3); ctx.font = "900 110px Titel"; ctx.textAlign = "center"; ctx.fillStyle = GOLD; ctx.fillText("NEUNZEHNER", W / 2, 1360); ctx.restore(); }
+  archiv(T, "NOV 25 2020"); const r = ZL.ende - T; if (r < 0.3) { ctx.fillStyle = `rgba(0,0,0,${1 - r / 0.3})`; ctx.fillRect(0, 0, W, H); } }
+// ---------- Ablauf ----------
+const SZENEN = () => [s01, s02, s03, s04, s05, s06, s07, s08, s09, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20];
+const SZ_CLIP = [null, "auto1", null, null, "kripo", null, "zimmer", null, null, "auto2", "uhr", "auto4", null, null, "graffiti", "party", null, null, "auto3", null];
+let GRENZEN = null, ZS = null;
+function vorbereiten() { const Z = ZL.zeilen; GRENZEN = Z.map(z => z.a); GRENZEN[0] = 0; GRENZEN.push(ZL.ende + 1); ZS = SZENEN().map((f, i) => ({ f, z: { ...Z[i], a: GRENZEN[i], e: GRENZEN[i + 1] } })); }
+function szeneNr(T) { let nr = 0; for (let i = 0; i < ZS.length; i++) if (T >= GRENZEN[i]) nr = i; return nr; }
+window.laden = async T => { if (!ZS) vorbereiten(); const nr = szeneNr(T), noetig = new Set([nr - 1, nr, nr + 1].map(i => SZ_CLIP[i]).filter(Boolean));
+  for (const k in CL) if (!noetig.has(k) && CL[k].img) CL[k].img = null; for (const k of noetig) await clipLaden(k); };
+function szeneIn(nr, T, puf) { const alt = ctx; ctx = puf.getContext("2d"); ctx.setTransform(K, 0, 0, K, 0, 0); ctx.filter = "none"; ctx.globalAlpha = 1; ctx.fillStyle = "#000"; ctx.fillRect(0, 0, W, H);
+  const s = ZS[clamp(nr, 0, ZS.length - 1)]; s.f(T, s.z); ctx = alt; }
+const RICHT = [[0, 1], [1, 0], [0, -1], [-1, 0]];
+function stossJetzt(T) { let st = 0; for (const k of ZL.kicks) { const ph = T - k; if (ph >= 0 && ph < 0.4) st = Math.max(st, Math.exp(-ph / 0.09) * 0.02); } return st; }
+window.zeichne = T => {
+  if (!ZS) vorbereiten();
+  ctx = HAUPT; ctx.setTransform(K, 0, 0, K, 0, 0); ctx.filter = "none"; ctx.globalAlpha = 1; ctx.fillStyle = "#000"; ctx.fillRect(0, 0, W, H);
+  const GR = GRENZEN, nr = szeneNr(T); const UE = 0.1; let g = -1; for (let i = 1; i < ZS.length; i++) if (Math.abs(T - GR[i]) < UE) g = i;
+  const st = stossJetzt(T);
+  const male = (puf, dx, dy, a = 1) => { ctx.save(); ctx.globalAlpha = a; ctx.translate(W / 2 + dx, H / 2 + dy); ctx.scale(1 + st, 1 + st); ctx.drawImage(puf, -W / 2, -H / 2, W, H); ctx.restore(); };
+  if (g < 0) { szeneIn(nr, T, PUF[0]); male(PUF[0], 0, 0); }
+  else { const p = (T - (GR[g] - UE)) / (2 * UE), e = p < 0.5 ? 4 * p * p * p : 1 - Math.pow(-2 * p + 2, 3) / 2, [rx, ry] = RICHT[g % RICHT.length], v = Math.sin(Math.PI * clamp(p, 0, 1));
+    szeneIn(g - 1, Math.min(T, GR[g] - 0.001), PUF[0]); szeneIn(g, Math.max(T, GR[g]), PUF[1]);
+    for (const [puf, off] of [[PUF[0], -e], [PUF[1], 1 - e]]) { const dx = off * W * rx, dy = off * H * ry; if (Math.abs(off) >= 1) continue; male(puf, dx, dy, 1); for (let s2 = 1; s2 <= 4; s2++) male(puf, dx - rx * s2 * 30 * v, dy - ry * s2 * 52 * v, 0.14 * v); } }
+  ctx.save(); ctx.globalCompositeOperation = "overlay"; ctx.drawImage(KORN[Math.floor(T * 24) % KORN.length], 0, 0, W, H); ctx.restore();
+};
+init();
+</script></body></html>
