@@ -622,7 +622,17 @@
     "thriller",
     "story",
     "ihr entscheidet"
-   ]
+   ],
+   "veroeffentlicht": {
+    "video": "https://raw.githubusercontent.com/jonathanb-bot/animierte-serie/youtube-upload/taeglich/raub-r002.mp4",
+    "geplant": {
+     "tiktok": "2026-11-17T22:36:00",
+     "instagram": "2026-11-17T22:58:00",
+     "youtube": "2026-11-17T23:43:00"
+    },
+    "lufs": -14.6,
+    "dauer_s": 67.22
+   }
   }
  ]
 }

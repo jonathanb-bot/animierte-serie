@@ -1,20 +1,36 @@
 {
  "_info": "Weltgedächtnis „Der letzte Raub – Ihr entscheidet“ (raub/serienbibel.md). Vor jeder Folge lesen, danach aktualisieren. Entscheidungen nur mit echter Quelle (Kommentar-ID, Nutzer, Likes) aus python raub/stimmen.py.",
- "folge": 1,
- "datum": "2026-11-16",
- "entscheidungen": [],
+ "folge": 2,
+ "datum": "2026-11-17",
+ "entscheidungen": [
+  {
+   "folge": 1,
+   "frage": "A Wahrheit sagen / B Ziel für dich behalten",
+   "ergebnis": "keine Entscheidung",
+   "quelle": "python raub/stimmen.py 1 im Lauf 17.11. (Kommentare Stand 2026-11-17T16:46:09Z, 201 Posts, 0 Fehler): unter den drei Posts von Folge 1 kein einziger Kommentar",
+   "kommentar_id": null,
+   "nutzer": null,
+   "likes": 0,
+   "stimmen_a": 0,
+   "stimmen_b": 0,
+   "folge_in_der_geschichte": "Du zögerst und sagst nichts (weder A noch B gewählt). Voss nutzt die Nacht für das Foto und die Warnung. Karo setzt eine Frist."
+  }
+ ],
  "offene_entscheidung": {
-  "folge": 1,
-  "a": "Der Gruppe die ganze Wahrheit sagen",
-  "b": "Das eigentliche Ziel vorerst für dich behalten",
-  "auswertung": "2026-11-17 Lauf 16:47"
+  "folge": 2,
+  "a": "Allen das Foto zeigen und die Gruppe zur Rede stellen",
+  "b": "Dich zuerst nur Mara anvertrauen",
+  "auswertung": "2026-11-18 Lauf 16:47"
  },
  "wissen": {
   "du": [
    "Lea ist unschuldig",
    "ATLAS-Auszug (3 von 41 Seiten) beweist allein nichts",
    "Original ATLAS liegt im Tresor der AUREON-Bank",
-   "8 Mio. € liegen bis Freitag im selben Tresor"
+   "8 Mio. € liegen bis Freitag im selben Tresor",
+   "anonymer Umschlag: Foto eurer Gruppe von oben aus einem Bankfenster, goldene Nadel spiegelt sich im Glas",
+   "Rückseite: „Einer von euch wurde bereits bezahlt.“",
+   "Jona hat sein Handy beim Summen umgedreht"
   ],
   "mara": [
    "Lea ist unschuldig",
@@ -29,24 +45,28 @@
   "karo": [
    "8 Mio. € im Tresor",
    "Plan: Banküberfall",
-   "sie organisiert die Abreise"
+   "sie organisiert die Abreise",
+   "du verschweigst etwas (sie will bis morgen die Wahrheit)"
   ],
   "voss": [
-   "kennt den Plan (Zuschauer ahnen es nur: er wartet in der leeren Bank)"
+   "kennt den Plan",
+   "hat euch nachts aus der Bank fotografiert und dir die Warnung geschickt (Zuschauer ahnen es über die Nadel)"
   ]
  },
  "vertrauen": {
   "du→mara": "mittel",
-  "du→jona": "hoch (ältester Freund)",
+  "du→jona": "hoch, erster Zweifel (umgedrehtes Handy)",
   "du→karo": "neu",
   "mara→du": "hoch",
   "jona→du": "hoch",
-  "karo→gruppe": "abwartend"
+  "karo→gruppe": "abwartend",
+  "karo→du": "sinkt (Frist bis morgen)"
  },
  "besitz": {
   "du": [
    "Leas Foto",
-   "leere Tasche"
+   "leere Tasche",
+   "Umschlag mit dem Gruppenfoto (in deiner Jacke, nur du kennst es)"
   ],
   "mara": [
    "ATLAS-Auszug (zeigt ihn dir, behält das Blatt)"
@@ -66,14 +86,21 @@
    "wer": "karo",
    "was": "Niemand bleibt zurück (ihre Bedingung)",
    "status": "gegeben"
+  },
+  {
+   "wer": "karo",
+   "was": "Frist: bis morgen will sie die Wahrheit hören",
+   "status": "offen (Folge 3)"
   }
  ],
  "geheimnisse": [
-  "du hast der Gruppe (außer Mara) noch nicht gesagt, dass es dir um Lea geht",
-  "Voss hat Jona heimlich ein Angebot gemacht (noch nicht gezeigt)"
+  "du hast der Gruppe (außer Mara) noch nicht gesagt, dass es dir um Lea geht (Folge 1: keine Entscheidung, du hast geschwiegen)",
+  "Voss hat Jona heimlich ein Angebot gemacht (Hinweis Folge 2: Jona dreht sein Handy um, noch nicht aufgedeckt)",
+  "nur du kennst das Foto und die Warnung „Einer von euch wurde bereits bezahlt.“"
  ],
  "gesperrt": [],
  "chronik": [
-  "Folge 1 „Acht Millionen. Eine Schwester.“ (16.11.): Mara zeigt den ATLAS-Auszug, Original im Tresor, 8 Mio. bis Freitag, Gruppe mit Jona und Karo, Karos Bedingung, Voss wartet in der leeren Bank. Entscheidung A Wahrheit / B Geheimnis. Stimme Orus, 75,6 s. Gepostet: TikTok 22:21, Instagram 22:45, YouTube 23:43."
+  "Folge 1 „Acht Millionen. Eine Schwester.“ (16.11.): Mara zeigt den ATLAS-Auszug, Original im Tresor, 8 Mio. bis Freitag, Gruppe mit Jona und Karo, Karos Bedingung, Voss wartet in der leeren Bank. Entscheidung A Wahrheit / B Geheimnis. Stimme Orus, 75,6 s. Gepostet: TikTok 22:21, Instagram 22:45, YouTube 23:43.",
+  "Folge 2 „Die erste Warnung“ (17.11.): Abstimmung Folge 1 ohne Kommentar → keine Entscheidung, du schweigst. Karo: „Bis morgen will ich die Wahrheit.“ Nachts Silhouette in der Bank, morgens Umschlag mit Gruppenfoto aus der Bank, goldene Nadel im Glas, Rückseite „Einer von euch wurde bereits bezahlt.“ Jona dreht sein Handy um. Entscheidung A Foto allen zeigen / B nur Mara. Stimme Orus, 67,2 s. Gepostet: TikTok 22:36, Instagram 22:58, YouTube 23:43."
  ]
 }

@@ -118,4 +118,6 @@ Reihenfolge als Vorschlag; die Analyse darf tauschen, aber jedes Genre kommt bis
 ## Der letzte Raub – Ihr entscheidet (ab 16.11., Issue #35)
 - **Experiment:** Mitmach-Thriller mit A/B-Abstimmung über den Top-Kommentar (Erzählform „interaktiv“), Stimme Orus, eigene Kulissen `engine/raub.js`, du immer von hinten. Zu messen: Anteil Kommentare mit A/B, Likes auf dem Top-Kommentar, Durchhalten von Folge zu Folge, Kommentare pro 1.000 Aufrufe im Vergleich zu „Bis zum Mond“ und „Deine Welt“.
 - Folge 1 (16.11.): 75,6 s, 13 Einstellungen, Entscheidung „Wahrheit sagen / Ziel für dich behalten“. Zahlen folgen im Lauf am 17.11.
+- Auswertung Folge 1 (Lauf 17.11., ca. 18 h nach dem TikTok-Post): **0 Kommentare** auf allen drei Plattformen (A 0 · B 0) → „keine Entscheidung“ nach Bibel. Beobachtung: Der Mitmach-Aufruf allein erzeugt bei Folge 1 noch keine Kommentare. Technik: Die Kommentarabfrage lief erst in die Zernio-Drosselung (HTTP 429, Hauptkonto unvollständig); `zernio.mjs --kommentare` wartet jetzt und versucht neu, zweiter Abruf vollständig (201 Posts, 0 Fehler).
+- Folge 2 (17.11.): 67,6 s, 11 Einstellungen, erzählt das Zögern (Hook „DU SCHWEIGST“ statt „Ihr habt … gewählt“), Entscheidung „Foto allen zeigen / nur Mara“.
 
