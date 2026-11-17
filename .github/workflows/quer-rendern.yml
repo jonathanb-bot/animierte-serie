@@ -1,0 +1,116 @@
+name: Querformat rendern (lange Videos)
+
+# Lange Querformat-Videos (Jonathan 17.11., Issue #37): 8–12 min in 2560×1440, 60 fps. Gerendert wird in Stücken
+# (Standard 120 s) parallel, danach wird das Bild ohne Neukodierung zusammengesetzt und die ganze Tonspur einmal
+# darübergelegt (render.mjs --nur-ton). Ablage als GitHub-Release `<folge>` (bis 2 GB pro Datei), nicht auf einem Branch.
+on:
+  workflow_dispatch:
+    inputs:
+      folge:
+        description: "Folge, z. B. quer-q01 oder quer-q01-en (Drehbuch taeglich/episoden/<folge>.txt)"
+        required: true
+      ref:
+        description: "Branch mit Drehbuch und Stimme"
+        required: false
+        default: "taeglich"
+      stueck:
+        description: "Sekunden pro Stück"
+        required: false
+        default: "120"
+
+permissions:
+  contents: write
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      liste: ${{ steps.p.outputs.liste }}
+      dauer: ${{ steps.p.outputs.dauer }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.inputs.ref }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - id: p
+        run: |
+          npm ci --ignore-scripts --no-audit --no-fund
+          d=$(node render.mjs "taeglich/episoden/${{ github.event.inputs.folge }}.txt" --nur-dauer | tail -1)
+          n=$(python3 -c "import math; print(math.ceil($d / ${{ github.event.inputs.stueck }}))")
+          echo "dauer=$d" >> "$GITHUB_OUTPUT"
+          echo "liste=$(python3 -c "import json; print(json.dumps(list(range($n))))")" >> "$GITHUB_OUTPUT"
+          echo "Dauer $d s, $n Stücke"
+
+  rendern:
+    needs: plan
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    strategy:
+      fail-fast: true
+      max-parallel: 6
+      matrix:
+        i: ${{ fromJson(needs.plan.outputs.liste) }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.inputs.ref }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Werkzeuge installieren
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+          npm ci --ignore-scripts --no-audit --no-fund
+          npx playwright install --with-deps chromium
+      - name: Stück rendern
+        run: |
+          f="taeglich/episoden/${{ github.event.inputs.folge }}.txt"
+          node taeglich/bibliothek.mjs --fuer "$f" || true
+          von=$(python3 -c "print(${{ matrix.i }} * ${{ github.event.inputs.stueck }})")
+          bis=$(python3 -c "print(min((${{ matrix.i }} + 1) * ${{ github.event.inputs.stueck }}, ${{ needs.plan.outputs.dauer }}))")
+          node render.mjs "$f" --von "$von" --bis "$bis"
+          mkdir -p stueck && mv "ausgabe/taeglich-${{ github.event.inputs.folge }}.mp4" "stueck/$(printf %03d ${{ matrix.i }}).mp4"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: stueck-${{ matrix.i }}
+          path: stueck/
+          retention-days: 3
+
+  zusammen:
+    needs: [plan, rendern]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.inputs.ref }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/download-artifact@v4
+        with:
+          path: stuecke
+          pattern: stueck-*
+          merge-multiple: true
+      - name: Zusammensetzen und Ton darüberlegen
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+          npm ci --ignore-scripts --no-audit --no-fund
+          F="${{ github.event.inputs.folge }}"
+          ls stuecke | sort | sed "s|^|file '$PWD/stuecke/|; s|$|'|" > liste.txt
+          mkdir -p ausgabe
+          ffmpeg -y -v error -f concat -safe 0 -i liste.txt -map 0:v -c:v copy -movflags +faststart "ausgabe/taeglich-$F.mp4"
+          node render.mjs "taeglich/episoden/$F.txt" --nur-ton
+          # Lautheit wie bei den Kurzvideos auf ca. −14 LUFS bringen (nur Ton, Bild unverändert)
+          ffmpeg -y -v error -i "ausgabe/taeglich-$F.mp4" -map 0 -c:v copy -af loudnorm=I=-14:TP=-1.5:LRA=11 -ar 48000 -c:a aac -b:a 192k -movflags +faststart laut.mp4 && mv laut.mp4 "ausgabe/taeglich-$F.mp4"
+          ffprobe -v error -show_entries stream=codec_type,width,height,r_frame_rate,duration -show_entries format=duration,size -of compact "ausgabe/taeglich-$F.mp4" | tee info.txt
+      - name: Als Release ablegen
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          F="${{ github.event.inputs.folge }}"
+          cp "ausgabe/taeglich-$F.mp4" "$F.mp4"
+          gh release view "$F" >/dev/null 2>&1 || gh release create "$F" --title "$F (Querformat)" --notes "Langes Querformat-Video, gerendert aus taeglich/episoden/$F.txt (Issue #37)." --target main
+          gh release upload "$F" "$F.mp4" info.txt --clobber
+          echo "https://github.com/${{ github.repository }}/releases/download/$F/$F.mp4"
