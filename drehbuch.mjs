@@ -66,6 +66,7 @@ export function parse(text, cast = {}) {
       else if (cmd === "serie") ep.serie = rest.join(" ");
       else if (cmd === "qualitaet") ep.qualitaet = rest[0]; // "hoch": verlustfreie Einzelbilder, bessere Kodierung (Kurzvideos); "max": zusätzlich 60 fps, doppelte Auflösung, Ausgabe 1440×2560
       else if (cmd === "mund") ep.mund = rest[0];
+      else if (cmd === "format") ep.format = rest[0]; // `@format quer`: Querformat 1920×1080 für lange YouTube-Videos (Jonathan 17.11., Issue #37)
       else if (cmd === "einblenden") ep.einblenden = rest[0] !== "aus", ep.einblendenGesetzt = true; // `@einblenden aus`: kein Schwarz am Anfang (Vorschaubild, 6.11.)
       else if (cmd === "sprache") ep.sprache = rest[0]; // `@sprache en`: englische Fassung (Texte im Bild wie „NO SERVICE“)
       else if (cmd === "untertitel") ep.untertitel = rest[0] !== "aus"; // `@untertitel aus`: keine Untertitel (Test ab s03, Jonathan 5.11.)

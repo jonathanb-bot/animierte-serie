@@ -5,7 +5,7 @@
   const { box, circle, ellipse, poly, line, shade, rgba, lgrad, rgrad, mix, clamp, lerp, E } = A;
   // Varianten für die Bildbibliothek: `variante=N` verschiebt alle Zufalls-Startwerte. Ohne Angabe (0) bleibt alles pixelgleich.
   const rnd = seed => A.rnd(seed + (A._kgVar || 0) * 7919);
-  const W = A.W, H = A.H, SZ = A.SZ;
+  const W = A.W, H = A.H, SZ = A.SZ, SW = A.SW, SH = A.SH; // Welt / Bildschirm (Querformat, 17.11.)
   const HIMMEL = { tag: ["#3f7fc0", "#a9d4ec"], morgen: ["#4b5d9a", "#f2b58a"], abend: ["#2a2c66", "#e9805a"], nacht: ["#060a1e", "#1d2650"] };
   const zeitVon = (s, std = "nacht") => (HIMMEL[s.zeit] ? s.zeit : std);
   const lw = (name, w, h) => { const k = "_kg_" + name; if (!A[k]) { const c = document.createElement("canvas"); c.width = w; c.height = h; A[k] = c.getContext("2d"); } return A[k]; };
@@ -23,15 +23,16 @@
     if (t < 0 || t > dauer) return;
     const ein = E.pop(clamp(t / 0.25, 0, 1)), aus = clamp((dauer - t) / 0.3, 0, 1);
     ctx.save(); ctx.setTransform(1, 0, 0, 1, 0, 0);
+    const Q = A.QUER, zeileMax = Q ? 1700 : 900, breitMax = Q ? 1800 : 960; // Querformat (17.11.): breitere Zeilen, oben mittig
     const woerter = String(s.hooktext).toUpperCase().split(/\s+/).filter(Boolean);
-    let fs = 96; ctx.font = `900 ${fs}px Titel`;
+    let fs = Q ? 92 : 96; ctx.font = `900 ${fs}px Titel`;
     const zeilen = []; let z = "";
-    for (const w of woerter) { const v = z ? z + " " + w : w; if (z && ctx.measureText(v).width > 900) { zeilen.push(z); z = w; } else z = v; }
+    for (const w of woerter) { const v = z ? z + " " + w : w; if (z && ctx.measureText(v).width > zeileMax) { zeilen.push(z); z = w; } else z = v; }
     if (z) zeilen.push(z);
     const breit = Math.max(...zeilen.map(l => ctx.measureText(l).width));
-    if (breit > 960) { fs = Math.floor(fs * 960 / breit); ctx.font = `900 ${fs}px Titel`; }
+    if (breit > breitMax) { fs = Math.floor(fs * breitMax / breit); ctx.font = `900 ${fs}px Titel`; }
     ctx.globalAlpha = aus; ctx.textAlign = "center"; ctx.textBaseline = "middle";
-    ctx.translate(W / 2, 300); ctx.scale(0.8 + 0.2 * ein, 0.8 + 0.2 * ein);
+    ctx.translate(Q ? SW / 2 : W / 2, Q ? 190 : 300); ctx.scale(0.8 + 0.2 * ein, 0.8 + 0.2 * ein);
     const lh = fs * 1.12, y0 = -(zeilen.length - 1) * lh / 2;
     ctx.shadowColor = "rgba(0,0,0,0.6)"; ctx.shadowBlur = 26; ctx.shadowOffsetY = 5;
     zeilen.forEach((l, i) => { ctx.fillStyle = "#ffffff"; ctx.fillText(l, 0, y0 + i * lh); });
@@ -42,10 +43,10 @@
   // Farbfamilien (palette=…): oben/unten, werden nur auf den Hintergrund gelegt (Figuren behalten ihre Farben)
   const PALETTEN = { lila: ["#7a5cff", "#2a1670"], orange: ["#ffb347", "#e0503a"], tuerkis: ["#58d6c8", "#2a62a8"], rosa: ["#ff8fb8", "#6e3aa8"], gruen: ["#a6dc6a", "#2c7a5c"], blau: ["#6fb6ff", "#1e2f8a"] };
   const leuchten = s => {
-    const c = lw("leuchten", W, H), f = lw("leuchtenFig", W, H);
-    c.setTransform(1, 0, 0, 1, 0, 0); c.filter = "none"; c.globalCompositeOperation = "source-over"; c.clearRect(0, 0, W, H); c.drawImage(A.cv, 0, 0);
+    const c = lw("leuchten", SW, SH), f = lw("leuchtenFig", SW, SH);
+    c.setTransform(1, 0, 0, 1, 0, 0); c.filter = "none"; c.globalCompositeOperation = "source-over"; c.clearRect(0, 0, SW, SH); c.drawImage(A.cv, 0, 0);
     // Figuren (Maske) scharf merken
-    f.setTransform(1, 0, 0, 1, 0, 0); f.globalCompositeOperation = "source-over"; f.clearRect(0, 0, W, H); f.drawImage(A.cv, 0, 0);
+    f.setTransform(1, 0, 0, 1, 0, 0); f.globalCompositeOperation = "source-over"; f.clearRect(0, 0, SW, SH); f.drawImage(A.cv, 0, 0);
     f.globalCompositeOperation = "destination-in"; f.drawImage(A.maske, 0, 0); f.globalCompositeOperation = "source-over";
     ctx.save(); ctx.setTransform(1, 0, 0, 1, 0, 0);
     // Tiefe: Hintergrund leicht weich (nicht bei Nahaufnahmen, die sind schon unscharf; tiefe=0 schaltet ab)
@@ -54,9 +55,9 @@
     // Farbfamilie auf den Hintergrund
     const pal = PALETTEN[s.palette];
     if (pal) {
-      const t = lw("leuchtenTon", W, H);
-      t.setTransform(1, 0, 0, 1, 0, 0); t.globalCompositeOperation = "source-over"; t.fillStyle = lgrad.call ? (() => { const g = t.createLinearGradient(0, 0, 0, H); g.addColorStop(0, pal[0]); g.addColorStop(1, pal[1]); return g; })() : pal[0];
-      t.fillRect(0, 0, W, H); t.globalCompositeOperation = "destination-out"; t.drawImage(A.maske, 0, 0); t.globalCompositeOperation = "source-over";
+      const t = lw("leuchtenTon", SW, SH);
+      t.setTransform(1, 0, 0, 1, 0, 0); t.globalCompositeOperation = "source-over"; t.fillStyle = lgrad.call ? (() => { const g = t.createLinearGradient(0, 0, 0, SH); g.addColorStop(0, pal[0]); g.addColorStop(1, pal[1]); return g; })() : pal[0];
+      t.fillRect(0, 0, SW, SH); t.globalCompositeOperation = "destination-out"; t.drawImage(A.maske, 0, 0); t.globalCompositeOperation = "source-over";
       ctx.globalCompositeOperation = "color"; ctx.globalAlpha = s.palette_staerke ?? 0.45; ctx.drawImage(t.canvas, 0, 0);
       ctx.globalCompositeOperation = "soft-light"; ctx.globalAlpha = 0.25; ctx.drawImage(t.canvas, 0, 0);
       ctx.globalCompositeOperation = "source-over"; ctx.globalAlpha = 1;
@@ -69,11 +70,11 @@
     if (s.stil === "leuchtend") leuchten(s);
     const k = Number(s.kino) || 0;
     if (k <= 0) { if (s.hooktext) hookText(s, T); return; }
-    const w4 = W / 4, h4 = H / 4, a = lw("klein", w4, h4), b = lw("glow", w4, h4);
+    const w4 = SW / 4, h4 = SH / 4, a = lw("klein", w4, h4), b = lw("glow", w4, h4);
     a.setTransform(1, 0, 0, 1, 0, 0); a.filter = "none"; a.clearRect(0, 0, w4, h4); a.drawImage(A.cv, 0, 0, w4, h4);
     b.setTransform(1, 0, 0, 1, 0, 0); b.clearRect(0, 0, w4, h4); b.filter = "brightness(0.56) contrast(6) saturate(1.4) blur(7px)"; // nur echte Lichter glühen, helle Wände nicht (sonst milchig) b.drawImage(a.canvas, 0, 0); b.filter = "none";
     ctx.save(); ctx.setTransform(1, 0, 0, 1, 0, 0);
-    ctx.globalCompositeOperation = "screen"; ctx.globalAlpha = clamp(0.6 * k, 0, 0.9); ctx.drawImage(b.canvas, 0, 0, W, H);
+    ctx.globalCompositeOperation = "screen"; ctx.globalAlpha = clamp(0.6 * k, 0, 0.9); ctx.drawImage(b.canvas, 0, 0, SW, SH);
     // Körnung: Rauschkachel, pro Bild versetzt (aus der Zeit abgeleitet, also reproduzierbar)
     if (!A._kg_rausch) {
       const c = document.createElement("canvas"); c.width = c.height = 256; const g = c.getContext("2d"), d = g.createImageData(256, 256), r = rnd(77);
@@ -84,7 +85,7 @@
     // Neu-Komprimieren von TikTok/Instagram/YouTube zu Matsch werden (gemessen 1.11.: 7,6 statt 2,9 Mbit/s)
     const ox = 0, oy = 0;
     ctx.globalCompositeOperation = "overlay"; ctx.globalAlpha = clamp(0.1 * k, 0, 0.2);
-    ctx.translate(-ox, -oy); ctx.fillStyle = A._kg_rausch; ctx.fillRect(0, 0, W + 256, H + 256);
+    ctx.translate(-ox, -oy); ctx.fillStyle = A._kg_rausch; ctx.fillRect(0, 0, SW + 256, SH + 256);
     ctx.restore();
     if (s.hooktext) hookText(s, T);
   };

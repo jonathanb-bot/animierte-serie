@@ -462,12 +462,12 @@
   // Hintergrund einer anderen Kulisse, unscharf (für Nahaufnahmen, Handy, Lichtbild)
   A.unscharf = (ort, s, t, blur = 12, hell = 1) => {
     const n = A.lichter.length, d = A._dunkel;
-    if (!A._ub) { A._ub = document.createElement("canvas"); A._ub.width = W; A._ub.height = H; A._ubc = A._ub.getContext("2d"); }
-    const m = ctx.getTransform(); A._ubc.setTransform(1, 0, 0, 1, 0, 0); A._ubc.clearRect(0, 0, W, H); A._ubc.setTransform(m);
+    if (!A._ub) { A._ub = document.createElement("canvas"); A._ub.width = A.SW; A._ub.height = A.SH; A._ubc = A._ub.getContext("2d"); } // Bildschirmgröße (Querformat 17.11.)
+    const m = ctx.getTransform(); A._ubc.setTransform(1, 0, 0, 1, 0, 0); A._ubc.clearRect(0, 0, A.SW, A.SH); A._ubc.setTransform(m);
     const bg = { ...s, typ: ort, figuren: [], figur: null, objekt: null, inhalt: null, nox: null, oben: null, gegenueber: null, zebra: null };
     A.umleiten(A._ubc, () => (SZ[ort] || SZ.wohnung)(bg, t, 0.5));
     const dn = A._dunkel; A.lichter.length = n; A._dunkel = d;
-    ctx.save(); ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.filter = `blur(${blur}px) brightness(${hell})`; ctx.drawImage(A._ub, -20, -20, W + 40, H + 40); ctx.restore();
+    ctx.save(); ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.filter = `blur(${blur}px) brightness(${hell})`; ctx.drawImage(A._ub, -20, -20, A.SW + 40, A.SH + 40); ctx.restore();
     return dn;
   };
 

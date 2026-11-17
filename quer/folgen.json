@@ -1,0 +1,11 @@
+{
+ "_info": "Querformat-Serie (Jonathan 17.11., Issue #37). Pro Folge: id, titel/beschreibung/tags (deutsch) und en{titel,beschreibung,tags}. Reihenfolge = Produktionsreihenfolge, Vorlage-Muster aus quer/vorlagen.md.",
+ "folgen": [
+  {"id": "q01", "arbeitstitel": "Du wachst auf und bist der LETZTE Mensch in deiner Stadt", "muster": "Du-Prämisse letzter Mensch (Strich Erklärt 138-fach, Team Laki 134 Tsd.)", "kapitel": "Minute 0 · Stunde 1 · Stunde 6 · Tag 2 · Tag 5 · Tag 9 · Tag 14"},
+  {"id": "q02", "arbeitstitel": "72 Stunden im Hochhaus eingeschlossen (Stunde für Stunde)", "muster": "Ich/Du-Überleben + Zeitgerüst (Infographics „Trapped Underwater“)"},
+  {"id": "q03", "arbeitstitel": "Du wachst nachts allein im Wald auf – würdest du bis zum Morgen überleben?", "muster": "Du wachst … auf – würdest du überleben? (Leicht Erklärt 151-fach)"},
+  {"id": "q04", "arbeitstitel": "Was wäre, wenn du deinen Opa mit 17 treffen könntest?", "muster": "Was wäre, wenn du … + Familie"},
+  {"id": "q05", "arbeitstitel": "Du wachst 1000 Jahre in der Zukunft auf", "muster": "Was wäre, wenn du … (Vergessene Welten 11-fach, 20.000 Jahre)"},
+  {"id": "q06", "arbeitstitel": "Dein Handy zeigt, wie viele Abende du noch mit deinen Eltern hast (Minute für Minute)", "muster": "Lebenszeit, stärkster TikTok-Start (video-001) + Zeitgerüst"}
+ ]
+}

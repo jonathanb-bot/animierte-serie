@@ -583,12 +583,12 @@
   // =====================================================================
   SZ.gesicht = (s, t) => {
     const ort = s.ort || "wohnung";
-    if (!A._off) { A._off = document.createElement("canvas"); A._off.width = W; A._off.height = H; A._offctx = A._off.getContext("2d"); }
+    if (!A._off) { A._off = document.createElement("canvas"); A._off.width = A.SW; A._off.height = A.SH; A._offctx = A._off.getContext("2d"); } // Bildschirmgröße (Querformat 17.11.)
     const oc = A._offctx, m = ctx.getTransform();
-    oc.setTransform(1, 0, 0, 1, 0, 0); oc.clearRect(0, 0, W, H); oc.setTransform(m);
+    oc.setTransform(1, 0, 0, 1, 0, 0); oc.clearRect(0, 0, A.SW, A.SH); oc.setTransform(m);
     const bg = { ...s, figuren: [], figur: null, objekt: null, horde: 3, laerm_x: null, zombies: s.zombies, klopfen: false };
     A.umleiten(oc, () => (SZ[ort] || SZ.wohnung)(bg, t, 0.5));
-    ctx.save(); ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.filter = "blur(12px)"; ctx.drawImage(A._off, -20, -20, W + 40, H + 40); ctx.restore();
+    ctx.save(); ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.filter = "blur(12px)"; ctx.drawImage(A._off, -20, -20, A.SW + 40, A.SH + 40); ctx.restore();
     ctx.fillStyle = "rgba(8,10,26,0.28)"; ctx.fillRect(-2000, -2000, 5000, 6000);
     const f = A.fig(s.figur);
     const bob = Math.sin(t * 1.5) * 7;

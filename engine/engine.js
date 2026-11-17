@@ -2,7 +2,7 @@
 (() => {
   const { box, circle, rgba, clamp, lerp, E, rr, fill } = A;
   let D = null;
-  const W = A.W, H = A.H;
+  const W = A.W, H = A.H, SW = A.SW, SH = A.SH, QZ = A.QUER ? (window.QUER_ZOOM || 0.6) : 1; // Welt / Bildschirm / Querformat-Zoom
 
   A.fig = name => {
     if (!name) return A.STANDARD;
@@ -23,8 +23,9 @@
     if (wack) { wx = (Math.sin(t * 53) + Math.sin(t * 31)) * 5 * wack; wy = (Math.cos(t * 47) + Math.sin(t * 29)) * 5 * wack; }
     // leichtes "Handkamera"-Schweben für Lebendigkeit
     wx += Math.sin(t * 0.7) * 3; wy += Math.cos(t * 0.53) * 3;
-    ctx.translate(W / 2 + wx, H / 2 + wy); ctx.scale(z, z); ctx.translate(-x, -y);
-    A.sicht = { x0: x - W / 2 / z, x1: x + W / 2 / z, y0: y - H / 2 / z, y1: y + H / 2 / z };
+    if (QZ !== 1) z *= QZ;
+    ctx.translate(SW / 2 + wx, SH / 2 + wy); ctx.scale(z, z); ctx.translate(-x, -y);
+    A.sicht = { x0: x - SW / 2 / z, x1: x + SW / 2 / z, y0: y - SH / 2 / z, y1: y + SH / 2 / z };
   }
 
   // ---------- HUD ----------
@@ -84,7 +85,7 @@
     const leer = fs * 0.4;
     const breiten = g.woerter.map(w => ctx.measureText(w.w.toUpperCase()).width * sx);
     const gesamt = breiten.reduce((a, b) => a + b, 0) + leer * (g.woerter.length - 1);
-    const y = s.untertitel_y || D.untertitel_y || 1380;
+    const y = s.untertitel_y || D.untertitel_y || (A.QUER ? 1760 : 1380); // Querformat: tiefer, nicht über den Figuren
     const pop = E.pop(clamp((t - g.start) / 0.16, 0, 1));
     ctx.translate(W / 2, y); ctx.scale(0.88 + 0.12 * pop, 0.88 + 0.12 * pop);
     box(-gesamt / 2 - 34, -fs * 0.72, gesamt + 68, fs * 1.44, fs * 0.36, "rgba(10,12,30,0.5)");
@@ -167,8 +168,8 @@
   // leicht indigo, kräftige Farben (Lampenlicht, Haut, Akzente) bleiben warm und klar. Pro Bildpunkt.
   function farblook(st = 1) {
     if (st <= 0) return;
-    const bild = ctx.getImageData(0, 0, W, H), d = bild.data;
-    const mk = A.mctx.getImageData(0, 0, W, H).data;
+    const bild = ctx.getImageData(0, 0, SW, SH), d = bild.data;
+    const mk = A.mctx.getImageData(0, 0, SW, SH).data;
     const tr = 26, tg = 30, tb = 64; // Ziel-Indigo für neutrale Töne
     for (let i = 0; i < d.length; i += 4) {
       const r = d[i], g = d[i + 1], b = d[i + 2];
@@ -187,13 +188,13 @@
   }
 
   function vignette(st) {
-    ctx.fillStyle = A.rgrad(W / 2, H / 2, H * 0.28, H * 0.78, [[0, "rgba(0,0,0,0)"], [1, `rgba(0,0,0,${st})`]]);
-    ctx.fillRect(0, 0, W, H);
+    ctx.fillStyle = A.rgrad(SW / 2, SH / 2, SH * 0.28, SH * 0.78, [[0, "rgba(0,0,0,0)"], [1, `rgba(0,0,0,${st})`]]);
+    ctx.fillRect(0, 0, SW, SH);
   }
 
   // ---------- API ----------
   window.init = daten => {
-    D = daten; A.cv.width = W; A.cv.height = H; A.sprache = D.sprache || "de";
+    D = daten; A.cv.width = SW; A.cv.height = SH; A.sprache = D.sprache || "de";
     for (const s of D.szenen) {
       s._gruppen = []; let cur = [];
       const push = () => { if (cur.length) s._gruppen.push({ woerter: cur, start: cur[0].start, ende: cur[cur.length - 1].ende }); cur = []; };
@@ -217,40 +218,42 @@
     const t = T - s.start, p = clamp(t / s.dauer, 0, 1);
     s._spricht = (s.woerter || []).some(w => t >= w.start && t < w.ende && (D.mund !== "zitate" || w.zitat));
     ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.filter = "none"; ctx.globalAlpha = 1; ctx.globalCompositeOperation = "source-over";
-    ctx.fillStyle = "#000"; ctx.fillRect(0, 0, W, H);
+    ctx.fillStyle = "#000"; ctx.fillRect(0, 0, SW, SH);
     A.lichter = []; A._dunkel = 0;
-    A.mctx.setTransform(1, 0, 0, 1, 0, 0); A.mctx.clearRect(0, 0, W, H);
+    A.mctx.setTransform(1, 0, 0, 1, 0, 0); A.mctx.clearRect(0, 0, SW, SH);
     ctx.save();
     kamera(s, p, t);
     (A.SZ[s.typ] || A.SZ.titel)(s, t, p);
     ctx.restore();
     A.dunkel(s.dunkel ?? A._dunkel);
     if (s.partikel) partikel(s.partikel, T, s.partikel_staerke || 1);
-    if (s.tint) { ctx.fillStyle = s.tint; ctx.globalAlpha = s.tint_staerke || 0.3; ctx.fillRect(0, 0, W, H); ctx.globalAlpha = 1; }
-    if (s.alarm) { ctx.fillStyle = `rgba(255,30,20,${0.1 + 0.1 * Math.sin(T * 6)})`; ctx.fillRect(0, 0, W, H); }
+    if (s.tint) { ctx.fillStyle = s.tint; ctx.globalAlpha = s.tint_staerke || 0.3; ctx.fillRect(0, 0, SW, SH); ctx.globalAlpha = 1; }
+    if (s.alarm) { ctx.fillStyle = `rgba(255,30,20,${0.1 + 0.1 * Math.sin(T * 6)})`; ctx.fillRect(0, 0, SW, SH); }
     farblook(s.typ === "titel" ? 0 : s.look ?? 1);
     vignette(s.vignette ?? 0.5);
     if (A.nachbearbeitung) A.nachbearbeitung(s, T); // Kino-Look (alltag.js), nur mit @kino
+    if (A.QUER) { ctx.save(); A.ovBasis(); } // Einblendungen im Querformat: mittige Spalte, gleich groß wie auf dem Handy
     hud(s.hud);
     if (A.weltOverlay && (s.spielstand || s.kommentar)) A.weltOverlay(s, t); // „Deine Welt“ (12.11.): Spielstand + Kommentar, sonst nichts
     einblendungen(s, t);
     untertitel(s, t);
-    if (s.blitz && t < 0.3) { ctx.fillStyle = `rgba(255,255,255,${1 - t / 0.3})`; ctx.fillRect(0, 0, W, H); }
+    if (A.QUER) ctx.restore();
+    if (s.blitz && t < 0.3) { ctx.fillStyle = `rgba(255,255,255,${1 - t / 0.3})`; ctx.fillRect(0, 0, SW, SH); }
     // Blenden
     const b = Math.max(D.einblenden === false ? 0 : clamp(1 - T / 0.5, 0, 1), // `@einblenden aus`: erstes Bild sofort sichtbar (Vorschau, Jonathan 6.11.)
        clamp((T - (D.dauer - 0.8)) / 0.8, 0, 1), s.uebergang === "blende" ? clamp(1 - t / 0.35, 0, 1) : 0);
-    if (b > 0) { ctx.fillStyle = `rgba(0,0,0,${b})`; ctx.fillRect(0, 0, W, H); }
+    if (b > 0) { ctx.fillStyle = `rgba(0,0,0,${b})`; ctx.fillRect(0, 0, SW, SH); }
   };
 
   function partikel(art, t, staerke = 1) {
     const r = A.rnd(art === "staub" ? 11 : art === "asche" ? 23 : 37);
     const n = Math.round((art === "staub" ? 40 : 80) * staerke);
     for (let i = 0; i < n; i++) {
-      const x0 = r() * W, y0 = r() * H, sp = 0.4 + r(), gr = 2 + r() * 4;
+      const x0 = r() * SW, y0 = r() * SH, sp = 0.4 + r(), gr = 2 + r() * 4;
       let x, y, c;
-      if (art === "staub") { x = (x0 + Math.sin(t * 0.5 * sp + i) * 40 + t * 12 * sp) % W; y = (y0 + Math.cos(t * 0.4 * sp + i) * 30 - t * 8 * sp + H * 10) % H; c = `rgba(255,250,235,${0.1 + 0.2 * r()})`; }
-      else if (art === "asche") { x = (x0 + Math.sin(t * sp + i) * 30 + W) % W; y = (y0 + t * 60 * sp) % H; c = `rgba(90,90,95,${0.35 + 0.35 * r()})`; }
-      else { x = (x0 + Math.sin(t * sp + i) * 35 + W) % W; y = (y0 + t * 110 * sp) % H; c = `rgba(255,255,255,${0.5 + 0.4 * r()})`; }
+      if (art === "staub") { x = (x0 + Math.sin(t * 0.5 * sp + i) * 40 + t * 12 * sp) % SW; y = (y0 + Math.cos(t * 0.4 * sp + i) * 30 - t * 8 * sp + SH * 10) % SH; c = `rgba(255,250,235,${0.1 + 0.2 * r()})`; }
+      else if (art === "asche") { x = (x0 + Math.sin(t * sp + i) * 30 + W) % SW; y = (y0 + t * 60 * sp) % SH; c = `rgba(90,90,95,${0.35 + 0.35 * r()})`; }
+      else { x = (x0 + Math.sin(t * sp + i) * 35 + W) % SW; y = (y0 + t * 110 * sp) % SH; c = `rgba(255,255,255,${0.5 + 0.4 * r()})`; }
       circle(x, y, gr, c);
     }
   }

@@ -2,14 +2,19 @@
 const A = (window.A = {});
 A.cv = document.getElementById("c");
 A.ctx = A.cv.getContext("2d");
-A.W = 1080; A.H = 1920;
+A.W = 1080; A.H = 1920; // Welt-Koordinaten (alle Kulissen)
+// Bildschirm: Hochkant wie die Welt, mit `@format quer` 1920×1080 (Jonathan 17.11., Issue #37). A.OV skaliert die
+// Einblendungen (Hook-Text, Etiketten, Untertitel) so, dass sie im Verhältnis zur Bildhöhe gleich groß bleiben.
+A.QUER = !!window.QUER; A.SW = A.QUER ? 1920 : A.W; A.SH = A.QUER ? 1080 : A.H; A.OV = A.QUER ? A.SH / A.H : 1;
 let ctx = A.ctx;
 // Zeichnen in eine andere Leinwand umleiten (z.B. für unscharfen Hintergrund)
 A.umleiten = (c2, fn) => { const alt = ctx; ctx = c2; try { fn(); } finally { ctx = alt; } };
 // Maske der Figuren: der Farblook dunkelt dort kaum ab, damit Figuren warm vor dem dunklen Hintergrund stehen
-A.maske = document.createElement("canvas"); A.maske.width = A.W; A.maske.height = A.H;
+A.maske = document.createElement("canvas"); A.maske.width = A.SW; A.maske.height = A.SH;
 A.mctx = A.maske.getContext("2d", { willReadFrequently: true });
 A.inMaske = false;
+// Grundlage für Einblendungen: im Querformat eine mittige Spalte mit Hochkant-Koordinaten, sonst unverändert
+A.ovBasis = (c = ctx) => A.QUER ? c.setTransform(A.OV, 0, 0, A.OV, (A.SW - A.W * A.OV) / 2, 0) : c.setTransform(1, 0, 0, 1, 0, 0);
 A.maskeZeichnen = fn => {
   if (A.inMaske || ctx !== A.ctx) return; // nicht doppelt und nicht in Hilfsleinwände (z. B. unscharfer Hintergrund)
   A.inMaske = true; A.mctx.setTransform(ctx.getTransform());
@@ -86,7 +91,7 @@ A.dunkel = (staerke, farbe = "#1a2350") => {
   ctx.save(); ctx.setTransform(1, 0, 0, 1, 0, 0);
   ctx.globalCompositeOperation = "multiply";
   ctx.fillStyle = A.mix("#ffffff", farbe, staerke);
-  ctx.fillRect(0, 0, A.W, A.H);
+  ctx.fillRect(0, 0, A.SW, A.SH);
   ctx.globalCompositeOperation = "screen";
   for (const l of A.lichter) {
     ctx.fillStyle = A.rgrad(l.x, l.y, 0, l.r, [[0, A.rgba(l.farbe, 0.8 * l.st * staerke)], [0.3, A.rgba(l.farbe, 0.35 * l.st * staerke)], [1, A.rgba(l.farbe, 0)]]);

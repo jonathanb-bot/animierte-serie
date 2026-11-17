@@ -29,9 +29,10 @@ const vorschau = flag("vorschau");
 // Gemessen 3.11. (4 Kerne): 1080p30 ca. 0,2 s pro Bild, max ca. 0,29 s pro Bild → 70-s-Folge ca. 20 min.
 const QMAX = !vorschau && (flag("ultra") || ep.qualitaet === "max");
 const FPS = Number(opt("fps", vorschau ? 15 : ep.fps || (QMAX ? 60 : 30)));
-const AUS = QMAX ? [1440, 2560] : null;
-const SS = QMAX ? Number(opt("ss", AUS[0] / 1080)) : 1;
-const W = 1080, H = 1920;
+const QUER = ep.format === "quer"; // `@format quer` (Jonathan 17.11., Issue #37): Bildschirm 1920×1080, die Welt bleibt 1080×1920
+const AUS = QMAX ? (QUER ? [2560, 1440] : [1440, 2560]) : null;
+const W = QUER ? 1920 : 1080, H = QUER ? 1080 : 1920;
+const SS = QMAX ? Number(opt("ss", AUS[0] / W)) : 1;
 
 const dauerVon = f => Number(execFileSync("ffprobe", ["-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", f]).toString().trim());
 // Echte Wortzeiten (audio/folge-XX/NNN.json, z. B. von `python -m ton.folge`) den Drehbuch-Wörtern zuordnen
@@ -100,6 +101,7 @@ if (szenen.some(s => s.typ === "bild")) {
   }
 }
 const von = Number(opt("von", 0)), bis = Math.min(Number(opt("bis", gesamt)), gesamt);
+if (flag("nur-dauer")) { console.log(gesamt.toFixed(3)); process.exit(0); } // für das Rendern in Stücken (Querformat, 17.11.)
 const frames = Math.round((bis - von) * FPS);
 console.log(`Folge ${id}: ${szenen.length} Szenen, ${gesamt.toFixed(1)} s, rendere ${frames} Frames @ ${FPS} fps`);
 
@@ -153,6 +155,7 @@ if (flag("bilder")) {
   const dir = path.join(ROOT, "ausgabe", `${name}-bilder`); fs.mkdirSync(dir, { recursive: true });
   const browser = await chromium.launch(process.env.CHROMIUM ? { executablePath: process.env.CHROMIUM, args: ["--headless=new", "--no-sandbox"] } : {}); // CHROMIUM=/opt/pw-browsers/chromium in Claude-Sitzungen
   const page = await browser.newPage({ viewport: { width: W, height: H } });
+  if (QUER) await page.addInitScript(`window.QUER = true;${opt("quer_zoom", null) ? ` window.QUER_ZOOM = ${Number(opt("quer_zoom", 0.6))};` : ""}`);
   if (SS !== 1) { await page.addInitScript(`window.SS = ${SS};`); await page.addInitScript({ path: path.join(ROOT, "engine", "ss.js") }); }
   await page.goto("file://" + path.join(ROOT, "engine", "index.html"));
   await page.evaluate(async () => { await document.fonts.load("900 80px Titel"); await document.fonts.load("700 40px HUD"); });
@@ -233,12 +236,14 @@ const ff = spawn("ffmpeg", ["-y", "-v", "error",
   ...(hq ? ["-tune", "animation", "-profile:v", "high", "-x264-params", "aq-mode=3"] : []),
   ...(vorschau ? ["-vf", "scale=540:960"] : []),
   // max: Ausgabe 1440×2560 (bei --ss 2 mit Lanczos verkleinert); Datenrate so gedeckelt, dass die Datei unter 95 MB bleibt (GitHub-Grenze)
-  ...(AUS ? [...(Math.round(W * SS) !== AUS[0] ? ["-vf", `scale=${AUS[0]}:${AUS[1]}:flags=lanczos`] : []), "-maxrate", `${Math.round(Math.min(16000, 95 * 8000 / Math.max(bis - von, 1) - 220))}k`,
-    "-bufsize", `${Math.round(2 * Math.min(16000, 95 * 8000 / Math.max(bis - von, 1) - 220))}k`] : []),
+  // Querformat (lange Videos, 17.11.): Ablage als GitHub-Release statt Branch, deshalb feste 12 Mbit/s statt der 95-MB-Grenze
+  ...(AUS ? [...(Math.round(W * SS) !== AUS[0] ? ["-vf", `scale=${AUS[0]}:${AUS[1]}:flags=lanczos`] : []), "-maxrate", `${QUER ? 12000 : Math.round(Math.min(16000, 95 * 8000 / Math.max(bis - von, 1) - 220))}k`,
+    "-bufsize", `${QUER ? 24000 : Math.round(2 * Math.min(16000, 95 * 8000 / Math.max(bis - von, 1) - 220))}k`] : []),
   "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", ziel], { stdio: ["pipe", "inherit", "inherit"] });
 
 const browser = await chromium.launch(process.env.CHROMIUM ? { executablePath: process.env.CHROMIUM, args: ["--headless=new", "--no-sandbox"] } : {}); // CHROMIUM=/opt/pw-browsers/chromium in Claude-Sitzungen
 const page = await browser.newPage({ viewport: { width: W, height: H } });
+if (QUER) await page.addInitScript(`window.QUER = true;${opt("quer_zoom", null) ? ` window.QUER_ZOOM = ${Number(opt("quer_zoom", 0.6))};` : ""}`);
 if (SS !== 1) { await page.addInitScript(`window.SS = ${SS};`); await page.addInitScript({ path: path.join(ROOT, "engine", "ss.js") }); }
 await page.goto("file://" + path.join(ROOT, "engine", "index.html"));
 await page.evaluate(async () => { await document.fonts.load("900 80px Titel"); await document.fonts.load("700 40px HUD"); });
