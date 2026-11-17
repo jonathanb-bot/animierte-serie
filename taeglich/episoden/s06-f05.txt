@@ -52,7 +52,7 @@
 // Ring-Gang, alle Türen
 [wohnring grau=1,2 palette=lila schwenk-rechts] Du gehst den Ring zurück. Vorbei an jeder Tür, hinter der jemand wohnt.
 // Eure Wohnungstür
-[wohnring ansicht=zimmer farbe=#e8685a tisch kratzer palette=rosa zoom-rein ein="Tür>EURE WOHNUNG" ein_y=420] Vor eurer roten Tür bleibst du stehen.
+[wohnring ansicht=zimmer farbe=#e8685a tisch kratzer palette=rosa zoom-rein ein="Tür>EURE WOHNUNG" ein_y=420] Vor eurer roten Tür bleibst du stehen. Drinnen brennt noch Licht.
 
 == Cliffhanger ==
 // Mama schiebt den Freigabeplan hin
