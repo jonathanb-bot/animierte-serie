@@ -41,13 +41,13 @@
 // Tisch durch die Tür
 [wohnring grau=1,2,3 du mama palette=orange schwenk-rechts ein="push>THE TABLE STAYS" ein_y=420 ton=moebel_ruecken] The three of you push it along the ring. The legs scrape across the floor.
 // Wow-Bild: Kuppel mit Tisch und Nischen
-[wohnring ansicht=kuppel tisch nischen lichter pflanzen palette=orange zoom-raus ein="sleeping>#31 SLEEPING NOOKS" ein_y=420] In the dome, you hang fabric panels. Thirty-one sleeping nooks around one table.
+[wohnring ansicht=kuppel tisch nischen lichter pflanzen palette=orange zoom-raus ein="sleeping>#31 SLEEPING NOOKS" ein_y=420] In the dome, you put up fabric panels. Thirty-one sleeping nooks around one table.
 
 == Wendung ==
 // Regeln mit den Nachbarn
 [objekt objekte="herz:One nook|uhr:Quiet after 10|schluessel:Table for all" gross="YOUR RULES" palette=orange zoom-rein] With the neighbors, you set the rules. One nook per person. Quiet after ten. The table belongs to everyone.
 // Bo zeichnet unter dem Tisch
-[wohnring ansicht=kuppel tisch nischen s06_bo palette=orange zoom-rein ein="room>BO DRAWS HIS ROOM" ein_y=420 ton=papier] Bo crawls under the table and draws his yellow room. From memory.
+[wohnring ansicht=kuppel tisch nischen s06_bo palette=orange zoom-rein ein="room>BO DRAWS HIS ROOM" ein_y=420 ton=papier] Bo crawls under the table. He draws his yellow room from memory.
 // Mama legt den Arm um dich
 [wohnring ansicht=kuppel tisch nischen du mama palette=orange schwenk-links] Your mom puts her arm around you. Neither of you says a word.
 

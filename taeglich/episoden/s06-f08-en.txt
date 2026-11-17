@@ -31,7 +31,7 @@
 // Mama schaut nicht weg
 [gesicht mama ort=wohnring grau=1,2,3 traurig palette=lila] Your mom doesn't look away. She quietly counts along.
 // Bo hält das Band
-[gesicht s06_bo ort=wohnring grau=1,2,3 entschlossen palette=lila] Bo holds his tape in both hands.
+[gesicht s06_bo ort=wohnring grau=1,2,3 entschlossen palette=lila] Your brother Bo holds his tape in both hands.
 // Ihr drei im Gang
 [wohnring grau=1,2,3,4 du mama s06_bo palette=lila schwenk-rechts] The three of you stand side by side. Nobody speaks until the last tile is gone.
 
@@ -51,7 +51,7 @@
 // Ren vor seiner Tür
 [wohnring grau=1,2,3,4 warn=10 s06_ren palette=lila zoom-rein ton=schritte] Now he's standing at his own door. His hand on the handle.
 // Ren, Figurenstimme
-[gesicht s06_ren ort=wohnring warn=10 wuetend figurstimme=mann_alt sprecher=s06_ren palette=lila] "Not mine. Not yet."
+[gesicht s06_ren ort=wohnring warn=10 wuetend figurstimme=mann_alt sprecher=s06_ren palette=lila] "Not my room. Not yet."
 // Leitungen klopfen
 [wohnring grau=1,2,3,4 warn=10 alarm palette=lila zoom-rein ein="knocking>PIPES KNOCKING" ein_y=420 ton=haemmern] Something starts knocking in the pipes. Soft at first, then like a fist.
 
