@@ -1,0 +1,243 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face { font-family: "Titel"; src: url("assets/InterDisplay-Black.otf"); font-weight: 900; }
+@font-face { font-family: "UI"; src: url("assets/Inter-Bold.otf"); font-weight: 700; }
+html,body{margin:0;background:#000}canvas{display:block}
+</style></head><body>
+<canvas id="c"></canvas>
+<script>
+// „Lieber Gott“ (AK Ausserkontrolle) – Edit im 3:4-Format: Hook, zwei Insta-Clips pro Zeile, Himmel und Hölle, Lyrics in Handy-Karten, Wörter auf dem 16tel-Raster.
+const W = 1080, H = 1440, K = 1440 / 1080; // 3:4 (1440×1920)
+const cv = document.getElementById("c"); cv.width = W * K; cv.height = H * K; let ctx = cv.getContext("2d"); const HAUPT = ctx;
+const PUF = [0, 1].map(() => { const c = document.createElement("canvas"); c.width = W * K; c.height = H * K; return c; });
+let ZL = null; const IMG = {}; const KORN = [];
+const lade = src => new Promise(r => { const i = new Image(); i.onload = () => r(i); i.onerror = () => { console.error("fehlt " + src); r(null); }; i.src = src; });
+const clamp = (v, a, b) => Math.max(a, Math.min(b, v)), lerp = (a, b, t) => a + (b - a) * t;
+const raus = p => 1 - Math.pow(1 - clamp(p, 0, 1), 3), weich = p => { p = clamp(p, 0, 1); return p * p * (3 - 2 * p); };
+const zurueck = p => { p = clamp(p, 0, 1); const c1 = 1.4, c3 = c1 + 1; return 1 + c3 * Math.pow(p - 1, 3) + c1 * Math.pow(p - 1, 2); };
+const rr = (x, y, w, h, r) => { ctx.beginPath(); ctx.roundRect(x, y, w, h, r); };
+// Text bis zur aktuellen Songzeit „tippen“: Wörter erscheinen mit ihrem Einsatz, Buchstaben laufen innerhalb des Worts mit
+function getippt(T, woerter, ab = 0) {
+  let s = ""; for (const w of woerter.slice(ab)) { if (T < w.a - 0.03) break; const n = Math.max(1, Math.round(clamp((T - w.a + 0.03) / 0.07, 0, 1) * w.w.length)); s += (s ? " " : "") + w.w.slice(0, n); }
+  return s;
+}
+function umbruch(text, maxB) { const z = []; let r = ""; for (const w of text.split(" ")) { const t = r ? r + " " + w : w; if (ctx.measureText(t).width > maxB && r) { z.push(r); r = w; } else r = t; } if (r) z.push(r); return z; }
+// schwebende Karte mit 3D-Anmutung (Drehung um Y über Breite + Scherung), weicher Schatten, Bewegungsunschärfe aus Geschwindigkeit
+function karte(o, inhalt) {
+  const { x, y, w, h, r = 46, rotY = 0, rotZ = 0, sk = 0, alpha = 1, schatten = 0.28, vx = 0, vy = 0, hell = true } = o;
+  const zeichne = (dx, dy, a) => {
+    ctx.save(); ctx.globalAlpha = a; ctx.translate(x + dx, y + dy); ctx.rotate(rotZ); ctx.transform(Math.cos(rotY), Math.sin(rotY) * 0.18 + sk, 0, 1, 0, 0);
+    ctx.shadowColor = `rgba(0,0,0,${schatten})`; ctx.shadowBlur = 70; ctx.shadowOffsetY = 34; rr(-w / 2, -h / 2, w, h, r); ctx.fillStyle = hell ? "#ffffff" : "#1c1c1e"; ctx.fill(); ctx.shadowColor = "transparent";
+    ctx.save(); rr(-w / 2, -h / 2, w, h, r); ctx.clip(); inhalt(-w / 2, -h / 2, w, h); ctx.restore(); ctx.restore(); };
+  const v = Math.hypot(vx, vy);
+  if (v > 2) { const n = 5; for (let k = n; k >= 1; k--) zeichne(-vx * k * 0.35, -vy * k * 0.35, alpha * 0.12); }
+  zeichne(0, 0, alpha);
+}
+// Bewegung einer Karte: fliegt von (x0,y0) mit Schwung ein, schwingt leicht nach, fliegt am Ende raus
+function flug(T, a, e, ziel, von, nach) { nach = { ...ziel, ...(nach || {}) };
+  const ein = zurueck((T - a) / 0.42), aus = 0;
+  const x = lerp(lerp(von.x, ziel.x, ein), nach.x, aus), y = lerp(lerp(von.y, ziel.y, ein), nach.y, aus);
+  const vx = (1 - clamp((T - a) / 0.42, 0, 1)) * (ziel.x - von.x) * 0.06 + aus * (nach.x - ziel.x) * 0.06, vy = (1 - clamp((T - a) / 0.42, 0, 1)) * (ziel.y - von.y) * 0.06 + aus * (nach.y - ziel.y) * 0.06;
+  const rotY = lerp(lerp(von.rotY ?? 0.6, ziel.rotY ?? 0, ein), nach.rotY ?? -0.6, aus), rotZ = lerp(lerp(von.rotZ ?? 0.1, ziel.rotZ ?? -0.04, ein), nach.rotZ ?? -0.1, aus);
+  return { x, y, vx, vy, rotY: rotY + Math.sin(T * 1.6) * 0.03, rotZ: rotZ + Math.sin(T * 1.1) * 0.01 };
+}
+function hintergrund(T, dunkel = false) {
+  const g = ctx.createLinearGradient(0, 0, 0, H);
+  if (dunkel) { g.addColorStop(0, "#0d0d12"); g.addColorStop(1, "#1b1622"); } else { g.addColorStop(0, "#f7f7f9"); g.addColorStop(1, "#e9e9ee"); }
+  ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+}
+function bildIn(img, x, y, w, h, zoom = 1, oy = 0) { if (!img) return; const s = Math.max(w / img.width, h / img.height) * zoom; ctx.save(); ctx.beginPath(); ctx.rect(x, y, w, h); ctx.clip(); ctx.drawImage(img, x + w / 2 - img.width * s / 2, y + h / 2 - img.height * s / 2 + oy, img.width * s, img.height * s); ctx.restore(); }
+function blase(x, y, w, text, farbe = "#0a84ff", schrift = "#fff", fs = 44) {
+  ctx.font = `700 ${fs}px UI`; const z = umbruch(text, w - 60); const h = 36 + z.length * fs * 1.25;
+  rr(x, y, w, h, 40); ctx.fillStyle = farbe; ctx.fill(); ctx.beginPath(); ctx.moveTo(x + w - 40, y + h - 30); ctx.quadraticCurveTo(x + w + 10, y + h + 4, x + w + 18, y + h - 2); ctx.quadraticCurveTo(x + w - 6, y + h - 8, x + w - 14, y + h - 30); ctx.fill();
+  ctx.fillStyle = schrift; ctx.textBaseline = "alphabetic"; z.forEach((l, i) => ctx.fillText(l, x + 30, y + 20 + fs + i * fs * 1.25)); return h;
+}
+function cursor(T, x, y, h) { if (Math.floor(T * 3.2) % 2 === 0) { ctx.fillStyle = "#0a84ff"; ctx.fillRect(x + 4, y - h * 0.82, 4, h); } }
+
+const wort = (z, i) => z.woerter[Math.min(i, z.woerter.length - 1)].a;
+function gross(T, woerter, x0, y0, fs, farbe, max = W - 160, glow = null) {
+  // Wörter links ausgerichtet, eins nach dem anderen, mit Nachzieh-Echo
+  ctx.save(); ctx.font = `900 ${fs}px Titel`; ctx.textBaseline = "alphabetic"; let x = x0, y = y0;
+  for (const w of woerter) { const t = w.w.toUpperCase(), wb = ctx.measureText(t).width * 0.9; if (x > x0 && x + wb > x0 + max) { x = x0; y += fs * 1.0; }
+    const d = T - w.a + 0.03; if (d >= 0) { const p = raus(d / 0.16);
+      for (let k = 3; k >= 1; k--) { ctx.save(); ctx.globalAlpha = 0.12 * (1 - p); ctx.translate(x + (1 - p) * 50 * k, y); ctx.scale(0.9, 1); ctx.fillStyle = farbe; ctx.fillText(t, 0, 0); ctx.restore(); }
+      ctx.save(); ctx.globalAlpha = clamp(d / 0.04, 0, 1); ctx.translate(x + (1 - p) * 36, y); ctx.scale(0.9, 1); ctx.fillStyle = farbe; if (glow) { ctx.shadowColor = glow; ctx.shadowBlur = 36; } ctx.fillText(t, 0, 0); ctx.restore(); }
+    x += wb + fs * 0.24; }
+  ctx.restore();
+}
+function dunkel(T, a = "#0c0c10", b = "#17141c") { const g = ctx.createLinearGradient(0, 0, 0, H); g.addColorStop(0, a); g.addColorStop(1, b); ctx.fillStyle = g; ctx.fillRect(0, 0, W, H); }
+function etikett(x, y, text, bg = "rgba(255,255,255,0.14)", fg = "#fff", fs = 28) { ctx.font = `700 ${fs}px UI`; const b = ctx.measureText(text).width + 36; rr(x, y, b, fs + 22, (fs + 22) / 2); ctx.fillStyle = bg; ctx.fill(); ctx.fillStyle = fg; ctx.fillText(text, x + 18, y + fs + 4); return b; }
+
+// ---------- Intro in vier Teilen ----------
+const IW = () => ZL.intro;
+function introWort(T, i) { return T > ZL.intro[i].a - 0.03; }
+function sticker(T, t0, text, x, y, rot, farbe, fs = 150) { const d = T - t0 + 0.03; if (d < 0) return; const q = zurueck(d / 0.28);
+  ctx.save(); ctx.translate(x, y); ctx.rotate(rot); ctx.scale(q, q); ctx.font = `900 ${fs}px Titel`; const b = ctx.measureText(text).width * 0.9 + 70;
+  ctx.shadowColor = "rgba(0,0,0,0.35)"; ctx.shadowBlur = 30; ctx.shadowOffsetY = 12; rr(-b / 2, -fs * 0.62, b, fs * 1.08, 28); ctx.fillStyle = farbe; ctx.fill(); ctx.shadowColor = "transparent";
+  ctx.fillStyle = farbe === "#fff" ? "#111" : "#fff"; ctx.textAlign = "center"; ctx.scale(0.9, 1); ctx.fillText(text, 0, fs * 0.33); ctx.restore(); }
+function klappe(T, t0, x, y, w, h, alt, neu) { const d = T - t0, q = clamp(d / 0.22, 0, 1), zeichen = q < 0.5 ? alt : neu;
+  rr(x, y, w, h, 24); ctx.fillStyle = "#16181a"; ctx.fill(); ctx.save(); rr(x, y, w, h, 24); ctx.clip(); ctx.fillStyle = "#fff"; ctx.font = `900 ${h * 0.8}px Titel`; ctx.textAlign = "center";
+  const sy = Math.abs(Math.cos(q * Math.PI)); ctx.translate(x + w / 2, y + h / 2); ctx.scale(1, Math.max(0.03, sy)); ctx.fillText(zeichen, 0, h * 0.29); ctx.restore();
+  ctx.fillStyle = "rgba(0,0,0,0.6)"; ctx.fillRect(x, y + h / 2 - 3, w, 6); }
+const ROT = "#e0283c", GOLD = "#e9c46a";
+const CLIPS = { himmel: 73, mic: 72, safe: 72, karten2: 72, uhr: 72, lambo: 72, rauch: 72, tanz: 73, tisch3: 27, halle: 73, weiss: 72, sterne: 72, hafen: 72 };
+const CL = {}; for (const k in CLIPS) CL[k] = { n: CLIPS[k], img: null };
+async function clipLaden(k) { const c = CL[k]; if (c.img) return; c.img = await Promise.all(Array.from({ length: c.n }, (_, i) => lade(`clips/${k}/${String(i + 1).padStart(3, "0")}.jpg`))); }
+function clipBild(k, T, t0, tempo = 1) { const c = CL[k]; if (!c.img) return null; return c.img[clamp(Math.floor((T - t0) * 30 * tempo), 0, c.n - 1)]; }
+async function init() {
+  ZL = await (await fetch("zeitleiste.json")).json();
+  const D = { cover: "cover.png", himmelfoto: "aka-22-0.jpg", himmel2: "aka-22-1.jpg", uhren: "aka-07-1.jpg" };
+  for (const [k, v] of Object.entries(D)) IMG[k] = await lade("assets/" + v);
+  await document.fonts.load('900 100px "Titel"'); await document.fonts.load('700 40px "UI"');
+  for (let k = 0; k < 6; k++) { const g = document.createElement("canvas"); g.width = 540; g.height = 720; const c = g.getContext("2d"), d = c.createImageData(540, 720);
+    for (let i = 0; i < d.data.length; i += 4) { const v = Math.random() * 255; d.data[i] = d.data[i + 1] = d.data[i + 2] = v; d.data[i + 3] = 18; } c.putImageData(d, 0, 0); KORN.push(g); }
+  window.bereit = true;
+}
+// ---------- Bausteine für den Kino-Look ----------
+// Vollbild-Foto mit langsamer Fahrt (Ken Burns), abgedunkelt, optional entsättigt
+function vollbild(img, T, a, o = {}) { if (!img) return; const { zoom = 1.12, fahrt = 0.035, dx = 0, dy = 0, dunkel: dk = 0.35, filter = "none", oy = 0 } = o;
+  const d = T - a, s = Math.max(W / img.width, H / img.height) * (zoom + d * fahrt);
+  ctx.save(); ctx.filter = filter; ctx.drawImage(img, W / 2 - img.width * s / 2 + dx * d, H / 2 - img.height * s / 2 + dy * d + oy, img.width * s, img.height * s); ctx.restore();
+  const g = ctx.createLinearGradient(0, 0, 0, H); g.addColorStop(0, `rgba(0,0,0,${dk * 0.8})`); g.addColorStop(0.45, `rgba(0,0,0,${dk * 0.5})`); g.addColorStop(1, `rgba(0,0,0,${Math.min(0.92, dk + 0.4)})`); ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+  const v = ctx.createRadialGradient(W / 2, H / 2, H * 0.3, W / 2, H / 2, H * 0.75); v.addColorStop(0, "rgba(0,0,0,0)"); v.addColorStop(1, "rgba(0,0,0,0.55)"); ctx.fillStyle = v; ctx.fillRect(0, 0, W, H); }
+// Kino-Balken oben/unten (q 0…1)
+function balken(q, h = 190) { if (q <= 0) return; ctx.fillStyle = "#000"; ctx.fillRect(0, 0, W, h * q); ctx.fillRect(0, H - h * q, W, h * q); }
+// große Lyrics unten, Wort für Wort getippt, max. 3 Zeilen
+function zeilenText(T, woerter, y, fs = 84, farbe = "#fff", glow = null, max = 930) { const t = getippt(T, woerter); if (!t) return;
+  ctx.save(); ctx.font = `900 ${fs}px Titel`; ctx.textBaseline = "alphabetic"; const z = umbruch(t.toUpperCase(), max / 0.9).slice(-3);
+  if (glow) { ctx.shadowColor = glow; ctx.shadowBlur = 34; } ctx.fillStyle = farbe;
+  z.forEach((l, i) => { ctx.save(); ctx.translate(75, y + (i - z.length + 1) * fs * 1.02); ctx.scale(0.9, 1); ctx.fillText(l, 0, 0); ctx.restore(); }); ctx.restore(); }
+// Kino-Untertitel (zentriert, gelblich-weiß, wie im Film)
+function untertitel(T, woerter, y = 1560, fs = 60) { const t = getippt(T, woerter); if (!t) return; ctx.save(); ctx.font = `700 ${fs}px UI`; ctx.textAlign = "center"; const z = umbruch(t, 900).slice(-2);
+  z.forEach((l, i) => { const yy = y + (i - z.length + 1) * fs * 1.25; ctx.lineWidth = 10; ctx.strokeStyle = "rgba(0,0,0,0.75)"; ctx.lineJoin = "round"; ctx.strokeText(l, W / 2, yy); ctx.fillStyle = "#fff6d8"; ctx.fillText(l, W / 2, yy); }); ctx.restore(); }
+function blitz(T, t0, farbe = "255,255,255", st = 0.5, dauer = 0.2) { const d = T - t0; if (d > 0 && d < dauer) { ctx.fillStyle = `rgba(${farbe},${st * (1 - d / dauer)})`; ctx.fillRect(0, 0, W, H); } }
+function wackeln(T, t0, st = 18) { const d = T - t0; if (d < 0 || d > 0.35) return; const e = Math.exp(-d / 0.08) * st; ctx.translate(Math.sin(d * 90) * e, Math.cos(d * 70) * e * 0.6); }
+function rec(T, text = "REC") { ctx.save(); ctx.font = "700 30px UI"; ctx.fillStyle = "rgba(255,255,255,0.85)"; if (Math.floor(T * 2) % 2 === 0) { ctx.beginPath(); ctx.arc(92, 248, 12, 0, Math.PI * 2); ctx.fillStyle = ROT; ctx.fill(); }
+  ctx.fillStyle = "rgba(255,255,255,0.85)"; ctx.fillText(text, 116, 259); const s = T + 3600 * 0 + 31.2, f = Math.floor((s % 1) * 24);
+  ctx.textAlign = "right"; ctx.fillText(`00:00:${String(Math.floor(s)).padStart(2, "0")}:${String(f).padStart(2, "0")}`, W - 80, 259); ctx.restore(); }
+function wortZeit(z, i) { return z.woerter[Math.min(i, z.woerter.length - 1)].a; }
+// Polizei-Absperrband quer durchs Bild
+function band(T, t0, y, rot, dir = 1) { const d = T - t0; if (d < 0) return; const q = raus(d / 0.22);
+  ctx.save(); ctx.translate(W / 2, y); ctx.rotate(rot); ctx.translate(dir * (1 - q) * 1600, 0); ctx.shadowColor = "rgba(0,0,0,0.5)"; ctx.shadowBlur = 24; ctx.fillStyle = "#f5c518"; ctx.fillRect(-1100, -52, 2200, 104); ctx.shadowColor = "transparent";
+  ctx.fillStyle = "#111"; ctx.font = "900 54px Titel"; ctx.textBaseline = "middle"; const t = "TATORT · BETRETEN VERBOTEN · "; let x = -1100 - ((T * 160) % 900);
+  while (x < 1100) { ctx.save(); ctx.translate(x, 2); ctx.scale(0.9, 1); ctx.fillText(t, 0, 0); ctx.restore(); x += ctx.measureText(t).width * 0.9; } ctx.restore(); }
+
+// ---------- Bausteine ----------
+function wz(z, i) { return z.woerter[Math.min(i, z.woerter.length - 1)].a; }
+function vollclip(k, T, t0, o = {}) { const im = clipBild(k, T, t0, o.tempo || 1); if (im) vollbild(im, T, t0, { fahrt: 0.03, dk: 0.25, ...o }); }
+function goldStrahlen(T, st = 1) { ctx.save(); ctx.globalCompositeOperation = "lighter"; ctx.filter = "blur(14px)"; for (let k = 0; k < 14; k++) { const a = -0.6 + k * 0.092 + Math.sin(T * 0.6 + k * 1.7) * 0.03, l = H * 1.3, br = 0.02 + (k % 3) * 0.015;
+  const g = ctx.createLinearGradient(W / 2, -80, W / 2 + Math.sin(a) * l, Math.cos(a) * l); g.addColorStop(0, `rgba(255,224,150,${0.16 * st * (0.6 + 0.4 * Math.sin(T * 1.3 + k))})`); g.addColorStop(1, "rgba(255,224,150,0)"); ctx.fillStyle = g;
+  ctx.beginPath(); ctx.moveTo(W / 2, -80); ctx.lineTo(W / 2 + Math.sin(a - br) * l, Math.cos(a - br) * l); ctx.lineTo(W / 2 + Math.sin(a + br) * l, Math.cos(a + br) * l); ctx.fill(); } ctx.restore(); }
+function rotTon(st = 0.35) { ctx.save(); ctx.globalCompositeOperation = "multiply"; ctx.fillStyle = `rgba(255,60,50,${st})`; ctx.fillRect(0, 0, W, H); ctx.restore();
+  const g = ctx.createRadialGradient(W / 2, H / 2, H * 0.2, W / 2, H / 2, H * 0.8); g.addColorStop(0, "rgba(0,0,0,0)"); g.addColorStop(1, "rgba(60,0,0,0.55)"); ctx.fillStyle = g; ctx.fillRect(0, 0, W, H); }
+function stempel(T, t0, text, x, y, rot, farbe = ROT, fs = 120) { const d = T - t0 + 0.03; if (d < 0) return; const q = zurueck(d / 0.22); ctx.save(); ctx.translate(x, y); ctx.rotate(rot); ctx.scale(q, q);
+  ctx.font = `900 ${fs}px Titel`; const b = ctx.measureText(text).width * 0.9 + 70; ctx.strokeStyle = farbe; ctx.lineWidth = 12; rr(-b / 2, -fs * 0.72, b, fs * 1.0, 18); ctx.stroke(); ctx.fillStyle = farbe; ctx.textAlign = "center"; ctx.scale(0.9, 1); ctx.fillText(text, 0, fs * 0.08); ctx.restore(); }
+function glitzer(T, n = 26, st = 1) { for (let k = 0; k < n; k++) { const ph = ((T * 0.9 + k * 0.173) % 1), x = (k * 197) % W, y = (k * 263) % (H - 300) + 80, s = Math.sin(ph * Math.PI) * 22 * st;
+  ctx.save(); ctx.translate(x, y); ctx.globalAlpha = Math.sin(ph * Math.PI) * 0.9; ctx.fillStyle = "#fff6d0"; ctx.shadowColor = "rgba(255,220,140,0.9)"; ctx.shadowBlur = 18; ctx.beginPath();
+  for (let i = 0; i < 8; i++) { const r = i % 2 ? s * 0.18 : s, a = i * Math.PI / 4; ctx.lineTo(Math.sin(a) * r, -Math.cos(a) * r); } ctx.closePath(); ctx.fill(); ctx.restore(); } }
+const TY = 1300, TF = 78; // Lyrics unten im 3:4-Bild
+// ---------- Szenen: je Zeile zwei Clips ----------
+// 1a Lieber Gott … – Himmel-Foto, Goldstrahlen
+function s1a(T, z) { vollbild(IMG.himmelfoto, T, z.a, { zoom: 1.08, fahrt: 0.04, dk: 0.15, oy: 40 }); goldStrahlen(T, 0.6 + 0.4 * raus((T - z.a) / 0.8)); zeilenText(T, z.woerter, TY, TF, "#fff", "rgba(233,196,106,0.6)"); }
+// 1b … niemals arm – Studio-Clip, Kontostand
+function s1b(T, z) { vollclip("mic", T, z.a); const tA = wz(z, 6);
+  if (T > tA - 0.03) { const q = zurueck((T - tA + 0.03) / 0.3); karte({ x: W / 2, y: lerp(-200, 330, q), w: 820, h: 220, r: 44, hell: false, schatten: 0.5, rotY: 0, rotZ: -0.02 }, (x, y, w, h) => { ctx.fillStyle = "rgba(18,18,22,0.95)"; ctx.fillRect(x, y, w, h);
+    ctx.fillStyle = "rgba(255,255,255,0.6)"; ctx.font = "700 28px UI"; ctx.fillText("Kontostand", x + 44, y + 64); ctx.fillStyle = GOLD; ctx.font = "900 92px Titel"; ctx.fillText("niemals 0 €", x + 40, y + 170); }); }
+  zeilenText(T, z.woerter, TY, TF, "#fff", "rgba(233,196,106,0.5)"); }
+// 2a Denn ich zahl' meine … – Schließfächer
+function s2a(T, z) { vollclip("safe", T, z.a, { zoom: 1.06 }); zeilenText(T, z.woerter, TY, TF); }
+// 2b … Schulden mit Harām – Nachtclip, Rechnung „BEZAHLT“
+function s2b(T, z) { vollclip("karten2", T, z.a, { zoom: 1.0 }); const tH = wz(z, 6);
+  const q = zurueck((T - z.a) / 0.3); karte({ x: W / 2, y: lerp(H + 200, 520, q), w: 640, h: 560, r: 16, schatten: 0.55, rotY: 0, rotZ: 0.03 }, (x, y, w, h) => { ctx.fillStyle = "#f7f4ec"; ctx.fillRect(x, y, w, h);
+    ctx.fillStyle = "#111"; ctx.font = "900 50px Titel"; ctx.fillText("SCHULDEN", x + 44, y + 90); ctx.font = "700 30px UI"; ctx.fillStyle = "rgba(0,0,0,0.55)";
+    ["Offener Betrag", "Mahnung 1", "Mahnung 2", "Letzte Frist"].forEach((s, k) => { ctx.fillText(s, x + 44, y + 170 + k * 60); ctx.textAlign = "right"; ctx.fillText(["4.900 €", "250 €", "250 €", "heute"][k], x + w - 44, y + 170 + k * 60); ctx.textAlign = "left"; });
+    if (T > tH - 0.03) { ctx.save(); const s = zurueck((T - tH + 0.03) / 0.22); ctx.translate(x + w / 2, y + 450); ctx.rotate(-0.14); ctx.scale(s, s); ctx.strokeStyle = "#2e9e4f"; ctx.lineWidth = 10; rr(-210, -60, 420, 110, 14); ctx.stroke(); ctx.fillStyle = "#2e9e4f"; ctx.font = "900 76px Titel"; ctx.textAlign = "center"; ctx.fillText("BEZAHLT", 0, 22); ctx.restore(); } });
+  zeilenText(T, z.woerter, TY, TF); }
+// 3a Alles was ich sehe … – Dach über Berlin
+function s3a(T, z) { vollclip("himmel", T, z.a, { zoom: 1.02 }); goldStrahlen(T, 0.35); zeilenText(T, z.woerter, TY, TF); }
+// 3b … ist alles was er plant – Nachtclip, goldene Planlinien
+function s3b(T, z) { vollclip("uhr", T, z.a); const tP = wz(z, 8);
+  if (T > tP - 0.03) { const q = raus((T - tP + 0.03) / 0.4); ctx.save(); ctx.strokeStyle = "rgba(233,196,106,0.75)"; ctx.lineWidth = 3; ctx.setLineDash([10, 12]);
+    const P = [[150, 260], [420, 180], [700, 330], [930, 210], [860, 560], [560, 480], [260, 620]]; ctx.beginPath(); ctx.moveTo(...P[0]); const n = Math.floor(q * (P.length - 1)); for (let k = 1; k <= n; k++) ctx.lineTo(...P[k]); ctx.stroke(); ctx.setLineDash([]);
+    P.slice(0, n + 1).forEach(([x, y]) => { ctx.beginPath(); ctx.arc(x, y, 9, 0, Math.PI * 2); ctx.fillStyle = GOLD; ctx.fill(); }); ctx.restore(); }
+  zeilenText(T, z.woerter, TY, TF, "#fff", T > tP ? "rgba(233,196,106,0.5)" : null); }
+// 4a Trotzdem richte ich … – Hafen-Clip
+function s4a(T, z) { vollclip("hafen", T, z.a, { zoom: 1.0 }); zeilenText(T, z.woerter, TY, TF); }
+// 4b … meinen Blick to the sky – Himmel, Kamera kippt nach oben, „TO THE SKY“
+function s4b(T, z) { const d = T - z.a; vollbild(IMG.himmel2, T, z.a, { zoom: 1.25, fahrt: 0.06, dk: 0.12, oy: lerp(-120, 260, raus(d / 1.6)) }); goldStrahlen(T, 0.8);
+  const tS = wz(z, 5); if (T > tS - 0.03) { const q = zurueck((T - tS + 0.03) / 0.35); ctx.save(); ctx.translate(W / 2, lerp(700, 360, raus((T - tS) / 1.2))); ctx.scale(q, q); ctx.font = "900 150px Titel"; ctx.textAlign = "center"; ctx.fillStyle = "#fff"; ctx.shadowColor = "rgba(255,224,150,0.9)"; ctx.shadowBlur = 50; ctx.scale(0.9, 1); ctx.fillText("TO THE SKY", 0, 0); ctx.restore(); }
+  zeilenText(T, z.woerter.slice(0, 5), TY, TF); }
+// 5a Der Teufel will mein' Seele – roter Rauch
+function s5a(T, z) { vollclip("rauch", T, z.a, { zoom: 1.04 }); rotTon(0.3); const tS = wz(z, 4); if (T > tS - 0.03) { const q = raus((T - tS + 0.03) / 0.3); ctx.save(); ctx.globalAlpha = q * 0.85; ctx.font = "900 200px Titel"; ctx.textAlign = "center"; ctx.fillStyle = ROT; ctx.shadowColor = "rgba(224,40,60,0.9)"; ctx.shadowBlur = 60; ctx.translate(W / 2, 520); ctx.scale(0.9, 1); ctx.fillText("SEELE", 0, 0); ctx.restore(); }
+  zeilenText(T, z.woerter, TY, TF, "#fff", "rgba(224,40,60,0.6)"); }
+// 5b … erteilt mir Befehle – grüner Lambo rot eingefärbt, Befehle als Nachrichten
+function s5b(T, z) { vollclip("lambo", T, z.a, { zoom: 1.02 }); rotTon(0.38); const tB = wz(z, 7);
+  ["Steh auf.", "Mach weiter.", "Nimm alles."].forEach((s, k) => { const t0 = z.a + 0.1 + k * 0.28; if (T < t0) return; const q = zurueck((T - t0) / 0.25); karte({ x: lerp(W + 500, W / 2, q), y: 240 + k * 150, w: 820, h: 120, r: 36, hell: false, schatten: 0.5, rotY: 0, rotZ: 0 }, (x, y, w, h) => { ctx.fillStyle = "rgba(30,8,10,0.92)"; ctx.fillRect(x, y, w, h);
+    ctx.font = "54px UI"; ctx.fillText("😈", x + 26, y + 80); ctx.fillStyle = "rgba(255,160,160,0.8)"; ctx.font = "700 24px UI"; ctx.fillText("BEFEHL " + (k + 1), x + 110, y + 46); ctx.fillStyle = "#fff"; ctx.font = "700 38px UI"; ctx.fillText(s, x + 110, y + 92); }); });
+  blitz(T, tB, "224,40,60", 0.3, 0.2); zeilenText(T, z.woerter, TY, TF, "#fff", "rgba(224,40,60,0.6)"); }
+// 6a Flaschen platzen, Schlampen tanzen – Tanz-Clip, Sektkorken-Funken
+function s6a(T, z) { vollclip("tanz", T, z.a, { zoom: 1.0, tempo: 0.7 }); const tP = wz(z, 1);
+  if (T > tP - 0.03) for (let k = 0; k < 30; k++) { const d = T - tP, a = -Math.PI / 2 + (k - 15) * 0.07, v = 900 + (k % 5) * 180, x = W * 0.3 + Math.cos(a) * v * d, y = 700 + Math.sin(a) * v * d + 1400 * d * d; ctx.globalAlpha = clamp(1 - d / 1.1, 0, 1); ctx.fillStyle = k % 3 ? "#fff3c4" : GOLD; ctx.beginPath(); ctx.arc(x, y, 5 + (k % 3) * 2, 0, Math.PI * 2); ctx.fill(); ctx.globalAlpha = 1; }
+  zeilenText(T, z.woerter, TY, TF); }
+// 6b … auf dem Tisch Verträge – Tisch-Clip (Zeitlupe), Vertrag wird unterschrieben
+function s6b(T, z) { vollclip("tisch3", T, z.a, { zoom: 1.0, tempo: 0.5 }); const tV = wz(z, 7);
+  const q = zurueck((T - z.a) / 0.3); karte({ x: W - 250, y: lerp(H + 300, 760, q), w: 420, h: 450, r: 10, schatten: 0.55, rotY: 0, rotZ: -0.05 }, (x, y, w, h) => { ctx.fillStyle = "#fbfaf6"; ctx.fillRect(x, y, w, h);
+    ctx.fillStyle = "#111"; ctx.font = "900 50px Titel"; ctx.textAlign = "center"; ctx.fillText("VERTRAG", x + w / 2, y + 90); ctx.textAlign = "left"; ctx.fillStyle = "rgba(0,0,0,0.18)"; for (let l = 0; l < 6; l++) ctx.fillRect(x + 50, y + 130 + l * 36, (w - 100) * (0.6 + 0.4 * Math.abs(Math.sin(l * 2.1))), 12);
+    ctx.fillStyle = "rgba(0,0,0,0.5)"; ctx.font = "700 24px UI"; ctx.fillText("Unterschrift", x + 50, y + h - 50); ctx.fillRect(x + 50, y + h - 90, w - 100, 3);
+    if (T > tV - 0.05) { const p = clamp((T - tV + 0.05) / 0.5, 0, 1); ctx.strokeStyle = "#1b3a8a"; ctx.lineWidth = 5; ctx.lineCap = "round"; ctx.beginPath(); for (let i = 0; i <= 60 * p; i++) { const u = i / 60, px = x + 70 + u * (w - 160), py = y + h - 110 + Math.sin(u * 22) * 18 * (1 - u * 0.5) - u * 20; i ? ctx.lineTo(px, py) : ctx.moveTo(px, py); } ctx.stroke(); } });
+  zeilenText(T, z.woerter, TY, TF); }
+// 7a Ich mach' alles falsch – Halle, roter Stempel
+function s7a(T, z) { vollclip("halle", T, z.a, { zoom: 1.02 }); const tF = wz(z, 3); if (T > tF - 0.03) stempel(T, tF, "FALSCH", W / 2, 460, -0.12, ROT, 140); zeilenText(T, z.woerter, TY, TF); }
+// 7b Geld ist niemals falsch – Geldprüfer zeigt „ECHT“
+function s7b(T, z) { vollclip("weiss", T, z.a, { zoom: 1.02 }); const tE = wz(z, 7);
+  const q = zurueck((T - z.a) / 0.3); karte({ x: W / 2, y: lerp(-300, 400, q), w: 780, h: 380, r: 40, hell: false, schatten: 0.5, rotY: 0, rotZ: 0.02 }, (x, y, w, h) => { ctx.fillStyle = "rgba(14,16,20,0.95)"; ctx.fillRect(x, y, w, h);
+    ctx.fillStyle = "rgba(255,255,255,0.6)"; ctx.font = "700 28px UI"; ctx.fillText("Geldprüfer · UV", x + 44, y + 64);
+    rr(x + 44, y + 100, w - 88, 150, 16); const g = ctx.createLinearGradient(x, 0, x + w, 0); g.addColorStop(0, "#7fbf7f"); g.addColorStop(1, "#4f8f6f"); ctx.fillStyle = g; ctx.fill(); ctx.fillStyle = "rgba(255,255,255,0.85)"; ctx.font = "900 90px Titel"; ctx.fillText("100", x + 70, y + 210);
+    const sc = (T * 1.4) % 1; ctx.fillStyle = "rgba(160,120,255,0.55)"; ctx.fillRect(x + 44 + sc * (w - 100), y + 96, 12, 158);
+    const echt = T > tE - 0.03; ctx.fillStyle = echt ? "#30d158" : "rgba(255,255,255,0.6)"; ctx.font = "900 62px Titel"; ctx.fillText(echt ? "✓ ECHT" : "prüft …", x + 44, y + h - 40); });
+  zeilenText(T, z.woerter, TY, TF); }
+// 8a Alles glänzt und alles blendet – Sternenhimmel-Clip, Glitzer
+function s8a(T, z) { vollclip("sterne", T, z.a, { zoom: 1.02 }); glitzer(T, 30, 1); const tB = wz(z, 4); blitz(T, tB, "255,246,220", 0.55, 0.3); zeilenText(T, z.woerter, TY, TF, "#fff", "rgba(233,196,106,0.6)"); }
+// 8b … für ein Leben lang – Uhren, Lens-Flare, Cover als Schluss
+function s8b(T, z) { vollbild(IMG.uhren, T, z.a, { zoom: 1.04, fahrt: 0.05, dk: 0.2 }); glitzer(T, 34, 1.2);
+  const fx = W * 0.62, fy = 520, g = ctx.createRadialGradient(fx, fy, 0, fx, fy, 420); g.addColorStop(0, "rgba(255,250,230,0.55)"); g.addColorStop(1, "rgba(255,250,230,0)"); ctx.save(); ctx.globalCompositeOperation = "lighter"; ctx.fillStyle = g; ctx.fillRect(0, 0, W, H); ctx.restore();
+  const tL = wz(z, 8); if (T < tL + 0.3) zeilenText(T, z.woerter, TY, TF, "#fff", "rgba(233,196,106,0.6)");
+  if (T > tL + 0.15) { const d = T - tL - 0.15, q = zurueck(d / 0.35); ctx.fillStyle = `rgba(0,0,0,${0.75 * raus(d / 0.2)})`; ctx.fillRect(0, 0, W, H);
+    karte({ x: W / 2, y: 620, w: 640 * q, h: 640 * q, r: 24, schatten: 0.6, rotY: 0, rotZ: -0.02, hell: false }, (x, y, w, h) => ctx.drawImage(IMG.cover, x, y, w, h));
+    ctx.save(); ctx.globalAlpha = raus(d / 0.3); ctx.font = "700 34px UI"; ctx.fillStyle = "rgba(255,246,216,0.9)"; ctx.textAlign = "center"; ctx.fillText("AK AUSSERKONTROLLE · LIEBER GOTT", W / 2, 1060); ctx.restore(); }
+  const r = ZL.ende - T; if (r < 0.3) { ctx.fillStyle = `rgba(0,0,0,${1 - r / 0.3})`; ctx.fillRect(0, 0, W, H); } }
+// ---------- Ablauf ----------
+const SZ = [[s1a, s1b, null, "mic"], [s2a, s2b, "safe", "karten2"], [s3a, s3b, "himmel", "uhr"], [s4a, s4b, "hafen", null], [s5a, s5b, "rauch", "lambo"], [s6a, s6b, "tanz", "tisch3"], [s7a, s7b, "halle", "weiss"], [s8a, s8b, "sterne", null]];
+const TEIL = [4, 4, 4, 4, 5, 4, 4, 5]; // Schnitt in der Zeile vor diesem Wort
+let GRENZEN = null, ZS = null, SZ_CLIP = [], HALB = new Set();
+function vorbereiten() { const Z = ZL.zeilen; GRENZEN = []; ZS = [];
+  Z.forEach((z, i) => { const a = i === 0 ? 0 : z.a, m = z.woerter[TEIL[i]].a - 0.04; GRENZEN.push(a, m); HALB.add(GRENZEN.length - 1);
+    ZS.push({ f: SZ[i][0], z: { ...z, a } }, { f: SZ[i][1], z: { ...z, a: m } }); SZ_CLIP.push(SZ[i][2], SZ[i][3]); });
+  GRENZEN.push(ZL.ende + 1); }
+function szeneNr(T) { let nr = 0; for (let i = 0; i < ZS.length; i++) if (T >= GRENZEN[i]) nr = i; return nr; }
+window.laden = async T => { if (!ZS) vorbereiten(); const nr = szeneNr(T), noetig = new Set([nr - 1, nr, nr + 1].map(i => SZ_CLIP[i]).filter(Boolean));
+  for (const k in CL) if (!noetig.has(k) && CL[k].img) CL[k].img = null; for (const k of noetig) await clipLaden(k); };
+function szeneIn(nr, T, puf) { const alt = ctx; ctx = puf.getContext("2d"); ctx.setTransform(K, 0, 0, K, 0, 0); ctx.filter = "none"; ctx.globalAlpha = 1; ctx.fillStyle = "#000"; ctx.fillRect(0, 0, W, H);
+  const s = ZS[clamp(nr, 0, ZS.length - 1)]; s.f(T, s.z); ctx = alt; }
+const RICHT = [[0, 1], [1, 0], [0, -1], [-1, 0]];
+function stossJetzt(T) { let st = 0; for (const k of ZL.kicks) { const ph = T - k; if (ph >= 0 && ph < 0.4) st = Math.max(st, Math.exp(-ph / 0.09) * 0.018); }
+  for (const i of HALB) { const ph = T - GRENZEN[i]; if (ph >= 0 && ph < 0.3) st = Math.max(st, Math.exp(-ph / 0.07) * 0.05); } return st; }
+window.zeichne = T => {
+  if (!ZS) vorbereiten();
+  ctx = HAUPT; ctx.setTransform(K, 0, 0, K, 0, 0); ctx.filter = "none"; ctx.globalAlpha = 1; ctx.fillStyle = "#000"; ctx.fillRect(0, 0, W, H);
+  const GR = GRENZEN, nr = szeneNr(T);
+  const UE = 0.1; let g = -1; for (let i = 1; i < ZS.length; i++) if (Math.abs(T - GR[i]) < UE && !HALB.has(i)) g = i; // Wisch nur beim Zeilenwechsel, in der Zeile harter Schnitt
+  const st = stossJetzt(T);
+  const male = (puf, dx, dy, a = 1) => { ctx.save(); ctx.globalAlpha = a; ctx.translate(W / 2 + dx, H / 2 + dy); ctx.scale(1 + st, 1 + st); ctx.drawImage(puf, -W / 2, -H / 2, W, H); ctx.restore(); };
+  if (g < 0) { szeneIn(nr, T, PUF[0]); male(PUF[0], 0, 0); }
+  else {
+    const p = (T - (GR[g] - UE)) / (2 * UE), e = p < 0.5 ? 4 * p * p * p : 1 - Math.pow(-2 * p + 2, 3) / 2, [rx, ry] = RICHT[(g / 2) % RICHT.length], v = Math.sin(Math.PI * clamp(p, 0, 1));
+    szeneIn(g - 1, Math.min(T, GR[g] - 0.001), PUF[0]); szeneIn(g, Math.max(T, GR[g]), PUF[1]);
+    for (const [puf, off] of [[PUF[0], -e], [PUF[1], 1 - e]]) { const dx = off * W * rx, dy = off * H * ry; if (Math.abs(off) >= 1) continue;
+      male(puf, dx, dy, 1); for (let s2 = 1; s2 <= 4; s2++) male(puf, dx - rx * s2 * 30 * v, dy - ry * s2 * 52 * v, 0.14 * v); }
+  }
+  ctx.save(); ctx.globalCompositeOperation = "overlay"; ctx.drawImage(KORN[Math.floor(T * 24) % KORN.length], 0, 0, W, H); ctx.restore();
+};
+init();
+</script></body></html>
