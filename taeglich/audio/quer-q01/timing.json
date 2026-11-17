@@ -1,0 +1,743 @@
+{
+ "dauer": 489.764,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "grossstadt",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 5.222,
+   "emotion": "erzaehlend",
+   "text": "Normalerweise weckt dich der Lärm der Straße. Heute weckt dich die Stille."
+  },
+  {
+   "nr": 2,
+   "typ": "zimmer",
+   "kapitel": 1,
+   "start": 5.222,
+   "dauer": 8.198,
+   "emotion": "erzaehlend",
+   "text": "Sieben Uhr zwölf. Dein Wecker hat nicht geklingelt. Kein Bus, keine Hupe, kein Nachbar, der die Treppe herunterpoltert."
+  },
+  {
+   "nr": 3,
+   "typ": "handy",
+   "kapitel": 1,
+   "start": 13.42,
+   "dauer": 8.966,
+   "emotion": "erzaehlend",
+   "text": "Du greifst nach deinem Handy. Null Nachrichten. Nicht mal der Familien-Chat, in dem deine Mama sonst schon um sieben die Wettervorhersage schickt."
+  },
+  {
+   "nr": 4,
+   "typ": "zimmer",
+   "kapitel": 1,
+   "start": 22.386,
+   "dauer": 7.502,
+   "emotion": "erzaehlend",
+   "text": "Du gehst ans Fenster. Unten auf der Straße steht ein Auto mit laufendem Scheibenwischer. Aber niemand sitzt am Steuer."
+  },
+  {
+   "nr": 5,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 29.888,
+   "dauer": 3.398,
+   "emotion": "erzaehlend",
+   "text": "Du rufst nach ihr. „Mama?“ Keine Antwort."
+  },
+  {
+   "nr": 6,
+   "typ": "kueche",
+   "kapitel": 1,
+   "start": 33.286,
+   "dauer": 7.718,
+   "emotion": "erzaehlend",
+   "text": "In der Küche steht ihre Tasse auf dem Tisch. Der Kaffee ist noch warm. Daneben ihr Schlüsselbund. Ihre Jacke hängt an der Tür."
+  },
+  {
+   "nr": 7,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 41.004,
+   "dauer": 3.302,
+   "emotion": "ernst",
+   "text": "Ohne Schlüssel geht deine Mama nirgendwohin. Nie."
+  },
+  {
+   "nr": 8,
+   "typ": "wohnzimmer",
+   "kapitel": 1,
+   "start": 44.306,
+   "dauer": 8.294,
+   "emotion": "erzaehlend",
+   "text": "Der Fernseher im Wohnzimmer läuft noch. Aber auf jedem Sender steht nur ein Standbild. Kein Moderator, keine Werbung, nichts."
+  },
+  {
+   "nr": 9,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 52.6,
+   "dauer": 8.486,
+   "emotion": "ernst",
+   "text": "Du klopfst bei den Nachbarn. Bei Frau Kessler, die jeden Morgen um sieben staubsaugt. Die Tür ist nur angelehnt. Ihre Wohnung ist leer."
+  },
+  {
+   "nr": 10,
+   "typ": "titel",
+   "kapitel": 1,
+   "start": 61.086,
+   "dauer": 9.374,
+   "emotion": "erzaehlend",
+   "text": "Was du in den nächsten vierzehn Tagen erlebst, hat noch kein Mensch erlebt. Und am Ende findest du heraus, warum ausgerechnet du übrig bist."
+  },
+  {
+   "nr": 11,
+   "typ": "titel",
+   "kapitel": 2,
+   "start": 70.46,
+   "dauer": 1.55,
+   "emotion": "erzaehlend",
+   "text": "Acht Uhr zwanzig."
+  },
+  {
+   "nr": 12,
+   "typ": "grossstadt",
+   "kapitel": 2,
+   "start": 72.01,
+   "dauer": 5.678,
+   "emotion": "erzaehlend",
+   "text": "Du gehst auf die Straße. Die Ampeln schalten brav von Rot auf Grün. Für niemanden."
+  },
+  {
+   "nr": 13,
+   "typ": "grossstadt",
+   "kapitel": 2,
+   "start": 77.688,
+   "dauer": 8.03,
+   "emotion": "erzaehlend",
+   "text": "Du läufst die ganze Hauptstraße entlang. Kein Mensch. Kein Jogger, kein Paketbote, kein Kind auf dem Weg zur Schule."
+  },
+  {
+   "nr": 14,
+   "typ": "kreuzung",
+   "kapitel": 2,
+   "start": 85.718,
+   "dauer": 7.478,
+   "emotion": "erzaehlend",
+   "text": "Mitten auf der Kreuzung steht ein Bus. Die Türen offen, der Motor aus. Kein Fahrer. Keine Fahrgäste."
+  },
+  {
+   "nr": 15,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 93.196,
+   "dauer": 7.526,
+   "emotion": "spannend",
+   "text": "Kein Unfall. Kein Chaos. Es sieht aus, als hätten alle Menschen in derselben Sekunde einfach aufgehört zu existieren."
+  },
+  {
+   "nr": 16,
+   "typ": "handy",
+   "kapitel": 2,
+   "start": 100.722,
+   "dauer": 5.918,
+   "emotion": "erzaehlend",
+   "text": "Du rufst deinen Opa an. Er geht immer ran, sogar beim Zahnarzt. Heute klingelt es ins Leere."
+  },
+  {
+   "nr": 17,
+   "typ": "handy",
+   "kapitel": 2,
+   "start": 106.64,
+   "dauer": 8.678,
+   "emotion": "erzaehlend",
+   "text": "Du wählst den Notruf. Eins, eins, zwei. Es klingelt zehnmal, zwanzigmal. In der Leitstelle sitzt niemand mehr, der abnehmen könnte."
+  },
+  {
+   "nr": 18,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 115.318,
+   "dauer": 4.814,
+   "emotion": "spannend",
+   "text": "Das ist der Moment, in dem dir zum ersten Mal richtig kalt wird. Mitten im Sommer."
+  },
+  {
+   "nr": 19,
+   "typ": "supermarkt",
+   "kapitel": 2,
+   "start": 120.132,
+   "dauer": 7.934,
+   "emotion": "erzaehlend",
+   "text": "Im Supermarkt an der Ecke läuft noch das Radio. Ein Lied über den Sommer. Die Kassen sind leer, die Einkaufswagen stehen mitten im Gang."
+  },
+  {
+   "nr": 20,
+   "typ": "supermarkt",
+   "kapitel": 2,
+   "start": 128.066,
+   "dauer": 3.158,
+   "emotion": "erzaehlend",
+   "text": "Eine Kasse ist offen. Du könntest alles nehmen."
+  },
+  {
+   "nr": 21,
+   "typ": "supermarkt",
+   "kapitel": 2,
+   "start": 131.224,
+   "dauer": 5.222,
+   "emotion": "erzaehlend",
+   "text": "Aber du stehst nur da und hörst dem Lied zu, weil es das einzige Geräusch in der ganzen Stadt ist."
+  },
+  {
+   "nr": 22,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 136.446,
+   "dauer": 4.382,
+   "emotion": "traurig",
+   "text": "Dann ist das Lied zu Ende. Und danach kommt nur noch Rauschen."
+  },
+  {
+   "nr": 23,
+   "typ": "titel",
+   "kapitel": 3,
+   "start": 140.828,
+   "dauer": 2.318,
+   "emotion": "erzaehlend",
+   "text": "Dreizehn Uhr vierzig."
+  },
+  {
+   "nr": 24,
+   "typ": "bahnhof",
+   "kapitel": 3,
+   "start": 143.146,
+   "dauer": 6.998,
+   "emotion": "erzaehlend",
+   "text": "Am Bahnhof zeigt die Anzeige noch die Abfahrten von heute Morgen. Kein Zug ist gefahren. Die große Uhr tickt trotzdem weiter."
+  },
+  {
+   "nr": 25,
+   "typ": "bahnhof",
+   "kapitel": 3,
+   "start": 150.144,
+   "dauer": 5.318,
+   "emotion": "erzaehlend",
+   "text": "Du schreist. So laut du kannst. Dein Echo kommt dreimal zurück. Sonst nichts."
+  },
+  {
+   "nr": 26,
+   "typ": "krankenhaus",
+   "kapitel": 3,
+   "start": 155.462,
+   "dauer": 8.414,
+   "emotion": "erzaehlend",
+   "text": "Du läufst zum Krankenhaus. Wenn irgendwo Menschen sein müssen, dann dort. Die Betten sind gemacht, die Monitore piepsen. Aber niemand liegt darin."
+  },
+  {
+   "nr": 27,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 163.876,
+   "dauer": 5.678,
+   "emotion": "traurig",
+   "text": "Auf einem Nachttisch liegt eine halb gelöste Rätselzeitschrift. Der Stift liegt noch quer über dem letzten Wort."
+  },
+  {
+   "nr": 28,
+   "typ": "handy",
+   "kapitel": 3,
+   "start": 169.554,
+   "dauer": 6.254,
+   "emotion": "erzaehlend",
+   "text": "Du schreibst in jede Gruppe, die du hast. Klasse, Fußball, Familie. Ist da irgendwer? Bitte antwortet."
+  },
+  {
+   "nr": 29,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 175.808,
+   "dauer": 3.398,
+   "emotion": "ernst",
+   "text": "Die Nachricht geht raus. Aber kein einziger Haken wird blau."
+  },
+  {
+   "nr": 30,
+   "typ": "grossstadt",
+   "kapitel": 3,
+   "start": 179.206,
+   "dauer": 6.854,
+   "emotion": "erzaehlend",
+   "text": "Was du jetzt noch nicht weißt: Das Handynetz hält nicht ewig. Viele Mobilfunkmasten haben nur Batterien für ein paar Stunden."
+  },
+  {
+   "nr": 31,
+   "typ": "grossstadt",
+   "kapitel": 3,
+   "start": 186.06,
+   "dauer": 4.262,
+   "emotion": "erzaehlend",
+   "text": "Wenn niemand die Kraftwerke überwacht, gehen ihnen nacheinander die Reserven aus."
+  },
+  {
+   "nr": 32,
+   "typ": "grossstadt",
+   "kapitel": 3,
+   "start": 190.322,
+   "dauer": 6.71,
+   "emotion": "erzaehlend",
+   "text": "Um zweiundzwanzig Uhr geht das erste Viertel aus. Dann das nächste. Wie eine Welle aus Dunkelheit, die auf dich zurollt."
+  },
+  {
+   "nr": 33,
+   "typ": "zimmer",
+   "kapitel": 3,
+   "start": 197.032,
+   "dauer": 4.046,
+   "emotion": "erzaehlend",
+   "text": "Du liegst in deinem Bett und zählst die Fenster gegenüber. Kein einziges Licht."
+  },
+  {
+   "nr": 34,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 201.078,
+   "dauer": 4.646,
+   "emotion": "traurig",
+   "text": "Zum ersten Mal in deinem Leben ist es so still, dass du dein eigenes Herz hörst."
+  },
+  {
+   "nr": 35,
+   "typ": "titel",
+   "kapitel": 4,
+   "start": 205.724,
+   "dauer": 1.766,
+   "emotion": "erzaehlend",
+   "text": "Tag zwei."
+  },
+  {
+   "nr": 36,
+   "typ": "handy",
+   "kapitel": 4,
+   "start": 207.49,
+   "dauer": 4.55,
+   "emotion": "erzaehlend",
+   "text": "Kein Netz mehr. Dein Handy ist jetzt nur noch eine Uhr mit Fotos."
+  },
+  {
+   "nr": 37,
+   "typ": "kueche",
+   "kapitel": 4,
+   "start": 212.04,
+   "dauer": 9.206,
+   "emotion": "erzaehlend",
+   "text": "Der Kühlschrank ist still. Ohne Strom bleibt Essen darin nur ungefähr vier Stunden sicher kühl, wenn man die Tür zulässt. Du hast sie zehnmal aufgemacht."
+  },
+  {
+   "nr": 38,
+   "typ": "kueche",
+   "kapitel": 4,
+   "start": 221.246,
+   "dauer": 6.302,
+   "emotion": "erzaehlend",
+   "text": "Du sortierst. Konserven, Nudeln, Zwieback, Erdnussbutter. Dinge, die nicht schlecht werden."
+  },
+  {
+   "nr": 39,
+   "typ": "supermarkt",
+   "kapitel": 4,
+   "start": 227.548,
+   "dauer": 8.798,
+   "emotion": "erzaehlend",
+   "text": "Konserven halten Jahre. Frisches Brot schimmelt schon nach etwa einer Woche. Du verstehst plötzlich, warum dein Opa im Keller immer ein Regal voller Dosen hatte."
+  },
+  {
+   "nr": 40,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 236.346,
+   "dauer": 4.622,
+   "emotion": "froh",
+   "text": "Du hast dich über ihn lustig gemacht. Jetzt würdest du alles geben, um dich bei ihm zu entschuldigen."
+  },
+  {
+   "nr": 41,
+   "typ": "wohnzimmer",
+   "kapitel": 4,
+   "start": 240.968,
+   "dauer": 7.046,
+   "emotion": "erzaehlend",
+   "text": "Am Abend kommt aus dem Wasserhahn nur noch ein dünner Strahl. Pumpen brauchen Strom. Ohne Strom fällt der Druck."
+  },
+  {
+   "nr": 42,
+   "typ": "kueche",
+   "kapitel": 4,
+   "start": 248.014,
+   "dauer": 6.35,
+   "emotion": "erzaehlend",
+   "text": "Zum Kochen nimmst du den alten Campingkocher vom letzten Sommerurlaub. Nudeln mit Tomatensoße aus der Dose."
+  },
+  {
+   "nr": 43,
+   "typ": "kueche",
+   "kapitel": 4,
+   "start": 254.364,
+   "dauer": 3.998,
+   "emotion": "erzaehlend",
+   "text": "Es schmeckt wie damals am See, nur ohne die Stimmen deiner Familie."
+  },
+  {
+   "nr": 44,
+   "typ": "wohnzimmer",
+   "kapitel": 4,
+   "start": 258.362,
+   "dauer": 5.414,
+   "emotion": "erzaehlend",
+   "text": "Du füllst jede Flasche, jeden Topf und die Badewanne. Mama hätte das als Erstes gemacht."
+  },
+  {
+   "nr": 45,
+   "typ": "titel",
+   "kapitel": 5,
+   "start": 263.776,
+   "dauer": 1.742,
+   "emotion": "erzaehlend",
+   "text": "Tag fünf."
+  },
+  {
+   "nr": 46,
+   "typ": "park",
+   "kapitel": 5,
+   "start": 265.518,
+   "dauer": 7.43,
+   "emotion": "erzaehlend",
+   "text": "Die Stadt fängt an, sich zu verändern. Im Park laufen Rehe über die Wiese, als wäre das schon immer ihr Zuhause gewesen."
+  },
+  {
+   "nr": 47,
+   "typ": "park",
+   "kapitel": 5,
+   "start": 272.948,
+   "dauer": 8.318,
+   "emotion": "erzaehlend",
+   "text": "Hunde, die keiner mehr füttert, laufen in kleinen Gruppen durch die Straßen. Sie sind nicht böse. Sie haben einfach Hunger. Genau wie du."
+  },
+  {
+   "nr": 48,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 281.266,
+   "dauer": 5.054,
+   "emotion": "spannend",
+   "text": "Du gehst nur noch tagsüber raus. Und du gehst nie ohne eine Tüte Hundefutter."
+  },
+  {
+   "nr": 49,
+   "typ": "dach",
+   "kapitel": 5,
+   "start": 286.32,
+   "dauer": 5.462,
+   "emotion": "erzaehlend",
+   "text": "Vom Dach eures Hauses kannst du an klaren Tagen weit sehen. Du suchst nach Rauch."
+  },
+  {
+   "nr": 50,
+   "typ": "dach",
+   "kapitel": 5,
+   "start": 291.782,
+   "dauer": 4.19,
+   "emotion": "erzaehlend",
+   "text": "Nach Licht. Nach irgendeinem Zeichen, dass da draußen noch jemand ist."
+  },
+  {
+   "nr": 51,
+   "typ": "skyline",
+   "kapitel": 5,
+   "start": 295.972,
+   "dauer": 6.254,
+   "emotion": "erzaehlend",
+   "text": "Nichts. Nur Dächer, Kräne und ein Himmel, der ohne Flugzeuge seltsam leer aussieht."
+  },
+  {
+   "nr": 52,
+   "typ": "zimmer",
+   "kapitel": 5,
+   "start": 302.226,
+   "dauer": 6.11,
+   "emotion": "erzaehlend",
+   "text": "In der Nacht schreibst du Tagebuch. Nicht für dich. Für den Menschen, der es vielleicht eines Tages findet."
+  },
+  {
+   "nr": 53,
+   "typ": "grossstadt",
+   "kapitel": 5,
+   "start": 308.336,
+   "dauer": 7.07,
+   "emotion": "erzaehlend",
+   "text": "Ohne Straßenlaternen siehst du über der Stadt zum ersten Mal die Milchstraße. Tausende Sterne, die immer da waren."
+  },
+  {
+   "nr": 54,
+   "typ": "grossstadt",
+   "kapitel": 5,
+   "start": 315.406,
+   "dauer": 3.11,
+   "emotion": "erzaehlend",
+   "text": "Man konnte sie nur nicht sehen, weil alle Lichter an waren."
+  },
+  {
+   "nr": 55,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 318.516,
+   "dauer": 8.654,
+   "emotion": "traurig",
+   "text": "Tag fünf. Ich habe heute laut mit mir selbst geredet. Zwei Stunden lang. Ich glaube, das ist normal, wenn man allein ist. Hoffe ich."
+  },
+  {
+   "nr": 56,
+   "typ": "titel",
+   "kapitel": 6,
+   "start": 327.17,
+   "dauer": 1.55,
+   "emotion": "erzaehlend",
+   "text": "Tag neun."
+  },
+  {
+   "nr": 57,
+   "typ": "wohnzimmer",
+   "kapitel": 6,
+   "start": 328.72,
+   "dauer": 8.462,
+   "emotion": "erzaehlend",
+   "text": "Im Schrank deines Opas findest du ein altes Kurbelradio. Kein Strom nötig. Du drehst die Kurbel, bis dein Arm brennt."
+  },
+  {
+   "nr": 58,
+   "typ": "gesicht",
+   "kapitel": 6,
+   "start": 337.182,
+   "dauer": 5.798,
+   "emotion": "erzaehlend",
+   "text": "Rauschen auf jedem Sender. Du drehst langsam weiter. Millimeter für Millimeter."
+  },
+  {
+   "nr": 59,
+   "typ": "wohnzimmer",
+   "kapitel": 6,
+   "start": 342.98,
+   "dauer": 8.774,
+   "emotion": "erzaehlend",
+   "text": "Bei einundneunzig Komma vier hörst du es. Ganz leise. Ein Klopfen. Drei kurz. Drei lang. Drei kurz."
+  },
+  {
+   "nr": 60,
+   "typ": "gesicht",
+   "kapitel": 6,
+   "start": 351.754,
+   "dauer": 6.758,
+   "emotion": "spannend",
+   "text": "Du hältst die Luft an. Das Klopfen hört auf. Und fängt wieder von vorne an. Immer gleich. Immer im selben Rhythmus."
+  },
+  {
+   "nr": 61,
+   "typ": "titel",
+   "kapitel": 6,
+   "start": 358.512,
+   "dauer": 2.462,
+   "emotion": "erzaehlend",
+   "text": "Das ist kein Zufall. Das ist ein Mensch."
+  },
+  {
+   "nr": 62,
+   "typ": "gesicht",
+   "kapitel": 6,
+   "start": 360.974,
+   "dauer": 8.198,
+   "emotion": "froh",
+   "text": "Du lachst. Und du weinst. Beides gleichzeitig. Nach neun Tagen Stille ist das schönste Geräusch der Welt ein Klopfen im Radio."
+  },
+  {
+   "nr": 63,
+   "typ": "dach",
+   "kapitel": 6,
+   "start": 369.172,
+   "dauer": 6.254,
+   "emotion": "erzaehlend",
+   "text": "Du rennst aufs Dach und blinkst mit der Taschenlampe in die Nacht. Drei kurz. Drei lang. Drei kurz."
+  },
+  {
+   "nr": 64,
+   "typ": "skyline",
+   "kapitel": 6,
+   "start": 375.426,
+   "dauer": 6.518,
+   "emotion": "erzaehlend",
+   "text": "Lange passiert nichts. Dann, ganz weit hinten, am Fernsehturm, blinkt ein Licht zurück."
+  },
+  {
+   "nr": 65,
+   "typ": "titel",
+   "kapitel": 7,
+   "start": 381.944,
+   "dauer": 1.934,
+   "emotion": "erzaehlend",
+   "text": "Tag vierzehn."
+  },
+  {
+   "nr": 66,
+   "typ": "grossstadt",
+   "kapitel": 7,
+   "start": 383.878,
+   "dauer": 9.158,
+   "emotion": "erzaehlend",
+   "text": "Fünf Nächte lang habt ihr euch Zeichen gegeben. Jetzt läufst du los. Zwölf Kilometer durch eine Stadt, die dir ganz allein gehört."
+  },
+  {
+   "nr": 67,
+   "typ": "kreuzung",
+   "kapitel": 7,
+   "start": 393.036,
+   "dauer": 7.286,
+   "emotion": "erzaehlend",
+   "text": "Vorbei an deiner Schule. Am Kino, in dem du mit deinem besten Freund jeden Film gesehen hast, egal wie schlecht er war."
+  },
+  {
+   "nr": 68,
+   "typ": "gesicht",
+   "kapitel": 7,
+   "start": 400.322,
+   "dauer": 6.662,
+   "emotion": "ernst",
+   "text": "Was, wenn es eine Falle ist? Was, wenn da oben niemand ist und das Licht nur ein kaputter Automat war?"
+  },
+  {
+   "nr": 69,
+   "typ": "park",
+   "kapitel": 7,
+   "start": 406.984,
+   "dauer": 3.47,
+   "emotion": "erzaehlend",
+   "text": "Im Park kommt dir ein Hund entgegen. Er knurrt nicht."
+  },
+  {
+   "nr": 70,
+   "typ": "park",
+   "kapitel": 7,
+   "start": 410.454,
+   "dauer": 5.366,
+   "emotion": "erzaehlend",
+   "text": "Er läuft einfach neben dir her, als hätte er auch beschlossen, nicht mehr allein zu sein."
+  },
+  {
+   "nr": 71,
+   "typ": "skyline",
+   "kapitel": 7,
+   "start": 415.82,
+   "dauer": 9.566,
+   "emotion": "erzaehlend",
+   "text": "Am Fuß des Turms ist die Tür offen. Du steigst die Treppe hoch. Stufe für Stufe. Dein Atem ist das Lauteste im ganzen Turm."
+  },
+  {
+   "nr": 72,
+   "typ": "grossstadt",
+   "kapitel": 7,
+   "start": 425.386,
+   "dauer": 5.678,
+   "emotion": "erzaehlend",
+   "text": "Oben, am Fenster, steht jemand mit einer Taschenlampe in der Hand. Er dreht sich um."
+  },
+  {
+   "nr": 73,
+   "typ": "gesicht",
+   "kapitel": 7,
+   "start": 431.064,
+   "dauer": 7.454,
+   "emotion": "froh",
+   "text": "Es ist dein bester Freund Ben. Abgemagert, ungewaschen, mit genau dem schiefen Grinsen, das du so vermisst hast."
+  },
+  {
+   "nr": 74,
+   "typ": "gesicht",
+   "kapitel": 7,
+   "start": 438.518,
+   "dauer": 3.47,
+   "emotion": "froh",
+   "text": "„Du hast echt fünf Tage gebraucht, um zwölf Kilometer zu laufen?“"
+  },
+  {
+   "nr": 75,
+   "typ": "gesicht",
+   "kapitel": 7,
+   "start": 441.988,
+   "dauer": 3.398,
+   "emotion": "froh",
+   "text": "Du lachst so laut, dass es durch den ganzen Turm hallt."
+  },
+  {
+   "nr": 76,
+   "typ": "grossstadt",
+   "kapitel": 7,
+   "start": 445.386,
+   "dauer": 8.966,
+   "emotion": "erzaehlend",
+   "text": "Ben hat auch ein Tagebuch. Auch sein Kaffee war noch warm. Auch seine Familie war einfach weg. Und auch er hat nachts am Radio gesessen."
+  },
+  {
+   "nr": 77,
+   "typ": "gesicht",
+   "kapitel": 7,
+   "start": 454.352,
+   "dauer": 8.03,
+   "emotion": "erzaehlend",
+   "text": "Und dann merkst du, warum ausgerechnet ihr übrig seid. In der Nacht, bevor alle verschwanden, habt ihr beide nicht geschlafen."
+  },
+  {
+   "nr": 78,
+   "typ": "gesicht",
+   "kapitel": 7,
+   "start": 462.382,
+   "dauer": 4.238,
+   "emotion": "erzaehlend",
+   "text": "Ihr habt bis vier Uhr telefoniert. Über nichts. Über alles."
+  },
+  {
+   "nr": 79,
+   "typ": "polarlicht",
+   "kapitel": 7,
+   "start": 466.62,
+   "dauer": 5.294,
+   "emotion": "erzaehlend",
+   "text": "Was auch immer in dieser Nacht passiert ist: Es hat alle erwischt, die geschlafen haben."
+  },
+  {
+   "nr": 80,
+   "typ": "polarlicht",
+   "kapitel": 7,
+   "start": 471.914,
+   "dauer": 5.726,
+   "emotion": "erzaehlend",
+   "text": "Nur nicht die zwei, die wach geblieben sind, weil sie einander etwas zu erzählen hatten."
+  },
+  {
+   "nr": 81,
+   "typ": "grossstadt",
+   "kapitel": 7,
+   "start": 477.64,
+   "dauer": 6.926,
+   "emotion": "erzaehlend",
+   "text": "Zwei Menschen in einer Stadt für eine Million. Morgen fangt ihr an, nach den anderen zu suchen."
+  },
+  {
+   "nr": 82,
+   "typ": "grossstadt",
+   "kapitel": 7,
+   "start": 484.566,
+   "dauer": 5.198,
+   "emotion": "erzaehlend",
+   "text": "Aber heute Nacht seid ihr zum ersten Mal seit vierzehn Tagen nicht allein."
+  }
+ ]
+}
