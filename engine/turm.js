@@ -7,6 +7,7 @@
      - leer: Text auf den Schildern freier Plätze (Standard „?“), leer_zeigen=N: so viele freie Plätze (die nächsten) bekommen ein Schild
    [turm modus=hoehe hoehe=0>1000 stadt="Deine Stadt"]   Kamerafahrt am Turm hoch (Meter, 1 Stockwerk = 3 m)
    [turm modus=ziele bis=5]                                Zielkarte (Wolken … Mond), bis = wie viele Ziele schon sichtbar
+   [turm modus=feld … krone="Stuttgart"]  (neu 17.11.) goldene Krone über dem Spitzenreiter, krone_ab = Einblendzeit in s
    [turm modus=duell duell="Hildesheim#0:6|Stuttgart#2:3>4" zeit=abend titel_text="DAS DUELL"]  (neu 16.11.) zwei Türme groß nebeneinander mit Abstand-Klammer
    [turm modus=rangliste rangliste="München#0:12>41|Wien#1:30" ziel=333 ziel_name=Wolken]  (#n = Platz/Farbe wie im Feld)  Rangliste mit Balken bis zum nächsten Ziel
 */
@@ -131,14 +132,21 @@
     const leute = []; { const rp = rnd(91); const n = Number(s.leute ?? 18); for (let k = 0; k < n; k++) { const quer = rp() < 0.5, bahn = Math.floor(rp() * G) + 0.5 - 1, v = (0.12 + rp() * 0.12) * (rp() < 0.5 ? 1 : -1), st = rp() * G;
       const pos = ((st + v * t) % G + G) % G - 0.5; leute.push({ i: quer ? pos : bahn, j: quer ? bahn : pos, f: FARBEN[k % FARBEN.length], ph: rp() * 6 }); } }
     const zuZeichnen = plaetze.map((pl, k) => ({ pl, k, turm: tuerme[k] })).concat(leute.map(m => ({ mensch: m, pl: [m.i + 0.45, m.j + 0.45] }))).sort((a, b) => (a.pl[0] + a.pl[1]) - (b.pl[0] + b.pl[1]));
-    const schilder = [];
+    const schilder = [], kronen = [];
+    // neu 17.11.: krone="Stuttgart" goldene Krone über dem Turm (Spitzenreiter), erscheint ab krone_ab (Standard 0.6 s)
+    const krone = (x, y, g) => { const p = E.raus(clamp((t - (Number(s.krone_ab) || 0.6)) / 0.5, 0, 1)); if (p <= 0) return; const yy = y - g * 0.2 + Math.sin(t * 2.4) * g * 0.06, w = g * 0.62 * (0.6 + 0.4 * p), h = g * 0.42 * (0.6 + 0.4 * p);
+      ctx.save(); ctx.globalAlpha = p; glut(x, yy - h * 0.5, g * 1.5, "#ffe27a", 0.55);
+      ctx.fillStyle = lgrad(0, yy - h, 0, yy, [[0, "#fff1a8"], [0.55, "#f6c844"], [1, "#d8962a"]]); ctx.beginPath();
+      ctx.moveTo(x - w, yy); ctx.lineTo(x - w * 1.08, yy - h); ctx.lineTo(x - w * 0.5, yy - h * 0.5); ctx.lineTo(x, yy - h * 1.22); ctx.lineTo(x + w * 0.5, yy - h * 0.5); ctx.lineTo(x + w * 1.08, yy - h); ctx.lineTo(x + w, yy); ctx.closePath(); ctx.fill();
+      box(x - w, yy - h * 0.16, w * 2, h * 0.26, h * 0.08, "#c8862a"); for (const [dx, f] of [[-0.55, "#e8705a"], [0, "#4a9ad0"], [0.55, "#e8705a"]]) circle(x + dx * w, yy - h * 0.03, h * 0.08, f);
+      for (const dx of [-1.08, 0, 1.08]) circle(x + dx * w, yy - h * (dx ? 1 : 1.22), h * 0.1, "#fff6d0"); ctx.restore(); };
     // neu 15.11.: schilder="Hildesheim,Freiburg" nur diese Türme beschriftet; schild_px=34 Schilder in fester Bildschirmgröße (unabhängig von nah); stock_hoehe=2 höhere Stockwerke
     const nurSchild = s.schilder ? new Set(String(s.schilder).split(",").map(q => q.trim()).filter(Boolean)) : null, festPx = Number(s.schild_px) || 0;
     for (const e of zuZeichnen) { if (e.mensch) { const m = e.mensch, [x, y] = feld(m.i, m.j), g = TW * 0.2, hop = Math.abs(Math.sin(t * 6 + m.ph)) * g * 0.06;
         ellipse(x, y, g * 0.22, g * 0.08, rgba("#1a2030", 0.25)); box(x - g * 0.1, y - g * 0.4 - hop, g * 0.2, g * 0.4, g * 0.06, "#3a3e4c");
         box(x - g * 0.15, y - g * 0.82 - hop, g * 0.3, g * 0.46, g * 0.12, m.f); circle(x, y - g * 0.96 - hop, g * 0.14, "#f2c8a4"); continue; }
       const [x, y] = feld(e.pl[0], e.pl[1]);
-      if (e.turm) { const st = Math.round(e.turm.stock), topY = turmBauen(x, y, TW, TH, st, FARBEN[e.k % FARBEN.length], P, t, e.k, e.turm.name, Number(s.stock_hoehe) || 1); if (!nurSchild || nurSchild.has(e.turm.name)) schilder.push([x, topY, `${e.turm.name} · ${fmt(st)}`, FARBEN[e.k % FARBEN.length]]); }
+      if (e.turm) { const st = Math.round(e.turm.stock), topY = turmBauen(x, y, TW, TH, st, FARBEN[e.k % FARBEN.length], P, t, e.k, e.turm.name, Number(s.stock_hoehe) || 1); if (!nurSchild || nurSchild.has(e.turm.name)) schilder.push([x, topY, `${e.turm.name} · ${fmt(st)}`, FARBEN[e.k % FARBEN.length], e.turm.name === s.krone]); else if (e.turm.name === s.krone) kronen.push([x, topY]); }
       else { turmBauen(x, y, TW, TH, 0, "#888", P, t, e.k); if (e.k < tuerme.length + (Number(s.leer_zeigen) || 0)) { line(x, y - 4, x, y - TW * 0.3, 2, "#6a5a4a"); schild(x, y - TW * 0.3, String(s.leer ?? "?"), festPx ? festPx * 1.15 / z : TW * 0.25, false); } } }
     if (s._grundstein && !tuerme.length) { const [x, y] = s._grundstein, w = TW * 0.16, h = TW * 0.13, yy = y - 6 + Math.sin(t * 2) * 1.5;
       glut(x, yy - h, TW * 0.5, "#ffe27a", 0.35);
@@ -148,7 +156,8 @@
     { const fs = festPx ? festPx / z : TW * 0.27, gesetzt = []; ctx.font = `700 ${fs}px HUD`;
       for (const sc of schilder.slice().sort((a, b) => a[1] - b[1])) { const w = ctx.measureText(sc[2]).width + fs * 1.4, h = fs * 1.6; let y = sc[1];
         for (let n = 0; n < 12; n++) { const k = gesetzt.find(g => Math.abs(g.x - sc[0]) < (g.w + w) / 2 && Math.abs(g.y - y) < h); if (!k) break; y = k.y - h - 4; }
-        gesetzt.push({ x: sc[0], y, w }); if (y < sc[1] - 4) line(sc[0], sc[1], sc[0], y, 2, rgba("#1a2030", 0.5)); schild(sc[0], y, sc[2], fs, true, sc[3]); } }
+        gesetzt.push({ x: sc[0], y, w }); if (y < sc[1] - 4) line(sc[0], sc[1], sc[0], y, 2, rgba("#1a2030", 0.5)); schild(sc[0], y, sc[2], fs, true, sc[3]); if (sc[4]) krone(sc[0], y - fs * 1.4, fs * 2.2); }
+      for (const [x, y] of kronen) krone(x, y - fs * 0.4, fs * 2.2); }
     ctx.restore();
   };
 

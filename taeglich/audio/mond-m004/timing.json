@@ -1,0 +1,122 @@
+{
+ "dauer": 63.926,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "turm",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 5.678,
+   "emotion": "erzaehlend",
+   "text": "Tag vier auf deinem Turmplatz. Einundzwanzig Städte, und oben steht eine neue Nummer eins."
+  },
+  {
+   "nr": 2,
+   "typ": "turm",
+   "kapitel": 1,
+   "start": 5.678,
+   "dauer": 3.854,
+   "emotion": "erzaehlend",
+   "text": "Sechsundfünfzig Stockwerke. Gestern waren es einunddreißig."
+  },
+  {
+   "nr": 3,
+   "typ": "titel",
+   "kapitel": 1,
+   "start": 9.532,
+   "dauer": 2.198,
+   "emotion": "erzaehlend",
+   "text": "Und an der Spitze ist alles anders."
+  },
+  {
+   "nr": 4,
+   "typ": "turm",
+   "kapitel": 2,
+   "start": 11.73,
+   "dauer": 5.606,
+   "emotion": "erzaehlend",
+   "text": "Stuttgart! Leeon schreibt Stuttgart, und sechs Leute liken das. Neun Stockwerke in einer Nacht."
+  },
+  {
+   "nr": 5,
+   "typ": "turm",
+   "kapitel": 2,
+   "start": 17.336,
+   "dauer": 6.278,
+   "emotion": "erzaehlend",
+   "text": "Gestern fehlten Stuttgart noch zwei Stockwerke. Heute liegt es sieben vor Hildesheim. Und Hildesheim baut seit zwei Tagen nicht mehr."
+  },
+  {
+   "nr": 6,
+   "typ": "turm",
+   "kapitel": 3,
+   "start": 23.614,
+   "dauer": 4.67,
+   "emotion": "erzaehlend",
+   "text": "Dann Bremen. Ganz neu dabei, und Lukas schreibt einfach sechsmal Bremen."
+  },
+  {
+   "nr": 7,
+   "typ": "turm",
+   "kapitel": 3,
+   "start": 28.284,
+   "dauer": 4.19,
+   "emotion": "erzaehlend",
+   "text": "Sechs Stockwerke. Genauso viele wie Hildesheim, das gestern noch vorne lag."
+  },
+  {
+   "nr": 8,
+   "typ": "turm",
+   "kapitel": 4,
+   "start": 32.474,
+   "dauer": 7.07,
+   "emotion": "erzaehlend",
+   "text": "Auch neu: Görlitz, Wermsdorf, Friedeburg und Bern, die erste Stadt aus der Schweiz. Jetzt bauen drei Länder mit."
+  },
+  {
+   "nr": 9,
+   "typ": "turm",
+   "kapitel": 5,
+   "start": 39.544,
+   "dauer": 5.99,
+   "emotion": "erzaehlend",
+   "text": "Die Rangliste nach Tag vier: Stuttgart vorne, Bremen und Hildesheim gleichauf, dahinter Freiburg und Hamm."
+  },
+  {
+   "nr": 10,
+   "typ": "turm",
+   "kapitel": 6,
+   "start": 45.534,
+   "dauer": 4.118,
+   "emotion": "erzaehlend",
+   "text": "Stuttgart steht bei neununddreißig Metern. Mehr als doppelt so hoch wie Hildesheim."
+  },
+  {
+   "nr": 11,
+   "typ": "turm",
+   "kapitel": 6,
+   "start": 49.652,
+   "dauer": 4.67,
+   "emotion": "erzaehlend",
+   "text": "Bis zu den Wolken fehlen trotzdem noch dreihundertzwanzig Stockwerke. Das schafft keine Stadt allein."
+  },
+  {
+   "nr": 12,
+   "typ": "turm",
+   "kapitel": 7,
+   "start": 54.322,
+   "dauer": 4.67,
+   "emotion": "erzaehlend",
+   "text": "Sieben Stockwerke Vorsprung. Ein Kommentar mit vielen Likes, und die Krone wechselt wieder."
+  },
+  {
+   "nr": 13,
+   "typ": "turm",
+   "kapitel": 7,
+   "start": 58.992,
+   "dauer": 4.934,
+   "emotion": "erzaehlend",
+   "text": "Deine Stadt ist noch nicht dabei? Dann kommentier sie jetzt. Jedes Like darauf baut ein Stockwerk mehr."
+  }
+ ]
+}

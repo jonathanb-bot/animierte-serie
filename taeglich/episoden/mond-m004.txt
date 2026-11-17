@@ -1,0 +1,54 @@
+# Bis zum Mond – Folge 4: Die neue Nummer eins
+@musik musik/mond-m004.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung aufbau
+@vortrag lebendig
+@klang studio
+@mund zitate
+@einblenden aus
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette tuerkis
+@zeit tag
+
+== Start ==
+// Wow-Bild zuerst: Stuttgart mit Krone, Hildesheim daneben klein
+[turm modus=feld stock_hoehe=2.5 palette=tuerkis palette_staerke=0.2 schilder="Stuttgart,Hildesheim" schild_px=34 krone="Stuttgart" krone_ab=0.8 tuerme="Hildesheim:6|Freiburg:4|Stuttgart:13|Leimersheim:2|Plauen:2|Rastatt:2|Ulm:2|Augsburg:1|Berlin:1|Ebensee:1|Freilassing:1|Hamm:3|Meuselwitz:1|Oldenburg:1|Ronnenberg:1|Baden-Baden:2|Bremen:6|Bern:2|Görlitz:2|Wermsdorf:2|Friedeburg:1" nah=1.45 blick=3.8,2.9 zoom-rein hooktext="TAG 4 · STUTTGART ÜBERHOLT" ein="einundzwanzig>#21 STÄDTE" ein_y=1200] Tag vier auf deinem Turmplatz. Einundzwanzig Städte, und oben steht eine neue Nummer eins.
+// Alles wächst, weiter weg
+[turm modus=feld stock_hoehe=2.5 palette=tuerkis palette_staerke=0.2 schilder="Stuttgart,Bremen" schild_px=34 tuerme="Hildesheim:6|Freiburg:3>4|Stuttgart:4>13|Leimersheim:2|Plauen:2|Rastatt:2|Ulm:2|Augsburg:1|Berlin:1|Ebensee:1|Freilassing:1|Hamm:3|Meuselwitz:1|Oldenburg:1|Ronnenberg:1|Baden-Baden:1>2|Bremen:0>6|Bern:0>2|Görlitz:0>2|Wermsdorf:0>2|Friedeburg:0>1" wachsen_dauer=2.6 nah=1.2 zoom-raus ein="sechsundfünfzig>#56 STOCKWERKE" ein_y=1150] Sechsundfünfzig Stockwerke. Gestern waren es einunddreißig.
+// Titelkarte
+[titel oben="Folge 4" gross="BIS ZUM MOND" unten="Die neue Nummer eins" farbe=#123a4a akzent=#7fe0e8 groesse=150 hud=false palette=tuerkis zoom-rein] Und an der Spitze ist alles anders.
+
+== Der Angriff ==
+// Nah auf Stuttgart, Leeons Kommentar
+[turm modus=feld stock_hoehe=2.5 palette=tuerkis palette_staerke=0.2 schilder="Stuttgart" schild_px=40 tuerme="Hildesheim:6|Freiburg:4|Stuttgart:4>13|Leimersheim:2|Plauen:2|Rastatt:2|Ulm:2|Augsburg:1|Berlin:1|Ebensee:1|Freilassing:1|Hamm:3|Meuselwitz:1|Oldenburg:1|Ronnenberg:1|Baden-Baden:2|Bremen:6|Bern:2|Görlitz:2|Wermsdorf:2|Friedeburg:1" wachsen_dauer=2.4 nah=1.5 blick=4.6,2.4 markiere=4,3 grundstein=0 zoom-rein kommentar="@leeon_112|Stuttgart|6" kommentar_y=1200 ein="sechs>#6 LIKES>herz" ein_y=1010] Stuttgart! Leeon schreibt Stuttgart, und sechs Leute liken das. Neun Stockwerke in einer Nacht.
+// Das Duell: Stuttgart zieht vorbei
+[turm modus=duell duell="Hildesheim#0:6|Stuttgart#2:4>13" zeit=abend titel_text="ÜBERHOLT" wachsen_dauer=2 palette=tuerkis palette_staerke=0.15 zoom-rein] Gestern fehlten Stuttgart noch zwei Stockwerke. Heute liegt es sieben vor Hildesheim. Und Hildesheim baut seit zwei Tagen nicht mehr.
+
+== Der Neue ==
+// Bremen, ganz neu am Rand
+[turm modus=feld stock_hoehe=2.5 palette=tuerkis palette_staerke=0.2 schilder="Bremen" schild_px=40 tuerme="Hildesheim:6|Freiburg:4|Stuttgart:13|Leimersheim:2|Plauen:2|Rastatt:2|Ulm:2|Augsburg:1|Berlin:1|Ebensee:1|Freilassing:1|Hamm:3|Meuselwitz:1|Oldenburg:1|Ronnenberg:1|Baden-Baden:2|Bremen:0>6|Bern:2|Görlitz:2|Wermsdorf:2|Friedeburg:1" wachsen_dauer=2.2 nah=2.4 blick=1,3 markiere=1,3 grundstein=0 schwenk-rechts kommentar="@LukasGradert-q7y|Bremen|0" kommentar_y=1200 ein="sechsmal>#6 KOMMENTARE" ein_y=420] Dann Bremen. Ganz neu dabei, und Lukas schreibt einfach sechsmal Bremen.
+// Bremen gegen Hildesheim
+[turm modus=duell duell="Hildesheim#0:6|Bremen#16:0>6" zeit=tag titel_text="GLEICHSTAND" wachsen_dauer=2 palette=tuerkis palette_staerke=0.15 zoom-rein] Sechs Stockwerke. Genauso viele wie Hildesheim, das gestern noch vorne lag.
+
+== Neu dabei ==
+// Die neuen Städte am Rand
+[turm modus=feld stock_hoehe=2.5 palette=tuerkis palette_staerke=0.2 schilder="Bern,Görlitz,Wermsdorf,Friedeburg" schild_px=34 tuerme="Hildesheim:6|Freiburg:4|Stuttgart:13|Leimersheim:2|Plauen:2|Rastatt:2|Ulm:2|Augsburg:1|Berlin:1|Ebensee:1|Freilassing:1|Hamm:3|Meuselwitz:1|Oldenburg:1|Ronnenberg:1|Baden-Baden:2|Bremen:6|Bern:0>2|Görlitz:0>2|Wermsdorf:0>2|Friedeburg:0>1" wachsen_dauer=2 nah=1.25 blick=3,3.3 schwenk-links ein="Bern>SCHWEIZ DABEI|drei>#3 LÄNDER"] Auch neu: Görlitz, Wermsdorf, Friedeburg und Bern, die erste Stadt aus der Schweiz. Jetzt bauen drei Länder mit.
+
+== Die Rangliste ==
+[turm modus=rangliste rangliste="Stuttgart#2:4>13|Bremen#16:0>6|Hildesheim#0:6>6|Freiburg#1:3>4|Hamm#11:3>3" ziel=333 ziel_name=Wolken titel_text="TAG 4" palette=tuerkis palette_staerke=0.2 zoom-rein] Die Rangliste nach Tag vier: Stuttgart vorne, Bremen und Hildesheim gleichauf, dahinter Freiburg und Hamm.
+
+== Bis zu den Wolken ==
+// Fahrt am Turm von Stuttgart hoch
+[turm modus=hoehe hoehe=0>39 stadt="Stuttgart" farbe=#f2c14e palette=tuerkis palette_staerke=0.2 kamera=ruhig ein="neununddreißig>#39 METER"] Stuttgart steht bei neununddreißig Metern. Mehr als doppelt so hoch wie Hildesheim.
+// Weiter bis zu den Wolken
+[turm modus=hoehe hoehe=39>1000 stadt="Stuttgart" farbe=#f2c14e palette=tuerkis palette_staerke=0.2 kamera=ruhig ein="dreihundertzwanzig>NOCH #320 STOCKWERKE"] Bis zu den Wolken fehlen trotzdem noch dreihundertzwanzig Stockwerke. Das schafft keine Stadt allein.
+
+== Das Rennen ==
+// Der ganze Platz am Abend, Krone auf Stuttgart
+[turm modus=feld stock_hoehe=2.5 palette=orange palette_staerke=0.2 schilder="Stuttgart,Bremen,Hildesheim" schild_px=34 krone="Stuttgart" krone_ab=0.3 zeit=abend tuerme="Hildesheim:6|Freiburg:4|Stuttgart:13|Leimersheim:2|Plauen:2|Rastatt:2|Ulm:2|Augsburg:1|Berlin:1|Ebensee:1|Freilassing:1|Hamm:3|Meuselwitz:1|Oldenburg:1|Ronnenberg:1|Baden-Baden:2|Bremen:6|Bern:2|Görlitz:2|Wermsdorf:2|Friedeburg:1" nah=1.3 zoom-raus ein="Sieben>#7 VORSPRUNG" ein_y=1150] Sieben Stockwerke Vorsprung. Ein Kommentar mit vielen Likes, und die Krone wechselt wieder.
+// Nah auf den nächsten freien Platz
+[turm modus=feld stock_hoehe=2.5 palette=orange palette_staerke=0.2 schilder="-" schild_px=40 zeit=abend tuerme="Hildesheim:6|Freiburg:4|Stuttgart:13|Leimersheim:2|Plauen:2|Rastatt:2|Ulm:2|Augsburg:1|Berlin:1|Ebensee:1|Freilassing:1|Hamm:3|Meuselwitz:1|Oldenburg:1|Ronnenberg:1|Baden-Baden:2|Bremen:6|Bern:2|Görlitz:2|Wermsdorf:2|Friedeburg:1" nah=2.4 blick=4,6 markiere=4,6 leer="Deine Stadt?" leer_zeigen=1 zoom-rein] Deine Stadt ist noch nicht dabei? Dann kommentier sie jetzt. Jedes Like darauf baut ein Stockwerk mehr.
