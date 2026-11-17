@@ -1,0 +1,114 @@
+# You Wake Up and You're the LAST Person in Your City
+@format quer
+@musik musik/quer-q01-en.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung spannend
+@vortrag lebendig
+@klang studio
+@mund zitate
+@einblenden aus
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette tuerkis
+@zeit morgen
+@sprache en
+
+== Minute 0 ==
+// Wow-Bild zum Einstieg: leere Stadt im Morgenlicht, du klein in der Mitte
+[grossstadt zeit=tag du palette=tuerkis zoom-rein hooktext="YOU ARE THE LAST PERSON" ton=wind] Usually, the noise of the street wakes you up. Today, it's the silence.
+[zimmer im_bett=du licht=aus palette=tuerkis zoom-rein ein="Seven>7:12 AM>wecker"] Seven twelve. Your alarm didn't go off. No bus, no honking, no neighbor stomping down the stairs.
+[handy ort=zimmer netz=1 akku=64 uhrzeit="7:12" von="No notifications" nachricht="You're all caught up" palette=tuerkis ein="Zero>0 MESSAGES>handy"] You grab your phone. Zero messages. Not even the family chat, where your mom always sends the weather forecast by seven.
+[zimmer du licht=aus palette=tuerkis schwenk-rechts] You walk to the window. Down on the street, a car sits with its wipers still running. But nobody is behind the wheel.
+[gesicht du ort=zimmer neugierig palette=tuerkis] You call out for her. “Mom?” No answer.
+[kueche du palette=orange schwenk-rechts ein="coffee>COFFEE STILL WARM>tasse"] In the kitchen, her mug is on the table. The coffee is still warm. Next to it, her keys. Her jacket is hanging by the door.
+[gesicht du ort=kueche besorgt palette=orange] Your mom never goes anywhere without her keys. Ever.
+[wohnzimmer du licht=aus palette=orange zoom-raus ton=stille_raum] The TV in the living room is still on. But every channel shows a frozen picture. No host, no commercials, nothing.
+[gesicht du ort=wohnzimmer besorgt palette=orange] You knock on the neighbors' door. Mrs. Kessler, who vacuums every morning at seven. The door is open a crack. Her apartment is empty.
+[titel oben="What if …" gross="… YOU WERE ALONE?" unten="14 days. One city. Just you." farbe=#0a1a30 akzent=#7fe0d8 groesse=130 hud=false zoom-rein] What you're about to live through in the next fourteen days, no human has ever lived through. And at the end, you'll find out why you, of all people, are the one who's left.
+
+== Stunde 1 ==
+[titel oben="Day 1" gross="8:20 AM" unten="one hour alone" farbe=#0a1a30 akzent=#7fe0d8 groesse=170 hud=false zoom-rein] Eight twenty.
+[grossstadt zeit=tag du palette=tuerkis schwenk-links ton=wind] You step outside. The traffic lights dutifully switch from red to green. For no one.
+[grossstadt zeit=tag du palette=tuerkis zoom-rein ein="soul>0 PEOPLE>auge"] You walk the whole length of Main Street. Not a soul. No joggers, no delivery guys, no kids on their way to school.
+[kreuzung du zeit=tag palette=tuerkis zoom-raus ein="bus>0 CARS>pfeil"] In the middle of the intersection sits a bus. Doors open, engine off. No driver. No passengers.
+[gesicht du ort=kreuzung zeit=tag angst palette=tuerkis] No crash. No chaos. It looks like every single person simply stopped existing in the same second.
+[handy ort=kreuzung netz=1 akku=61 uhrzeit="8:31" von="Grandpa" nachricht="Calling … no answer" palette=tuerkis ton=handy_vibration ein="grandpa>GRANDPA DOESN'T ANSWER>telefon_alt"] You call your grandpa. He always picks up, even at the dentist. Today it just rings and rings.
+[handy ort=kreuzung netz=1 akku=60 uhrzeit="8:34" von="911" nachricht="Calling …" palette=tuerkis ein="nine>911 – NO ANSWER>telefon_alt"] You dial nine one one. It rings ten times, twenty times. There's nobody left at the dispatch center to answer.
+[gesicht du ort=kreuzung zeit=tag angst palette=tuerkis] That's the moment you feel cold for the first time. In the middle of summer.
+[supermarkt du palette=orange zoom-rein] In the grocery store on the corner, the radio is still playing. A song about summer. The registers are empty, the shopping carts left in the middle of the aisle.
+[supermarkt du palette=orange schwenk-rechts ein="register>REGISTER OPEN>geld"] One register is open. You could take everything.
+[supermarkt du palette=orange zoom-raus] But you just stand there and listen to the song, because it's the only sound in the entire city.
+[gesicht du ort=supermarkt traurig palette=orange] Then the song ends. And after that, there's only static.
+
+== Stunde 6 ==
+[titel oben="Day 1" gross="1:40 PM" unten="six hours alone" farbe=#0a1a30 akzent=#7fe0d8 groesse=170 hud=false zoom-rein] One forty P M.
+[bahnhof du palette=tuerkis zoom-raus ein="train>NEXT TRAIN: —>uhr"] At the train station, the board still shows this morning's departures. Not a single train has left. The big clock keeps ticking anyway.
+[bahnhof du palette=tuerkis schwenk-links] You scream. As loud as you can. Your echo comes back three times. Nothing else.
+[krankenhaus palette=tuerkis zoom-raus ein="hospital>HOSPITAL EMPTY>kreuz"] You run to the hospital. If there are people anywhere, it's there. The beds are made, the monitors are beeping. But nobody is lying in them.
+[gesicht du ort=krankenhaus traurig palette=tuerkis] On a nightstand lies a half-finished crossword. The pen is still resting across the last word.
+[handy ort=bahnhof netz=1 akku=48 uhrzeit="1:52" von="You to everyone" nachricht="Is anyone there? Please answer." palette=tuerkis] You post in every group chat you have. Class, soccer, family. Is anyone there? Please answer.
+[gesicht du ort=bahnhof besorgt palette=tuerkis] The message goes out. But not a single check mark turns blue.
+[grossstadt zeit=abend du palette=orange zoom-raus] What you don't know yet: the cell network won't last forever. Many cell towers only have batteries for a few hours.
+[grossstadt zeit=abend du palette=orange zoom-rein ein="batteries>BACKUP POWER: HOURS>batterie"] With no one watching the power plants, their reserves run out one after another.
+[grossstadt zeit=nacht du palette=blau zoom-rein ton=stromausfall stromlos] At ten P M, the first neighborhood goes dark. Then the next one. Like a wave of darkness rolling toward you.
+[zimmer du licht=aus palette=blau zoom-rein] You lie in bed and count the windows across the street. Not a single light.
+[gesicht du ort=zimmer zeit=nacht traurig palette=blau] For the first time in your life, it's so quiet you can hear your own heartbeat.
+
+== Tag 2 ==
+[titel oben="Day 2" gross="NO POWER" unten="no signal · no internet" farbe=#0a1a30 akzent=#7fe0d8 groesse=150 hud=false zoom-rein] Day two.
+[handy ort=zimmer netz=0 akku=19 uhrzeit="9:03" von="System" nachricht="No service" palette=tuerkis ton=kein_netz ein="signal>NO SIGNAL>handy_netz0"] No signal anymore. Your phone is now just a clock with photos.
+[kueche du palette=orange zoom-rein ein="four>4 HOURS IN THE FRIDGE>uhr"] The fridge has gone silent. Without power, food inside only stays safely cold for about four hours, if you keep the door shut. You've opened it ten times.
+[kueche du palette=orange schwenk-rechts] You start sorting. Canned food, pasta, crackers, peanut butter. Things that won't go bad.
+[supermarkt du palette=orange zoom-raus ein="years>CANS: YEARS>dose"] Canned food lasts for years. Fresh bread gets moldy in about a week. Suddenly you understand why your grandpa always kept a shelf full of cans in the basement.
+[gesicht du ort=supermarkt froh palette=orange] You used to make fun of him. Now you'd give anything to tell him you're sorry.
+[wohnzimmer du licht=aus palette=orange zoom-rein ein="Water>WATER RUNNING LOW>wasserflasche"] By evening, the faucet only gives a thin trickle. Water pumps need power. Without power, the pressure drops.
+[kueche du palette=orange zoom-rein] To cook, you use the old camping stove from last summer's vacation. Pasta with tomato sauce from a can.
+[kueche du palette=orange schwenk-rechts ein="camping>CAMPING STOVE>kocher"] It tastes just like that time at the lake, only without your family's voices.
+[wohnzimmer du licht=aus palette=orange schwenk-links] You fill every bottle, every pot, and the bathtub. Mom would have done that first.
+
+== Tag 5 ==
+[titel oben="Day 5" gross="THE CITY IS CHANGING" unten="" farbe=#0a1a30 akzent=#7fe0d8 groesse=110 hud=false zoom-rein] Day five.
+[park du jahreszeit=herbst palette=gruen zoom-raus ton=wind] The city starts to change. In the park, deer walk across the grass like it's always been their home.
+[park du jahreszeit=herbst palette=gruen schwenk-rechts ein="Dogs>DOGS IN PACKS>hund"] Dogs that nobody feeds anymore roam the streets in small packs. They're not mean. They're just hungry. Just like you.
+[gesicht du ort=park angst palette=gruen] Now you only go out during the day. And you never leave without a bag of dog food.
+[dach du palette=orange zoom-raus] From the roof of your building, you can see far on a clear day. You look for smoke.
+[dach du palette=orange zoom-rein ein="far>UP TO 20 MILES VIEW>auge"] For light. For any sign that someone else is still out there.
+[skyline palette=orange zoom-raus] Nothing. Just rooftops, cranes, and a sky that looks strangely empty without airplanes.
+[zimmer du licht=aus palette=blau zoom-rein] At night, you write in a journal. Not for yourself. For whoever might find it one day.
+[grossstadt zeit=nacht du palette=blau zoom-raus ein="stars>MILKY WAY VISIBLE>auge" stromlos] Without streetlights, you see the Milky Way above the city for the very first time. Thousands of stars that were always there.
+[grossstadt zeit=nacht du palette=blau zoom-rein stromlos] You just couldn't see them, because all the lights were on.
+[gesicht du ort=zimmer zeit=nacht traurig palette=blau] Day five. Today I talked out loud to myself. For two hours. I think that's normal when you're alone. I hope.
+
+== Tag 9 ==
+[titel oben="Day 9" gross="A SIGN" unten="" farbe=#0a1a30 akzent=#7fe0d8 groesse=150 hud=false zoom-rein] Day nine.
+[wohnzimmer du licht=aus palette=orange zoom-rein ein="radio>HAND-CRANK RADIO>funkgeraet"] In your grandpa's closet, you find an old hand-crank radio. No power needed. You turn the crank until your arm burns.
+[gesicht du ort=wohnzimmer neugierig palette=orange ton=funk_rauschen] Static on every station. You keep turning, slowly. Millimeter by millimeter.
+[wohnzimmer du licht=aus palette=orange zoom-rein ein="ninety>91.4 MHZ>funkgeraet"] At ninety-one point four, you hear it. Very faint. A knocking. Three short. Three long. Three short.
+[gesicht du ort=wohnzimmer schreck palette=orange] You hold your breath. The knocking stops. Then it starts all over again. Always the same. Always the same rhythm.
+[titel oben="Morse code" gross="··· ––– ···" unten="SOS" farbe=#0a1a30 akzent=#ffcf7a groesse=150 hud=false zoom-rein] That's not random. That's a person.
+[gesicht du ort=wohnzimmer froh palette=orange] You laugh. And you cry. Both at the same time. After nine days of silence, the most beautiful sound in the world is a knocking on the radio.
+[dach du palette=blau zoom-raus ein="flashlight>SIGNAL BACK>taschenlampe"] You run up to the roof and flash your flashlight into the night. Three short. Three long. Three short.
+[skyline palette=blau zoom-rein] For a long time, nothing happens. Then, far away, at the TV tower, a light flashes back.
+
+== Tag 14 ==
+[titel oben="Day 14" gross="THE TV TOWER" unten="7 miles" farbe=#0a1a30 akzent=#7fe0d8 groesse=140 hud=false zoom-rein] Day fourteen.
+[grossstadt zeit=morgen du palette=tuerkis zoom-raus ein="Seven>#7 MILES>pfeil"] For five nights, you've been sending each other signals. Now you set out. Seven miles through a city that belongs to you alone.
+[kreuzung du zeit=tag palette=tuerkis schwenk-rechts] Past your school. Past the movie theater where you and your best friend watched every single movie, no matter how bad.
+[gesicht du ort=kreuzung zeit=tag besorgt palette=tuerkis] What if it's a trap? What if nobody's up there and the light was just a broken machine?
+[park du jahreszeit=herbst palette=gruen zoom-raus] In the park, a dog comes toward you. It doesn't growl.
+[park du jahreszeit=herbst palette=gruen zoom-rein] It just walks next to you, as if it also decided it didn't want to be alone anymore.
+[skyline palette=orange zoom-rein ein="stairs>368 STEPS>treppe"] At the foot of the tower, the door is open. You climb the stairs. Step by step. Your breathing is the loudest thing in the whole tower.
+[grossstadt zeit=abend du ben palette=orange zoom-rein stromlos] At the top, by the window, someone is standing with a flashlight in hand. He turns around.
+[gesicht ben ort=grossstadt zeit=abend stromlos froh palette=orange] It's your best friend, Ben. Skinny, unwashed, with exactly the crooked grin you've missed so much.
+[gesicht ben ort=grossstadt zeit=abend stromlos froh palette=orange] “You seriously needed five days to walk seven miles?”
+[gesicht du ort=grossstadt zeit=abend stromlos froh palette=orange] You laugh so hard it echoes through the whole tower.
+[grossstadt zeit=abend du ben palette=orange zoom-raus ein="Ben>#2 PEOPLE>herz" stromlos] Ben has a journal too. His coffee was still warm too. His family was just gone too. And he also sat by the radio every night.
+[gesicht du ort=grossstadt zeit=abend stromlos denkt palette=orange] And then you realize why the two of you are the ones left. The night before everyone vanished, neither of you slept.
+[gesicht du ort=grossstadt zeit=abend stromlos denkt palette=orange] You were on the phone until four in the morning. Talking about nothing. About everything.
+[polarlicht du ben palette=tuerkis zoom-raus] Whatever happened that night, it took everyone who was asleep.
+[polarlicht du ben palette=tuerkis zoom-rein] Everyone except the two who stayed awake because they had something to tell each other.
+[grossstadt zeit=nacht du ben palette=blau zoom-raus stromlos] Two people in a city built for a million. Tomorrow, you start looking for the others.
+[grossstadt zeit=nacht du ben palette=blau zoom-rein stromlos] But tonight, for the first time in fourteen days, you're not alone.

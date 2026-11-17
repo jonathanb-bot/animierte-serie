@@ -148,7 +148,7 @@
   // GROSSSTADT – Stadt mit Tiefe: Skyline-Schichten, Nebel, leuchtende Fenster, Lichtspuren (dach: Figuren auf einem Dach vorne)
   // =====================================================================
   SZ.grossstadt = (s, t) => {
-    const zeit = zeitVon(s), nacht = zeit === "nacht", hc = HIMMEL[zeit], abends = nacht || zeit === "abend";
+    const zeit = zeitVon(s), nacht = zeit === "nacht", hc = HIMMEL[zeit], abends = (nacht || zeit === "abend") && !s.stromlos; // stromlos: keine Fenster/Laternen (Querformat q01, 17.11.)
     ctx.fillStyle = lgrad(0, -600, 0, 1300, [[0, hc[0]], [1, hc[1]]]); ctx.fillRect(-1500, -1500, 4080, 3200);
     if (nacht) {
       sterne(80, 3, t, -900, -900, 2900, 1500);
