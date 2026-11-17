@@ -787,7 +787,7 @@
       if (s.baum) { const bx = 560, by = 1400; ctx.beginPath(); ctx.moveTo(bx - 40, by); ctx.bezierCurveTo(bx - 60, by - 200, bx + 90, by - 300, bx + 30, by - 520); ctx.lineTo(bx + 70, by - 520); ctx.bezierCurveTo(bx + 140, by - 300, bx, by - 200, bx + 40, by); ctx.closePath(); ctx.fillStyle = "#6a4230"; ctx.fill();
         line(bx + 50, by - 400, bx - 120, by - 560, 22, "#6a4230"); line(bx + 50, by - 470, bx + 220, by - 600, 18, "#6a4230");
         const r = rnd(671); for (let i = 0; i < 16; i++) { const x = bx + 40 + (r() - 0.5) * 520, y = by - 600 + (r() - 0.5) * 260; circle(x + Math.sin(t + i) * 4, y, 70 + r() * 50, i % 3 ? "#3fa86a" : "#5ac884"); }
-        glut(bx + 40, by - 620, 360, "#b8ffb0", 0.25); if (s.markierung) { line(bx - 140, by - 720, bx + 240, by - 720, 8, "#ffffff"); A.text("2,40 m", bx + 260, by - 720, 40, "#ffffff", "left", 800); } }
+        glut(bx + 40, by - 620, 360, "#b8ffb0", 0.25); if (s.markierung) { line(bx - 140, by - 720, bx + 240, by - 720, 8, "#ffffff"); A.text(A.sprache === "en" ? "2.40 m" : "2,40 m", bx + 260, by - 720, 40, "#ffffff", "left", 800); } }
       if (s.bett && z < 0.4) { box(-40, 1300, 470, 210, 30, "#4a5aa8"); box(-40, 1300, 470, 60, 26, "#f6eedc"); box(-20, 1250, 160, 80, 30, "#ffffff"); for (let k = 0; k < 5; k++) circle(60 + k * 80, 1420, 12, rgba("#f2c23a", 0.8)); }
       if (s.tisch) { const tx = 640, ty = 1520; ellipse(tx, ty + 210, 300, 30, rgba("#000000", 0.35)); box(tx - 300, ty, 600, 40, 14, "#a8683a"); box(tx - 300, ty, 600, 10, 5, rgba("#ffffff", 0.18)); for (const dx of [-260, 240]) box(tx + dx, ty + 36, 22, 180, 6, "#7a4a2a");
         if (s.kratzer) for (let k = 0; k < 4; k++) line(tx - 200 + k * 24, ty + 18, tx - 170 + k * 24, ty + 8, 3, "#5a3218");
@@ -837,7 +837,7 @@
     messband(t) { ctx.save(); ctx.rotate(-0.12); box(-200, -40, 400, 80, 10, "#f2c23a"); box(-200, -40, 400, 14, 6, A.rgba("#ffffff", 0.3));
       for (let k = 0; k < 7; k++) { const x = -170 + k * 55; line(x, -30, x, 26, 6, "#5a3218"); A.text(String(3 + k), x, -54, 26, "#fff2c8", "center", 800); }
       ctx.beginPath(); ctx.arc(230, 0, 60, 0, Math.PI * 2); A.fill("#d8a830"); circle(230, 0, 22, "#8a6a1a"); ctx.restore(); },
-    saatgut(t) { ctx.save(); ctx.rotate(0.06); box(-110, -150, 220, 300, 14, "#e8dcc0"); box(-110, -150, 220, 70, 14, "#3fb87a"); A.text("SAAT", 0, -114, 40, "#ffffff", "center", 900);
+    saatgut(t) { ctx.save(); ctx.rotate(0.06); box(-110, -150, 220, 300, 14, "#e8dcc0"); box(-110, -150, 220, 70, 14, "#3fb87a"); circle(-50, -115, 12, "#ffffff"); circle(0, -115, 12, "#ffffff"); circle(50, -115, 12, "#ffffff");
       ctx.save(); ctx.translate(0, 30); line(0, 60, 0, -20, 8, "#2f8a4a"); ellipse(-30, -24, 34, 14, "#5ad08a"); ellipse(30, -40, 34, 14, "#3fb87a"); ctx.restore();
       for (let k = 0; k < 5; k++) ellipse(-60 + k * 30, 118, 8, 5, "#8a5a2a"); ctx.restore(); },
     kiste(t) { box(-170, -90, 340, 200, 14, "#a8743a"); box(-180, -120, 360, 60, 14, "#c08a4a"); for (const x of [-120, 120]) box(x - 14, -120, 28, 230, 6, "#6a4420");
