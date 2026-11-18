@@ -24,6 +24,7 @@ Jede Stadt bekommt einen Bauplatz auf einem schwebenden Turmplatz. Die Zuschauer
 - `[turm modus=hoehe hoehe=von>bis stadt="…" farbe=#…]` – Kamerafahrt am Turm hoch (logarithmisch, Wolken, Ballon, Flugzeug, Everest, Raumstation, Satellit, Mond), Höhenanzeige in Metern und Stockwerken.
 - `[turm modus=ziele]` – Zielkarte.
 - `[turm modus=duell duell="Hildesheim#0:6|Stuttgart#2:3>4" zeit=abend titel_text="DAS DUELL"]` – (neu 16.11., Folge 3) zwei Türme groß nebeneinander, Abstand als Klammer mit „−2 Stockwerke“, Tafeln mit Name und Zahl unter den Untertiteln.
+- `land="Suceava:RO|Bern:CH|Ebensee:AT"` – (neu 18.11., Folge 5) kleine Landesflagge auf den Schildern im Feld, auf den Duell-Tafeln und in der Rangliste (DE, AT, CH, RO, IT, FR, NL, PL). Bei hohen Türmen `stock_hoehe=0.7` und den Blickpunkt so wählen, dass der Hook-Text oben frei bleibt.
 - `[turm modus=rangliste rangliste="München#0:12>41|Wien#1:30" ziel=333 ziel_name=Wolken]` – Rangliste (Top 5) mit Balken bis zum nächsten Ziel; `#n` = fester Platz, gleiche Farbe wie der Turm.
 
 ## Zählen und täglicher Lauf
