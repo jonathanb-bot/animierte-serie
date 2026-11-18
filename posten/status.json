@@ -9595,5 +9595,35 @@
   "konto": "storys4you_eng",
   "http": 201,
   "am": "2026-11-18T02:33:10.583Z"
+ },
+ "taeglich-tiktok-m005": {
+  "ok": true,
+  "zeit": "2026-11-18T22:24:00",
+  "zernioId": "6afdd6ce6d1ddc8e2bf7356d",
+  "yt": false,
+  "k": 0,
+  "konto": "storys4you.de1",
+  "http": 201,
+  "am": "2026-11-18T16:48:14.353Z"
+ },
+ "taeglich-insta-m005": {
+  "ok": true,
+  "zeit": "2026-11-18T22:18:00",
+  "zernioId": "6afdd6d06422a431b197d412",
+  "yt": false,
+  "k": 0,
+  "konto": "sto.rys4you",
+  "http": 201,
+  "am": "2026-11-18T16:48:17.090Z"
+ },
+ "taeglich-yt-m005": {
+  "ok": true,
+  "zeit": "2026-11-18T22:15:00",
+  "zernioId": "6afdd6d32087f03c54b6a265",
+  "yt": true,
+  "k": 1,
+  "konto": "sto.rys4you",
+  "http": 201,
+  "am": "2026-11-18T16:48:19.766Z"
  }
 }
