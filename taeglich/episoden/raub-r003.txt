@@ -17,7 +17,7 @@
 // Abstimmung Folge 2 (Lauf 18.11., Kommentare Stand 2026-11-18T15:49:49Z): kein Kommentar unter den drei Posts → KEINE Entscheidung (Bibel): du zögerst wieder, Voss nutzt die Zeit. Kein „Ihr habt … gewählt“.
 == Die Frist ==
 // Hook: Karos Frist ist abgelaufen, alle schauen dich an
-[versteck jona mara karo r_du hinten=r_du figur_y=1530 skala_figur=1.15 palette=orange palette_staerke=0.15 zoom-rein ton=regen hooktext="KAROS FRIST IST UM" ein="Jacke>FOTO IN DER JACKE" ein_y=430] Karos Frist ist abgelaufen. Das Foto steckt immer noch in deiner Jacke. Und wieder sagst du nichts.
+[versteck jona mara karo r_du hinten=r_du figur_y=1530 skala_figur=1.15 palette=orange palette_staerke=0.15 zoom-rein ton=regen hooktext="FRIST VORBEI" ein="Jacke>FOTO IN DER JACKE" ein_y=430] Karos Frist ist abgelaufen. Das Foto steckt immer noch in deiner Jacke. Und wieder sagst du nichts.
 // Karo, Nahaufnahme: sie stellt ihre Tasche an die Tür
 [gesicht karo entschlossen ort=versteck palette=orange palette_staerke=0.15 zoom-rein] Karo stellt ihre Tasche neben die Tür. „Ich zähle Köpfe, keine Ausreden.“
 // Jona, Nahaufnahme: das Handy liegt wieder verdeckt
