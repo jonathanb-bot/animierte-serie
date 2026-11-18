@@ -111,4 +111,4 @@
 [polarlicht du ben palette=tuerkis zoom-raus] Whatever happened that night, it took everyone who was asleep.
 [polarlicht du ben palette=tuerkis zoom-rein] Everyone except the two who stayed awake because they had something to tell each other.
 [grossstadt zeit=nacht du ben palette=blau zoom-raus stromlos] Two people in a city built for a million. Tomorrow, you start looking for the others.
-[grossstadt zeit=nacht du ben palette=blau zoom-rein stromlos] But tonight, for the first time in fourteen days, you're not alone.
+[grossstadt zeit=nacht du ben palette=blau zoom-rein stromlos dauer=9.5] But tonight, for the first time in fourteen days, you're not alone.
