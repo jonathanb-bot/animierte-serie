@@ -1,8 +1,8 @@
 # You Wake Up and You're the LAST Person in Your City
-@format quer
 @musik musik/quer-q01-en.mp3
 @musik_lautstaerke 1
 @whoosh aus
+@format quer
 @stimmung spannend
 @vortrag lebendig
 @klang studio

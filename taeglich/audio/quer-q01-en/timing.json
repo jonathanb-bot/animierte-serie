@@ -1,0 +1,743 @@
+{
+ "dauer": 481.988,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "grossstadt",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 5.894,
+   "emotion": "erzaehlend",
+   "text": "Usually, the noise of the street wakes you up. Today, it's the silence."
+  },
+  {
+   "nr": 2,
+   "typ": "zimmer",
+   "kapitel": 1,
+   "start": 5.894,
+   "dauer": 7.934,
+   "emotion": "erzaehlend",
+   "text": "Seven twelve. Your alarm didn't go off. No bus, no honking, no neighbor stomping down the stairs."
+  },
+  {
+   "nr": 3,
+   "typ": "handy",
+   "kapitel": 1,
+   "start": 13.828,
+   "dauer": 7.838,
+   "emotion": "erzaehlend",
+   "text": "You grab your phone. Zero messages. Not even the family chat, where your mom always sends the weather forecast by seven."
+  },
+  {
+   "nr": 4,
+   "typ": "zimmer",
+   "kapitel": 1,
+   "start": 21.666,
+   "dauer": 7.454,
+   "emotion": "erzaehlend",
+   "text": "You walk to the window. Down on the street, a car sits with its wipers still running. But nobody is behind the wheel."
+  },
+  {
+   "nr": 5,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 29.12,
+   "dauer": 3.59,
+   "emotion": "erzaehlend",
+   "text": "You call out for her. “Mom?” No answer."
+  },
+  {
+   "nr": 6,
+   "typ": "kueche",
+   "kapitel": 1,
+   "start": 32.71,
+   "dauer": 8.15,
+   "emotion": "erzaehlend",
+   "text": "In the kitchen, her mug is on the table. The coffee is still warm. Next to it, her keys. Her jacket is hanging by the door."
+  },
+  {
+   "nr": 7,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 40.86,
+   "dauer": 3.782,
+   "emotion": "ernst",
+   "text": "Your mom never goes anywhere without her keys. Ever."
+  },
+  {
+   "nr": 8,
+   "typ": "wohnzimmer",
+   "kapitel": 1,
+   "start": 44.642,
+   "dauer": 8.51,
+   "emotion": "erzaehlend",
+   "text": "The TV in the living room is still on. But every channel shows a frozen picture. No host, no commercials, nothing."
+  },
+  {
+   "nr": 9,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 53.152,
+   "dauer": 8.75,
+   "emotion": "ernst",
+   "text": "You knock on the neighbors' door. Mrs. Kessler, who vacuums every morning at seven. The door is open a crack. Her apartment is empty."
+  },
+  {
+   "nr": 10,
+   "typ": "titel",
+   "kapitel": 1,
+   "start": 61.902,
+   "dauer": 10.574,
+   "emotion": "erzaehlend",
+   "text": "What you're about to live through in the next fourteen days, no human has ever lived through. And at the end, you'll find out why you, of all people, are the one who's left."
+  },
+  {
+   "nr": 11,
+   "typ": "titel",
+   "kapitel": 2,
+   "start": 72.476,
+   "dauer": 1.238,
+   "emotion": "erzaehlend",
+   "text": "Eight twenty."
+  },
+  {
+   "nr": 12,
+   "typ": "grossstadt",
+   "kapitel": 2,
+   "start": 73.714,
+   "dauer": 5.918,
+   "emotion": "erzaehlend",
+   "text": "You step outside. The traffic lights dutifully switch from red to green. For no one."
+  },
+  {
+   "nr": 13,
+   "typ": "grossstadt",
+   "kapitel": 2,
+   "start": 79.632,
+   "dauer": 7.982,
+   "emotion": "erzaehlend",
+   "text": "You walk the whole length of Main Street. Not a soul. No joggers, no delivery guys, no kids on their way to school."
+  },
+  {
+   "nr": 14,
+   "typ": "kreuzung",
+   "kapitel": 2,
+   "start": 87.614,
+   "dauer": 7.094,
+   "emotion": "erzaehlend",
+   "text": "In the middle of the intersection sits a bus. Doors open, engine off. No driver. No passengers."
+  },
+  {
+   "nr": 15,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 94.708,
+   "dauer": 6.926,
+   "emotion": "spannend",
+   "text": "No crash. No chaos. It looks like every single person simply stopped existing in the same second."
+  },
+  {
+   "nr": 16,
+   "typ": "handy",
+   "kapitel": 2,
+   "start": 101.634,
+   "dauer": 6.782,
+   "emotion": "erzaehlend",
+   "text": "You call your grandpa. He always picks up, even at the dentist. Today it just rings and rings."
+  },
+  {
+   "nr": 17,
+   "typ": "handy",
+   "kapitel": 2,
+   "start": 108.416,
+   "dauer": 7.046,
+   "emotion": "erzaehlend",
+   "text": "You dial nine one one. It rings ten times, twenty times. There's nobody left at the dispatch center to answer."
+  },
+  {
+   "nr": 18,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 115.462,
+   "dauer": 3.806,
+   "emotion": "spannend",
+   "text": "That's the moment you feel cold for the first time. In the middle of summer."
+  },
+  {
+   "nr": 19,
+   "typ": "supermarkt",
+   "kapitel": 2,
+   "start": 119.268,
+   "dauer": 8.87,
+   "emotion": "erzaehlend",
+   "text": "In the grocery store on the corner, the radio is still playing. A song about summer. The registers are empty, the shopping carts left in the middle of the aisle."
+  },
+  {
+   "nr": 20,
+   "typ": "supermarkt",
+   "kapitel": 2,
+   "start": 128.138,
+   "dauer": 3.422,
+   "emotion": "erzaehlend",
+   "text": "One register is open. You could take everything."
+  },
+  {
+   "nr": 21,
+   "typ": "supermarkt",
+   "kapitel": 2,
+   "start": 131.56,
+   "dauer": 5.51,
+   "emotion": "erzaehlend",
+   "text": "But you just stand there and listen to the song, because it's the only sound in the entire city."
+  },
+  {
+   "nr": 22,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 137.07,
+   "dauer": 3.734,
+   "emotion": "traurig",
+   "text": "Then the song ends. And after that, there's only static."
+  },
+  {
+   "nr": 23,
+   "typ": "titel",
+   "kapitel": 3,
+   "start": 140.804,
+   "dauer": 1.958,
+   "emotion": "erzaehlend",
+   "text": "One forty P M."
+  },
+  {
+   "nr": 24,
+   "typ": "bahnhof",
+   "kapitel": 3,
+   "start": 142.762,
+   "dauer": 8.726,
+   "emotion": "erzaehlend",
+   "text": "At the train station, the board still shows this morning's departures. Not a single train has left. The big clock keeps ticking anyway."
+  },
+  {
+   "nr": 25,
+   "typ": "bahnhof",
+   "kapitel": 3,
+   "start": 151.488,
+   "dauer": 6.206,
+   "emotion": "erzaehlend",
+   "text": "You scream. As loud as you can. Your echo comes back three times. Nothing else."
+  },
+  {
+   "nr": 26,
+   "typ": "krankenhaus",
+   "kapitel": 3,
+   "start": 157.694,
+   "dauer": 9.086,
+   "emotion": "erzaehlend",
+   "text": "You run to the hospital. If there are people anywhere, it's there. The beds are made, the monitors are beeping. But nobody is lying in them."
+  },
+  {
+   "nr": 27,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 166.78,
+   "dauer": 5.918,
+   "emotion": "traurig",
+   "text": "On a nightstand lies a half-finished crossword. The pen is still resting across the last word."
+  },
+  {
+   "nr": 28,
+   "typ": "handy",
+   "kapitel": 3,
+   "start": 172.698,
+   "dauer": 7.766,
+   "emotion": "erzaehlend",
+   "text": "You post in every group chat you have. Class, soccer, family. Is anyone there? Please answer."
+  },
+  {
+   "nr": 29,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 180.464,
+   "dauer": 3.854,
+   "emotion": "ernst",
+   "text": "The message goes out. But not a single check mark turns blue."
+  },
+  {
+   "nr": 30,
+   "typ": "grossstadt",
+   "kapitel": 3,
+   "start": 184.318,
+   "dauer": 6.854,
+   "emotion": "erzaehlend",
+   "text": "What you don't know yet: the cell network won't last forever. Many cell towers only have batteries for a few hours."
+  },
+  {
+   "nr": 31,
+   "typ": "grossstadt",
+   "kapitel": 3,
+   "start": 191.172,
+   "dauer": 4.142,
+   "emotion": "erzaehlend",
+   "text": "With no one watching the power plants, their reserves run out one after another."
+  },
+  {
+   "nr": 32,
+   "typ": "grossstadt",
+   "kapitel": 3,
+   "start": 195.314,
+   "dauer": 6.806,
+   "emotion": "erzaehlend",
+   "text": "At ten P M, the first neighborhood goes dark. Then the next one. Like a wave of darkness rolling toward you."
+  },
+  {
+   "nr": 33,
+   "typ": "zimmer",
+   "kapitel": 3,
+   "start": 202.12,
+   "dauer": 4.574,
+   "emotion": "erzaehlend",
+   "text": "You lie in bed and count the windows across the street. Not a single light."
+  },
+  {
+   "nr": 34,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 206.694,
+   "dauer": 4.646,
+   "emotion": "traurig",
+   "text": "For the first time in your life, it's so quiet you can hear your own heartbeat."
+  },
+  {
+   "nr": 35,
+   "typ": "titel",
+   "kapitel": 4,
+   "start": 211.34,
+   "dauer": 1.118,
+   "emotion": "erzaehlend",
+   "text": "Day two."
+  },
+  {
+   "nr": 36,
+   "typ": "handy",
+   "kapitel": 4,
+   "start": 212.458,
+   "dauer": 4.742,
+   "emotion": "erzaehlend",
+   "text": "No signal anymore. Your phone is now just a clock with photos."
+  },
+  {
+   "nr": 37,
+   "typ": "kueche",
+   "kapitel": 4,
+   "start": 217.2,
+   "dauer": 9.494,
+   "emotion": "erzaehlend",
+   "text": "The fridge has gone silent. Without power, food inside only stays safely cold for about four hours, if you keep the door shut. You've opened it ten times."
+  },
+  {
+   "nr": 38,
+   "typ": "kueche",
+   "kapitel": 4,
+   "start": 226.694,
+   "dauer": 7.022,
+   "emotion": "erzaehlend",
+   "text": "You start sorting. Canned food, pasta, crackers, peanut butter. Things that won't go bad."
+  },
+  {
+   "nr": 39,
+   "typ": "supermarkt",
+   "kapitel": 4,
+   "start": 233.716,
+   "dauer": 9.47,
+   "emotion": "erzaehlend",
+   "text": "Canned food lasts for years. Fresh bread gets moldy in about a week. Suddenly you understand why your grandpa always kept a shelf full of cans in the basement."
+  },
+  {
+   "nr": 40,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 243.186,
+   "dauer": 3.782,
+   "emotion": "froh",
+   "text": "You used to make fun of him. Now you'd give anything to tell him you're sorry."
+  },
+  {
+   "nr": 41,
+   "typ": "wohnzimmer",
+   "kapitel": 4,
+   "start": 246.968,
+   "dauer": 6.446,
+   "emotion": "erzaehlend",
+   "text": "By evening, the faucet only gives a thin trickle. Water pumps need power. Without power, the pressure drops."
+  },
+  {
+   "nr": 42,
+   "typ": "kueche",
+   "kapitel": 4,
+   "start": 253.414,
+   "dauer": 5.726,
+   "emotion": "erzaehlend",
+   "text": "To cook, you use the old camping stove from last summer's vacation. Pasta with tomato sauce from a can."
+  },
+  {
+   "nr": 43,
+   "typ": "kueche",
+   "kapitel": 4,
+   "start": 259.14,
+   "dauer": 4.91,
+   "emotion": "erzaehlend",
+   "text": "It tastes just like that time at the lake, only without your family's voices."
+  },
+  {
+   "nr": 44,
+   "typ": "wohnzimmer",
+   "kapitel": 4,
+   "start": 264.05,
+   "dauer": 5.654,
+   "emotion": "erzaehlend",
+   "text": "You fill every bottle, every pot, and the bathtub. Mom would have done that first."
+  },
+  {
+   "nr": 45,
+   "typ": "titel",
+   "kapitel": 5,
+   "start": 269.704,
+   "dauer": 1.094,
+   "emotion": "erzaehlend",
+   "text": "Day five."
+  },
+  {
+   "nr": 46,
+   "typ": "park",
+   "kapitel": 5,
+   "start": 270.798,
+   "dauer": 6.59,
+   "emotion": "erzaehlend",
+   "text": "The city starts to change. In the park, deer walk across the grass like it's always been their home."
+  },
+  {
+   "nr": 47,
+   "typ": "park",
+   "kapitel": 5,
+   "start": 277.388,
+   "dauer": 7.526,
+   "emotion": "erzaehlend",
+   "text": "Dogs that nobody feeds anymore roam the streets in small packs. They're not mean. They're just hungry. Just like you."
+  },
+  {
+   "nr": 48,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 284.914,
+   "dauer": 4.622,
+   "emotion": "spannend",
+   "text": "Now you only go out during the day. And you never leave without a bag of dog food."
+  },
+  {
+   "nr": 49,
+   "typ": "dach",
+   "kapitel": 5,
+   "start": 289.536,
+   "dauer": 4.574,
+   "emotion": "erzaehlend",
+   "text": "From the roof of your building, you can see far on a clear day. You look for smoke."
+  },
+  {
+   "nr": 50,
+   "typ": "dach",
+   "kapitel": 5,
+   "start": 294.11,
+   "dauer": 4.19,
+   "emotion": "erzaehlend",
+   "text": "For light. For any sign that someone else is still out there."
+  },
+  {
+   "nr": 51,
+   "typ": "skyline",
+   "kapitel": 5,
+   "start": 298.3,
+   "dauer": 6.614,
+   "emotion": "erzaehlend",
+   "text": "Nothing. Just rooftops, cranes, and a sky that looks strangely empty without airplanes."
+  },
+  {
+   "nr": 52,
+   "typ": "zimmer",
+   "kapitel": 5,
+   "start": 304.914,
+   "dauer": 5.534,
+   "emotion": "erzaehlend",
+   "text": "At night, you write in a journal. Not for yourself. For whoever might find it one day."
+  },
+  {
+   "nr": 53,
+   "typ": "grossstadt",
+   "kapitel": 5,
+   "start": 310.448,
+   "dauer": 6.662,
+   "emotion": "erzaehlend",
+   "text": "Without streetlights, you see the Milky Way above the city for the very first time. Thousands of stars that were always there."
+  },
+  {
+   "nr": 54,
+   "typ": "grossstadt",
+   "kapitel": 5,
+   "start": 317.11,
+   "dauer": 3.014,
+   "emotion": "erzaehlend",
+   "text": "You just couldn't see them, because all the lights were on."
+  },
+  {
+   "nr": 55,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 320.124,
+   "dauer": 7.358,
+   "emotion": "traurig",
+   "text": "Day five. Today I talked out loud to myself. For two hours. I think that's normal when you're alone. I hope."
+  },
+  {
+   "nr": 56,
+   "typ": "titel",
+   "kapitel": 6,
+   "start": 327.482,
+   "dauer": 1.502,
+   "emotion": "erzaehlend",
+   "text": "Day nine."
+  },
+  {
+   "nr": 57,
+   "typ": "wohnzimmer",
+   "kapitel": 6,
+   "start": 328.984,
+   "dauer": 7.55,
+   "emotion": "erzaehlend",
+   "text": "In your grandpa's closet, you find an old hand-crank radio. No power needed. You turn the crank until your arm burns."
+  },
+  {
+   "nr": 58,
+   "typ": "gesicht",
+   "kapitel": 6,
+   "start": 336.534,
+   "dauer": 5.558,
+   "emotion": "erzaehlend",
+   "text": "Static on every station. You keep turning, slowly. Millimeter by millimeter."
+  },
+  {
+   "nr": 59,
+   "typ": "wohnzimmer",
+   "kapitel": 6,
+   "start": 342.092,
+   "dauer": 8.078,
+   "emotion": "erzaehlend",
+   "text": "At ninety-one point four, you hear it. Very faint. A knocking. Three short. Three long. Three short."
+  },
+  {
+   "nr": 60,
+   "typ": "gesicht",
+   "kapitel": 6,
+   "start": 350.17,
+   "dauer": 7.118,
+   "emotion": "spannend",
+   "text": "You hold your breath. The knocking stops. Then it starts all over again. Always the same. Always the same rhythm."
+  },
+  {
+   "nr": 61,
+   "typ": "titel",
+   "kapitel": 6,
+   "start": 357.288,
+   "dauer": 2.486,
+   "emotion": "erzaehlend",
+   "text": "That's not random. That's a person."
+  },
+  {
+   "nr": 62,
+   "typ": "gesicht",
+   "kapitel": 6,
+   "start": 359.774,
+   "dauer": 8.606,
+   "emotion": "froh",
+   "text": "You laugh. And you cry. Both at the same time. After nine days of silence, the most beautiful sound in the world is a knocking on the radio."
+  },
+  {
+   "nr": 63,
+   "typ": "dach",
+   "kapitel": 6,
+   "start": 368.38,
+   "dauer": 6.182,
+   "emotion": "erzaehlend",
+   "text": "You run up to the roof and flash your flashlight into the night. Three short. Three long. Three short."
+  },
+  {
+   "nr": 64,
+   "typ": "skyline",
+   "kapitel": 6,
+   "start": 374.562,
+   "dauer": 6.47,
+   "emotion": "erzaehlend",
+   "text": "For a long time, nothing happens. Then, far away, at the TV tower, a light flashes back."
+  },
+  {
+   "nr": 65,
+   "typ": "titel",
+   "kapitel": 7,
+   "start": 381.032,
+   "dauer": 1.454,
+   "emotion": "erzaehlend",
+   "text": "Day fourteen."
+  },
+  {
+   "nr": 66,
+   "typ": "grossstadt",
+   "kapitel": 7,
+   "start": 382.486,
+   "dauer": 9.398,
+   "emotion": "erzaehlend",
+   "text": "For five nights, you've been sending each other signals. Now you set out. Seven miles through a city that belongs to you alone."
+  },
+  {
+   "nr": 67,
+   "typ": "kreuzung",
+   "kapitel": 7,
+   "start": 391.884,
+   "dauer": 7.142,
+   "emotion": "erzaehlend",
+   "text": "Past your school. Past the movie theater where you and your best friend watched every single movie, no matter how bad."
+  },
+  {
+   "nr": 68,
+   "typ": "gesicht",
+   "kapitel": 7,
+   "start": 399.026,
+   "dauer": 5.486,
+   "emotion": "ernst",
+   "text": "What if it's a trap? What if nobody's up there and the light was just a broken machine?"
+  },
+  {
+   "nr": 69,
+   "typ": "park",
+   "kapitel": 7,
+   "start": 404.512,
+   "dauer": 3.71,
+   "emotion": "erzaehlend",
+   "text": "In the park, a dog comes toward you. It doesn't growl."
+  },
+  {
+   "nr": 70,
+   "typ": "park",
+   "kapitel": 7,
+   "start": 408.222,
+   "dauer": 5.558,
+   "emotion": "erzaehlend",
+   "text": "It just walks next to you, as if it also decided it didn't want to be alone anymore."
+  },
+  {
+   "nr": 71,
+   "typ": "skyline",
+   "kapitel": 7,
+   "start": 413.78,
+   "dauer": 8.75,
+   "emotion": "erzaehlend",
+   "text": "At the foot of the tower, the door is open. You climb the stairs. Step by step. Your breathing is the loudest thing in the whole tower."
+  },
+  {
+   "nr": 72,
+   "typ": "grossstadt",
+   "kapitel": 7,
+   "start": 422.53,
+   "dauer": 5.222,
+   "emotion": "erzaehlend",
+   "text": "At the top, by the window, someone is standing with a flashlight in hand. He turns around."
+  },
+  {
+   "nr": 73,
+   "typ": "gesicht",
+   "kapitel": 7,
+   "start": 427.752,
+   "dauer": 6.998,
+   "emotion": "froh",
+   "text": "It's your best friend, Ben. Skinny, unwashed, with exactly the crooked grin you've missed so much."
+  },
+  {
+   "nr": 74,
+   "typ": "gesicht",
+   "kapitel": 7,
+   "start": 434.75,
+   "dauer": 3.854,
+   "emotion": "froh",
+   "text": "“You seriously needed five days to walk seven miles?”"
+  },
+  {
+   "nr": 75,
+   "typ": "gesicht",
+   "kapitel": 7,
+   "start": 438.604,
+   "dauer": 3.542,
+   "emotion": "froh",
+   "text": "You laugh so hard it echoes through the whole tower."
+  },
+  {
+   "nr": 76,
+   "typ": "grossstadt",
+   "kapitel": 7,
+   "start": 442.146,
+   "dauer": 9.566,
+   "emotion": "erzaehlend",
+   "text": "Ben has a journal too. His coffee was still warm too. His family was just gone too. And he also sat by the radio every night."
+  },
+  {
+   "nr": 77,
+   "typ": "gesicht",
+   "kapitel": 7,
+   "start": 451.712,
+   "dauer": 6.806,
+   "emotion": "erzaehlend",
+   "text": "And then you realize why the two of you are the ones left. The night before everyone vanished, neither of you slept."
+  },
+  {
+   "nr": 78,
+   "typ": "gesicht",
+   "kapitel": 7,
+   "start": 458.518,
+   "dauer": 5.822,
+   "emotion": "erzaehlend",
+   "text": "You were on the phone until four in the morning. Talking about nothing. About everything."
+  },
+  {
+   "nr": 79,
+   "typ": "polarlicht",
+   "kapitel": 7,
+   "start": 464.34,
+   "dauer": 3.71,
+   "emotion": "erzaehlend",
+   "text": "Whatever happened that night, it took everyone who was asleep."
+  },
+  {
+   "nr": 80,
+   "typ": "polarlicht",
+   "kapitel": 7,
+   "start": 468.05,
+   "dauer": 4.478,
+   "emotion": "erzaehlend",
+   "text": "Everyone except the two who stayed awake because they had something to tell each other."
+  },
+  {
+   "nr": 81,
+   "typ": "grossstadt",
+   "kapitel": 7,
+   "start": 472.528,
+   "dauer": 5.126,
+   "emotion": "erzaehlend",
+   "text": "Two people in a city built for a million. Tomorrow, you start looking for the others."
+  },
+  {
+   "nr": 82,
+   "typ": "grossstadt",
+   "kapitel": 7,
+   "start": 477.654,
+   "dauer": 4.334,
+   "emotion": "erzaehlend",
+   "text": "But tonight, for the first time in fourteen days, you're not alone."
+  }
+ ]
+}

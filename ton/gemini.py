@@ -294,7 +294,11 @@ def _ohne_stilanweisung(x: np.ndarray, erkannt: list, log=print):
     # tolerant: die Spracherkennung hört z. B. „liest“ statt „lies“; es reichen 3 Anweisungswörter am Anfang
     if len(n) < 3 or len(set(n[:8]) & set(stil[:10])) < 3 or stil[-1] not in n:
         return x, erkannt
-    k = n.index(stil[-1])
+    # Ende der Anweisung = letzte Stelle mit den Schlusswörtern („only the text“), nicht das erste „text“
+    # („Read the following English text …“ schnitt am 18.11. nur 1,8 s ab, q01-en Zeile 56)
+    schluss = stil[-3:]
+    treffer = [i for i in range(2, len(n)) if n[i - 2:i + 1] == schluss]
+    k = treffer[-1] if treffer else len(n) - 1 - n[::-1].index(stil[-1])
     log(f"    Stilanweisung mitgelesen – bis {erkannt[k][1]:.1f} s abgeschnitten")
     x = x[A.sek(erkannt[k][1] + 0.05):]
     return x, _erkennen(x)
