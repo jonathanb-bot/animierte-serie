@@ -9,6 +9,7 @@
    [turm modus=ziele bis=5]                                Zielkarte (Wolken … Mond), bis = wie viele Ziele schon sichtbar
    [turm modus=feld … krone="Stuttgart"]  (neu 17.11.) goldene Krone über dem Spitzenreiter, krone_ab = Einblendzeit in s
    [turm modus=duell duell="Hildesheim#0:6|Stuttgart#2:3>4" zeit=abend titel_text="DAS DUELL"]  (neu 16.11.) zwei Türme groß nebeneinander mit Abstand-Klammer
+   [turm … land="Suceava:RO|Bern:CH"]  (neu 18.11.) kleine Landesflagge auf Schild (feld), Tafel (duell) und Zeile (rangliste); DE, AT, CH, RO, IT, FR, NL, PL
    [turm modus=rangliste rangliste="München#0:12>41|Wien#1:30" ziel=333 ziel_name=Wolken]  (#n = Platz/Farbe wie im Feld)  Rangliste mit Balken bis zum nächsten Ziel
 */
 (() => {
@@ -58,7 +59,21 @@
     poly([[top[0], top[1] - TW * 0.42], [top[0] + TW * 0.22, top[1] - TW * 0.38 + wv(1)], [top[0] + TW * 0.22, top[1] - TW * 0.26 + wv(1)], [top[0], top[1] - TW * 0.28]], farbe);
     return y - h - TW * 0.45;
   };
-  const schild = (x, y, txt, fs, dunkel = true, akzent = null) => {
+  // neu 18.11.: land="Suceava:RO|Bern:CH" – kleine Flagge (Seitenverhältnis 3:2, CH quadratisch), sonst nichts
+  const FLAGGEN = { DE: ["h", "#1a1a1a", "#dd2a2a", "#f2c42e"], AT: ["h", "#d8303a", "#ffffff", "#d8303a"], RO: ["v", "#1f3f9a", "#f6d02a", "#d8303a"],
+    IT: ["v", "#2a9a52", "#ffffff", "#d8303a"], FR: ["v", "#2a4aa8", "#ffffff", "#d8303a"], NL: ["h", "#c8303a", "#ffffff", "#2a4a9a"], PL: ["h", "#ffffff", "#ffffff", "#d8303a"], CH: ["ch"] };
+  const laender = s => { const m = {}; for (const q of String(s.land || "").split("|")) { const [n, c] = q.split(":"); if (n && c && FLAGGEN[c.trim().toUpperCase()]) m[n.trim()] = c.trim().toUpperCase(); } return m; };
+  const flagge = (x, y, w, h, code) => { const F = FLAGGEN[code]; if (!F) return; ctx.save(); ctx.beginPath(); A.rr(x, y, w, h, Math.min(w, h) * 0.18); ctx.clip();
+    if (F[0] === "ch") { ctx.fillStyle = "#d8303a"; ctx.fillRect(x, y, w, h); const c = Math.min(w, h), u = c / 5; box(x + w / 2 - u * 0.5, y + h / 2 - u * 1.6, u, u * 3.2, 0, "#ffffff"); box(x + w / 2 - u * 1.6, y + h / 2 - u * 0.5, u * 3.2, u, 0, "#ffffff"); }
+    else for (let k = 0; k < 3; k++) { ctx.fillStyle = F[k + 1]; if (F[0] === "h") ctx.fillRect(x, y + h * k / 3, w, h / 3 + 0.5); else ctx.fillRect(x + w * k / 3, y, w / 3 + 0.5, h); }
+    ctx.fillStyle = "rgba(255,255,255,0.18)"; ctx.fillRect(x, y, w, h * 0.22); ctx.restore(); ctx.save(); ctx.beginPath(); A.rr(x, y, w, h, Math.min(w, h) * 0.18); ctx.lineWidth = Math.max(1, h * 0.06); ctx.strokeStyle = "rgba(0,0,0,0.25)"; ctx.stroke(); ctx.restore(); };
+  const schild = (x, y, txt, fs, dunkel = true, akzent = null, land = null) => {
+    if (land) { ctx.save(); ctx.font = `700 ${fs}px HUD`; const tw = ctx.measureText(txt).width, fw = fs * 1.2, fhh = fs * 0.8, bw = tw + fw + fs * 1.3, bh = fs * 1.5;
+      ctx.shadowColor = "rgba(0,0,0,0.3)"; ctx.shadowBlur = fs * 0.5; ctx.shadowOffsetY = fs * 0.12;
+      box(x - bw / 2, y - bh, bw, bh, bh / 2, dunkel ? "rgba(12,14,34,0.82)" : "rgba(255,255,255,0.92)"); ctx.shadowColor = "transparent";
+      if (akzent) box(x - bw / 2, y - bh, fs * 0.42, bh, bh / 2, akzent);
+      flagge(x - bw / 2 + fs * 0.62, y - bh / 2 - fhh / 2, fw, fhh, land);
+      ctx.fillStyle = dunkel ? "#ffffff" : "#2a2e3a"; ctx.textAlign = "left"; ctx.textBaseline = "middle"; ctx.fillText(txt, x - bw / 2 + fs * 0.62 + fw + fs * 0.32, y - bh / 2 + fs * 0.05); ctx.restore(); return; }
     ctx.save(); ctx.font = `700 ${fs}px HUD`; const tw = ctx.measureText(txt).width, bw = tw + fs * 0.9, bh = fs * 1.5;
     ctx.shadowColor = "rgba(0,0,0,0.3)"; ctx.shadowBlur = fs * 0.5; ctx.shadowOffsetY = fs * 0.12;
     box(x - bw / 2, y - bh, bw, bh, bh / 2, dunkel ? "rgba(12,14,34,0.82)" : "rgba(255,255,255,0.92)"); ctx.shadowColor = "transparent";
@@ -132,7 +147,7 @@
     const leute = []; { const rp = rnd(91); const n = Number(s.leute ?? 18); for (let k = 0; k < n; k++) { const quer = rp() < 0.5, bahn = Math.floor(rp() * G) + 0.5 - 1, v = (0.12 + rp() * 0.12) * (rp() < 0.5 ? 1 : -1), st = rp() * G;
       const pos = ((st + v * t) % G + G) % G - 0.5; leute.push({ i: quer ? pos : bahn, j: quer ? bahn : pos, f: FARBEN[k % FARBEN.length], ph: rp() * 6 }); } }
     const zuZeichnen = plaetze.map((pl, k) => ({ pl, k, turm: tuerme[k] })).concat(leute.map(m => ({ mensch: m, pl: [m.i + 0.45, m.j + 0.45] }))).sort((a, b) => (a.pl[0] + a.pl[1]) - (b.pl[0] + b.pl[1]));
-    const schilder = [], kronen = [];
+    const schilder = [], kronen = [], LA = laender(s);
     // neu 17.11.: krone="Stuttgart" goldene Krone über dem Turm (Spitzenreiter), erscheint ab krone_ab (Standard 0.6 s)
     const krone = (x, y, g) => { const p = E.raus(clamp((t - (Number(s.krone_ab) || 0.6)) / 0.5, 0, 1)); if (p <= 0) return; const yy = y - g * 0.2 + Math.sin(t * 2.4) * g * 0.06, w = g * 0.62 * (0.6 + 0.4 * p), h = g * 0.42 * (0.6 + 0.4 * p);
       ctx.save(); ctx.globalAlpha = p; glut(x, yy - h * 0.5, g * 1.5, "#ffe27a", 0.55);
@@ -146,7 +161,7 @@
         ellipse(x, y, g * 0.22, g * 0.08, rgba("#1a2030", 0.25)); box(x - g * 0.1, y - g * 0.4 - hop, g * 0.2, g * 0.4, g * 0.06, "#3a3e4c");
         box(x - g * 0.15, y - g * 0.82 - hop, g * 0.3, g * 0.46, g * 0.12, m.f); circle(x, y - g * 0.96 - hop, g * 0.14, "#f2c8a4"); continue; }
       const [x, y] = feld(e.pl[0], e.pl[1]);
-      if (e.turm) { const st = Math.round(e.turm.stock), topY = turmBauen(x, y, TW, TH, st, FARBEN[e.k % FARBEN.length], P, t, e.k, e.turm.name, Number(s.stock_hoehe) || 1); if (!nurSchild || nurSchild.has(e.turm.name)) schilder.push([x, topY, `${e.turm.name} · ${fmt(st)}`, FARBEN[e.k % FARBEN.length], e.turm.name === s.krone]); else if (e.turm.name === s.krone) kronen.push([x, topY]); }
+      if (e.turm) { const st = Math.round(e.turm.stock), topY = turmBauen(x, y, TW, TH, st, FARBEN[e.k % FARBEN.length], P, t, e.k, e.turm.name, Number(s.stock_hoehe) || 1); if (!nurSchild || nurSchild.has(e.turm.name)) schilder.push([x, topY, `${e.turm.name} · ${fmt(st)}`, FARBEN[e.k % FARBEN.length], e.turm.name === s.krone, LA[e.turm.name] || null]); else if (e.turm.name === s.krone) kronen.push([x, topY]); }
       else { turmBauen(x, y, TW, TH, 0, "#888", P, t, e.k); if (e.k < tuerme.length + (Number(s.leer_zeigen) || 0)) { line(x, y - 4, x, y - TW * 0.3, 2, "#6a5a4a"); schild(x, y - TW * 0.3, String(s.leer ?? "?"), festPx ? festPx * 1.15 / z : TW * 0.25, false); } } }
     if (s._grundstein && !tuerme.length) { const [x, y] = s._grundstein, w = TW * 0.16, h = TW * 0.13, yy = y - 6 + Math.sin(t * 2) * 1.5;
       glut(x, yy - h, TW * 0.5, "#ffe27a", 0.35);
@@ -154,9 +169,9 @@
       poly([[x - w, yy - h], [x, yy - w / 2 - h], [x + w, yy - h], [x, yy + w / 2 - h]], "#efe6d2"); line(x - w * 0.5, yy - h + 2, x + w * 0.5, yy - h + 2, 1.5, rgba("#8a7a5a", 0.6)); }
     for (const b of baeume.filter(b => !(b.i < 0 || b.j < 0))) baum(b); laterne(laternen[3]);
     { const fs = festPx ? festPx / z : TW * 0.27, gesetzt = []; ctx.font = `700 ${fs}px HUD`;
-      for (const sc of schilder.slice().sort((a, b) => a[1] - b[1])) { const w = ctx.measureText(sc[2]).width + fs * 1.4, h = fs * 1.6; let y = sc[1];
+      for (const sc of schilder.slice().sort((a, b) => a[1] - b[1])) { const w = ctx.measureText(sc[2]).width + fs * (sc[5] ? 2.8 : 1.4), h = fs * 1.6; let y = sc[1];
         for (let n = 0; n < 12; n++) { const k = gesetzt.find(g => Math.abs(g.x - sc[0]) < (g.w + w) / 2 && Math.abs(g.y - y) < h); if (!k) break; y = k.y - h - 4; }
-        gesetzt.push({ x: sc[0], y, w }); if (y < sc[1] - 4) line(sc[0], sc[1], sc[0], y, 2, rgba("#1a2030", 0.5)); schild(sc[0], y, sc[2], fs, true, sc[3]); if (sc[4]) krone(sc[0], y - fs * 1.4, fs * 2.2); }
+        gesetzt.push({ x: sc[0], y, w }); if (y < sc[1] - 4) line(sc[0], sc[1], sc[0], y, 2, rgba("#1a2030", 0.5)); schild(sc[0], y, sc[2], fs, true, sc[3], sc[5]); if (sc[4]) krone(sc[0], y - fs * 1.4, fs * 2.2); }
       for (const [x, y] of kronen) krone(x, y - fs * 0.4, fs * 2.2); }
     ctx.restore();
   };
@@ -250,6 +265,7 @@
       ctx.save(); ctx.globalAlpha = p; ctx.translate((1 - E.raus(p)) * 60, 0);
       circle(x0 + 80, y + 10, 40, k < 3 ? MED[k] : "rgba(255,255,255,0.14)"); ctx.fillStyle = k < 3 ? "#1a1c2a" : "#ffffff"; ctx.font = "900 44px Titel"; ctx.textAlign = "center"; ctx.fillText(String(k + 1), x0 + 80, y + 26);
       ctx.textAlign = "left"; ctx.fillStyle = "#ffffff"; ctx.font = "900 52px Titel"; ctx.fillText(e.name, x0 + 150, y);
+      { const la = laender(s)[e.name]; if (la) flagge(x0 + 150 + ctx.measureText(e.name).width + 18, y - 38, 57, 38, la); }
       ctx.textAlign = "right"; ctx.fillStyle = "#f2cf7e"; ctx.font = "900 52px Titel"; ctx.fillText(fmt(v), x0 + w - 50, y);
       const bx = x0 + 150, bw = w - 200, by = y + 26; box(bx, by, bw, 22, 11, "rgba(255,255,255,0.1)");
       const q = clamp(v / ziel, 0, 1); if (q > 0) { box(bx, by, Math.max(22, bw * q), 22, 11, f); box(bx, by, Math.max(22, bw * q), 8, 4, rgba("#ffffff", 0.25)); }
@@ -298,7 +314,8 @@
       ctx.fillStyle = "#ffe27a"; ctx.font = "900 92px Titel"; ctx.fillText(`−${n}`, 540, my + 20); ctx.font = "700 30px HUD"; ctx.fillStyle = "#ffffff"; ctx.fillText(n === 1 ? "Stockwerk" : "Stockwerke", 540, my + 62); ctx.restore(); }
     for (const [x, st, nm, f] of namen) { const y = 1480, w = 330, h = 250; // Tafel unter dem Turm, unterhalb der Untertitel
       ctx.save(); ctx.shadowColor = "rgba(0,0,0,0.35)"; ctx.shadowBlur = 26; box(x - w / 2, y, w, h, 36, "rgba(12,14,34,0.82)"); ctx.restore();
-      box(x - w / 2, y, w, 14, 7, f); ctx.save(); ctx.textAlign = "center"; ctx.fillStyle = "#ffffff"; ctx.font = "900 42px Titel"; ctx.fillText(nm, x, y + 70);
+      box(x - w / 2, y, w, 14, 7, f); ctx.save(); ctx.textAlign = "center"; ctx.fillStyle = "#ffffff"; ctx.font = "900 42px Titel";
+      const la = laender(s)[nm]; if (la) { const nw = ctx.measureText(nm).width, fw = 54, gx = x - (nw + fw + 14) / 2; flagge(gx, y + 40, fw, 36, la); ctx.textAlign = "left"; ctx.fillText(nm, gx + fw + 14, y + 70); ctx.textAlign = "center"; } else ctx.fillText(nm, x, y + 70);
       ctx.fillStyle = "#f2cf7e"; ctx.font = "900 96px Titel"; ctx.fillText(fmt(st), x, y + 172); ctx.fillStyle = rgba("#ffffff", 0.7); ctx.font = "700 28px HUD"; ctx.fillText(st === 1 ? "Stockwerk" : "Stockwerke", x, y + 216); ctx.restore(); }
     // Titel
     ctx.save(); ctx.textAlign = "center"; ctx.font = "900 84px Titel"; ctx.fillStyle = "#ffffff"; ctx.shadowColor = "rgba(0,0,0,0.4)"; ctx.shadowBlur = 24; ctx.fillText(s.titel_text || "DAS DUELL", 540, 300); ctx.restore();

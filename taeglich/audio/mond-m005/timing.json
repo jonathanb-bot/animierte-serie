@@ -1,0 +1,122 @@
+{
+ "dauer": 79.31,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "turm",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 8.006,
+   "emotion": "erzaehlend",
+   "text": "Tag fünf auf deinem Turmplatz. Über Nacht stehen hier zweihundertsiebzig Stockwerke, und die Krone fliegt nach Rumänien."
+  },
+  {
+   "nr": 2,
+   "typ": "turm",
+   "kapitel": 1,
+   "start": 8.006,
+   "dauer": 7.79,
+   "emotion": "erzaehlend",
+   "text": "Gestern waren es sechsundfünfzig. Jetzt bauen sechsundzwanzig Städte aus vier Ländern: Deutschland, Österreich, die Schweiz und neu Rumänien."
+  },
+  {
+   "nr": 3,
+   "typ": "titel",
+   "kapitel": 1,
+   "start": 15.796,
+   "dauer": 1.958,
+   "emotion": "erzaehlend",
+   "text": "Was ist in dieser Nacht passiert?"
+  },
+  {
+   "nr": 4,
+   "typ": "turm",
+   "kapitel": 2,
+   "start": 17.754,
+   "dauer": 6.95,
+   "emotion": "erzaehlend",
+   "text": "Suceava, eine Stadt in Rumänien. Emanuel schreibt achtunddreißigmal Suceava, und jeder Kommentar bekommt ein Like."
+  },
+  {
+   "nr": 5,
+   "typ": "turm",
+   "kapitel": 2,
+   "start": 24.704,
+   "dauer": 7.622,
+   "emotion": "erzaehlend",
+   "text": "Sechsundsiebzig Stockwerke, von null auf Platz eins. Stuttgart wächst auch, auf zweiundvierzig, und verliert trotzdem die Krone."
+  },
+  {
+   "nr": 6,
+   "typ": "turm",
+   "kapitel": 3,
+   "start": 32.326,
+   "dauer": 6.062,
+   "emotion": "erzaehlend",
+   "text": "Dann Hamburg. Ilyas schreibt fünfzigmal Hamburg. Aber auf keinem einzigen Kommentar liegt ein Like."
+  },
+  {
+   "nr": 7,
+   "typ": "turm",
+   "kapitel": 3,
+   "start": 38.388,
+   "dauer": 5.174,
+   "emotion": "erzaehlend",
+   "text": "Stuttgart macht es andersrum: nur sieben Kommentare, aber fünfunddreißig Likes darauf."
+  },
+  {
+   "nr": 8,
+   "typ": "turm",
+   "kapitel": 4,
+   "start": 43.562,
+   "dauer": 7.334,
+   "emotion": "erzaehlend",
+   "text": "Bremen klettert auf vierundzwanzig, Wermsdorf auf achtzehn. Neu sind München, Luhe und Dörpen, wo Henry siebenmal kommentiert."
+  },
+  {
+   "nr": 9,
+   "typ": "turm",
+   "kapitel": 5,
+   "start": 50.896,
+   "dauer": 6.494,
+   "emotion": "erzaehlend",
+   "text": "Die Rangliste nach Tag fünf: Suceava, Hamburg, Stuttgart, Bremen und Wermsdorf."
+  },
+  {
+   "nr": 10,
+   "typ": "turm",
+   "kapitel": 6,
+   "start": 57.39,
+   "dauer": 6.158,
+   "emotion": "erzaehlend",
+   "text": "Suceava ragt jetzt über zweihundert Meter in den Himmel. Höher als der Kölner Dom, fast anderthalbmal so hoch."
+  },
+  {
+   "nr": 11,
+   "typ": "turm",
+   "kapitel": 6,
+   "start": 63.548,
+   "dauer": 4.886,
+   "emotion": "erzaehlend",
+   "text": "Bis zu den Wolken fehlen trotzdem noch über zweihundertfünfzig Stockwerke."
+  },
+  {
+   "nr": 12,
+   "typ": "turm",
+   "kapitel": 7,
+   "start": 68.434,
+   "dauer": 5.582,
+   "emotion": "erzaehlend",
+   "text": "Fünfzig Hamburg-Kommentare ohne Like. Liken sechsundzwanzig Leute sie, ist die Krone wieder weg."
+  },
+  {
+   "nr": 13,
+   "typ": "turm",
+   "kapitel": 7,
+   "start": 74.016,
+   "dauer": 5.294,
+   "emotion": "erzaehlend",
+   "text": "Deine Stadt fehlt noch? Dann kommentier sie jetzt. Jedes Like darauf baut ein Stockwerk mehr."
+  }
+ ]
+}

@@ -224,7 +224,10 @@
   "Rastatt": "DE",
   "Baden-Baden": "DE",
   "Friedeburg": "DE",
-  "Wermsdorf": "DE"
+  "Wermsdorf": "DE",
+  "Suceava": "RO",
+  "Dörpen": "DE",
+  "Luhe-Wildenau": "DE"
  },
  "aliase": {
   "munich": "München",
@@ -276,6 +279,8 @@
   "oö": "Oberösterreich",
   "noe": "Niederösterreich",
   "nö": "Niederösterreich",
-  "ebensee am traunsee": "Ebensee"
+  "ebensee am traunsee": "Ebensee",
+  "Sucaeva": "Suceava",
+  "Luhe": "Luhe-Wildenau"
  }
 }

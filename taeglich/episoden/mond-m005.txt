@@ -1,0 +1,54 @@
+# Bis zum Mond – Folge 5: Die Nacht der Kommentare
+@musik musik/mond-m005.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung aufbau
+@vortrag lebendig
+@klang studio
+@mund zitate
+@einblenden aus
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette tuerkis
+@zeit tag
+
+== Start ==
+// Wow-Bild zuerst: Suceava mit Krone, Hamburg und Stuttgart daneben
+[turm modus=feld stock_hoehe=0.7 palette=tuerkis palette_staerke=0.2 schilder="Suceava,Hamburg,Stuttgart" schild_px=34 land="Suceava:RO|Bern:CH|Ebensee:AT" krone="Suceava" krone_ab=2.4 tuerme="Hildesheim:6|Freiburg:4|Stuttgart:42|Leimersheim:2|Plauen:2|Rastatt:2|Ulm:2|Augsburg:2|Berlin:1|Ebensee:1|Freilassing:1|Hamm:3|Meuselwitz:1|Oldenburg:1|Ronnenberg:1|Baden-Baden:3|Bremen:24|Bern:2|Görlitz:2|Wermsdorf:18|Friedeburg:1|Suceava:76|Hamburg:50|Dörpen:14|München:8|Luhe-Wildenau:1" nah=1.15 zoom-rein hooktext="TAG 5: RUMÄNIEN VORNE" ein="zweihundertsiebzig>#270 STOCKWERKE" ein_y=1200] Tag fünf auf deinem Turmplatz. Über Nacht stehen hier zweihundertsiebzig Stockwerke, und die Krone fliegt nach Rumänien.
+// Alles wächst, weiter weg
+[turm modus=feld stock_hoehe=0.7 palette=tuerkis palette_staerke=0.2 schilder="Suceava,Hamburg" schild_px=34 land="Suceava:RO|Bern:CH|Ebensee:AT" tuerme="Hildesheim:6|Freiburg:4|Stuttgart:13>42|Leimersheim:2|Plauen:2|Rastatt:2|Ulm:2|Augsburg:1>2|Berlin:1|Ebensee:1|Freilassing:1|Hamm:3|Meuselwitz:1|Oldenburg:1|Ronnenberg:1|Baden-Baden:2>3|Bremen:6>24|Bern:2|Görlitz:2|Wermsdorf:2>18|Friedeburg:1|Suceava:0>76|Hamburg:0>50|Dörpen:0>14|München:0>8|Luhe-Wildenau:0>1" wachsen_dauer=2.8 nah=1.1 zoom-raus ein="sechsundzwanzig>#26 STÄDTE|vier>#4 LÄNDER" ein_y=980] Gestern waren es sechsundfünfzig. Jetzt bauen sechsundzwanzig Städte aus vier Ländern: Deutschland, Österreich, die Schweiz und neu Rumänien.
+// Titelkarte
+[titel oben="Folge 5" gross="BIS ZUM MOND" unten="Die Nacht der Kommentare" farbe=#123a4a akzent=#7fe0e8 groesse=150 hud=false palette=tuerkis zoom-rein] Was ist in dieser Nacht passiert?
+
+== Aus dem Nichts ==
+// Nah auf Suceava, Kommentar von f_e_m_a_n_u_e_l
+[turm modus=feld stock_hoehe=0.7 palette=tuerkis palette_staerke=0.2 schilder="Suceava" schild_px=40 land="Suceava:RO|Bern:CH|Ebensee:AT" tuerme="Hildesheim:6|Freiburg:4|Stuttgart:13>42|Leimersheim:2|Plauen:2|Rastatt:2|Ulm:2|Augsburg:1>2|Berlin:1|Ebensee:1|Freilassing:1|Hamm:3|Meuselwitz:1|Oldenburg:1|Ronnenberg:1|Baden-Baden:2>3|Bremen:6>24|Bern:2|Görlitz:2|Wermsdorf:2>18|Friedeburg:1|Suceava:0>76|Hamburg:0>50|Dörpen:0>14|München:0>8|Luhe-Wildenau:0>1" wachsen_dauer=2.6 nah=1.6 blick=-3.07,-1.07 zoom-rein kommentar="@f_e_m_a_n_u_e_l|Suceava|1" kommentar_y=1200 ein="achtunddreißig>#38 KOMMENTARE" ein_y=250] Suceava, eine Stadt in Rumänien. Emanuel schreibt achtunddreißigmal Suceava, und jeder Kommentar bekommt ein Like.
+// Das Duell: Suceava zieht an Stuttgart vorbei
+[turm modus=duell duell="Stuttgart#2:13>42|Suceava#21:0>76" land="Suceava:RO|Bern:CH|Ebensee:AT" zeit=abend titel_text="VON NULL AUF EINS" wachsen_dauer=2 palette=tuerkis palette_staerke=0.15 zoom-rein] Sechsundsiebzig Stockwerke, von null auf Platz eins. Stuttgart wächst auch, auf zweiundvierzig, und verliert trotzdem die Krone.
+
+== Fünfzig Mal Hamburg ==
+// Nah auf Hamburg
+[turm modus=feld stock_hoehe=0.7 palette=tuerkis palette_staerke=0.2 schilder="Hamburg" schild_px=40 land="Suceava:RO|Bern:CH|Ebensee:AT" tuerme="Hildesheim:6|Freiburg:4|Stuttgart:13>42|Leimersheim:2|Plauen:2|Rastatt:2|Ulm:2|Augsburg:1>2|Berlin:1|Ebensee:1|Freilassing:1|Hamm:3|Meuselwitz:1|Oldenburg:1|Ronnenberg:1|Baden-Baden:2>3|Bremen:6>24|Bern:2|Görlitz:2|Wermsdorf:2>18|Friedeburg:1|Suceava:0>76|Hamburg:0>50|Dörpen:0>14|München:0>8|Luhe-Wildenau:0>1" wachsen_dauer=2.6 nah=1.6 blick=2.03,-0.97 zoom-rein kommentar="@ilyas.1887_15|Hamburg|0" kommentar_y=1200 ein="fünfzigmal>#50 KOMMENTARE|kein>#0 LIKES>herz" ein_y=250] Dann Hamburg. Ilyas schreibt fünfzigmal Hamburg. Aber auf keinem einzigen Kommentar liegt ein Like.
+// Stuttgart baut mit Likes
+[turm modus=feld stock_hoehe=0.7 palette=tuerkis palette_staerke=0.2 schilder="Stuttgart" schild_px=40 land="Suceava:RO|Bern:CH|Ebensee:AT" tuerme="Hildesheim:6|Freiburg:4|Stuttgart:13>42|Leimersheim:2|Plauen:2|Rastatt:2|Ulm:2|Augsburg:1>2|Berlin:1|Ebensee:1|Freilassing:1|Hamm:3|Meuselwitz:1|Oldenburg:1|Ronnenberg:1|Baden-Baden:2>3|Bremen:6>24|Bern:2|Görlitz:2|Wermsdorf:2>18|Friedeburg:1|Suceava:0>76|Hamburg:0>50|Dörpen:0>14|München:0>8|Luhe-Wildenau:0>1" wachsen_dauer=2.4 nah=1.6 blick=0.99,-0.01 markiere=4,3 grundstein=0 schwenk-rechts kommentar="@leeon_112|STUTTGART|6" kommentar_y=1200 ein="fünfunddreißig>#35 LIKES>herz" ein_y=250] Stuttgart macht es andersrum: nur sieben Kommentare, aber fünfunddreißig Likes darauf.
+
+== Neu dabei ==
+// Bremen, Wermsdorf, Dörpen, München
+[turm modus=feld stock_hoehe=0.7 palette=tuerkis palette_staerke=0.2 schilder="Bremen,Wermsdorf,Dörpen,München" schild_px=34 land="Suceava:RO|Bern:CH|Ebensee:AT" tuerme="Hildesheim:6|Freiburg:4|Stuttgart:13>42|Leimersheim:2|Plauen:2|Rastatt:2|Ulm:2|Augsburg:1>2|Berlin:1|Ebensee:1|Freilassing:1|Hamm:3|Meuselwitz:1|Oldenburg:1|Ronnenberg:1|Baden-Baden:2>3|Bremen:6>24|Bern:2|Görlitz:2|Wermsdorf:2>18|Friedeburg:1|Suceava:0>76|Hamburg:0>50|Dörpen:0>14|München:0>8|Luhe-Wildenau:0>1" wachsen_dauer=2.2 nah=1.25 blick=3,3.3 schwenk-links ein="München>NEU: MÜNCHEN|Dörpen>NEU: DÖRPEN" ein_y=1120] Bremen klettert auf vierundzwanzig, Wermsdorf auf achtzehn. Neu sind München, Luhe und Dörpen, wo Henry siebenmal kommentiert.
+
+== Die Rangliste ==
+[turm modus=rangliste rangliste="Suceava#21:0>76|Hamburg#22:0>50|Stuttgart#2:13>42|Bremen#16:6>24|Wermsdorf#19:2>18" land="Suceava:RO|Bern:CH|Ebensee:AT" ziel=333 ziel_name=Wolken titel_text="TAG 5" palette=tuerkis palette_staerke=0.2 zoom-rein] Die Rangliste nach Tag fünf: Suceava, Hamburg, Stuttgart, Bremen und Wermsdorf.
+
+== Bis zu den Wolken ==
+// Fahrt am Turm von Suceava hoch
+[turm modus=hoehe hoehe=0>228 stadt="Suceava" farbe=#4a9ad0 palette=tuerkis palette_staerke=0.2 kamera=ruhig ein="zweihundert>#228 METER|Kölner>HÖHER ALS DER DOM"] Suceava ragt jetzt über zweihundert Meter in den Himmel. Höher als der Kölner Dom, fast anderthalbmal so hoch.
+// Weiter bis zu den Wolken
+[turm modus=hoehe hoehe=228>1000 stadt="Suceava" farbe=#4a9ad0 palette=tuerkis palette_staerke=0.2 kamera=ruhig ein="zweihundertfünfzig>NOCH #257 STOCKWERKE"] Bis zu den Wolken fehlen trotzdem noch über zweihundertfünfzig Stockwerke.
+
+== Das Rennen ==
+// Der ganze Platz am Abend, Krone auf Suceava
+[turm modus=feld stock_hoehe=0.7 palette=orange palette_staerke=0.2 schilder="Suceava,Hamburg" schild_px=34 land="Suceava:RO|Bern:CH|Ebensee:AT" krone="Suceava" krone_ab=0.3 zeit=abend tuerme="Hildesheim:6|Freiburg:4|Stuttgart:42|Leimersheim:2|Plauen:2|Rastatt:2|Ulm:2|Augsburg:2|Berlin:1|Ebensee:1|Freilassing:1|Hamm:3|Meuselwitz:1|Oldenburg:1|Ronnenberg:1|Baden-Baden:3|Bremen:24|Bern:2|Görlitz:2|Wermsdorf:18|Friedeburg:1|Suceava:76|Hamburg:50|Dörpen:14|München:8|Luhe-Wildenau:1" nah=1.2 zoom-raus ein="sechsundzwanzig>NOCH #26 FÜR HAMBURG" ein_y=1150] Fünfzig Hamburg-Kommentare ohne Like. Liken sechsundzwanzig Leute sie, ist die Krone wieder weg.
+// Nah auf den nächsten freien Platz
+[turm modus=feld stock_hoehe=0.7 palette=orange palette_staerke=0.2 schilder="-" schild_px=40 zeit=abend tuerme="Hildesheim:6|Freiburg:4|Stuttgart:42|Leimersheim:2|Plauen:2|Rastatt:2|Ulm:2|Augsburg:2|Berlin:1|Ebensee:1|Freilassing:1|Hamm:3|Meuselwitz:1|Oldenburg:1|Ronnenberg:1|Baden-Baden:3|Bremen:24|Bern:2|Görlitz:2|Wermsdorf:18|Friedeburg:1|Suceava:76|Hamburg:50|Dörpen:14|München:8|Luhe-Wildenau:1" nah=2.8 blick=5.9,6.5 markiere=5,6 leer="Deine Stadt?" leer_zeigen=4 zoom-rein] Deine Stadt fehlt noch? Dann kommentier sie jetzt. Jedes Like darauf baut ein Stockwerk mehr.
