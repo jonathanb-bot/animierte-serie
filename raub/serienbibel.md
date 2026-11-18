@@ -3,6 +3,7 @@
 > Auftrag von Jonathan vom 16.11.2026: eine animierte Mitmachserie über einen Banküberfall für storys4you. Diese Datei ist verbindlich.
 > **Produktionsstand 16.11.:** Folge 1 ist fertig geschrieben, mit Orus vertont, und die Bilder sind gebaut (`taeglich/episoden/raub-r001.txt`).
 > **17.11.:** Folge 2 „Die erste Warnung“ fertig (keine Entscheidung zu Folge 1, kein Kommentar → du zögerst, Voss nutzt die Nacht; Karos Frist „bis morgen“).
+> **18.11.:** Folge 3 „Noch eine Nacht“ fertig (wieder keine Entscheidung, kein Kommentar unter Folge 2 → du schweigst weiter, Karos Frist läuft ab; Notiz aus dem Büro der Direktion: ATLAS wird morgen 20:00 vernichtet, Überfall vorgezogen; Journalistin Hanna Wendt eingeführt).
 > Folgen 2–10 entstehen erst, wenn die jeweilige Abstimmung feststeht. Ablauf: `taeglich/laeufe/raub.md`.
 
 ## Feste Regeln
@@ -32,7 +33,7 @@ Du stellst eine Gruppe zusammen (Mara, Jona, Karo). **Direktor Voss** weiß von 
 | **Karo** | `karo` | organisiert die gemeinsame Abreise, direkt, unabhängig. Bedingung: **Niemand wird zurückgelassen** | gelbe Jacke `#e8b82e`, geflochtener Zopf über der Schulter |
 | **Direktor Voss** | `voss` | ruhig, höflich, gefährlich, lässt andere glauben, sie hätten die Kontrolle | heller Anzug `#e4ded2`, silbernes Haar, kleine goldene Anstecknadel `#e8b83a` |
 | **Lea** | `lea` | keine bloße Gerettete: hat selbst Hinweise hinterlassen, bekommt im Finale eine eigene Haltung zu dem, was du getan hast | lange dunkle Haare, graublaue Jacke. Zu Beginn nur auf ihrem Foto |
-| Journalistin | (ab Folge 3) | hat früher über Leas Fall berichtet | wird in Folge 3 neu angelegt (Name, Aussehen hier nachtragen) |
+| **Hanna Wendt** (Journalistin) | `hanna` | hat damals als Einzige mit Zweifeln über Leas Fall geschrieben (Stadtanzeiger), will eine Geschichte, hat eigene Interessen | kupferrotes Haar im Dutt, pflaumenfarbene Jacke `#6a3f6e`, heller Schal `#d9c8a8` |
 
 ## Leitmotive (Bedeutung ändert sich)
 | Motiv | Kulisse | Bedeutung am Anfang | mögliche Entwicklung |
@@ -57,8 +58,10 @@ Du stellst eine Gruppe zusammen (Mara, Jona, Karo). **Direktor Voss** weiß von 
 | Nahaufnahmen | `raubdetail` | Holztisch im Lampenlicht | `orange`/`blau` |
 | Umschlag-Foto (Folge 2) | `raubdetail motiv=umschlag` / `fotonah` / `fotorueck` | Foto eurer Gruppe von oben durch ein Bankfenster (Fensterkreuz, ihr vier klein, du von hinten), goldene Nadel spiegelt sich im Glas; Nahaufnahme mit korallrotem Kreis; Rückseite mit der Warnung (`aufschrift="Zeile/Zeile"`) | `orange` |
 | Beobachter (Folge 2) | `bankfassade beobachter=1` | dunkle Silhouette hinter dem mittleren Bogen, goldene Nadel blinkt | `blau` |
+| Archiv der Bank (Folge 3) | `archiv` | kühler Regalgang in die Tiefe, Kartons mit Etiketten, türkisfarbene Leuchtröhren (eine flackert, `licht=0` aus), Staub im Licht, am Ende eine Tür mit Goldlicht (Büro der Direktion). Mara arbeitet hier noch | `tuerkis` |
+| Notiz / Zeitung (Folge 3) | `raubdetail motiv=notiz` / `motiv=zeitung` | interne Notiz „AUREON · BÜRO DER DIREKTION“, Text tippt sich, Stempel VERTRAULICH (`aufschrift="Zeile/Zeile"`); alter Artikel „Bankangestellte unter Betrugsverdacht“, „Von Hanna Wendt“ rot umkreist, graues Pressefoto von Lea (`aufschrift=`, `autor=`) | `orange` |
 | Entscheidung | `entscheidung` | dunkelblau, A türkis, B gold | `blau` |
-| noch zu bauen | – | kühler Archivbereich (Folge 3/6), monumentaler Tresorraum (Folge 6), regennasse Straßen mit Blaulicht (Folge 8), stilles Flussufer im Morgengrauen (Folge 9/10) | `blau`, `tuerkis` |
+| noch zu bauen | – | monumentaler Tresorraum (Folge 6), regennasse Straßen mit Blaulicht (Folge 8), stilles Flussufer im Morgengrauen (Folge 9/10) | `blau`, `tuerkis` |
 
 Farben: Dunkelblau `#0b1530` und Türkis `#3fc4c8` als Grund, Gold `#e8b84a` für Bank und Geld, Korallrot `#ff6a5a` für Gefahr.
 

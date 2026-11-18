@@ -1,0 +1,95 @@
+{
+ "dauer": 72.5,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "versteck",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 6.854,
+   "emotion": "erzaehlend",
+   "text": "Karos Frist ist abgelaufen. Das Foto steckt immer noch in deiner Jacke. Und wieder sagst du nichts."
+  },
+  {
+   "nr": 2,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 6.854,
+   "dauer": 5.006,
+   "emotion": "ernst",
+   "text": "Karo stellt ihre Tasche neben die Tür. „Ich zähle Köpfe, keine Ausreden.“"
+  },
+  {
+   "nr": 3,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 11.86,
+   "dauer": 5.678,
+   "emotion": "froh",
+   "text": "Jona lacht zu laut. Sein Handy liegt wieder mit dem Bildschirm nach unten. Niemand fragt, warum."
+  },
+  {
+   "nr": 4,
+   "typ": "archiv",
+   "kapitel": 2,
+   "start": 17.538,
+   "dauer": 10.574,
+   "emotion": "erzaehlend",
+   "text": "Während du schweigst, handelt ein anderer. Am Morgen ruft Mara aus dem Archiv der Bank an, wo sie noch arbeitet. Am Ende des Gangs brennt schon Licht, im Büro der Direktion."
+  },
+  {
+   "nr": 5,
+   "typ": "raubdetail",
+   "kapitel": 2,
+   "start": 28.112,
+   "dauer": 9.278,
+   "emotion": "erzaehlend",
+   "text": "Zwischen den Akten liegt eine Notiz, noch warm vom Drucker. ATLAS, das Original. Abholung morgen Abend um acht. Zur Vernichtung."
+  },
+  {
+   "nr": 6,
+   "typ": "bankfassade",
+   "kapitel": 2,
+   "start": 37.39,
+   "dauer": 7.262,
+   "emotion": "erzaehlend",
+   "text": "Wenn der rote Koffer die Bank verlässt, ist Leas letzter Beweis weg. Also nicht Freitag. Der Überfall muss morgen sein."
+  },
+  {
+   "nr": 7,
+   "typ": "raubdetail",
+   "kapitel": 3,
+   "start": 44.652,
+   "dauer": 6.014,
+   "emotion": "erzaehlend",
+   "text": "Dann fällt dir ein alter Artikel ein. Hanna Wendt hat damals über Lea geschrieben. Als Einzige mit Zweifeln."
+  },
+  {
+   "nr": 8,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 50.666,
+   "dauer": 7.262,
+   "emotion": "erzaehlend",
+   "text": "Sie könnte die drei Seiten noch heute sichern. Aber eine Journalistin will eine Geschichte. Und die gehört dann nicht mehr nur dir."
+  },
+  {
+   "nr": 9,
+   "typ": "raubdetail",
+   "kapitel": 3,
+   "start": 57.928,
+   "dauer": 6.206,
+   "emotion": "erzaehlend",
+   "text": "Leas Foto liegt neben dem Artikel. Elf Monate hat sie gewartet. Morgen Abend entscheidet sich alles."
+  },
+  {
+   "nr": 10,
+   "typ": "entscheidung",
+   "kapitel": 4,
+   "start": 64.134,
+   "dauer": 8.366,
+   "emotion": "erzaehlend",
+   "text": "Weihst du Hanna Wendt vor dem Überfall ein, oder wartest du, bis du die Originalakte hast? Kommentiere A oder B. Der Top-Kommentar entscheidet."
+  }
+ ]
+}
