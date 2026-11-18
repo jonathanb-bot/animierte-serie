@@ -2154,6 +2154,12 @@
    "bild_s": 78.85,
    "ton_s": 78.85,
    "lufs": -14.5
+  },
+  "taeglich/raub-r003.mp4": {
+   "ok": true,
+   "bild_s": 72.08,
+   "ton_s": 72.11,
+   "lufs": -14.6
   }
  },
  "serien": {
@@ -2402,6 +2408,10 @@
   "mond-m005": {
    "titel": "Bis zum Mond – Folge 5: Die Nacht der Kommentare",
    "datei": "taeglich/mond-m005.mp4"
+  },
+  "raub-r003": {
+   "titel": "Der letzte Raub – Folge 3: Noch eine Nacht",
+   "datei": "taeglich/raub-r003.mp4"
   }
  },
  "taeglich_staffeln": {
