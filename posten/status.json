@@ -9585,5 +9585,15 @@
   "konto": "sto.rys4you",
   "http": 201,
   "am": "2026-11-18T01:09:30.513Z"
+ },
+ "quer-yt-q01-en": {
+  "ok": true,
+  "zeit": "2026-11-18T23:02:00",
+  "zernioId": "6afd0e666d9625c4a0fc72a2",
+  "yt": false,
+  "k": 2,
+  "konto": "storys4you_eng",
+  "http": 201,
+  "am": "2026-11-18T02:33:10.583Z"
  }
 }
