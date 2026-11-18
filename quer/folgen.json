@@ -30,6 +30,15 @@
      "alone",
      "storytime"
     ]
+   },
+   "veroeffentlicht": {
+    "de": {
+     "post": "quer-yt-q01",
+     "zernio_id": "6afcfac8043b55c66f22622c",
+     "zeit": "2026-11-18T17:26",
+     "laenge_s": 486.8,
+     "video": "https://github.com/jonathanb-bot/animierte-serie/releases/download/quer-q01/quer-q01.mp4"
+    }
    }
   },
   {
