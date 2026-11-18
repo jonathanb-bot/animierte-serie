@@ -633,6 +633,41 @@
     "lufs": -14.6,
     "dauer_s": 67.22
    }
+  },
+  {
+   "id": "mond-m005",
+   "datum": "2026-11-18",
+   "titel": "Bis zum Mond – Folge 5: Die Nacht der Kommentare",
+   "emoji": "🌕",
+   "serie": "Bis zum Mond (Jonathans Idee 14.11.)",
+   "stimmung": "aufbau",
+   "stimme": "Fenrir",
+   "thema": "Tag 5: 26 Städte aus 4 Ländern, 270 Stockwerke (gestern 56). Suceava (Rumänien) neu und sofort Platz 1 mit 76 (@f_e_m_a_n_u_e_l, 38 Kommentare mit je 1 Like). Hamburg neu mit 50 (@ilyas.1887_15, 50 Kommentare, 0 Likes). Stuttgart 13→42 (7 Kommentare, 35 Likes, @leeon_112), verliert die Krone. Bremen 24, Wermsdorf 18, neu Dörpen 14 (@HenryHempen), München 8, Luhe. Cliffhanger: 26 Likes auf Hamburg und die Krone ist wieder weg",
+   "stil": "leuchtend, Kulisse turm (Turmplatz mit 26 Türmen, Nahaufnahmen mit Kommentar-Sprechblasen, Duell Stuttgart–Suceava, Rangliste, Fahrt über den Kölner Dom bis zu den Wolken); neu: land= (Landesflaggen auf Schildern, Duell-Tafeln, Rangliste)",
+   "kulissen": [
+    "turm",
+    "titel"
+   ],
+   "beschreibung": "Tag 5: Über Nacht wachsen 214 Stockwerke. Suceava aus Rumänien springt von null auf Platz 1, Hamburg kommt mit 50 Kommentaren – aber ohne ein einziges Like. Jeder Kommentar mit deiner Stadt ist ein Stockwerk, jedes Like darauf noch eins. Kommentier deine Stadt!",
+   "hashtags": [
+    "#biszummond",
+    "#deinestadt",
+    "#hamburg",
+    "#stuttgart",
+    "#suceava",
+    "#animation",
+    "#deutsch"
+   ],
+   "tags": [
+    "animation",
+    "bis zum mond",
+    "turm",
+    "stadt",
+    "hamburg",
+    "stuttgart",
+    "suceava",
+    "rumänien"
+   ]
   }
  ]
 }
