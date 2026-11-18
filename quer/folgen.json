@@ -38,6 +38,14 @@
      "zeit": "2026-11-18T17:26",
      "laenge_s": 486.8,
      "video": "https://github.com/jonathanb-bot/animierte-serie/releases/download/quer-q01/quer-q01.mp4"
+    },
+    "en": {
+     "post": "quer-yt-q01-en",
+     "zernio_id": null,
+     "zeit": "2026-11-18T23:02",
+     "laenge_s": 484.3,
+     "konto": "zernio:3",
+     "video": "https://github.com/jonathanb-bot/animierte-serie/releases/download/quer-q01-en/quer-q01-en.mp4"
     }
    }
   },
