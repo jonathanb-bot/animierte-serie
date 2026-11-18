@@ -678,6 +678,41 @@
     "lufs": -14.5,
     "dauer_s": 78.85
    }
+  },
+  {
+   "id": "raub-r003",
+   "datum": "2026-11-18",
+   "titel": "Der letzte Raub – Folge 3: Noch eine Nacht",
+   "emoji": "🏦",
+   "serie": "Der letzte Raub – Ihr entscheidet (Jonathans Auftrag 16.11., Issue #35)",
+   "stimmung": "spannend",
+   "stimme": "Orus",
+   "thema": "Keine Entscheidung zu Folge 2 (kein Kommentar): Karos Frist ist abgelaufen, du schweigst weiter, Jonas Handy liegt wieder verdeckt. Mara findet im Archiv der Bank eine Notiz aus dem Büro der Direktion: ATLAS wird morgen 20:00 vernichtet, der Überfall muss morgen sein. Die Journalistin Hanna Wendt hat damals als Einzige mit Zweifeln über Lea geschrieben. Entscheidung A Hanna vor dem Überfall einweihen / B warten, bis du das Original hast",
+   "stil": "leuchtend, engine/raub.js neu: archiv, raubdetail motiv=notiz/zeitung, Figur hanna",
+   "kulissen": [
+    "versteck",
+    "gesicht",
+    "archiv",
+    "raubdetail",
+    "bankfassade",
+    "entscheidung"
+   ],
+   "beschreibung": "Karos Frist ist vorbei und du schweigst immer noch. Dann findet Mara eine Notiz: Morgen um 20 Uhr wird der letzte Beweis für Leas Unschuld vernichtet. Ihr entscheidet: Kommentiere A oder B, der Top-Kommentar bestimmt die nächste Folge.",
+   "hashtags": [
+    "#derletzteraub",
+    "#ihrentscheidet",
+    "#thriller",
+    "#animation",
+    "#story",
+    "#deutsch"
+   ],
+   "tags": [
+    "animation",
+    "der letzte raub",
+    "thriller",
+    "story",
+    "ihr entscheidet"
+   ]
   }
  ]
 }
