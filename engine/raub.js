@@ -5,7 +5,8 @@
    [bankfassade regen=1 schild="AUREON" beobachter=1]     AUREON-Bank bei Nacht im Regen: goldene Bögen, türkisfarbenes Glas, nasse Straße mit Spiegelung
    [bankhalle leute=6 alarm=0]                     Schalterhalle: hohe goldene Bögen, dunkler Steinboden mit Spiegelung, türkisfarbene Glasflächen
    [versteck regen=1]                               warmer, enger Vorbereitungsraum: Hängelampe, Tisch, Pinnwand, Fenster mit Regen
-   [raubdetail motiv=foto|akte|tasche|geld|umschlag|fotonah|fotorueck|nadel|koffer aufschrift="…"]   Nahaufnahme eines Leitmotivs auf dem Tisch (Lampenlicht)
+   [raubdetail motiv=foto|akte|tasche|geld|umschlag|fotonah|fotorueck|nadel|koffer|zeitung|notiz aufschrift="…"]   Nahaufnahme eines Leitmotivs auf dem Tisch (Lampenlicht)
+   [archiv licht=1]                                 neu Folge 3: kühles Archiv der Bank bei Nacht, Regalgang in die Tiefe, Leuchtröhren, Kartons, Tür mit Goldlicht am Ende
    [entscheidung a="Geld mitnehmen" b="ATLAS mitnehmen" frage="…"]          A/B-Karten am Ende jeder Entscheidungsfolge
    Alle Kulissen zeigen Figuren wie gewohnt (`r_du mara jona karo voss`, `hinten=r_du`, `gross`, `figur_y=`).
 */
@@ -158,6 +159,60 @@
     ctx.restore();
   };
 
+
+  // ---------- Archiv der Bank (neu Folge 3): Regalgang in die Tiefe, kühles Licht ----------
+  SZ.archiv = (s, t) => {
+    const VX = 540, VY = 900, P = (x, y, z) => [VX + (x - VX) / z, VY + (y - VY) / z];
+    const quad = (a, b, c, d, farbe) => poly([a, b, c, d], farbe);
+    ctx.fillStyle = lgrad(0, 0, 0, 1920, [[0, "#06101f"], [0.5, "#0d2240"], [1, "#071022"]]); ctx.fillRect(-400, -400, 1880, 2800);
+    const ZN = 1, ZF = 7.5, XL = -80, XR = 1160, YO = 120, YU = 1700;
+    // Rückwand mit Tür, hinter der Goldlicht brennt (Büro)
+    { const [ax, ay] = P(XL, YO, ZF), [bx, by] = P(XR, YU, ZF); box(ax, ay, bx - ax, by - ay, 0, "#0c1a30");
+      const [tx, ty] = P(440, 1000, ZF), [ux, uy] = P(640, YU, ZF), g = 0.85 + 0.15 * Math.sin(t * 2.3);
+      box(tx - 6, ty - 6, ux - tx + 12, uy - ty + 6, 2, "#1a2438"); box(tx, ty, ux - tx, uy - ty, 1, rgba(F.goldH, 0.75 * g)); glut((tx + ux) / 2, (ty + uy) / 2, 160, F.goldH, 0.5 * g);
+      ctx.save(); ctx.globalAlpha = 0.35 * g; ctx.fillStyle = lgrad(0, uy, 0, uy + 260, [[0, rgba(F.goldH, 0.8)], [1, rgba(F.goldH, 0)]]); poly([[tx, uy], [ux, uy], [ux + 120, uy + 260], [tx - 120, uy + 260]], ctx.fillStyle); ctx.restore(); }
+    // Decke und Boden
+    { const a = P(XL, YO, ZN), b = P(XR, YO, ZN), c = P(XR, YO, ZF), d = P(XL, YO, ZF); ctx.fillStyle = lgrad(0, a[1] - 200, 0, c[1], [[0, "#040a16"], [1, "#0e1e36"]]); poly([[a[0], a[1] - 400], [b[0], b[1] - 400], b, c, d, a], ctx.fillStyle); }
+    { const a = P(XL, YU, ZN), b = P(XR, YU, ZN), c = P(XR, YU, ZF), d = P(XL, YU, ZF); ctx.fillStyle = lgrad(0, c[1], 0, 1920, [[0, "#122238"], [1, "#081020"]]); poly([d, c, b, [b[0], 2400], [a[0], 2400], a], ctx.fillStyle);
+      for (let z = ZN + 0.5; z < ZF; z += 0.5) { const p = P(XL, YU, z), q = P(XR, YU, z); line(p[0], p[1], q[0], q[1], 2, rgba("#9fd8e8", 0.05)); }
+      for (const x of [240, 540, 840]) { const p = P(x, YU, ZN), q = P(x, YU, ZF); line(p[0], p[1], q[0], q[1], 2, rgba("#9fd8e8", 0.05)); } }
+    // Regale links und rechts, von hinten nach vorn
+    const r = rnd(23), boxen = [];
+    for (let k = 0; k < 60; k++) boxen.push([r(), r(), r()]);
+    const bays = []; for (let z = ZF - 0.6; z >= 0.55; z -= 0.75) bays.push(z);
+    for (const z0 of bays) { const z1 = z0 + 0.62, dim = clamp((z0 - 1) / 6.5, 0, 1) * 0.75;
+      for (const [X, dir] of [[XL, 1], [XR, -1]]) {
+        // Seitenpfosten
+        const p0 = P(X, YO + 60, z0), p1 = P(X, YU, z0); line(p0[0], p0[1], p1[0], p1[1], 14 / z0, mix("#2a3a52", "#0c1a30", dim));
+        // Rückwand des Fachs (dunkel)
+        quad(P(X, YO + 60, z0), P(X, YO + 60, z1), P(X, YU, z1), P(X, YU, z0), mix("#0f1e34", "#0b172a", dim));
+        // Fachböden mit Kartons
+        for (let lv = 0; lv < 6; lv++) { const yb = YO + 300 + lv * 250, yt = yb - 190;
+          let zz = z0 + 0.02; let k = (Math.round(z0 * 10) + lv * 7 + (dir > 0 ? 0 : 31)) % 50;
+          while (zz < z1 - 0.06) { const [a1, a2, a3] = boxen[k % 60]; const w = 0.12 + a1 * 0.08; if (zz + w > z1 - 0.02) break; const h = 150 + a2 * 40;
+            const farbe = mix(a3 < 0.15 ? "#3a6a8a" : a3 < 0.25 ? "#8a7448" : "#c8bc9e", "#0e1a30", 0.25 + dim);
+            quad(P(X, yb - h, zz), P(X, yb - h, zz + w), P(X, yb, zz + w), P(X, yb, zz), farbe);
+            // Etikett
+            const e1 = P(X, yb - h * 0.62, zz + w * 0.25), e2 = P(X, yb - h * 0.62, zz + w * 0.75), e3 = P(X, yb - h * 0.42, zz + w * 0.75), e4 = P(X, yb - h * 0.42, zz + w * 0.25);
+            quad(e1, e2, e3, e4, rgba("#f4f0e6", 0.8 - dim * 0.5));
+            zz += w + 0.012; k++; }
+          // Fachboden-Kante
+          const b1 = P(X, yb, z0), b2 = P(X, yb, z1); line(b1[0], b1[1], b2[0], b2[1], 10 / z0, mix("#3a4e6a", "#0e1a30", dim)); }
+      }
+    }
+    // Leuchtröhren an der Decke, kühles Türkis, eine flackert
+    ctx.save(); ctx.globalCompositeOperation = "lighter";
+    for (let z = ZF - 0.5, i = 0; z >= ZN + 0.3; z -= 1.1, i++) { const fl = i === 2 && s.licht !== 0 ? (Math.sin(t * 23) > 0.6 || Math.sin(t * 3.1) > 0.9 ? 0.25 : 1) : 1;
+      const a = P(470, YO + 40, z), b = P(610, YO + 40, z), c = P(610, YO + 40, z + 0.4), d = P(470, YO + 40, z + 0.4); poly([a, b, c, d], rgba("#e8fbff", 0.85 * fl));
+      const m = P(540, YO + 60, z + 0.2); glut(m[0], m[1] + 30 / z, 360 / z, "#9fe8f0", 0.4 * fl);
+      ctx.fillStyle = lgrad(0, m[1], 0, P(540, YU, z)[1], [[0, rgba("#9fe8f0", 0.1 * fl)], [1, rgba("#9fe8f0", 0)]]);
+      const f1 = P(300, YU, z - 0.15), f2 = P(780, YU, z - 0.15); poly([a, b, f2, f1], ctx.fillStyle); }
+    ctx.restore();
+    // Staub im Licht
+    { const q = rnd(41); for (let k = 0; k < 50; k++) { const x = 300 + q() * 480, y = (q() * 1500 + t * (12 + q() * 18)) % 1500 + 200; circle(x + Math.sin(t + k) * 10, y, 1.5 + q() * 2, rgba("#cfefff", 0.2 + 0.2 * Math.abs(Math.sin(t * 0.7 + k)))); } }
+    A.figurenZeigen(s, t, s.figur_y ?? (s.gross ? 1820 : 1600), s.gross ? 0.95 : 0.6);
+  };
+
   // ---------- Nahaufnahme eines Leitmotivs ----------
   SZ.raubdetail = (s, t) => {
     const m = s.motiv || "foto";
@@ -213,6 +268,25 @@
     } else if (m === "nadel") { // Voss' goldene Anstecknadel
       ctx.fillStyle = "#e4ded2"; ctx.fillRect(-600, -1000, 1200, 2000); ctx.fillStyle = lgrad(-300, 0, 300, 0, [[0, "rgba(0,0,0,0.12)"], [1, "rgba(0,0,0,0)"]]); ctx.fillRect(-600, -1000, 1200, 2000);
       glut(0, 0, 300, F.goldH, 0.6 + 0.2 * Math.sin(t * 3)); circle(0, 0, 90, F.gold); circle(0, 0, 70, F.goldD); poly([[0, -50], [44, 30], [-44, 30]], F.goldH); circle(-26, -30, 14, rgba("#ffffff", 0.8));
+    } else if (m === "zeitung") { // neu Folge 3: alter Zeitungsartikel über Leas Fall, Name der Journalistin
+      ctx.rotate(-0.04); ctx.shadowColor = "rgba(0,0,0,0.5)"; ctx.shadowBlur = 40; box(-360, -470, 720, 920, 4, "#e9e2d0"); ctx.shadowColor = "transparent";
+      ctx.fillStyle = "#3a3a44"; ctx.font = "700 26px HUD"; ctx.textAlign = "left"; ctx.fillText("STADTANZEIGER · WIRTSCHAFT", -320, -420); line(-320, -400, 320, -400, 3, "#3a3a44");
+      const kopf = String(s.aufschrift || "Bankangestellte/unter Betrugsverdacht").split("/"); ctx.fillStyle = "#14161c"; ctx.font = "900 58px Titel";
+      kopf.forEach((z, i) => ctx.fillText(z, -320, -330 + i * 64));
+      ctx.fillStyle = "#5a4a3a"; ctx.font = "italic 700 30px HUD"; ctx.fillText(s.autor || "Von Hanna Wendt", -320, -170);
+      // Pressefoto: Lea vor der Bank (grau)
+      ctx.save(); ctx.beginPath(); ctx.rect(-320, -140, 300, 330); ctx.clip(); ctx.fillStyle = "#9aa0a8"; ctx.fillRect(-320, -140, 300, 330);
+      for (const bx of [-260, -170, -80]) bogen(bx, -120, 70, 200, "#7a8088", "#b8bec6"); A.figur(-170, 260, 0.62, { ...A.fig("lea"), jacke: "#6a7078", haare: "#3a3a40", haut: "#c8c0b8", hose: "#4a4e56" }, { t: 0, seed: 4, ausdruck: "traurig" }); ctx.restore();
+      for (let k = 0; k < 14; k++) box(10, -130 + k * 26, 300 - ((k * 37) % 60), 10, 5, rgba("#2a2c34", 0.35));
+      for (let k = 0; k < 8; k++) box(-320, 220 + k * 26, 630 - ((k * 53) % 90), 10, 5, rgba("#2a2c34", 0.35));
+      const d = E.raus(clamp((t - 0.8) / 0.6, 0, 1)); if (d > 0) { ctx.save(); ctx.globalAlpha = d; ctx.strokeStyle = F.koralle; ctx.lineWidth = 6; ctx.beginPath(); ctx.ellipse(-190, -182, 160 + (1 - d) * 40, 40, 0, 0, Math.PI * 2); ctx.stroke(); ctx.restore(); }
+    } else if (m === "notiz") { // neu Folge 3: interne Notiz aus dem Büro der Direktion
+      ctx.rotate(0.05); ctx.shadowColor = "rgba(0,0,0,0.5)"; ctx.shadowBlur = 40; box(-330, -420, 660, 800, 6, "#f4f1ea"); ctx.shadowColor = "transparent";
+      box(-330, -420, 660, 100, 6, "#14284f"); ctx.fillStyle = F.goldH; ctx.font = "900 40px Titel"; ctx.textAlign = "left"; ctx.fillText("AUREON", -290, -356); ctx.fillStyle = "#9fd8dc"; ctx.font = "700 26px HUD"; ctx.textAlign = "right"; ctx.fillText("BÜRO DER DIREKTION", 290, -360);
+      const zeilen = String(s.aufschrift || "ATLAS (Original)/Abholung: morgen 20:00/zur Vernichtung").split("/"), n = Math.ceil(zeilen.join("").length * clamp((t - 0.3) / 1.8, 0, 1));
+      ctx.textAlign = "left"; let rest = n; zeilen.forEach((z, i) => { ctx.fillStyle = i === 0 ? "#14161c" : "#2a3048"; ctx.font = i === 0 ? "900 56px Titel" : "800 46px HUD"; ctx.fillText(z.slice(0, Math.max(0, rest)), -290, -200 + i * 100); rest -= z.length; });
+      for (let k = 0; k < 6; k++) box(-290, 130 + k * 34, 520 - ((k * 41) % 120), 12, 6, rgba("#2a2c34", 0.25));
+      const d = E.raus(clamp((t - 2.1) / 0.4, 0, 1)); if (d > 0) { ctx.save(); ctx.translate(150, 330); ctx.rotate(-0.18); ctx.scale(1.6 - 0.6 * d, 1.6 - 0.6 * d); ctx.globalAlpha = 0.85 * d; ctx.strokeStyle = F.koralle; ctx.lineWidth = 7; A.rr(-170, -46, 340, 92, 10); ctx.stroke(); ctx.fillStyle = F.koralle; ctx.font = "900 46px Titel"; ctx.textAlign = "center"; ctx.fillText("VERTRAULICH", 0, 16); ctx.restore(); }
     } else if (m === "koffer") { // der rote ATLAS-Koffer
       ctx.shadowColor = "rgba(0,0,0,0.5)"; ctx.shadowBlur = 40; box(-320, -200, 640, 420, 26, "#c8443a"); ctx.shadowColor = "transparent";
       box(-320, -200, 640, 40, 20, shade("#c8443a", 0.15)); box(-80, -270, 160, 80, 20, "#2a1a1a"); box(-60, -250, 120, 50, 14, "#c8443a");

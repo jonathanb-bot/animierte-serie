@@ -190,5 +190,13 @@
   "jacke": "#7a5aa8",
   "hose": "#33363f",
   "brille": "#2a2a2e"
+ },
+ "hanna": {
+  "haar": "dutt",
+  "haare": "#8a4a2a",
+  "haut": "#e6bc9a",
+  "jacke": "#6a3f6e",
+  "hose": "#2c2a34",
+  "schal": "#d9c8a8"
  }
 }
