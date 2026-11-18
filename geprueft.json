@@ -2148,6 +2148,12 @@
    "bild_s": 67.22,
    "ton_s": 67.24,
    "lufs": -14.6
+  },
+  "taeglich/mond-m005.mp4": {
+   "ok": true,
+   "bild_s": 78.85,
+   "ton_s": 78.85,
+   "lufs": -14.5
   }
  },
  "serien": {
@@ -2392,6 +2398,10 @@
   "raub-r002": {
    "titel": "Der letzte Raub – Folge 2: Die erste Warnung",
    "datei": "taeglich/raub-r002.mp4"
+  },
+  "mond-m005": {
+   "titel": "Bis zum Mond – Folge 5: Die Nacht der Kommentare",
+   "datei": "taeglich/mond-m005.mp4"
   }
  },
  "taeglich_staffeln": {
