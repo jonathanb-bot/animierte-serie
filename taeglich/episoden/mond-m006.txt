@@ -1,0 +1,52 @@
+# Bis zum Mond – Folge 6: Der Norden greift an
+@musik musik/mond-m006.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung aufbau
+@vortrag lebendig
+@klang studio
+@mund zitate
+@einblenden aus
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette tuerkis
+@zeit tag
+
+== Start ==
+// Wow-Bild zuerst: der ganze Platz, Krone auf Suceava, der Norden leuchtet
+[turm modus=feld stock_hoehe=0.7 palette=tuerkis palette_staerke=0.2 schilder="Suceava,Hamburg,Stuttgart" schild_px=34 land="Suceava:RO|Bern:CH|Ebensee:AT" krone="Suceava" krone_ab=2.4 tuerme="Hildesheim:7|Freiburg:4|Stuttgart:46|Leimersheim:2|Plauen:2|Rastatt:2|Ulm:2|Augsburg:2|Berlin:1|Ebensee:1|Freilassing:1|Hamm:3|Meuselwitz:1|Oldenburg:1|Ronnenberg:1|Baden-Baden:6|Bremen:29|Bern:2|Görlitz:2|Wermsdorf:26|Friedeburg:1|Suceava:76|Hamburg:50|Dörpen:14|München:9|Luhe-Wildenau:13|Bielefeld:15|Bremerhaven:15|Lübeck:9" nah=1.1 blick=1.6,1.6 zoom-rein hooktext="TAG 6: DER NORDEN GREIFT AN" ein="dreihundert>#343 STOCKWERKE" ein_y=1200] Tag sechs auf deinem Turmplatz. Dreihundertdreiundvierzig Stockwerke, und von der Küste rollt ein Angriff heran.
+// Alles wächst
+[turm modus=feld stock_hoehe=0.7 palette=tuerkis palette_staerke=0.2 schilder="Bielefeld,Bremerhaven,Lübeck" schild_px=34 land="Suceava:RO|Bern:CH|Ebensee:AT" tuerme="Hildesheim:6>7|Freiburg:4|Stuttgart:42>46|Leimersheim:2|Plauen:2|Rastatt:2|Ulm:2|Augsburg:2|Berlin:1|Ebensee:1|Freilassing:1|Hamm:3|Meuselwitz:1|Oldenburg:1|Ronnenberg:1|Baden-Baden:3>6|Bremen:24>29|Bern:2|Görlitz:2|Wermsdorf:18>26|Friedeburg:1|Suceava:76|Hamburg:50|Dörpen:14|München:8>9|Luhe-Wildenau:1>13|Bielefeld:0>15|Bremerhaven:0>15|Lübeck:0>9" wachsen_dauer=2.8 nah=1.1 zoom-raus ein="neunundzwanzig>#29 STÄDTE|Lübeck>NEU: LÜBECK" ein_y=980] Neunundzwanzig Städte bauen jetzt mit. Neu sind Bielefeld, Bremerhaven und Lübeck. Eren schreibt vierzehnmal Bielefeld.
+// Titelkarte
+[titel oben="Folge 6" gross="BIS ZUM MOND" unten="Der Norden greift an" farbe=#123a4a akzent=#7fe0e8 groesse=150 hud=false palette=tuerkis zoom-rein] Der Norden greift an.
+
+== Die Küste ==
+// Die Nord-Türme
+[turm modus=feld stock_hoehe=0.7 palette=tuerkis palette_staerke=0.2 schilder="Hamburg,Bremerhaven,Lübeck" schild_px=34 land="Suceava:RO|Bern:CH|Ebensee:AT" tuerme="Hildesheim:6>7|Freiburg:4|Stuttgart:42>46|Leimersheim:2|Plauen:2|Rastatt:2|Ulm:2|Augsburg:2|Berlin:1|Ebensee:1|Freilassing:1|Hamm:3|Meuselwitz:1|Oldenburg:1|Ronnenberg:1|Baden-Baden:3>6|Bremen:24>29|Bern:2|Görlitz:2|Wermsdorf:18>26|Friedeburg:1|Suceava:76|Hamburg:50|Dörpen:14|München:8>9|Luhe-Wildenau:1>13|Bielefeld:0>15|Bremerhaven:0>15|Lübeck:0>9" wachsen_dauer=2.4 nah=1.15 blick=1,1 schwenk-rechts ein="hundertdrei>#103 STOCKWERKE" ein_y=1150] Hamburg, Bremen, Bremerhaven und Lübeck. Zusammen schon hundertdrei Stockwerke.
+// Nah auf Bremerhaven
+[turm modus=feld stock_hoehe=0.7 palette=tuerkis palette_staerke=0.2 schilder="Bremerhaven" schild_px=40 land="Suceava:RO|Bern:CH|Ebensee:AT" tuerme="Hildesheim:6>7|Freiburg:4|Stuttgart:42>46|Leimersheim:2|Plauen:2|Rastatt:2|Ulm:2|Augsburg:2|Berlin:1|Ebensee:1|Freilassing:1|Hamm:3|Meuselwitz:1|Oldenburg:1|Ronnenberg:1|Baden-Baden:3>6|Bremen:24>29|Bern:2|Görlitz:2|Wermsdorf:18>26|Friedeburg:1|Suceava:76|Hamburg:50|Dörpen:14|München:8>9|Luhe-Wildenau:1>13|Bielefeld:0>15|Bremerhaven:0>15|Lübeck:0>9" wachsen_dauer=2.6 nah=1.8 blick=1.3,5.3 zoom-rein kommentar="@blaulicht_bhv|Bremerhaven auf die 1|0" kommentar_y=1200 ein="fünfzehn>#15 KOMMENTARE" ein_y=250] Bremerhaven kommt mit fünfzehn Kommentaren auf einmal, und das Ziel steht gleich dabei: Platz eins.
+// Nah auf Lübeck, Bremen wächst
+[turm modus=feld stock_hoehe=0.7 palette=tuerkis palette_staerke=0.2 schilder="Lübeck" schild_px=40 land="Suceava:RO|Bern:CH|Ebensee:AT" tuerme="Hildesheim:6>7|Freiburg:4|Stuttgart:42>46|Leimersheim:2|Plauen:2|Rastatt:2|Ulm:2|Augsburg:2|Berlin:1|Ebensee:1|Freilassing:1|Hamm:3|Meuselwitz:1|Oldenburg:1|Ronnenberg:1|Baden-Baden:3>6|Bremen:24>29|Bern:2|Görlitz:2|Wermsdorf:18>26|Friedeburg:1|Suceava:76|Hamburg:50|Dörpen:14|München:8>9|Luhe-Wildenau:1>13|Bielefeld:0>15|Bremerhaven:0>15|Lübeck:0>9" wachsen_dauer=2.6 nah=1.5 blick=3,0 schwenk-links kommentar="@lukes.k.2012|Lübeck|0" kommentar_y=1200 ein="neun>#9 STOCKWERKE|neunundzwanzig>BREMEN #29" ein_y=250] Lübeck baut neun Stockwerke aus dem Nichts. Bremen klettert mit Likes auf neunundzwanzig.
+
+== Das Duell ==
+[turm modus=duell duell="Hamburg#22:50|Stuttgart#2:42>46" land="Suceava:RO|Bern:CH|Ebensee:AT" zeit=abend titel_text="NUR NOCH 4" wachsen_dauer=2 palette=tuerkis palette_staerke=0.15 zoom-rein] Aber der Süden schläft nicht. Stuttgart wächst auf sechsundvierzig, nur noch vier Stockwerke hinter Hamburg.
+
+== Die Aufsteiger ==
+// Luhe-Wildenau und Wermsdorf
+[turm modus=feld stock_hoehe=0.7 palette=tuerkis palette_staerke=0.2 schilder="Luhe-Wildenau,Wermsdorf" schild_px=40 land="Suceava:RO|Bern:CH|Ebensee:AT" tuerme="Hildesheim:6>7|Freiburg:4|Stuttgart:42>46|Leimersheim:2|Plauen:2|Rastatt:2|Ulm:2|Augsburg:2|Berlin:1|Ebensee:1|Freilassing:1|Hamm:3|Meuselwitz:1|Oldenburg:1|Ronnenberg:1|Baden-Baden:3>6|Bremen:24>29|Bern:2|Görlitz:2|Wermsdorf:18>26|Friedeburg:1|Suceava:76|Hamburg:50|Dörpen:14|München:8>9|Luhe-Wildenau:1>13|Bielefeld:0>15|Bremerhaven:0>15|Lübeck:0>9" wachsen_dauer=2.6 nah=1.5 blick=0.5,4.2 schwenk-rechts kommentar="@Jonas_YT-HD|Luhe ❤|0" kommentar_y=1200 ein="dreizehn>#13 STOCKWERKE|acht>+8 FÜR WERMSDORF" ein_y=250] Der größte Sprung: Luhe-Wildenau, von einem auf dreizehn Stockwerke. Wermsdorf holt mit Likes acht dazu.
+// Baden-Baden, Ellens Aufruf
+[turm modus=feld stock_hoehe=0.7 palette=tuerkis palette_staerke=0.2 schilder="Baden-Baden" schild_px=40 land="Suceava:RO|Bern:CH|Ebensee:AT" tuerme="Hildesheim:6>7|Freiburg:4|Stuttgart:42>46|Leimersheim:2|Plauen:2|Rastatt:2|Ulm:2|Augsburg:2|Berlin:1|Ebensee:1|Freilassing:1|Hamm:3|Meuselwitz:1|Oldenburg:1|Ronnenberg:1|Baden-Baden:3>6|Bremen:24>29|Bern:2|Görlitz:2|Wermsdorf:18>26|Friedeburg:1|Suceava:76|Hamburg:50|Dörpen:14|München:8>9|Luhe-Wildenau:1>13|Bielefeld:0>15|Bremerhaven:0>15|Lübeck:0>9" wachsen_dauer=2.6 nah=2.0 blick=4.6,4.6 zoom-rein kommentar="@EllenZaum|Bitte Leute fangt an zu liken und zu kommentieren.|0" kommentar_y=1200 ein="verdoppelt>#6 STOCKWERKE" ein_y=250] Und Ellen ruft: Bitte Leute, liken und kommentieren. Baden-Baden verdoppelt sich auf sechs.
+
+== Die Rangliste ==
+[turm modus=rangliste rangliste="Suceava#21:76>76|Hamburg#22:50>50|Stuttgart#2:42>46|Bremen#16:24>29|Wermsdorf#19:18>26" land="Suceava:RO|Bern:CH|Ebensee:AT" ziel=333 ziel_name=Wolken titel_text="TAG 6" palette=tuerkis palette_staerke=0.2 zoom-rein] Oben bleibt Suceava mit sechsundsiebzig. Seit Tag fünf kein einziges Stockwerk mehr. Dahinter Hamburg, Stuttgart, Bremen und Wermsdorf.
+
+== Bis zu den Wolken ==
+[turm modus=hoehe hoehe=0>1000 stadt="Suceava" farbe=#4a9ad0 palette=tuerkis palette_staerke=0.2 kamera=ruhig ein="Krone>#228 METER|zweihundertsiebenundfünfzig>NOCH #257 STOCKWERKE"] Die Krone hängt auf zweihundertachtundzwanzig Metern. Bis zu den Wolken fehlen noch zweihundertsiebenundfünfzig Stockwerke.
+
+== Das Rennen ==
+// Abend, Hamburg und Stuttgart
+[turm modus=feld stock_hoehe=0.7 palette=orange palette_staerke=0.2 schilder="Suceava,Hamburg,Stuttgart" schild_px=34 land="Suceava:RO|Bern:CH|Ebensee:AT" krone="Suceava" krone_ab=0.3 zeit=abend tuerme="Hildesheim:7|Freiburg:4|Stuttgart:46|Leimersheim:2|Plauen:2|Rastatt:2|Ulm:2|Augsburg:2|Berlin:1|Ebensee:1|Freilassing:1|Hamm:3|Meuselwitz:1|Oldenburg:1|Ronnenberg:1|Baden-Baden:6|Bremen:29|Bern:2|Görlitz:2|Wermsdorf:26|Friedeburg:1|Suceava:76|Hamburg:50|Dörpen:14|München:9|Luhe-Wildenau:13|Bielefeld:15|Bremerhaven:15|Lübeck:9" nah=1.2 zoom-raus ein="Fünf>#5 LIKES>herz" ein_y=1150] Fünf Likes auf Stuttgart, und Hamburg fällt auf Platz drei. Der Norden muss jetzt nachlegen.
+// Nah auf den nächsten freien Platz
+[turm modus=feld stock_hoehe=0.7 palette=orange palette_staerke=0.2 schilder="-" schild_px=40 zeit=abend tuerme="Hildesheim:7|Freiburg:4|Stuttgart:46|Leimersheim:2|Plauen:2|Rastatt:2|Ulm:2|Augsburg:2|Berlin:1|Ebensee:1|Freilassing:1|Hamm:3|Meuselwitz:1|Oldenburg:1|Ronnenberg:1|Baden-Baden:6|Bremen:29|Bern:2|Görlitz:2|Wermsdorf:26|Friedeburg:1|Suceava:76|Hamburg:50|Dörpen:14|München:9|Luhe-Wildenau:13|Bielefeld:15|Bremerhaven:15|Lübeck:9" nah=2.8 blick=5.9,6.5 markiere=5,6 leer="Deine Stadt?" leer_zeigen=4 zoom-rein] Kommentier deine Stadt! Jedes Like darauf ist ein Stockwerk mehr.

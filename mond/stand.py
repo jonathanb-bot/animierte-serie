@@ -73,24 +73,47 @@ def main_json(pfad: str):
     return json.loads(subprocess.check_output(["git", "-C", str(ROOT), "show", f"origin/main:{pfad}"]))
 
 
+def historie() -> list:
+    """Alle Stände von posten/kommentare.json auf origin/main seit Serienstart (14.11.), älteste zuerst."""
+    revs = subprocess.check_output(["git", "-C", str(ROOT), "log", "--reverse", "--format=%H", "--since=2026-11-14",
+                                    "origin/main", "--", "posten/kommentare.json"], text=True).split()
+    out = []
+    for r in revs:
+        try:
+            out.append(json.loads(subprocess.check_output(["git", "-C", str(ROOT), "show", f"{r}:posten/kommentare.json"])))
+        except (subprocess.CalledProcessError, json.JSONDecodeError):
+            pass
+    out.append(main_json("posten/kommentare.json"))
+    return out
+
+
 def zaehlen() -> dict:
     lx = lexikon()
     g = json.loads(GED.read_text(encoding="utf-8")) if GED.exists() else {}
     gesperrt = set(g.get("gesperrt", []))
     k = main_json("posten/kommentare.json")
     posts = [p for p in k.get("posts", []) if SERIE.lower() in (p["post"].get("content") or "").lower()]
-    gesehen, staedte, unbekannt = set(), {}, []
-    for p in posts:
-        for c in p.get("kommentare", []):
-            von = c.get("from") or {}
-            cid = c.get("id")
-            if von.get("isOwner") or cid in gesehen or cid in gesperrt:
+    # Zernio liefert pro Post höchstens die neuesten 100 Kommentare (Instagram Folge 4 hatte am 20.11. schon 169).
+    # Deshalb alle früheren Stände von posten/kommentare.json einlesen: jeder je gesehene Kommentar zählt weiter,
+    # die Likes stammen aus dem neuesten Stand, in dem er vorkommt (Fehler entdeckt am 20.11., Folge 6).
+    alle = {}
+    for stand in historie():
+        for p in stand.get("posts", []):
+            if SERIE.lower() not in (p["post"].get("content") or "").lower():
                 continue
-            gesehen.add(cid)
+            for c in p.get("kommentare", []):
+                if c.get("id"):
+                    alle[c["id"]] = (c, p["post"]["platform"])
+    staedte, unbekannt = {}, []
+    for cid, (c, plattform) in alle.items():
+        if True:
+            von = c.get("from") or {}
+            if von.get("isOwner") or cid in gesperrt:
+                continue
             likes = int(c.get("likeCount") or 0)
             wer = ("@" + von["username"]) if von.get("username") else (von.get("name") or "?")
             st = stadt_finden(c.get("message", ""), lx)
-            eintrag = {"id": cid, "wer": wer, "text": c.get("message", ""), "likes": likes, "plattform": p["post"]["platform"]}
+            eintrag = {"id": cid, "wer": wer, "text": c.get("message", ""), "likes": likes, "plattform": plattform}
             if not st:
                 unbekannt.append(eintrag)
                 continue

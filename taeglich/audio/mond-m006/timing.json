@@ -1,0 +1,122 @@
+{
+ "dauer": 67.142,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "turm",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 6.686,
+   "emotion": "erzaehlend",
+   "text": "Tag sechs auf deinem Turmplatz. Dreihundertdreiundvierzig Stockwerke, und von der Küste rollt ein Angriff heran."
+  },
+  {
+   "nr": 2,
+   "typ": "turm",
+   "kapitel": 1,
+   "start": 6.686,
+   "dauer": 6.35,
+   "emotion": "erzaehlend",
+   "text": "Neunundzwanzig Städte bauen jetzt mit. Neu sind Bielefeld, Bremerhaven und Lübeck. Eren schreibt vierzehnmal Bielefeld."
+  },
+  {
+   "nr": 3,
+   "typ": "titel",
+   "kapitel": 1,
+   "start": 13.036,
+   "dauer": 1.574,
+   "emotion": "erzaehlend",
+   "text": "Der Norden greift an."
+  },
+  {
+   "nr": 4,
+   "typ": "turm",
+   "kapitel": 2,
+   "start": 14.61,
+   "dauer": 3.95,
+   "emotion": "erzaehlend",
+   "text": "Hamburg, Bremen, Bremerhaven und Lübeck. Zusammen schon hundertdrei Stockwerke."
+  },
+  {
+   "nr": 5,
+   "typ": "turm",
+   "kapitel": 2,
+   "start": 18.56,
+   "dauer": 5.438,
+   "emotion": "erzaehlend",
+   "text": "Bremerhaven kommt mit fünfzehn Kommentaren auf einmal, und das Ziel steht gleich dabei: Platz eins."
+  },
+  {
+   "nr": 6,
+   "typ": "turm",
+   "kapitel": 2,
+   "start": 23.998,
+   "dauer": 4.646,
+   "emotion": "erzaehlend",
+   "text": "Lübeck baut neun Stockwerke aus dem Nichts. Bremen klettert mit Likes auf neunundzwanzig."
+  },
+  {
+   "nr": 7,
+   "typ": "turm",
+   "kapitel": 3,
+   "start": 28.644,
+   "dauer": 5.174,
+   "emotion": "erzaehlend",
+   "text": "Aber der Süden schläft nicht. Stuttgart wächst auf sechsundvierzig, nur noch vier Stockwerke hinter Hamburg."
+  },
+  {
+   "nr": 8,
+   "typ": "turm",
+   "kapitel": 4,
+   "start": 33.818,
+   "dauer": 6.158,
+   "emotion": "erzaehlend",
+   "text": "Der größte Sprung: Luhe-Wildenau, von einem auf dreizehn Stockwerke. Wermsdorf holt mit Likes acht dazu."
+  },
+  {
+   "nr": 9,
+   "typ": "turm",
+   "kapitel": 4,
+   "start": 39.976,
+   "dauer": 5.606,
+   "emotion": "erzaehlend",
+   "text": "Und Ellen ruft: Bitte Leute, liken und kommentieren. Baden-Baden verdoppelt sich auf sechs."
+  },
+  {
+   "nr": 10,
+   "typ": "turm",
+   "kapitel": 5,
+   "start": 45.582,
+   "dauer": 7.574,
+   "emotion": "erzaehlend",
+   "text": "Oben bleibt Suceava mit sechsundsiebzig. Seit Tag fünf kein einziges Stockwerk mehr. Dahinter Hamburg, Stuttgart, Bremen und Wermsdorf."
+  },
+  {
+   "nr": 11,
+   "typ": "turm",
+   "kapitel": 6,
+   "start": 53.156,
+   "dauer": 5.894,
+   "emotion": "erzaehlend",
+   "text": "Die Krone hängt auf zweihundertachtundzwanzig Metern. Bis zu den Wolken fehlen noch zweihundertsiebenundfünfzig Stockwerke."
+  },
+  {
+   "nr": 12,
+   "typ": "turm",
+   "kapitel": 7,
+   "start": 59.05,
+   "dauer": 4.67,
+   "emotion": "erzaehlend",
+   "text": "Fünf Likes auf Stuttgart, und Hamburg fällt auf Platz drei. Der Norden muss jetzt nachlegen."
+  },
+  {
+   "nr": 13,
+   "typ": "turm",
+   "kapitel": 7,
+   "start": 63.72,
+   "dauer": 3.422,
+   "emotion": "erzaehlend",
+   "text": "Kommentier deine Stadt! Jedes Like darauf ist ein Stockwerk mehr."
+  }
+ ]
+}
