@@ -113,3 +113,14 @@ Diese Liste A–I und alle Nachträge oben Punkt für Punkt abhaken. Im Bericht 
 - **Falls ein Konto „neu“ empfohlen wird** (Abschnitt „Kanal behalten oder neu“): Plan nach dem Video. Kanal anlegen (geht unter demselben Google-Konto: Einstellungen → Kanäle → „Neuen Kanal erstellen“), Name passend zur Gewinner-Nische, Profilbild, Identität bestätigen. Dann **5–7 Tage ganz normal benutzen**, bevor das erste Short kommt: Videos der Nische ansehen, liken, abonnieren, kommentieren. Das macht Jonathan selbst von Hand, keine Bots und keine gekauften Interaktionen. Danach jeden Tag posten, Nische nicht wechseln.
 - **Durchbruch-Effekt beobachten:** Wenn ein Video stark ausbricht, ziehen oft ältere Videos mit. Im Bericht prüfen, ob das bei uns schon passiert ist (z. B. s02-f01 auf Instagram).
 - **Nicht übernehmen:** „Rage Bait“ und absichtlich kontroverse Sätze (widerspricht Qualität #30 und dem Stil), Aufrufe zum Kommentieren im Video (#8) und Endkarten (#11).
+
+## Nachtrag 20.11. (3): Nischen-Kandidaten (TikTok DecodingYT „12 Secret Faceless YouTube Niches 2026“)
+Bei der Wahl der **Gewinner-Nische** (Abschnitt I) diese Kandidaten neben unseren eigenen Testergebnissen prüfen. Nur die, die zu Stil „leuchtend“ (Kurzgesagt-Richtung), Orus und Du-Erzählung (#31) passen. Die Zahlen im Video sind Schätzungen des Erstellers und nicht geprüft.
+- **Psychologie über dich** („Die Psychologie von Menschen, die zu viel denken“): Das Video nennt es stark, weil es um den Zuschauer selbst geht. Mit unserem s07 und video-001 („Aussage über dein Leben“, Bestwerte) vergleichen.
+- **Weltall-Doku** (Planeten, schwarze Löcher, Titel aus Neugier wie „Warum Saturn der gruseligste Planet ist“): zeitlos, passt am genauesten zu Kurzgesagt. Kandidat auch fürs Querformat (#37).
+- **Seltsame Tiere / Tiefsee** (Wissen + Mysterium, zeitlos): Kandidat für Shorts und Querformat.
+- **Tier-Psychologie in Du-Form** („Was dein Hund macht, wenn du nicht im Raum bist“).
+- **Erschreckende wahre Geschichten** (z. B. Höhlentaucher): passt zum Horror-Test (s03, s05). Nur ohne Blut und Wunden (#23), keine echten Opfer verhöhnen.
+- **Lange Geschichten** (eigene, erfundene Ich- bzw. Du-Geschichten, sehr lang): hohe Wiedergabezeit. Idee fürs Querformat, nicht für Shorts.
+- **Nicht passend:** Quiz und Tier-/Ranking-Listen mit fremdem Material (Gefahr „inauthentic content“, laut Video werden solche Kanäle nicht monetarisiert), Reddit-Geschichten mit fremdem Spielmaterial, Immobilien und Navy mit fremden Clips.
+- Im Bericht: Kandidat, passt zu uns (ja/nein), vorhandene eigene Daten dazu, Empfehlung.
