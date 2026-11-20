@@ -769,6 +769,40 @@
     "lufs": -14.6,
     "dauer_s": 66.65
    }
+  },
+  {
+   "id": "raub-r004",
+   "datum": "2026-11-20",
+   "titel": "Der letzte Raub – Folge 4: Er hat auf dich gewartet",
+   "emoji": "🏦",
+   "serie": "Der letzte Raub – Ihr entscheidet (Jonathans Auftrag 16.11., Issue #35)",
+   "stimmung": "spannend",
+   "stimme": "Orus",
+   "thema": "Abstimmung Folge 3: B (@EllenZaum, YouTube) – du weihst Hanna Wendt nicht ein. Um 18:58 beginnt der Überfall, Alarm färbt die Schalterhalle rot, sechs Kunden ducken sich. Karo: „Vier rein. Vier raus.“ Jonas Handy summt wieder. Direktor Voss tritt ruhig aus seinem Büro, nicht überrascht: „Deine Schwester hat denselben Fehler gemacht.“ Jona und Karo hören zum ersten Mal von einer Schwester. Entscheidung A am Geld festhalten / B ATLAS offen zum Ziel machen",
+   "stil": "leuchtend, engine/raub.js unverändert (bankhalle alarm=1 leute=6, raubdetail motiv=tasche/fotonah)",
+   "kulissen": [
+    "bankfassade",
+    "raubdetail",
+    "bankhalle",
+    "gesicht",
+    "entscheidung"
+   ],
+   "beschreibung": "Du hast niemanden eingeweiht. Dann geht in der Bank der Alarm los, und Direktor Voss kommt ganz ruhig aus seinem Büro. Er weiß, wer du bist. Ihr entscheidet: Kommentiere A oder B, der Top-Kommentar bestimmt die nächste Folge.",
+   "hashtags": [
+    "#derletzteraub",
+    "#ihrentscheidet",
+    "#thriller",
+    "#animation",
+    "#story",
+    "#deutsch"
+   ],
+   "tags": [
+    "animation",
+    "der letzte raub",
+    "thriller",
+    "story",
+    "ihr entscheidet"
+   ]
   }
  ]
 }
