@@ -2220,6 +2220,66 @@
    "bild_s": 71.1,
    "ton_s": 71.12,
    "lufs": -14.6
+  },
+  "taeglich-en/s07-f01.mp4": {
+   "ok": true,
+   "bild_s": 70.73,
+   "ton_s": 70.72,
+   "lufs": -14.6
+  },
+  "taeglich-en/s07-f02.mp4": {
+   "ok": true,
+   "bild_s": 76.08,
+   "ton_s": 76.12,
+   "lufs": -14.6
+  },
+  "taeglich-en/s07-f03.mp4": {
+   "ok": true,
+   "bild_s": 68.3,
+   "ton_s": 68.33,
+   "lufs": -14.6
+  },
+  "taeglich-en/s07-f04.mp4": {
+   "ok": true,
+   "bild_s": 74.68,
+   "ton_s": 74.71,
+   "lufs": -14.6
+  },
+  "taeglich-en/s07-f05.mp4": {
+   "ok": true,
+   "bild_s": 71.98,
+   "ton_s": 72.0,
+   "lufs": -14.6
+  },
+  "taeglich-en/s07-f06.mp4": {
+   "ok": true,
+   "bild_s": 69.57,
+   "ton_s": 69.55,
+   "lufs": -14.6
+  },
+  "taeglich-en/s07-f07.mp4": {
+   "ok": true,
+   "bild_s": 69.53,
+   "ton_s": 69.57,
+   "lufs": -14.6
+  },
+  "taeglich-en/s07-f08.mp4": {
+   "ok": true,
+   "bild_s": 67.88,
+   "ton_s": 67.9,
+   "lufs": -14.5
+  },
+  "taeglich-en/s07-f09.mp4": {
+   "ok": true,
+   "bild_s": 75.07,
+   "ton_s": 75.09,
+   "lufs": -14.6
+  },
+  "taeglich-en/s07-f10.mp4": {
+   "ok": true,
+   "bild_s": 64.87,
+   "ton_s": 64.9,
+   "lufs": -14.6
   }
  },
  "serien": {
