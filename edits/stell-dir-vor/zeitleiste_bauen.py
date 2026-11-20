@@ -1,0 +1,73 @@
+import json, numpy as np, scipy.io.wavfile as wf, scipy.signal as sg, subprocess, difflib, re
+from zeilen import ZEILEN
+S0, S1 = 10.97, 48.30
+B0, P = 8.71, 0.7547; s16 = P/4
+subprocess.run(['ffmpeg','-loglevel','error','-y','-ss',str(S0),'-to',str(S1),'-i','song.mp3','-af','afade=t=in:d=0.02,afade=t=out:st=%.2f:d=0.3'%(S1-S0-0.3),'-ar','48000','ausschnitt.wav'],check=True)
+sr,x=wf.read('ausschnitt.wav'); x=x.astype(np.float32); x=x.mean(1) if x.ndim>1 else x
+f,t,Z=sg.stft(x,sr,nperseg=2048,noverlap=2048-256);M=np.log1p(np.abs(Z)/300); t=t+S0
+def flux(lo,hi):
+    b=(f>=lo)&(f<hi);d=np.diff(M[b],axis=1);d[d<0]=0;e=np.concatenate([[0],d.sum(0)]);return e/e.max()
+voc=flux(1000,4000); kick=flux(30,150)
+roh=[w for w in json.load(open('woerter-roh.json')) if w['a']<14.45]+[w for w in json.load(open('woerter-large.json')) if w['a']>=14.45]
+ww=[]
+for w in roh:
+    if (w['w'].startswith("'") or w['w'].startswith('-')) and ww: ww[-1]['w']+=w['w']
+    else: ww.append(dict(w))
+ww=[w for w in ww if 11.0<w['a']<48.2]
+norm=lambda s: re.sub(r"[^a-z0-9äöüß]","",s.lower().replace('ss','ß'))
+lyr=[]
+for zi,z in enumerate(ZEILEN):
+    for k,w in enumerate(z.split()): lyr.append((zi,k,w.lstrip('~')))
+sm=difflib.SequenceMatcher(None,[norm(w) for _,_,w in lyr],[norm(w['w']) for w in ww],autojunk=False)
+zeit=[None]*len(lyr)
+for a,b,n in sm.get_matching_blocks():
+    for i in range(n): zeit[a+i]=ww[b+i]['a']
+# Lücken interpolieren
+idx=[i for i,v in enumerate(zeit) if v is not None]
+for i in range(len(zeit)):
+    if zeit[i] is None:
+        lo=max([j for j in idx if j<i],default=None); hi=min([j for j in idx if j>i],default=None)
+        zeit[i]= zeit[lo]+ (zeit[hi]-zeit[lo])*(i-lo)/(hi-lo) if lo is not None and hi is not None else (zeit[lo]+0.2 if lo is not None else zeit[hi]-0.2)
+def stark(tm,w=0.03):
+    m=(t>tm-w)&(t<tm+w); return voc[m].max() if m.any() else 0
+zeilen=[]; prev=S0-0.1; i=0
+for zi,z in enumerate(ZEILEN):
+    out=[]
+    for k,w in enumerate(z.split()):
+        a=zeit[i]; i+=1
+        ks=np.arange(np.ceil((a-0.12-B0)/s16),np.floor((a+0.09-B0)/s16)+1)
+        cand=[B0+q*s16 for q in ks if B0+q*s16>prev+0.04] or [max(a,prev+0.05)]
+        sc=[stark(c)-0.8*abs(c-a) for c in cand]; nn=cand[int(np.argmax(sc))]; prev=nn
+        out.append(dict(w=w.lstrip('~'),a=round(nn-S0,3),v=w.startswith('~')))
+    anz=[]
+    for w in out:
+        if w['v']:
+            if not anz or anz[-1]['w']!='…': anz.append(dict(w='…',a=w['a']))
+        else: anz.append(dict(w=w['w'],a=w['a']))
+    zeilen.append(dict(text=z,woerter=out,anzeige=anz))
+# Zeilengrenzen auf Takt/erstes Wort
+for k,z in enumerate(zeilen):
+    z['a']=round(z['woerter'][0]['a']-0.06,3)
+for k,z in enumerate(zeilen):
+    z['e']=zeilen[k+1]['a'] if k+1<len(zeilen) else round(S1-S0,3)
+    print(f"{z['a']:6.2f} {z['e']:6.2f} "+' '.join(f"{w['w']}@{w['a']+S0:.2f}" for w in z['woerter']))
+kk=[round(float(t[i])-S0,3) for i in range(1,len(kick)-1) if kick[i]>0.35 and kick[i]>=kick[i-1] and kick[i]>kick[i+1]]
+dd=[]
+for k in kk:
+    if not dd or k-dd[-1]>0.15: dd.append(k)
+print('Kicks',len(dd))
+json.dump(dict(start=S0,ende=round(S1-S0,3),beat=P,beat0=round((B0-S0)%P,4),takt0=round(B0-S0,3),zeilen=zeilen,kicks=dd),open('zeitleiste.json','w'),ensure_ascii=False)
+# Von Hand: "Stell dir vor" sitzt immer gleich im Takt (Abstand 3,02 s), Song-Sekunden
+zl=json.load(open('zeitleiste.json'))
+STELL={0:11.54,1:14.56,2:17.58,3:20.60,4:23.62,6:30.41,8:36.45,9:39.47,10:42.49,11:45.51}
+for zi,T in STELL.items():
+    l=zl['zeilen'][zi]['woerter']
+    for k,d in enumerate([0,0.34,0.56]): l[k]['a']=round(T+d-S0,3)
+    for k in range(3,len(l)): l[k]['a']=max(l[k]['a'],round(l[k-1]['a']+0.07,3))
+for z in zl['zeilen']:
+    l=z['woerter']
+    for k,w in enumerate(l): w['e']=round(l[k+1]['a']-0.02,3) if k+1<len(l) else round(w['a']+0.35,3)
+    z['anzeige']=[dict(w=w['w'],a=w['a']) for w in l]; z['a']=round(l[0]['a']-0.06,3)
+for k,z in enumerate(zl['zeilen']): z['e']=zl['zeilen'][k+1]['a'] if k+1<len(zl['zeilen']) else zl['ende']
+json.dump(zl,open('zeitleiste.json','w'),ensure_ascii=False)
+for z in zl['zeilen']: print(f"{z['a']+S0:6.2f}", ' '.join(f"{w['w']}@{w['a']+S0:.2f}" for w in z['woerter'][:5]))
