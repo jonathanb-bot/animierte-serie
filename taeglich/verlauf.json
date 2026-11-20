@@ -723,6 +723,42 @@
     "lufs": -14.6,
     "dauer_s": 72.08
    }
+  },
+  {
+   "id": "mond-m006",
+   "datum": "2026-11-20",
+   "titel": "Bis zum Mond – Folge 6: Der Norden greift an",
+   "emoji": "🌕",
+   "serie": "Bis zum Mond (Jonathans Idee 14.11.)",
+   "stimmung": "aufbau",
+   "stimme": "Fenrir",
+   "thema": "Tag 6: 29 Städte, 343 Stockwerke. Der Norden: Hamburg 50, Bremen 24→29, neu Bremerhaven 15 (@blaulicht_bhv „Bremerhaven auf die 1“), neu Lübeck 9 (@lukes.k.2012); zusammen 103. Neu auch Bielefeld 15 (@ErenGüzel-c8s). Duell: Stuttgart 42→46, nur 4 hinter Hamburg. Aufsteiger Luhe-Wildenau 1→13 (@Jonas_YT-HD), Wermsdorf 18→26 durch Likes, Baden-Baden 3→6 (@EllenZaum ruft zum Liken auf). Suceava bleibt vorne mit 76 (seit Tag 5 +0). Cliffhanger: 5 Likes auf Stuttgart und Hamburg fällt auf Platz 3.",
+   "stil": "leuchtend, Kulisse turm (Turmplatz mit 29 Türmen, Nahaufnahmen mit Kommentar-Sprechblasen, Duell Hamburg–Stuttgart, Rangliste, Fahrt am Turm von Suceava bis zu den Wolken)",
+   "kulissen": [
+    "turm",
+    "titel"
+   ],
+   "beschreibung": "Tag 6: Hamburg, Bremen, Bremerhaven und Lübeck bauen zusammen schon 103 Stockwerke – und Stuttgart liegt nur noch 4 hinter Hamburg. Jeder Kommentar mit deiner Stadt ist ein Stockwerk, jedes Like darauf noch eins. Kommentier deine Stadt!",
+   "hashtags": [
+    "#biszummond",
+    "#deinestadt",
+    "#hamburg",
+    "#bremen",
+    "#stuttgart",
+    "#animation",
+    "#deutsch"
+   ],
+   "tags": [
+    "animation",
+    "bis zum mond",
+    "turm",
+    "stadt",
+    "hamburg",
+    "bremen",
+    "bremerhaven",
+    "lübeck",
+    "stuttgart"
+   ]
   }
  ]
 }
