@@ -123,3 +123,21 @@ Automatisch aus `python taeglich/videodaten.py`. Grundlage für die Analyse (Lä
 | TikTok-Teil | Folgen | Länge s | Termin |
 |---|---|---|---|
 
+## s07 „Du warst dir sicher“ (10 Folgen, Format-Längenband: masse 62–75 s)
+
+| Video | Länge s | Band | Wörter | Wörter/s | Einst. | Kurzgesagt-Einst. | Nah | Fakten | Stimmung | Hook-Text | Instagram | YouTube |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| F1 Mit offenen Augen | 75.01 | mittel | 181 | 2.41 | 16 | 0 | 6 | 3 | spannend | DU SIEHST NUR GELB |  |  |
+| F2 Das Wort, das fehlte | 77.52 | mittel | 181 | 2.33 | 16 | 0 | 8 | 4 | freudig | DU ERINNERST DICH AN EIN WORT ZU VIEL |  |  |
+| F3 Ich weiß es noch genau | 70.68 | mittel | 176 | 2.49 | 15 | 0 | 7 | 0 | traurig | DU WEISST ES GENAU. ODER? |  |  |
+| F4 Drei verlorene Nächte | 74.88 | mittel | 180 | 2.4 | 15 | 0 | 7 | 2 | duester | DREI NÄCHTE FÜR EINE WAND |  |  |
+| F5 Dasselbe, anders gesagt | 72.93 | mittel | 172 | 2.36 | 14 | 0 | 5 | 4 | spannend | SECHS FERTIG ODER VIER FEHLEN? |  |  |
+| F6 Mein Platz vorn | 65.24 | kurz | 167 | 2.56 | 15 | 0 | 7 | 3 | traurig | DEINE REDE NIMMT IHR DEN PLATZ |  |  |
+| F7 Die hintere Reihe | 64.8 | kurz | 174 | 2.69 | 15 | 0 | 6 | 3 | warm | DEIN PAPA SITZT GANZ HINTEN |  |  |
+| F8 Der leere Stuhl in deinem Kopf | 65.98 | kurz | 170 | 2.58 | 14 | 0 | 7 | 0 | traurig | DER LEERE STUHL WAR NICHT LEER |  |  |
+| F9 Die perfekte Eröffnung fällt aus | 74.33 | mittel | 177 | 2.38 | 14 | 0 | 6 | 2 | spannend | DEIN PROJEKTOR STIRBT JETZT |  |  |
+| F10 Das weiß ich noch nicht | 71.11 | mittel | 172 | 2.42 | 14 | 0 | 5 | 2 | freudig | DU SAGST: WEISS ICH NICHT |  |  |
+
+| TikTok-Teil | Folgen | Länge s | Termin |
+|---|---|---|---|
+
