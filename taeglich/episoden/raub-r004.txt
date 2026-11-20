@@ -1,0 +1,47 @@
+# Der letzte Raub – Folge 4: Er hat auf dich gewartet
+@musik musik/raub-r004.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung spannend
+@vortrag lebendig
+@klang studio
+@mund zitate
+@einblenden aus
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette blau
+
+// Serienbibel: raub/serienbibel.md · Folgenplan: raub/folgenplan.md · Weltgedächtnis: raub/gedaechtnis.json
+// Abstimmung Folge 3 (Lauf 20.11., Kommentare Stand 2026-11-20T16:17:29Z): B – warten, bis du die Originalakte hast. Einziger gültiger Kommentar: @EllenZaum (YouTube, ID UgzP84Do3_FuHGC_suZ4AaABAg) „B warten“, 0 Likes, A 0 : B 1.
+// Folge der Wahl: Hanna Wendt weiß nichts. Draußen kennt niemand deinen Grund. Gruppe (außer Mara) weiß weiter nichts von Lea (E1/E2 ohne Entscheidung).
+== Keine Rückversicherung ==
+// Hook (Wow-Bild): du vor der Bank im Regen, Hanna nicht angerufen
+[bankfassade r_du hinten=r_du gross figur_y=1820 palette=blau palette_staerke=0.15 zoom-rein ton=regen hooktext="IHR HABT B GEWÄHLT" ein="Hanna>NICHT ANGERUFEN" ein_y=430] Hanna Wendts Nummer bleibt ungewählt. Wenn heute etwas schiefgeht, weiß draußen niemand, warum du hier stehst.
+// die leere Tasche, Uhrzeit
+[raubdetail motiv=tasche palette=blau palette_staerke=0.15 zoom-raus ton=rucksack ein="Uhr>18:58 UHR>uhr|Koffer>ABHOLUNG 20:00" ein_y=330] Achtzehn Uhr achtundfünfzig. Die leere Tasche hängt über deiner Schulter. Um acht holt jemand den roten Koffer ab.
+
+== Die Halle ==
+// Wow-Bild: Schalterhalle, ihr vier zwischen den Kunden
+[bankhalle leute=6 jona mara karo r_du hinten=r_du figur_y=1950 skala_figur=1.4 palette=tuerkis palette_staerke=0.15 schwenk-rechts ton=schritte ein="Kunden>#6 KUNDEN" ein_y=330] Ihr geht hinein. Warmes Licht, glänzender Steinboden, sechs Kunden, die nur nach Hause wollen.
+// Wow-Bild: der Alarm färbt die Halle korallrot
+[bankhalle leute=6 alarm=1 palette=tuerkis palette_staerke=0.12 zoom-rein ton=autoalarm ein="Alarm>ALARM" ein_y=330] Dann schrillt der Alarm. Rotes Licht flutet die goldenen Bögen. Menschen ducken sich hinter die Schalter, jemand lässt seinen Schlüssel fallen.
+// Karo zählt Köpfe (Zitat 1)
+[gesicht karo entschlossen ort=bankhalle alarm=1 palette=tuerkis palette_staerke=0.12 zoom-rein] Karo zählt euch mit dem Finger ab. „Vier rein. Vier raus.“
+// Jona: das Handy summt wieder
+[gesicht jona besorgt ort=bankhalle alarm=1 palette=tuerkis palette_staerke=0.12 schwenk-links ton=handy_vibration ein="Handy>SUMMT WIEDER" ein_y=330] In Jonas Tasche summt wieder das Handy. Er greift nicht danach.
+
+== Er ist nicht überrascht ==
+// Voss tritt aus seinem Büro, ruhig
+[bankhalle voss figur_y=1950 skala_figur=1.6 alarm=1 palette=tuerkis palette_staerke=0.12 zoom-rein ton=schritte ein="Voss>DIREKTOR VOSS" ein_y=330] Am Ende der Halle öffnet sich eine Tür. Heller Anzug. Direktor Voss. Er rennt nicht, er duckt sich nicht.
+// Leitmotiv: die goldene Nadel
+[raubdetail motiv=fotonah palette=orange palette_staerke=0.1 zoom-rein ein="Nadel>DIESELBE NADEL" ein_y=330] An seinem Revers blinkt die goldene Nadel. Dieselbe wie im Glas auf deinem Foto. Er wirkt nicht überrascht. Er wirkt pünktlich.
+// Voss, Nahaufnahme (Zitat 2)
+[gesicht voss ort=bankhalle alarm=1 palette=tuerkis palette_staerke=0.12 zoom-rein] Er sieht an allen vorbei, nur dich an. „Deine Schwester hat denselben Fehler gemacht.“
+// Folge: Jona und Karo hören es
+[bankhalle jona mara karo r_du hinten=r_du alarm=1 figur_y=1950 skala_figur=1.4 palette=tuerkis palette_staerke=0.12 zoom-raus ton=herzschlag ein="Schwester>SCHWESTER?" ein_y=330] Jona dreht sich zu dir um. Schwester? Karo starrt dich an. Sie wissen nichts von Lea. Aber Voss weiß alles. Und die Uhr läuft.
+
+== Deine Entscheidung ==
+// A/B-Karten
+[entscheidung a="Halte vor der Gruppe / am Geld fest" b="Mach ATLAS jetzt / offen zum Ziel" frage="Voss kennt deinen Grund." palette=blau palette_staerke=0.1] Hältst du vor der Gruppe am Geld fest, oder machst du die Suche nach ATLAS jetzt offen zum Ziel? Kommentiere A oder B. Der Top-Kommentar entscheidet.

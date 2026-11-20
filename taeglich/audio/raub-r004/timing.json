@@ -1,0 +1,104 @@
+{
+ "dauer": 77.002,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "bankfassade",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 8.702,
+   "emotion": "erzaehlend",
+   "text": "Hanna Wendts Nummer bleibt ungewählt. Wenn heute etwas schiefgeht, weiß draußen niemand, warum du hier stehst."
+  },
+  {
+   "nr": 2,
+   "typ": "raubdetail",
+   "kapitel": 1,
+   "start": 8.702,
+   "dauer": 7.454,
+   "emotion": "erzaehlend",
+   "text": "Achtzehn Uhr achtundfünfzig. Die leere Tasche hängt über deiner Schulter. Um acht holt jemand den roten Koffer ab."
+  },
+  {
+   "nr": 3,
+   "typ": "bankhalle",
+   "kapitel": 2,
+   "start": 16.156,
+   "dauer": 6.662,
+   "emotion": "erzaehlend",
+   "text": "Ihr geht hinein. Warmes Licht, glänzender Steinboden, sechs Kunden, die nur nach Hause wollen."
+  },
+  {
+   "nr": 4,
+   "typ": "bankhalle",
+   "kapitel": 2,
+   "start": 22.818,
+   "dauer": 7.046,
+   "emotion": "erzaehlend",
+   "text": "Dann schrillt der Alarm. Rotes Licht flutet die goldenen Bögen. Menschen ducken sich hinter die Schalter, jemand lässt seinen Schlüssel fallen."
+  },
+  {
+   "nr": 5,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 29.864,
+   "dauer": 3.806,
+   "emotion": "ernst",
+   "text": "Karo zählt euch mit dem Finger ab. „Vier rein. Vier raus.“"
+  },
+  {
+   "nr": 6,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 33.67,
+   "dauer": 3.998,
+   "emotion": "ernst",
+   "text": "In Jonas Tasche summt wieder das Handy. Er greift nicht danach."
+  },
+  {
+   "nr": 7,
+   "typ": "bankhalle",
+   "kapitel": 3,
+   "start": 37.668,
+   "dauer": 7.19,
+   "emotion": "erzaehlend",
+   "text": "Am Ende der Halle öffnet sich eine Tür. Heller Anzug. Direktor Voss. Er rennt nicht, er duckt sich nicht."
+  },
+  {
+   "nr": 8,
+   "typ": "raubdetail",
+   "kapitel": 3,
+   "start": 44.858,
+   "dauer": 7.862,
+   "emotion": "erzaehlend",
+   "text": "An seinem Revers blinkt die goldene Nadel. Dieselbe wie im Glas auf deinem Foto. Er wirkt nicht überrascht. Er wirkt pünktlich."
+  },
+  {
+   "nr": 9,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 52.72,
+   "dauer": 5.63,
+   "emotion": "erzaehlend",
+   "text": "Er sieht an allen vorbei, nur dich an. „Deine Schwester hat denselben Fehler gemacht.“"
+  },
+  {
+   "nr": 10,
+   "typ": "bankhalle",
+   "kapitel": 3,
+   "start": 58.35,
+   "dauer": 9.134,
+   "emotion": "erzaehlend",
+   "text": "Jona dreht sich zu dir um. Schwester? Karo starrt dich an. Sie wissen nichts von Lea. Aber Voss weiß alles. Und die Uhr läuft."
+  },
+  {
+   "nr": 11,
+   "typ": "entscheidung",
+   "kapitel": 4,
+   "start": 67.484,
+   "dauer": 9.518,
+   "emotion": "erzaehlend",
+   "text": "Hältst du vor der Gruppe am Geld fest, oder machst du die Suche nach ATLAS jetzt offen zum Ziel? Kommentiere A oder B. Der Top-Kommentar entscheidet."
+  }
+ ]
+}

@@ -4,6 +4,7 @@
 > **Produktionsstand 16.11.:** Folge 1 ist fertig geschrieben, mit Orus vertont, und die Bilder sind gebaut (`taeglich/episoden/raub-r001.txt`).
 > **17.11.:** Folge 2 „Die erste Warnung“ fertig (keine Entscheidung zu Folge 1, kein Kommentar → du zögerst, Voss nutzt die Nacht; Karos Frist „bis morgen“).
 > **18.11.:** Folge 3 „Noch eine Nacht“ fertig (wieder keine Entscheidung, kein Kommentar unter Folge 2 → du schweigst weiter, Karos Frist läuft ab; Notiz aus dem Büro der Direktion: ATLAS wird morgen 20:00 vernichtet, Überfall vorgezogen; Journalistin Hanna Wendt eingeführt).
+> **20.11.:** Folge 4 „Er hat auf dich gewartet“ fertig (erste echte Wahl: B, Hanna nicht eingeweiht; Überfall beginnt, Alarm in der Schalterhalle, Voss nicht überrascht: „Deine Schwester hat denselben Fehler gemacht.“; Jona und Karo hören „Schwester“). Keine neue Kulisse nötig (Schalterhalle mit `alarm=1`, `leute=6`).
 > Folgen 2–10 entstehen erst, wenn die jeweilige Abstimmung feststeht. Ablauf: `taeglich/laeufe/raub.md`.
 
 ## Feste Regeln
