@@ -2286,6 +2286,12 @@
    "bild_s": 66.65,
    "ton_s": 66.64,
    "lufs": -14.6
+  },
+  "taeglich/raub-r004.mp4": {
+   "ok": true,
+   "bild_s": 76.62,
+   "ton_s": 76.61,
+   "lufs": -14.6
   }
  },
  "serien": {
@@ -2542,6 +2548,10 @@
   "mond-m006": {
    "titel": "Bis zum Mond – Folge 6: Der Norden greift an",
    "datei": "taeglich/mond-m006.mp4"
+  },
+  "raub-r004": {
+   "titel": "Der letzte Raub – Folge 4: Er hat auf dich gewartet",
+   "datei": "taeglich/raub-r004.mp4"
   }
  },
  "taeglich_staffeln": {
