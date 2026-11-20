@@ -22,3 +22,11 @@ Jonathans Vorgabe 14.11. (dazu Issue #22, Test- und Analysephase bis 22.11.): **
 
 ## Nachtrag 16.11.: Masse-Test
 Vom 17. bis 21.11. lief der Masse-Test (Jonathan 16.11., `taeglich/laeufe/masse.md`): 8–10 Videos am Tag pro Plattform, jede Folge einzeln, weniger Feinschliff. Im Bericht unbedingt vergleichen: Massephase (17.–21.11.) gegen Qualitätsphase davor – Aufrufe/Tag, Follower/Tag, Schnitt pro Video, Zuschauerbindung, je Plattform und Sprache. Danach beide Läufe „Masse-Test“ ausgeschaltet lassen, bis Jonathan entscheidet.
+
+## Nachtrag 20.11.: Empfehlungen „View Jails“ + Nachschnitt (Issue #38)
+Jonathan 20.11.: alles umsetzen, was vidIQ („How to Escape EVERY YouTube Shorts View Jail“) und Marcus Jones („How To Get More Views in 2 Minutes“) empfehlen, **ab dem 22.11.** Im Bericht:
+- **Grenzen einordnen:** Für jeden Kanal und jedes Format bestimmen, wo die Views hängen bleiben (ca. 0 / 1.000 / 10.000 / 30.000), und den passenden Ausweg aus Issue #38 als Vorgabe aufschreiben (0: Masse zurückfahren, jedes Video eigenständig · 1.000: Thema oder Format deutlich ändern, klares Kanalversprechen, immer Bewegung im Bild · 10.000: Hook mit Rätsel/Problem/Entscheidung/Nostalgie ohne Vorwissen, Mitte straffen · 30.000: Absprung-Sekunde finden, Tempo, hartes Ende).
+- **Masse-Test gegen „mass-produced“ prüfen:** Gab es in der Massephase Videos oder Kanäle nahe 0 Views?
+- **Zuschauerbindung pro Video** (YouTube Analytics, vidIQ): Wo springen die Leute ab, am Anfang, in der Mitte oder am Ende?
+- **Nachschnitt ab 22.11. einrichten:** Liste der YouTube-Videos mit gutem Start und klarem Einbruch in der Zuschauerbindung, mit genauer Stelle (Sekunde, Einstellung) zum Herausschneiden im YouTube-Studio-Editor (Trim & Cut). Der Schnitt läuft über die Browser-Aufgabe auf Jonathans iMac, danach wöchentlich. Jeden Nachschnitt in `experimente.md` festhalten, mit Zahlen vorher und 7 Tage danach.
+- Die Regeln aus #38 in die „Vorgaben für die nächsten 2 Wochen“ übernehmen und in `taeglich/FORMAT.md` eintragen.
