@@ -1686,6 +1686,210 @@
     "taeglich-yt-s06-f09": "2026-11-19T17:51:00",
     "taeglich-yt-s06-f10": "2026-11-19T19:37:00"
    }
+  },
+  {
+   "id": "s07",
+   "datum": "2026-11-20",
+   "titel": "Du warst dir sicher",
+   "beschreibung": "Du willst mit deiner besten Freundin eine Ausstellung über Wahrnehmung eröffnen. Ohne einen einzigen Fehler. Genau das wird zum Problem.",
+   "thema": "Psychologie in einer Geschichte (Staffelplan s07): Schulausstellung über Wahrnehmung; Aufmerksamkeit, falsche Erinnerungen, versunkene Kosten und Formulierung beeinflussen dich; du, deine beste Freundin Eda, Lehrerin Frau Sen und dein Papa (Busfahrer)",
+   "hauptstimmung": "warm",
+   "vorbild": "Dinge Erklärt – Kurzgesagt (Studie als Karte mit Jahr, Zusammenhang im Bild), dazu illumeably (persönlicher Moment mit Psychologie)",
+   "hashtags": [
+    "#psychologie",
+    "#animation",
+    "#geschichte",
+    "#storytime",
+    "#freundschaft",
+    "#schule",
+    "#deutsch"
+   ],
+   "tags": [
+    "animation",
+    "psychologie",
+    "geschichte",
+    "story",
+    "freundschaft",
+    "schule",
+    "deutsch"
+   ],
+   "emoji": "🧠",
+   "kulissen_neu": [
+    "atelier"
+   ],
+   "analyse": {
+    "quelle": "taeglich/analyse/aktuell.md (8.11.2026) – allgemeine Punkte 1–9, Masse-Test (Issue #36)",
+    "mehr_davon": [
+     "1: Satz 1 mit du/dein, kurz, trifft dich (Hook nennt deinen Fehler oder dein Problem)",
+     "2: Satz 2–3 steigern sofort (Gesicht + Folge)",
+     "3: erstes Bild hell und in Bewegung, mit Hook-Text",
+     "4: jede Folge sagt in Satz 2 kurz, wo wir stehen (Tage bis zur Eröffnung)",
+     "5: Familie und Freundschaft als Herz (Eda F1–F6, F9–F10; Papa F7, F8, F10)",
+     "6: Hook-Text in allen 10 Folgen, auch ohne Untertitel"
+    ],
+    "weniger_davon": [
+     "7: kein Einstieg mit Regel oder Studie, die Studie kommt erst in der Steigerung",
+     "8: keine Aufzählung im ersten Satz"
+    ],
+    "experiment": "E8: Psychologie in einer Geschichte (echte Studien mit Jahr als Einblendkarte) gegen reine Fantasie-/Horror-/Sci-Fi-Welten davor. Dazu E4 (ungerade Staffel ohne Untertitel) und E-Masse.",
+    "thema": "Staffelplan s07 (Jonathan 5.11.), auf 10 × 62–75 s angepasst (Masse-Test 16.11.)"
+   },
+   "boegen": [
+    "Eda am Rand der Aufnahme (F1) → du setzt dich neben Papa statt nur zu zählen (F7)",
+    "Zettel mit dem falschen Wort Schlaf (F2) → hängt als Beispiel an der Wand (F2) → durchgestrichen bei der Eröffnung (F10)",
+    "Gedanke „so viel Arbeit drin“ bei der Stellwand (F4) → erkannt bei der Rede (F6) → erkannt beim Projektor (F9)",
+    "Eintrittskarte 2019 (F7) → Fotos mit Papa an der Tür (F8) → Papa ganz vorne (F10)",
+    "Frau Sens komisches Lächeln (F1) → ihre alte Karte mit demselben Satz (F10)"
+   ],
+   "ueberraschung": "Frau Sen hatte als Schülerin denselben Satz auf ihrer Karte: „Ich darf keinen Fehler machen“ (angedeutet: ihr Lächeln in F1, ihre Frage nach dem Aufwand in F5).",
+   "cliffhanger": [
+    "Entdeckung",
+    "Rätsel",
+    "Geständnis",
+    "Entscheidung",
+    "falsche Fährte",
+    "Wiedersehen",
+    "Entdeckung",
+    "Geständnis",
+    "Entscheidung",
+    "Schluss mit Entdeckung"
+   ],
+   "folgen": [
+    {
+     "nr": 1,
+     "titel": "Mit offenen Augen",
+     "stimmung": "spannend",
+     "beschreibung": "Du zählst gelbe Karten. Und übersiehst deine beste Freundin.",
+     "familie": true,
+     "hooktext": true,
+     "hook": "dein_fehler"
+    },
+    {
+     "nr": 2,
+     "titel": "Das Wort, das fehlte",
+     "stimmung": "freudig",
+     "beschreibung": "Du bist dir sicher: Dieses Wort stand auf der Liste.",
+     "familie": true,
+     "hooktext": true,
+     "hook": "dein_fehler"
+    },
+    {
+     "nr": 3,
+     "titel": "Ich weiß es noch genau",
+     "stimmung": "traurig",
+     "beschreibung": "Du weißt genau, was deine beste Freundin versprochen hat. Glaubst du.",
+     "familie": true,
+     "hooktext": true,
+     "hook": "dein_fehler"
+    },
+    {
+     "nr": 4,
+     "titel": "Drei verlorene Nächte",
+     "stimmung": "duester",
+     "beschreibung": "Deine Wand ist perfekt. Und niemand kommt an ihr vorbei.",
+     "familie": false,
+     "hooktext": true,
+     "hook": "dein_fehler"
+    },
+    {
+     "nr": 5,
+     "titel": "Dasselbe, anders gesagt",
+     "stimmung": "spannend",
+     "beschreibung": "Sechs von zehn fertig. Oder vier von zehn fehlen. Dasselbe?",
+     "familie": true,
+     "hooktext": true,
+     "hook": "dein_fehler"
+    },
+    {
+     "nr": 6,
+     "titel": "Mein Platz vorn",
+     "stimmung": "traurig",
+     "beschreibung": "Deine Rede ist perfekt. Und deine Freundin hat darin nichts zu sagen.",
+     "familie": true,
+     "hooktext": true,
+     "hook": "dein_fehler"
+    },
+    {
+     "nr": 7,
+     "titel": "Die hintere Reihe",
+     "stimmung": "warm",
+     "beschreibung": "Du zählst Fehler. Und dein Vater wartet in der letzten Reihe.",
+     "familie": true,
+     "hooktext": true,
+     "hook": "dein_fehler"
+    },
+    {
+     "nr": 8,
+     "titel": "Der leere Stuhl in deinem Kopf",
+     "stimmung": "traurig",
+     "beschreibung": "Du erinnerst dich an Papas leeren Stuhl. Aber nicht an alles.",
+     "familie": true,
+     "hooktext": true,
+     "hook": "dein_fehler"
+    },
+    {
+     "nr": 9,
+     "titel": "Die perfekte Eröffnung fällt aus",
+     "stimmung": "spannend",
+     "beschreibung": "Zehn Minuten vor deiner Eröffnung stirbt der Projektor.",
+     "familie": true,
+     "hooktext": true,
+     "hook": "dein_fehler"
+    },
+    {
+     "nr": 10,
+     "titel": "Das weiß ich noch nicht",
+     "stimmung": "freudig",
+     "beschreibung": "120 Leute schauen dich an. Und du sagst: Das weiß ich noch nicht.",
+     "familie": true,
+     "hooktext": true,
+     "hook": "dein_fehler"
+    }
+   ],
+   "format": {
+    "folgen": 10,
+    "laengenband": "masse 62–75 s",
+    "tiktok_teile": "einzeln (Masse-Test)"
+   },
+   "vielfalt": {
+    "welt": "Schulatelier mit Stellwänden, kleiner Vorführraum, herbstlicher Pausenhof",
+    "genre": "Psychologie in einer Geschichte",
+    "erzaehlform": "chronologische Vorbereitung bis zur Eröffnung, erst deine sichere Deutung, dann der sichtbare Abgleich (Aufnahme, Liste, Nachrichten, Fotos)",
+    "hook_art": "direkte Aussage über deinen Irrtum",
+    "vorbild_kurz": "Kurzgesagt + illumeably",
+    "figuren_fokus": "Freundschaft: Eda; Familie: dein Papa; Lehrerin Frau Sen",
+    "laenge": "ca. 62–75 s",
+    "folgen": 10,
+    "tiktok": "einzeln",
+    "experiment": "E8 Psychologie (+ E4 ohne Untertitel, E-Masse)",
+    "neue_kulissen": [
+     "atelier"
+    ]
+   },
+   "en": {
+    "titel": "You Were So Sure",
+    "beschreibung": "You and your best friend are opening a school exhibition about perception. You don't want to make a single mistake. That's exactly the problem.",
+    "hashtags": [
+     "#psychology",
+     "#animation",
+     "#story",
+     "#storytime",
+     "#friendship",
+     "#school"
+    ],
+    "folgen": [
+     "With Your Eyes Open",
+     "The Word That Wasn't There",
+     "I Remember It Clearly",
+     "Three Nights Already Spent",
+     "Same Choice, Different Words",
+     "My Place at the Front",
+     "The Back Row",
+     "The Empty Seat in Your Head",
+     "The Perfect Opening Is Cancelled",
+     "I Don't Know Yet"
+    ]
+   }
   }
  ]
 }

@@ -1,0 +1,40 @@
+# Du warst dir sicher – Folge 9: Die perfekte Eröffnung fällt aus
+@musik musik/s07-f09.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung spannend
+@vortrag lebendig
+@klang studio
+@mund zitate
+@einblenden aus
+@untertitel aus
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette lila
+@zeit tag
+
+== Hook ==
+[atelier ansicht=vorfuehrung projektor=punkt du s07_eda palette=lila zoom-rein hooktext="DEIN PROJEKTOR STIRBT JETZT" ton=summen] Zehn Minuten vor deiner Eröffnung stirbt der Projektor.
+[gesicht du ort=atelier ansicht=vorfuehrung projektor=punkt palette=lila zoom-rein] Das Bild schrumpft zu einem weißen Punkt. Der Lüfter wird leiser. Dann still.
+[atelier ansicht=vorfuehrung projektor=aus du s07_eda s07_sen palette=lila schwenk-rechts ein="zehn>#10 MINUTEN>uhr" ein_y=1500 ton=ui_pop] Frau Sen drückt alle Knöpfe. Nichts. Die Leinwand bleibt schwarz.
+
+== Wiedererkennen ==
+[atelier wand=offen du palette=rosa schwenk-links ein="hundertzwanzig>#120 GÄSTE" ein_y=1500] Draußen im Atelier warten hundertzwanzig Gäste. Eltern, Lehrer, die ganze Stufe. Du hörst Schuhe scharren. Jemand lacht.
+[gesicht du ort=atelier ansicht=vorfuehrung projektor=aus palette=lila] Deine Hände sind feucht. Deine ganze Präsentation lebt auf dieser Leinwand. Ohne sie hast du nichts. Denkst du.
+[gesicht du ort=atelier ansicht=vorfuehrung projektor=aus palette=lila] „Wir verschieben. Bis er wieder läuft.“
+
+== Steigerung ==
+[objekt objekte="projektor:Kaputt|uhr:Wochen Arbeit" gross="ALLES AUF DER LEINWAND" palette=blau zoom-rein ein="Wochen>#3 WOCHEN ARBEIT" ein_y=1500] Drei Wochen Animationen. Ohne Projektor sind sie nichts.
+[gesicht s07_eda ort=atelier ansicht=vorfuehrung projektor=aus palette=blau figurstimme=frau sprecher=s07_eda] „Oder wir zeigen einfach die Karten.“
+[gesicht du ort=atelier ansicht=vorfuehrung projektor=aus palette=blau zoom-rein] Da ist er wieder. Der Gedanke von der Stellwand. Und von der Rede. Du erkennst ihn sofort.
+[objekt objekte="karteikarte:Zeichnungen|karteikarte:Karten" gross="WAS DU HAST" palette=orange zoom-rein ein="Zeichnungen>ZEICHNUNGEN & KARTEN" ein_y=1500] Ihr habt die Zeichnungen. Die gelben Karten. Deinen Zettel mit dem falschen Wort. Die Fotos von deinem Papa. Alles, was echt ist.
+
+== Wendung ==
+[atelier wand=offen schild="TECHNIK KAPUTT. WIR AUCH NICHT PERFEKT." du s07_eda palette=orange zoom-rein ein="Schild>HANDGESCHRIEBEN" ein_y=1500 ton=papier] Eda schreibt ein Schild. Mit dickem Filzstift. Ihr hängt es an die Tür. Du musst lachen, zum ersten Mal heute.
+[atelier ansicht=vorfuehrung projektor=aus mikro du s07_eda palette=rosa zoom-raus ein="Plan>PLAN B" ein_y=1500] Ihr tragt alles nach vorne. Karten, Zeichnungen, eine Rolle Klebeband. Deine Hände zittern nicht mehr ganz so sehr.
+[gesicht s07_sen ort=atelier ansicht=vorfuehrung froh palette=rosa] „Ich mach die Tür auf. Bereit?“
+
+== Cliffhanger ==
+[atelier ansicht=vorfuehrung projektor=aus mikro du palette=lila zoom-rein ton=hit] Du gehst ohne deine perfekte Präsentation ans Mikrofon.

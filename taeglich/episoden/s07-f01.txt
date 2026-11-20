@@ -1,0 +1,43 @@
+# Du warst dir sicher – Folge 1: Mit offenen Augen
+@musik musik/s07-f01.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung spannend
+@vortrag lebendig
+@klang studio
+@mund zitate
+@einblenden aus
+@untertitel aus
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette lila
+@zeit tag
+
+== Hook ==
+// Wow-Bild: gelbe Karten überall
+[atelier karten=gelb du palette=orange zoom-rein hooktext="DU SIEHST NUR GELB" ton=summen] Du zählst gelbe Karten. Und übersiehst deine beste Freundin.
+[titel oben="Folge 1" gross="DU WARST DIR SICHER" unten="Mit offenen Augen" farbe=#1a1030 akzent=#f2c23a hud=false dauer=1] Morgen in drei Tagen eröffnest du die Schulausstellung.
+[gesicht du ort=atelier karten=gelb palette=orange zoom-rein] Thema: Wahrnehmung. Zusammen mit Eda. Und du willst keinen einzigen Fehler machen. Nicht einen.
+
+== Wiedererkennen ==
+[atelier ansicht=vorfuehrung du s07_eda palette=lila schwenk-rechts ein="Probe>GENERALPROBE>projektor" ein_y=1500 ton=ui_pop] Generalprobe im Vorführraum. Die Vorhänge sind zu. Der Projektor bläst warme Luft in dein Gesicht.
+[objekt objekte="karteikarte:Gelb|karteikarte:Gelb|karteikarte:Gelb" gross="ZÄHL DIE GELBEN" palette=lila zoom-rein ein="zwölf>#12 GELBE KARTEN" ein_y=1500] Auf der Leinwand fliegen Karten durcheinander. Deine Aufgabe: alle gelben zählen.
+[gesicht du ort=atelier ansicht=vorfuehrung palette=lila zoom-rein] Klack. Klack. Klack. Du zählst laut mit. Zwölf. Kein Fehler.
+[gesicht s07_eda ort=atelier ansicht=vorfuehrung palette=lila figurstimme=frau sprecher=s07_eda] „Zwölf. Super. Hast du sonst was gesehen?“
+
+== Steigerung ==
+[atelier ansicht=vorfuehrung du s07_eda palette=rosa zoom-raus ein="Eda>EDA · BESTE FREUNDIN>herz" ein_y=1500] Eda. Deine beste Freundin. Seit der fünften Klasse.
+[gesicht du ort=atelier ansicht=vorfuehrung palette=rosa] Du schüttelst den Kopf. Da war nichts außer Karten.
+[atelier ansicht=vorfuehrung s07_sen du palette=rosa schwenk-links ein="Sen>FRAU SEN>karteikarte" ein_y=1500] Frau Sen, eure Lehrerin, spult die Aufnahme zurück. Sie lächelt komisch. Als wüsste sie etwas.
+[objekt objekte="auge:Gezielt|fragezeichen:Übersehen" gross="1999 · SIMONS & CHABRIS" palette=blau zoom-rein ein="Neunzehn>#1999>uhr" ein_y=1500] Neunzehnhundertneunundneunzig zeigten zwei Forscher: Wer gezielt auf etwas achtet, kann Unerwartetes übersehen.
+[atelier ansicht=vorfuehrung leinwand="AUFNAHME · 0:41" du palette=blau zoom-rein ein="einundvierzig>SEKUNDE 41" ein_y=1500] Sekunde einundvierzig. Am Rand des Bildes hebt jemand die Hand.
+
+== Wendung ==
+[gesicht s07_eda ort=atelier ansicht=vorfuehrung traurig palette=blau zoom-rein] Es ist Eda. Sie winkt. Sie zeigt auf ihr Blatt. Sie braucht Hilfe.
+[gesicht du ort=atelier ansicht=vorfuehrung traurig palette=blau] Dein Gesicht wird heiß. Du hast die ganze Zeit hingeschaut. Und trotzdem nichts gesehen.
+[atelier ansicht=vorfuehrung du s07_eda palette=lila zoom-raus ein="Moment>BLEIBT DRIN>schere" ein_y=1500] Frau Sen fragt, ob ihr den Moment herausschneidet. Du sagst: „Der bleibt drin.“
+
+== Cliffhanger ==
+[atelier ansicht=vorfuehrung leinwand="0:00 – 1:12" du palette=lila zoom-rein ton=hit] Dann läuft die Aufnahme weiter. Eda stand die ganze Zeit direkt neben dir.

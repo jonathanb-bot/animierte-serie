@@ -1,0 +1,41 @@
+# Du warst dir sicher – Folge 4: Drei verlorene Nächte
+@musik musik/s07-f04.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung duester
+@vortrag lebendig
+@klang studio
+@mund zitate
+@einblenden aus
+@untertitel aus
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette lila
+@zeit tag
+
+== Hook ==
+[atelier wand=block zeit=abend du palette=lila zoom-rein hooktext="DREI NÄCHTE FÜR EINE WAND" ton=summen] Deine Wand ist perfekt. Und niemand kommt an ihr vorbei.
+[gesicht du ort=atelier wand=block zeit=abend palette=lila zoom-rein] Aufbautag. Drei Nächte hast du an dieser Stellwand gebaut.
+[atelier wand=block zeit=abend du s07_eda palette=lila schwenk-rechts ein="drei>#3 NÄCHTE>uhr" ein_y=1500] Sie steht genau in der Mitte des Ateliers. Groß. Weiß. Voller Karten. Du bist stolz auf jede Schraube.
+
+== Wiedererkennen ==
+[gesicht du ort=atelier wand=block zeit=abend palette=lila] Deine Hand hat noch einen Abdruck vom Schraubgriff. Es riecht nach frischer Farbe.
+[atelier wand=block zeit=abend s07_eda palette=lila zoom-rein ein="Rucksack>RUCKSACK HÄNGT FEST" ein_y=1500 ton=moebel_ruecken] Eda testet den Weg. Ihr Rucksack bleibt zwischen den Tafeln hängen. Das Holz knarrt.
+[gesicht s07_eda ort=atelier wand=block zeit=abend palette=lila figurstimme=frau sprecher=s07_eda] „Da passt kein Rollstuhl durch. Kein Kinderwagen.“
+[gesicht du ort=atelier wand=block zeit=abend palette=blau zoom-rein] „Dann gehen die Leute eben außen rum.“
+
+== Steigerung ==
+[atelier wand=block zeit=abend du palette=blau schwenk-links ein="Umweg>#40 METER UMWEG" ein_y=1500] Außen rum sind vierzig Meter. An zwei Stationen vorbei, die dann keiner sieht.
+[objekt objekte="uhr:Nacht 1|uhr:Nacht 2|uhr:Nacht 3" gross="DREI NÄCHTE" palette=blau zoom-rein ein="Nächte>VERLOREN?" ein_y=1500] In deinem Kopf zählt nur eins: drei Nächte. Abbauen fühlt sich an wie verlieren.
+[objekt objekte="uhr:Schon investiert|fragezeichen:Noch sinnvoll?" gross="1985 · ARKES & BLUMER" palette=blau zoom-rein ein="Neunzehn>#1985" ein_y=1500] Neunzehnhundertfünfundachtzig fanden Forscher: Schon investierte Zeit kann Menschen an einer schlechten Wahl festhalten lassen.
+[gesicht du ort=atelier wand=block zeit=abend traurig palette=blau] Die Nächte sind weg. Egal, was du jetzt machst. Die Frage ist nur: Was hilft ab morgen?
+
+== Wendung ==
+[atelier wand=block zeit=abend du palette=lila zoom-rein ein="Schraube>ERSTE SCHRAUBE" ein_y=1500 ton=ui_pop] Du nimmst den Schrauber. Die erste Schraube quietscht.
+[atelier wand=offen zeit=abend du s07_eda palette=orange zoom-raus ein="Durchgang>FREIER DURCHGANG" ein_y=1500] Eine Stunde später ist die Mitte offen. Licht fällt durch den Gang.
+[gesicht s07_eda ort=atelier wand=offen zeit=abend froh palette=orange] Eda geht einmal hindurch. Mit Rucksack. Ohne hängenzubleiben.
+
+== Cliffhanger ==
+[gesicht du ort=atelier wand=offen zeit=abend palette=lila zoom-rein ton=hit] Du stellst das erste Bauteil in die Ecke. Gestern hast du es noch dein bestes genannt.

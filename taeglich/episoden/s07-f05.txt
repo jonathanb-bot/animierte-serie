@@ -1,0 +1,40 @@
+# Du warst dir sicher – Folge 5: Dasselbe, anders gesagt
+@musik musik/s07-f05.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung spannend
+@vortrag lebendig
+@klang studio
+@mund zitate
+@einblenden aus
+@untertitel aus
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette rosa
+@zeit tag
+
+== Hook ==
+[atelier kaestchen=6 du s07_eda palette=rosa zoom-rein hooktext="SECHS FERTIG ODER VIER FEHLEN?" ton=summen] Sechs von zehn fertig. Oder vier von zehn fehlen. Dasselbe. Oder?
+[gesicht du ort=atelier kaestchen=6 palette=rosa zoom-rein] Noch ein Tag bis zur Eröffnung. Du hast den Stand an die Wand gemalt.
+[atelier kaestchen=6 du s07_eda palette=rosa schwenk-rechts ein="zehn>#10 STATIONEN" ein_y=1500 ton=stille_raum] Zehn Kästchen für zehn Stationen. Sechs davon sind grün. Die Wanduhr über der Tür tickt laut.
+
+== Wiedererkennen ==
+[gesicht du ort=atelier kaestchen=6 palette=rosa] „Vier Stationen fehlen. Das schaffen wir nie.“
+[gesicht s07_eda ort=atelier kaestchen=6 froh palette=rosa figurstimme=frau sprecher=s07_eda] „Sechs sind fertig. Das reicht doch.“
+[atelier kaestchen=6 du s07_eda palette=lila zoom-raus ein="Streit>GLEICHER STAND" ein_y=1500] Ihr redet über denselben Stand. Und klingt wie zwei verschiedene Welten. Eda verschränkt die Arme. Du auch.
+
+== Steigerung ==
+[objekt objekte="karteikarte:6 fertig|karteikarte:4 fehlen" gross="ZWEI ZETTEL" palette=lila zoom-rein ein="Zettel>#2 ZETTEL" ein_y=1500] Du schreibst beide Sätze auf zwei Zettel. Glatte Karteikarten. Nebeneinander.
+[gesicht du ort=atelier kaestchen=6 palette=lila] Der eine Zettel macht dir Angst. Der andere macht dich ruhig. Dabei hat sich nichts verändert. Gar nichts.
+[objekt objekte="karteikarte:Gewinn|karteikarte:Verlust" gross="1981 · TVERSKY & KAHNEMAN" palette=blau zoom-rein ein="Neunzehn>#1981" ein_y=1500] Neunzehnhunderteinundachtzig zeigten zwei Forscher: Gleiche Möglichkeiten, anders formuliert, können Entscheidungen verändern.
+[atelier kaestchen=6 s07_sen du palette=blau schwenk-links ein="Sen>FRAU SEN FRAGT" ein_y=1500] Frau Sen kommt vorbei. Sie fragt nur: „Was kostet welche Station?“
+
+== Wendung ==
+[objekt objekte="uhr:5 Std|uhr:1 Std|uhr:8 Std|uhr:2 Std" gross="AUFWAND & NUTZEN" palette=orange zoom-rein ein="fünf>STUNDEN STATT GEFÜHL" ein_y=1500] Ihr schreibt Stunden dazu. Und was jede Station den Besuchern wirklich bringt. Plötzlich wird es leise im Atelier.
+[atelier kaestchen=8 du s07_eda palette=orange zoom-raus ein="zwei>#2 STRICHE" ein_y=1500] Zwei Stationen schafft ihr heute Nacht. Zwei streicht ihr. Ohne Drama. Ohne Schuld.
+[gesicht s07_eda ort=atelier kaestchen=8 froh palette=orange] Eda schiebt die beiden Zettel aufeinander. Sie passen genau.
+
+== Cliffhanger ==
+[objekt objekte="karteikarte:6 fertig|karteikarte:4 fehlen" gross="EXAKT DIESELBEN" palette=rosa zoom-rein ton=hit] Die bedrohliche und die beruhigende Version beschreiben exakt dieselben sechs Stationen.

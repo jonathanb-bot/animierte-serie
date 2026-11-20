@@ -1,0 +1,43 @@
+# You Were So Sure – Episode 2: The Word That Wasn't There
+@musik musik/s07-f02-en.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung freudig
+@vortrag lebendig
+@klang studio
+@mund zitate
+@einblenden aus
+@untertitel aus
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette orange
+@zeit tag
+@sprache en
+
+== Hook ==
+[atelier du s07_eda kaestchen=3 palette=orange zoom-rein hooktext="YOU REMEMBER ONE WORD TOO MANY" ton=papier] You're sure of it. That word was on the list.
+[gesicht du ort=atelier palette=orange zoom-rein] Two days before your exhibition, you test the second station on yourself.
+[atelier du s07_eda palette=orange schwenk-rechts ein="station>STATION 2 · MEMORY>karteikarte" ein_y=1500] Eda reads you fifteen words for the station. Slowly. Then you have to write them all down.
+
+== Wiedererkennen ==
+[objekt objekte="karteikarte:Bed|karteikarte:Pillow|karteikarte:Dream|karteikarte:Blanket" gross="15 WORDS" palette=orange zoom-rein ein="Bed>#15 WORDS" ein_y=1500] Bed. Pillow. Dream. Blanket. Tired. Yawn. It all kind of fits together. Like a long evening.
+[gesicht du ort=atelier palette=orange] Your marker squeaks across the paper. It smells like glue and sunshine.
+[gesicht du ort=atelier froh palette=orange zoom-rein ein="fourteen>#14 OF 15" ein_y=1600] You've got fourteen words. You grin. Almost perfect.
+[gesicht s07_eda ort=atelier froh palette=orange figurstimme=frau sprecher=s07_eda] "Read them out. Slowly."
+
+== Steigerung ==
+[atelier du s07_eda palette=tuerkis schwenk-links ein="Sleep>SLEEP>karteikarte" ein_y=1500] You read. Bed, pillow, dream … and sleep. Definitely sleep.
+[gesicht s07_eda ort=atelier palette=tuerkis zoom-rein] Eda doesn't say a word. She lays the original list next to yours.
+[objekt objekte="karteikarte:Your list|karteikarte:Original" gross="SLEEP? MISSING" palette=tuerkis zoom-rein ein="original>NOT ON THE LIST" ein_y=1500] The word sleep isn't on the original. Anywhere.
+[gesicht du ort=atelier palette=blau] Your stomach drops. You heard it. In Eda's voice. You'd swear to it.
+[objekt objekte="karteikarte:List|auge:Certain" gross="1995 · ROEDIGER & MCDERMOTT" palette=blau zoom-rein ein="nineteen>#1995>uhr" ein_y=1500] In studies from nineteen ninety-five, people confidently remembered fitting words that were never shown.
+
+== Wendung ==
+[gesicht du ort=atelier palette=blau zoom-rein] That doesn't mean all memories are wrong. Just that feeling sure doesn't always mean being right.
+[atelier du s07_eda kaestchen=4 palette=orange zoom-raus ein="example>YOUR MISTAKE · STATION 2" ein_y=1500] You pin your sheet to the wall. Your mistake becomes the example.
+[gesicht s07_eda ort=atelier froh palette=orange figurstimme=frau sprecher=s07_eda] "Brave. I wouldn't have done that."
+
+== Cliffhanger ==
+[objekt objekte="karteikarte:Bed|karteikarte:Dream|karteikarte:Sleep" gross="16 NOT 15" palette=lila zoom-rein ton=hit] You count again. Your sure memory has one word more than the original.

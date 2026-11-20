@@ -832,6 +832,103 @@
     A._dunkel = 0;
   };
 
+  // =====================================================================
+  // ATELIER (s07 „Du warst dir sicher“): Schulatelier mit Stellwänden, hohe Fenster mit Lichtstrahlen und Staub,
+  //  Hängelampen, Werktisch mit Farbtöpfen vorne. Neue Kulisse im Stil „leuchtend“ (nur neuer Name, alte Serien unverändert).
+  //  ansicht=atelier (Standard): karten=gelb (viele gelbe Karten an den Wänden), wand=block (Stellwand versperrt den Durchgang)
+  //    | wand=offen (heller Durchgang), schild="TEXT" (handgeschriebenes Schild), kaestchen=N (zehn Kästchen, N grün), zeit=tag|abend
+  //  ansicht=vorfuehrung: kleiner Vorführraum mit Stuhlreihen, Leinwand und Projektor-Lichtkegel; projektor=aus|punkt,
+  //    leinwand="TEXT", hinten=<figur> (kleine Figur in der letzten Reihe), mikro (Mikrofonständer vorne)
+  //  dazu: gross, figur_y
+  // =====================================================================
+  SZ.atelier = (s, t) => {
+    const ansicht = s.ansicht || "atelier", abend = s.zeit === "abend";
+    const figY = s.figur_y ?? 1890, sk = s.gross ? 0.98 : 0.8;
+    const KF = ["#f2c23a", "#e8685a", "#5aa8f2", "#3fb87a", "#b07ae8", "#f29a3a"];
+    if (ansicht === "vorfuehrung") {
+      const aus = s.projektor === "aus", punkt = s.projektor === "punkt";
+      ctx.fillStyle = lgrad(0, -400, 0, 2400, [[0, "#0d1024"], [0.55, "#1a1838"], [1, "#0a0a18"]]); ctx.fillRect(-1500, -400, 4080, 2800);
+      // Wände mit Akustikpaneelen
+      ebene("atvw", 3, () => { for (let i = 0; i < 9; i++) { const x = -260 + i * 200; box(x, 180, 170, 900, 18, i % 2 ? "#221f44" : "#1c1a3a"); box(x + 10, 190, 150, 12, 6, rgba("#ffffff", 0.05)); }
+        for (const x of [-120, 1200]) { box(x - 40, 300, 80, 120, 12, "#2a2650"); glut(x, 330, 120, "#ffb86a", 0.5); } });
+      // Leinwand
+      const lx = 160, ly = 260, lw = 760, lh = 470;
+      box(lx - 24, ly - 24, lw + 48, lh + 48, 10, "#0a0a14");
+      const hell = aus ? 0.08 : punkt ? 0.12 : 0.95;
+      ctx.fillStyle = lgrad(lx, ly, lx, ly + lh, [[0, mix("#1a1a2a", "#f4f1ff", hell)], [1, mix("#141420", "#dcd8f0", hell)]]); ctx.fillRect(lx, ly, lw, lh);
+      if (!aus && !punkt) { glut(540, 500, 700, "#cfd8ff", 0.35); if (s.leinwand) A.text(String(s.leinwand), 540, 520, 64, "#2a2a48", "center", 900, "Titel", 680);
+        else { const r = rnd(711); for (let i = 0; i < 14; i++) { const x = lx + 60 + r() * (lw - 160), y = ly + 50 + r() * (lh - 140); box(x, y, 70, 46, 6, KF[i % 6 === 0 ? 0 : (i % 3 ? 0 : 2)]); } } }
+      if (punkt) { const a = 0.6 + 0.4 * Math.sin(t * 9); circle(540, 495, 10, rgba("#ffffff", a)); glut(540, 495, 90, "#cfe0ff", a * 0.7); }
+      // Projektor-Lichtkegel von hinten oben
+      if (!aus) { ctx.save(); ctx.globalCompositeOperation = "screen"; const a = punkt ? 0.1 : 0.22;
+        ctx.fillStyle = lgrad(540, 2100, 540, 400, [[0, rgba("#dfe6ff", a * 1.4)], [1, rgba("#dfe6ff", a * 0.3)]]);
+        poly(punkt ? [[520, 2150], [560, 2150], [545, 495], [535, 495]] : [[470, 2150], [610, 2150], [lx + lw, ly + lh], [lx, ly + lh], [lx, ly], [lx + lw, ly]]); ctx.fill();
+        const r = rnd(733); for (let i = 0; i < 40; i++) { const k = (r() + t * 0.02 * (0.5 + r())) % 1, y = lerp(2050, 500, k), w = lerp(60, 700, k), x = 540 + (r() - 0.5) * w; circle(x, y + Math.sin(t + i) * 10, 2 + r() * 2, rgba("#ffffff", 0.35 * (1 - k * 0.5))); }
+        ctx.restore(); }
+      // Stuhlreihen in Perspektive
+      ctx.fillStyle = lgrad(0, 1100, 0, 2400, [[0, "#1a1730"], [1, "#0c0a18"]]); ctx.fillRect(-1500, 1100, 4080, 1400);
+      const reihe = (y, skal, farbe, n) => { const w = 150 * skal; for (let i = 0; i < n; i++) { const x = 540 + (i - (n - 1) / 2) * w * 1.05;
+        box(x - w * 0.42, y - 120 * skal, w * 0.84, 110 * skal, 16 * skal, farbe); box(x - w * 0.46, y - 14 * skal, w * 0.92, 30 * skal, 10 * skal, shade(farbe, -0.2));
+        box(x - w * 0.42, y - 120 * skal, w * 0.84, 10 * skal, 6, rgba("#ffffff", 0.08)); } };
+      const rf = s.leer ? "#3a2e5a" : "#4a3468";
+      reihe(1180, 0.55, shade(rf, -0.25), 13);
+      if (s.hinten) { const name = String(s.hinten); A.figur(s.hinten_x ?? 760, 1210, 0.42, A.fig(name), { t, pose: "sitzt", ausdruck: s.hinten_ausdruck || "neutral", spricht: s._spricht && s.sprecher === name, blick: [0, 0], seed: 7 }); }
+      reihe(1290, 0.68, shade(rf, -0.15), 11); reihe(1420, 0.82, shade(rf, -0.05), 9);
+      glut(540, 1300, 500, "#ffb86a", 0.08);
+      if (s.mikro) { line(880, 2080, 880, 1420, 10, "#2a2a34"); ellipse(880, 2000, 90, 18, "#1a1a22"); ctx.save(); ctx.translate(880, 1410); ctx.rotate(-0.4); box(-22, -60, 44, 80, 20, "#3a3a46"); box(-18, -56, 36, 30, 14, "#6a6a7a"); ctx.restore(); glut(870, 1360, 90, "#ffe0a0", 0.3); }
+      A.figurenZeigen(s, t, figY, sk);
+      ebene("atvv", 10, () => { box(-280, 2080, 1640, 900, 80, "#05040c"); for (let i = 0; i < 6; i++) box(-160 + i * 260, 2030, 210, 140, 40, "#07060f"); });
+      A._dunkel = 0; return;
+    }
+    // ---- Atelier ----
+    const wand = abend ? "#e6c9a8" : "#e9e2d2";
+    ctx.fillStyle = lgrad(0, -400, 0, 1500, [[0, shade(wand, 0.04)], [1, shade(wand, -0.1)]]); ctx.fillRect(-1500, -400, 4080, 1900);
+    // hohe Fenster mit Sprossen und Himmel
+    ebene("atfen", 2.2, () => {
+      for (const fx of [-180, 300, 780]) { box(fx, 60, 380, 820, 12, "#5a6478");
+        ctx.fillStyle = lgrad(0, 80, 0, 860, abend ? [[0, "#ffb27a"], [1, "#ffe0b0"]] : [[0, "#9fd0ff"], [1, "#e6f4ff"]]); ctx.fillRect(fx + 16, 76, 348, 788);
+        const r = rnd(fx + 900); for (let k = 0; k < 3; k++) ellipse(fx + 60 + r() * 260 + Math.sin(t * 0.05 + k) * 30, 180 + r() * 300, 70 + r() * 50, 22, rgba("#ffffff", 0.7));
+        ebene("atbaum" + fx, 4, () => { ellipse(fx + 120, 760, 160, 120, abend ? "#c88a5a" : "#7ab88a"); ellipse(fx + 280, 800, 140, 100, abend ? "#b0744a" : "#5aa070"); });
+        box(fx + 186, 76, 12, 788, 4, "#5a6478"); box(fx + 16, 460, 348, 12, 4, "#5a6478"); }
+    });
+    // Lichtstrahlen mit Staub
+    ctx.save(); ctx.globalCompositeOperation = "screen";
+    for (const fx of [-180, 300, 780]) { ctx.fillStyle = lgrad(fx, 200, fx + 500, 1700, [[0, rgba(abend ? "#ffc890" : "#fff6d8", 0.28)], [1, rgba("#fff6d8", 0)]]); poly([[fx + 20, 120], [fx + 360, 120], [fx + 760, 1800], [fx + 300, 1800]]); ctx.fill(); }
+    const rs = rnd(751); for (let i = 0; i < 50; i++) { const x = rs() * 1300 - 100, y = (rs() * 1600 + t * 12 * (0.4 + rs())) % 1600 + 150; circle(x + Math.sin(t * 0.7 + i) * 14, y, 2 + rs() * 2.5, rgba("#fffbe8", 0.5)); }
+    ctx.restore();
+    // Hängelampen
+    for (const lx of [180, 540, 900]) { line(lx, -100, lx, 230, 4, "#3a3a44"); poly([[lx - 70, 300], [lx + 70, 300], [lx + 36, 230], [lx - 36, 230]], "#2f6f6a"); ellipse(lx, 300, 70, 12, "#fff2c8"); glut(lx, 310, 240, "#ffe2a0", abend ? 0.75 : 0.4); }
+    // Boden
+    ctx.fillStyle = lgrad(0, 1480, 0, 2500, [[0, abend ? "#a8784e" : "#b89a74"], [1, "#6a4e36"]]); ctx.fillRect(-1500, 1480, 4080, 1100);
+    for (let i = -8; i < 16; i++) line(540 + i * 140, 1480, 540 + i * 420, 2600, 3, rgba("#000000", 0.08));
+    box(-1500, 1470, 4080, 16, 0, rgba("#000000", 0.18));
+    // Stellwände mit Karten
+    const stellwand = (x, y, w, h, seed, gelb) => {
+      ellipse(x + w / 2, y + h + 50, w * 0.55, 24, rgba("#000000", 0.25));
+      box(x, y, w, h, 10, "#f6f3ec"); box(x, y, 16, h, 6, "#c8c0b0"); box(x + w - 16, y, 16, h, 6, "#a8a090");
+      for (const fx of [x + 30, x + w - 50]) { box(fx, y + h, 20, 60, 4, "#6a6a74"); box(fx - 30, y + h + 50, 80, 14, 6, "#4a4a54"); }
+      const r = rnd(seed), n = gelb ? 12 : 6;
+      for (let i = 0; i < n; i++) { const cx = x + 40 + r() * (w - 140), cy = y + 40 + r() * (h - 140), f = gelb ? (r() < 0.8 ? "#f2c23a" : KF[(i + 2) % 6]) : KF[i % 6];
+        ctx.save(); ctx.translate(cx + 45, cy + 32); ctx.rotate((r() - 0.5) * 0.25); box(-45, -32, 90, 64, 6, f); box(-30, -14, 60, 6, 3, rgba("#3a3020", 0.35)); box(-30, 2, 40, 6, 3, rgba("#3a3020", 0.3)); circle(0, -26, 6, "#c8302a"); ctx.restore(); }
+    };
+    ebene("atsw", 1.2, () => {
+      stellwand(-260, 720, 420, 640, 761, s.karten === "gelb");
+      stellwand(900, 700, 420, 660, 763, s.karten === "gelb");
+      if (s.wand === "block") { stellwand(140, 760, 800, 600, 767, s.karten === "gelb"); glut(540, 1060, 400, "#ff6a4a", 0.12); }
+      else { stellwand(250, 820, 260, 500, 769, s.karten === "gelb"); if (s.wand === "offen") glut(700, 1100, 360, "#fff2c0", 0.6); }
+    });
+    if (s.kaestchen != null) { const n = Number(s.kaestchen); for (let i = 0; i < 10; i++) { const x = 190 + i * 72, y = 560; box(x, y, 58, 58, 10, i < n ? "#3fb87a" : rgba("#ffffff", 0.75)); if (i < n) glut(x + 29, y + 29, 50, "#8affb0", 0.4); } }
+    if (s.schild) { ctx.save(); ctx.translate(540, 640); ctx.rotate(-0.04); box(-300, -70, 600, 140, 12, "#fff8e6"); ellipse(0, 76, 280, 10, rgba("#000000", 0.15)); A.text(String(s.schild), 0, 18, 52, "#2a3350", "center", 800, "Titel", 560); box(-8, -86, 16, 22, 4, "#c8302a"); ctx.restore(); }
+    A.figurenZeigen(s, t, figY, sk);
+    // Werktisch vorne mit Farbtöpfen und Pinseln (unscharf)
+    ebene("atvorn", 9, () => {
+      box(-300, 1960, 1700, 80, 16, "#c9a070"); box(-300, 2040, 1700, 600, 0, "#7a5a3c");
+      for (const [x, f] of [[-40, "#e8685a"], [80, "#5aa8f2"], [880, "#f2c23a"], [1000, "#3fb87a"]]) { box(x, 1850, 100, 120, 14, "#d8dce4"); ellipse(x + 50, 1852, 50, 14, f); }
+      for (const x of [200, 230, 260]) line(x, 1960, x + 40, 1800, 10, "#a8743a");
+      box(1150, 1300, 320, 700, 60, "#3f8a5a"); ellipse(1240, 1280, 160, 200, "#4fa06a");
+    });
+    A._dunkel = 0;
+  };
   // ---- Icons für s06 (Messband mit Größenstrichen, Saatgut, verschlossene Kiste, Wärmeregler) ----
   Object.assign(A.I, {
     messband(t) { ctx.save(); ctx.rotate(-0.12); box(-200, -40, 400, 80, 10, "#f2c23a"); box(-200, -40, 400, 14, 6, A.rgba("#ffffff", 0.3));
@@ -870,6 +967,15 @@
       line(0, 0, 30, -30, 8, "#2d2a30"); line(0, 0, -10, -60, 6, "#2d2a30"); ctx.save(); ctx.rotate(t * 1.05); line(0, 12, 0, -70, 3, "#d8443a"); ctx.restore(); circle(0, 0, 7, "#d8443a"); box(96, -14, 22, 28, 6, "#c8ccd4"); },
   });
   for (const n of ["quittung", "kasse", "stoffvogel", "stempel", "blechdose", "armbanduhr"]) if (!A.ICONS.includes(n)) A.ICONS.push(n);
+  // ---- Icons für s07 (Karteikarte, Projektor, Mikrofon) ----
+  Object.assign(A.I, {
+    karteikarte(t) { ctx.save(); ctx.rotate(-0.06); box(-160, -110, 320, 220, 12, "#f2c23a"); box(-160, -110, 320, 40, 12, "#e0a820"); for (let k = 0; k < 4; k++) box(-130, -40 + k * 34, k === 3 ? 140 : 250, 10, 5, A.rgba("#3a3020", 0.4)); circle(0, -92, 10, "#c8302a"); ctx.restore(); },
+    projektor(t) { box(-150, -70, 300, 150, 30, "#3a3f58"); circle(-60, 4, 52, "#1a1e30"); circle(-60, 4, 34, "#9fd0ff"); circle(-72, -8, 10, A.rgba("#ffffff", 0.7)); box(40, -40, 80, 20, 8, "#5a6080"); box(40, 0, 80, 20, 8, "#5a6080");
+      for (const x of [-110, 110]) box(x - 10, 80, 20, 50, 6, "#2a2e40"); const a = 0.6 + 0.4 * Math.sin(t * 3); ctx.fillStyle = A.rgrad(-60, 4, 0, 200, [[0, A.rgba("#cfe6ff", 0.5 * a)], [1, A.rgba("#cfe6ff", 0)]]); ctx.fillRect(-260, -200, 400, 400); },
+    mikrofon(t) { box(-50, -170, 100, 150, 50, "#5a5f70"); for (let k = 0; k < 5; k++) box(-40, -150 + k * 24, 80, 6, 3, A.rgba("#ffffff", 0.25)); box(-12, -20, 24, 120, 8, "#3a3e4c"); box(-80, 100, 160, 24, 12, "#2a2e3a");
+      ctx.beginPath(); ctx.arc(0, -70, 80, 0.15 * Math.PI, 0.85 * Math.PI); ctx.lineWidth = 10; ctx.strokeStyle = "#3a3e4c"; ctx.stroke(); },
+  });
+  for (const n of ["karteikarte", "projektor", "mikrofon"]) if (!A.ICONS.includes(n)) A.ICONS.push(n);
   // ---- Icons für s05 (Busticket, Halteknopf) ----
   Object.assign(A.I, {
     busticket(t) { ctx.save(); ctx.rotate(-0.08); box(-150, -95, 300, 190, 14, "#f2ead2"); box(-150, -95, 300, 44, 14, "#2f6fb5"); A.text("TICKET", 0, -72, 30, "#ffffff", "center", 900);

@@ -1,0 +1,42 @@
+# You Were So Sure – Episode 3: I Remember It Clearly
+@musik musik/s07-f03-en.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung traurig
+@vortrag lebendig
+@klang studio
+@mund zitate
+@einblenden aus
+@untertitel aus
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette blau
+@zeit tag
+@sprache en
+
+== Hook ==
+[park du s07_eda jahreszeit=herbst zeit=abend blaetter palette=blau zoom-rein hooktext="YOU KNOW EXACTLY. RIGHT?" ton=summen] You know exactly what Eda promised you. Or you think you do.
+[gesicht s07_eda ort=park jahreszeit=herbst palette=blau zoom-rein] The schoolyard, one day before setup. Eda is sitting on the cold stone wall.
+[gesicht s07_eda ort=park jahreszeit=herbst traurig palette=blau figurstimme=frau sprecher=s07_eda] "I can't write the texts. Not all of them."
+
+== Wiedererkennen ==
+[gesicht du ort=park jahreszeit=herbst palette=blau] You go hot. You had a deal. She writes all ten texts.
+[park du s07_eda jahreszeit=herbst blaetter palette=blau schwenk-rechts ein="Ten>#10 TEXTS>karteikarte" ein_y=1500] Ten stations, ten texts. Setup is tomorrow. You remember her exact words. Word for word. Totally sure.
+[gesicht du ort=park jahreszeit=herbst palette=blau zoom-rein] "You promised. I remember it clearly."
+[park du s07_eda jahreszeit=herbst zeit=abend palette=blau zoom-raus ton=ui_ding ein="bell>SCHOOL BELL" ein_y=1500] The school bell rings. Neither of you gets up.
+
+== Steigerung ==
+[gesicht s07_eda ort=park jahreszeit=herbst palette=tuerkis] Eda doesn't say anything. She pulls out her phone and scrolls back. Three weeks. To the night you planned everything.
+[handy ort=park netz=4 akku=34 uhrzeit="9:14 PM" von="Eda" nachricht="I can make you a draft if you want." palette=tuerkis ein="draft>ONE DRAFT" ein_y=1600] There it is. One draft. Not a word about all ten.
+[gesicht du ort=park jahreszeit=herbst palette=tuerkis zoom-rein] Your thumb is shaking. You keep scrolling.
+[handy ort=park netz=4 akku=34 uhrzeit="9:16 PM" von="You" nachricht="No, it's fine. I'll handle the pressure." palette=tuerkis ein="Right>YOUR MESSAGE>herz" ein_y=1600] Right below it is your reply. Two minutes later. You completely forgot it.
+
+== Wendung ==
+[gesicht du ort=park jahreszeit=herbst traurig palette=blau] Your memory was so sure. Clear as a photo. And still wrong.
+[park du s07_eda jahreszeit=herbst blaetter palette=blau zoom-rein ein="sorry>NO BUT" ein_y=1500] You say, "I'm sorry." No but. No excuse.
+[park du s07_eda jahreszeit=herbst zeit=abend blaetter palette=blau zoom-rein ein="invitation>INVITATION · STILL SEALED" ein_y=1500] Eda nods slowly. She's holding the invitation to the opening. Still sealed.
+
+== Cliffhanger ==
+[handy ort=park netz=4 akku=33 uhrzeit="9:16 PM" von="You" nachricht="I'll handle the pressure." palette=lila zoom-rein ton=hit] Then you read your own message out loud. "I'll handle the pressure."

@@ -1,0 +1,41 @@
+# You Were So Sure – Episode 9: The Perfect Opening Is Cancelled
+@musik musik/s07-f09-en.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung spannend
+@vortrag lebendig
+@klang studio
+@mund zitate
+@einblenden aus
+@untertitel aus
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette lila
+@zeit tag
+@sprache en
+
+== Hook ==
+[atelier ansicht=vorfuehrung projektor=punkt du s07_eda palette=lila zoom-rein hooktext="YOUR PROJECTOR IS DYING" ton=summen] Ten minutes before your opening, the projector dies.
+[gesicht du ort=atelier ansicht=vorfuehrung projektor=punkt palette=lila zoom-rein] The picture shrinks to a white dot. The fan gets quieter. Then silent.
+[atelier ansicht=vorfuehrung projektor=aus du s07_eda s07_sen palette=lila schwenk-rechts ein="button>#10 MINUTES>uhr" ein_y=1500 ton=ui_pop] Ms. Sen presses every button she can find. Nothing. The screen stays black.
+
+== Wiedererkennen ==
+[atelier wand=offen du palette=rosa schwenk-links ein="hundred>#120 GUESTS" ein_y=1500] Out in the studio, a hundred and twenty guests are waiting. Parents, teachers, the whole grade. You hear shoes shuffling. Someone laughs.
+[gesicht du ort=atelier ansicht=vorfuehrung projektor=aus palette=lila] Your hands are sweaty. Your whole presentation lives on that screen. Without it, you've got nothing. Or so you think.
+[gesicht du ort=atelier ansicht=vorfuehrung projektor=aus palette=lila] "We push it back. Until it works again."
+
+== Steigerung ==
+[objekt objekte="projektor:Broken|uhr:Weeks of work" gross="ALL ON THE SCREEN" palette=blau zoom-rein ein="weeks>#3 WEEKS OF WORK" ein_y=1500] Three weeks of animations. Without the projector, they're nothing.
+[gesicht s07_eda ort=atelier ansicht=vorfuehrung projektor=aus palette=blau figurstimme=frau sprecher=s07_eda] "Or we just show the cards."
+[gesicht du ort=atelier ansicht=vorfuehrung projektor=aus palette=blau zoom-rein] There it is again. The thought from the wall. And from the speech. You recognize it right away.
+[objekt objekte="karteikarte:Drawings|karteikarte:Cards" gross="WHAT YOU HAVE" palette=orange zoom-rein ein="drawings>DRAWINGS & CARDS" ein_y=1500] You've got the drawings. The yellow cards. Your sheet with the wrong word. Your dad's photos. Everything that's real.
+
+== Wendung ==
+[atelier wand=offen schild="TECH BROKE. WE'RE NOT PERFECT EITHER." du s07_eda palette=orange zoom-rein ein="sign>HANDWRITTEN" ein_y=1500 ton=papier] Eda writes a sign. With a thick marker. You hang it on the door. You laugh for the first time today.
+[atelier ansicht=vorfuehrung projektor=aus mikro du s07_eda palette=rosa zoom-raus ein="front>PLAN B" ein_y=1500] You carry everything up front. Cards, drawings, a roll of tape. Your hands aren't shaking quite as much.
+[gesicht s07_sen ort=atelier ansicht=vorfuehrung froh palette=rosa] "I'll open the door. Ready?"
+
+== Cliffhanger ==
+[atelier ansicht=vorfuehrung projektor=aus mikro du palette=lila zoom-rein ton=hit] You walk up to the mic without your perfect presentation.

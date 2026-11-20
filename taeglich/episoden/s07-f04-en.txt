@@ -1,0 +1,42 @@
+# You Were So Sure – Episode 4: Three Nights Already Spent
+@musik musik/s07-f04-en.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung duester
+@vortrag lebendig
+@klang studio
+@mund zitate
+@einblenden aus
+@untertitel aus
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette lila
+@zeit tag
+@sprache en
+
+== Hook ==
+[atelier wand=block zeit=abend du palette=lila zoom-rein hooktext="THREE NIGHTS FOR ONE WALL" ton=summen] Your wall is perfect. And nobody can get past it.
+[gesicht du ort=atelier wand=block zeit=abend palette=lila zoom-rein] Setup day. You spent three nights building this display wall.
+[atelier wand=block zeit=abend du s07_eda palette=lila schwenk-rechts ein="middle>#3 NIGHTS>uhr" ein_y=1500] It stands right in the middle of the studio. Huge. White. Full of cards. You're proud of every single screw.
+
+== Wiedererkennen ==
+[gesicht du ort=atelier wand=block zeit=abend palette=lila] Your palm still has a mark from the screwdriver. It smells like fresh paint.
+[atelier wand=block zeit=abend s07_eda palette=lila zoom-rein ein="backpack>BACKPACK STUCK" ein_y=1500 ton=moebel_ruecken] Eda tests the path. Her backpack gets stuck between the panels. The wood creaks.
+[gesicht s07_eda ort=atelier wand=block zeit=abend palette=lila figurstimme=frau sprecher=s07_eda] "A wheelchair won't fit. Or a stroller."
+[gesicht du ort=atelier wand=block zeit=abend palette=blau zoom-rein] "Then people can just go around."
+
+== Steigerung ==
+[atelier wand=block zeit=abend du palette=blau schwenk-links ein="forty>#40 METER DETOUR" ein_y=1500] Going around is forty meters. Past two stations nobody will see.
+[objekt objekte="uhr:Night 1|uhr:Night 2|uhr:Night 3" gross="THREE NIGHTS" palette=blau zoom-rein ein="nights>WASTED?" ein_y=1500] In your head, only one thing counts: three nights. Taking it down feels like losing.
+[objekt objekte="uhr:Already spent|fragezeichen:Still worth it?" gross="1985 · ARKES & BLUMER" palette=blau zoom-rein ein="nineteen>#1985" ein_y=1500] In nineteen eighty-five, researchers found that time already spent can make people stick with a bad choice.
+[gesicht du ort=atelier wand=block zeit=abend traurig palette=blau] Those nights are gone. No matter what you do now. The only question is: what helps from tomorrow on?
+
+== Wendung ==
+[atelier wand=block zeit=abend du palette=lila zoom-rein ein="screw>FIRST SCREW" ein_y=1500 ton=ui_pop] You grab the screwdriver. The first screw squeaks.
+[atelier wand=offen zeit=abend du s07_eda palette=orange zoom-raus ein="open>OPEN PATH" ein_y=1500] An hour later, the middle is open. Light falls through the gap.
+[gesicht s07_eda ort=atelier wand=offen zeit=abend froh palette=orange] Eda walks through once. With her backpack. Without getting stuck.
+
+== Cliffhanger ==
+[gesicht du ort=atelier wand=offen zeit=abend palette=lila zoom-rein ton=hit] You set the first piece in the corner. Yesterday you still called it your best work.

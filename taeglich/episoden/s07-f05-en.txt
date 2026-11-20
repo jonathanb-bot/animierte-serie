@@ -1,0 +1,41 @@
+# You Were So Sure – Episode 5: Same Choice, Different Words
+@musik musik/s07-f05-en.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung spannend
+@vortrag lebendig
+@klang studio
+@mund zitate
+@einblenden aus
+@untertitel aus
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette rosa
+@zeit tag
+@sprache en
+
+== Hook ==
+[atelier kaestchen=6 du s07_eda palette=rosa zoom-rein hooktext="SIX DONE OR FOUR MISSING?" ton=summen] Six out of ten done. Or four out of ten missing. Same thing. Right?
+[gesicht du ort=atelier kaestchen=6 palette=rosa zoom-rein] One day until the opening. You've painted your progress on the wall.
+[atelier kaestchen=6 du s07_eda palette=rosa schwenk-rechts ein="boxes>#10 STATIONS" ein_y=1500 ton=stille_raum] Ten boxes for ten stations. Six of them are green. The clock over the door ticks loudly.
+
+== Wiedererkennen ==
+[gesicht du ort=atelier kaestchen=6 palette=rosa] "Four stations missing. We'll never make it."
+[gesicht s07_eda ort=atelier kaestchen=6 froh palette=rosa figurstimme=frau sprecher=s07_eda] "Six are done. That's plenty."
+[atelier kaestchen=6 du s07_eda palette=lila zoom-raus ein="same>SAME PROGRESS" ein_y=1500] You're talking about the same progress. And you sound like two different worlds. Eda crosses her arms. So do you.
+
+== Steigerung ==
+[objekt objekte="karteikarte:6 done|karteikarte:4 missing" gross="TWO NOTES" palette=lila zoom-rein ein="notes>#2 NOTES" ein_y=1500] You write both sentences on two notes. Smooth index cards. Side by side.
+[gesicht du ort=atelier kaestchen=6 palette=lila] One note scares you. The other calms you down. And nothing has changed. Nothing at all.
+[objekt objekte="karteikarte:Gain|karteikarte:Loss" gross="1981 · TVERSKY & KAHNEMAN" palette=blau zoom-rein ein="nineteen>#1981" ein_y=1500] In nineteen eighty-one, two researchers showed that the same options, worded differently, can change decisions.
+[atelier kaestchen=6 s07_sen du palette=blau schwenk-links ein="Sen>MS. SEN ASKS" ein_y=1500] Ms. Sen walks by. She only asks, "What does each station cost?"
+
+== Wendung ==
+[objekt objekte="uhr:5 hrs|uhr:1 hr|uhr:8 hrs|uhr:2 hrs" gross="EFFORT & VALUE" palette=orange zoom-rein ein="hours>HOURS, NOT FEELINGS" ein_y=1500] You write down the hours. And what each station really gives visitors. Suddenly the studio goes quiet.
+[atelier kaestchen=8 du s07_eda palette=orange zoom-raus ein="cut>#2 CUT" ein_y=1500] Two stations you can finish tonight. Two you cut. No drama. No guilt.
+[gesicht s07_eda ort=atelier kaestchen=8 froh palette=orange] Eda slides the two notes on top of each other. They match perfectly.
+
+== Cliffhanger ==
+[objekt objekte="karteikarte:6 done|karteikarte:4 missing" gross="EXACTLY THE SAME" palette=rosa zoom-rein ton=hit] The scary version and the calm version describe exactly the same six stations.

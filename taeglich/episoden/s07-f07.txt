@@ -1,0 +1,41 @@
+# Du warst dir sicher – Folge 7: Die hintere Reihe
+@musik musik/s07-f07.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung warm
+@vortrag lebendig
+@klang studio
+@mund zitate
+@einblenden aus
+@untertitel aus
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette orange
+@zeit tag
+
+== Hook ==
+[atelier ansicht=vorfuehrung leer hinten=papa du palette=orange zoom-rein hooktext="DEIN PAPA SITZT GANZ HINTEN" ton=summen] Du zählst Fehler. Und dein Vater wartet in der letzten Reihe.
+[gesicht du ort=atelier ansicht=vorfuehrung palette=orange zoom-rein] Morgen früh, eine Stunde vor der Eröffnung. Du gehst deine Liste durch.
+[objekt objekte="karteikarte:Licht|karteikarte:Ton|karteikarte:Schilder" gross="47 PUNKTE" palette=orange zoom-rein ein="siebenundvierzig>#47 PUNKTE" ein_y=1500] Siebenundvierzig Punkte. Licht. Ton. Schilder. Jeder Haken beruhigt dich kurz.
+
+== Wiedererkennen ==
+[atelier ansicht=vorfuehrung leer du palette=orange schwenk-rechts] Die Stuhlreihen sind noch leer. Du läufst sie ab und prüfst jeden Platz. Licht an den Stühlen. Kabel am Boden.
+[gesicht s07_eda ort=atelier ansicht=vorfuehrung palette=orange figurstimme=frau sprecher=s07_eda] „Hör mal auf zu zählen. Guck nach hinten.“
+[atelier ansicht=vorfuehrung leer hinten=papa hinten_ausdruck=froh palette=rosa zoom-rein ein="Papa>DEIN PAPA>herz" ein_y=1500] Ganz hinten sitzt dein Papa. Noch in der grauen Arbeitsjacke.
+[nachtbus anzeige="Schulzentrum" uhr="6:10" draussen=stadt palette=orange schwenk-links ein="Frühschicht>FRÜHSCHICHT · 4:30>busticket" ein_y=1500] Er fährt Bus. Heute hat er früher Schluss gemacht. Extra für dich.
+
+== Steigerung ==
+[atelier ansicht=vorfuehrung leer hinten=papa palette=rosa zoom-rein ein="zwanzig>#20 MINUTEN>uhr" ein_y=1500] Er hält eine Thermoskanne auf dem Schoß. Er sitzt da seit zwanzig Minuten.
+[gesicht du ort=atelier ansicht=vorfuehrung palette=rosa zoom-rein] Zwanzig Minuten. Und du hast ihn nicht gesehen. Nur deine Liste. Punkt für Punkt.
+[gesicht papa ort=atelier ansicht=vorfuehrung froh palette=rosa figurstimme=mann_alt sprecher=papa] „Ich wollte nicht stören.“
+[gesicht du ort=atelier ansicht=vorfuehrung palette=orange] Bei Schulterminen ist dein Papa immer so. Leise. Ganz hinten. Als wäre er zu viel.
+
+== Wendung ==
+[atelier ansicht=vorfuehrung leer hinten=papa hinten_ausdruck=froh palette=orange zoom-raus ein="fünf>#5 MINUTEN>uhr" ein_y=1500] Du klappst die Liste zu. Fünf Minuten. Du setzt dich neben ihn.
+[objekt objekte="herz:Pfefferminz|uhr:5 Minuten" gross="PFEFFERMINZTEE" palette=orange zoom-rein ein="Tee>NOCH WARM" ein_y=1500] Er schenkt dir Pfefferminztee ein. Er riecht nach eurer Küche.
+[gesicht papa ort=atelier ansicht=vorfuehrung palette=rosa zoom-rein] Dann greift er in seine Jackentasche. Er zögert.
+
+== Cliffhanger ==
+[objekt objekte="busticket:Eintritt 2019" gross="EINTRITTSKARTE 2019" palette=rosa zoom-rein ton=hit] Er legt eine alte Eintrittskarte auf deinen Schoß. „Beim letzten Mal war ich auch da.“

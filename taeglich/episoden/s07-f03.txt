@@ -1,0 +1,41 @@
+# Du warst dir sicher – Folge 3: Ich weiß es noch genau
+@musik musik/s07-f03.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung traurig
+@vortrag lebendig
+@klang studio
+@mund zitate
+@einblenden aus
+@untertitel aus
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette blau
+@zeit tag
+
+== Hook ==
+[park du s07_eda jahreszeit=herbst zeit=abend blaetter palette=blau zoom-rein hooktext="DU WEISST ES GENAU. ODER?" ton=summen] Du weißt genau, was Eda dir versprochen hat. Glaubst du.
+[gesicht s07_eda ort=park jahreszeit=herbst palette=blau zoom-rein] Pausenhof, ein Tag vor dem Aufbau. Eda sitzt auf der kalten Steinmauer.
+[gesicht s07_eda ort=park jahreszeit=herbst traurig palette=blau figurstimme=frau sprecher=s07_eda] „Ich kann die Texte nicht schreiben. Nicht alle.“
+
+== Wiedererkennen ==
+[gesicht du ort=park jahreszeit=herbst palette=blau] Dir wird heiß. Ihr hattet das ausgemacht. Sie schreibt alle zehn Texte.
+[park du s07_eda jahreszeit=herbst blaetter palette=blau schwenk-rechts ein="zehn>#10 TEXTE>karteikarte" ein_y=1500] Zehn Stationen, zehn Texte. Morgen ist Aufbau. Du erinnerst dich an ihren Satz. Wort für Wort. Ganz sicher.
+[gesicht du ort=park jahreszeit=herbst palette=blau zoom-rein] „Du hast es versprochen. Ich weiß es noch genau.“
+[park du s07_eda jahreszeit=herbst zeit=abend palette=blau zoom-raus ton=ui_ding ein="Gong>PAUSENGONG" ein_y=1500] Der Pausengong schrillt. Keiner von euch steht auf.
+
+== Steigerung ==
+[gesicht s07_eda ort=park jahreszeit=herbst palette=tuerkis] Eda sagt nichts. Sie zieht ihr Handy raus und scrollt zurück. Drei Wochen. Bis zu dem Abend, an dem ihr alles geplant habt.
+[handy ort=park netz=4 akku=34 uhrzeit="21:14" von="Eda" nachricht="Ich kann dir einen Entwurf machen, wenn du willst." palette=tuerkis ein="Entwurf>EIN ENTWURF" ein_y=1600] Da steht es. Ein Entwurf. Kein Wort von allen zehn.
+[gesicht du ort=park jahreszeit=herbst palette=tuerkis zoom-rein] Dein Daumen zittert. Du scrollst weiter.
+[handy ort=park netz=4 akku=34 uhrzeit="21:16" von="Du" nachricht="Nein, lass. Den Druck übernehme ich." palette=tuerkis ein="Druck>DEINE NACHRICHT>herz" ein_y=1600] Darunter steht deine Antwort. Zwei Minuten später. Du hast sie komplett vergessen.
+
+== Wendung ==
+[gesicht du ort=park jahreszeit=herbst traurig palette=blau] Deine Erinnerung war so sicher. Klar wie ein Foto. Und trotzdem falsch.
+[park du s07_eda jahreszeit=herbst blaetter palette=blau zoom-rein ein="leid>OHNE ABER" ein_y=1500] Du sagst: „Es tut mir leid.“ Kein Aber. Keine Erklärung.
+[park du s07_eda jahreszeit=herbst zeit=abend blaetter palette=blau zoom-rein ein="Einladung>EINLADUNG · NOCH ZU" ein_y=1500] Eda nickt langsam. Sie hält die Einladung zur Eröffnung in der Hand. Noch zu.
+
+== Cliffhanger ==
+[handy ort=park netz=4 akku=33 uhrzeit="21:16" von="Du" nachricht="Den Druck übernehme ich." palette=lila zoom-rein ton=hit] Dann liest du deine eigene Nachricht laut vor. „Den Druck übernehme ich.“

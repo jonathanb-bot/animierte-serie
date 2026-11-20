@@ -198,5 +198,20 @@
   "jacke": "#6a3f6e",
   "hose": "#2c2a34",
   "schal": "#d9c8a8"
+ },
+ "s07_eda": {
+  "haar": "bob",
+  "haare": "#c8452e",
+  "haut": "#f0cdb0",
+  "jacke": "#e8dcc4",
+  "hose": "#3f8a4a"
+ },
+ "s07_sen": {
+  "haar": "kurz",
+  "haare": "#2a2420",
+  "haut": "#d9a882",
+  "jacke": "#e8b83a",
+  "hose": "#3a3f4a",
+  "brille": "#2a2a2e"
  }
 }

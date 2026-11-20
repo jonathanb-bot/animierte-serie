@@ -1,0 +1,40 @@
+# Du warst dir sicher – Folge 8: Der leere Stuhl in deinem Kopf
+@musik musik/s07-f08.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung traurig
+@vortrag lebendig
+@klang studio
+@mund zitate
+@einblenden aus
+@untertitel aus
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette blau
+@zeit tag
+
+== Hook ==
+[atelier ansicht=vorfuehrung leer palette=tuerkis zoom-rein hooktext="DER LEERE STUHL WAR NICHT LEER" ton=summen] Du erinnerst dich an Papas leeren Stuhl. Aber nicht an alles.
+[gesicht du ort=atelier ansicht=vorfuehrung palette=blau zoom-rein] Die Eintrittskarte liegt in deiner Hand. Deine erste Vorführung, mit zwölf.
+[gesicht du ort=atelier ansicht=vorfuehrung traurig palette=blau] „Du warst nicht da, Papa. Der Stuhl war leer.“
+
+== Wiedererkennen ==
+[atelier ansicht=vorfuehrung leer palette=blau schwenk-rechts ein="zwölf>DU, 12 JAHRE" ein_y=1500] Du siehst es genau vor dir. Erste Reihe. Alle Eltern da. Nur ein Platz frei.
+[gesicht du ort=atelier ansicht=vorfuehrung traurig palette=blau] Dieses Bild hast du fünf Jahre lang mitgetragen. Bei jedem Auftritt. Bei jedem Elternabend.
+[atelier ansicht=vorfuehrung leer hinten=papa du palette=blau zoom-rein ein="Handy>SEINE FOTOS" ein_y=1500] Dein Papa nickt. Er widerspricht nicht. Er holt nur sein Handy raus. Der Tee wird kalt.
+
+== Steigerung ==
+[handy ort=atelier ansicht=vorfuehrung netz=3 akku=52 uhrzeit="18:05" von="Fotos · 14.06.2019" nachricht="Vorführung 7b – Anfang" palette=tuerkis ein="achtzehn>18:05 · LEERER STUHL" ein_y=1600] Erstes Foto. Achtzehn Uhr fünf. Erste Reihe, ein leerer Stuhl.
+[handy ort=atelier ansicht=vorfuehrung netz=3 akku=52 uhrzeit="18:52" von="Fotos · 14.06.2019" nachricht="Vorführung 7b – Applaus" palette=tuerkis ein="zweiundfünfzig>18:52 · AN DER TÜR" ein_y=1600 ton=ui_pop] Er scrollt weiter. Achtzehn Uhr zweiundfünfzig. Schlussapplaus.
+[atelier ansicht=vorfuehrung leer hinten=papa hinten_x=980 palette=tuerkis zoom-rein ein="Tür>PAPA AN DER TÜR>herz" ein_y=1500] Ganz hinten an der Tür. Ein Mann in grauer Jacke. Er klatscht.
+[gesicht du ort=atelier ansicht=vorfuehrung palette=tuerkis zoom-rein] Dein Papa. Völlig außer Atem, die Mütze schief. Du hast ihn damals nie gesehen.
+
+== Wendung ==
+[gesicht papa ort=atelier ansicht=vorfuehrung traurig palette=blau figurstimme=mann_alt sprecher=papa] „Der Bus hatte eine Panne. Ich bin gerannt.“
+[gesicht du ort=atelier ansicht=vorfuehrung palette=blau] Beides stimmt. Der leere Stuhl. Und der Mann an der Tür.
+[atelier ansicht=vorfuehrung leer hinten=papa du palette=blau zoom-raus ein="beides>BEIDES IST WAHR" ein_y=1500] Du sagst ihm, wie allein du dich gefühlt hast. Und dass du froh bist, dass er da war.
+
+== Cliffhanger ==
+[gesicht papa ort=atelier ansicht=vorfuehrung traurig palette=lila zoom-rein ton=hit] Papa sagt leise: „Ich war zu spät. Und du musstest dich trotzdem allein fühlen.“

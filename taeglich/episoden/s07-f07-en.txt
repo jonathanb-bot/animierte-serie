@@ -1,0 +1,42 @@
+# You Were So Sure – Episode 7: The Back Row
+@musik musik/s07-f07-en.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung warm
+@vortrag lebendig
+@klang studio
+@mund zitate
+@einblenden aus
+@untertitel aus
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette orange
+@zeit tag
+@sprache en
+
+== Hook ==
+[atelier ansicht=vorfuehrung leer hinten=papa du palette=orange zoom-rein hooktext="YOUR DAD IS IN THE LAST ROW" ton=summen] You're counting mistakes. And your dad is waiting in the last row.
+[gesicht du ort=atelier ansicht=vorfuehrung palette=orange zoom-rein] Tomorrow morning, one hour before the opening. You go through your checklist.
+[objekt objekte="karteikarte:Lights|karteikarte:Sound|karteikarte:Signs" gross="47 ITEMS" palette=orange zoom-rein ein="Forty>#47 ITEMS" ein_y=1500] Forty-seven items. Lights. Sound. Signs. Every check mark calms you down for a second.
+
+== Wiedererkennen ==
+[atelier ansicht=vorfuehrung leer du palette=orange schwenk-rechts] The rows of chairs are still empty. You walk them and check every seat. Lights on the chairs. Cables on the floor.
+[gesicht s07_eda ort=atelier ansicht=vorfuehrung palette=orange figurstimme=frau sprecher=s07_eda] "Stop counting. Look behind you."
+[atelier ansicht=vorfuehrung leer hinten=papa hinten_ausdruck=froh palette=rosa zoom-rein ein="dad>YOUR DAD>herz" ein_y=1500] All the way in the back sits your dad. Still in his gray work jacket.
+[nachtbus anzeige="School Center" uhr="6:10" draussen=stadt palette=orange schwenk-links ein="early>EARLY SHIFT · 4:30>busticket" ein_y=1500] He drives a bus. Today he left work early. Just for you.
+
+== Steigerung ==
+[atelier ansicht=vorfuehrung leer hinten=papa palette=rosa zoom-rein ein="twenty>#20 MINUTES>uhr" ein_y=1500] He's holding a thermos in his lap. He's been sitting there for twenty minutes.
+[gesicht du ort=atelier ansicht=vorfuehrung palette=rosa zoom-rein] Twenty minutes. And you didn't see him. Only your list. Item by item.
+[gesicht papa ort=atelier ansicht=vorfuehrung froh palette=rosa figurstimme=mann_alt sprecher=papa] "I didn't want to be in the way."
+[gesicht du ort=atelier ansicht=vorfuehrung palette=orange] At school events, your dad is always like this. Quiet. In the back. Like he's too much.
+
+== Wendung ==
+[atelier ansicht=vorfuehrung leer hinten=papa hinten_ausdruck=froh palette=orange zoom-raus ein="Five>#5 MINUTES>uhr" ein_y=1500] You close the list. Five minutes. You sit down next to him.
+[objekt objekte="herz:Peppermint|uhr:5 minutes" gross="PEPPERMINT TEA" palette=orange zoom-rein ein="tea>STILL WARM" ein_y=1500] He pours you peppermint tea. It smells like your kitchen.
+[gesicht papa ort=atelier ansicht=vorfuehrung palette=rosa zoom-rein] Then he reaches into his jacket pocket. He hesitates.
+
+== Cliffhanger ==
+[objekt objekte="busticket:Ticket 2019" gross="TICKET FROM 2019" palette=rosa zoom-rein ton=hit] He sets an old ticket in your lap. "I was there last time too."

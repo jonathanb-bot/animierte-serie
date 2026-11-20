@@ -1,0 +1,41 @@
+# You Were So Sure – Episode 10: I Don't Know Yet
+@musik musik/s07-f10-en.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung freudig
+@vortrag lebendig
+@klang studio
+@mund zitate
+@einblenden aus
+@untertitel aus
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette orange
+@zeit tag
+@sprache en
+
+== Hook ==
+[atelier wand=offen karten=gelb du s07_eda palette=orange zoom-rein hooktext="YOU SAY: I DON'T KNOW" ton=summen] A hundred and twenty people are looking at you. And you say, "I don't know yet."
+[gesicht du ort=atelier ansicht=vorfuehrung palette=orange zoom-rein] The opening. The mic echoes. The stage light is warm on your face.
+[atelier ansicht=vorfuehrung mikro du s07_eda palette=orange schwenk-rechts ein="Eda>EDA'S HALF>herz" ein_y=1500] Eda starts. Her half of the welcome. She's funnier than you.
+
+== Wiedererkennen ==
+[atelier wand=offen karten=gelb du palette=orange zoom-raus ein="yellow>YELLOW CARDS" ein_y=1500] Then you lead everyone through the stations. The yellow cards. The recording with Eda at the edge.
+[atelier wand=offen kaestchen=8 du palette=tuerkis schwenk-links ein="sleep>SLEEP · CROSSED OUT" ein_y=1500] Your sheet with the word sleep. Crossed out. People laugh. In a kind way.
+[gesicht papa ort=atelier wand=offen froh palette=tuerkis] Your dad is standing right up front. This time, right up front.
+
+== Steigerung ==
+[atelier ansicht=vorfuehrung mikro du palette=orange zoom-rein ein="question>ONE QUESTION" ein_y=1500] A boy raises his hand. His question is good. And you don't know the answer.
+[gesicht du ort=atelier ansicht=vorfuehrung palette=orange] Before, you would've just made something up. Fast. Sounding sure. As long as nobody noticed.
+[gesicht du ort=atelier ansicht=vorfuehrung froh palette=orange zoom-rein] "I don't know yet. I'll write it down."
+[atelier wand=offen schild="QUESTIONS WE STILL NEED TO ANSWER" du palette=orange zoom-rein ein="wall>OPEN QUESTIONS" ein_y=1500 ton=papier] You pin the question to the wall. Underneath, there's room for the answer.
+
+== Wendung ==
+[atelier wand=offen du s07_eda s07_sen palette=rosa zoom-raus ein="applause>APPLAUSE" ein_y=1500 ton=riser] Then comes the applause. Not for a perfect show. For an honest one. Eda squeezes your hand.
+[gesicht s07_sen ort=atelier wand=offen palette=rosa zoom-rein] Ms. Sen walks over with an old, yellowed index card. She pins it next to yours.
+[objekt objekte="karteikarte:Yours|karteikarte:Ms. Sen's" gross="TWO CARDS" palette=rosa zoom-rein ein="two>#2003" ein_y=1500] Her card is from two thousand three. Her first exhibition, back when she was a student.
+
+== Schluss ==
+[objekt objekte="karteikarte:No mistakes!" gross="THE SAME SENTENCE" palette=orange zoom-rein ton=hit] It says the sentence you almost said yourself: "I'm not allowed to make mistakes."

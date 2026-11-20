@@ -1,0 +1,41 @@
+# Du warst dir sicher – Folge 6: Mein Platz vorn
+@musik musik/s07-f06.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung traurig
+@vortrag lebendig
+@klang studio
+@mund zitate
+@einblenden aus
+@untertitel aus
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette tuerkis
+@zeit tag
+
+== Hook ==
+[atelier ansicht=vorfuehrung mikro du s07_eda palette=tuerkis zoom-rein hooktext="DEINE REDE NIMMT IHR DEN PLATZ" ton=papier] Deine Rede ist perfekt. Und deine Freundin hat darin nichts zu sagen.
+[gesicht du ort=atelier ansicht=vorfuehrung palette=tuerkis zoom-rein] Der Abend vor der Eröffnung. Du probst die Begrüßung im Vorführraum.
+[objekt objekte="karteikarte:Rede|karteikarte:Rede|karteikarte:Rede" gross="22 REDEKARTEN" palette=tuerkis zoom-rein ein="zweiundzwanzig>#22 KARTEN" ein_y=1500] Zweiundzwanzig Redekarten. Du hast jede Nacht daran geschrieben.
+
+== Wiedererkennen ==
+[gesicht du ort=atelier ansicht=vorfuehrung palette=tuerkis] Dein Hemdkragen ist eng. Die Karten rascheln in deinen Händen.
+[atelier ansicht=vorfuehrung mikro du s07_eda palette=tuerkis schwenk-rechts ein="Eda>EDA: 1 SATZ" ein_y=1500] Eda steht daneben. Sie hat genau einen Satz. Ganz am Ende. „Viel Spaß beim Rundgang.“
+[gesicht s07_eda ort=atelier ansicht=vorfuehrung traurig palette=tuerkis figurstimme=frau sprecher=s07_eda] „Ich bin dann wohl die Deko.“
+[gesicht du ort=atelier ansicht=vorfuehrung palette=blau zoom-rein] Sie lacht dabei. Aber nur mit dem Mund. Ihre Augen schauen auf den Boden.
+
+== Steigerung ==
+[objekt objekte="karteikarte:Deine 22|karteikarte:Edas 1" gross="22 ZU 1" palette=blau zoom-rein ein="Stapel>DOPPELT SO HOCH" ein_y=1500] Dein Stapel ist doppelt so hoch wie die Hälfte. Ihrer ist eine Karte.
+[gesicht du ort=atelier ansicht=vorfuehrung palette=blau] „Aber die Rede ist doch schon fertig.“
+[gesicht du ort=atelier ansicht=vorfuehrung traurig palette=blau zoom-rein] Da ist er wieder. Der Gedanke von der Stellwand. So viel Arbeit drin, also muss es bleiben.
+[atelier ansicht=vorfuehrung mikro du palette=blau zoom-raus ein="Fenster>KALTE LUFT" ein_y=1500] Durch das gekippte Fenster zieht kühle Luft. Du liest die Karten noch einmal. Diesmal ehrlich. Welche braucht wirklich jemand?
+
+== Wendung ==
+[objekt objekte="karteikarte:11|karteikarte:11" gross="ELF UND ELF" palette=orange zoom-rein ein="elf>#11 KARTEN" ein_y=1500] Elf Karten legst du in die Ablage. Elf behältst du.
+[atelier ansicht=vorfuehrung mikro du s07_eda palette=orange zoom-rein ein="Hälfte>HALBE-HALBE>herz" ein_y=1500] Du gibst Eda die Hälfte der Begrüßung. Ihre Hälfte, ihre Worte.
+[gesicht s07_eda ort=atelier ansicht=vorfuehrung froh palette=orange figurstimme=frau sprecher=s07_eda] „Dann schreib ich meinen Teil selbst.“
+
+== Cliffhanger ==
+[atelier ansicht=vorfuehrung du s07_eda palette=rosa zoom-rein ton=hit] Und Eda stellt ihren Stuhl wieder neben deinen.

@@ -1,0 +1,43 @@
+# You Were So Sure – Episode 1: With Your Eyes Open
+@musik musik/s07-f01-en.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung spannend
+@vortrag lebendig
+@klang studio
+@mund zitate
+@einblenden aus
+@untertitel aus
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette lila
+@zeit tag
+@sprache en
+
+== Hook ==
+[atelier karten=gelb du palette=orange zoom-rein hooktext="YOU ONLY SEE YELLOW" ton=summen] You're counting yellow cards. And you miss your best friend.
+[titel oben="Episode 1" gross="YOU WERE SO SURE" unten="With Your Eyes Open" farbe=#1a1030 akzent=#f2c23a hud=false dauer=1] In three days, you open the school exhibition.
+[gesicht du ort=atelier karten=gelb palette=orange zoom-rein] The topic: perception. Together with Eda. And you don't want to make a single mistake. Not one.
+
+== Wiedererkennen ==
+[atelier ansicht=vorfuehrung du s07_eda palette=lila schwenk-rechts ein="rehearsal>DRESS REHEARSAL>projektor" ein_y=1500 ton=ui_pop] Dress rehearsal in the screening room. The curtains are closed. The projector blows warm air in your face.
+[objekt objekte="karteikarte:Yellow|karteikarte:Yellow|karteikarte:Yellow" gross="COUNT THE YELLOW ONES" palette=lila zoom-rein ein="twelve>#12 YELLOW CARDS" ein_y=1500] Cards fly across the screen. Your job: count every yellow one.
+[gesicht du ort=atelier ansicht=vorfuehrung palette=lila zoom-rein] Click. Click. Click. You count out loud. Twelve. No mistakes.
+[gesicht s07_eda ort=atelier ansicht=vorfuehrung palette=lila figurstimme=frau sprecher=s07_eda] "Twelve. Nice. Did you see anything else?"
+
+== Steigerung ==
+[atelier ansicht=vorfuehrung du s07_eda palette=rosa zoom-raus ein="Eda>EDA · BEST FRIEND>herz" ein_y=1500] Eda. Your best friend. Since fifth grade.
+[gesicht du ort=atelier ansicht=vorfuehrung palette=rosa] You shake your head. There was nothing but cards.
+[atelier ansicht=vorfuehrung s07_sen du palette=rosa schwenk-links ein="Sen>MS. SEN>karteikarte" ein_y=1500] Ms. Sen, your teacher, rewinds the recording. She smiles kind of funny. Like she knows something.
+[objekt objekte="auge:Focused|fragezeichen:Missed" gross="1999 · SIMONS & CHABRIS" palette=blau zoom-rein ein="nineteen>#1999>uhr" ein_y=1500] In nineteen ninety-nine, two researchers showed it: when you focus on one thing, you can miss something unexpected.
+[atelier ansicht=vorfuehrung leinwand="RECORDING · 0:41" du palette=blau zoom-rein ein="forty>SECOND 41" ein_y=1500] Second forty-one. At the edge of the frame, someone raises a hand.
+
+== Wendung ==
+[gesicht s07_eda ort=atelier ansicht=vorfuehrung traurig palette=blau zoom-rein] It's Eda. She's waving. She's pointing at her page. She needs help.
+[gesicht du ort=atelier ansicht=vorfuehrung traurig palette=blau] Your face goes hot. You were looking the whole time. And you still saw nothing.
+[atelier ansicht=vorfuehrung du s07_eda palette=lila zoom-raus ein="moment>IT STAYS IN>schere" ein_y=1500] Ms. Sen asks if you want to cut that moment out. You say, "It stays in."
+
+== Cliffhanger ==
+[atelier ansicht=vorfuehrung leinwand="0:00 – 1:12" du palette=lila zoom-rein ton=hit] Then the recording keeps playing. Eda was standing right next to you the whole time.

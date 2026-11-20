@@ -1,0 +1,42 @@
+# You Were So Sure – Episode 6: My Place at the Front
+@musik musik/s07-f06-en.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung traurig
+@vortrag lebendig
+@klang studio
+@mund zitate
+@einblenden aus
+@untertitel aus
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette tuerkis
+@zeit tag
+@sprache en
+
+== Hook ==
+[atelier ansicht=vorfuehrung mikro du s07_eda palette=tuerkis zoom-rein hooktext="YOUR SPEECH TAKES HER PLACE" ton=papier] Your speech is perfect. And your friend has nothing to say in it.
+[gesicht du ort=atelier ansicht=vorfuehrung palette=tuerkis zoom-rein] The night before the opening. You're rehearsing the welcome in the screening room.
+[objekt objekte="karteikarte:Speech|karteikarte:Speech|karteikarte:Speech" gross="22 SPEECH CARDS" palette=tuerkis zoom-rein ein="Twenty>#22 CARDS" ein_y=1500] Twenty-two speech cards. You wrote on them every night.
+
+== Wiedererkennen ==
+[gesicht du ort=atelier ansicht=vorfuehrung palette=tuerkis] Your collar is tight. The cards rustle in your hands.
+[atelier ansicht=vorfuehrung mikro du s07_eda palette=tuerkis schwenk-rechts ein="Eda>EDA: 1 LINE" ein_y=1500] Eda is standing next to you. She has exactly one line. At the very end. "Enjoy the tour."
+[gesicht s07_eda ort=atelier ansicht=vorfuehrung traurig palette=tuerkis figurstimme=frau sprecher=s07_eda] "So I'm basically the decoration."
+[gesicht du ort=atelier ansicht=vorfuehrung palette=blau zoom-rein] She laughs when she says it. But only with her mouth. Her eyes are on the floor.
+
+== Steigerung ==
+[objekt objekte="karteikarte:Your 22|karteikarte:Eda's 1" gross="22 TO 1" palette=blau zoom-rein ein="stack>TWICE AS TALL" ein_y=1500] Your stack is twice as tall as half. Hers is one card.
+[gesicht du ort=atelier ansicht=vorfuehrung palette=blau] "But the speech is already finished."
+[gesicht du ort=atelier ansicht=vorfuehrung traurig palette=blau zoom-rein] There it is again. The thought from the display wall. So much work went in, so it has to stay.
+[atelier ansicht=vorfuehrung mikro du palette=blau zoom-raus ein="window>COLD AIR" ein_y=1500] Cool air drifts in through the open window. You read the cards again. Honestly this time. Which ones does anyone actually need?
+
+== Wendung ==
+[objekt objekte="karteikarte:11|karteikarte:11" gross="ELEVEN AND ELEVEN" palette=orange zoom-rein ein="Eleven>#11 CARDS" ein_y=1500] Eleven cards go in the tray. Eleven you keep.
+[atelier ansicht=vorfuehrung mikro du s07_eda palette=orange zoom-rein ein="half>HALF AND HALF>herz" ein_y=1500] You give Eda half of the welcome. Her half, her words.
+[gesicht s07_eda ort=atelier ansicht=vorfuehrung froh palette=orange figurstimme=frau sprecher=s07_eda] "Then I'll write my part myself."
+
+== Cliffhanger ==
+[atelier ansicht=vorfuehrung du s07_eda palette=rosa zoom-rein ton=hit] And Eda puts her chair back next to yours.
