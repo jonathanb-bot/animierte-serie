@@ -2280,6 +2280,12 @@
    "bild_s": 64.87,
    "ton_s": 64.9,
    "lufs": -14.6
+  },
+  "taeglich/mond-m006.mp4": {
+   "ok": true,
+   "bild_s": 66.65,
+   "ton_s": 66.64,
+   "lufs": -14.6
   }
  },
  "serien": {
@@ -2532,6 +2538,10 @@
   "raub-r003": {
    "titel": "Der letzte Raub – Folge 3: Noch eine Nacht",
    "datei": "taeglich/raub-r003.mp4"
+  },
+  "mond-m006": {
+   "titel": "Bis zum Mond – Folge 6: Der Norden greift an",
+   "datei": "taeglich/mond-m006.mp4"
   }
  },
  "taeglich_staffeln": {
