@@ -1,0 +1,131 @@
+{
+ "dauer": 72.484,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "atelier",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 6.566,
+   "emotion": "erzaehlend",
+   "text": "Six out of ten done. Or four out of ten missing. Same thing. Right?"
+  },
+  {
+   "nr": 2,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 6.566,
+   "dauer": 3.974,
+   "emotion": "erzaehlend",
+   "text": "One day until the opening. You've painted your progress on the wall."
+  },
+  {
+   "nr": 3,
+   "typ": "atelier",
+   "kapitel": 1,
+   "start": 10.54,
+   "dauer": 5.894,
+   "emotion": "erzaehlend",
+   "text": "Ten boxes for ten stations. Six of them are green. The clock over the door ticks loudly."
+  },
+  {
+   "nr": 4,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 16.434,
+   "dauer": 2.87,
+   "emotion": "erzaehlend",
+   "text": "\"Four stations missing. We'll never make it.\""
+  },
+  {
+   "nr": 5,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 19.304,
+   "dauer": 2.894,
+   "emotion": "froh",
+   "text": "\"Six are done. That's plenty.\""
+  },
+  {
+   "nr": 6,
+   "typ": "atelier",
+   "kapitel": 2,
+   "start": 22.198,
+   "dauer": 7.07,
+   "emotion": "erzaehlend",
+   "text": "You're talking about the same progress. And you sound like two different worlds. Eda crosses her arms. So do you."
+  },
+  {
+   "nr": 7,
+   "typ": "objekt",
+   "kapitel": 3,
+   "start": 29.268,
+   "dauer": 5.702,
+   "emotion": "erklaerend",
+   "text": "You write both sentences on two notes. Smooth index cards. Side by side."
+  },
+  {
+   "nr": 8,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 34.97,
+   "dauer": 5.798,
+   "emotion": "erzaehlend",
+   "text": "One note scares you. The other calms you down. And nothing has changed. Nothing at all."
+  },
+  {
+   "nr": 9,
+   "typ": "objekt",
+   "kapitel": 3,
+   "start": 40.768,
+   "dauer": 6.326,
+   "emotion": "erklaerend",
+   "text": "In nineteen eighty-one, two researchers showed that the same options, worded differently, can change decisions."
+  },
+  {
+   "nr": 10,
+   "typ": "atelier",
+   "kapitel": 3,
+   "start": 47.094,
+   "dauer": 4.646,
+   "emotion": "erzaehlend",
+   "text": "Ms. Sen walks by. She only asks, \"What does each station cost?\""
+  },
+  {
+   "nr": 11,
+   "typ": "objekt",
+   "kapitel": 4,
+   "start": 51.74,
+   "dauer": 7.118,
+   "emotion": "erklaerend",
+   "text": "You write down the hours. And what each station really gives visitors. Suddenly the studio goes quiet."
+  },
+  {
+   "nr": 12,
+   "typ": "atelier",
+   "kapitel": 4,
+   "start": 58.858,
+   "dauer": 4.742,
+   "emotion": "erzaehlend",
+   "text": "Two stations you can finish tonight. Two you cut. No drama. No guilt."
+  },
+  {
+   "nr": 13,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 63.6,
+   "dauer": 4.07,
+   "emotion": "froh",
+   "text": "Eda slides the two notes on top of each other. They match perfectly."
+  },
+  {
+   "nr": 14,
+   "typ": "objekt",
+   "kapitel": 5,
+   "start": 67.67,
+   "dauer": 4.814,
+   "emotion": "erklaerend",
+   "text": "The scary version and the calm version describe exactly the same six stations."
+  }
+ ]
+}

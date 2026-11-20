@@ -1,0 +1,131 @@
+{
+ "dauer": 65.38,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "atelier",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 5.27,
+   "emotion": "erzaehlend",
+   "text": "A hundred and twenty people are looking at you. And you say, \"I don't know yet.\""
+  },
+  {
+   "nr": 2,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 5.27,
+   "dauer": 4.478,
+   "emotion": "erzaehlend",
+   "text": "The opening. The mic echoes. The stage light is warm on your face."
+  },
+  {
+   "nr": 3,
+   "typ": "atelier",
+   "kapitel": 1,
+   "start": 9.748,
+   "dauer": 3.926,
+   "emotion": "erzaehlend",
+   "text": "Eda starts. Her half of the welcome. She's funnier than you."
+  },
+  {
+   "nr": 4,
+   "typ": "atelier",
+   "kapitel": 2,
+   "start": 13.674,
+   "dauer": 5.414,
+   "emotion": "erzaehlend",
+   "text": "Then you lead everyone through the stations. The yellow cards. The recording with Eda at the edge."
+  },
+  {
+   "nr": 5,
+   "typ": "atelier",
+   "kapitel": 2,
+   "start": 19.088,
+   "dauer": 4.886,
+   "emotion": "erzaehlend",
+   "text": "Your sheet with the word sleep. Crossed out. People laugh. In a kind way."
+  },
+  {
+   "nr": 6,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 23.974,
+   "dauer": 3.926,
+   "emotion": "froh",
+   "text": "Your dad is standing right up front. This time, right up front."
+  },
+  {
+   "nr": 7,
+   "typ": "atelier",
+   "kapitel": 3,
+   "start": 27.9,
+   "dauer": 4.694,
+   "emotion": "erzaehlend",
+   "text": "A boy raises his hand. His question is good. And you don't know the answer."
+  },
+  {
+   "nr": 8,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 32.594,
+   "dauer": 5.63,
+   "emotion": "erzaehlend",
+   "text": "Before, you would've just made something up. Fast. Sounding sure. As long as nobody noticed."
+  },
+  {
+   "nr": 9,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 38.224,
+   "dauer": 2.366,
+   "emotion": "froh",
+   "text": "\"I don't know yet. I'll write it down.\""
+  },
+  {
+   "nr": 10,
+   "typ": "atelier",
+   "kapitel": 3,
+   "start": 40.59,
+   "dauer": 3.95,
+   "emotion": "erzaehlend",
+   "text": "You pin the question to the wall. Underneath, there's room for the answer."
+  },
+  {
+   "nr": 11,
+   "typ": "atelier",
+   "kapitel": 4,
+   "start": 44.54,
+   "dauer": 6.134,
+   "emotion": "erzaehlend",
+   "text": "Then comes the applause. Not for a perfect show. For an honest one. Eda squeezes your hand."
+  },
+  {
+   "nr": 12,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 50.674,
+   "dauer": 5.15,
+   "emotion": "erzaehlend",
+   "text": "Ms. Sen walks over with an old, yellowed index card. She pins it next to yours."
+  },
+  {
+   "nr": 13,
+   "typ": "objekt",
+   "kapitel": 4,
+   "start": 55.824,
+   "dauer": 4.958,
+   "emotion": "erklaerend",
+   "text": "Her card is from two thousand three. Her first exhibition, back when she was a student."
+  },
+  {
+   "nr": 14,
+   "typ": "objekt",
+   "kapitel": 5,
+   "start": 60.782,
+   "dauer": 4.598,
+   "emotion": "erklaerend",
+   "text": "It says the sentence you almost said yourself: \"I'm not allowed to make mistakes.\""
+  }
+ ]
+}

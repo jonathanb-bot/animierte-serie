@@ -1,0 +1,149 @@
+{
+ "dauer": 76.664,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "atelier",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 3.854,
+   "emotion": "erzaehlend",
+   "text": "You're sure of it. That word was on the list."
+  },
+  {
+   "nr": 2,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 3.854,
+   "dauer": 4.646,
+   "emotion": "erzaehlend",
+   "text": "Two days before your exhibition, you test the second station on yourself."
+  },
+  {
+   "nr": 3,
+   "typ": "atelier",
+   "kapitel": 1,
+   "start": 8.5,
+   "dauer": 5.774,
+   "emotion": "erzaehlend",
+   "text": "Eda reads you fifteen words for the station. Slowly. Then you have to write them all down."
+  },
+  {
+   "nr": 4,
+   "typ": "objekt",
+   "kapitel": 2,
+   "start": 14.274,
+   "dauer": 9.23,
+   "emotion": "erklaerend",
+   "text": "Bed. Pillow. Dream. Blanket. Tired. Yawn. It all kind of fits together. Like a long evening."
+  },
+  {
+   "nr": 5,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 23.504,
+   "dauer": 4.214,
+   "emotion": "erzaehlend",
+   "text": "Your marker squeaks across the paper. It smells like glue and sunshine."
+  },
+  {
+   "nr": 6,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 27.718,
+   "dauer": 4.118,
+   "emotion": "froh",
+   "text": "You've got fourteen words. You grin. Almost perfect."
+  },
+  {
+   "nr": 7,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 31.836,
+   "dauer": 4.19,
+   "emotion": "froh",
+   "text": "\"Read them out. Slowly.\""
+  },
+  {
+   "nr": 8,
+   "typ": "atelier",
+   "kapitel": 3,
+   "start": 36.026,
+   "dauer": 5.75,
+   "emotion": "erzaehlend",
+   "text": "You read. Bed, pillow, dream … and sleep. Definitely sleep."
+  },
+  {
+   "nr": 9,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 41.776,
+   "dauer": 4.55,
+   "emotion": "erzaehlend",
+   "text": "Eda doesn't say a word. She lays the original list next to yours."
+  },
+  {
+   "nr": 10,
+   "typ": "objekt",
+   "kapitel": 3,
+   "start": 46.326,
+   "dauer": 3.95,
+   "emotion": "erklaerend",
+   "text": "The word sleep isn't on the original. Anywhere."
+  },
+  {
+   "nr": 11,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 50.276,
+   "dauer": 5.006,
+   "emotion": "erzaehlend",
+   "text": "Your stomach drops. You heard it. In Eda's voice. You'd swear to it."
+  },
+  {
+   "nr": 12,
+   "typ": "objekt",
+   "kapitel": 3,
+   "start": 55.282,
+   "dauer": 5.942,
+   "emotion": "erklaerend",
+   "text": "In studies from nineteen ninety-five, people confidently remembered fitting words that were never shown."
+  },
+  {
+   "nr": 13,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 61.224,
+   "dauer": 5.174,
+   "emotion": "erzaehlend",
+   "text": "That doesn't mean all memories are wrong. Just that feeling sure doesn't always mean being right."
+  },
+  {
+   "nr": 14,
+   "typ": "atelier",
+   "kapitel": 4,
+   "start": 66.398,
+   "dauer": 3.974,
+   "emotion": "erzaehlend",
+   "text": "You pin your sheet to the wall. Your mistake becomes the example."
+  },
+  {
+   "nr": 15,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 70.372,
+   "dauer": 1.646,
+   "emotion": "froh",
+   "text": "\"Brave. I wouldn't have done that.\""
+  },
+  {
+   "nr": 16,
+   "typ": "objekt",
+   "kapitel": 5,
+   "start": 72.018,
+   "dauer": 4.646,
+   "emotion": "erklaerend",
+   "text": "You count again. Your sure memory has one word more than the original."
+  }
+ ]
+}

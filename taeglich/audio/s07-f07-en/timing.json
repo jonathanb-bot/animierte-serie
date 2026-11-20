@@ -1,0 +1,140 @@
+{
+ "dauer": 70.146,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "atelier",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 4.478,
+   "emotion": "erzaehlend",
+   "text": "You're counting mistakes. And your dad is waiting in the last row."
+  },
+  {
+   "nr": 2,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 4.478,
+   "dauer": 4.862,
+   "emotion": "erzaehlend",
+   "text": "Tomorrow morning, one hour before the opening. You go through your checklist."
+  },
+  {
+   "nr": 3,
+   "typ": "objekt",
+   "kapitel": 1,
+   "start": 9.34,
+   "dauer": 7.67,
+   "emotion": "erklaerend",
+   "text": "Forty-seven items. Lights. Sound. Signs. Every check mark calms you down for a second."
+  },
+  {
+   "nr": 4,
+   "typ": "atelier",
+   "kapitel": 2,
+   "start": 17.01,
+   "dauer": 7.502,
+   "emotion": "erzaehlend",
+   "text": "The rows of chairs are still empty. You walk them and check every seat. Lights on the chairs. Cables on the floor."
+  },
+  {
+   "nr": 5,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 24.512,
+   "dauer": 3.35,
+   "emotion": "erzaehlend",
+   "text": "\"Stop counting. Look behind you.\""
+  },
+  {
+   "nr": 6,
+   "typ": "atelier",
+   "kapitel": 2,
+   "start": 27.862,
+   "dauer": 4.286,
+   "emotion": "erzaehlend",
+   "text": "All the way in the back sits your dad. Still in his gray work jacket."
+  },
+  {
+   "nr": 7,
+   "typ": "nachtbus",
+   "kapitel": 2,
+   "start": 32.148,
+   "dauer": 4.07,
+   "emotion": "erzaehlend",
+   "text": "He drives a bus. Today he left work early. Just for you."
+  },
+  {
+   "nr": 8,
+   "typ": "atelier",
+   "kapitel": 3,
+   "start": 36.218,
+   "dauer": 4.238,
+   "emotion": "erzaehlend",
+   "text": "He's holding a thermos in his lap. He's been sitting there for twenty minutes."
+  },
+  {
+   "nr": 9,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 40.456,
+   "dauer": 5.87,
+   "emotion": "erzaehlend",
+   "text": "Twenty minutes. And you didn't see him. Only your list. Item by item."
+  },
+  {
+   "nr": 10,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 46.326,
+   "dauer": 2.174,
+   "emotion": "froh",
+   "text": "\"I didn't want to be in the way.\""
+  },
+  {
+   "nr": 11,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 48.5,
+   "dauer": 6.254,
+   "emotion": "erzaehlend",
+   "text": "At school events, your dad is always like this. Quiet. In the back. Like he's too much."
+  },
+  {
+   "nr": 12,
+   "typ": "atelier",
+   "kapitel": 4,
+   "start": 54.754,
+   "dauer": 3.926,
+   "emotion": "erzaehlend",
+   "text": "You close the list. Five minutes. You sit down next to him."
+  },
+  {
+   "nr": 13,
+   "typ": "objekt",
+   "kapitel": 4,
+   "start": 58.68,
+   "dauer": 3.494,
+   "emotion": "erklaerend",
+   "text": "He pours you peppermint tea. It smells like your kitchen."
+  },
+  {
+   "nr": 14,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 62.174,
+   "dauer": 4.118,
+   "emotion": "erzaehlend",
+   "text": "Then he reaches into his jacket pocket. He hesitates."
+  },
+  {
+   "nr": 15,
+   "typ": "objekt",
+   "kapitel": 5,
+   "start": 66.292,
+   "dauer": 3.854,
+   "emotion": "erklaerend",
+   "text": "He sets an old ticket in your lap. \"I was there last time too.\""
+  }
+ ]
+}

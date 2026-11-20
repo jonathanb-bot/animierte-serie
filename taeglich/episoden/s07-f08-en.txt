@@ -18,7 +18,7 @@
 
 == Hook ==
 [atelier ansicht=vorfuehrung leer palette=tuerkis zoom-rein hooktext="THE EMPTY SEAT WASN'T EMPTY" ton=summen] You remember your dad's empty seat. But not all of it.
-[gesicht du ort=atelier ansicht=vorfuehrung palette=blau zoom-rein] The ticket is in your hand. Your first show, when you were twelve.
+[gesicht du ort=atelier ansicht=vorfuehrung palette=blau zoom-rein] The old ticket is in your hand. From your very first show, when you were twelve.
 [gesicht du ort=atelier ansicht=vorfuehrung traurig palette=blau] "You weren't there, Dad. The seat was empty."
 
 == Wiedererkennen ==
@@ -28,14 +28,14 @@
 
 == Steigerung ==
 [handy ort=atelier ansicht=vorfuehrung netz=3 akku=52 uhrzeit="6:05 PM" von="Photos · June 14, 2019" nachricht="Grade 7 show – start" palette=tuerkis ein="six>6:05 · EMPTY SEAT" ein_y=1600] First photo. Six-oh-five p.m. Front row, one empty seat.
-[handy ort=atelier ansicht=vorfuehrung netz=3 akku=52 uhrzeit="6:52 PM" von="Photos · June 14, 2019" nachricht="Grade 7 show – applause" palette=tuerkis ein="fifty>6:52 · AT THE DOOR" ein_y=1600 ton=ui_pop] He keeps scrolling. Six fifty-two. The final applause.
-[atelier ansicht=vorfuehrung leer hinten=papa hinten_x=980 palette=tuerkis zoom-rein ein="door>DAD AT THE DOOR>herz" ein_y=1500] All the way in the back, by the door. A man in a gray jacket. Clapping.
+[handy ort=atelier ansicht=vorfuehrung netz=3 akku=52 uhrzeit="6:52 PM" von="Photos · June 14, 2019" nachricht="Grade 7 show – applause" palette=tuerkis ein="fifty>6:52 · AT THE DOOR" ein_y=1600 ton=ui_pop] He keeps scrolling. Six fifty-two. The final applause. Everyone is standing up.
+[atelier ansicht=vorfuehrung leer hinten=papa hinten_x=980 palette=tuerkis zoom-rein ein="door>DAD AT THE DOOR>herz" ein_y=1500] All the way in the back, by the door. A man in a gray jacket. Clapping harder than anyone.
 [gesicht du ort=atelier ansicht=vorfuehrung palette=tuerkis zoom-rein] Your dad. Totally out of breath, his cap crooked. You never saw him back then.
 
 == Wendung ==
-[gesicht papa ort=atelier ansicht=vorfuehrung traurig palette=blau figurstimme=mann_alt sprecher=papa] "The bus broke down. I ran."
-[gesicht du ort=atelier ansicht=vorfuehrung palette=blau] Both things are true. The empty seat. And the man at the door.
-[atelier ansicht=vorfuehrung leer hinten=papa du palette=blau zoom-raus ein="both>BOTH ARE TRUE" ein_y=1500] You tell him how alone you felt. And that you're glad he was there.
+[gesicht papa ort=atelier ansicht=vorfuehrung traurig palette=blau figurstimme=mann_alt sprecher=papa] "My bus broke down. So I ran all the way."
+[gesicht du ort=atelier ansicht=vorfuehrung palette=blau] Both things are true. The empty seat at the start. And the man at the door at the end.
+[atelier ansicht=vorfuehrung leer hinten=papa du palette=blau zoom-raus ein="both>BOTH ARE TRUE" ein_y=1500] You tell him how alone you felt back then. And that you're really glad he was there.
 
 == Cliffhanger ==
 [gesicht papa ort=atelier ansicht=vorfuehrung traurig palette=lila zoom-rein ton=hit] Your dad says quietly, "I was late. And you still had to feel alone."

@@ -1,0 +1,149 @@
+{
+ "dauer": 71.266,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "atelier",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 3.398,
+   "emotion": "erzaehlend",
+   "text": "You're counting yellow cards. And you miss your best friend."
+  },
+  {
+   "nr": 2,
+   "typ": "titel",
+   "kapitel": 1,
+   "start": 3.398,
+   "dauer": 1.0,
+   "emotion": "erzaehlend",
+   "text": "In three days, you open the school exhibition."
+  },
+  {
+   "nr": 3,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 4.398,
+   "dauer": 6.062,
+   "emotion": "erzaehlend",
+   "text": "The topic: perception. Together with Eda. And you don't want to make a single mistake. Not one."
+  },
+  {
+   "nr": 4,
+   "typ": "atelier",
+   "kapitel": 2,
+   "start": 10.46,
+   "dauer": 6.086,
+   "emotion": "erzaehlend",
+   "text": "Dress rehearsal in the screening room. The curtains are closed. The projector blows warm air in your face."
+  },
+  {
+   "nr": 5,
+   "typ": "objekt",
+   "kapitel": 2,
+   "start": 16.546,
+   "dauer": 4.286,
+   "emotion": "erklaerend",
+   "text": "Cards fly across the screen. Your job: count every yellow one."
+  },
+  {
+   "nr": 6,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 20.832,
+   "dauer": 5.63,
+   "emotion": "erzaehlend",
+   "text": "Click. Click. Click. You count out loud. Twelve. No mistakes."
+  },
+  {
+   "nr": 7,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 26.462,
+   "dauer": 4.454,
+   "emotion": "erzaehlend",
+   "text": "\"Twelve. Nice. Did you see anything else?\""
+  },
+  {
+   "nr": 8,
+   "typ": "atelier",
+   "kapitel": 3,
+   "start": 30.916,
+   "dauer": 3.206,
+   "emotion": "erzaehlend",
+   "text": "Eda. Your best friend. Since fifth grade."
+  },
+  {
+   "nr": 9,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 34.122,
+   "dauer": 3.014,
+   "emotion": "erzaehlend",
+   "text": "You shake your head. There was nothing but cards."
+  },
+  {
+   "nr": 10,
+   "typ": "atelier",
+   "kapitel": 3,
+   "start": 37.136,
+   "dauer": 5.822,
+   "emotion": "erzaehlend",
+   "text": "Ms. Sen, your teacher, rewinds the recording. She smiles kind of funny. Like she knows something."
+  },
+  {
+   "nr": 11,
+   "typ": "objekt",
+   "kapitel": 3,
+   "start": 42.958,
+   "dauer": 6.398,
+   "emotion": "erklaerend",
+   "text": "In nineteen ninety-nine, two researchers showed it: when you focus on one thing, you can miss something unexpected."
+  },
+  {
+   "nr": 12,
+   "typ": "atelier",
+   "kapitel": 3,
+   "start": 49.356,
+   "dauer": 4.262,
+   "emotion": "erzaehlend",
+   "text": "Second forty-one. At the edge of the frame, someone raises a hand."
+  },
+  {
+   "nr": 13,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 53.618,
+   "dauer": 4.526,
+   "emotion": "traurig",
+   "text": "It's Eda. She's waving. She's pointing at her page. She needs help."
+  },
+  {
+   "nr": 14,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 58.144,
+   "dauer": 4.478,
+   "emotion": "traurig",
+   "text": "Your face goes hot. You were looking the whole time. And you still saw nothing."
+  },
+  {
+   "nr": 15,
+   "typ": "atelier",
+   "kapitel": 4,
+   "start": 62.622,
+   "dauer": 3.95,
+   "emotion": "erzaehlend",
+   "text": "Ms. Sen asks if you want to cut that moment out. You say, \"It stays in.\""
+  },
+  {
+   "nr": 16,
+   "typ": "atelier",
+   "kapitel": 5,
+   "start": 66.572,
+   "dauer": 4.694,
+   "emotion": "erzaehlend",
+   "text": "Then the recording keeps playing. Eda was standing right next to you the whole time."
+  }
+ ]
+}

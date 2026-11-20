@@ -1,0 +1,140 @@
+{
+ "dauer": 75.21,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "atelier",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 4.574,
+   "emotion": "erzaehlend",
+   "text": "Your wall is perfect. And nobody can get past it."
+  },
+  {
+   "nr": 2,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 4.574,
+   "dauer": 4.382,
+   "emotion": "erzaehlend",
+   "text": "Setup day. You spent three nights building this display wall."
+  },
+  {
+   "nr": 3,
+   "typ": "atelier",
+   "kapitel": 1,
+   "start": 8.956,
+   "dauer": 8.102,
+   "emotion": "erzaehlend",
+   "text": "It stands right in the middle of the studio. Huge. White. Full of cards. You're proud of every single screw."
+  },
+  {
+   "nr": 4,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 17.058,
+   "dauer": 4.526,
+   "emotion": "erzaehlend",
+   "text": "Your palm still has a mark from the screwdriver. It smells like fresh paint."
+  },
+  {
+   "nr": 5,
+   "typ": "atelier",
+   "kapitel": 2,
+   "start": 21.584,
+   "dauer": 5.774,
+   "emotion": "erzaehlend",
+   "text": "Eda tests the path. Her backpack gets stuck between the panels. The wood creaks."
+  },
+  {
+   "nr": 6,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 27.358,
+   "dauer": 3.95,
+   "emotion": "erzaehlend",
+   "text": "\"A wheelchair won't fit. Or a stroller.\""
+  },
+  {
+   "nr": 7,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 31.308,
+   "dauer": 2.63,
+   "emotion": "erzaehlend",
+   "text": "\"Then people can just go around.\""
+  },
+  {
+   "nr": 8,
+   "typ": "atelier",
+   "kapitel": 3,
+   "start": 33.938,
+   "dauer": 4.982,
+   "emotion": "erzaehlend",
+   "text": "Going around is forty meters. Past two stations nobody will see."
+  },
+  {
+   "nr": 9,
+   "typ": "objekt",
+   "kapitel": 3,
+   "start": 38.92,
+   "dauer": 6.086,
+   "emotion": "erklaerend",
+   "text": "In your head, only one thing counts: three nights. Taking it down feels like losing."
+  },
+  {
+   "nr": 10,
+   "typ": "objekt",
+   "kapitel": 3,
+   "start": 45.006,
+   "dauer": 6.35,
+   "emotion": "erklaerend",
+   "text": "In nineteen eighty-five, researchers found that time already spent can make people stick with a bad choice."
+  },
+  {
+   "nr": 11,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 51.356,
+   "dauer": 6.854,
+   "emotion": "traurig",
+   "text": "Those nights are gone. No matter what you do now. The only question is: what helps from tomorrow on?"
+  },
+  {
+   "nr": 12,
+   "typ": "atelier",
+   "kapitel": 4,
+   "start": 58.21,
+   "dauer": 3.518,
+   "emotion": "erzaehlend",
+   "text": "You grab the screwdriver. The first screw squeaks."
+  },
+  {
+   "nr": 13,
+   "typ": "atelier",
+   "kapitel": 4,
+   "start": 61.728,
+   "dauer": 4.19,
+   "emotion": "erzaehlend",
+   "text": "An hour later, the middle is open. Light falls through the gap."
+  },
+  {
+   "nr": 14,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 65.918,
+   "dauer": 4.406,
+   "emotion": "froh",
+   "text": "Eda walks through once. With her backpack. Without getting stuck."
+  },
+  {
+   "nr": 15,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 70.324,
+   "dauer": 4.886,
+   "emotion": "erzaehlend",
+   "text": "You set the first piece in the corner. Yesterday you still called it your best work."
+  }
+ ]
+}

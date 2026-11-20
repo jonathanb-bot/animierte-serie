@@ -1,0 +1,131 @@
+{
+ "dauer": 75.556,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "atelier",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 3.902,
+   "emotion": "erzaehlend",
+   "text": "Ten minutes before your opening, the projector dies."
+  },
+  {
+   "nr": 2,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 3.902,
+   "dauer": 5.486,
+   "emotion": "erzaehlend",
+   "text": "The picture shrinks to a white dot. The fan gets quieter. Then silent."
+  },
+  {
+   "nr": 3,
+   "typ": "atelier",
+   "kapitel": 1,
+   "start": 9.388,
+   "dauer": 5.678,
+   "emotion": "erzaehlend",
+   "text": "Ms. Sen presses every button she can find. Nothing. The screen stays black."
+  },
+  {
+   "nr": 4,
+   "typ": "atelier",
+   "kapitel": 2,
+   "start": 15.066,
+   "dauer": 9.926,
+   "emotion": "erzaehlend",
+   "text": "Out in the studio, a hundred and twenty guests are waiting. Parents, teachers, the whole grade. You hear shoes shuffling. Someone laughs."
+  },
+  {
+   "nr": 5,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 24.992,
+   "dauer": 7.91,
+   "emotion": "erzaehlend",
+   "text": "Your hands are sweaty. Your whole presentation lives on that screen. Without it, you've got nothing. Or so you think."
+  },
+  {
+   "nr": 6,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 32.902,
+   "dauer": 2.702,
+   "emotion": "erzaehlend",
+   "text": "\"We push it back. Until it works again.\""
+  },
+  {
+   "nr": 7,
+   "typ": "objekt",
+   "kapitel": 3,
+   "start": 35.604,
+   "dauer": 4.526,
+   "emotion": "erklaerend",
+   "text": "Three weeks of animations. Without the projector, they're nothing."
+  },
+  {
+   "nr": 8,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 40.13,
+   "dauer": 2.702,
+   "emotion": "erzaehlend",
+   "text": "\"Or we just show the cards.\""
+  },
+  {
+   "nr": 9,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 42.832,
+   "dauer": 6.062,
+   "emotion": "erzaehlend",
+   "text": "There it is again. The thought from the wall. And from the speech. You recognize it right away."
+  },
+  {
+   "nr": 10,
+   "typ": "objekt",
+   "kapitel": 3,
+   "start": 48.894,
+   "dauer": 7.67,
+   "emotion": "erklaerend",
+   "text": "You've got the drawings. The yellow cards. Your sheet with the wrong word. Your dad's photos. Everything that's real."
+  },
+  {
+   "nr": 11,
+   "typ": "atelier",
+   "kapitel": 4,
+   "start": 56.564,
+   "dauer": 6.062,
+   "emotion": "erzaehlend",
+   "text": "Eda writes a sign. With a thick marker. You hang it on the door. You laugh for the first time today."
+  },
+  {
+   "nr": 12,
+   "typ": "atelier",
+   "kapitel": 4,
+   "start": 62.626,
+   "dauer": 7.454,
+   "emotion": "erzaehlend",
+   "text": "You carry everything up front. Cards, drawings, a roll of tape. Your hands aren't shaking quite as much."
+  },
+  {
+   "nr": 13,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 70.08,
+   "dauer": 2.006,
+   "emotion": "froh",
+   "text": "\"I'll open the door. Ready?\""
+  },
+  {
+   "nr": 14,
+   "typ": "atelier",
+   "kapitel": 5,
+   "start": 72.086,
+   "dauer": 3.47,
+   "emotion": "erzaehlend",
+   "text": "You walk up to the mic without your perfect presentation."
+  }
+ ]
+}

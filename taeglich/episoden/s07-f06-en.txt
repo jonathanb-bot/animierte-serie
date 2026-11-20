@@ -22,7 +22,7 @@
 [objekt objekte="karteikarte:Speech|karteikarte:Speech|karteikarte:Speech" gross="22 SPEECH CARDS" palette=tuerkis zoom-rein ein="Twenty>#22 CARDS" ein_y=1500] Twenty-two speech cards. You wrote on them every night.
 
 == Wiedererkennen ==
-[gesicht du ort=atelier ansicht=vorfuehrung palette=tuerkis] Your collar is tight. The cards rustle in your hands.
+[gesicht du ort=atelier ansicht=vorfuehrung palette=tuerkis] Your collar feels tight. The cards rustle in your hands. You know every word by heart.
 [atelier ansicht=vorfuehrung mikro du s07_eda palette=tuerkis schwenk-rechts ein="Eda>EDA: 1 LINE" ein_y=1500] Eda is standing next to you. She has exactly one line. At the very end. "Enjoy the tour."
 [gesicht s07_eda ort=atelier ansicht=vorfuehrung traurig palette=tuerkis figurstimme=frau sprecher=s07_eda] "So I'm basically the decoration."
 [gesicht du ort=atelier ansicht=vorfuehrung palette=blau zoom-rein] She laughs when she says it. But only with her mouth. Her eyes are on the floor.
@@ -34,8 +34,8 @@
 [atelier ansicht=vorfuehrung mikro du palette=blau zoom-raus ein="window>COLD AIR" ein_y=1500] Cool air drifts in through the open window. You read the cards again. Honestly this time. Which ones does anyone actually need?
 
 == Wendung ==
-[objekt objekte="karteikarte:11|karteikarte:11" gross="ELEVEN AND ELEVEN" palette=orange zoom-rein ein="Eleven>#11 CARDS" ein_y=1500] Eleven cards go in the tray. Eleven you keep.
-[atelier ansicht=vorfuehrung mikro du s07_eda palette=orange zoom-rein ein="half>HALF AND HALF>herz" ein_y=1500] You give Eda half of the welcome. Her half, her words.
+[objekt objekte="karteikarte:11|karteikarte:11" gross="ELEVEN AND ELEVEN" palette=orange zoom-rein ein="Eleven>#11 CARDS" ein_y=1500] Eleven cards go in the tray. Eleven you keep. It hurts a little. Less than you thought.
+[atelier ansicht=vorfuehrung mikro du s07_eda palette=orange zoom-rein ein="half>HALF AND HALF>herz" ein_y=1500] You give Eda half of the welcome. Her half, her words, her jokes.
 [gesicht s07_eda ort=atelier ansicht=vorfuehrung froh palette=orange figurstimme=frau sprecher=s07_eda] "Then I'll write my part myself."
 
 == Cliffhanger ==

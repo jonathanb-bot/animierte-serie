@@ -1,0 +1,140 @@
+{
+ "dauer": 68.874,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "park",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 4.79,
+   "emotion": "erzaehlend",
+   "text": "You know exactly what Eda promised you. Or you think you do."
+  },
+  {
+   "nr": 2,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 4.79,
+   "dauer": 5.318,
+   "emotion": "erzaehlend",
+   "text": "The schoolyard, one day before setup. Eda is sitting on the cold stone wall."
+  },
+  {
+   "nr": 3,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 10.108,
+   "dauer": 3.83,
+   "emotion": "traurig",
+   "text": "\"I can't write the texts. Not all of them.\""
+  },
+  {
+   "nr": 4,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 13.938,
+   "dauer": 4.334,
+   "emotion": "erzaehlend",
+   "text": "You go hot. You had a deal. She writes all ten texts."
+  },
+  {
+   "nr": 5,
+   "typ": "park",
+   "kapitel": 2,
+   "start": 18.272,
+   "dauer": 8.558,
+   "emotion": "erzaehlend",
+   "text": "Ten stations, ten texts. Setup is tomorrow. You remember her exact words. Word for word. Totally sure."
+  },
+  {
+   "nr": 6,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 26.83,
+   "dauer": 2.774,
+   "emotion": "erzaehlend",
+   "text": "\"You promised. I remember it clearly.\""
+  },
+  {
+   "nr": 7,
+   "typ": "park",
+   "kapitel": 2,
+   "start": 29.604,
+   "dauer": 2.942,
+   "emotion": "erzaehlend",
+   "text": "The school bell rings. Neither of you gets up."
+  },
+  {
+   "nr": 8,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 32.546,
+   "dauer": 7.166,
+   "emotion": "erzaehlend",
+   "text": "Eda doesn't say anything. She pulls out her phone and scrolls back. Three weeks. To the night you planned everything."
+  },
+  {
+   "nr": 9,
+   "typ": "handy",
+   "kapitel": 3,
+   "start": 39.712,
+   "dauer": 4.406,
+   "emotion": "erzaehlend",
+   "text": "There it is. One draft. Not a word about all ten."
+  },
+  {
+   "nr": 10,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 44.118,
+   "dauer": 2.822,
+   "emotion": "erzaehlend",
+   "text": "Your thumb is shaking. You keep scrolling."
+  },
+  {
+   "nr": 11,
+   "typ": "handy",
+   "kapitel": 3,
+   "start": 46.94,
+   "dauer": 4.718,
+   "emotion": "erzaehlend",
+   "text": "Right below it is your reply. Two minutes later. You completely forgot it."
+  },
+  {
+   "nr": 12,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 51.658,
+   "dauer": 4.646,
+   "emotion": "traurig",
+   "text": "Your memory was so sure. Clear as a photo. And still wrong."
+  },
+  {
+   "nr": 13,
+   "typ": "park",
+   "kapitel": 4,
+   "start": 56.304,
+   "dauer": 3.614,
+   "emotion": "erzaehlend",
+   "text": "You say, \"I'm sorry.\" No but. No excuse."
+  },
+  {
+   "nr": 14,
+   "typ": "park",
+   "kapitel": 4,
+   "start": 59.918,
+   "dauer": 5.102,
+   "emotion": "erzaehlend",
+   "text": "Eda nods slowly. She's holding the invitation to the opening. Still sealed."
+  },
+  {
+   "nr": 15,
+   "typ": "handy",
+   "kapitel": 5,
+   "start": 65.02,
+   "dauer": 3.854,
+   "emotion": "erzaehlend",
+   "text": "Then you read your own message out loud. \"I'll handle the pressure.\""
+  }
+ ]
+}

@@ -1,0 +1,140 @@
+{
+ "dauer": 70.122,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "atelier",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 4.574,
+   "emotion": "erzaehlend",
+   "text": "Your speech is perfect. And your friend has nothing to say in it."
+  },
+  {
+   "nr": 2,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 4.574,
+   "dauer": 4.166,
+   "emotion": "erzaehlend",
+   "text": "The night before the opening. You're rehearsing the welcome in the screening room."
+  },
+  {
+   "nr": 3,
+   "typ": "objekt",
+   "kapitel": 1,
+   "start": 8.74,
+   "dauer": 3.902,
+   "emotion": "erklaerend",
+   "text": "Twenty-two speech cards. You wrote on them every night."
+  },
+  {
+   "nr": 4,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 12.642,
+   "dauer": 5.678,
+   "emotion": "erzaehlend",
+   "text": "Your collar feels tight. The cards rustle in your hands. You know every word by heart."
+  },
+  {
+   "nr": 5,
+   "typ": "atelier",
+   "kapitel": 2,
+   "start": 18.32,
+   "dauer": 6.686,
+   "emotion": "erzaehlend",
+   "text": "Eda is standing next to you. She has exactly one line. At the very end. \"Enjoy the tour.\""
+  },
+  {
+   "nr": 6,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 25.006,
+   "dauer": 4.046,
+   "emotion": "traurig",
+   "text": "\"So I'm basically the decoration.\""
+  },
+  {
+   "nr": 7,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 29.052,
+   "dauer": 4.742,
+   "emotion": "erzaehlend",
+   "text": "She laughs when she says it. But only with her mouth. Her eyes are on the floor."
+  },
+  {
+   "nr": 8,
+   "typ": "objekt",
+   "kapitel": 3,
+   "start": 33.794,
+   "dauer": 4.43,
+   "emotion": "erklaerend",
+   "text": "Your stack is twice as tall as half. Hers is one card."
+  },
+  {
+   "nr": 9,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 38.224,
+   "dauer": 1.934,
+   "emotion": "erzaehlend",
+   "text": "\"But the speech is already finished.\""
+  },
+  {
+   "nr": 10,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 40.158,
+   "dauer": 6.398,
+   "emotion": "traurig",
+   "text": "There it is again. The thought from the display wall. So much work went in, so it has to stay."
+  },
+  {
+   "nr": 11,
+   "typ": "atelier",
+   "kapitel": 3,
+   "start": 46.556,
+   "dauer": 8.222,
+   "emotion": "erzaehlend",
+   "text": "Cool air drifts in through the open window. You read the cards again. Honestly this time. Which ones does anyone actually need?"
+  },
+  {
+   "nr": 12,
+   "typ": "objekt",
+   "kapitel": 4,
+   "start": 54.778,
+   "dauer": 5.822,
+   "emotion": "erklaerend",
+   "text": "Eleven cards go in the tray. Eleven you keep. It hurts a little. Less than you thought."
+  },
+  {
+   "nr": 13,
+   "typ": "atelier",
+   "kapitel": 4,
+   "start": 60.6,
+   "dauer": 5.39,
+   "emotion": "erzaehlend",
+   "text": "You give Eda half of the welcome. Her half, her words, her jokes."
+  },
+  {
+   "nr": 14,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 65.99,
+   "dauer": 1.55,
+   "emotion": "froh",
+   "text": "\"Then I'll write my part myself.\""
+  },
+  {
+   "nr": 15,
+   "typ": "atelier",
+   "kapitel": 5,
+   "start": 67.54,
+   "dauer": 2.582,
+   "emotion": "erzaehlend",
+   "text": "And Eda puts her chair back next to yours."
+  }
+ ]
+}
