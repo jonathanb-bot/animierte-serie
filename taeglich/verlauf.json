@@ -758,7 +758,17 @@
     "bremerhaven",
     "lübeck",
     "stuttgart"
-   ]
+   ],
+   "veroeffentlicht": {
+    "video": "https://raw.githubusercontent.com/jonathanb-bot/animierte-serie/youtube-upload/taeglich/mond-m006.mp4",
+    "geplant": {
+     "tiktok": "2026-11-20T21:56:00",
+     "instagram": "2026-11-20T20:43:00",
+     "youtube": "2026-11-20T22:04:00"
+    },
+    "lufs": -14.6,
+    "dauer_s": 66.65
+   }
   }
  ]
 }

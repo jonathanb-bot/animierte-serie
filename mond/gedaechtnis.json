@@ -1,19 +1,23 @@
 {
  "_info": "Weltgedächtnis „Bis zum Mond“. tuerme = Stockwerke pro Stadt beim letzten Video (für alt>neu), reihenfolge = feste Plätze auf dem Turmplatz. Nach jeder Folge mit `python mond/stand.py --speichern` aktualisieren. gesperrt = Kommentar-IDs, die nicht zählen (Beleidigung, Politik, Werbung).",
- "folge": 5,
- "datum": "2026-11-18",
- "tag": 5,
+ "folge": 6,
+ "datum": "2026-11-20",
+ "tag": 6,
  "tuerme": {
   "Suceava": 76,
   "Hamburg": 50,
-  "Stuttgart": 42,
-  "Bremen": 24,
-  "Wermsdorf": 18,
+  "Stuttgart": 46,
+  "Bremen": 29,
+  "Wermsdorf": 26,
+  "Bielefeld": 15,
+  "Bremerhaven": 15,
   "Dörpen": 14,
-  "München": 8,
-  "Hildesheim": 6,
+  "Luhe-Wildenau": 13,
+  "Lübeck": 9,
+  "München": 9,
+  "Hildesheim": 7,
+  "Baden-Baden": 6,
   "Freiburg": 4,
-  "Baden-Baden": 3,
   "Hamm": 3,
   "Augsburg": 2,
   "Bern": 2,
@@ -26,7 +30,6 @@
   "Ebensee": 1,
   "Freilassing": 1,
   "Friedeburg": 1,
-  "Luhe-Wildenau": 1,
   "Meuselwitz": 1,
   "Oldenburg": 1,
   "Ronnenberg": 1
@@ -57,7 +60,10 @@
   "Hamburg",
   "Dörpen",
   "München",
-  "Luhe-Wildenau"
+  "Luhe-Wildenau",
+  "Bielefeld",
+  "Bremerhaven",
+  "Lübeck"
  ],
  "gesperrt": [],
  "erreichte_ziele": [],
@@ -66,7 +72,8 @@
   "Folge 2 „Hildesheim legt vor“ (15.11.): 15 Städte, 27 Stockwerke. Hildesheim 6 (@jaron.krk, 3 Kommentare), Freiburg und Stuttgart je 3, Dorf Leimersheim Platz 4, Ebensee (AT) dabei, 57 Feuer-Emojis zählen nicht. Noch kein Ziel erreicht (Wolken 333). Neu in engine/turm.js: schilder=, schild_px=, stock_hoehe= (Folge 2 mit 2.5).",
   "Folge 3 „Die Jagd beginnt“ (16.11.): 16 Städte, 31 Stockwerke. Stuttgart 4 (Platz 2, @jonas27859 jetzt 3 Likes), nur 2 hinter Hildesheim 6 (seit gestern +0). Hamm 1→3 (Platz 13→4, @joejanjac132 kommentierte unter Folge 2 nochmal „hamm“; stand.py zählt seitdem mehrdeutige Orte auch kleingeschrieben, wenn sie allein den Kommentar bilden). Baden-Baden neu (@EllenZaum „mein Geburtsort“, Baden-Baden in staedte.json ergänzt). Noch kein Ziel erreicht. Neu in engine/turm.js: modus=duell. Post: TikTok 20:56, Instagram 21:54, YouTube 22:26.",
   "Folge 4 „Die neue Nummer eins“ (17.11.): 21 Städte, 56 Stockwerke. Stuttgart überholt Hildesheim: 4→13 (@leeon_112 „Stuttgart“ mit 6 Likes, dazu @Luka-w9r4v auf YouTube), 7 Stockwerke Vorsprung. Bremen neu und gleich Platz 2 mit 6 (@LukasGradert-q7y schrieb sechsmal Bremen, ohne Likes), gleichauf mit Hildesheim (seit Folge 2 +0). Neu: Bern (erste Stadt aus der Schweiz, jetzt 3 Länder), Görlitz, Wermsdorf, Friedeburg (Friedeburg und Wermsdorf in staedte.json ergänzt). „Reiding“ (12× von @eckeralexander5290, je 1 Like) zählt nicht: kein eindeutig nachweisbarer Ort (evtl. Raiding/Riding gemeint) – schreibt er eine echte Stadt, zählt sie. Görlitz-Kommentator wegen anstößigem Nutzernamen nicht eingeblendet. Noch kein Ziel erreicht (Wolken 333). Neu in engine/turm.js: krone= (goldene Krone über dem Spitzenreiter, krone_ab). Post: TikTok 20:57, Instagram 21:25, YouTube 21:32.",
-  "Folge 5 „Die Nacht der Kommentare“ (18.11.): 26 Städte aus 4 Ländern, 270 Stockwerke (gestern 56). Suceava (Rumänien, in staedte.json ergänzt, Alias „Sucaeva“) neu und sofort Platz 1 mit 76 (@f_e_m_a_n_u_e_l, 38 Kommentare mit je 1 Like auf Instagram), Krone wechselt von Stuttgart nach Suceava. Hamburg neu Platz 2 mit 50 (@ilyas.1887_15, 50 Kommentare, 0 Likes). Stuttgart 13→42 (nur 7 Kommentare, 35 Likes, @leeon_112). Bremen 6→24, Wermsdorf 2→18, neu Dörpen 14 (@HenryHempen, ergänzt), München 8, Luhe (→ Luhe-Wildenau, ergänzt). „Reiding“ (12×) und „Werm“ zählen weiter nicht. Noch kein Ziel erreicht (Suceava 228 m, noch 257 bis zu den Wolken). Cliffhanger: 26 Likes auf Hamburg und die Krone ist wieder weg. Neu in engine/turm.js: land= (Landesflaggen auf Schildern, Duell-Tafeln, Rangliste). Post: TikTok 22:24, Instagram 22:18, YouTube 22:15 (Slots um 21 Uhr durch englische Posts belegt). Nach dem Drehbuch kam noch Bielefeld dazu (14, Stand 15:49) und Stuttgart stieg auf 46 – das zeigt Folge 6 als Wachstum."
+  "Folge 5 „Die Nacht der Kommentare“ (18.11.): 26 Städte aus 4 Ländern, 270 Stockwerke (gestern 56). Suceava (Rumänien, in staedte.json ergänzt, Alias „Sucaeva“) neu und sofort Platz 1 mit 76 (@f_e_m_a_n_u_e_l, 38 Kommentare mit je 1 Like auf Instagram), Krone wechselt von Stuttgart nach Suceava. Hamburg neu Platz 2 mit 50 (@ilyas.1887_15, 50 Kommentare, 0 Likes). Stuttgart 13→42 (nur 7 Kommentare, 35 Likes, @leeon_112). Bremen 6→24, Wermsdorf 2→18, neu Dörpen 14 (@HenryHempen, ergänzt), München 8, Luhe (→ Luhe-Wildenau, ergänzt). „Reiding“ (12×) und „Werm“ zählen weiter nicht. Noch kein Ziel erreicht (Suceava 228 m, noch 257 bis zu den Wolken). Cliffhanger: 26 Likes auf Hamburg und die Krone ist wieder weg. Neu in engine/turm.js: land= (Landesflaggen auf Schildern, Duell-Tafeln, Rangliste). Post: TikTok 22:24, Instagram 22:18, YouTube 22:15 (Slots um 21 Uhr durch englische Posts belegt). Nach dem Drehbuch kam noch Bielefeld dazu (14, Stand 15:49) und Stuttgart stieg auf 46 – das zeigt Folge 6 als Wachstum.",
+  "Folge 6 „Der Norden greift an“ (20.11.): 29 Städte, 343 Stockwerke. Der Norden: Hamburg 50, Bremen 24→29, neu Bremerhaven 15 (@blaulicht_bhv „Bremerhaven auf die 1“, 15 Kommentare ohne Likes), neu Lübeck 9 (@lukes.k.2012) – zusammen 103. Neu auch Bielefeld 15 (@ErenGüzel-c8s „Bielefeld 20 mal“ zählt einmal). Duell: Stuttgart 42→46, nur 4 hinter Hamburg. Aufsteiger Luhe-Wildenau 1→13 (@Jonas_YT-HD), Wermsdorf 18→26 durch Likes, Baden-Baden 3→6 (@EllenZaum: „Bitte Leute fangt an zu liken und zu kommentieren.“). Suceava bleibt vorne mit 76 (seit Tag 5 +0), noch 257 bis zu den Wolken. Kein Ziel erreicht. Cliffhanger: 5 Likes auf Stuttgart und Hamburg fällt auf Platz 3. WICHTIG: Zernio liefert pro Post nur die neuesten 100 Kommentare (Instagram Folge 4 hat 169) – ohne Korrektur wären Suceava auf 50, Stuttgart auf 15 und München auf 2 gefallen. stand.py liest deshalb jetzt alle früheren Stände von posten/kommentare.json (Likes aus dem neuesten). Am 19.11. lief keine Folge. Ein Versuch mit leuchtenden Ringen (leuchten=) war im Bild kaum sichtbar und wurde verworfen, engine/turm.js unverändert. Post: TikTok 21:56, Instagram 20:43, YouTube 22:04."
  ],
- "stand_kommentare": "2026-11-18T14:38:38.079Z"
+ "stand_kommentare": "2026-11-20T14:20:44.520Z"
 }
