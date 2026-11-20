@@ -106,3 +106,10 @@ Diese Liste A–I und alle Nachträge oben Punkt für Punkt abhaken. Im Bericht 
 - **#15 KI-Haken:** Stichprobe, ob ein Post doch als KI-generiert markiert wurde.
 - **#26 / #27 Takt:** Wurden Abstände über 20 min und die Reihenfolge Deutsch vor Englisch eingehalten?
 - **Zuschauerbindung je Video:** Wo die Leute abspringen (Anfang, Mitte, Ende). Die Kandidaten für den Nachschnitt (#38 Punkt 5) gleich mit Sekunde und Einstellung auflisten.
+
+## Nachtrag 20.11. (2): TikTok clicktheory31 „The REAL Reason Your YouTube Shorts Get 0 Views“ (Issue #38, Punkte 11–13)
+- **Wegwisch-Quote (YouTube „Angesehen / Weggewischt“) je Short auswerten:** Ziel über 80 %, besser über 90 %. Dazu die durchschnittliche Wiedergabe in % der Länge (über 100 % heißt, die Leute schauen nochmal). Werte aus YouTube Studio (Shorts-Bericht), wenn nötig über die iMac-Browser-Aufgabe, weil vidIQ fast keine Credits mehr hat. In den Bericht als eigene Spalte, je Staffel und Sprache.
+- **Vertrauen der Konten prüfen:** Sind alle YouTube-Kanäle (deutsch und englisch) bestätigt (Telefonnummer, Identität, alle Funktionen freigeschaltet)? Name, Profilbild und Beschreibung gepflegt? Fehlendes als Aufgabe für Jonathan auflisten.
+- **Falls ein Konto „neu“ empfohlen wird** (Abschnitt „Kanal behalten oder neu“): Plan nach dem Video. Kanal anlegen (geht unter demselben Google-Konto: Einstellungen → Kanäle → „Neuen Kanal erstellen“), Name passend zur Gewinner-Nische, Profilbild, Identität bestätigen. Dann **5–7 Tage ganz normal benutzen**, bevor das erste Short kommt: Videos der Nische ansehen, liken, abonnieren, kommentieren. Das macht Jonathan selbst von Hand, keine Bots und keine gekauften Interaktionen. Danach jeden Tag posten, Nische nicht wechseln.
+- **Durchbruch-Effekt beobachten:** Wenn ein Video stark ausbricht, ziehen oft ältere Videos mit. Im Bericht prüfen, ob das bei uns schon passiert ist (z. B. s02-f01 auf Instagram).
+- **Nicht übernehmen:** „Rage Bait“ und absichtlich kontroverse Sätze (widerspricht Qualität #30 und dem Stil), Aufrufe zum Kommentieren im Video (#8) und Endkarten (#11).
