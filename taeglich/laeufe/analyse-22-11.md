@@ -124,3 +124,13 @@ Bei der Wahl der **Gewinner-Nische** (Abschnitt I) diese Kandidaten neben unsere
 - **Lange Geschichten** (eigene, erfundene Ich- bzw. Du-Geschichten, sehr lang): hohe Wiedergabezeit. Idee fürs Querformat, nicht für Shorts.
 - **Nicht passend:** Quiz und Tier-/Ranking-Listen mit fremdem Material (Gefahr „inauthentic content“, laut Video werden solche Kanäle nicht monetarisiert), Reddit-Geschichten mit fremdem Spielmaterial, Immobilien und Navy mit fremden Clips.
 - Im Bericht: Kandidat, passt zu uns (ja/nein), vorhandene eigene Daten dazu, Empfehlung.
+
+## Pflicht im Bericht: eigener Abschnitt „Vorbild-Videos“ (Jonathan 20.11.: „darauf auch beziehen“)
+Der Bericht bekommt einen eigenen Abschnitt **„Was die Vorbild-Videos sagen und was unsere Zahlen dazu zeigen“**. Für jedes der 6 Videos: Kernaussagen, ob unsere Daten sie bestätigen oder widerlegen (mit Zahlen), und was daraus konkret für die nächsten 2 Wochen folgt. Die Empfehlungen in Abschnitt I müssen sich ausdrücklich darauf beziehen (z. B. „nach #38 Punkt 6“).
+1. **vidIQ „How to Escape EVERY YouTube Shorts View Jail“** (youtu.be/fEeZhVkvywI): Grenzen bei 0 / 1.000 / 10.000 / 30.000, Massenware, Bewegung im Bild, Grund zum Bleiben, Absprung-Sekunde, hartes Ende (#38 Punkte 1–4).
+2. **Marcus Jones „How To Get More Views in 2 Minutes“** (youtu.be/4Gw-HQvo9jY): Nachschnitt im YouTube-Editor, Bildwechsel alle 3–5 s, Textschilder (#38 Punkte 5 und 10).
+3. **DecodingYT „7 Mistakes Destroying your shorts channel“** (TikTok): Nische und 30 Shorts, Takt, nicht kopieren, höchstens 2 Hashtags, kein Doppel-Upload, angeheftete Frage, Shorts-Vorschaubild (#38 Punkte 6–9).
+4. **clicktheory31 „The REAL Reason Your YouTube Shorts Get 0 Views“** (TikTok): Wegwisch-Quote, Konten bestätigen, neue Kanäle 5–7 Tage normal nutzen, Durchbruch zieht alte Videos mit (#38 Punkte 11–13).
+5. **DecodingYT „12 Secret Faceless YouTube Niches 2026“** (TikTok): Nischen-Kandidaten (Psychologie über dich, Weltall, Tiefsee, Tier-Psychologie in Du-Form, wahre Grusel-Geschichten, lange Geschichten fürs Querformat). Mit unseren Genre-Ergebnissen abgleichen und in die Wahl der Gewinner-Nische einbeziehen.
+6. **Kanal behalten oder neu** (Jonathans Frage 20.11.): Entscheidungsregel aus dem Nachtrag oben, verbunden mit 1 (0-View-Grenze) und 4 (Vertrauen, Aufwärmen).
+In der Prüfliste (Abschnitt J) je Video eine Zeile mit ✓ oder ✗.
