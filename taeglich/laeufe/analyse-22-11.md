@@ -41,3 +41,56 @@ Jonathan fragt, ob man nach der Auswertung alle Videos oder den ganzen Account l
   - Dazwischen → behalten, 30 Videos in der Gewinner-Nische testen, danach neu entscheiden.
 - **Grundsatz:** Den Account nie löschen und nicht alle Videos löschen. Löschen lässt sich nicht rückgängig machen, kostet Follower (TikTok Creator Rewards erst ab 10.000) und setzt den Algorithmus nicht zurück. Einzelne stark störende Videos höchstens als Vorschlag zum **Privatstellen** auflisten.
 - Im Bericht eine eigene Tabelle „Kanal behalten / neu / testen“ mit Begründung je Konto.
+
+## Nachtrag 20.11.: Vollständige Prüfliste (Jonathan 20.11.: „alles beachten, was bei der Analyse beachtet werden muss“)
+Diese Liste **ergänzt** die Schritte oben. Jeder Punkt kommt im Bericht vor. Wenn Daten fehlen, steht dort „keine Daten“ mit dem Grund, nichts wird geschätzt.
+
+### A. Fehlende Projekte (zusätzlich zur Liste oben)
+- **„Der letzte Raub – Ihr entscheidet“** (Issue #35, `taeglich/laeufe/raub.md`, seit 16.11. täglich): Kommentare je Folge (bisher F1 und F2: 0), Anteil A/B-Kommentare, Durchhalten von Folge zu Folge, Kommentare pro 1.000 Aufrufe im Vergleich zu „Deine Welt“ und „Bis zum Mond“. Klare Empfehlung: weiter, umbauen oder einstellen.
+- **Querformat lang** (Issue #37, `quer/`, seit 17.11.): nur den Stand berichten (Videos, Aufrufe, Wiedergabedauer), **nicht** in den Vergleich Masse gegen Qualität aufnehmen (#37). Den Lauf nicht anfassen.
+- **Zitat-Videos:** Jonathan postet sie selbst, nicht über Zernio. Zahlen nur, wenn sie in Zernio oder vidIQ auftauchen, sonst als Lücke nennen.
+
+### B. Datenlücke 9.–21.11. schließen
+- Der Lauf „Analyse vor der Staffel“ ist seit 9.11. aus. In `experimente.md` stehen Ergebnisse nur bis 8.11. Für den Zeitraum 9.–21.11. alles frisch auswerten: Zernio `analyse=true` und `kommentare=true`, `posten/analyse.json`, `taeglich/verlauf.json`, `taeglich/kennzahlen.json`, `taeglich/videodaten.md` (`python taeglich/videodaten.py` vorher neu erzeugen).
+- **vidIQ: nur noch ca. 19 Credits (Stand 20.11.).** Keine Bildanalyse (`video_watch`, 25 Credits). Höchstens `vidiq_channel_analytics` oder Einzelabfragen ≤ 19, gezielt für YouTube-Zuschauerbindung. Sonst Zernio-Daten nehmen und die Lücke benennen.
+- Zernio und YouTube-Analytics drosseln (HTTP 429): Abfragen mit Pausen wiederholen, den Datenstand (Uhrzeit) im Bericht angeben.
+
+### C. Faire Vergleiche
+- **Gleiches Alter vergleichen:** Werte nach 24 h und 72 h je Post (oder Aufrufe pro Stunde), nie junge gegen alte Posts.
+- **Ausreißer** (oben und unten) einzeln mit Begründung. Median statt Durchschnitt, wenn wenige Posts sehr viel haben.
+- **Belastbar** erst ab ≥ 2 Staffeln oder ≥ 6 Posts je Variante, sonst „Tendenz“ (Regel 6 in `experimente.md`).
+- Immer getrennt nach Plattform **und** Sprache.
+
+### D. Experimente einzeln auflösen (Tabelle mit Ergebnis je Zeile)
+- **E1/E2 Hook-Text** (s01/s02) · **E3 Grund-Regel im Satz 1** (s03) · **E4 Untertitel an/aus** (s03–s12 im Wechsel) · **E5 Ende zuerst** (s04) · **E6 Horror kurz gegen lang** (s05 gegen s03) · **E7 Zukunftswelt mit deinem Verlust im Satz 1** (s06) · **E-Masse** (16.–21.11.) und alle weiteren Zeilen, die bis zum 21.11. dazukamen.
+- Frühere Tendenzen prüfen, ob sie halten: **Teil-1-Effekt** (Teil 1 hält länger) · **kühne Prämisse / Aussage über dein Leben schlägt Rätsel mit Gefahr** · **Familie + Gefühl mit „dein“** (#31) · **TikTok-Schwelle**: unter ca. 35 % nach 4 s bleibt ein Post bei ca. 250 Aufrufen hängen · **Genre Lebenszeit** stark (video-001) · **Kulisse Esstisch** stark · **Einzelfolge schlägt Sammelteil** beim Abschluss auf TikTok.
+- **Dimensionen:** Genre (jedes getestete Genre einzeln, welche fehlen noch?), Welt, Erzählform, Hook-Art, Cliffhanger-Art, Figuren-Fokus, Länge und Folgenzahl, Kulisse, Wörter pro Sekunde, Zahl der Einstellungen.
+
+### E. Stimme und Ton
+- **Orus 106 Hz (bis 12.11.) gegen 118 Hz (ab 13.11.)**: Bindung in den ersten 3–10 s vergleichen (Tendenz, weil sich der Inhalt gleichzeitig ändert).
+- **Figurenstimmen** (Kore, Zephyr, Gacrux, seit 7.11.): Folgen mit und ohne vergleichen.
+- Andere getestete Stimmen (Puck, Fenrir), soweit vorhanden. Kommentare, die etwas über die Stimme sagen, sammeln.
+
+### F. Posten
+- **Takt:** Instagram/YouTube 12× am Tag (bis 5.11.) → 5× (ab 6.11.) → Masse 8–10× (17.–21.11.), TikTok 4× am Tag. Aufrufe pro Post **und** pro Tag je Phase.
+- **Uhrzeiten:** welche Tageszeiten (nach der Streuung ±30 min) am besten laufen, je Plattform und Sprache.
+- **YouTube deutsch gedrosselt seit 3.11.:** Die gleichen Videos bekamen englisch deutlich mehr Aufrufe (Median 252 gegen 17). Prüfen, ob das noch gilt. Das ist der wichtigste Hinweis für die Entscheidung „Kanal behalten oder neu“.
+- **Hashtags:** Stand heute 7–10 je Post. Als Ausgangswert festhalten, damit die Umstellung auf höchstens 2 ab 22.11. messbar wird.
+- Posting-Fehler, abgelehnte Posts (Tonprüfung, schwarzes erstes Bild), Posts ohne Ton: Anzahl und Ursache.
+
+### G. Konten und Ziele
+- Follower je Konto: Stand, Zuwachs pro Tag, Herkunft (welche Staffel oder Serie hat Follower gebracht?).
+- Abstand zu den Schwellen aus `kennzahlen.json`: TikTok Creator Rewards (10.000 Follower + 100.000 Aufrufe in 30 Tagen), YouTube-Partnerprogramm (1.000 Abos + 10 Mio. Shorts-Aufrufe in 90 Tagen), Instagram. Realistischer Zeitpunkt, bis wann sie erreicht werden.
+- Entscheidung „behalten / neu / testen“ je Konto (Nachtrag oben).
+
+### H. Aufwand gegen Ertrag
+- Renderzeit, Arbeitszeit und Gemini-Kontingent je Video in der Qualitätsphase gegen die Massephase, verglichen mit den Aufrufen und Followern je Video. Daraus eine Empfehlung, wie viele Videos am Tag in voller Qualität (#30) machbar und sinnvoll sind.
+
+### I. Empfehlungen für die nächsten 2 Wochen
+- Alle festen Regeln bleiben (Orus, Stil „leuchtend“, `@qualitaet max`, Du-Erzählung #31, nie „Fortsetzung folgt“ #11, keine Fragen im Video #8, nie „Echter Fakt“ #2, kein `@hud` #19, KI-Haken aus #15, über 1 Minute #12, erstes Bild nie schwarz, Stimme nie flüstern, 118 Hz). Empfehlungen dürfen ihnen nicht widersprechen, sonst ausdrücklich als Frage an Jonathan kennzeichnen.
+- Dazu die Regeln aus Issue #38 (Punkte 1–10) einplanen und sagen, welcher Lauf was umsetzt.
+- Eine **Gewinner-Nische** vorschlagen (Genre + Welt + Format + Hook-Art), dazu 30 Shorts darin als Plan.
+- Welche Läufe danach weiterlaufen, pausieren oder enden. Nur vorschlagen, der Masse-Test schaltet sich selbst aus, alles andere entscheidet Jonathan.
+
+### J. Selbstkontrolle vor dem Veröffentlichen des Berichts
+Diese Liste A–I und alle Nachträge oben Punkt für Punkt abhaken. Im Bericht am Ende eine Tabelle „Prüfliste“ mit ✓ (erledigt) oder ✗ (fehlt, mit Grund).
