@@ -94,3 +94,14 @@ Diese Liste **ergänzt** die Schritte oben. Jeder Punkt kommt im Bericht vor. We
 
 ### J. Selbstkontrolle vor dem Veröffentlichen des Berichts
 Diese Liste A–I und alle Nachträge oben Punkt für Punkt abhaken. Im Bericht am Ende eine Tabelle „Prüfliste“ mit ✓ (erledigt) oder ✗ (fehlt, mit Grund).
+
+### K. Abgleich mit allen Regel-Issues (2. Durchgang)
+- **#9 gekürzte Fassungen** (Instagram/YouTube, alte Serien): gekürzt (`<serie>-kurz`) gegen ungekürzt, je Ø Wiedergabe und Aufrufe.
+- **#7 TikTok-Sammelteile gegen Einzelfolgen** (alte Serien und s01/s04 gegen s02/s03/s05 ff.): Abschluss, Follows, Aufrufe.
+- **#17 / #20 Look und Qualität:** dunkler Look der alten Serien gegen „leuchtend“, düsterer Horror-Look (`@look 0.75`, s03) gegen hell, 1080p/30 fps gegen 1440p/60 fps (`@qualitaet max`). Jeweils als Tendenz, weil sich die Inhalte mit ändern.
+- **#29 Einblendungen / #33 „Deine Welt“** (Namen und Kommentar im Bild, Aufruf am Ende, Spielstand-Leiste): mit und ohne vergleichen, soweit möglich.
+- **#19 ohne Statusanzeige** gegen alte Serien mit `@hud`: nur nennen, falls ein Unterschied auffällt.
+- **#12 Länge über 1 Minute:** Gibt es Posts unter 62 s? (Sollte 0 sein, sonst Fehler melden.)
+- **#15 KI-Haken:** Stichprobe, ob ein Post doch als KI-generiert markiert wurde.
+- **#26 / #27 Takt:** Wurden Abstände über 20 min und die Reihenfolge Deutsch vor Englisch eingehalten?
+- **Zuschauerbindung je Video:** Wo die Leute abspringen (Anfang, Mitte, Ende). Die Kandidaten für den Nachschnitt (#38 Punkt 5) gleich mit Sekunde und Einstellung auflisten.
