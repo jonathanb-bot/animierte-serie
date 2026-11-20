@@ -1,0 +1,131 @@
+{
+ "dauer": 73.468,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "atelier",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 5.582,
+   "emotion": "erzaehlend",
+   "text": "Sechs von zehn fertig. Oder vier von zehn fehlen. Dasselbe. Oder?"
+  },
+  {
+   "nr": 2,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 5.582,
+   "dauer": 4.766,
+   "emotion": "erzaehlend",
+   "text": "Noch ein Tag bis zur Eröffnung. Du hast den Stand an die Wand gemalt."
+  },
+  {
+   "nr": 3,
+   "typ": "atelier",
+   "kapitel": 1,
+   "start": 10.348,
+   "dauer": 5.99,
+   "emotion": "erzaehlend",
+   "text": "Zehn Kästchen für zehn Stationen. Sechs davon sind grün. Die Wanduhr über der Tür tickt laut."
+  },
+  {
+   "nr": 4,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 16.338,
+   "dauer": 3.134,
+   "emotion": "erzaehlend",
+   "text": "„Vier Stationen fehlen. Das schaffen wir nie.“"
+  },
+  {
+   "nr": 5,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 19.472,
+   "dauer": 2.942,
+   "emotion": "froh",
+   "text": "„Sechs sind fertig. Das reicht doch.“"
+  },
+  {
+   "nr": 6,
+   "typ": "atelier",
+   "kapitel": 2,
+   "start": 22.414,
+   "dauer": 6.47,
+   "emotion": "erzaehlend",
+   "text": "Ihr redet über denselben Stand. Und klingt wie zwei verschiedene Welten. Eda verschränkt die Arme. Du auch."
+  },
+  {
+   "nr": 7,
+   "typ": "objekt",
+   "kapitel": 3,
+   "start": 28.884,
+   "dauer": 5.678,
+   "emotion": "erklaerend",
+   "text": "Du schreibst beide Sätze auf zwei Zettel. Glatte Karteikarten. Nebeneinander."
+  },
+  {
+   "nr": 8,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 34.562,
+   "dauer": 6.11,
+   "emotion": "erzaehlend",
+   "text": "Der eine Zettel macht dir Angst. Der andere macht dich ruhig. Dabei hat sich nichts verändert. Gar nichts."
+  },
+  {
+   "nr": 9,
+   "typ": "objekt",
+   "kapitel": 3,
+   "start": 40.672,
+   "dauer": 6.974,
+   "emotion": "erklaerend",
+   "text": "Neunzehnhunderteinundachtzig zeigten zwei Forscher: Gleiche Möglichkeiten, anders formuliert, können Entscheidungen verändern."
+  },
+  {
+   "nr": 10,
+   "typ": "atelier",
+   "kapitel": 3,
+   "start": 47.646,
+   "dauer": 4.142,
+   "emotion": "erzaehlend",
+   "text": "Frau Sen kommt vorbei. Sie fragt nur: „Was kostet welche Station?“"
+  },
+  {
+   "nr": 11,
+   "typ": "objekt",
+   "kapitel": 4,
+   "start": 51.788,
+   "dauer": 7.142,
+   "emotion": "erklaerend",
+   "text": "Ihr schreibt Stunden dazu. Und was jede Station den Besuchern wirklich bringt. Plötzlich wird es leise im Atelier."
+  },
+  {
+   "nr": 12,
+   "typ": "atelier",
+   "kapitel": 4,
+   "start": 58.93,
+   "dauer": 5.342,
+   "emotion": "erzaehlend",
+   "text": "Zwei Stationen schafft ihr heute Nacht. Zwei streicht ihr. Ohne Drama. Ohne Schuld."
+  },
+  {
+   "nr": 13,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 64.272,
+   "dauer": 3.782,
+   "emotion": "froh",
+   "text": "Eda schiebt die beiden Zettel aufeinander. Sie passen genau."
+  },
+  {
+   "nr": 14,
+   "typ": "objekt",
+   "kapitel": 5,
+   "start": 68.054,
+   "dauer": 5.414,
+   "emotion": "erklaerend",
+   "text": "Die bedrohliche und die beruhigende Version beschreiben exakt dieselben sechs Stationen."
+  }
+ ]
+}

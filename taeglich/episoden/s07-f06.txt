@@ -35,7 +35,7 @@
 == Wendung ==
 [objekt objekte="karteikarte:11|karteikarte:11" gross="ELF UND ELF" palette=orange zoom-rein ein="elf>#11 KARTEN" ein_y=1500] Elf Karten legst du in die Ablage. Elf behältst du.
 [atelier ansicht=vorfuehrung mikro du s07_eda palette=orange zoom-rein ein="Hälfte>HALBE-HALBE>herz" ein_y=1500] Du gibst Eda die Hälfte der Begrüßung. Ihre Hälfte, ihre Worte.
-[gesicht s07_eda ort=atelier ansicht=vorfuehrung froh palette=orange figurstimme=frau sprecher=s07_eda] „Dann schreib ich meinen Teil selbst.“
+[gesicht s07_eda ort=atelier ansicht=vorfuehrung froh palette=orange figurstimme=frau sprecher=s07_eda] „Dann schreibe ich meinen Teil selbst.“
 
 == Cliffhanger ==
 [atelier ansicht=vorfuehrung du s07_eda palette=rosa zoom-rein ton=hit] Und Eda stellt ihren Stuhl wieder neben deinen.

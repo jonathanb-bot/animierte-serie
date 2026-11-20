@@ -1,0 +1,140 @@
+{
+ "dauer": 65.754,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "atelier",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 5.582,
+   "emotion": "erzaehlend",
+   "text": "Deine Rede ist perfekt. Und deine Freundin hat darin nichts zu sagen."
+  },
+  {
+   "nr": 2,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 5.582,
+   "dauer": 4.718,
+   "emotion": "erzaehlend",
+   "text": "Der Abend vor der Eröffnung. Du probst die Begrüßung im Vorführraum."
+  },
+  {
+   "nr": 3,
+   "typ": "objekt",
+   "kapitel": 1,
+   "start": 10.3,
+   "dauer": 4.262,
+   "emotion": "erklaerend",
+   "text": "Zweiundzwanzig Redekarten. Du hast jede Nacht daran geschrieben."
+  },
+  {
+   "nr": 4,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 14.562,
+   "dauer": 4.31,
+   "emotion": "erzaehlend",
+   "text": "Dein Hemdkragen ist eng. Die Karten rascheln in deinen Händen."
+  },
+  {
+   "nr": 5,
+   "typ": "atelier",
+   "kapitel": 2,
+   "start": 18.872,
+   "dauer": 6.302,
+   "emotion": "erzaehlend",
+   "text": "Eda steht daneben. Sie hat genau einen Satz. Ganz am Ende. „Viel Spaß beim Rundgang.“"
+  },
+  {
+   "nr": 6,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 25.174,
+   "dauer": 2.342,
+   "emotion": "traurig",
+   "text": "„Ich bin dann wohl die Deko.“"
+  },
+  {
+   "nr": 7,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 27.516,
+   "dauer": 4.622,
+   "emotion": "erzaehlend",
+   "text": "Sie lacht dabei. Aber nur mit dem Mund. Ihre Augen schauen auf den Boden."
+  },
+  {
+   "nr": 8,
+   "typ": "objekt",
+   "kapitel": 3,
+   "start": 32.138,
+   "dauer": 4.526,
+   "emotion": "erklaerend",
+   "text": "Dein Stapel ist doppelt so hoch wie die Hälfte. Ihrer ist eine Karte."
+  },
+  {
+   "nr": 9,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 36.664,
+   "dauer": 1.934,
+   "emotion": "erzaehlend",
+   "text": "„Aber die Rede ist doch schon fertig.“"
+  },
+  {
+   "nr": 10,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 38.598,
+   "dauer": 6.326,
+   "emotion": "traurig",
+   "text": "Da ist er wieder. Der Gedanke von der Stellwand. So viel Arbeit drin, also muss es bleiben."
+  },
+  {
+   "nr": 11,
+   "typ": "atelier",
+   "kapitel": 3,
+   "start": 44.924,
+   "dauer": 8.078,
+   "emotion": "erzaehlend",
+   "text": "Durch das gekippte Fenster zieht kühle Luft. Du liest die Karten noch einmal. Diesmal ehrlich. Welche braucht wirklich jemand?"
+  },
+  {
+   "nr": 12,
+   "typ": "objekt",
+   "kapitel": 4,
+   "start": 53.002,
+   "dauer": 3.422,
+   "emotion": "erklaerend",
+   "text": "Elf Karten legst du in die Ablage. Elf behältst du."
+  },
+  {
+   "nr": 13,
+   "typ": "atelier",
+   "kapitel": 4,
+   "start": 56.424,
+   "dauer": 4.622,
+   "emotion": "erzaehlend",
+   "text": "Du gibst Eda die Hälfte der Begrüßung. Ihre Hälfte, ihre Worte."
+  },
+  {
+   "nr": 14,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 61.046,
+   "dauer": 1.91,
+   "emotion": "froh",
+   "text": "„Dann schreibe ich meinen Teil selbst.“"
+  },
+  {
+   "nr": 15,
+   "typ": "atelier",
+   "kapitel": 5,
+   "start": 62.956,
+   "dauer": 2.798,
+   "emotion": "erzaehlend",
+   "text": "Und Eda stellt ihren Stuhl wieder neben deinen."
+  }
+ ]
+}

@@ -1,0 +1,131 @@
+{
+ "dauer": 71.62,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "atelier",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 5.822,
+   "emotion": "erzaehlend",
+   "text": "Hundertzwanzig Leute schauen dich an. Und du sagst: „Das weiß ich noch nicht.“"
+  },
+  {
+   "nr": 2,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 5.822,
+   "dauer": 5.222,
+   "emotion": "erzaehlend",
+   "text": "Eröffnung. Das Mikrofon hallt. Das Bühnenlicht ist warm auf deinem Gesicht."
+  },
+  {
+   "nr": 3,
+   "typ": "atelier",
+   "kapitel": 1,
+   "start": 11.044,
+   "dauer": 4.934,
+   "emotion": "erzaehlend",
+   "text": "Eda beginnt. Ihre Hälfte der Begrüßung. Sie ist witziger als deine."
+  },
+  {
+   "nr": 4,
+   "typ": "atelier",
+   "kapitel": 2,
+   "start": 15.978,
+   "dauer": 5.774,
+   "emotion": "erzaehlend",
+   "text": "Dann führt ihr durch die Stationen. Die gelben Karten. Die Aufnahme mit Eda am Rand."
+  },
+  {
+   "nr": 5,
+   "typ": "atelier",
+   "kapitel": 2,
+   "start": 21.752,
+   "dauer": 6.038,
+   "emotion": "erzaehlend",
+   "text": "Dein Zettel mit dem Wort Schlaf. Durchgestrichen. Die Leute lachen. Freundlich."
+  },
+  {
+   "nr": 6,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 27.79,
+   "dauer": 3.902,
+   "emotion": "froh",
+   "text": "Dein Papa steht ganz vorne. Diesmal ganz vorne."
+  },
+  {
+   "nr": 7,
+   "typ": "atelier",
+   "kapitel": 3,
+   "start": 31.692,
+   "dauer": 5.462,
+   "emotion": "erzaehlend",
+   "text": "Ein Junge hebt die Hand. Seine Frage ist gut. Und du kennst die Antwort nicht."
+  },
+  {
+   "nr": 8,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 37.154,
+   "dauer": 5.894,
+   "emotion": "erzaehlend",
+   "text": "Früher hättest du jetzt einfach etwas erfunden. Schnell. Sicher klingend. Hauptsache, keiner merkt was."
+  },
+  {
+   "nr": 9,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 43.048,
+   "dauer": 2.63,
+   "emotion": "froh",
+   "text": "„Das weiß ich noch nicht. Ich schreib’s auf.“"
+  },
+  {
+   "nr": 10,
+   "typ": "atelier",
+   "kapitel": 3,
+   "start": 45.678,
+   "dauer": 3.614,
+   "emotion": "erzaehlend",
+   "text": "Du hängst die Frage an die Wand. Darunter ist Platz für die Antwort."
+  },
+  {
+   "nr": 11,
+   "typ": "atelier",
+   "kapitel": 4,
+   "start": 49.292,
+   "dauer": 6.806,
+   "emotion": "erzaehlend",
+   "text": "Dann kommt Applaus. Nicht für eine perfekte Show. Sondern für eine ehrliche. Eda drückt deine Hand."
+  },
+  {
+   "nr": 12,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 56.098,
+   "dauer": 5.198,
+   "emotion": "erzaehlend",
+   "text": "Frau Sen kommt mit einer alten, vergilbten Karteikarte. Sie hängt sie neben deine."
+  },
+  {
+   "nr": 13,
+   "typ": "objekt",
+   "kapitel": 4,
+   "start": 61.296,
+   "dauer": 5.126,
+   "emotion": "erklaerend",
+   "text": "Ihre Karte ist von zweitausenddrei. Ihre erste Ausstellung als Schülerin."
+  },
+  {
+   "nr": 14,
+   "typ": "objekt",
+   "kapitel": 5,
+   "start": 66.422,
+   "dauer": 5.198,
+   "emotion": "erklaerend",
+   "text": "Darauf steht der Satz, den du fast gesagt hättest: „Ich darf keinen Fehler machen.“"
+  }
+ ]
+}

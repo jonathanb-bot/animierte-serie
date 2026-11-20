@@ -28,7 +28,7 @@
 
 == Steigerung ==
 [atelier du s07_eda palette=tuerkis schwenk-links ein="Schlaf>SCHLAF>karteikarte" ein_y=1500] Du liest. Bett, Kissen, Traum … und Schlaf. Schlaf ganz sicher.
-[gesicht s07_eda ort=atelier palette=tuerkis zoom-rein] Eda sagt nichts. Sie legt die Originalliste neben deine.
+[gesicht s07_eda ort=atelier palette=tuerkis zoom-rein] Deine Freundin sagt nichts. Sie legt die Originalliste neben deine.
 [objekt objekte="karteikarte:Deine Liste|karteikarte:Original" gross="SCHLAF? FEHLT" palette=tuerkis zoom-rein ein="Original>NICHT AUF DER LISTE" ein_y=1500] Auf dem Original steht das Wort Schlaf nicht. Nirgends.
 [gesicht du ort=atelier palette=blau] Dein Magen zieht sich zusammen. Du hast es doch gehört. Mit Edas Stimme. Du könntest es beschwören.
 [objekt objekte="karteikarte:Liste|auge:Sicher" gross="1995 · ROEDIGER & MCDERMOTT" palette=blau zoom-rein ein="Neunzehn>#1995>uhr" ein_y=1500] In Versuchen von neunzehnhundertfünfundneunzig erinnerten sich Menschen sicher an passende Wörter, die nie gezeigt wurden.

@@ -1,0 +1,140 @@
+{
+ "dauer": 71.25,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "park",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 3.854,
+   "emotion": "erzaehlend",
+   "text": "Du weißt genau, was Eda dir versprochen hat. Glaubst du."
+  },
+  {
+   "nr": 2,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 3.854,
+   "dauer": 5.15,
+   "emotion": "erzaehlend",
+   "text": "Pausenhof, ein Tag vor dem Aufbau. Eda sitzt auf der kalten Steinmauer."
+  },
+  {
+   "nr": 3,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 9.004,
+   "dauer": 3.974,
+   "emotion": "traurig",
+   "text": "„Ich kann die Texte nicht schreiben. Nicht alle.“"
+  },
+  {
+   "nr": 4,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 12.978,
+   "dauer": 4.934,
+   "emotion": "erzaehlend",
+   "text": "Dir wird heiß. Ihr hattet das ausgemacht. Sie schreibt alle zehn Texte."
+  },
+  {
+   "nr": 5,
+   "typ": "park",
+   "kapitel": 2,
+   "start": 17.912,
+   "dauer": 8.03,
+   "emotion": "erzaehlend",
+   "text": "Zehn Stationen, zehn Texte. Morgen ist Aufbau. Du erinnerst dich an ihren Satz. Wort für Wort. Ganz sicher."
+  },
+  {
+   "nr": 6,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 25.942,
+   "dauer": 3.038,
+   "emotion": "erzaehlend",
+   "text": "„Du hast es versprochen. Ich weiß es noch genau.“"
+  },
+  {
+   "nr": 7,
+   "typ": "park",
+   "kapitel": 2,
+   "start": 28.98,
+   "dauer": 3.758,
+   "emotion": "erzaehlend",
+   "text": "Der Pausengong schrillt. Keiner von euch steht auf."
+  },
+  {
+   "nr": 8,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 32.738,
+   "dauer": 7.67,
+   "emotion": "erzaehlend",
+   "text": "Eda sagt nichts. Sie zieht ihr Handy raus und scrollt zurück. Drei Wochen. Bis zu dem Abend, an dem ihr alles geplant habt."
+  },
+  {
+   "nr": 9,
+   "typ": "handy",
+   "kapitel": 3,
+   "start": 40.408,
+   "dauer": 4.406,
+   "emotion": "erzaehlend",
+   "text": "Da steht es. Ein Entwurf. Kein Wort von allen zehn."
+  },
+  {
+   "nr": 10,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 44.814,
+   "dauer": 2.75,
+   "emotion": "erzaehlend",
+   "text": "Dein Daumen zittert. Du scrollst weiter."
+  },
+  {
+   "nr": 11,
+   "typ": "handy",
+   "kapitel": 3,
+   "start": 47.564,
+   "dauer": 5.126,
+   "emotion": "erzaehlend",
+   "text": "Darunter steht deine Antwort. Zwei Minuten später. Du hast sie komplett vergessen."
+  },
+  {
+   "nr": 12,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 52.69,
+   "dauer": 4.598,
+   "emotion": "traurig",
+   "text": "Deine Erinnerung war so sicher. Klar wie ein Foto. Und trotzdem falsch."
+  },
+  {
+   "nr": 13,
+   "typ": "park",
+   "kapitel": 4,
+   "start": 57.288,
+   "dauer": 4.55,
+   "emotion": "erzaehlend",
+   "text": "Du sagst: „Es tut mir leid.“ Kein Aber. Keine Erklärung."
+  },
+  {
+   "nr": 14,
+   "typ": "park",
+   "kapitel": 4,
+   "start": 61.838,
+   "dauer": 4.982,
+   "emotion": "erzaehlend",
+   "text": "Eda nickt langsam. Sie hält die Einladung zur Eröffnung in der Hand. Noch zu."
+  },
+  {
+   "nr": 15,
+   "typ": "handy",
+   "kapitel": 5,
+   "start": 66.82,
+   "dauer": 4.43,
+   "emotion": "erzaehlend",
+   "text": "Dann liest du deine eigene Nachricht laut vor. „Den Druck übernehme ich.“"
+  }
+ ]
+}

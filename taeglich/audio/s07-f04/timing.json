@@ -1,0 +1,140 @@
+{
+ "dauer": 75.474,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "atelier",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 5.318,
+   "emotion": "erzaehlend",
+   "text": "Deine Wand ist perfekt. Und niemand kommt an ihr vorbei."
+  },
+  {
+   "nr": 2,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 5.318,
+   "dauer": 4.238,
+   "emotion": "erzaehlend",
+   "text": "Aufbautag. Drei Nächte hast du an dieser Stellwand gebaut."
+  },
+  {
+   "nr": 3,
+   "typ": "atelier",
+   "kapitel": 1,
+   "start": 9.556,
+   "dauer": 8.198,
+   "emotion": "erzaehlend",
+   "text": "Sie steht genau in der Mitte des Ateliers. Groß. Weiß. Voller Karten. Du bist stolz auf jede Schraube."
+  },
+  {
+   "nr": 4,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 17.754,
+   "dauer": 5.126,
+   "emotion": "erzaehlend",
+   "text": "Deine Hand hat noch einen Abdruck vom Schraubgriff. Es riecht nach frischer Farbe."
+  },
+  {
+   "nr": 5,
+   "typ": "atelier",
+   "kapitel": 2,
+   "start": 22.88,
+   "dauer": 5.942,
+   "emotion": "erzaehlend",
+   "text": "Eda testet den Weg. Ihr Rucksack bleibt zwischen den Tafeln hängen. Das Holz knarrt."
+  },
+  {
+   "nr": 6,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 28.822,
+   "dauer": 4.67,
+   "emotion": "erzaehlend",
+   "text": "„Da passt kein Rollstuhl durch. Kein Kinderwagen.“"
+  },
+  {
+   "nr": 7,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 33.492,
+   "dauer": 1.814,
+   "emotion": "erzaehlend",
+   "text": "„Dann gehen die Leute eben außen rum.“"
+  },
+  {
+   "nr": 8,
+   "typ": "atelier",
+   "kapitel": 3,
+   "start": 35.306,
+   "dauer": 5.078,
+   "emotion": "erzaehlend",
+   "text": "Außen rum sind vierzig Meter. An zwei Stationen vorbei, die dann keiner sieht."
+  },
+  {
+   "nr": 9,
+   "typ": "objekt",
+   "kapitel": 3,
+   "start": 40.384,
+   "dauer": 6.086,
+   "emotion": "erklaerend",
+   "text": "In deinem Kopf zählt nur eins: drei Nächte. Abbauen fühlt sich an wie verlieren."
+  },
+  {
+   "nr": 10,
+   "typ": "objekt",
+   "kapitel": 3,
+   "start": 46.47,
+   "dauer": 6.758,
+   "emotion": "erklaerend",
+   "text": "Neunzehnhundertfünfundachtzig fanden Forscher: Schon investierte Zeit kann Menschen an einer schlechten Wahl festhalten lassen."
+  },
+  {
+   "nr": 11,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 53.228,
+   "dauer": 5.774,
+   "emotion": "traurig",
+   "text": "Die Nächte sind weg. Egal, was du jetzt machst. Die Frage ist nur: Was hilft ab morgen?"
+  },
+  {
+   "nr": 12,
+   "typ": "atelier",
+   "kapitel": 4,
+   "start": 59.002,
+   "dauer": 3.038,
+   "emotion": "erzaehlend",
+   "text": "Du nimmst den Schrauber. Die erste Schraube quietscht."
+  },
+  {
+   "nr": 13,
+   "typ": "atelier",
+   "kapitel": 4,
+   "start": 62.04,
+   "dauer": 4.046,
+   "emotion": "erzaehlend",
+   "text": "Eine Stunde später ist die Mitte offen. Licht fällt durch den Gang."
+  },
+  {
+   "nr": 14,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 66.086,
+   "dauer": 4.502,
+   "emotion": "froh",
+   "text": "Eda geht einmal hindurch. Mit Rucksack. Ohne hängenzubleiben."
+  },
+  {
+   "nr": 15,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 70.588,
+   "dauer": 4.886,
+   "emotion": "erzaehlend",
+   "text": "Du stellst das erste Bauteil in die Ecke. Gestern hast du es noch dein bestes genannt."
+  }
+ ]
+}

@@ -1,0 +1,149 @@
+{
+ "dauer": 75.538,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "atelier",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 5.174,
+   "emotion": "erzaehlend",
+   "text": "Du zählst gelbe Karten. Und übersiehst deine beste Freundin."
+  },
+  {
+   "nr": 2,
+   "typ": "titel",
+   "kapitel": 1,
+   "start": 5.174,
+   "dauer": 1.0,
+   "emotion": "erzaehlend",
+   "text": "Morgen in drei Tagen eröffnest du die Schulausstellung."
+  },
+  {
+   "nr": 3,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 6.174,
+   "dauer": 5.942,
+   "emotion": "erzaehlend",
+   "text": "Thema: Wahrnehmung. Zusammen mit Eda. Und du willst keinen einzigen Fehler machen. Nicht einen."
+  },
+  {
+   "nr": 4,
+   "typ": "atelier",
+   "kapitel": 2,
+   "start": 12.116,
+   "dauer": 5.894,
+   "emotion": "erzaehlend",
+   "text": "Generalprobe im Vorführraum. Die Vorhänge sind zu. Der Projektor bläst warme Luft in dein Gesicht."
+  },
+  {
+   "nr": 5,
+   "typ": "objekt",
+   "kapitel": 2,
+   "start": 18.01,
+   "dauer": 4.238,
+   "emotion": "erklaerend",
+   "text": "Auf der Leinwand fliegen Karten durcheinander. Deine Aufgabe: alle gelben zählen."
+  },
+  {
+   "nr": 6,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 22.248,
+   "dauer": 6.71,
+   "emotion": "erzaehlend",
+   "text": "Klack. Klack. Klack. Du zählst laut mit. Zwölf. Kein Fehler."
+  },
+  {
+   "nr": 7,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 28.958,
+   "dauer": 3.638,
+   "emotion": "erzaehlend",
+   "text": "„Zwölf. Super. Hast du sonst was gesehen?“"
+  },
+  {
+   "nr": 8,
+   "typ": "atelier",
+   "kapitel": 3,
+   "start": 32.596,
+   "dauer": 2.75,
+   "emotion": "erzaehlend",
+   "text": "Eda. Deine beste Freundin. Seit der fünften Klasse."
+  },
+  {
+   "nr": 9,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 35.346,
+   "dauer": 3.038,
+   "emotion": "erzaehlend",
+   "text": "Du schüttelst den Kopf. Da war nichts außer Karten."
+  },
+  {
+   "nr": 10,
+   "typ": "atelier",
+   "kapitel": 3,
+   "start": 38.384,
+   "dauer": 6.182,
+   "emotion": "erzaehlend",
+   "text": "Frau Sen, eure Lehrerin, spult die Aufnahme zurück. Sie lächelt komisch. Als wüsste sie etwas."
+  },
+  {
+   "nr": 11,
+   "typ": "objekt",
+   "kapitel": 3,
+   "start": 44.566,
+   "dauer": 7.382,
+   "emotion": "erklaerend",
+   "text": "Neunzehnhundertneunundneunzig zeigten zwei Forscher: Wer gezielt auf etwas achtet, kann Unerwartetes übersehen."
+  },
+  {
+   "nr": 12,
+   "typ": "atelier",
+   "kapitel": 3,
+   "start": 51.948,
+   "dauer": 4.478,
+   "emotion": "erzaehlend",
+   "text": "Sekunde einundvierzig. Am Rand des Bildes hebt jemand die Hand."
+  },
+  {
+   "nr": 13,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 56.426,
+   "dauer": 4.67,
+   "emotion": "traurig",
+   "text": "Es ist Eda. Sie winkt. Sie zeigt auf ihr Blatt. Sie braucht Hilfe."
+  },
+  {
+   "nr": 14,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 61.096,
+   "dauer": 4.91,
+   "emotion": "traurig",
+   "text": "Dein Gesicht wird heiß. Du hast die ganze Zeit hingeschaut. Und trotzdem nichts gesehen."
+  },
+  {
+   "nr": 15,
+   "typ": "atelier",
+   "kapitel": 4,
+   "start": 66.006,
+   "dauer": 4.814,
+   "emotion": "erzaehlend",
+   "text": "Frau Sen fragt, ob ihr den Moment herausschneidet. Du sagst: „Der bleibt drin.“"
+  },
+  {
+   "nr": 16,
+   "typ": "atelier",
+   "kapitel": 5,
+   "start": 70.82,
+   "dauer": 4.718,
+   "emotion": "erzaehlend",
+   "text": "Dann läuft die Aufnahme weiter. Eda stand die ganze Zeit direkt neben dir."
+  }
+ ]
+}
