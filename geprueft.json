@@ -2160,6 +2160,66 @@
    "bild_s": 72.08,
    "ton_s": 72.11,
    "lufs": -14.6
+  },
+  "taeglich/s07-f01.mp4": {
+   "ok": true,
+   "bild_s": 75.0,
+   "ton_s": 75.03,
+   "lufs": -14.6
+  },
+  "taeglich/s07-f02.mp4": {
+   "ok": true,
+   "bild_s": 77.52,
+   "ton_s": 77.5,
+   "lufs": -14.6
+  },
+  "taeglich/s07-f03.mp4": {
+   "ok": true,
+   "bild_s": 70.68,
+   "ton_s": 70.68,
+   "lufs": -14.6
+  },
+  "taeglich/s07-f04.mp4": {
+   "ok": true,
+   "bild_s": 74.88,
+   "ton_s": 74.88,
+   "lufs": -14.6
+  },
+  "taeglich/s07-f05.mp4": {
+   "ok": true,
+   "bild_s": 72.93,
+   "ton_s": 72.92,
+   "lufs": -14.6
+  },
+  "taeglich/s07-f06.mp4": {
+   "ok": true,
+   "bild_s": 65.23,
+   "ton_s": 65.26,
+   "lufs": -14.6
+  },
+  "taeglich/s07-f07.mp4": {
+   "ok": true,
+   "bild_s": 64.8,
+   "ton_s": 64.79,
+   "lufs": -14.6
+  },
+  "taeglich/s07-f08.mp4": {
+   "ok": true,
+   "bild_s": 65.98,
+   "ton_s": 65.96,
+   "lufs": -14.5
+  },
+  "taeglich/s07-f09.mp4": {
+   "ok": true,
+   "bild_s": 74.33,
+   "ton_s": 74.33,
+   "lufs": -14.6
+  },
+  "taeglich/s07-f10.mp4": {
+   "ok": true,
+   "bild_s": 71.1,
+   "ton_s": 71.12,
+   "lufs": -14.6
   }
  },
  "serien": {
@@ -2522,6 +2582,11 @@
   },
   "s06": {
    "titel": "Ein Zimmer weniger",
+   "folgen": 10,
+   "tiktok_teile": []
+  },
+  "s07": {
+   "titel": "Du warst dir sicher",
    "folgen": 10,
    "tiktok_teile": []
   }
