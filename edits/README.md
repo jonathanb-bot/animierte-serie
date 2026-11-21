@@ -28,7 +28,8 @@ Kommt im Chat eine MP3 (oder ein Reel-Link) **ohne weitere Erklärung**, ist das
 - Bilder der Künstler gern von Instagram und Genius; Fotos, die genau zur Zeile passen (z. B. Kino-Leuchttafel bei „Film“, Porsche-Plakette bei „Carrera S“).
 - Der Ausschnitt richtet sich nach Jonathans Angabe (z. B. „von Ralphs Part zu Lucios Part“), 30–45 s sind gut.
 - **Liefern:** volle Qualität direkt im Chat (SendUserFile), zusätzlich Download-Link auf Branch `edits-download` (dort unter 100 MB, sonst zweipassig auf ca. 15 Mbit/s komprimieren).
-- Waffen und Drogen nur als Text, nie als Bild.
+- Waffen und Drogen: seit Goldgräber (17.11.) auch als Grafik erlaubt.
+- **Nur Bilder vom Künstler selbst** (Jonathan 21.11. bei „2 Sitza“): keine Stockfotos fremder Leute/Orte; Fotos und Clips vom Instagram des Künstlers, realistische Grafik-Elemente (Mitteilung, Blitzerfoto, Bordkarte …) darüber sind okay.
 
 ## film/
 Gangsta Ralph & Lucio101 – „Film“, Song 31,20–76,88 s (Ende Part Ralph, Pre-Hook + Hook, Part Lucio bis „Carrera S“), 100 BPM, Kino-Look. Fotos von Instagram (@gangsta__ralph, @luciobene101) und Genius. Jonathan: „wirklich perfekt“.
