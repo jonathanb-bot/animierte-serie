@@ -86,7 +86,7 @@ const CLIPS = { gold1: 58, gold2: 60, fahrt: 78, eiffel: 30, oben: 30, tuer: 30,
 const CL = {}; for (const k in CLIPS) CL[k] = { n: CLIPS[k], img: null };
 async function clipLaden(k) { const c = CL[k]; if (c.img) return; c.img = await Promise.all(Array.from({ length: c.n }, (_, i) => lade(`clips/${k}/${String(i + 1).padStart(3, "0")}.jpg`))); }
 function clipBild(k, T, t0, tempo = 1) { const c = CL[k]; if (!c.img) return null; return c.img[clamp(Math.floor((T - t0) * 30 * tempo), 0, c.n - 1)]; }
-const BILDER = ["alt17", "pool", "jetski", "porsche_frau", "sonnenstrasse", "porsche_meer", "lenkrad", "sw", "palme", "streife", "blitzer", "blaulicht", "solarium", "cabrio", "lichter", "strasse", "pizza", "nizza", "rom", "eiffel1", "eiffel2", "eiffel3"];
+const BILDER = ["p7", "p126", "p94", "p18", "p75", "p57", "p19", "p3", "p154", "p130", "p16", "p117", "p0", "p121", "p112", "p99", "p102", "p100", "p111", "p115", "p97", "p103", "sw"];
 async function init() {
   ZL = await (await fetch("zeitleiste.json")).json();
   await Promise.all(BILDER.map(async k => IMG[k] = await lade("assets/" + k + ".jpg")));
@@ -159,7 +159,7 @@ function blaulicht(T, st = 1) { const p = (T * 3.1) % 1, a = Math.pow(Math.max(0
   const g2 = ctx.createRadialGradient(W * 0.8, 260, 20, W * 0.8, 260, 800); g2.addColorStop(0, `rgba(120,170,255,${b})`); g2.addColorStop(1, "rgba(0,0,40,0)"); ctx.fillStyle = g2; ctx.fillRect(0, 0, W, H); ctx.restore(); }
 // ---------- realistische Elemente ----------
 function sf(gew, px) { return `${gew} ${px}px -apple-system, "SF Pro Display", UI`; }
-function sperrbild(T, t0) { const im = IMG.jetski; deck(im, T, t0, { zoom: 1.12, fahrt: 0.02 }); ctx.fillStyle = "rgba(0,0,0,0.12)"; ctx.fillRect(0, 0, W, H);
+function sperrbild(T, t0) { const im = IMG.p18; deck(im, T, t0, { zoom: 1.12, fahrt: 0.02 }); ctx.fillStyle = "rgba(0,0,0,0.12)"; ctx.fillRect(0, 0, W, H);
   ctx.save(); ctx.textAlign = "center"; ctx.fillStyle = "rgba(255,255,255,0.92)"; ctx.shadowColor = "rgba(0,0,0,0.25)"; ctx.shadowBlur = 20; ctx.font = "700 40px UI"; ctx.fillText("Samstag, 21. Juni", W / 2, 300); ctx.font = "700 230px UI"; ctx.fillText("11:52", W / 2, 520); ctx.restore(); }
 function mitteilung(T, t0, titel, text, y = 640) { const d = T - t0 + 0.05; if (d < 0) return; const q = zurueck(d / 0.38), x = 50, w = W - 100, h = 170, yy = lerp(-220, y, q);
   ctx.save(); ctx.shadowColor = "rgba(0,0,0,0.3)"; ctx.shadowBlur = 50; ctx.shadowOffsetY = 18; rr(x, yy, w, h, 52); ctx.fillStyle = "rgba(245,245,245,0.78)"; ctx.fill(); ctx.shadowColor = "transparent";
@@ -197,24 +197,24 @@ function unten(T, z, yU = 1700, fs = 92) { const ws = z.woerter.filter(w => T >=
 // ---------- Einstellungen pro Zeile ----------
 // Jede Zeile: Liste von Einstellungen {t: Sekunde | w: Wort-Index, b: Bild | c: Clip, art}
 const LIN = [
-  [{ t: 0, b: "palme" }, { t: 1.967, b: "porsche_meer", art: "karte" }, { t: 3.933, c: "gold1", art: "rahmen", tempo: 0.95 }, { t: 5.9, b: "porsche_frau", art: "karte" }, { t: 7.867, c: "oben", art: "rahmen", tempo: 0.5 }, { t: 9.5, art: "sperre" }],
+  [{ t: 0, b: "p7", art: "voll" }, { t: 1.967, b: "p126", art: "karte" }, { t: 3.933, c: "gold1", art: "rahmen", tempo: 0.95 }, { t: 5.9, b: "p94", art: "karte" }, { t: 7.867, c: "oben", art: "rahmen", tempo: 0.5 }, { t: 9.5, art: "sperre" }],
   [{ w: 0, c: "gold3", art: "rahmen", tempo: 1.2 }, { w: 6, c: "tuer", art: "rahmen", tempo: 0.6 }],
-  [{ w: 0, b: "streife" }, { w: 7, b: "blitzer" }],
-  [{ w: 0, c: "polizei", art: "voll", tempo: 0.75 }, { w: 3, b: "solarium" }],
-  [{ w: 0, b: "lenkrad", art: "karte" }],
-  [{ w: 0, b: "cabrio", fx: 0.1 }, { w: 6, c: "pink", art: "voll" }],
-  [{ w: 0, b: "lichter" }, { w: 7, b: "strasse" }],
-  [{ w: 0, b: "alt17", art: "polaroid", text: "damals" }, { w: 7, b: "pool", art: "polaroid", text: "heute" }],
-  [{ w: 0, b: "sonnenstrasse", art: "karte" }, { w: 8, b: "pizza" }],
-  [{ w: 0, c: "flug", art: "voll", tempo: 0.75 }, { w: 4, b: "nizza" }, { w: 9, b: "rom" }],
-  [{ w: 0, c: "eiffel", art: "rahmen", tempo: 0.55 }, { w: 6, b: "eiffel1" }],
-  [{ w: 0, b: "eiffel2" }, { w: 5, b: "eiffel3" }],
+  [{ w: 0, b: "p75", art: "voll" }, { w: 7, b: "p57", art: "karte" }],
+  [{ w: 0, b: "p19", art: "voll" }, { w: 3, b: "p3", art: "voll" }],
+  [{ w: 0, b: "p154", art: "karte" }],
+  [{ w: 0, b: "p130", art: "karte" }, { w: 6, c: "pink", art: "voll" }],
+  [{ w: 0, b: "p16", art: "voll" }, { w: 7, b: "p117", art: "karte" }],
+  [{ w: 0, b: "p0", art: "polaroid", text: "damals" }, { w: 7, b: "p121", art: "polaroid", text: "heute" }],
+  [{ w: 0, b: "p112", art: "voll" }, { w: 8, b: "p99", art: "karte" }],
+  [{ w: 0, b: "p102", art: "voll" }, { w: 4, b: "p100", art: "karte" }, { w: 9, b: "p111", art: "karte" }],
+  [{ w: 0, c: "eiffel", art: "rahmen", tempo: 0.55 }, { w: 6, b: "p115", art: "karte" }],
+  [{ w: 0, b: "p97", art: "voll" }, { w: 5, b: "p103", art: "karte" }],
   [{ w: 0, b: "sw", art: "karte" }],
 ];
 const NACHT = new Set([3, 12]);
 const EXTRA = [
-  (T, z, e) => { if (e === 0) { const a = clamp(1 - (T - 1.6) / 0.35, 0, 1) * clamp((T - 0.15) / 0.3, 0, 1); ctx.save(); ctx.globalAlpha = a; ctx.textAlign = "center"; ctx.shadowColor = "rgba(0,0,0,0.4)"; ctx.shadowBlur = 30; ctx.font = "700 42px UI"; ctx.fillStyle = "#fff"; ctx.fillText("P A S H A N I M", W / 2, 820);
-      ctx.font = "900 210px Titel"; ctx.save(); ctx.translate(W / 2, 1020); ctx.scale(0.92, 1); ctx.fillStyle = SONNE; ctx.fillText("2 SITZA", 0, 0); ctx.restore(); ctx.restore(); blende(T, W * 0.78, 330, 0.8); }
+  (T, z, e) => { if (e === 0) { const a = clamp(1 - (T - 1.6) / 0.35, 0, 1) * clamp((T - 0.15) / 0.3, 0, 1); ctx.save(); ctx.globalAlpha = a; ctx.textAlign = "center"; ctx.shadowColor = "rgba(0,0,0,0.4)"; ctx.shadowBlur = 30; ctx.font = "700 42px UI"; ctx.fillStyle = "#fff"; ctx.fillText("P A S H A N I M", W / 2, 1300);
+      ctx.font = "900 210px Titel"; ctx.save(); ctx.translate(W / 2, 1500); ctx.scale(0.92, 1); ctx.fillStyle = SONNE; ctx.fillText("2 SITZA", 0, 0); ctx.restore(); ctx.restore(); blende(T, W * 0.78, 330, 0.8); }
     if (e === 5) mitteilung(T, wz(z, 0), "Maps", "Die App läuft im Hintergrund"); return e === 5; },
   (T, z, e) => { tacho(T, wz(z, 1), wz(z, 6)); },
   (T, z, e) => { if (e === 1) { blitzWeiss(T, wz(z, 7), 1, 0.32); blitzerFoto(T, wz(z, 7) + 0.05); } },
