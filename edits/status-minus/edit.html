@@ -82,11 +82,11 @@ function klappe(T, t0, x, y, w, h, alt, neu) { const d = T - t0, q = clamp(d / 0
   const sy = Math.abs(Math.cos(q * Math.PI)); ctx.translate(x + w / 2, y + h / 2); ctx.scale(1, Math.max(0.03, sy)); ctx.fillText(zeichen, 0, h * 0.29); ctx.restore();
   ctx.fillStyle = "rgba(0,0,0,0.6)"; ctx.fillRect(x, y + h / 2 - 3, w, 6); }
 const ROT = "#e0283c";
-const CLIPS = {auto: 60, lambo: 75, lobby: 75, millionaer: 60, nacht: 60, reich: 75, rolls: 135};
+const CLIPS = {auto: 60, frueher: 75, lambo: 75, lobby: 75, millionaer: 60, nacht: 60, reich: 75, rolls: 135, uhr: 51, weiss: 54};
 const CL = {}; for (const k in CLIPS) CL[k] = { n: CLIPS[k], img: null };
 async function clipLaden(k) { const c = CL[k]; if (c.img) return; c.img = await Promise.all(Array.from({ length: c.n }, (_, i) => lade(`clips/${k}/${String(i + 1).padStart(3, "0")}.jpg`))); }
 function clipBild(k, T, t0, tempo = 1) { const c = CL[k]; if (!c.img) return null; return c.img[clamp(Math.floor((T - t0) * 30 * tempo), 0, c.n - 1)]; }
-const BILDER = ["eingiessen", "geld50", "geldregen", "goose", "monaco", "monaco2", "patek", "pateksign", "portemonnaie", "rm", "rollsfahrt", "tiffany", "uhrblick", "v12", "v12b"];
+const BILDER = ["eingiessen", "geld50", "geldregen", "goose", "monaco", "monaco2", "patek", "patek2", "pateksign", "portemonnaie", "rm", "rollsfahrt", "tiffany", "uhrblick", "v12", "v12b"];
 async function init() {
   ZL = await (await fetch("zeitleiste.json")).json();
   await Promise.all(BILDER.map(async k => IMG[k] = await lade("assets/" + k + ".jpg")));
@@ -193,15 +193,15 @@ function unten(T, z, yU = 1700, fs = 90) { const ws = z.woerter.filter(w => T >=
 // ---------- Einstellungen pro Zeile ----------
 const LIN = [
   [{ w: 0, c: "millionaer", art: "voll" }, { w: 4, b: "geldregen" }],
-  [{ w: 0, b: "portemonnaie", grau: true }],
+  [{ w: 0, c: "frueher", art: "voll", grau: true }],
   [{ w: 0, c: "reich", art: "voll", tempo: 0.8 }],
   [{ w: 0, c: "nacht", art: "voll" }, { w: 4, b: "geld50" }],
-  [{ w: 0, b: "rm", zoom: 1.8, fx: -0.75, fy: -0.6 }],
+  [{ w: 0, c: "uhr", art: "voll", tempo: 0.62 }],
   [{ w: 0, b: "patek" }, { w: 4, b: "tiffany" }],
   [{ w: 0, c: "rolls", art: "voll", tempo: 0.9 }, { w: 8, b: "monaco" }],
-  [{ w: 0, b: "v12" }, { w: 6, b: "goose" }],
-  [{ w: 0, b: "uhrblick" }, { w: 2, c: "auto", art: "voll" }],
-  [{ w: 0, b: "pateksign" }, { w: 4, c: "lambo", art: "voll" }],
+  [{ w: 0, b: "v12" }, { w: 6, b: "goose", zoom: 1.7, fx: -1, fy: -0.2 }],
+  [{ w: 0, c: "weiss", art: "voll", tempo: 0.55 }, { w: 2, c: "auto", art: "voll" }],
+  [{ w: 0, b: "patek2" }, { w: 4, c: "lambo", art: "voll" }],
   [{ w: 0, b: "rollsfahrt" }, { w: 8, b: "monaco2" }],
   [{ w: 0, b: "v12b" }, { w: 6, b: "eingiessen" }],
 ];
@@ -222,7 +222,7 @@ const EXTRA = [
 function zeile(nr) { return (T, z) => { const L = LIN[nr], ts = L.map(s => s.w === 0 ? z.a : wz(z, s.w) - 0.04); let e = 0; for (let i = 0; i < L.length; i++) if (T >= ts[i]) e = i;
   const s = L[e], t0 = ts[e]; let st = 1; if (e > 0) { const d = T - t0; if (d < 0.3) st = 1 + Math.exp(-d / 0.08) * 0.05; }
   ctx.save(); ctx.translate(W / 2, H / 2); ctx.scale(st, st); ctx.translate(-W / 2, -H / 2);
-  if (s.c) deck(clipBild(s.c, T, t0, s.tempo || 1), T, t0, { zoom: 1.04, fahrt: 0.02 });
+  if (s.c) deck(clipBild(s.c, T, t0, s.tempo || 1), T, t0, { zoom: 1.04, fahrt: 0.02, filter: s.grau ? "grayscale(1) contrast(1.15) brightness(0.9)" : "none" });
   else deck(IMG[s.b], T, t0, { zoom: s.zoom || 1.05, fx: s.fx || 0, fy: s.fy || 0, fahrt: 0.035, filter: s.grau ? "grayscale(1) contrast(1.1) brightness(0.9)" : "none" });
   ctx.restore();
   luxus(T, nr === 1 ? 0.5 : 1); verlauf(0.35);
