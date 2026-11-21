@@ -155,7 +155,7 @@ def main(argv=None) -> int:
         plan.setdefault("loeschen", []).extend(alt); loeschen |= set(alt)
         print(f"  {len(alt)} alte englische Posts zurückgezogen")
     frueh = dt.datetime.now(V.BERLIN).replace(tzinfo=None, second=0, microsecond=0) + S.VORLAUF
-    tags_txt, em = " ".join(en["hashtags"]), st.get("emoji", "")
+    tags_txt, em = V.zwei_hashtags(en["hashtags"]), st.get("emoji", "")  # höchstens 2 (#38)
     neu_teile = [] if a.ohne_tiktok else [t for t in teile if f"taeglich-tiktok-en-{a.staffel}-teil-{t['k']}{endung}" not in ids]
     neu = []
     for t, z in zip(neu_teile, zeiten_en(plan, loeschen, a.staffel, neu_teile, frueh)):
@@ -163,7 +163,7 @@ def main(argv=None) -> int:
                 "zeit": z.strftime("%Y-%m-%dT%H:%M:00"), "serie": "taeglich-en", "video": S.RAW.format(pfad=t["pfad"]),
                 "text": (f"{en['titel']} – Part {t['k']}/{len(teile)} (Episode {t['folgen'][0]}–{t['folgen'][-1]}) {em}\n"
                          + " · ".join(en["folgen"][n - 1] for n in t["folgen"])
-                         + f"\n{en['beschreibung']}\nFollow so you don't miss a part!\n\n{tags_txt} #fyp")}
+                         + f"\n{en['beschreibung']}\nFollow so you don't miss a part!\n\n{tags_txt}")}
         plan["posts"].append(post); neu.append(post); print(f"  {post['id']}: {post['zeit']}")
 
     # Instagram + YouTube englisch: jede Folge ein Post, eigene Warteschlange je Konto, nie vor dem deutschen Gegenstück
@@ -195,13 +195,13 @@ def main(argv=None) -> int:
             post = {"id": pid, "platform": platform, "konto": konto, "zeit": z.strftime("%Y-%m-%dT%H:%M:00"), "serie": "taeglich-en",
                     "video": S.RAW.format(pfad=f["pfad"])}
             if platform == "youtube":
-                post["titel"] = f"{en['titel']} – Episode {nr}: {en['folgen'][nr - 1]} {em} #shorts"[:100]
+                post["titel"] = f"{en['titel']} – Episode {nr}: {en['folgen'][nr - 1]} {em}"[:100]
                 post["tags"] = (en.get("tags") or ["animation", "story"]) + ["shorts"]
-                post["text"] = f"{en['beschreibung']}\n{weiter}\n\n{tags_txt} #shorts"
+                post["text"] = f"{en['beschreibung']}\n{weiter}\n\n{tags_txt}"
             elif platform == "tiktok":
-                post["text"] = f"{en['titel']} – Episode {nr}: {en['folgen'][nr - 1]} {em}\n{en['beschreibung']}\n{weiter}\n\n{tags_txt} #fyp"
+                post["text"] = f"{en['titel']} – Episode {nr}: {en['folgen'][nr - 1]} {em}\n{en['beschreibung']}\n{weiter}\n\n{tags_txt}"
             else:
-                post["text"] = f"{en['titel']} – Episode {nr}: {en['folgen'][nr - 1]} {em}\n{en['beschreibung']}\n{weiter}\n\n{tags_txt} #reels"
+                post["text"] = f"{en['titel']} – Episode {nr}: {en['folgen'][nr - 1]} {em}\n{en['beschreibung']}\n{weiter}\n\n{tags_txt}"
             plan["posts"].append(post); neu.append(post); letzte = z; print(f"  {pid}: {post['zeit']}")
     if not neu:
         print("Alle englischen Posts stehen schon im Plan."); return 0

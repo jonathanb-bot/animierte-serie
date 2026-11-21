@@ -186,6 +186,24 @@ STREUUNG_MIN = 30
 _zufall = random.SystemRandom()
 
 
+# Issue #38 Punkt 6 (Jonathan 20.11., gilt seit der Auswertung 21.11.): höchstens 2 Hashtags pro Post,
+# beide passend zum Inhalt, kein #fyp/#viral/#reels/#shorts. Bereits eingeplante Posts bleiben, wie sie sind.
+ALLGEMEINE_TAGS = {"#fyp", "#foryou", "#fy", "#viral", "#trending", "#reels", "#shorts", "#deutsch", "#english",
+                   "#story", "#storytime", "#serie", "#series", "#fortsetzung"}
+
+
+def zwei_hashtags(tags) -> str:
+    """Höchstens 2 inhaltlich passende Hashtags (Reihenfolge aus der Liste, allgemeine werden übersprungen)."""
+    gut = []
+    for t in tags or []:
+        t = t if t.startswith("#") else f"#{t}"
+        if t.lower() not in ALLGEMEINE_TAGS and t.lower() not in (g.lower() for g in gut):
+            gut.append(t)
+    if len(gut) < 2 and "#animation" not in gut:
+        gut.append("#animation")
+    return " ".join(gut[:2])
+
+
 def streuen(z: dt.datetime, frueh: dt.datetime | None = None) -> dt.datetime:
     """Takt-Zeit `z` um zufällig −30 … +30 Minuten verschieben (nie vor `frueh`)."""
     # nie 0: kein Post genau zur Takt-Zeit (Issue #26; 6.11. lag yt-s01-f10-v2 so exakt auf 20:30)
@@ -205,7 +223,7 @@ def einplanen(vid: str, eintrag: dict, zeit: dt.datetime, yt_zeit: dt.datetime, 
     loeschen = set(plan.get("loeschen") or [])
     ids = {p["id"] for p in plan["posts"]}
     titel, em = eintrag["titel"], eintrag.get("emoji", "")
-    tags_txt = " ".join(eintrag.get("hashtags", ["#animation", "#story", "#storytime"]))
+    tags_txt = zwei_hashtags(eintrag.get("hashtags"))
     kopf = f"{titel} {em}".strip()
     neu = []
     for platform, z in (("tiktok", zeit), ("instagram", zeit), ("youtube", yt_zeit)):
@@ -218,13 +236,13 @@ def einplanen(vid: str, eintrag: dict, zeit: dt.datetime, yt_zeit: dt.datetime, 
         z = streuen(freie_zeit(plan["posts"], loeschen, platform, z))
         post = {"id": pid, "platform": platform, "zeit": z.strftime("%Y-%m-%dT%H:%M:00"), "serie": "taeglich", "video": url}
         if platform == "tiktok":
-            post["text"] = f"{kopf}\n{eintrag['beschreibung']}\n{'Folg mir, dann verpasst du keine Geschichte!' if endung else 'Folg mir für die nächste Geschichte!'}\n\n{tags_txt} #fyp"
+            post["text"] = f"{kopf}\n{eintrag['beschreibung']}\n{'Folg mir, dann verpasst du keine Geschichte!' if endung else 'Folg mir für die nächste Geschichte!'}\n\n{tags_txt}"
         elif platform == "instagram":
-            post["text"] = f"{kopf}\n{eintrag['beschreibung']}\n\n{tags_txt} #reels"
+            post["text"] = f"{kopf}\n{eintrag['beschreibung']}\n\n{tags_txt}"
         else:
-            post["titel"] = f"{kopf} #shorts"[:100]
+            post["titel"] = kopf[:100]
             post["tags"] = (eintrag.get("tags") or ["animation", "story"]) + ["shorts"]
-            post["text"] = f"{eintrag['beschreibung']}\nAbonnieren für die nächste Geschichte!\n\n{tags_txt} #shorts"
+            post["text"] = f"{eintrag['beschreibung']}\nAbonnieren für die nächste Geschichte!\n\n{tags_txt}"
         plan["posts"].append(post)
         neu.append(post)
     if not neu:

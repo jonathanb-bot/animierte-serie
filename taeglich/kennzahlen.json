@@ -341,6 +341,45 @@
    "erkenntnis": "Horror lang (s03) verliert auf TikTok zwischen 3 und 6 s am meisten (34→14 %), weil nach dem Hook Vorgeschichte kommt; Hooks mit dir und deiner Familie (video-001, s01-f09, s02-f01) halten. YouTube deutsch weiter gedrosselt.",
    "posting_fehler": 0,
    "vidiq_credits_danach": 109
+  },
+  {
+   "datum": "2026-11-21T13:50",
+   "quelle": "Große Auswertung (Zernio 481 Posts + vidIQ YouTube Studio)",
+   "tiktok": {
+    "follower": 75,
+    "followers_30_tage": "+27/-3",
+    "likes_gesamt": 1826,
+    "videos": 85,
+    "median_letzte_20": 11
+   },
+   "instagram": {
+    "follower": 18,
+    "aufrufe_30_tage": 56166,
+    "reichweite_30_tage": 29193,
+    "median_letzte_20": 164
+   },
+   "youtube": {
+    "abonnenten": 69,
+    "aufrufe_30_tage": 28399,
+    "minuten_30_tage": 8549,
+    "abos_30_tage": "+73/-11",
+    "median_letzte_20": 8.5,
+    "angesehen_anteil_median": 0.55
+   },
+   "tiktok_eng": {
+    "follower": 5,
+    "median_letzte_20": 195
+   },
+   "youtube_eng": {
+    "follower": 22,
+    "aufrufe_30_tage": 6329,
+    "median_letzte_20": 3
+   },
+   "instagram_eng": {
+    "follower": 4,
+    "median_letzte_20": 112
+   },
+   "erkenntnis": "Masse-Test bringt beide TikTok-Konten an die 0-Grenze; Instagram deutsch hält; YouTube beide Kanäle gedrosselt; Bis zum Mond einzige Mitmach-Serie mit echter Beteiligung."
   }
  ],
  "letzte_analyse": "taeglich/analyse/2026-11-08.md"

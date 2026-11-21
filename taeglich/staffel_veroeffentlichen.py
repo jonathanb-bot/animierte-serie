@@ -239,9 +239,9 @@ def main(argv=None) -> int:
     # neue Fassung: Text leicht anders, sonst lehnt Zernio den Post als Doppel ab (gleicher Inhalt innerhalb von 24 h, 5./6.11.)
     neu_txt = ""
     frueh = dt.datetime.now(V.BERLIN).replace(tzinfo=None, second=0, microsecond=0) + VORLAUF
-    em, tags_txt, titel = st.get("emoji", ""), " ".join(st["hashtags"]), st["titel"]
-    if a.ersetzen:  # neue Fassung: Text leicht anders, sonst sperrt Zernio den gleichen Inhalt 24 h
-        tags_txt += " #serie"
+    em, tags_txt, titel = st.get("emoji", ""), V.zwei_hashtags(st["hashtags"]), st["titel"]  # höchstens 2 (#38)
+    if a.ersetzen:  # neue Fassung: Text leicht anders, sonst sperrt Zernio den gleichen Inhalt 24 h (kein 3. Hashtag, #38)
+        neu_txt = "\nJetzt in neuer Fassung."
     neu = []
 
     def anhaengen(platform: str, eintraege: list[dict]) -> None:
@@ -270,7 +270,7 @@ def main(argv=None) -> int:
     if a.masse:
         anhaengen("tiktok", [{
             "id": f"taeglich-tiktok-{f['id']}{endung}", "video": RAW.format(pfad=f"taeglich/{f['id']}.mp4"),
-            "text": f"{titel} – Folge {f['nr']}: {f['titel']} {em}\n{f.get('beschreibung') or st['beschreibung']}\n{weiter(f, 'mir')}\n\n{tags_txt} #fyp"}
+            "text": f"{titel} – Folge {f['nr']}: {f['titel']} {em}\n{f.get('beschreibung') or st['beschreibung']}\n{weiter(f, 'mir')}\n\n{tags_txt}"}
             for f in folgen if f["nr"] >= a.ab])
     else: anhaengen("tiktok", [{
         "id": f"taeglich-tiktok-{a.staffel}-teil-{t['k']}{endung}",
@@ -280,15 +280,15 @@ def main(argv=None) -> int:
                  + f"\n{st['beschreibung']}\n"
                  # neue Fassung: Text leicht anders, Zernio sperrt identischen Inhalt 24 h (5.11.)
                  + ("Folg mir, damit du den nächsten Teil nicht verpasst!" if endung else "Folg mir, damit du keinen Teil verpasst!")
-                 + f"\n\n{tags_txt} #fyp")} for t in teile if t["folgen"][0] >= a.ab])
+                 + f"\n\n{tags_txt}")} for t in teile if t["folgen"][0] >= a.ab])
     anhaengen("instagram", [{
         "id": f"taeglich-insta-{f['id']}{endung}", "video": RAW.format(pfad=f"taeglich/{f['id']}.mp4"),
-        "text": f"{titel} – Folge {f['nr']}: {f['titel']} {em}\n{f.get('beschreibung') or st['beschreibung']}\n{weiter(f, '@sto.rys4you')}{neu_txt}\n\n{tags_txt} #reels"} for f in folgen if f["nr"] >= a.ab])
+        "text": f"{titel} – Folge {f['nr']}: {f['titel']} {em}\n{f.get('beschreibung') or st['beschreibung']}\n{weiter(f, '@sto.rys4you')}{neu_txt}\n\n{tags_txt}"} for f in folgen if f["nr"] >= a.ab])
     anhaengen("youtube", [{
         "id": f"taeglich-yt-{f['id']}{endung}", "video": RAW.format(pfad=f"taeglich/{f['id']}.mp4"),
-        "titel": f"{titel} – Folge {f['nr']}: {f['titel']} {em} #shorts"[:100],
+        "titel": f"{titel} – Folge {f['nr']}: {f['titel']} {em}"[:100],
         "tags": (st.get("tags") or ["animation", "story"]) + ["shorts"],
-        "text": f"{f.get('beschreibung') or st['beschreibung']}\n{weiter(f, None)}{neu_txt}\n\n{tags_txt} #shorts"} for f in folgen if f["nr"] >= a.ab])
+        "text": f"{f.get('beschreibung') or st['beschreibung']}\n{weiter(f, None)}{neu_txt}\n\n{tags_txt}"} for f in folgen if f["nr"] >= a.ab])
 
     for p in neu:
         print(f"  {p['id']}: {p['zeit']}")

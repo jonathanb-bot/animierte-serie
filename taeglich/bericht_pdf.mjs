@@ -13,11 +13,14 @@ const titel = (readFileSync(ein, 'utf8').match(/^#\s+(.+)$/m) || [, basename(ein
 
 const css = `
 @page { size: A4; margin: 16mm 14mm 18mm; }
-body { font-family: "DejaVu Sans", Arial, sans-serif; font-size: 10pt; line-height: 1.45; color: #1d2330; }
+body { font-family: "DejaVu Sans", Arial, sans-serif; font-size: 10pt; line-height: 1.45; color: #1d2330; max-width: none !important; margin: 0 !important; padding: 0 !important; }
+html { max-width: none !important; }
 h1 { font-size: 20pt; color: #2b3a8c; border-bottom: 3px solid #2b3a8c; padding-bottom: 4px; margin-top: 0; }
 h2 { font-size: 14pt; color: #2b3a8c; margin-top: 18px; border-bottom: 1px solid #c9cfe6; padding-bottom: 2px; page-break-after: avoid; }
 h3 { font-size: 11.5pt; color: #3d4a73; margin-top: 12px; page-break-after: avoid; }
-table { border-collapse: collapse; width: 100%; margin: 8px 0; font-size: 8.5pt; page-break-inside: auto; }
+table { border-collapse: collapse; width: 100%; margin: 8px 0; font-size: 8pt; page-break-inside: auto; table-layout: auto; }
+col { width: auto !important; }
+th, td { overflow-wrap: break-word; hyphens: manual; }
 tr { page-break-inside: avoid; }
 th { background: #2b3a8c; color: #fff; text-align: left; padding: 4px 5px; }
 td { border-bottom: 1px solid #dde1ef; padding: 3px 5px; vertical-align: top; }
@@ -30,7 +33,7 @@ const html = execFileSync('pandoc', [ein, '-f', 'gfm', '-t', 'html5', '-s',
   '--metadata', `pagetitle=${titel}`], { encoding: 'utf8' })
   .replace('</head>', `<style>${css}</style></head>`);
 
-const browser = await chromium.launch();
+const browser = await chromium.launch(process.env.CHROMIUM ? { executablePath: process.env.CHROMIUM } : {});  // frischer Container: vorinstallierter Browser
 const page = await browser.newPage();
 await page.setContent(html, { waitUntil: 'load' });
 await page.pdf({ path: aus, format: 'A4', printBackground: true, displayHeaderFooter: true,

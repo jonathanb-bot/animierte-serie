@@ -11,6 +11,26 @@ Jonathans Auftrag vom 1.11.2026:
 - Alles in Du-Form, es **betrifft dich direkt**. **Keine Quizze, keine Fragen ans Publikum.**
 - **KI-Haken beim Posten immer aus** (Jonathans Vorgabe 2.11., Issue #15), besonders auf TikTok (`posten/zernio.mjs` auf `main`: `videoMadeWithAi: false`).
 
+## Regeln aus Issue #38 – gelten seit der großen Auswertung (21.11.2026)
+
+Jonathan 20.11.: „Alles machen, was dort empfohlen wird“ (vidIQ „View Jails“, Marcus Jones, DecodingYT, clicktheory31). Seit 21.11. für alle neuen Videos, Serien und Sprachen. Begründung mit Zahlen: `taeglich/analyse/2026-11-22-abschluss.md`.
+
+1. **Keine Massenware:** höchstens 1 neues Video am Tag pro Plattform (Instagram deutsch bis 2). Der Masse-Test hat beide TikTok-Konten an die 0-Grenze gebracht (Median 282 → 15 deutsch, 721 → 2 englisch). Jedes Video ist eigenständig: eigene Prämisse, eigene Kulisse, eigener Hook, keine Klon-Vorlagen in Serie.
+2. **Klares Kanalversprechen, immer Bewegung im Bild:** nie ein stehendes Bild, während gesprochen wird. Bleibt ein Format mehrere Videos lang bei 300–1.000 Aufrufen hängen, Thema oder Format deutlich ändern.
+3. **Hook ohne Vorwissen:** Rätsel, Problem, Entscheidung, Erinnerung oder Prämisse über dich in den ersten 1–2 s, mit „du/dein“ und möglichst Familie. Kein Einstieg mit Ort, Regel oder Aufzählung. Fällt die Bindung in der Mitte ab, bei den nächsten Folgen die Mitte straffen.
+4. **Absprung-Sekunde finden, hartes Ende:** in der Bindungskurve die Stelle suchen, an der die Leute gehen, und dort straffen. Ende hart auf der Pointe oder dem Cliffhanger, ohne Dank, Abo-Bitte oder Endkarte (#8, #11).
+5. **Nachschnitt wöchentlich (YouTube):** Videos mit gutem Start und klarem Einbruch in YouTube Studio → Editor → Trim & Cut kürzen (iMac-Aufgabe). Jeden Schnitt in `taeglich/analyse/experimente.md` → „Nachschnitt“ mit Zahlen vorher und 7 Tage danach festhalten.
+6. **Höchstens 2 Hashtags pro Post**, beide passend zum Inhalt, kein `#fyp`, `#viral`, `#reels`, `#shorts` (umgesetzt in `veroeffentlichen.py` → `zwei_hashtags`, genutzt von `staffel_veroeffentlichen.py` und `staffel_englisch.py`). Hashtags in `staffeln.json`/`verlauf.json` deshalb mit den zwei passendsten zuerst eintragen.
+7. **Angeheftete Frage als Kommentar** unter dem Video (nicht im Video, #8 bleibt): Zernio kann auf TikTok und YouTube kommentieren und auf allen Plattformen antworten, aber nicht anheften → Anheften über die iMac-Aufgabe. Auf Kommentare antworten, wo es geht.
+8. **Eigenes Vorschaubild für YouTube-Shorts:** stärkstes Bild mit kurzer, fetter Schrift, 0,1 s im Video (nicht am Anfang, das erste Bild bleibt die erste Szene), Auswahl beim Upload über die iMac-Aufgabe.
+9. **Eine Nische, mindestens 30 Shorts:** Die Vielfalt der Testphase (#22) ist vorbei. Vorschlag aus der Auswertung: „Was wäre, wenn du …“ (eigenständige Du-Geschichten aus dem echten Leben, 62–75 s). Jonathan entscheidet. Takt nie abreißen lassen (mindestens 3–4 pro Woche). Nie dasselbe Video auf mehreren Kanälen und keine Neu-Uploads alter Folgen (Englisch ist neu eingesprochen und gilt als eigener Inhalt).
+10. **Tempo:** spätestens alle 3–5 s ein Bildwechsel oder sichtbare Bewegung (Zoom, Schwenk, neues Detail), keine Einstellung ohne neue Information, kurze fette Textschilder an den Schlüsselmomenten (#29). Kein Countdown oder Aufruf am Ende.
+11. **Wegwisch-Quote** (YouTube „Angesehen / Weggewischt“, Ziel über 80 %) und Ø Wiedergabe in % der Länge sind die wichtigsten Kennzahlen je Short (Stand 21.11.: ca. 55 %, kein Short über 80 %).
+12. **Konten vertrauenswürdig:** alle Kanäle bestätigen (Telefon, Identität, Funktionen), Name, Profilbild und Beschreibung passend zur Nische (Aufgabe Jonathan).
+13. **Neuer Kanal:** nur nach Jonathans Entscheidung; dann 5–7 Tage von Hand normal benutzen (keine Bots, keine gekauften Interaktionen), danach täglich in der Nische posten.
+
+Nicht übernommen: „Rage Bait“ und absichtlich kontroverse Sätze (#30), Aufrufe zum Kommentieren im Video (#8), Endkarten (#11).
+
 ## QUALITÄT VOR QUANTITÄT (Jonathans feste Vorgabe 8.11., Issue #30) – gilt vor allem anderen
 
 **Jedes Video muss maximal gut aussehen und klingen. Lieber weniger, dafür jedes sauber.** Mengenziele (jede Nacht eine Staffel, 4 TikToks am Tag, Folgenzahl der Rotation) sind Richtwerte. Sie treten immer hinter die Qualität zurück.
