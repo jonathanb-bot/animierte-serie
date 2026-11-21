@@ -1,5 +1,6 @@
 # Hinweise für Claude
 
+> **MASTER-VORAUSSETZUNG (Jonathan 21.11.): `taeglich/MASTER.md` (Branch `taeglich`) vor jedem neuen Video lesen und die Abnahme (Abschnitt 9) abhaken** – fasst Auswertung, #38, #39, Dopamin-Loop, 7 Content-Gesetze und alle festen Regeln zusammen.
 > **KEINE STAFFEL MEHR – nur noch nach den Analysedaten (Jonathan 21.11., Issue #39):** Keine Staffel und keine Serie wird fortgesetzt („Bis zum Mond“, „Der letzte Raub“, Masse-Test aus). Täglich 1 eigenständiges Video „Was wäre, wenn du …“ (62–75 s, deutsch + englisch) nach `taeglich/analyse/aktuell.md`, Lauf `taeglich/laeufe/nische.md` (06:17), Wochenanalyse `taeglich/laeufe/wochenanalyse.md` (Sa 10:37). Upload: Instagram 12:00, YouTube 17:30, TikTok 19:00, englisch 22:00/23:30/01:00. Nie mehr als 2 Videos am Tag pro Plattform. Grundlage: `taeglich/analyse/2026-11-22-abschluss.md`.
 > **Große Analyse-Auswertung am 22.11.2026 (Jonathan 14.11.):** An diesem Tag werden alle bisherigen Projekte gründlich ausgewertet (24. Stock, Der Alien, Der letzte Mann, Kurzvideo-Staffeln inkl. Englisch und Zitat-Videos, Deine Welt, Bis zum Mond). Ablauf `taeglich/laeufe/analyse-22-11.md` (Branch `taeglich`), Bericht `taeglich/analyse/2026-11-22-abschluss.md`. Bis dahin alle Zahlen, Beobachtungen und Experimente sauber festhalten.
 
