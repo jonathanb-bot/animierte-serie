@@ -11,6 +11,8 @@ Gilt für `taeglich/laeufe/nische.md`, bis die Wochenanalyse (samstags) diese Da
 
 6a. **Dopamin-Loop (Jonathan 21.11.):** jede Geschichte mit 2 Schleifen aus Einsatz → große Frage → Finte → Rehook, die zweite Finte ist das Ende (`FORMAT.md` → „Dopamin-Loop“). Die Wochenanalyse prüft an der Bindungskurve, ob die Finte bei ca. 20–25 s die Leute hält.
 
+6b. **7 Content-Gesetze (Jonathan 21.11.):** Hook immer einlösen, eine Nische, jedes Video schenkt einen Gedanken oder echten Fakt, Bild zeigt die Prämisse, jeden Tag posten (`FORMAT.md` → „Die 7 Content-Gesetze“). Die Wochenanalyse misst Teilen und Speichern pro 1.000 Aufrufe als Zeichen für „Geben“.
+
 ## Weniger davon
 6. Kein Einstieg mit Ort, Regel, Aufzählung oder ruhiger Vorgeschichte (s03: 30 % nach 3 s, Instagram Abbruch 54 %; Mond F1 verliert bei 5–9 s an einer ruhigen Einstellung).
 7. Keine Serien-, Staffel- oder Mitmach-Logik, keine A/B-Abstimmung, keine Verweise auf andere Folgen.

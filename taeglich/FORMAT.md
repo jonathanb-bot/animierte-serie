@@ -11,6 +11,20 @@ Jonathans Auftrag vom 1.11.2026:
 - Alles in Du-Form, es **betrifft dich direkt**. **Keine Quizze, keine Fragen ans Publikum.**
 - **KI-Haken beim Posten immer aus** (Jonathans Vorgabe 2.11., Issue #15), besonders auf TikTok (`posten/zernio.mjs` auf `main`: `videoMadeWithAi: false`).
 
+## Die 7 Content-Gesetze (Jonathan 21.11.)
+
+Jonathan 21.11. zu einem Vorbild-Video („7 universelle Content-Gesetze für Millionen Views“, TikTok, 1:55 min): „auch reinmachen“. Das Video richtet sich an Leute, die etwas verkaufen; hier steht, was die Gesetze **für unsere Geschichten** heißen. Gilt zusammen mit dem Dopamin-Loop für alle neuen Kurzvideos. Das Querformat bleibt unverändert. Übernommen wird nur der Gedanke, nie Inhalte.
+
+| Gesetz | Aussage im Video | Bei uns |
+|---|---|---|
+| 1. Aufmerksamkeit | Content heißt Aufmerksamkeit erzeugen und halten | Hook in 1–2 s, Dopamin-Loop hält sie. **Nie** über Beleidigen, Rage Bait oder absichtlich kontroverse Sätze (#30, #38) |
+| 2. Vertrauen | Aufmerksamkeit darf das Vertrauen nicht zerstören | Jeder Hook wird im Video eingelöst, kein Köder, der nicht hält. Fakten stimmen (mit Jahr und Quelle in der Einblendung), keine erfundenen Zahlen |
+| 3. Kategorisierung | Menschen denken in Schubladen, steh für wenige Themen | Eine Nische: „Was wäre, wenn du …“ (#39). Titel, Beschreibung, Kanalname und Profilbild sagen dasselbe. Kein Themenwechsel zwischendurch |
+| 4. Geben | Wer gibt, dem wird gegeben, guter Content erzeugt Sympathie | Jedes Video schenkt etwas: einen Gedanken, der bleibt, oder einen echten, überraschenden Fakt über dein Leben (wie video-001). Das Ende soll man jemandem schicken wollen |
+| 5. Status | Man folgt denen, die weiter sind | Saubere Machart in Kurzgesagt-Richtung, ruhige, sichere Erzählstimme (Orus), präzise Zahlen. Nie billig oder hektisch wirken |
+| 6. Demonstration | Zeigen schlägt Sagen | Das Bild zeigt die Prämisse (Zähler läuft, Geldstapel wächst, leerer Stuhl am Esstisch), nicht nur eine Kulisse hinter dem Satz |
+| 7. Kontinuität | Content wächst exponentiell, wer unterbricht, scheitert | Jeden Tag ein Video, den Takt nie abreißen lassen (#38 P. 9). Fällt ein Tag aus, am nächsten Tag weiter, nie doppelt nachholen |
+
 ## Dopamin-Loop – Pflicht-Aufbau jeder Geschichte (Jonathan 21.11.)
 
 Jonathan 21.11. zu einem Vorbild-Video („Storytelling süchtig machen mit dem Dopamin Loop“, TikTok/Instagram, 1:52 min): „Das sollst du mit reinbrennen in der Erstellung von Storys.“ Gilt für alle neuen Kurzvideos (vor allem „Was wäre, wenn du …“, `laeufe/nische.md`). Das Querformat bleibt unverändert (`quer/FORMAT.md`). Übernommen wird nur der Aufbau, nie Inhalte.
