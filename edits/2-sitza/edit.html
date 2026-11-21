@@ -86,7 +86,7 @@ const CLIPS = { gold1: 58, gold2: 60, fahrt: 78, eiffel: 30, oben: 30, tuer: 30,
 const CL = {}; for (const k in CLIPS) CL[k] = { n: CLIPS[k], img: null };
 async function clipLaden(k) { const c = CL[k]; if (c.img) return; c.img = await Promise.all(Array.from({ length: c.n }, (_, i) => lade(`clips/${k}/${String(i + 1).padStart(3, "0")}.jpg`))); }
 function clipBild(k, T, t0, tempo = 1) { const c = CL[k]; if (!c.img) return null; return c.img[clamp(Math.floor((T - t0) * 30 * tempo), 0, c.n - 1)]; }
-const BILDER = ["p7", "p126", "p94", "p18", "p75", "p57", "p19", "p3", "p154", "p130", "p16", "p117", "p0", "p121", "p112", "p99", "p102", "p100", "p111", "p115", "p97", "p103", "sw"];
+const BILDER = ["p7", "p126", "p94", "p18", "p75", "p57", "p19", "p3", "p154", "p130", "p14", "p117", "p0", "p121", "p112", "p99", "p102", "p100", "p111", "p115", "p97", "p103", "sw"];
 async function init() {
   ZL = await (await fetch("zeitleiste.json")).json();
   await Promise.all(BILDER.map(async k => IMG[k] = await lade("assets/" + k + ".jpg")));
@@ -203,7 +203,7 @@ const LIN = [
   [{ w: 0, b: "p19", art: "voll" }, { w: 3, b: "p3", art: "voll" }],
   [{ w: 0, b: "p154", art: "karte" }],
   [{ w: 0, b: "p130", art: "karte" }, { w: 6, c: "pink", art: "voll" }],
-  [{ w: 0, b: "p16", art: "voll" }, { w: 7, b: "p117", art: "karte" }],
+  [{ w: 0, b: "p14", art: "voll" }, { w: 7, b: "p117", art: "karte" }],
   [{ w: 0, b: "p0", art: "polaroid", text: "damals" }, { w: 7, b: "p121", art: "polaroid", text: "heute" }],
   [{ w: 0, b: "p112", art: "voll" }, { w: 8, b: "p99", art: "karte" }],
   [{ w: 0, b: "p102", art: "voll" }, { w: 4, b: "p100", art: "karte" }, { w: 9, b: "p111", art: "karte" }],
