@@ -8,6 +8,13 @@ So funktioniert es:
 2. Die Starter-Session macht nur eins: Sie legt mit `create_session` eine **neue Session** an, mit Repo `jonathanb-bot/animierte-serie`, Branch `taeglich` und Modell Opus. Die neue Session bekommt den kurzen Auftrag „Lies `taeglich/laeufe/<lauf>.md` und führe es aus“. Danach ist die Starter-Session fertig.
 3. Die neue Session arbeitet alles ab (pushen, GitHub, vidIQ, Gemini, PushNotification gehen dort) und endet.
 
+**Seit 21.11. (Jonathan): keine Staffel und keine Serie mehr fortsetzen, nur noch nach den Analysedaten.** Aktiv sind nur noch:
+- `nische.md`: „Was wäre, wenn du …“ täglich 06:17, 1 eigenständiges Video am Tag (deutsch + englisch) nach `taeglich/analyse/aktuell.md`
+- `wochenanalyse.md`: samstags 10:37, frische Zahlen, Kanal-Entscheidung, Nachschnitt, neue Vorgaben in `aktuell.md`
+- `quer.md`: Querformat lang So/Di/Do 21:23 (#37, eigene Videos, keine Staffel)
+
+Ausgeschaltet am 21.11.: Masse-Test, „Bis zum Mond“, „Der letzte Raub“ (vorher schon: Kurzvideo-Staffel, Analyse vor der Staffel, Zitat-Video, Abend-Kontrolle, Deine Welt).
+
 Die Abläufe stehen in diesen Dateien. Wer einen Ablauf ändern will, ändert nur die Datei und muss die geplanten Aufgaben nicht anfassen:
 
 - `analyse.md`: Analyse vor der Staffel

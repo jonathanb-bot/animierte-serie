@@ -3,6 +3,8 @@ TikTok + Instagram + YouTube in `posten/plan.json` auf `main` eintragen (GitHub 
 
     python taeglich/veroeffentlichen.py video-001 --zeit 2026-11-01T18:00            # YouTube automatisch 30 min später
     python taeglich/veroeffentlichen.py video-001 --zeit 2026-11-01T18:00 --probe    # alles prüfen, nichts pushen
+    python taeglich/veroeffentlichen.py nische-n001 --zeit 2026-11-22T19:00 --insta-zeit 2026-11-22T12:00 --yt-zeit 2026-11-22T17:30
+    python taeglich/veroeffentlichen.py nische-n001 --englisch --zeit 2026-11-23T01:00 --insta-zeit 2026-11-22T22:00 --yt-zeit 2026-11-22T23:30
 
 Voraussetzungen:
 - `ausgabe/taeglich-video-001.mp4` ist gerendert (`node render.mjs taeglich/episoden/video-001.txt`).
@@ -172,9 +174,10 @@ def warten_auf_raw(url: str, groesse: int, max_s=600) -> None:
     raise RuntimeError(f"Video nach {max_s} s noch nicht unter {url} abrufbar")
 
 
-def freie_zeit(posts: list, loeschen: set, platform: str, zeit: dt.datetime) -> dt.datetime:
-    """Keine zwei Posts derselben Plattform innerhalb von 30 Minuten: sonst in 30-Minuten-Schritten nach hinten."""
-    belegt = [dt.datetime.fromisoformat(p["zeit"]) for p in posts if p["platform"] == platform and p["id"] not in loeschen]
+def freie_zeit(posts: list, loeschen: set, platform: str, zeit: dt.datetime, konto: str | None = None) -> dt.datetime:
+    """Keine zwei Posts desselben Kontos innerhalb von 30 Minuten: sonst in 30-Minuten-Schritten nach hinten."""
+    belegt = [dt.datetime.fromisoformat(p["zeit"]) for p in posts
+              if p["platform"] == platform and p["id"] not in loeschen and p.get("konto") == konto]
     while any(abs((zeit - b).total_seconds()) < 1800 for b in belegt):
         zeit += dt.timedelta(minutes=30)
     return zeit
@@ -214,9 +217,14 @@ def streuen(z: dt.datetime, frueh: dt.datetime | None = None) -> dt.datetime:
     return neu
 
 
+# Englische Konten (wie staffel_englisch.py): TikTok @storys4you_eng (2. Zernio-Konto), Instagram/YouTube im 3. Konto
+KONTEN_EN = {"tiktok": "storys4you_eng", "instagram": "zernio:3", "youtube": "zernio:3"}
+
+
 def einplanen(vid: str, eintrag: dict, zeit: dt.datetime, yt_zeit: dt.datetime, url: str, probe: bool,
-              endung: str = "", plattformen: tuple = ("tiktok", "instagram", "youtube")) -> dict:
-    nr = vid.split("-")[-1]
+              endung: str = "", plattformen: tuple = ("tiktok", "instagram", "youtube"),
+              insta_zeit: dt.datetime | None = None, englisch: bool = False) -> dict:
+    nr = vid.removesuffix("-en").split("-")[-1]
     repo_main = klonen("main", ["/posten/"], "main")
     plan_datei = repo_main / "posten" / "plan.json"
     plan = json.loads(plan_datei.read_text(encoding="utf-8"))
@@ -226,16 +234,26 @@ def einplanen(vid: str, eintrag: dict, zeit: dt.datetime, yt_zeit: dt.datetime, 
     tags_txt = zwei_hashtags(eintrag.get("hashtags"))
     kopf = f"{titel} {em}".strip()
     neu = []
-    for platform, z in (("tiktok", zeit), ("instagram", zeit), ("youtube", yt_zeit)):
+    for platform, z in (("tiktok", zeit), ("instagram", insta_zeit or zeit), ("youtube", yt_zeit)):
         if platform not in plattformen:
             continue
-        pid = f"taeglich-{KURZ[platform]}-{nr}{endung}"
+        pid = f"taeglich-{KURZ[platform]}-{'en-' if englisch else ''}{nr}{endung}"
         if pid in ids:
             print(f"{pid} steht schon im Plan – übersprungen")
             continue
-        z = streuen(freie_zeit(plan["posts"], loeschen, platform, z))
-        post = {"id": pid, "platform": platform, "zeit": z.strftime("%Y-%m-%dT%H:%M:00"), "serie": "taeglich", "video": url}
-        if platform == "tiktok":
+        konto = KONTEN_EN[platform] if englisch else None
+        z = streuen(freie_zeit(plan["posts"], loeschen, platform, z, konto))
+        post = {"id": pid, "platform": platform, "zeit": z.strftime("%Y-%m-%dT%H:%M:00"),
+                "serie": "taeglich-en" if englisch else "taeglich", "video": url}
+        if englisch:
+            post["konto"] = konto
+            if platform == "youtube":
+                post["titel"] = kopf[:100]
+                post["tags"] = (eintrag.get("tags") or ["animation", "story"]) + ["shorts"]
+                post["text"] = f"{eintrag['beschreibung']}\nSubscribe for the next story!\n\n{tags_txt}"
+            else:
+                post["text"] = f"{kopf}\n{eintrag['beschreibung']}\n{'Follow for the next story!' if platform == 'tiktok' else ''}\n\n{tags_txt}".replace("\n\n\n", "\n\n")
+        elif platform == "tiktok":
             post["text"] = f"{kopf}\n{eintrag['beschreibung']}\n{'Folg mir, dann verpasst du keine Geschichte!' if endung else 'Folg mir für die nächste Geschichte!'}\n\n{tags_txt}"
         elif platform == "instagram":
             post["text"] = f"{kopf}\n{eintrag['beschreibung']}\n\n{tags_txt}"
@@ -268,40 +286,52 @@ def main(argv=None) -> int:
     ap.add_argument("--probe", action="store_true", help="alles prüfen und vorbereiten, aber nichts pushen")
     ap.add_argument("--ersetzen", metavar="SUFFIX", help="neu vertonte Fassung: neue Post-IDs mit -SUFFIX, Text leicht anders (5.11.)")
     ap.add_argument("--plattformen", default="tiktok,instagram,youtube", help="nur diese Plattformen, z. B. tiktok")
+    ap.add_argument("--insta-zeit", help="Instagram zu einer eigenen Zeit (Standard: wie --zeit)")
+    ap.add_argument("--englisch", action="store_true",
+                    help="englische Fassung: Video ausgabe/taeglich-<id>-en.mp4, Texte aus dem Eintrag → en, englische Konten")
     a = ap.parse_args(argv)
 
     verlauf = json.loads(VERLAUF.read_text(encoding="utf-8"))
     eintrag = next((e for e in verlauf["videos"] if e["id"] == a.id), None)
     if not eintrag:
         print(f"Kein Eintrag „{a.id}“ in {VERLAUF.relative_to(ROOT)}"); return 1
+    if a.englisch:  # Texte der englischen Fassung stehen im Eintrag unter "en" (titel, beschreibung, hashtags, tags)
+        if not eintrag.get("en"):
+            print("Feld „en“ fehlt im Verlauf-Eintrag"); return 1
+        eintrag_text = {**eintrag, **eintrag["en"]}
+    else:
+        eintrag_text = eintrag
     for feld in ("titel", "beschreibung", "hashtags"):
-        if not eintrag.get(feld):
+        if not eintrag_text.get(feld):
             print(f"Feld „{feld}“ fehlt im Verlauf-Eintrag"); return 1
+    vid = f"{a.id}-en" if a.englisch else a.id
+    insta_zeit = dt.datetime.fromisoformat(a.insta_zeit) if a.insta_zeit else None
     zeit = dt.datetime.fromisoformat(a.zeit)
     yt_zeit = dt.datetime.fromisoformat(a.yt_zeit) if a.yt_zeit else zeit + dt.timedelta(minutes=30)
     jetzt = dt.datetime.now(BERLIN).replace(tzinfo=None)
     if zeit < jetzt + dt.timedelta(minutes=20):
         print(f"--zeit {zeit} liegt zu nah oder in der Vergangenheit (jetzt {jetzt:%Y-%m-%d %H:%M})"); return 1
 
-    roh = ROOT / "ausgabe" / f"taeglich-{a.id}.mp4"
+    roh = ROOT / "ausgabe" / f"taeglich-{vid}.mp4"
     if not roh.exists():
         print(f"{roh.relative_to(ROOT)} fehlt – erst rendern"); return 1
-    fertig = ROOT / "ausgabe" / f"taeglich-{a.id}-fertig.mp4"
+    fertig = ROOT / "ausgabe" / f"taeglich-{vid}-fertig.mp4"
     angleichen(roh, fertig)
     ergebnis = pruefe(fertig)
     print("Prüfung:", json.dumps(ergebnis, ensure_ascii=False))
     if not ergebnis["ok"]:
         print("NICHT veröffentlicht – Prüfung fehlgeschlagen."); return 1
 
-    ablegen(a.id, fertig, ergebnis, eintrag, a.probe)
-    url = RAW.format(id=a.id)
+    ablegen(vid, fertig, ergebnis, eintrag_text, a.probe)
+    url = RAW.format(id=vid)
     if not a.probe:
         warten_auf_raw(url, fertig.stat().st_size)
-    geplant = einplanen(a.id, eintrag, zeit, yt_zeit, url, a.probe, f"-{a.ersetzen}" if a.ersetzen else "",
-                        tuple(a.plattformen.split(",")))
+    geplant = einplanen(vid, eintrag_text, zeit, yt_zeit, url, a.probe, f"-{a.ersetzen}" if a.ersetzen else "",
+                        tuple(a.plattformen.split(",")), insta_zeit, a.englisch)
 
     if not a.probe:
-        eintrag["veroeffentlicht"] = {"video": url, "geplant": geplant, "lufs": ergebnis["lufs"], "dauer_s": ergebnis["bild_s"]}
+        ziel = eintrag["en"] if a.englisch else eintrag
+        ziel["veroeffentlicht"] = {"video": url, "geplant": geplant, "lufs": ergebnis["lufs"], "dauer_s": ergebnis["bild_s"]}
         VERLAUF.write_text(json.dumps(verlauf, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
         print("verlauf.json aktualisiert – jetzt den Branch „taeglich“ committen und pushen.")
     return 0

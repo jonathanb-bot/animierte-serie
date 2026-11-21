@@ -1,0 +1,216 @@
+{
+ "_info": "Gewinner-Nische „Was wäre, wenn du …“ (große Auswertung 21.11., Jonathan 21.11.: keine Staffel mehr fortsetzen, nur noch nach den Analysedaten). Jede Idee = ein eigenständiges Video (nische-nNNN). Der Lauf taeglich/laeufe/nische.md nimmt die nächste offene Idee (Reihenfolge darf die Wochenanalyse ändern), trägt id, datum und status ein. Neue Ideen nur nach taeglich/analyse/aktuell.md ergänzen. art: praemisse (kühne Prämisse über dein Leben) oder grusel (kurzer Alltags-Grusel nach s05-Machart, höchstens jedes 4. Video).",
+ "ziel": 30,
+ "ideen": [
+  {
+   "nr": 1,
+   "hook": "Ab heute zeigt dein Handy, wie viele Abende du noch mit deinen Eltern hast.",
+   "art": "praemisse",
+   "id": null,
+   "status": "offen"
+  },
+  {
+   "nr": 2,
+   "hook": "Du gewinnst dreißig Millionen. Und nur dein Opa darf es wissen.",
+   "art": "praemisse",
+   "id": null,
+   "status": "offen"
+  },
+  {
+   "nr": 3,
+   "hook": "Dein Wecker klingelt, und du bist wieder zwölf. Mit allem, was du heute weißt.",
+   "art": "praemisse",
+   "id": null,
+   "status": "offen"
+  },
+  {
+   "nr": 4,
+   "hook": "Ab Mitternacht kannst du jede Lüge hören. Auch die deiner besten Freundin.",
+   "art": "praemisse",
+   "id": null,
+   "status": "offen"
+  },
+  {
+   "nr": 5,
+   "hook": "Du findest im Keller deiner Oma einen Brief an dich. Datiert 1989.",
+   "art": "praemisse",
+   "id": null,
+   "status": "offen"
+  },
+  {
+   "nr": 6,
+   "hook": "Jedes Mal, wenn du „später“ sagst, verschwindet ein Tag aus deinem Kalender.",
+   "art": "praemisse",
+   "id": null,
+   "status": "offen"
+  },
+  {
+   "nr": 7,
+   "hook": "Dein kleiner Bruder kann plötzlich deine Gedanken lesen. Nur deine.",
+   "art": "praemisse",
+   "id": null,
+   "status": "offen"
+  },
+  {
+   "nr": 8,
+   "hook": "Ab heute kostet jedes Wort, das du sagst, einen Euro.",
+   "art": "praemisse",
+   "id": null,
+   "status": "offen"
+  },
+  {
+   "nr": 9,
+   "hook": "Du darfst einen einzigen Tag deines Lebens noch einmal erleben.",
+   "art": "praemisse",
+   "id": null,
+   "status": "offen"
+  },
+  {
+   "nr": 10,
+   "hook": "Dein Spiegelbild bewegt sich eine Sekunde zu spät.",
+   "art": "grusel",
+   "id": null,
+   "status": "offen"
+  },
+  {
+   "nr": 11,
+   "hook": "Für eine Woche kannst du die Zeit anhalten. Aber nur für alle anderen.",
+   "art": "praemisse",
+   "id": null,
+   "status": "offen"
+  },
+  {
+   "nr": 12,
+   "hook": "Deine Mama bekommt jeden Morgen eine Nachricht von dir. Du hast sie nie geschrieben.",
+   "art": "grusel",
+   "id": null,
+   "status": "offen"
+  },
+  {
+   "nr": 13,
+   "hook": "Du weißt, wie viele Tage dir mit deinem Hund bleiben.",
+   "art": "praemisse",
+   "id": null,
+   "status": "offen"
+  },
+  {
+   "nr": 14,
+   "hook": "Ab heute siehst du über jedem Kopf, wie oft er an dich denkt.",
+   "art": "praemisse",
+   "id": null,
+   "status": "offen"
+  },
+  {
+   "nr": 15,
+   "hook": "Dein Opa gibt dir einen Schlüssel. „Mach erst auf, wenn ich nicht mehr da bin.“",
+   "art": "praemisse",
+   "id": null,
+   "status": "offen"
+  },
+  {
+   "nr": 16,
+   "hook": "Alle Erwachsenen der Stadt schlafen ein. Nur du und dein bester Freund nicht.",
+   "art": "praemisse",
+   "id": null,
+   "status": "offen"
+  },
+  {
+   "nr": 17,
+   "hook": "Du kannst ein einziges Gespräch aus deiner Vergangenheit ändern.",
+   "art": "praemisse",
+   "id": null,
+   "status": "offen"
+  },
+  {
+   "nr": 18,
+   "hook": "Um 3:33 Uhr ruft dich deine eigene Nummer an.",
+   "art": "grusel",
+   "id": null,
+   "status": "offen"
+  },
+  {
+   "nr": 19,
+   "hook": "Ab heute erfüllt sich jeder Wunsch deiner kleinen Schwester. Wörtlich.",
+   "art": "praemisse",
+   "id": null,
+   "status": "offen"
+  },
+  {
+   "nr": 20,
+   "hook": "Du bekommst jede Nacht eine Stunde mehr als alle anderen.",
+   "art": "praemisse",
+   "id": null,
+   "status": "offen"
+  },
+  {
+   "nr": 21,
+   "hook": "Dein Lehrer weiß, was du morgen tun wirst.",
+   "art": "praemisse",
+   "id": null,
+   "status": "offen"
+  },
+  {
+   "nr": 22,
+   "hook": "Du wachst auf, und deine Familie erinnert sich nicht an dich.",
+   "art": "praemisse",
+   "id": null,
+   "status": "offen"
+  },
+  {
+   "nr": 23,
+   "hook": "Ab heute kannst du nie mehr Nein sagen.",
+   "art": "praemisse",
+   "id": null,
+   "status": "offen"
+  },
+  {
+   "nr": 24,
+   "hook": "Im Fundbüro liegt ein Rucksack mit deinem Namen. Und deinem Kinderfoto.",
+   "art": "grusel",
+   "id": null,
+   "status": "offen"
+  },
+  {
+   "nr": 25,
+   "hook": "Du darfst einen Menschen für einen Tag zurückholen.",
+   "art": "praemisse",
+   "id": null,
+   "status": "offen"
+  },
+  {
+   "nr": 26,
+   "hook": "Dein Handy zeigt dir jeden Morgen das Foto von heute Abend.",
+   "art": "praemisse",
+   "id": null,
+   "status": "offen"
+  },
+  {
+   "nr": 27,
+   "hook": "Ab heute kosten Erinnerungen Geld. Und du bist pleite.",
+   "art": "praemisse",
+   "id": null,
+   "status": "offen"
+  },
+  {
+   "nr": 28,
+   "hook": "Im letzten Bus sitzt jeden Abend dieselbe Frau. Sie kennt deinen Namen.",
+   "art": "grusel",
+   "id": null,
+   "status": "offen"
+  },
+  {
+   "nr": 29,
+   "hook": "Deine beste Freundin zieht weg. Und du hast noch genau 24 Stunden.",
+   "art": "praemisse",
+   "id": null,
+   "status": "offen"
+  },
+  {
+   "nr": 30,
+   "hook": "Du siehst zum ersten Mal, wie oft deine Eltern dich angesehen haben, als du geschlafen hast.",
+   "art": "praemisse",
+   "id": null,
+   "status": "offen"
+  }
+ ]
+}
