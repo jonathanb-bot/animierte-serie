@@ -1,5 +1,7 @@
 # Kurzvideo-Staffeln („taeglich“) – Format
 
+> **Seit 21.11.: Für jedes neue Video gilt zuerst `taeglich/MASTER.md`** (Master-Voraussetzung: Nische, Dopamin-Loop, 7 Content-Gesetze, #38, #39, feste Regeln, Abnahme). Diese Datei liefert die Technik (Kulissen, Paletten, Einblendungen, Engine-Befehle). Bei Widerspruch gilt MASTER.md. Abschnitte über Staffeln, Rotation, Testphase und Masse sind seit #39 nur noch Archiv.
+
 > **Große Analyse-Auswertung am 22.11.2026 (Jonathan 14.11.):** An diesem Tag werden alle bisherigen Projekte gründlich ausgewertet (24. Stock, Der Alien, Der letzte Mann, Kurzvideo-Staffeln inkl. Englisch und Zitat-Videos, Deine Welt, Bis zum Mond). Ablauf `taeglich/laeufe/analyse-22-11.md` (Branch `taeglich`), Bericht `taeglich/analyse/2026-11-22-abschluss.md`. Bis dahin alle Zahlen, Beobachtungen und Experimente sauber festhalten.
 
 Jonathans Auftrag vom 1.11.2026:
