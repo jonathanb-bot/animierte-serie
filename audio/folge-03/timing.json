@@ -1,0 +1,464 @@
+{
+ "dauer": 200.968,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "treppenhaus",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 4.142,
+   "emotion": "erzaehlend",
+   "text": "Sie stehen direkt vor eurer Tür. Zwei. Vielleicht drei."
+  },
+  {
+   "nr": 2,
+   "typ": "wohnung",
+   "kapitel": 1,
+   "start": 4.142,
+   "dauer": 2.87,
+   "emotion": "spannend",
+   "text": "Keiner bewegt sich. Keiner atmet laut."
+  },
+  {
+   "nr": 3,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 7.012,
+   "dauer": 4.958,
+   "emotion": "spannend",
+   "text": "Du zählst die Sekunden. Zehn. Zwanzig. Sechzig."
+  },
+  {
+   "nr": 4,
+   "typ": "treppenhaus",
+   "kapitel": 1,
+   "start": 11.97,
+   "dauer": 3.638,
+   "emotion": "erzaehlend",
+   "text": "Dann wird das Schlurfen leiser. Sie verlieren das *Interesse*."
+  },
+  {
+   "nr": 5,
+   "typ": "titel",
+   "kapitel": 1,
+   "start": 15.608,
+   "dauer": 3.0,
+   "emotion": null,
+   "text": ""
+  },
+  {
+   "nr": 6,
+   "typ": "wohnung",
+   "kapitel": 2,
+   "start": 18.608,
+   "dauer": 4.622,
+   "emotion": "erzaehlend",
+   "text": "Was bisher geschah: Lena und ihre kleine Schwester Mila sind bei euch eingezogen."
+  },
+  {
+   "nr": 7,
+   "typ": "objekt",
+   "kapitel": 2,
+   "start": 23.23,
+   "dauer": 3.278,
+   "emotion": "erklaerend",
+   "text": "Ihr habt alle versteckten *Wasserreserven* im Haus geplündert."
+  },
+  {
+   "nr": 8,
+   "typ": "hochhaus",
+   "kapitel": 2,
+   "start": 26.508,
+   "dauer": 4.598,
+   "emotion": "erzaehlend",
+   "text": "Aber das Hämmern an der Tür hat *sie* angelockt. Etage für Etage."
+  },
+  {
+   "nr": 9,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 31.106,
+   "dauer": 4.262,
+   "emotion": "ernst",
+   "text": "Am Morgen sagt Walter: „Ein Treppenhaus ist wie ein *Schalltrichter*.“"
+  },
+  {
+   "nr": 10,
+   "typ": "hochhaus",
+   "kapitel": 3,
+   "start": 35.368,
+   "dauer": 5.654,
+   "emotion": "erzaehlend",
+   "text": "Jedes Geräusch oben hallt bis ganz nach unten. Jede zugeknallte Tür. Jeder Schrei."
+  },
+  {
+   "nr": 11,
+   "typ": "objekt",
+   "kapitel": 3,
+   "start": 41.022,
+   "dauer": 4.646,
+   "emotion": "erklaerend",
+   "text": "Und sie folgen dem Geräusch. Stufe für Stufe. *Ohne* Pause."
+  },
+  {
+   "nr": 12,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 45.668,
+   "dauer": 3.494,
+   "emotion": "ernst",
+   "text": "Wenn ihr hier überleben wollt, muss das Treppenhaus *dicht* werden."
+  },
+  {
+   "nr": 13,
+   "typ": "hochhaus",
+   "kapitel": 4,
+   "start": 49.162,
+   "dauer": 3.35,
+   "emotion": "erzaehlend",
+   "text": "Und der Aufzug? Der hängt seit gestern im vierzehnten Stock."
+  },
+  {
+   "nr": 14,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 52.512,
+   "dauer": 4.526,
+   "emotion": "ernst",
+   "text": "„Ein Aufzugschacht ist ein Loch durch das ganze Haus. Ohne Strom ist er *nutzlos*.“"
+  },
+  {
+   "nr": 15,
+   "typ": "objekt",
+   "kapitel": 4,
+   "start": 57.038,
+   "dauer": 3.974,
+   "emotion": "erklaerend",
+   "text": "Also bleibt nur ein Weg nach oben. Und genau den müsst ihr *versperren*."
+  },
+  {
+   "nr": 16,
+   "typ": "hochhaus",
+   "kapitel": 5,
+   "start": 61.012,
+   "dauer": 3.302,
+   "emotion": "erzaehlend",
+   "text": "Walters Plan: eine *Barrikade* im zwanzigsten Stock."
+  },
+  {
+   "nr": 17,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 64.314,
+   "dauer": 3.854,
+   "emotion": "ernst",
+   "text": "„Nicht direkt vor unserer Tür. Vier Etagen tiefer. Dann haben wir *Abstand*.“"
+  },
+  {
+   "nr": 18,
+   "typ": "objekt",
+   "kapitel": 5,
+   "start": 68.168,
+   "dauer": 5.702,
+   "emotion": "erklaerend",
+   "text": "Vier Etagen Puffer bedeuten: Wenn sie durchbrechen, habt ihr Zeit. Zeit zum *Reagieren*."
+  },
+  {
+   "nr": 19,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 73.87,
+   "dauer": 3.038,
+   "emotion": "ernst",
+   "text": "„Aber wie bauen wir die, ohne Lärm zu machen?“"
+  },
+  {
+   "nr": 20,
+   "typ": "treppenhaus",
+   "kapitel": 6,
+   "start": 76.908,
+   "dauer": 3.758,
+   "emotion": "erzaehlend",
+   "text": "Die Regel: Nichts wird *geschleift*. Alles wird *getragen*."
+  },
+  {
+   "nr": 21,
+   "typ": "objekt",
+   "kapitel": 6,
+   "start": 80.666,
+   "dauer": 4.406,
+   "emotion": "erklaerend",
+   "text": "Decken unter schwere Möbel. Socken über die Schuhe. Türen nur *halb* öffnen."
+  },
+  {
+   "nr": 22,
+   "typ": "treppenhaus",
+   "kapitel": 6,
+   "start": 85.072,
+   "dauer": 3.95,
+   "emotion": "erzaehlend",
+   "text": "Sofas, Schränke, Matratzen aus den leeren Wohnungen. Stück für Stück."
+  },
+  {
+   "nr": 23,
+   "typ": "gesicht",
+   "kapitel": 6,
+   "start": 89.022,
+   "dauer": 3.926,
+   "emotion": "ruhig",
+   "text": "Es ist anstrengend. Vier Etagen runter, mit einem Schrank auf dem Rücken."
+  },
+  {
+   "nr": 24,
+   "typ": "treppenhaus",
+   "kapitel": 6,
+   "start": 92.948,
+   "dauer": 4.598,
+   "emotion": "erzaehlend",
+   "text": "Walter erklärt, wie man stapelt: Schwere Sachen *unten*. Verkeilt gegen die Wand."
+  },
+  {
+   "nr": 25,
+   "typ": "treppenhaus",
+   "kapitel": 7,
+   "start": 97.546,
+   "dauer": 6.014,
+   "emotion": "spannend",
+   "text": "Dann passiert es. Ein Stuhl rutscht ab. Er knallt *zwölf Etagen* tief durch den Treppenschacht."
+  },
+  {
+   "nr": 26,
+   "typ": "gesicht",
+   "kapitel": 7,
+   "start": 103.56,
+   "dauer": 1.91,
+   "emotion": "spannend",
+   "text": "Das Echo hört gar nicht mehr auf."
+  },
+  {
+   "nr": 27,
+   "typ": "hochhaus",
+   "kapitel": 7,
+   "start": 105.47,
+   "dauer": 3.758,
+   "emotion": "erzaehlend",
+   "text": "Unten setzt sich etwas in Bewegung. Viele Schritte. *Schnell*."
+  },
+  {
+   "nr": 28,
+   "typ": "gesicht",
+   "kapitel": 7,
+   "start": 109.228,
+   "dauer": 1.574,
+   "emotion": "ernst",
+   "text": "„Weitermachen! *Jetzt*!“"
+  },
+  {
+   "nr": 29,
+   "typ": "gesicht",
+   "kapitel": 8,
+   "start": 110.802,
+   "dauer": 3.11,
+   "emotion": "ernst",
+   "text": "Lena hat eine Idee. Sie rennt zurück in eure Wohnung."
+  },
+  {
+   "nr": 30,
+   "typ": "objekt",
+   "kapitel": 8,
+   "start": 113.912,
+   "dauer": 3.23,
+   "emotion": "erklaerend",
+   "text": "Ein alter Wecker. Mit einer richtig *lauten* Klingel."
+  },
+  {
+   "nr": 31,
+   "typ": "hochhaus",
+   "kapitel": 8,
+   "start": 117.142,
+   "dauer": 4.43,
+   "emotion": "erzaehlend",
+   "text": "Sie stellt ihn auf eine Minute. Und wirft ihn in den offenen Aufzugschacht."
+  },
+  {
+   "nr": 32,
+   "typ": "hochhaus",
+   "kapitel": 8,
+   "start": 121.572,
+   "dauer": 4.286,
+   "emotion": "erzaehlend",
+   "text": "Er fällt. Und fällt. Und *klingelt* irgendwo ganz unten."
+  },
+  {
+   "nr": 33,
+   "typ": "strasse",
+   "kapitel": 8,
+   "start": 125.858,
+   "dauer": 4.094,
+   "emotion": "erzaehlend",
+   "text": "Alles, was im Haus ist, dreht um. *Weg* von euch. *Hin* zum Lärm."
+  },
+  {
+   "nr": 34,
+   "typ": "gesicht",
+   "kapitel": 8,
+   "start": 129.952,
+   "dauer": 2.486,
+   "emotion": "froh",
+   "text": "Ihr habt zehn Minuten. Vielleicht weniger."
+  },
+  {
+   "nr": 35,
+   "typ": "treppenhaus",
+   "kapitel": 9,
+   "start": 132.438,
+   "dauer": 5.15,
+   "emotion": "erzaehlend",
+   "text": "Ihr arbeitet so schnell wie noch nie. Schrank. Matratze. Waschmaschine."
+  },
+  {
+   "nr": 36,
+   "typ": "treppenhaus",
+   "kapitel": 9,
+   "start": 137.588,
+   "dauer": 4.79,
+   "emotion": "froh",
+   "text": "Und dann steht sie. Eine Wand aus Möbeln, vom Boden bis zum *Geländer*."
+  },
+  {
+   "nr": 37,
+   "typ": "hochhaus",
+   "kapitel": 9,
+   "start": 142.378,
+   "dauer": 4.742,
+   "emotion": "erzaehlend",
+   "text": "Zwischen euch und dem Rest der Welt: vier Etagen. Und *eine* Barrikade."
+  },
+  {
+   "nr": 38,
+   "typ": "gesicht",
+   "kapitel": 9,
+   "start": 147.12,
+   "dauer": 2.966,
+   "emotion": "froh",
+   "text": "„So. Jetzt schlafen wir mal eine Nacht *durch*.“"
+  },
+  {
+   "nr": 39,
+   "typ": "wohnung",
+   "kapitel": 10,
+   "start": 150.086,
+   "dauer": 3.902,
+   "emotion": "erzaehlend",
+   "text": "Ihr esst Dosensuppe. Kalt. Keiner beschwert sich."
+  },
+  {
+   "nr": 40,
+   "typ": "gesicht",
+   "kapitel": 10,
+   "start": 153.988,
+   "dauer": 6.278,
+   "emotion": "froh",
+   "text": "Mila malt mit einem Kuli ein Bild von eurer Barrikade. „Damit die Monster draußen bleiben.“"
+  },
+  {
+   "nr": 41,
+   "typ": "gesicht",
+   "kapitel": 10,
+   "start": 160.266,
+   "dauer": 1.982,
+   "emotion": "froh",
+   "text": "Zum ersten Mal *lachst* du ein bisschen."
+  },
+  {
+   "nr": 42,
+   "typ": "treppenhaus",
+   "kapitel": 11,
+   "start": 162.248,
+   "dauer": 3.974,
+   "emotion": "erzaehlend",
+   "text": "Kurz vor Mitternacht macht ihr einen letzten Kontrollgang zur Barrikade."
+  },
+  {
+   "nr": 43,
+   "typ": "treppenhaus",
+   "kapitel": 11,
+   "start": 166.222,
+   "dauer": 3.83,
+   "emotion": "erzaehlend",
+   "text": "Alles ruhig. Dann hört Walter etwas. Von *unten*."
+  },
+  {
+   "nr": 44,
+   "typ": "gesicht",
+   "kapitel": 11,
+   "start": 170.052,
+   "dauer": 2.03,
+   "emotion": "spannend",
+   "text": "Kein Stöhnen. Kein Schlurfen."
+  },
+  {
+   "nr": 45,
+   "typ": "hochhaus",
+   "kapitel": 11,
+   "start": 172.082,
+   "dauer": 5.726,
+   "emotion": "erzaehlend",
+   "text": "Sondern eine Stimme. Ein Mensch. *Leise*. Direkt hinter der Barrikade."
+  },
+  {
+   "nr": 46,
+   "typ": "gesicht",
+   "kapitel": 11,
+   "start": 177.808,
+   "dauer": 3.95,
+   "emotion": "spannend",
+   "text": "„Hallo? Ist da oben wer? Bitte … ich hab *Essen* dabei.“"
+  },
+  {
+   "nr": 47,
+   "typ": "gesicht",
+   "kapitel": 11,
+   "start": 181.758,
+   "dauer": 3.254,
+   "emotion": "ernst",
+   "text": "Und jetzt musst du entscheiden, ob du einem Fremden *vertraust*."
+  },
+  {
+   "nr": 48,
+   "typ": "titel",
+   "kapitel": 11,
+   "start": 185.012,
+   "dauer": 3.5,
+   "emotion": null,
+   "text": ""
+  },
+  {
+   "nr": 49,
+   "typ": "objekt",
+   "kapitel": 12,
+   "start": 188.512,
+   "dauer": 3.926,
+   "emotion": "erklaerend",
+   "text": "Überlebens-Check! Warum war der Wecker im Aufzugschacht so *clever*?"
+  },
+  {
+   "nr": 50,
+   "typ": "objekt",
+   "kapitel": 12,
+   "start": 192.438,
+   "dauer": 5.03,
+   "emotion": "erklaerend",
+   "text": "Weil Lärm sie lockt. Und der Schacht den Lärm *weit weg* von euch gebracht hat."
+  },
+  {
+   "nr": 51,
+   "typ": "titel",
+   "kapitel": 12,
+   "start": 197.468,
+   "dauer": 3.5,
+   "emotion": null,
+   "text": ""
+  }
+ ]
+}

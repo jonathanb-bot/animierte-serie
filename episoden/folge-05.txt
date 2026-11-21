@@ -1,4 +1,7 @@
 # Folge 5: Wasserdiebe
+@musik musik/folge-05.mp3
+@musik_lautstaerke 1
+@whoosh aus
 
 == Szene 1: Die Rechnung geht nicht auf ==
 @zeit morgen
@@ -33,7 +36,7 @@
 
 == Szene 5: Rationen ==
 @hud zeit=10:00 wasser=230/400L
-[objekt objekte="schluessel:Wasser wird verschlossen" farbe="#2a3a4a"] Erstens: Das Trinkwasser kommt in einen Raum. Den Schlüssel hat *Walter*.
+[objekt objekte="schluessel:Weggeschlossen" farbe="#2a3a4a"] Erstens: Das Trinkwasser kommt in einen Raum. Den Schlüssel hat *Walter*.
 [objekt objekte="wasserflasche:2 Liter|uhr:Pro Tag" gross="Ration"] Zweitens: Jeder bekommt seine Ration. Zwei Liter. Morgens ausgeteilt. Nicht mehr.
 [objekt objekte="medizin:Wasserbuch" farbe="#2a3a2a"] Drittens: Alles wird *aufgeschrieben*. Wer was nimmt, wann und wie viel.
 [gesicht walter ort=wohnung tag entschlossen] „Ein Strich auf Papier ist ehrlicher als jedes *Versprechen*.“
@@ -75,11 +78,4 @@
 [gesicht du ort=dach abend froh] Für einen Moment vergisst du alles.
 [dach abend tank=0.6 tonnen=false zombie3 pose=zombie zoom-rein] Bis du siehst, dass hinter dem Tank *jemand* steht.
 [gesicht du ort=dach abend schreck zoom-rein] Mit dem Rücken zu euch. Ganz still. Und er dreht sich *langsam* um.
-[titel gross="Fortsetzung folgt" oben="Folge 6: Auf dem Dach" farbe="#2a0d0b" dauer=3.5]
-
-
-== Überlebens-Check ==
-@hud aus
-[objekt objekte="kocher:Abkochen|uhr:1 Minute" gross="Überlebens-Check" farbe="#1e2f45"] Überlebens-Check! Wie machst du stehendes Wasser *sicherer*?
-[objekt objekte="kocher:Abkochen|uhr:1 Minute" gross="Die Antwort" farbe="#1e3a2a"] Sprudelnd abkochen. Mindestens *eine Minute* lang.
-[titel gross="Was hättest du|gemacht?" groesse=120 unten="Schreib es in die Kommentare" farbe="#1e2f45" dauer=3.5]
+[titel oben="Fortsetzung folgt" gross="Teil 6|Auf dem Dach" groesse=120 knopf="Jetzt auf dem Profil" farbe="#2a0d0b" dauer=4]

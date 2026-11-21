@@ -1,0 +1,536 @@
+{
+ "dauer": 237.512,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "treppenhaus",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 2.798,
+   "emotion": "erzaehlend",
+   "text": "Das Hämmern an deiner Tür wird lauter."
+  },
+  {
+   "nr": 2,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 2.798,
+   "dauer": 3.998,
+   "emotion": "spannend",
+   "text": "Dann eine Stimme. Eine Frauenstimme. Flüsternd."
+  },
+  {
+   "nr": 3,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 6.796,
+   "dauer": 3.638,
+   "emotion": "spannend",
+   "text": "„Bitte! Mach auf! Ich hab meine kleine Schwester dabei!“"
+  },
+  {
+   "nr": 4,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 10.434,
+   "dauer": 4.022,
+   "emotion": "ernst",
+   "text": "Walter schüttelt den Kopf. „Wir wissen nicht, ob sie gebissen wurden.“"
+  },
+  {
+   "nr": 5,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 14.456,
+   "dauer": 3.926,
+   "emotion": "ernst",
+   "text": "Aber das Klopfen ist *laut*. Und Lärm lockt sie an."
+  },
+  {
+   "nr": 6,
+   "typ": "titel",
+   "kapitel": 1,
+   "start": 18.382,
+   "dauer": 3.0,
+   "emotion": null,
+   "text": ""
+  },
+  {
+   "nr": 7,
+   "typ": "skyline",
+   "kapitel": 2,
+   "start": 21.382,
+   "dauer": 5.63,
+   "emotion": "erzaehlend",
+   "text": "Was bisher geschah: Die Zombie-Apokalypse bricht aus. Du wohnst im *24. Stock*."
+  },
+  {
+   "nr": 8,
+   "typ": "strasse",
+   "kapitel": 2,
+   "start": 27.012,
+   "dauer": 2.63,
+   "emotion": "erzaehlend",
+   "text": "Du hast gelernt: Sie reagieren auf *Lärm*."
+  },
+  {
+   "nr": 9,
+   "typ": "bad",
+   "kapitel": 2,
+   "start": 29.642,
+   "dauer": 3.086,
+   "emotion": "erzaehlend",
+   "text": "Du hast die Badewanne gefüllt, *bevor* der Strom ausfiel."
+  },
+  {
+   "nr": 10,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 32.728,
+   "dauer": 3.254,
+   "emotion": "froh",
+   "text": "Du hast Walter kennengelernt. Den alten Hausmeister."
+  },
+  {
+   "nr": 11,
+   "typ": "treppenhaus",
+   "kapitel": 2,
+   "start": 35.982,
+   "dauer": 3.182,
+   "emotion": "erzaehlend",
+   "text": "Und um Mitternacht hat jemand an deine Tür *gehämmert*."
+  },
+  {
+   "nr": 12,
+   "typ": "treppenhaus",
+   "kapitel": 3,
+   "start": 39.164,
+   "dauer": 3.566,
+   "emotion": "spannend",
+   "text": "Du öffnest die Tür einen Spalt. Taschenlampe ins Gesicht."
+  },
+  {
+   "nr": 13,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 42.73,
+   "dauer": 3.254,
+   "emotion": "ernst",
+   "text": "„Ärmel hoch. Beide. Zeigt mir eure Arme und Hälse.“"
+  },
+  {
+   "nr": 14,
+   "typ": "treppenhaus",
+   "kapitel": 3,
+   "start": 45.984,
+   "dauer": 4.478,
+   "emotion": "erzaehlend",
+   "text": "Lena zeigt ihre Arme. Mila auch. Keine Bisse. Keine Kratzer."
+  },
+  {
+   "nr": 15,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 50.462,
+   "dauer": 3.614,
+   "emotion": "traurig",
+   "text": "„Wir wohnen im dreiundzwanzigsten. Unser Wasser war schon vor einer Stunde weg.“"
+  },
+  {
+   "nr": 16,
+   "typ": "wohnung",
+   "kapitel": 3,
+   "start": 54.076,
+   "dauer": 4.046,
+   "emotion": "erzaehlend",
+   "text": "Ihr seid jetzt zu viert. Und vier Leute brauchen *viel* mehr Wasser."
+  },
+  {
+   "nr": 17,
+   "typ": "wohnung",
+   "kapitel": 4,
+   "start": 58.122,
+   "dauer": 2.558,
+   "emotion": "erzaehlend",
+   "text": "Am Morgen setzt ihr euch zusammen und rechnet."
+  },
+  {
+   "nr": 18,
+   "typ": "objekt",
+   "kapitel": 4,
+   "start": 60.68,
+   "dauer": 4.238,
+   "emotion": "erklaerend",
+   "text": "Zum Trinken und Kochen braucht ein Mensch ungefähr *zwei Liter* am Tag."
+  },
+  {
+   "nr": 19,
+   "typ": "objekt",
+   "kapitel": 4,
+   "start": 64.918,
+   "dauer": 3.542,
+   "emotion": "erklaerend",
+   "text": "Ohne Wasser überlebst du nur wenige Tage. Ohne Essen *Wochen*."
+  },
+  {
+   "nr": 20,
+   "typ": "objekt",
+   "kapitel": 4,
+   "start": 68.46,
+   "dauer": 4.478,
+   "emotion": "erklaerend",
+   "text": "Ihr seid vier. Das heißt: *acht Liter* jeden Tag. Nur fürs Überleben."
+  },
+  {
+   "nr": 21,
+   "typ": "bad",
+   "kapitel": 4,
+   "start": 72.938,
+   "dauer": 4.07,
+   "emotion": "erzaehlend",
+   "text": "In der Badewanne sind etwa hundert Liter. Dazu die Töpfe und Flaschen."
+  },
+  {
+   "nr": 22,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 77.008,
+   "dauer": 4.022,
+   "emotion": "ernst",
+   "text": "„Das reicht keine drei Wochen. Und wir haben uns noch nicht *gewaschen*.“"
+  },
+  {
+   "nr": 23,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 81.03,
+   "dauer": 4.214,
+   "emotion": "froh",
+   "text": "Walter lächelt. „In jeder Wohnung gibt es Wasser, das keiner sieht.“"
+  },
+  {
+   "nr": 24,
+   "typ": "objekt",
+   "kapitel": 5,
+   "start": 85.244,
+   "dauer": 4.67,
+   "emotion": "erklaerend",
+   "text": "Erstens: der *Warmwasserspeicher*. Oft achtzig Liter oder mehr."
+  },
+  {
+   "nr": 25,
+   "typ": "bad",
+   "kapitel": 5,
+   "start": 89.914,
+   "dauer": 4.382,
+   "emotion": "erzaehlend",
+   "text": "Unten ist ein Ablasshahn. Ihr füllt alles ab, solange es noch warm ist."
+  },
+  {
+   "nr": 26,
+   "typ": "objekt",
+   "kapitel": 5,
+   "start": 94.296,
+   "dauer": 6.374,
+   "emotion": "erklaerend",
+   "text": "Zweitens: der *Spülkasten* der Toilette. Sieben bis neun Liter. Sauberes Leitungswasser."
+  },
+  {
+   "nr": 27,
+   "typ": "objekt",
+   "kapitel": 5,
+   "start": 100.67,
+   "dauer": 5.678,
+   "emotion": "erklaerend",
+   "text": "Drittens: Die Leitungen selbst. Unten in der Wohnung kann noch Wasser in den Rohren stehen."
+  },
+  {
+   "nr": 28,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 106.348,
+   "dauer": 4.598,
+   "emotion": "wuetend",
+   "text": "„Aber niemals das Wasser aus der *Heizung* trinken. Da sind Chemikalien drin.“"
+  },
+  {
+   "nr": 29,
+   "typ": "objekt",
+   "kapitel": 5,
+   "start": 110.946,
+   "dauer": 3.182,
+   "emotion": "erklaerend",
+   "text": "Heizungswasser ist tabu. Egal wie durstig ihr seid."
+  },
+  {
+   "nr": 30,
+   "typ": "hochhaus",
+   "kapitel": 6,
+   "start": 114.128,
+   "dauer": 3.83,
+   "emotion": "erzaehlend",
+   "text": "Und dann gibt es noch die Wohnungen auf deiner Etage. Und darunter."
+  },
+  {
+   "nr": 31,
+   "typ": "treppenhaus",
+   "kapitel": 6,
+   "start": 117.958,
+   "dauer": 3.302,
+   "emotion": "erzaehlend",
+   "text": "Viele Nachbarn sind geflohen. Ihre Wohnungen stehen leer."
+  },
+  {
+   "nr": 32,
+   "typ": "gesicht",
+   "kapitel": 6,
+   "start": 121.26,
+   "dauer": 4.934,
+   "emotion": "ernst",
+   "text": "Jeder Spülkasten. Jeder Boiler. Jede volle Flasche im Kühlschrank."
+  },
+  {
+   "nr": 33,
+   "typ": "objekt",
+   "kapitel": 6,
+   "start": 126.194,
+   "dauer": 2.726,
+   "emotion": "erklaerend",
+   "text": "Am Abend habt ihr fast *dreihundert* Liter."
+  },
+  {
+   "nr": 34,
+   "typ": "wohnung",
+   "kapitel": 6,
+   "start": 128.92,
+   "dauer": 3.59,
+   "emotion": "froh",
+   "text": "Zum ersten Mal seit gestern fühlt ihr euch ein bisschen sicher."
+  },
+  {
+   "nr": 35,
+   "typ": "gesicht",
+   "kapitel": 7,
+   "start": 132.51,
+   "dauer": 4.118,
+   "emotion": "spannend",
+   "text": "Dann muss Mila aufs Klo. Und keiner hat daran gedacht."
+  },
+  {
+   "nr": 36,
+   "typ": "bad",
+   "kapitel": 7,
+   "start": 136.628,
+   "dauer": 6.566,
+   "emotion": "erzaehlend",
+   "text": "Ohne Wasserdruck kannst du nicht spülen. Und Trinkwasser in die Toilette kippen? Viel zu wertvoll."
+  },
+  {
+   "nr": 37,
+   "typ": "objekt",
+   "kapitel": 7,
+   "start": 143.194,
+   "dauer": 6.734,
+   "emotion": "erklaerend",
+   "text": "Die Lösung: Eimer, Müllbeutel, gut verschließen. Klingt eklig. *Ist* es auch."
+  },
+  {
+   "nr": 38,
+   "typ": "gesicht",
+   "kapitel": 7,
+   "start": 149.928,
+   "dauer": 4.982,
+   "emotion": "ernst",
+   "text": "„Hygiene ist kein Luxus. Wenn hier einer krank wird, haben wir *keinen* Arzt.“"
+  },
+  {
+   "nr": 39,
+   "typ": "objekt",
+   "kapitel": 7,
+   "start": 154.91,
+   "dauer": 5.294,
+   "emotion": "erklaerend",
+   "text": "Hände waschen mit wenig Wasser. Abfall weit weg. Das schützt vor Krankheiten."
+  },
+  {
+   "nr": 40,
+   "typ": "wohnung",
+   "kapitel": 8,
+   "start": 160.204,
+   "dauer": 4.622,
+   "emotion": "erzaehlend",
+   "text": "Euer Kühlschrank ist warm. Was darin ist, verdirbt jetzt schnell."
+  },
+  {
+   "nr": 41,
+   "typ": "objekt",
+   "kapitel": 8,
+   "start": 164.826,
+   "dauer": 3.998,
+   "emotion": "erklaerend",
+   "text": "Also esst ihr zuerst alles Frische. Die Dosen kommen *zuletzt*."
+  },
+  {
+   "nr": 42,
+   "typ": "wohnung",
+   "kapitel": 8,
+   "start": 168.824,
+   "dauer": 4.766,
+   "emotion": "froh",
+   "text": "Ihr esst kalte Nudeln. Für Mila ist es fast wie ein Picknick."
+  },
+  {
+   "nr": 43,
+   "typ": "skyline",
+   "kapitel": 9,
+   "start": 173.59,
+   "dauer": 4.094,
+   "emotion": "erzaehlend",
+   "text": "Die Stadt ist komplett dunkel. Nur vereinzelt brennen noch Feuer."
+  },
+  {
+   "nr": 44,
+   "typ": "wohnung",
+   "kapitel": 9,
+   "start": 177.684,
+   "dauer": 3.182,
+   "emotion": "erzaehlend",
+   "text": "Ihr flüstert nur noch. Gewöhnt euch an die Stille."
+  },
+  {
+   "nr": 45,
+   "typ": "gesicht",
+   "kapitel": 9,
+   "start": 180.866,
+   "dauer": 2.438,
+   "emotion": "traurig",
+   "text": "„Kommt Mama morgen?“, fragt Mila."
+  },
+  {
+   "nr": 46,
+   "typ": "gesicht",
+   "kapitel": 9,
+   "start": 183.304,
+   "dauer": 3.47,
+   "emotion": "traurig",
+   "text": "Lena antwortet nicht. Sie streicht ihr nur über den Kopf."
+  },
+  {
+   "nr": 47,
+   "typ": "wohnung",
+   "kapitel": 10,
+   "start": 186.774,
+   "dauer": 1.934,
+   "emotion": "erzaehlend",
+   "text": "Mitten in der Nacht wachst du auf."
+  },
+  {
+   "nr": 48,
+   "typ": "gesicht",
+   "kapitel": 10,
+   "start": 188.708,
+   "dauer": 4.406,
+   "emotion": "spannend",
+   "text": "Mila steht an der Tür. Sie zittert. „Da ist was im *Treppenhaus*.“"
+  },
+  {
+   "nr": 49,
+   "typ": "treppenhaus",
+   "kapitel": 10,
+   "start": 193.114,
+   "dauer": 3.83,
+   "emotion": "erzaehlend",
+   "text": "Du legst dein Ohr an die Tür. Erst nichts. Dann …"
+  },
+  {
+   "nr": 50,
+   "typ": "treppenhaus",
+   "kapitel": 10,
+   "start": 196.944,
+   "dauer": 5.078,
+   "emotion": "erzaehlend",
+   "text": "Ein Schlurfen. Langsam. Gleichmäßig. Und ein *Stöhnen*."
+  },
+  {
+   "nr": 51,
+   "typ": "gesicht",
+   "kapitel": 10,
+   "start": 202.022,
+   "dauer": 2.75,
+   "emotion": "spannend",
+   "text": "Du erinnerst dich an das Hämmern von gestern Nacht."
+  },
+  {
+   "nr": 52,
+   "typ": "hochhaus",
+   "kapitel": 11,
+   "start": 204.772,
+   "dauer": 5.054,
+   "emotion": "erzaehlend",
+   "text": "Das Klopfen hat sie *angelockt*. Etage für Etage sind sie dem Lärm gefolgt."
+  },
+  {
+   "nr": 53,
+   "typ": "gesicht",
+   "kapitel": 11,
+   "start": 209.826,
+   "dauer": 5.03,
+   "emotion": "ernst",
+   "text": "Walter flüstert: „Sie sind langsam auf Treppen. Aber sie hören *nicht* auf.“"
+  },
+  {
+   "nr": 54,
+   "typ": "treppenhaus",
+   "kapitel": 11,
+   "start": 214.856,
+   "dauer": 2.798,
+   "emotion": "erzaehlend",
+   "text": "Einundzwanzig. Zweiundzwanzig."
+  },
+  {
+   "nr": 55,
+   "typ": "gesicht",
+   "kapitel": 11,
+   "start": 217.654,
+   "dauer": 3.878,
+   "emotion": "ernst",
+   "text": "Und eure Tür ist das *Einzige*, was zwischen euch und ihnen steht."
+  },
+  {
+   "nr": 56,
+   "typ": "titel",
+   "kapitel": 11,
+   "start": 221.532,
+   "dauer": 3.5,
+   "emotion": null,
+   "text": ""
+  },
+  {
+   "nr": 57,
+   "typ": "objekt",
+   "kapitel": 12,
+   "start": 225.032,
+   "dauer": 3.998,
+   "emotion": "erklaerend",
+   "text": "Überlebens-Check! Wo findest du in deiner Wohnung *versteckt* Wasser?"
+  },
+  {
+   "nr": 58,
+   "typ": "objekt",
+   "kapitel": 12,
+   "start": 229.03,
+   "dauer": 4.982,
+   "emotion": "erklaerend",
+   "text": "Boiler, Spülkasten und die Leitungen. Aber *niemals* Heizungswasser."
+  },
+  {
+   "nr": 59,
+   "typ": "titel",
+   "kapitel": 12,
+   "start": 234.012,
+   "dauer": 3.5,
+   "emotion": null,
+   "text": ""
+  }
+ ]
+}

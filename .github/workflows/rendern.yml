@@ -8,6 +8,8 @@ on:
       - "musik/**"
       - "engine/**"
       - "figuren.json"
+      - "render.mjs"
+      - "drehbuch.mjs"
   workflow_dispatch:
     inputs:
       folge:
@@ -35,7 +37,7 @@ jobs:
             L=$(ls episoden/folge-*.txt | xargs -n1 basename | sed 's/\.txt$//')
           else
             G=$(git diff --name-only HEAD~1 HEAD || true)
-            if echo "$G" | grep -qE '^(engine/|figuren.json)'; then
+            if echo "$G" | grep -qE '^(engine/|figuren.json|render.mjs|drehbuch.mjs)'; then
               L=$(ls episoden/folge-*.txt | xargs -n1 basename | sed 's/\.txt$//')
             else
               L=$(echo "$G" | grep -E '^episoden/folge-.*\.txt$' | xargs -r -n1 basename | sed 's/\.txt$//')
@@ -67,14 +69,18 @@ jobs:
           npm install --no-audit --no-fund
           npx playwright install --with-deps chromium
       - name: Rendern
-        run: node render.mjs "episoden/${{ matrix.folge }}.txt"
+        run: node render.mjs "episoden/${{ matrix.folge }}.txt" --teile
       - name: Als Download bereitstellen
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           tag="${{ matrix.folge }}-v${{ github.run_number }}"
-          gh release create "$tag" "ausgabe/${{ matrix.folge }}.mp4" --title "${{ matrix.folge }} (Version ${{ github.run_number }})" --notes "Automatisch gerendert."
+          { echo "Automatisch gerendert. Ganze Folge plus Teile für TikTok/Insta (je max. 1 Minute):"; echo; cat "ausgabe/${{ matrix.folge }}-teile.txt"; } > notes.txt
+          gh release create "$tag" "ausgabe/${{ matrix.folge }}.mp4" ausgabe/${{ matrix.folge }}-teil-*.mp4 --title "${{ matrix.folge }} (Version ${{ github.run_number }})" --notes-file notes.txt
       - uses: actions/upload-artifact@v4
         with:
           name: ${{ matrix.folge }}
-          path: ausgabe/${{ matrix.folge }}.mp4
+          path: |
+            ausgabe/${{ matrix.folge }}.mp4
+            ausgabe/${{ matrix.folge }}-teil-*.mp4
+            ausgabe/${{ matrix.folge }}-teile.txt

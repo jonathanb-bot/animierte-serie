@@ -1,0 +1,437 @@
+{
+ "dauer": 194.614,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "treppenhaus",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 4.838,
+   "emotion": "erzaehlend",
+   "text": "Du stolperst in die Wohnung. Lena nimmt dir die Medikamente ab, ohne ein Wort."
+  },
+  {
+   "nr": 2,
+   "typ": "wohnung",
+   "kapitel": 1,
+   "start": 4.838,
+   "dauer": 4.358,
+   "emotion": "erzaehlend",
+   "text": "Fiebersaft. Elektrolyte in abgekochtem Wasser. Schluck für Schluck."
+  },
+  {
+   "nr": 3,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 9.196,
+   "dauer": 4.502,
+   "emotion": "ruhig",
+   "text": "Dann erst erzählst du es. Kai. Die Hintertür. Die *Horde*."
+  },
+  {
+   "nr": 4,
+   "typ": "titel",
+   "kapitel": 1,
+   "start": 13.698,
+   "dauer": 3.0,
+   "emotion": null,
+   "text": ""
+  },
+  {
+   "nr": 5,
+   "typ": "strasse",
+   "kapitel": 2,
+   "start": 16.698,
+   "dauer": 5.03,
+   "emotion": "erzaehlend",
+   "text": "Was bisher geschah: Kai hat die Horde mit einer Autoalarmanlage *weggelockt*."
+  },
+  {
+   "nr": 6,
+   "typ": "objekt",
+   "kapitel": 2,
+   "start": 21.728,
+   "dauer": 2.582,
+   "emotion": "erklaerend",
+   "text": "Du hast die Medikamente für Mila geholt."
+  },
+  {
+   "nr": 7,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 24.31,
+   "dauer": 4.046,
+   "emotion": "spannend",
+   "text": "Aber du hast die Hintertür *offen* gelassen. Und Kai ist nicht zurückgekommen."
+  },
+  {
+   "nr": 8,
+   "typ": "hochhaus",
+   "kapitel": 3,
+   "start": 28.356,
+   "dauer": 3.734,
+   "emotion": "erzaehlend",
+   "text": "Eine Stunde später sind sie da. An der Barrikade im zwanzigsten Stock."
+  },
+  {
+   "nr": 9,
+   "typ": "treppenhaus",
+   "kapitel": 3,
+   "start": 32.09,
+   "dauer": 5.174,
+   "emotion": "erzaehlend",
+   "text": "Sie drücken. Sie kratzen. Und das Stöhnen hallt durch das *ganze* Haus."
+  },
+  {
+   "nr": 10,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 37.264,
+   "dauer": 6.422,
+   "emotion": "ernst",
+   "text": "Walter schaut sich die Barrikade an. „Sie hält. Noch. Aber je mehr kommen, desto *stärker* drücken sie.“"
+  },
+  {
+   "nr": 11,
+   "typ": "objekt",
+   "kapitel": 3,
+   "start": 43.686,
+   "dauer": 3.71,
+   "emotion": "erklaerend",
+   "text": "Einer allein kann keine Barrikade umwerfen. Fünfzig *schon*."
+  },
+  {
+   "nr": 12,
+   "typ": "treppenhaus",
+   "kapitel": 4,
+   "start": 47.396,
+   "dauer": 5.582,
+   "emotion": "erzaehlend",
+   "text": "Ihr holt alles, was noch schwer ist. Kühlschränke. Bücherregale. Eine *Badewanne*."
+  },
+  {
+   "nr": 13,
+   "typ": "objekt",
+   "kapitel": 4,
+   "start": 52.978,
+   "dauer": 6.326,
+   "emotion": "erklaerend",
+   "text": "Walters Trick: Alles wird gegen die Stufen *verkeilt*. Je mehr sie drücken, desto fester sitzt es."
+  },
+  {
+   "nr": 14,
+   "typ": "treppenhaus",
+   "kapitel": 4,
+   "start": 59.304,
+   "dauer": 3.95,
+   "emotion": "erzaehlend",
+   "text": "Die Barrikade ist jetzt doppelt so hoch. Für heute *muss* das reichen."
+  },
+  {
+   "nr": 15,
+   "typ": "wohnung",
+   "kapitel": 5,
+   "start": 63.254,
+   "dauer": 3.11,
+   "emotion": "erzaehlend",
+   "text": "In der Nacht sitzt Lena die ganze Zeit neben Mila."
+  },
+  {
+   "nr": 16,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 66.364,
+   "dauer": 5.222,
+   "emotion": "froh",
+   "text": "Gegen Morgen legt sie ihr die Hand auf die Stirn. Und *lächelt* zum ersten Mal seit Tagen."
+  },
+  {
+   "nr": 17,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 71.586,
+   "dauer": 2.126,
+   "emotion": "ruhig",
+   "text": "„Lena? Ich hab Hunger.“"
+  },
+  {
+   "nr": 18,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 73.712,
+   "dauer": 1.43,
+   "emotion": "froh",
+   "text": "Das Fieber *sinkt*."
+  },
+  {
+   "nr": 19,
+   "typ": "dach",
+   "kapitel": 6,
+   "start": 75.142,
+   "dauer": 3.758,
+   "emotion": "erzaehlend",
+   "text": "Am Morgen geht ihr aufs Dach. Ihr braucht Luft. Und einen Plan."
+  },
+  {
+   "nr": 20,
+   "typ": "skyline",
+   "kapitel": 6,
+   "start": 78.9,
+   "dauer": 3.398,
+   "emotion": "erzaehlend",
+   "text": "Da blitzt etwas auf. Auf dem Dach des Hochhauses *gegenüber*."
+  },
+  {
+   "nr": 21,
+   "typ": "objekt",
+   "kapitel": 6,
+   "start": 82.298,
+   "dauer": 4.91,
+   "emotion": "erklaerend",
+   "text": "Kurz. Lang. Kurz. Jemand spiegelt die Sonne. Direkt zu euch."
+  },
+  {
+   "nr": 22,
+   "typ": "gesicht",
+   "kapitel": 6,
+   "start": 87.208,
+   "dauer": 4.622,
+   "emotion": "froh",
+   "text": "Du kneifst die Augen zusammen. Eine Gestalt. Mit Rucksack. Sie *winkt*."
+  },
+  {
+   "nr": 23,
+   "typ": "gesicht",
+   "kapitel": 6,
+   "start": 91.83,
+   "dauer": 2.942,
+   "emotion": "froh",
+   "text": "Es ist *Kai*. Er hat es aufs andere Dach geschafft."
+  },
+  {
+   "nr": 24,
+   "typ": "objekt",
+   "kapitel": 7,
+   "start": 94.772,
+   "dauer": 5.87,
+   "emotion": "erklaerend",
+   "text": "Und dann fällt euch ein, welcher Tag heute ist. Tag elf. Der Tag der *Evakuierung*."
+  },
+  {
+   "nr": 25,
+   "typ": "gesicht",
+   "kapitel": 7,
+   "start": 100.642,
+   "dauer": 4.598,
+   "emotion": "ernst",
+   "text": "Walter: „Ins Stadion kommen wir nicht. Also muss der Hubschrauber zu *uns* kommen.“"
+  },
+  {
+   "nr": 26,
+   "typ": "dach",
+   "kapitel": 7,
+   "start": 105.24,
+   "dauer": 4.526,
+   "emotion": "erzaehlend",
+   "text": "Die Hubschrauber suchen die Dächer ab. Aber vor drei Tagen ist einer *einfach weitergeflogen*."
+  },
+  {
+   "nr": 27,
+   "typ": "gesicht",
+   "kapitel": 7,
+   "start": 109.766,
+   "dauer": 3.902,
+   "emotion": "erzaehlend",
+   "text": "Ihr braucht ein Zeichen. Eins, das man von oben *nicht übersehen* kann."
+  },
+  {
+   "nr": 28,
+   "typ": "objekt",
+   "kapitel": 8,
+   "start": 113.668,
+   "dauer": 6.062,
+   "emotion": "erklaerend",
+   "text": "Erstens: weiße Bettlaken. Ausgelegt als drei riesige Buchstaben. *S. O. S.*"
+  },
+  {
+   "nr": 29,
+   "typ": "dach",
+   "kapitel": 8,
+   "start": 119.73,
+   "dauer": 2.942,
+   "emotion": "erzaehlend",
+   "text": "Ihr holt jedes helle Laken aus jeder leeren Wohnung."
+  },
+  {
+   "nr": 30,
+   "typ": "objekt",
+   "kapitel": 8,
+   "start": 122.672,
+   "dauer": 5.534,
+   "emotion": "erklaerend",
+   "text": "Zweitens: ein Spiegel. Wie Kai. Ein Blitz aus Sonnenlicht ist *kilometerweit* zu sehen."
+  },
+  {
+   "nr": 31,
+   "typ": "objekt",
+   "kapitel": 8,
+   "start": 128.206,
+   "dauer": 5.63,
+   "emotion": "erklaerend",
+   "text": "Drittens: Rauch. Aber nur, wenn ein Hubschrauber *da ist*. Feuer auf einem Dach ist gefährlich."
+  },
+  {
+   "nr": 32,
+   "typ": "dach",
+   "kapitel": 8,
+   "start": 133.836,
+   "dauer": 3.734,
+   "emotion": "froh",
+   "text": "Am Mittag liegt da ein SOS, so groß wie ein Tennisplatz."
+  },
+  {
+   "nr": 33,
+   "typ": "dach",
+   "kapitel": 9,
+   "start": 137.57,
+   "dauer": 5.294,
+   "emotion": "erzaehlend",
+   "text": "Ihr wartet. Mila ist eingewickelt in eine Decke. Sie ist schwach. Aber sie *lebt*."
+  },
+  {
+   "nr": 34,
+   "typ": "skyline",
+   "kapitel": 9,
+   "start": 142.864,
+   "dauer": 3.398,
+   "emotion": "erzaehlend",
+   "text": "Weit weg hört ihr Rotoren. Richtung Stadion. Immer wieder."
+  },
+  {
+   "nr": 35,
+   "typ": "gesicht",
+   "kapitel": 9,
+   "start": 146.262,
+   "dauer": 1.55,
+   "emotion": "ernst",
+   "text": "Aber keiner kommt zu euch."
+  },
+  {
+   "nr": 36,
+   "typ": "gesicht",
+   "kapitel": 9,
+   "start": 147.812,
+   "dauer": 2.942,
+   "emotion": "ernst",
+   "text": "„Morgen“, sagt Walter. „Morgen fliegen sie *nochmal*.“"
+  },
+  {
+   "nr": 37,
+   "typ": "wohnung",
+   "kapitel": 10,
+   "start": 150.754,
+   "dauer": 2.174,
+   "emotion": "erzaehlend",
+   "text": "In der Nacht schläft keiner richtig."
+  },
+  {
+   "nr": 38,
+   "typ": "treppenhaus",
+   "kapitel": 10,
+   "start": 152.928,
+   "dauer": 3.734,
+   "emotion": "erzaehlend",
+   "text": "Das Drücken an der Barrikade wird *lauter*. Rhythmischer."
+  },
+  {
+   "nr": 39,
+   "typ": "gesicht",
+   "kapitel": 10,
+   "start": 156.662,
+   "dauer": 4.166,
+   "emotion": "spannend",
+   "text": "Walter steht auf. „Das sind jetzt hundert. Mindestens.“"
+  },
+  {
+   "nr": 40,
+   "typ": "hochhaus",
+   "kapitel": 10,
+   "start": 160.828,
+   "dauer": 3.878,
+   "emotion": "erzaehlend",
+   "text": "Das ganze Treppenhaus ist voll. Bis runter ins *Erdgeschoss*."
+  },
+  {
+   "nr": 41,
+   "typ": "treppenhaus",
+   "kapitel": 11,
+   "start": 164.706,
+   "dauer": 4.31,
+   "emotion": "erzaehlend",
+   "text": "Dann: ein Krachen. Holz splittert. Metall kreischt."
+  },
+  {
+   "nr": 42,
+   "typ": "gesicht",
+   "kapitel": 11,
+   "start": 169.016,
+   "dauer": 2.726,
+   "emotion": "spannend",
+   "text": "Die Barrikade im zwanzigsten Stock ist *gebrochen*."
+  },
+  {
+   "nr": 43,
+   "typ": "hochhaus",
+   "kapitel": 11,
+   "start": 171.742,
+   "dauer": 3.35,
+   "emotion": "erzaehlend",
+   "text": "Einundzwanzig. Zweiundzwanzig. Sie kommen."
+  },
+  {
+   "nr": 44,
+   "typ": "gesicht",
+   "kapitel": 11,
+   "start": 175.092,
+   "dauer": 3.59,
+   "emotion": "ernst",
+   "text": "Walter greift nach Milas Hand. „*Aufs Dach*. Sofort.“"
+  },
+  {
+   "nr": 45,
+   "typ": "titel",
+   "kapitel": 11,
+   "start": 178.682,
+   "dauer": 3.5,
+   "emotion": null,
+   "text": ""
+  },
+  {
+   "nr": 46,
+   "typ": "objekt",
+   "kapitel": 12,
+   "start": 182.182,
+   "dauer": 3.854,
+   "emotion": "erklaerend",
+   "text": "Überlebens-Check! Welche Signale sieht ein Hubschrauber *am besten*?"
+  },
+  {
+   "nr": 47,
+   "typ": "objekt",
+   "kapitel": 12,
+   "start": 186.036,
+   "dauer": 5.078,
+   "emotion": "erklaerend",
+   "text": "Große helle Zeichen, Spiegelblitze und Rauch. Am besten *alles zusammen*."
+  },
+  {
+   "nr": 48,
+   "typ": "titel",
+   "kapitel": 12,
+   "start": 191.114,
+   "dauer": 3.5,
+   "emotion": null,
+   "text": ""
+  }
+ ]
+}

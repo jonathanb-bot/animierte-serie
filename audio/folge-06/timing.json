@@ -1,0 +1,482 @@
+{
+ "dauer": 210.86,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "dach",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 6.206,
+   "emotion": "erzaehlend",
+   "text": "Er dreht sich um. Graue Haut. Milchige Augen. Ein Anzug, voller Flecken."
+  },
+  {
+   "nr": 2,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 6.206,
+   "dauer": 5.846,
+   "emotion": "traurig",
+   "text": "Walter erkennt ihn. „Herr Brandt. Zweiundzwanzigster Stock. Hat hier oben immer *geraucht*.“"
+  },
+  {
+   "nr": 3,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 12.052,
+   "dauer": 3.398,
+   "emotion": "wuetend",
+   "text": "Kai hebt das Brecheisen. Aber Walter hält seinen Arm fest."
+  },
+  {
+   "nr": 4,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 15.45,
+   "dauer": 4.718,
+   "emotion": "ernst",
+   "text": "„Kein Kampf. Jeder Kampf ist *Lärm*. Und Lärm holt die anderen.“"
+  },
+  {
+   "nr": 5,
+   "typ": "titel",
+   "kapitel": 1,
+   "start": 20.168,
+   "dauer": 3.0,
+   "emotion": null,
+   "text": ""
+  },
+  {
+   "nr": 6,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 23.168,
+   "dauer": 4.646,
+   "emotion": "traurig",
+   "text": "Was bisher geschah: Kai hat Wasser gestohlen. Er wollte allein zum *Stadion*."
+  },
+  {
+   "nr": 7,
+   "typ": "objekt",
+   "kapitel": 2,
+   "start": 27.814,
+   "dauer": 1.982,
+   "emotion": "erklaerend",
+   "text": "Seitdem wird das Wasser *rationiert*."
+  },
+  {
+   "nr": 8,
+   "typ": "dach",
+   "kapitel": 2,
+   "start": 29.796,
+   "dauer": 4.43,
+   "emotion": "erzaehlend",
+   "text": "Walter hat euch zum alten Tank auf dem Dach geführt. Aber da oben war *jemand*."
+  },
+  {
+   "nr": 9,
+   "typ": "dach",
+   "kapitel": 3,
+   "start": 34.226,
+   "dauer": 4.862,
+   "emotion": "erzaehlend",
+   "text": "Neben dem Tank steht ein kleiner Betonbau. Der *Technikraum*. Die Tür ist offen."
+  },
+  {
+   "nr": 10,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 39.088,
+   "dauer": 3.686,
+   "emotion": "ernst",
+   "text": "Lena flüstert: „Wir locken ihn da rein. Und machen die Tür zu.“"
+  },
+  {
+   "nr": 11,
+   "typ": "dach",
+   "kapitel": 3,
+   "start": 42.774,
+   "dauer": 4.406,
+   "emotion": "erzaehlend",
+   "text": "Kai klopft zweimal leise gegen die offene Stahltür. Dann tritt er *zur Seite*."
+  },
+  {
+   "nr": 12,
+   "typ": "dach",
+   "kapitel": 3,
+   "start": 47.18,
+   "dauer": 4.358,
+   "emotion": "erzaehlend",
+   "text": "Herr Brandt dreht den Kopf. Langsam. Und schlurft auf das Geräusch zu."
+  },
+  {
+   "nr": 13,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 51.538,
+   "dauer": 2.918,
+   "emotion": "spannend",
+   "text": "Ein Schritt. Noch einer. Er ist drin."
+  },
+  {
+   "nr": 14,
+   "typ": "dach",
+   "kapitel": 3,
+   "start": 54.456,
+   "dauer": 3.11,
+   "emotion": "erzaehlend",
+   "text": "*Tür zu*. Kai rammt das Brecheisen unter die Klinke."
+  },
+  {
+   "nr": 15,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 57.566,
+   "dauer": 3.398,
+   "emotion": "froh",
+   "text": "Von drinnen kommt ein dumpfes Kratzen. Aber die Tür *hält*."
+  },
+  {
+   "nr": 16,
+   "typ": "dach",
+   "kapitel": 4,
+   "start": 60.964,
+   "dauer": 3.566,
+   "emotion": "erzaehlend",
+   "text": "Am nächsten Morgen klettert Walter die Leiter am Tank hoch."
+  },
+  {
+   "nr": 17,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 64.53,
+   "dauer": 3.542,
+   "emotion": "froh",
+   "text": "„Halb voll! Das sind locker *anderthalbtausend* Liter!“"
+  },
+  {
+   "nr": 18,
+   "typ": "objekt",
+   "kapitel": 4,
+   "start": 68.072,
+   "dauer": 2.918,
+   "emotion": "erklaerend",
+   "text": "Anderthalbtausend Liter. Genug für Monate."
+  },
+  {
+   "nr": 19,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 70.99,
+   "dauer": 3.782,
+   "emotion": "ernst",
+   "text": "Dann schaut er genauer hin. „Aber *trinken* würde ich das so nicht.“"
+  },
+  {
+   "nr": 20,
+   "typ": "objekt",
+   "kapitel": 4,
+   "start": 74.772,
+   "dauer": 4.478,
+   "emotion": "erklaerend",
+   "text": "Algen. Laub. Vogeldreck. Das Wasser steht seit Jahren."
+  },
+  {
+   "nr": 21,
+   "typ": "wohnung",
+   "kapitel": 5,
+   "start": 79.25,
+   "dauer": 2.702,
+   "emotion": "erzaehlend",
+   "text": "Lena zeigt euch, wie man Wasser *trinkbar* macht."
+  },
+  {
+   "nr": 22,
+   "typ": "objekt",
+   "kapitel": 5,
+   "start": 81.952,
+   "dauer": 5.942,
+   "emotion": "erklaerend",
+   "text": "Erstens: durch ein sauberes Tuch oder einen Kaffeefilter gießen. Das holt den groben *Dreck* raus."
+  },
+  {
+   "nr": 23,
+   "typ": "objekt",
+   "kapitel": 5,
+   "start": 87.894,
+   "dauer": 5.342,
+   "emotion": "erklaerend",
+   "text": "Zweitens: sprudelnd kochen lassen. Mindestens eine Minute. Das tötet die meisten *Keime*."
+  },
+  {
+   "nr": 24,
+   "typ": "objekt",
+   "kapitel": 5,
+   "start": 93.236,
+   "dauer": 5.198,
+   "emotion": "erklaerend",
+   "text": "Und wenn das Gas ausgeht? Klare Plastikflaschen. Sechs Stunden in die *pralle Sonne*."
+  },
+  {
+   "nr": 25,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 98.434,
+   "dauer": 4.982,
+   "emotion": "ernst",
+   "text": "„Das UV-Licht der Sonne tötet viele Keime. Nicht perfekt. Aber besser als nichts.“"
+  },
+  {
+   "nr": 26,
+   "typ": "dach",
+   "kapitel": 5,
+   "start": 103.416,
+   "dauer": 3.374,
+   "emotion": "erzaehlend",
+   "text": "Ab jetzt liegen auf dem Dach jeden Tag Flaschen in der Sonne."
+  },
+  {
+   "nr": 27,
+   "typ": "gesicht",
+   "kapitel": 6,
+   "start": 106.79,
+   "dauer": 4.43,
+   "emotion": "froh",
+   "text": "Kai hat die nächste Idee. „Wenn der Tank Regen sammelt, können *wir* das auch.“"
+  },
+  {
+   "nr": 28,
+   "typ": "dach",
+   "kapitel": 6,
+   "start": 111.22,
+   "dauer": 4.358,
+   "emotion": "erzaehlend",
+   "text": "Aus den leeren Wohnungen holt ihr Planen, Duschvorhänge und Regentonnen."
+  },
+  {
+   "nr": 29,
+   "typ": "objekt",
+   "kapitel": 6,
+   "start": 115.578,
+   "dauer": 4.646,
+   "emotion": "erklaerend",
+   "text": "Die Plane wird schräg gespannt. In der Mitte ein Loch. Darunter: die *Tonne*."
+  },
+  {
+   "nr": 30,
+   "typ": "gesicht",
+   "kapitel": 6,
+   "start": 120.224,
+   "dauer": 4.742,
+   "emotion": "erzaehlend",
+   "text": "„Die ersten Liter bei jedem Regen wegkippen“, sagt Walter. „Die spülen den *Dreck* vom Dach.“"
+  },
+  {
+   "nr": 31,
+   "typ": "dach",
+   "kapitel": 7,
+   "start": 124.966,
+   "dauer": 2.654,
+   "emotion": "erzaehlend",
+   "text": "Am achten Tag zieht ein Gewitter auf."
+  },
+  {
+   "nr": 32,
+   "typ": "dach",
+   "kapitel": 7,
+   "start": 127.62,
+   "dauer": 3.71,
+   "emotion": "froh",
+   "text": "Und dann *regnet* es. Richtig. Stundenlang."
+  },
+  {
+   "nr": 33,
+   "typ": "gesicht",
+   "kapitel": 7,
+   "start": 131.33,
+   "dauer": 3.374,
+   "emotion": "froh",
+   "text": "Mila steht mit ausgebreiteten Armen auf dem Dach und lacht."
+  },
+  {
+   "nr": 34,
+   "typ": "dach",
+   "kapitel": 7,
+   "start": 134.704,
+   "dauer": 5.054,
+   "emotion": "froh",
+   "text": "Die Tonnen laufen voll. Der Tank steigt. Zum ersten Mal habt ihr *genug*."
+  },
+  {
+   "nr": 35,
+   "typ": "dach",
+   "kapitel": 8,
+   "start": 139.758,
+   "dauer": 4.958,
+   "emotion": "erzaehlend",
+   "text": "Am Abend des neunten Tages hört ihr etwas, das ihr seit über einer Woche nicht gehört habt."
+  },
+  {
+   "nr": 36,
+   "typ": "objekt",
+   "kapitel": 8,
+   "start": 144.716,
+   "dauer": 3.062,
+   "emotion": "erklaerend",
+   "text": "Ein Knattern. Rhythmisch. *Laut*."
+  },
+  {
+   "nr": 37,
+   "typ": "dach",
+   "kapitel": 8,
+   "start": 147.778,
+   "dauer": 2.798,
+   "emotion": "erzaehlend",
+   "text": "Ein *Hubschrauber*! Er fliegt tief über die Dächer."
+  },
+  {
+   "nr": 38,
+   "typ": "dach",
+   "kapitel": 9,
+   "start": 150.576,
+   "dauer": 2.414,
+   "emotion": "erzaehlend",
+   "text": "Ihr springt. Ihr winkt. Ihr schreit."
+  },
+  {
+   "nr": 39,
+   "typ": "skyline",
+   "kapitel": 9,
+   "start": 152.99,
+   "dauer": 3.71,
+   "emotion": "erzaehlend",
+   "text": "Aber er dreht *nicht* ab. Er fliegt weiter Richtung Stadion."
+  },
+  {
+   "nr": 40,
+   "typ": "gesicht",
+   "kapitel": 9,
+   "start": 156.7,
+   "dauer": 4.55,
+   "emotion": "traurig",
+   "text": "Ihr seid nur ein Dach unter Tausenden. Ohne Zeichen. Ohne *Signal*."
+  },
+  {
+   "nr": 41,
+   "typ": "gesicht",
+   "kapitel": 9,
+   "start": 161.25,
+   "dauer": 4.598,
+   "emotion": "ernst",
+   "text": "Walter sagt leise: „Nächstes Mal sehen sie uns. Dafür *sorgen* wir.“"
+  },
+  {
+   "nr": 42,
+   "typ": "wohnung",
+   "kapitel": 10,
+   "start": 165.848,
+   "dauer": 3.494,
+   "emotion": "erzaehlend",
+   "text": "In dieser Nacht kann Mila nicht schlafen. Ihr ist *heiß*."
+  },
+  {
+   "nr": 43,
+   "typ": "gesicht",
+   "kapitel": 10,
+   "start": 169.342,
+   "dauer": 3.542,
+   "emotion": "ernst",
+   "text": "Lena legt ihr die Hand auf die Stirn. Ihr Gesicht wird blass."
+  },
+  {
+   "nr": 44,
+   "typ": "gesicht",
+   "kapitel": 10,
+   "start": 172.884,
+   "dauer": 5.414,
+   "emotion": "traurig",
+   "text": "„Ich hatte so Durst“, flüstert Mila. „Ich hab vom Tank *getrunken*. Direkt. Bevor ihr es gekocht habt.“"
+  },
+  {
+   "nr": 45,
+   "typ": "gesicht",
+   "kapitel": 11,
+   "start": 178.298,
+   "dauer": 3.662,
+   "emotion": "spannend",
+   "text": "Lena flüstert: „Ihr Fieber ist *hoch*. Und es steigt.“"
+  },
+  {
+   "nr": 46,
+   "typ": "objekt",
+   "kapitel": 11,
+   "start": 181.96,
+   "dauer": 4.19,
+   "emotion": "erklaerend",
+   "text": "Keine Medikamente. Keine Salze gegen den Wasserverlust. *Nichts*."
+  },
+  {
+   "nr": 47,
+   "typ": "wohnung",
+   "kapitel": 11,
+   "start": 186.15,
+   "dauer": 2.126,
+   "emotion": "erzaehlend",
+   "text": "Ihr wisst alle, wo es Medikamente gibt."
+  },
+  {
+   "nr": 48,
+   "typ": "strasse",
+   "kapitel": 11,
+   "start": 188.276,
+   "dauer": 4.718,
+   "emotion": "erzaehlend",
+   "text": "Direkt gegenüber. Auf der anderen Straßenseite. Mitten *zwischen* ihnen."
+  },
+  {
+   "nr": 49,
+   "typ": "gesicht",
+   "kapitel": 11,
+   "start": 192.994,
+   "dauer": 2.39,
+   "emotion": "ernst",
+   "text": "Und jemand muss dorthin."
+  },
+  {
+   "nr": 50,
+   "typ": "titel",
+   "kapitel": 11,
+   "start": 195.384,
+   "dauer": 3.5,
+   "emotion": null,
+   "text": ""
+  },
+  {
+   "nr": 51,
+   "typ": "objekt",
+   "kapitel": 12,
+   "start": 198.884,
+   "dauer": 3.758,
+   "emotion": "erklaerend",
+   "text": "Überlebens-Check! Was musst du bei Regenwasser vom Dach *beachten*?"
+  },
+  {
+   "nr": 52,
+   "typ": "objekt",
+   "kapitel": 12,
+   "start": 202.642,
+   "dauer": 4.718,
+   "emotion": "erklaerend",
+   "text": "Die ersten Liter wegkippen. Danach trotzdem *filtern und abkochen*."
+  },
+  {
+   "nr": 53,
+   "typ": "titel",
+   "kapitel": 12,
+   "start": 207.36,
+   "dauer": 3.5,
+   "emotion": null,
+   "text": ""
+  }
+ ]
+}

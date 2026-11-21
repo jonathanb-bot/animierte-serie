@@ -1,0 +1,464 @@
+{
+ "dauer": 209.992,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "treppenhaus",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 3.614,
+   "emotion": "erzaehlend",
+   "text": "Hinter der Barrikade wartet ein Mann. Allein."
+  },
+  {
+   "nr": 2,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 3.614,
+   "dauer": 4.142,
+   "emotion": "spannend",
+   "text": "„Ich heiße Kai. Zwölfter Stock. Meine Etage ist *voll* von denen.“"
+  },
+  {
+   "nr": 3,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 7.756,
+   "dauer": 4.19,
+   "emotion": "ernst",
+   "text": "Walter flüstert: „Wenn wir ihn reinlassen, müssen wir ihn auch *durchfüttern*.“"
+  },
+  {
+   "nr": 4,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 11.946,
+   "dauer": 3.182,
+   "emotion": "ernst",
+   "text": "„Ich hab Konserven. Eine Powerbank. Und ein *Kurbelradio*.“"
+  },
+  {
+   "nr": 5,
+   "typ": "titel",
+   "kapitel": 1,
+   "start": 15.128,
+   "dauer": 3.0,
+   "emotion": null,
+   "text": ""
+  },
+  {
+   "nr": 6,
+   "typ": "treppenhaus",
+   "kapitel": 2,
+   "start": 18.128,
+   "dauer": 4.406,
+   "emotion": "erzaehlend",
+   "text": "Was bisher geschah: Ihr habt eine Barrikade im *20. Stock* gebaut."
+  },
+  {
+   "nr": 7,
+   "typ": "hochhaus",
+   "kapitel": 2,
+   "start": 22.534,
+   "dauer": 3.398,
+   "emotion": "erzaehlend",
+   "text": "Ein Wecker im Aufzugschacht hat die Zombies nach *unten* gelockt."
+  },
+  {
+   "nr": 8,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 25.932,
+   "dauer": 3.926,
+   "emotion": "spannend",
+   "text": "Und hinter der Barrikade stand plötzlich ein Fremder. *Kai*."
+  },
+  {
+   "nr": 9,
+   "typ": "treppenhaus",
+   "kapitel": 3,
+   "start": 29.858,
+   "dauer": 5.174,
+   "emotion": "erzaehlend",
+   "text": "Ihr macht die Barrikade nicht auf. Kai muss *drüberklettern*. Ganz oben, am Geländer."
+  },
+  {
+   "nr": 10,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 35.032,
+   "dauer": 3.446,
+   "emotion": "ernst",
+   "text": "„Erst die Arme. Dann den Hals. Dann die Beine.“"
+  },
+  {
+   "nr": 11,
+   "typ": "treppenhaus",
+   "kapitel": 3,
+   "start": 38.478,
+   "dauer": 4.19,
+   "emotion": "erzaehlend",
+   "text": "Keine Bisse. Nur ein Kratzer an der Hand. Von *Glas*, sagt er."
+  },
+  {
+   "nr": 12,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 42.668,
+   "dauer": 5.246,
+   "emotion": "ernst",
+   "text": "Lena schaut sich den Kratzer genau an. Sauber. Kein Fieber. Sie *glaubt* ihm."
+  },
+  {
+   "nr": 13,
+   "typ": "wohnung",
+   "kapitel": 3,
+   "start": 47.914,
+   "dauer": 1.526,
+   "emotion": "erzaehlend",
+   "text": "Ihr seid jetzt zu fünft."
+  },
+  {
+   "nr": 14,
+   "typ": "objekt",
+   "kapitel": 4,
+   "start": 49.44,
+   "dauer": 4.982,
+   "emotion": "erklaerend",
+   "text": "Kais Kurbelradio braucht keinen Strom. Eine Minute kurbeln, ein paar Minuten *Empfang*."
+  },
+  {
+   "nr": 15,
+   "typ": "wohnung",
+   "kapitel": 4,
+   "start": 54.422,
+   "dauer": 3.758,
+   "emotion": "erzaehlend",
+   "text": "Ihr dreht stundenlang an den Sendern. Fast überall nur Rauschen."
+  },
+  {
+   "nr": 16,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 58.18,
+   "dauer": 5.246,
+   "emotion": "ernst",
+   "text": "Dann eine automatische Durchsage: „Bleiben Sie zu Hause. Verdunkeln Sie Ihre Fenster.“"
+  },
+  {
+   "nr": 17,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 63.426,
+   "dauer": 2.678,
+   "emotion": "ernst",
+   "text": "*Verdunkeln*. Warum ausgerechnet das?"
+  },
+  {
+   "nr": 18,
+   "typ": "skyline",
+   "kapitel": 5,
+   "start": 66.104,
+   "dauer": 4.67,
+   "emotion": "erzaehlend",
+   "text": "Am Abend seht ihr die Antwort. Im Hochhaus gegenüber, fünfzehnter Stock."
+  },
+  {
+   "nr": 19,
+   "typ": "skyline",
+   "kapitel": 5,
+   "start": 70.774,
+   "dauer": 3.446,
+   "emotion": "erzaehlend",
+   "text": "Dort brennt *Licht*. Hell. Mit einem Generator."
+  },
+  {
+   "nr": 20,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 74.22,
+   "dauer": 3.662,
+   "emotion": "ernst",
+   "text": "„Die Idioten. Den Generator hört man drei Straßen weit.“"
+  },
+  {
+   "nr": 21,
+   "typ": "strasse",
+   "kapitel": 5,
+   "start": 77.882,
+   "dauer": 4.814,
+   "emotion": "erzaehlend",
+   "text": "Und unten auf der Straße passiert etwas. Sie *sammeln* sich. Dutzende."
+  },
+  {
+   "nr": 22,
+   "typ": "strasse",
+   "kapitel": 5,
+   "start": 82.696,
+   "dauer": 3.59,
+   "emotion": "erzaehlend",
+   "text": "Sie starren nach oben. Zum Licht. Zum Lärm."
+  },
+  {
+   "nr": 23,
+   "typ": "skyline",
+   "kapitel": 6,
+   "start": 86.286,
+   "dauer": 3.134,
+   "emotion": "erzaehlend",
+   "text": "Gegen Mitternacht hört ihr Glas zersplittern. Schreie."
+  },
+  {
+   "nr": 24,
+   "typ": "gesicht",
+   "kapitel": 6,
+   "start": 89.42,
+   "dauer": 2.126,
+   "emotion": "spannend",
+   "text": "Lena hält Mila die Ohren zu."
+  },
+  {
+   "nr": 25,
+   "typ": "skyline",
+   "kapitel": 6,
+   "start": 91.546,
+   "dauer": 3.302,
+   "emotion": "erzaehlend",
+   "text": "Dann geht das Licht gegenüber aus. Und es wird *still*."
+  },
+  {
+   "nr": 26,
+   "typ": "gesicht",
+   "kapitel": 6,
+   "start": 94.848,
+   "dauer": 3.374,
+   "emotion": "traurig",
+   "text": "Ihr sagt kein Wort. Aber ihr wisst alle, was das bedeutet."
+  },
+  {
+   "nr": 27,
+   "typ": "wohnung",
+   "kapitel": 7,
+   "start": 98.222,
+   "dauer": 3.758,
+   "emotion": "erzaehlend",
+   "text": "Am nächsten Morgen macht ihr *Regeln*. Für jede Nacht."
+  },
+  {
+   "nr": 28,
+   "typ": "objekt",
+   "kapitel": 7,
+   "start": 101.98,
+   "dauer": 5.774,
+   "emotion": "erklaerend",
+   "text": "Erstens: Alle Fenster verdunkeln. Dicke Decken, Alufolie, *keine* Lücke."
+  },
+  {
+   "nr": 29,
+   "typ": "wohnung",
+   "kapitel": 7,
+   "start": 107.754,
+   "dauer": 6.158,
+   "emotion": "erzaehlend",
+   "text": "Ihr klebt die Ränder ab. Von außen soll eure Wohnung aussehen wie alle anderen. *Tot*."
+  },
+  {
+   "nr": 30,
+   "typ": "objekt",
+   "kapitel": 7,
+   "start": 113.912,
+   "dauer": 5.318,
+   "emotion": "erklaerend",
+   "text": "Zweitens: Kerzen nur in Räumen *ohne* Fenster. Im Bad. Im Flur."
+  },
+  {
+   "nr": 31,
+   "typ": "objekt",
+   "kapitel": 7,
+   "start": 119.23,
+   "dauer": 4.622,
+   "emotion": "erklaerend",
+   "text": "Drittens: Taschenlampen immer *nach unten* richten. Nie zum Fenster."
+  },
+  {
+   "nr": 32,
+   "typ": "objekt",
+   "kapitel": 7,
+   "start": 123.852,
+   "dauer": 6.086,
+   "emotion": "erklaerend",
+   "text": "Und viertens: Handys auf dunkelste Helligkeit. Ein Display leuchtet weiter, als du denkst."
+  },
+  {
+   "nr": 33,
+   "typ": "gesicht",
+   "kapitel": 8,
+   "start": 129.938,
+   "dauer": 2.582,
+   "emotion": "wuetend",
+   "text": "Walter ist bei einer Sache *besonders* streng."
+  },
+  {
+   "nr": 34,
+   "typ": "objekt",
+   "kapitel": 8,
+   "start": 132.52,
+   "dauer": 4.31,
+   "emotion": "erklaerend",
+   "text": "Eine umgefallene Kerze. In einem Hochhaus. *Ohne* Feuerwehr."
+  },
+  {
+   "nr": 35,
+   "typ": "gesicht",
+   "kapitel": 8,
+   "start": 136.83,
+   "dauer": 5.966,
+   "emotion": "ernst",
+   "text": "„Wenn es hier brennt, brennen wir. Kerze nie unbeaufsichtigt. Immer feste Unterlage.“"
+  },
+  {
+   "nr": 36,
+   "typ": "bad",
+   "kapitel": 8,
+   "start": 142.796,
+   "dauer": 5.03,
+   "emotion": "erzaehlend",
+   "text": "Daneben steht immer ein Eimer. Gefüllt mit *gebrauchtem* Wasser. Nur für den Notfall."
+  },
+  {
+   "nr": 37,
+   "typ": "wohnung",
+   "kapitel": 9,
+   "start": 147.826,
+   "dauer": 3.926,
+   "emotion": "erzaehlend",
+   "text": "Die Tage werden ruhiger. Ihr gewöhnt euch an die Dunkelheit."
+  },
+  {
+   "nr": 38,
+   "typ": "gesicht",
+   "kapitel": 9,
+   "start": 151.752,
+   "dauer": 4.358,
+   "emotion": "froh",
+   "text": "Kai erzählt Witze. Leise. Selbst Walter muss manchmal lachen."
+  },
+  {
+   "nr": 39,
+   "typ": "bad",
+   "kapitel": 9,
+   "start": 156.11,
+   "dauer": 3.47,
+   "emotion": "froh",
+   "text": "Lena bringt Mila im Kerzenlicht Kartenspiele bei."
+  },
+  {
+   "nr": 40,
+   "typ": "gesicht",
+   "kapitel": 9,
+   "start": 159.58,
+   "dauer": 5.606,
+   "emotion": "ernst",
+   "text": "Aber du merkst etwas. Kai kurbelt das Radio immer, wenn er glaubt, dass ihr *schlaft*."
+  },
+  {
+   "nr": 41,
+   "typ": "wohnung",
+   "kapitel": 10,
+   "start": 165.186,
+   "dauer": 4.094,
+   "emotion": "erzaehlend",
+   "text": "In der vierten Nacht hörst du ihn flüstern. Er hält das Radio ans Ohr."
+  },
+  {
+   "nr": 42,
+   "typ": "objekt",
+   "kapitel": 10,
+   "start": 169.28,
+   "dauer": 5.87,
+   "emotion": "erklaerend",
+   "text": "Eine neue Durchsage. „Evakuierung per Hubschrauber. In *sieben Tagen*. Am Stadion.“"
+  },
+  {
+   "nr": 43,
+   "typ": "karte",
+   "kapitel": 10,
+   "start": 175.15,
+   "dauer": 4.382,
+   "emotion": "erklaerend",
+   "text": "Das Stadion ist vier Kilometer entfernt. Quer durch die Stadt. Über die *Brücke*."
+  },
+  {
+   "nr": 44,
+   "typ": "gesicht",
+   "kapitel": 10,
+   "start": 179.532,
+   "dauer": 3.494,
+   "emotion": "ernst",
+   "text": "Kai schaltet das Radio aus. Er erzählt *niemandem* davon."
+  },
+  {
+   "nr": 45,
+   "typ": "wohnung",
+   "kapitel": 11,
+   "start": 183.026,
+   "dauer": 2.438,
+   "emotion": "erzaehlend",
+   "text": "Am Morgen zupft Mila an deinem Ärmel."
+  },
+  {
+   "nr": 46,
+   "typ": "gesicht",
+   "kapitel": 11,
+   "start": 185.464,
+   "dauer": 4.574,
+   "emotion": "ernst",
+   "text": "„Du“, flüstert sie. „Kai hat heute Nacht *Wasserflaschen* in seinen Rucksack gesteckt.“"
+  },
+  {
+   "nr": 47,
+   "typ": "gesicht",
+   "kapitel": 11,
+   "start": 190.038,
+   "dauer": 4.958,
+   "emotion": "spannend",
+   "text": "Und plötzlich ist der gefährlichste Mensch in eurer Wohnung vielleicht *keiner* von denen da draußen."
+  },
+  {
+   "nr": 48,
+   "typ": "titel",
+   "kapitel": 11,
+   "start": 194.996,
+   "dauer": 3.5,
+   "emotion": null,
+   "text": ""
+  },
+  {
+   "nr": 49,
+   "typ": "objekt",
+   "kapitel": 12,
+   "start": 198.496,
+   "dauer": 3.35,
+   "emotion": "erklaerend",
+   "text": "Überlebens-Check! Was verrät dich nachts am *schnellsten*?"
+  },
+  {
+   "nr": 50,
+   "typ": "objekt",
+   "kapitel": 12,
+   "start": 201.846,
+   "dauer": 4.646,
+   "emotion": "erklaerend",
+   "text": "Jedes Licht. Auch ein Handy-Display. Von oben sieht man es *kilometerweit*."
+  },
+  {
+   "nr": 51,
+   "typ": "titel",
+   "kapitel": 12,
+   "start": 206.492,
+   "dauer": 3.5,
+   "emotion": null,
+   "text": ""
+  }
+ ]
+}

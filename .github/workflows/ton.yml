@@ -1,0 +1,49 @@
+name: Ton bauen
+
+on:
+  workflow_dispatch:
+    inputs:
+      folgen:
+        description: "Welche Folgen (z. B. 'folge-01 folge-02'), leer = alle"
+        required: false
+        default: ""
+
+jobs:
+  liste:
+    runs-on: ubuntu-latest
+    outputs:
+      folgen: ${{ steps.f.outputs.folgen }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: f
+        run: |
+          if [ -n "${{ github.event.inputs.folgen }}" ]; then
+            namen="${{ github.event.inputs.folgen }}"
+          else
+            namen=$(ls -d folgen/*/ton.yaml | xargs -n1 dirname | xargs -n1 basename | grep -v '^vorlage$')
+          fi
+          echo "folgen=$(printf '%s\n' $namen | jq -R . | jq -cs .)" >> "$GITHUB_OUTPUT"
+
+  ton:
+    needs: liste
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      max-parallel: 5
+      matrix:
+        folge: ${{ fromJson(needs.liste.outputs.folgen) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: sudo apt-get update && sudo apt-get install -y ffmpeg fonts-inter
+      - run: pip install -r requirements.txt
+      - run: python -m ton folgen/${{ matrix.folge }}/ton.yaml --vorschau
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ton-${{ matrix.folge }}
+          path: |
+            folgen/${{ matrix.folge }}/ausgabe/
+            !folgen/${{ matrix.folge }}/ausgabe/stem_*.wav
