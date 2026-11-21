@@ -11,6 +11,18 @@ Jonathans Auftrag vom 1.11.2026:
 - Alles in Du-Form, es **betrifft dich direkt**. **Keine Quizze, keine Fragen ans Publikum.**
 - **KI-Haken beim Posten immer aus** (Jonathans Vorgabe 2.11., Issue #15), besonders auf TikTok (`posten/zernio.mjs` auf `main`: `videoMadeWithAi: false`).
 
+## Dopamin-Loop – Pflicht-Aufbau jeder Geschichte (Jonathan 21.11.)
+
+Jonathan 21.11. zu einem Vorbild-Video („Storytelling süchtig machen mit dem Dopamin Loop“, TikTok/Instagram, 1:52 min): „Das sollst du mit reinbrennen in der Erstellung von Storys.“ Gilt für alle neuen Kurzvideos (vor allem „Was wäre, wenn du …“, `laeufe/nische.md`). Das Querformat bleibt unverändert (`quer/FORMAT.md`). Übernommen wird nur der Aufbau, nie Inhalte.
+
+Eine Schleife hat 4 Schritte, gute Geschichten haben mehrere hintereinander:
+1. **Einsatz:** eine Figur zum Mitfiebern, etwas, das auf dem Spiel steht, und Zeitdruck. Es muss nicht dramatisch sein, nur persönlich (bei uns: du und deine Familie, #31).
+2. **Große Frage:** gerade so viel Kontext, dass im Kopf eine spannende Frage entsteht (wie beim Blackjack: welche Karte kommt?). Bei uns als Aussage erzählt, nie als Frage ans Publikum (#8).
+3. **Finte:** Alles deutet auf A, dann dreht die Geschichte und zeigt B. Hier bleiben die Leute wirklich hängen (Kontrast wie im Krimi).
+4. **Rehook:** sofort die nächste Frage stellen und die Schleife neu starten, wie das Casino, das gleich die nächste Hand gibt.
+
+**Bei uns (62–75 s):** 2 Schleifen. Schleife 1 ca. 0–30 s (Einsatz in Satz 1, Finte bei ca. 20–25 s, Rehook bei ca. 30 s), Schleife 2 bis zum Schluss. Die zweite Finte ist das harte Ende. Kein Rehook auf eine nächste Folge, kein Aufruf („lass ein Follow da“ wird nicht übernommen), keine Endkarte (#8, #11, #39). Im Bild bei jedem Schritt ein großes Schlüsselwort und eine klare, ruhige Grafik (das Vorbild arbeitet mit einzelnen großen Wörtern und einer schlichten Karte, die sich verändert, z. B. „Anmeldungen 0“). Passt zu #38 (Hook in 1–2 s, Mitte straff, hartes Ende).
+
 ## Regeln aus Issue #38 – gelten seit der großen Auswertung (21.11.2026)
 
 Jonathan 20.11.: „Alles machen, was dort empfohlen wird“ (vidIQ „View Jails“, Marcus Jones, DecodingYT, clicktheory31). Seit 21.11. für alle neuen Videos, Serien und Sprachen. Begründung mit Zahlen: `taeglich/analyse/2026-11-22-abschluss.md`.
