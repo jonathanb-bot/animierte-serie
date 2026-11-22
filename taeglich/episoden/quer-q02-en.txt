@@ -113,7 +113,7 @@
 [gesicht du ort=wohnung froh palette=orange] I'm downstairs. I'm not leaving. Your text made it. Sometime during the night, after two and a half days.
 [skyline zeit=morgen strom=false licht palette=orange zoom-raus] You look down. Between all the helmets and trucks, there's a tiny figure waving with both arms.
 [gesicht du ort=wohnung froh palette=orange] You cry. For the first time since the quake.
-[wohnung du opa lina licht=aus palette=blau wackeln=1 staub ton=hit,moebel_ruecken] In the afternoon, the next aftershock hits. The strongest one since Sunday.
+[wohnung du opa lina licht=aus palette=blau wackeln=1 staub ton=hit,moebel_ruecken] In the afternoon, another aftershock hits. The strongest one since Sunday.
 [treppenhaus du etage=16 palette=blau zoom-rein staub kaputt ton=moebel_ruecken] When the dust settles, the hole in the stairwell is bigger. It now reaches up to the fourteenth floor.
 [hochhaus etage=16 strom=false palette=blau zoom-raus ein="crack>CRACKS IN THE WALL>auge"] And in your living room wall, there's a crack as wide as your finger. Nobody can reach you from below anymore.
 [gesicht du ort=wohnung denkt palette=blau] If help comes, it won't come from below. It'll come from above.

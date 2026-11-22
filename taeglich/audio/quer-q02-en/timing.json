@@ -1,0 +1,1013 @@
+{
+ "dauer": 675.074,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "skyline",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 7.958,
+   "emotion": "erzaehlend",
+   "text": "Sunday afternoon. You're at your grandpa's place on the sixteenth floor, and you're losing at rummy for the third time."
+  },
+  {
+   "nr": 2,
+   "typ": "wohnung",
+   "kapitel": 1,
+   "start": 7.958,
+   "dauer": 8.03,
+   "emotion": "erzaehlend",
+   "text": "He grins, lays down his cards and slides the last piece of apple pie over to you. A consolation prize."
+  },
+  {
+   "nr": 3,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 15.988,
+   "dauer": 6.926,
+   "emotion": "erzaehlend",
+   "text": "Then you see it. The tea in his glass is trembling. Tiny rings on the surface. Nobody touched the table."
+  },
+  {
+   "nr": 4,
+   "typ": "wohnung",
+   "kapitel": 1,
+   "start": 22.914,
+   "dauer": 8.822,
+   "emotion": "erzaehlend",
+   "text": "One second later, the whole building shakes. Glasses fly out of the cabinet, the shelf tips over, the floor sways like a ship."
+  },
+  {
+   "nr": 5,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 31.736,
+   "dauer": 5.702,
+   "emotion": "spannend",
+   "text": "\"Under the table!\" your grandpa shouts. You crawl under it and grab the table leg."
+  },
+  {
+   "nr": 6,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 37.438,
+   "dauer": 4.838,
+   "emotion": "spannend",
+   "text": "Forty seconds. That's how long it lasts. It feels like an hour."
+  },
+  {
+   "nr": 7,
+   "typ": "titel",
+   "kapitel": 1,
+   "start": 42.276,
+   "dauer": 8.966,
+   "emotion": "erzaehlend",
+   "text": "What comes next are the longest seventy-two hours of your life. And in the very last hour, everything depends on a single sound."
+  },
+  {
+   "nr": 8,
+   "typ": "titel",
+   "kapitel": 2,
+   "start": 51.242,
+   "dauer": 1.862,
+   "emotion": "erzaehlend",
+   "text": "Three forty in the afternoon."
+  },
+  {
+   "nr": 9,
+   "typ": "wohnung",
+   "kapitel": 2,
+   "start": 53.104,
+   "dauer": 3.902,
+   "emotion": "erzaehlend",
+   "text": "It's quiet. The apartment looks like someone picked it up and shook it."
+  },
+  {
+   "nr": 10,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 57.006,
+   "dauer": 6.59,
+   "emotion": "ernst",
+   "text": "Your grandpa has a scrape on his forehead, but he's already smiling again. He always does that when he wants you to stop being scared."
+  },
+  {
+   "nr": 11,
+   "typ": "wohnung",
+   "kapitel": 2,
+   "start": 63.596,
+   "dauer": 5.87,
+   "emotion": "erzaehlend",
+   "text": "You flip the light switch. Nothing. The fridge is silent, the clock on the stove is black."
+  },
+  {
+   "nr": 12,
+   "typ": "treppenhaus",
+   "kapitel": 2,
+   "start": 69.466,
+   "dauer": 6.83,
+   "emotion": "erzaehlend",
+   "text": "The front door is jammed. You throw your shoulder against it, twice, three times. Then it pops open."
+  },
+  {
+   "nr": 13,
+   "typ": "treppenhaus",
+   "kapitel": 2,
+   "start": 76.296,
+   "dauer": 7.31,
+   "emotion": "erzaehlend",
+   "text": "The stairwell smells like concrete and dust. You head down. Fifteenth floor. Fourteenth. Thirteenth."
+  },
+  {
+   "nr": 14,
+   "typ": "treppenhaus",
+   "kapitel": 2,
+   "start": 83.606,
+   "dauer": 5.366,
+   "emotion": "erzaehlend",
+   "text": "On the twelfth floor, you stop breathing. Below you, there are no more stairs."
+  },
+  {
+   "nr": 15,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 88.972,
+   "dauer": 6.638,
+   "emotion": "spannend",
+   "text": "Where the steps used to be, there's only a hole full of rubble and twisted steel bars. Ten floors deep."
+  },
+  {
+   "nr": 16,
+   "typ": "hochhaus",
+   "kapitel": 2,
+   "start": 95.61,
+   "dauer": 7.526,
+   "emotion": "erzaehlend",
+   "text": "The only way down is gone. The elevator is stuck. And you and your grandpa are trapped on the sixteenth floor."
+  },
+  {
+   "nr": 17,
+   "typ": "handy",
+   "kapitel": 2,
+   "start": 103.136,
+   "dauer": 3.926,
+   "emotion": "erzaehlend",
+   "text": "You call your mom. Busy. Again. Call failed."
+  },
+  {
+   "nr": 18,
+   "typ": "handy",
+   "kapitel": 2,
+   "start": 107.062,
+   "dauer": 6.014,
+   "emotion": "erzaehlend",
+   "text": "After a big quake, millions of people try to make a call in the same minute. No network in the world can handle that."
+  },
+  {
+   "nr": 19,
+   "typ": "handy",
+   "kapitel": 2,
+   "start": 113.076,
+   "dauer": 6.182,
+   "emotion": "erzaehlend",
+   "text": "So you send a text instead. A text is tiny. Sometimes it still slips through when no call can."
+  },
+  {
+   "nr": 20,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 119.258,
+   "dauer": 10.382,
+   "emotion": "ernst",
+   "text": "Grandpa and I are alive. Sixteenth floor. Stairs gone. You hit send. Under the message, a little circle starts spinning. And spinning. And spinning."
+  },
+  {
+   "nr": 21,
+   "typ": "titel",
+   "kapitel": 3,
+   "start": 129.64,
+   "dauer": 2.102,
+   "emotion": "erzaehlend",
+   "text": "Eight thirty at night."
+  },
+  {
+   "nr": 22,
+   "typ": "skyline",
+   "kapitel": 3,
+   "start": 131.742,
+   "dauer": 8.51,
+   "emotion": "erzaehlend",
+   "text": "Outside, it's getting dark. And for the first time, you see your city without a single light. Only sirens, wailing in the distance."
+  },
+  {
+   "nr": 23,
+   "typ": "wohnung",
+   "kapitel": 3,
+   "start": 140.252,
+   "dauer": 7.598,
+   "emotion": "erzaehlend",
+   "text": "Grandpa pulls candles out of a drawer. He has a drawer for everything. Candles, a camping stove, a hand-crank radio."
+  },
+  {
+   "nr": 24,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 147.85,
+   "dauer": 4.622,
+   "emotion": "froh",
+   "text": "You always made fun of him for his emergency drawer. Today you don't say a word."
+  },
+  {
+   "nr": 25,
+   "typ": "bad",
+   "kapitel": 3,
+   "start": 152.472,
+   "dauer": 4.862,
+   "emotion": "erzaehlend",
+   "text": "You turn on the faucet. A gurgle, a few drops. Then nothing."
+  },
+  {
+   "nr": 26,
+   "typ": "hochhaus",
+   "kapitel": 3,
+   "start": 157.334,
+   "dauer": 7.43,
+   "emotion": "erzaehlend",
+   "text": "In a high-rise, a pump pushes the water up to the top floors. No power, no pump. No pump, no water."
+  },
+  {
+   "nr": 27,
+   "typ": "objekt",
+   "kapitel": 3,
+   "start": 164.764,
+   "dauer": 5.918,
+   "emotion": "erklaerend",
+   "text": "There's one bottle of water left in the apartment. Without water, a person only lasts about three days."
+  },
+  {
+   "nr": 28,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 170.682,
+   "dauer": 5.006,
+   "emotion": "erzaehlend",
+   "text": "Three days. You do the math. For two people, one bottle is nothing."
+  },
+  {
+   "nr": 29,
+   "typ": "wohnung",
+   "kapitel": 3,
+   "start": 175.688,
+   "dauer": 5.006,
+   "emotion": "erzaehlend",
+   "text": "Then it shakes again. Shorter, but hard enough that Grandpa reaches for your hand."
+  },
+  {
+   "nr": 30,
+   "typ": "objekt",
+   "kapitel": 3,
+   "start": 180.694,
+   "dauer": 5.558,
+   "emotion": "erklaerend",
+   "text": "Aftershocks. After a major earthquake, they can keep coming for days, even weeks."
+  },
+  {
+   "nr": 31,
+   "typ": "treppenhaus",
+   "kapitel": 3,
+   "start": 186.252,
+   "dauer": 4.718,
+   "emotion": "erzaehlend",
+   "text": "From the stairwell, you hear a rumble. More chunks of concrete falling into the hole."
+  },
+  {
+   "nr": 32,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 190.97,
+   "dauer": 7.358,
+   "emotion": "ernst",
+   "text": "Later, in the candlelight, you see your grandpa shaking his pill bottle. He's counting. And he doesn't tell you how many are left."
+  },
+  {
+   "nr": 33,
+   "typ": "titel",
+   "kapitel": 4,
+   "start": 198.328,
+   "dauer": 2.606,
+   "emotion": "erzaehlend",
+   "text": "Monday. Ten fifteen in the morning."
+  },
+  {
+   "nr": 34,
+   "typ": "wohnung",
+   "kapitel": 4,
+   "start": 200.934,
+   "dauer": 6.086,
+   "emotion": "erzaehlend",
+   "text": "You barely slept. It's cold in the apartment. No power means no heat, and it's November."
+  },
+  {
+   "nr": 35,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 207.02,
+   "dauer": 4.238,
+   "emotion": "ernst",
+   "text": "But during the night, you remembered something. Something your grandpa told you once."
+  },
+  {
+   "nr": 36,
+   "typ": "bad",
+   "kapitel": 4,
+   "start": 211.258,
+   "dauer": 5.51,
+   "emotion": "erzaehlend",
+   "text": "The water heater. That big white tank in the bathroom. It's completely full of tap water."
+  },
+  {
+   "nr": 37,
+   "typ": "bad",
+   "kapitel": 4,
+   "start": 216.768,
+   "dauer": 7.382,
+   "emotion": "erzaehlend",
+   "text": "There's a little valve at the bottom. You open it, and water comes out. Lukewarm, a little rusty, but it comes out."
+  },
+  {
+   "nr": 38,
+   "typ": "bad",
+   "kapitel": 4,
+   "start": 224.15,
+   "dauer": 5.894,
+   "emotion": "erzaehlend",
+   "text": "And in the toilet tank, not the bowl, there's another gallon or two of clean tap water."
+  },
+  {
+   "nr": 39,
+   "typ": "wohnung",
+   "kapitel": 4,
+   "start": 230.044,
+   "dauer": 7.358,
+   "emotion": "erzaehlend",
+   "text": "You fill every pot, every bottle, every vase. Grandpa boils the water on his camping stove, just to be safe."
+  },
+  {
+   "nr": 40,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 237.402,
+   "dauer": 5.798,
+   "emotion": "froh",
+   "text": "He pats you on the shoulder. You actually listened to him, he says. That doesn't happen often."
+  },
+  {
+   "nr": 41,
+   "typ": "skyline",
+   "kapitel": 4,
+   "start": 243.2,
+   "dauer": 5.174,
+   "emotion": "erzaehlend",
+   "text": "Around noon, you hear a helicopter. You run to the window and wave like crazy."
+  },
+  {
+   "nr": 42,
+   "typ": "skyline",
+   "kapitel": 4,
+   "start": 248.374,
+   "dauer": 5.918,
+   "emotion": "erzaehlend",
+   "text": "It flies right past. It doesn't see you. To them, you're just one of a thousand windows."
+  },
+  {
+   "nr": 43,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 254.292,
+   "dauer": 2.414,
+   "emotion": "ernst",
+   "text": "So you need something they can see from above."
+  },
+  {
+   "nr": 44,
+   "typ": "wohnung",
+   "kapitel": 4,
+   "start": 256.706,
+   "dauer": 6.542,
+   "emotion": "erzaehlend",
+   "text": "With Grandpa's marker, you write huge letters on his white bedsheet. Two people. Sixteenth floor."
+  },
+  {
+   "nr": 45,
+   "typ": "skyline",
+   "kapitel": 4,
+   "start": 263.248,
+   "dauer": 4.598,
+   "emotion": "erzaehlend",
+   "text": "Then you tie it to the balcony. It flutters in the wind like a little white flag."
+  },
+  {
+   "nr": 46,
+   "typ": "handy",
+   "kapitel": 4,
+   "start": 267.846,
+   "dauer": 3.494,
+   "emotion": "erzaehlend",
+   "text": "Your text is still spinning. Twenty-one hours now."
+  },
+  {
+   "nr": 47,
+   "typ": "titel",
+   "kapitel": 5,
+   "start": 271.34,
+   "dauer": 1.838,
+   "emotion": "erzaehlend",
+   "text": "Eleven ten at night."
+  },
+  {
+   "nr": 48,
+   "typ": "wohnung",
+   "kapitel": 5,
+   "start": 273.178,
+   "dauer": 9.134,
+   "emotion": "erzaehlend",
+   "text": "Grandpa is asleep in his armchair under three blankets. You sit next to him and listen to the city breathe. Dogs, sirens, wind."
+  },
+  {
+   "nr": 49,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 282.312,
+   "dauer": 6.062,
+   "emotion": "erzaehlend",
+   "text": "And then you hear something else. A knocking. Faint. It's coming from the wall."
+  },
+  {
+   "nr": 50,
+   "typ": "treppenhaus",
+   "kapitel": 5,
+   "start": 288.374,
+   "dauer": 5.342,
+   "emotion": "erzaehlend",
+   "text": "You take the flashlight out into the stairwell. The neighbors' door is warped and jammed shut."
+  },
+  {
+   "nr": 51,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 293.716,
+   "dauer": 4.502,
+   "emotion": "ernst",
+   "text": "You knock back. And from inside, a small voice calls out."
+  },
+  {
+   "nr": 52,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 298.218,
+   "dauer": 4.502,
+   "emotion": "spannend",
+   "text": "\"Hello? Is someone there? My mom's not home.\""
+  },
+  {
+   "nr": 53,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 302.72,
+   "dauer": 9.35,
+   "emotion": "ernst",
+   "text": "It's Lina, the little girl from next door. Eight years old. Her mom was working the late shift at the hospital. She's been alone for thirty-three hours."
+  },
+  {
+   "nr": 54,
+   "typ": "treppenhaus",
+   "kapitel": 5,
+   "start": 312.07,
+   "dauer": 6.35,
+   "emotion": "erzaehlend",
+   "text": "The door won't move an inch. But Lina's balcony is right next to yours. Only a thin divider wall between them."
+  },
+  {
+   "nr": 55,
+   "typ": "skyline",
+   "kapitel": 5,
+   "start": 318.42,
+   "dauer": 6.95,
+   "emotion": "erzaehlend",
+   "text": "You step out onto the balcony and you don't look down. A hundred and sixty feet. You don't look down."
+  },
+  {
+   "nr": 56,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 325.37,
+   "dauer": 5.798,
+   "emotion": "spannend",
+   "text": "With Grandpa's hammer, you knock a hole in the divider. Then another one. Your arm is shaking."
+  },
+  {
+   "nr": 57,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 331.168,
+   "dauer": 8.654,
+   "emotion": "froh",
+   "text": "And then Lina climbs through, in her pajamas, with her stuffed animal under her arm. She throws her arms around your neck and won't let go."
+  },
+  {
+   "nr": 58,
+   "typ": "wohnung",
+   "kapitel": 5,
+   "start": 339.822,
+   "dauer": 9.302,
+   "emotion": "erzaehlend",
+   "text": "Grandpa wakes up, sees you two and laughs. Now there are three of you. Three people, half a bathtub of water and a deck of cards."
+  },
+  {
+   "nr": 59,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 349.124,
+   "dauer": 6.302,
+   "emotion": "froh",
+   "text": "That same night, he teaches Lina how to play rummy. She wins right away. He claims he let her win."
+  },
+  {
+   "nr": 60,
+   "typ": "titel",
+   "kapitel": 6,
+   "start": 355.426,
+   "dauer": 2.318,
+   "emotion": "erzaehlend",
+   "text": "Tuesday. Two in the afternoon."
+  },
+  {
+   "nr": 61,
+   "typ": "gesicht",
+   "kapitel": 6,
+   "start": 357.744,
+   "dauer": 6.182,
+   "emotion": "ruhig",
+   "text": "Since this morning, your grandpa has been different. Gray in the face. He has to sit down every few minutes."
+  },
+  {
+   "nr": 62,
+   "typ": "objekt",
+   "kapitel": 6,
+   "start": 363.926,
+   "dauer": 7.046,
+   "emotion": "erklaerend",
+   "text": "You pick up his pill bottle. It's empty. He took the last one this morning. He didn't tell you, so you wouldn't worry."
+  },
+  {
+   "nr": 63,
+   "typ": "gesicht",
+   "kapitel": 6,
+   "start": 370.972,
+   "dauer": 4.622,
+   "emotion": "spannend",
+   "text": "For the first time, you're not scared for yourself. You're scared for him."
+  },
+  {
+   "nr": 64,
+   "typ": "grossstadt",
+   "kapitel": 6,
+   "start": 375.594,
+   "dauer": 7.214,
+   "emotion": "erzaehlend",
+   "text": "Then, in the afternoon, you hear engines. Down on the street, fire trucks pull up, and a van full of rescue dogs."
+  },
+  {
+   "nr": 65,
+   "typ": "skyline",
+   "kapitel": 6,
+   "start": 382.808,
+   "dauer": 7.406,
+   "emotion": "erzaehlend",
+   "text": "A ladder truck extends its ladder. Higher, and higher. And then it stops, way too far below you."
+  },
+  {
+   "nr": 66,
+   "typ": "hochhaus",
+   "kapitel": 6,
+   "start": 390.214,
+   "dauer": 11.726,
+   "emotion": "erzaehlend",
+   "text": "That's no accident. In the US, a building counts as a high-rise above seventy-five feet, because beyond that, fighting fires from outside with ladders gets really hard. That's about the seventh floor."
+  },
+  {
+   "nr": 67,
+   "typ": "gesicht",
+   "kapitel": 6,
+   "start": 401.94,
+   "dauer": 3.542,
+   "emotion": "spannend",
+   "text": "You're on the sixteenth. More than twice as high."
+  },
+  {
+   "nr": 68,
+   "typ": "grossstadt",
+   "kapitel": 6,
+   "start": 405.482,
+   "dauer": 8.006,
+   "emotion": "erzaehlend",
+   "text": "Then someone shouts through a megaphone. Every machine shuts off. The dogs sit down. The whole street goes dead silent."
+  },
+  {
+   "nr": 69,
+   "typ": "objekt",
+   "kapitel": 6,
+   "start": 413.488,
+   "dauer": 7.142,
+   "emotion": "erklaerend",
+   "text": "A silent period. Rescuers listen with sensitive devices for signs of life. For voices. For knocking."
+  },
+  {
+   "nr": 70,
+   "typ": "gesicht",
+   "kapitel": 6,
+   "start": 420.63,
+   "dauer": 5.27,
+   "emotion": "ruhig",
+   "text": "\"Don't yell. Knock. The pipes carry the sound through the whole building.\""
+  },
+  {
+   "nr": 71,
+   "typ": "bad",
+   "kapitel": 6,
+   "start": 425.9,
+   "dauer": 7.43,
+   "emotion": "erzaehlend",
+   "text": "You grab the wrench and bang it against the heating pipe. Three times. Pause. Three times. Pause."
+  },
+  {
+   "nr": 72,
+   "typ": "gesicht",
+   "kapitel": 6,
+   "start": 433.33,
+   "dauer": 3.494,
+   "emotion": "erzaehlend",
+   "text": "You hold your breath. Ten seconds. Twenty."
+  },
+  {
+   "nr": 73,
+   "typ": "gesicht",
+   "kapitel": 6,
+   "start": 436.824,
+   "dauer": 5.078,
+   "emotion": "froh",
+   "text": "And then, very faintly, from deep inside the building: three knocks back."
+  },
+  {
+   "nr": 74,
+   "typ": "gesicht",
+   "kapitel": 6,
+   "start": 441.902,
+   "dauer": 5.318,
+   "emotion": "froh",
+   "text": "Lina jumps up and down. Grandpa closes his eyes and smiles. They know you're here."
+  },
+  {
+   "nr": 75,
+   "typ": "titel",
+   "kapitel": 7,
+   "start": 447.22,
+   "dauer": 2.63,
+   "emotion": "erzaehlend",
+   "text": "Wednesday. Six in the morning."
+  },
+  {
+   "nr": 76,
+   "typ": "gesicht",
+   "kapitel": 7,
+   "start": 449.85,
+   "dauer": 5.798,
+   "emotion": "ruhig",
+   "text": "But knowing isn't the same as saving. For a whole day, nothing else happens."
+  },
+  {
+   "nr": 77,
+   "typ": "objekt",
+   "kapitel": 7,
+   "start": 455.648,
+   "dauer": 7.31,
+   "emotion": "erklaerend",
+   "text": "There's only half a bottle of water left. You give it to Lina and Grandpa. You just take one sip, to wet your lips."
+  },
+  {
+   "nr": 78,
+   "typ": "objekt",
+   "kapitel": 7,
+   "start": 462.958,
+   "dauer": 9.734,
+   "emotion": "erklaerend",
+   "text": "After earthquakes, rescuers talk about the seventy-two hours. After that, the chance of finding trapped people alive drops with every day."
+  },
+  {
+   "nr": 79,
+   "typ": "gesicht",
+   "kapitel": 7,
+   "start": 472.692,
+   "dauer": 2.006,
+   "emotion": "ernst",
+   "text": "You're at hour sixty-four."
+  },
+  {
+   "nr": 80,
+   "typ": "handy",
+   "kapitel": 7,
+   "start": 474.698,
+   "dauer": 5.486,
+   "emotion": "erzaehlend",
+   "text": "Then your phone buzzes. Nine percent battery. A message. From your mom."
+  },
+  {
+   "nr": 81,
+   "typ": "gesicht",
+   "kapitel": 7,
+   "start": 480.184,
+   "dauer": 7.478,
+   "emotion": "froh",
+   "text": "I'm downstairs. I'm not leaving. Your text made it. Sometime during the night, after two and a half days."
+  },
+  {
+   "nr": 82,
+   "typ": "skyline",
+   "kapitel": 7,
+   "start": 487.662,
+   "dauer": 6.278,
+   "emotion": "erzaehlend",
+   "text": "You look down. Between all the helmets and trucks, there's a tiny figure waving with both arms."
+  },
+  {
+   "nr": 83,
+   "typ": "gesicht",
+   "kapitel": 7,
+   "start": 493.94,
+   "dauer": 3.014,
+   "emotion": "froh",
+   "text": "You cry. For the first time since the quake."
+  },
+  {
+   "nr": 84,
+   "typ": "wohnung",
+   "kapitel": 7,
+   "start": 496.954,
+   "dauer": 6.35,
+   "emotion": "erzaehlend",
+   "text": "In the afternoon, another aftershock hits. The strongest one since Sunday."
+  },
+  {
+   "nr": 85,
+   "typ": "treppenhaus",
+   "kapitel": 7,
+   "start": 503.304,
+   "dauer": 6.086,
+   "emotion": "erzaehlend",
+   "text": "When the dust settles, the hole in the stairwell is bigger. It now reaches up to the fourteenth floor."
+  },
+  {
+   "nr": 86,
+   "typ": "hochhaus",
+   "kapitel": 7,
+   "start": 509.39,
+   "dauer": 6.518,
+   "emotion": "erzaehlend",
+   "text": "And in your living room wall, there's a crack as wide as your finger. Nobody can reach you from below anymore."
+  },
+  {
+   "nr": 87,
+   "typ": "gesicht",
+   "kapitel": 7,
+   "start": 515.908,
+   "dauer": 4.502,
+   "emotion": "erzaehlend",
+   "text": "If help comes, it won't come from below. It'll come from above."
+  },
+  {
+   "nr": 88,
+   "typ": "titel",
+   "kapitel": 8,
+   "start": 520.41,
+   "dauer": 1.814,
+   "emotion": "erzaehlend",
+   "text": "One twenty in the afternoon."
+  },
+  {
+   "nr": 89,
+   "typ": "handy",
+   "kapitel": 8,
+   "start": 522.224,
+   "dauer": 5.894,
+   "emotion": "erzaehlend",
+   "text": "Another message. Three percent battery. Go to the roof. Helicopter in forty minutes."
+  },
+  {
+   "nr": 90,
+   "typ": "treppenhaus",
+   "kapitel": 8,
+   "start": 528.118,
+   "dauer": 7.07,
+   "emotion": "erzaehlend",
+   "text": "The roof is eight floors up. For you, that's two minutes. For your grandpa, without his pills, it's a mountain."
+  },
+  {
+   "nr": 91,
+   "typ": "treppenhaus",
+   "kapitel": 8,
+   "start": 535.188,
+   "dauer": 8.222,
+   "emotion": "erzaehlend",
+   "text": "Lina leads the way with the flashlight. You hold Grandpa up. Step by step. After every floor, he has to sit down."
+  },
+  {
+   "nr": 92,
+   "typ": "gesicht",
+   "kapitel": 8,
+   "start": 543.41,
+   "dauer": 3.278,
+   "emotion": "ruhig",
+   "text": "On the twentieth floor, he tells you to go on without him."
+  },
+  {
+   "nr": 93,
+   "typ": "gesicht",
+   "kapitel": 8,
+   "start": 546.688,
+   "dauer": 5.078,
+   "emotion": "ernst",
+   "text": "You say no. You say the rummy game isn't over yet. And that he still owes you one."
+  },
+  {
+   "nr": 94,
+   "typ": "treppenhaus",
+   "kapitel": 8,
+   "start": 551.766,
+   "dauer": 6.95,
+   "emotion": "erzaehlend",
+   "text": "He laughs, coughs, and gets back up. Twenty-two. Twenty-three. Twenty-four."
+  },
+  {
+   "nr": 95,
+   "typ": "dach",
+   "kapitel": 8,
+   "start": 558.716,
+   "dauer": 7.31,
+   "emotion": "erzaehlend",
+   "text": "Then you push open the heavy steel door, and the wind hits you in the face. The roof. Nothing above you but sky."
+  },
+  {
+   "nr": 96,
+   "typ": "dach",
+   "kapitel": 8,
+   "start": 566.026,
+   "dauer": 6.494,
+   "emotion": "erzaehlend",
+   "text": "With a piece of brick, Lina draws three giant letters on the tar. S. O. S."
+  },
+  {
+   "nr": 97,
+   "typ": "titel",
+   "kapitel": 9,
+   "start": 572.52,
+   "dauer": 4.43,
+   "emotion": "erzaehlend",
+   "text": "Two oh two. Exactly seventy-two hours after the quake."
+  },
+  {
+   "nr": 98,
+   "typ": "dach",
+   "kapitel": 9,
+   "start": 576.95,
+   "dauer": 8.006,
+   "emotion": "erzaehlend",
+   "text": "At first, you only hear it. That deep thumping you can feel in your stomach. Then it appears from behind the building next door."
+  },
+  {
+   "nr": 99,
+   "typ": "dach",
+   "kapitel": 9,
+   "start": 584.956,
+   "dauer": 6.83,
+   "emotion": "erzaehlend",
+   "text": "The helicopter hovers right above you. A rescuer comes down on a cable, in a helmet and harness."
+  },
+  {
+   "nr": 100,
+   "typ": "dach",
+   "kapitel": 9,
+   "start": 591.786,
+   "dauer": 4.958,
+   "emotion": "erzaehlend",
+   "text": "Lina goes first. She hugs her stuffed animal and waves at you as she's pulled up."
+  },
+  {
+   "nr": 101,
+   "typ": "dach",
+   "kapitel": 9,
+   "start": 596.744,
+   "dauer": 6.134,
+   "emotion": "erzaehlend",
+   "text": "Then your grandpa. Before they strap him in, he presses something into your hand. His deck of cards."
+  },
+  {
+   "nr": 102,
+   "typ": "gesicht",
+   "kapitel": 9,
+   "start": 602.878,
+   "dauer": 2.174,
+   "emotion": "froh",
+   "text": "\"Take good care of these. We're not done yet.\""
+  },
+  {
+   "nr": 103,
+   "typ": "dach",
+   "kapitel": 9,
+   "start": 605.052,
+   "dauer": 7.358,
+   "emotion": "erzaehlend",
+   "text": "And then you. Last. The harness pulls you up, the roof gets smaller, the city gets huge."
+  },
+  {
+   "nr": 104,
+   "typ": "skyline",
+   "kapitel": 9,
+   "start": 612.41,
+   "dauer": 7.718,
+   "emotion": "erzaehlend",
+   "text": "From up here, you can see how many buildings are damaged. And how many rooftops still have people waiting. You're one of the lucky ones."
+  },
+  {
+   "nr": 105,
+   "typ": "park",
+   "kapitel": 9,
+   "start": 620.128,
+   "dauer": 5.678,
+   "emotion": "erzaehlend",
+   "text": "The helicopter lands on a sports field. You jump out and run. Someone is running toward you."
+  },
+  {
+   "nr": 106,
+   "typ": "gesicht",
+   "kapitel": 9,
+   "start": 625.806,
+   "dauer": 7.118,
+   "emotion": "froh",
+   "text": "Your mom holds you so tight you can barely breathe. She smells like smoke and coffee and three nights without sleep."
+  },
+  {
+   "nr": 107,
+   "typ": "gesicht",
+   "kapitel": 9,
+   "start": 632.924,
+   "dauer": 4.958,
+   "emotion": "froh",
+   "text": "\"I read your message a hundred times. Every time I couldn't go on.\""
+  },
+  {
+   "nr": 108,
+   "typ": "krankenhaus",
+   "kapitel": 9,
+   "start": 637.882,
+   "dauer": 7.574,
+   "emotion": "erzaehlend",
+   "text": "Your grandpa goes to the hospital. New pills, an IV, two days of rest. And then he's his old self again."
+  },
+  {
+   "nr": 109,
+   "typ": "gesicht",
+   "kapitel": 9,
+   "start": 645.456,
+   "dauer": 5.798,
+   "emotion": "froh",
+   "text": "Lina's mom finds her that same evening. For three days, she'd been in the ER, helping other people."
+  },
+  {
+   "nr": 110,
+   "typ": "wohnung",
+   "kapitel": 9,
+   "start": 651.254,
+   "dauer": 9.614,
+   "emotion": "erzaehlend",
+   "text": "Since then, you have a drawer too. Flashlight, crank radio, a power bank, ten bottles of water. Nobody laughs at it anymore."
+  },
+  {
+   "nr": 111,
+   "typ": "wohnung",
+   "kapitel": 9,
+   "start": 660.868,
+   "dauer": 6.206,
+   "emotion": "erzaehlend",
+   "text": "And every Sunday, you sit together again. You, your grandpa and Lina. With apple pie."
+  },
+  {
+   "nr": 112,
+   "typ": "gesicht",
+   "kapitel": 9,
+   "start": 667.074,
+   "dauer": 8.0,
+   "emotion": "froh",
+   "text": "You never finished that rummy game. You all decided it should never really end."
+  }
+ ]
+}

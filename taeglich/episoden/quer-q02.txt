@@ -51,7 +51,7 @@
 [gesicht du ort=wohnung licht=kerze denkt palette=orange] Drei Tage. Du rechnest. Für zwei Menschen ist eine Flasche nichts.
 [wohnung du opa licht=kerze zeit=nacht palette=orange wackeln=1 staub ton=hit,moebel_ruecken] Dann bebt es wieder. Kürzer, aber heftig genug, dass Opa nach deiner Hand greift.
 [objekt objekte="uhr:Stunden|uhr:Tage|uhr:Wochen" gross="NACHBEBEN" palette=blau zoom-rein ein="Nachbeben>NACHBEBEN: TAGE BIS WOCHEN>uhr" ein_y=1450] Nachbeben. Nach einem großen Erdbeben können sie noch Tage und Wochen später kommen.
-[treppenhaus du etage=16 palette=blau zoom-rein staub ton=moebel_ruecken] Aus dem Treppenhaus hörst du ein Poltern. Noch mehr Steine, die in das Loch fallen.
+[treppenhaus du etage=16 palette=blau zoom-rein staub ton=moebel_ruecken] Aus dem Treppenhaus kommt ein dumpfes Poltern. Noch mehr Steine stürzen in das Loch.
 [gesicht opa ort=wohnung licht=kerze zeit=nacht besorgt palette=orange] Später siehst du, wie dein Opa im Kerzenlicht seine Tablettendose schüttelt. Er zählt. Und er sagt dir nicht, wie viele es sind.
 
 == Stunde 20 ==
