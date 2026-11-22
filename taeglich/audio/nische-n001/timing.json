@@ -1,0 +1,167 @@
+{
+ "dauer": 72.612,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "handy",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 4.718,
+   "emotion": "erzaehlend",
+   "text": "Ab heute zeigt dein Handy, wie viele Abende du noch mit deinen Eltern hast."
+  },
+  {
+   "nr": 2,
+   "typ": "grossstadt",
+   "kapitel": 1,
+   "start": 4.718,
+   "dauer": 3.59,
+   "emotion": "erzaehlend",
+   "text": "Dreihundertzwölf. Und jeden Morgen wird die Zahl kleiner."
+  },
+  {
+   "nr": 3,
+   "typ": "esstisch",
+   "kapitel": 1,
+   "start": 8.308,
+   "dauer": 5.606,
+   "emotion": "erzaehlend",
+   "text": "Am Montag isst du in deinem Zimmer. Dein Stuhl bleibt leer. Am Morgen: dreihundertelf."
+  },
+  {
+   "nr": 4,
+   "typ": "wohnzimmer",
+   "kapitel": 1,
+   "start": 13.914,
+   "dauer": 4.334,
+   "emotion": "erzaehlend",
+   "text": "Dein Papa will mit dir Fußball schauen. Du sagst ab. Dreihundertzehn."
+  },
+  {
+   "nr": 5,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 18.248,
+   "dauer": 3.35,
+   "emotion": "traurig",
+   "text": "Und du glaubst zu wissen, was am Ende dieser Zahl wartet."
+  },
+  {
+   "nr": 6,
+   "typ": "esstisch",
+   "kapitel": 1,
+   "start": 21.598,
+   "dauer": 4.814,
+   "emotion": "erzaehlend",
+   "text": "Dann kochst du am Samstag mit deiner Mama. Nudeln, viel zu viel Soße."
+  },
+  {
+   "nr": 7,
+   "typ": "handy",
+   "kapitel": 1,
+   "start": 26.412,
+   "dauer": 4.166,
+   "emotion": "erzaehlend",
+   "text": "Am Sonntag steht da: dreihundertvierzig. Die Zahl ist gestiegen."
+  },
+  {
+   "nr": 8,
+   "typ": "titel",
+   "kapitel": 1,
+   "start": 30.578,
+   "dauer": 4.718,
+   "emotion": "erzaehlend",
+   "text": "Sie zählt nicht, wie lange deine Eltern noch leben. Sie zählt, wie *du* lebst."
+  },
+  {
+   "nr": 9,
+   "typ": "handy",
+   "kapitel": 2,
+   "start": 35.296,
+   "dauer": 4.43,
+   "emotion": "erzaehlend",
+   "text": "Dann siehst du das Handy deines Papas. Neben Opas Namen: elf."
+  },
+  {
+   "nr": 10,
+   "typ": "landschaft",
+   "kapitel": 2,
+   "start": 39.726,
+   "dauer": 4.19,
+   "emotion": "erzaehlend",
+   "text": "Dein Opa wohnt vier Stunden weg. Die beiden telefonieren nur an Weihnachten."
+  },
+  {
+   "nr": 11,
+   "typ": "wohnzimmer",
+   "kapitel": 2,
+   "start": 43.916,
+   "dauer": 3.014,
+   "emotion": "erzaehlend",
+   "text": "Du setzt dich neben deinen Papa. „Ruf ihn an.“"
+  },
+  {
+   "nr": 12,
+   "typ": "lebenszeit",
+   "kapitel": 2,
+   "start": 46.93,
+   "dauer": 4.238,
+   "emotion": "erzaehlend",
+   "text": "In Deutschland ziehen Kinder im Schnitt mit vierundzwanzig von zu Hause aus."
+  },
+  {
+   "nr": 13,
+   "typ": "lebenszeit",
+   "kapitel": 2,
+   "start": 51.168,
+   "dauer": 4.646,
+   "emotion": "erzaehlend",
+   "text": "Dir bleiben etwa neun Jahre unter einem Dach. Dann werden aus Abenden Besuche."
+  },
+  {
+   "nr": 14,
+   "typ": "handy",
+   "kapitel": 2,
+   "start": 55.814,
+   "dauer": 2.438,
+   "emotion": "erzaehlend",
+   "text": "Dein Papa wählt. Es klingelt lange."
+  },
+  {
+   "nr": 15,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 58.252,
+   "dauer": 2.462,
+   "emotion": "froh",
+   "text": "„Na endlich, mein Junge.“"
+  },
+  {
+   "nr": 16,
+   "typ": "esstisch",
+   "kapitel": 2,
+   "start": 60.714,
+   "dauer": 4.67,
+   "emotion": "erzaehlend",
+   "text": "Am Sonntag sitzt dein Opa an eurem Tisch. Und Papas Zahl springt auf vierzehn."
+  },
+  {
+   "nr": 17,
+   "typ": "handy",
+   "kapitel": 2,
+   "start": 65.384,
+   "dauer": 5.054,
+   "emotion": "erzaehlend",
+   "text": "Dann leuchtet das Handy deiner Mama auf. Neben deinem Namen: dreihundertvierzig."
+  },
+  {
+   "nr": 18,
+   "typ": "lebenszeit",
+   "kapitel": 2,
+   "start": 70.438,
+   "dauer": 2.174,
+   "emotion": "erzaehlend",
+   "text": "Sie zählt schon mit, seit du geboren bist."
+  }
+ ]
+}

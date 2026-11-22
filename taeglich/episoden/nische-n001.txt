@@ -1,0 +1,57 @@
+# Dein Handy zählt die Abende
+@musik musik/nische-n001.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung warm
+@vortrag lebendig
+@klang studio
+@mund zitate
+@einblenden aus
+@untertitel aus
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette orange
+@zeit abend
+
+== Schleife 1 ==
+// 0 s – Einsatz 1 (Hook): Der Zähler steht groß auf deinem Handy, Prämisse über dich und deine Eltern
+[handy ort=zimmer zeit=abend lichterkette palette=orange netz=4 akku=58 uhrzeit="312" von="Abende mit Mama & Papa" nachricht="So viele bleiben dir noch." hooktext="DEIN HANDY ZÄHLT DIE ABENDE" zoom-rein] Ab heute zeigt dein Handy, wie viele Abende du noch mit deinen Eltern hast.
+// 4 s – Einsatz 1: Zeitdruck, Wow-Bild Stadt am Abend, die Zahl als Schlüsselwort
+[grossstadt zeit=abend du palette=orange zoom-raus ein="Dreihundertzwölf>#312 ABENDE>uhr" ein_y=470] Dreihundertzwölf. Und jeden Morgen wird die Zahl kleiner.
+// 8 s – Große Frage 1: erste Folge, dein Platz am Tisch bleibt leer
+[esstisch mama papa lina leer=3 gedeckt kerzen zeit=abend palette=orange zoom-rein ein="dreihundertelf>NOCH 311>uhr" ein_y=430] Am Montag isst du in deinem Zimmer. Dein Stuhl bleibt leer. Am Morgen: dreihundertelf.
+// 12 s – Große Frage 1: zweite Folge, du sagst deinem Papa ab
+[wohnzimmer papa tv licht=an zeit=abend palette=orange schwenk-links ein="dreihundertzehn>NOCH 310>uhr" ein_y=430] Dein Papa will mit dir Fußball schauen. Du sagst ab. Dreihundertzehn.
+// 16 s – Große Frage 1: Die Frage entsteht – was wartet am Ende der Zahl?
+[gesicht du ort=zimmer zeit=nacht lichterkette traurig palette=lila zoom-rein] Und du glaubst zu wissen, was am Ende dieser Zahl wartet.
+// 20 s – Finte 1 (Vorbereitung): Samstag, du kochst mit deiner Mama
+[esstisch mama du gedeckt kerzen zeit=abend palette=orange schwenk-rechts] Dann kochst du am Samstag mit deiner Mama. Nudeln, viel zu viel Soße.
+// 23 s – Finte 1: Die Zahl steigt – Wendung von A auf B
+[handy ort=esstisch zeit=abend palette=orange netz=4 akku=71 uhrzeit="340" von="Abende mit Mama & Papa" nachricht="Achtundzwanzig mehr als gestern." zoom-rein ton=hit ein="dreihundertvierzig>#340 ABENDE>herz" ein_y=430] Am Sonntag steht da: dreihundertvierzig. Die Zahl ist gestiegen.
+// 26 s – Finte 1 aufgelöst: großes Schlüsselwort FALSCH
+[titel oben="Sie zählt nicht ihre Zeit" gross="FALSCH" unten="Sie zählt, wie du lebst" farbe=#4a2a1a akzent=#ffb35a groesse=170 hud=false palette=orange zoom-rein] Sie zählt nicht, wie lange deine Eltern noch leben. Sie zählt, wie *du* lebst.
+
+== Schleife 2 ==
+// 30 s – Rehook: Auch Papas Handy zählt – neben Opas Namen nur elf
+[handy wer=papa ort=wohnzimmer zeit=abend palette=rosa netz=4 akku=40 uhrzeit="11" von="Abende mit Opa" nachricht="So viele bleiben dir noch." zoom-rein ein="elf>NUR 11>uhr" ein_y=430] Dann siehst du das Handy deines Papas. Neben Opas Namen: elf.
+// 35 s – Einsatz 2: Wow-Bild Landschaft, dein Opa wohnt weit weg
+[landschaft zeit=abend palette=rosa schwenk-rechts ein="vier>#4 STUNDEN WEG" ein_y=470] Dein Opa wohnt vier Stunden weg. Die beiden telefonieren nur an Weihnachten.
+// 39 s – Einsatz 2: warmer Moment auf dem Sofa, du gibst deinem Papa das Handy
+[wohnzimmer du papa sofa_sitzen licht=an zeit=abend palette=rosa zoom-rein] Du setzt dich neben deinen Papa. „Ruf ihn an.“
+// 44 s – Große Frage 2: echter Fakt mit Quelle, Wow-Bild Leben in Wochen
+// Quelle: Statistisches Bundesamt, Pressemitteilung Juli 2026 (Mikrozensus/Eurostat, Daten 2025): Durchschnittsalter beim Auszug aus dem Elternhaus in Deutschland 24,1 Jahre
+[lebenszeit jahre=15 markiert="15-24" fuellen oben="Dein Leben in Wochen" palette=blau zoom-rein ein="Deutschland>DESTATIS 2026|vierundzwanzig>#24,1 JAHRE>haus" ein_y=1250] In Deutschland ziehen Kinder im Schnitt mit vierundzwanzig von zu Hause aus.
+// 48 s – Große Frage 2: Zuspitzung, dir bleiben etwa neun Jahre unter einem Dach
+[lebenszeit jahre=15 markiert="15-24" oben="Dein Leben in Wochen" palette=blau zoom-raus ein="neun>#9 JAHRE>uhr" ein_y=1250] Dir bleiben etwa neun Jahre unter einem Dach. Dann werden aus Abenden Besuche.
+// 52 s – Große Frage 2: Dein Papa ruft an
+[handy wer=papa ort=wohnzimmer zeit=abend palette=rosa netz=4 akku=39 uhrzeit="20:14" von="Opa" nachricht="Anruf …" ton=handy_vibration zoom-rein] Dein Papa wählt. Es klingelt lange.
+// 55 s – Große Frage 2: dein Opa geht ran (Figurenstimme)
+[gesicht opa ort=wohnzimmer zeit=abend froh palette=rosa figurstimme=mann_alt sprecher=opa zoom-rein] „Na endlich, mein Junge.“
+// 57 s – Einsatz eingelöst: Am Sonntag sitzt dein Opa am Tisch, Papas Zahl springt
+[esstisch mama papa opa du gedeckt kerzen zeit=abend palette=orange zoom-raus ein="Sonntag>OPA IST DA>herz|vierzehn>11 → 14" ein_y=430] Am Sonntag sitzt dein Opa an eurem Tisch. Und Papas Zahl springt auf vierzehn.
+// 61 s – Finte 2 (Ende): Mamas Handy leuchtet auf – sie hat auch einen Zähler, für dich
+[handy wer=mama ort=esstisch zeit=abend palette=orange netz=4 akku=66 uhrzeit="340" von="Abende mit dir" nachricht="So viele bleiben dir noch." zoom-rein ton=hit] Dann leuchtet das Handy deiner Mama auf. Neben deinem Namen: dreihundertvierzig.
+// 66 s – Finte 2 = hartes Ende: Sie zählt schon immer. Schlussbild: dein Leben in Wochen füllt sich von der ersten Woche an
+[lebenszeit jahre=15 fuellen oben="Mama zählt seit Woche eins" palette=orange zoom-raus ein="geboren>SEIT DEINER GEBURT>herz" ein_y=1250] Sie zählt schon mit, seit du geboren bist.

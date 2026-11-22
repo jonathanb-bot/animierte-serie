@@ -1,0 +1,58 @@
+# Your Phone Counts the Evenings
+@musik musik/nische-n001-en.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung warm
+@vortrag lebendig
+@klang studio
+@mund zitate
+@einblenden aus
+@untertitel aus
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette orange
+@zeit abend
+@sprache en
+
+== Loop 1 ==
+// 0 s – Setup 1 (hook): the counter, big on your phone – premise about you and your parents
+[handy ort=zimmer zeit=abend lichterkette palette=orange netz=4 akku=58 uhrzeit="312" von="Evenings with Mom & Dad" nachricht="That's how many you have left." hooktext="YOUR PHONE COUNTS THE EVENINGS" zoom-rein] Starting today, your phone shows how many evenings you have left with your parents.
+// 4 s – Setup 1: time pressure, wow shot of the city at dusk, the number as keyword
+[grossstadt zeit=abend du palette=orange zoom-raus ein="Three>#312 EVENINGS>uhr" ein_y=470] Three hundred twelve. And every morning, the number gets smaller.
+// 8 s – Big question 1: first consequence, your seat at the table stays empty
+[esstisch mama papa lina leer=3 gedeckt kerzen zeit=abend palette=orange zoom-rein ein="eleven>311 LEFT>uhr" ein_y=430] On Monday, you eat in your room. Your chair stays empty. Next morning: three hundred eleven.
+// 12 s – Big question 1: second consequence, you blow off your dad
+[wohnzimmer papa tv licht=an zeit=abend palette=orange schwenk-links ein="ten>310 LEFT>uhr" ein_y=430] Your dad wants to watch the game with you. You say no. Three hundred ten.
+// 16 s – Big question 1: the question forms – what waits at the end of the number?
+[gesicht du ort=zimmer zeit=nacht lichterkette traurig palette=lila zoom-rein] And you think you know what waits at the end.
+// 20 s – Twist 1 (setup): Saturday, you cook with your mom
+[esstisch mama du gedeckt kerzen zeit=abend palette=orange schwenk-rechts] Then on Saturday, you cook with your mom. Pasta, way too much sauce.
+// 23 s – Twist 1: the number goes up – A flips to B
+[handy ort=esstisch zeit=abend palette=orange netz=4 akku=71 uhrzeit="340" von="Evenings with Mom & Dad" nachricht="Twenty-eight more than yesterday." zoom-rein ton=hit ein="forty>#340 EVENINGS>herz" ein_y=430] On Sunday, it says: three hundred forty. The number went up.
+// 26 s – Twist 1 resolved: big keyword WRONG
+[titel oben="It's not counting their time" gross="WRONG" unten="It counts how you live" farbe=#4a2a1a akzent=#ffb35a groesse=170 hud=false palette=orange zoom-rein] It's not counting how long your parents will live. It's counting how *you* live.
+
+== Loop 2 ==
+// 30 s – Rehook: your dad's phone counts too – next to Grandpa's name, only eleven
+[handy wer=papa ort=wohnzimmer zeit=abend palette=rosa netz=4 akku=40 uhrzeit="11" von="Evenings with Dad" nachricht="That's how many you have left." zoom-rein ein="eleven>ONLY 11>uhr" ein_y=430] Then you see your dad's phone. Next to Grandpa's name: eleven.
+// 35 s – Setup 2: wow shot of the landscape, your grandpa lives far away
+[landschaft zeit=abend palette=rosa schwenk-rechts ein="four>#4 HOURS AWAY" ein_y=470] Your grandpa lives four hours away. They only call on Christmas.
+// 39 s – Setup 2: warm moment on the couch
+[wohnzimmer du papa sofa_sitzen licht=an zeit=abend palette=rosa zoom-rein] You sit down next to your dad. "Call him."
+// 44 s – Big question 2: real fact with source, wow shot of your life in weeks
+// Source: German Federal Statistical Office (Destatis), press release July 2026 (Mikrozensus/Eurostat, 2025 data): average age of leaving the parental home in Germany 24.1 years
+[lebenszeit jahre=15 markiert="15-24" fuellen oben="Your life in weeks" palette=blau zoom-rein ein="Germany>DESTATIS 2026|twenty>#24.1 YEARS>haus" ein_y=1250] In Germany, kids move out at twenty-four, on average.
+// 48 s – Big question 2: escalation, about nine years left under one roof
+[lebenszeit jahre=15 markiert="15-24" oben="Your life in weeks" palette=blau zoom-raus ein="nine>#9 YEARS>uhr" ein_y=1250] So you've got about nine years left under one roof. Then evenings turn into visits.
+// 52 s – Big question 2: your dad calls
+[handy wer=papa ort=wohnzimmer zeit=abend palette=rosa netz=4 akku=39 uhrzeit="8:14" von="Dad" nachricht="Calling …" ton=handy_vibration zoom-rein] Your dad dials. It rings and rings.
+// 55 s – Big question 2: your grandpa picks up (character voice)
+[gesicht opa ort=wohnzimmer zeit=abend froh palette=rosa figurstimme=mann_alt sprecher=opa zoom-rein] "Well, finally, son."
+// 57 s – Setup paid off: on Sunday your grandpa sits at your table, Dad's number jumps
+[esstisch mama papa opa du gedeckt kerzen zeit=abend palette=orange zoom-raus ein="Sunday>GRANDPA IS HERE>herz|fourteen>11 → 14" ein_y=430] On Sunday, your grandpa sits at your table. And Dad's number jumps to fourteen.
+// 61 s – Twist 2 (ending): your mom's phone lights up – she has a counter too, for you
+[handy wer=mama ort=esstisch zeit=abend palette=orange netz=4 akku=66 uhrzeit="340" von="Evenings with my kid" nachricht="That's how many you have left." zoom-rein ton=hit] Then your mom's phone lights up. Next to your name: three hundred forty.
+// 66 s – Twist 2 = hard ending: she's always counted. Final image: your life in weeks fills from week one
+[lebenszeit jahre=15 fuellen oben="Mom has counted since week one" palette=orange zoom-raus ein="born>SINCE YOU WERE BORN>herz" ein_y=1250] She's been counting since the day you were born.

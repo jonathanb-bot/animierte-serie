@@ -1,0 +1,167 @@
+{
+ "dauer": 70.044,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "handy",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 4.718,
+   "emotion": "erzaehlend",
+   "text": "Starting today, your phone shows how many evenings you have left with your parents."
+  },
+  {
+   "nr": 2,
+   "typ": "grossstadt",
+   "kapitel": 1,
+   "start": 4.718,
+   "dauer": 3.518,
+   "emotion": "erzaehlend",
+   "text": "Three hundred twelve. And every morning, the number gets smaller."
+  },
+  {
+   "nr": 3,
+   "typ": "esstisch",
+   "kapitel": 1,
+   "start": 8.236,
+   "dauer": 5.822,
+   "emotion": "erzaehlend",
+   "text": "On Monday, you eat in your room. Your chair stays empty. Next morning: three hundred eleven."
+  },
+  {
+   "nr": 4,
+   "typ": "wohnzimmer",
+   "kapitel": 1,
+   "start": 14.058,
+   "dauer": 4.67,
+   "emotion": "erzaehlend",
+   "text": "Your dad wants to watch the game with you. You say no. Three hundred ten."
+  },
+  {
+   "nr": 5,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 18.728,
+   "dauer": 2.15,
+   "emotion": "traurig",
+   "text": "And you think you know what waits at the end."
+  },
+  {
+   "nr": 6,
+   "typ": "esstisch",
+   "kapitel": 1,
+   "start": 20.878,
+   "dauer": 4.526,
+   "emotion": "erzaehlend",
+   "text": "Then on Saturday, you cook with your mom. Pasta, way too much sauce."
+  },
+  {
+   "nr": 7,
+   "typ": "handy",
+   "kapitel": 1,
+   "start": 25.404,
+   "dauer": 3.662,
+   "emotion": "erzaehlend",
+   "text": "On Sunday, it says: three hundred forty. The number went up."
+  },
+  {
+   "nr": 8,
+   "typ": "titel",
+   "kapitel": 1,
+   "start": 29.066,
+   "dauer": 4.382,
+   "emotion": "erzaehlend",
+   "text": "It's not counting how long your parents will live. It's counting how *you* live."
+  },
+  {
+   "nr": 9,
+   "typ": "handy",
+   "kapitel": 2,
+   "start": 33.448,
+   "dauer": 4.238,
+   "emotion": "erzaehlend",
+   "text": "Then you see your dad's phone. Next to Grandpa's name: eleven."
+  },
+  {
+   "nr": 10,
+   "typ": "landschaft",
+   "kapitel": 2,
+   "start": 37.686,
+   "dauer": 3.734,
+   "emotion": "erzaehlend",
+   "text": "Your grandpa lives four hours away. They only call on Christmas."
+  },
+  {
+   "nr": 11,
+   "typ": "wohnzimmer",
+   "kapitel": 2,
+   "start": 41.42,
+   "dauer": 2.702,
+   "emotion": "erzaehlend",
+   "text": "You sit down next to your dad. \"Call him.\""
+  },
+  {
+   "nr": 12,
+   "typ": "lebenszeit",
+   "kapitel": 2,
+   "start": 44.122,
+   "dauer": 3.302,
+   "emotion": "erzaehlend",
+   "text": "In Germany, kids move out at twenty-four, on average."
+  },
+  {
+   "nr": 13,
+   "typ": "lebenszeit",
+   "kapitel": 2,
+   "start": 47.424,
+   "dauer": 4.694,
+   "emotion": "erzaehlend",
+   "text": "So you've got about nine years left under one roof. Then evenings turn into visits."
+  },
+  {
+   "nr": 14,
+   "typ": "handy",
+   "kapitel": 2,
+   "start": 52.118,
+   "dauer": 3.278,
+   "emotion": "erzaehlend",
+   "text": "Your dad dials. It rings and rings."
+  },
+  {
+   "nr": 15,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 55.396,
+   "dauer": 3.11,
+   "emotion": "froh",
+   "text": "\"Well, finally, son.\""
+  },
+  {
+   "nr": 16,
+   "typ": "esstisch",
+   "kapitel": 2,
+   "start": 58.506,
+   "dauer": 4.67,
+   "emotion": "erzaehlend",
+   "text": "On Sunday, your grandpa sits at your table. And Dad's number jumps to fourteen."
+  },
+  {
+   "nr": 17,
+   "typ": "handy",
+   "kapitel": 2,
+   "start": 63.176,
+   "dauer": 4.574,
+   "emotion": "erzaehlend",
+   "text": "Then your mom's phone lights up. Next to your name: three hundred forty."
+  },
+  {
+   "nr": 18,
+   "typ": "lebenszeit",
+   "kapitel": 2,
+   "start": 67.75,
+   "dauer": 2.294,
+   "emotion": "erzaehlend",
+   "text": "She's been counting since the day you were born."
+  }
+ ]
+}
