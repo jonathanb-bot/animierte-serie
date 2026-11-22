@@ -52,7 +52,36 @@
   {
    "id": "q02",
    "arbeitstitel": "72 Stunden im Hochhaus eingeschlossen (Stunde für Stunde)",
-   "muster": "Ich/Du-Überleben + Zeitgerüst (Infographics „Trapped Underwater“)"
+   "muster": "Ich/Du-Überleben + Zeitgerüst (Infographics „Trapped Underwater“)",
+   "kapitel": "Minute 0 · Stunde 1 · Stunde 6 · Stunde 20 · Stunde 33 · Stunde 48 · Stunde 64 · Stunde 71 · Stunde 72",
+   "titel": "Du bist 72 STUNDEN im Hochhaus eingeschlossen (Stunde für Stunde)",
+   "beschreibung": "Sonntagnachmittag, Rommé bei deinem Opa im 16. Stock. Dann bebt die Erde. Die Treppe ist weg, kein Strom, kein Wasser, kein Netz – und Opas Tabletten werden knapp. 72 Stunden, Stunde für Stunde: wie du überlebst, wen du nebenan findest und warum am Ende alles an einem einzigen Geräusch hängt.",
+   "tags": [
+    "was wäre wenn",
+    "erdbeben",
+    "hochhaus",
+    "eingeschlossen",
+    "überleben",
+    "animation",
+    "geschichte",
+    "72 stunden",
+    "deutsch"
+   ],
+   "en": {
+    "titel": "You're Trapped in a High-Rise for 72 HOURS (Hour by Hour)",
+    "beschreibung": "Sunday afternoon, playing rummy at your grandpa's place on the 16th floor. Then the earthquake hits. The stairs are gone. No power, no water, no signal, and Grandpa's pills are running out. 72 hours, hour by hour: how you survive, who you find next door, and why in the end everything depends on a single sound.",
+    "tags": [
+     "what if",
+     "earthquake",
+     "trapped",
+     "high-rise",
+     "survival",
+     "animation",
+     "story",
+     "72 hours",
+     "storytime"
+    ]
+   }
   },
   {
    "id": "q03",

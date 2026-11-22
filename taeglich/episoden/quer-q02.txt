@@ -1,0 +1,147 @@
+# Du bist 72 Stunden im Hochhaus eingeschlossen
+@musik musik/quer-q02.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@format quer
+@stimmung spannend
+@vortrag lebendig
+@klang studio
+@mund zitate
+@einblenden aus
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette orange
+@zeit tag
+
+== Minute 0 ==
+// Wow-Bild zum Einstieg: das Hochhaus von außen, oben ein Fenster
+[skyline licht palette=orange zoom-rein hooktext="72 STUNDEN EINGESCHLOSSEN" ton=wind] Sonntagnachmittag. Du sitzt bei deinem Opa im sechzehnten Stock und verlierst zum dritten Mal beim Rommé.
+[wohnung du opa licht=an palette=orange zoom-rein ein="sechzehnten>16. STOCK>treppe"] Er grinst, legt seine Karten ab und schiebt dir das letzte Stück Apfelkuchen rüber. Als Trostpreis.
+[gesicht du ort=wohnung neugierig palette=orange] Dann siehst du es. Der Tee in seinem Glas zittert. Kleine Ringe auf der Oberfläche. Niemand hat den Tisch berührt.
+[wohnung du opa licht=an palette=orange wackeln=1 staub ton=hit,glas_klirren] Eine Sekunde später bebt das ganze Haus. Gläser fallen aus dem Schrank, das Regal kippt, der Boden schwankt wie ein Schiff.
+[gesicht opa ort=wohnung angst palette=orange wackeln=1] „Unter den Tisch!“, ruft dein Opa. Du kriechst darunter und hältst dich am Tischbein fest.
+[gesicht du ort=wohnung angst palette=orange wackeln=1 staub ton=herzschlag] Vierzig Sekunden. So lange dauert es. Es fühlt sich an wie eine Stunde.
+[titel oben="Was wäre, wenn …" gross="… DU 72 STUNDEN|EINGESCHLOSSEN WÄRST?" unten="Stunde für Stunde" farbe=#1a1208 akzent=#ffb35a groesse=120 hud=false zoom-rein] Was dann kommt, sind die längsten zweiundsiebzig Stunden deines Lebens. Und in der letzten Stunde hängt alles an einem einzigen Geräusch.
+
+== Stunde 1 ==
+[titel oben="Sonntag" gross="15:40 UHR" unten="eine Stunde nach dem Beben" farbe=#1a1208 akzent=#ffb35a groesse=170 hud=false zoom-rein] Fünfzehn Uhr vierzig.
+[wohnung du opa licht=aus palette=orange zoom-raus staub ton=stille_raum] Es ist still. Die Wohnung sieht aus wie durchgeschüttelt.
+[gesicht opa ort=wohnung besorgt palette=orange] Dein Opa hat eine Schramme an der Stirn, aber er lächelt schon wieder. Das macht er immer, wenn er dir Angst nehmen will.
+[wohnung du licht=aus palette=orange schwenk-rechts ton=stromausfall ein="Strom>KEIN STROM>gluehbirne"] Du drückst auf den Lichtschalter. Nichts. Der Kühlschrank ist still, die Uhr am Herd ist schwarz.
+[treppenhaus du etage=16 palette=orange zoom-rein ton=treppenhaus_tuer] Die Wohnungstür klemmt. Du wirfst dich mit der Schulter dagegen, zweimal, dreimal. Dann springt sie auf.
+[treppenhaus du etage=16 palette=orange schwenk-runter staub ton=schritte] Im Treppenhaus riecht es nach Beton und Staub. Du gehst nach unten. Fünfzehnter Stock. Vierzehnter. Dreizehnter.
+[treppenhaus du etage=12 palette=orange zoom-rein staub kaputt] Im zwölften Stock hörst du auf zu atmen. Unter dir ist keine Treppe mehr.
+[gesicht du ort=treppenhaus etage=16 schreck palette=orange staub] Wo eben noch Stufen waren, ist nur noch ein Loch voller Schutt und verbogener Stahlstangen. Zehn Stockwerke tief.
+[hochhaus etage=16 strom=false palette=orange zoom-raus ein="Treppe>TREPPE ZERSTÖRT>treppe"] Der einzige Weg nach unten ist weg. Der Aufzug steckt fest. Und du und dein Opa seid im sechzehnten Stock gefangen.
+[handy ort=treppenhaus etage=16 netz=1 akku=71 uhrzeit="15:52" von="Mama" nachricht="Anruf fehlgeschlagen" palette=orange ton=kein_netz ein="Netz>NETZ ÜBERLASTET>handy_netz0"] Du rufst deine Mama an. Besetzt. Noch mal. Anruf fehlgeschlagen.
+[handy ort=treppenhaus etage=16 netz=1 akku=70 uhrzeit="15:54" von="Notruf 112" nachricht="Alle Leitungen belegt" palette=orange ein="Millionen>ALLE RUFEN GLEICHZEITIG AN>telefon_alt"] Nach einem großen Beben versuchen Millionen Menschen in derselben Minute zu telefonieren. Kein Netz der Welt schafft das.
+[handy ort=wohnung netz=1 akku=69 uhrzeit="15:58" von="Du an Mama" nachricht="Opa und ich leben. 16. Stock. Treppe kaputt." palette=orange ein="SMS>SMS STATT ANRUF>handy"] Also schreibst du eine SMS. Eine SMS ist winzig. Manchmal schlüpft sie noch durch, wenn kein Anruf mehr durchkommt.
+[gesicht du ort=wohnung besorgt palette=orange] Opa und ich leben. Sechzehnter Stock. Treppe kaputt. Du drückst auf Senden. Unter der Nachricht dreht sich ein kleiner Kreis. Und dreht sich. Und dreht sich.
+
+== Stunde 6 ==
+[titel oben="Sonntag" gross="20:30 UHR" unten="sechs Stunden" farbe=#1a1208 akzent=#ffb35a groesse=170 hud=false zoom-rein] Zwanzig Uhr dreißig.
+[skyline zeit=abend strom=false palette=blau zoom-raus ton=sirene_fern ein="Stadt>STADT OHNE STROM>gluehbirne"] Draußen wird es dunkel. Und zum ersten Mal siehst du deine Stadt ohne ein einziges Licht. Nur in der Ferne heulen Sirenen.
+[wohnung du opa licht=kerze zeit=abend palette=orange zoom-rein ton=kerze_knistern] Opa holt Kerzen aus der Schublade. Er hat für alles eine Schublade. Kerzen, ein Gaskocher, ein Kurbelradio.
+[gesicht opa ort=wohnung licht=kerze zeit=abend froh palette=orange] Du hast ihn immer ausgelacht für seinen Krisenschrank. Heute sagst du nichts.
+[bad du licht=kerze hahn=tropft palette=blau zoom-rein ton=wasser_stockt] Du drehst den Wasserhahn auf. Ein Gurgeln, ein paar Tropfen. Dann nichts mehr.
+[hochhaus etage=16 strom=false wasser=weg palette=blau zoom-raus ein="Pumpen>PUMPEN BRAUCHEN STROM>tropfen"] In einem Hochhaus drückt eine Pumpe das Wasser nach oben. Ohne Strom keine Pumpe. Ohne Pumpe kein Wasser.
+[objekt objekte="wasserflasche:1,5 Liter|tropfen:3 Tage" gross="WASSER" palette=blau zoom-rein ein="drei>OHNE WASSER: CA. 3 TAGE>tropfen" ein_y=1450] In der Wohnung gibt es noch eine Flasche Wasser. Ohne Wasser hält ein Mensch nur etwa drei Tage durch.
+[gesicht du ort=wohnung licht=kerze denkt palette=orange] Drei Tage. Du rechnest. Für zwei Menschen ist eine Flasche nichts.
+[wohnung du opa licht=kerze zeit=nacht palette=orange wackeln=1 staub ton=hit,moebel_ruecken] Dann bebt es wieder. Kürzer, aber heftig genug, dass Opa nach deiner Hand greift.
+[objekt objekte="uhr:Stunden|uhr:Tage|uhr:Wochen" gross="NACHBEBEN" palette=blau zoom-rein ein="Nachbeben>NACHBEBEN: TAGE BIS WOCHEN>uhr" ein_y=1450] Nachbeben. Nach einem großen Erdbeben können sie noch Tage und Wochen später kommen.
+[treppenhaus du etage=16 palette=blau zoom-rein staub ton=moebel_ruecken] Aus dem Treppenhaus hörst du ein Poltern. Noch mehr Steine, die in das Loch fallen.
+[gesicht opa ort=wohnung licht=kerze zeit=nacht besorgt palette=orange] Später siehst du, wie dein Opa im Kerzenlicht seine Tablettendose schüttelt. Er zählt. Und er sagt dir nicht, wie viele es sind.
+
+== Stunde 20 ==
+[titel oben="Montag" gross="10:15 UHR" unten="zwanzig Stunden" farbe=#1a1208 akzent=#ffb35a groesse=170 hud=false zoom-rein] Montag. Zehn Uhr fünfzehn.
+[wohnung du licht=aus palette=tuerkis zoom-raus] Du hast kaum geschlafen. Es ist kalt in der Wohnung. Ohne Strom läuft keine Heizung, und es ist November.
+[gesicht du ort=wohnung entschlossen palette=tuerkis] Aber in der Nacht ist dir etwas eingefallen. Etwas, das dein Opa mal erzählt hat.
+[bad du licht=an palette=tuerkis zoom-rein ein="Boiler>BOILER: BIS ZU 80 LITER>boiler"] Der Warmwasserboiler im Bad. Der große weiße Kasten über der Wanne. Er ist randvoll mit Leitungswasser.
+[bad du palette=tuerkis schwenk-rechts ton=eingiessen ein="Hahn>WASSER AUS DEM BOILER>wasserflasche"] Unten ist ein kleiner Hahn. Du drehst ihn auf, und es läuft. Lauwarm, ein bisschen rostig, aber es läuft.
+[bad du palette=tuerkis zoom-rein spuelkasten ein="Spülkasten>SPÜLKASTEN: 6–9 LITER>spuelkasten"] Und im Spülkasten der Toilette, nicht in der Schüssel, stehen noch einmal sechs bis neun Liter sauberes Leitungswasser.
+[wohnung du opa licht=an palette=orange zoom-rein ton=eingiessen] Du füllst jeden Topf, jede Flasche, jede Vase. Opa kocht das Wasser auf dem Gaskocher ab, sicher ist sicher.
+[gesicht opa ort=wohnung froh palette=orange] Er klopft dir auf die Schulter. Du hast ihm zugehört, sagt er. Das passiert nicht oft.
+[skyline zeit=tag strom=false heli palette=tuerkis zoom-raus ton=hubschrauber] Gegen Mittag hörst du einen Hubschrauber. Du rennst ans Fenster und winkst wie verrückt.
+[skyline zeit=tag strom=false heli palette=tuerkis zoom-rein ton=hubschrauber] Er fliegt vorbei. Er sieht dich nicht. Für ihn bist du eines von tausend Fenstern.
+[gesicht du ort=wohnung entschlossen palette=tuerkis] Also brauchst du etwas, das man von oben sieht.
+[wohnung du licht=an palette=tuerkis zoom-rein ein="Bettlaken>BETTLAKEN AM FENSTER>plane"] Mit Opas Filzstift malst du riesige Buchstaben auf sein weißes Bettlaken. Zwei Personen. Sechzehnter Stock.
+[skyline zeit=tag strom=false licht palette=tuerkis zoom-raus ton=wind ein="weiß>2 PERSONEN · 16. OG>auge"] Dann knotest du es an den Balkon. Es flattert im Wind wie eine kleine weiße Fahne.
+[handy ort=wohnung netz=0 akku=38 uhrzeit="13:12" von="Du an Mama" nachricht="Wird gesendet …" palette=tuerkis ton=kein_netz] Deine SMS dreht sich immer noch. Seit einundzwanzig Stunden.
+
+== Stunde 33 ==
+[titel oben="Montag" gross="23:10 UHR" unten="dreiunddreißig Stunden" farbe=#1a1208 akzent=#ffb35a groesse=160 hud=false zoom-rein] Dreiundzwanzig Uhr zehn.
+[wohnung du opa licht=kerze zeit=nacht palette=blau zoom-raus ton=kerze_knistern] Opa schläft im Sessel unter drei Decken. Du sitzt neben ihm und hörst die Stadt atmen. Hunde, Sirenen, Wind.
+[gesicht du ort=wohnung licht=kerze zeit=nacht lauscht palette=blau ton=tuer_klopfen] Und dann hörst du noch etwas. Ein Klopfen. Leise. Es kommt aus der Wand.
+[treppenhaus du etage=16 licht=taschenlampe klopfen palette=blau zoom-rein ton=tuer_klopfen] Du gehst mit der Taschenlampe ins Treppenhaus. Die Tür der Nachbarwohnung ist verzogen und eingeklemmt.
+[gesicht du ort=treppenhaus etage=16 licht=taschenlampe zeit=nacht besorgt palette=blau] Du klopfst zurück. Und von drinnen ruft eine dünne Stimme.
+[gesicht lina ort=treppenhaus etage=16 zeit=nacht angst palette=blau figurstimme=kind sprecher=lina] „Hallo? Ist da wer? Meine Mama ist nicht da.“
+[gesicht du ort=treppenhaus etage=16 licht=taschenlampe zeit=nacht entschlossen palette=blau] Es ist Lina, die Kleine von nebenan. Acht Jahre alt. Ihre Mama hatte Spätschicht im Krankenhaus. Sie ist seit dreiunddreißig Stunden allein.
+[treppenhaus du etage=16 licht=taschenlampe palette=blau zoom-rein ton=haemmern] Die Tür bewegt sich keinen Zentimeter. Aber Linas Balkon liegt direkt neben eurem. Dazwischen nur eine dünne Trennwand.
+[skyline zeit=nacht strom=false licht palette=blau zoom-raus ton=wind ein="Achtundvierzig>#48 METER>pfeil"] Du stehst auf dem Balkon und schaust nicht nach unten. Achtundvierzig Meter. Du schaust nicht nach unten.
+[gesicht du ort=wohnung zeit=nacht angst palette=blau ton=haemmern,glas_klirren] Mit Opas Hammer schlägst du ein Loch in die Trennwand. Dann noch eins. Dein Arm zittert.
+[gesicht lina ort=wohnung licht=kerze zeit=nacht froh palette=orange] Und dann klettert Lina durch, im Schlafanzug, mit ihrem Stofftier unter dem Arm. Sie fällt dir um den Hals und lässt nicht mehr los.
+[wohnung du opa lina licht=kerze zeit=nacht palette=orange zoom-raus ton=kerze_knistern ein="drei>#3 MENSCHEN>herz"] Opa wacht auf, sieht euch und lacht. Jetzt seid ihr drei. Drei Menschen, eine halbe Badewanne Wasser und ein Kartenspiel.
+[gesicht opa ort=wohnung licht=kerze zeit=nacht froh palette=orange] Noch in derselben Nacht bringt er Lina Rommé bei. Sie gewinnt sofort. Er behauptet, er hätte sie gewinnen lassen.
+
+== Stunde 48 ==
+[titel oben="Dienstag" gross="14:00 UHR" unten="zwei Tage" farbe=#1a1208 akzent=#ffb35a groesse=170 hud=false zoom-rein] Dienstag. Vierzehn Uhr.
+[gesicht opa ort=wohnung muede palette=orange] Seit dem Morgen ist dein Opa anders. Grau im Gesicht. Er setzt sich alle paar Minuten hin.
+[objekt objekte="medizin:Tabletten|uhr:heute früh" gross="OPAS TABLETTEN" palette=orange zoom-rein ein="leer>DIE DOSE IST LEER>medizin" ein_y=1450] Du nimmst seine Tablettendose. Sie ist leer. Die letzte hat er heute früh genommen. Er hat es dir nicht gesagt, um dir keine Sorgen zu machen.
+[gesicht du ort=wohnung angst palette=orange ton=herzschlag] Zum ersten Mal hast du nicht Angst um dich. Du hast Angst um ihn.
+[grossstadt zeit=tag palette=orange zoom-raus ton=sirene_fern stromlos] Dann, am Nachmittag, hörst du Motoren. Unten auf der Straße halten Feuerwehrwagen und ein Lastwagen mit Rettungshunden.
+[skyline zeit=tag strom=false licht palette=orange zoom-rein ein="Leiter>DREHLEITER: CA. 23 METER>treppe"] Eine Drehleiter fährt aus. Höher, immer höher. Und bleibt stehen, viel zu weit unter dir.
+[hochhaus etage=16 strom=false palette=orange zoom-raus ein="zweiundzwanzig>HOCHHAUS AB 22 METER>pfeil"] Das ist kein Zufall. In Deutschland gilt ein Gebäude ab zweiundzwanzig Metern als Hochhaus, genau weil die normale Feuerwehrleiter nicht höher reicht. Das ist ungefähr der achte Stock.
+[gesicht du ort=wohnung schreck palette=orange] Du bist im sechzehnten. Doppelt so hoch.
+[grossstadt zeit=tag palette=orange zoom-rein ton=funk_klick stromlos] Dann ruft jemand durch ein Megafon. Alle Maschinen gehen aus. Die Hunde setzen sich. Auf der ganzen Straße wird es totenstill.
+[objekt objekte="ohr:Horchgeräte|herz:Lebenszeichen" gross="RUHEPHASE" palette=blau zoom-rein ein="still>RUHEPHASE: ALLE SIND STILL>ohr" ein_y=1450] Eine Ruhephase. Die Retter horchen mit empfindlichen Geräten nach Lebenszeichen. Nach Stimmen. Nach Klopfen.
+[gesicht opa ort=wohnung muede palette=orange figurstimme=mann_alt sprecher=opa] „Nicht schreien. Klopfen. Die Rohre tragen den Schall durchs ganze Haus.“
+[bad du palette=orange zoom-rein ton=haemmern ein="Rohr>KLOPFEN STATT SCHREIEN>ohr"] Du nimmst den Schraubenschlüssel und schlägst gegen das Heizungsrohr. Drei Mal. Pause. Drei Mal. Pause.
+[gesicht du ort=bad lauscht palette=orange ton=stille_raum] Du hältst die Luft an. Zehn Sekunden. Zwanzig.
+[gesicht du ort=bad froh palette=orange ton=tuer_klopfen] Und dann, ganz leise, aus der Tiefe des Hauses: drei Schläge zurück.
+[gesicht lina ort=wohnung froh palette=orange] Lina springt auf und ab. Opa schließt die Augen und lächelt. Sie wissen, dass ihr hier seid.
+
+== Stunde 64 ==
+[titel oben="Mittwoch" gross="06:00 UHR" unten="vierundsechzig Stunden" farbe=#1a1208 akzent=#ffb35a groesse=160 hud=false zoom-rein] Mittwoch. Sechs Uhr morgens.
+[gesicht du ort=wohnung muede palette=blau] Aber wissen heißt nicht retten. Einen ganzen Tag lang passiert nichts mehr.
+[objekt objekte="wasserflasche:0,5 Liter|tropfen:3 Personen" gross="WASSER" palette=blau zoom-rein ein="halbe>NOCH 0,5 LITER>wasserflasche" ein_y=1450] Vom Wasser ist nur noch ein halber Liter übrig. Du gibst Lina und Opa davon. Du selbst nimmst nur einen Schluck, um die Lippen nass zu machen.
+[objekt objekte="uhr:24 h|uhr:48 h|uhr:72 h" gross="DIE 72 STUNDEN" palette=blau zoom-rein ein="zweiundsiebzig>NACH 72 STUNDEN WIRD ES KRITISCH>uhr" ein_y=1450] Retter sprechen nach Erdbeben von den zweiundsiebzig Stunden. Danach sinkt die Chance, Eingeschlossene lebend zu finden, mit jedem Tag.
+[gesicht du ort=wohnung besorgt palette=blau] Ihr seid bei Stunde vierundsechzig.
+[handy ort=wohnung netz=1 akku=9 uhrzeit="06:41" von="Mama" nachricht="Ich bin unten. Ich gehe nicht weg." palette=orange ton=handy_vibration ein="Mama>NACHRICHT VON MAMA>herz"] Da vibriert dein Handy. Neun Prozent Akku. Eine Nachricht. Von deiner Mama.
+[gesicht du ort=wohnung froh palette=orange] Ich bin unten. Ich gehe nicht weg. Deine SMS ist durchgekommen. Irgendwann in der Nacht, nach zweieinhalb Tagen.
+[skyline zeit=morgen strom=false licht palette=orange zoom-raus] Du schaust nach unten. Zwischen all den Helmen und Fahrzeugen steht eine kleine Gestalt und winkt mit beiden Armen.
+[gesicht du ort=wohnung froh palette=orange] Du weinst. Zum ersten Mal seit dem Beben.
+[wohnung du opa lina licht=aus palette=blau wackeln=1 staub ton=hit,moebel_ruecken] Am Nachmittag kommt das nächste Nachbeben. Das stärkste seit Sonntag.
+[treppenhaus du etage=16 palette=blau zoom-rein staub kaputt ton=moebel_ruecken] Als der Staub sich legt, ist das Loch im Treppenhaus größer. Es reicht jetzt bis in den vierzehnten Stock.
+[hochhaus etage=16 strom=false palette=blau zoom-raus ein="Risse>RISSE IN DER WAND>auge"] Und in eurer Wohnzimmerwand ist ein Riss, so breit wie dein Finger. Von unten kann niemand mehr zu euch hoch.
+[gesicht du ort=wohnung denkt palette=blau] Wenn Hilfe kommt, dann nicht von unten. Dann von oben.
+
+== Stunde 71 ==
+[titel oben="Mittwoch" gross="13:20 UHR" unten="einundsiebzig Stunden" farbe=#1a1208 akzent=#ffb35a groesse=160 hud=false zoom-rein] Dreizehn Uhr zwanzig.
+[handy ort=wohnung netz=1 akku=3 uhrzeit="13:20" von="Mama" nachricht="Geht aufs Dach. Hubschrauber in 40 Min." palette=orange ton=handy_vibration ein="Dach>AUFS DACH>pfeil"] Noch eine Nachricht. Drei Prozent Akku. Geht aufs Dach. Hubschrauber in vierzig Minuten.
+[treppenhaus du opa etage=17 palette=orange schwenk-hoch ton=schritte ein="acht>8 STOCKWERKE BIS ZUM DACH>treppe"] Bis zum Dach sind es acht Stockwerke. Für dich sind das zwei Minuten. Für deinen Opa ohne seine Tabletten ist es ein Berg.
+[treppenhaus du opa lina etage=19 licht=taschenlampe palette=orange zoom-rein ton=atmen] Lina geht vorne mit der Taschenlampe. Du stützt Opa. Stufe für Stufe. Nach jedem Stockwerk muss er sich setzen.
+[gesicht opa ort=treppenhaus etage=16 muede palette=orange] Im zwanzigsten Stock sagt er, ihr sollt ohne ihn weitergehen.
+[gesicht du ort=treppenhaus etage=16 entschlossen palette=orange] Du sagst nein. Du sagst, die Rommé-Partie ist noch nicht zu Ende. Und dass er dir noch was schuldet.
+[treppenhaus du opa lina etage=22 palette=orange schwenk-hoch ton=atmen] Er lacht, hustet, und steht wieder auf. Zweiundzwanzig. Dreiundzwanzig. Vierundzwanzig.
+[dach du opa lina palette=orange zoom-raus ton=wind sos=malt ein="vierundzwanzig>DACH · 72 METER>pfeil"] Dann drückst du die schwere Stahltür auf, und euch schlägt der Wind ins Gesicht. Das Dach. Über euch nur noch Himmel.
+[dach du opa lina palette=orange zoom-rein sos ein="SOS>SOS>kreuz"] Mit einem Stück Ziegel malt Lina drei riesige Buchstaben auf den Teer. S. O. S.
+
+== Stunde 72 ==
+[titel oben="Mittwoch" gross="14:02 UHR" unten="zweiundsiebzig Stunden" farbe=#1a1208 akzent=#ffb35a groesse=160 hud=false zoom-rein] Vierzehn Uhr zwei. Genau zweiundsiebzig Stunden nach dem Beben.
+[dach du opa lina heli=kommt palette=orange zoom-raus ton=hubschrauber] Erst hörst du es nur. Dieses tiefe Wummern, das du in deinem Bauch spürst. Dann taucht er hinter dem Nachbarhaus auf.
+[dach du opa lina heli=kommt palette=orange zoom-rein ton=hubschrauber,wind ein="Seil>RETTUNG AM SEIL>pfeil"] Der Hubschrauber bleibt über euch stehen. An einem Seil schwebt ein Retter herunter, mit Helm und Gurt.
+[dach du lina heli palette=orange schwenk-hoch ton=hubschrauber] Lina zuerst. Sie hält ihr Stofftier fest und winkt dir, als sie nach oben gezogen wird.
+[dach du opa heli palette=orange schwenk-hoch ton=hubschrauber] Dann dein Opa. Bevor sie ihm den Gurt umlegen, drückt er dir etwas in die Hand. Seine Spielkarten.
+[gesicht opa ort=dach froh palette=orange figurstimme=mann_alt sprecher=opa] „Pass gut drauf auf. Wir sind noch nicht fertig.“
+[dach du heli palette=orange zoom-raus ton=hubschrauber,wind] Und dann du. Als letzter. Der Gurt zieht dich hoch, das Dach wird kleiner, die Stadt wird riesig.
+[skyline zeit=tag heli palette=orange zoom-raus ton=wind] Von hier oben siehst du, wie viele Häuser beschädigt sind. Und auf wie vielen Dächern noch Menschen warten. Du bist einer der Glücklichen.
+[park du palette=orange zoom-rein ton=hubschrauber] Auf dem Sportplatz landet der Hubschrauber. Du springst raus und rennst. Jemand rennt dir entgegen.
+[gesicht mama ort=park froh palette=orange] Deine Mama hält dich so fest, dass du kaum Luft bekommst. Sie riecht nach Rauch und Kaffee und nach drei Nächten ohne Schlaf.
+[gesicht mama ort=park froh palette=orange figurstimme=frau sprecher=mama] „Ich hab deine Nachricht hundertmal gelesen. Jedes Mal, wenn ich nicht mehr konnte.“
+[krankenhaus palette=tuerkis zoom-raus ein="Opa>OPA IST STABIL>herz"] Dein Opa kommt ins Krankenhaus. Neue Tabletten, eine Infusion, zwei Tage Ruhe. Und dann ist er wieder ganz der Alte.
+[gesicht lina ort=krankenhaus froh palette=tuerkis] Linas Mama findet ihre Tochter noch am selben Abend. Sie hatte drei Tage lang in der Notaufnahme anderen Menschen geholfen.
+[wohnung du opa lina licht=an palette=orange zoom-raus ein="Schrank>DER KRISENSCHRANK>wasserflasche"] Seitdem hast auch du eine Schublade. Taschenlampe, Kurbelradio, eine Powerbank, zehn Flaschen Wasser. Niemand lacht mehr darüber.
+[wohnung du opa lina licht=an palette=orange zoom-rein] Und jeden Sonntag sitzt ihr wieder zusammen. Du, dein Opa und Lina. Mit Apfelkuchen.
+[gesicht du ort=wohnung froh palette=orange dauer=8] Die Rommé-Partie von damals habt ihr nie zu Ende gespielt. Ihr habt beschlossen, dass sie nie ganz zu Ende gehen soll.

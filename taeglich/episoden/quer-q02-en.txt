@@ -1,0 +1,148 @@
+# You're Trapped in a High-Rise for 72 Hours
+@musik musik/quer-q02-en.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@format quer
+@stimmung spannend
+@vortrag lebendig
+@klang studio
+@mund zitate
+@einblenden aus
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette orange
+@zeit tag
+@sprache en
+
+== Minute 0 ==
+// Wow-Bild zum Einstieg: das Hochhaus von außen, oben ein Fenster
+[skyline licht palette=orange zoom-rein hooktext="TRAPPED FOR 72 HOURS" ton=wind] Sunday afternoon. You're at your grandpa's place on the sixteenth floor, and you're losing at rummy for the third time.
+[wohnung du opa licht=an palette=orange zoom-rein ein="sixteenth>16TH FLOOR>treppe"] He grins, lays down his cards and slides the last piece of apple pie over to you. A consolation prize.
+[gesicht du ort=wohnung neugierig palette=orange] Then you see it. The tea in his glass is trembling. Tiny rings on the surface. Nobody touched the table.
+[wohnung du opa licht=an palette=orange wackeln=1 staub ton=hit,glas_klirren] One second later, the whole building shakes. Glasses fly out of the cabinet, the shelf tips over, the floor sways like a ship.
+[gesicht opa ort=wohnung angst palette=orange wackeln=1] "Under the table!" your grandpa shouts. You crawl under it and grab the table leg.
+[gesicht du ort=wohnung angst palette=orange wackeln=1 staub ton=herzschlag] Forty seconds. That's how long it lasts. It feels like an hour.
+[titel oben="What if …" gross="… YOU WERE TRAPPED|FOR 72 HOURS?" unten="Hour by hour" farbe=#1a1208 akzent=#ffb35a groesse=120 hud=false zoom-rein] What comes next are the longest seventy-two hours of your life. And in the very last hour, everything depends on a single sound.
+
+== Hour 1 ==
+[titel oben="Sunday" gross="3:40 PM" unten="one hour after the quake" farbe=#1a1208 akzent=#ffb35a groesse=170 hud=false zoom-rein] Three forty in the afternoon.
+[wohnung du opa licht=aus palette=orange zoom-raus staub ton=stille_raum] It's quiet. The apartment looks like someone picked it up and shook it.
+[gesicht opa ort=wohnung besorgt palette=orange] Your grandpa has a scrape on his forehead, but he's already smiling again. He always does that when he wants you to stop being scared.
+[wohnung du licht=aus palette=orange schwenk-rechts ton=stromausfall ein="switch>NO POWER>gluehbirne"] You flip the light switch. Nothing. The fridge is silent, the clock on the stove is black.
+[treppenhaus du etage=16 palette=orange zoom-rein ton=treppenhaus_tuer] The front door is jammed. You throw your shoulder against it, twice, three times. Then it pops open.
+[treppenhaus du etage=16 palette=orange schwenk-runter staub ton=schritte] The stairwell smells like concrete and dust. You head down. Fifteenth floor. Fourteenth. Thirteenth.
+[treppenhaus du etage=12 palette=orange zoom-rein staub kaputt] On the twelfth floor, you stop breathing. Below you, there are no more stairs.
+[gesicht du ort=treppenhaus etage=16 schreck palette=orange staub] Where the steps used to be, there's only a hole full of rubble and twisted steel bars. Ten floors deep.
+[hochhaus etage=16 strom=false palette=orange zoom-raus ein="stairs>STAIRS DESTROYED>treppe"] The only way down is gone. The elevator is stuck. And you and your grandpa are trapped on the sixteenth floor.
+[handy ort=treppenhaus etage=16 netz=1 akku=71 uhrzeit="3:52" von="Mom" nachricht="Call failed" palette=orange ton=kein_netz ein="failed>NETWORK OVERLOADED>handy_netz0"] You call your mom. Busy. Again. Call failed.
+[handy ort=treppenhaus etage=16 netz=1 akku=70 uhrzeit="3:54" von="911" nachricht="All circuits are busy" palette=orange ein="millions>EVERYONE CALLS AT ONCE>telefon_alt"] After a big quake, millions of people try to make a call in the same minute. No network in the world can handle that.
+[handy ort=wohnung netz=1 akku=69 uhrzeit="3:58" von="You to Mom" nachricht="Grandpa and I are alive. 16th floor. Stairs gone." palette=orange ein="text>TEXT, DON'T CALL>handy"] So you send a text instead. A text is tiny. Sometimes it still slips through when no call can.
+[gesicht du ort=wohnung besorgt palette=orange] Grandpa and I are alive. Sixteenth floor. Stairs gone. You hit send. Under the message, a little circle starts spinning. And spinning. And spinning.
+
+== Hour 6 ==
+[titel oben="Sunday" gross="8:30 PM" unten="six hours" farbe=#1a1208 akzent=#ffb35a groesse=170 hud=false zoom-rein] Eight thirty at night.
+[skyline zeit=abend strom=false palette=blau zoom-raus ton=sirene_fern ein="city>CITY WITHOUT POWER>gluehbirne"] Outside, it's getting dark. And for the first time, you see your city without a single light. Only sirens, wailing in the distance.
+[wohnung du opa licht=kerze zeit=abend palette=orange zoom-rein ton=kerze_knistern] Grandpa pulls candles out of a drawer. He has a drawer for everything. Candles, a camping stove, a hand-crank radio.
+[gesicht opa ort=wohnung licht=kerze zeit=abend froh palette=orange] You always made fun of him for his emergency drawer. Today you don't say a word.
+[bad du licht=kerze hahn=tropft palette=blau zoom-rein ton=wasser_stockt] You turn on the faucet. A gurgle, a few drops. Then nothing.
+[hochhaus etage=16 strom=false wasser=weg palette=blau zoom-raus ein="pump>PUMPS NEED POWER>tropfen"] In a high-rise, a pump pushes the water up to the top floors. No power, no pump. No pump, no water.
+[objekt objekte="wasserflasche:1 bottle|tropfen:3 days" gross="WATER" palette=blau zoom-rein ein="three>NO WATER: ABOUT 3 DAYS>tropfen" ein_y=1450] There's one bottle of water left in the apartment. Without water, a person only lasts about three days.
+[gesicht du ort=wohnung licht=kerze denkt palette=orange] Three days. You do the math. For two people, one bottle is nothing.
+[wohnung du opa licht=kerze zeit=nacht palette=orange wackeln=1 staub ton=hit,moebel_ruecken] Then it shakes again. Shorter, but hard enough that Grandpa reaches for your hand.
+[objekt objekte="uhr:Hours|uhr:Days|uhr:Weeks" gross="AFTERSHOCKS" palette=blau zoom-rein ein="Aftershocks>AFTERSHOCKS: DAYS TO WEEKS>uhr" ein_y=1450] Aftershocks. After a major earthquake, they can keep coming for days, even weeks.
+[treppenhaus du etage=16 palette=blau zoom-rein staub ton=moebel_ruecken] From the stairwell, you hear a rumble. More chunks of concrete falling into the hole.
+[gesicht opa ort=wohnung licht=kerze zeit=nacht besorgt palette=orange] Later, in the candlelight, you see your grandpa shaking his pill bottle. He's counting. And he doesn't tell you how many are left.
+
+== Hour 20 ==
+[titel oben="Monday" gross="10:15 AM" unten="twenty hours" farbe=#1a1208 akzent=#ffb35a groesse=170 hud=false zoom-rein] Monday. Ten fifteen in the morning.
+[wohnung du licht=aus palette=tuerkis zoom-raus] You barely slept. It's cold in the apartment. No power means no heat, and it's November.
+[gesicht du ort=wohnung entschlossen palette=tuerkis] But during the night, you remembered something. Something your grandpa told you once.
+[bad du licht=an palette=tuerkis zoom-rein ein="heater>WATER HEATER: UP TO 50 GALLONS>boiler"] The water heater. That big white tank in the bathroom. It's completely full of tap water.
+[bad du palette=tuerkis schwenk-rechts ton=eingiessen ein="valve>WATER FROM THE HEATER>wasserflasche"] There's a little valve at the bottom. You open it, and water comes out. Lukewarm, a little rusty, but it comes out.
+[bad du palette=tuerkis zoom-rein spuelkasten ein="tank>TOILET TANK: 1–3 GALLONS>spuelkasten"] And in the toilet tank, not the bowl, there's another gallon or two of clean tap water.
+[wohnung du opa licht=an palette=orange zoom-rein ton=eingiessen] You fill every pot, every bottle, every vase. Grandpa boils the water on his camping stove, just to be safe.
+[gesicht opa ort=wohnung froh palette=orange] He pats you on the shoulder. You actually listened to him, he says. That doesn't happen often.
+[skyline zeit=tag strom=false heli palette=tuerkis zoom-raus ton=hubschrauber] Around noon, you hear a helicopter. You run to the window and wave like crazy.
+[skyline zeit=tag strom=false heli palette=tuerkis zoom-rein ton=hubschrauber] It flies right past. It doesn't see you. To them, you're just one of a thousand windows.
+[gesicht du ort=wohnung entschlossen palette=tuerkis] So you need something they can see from above.
+[wohnung du licht=an palette=tuerkis zoom-rein ein="sheet>BEDSHEET IN THE WINDOW>plane"] With Grandpa's marker, you write huge letters on his white bedsheet. Two people. Sixteenth floor.
+[skyline zeit=tag strom=false licht palette=tuerkis zoom-raus ton=wind ein="flag>2 PEOPLE · 16TH FLOOR>auge"] Then you tie it to the balcony. It flutters in the wind like a little white flag.
+[handy ort=wohnung netz=0 akku=38 uhrzeit="1:12" von="You to Mom" nachricht="Sending …" palette=tuerkis ton=kein_netz] Your text is still spinning. Twenty-one hours now.
+
+== Hour 33 ==
+[titel oben="Monday" gross="11:10 PM" unten="thirty-three hours" farbe=#1a1208 akzent=#ffb35a groesse=160 hud=false zoom-rein] Eleven ten at night.
+[wohnung du opa licht=kerze zeit=nacht palette=blau zoom-raus ton=kerze_knistern] Grandpa is asleep in his armchair under three blankets. You sit next to him and listen to the city breathe. Dogs, sirens, wind.
+[gesicht du ort=wohnung licht=kerze zeit=nacht lauscht palette=blau ton=tuer_klopfen] And then you hear something else. A knocking. Faint. It's coming from the wall.
+[treppenhaus du etage=16 licht=taschenlampe klopfen palette=blau zoom-rein ton=tuer_klopfen] You take the flashlight out into the stairwell. The neighbors' door is warped and jammed shut.
+[gesicht du ort=treppenhaus etage=16 licht=taschenlampe zeit=nacht besorgt palette=blau] You knock back. And from inside, a small voice calls out.
+[gesicht lina ort=treppenhaus etage=16 zeit=nacht angst palette=blau figurstimme=kind sprecher=lina] "Hello? Is someone there? My mom's not home."
+[gesicht du ort=treppenhaus etage=16 licht=taschenlampe zeit=nacht entschlossen palette=blau] It's Lina, the little girl from next door. Eight years old. Her mom was working the late shift at the hospital. She's been alone for thirty-three hours.
+[treppenhaus du etage=16 licht=taschenlampe palette=blau zoom-rein ton=haemmern] The door won't move an inch. But Lina's balcony is right next to yours. Only a thin divider wall between them.
+[skyline zeit=nacht strom=false licht palette=blau zoom-raus ton=wind ein="hundred>#160 FEET>pfeil"] You step out onto the balcony and you don't look down. A hundred and sixty feet. You don't look down.
+[gesicht du ort=wohnung zeit=nacht angst palette=blau ton=haemmern,glas_klirren] With Grandpa's hammer, you knock a hole in the divider. Then another one. Your arm is shaking.
+[gesicht lina ort=wohnung licht=kerze zeit=nacht froh palette=orange] And then Lina climbs through, in her pajamas, with her stuffed animal under her arm. She throws her arms around your neck and won't let go.
+[wohnung du opa lina licht=kerze zeit=nacht palette=orange zoom-raus ton=kerze_knistern ein="three>#3 PEOPLE>herz"] Grandpa wakes up, sees you two and laughs. Now there are three of you. Three people, half a bathtub of water and a deck of cards.
+[gesicht opa ort=wohnung licht=kerze zeit=nacht froh palette=orange] That same night, he teaches Lina how to play rummy. She wins right away. He claims he let her win.
+
+== Hour 48 ==
+[titel oben="Tuesday" gross="2:00 PM" unten="two days" farbe=#1a1208 akzent=#ffb35a groesse=170 hud=false zoom-rein] Tuesday. Two in the afternoon.
+[gesicht opa ort=wohnung muede palette=orange] Since this morning, your grandpa has been different. Gray in the face. He has to sit down every few minutes.
+[objekt objekte="medizin:Pills|uhr:this morning" gross="GRANDPA'S PILLS" palette=orange zoom-rein ein="empty>THE BOTTLE IS EMPTY>medizin" ein_y=1450] You pick up his pill bottle. It's empty. He took the last one this morning. He didn't tell you, so you wouldn't worry.
+[gesicht du ort=wohnung angst palette=orange ton=herzschlag] For the first time, you're not scared for yourself. You're scared for him.
+[grossstadt zeit=tag palette=orange zoom-raus ton=sirene_fern stromlos] Then, in the afternoon, you hear engines. Down on the street, fire trucks pull up, and a van full of rescue dogs.
+[skyline zeit=tag strom=false licht palette=orange zoom-rein ein="ladder>LADDER: ABOUT 100 FEET>treppe"] A ladder truck extends its ladder. Higher, and higher. And then it stops, way too far below you.
+[hochhaus etage=16 strom=false palette=orange zoom-raus ein="seventy-five>HIGH-RISE: OVER 75 FEET>pfeil"] That's no accident. In the US, a building counts as a high-rise above seventy-five feet, because beyond that, fighting fires from outside with ladders gets really hard. That's about the seventh floor.
+[gesicht du ort=wohnung schreck palette=orange] You're on the sixteenth. More than twice as high.
+[grossstadt zeit=tag palette=orange zoom-rein ton=funk_klick stromlos] Then someone shouts through a megaphone. Every machine shuts off. The dogs sit down. The whole street goes dead silent.
+[objekt objekte="ohr:Listening devices|herz:Signs of life" gross="SILENT PERIOD" palette=blau zoom-rein ein="silent>EVERYONE GOES SILENT>ohr" ein_y=1450] A silent period. Rescuers listen with sensitive devices for signs of life. For voices. For knocking.
+[gesicht opa ort=wohnung muede palette=orange figurstimme=mann_alt sprecher=opa] "Don't yell. Knock. The pipes carry the sound through the whole building."
+[bad du palette=orange zoom-rein ton=haemmern ein="pipe>KNOCK, DON'T YELL>ohr"] You grab the wrench and bang it against the heating pipe. Three times. Pause. Three times. Pause.
+[gesicht du ort=bad lauscht palette=orange ton=stille_raum] You hold your breath. Ten seconds. Twenty.
+[gesicht du ort=bad froh palette=orange ton=tuer_klopfen] And then, very faintly, from deep inside the building: three knocks back.
+[gesicht lina ort=wohnung froh palette=orange] Lina jumps up and down. Grandpa closes his eyes and smiles. They know you're here.
+
+== Hour 64 ==
+[titel oben="Wednesday" gross="6:00 AM" unten="sixty-four hours" farbe=#1a1208 akzent=#ffb35a groesse=160 hud=false zoom-rein] Wednesday. Six in the morning.
+[gesicht du ort=wohnung muede palette=blau] But knowing isn't the same as saving. For a whole day, nothing else happens.
+[objekt objekte="wasserflasche:Half a bottle|tropfen:3 people" gross="WATER" palette=blau zoom-rein ein="half>HALF A BOTTLE LEFT>wasserflasche" ein_y=1450] There's only half a bottle of water left. You give it to Lina and Grandpa. You just take one sip, to wet your lips.
+[objekt objekte="uhr:24 h|uhr:48 h|uhr:72 h" gross="THE 72 HOURS" palette=blau zoom-rein ein="seventy-two>AFTER 72 HOURS, IT GETS CRITICAL>uhr" ein_y=1450] After earthquakes, rescuers talk about the seventy-two hours. After that, the chance of finding trapped people alive drops with every day.
+[gesicht du ort=wohnung besorgt palette=blau] You're at hour sixty-four.
+[handy ort=wohnung netz=1 akku=9 uhrzeit="6:41" von="Mom" nachricht="I'm downstairs. I'm not leaving." palette=orange ton=handy_vibration ein="Mom>MESSAGE FROM MOM>herz"] Then your phone buzzes. Nine percent battery. A message. From your mom.
+[gesicht du ort=wohnung froh palette=orange] I'm downstairs. I'm not leaving. Your text made it. Sometime during the night, after two and a half days.
+[skyline zeit=morgen strom=false licht palette=orange zoom-raus] You look down. Between all the helmets and trucks, there's a tiny figure waving with both arms.
+[gesicht du ort=wohnung froh palette=orange] You cry. For the first time since the quake.
+[wohnung du opa lina licht=aus palette=blau wackeln=1 staub ton=hit,moebel_ruecken] In the afternoon, the next aftershock hits. The strongest one since Sunday.
+[treppenhaus du etage=16 palette=blau zoom-rein staub kaputt ton=moebel_ruecken] When the dust settles, the hole in the stairwell is bigger. It now reaches up to the fourteenth floor.
+[hochhaus etage=16 strom=false palette=blau zoom-raus ein="crack>CRACKS IN THE WALL>auge"] And in your living room wall, there's a crack as wide as your finger. Nobody can reach you from below anymore.
+[gesicht du ort=wohnung denkt palette=blau] If help comes, it won't come from below. It'll come from above.
+
+== Hour 71 ==
+[titel oben="Wednesday" gross="1:20 PM" unten="seventy-one hours" farbe=#1a1208 akzent=#ffb35a groesse=160 hud=false zoom-rein] One twenty in the afternoon.
+[handy ort=wohnung netz=1 akku=3 uhrzeit="1:20" von="Mom" nachricht="Go to the roof. Helicopter in 40 min." palette=orange ton=handy_vibration ein="roof>GO TO THE ROOF>pfeil"] Another message. Three percent battery. Go to the roof. Helicopter in forty minutes.
+[treppenhaus du opa etage=17 palette=orange schwenk-hoch ton=schritte ein="eight>8 FLOORS TO THE ROOF>treppe"] The roof is eight floors up. For you, that's two minutes. For your grandpa, without his pills, it's a mountain.
+[treppenhaus du opa lina etage=19 licht=taschenlampe palette=orange zoom-rein ton=atmen] Lina leads the way with the flashlight. You hold Grandpa up. Step by step. After every floor, he has to sit down.
+[gesicht opa ort=treppenhaus etage=16 muede palette=orange] On the twentieth floor, he tells you to go on without him.
+[gesicht du ort=treppenhaus etage=16 entschlossen palette=orange] You say no. You say the rummy game isn't over yet. And that he still owes you one.
+[treppenhaus du opa lina etage=22 palette=orange schwenk-hoch ton=atmen] He laughs, coughs, and gets back up. Twenty-two. Twenty-three. Twenty-four.
+[dach du opa lina palette=orange zoom-raus ton=wind sos=malt ein="twenty-four>ROOF · 240 FEET>pfeil"] Then you push open the heavy steel door, and the wind hits you in the face. The roof. Nothing above you but sky.
+[dach du opa lina palette=orange zoom-rein sos ein="SOS>SOS>kreuz"] With a piece of brick, Lina draws three giant letters on the tar. S. O. S.
+
+== Hour 72 ==
+[titel oben="Wednesday" gross="2:02 PM" unten="seventy-two hours" farbe=#1a1208 akzent=#ffb35a groesse=160 hud=false zoom-rein] Two oh two. Exactly seventy-two hours after the quake.
+[dach du opa lina heli=kommt palette=orange zoom-raus ton=hubschrauber] At first, you only hear it. That deep thumping you can feel in your stomach. Then it appears from behind the building next door.
+[dach du opa lina heli=kommt palette=orange zoom-rein ton=hubschrauber,wind ein="rope>RESCUE BY HOIST>pfeil"] The helicopter hovers right above you. A rescuer comes down on a cable, in a helmet and harness.
+[dach du lina heli palette=orange schwenk-hoch ton=hubschrauber] Lina goes first. She hugs her stuffed animal and waves at you as she's pulled up.
+[dach du opa heli palette=orange schwenk-hoch ton=hubschrauber] Then your grandpa. Before they strap him in, he presses something into your hand. His deck of cards.
+[gesicht opa ort=dach froh palette=orange figurstimme=mann_alt sprecher=opa] "Take good care of these. We're not done yet."
+[dach du heli palette=orange zoom-raus ton=hubschrauber,wind] And then you. Last. The harness pulls you up, the roof gets smaller, the city gets huge.
+[skyline zeit=tag heli palette=orange zoom-raus ton=wind] From up here, you can see how many buildings are damaged. And how many rooftops still have people waiting. You're one of the lucky ones.
+[park du palette=orange zoom-rein ton=hubschrauber] The helicopter lands on a sports field. You jump out and run. Someone is running toward you.
+[gesicht mama ort=park froh palette=orange] Your mom holds you so tight you can barely breathe. She smells like smoke and coffee and three nights without sleep.
+[gesicht mama ort=park froh palette=orange figurstimme=frau sprecher=mama] "I read your message a hundred times. Every time I couldn't go on."
+[krankenhaus palette=tuerkis zoom-raus ein="hospital>GRANDPA IS STABLE>herz"] Your grandpa goes to the hospital. New pills, an IV, two days of rest. And then he's his old self again.
+[gesicht lina ort=krankenhaus froh palette=tuerkis] Lina's mom finds her that same evening. For three days, she'd been in the ER, helping other people.
+[wohnung du opa lina licht=an palette=orange zoom-raus ein="drawer>THE EMERGENCY DRAWER>wasserflasche"] Since then, you have a drawer too. Flashlight, crank radio, a power bank, ten bottles of water. Nobody laughs at it anymore.
+[wohnung du opa lina licht=an palette=orange zoom-rein] And every Sunday, you sit together again. You, your grandpa and Lina. With apple pie.
+[gesicht du ort=wohnung froh palette=orange dauer=8] You never finished that rummy game. You all decided it should never really end.
