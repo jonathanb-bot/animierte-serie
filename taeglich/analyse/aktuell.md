@@ -13,6 +13,8 @@ Gilt für `taeglich/laeufe/nische.md`, bis die Wochenanalyse (samstags) diese Da
 
 6b. **7 Content-Gesetze (Jonathan 21.11.):** Hook immer einlösen, eine Nische, jedes Video schenkt einen Gedanken oder echten Fakt, Bild zeigt die Prämisse, jeden Tag posten (`FORMAT.md` → „Die 7 Content-Gesetze“). Die Wochenanalyse misst Teilen und Speichern pro 1.000 Aufrufe als Zeichen für „Geben“.
 
+6c. **Test „So baust du …“ (Jonathan 22.11.):** jeden Mittwoch statt des Nischen-Videos (MASTER Abschnitt 3b), Kette aus „Aber … Also …“, Ende „Glückwunsch, du hast gerade … gebaut“. Erster Termin: Mittwoch 25.11.
+
 ## Weniger davon
 6. Kein Einstieg mit Ort, Regel, Aufzählung oder ruhiger Vorgeschichte (s03: 30 % nach 3 s, Instagram Abbruch 54 %; Mond F1 verliert bei 5–9 s an einer ruhigen Einstellung).
 7. Keine Serien-, Staffel- oder Mitmach-Logik, keine A/B-Abstimmung, keine Verweise auf andere Folgen.

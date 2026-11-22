@@ -17,7 +17,7 @@
 ## 1. Was wir machen
 
 - **Kanalversprechen:** „Was wäre, wenn es dir passiert? Jeden Tag eine Geschichte über dich.“
-- **Nische:** „Was wäre, wenn du …“ – eigenständige Du-Geschichten aus dem echten Leben mit einer kühnen Prämisse über dein Leben. Ab und zu (höchstens jedes 4. Video) kurzer Alltags-Grusel nach der Machart von „Haltestelle Mühlenweg“. Ideen: `taeglich/nische.json`.
+- **Nische:** „Was wäre, wenn du …“ – eigenständige Du-Geschichten aus dem echten Leben mit einer kühnen Prämisse über dein Leben. Ab und zu (höchstens jedes 4. Video) kurzer Alltags-Grusel nach der Machart von „Haltestelle Mühlenweg“. Ideen: `taeglich/nische.json`. **Dazu der Test „So baust du …“ (Abschnitt 3b): jeden Mittwoch statt des Nischen-Videos.**
 - **Keine Staffel, keine Serie, keine Teile, keine Mitmach-Abstimmung** (#39). Jedes Video versteht ein Fremder ohne Vorwissen.
 - **Warum genau das (Zahlen der Auswertung):**
   - Prämisse über dich schlägt Rätsel mit Gefahr: s02 auf Instagram Ø 46 % der Länge angesehen gegen 15 %; Rekord 4.576 Aufrufe.
@@ -75,6 +75,33 @@ Jede Geschichte besteht aus **2 Schleifen** mit je 4 Schritten:
   - Aufzählung im ersten Satz.
   - Vorgeschichte vor der ersten Wendung.
   - Wesen oder Regel erklären statt zeigen.
+
+## 3b. Test-Format „So baust du …“ (Jonathan 22.11.)
+
+Jonathan zu einem Vorbild-Video („So baust du eine Palmeninsel“, selbstgebaut.de, 1:13 min, 513.400 Aufrufe, 17.400 Likes): „Auch vielleicht mal als Test reinmachen, wie Dinge überhaupt gemacht werden (Gebäude).“ Übernommen wird nur der Aufbau. **Nie dasselbe Bauwerk wie im Vorbild** (keine Palmeninsel), eigene Themen, eigene Grafik.
+
+**Warum es zu uns passt:** Du-Form („So baust du …“, „Glückwunsch, du hast gerade … gebaut“), ein Dopamin-Loop in Reinform, echte Fakten (Geben, Status), das Bild zeigt jeden Schritt (Demonstration), Kurzgesagt-Richtung.
+
+**Aufbau (62–75 s): Kette aus 6–8 Mini-Schleifen „Aber … Also …“:**
+
+| Sekunde | Schritt |
+|---|---|
+| 0–4 | **Einsatz:** naive Lösung als Prämisse über dich („Wenn du einfach Sand ins Meer kippst, hättest du deine Insel.“ → bei uns eigenes Bauwerk), sofort Schlüsselwort |
+| 4–8 | **Finte 1:** „Aber …“ – warum das nicht geht (echtes physikalisches Problem) |
+| 8–14 | **Lösung:** „Also …“ – die echte Technik, mit Fachwort als Schlüsselwort im Bild |
+| ab 14 | **Rehook + nächste Schleife:** „Aber …“ (neues Problem) → „Also …“ (Lösung), alle 5–8 s, jedes Problem größer als das davor |
+| letzte 3–5 s | **Ende:** „Dann … Glückwunsch, du hast gerade <echtes Bauwerk> gebaut.“ Harte Pointe mit dem fertigen Bauwerk im Bild. Kein Aufruf, keine Endkarte (#8, #11) |
+
+**Bild:** Ein Bauwerk wächst Schritt für Schritt aus derselben Kamera bzw. einer langsam kreisenden Kamera, jede Lösung wird sofort sichtbar. Je Schritt ein großes Schlüsselwort (Fachwort, Zahl: „11 KILOMETER“, „RÜTTELSONDEN“). Engine: vorhandene Bau-Kulissen (`engine/reich.js` für Inseln/Gelände, `engine/turm.js` für Höhe) nutzen und erweitern; Stil „leuchtend“.
+
+**Fakten:** jede Zahl und jedes Fachwort vorher recherchieren (WebSearch), mit Quelle im Drehbuch-Kommentar. Nichts erfinden (Gesetz „Vertrauen“).
+
+**Takt und Test:**
+- Jeden **Mittwoch** ersetzt ein „So baust du …“-Video das Nischen-Video, deutsch + englisch, gleiche Uhrzeiten.
+- Läuft 4 Wochen (bis 23.12.).
+- Ideen: `taeglich/nische.json` → `art: "bau"`.
+- Die Wochenanalyse vergleicht `bau` gegen `praemisse`: Aufrufe nach 24/72 h, Bindung 3/10 s, Ø %, Teilen/Speichern pro 1.000.
+- Danach entscheidet Jonathan, ob es bleibt, mehr Platz bekommt oder endet.
 
 ## 4. Die 7 Content-Gesetze (Prüfung jedes Drehbuchs)
 
@@ -159,6 +186,7 @@ Jede Geschichte besteht aus **2 Schleifen** mit je 4 Schritten:
   - YouTube: Angesehen-Anteil (Ziel ≥ 80 %), Ø % der Länge.
   - Dazu Teilen und Speichern pro 1.000 Aufrufe (Gesetz „Geben“).
   - Prüfen, ob die Bindung an Finte 1 (ca. 20–25 s) hält.
+- **Test „So baust du …“ (Abschnitt 3b):** `art: bau` getrennt auswerten und mit `praemisse` vergleichen.
 - **Vergleichswerte** (Qualitätsphase 6.–16.11., Median nach 2–4 Tagen): TikTok de 282, Instagram de 152, YouTube de 12, TikTok en 721, Instagram en 135, YouTube en 8.
 - **Stellschrauben, die die Wochenanalyse über `aktuell.md` ändern darf:** Reihenfolge der Ideen, neue Ideen in der Nische, Uhrzeiten, Anteil Grusel, Länge innerhalb 62–75 s, Hook-Varianten, ein zweites Instagram-Video am Tag. Nur mit mindestens 6 Posts je Variante, sonst „Tendenz“. Alles andere in dieser Datei ändert nur Jonathan.
 - **Kanal-Entscheidung ab 28.11.:** Bleiben die letzten 20 Videos eines Kontos im Median unter 100, schlägt die Wochenanalyse Jonathan einen neuen Kanal vor (nichts selbst anlegen, löschen oder privat stellen).

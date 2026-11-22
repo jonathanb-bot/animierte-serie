@@ -1,5 +1,5 @@
 {
- "_info": "Gewinner-Nische „Was wäre, wenn du …“ (große Auswertung 21.11., Jonathan 21.11.: keine Staffel mehr fortsetzen, nur noch nach den Analysedaten). Jede Idee = ein eigenständiges Video (nische-nNNN). Der Lauf taeglich/laeufe/nische.md nimmt die nächste offene Idee (Reihenfolge darf die Wochenanalyse ändern), trägt id, datum und status ein. Neue Ideen nur nach taeglich/analyse/aktuell.md ergänzen. art: praemisse (kühne Prämisse über dein Leben) oder grusel (kurzer Alltags-Grusel nach s05-Machart, höchstens jedes 4. Video).",
+ "_info": "Gewinner-Nische „Was wäre, wenn du …“ (große Auswertung 21.11., Jonathan 21.11.: keine Staffel mehr fortsetzen, nur noch nach den Analysedaten). Jede Idee = ein eigenständiges Video (nische-nNNN). Der Lauf taeglich/laeufe/nische.md nimmt die nächste offene Idee (Reihenfolge darf die Wochenanalyse ändern), trägt id, datum und status ein. Neue Ideen nur nach taeglich/analyse/aktuell.md ergänzen. art: praemisse (kühne Prämisse über dein Leben) oder grusel (kurzer Alltags-Grusel nach s05-Machart, höchstens jedes 4. Video). art: bau = Test „So baust du …“ (Jonathan 22.11., MASTER Abschnitt 3b), jeden Mittwoch, nie dasselbe Bauwerk wie im Vorbild (keine Palmeninsel); Hook-Zeile ist nur die Richtung, Satz 1 beginnt mit der naiven Lösung.",
  "ziel": 30,
  "ideen": [
   {
@@ -209,6 +209,62 @@
    "nr": 30,
    "hook": "Du siehst zum ersten Mal, wie oft deine Eltern dich angesehen haben, als du geschlafen hast.",
    "art": "praemisse",
+   "id": null,
+   "status": "offen"
+  },
+  {
+   "nr": 31,
+   "hook": "So baust du einen Tunnel unter dem Meer – mit deiner Familie im ersten Zug.",
+   "art": "bau",
+   "id": null,
+   "status": "offen"
+  },
+  {
+   "nr": 32,
+   "hook": "So baust du einen Wolkenkratzer, der höher ist als jeder Berg in deiner Heimat.",
+   "art": "bau",
+   "id": null,
+   "status": "offen"
+  },
+  {
+   "nr": 33,
+   "hook": "So baust du eine Staumauer, hinter der dein ganzes Dorf verschwinden würde.",
+   "art": "bau",
+   "id": null,
+   "status": "offen"
+  },
+  {
+   "nr": 34,
+   "hook": "So baust du eine Brücke über einen Fjord, über die deine Oma ohne Angst fahren kann.",
+   "art": "bau",
+   "id": null,
+   "status": "offen"
+  },
+  {
+   "nr": 35,
+   "hook": "So baust du eine Skihalle mitten in der Wüste.",
+   "art": "bau",
+   "id": null,
+   "status": "offen"
+  },
+  {
+   "nr": 36,
+   "hook": "So baust du ein Haus, das ein Erdbeben überlebt – mit deinem kleinen Bruder darin.",
+   "art": "bau",
+   "id": null,
+   "status": "offen"
+  },
+  {
+   "nr": 37,
+   "hook": "So baust du eine Station im ewigen Eis, in der du einen Winter überlebst.",
+   "art": "bau",
+   "id": null,
+   "status": "offen"
+  },
+  {
+   "nr": 38,
+   "hook": "So baust du ein Hochhaus aus Holz.",
+   "art": "bau",
    "id": null,
    "status": "offen"
   }
