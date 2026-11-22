@@ -31,6 +31,20 @@ Kommt im Chat eine MP3 (oder ein Reel-Link) **ohne weitere Erklärung**, ist das
 - Waffen und Drogen: seit Goldgräber (17.11.) auch als Grafik erlaubt.
 - **Personen im Bild nur: die Künstler selbst, ihre Freunde oder Leute, die sie im Text erwähnen – nie Fremde** (Jonathan 21.11., bei „2 Sitza“ und „Status Minus“). Fotos/Clips vom Instagram der Künstler. Objekte und Orte ohne Menschen (Uhr, Auto, Hafen …) dürfen von Pexels kommen; bei Stockfotos fremde Hände/Gesichter wegschneiden. Realistische Grafik-Elemente (Mitteilung, Blitzerfoto, Preisschild …) darüber sind okay.
 
+## Stil-Richtung für alle künftigen Musik-Edits (Jonathan 22.11.)
+**Vorbild:** TikTok von @crazylyricsedits zu „Hin und Her“ (AK Ausserkontrolle), https://vm.tiktok.com/ZGdXvTRf6/ (Analyse in `scratchpad/edit/ref-ZGdXvTRf6`). Künftige Musik-Edits orientieren sich daran:
+- **Eine durchgehende iPhone-Welt (iOS, Dark Mode) statt Foto-Karten:** Der Text steht immer *in* echten App-Elementen und wird Wort für Wort getippt, genau wenn er gesungen wird.
+  - Apple-Karten-Suche: Lyric in der Suchleiste, Ort als Ergebnis („Weinbergspark, Berlin · Privatbesitz“).
+  - Route mit Stopps: Lyrics als Stopp-Namen, darunter „Späti · 2 Min.“ / „Club · 4 Min.“, die blaue Route wächst mit.
+  - Navigation: Abbiege-Banner („↑ Club · 4 Min.“) mit der Zeile darunter, Pfeil fährt, Tempo-Anzeige steigt mit dem Song (50er-Schild, 70 → 128 km/h).
+  - Eingehender Anruf: Lyric als Anrufer-Text, darunter verpasste Anrufe.
+  - Wetter-App mit Unwetter-Warnung: Lyric als Warntext, Schnee fällt.
+  - Musik-Player mit Live-Lyrics: aktuelle Zeile hell, Nachbarzeilen gedimmt.
+- **Kein harter Schnitt:** Die Kamera fährt weich von Element zu Element (Zoom, Schwenk, Unschärfe-Übergänge). Die Elemente sind wörtlich zum Text gewählt (Club → Navi zum Club, „rufen Kunden“ → Anruf von „Kunde · mobil“, „Stadt auf Eis“ → Wetter Berlin −2 °, Schneefall).
+- **Typografie:** SF-Pro-artig fett, weiß auf dunklen iOS-Flächen, kleine graue Zusatzzeilen (Entfernung, Minuten, Absender), echte iOS-Details (Statusleisten, Tasten, Badges).
+- **Format im Vorbild:** 1:1 (1080×1080), ca. 25 s, nur der Hook. Ruhiger, sauberer und realistischer als die bisherigen Edits mit Zoom-Stößen und Effekten.
+- **Fotos und Personen:** Werden Fotos gebraucht, dann nur als Inhalt einer App (z. B. Satellitenkarte, Albumcover im Player). Die Personen-Regel bleibt.
+
 ## film/
 Gangsta Ralph & Lucio101 – „Film“, Song 31,20–76,88 s (Ende Part Ralph, Pre-Hook + Hook, Part Lucio bis „Carrera S“), 100 BPM, Kino-Look. Fotos von Instagram (@gangsta__ralph, @luciobene101) und Genius. Jonathan: „wirklich perfekt“.
 
