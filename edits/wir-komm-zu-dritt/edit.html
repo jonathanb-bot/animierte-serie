@@ -1,0 +1,137 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face { font-family: "Titel"; src: url("assets/InterDisplay-Black.otf"); font-weight: 900; }
+@font-face { font-family: "UI"; src: url("assets/Inter-Bold.otf"); font-weight: 700; }
+html,body{margin:0;background:#000}canvas{display:block}
+</style></head><body>
+<canvas id="c"></canvas>
+<script>
+// „Wir komm zu dritt“ (Caney030 & Nizi19, Snippet) – Edit auf Schwarz: Musikvideo-Clips aus Kreuzberg als Karten, Crew-Clips von Caney/Nizi,
+// Lyrics Wort für Wort, Schnitte auf den Beat (91 BPM, Takt 2,632 s, Eins bei 1,44 s).
+const W = 1080, H = 1920, K = 1440 / 1080;
+const cv = document.getElementById("c"); cv.width = W * K; cv.height = H * K; const ctx = cv.getContext("2d");
+const clamp = (v, a, b) => Math.max(a, Math.min(b, v)), lerp = (a, b, t) => a + (b - a) * t;
+const raus = p => 1 - Math.pow(1 - clamp(p, 0, 1), 3);
+const zurueck = p => { p = clamp(p, 0, 1); const c1 = 1.4, c3 = c1 + 1; return 1 + c3 * Math.pow(p - 1, 3) + c1 * Math.pow(p - 1, 2); };
+const rr = (x, y, w, h, r) => { ctx.beginPath(); ctx.roundRect(x, y, w, h, r); };
+const lade = src => new Promise(r => { const i = new Image(); i.onload = () => r(i); i.onerror = () => r(null); i.src = src; });
+const ROT = "#ff2d3c", ENDE = 10.45, P = 0.658, EINS = 1.44;
+const N = { mv: 321, schuss: 515, oha: 809, berliner: 772, kalim: 592 };
+// Wörter (Spracherkennung, Text nach dem Lyric-TikTok)
+const ZEILEN = [
+  { a: 0.00, e: 1.00, w: [["Wir", 0.0], ["kommen", 0.18], ["zu", 0.38], ["dritt,", 0.6]], rot: ["dritt,"] },
+  { a: 1.00, e: 2.20, w: [["deine", 1.0], ["Ware", 1.12], ["wird", 1.4], ["gerippt", 1.74]], rot: ["gerippt"] },
+  { a: 2.20, e: 3.54, w: [["Abi", 2.22], ["hat", 2.52], ["Bricks,", 2.76], ["ah,", 3.38]], rot: ["Bricks,"] },
+  { a: 3.54, e: 5.02, w: [["und", 3.56], ["dein", 3.72], ["Abi,", 3.84], ["er", 4.3], ["macht", 4.34], ["nix", 4.48]], rot: ["nix"] },
+  { a: 5.02, e: 6.34, w: [["Wir", 5.04], ["pushen", 5.48], ["Haze,", 5.86]], rot: ["Haze,"] },
+  { a: 6.34, e: 7.62, w: [["wir", 6.36], ["pushen", 6.48], ["Klicks", 6.84]], rot: ["Klicks"] },
+  { a: 7.62, e: 9.33, w: [["Alle", 7.64], ["deine", 8.06], ["Rapper", 8.34], ["an", 8.72], ["mein", 8.96], ["Sip", 9.04]], rot: ["Sip"] },
+  { a: 9.33, e: ENDE, w: [["Meine", 9.42], ["Akhs", 9.72]], rot: [] },
+];
+// Szenen: Clip, Startbild (30 fps) und Art
+const SZ = [
+  { a: 0.00, art: "drei" },
+  { a: 1.00, art: "karte", clip: "mv", f0: 30 },
+  { a: 2.20, art: "voll", clip: "schuss", f0: 40 },
+  { a: 3.54, art: "karte", clip: "mv", f0: 190 },
+  { a: 5.02, art: "karte", clip: "mv", f0: 0 },
+  { a: 6.34, art: "klicks", clip: "mv", f0: 250 },
+  { a: 7.62, art: "voll", clip: "oha", f0: 20 },
+  { a: 9.33, art: "voll", clip: "schuss", f0: 330 },
+];
+const CACHE = new Map(); const KORN = [];
+const pfad = (c, f) => `f/${c}/${String(clamp(Math.floor(f), 0, N[c] - 1) + 1).padStart(3, "0")}.jpg`;
+function noetig(T) { const s = new Set(); const sz = szeneBei(T);
+  const add = (c, f0, t0) => { const f = f0 + (T - t0) * 30; s.add(pfad(c, f)); };
+  if (sz.art === "drei") { add("mv", 60, 0); add("mv", 135, 0.18); add("mv", 270, 0.6); } else add(sz.clip, sz.f0, sz.a);
+  return s; }
+function szeneBei(T) { let s = SZ[0]; for (const x of SZ) if (T >= x.a) s = x; return s; }
+function bild(c, f) { return CACHE.get(pfad(c, f)); }
+function cover(img, x, y, w, h, z = 1, oy = 0) { if (!img) return; const s = Math.max(w / img.width, h / img.height) * z; ctx.save(); ctx.beginPath(); ctx.rect(x, y, w, h); ctx.clip();
+  ctx.drawImage(img, x + w / 2 - img.width * s / 2, y + h / 2 - img.height * s / 2 + oy, img.width * s, img.height * s); ctx.restore(); }
+// schwebende Karte mit leichtem Schwung beim Einfliegen
+function karteClip(T, sz, y = 760, w = 1000) { const d = T - sz.a, q = zurueck(d / 0.38), h = w * 582 / 1076;
+  const img = bild(sz.clip, sz.f0 + d * 30); ctx.save(); ctx.translate(W / 2, y + (1 - q) * 220); ctx.rotate((1 - q) * -0.06 + Math.sin(T * 1.3) * 0.006); ctx.scale(lerp(0.86, 1, q) + d * 0.012, lerp(0.86, 1, q) + d * 0.012);
+  ctx.globalAlpha = clamp(d / 0.08, 0, 1); ctx.shadowColor = "rgba(255,255,255,0.08)"; ctx.shadowBlur = 60; rr(-w / 2, -h / 2, w, h, 34); ctx.fillStyle = "#111"; ctx.fill(); ctx.shadowColor = "transparent";
+  rr(-w / 2, -h / 2, w, h, 34); ctx.clip(); cover(img, -w / 2, -h / 2, w, h, 1.04); ctx.restore(); return h; }
+// Vollbild-Clip (hochkant), dunkel verlaufend nach unten für die Schrift
+function vollClip(T, sz) { const d = T - sz.a; const img = bild(sz.clip, sz.f0 + d * 30); cover(img, 0, 0, W, H, 1.04 + d * 0.02);
+  const g = ctx.createLinearGradient(0, 0, 0, H); g.addColorStop(0, "rgba(0,0,0,0.25)"); g.addColorStop(0.55, "rgba(0,0,0,0.15)"); g.addColorStop(1, "rgba(0,0,0,0.9)"); ctx.fillStyle = g; ctx.fillRect(0, 0, W, H); }
+// „zu dritt“: drei Musikvideo-Streifen erscheinen nacheinander auf die Wörter
+function drei(T) { const ts = [0.0, 0.18, 0.6], fs = [60, 135, 270], h = 400, w = 1000;
+  ts.forEach((t, i) => { const d = T - t + 0.03; if (d < 0) return; const q = zurueck(d / 0.3), y = 170 + i * (h + 34);
+    ctx.save(); ctx.translate(W / 2 + (1 - q) * (i % 2 ? 900 : -900), y + h / 2); rr(-w / 2, -h / 2, w, h, 30); ctx.clip(); cover(bild("mv", fs[i] + (T - t) * 30), -w / 2, -h / 2, w, h, 1.05);
+    ctx.restore();
+    ctx.save(); ctx.font = "900 120px Titel"; ctx.fillStyle = i === 2 ? ROT : "rgba(255,255,255,0.92)"; ctx.globalAlpha = clamp(d / 0.1, 0, 1); ctx.textBaseline = "middle"; ctx.translate(W / 2 - w / 2 + 40, y + h - 70); ctx.scale(0.9, 1); ctx.fillText(String(i + 1), 0, 0); ctx.restore(); }); }
+// „gerippt“: die Karte reißt in zwei Hälften auseinander (gezackte Kante)
+function riss(T, sz, t0) { const d = T - t0; if (d < 0) { karteClip(T, sz); return; }
+  const q = raus(d / 0.35), w = 1000, h = w * 582 / 1076, y = 760, img = bild(sz.clip, sz.f0 + (T - sz.a) * 30);
+  const zack = []; for (let i = 0; i <= 14; i++) zack.push([-w / 2 + i * w / 14 + (i % 2 ? 18 : -18), (i % 2 ? 1 : -1) * 22 + Math.sin(i * 2.3) * 10]);
+  [[-1, "oben"], [1, "unten"]].forEach(([s]) => { ctx.save(); ctx.translate(W / 2 + s * q * 60, y + s * q * 120); ctx.rotate(s * q * 0.07);
+    ctx.beginPath(); if (s < 0) { ctx.moveTo(-w / 2, -h / 2); ctx.lineTo(w / 2, -h / 2); for (let i = zack.length - 1; i >= 0; i--) ctx.lineTo(zack[i][0], zack[i][1]); }
+    else { ctx.moveTo(-w / 2, h / 2); ctx.lineTo(w / 2, h / 2); for (let i = zack.length - 1; i >= 0; i--) ctx.lineTo(zack[i][0], zack[i][1]); }
+    ctx.closePath(); ctx.save(); ctx.clip(); rr(-w / 2, -h / 2, w, h, 34); ctx.clip(); cover(img, -w / 2, -h / 2, w, h, 1.04); ctx.restore();
+    ctx.strokeStyle = "rgba(240,236,228,0.9)"; ctx.lineWidth = 7; ctx.beginPath(); zack.forEach(([x, yy], i) => i ? ctx.lineTo(x, yy) : ctx.moveTo(x, yy)); ctx.stroke(); ctx.restore(); }); }
+// „Bricks“: drei in Folie gewickelte Blöcke fallen nacheinander ins Bild
+function bricks(T, t0) { for (let i = 0; i < 3; i++) { const d = T - t0 - i * 0.12; if (d < 0) continue; const q = zurueck(d / 0.3);
+  const x = W / 2 + (i - 1) * 250, y = lerp(-200, 1180 - (i === 1 ? 70 : 0), q);
+  ctx.save(); ctx.translate(x, y); ctx.rotate((i - 1) * 0.12 + (1 - q) * 0.5); ctx.shadowColor = "rgba(0,0,0,0.6)"; ctx.shadowBlur = 40; ctx.shadowOffsetY = 20;
+  const g = ctx.createLinearGradient(-110, -70, 110, 70); g.addColorStop(0, "#d9c79f"); g.addColorStop(0.5, "#c2ab7c"); g.addColorStop(1, "#a88f60"); rr(-115, -72, 230, 144, 16); ctx.fillStyle = g; ctx.fill(); ctx.shadowColor = "transparent";
+  ctx.globalAlpha = 0.5; ctx.strokeStyle = "#fff"; ctx.lineWidth = 3; for (let k = -2; k <= 2; k++) { ctx.beginPath(); ctx.moveTo(-115, k * 26 - 10); ctx.lineTo(115, k * 26 + 14); ctx.stroke(); }
+  ctx.globalAlpha = 0.35; const gl = ctx.createLinearGradient(-115, -72, 40, 72); gl.addColorStop(0, "rgba(255,255,255,0.9)"); gl.addColorStop(0.5, "rgba(255,255,255,0)"); ctx.fillStyle = gl; rr(-115, -72, 230, 144, 16); ctx.fill(); ctx.globalAlpha = 1;
+  ctx.fillStyle = "rgba(60,40,10,0.75)"; ctx.font = "900 46px Titel"; ctx.textAlign = "center"; ctx.textBaseline = "middle"; ctx.fillText("1 KG", 0, 4); ctx.restore(); } }
+// „nix“: Stempel
+function stempel(T, t0, text, x, y, rot) { const d = T - t0; if (d < 0) return; const q = clamp(d / 0.12, 0, 1), s = lerp(2.2, 1, raus(q));
+  ctx.save(); ctx.translate(x, y); ctx.rotate(rot); ctx.scale(s, s); ctx.globalAlpha = q * 0.92; ctx.strokeStyle = ROT; ctx.lineWidth = 12; ctx.font = "900 150px Titel"; ctx.textAlign = "center"; ctx.textBaseline = "middle";
+  const b = ctx.measureText(text).width * 0.9 + 70; rr(-b / 2, -95, b, 190, 24); ctx.stroke(); ctx.fillStyle = ROT; ctx.scale(0.9, 1); ctx.fillText(text, 0, 8); ctx.restore(); }
+// „Haze“: Rauchschwaden ziehen über die Karte
+function rauch(T, t0) { const d = T - t0; if (d < 0) return; for (let i = 0; i < 9; i++) { const ph = d * 0.35 + i * 0.13, x = 160 + (i * 137) % 760 + Math.sin(ph * 4 + i) * 60, y = 1050 - ph * 520 - (i % 3) * 90, r = 120 + ph * 260;
+  const g = ctx.createRadialGradient(x, y, 0, x, y, r); const a = 0.16 * clamp(d / 0.3, 0, 1) * clamp(1.4 - ph, 0, 1); g.addColorStop(0, `rgba(230,230,230,${a})`); g.addColorStop(1, "rgba(230,230,230,0)"); ctx.fillStyle = g; ctx.fillRect(x - r, y - r, 2 * r, 2 * r); } }
+// „Klicks“: Aufruf-Zähler wie bei TikTok, zählt schnell hoch
+function klicks(T, t0) { const d = T - t0; if (d < 0) return; const q = zurueck(d / 0.3), n = Math.floor(Math.pow(clamp(d / 1.1, 0, 1), 0.6) * 2847193);
+  ctx.save(); ctx.translate(W / 2, 1180 + (1 - q) * 120); ctx.globalAlpha = clamp(d / 0.1, 0, 1); rr(-330, -70, 660, 140, 70); ctx.fillStyle = "rgba(22,22,26,0.92)"; ctx.fill(); ctx.strokeStyle = "rgba(255,255,255,0.12)"; ctx.lineWidth = 2; ctx.stroke();
+  ctx.fillStyle = "#fff"; ctx.beginPath(); ctx.moveTo(-268, -32); ctx.lineTo(-268, 32); ctx.lineTo(-214, 0); ctx.closePath(); ctx.fill();
+  ctx.font = "700 74px UI"; ctx.textBaseline = "middle"; ctx.fillText(n.toLocaleString("de-DE"), -180, 4); ctx.restore();
+  const herz = Math.floor(d / 0.12); for (let i = 0; i < Math.min(herz, 8); i++) { const dd = d - i * 0.12, x = 860 + Math.sin(i * 2.1) * 50, y = 1100 - dd * 420; ctx.save(); ctx.globalAlpha = clamp(1 - dd / 1.1, 0, 1); ctx.fillStyle = ROT; ctx.translate(x, y); ctx.scale(1.6, 1.6);
+    ctx.beginPath(); ctx.moveTo(0, 8); ctx.bezierCurveTo(-18, -6, -10, -20, 0, -10); ctx.bezierCurveTo(10, -20, 18, -6, 0, 8); ctx.fill(); ctx.restore(); } }
+// Lyrics: groß, Wort für Wort, Schlüsselwort rot; Echo für „Meine Akhs“
+function lyrics(T, z, y) { ctx.save(); ctx.font = "900 112px Titel"; ctx.textBaseline = "alphabetic"; const zeilen = [[]]; let b = 0; const max = 900 / 0.9;
+  for (const [w] of z.w) { const t = w.toUpperCase(), wb = ctx.measureText(t + " ").width; if (b + wb > max && zeilen[zeilen.length - 1].length) { zeilen.push([]); b = 0; } zeilen[zeilen.length - 1].push(w); b += wb; }
+  let i = 0; zeilen.forEach((zl, r) => { let x = 0; const yy = y + r * 112;
+    for (const w of zl) { const at = z.w[i++][1], d = T - at + 0.03, t = w.toUpperCase(); const wb = ctx.measureText(t + " ").width;
+      if (d >= 0) { const q = raus(d / 0.14); ctx.save(); ctx.translate(90 + x * 0.9, yy + (1 - q) * 40); ctx.scale(0.9, 1); ctx.globalAlpha = clamp(d / 0.05, 0, 1); ctx.fillStyle = z.rot.includes(w) ? ROT : "#fff";
+        ctx.shadowColor = "rgba(0,0,0,0.6)"; ctx.shadowBlur = 20; ctx.fillText(t, 0, 0); ctx.restore(); }
+      x += wb; } }); ctx.restore(); }
+function echo(T, t0, text, y) { for (let k = 4; k >= 0; k--) { const d = T - t0 - k * 0.16; if (d < 0) continue; const q = raus(d / 0.2);
+  ctx.save(); ctx.font = "900 150px Titel"; ctx.textAlign = "center"; ctx.globalAlpha = (k === 0 ? 1 : 0.42 / k) * clamp(d / 0.05, 0, 1); ctx.fillStyle = k === 0 ? "#fff" : "rgba(255,255,255,0.9)";
+  ctx.translate(W / 2, y + k * 120 * q); ctx.scale(0.9 * (1 - k * 0.06), 1 - k * 0.06); ctx.fillText(text, 0, 0); ctx.restore(); } }
+function korn(T) { ctx.save(); ctx.globalAlpha = 0.7; ctx.globalCompositeOperation = "overlay"; ctx.drawImage(KORN[Math.floor(T * 24) % KORN.length], 0, 0, W, H); ctx.restore(); }
+function stoss(T) { const s = (T - EINS) / P, k = Math.floor(s), im = (s - k) * P; if (T < 0.1) return 0; return Math.exp(-im / 0.09) * ((k % 4 + 4) % 4 === 0 ? 0.035 : 0.015); }
+
+window.laden = async T => { const n = noetig(T); for (const k of [...CACHE.keys()]) if (!n.has(k)) CACHE.delete(k); await Promise.all([...n].filter(p => !CACHE.has(p)).map(async p => CACHE.set(p, await lade(p)))); };
+window.zeichne = T => {
+  ctx.setTransform(K, 0, 0, K, 0, 0); ctx.globalAlpha = 1; ctx.fillStyle = "#000"; ctx.fillRect(0, 0, W, H);
+  const sz = szeneBei(T), z = ZEILEN.find(x => T >= x.a && T < x.e) || ZEILEN[ZEILEN.length - 1], st = stoss(T);
+  ctx.save(); ctx.translate(W / 2, H / 2); ctx.scale(1 + st, 1 + st); ctx.translate(-W / 2, -H / 2);
+  let ly = 1430;
+  if (sz.art === "drei") { drei(T); ly = 1640; }
+  else if (sz.art === "voll") { vollClip(T, sz); ly = 1560; }
+  else if (sz.a === 1.00) riss(T, sz, 1.74);
+  else { karteClip(T, sz); }
+  if (sz.a === 2.20) bricks(T, 2.76);
+  if (sz.a === 3.54) stempel(T, 4.48, "NIX", 760, 1150, -0.14);
+  if (sz.a === 5.02) rauch(T, 5.3);
+  if (sz.art === "klicks") klicks(T, 6.84);
+  ctx.restore();
+  if (z.a === 9.33) echo(T, 9.42, "MEINE AKHS", 1580); else lyrics(T, z, ly);
+  // weißer Blitz auf jeder Eins, kurzer Schwarz-Schnitt zwischen den Zeilen
+  const s = (T - EINS) / (4 * P), im = (s - Math.floor(s)) * 4 * P; if (T > 1 && im < 0.07) { ctx.fillStyle = `rgba(255,255,255,${0.35 * (1 - im / 0.07)})`; ctx.fillRect(0, 0, W, H); }
+  korn(T);
+  const r = ENDE - T; if (r < 0.3) { ctx.fillStyle = `rgba(0,0,0,${1 - r / 0.3})`; ctx.fillRect(0, 0, W, H); }
+};
+(async () => { await document.fonts.load('900 100px "Titel"'); await document.fonts.load('700 40px "UI"');
+  for (let k = 0; k < 6; k++) { const g = document.createElement("canvas"); g.width = 540; g.height = 960; const c = g.getContext("2d"), d = c.createImageData(540, 960);
+    for (let i = 0; i < d.data.length; i += 4) { const v = Math.random() * 255; d.data[i] = d.data[i + 1] = d.data[i + 2] = v; d.data[i + 3] = 22; } c.putImageData(d, 0, 0); KORN.push(g); }
+  window.bereit = true; })();
+</script></body></html>

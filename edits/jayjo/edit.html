@@ -1,0 +1,216 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face { font-family: "Titel"; src: url("assets/InterDisplay-Black.otf"); font-weight: 900; }
+@font-face { font-family: "UI"; src: url("assets/Inter-Bold.otf"); font-weight: 700; }
+html,body{margin:0;background:#000}canvas{display:block}
+</style></head><body>
+<canvas id="c"></canvas>
+<script>
+// „Jayjo“ (Undacava & Capo, 2019) – Edit des Haupt-Hooks (Capo) im Stil des allerersten Pascha-Edits („Lounge City“), aber auf Schwarz:
+// der Text steht direkt in realistischen iPhone-Elementen (Sperrbildschirm mit Musik-Widget, Nachrichten, Anruf, Notizen, Story-Sticker,
+// Produktfoto mit Bildunterschrift, Chat), echte Capo-Fotos/-Clips als Karten. Echo „(Yayo)“ als leise, auslaufende Wiederholung.
+// 80 BPM, Ausschnitt 20,125–47,9 s.
+const W = 1080, H = 1920, K = 1440 / 1080, A = 20.125, ENDE = 27.78, P = 0.75;
+const cv = document.getElementById("c"); cv.width = W * K; cv.height = H * K; const ctx = cv.getContext("2d");
+const clamp = (v, a, b) => Math.max(a, Math.min(b, v)), lerp = (a, b, t) => a + (b - a) * t;
+const raus = p => 1 - Math.pow(1 - clamp(p, 0, 1), 3);
+const zurueck = p => { p = clamp(p, 0, 1); const c1 = 1.4, c3 = c1 + 1; return 1 + c3 * Math.pow(p - 1, 3) + c1 * Math.pow(p - 1, 2); };
+const rr = (x, y, w, h, r) => { ctx.beginPath(); ctx.roundRect(x, y, w, h, r); };
+const lade = src => new Promise(r => { const i = new Image(); i.onload = () => r(i); i.onerror = () => r(null); i.src = src; });
+const ROT = "#ff3b3b", BLAU = "#0a84ff";
+// Zeilen in Songzeit (Text nach Genius, Zeiten aus der Spracherkennung, fehlende Wörter eingepasst)
+const Z = [
+  { w: "Die Schlampe, sie will Yayo", t: [22.76, 23.32, 23.88, 24.16, 24.28], rot: ["Yayo"], echo: 24.95 },
+  { w: "Sie ruft mich schon wieder an", t: [25.78, 26.2, 26.4, 26.64, 26.96, 27.34] },
+  { w: "Und sagt, sie will noch paar Gramm von mir haben", t: [27.68, 27.92, 28.06, 28.26, 28.42, 28.58, 28.76, 28.96, 29.1, 29.25], rot: ["Gramm"] },
+  { w: "Sie will Yayo", t: [29.54, 30.02, 30.22], rot: ["Yayo"], echo: 30.92 },
+  { w: "Aber ich weiß nicht, wie lang", t: [31.28, 32.44, 32.7, 32.92, 33.16, 33.44] },
+  { w: "Ich heute noch mit ihr kann,", t: [33.7, 33.94, 34.18, 34.44, 34.68, 34.86] },
+  { w: "diese Schlampe will nur Yayo", t: [35.14, 35.5, 35.88, 36.12, 36.36], rot: ["Yayo"] },
+  { w: "Sie mag es, die Art wie", t: [36.82, 37.14, 37.46, 38.18, 38.7, 39.0] },
+  { w: "Ich sie hart fick', Jean Paul Gaultier, Baba", t: [39.48, 39.92, 40.18, 40.5, 40.82, 41.05, 41.3, 41.94], rot: ["Gaultier,"] },
+  { w: "Ich pack' sie am Hals und mach' ihr ganz schnell klar:", t: [42.28, 42.68, 42.86, 43.08, 43.46, 43.74, 43.94, 44.16, 44.32, 44.6, 44.92] },
+  { w: "„Ich muss leider weg, denn dein Mann ist ein Gangster“", t: [45.18, 45.46, 45.68, 46.12, 46.4, 46.64, 46.96, 47.2, 47.5, 47.68], rot: ["Gangster“"] },
+].map(z => ({ ...z, woerter: z.w.split(" ").map((w, i) => ({ w, a: z.t[i] })), a: z.t[0] }));
+Z.forEach((z, i) => z.e = i + 1 < Z.length ? Z[i + 1].a : A + ENDE);
+// Szenen in Songzeit
+const SZ = [
+  { a: A, art: "sperr0" }, { a: 22.70, art: "nachricht", z: 0, foto: "c8" }, { a: 25.72, art: "anruf", z: 1 }, { a: 27.62, art: "gramm", z: 2 },
+  { a: 29.48, art: "story", z: 3, foto: "c7" }, { a: 31.22, art: "notiz", z: [4, 5] }, { a: 35.08, art: "clipSticker", z: 6, c: "auto", n: 120 },
+  { a: 36.76, art: "clipSticker", z: 7, c: "balkon", n: 120 }, { a: 39.42, art: "produkt", z: 8 }, { a: 42.22, art: "clipGross", z: 9, c: "hotel", n: 120 },
+  { a: 45.12, art: "chat2", z: 10 },
+];
+SZ.forEach((s, i) => s.e = i + 1 < SZ.length ? SZ[i + 1].a : A + ENDE);
+const FOTOS = ["c5", "c7", "c8", "c9", "c13", "c15", "c21", "c31", "c33", "c52", "c59", "c61", "c64", "c66", "c70", "c74", "c78"]; const IMG = {};
+const CACHE = new Map(); const KORN = [];
+const pfad = (c, f, n) => `f/${c}/${String(clamp(Math.floor(f), 0, n - 1) + 1).padStart(3, "0")}.jpg`;
+const szBei = ts => { let s = SZ[0]; for (const x of SZ) if (ts >= x.a) s = x; return s; };
+function cover(img, x, y, w, h, z = 1, ox = 0, oy = 0) { if (!img) return; const s = Math.max(w / img.width, h / img.height) * z; ctx.save(); ctx.beginPath(); ctx.rect(x, y, w, h); ctx.clip();
+  ctx.drawImage(img, x + w / 2 - img.width * s / 2 + ox, y + h / 2 - img.height * s / 2 + oy, img.width * s, img.height * s); ctx.restore(); }
+// schwebende Karte (Einflug mit Schwung, leichtes Schweben), Inhalt per Callback
+function karte(ts, a, x, y, w, h, inhalt, o = {}) { const d = ts - a, q = zurueck(d / 0.42), von = o.von ?? 1;
+  ctx.save(); ctx.translate(x + (1 - q) * 520 * von, y + (1 - q) * 140); ctx.rotate((o.rot ?? -0.02) * q + (1 - q) * 0.12 * von + Math.sin(ts * 1.2) * 0.006);
+  const s = lerp(0.8, 1, q) + d * 0.008; ctx.scale(s, s); ctx.globalAlpha = clamp(d / 0.1, 0, 1);
+  ctx.shadowColor = "rgba(255,255,255,0.07)"; ctx.shadowBlur = 80; rr(-w / 2, -h / 2, w, h, o.r ?? 44); ctx.fillStyle = o.bg ?? "#141416"; ctx.fill(); ctx.shadowColor = "transparent";
+  ctx.save(); rr(-w / 2, -h / 2, w, h, o.r ?? 44); ctx.clip(); inhalt(-w / 2, -h / 2, w, h, d); ctx.restore();
+  ctx.strokeStyle = "rgba(255,255,255,0.10)"; ctx.lineWidth = 2; rr(-w / 2, -h / 2, w, h, o.r ?? 44); ctx.stroke(); ctx.restore(); }
+// zweite, kleinere Karte schräg dahinter (Tiefe)
+function nebenKarte(ts, a, img, x, y, w, h, rot) { const d = ts - a - 0.12; if (d < 0) return; const q = zurueck(d / 0.45);
+  ctx.save(); ctx.translate(x, y + (1 - q) * 200); ctx.rotate(rot); ctx.globalAlpha = clamp(d / 0.15, 0, 1) * 0.55; ctx.filter = "blur(2px) brightness(0.6)"; rr(-w / 2, -h / 2, w, h, 36); ctx.clip(); cover(img, -w / 2, -h / 2, w, h); ctx.restore(); }
+// Lyrics unten: Wort für Wort, Schlüsselwort rot
+function lyrics(ts, z, y = 1560) { ctx.save(); ctx.font = "900 92px Titel"; ctx.textBaseline = "alphabetic"; const max = 920 / 0.9; const zl = [[]]; let b = 0;
+  for (const w of z.woerter) { const wb = ctx.measureText(w.w.toUpperCase() + " ").width; if (b + wb > max && zl[zl.length - 1].length) { zl.push([]); b = 0; } zl[zl.length - 1].push(w); b += wb; }
+  const y0 = y - (zl.length - 1) * 96;
+  zl.forEach((r, ri) => { let x = 0; for (const w of r) { const t = w.w.toUpperCase(), wb = ctx.measureText(t + " ").width, d = ts - w.a + 0.03;
+      if (d >= 0) { const q = raus(d / 0.14); ctx.save(); ctx.translate(80 + x * 0.9, y0 + ri * 96 + (1 - q) * 34); ctx.scale(0.9, 1); ctx.globalAlpha = clamp(d / 0.05, 0, 1);
+        ctx.fillStyle = (z.rot || []).includes(w.w) ? ROT : "#fff"; ctx.shadowColor = "rgba(0,0,0,0.8)"; ctx.shadowBlur = 24; ctx.fillText(t, 0, 0); ctx.restore(); }
+      x += wb; } }); ctx.restore(); }
+// Echo „(Yayo)“: leise Kopien laufen nach unten aus, rechts neben der Zeile
+function echo(ts, t0) { const d = ts - t0; if (d < 0 || d > 1.6) return; const aus = clamp((1.6 - d) / 0.4, 0, 1);
+  for (let k = 0; k < 4; k++) { const dk = d - k * 0.14; if (dk < 0) continue; const q = raus(dk / 0.25);
+    ctx.save(); ctx.font = "900 78px Titel"; ctx.textAlign = "right"; ctx.globalAlpha = (0.5 - k * 0.11) * aus * clamp(dk / 0.06, 0, 1); ctx.fillStyle = "#fff";
+    ctx.translate(W - 80, 1700 + k * 62 * q); ctx.scale(0.9 * (1 - k * 0.07), 1 - k * 0.07); ctx.fillText("(YAYO)", 0, 0); ctx.restore(); } }
+// ---------- Szenen ----------
+function titel(ts) { const d = ts - A;
+  karte(ts, A + 0.05, W / 2, 780, 720, 960, (x, y, w, h, dd) => cover(IMG.c8, x, y, w, h, 1.05 + dd * 0.01), { rot: 0.02 });
+  nebenKarte(ts, A, IMG.c9, 250, 700, 380, 520, -0.12); nebenKarte(ts, A + 0.2, IMG.c5, 840, 900, 360, 500, 0.1);
+  ctx.save(); ctx.textAlign = "center"; const q = raus((d - 0.6) / 0.4); ctx.globalAlpha = q; ctx.fillStyle = "rgba(255,255,255,0.7)"; ctx.font = "700 40px UI"; ctx.fillText("U N D A C A V A   &   C A P O", W / 2, 1450);
+  ctx.font = "900 220px Titel"; ctx.fillStyle = "#fff"; ctx.translate(W / 2, 1650 + (1 - q) * 40); ctx.scale(0.9, 1); ctx.fillText("JAYJO", 0, 0); ctx.restore(); }
+function clip(ts, s) { const img = CACHE.get(pfad(s.c, (ts - s.a) * 30, s.n));
+  karte(ts, s.a, W / 2, 760, 860, 1080, (x, y, w, h, d) => cover(img, x, y, w, h, s.c === "auto" ? 1.32 : 1.04, s.c === "auto" ? 90 : 0), { von: SZ.indexOf(s) % 2 ? -1 : 1 }); }
+function foto(ts, s, key, key2) { karte(ts, s.a, W / 2 + 40, 760, 760, 1000, (x, y, w, h, d) => cover(IMG[key], x, y, w, h, 1.06 + d * 0.012), { von: -1, rot: 0.03 });
+  if (key2) nebenKarte(ts, s.a, IMG[key2], 230, 1080, 360, 480, -0.14); }
+// eingehender Anruf (iPhone), vibriert, „schon wieder“ → Zähler verpasster Anrufe
+function anruf(ts, s) { const d = ts - s.a, vib = Math.sin(ts * 70) * 6 * (Math.floor(ts * 1.6) % 2 === 0 ? 1 : 0);
+  karte(ts, s.a, W / 2 + vib, 770, 700, 1180, (x, y, w, h) => { const g = ctx.createLinearGradient(0, y, 0, y + h); g.addColorStop(0, "#2b2a33"); g.addColorStop(1, "#0d0d10"); ctx.fillStyle = g; ctx.fillRect(x, y, w, h);
+    ctx.save(); ctx.beginPath(); ctx.arc(0, y + 300, 110, 0, Math.PI * 2); ctx.clip(); ctx.fillStyle = "#3a3a44"; ctx.fillRect(-110, y + 190, 220, 220); ctx.fillStyle = "#8e8e96"; ctx.beginPath(); ctx.arc(0, y + 280, 40, 0, Math.PI * 2); ctx.fill(); ctx.beginPath(); ctx.arc(0, y + 390, 75, Math.PI, 0); ctx.fill(); ctx.restore();
+    ctx.textAlign = "center"; ctx.fillStyle = "#fff"; ctx.font = "700 70px UI"; ctx.fillText("Sie 🖤", 0, y + 520); ctx.fillStyle = "rgba(255,255,255,0.6)"; ctx.font = "700 34px UI"; ctx.fillText("ruft an …", 0, y + 575);
+    const pul = 1 + Math.sin(ts * 6) * 0.05; [[-170, "#ff3b30", "Ablehnen"], [170, "#34c759", "Annehmen"]].forEach(([bx, f, l]) => { ctx.save(); ctx.translate(bx, y + h - 230); ctx.scale(pul, pul); ctx.beginPath(); ctx.arc(0, 0, 70, 0, Math.PI * 2); ctx.fillStyle = f; ctx.fill();
+      ctx.strokeStyle = "#fff"; ctx.lineWidth = 9; ctx.lineCap = "round"; ctx.beginPath(); ctx.rotate(bx < 0 ? 2.36 : 0); ctx.arc(0, 0, 28, 0.6, 2.5); ctx.stroke(); ctx.restore(); ctx.fillStyle = "rgba(255,255,255,0.75)"; ctx.font = "700 30px UI"; ctx.fillText(l, bx, y + h - 120); }); }, { r: 70 });
+  const n = 1 + (ts > 26.64 ? 1 : 0) + (ts > 26.96 ? 1 : 0) + (ts > 27.34 ? 3 : 0); if (d > 0.5) { const q = zurueck((d - 0.5) / 0.3); ctx.save(); ctx.translate(820, 300); ctx.scale(q, q); ctx.beginPath(); ctx.arc(0, 0, 62, 0, Math.PI * 2); ctx.fillStyle = ROT; ctx.fill(); ctx.fillStyle = "#fff"; ctx.font = "900 64px Titel"; ctx.textAlign = "center"; ctx.textBaseline = "middle"; ctx.fillText(String(n), 0, 4); ctx.restore();
+    ctx.fillStyle = "rgba(255,255,255,0.7)"; ctx.font = "700 32px UI"; ctx.textAlign = "center"; ctx.fillText("verpasste Anrufe", 820, 400); } }
+// digitale Feinwaage, Anzeige zählt auf 2,00 g
+function waage(ts, s) { const d = ts - s.a, g = clamp((ts - 28.7) / 0.6, 0, 1) * 2;
+  karte(ts, s.a, W / 2, 800, 780, 1000, (x, y, w, h) => { ctx.fillStyle = "#0b0b0d"; ctx.fillRect(x, y, w, h);
+    const sx = 0, sy = y + 520; ctx.save(); ctx.translate(sx, sy); ctx.rotate(-0.04); ctx.shadowColor = "rgba(0,0,0,0.8)"; ctx.shadowBlur = 50; ctx.shadowOffsetY = 30;
+    const gk = ctx.createLinearGradient(-300, -260, 300, 260); gk.addColorStop(0, "#3d3f44"); gk.addColorStop(1, "#16171a"); rr(-300, -270, 600, 560, 50); ctx.fillStyle = gk; ctx.fill(); ctx.shadowColor = "transparent";
+    const gp = ctx.createLinearGradient(-230, -230, 230, 80); gp.addColorStop(0, "#e4e6ea"); gp.addColorStop(0.5, "#9da1a8"); gp.addColorStop(1, "#d3d6db"); rr(-235, -235, 470, 300, 28); ctx.fillStyle = gp; ctx.fill();
+    ctx.globalAlpha = 0.25; ctx.strokeStyle = "#fff"; for (let i = -6; i < 8; i++) { ctx.beginPath(); ctx.moveTo(-235 + i * 40, -235); ctx.lineTo(-235 + i * 40 + 120, 65); ctx.stroke(); } ctx.globalAlpha = 1;
+    rr(-200, 110, 400, 120, 16); ctx.fillStyle = "#1d2a1d"; ctx.fill(); ctx.fillStyle = "#9cff7a"; ctx.shadowColor = "#7dff5a"; ctx.shadowBlur = 18; ctx.font = "700 92px monospace"; ctx.textAlign = "right"; ctx.textBaseline = "middle";
+    ctx.fillText(g.toFixed(2).replace(".", ","), 120, 172); ctx.font = "700 46px monospace"; ctx.fillText("g", 175, 180); ctx.shadowColor = "transparent";
+    ctx.fillStyle = "#55585e"; [-120, 0, 120].forEach(bx => { ctx.beginPath(); ctx.arc(bx, 262, 14, 0, Math.PI * 2); ctx.fill(); }); ctx.restore();
+    ctx.fillStyle = "rgba(255,255,255,0.5)"; ctx.font = "700 30px UI"; ctx.textAlign = "center"; ctx.fillText("DIGITAL POCKET SCALE · 0,01 g", 0, y + 90); }, { von: -1 }); }
+// Sperrbildschirm 03:47 mit Mitteilung
+function sperr(ts, s) { const d = ts - s.a;
+  karte(ts, s.a, W / 2, 780, 700, 1200, (x, y, w, h, dd) => { cover(IMG.c61, x, y, w, h, 1.1); ctx.fillStyle = "rgba(0,0,0,0.45)"; ctx.fillRect(x, y, w, h);
+    ctx.textAlign = "center"; ctx.fillStyle = "rgba(255,255,255,0.85)"; ctx.font = "700 34px UI"; ctx.fillText("Sonntag, 22. November", 0, y + 150);
+    const min = 47 + Math.floor(clamp((ts - 32.5) / 2.2, 0, 1) * 12); ctx.font = "900 190px Titel"; ctx.fillStyle = "#fff"; ctx.fillText(`03:${String(min).padStart(2, "0")}`, 0, y + 330);
+    const n = [[32.44, "Sie", "wann kommst du endlich?"], [33.94, "Sie", "bist du noch wach?"], [34.86, "Sie", "ruf mich an 🖤"]];
+    n.forEach(([t, wer, txt], i) => { const dq = ts - t; if (dq < 0) return; const q = zurueck(dq / 0.3); ctx.save(); ctx.translate(0, y + 470 + i * 170 + (1 - q) * -60); ctx.globalAlpha = clamp(dq / 0.12, 0, 1);
+      rr(-300, 0, 600, 150, 34); ctx.fillStyle = "rgba(245,245,247,0.82)"; ctx.fill(); ctx.textAlign = "left"; ctx.fillStyle = "#111"; ctx.font = "700 34px UI"; ctx.fillText(wer, -200, 58); ctx.fillStyle = "#333"; ctx.font = "700 32px UI"; ctx.fillText(txt, -200, 108);
+      rr(-270, 30, 50, 50, 12); ctx.fillStyle = "#34c759"; ctx.fill(); ctx.fillStyle = "rgba(0,0,0,0.45)"; ctx.font = "700 26px UI"; ctx.textAlign = "right"; ctx.fillText("jetzt", 270, 58); ctx.restore(); }); }, { r: 70 }); }
+// Parfum „Jean Paul Gaultier“ (Flakon in Torso-Form mit Streifen)
+function parfum(ts, s) { const d = ts - s.a;
+  karte(ts, s.a, W / 2, 780, 760, 1080, (x, y, w, h, dd) => { const g = ctx.createRadialGradient(0, y + 480, 50, 0, y + 480, 600); g.addColorStop(0, "#1d3550"); g.addColorStop(1, "#06080c"); ctx.fillStyle = g; ctx.fillRect(x, y, w, h);
+    ctx.save(); ctx.translate(0, y + 520); ctx.rotate(Math.sin(ts * 0.8) * 0.03); ctx.scale(1.05, 1.05);
+    const torso = () => { ctx.beginPath(); ctx.moveTo(-90, -300); ctx.bezierCurveTo(-210, -280, -230, -170, -200, -60); ctx.bezierCurveTo(-170, 60, -150, 160, -130, 260); ctx.lineTo(130, 260); ctx.bezierCurveTo(150, 160, 170, 60, 200, -60); ctx.bezierCurveTo(230, -170, 210, -280, 90, -300); ctx.closePath(); };
+    ctx.shadowColor = "rgba(80,160,255,0.35)"; ctx.shadowBlur = 80; torso(); ctx.fillStyle = "rgba(170,205,235,0.35)"; ctx.fill(); ctx.shadowColor = "transparent";
+    ctx.save(); torso(); ctx.clip(); for (let i = -320; i < 280; i += 44) { ctx.fillStyle = "rgba(25,70,140,0.75)"; ctx.fillRect(-260, i, 520, 22); }
+    const gl = ctx.createLinearGradient(-200, 0, 200, 0); gl.addColorStop(0, "rgba(255,255,255,0.35)"); gl.addColorStop(0.3, "rgba(255,255,255,0)"); gl.addColorStop(0.75, "rgba(255,255,255,0)"); gl.addColorStop(1, "rgba(255,255,255,0.25)"); ctx.fillStyle = gl; ctx.fillRect(-260, -320, 520, 600); ctx.restore();
+    const gc = ctx.createLinearGradient(-70, -400, 70, -300); gc.addColorStop(0, "#f2f3f5"); gc.addColorStop(0.5, "#8d9198"); gc.addColorStop(1, "#dfe2e6"); rr(-70, -400, 140, 110, 20); ctx.fillStyle = gc; ctx.fill();
+    ctx.fillStyle = "rgba(255,255,255,0.9)"; ctx.font = "700 26px UI"; ctx.textAlign = "center"; ctx.fillText("JEAN PAUL GAULTIER", 0, 330); ctx.font = "900 44px Titel"; ctx.fillText("LE MALE", 0, 385); ctx.restore();
+    if (ts > 41.3) for (let i = 0; i < 14; i++) { const dt = ts - 41.3 - i * 0.03; if (dt < 0) continue; const px = 60 + dt * 520 * Math.cos(-0.5 + i * 0.07), py = y + 140 - dt * 180 + i * 6; ctx.fillStyle = `rgba(200,225,255,${clamp(0.5 - dt * 0.5, 0, 0.5)})`; ctx.beginPath(); ctx.arc(px, py, 6 + dt * 30, 0, Math.PI * 2); ctx.fill(); } }, { von: 1 }); }
+// Chat: „Ich muss leider weg“ wird getippt und gesendet, danach Antwort
+function chat(ts, s) { const d = ts - s.a;
+  karte(ts, s.a, W / 2, 760, 760, 1100, (x, y, w, h) => { ctx.fillStyle = "#000"; ctx.fillRect(x, y, w, h); ctx.fillStyle = "#1c1c1e"; ctx.fillRect(x, y, w, 150);
+    ctx.textAlign = "center"; ctx.fillStyle = "#fff"; ctx.font = "700 40px UI"; ctx.fillText("Sie 🖤", 0, y + 95);
+    const blase = (tx, by, rechts, farbe) => { ctx.font = "700 40px UI"; const bw = Math.min(ctx.measureText(tx).width + 64, 600), bx = rechts ? w / 2 - 40 - bw : -w / 2 + 40; rr(bx, by, bw, 90, 40); ctx.fillStyle = farbe; ctx.fill(); ctx.fillStyle = "#fff"; ctx.textAlign = "left"; ctx.fillText(tx, bx + 32, by + 58); };
+    blase("kommst du jetzt?", y + 220, false, "#26262a");
+    const t1 = "Ich muss leider weg", n1 = Math.floor(clamp((ts - 45.18) / 0.9, 0, 1) * t1.length); if (ts > 45.18) blase(t1.slice(0, n1), y + 360, true, BLAU);
+    const t2 = "dein Mann ist ein Gangster", n2 = Math.floor(clamp((ts - 46.4) / 1.1, 0, 1) * t2.length); if (ts > 46.4) blase(t2.slice(0, n2), y + 480, true, BLAU);
+    if (ts > 47.75) { ctx.fillStyle = "rgba(255,255,255,0.5)"; ctx.font = "700 26px UI"; ctx.textAlign = "right"; ctx.fillText("Gelesen 03:59", w / 2 - 44, y + 610); }
+    cover(IMG.c70, x + 40, y + h - 380, w - 80, 340, 1.0); ctx.fillStyle = "rgba(0,0,0,0.25)"; ctx.fillRect(x + 40, y + h - 380, w - 80, 340); }, { von: -1, r: 60 }); }
+
+// ---------- Bausteine im „Lounge City“-Stil (Dark Mode) ----------
+function getippt(ts, woerter) { let t = ""; for (const w of woerter) { if (ts < w.a - 0.03) break; const n = Math.max(1, Math.round(clamp((ts - w.a + 0.03) / 0.08, 0, 1) * w.w.length)); t += (t ? " " : "") + w.w.slice(0, n); } return t; }
+function umbruch(text, max) { const z = []; let r = ""; for (const w of text.split(" ")) { const t = r ? r + " " + w : w; if (ctx.measureText(t).width > max && r) { z.push(r); r = w; } else r = t; } if (r) z.push(r); return z; }
+// iMessage-Blase (blau = gesendet), Text wird getippt
+function blaseT(text, x, y, max, farbe = BLAU, fs = 44, rechts = true) { if (!text) return 0; ctx.font = `700 ${fs}px UI`; const z = umbruch(text, max - 64); const bw = Math.min(max, Math.max(...z.map(l => ctx.measureText(l).width)) + 64), h = 30 + z.length * fs * 1.25;
+  const bx = rechts ? x - bw : x; rr(bx, y, bw, h, 42); ctx.fillStyle = farbe; ctx.fill(); ctx.fillStyle = "#fff"; ctx.textAlign = "left"; ctx.textBaseline = "alphabetic"; z.forEach((l, i) => ctx.fillText(l, bx + 32, y + 15 + fs + i * fs * 1.25)); return h; }
+// weißer Story-Sticker (wie Instagram-Textfeld), schräg
+function sticker(text, x, y, rot, fs = 54, max = 600) { if (!text) return; ctx.save(); ctx.translate(x, y); ctx.rotate(rot); ctx.font = `900 ${fs}px Titel`; const z = umbruch(text.toUpperCase(), max / 0.9);
+  z.forEach((l, i) => { const b = ctx.measureText(l).width * 0.9 + 40, yy = i * fs * 1.12; rr(-b / 2, yy - fs * 0.86, b, fs * 1.14, 12); ctx.fillStyle = "#fff"; ctx.fill(); ctx.save(); ctx.fillStyle = "#000"; ctx.textAlign = "center"; ctx.translate(0, yy + fs * 0.08); ctx.scale(0.9, 1); ctx.fillText(l, 0, 0); ctx.restore(); }); ctx.restore(); }
+function stickerEcho(ts, t0, x, y, rot) { const d = ts - t0; if (d < 0 || d > 1.5) return; const aus = clamp((1.5 - d) / 0.4, 0, 1);
+  for (let k = 1; k <= 3; k++) { const dk = d - (k - 1) * 0.14; if (dk < 0) continue; const q = raus(dk / 0.25); ctx.save(); ctx.globalAlpha = (0.5 - k * 0.12) * aus * clamp(dk / 0.06, 0, 1); sticker("(Yayo)", x + k * 10, y + k * 78 * q, rot, 54 - k * 5); ctx.restore(); } }
+// großer Lyrics-Block unten (fett), für Szenen ohne Text-Element
+function lyricsGross(ts, z, y = 1600) { const t = getippt(ts, z.woerter); if (!t) return; ctx.save(); ctx.font = "900 86px Titel"; const zl = umbruch(t.toUpperCase(), 920 / 0.9).slice(-3); ctx.fillStyle = "#fff"; ctx.shadowColor = "rgba(0,0,0,0.8)"; ctx.shadowBlur = 20;
+  zl.forEach((l, i) => { ctx.save(); ctx.translate(80, y + (i - zl.length + 1) * 92); ctx.scale(0.9, 1); ctx.fillText(l, 0, 0); ctx.restore(); }); ctx.restore(); }
+// Musik-Widget (Sperrbildschirm)
+function widget(ts, x, y, w, titel, fort, pause = false) { rr(x, y, w, 200, 44); ctx.fillStyle = "rgba(38,38,42,0.92)"; ctx.fill();
+  cover(IMG.c15, x + 28, y + 28, 104, 104, 1.2); ctx.textAlign = "left"; ctx.fillStyle = "#fff"; ctx.font = "700 38px UI"; ctx.fillText(titel, x + 156, y + 72); ctx.fillStyle = "rgba(255,255,255,0.6)"; ctx.font = "700 30px UI"; ctx.fillText("Undacava & Capo", x + 156, y + 114);
+  rr(x + 28, y + 160, w - 56, 8, 4); ctx.fillStyle = "rgba(255,255,255,0.25)"; ctx.fill(); rr(x + 28, y + 160, (w - 56) * fort, 8, 4); ctx.fillStyle = "#fff"; ctx.fill();
+  if (pause) { ctx.fillStyle = "#fff"; ctx.fillRect(x + w - 90, y + 55, 14, 50); ctx.fillRect(x + w - 66, y + 55, 14, 50); }
+  else for (let i = 0; i < 4; i++) { const hh = 14 + Math.abs(Math.sin(ts * 9 + i * 1.7)) * 34; ctx.fillStyle = "#ff9f0a"; ctx.fillRect(x + w - 110 + i * 18, y + 100 - hh, 10, hh); } }
+function sperr0(ts) { const d = ts - A; const g = ctx.createRadialGradient(W / 2, 700, 100, W / 2, 900, 1200); g.addColorStop(0, "#15151a"); g.addColorStop(1, "#000"); ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+  ctx.textAlign = "center"; ctx.fillStyle = "rgba(255,255,255,0.8)"; ctx.font = "700 40px UI"; ctx.fillText("Sonntag, 22. November", W / 2, 250); ctx.fillStyle = "#fff"; ctx.font = "900 250px Titel"; ctx.fillText("03:47", W / 2, 480);
+  if (d > 0.4) { const q = zurueck((d - 0.4) / 0.35); ctx.save(); ctx.translate(0, (1 - q) * -80); ctx.globalAlpha = clamp((d - 0.4) / 0.15, 0, 1); rr(70, 560, 940, 170, 40); ctx.fillStyle = "rgba(40,40,45,0.9)"; ctx.fill();
+    cover(IMG.c15, 100, 595, 100, 100, 1.2); ctx.textAlign = "left"; ctx.fillStyle = "rgba(255,255,255,0.55)"; ctx.font = "700 28px UI"; ctx.fillText("MUSIK · jetzt", 230, 620); ctx.fillStyle = "#fff"; ctx.font = "700 38px UI"; ctx.fillText("Undacava & Capo – Jayjo", 230, 668); ctx.fillStyle = "rgba(255,255,255,0.6)"; ctx.font = "700 30px UI"; ctx.fillText("Smash & Grab · jetzt anhören", 230, 708); ctx.restore(); }
+  if (d > 1.0) { const q = zurueck((d - 1.0) / 0.35), tt = "Jayjo".slice(0, Math.ceil(clamp((d - 1.1) / 0.5, 0, 1) * 5)); ctx.save(); ctx.translate(0, (1 - q) * 120); ctx.globalAlpha = clamp((d - 1.0) / 0.15, 0, 1); widget(ts, 70, 1500, 940, tt, clamp(d / 30, 0, 1)); ctx.restore(); }
+  if (d > 1.4) { karte(ts, A + 1.4, W / 2, 1060, 520, 640, (x, y, w, h, dd) => cover(IMG.c9, x, y, w, h, 1.05 + dd * 0.01), { rot: -0.03 }); nebenKarte(ts, A + 1.5, IMG.c5, 260, 1080, 300, 400, -0.14); nebenKarte(ts, A + 1.6, IMG.c74, 830, 1060, 300, 400, 0.12); } }
+function nachricht(ts, s) { const z = Z[s.z];
+  karte(ts, s.a, W / 2, 640, 640, 820, (x, y, w, h, d) => cover(IMG[s.foto], x, y, w, h, 1.05 + d * 0.012), { rot: -0.03 });
+  ctx.save(); const h = blaseT(getippt(ts, z.woerter), W - 120, 1170, 820); ctx.restore();
+  if (z.echo) { const d = ts - z.echo; if (d > 0) for (let k = 1; k <= 3; k++) { const dk = d - (k - 1) * 0.14; if (dk < 0) continue; ctx.save(); ctx.globalAlpha = (0.55 - k * 0.13) * clamp((1.6 - d) / 0.4, 0, 1); blaseT("Yayo", W - 120 - k * 14, 1170 + h + 24 + (k - 1) * 100 * raus(dk / 0.25), 400, BLAU, 44 - k * 4); ctx.restore(); } }
+  if (ts > 24.4) { ctx.fillStyle = "rgba(255,255,255,0.45)"; ctx.font = "700 28px UI"; ctx.textAlign = "right"; ctx.fillText("Zugestellt", W - 130, 1170 + h + 44 + (ts > z.echo ? 330 : 0)); } }
+function gramm(ts, s) { const z = Z[s.z]; waage(ts, s); ctx.save(); ctx.globalAlpha = clamp((ts - z.a + 0.03) / 0.08, 0, 1);
+  // eingehende Nachricht (grau) mit dem Text
+  rr(70, 1340, 120, 120, 60); ctx.fillStyle = "#3a3a40"; ctx.fill(); ctx.fillStyle = "#fff"; ctx.font = "700 46px UI"; ctx.textAlign = "center"; ctx.fillText("S", 130, 1416);
+  blaseT(getippt(ts, z.woerter), 210, 1350, 800, "#26262a", 42, false); ctx.restore(); }
+function story(ts, s) { const z = Z[s.z];
+  karte(ts, s.a, W / 2, 820, 720, 1200, (x, y, w, h, d) => { cover(IMG[s.foto], x, y, w, h, 1.05 + d * 0.012);
+    rr(x + 24, y + 26, w - 48, 6, 3); ctx.fillStyle = "rgba(255,255,255,0.35)"; ctx.fill(); rr(x + 24, y + 26, (w - 48) * clamp((ts - s.a) / 1.7, 0, 1), 6, 3); ctx.fillStyle = "#fff"; ctx.fill();
+    cover(IMG.c15, x + 30, y + 52, 64, 64); ctx.fillStyle = "#fff"; ctx.textAlign = "left"; ctx.font = "700 30px UI"; ctx.fillText("capo  ·  2 Std.", x + 110, y + 95); }, { von: -1, rot: 0.03, r: 36 });
+  sticker(getippt(ts, z.woerter), W / 2 + 40, 1160, -0.06, 70); stickerEcho(ts, z.echo, W / 2 + 40, 1240, -0.06); }
+function notiz(ts, s) { const z1 = Z[s.z[0]], z2 = Z[s.z[1]];
+  karte(ts, s.a, W / 2, 820, 800, 1150, (x, y, w, h) => { ctx.fillStyle = "#1c1c1e"; ctx.fillRect(x, y, w, h); ctx.fillStyle = "#ff9f0a"; ctx.font = "700 32px UI"; ctx.textAlign = "left"; ctx.fillText("‹ Notizen", x + 40, y + 70);
+    ctx.fillStyle = "#fff"; ctx.font = "900 62px Titel"; ctx.fillText("Für mich", x + 50, y + 180); ctx.fillStyle = "rgba(255,255,255,0.45)"; ctx.font = "700 28px UI"; ctx.fillText("22. November 2026 um 03:52", x + 50, y + 228);
+    ctx.fillStyle = "#fff"; ctx.font = "700 46px UI"; const t = [getippt(ts, z1.woerter), getippt(ts, z2.woerter)].filter(Boolean).join(" "); const zl = umbruch(t, w - 110);
+    zl.forEach((l, i) => ctx.fillText(l, x + 50, y + 320 + i * 62)); if (Math.floor(ts * 3) % 2 === 0) { const l = zl[zl.length - 1] || ""; ctx.fillStyle = "#ff9f0a"; ctx.fillRect(x + 54 + ctx.measureText(l).width, y + 280 + (zl.length - 1) * 62, 5, 52); } }, { r: 50 }); }
+function clipSticker(ts, s) { const z = Z[s.z], img = CACHE.get(pfad(s.c, (ts - s.a) * 30, s.n));
+  karte(ts, s.a, W / 2, 820, 760, 1180, (x, y, w, h) => cover(img, x, y, w, h, s.c === "auto" ? 1.32 : 1.04, s.c === "auto" ? 90 : 0), { von: SZ.indexOf(s) % 2 ? -1 : 1, r: 36 });
+  sticker(getippt(ts, z.woerter), W / 2, 1300, 0.05, 64, 680); }
+function produkt(ts, s) { const z = Z[s.z]; parfum(ts, s); const t = getippt(ts, z.woerter); if (!t) return;
+  ctx.save(); ctx.font = "700 40px UI"; const zl = umbruch(t, 760); const h = 50 + zl.length * 54; rr(110, 1400, 860, h, 30); ctx.fillStyle = "#1c1c1e"; ctx.fill(); ctx.fillStyle = "#fff"; ctx.textAlign = "left"; zl.forEach((l, i) => ctx.fillText(l, 150, 1460 + i * 54)); ctx.restore(); }
+function clipGross(ts, s) { const z = Z[s.z], img = CACHE.get(pfad(s.c, (ts - s.a) * 30, s.n)); karte(ts, s.a, W / 2, 720, 780, 1060, (x, y, w, h) => cover(img, x, y, w, h, 1.04), { r: 36 }); lyricsGross(ts, z, 1620); }
+function chat2(ts, s) { const d = ts - s.a;
+  karte(ts, s.a, W / 2, 700, 820, 1060, (x, y, w, h) => { ctx.fillStyle = "#000"; ctx.fillRect(x, y, w, h); ctx.fillStyle = "#1c1c1e"; ctx.fillRect(x, y, w, 150);
+    ctx.textAlign = "center"; ctx.fillStyle = "#fff"; ctx.font = "700 40px UI"; ctx.fillText("Sie 🖤", 0, y + 95);
+    blaseT("wo bleibst du??", x + 40, y + 210, 600, "#26262a", 42, false);
+    const z = Z[s.z], w1 = z.woerter.slice(0, 4), w2 = z.woerter.slice(4); const h1 = blaseT(getippt(ts, w1).replace("„", ""), w / 2 - 40, y + 360, 640);
+    blaseT(getippt(ts, w2).replace("“", ""), w / 2 - 40, y + 360 + h1 + 20, 640);
+    if (ts > 47.75) { ctx.fillStyle = "rgba(255,255,255,0.5)"; ctx.font = "700 26px UI"; ctx.textAlign = "right"; ctx.fillText("Gelesen 03:59", w / 2 - 44, y + 600); } }, { von: -1, r: 60 });
+  const q = zurueck((d - 0.5) / 0.4); if (d > 0.5) { ctx.save(); ctx.translate(0, (1 - q) * 160); ctx.globalAlpha = clamp((d - 0.5) / 0.2, 0, 1); widget(ts, 90, 1420, 900, "Jayjo", 0.24 + d / 120, ts > 47.6); ctx.restore(); } }
+function korn(ts) { ctx.save(); ctx.globalAlpha = 0.6; ctx.globalCompositeOperation = "overlay"; ctx.drawImage(KORN[Math.floor(ts * 24) % KORN.length], 0, 0, W, H); ctx.restore(); }
+
+window.laden = async T => { const ts = T + A, s = szBei(ts), n = new Set(); if (s.c) n.add(pfad(s.c, (ts - s.a) * 30, s.n));
+  for (const k of [...CACHE.keys()]) if (!n.has(k)) CACHE.delete(k); await Promise.all([...n].filter(p => !CACHE.has(p)).map(async p => CACHE.set(p, await lade(p)))); };
+window.zeichne = T => { const ts = T + A;
+  ctx.setTransform(K, 0, 0, K, 0, 0); ctx.globalAlpha = 1; ctx.filter = "none"; ctx.fillStyle = "#000"; ctx.fillRect(0, 0, W, H);
+  const s = szBei(ts), z = [...Z].reverse().find(x => ts >= x.a - 0.03);
+  const k = (ts - 20.125) / P, im = (k - Math.floor(k)) * P, eins = Math.floor(k) % 4 === 0, st = Math.exp(-im / 0.1) * (eins ? 0.022 : 0.008);
+  ctx.save(); ctx.translate(W / 2, H / 2); ctx.scale(1 + st, 1 + st); ctx.translate(-W / 2, -H / 2);
+  const F = { sperr0: () => sperr0(ts), nachricht: () => nachricht(ts, s), anruf: () => anruf(ts, s), gramm: () => gramm(ts, s), story: () => story(ts, s), notiz: () => notiz(ts, s),
+    clipSticker: () => clipSticker(ts, s), produkt: () => produkt(ts, s), clipGross: () => clipGross(ts, s), chat2: () => chat2(ts, s) }; F[s.art]();
+  ctx.restore();
+  if (s.art === "anruf") lyricsGross(ts, Z[1], 1660);
+  if (Math.abs(ts - 22.76) < 0.12) { ctx.fillStyle = `rgba(255,255,255,${0.5 * (1 - Math.abs(ts - 22.76) / 0.12)})`; ctx.fillRect(0, 0, W, H); }
+  korn(ts);
+  const r = ENDE - T; if (r < 0.25) { ctx.fillStyle = `rgba(0,0,0,${1 - r / 0.25})`; ctx.fillRect(0, 0, W, H); }
+};
+(async () => { await document.fonts.load('900 100px "Titel"'); await document.fonts.load('700 40px "UI"');
+  await Promise.all(FOTOS.map(async k => IMG[k] = await lade("assets/" + k + ".jpg")));
+  for (let k = 0; k < 6; k++) { const g = document.createElement("canvas"); g.width = 540; g.height = 960; const c = g.getContext("2d"), d = c.createImageData(540, 960);
+    for (let i = 0; i < d.data.length; i += 4) { const v = Math.random() * 255; d.data[i] = d.data[i + 1] = d.data[i + 2] = v; d.data[i + 3] = 20; } c.putImageData(d, 0, 0); KORN.push(g); }
+  window.bereit = true; })();
+</script></body></html>
