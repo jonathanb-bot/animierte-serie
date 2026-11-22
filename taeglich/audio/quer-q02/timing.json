@@ -1,0 +1,1013 @@
+{
+ "dauer": 637.298,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "skyline",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 7.502,
+   "emotion": "erzaehlend",
+   "text": "Sonntagnachmittag. Du sitzt bei deinem Opa im sechzehnten Stock und verlierst zum dritten Mal beim Rommé."
+  },
+  {
+   "nr": 2,
+   "typ": "wohnung",
+   "kapitel": 1,
+   "start": 7.502,
+   "dauer": 6.71,
+   "emotion": "erzaehlend",
+   "text": "Er grinst, legt seine Karten ab und schiebt dir das letzte Stück Apfelkuchen rüber. Als Trostpreis."
+  },
+  {
+   "nr": 3,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 14.212,
+   "dauer": 7.478,
+   "emotion": "erzaehlend",
+   "text": "Dann siehst du es. Der Tee in seinem Glas zittert. Kleine Ringe auf der Oberfläche. Niemand hat den Tisch berührt."
+  },
+  {
+   "nr": 4,
+   "typ": "wohnung",
+   "kapitel": 1,
+   "start": 21.69,
+   "dauer": 9.014,
+   "emotion": "erzaehlend",
+   "text": "Eine Sekunde später bebt das ganze Haus. Gläser fallen aus dem Schrank, das Regal kippt, der Boden schwankt wie ein Schiff."
+  },
+  {
+   "nr": 5,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 30.704,
+   "dauer": 4.454,
+   "emotion": "spannend",
+   "text": "„Unter den Tisch!“, ruft dein Opa. Du kriechst darunter und hältst dich am Tischbein fest."
+  },
+  {
+   "nr": 6,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 35.158,
+   "dauer": 4.934,
+   "emotion": "spannend",
+   "text": "Vierzig Sekunden. So lange dauert es. Es fühlt sich an wie eine Stunde."
+  },
+  {
+   "nr": 7,
+   "typ": "titel",
+   "kapitel": 1,
+   "start": 40.092,
+   "dauer": 7.838,
+   "emotion": "erzaehlend",
+   "text": "Was dann kommt, sind die längsten zweiundsiebzig Stunden deines Lebens. Und in der letzten Stunde hängt alles an einem einzigen Geräusch."
+  },
+  {
+   "nr": 8,
+   "typ": "titel",
+   "kapitel": 2,
+   "start": 47.93,
+   "dauer": 1.382,
+   "emotion": "erzaehlend",
+   "text": "Fünfzehn Uhr vierzig."
+  },
+  {
+   "nr": 9,
+   "typ": "wohnung",
+   "kapitel": 2,
+   "start": 49.312,
+   "dauer": 4.094,
+   "emotion": "erzaehlend",
+   "text": "Es ist still. Die Wohnung sieht aus wie durchgeschüttelt."
+  },
+  {
+   "nr": 10,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 53.406,
+   "dauer": 6.038,
+   "emotion": "ernst",
+   "text": "Dein Opa hat eine Schramme an der Stirn, aber er lächelt schon wieder. Das macht er immer, wenn er dir Angst nehmen will."
+  },
+  {
+   "nr": 11,
+   "typ": "wohnung",
+   "kapitel": 2,
+   "start": 59.444,
+   "dauer": 5.942,
+   "emotion": "erzaehlend",
+   "text": "Du drückst auf den Lichtschalter. Nichts. Der Kühlschrank ist still, die Uhr am Herd ist schwarz."
+  },
+  {
+   "nr": 12,
+   "typ": "treppenhaus",
+   "kapitel": 2,
+   "start": 65.386,
+   "dauer": 5.678,
+   "emotion": "erzaehlend",
+   "text": "Die Wohnungstür klemmt. Du wirfst dich mit der Schulter dagegen, zweimal, dreimal. Dann springt sie auf."
+  },
+  {
+   "nr": 13,
+   "typ": "treppenhaus",
+   "kapitel": 2,
+   "start": 71.064,
+   "dauer": 7.262,
+   "emotion": "erzaehlend",
+   "text": "Im Treppenhaus riecht es nach Beton und Staub. Du gehst nach unten. Fünfzehnter Stock. Vierzehnter. Dreizehnter."
+  },
+  {
+   "nr": 14,
+   "typ": "treppenhaus",
+   "kapitel": 2,
+   "start": 78.326,
+   "dauer": 4.718,
+   "emotion": "erzaehlend",
+   "text": "Im zwölften Stock hörst du auf zu atmen. Unter dir ist keine Treppe mehr."
+  },
+  {
+   "nr": 15,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 83.044,
+   "dauer": 7.526,
+   "emotion": "spannend",
+   "text": "Wo eben noch Stufen waren, ist nur noch ein Loch voller Schutt und verbogener Stahlstangen. Zehn Stockwerke tief."
+  },
+  {
+   "nr": 16,
+   "typ": "hochhaus",
+   "kapitel": 2,
+   "start": 90.57,
+   "dauer": 6.95,
+   "emotion": "erzaehlend",
+   "text": "Der einzige Weg nach unten ist weg. Der Aufzug steckt fest. Und du und dein Opa seid im sechzehnten Stock gefangen."
+  },
+  {
+   "nr": 17,
+   "typ": "handy",
+   "kapitel": 2,
+   "start": 97.52,
+   "dauer": 5.27,
+   "emotion": "erzaehlend",
+   "text": "Du rufst deine Mama an. Besetzt. Noch mal. Anruf fehlgeschlagen."
+  },
+  {
+   "nr": 18,
+   "typ": "handy",
+   "kapitel": 2,
+   "start": 102.79,
+   "dauer": 6.566,
+   "emotion": "erzaehlend",
+   "text": "Nach einem großen Beben versuchen Millionen Menschen in derselben Minute zu telefonieren. Kein Netz der Welt schafft das."
+  },
+  {
+   "nr": 19,
+   "typ": "handy",
+   "kapitel": 2,
+   "start": 109.356,
+   "dauer": 6.95,
+   "emotion": "erzaehlend",
+   "text": "Also schreibst du eine SMS. Eine SMS ist winzig. Manchmal schlüpft sie noch durch, wenn kein Anruf mehr durchkommt."
+  },
+  {
+   "nr": 20,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 116.306,
+   "dauer": 9.926,
+   "emotion": "ernst",
+   "text": "Opa und ich leben. Sechzehnter Stock. Treppe kaputt. Du drückst auf Senden. Unter der Nachricht dreht sich ein kleiner Kreis. Und dreht sich. Und dreht sich."
+  },
+  {
+   "nr": 21,
+   "typ": "titel",
+   "kapitel": 3,
+   "start": 126.232,
+   "dauer": 2.126,
+   "emotion": "erzaehlend",
+   "text": "Zwanzig Uhr dreißig."
+  },
+  {
+   "nr": 22,
+   "typ": "skyline",
+   "kapitel": 3,
+   "start": 128.358,
+   "dauer": 7.502,
+   "emotion": "erzaehlend",
+   "text": "Draußen wird es dunkel. Und zum ersten Mal siehst du deine Stadt ohne ein einziges Licht. Nur in der Ferne heulen Sirenen."
+  },
+  {
+   "nr": 23,
+   "typ": "wohnung",
+   "kapitel": 3,
+   "start": 135.86,
+   "dauer": 7.406,
+   "emotion": "erzaehlend",
+   "text": "Opa holt Kerzen aus der Schublade. Er hat für alles eine Schublade. Kerzen, ein Gaskocher, ein Kurbelradio."
+  },
+  {
+   "nr": 24,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 143.266,
+   "dauer": 4.214,
+   "emotion": "froh",
+   "text": "Du hast ihn immer ausgelacht für seinen Krisenschrank. Heute sagst du nichts."
+  },
+  {
+   "nr": 25,
+   "typ": "bad",
+   "kapitel": 3,
+   "start": 147.48,
+   "dauer": 4.982,
+   "emotion": "erzaehlend",
+   "text": "Du drehst den Wasserhahn auf. Ein Gurgeln, ein paar Tropfen. Dann nichts mehr."
+  },
+  {
+   "nr": 26,
+   "typ": "hochhaus",
+   "kapitel": 3,
+   "start": 152.462,
+   "dauer": 6.806,
+   "emotion": "erzaehlend",
+   "text": "In einem Hochhaus drückt eine Pumpe das Wasser nach oben. Ohne Strom keine Pumpe. Ohne Pumpe kein Wasser."
+  },
+  {
+   "nr": 27,
+   "typ": "objekt",
+   "kapitel": 3,
+   "start": 159.268,
+   "dauer": 5.486,
+   "emotion": "erklaerend",
+   "text": "In der Wohnung gibt es noch eine Flasche Wasser. Ohne Wasser hält ein Mensch nur etwa drei Tage durch."
+  },
+  {
+   "nr": 28,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 164.754,
+   "dauer": 4.31,
+   "emotion": "erzaehlend",
+   "text": "Drei Tage. Du rechnest. Für zwei Menschen ist eine Flasche nichts."
+  },
+  {
+   "nr": 29,
+   "typ": "wohnung",
+   "kapitel": 3,
+   "start": 169.064,
+   "dauer": 4.67,
+   "emotion": "erzaehlend",
+   "text": "Dann bebt es wieder. Kürzer, aber heftig genug, dass Opa nach deiner Hand greift."
+  },
+  {
+   "nr": 30,
+   "typ": "objekt",
+   "kapitel": 3,
+   "start": 173.734,
+   "dauer": 4.742,
+   "emotion": "erklaerend",
+   "text": "Nachbeben. Nach einem großen Erdbeben können sie noch Tage und Wochen später kommen."
+  },
+  {
+   "nr": 31,
+   "typ": "treppenhaus",
+   "kapitel": 3,
+   "start": 178.476,
+   "dauer": 4.238,
+   "emotion": "erzaehlend",
+   "text": "Aus dem Treppenhaus hörst du ein Poltern. Noch mehr Steine, die in das Loch fallen."
+  },
+  {
+   "nr": 32,
+   "typ": "gesicht",
+   "kapitel": 3,
+   "start": 182.714,
+   "dauer": 7.118,
+   "emotion": "ernst",
+   "text": "Später siehst du, wie dein Opa im Kerzenlicht seine Tablettendose schüttelt. Er zählt. Und er sagt dir nicht, wie viele es sind."
+  },
+  {
+   "nr": 33,
+   "typ": "titel",
+   "kapitel": 4,
+   "start": 189.832,
+   "dauer": 2.054,
+   "emotion": "erzaehlend",
+   "text": "Montag. Zehn Uhr fünfzehn."
+  },
+  {
+   "nr": 34,
+   "typ": "wohnung",
+   "kapitel": 4,
+   "start": 191.886,
+   "dauer": 5.87,
+   "emotion": "erzaehlend",
+   "text": "Du hast kaum geschlafen. Es ist kalt in der Wohnung. Ohne Strom läuft keine Heizung, und es ist November."
+  },
+  {
+   "nr": 35,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 197.756,
+   "dauer": 4.43,
+   "emotion": "ernst",
+   "text": "Aber in der Nacht ist dir etwas eingefallen. Etwas, das dein Opa mal erzählt hat."
+  },
+  {
+   "nr": 36,
+   "typ": "bad",
+   "kapitel": 4,
+   "start": 202.186,
+   "dauer": 6.422,
+   "emotion": "erzaehlend",
+   "text": "Der Warmwasserboiler im Bad. Der große weiße Kasten über der Wanne. Er ist randvoll mit Leitungswasser."
+  },
+  {
+   "nr": 37,
+   "typ": "bad",
+   "kapitel": 4,
+   "start": 208.608,
+   "dauer": 7.742,
+   "emotion": "erzaehlend",
+   "text": "Unten ist ein kleiner Hahn. Du drehst ihn auf, und es läuft. Lauwarm, ein bisschen rostig, aber es läuft."
+  },
+  {
+   "nr": 38,
+   "typ": "bad",
+   "kapitel": 4,
+   "start": 216.35,
+   "dauer": 6.662,
+   "emotion": "erzaehlend",
+   "text": "Und im Spülkasten der Toilette, nicht in der Schüssel, stehen noch einmal sechs bis neun Liter sauberes Leitungswasser."
+  },
+  {
+   "nr": 39,
+   "typ": "wohnung",
+   "kapitel": 4,
+   "start": 223.012,
+   "dauer": 6.47,
+   "emotion": "erzaehlend",
+   "text": "Du füllst jeden Topf, jede Flasche, jede Vase. Opa kocht das Wasser auf dem Gaskocher ab, sicher ist sicher."
+  },
+  {
+   "nr": 40,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 229.482,
+   "dauer": 4.982,
+   "emotion": "froh",
+   "text": "Er klopft dir auf die Schulter. Du hast ihm zugehört, sagt er. Das passiert nicht oft."
+  },
+  {
+   "nr": 41,
+   "typ": "skyline",
+   "kapitel": 4,
+   "start": 234.464,
+   "dauer": 4.91,
+   "emotion": "erzaehlend",
+   "text": "Gegen Mittag hörst du einen Hubschrauber. Du rennst ans Fenster und winkst wie verrückt."
+  },
+  {
+   "nr": 42,
+   "typ": "skyline",
+   "kapitel": 4,
+   "start": 239.374,
+   "dauer": 5.366,
+   "emotion": "erzaehlend",
+   "text": "Er fliegt vorbei. Er sieht dich nicht. Für ihn bist du eines von tausend Fenstern."
+  },
+  {
+   "nr": 43,
+   "typ": "gesicht",
+   "kapitel": 4,
+   "start": 244.74,
+   "dauer": 2.798,
+   "emotion": "ernst",
+   "text": "Also brauchst du etwas, das man von oben sieht."
+  },
+  {
+   "nr": 44,
+   "typ": "wohnung",
+   "kapitel": 4,
+   "start": 247.538,
+   "dauer": 7.046,
+   "emotion": "erzaehlend",
+   "text": "Mit Opas Filzstift malst du riesige Buchstaben auf sein weißes Bettlaken. Zwei Personen. Sechzehnter Stock."
+  },
+  {
+   "nr": 45,
+   "typ": "skyline",
+   "kapitel": 4,
+   "start": 254.584,
+   "dauer": 5.126,
+   "emotion": "erzaehlend",
+   "text": "Dann knotest du es an den Balkon. Es flattert im Wind wie eine kleine weiße Fahne."
+  },
+  {
+   "nr": 46,
+   "typ": "handy",
+   "kapitel": 4,
+   "start": 259.71,
+   "dauer": 4.31,
+   "emotion": "erzaehlend",
+   "text": "Deine SMS dreht sich immer noch. Seit einundzwanzig Stunden."
+  },
+  {
+   "nr": 47,
+   "typ": "titel",
+   "kapitel": 5,
+   "start": 264.02,
+   "dauer": 2.15,
+   "emotion": "erzaehlend",
+   "text": "Dreiundzwanzig Uhr zehn."
+  },
+  {
+   "nr": 48,
+   "typ": "wohnung",
+   "kapitel": 5,
+   "start": 266.17,
+   "dauer": 8.15,
+   "emotion": "erzaehlend",
+   "text": "Opa schläft im Sessel unter drei Decken. Du sitzt neben ihm und hörst die Stadt atmen. Hunde, Sirenen, Wind."
+  },
+  {
+   "nr": 49,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 274.32,
+   "dauer": 5.174,
+   "emotion": "erzaehlend",
+   "text": "Und dann hörst du noch etwas. Ein Klopfen. Leise. Es kommt aus der Wand."
+  },
+  {
+   "nr": 50,
+   "typ": "treppenhaus",
+   "kapitel": 5,
+   "start": 279.494,
+   "dauer": 5.822,
+   "emotion": "erzaehlend",
+   "text": "Du gehst mit der Taschenlampe ins Treppenhaus. Die Tür der Nachbarwohnung ist verzogen und eingeklemmt."
+  },
+  {
+   "nr": 51,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 285.316,
+   "dauer": 3.422,
+   "emotion": "ernst",
+   "text": "Du klopfst zurück. Und von drinnen ruft eine dünne Stimme."
+  },
+  {
+   "nr": 52,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 288.738,
+   "dauer": 4.67,
+   "emotion": "spannend",
+   "text": "„Hallo? Ist da wer? Meine Mama ist nicht da.“"
+  },
+  {
+   "nr": 53,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 293.408,
+   "dauer": 8.678,
+   "emotion": "ernst",
+   "text": "Es ist Lina, die Kleine von nebenan. Acht Jahre alt. Ihre Mama hatte Spätschicht im Krankenhaus. Sie ist seit dreiunddreißig Stunden allein."
+  },
+  {
+   "nr": 54,
+   "typ": "treppenhaus",
+   "kapitel": 5,
+   "start": 302.086,
+   "dauer": 7.478,
+   "emotion": "erzaehlend",
+   "text": "Die Tür bewegt sich keinen Zentimeter. Aber Linas Balkon liegt direkt neben eurem. Dazwischen nur eine dünne Trennwand."
+  },
+  {
+   "nr": 55,
+   "typ": "skyline",
+   "kapitel": 5,
+   "start": 309.564,
+   "dauer": 5.51,
+   "emotion": "erzaehlend",
+   "text": "Du stehst auf dem Balkon und schaust nicht nach unten. Achtundvierzig Meter. Du schaust nicht nach unten."
+  },
+  {
+   "nr": 56,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 315.074,
+   "dauer": 4.958,
+   "emotion": "spannend",
+   "text": "Mit Opas Hammer schlägst du ein Loch in die Trennwand. Dann noch eins. Dein Arm zittert."
+  },
+  {
+   "nr": 57,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 320.032,
+   "dauer": 7.406,
+   "emotion": "froh",
+   "text": "Und dann klettert Lina durch, im Schlafanzug, mit ihrem Stofftier unter dem Arm. Sie fällt dir um den Hals und lässt nicht mehr los."
+  },
+  {
+   "nr": 58,
+   "typ": "wohnung",
+   "kapitel": 5,
+   "start": 327.438,
+   "dauer": 7.646,
+   "emotion": "erzaehlend",
+   "text": "Opa wacht auf, sieht euch und lacht. Jetzt seid ihr drei. Drei Menschen, eine halbe Badewanne Wasser und ein Kartenspiel."
+  },
+  {
+   "nr": 59,
+   "typ": "gesicht",
+   "kapitel": 5,
+   "start": 335.084,
+   "dauer": 6.35,
+   "emotion": "froh",
+   "text": "Noch in derselben Nacht bringt er Lina Rommé bei. Sie gewinnt sofort. Er behauptet, er hätte sie gewinnen lassen."
+  },
+  {
+   "nr": 60,
+   "typ": "titel",
+   "kapitel": 6,
+   "start": 341.434,
+   "dauer": 2.078,
+   "emotion": "erzaehlend",
+   "text": "Dienstag. Vierzehn Uhr."
+  },
+  {
+   "nr": 61,
+   "typ": "gesicht",
+   "kapitel": 6,
+   "start": 343.512,
+   "dauer": 5.726,
+   "emotion": "ruhig",
+   "text": "Seit dem Morgen ist dein Opa anders. Grau im Gesicht. Er setzt sich alle paar Minuten hin."
+  },
+  {
+   "nr": 62,
+   "typ": "objekt",
+   "kapitel": 6,
+   "start": 349.238,
+   "dauer": 8.006,
+   "emotion": "erklaerend",
+   "text": "Du nimmst seine Tablettendose. Sie ist leer. Die letzte hat er heute früh genommen. Er hat es dir nicht gesagt, um dir keine Sorgen zu machen."
+  },
+  {
+   "nr": 63,
+   "typ": "gesicht",
+   "kapitel": 6,
+   "start": 357.244,
+   "dauer": 3.686,
+   "emotion": "spannend",
+   "text": "Zum ersten Mal hast du nicht Angst um dich. Du hast Angst um ihn."
+  },
+  {
+   "nr": 64,
+   "typ": "grossstadt",
+   "kapitel": 6,
+   "start": 360.93,
+   "dauer": 7.286,
+   "emotion": "erzaehlend",
+   "text": "Dann, am Nachmittag, hörst du Motoren. Unten auf der Straße halten Feuerwehrwagen und ein Lastwagen mit Rettungshunden."
+  },
+  {
+   "nr": 65,
+   "typ": "skyline",
+   "kapitel": 6,
+   "start": 368.216,
+   "dauer": 7.166,
+   "emotion": "erzaehlend",
+   "text": "Eine Drehleiter fährt aus. Höher, immer höher. Und bleibt stehen, viel zu weit unter dir."
+  },
+  {
+   "nr": 66,
+   "typ": "hochhaus",
+   "kapitel": 6,
+   "start": 375.382,
+   "dauer": 10.142,
+   "emotion": "erzaehlend",
+   "text": "Das ist kein Zufall. In Deutschland gilt ein Gebäude ab zweiundzwanzig Metern als Hochhaus, genau weil die normale Feuerwehrleiter nicht höher reicht. Das ist ungefähr der achte Stock."
+  },
+  {
+   "nr": 67,
+   "typ": "gesicht",
+   "kapitel": 6,
+   "start": 385.524,
+   "dauer": 2.966,
+   "emotion": "spannend",
+   "text": "Du bist im sechzehnten. Doppelt so hoch."
+  },
+  {
+   "nr": 68,
+   "typ": "grossstadt",
+   "kapitel": 6,
+   "start": 388.49,
+   "dauer": 7.022,
+   "emotion": "erzaehlend",
+   "text": "Dann ruft jemand durch ein Megafon. Alle Maschinen gehen aus. Die Hunde setzen sich. Auf der ganzen Straße wird es totenstill."
+  },
+  {
+   "nr": 69,
+   "typ": "objekt",
+   "kapitel": 6,
+   "start": 395.512,
+   "dauer": 6.494,
+   "emotion": "erklaerend",
+   "text": "Eine Ruhephase. Die Retter horchen mit empfindlichen Geräten nach Lebenszeichen. Nach Stimmen. Nach Klopfen."
+  },
+  {
+   "nr": 70,
+   "typ": "gesicht",
+   "kapitel": 6,
+   "start": 402.006,
+   "dauer": 5.75,
+   "emotion": "ruhig",
+   "text": "„Nicht schreien. Klopfen. Die Rohre tragen den Schall durchs ganze Haus.“"
+  },
+  {
+   "nr": 71,
+   "typ": "bad",
+   "kapitel": 6,
+   "start": 407.756,
+   "dauer": 6.998,
+   "emotion": "erzaehlend",
+   "text": "Du nimmst den Schraubenschlüssel und schlägst gegen das Heizungsrohr. Drei Mal. Pause. Drei Mal. Pause."
+  },
+  {
+   "nr": 72,
+   "typ": "gesicht",
+   "kapitel": 6,
+   "start": 414.754,
+   "dauer": 3.518,
+   "emotion": "erzaehlend",
+   "text": "Du hältst die Luft an. Zehn Sekunden. Zwanzig."
+  },
+  {
+   "nr": 73,
+   "typ": "gesicht",
+   "kapitel": 6,
+   "start": 418.272,
+   "dauer": 5.63,
+   "emotion": "froh",
+   "text": "Und dann, ganz leise, aus der Tiefe des Hauses: drei Schläge zurück."
+  },
+  {
+   "nr": 74,
+   "typ": "gesicht",
+   "kapitel": 6,
+   "start": 423.902,
+   "dauer": 5.27,
+   "emotion": "froh",
+   "text": "Lina springt auf und ab. Opa schließt die Augen und lächelt. Sie wissen, dass ihr hier seid."
+  },
+  {
+   "nr": 75,
+   "typ": "titel",
+   "kapitel": 7,
+   "start": 429.172,
+   "dauer": 2.318,
+   "emotion": "erzaehlend",
+   "text": "Mittwoch. Sechs Uhr morgens."
+  },
+  {
+   "nr": 76,
+   "typ": "gesicht",
+   "kapitel": 7,
+   "start": 431.49,
+   "dauer": 4.694,
+   "emotion": "ruhig",
+   "text": "Aber wissen heißt nicht retten. Einen ganzen Tag lang passiert nichts mehr."
+  },
+  {
+   "nr": 77,
+   "typ": "objekt",
+   "kapitel": 7,
+   "start": 436.184,
+   "dauer": 7.718,
+   "emotion": "erklaerend",
+   "text": "Vom Wasser ist nur noch ein halber Liter übrig. Du gibst Lina und Opa davon. Du selbst nimmst nur einen Schluck, um die Lippen nass zu machen."
+  },
+  {
+   "nr": 78,
+   "typ": "objekt",
+   "kapitel": 7,
+   "start": 443.902,
+   "dauer": 7.622,
+   "emotion": "erklaerend",
+   "text": "Retter sprechen nach Erdbeben von den zweiundsiebzig Stunden. Danach sinkt die Chance, Eingeschlossene lebend zu finden, mit jedem Tag."
+  },
+  {
+   "nr": 79,
+   "typ": "gesicht",
+   "kapitel": 7,
+   "start": 451.524,
+   "dauer": 1.814,
+   "emotion": "ernst",
+   "text": "Ihr seid bei Stunde vierundsechzig."
+  },
+  {
+   "nr": 80,
+   "typ": "handy",
+   "kapitel": 7,
+   "start": 453.338,
+   "dauer": 5.246,
+   "emotion": "erzaehlend",
+   "text": "Da vibriert dein Handy. Neun Prozent Akku. Eine Nachricht. Von deiner Mama."
+  },
+  {
+   "nr": 81,
+   "typ": "gesicht",
+   "kapitel": 7,
+   "start": 458.584,
+   "dauer": 7.238,
+   "emotion": "froh",
+   "text": "Ich bin unten. Ich gehe nicht weg. Deine SMS ist durchgekommen. Irgendwann in der Nacht, nach zweieinhalb Tagen."
+  },
+  {
+   "nr": 82,
+   "typ": "skyline",
+   "kapitel": 7,
+   "start": 465.822,
+   "dauer": 5.534,
+   "emotion": "erzaehlend",
+   "text": "Du schaust nach unten. Zwischen all den Helmen und Fahrzeugen steht eine kleine Gestalt und winkt mit beiden Armen."
+  },
+  {
+   "nr": 83,
+   "typ": "gesicht",
+   "kapitel": 7,
+   "start": 471.356,
+   "dauer": 2.726,
+   "emotion": "froh",
+   "text": "Du weinst. Zum ersten Mal seit dem Beben."
+  },
+  {
+   "nr": 84,
+   "typ": "wohnung",
+   "kapitel": 7,
+   "start": 474.082,
+   "dauer": 3.878,
+   "emotion": "erzaehlend",
+   "text": "Am Nachmittag kommt das nächste Nachbeben. Das stärkste seit Sonntag."
+  },
+  {
+   "nr": 85,
+   "typ": "treppenhaus",
+   "kapitel": 7,
+   "start": 477.96,
+   "dauer": 5.222,
+   "emotion": "erzaehlend",
+   "text": "Als der Staub sich legt, ist das Loch im Treppenhaus größer. Es reicht jetzt bis in den vierzehnten Stock."
+  },
+  {
+   "nr": 86,
+   "typ": "hochhaus",
+   "kapitel": 7,
+   "start": 483.182,
+   "dauer": 5.51,
+   "emotion": "erzaehlend",
+   "text": "Und in eurer Wohnzimmerwand ist ein Riss, so breit wie dein Finger. Von unten kann niemand mehr zu euch hoch."
+  },
+  {
+   "nr": 87,
+   "typ": "gesicht",
+   "kapitel": 7,
+   "start": 488.692,
+   "dauer": 3.062,
+   "emotion": "erzaehlend",
+   "text": "Wenn Hilfe kommt, dann nicht von unten. Dann von oben."
+  },
+  {
+   "nr": 88,
+   "typ": "titel",
+   "kapitel": 8,
+   "start": 491.754,
+   "dauer": 1.406,
+   "emotion": "erzaehlend",
+   "text": "Dreizehn Uhr zwanzig."
+  },
+  {
+   "nr": 89,
+   "typ": "handy",
+   "kapitel": 8,
+   "start": 493.16,
+   "dauer": 5.006,
+   "emotion": "erzaehlend",
+   "text": "Noch eine Nachricht. Drei Prozent Akku. Geht aufs Dach. Hubschrauber in vierzig Minuten."
+  },
+  {
+   "nr": 90,
+   "typ": "treppenhaus",
+   "kapitel": 8,
+   "start": 498.166,
+   "dauer": 6.206,
+   "emotion": "erzaehlend",
+   "text": "Bis zum Dach sind es acht Stockwerke. Für dich sind das zwei Minuten. Für deinen Opa ohne seine Tabletten ist es ein Berg."
+  },
+  {
+   "nr": 91,
+   "typ": "treppenhaus",
+   "kapitel": 8,
+   "start": 504.372,
+   "dauer": 7.598,
+   "emotion": "erzaehlend",
+   "text": "Lina geht vorne mit der Taschenlampe. Du stützt Opa. Stufe für Stufe. Nach jedem Stockwerk muss er sich setzen."
+  },
+  {
+   "nr": 92,
+   "typ": "gesicht",
+   "kapitel": 8,
+   "start": 511.97,
+   "dauer": 3.71,
+   "emotion": "ruhig",
+   "text": "Im zwanzigsten Stock sagt er, ihr sollt ohne ihn weitergehen."
+  },
+  {
+   "nr": 93,
+   "typ": "gesicht",
+   "kapitel": 8,
+   "start": 515.68,
+   "dauer": 5.318,
+   "emotion": "ernst",
+   "text": "Du sagst nein. Du sagst, die Rommé-Partie ist noch nicht zu Ende. Und dass er dir noch was schuldet."
+  },
+  {
+   "nr": 94,
+   "typ": "treppenhaus",
+   "kapitel": 8,
+   "start": 520.998,
+   "dauer": 5.774,
+   "emotion": "erzaehlend",
+   "text": "Er lacht, hustet, und steht wieder auf. Zweiundzwanzig. Dreiundzwanzig. Vierundzwanzig."
+  },
+  {
+   "nr": 95,
+   "typ": "dach",
+   "kapitel": 8,
+   "start": 526.772,
+   "dauer": 7.118,
+   "emotion": "erzaehlend",
+   "text": "Dann drückst du die schwere Stahltür auf, und euch schlägt der Wind ins Gesicht. Das Dach. Über euch nur noch Himmel."
+  },
+  {
+   "nr": 96,
+   "typ": "dach",
+   "kapitel": 8,
+   "start": 533.89,
+   "dauer": 6.374,
+   "emotion": "erzaehlend",
+   "text": "Mit einem Stück Ziegel malt Lina drei riesige Buchstaben auf den Teer. S. O. S."
+  },
+  {
+   "nr": 97,
+   "typ": "titel",
+   "kapitel": 9,
+   "start": 540.264,
+   "dauer": 4.214,
+   "emotion": "erzaehlend",
+   "text": "Vierzehn Uhr zwei. Genau zweiundsiebzig Stunden nach dem Beben."
+  },
+  {
+   "nr": 98,
+   "typ": "dach",
+   "kapitel": 9,
+   "start": 544.478,
+   "dauer": 6.59,
+   "emotion": "erzaehlend",
+   "text": "Erst hörst du es nur. Dieses tiefe Wummern, das du in deinem Bauch spürst. Dann taucht er hinter dem Nachbarhaus auf."
+  },
+  {
+   "nr": 99,
+   "typ": "dach",
+   "kapitel": 9,
+   "start": 551.068,
+   "dauer": 5.582,
+   "emotion": "erzaehlend",
+   "text": "Der Hubschrauber bleibt über euch stehen. An einem Seil schwebt ein Retter herunter, mit Helm und Gurt."
+  },
+  {
+   "nr": 100,
+   "typ": "dach",
+   "kapitel": 9,
+   "start": 556.65,
+   "dauer": 5.174,
+   "emotion": "erzaehlend",
+   "text": "Lina zuerst. Sie hält ihr Stofftier fest und winkt dir, als sie nach oben gezogen wird."
+  },
+  {
+   "nr": 101,
+   "typ": "dach",
+   "kapitel": 9,
+   "start": 561.824,
+   "dauer": 6.23,
+   "emotion": "erzaehlend",
+   "text": "Dann dein Opa. Bevor sie ihm den Gurt umlegen, drückt er dir etwas in die Hand. Seine Spielkarten."
+  },
+  {
+   "nr": 102,
+   "typ": "gesicht",
+   "kapitel": 9,
+   "start": 568.054,
+   "dauer": 2.606,
+   "emotion": "froh",
+   "text": "„Pass gut drauf auf. Wir sind noch nicht fertig.“"
+  },
+  {
+   "nr": 103,
+   "typ": "dach",
+   "kapitel": 9,
+   "start": 570.66,
+   "dauer": 6.35,
+   "emotion": "erzaehlend",
+   "text": "Und dann du. Als letzter. Der Gurt zieht dich hoch, das Dach wird kleiner, die Stadt wird riesig."
+  },
+  {
+   "nr": 104,
+   "typ": "skyline",
+   "kapitel": 9,
+   "start": 577.01,
+   "dauer": 7.118,
+   "emotion": "erzaehlend",
+   "text": "Von hier oben siehst du, wie viele Häuser beschädigt sind. Und auf wie vielen Dächern noch Menschen warten. Du bist einer der Glücklichen."
+  },
+  {
+   "nr": 105,
+   "typ": "park",
+   "kapitel": 9,
+   "start": 584.128,
+   "dauer": 5.51,
+   "emotion": "erzaehlend",
+   "text": "Auf dem Sportplatz landet der Hubschrauber. Du springst raus und rennst. Jemand rennt dir entgegen."
+  },
+  {
+   "nr": 106,
+   "typ": "gesicht",
+   "kapitel": 9,
+   "start": 589.638,
+   "dauer": 7.166,
+   "emotion": "froh",
+   "text": "Deine Mama hält dich so fest, dass du kaum Luft bekommst. Sie riecht nach Rauch und Kaffee und nach drei Nächten ohne Schlaf."
+  },
+  {
+   "nr": 107,
+   "typ": "gesicht",
+   "kapitel": 9,
+   "start": 596.804,
+   "dauer": 5.15,
+   "emotion": "froh",
+   "text": "„Ich hab deine Nachricht hundertmal gelesen. Jedes Mal, wenn ich nicht mehr konnte.“"
+  },
+  {
+   "nr": 108,
+   "typ": "krankenhaus",
+   "kapitel": 9,
+   "start": 601.954,
+   "dauer": 6.83,
+   "emotion": "erzaehlend",
+   "text": "Dein Opa kommt ins Krankenhaus. Neue Tabletten, eine Infusion, zwei Tage Ruhe. Und dann ist er wieder ganz der Alte."
+  },
+  {
+   "nr": 109,
+   "typ": "gesicht",
+   "kapitel": 9,
+   "start": 608.784,
+   "dauer": 6.398,
+   "emotion": "froh",
+   "text": "Linas Mama findet ihre Tochter noch am selben Abend. Sie hatte drei Tage lang in der Notaufnahme anderen Menschen geholfen."
+  },
+  {
+   "nr": 110,
+   "typ": "wohnung",
+   "kapitel": 9,
+   "start": 615.182,
+   "dauer": 7.862,
+   "emotion": "erzaehlend",
+   "text": "Seitdem hast auch du eine Schublade. Taschenlampe, Kurbelradio, eine Powerbank, zehn Flaschen Wasser. Niemand lacht mehr darüber."
+  },
+  {
+   "nr": 111,
+   "typ": "wohnung",
+   "kapitel": 9,
+   "start": 623.044,
+   "dauer": 6.254,
+   "emotion": "erzaehlend",
+   "text": "Und jeden Sonntag sitzt ihr wieder zusammen. Du, dein Opa und Lina. Mit Apfelkuchen."
+  },
+  {
+   "nr": 112,
+   "typ": "gesicht",
+   "kapitel": 9,
+   "start": 629.298,
+   "dauer": 8.0,
+   "emotion": "froh",
+   "text": "Die Rommé-Partie von damals habt ihr nie zu Ende gespielt. Ihr habt beschlossen, dass sie nie ganz zu Ende gehen soll."
+  }
+ ]
+}
