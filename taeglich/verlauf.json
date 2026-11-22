@@ -813,6 +813,62 @@
     "lufs": -14.6,
     "dauer_s": 76.62
    }
+  },
+  {
+   "id": "nische-n001",
+   "datum": "2026-11-22",
+   "titel": "Dein Handy zählt die Abende",
+   "emoji": "📱",
+   "serie": "Was wäre, wenn du … (Gewinner-Nische, Issue #39) – eigenständig",
+   "art": "praemisse",
+   "idee_nr": 1,
+   "stimmung": "warm",
+   "stimme": "Orus",
+   "thema": "Dein Handy zeigt, wie viele Abende du noch mit deinen Eltern hast. Die Zahl sinkt, wenn du dich zurückziehst (Finte 1: sie steigt, als du mit Mama kochst – sie zählt nicht ihre Zeit, sondern wie du lebst). Papas Zähler für Opa steht auf 11, du bringst ihn zum Anrufen, Opa sitzt am Sonntag am Tisch. Fakt: Auszug im Schnitt mit 24,1 Jahren (Destatis 2026). Finte 2/Ende: Mamas Handy zählt die Abende mit dir – seit deiner Geburt.",
+   "stil": "leuchtend, nur vorhandene Kulissen (handy, grossstadt, esstisch, wohnzimmer, gesicht, titel, landschaft, lebenszeit), Paletten orange/rosa/blau/lila",
+   "kulissen": [
+    "handy",
+    "grossstadt",
+    "esstisch",
+    "wohnzimmer",
+    "gesicht",
+    "titel",
+    "landschaft",
+    "lebenszeit"
+   ],
+   "beschreibung": "Ab heute zeigt dein Handy, wie viele Abende du noch mit deinen Eltern hast. Und jeden Morgen ist die Zahl ein Stück kleiner.",
+   "hashtags": [
+    "#waswärewenn",
+    "#animation",
+    "#familie",
+    "#story"
+   ],
+   "tags": [
+    "was wäre wenn",
+    "animation",
+    "familie",
+    "eltern",
+    "story"
+   ],
+   "kommentar_frage": "Wie viele Abende pro Woche verbringst du gerade mit deinen Eltern?",
+   "en": {
+    "titel": "Your Phone Counts the Evenings",
+    "beschreibung": "Starting today, your phone shows how many evenings you have left with your parents. And every morning, the number gets smaller.",
+    "hashtags": [
+     "#whatif",
+     "#animation",
+     "#family",
+     "#story"
+    ],
+    "tags": [
+     "what if",
+     "animation",
+     "family",
+     "parents",
+     "story"
+    ],
+    "kommentar_frage": "How many evenings a week do you actually spend with your parents right now?"
+   }
   }
  ]
 }

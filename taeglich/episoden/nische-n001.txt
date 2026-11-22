@@ -42,7 +42,7 @@
 [wohnzimmer du papa sofa_sitzen licht=an zeit=abend palette=rosa zoom-rein] Du setzt dich neben deinen Papa. „Ruf ihn an.“
 // 44 s – Große Frage 2: echter Fakt mit Quelle, Wow-Bild Leben in Wochen
 // Quelle: Statistisches Bundesamt, Pressemitteilung Juli 2026 (Mikrozensus/Eurostat, Daten 2025): Durchschnittsalter beim Auszug aus dem Elternhaus in Deutschland 24,1 Jahre
-[lebenszeit jahre=15 markiert="15-24" fuellen oben="Dein Leben in Wochen" palette=blau zoom-rein ein="Deutschland>DESTATIS 2026|vierundzwanzig>#24,1 JAHRE>haus" ein_y=1250] In Deutschland ziehen Kinder im Schnitt mit vierundzwanzig von zu Hause aus.
+[lebenszeit jahre=15 markiert="15-24" fuellen oben="Dein Leben in Wochen" palette=blau zoom-rein ein="Deutschland>DESTATIS 2026|vierundzwanzig>#24 JAHRE>haus" ein_y=1250] In Deutschland ziehen Kinder im Schnitt mit vierundzwanzig von zu Hause aus.
 // 48 s – Große Frage 2: Zuspitzung, dir bleiben etwa neun Jahre unter einem Dach
 [lebenszeit jahre=15 markiert="15-24" oben="Dein Leben in Wochen" palette=blau zoom-raus ein="neun>#9 JAHRE>uhr" ein_y=1250] Dir bleiben etwa neun Jahre unter einem Dach. Dann werden aus Abenden Besuche.
 // 52 s – Große Frage 2: Dein Papa ruft an

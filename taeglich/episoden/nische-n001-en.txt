@@ -18,7 +18,7 @@
 
 == Loop 1 ==
 // 0 s – Setup 1 (hook): the counter, big on your phone – premise about you and your parents
-[handy ort=zimmer zeit=abend lichterkette palette=orange netz=4 akku=58 uhrzeit="312" von="Evenings with Mom & Dad" nachricht="That's how many you have left." hooktext="YOUR PHONE COUNTS THE EVENINGS" zoom-rein] Starting today, your phone shows how many evenings you have left with your parents.
+[handy ort=zimmer zeit=abend lichterkette palette=orange netz=4 akku=58 uhrzeit="312" von="Evenings: Mom & Dad" nachricht="That's how many you have left." hooktext="YOUR PHONE COUNTS THE EVENINGS" zoom-rein] Starting today, your phone shows how many evenings you have left with your parents.
 // 4 s – Setup 1: time pressure, wow shot of the city at dusk, the number as keyword
 [grossstadt zeit=abend du palette=orange zoom-raus ein="Three>#312 EVENINGS>uhr" ein_y=470] Three hundred twelve. And every morning, the number gets smaller.
 // 8 s – Big question 1: first consequence, your seat at the table stays empty
@@ -30,9 +30,9 @@
 // 20 s – Twist 1 (setup): Saturday, you cook with your mom
 [esstisch mama du gedeckt kerzen zeit=abend palette=orange schwenk-rechts] Then on Saturday, you cook with your mom. Pasta, way too much sauce.
 // 23 s – Twist 1: the number goes up – A flips to B
-[handy ort=esstisch zeit=abend palette=orange netz=4 akku=71 uhrzeit="340" von="Evenings with Mom & Dad" nachricht="Twenty-eight more than yesterday." zoom-rein ton=hit ein="forty>#340 EVENINGS>herz" ein_y=430] On Sunday, it says: three hundred forty. The number went up.
+[handy ort=esstisch zeit=abend palette=orange netz=4 akku=71 uhrzeit="340" von="Evenings: Mom & Dad" nachricht="Twenty-eight more than yesterday." zoom-rein ton=hit ein="forty>#340 EVENINGS>herz" ein_y=430] On Sunday, it says: three hundred forty. The number went up.
 // 26 s – Twist 1 resolved: big keyword WRONG
-[titel oben="It's not counting their time" gross="WRONG" unten="It counts how you live" farbe=#4a2a1a akzent=#ffb35a groesse=170 hud=false palette=orange zoom-rein] It's not counting how long your parents will live. It's counting how *you* live.
+[titel oben="Not their time" gross="WRONG" unten="It counts how you live" farbe=#4a2a1a akzent=#ffb35a groesse=170 hud=false palette=orange zoom-rein] It's not counting how long your parents will live. It's counting how *you* live.
 
 == Loop 2 ==
 // 30 s – Rehook: your dad's phone counts too – next to Grandpa's name, only eleven
@@ -43,7 +43,7 @@
 [wohnzimmer du papa sofa_sitzen licht=an zeit=abend palette=rosa zoom-rein] You sit down next to your dad. "Call him."
 // 44 s – Big question 2: real fact with source, wow shot of your life in weeks
 // Source: German Federal Statistical Office (Destatis), press release July 2026 (Mikrozensus/Eurostat, 2025 data): average age of leaving the parental home in Germany 24.1 years
-[lebenszeit jahre=15 markiert="15-24" fuellen oben="Your life in weeks" palette=blau zoom-rein ein="Germany>DESTATIS 2026|twenty>#24.1 YEARS>haus" ein_y=1250] In Germany, kids move out at twenty-four, on average.
+[lebenszeit jahre=15 markiert="15-24" fuellen oben="Your life in weeks" palette=blau zoom-rein ein="Germany>DESTATIS 2026|twenty>#24 YEARS>haus" ein_y=1250] In Germany, kids move out at twenty-four, on average.
 // 48 s – Big question 2: escalation, about nine years left under one roof
 [lebenszeit jahre=15 markiert="15-24" oben="Your life in weeks" palette=blau zoom-raus ein="nine>#9 YEARS>uhr" ein_y=1250] So you've got about nine years left under one roof. Then evenings turn into visits.
 // 52 s – Big question 2: your dad calls
