@@ -1,0 +1,18 @@
+# Test Baustelle
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@einblenden aus
+@untertitel aus
+
+== Test ==
+[baustelle stapel=1 du zoom-rein] Eins.
+[baustelle ansicht=boden pfaehle=0>1 wasser] Zwei.
+[baustelle ansicht=boden pfaehle=1 wasser rost platte=1] Drei.
+[baustelle ansicht=boden pfaehle=1 wasser strom platte=1 hoehe=0>10] Vier.
+[baustelle zeit=nacht hoehe=200>350 pumpe mischer kran] Fünf.
+[baustelle hoehe=450 wind=wirbel kran] Sechs.
+[baustelle hoehe=630 wind=ruhig] Sieben.
+[baustelle zeit=abend hoehe=630 spitze=0>1] Acht.
+[baustelle zeit=nacht hoehe=630 spitze=1 lichter] Neun.

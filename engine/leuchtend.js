@@ -132,6 +132,156 @@
   };
 
   // =====================================================================
+  // BAUSTELLE – Wolkenkratzer wächst in der Wüste (Test-Format „So baust du …“, MASTER 3b, 22.11.).
+  //  ansicht=ganz|boden|oben, zeit=tag|abend|nacht, hoehe=a>b (Meter Turmkörper, max. ca. 630), wachsen=s (Dauer),
+  //  spitze=a>b (0–1, Stahlnadel 200 m fährt aus dem Turm), stapel=1 (naive Lösung: Stockwerke sacken weg),
+  //  pfaehle=a>b (0–1, Bohrpfähle im Bodenschnitt), wasser (salziges Grundwasser), rost, platte=a>b (0–1), strom (Korrosionsschutz),
+  //  pumpe (Betonleitung nach oben), mischer (Betonmischer am Fuß), wind=wirbel|ruhig, kran, lichter, figur_y
+  // =====================================================================
+  SZ.baustelle = (s, t) => {
+    const zeit = s.zeit || "tag", nacht = zeit === "nacht", abend = zeit === "abend";
+    const P = nacht ? { oben: "#0b1638", mitte: "#1d2f6a", horizont: "#3d4f9a", sand: ["#5a4a78", "#6a5486", "#4a3c66"], licht: "#9fc4ff", glas: ["#3a5ea8", "#7aa6e8"], kern: "#7d86a8" }
+      : abend ? { oben: "#3b2a78", mitte: "#c2507e", horizont: "#ffb45e", sand: ["#f39150", "#f7ad5a", "#e66b40"], licht: "#ffd48e", glas: ["#5a6aa8", "#ffc890"], kern: "#c9b8b0" }
+      : { oben: "#4fbcd2", mitte: "#a9e0cf", horizont: "#fdeaa8", sand: ["#f9b44c", "#fcd36c", "#f39447"], licht: "#fff4c8", glas: ["#4a8ac0", "#bfeaff"], kern: "#d8d2c8" };
+    const zahl = v => Number(String(v).replace(",", ".")) || 0;
+    const ber = (v, dauer = 2.4, ab = 0.3) => { const [a, b] = String(v ?? 0).split(">"); if (b === undefined) return zahl(a); return lerp(zahl(a), zahl(b), E.raus(clamp((t - ab) / dauer, 0, 1))); };
+    const ansicht = s.ansicht || "ganz";
+    const boden = ansicht === "boden", oben = ansicht === "oben";
+    const gy = boden ? 640 : 1500;                         // Bodenlinie
+    const pxm = boden ? 18 : oben ? 6 : 1.39;              // Pixel pro Meter
+    const hh = ber(s.hoehe ?? (boden ? 0 : 0), Number(s.wachsen) || 2.6);
+    const sp = clamp(ber(s.spitze ?? 0, Number(s.wachsen) || 2.6), 0, 1);
+    const sx = 820, syy = nacht ? 330 : 360;
+    // Himmel, Sonne/Mond
+    ctx.fillStyle = lgrad(0, -600, 0, gy + 80, [[0, P.oben], [0.6, P.mitte], [1, P.horizont]]); ctx.fillRect(-1500, -1500, 4080, gy + 1600);
+    if (nacht) { const r = rnd(5); for (let i = 0; i < 90; i++) { const x = r() * 1080, y = r() * (gy - 200), a = 0.4 + 0.6 * Math.abs(Math.sin(t * (0.5 + r()) + i)); circle(x, y, 1.5 + r() * 2, rgba("#ffffff", 0.7 * a)); } circle(sx, syy, 60, "#f2f0e0"); glut(sx, syy, 260, "#bcd0ff", 0.5); }
+    else { glut(sx, syy, 800, P.licht, 0.6); glut(sx, syy, 260, "#fff3b0", 1); circle(sx, syy, 74, "#ffffff"); A.licht && A.licht(sx, syy, 900, P.licht, 0.8); }
+    // ferne Dünen + kleine Stadt im Dunst
+    ebene("bau_fern", 4, () => {
+      const r = rnd(13);
+      for (let i = 0; i < 26; i++) { const x = -40 + i * 46 + r() * 10, h = 30 + r() * 120; box(x, gy - 20 - h, 30 + r() * 14, h + 20, 2, rgba(mix(P.horizont, P.oben, 0.45), 0.55)); }
+      const pk = []; for (let x = -400; x <= 1500; x += 260 + r() * 160) pk.push([x, gy - 30 - r() * 60]); kurve(pk, gy + 40); ctx.fillStyle = mix(P.sand[1], P.horizont, 0.45); ctx.fill();
+    });
+    // Boden: Wüste oder Schnitt
+    if (boden) {
+      // Oberfläche
+      box(-300, gy - 10, 1680, 24, 0, P.sand[1]);
+      // Schnitt: Sandschichten
+      ctx.fillStyle = lgrad(0, gy, 0, 1920, [[0, shade(P.sand[0], -0.1)], [0.45, shade(P.sand[2], -0.25)], [1, shade(P.sand[2], -0.45)]]); ctx.fillRect(-300, gy + 12, 1680, 1920);
+      { const r = rnd(21); for (let i = 0; i < 260; i++) circle(r() * 1080, gy + 20 + r() * 1300, 2 + r() * 4, rgba(i % 3 ? "#fff0c8" : "#5a3020", 0.18)); }
+      for (let k = 1; k < 6; k++) line(-100, gy + k * 210 + Math.sin(k) * 20, 1180, gy + k * 210 - Math.cos(k) * 20, 3, rgba("#3a2010", 0.15));
+      if (s.wasser) { // salziges Grundwasser
+        const wy = gy + 330;
+        ctx.fillStyle = lgrad(0, wy, 0, 1920, [[0, rgba("#3fb8e0", 0.5)], [1, rgba("#1a4a8a", 0.7)]]); ctx.fillRect(-300, wy, 1680, 1920);
+        const r = rnd(31); for (let i = 0; i < 70; i++) { const x = r() * 1080, y = wy + 20 + ((r() * 1200 + t * 30 * (0.5 + r())) % 1200), a = 0.4 + 0.6 * Math.sin(t * 3 + i); ctx.save(); ctx.translate(x, y); ctx.rotate(0.78); box(-4, -4, 8, 8, 1, rgba("#ffffff", 0.55 * a)); ctx.restore(); }
+        line(-100, wy, 1180, wy, 5, rgba("#bff0ff", 0.7));
+      }
+      // Bohrpfähle
+      const pf = clamp(ber(s.pfaehle ?? 0, 3), 0, 1);
+      const xs = [190, 290, 390, 490, 590, 690, 790, 890];
+      xs.forEach((x, k) => {
+        const f = clamp(pf * 1.35 - k * 0.045, 0, 1), tief = 50 * pxm * f;
+        if (f <= 0) return;
+        ctx.fillStyle = lgrad(x - 14, 0, x + 14, 0, [[0, "#8a8c98"], [0.5, "#c8cad4"], [1, "#7a7c88"]]); A.rr(x - 14, gy, 28, tief, 6); ctx.fill();
+        for (let y = gy + 30; y < gy + tief - 10; y += 46) line(x - 14, y, x + 14, y + 10, 2, rgba("#4a4c58", 0.35));
+        if (s.rost) { const r = rnd(41 + k); for (let i = 0; i < 6; i++) circle(x + (r() - 0.5) * 22, gy + 360 + r() * (tief - 380), 6 + r() * 8, rgba("#b4561e", 0.75)); }
+        if (s.strom) { const a = 0.6 + 0.4 * Math.sin(t * 6 + k); glut(x, gy + tief * 0.55, 110, "#7fe0ff", 0.8 * a); line(x + 20, gy + 20, x + 20, gy + tief - 10, 5, rgba("#dffaff", 0.95 * a)); for (let j = 0; j < 4; j++) { const yy = gy + 400 + ((t * 160 + j * 140 + k * 37) % (tief - 420)); glut(x + 20, yy, 26, "#ffffff", 0.9); } }
+        if (f < 1) { box(x - 22, gy + tief - 30, 44, 34, 6, "#e8b23a"); for (let j = 0; j < 3; j++) line(x - 18, gy + tief - 20 + j * 9, x + 18, gy + tief - 14 + j * 9, 3, "#7a5a1a"); }
+      });
+      // Bodenplatte
+      const pl = clamp(ber(s.platte ?? 0, 1.8), 0, 1);
+      if (pl > 0) { ctx.save(); ctx.globalAlpha = pl; ctx.fillStyle = lgrad(0, gy - 70, 0, gy + 4, [[0, "#d8dae2"], [1, "#9a9ca8"]]); A.rr(130, gy - 67, 820, 67, 8); ctx.fill(); line(130, gy - 67, 950, gy - 67, 4, rgba("#ffffff", 0.6)); ctx.restore(); }
+      // Turmansatz über der Platte
+      if (hh > 0) { const h = Math.min(hh * pxm, gy + 200); ctx.fillStyle = lgrad(420, 0, 660, 0, [[0, P.glas[0]], [0.5, P.glas[1]], [1, P.glas[0]]]); ctx.fillRect(420, gy - 67 - h, 240, h); }
+    } else {
+      // Wüstenboden vorne
+      const r = rnd(17);
+      const pk = []; for (let x = -400; x <= 1500; x += 300 + r() * 200) pk.push([x, gy - 10 - r() * 26]); kurve(pk); ctx.fillStyle = P.sand[0]; ctx.fill();
+      const pk2 = []; for (let x = -400; x <= 1500; x += 280 + r() * 200) pk2.push([x, gy + 160 - r() * 60]); kurve(pk2); ctx.fillStyle = P.sand[2]; ctx.fill();
+      for (let i = 0; i < 12; i++) { const x = r() * 1080, y = gy + 60 + r() * 300; ctx.beginPath(); ctx.ellipse(x, y, 80 + r() * 60, 8, -0.06, Math.PI * 1.1, Math.PI * 1.9); ctx.lineWidth = 4; ctx.strokeStyle = rgba(shade(P.sand[2], -0.15), 0.4); ctx.stroke(); }
+      // Bauzaun
+      for (let x = 200; x < 880; x += 26) line(x, gy + 4, x, gy - 26, 3, rgba("#5a5a6a", 0.55)); line(200, gy - 24, 880, gy - 24, 3, rgba("#5a5a6a", 0.55));
+    }
+    // Turm (Ansicht ganz/oben): Y-Grundriss, von vorn als gestufte Silhouette
+    const tx = 540;
+    const turm = (basisY, k, hoeheM, sway) => {
+      const H = hoeheM * k; if (H <= 0) return { top: basisY };
+      ctx.save(); ctx.translate(tx, basisY); ctx.rotate(sway); ctx.translate(-tx, -basisY);
+      // Y-Grundriss: Flügel springen abwechselnd links und rechts zurück (spiralförmige Rücksprünge), Kern läuft durch
+      const gesamt = 630 * k, n = 12;
+      let l = 170, r = 170;
+      for (let i = 0; i < n; i++) {
+        const f0 = i / n, f1 = (i + 1) / n;
+        const y0 = basisY - f0 * gesamt; if (y0 <= basisY - H) break;
+        const y1 = basisY - Math.min(f1 * gesamt, H), hgt = y0 - y1; if (hgt <= 0) continue;
+        const x0 = tx - l, w = l + r;
+        ctx.fillStyle = lgrad(x0, 0, x0 + w, 0, [[0, shade(P.glas[0], -0.25)], [0.3, P.glas[1]], [0.5, P.glas[0]], [0.62, mix(P.glas[1], P.glas[0], 0.4)], [1, shade(P.glas[0], -0.35)]]); ctx.fillRect(x0, y1, w, hgt);
+        line(tx - 6, y0, tx - 6, y1, 4, rgba("#ffffff", 0.35));
+        for (let y = y0 - 8; y > y1; y -= Math.max(5, 9 * k / 1.39)) line(x0 + 4, y, x0 + w - 4, y, 1.2, rgba(nacht && s.lichter ? "#ffe39a" : "#ffffff", nacht && s.lichter ? 0.6 : 0.18));
+        box(x0 - 3, y0 - 4, w + 6, 6, 2, rgba("#ffffff", 0.45));
+        // nächster Rücksprung: abwechselnd links / rechts
+        if (i % 2 === 0) l = Math.max(30, l - 26); else r = Math.max(30, r - 26);
+      }
+      const top = basisY - H;
+      // offenes Rohbau-Geschoss oben (grauer Kern) solange gebaut wird
+      if (!s.stapel && (s.kran || s.pumpe) && H < gesamt * 0.999) { box(tx - 34, top - 26, 68, 30, 3, P.kern); for (let j = 0; j < 4; j++) line(tx - 30 + j * 20, top - 26, tx - 30 + j * 20, top + 4, 3, shade(P.kern, -0.3)); }
+      ctx.restore();
+      return { top };
+    };
+    let info = { top: gy };
+    if (!boden) {
+      const k = oben ? pxm : pxm;
+      const basis = oben ? gy + 2400 : gy;  // „oben“: Kamera nur an der Turmspitze
+      // Wind: Wirbel bringen den Turm zum Schwingen
+      const sway = s.wind === "wirbel" ? Math.sin(t * 2.6) * 0.012 : 0;
+      if (s.stapel) {
+        // naive Lösung: gestapelte Stockwerke versinken und kippen im Sand
+        const sink = E.raus(clamp((t - 0.6) / 3, 0, 1)), kipp = sink * 0.16;
+        ctx.save(); ctx.translate(tx, gy + sink * 120); ctx.rotate(kipp);
+        for (let i = 0; i < 9; i++) { const y = -i * 92; ctx.fillStyle = lgrad(-150, 0, 150, 0, [[0, shade(P.glas[0], -0.2)], [0.4, P.glas[1]], [1, shade(P.glas[0], -0.3)]]); ctx.fillRect(-150, y - 88, 300, 88); box(-156, y - 6, 312, 8, 2, rgba("#ffffff", 0.5)); for (let j = 0; j < 5; j++) box(-130 + j * 56, y - 70, 36, 46, 4, rgba("#ffffff", 0.22)); }
+        ctx.restore();
+        // Sand quillt seitlich hoch
+        ellipse(tx - 180, gy + 10, 130, 30 + sink * 40, P.sand[1]); ellipse(tx + 200, gy + 14, 140, 28 + sink * 46, P.sand[1]);
+        if (sink > 0.4) for (let i = 0; i < 3; i++) line(tx - 40 + i * 30, gy - 300 - i * 120, tx - 10 + i * 30, gy - 230 - i * 120, 4, rgba("#2a1a10", 0.6 * sink));
+      } else {
+        info = turm(basis, k, Math.min(hh, 630), sway);
+        // Stahlnadel (Spitze): fährt aus dem Turm nach oben
+        if (sp > 0) { const L = 200 * k * sp, tp = info.top; ctx.fillStyle = lgrad(tx - 10, 0, tx + 10, 0, [[0, "#8a96b0"], [0.5, "#eef2ff"], [1, "#7a86a0"]]); poly([[tx - 14, tp + 2], [tx + 14, tp + 2], [tx + 4, tp - L], [tx - 4, tp - L]]); ctx.fill();
+          for (let j = 1; j < 6; j++) line(tx - 12 + j, tp - L * j / 6, tx + 12 - j, tp - L * j / 6, 2, rgba("#4a5470", 0.5));
+          if (nacht || s.lichter) { const a = 0.5 + 0.5 * Math.sin(t * 4); glut(tx, tp - L, 50, "#ff5040", a); circle(tx, tp - L, 5, "#ff8070"); } }
+        // Kran oben
+        if (s.kran && hh > 20) { const ty = info.top - 30; line(tx + 10, ty, tx + 10, ty - 150, 8, "#f2b53a"); line(tx - 120, ty - 140, tx + 190, ty - 140, 7, "#f2b53a"); for (let j = 0; j < 8; j++) line(tx - 110 + j * 38, ty - 140, tx - 92 + j * 38, ty - 128, 2, "#a8761a"); line(tx + 150, ty - 140, tx + 150, ty - 60 + Math.sin(t * 1.5) * 10, 2, "#3a3a4a"); box(tx + 138, ty - 62 + Math.sin(t * 1.5) * 10, 24, 18, 3, "#7a8090"); }
+        // Betonpumpe: Leitung am Turm, Betonklumpen wandern nach oben
+        if (s.pumpe) { const x = tx + 190, y1 = info.top + 10; line(x, gy, x, y1, 8, "#5a5f70"); line(x, y1, tx + 20, y1, 8, "#5a5f70");
+          for (let i = 0; i < 14; i++) { const q = ((t * 0.35 + i / 14) % 1), y = lerp(gy, y1, q); circle(x, y, 7, "#b8b4ac"); }
+          box(x - 70, gy - 70, 150, 64, 10, "#e8b23a"); box(x + 40, gy - 96, 46, 40, 8, "#d4982a"); for (const wx of [x - 40, x + 50]) circle(wx, gy - 4, 16, "#2a2a34"); }
+        if (s.mischer) for (const [mx, f] of [[150, 0], [300, 1]]) { box(mx - 60, gy - 60, 120, 50, 10, "#dde2ea"); ctx.save(); ctx.translate(mx - 10, gy - 70); ctx.rotate(-0.25 + Math.sin(t * 2 + f) * 0.02); ellipse(0, 0, 58, 30, "#c8ced8"); for (let j = -2; j <= 2; j++) line(j * 18 - 8, -26, j * 18 + 8, 26, 3, rgba("#7a8090", 0.5)); ctx.restore(); for (const wx of [mx - 40, mx + 40]) circle(wx, gy - 6, 14, "#2a2a34"); if (nacht) glut(mx + 60, gy - 40, 80, "#ffe39a", 0.6); }
+        // Wind-Stromlinien
+        if (s.wind) {
+          const r = rnd(51), wirbel = s.wind === "wirbel";
+          for (let i = 0; i < 16; i++) {
+            const y = info.top + 60 + r() * (gy - info.top - 160), off = (t * 260 + r() * 1200) % 1400 - 300;
+            ctx.beginPath(); ctx.moveTo(off - 260, y); ctx.bezierCurveTo(off - 130, y - 10, off - 60, y + 10, off, y); ctx.lineWidth = 5; ctx.strokeStyle = rgba("#ffffff", 0.55); ctx.lineCap = "round"; ctx.stroke();
+          }
+          if (wirbel) for (let i = 0; i < 6; i++) { const y = info.top + 120 + i * ((gy - info.top - 200) / 6), x = tx + 220 + (i % 2) * 90, a = t * 3 + i; ctx.beginPath(); for (let w = 0; w < 4 * Math.PI; w += 0.3) ctx.lineTo(x + Math.cos(w + a) * w * 5, y + Math.sin(w + a) * w * 5); ctx.lineWidth = 4; ctx.strokeStyle = rgba("#ffffff", 0.6); ctx.stroke(); }
+          else for (let i = 0; i < 9; i++) { const y = info.top + 80 + i * ((gy - info.top - 140) / 9), x = tx + 200 + Math.sin(t * 2 + i) * 20; ctx.beginPath(); ctx.arc(x, y, 14, a0(i, t), a0(i, t) + 3.5); ctx.lineWidth = 3; ctx.strokeStyle = rgba("#ffffff", 0.45); ctx.stroke(); }
+        }
+      }
+      // Hitzeflimmern am Tag
+      if (!nacht && !oben) { const r = rnd(61); for (let i = 0; i < 8; i++) { const y = gy - 20 - r() * 40, x = r() * 1080; line(x, y + Math.sin(t * 3 + i) * 4, x + 120, y + Math.cos(t * 3 + i) * 4, 3, rgba("#ffffff", 0.18)); } }
+    }
+    function a0(i, t) { return t * 2.4 + i; }
+    A.figurenZeigen(s, t, s.figur_y ?? (boden ? gy - 4 : gy + 80), boden ? 0.55 : 0.42);
+    // Vordergrund-Silhouetten (Wüstenpflanzen, unscharf)
+    ebene("bau_vorne", 12, () => {
+      const dunkel = nacht ? "#141a3a" : abend ? "#3a1c3f" : "#4a2a52";
+      if (!boden) { farn(-80, 2150, 820, 0.5, dunkel, shade(dunkel, 0.08)); farn(1180, 2150, 860, -0.55, dunkel, shade(dunkel, 0.08)); circle(-60, 2000, 200, shade(dunkel, -0.1)); circle(1150, 1980, 230, shade(dunkel, -0.1)); }
+      else { circle(-90, 1880, 220, rgba(dunkel, 0.8)); circle(1180, 1900, 240, rgba(dunkel, 0.8)); }
+    });
+    A._dunkel = 0;
+  };
+
+  // =====================================================================
   // KIOSK – Lotto-Kiosk an der Straßenecke bei Nacht (s02 „Der Hauptgewinn“): leuchtendes Schaufenster, Neonschild,
   // Zeitungsständer, Laterne, nasser Asphalt mit Spiegelungen, unscharfe Stadt mit Lichtpunkten, dunkle Ränder.
   // (zeit=nacht|abend, regen, gross)

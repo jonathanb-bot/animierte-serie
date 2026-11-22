@@ -1,0 +1,56 @@
+# So baust du das höchste Haus der Welt (Beispiel Test-Format „So baust du …“, MASTER 3b)
+@musik musik/beispiel-bau-01.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@vortrag lebendig
+@klang studio
+@mund zitate
+@einblenden aus
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@zeit tag
+@untertitel aus
+// Quellen: burjkhalifa.ae (Design & Construction: Y-Grundriss mit Rücksprüngen, Rekord-Betonpumpe 601 m, Nov. 2007);
+// Poulos & Bunce / Multiplex (Bodenplatte 3,7 m auf 192 Bohrpfählen, 1,5 m Durchmesser, ca. 50 m tief, kathodischer Korrosionsschutz);
+// Putzmeister / ENR (Betonieren nachts, Teil des Wassers durch Eis ersetzt); RWDI (über 40 Windkanal-Tests);
+// Baker / SOM (Stahlspitze über 200 m im Inneren gebaut und hydraulisch hochgeschoben). Höhe 828 m.
+
+== Schleife 1: Sand ==
+// 0 s – Einsatz (naive Lösung als Prämisse über dich)
+[baustelle stapel=1 du hooktext="DAS HÖCHSTE HAUS DER WELT" zoom-rein] Du willst das höchste Haus der Welt bauen? Dann stapelst du einfach Stockwerke.
+// 5 s – Finte 1: Sand trägt nicht
+[baustelle stapel=1 zoom-rein ein="Wüstensand>WÜSTENSAND"] Aber unter dir ist nur Wüstensand. Dein Turm sackt weg und kippt.
+// 9 s – Lösung: Bohrpfähle
+[baustelle ansicht=boden pfaehle=0>1 zoom-rein ein="fünfzig>50 METER TIEF"] Also bohrst du Pfähle in den Boden, fünfzig Meter tief.
+[titel oben="Bohrpfähle" gross="192" unten="je 1,5 Meter dick" farbe=#5a2a1a akzent=#ffc070 groesse=190 hud=false zoom-rein] Hundertzweiundneunzig Stück, jeder anderthalb Meter dick.
+// 17 s – Rehook: neues, größeres Problem
+[baustelle ansicht=boden pfaehle=1 wasser rost zoom-rein ein="salzig>SALZWASSER"] Aber das Grundwasser hier ist salzig. Es frisst den Stahl in deinen Pfählen.
+// 22 s – Lösung: Korrosionsschutz
+[baustelle ansicht=boden pfaehle=1 wasser strom zoom-rein ein="Strom>STROM GEGEN ROST"] Also schickst du schwachen Strom durch den Boden. Der schützt vor Rost.
+[baustelle ansicht=boden pfaehle=1 wasser strom platte=0>1 zoom-rein ein="vier>3,7 METER"] Darauf gießt du eine Betonplatte, fast vier Meter dick.
+
+== Schleife 2: Hitze und Höhe ==
+// 31 s – Einsatz 2: der Turm wächst
+[baustelle hoehe=0>140 kran mischer wachsen=3.5 zoom-rein] Jetzt wächst dein Turm.
+// 33 s – Finte 2: Hitze
+[objekt objekte="feuer:50 Grad|tropfen:Beton" gross="ZU HEISS" palette=orange zoom-rein ein="fünfzig>50 °C"] Aber bei fünfzig Grad wird Beton zu schnell hart und reißt.
+// 37 s – Lösung: nachts und mit Eis
+[baustelle zeit=nacht hoehe=140>280 mischer kran pumpe zoom-rein ein="Eis>EIS IM BETON"] Also gießt du nachts. Und statt Wasser kommt Eis in den Beton.
+// 42 s – Rehook: Höhe
+[baustelle zeit=nacht hoehe=280>430 pumpe kran zoom-rein] Aber je höher du kommst, desto weiter muss der Beton nach oben.
+[titel oben="Beton gepumpt" gross="601 m" unten="Weltrekord" farbe=#14204a akzent=#9fc4ff groesse=190 hud=false zoom-rein] Also baust du Pumpen, die ihn über sechshundert Meter hochdrücken.
+
+== Schleife 3: Wind und Spitze ==
+// 51 s – Finte 3: Wind
+[baustelle hoehe=450 wind=wirbel kran zoom-rein ein="Wirbel>WINDWIRBEL"] Aber da oben bilden sich Wirbel im Wind, und dein Turm fängt an zu schwingen.
+// 55 s – Lösung: Y-Form mit Rücksprüngen
+[baustelle hoehe=450>630 wind=ruhig kran wachsen=3 zoom-rein ein="Flügel>Y-FORM"] Also baust du ihn in Y-Form, und immer wieder springt ein Flügel zurück.
+[baustelle hoehe=630 wind=ruhig zoom-rein ein="zweimal>40 TESTS IM WINDKANAL"] So trifft der Wind nie zweimal dieselbe Form.
+// 62 s – Rehook: Spitze
+[baustelle zeit=abend hoehe=630 kran zoom-rein ein="Spitze>DIE SPITZE"] Aber für die Spitze kommt kein Kran mehr hoch genug.
+[baustelle zeit=abend hoehe=630 spitze=0>1 wachsen=3 zoom-rein ein="zweihundert>200 METER"] Also baust du die Stahlnadel innen und schiebst sie zweihundert Meter hoch.
+// 70 s – Ende: harte Pointe
+[baustelle zeit=nacht hoehe=630 spitze=1 lichter zoom-rein ein="achtundzwanzig>828 METER"] Achthundertachtundzwanzig Meter.
+[baustelle zeit=nacht hoehe=630 spitze=1 lichter du figur_y=1660] Glückwunsch. Du hast gerade den Burj Khalifa gebaut.

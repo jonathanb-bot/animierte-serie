@@ -1,0 +1,176 @@
+{
+ "dauer": 70.466,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "baustelle",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 4.838,
+   "emotion": "erzaehlend",
+   "text": "Du willst das höchste Haus der Welt bauen? Dann stapelst du einfach Stockwerke."
+  },
+  {
+   "nr": 2,
+   "typ": "baustelle",
+   "kapitel": 1,
+   "start": 4.838,
+   "dauer": 4.982,
+   "emotion": "erzaehlend",
+   "text": "Aber unter dir ist nur Wüstensand. Dein Turm sackt weg und kippt."
+  },
+  {
+   "nr": 3,
+   "typ": "baustelle",
+   "kapitel": 1,
+   "start": 9.82,
+   "dauer": 3.566,
+   "emotion": "erzaehlend",
+   "text": "Also bohrst du Pfähle in den Boden, fünfzig Meter tief."
+  },
+  {
+   "nr": 4,
+   "typ": "titel",
+   "kapitel": 1,
+   "start": 13.386,
+   "dauer": 3.326,
+   "emotion": "erzaehlend",
+   "text": "Hundertzweiundneunzig Stück, jeder anderthalb Meter dick."
+  },
+  {
+   "nr": 5,
+   "typ": "baustelle",
+   "kapitel": 1,
+   "start": 16.712,
+   "dauer": 4.934,
+   "emotion": "erzaehlend",
+   "text": "Aber das Grundwasser hier ist salzig. Es frisst den Stahl in deinen Pfählen."
+  },
+  {
+   "nr": 6,
+   "typ": "baustelle",
+   "kapitel": 1,
+   "start": 21.646,
+   "dauer": 6.35,
+   "emotion": "erzaehlend",
+   "text": "Also schickst du schwachen Strom durch den Boden. Der schützt vor Rost."
+  },
+  {
+   "nr": 7,
+   "typ": "baustelle",
+   "kapitel": 1,
+   "start": 27.996,
+   "dauer": 1.694,
+   "emotion": "erzaehlend",
+   "text": "Darauf gießt du eine Betonplatte, fast vier Meter dick."
+  },
+  {
+   "nr": 8,
+   "typ": "baustelle",
+   "kapitel": 2,
+   "start": 29.69,
+   "dauer": 1.742,
+   "emotion": "erzaehlend",
+   "text": "Jetzt wächst dein Turm."
+  },
+  {
+   "nr": 9,
+   "typ": "objekt",
+   "kapitel": 2,
+   "start": 31.432,
+   "dauer": 3.638,
+   "emotion": "erklaerend",
+   "text": "Aber bei fünfzig Grad wird Beton zu schnell hart und reißt."
+  },
+  {
+   "nr": 10,
+   "typ": "baustelle",
+   "kapitel": 2,
+   "start": 35.07,
+   "dauer": 3.926,
+   "emotion": "erzaehlend",
+   "text": "Also gießt du nachts. Und statt Wasser kommt Eis in den Beton."
+  },
+  {
+   "nr": 11,
+   "typ": "baustelle",
+   "kapitel": 2,
+   "start": 38.996,
+   "dauer": 3.422,
+   "emotion": "erzaehlend",
+   "text": "Aber je höher du kommst, desto weiter muss der Beton nach oben."
+  },
+  {
+   "nr": 12,
+   "typ": "titel",
+   "kapitel": 2,
+   "start": 42.418,
+   "dauer": 3.302,
+   "emotion": "erzaehlend",
+   "text": "Also baust du Pumpen, die ihn über sechshundert Meter hochdrücken."
+  },
+  {
+   "nr": 13,
+   "typ": "baustelle",
+   "kapitel": 3,
+   "start": 45.72,
+   "dauer": 4.598,
+   "emotion": "erzaehlend",
+   "text": "Aber da oben bilden sich Wirbel im Wind, und dein Turm fängt an zu schwingen."
+  },
+  {
+   "nr": 14,
+   "typ": "baustelle",
+   "kapitel": 3,
+   "start": 50.318,
+   "dauer": 4.694,
+   "emotion": "erzaehlend",
+   "text": "Also baust du ihn in Y-Form, und immer wieder springt ein Flügel zurück."
+  },
+  {
+   "nr": 15,
+   "typ": "baustelle",
+   "kapitel": 3,
+   "start": 55.012,
+   "dauer": 2.582,
+   "emotion": "erzaehlend",
+   "text": "So trifft der Wind nie zweimal dieselbe Form."
+  },
+  {
+   "nr": 16,
+   "typ": "baustelle",
+   "kapitel": 3,
+   "start": 57.594,
+   "dauer": 2.798,
+   "emotion": "erzaehlend",
+   "text": "Aber für die Spitze kommt kein Kran mehr hoch genug."
+  },
+  {
+   "nr": 17,
+   "typ": "baustelle",
+   "kapitel": 3,
+   "start": 60.392,
+   "dauer": 4.358,
+   "emotion": "erzaehlend",
+   "text": "Also baust du die Stahlnadel innen und schiebst sie zweihundert Meter hoch."
+  },
+  {
+   "nr": 18,
+   "typ": "baustelle",
+   "kapitel": 3,
+   "start": 64.75,
+   "dauer": 2.294,
+   "emotion": "erzaehlend",
+   "text": "Achthundertachtundzwanzig Meter."
+  },
+  {
+   "nr": 19,
+   "typ": "baustelle",
+   "kapitel": 3,
+   "start": 67.044,
+   "dauer": 3.422,
+   "emotion": "erzaehlend",
+   "text": "Glückwunsch. Du hast gerade den Burj Khalifa gebaut."
+  }
+ ]
+}
