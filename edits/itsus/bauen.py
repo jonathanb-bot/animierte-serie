@@ -1,4 +1,4 @@
-# „IT'S US“ (Bartofso feat. Murda) – Luxus-Vlog im Stil des Vorbilds: 4:3-Camcorder-Look, Schnitt auf jeden Beat (130 BPM),
+# „IT'S US“ (Bartofso feat. Murda) – Luxus-Vlog im Stil des Vorbilds: 4:3, Handykamera-Look (v2: Monaco, Hypercars, Geld, Clubs, Drogen; keine Kerzen), Schnitt auf jeden Beat (130 BPM),
 # Song-Ausschnitt 24,15–36,92 s (gleiche Stelle wie im Vorbild-TikTok). Nur Clips ohne Menschen (Pexels).
 import subprocess, random, sys
 A, D, FPS = 24.15, 12.77, 60
@@ -6,12 +6,14 @@ P = 0.4635
 schnitte = [0.0] + [round(0.47 + k * P, 3) for k in range(27) if 0.47 + k * P < D - 0.2]
 schnitte += [1.97, 2.07, 2.2, 2.93, 3.07, 8.47, 8.6]          # kurze Schnell-Folgen wie im Vorbild
 schnitte = sorted(set(schnitte))
-CLIPS = ["34555902", "26799497", "11506224", "34867881", "8747374", "32062451", "10811089", "18837288", "34867895", "15434655",
-         "7707975", "11918056", "855139", "8436074", "39596655", "32054939", "34867891", "16577325", "10809162", "6396170",
-         "36735250", "35747920", "8747848", "20203971", "34867896", "8436070", "18607791"]
+CLIPS = ["29498800", "11957603", "6266286", "12748107", "11506224", "29498825", "13086642", "10223447", "32346349", "5309319",
+         "13367423", "12890562", "29498822", "4393479", "5011044", "8747374", "39497373", "29498807", "3752538", "7269180",
+         "40061525", "11957604", "7231380", "29498826", "39472138", "11918056", "10630297", "31541618", "3960019", "32068488",
+         "29498796", "6396170", "35353790", "29498827", "14052141", "10809162"]
 random.seed(7)
-LOOK = ("scale=720:540,lenscorrection=k1=-0.16:k2=-0.03,vignette=angle=PI/4.2,eq=contrast=1.06:saturation=1.12:gamma=1.04,"
-        "colorbalance=rh=0.03:gh=0.01:bs=0.02,noise=alls=9:allf=t,scale=1440:1080:flags=lanczos,unsharp=5:5:0.4")
+# Handykamera-Look: iPhone-Ultraweitwinkel (leichte Tonnenverzeichnung), scharf, kräftige Farben, leicht verwackelt aus der Hand
+LOOK = ("crop=1340:1005:'50+38*sin(t*6.1)+14*sin(t*13.7)':'37+26*sin(t*4.7)+10*sin(t*11.3)',scale=1440:1080,"
+        "lenscorrection=k1=-0.09:k2=-0.01,eq=contrast=1.07:saturation=1.16:gamma=0.98,unsharp=5:5:0.7,noise=alls=3:allf=t")
 teile = []
 for i, t0 in enumerate(schnitte):
     t1 = schnitte[i + 1] if i + 1 < len(schnitte) else D
