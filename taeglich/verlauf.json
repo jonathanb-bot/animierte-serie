@@ -867,7 +867,17 @@
      "parents",
      "story"
     ],
-    "kommentar_frage": "How many evenings a week do you actually spend with your parents right now?"
+    "kommentar_frage": "How many evenings a week do you actually spend with your parents right now?",
+    "veroeffentlicht": {
+     "video": "https://raw.githubusercontent.com/jonathanb-bot/animierte-serie/youtube-upload/taeglich/nische-n001-en.mp4",
+     "geplant": {
+      "tiktok": "2026-11-23T01:27:00",
+      "instagram": "2026-11-22T21:44:00",
+      "youtube": "2026-11-22T23:14:00"
+     },
+     "lufs": -14.6,
+     "dauer_s": 69.42
+    }
    },
    "veroeffentlicht": {
     "video": "https://raw.githubusercontent.com/jonathanb-bot/animierte-serie/youtube-upload/taeglich/nische-n001.mp4",
