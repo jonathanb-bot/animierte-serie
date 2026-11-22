@@ -1,0 +1,116 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face { font-family: "Fraktur"; src: url("assets/Fraktur.woff2"); }
+@font-face { font-family: "Pirata"; src: url("assets/Pirata.woff2"); }
+html,body{margin:0;background:#000}canvas{display:block}
+</style></head><body>
+<canvas id="c"></canvas>
+<script>
+// Nur kurze Videoclips (Pexels: Supersportwagen, Uhren, Dollar, Städte bei Nacht), komplett Schwarz-Weiß im 2000er-Digicam-Look (480 px, JPEG-Artefakte, Blitz, Datumsstempel). Dark-Y2K-Money-Vorlage zu „All I Need“ (Clams Casino) – Schnitt auf jeden Schlag, Schwarz-Weiß-Flackern, Chrom-Fraktur, Y2K-Kamera, Glitzersterne. Nur Objekte, keine Personen.
+const W = 1080, H = 1920, K = 1440 / 1080;
+const cv = document.getElementById("c"); cv.width = W * K; cv.height = H * K; let ctx = cv.getContext("2d");
+const P = 0.857, B0 = 0.335, BASS = B0 + 14 * P, DROP = B0 + 19 * P, ENDE = 38.04; const MODUS = new URLSearchParams(location.search).get("modus") || "normal";
+const clamp = (v, a, b) => Math.max(a, Math.min(b, v)), lerp = (a, b, t) => a + (b - a) * t, raus = p => 1 - Math.pow(1 - clamp(p, 0, 1), 3);
+const lade = src => new Promise(r => { const i = new Image(); i.onload = () => r(i); i.onerror = () => { console.error("fehlt " + src); r(null); }; i.src = src; });
+const VOR = ["city_10093263", "city_11335976", "city_11897914", "city_14300105", "city_30951537", "city_32258501", "city_34195865", "city_34398886", "city_34835534", "city_35379336", "city_39481322", "city_5422261", "city_9847377"];
+const LISTE = ["auto_28585500", "uhr_12560215", "geld_5651586", "city_10093263", "auto_30280409", "uhr_12560234", "geld_6590509", "city_11335976", "auto_32779590", "uhr_12976044", "geld_6590510", "city_11897914", "auto_34587597", "uhr_12976045", "geld_6590513", "city_14300105", "auto_35353790", "uhr_12976047", "geld_6590514", "city_30951537", "auto_36110192", "uhr_41044293", "geld_6590515", "city_32258501", "auto_39371050", "uhr_12560215", "geld_5651586", "city_34195865", "auto_39421357", "uhr_12560234", "geld_6590509", "city_34398886", "auto_39811492", "uhr_12976044", "geld_6590510", "city_34835534", "auto_40061525", "uhr_12976045", "geld_6590513", "city_35379336", "auto_40454624", "uhr_12976047", "geld_6590514", "city_39481322", "auto_40454881", "uhr_41044293", "geld_6590515", "city_5422261", "auto_40455419", "uhr_12560215", "geld_5651586", "city_9847377", "auto_40575061", "uhr_12560234", "geld_6590509", "city_10093263", "auto_40575080", "uhr_12976044", "geld_6590510", "city_11335976", "auto_41022673", "uhr_12976045", "geld_6590513", "city_11897914", "auto_28585500", "uhr_12976047", "geld_6590514", "city_14300105", "auto_30280409", "uhr_41044293", "geld_6590515", "city_30951537", "auto_32779590", "uhr_12560215", "geld_5651586", "city_32258501", "auto_34587597", "uhr_12560234", "geld_6590509", "city_34195865", "auto_35353790", "uhr_12976044", "geld_6590510", "city_34398886", "auto_36110192", "uhr_12976045", "geld_6590513", "city_34835534", "auto_39371050", "uhr_12976047", "geld_6590514", "city_35379336", "auto_39421357", "uhr_41044293", "geld_6590515", "city_39481322", "auto_39811492", "uhr_12560215", "geld_5651586", "city_5422261", "auto_40061525", "uhr_12560234", "geld_6590509", "city_9847377", "auto_40454624", "uhr_12976044", "geld_6590510", "city_10093263", "auto_40454881", "uhr_12976045", "geld_6590513", "city_11335976", "auto_40455419", "uhr_12976047", "geld_6590514", "city_11897914", "auto_40575061", "uhr_41044293", "geld_6590515", "city_14300105", "auto_40575080", "uhr_12560215", "geld_5651586", "city_30951537", "auto_41022673", "uhr_12560234", "geld_6590509", "city_32258501", "auto_28585500", "uhr_12976044", "geld_6590510", "city_34195865", "auto_30280409", "uhr_12976045", "geld_6590513", "city_34398886", "auto_32779590", "uhr_12976047", "geld_6590514", "city_34835534", "auto_34587597", "uhr_41044293", "geld_6590515", "city_35379336", "auto_35353790", "uhr_12560215", "geld_5651586", "city_39481322", "auto_36110192", "uhr_12560234", "geld_6590509", "city_5422261", "auto_39371050", "uhr_12976044", "geld_6590510", "city_9847377", "auto_39421357", "uhr_12976045", "geld_6590513", "city_10093263", "auto_39811492", "uhr_12976047", "geld_6590514", "city_11335976", "auto_40061525", "uhr_41044293", "geld_6590515", "city_11897914", "auto_40454624", "uhr_12560215", "geld_5651586", "city_14300105", "auto_40454881", "uhr_12560234", "geld_6590509", "city_30951537", "auto_40455419", "uhr_12976044", "geld_6590510", "city_32258501", "auto_40575061", "uhr_12976045", "geld_6590513", "city_34195865", "auto_40575080", "uhr_12976047", "geld_6590514", "city_34398886", "auto_41022673", "uhr_41044293", "geld_6590515", "city_34835534", "auto_28585500", "uhr_12560215", "geld_5651586", "city_35379336", "auto_30280409", "uhr_12560234", "geld_6590509", "city_39481322", "auto_32779590", "uhr_12976044", "geld_6590510", "city_5422261", "auto_34587597", "uhr_12976045", "geld_6590513", "city_9847377", "auto_35353790", "uhr_12976047", "geld_6590514", "city_10093263", "auto_36110192", "uhr_41044293", "geld_6590515", "city_11335976", "auto_39371050", "uhr_12560215", "geld_5651586", "city_11897914", "auto_39421357", "uhr_12560234", "geld_6590509", "city_14300105", "auto_39811492", "uhr_12976044", "geld_6590510", "city_30951537", "auto_40061525", "uhr_12976045", "geld_6590513", "city_32258501", "auto_40454624", "uhr_12976047", "geld_6590514", "city_34195865", "auto_40454881", "uhr_41044293", "geld_6590515", "city_34398886"];
+const CLIPN = {"auto_28585500": 75, "auto_30280409": 75, "auto_32779590": 75, "auto_34587597": 75, "auto_35353790": 75, "auto_36110192": 75, "auto_39371050": 75, "auto_39421357": 75, "auto_39811492": 75, "auto_40061525": 75, "auto_40454624": 75, "auto_40454881": 75, "auto_40455419": 75, "auto_40575061": 75, "auto_40575080": 75, "auto_41022673": 75, "city_10093263": 75, "city_11335976": 75, "city_11897914": 75, "city_14300105": 75, "city_30951537": 75, "city_32258501": 75, "city_34195865": 75, "city_34398886": 75, "city_34835534": 75, "city_35379336": 75, "city_39481322": 75, "city_5422261": 75, "city_9847377": 75, "geld_5651586": 75, "geld_6590509": 75, "geld_6590510": 75, "geld_6590513": 74, "geld_6590514": 75, "geld_6590515": 75, "uhr_12560215": 75, "uhr_12560234": 75, "uhr_12976044": 75, "uhr_12976045": 75, "uhr_12976047": 75, "uhr_41044293": 75};
+const CACHE = new Map(); const KORN = []; let OFF, SW;
+async function init() {
+  await document.fonts.load('100px "Fraktur"'); await document.fonts.load('100px "Pirata"');
+  for (let k = 0; k < 6; k++) { const g = document.createElement("canvas"); g.width = 540; g.height = 960; const c = g.getContext("2d"), d = c.createImageData(540, 960);
+    for (let i = 0; i < d.data.length; i += 4) { const v = Math.random() * 255; d.data[i] = d.data[i + 1] = d.data[i + 2] = v; d.data[i + 3] = 30; } c.putImageData(d, 0, 0); KORN.push(g); }
+  SW = document.createElement("canvas"); SW.width = W * K; SW.height = H * K;
+  OFF = document.createElement("canvas"); OFF.width = W * K; OFF.height = 700 * K;
+  window.bereit = true;
+}
+// ---------- Schnittplan ----------
+// Vorspann: 4 Schläge Röhrenfernseher. Danach jeder Schlag ein Bild, Takt 5–8 doppelt so schnell (halbe Schläge).
+const SCHNITTE = [];
+(function () { const S = MODUS === "schnell"; let i = 0, v = 0;
+  // Anfang des Songs (ruhig): Städte bei Nacht. normal alle 2 Schläge, schnell jeden halben Schlag
+  SCHNITTE.push({ t: 0, b: VOR[v++ % VOR.length], vor: true });
+  for (let k = 1; k < 14; k++) { const teile = S ? 2 : (k % 2 === 0 ? 1 : 0); for (let q = 0; q < teile; q++) SCHNITTE.push({ t: B0 + k * P + q * P / teile, b: q % 2 || !S ? LISTE[i++ % LISTE.length] : VOR[v++ % VOR.length], vor: true }); }
+  // Bass setzt ein: normal jeder Schlag, schnell vier pro Schlag
+  for (let k = 14; k < 19; k++) { const teile = S ? 4 : 1; for (let q = 0; q < teile; q++) SCHNITTE.push({ t: B0 + k * P + q * P / teile, b: LISTE[i++ % LISTE.length], k }); }
+  // Drop: normal jeder Schlag, schnell vier pro Schlag, in Takt 3–4 acht pro Schlag
+  for (let k = 19; k < 44; k++) { const takt = Math.floor((k - 19) / 4); const teile = S ? (takt === 2 || takt === 3 ? 8 : 4) : 1;
+    for (let q = 0; q < teile; q++) SCHNITTE.push({ t: B0 + k * P + q * P / teile, b: LISTE[i++ % LISTE.length], k }); } })();
+(function () { const zaehl = {}; for (let i = 0; i < SCHNITTE.length; i++) { const c = SCHNITTE[i]; c.e = i + 1 < SCHNITTE.length ? SCHNITTE[i + 1].t : ENDE; const n = CLIPN[c.b] || 60, z = zaehl[c.b] = (zaehl[c.b] || 0) + 1, len = Math.ceil((c.e - c.t) * 30) + 2;
+  c.off = Math.max(0, Math.min(n - len, ((z * 23) % Math.max(1, n - len)))); } })();
+function bildPfad(c, T) { const n = CLIPN[c.b] || 60, f = Math.min(n, c.off + 1 + Math.floor((T - c.t) * 30)); return `clips2000/${c.b}/${String(f).padStart(3, "0")}.jpg`; }
+function schnittBei(T) { let s = SCHNITTE[0], n = 0; for (let i = 0; i < SCHNITTE.length; i++) if (T >= SCHNITTE[i].t) { s = SCHNITTE[i]; n = i; } return [s, n]; }
+// ---------- Bild ----------
+function deck(im, T, t0, n, filter) { if (!im) return; const d = T - t0, z = 1.08 + d * 0.06 + (n % 3 === 0 ? 0.05 : 0), s = Math.max(W / im.width, H / im.height) * z, bw = im.width * s, bh = im.height * s;
+  const dx = (n % 2 ? -1 : 1) * d * 18, dy = (n % 4 < 2 ? 1 : -1) * d * 10; ctx.save(); ctx.imageSmoothingQuality = "low"; ctx.filter = filter; ctx.drawImage(im, W / 2 - bw / 2 + dx, H / 2 - bh / 2 + dy, bw, bh); ctx.restore(); }
+// ---------- 2000er-Foto ----------
+// direkter Kamerablitz: heller Kern, harter Abfall zu dunklen Rändern
+function blitzlicht() { ctx.save(); ctx.globalCompositeOperation = "soft-light"; const g = ctx.createRadialGradient(W / 2, H * 0.45, 40, W / 2, H * 0.45, H * 0.62); g.addColorStop(0, "rgba(255,255,255,0.55)"); g.addColorStop(0.55, "rgba(255,255,255,0)"); g.addColorStop(1, "rgba(0,0,0,0.8)"); ctx.fillStyle = g; ctx.fillRect(0, 0, W, H); ctx.restore(); }
+// Datumsstempel wie auf Digicam-Fotos um 2000
+function datum(T) { const tk = Math.floor((T - DROP) / (4 * P)); if (T < BASS || (T >= DROP && tk === 4)) return; const [s, n] = schnittBei(T); const tag = 1 + (n * 7) % 28, mon = 1 + (n * 5) % 12, jahr = ["00", "01", "02", "03", "04"][n % 5];
+  ctx.save(); ctx.font = "700 46px monospace"; ctx.textAlign = "right"; ctx.fillStyle = "rgba(240,240,240,0.85)"; ctx.shadowColor = "rgba(255,255,255,0.6)"; ctx.shadowBlur = 8; ctx.fillText(`'${jahr} ${String(mon).padStart(2, " ")} ${String(tag).padStart(2, " ")}`, W - 80, H - 380); ctx.restore(); }
+// ---------- Effekte ----------
+function rgbVersatz(st) { if (st <= 0.01) return; const src = cv; ctx.save(); ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.globalCompositeOperation = "screen"; ctx.globalAlpha = 0.5 * st;
+  ctx.filter = "grayscale(1)"; ctx.drawImage(src, 18 * st * K, 0); ctx.drawImage(src, -18 * st * K, 0); ctx.restore(); }
+function zeilen(T, a = 0.12) { ctx.save(); ctx.globalAlpha = a; ctx.fillStyle = "#000"; for (let y = (T * 120) % 6; y < H; y += 6) ctx.fillRect(0, y, W, 2); ctx.restore(); }
+function vignette() { const v = ctx.createRadialGradient(W / 2, H / 2, H * 0.25, W / 2, H / 2, H * 0.75); v.addColorStop(0, "rgba(0,0,0,0)"); v.addColorStop(1, "rgba(0,0,0,0.75)"); ctx.fillStyle = v; ctx.fillRect(0, 0, W, H); }
+function funkel(x, y, r, a) { if (a <= 0) return; ctx.save(); ctx.globalCompositeOperation = "screen"; ctx.globalAlpha = a; ctx.translate(x, y);
+  const g = ctx.createRadialGradient(0, 0, 0, 0, 0, r * 0.9); g.addColorStop(0, "rgba(255,255,255,0.9)"); g.addColorStop(1, "rgba(255,255,255,0)"); ctx.fillStyle = g; ctx.beginPath(); ctx.arc(0, 0, r * 0.9, 0, Math.PI * 2); ctx.fill();
+  ctx.fillStyle = "#fff"; for (const rot of [0, Math.PI / 2]) { ctx.save(); ctx.rotate(rot); ctx.beginPath(); ctx.moveTo(-r * 2.2, 0); ctx.quadraticCurveTo(0, r * 0.12, r * 2.2, 0); ctx.quadraticCurveTo(0, -r * 0.12, -r * 2.2, 0); ctx.fill(); ctx.restore(); } ctx.restore(); }
+function kreuz(x, y, s, a) { ctx.save(); ctx.globalAlpha = a; ctx.translate(x, y); ctx.scale(s, s); ctx.fillStyle = "#e9edf2"; ctx.shadowColor = "rgba(255,255,255,0.6)"; ctx.shadowBlur = 20; ctx.fillRect(-9, -60, 18, 150); ctx.fillRect(-45, -25, 90, 18); ctx.restore(); }
+// Chrom-Schrift: Verlauf wie poliertes Metall, dunkle Kante, wandernder Glanz
+function chrom(text, x, y, fs, a = 1, font = "Fraktur", glanzT = 0) { if (a <= 0) return; const o = OFF.getContext("2d"); o.setTransform(K, 0, 0, K, 0, 0); o.clearRect(0, 0, W, 700);
+  o.font = `${fs}px ${font}`; o.textAlign = "center"; o.textBaseline = "middle"; const cy = 350;
+  o.lineJoin = "round"; o.strokeStyle = "#05060a"; o.lineWidth = fs * 0.09; o.strokeText(text, W / 2, cy);
+  const g = o.createLinearGradient(0, cy - fs * 0.5, 0, cy + fs * 0.5); [[0, "#ffffff"], [0.22, "#d7dce3"], [0.45, "#6c7480"], [0.5, "#2a2f38"], [0.53, "#f4f6f9"], [0.75, "#a9b0ba"], [1, "#eef1f5"]].forEach(([p, c]) => g.addColorStop(p, c));
+  o.fillStyle = g; o.fillText(text, W / 2, cy); o.globalCompositeOperation = "source-atop"; const gx = lerp(-300, W + 300, (glanzT % 1.6) / 1.6); const s = o.createLinearGradient(gx - 140, 0, gx + 140, 0);
+  s.addColorStop(0, "rgba(255,255,255,0)"); s.addColorStop(0.5, "rgba(255,255,255,0.9)"); s.addColorStop(1, "rgba(255,255,255,0)"); o.fillStyle = s; o.fillRect(0, 0, W, 700); o.globalCompositeOperation = "source-over";
+  ctx.save(); ctx.globalAlpha = a; ctx.shadowColor = "rgba(0,0,0,0.85)"; ctx.shadowBlur = 40; ctx.drawImage(OFF, 0, y - 350 + (x - W / 2) * 0, W, 700); ctx.restore(); }
+// Y2K-Digicam-Sucher
+function kamera(T) { ctx.save(); ctx.strokeStyle = "rgba(255,255,255,0.85)"; ctx.lineWidth = 4; const r = 70, m = 70; for (const [x, y, sx, sy] of [[m, 240, 1, 1], [W - m, 240, -1, 1], [m, H - 260, 1, -1], [W - m, H - 260, -1, -1]]) { ctx.beginPath(); ctx.moveTo(x, y + sy * r); ctx.lineTo(x, y); ctx.lineTo(x + sx * r, y); ctx.stroke(); }
+  ctx.font = "700 34px monospace"; ctx.fillStyle = "rgba(255,255,255,0.9)"; if (Math.floor(T * 2) % 2 === 0) { ctx.fillStyle = "#e01e1e"; ctx.beginPath(); ctx.arc(m + 20, 310, 12, 0, Math.PI * 2); ctx.fill(); } ctx.fillStyle = "rgba(255,255,255,0.9)"; ctx.fillText("REC", m + 42, 322);
+  ctx.textAlign = "right"; ctx.fillText("8.0 MP  [■■■□]", W - m, 322); ctx.textAlign = "left"; const s = 7 + Math.floor(T); ctx.fillText(`2004.11.22  03:${String(33 + Math.floor(s / 60)).padStart(2, "0")}:${String(s % 60).padStart(2, "0")}`, m, H - 300);
+  ctx.textAlign = "right"; ctx.fillText("ISO 1600  F2.8", W - m, H - 300); ctx.strokeStyle = "rgba(255,255,255,0.5)"; ctx.lineWidth = 2; ctx.strokeRect(W / 2 - 60, H / 2 - 40, 120, 80); ctx.restore(); }
+// ---------- Bild zusammensetzen ----------
+const WOERTER = [[DROP, 3 * P, "All I Need", 200, "Fraktur"], [DROP + 8 * P, 2 * P, "MONEY", 210, "Pirata"], [DROP + 16 * P, 2 * P, "no love", 210, "Fraktur"], [DROP + 24 * P, 2 * P, "2OO4", 240, "Pirata"], [DROP + 32 * P, 2 * P, "chrome", 210, "Fraktur"], [ENDE - 3.3, 3.3, "All I Need", 200, "Fraktur"]];
+window.laden = async T => { const noetig = new Set();
+  for (const c of SCHNITTE) { if (c.e < T - 0.05 || c.t > T + 0.5) continue; for (let t = Math.max(c.t, T - 0.05); t < Math.min(c.e, T + 0.5); t += 1 / 30) noetig.add(bildPfad(c, t)); noetig.add(bildPfad(c, Math.min(c.e - 0.001, T + 0.5))); }
+  for (const k of [...CACHE.keys()]) if (!noetig.has(k)) CACHE.delete(k);
+  await Promise.all([...noetig].filter(p => !CACHE.has(p)).map(async p => CACHE.set(p, await lade(p)))); };
+window.zeichne = T => {
+  ctx.setTransform(K, 0, 0, K, 0, 0); ctx.filter = "none"; ctx.globalAlpha = 1; ctx.fillStyle = "#000"; ctx.fillRect(0, 0, W, H);
+  const [s, n] = schnittBei(T), d = T - s.t, schlag = Math.floor((T - B0) / P), imSchlag = T - B0 - schlag * P, taktEins = (schlag - 19) % 4 === 0 && T >= DROP;
+  // Zoom-Stoß auf jeden Schlag, stärker auf der Eins
+  const stoss = T < B0 ? 0 : Math.exp(-imSchlag / 0.09) * (taktEins ? 0.06 : 0.03) * (T >= DROP ? 1 : T >= BASS ? 0.6 : 0.25);
+  ctx.save(); ctx.translate(W / 2, H / 2); ctx.scale(1 + stoss, 1 + stoss); ctx.rotate((schlag % 2 ? 1 : -1) * stoss * 0.15); ctx.translate(-W / 2, -H / 2);
+  // Schwarz-Weiß-Wechsel: harte S/W-Bilder, kurz nach jedem Schnitt flackert es zwischen S/W, Farbe und Negativ
+  const sw = (n % 2 === 0), fl = Math.floor(d / 0.055);
+  let filter = sw ? "grayscale(1) contrast(1.35) brightness(0.9)" : "grayscale(1) contrast(1.8) brightness(0.75)";
+  if (T >= DROP && d < (MODUS === "schnell" ? 0.06 : 0.17)) filter = fl % 2 === 0 ? (sw ? "grayscale(1) contrast(2.2) brightness(1.25)" : "grayscale(1) contrast(1.1) brightness(0.6)") : (taktEins && fl === 1 ? "invert(1) grayscale(1) contrast(1.4)" : filter);
+  deck(CACHE.get(bildPfad(s, T)), T, s.t, n, filter); ctx.restore();
+  // Farbe: kaltes Blau in den Schatten, Rot-Stich in den Farb-Bildern (Opium-Look)
+  datum(T);
+  vignette(); zeilen(T, 0.1);
+  if (false) { ctx.save(); ctx.globalAlpha = 0.18 + 0.1 * Math.sin(T * 40); ctx.drawImage(KORN[Math.floor(T * 30) % 6], 0, 0, W, H); ctx.drawImage(KORN[(Math.floor(T * 30) + 3) % 6], 0, 0, W, H); ctx.restore(); }
+  // Weiß-/Schwarz-Blitz auf jeder Eins
+  if (taktEins && imSchlag < 0.08) { ctx.fillStyle = `rgba(255,255,255,${0.75 * (1 - imSchlag / 0.08)})`; ctx.fillRect(0, 0, W, H); }
+  if (Math.abs(T - DROP) < 0.12) { ctx.fillStyle = `rgba(255,255,255,${1 - Math.abs(T - DROP) / 0.12})`; ctx.fillRect(0, 0, W, H); }
+  // Y2K-Kamera in Takt 3–4 und 9–10
+  const takt = Math.floor((T - DROP) / (4 * P)); if (T < BASS || (T >= DROP && takt === 4)) kamera(T);
+  // Kreuze und Funkeln
+  if (T >= DROP) { for (let i = 0; i < 5; i++) { const ph = (T * 1.3 + i * 0.37) % 1, x = (i * 271 + schlag * 97) % (W - 160) + 80, y = (i * 433 + schlag * 151) % (H - 600) + 300; funkel(x, y, 26 + (i % 3) * 14, Math.sin(ph * Math.PI) * (n % 3 === 0 ? 1 : 0.5)); }
+    if (takt >= 2 && takt < 4) { const a = Math.max(0, 1 - imSchlag / (P * 0.8)) * 0.85; kreuz(W * 0.18, H * 0.2, 0.9, a); kreuz(W * 0.82, H * 0.78, 0.9, a); } }
+  // Chrom-Wörter
+  if (false) for (const [t0, dauer, text, fs, font] of WOERTER) { const dd = T - t0; if (dd < 0 || dd > dauer) continue; const a = clamp(dd / 0.06, 0, 1) * clamp((dauer - dd) / 0.15, 0, 1) * (Math.floor(dd / 0.07) % 7 === 3 ? 0.4 : 1);
+    const sc = lerp(1.25, 1, raus(dd / 0.2)); ctx.save(); ctx.translate(W / 2, H / 2); ctx.scale(sc, sc); ctx.translate(-W / 2, -H / 2); chrom(text, W / 2, H / 2, fs, a, font, dd); ctx.restore();
+    funkel(W / 2 + fs * 1.3, H / 2 - fs * 0.45, 30, Math.sin(clamp(dd / 0.8, 0, 1) * Math.PI)); }
+  // Farb-Versatz auf den Schlägen
+  rgbVersatz(T >= DROP ? Math.exp(-imSchlag / 0.07) * (taktEins ? 1 : 0.5) : T >= BASS ? Math.exp(-imSchlag / 0.07) * 0.4 : 0);
+  ctx.save(); ctx.globalCompositeOperation = "overlay"; ctx.drawImage(KORN[Math.floor(T * 24) % 6], 0, 0, W, H); ctx.restore();
+  // Sicherheitshalber alles entsättigen: komplett Schwarz-Weiß
+  { const o = SW.getContext("2d"); o.clearRect(0, 0, SW.width, SW.height); o.drawImage(cv, 0, 0); ctx.save(); ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.filter = "grayscale(1)"; ctx.drawImage(SW, 0, 0); ctx.restore(); }
+  const r = ENDE - T; if (r < 0.4) { ctx.fillStyle = `rgba(0,0,0,${1 - r / 0.4})`; ctx.fillRect(0, 0, W, H); }
+};
+init();
+</script></body></html>
