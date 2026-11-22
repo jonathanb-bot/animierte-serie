@@ -1,4 +1,4 @@
-# „IT'S US“ (Bartofso feat. Murda) – Luxus-Vlog im Stil des Vorbilds: 4:3, Handykamera-Look (v2: Monaco, Hypercars, Geld, Clubs, Drogen; keine Kerzen), Schnitt auf jeden Beat (130 BPM),
+# „IT'S US“ (Bartofso feat. Murda) – Luxus-Vlog im Stil des Vorbilds: 4:3 (v3: Retro-Look alte Kamera, verpixelt; Hypercars, Monaco, viel Bargeld, Champagner/Wodka), Schnitt auf jeden Beat (130 BPM),
 # Song-Ausschnitt 24,15–36,92 s (gleiche Stelle wie im Vorbild-TikTok). Nur Clips ohne Menschen (Pexels).
 import subprocess, random, sys
 A, D, FPS = 24.15, 12.77, 60
@@ -6,18 +6,22 @@ P = 0.4635
 schnitte = [0.0] + [round(0.47 + k * P, 3) for k in range(27) if 0.47 + k * P < D - 0.2]
 schnitte += [1.97, 2.07, 2.2, 2.93, 3.07, 8.47, 8.6]          # kurze Schnell-Folgen wie im Vorbild
 schnitte = sorted(set(schnitte))
-CLIPS = ["29498800", "11957603", "6266286", "12748107", "11506224", "29498825", "13086642", "10223447", "32346349", "5309319",
-         "13367423", "12890562", "29498822", "4393479", "5011044", "8747374", "39497373", "29498807", "3752538", "7269180",
-         "40061525", "11957604", "7231380", "29498826", "39472138", "11918056", "10630297", "31541618", "3960019", "32068488",
-         "29498796", "6396170", "35353790", "29498827", "14052141", "10809162"]
+CLIPS = ["29498800", "11957605", "6266434", "39323981", "40455916", "3066463", "6266286", "8967918", "11506224", "11957603",
+         "9675966", "29498825", "40548602", "7727416", "10223447", "11541170", "32346349", "3752538", "13086642", "8967910",
+         "5309319", "4393479", "20153915", "11373228", "40140718", "29498822", "10630297", "7727415", "12748107", "29498807",
+         "6396170", "39497373", "7231380", "3066432", "29498826", "12890562"]
+START = {"9675966": (1.2, 2.8), "11373228": (0.2, 3.0), "7727415": (0.5, 5.0)}
 random.seed(7)
-# Handykamera-Look: iPhone-Ultraweitwinkel (leichte Tonnenverzeichnung), scharf, kräftige Farben, leicht verwackelt aus der Hand
-LOOK = ("crop=1340:1005:'50+38*sin(t*6.1)+14*sin(t*13.7)':'37+26*sin(t*4.7)+10*sin(t*11.3)',scale=1440:1080,"
-        "lenscorrection=k1=-0.09:k2=-0.01,eq=contrast=1.07:saturation=1.16:gamma=0.98,unsharp=5:5:0.7,noise=alls=3:allf=t")
+# Retro-Look wie von einer alten Digitalkamera: niedrige Auflösung, leicht verpixelt (Nearest-Neighbor), etwas Rauschen und
+# warme, leicht ausgewaschene Farben, minimal verwackelt, oranger Datumsstempel unten rechts
+LOOK = ("crop=1380:1035:'30+20*sin(t*5.3)':'22+14*sin(t*4.1)',scale=360:270:flags=area,eq=contrast=1.1:saturation=1.05:gamma=1.03:brightness=0.01,"
+        "colorbalance=rs=0.04:gs=0.01:bs=-0.03:rh=0.03,noise=alls=12:allf=t,scale=1440:1080:flags=neighbor,"
+        "drawtext=fontfile=Inter-Bold.otf:text='22 11 2026':fontsize=46:fontcolor=0xffa23a:x=w-tw-70:y=h-th-60:shadowcolor=0x00000080:shadowx=3:shadowy=3,"
+        "vignette=angle=PI/5")
 teile = []
 for i, t0 in enumerate(schnitte):
     t1 = schnitte[i + 1] if i + 1 < len(schnitte) else D
-    n = round(t1 * FPS) - round(t0 * FPS); clip = CLIPS[i % len(CLIPS)]; ss = round(random.uniform(0.3, 5.5), 2)
+    n = round(t1 * FPS) - round(t0 * FPS); clip = CLIPS[i % len(CLIPS)]; ss = round(random.uniform(*START.get(clip, (0.3, 5.5))), 2)
     aus = f"teil/{i:02d}.mp4"; teile.append(aus)
     subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-ss", str(ss), "-i", f"roh/{clip}.mp4", "-an", "-vf", f"fps={FPS},{LOOK}", "-frames:v", str(n),
                     "-c:v", "libx264", "-crf", "12", "-preset", "fast", "-pix_fmt", "yuv420p", aus], check=True)
