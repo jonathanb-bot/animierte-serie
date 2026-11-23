@@ -1,0 +1,12 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<!-- Fotostudio der Bibliothek (katalog.js). Name des Elements klein oben links. -->
+<style>
+  html,body{margin:0;background:#000;overflow:hidden}
+  #wrap{position:relative;width:720px;height:1280px;overflow:hidden}
+  canvas{display:block}
+  #cap{position:absolute;left:18px;top:14px;font:900 34px "Inter Display","Inter",sans-serif;color:#ffe53a;-webkit-text-stroke:6px #0a0a0a;paint-order:stroke fill}
+</style>
+<script type="importmap">{"imports":{"three":"./node_modules/three/build/three.module.min.js","three/addons/":"./node_modules/three/examples/jsm/"}}</script>
+</head><body><div id="wrap"><div id="cap"></div></div>
+<script type="module">await import("/katalog.js");</script></body></html>

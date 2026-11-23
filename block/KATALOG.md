@@ -1,5 +1,7 @@
 # Bibliothek Blockstadt – was es schon gibt (vor jeder neuen Folge lesen)
 
+**Vorschaubilder aller Elemente:** Server starten (`python3 -m http.server 8767 --directory block`), dann `node block/katalog_bilder.cjs alle` → `block/katalog/<name>.jpg` und `block/katalog/uebersicht.jpg`. Das Fotostudio (`katalog.html` und `katalog.js`) zeigt jedes Element im echten Serien-Look. Vorbild-Videos vergleicht der Skill `bibliothek` (`.claude/skills/bibliothek/`); die Berichte liegen in `block/vergleiche/`.
+
 Ziel (Jonathan 23.11.): Jede Folge setzt sich aus fertigen, geprüften Teilen zusammen. Das spart Arbeit, und die Qualität bleibt mindestens gleich.
 
 - **Neue Teile gehören in die Bibliothek**, nicht in die Folge, und kommen in diese Liste.
@@ -26,6 +28,7 @@ Ziel (Jonathan 23.11.): Jede Folge setzt sich aus fertigen, geprüften Teilen zu
 `figur({haut, hemd, hose, haare, frisur, helm, weste, muetze, abzeichen, brille, kapuze, schal, skala, schuhe})`
 - Frisuren: kurz, zopf, dutt, strubbel, glatze.
 - Neu (23.11.): `jacke` (offene Jacke über dem Hemd, z. B. Lehrer), `brust` (Zeichen oder Emoji auf der Brust, `brustFarbe`).
+- Neu (23.11.): **`struktur: true`** gibt Kleidung ein Strickmuster und Haaren Strähnen. Für alle neuen Folgen benutzen; ohne die Option bleibt das alte glatte Aussehen (Folge 1).
 
 `pose(f, {lauf, renn, phase, sitz, liegen, armL, armR, armLz, armRz, kopfNeig, kopfDreh, ges, huepf, atmen, neig})`
 - Gesichter: froh, lachen, reden, schreien, angst, idee, ernst, schlaf, **staunen** (O-Mund, hohe Brauen), **traurig**.
@@ -67,6 +70,21 @@ Feste Personen aus Folge 1 (gleich lassen, Werte in `folge-01/szene.html`):
 | Konfetti | – | `konfettiSetzen(t, an)` |
 | Taschenlampe + Kegel, Megafon, Kisten | Handrequisiten | an `handPos` setzen |
 | `freiraeumen(x0, x1, z0, z1)` | Häuser entfernen (Platz für eigene Kulissen) | – |
+
+## Objekte (`objekte.js`, neu 23.11.)
+
+Jede Funktion baut ein Objekt (`THREE.Group`, noch nicht in der Szene): `const b = O.baum({art: "rund"}); b.position.set(x, 0, z); scene.add(b);`. Alles mit festem Zufall, also flackerfrei. Neue Objekte in `ALLE` eintragen, dann erscheinen sie automatisch im Fotostudio.
+
+| Gruppe | Objekte (wichtigste Optionen) |
+|---|---|
+| Natur | `baum({art: rund/nadel/kegel/busch, groesse, krone, saat})`, `blumenkuebel`, `hecke({laenge})` |
+| Straße | `bank`, `laterne({hoehe, an})`, `ampel({phase: rot/gelb/gruen})`, `hydrant`, `muelltonne`, `briefkasten`, `schild({text, farbe, form})`, `zaun({laenge})`, `brunnen` (`userData.strahl`), `laden({name, wand, markise, breite})`, `haltestelle` |
+| Fahrzeuge | `fahrrad`, `bus({farbe, text})` |
+| Tiere | `hund`, `katze`, `vogel` (`userData.schwanz` bzw. `fluegelL/R` zum Bewegen) |
+| Riesen-Wesen | `riesenTier({fell, bauch, groesse, dichte})`: flauschiger Riese mit hängendem Fell, etwa 18 m hoch; `userData.augen` zum Blinzeln. Eigenes Wesen, kein Mammut |
+| Möbel und Kram | `tisch`, `stuhl`, `sofa`, `stehlampe`, `regal`, `geschenk`, `fernseher` (`userData.schirm`) |
+
+Fertige Straßenzüge (`alltag.js`): **`einkaufsstrasse({x: 24, z0: 70, z1: 330})`** setzt an alle Häuser einer Nord-Süd-Straße Ladenfronten mit Markisen (Bäckerei, Eis, Blumen …) und Gehweg-Deko (Bäume, Bänke, Hydranten, Briefkästen). Die Straße ist zuerst unsichtbar, `.visible = true` pro Einstellung setzen.
 
 ## Alltag, Bildschirme, Text in der Welt (`alltag.js`, neu 23.11.)
 

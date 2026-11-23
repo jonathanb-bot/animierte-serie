@@ -5,7 +5,8 @@
 //   leinwand    beliebiger Text/Zeichnung in der Welt: Tafel, Schild, Preisschild, Fehlermeldung …
 //   Räume       Klassenzimmer, Küche, Omas Wohnzimmer (weit weg, eigene Sets) + raumlicht(raum).
 //   Effekte     Regenbogen, Luftballons.
-import { THREE, RoundedBoxGeometry, scene, renderer, W, H } from "./welt.js";
+import { THREE, RoundedBoxGeometry, scene, renderer, W, H, LOTS } from "./welt.js";
+import * as O from "./objekte.js";
 import { rnd } from "./wesen.js";
 const mat = (c, r = 0.7, m = 0) => new THREE.MeshStandardMaterial({ color: c, roughness: r, metalness: m });
 const plastik = c => new THREE.MeshPhysicalMaterial({ color: c, roughness: 0.4, clearcoat: 0.5 });
@@ -185,3 +186,22 @@ export const bildschirmeRendern = () => {
   renderer.setRenderTarget(HANDY.rt); renderer.clear(); renderer.render(scene, HANDY.cam); renderer.setRenderTarget(null);
   handy.visible = hv; videowand.visible = wv; STUBE.tvSchirm.material = tvm;
 };
+
+// ---------- Einkaufsstraße (Vergleich 23.11.: Vorbild-Straßen haben Läden, Markisen, Bäume, Bänke) ----------
+// Setzt an die Häuser entlang einer Nord-Süd-Straße (x = 24 + 48·k) Ladenfronten und Gehweg-Deko. Fester Zufall → in jedem Bild gleich.
+// const s = einkaufsstrasse({ x: 24, z0: 70, z1: 330 }); s.visible = true/false pro Einstellung (Standard: unsichtbar)
+const LADEN_ARTEN = [["BÄCKEREI", "#f4b8c8", ["#ffffff", "#e84a6a"]], ["EIS", "#b8e8f4", ["#ffffff", "#3aa8e8"]], ["BLUMEN", "#d8f0b8", ["#ffffff", "#4ab84a"]], ["SPIELZEUG", "#f8e0a0", ["#ffd23a", "#e84a3a"]],
+  ["BÜCHER", "#e0d0f4", ["#ffffff", "#8a5ae8"]], ["PIZZA", "#f8d0b0", ["#ffffff", "#e8603a"]], ["KIOSK", "#c8e0f8", ["#ffffff", "#2a6ae8"]], ["FRISEUR", "#f0f0f0", ["#e84a4a", "#ffffff"]]];
+export const einkaufsstrasse = ({ x = 24, z0 = 70, z1 = 330, saat = 4 } = {}) => {
+  const g = new THREE.Group(); g.visible = false; scene.add(g); let s = saat; const r = () => { s = (s * 16807) % 2147483647; return s / 2147483647; }; let k = 0;
+  for (const l of LOTS) { if (l.aufsatz || l.z < z0 || l.z > z1) continue;
+    for (const seite of [-1, 1]) {   // -1: Haus westlich der Straße (Front nach +x), +1: östlich (Front nach -x)
+      const front = seite < 0 ? l.x + l.w / 2 : l.x - l.w / 2, soll = x + seite * 6; if (Math.abs(front - soll) > 5.5) continue;
+      const [name, wand, mk] = LADEN_ARTEN[k++ % LADEN_ARTEN.length]; const b = Math.min(l.d * 0.85, 14);
+      const ld = O.laden({ name, wand, markise: mk, breite: b }); ld.position.set(front - seite * 0.55, 0, l.z); ld.rotation.y = -seite * Math.PI / 2; g.add(ld);
+      // Gehweg-Deko vor dem Laden (zwischen Hauskante und Fahrbahn)
+      const vor = front - seite * 1.6, deko = [() => O.blumenkuebel({ farbe: ["#d8704a", "#7a8a9a", "#c8a060"][k % 3] }), () => O.bank(), () => O.hydrant(), () => O.briefkasten(), () => O.muelltonne()];
+      const d1 = deko[Math.floor(r() * deko.length)](); d1.scale.setScalar(0.8); d1.position.set(vor, 0, l.z + (r() - 0.5) * b * 0.5); d1.rotation.y = -seite * Math.PI / 2; g.add(d1);
+      const bm = O.baum({ art: r() < 0.7 ? "rund" : "kegel", groesse: 0.55 + r() * 0.15, saat: k }); bm.position.set(front - seite * 1.4, 0, l.z + b / 2 + 1.2); g.add(bm);
+    } }
+  return g; };
