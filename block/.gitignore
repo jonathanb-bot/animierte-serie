@@ -1,0 +1,14 @@
+node_modules/
+*/frames/
+*/bilder/
+*/pruef/
+*.mp4
+*.jpg
+*/v2/
+*/roh.wav
+*/s16.wav
+*/m16.wav
+*/v16.wav
+*/sf16.wav
+*/mix.wav
+*/stimme.wav

@@ -1,0 +1,6 @@
+{
+  "name": "blockstadt",
+  "private": true,
+  "description": "Blockfiguren-Kurzvideos (Three.js, Bild für Bild in Chromium gerendert)",
+  "dependencies": { "three": "0.170.0" }
+}

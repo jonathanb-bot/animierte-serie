@@ -1,0 +1,30 @@
+// Rendert szene.html Bild für Bild und legt den Ton darunter. --bilder t1,t2,… nur Standbilder.
+const { chromium } = require("playwright");
+const path = require("path");
+const FOLGE = process.env.FOLGE || "folge-01"; process.chdir(path.join(__dirname, FOLGE));
+const { execFileSync } = require("child_process");
+const fs = require("fs");
+const FPS = Number(process.env.FPS || 60);
+const bi = process.argv.indexOf("--bilder"); const nurBilder = bi > 0;
+const von = Number(process.env.VON || 0), bis = process.env.BIS ? Number(process.env.BIS) : null, ordner = process.env.ORDNER || "frames";
+(async () => {
+  const browser = await chromium.launch({ executablePath: "/opt/pw-browsers/chromium", args: ["--use-gl=angle", "--use-angle=swiftshader", "--enable-unsafe-swiftshader", "--ignore-gpu-blocklist"] });
+  const page = await browser.newPage({ viewport: { width: 720, height: 1280 } });
+  page.on("console", m => console.log("[seite]", m.text()));
+  page.on("pageerror", e => console.log("[fehler]", e.message));
+  await page.goto(`http://127.0.0.1:8767/${FOLGE}/szene.html${process.env.PLAN ? "?plan=" + process.env.PLAN : ""}`);
+  await page.waitForFunction(() => window.bereit === true, null, { timeout: 120000 });
+  const DAUER = await page.evaluate(() => window.DAUER);
+  const n = Math.round(DAUER * FPS);
+  const zeiten = nurBilder ? process.argv[bi + 1].split(",").map(Number) : Array.from({ length: n }, (_, i) => i / FPS).slice(von, bis ?? n);
+  if (nurBilder) { fs.rmSync("bilder", { recursive: true, force: true }); fs.mkdirSync("bilder"); } else fs.mkdirSync(ordner, { recursive: true });
+  let i = 0; const t0 = Date.now();
+  for (const t of zeiten) {
+    await page.evaluate(t => window.renderAt(t), t);
+    const name = nurBilder ? `bilder/${String(i).padStart(3, "0")}_${t.toFixed(2)}.jpg` : `${ordner}/${String(von + i).padStart(5, "0")}.jpg`;
+    await page.screenshot({ path: name, type: "jpeg", quality: 93 }); i++;
+    if (i % 60 === 0) console.log(`${i}/${zeiten.length} Bilder, ${((Date.now() - t0) / 1000).toFixed(0)} s`);
+  }
+  console.log(`fertig ${i} Bilder in ${((Date.now() - t0) / 1000).toFixed(0)} s`);
+  await browser.close();
+})();

@@ -1,0 +1,318 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+  html,body{margin:0;background:#000;overflow:hidden}
+  #wrap{position:relative;width:720px;height:1280px;overflow:hidden}
+  canvas{display:block;transform-origin:center}
+  #cap{position:absolute;left:10px;right:10px;top:790px;text-align:center;font:900 78px "Inter Display","Inter",sans-serif;color:#ffe53a;
+       -webkit-text-stroke:12px #0a0a0a;paint-order:stroke fill;transform-origin:center;letter-spacing:0.5px;text-shadow:0 6px 0 rgba(0,0,0,.35)}
+  #blitz{position:absolute;inset:0;background:#000;opacity:0;pointer-events:none}
+  #wahl{position:absolute;left:40px;right:40px;top:300px;display:none;flex-direction:column;gap:26px}
+  .karte{display:flex;align-items:center;gap:22px;background:rgba(14,16,30,.82);border:4px solid rgba(255,229,58,.85);border-radius:28px;padding:20px 26px;
+         font:900 46px "Inter Display","Inter",sans-serif;color:#fff;box-shadow:0 10px 0 rgba(0,0,0,.35);transform-origin:left center}
+  .karte b{display:inline-flex;align-items:center;justify-content:center;width:70px;height:70px;border-radius:50%;background:#ffe53a;color:#111;font-size:44px;flex:none}
+  .karte span.e{font-family:"Noto Color Emoji";font-size:48px}
+  #frage{position:absolute;left:30px;right:30px;top:170px;text-align:center;font:900 64px "Inter Display","Inter",sans-serif;color:#fff;-webkit-text-stroke:10px #0a0a0a;paint-order:stroke fill;display:none}
+</style>
+<script type="importmap">{"imports":{"three":"../node_modules/three/build/three.module.min.js","three/addons/":"../node_modules/three/examples/jsm/"}}</script>
+</head><body>
+<div id="wrap"><div id="blitz"></div><div id="frage">Was soll ich tun?</div><div id="wahl"><div class="karte"><b>A</b><span class="e">💡</span>Licht an</div><div class="karte"><b>B</b><span class="e">📣</span>Papa rufen</div><div class="karte"><b>C</b><span class="e">👀</span>Unters Bett schauen</div></div><div id="cap"></div></div>
+<script type="module">
+import * as Wt from "../welt.js";
+import * as Fg from "../figuren.js";
+import * as Ws from "../wesen.js";
+import * as Rq from "../requisiten.js";
+const { THREE, renderer, composer, cam, U, scene } = Wt;
+await document.fonts.load('900 78px "Inter Display"'); await document.fonts.load('48px "Noto Color Emoji"');
+document.getElementById("wrap").prepend(renderer.domElement);
+const leinwand = renderer.domElement;
+
+// ---------- Zeitplan ----------
+const PLAN = new URLSearchParams(location.search).get("plan") || "plan_final.json";
+const plan = await (await fetch(PLAN)).json();
+const Z = plan.zeilen.map(z => z.start), E = plan.zeilen.map(z => z.start + z.dauer);
+const sauber = w => w.replace(/[.,!?:„“"]/g, "");
+const wz = (name, zeile) => { const zl = plan.zeilen[zeile]; if (!zl.woerter.length) return zl.start; const w = zl.woerter.find(x => sauber(x[2]).toLowerCase() === name.toLowerCase()); if (!w) throw new Error("Wort fehlt: " + name + " in " + zeile); return w[0]; };
+const woerter = plan.zeilen.flatMap(z => z.woerter);
+const DAUER = E[25] + 1.6;
+const ease = x => x <= 0 ? 0 : x >= 1 ? 1 : x * x * (3 - 2 * x);
+const easeIO = x => x <= 0 ? 0 : x >= 1 ? 1 : (x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2);
+const lerp = (a, b, q) => a + (b - a) * q;
+const V = (x, y, z) => new THREE.Vector3(x, y, z);
+const lerpV = (a, b, q) => a.clone().lerp(b, q);
+const ZIEL = new THREE.Vector3();
+const wackel = (t, s) => [0, 0];   // kein Handkamera-Wackeln (Jonathan 22.11.)
+const blick = (pos, ziel, t, s = 1) => { const [a, b] = wackel(t, s); cam.position.set(pos.x + a, pos.y + b, pos.z); ZIEL.copy(ziel); cam.lookAt(ziel); };
+const licht = (staerke = 1.6, farbe = "#ffd8b0", rimS = 1.0, rimF = "#8ab0ff") => { // Key-Licht von vorn-links-oben relativ zur Kamera, Rim von hinten
+  const d = ZIEL.clone().sub(cam.position).normalize(); const re = new THREE.Vector3().crossVectors(d, V(0, 1, 0)).normalize();
+  Wt.key.position.copy(cam.position).addScaledVector(re, -6).add(V(0, 8, 0)); Wt.key.target.position.copy(ZIEL); Wt.key.intensity = staerke; Wt.key.color.set(farbe);
+  Wt.rim.position.copy(ZIEL).addScaledVector(d, 12).addScaledVector(re, 4).add(V(0, 6, 0)); Wt.rim.target.position.copy(ZIEL); Wt.rim.intensity = rimS; Wt.rim.color.set(rimF); };
+
+// ---------- Figuren ----------
+const ich = Fg.figur({ haut: "#f0c8a0", hemd: "#e8a020", hose: "#2a3a5a", haare: "#5a3418", frisur: "strubbel", kapuze: true, skala: 0.78, schuhe: "#e8e8e8" });
+const papa = Fg.figur({ haut: "#d89a6a", hemd: "#2a3a5a", aermel: "#2a3a5a", weste: "#ff7a1a", hose: "#2a2a30", haare: "#3a2414", helm: "#f0c020", skala: 1.1 });
+const oma = Fg.figur({ haut: "#f2d0b0", hemd: "#8a4a6a", stoff: true, hose: "#4a3a4a", haare: "#e0e0e0", frisur: "dutt", brille: true, schal: "#c8a050", skala: 0.95 });
+const polizist = Fg.figur({ haut: "#9a6038", hemd: "#1e2e5a", hose: "#1a2240", muetze: "#1e2e5a", abzeichen: true, frisur: "glatze", haare: "#111", skala: 1.05 });
+const leute = [Fg.figur({ haut: "#f2cfa8", hemd: "#c83a3a", hose: "#2a3a5a", haare: "#c8a050", frisur: "zopf" }), Fg.figur({ haut: "#6a4028", hemd: "#3a8a5a", hose: "#3a3a3a", haare: "#1a1a1a" }), Fg.figur({ haut: "#e0a878", hemd: "#5a4ac8", hose: "#4a3a2a", haare: "#2a1a10", frisur: "strubbel", skala: 0.95 })];
+const ALLE = [ich, papa, oma, polizist, ...leute];
+// Heldenautos (für die Scheinwerfer-Szene)
+const heldenAuto = (farbe) => { const g = new THREE.Group(); const pm = new THREE.MeshPhysicalMaterial({ color: farbe, roughness: 0.3, clearcoat: 0.8, metalness: 0.3 });
+  const k = new THREE.Mesh(new Wt.RoundedBoxGeometry(2.1, 0.95, 4.5, 3, 0.3), pm); k.position.y = 0.85; g.add(k); const kab = new THREE.Mesh(new Wt.RoundedBoxGeometry(1.9, 0.8, 2.3, 3, 0.3), new THREE.MeshPhysicalMaterial({ color: "#12141a", roughness: 0.1, clearcoat: 1 })); kab.position.set(0, 1.65, -0.3); g.add(kab);
+  for (const [x, z] of [[-1.0, 1.45], [1.0, 1.45], [-1.0, -1.45], [1.0, -1.45]]) { const r = new THREE.Mesh(new THREE.CylinderGeometry(0.45, 0.45, 0.35, 16), new THREE.MeshStandardMaterial({ color: "#111", roughness: 0.8 })); r.rotation.z = Math.PI / 2; r.position.set(x, 0.45, z); g.add(r); }
+  const an = new THREE.MeshBasicMaterial({ color: new THREE.Color(7, 6.6, 5.4) }), aus = new THREE.MeshStandardMaterial({ color: "#c8c8c8", roughness: 0.2 }); const sch = [];
+  for (const sx of [-0.65, 0.65]) { const s = new THREE.Mesh(new Wt.RoundedBoxGeometry(0.5, 0.25, 0.1, 1, 0.04), aus); s.position.set(sx, 0.95, 2.26); g.add(s); sch.push(s); }
+  const kl = Wt.kegel("#fff4dc", 0.32, 28, 6), kr = Wt.kegel("#fff4dc", 0.32, 28, 6); g.userData = { sch, an, aus, kl, kr }; scene.add(g);
+  g.scale.setScalar(1.7);
+  g.userData.setze = (ein) => { sch.forEach(s => s.material = ein ? an : aus); kl.visible = kr.visible = ein > 0; if (ein) { g.updateMatrixWorld(true); for (const [k, sx] of [[kl, -0.65], [kr, 0.65]]) { const v = g.localToWorld(V(sx, 0.95, 2.32)); const ziel = g.localToWorld(V(sx * 2, -0.5, 17)); k.userData.richte(v, ziel); } } };
+  return g; };
+const autos3 = [heldenAuto("#c83a2a"), heldenAuto("#2a5ab8"), heldenAuto("#e8e8e8")];
+
+// ---------- Ereignisse ----------
+const T_AUS = Z[6] + 0.64;                             // Stromausfall beginnt am Kraftwerk
+const T_KNALL = wz("kaputtgegangen", 5) + 0.25;
+const T_WECKER = wz("zwei", 6) + 0.15, T_BETT_AUS = wz("Strom", 6) + 0.1;
+const T_KREIS = Z[10];                                // Polizei-Kreis steht ab „Papa schrie“
+const T_LOS = wz("ließen", 20) + 0.1;
+const OHNE_MORGEN = !plan.zeilen[23].woerter.length;   // YouTube-Fassung ohne Morgen-Zeile
+const T_AN = OHNE_MORGEN ? Z[24] + 1e6 : Z[23] - 0.3, T_TAG = OHNE_MORGEN ? 1e9 : Z[23] - 0.05;
+Ws.funkenAnlegen(V(-28, 6.5, -425), T_KNALL, 260, 16);
+Ws.funkenAnlegen(V(-28, 6.5, -425), T_KNALL - 1.6, 30, 5);
+// Laternen: Hände der Menge + ganze Stadt
+{ const L = []; Rq.MENGE.forEach((p, i) => { const h = Rq.mengeHand(p, false); L.push({ x: h.x, y: h.y, z: h.z, t0: T_LOS + Ws.rnd() * 0.5, v: 1.6 + Ws.rnd() * 1.2, wx: 0.6 + Ws.rnd(), wz: -0.3 + Ws.rnd() * 0.6, ph: Ws.rnd() * 6, hand: i, sichtbarAb: Z[17] + 1.2 }); });
+  for (const n of [papa, oma]) L.push({ x: 0, y: 0, z: 0, t0: T_LOS, v: 2, wx: 1, wz: 0, ph: 1, held: n, sichtbarAb: Z[17] });
+  for (let i = 0; i < 3900; i++) { let x, y, z; if (Ws.rnd() < 0.55) { const l = Wt.LOTS[Math.floor(Ws.rnd() * Wt.LOTS.length)]; x = l.x + (Ws.rnd() - 0.5) * l.w * 0.8; z = l.z + (Ws.rnd() - 0.5) * l.d * 0.8; y = l.h + 1.2; }
+    else { const k = Math.floor(Ws.rnd() * 15) - 7, u = (Ws.rnd() - 0.5) * 700; const strasse = k * 48 + 24 + (Ws.rnd() < 0.5 ? -1 : 1) * 7; if (Ws.rnd() < 0.5) { x = strasse; z = u; } else { x = u; z = strasse; } y = 1.5; }
+    if (Math.abs(x) < 40 && Math.abs(z) < 40) continue;
+    L.push({ x, y, z, t0: T_LOS + 0.3 + Ws.rnd() * 3.0 + Math.hypot(x, z) / 400, v: 2.6 + Ws.rnd() * 2.2, wx: 0.6 + Ws.rnd(), wz: -0.3 + Ws.rnd() * 0.6, ph: Ws.rnd() * 6, sichtbarAb: T_LOS - 1.5, s: 1.7 }); }
+  Ws.laternenAnlegen(L); }
+
+// ---------- Schatten-Helfer ----------
+const SCH = Ws.SCHATTEN;
+const schatten = (i, x, z, ry, o = {}) => { const S = SCH[i]; S.aktiv = true; S.x = x; S.z = z; S.y = o.y ?? 0; S.ry = ry; S.groesse = o.g ?? 1.3; S.kriech = o.kriech ?? 0.5; S.aufl = o.aufl ?? 0; S.augen = o.augen ?? 1; return S; };
+const ring = (n, r0, r1, t, o = {}) => { for (let i = 0; i < n; i++) { const a = i / n * Math.PI * 2 + 0.13 + (o.dreh ?? 0); const r = r0 + (r1 - r0) * ((i * 7) % 5) / 4 + Math.sin(t * 0.8 + i) * (o.wackel ?? 0.4);
+  schatten(o.start ?? 0 + i, Math.cos(a) * r, Math.sin(a) * r, Math.atan2(-Math.cos(a), -Math.sin(a)), { g: o.g ?? 1.6, kriech: 0.5 + 0.4 * Math.sin(t * 1.3 + i), aufl: o.aufl ? o.aufl(i, a, r) : 0 }); } };
+
+// ---------- Untertitel: ein Wort ----------
+const capEl = document.getElementById("cap"), blitz = document.getElementById("blitz");
+
+// ---------- Einstellungen ----------
+const S = [];   // [bis, fn(t, q)]
+const sh = (bis, fn) => S.push([bis, fn]);
+const stadtLicht = (t, s = 1) => licht(1.4 * s, "#ffcf9a", 1.2, "#7a9aff");
+// 1 Luftbild über der leuchtenden Stadt
+sh(2.6, (t, q) => { blick(lerpV(V(300, 235, 430), V(235, 185, 330), easeIO(q)), V(0, 15, -70), t, 0.3); cam.fov = 55; Wt.suchkegel.forEach(k => k.visible = true); });
+// 2 Straße von unten, Hochhäuser, Autos
+sh(E[0] + 0.15, (t, q) => { blick(lerpV(V(-112.6, 1.6, 168), V(-112.6, 1.9, 160), q), V(-121, 48, 70), t, 0.4); cam.fov = 72; stadtLicht(t); });
+// 3 Gasse: Lampe flackert aus, Augen gehen auf
+const tDunkel = wz("dunkel", 1), tSchatten = wz("Schatten", 1);
+sh(E[1] + 0.25, (t, q) => { blick(lerpV(V(-75, 2.4, 96.5), V(-80, 2.2, 96.3), easeIO(q)), V(-104, 2.4, 96), t, 0.3); cam.fov = 50;
+  const aus = t > tDunkel; Rq.GASSE.lampe.material = aus || (t > tDunkel - 0.4 && Math.sin(t * 60) > 0) ? Rq.GASSE.lampeAus : Rq.GASSE.lampeAn; Rq.GASSE.licht.intensity = aus ? 0 : 40;
+  schatten(0, -104, 96, Math.PI / 2, { g: 1.5, kriech: 0.2, augen: ease((t - tSchatten + 0.2) / 0.25) }); licht(aus ? 0.7 : 1.1, aus ? "#8aa0ff" : "#ffc890", 1.0); Wt.hemi.intensity = 1.0; });
+// 4 Bodennah: Schatten kriecht auf die Kamera zu
+sh(wz("Und", 2) - 0.05, (t, q) => { const x = lerp(-108, -95, q); schatten(0, x, 96, Math.PI / 2, { g: 1.5, kriech: 1 }); blick(V(-89, 0.7, 96.6), V(x - 2, 1.2, 96), t, 0.2); cam.fov = 50; licht(0.8, "#8aa0ff", 1.2); Wt.hemi.intensity = 1.0; Rq.GASSE.lampe.material = Rq.GASSE.lampeAus; Rq.GASSE.licht.intensity = 0; });
+// 5 Mülleimer verschwindet
+const tWeg = wz("verschwindet", 2);
+sh(E[2] + 0.25, (t, q) => { Rq.muell.visible = true; Rq.muell.position.set(-80, 0, 98.5); const k = 1 - ease((t - tWeg) / 0.35); Rq.muell.scale.set(k, k, k);
+  schatten(0, lerp(-90, -82.6, ease(q * 1.3)), 97.6, Math.PI / 2 - 0.15, { g: 1.5, kriech: 1 }); blick(V(-72.0, 1.5, 96.8), V(-83, 1.0, 97.4), t, 0.3); cam.fov = 50; licht(0.8, "#8aa0ff", 1.2); Wt.hemi.intensity = 1.0;
+  if (t > tWeg) { blitz.style.opacity = 0; } });
+// 6 Laternenreihe
+sh(wz("Scheinwerfer", 3) - 0.1, (t, q) => { blick(V(-116.8, 3.0, lerp(178, 160, q)), V(-115, 7.2, lerp(140, 120, q)), t, 0.3); cam.fov = 62; });
+// 7 Suchscheinwerfer auf dem Dach
+const HOCH = Wt.LOTS.filter(l => Math.hypot(l.x, l.z) < 260).sort((a, b) => b.h - a.h)[0];
+sh(wz("Millionen", 3) - 0.1, (t, q) => { const b = V(HOCH.x, HOCH.h + 1, HOCH.z); const a = 1.2 + t * 0.45; Wt.suchkegel[0].visible = true; Wt.suchkegel[0].userData.richte(b, b.clone().add(V(Math.sin(a) * 400, 800, Math.cos(a) * 400)));
+  blick(V(HOCH.x + HOCH.w * 0.5 + 18, HOCH.h + 9, HOCH.z + HOCH.d * 0.5 + 22), b.clone().add(V(-30, 18, -60)), t, 0.4); cam.fov = 64; scheinwerferModell.visible = true; scheinwerferModell.position.copy(b); scheinwerferModell.lookAt(b.clone().add(V(Math.sin(a) * 400, 800, Math.cos(a) * 400))); Wt.suchkegel.forEach((k, i) => { if (i) k.visible = true; }); });
+// 8 Rückfahrt: Millionen Fenster
+sh(E[3] + 0.2, (t, q) => { blick(lerpV(V(70, 60, 150), V(430, 300, 560), easeIO(q)), V(0, 30, 0), t, 0.2); cam.fov = 58; Wt.suchkegel.forEach(k => k.visible = true); });
+// 9 Papa vor dem Kraftwerk
+sh(wz("das", 4) - 0.05, (t, q) => { papa.visible = true; papa.position.set(8, 0, -440); papa.rotation.y = 0.1; Fg.pose(papa, { armL: 0.5, armR: 0.5, armLz: -0.6, armRz: -0.6, ges: "froh", atmen: t, kopfDreh: Math.sin(t * 0.6) * 0.1 });
+  blick(lerpV(V(11.5, 1.2, -430.5), V(10.8, 1.4, -431.8), q), V(7.5, 5.6, -442), t, 0.3); cam.fov = 50; licht(2.0, "#ffe0b0", 1.6, "#ffcf8a"); });
+// 10 Kraftwerk, Leitungen, Stadt im Hintergrund
+sh(E[4] + 0.3, (t, q) => { blick(lerpV(V(-130, 60, -650), V(-120, 66, -628), q), V(-20, 15, -250), t, 0.3); cam.fov = 58; });
+// 11 Trafo summt, erste Funken
+sh(wz("kaputtgegangen", 5) - 0.1, (t, q) => { blick(lerpV(V(-20, 3.5, -404), V(-21, 3.8, -406.5), q), V(-28, 5.2, -413), t, 0.5); cam.fov = 48; licht(1.4, "#ffd8a0", 1.0); });
+// 12 Knall
+sh(Z[6] - 0.15, (t, q) => { const d = t - T_KNALL; blick(V(-6, 11, -386), V(-26, 4, -417), t, d > 0 && d < 0.6 ? 6 * (0.6 - d) : 0.3); cam.fov = 52; licht(1.2, "#ffd8a0", 0.8);
+  Wt.grade.uniforms.uFlash.value = d > 0 && d < 0.5 ? (1 - d / 0.5) * 0.8 : 0; Wt.kraftwerk.userData.aus = d > 0.25; Wt.KW.licht.intensity = d > 0 && d < 0.6 ? 900 * (1 - d / 0.6) : 0; });
+// 13 Wecker 01:59 → 02:00, Lampe geht aus
+sh(wz("Ein", 7) - 1.9, (t, q) => { const zm = Rq.zimmer; zm.updateMatrixWorld(true); const p = V(1.75, 3.0, 1.1).applyMatrix4(zm.matrixWorld), z = V(0.85, 2.15, 4.1).applyMatrix4(zm.matrixWorld); blick(lerpV(p, V(1.6, 2.95, 1.6).applyMatrix4(zm.matrixWorld), q), z, t, 0.15); cam.fov = 46;
+  Rq.weckerZeichnen(t < T_WECKER ? "01:59" : "02:00", t < T_BETT_AUS); const an = t < T_BETT_AUS; Rq.ZIMMER.schirm.material = an ? Rq.ZIMMER.schirmAn : Rq.ZIMMER.schirmAus; Rq.ZIMMER.licht.intensity = an ? 30 : 0;
+  licht(0.15, "#8aa0ff", 0.3); });
+// 14 Luftbild: die Lichter gehen in einer Welle aus
+sh(wz("Ein", 7) - 0.1, (t, q) => { blick(lerpV(V(40, 420, 650), V(30, 400, 610), q), V(0, 0, -250), t, 0.2); cam.fov = 58; });
+// 15 Viertel für Viertel
+sh(E[7] + 0.3, (t, q) => { blick(lerpV(V(440, 130, 60), V(420, 120, 20), q), V(0, 20, -60), t, 0.2); cam.fov = 58; });
+// 16 Aus den Gassen kriechen die Schatten
+sh(E[8] + 0.3, (t, q) => { for (let i = 0; i < 10; i++) { const seite = i % 2 ? 1 : -1, z0 = 66 - i * 5; const k = ease((t - Z[8] - i * 0.12) / 2.2);
+    schatten(i, -72 + seite * lerp(13, 4 + (i % 3), k), z0 - k * 3, (seite > 0 ? -Math.PI / 2 : Math.PI / 2) * (1 - 0.6 * k), { g: 1.8, kriech: 1 }); }
+  blick(lerpV(V(-71, 0.6, 76), V(-71.5, 0.8, 72), q), V(-72, 1.6, 40), t, 0.3); cam.fov = 60; licht(0.7, "#8aa0ff", 1.2); Wt.hemi.intensity = 0.9; });
+// 17 Die Leute rennen zu ihren Autos
+const AX = -72;  // Straße
+const autoPos = [[AX - 3.4, 20, 0], [AX + 3.4, 6, Math.PI], [AX - 3.4, -8, 0]];
+sh(wz("schalteten", 9) - 0.1, (t, q) => { autos3.forEach((a, i) => { a.visible = true; a.position.set(autoPos[i][0], 0, autoPos[i][1]); a.rotation.y = autoPos[i][2]; a.userData.setze(0); });
+  leute.forEach((f, i) => { f.visible = true; const ziel = autoPos[i]; const k = ease((t - Z[9] + 0.3 - i * 0.15) / 1.6); const sx = AX + (i % 2 ? 9 : -9), sz = ziel[1] + 4;
+    f.position.set(lerp(sx, ziel[0] + (i % 2 ? 1.6 : -1.6), k), 0, lerp(sz, ziel[1], k)); f.rotation.y = Math.atan2(ziel[0] - sx, ziel[1] - sz); Fg.pose(f, { renn: 1 - k * 0.8, phase: t * 11 + i, ges: "angst" }); });
+  for (let i = 0; i < 4; i++) schatten(i, AX + (i % 2 ? 7 : -7), 34 + i * 3, Math.PI, { g: 1.4, kriech: 0.8 });
+  blick(lerpV(V(AX + 2, 1.6, 31), V(AX + 2, 1.7, 28), q), V(AX, 1.6, 8), t, 0.5); cam.fov = 60; licht(0.45, "#8aa0ff", 1.0); });
+// 18 Scheinwerfer an!
+const tSchein = wz("Scheinwerfer", 9);
+sh(E[9] + 0.2, (t, q) => { const a = autos3[0]; a.visible = true; a.position.set(autoPos[0][0], 0, autoPos[0][1]); a.rotation.y = 0; a.userData.setze(t > tSchein ? 1 : 0); autos3[1].visible = autos3[2].visible = false;
+  const k = ease((t - tSchein) / 0.6); schatten(0, AX - 3.4, autoPos[0][1] + lerp(7.5, 12, k), Math.PI, { g: 1.6, kriech: 1 - k }); schatten(1, AX - 0.4, autoPos[0][1] + lerp(8.5, 14, k), Math.PI - 0.3, { g: 1.4, kriech: 1 - k });
+  blick(lerpV(V(AX + 10, 2.4, autoPos[0][1] + 17), V(AX + 9.2, 2.3, autoPos[0][1] + 15.5), q), V(AX - 3.4, 1.4, autoPos[0][1] + 6), t, 0.3); cam.fov = 54; licht(0.7, "#8aa0ff", 1.2); });
+// 19 Papa schreit
+sh(E[10] + 0.2, (t, q) => { papa.visible = true; papa.position.set(19, 0, 4); papa.rotation.y = -1.45; Fg.pose(papa, { armR: 1.35, armRz: 1.05, armL: 0.5, armLz: -0.2, ges: t > wz("Alle", 10) - 0.05 ? (Math.sin(t * 12) > -0.5 ? "schreien" : "reden") : "ernst", atmen: t });
+  Rq.megafon.visible = false; const h = Fg.handPos(papa, true, -1.95, 0.5); Rq.megafon.position.copy(h); Rq.megafon.rotation.set(0, papa.rotation.y, 0); Rq.megafon.position.add(V(0, 0.15, 0).add(V(0, 0, 0.5).applyEuler(papa.rotation)));
+  papa.updateMatrixWorld(true); const k = Fg.kopfPos(papa); const c0 = papa.localToWorld(V(-2.6, 3.0, 6.2)), c1 = papa.localToWorld(V(-2.3, 3.2, 5.4)); blick(lerpV(c0, c1, q), V(k.x, k.y - 0.9, k.z), t, 0.4); cam.fov = 48; licht(1.6, "#ffd8b0", 2.0, "#ff6a6a"); });
+// 20 Polizei-Kreis von oben
+sh(E[11] + 0.4, (t, q) => { const a = lerp(0.5, 1.1, easeIO(q)); blick(V(Math.sin(a) * 34, lerp(70, 58, q), Math.cos(a) * 34), V(0, 0, 0), t, 0.2); cam.fov = 60; ring(16, 55, 62, t, { g: 2.0 }); });
+// 21 An der Grenze zum Licht
+sh(wz("Grenze", 12) - 0.1, (t, q) => { ring(16, 53, 57, t, { g: 1.8, wackel: 0.6 }); const a = 0.2 + 0.5 * Math.PI * 2 / 10; blick(lerpV(V(Math.cos(a) * 33, 1.3, Math.sin(a) * 33 + 2.5), V(Math.cos(a) * 36, 1.4, Math.sin(a) * 36 + 2.5), q), V(Math.cos(a) * 56, 1.6, Math.sin(a) * 56), t, 0.3); cam.fov = 52; licht(0.6, "#ffe8c0", 1.0); });
+// 22 Ein Schatten tastet ins Licht und zuckt zurück
+sh(E[12] + 0.4, (t, q) => { const a = 0.2 + 0.5 * Math.PI * 2 / 10 + 0.05; const r = 53.5 - Math.max(0, Math.sin((t - Z[12]) * 2.4)) * 1.3; schatten(0, Math.cos(a) * r, Math.sin(a) * r, Math.atan2(-Math.cos(a), -Math.sin(a)), { g: 1.5, kriech: 0.5 + Math.max(0, Math.sin((t - Z[12]) * 2.4)) * 0.6 });
+  for (let i = 1; i < 6; i++) { const b = a + (i - 3) * 0.06; schatten(i, Math.cos(b) * 55.5, Math.sin(b) * 55.5, Math.atan2(-Math.cos(b), -Math.sin(b)), { g: 1.6, kriech: 0.4 }); }
+  const c = V(Math.cos(a) * 41.5, 1.1, Math.sin(a) * 41.5 + 1.5); blick(lerpV(c, V(Math.cos(a) * 43, 1.1, Math.sin(a) * 43 + 1.5), q), V(Math.cos(a) * 53, 1.3, Math.sin(a) * 53), t, 0.3); cam.fov = 46; licht(0.9, "#ffe8c0", 0.8); });
+// 23 Notlampe: Akku 10:00
+sh(E[13] + 0.3, (t, q) => { const g = Rq.NOTLAMPEN[1]; g.updateMatrixWorld(true); const p = V(0, 0.36, 0.26).applyMatrix4(g.matrixWorld); const n = V(0, 0, 1).applyQuaternion(g.quaternion);
+  const sq = V(n.z, 0, -n.x); blick(lerpV(p.clone().addScaledVector(n, 3.4).addScaledVector(sq, 1.2).add(V(0, 1.5, 0)), p.clone().addScaledVector(n, 2.5).addScaledVector(sq, 0.9).add(V(0, 1.1, 0)), easeIO(q)), p.clone().add(V(0, -0.5, 0)), t, 0.2); cam.fov = 42; licht(0.8, "#ffe8c0", 0.6);
+  const s = Math.max(0, 600 - Math.floor((t - Z[13]) * 1.3)); Rq.akkuZeichnen(`${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`, 0.62); });
+// 24 Mir fällt Omas Lager ein
+sh(E[14] + 0.2, (t, q) => { ich.visible = true; ich.position.set(-14, 0, 19); ich.rotation.y = -0.55; const idee = t > wz("Oma", 14) - 0.2; Fg.pose(ich, { ges: idee ? "idee" : "angst", kopfNeig: idee ? -0.15 : 0.1, armR: idee ? 1.2 : 0.2, armRz: idee ? -0.2 : 0, atmen: t, huepf: idee ? Math.abs(Math.sin((t - wz("Oma", 14)) * 8)) * 0.08 * Math.max(0, 1 - (t - wz("Oma", 14))) : 0 });
+  papa.visible = true; papa.position.set(-16.5, 0, 15.5); papa.rotation.y = -0.3; Fg.pose(papa, { ges: "ernst", atmen: t, kopfDreh: 0.3 });
+  const k = Fg.kopfPos(ich); blick(lerpV(V(k.x - 2.2, k.y + 0.2, k.z + 4.4), V(k.x - 1.9, k.y + 0.2, k.z + 3.7), q), V(k.x - 0.6, k.y - 0.6, k.z), t, 0.3); cam.fov = 44; licht(1.6, "#ffe0b8", 1.4); });
+// 25 Omas Laden
+sh(wz("Tausende", 15) - 0.1, (t, q) => { oma.visible = true; oma.position.set(Rq.LADEN.x - 1.4, 0, Rq.LADEN.z - 4); oma.rotation.y = -Math.PI / 2; Fg.pose(oma, { armR: 1.0, armRz: -0.1, ges: "froh", atmen: t });
+  const h = Fg.handPos(oma, true, -2.2, 0.6); const L = Ws.LATERNEN.find(l => l.held === oma); if (L) { L.x = h.x; L.y = h.y - 0.3; L.z = h.z; L.sichtbarAb = -1; L.t0 = 1e9; }
+  blick(lerpV(V(Rq.LADEN.x - 17, 2.2, Rq.LADEN.z - 9), V(Rq.LADEN.x - 14, 2.6, Rq.LADEN.z - 7.5), easeIO(q)), V(Rq.LADEN.x, 5.2, Rq.LADEN.z - 2), t, 0.3); cam.fov = 52; licht(1.0, "#ffc890", 1.0); });
+// 26 Im Lager: tausende Laternen
+sh(E[15] + 0.4, (t, q) => { const lg = Rq.lager.position; Rq.lampenKegel.visible = true; const a = lerp(-0.5, 0.6, easeIO(q)); const von = V(lg.x + 2, 5, lg.z + 17); Rq.lampenKegel.userData.richte(von, V(lg.x + Math.sin(a) * 16, 3, lg.z - 6));
+  blick(lerpV(V(lg.x + 3, 5.5, lg.z + 18), V(lg.x + 1, 5.8, lg.z + 14), q), V(lg.x + Math.sin(a) * 10, 4.5, lg.z - 4), t, 0.5); cam.fov = 58; licht(0.25, "#ffe8c0", 0.3); Wt.key.intensity = 0.2; lagerLicht.position.copy(V(lg.x + Math.sin(a) * 9, 3.5, lg.z - 2)); lagerLicht.intensity = 60; });
+const lagerLicht = new THREE.PointLight("#fff0d8", 0, 30, 1.6); scene.add(lagerLicht);
+// 27 Wir rennen los (Taschenlampe)
+const lauf = (t) => V(-30 + (t - Z[16]) * 0, 0, 0);
+sh(wz("ich", 16) - 0.1, (t, q) => { const zz = lerp(-60, -72, q); papa.visible = ich.visible = true; papa.position.set(72, 0, zz + 0); papa.rotation.y = Math.PI; ich.position.set(72.8, 0, zz + 3.2); ich.rotation.y = Math.PI;
+  Fg.pose(papa, { renn: 1, phase: t * 10, armR: 1.4, ges: "ernst" }); Fg.pose(ich, { renn: 0.8, phase: t * 11 + 1, armL: 1.3, armR: 1.3, ges: "angst" });
+  Rq.taschenlampe.visible = Rq.lampenKegel.visible = true; const h = Fg.handPos(papa, true, -1.95, 0.4); Rq.taschenlampe.position.copy(h); Rq.taschenlampe.rotation.set(0, Math.PI, 0); Rq.lampenKegel.userData.richte(h.clone().add(V(0, 0, -0.4)), h.clone().add(V(Math.sin(t * 2) * 3, -3.5, -24)));
+  Rq.kisten.visible = true; const hk = Fg.handPos(ich, true, -1.9, 0.3); Rq.kisten.position.set(ich.position.x, hk.y + 0.3, hk.z - 0.3); Rq.kisten.rotation.set(Math.sin(t * 11) * 0.06, Math.PI, 0); Rq.kisten.scale.setScalar(0.72);
+  for (let i = 0; i < 6; i++) { const seite = i % 2 ? 1 : -1; const sz = zz - 18 - i * 4; schatten(i, 72 + seite * (5 + (i % 3)), sz, seite > 0 ? -Math.PI / 2 : Math.PI / 2, { g: 1.4, kriech: 0.2 }); }
+  blick(V(70.2, 2.8, zz - 8.5), V(72.6, 2.2, zz + 1.5), t, 0.9); cam.fov = 58; licht(0.6, "#9ab0ff", 1.2, "#fff0d0"); });
+// 28 Ich schleppe die Kisten
+sh(E[16] + 0.2, (t, q) => { const zz = lerp(-82, -92, q); ich.visible = true; ich.position.set(72.8, 0, zz); ich.rotation.y = Math.PI; Fg.pose(ich, { renn: 0.7, phase: t * 11, armL: 1.3, armR: 1.3, ges: Math.sin(t * 3) > 0 ? "angst" : "ernst", neig: -0.05 });
+  Rq.kisten.visible = true; const hk = Fg.handPos(ich, true, -1.9, 0.3); Rq.kisten.position.set(ich.position.x, hk.y - 0.35, hk.z - 0.3); Rq.kisten.rotation.set(Math.sin(t * 11) * 0.08, Math.PI + Math.sin(t * 5.5) * 0.06, Math.sin(t * 7) * 0.05); Rq.kisten.scale.setScalar(0.72);
+  Rq.lampenKegel.visible = true; Rq.lampenKegel.userData.richte(V(72.2, 3.3, zz - 4), V(72 + Math.sin(t * 2) * 3, 0, zz - 28));
+  blick(V(77.8, 2.6, zz - 3.5), V(72.8, 2.3, zz + 0.3), t, 0.7); cam.fov = 50; licht(0.8, "#fff0d0", 1.0); });
+// 29 Laternen verteilen auf dem Platz (Kran)
+sh(E[17] + 0.5, (t, q) => { blick(lerpV(V(14, 3.2, 26), V(18, 15, 34), easeIO(q)), V(0, 2.5, 2), t, 0.3); cam.fov = 58; papa.visible = oma.visible = ich.visible = true;
+  papa.position.set(4, 0, 12); papa.rotation.y = 2.4; Fg.pose(papa, { armR: 1.2, ges: "reden", atmen: t }); oma.position.set(-2, 0, 13); oma.rotation.y = 3.3; Fg.pose(oma, { armL: 1.1, ges: "froh", atmen: t }); ich.position.set(1, 0, 15); ich.rotation.y = 2.9; Fg.pose(ich, { armL: 1.2, armR: 1.2, ges: "froh", atmen: t });
+  Rq.kisten.visible = true; Rq.kisten.position.set(1, 0, 13); Rq.kisten.rotation.set(0, 0.3, 0); Rq.kisten.scale.setScalar(1); licht(1.0, "#ffd8a8", 1.0); });
+// 30 Notlampen flackern: 1:00
+sh(wz("Noch", 18) + 0.6, (t, q) => { const g = Rq.NOTLAMPEN[1]; g.updateMatrixWorld(true); const p = V(0, 0.36, 0.26).applyMatrix4(g.matrixWorld); const n = V(0, 0, 1).applyQuaternion(g.quaternion);
+  const sq = V(n.z, 0, -n.x); blick(p.clone().addScaledVector(n, 3.0).addScaledVector(sq, 2.6).add(V(0, 0.9, 0)), p.clone().addScaledVector(sq, -0.6).add(V(0, 1.6, 0)), t, 0.3); cam.fov = 54; const s = Math.max(0, 60 - Math.floor((t - Z[18]) * 1.5)); Rq.akkuZeichnen(`${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`, 0.08); licht(0.6, "#ffe8c0", 0.6); });
+// 31 Die Schatten rücken näher
+sh(E[18] + 0.6, (t, q) => { ring(16, lerp(52, 44, q), lerp(55, 47, q), t, { g: 1.9, wackel: 0.8 }); blick(V(6, 1.6, 24), V(14, 1.4, 50), t, 0.4); cam.fov = 56; licht(0.6, "#ffe8c0", 1.0); });
+// 32 Papa: Jetzt!
+sh(E[19] + 0.8, (t, q) => { papa.visible = true; papa.position.set(0, 2.8, 0.9); papa.rotation.y = 0.15; const j = t > wz("Jetzt", 19) - 0.1; Fg.pose(papa, { armR: j ? 2.9 : 1.0, armRz: 0.1, armL: 0.3, ges: j ? "schreien" : "ernst", atmen: t, huepf: j ? 0.05 : 0 });
+  papa.updateMatrixWorld(true); const k = Fg.kopfPos(papa); blick(lerpV(papa.localToWorld(V(-1.6, -0.6, 8.6)), papa.localToWorld(V(-1.4, -0.4, 7.6)), q), V(k.x, k.y - 0.4, k.z), t, 0.4); cam.fov = 52; licht(1.6, "#ffe0b0", 1.4, "#ffcf8a"); });
+// 33 Alle lassen los
+sh(E[20] + 0.6, (t, q) => { blick(lerpV(V(1.5, 1.6, 23.5), V(1.5, 1.9, 23), q), V(-1, lerp(8, 15, easeIO(q)), 0), t, 0.4); cam.fov = 68; licht(0.9, "#ffd8a0", 0.8); });
+// 34 Mit den Laternen nach oben
+sh(wz("und", 21) - 0.1, (t, q) => { blick(V(-3 + q * 6, lerp(10, 42, easeIO(q)), 6 - q * 4), V(lerp(-2, 20, q), lerp(14, 50, q), -30), t, 0.3); cam.fov = 62; });
+// 35 Tausende Lichter über der Stadt
+sh(E[21] + 0.9, (t, q) => { const a = lerp(0.65, 0.85, q); blick(V(Math.sin(a) * 380, lerp(170, 200, q), Math.cos(a) * 380), V(0, 50, 0), t, 0.2); cam.fov = 60; });
+// 36 Ein Schatten zerfällt zu Gold
+const tLoes = wz("lösten", 22);
+sh(wz("lösten", 22) - 0.05, (t, q) => { schatten(0, -72, 30, 0, { g: 1.7, kriech: 0.6, aufl: ease((t - Z[22] - 0.3) / 1.4) }); blick(lerpV(V(-69, 1.6, 37), V(-69.5, 1.8, 36), q), V(-72, 2.0, 30), t, 0.3); cam.fov = 48; licht(0.8, "#ffb060", 0.6, "#ffcf8a"); });
+// 37 Überall zerfallen sie
+sh(E[22] + 0.8, (t, q) => { for (let i = 0; i < 10; i++) schatten(i, -72 + (i % 2 ? 6 : -6) + Math.sin(i) * 2, 30 - i * 7, i % 2 ? -1.2 : 1.2, { g: 1.5, kriech: 0.4, aufl: ease((t - tLoes + 0.6 - i * 0.12) / 1.3) });
+  blick(lerpV(V(-72, 2.4, 45), V(-72, 3.0, 41), q), V(-72, 4, 0), t, 0.3); cam.fov = 56; licht(0.8, "#ffb060", 0.6, "#ffcf8a"); });
+// 38 Morgen: Kraftwerk läuft
+sh(wz("und", 23) - 0.1, (t, q) => { blick(lerpV(V(70, 22, -400), V(64, 24, -408), q), V(-25, 35, -560), t, 0.2); cam.fov = 55; });
+// 39 Die ganze Stadt feiert
+sh(E[23] + 1.0, (t, q) => { papa.visible = ich.visible = oma.visible = true; papa.position.set(2, 0, 10); papa.rotation.y = 0.3; ich.position.set(4.5, 0, 10.5); ich.rotation.y = -0.2; oma.position.set(-1, 0, 11); oma.rotation.y = 0.5;
+  const hp = i => Math.abs(Math.sin(t * 6 + i)) * 0.6; Fg.pose(papa, { armL: 2.8, armR: 2.8, ges: "lachen", huepf: hp(0) }); Fg.pose(ich, { armL: 2.9, armR: 2.9, ges: "lachen", huepf: hp(1) * 1.3 }); Fg.pose(oma, { armL: 1.6, armR: 2.6, ges: "lachen", huepf: hp(2) * 0.4 });
+  blick(lerpV(V(3.5, 4.2, 19), V(3.5, 4.4, 17.5), q), V(2.8, 3.6, 10), t, 0.5); cam.fov = 58; mengeFrei = true; licht(2.0, "#fff4e0", 1.2, "#ffffff"); });
+// 40 Heute Nacht im Bett
+sh(wz("flackerte", 24) - 0.2, (t, q) => { const zm = Rq.zimmer; zm.updateMatrixWorld(true); ich.visible = true; ich.position.copy(V(-2.2, 2.35, 0.5).applyMatrix4(zm.matrixWorld)); ich.rotation.set(0, Math.PI / 4 + Math.PI, 0); Fg.pose(ich, { liegen: 1, ges: "froh" });
+  blick(lerpV(V(3.5, 5.5, -3.5).applyMatrix4(zm.matrixWorld), V(3.0, 5.0, -2.8).applyMatrix4(zm.matrixWorld), q), V(-1, 2.0, 2.5).applyMatrix4(zm.matrixWorld), t, 0.2); cam.fov = 55; Rq.weckerZeichnen("21:30"); licht(0.3, "#ffc080", 0.4); });
+// 41 Die Lampe flackert
+sh(E[24] + 0.3, (t, q) => { const zm = Rq.zimmer; zm.updateMatrixWorld(true); ich.visible = true; ich.position.copy(V(-2.2, 2.35, 0.5).applyMatrix4(zm.matrixWorld)); ich.rotation.set(0, Math.PI / 4 + Math.PI, 0); Fg.pose(ich, { liegen: 1, ges: "angst", kopfDreh: 0.6 });
+  const fl = Math.sin(t * 37) + Math.sin(t * 23) > 0.6 || Math.sin(t * 5) > 0.8; Rq.ZIMMER.schirm.material = fl ? Rq.ZIMMER.schirmAus : Rq.ZIMMER.schirmAn; Rq.ZIMMER.licht.intensity = fl ? 1 : 30;
+  blick(lerpV(V(-1.0, 5.6, 2.2).applyMatrix4(zm.matrixWorld), V(-1.3, 5.3, 2.6).applyMatrix4(zm.matrixWorld), q), V(-2.2, 2.5, 3.9).applyMatrix4(zm.matrixWorld), t, 0.2); cam.fov = 52; Rq.weckerZeichnen("21:31"); licht(0.15, "#8aa0ff", 0.3); });
+// 42 Unter dem Bett
+sh(DAUER + 1, (t, q) => { const zm = Rq.zimmer; zm.updateMatrixWorld(true); Rq.ZIMMER.licht.intensity = 0; Rq.ZIMMER.schirm.material = Rq.ZIMMER.schirmAus;
+  const tb = wz("bewegt", 25);
+  const b = V(0.15, 0.0, 0.9).applyMatrix4(zm.matrixWorld);
+  const hoch = plan.zeilen.length > 26 ? ease((t - Z[26] + 0.3) / 0.8) : 0; blick(lerpV(V(2.3, 0.55, -1.6).applyMatrix4(zm.matrixWorld), V(2.0, 0.52, -1.15).applyMatrix4(zm.matrixWorld), easeIO(q)), V(b.x, b.y + 0.45 + hoch * 0.55, b.z), t, 0.15); cam.fov = 46; const ry = Math.atan2(cam.position.x - b.x, cam.position.z - b.z);
+  schatten(0, b.x, b.z, ry + 0.25 * Math.sin(t * 0.7), { y: b.y + 0.1, g: 0.36, kriech: ease((t - tb) / 0.8) * 0.6, augen: ease((t - wz("unter", 25) - 0.1) / 0.3) });
+  licht(0.35, "#8aa0ff", 0.6); Wt.hemi.intensity = 0.35; });
+
+const scheinwerferModell = (() => { const g = new THREE.Group(); const k = new THREE.Mesh(new THREE.CylinderGeometry(1.4, 1.1, 2.4, 20), new THREE.MeshStandardMaterial({ color: "#3a3d44", metalness: 0.6, roughness: 0.4 })); k.rotation.x = Math.PI / 2; g.add(k);
+  const gl = new THREE.Mesh(new THREE.CircleGeometry(1.3, 20), new THREE.MeshBasicMaterial({ color: new THREE.Color(6, 6, 6) })); gl.position.z = 1.22; g.add(gl); scene.add(g); return g; })();
+let mengeFrei = false;
+const GRENZEN = S.map(s => s[0]);
+const VERSTECK = new Map();
+window.renderAt = (t, probe = false) => {
+  // Grundzustand
+  U.uT.value = t; U.uAus.value = T_AUS; U.uAn.value = T_AN; U.uTag.value = t >= T_TAG && t < Z[24] - 0.1 ? 1 : 0;
+  const tag = U.uTag.value > 0.5;
+  U.uGold.value = t > T_LOS && t < T_TAG ? Math.min(0.85, ease((t - T_LOS - 0.5) / 5) * 0.85) : 0;
+  Wt.grade.uniforms.uT.value = t; Wt.grade.uniforms.uFlash.value = 0; Wt.grade.uniforms.uWarm.value = U.uGold.value * 0.6;
+  Wt.hemi.intensity = tag ? 1.6 : 0.6; Wt.hemi.color.set(tag ? "#cfe4ff" : "#5a6ab0"); Wt.hemi.groundColor.set(tag ? "#6a7a5a" : "#141018"); Wt.mondLicht.intensity = tag ? 0 : 0.5;
+  if (U.uGold.value > 0) { Wt.hemi.color.set("#ffb070"); Wt.hemi.intensity = 0.6 + U.uGold.value * 1.2; }
+  Wt.lampenAktualisieren(t); Wt.autosSetzen(t, T_AUS + 3, undefined, v => Math.abs(v.x - AX) < 8 && v.z > -40 && v.z < 90 && t > T_AUS);
+  Wt.warnlichter.visible = !(t > T_AUS + 2 && t < T_AN) && Math.floor(t * 1.2) % 2 === 0;
+  Wt.suchkegel.forEach((k, i) => { k.visible = false; const a = i * 1.7 + t * 0.35; const b = V((i - 1.5) * 130, 70, -40 + i * 50); k.userData.richte(b, b.clone().add(V(Math.sin(a) * 320, 900, Math.cos(a) * 320))); });
+  // Kraftwerk an/aus
+  const kwAus = t > T_KNALL + 0.25 && t < T_AN; Wt.KW.fensterMat.color.setScalar(kwAus ? 0.04 : 2.2); Wt.KW.flut.forEach(f => f.material.color.setRGB(kwAus ? 0.1 : 4, kwAus ? 0.1 : 3.6, kwAus ? 0.1 : 3));
+  if (t > T_KNALL - 1.6 && t < T_KNALL + 0.25) Wt.KW.flut.forEach(f => { if (Math.sin(t * 50 + f.position.x) > 0.3) f.material.color.setRGB(0.3, 0.3, 0.3); });
+  ALLE.forEach(f => f.visible = false); autos3.forEach(a => { a.visible = false; a.userData.setze(0); });
+  Ws.schattenAus(); Rq.muell.visible = false; Rq.megafon.visible = false; Rq.taschenlampe.visible = false; Rq.lampenKegel.visible = false; Rq.kisten.visible = false; lagerLicht.intensity = 0;
+  Rq.GASSE.lampe.material = Rq.GASSE.lampeAn; Rq.GASSE.licht.intensity = 40;
+  const kreis = t >= T_KREIS && t < T_TAG; Rq.polizeiSetzen(t, kreis, kreis || (tag && t < Z[24]), 27, cam.position);
+  const notS = t < Z[18] ? 1 : (i => (Math.sin(t * 31 + i * 7) + Math.sin(t * 17 + i * 3) > -0.2 ? 1 : 0));
+  Rq.notlampenSetzen(t >= T_LOS + 3 ? 0 : notS, kreis);
+  const mengeDa = t >= T_KREIS && t < Z[24] - 0.1;
+  Rq.mengeSetzen(t, { sichtbar: mengeDa, armeHoch: (p, i) => tag ? (Math.sin(t * 5 + p.ph) > 0 ? 1 : 0) : (t > T_LOS - 0.2 && t < T_LOS + 2.2 ? 1 : 0), huepf: (p) => tag ? Math.max(0, Math.sin(t * 6 + p.ph)) * 0.6 : 0, licht: tag ? 1 : 0.5 });
+  Rq.konfettiSetzen(t, tag && t > Z[23] + 1);
+  Rq.weckerZeichnen("21:30"); Rq.ZIMMER.schirm.material = Rq.ZIMMER.schirmAn; Rq.ZIMMER.licht.intensity = 30;
+  Rq.akkuZeichnen("10:00", 0.62);
+  // Laternen in der Hand halten, bis sie losgelassen werden
+  const haltePos = (L) => { if (L.held) return null; const p = Rq.MENGE[L.hand]; if (p.weg && t < L.t0) return V(0, -200, 0); return Rq.mengeHand(p, t > T_LOS - 0.2).add(V(0, 0.3, 0)); };
+  Ws.LATERNEN.forEach(L => { if (L.held === papa) { L.sichtbarAb = 1e9; } if (L.held === oma) { L.sichtbarAb = 1e9; } });
+  Wt.grade.uniforms.uVig.value = 0.35; cam.fov = 55; blitz.style.opacity = 0; scheinwerferModell.visible = false; mengeFrei = false;
+
+  // Einstellung
+  let k = GRENZEN.findIndex(b => t < b); if (k < 0) k = S.length - 1; const von = k ? GRENZEN[k - 1] : 0, bis = GRENZEN[k];
+  S[k][1](t, Math.min(1, Math.max(0, (t - von) / (bis - von))));
+  cam.updateProjectionMatrix();
+  if (probe) return { kam: cam.position.clone(), ziel: ZIEL.clone(), frei: ALLE.filter(f => f.visible).map(f => f.position.clone()) };
+  // Kamera-Nahebene passend zur Entfernung (gegen Flackern übereinanderliegender Flächen)
+  cam.near = Math.min(3, Math.max(0.15, cam.position.distanceTo(ZIEL) * 0.04)); cam.updateProjectionMatrix();
+  if (mengeFrei || mengeDa) {   // wer der Kamera im Weg steht, bleibt für die ganze Einstellung weg (kein Auf- und Abtauchen)
+    const key = k + (mengeFrei ? "f" : "");
+    if (!VERSTECK.has(key)) { const set = new Set(); const b2 = Math.min(bis, DAUER); for (const qq of [0.01, 0.2, 0.4, 0.6, 0.8, 0.99]) { const r = window.renderAt(von + (b2 - von) * qq, true);
+        Rq.MENGE.forEach((p, i) => { if (Rq.mengeImWeg(p, r.kam, r.ziel, r.frei, 0, mengeFrei ? -6 : 0)) set.add(i); }); } VERSTECK.set(key, set); return window.renderAt(t); }
+    const vs = VERSTECK.get(key);
+    if (mengeFrei) Rq.mengeSetzen(t, { sichtbar: true, armeHoch: (p) => Math.sin(t * 5 + p.ph) > 0 ? 1 : 0, huepf: (p) => Math.max(0, Math.sin(t * 6 + p.ph)) * 0.6, licht: 1, dz: -6, versteckt: vs });
+    else Rq.mengeSetzen(t, { sichtbar: true, armeHoch: (p, i) => tag ? (Math.sin(t * 5 + p.ph) > 0 ? 1 : 0) : (t > T_LOS - 0.2 && t < T_LOS + 2.2 ? 1 : 0), huepf: (p) => tag ? Math.max(0, Math.sin(t * 6 + p.ph)) * 0.6 : 0, licht: tag ? 1 : 0.5, versteckt: vs }); }
+  Ws.laternenSetzen(t, haltePos); Ws.schattenSetzen(t); Ws.funkenSetzen(t);
+  if (t > tLoes - 2 && t < E[22] + 1) { /* Goldstaub wird in den Einstellungen 36/37 angelegt */ }
+  Ws.staubSetzen(t);
+  // Untertitel: ein Wort, gelb
+  const w = woerter.find(([a, b]) => t >= a - 0.02 && t < b + 0.05);
+  if (w) { capEl.textContent = sauber(w[2]).toLowerCase(); const pop = ease((t - w[0]) / 0.08); capEl.style.transform = `scale(${0.8 + 0.2 * pop}) rotate(${(Math.sin(w[0] * 13) * 2).toFixed(1)}deg)`; } else capEl.textContent = "";
+  // Mitmach-Frage am Ende (Jonathan 23.11.): 3 Möglichkeiten, Antwort in die Kommentare
+  const fr = document.getElementById("frage"), wahl = document.getElementById("wahl");
+  if (plan.zeilen.length > 26 && t >= Z[26] - 0.15) {
+    fr.style.display = "block"; wahl.style.display = "flex"; const k0 = ease((t - Z[26] + 0.15) / 0.3); fr.style.transform = `scale(${0.7 + 0.3 * k0})`; fr.style.opacity = k0;
+    const an = [Z[27] - 0.1, (wz("papa", 27) ?? Z[27] + 1) - 0.1, (wz("bett", 27) ?? Z[27] + 2) - 0.5];
+    [...wahl.children].forEach((c, i) => { const q = ease((t - an[i]) / 0.25); c.style.opacity = q; c.style.transform = `translateX(${(1 - q) * -80}px) scale(${0.85 + 0.15 * q})`; });
+    Wt.grade.uniforms.uVig.value = 0.6;
+  } else { fr.style.display = "none"; wahl.style.display = "none"; }
+  composer.render();
+  return true;
+};
+// Goldstaub für die zerfallenden Schatten (fest angelegt)
+Ws.staubAnlegen(-72, 0.5, 30, Z[22] + 0.5, 70, 1.8);
+for (let i = 0; i < 10; i++) Ws.staubAnlegen(-72 + (i % 2 ? 6 : -6) + Math.sin(i) * 2, 0.5, 30 - i * 7, tLoes - 0.4 + i * 0.12, 30, 1.5);
+window.DAUER = DAUER; window.GRENZEN = GRENZEN;
+window.bereit = true;
+</script></body></html>

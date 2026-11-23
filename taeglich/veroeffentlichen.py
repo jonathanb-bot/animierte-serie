@@ -287,6 +287,8 @@ def main(argv=None) -> int:
     ap.add_argument("--ersetzen", metavar="SUFFIX", help="neu vertonte Fassung: neue Post-IDs mit -SUFFIX, Text leicht anders (5.11.)")
     ap.add_argument("--plattformen", default="tiktok,instagram,youtube", help="nur diese Plattformen, z. B. tiktok")
     ap.add_argument("--insta-zeit", help="Instagram zu einer eigenen Zeit (Standard: wie --zeit)")
+    ap.add_argument("--max-dauer", type=float, default=MAX_DAUER,
+                    help="Höchstdauer in s (Standard 89; Blockstadt-Test 23.11.: TikTok/Instagram dürfen länger sein, YouTube nicht)")
     ap.add_argument("--englisch", action="store_true",
                     help="englische Fassung: Video ausgabe/taeglich-<id>-en.mp4, Texte aus dem Eintrag → en, englische Konten")
     a = ap.parse_args(argv)
@@ -317,7 +319,9 @@ def main(argv=None) -> int:
         print(f"{roh.relative_to(ROOT)} fehlt – erst rendern"); return 1
     fertig = ROOT / "ausgabe" / f"taeglich-{vid}-fertig.mp4"
     angleichen(roh, fertig)
-    ergebnis = pruefe(fertig)
+    ergebnis = pruefe(fertig, max_dauer=a.max_dauer)
+    if "youtube" in a.plattformen and ergebnis["bild_s"] > 89.5:
+        print("YouTube erlaubt höchstens 90 s – für YouTube eine gekürzte Fassung einplanen"); return 1
     print("Prüfung:", json.dumps(ergebnis, ensure_ascii=False))
     if not ergebnis["ok"]:
         print("NICHT veröffentlicht – Prüfung fehlgeschlagen."); return 1
