@@ -1,3 +1,6 @@
 Verbundene Konten: tiktok:storys4you.de1, instagram:sto.rys4you, youtube:sto.rys4you (2. Zernio-Konto), tiktok:storys4you_eng (2. Zernio-Konto), youtube:storys4you_eng (3. Zernio-Konto), instagram:sory4you_eng (3. Zernio-Konto)
-🗑 taeglich-yt-n002 zurückgezogen
-Fertig: 0 neu eingeplant, 0 Fehler.
+↻ taeglich-tiktok-b01: 2026-11-23T21:29:00 → 2026-11-23T21:00:00
+  taeglich-tiktok-b01: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-tiktok-b01 eingeplant für 2026-11-23T21:00:00 (6b04978dd2b2347d8162c29b)
+  KI-Kennzeichnung laut Zernio: "videoMadeWithAi":false, "videoMadeWithAi":false
+Fertig: 1 neu eingeplant, 0 Fehler.
