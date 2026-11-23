@@ -4,7 +4,7 @@ const { chromium } = require('playwright'); const { spawn } = require('child_pro
   const p = await b.newPage({ viewport: { width: 1440, height: 2560 } });
   p.on('pageerror', e => console.log('FEHLER', e.message));
   await p.goto('http://127.0.0.1:8778/edit.html'); await p.waitForFunction('window.bereit === true', null, { timeout: 120000 });
-  const FPS = 60, DAUER = 27.85, N = Math.round(DAUER * FPS), aus = process.argv[2];
+  const FPS = 60, DAUER = 44.6, N = Math.round(DAUER * FPS), aus = process.argv[2];
   const ff = spawn('ffmpeg', ['-loglevel', 'error', '-y', '-f', 'image2pipe', '-framerate', String(FPS), '-c:v', 'mjpeg', '-i', '-', '-i', 'ausschnitt.wav',
     '-c:v', 'libx264', '-preset', 'slow', '-crf', '16', '-pix_fmt', 'yuv420p', '-tune', 'film', '-c:a', 'aac', '-b:a', '256k', '-shortest', '-movflags', '+faststart', aus], { stdio: ['pipe', 'inherit', 'inherit'] });
   for (let i = 0; i < N; i++) {
