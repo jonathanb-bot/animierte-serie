@@ -25,9 +25,10 @@ Ziel (Jonathan 23.11.): Jede Folge setzt sich aus fertigen, geprüften Teilen zu
 
 `figur({haut, hemd, hose, haare, frisur, helm, weste, muetze, abzeichen, brille, kapuze, schal, skala, schuhe})`
 - Frisuren: kurz, zopf, dutt, strubbel, glatze.
+- Neu (23.11.): `jacke` (offene Jacke über dem Hemd, z. B. Lehrer), `brust` (Zeichen oder Emoji auf der Brust, `brustFarbe`).
 
 `pose(f, {lauf, renn, phase, sitz, liegen, armL, armR, armLz, armRz, kopfNeig, kopfDreh, ges, huepf, atmen, neig})`
-- Gesichter: froh, lachen, reden, schreien, angst, idee, ernst, schlaf.
+- Gesichter: froh, lachen, reden, schreien, angst, idee, ernst, schlaf, **staunen** (O-Mund, hohe Brauen), **traurig**.
 - `mund(t)` gibt abwechselnd reden und froh zurück.
 - `handPos(f, rechts, y, z)` und `kopfPos(f)`.
 
@@ -67,6 +68,24 @@ Feste Personen aus Folge 1 (gleich lassen, Werte in `folge-01/szene.html`):
 | Taschenlampe + Kegel, Megafon, Kisten | Handrequisiten | an `handPos` setzen |
 | `freiraeumen(x0, x1, z0, z1)` | Häuser entfernen (Platz für eigene Kulissen) | – |
 
+## Alltag, Bildschirme, Text in der Welt (`alltag.js`, neu 23.11.)
+
+Aus dem Vorbild-Video übernommen (nur die Mittel, nie Inhalte). Beispiel für alles: `probe-alltag/szene.js`.
+
+| Name | Was | Steuerung |
+|---|---|---|
+| `handy` + `HANDY` | Handy mit **echtem Bildschirm**. Er zeigt eine zweite Kamera (`HANDY.cam`) irgendwo in der Welt, im selben Look wie das Hauptbild | `handyHalten(f, Fg.handPos, Fg.kopfPos, {rechts, zu})`, `handyBlick(pos, ziel, fov)` |
+| Seite statt Welt | Shop, Nachricht, Fehlermeldung, Preis … auf dem Handy | `handySeite((x, w, h) => {…}, "schlüssel")`, zurück: `handyWelt()` |
+| **Flug ins Handy** | Kamera fliegt in den Bildschirm. Danach `kamera.imHandy()`, damit der Schnitt unsichtbar ist. Hand, Arm und Kopf davor verschwinden von selbst | `kamera.insHandy(q, startPos, fov)`; Handy dafür **zur Kamera drehen** (`zu: startPos`) |
+| `videowand` | Großbildschirm 9×16 m (Platz, Hauswand), zeigt dasselbe wie das Handy | `.visible`, `.position`, `.rotation.y`, `.scale` |
+| Fernseher | in Omas Stube, zeigt das Handy-Bild | `fernseherAn()` / `fernseherAus()` |
+| `leinwand(w, h, {leuchtet})` | Text oder Zeichnung in der Welt (Schild, Plakat, Zettel, Bildschirm) | `schreibe(m, ["ZEILE"], {bg, fg, font, anteil, kreide})`: mit `anteil` 0…1 wird der Text Buchstabe für Buchstabe geschrieben |
+| `KLASSE` | Klassenzimmer bei (−1400, 0, 600): Tafel (`KLASSE.tafel`), Lehrerpult mit Apfel, 3×3 Tische (`KLASSE.plaetze`), Uhr, Fenster | Kamera innen, Rückwand bei lokal z = −7 |
+| `KUECHE` | Küche bei (−1400, 0, −600): Tisch mit Müslischale (`KUECHE.schale`), Saft, Stühle, Kühlschrank, Theke | Tisch bei lokal (0, 0, 0.5) |
+| `STUBE` | Omas Wohnzimmer bei (1400, 0, 600): Sofa (Oma sitzt: `sitz: 1`, y −0.05), Sessel, Couchtisch mit Tee und Kuchen, Stehlampe, Bücherregal, Bilder, Fernseher | – |
+| `raumlicht(R)` | ein Licht für den Raum, in dem gerade gefilmt wird | pro Einstellung aufrufen, Lichtstärke dazu `licht(0.6, …)` |
+| `regenbogen`, `ballonsSetzen(t, an, {x, z, t0})` | Feier-Effekte | – |
+
 ## Gerüst (`folge.js`) – nie neu schreiben
 
 | Name | Was |
@@ -75,7 +94,7 @@ Feste Personen aus Folge 1 (gleich lassen, Werte in `folge-01/szene.html`):
 | `sh(bis, (t, q) => {...})` | Einstellung bis Zeit `bis`; q läuft von 0 bis 1 |
 | `blick(pos, ziel)` | Kamera ohne Wackeln |
 | `licht(stärke, farbe, rimStärke, rimFarbe)` | Licht passend zur Kamera |
-| Kamerafahrten | `kamera.luft(...)`, `kamera.fahrt(...)`, `kamera.vorFigur(q, f, ...)`, `kamera.bodennah(...)` |
+| Kamerafahrten | `kamera.luft(...)`, `kamera.fahrt(...)`, `kamera.vorFigur(q, f, ...)`, `kamera.bodennah(...)`, `kamera.insHandy(q, von)`, `kamera.imHandy()` |
 | `start({grund, frage: {zeile, text, karten: [[B, Emoji, Text, Stichwort]]}, haltePos, nach})` | Grundzustand, Untertitel, Mitmach-Karten, Nahebene gegen Flackern, Menge ohne Aufploppen |
 
 ## Ton (`tonbib.py`)

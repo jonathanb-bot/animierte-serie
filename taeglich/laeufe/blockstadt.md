@@ -26,6 +26,17 @@ Arbeite selbstständig, ohne Rückfragen, auf Deutsch. Qualität vor Quantität 
   - YouTube 17:30
   - TikTok 19:00
 
+## Erzählmittel aus dem Vorbild-Video (Jonathan 23.11.: „die Elemente auch bei uns verwenden“)
+
+Nur die Mittel übernehmen, nie Inhalte (keine Lava-Stunde, keine Mammuts, keine Werbung). Bausteine dafür in `block/alltag.js` (siehe `KATALOG.md`).
+- **Beweis-Montage nach dem Hook:** Auf die Behauptung folgen 2–3 schnelle Alltagsbeweise, jeder an einem neuen Ort (Küche, Schule, Omas Stube, Straße) und jeder mit einem kleinen Witz.
+- **Bekannte Personen mit Gag:** Lehrer, Oma, bester Freund und Papa tun etwas Lustiges, das zur Regel der Stadt passt. Zum Beispiel schreibt der Lehrer das falsche Wort an die Tafel, oder Oma bestellt im Internet etwas Verrücktes, mit Preisschild.
+- **Bildschirm als Fenster:** Handy, Fernseher oder Großbildschirm zeigen eine zweite Szene. Wo es passt, einmal pro Folge der **Flug ins Handy** (`kamera.insHandy` → `kamera.imHandy`) als Übergang in die Handlung.
+- **Text in der Welt:** Tafel, Schild, Handy-Seite, Fehlermeldung. Nur kurze Wörter, groß lesbar, nie mehr als eine Zeile gleichzeitig zum Lesen.
+- **Tempo:** Etwa alle 2 s ein neues Bild, jede Zeile mindestens eine eigene Einstellung. Mischen aus Totale, Über-die-Schulter, Gesicht in Nahaufnahme (`staunen`, `angst`) und Blick aufs Handy.
+- **Wendepunkt:** „Aber …“ oder „Doch dann …“ nach etwa einem Drittel, danach ein Spektakel-Höhepunkt mit eigenen großen Wesen oder Massen.
+- **Helle Szenen als Kontrast:** Tag (`U.uTag = 1`), bunte Innenräume und Feier-Effekte (Konfetti, Ballons, Regenbogen) sind erlaubt. Die Stadt bleibt aber meist nachts, das ist unser Wiedererkennungszeichen.
+
 ## Ablauf
 
 1. **Repo vorbereiten:**

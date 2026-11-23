@@ -19,15 +19,18 @@ export const gesicht = (art, haut) => { const key = art + haut; if (GES[key]) re
   else if (art === "angst") { x.lineWidth = 8; x.beginPath(); x.moveTo(66, 76); x.lineTo(106, 66); x.moveTo(150, 66); x.lineTo(190, 76); x.stroke(); for (const ex of [88, 168]) { x.fillStyle = "#fff"; x.beginPath(); x.ellipse(ex, 110, 22, 25, 0, 0, 7); x.fill(); x.fillStyle = ink; x.beginPath(); x.arc(ex, 113, 10, 0, 7); x.fill(); } x.beginPath(); x.ellipse(128, 174, 14, 19, 0, 0, 7); x.fill(); }
   else if (art === "idee") { brauen(-8, 70); for (const ex of [88, 168]) { x.fillStyle = "#fff"; x.beginPath(); x.ellipse(ex, 108, 20, 23, 0, 0, 7); x.fill(); x.fillStyle = ink; x.beginPath(); x.arc(ex + 3, 106, 11, 0, 7); x.fill(); x.fillStyle = "#fff"; x.beginPath(); x.arc(ex + 7, 101, 4, 0, 7); x.fill(); } x.fillStyle = ink; x.lineWidth = 9; x.beginPath(); x.arc(128, 150, 32, 0.12 * Math.PI, 0.88 * Math.PI); x.stroke(); }
   else if (art === "ernst") { brauen(8, 82); augen(16); x.lineWidth = 8; x.beginPath(); x.moveTo(104, 168); x.lineTo(152, 168); x.stroke(); }
+  else if (art === "staunen") { brauen(-10, 68); for (const ex of [88, 168]) { x.fillStyle = "#fff"; x.beginPath(); x.ellipse(ex, 110, 19, 23, 0, 0, 7); x.fill(); x.fillStyle = ink; x.beginPath(); x.arc(ex, 112, 11, 0, 7); x.fill(); x.fillStyle = "#fff"; x.beginPath(); x.arc(ex + 4, 107, 4, 0, 7); x.fill(); } x.fillStyle = ink; x.beginPath(); x.ellipse(128, 170, 17, 22, 0, 0, 7); x.fill(); }
+  else if (art === "traurig") { x.lineWidth = 9; x.beginPath(); x.moveTo(66, 84); x.lineTo(106, 72); x.moveTo(150, 72); x.lineTo(190, 84); x.stroke(); augen(17, 12, 4); x.lineWidth = 8; x.beginPath(); x.arc(128, 188, 26, 1.2 * Math.PI, 1.8 * Math.PI); x.stroke(); }
   else if (art === "schlaf") { x.lineWidth = 8; for (const ex of [88, 168]) { x.beginPath(); x.arc(ex, 108, 14, 0.1 * Math.PI, 0.9 * Math.PI); x.stroke(); } x.beginPath(); x.arc(128, 156, 18, 0.2 * Math.PI, 0.8 * Math.PI); x.stroke(); }
-  if (art !== "ernst" && art !== "angst" && art !== "schreien") { x.fillStyle = "rgba(240,90,90,0.22)"; for (const ex of [58, 198]) { x.beginPath(); x.ellipse(ex, 150, 17, 10, 0, 0, 7); x.fill(); } }
+  if (art !== "ernst" && art !== "angst" && art !== "schreien" && art !== "traurig") { x.fillStyle = "rgba(240,90,90,0.22)"; for (const ex of [58, 198]) { x.beginPath(); x.ellipse(ex, 150, 17, 10, 0, 0, 7); x.fill(); } }
   const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 4; return GES[key] = t; };
 export const mund = (t, k = 0) => (Math.sin(t * 11 + k) + Math.sin(t * 7.3 + k * 2) > 0.3 ? "reden" : "froh");
 
 const blobTex = (() => { const c = document.createElement("canvas"); c.width = c.height = 128; const x = c.getContext("2d"); const g = x.createRadialGradient(64, 64, 4, 64, 64, 62); g.addColorStop(0, "rgba(0,0,0,0.7)"); g.addColorStop(1, "rgba(0,0,0,0)"); x.fillStyle = g; x.fillRect(0, 0, 128, 128); return new THREE.CanvasTexture(c); })();
 
 export const FIGUREN = [];
-// o: haut, hemd, hose, haare, frisur ('kurz','zopf','dutt','strubbel','glatze'), helm, weste, muetze, brille, kapuze, schuhe, skala
+// o: haut, hemd, hose, haare, frisur ('kurz','zopf','dutt','strubbel','glatze'), helm, weste, muetze, brille, kapuze, schuhe, skala,
+//    jacke (offene Jacke über dem Hemd), brust (Zeichen/Emoji auf der Brust, brustFarbe)
 export const figur = (o) => {
   const sk = o.skala ?? 1, haut = o.haut ?? "#e8b98a";
   const f = new THREE.Group(); const hautM = plastik(haut);
@@ -51,6 +54,10 @@ export const figur = (o) => {
   if (o.weste) { const wm = plastik(o.weste); const w = rb(2.06, 1.8, 1.06, 0.12, wm); w.position.y = 3.0; koerper.add(w); const st = new THREE.MeshStandardMaterial({ color: "#e8e8e0", emissive: "#bfbfb0", emissiveIntensity: 0.6, roughness: 0.3 });
     for (const y of [2.55, 3.25]) { const s = new THREE.Mesh(new THREE.BoxGeometry(2.1, 0.16, 1.1), st); s.position.y = y; koerper.add(s); } }
   if (o.abzeichen) { const b = rb(0.35, 0.4, 0.05, 0.05, new THREE.MeshStandardMaterial({ color: "#e8c040", metalness: 0.8, roughness: 0.3 })); b.position.set(-0.5, 3.4, 0.53); koerper.add(b); const fu = rb(0.3, 0.5, 0.2, 0.05, plastik("#222")); fu.position.set(0.55, 3.4, 0.55); koerper.add(fu); const g = rb(2.04, 0.22, 1.04, 0.05, plastik("#1a1a1a")); g.position.y = 2.05; koerper.add(g); }
+  if (o.jacke) { const jm = stoff(o.jacke); const r = rb(2.08, 2.04, 0.55, 0.12, jm); r.position.set(0, 2.95, -0.25); koerper.add(r);
+    for (const sx of [-1, 1]) { const v = rb(0.62, 2.04, 0.5, 0.1, jm); v.position.set(sx * 0.73, 2.95, 0.29); koerper.add(v); const kr = rb(0.5, 0.5, 0.12, 0.05, jm); kr.position.set(sx * 0.42, 3.72, 0.55); kr.rotation.z = sx * 0.5; koerper.add(kr); } }
+  if (o.brust) { const c = document.createElement("canvas"); c.width = c.height = 128; const x = c.getContext("2d"); x.fillStyle = o.brustFarbe ?? "#ffd23a"; x.font = "900 96px 'Inter Display', Inter, 'Noto Color Emoji', sans-serif"; x.textAlign = "center"; x.textBaseline = "middle"; x.fillText(o.brust, 64, 70);
+    const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; const b = new THREE.Mesh(new THREE.PlaneGeometry(0.75, 0.75), new THREE.MeshStandardMaterial({ map: t, transparent: true, roughness: 0.7 })); b.position.set(0, 3.1, o.weste || o.jacke ? 0.56 : 0.51); koerper.add(b); }
   if (o.schal) { const s = rb(2.0, 0.4, 1.1, 0.15, stoff(o.schal)); s.position.y = 3.85; koerper.add(s); }
   const glied = (x, y, m, hand) => { const p = new THREE.Group(); p.position.set(x, y, 0); const b = rb(0.96, hand ? 1.5 : 1.6, 0.96, 0.12, m); b.position.y = hand ? -0.7 : -0.75; p.add(b);
     if (hand) { const hd = rb(0.96, 0.5, 0.96, 0.12, hautM); hd.position.y = -1.7; p.add(hd); } else { const s = rb(1.0, 0.42, 1.12, 0.12, plastik(o.schuhe ?? "#2a2a2e")); s.position.set(0, -1.75, 0.06); p.add(s); } return p; };

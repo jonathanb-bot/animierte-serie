@@ -10,7 +10,8 @@ import * as Wt from "./welt.js";
 import * as Fg from "./figuren.js";
 import * as Ws from "./wesen.js";
 import * as Rq from "./requisiten.js";
-export { Wt, Fg, Ws, Rq };
+import * as Al from "./alltag.js";
+export { Wt, Fg, Ws, Rq, Al };
 const { THREE, cam, composer, U } = Wt;
 export { THREE };
 
@@ -38,6 +39,7 @@ export async function laden() {
 
 // ---------- Kamera + Licht ----------
 export const ZIEL = new THREE.Vector3();
+export const NAH = { wert: null };   // Nahebene für diese Einstellung erzwingen (insHandy)
 export const blick = (pos, ziel) => { cam.position.copy(pos); ZIEL.copy(ziel); cam.lookAt(ziel); };   // ohne Wackeln (Jonathan 22.11.)
 export const licht = (staerke = 1.6, farbe = "#ffd8b0", rimS = 1.0, rimF = "#8ab0ff") => {
   const d = ZIEL.clone().sub(cam.position).normalize(); const re = new THREE.Vector3().crossVectors(d, V(0, 1, 0)).normalize();
@@ -50,6 +52,15 @@ export const kamera = {
   vorFigur: (q, f, abst0 = 5.4, abst1 = 4.6, seite = -1.4, hoehe = 0.1, fov = 46) => { f.updateMatrixWorld(true); const k = Fg.kopfPos(f);
     blick(lerpV(f.localToWorld(V(seite, 3.8 + hoehe, abst0)), f.localToWorld(V(seite * 0.85, 3.8 + hoehe, abst1)), easeIO(q)), V(k.x, k.y - 0.6, k.z)); cam.fov = fov; },
   bodennah: (q, von0, von1, ziel, fov = 50) => { blick(lerpV(von0, von1, easeIO(q)), ziel); cam.fov = fov; },
+  // Ins Handy fliegen: bei q = 1 füllt der Bildschirm genau das Bild. Nächste Einstellung = HANDY.cam (gleiches fov) → kein sichtbarer Schnitt.
+  insHandy: (q, von, fov = 50) => { const h = Al.handy, s = Al.HANDY.schirm; h.updateMatrixWorld(true); const mitte = s.getWorldPosition(V(0, 0, 0));
+    const n = V(0, 0, 1).transformDirection(s.matrixWorld), oben = V(0, 1, 0).transformDirection(s.matrixWorld), hw = Al.HANDY.schirmH * h.getWorldScale(V(0, 0, 0)).y;
+    const ende = mitte.clone().addScaledVector(n, (hw / 2) / Math.tan(fov * Math.PI / 360)); const k = easeIO(q);
+    cam.up.copy(V(0, 1, 0).lerp(oben, k).normalize()); blick(lerpV(von, ende, k), mitte); cam.fov = fov;
+    // Hand, Arm, Kopf vor dem Bildschirm verschwinden sanft: vordere Schnittebene wandert bis kurz vor den Bildschirm
+    NAH.wert = Math.max(0.15, cam.position.distanceTo(mitte) * 0.985 * ease((q - 0.25) / 0.6)); if (q > 0.72 && Al.HANDY.arm) Al.HANDY.arm.visible = false; },
+  // Bildschirm-Kamera als Hauptkamera (direkt nach insHandy)
+  imHandy: () => { cam.position.copy(Al.HANDY.cam.position); cam.quaternion.copy(Al.HANDY.cam.quaternion); cam.fov = Al.HANDY.cam.fov; ZIEL.copy(cam.position).add(V(0, 0, -10).applyQuaternion(cam.quaternion)); },
 };
 
 // ---------- Einstellungen ----------
@@ -78,6 +89,7 @@ export function start(o = {}) {
     Wt.suchkegel.forEach(k => k.visible = false); Fg.FIGUREN.forEach(f => f.visible = false); Ws.schattenAus();
     for (const p of [Rq.muell, Rq.megafon, Rq.taschenlampe, Rq.lampenKegel, Rq.kisten]) p.visible = false;
     Rq.GASSE.lampe.material = Rq.GASSE.lampeAn; Rq.GASSE.licht.intensity = 40; Rq.ZIMMER.schirm.material = Rq.ZIMMER.schirmAn; Rq.ZIMMER.licht.intensity = 30;
+    Al.zuruecksetzen(); cam.up.set(0, 1, 0); NAH.wert = null;
     Z_.menge = null; Z_.vignette = 0.35; cam.fov = 55;
     grund(t);                                  // Folge: Uniforms, Autos, Polizei, Notlampen, Menge …
     const tag = U.uTag.value > 0.5;
@@ -88,7 +100,7 @@ export function start(o = {}) {
     S[k][1](t, Math.min(1, Math.max(0, (t - von) / (bis - von))));
     cam.updateProjectionMatrix();
     if (probe) return { kam: cam.position.clone(), ziel: ZIEL.clone(), frei: Fg.FIGUREN.filter(f => f.visible).map(f => f.position.clone()), menge: Z_.menge };
-    cam.near = Math.min(3, Math.max(0.15, cam.position.distanceTo(ZIEL) * 0.04)); cam.updateProjectionMatrix();
+    cam.near = NAH.wert ?? Math.min(3, Math.max(0.15, cam.position.distanceTo(ZIEL) * 0.04)); cam.updateProjectionMatrix();
     // Menge: wer im Weg steht, bleibt die ganze Einstellung weg (kein Auf- und Abtauchen)
     if (Z_.menge) { const m = Z_.menge, key = k + ":" + (m.dz ?? 0);
       if (!VERSTECK.has(key)) { const set = new Set(); const b2 = Math.min(bis, F.DAUER);
@@ -99,6 +111,7 @@ export function start(o = {}) {
     } else Rq.mengeSetzen(t, { sichtbar: false });
     Ws.laternenSetzen(t, haltePos ? (L) => haltePos(L, t) : null); Ws.schattenSetzen(t); Ws.funkenSetzen(t); Ws.staubSetzen(t);
     nach(t);
+    Al.bildschirmeRendern();                   // Handy, Großbildschirm, Fernseher
     // Untertitel: ein Wort, gelb
     const w = F.woerter.find(([a, b]) => t >= a - 0.02 && t < b + 0.05);
     if (w) { cap.textContent = sauber(w[2]).toLowerCase(); const pop = ease((t - w[0]) / 0.08); cap.style.transform = `scale(${0.8 + 0.2 * pop}) rotate(${(Math.sin(w[0] * 13) * 2).toFixed(1)}deg)`; } else cap.textContent = "";
