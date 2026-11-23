@@ -1001,7 +1001,16 @@
     "tiktok",
     "instagram"
    ],
-   "fassung": "voll"
+   "fassung": "voll",
+   "veroeffentlicht": {
+    "video": "https://raw.githubusercontent.com/jonathanb-bot/animierte-serie/youtube-upload/taeglich/block-b01.mp4",
+    "geplant": {
+     "tiktok": "2026-11-23T21:29:00",
+     "instagram": "2026-11-23T14:57:00"
+    },
+    "lufs": -14.6,
+    "dauer_s": 112.45
+   }
   },
   {
    "id": "block-b01k",
@@ -1034,7 +1043,15 @@
    "plattformen": [
     "youtube"
    ],
-   "fassung": "YouTube ≤89 s (ohne Zeile 3, kürzere Pausen)"
+   "fassung": "YouTube ≤89 s (ohne Zeile 3, kürzere Pausen)",
+   "veroeffentlicht": {
+    "video": "https://raw.githubusercontent.com/jonathanb-bot/animierte-serie/youtube-upload/taeglich/block-b01k.mp4",
+    "geplant": {
+     "youtube": "2026-11-23T19:58:00"
+    },
+    "lufs": -14.6,
+    "dauer_s": 88.7
+   }
   }
  ]
 }
