@@ -1,0 +1,188 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face { font-family: "T"; src: url("assets/InterDisplay-Black.otf"); font-weight: 900; }
+@font-face { font-family: "UI"; src: url("assets/Inter-Bold.otf"); font-weight: 700; }
+html,body{margin:0;background:#000}canvas{display:block}
+</style></head><body>
+<canvas id="c"></canvas>
+<script>
+// „BELABOYZ (XWAVE)“ (KARDO, X Wave & Veysel) – cleanes iOS-Edit (Stil „Hin und Her“ / „Hele Hele v2“): Intro + Anfang Part 1, 5,1–32,95 s.
+// Jonathan 23.11.: „Intro mit bisschen mehr“ und die gleiche Gucci-Cap wie im Pashanim-Edit (Lounge City), die sich dreht
+// (8 Ansichten aus werk/ansichten, weich überblendet, Bewegungsunschärfe je nach Tempo).
+// Ablauf: Sprachnachricht mit Transkript → Kontrollzentrum (Boxen im Zimmer aufdrehen) → Drop: Cap dreht sich in der 3D-Ansicht →
+// Charts → „Wo ist?“ (Altendorf, FFM, Oberbarmen, LKW durch den Scanner) → Eilmeldung → Live-Aktivität 4/5/6 Blocks → AirDrop an alle + Lautlos.
+const W = 1080, H = 1920, K = 1440 / 1080, A = 5.1, ENDE = 27.85;
+const cv = document.getElementById("c"); cv.width = W * K; cv.height = H * K; let ctx = cv.getContext("2d");
+const clamp = (v, a, b) => Math.max(a, Math.min(b, v)), lerp = (a, b, t) => a + (b - a) * t, ein = p => { p = clamp(p, 0, 1); return p < 0.5 ? 4 * p * p * p : 1 - Math.pow(-2 * p + 2, 3) / 2; };
+const raus = p => 1 - Math.pow(1 - clamp(p, 0, 1), 3), zurueck = p => { p = clamp(p, 0, 1); const c1 = 1.3, c3 = c1 + 1; return 1 + c3 * Math.pow(p - 1, 3) + c1 * Math.pow(p - 1, 2); };
+const rr = (x, y, w, h, r) => { ctx.beginPath(); ctx.roundRect(x, y, w, h, r); };
+const lade = src => new Promise(r => { const i = new Image(); i.onload = () => r(i); i.onerror = () => r(null); i.src = src; });
+const BLAU = "#0a84ff", GRAU = "rgba(235,235,245,0.6)", FL = "#1c1c1e", FL2 = "#2c2c2e", GRUEN = "#30d158", ROT = "#ff453a", ORANGE = "#ff9f0a";
+let COVER = null; const CAP = [];
+// Text nach Genius, Wortzeiten aus der Spracherkennung (large-v3)
+const Z = {};
+[["i1", "Yeah, an alle Hochhäuser und Sozialbaus", [5.48, 6.44, 7.02, 7.24, 7.76, 7.92]], ["i2", "Der ist für euch", [8.8, 9.24, 9.46, 9.6]],
+ ["i3", "X Wave für immer, dreh die Boxen auf im Zimmer", [10.12, 10.74, 11.1, 11.38, 11.66, 11.9, 11.94, 12.4, 12.58, 12.82]], ["i4", "Wesh-wesh, Sensei", [13.72, 14.78]],
+ ["l1", "Hier kommt der Tijarist Kardo mit der Gucci-Kappe", [16.04, 16.36, 16.56, 16.68, 17.24, 17.66, 18.02, 18.18]],
+ ["l2", "Guck ma', wie ich Deutschrap in den Arsch ficke", [18.82, 19.14, 19.3, 19.42, 19.5, 19.92, 20.12, 20.26, 20.48]],
+ ["l3", "Mollyphones, salam an alle Jungs aus Altendorf", [21.14, 21.56, 21.78, 21.88, 22.04, 22.26, 22.36]], ["l4", "Alle aus FFM, alle auf Oberbarm'n", [22.86, 23.1, 23.3, 23.94, 24.12, 24.28]],
+ ["l5", "TP los mit Sender, der LKW geht durch den Scanner", [24.92, 25.06, 25.26, 25.42, 25.74, 25.76, 25.96, 26.14, 26.3, 26.42]],
+ ["l6", "Echte Gangster machen nicht auf Automatensprenger", [26.92, 27.24, 27.6, 27.72, 27.84, 27.96]],
+ ["l7", "Vier Blocks geh'n raus, fünf Blocks, sechs Blocks", [28.98, 29.3, 29.56, 29.84, 30.08, 30.24, 30.6, 30.74]],
+ ["l8", "Ich drück' alle raus, Eisen mit Schalldämpfer", [31.1, 31.2, 31.34, 31.5, 31.92, 32.1, 32.3]]
+].forEach(([k, t, z]) => Z[k] = { woerter: t.split(" ").map((w, i) => ({ w, a: z[i] })), a: z[0] });
+function tipp(ts, k) { let s = ""; for (const w of Z[k].woerter) { if (ts < w.a - 0.04) break; const n = Math.max(1, Math.round(clamp((ts - w.a + 0.04) / 0.09, 0, 1) * w.w.length)); s += (s ? " " : "") + w.w.slice(0, n); } return s; }
+function umbruch(t, max) { const z = []; let r = ""; for (const w of t.split(" ")) { const x = r ? r + " " + w : w; if (ctx.measureText(x).width > max && r) { z.push(r); r = w; } else r = x; } if (r) z.push(r); return z; }
+function text(t, x, y, fs, farbe = "#fff", max = 2000, lh = 1.2, gew = 700, font = "UI") { if (!t) return 0; ctx.font = `${gew} ${fs}px ${font}`; ctx.fillStyle = farbe; ctx.textBaseline = "alphabetic"; const z = umbruch(t, max); z.forEach((l, i) => ctx.fillText(l, x, y + i * fs * lh)); return z.length; }
+const gross = (t, x, y, fs = 84, max = W - 140, farbe = "#fff") => text(t, x, y, fs, farbe, max, 1.07, 900, "T");
+function panel(x, y, w, h, r = 40, farbe = "rgba(28,28,30,0.96)") { ctx.save(); ctx.shadowColor = "rgba(0,0,0,0.55)"; ctx.shadowBlur = 60; ctx.shadowOffsetY = 20; rr(x, y, w, h, r); ctx.fillStyle = farbe; ctx.fill(); ctx.restore(); }
+function kreis(x, y, r, farbe, buch, fs) { ctx.beginPath(); ctx.arc(x, y, r, 0, Math.PI * 2); ctx.fillStyle = farbe; ctx.fill(); if (buch) { ctx.textAlign = "center"; text(buch, x, y + fs * 0.36, fs, "#fff"); ctx.textAlign = "left"; } }
+// ---------- 1) Sprachnachricht in der Gruppe „Hochhaus & Sozialbau“ mit Transkript ----------
+function sSprach(ts) { ctx.fillStyle = "#000"; ctx.fillRect(0, 0, W, H); ctx.fillStyle = "rgba(28,28,30,0.96)"; ctx.fillRect(0, 0, W, 340);
+  kreis(W / 2, 205, 60, "#3a3a3c", "🏢", 54); ctx.textAlign = "center"; text("Hochhaus & Sozialbau ›", W / 2, 300, 32, "#fff"); text("312 Mitglieder", W / 2, 332, 24, GRAU); ctx.textAlign = "left";
+  rr(120, 420, 300, 96, 40); ctx.fillStyle = "#26262a"; ctx.fill(); text("wer ist wach?", 152, 482, 40, "#fff"); text("Kardo", 140, 580, 26, GRAU);
+  // Sprachnachricht
+  const y = 600, w = 860, p = clamp((ts - 5.2) / 10.3, 0, 1); kreis(76, y + 120, 32, "#8e5a2b", "K", 34); rr(120, y, w, 250, 46); ctx.fillStyle = "#26262a"; ctx.fill();
+  kreis(200, y + 82, 50, "#fff"); ctx.fillStyle = "#000"; ctx.fillRect(184, y + 60, 11, 44); ctx.fillRect(205, y + 60, 11, 44);
+  for (let i = 0; i < 44; i++) { const x = 280 + i * 15, hh = 14 + 44 * Math.abs(Math.sin(i * 1.7) * Math.cos(i * 0.6)) * (0.6 + 0.4 * Math.abs(Math.sin(ts * 9 + i))), an = i / 44 < p; rr(x, y + 82 - hh / 2, 8, hh, 4); ctx.fillStyle = an ? "#fff" : "rgba(235,235,245,0.3)"; ctx.fill(); }
+  text("0:" + String(Math.floor(5 + p * 10)).padStart(2, "0"), 280, y + 180, 28, GRAU); text("Transkript ansehen", 560, y + 180, 28, BLAU);
+  panel(40, 940, W - 80, 760, 44, FL); text("TRANSKRIPT", 90, 1015, 28, GRAU); const n = gross(tipp(ts, "i1"), 90, 1120, 80, W - 180); gross(tipp(ts, "i2"), 90, 1120 + Math.max(n, 2) * 86 + 40, 80, W - 180, "rgba(235,235,245,0.95)"); }
+// ---------- 2) Kontrollzentrum: Boxen im Zimmer aufdrehen ----------
+function vol(ts) { return lerp(0.35, 1, ein((ts - 11.66) / 1.2)); }
+function kontroll(ts) { const kachel = (x, y, w, h, r = 50) => { rr(x, y, w, h, r); ctx.fillStyle = "rgba(60,60,68,0.75)"; ctx.fill(); };
+  kachel(60, 220, W - 120, 560); if (COVER) { ctx.save(); rr(100, 260, 170, 170, 26); ctx.clip(); ctx.drawImage(COVER, 100, 260, 170, 170); ctx.restore(); }
+  text("BELABOYZ (XWAVE)", 300, 320, 40, "#fff", 680, 1, 900, "T"); text("KARDO, X Wave & Veysel", 300, 370, 32, GRAU); text("◉  Boxen · Zimmer", 300, 418, 30, BLAU);
+  const n = gross(tipp(ts, "i3"), 100, 540, 74, W - 200); gross(tipp(ts, "i4"), 100, 540 + Math.max(n, 2) * 80 + 20, 74, W - 200, ORANGE);
+  // Lautstärke-Regler (quer, groß)
+  const v = vol(ts), puls = ts > 12.8 ? 1 + 0.03 * Math.max(0, 1 - ((ts - 12.82) % 0.545) / 0.2) : 1; ctx.save(); ctx.translate(W / 2, 950); ctx.scale(puls, puls); ctx.translate(-W / 2, -950);
+  kachel(60, 840, W - 120, 220, 60); ctx.save(); rr(60, 840, W - 120, 220, 60); ctx.clip(); ctx.fillStyle = "rgba(255,255,255,0.93)"; ctx.fillRect(60, 840, (W - 120) * v, 220); ctx.restore();
+  text("🔊", 110, 975, 56, v > 0.15 ? "#333" : "#fff"); ctx.textAlign = "right"; text(Math.round(v * 100) + " %", W - 110, 972, 52, v > 0.9 ? "#333" : "#fff", 999, 1, 900, "T"); ctx.textAlign = "left"; ctx.restore();
+  kachel(60, 1110, W - 120, 560); text("AirPlay", 110, 1190, 34, GRAU);
+  [["Boxen · Zimmer", true], ["iPhone", false], ["Wohnzimmer TV", false]].forEach(([t, an], i) => { const y = 1290 + i * 130; text(t, 110, y, 44, "#fff"); text(an ? "Verbunden · " + Math.round(vol(ts) * 100) + " %" : "", 110, y + 44, 28, GRAU);
+    kreis(W - 140, y - 12, 34, an ? BLAU : "rgba(120,120,128,0.35)", an ? "✓" : "", 36); ctx.fillStyle = "rgba(235,235,245,0.1)"; ctx.fillRect(110, y + 66, W - 220, 2); }); }
+function sKontroll(ts) { const b = inBuf(2, sSprach, ts); ctx.save(); ctx.filter = "blur(36px)"; ctx.drawImage(b, 0, 0, W, H); ctx.restore(); ctx.fillStyle = "rgba(0,0,0,0.5)"; ctx.fillRect(0, 0, W, H); kontroll(ts); }
+// ---------- 3) Drop: die Gucci-Cap dreht sich (3D-Ansicht) ----------
+function capZeichnen(w, tempo, cx, cy, breite) { const pos = ((w / (Math.PI * 2)) % 1 + 1) % 1 * 8, i = Math.floor(pos) % 8, f = pos - Math.floor(pos);
+  const sm = x => x * x * (3 - 2 * x), mix = sm(clamp((f - 0.2) / 0.6, 0, 1)), unsch = clamp(tempo * 2.2, 0, 9); const a = CAP[i], b = CAP[(i + 1) % 8], s = breite / a.width, w2 = a.width * s, h2 = a.height * s;
+  const g = ctx.createRadialGradient(cx, cy + h2 * 0.48, 10, cx, cy + h2 * 0.48, w2 * 0.5); g.addColorStop(0, "rgba(0,0,0,0.6)"); g.addColorStop(1, "rgba(0,0,0,0)");
+  ctx.save(); ctx.translate(cx, cy + h2 * 0.48); ctx.scale(1, 0.18); ctx.translate(-cx, -(cy + h2 * 0.48)); ctx.fillStyle = g; ctx.fillRect(cx - w2, cy, w2 * 2, h2); ctx.restore();
+  for (const [img, al] of [[a, 1 - mix], [b, mix]]) { if (al < 0.01) continue; ctx.save(); ctx.globalAlpha = al; if (unsch > 0.5) ctx.filter = `blur(${unsch.toFixed(1)}px)`; ctx.drawImage(img, cx - w2 / 2, cy - h2 / 2, w2, h2); ctx.restore(); } }
+function capWinkel(ts) { const t0 = 15.48, tG = 18.18; // schnell anlaufen (2 Umdrehungen), auf „Gucci“ vorn abbremsen, danach langsam weiter
+  if (ts < tG) { const q = clamp((ts - t0) / (tG - t0), 0, 1); return [raus(q) * Math.PI * 4, (1 - q) * (1 - q) * 4]; } return [Math.PI * 4 + (ts - tG) * 0.9, 0.2]; }
+function sCap(ts) { const g = ctx.createRadialGradient(W / 2, 760, 60, W / 2, 900, 1150); g.addColorStop(0, "#3b3428"); g.addColorStop(0.5, "#17140f"); g.addColorStop(1, "#050404"); ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+  const sp = ctx.createRadialGradient(W / 2, 0, 50, W / 2, 420, 900); sp.addColorStop(0, "rgba(255,240,210,0.35)"); sp.addColorStop(1, "rgba(255,240,210,0)"); ctx.fillStyle = sp; ctx.fillRect(0, 0, W, H);
+  rr(W / 2 - 200, 170, 400, 84, 42); ctx.fillStyle = "rgba(60,60,68,0.8)"; ctx.fill(); rr(W / 2 - 194, 176, 194, 72, 36); ctx.fillStyle = "rgba(255,255,255,0.9)"; ctx.fill(); ctx.textAlign = "center"; text("Objekt", W / 2 - 97, 225, 32, "#000"); text("AR", W / 2 + 97, 225, 32, "#fff"); ctx.textAlign = "left";
+  text("✕", 70, 228, 46, "#fff"); ctx.textAlign = "right"; text("⇪", W - 70, 228, 46, "#fff"); ctx.textAlign = "left";
+  const [w, tempo] = capWinkel(ts); capZeichnen(w, tempo, W / 2, 800 + Math.sin(ts * 2) * 8, 900);
+  panel(40, 1250, W - 80, 560, 46, "rgba(28,28,30,0.9)"); text("Kappe aus GG Canvas", 90, 1330, 34, GRAU); gross(tipp(ts, "l1"), 90, 1440, 86, W - 180);
+  if (ts > 15.45 && ts < 15.75) { ctx.fillStyle = `rgba(255,255,255,${0.7 * (1 - (ts - 15.45) / 0.3)})`; ctx.fillRect(0, 0, W, H); } }
+// ---------- 4) Charts: X Wave schiebt sich auf Platz 1 ----------
+const CH = [["Sommer 3000", "Deutschrap"], ["Zu viel Gefühl", "Deutschrap"], ["Neon", "Deutschrap"], ["Kein Plan", "Deutschrap"], ["Ohne dich", "Deutschrap"], ["Blaulicht", "Deutschrap"]];
+function sCharts(ts) { ctx.fillStyle = "#000"; ctx.fillRect(0, 0, W, H); text("Charts", 70, 250, 80, "#fff", 999, 1, 900, "T"); text("Top 100: Deutschland", 70, 305, 36, "#fa2d48");
+  panel(40, 350, W - 80, 380, 40, FL); text("NEU AUF PLATZ 1", 90, 420, 28, "#fa2d48"); gross(tipp(ts, "l2"), 90, 515, 70, W - 180);
+  const p = ein((ts - 19.3) / 1.1), yX = lerp(800 + 6 * 140, 800, p); // X Wave steigt von Platz 7 auf 1
+  CH.forEach(([t, k], i) => { const nach = i + 2, y = lerp(800 + i * 140, 800 + (nach - 1) * 140, ein((ts - 19.3 - i * 0.05) / 1.1)); const rang = Math.round(lerp(i + 1, nach, ein((ts - 19.3) / 1.1)));
+    text(String(rang), 70, y + 50, 40, GRAU); rr(150, y, 100, 100, 14); ctx.fillStyle = ["#3a3a3c", "#48484a", "#2c2c2e", "#3a3a3c", "#48484a", "#2c2c2e"][i]; ctx.fill(); text(t, 280, y + 42, 40, "#fff"); text(k, 280, y + 86, 30, GRAU); });
+  ctx.save(); ctx.shadowColor = "rgba(0,0,0,0.8)"; ctx.shadowBlur = 30; rr(40, yX - 20, W - 80, 140, 26); ctx.fillStyle = "#2a1015"; ctx.fill(); ctx.restore();
+  text(String(Math.round(lerp(7, 1, p))), 70, yX + 50, 40, "#fa2d48"); if (COVER) ctx.drawImage(COVER, 150, yX, 100, 100); text("BELABOYZ (XWAVE)", 280, yX + 42, 40, "#fff", 999, 1, 900, "T"); text("KARDO, X Wave & Veysel", 280, yX + 86, 30, GRAU);
+  ctx.textAlign = "right"; text(p > 0.95 ? "▲ 6" : "", W - 80, yX + 60, 36, GRUEN); ctx.textAlign = "left"; }
+// ---------- 5) „Wo ist?“: Karte West-Deutschland ----------
+const geo = (lon, lat) => [(lon - 7.6) * 70, -(lat - 50.8) * 111];
+const ORTE = { altendorf: geo(6.98, 51.455), oberbarmen: geo(7.22, 51.275), ffm: geo(8.68, 50.11), koeln: geo(6.96, 50.94), dus: geo(6.78, 51.225), dortmund: geo(7.47, 51.51), bonn: geo(7.1, 50.73), koblenz: geo(7.59, 50.36), mainz: geo(8.27, 50.0), siegen: geo(8.02, 50.875), limburg: geo(8.06, 50.39) };
+const RHEIN = [[8.27, 50.0], [7.95, 50.1], [7.6, 50.36], [7.25, 50.6], [7.1, 50.73], [6.96, 50.94], [6.78, 51.23], [6.75, 51.45], [6.6, 51.8]].map(([a, b]) => geo(a, b));
+const MAIN = [[8.95, 50.12], [8.68, 50.105], [8.45, 50.05], [8.27, 50.0]].map(([a, b]) => geo(a, b));
+const A3 = [[8.68, 50.11], [8.4, 50.2], [8.06, 50.39], [7.6, 50.6], [7.2, 50.8], [7.0, 50.95], [6.85, 51.1], [6.85, 51.3], [6.9, 51.45]].map(([a, b]) => geo(a, b));
+const A45 = [[8.68, 50.11], [8.4, 50.45], [8.02, 50.875], [7.75, 51.15], [7.47, 51.51]].map(([a, b]) => geo(a, b));
+const A1 = [[6.96, 50.94], [7.15, 51.15], [7.22, 51.27], [7.47, 51.51]].map(([a, b]) => geo(a, b));
+const SCANNER = geo(8.06, 50.39);
+let LA = [0]; for (let i = 1; i < A3.length; i++) LA.push(LA[i - 1] + Math.hypot(A3[i][0] - A3[i - 1][0], A3[i][1] - A3[i - 1][1]));
+function aufA3(s) { s = clamp(s, 0, LA[LA.length - 1]); for (let i = 1; i < A3.length; i++) if (s <= LA[i]) { const q = (s - LA[i - 1]) / (LA[i] - LA[i - 1]); return [lerp(A3[i - 1][0], A3[i][0], q), lerp(A3[i - 1][1], A3[i][1], q)]; } return A3[A3.length - 1]; }
+const zuBild = (c, [x, y]) => [W / 2 + (x - c.cx) * c.z, c.ay + (y - c.cy) * c.z];
+function karte(c) { ctx.fillStyle = "#1a1d22"; ctx.fillRect(0, 0, W, H);
+  ctx.fillStyle = "#1c2c23"; [[7.9, 50.55, 24], [8.3, 50.75, 18], [7.3, 50.45, 20], [8.5, 51.1, 22], [7.85, 51.05, 16], [7.45, 51.0, 14], [8.2, 50.3, 15]].forEach(([a, b, r]) => { const [x, y] = zuBild(c, geo(a, b)); ctx.beginPath(); ctx.ellipse(x, y, r * c.z, r * c.z * 0.7, 0.4, 0, Math.PI * 2); ctx.fill(); });
+  ctx.fillStyle = "#252a32"; Object.values(ORTE).forEach(p => { const [x, y] = zuBild(c, p); ctx.beginPath(); ctx.arc(x, y, Math.max(10, 9 * c.z), 0, Math.PI * 2); ctx.fill(); });
+  const linie = (pts, farbe, b) => { ctx.beginPath(); pts.forEach((p, i) => { const [x, y] = zuBild(c, p); i ? ctx.lineTo(x, y) : ctx.moveTo(x, y); }); ctx.strokeStyle = farbe; ctx.lineWidth = b; ctx.lineJoin = "round"; ctx.lineCap = "round"; ctx.stroke(); };
+  linie(RHEIN, "#1d3550", Math.max(8, 2.2 * c.z)); linie(MAIN, "#1d3550", Math.max(6, 1.5 * c.z)); [A3, A45, A1].forEach(a => linie(a, "#6b5a2c", Math.max(6, 1.0 * c.z)));
+  ctx.textAlign = "center"; [["Köln", "koeln"], ["Dortmund", "dortmund"], ["Bonn", "bonn"], ["Koblenz", "koblenz"], ["Mainz", "mainz"], ["Siegen", "siegen"]].forEach(([t, k]) => { const [x, y] = zuBild(c, ORTE[k]); text(t, x, y + 50, 28, "rgba(235,235,245,0.5)"); });
+  [["Frankfurt", "ffm"], ["Wuppertal-Oberbarmen", "oberbarmen"], ["Essen-Altendorf", "altendorf"]].forEach(([t, k]) => { const [x, y] = zuBild(c, ORTE[k]); text(t, x, y + 92, 30, "rgba(235,235,245,0.8)"); }); ctx.textAlign = "left"; }
+function camWo(ts) { const z1 = { cx: ORTE.altendorf[0], cy: ORTE.altendorf[1], z: 22, ay: 975 }, z2 = { cx: 16, cy: 4, z: 4.9, ay: 975 }, z3 = { cx: 45, cy: 52, z: 9, ay: 975 };
+  const e = ein((ts - 22.8) / 0.9), f = ein((ts - 24.8) / 0.8), m = (a, b, q) => ({ cx: lerp(a.cx, b.cx, q), cy: lerp(a.cy, b.cy, q), z: a.z * Math.pow(b.z / a.z, q), ay: lerp(a.ay, b.ay, q) });
+  return m(m(z1, z2, e), z3, f); }
+const LKW_S = ts => lerp(0, LA[LA.length - 1] * 0.55, clamp((ts - 24.9) / 2.6, 0, 1));
+function sWo(ts) { const c = camWo(ts); karte(c);
+  // Personen (nur Initialen)
+  [["K", "altendorf", "#8e5a2b", 21.2], ["G", "ffm", "#5e5ce6", 22.9], ["B", "oberbarmen", "#2c6e49", 23.95]].forEach(([b, o, f, t0]) => { if (ts < t0 - 0.05) return; const q = zurueck((ts - t0) / 0.3), [x, y] = zuBild(c, ORTE[o]); ctx.save(); ctx.translate(x, y - 40); ctx.scale(q, q); kreis(0, 0, 50, "#fff"); kreis(0, 0, 43, f, b, 44); ctx.restore(); });
+  // LKW mit Sender, Zoll-Scanner auf der A3
+  if (ts > 24.85) { const a = clamp((ts - 24.85) / 0.2, 0, 1); ctx.globalAlpha = a; const [sx, sy] = zuBild(c, SCANNER); rr(sx - 70, sy - 26, 140, 52, 26); ctx.fillStyle = ts > 26.3 ? GRUEN : "#3a3a3c"; ctx.fill(); ctx.textAlign = "center"; text(ts > 26.3 ? "✓ Scanner" : "Scanner", sx, sy + 11, 28, "#fff"); ctx.textAlign = "left";
+    const [lx, ly] = zuBild(c, aufA3(LKW_S(ts))); kreis(lx, ly, 46, "#fff"); kreis(lx, ly, 40, ORANGE, "🚛", 40); ctx.globalAlpha = 1; }
+  // Kopfkarte mit der aktuellen Zeile
+  const zeile = ts < 22.8 ? "l3" : ts < 24.85 ? "l4" : "l5"; panel(40, 150, W - 80, 380, 44, "rgba(28,28,30,0.95)"); text(zeile === "l5" ? "OBJEKTE · LKW · Sender" : "PERSONEN · Standort geteilt", 90, 220, 28, GRAU); gross(tipp(ts, zeile), 90, 320, 70, W - 180);
+  // Blatt unten
+  panel(0, 1420, W, 600, 50, "rgba(28,28,30,0.97)"); rr(W / 2 - 40, 1440, 80, 10, 5); ctx.fillStyle = "rgba(235,235,245,0.3)"; ctx.fill();
+  const obj = ts > 24.85; [["Personen", false], ["Geräte", false], ["Objekte", true]].forEach(([t, o], i) => { const an = obj ? o : i === 0; ctx.textAlign = "center"; text(["👥", "📱", "🏷"][i], 200 + i * 340, 1800, 46, an ? BLAU : GRAU); text(t, 200 + i * 340, 1850, 26, an ? BLAU : GRAU); ctx.textAlign = "left"; });
+  const reihen = obj ? [["🚛", "LKW · Sender", ts > 26.3 ? "durch den Scanner ✓" : "A3 · unterwegs", ORANGE]] : [["K", "Kardo", "Essen-Altendorf · jetzt", "#8e5a2b"], ["G", "Gotti", ts > 22.9 ? "Frankfurt am Main · jetzt" : "…", "#5e5ce6"], ["B", "Bangwhite", ts > 23.95 ? "Wuppertal-Oberbarmen · jetzt" : "…", "#2c6e49"]];
+  reihen.forEach(([b, n, s, f], i) => { const y = 1530 + i * 80; kreis(100, y, 30, f, b, 30); text(n, 150, y + 4, 34, "#fff"); ctx.textAlign = "right"; text(s, W - 70, y + 4, 28, n.startsWith("LKW") && ts > 26.3 ? GRUEN : GRAU); ctx.textAlign = "left"; }); }
+// Eilmeldung (aufgeklappt) über der Karte, wird weggewischt
+function eilmeldung(ts) { const t0 = 26.72, ein_ = zurueck((ts - t0) / 0.28), weg = ein((ts - 28.62) / 0.3); if (ts < t0) return;
+  ctx.fillStyle = `rgba(0,0,0,${0.62 * clamp((ts - t0) / 0.2, 0, 1) * (1 - weg)})`; ctx.fillRect(0, 0, W, H);
+  ctx.save(); ctx.translate(-weg * W * 1.1, lerp(-500, 0, ein_)); panel(40, 560, W - 80, 640, 48, "rgba(44,44,48,0.97)");
+  rr(80, 610, 80, 80, 20); ctx.fillStyle = ROT; ctx.fill(); ctx.textAlign = "center"; text("N", 120, 666, 46, "#fff"); ctx.textAlign = "left"; text("NEWS · EILMELDUNG", 190, 646, 28, GRAU); text("Geldautomat in der Nacht gesprengt", 190, 690, 34, "#fff", W - 290);
+  gross(tipp(ts, "l6"), 90, 860, 80, W - 180); ctx.fillStyle = "rgba(235,235,245,0.14)"; ctx.fillRect(40, 1090, W - 80, 2); ctx.textAlign = "center"; text("Öffnen", W / 2 - 230, 1162, 38, BLAU); text("Löschen", W / 2 + 230, 1162, 38, ROT); ctx.textAlign = "left";
+  ctx.restore(); if (weg > 0 && weg < 1) { rr(W - weg * 600, 560, weg * 600, 640, 48); ctx.fillStyle = ROT; ctx.fill(); text("🗑", W - weg * 300 - 30, 900, 70, "#fff"); } }
+// Live-Aktivität in der Dynamic Island: 4 → 5 → 6 Blocks raus
+function insel(ts) { const t0 = 28.85, t1 = 30.95; if (ts < t0 || ts > t1 + 0.3) return null; const e = ein((ts - t0) / 0.32) * (1 - ein((ts - t1) / 0.3)); return e; }
+function inselGross(ts, e) { const r = { x: lerp(W / 2 - 165, 30, e), y: 38, w: lerp(330, W - 60, e), h: lerp(74, 470, e) }; ctx.fillStyle = `rgba(0,0,0,${0.55 * e})`; ctx.fillRect(0, 0, W, H);
+  rr(r.x, r.y, r.w, r.h, lerp(37, 70, e)); ctx.fillStyle = "#000"; ctx.fill(); if (e < 0.5) return; ctx.save(); ctx.globalAlpha = (e - 0.5) * 2;
+  const n = ts < 30.08 ? 4 : ts < 30.6 ? 5 : 6, t = ts < 30.08 ? 28.98 : ts < 30.6 ? 30.08 : 30.6, q = zurueck((ts - t) / 0.2);
+  text("📦  Lieferung", 90, 140, 32, GRAU); ctx.textAlign = "right"; text("raus", W - 90, 140, 32, ORANGE); ctx.textAlign = "left";
+  ctx.save(); ctx.translate(90, 330); ctx.scale(q, q); text(String(n), 0, 0, 200, "#fff", 999, 1, 900, "T"); ctx.restore(); text("Blocks", 260, 320, 64, "#fff", 999, 1, 900, "T");
+  for (let i = 0; i < 6; i++) { rr(90 + i * 150, 400, 130, 22, 11); ctx.fillStyle = i < n ? ORANGE : "rgba(235,235,245,0.2)"; ctx.fill(); } ctx.restore();
+  ctx.save(); ctx.globalAlpha = e; gross(tipp(ts, "l7"), 70, 820, 96, W - 140); ctx.restore(); }
+// AirDrop an alle + Lautlos
+function airdrop(ts) { const t0 = 31.0; if (ts < t0) return; const q = zurueck((ts - t0) / 0.32), top = lerp(H, 760, q); ctx.fillStyle = `rgba(0,0,0,${0.5 * clamp(q, 0, 1)})`; ctx.fillRect(0, 0, W, H);
+  ctx.save(); ctx.globalAlpha = clamp((ts - t0) / 0.15, 0, 1); gross(tipp(ts, "l8"), 70, 330, 92, W - 140); ctx.restore();
+  ctx.save(); ctx.translate(0, top - 760); panel(0, 760, W, 1300, 56, "#1c1c1e"); rr(W / 2 - 40, 780, 80, 10, 5); ctx.fillStyle = "rgba(235,235,245,0.3)"; ctx.fill();
+  text("AirDrop", 70, 880, 44, "#fff", 999, 1, 900, "T"); text("An alle senden · 6 Kontakte", 70, 930, 30, GRAU);
+  "KBGVXA".split("").forEach((b, i) => { const x = 160 + (i % 3) * 380, y = 1110 + Math.floor(i / 3) * 280, p = clamp((ts - 31.3 - i * 0.15) / 0.5, 0, 1); kreis(x, y, 80, ["#8e5a2b", "#2c6e49", "#5e5ce6", "#7a3b3b", "#3a3a3c", "#4a4a6a"][i], b, 64);
+    ctx.beginPath(); ctx.arc(x, y, 94, -Math.PI / 2, -Math.PI / 2 + p * Math.PI * 2); ctx.strokeStyle = BLAU; ctx.lineWidth = 9; ctx.stroke(); ctx.textAlign = "center"; text(p >= 1 ? "Gesendet" : p > 0 ? "Wird gesendet …" : "Warten …", x, y + 140, 26, p >= 1 ? BLAU : GRAU); ctx.textAlign = "left"; });
+  ctx.restore(); }
+function sEnde(ts) { bildMit(inBuf(2, sWo, ts), 1, 1, 0); }
+// ---------- Puffer, Übergänge, Statusleiste ----------
+let BUF = [];
+function inBuf(i, f, ts) { const o = BUF[i].getContext("2d"); o.setTransform(K, 0, 0, K, 0, 0); o.globalAlpha = 1; o.filter = "none"; o.textAlign = "left"; o.clearRect(0, 0, W, H); const alt = ctx; ctx = o; try { f(ts); } finally { ctx = alt; } return BUF[i]; }
+function bildMit(b, s = 1, a = 1, dim = 0, dx = 0, dy = 0, blur = 0) { ctx.save(); ctx.globalAlpha = a; if (blur > 0.5) ctx.filter = `blur(${blur}px)`; ctx.translate(W / 2 + dx, H / 2 + dy); ctx.scale(s, s); ctx.translate(-W / 2, -H / 2); ctx.drawImage(b, 0, 0, W, H); ctx.restore(); if (dim > 0) { ctx.fillStyle = `rgba(0,0,0,${dim})`; ctx.fillRect(0, 0, W, H); } }
+const BANNER = { x: 30, y: 130, w: W - 60, h: 200 };
+function banner(r, a) { if (a <= 0) return; ctx.save(); ctx.globalAlpha = a; panel(r.x, r.y, r.w, r.h, 44, "rgba(40,40,44,0.97)"); rr(r.x + 30, r.y + 44, 96, 96, 22); ctx.fillStyle = GRUEN; ctx.fill(); ctx.textAlign = "center"; text("◎", r.x + 78, r.y + 110, 56, "#fff"); ctx.textAlign = "left";
+  text("WO IST?", r.x + 150, r.y + 66, 26, GRAU); ctx.textAlign = "right"; text("jetzt", r.x + r.w - 34, r.y + 66, 26, GRAU); ctx.textAlign = "left"; text("Die Jungs teilen ihren Standort", r.x + 150, r.y + 114, 38, "#fff", r.w - 190); text("Altendorf · FFM · Oberbarmen", r.x + 150, r.y + 162, 32, "rgba(235,235,245,0.8)"); ctx.restore(); }
+function oeffnen(fA, fB, t0, dauer, ts) { const e = ein((ts - t0) / dauer); bildMit(inBuf(0, fA, ts), 1 - 0.07 * e, 1, 0.55 * e);
+  const r = { x: lerp(BANNER.x, 0, e), y: lerp(BANNER.y, 0, e), w: lerp(BANNER.w, W, e), h: lerp(BANNER.h, H, e) }, s = r.w / W, b = inBuf(1, fB, ts);
+  ctx.save(); rr(r.x, r.y, r.w, r.h, lerp(44, 0, e)); ctx.clip(); ctx.fillStyle = "#000"; ctx.fillRect(r.x, r.y, r.w, r.h); ctx.globalAlpha = clamp(e * 2.2, 0, 1); ctx.drawImage(b, r.x, r.y + r.h / 2 - (H * s) / 2 * lerp(0.25, 1, e) - lerp(H * s * 0.12, 0, e), r.w, H * s); ctx.restore(); banner(r, 1 - clamp(e * 3, 0, 1)); }
+function umschalten(fA, fB, t0, dauer, ts) { const e = ein((ts - t0) / dauer), s = 1 - 0.3 * Math.sin(Math.PI * e), r = 70 * Math.sin(Math.PI * e); ctx.fillStyle = "#0b0b10"; ctx.fillRect(0, 0, W, H);
+  [[fA, -e * W * 0.8, 0], [fB, (1 - e) * W * 0.8, 1]].forEach(([f, dx, i]) => { const b = inBuf(i, f, ts); ctx.save(); ctx.translate(W / 2 + dx, H / 2); ctx.scale(s, s); ctx.translate(-W / 2, -H / 2); rr(0, 0, W, H, r / s); ctx.clip(); ctx.drawImage(b, 0, 0, W, H); ctx.restore(); }); }
+function oben(ts) { ctx.fillStyle = "#fff"; ctx.font = "700 36px UI"; ctx.textAlign = "left"; ctx.fillText("23:41", 96, 92); ctx.textAlign = "right"; ctx.fillText("5G", W - 170, 92);
+  rr(W - 150, 66, 62, 30, 9); ctx.strokeStyle = "#fff"; ctx.lineWidth = 3; ctx.stroke(); rr(W - 146, 70, 44, 22, 6); ctx.fill(); ctx.textAlign = "left";
+  const e = insel(ts); if (e !== null && e > 0) { inselGross(ts, e); return; }
+  const laut = ts > 32.25, lq = laut ? zurueck((ts - 32.25) / 0.3) : 0, w = 330 + 60 * lq; rr(W / 2 - w / 2, 38, w, 74, 37); ctx.fillStyle = "#000"; ctx.fill();
+  if (laut) { ctx.save(); ctx.globalAlpha = clamp(lq, 0, 1); kreis(W / 2 - w / 2 + 44, 75, 26, ORANGE, "🔕", 26); text("Lautlos", W / 2 - w / 2 + 84, 87, 30, ORANGE); ctx.restore(); return; }
+  if (COVER) { ctx.save(); rr(W / 2 - w / 2 + 16, 51, 48, 48, 12); ctx.clip(); ctx.drawImage(COVER, W / 2 - w / 2 + 16, 51, 48, 48); ctx.restore(); }
+  const st = ts < 15.45 ? 0.45 : 1; for (let i = 0; i < 5; i++) { const h = 10 + 26 * st * Math.abs(Math.sin(ts * (5 + i * 1.7) + i)); rr(W / 2 + w / 2 - 110 + i * 16, 75 - h / 2, 8, h, 4); ctx.fillStyle = "#c9a46b"; ctx.fill(); } }
+// ---------- Ablauf ----------
+window.laden = async () => {};
+window.zeichne = T => { const ts = T + A; ctx = cv.getContext("2d"); ctx.setTransform(K, 0, 0, K, 0, 0); ctx.filter = "none"; ctx.globalAlpha = 1; ctx.fillStyle = "#000"; ctx.fillRect(0, 0, W, H);
+  if (ts < 9.95) bildMit(inBuf(0, sSprach, ts));
+  else if (ts < 10.4) { const e = ein((ts - 9.95) / 0.45); bildMit(inBuf(0, sSprach, ts), 1, 1, 0.5 * e, 0, 0, 36 * e); ctx.save(); ctx.globalAlpha = e; ctx.translate(W * 0.3 * (1 - e), -300 * (1 - e)); const s = lerp(0.8, 1, e); ctx.scale(s, s); kontroll(ts); ctx.restore(); }
+  else if (ts < 15.45) bildMit(inBuf(0, sKontroll, ts));
+  else if (ts < 15.78) { const e = ein((ts - 15.45) / 0.33); bildMit(inBuf(1, sCap, ts), lerp(1.12, 1, e)); bildMit(inBuf(0, sKontroll, ts), 1, 1 - e * 0.3, 0, 0, -e * H, 20 * e); } // Kontrollzentrum wird auf den Drop nach oben weggewischt
+  else if (ts < 18.7) bildMit(inBuf(0, sCap, ts));
+  else if (ts < 19.12) umschalten(sCap, sCharts, 18.7, 0.42, ts);
+  else if (ts < 20.75) bildMit(inBuf(0, sCharts, ts));
+  else if (ts < 21.0) { bildMit(inBuf(0, sCharts, ts)); const q = zurueck((ts - 20.75) / 0.24); banner({ ...BANNER, y: lerp(-240, BANNER.y, q) }, clamp((ts - 20.75) / 0.08, 0, 1)); }
+  else if (ts < 21.32) oeffnen(sCharts, sWo, 21.0, 0.32, ts);
+  else { bildMit(inBuf(0, sWo, ts), 1, 1, 0, 0, 0, ts > 28.85 ? 18 * clamp((ts - 28.85) / 0.3, 0, 1) : 0); eilmeldung(ts); airdrop(ts); }
+  oben(ts);
+  const r = ENDE - T; if (r < 0.25) { ctx.fillStyle = `rgba(0,0,0,${1 - r / 0.25})`; ctx.fillRect(0, 0, W, H); } };
+(async () => { await document.fonts.load('900 100px "T"'); await document.fonts.load('700 40px "UI"'); COVER = await lade("assets/cover.png");
+  for (let i = 0; i < 8; i++) CAP.push(await lade(`assets/cap${i}.png`));
+  for (let i = 0; i < 3; i++) { const c = document.createElement("canvas"); c.width = W * K; c.height = H * K; BUF.push(c); } window.bereit = true; })();
+</script></body></html>
