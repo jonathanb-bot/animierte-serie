@@ -2310,6 +2310,12 @@
    "bild_s": 66.82,
    "ton_s": 66.84,
    "lufs": -14.6
+  },
+  "taeglich/nische-n002-en.mp4": {
+   "ok": true,
+   "bild_s": 65.25,
+   "ton_s": 65.28,
+   "lufs": -14.6
   }
  },
  "serien": {
@@ -2582,6 +2588,10 @@
   "nische-n002": {
    "titel": "Nur dein Opa darf es wissen",
    "datei": "taeglich/nische-n002.mp4"
+  },
+  "nische-n002-en": {
+   "titel": "Only Your Grandpa Can Know",
+   "datei": "taeglich/nische-n002-en.mp4"
   }
  },
  "taeglich_staffeln": {
