@@ -41,6 +41,21 @@ Nur die Mittel übernehmen, nie Inhalte (keine Lava-Stunde, keine Mammuts, keine
 - **Doppelte Wendung (24.11.):** Der Plan scheint aufzugehen, dann kommt die Wendung („alle hatten denselben Plan“), und danach dreht sich alles um (der Zähler läuft rückwärts). Am Ende steht ein kurzer, witziger Satz einer bekannten Person (Opa, Oma).
 - **Helle Szenen als Kontrast:** Tag (`U.uTag = 1`), bunte Innenräume und Feier-Effekte (Konfetti, Ballons, Regenbogen) sind erlaubt. Die Stadt bleibt aber meist nachts, das ist unser Wiedererkennungszeichen.
 
+## Test ab 24.11. (Jonathan 23.11.: „als Test einfach morgen verwenden“)
+
+Ab Folge 2 kommen die neuen Bibliotheks-Elemente zum Einsatz. Jede Folge nutzt mindestens:
+- Figuren mit `struktur: true`. Die Gesichter liegen automatisch auf dem runden Kopf.
+- Mindestens **3 neue Elemente**, sonst wiederholt jede Folge dieselben Bilder. Zur Auswahl:
+  - Kulissen: `VORSTADT`, `einkaufsstrasse()`, `AULA`, `KLASSE`, `KUECHE`, `STUBE`
+  - Erzähl-Werkzeuge: Flug ins Handy, Großbildschirm, Tafel/Schild (`leinwand`), Geld-Zähler (`Z_.zaehler`), Geldscheine
+  - Figuren-Zubehör: Propellermütze, Sonnenbrille, Muster
+  - Objekte: `riesenTier`, `objekte.js` (Haus, Schule, Sportwagen, Bus, Tiere …)
+- Die Erzählmittel oben (Beweis-Montage, Zeitraffer, Zähler, doppelte Wendung), soweit sie zur gewählten Antwort passen.
+
+Vor dem Schreiben `node block/katalog_bilder.cjs alle` laufen lassen und `block/katalog/uebersicht.jpg` ansehen, damit klar ist, was es gibt. In `verlauf.json` → `block-bNN.elemente` eintragen, welche neuen Elemente benutzt wurden. Das braucht die Wochenanalyse.
+
+Fehlt für die Geschichte ein Element: es in der Bibliothek bauen (Regeln im Skill `bibliothek`, `.claude/skills/bibliothek/SKILL.md`), nie nur in der Folge.
+
 ## Ablauf
 
 1. **Repo vorbereiten:**
