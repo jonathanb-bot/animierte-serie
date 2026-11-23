@@ -17,7 +17,7 @@
 
 == Schleife 1 ==
 // 0 s – Einsatz 1 (Hook): Kiosk bei Nacht, du fassungslos, dein Opa neben dir, Prämisse groß im Bild
-[kiosk du:schreck opa zeit=nacht palette=lila zoom-rein hooktext="30 MILLIONEN. NUR OPA WEISS ES"] Du gewinnst dreißig Millionen. Und nur dein Opa darf es wissen.
+[kiosk du:schreck opa zeit=nacht palette=lila zoom-rein hooktext="NUR OPA WEISS: 30 MILLIONEN"] Du gewinnst dreißig Millionen. Und nur dein Opa darf es wissen.
 // 4 s – Einsatz 1: Der Schein als Beweis, Opa bleibt verdächtig ruhig (Vorbereitung Finte 2)
 [objekt objekte="lottoschein:Sechs Richtige|geld:Superzahl" gross="30.000.000 €" palette=lila zoom-rein ein="Sechs>6 RICHTIGE + SZ>lottoschein" ein_y=1500] Sechs Richtige. Plus Superzahl.
 // 6 s – Einsatz 1: Du rufst Opa an, er bleibt verdächtig ruhig (Vorbereitung Finte 2)
