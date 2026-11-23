@@ -1,0 +1,185 @@
+{
+ "dauer": 67.6,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "kiosk",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 5.39,
+   "emotion": "spannend",
+   "text": "Du gewinnst dreißig Millionen. Und nur dein Opa darf es wissen."
+  },
+  {
+   "nr": 2,
+   "typ": "objekt",
+   "kapitel": 1,
+   "start": 5.39,
+   "dauer": 2.486,
+   "emotion": "erklaerend",
+   "text": "Sechs Richtige. Plus Superzahl."
+  },
+  {
+   "nr": 3,
+   "typ": "handy",
+   "kapitel": 1,
+   "start": 7.876,
+   "dauer": 2.942,
+   "emotion": "erzaehlend",
+   "text": "Du rufst Opa an. Er klingt nicht mal überrascht."
+  },
+  {
+   "nr": 4,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 10.818,
+   "dauer": 3.662,
+   "emotion": "erzaehlend",
+   "text": "„Sieben Tage. Du sagst es niemandem.“"
+  },
+  {
+   "nr": 5,
+   "typ": "esstisch",
+   "kapitel": 1,
+   "start": 14.48,
+   "dauer": 4.934,
+   "emotion": "erzaehlend",
+   "text": "Tag eins. Deine Mama rechnet, ob das Geld fürs Auto reicht. Du schweigst."
+  },
+  {
+   "nr": 6,
+   "typ": "grossstadt",
+   "kapitel": 1,
+   "start": 19.414,
+   "dauer": 3.902,
+   "emotion": "erzaehlend",
+   "text": "Tag drei. Taxi zur Schule. Neue Schuhe, neue Jacke."
+  },
+  {
+   "nr": 7,
+   "typ": "handy",
+   "kapitel": 1,
+   "start": 23.316,
+   "dauer": 4.55,
+   "emotion": "erzaehlend",
+   "text": "Tag fünf. Deine beste Freundin schreibt zum dritten Mal. Du antwortest nicht."
+  },
+  {
+   "nr": 8,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 27.866,
+   "dauer": 2.606,
+   "emotion": "traurig",
+   "text": "Du dachtest, Opa hat Angst vor den anderen."
+  },
+  {
+   "nr": 9,
+   "typ": "titel",
+   "kapitel": 1,
+   "start": 30.472,
+   "dauer": 3.254,
+   "emotion": "erzaehlend",
+   "text": "Aber keiner weiß es. Verändert hast nur du dich."
+  },
+  {
+   "nr": 10,
+   "typ": "kueche",
+   "kapitel": 2,
+   "start": 33.726,
+   "dauer": 2.342,
+   "emotion": "erzaehlend",
+   "text": "Am siebten Tag sitzt du in Opas Küche."
+  },
+  {
+   "nr": 11,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 36.068,
+   "dauer": 3.062,
+   "emotion": "froh",
+   "text": "Er lächelt nur. Als hätte er das schon erlebt."
+  },
+  {
+   "nr": 12,
+   "typ": "objekt",
+   "kapitel": 2,
+   "start": 39.13,
+   "dauer": 5.054,
+   "emotion": "erklaerend",
+   "text": "In seiner Blechdose: ein vergilbter Lottoschein von neunzehnhundertsechsundachtzig."
+  },
+  {
+   "nr": 13,
+   "typ": "objekt",
+   "kapitel": 2,
+   "start": 44.184,
+   "dauer": 3.11,
+   "emotion": "erklaerend",
+   "text": "Forscher in Berkeley ließen Fremde Monopoly spielen."
+  },
+  {
+   "nr": 14,
+   "typ": "titel",
+   "kapitel": 2,
+   "start": 47.294,
+   "dauer": 2.63,
+   "emotion": "erzaehlend",
+   "text": "Einer bekam per Münzwurf doppelt so viel Geld."
+  },
+  {
+   "nr": 15,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 49.924,
+   "dauer": 3.494,
+   "emotion": "spannend",
+   "text": "Der wurde unhöflicher. Und fand, er hätte es verdient."
+  },
+  {
+   "nr": 16,
+   "typ": "objekt",
+   "kapitel": 2,
+   "start": 53.418,
+   "dauer": 3.974,
+   "emotion": "erklaerend",
+   "text": "Er tippt auf den alten Schein. Gewonnen. Eine Million Mark."
+  },
+  {
+   "nr": 17,
+   "typ": "esstisch",
+   "kapitel": 2,
+   "start": 57.392,
+   "dauer": 2.702,
+   "emotion": "erzaehlend",
+   "text": "Euer Haus. Das Studium deiner Mama."
+  },
+  {
+   "nr": 18,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 60.094,
+   "dauer": 3.686,
+   "emotion": "froh",
+   "text": "Sogar dein erstes Fahrrad. Alles von Opas Gewinn."
+  },
+  {
+   "nr": 19,
+   "typ": "landschaft",
+   "kapitel": 2,
+   "start": 63.78,
+   "dauer": 1.862,
+   "emotion": "erzaehlend",
+   "text": "Vierzig Jahre hat er geschwiegen."
+  },
+  {
+   "nr": 20,
+   "typ": "kiosk",
+   "kapitel": 2,
+   "start": 65.642,
+   "dauer": 1.958,
+   "emotion": "froh",
+   "text": "Und jetzt weißt nur du es."
+  }
+ ]
+}

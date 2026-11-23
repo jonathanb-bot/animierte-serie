@@ -1,0 +1,62 @@
+# Nur dein Opa darf es wissen
+@musik musik/nische-n002.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung spannend
+@vortrag lebendig
+@klang studio
+@mund zitate
+@einblenden aus
+@untertitel aus
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette lila
+@zeit nacht
+
+== Schleife 1 ==
+// 0 s – Einsatz 1 (Hook): Kiosk bei Nacht, du fassungslos, dein Opa neben dir, Prämisse groß im Bild
+[kiosk du:schreck opa zeit=nacht palette=lila zoom-rein hooktext="30 MILLIONEN. NUR OPA WEISS ES"] Du gewinnst dreißig Millionen. Und nur dein Opa darf es wissen.
+// 4 s – Einsatz 1: Der Schein als Beweis, Opa bleibt verdächtig ruhig (Vorbereitung Finte 2)
+[objekt objekte="lottoschein:Sechs Richtige|geld:Superzahl" gross="30.000.000 €" palette=lila zoom-rein ein="Sechs>6 RICHTIGE + SZ>lottoschein" ein_y=1500] Sechs Richtige. Plus Superzahl.
+// 6 s – Einsatz 1: Du rufst Opa an, er bleibt verdächtig ruhig (Vorbereitung Finte 2)
+[handy ort=kiosk zeit=nacht palette=lila netz=4 akku=12 uhrzeit="23:41" von="Opa" nachricht="Anruf …" ton=handy_vibration zoom-rein] Du rufst Opa an. Er klingt nicht mal überrascht.
+// 9 s – Einsatz 1: Zeitdruck, Opas Regel (Figurenstimme)
+[gesicht opa ort=wohnzimmer zeit=nacht palette=lila figurstimme=mann_alt sprecher=opa zoom-rein] „Sieben Tage. Du sagst es niemandem.“
+// 11 s – Große Frage 1: erste Folge, deine Mama rechnet, du schweigst
+[esstisch mama lina du gedeckt zeit=abend palette=orange schwenk-rechts ein="eins>TAG 1>uhr|Auto>AUTO KAPUTT>schluessel" ein_y=430] Tag eins. Deine Mama rechnet, ob das Geld fürs Auto reicht. Du schweigst.
+// 16 s – Große Frage 1: zweite Folge, Wow-Bild Stadt, du gibst Geld aus
+[grossstadt zeit=tag du palette=tuerkis zoom-raus ein="drei>TAG 3>uhr|Taxi>TAXI ZUR SCHULE>geld" ein_y=430] Tag drei. Taxi zur Schule. Neue Schuhe, neue Jacke.
+// 19 s – Große Frage 1: dritte Folge, deine beste Freundin wird ignoriert
+[handy ort=zimmer zeit=nacht lichterkette palette=lila netz=4 akku=34 uhrzeit="22:48" von="Mia" nachricht="Hallo?? Lebst du noch? (3)" zoom-rein ein="fünf>TAG 5>uhr" ein_y=430] Tag fünf. Deine beste Freundin schreibt zum dritten Mal. Du antwortest nicht.
+// 23 s – Große Frage 1 aufgespannt: die naheliegende Erklärung A
+[gesicht du ort=zimmer zeit=nacht lichterkette traurig palette=lila zoom-rein] Du dachtest, Opa hat Angst vor den anderen.
+// 26 s – Finte 1: Alles deutete auf die anderen – verändert hast nur du dich (Schlüsselwort DU)
+[titel oben="Nicht die anderen" gross="DU" unten="hast dich verändert" farbe=#2a1d3e akzent=#c9a2ff groesse=230 hud=false palette=lila zoom-rein ton=hit] Aber keiner weiß es. Verändert hast nur du dich.
+
+== Schleife 2 ==
+// 30 s – Rehook: Tag sieben bei Opa, er lächelt, als kenne er das
+[kueche du opa palette=orange zoom-rein ein="siebten>TAG 7>uhr" ein_y=430] Am siebten Tag sitzt du in Opas Küche.
+// 33 s – Rehook: Opa lächelt, als kenne er das – die größere Frage
+[gesicht opa ort=kueche froh palette=orange zoom-rein] Er lächelt nur. Als hätte er das schon erlebt.
+// 37 s – Einsatz 2: die Blechdose, ein vergilbter Schein, Jahreszahl
+[objekt objekte="blechdose|lottoschein:1986" gross="OPAS DOSE" palette=orange zoom-rein ton=papier ein="vergilbt>VERGILBT>lottoschein" ein_y=1500] In seiner Blechdose: ein vergilbter Lottoschein von neunzehnhundertsechsundachtzig.
+// 42 s – Große Frage 2: echter Fakt – Monopoly-Studie aus Berkeley
+// Quelle: Paul Piff, University of California, Berkeley (Monopoly-Experiment; NPR 2013/2014, PBS NewsHour 2023, APA „Speaking of Psychology“): Münzwurf entscheidet, wer doppelt so viel Geld bekommt und mit zwei Würfeln würfelt
+[objekt objekte="geld:Spieler 1|geld:Spieler 2" gross="MONOPOLY" palette=orange zoom-rein ein="Berkeley>UNI BERKELEY>auge" ein_y=1500] Forscher in Berkeley ließen Fremde Monopoly spielen.
+// 45 s – Große Frage 2: der Münzwurf verteilt das Glück
+[titel oben="Studie · Uni Berkeley" gross="2× GELD" unten="per Münzwurf" farbe=#3a2414 akzent=#ffb45e groesse=190 hud=false palette=orange zoom-rein] Einer bekam per Münzwurf doppelt so viel Geld.
+// 48 s – Große Frage 2: Zuspitzung – der „Reiche“ wird unhöflich und glaubt, er habe es verdient
+// Quelle: wie oben – die „reichen“ Spieler wurden unhöflicher und schrieben den Sieg ihrer Strategie zu, nicht dem Münzwurf
+[gesicht du ort=kueche schreck palette=orange zoom-rein] Der wurde unhöflicher. Und fand, er hätte es verdient.
+// 53 s – Finte 2 (Vorbereitung): Opas alter Schein hat gewonnen
+[objekt objekte="lottoschein:Gewonnen|geld:1.000.000 DM" gross="OPAS GEWINN" palette=orange zoom-rein ton=hit ein="Million>#1.000.000 MARK>geld" ein_y=1500] Er tippt auf den alten Schein. Gewonnen. Eine Million Mark.
+// 57 s – Finte 2: Wofür das Geld war – warmes Bild der Familie
+[esstisch mama papa lina du opa gedeckt kerzen zeit=abend palette=orange zoom-raus ein="Haus>EUER HAUS>schluessel|Studium>MAMAS STUDIUM>herz" ein_y=430] Euer Haus. Das Studium deiner Mama.
+// 60 s – Finte 2: noch ein Detail, das dich selbst betrifft
+[gesicht du ort=esstisch zeit=abend froh palette=orange zoom-rein] Sogar dein erstes Fahrrad. Alles von Opas Gewinn.
+// 62 s – Finte 2: Er hat es nie erzählt
+[landschaft zeit=abend palette=rosa schwenk-links ein="vierzig>40 JAHRE GESCHWIEGEN>herz" ein_y=470] Vierzig Jahre hat er geschwiegen.
+// 70 s – Finte 2 = hartes Ende, Schlussbild wie der Anfang: Kiosk bei Nacht, du und Opa, die Prämisse ist umgedreht
+[kiosk du opa:froh zeit=nacht palette=lila zoom-raus ein="nur>NUR DU WEISST ES>herz" ein_y=330] Und jetzt weißt nur du es.

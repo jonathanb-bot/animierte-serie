@@ -889,6 +889,65 @@
     "lufs": -14.6,
     "dauer_s": 71.92
    }
+  },
+  {
+   "id": "nische-n002",
+   "datum": "2026-11-23",
+   "titel": "Nur dein Opa darf es wissen",
+   "emoji": "🎟️",
+   "serie": "Was wäre, wenn du … (Gewinner-Nische, Issue #39) – eigenständig",
+   "art": "praemisse",
+   "idee_nr": 2,
+   "stimmung": "spannend",
+   "stimme": "Orus",
+   "thema": "Du gewinnst 30 Millionen, Opas Regel: sieben Tage niemandem etwas sagen. Du schweigst, aber gibst Geld aus und ignorierst deine Freundin (Finte 1: nicht die anderen verändern sich, sondern du). Rehook: Opa lächelt, als kenne er das. Fakt: Monopoly-Versuch von Paul Piff (UC Berkeley) – wer per Münzwurf doppelt Geld bekam, wurde unhöflicher und hielt den Sieg für verdient. Finte 2/Ende: Opa hat 1986 selbst eine Million Mark gewonnen und damit still Haus, Mamas Studium und dein erstes Fahrrad bezahlt – jetzt weißt nur du es.",
+   "stil": "leuchtend, nur vorhandene Kulissen (kiosk, objekt, handy, gesicht, esstisch, grossstadt, titel, kueche, landschaft), Paletten lila/orange/tuerkis/rosa",
+   "kulissen": [
+    "kiosk",
+    "objekt",
+    "handy",
+    "gesicht",
+    "esstisch",
+    "grossstadt",
+    "titel",
+    "kueche",
+    "landschaft"
+   ],
+   "beschreibung": "Du gewinnst dreißig Millionen, und nur dein Opa darf es wissen. Sieben Tage lang sagst du es niemandem – und dann zeigt dir Opa, warum.",
+   "hashtags": [
+    "#waswärewenn",
+    "#animation",
+    "#lotto",
+    "#opa"
+   ],
+   "tags": [
+    "was wäre wenn",
+    "animation",
+    "lotto",
+    "opa",
+    "familie",
+    "story"
+   ],
+   "kommentar_frage": "Wem würdest du als Erstes von dreißig Millionen erzählen – oder niemandem?",
+   "en": {
+    "titel": "Only Your Grandpa Can Know",
+    "beschreibung": "You win thirty million, and only your grandpa can know. For seven days you tell no one – and then Grandpa shows you why.",
+    "hashtags": [
+     "#whatif",
+     "#animation",
+     "#lottery",
+     "#grandpa"
+    ],
+    "tags": [
+     "what if",
+     "animation",
+     "lottery",
+     "grandpa",
+     "family",
+     "story"
+    ],
+    "kommentar_frage": "Who's the first person you'd tell about winning thirty million – or would you tell no one?"
+   }
   }
  ]
 }

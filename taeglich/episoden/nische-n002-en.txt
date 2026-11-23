@@ -1,0 +1,63 @@
+# Only Your Grandpa Can Know
+@musik musik/nische-n002-en.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung spannend
+@vortrag lebendig
+@klang studio
+@mund zitate
+@einblenden aus
+@untertitel aus
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette lila
+@zeit nacht
+@sprache en
+
+== Loop 1 ==
+// 0 s – Setup 1 (hook): kiosk at night, you in shock, your grandpa beside you, premise big on screen
+[kiosk du:schreck opa zeit=nacht palette=lila zoom-rein hooktext="30 MILLION. ONLY GRANDPA KNOWS"] You win thirty million. And only your grandpa can know.
+// 4 s – Setup 1: the ticket as proof
+[objekt objekte="lottoschein:Six numbers|geld:Bonus ball" gross="30,000,000" palette=lila zoom-rein ein="six>ALL 6 + BONUS>lottoschein" ein_y=1500] All six numbers. Plus the bonus ball.
+// 6 s – Setup 1: you call Grandpa, he's suspiciously calm (setup for twist 2)
+[handy ort=kiosk zeit=nacht palette=lila netz=4 akku=12 uhrzeit="11:41" von="Grandpa" nachricht="Calling …" ton=handy_vibration zoom-rein] You call Grandpa. He doesn't even sound surprised.
+// 9 s – Setup 1: time pressure, Grandpa's rule (character voice)
+[gesicht opa ort=wohnzimmer zeit=nacht palette=lila figurstimme=mann_alt sprecher=opa zoom-rein] "Seven days. You tell no one."
+// 11 s – Big question 1: first consequence, your mom does the math, you stay quiet
+[esstisch mama lina du gedeckt zeit=abend palette=orange schwenk-rechts ein="one>DAY 1>uhr|car>CAR BROKE DOWN>schluessel" ein_y=430] Day one. Your mom's figuring out if there's enough for the car. You say nothing.
+// 16 s – Big question 1: second consequence, wow shot city, you start spending
+[grossstadt zeit=tag du palette=tuerkis zoom-raus ein="three>DAY 3>uhr|cab>CAB TO SCHOOL>geld" ein_y=430] Day three. A cab to school. New shoes, new jacket.
+// 19 s – Big question 1: third consequence, you ignore your best friend
+[handy ort=zimmer zeit=nacht lichterkette palette=lila netz=4 akku=34 uhrzeit="10:48" von="Mia" nachricht="Hello?? Are you alive? (3)" zoom-rein ein="five>DAY 5>uhr" ein_y=430] Day five. Your best friend texts for the third time. You don't answer.
+// 23 s – Big question 1: the obvious explanation A
+[gesicht du ort=zimmer zeit=nacht lichterkette traurig palette=lila zoom-rein] You thought Grandpa was worried about everyone else.
+// 26 s – Twist 1: it was never about the others – you're the one who changed (keyword YOU)
+[titel oben="Not the others" gross="YOU" unten="are the one who changed" farbe=#2a1d3e akzent=#c9a2ff groesse=230 hud=false palette=lila zoom-rein ton=hit] But nobody knows. The only one who changed is you.
+
+== Loop 2 ==
+// 30 s – Rehook: day seven at Grandpa's, he smiles like he knows
+[kueche du opa palette=orange zoom-rein ein="seven>DAY 7>uhr" ein_y=430] On day seven, you're sitting in Grandpa's kitchen.
+// 33 s – Rehook: Grandpa smiles like he's been here before – the bigger question
+[gesicht opa ort=kueche froh palette=orange zoom-rein] He just smiles. Like he's been through this before.
+// 37 s – Setup 2: the tin box, a yellowed ticket, the year
+[objekt objekte="blechdose|lottoschein:1986" gross="GRANDPA'S TIN" palette=orange zoom-rein ton=papier ein="yellowed>YELLOWED>lottoschein" ein_y=1500] In his old tin box: a yellowed lottery ticket from nineteen eighty-six.
+// 42 s – Big question 2: real fact – the Berkeley Monopoly study
+// Source: Paul Piff, University of California, Berkeley (Monopoly experiment; NPR 2013/2014, PBS NewsHour 2023, APA "Speaking of Psychology"): a coin flip decides who gets twice the money and rolls two dice
+[objekt objekte="geld:Player 1|geld:Player 2" gross="MONOPOLY" palette=orange zoom-rein ein="Berkeley>UC BERKELEY>auge" ein_y=1500] Researchers at Berkeley had strangers play Monopoly.
+// 45 s – Big question 2: a coin flip hands out the luck
+[titel oben="Study · UC Berkeley" gross="2× MONEY" unten="by coin flip" farbe=#3a2414 akzent=#ffb45e groesse=150 hud=false palette=orange zoom-rein] A coin flip gave one of them twice the money.
+// 48 s – Big question 2: escalation – the "rich" player got rude and felt he'd earned it
+// Source: as above – the "rich" players got ruder and credited their strategy, not the coin flip
+[gesicht du ort=kueche schreck palette=orange zoom-rein] That player got ruder. And decided he'd earned it.
+// 53 s – Twist 2 (setup): Grandpa's old ticket was a winner
+[objekt objekte="lottoschein:Winner|geld:1,000,000" gross="GRANDPA'S WIN" palette=orange zoom-rein ton=hit ein="million>#1,000,000>geld" ein_y=1500] He taps the old ticket. A winner. One million.
+// 57 s – Twist 2: what the money was for – warm family shot
+[esstisch mama papa lina du opa gedeckt kerzen zeit=abend palette=orange zoom-raus ein="house>YOUR HOUSE>schluessel|college>MOM'S COLLEGE>herz" ein_y=430] Your house. Your mom's college.
+// 60 s – Twist 2: one more detail that's about you
+[gesicht du ort=esstisch zeit=abend froh palette=orange zoom-rein] Even your first bike. All from Grandpa's win.
+// 62 s – Twist 2: he never told anyone
+[landschaft zeit=abend palette=rosa schwenk-links ein="forty>40 YEARS OF SILENCE>herz" ein_y=470] For forty years, he never said a word.
+// 66 s – Twist 2 = hard ending, final shot mirrors the start: kiosk at night, you and Grandpa, the premise flipped
+[kiosk du opa:froh zeit=nacht palette=lila zoom-raus ein="only>ONLY YOU KNOW>herz" ein_y=330] And now, only you know.

@@ -1,0 +1,185 @@
+{
+ "dauer": 65.968,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "kiosk",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 4.238,
+   "emotion": "spannend",
+   "text": "You win thirty million. And only your grandpa can know."
+  },
+  {
+   "nr": 2,
+   "typ": "objekt",
+   "kapitel": 1,
+   "start": 4.238,
+   "dauer": 2.558,
+   "emotion": "erklaerend",
+   "text": "All six numbers. Plus the bonus ball."
+  },
+  {
+   "nr": 3,
+   "typ": "handy",
+   "kapitel": 1,
+   "start": 6.796,
+   "dauer": 3.038,
+   "emotion": "erzaehlend",
+   "text": "You call Grandpa. He doesn't even sound surprised."
+  },
+  {
+   "nr": 4,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 9.834,
+   "dauer": 3.374,
+   "emotion": "erzaehlend",
+   "text": "\"Seven days. You tell no one.\""
+  },
+  {
+   "nr": 5,
+   "typ": "esstisch",
+   "kapitel": 1,
+   "start": 13.208,
+   "dauer": 4.838,
+   "emotion": "erzaehlend",
+   "text": "Day one. Your mom's figuring out if there's enough for the car. You say nothing."
+  },
+  {
+   "nr": 6,
+   "typ": "grossstadt",
+   "kapitel": 1,
+   "start": 18.046,
+   "dauer": 4.334,
+   "emotion": "erzaehlend",
+   "text": "Day three. A cab to school. New shoes, new jacket."
+  },
+  {
+   "nr": 7,
+   "typ": "handy",
+   "kapitel": 1,
+   "start": 22.38,
+   "dauer": 4.67,
+   "emotion": "erzaehlend",
+   "text": "Day five. Your best friend texts for the third time. You don't answer."
+  },
+  {
+   "nr": 8,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 27.05,
+   "dauer": 2.318,
+   "emotion": "traurig",
+   "text": "You thought Grandpa was worried about everyone else."
+  },
+  {
+   "nr": 9,
+   "typ": "titel",
+   "kapitel": 1,
+   "start": 29.368,
+   "dauer": 4.094,
+   "emotion": "erzaehlend",
+   "text": "But nobody knows. The only one who changed is you."
+  },
+  {
+   "nr": 10,
+   "typ": "kueche",
+   "kapitel": 2,
+   "start": 33.462,
+   "dauer": 2.846,
+   "emotion": "erzaehlend",
+   "text": "On day seven, you're sitting in Grandpa's kitchen."
+  },
+  {
+   "nr": 11,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 36.308,
+   "dauer": 2.966,
+   "emotion": "froh",
+   "text": "He just smiles. Like he's been through this before."
+  },
+  {
+   "nr": 12,
+   "typ": "objekt",
+   "kapitel": 2,
+   "start": 39.274,
+   "dauer": 4.454,
+   "emotion": "erklaerend",
+   "text": "In his old tin box: a yellowed lottery ticket from nineteen eighty-six."
+  },
+  {
+   "nr": 13,
+   "typ": "objekt",
+   "kapitel": 2,
+   "start": 43.728,
+   "dauer": 3.182,
+   "emotion": "erklaerend",
+   "text": "Researchers at Berkeley had strangers play Monopoly."
+  },
+  {
+   "nr": 14,
+   "typ": "titel",
+   "kapitel": 2,
+   "start": 46.91,
+   "dauer": 2.51,
+   "emotion": "erzaehlend",
+   "text": "A coin flip gave one of them twice the money."
+  },
+  {
+   "nr": 15,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 49.42,
+   "dauer": 2.822,
+   "emotion": "spannend",
+   "text": "That player got ruder. And decided he'd earned it."
+  },
+  {
+   "nr": 16,
+   "typ": "objekt",
+   "kapitel": 2,
+   "start": 52.242,
+   "dauer": 3.542,
+   "emotion": "erklaerend",
+   "text": "He taps the old ticket. A winner. One million."
+  },
+  {
+   "nr": 17,
+   "typ": "esstisch",
+   "kapitel": 2,
+   "start": 55.784,
+   "dauer": 2.51,
+   "emotion": "erzaehlend",
+   "text": "Your house. Your mom's college."
+  },
+  {
+   "nr": 18,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 58.294,
+   "dauer": 3.038,
+   "emotion": "froh",
+   "text": "Even your first bike. All from Grandpa's win."
+  },
+  {
+   "nr": 19,
+   "typ": "landschaft",
+   "kapitel": 2,
+   "start": 61.332,
+   "dauer": 2.606,
+   "emotion": "erzaehlend",
+   "text": "For forty years, he never said a word."
+  },
+  {
+   "nr": 20,
+   "typ": "kiosk",
+   "kapitel": 2,
+   "start": 63.938,
+   "dauer": 2.03,
+   "emotion": "froh",
+   "text": "And now, only you know."
+  }
+ ]
+}
