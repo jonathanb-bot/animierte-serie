@@ -10,7 +10,8 @@ Arbeite selbstständig, ohne Rückfragen, auf Deutsch. Qualität vor Quantität 
 ## Feste Regeln (Jonathan)
 
 - **Stil:** wie Folge 1. Nachtstadt, Blockfiguren, Ich-Erzählung („In meiner Stadt …“ in Folge 1; ab Folge 2 geht es direkt weiter). Papa, Oma und die Schatten-Wesen bleiben.
-- **Stimme:** Gemini „Puck“ als Kinderstimme. Kurze Abschnitte (3 Zeilen), keine Radio-Kette, nur kleiner Tonhöhen-Angleich auf etwa 200 Hz. Die Vorlage ist `block/folge-01/stimme4.py`.
+- **Stimme:** Gemini „Puck“ als Kinderstimme, **fröhlich und mitreißend wie ein Storytime-Kind** (Jonathan 23.11. abends: „noch nicht dieses Etwas, mehr freudige Stimme wie im Vorbild“). Immer über `block/stimme.py` (`erzeugen` + `zusammen`): kurze Abschnitte (3 Zeilen), Auswahl nach Sprachmelodie, kurze Pausen (0,12 s, Spannungspausen höchstens +0,45 s), keine Radio-Kette, kleiner Tonhöhen-Angleich auf etwa 200 Hz.
+- **Lautstärke:** Die Stimme liegt **12 LU über Musik und Geräuschen** wie im Vorbild (Jonathan 23.11.: „Audio zu leise im Vergleich zum Hintergrund“). `Ton.mischen()` in `block/tonbib.py` pegelt das automatisch und gibt den Abstand aus; nie `musik_laut=` setzen (das ist der alte, zu laute Hintergrund von Folge 1).
 - **Musik:** passt zur Stimmung jeder Zeile, über `block/tonbib.py` mit `Ton.musik([...])`.
 - **Bild:**
   - Kein Kamera-Wackeln, nichts darf flackern. Das Gerüst `block/folge.js` sorgt dafür.
@@ -121,8 +122,7 @@ Fehlt für die Geschichte ein Element: es in der Bibliothek bauen (Regeln im Ski
    - Eigene Ideen, nie Inhalte fremder Videos übernehmen.
 6. **Ordner `block/folge-NN/`:**
    - `zeilen.py` mit Zeilen und Stimmungen.
-   - Stimme mit `stimme4.py` (Kopie, Zeilen importieren).
-   - `zusammen.py` und `zusammen_yt.py` kopieren und die Pausen anpassen.
+   - Stimme: kleines `stimme.py` in der Folge, das `from stimme import erzeugen, zusammen` (Ordner `..`) nutzt: `erzeugen(zeilen, '.')`, dann `zusammen('.', extra={…})` und `zusammen('.', extra={…}, yt=True, ohne=[{…}])`. Nicht mehr `folge-01/stimme4.py` kopieren.
    - `szene.js`: nur Ereignisse und Einstellungen. Alles Wiederkehrende kommt aus `../folge.js`, Kulissen, Objekte und Figuren aus der Bibliothek (`KATALOG.md`).
    - Neue Kulissen oder Objekte kommen **in die Bibliothek** (`requisiten.js` usw.), nicht in die Folge, und werden in `KATALOG.md` eingetragen.
 7. **Standbilder:**
@@ -130,7 +130,7 @@ Fehlt für die Geschichte ein Element: es in der Bibliothek bauen (Regeln im Ski
    - Prüfen: keine Kamera in Objekten, nichts verdeckt Gesichter, Karten verdecken nichts Wichtiges.
    - Korrigieren, bis alles sauber ist. Danach mit `PLAN=plan_yt.json` noch einmal.
 8. **Rendern:** `block/alles_rendern.sh <Bilder voll> <Bilder yt>` (anpassen auf `FOLGE`). 60 fps, etwa 1,7 Bilder pro Sekunde mit 3 Teilen.
-9. **Ton:** `tonspur.py` der Folge mit `tonbib.Ton` (Musik nach Stimmung, Geräusche, Karten-Töne), für YouTube mit `PLAN=plan_yt.json STIMME=stimme_yt.wav MIX=mix_yt.wav`.
+9. **Ton:** `tonspur.py` der Folge mit `tonbib.Ton` (Musik nach Stimmung, Geräusche, Karten-Töne) und `T.mischen()` ohne `musik_laut` (Ausgabe „Abstand Stimme–Hintergrund“ muss ≈ 12 LU sein), für YouTube mit `PLAN=plan_yt.json STIMME=stimme_yt.wav MIX=mix_yt.wav`.
 10. **Kodieren und prüfen:**
     - Unter 100 MB: `-crf 22 -maxrate 7M -bufsize 14M`, Ton −14 LUFS.
     - Kontaktbogen im Halbsekunden-Abstand ansehen.

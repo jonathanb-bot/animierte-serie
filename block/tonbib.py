@@ -169,13 +169,43 @@ class Ton:
         for w in woerter: self.fx((self.wz(w, zeile_frage + 1) if w else self.Z[zeile_frage + 1]) - 0.15, self.glocke(88, 1.2), 0.08)
 
     # ---------- Mischung ----------
-    def mischen(self, stimme_pfad=None, ziel=None, musik_laut=0.62):
+    @staticmethod
+    def _lufs(x):
+        """Integrierte Lautheit (EBU R128) über ffmpeg."""
+        import subprocess, tempfile
+        with tempfile.TemporaryDirectory() as d:
+            sf.write(d + "/a.wav", x.astype(np.float32), SR)
+            o = subprocess.run(["ffmpeg", "-v", "info", "-i", d + "/a.wav", "-af", "ebur128", "-f", "null", "-"], capture_output=True, text=True).stderr
+        return float(o.rsplit("I:", 1)[1].split("LUFS")[0])
+
+    def mischen(self, stimme_pfad=None, ziel=None, abstand=None, musik_laut=None):
+        """Stimme + Musik + Geräusche. Jonathan 23.11.: Stimme war zu leise gegenüber dem Hintergrund. Seitdem wird der
+        Hintergrund (Musik + Geräusche) automatisch so gepegelt, dass die Stimme `abstand` LU (Standard 12, wie im
+        Vorbild) lauter ist. In Sprechpausen kommt die Musik um bis zu 6 dB hoch, Geräusch-Spitzen bleiben unter der Stimme.
+        musik_laut: alter fester Faktor (Folge 1), nur noch für alte Folgen."""
         stimme_pfad = stimme_pfad or os.environ.get("STIMME", "stimme_final.wav"); ziel = ziel or os.environ.get("MIX", "mix.wav")
         st, sr2 = sf.read(stimme_pfad, dtype="float64"); st = st.mean(1) if st.ndim > 1 else st
         assert sr2 == SR; stimme = np.zeros(self.n); stimme[:min(self.n, len(st))] = st[:self.n]
-        hk = np.convolve(np.abs(stimme), np.ones(int(0.25 * SR)) / int(0.25 * SR), "same"); duck = 1 - 0.6 * np.clip(hk / (hk.max() * 0.25), 0, 1)
-        mix = stimme + self.m * musik_laut * duck + self.f * 0.9 * (0.5 + 0.5 * duck)
-        mix /= np.abs(mix).max() / 0.9
+        glatt = lambda x, s: np.convolve(x, np.ones(int(s * SR)) / int(s * SR), "same")
+        db = lambda x: 20 * np.log10(np.sqrt((x ** 2).mean()) + 1e-9)
+        if musik_laut is not None:   # altes Verhalten (Folge 1)
+            hk = glatt(np.abs(stimme), 0.25); duck = 1 - 0.6 * np.clip(hk / (hk.max() * 0.25), 0, 1)
+            mix = stimme + self.m * musik_laut * duck + self.f * 0.9 * (0.5 + 0.5 * duck)
+        else:
+            abstand = float(abstand if abstand is not None else os.environ.get("ABSTAND", 12))
+            hk = glatt(np.abs(stimme), 0.3); spricht = np.clip(hk / (np.percentile(hk[hk > 1e-4], 50) * 0.5 + 1e-9), 0, 1)
+            spricht = glatt(spricht, 0.35)                       # weiches Ein- und Ausblenden
+            duck = 1 - 0.5 * spricht                             # −6 dB unter der Stimme, voll in Pausen
+            bett = self.m * duck + self.f * (0.6 + 0.4 * duck)
+            g = 10 ** ((self._lufs(stimme) - abstand - self._lufs(bett)) / 20); bett *= g
+            # Geräusch-Spitzen: kurzzeitiger Pegel (0,4 s) nie über Stimme −3 dB
+            w = int(0.4 * SR); ref = np.sqrt(np.mean(stimme[np.abs(stimme) > 0.02] ** 2)) * 10 ** (-3 / 20)
+            kurz = np.sqrt(glatt(bett ** 2, 0.4)) + 1e-9; bett *= np.minimum(1.0, glatt(np.minimum(1.0, ref / kurz), 0.1))
+            mix = stimme + bett
+            print(f"   Abstand Stimme–Hintergrund: {self._lufs(stimme) - self._lufs(bett):.1f} LU (Ziel {abstand:.0f})")
+        spitze = np.abs(mix).max()
+        if spitze > 0.95: mix = np.where(np.abs(mix) > 0.8, np.sign(mix) * (0.8 + 0.15 * np.tanh((np.abs(mix) - 0.8) / 0.15)), mix)
+        mix *= 0.9 / np.abs(mix).max()
         sf.write(ziel, mix.astype(np.float32), SR)
-        db = lambda x: 20 * np.log10(np.sqrt((x ** 2).mean()) + 1e-9); v = np.abs(stimme) > 0.02
-        print(f"{ziel}: {self.DAUER:.2f} s, Stimme {db(stimme[v]):.1f} dB, Musik unter Stimme {db((self.m * musik_laut * duck)[v]):.1f} dB")
+        v = np.abs(stimme) > 0.02
+        print(f"{ziel}: {self.DAUER:.2f} s, Stimme {db(stimme[v]):.1f} dB, Hintergrund unter Stimme {db((mix - stimme)[v]):.1f} dB")

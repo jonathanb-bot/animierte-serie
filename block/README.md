@@ -33,12 +33,13 @@ Ausgewertet wird in der nächsten großen Analyse.
 **Ablauf einer Folge:**
 
 1. `npm ci --ignore-scripts`, dann den Server starten: `python3 -m http.server 8767 --directory block`.
-2. Stimme erzeugen: `python3 folge-XX/stimme4.py`.
-   - Gemini „Puck“, kurze Abschnitte, keine Rundfunk-Kette, nur kleiner Tonhöhen-Angleich auf etwa 200 Hz.
-   - Danach `python3 zusammen.py` (volle Fassung) und `python3 zusammen_yt.py` (YouTube, höchstens 89 s).
+2. Stimme erzeugen mit `stimme.py` (gemeinsam für alle Folgen, seit 23.11. abends):
+   - `erzeugen(zeilen, ordner)`: Gemini „Puck“, fröhliche Storytime-Anweisung, kurze Abschnitte, Auswahl nach Sprachmelodie, keine Rundfunk-Kette, kleiner Tonhöhen-Angleich auf etwa 200 Hz.
+   - `zusammen(ordner, extra)` (volle Fassung) und `zusammen(ordner, extra, yt=True, ohne=[…])` (YouTube, höchstens 89 s).
+   - Folge 1 nutzt noch ihre eigenen Skripte (`folge-01/stimme4.py`, `zusammen*.py`).
 3. Standbilder prüfen: `node mitten.cjs alle`.
 4. Rendern: in 3 parallelen Teilen, 60 fps. Für eine 95-s-Folge dauert das etwa 55 min.
-5. Ton erzeugen: `python3 tonspur.py`, für YouTube mit `PLAN=plan_yt.json STIMME=stimme_yt.wav MIX=mix_yt.wav`.
+5. Ton erzeugen: `python3 tonspur.py` mit `Ton.mischen()`. Die Stimme liegt automatisch 12 LU über dem Hintergrund (wie im Vorbild), für YouTube mit `PLAN=plan_yt.json STIMME=stimme_yt.wav MIX=mix_yt.wav`.
 6. Kodieren: unter 100 MB, weil GitHub keine größeren Dateien annimmt. Zum Beispiel `-c:v libx264 -preset slow -crf 22 -maxrate 7M -bufsize 14M`, Ton auf −14 LUFS.
 7. Veröffentlichen:
    - `ausgabe/taeglich-block-bNN.mp4` mit `taeglich/veroeffentlichen.py block-bNN --max-dauer 120 --plattformen tiktok,instagram`.
