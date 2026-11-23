@@ -7,10 +7,6 @@ html,body{margin:0;background:#000}canvas{display:block}
 </style></head><body>
 <canvas id="c"></canvas>
 <script>
-// „WAHNSINNIG (HELE HELE)“ (KARDO & X Wave) – cleanes Edit im Stil des Vorbilds „Hin und Her“ (Jonathan 22.11.):
-// eine durchgehende iPhone-Welt im Dark Mode, der Text steht in echten App-Elementen und wird mit dem Gesang getippt,
-// weiche Kamerafahrten (Zoom/Schwenk/Unschärfe) statt harter Schnitte, über einer dunklen Karte, die mitläuft.
-// Ausschnitt 32,434–53,0 s (letzte Line Part 1 + kompletter Hook), 110 BPM.
 const W = 1080, H = 1920, K = 1440 / 1080, A = 32.434, ENDE = 20.566;
 const cv = document.getElementById("c"); cv.width = W * K; cv.height = H * K; let ctx = cv.getContext("2d");
 const clamp = (v, a, b) => Math.max(a, Math.min(b, v)), lerp = (a, b, t) => a + (b - a) * t, ein = p => { p = clamp(p, 0, 1); return p < 0.5 ? 4 * p * p * p : 1 - Math.pow(-2 * p + 2, 3) / 2; };
@@ -36,106 +32,181 @@ function tipp(ts, k) { let s = ""; for (const w of Z[k].woerter) { if (ts < w.a 
 function umbruch(t, max) { const z = []; let r = ""; for (const w of t.split(" ")) { const x = r ? r + " " + w : w; if (ctx.measureText(x).width > max && r) { z.push(r); r = w; } else r = x; } if (r) z.push(r); return z; }
 function text(t, x, y, fs, farbe = "#fff", max = 2000, lh = 1.2, gew = 700, font = "UI") { if (!t) return 0; ctx.font = `${gew} ${fs}px ${font}`; ctx.fillStyle = farbe; ctx.textBaseline = "alphabetic"; const z = umbruch(t, max); z.forEach((l, i) => ctx.fillText(l, x, y + i * fs * lh)); return z.length; }
 function cursor(ts, x, y, h, farbe = BLAU) { if (Math.floor(ts * 3) % 2 === 0) { ctx.fillStyle = farbe; ctx.fillRect(x, y - h * 0.82, 4, h); } }
-// ---------- dunkle Karte (Apple-Karten Dark), läuft unter allem mit ----------
-const STRASSEN = []; (function () { let s = 7; const r = () => (s = (s * 9301 + 49297) % 233280) / 233280;
-  for (let i = 0; i < 26; i++) STRASSEN.push({ x0: r() * 3000 - 1000, y0: r() * 4000 - 1000, a: r() * Math.PI, l: 1500 + r() * 2500, w: r() < 0.25 ? 26 : 12, gelb: r() < 0.2 }); })();
-function karte(ts, ox, oy, z = 1) { ctx.save(); ctx.fillStyle = "#1b1d22"; ctx.fillRect(0, 0, W, H); ctx.translate(W / 2, H / 2); ctx.scale(z, z); ctx.translate(-W / 2 - ox, -H / 2 - oy);
-  ctx.fillStyle = "#20242b"; for (let i = 0; i < 40; i++) { const x = (i * 397) % 2600 - 700, y = (i * 613) % 3600 - 800; rr(x, y, 220 + (i % 5) * 40, 160 + (i % 3) * 50, 18); ctx.fill(); }
-  ctx.fillStyle = "#1f3a2a"; rr(300, 1300, 520, 380, 60); ctx.fill(); rr(-400, 300, 380, 300, 50); ctx.fill();
-  ctx.lineCap = "round"; for (const s of STRASSEN) { ctx.strokeStyle = s.gelb ? "#6b5a2c" : "#3a3f48"; ctx.lineWidth = s.w; ctx.beginPath(); ctx.moveTo(s.x0, s.y0); ctx.lineTo(s.x0 + Math.cos(s.a) * s.l, s.y0 + Math.sin(s.a) * s.l); ctx.stroke(); }
-  ctx.fillStyle = "rgba(235,235,245,0.35)"; ctx.font = "700 26px UI"; [["Wichlinghauser Str.", 200, 700], ["Berliner Str.", 640, 1180], ["Oberbarmen", 380, 1500]].forEach(([t, x, y]) => ctx.fillText(t, x, y)); ctx.restore(); }
-// ---------- iOS-Bausteine ----------
-function panel(x, y, w, h, r = 40, farbe = "rgba(28,28,30,0.94)") { ctx.save(); ctx.shadowColor = "rgba(0,0,0,0.55)"; ctx.shadowBlur = 60; ctx.shadowOffsetY = 20; rr(x, y, w, h, r); ctx.fillStyle = farbe; ctx.fill(); ctx.restore(); }
-function pin(x, y, farbe, symbol, s = 1) { ctx.save(); ctx.translate(x, y); ctx.scale(s, s); ctx.fillStyle = farbe; ctx.beginPath(); ctx.arc(0, -46, 34, 0, Math.PI * 2); ctx.fill(); ctx.beginPath(); ctx.moveTo(-10, -18); ctx.lineTo(10, -18); ctx.lineTo(0, 0); ctx.fill();
-  ctx.fillStyle = "#fff"; ctx.font = "700 34px UI"; ctx.textAlign = "center"; ctx.fillText(symbol, 0, -34); ctx.restore(); }
-function status(ts, hell = true) { ctx.fillStyle = hell ? "#fff" : "#000"; ctx.font = "700 36px UI"; ctx.textAlign = "left"; ctx.fillText("23:41", 96, 92); ctx.textAlign = "right"; ctx.fillText("5G", W - 170, 92);
-  rr(W - 150, 66, 62, 30, 9); ctx.strokeStyle = ctx.fillStyle; ctx.lineWidth = 3; ctx.stroke(); rr(W - 146, 70, 44, 22, 6); ctx.fill(); ctx.textAlign = "left";
-  rr(W / 2 - 120, 40, 240, 70, 35); ctx.fillStyle = "#000"; ctx.fill(); }
-// ---------- Szenen (jede zeichnet einen vollen Bildschirm) ----------
-// 0: Musik-Player mit Live-Lyrics (Einstieg)
-function sPlayer(ts) { karte(ts, ts * 8, ts * 4); ctx.fillStyle = "rgba(0,0,0,0.55)"; ctx.fillRect(0, 0, W, H); status(ts);
-  const g = ctx.createLinearGradient(0, 0, 0, H); g.addColorStop(0, "rgba(60,30,20,0.6)"); g.addColorStop(1, "rgba(10,10,12,0.95)"); ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+// v2 (Jonathan 23.11.: „Übergänge fließend, die Karte muss Sinn ergeben“):
+// Jeder Wechsel wächst aus einem Element des vorigen Bildes heraus (Player → Dynamic Island, Mitteilung → App,
+// Standort-Karte im Chat → Vollbild-Navigation, Warnung über der Navigation). Eine einzige Stadt-Karte (Wuppertal-Oberbarmen)
+// mit festen Koordinaten: dein Standort U, Dilês Lounge D und eine Route entlang der Straßen, auf der die Navigation wirklich fährt.
+// ---------- Karte: feste Welt ----------
+const BX = 260, BY = 300, U = [0, 1500], D = [780, -600], ROUTE = [[0, 1500], [0, 300], [780, 300], [780, -600]];
+const SEG = []; let LROUTE = 0; for (let i = 1; i < ROUTE.length; i++) { const [a, b] = [ROUTE[i - 1], ROUTE[i]], l = Math.hypot(b[0] - a[0], b[1] - a[1]); SEG.push({ a, b, l, s0: LROUTE }); LROUTE += l; }
+function routePunkt(s) { s = clamp(s, 0, LROUTE); for (const g of SEG) if (s <= g.s0 + g.l + 1e-6) { const q = (s - g.s0) / g.l; return [lerp(g.a[0], g.b[0], q), lerp(g.a[1], g.b[1], q)]; } return ROUTE[ROUTE.length - 1]; }
+const PARKS = new Set(["2,-3", "-2,1", "3,3", "-1,-2", "4,0"]);
+const HAUPT_X = new Set([0, 3]), HAUPT_Y = new Set([1, -2]);
+const LABELS = [["Wichlinghauser Str.", 0, 900, "s"], ["Berliner Str.", 420, 300, "s"], ["Schwarzbach", 780, -250, "s"], ["Wupper", -700, 640, "w"], ["OBERBARMEN", 1450, 1150, "o"], ["WICHLINGHAUSEN", -900, -700, "o"]];
+const flussY = x => 620 + 45 * Math.sin(x / 520);
+function weltZuBild(cam, x, y) { const dx = (x - cam.cx) * cam.z, dy = (y - cam.cy) * cam.z, c = Math.cos(cam.rot), s = Math.sin(cam.rot); return [cam.ax + dx * c - dy * s, cam.ay + dx * s + dy * c]; }
+// zeichnet die Karte; o.route (0..1 Deckkraft), o.gefahren (bis wohin grau), o.punkt (blauer Standortpunkt), o.pin (Größe des Dilê-Pins)
+function karte(cam, o = {}) {
+  ctx.save(); ctx.fillStyle = "#1a1d22"; ctx.fillRect(-200, -200, W + 400, H + 400);
+  ctx.translate(cam.ax, cam.ay); ctx.rotate(cam.rot); ctx.scale(cam.z, cam.z); ctx.translate(-cam.cx, -cam.cy);
+  const R = 1500 / cam.z + 400, i0 = Math.floor((cam.cx - R) / BX), i1 = Math.ceil((cam.cx + R) / BX), j0 = Math.floor((cam.cy - R) / BY), j1 = Math.ceil((cam.cy + R) / BY);
+  for (let i = i0; i <= i1; i++) for (let j = j0; j <= j1; j++) { const park = PARKS.has(i + "," + j); ctx.fillStyle = park ? "#1e3326" : ((i * 7 + j * 3) % 5 === 0 ? "#252a32" : "#22262d"); rr(i * BX + 16, j * BY + 16, BX - 32, BY - 32, 14); ctx.fill(); }
+  // Fluss Wupper mit Schwebebahn
+  ctx.lineCap = "round"; ctx.lineJoin = "round"; ctx.beginPath(); for (let x = cam.cx - R; x <= cam.cx + R; x += 40) { const y = flussY(x); x === cam.cx - R ? ctx.moveTo(x, y) : ctx.lineTo(x, y); }
+  ctx.strokeStyle = "#1b2b3d"; ctx.lineWidth = 120; ctx.stroke(); ctx.strokeStyle = "#4a5160"; ctx.lineWidth = 5; ctx.setLineDash([22, 16]); ctx.stroke(); ctx.setLineDash([]);
+  // Straßen
+  ctx.lineCap = "butt"; for (let i = i0; i <= i1; i++) { const h = HAUPT_X.has(i); ctx.strokeStyle = h ? "#5d5434" : "#373c46"; ctx.lineWidth = h ? 26 : 15; ctx.beginPath(); ctx.moveTo(i * BX, j0 * BY); ctx.lineTo(i * BX, j1 * BY); ctx.stroke(); }
+  for (let j = j0; j <= j1; j++) { const h = HAUPT_Y.has(j); ctx.strokeStyle = h ? "#5d5434" : "#373c46"; ctx.lineWidth = h ? 26 : 15; ctx.beginPath(); ctx.moveTo(i0 * BX, j * BY); ctx.lineTo(i1 * BX, j * BY); ctx.stroke(); }
+  // Route
+  if (o.route > 0) { ctx.globalAlpha = o.route; ctx.lineCap = "round"; const lw = 34 / cam.z;
+    const pfad = (s0, s1) => { ctx.beginPath(); const n = 60; for (let k = 0; k <= n; k++) { const p = routePunkt(lerp(s0, s1, k / n)); k ? ctx.lineTo(p[0], p[1]) : ctx.moveTo(p[0], p[1]); } };
+    const g = o.gefahren || 0; pfad(g, LROUTE); ctx.strokeStyle = "#0a5ad0"; ctx.lineWidth = lw + 10 / cam.z; ctx.stroke(); ctx.strokeStyle = BLAU; ctx.lineWidth = lw; ctx.stroke();
+    if (g > 0) { pfad(0, g); ctx.strokeStyle = "rgba(140,150,170,0.5)"; ctx.lineWidth = lw; ctx.stroke(); } ctx.globalAlpha = 1; }
+  ctx.restore();
+  // Beschriftungen bleiben waagerecht lesbar
+  ctx.textAlign = "center"; for (const [t, x, y, art] of LABELS) { const [sx, sy] = weltZuBild(cam, x, y); if (sx < -200 || sx > W + 200 || sy < -100 || sy > H + 100) continue;
+    ctx.font = art === "o" ? "700 30px UI" : "700 27px UI"; ctx.fillStyle = art === "w" ? "rgba(120,160,210,0.7)" : art === "o" ? "rgba(235,235,245,0.38)" : "rgba(235,235,245,0.55)"; ctx.fillText(t, sx, sy + 10); } ctx.textAlign = "left";
+  if (o.punkt) { const [sx, sy] = weltZuBild(cam, U[0], U[1]); ctx.beginPath(); ctx.arc(sx, sy, 60, 0, Math.PI * 2); ctx.fillStyle = "rgba(10,132,255,0.18)"; ctx.fill(); ctx.beginPath(); ctx.arc(sx, sy, 22, 0, Math.PI * 2); ctx.fillStyle = "#fff"; ctx.fill(); ctx.beginPath(); ctx.arc(sx, sy, 16, 0, Math.PI * 2); ctx.fillStyle = BLAU; ctx.fill(); }
+  if (o.pin > 0) { const [sx, sy] = weltZuBild(cam, D[0], D[1]); pin(sx, sy, "#ff375f", "♪", o.pin); ctx.globalAlpha = clamp(o.pin, 0, 1); ctx.textAlign = "center"; text("Dilê", sx, sy + 40, 30); ctx.textAlign = "left"; ctx.globalAlpha = 1; }
+}
+function pin(x, y, farbe, symbol, s = 1) { if (s <= 0) return; ctx.save(); ctx.translate(x, y); ctx.scale(s, s); ctx.fillStyle = farbe; ctx.beginPath(); ctx.arc(0, -46, 34, 0, Math.PI * 2); ctx.fill(); ctx.beginPath(); ctx.moveTo(-12, -20); ctx.lineTo(12, -20); ctx.lineTo(0, 0); ctx.fill();
+  ctx.lineWidth = 5; ctx.strokeStyle = "#fff"; ctx.beginPath(); ctx.arc(0, -46, 34, 0, Math.PI * 2); ctx.stroke(); ctx.fillStyle = "#fff"; ctx.font = "700 34px UI"; ctx.textAlign = "center"; ctx.fillText(symbol, 0, -34); ctx.restore(); }
+function panel(x, y, w, h, r = 40, farbe = "rgba(28,28,30,0.96)") { ctx.save(); ctx.shadowColor = "rgba(0,0,0,0.55)"; ctx.shadowBlur = 60; ctx.shadowOffsetY = 20; rr(x, y, w, h, r); ctx.fillStyle = farbe; ctx.fill(); ctx.restore(); }
+const beat = ts => ((ts - A) / 0.54545) % 1;
+// ---------- Szenen ----------
+// Musik-Player mit Live-Lyrics
+function sPlayer(ts) { const g = ctx.createLinearGradient(0, 0, 0, H); g.addColorStop(0, "#3a2016"); g.addColorStop(0.55, "#171012"); g.addColorStop(1, "#0b0b0d"); ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
   if (COVER) { ctx.save(); rr(90, 210, 150, 150, 20); ctx.clip(); ctx.drawImage(COVER, 90, 210, 150, 150); ctx.restore(); }
   text("WAHNSINNIG (HELE HELE)", 270, 270, 44); text("KARDO & X Wave", 270, 326, 36, GRAU);
   text("Paar Straßen weiter, wo ich leb', darf er nicht checken", 90, 560, 70, "rgba(235,235,245,0.28)", 900, 1.15);
   const n = text(tipp(ts, "abloh") || "Der echte Kardo, der Ticker-Sensei", 90, 900, 86, ts > 32.78 ? "#fff" : "rgba(235,235,245,0.5)", 900, 1.12, 900, "T");
   text("Hele, hele, hele", 90, 900 + Math.max(n, 3) * 98 + 120, 70, "rgba(235,235,245,0.28)", 900);
-  rr(90, H - 330, W - 180, 8, 4); ctx.fillStyle = "rgba(235,235,245,0.25)"; ctx.fill(); rr(90, H - 330, (W - 180) * (0.31 + (ts - A) / 108), 8, 4); ctx.fillStyle = "#fff"; ctx.fill();
-  text("0:" + String(Math.floor(ts)).padStart(2, "0"), 90, H - 280, 28, GRAU); ctx.textAlign = "right"; const rest = Math.max(0, 161 - Math.floor(ts)); text("-" + Math.floor(rest / 60) + ":" + String(rest % 60).padStart(2, "0"), W - 90, H - 280, 28, GRAU); ctx.textAlign = "left";
+  rr(90, H - 330, W - 180, 8, 4); ctx.fillStyle = "rgba(235,235,245,0.25)"; ctx.fill(); rr(90, H - 330, (W - 180) * (ts / 161), 8, 4); ctx.fillStyle = "#fff"; ctx.fill();
+  text("0:" + String(Math.floor(ts)).padStart(2, "0"), 90, H - 280, 28, GRAU); const rest = 161 - Math.floor(ts); ctx.textAlign = "right"; text("-" + Math.floor(rest / 60) + ":" + String(rest % 60).padStart(2, "0"), W - 90, H - 280, 28, GRAU); ctx.textAlign = "left";
   ctx.fillStyle = "#fff"; ctx.fillRect(W / 2 - 34, H - 200, 22, 76); ctx.fillRect(W / 2 + 12, H - 200, 22, 76); }
-// 1: Apple-Karten-Suche: „Hele, hele, hele“ in der Suche, Ergebnis „Dilê tanzt auf Tisch“
-function sKarte(ts) { const d = ts - 34.8; karte(ts, 120 - d * 30, 260 - d * 50, 1.0 + d * 0.03); status(ts);
-  if (ts > 36.2) { const q = zurueck((ts - 36.2) / 0.35); pin(560, 820, "#ff375f", "♪", q); text("Dilê", 500, 870, 30, "#fff"); }
-  pin(380, 1260, "#5e5ce6", "⌂", 0.8);
-  panel(50, 1180, W - 100, 640, 46); rr(W / 2 - 40, 1200, 80, 10, 5); ctx.fillStyle = "rgba(235,235,245,0.3)"; ctx.fill();
-  rr(90, 1240, W - 180, 96, 26); ctx.fillStyle = FL2; ctx.fill(); text("⌕", 116, 1306, 44, GRAU); const s = tipp(ts, "hele1") || ""; text(s || "Suchen", 180, 1305, 42, s ? "#fff" : GRAU);
-  ctx.font = "700 42px UI"; if (s) cursor(ts, 182 + ctx.measureText(s).width, 1305, 48);
-  const t2 = tipp(ts, "dile1"); if (t2) { text(t2, 100, 1440, 58, "#fff", 860, 1.1, 900, "T"); text("Shisha-Lounge · Oberbarmen, Wuppertal · 2 Min.", 100, 1500, 32, GRAU);
-    rr(100, 1560, 400, 96, 28); ctx.fillStyle = BLAU; ctx.fill(); text("Route", 250, 1622, 38, "#fff"); rr(520, 1560, 400, 96, 28); ctx.fillStyle = FL2; ctx.fill(); text("Anrufen", 640, 1622, 38, BLAU); } }
-// 2: Übersetzen: Kurdisch → Deutsch
-function sUebersetzen(ts) { ctx.fillStyle = "#000"; ctx.fillRect(0, 0, W, H); status(ts); text("Übersetzen", 70, 250, 76, "#fff", 900, 1, 900, "T");
-  rr(60, 320, W - 120, 110, 30); ctx.fillStyle = FL; ctx.fill(); text("Kurdisch", 130, 392, 38, "#fff"); text("⇄", W / 2 - 22, 392, 44, BLAU); text("Deutsch", W - 330, 392, 38, "#fff");
-  panel(60, 470, W - 120, 470, 40, FL); text("KURDISCH (KURMANCÎ)", 110, 550, 28, GRAU); const a = tipp(ts, "kunet"); text(a, 110, 660, 76, "#fff", 860, 1.1, 900, "T"); ctx.font = "900 76px T"; if (ts < 38.1) cursor(ts, 112 + ctx.measureText(a).width, 660, 80);
-  panel(60, 980, W - 120, 560, 40, "#0b2a4d"); text("DEUTSCH", 110, 1060, 28, "rgba(160,200,255,0.8)"); const b = tipp(ts, "arsch1"); text(b, 110, 1170, 76, "#fff", 860, 1.1, 900, "T");
-  if (ts > 38.9) { text("☆   ⧉   ▷", 110, 1480, 44, "rgba(160,200,255,0.9)"); } }
-// 3: Kalender: Hochzeit eintragen … und wieder löschen
-function sKalender(ts) { ctx.fillStyle = "#000"; ctx.fillRect(0, 0, W, H); status(ts); text("‹ November", 60, 210, 40, "#ff453a"); text("Samstag", 70, 320, 44, GRAU); text("28. November 2026", 70, 400, 70, "#fff", 900, 1, 900, "T");
+// Karten-Suche: erst dein Standort, dann fährt die Kamera auf, bis Route und Dilês Lounge zu sehen sind; danach Übersetzen-Blatt
+function camSuche(ts) { const p = ein((ts - 36.32) / 0.75); return { cx: lerp(U[0], 390, p), cy: lerp(U[1] - 150, 430, p) - (ts - 34.5) * 4, z: lerp(1.05, 0.4, p), rot: 0, ax: W / 2, ay: lerp(620, 700, p) }; }
+function sKarte(ts) { const routeA = clamp((ts - 36.6) / 0.35, 0, 1); karte(camSuche(ts), { punkt: true, route: routeA, pin: ts > 36.3 ? zurueck((ts - 36.3) / 0.35) : 0 });
+  panel(40, 1180, W - 80, 660, 46); rr(W / 2 - 40, 1200, 80, 10, 5); ctx.fillStyle = "rgba(235,235,245,0.3)"; ctx.fill();
+  rr(80, 1240, W - 160, 96, 26); ctx.fillStyle = FL2; ctx.fill(); text("⌕", 106, 1306, 44, GRAU); const s = tipp(ts, "hele1"); text(s || "Suchen", 170, 1305, 42, s ? "#fff" : GRAU);
+  ctx.font = "700 42px UI"; if (s && ts < 36.3) cursor(ts, 172 + ctx.measureText(s).width, 1305, 48);
+  if (ts < 36.3 && s) { text("Vorschläge", 90, 1430, 30, GRAU); text("♪  Dilê · Shisha-Lounge", 90, 1500, 40, "#fff"); text("Oberbarmen · 1,2 km", 150, 1550, 30, GRAU); }
+  const t2 = tipp(ts, "dile1"); if (t2) { const q = raus((ts - 36.3) / 0.25); ctx.save(); ctx.globalAlpha = q; ctx.translate(0, (1 - q) * 30);
+    text(t2, 90, 1440, 58, "#fff", 880, 1.1, 900, "T"); text("Shisha-Lounge · Oberbarmen · 1,2 km", 90, 1500, 32, GRAU);
+    rr(90, 1550, 440, 96, 28); ctx.fillStyle = BLAU; ctx.fill(); text("🚗  2 Min.", 220, 1612, 38, "#fff"); rr(550, 1550, 440, 96, 28); ctx.fillStyle = FL2; ctx.fill(); text("Anrufen", 690, 1612, 38, BLAU);
+    if (ts > 36.95) { ctx.globalAlpha = q * clamp((ts - 36.95) / 0.2, 0, 1); text("„Kunet hajinet …“ – Bewertung auf Kurmancî", 90, 1730, 30, GRAU); text("Übersetzen", 90, 1780, 32, ts > 37.15 ? "#fff" : BLAU); }
+    ctx.restore(); }
+  // Übersetzen-Blatt schiebt sich aus der Bewertung hoch
+  if (ts > 37.2) { const q = zurueck((ts - 37.2) / 0.32), top = lerp(H, 520, q); ctx.fillStyle = `rgba(0,0,0,${0.45 * clamp(q, 0, 1)})`; ctx.fillRect(0, 0, W, H);
+    ctx.save(); ctx.translate(0, top - 520); panel(0, 520, W, H, 50, "#1c1c1e"); rr(W / 2 - 40, 540, 80, 10, 5); ctx.fillStyle = "rgba(235,235,245,0.3)"; ctx.fill();
+    text("Übersetzen", 60, 650, 60, "#fff", 900, 1, 900, "T"); text("Kurdisch  →  Deutsch", 60, 715, 34, BLAU);
+    rr(40, 770, W - 80, 380, 36); ctx.fillStyle = FL2; ctx.fill(); text("KURDISCH (KURMANCÎ)", 90, 840, 28, GRAU); const a = tipp(ts, "kunet"); text(a, 90, 950, 80, "#fff", 880, 1.1, 900, "T"); ctx.font = "900 80px T"; if (ts < 38.1) cursor(ts, 94 + ctx.measureText(a).width, 950, 84);
+    rr(40, 1180, W - 80, 470, 36); ctx.fillStyle = "#0b2a4d"; ctx.fill(); text("DEUTSCH", 90, 1250, 28, "rgba(160,200,255,0.85)"); text(tipp(ts, "arsch1"), 90, 1360, 80, "#fff", 880, 1.1, 900, "T");
+    if (ts > 38.9) text("☆    ⧉    ▷", 90, 1600, 44, "rgba(160,200,255,0.9)"); ctx.restore(); } }
+// Kalender: Hochzeit eintragen … und wieder löschen
+function sKalender(ts) { ctx.fillStyle = "#000"; ctx.fillRect(0, 0, W, H); text("‹ November", 60, 210, 40, "#ff453a"); text("Samstag", 70, 320, 44, GRAU); text("28. November 2026", 70, 400, 70, "#fff", 900, 1, 900, "T");
   for (let h = 0; h < 9; h++) { const y = 520 + h * 150; text(`${12 + h}:00`, 70, y + 12, 28, "rgba(235,235,245,0.35)"); ctx.fillStyle = "rgba(235,235,245,0.12)"; ctx.fillRect(190, y, W - 250, 2); }
-  const weg = ts > 40.54, d = ts - 40.54; const ex = clamp(1 - raus((ts - 41.35) / 0.3), 0, 1);
-  ctx.save(); ctx.globalAlpha = weg ? ex : 1; rr(210, 670, W - 290, 380, 22); ctx.fillStyle = weg ? "rgba(255,69,58,0.32)" : "rgba(10,132,255,0.32)"; ctx.fill(); ctx.fillStyle = weg ? "#ff453a" : BLAU; ctx.fillRect(210, 670, 10, 380);
-  text("💍  " + (tipp(ts, "heirat") || "Neues Ereignis"), 250, 740, 46, "#fff", W - 360, 1.18); text("13:00 – 18:00 · Standesamt", 250, 1000, 32, "rgba(235,235,245,0.7)"); ctx.restore();
-  if (weg) { const q = zurueck(d / 0.3); ctx.save(); ctx.translate(0, (1 - q) * 500); panel(40, 1250, W - 80, 520, 44, FL); text(tipp(ts, "bitch"), 90, 1350, 46, "#fff", W - 180, 1.2, 900, "T");
-    text("Möchtest du dieses Ereignis wirklich löschen?", 90, 1470, 32, GRAU, W - 180); rr(70, 1560, W - 140, 110, 26); ctx.fillStyle = FL2; ctx.fill(); ctx.textAlign = "center"; text("Ereignis löschen", W / 2, 1632, 42, "#ff453a"); ctx.textAlign = "left"; ctx.restore(); }
-  if (ts > 41.4) { const q = clamp((ts - 41.4) / 0.2, 0, 1) * clamp((41.68 - ts) / 0.1 + 1, 0, 1); ctx.save(); ctx.globalAlpha = q; rr(W / 2 - 230, 860, 460, 90, 45); ctx.fillStyle = "rgba(60,60,64,0.95)"; ctx.fill(); ctx.textAlign = "center"; text("Ereignis gelöscht", W / 2, 918, 36, "#fff"); ctx.textAlign = "left"; ctx.restore(); } }
-// 4: Nachrichten: „Schick mal Bild“ → Foto kommt (nicht geladen)
-function sChat(ts) { ctx.fillStyle = "#000"; ctx.fillRect(0, 0, W, H); status(ts); ctx.fillStyle = "rgba(28,28,30,0.96)"; ctx.fillRect(0, 0, W, 330);
-  ctx.beginPath(); ctx.arc(W / 2, 200, 56, 0, Math.PI * 2); ctx.fillStyle = "#8e8e93"; ctx.fill(); ctx.textAlign = "center"; text("D", W / 2, 218, 54, "#fff"); text("Dilê ›", W / 2, 300, 32, "#fff"); ctx.textAlign = "left";
-  const bl = (t, y, rechts, farbe) => { if (!t) return 0; ctx.font = "700 44px UI"; const z = umbruch(t, 640); const bw = Math.max(...z.map(l => ctx.measureText(l).width)) + 64, h = 34 + z.length * 56, x = rechts ? W - 50 - bw : 50; rr(x, y, bw, h, 40); ctx.fillStyle = farbe; ctx.fill(); ctx.fillStyle = "#fff"; z.forEach((l, i) => ctx.fillText(l, x + 32, y + 66 + i * 56)); return h; };
-  bl("wann kommst du? 🥺", 420, false, "#26262a"); let y = 560;
-  const a = tipp(ts, "falsch"); y += bl(a, y, true, BLAU) + 18; const b = tipp(ts, "bild"); y += bl(b, y, true, BLAU) + 18;
-  if (ts > 43.5) { const q = zurueck((ts - 43.5) / 0.3); ctx.save(); ctx.translate(0, (1 - q) * 80); ctx.globalAlpha = clamp((ts - 43.5) / 0.1, 0, 1); rr(50, y + 20, 520, 640, 36); ctx.fillStyle = "#3a3a3c"; ctx.fill(); ctx.filter = "blur(20px)"; ctx.fillStyle = "#8a6a5a"; ctx.beginPath(); ctx.arc(310, y + 340, 160, 0, Math.PI * 2); ctx.fill(); ctx.filter = "none";
-    ctx.textAlign = "center"; text("📷  Foto", 310, y + 320, 40, "#fff"); text("Zum Laden tippen", 310, y + 380, 30, GRAU); ctx.textAlign = "left"; ctx.restore(); } }
-// 5: Navigation zu Dilê: Abbiege-Banner mit den Hook-Zeilen, Tempo steigt
-function sNavi(ts) { const d = ts - 43.6; karte(ts, 300, 400 - d * 260, 1.35); status(ts);
-  ctx.strokeStyle = BLAU; ctx.lineWidth = 34; ctx.lineCap = "round"; ctx.beginPath(); ctx.moveTo(W / 2, H + 50); ctx.lineTo(W / 2, 900); ctx.lineTo(W / 2 + 300, 720); ctx.stroke();
-  pin(W / 2 + 300, 720, "#ff375f", "♪", 1); ctx.beginPath(); ctx.arc(W / 2, 1450, 44, 0, Math.PI * 2); ctx.fillStyle = "#fff"; ctx.fill(); ctx.fillStyle = BLAU; ctx.beginPath(); ctx.moveTo(W / 2, 1418); ctx.lineTo(W / 2 + 24, 1474); ctx.lineTo(W / 2, 1462); ctx.lineTo(W / 2 - 24, 1474); ctx.fill();
-  panel(40, 150, W - 80, 420, 44, "rgba(28,28,30,0.96)"); const zwei = ts >= 46.0;
-  text(zwei ? "↗  Dilê" : "↑  Dilê", 90, 260, 64, "#fff", 900, 1, 900, "T"); ctx.textAlign = "right"; text(zwei ? "1 Min." : "2 Min.", W - 90, 255, 38, GRAU); ctx.textAlign = "left";
-  const a = zwei ? tipp(ts, "hele3") : tipp(ts, "hele2"), b = zwei ? tipp(ts, "nurmich") : tipp(ts, "dile2"); text(a, 90, 360, 62, "#fff", 900, 1.1, 900, "T"); text(b, 90, 445, 56, "#fff", 900, 1.1);
-  ctx.beginPath(); ctx.arc(150, H - 260, 80, 0, Math.PI * 2); ctx.fillStyle = "#fff"; ctx.fill(); ctx.lineWidth = 14; ctx.strokeStyle = "#e5252a"; ctx.stroke(); ctx.textAlign = "center"; text("50", 150, H - 236, 62, "#000", 999, 1, 900, "T");
-  const v = Math.round(lerp(38, 96, clamp(d / 4.4, 0, 1))); rr(260, H - 330, 200, 140, 30); ctx.fillStyle = "rgba(28,28,30,0.95)"; ctx.fill(); text(String(v), 360, H - 248, 70, v > 50 ? "#ff453a" : "#fff", 999, 1, 900, "T"); text("km/h", 360, H - 212, 26, GRAU); ctx.textAlign = "left"; }
-// 6: Notfallwarnung „Erdbeben“: wahnsinnig / wackelig, Bildschirm wackelt
-function sWarnung(ts) { const w = ts > 50.3 ? Math.sin(ts * 60) * 14 * clamp(1 - (ts - 50.3) / 1.2, 0.3, 1) : 0; ctx.save(); ctx.translate(w, w * 0.4);
-  karte(ts, 500, 200, 0.9); ctx.fillStyle = "rgba(0,0,0,0.5)"; ctx.fillRect(-40, -40, W + 80, H + 80); status(ts);
-  ctx.textAlign = "center"; text("23:41", W / 2, 420, 220, "#fff", 2000, 1, 900, "T"); text("Sonntag, 23. November", W / 2, 180 + 30, 40, "rgba(255,255,255,0.8)"); ctx.textAlign = "left";
-  const q = zurueck((ts - 48.0) / 0.35); ctx.save(); ctx.translate(0, (1 - q) * -200); panel(50, 560, W - 100, 560, 44, "rgba(58,20,20,0.92)");
-  text("⚠  NOTFALLWARNUNG", 100, 650, 34, "#ff6961"); ctx.textAlign = "right"; text("jetzt", W - 100, 650, 30, GRAU); ctx.textAlign = "left";
-  text(tipp(ts, "hele4") || " ", 100, 750, 66, "#fff", 880, 1.1, 900, "T"); text(tipp(ts, "arsch2"), 100, 850, 58, "#fff", 880); text(tipp(ts, "wackel"), 100, 940, 58, "#fff", 880);
-  text("Erdbebenwarnung · Oberbarmen · Stärke 7,1", 100, 1060, 30, GRAU, 880); ctx.restore(); ctx.restore(); }
-// 7: Erinnerungen: „Heiraten“ wird gestrichen, Abschluss „Relax-Flow“
-function sErinnerung(ts) { ctx.fillStyle = "#000"; ctx.fillRect(0, 0, W, H); status(ts); text("‹ Listen", 60, 210, 40, "#ff9f0a"); text("Zu erledigen", 70, 330, 80, "#ff9f0a", 900, 1, 900, "T");
-  const items = [["Batzen zählen", true], ["Neue Fleece holen", true], ["💍  Heiraten", false]];
-  items.forEach(([t, fertig], i) => { const y = 470 + i * 150; ctx.beginPath(); ctx.arc(110, y, 30, 0, Math.PI * 2); ctx.lineWidth = 4; const zu = fertig || ts > 52.24; ctx.strokeStyle = zu ? "#ff9f0a" : "rgba(235,235,245,0.4)"; ctx.stroke(); if (zu) { ctx.fillStyle = "#ff9f0a"; ctx.beginPath(); ctx.arc(110, y, 20, 0, Math.PI * 2); ctx.fill(); }
-    text(t, 170, y + 16, 46, fertig ? "rgba(235,235,245,0.45)" : "#fff"); if (i === 2 && ts > 52.24) { ctx.font = "700 46px UI"; const b = ctx.measureText(t).width * clamp((ts - 52.24) / 0.25, 0, 1); ctx.fillStyle = "#fff"; ctx.fillRect(170, y + 1, b, 4); }
-    ctx.fillStyle = "rgba(235,235,245,0.12)"; ctx.fillRect(170, y + 60, W - 230, 2); });
-  panel(50, 1000, W - 100, 360, 40, FL); text("Notiz", 100, 1080, 30, GRAU); text(tipp(ts, "nicht"), 100, 1180, 58, "#fff", 880, 1.12, 900, "T");
+  const weg = ts > 40.5, ex = 1 - raus((ts - 41.3) / 0.25);
+  ctx.save(); ctx.globalAlpha = weg ? clamp(ex, 0, 1) : 1; rr(210, 670, W - 290, 380, 22); ctx.fillStyle = weg ? "rgba(255,69,58,0.32)" : "rgba(10,132,255,0.32)"; ctx.fill(); ctx.fillStyle = weg ? "#ff453a" : BLAU; ctx.fillRect(210, 670, 10, 380);
+  text("💍  " + (tipp(ts, "heirat") || "Hochzeit"), 250, 740, 50, "#fff", W - 360, 1.18, 900, "T"); text("13:00 – 18:00 · Standesamt", 250, 1000, 32, "rgba(235,235,245,0.7)"); ctx.restore();
+  if (weg) { const q = zurueck((ts - 40.5) / 0.3); ctx.save(); ctx.translate(0, (1 - q) * 600); panel(40, 1240, W - 80, 540, 44, FL); text(tipp(ts, "bitch"), 90, 1345, 54, "#fff", W - 180, 1.15, 900, "T");
+    text("Möchtest du dieses Ereignis wirklich löschen?", 90, 1490, 32, GRAU, W - 180); rr(70, 1570, W - 140, 110, 26); ctx.fillStyle = FL2; ctx.fill(); ctx.textAlign = "center"; text("Ereignis löschen", W / 2, 1642, 42, "#ff453a"); ctx.textAlign = "left"; ctx.restore(); } }
+// Nachrichten: „Schick mal Bild“ → Dilê schickt stattdessen ihren Standort (falsch verstanden)
+let ORTKARTE = { x: 50, y: 900, w: 620, h: 440 };
+function camOrt(r) { return { cx: D[0] - 60, cy: D[1] + 120, z: 0.95, rot: 0, ax: r.x + r.w / 2, ay: r.y + r.h / 2 - 30 }; }
+function sChat(ts) { ctx.fillStyle = "#000"; ctx.fillRect(0, 0, W, H); ctx.fillStyle = "rgba(28,28,30,0.96)"; ctx.fillRect(0, 0, W, 330);
+  ctx.beginPath(); ctx.arc(W / 2, 200, 56, 0, Math.PI * 2); ctx.fillStyle = "#c2416b"; ctx.fill(); ctx.textAlign = "center"; text("D", W / 2, 218, 54, "#fff"); text("Dilê ›", W / 2, 300, 32, "#fff"); ctx.textAlign = "left";
+  const bl = (t, y, rechts, farbe) => { if (!t) return 0; ctx.font = "700 46px UI"; const z = umbruch(t, 660); const bw = Math.max(...z.map(l => ctx.measureText(l).width)) + 64, h = 36 + z.length * 58, x = rechts ? W - 50 - bw : 50; rr(x, y, bw, h, 40); ctx.fillStyle = farbe; ctx.fill(); ctx.fillStyle = "#fff"; z.forEach((l, i) => ctx.fillText(l, x + 32, y + 68 + i * 58)); return h; };
+  let y = 400; y += bl("wann kommst du? 🥺", y, false, "#26262a") + 22; y += bl(tipp(ts, "falsch"), y, true, BLAU) + 16; y += bl(tipp(ts, "bild"), y, true, BLAU) + 30;
+  ORTKARTE = { x: 50, y, w: 620, h: 440 };
+  if (ts > 43.36) { const q = zurueck((ts - 43.36) / 0.22); const r = ORTKARTE; ctx.save(); ctx.translate(r.x, r.y + r.h); ctx.scale(q, q); ctx.translate(-r.x, -r.y - r.h);
+    rr(r.x, r.y, r.w, r.h, 36); ctx.save(); ctx.clip(); karte(camOrt(r), { pin: 1 }); ctx.fillStyle = "#26262a"; ctx.fillRect(r.x, r.y + r.h - 96, r.w, 96); text("📍 Standort von Dilê", r.x + 30, r.y + r.h - 34, 36, "#fff"); ctx.restore(); ctx.restore(); } }
+// Navigation von deinem Standort zu Dilê, die Kamera fährt die Route ab
+const N0 = 43.98, N1 = 48.75;
+function navS(ts) { const u = clamp((ts - N0) / (N1 - N0), 0, 1); return LROUTE * (0.32 * u + 0.68 * u * u); }
+function navV(ts) { const u = clamp((ts - N0) / (N1 - N0), 0, 1); return LROUTE * (0.32 + 1.36 * u) / (N1 - N0); }
+function camNavi(ts) { const s = navS(ts), p = routePunkt(s), q = routePunkt(s + 170), r = routePunkt(Math.max(0, s - 1)); let dx = q[0] - p[0], dy = q[1] - p[1]; if (Math.hypot(dx, dy) < 1) { dx = p[0] - r[0]; dy = p[1] - r[1]; }
+  return { cx: p[0], cy: p[1], z: 1.9, rot: -Math.PI / 2 - Math.atan2(dy, dx), ax: W / 2, ay: H * 0.64 }; }
+function naviUI(ts, a = 1) { if (a <= 0) return; ctx.save(); ctx.globalAlpha = a; const s = navS(ts), rest = LROUTE - s;
+  let ziel = SEG.find(g => s < g.s0 + g.l - 1) || SEG[SEG.length - 1]; const bisAbb = ziel.s0 + ziel.l - s, letzte = ziel === SEG[SEG.length - 1];
+  const pfeil = letzte ? "⚑" : (SEG.indexOf(ziel) === 0 ? "↱" : "↰"), strasse = letzte ? "Dilê · Shisha-Lounge" : (SEG.indexOf(ziel) === 0 ? "Berliner Str." : "Schwarzbach");
+  panel(40, 150, W - 80, 430, 44, "rgba(20,20,22,0.97)");
+  text(pfeil + "  " + (rest < 15 ? "Angekommen" : Math.max(10, Math.round(bisAbb * 0.42 / 10) * 10) + " m"), 90, 255, 66, "#fff", 900, 1, 900, "T"); ctx.textAlign = "right"; text(strasse, W - 90, 250, 32, GRAU); ctx.textAlign = "left";
+  ctx.fillStyle = "rgba(235,235,245,0.14)"; ctx.fillRect(90, 295, W - 180, 2);
+  const zwei = ts >= 45.96; text(zwei ? tipp(ts, "hele3") : tipp(ts, "hele2"), 90, 385, 64, "#fff", 900, 1.1, 900, "T"); text(zwei ? tipp(ts, "nurmich") : tipp(ts, "dile2"), 90, 470, 58, "#fff", 900, 1.1);
+  // Pfeil (du)
+  ctx.save(); ctx.translate(W / 2, H * 0.64); ctx.beginPath(); ctx.arc(0, 0, 46, 0, Math.PI * 2); ctx.fillStyle = "#fff"; ctx.fill(); ctx.fillStyle = BLAU; ctx.beginPath(); ctx.moveTo(0, -30); ctx.lineTo(24, 26); ctx.lineTo(0, 14); ctx.lineTo(-24, 26); ctx.fill(); ctx.restore();
+  // unten: Ankunft, Tempo, Schild
+  panel(40, H - 300, W - 80, 230, 44, "rgba(20,20,22,0.97)"); const min = rest > 1300 ? 2 : rest > 15 ? 1 : 0;
+  text(min ? "23:4" + (1 + min) : "Angekommen", 300, H - 200, 52, "#fff", 999, 1, 900, "T"); text(min ? `${min} Min. · ${(rest * 0.42 / 1000).toFixed(1).replace(".", ",")} km` : "Dilê · Shisha-Lounge", 300, H - 140, 32, GRAU);
+  ctx.beginPath(); ctx.arc(160, H - 185, 74, 0, Math.PI * 2); ctx.fillStyle = "#fff"; ctx.fill(); ctx.lineWidth = 13; ctx.strokeStyle = "#e5252a"; ctx.stroke(); ctx.textAlign = "center"; text("50", 160, H - 162, 58, "#000", 999, 1, 900, "T");
+  const v = rest < 15 ? 0 : Math.round(lerp(38, 96, clamp((navV(ts) - LROUTE * 0.32 / (N1 - N0)) / (LROUTE * 1.36 / (N1 - N0)), 0, 1)));
+  rr(W - 270, H - 270, 190, 170, 34); ctx.fillStyle = v > 50 ? "rgba(255,69,58,0.2)" : FL2; ctx.fill(); text(String(v), W - 175, H - 180, 76, v > 50 ? "#ff453a" : "#fff", 999, 1, 900, "T"); text("km/h", W - 175, H - 130, 28, GRAU); ctx.textAlign = "left"; ctx.restore(); }
+function sNavi(ts) { karte(camNavi(ts), { route: 1, gefahren: navS(ts), pin: 1.2 }); naviUI(ts); }
+// Notfallwarnung (als Fenster über der Navigation)
+function warnung(ts) { const ein_ = zurueck((ts - 47.9) / 0.3), aus = 1 - raus((ts - 50.98) / 0.16), a = clamp(Math.min(ein_, aus), 0, 1); if (a <= 0) return;
+  ctx.fillStyle = `rgba(0,0,0,${0.5 * a})`; ctx.fillRect(-60, -60, W + 120, H + 120); ctx.save(); ctx.globalAlpha = a; const s = lerp(1.12, 1, ein_) * lerp(0.9, 1, aus); ctx.translate(W / 2, H / 2); ctx.scale(s, s); ctx.translate(-W / 2, -H / 2);
+  panel(80, 560, W - 160, 760, 46, "rgba(44,44,46,0.97)"); ctx.textAlign = "center"; text("⚠", W / 2, 680, 70, "#ff453a"); text("Notfallwarnung", W / 2, 770, 50, "#fff", 999, 1, 900, "T"); text("Erdbeben · Oberbarmen", W / 2, 822, 30, GRAU);
+  text(tipp(ts, "hele4") || " ", W / 2, 940, 64, "#fff", 820, 1.1, 900, "T"); text(tipp(ts, "arsch2"), W / 2, 1040, 54, "#fff", 820); text(tipp(ts, "wackel"), W / 2, 1120, 54, ts > 50.3 ? "#ff6961" : "#fff", 820);
+  ctx.fillStyle = "rgba(235,235,245,0.15)"; ctx.fillRect(80, 1200, W - 160, 2); text("OK", W / 2, 1278, 44, BLAU); ctx.textAlign = "left"; ctx.restore(); }
+// Erinnerungen: ortsbasierte Erinnerung „Dilê heiraten“ wird beim Ankommen fällig … und abgehakt
+function sErinnerung(ts) { ctx.fillStyle = "#000"; ctx.fillRect(0, 0, W, H); text("‹ Listen", 60, 210, 40, "#ff9f0a"); text("Zu erledigen", 70, 330, 80, "#ff9f0a", 900, 1, 900, "T");
+  const items = [["Batzen zählen", true, ""], ["Neue Fleece holen", true, ""], ["💍  Dilê heiraten", false, "📍 Beim Ankommen: Dilê"]];
+  items.forEach(([t, fertig, sub], i) => { const y = 470 + i * 150; ctx.beginPath(); ctx.arc(110, y, 30, 0, Math.PI * 2); ctx.lineWidth = 4; const zu = fertig || ts > 52.24; ctx.strokeStyle = zu ? "#ff9f0a" : "rgba(235,235,245,0.4)"; ctx.stroke();
+    if (zu) { ctx.fillStyle = "#ff9f0a"; ctx.beginPath(); ctx.arc(110, y, 20 * (fertig ? 1 : zurueck((ts - 52.24) / 0.2)), 0, Math.PI * 2); ctx.fill(); }
+    text(t, 170, y + 16, 46, fertig || ts > 52.4 ? "rgba(235,235,245,0.45)" : "#fff"); if (sub) text(sub, 170, y + 62, 28, "#ff9f0a");
+    if (i === 2 && ts > 52.24) { ctx.font = "700 46px UI"; const b = ctx.measureText(t).width * clamp((ts - 52.24) / 0.25, 0, 1); ctx.fillStyle = "#fff"; ctx.fillRect(170, y + 1, b, 4); }
+    ctx.fillStyle = "rgba(235,235,245,0.12)"; ctx.fillRect(170, y + 88, W - 230, 2); });
+  panel(50, 1000, W - 100, 380, 40, FL); text("Notiz", 100, 1080, 30, GRAU); const n = tipp(ts, "nicht"); text(n, 100, 1185, 62, "#fff", 880, 1.12, 900, "T");
   const r = ts - 52.38; if (r > 0) { ctx.save(); ctx.globalAlpha = clamp(r / 0.15, 0, 1) * 0.55; ctx.textAlign = "center"; text("(" + tipp(ts, "relax") + ")", W / 2, 1600, 54, "rgba(235,235,245,0.8)"); ctx.restore(); } }
-// ---------- Kamera: weiche Fahrt zwischen den Szenen ----------
-const SZ = [{ a: A, f: sPlayer, v: [0, 1] }, { a: 34.8, f: sKarte, v: [1, 0] }, { a: 37.4, f: sUebersetzen, v: [0, -1] }, { a: 39.45, f: sKalender, v: [-1, 0] },
-  { a: 41.55, f: sChat, v: [0, 1] }, { a: 43.55, f: sNavi, v: [1, 0] }, { a: 47.92, f: sWarnung, v: [0, -1] }, { a: 51.1, f: sErinnerung, v: [-1, 0] }];
-const UE = 0.42; let PUF;
+// ---------- Mitteilungen (fallen aus der Dynamic Island) ----------
+const BANNER = { x: 30, y: 130, w: W - 60, h: 190 };
+const MITT = { kal: ["KALENDER", "#ff453a", "▦", "Siri-Vorschlag", "💍 Hochzeit · Sa., 28. Nov. hinzufügen?"], msg: ["NACHRICHTEN", "#30d158", "✉", "Dilê", "wann kommst du? 🥺"], erin: ["ERINNERUNGEN", "#ff9f0a", "☑", "📍 Du bist angekommen", "💍 Dilê heiraten"] };
+function banner(k, r, a = 1) { if (a <= 0) return; const [app, farbe, sym, titel, body] = MITT[k]; ctx.save(); ctx.globalAlpha = a; panel(r.x, r.y, r.w, r.h, 44, "rgba(40,40,44,0.97)");
+  rr(r.x + 30, r.y + 40, 96, 96, 22); ctx.fillStyle = farbe; ctx.fill(); ctx.textAlign = "center"; text(sym, r.x + 78, r.y + 105, 52, "#fff"); ctx.textAlign = "left";
+  text(app, r.x + 150, r.y + 62, 26, GRAU); ctx.textAlign = "right"; text("jetzt", r.x + r.w - 34, r.y + 62, 26, GRAU); ctx.textAlign = "left"; text(titel, r.x + 150, r.y + 112, 38, "#fff"); text(body, r.x + 150, r.y + 160, 34, "rgba(235,235,245,0.85)", r.w - 190); ctx.restore(); }
+function bannerFall(k, t0, ts) { const q = zurueck((ts - t0) / 0.24); banner(k, { ...BANNER, y: lerp(-220, BANNER.y, q) }, clamp((ts - t0) / 0.08, 0, 1)); }
+// ---------- Puffer und Übergänge ----------
+let BUF = [];
+function inBuf(i, f, ts) { const o = BUF[i].getContext("2d"); o.setTransform(K, 0, 0, K, 0, 0); o.globalAlpha = 1; o.filter = "none"; o.textAlign = "left"; o.clearRect(0, 0, W, H); const alt = ctx; ctx = o; try { f(ts); } finally { ctx = alt; } return BUF[i]; }
+function bildMit(b, s = 1, a = 1, dim = 0, dy = 0) { ctx.save(); ctx.globalAlpha = a; ctx.translate(W / 2, H / 2 + dy); ctx.scale(s, s); ctx.translate(-W / 2, -H / 2); ctx.drawImage(b, 0, 0, W, H); ctx.restore(); if (dim > 0) { ctx.fillStyle = `rgba(0,0,0,${dim})`; ctx.fillRect(0, 0, W, H); } }
+const lerpR = (a, b, e) => ({ x: lerp(a.x, b.x, e), y: lerp(a.y, b.y, e), w: lerp(a.w, b.w, e), h: lerp(a.h, b.h, e), r: lerp(a.r ?? 44, b.r ?? 0, e) });
+// App öffnet sich aus der Mitteilung (wie iOS): Rahmen wächst von der Mitteilung zum Vollbild, die alte App tritt zurück
+function oeffnen(fA, fB, k, t0, dauer, ts) { const e = ein((ts - t0) / dauer); bildMit(inBuf(0, fA, ts), 1 - 0.07 * e, 1, 0.55 * e);
+  const r = lerpR({ ...BANNER, r: 44 }, { x: 0, y: 0, w: W, h: H, r: 0 }, e), s = r.w / W, b = inBuf(1, fB, ts);
+  ctx.save(); rr(r.x, r.y, r.w, r.h, r.r); ctx.clip(); ctx.fillStyle = "#000"; ctx.fillRect(r.x, r.y, r.w, r.h); ctx.globalAlpha = clamp(e * 2.2, 0, 1);
+  ctx.drawImage(b, r.x, r.y + r.h / 2 - (H * s) / 2 * lerp(0.25, 1, e) - lerp(H * s * 0.12, 0, e), r.w, H * s); ctx.restore();
+  banner(k, r, 1 - clamp(e * 3, 0, 1)); }
+// ---------- Statusleiste + Dynamic Island mit Live-Aktivität (immer oben, fest) ----------
+function oben(ts) { ctx.fillStyle = "#fff"; ctx.font = "700 36px UI"; ctx.textAlign = "left"; ctx.fillText("23:41", 96, 92); ctx.textAlign = "right"; ctx.fillText("5G", W - 170, 92);
+  rr(W - 150, 66, 62, 30, 9); ctx.strokeStyle = "#fff"; ctx.lineWidth = 3; ctx.stroke(); rr(W - 146, 70, 44, 22, 6); ctx.fill(); ctx.textAlign = "left";
+  const e = ein((ts - 34.7) / 0.3), w = lerp(240, 330, e); rr(W / 2 - w / 2, 38, w, 74, 37); ctx.fillStyle = "#000"; ctx.fill();
+  if (e > 0) { ctx.save(); ctx.globalAlpha = e; if (COVER) { ctx.save(); rr(W / 2 - w / 2 + 16, 51, 48, 48, 12); ctx.clip(); ctx.drawImage(COVER, W / 2 - w / 2 + 16, 51, 48, 48); ctx.restore(); }
+    const b = beat(ts); for (let i = 0; i < 5; i++) { const h = 10 + 26 * Math.abs(Math.sin(ts * (5 + i * 1.7) + i)) * (0.55 + 0.45 * (1 - b)); rr(W / 2 + w / 2 - 110 + i * 16, 75 - h / 2, 8, h, 4); ctx.fillStyle = "#ff9f6b"; ctx.fill(); } ctx.restore(); } }
+// ---------- Ablauf ----------
 window.laden = async () => {};
-window.zeichne = T => { const ts = T + A; const C = cv.getContext("2d"); C.setTransform(K, 0, 0, K, 0, 0); C.filter = "none"; C.globalAlpha = 1; C.fillStyle = "#000"; C.fillRect(0, 0, W, H);
-  let i = 0; for (let k = 0; k < SZ.length; k++) if (ts >= SZ[k].a) i = k; const s = SZ[i], d = ts - s.a;
-  if (i > 0 && d < UE) { const p = ein(d / UE), pv = SZ[i - 1], [vx, vy] = s.v;
-    zeichneSzene(pv.f, ts, -vx * W * 0.9 * p, -vy * H * 0.6 * p, 1 - 0.12 * Math.sin(p * Math.PI) - 0.06 * p, 18 * Math.sin(p * Math.PI), 1 - p * 0.6);
-    zeichneSzene(s.f, ts, vx * W * 0.9 * (1 - p), vy * H * 0.6 * (1 - p), 0.88 + 0.12 * p, 18 * Math.sin(p * Math.PI), clamp(p * 1.6, 0, 1)); }
-  else zeichneSzene(s.f, ts, 0, 0, 1 + d * 0.006, 0, 1);
-  const r = ENDE - T; if (r < 0.35) { C.fillStyle = `rgba(0,0,0,${1 - r / 0.35})`; C.fillRect(0, 0, W, H); } };
-// Szene in den Puffer zeichnen und mit Kamera-Transform aufs Bild
-function zeichneSzene(f, ts, dx, dy, s, blur, alpha) { const C = cv.getContext("2d"), o = PUF.getContext("2d"); o.setTransform(K, 0, 0, K, 0, 0); o.globalAlpha = 1; o.filter = "none"; o.textAlign = "left"; o.clearRect(0, 0, W, H);
-  const alt = ctx; ctx = o; try { f(ts); } finally { ctx = alt; }
-  C.save(); C.setTransform(K, 0, 0, K, 0, 0); C.globalAlpha = alpha; C.filter = blur > 0.5 ? `blur(${blur}px)` : "none"; C.translate(W / 2 + dx, H / 2 + dy); C.scale(s, s); C.translate(-W / 2, -H / 2); C.drawImage(PUF, 0, 0, W, H); C.restore(); }
+window.zeichne = T => { const ts = T + A; ctx = cv.getContext("2d"); ctx.setTransform(K, 0, 0, K, 0, 0); ctx.filter = "none"; ctx.globalAlpha = 1; ctx.fillStyle = "#000"; ctx.fillRect(0, 0, W, H);
+  const wackel = ts > 50.3 && ts < 51.05 ? Math.sin(ts * 70) * 13 * (1 - (ts - 50.3) / 0.9) : 0; ctx.save(); ctx.translate(wackel, wackel * 0.35);
+  if (ts < 34.5) bildMit(inBuf(0, sPlayer, ts));
+  else if (ts < 34.95) { // Player zieht sich in die Dynamic Island zurück, darunter liegt schon die Karte
+    const e = ein((ts - 34.5) / 0.45); bildMit(inBuf(1, sKarte, ts), lerp(1.06, 1, e), 1, 0.6 * (1 - e));
+    const w = lerp(240, 330, ein((ts - 34.7) / 0.3)), r = lerpR({ x: 0, y: 0, w: W, h: H, r: 0 }, { x: W / 2 - w / 2, y: 38, w, h: 74, r: 37 }, e), s = r.w / W;
+    ctx.save(); rr(r.x, r.y, r.w, r.h, lerp(0, 37, e)); ctx.clip(); ctx.globalAlpha = 1 - clamp((e - 0.55) / 0.45, 0, 1); ctx.drawImage(inBuf(0, sPlayer, ts), r.x, r.y + r.h / 2 - (H * s) / 2, r.w, H * s); ctx.restore(); }
+  else if (ts < 39.16) { bildMit(inBuf(0, sKarte, ts)); if (ts > 38.92) bannerFall("kal", 38.92, ts); }
+  else if (ts < 39.5) oeffnen(sKarte, sKalender, "kal", 39.16, 0.34, ts);
+  else if (ts < 41.4) { bildMit(inBuf(0, sKalender, ts)); if (ts > 41.16) bannerFall("msg", 41.16, ts); }
+  else if (ts < 41.72) oeffnen(sKalender, sChat, "msg", 41.4, 0.32, ts);
+  else if (ts < 43.52) bildMit(inBuf(0, sChat, ts));
+  else if (ts < N0) { // Standort-Karte im Chat wächst zur Vollbild-Navigation, die Kamera fliegt von Dilê zu dir
+    const e = ein((ts - 43.52) / (N0 - 43.52)); const chat = inBuf(0, sChat, ts), r0 = { ...ORTKARTE, r: 36 }; bildMit(chat, 1 + 0.05 * e, 1 - e);
+    const r = lerpR(r0, { x: 0, y: 0, w: W, h: H, r: 0 }, e), c0 = camOrt(ORTKARTE), c1 = camNavi(N0), zf = 1 - 0.55 * Math.sin(Math.PI * e);
+    const cam = { cx: lerp(c0.cx, c1.cx, e), cy: lerp(c0.cy, c1.cy, e), z: lerp(c0.z, c1.z, e) * zf, rot: lerp(c0.rot, c1.rot, e), ax: lerp(c0.ax, c1.ax, e), ay: lerp(c0.ay, c1.ay, e) };
+    ctx.save(); rr(r.x, r.y, r.w, r.h, r.r); ctx.clip(); karte(cam, { route: clamp((e - 0.3) / 0.4, 0, 1), pin: 1 }); ctx.fillStyle = "#26262a"; ctx.globalAlpha = 1 - clamp(e * 4, 0, 1); ctx.fillRect(r.x, r.y + r.h - 96, r.w, 96); ctx.globalAlpha = 1; naviUI(ts, clamp((e - 0.55) / 0.45, 0, 1)); ctx.restore(); }
+  else if (ts < 51.14) { bildMit(inBuf(0, sNavi, ts)); warnung(ts); if (ts > 50.95) bannerFall("erin", 50.95, ts); }
+  else if (ts < 51.46) oeffnen(sNavi, sErinnerung, "erin", 51.14, 0.32, ts);
+  else bildMit(inBuf(0, sErinnerung, ts));
+  oben(ts); ctx.restore();
+  const r = ENDE - T; if (r < 0.35) { ctx.setTransform(K, 0, 0, K, 0, 0); ctx.fillStyle = `rgba(0,0,0,${1 - r / 0.35})`; ctx.fillRect(0, 0, W, H); } };
 (async () => { await document.fonts.load('900 100px "T"'); await document.fonts.load('700 40px "UI"'); COVER = await lade("assets/cover.png");
-  PUF = document.createElement("canvas"); PUF.width = W * K; PUF.height = H * K; window.bereit = true; })();
+  for (let i = 0; i < 2; i++) { const c = document.createElement("canvas"); c.width = W * K; c.height = H * K; BUF.push(c); } window.bereit = true; })();
 </script></body></html>
