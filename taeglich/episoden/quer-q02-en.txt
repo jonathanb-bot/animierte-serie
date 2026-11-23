@@ -61,7 +61,7 @@
 [gesicht du ort=wohnung entschlossen palette=tuerkis] But during the night, you remembered something. Something your grandpa told you once.
 [bad du licht=an palette=tuerkis zoom-rein ein="heater>WATER HEATER: UP TO 50 GALLONS>boiler"] The water heater. That big white tank in the bathroom. It's completely full of tap water.
 [bad du palette=tuerkis schwenk-rechts ton=eingiessen ein="valve>WATER FROM THE HEATER>wasserflasche"] There's a little valve at the bottom. You open it, and water comes out. Lukewarm, a little rusty, but it comes out.
-[bad du palette=tuerkis zoom-rein spuelkasten ein="tank>TOILET TANK: 1–3 GALLONS>spuelkasten"] And in the toilet tank, not the bowl, there's another gallon or two of clean tap water.
+[bad du palette=tuerkis zoom-rein ein="tank>TOILET TANK: 1–3 GALLONS>spuelkasten"] And in the toilet tank, not the bowl, there's another gallon or two of clean tap water.
 [wohnung du opa licht=an palette=orange zoom-rein ton=eingiessen] You fill every pot, every bottle, every vase. Grandpa boils the water on his camping stove, just to be safe.
 [gesicht opa ort=wohnung froh palette=orange] He pats you on the shoulder. You actually listened to him, he says. That doesn't happen often.
 [skyline zeit=tag strom=false heli palette=tuerkis zoom-raus ton=hubschrauber] Around noon, you hear a helicopter. You run to the window and wave like crazy.
