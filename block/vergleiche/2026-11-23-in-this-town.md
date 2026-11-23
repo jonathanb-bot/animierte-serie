@@ -15,4 +15,4 @@ Quelle: https://vm.tiktok.com/ZGdXT8f49/ · Länge 108 s · 59 Szenenwechsel (�
 | Beweis-Montage, Gags, Tempo | Erzählmittel | 0:00–0:43 | blockstadt.md | fehlte | Regeln in taeglich/laeufe/blockstadt.md | übernommen |
 
 Nicht übernommen (Inhalt statt Mittel): Lava-Stunde, Mammuts, Werbung für einen Kurs, Roblox-Bezug.
-Offen für später: Hochhaus-Fassaden am Tag pastellbunt mit Fensterrahmen (welt.js, nur wenn `uTag`), Hund mit Flecken, Vorhänge an den Fenstern der Räume.
+Erledigt am 24.11.: pastellbunte Fassaden am Tag (`U.uWolken`). Offen für später: Hund mit Flecken, Vorhänge an den Fenstern der Räume.

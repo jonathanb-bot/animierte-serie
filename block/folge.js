@@ -89,7 +89,7 @@ export function start(o = {}) {
   if (frage) { fr.textContent = frage.text ?? "Was soll ich tun?"; wahl.innerHTML = frage.karten.map(([b, e, txt]) => `<div class="karte"><b>${b}</b><span class="e">${e}</span>${txt}</div>`).join(""); }
   window.renderAt = (t, probe = false) => {
     // neutraler Grundzustand
-    U.uT.value = t; U.uAus.value = 1e6; U.uAn.value = 1e6; U.uTag.value = 0; U.uGold.value = 0;
+    U.uT.value = t; U.uWolken.value = 0; U.uAus.value = 1e6; U.uAn.value = 1e6; U.uTag.value = 0; U.uGold.value = 0;
     Wt.grade.uniforms.uT.value = t; Wt.grade.uniforms.uFlash.value = 0; Wt.grade.uniforms.uWarm.value = 0;
     Wt.hemi.intensity = 0.6; Wt.hemi.color.set("#5a6ab0"); Wt.hemi.groundColor.set("#141018"); Wt.mondLicht.intensity = 0.5;
     Wt.suchkegel.forEach(k => k.visible = false); Fg.FIGUREN.forEach(f => f.visible = false); Ws.schattenAus();

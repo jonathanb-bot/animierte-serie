@@ -58,7 +58,7 @@ E["gesicht-seite"] = { gruppe: "Gesichter", zeige: () => { halter.clear(); const
 E["gesicht-schraeg"] = { gruppe: "Gesichter", zeige: () => { halter.clear(); const f = FIG["lehrer-struktur"] || FIG.lehrer; f.visible = true; f.position.copy(STUDIO); f.rotation.set(0, -0.55, 0); Fg.pose(f, { ges: "staunen", kopfNeig: -0.25 }); const k = Fg.kopfPos(f); blick(k.clone().add(V(-0.3, -0.9, 2.8)), k, 40); studioLicht.intensity = 1.2; licht(1.4, "#fff0e0", k); } };
 for (const g of GESICHTER) E["gesicht-" + g] = { gruppe: "Gesichter", zeige: () => { halter.clear(); const f = FIG.ich; f.visible = true; f.position.copy(STUDIO); f.rotation.set(0, 0, 0); Fg.pose(f, { ges: g }); const k = Fg.kopfPos(f); blick(k.clone().add(V(0.3, 0.15, 2.6)), k, 40); studioLicht.intensity = 1.2; licht(1.4, "#fff0e0", k); } };
 const nacht = () => {};
-const tag = () => { U.uTag.value = 1; Wt.hemi.intensity = 1.2; Wt.hemi.color.set("#cfe4ff"); Wt.hemi.groundColor.set("#8a8070"); };
+const tag = () => { U.uTag.value = 1; U.uWolken.value = 1; Wt.hemi.intensity = 1.2; Wt.hemi.color.set("#cfe4ff"); Wt.hemi.groundColor.set("#8a8070"); };
 let STR = null, RT = null;
 const K = {   // Kulissen und Effekte in der Welt (Koordinaten siehe KATALOG.md)
   "stadt-nacht": () => { const z = blick(V(180, 150, 420), V(0, 10, 0), 55); licht(1.2, "#ffd8b0", z); },
@@ -101,7 +101,7 @@ for (const [n, f] of Object.entries(K)) E["kulisse-" + n] = { gruppe: "Kulissen,
 // ---------- Rendern ----------
 window.NAMEN = Object.keys(E); window.GRUPPEN = Object.fromEntries(Object.entries(E).map(([n, e]) => [n, e.gruppe]));
 window.zeige = (name) => { const e = E[name]; if (!e) throw new Error("Unbekannt: " + name);
-  U.uT.value = 1; U.uAus.value = 1e6; U.uAn.value = 1e6; U.uTag.value = 0; U.uGold.value = 0; Wt.grade.uniforms.uFlash.value = 0; Wt.grade.uniforms.uVig.value = 0.3;
+  U.uT.value = 1; U.uWolken.value = 0; U.uAus.value = 1e6; U.uAn.value = 1e6; U.uTag.value = 0; U.uGold.value = 0; Wt.grade.uniforms.uFlash.value = 0; Wt.grade.uniforms.uVig.value = 0.3;
   Wt.hemi.intensity = 0.6; Wt.hemi.color.set("#5a6ab0"); Wt.hemi.groundColor.set("#141018"); Wt.suchkegel.forEach(k => k.visible = false);
   Fg.FIGUREN.forEach(f => f.visible = false); if (STR) STR.visible = false; if (RT) RT.visible = false; Rq.ZIMMER.lichterkette.visible = false; Ws.schattenAus(); Ws.laternenAnlegen([]); Al.zuruecksetzen(); studioLicht.intensity = 0; halter.clear(); Wt.boden.visible = true;
   Rq.polizeiSetzen(1, false, false); Rq.notlampenSetzen(0, false); Rq.mengeSetzen(1, { sichtbar: false }); Rq.konfettiSetzen(0, false);

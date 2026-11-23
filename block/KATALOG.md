@@ -22,6 +22,7 @@ Ziel (Jonathan 23.11.): Jede Folge setzt sich aus fertigen, geprüften Teilen zu
 | `kegel(farbe, stärke, länge, radius)` | sichtbarer Lichtkegel | `.userData.richte(von, nach)` |
 | `suchkegel[0..3]` | Suchscheinwerfer in den Himmel | sichtbar setzen und richten |
 | `grade` | Farbe, Vignette, Blitz | `uFlash`, `uWarm`, `uVig` |
+| **Bilderbuch-Tag** (24.11.) | kräftig blauer Himmel mit weichen Wolken, pastellbunte Hochhäuser, hellblauer Dunst | zusätzlich zu `U.uTag.value = 1` auch `U.uWolken.value = 1` (wird pro Bild auf 0 zurückgesetzt; ohne bleibt der alte Taglook) |
 
 ## Figuren (`figuren.js`)
 

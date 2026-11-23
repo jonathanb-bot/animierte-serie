@@ -31,7 +31,7 @@ export const grade = new ShaderPass({
 composer.addPass(grade);
 composer.addPass(new OutputPass());
 
-export const U = { uT: { value: 0 }, uAus: { value: 1e6 }, uTag: { value: 0 }, uGold: { value: 0 }, uMond: { value: 1 }, uAn: { value: 1e6 } };
+export const U = { uWolken: { value: 0 }, uT: { value: 0 }, uAus: { value: 1e6 }, uTag: { value: 0 }, uGold: { value: 0 }, uMond: { value: 1 }, uAn: { value: 1e6 } };
 export const PLANT = new THREE.Vector2(0, -520);
 export const P = 48, BLOCK = 36, N = 7;                 // Raster: Blöcke 36 m, Straßen 12 m
 export const PLATZ = 66;                                // großer Platz in der Mitte (|x|,|z| < PLATZ)
@@ -60,7 +60,10 @@ export const strom = (x, z, t) => { const dx = Math.floor((x + 384) / 96), dz = 
 export const himmel = new THREE.Mesh(new THREE.SphereGeometry(2500, 48, 24), new THREE.ShaderMaterial({ side: THREE.BackSide, depthWrite: false, fog: false,
   uniforms: U,
   vertexShader: `varying vec3 vP; void main(){ vP = normalize(position); gl_Position = projectionMatrix*modelViewMatrix*vec4(position,1.); gl_Position.z = gl_Position.w; }`,
-  fragmentShader: `varying vec3 vP; uniform float uTag, uGold, uT, uAus, uAn;
+  fragmentShader: `varying vec3 vP; uniform float uTag, uGold, uT, uAus, uAn, uWolken;
+    float hh(vec2 p){ return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453); }
+    float rauschen(vec2 p){ vec2 i = floor(p), f = fract(p); f = f*f*(3.-2.*f); return mix(mix(hh(i), hh(i+vec2(1,0)), f.x), mix(hh(i+vec2(0,1)), hh(i+vec2(1,1)), f.x), f.y); }
+    float fbm(vec2 p){ float v = 0., a = 0.5; for (int i = 0; i < 5; i++){ v += a * rauschen(p); p *= 2.03; a *= 0.5; } return v; }
     ${GLSL_STROM}
     void main(){ float h = clamp(vP.y, -0.2, 1.);
       vec3 nacht = mix(horizont(), mix(vec3(0.006,0.01,0.03), vec3(0.03,0.05,0.16), stadtGlow()), pow(max(h,0.),0.5));
@@ -68,6 +71,11 @@ export const himmel = new THREE.Mesh(new THREE.SphereGeometry(2500, 48, 24), new
       vec3 sg = vP * 110.; vec3 sp = floor(sg); vec3 sf = fract(sg) - 0.5; float sh = fract(sin(dot(sp, vec3(12.99, 78.23, 37.71))) * 43758.5); float s = step(0.986, sh) * smoothstep(0.16, 0.0, length(sf)) * smoothstep(0.05, 0.3, h);
       nacht += s * vec3(0.9,0.95,1.0) * (0.5 + 0.7 * fract(sh * 91.)) * (1. - uTag);
       vec3 tag = mix(vec3(0.86,0.80,0.74), vec3(0.30,0.52,0.90), pow(max(h,0.),0.45));
+      // Bilderbuch-Himmel (Vergleich 24.11.): kräftiges Blau mit weichen Wolken, nur mit U.uWolken = 1
+      if (uWolken > 0.) { vec3 blau = mix(vec3(0.30,0.56,0.92), vec3(0.06,0.24,0.72), pow(max(h,0.),0.5));
+        vec2 wp = vP.xz / max(vP.y + 0.08, 0.05) * 1.6; float w = smoothstep(0.5, 0.74, fbm(wp + vec2(uT * 0.004, 0.))) * smoothstep(0.0, 0.12, h);
+        vec3 wolke = mix(vec3(0.82,0.86,0.94), vec3(1.15,1.15,1.12), smoothstep(0.55, 0.85, fbm(wp * 1.3 + 3.1)));
+        tag = mix(tag, mix(blau, wolke, w), uWolken); }
       vec3 c = mix(nacht, tag, uTag * (1. - uGold));
       c = mix(c, mix(horizont(), vec3(0.05,0.02,0.04), pow(max(h,0.),0.5)), uGold * (1. - uTag));
       gl_FragColor = vec4(c, 1.); }` }));
@@ -91,13 +99,16 @@ const gebaeudeMat = new THREE.ShaderMaterial({ uniforms: U, fog: false,
       bool sx = abs(normal.x) > 0.5; vUV = vec2(sx ? (position.z + 0.5) * sc.z : (position.x + 0.5) * sc.x, position.y * sc.y);
       vGr = vec2(sx ? sc.z : sc.x, sc.y); vSeed = aSeed; vFarbe = aFarbe; vFace = sx ? (normal.x > 0. ? 1. : 2.) : (normal.z > 0. ? 3. : 4.);
       gl_Position = projectionMatrix * viewMatrix * wp; }`,
-  fragmentShader: `uniform float uT, uAus, uTag, uGold, uAn; varying vec3 vW, vN, vFarbe; varying vec2 vUV, vGr; varying float vSeed, vFace;
+  fragmentShader: `uniform float uT, uAus, uTag, uGold, uAn, uWolken; varying vec3 vW, vN, vFarbe; varying vec2 vUV, vGr; varying float vSeed, vFace;
     ${GLSL_STROM}
     void main(){ vec3 n = normalize(vN); vec3 base = vFarbe;
       float pw = strom(vW.xz);
       vec3 nacht = base * (0.05 + 0.07 * max(n.y, 0.) + 0.06 * max(dot(n, normalize(vec3(-0.5, 0.4, -0.6))), 0.) + 0.10 * (1. - clamp(vW.y / 90., 0., 1.)) * pw);
       vec3 sunD = normalize(vec3(0.5, 0.6, 0.35));
-      vec3 tag = base * 1.9 * (0.42 + 0.6 * max(dot(n, sunD), 0.) + 0.15 * n.y);
+      // Bilderbuch-Fassaden am Tag (Vergleich 24.11.): Pastellfarben pro Haus, nur mit U.uWolken = 1
+      float pk = floor(fract(vSeed * 7.31) * 7.);
+      vec3 pastell = pk < 1. ? vec3(0.38,0.58,0.86) : pk < 2. ? vec3(0.90,0.56,0.62) : pk < 3. ? vec3(0.56,0.80,0.52) : pk < 4. ? vec3(0.94,0.78,0.42) : pk < 5. ? vec3(0.66,0.56,0.90) : pk < 6. ? vec3(0.86,0.84,0.80) : vec3(0.40,0.76,0.82);
+      vec3 tag = mix(base * 1.9, pastell * 0.46, uWolken) * (0.42 + 0.6 * max(dot(n, sunD), 0.) + 0.15 * n.y);
       vec3 c = mix(nacht, tag, uTag);
       if (abs(n.y) < 0.5) {
         vec2 q = vec2(vUV.x / 3.0, vUV.y / 3.6); vec2 cell = floor(q); vec2 f = fract(q);
@@ -119,7 +130,7 @@ const gebaeudeMat = new THREE.ShaderMaterial({ uniforms: U, fog: false,
       } else { c *= 0.7; }
       c += uGold * vec3(1.0, 0.55, 0.2) * base * (0.35 + 0.5 * max(n.y, 0.) + 0.25 * (1. - abs(n.y)));
       float d = length(vW - cameraPosition);
-      c = mix(c, horizont(), 1. - exp(-d * mix(0.0010, 0.0005, uTag)));
+      c = mix(c, mix(horizont(), vec3(0.55,0.70,0.90), uWolken * uTag), 1. - exp(-d * mix(0.0010, 0.0005, uTag) * (1. - 0.55 * uWolken)));
       gl_FragColor = vec4(c, 1.); }` });
 export const LOTS = [];  // {x, z, w, d, h}
 { const farben = ["#3a3f52", "#4a4552", "#2f3a4a", "#55504a", "#3f4a4a", "#5a5560", "#353a45", "#6a6258", "#48505e"].map(c => new THREE.Color(c));
@@ -150,7 +161,7 @@ export const warnlichter = new THREE.InstancedMesh(new THREE.SphereGeometry(0.5,
 // ---------- Boden: Straßen, Gehwege, Platz, Lichtkegel der Laternen ----------
 export const boden = new THREE.Mesh(new THREE.PlaneGeometry(6000, 6000).rotateX(-Math.PI / 2), new THREE.ShaderMaterial({ uniforms: U, fog: false,
   vertexShader: `varying vec3 vW; void main(){ vec4 wp = modelMatrix * vec4(position, 1.); vW = wp.xyz; gl_Position = projectionMatrix * viewMatrix * wp; }`,
-  fragmentShader: `uniform float uT, uAus, uTag, uGold, uAn; varying vec3 vW;
+  fragmentShader: `uniform float uT, uAus, uTag, uGold, uAn, uWolken; varying vec3 vW;
     ${GLSL_STROM}
     void main(){ vec2 w = vW.xz; vec2 q = mod(w + 24., 48.) - 24.; vec2 a = abs(q);
       bool stadt = abs(w.x) < 360. && abs(w.y) < 360.;
@@ -175,7 +186,7 @@ export const boden = new THREE.Mesh(new THREE.PlaneGeometry(6000, 6000).rotateX(
       c += vec3(1.0, 0.62, 0.3) * pool * 0.55;
       c += uGold * vec3(1.0, 0.55, 0.2) * 0.45 * (stadt ? 1. : 0.5);
       float d = length(vW - cameraPosition);
-      c = mix(c, horizont(), 1. - exp(-d * mix(0.0010, 0.0005, uTag)));
+      c = mix(c, mix(horizont(), vec3(0.55,0.70,0.90), uWolken * uTag), 1. - exp(-d * mix(0.0010, 0.0005, uTag) * (1. - 0.55 * uWolken)));
       gl_FragColor = vec4(c, 1.); }` }));
 scene.add(boden);
 
