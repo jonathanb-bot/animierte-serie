@@ -2304,6 +2304,12 @@
    "bild_s": 69.42,
    "ton_s": 69.4,
    "lufs": -14.6
+  },
+  "taeglich/nische-n002.mp4": {
+   "ok": true,
+   "bild_s": 66.82,
+   "ton_s": 66.84,
+   "lufs": -14.6
   }
  },
  "serien": {
@@ -2572,6 +2578,10 @@
   "nische-n001-en": {
    "titel": "Your Phone Counts the Evenings",
    "datei": "taeglich/nische-n001-en.mp4"
+  },
+  "nische-n002": {
+   "titel": "Nur dein Opa darf es wissen",
+   "datei": "taeglich/nische-n002.mp4"
   }
  },
  "taeglich_staffeln": {
