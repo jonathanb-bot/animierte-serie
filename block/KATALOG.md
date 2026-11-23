@@ -145,7 +145,12 @@ Aus dem Vorbild-Video übernommen (nur die Mittel, nie Inhalte). Beispiel für a
 | `blick(pos, ziel)` | Kamera ohne Wackeln |
 | `licht(stärke, farbe, rimStärke, rimFarbe)` | Licht passend zur Kamera |
 | Kamerafahrten | `kamera.luft(...)`, `kamera.fahrt(...)`, `kamera.vorFigur(q, f, ...)`, `kamera.bodennah(...)`, `kamera.insHandy(q, von)`, `kamera.imHandy()` |
+| `Z_.mengeZahl = {text: (i) => "3", farbe}` | Zahl über jedem sichtbaren Kopf der Menge (ausgeblendete Leute ohne Zahl) |
 | `start({grund, frage: {zeile, text, karten: [[B, Emoji, Text, Stichwort]]}, haltePos, nach})` | Grundzustand, Untertitel, Mitmach-Karten, Nahebene gegen Flackern, Menge ohne Aufploppen |
+
+**Rendern:** `./rendern.sh <ordner> [plan] [frames]` (3 Teile parallel), `WEITER=1` setzt nach Abbruch fort.
+
+**Liegen:** `pose(f, {liegen: 1})` legt die Figur von den Füßen aus nach hinten (lokal −z), Gesicht nach oben. Die Position sind also die Füße. Beispiele: Sofa und Liegestuhl in `vorrat-02/szene.js`.
 
 ## Ton (`tonbib.py`)
 
@@ -157,8 +162,8 @@ Geräusche:
 - `glitzer(t0, d)`, `jubel(t0, d)`, `voegel(t0, d)`, `schritte(t0, d)`, `uhr(t0, d)`;
 - `kartenToene(zeile_frage, stichwörter)`.
 
-Danach `mischen(stimme, ziel)`: Musik wird unter der Stimme leiser.
+Danach `mischen()`: Der Hintergrund (Musik + Geräusche) wird automatisch so gepegelt, dass die Stimme **12 LU lauter** ist (wie im Vorbild, Jonathan 23.11.). In Sprechpausen kommt die Musik bis zu 6 dB hoch, Geräusch-Spitzen bleiben unter der Stimme. Die Ausgabe nennt den Abstand. `musik_laut=` nur noch für Folge 1.
 
 ## Stimme
 
-`folge-01/stimme4.py` als Vorlage: Gemini „Puck“, Abschnitte zu 3 Zeilen, bis zu 3 Versuche, Auswahl nach Tonhöhe (200 Hz) und Melodie, ohne Radio-Kette, wärmer abgemischt. Das Kontingent liegt bei etwa 10 Anfragen pro Schlüssel und Tag; es gibt 5 Schlüssel.
+`stimme.py` (seit 23.11. abends, für alle neuen Folgen): `erzeugen(zeilen, ordner, gruppe=4)` mit Gemini „Puck“ und fröhlicher Storytime-Anweisung, bis zu 3 Versuche je Abschnitt, Auswahl nach Tonhöhe (200 Hz) und Sprachmelodie (Ziel > 17 Halbtöne, Vorbild ~20), kurze Pausen. Dann `zusammen(ordner, extra)` und `zusammen(ordner, extra, yt=True, ohne=[…])`. Liegt die volle Fassung unter 89 s, reicht sie auch für YouTube. Kommt ein Abschnitt zu tief (F0 < 175 Hz), diesen Teil von `stimme.wav` mit rubberband anheben und `--nur-zusammen` laufen lassen. Das Kontingent liegt bei etwa 10 Anfragen pro Schlüssel und Tag; es gibt 5 Schlüssel.
