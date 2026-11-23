@@ -2316,6 +2316,12 @@
    "bild_s": 65.25,
    "ton_s": 65.28,
    "lufs": -14.6
+  },
+  "taeglich/block-b01.mp4": {
+   "ok": true,
+   "bild_s": 112.45,
+   "ton_s": 112.45,
+   "lufs": -14.6
   }
  },
  "serien": {
@@ -2592,6 +2598,10 @@
   "nische-n002-en": {
    "titel": "Only Your Grandpa Can Know",
    "datei": "taeglich/nische-n002-en.mp4"
+  },
+  "block-b01": {
+   "titel": "In meiner Stadt geht nie ein Licht aus",
+   "datei": "taeglich/block-b01.mp4"
   }
  },
  "taeglich_staffeln": {
