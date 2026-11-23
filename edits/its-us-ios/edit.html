@@ -1,0 +1,232 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face { font-family: "T"; src: url("assets/InterDisplay-Black.otf"); font-weight: 900; }
+@font-face { font-family: "UI"; src: url("assets/Inter-Bold.otf"); font-weight: 700; }
+html,body{margin:0;background:#000}canvas{display:block}
+</style></head><body>
+<canvas id="c"></canvas>
+<script>
+// „IT'S US“ (Bartofso ft. Murda) – cleanes iOS-Edit im Stil von „Hin und Her“ / „Hele Hele v2“ (Jonathan 22./23.11.):
+// eine durchgehende iPhone-Welt im Dark Mode, der Text tippt sich mit dem Gesang in echte App-Elemente, jeder Wechsel wächst
+// aus dem vorigen Bild heraus (Mitteilung → App, „Yukarı bak“ = die Kamera schwenkt nach oben in den Himmel, Kontrollzentrum
+// zieht herunter, Face ID → Wallet, App-Umschalter). Ganzer Refrain 7,90–36,70 s (Türkisch + Niederländisch), türkische Zeilen
+// mit kleiner deutscher Übersetzung wie die iOS-Übersetzung.
+const W = 1080, H = 1920, K = 1440 / 1080, A = 7.90, ENDE = 28.8;
+const cv = document.getElementById("c"); cv.width = W * K; cv.height = H * K; let ctx = cv.getContext("2d");
+const clamp = (v, a, b) => Math.max(a, Math.min(b, v)), lerp = (a, b, t) => a + (b - a) * t, ein = p => { p = clamp(p, 0, 1); return p < 0.5 ? 4 * p * p * p : 1 - Math.pow(-2 * p + 2, 3) / 2; };
+const raus = p => 1 - Math.pow(1 - clamp(p, 0, 1), 3), zurueck = p => { p = clamp(p, 0, 1); const c1 = 1.3, c3 = c1 + 1; return 1 + c3 * Math.pow(p - 1, 3) + c1 * Math.pow(p - 1, 2); };
+const rr = (x, y, w, h, r) => { ctx.beginPath(); ctx.roundRect(x, y, w, h, r); };
+const lade = src => new Promise(r => { const i = new Image(); i.onload = () => r(i); i.onerror = () => r(null); i.src = src; });
+const BLAU = "#0a84ff", GRAU = "rgba(235,235,245,0.6)", FL = "#1c1c1e", FL2 = "#2c2c2e", GRUEN = "#30d158", ROT = "#ff453a";
+let COVER = null;
+// Text nach Genius, Wortzeiten aus der Spracherkennung (large-v3, tr/nl)
+const Z = {};
+[["yeah", "Yeah, ey", [7.98, 8.54]],
+ ["calis", "Çalıştım, hak ettim, değildi luck", [9.2, 9.66, 9.84, 10.16, 10.6]], ["kader", "Kaderde yazılı, değildi luck", [11.0, 11.44, 11.92, 12.42]],
+ ["yuk1", "Yukarı bak hele, baby, it's us", [12.8, 13.24, 13.44, 13.74, 14.08, 14.4]], ["us", "Us, ey", [14.98, 15.58]],
+ ["verm", "Vermedim bi' kere bile bi' fuck", [16.62, 17.06, 17.2, 17.44, 17.64, 17.94]], ["kime", "Kime hesap vere'm, kime cevap?", [18.32, 18.7, 19.06, 19.4, 19.58]],
+ ["yuk2", "Yukarı bak hele, baby, it's us", [20.18, 20.62, 20.84, 21.14, 21.46, 21.72]],
+ ["baba", "Baba geladen, zoveel soldaten", [21.6, 22.24, 22.94, 23.36]], ["glock", "Glock doet click en clack", [23.88, 24.18, 24.4, 24.96, 25.22]],
+ ["look1", "Do I look like I give a fuck?", [25.72, 26.08, 26.22, 26.42, 26.58, 26.68, 26.92, 27.1]], ["pap", "Ik heb pap hier in mijn zak", [27.56, 28.0, 28.1, 28.28, 28.46, 28.76, 28.9]],
+ ["oorlog", "Oorlog voeren om orde te maken", [29.4, 29.78, 30.24, 30.4, 30.7, 30.76]], ["mannen", "Mannen daar die doen zig en zag", [31.28, 31.62, 31.74, 31.96, 32.12, 32.4, 32.62]],
+ ["look2", "Do I look like I give a fuck?", [33.14, 33.5, 33.6, 33.84, 34.0, 34.08, 34.32, 34.52]], ["cash", "Ik heb cash gepakt", [35.04, 35.38, 35.88, 36.14]]
+].forEach(([k, t, z]) => Z[k] = { woerter: t.split(" ").map((w, i) => ({ w, a: z[i] })), a: z[0] });
+const UEB = { calis: "Ich hab gearbeitet, es mir verdient – war kein Glück", kader: "Es stand im Schicksal geschrieben – war kein Glück", yuk1: "Schau mal nach oben, Baby, das sind wir",
+  yuk2: "Schau mal nach oben, Baby, das sind wir", verm: "Nicht ein einziges Mal hat's mich gejuckt", kime: "Wem soll ich Rechenschaft geben, wem antworten?" };
+function tipp(ts, k) { let s = ""; for (const w of Z[k].woerter) { if (ts < w.a - 0.04) break; const n = Math.max(1, Math.round(clamp((ts - w.a + 0.04) / 0.09, 0, 1) * w.w.length)); s += (s ? " " : "") + w.w.slice(0, n); } return s; }
+const fertig = (ts, k) => { const w = Z[k].woerter; return ts > w[w.length - 1].a + 0.15; };
+function umbruch(t, max) { const z = []; let r = ""; for (const w of t.split(" ")) { const x = r ? r + " " + w : w; if (ctx.measureText(x).width > max && r) { z.push(r); r = w; } else r = x; } if (r) z.push(r); return z; }
+function text(t, x, y, fs, farbe = "#fff", max = 2000, lh = 1.2, gew = 700, font = "UI") { if (!t) return 0; ctx.font = `${gew} ${fs}px ${font}`; ctx.fillStyle = farbe; ctx.textBaseline = "alphabetic"; const z = umbruch(t, max); z.forEach((l, i) => ctx.fillText(l, x, y + i * fs * lh)); return z.length; }
+// türkische Zeile: kleine Übersetzung blendet ein, sobald die Zeile fertig gesungen ist
+function uebersetzung(ts, k, x, y, max = 900, farbe = "rgba(235,235,245,0.55)") { const a = clamp((ts - Z[k].woerter[Z[k].woerter.length - 1].a - 0.1) / 0.25, 0, 1); if (a <= 0) return; ctx.save(); ctx.globalAlpha *= a; text("Übersetzt: " + UEB[k], x, y, 30, farbe, max, 1.25); ctx.restore(); }
+function panel(x, y, w, h, r = 40, farbe = "rgba(28,28,30,0.96)") { ctx.save(); ctx.shadowColor = "rgba(0,0,0,0.55)"; ctx.shadowBlur = 60; ctx.shadowOffsetY = 20; rr(x, y, w, h, r); ctx.fillStyle = farbe; ctx.fill(); ctx.restore(); }
+const geld = v => v.toLocaleString("de-DE", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + " €";
+// ---------- Sperrbildschirm mit Live-Lyrics ----------
+function hintergrund() { const g = ctx.createLinearGradient(0, 0, 0, H); g.addColorStop(0, "#0b1020"); g.addColorStop(0.6, "#14122a"); g.addColorStop(1, "#2a1a24"); ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+  ctx.fillStyle = "#07080f"; let x = 0, s = 3; while (x < W) { s = (s * 9301 + 49297) % 233280; const w = 70 + (s % 90), h = 180 + (s % 420); ctx.fillRect(x, H - h, w, h); for (let j = 0; j < 8; j++) { s = (s * 9301 + 49297) % 233280; if (s % 3 === 0) { ctx.fillStyle = "rgba(255,190,110,0.35)"; ctx.fillRect(x + 10 + (s % (w - 24)), H - h + 20 + (s % (h - 40)), 8, 10); ctx.fillStyle = "#07080f"; } } x += w + 6; } }
+function sSperr(ts) { hintergrund(); ctx.textAlign = "center"; text("Montag, 23. November", W / 2, 420, 42, "rgba(255,255,255,0.85)"); text("23:41", W / 2, 640, 250, "#fff", 2000, 1, 900, "T"); ctx.textAlign = "left";
+  panel(50, 1180, W - 100, 470, 50, "rgba(40,40,48,0.82)"); if (COVER) { ctx.save(); rr(90, 1220, 140, 140, 22); ctx.clip(); ctx.drawImage(COVER, 90, 1220, 140, 140); ctx.restore(); }
+  text("IT'S US", 260, 1280, 48, "#fff", 700, 1, 900, "T"); text("Bartofso ft. Murda", 260, 1336, 34, GRAU);
+  text(tipp(ts, "yeah") || "♪", 90, 1480, 84, "#fff", 900, 1.1, 900, "T");
+  rr(90, 1560, W - 180, 8, 4); ctx.fillStyle = "rgba(235,235,245,0.25)"; ctx.fill(); rr(90, 1560, (W - 180) * (ts / 194), 8, 4); ctx.fillStyle = "#fff"; ctx.fill();
+  text("0:0" + Math.floor(ts), 90, 1610, 28, GRAU); ctx.textAlign = "right"; const rest = 194 - Math.floor(ts); text("-" + Math.floor(rest / 60) + ":" + String(rest % 60).padStart(2, "0"), W - 90, 1610, 28, GRAU); ctx.textAlign = "left"; }
+// ---------- Konto-App: Zahlungseingang ----------
+function sKonto(ts) { ctx.fillStyle = "#000"; ctx.fillRect(0, 0, W, H); text("Girokonto", 70, 230, 40, GRAU); const q = ein((ts - 10.95) / 0.9);
+  text(geld(lerp(3180.42, 253180.42, q)), 70, 340, 96, "#fff", 2000, 1, 900, "T"); text(q > 0.98 ? "+250.000,00 € heute" : "Kontostand", 70, 400, 34, q > 0.98 ? GRUEN : GRAU);
+  panel(40, 470, W - 80, 760, 44, FL); ctx.beginPath(); ctx.arc(120, 560, 46, 0, Math.PI * 2); ctx.fillStyle = "rgba(48,209,88,0.2)"; ctx.fill(); ctx.textAlign = "center"; text("↓", 120, 578, 50, GRUEN); ctx.textAlign = "left";
+  text("Tour & Streams 2026", 190, 552, 40, "#fff"); text("Zahlungseingang · gerade eben", 190, 598, 30, GRAU); ctx.textAlign = "right"; text("+250.000,00 €", W - 80, 572, 42, GRUEN); ctx.textAlign = "left";
+  ctx.fillStyle = "rgba(235,235,245,0.12)"; ctx.fillRect(80, 650, W - 160, 2); text("VERWENDUNGSZWECK", 80, 715, 28, GRAU);
+  text("Çalıştım, hak ettim, değildi luck", 80, 775, 40, "rgba(235,235,245,0.55)", W - 160); const n = text(tipp(ts, "kader"), 80, 880, 76, "#fff", W - 160, 1.08, 900, "T"); uebersetzung(ts, "kader", 80, 880 + Math.max(n, 2) * 82 + 10, W - 160);
+  [["Autohaus Monaco", "−4.900,00 €"], ["Juwelier", "−38.500,00 €"], ["Sushi-Bar", "−1.240,00 €"]].forEach(([a, b], i) => { const y = 1340 + i * 130; text(a, 80, y, 40, "#fff"); text("Kartenzahlung", 80, y + 44, 28, GRAU); ctx.textAlign = "right"; text(b, W - 80, y + 10, 40, "#fff"); ctx.textAlign = "left"; ctx.fillStyle = "rgba(235,235,245,0.1)"; ctx.fillRect(80, y + 74, W - 160, 2); }); }
+// ---------- Kamera nach oben: Nachthimmel, ein Jet zieht über dich ----------
+const STERNE = []; (function () { let s = 11; for (let i = 0; i < 140; i++) { s = (s * 9301 + 49297) % 233280; const x = s % W; s = (s * 9301 + 49297) % 233280; STERNE.push([x, s % 1300, (s % 7) / 7]); } })();
+const VF = { y: 230, h: 1330 };
+function jet(x, y, s, rot, ts) { ctx.save(); ctx.translate(x, y); ctx.rotate(rot); ctx.scale(s, s);
+  ctx.fillStyle = "#c9ced8"; ctx.beginPath(); ctx.ellipse(0, 0, 120, 16, 0, 0, Math.PI * 2); ctx.fill();
+  ctx.fillStyle = "#aeb4c0"; ctx.beginPath(); ctx.moveTo(20, -8); ctx.lineTo(-40, -110); ctx.lineTo(-62, -110); ctx.lineTo(-20, -8); ctx.fill(); ctx.beginPath(); ctx.moveTo(20, 8); ctx.lineTo(-40, 110); ctx.lineTo(-62, 110); ctx.lineTo(-20, 8); ctx.fill();
+  ctx.beginPath(); ctx.moveTo(-95, -6); ctx.lineTo(-125, -48); ctx.lineTo(-138, -48); ctx.lineTo(-118, -4); ctx.fill(); ctx.beginPath(); ctx.moveTo(-95, 6); ctx.lineTo(-125, 48); ctx.lineTo(-138, 48); ctx.lineTo(-118, 4); ctx.fill();
+  ctx.fillStyle = "#e9ecf2"; ctx.fillRect(-70, -16, 26, 32); // Triebwerke
+  const blink = Math.floor(ts * 2.2) % 2 === 0; const lamp = (lx, ly, c, r) => { ctx.beginPath(); ctx.arc(lx, ly, r, 0, Math.PI * 2); ctx.fillStyle = c; ctx.shadowColor = c; ctx.shadowBlur = 30; ctx.fill(); ctx.shadowBlur = 0; };
+  lamp(-52, -112, "#ff3b30", 7); lamp(-52, 112, "#34c759", 7); if (blink) { lamp(-135, 0, "#ffffff", 9); lamp(0, 0, "rgba(255,255,255,0.9)", 6); } ctx.restore(); }
+function sKamera(ts, v = 1) { ctx.fillStyle = "#000"; ctx.fillRect(0, 0, W, H); ctx.save(); rr(0, VF.y, W, VF.h, 0); ctx.clip();
+  const g = ctx.createLinearGradient(0, VF.y, 0, VF.y + VF.h); g.addColorStop(0, "#050914"); g.addColorStop(0.7, "#0d1630"); g.addColorStop(1, "#2a2440"); ctx.fillStyle = g; ctx.fillRect(0, VF.y, W, VF.h);
+  for (const [x, y, b] of STERNE) { ctx.fillStyle = `rgba(255,255,255,${0.25 + 0.6 * b * (0.7 + 0.3 * Math.sin(ts * 3 + x))})`; ctx.fillRect(x, VF.y + y, 3, 3); }
+  // Hochhäuser von unten gesehen (laufen zur Mitte zusammen)
+  const t0 = v === 1 ? 12.7 : 20.1, d = ts - t0, wack = Math.sin(ts * 1.3) * 6;
+  ctx.fillStyle = "#06070c"; [[-80, 300, 120], [W + 80, W - 300, W - 120]].forEach(([a, b, c]) => { ctx.beginPath(); ctx.moveTo(a, VF.y + VF.h); ctx.lineTo(b + wack, VF.y + VF.h); ctx.lineTo(c + wack, VF.y + 780); ctx.lineTo(a, VF.y + 700); ctx.fill(); });
+  ctx.fillStyle = "rgba(255,190,110,0.45)"; for (let i = 0; i < 18; i++) { const yy = VF.y + 800 + i * 30, f = (yy - VF.y - 780) / (VF.h - 780); if (i % 3) { ctx.fillRect(lerp(80, 220, f) + wack, yy, 10, 12); ctx.fillRect(W - lerp(110, 250, f) + wack, yy, 10, 12); } }
+  // Jet
+  const jx = v === 1 ? lerp(-200, W + 250, (ts - 12.6) / 3.6) : lerp(-300, W + 400, (ts - 20.0) / 2.2), jy = v === 1 ? VF.y + 430 - (ts - 12.6) * 30 : VF.y + 560 - (ts - 20.0) * 60, js = v === 1 ? 0.95 : 2.1;
+  ctx.strokeStyle = "rgba(220,225,235,0.18)"; ctx.lineWidth = 14 * js; ctx.beginPath(); ctx.moveTo(jx - 140 * js, jy + 4); ctx.lineTo(jx - 900 * js, jy + (v === 1 ? 108 : 132) * js * 0.6); ctx.stroke();
+  jet(jx, jy, js, v === 1 ? -0.08 : -0.12, ts);
+  // gelbes Fokusfeld rastet auf den Jet ein
+  const lock = clamp((ts - (t0 + 0.35)) / 0.25, 0, 1); if (lock > 0) { const bs = lerp(420, 300, lock) * (v === 1 ? 1 : 1.5); ctx.strokeStyle = `rgba(255,214,10,${lock})`; ctx.lineWidth = 4; ctx.strokeRect(jx - bs / 2, jy - bs / 2, bs, bs); }
+  ctx.restore();
+  // Kamera-Oberfläche
+  ctx.fillStyle = "#fff"; text("⚡︎", 70, 190, 44, "#fff"); ctx.textAlign = "center"; rr(W / 2 - 50, VF.y + VF.h - 110, 100, 72, 36); ctx.fillStyle = "rgba(0,0,0,0.45)"; ctx.fill(); text(v === 1 ? "1×" : "3×", W / 2, VF.y + VF.h - 60, 34, "#ffd60a");
+  ["ZEITLUPE", "VIDEO", "FOTO", "PORTRÄT", "PANO"].forEach((m, i) => text(m, W / 2 + (i - 2) * 200, 1640, 30, m === "FOTO" ? "#ffd60a" : "rgba(255,255,255,0.8)"));
+  ctx.beginPath(); ctx.arc(W / 2, 1780, 70, 0, Math.PI * 2); ctx.strokeStyle = "#fff"; ctx.lineWidth = 8; ctx.stroke(); const druck = ts > 14.95 && ts < 15.12 ? 0.85 : 1; ctx.beginPath(); ctx.arc(W / 2, 1780, 56 * druck, 0, Math.PI * 2); ctx.fillStyle = "#fff"; ctx.fill(); ctx.textAlign = "left";
+  rr(90, 1730, 100, 100, 18); ctx.fillStyle = "#1c1c1e"; ctx.fill(); if (ts > 15.05 && v === 1 || v === 2) { const q = v === 2 ? 1 : zurueck((ts - 15.05) / 0.25); ctx.save(); ctx.translate(140, 1780); ctx.scale(q, q); rr(-50, -50, 100, 100, 18); ctx.fillStyle = "#0d1630"; ctx.fill(); ctx.fillStyle = "#c9ced8"; ctx.fillRect(-18, -6, 36, 6); ctx.restore(); }
+  rr(W - 190, 1730, 100, 100, 50); ctx.fillStyle = "#1c1c1e"; ctx.fill(); ctx.textAlign = "center"; text("⟲", W - 140, 1797, 50, "#fff"); ctx.textAlign = "left";
+  // Live-Text-Untertitel unten im Sucher
+  const k = v === 1 ? "yuk1" : "yuk2", t = tipp(ts, k), us = v === 1 ? tipp(ts, "us") : "";
+  if (t) { panel(50, VF.y + 840, W - 100, us ? 400 : 340, 40, "rgba(0,0,0,0.55)"); text(t, 90, VF.y + 940, 72, "#fff", W - 180, 1.08, 900, "T"); uebersetzung(ts, k, 90, VF.y + 1120, W - 180); if (us) text(us, 90, VF.y + 1195, 60, "#ffd60a", 900, 1, 900, "T"); }
+  if (v === 1 && ts > 14.97 && ts < 15.3) { ctx.fillStyle = `rgba(255,255,255,${0.75 * (1 - (ts - 14.97) / 0.33)})`; ctx.fillRect(0, VF.y, W, VF.h); } }
+// ---------- Kontrollzentrum: Fokus „Nicht stören“ ----------
+let BUF = [];
+function sKontroll(ts) { const b = inBuf(2, sKamera, ts); ctx.save(); ctx.filter = "blur(36px)"; ctx.drawImage(b, 0, 0, W, H); ctx.restore(); ctx.fillStyle = "rgba(0,0,0,0.45)"; ctx.fillRect(0, 0, W, H); kontrollKacheln(ts); }
+function kachel(x, y, w, h, r = 50) { rr(x, y, w, h, r); ctx.fillStyle = "rgba(60,60,68,0.72)"; ctx.fill(); }
+function kontrollKacheln(ts) { const fok = ts > 16.45, fq = clamp((ts - 16.45) / 0.2, 0, 1);
+  kachel(60, 220, 450, 450); [[160, 330, "#ff9f0a", "✈"], [410, 330, GRUEN, "⇅"], [160, 560, BLAU, "ᯤ"], [410, 560, BLAU, "ᛒ"]].forEach(([x, y, c, s]) => { ctx.beginPath(); ctx.arc(x, y, 70, 0, Math.PI * 2); ctx.fillStyle = s === "✈" ? "rgba(120,120,128,0.5)" : c; ctx.fill(); ctx.textAlign = "center"; text(s, x, y + 20, 56, "#fff"); ctx.textAlign = "left"; });
+  kachel(570, 220, 450, 450); if (COVER) { ctx.save(); rr(610, 260, 120, 120, 20); ctx.clip(); ctx.drawImage(COVER, 610, 260, 120, 120); ctx.restore(); } text("IT'S US", 610, 450, 40, "#fff"); text("Bartofso ft. Murda", 610, 495, 30, GRAU); text("◀◀     ❚❚     ▶▶", 625, 620, 42, "#fff");
+  kachel(60, 720, 450, 200); ctx.beginPath(); ctx.arc(150, 820, 56, 0, Math.PI * 2); ctx.fillStyle = fok ? `rgba(94,92,230,${fq})` : "rgba(120,120,128,0.5)"; ctx.fill(); ctx.textAlign = "center"; text("☾", 150, 840, 56, "#fff"); ctx.textAlign = "left"; text(fok ? "Nicht stören" : "Fokus", 230, 812, 38, "#fff"); text(fok ? "An" : "Aus", 230, 858, 30, GRAU);
+  [[570, "☀"], [820, "🔊"]].forEach(([x, s], i) => { kachel(x, 720, 200, 450, 60); const f = i ? 0.7 : 0.55; ctx.save(); rr(x, 720, 200, 450, 60); ctx.clip(); ctx.fillStyle = "rgba(255,255,255,0.92)"; ctx.fillRect(x, 720 + 450 * (1 - f), 200, 450 * f); ctx.restore(); ctx.textAlign = "center"; text(s, x + 100, 1120, 50, "#555"); ctx.textAlign = "left"; });
+  // aufgeklappte Fokus-Karte mit der Zeile
+  if (ts > 16.4) { const q = zurueck((ts - 16.4) / 0.3); ctx.save(); ctx.globalAlpha = clamp(q, 0, 1); ctx.translate(0, (1 - q) * 80); panel(60, 1230, W - 120, 470, 50, "rgba(70,62,140,0.85)");
+    text("☾  Nicht stören · aktiviert", 110, 1310, 34, "rgba(255,255,255,0.85)"); const n = text(tipp(ts, "verm"), 110, 1410, 70, "#fff", W - 220, 1.08, 900, "T"); uebersetzung(ts, "verm", 110, 1410 + Math.max(n, 2) * 76 + 4, W - 220, "rgba(255,255,255,0.65)");
+    text("Mitteilungen stummgeschaltet", 110, 1665, 28, "rgba(255,255,255,0.6)"); ctx.restore(); } }
+// ---------- Anruf (stumm durch Fokus) ----------
+function sAnruf(ts) { const g = ctx.createLinearGradient(0, 0, 0, H); g.addColorStop(0, "#2b3240"); g.addColorStop(1, "#0e1016"); ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+  ctx.textAlign = "center"; text("stumm durch Fokus ☾", W / 2, 270, 32, GRAU); text("Finanzamt", W / 2, 400, 110, "#fff", 2000, 1, 900, "T"); text("Mobil", W / 2, 470, 38, GRAU); ctx.textAlign = "left";
+  panel(60, 640, W - 120, 560, 46, "rgba(28,28,30,0.9)"); text("Mit Nachricht antworten", 110, 720, 32, GRAU); rr(100, 760, W - 200, 300, 34); ctx.fillStyle = FL2; ctx.fill();
+  const t = tipp(ts, "kime"); const n = text(t, 140, 860, 66, "#fff", W - 290, 1.08, 900, "T"); ctx.font = "900 66px T"; if (ts < 19.75) { const z = umbruch(t || " ", W - 290), last = z[z.length - 1] || ""; if (Math.floor(ts * 3) % 2 === 0) { ctx.fillStyle = BLAU; ctx.fillRect(142 + ctx.measureText(last).width, 860 + (Math.max(z.length, 1) - 1) * 71 - 54, 4, 66); } }
+  uebersetzung(ts, "kime", 110, 1110, W - 220);
+  const ab = ts > 19.8, dq = ab ? clamp((ts - 19.8) / 0.12, 0, 1) : 0;
+  [[250, ROT, "✆", "Ablehnen"], [W - 250, GRUEN, "✆", "Annehmen"]].forEach(([x, c, s, l], i) => { const sc = i === 0 && ab ? 1 - 0.12 * Math.sin(dq * Math.PI) : 1; ctx.save(); ctx.translate(x, 1560); ctx.scale(sc, sc); ctx.beginPath(); ctx.arc(0, 0, 100, 0, Math.PI * 2); ctx.fillStyle = c; ctx.fill(); ctx.textAlign = "center"; ctx.rotate(i ? 0 : 2.4); text(s, 0, 22, 70, "#fff"); ctx.restore(); ctx.textAlign = "center"; text(l, x, 1710, 32, "#fff"); ctx.textAlign = "left"; });
+  if (ab) { ctx.textAlign = "center"; ctx.globalAlpha = dq; text("Anruf abgelehnt", W / 2, 1360, 40, ROT); ctx.globalAlpha = 1; ctx.textAlign = "left"; } }
+// ---------- Gruppenchat „Soldaten“ ----------
+function sChat(ts) { ctx.fillStyle = "#000"; ctx.fillRect(0, 0, W, H); ctx.fillStyle = "rgba(28,28,30,0.96)"; ctx.fillRect(0, 0, W, 340);
+  for (let i = 0; i < 5; i++) { ctx.beginPath(); ctx.arc(W / 2 - 120 + i * 60, 205, 44, 0, Math.PI * 2); ctx.fillStyle = ["#3a3a3c", "#5e5ce6", "#2c6e49", "#8e5a2b", "#444"][i]; ctx.fill(); ctx.strokeStyle = "#1c1c1e"; ctx.lineWidth = 6; ctx.stroke(); ctx.textAlign = "center"; text(i === 4 ? "+143" : "🪖", W / 2 - 120 + i * 60, i === 4 ? 214 : 220, i === 4 ? 24 : 40, "#fff"); }
+  text("Soldaten 🪖 ›", W / 2, 300, 34, "#fff"); text("148 Mitglieder", W / 2, 330, 24, GRAU); ctx.textAlign = "left";
+  const bl = (t, y, rechts, farbe, name, fs = 46) => { if (!t) return 0; ctx.font = `700 ${fs}px UI`; const z = umbruch(t, 640); const bw = Math.max(...z.map(l => ctx.measureText(l).width)) + 64, h = 36 + z.length * fs * 1.26, x = rechts ? W - 50 - bw : 120;
+    if (name) { text(name, x + 20, y - 12, 26, GRAU); ctx.beginPath(); ctx.arc(76, y + h - 34, 32, 0, Math.PI * 2); ctx.fillStyle = "#8e5a2b"; ctx.fill(); ctx.textAlign = "center"; text("B", 76, y + h - 22, 34, "#fff"); ctx.textAlign = "left"; ctx.font = `700 ${fs}px UI`; }
+    rr(x, y, bw, h, 40); ctx.fillStyle = farbe; ctx.fill(); ctx.fillStyle = "#fff"; z.forEach((l, i) => ctx.fillText(l, x + 32, y + 22 + fs + i * fs * 1.26)); return h; };
+  let y = 420; y += bl("🫡🫡🫡", y, false, "#26262a", "") + 18; y += bl("🪖", y, false, "#26262a", "") + 60;
+  y += bl(tipp(ts, "baba") || "Baba", y, false, "#26262a", "Baba", 54) + 28;
+  const g = tipp(ts, "glock"); y += bl(g, y, true, BLAU, "", 54) + 24;
+  [["🔫 click", 24.4, 140], ["clack 🔫", 25.22, 560]].forEach(([s, t0, x]) => { if (ts > t0) { const q = zurueck((ts - t0) / 0.25); ctx.save(); ctx.translate(x + 180, y + 90); ctx.rotate(x < 400 ? -0.12 : 0.1); ctx.scale(q, q); rr(-180, -70, 360, 140, 40); ctx.fillStyle = "#ffd60a"; ctx.fill(); ctx.textAlign = "center"; text(s, 0, 22, 62, "#000", 999, 1, 900, "T"); ctx.textAlign = "left"; ctx.restore(); } });
+  rr(40, H - 170, W - 80, 100, 50); ctx.strokeStyle = "rgba(235,235,245,0.25)"; ctx.lineWidth = 3; ctx.stroke(); text("iMessage", 90, H - 105, 36, "rgba(235,235,245,0.35)"); }
+// ---------- Face ID (zum Bezahlen) ----------
+function faceID(ts, t0, k, tOk) { const a = clamp((ts - t0) / 0.2, 0, 1); if (a <= 0) return; ctx.fillStyle = `rgba(0,0,0,${0.8 * a})`; ctx.fillRect(0, 0, W, H);
+  ctx.save(); ctx.globalAlpha = a; const s = lerp(0.85, 1, zurueck((ts - t0) / 0.3)); ctx.translate(W / 2, 760); ctx.scale(s, s);
+  rr(-190, -190, 380, 380, 80); ctx.fillStyle = "rgba(44,44,48,0.92)"; ctx.fill(); const ok = ts > tOk, c = ok ? GRUEN : "#fff";
+  ctx.strokeStyle = c; ctx.lineWidth = 10; ctx.lineCap = "round";
+  if (!ok) { [[-1, -1], [1, -1], [-1, 1], [1, 1]].forEach(([sx, sy]) => { ctx.beginPath(); ctx.moveTo(sx * 100, sy * 40); ctx.lineTo(sx * 100, sy * 80); ctx.quadraticCurveTo(sx * 100, sy * 100, sx * 80, sy * 100); ctx.lineTo(sx * 40, sy * 100); ctx.stroke(); });
+    ctx.beginPath(); ctx.moveTo(-36, -30); ctx.lineTo(-36, -10); ctx.moveTo(36, -30); ctx.lineTo(36, -10); ctx.moveTo(0, -30); ctx.lineTo(0, 12); ctx.lineTo(-10, 12); ctx.stroke(); ctx.beginPath(); ctx.arc(0, 18, 34, 0.25 * Math.PI, 0.75 * Math.PI); ctx.stroke();
+    ctx.globalAlpha = a * 0.6; ctx.setLineDash([14, 22]); ctx.lineDashOffset = -ts * 300; ctx.beginPath(); ctx.arc(0, 0, 150, 0, Math.PI * 2); ctx.stroke(); ctx.setLineDash([]); }
+  else { const q = clamp((ts - tOk) / 0.2, 0, 1); ctx.beginPath(); ctx.arc(0, 0, 120, 0, Math.PI * 2); ctx.stroke(); ctx.beginPath(); ctx.moveTo(-55, 0); ctx.lineTo(lerp(-55, -15, Math.min(1, q * 2)), lerp(0, 42, Math.min(1, q * 2))); if (q > 0.5) ctx.lineTo(lerp(-15, 60, (q - 0.5) * 2), lerp(42, -45, (q - 0.5) * 2)); ctx.stroke(); }
+  ctx.restore(); ctx.save(); ctx.globalAlpha = a; ctx.textAlign = "center"; text(ok ? "Bestätigt" : "Face ID", W / 2, 1010, 36, ok ? GRUEN : GRAU);
+  text(tipp(ts, k), W / 2, 1180, 92, "#fff", W - 140, 1.08, 900, "T"); ctx.textAlign = "right"; text("Zum Bezahlen", W - 50, 330, 30, "#fff"); text("doppelklicken", W - 50, 368, 30, "#fff"); ctx.restore();
+  rr(W - 14, 300, 14, 120, 7); ctx.fillStyle = `rgba(255,255,255,${0.8 * a * (0.6 + 0.4 * Math.sin(ts * 12))})`; ctx.fill(); }
+// ---------- Wallet ----------
+function karteZ(x, y, w, h, g1, g2, titel, rechts) { ctx.save(); ctx.shadowColor = "rgba(0,0,0,0.6)"; ctx.shadowBlur = 40; ctx.shadowOffsetY = -6; rr(x, y, w, h, 34); const g = ctx.createLinearGradient(x, y, x + w, y + h); g.addColorStop(0, g1); g.addColorStop(1, g2); ctx.fillStyle = g; ctx.fill(); ctx.restore();
+  text(titel, x + 44, y + 76, 40, "#fff", 999, 1, 900, "T"); if (rechts) { ctx.textAlign = "right"; text(rechts, x + w - 44, y + 74, 32, "rgba(255,255,255,0.85)"); ctx.textAlign = "left"; } }
+function sWallet(ts) { ctx.fillStyle = "#000"; ctx.fillRect(0, 0, W, H); text("Wallet", 70, 250, 80, "#fff", 999, 1, 900, "T");
+  karteZ(60, 320, W - 120, 300, "#1f3b73", "#0a1630", "BOARDING PASS", "Privatjet · 1A"); karteZ(60, 420, W - 120, 300, "#2c6e49", "#0f2a1c", "Bank", "•••• 4512");
+  const q = ein((ts - 27.3) / 0.6); karteZ(60, 520, W - 120, 640, "#2b2b30", "#0c0c0e", "Cash", "");
+  text("Kontostand", 104, 900, 32, GRAU); text(geld(lerp(0, 48250, q)), 104, 1000, 104, "#fff", 2000, 1, 900, "T"); ctx.fillStyle = "#d4af37"; rr(104, 1060, 120, 12, 6); ctx.fill();
+  text(tipp(ts, "pap"), 70, 1320, 84, "#fff", W - 140, 1.08, 900, "T");
+  if (fertig(ts, "pap")) { ctx.globalAlpha = clamp((ts - 29.05) / 0.2, 0, 1); text("✓ Bargeld · in deiner Tasche", 70, 1560, 34, GRUEN); ctx.globalAlpha = 1; } }
+// ---------- Aktien: Schlagzeile + Zickzack-Kurs ----------
+const KURS = [[29.4, 0.30], [30.2, 0.34], [30.9, 0.38], [31.28, 0.42], [31.62, 0.25], [31.74, 0.55], [31.96, 0.2], [32.12, 0.62], [32.4, 0.18], [32.62, 0.7], [32.9, 0.6], [33.4, 0.82], [34.4, 0.92], [36.8, 1.0]];
+function kurs(t) { if (t <= KURS[0][0]) return KURS[0][1]; for (let i = 1; i < KURS.length; i++) if (t <= KURS[i][0]) { const [a, va] = KURS[i - 1], [b, vb] = KURS[i]; return lerp(va, vb, ein((t - a) / (b - a))); } return 1; }
+function sAktien(ts) { ctx.fillStyle = "#000"; ctx.fillRect(0, 0, W, H); text("Aktien", 70, 250, 80, "#fff", 999, 1, 900, "T"); text("23. November", 70, 305, 36, GRAU);
+  panel(40, 360, W - 80, 380, 40, FL); text("EILMELDUNG", 90, 430, 28, ROT); text(tipp(ts, "oorlog"), 90, 520, 66, "#fff", W - 180, 1.08, 900, "T"); text("Nieuws · vor 1 Min.", 90, 705, 28, GRAU);
+  text("US", 70, 850, 64, "#fff", 999, 1, 900, "T"); text("It's Us Holding", 170, 850, 34, GRAU); const v = kurs(ts); ctx.textAlign = "right"; text(geld(1000 + v * 4127).replace(" €", " $"), W - 70, 840, 48, "#fff"); text("+" + (v * 412.7).toFixed(1).replace(".", ",") + " %", W - 70, 890, 34, v > 0.3 ? GRUEN : ROT); ctx.textAlign = "left";
+  const cx = 70, cy = 960, cw = W - 140, ch = 560; ctx.fillStyle = "rgba(235,235,245,0.08)"; for (let i = 0; i <= 4; i++) ctx.fillRect(cx, cy + i * ch / 4, cw, 2);
+  const t0 = 29.4, t1 = 36.8, x = t => cx + (t - t0) / (t1 - t0) * cw, y = val => cy + ch - val * ch;
+  ctx.beginPath(); let n = 0; for (let t = t0; t <= Math.min(ts, t1); t += 0.02) { const px = x(t), py = y(kurs(t)); n++ ? ctx.lineTo(px, py) : ctx.moveTo(px, py); }
+  ctx.strokeStyle = GRUEN; ctx.lineWidth = 7; ctx.lineJoin = "round"; ctx.stroke(); if (n) { ctx.lineTo(x(Math.min(ts, t1)), cy + ch); ctx.lineTo(cx, cy + ch); const g = ctx.createLinearGradient(0, cy, 0, cy + ch); g.addColorStop(0, "rgba(48,209,88,0.35)"); g.addColorStop(1, "rgba(48,209,88,0)"); ctx.fillStyle = g; ctx.fill();
+    ctx.beginPath(); ctx.arc(x(Math.min(ts, t1)), y(kurs(ts)), 14, 0, Math.PI * 2); ctx.fillStyle = "#fff"; ctx.fill(); }
+  const m = tipp(ts, "mannen"); if (m) text(m, 70, 1640, 72, "#fff", W - 140, 1.08, 900, "T");
+  [["GOLD", "+3,1 %"], ["CASH", "+0,0 %"]].forEach(([a, b], i) => { if (m) return; const yy = 1640 + i * 120; text(a, 70, yy, 44, "#fff"); ctx.textAlign = "right"; text(b, W - 70, yy, 40, GRUEN); ctx.textAlign = "left"; }); }
+// ---------- Geldautomat: Bargeld abheben (Apple-Pay-Blatt) ----------
+function sGeld(ts, unten) { const b = inBuf(2, sAktien, ts); ctx.save(); ctx.filter = "blur(24px)"; ctx.drawImage(b, 0, 0, W, H); ctx.restore(); ctx.fillStyle = "rgba(0,0,0,0.82)"; ctx.fillRect(0, 0, W, H);
+  ctx.textAlign = "center"; text(tipp(ts, "cash"), W / 2, 560, 110, "#fff", W - 120, 1.05, 900, "T"); ctx.textAlign = "left";
+  const top = lerp(H, 980, unten); ctx.save(); ctx.translate(0, top - 980); panel(0, 980, W, 1000, 56, "#1c1c1e");
+  text("Geldautomat", 70, 1080, 44, "#fff", 999, 1, 900, "T"); text("Bargeld abheben", 70, 1130, 32, GRAU); rr(70, 1180, 200, 126, 18); const g = ctx.createLinearGradient(70, 1180, 270, 1306); g.addColorStop(0, "#2b2b30"); g.addColorStop(1, "#0c0c0e"); ctx.fillStyle = g; ctx.fill(); text("Cash", 90, 1225, 26, "#fff");
+  text("Cash-Karte", 300, 1230, 36, "#fff"); text("Kontostand " + geld(48250), 300, 1275, 28, GRAU);
+  ctx.fillStyle = "rgba(235,235,245,0.12)"; ctx.fillRect(70, 1350, W - 140, 2); text("BETRAG", 70, 1420, 28, GRAU); ctx.textAlign = "right"; text(geld(10000), W - 70, 1430, 64, "#fff", 999, 1, 900, "T"); ctx.textAlign = "left";
+  const ok = ts > 36.14, q = clamp((ts - 36.14) / 0.3, 0, 1); ctx.textAlign = "center";
+  if (!ok) { text("Zum Abheben doppelklicken", W / 2, 1640, 36, "#fff"); } else { ctx.beginPath(); ctx.arc(W / 2, 1640, 70, 0, Math.PI * 2); ctx.strokeStyle = BLAU; ctx.lineWidth = 9; ctx.stroke(); ctx.beginPath(); ctx.moveTo(W / 2 - 32, 1642); ctx.lineTo(W / 2 - 8, 1668); if (q > 0.4) ctx.lineTo(lerp(W / 2 - 8, W / 2 + 36, (q - 0.4) / 0.6), lerp(1668, 1612, (q - 0.4) / 0.6)); ctx.stroke(); text("Fertig", W / 2, 1770, 40, BLAU); }
+  ctx.textAlign = "left"; ctx.restore(); }
+// ---------- Mitteilungen ----------
+const BANNER = { x: 30, y: 130, w: W - 60, h: 230 };
+const MITT = {
+  konto: ["KONTO", GRUEN, "€", () => "Zahlungseingang +250.000,00 €", ts => tipp(ts, "calis") || "Tour & Streams 2026"],
+  anruf: ["TELEFON", GRUEN, "✆", () => "Finanzamt", () => "Eingehender Anruf · stumm durch Fokus ☾"],
+  sold: ["NACHRICHTEN", GRUEN, "✉", () => "Soldaten 🪖 · Baba", ts => tipp(ts, "baba") || "…"] };
+function banner(k, r, a, ts) { if (a <= 0) return; const [app, farbe, sym, titel, body] = MITT[k]; ctx.save(); ctx.globalAlpha = a; panel(r.x, r.y, r.w, r.h, 44, "rgba(40,40,44,0.97)");
+  rr(r.x + 30, r.y + 40, 96, 96, 22); ctx.fillStyle = farbe; ctx.fill(); ctx.textAlign = "center"; text(sym, r.x + 78, r.y + 105, 52, "#fff"); ctx.textAlign = "left";
+  text(app, r.x + 150, r.y + 62, 26, GRAU); ctx.textAlign = "right"; text("jetzt", r.x + r.w - 34, r.y + 62, 26, GRAU); ctx.textAlign = "left"; text(titel(ts), r.x + 150, r.y + 110, 38, "#fff");
+  text(body(ts), r.x + 150, r.y + 162, 38, "#fff", r.w - 190, 1.15); if (k === "konto") uebersetzung(ts, "calis", r.x + 150, r.y + 212 + (umbruch(body(ts), r.w - 190).length - 1) * 44, r.w - 190); ctx.restore(); }
+function bannerFall(k, t0, ts) { const q = zurueck((ts - t0) / 0.24); banner(k, { ...BANNER, h: k === "konto" ? 300 : BANNER.h, y: lerp(-320, BANNER.y, q) }, clamp((ts - t0) / 0.08, 0, 1), ts); }
+// ---------- Puffer und Übergänge ----------
+function inBuf(i, f, ts, ...arg) { const o = BUF[i].getContext("2d"); o.setTransform(K, 0, 0, K, 0, 0); o.globalAlpha = 1; o.filter = "none"; o.textAlign = "left"; o.clearRect(0, 0, W, H); const alt = ctx; ctx = o; try { f(ts, ...arg); } finally { ctx = alt; } return BUF[i]; }
+function bildMit(b, s = 1, a = 1, dim = 0, dx = 0, dy = 0, blur = 0) { ctx.save(); ctx.globalAlpha = a; if (blur > 0.5) ctx.filter = `blur(${blur}px)`; ctx.translate(W / 2 + dx, H / 2 + dy); ctx.scale(s, s); ctx.translate(-W / 2, -H / 2); ctx.drawImage(b, 0, 0, W, H); ctx.restore(); if (dim > 0) { ctx.fillStyle = `rgba(0,0,0,${dim})`; ctx.fillRect(0, 0, W, H); } }
+const lerpR = (a, b, e) => ({ x: lerp(a.x, b.x, e), y: lerp(a.y, b.y, e), w: lerp(a.w, b.w, e), h: lerp(a.h, b.h, e), r: lerp(a.r ?? 44, b.r ?? 0, e) });
+// App öffnet sich aus der Mitteilung
+function oeffnen(fA, fB, k, t0, dauer, ts) { const e = ein((ts - t0) / dauer); bildMit(inBuf(0, fA, ts), 1 - 0.07 * e, 1, 0.55 * e);
+  const r0 = { ...BANNER, h: k === "konto" ? 300 : BANNER.h, r: 44 }, r = lerpR(r0, { x: 0, y: 0, w: W, h: H, r: 0 }, e), s = r.w / W, b = inBuf(1, fB, ts);
+  ctx.save(); rr(r.x, r.y, r.w, r.h, r.r); ctx.clip(); ctx.fillStyle = "#000"; ctx.fillRect(r.x, r.y, r.w, r.h); ctx.globalAlpha = clamp(e * 2.2, 0, 1);
+  ctx.drawImage(b, r.x, r.y + r.h / 2 - (H * s) / 2 * lerp(0.25, 1, e) - lerp(H * s * 0.12, 0, e), r.w, H * s); ctx.restore(); banner(k, r, 1 - clamp(e * 3, 0, 1), ts); }
+// „Yukarı bak“: die Kamera schwenkt nach oben – das alte Bild rutscht nach unten weg, der Himmel kommt von oben
+function hochschauen(fA, fB, t0, dauer, ts, v) { const e = ein((ts - t0) / dauer), bl = 14 * Math.sin(Math.PI * e); bildMit(inBuf(0, fA, ts), 1, 1, 0.3 * e, 0, e * H * 0.92, bl); bildMit(inBuf(1, fB, ts, v), 1, 1, 0, 0, -(1 - e) * H * 0.92, bl); }
+// App-Umschalter: die App schrumpft zur Karte, die nächste schiebt sich herein und wächst
+function umschalten(fA, fB, t0, dauer, ts) { const e = ein((ts - t0) / dauer), s = 1 - 0.3 * Math.sin(Math.PI * e), r = 70 * Math.sin(Math.PI * e); hintergrund(); ctx.fillStyle = "rgba(0,0,0,0.5)"; ctx.fillRect(0, 0, W, H);
+  [[fA, -e * W * 0.8, 0], [fB, (1 - e) * W * 0.8, 1]].forEach(([f, dx, i]) => { const b = inBuf(i, f, ts); ctx.save(); ctx.translate(W / 2 + dx, H / 2); ctx.scale(s, s); ctx.translate(-W / 2, -H / 2); rr(0, 0, W, H, r / s); ctx.clip(); ctx.drawImage(b, 0, 0, W, H); ctx.restore(); }); }
+// ---------- Statusleiste + Dynamic Island mit Musik-Live-Aktivität ----------
+function oben(ts) { ctx.fillStyle = "#fff"; ctx.font = "700 36px UI"; ctx.textAlign = "left"; ctx.fillText("23:41", 96, 92); ctx.textAlign = "right"; ctx.fillText("5G", W - 170, 92);
+  rr(W - 150, 66, 62, 30, 9); ctx.strokeStyle = "#fff"; ctx.lineWidth = 3; ctx.stroke(); rr(W - 146, 70, 44, 22, 6); ctx.fill(); ctx.textAlign = "left";
+  const w = 330; rr(W / 2 - w / 2, 38, w, 74, 37); ctx.fillStyle = "#000"; ctx.fill(); if (COVER) { ctx.save(); rr(W / 2 - w / 2 + 16, 51, 48, 48, 12); ctx.clip(); ctx.drawImage(COVER, W / 2 - w / 2 + 16, 51, 48, 48); ctx.restore(); }
+  const b = ((ts - 7.98) / 0.4615) % 1; for (let i = 0; i < 5; i++) { const h = 10 + 26 * Math.abs(Math.sin(ts * (5 + i * 1.7) + i)) * (0.55 + 0.45 * (1 - Math.max(0, b))); rr(W / 2 + w / 2 - 110 + i * 16, 75 - h / 2, 8, h, 4); ctx.fillStyle = "#6bd1ff"; ctx.fill(); } }
+// ---------- Ablauf ----------
+window.laden = async () => {};
+window.zeichne = T => { const ts = T + A; ctx = cv.getContext("2d"); ctx.setTransform(K, 0, 0, K, 0, 0); ctx.filter = "none"; ctx.globalAlpha = 1; ctx.fillStyle = "#000"; ctx.fillRect(0, 0, W, H);
+  if (ts < 10.75) { bildMit(inBuf(0, sSperr, ts)); if (ts > 8.95) bannerFall("konto", 8.95, ts); }
+  else if (ts < 11.07) oeffnen(sSperr, sKonto, "konto", 10.75, 0.32, ts);
+  else if (ts < 12.5) bildMit(inBuf(0, sKonto, ts));
+  else if (ts < 12.85) hochschauen(sKonto, sKamera, 12.5, 0.35, ts, 1);
+  else if (ts < 15.85) bildMit(inBuf(0, sKamera, ts, 1));
+  else if (ts < 16.3) { // Kontrollzentrum zieht von oben rechts herunter, die Kamera verschwimmt dahinter
+    const e = ein((ts - 15.85) / 0.45); bildMit(inBuf(0, sKamera, ts, 1), 1, 1, 0.45 * e, 0, 0, 36 * e); ctx.save(); ctx.globalAlpha = e; ctx.translate(W * 0.3 * (1 - e), -260 * (1 - e)); const s = lerp(0.8, 1, e); ctx.scale(s, s); kontrollKacheln(ts); ctx.restore(); }
+  else if (ts < 18.2) { bildMit(inBuf(0, sKontroll, ts)); if (ts > 17.98) bannerFall("anruf", 17.98, ts); }
+  else if (ts < 18.5) oeffnen(sKontroll, sAnruf, "anruf", 18.2, 0.3, ts);
+  else if (ts < 19.95) bildMit(inBuf(0, sAnruf, ts));
+  else if (ts < 20.3) hochschauen(sAnruf, sKamera, 19.95, 0.35, ts, 2);
+  else if (ts < 21.62) { bildMit(inBuf(0, sKamera, ts, 2)); if (ts > 21.38) bannerFall("sold", 21.38, ts); }
+  else if (ts < 21.92) oeffnen(t => sKamera(t, 2), sChat, "sold", 21.62, 0.3, ts);
+  else if (ts < 27.32) { bildMit(inBuf(0, sChat, ts), 1, 1, 0, 0, 0, 24 * clamp((ts - 25.5) / 0.2, 0, 1)); faceID(ts, 25.5, "look1", 27.18); }
+  else if (ts < 27.65) { // Face ID bestätigt → Wallet schiebt sich hoch
+    const e = ein((ts - 27.32) / 0.33); bildMit(inBuf(0, sChat, ts), 1 - 0.05 * e, 1, 0.6, 0, 0, 24); ctx.save(); ctx.globalAlpha = 1 - e; faceID(ts, 25.5, "look1", 27.18); ctx.restore(); bildMit(inBuf(1, sWallet, ts), 1, 1, 0, 0, (1 - e) * H); }
+  else if (ts < 29.0) bildMit(inBuf(0, sWallet, ts));
+  else if (ts < 29.45) umschalten(sWallet, sAktien, 29.0, 0.45, ts);
+  else if (ts < 34.75) { bildMit(inBuf(0, sAktien, ts), 1, 1, 0, 0, 0, 24 * clamp((ts - 32.95) / 0.2, 0, 1)); faceID(ts, 32.95, "look2", 34.62); }
+  else if (ts < 35.1) { const e = ein((ts - 34.75) / 0.35); bildMit(inBuf(1, sGeld, ts, e)); ctx.save(); ctx.globalAlpha = 1 - e; faceID(ts, 32.95, "look2", 34.62); ctx.restore(); }
+  else bildMit(inBuf(1, sGeld, ts, 1));
+  oben(ts);
+  const r = ENDE - T; if (r < 0.3) { ctx.fillStyle = `rgba(0,0,0,${1 - r / 0.3})`; ctx.fillRect(0, 0, W, H); } };
+(async () => { await document.fonts.load('900 100px "T"'); await document.fonts.load('700 40px "UI"'); COVER = await lade("assets/cover.png");
+  for (let i = 0; i < 3; i++) { const c = document.createElement("canvas"); c.width = W * K; c.height = H * K; BUF.push(c); } window.bereit = true; })();
+</script></body></html>
