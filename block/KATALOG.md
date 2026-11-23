@@ -28,6 +28,7 @@ Ziel (Jonathan 23.11.): Jede Folge setzt sich aus fertigen, geprüften Teilen zu
 `figur({haut, hemd, hose, haare, frisur, helm, weste, muetze, abzeichen, brille, kapuze, schal, skala, schuhe})`
 - Frisuren: kurz, zopf, dutt, strubbel, glatze.
 - Neu (23.11.): `jacke` (offene Jacke über dem Hemd, z. B. Lehrer), `brust` (Zeichen oder Emoji auf der Brust, `brustFarbe`).
+- Neu (23.11.): **Gesicht auf der runden Kopfform**: Augen, Mund, Brauen und Wangen liegen direkt auf dem gerundeten Kopf, ohne eckige Gesichtsfläche (Standard; alte Darstellung mit `flachesGesicht: true`). Prüfbilder: `gesicht-seite`, `gesicht-schraeg`.
 - Neu (23.11.): **`struktur: true`** gibt Kleidung ein Strickmuster und Haaren Strähnen. Für alle neuen Folgen benutzen; ohne die Option bleibt das alte glatte Aussehen (Folge 1).
 
 `pose(f, {lauf, renn, phase, sitz, liegen, armL, armR, armLz, armRz, kopfNeig, kopfDreh, ges, huepf, atmen, neig})`

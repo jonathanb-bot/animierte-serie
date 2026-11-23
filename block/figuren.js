@@ -7,9 +7,9 @@ const rb = (w, h, d, r, m) => { const g = new THREE.Mesh(new RoundedBoxGeometry(
 
 // Gesichter (Leinwand), pro Hautton zwischengespeichert
 const GES = {};
-export const gesicht = (art, haut) => { const key = art + haut; if (GES[key]) return GES[key];
+export const gesicht = (art, haut, rund = false) => { const key = art + haut + (rund ? "r" : ""); if (GES[key]) return GES[key];
   const c = document.createElement("canvas"); c.width = c.height = 256; const x = c.getContext("2d");
-  x.fillStyle = haut; x.fillRect(0, 0, 256, 256); const ink = "#1a1410"; x.fillStyle = ink; x.strokeStyle = ink; x.lineCap = "round"; x.lineJoin = "round";
+  if (!rund) { x.fillStyle = haut; x.fillRect(0, 0, 256, 256); } const ink = "#1a1410"; x.fillStyle = ink; x.strokeStyle = ink; x.lineCap = "round"; x.lineJoin = "round";
   const brauen = (a = 0, y = 78) => { x.lineWidth = 9; x.beginPath(); x.moveTo(66, y + a); x.lineTo(108, y - a * 0.4); x.moveTo(148, y - a * 0.4); x.lineTo(190, y + a); x.stroke(); };
   const augen = (h = 20, w = 13, py = 0) => { for (const ex of [88, 168]) { x.fillStyle = ink; x.beginPath(); x.ellipse(ex, 112 + py, w, h, 0, 0, 7); x.fill(); x.fillStyle = "#fff"; x.beginPath(); x.arc(ex + 4, 104 + py, 5, 0, 7); x.fill(); } x.fillStyle = ink; };
   if (art === "froh") { brauen(-2); augen(); x.lineWidth = 9; x.beginPath(); x.arc(128, 150, 36, 0.15 * Math.PI, 0.85 * Math.PI); x.stroke(); }
@@ -24,6 +24,12 @@ export const gesicht = (art, haut) => { const key = art + haut; if (GES[key]) re
   else if (art === "schlaf") { x.lineWidth = 8; for (const ex of [88, 168]) { x.beginPath(); x.arc(ex, 108, 14, 0.1 * Math.PI, 0.9 * Math.PI); x.stroke(); } x.beginPath(); x.arc(128, 156, 18, 0.2 * Math.PI, 0.8 * Math.PI); x.stroke(); }
   if (art !== "ernst" && art !== "angst" && art !== "schreien" && art !== "traurig") { x.fillStyle = "rgba(240,90,90,0.22)"; for (const ex of [58, 198]) { x.beginPath(); x.ellipse(ex, 150, 17, 10, 0, 0, 7); x.fill(); } }
   const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 4; return GES[key] = t; };
+// Gesicht auf der gerundeten Kopfform (Jonathan 23.11.: „kein Viereck auf einem runden Quader“): die Vorderseite der Kopf-Geometrie,
+// minimal größer, mit ebener Projektion der Gesichtstextur (durchsichtig, nur Augen/Mund/Brauen/Wangen). Alte Darstellung: figur({ flachesGesicht: true }).
+const gesichtGeo = (() => { const src = new RoundedBoxGeometry(1.25, 1.2, 1.25, 3, 0.32); const p = src.attributes.position, n = src.attributes.normal; const pos = [], nor = [], uv = [];
+  for (let i = 0; i < p.count; i += 3) { if ((n.getZ(i) + n.getZ(i + 1) + n.getZ(i + 2)) / 3 < 0.2) continue;
+    for (let k = 0; k < 3; k++) { const x = p.getX(i + k), y = p.getY(i + k), z = p.getZ(i + k); pos.push(x * 1.006, y * 1.006, z * 1.006); nor.push(n.getX(i + k), n.getY(i + k), n.getZ(i + k)); uv.push(x + 0.5, y + 0.5); } }
+  const g = new THREE.BufferGeometry(); g.setAttribute("position", new THREE.Float32BufferAttribute(pos, 3)); g.setAttribute("normal", new THREE.Float32BufferAttribute(nor, 3)); g.setAttribute("uv", new THREE.Float32BufferAttribute(uv, 2)); return g; })();
 export const mund = (t, k = 0) => (Math.sin(t * 11 + k) + Math.sin(t * 7.3 + k * 2) > 0.3 ? "reden" : "froh");
 
 // Stoff- und Haarstruktur (Jonathan 23.11., Vergleich mit Vorbild): nur mit figur({ struktur: true }), alte Figuren bleiben glatt
@@ -52,8 +58,10 @@ export const figur = (o) => {
   const koerper = new THREE.Group(); f.add(koerper);
   const kopfG = new THREE.Group(); kopfG.position.y = 4.0; koerper.add(kopfG);
   const kopf = rb(1.25, 1.2, 1.25, 0.32, hautM); kopf.position.y = 0.62; kopfG.add(kopf);
-  const gm = new THREE.MeshPhysicalMaterial({ map: gesicht("froh", haut), roughness: 0.45, clearcoat: 0.4 });
-  const fl = new THREE.Mesh(new THREE.PlaneGeometry(1.0, 1.0), gm); fl.position.set(0, 0.62, 0.648); kopfG.add(fl);
+  const rund = !o.flachesGesicht;
+  const gm = new THREE.MeshPhysicalMaterial({ map: gesicht("froh", haut, rund), roughness: 0.45, clearcoat: 0.4, ...(rund ? { transparent: true, depthWrite: false, polygonOffset: true, polygonOffsetFactor: -2, polygonOffsetUnits: -2, clearcoat: 0.08, roughness: 0.6 } : {}) });
+  if (rund) { const tex = gm.map; const fl = new THREE.Mesh(gesichtGeo, gm); fl.position.y = 0.62; fl.renderOrder = 1; kopfG.add(fl); }
+  else { const fl = new THREE.Mesh(new THREE.PlaneGeometry(1.0, 1.0), gm); fl.position.set(0, 0.62, 0.648); kopfG.add(fl); }
   const hm = o.haare ? plastik(o.haare) : null, fr = o.frisur ?? "kurz"; const S = !!o.struktur; if (S) strukturieren(hm, "haar");
   if (hm && fr !== "glatze") { const h = rb(1.36, 0.5, 1.36, 0.18, hm); h.position.y = 1.15; kopfG.add(h);
     const hb = rb(1.36, fr === "zopf" || fr === "dutt" ? 1.0 : 0.8, 0.3, 0.12, hm); hb.position.set(0, fr === "zopf" ? 0.7 : 0.85, -0.55); kopfG.add(hb);
@@ -80,7 +88,7 @@ export const figur = (o) => {
   const armL = glied(-1.5, 3.85, armM, true), armR = glied(1.5, 3.85, armM, true); koerper.add(armL, armR);
   const hoseM = plastik(o.hose); if (S) strukturieren(hoseM); const beinL = glied(-0.5, 1.95, hoseM), beinR = glied(0.5, 1.95, hoseM); f.add(beinL, beinR);
   const blob = new THREE.Mesh(new THREE.PlaneGeometry(3.2, 3.2).rotateX(-Math.PI / 2), new THREE.MeshBasicMaterial({ map: blobTex, transparent: true, depthWrite: false })); blob.position.y = 0.03; f.add(blob);
-  f.userData = { koerper, kopfG, gm, armL, armR, beinL, beinR, skala: sk, haut };
+  f.userData = { koerper, kopfG, gm, armL, armR, beinL, beinR, skala: sk, haut, rund };
   f.scale.setScalar(0.9 * sk); scene.add(f); FIGUREN.push(f); return f; };
 
 export const pose = (f, o = {}) => {
@@ -93,6 +101,6 @@ export const pose = (f, o = {}) => {
   u.koerper.rotation.set(neig + 0.06 * lauf + 0.22 * renn, s * 0.1 * L, 0);
   u.kopfG.rotation.set(kopfNeig - 0.12 * renn, kopfDreh - s * 0.07 * L, 0);
   f.rotation.order = "YXZ"; f.rotation.x = liegen ? -Math.PI / 2 * liegen : 0;
-  const tex = gesicht(ges, u.haut); if (u.gm.map !== tex) { u.gm.map = tex; u.gm.needsUpdate = true; } };
+  const tex = gesicht(ges, u.haut, u.rund); if (u.gm.map !== tex) { u.gm.map = tex; u.gm.needsUpdate = true; } };
 export const handPos = (f, rechts = true, y = -1.9, z = 0.2) => { f.updateMatrixWorld(true); const p = new THREE.Vector3(0, y, z); (rechts ? f.userData.armR : f.userData.armL).localToWorld(p); return p; };
 export const kopfPos = (f, y = 0.62) => { f.updateMatrixWorld(true); const p = new THREE.Vector3(0, y, 0); f.userData.kopfG.localToWorld(p); return p; };
