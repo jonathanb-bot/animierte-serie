@@ -24,7 +24,7 @@ const von = Number(process.env.VON || 0), bis = process.env.BIS ? Number(process
     if (name0 && process.env.WEITER && fs.existsSync(name0)) { i++; continue; }   // WEITER=1: schon fertige Bilder überspringen
     await page.evaluate(t => window.renderAt(t), t);
     const name = nurBilder ? `bilder/${String(i).padStart(3, "0")}_${t.toFixed(2)}.jpg` : `${ordner}/${String(von + i).padStart(5, "0")}.jpg`;
-    await page.screenshot({ path: name, type: "jpeg", quality: 93 }); i++;
+    await page.screenshot({ path: name, type: "jpeg", quality: 93, timeout: 180000 }); i++;
     if (i % 60 === 0) console.log(`${i}/${zeiten.length} Bilder, ${((Date.now() - t0) / 1000).toFixed(0)} s`);
   }
   console.log(`fertig ${i} Bilder in ${((Date.now() - t0) / 1000).toFixed(0)} s`);
