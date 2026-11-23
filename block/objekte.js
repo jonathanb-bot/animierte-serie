@@ -342,5 +342,28 @@ export const tellerhaus = ({ farbe = "#2a4ab8" } = {}) => { const g = new THREE.
   an(g, new THREE.Mesh(new THREE.SphereGeometry(9, 24, 12, 0, Math.PI * 2, 0, Math.PI / 2), new THREE.MeshPhysicalMaterial({ color: "#cfe8ff", roughness: 0.05, transparent: true, opacity: 0.35 })), 0, 64.4, 0);
   for (let i = 0; i < 6; i++) { const a = i / 6 * Math.PI * 2; an(g, kugel(0.9, leucht(0.6, 2.6, 2.4), 10), Math.cos(a) * 12, 60.2, Math.sin(a) * 12); } return g; };
 
+// ---------- Schule, Turnhalle, Krankenhaus (Vergleich 24.11.: „erstes Wort = Superkraft“) ----------
+export const spind = ({ farbe = "#2ab08a", n = 1 } = {}) => { const g = new THREE.Group(), m = mat(farbe, 0.45, 0.3), d = mat(new THREE.Color(farbe).multiplyScalar(0.8), 0.45, 0.3);
+  for (let i = 0; i < n; i++) { const x = i * 1.62; an(g, bx(1.6, 6, 1.6, m), x, 3, 0); an(g, bx(1.45, 5.7, 0.06, d), x, 3, 0.81); for (let k = 0; k < 4; k++) an(g, bx(0.9, 0.08, 0.04, mat("#1a3a30", 0.6)), x, 5.3 - k * 0.18, 0.85); an(g, bx(0.12, 0.5, 0.08, metall("#c8ccd4")), x + 0.5, 3, 0.86); }
+  return g; };
+export const tribuene = ({ breite = 24, reihen = 5, farben = ["#2a3a6a", "#c8c8d0"] } = {}) => { const g = new THREE.Group(); for (let i = 0; i < reihen; i++) { an(g, bx(breite, 0.5, 1.6, mat(farben[i % 2], 0.6)), 0, 0.8 + i * 0.9, -i * 1.6); an(g, bx(breite, 0.8 + i * 0.9, 0.2, mat("#3a3a44", 0.7)), 0, (0.8 + i * 0.9) / 2, -i * 1.6 + 0.7); } return g; };
+export const krankenwagen = ({ groesse = 1.7 } = {}) => { const g = new THREE.Group(), w = plastik("#fbfbfb"), r = plastik("#e02a2a");
+  an(g, rb(2.4, 2.6, 4.4, 0.2, w), 0, 1.75, -0.8); an(g, rb(2.3, 1.8, 1.8, 0.2, w), 0, 1.35, 2.2); an(g, bx(2.42, 0.3, 4.42, r), 0, 1.6, -0.8);
+  for (const sx of [-1, 1]) { an(g, bx(0.05, 0.9, 0.3, r), sx * 1.22, 2.3, -0.8); an(g, bx(0.05, 0.3, 0.9, r), sx * 1.22, 2.3, -0.8); }
+  an(g, bx(2.0, 0.9, 0.05, new THREE.MeshPhysicalMaterial({ color: "#2a3a4a", roughness: 0.05, clearcoat: 1 })), 0, 1.8, 3.11); for (const [x, z] of [[-1, 2.2], [1, 2.2], [-1, -1.8], [1, -1.8]]) { const rd = an(g, zyl(0.45, 0.45, 0.35, mat("#141418"), 18), x, 0.45, z); rd.rotation.z = Math.PI / 2; }
+  for (const sx of [-0.5, 0.5]) an(g, bx(0.4, 0.2, 0.3, sx < 0 ? leucht(2.6, 0.3, 0.2) : leucht(0.3, 0.6, 2.8)), sx, 3.15, -0.8); g.scale.setScalar(groesse); return g; };
+export const krankenbett = ({ decke = "#9ad0e8" } = {}) => { const g = new THREE.Group(), em = metall("#c8ccd4"); an(g, rb(3.4, 0.4, 6.6, 0.1, em), 0, 1.6, 0);
+  an(g, rb(3.2, 0.6, 6.4, 0.25, mat("#f4f6f8", 0.8)), 0, 2.1, 0); an(g, rb(3.0, 0.5, 4.2, 0.25, mat(decke, 0.85)), 0, 2.4, -0.9); an(g, rb(2.2, 0.5, 1.3, 0.25, mat("#ffffff", 0.9)), 0, 2.55, 2.4);
+  for (const z of [-3.2, 3.2]) an(g, bx(3.4, 1.8, 0.15, em), 0, 2.2, z); for (const [x, z] of [[-1.5, -3], [1.5, -3], [-1.5, 3], [1.5, 3]]) an(g, zyl(0.08, 0.08, 1.4, em, 8), x, 0.7, z); return g; };
+// Herzmonitor: Bildschirm mit Herzlinie (userData.zeichne(t) für die laufende Linie)
+export const herzmonitor = () => { const g = new THREE.Group(); an(g, zyl(0.08, 0.08, 4.4, metall(), 8), 0, 2.2, 0); an(g, rb(1.8, 1.3, 0.4, 0.08, plastik("#e8e8ec")), 0, 4.6, 0.2);
+  const c = document.createElement("canvas"); c.width = 256; c.height = 160; const x = c.getContext("2d"); const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace;
+  const sch = an(g, new THREE.Mesh(new THREE.PlaneGeometry(1.5, 1.0), new THREE.MeshBasicMaterial({ map: t, color: new THREE.Color(1.6, 1.6, 1.6) })), 0, 4.6, 0.41);
+  g.userData.zeichne = (zeit = 0) => { x.fillStyle = "#06120c"; x.fillRect(0, 0, 256, 160); x.strokeStyle = "#3aff7a"; x.lineWidth = 4; x.beginPath(); for (let i = 0; i <= 256; i += 4) { const p = ((i / 256) * 2 + zeit * 1.2) % 1; const y = p > 0.45 && p < 0.5 ? 30 : p > 0.5 && p < 0.55 ? 130 : 80; i ? x.lineTo(i, y) : x.moveTo(i, y); } x.stroke(); t.needsUpdate = true; };
+  g.userData.zeichne(0); return g; };
+export const babybett = () => { const g = new THREE.Group(), m = mat("#f8f6f0", 0.6); an(g, bx(4, 0.3, 2.4, m), 0, 1.4, 0); an(g, rb(3.8, 0.4, 2.2, 0.15, mat("#e8f0f8", 0.9)), 0, 1.75, 0);
+  for (const z of [-1.15, 1.15]) for (let i = 0; i <= 12; i++) an(g, zyl(0.05, 0.05, 1.8, m, 6), -1.9 + i * 0.317, 2.2, z); for (const x of [-2, 2]) for (let i = 0; i <= 7; i++) an(g, zyl(0.05, 0.05, 1.8, m, 6), x, 2.2, -1.1 + i * 0.31);
+  for (const z of [-1.15, 1.15]) an(g, bx(4.1, 0.12, 0.12, m), 0, 3.1, z); for (const [x, z] of [[-2, -1.15], [2, -1.15], [-2, 1.15], [2, 1.15]]) an(g, bx(0.15, 3.2, 0.15, m), x, 1.6, z); return g; };
+
 // Liste für Katalog und Vorschau (Name → Bau-Funktion mit Standardwerten)
-export const ALLE = { baum, blumenkuebel, hecke, bank, laterne, ampel, hydrant, muelltonne, briefkasten, schild, zaun, brunnen, laden, haltestelle, fahrrad, bus, hund, katze, vogel, tisch, stuhl, sofa, stehlampe, regal, geschenk, fernseher, riesenTier, haus, schule, sportwagen, lichterkette, lehmhaus, wimpelkette, fackel, krug, palme, pyramide, glocke, thron, krone, sockel, steinwaechter, riesenWaechter, wolke, himmelshaus, bretterbude, muellberg, leiter, pool, glasaufzug, absperrung, goldvilla, goldschluessel, tellerhaus };
+export const ALLE = { baum, blumenkuebel, hecke, bank, laterne, ampel, hydrant, muelltonne, briefkasten, schild, zaun, brunnen, laden, haltestelle, fahrrad, bus, hund, katze, vogel, tisch, stuhl, sofa, stehlampe, regal, geschenk, fernseher, riesenTier, haus, schule, sportwagen, lichterkette, lehmhaus, wimpelkette, fackel, krug, palme, pyramide, glocke, thron, krone, sockel, steinwaechter, riesenWaechter, wolke, himmelshaus, bretterbude, muellberg, leiter, pool, glasaufzug, absperrung, goldvilla, goldschluessel, tellerhaus, spind, tribuene, krankenwagen, krankenbett, herzmonitor, babybett };

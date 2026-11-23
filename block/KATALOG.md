@@ -30,13 +30,14 @@ Ziel (Jonathan 23.11.): Jede Folge setzt sich aus fertigen, geprüften Teilen zu
 - Frisuren: kurz, zopf, dutt, strubbel, glatze.
 - Neu (23.11.): `jacke` (offene Jacke über dem Hemd, z. B. Lehrer), `brust` (Zeichen oder Emoji auf der Brust, `brustFarbe`).
 - Neu (23.11.): **Gesicht auf der runden Kopfform**: Augen, Mund, Brauen und Wangen liegen direkt auf dem gerundeten Kopf, ohne eckige Gesichtsfläche (Standard; alte Darstellung mit `flachesGesicht: true`). Prüfbilder: `gesicht-seite`, `gesicht-schraeg`.
+- Neu (24.11.): **`baby: true`** (großer Kopf; mit `skala: 0.45`).
 - Neu (24.11.): **`zylinder`** (Zylinderhut, `zylinderBand`), **`goldkette`** (für reiche Figuren).
 - Neu (24.11.): **`kragen`** (breiter Halskragen mit Goldpunkten; `true` oder Farbe), **`krone`** (goldene Krone mit Steinen).
 - Neu (24.11.): **`propeller`** (Propellermütze; `true` oder 4 Farben; drehen mit `f.userData.propeller.rotation.y = t * 12`), **`sonnenbrille`**, **`muster: {hemd, hose}`** mit `streifen`, `karo` oder `punkte` (z. B. Schlafanzug).
 - Neu (23.11.): **`struktur: true`** gibt Kleidung ein Strickmuster und Haaren Strähnen. Für alle neuen Folgen benutzen; ohne die Option bleibt das alte glatte Aussehen (Folge 1).
 
 `pose(f, {lauf, renn, phase, sitz, liegen, armL, armR, armLz, armRz, kopfNeig, kopfDreh, ges, huepf, atmen, neig})`
-- Gesichter: froh, lachen, reden, schreien, angst, idee, ernst, schlaf, **staunen** (O-Mund, hohe Brauen), **traurig**.
+- Gesichter: froh, lachen, reden, schreien, angst, idee, ernst, schlaf, **staunen** (O-Mund, hohe Brauen), **traurig**, **weinen** (Tränen), **schwitzen** (Schweißtropfen, Zickzack-Mund), **kneifen** (>_<), **muede** (halb geschlossene Augen, Augenringe).
 - `mund(t)` gibt abwechselnd reden und froh zurück.
 - `handPos(f, rechts, y, z)` und `kopfPos(f)`.
 
@@ -91,6 +92,7 @@ Jede Funktion baut ein Objekt (`THREE.Group`, noch nicht in der Szene): `const b
 | Wüste und Tempel (24.11.) | `lehmhaus({farbe, band})`, `wimpelkette({laenge, durchhang})`, `fackel({hoehe})` (`userData.flamme` sanft wiegen, nie flackern), `krug`, `palme({hoehe})`, `pyramide({groesse})`, `glocke`, `thron`, `krone`, `sockel`, `steinwaechter({ohren})` |
 | Riesen-Wächter (24.11.) | `riesenWaechter({stein, gold, augen, groesse})`: schlankes Steinwesen, etwa 22 m groß, mit Goldbändern, Kopfkamm, leuchtenden Augen und Stab (`userData.kopf`). Eigenes Wesen, keine Gottheit |
 | Reich, arm, Himmel (24.11.) | `wolke({groesse})` (3D-Wolke aus Kugeln), `himmelshaus({hoehe})` (Glasturm mit Villa, Pool und Palmen oben, `userData.oben`), `bretterbude`, `muellberg`, `leiter` (eine Sprosse fehlt), `pool`, `glasaufzug` (`userData.kabine`), `absperrung` (rote Kordel), `goldvilla` (Diamantfenster, Kuppel), `goldschluessel`, `tellerhaus` (Turmspitze im All) |
+| Schule, Sport, Krankenhaus (24.11.) | `spind({farbe, n})` (Reihe), `tribuene({breite, reihen})`, `krankenwagen`, `krankenbett`, `herzmonitor` (`userData.zeichne(t)` lässt die Herzlinie laufen), `babybett` |
 | Gebäude und Autos (24.11.) | `haus({wand, dach, tuer, breite, tiefe, stock, licht})` (Einfamilienhaus mit Satteldach), `schule({name, banner})` (Backstein, Säulen-Eingang, Schild), `sportwagen({farbe})`; `laterne({punktlicht: false})` ohne eigene Lichtquelle für viele Laternen |
 
 Fertige Kulissen (`alltag.js`, 24.11.):
@@ -102,6 +104,9 @@ Fertige Kulissen (`alltag.js`, 24.11.):
 - **`THRONSAAL`** bei (1800, 0, −1400): Säulenhalle mit goldenem Licht (`raumlicht(THRONSAAL, 70)`), leuchtenden Wandzeichen (`wandLicht(0…1)`), Reihen knieender Steinwächter (`THRONSAAL.waechter`), Thron, Krone auf Sockel (`THRONSAAL.krone`), Banner und Fackeln (`flammen(t)`).
 - **`HIMMELSSTADT`** bei (0, 0, −2000): Armenviertel am Boden (Bretterbuden, Müllberge, Leiter zum hohen Gehweg), ringsum Glastürme mit Villen bis über die Wolken, 3D-Wolkendecke (y ≈ 100–170). Am besten mit Bilderbuch-Tag (`uTag` und `uWolken`).
 - **`WELTALL`** bei (2000, 0, 600): Sternenkugel, Erde unten, Mond, drei Turmspitzen mit Teller-Häusern. `WELTALL.an(true)` schaltet das Sonnenlicht dort an.
+- **`SCHULFLUR`** bei (−600, 0, 1800): langer Gang mit grünen Spinden links und rechts, Tür am Ende.
+- **`TURNHALLE`** bei (600, 0, −1800): Hallenboden mit Linien und Mittelkreis, Tribüne, Basketballkörbe.
+- **`KRANKENHAUS`** bei (−600, 0, −1800): Zimmer mit Bett (`KRANKENHAUS.bett`), Herzmonitor (`KRANKENHAUS.monitor`), Fenster mit Vorhang, Wartestühle.
 - `schreibe()` verkleinert lange Texte automatisch, damit sie in die Fläche passen.
 
 Fertige Straßenzüge (`alltag.js`): **`einkaufsstrasse({x: 24, z0: 70, z1: 330})`** setzt an alle Häuser einer Nord-Süd-Straße Ladenfronten mit Markisen (Bäckerei, Eis, Blumen …) und Gehweg-Deko (Bäume, Bänke, Hydranten, Briefkästen). Die Straße ist zuerst unsichtbar, `.visible = true` pro Einstellung setzen.

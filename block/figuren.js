@@ -21,8 +21,15 @@ export const gesicht = (art, haut, rund = false) => { const key = art + haut + (
   else if (art === "ernst") { brauen(8, 82); augen(16); x.lineWidth = 8; x.beginPath(); x.moveTo(104, 168); x.lineTo(152, 168); x.stroke(); }
   else if (art === "staunen") { brauen(9, 62); for (const ex of [88, 168]) { x.fillStyle = "#fff"; x.beginPath(); x.ellipse(ex, 110, 19, 23, 0, 0, 7); x.fill(); x.fillStyle = ink; x.beginPath(); x.arc(ex, 112, 11, 0, 7); x.fill(); x.fillStyle = "#fff"; x.beginPath(); x.arc(ex + 4, 107, 4, 0, 7); x.fill(); } x.fillStyle = ink; x.beginPath(); x.ellipse(128, 170, 17, 22, 0, 0, 7); x.fill(); }
   else if (art === "traurig") { x.lineWidth = 9; x.beginPath(); x.moveTo(66, 84); x.lineTo(106, 72); x.moveTo(150, 72); x.lineTo(190, 84); x.stroke(); augen(17, 12, 4); x.lineWidth = 8; x.beginPath(); x.arc(128, 188, 26, 1.2 * Math.PI, 1.8 * Math.PI); x.stroke(); }
+  else if (art === "weinen") { x.lineWidth = 9; x.beginPath(); x.moveTo(66, 82); x.lineTo(106, 70); x.moveTo(150, 70); x.lineTo(190, 82); x.stroke(); augen(17, 12, 4); x.lineWidth = 8; x.beginPath(); x.arc(128, 190, 24, 1.15 * Math.PI, 1.85 * Math.PI); x.stroke();
+    x.fillStyle = "#5ab8f0"; for (const ex of [74, 182]) { x.beginPath(); x.moveTo(ex, 128); x.quadraticCurveTo(ex - 12, 156, ex, 166); x.quadraticCurveTo(ex + 12, 156, ex, 128); x.fill(); } x.fillStyle = ink; }
+  else if (art === "schwitzen") { brauen(6, 76); augen(17, 12, 2); x.lineWidth = 7; x.beginPath(); x.moveTo(98, 172); for (let i = 0; i <= 6; i++) x.lineTo(98 + i * 10, 172 + (i % 2 ? -7 : 7)); x.stroke();
+    x.fillStyle = "#7ac8f8"; x.beginPath(); x.moveTo(204, 40); x.quadraticCurveTo(190, 70, 204, 80); x.quadraticCurveTo(218, 70, 204, 40); x.fill(); x.fillStyle = ink; }
+  else if (art === "kneifen") { x.lineWidth = 9; for (const [ex, d] of [[88, 1], [168, -1]]) { x.beginPath(); x.moveTo(ex - 18 * d, 96); x.lineTo(ex + 14 * d, 110); x.lineTo(ex - 18 * d, 124); x.stroke(); } brauen(8, 76);
+    x.beginPath(); x.ellipse(128, 172, 26, 14, 0, 0, 7); x.fill(); x.fillStyle = "#fff"; x.fillRect(104, 166, 48, 8); x.fillStyle = ink; }
+  else if (art === "muede") { brauen(-2, 80); x.lineWidth = 8; for (const ex of [88, 168]) { x.beginPath(); x.moveTo(ex - 15, 112); x.lineTo(ex + 15, 112); x.stroke(); x.beginPath(); x.arc(ex, 112, 12, 0.1 * Math.PI, 0.9 * Math.PI); x.fill(); } x.fillStyle = "rgba(90,70,110,0.25)"; for (const ex of [88, 168]) { x.beginPath(); x.ellipse(ex, 132, 16, 6, 0, 0, 7); x.fill(); } x.fillStyle = ink; x.lineWidth = 7; x.beginPath(); x.moveTo(114, 172); x.lineTo(142, 172); x.stroke(); }
   else if (art === "schlaf") { x.lineWidth = 8; for (const ex of [88, 168]) { x.beginPath(); x.arc(ex, 108, 14, 0.1 * Math.PI, 0.9 * Math.PI); x.stroke(); } x.beginPath(); x.arc(128, 156, 18, 0.2 * Math.PI, 0.8 * Math.PI); x.stroke(); }
-  if (art !== "ernst" && art !== "angst" && art !== "schreien" && art !== "traurig") { x.fillStyle = "rgba(240,90,90,0.22)"; for (const ex of [58, 198]) { x.beginPath(); x.ellipse(ex, 150, 17, 10, 0, 0, 7); x.fill(); } }
+  if (!["ernst", "angst", "schreien", "traurig", "weinen", "schwitzen", "kneifen", "muede"].includes(art)) { x.fillStyle = "rgba(240,90,90,0.22)"; for (const ex of [58, 198]) { x.beginPath(); x.ellipse(ex, 150, 17, 10, 0, 0, 7); x.fill(); } }
   const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 4; return GES[key] = t; };
 // Gesicht auf der gerundeten Kopfform (Jonathan 23.11.: „kein Viereck auf einem runden Quader“): die Vorderseite der Kopf-Geometrie,
 // minimal größer, mit ebener Projektion der Gesichtstextur (durchsichtig, nur Augen/Mund/Brauen/Wangen). Alte Darstellung: figur({ flachesGesicht: true }).
@@ -62,7 +69,7 @@ export const FIGUREN = [];
 // o: haut, hemd, hose, haare, frisur ('kurz','zopf','dutt','strubbel','glatze'), helm, weste, muetze, brille, kapuze, schuhe, skala,
 //    jacke (offene Jacke über dem Hemd), brust (Zeichen/Emoji auf der Brust, brustFarbe), struktur (Stoff- und Haarstruktur, für neue Folgen),
 //    propeller (Propellermütze; true oder 4 Farben; drehen: f.userData.propeller.rotation.y = t * 12), sonnenbrille, muster { hemd, hose: streifen|karo|punkte },
-//    kragen (breiter Halskragen; true oder Farbe), krone (goldene Krone), zylinder (Zylinderhut; true oder Farbe, zylinderBand), goldkette
+//    kragen (breiter Halskragen; true oder Farbe), krone (goldene Krone), zylinder (Zylinderhut; true oder Farbe, zylinderBand), goldkette, baby (großer Kopf; mit skala ≈ 0.45)
 export const figur = (o) => {
   const sk = o.skala ?? 1, haut = o.haut ?? "#e8b98a";
   const f = new THREE.Group(); const hautM = plastik(haut);
@@ -115,6 +122,7 @@ export const figur = (o) => {
   const hoseM = plastik(o.hose); if (S) strukturieren(hoseM); mustern(hoseM, o.muster?.hose); const beinL = glied(-0.5, 1.95, hoseM), beinR = glied(0.5, 1.95, hoseM); f.add(beinL, beinR);
   const blob = new THREE.Mesh(new THREE.PlaneGeometry(3.2, 3.2).rotateX(-Math.PI / 2), new THREE.MeshBasicMaterial({ map: blobTex, transparent: true, depthWrite: false })); blob.position.y = 0.03; f.add(blob);
   f.userData = { koerper, kopfG, gm, armL, armR, beinL, beinR, skala: sk, haut, rund, propeller: f.userData_propeller ?? null }; delete f.userData_propeller;
+  if (o.baby) { kopfG.scale.setScalar(1.55); kopfG.position.y = 3.85; }   // Baby: großer Kopf (Vergleich 24.11.)
   f.scale.setScalar(0.9 * sk); scene.add(f); FIGUREN.push(f); return f; };
 
 export const pose = (f, o = {}) => {

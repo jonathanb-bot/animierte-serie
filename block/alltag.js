@@ -364,3 +364,23 @@ export const WELTALL = (() => {
   A.tuerme = []; for (const [x, z, s2, f] of [[0, 0, 1, "#2a4ab8"], [-60, -50, 0.8, "#c83a3a"], [55, -70, 0.9, "#2ab08a"]]) { const t = O.tellerhaus({ farbe: f }); t.position.set(x, -40, z); t.scale.setScalar(s2); g.add(t); A.tuerme.push(t); }
   A.an = (an = true) => { A.licht.intensity = an ? 2.2 : 0; };
   A.pos = (x, y, z) => new THREE.Vector3(g.position.x + x, y, g.position.z + z); return A; })();
+
+// ---------- Schulflur, Turnhalle, Krankenhaus (Vergleich 24.11.) ----------
+// SCHULFLUR bei (-600, 0, 1800): langer Gang (entlang z) mit Spinden links und rechts, Fenstern, Türen.
+export const SCHULFLUR = (() => { const R = raum("schulflur", -600, 1800, 12, 60, 7.5, { wandU: "#5ab0c8", wandO: "#f4ecd8", boden: new THREE.MeshStandardMaterial({ map: kacheln("#e8ecef", "#cfd6db", 8), roughness: 0.45 }) });
+  for (const sx of [-1, 1]) { const sp = O.spind({ n: 30, farbe: "#2ab08a" }); sp.position.set(sx * 5.1, 0, -24); sp.rotation.y = -sx * Math.PI / 2; R.g.add(sp); }
+  for (let i = 0; i < 3; i++) { const t = bx(2.4, 5, 0.2, mat("#a8763a", 0.6)); t.position.set(0, 2.5, -29.8); if (i) t.visible = false; R.g.add(t); }
+  for (let i = 0; i < 5; i++) fenster(R, 0, 5.4, 29.8, Math.PI, 3, 2);
+  R.pos = (x, y, z) => new THREE.Vector3(R.g.position.x + x, y, R.g.position.z + z); return R; })();
+// TURNHALLE bei (600, 0, -1800): Hallenboden mit Linien, Mittelkreis, Tribüne, Körbe, Banner.
+export const TURNHALLE = (() => { const R = raum("turnhalle", 600, -1800, 40, 56, 14, { wandU: "#c83a3a", wandO: "#f4ecdc", boden: new THREE.MeshStandardMaterial({ roughness: 0.35, map: canvasTex(512, 720, (x, w, h) => { x.fillStyle = "#e0a860"; x.fillRect(0, 0, w, h); for (let i = 0; i < 40; i++) { x.fillStyle = i % 2 ? "rgba(0,0,0,0.04)" : "rgba(255,255,255,0.05)"; x.fillRect(i * w / 40, 0, w / 40, h); }
+    x.strokeStyle = "#ffffff"; x.lineWidth = 6; x.strokeRect(30, 30, w - 60, h - 60); x.beginPath(); x.moveTo(30, h / 2); x.lineTo(w - 30, h / 2); x.stroke(); x.beginPath(); x.arc(w / 2, h / 2, 70, 0, 7); x.stroke(); x.strokeStyle = "#2a5ad8"; x.beginPath(); x.arc(w / 2, 30, 120, 0, Math.PI); x.stroke(); x.beginPath(); x.arc(w / 2, h - 30, 120, Math.PI, 2 * Math.PI); x.stroke(); }) }) });
+  const tr = O.tribuene({ breite: 34, reihen: 6 }); tr.position.set(0, 0, -19); R.g.add(tr);
+  for (const z of [-26, 26]) { const k = new THREE.Group(); k.position.set(0, 0, z); R.g.add(k); const brett = bx(4, 2.6, 0.15, mat("#ffffff", 0.4)); brett.position.y = 9.5; k.add(brett); const ring = new THREE.Mesh(new THREE.TorusGeometry(0.6, 0.06, 8, 20), mat("#e8602a", 0.5)); ring.rotation.x = Math.PI / 2; ring.position.set(0, 8.4, -Math.sign(z) * 0.7); k.add(ring); }
+  R.pos = (x, y, z) => new THREE.Vector3(R.g.position.x + x, y, R.g.position.z + z); return R; })();
+// KRANKENHAUS bei (-600, 0, -1800): Zimmer mit Bett, Herzmonitor, Fenster; davor Flur mit Wartestühlen. KRANKENHAUS.monitor.userData.zeichne(t)
+export const KRANKENHAUS = (() => { const R = raum("krankenhaus", -600, -1800, 16, 14, 7, { wandU: "#a8d8d0", wandO: "#f2f6f6", boden: new THREE.MeshStandardMaterial({ map: kacheln("#eef2f2", "#dfe8e8", 8), roughness: 0.4 }) });
+  const bett = O.krankenbett(); bett.position.set(-1, 0, -2); R.g.add(bett); R.bett = bett; const mon = O.herzmonitor(); mon.position.set(2.8, 0, -4.5); mon.rotation.y = -0.4; R.g.add(mon); R.monitor = mon;
+  fenster(R, -7.82, 4, -2, Math.PI / 2, 3, 2.6); const vh = bx(0.1, 6.5, 3.5, mat("#f0e8d8", 0.9)); vh.position.set(-7.7, 3.3, -5); R.g.add(vh);
+  for (let i = 0; i < 4; i++) { const st = O.stuhl({ farbe: "#3a8ae8" }); st.position.set(5.5, 0, 1 + i * 1.6); st.rotation.y = -Math.PI / 2; st.scale.setScalar(0.85); R.g.add(st); }
+  R.pos = (x, y, z) => new THREE.Vector3(R.g.position.x + x, y, R.g.position.z + z); return R; })();

@@ -41,6 +41,22 @@ Nur die Mittel übernehmen, nie Inhalte (keine Lava-Stunde, keine Mammuts, keine
 - **Doppelte Wendung (24.11.):** Der Plan scheint aufzugehen, dann kommt die Wendung („alle hatten denselben Plan“), und danach dreht sich alles um (der Zähler läuft rückwärts). Am Ende steht ein kurzer, witziger Satz einer bekannten Person (Opa, Oma).
 - **Helle Szenen als Kontrast:** Tag (`U.uTag = 1`, dazu `U.uWolken = 1` für blauen Himmel mit Wolken und bunte Häuser), bunte Innenräume und Feier-Effekte (Konfetti, Ballons, Regenbogen) sind erlaubt. Die Stadt bleibt aber meist nachts, das ist unser Wiedererkennungszeichen.
 
+## Story-Richtung „Herz“ (Jonathan 24.11.: „Story sollte auch mal in die Richtung gehen danach“)
+
+Vorbild: `block/vergleiche/2026-11-24-erstes-wort.md`. Nach dem aktuellen Spannungsbogen (oder wenn die Abstimmung es zulässt) kommen auch **emotionale Geschichten mit Herz** dran, nicht nur Grusel und Action:
+- **Aufbau:**
+  1. Die Regel der Stadt.
+  2. Eine Figur wird von allen missverstanden. Sie gilt als gierig, komisch oder gefährlich, und „ich“ mache mit.
+  3. Kleine Hinweise, dass etwas nicht stimmt (müde, Husten, kaputte Schuhe).
+  4. Eine falsche Beschuldigung, keiner entschuldigt sich.
+  5. Zusammenbruch, „ich“ helfe zum ersten Mal.
+  6. Eine dritte Person (Schwester, Oma) erzählt die Wahrheit: Die Figur hat heimlich ein großes Opfer gebracht.
+  7. Ein letzter Satz, der alles umdreht.
+- **Ich-Erzählung bleibt.** „Ich“ bin derjenige, der falsch lag und es am Ende versteht. So fühlt sich der Zuschauer mitschuldig, und das wirkt stärker.
+- **Bild:** viele Nahaufnahmen von Gesichtern (`traurig`, `weinen`, `kneifen`, `muede`, `schwitzen`), ruhige Kamera, gedämpfte Musik (`traurig`, `stille`), zum Schluss Stille.
+- **Ende:** Auch hier gibt es eine Mitmach-Frage, aber eine leise, zum Beispiel „Was soll ich ihm sagen?“ mit A/B/C.
+- **Grenzen:** nie Blut, nie Gewalt. Krankheit nur andeuten (Husten, Krankenhausbett), kein Tod im Bild.
+
 ## Test ab 24.11. (Jonathan 23.11.: „als Test einfach morgen verwenden“)
 
 Ab Folge 2 kommen die neuen Bibliotheks-Elemente zum Einsatz. Jede Folge nutzt mindestens:
