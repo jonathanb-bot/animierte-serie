@@ -416,3 +416,48 @@ export const blitz = (an = false, von = new THREE.Vector3(), nach = new THREE.Ve
 const RA_N = 30; export const RAUCH = new THREE.InstancedMesh(new THREE.SphereGeometry(1, 12, 8), new THREE.MeshStandardMaterial({ color: "#8a8a92", roughness: 1, transparent: true, opacity: 0.8, depthWrite: false }), RA_N); RAUCH.frustumCulled = false; scene.add(RAUCH);
 const raD = []; { let s = 91; const r = () => { s = (s * 16807) % 2147483647; return s / 2147483647; }; for (let i = 0; i < RA_N; i++) raD.push([r(), (r() - 0.5) * 2, (r() - 0.5) * 2]); }
 export const rauch = (t, an = false, o = {}) => { const { x = 0, y = 2, z = 0, t0 = 0, staerke = 1 } = o; const m = new THREE.Matrix4(); raD.forEach(([ph, dx, dz], i) => { const f = ((t - t0) * 0.5 + ph) % 1; if (!an || t < t0) { m.makeScale(0, 0, 0); } else { const sc = (0.4 + f * 1.6) * staerke; m.makeScale(sc, sc, sc); m.setPosition(x + dx * f * 2, y + f * 7 * staerke, z + dz * f * 2); } RAUCH.setMatrixAt(i, m); }); RAUCH.instanceMatrix.needsUpdate = true; };
+
+// ---------- Buntdorf (Jonathan 23.11.: „als Umgebung ein Dorf mit bunten Häusern wie in den Vorbild-Videos“) ----------
+// Kleinstadt am Tag bei (0, 0, 2800): Hauptstraße entlang z (x = 0), auf beiden Seiten pastellbunte Reihenhäuser (2–4 Stockwerke,
+// Läden mit Markisen), Querstraße bei z = 0, rechts davon ein Platz mit Brunnen (x 14…62, z −24…24, Platz für die Menge),
+// Bäume, Laternen, Bänke, Hydranten, Briefkästen, Bushaltestelle; ringsum eine Skyline aus Pastell-Glastürmen.
+// BUNTDORF.pos(x, y, z) → Weltkoordinaten. Menge auf den Platz: Z_.menge = { …, dx: BUNTDORF.platz.x, dz: BUNTDORF.platz.z }.
+// Am besten mit Bilderbuch-Tag (uTag = 1, uWolken = 1); abends zusätzlich uAbend.
+export const BUNTDORF = (() => {
+  const g = new THREE.Group(); g.position.set(0, 0, 2800); scene.add(g); const D = { g }; let s = 33; const r = () => { s = (s * 16807) % 2147483647; return s / 2147483647; };
+  const gras = new THREE.Mesh(new THREE.PlaneGeometry(1400, 1400).rotateX(-Math.PI / 2), new THREE.MeshStandardMaterial({ map: graszTex, roughness: 0.95 })); gras.position.y = 0.02; g.add(gras);
+  const strM = new THREE.MeshStandardMaterial({ map: strasseTex, roughness: 0.85 });
+  const str = new THREE.Mesh(new THREE.PlaneGeometry(12, 340).rotateX(-Math.PI / 2), strM); str.position.y = 0.05; g.add(str);
+  const quer = new THREE.Mesh(new THREE.PlaneGeometry(12, 120).rotateX(-Math.PI / 2).rotateY(Math.PI / 2), strM); quer.position.set(-50, 0.055, 0); g.add(quer);
+  const gwM = mat("#e2ddd4", 0.85), pflM = new THREE.MeshStandardMaterial({ map: kacheln("#ece6da", "#ddd5c6", 16), roughness: 0.8 });
+  for (const sx of [-1, 1]) { const gw = bx(4, 0.3, 340, gwM); gw.position.set(sx * 8, 0.15, 0); g.add(gw); const bd = bx(0.25, 0.32, 340, mat("#c8c2b8", 0.7)); bd.position.set(sx * 6.1, 0.16, 0); g.add(bd); }
+  const platz = bx(48, 0.28, 48, pflM); platz.position.set(38, 0.14, 0); g.add(platz); D.platz = new THREE.Vector3(38, 0, 2800); D.platz.x = g.position.x + 38;
+  const WAND = ["#9ad8c8", "#a8cff0", "#f6dc8a", "#f4b8c4", "#c8b8ec", "#b8e4a8", "#f8c89a", "#9cc8e8", "#f2e6c8", "#e8a8a8"];
+  const TUER = ["#2a7a4a", "#2a5ad8", "#c83a3a", "#6a3a8a", "#e8a020", "#3a3a48"];
+  const LAEDEN = [["BÄCKEREI", ["#ffffff", "#e84a6a"]], ["EIS", ["#ffffff", "#3aa8e8"]], ["BLUMEN", ["#ffffff", "#4ab84a"]], ["KIOSK", ["#ffd23a", "#e84a3a"]], ["PIZZA", ["#ffffff", "#e8603a"]], ["BÜCHER", ["#ffffff", "#8a5ae8"]], ["CAFÉ", ["#ffffff", "#8a5a3a"]], ["SPIELE", ["#ffffff", "#2ab0a0"]]];
+  let k = 0; const reihe = (sx, z0, z1) => { let z = z0; while (z < z1 - 8) { const b = Math.min(10 + Math.floor(r() * 5), z1 - z); const st = 2 + Math.floor(r() * 2.6); const ld = r() < 0.4 ? LAEDEN[k % LAEDEN.length] : null;
+      const h = O.reihenhaus({ wand: WAND[(k * 3 + (sx > 0 ? 1 : 0)) % WAND.length], stock: Math.min(4, st), breite: b, tiefe: 12, laden: ld ? ld[0] : null, markise: ld ? ld[1] : undefined, tuer: TUER[k % TUER.length], dach: r() < 0.3 ? "giebel" : "flach", saat: k + 5 });
+      h.position.set(sx * 16.2, 0.05, z + b / 2); h.rotation.y = -sx * Math.PI / 2; g.add(h); k++; z += b; } };
+  reihe(-1, -165, -6); reihe(-1, 6, 165); reihe(1, -165, -26); reihe(1, 26, 165);
+  // Häuser rund um den Platz (Rückseite und Seiten)
+  for (let i = 0; i < 4; i++) { const h = O.reihenhaus({ wand: WAND[(i * 2 + 3) % WAND.length], stock: 3 + (i % 2), breite: 12, laden: i === 1 ? "CAFÉ" : i === 2 ? "EIS" : null, markise: i === 1 ? ["#ffffff", "#8a5a3a"] : ["#ffffff", "#3aa8e8"], tuer: TUER[(i + 2) % TUER.length], saat: 40 + i });
+    h.position.set(14 + 6 + i * 12, 0.05, -30.2); g.add(h);
+    const h2 = O.reihenhaus({ wand: WAND[(i * 2 + 6) % WAND.length], stock: 2 + (i % 3), breite: 12, laden: i === 0 ? "BLUMEN" : null, markise: ["#ffffff", "#4ab84a"], saat: 50 + i }); h2.position.set(14 + 6 + i * 12, 0.05, 30.2); h2.rotation.y = Math.PI; g.add(h2); }
+  for (let i = 0; i < 4; i++) { const h = O.reihenhaus({ wand: WAND[(i + 1) % WAND.length], stock: 3, breite: 12, saat: 60 + i }); h.position.set(68.2, 0.05, -18 + i * 12); h.rotation.y = -Math.PI / 2; g.add(h); }
+  const br = O.brunnen(); br.position.set(38, 0.28, 0); br.scale.setScalar(1.3); g.add(br); D.brunnen = br;
+  for (const [x, z] of [[20, -18], [56, -18], [20, 18], [56, 18]]) { const b = O.baum({ art: "rund", groesse: 0.85, saat: x + z }); b.position.set(x, 0.28, z); g.add(b); }
+  for (const [x, z, ry] of [[30, -14, 0], [46, -14, 0], [30, 14, Math.PI], [46, 14, Math.PI]]) { const b = O.bank(); b.position.set(x, 0.28, z); b.rotation.y = ry; b.scale.setScalar(0.75); g.add(b); }
+  // Straßen-Deko
+  for (let z = -156; z <= 156; z += 18) for (const sx of [-1, 1]) { if (Math.abs(z) < 14) continue; if (sx > 0 && Math.abs(z) < 30) continue;
+    const b = O.baum({ art: r() < 0.8 ? "rund" : "kegel", groesse: 0.55 + r() * 0.2, saat: k++ }); b.position.set(sx * 8.6, 0.3, z); g.add(b);
+    if ((z / 18) % 2 === 0) { const l = O.laterne({ hoehe: 8, an: false, punktlicht: false }); l.position.set(sx * 6.9, 0.3, z + 9); g.add(l); }
+    const w = r(); const o = w < 0.25 ? O.bank() : w < 0.4 ? O.hydrant() : w < 0.55 ? O.briefkasten({ farbe: ["#f2c21a", "#2a5ad8"][k % 2] }) : w < 0.7 ? O.blumenkuebel({ farbe: "#c8a060" }) : w < 0.78 ? O.fahrrad() : null;
+    if (o) { o.scale.setScalar(0.75); o.position.set(sx * 8.4, 0.3, z + 4.5); o.rotation.y = -sx * Math.PI / 2; g.add(o); } }
+  // geparkte Autos am Straßenrand
+  [[-1, -128, "#e84a4a"], [1, -96, "#3a8ae8"], [-1, -70, "#f2c21a"], [1, 52, "#2ab08a"], [-1, 78, "#f4f4f4"], [1, 104, "#e8803a"], [-1, 130, "#8a5ae8"]].forEach(([sx, z, f], i) => {
+    const a = O.sportwagen({ farbe: f, groesse: 1.25 }); a.position.set(sx * 4.4, 0.05, z); a.rotation.y = sx > 0 ? Math.PI : 0; g.add(a); });
+  const hs = O.haltestelle({ farbe: "#2a8ae8" }); hs.position.set(-8.6, 0.3, 40); hs.rotation.y = Math.PI / 2; g.add(hs);
+  // Skyline aus Pastell-Glastürmen (weit hinten, ringsum)
+  const TF = ["#a8d8f0", "#bfe8e0", "#d8c8f0", "#c8e0f8", "#f0d8e8", "#b0d0f0"];
+  for (let i = 0; i < 46; i++) { const a = i / 46 * Math.PI * 2 + r() * 0.08, rr = 300 + r() * 160; const t = O.glasturm({ breite: 18 + r() * 16, hoehe: 70 + r() * 130, farbe: TF[i % TF.length] }); t.position.set(Math.cos(a) * rr, 0, Math.sin(a) * rr); t.rotation.y = r() * 2; g.add(t); }
+  D.pos = (x, y, z) => new THREE.Vector3(g.position.x + x, y, g.position.z + z); return D; })();

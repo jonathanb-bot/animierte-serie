@@ -404,4 +404,50 @@ export const liegestuhl = ({ farbe = "#3ab0e8" } = {}) => { const g = new THREE.
   const liege = an(g, bx(1.6, 0.12, 4, st), 0, 1.0, 0.3); const lehne = an(g, bx(1.6, 0.12, 2, st), 0, 1.75, -2.2); lehne.rotation.x = 0.85; for (const [x, z] of [[-0.75, -1.4], [0.75, -1.4], [-0.75, 2.1], [0.75, 2.1]]) an(g, bx(0.12, 1.0, 0.12, fm), x, 0.5, z); return g; };
 
 // Liste für Katalog und Vorschau (Name → Bau-Funktion mit Standardwerten)
-export const ALLE = { baum, blumenkuebel, hecke, bank, laterne, ampel, hydrant, muelltonne, briefkasten, schild, zaun, brunnen, laden, haltestelle, fahrrad, bus, hund, katze, vogel, tisch, stuhl, sofa, stehlampe, regal, geschenk, fernseher, riesenTier, haus, schule, sportwagen, lichterkette, lehmhaus, wimpelkette, fackel, krug, palme, pyramide, glocke, thron, krone, sockel, steinwaechter, riesenWaechter, wolke, himmelshaus, bretterbude, muellberg, leiter, pool, glasaufzug, absperrung, goldvilla, goldschluessel, tellerhaus, spind, tribuene, krankenwagen, krankenbett, herzmonitor, babybett, achterbahn, torte, kinderwagen, gluehbirnenladen, limousine, liegestuhl };
+// ---------- Buntes Reihenhaus (Vergleich 24.11.: Kleinstadt der Vorbild-Videos) ----------
+// Pastellfarbene Stadthäuser mit 2–4 Stockwerken. Fassade als gezeichnete Textur (Fenster mit weißem Rahmen, Glanz, Fensterbank),
+// dazu echtes Gesims, Sockel, Tür mit Vordach und auf Wunsch ein Laden mit gestreifter Markise. Front nach +z. Wenig Meshes → schnell.
+const FASSADE = new Map();
+const fassadeTex = (wand, stock, breite, laden, saat) => { const k = [wand, stock, breite, laden, saat].join(); if (FASSADE.has(k)) return FASSADE.get(k);
+  const H = stock * 4.4, px = 40, w = Math.round(breite * px), h = Math.round(H * px), r = zufall(saat + 7);
+  const t = tex(w, h, (x) => { x.fillStyle = wand; x.fillRect(0, 0, w, h);
+    const hell = (a) => { x.globalAlpha = a; x.fillStyle = "#ffffff"; }; hell(0.10); for (let st = 1; st < stock; st++) x.fillRect(0, h - st * 4.4 * px - 6, w, 10); x.globalAlpha = 1;
+    const n = Math.max(2, Math.round(breite / 4)), fw = 1.7 * px, fh = 2.3 * px, laeden = !!laden, art = r() < 0.5;
+    for (let st = laeden ? 1 : 0; st < stock; st++) for (let i = 0; i < n; i++) { if (!laeden && st === 0 && i === Math.floor(n / 2)) continue;
+      const cx = (i + 0.5) * w / n, cy = h - (st * 4.4 + 2.5) * px;
+      x.fillStyle = "rgba(0,0,0,0.12)"; x.fillRect(cx - fw / 2 - 6, cy - fh / 2 - 2, fw + 12, fh + 14);
+      const gr = x.createLinearGradient(cx - fw / 2, cy - fh / 2, cx + fw / 2, cy + fh / 2); gr.addColorStop(0, "#cfeaff"); gr.addColorStop(0.5, "#7fb8e8"); gr.addColorStop(1, "#5a90c8");
+      x.fillStyle = "#ffffff"; x.fillRect(cx - fw / 2 - 8, cy - fh / 2 - 8, fw + 16, fh + 16); x.fillStyle = gr; x.fillRect(cx - fw / 2, cy - fh / 2, fw, fh);
+      x.globalAlpha = 0.45; x.fillStyle = "#ffffff"; x.beginPath(); x.moveTo(cx - fw / 2, cy - fh * 0.1); x.lineTo(cx - fw * 0.1, cy - fh / 2); x.lineTo(cx + fw * 0.12, cy - fh / 2); x.lineTo(cx - fw / 2, cy + fh * 0.18); x.fill(); x.globalAlpha = 1;
+      x.fillStyle = "#ffffff"; x.fillRect(cx - 4, cy - fh / 2, 8, fh); x.fillRect(cx - fw / 2, cy - 4, fw, 8);
+      x.fillStyle = "#f4f2ec"; x.fillRect(cx - fw / 2 - 14, cy + fh / 2 + 6, fw + 28, 12);
+      if (art && st > 0) { x.fillStyle = "rgba(0,0,0,0.18)"; x.fillRect(cx - fw / 2 - 30, cy - fh / 2 - 8, 18, fh + 16); x.fillRect(cx + fw / 2 + 12, cy - fh / 2 - 8, 18, fh + 16); } }
+    if (laeden) { const sw = w * 0.62, sh = 2.9 * px, sx = w * 0.06, sy = h - 0.5 * px - sh; x.fillStyle = "#ffffff"; x.fillRect(sx - 8, sy - 8, sw + 16, sh + 16);
+      const gr = x.createLinearGradient(sx, sy, sx + sw, sy + sh); gr.addColorStop(0, "#d8f0ff"); gr.addColorStop(1, "#6aa0d0"); x.fillStyle = gr; x.fillRect(sx, sy, sw, sh);
+      x.fillStyle = "rgba(255,255,255,0.35)"; for (let i = 1; i < 3; i++) x.fillRect(sx + i * sw / 3 - 3, sy, 6, sh);
+      x.fillStyle = "#ffffff"; x.font = `900 ${Math.round(px * 0.9)}px 'Inter Display', Inter, sans-serif`; x.textAlign = "center"; x.textBaseline = "middle"; x.fillText(laden, w / 2, h - 3.95 * px); }
+    x.fillStyle = "rgba(0,0,0,0.10)"; x.fillRect(0, h - 0.45 * px, w, 0.45 * px); });
+  FASSADE.set(k, t); return t; };
+const WANDMAT = new Map(); const wandMat = (c) => { if (!WANDMAT.has(c)) WANDMAT.set(c, mat(c, 0.85)); return WANDMAT.get(c); };
+export const reihenhaus = ({ wand = "#9ad8c8", stock = 3, breite = 12, tiefe = 12, laden = null, markise = ["#ffffff", "#2ab08a"], tuer = "#2a7a4a", dach = "flach", saat = 3 } = {}) => {
+  const g = new THREE.Group(), H = stock * 4.4, wm = wandMat(wand), front = new THREE.MeshStandardMaterial({ map: fassadeTex(wand, stock, breite, laden, saat), roughness: 0.8 });
+  an(g, new THREE.Mesh(new THREE.BoxGeometry(breite, H, tiefe), [wm, wm, wm, wm, front, wm]), 0, H / 2, 0);
+  const weiss = mat("#f6f4ee", 0.6); an(g, bx(breite + 0.5, 0.7, tiefe + 0.5, weiss), 0, H + 0.1, 0); an(g, bx(breite + 0.2, 0.5, 0.5, weiss), 0, 4.4, tiefe / 2 + 0.2);
+  if (dach === "giebel") { const d = new THREE.Shape(); d.moveTo(-breite / 2 - 0.4, 0); d.lineTo(0, breite * 0.32); d.lineTo(breite / 2 + 0.4, 0); d.lineTo(-breite / 2 - 0.4, 0);
+    const dg = new THREE.ExtrudeGeometry(d, { depth: tiefe + 0.8, bevelEnabled: false }); dg.translate(0, 0, -(tiefe + 0.8) / 2); an(g, new THREE.Mesh(dg, mat(["#c8503a", "#3a4a6a", "#6a3a3a"][saat % 3], 0.7)), 0, H + 0.4, 0); }
+  else if (zufall(saat)() < 0.5) an(g, bx(breite * 0.3, 1.6, 0.4, weiss), 0, H + 1.1, tiefe / 2 - 0.2);   // Giebel-Aufsatz
+  an(g, bx(breite, 0.6, 0.3, mat("#d8d2c4", 0.8)), 0, 0.3, tiefe / 2 + 0.1);
+  if (laden) { const tx = breite * 0.37; an(g, bx(2.2, 3.8, 0.3, mat(tuer, 0.6)), tx, 1.9, tiefe / 2 + 0.05);
+    const ms = new THREE.Mesh(new THREE.PlaneGeometry(breite * 0.96, 2.4), new THREE.MeshStandardMaterial({ map: streifenTex(markise[0], markise[1], 10), roughness: 0.8, side: THREE.DoubleSide }));
+    ms.position.set(0, 4.0, tiefe / 2 + 1.0); ms.rotation.x = -Math.PI / 2 + 0.55; g.add(ms);
+    const sb = new THREE.Mesh(new THREE.PlaneGeometry(breite * 0.96, 0.45), new THREE.MeshStandardMaterial({ map: streifenTex(markise[0], markise[1], 10), roughness: 0.8, side: THREE.DoubleSide })); sb.position.set(0, 2.78, tiefe / 2 + 2.05); g.add(sb); }
+  else { an(g, bx(2.2, 3.8, 0.3, mat(tuer, 0.6)), 0, 1.9, tiefe / 2 + 0.05); an(g, kugel(0.14, metall("#e8c040"), 8), 0.7, 1.9, tiefe / 2 + 0.25);
+    an(g, bx(3.2, 0.2, 1.4, weiss), 0, 4.0, tiefe / 2 + 0.7); an(g, bx(3.0, 0.3, 1.6, mat("#d8d2c4")), 0, 0.15, tiefe / 2 + 0.8); }
+  if (stock >= 3 && zufall(saat + 3)() < 0.5) { const bk = an(g, bx(breite * 0.45, 0.25, 1.4, weiss), 0, 2 * 4.4 + 0.3, tiefe / 2 + 0.7); for (let i = 0; i < 7; i++) an(g, bx(0.12, 1.1, 0.12, weiss), -breite * 0.21 + i * breite * 0.07, 2 * 4.4 + 0.95, tiefe / 2 + 1.35); an(g, bx(breite * 0.45, 0.15, 0.15, weiss), 0, 2 * 4.4 + 1.5, tiefe / 2 + 1.35); }
+  return g; };
+// Pastell-Hochhaus für die Skyline hinter der Kleinstadt (Glasbänder)
+const GLAS = tex(64, 256, (x, w, h) => { x.fillStyle = "#bfe2f4"; x.fillRect(0, 0, w, h); for (let i = 0; i < 32; i++) { x.fillStyle = i % 2 ? "#9ccce8" : "#e2f4fc"; x.fillRect(0, i * 8, w, 5); } }, [1, 1]);
+export const glasturm = ({ breite = 16, hoehe = 70, farbe = "#a8d8f0" } = {}) => { const g = new THREE.Group(); const m = new THREE.MeshStandardMaterial({ map: GLAS, color: farbe, roughness: 0.25, metalness: 0.2 });
+  const b = an(g, bx(breite, hoehe, breite, m), 0, hoehe / 2, 0); an(g, bx(breite + 0.6, 1.2, breite + 0.6, mat("#f4f8fa", 0.5)), 0, hoehe + 0.6, 0); return g; };
+
+export const ALLE = { reihenhaus, glasturm, baum, blumenkuebel, hecke, bank, laterne, ampel, hydrant, muelltonne, briefkasten, schild, zaun, brunnen, laden, haltestelle, fahrrad, bus, hund, katze, vogel, tisch, stuhl, sofa, stehlampe, regal, geschenk, fernseher, riesenTier, haus, schule, sportwagen, lichterkette, lehmhaus, wimpelkette, fackel, krug, palme, pyramide, glocke, thron, krone, sockel, steinwaechter, riesenWaechter, wolke, himmelshaus, bretterbude, muellberg, leiter, pool, glasaufzug, absperrung, goldvilla, goldschluessel, tellerhaus, spind, tribuene, krankenwagen, krankenbett, herzmonitor, babybett, achterbahn, torte, kinderwagen, gluehbirnenladen, limousine, liegestuhl };

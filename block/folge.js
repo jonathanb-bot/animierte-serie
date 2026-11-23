@@ -138,6 +138,7 @@ export function start(o = {}) {
       [...wahl.children].forEach((c, i) => { const q = ease((t - an[i]) / 0.25); c.style.opacity = q; c.style.transform = `translateX(${(1 - q) * -80}px) scale(${0.85 + 0.15 * q})`; });
       Wt.grade.uniforms.uVig.value = 0.6;
     } else { fr.style.display = "none"; wahl.style.display = "none"; }
+    Wt.himmel.position.copy(cam.position);   // Himmelskugel folgt der Kamera (weit entfernte Kulissen wie BUNTDORF haben sonst schwarzen Himmel)
     composer.render();
     return true;
   };

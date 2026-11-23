@@ -21,7 +21,7 @@ const aerztin = Fg.figur({ haut: "#d8a070", hemd: "#f4f8f8", jacke: "#ffffff", h
 
 // Kulissen-Teile für diese Folge (Objekte aus der Bibliothek)
 const VP = Al.VORSTADT.pos;
-const stuhl2 = O.liegestuhl({ farbe: "#e85a7a" }); stuhl2.position.set(10, 0, 34); stuhl2.rotation.y = -Math.PI / 2; Wt.scene.add(stuhl2);
+const stuhl2 = O.liegestuhl({ farbe: "#e85a7a" }); stuhl2.position.copy(Al.BUNTDORF.pos(30, 0.28, 8)); stuhl2.rotation.y = -Math.PI / 2; Wt.scene.add(stuhl2);
 const villa = O.goldvilla({ breite: 40 }); villa.position.copy(VP(0, 0.04, 214)); villa.rotation.y = Math.PI; Wt.scene.add(villa);
 const pool = O.pool(); pool.position.copy(VP(-8, 0.06, 186)); Wt.scene.add(pool);
 const stuhl = O.liegestuhl(); stuhl.position.copy(VP(4, 0.06, 184)); stuhl.rotation.y = Math.PI * 0.85; Wt.scene.add(stuhl);
@@ -70,7 +70,7 @@ const nachbarSteht = (t) => { tag(); nachbar.visible = true; nachbar.position.co
 sh(wz("darum", 5) - 0.1, (t, q) => { nachbarSteht(t); kamera.vorFigur(q, nachbar, 6.8, 6.0, 1.0, 1.4, 46); licht(1.6, "#fff4e0", 1.0, "#ffffff"); wisch(t, 5); });
 sh(E[5] + 0.2, (t, q) => { nachbarSteht(t); kamera.fahrt(q, VP(2, 5.5, 46), VP(1, 5, 50), VP(-14, 1.8, 62), VP(-14, 1.8, 64), 52); licht(1.6, "#fff4e0", 1.0, "#ffffff"); });
 // 6 Und ich? Problem (Platz am Tag)
-sh(E[6] + 0.2, (t, q) => { tag(); ich.visible = true; ich.position.set(4, 0, 30); ich.rotation.y = 0.2; Fg.pose(ich, { ges: t > wz("problem", 6) - 0.3 ? "schwitzen" : "ernst", armL: 0.5, armR: 0.5, armLz: 0.4, armRz: -0.4 });
+sh(E[6] + 0.2, (t, q) => { tag(); ich.visible = true; ich.position.copy(Al.BUNTDORF.pos(22, 0.28, -6)); ich.rotation.y = -Math.PI / 2 + 0.3; Fg.pose(ich, { ges: t > wz("problem", 6) - 0.3 ? "schwitzen" : "ernst", armL: 0.5, armR: 0.5, armLz: 0.4, armRz: -0.4 });
   kamera.vorFigur(q, ich, 6.2, 5.4, -1.0, 0.6, 46); licht(1.6, "#fff4e0", 1.0, "#ffffff"); wisch(t, 6); });
 // 7 Ich kann nicht einschlafen: im Bett, Augen weit offen, Wecker 03:00
 sh(E[7] + 0.4, (t, q) => { imBett(ich, "staunen"); Rq.weckerZeichnen("03:00"); Rq.ZIMMER.licht.intensity = 4; Rq.ZIMMER.schirm.material = Rq.ZIMMER.schirmAus;
@@ -114,7 +114,7 @@ sh(E[15] + 0.3, (t, q) => { amt(t); if (t >= wz("null", 15)) rotNull(); kamera.f
 sh(E[16] + 0.3, (t, q) => { imBett(ich, "traurig"); Rq.ZIMMER.licht.intensity = 14; Rq.ZIMMER.licht.color.set("#ff9a5a"); Rq.weckerZeichnen("20:30");
   kamera.fahrt(q, ZI(-0.8, 5.8, 2.0), ZI(-1.1, 5.4, 2.4), ZI(-2.2, 2.5, 3.9), ZI(-2.2, 2.5, 3.9), 54); licht(0.5, "#ff9a5a", 0.5, "#a080ff"); wisch(t, 16); });
 // 17 Die ganze Stadt schläft
-sh(E[17] + 0.4, (t, q) => { kamera.luft(q, V(0, 0, 0), 130, 118, 64, 58, 2.2, 2.0, 56); licht(0.8, "#ffd8b0", 0.6); Rq.ZIMMER.licht.color.set("#ffc080"); wisch(t, 17); });
+sh(E[17] + 0.4, (t, q) => { const P0 = Al.BUNTDORF.pos; Wt.hemi.intensity = 0.45; kamera.fahrt(q, P0(0, 34, -150), P0(0, 30, -132), P0(0, 6, 40), P0(10, 6, 30), 56); licht(0.8, "#ffd8b0", 0.6); Rq.ZIMMER.licht.color.set("#ffc080"); wisch(t, 17); });
 // 18 Eine Nachricht: Handy leuchtet am Fenster
 const amFenster = (t, ges = "staunen") => { ich.visible = true; ich.position.copy(ZI(0.0, 2.15 - 2.15, -2.4)); ich.position.y = ZI(0, 0, 0).y; ich.rotation.set(0, Math.PI / 4 + Math.PI, 0);
   Fg.pose(ich, { armR: 1.45, armRz: -0.3, kopfNeig: 0.3, ges }); Rq.ZIMMER.licht.intensity = 3; Rq.ZIMMER.schirm.material = Rq.ZIMMER.schirmAus;

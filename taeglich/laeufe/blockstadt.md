@@ -40,6 +40,7 @@ Nur die Mittel übernehmen, nie Inhalte (keine Lava-Stunde, keine Mammuts, keine
 - **Zeitraffer mit Uhrzeit (24.11.):** „8 Uhr … 9 Uhr … Mittag …“, jede Uhrzeit ein eigenes kurzes Bild mit Uhr in der Welt (Wecker, Wanduhr, `leinwand`).
 - **Laufender Zähler (24.11.):** Wenn es um Geld, Punkte oder Anzahl geht, zählt `Z_.zaehler` sichtbar mit (grün hoch, rot runter). Das ist ein starker Dopamin-Moment.
 - **Doppelte Wendung (24.11.):** Der Plan scheint aufzugehen, dann kommt die Wendung („alle hatten denselben Plan“), und danach dreht sich alles um (der Zähler läuft rückwärts). Am Ende steht ein kurzer, witziger Satz einer bekannten Person (Opa, Oma).
+- **Bunte Kleinstadt als Ort (Jonathan 23.11. abends):** Außenszenen bevorzugt im `BUNTDORF` (bunte Reihenhäuser, Läden, Dorfplatz mit Brunnen, Skyline), tagsüber oder im Abendrot, wie in den Vorbild-Videos. Die Nachtstadt bleibt für Grusel und Stromausfall.
 - **Helle Szenen als Kontrast:** Tag (`U.uTag = 1`, dazu `U.uWolken = 1` für blauen Himmel mit Wolken und bunte Häuser), bunte Innenräume und Feier-Effekte (Konfetti, Ballons, Regenbogen) sind erlaubt. Die Stadt bleibt aber meist nachts, das ist unser Wiedererkennungszeichen.
 
 ## Story-Richtung „Herz“ (Jonathan 24.11.: „Story sollte auch mal in die Richtung gehen danach“)
