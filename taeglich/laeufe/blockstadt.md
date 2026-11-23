@@ -16,6 +16,7 @@ Arbeite selbstständig, ohne Rückfragen, auf Deutsch. Qualität vor Quantität 
   - Kein Kamera-Wackeln, nichts darf flackern. Das Gerüst `block/folge.js` sorgt dafür.
   - Ein-Wort-Untertitel in Gelb.
   - Große Autos.
+  - Figuren immer mit `struktur: true` (Stoff und Haare wie im Vorbild, seit 23.11.). Objekte und Straßenzüge aus `block/objekte.js` und `einkaufsstrasse()` nutzen, damit die Kulissen voll und lebendig wirken.
   - Erstes Bild nie schwarz.
 - **Ende:** „Was soll ich jetzt tun?“, dann 3 kurze Antworten in einem Satz, dann „Schreibt es in die Kommentare. Was die meisten sagen, mache ich.“ Dazu die Karten A/B/C im Bild.
 - **Längen:**
