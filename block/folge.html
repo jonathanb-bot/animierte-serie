@@ -1,0 +1,27 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<!-- Gemeinsame Seite für alle Blockstadt-Folgen ab Folge 2: /folge.html?folge=folge-02[&plan=plan_yt.json]
+     lädt folge-XX/szene.js (Ereignisse + Einstellungen) und deren Zeitplan. -->
+<style>
+  html,body{margin:0;background:#000;overflow:hidden}
+  #wrap{position:relative;width:720px;height:1280px;overflow:hidden}
+  canvas{display:block;transform-origin:center}
+  #cap{position:absolute;left:10px;right:10px;top:790px;text-align:center;font:900 78px "Inter Display","Inter",sans-serif;color:#ffe53a;
+       -webkit-text-stroke:12px #0a0a0a;paint-order:stroke fill;transform-origin:center;letter-spacing:0.5px;text-shadow:0 6px 0 rgba(0,0,0,.35)}
+  #wahl{position:absolute;left:40px;right:40px;top:300px;display:none;flex-direction:column;gap:26px}
+  .karte{display:flex;align-items:center;gap:22px;background:rgba(14,16,30,.82);border:4px solid rgba(255,229,58,.85);border-radius:28px;padding:20px 26px;
+         font:900 46px "Inter Display","Inter",sans-serif;color:#fff;box-shadow:0 10px 0 rgba(0,0,0,.35);transform-origin:left center}
+  .karte b{display:inline-flex;align-items:center;justify-content:center;width:70px;height:70px;border-radius:50%;background:#ffe53a;color:#111;font-size:44px;flex:none}
+  .karte span.e{font-family:"Noto Color Emoji";font-size:48px}
+  #frage{position:absolute;left:30px;right:30px;top:170px;text-align:center;font:900 64px "Inter Display","Inter",sans-serif;color:#fff;-webkit-text-stroke:10px #0a0a0a;paint-order:stroke fill;display:none}
+</style>
+<script type="importmap">{"imports":{"three":"./node_modules/three/build/three.module.min.js","three/addons/":"./node_modules/three/examples/jsm/"}}</script>
+</head><body>
+<div id="wrap"><div id="frage"></div><div id="wahl"></div><div id="cap"></div></div>
+<script type="module">
+const folge = new URLSearchParams(location.search).get("folge");
+// Zeitplan relativ zum Ordner der Folge laden
+const plan = new URLSearchParams(location.search).get("plan") || "plan_final.json";
+history.replaceState(null, "", `${folge}/?plan=${plan}`);
+await import(`/${folge}/szene.js`);
+</script></body></html>
