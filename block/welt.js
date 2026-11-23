@@ -33,7 +33,7 @@ export const grade = new ShaderPass({
 composer.addPass(grade);
 composer.addPass(new OutputPass());
 
-export const U = { uWolken: { value: 0 }, uGewitter: { value: 0 }, uT: { value: 0 }, uAus: { value: 1e6 }, uTag: { value: 0 }, uGold: { value: 0 }, uMond: { value: 1 }, uAn: { value: 1e6 } };
+export const U = { uWolken: { value: 0 }, uGewitter: { value: 0 }, uAbend: { value: 0 }, uT: { value: 0 }, uAus: { value: 1e6 }, uTag: { value: 0 }, uGold: { value: 0 }, uMond: { value: 1 }, uAn: { value: 1e6 } };
 export const PLANT = new THREE.Vector2(0, -520);
 export const P = 48, BLOCK = 36, N = 7;                 // Raster: Blöcke 36 m, Straßen 12 m
 export const PLATZ = 66;                                // großer Platz in der Mitte (|x|,|z| < PLATZ)
@@ -62,7 +62,7 @@ export const strom = (x, z, t) => { const dx = Math.floor((x + 384) / 96), dz = 
 export const himmel = new THREE.Mesh(new THREE.SphereGeometry(2500, 48, 24), new THREE.ShaderMaterial({ side: THREE.BackSide, depthWrite: false, fog: false,
   uniforms: U,
   vertexShader: `varying vec3 vP; void main(){ vP = normalize(position); gl_Position = projectionMatrix*modelViewMatrix*vec4(position,1.); gl_Position.z = gl_Position.w; }`,
-  fragmentShader: `varying vec3 vP; uniform float uTag, uGold, uT, uAus, uAn, uWolken, uGewitter;
+  fragmentShader: `varying vec3 vP; uniform float uTag, uGold, uT, uAus, uAn, uWolken, uGewitter, uAbend;
     float hh(vec2 p){ return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453); }
     float rauschen(vec2 p){ vec2 i = floor(p), f = fract(p); f = f*f*(3.-2.*f); return mix(mix(hh(i), hh(i+vec2(1,0)), f.x), mix(hh(i+vec2(0,1)), hh(i+vec2(1,1)), f.x), f.y); }
     float fbm(vec2 p){ float v = 0., a = 0.5; for (int i = 0; i < 5; i++){ v += a * rauschen(p); p *= 2.03; a *= 0.5; } return v; }
@@ -77,6 +77,7 @@ export const himmel = new THREE.Mesh(new THREE.SphereGeometry(2500, 48, 24), new
       if (uWolken > 0.) { vec3 blau = mix(vec3(0.30,0.56,0.92), vec3(0.06,0.24,0.72), pow(max(h,0.),0.5));
         vec2 wp = vP.xz / max(vP.y + 0.08, 0.05) * 1.6; float w = smoothstep(0.5, 0.74, fbm(wp + vec2(uT * 0.004, 0.))) * smoothstep(0.0, 0.12, h);
         vec3 wolke = mix(vec3(0.82,0.86,0.94), vec3(1.15,1.15,1.12), smoothstep(0.55, 0.85, fbm(wp * 1.3 + 3.1)));
+        blau = mix(blau, mix(vec3(0.95,0.34,0.14), vec3(0.26,0.12,0.46), pow(max(h,0.),0.5)), uAbend); wolke = mix(wolke, vec3(1.05,0.62,0.52), uAbend * 0.8);   // Abendrot (Vergleich 24.11.)
         blau = mix(blau, vec3(0.32,0.36,0.44), uGewitter); wolke = mix(wolke, vec3(0.16,0.17,0.2) * (0.8 + 0.4 * fbm(wp * 2.)), uGewitter); w = mix(w, smoothstep(0.35, 0.6, fbm(wp + 7.)) * smoothstep(0.0, 0.1, h), uGewitter);   // dunkle Wolken ziehen auf
         tag = mix(tag, mix(blau, wolke, w), uWolken); }
       vec3 c = mix(nacht, tag, uTag * (1. - uGold));

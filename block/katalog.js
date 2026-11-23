@@ -63,7 +63,7 @@ E["gesicht-schraeg"] = { gruppe: "Gesichter", zeige: () => { halter.clear(); con
 for (const g of GESICHTER) E["gesicht-" + g] = { gruppe: "Gesichter", zeige: () => { halter.clear(); const f = FIG.ich; f.visible = true; f.position.copy(STUDIO); f.rotation.set(0, 0, 0); Fg.pose(f, { ges: g }); const k = Fg.kopfPos(f); blick(k.clone().add(V(0.3, 0.15, 2.6)), k, 40); studioLicht.intensity = 1.2; licht(1.4, "#fff0e0", k); } };
 const nacht = () => {};
 const tag = () => { U.uTag.value = 1; U.uWolken.value = 1; Wt.hemi.intensity = 1.2; Wt.hemi.color.set("#cfe4ff"); Wt.hemi.groundColor.set("#8a8070"); };
-let STR = null, RT = null, RW = null, GV = null, KW2 = null;
+let STR = null, RT = null, RW = null, GV = null, KW2 = null, BU = null;
 const K = {   // Kulissen und Effekte in der Welt (Koordinaten siehe KATALOG.md)
   "stadt-nacht": () => { const z = blick(V(180, 150, 420), V(0, 10, 0), 55); licht(1.2, "#ffd8b0", z); },
   "stadt-tag": () => { tag(); const z = blick(V(180, 150, 420), V(0, 10, 0), 55); licht(1.6, "#fff4e0", z); },
@@ -100,6 +100,11 @@ const K = {   // Kulissen und Effekte in der Welt (Koordinaten siehe KATALOG.md)
     const z = blick(V.pos(0, 5, -8), V.pos(0, 4, 4), 55); licht(1.6, "#fff4e0", z); },
   "gewitter": () => { tag(); U.uGewitter.value = 1; const V = Al.VORSTADT; const z = blick(V.pos(-2, 4.5, -60), V.pos(4, 12, 10), 55); licht(1.0, "#c8d0e0", z); },
   "wisch-uebergang": () => { tag(); Wt.grade.uniforms.uWisch.value = 0.8; const V = Al.VORSTADT; const z = blick(V.pos(-2, 4.5, -60), V.pos(4, 3.5, 10), 52); licht(1.6, "#fff4e0", z); },
+  "regenwolke": () => { tag(); const V = Al.VORSTADT; const f = FIG["ich-struktur"]; f.visible = true; f.position.copy(V.pos(8, 0.3, 4)); f.rotation.set(0, Math.PI * 0.8, 0); Fg.pose(f, { ges: "traurig" }); Al.regenwolke(1.3, true, { ...V.pos(8, 7.5, 4) });
+    const z = blick(V.pos(2, 4, -6), V.pos(8, 3.5, 4), 50); licht(1.6, "#fff4e0", z); },
+  "blitz": () => { tag(); U.uGewitter.value = 0.7; const V = Al.VORSTADT; Al.blitz(true, V.pos(23, 60, 0), V.pos(23, 9, 0)); const z = blick(V.pos(-4, 4, -30), V.pos(18, 14, 0), 55); licht(1.2, "#c8d0e0", z); },
+  "rauch": () => { tag(); const V = Al.VORSTADT; BU = BU || O.bus(); BU.visible = true; BU.position.copy(V.pos(3, 0.06, 10)); if (!BU.parent) scene.add(BU); Al.rauch(3, true, { ...V.pos(3, 4, 18), t0: 0 }); const z = blick(V.pos(-8, 4, 34), V.pos(3, 4, 12), 50); licht(1.6, "#fff4e0", z); },
+  "abendrot": () => { tag(); U.uAbend.value = 1; const V = Al.VORSTADT; const z = blick(V.pos(-2, 4.5, -60), V.pos(4, 10, 10), 55); licht(1.2, "#ffb080", z); },
   "platz": () => { const z = blick(V(0, 14, 62), V(0, 5, 0), 55); licht(1.2, "#ffd8b0", z); },
   "gasse": () => { const z = blick(V(-70, 4, 96), V(-100, 3, 96), 50); licht(0.8, "#ffd8b0", z); },
   "laden-laternen": () => { const z = blick(V(58, 5, -24), V(79, 4.5, -30), 50); licht(1.2, "#ffd8b0", z); },
@@ -126,9 +131,9 @@ for (const [n, f] of Object.entries(K)) E["kulisse-" + n] = { gruppe: "Kulissen,
 // ---------- Rendern ----------
 window.NAMEN = Object.keys(E); window.GRUPPEN = Object.fromEntries(Object.entries(E).map(([n, e]) => [n, e.gruppe]));
 window.zeige = (name) => { const e = E[name]; if (!e) throw new Error("Unbekannt: " + name);
-  U.uT.value = 1; U.uWolken.value = 0; U.uAus.value = 1e6; U.uAn.value = 1e6; U.uTag.value = 0; U.uGold.value = 0; Wt.grade.uniforms.uFlash.value = 0; Wt.grade.uniforms.uWisch.value = 0; U.uGewitter.value = 0; Wt.grade.uniforms.uVig.value = 0.3;
+  U.uT.value = 1; U.uWolken.value = 0; U.uAus.value = 1e6; U.uAn.value = 1e6; U.uTag.value = 0; U.uGold.value = 0; Wt.grade.uniforms.uFlash.value = 0; Wt.grade.uniforms.uWisch.value = 0; U.uGewitter.value = 0; U.uAbend.value = 0; Wt.grade.uniforms.uVig.value = 0.3;
   Wt.hemi.intensity = 0.6; Wt.hemi.color.set("#5a6ab0"); Wt.hemi.groundColor.set("#141018"); Wt.suchkegel.forEach(k => k.visible = false);
-  Fg.FIGUREN.forEach(f => f.visible = false); if (STR) STR.visible = false; if (RT) RT.visible = false; if (RW) RW.visible = false; if (GV) GV.visible = false; if (KW2) KW2.visible = false; Rq.ZIMMER.lichterkette.visible = false; Ws.schattenAus(); Ws.laternenAnlegen([]); Al.zuruecksetzen(); studioLicht.intensity = 0; halter.clear(); Wt.boden.visible = true;
+  Fg.FIGUREN.forEach(f => f.visible = false); if (STR) STR.visible = false; if (RT) RT.visible = false; if (RW) RW.visible = false; if (GV) GV.visible = false; if (KW2) KW2.visible = false; if (BU) BU.visible = false; Rq.ZIMMER.lichterkette.visible = false; Ws.schattenAus(); Ws.laternenAnlegen([]); Al.zuruecksetzen(); studioLicht.intensity = 0; halter.clear(); Wt.boden.visible = true;
   Rq.polizeiSetzen(1, false, false); Rq.notlampenSetzen(0, false); Rq.mengeSetzen(1, { sichtbar: false }); Rq.konfettiSetzen(0, false);
   Wt.autosSetzen(1); Wt.lampenAktualisieren(1);
   e.zeige(1); if (studioLicht.intensity > 0) Wt.boden.visible = false; cam.updateProjectionMatrix();

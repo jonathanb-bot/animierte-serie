@@ -94,6 +94,7 @@ Jede Funktion baut ein Objekt (`THREE.Group`, noch nicht in der Szene): `const b
 | Reich, arm, Himmel (24.11.) | `wolke({groesse})` (3D-Wolke aus Kugeln), `himmelshaus({hoehe})` (Glasturm mit Villa, Pool und Palmen oben, `userData.oben`), `bretterbude`, `muellberg`, `leiter` (eine Sprosse fehlt), `pool`, `glasaufzug` (`userData.kabine`), `absperrung` (rote Kordel), `goldvilla` (Diamantfenster, Kuppel), `goldschluessel`, `tellerhaus` (Turmspitze im All) |
 | Schule, Sport, Krankenhaus (24.11.) | `spind({farbe, n})` (Reihe), `tribuene({breite, reihen})`, `krankenwagen`, `krankenbett`, `herzmonitor` (`userData.zeichne(t)` lässt die Herzlinie laufen), `babybett` |
 | Freizeit und Feiern (24.11.) | `achterbahn({laenge, hoehe})` (Wagen fahren: `userData.setze(u)` mit u 0…1), `torte({text, stufen})` (`userData.schrift(text)`), `kinderwagen` |
+| Glück und Pech (24.11.) | `gluehbirnenladen({name, wand})` (Lotto, Kino, Spielhalle mit Glühbirnen-Rahmen), `limousine`, `liegestuhl` |
 | Gebäude und Autos (24.11.) | `haus({wand, dach, tuer, breite, tiefe, stock, licht})` (Einfamilienhaus mit Satteldach), `schule({name, banner})` (Backstein, Säulen-Eingang, Schild), `sportwagen({farbe})`; `laterne({punktlicht: false})` ohne eigene Lichtquelle für viele Laternen |
 
 Fertige Kulissen (`alltag.js`, 24.11.):
@@ -111,6 +112,8 @@ Fertige Kulissen (`alltag.js`, 24.11.):
 - **Zahl/Text über dem Kopf:** `kopfzahl(figurOderPosition, "12.000", {farbe, groesse})` pro Bild aufrufen. Sie schaut immer zur Kamera und wird pro Bild zurückgesetzt. Für die ganze Menge: `B.mengeZahlen((i) => "1")`.
 - **Wisch-Übergang:** `Wt.grade.uniforms.uWisch.value = B.wisch(t, schnittZeit)` verwischt das Bild kurz waagerecht am Schnitt, ohne Wackeln.
 - **Gewitterhimmel:** mit Bilderbuch-Tag zusätzlich `U.uGewitter.value = 0…1`. Dunkle Wolken ziehen auf, der Himmel wird grau.
+- **Wetter-Effekte:** `regenwolke(t, an, {x, y, z, breite})` (eigene Regenwolke über einer Figur, mit Tropfen und Pfütze), `blitz(an, von, nach)` (Zickzack-Blitz, ohne Bildschirmblitz), `rauch(t, an, {x, y, z, t0, staerke})` (aufsteigender Rauch, z. B. aus einem Motor).
+- **Abendrot:** mit Bilderbuch-Tag zusätzlich `U.uAbend.value = 1` (orange-violetter Himmel, rosa Wolken).
 - `schreibe()` verkleinert lange Texte automatisch, damit sie in die Fläche passen.
 
 Fertige Straßenzüge (`alltag.js`): **`einkaufsstrasse({x: 24, z0: 70, z1: 330})`** setzt an alle Häuser einer Nord-Süd-Straße Ladenfronten mit Markisen (Bäckerei, Eis, Blumen …) und Gehweg-Deko (Bäume, Bänke, Hydranten, Briefkästen). Die Straße ist zuerst unsichtbar, `.visible = true` pro Einstellung setzen.

@@ -179,7 +179,7 @@ export const ballonsSetzen = (t, an = false, o = { x: 0, z: 0, t0: 0 }) => { con
     ballonW.setMatrixAt(i, m); } ballonW.instanceMatrix.needsUpdate = true; };
 
 // ---------- Pro Bild ----------
-export const zuruecksetzen = () => { kopfzahlenAus(); if (HANDY.arm) HANDY.arm.visible = true; HANDY.arm = null; handy.visible = false; videowand.visible = false; videowand.scale.setScalar(1); regenbogen.visible = false; regenbogen.scale.setScalar(1); handyWelt(); raumlicht(null); STUBE.tvSchirm.material = STUBE.tvAus; ballonsSetzen(0, false); geldSetzen(0, false); VORSTADT.nacht(false); AULA.kinder(1); WELTALL.an(false); };
+export const zuruecksetzen = () => { kopfzahlenAus(); regenwolke(0, false); blitz(false); rauch(0, false); if (HANDY.arm) HANDY.arm.visible = true; HANDY.arm = null; handy.visible = false; videowand.visible = false; videowand.scale.setScalar(1); regenbogen.visible = false; regenbogen.scale.setScalar(1); handyWelt(); raumlicht(null); STUBE.tvSchirm.material = STUBE.tvAus; ballonsSetzen(0, false); geldSetzen(0, false); VORSTADT.nacht(false); AULA.kinder(1); WELTALL.an(false); };
 export const fernseherAn = () => { STUBE.tvSchirm.material = HANDY.weltMat; };
 export const fernseherAus = () => { STUBE.tvSchirm.material = STUBE.tvAus; };
 // Handy-Welt rendern (vor dem Haupt-Render), nur wenn ein Bildschirm sie zeigt. Bildschirme selbst dabei aus (keine Rückkopplung).
@@ -396,3 +396,23 @@ export const kopfzahl = (wer, text, { farbe = "#4ef07a", groesse = 1, hoehe = 2.
   const p = new THREE.Vector3(); let sk = 1; if (wer.userData?.kopfG) { wer.userData.kopfG.getWorldPosition(p); sk = wer.scale.y; p.y += hoehe * sk; } else p.copy(wer);
   s2.material.map = kzTex(String(text), farbe); s2.material.needsUpdate = true; s2.position.copy(p); s2.scale.set(3.2 * groesse * Math.max(sk, 0.7), 1.0 * groesse * Math.max(sk, 0.7), 1); s2.visible = true; return s2; };
 const kopfzahlenAus = () => { KZ.forEach(s2 => s2.visible = false); kzN = 0; };
+
+// ---------- Wetter-Effekte (Vergleich 24.11.): eigene Regenwolke über einer Figur, Blitz, Rauch ----------
+// regenwolke(t, an, {x, y, z, breite}) – kleine dunkle Wolke mit fallenden Tropfen und Pfütze darunter (fest vorausberechnet)
+const RW_N = 140; export const REGEN = new THREE.Group(); REGEN.visible = false; scene.add(REGEN);
+{ const wm = new THREE.MeshStandardMaterial({ color: "#4a4e5a", roughness: 1 }); for (const [x, y, z, r] of [[0, 0, 0, 1.3], [1.2, -0.2, 0.2, 1.0], [-1.2, -0.2, -0.1, 1.0], [0.4, 0.5, -0.3, 0.9], [-0.5, 0.4, 0.3, 0.9]]) { const k = new THREE.Mesh(new THREE.SphereGeometry(r, 16, 12), wm); k.position.set(x, y, z); REGEN.add(k); }
+  REGEN.tropfen = new THREE.InstancedMesh(new THREE.BoxGeometry(0.04, 0.5, 0.04), new THREE.MeshBasicMaterial({ color: new THREE.Color(0.7, 0.85, 1.2), transparent: true, opacity: 0.7 }), RW_N); REGEN.tropfen.frustumCulled = false; REGEN.add(REGEN.tropfen);
+  REGEN.pfuetze = new THREE.Mesh(new THREE.CircleGeometry(1.6, 24).rotateX(-Math.PI / 2), new THREE.MeshPhysicalMaterial({ color: "#6aa8e8", roughness: 0.05, clearcoat: 1, transparent: true, opacity: 0.75 })); REGEN.add(REGEN.pfuetze); }
+const rwD = []; { let s = 71; const r = () => { s = (s * 16807) % 2147483647; return s / 2147483647; }; for (let i = 0; i < RW_N; i++) rwD.push([(r() - 0.5) * 3, (r() - 0.5) * 1.6, r()]); }
+export const regenwolke = (t, an = false, o = {}) => { REGEN.visible = an; if (!an) return; const { x = 0, y = 7, z = 0, breite = 1 } = o; REGEN.position.set(x, y, z); REGEN.scale.setScalar(breite); REGEN.pfuetze.position.y = (-y + 0.08) / breite;
+  const m = new THREE.Matrix4(); rwD.forEach(([dx, dz, ph], i) => { const f = ((t * 1.6 + ph) % 1); m.makeTranslation(dx, -0.8 - f * (y / breite - 0.8), dz); REGEN.tropfen.setMatrixAt(i, m); }); REGEN.tropfen.instanceMatrix.needsUpdate = true; };
+// blitz(an, von, nach) – leuchtender Zickzack-Blitz zwischen zwei Punkten (fester Zufall, keine Bildschirm-Blitze)
+export const BLITZ = new THREE.Group(); BLITZ.visible = false; scene.add(BLITZ);
+export const blitz = (an = false, von = new THREE.Vector3(), nach = new THREE.Vector3(), saat = 5) => { BLITZ.visible = an; if (!an) return; BLITZ.clear(); let s = saat; const r = () => { s = (s * 16807) % 2147483647; return s / 2147483647; };
+  const pts = [von.clone()]; for (let i = 1; i < 9; i++) { const p = von.clone().lerp(nach, i / 9); p.x += (r() - 0.5) * 2.4; p.z += (r() - 0.5) * 1.2; pts.push(p); } pts.push(nach.clone());
+  const kurve = new THREE.CatmullRomCurve3(pts, false, "catmullrom", 0.05); BLITZ.add(new THREE.Mesh(new THREE.TubeGeometry(kurve, 60, 0.18, 6), new THREE.MeshBasicMaterial({ color: new THREE.Color(4, 4, 5) })));
+  BLITZ.add(new THREE.Mesh(new THREE.TubeGeometry(kurve, 60, 0.5, 6), new THREE.MeshBasicMaterial({ color: new THREE.Color(0.6, 0.7, 1.6), transparent: true, opacity: 0.35, depthWrite: false }))); };
+// rauch(t, an, {x, y, z, t0, farbe}) – aufsteigende graue Rauchwolken (Motor, Schornstein, Unfall)
+const RA_N = 30; export const RAUCH = new THREE.InstancedMesh(new THREE.SphereGeometry(1, 12, 8), new THREE.MeshStandardMaterial({ color: "#8a8a92", roughness: 1, transparent: true, opacity: 0.8, depthWrite: false }), RA_N); RAUCH.frustumCulled = false; scene.add(RAUCH);
+const raD = []; { let s = 91; const r = () => { s = (s * 16807) % 2147483647; return s / 2147483647; }; for (let i = 0; i < RA_N; i++) raD.push([r(), (r() - 0.5) * 2, (r() - 0.5) * 2]); }
+export const rauch = (t, an = false, o = {}) => { const { x = 0, y = 2, z = 0, t0 = 0, staerke = 1 } = o; const m = new THREE.Matrix4(); raD.forEach(([ph, dx, dz], i) => { const f = ((t - t0) * 0.5 + ph) % 1; if (!an || t < t0) { m.makeScale(0, 0, 0); } else { const sc = (0.4 + f * 1.6) * staerke; m.makeScale(sc, sc, sc); m.setPosition(x + dx * f * 2, y + f * 7 * staerke, z + dz * f * 2); } RAUCH.setMatrixAt(i, m); }); RAUCH.instanceMatrix.needsUpdate = true; };

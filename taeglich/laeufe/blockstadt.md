@@ -67,6 +67,17 @@ Vorbild: `block/vergleiche/2026-11-24-ein-tag.md` (69 s, sehr dicht). Merkmale, 
 - **Wendung in den letzten 10 s**, die alles umdreht: Über **allen** Köpfen steht plötzlich dieselbe Zahl, und Gewitterwolken ziehen auf (`U.uGewitter`). Danach sofort die Mitmach-Frage A/B/C.
 - **Länge 65–75 s**, Sätze höchstens 8 Wörter.
 
+## Story-Richtung „Paradox-Komödie“ (Jonathan 24.11.: „auch so Storys wie diese“)
+
+Vorbild: `block/vergleiche/2026-11-24-pech.md`. Eine verdrehte Regel, bei der **das Gute schlecht ist** (oder umgekehrt), und „ich“ habe genau das Falsche:
+- **Regel mit Preisliste:** 3 Beispiele mit steigenden Beträgen oder Punkten („Bus verpasst: 100 €, Regen: 500 €, Haus kaputt: 1 Million“), dabei läuft der Zähler (`Z_.zaehler`).
+- **Nachbar und Reichster als Beweis**, jeder in einem Satz mit Bild-Gag (Blitz `Al.blitz`, Regenwolke `Al.regenwolke`).
+- **„Und ich? Ich habe ein riesiges Problem.“** Ich bin die Ausnahme.
+- **Drei Versuche, die jeweils ins Gegenteil kippen**, jeder endet mit „0 €“ als roter Zähler. Die Steigerung ist wichtig: Der dritte Versuch ist der verrückteste.
+- **Offizielle Stelle bestätigt es** (Schalter, Scanner-Bildschirm mit `leinwand`: „0 %“).
+- **Tiefpunkt** auf dem Bett, Abendrot (`U.uAbend`), leise Musik.
+- **Paradox-Pointe als Nachricht aufs Handy** (`handySeite`), die die Regel auf sich selbst anwendet. Danach folgt bei uns die Mitmach-Frage statt des Happy Ends.
+
 ## Test ab 24.11. (Jonathan 23.11.: „als Test einfach morgen verwenden“)
 
 Ab Folge 2 kommen die neuen Bibliotheks-Elemente zum Einsatz. Jede Folge nutzt mindestens:
