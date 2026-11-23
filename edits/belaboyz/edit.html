@@ -82,7 +82,7 @@ function ikon(n, x, y, s, farbe = C.l1, gew = 0.1) { ctx.save(); ctx.translate(x
     case "lupe": b(); ctx.arc(-6, -6, 24, 0, Math.PI * 2); ctx.lineWidth = 9; st(); b(); ctx.moveTo(12, 12); ctx.lineTo(32, 32); ctx.lineWidth = 11; st(); break;
     case "herz": b(); ctx.moveTo(0, 32); ctx.bezierCurveTo(-40, 6, -38, -30, -14, -30); ctx.bezierCurveTo(-4, -30, 0, -20, 0, -16); ctx.bezierCurveTo(0, -20, 4, -30, 14, -30); ctx.bezierCurveTo(38, -30, 40, 6, 0, 32); fi(); break;
     case "daumen_runter": ctx.rotate(Math.PI); case "daumen": rr(-36, -6, 16, 40, 4); fi(); b(); ctx.moveTo(-14, -6); ctx.lineTo(0, -34); ctx.quadraticCurveTo(12, -34, 10, -20); ctx.lineTo(8, -8); ctx.lineTo(30, -8); ctx.quadraticCurveTo(40, -6, 36, 6); ctx.lineTo(30, 30); ctx.quadraticCurveTo(28, 34, 22, 34); ctx.lineTo(-14, 34); ctx.closePath(); fi(); break;
-    case "haha": text("HA", 0, 12, 40, farbe, 800, 999, 1, "center"); text("HA", 6, -8, 30, farbe, 800, 999, 1, "center"); break;
+    case "haha": text("HA", -6, -4, 30, farbe, 800, 999, 1, "center"); text("HA", 8, 28, 30, farbe, 800, 999, 1, "center"); break;
     case "ausruf": rr(-18, -32, 10, 44, 4); fi(); kreis(-13, 26, 6, farbe); rr(8, -32, 10, 44, 4); fi(); kreis(13, 26, 6, farbe); break;
     case "frage": text("?", 0, 22, 70, farbe, 800, 999, 1, "center"); break;
     case "x": b(); ctx.moveTo(-20, -20); ctx.lineTo(20, 20); ctx.moveTo(20, -20); ctx.lineTo(-20, 20); ctx.lineWidth = 10; st(); break;
@@ -112,8 +112,8 @@ function eingabe() { ikon("plus", 92, H - 128, 64, C.l2); rr(150, H - 178, W - 2
 function blase(x, y, w, h, farbe, rechts) { rr(x, y, w, h, 50); ctx.fillStyle = farbe; ctx.fill(); }
 function sSprach(ts) { ctx.fillStyle = C.bg; ctx.fillRect(0, 0, W, H); navLeiste("Hochhaus & Sozialbau", "", "H", AV.H);
   text("Kardo", 160, 450, 33, C.l2); blase(130, 470, 360, 118, C.bg3); text("wer ist wach?", 175, 545, 47, C.l1);
-  avatar(80, 1080, 40, "K", AV.K); text("Kardo", 160, 650, 33, C.l2);
-  const p = clamp((ts - 5.2) / 10.3, 0, 1); blase(130, 670, W - 190, 470, C.bg3);
+  avatar(80, 1290, 40, "K", AV.K); text("Kardo", 160, 650, 33, C.l2);
+  const p = clamp((ts - 5.2) / 10.3, 0, 1); blase(130, 670, W - 190, 660, C.bg3);
   kreis(225, 765, 52, C.l1); ikon(ts < 15.2 ? "pause" : "play", 225, 765, 44, C.bg3);
   for (let i = 0; i < 34; i++) { const x = 310 + i * 16.5, hh = 12 + 52 * Math.abs(Math.sin(i * 1.7) * Math.cos(i * 0.6) + 0.15 * Math.sin(i * 3.1)) * (i / 34 < p ? 0.85 + 0.15 * Math.abs(Math.sin(ts * 8 + i)) : 1); rr(x, 765 - hh / 2, 8, hh, 4); ctx.fillStyle = i / 34 < p ? C.l1 : C.l3; ctx.fill(); }
   text("0:" + String(Math.floor(5 + p * 10)).padStart(2, "0"), W - 110, 778, 36, C.l2, 400, 999, 1, "right");
@@ -253,7 +253,7 @@ function airdrop(ts) { const t0 = 31.0, t1 = 32.52; if (ts < t0 || ts > t1 + 0.3
   ctx.save(); ctx.translate(0, top - 820); schatten(() => { rr(0, 820, W, 1200, 56); ctx.fillStyle = C.bg2; ctx.fill(); }); rr(W / 2 - 50, 838, 100, 14, 7); ctx.fillStyle = C.l3; ctx.fill();
   if (COVER) { ctx.save(); rr(60, 900, 120, 120, 18); ctx.clip(); ctx.drawImage(COVER, 60, 900, 120, 120); ctx.restore(); } text("BELABOYZ (XWAVE)", 210, 950, 42, C.l1, 600); text("An alle senden", 210, 1000, 36, C.l2); kreis(W - 104, 960, 44, C.fill2); ikon("x", W - 104, 960, 30, C.l2);
   ctx.fillStyle = C.sep; ctx.fillRect(0, 1070, W, 1.5); text("AirDrop", 60, 1150, 36, C.l2, 500);
-  ["K", "B", "G", "V", "X", "A"].forEach((b, i) => { const x = 140 + (i % 3) * 400, y = 1310 + Math.floor(i / 3) * 300, p = clamp((ts - 31.25 - i * 0.14) / 0.5, 0, 1); avatar(x, y, 82, b, AV[b]);
+  ["K", "B", "G", "V", "X", "A"].forEach((b, i) => { const x = 160 + (i % 3) * 380, y = 1290 + Math.floor(i / 3) * 340, p = clamp((ts - 31.25 - i * 0.14) / 0.5, 0, 1); avatar(x, y, 82, b, AV[b]);
     if (p > 0) { ctx.beginPath(); ctx.arc(x, y, 96, -Math.PI / 2, -Math.PI / 2 + p * Math.PI * 2); ctx.strokeStyle = C.blau; ctx.lineWidth = 8; ctx.lineCap = "round"; ctx.stroke(); }
     text(["Kardo", "Bangwhite", "Gotti", "Veysel", "X Wave", "Ali"][i], x, y + 150, 33, C.l1, 500, 999, 1, "center"); text(p >= 1 ? "Gesendet" : p > 0 ? "Wird gesendet …" : "Warten …", x, y + 192, 30, p >= 1 ? C.blau : C.l2, 400, 999, 1, "center"); });
   ctx.restore(); }
@@ -297,11 +297,11 @@ function sNotiz(ts) { ctx.fillStyle = C.bg; ctx.fillRect(0, 0, W, H); ikon("zuru
 // ---------- 10) Nachrichten: Tapbacks lieben / hassen ----------
 function sTap(ts) { ctx.fillStyle = C.bg; ctx.fillRect(0, 0, W, H); navLeiste("Deutschrap", "", "X", AV.X);
   [["ihr seid nur blender", 470], ["wer macht es besser?", 610]].forEach(([t, y]) => { font(400, 47); const w = ctx.measureText(t).width + 76; blase(60, y, w, 118, C.bg3); text(t, 98, y + 76, 47, C.l1); });
-  const t = tipp(ts, "l15") || " "; font(700, 76); const z = umbruch(t, 760), bw = Math.max(...z.map(l => ctx.measureText(l).width)) + 100, bh = 70 + z.length * 86, bx = W - 60 - bw, by = 900;
+  const t = tipp(ts, "l15") || " "; font(700, 76); const z = umbruch(t, 760), bw = Math.max(...z.map(l => ctx.measureText(l).width)) + 100, bh = 70 + z.length * 86, bx = W - 60 - bw, by = 1010;
   blase(bx, by, bw, bh, C.blau); z.forEach((l, i) => text(l, bx + 50, by + 112 + i * 86, 76, "#fff", 700));
   // Tapback-Auswahl über der Blase
   const p0 = 45.95, a = clamp((ts - p0) / 0.2, 0, 1) * (1 - clamp((ts - 47.35) / 0.2, 0, 1)); if (a > 0) { ctx.save(); ctx.globalAlpha = a; const px = W - 60 - 820, py = by - 190; schatten(() => { rr(px, py, 820, 150, 75); ctx.fillStyle = "rgba(58,58,62,0.97)"; ctx.fill(); });
-    ["herz", "daumen", "daumen_runter", "haha", "ausruf", "frage"].forEach((ik, i) => { const x = px + 80 + i * 132, sel = (ik === "herz" && ts > 46.12 && ts < 46.9) || (ik === "daumen_runter" && ts > 47.1); if (sel) kreis(x, py + 75, 58, C.blau); ikon(ik, x, py + 75, 56, sel ? "#fff" : C.l2); }); ctx.restore(); }
+    ["herz", "daumen", "daumen_runter", "haha", "ausruf", "frage"].forEach((ik, i) => { const x = px + 80 + i * 132, sel = (ik === "herz" && ts > 46.12 && ts < 46.9) || (ik === "daumen_runter" && ts > 47.1); if (sel) kreis(x, py + 75, 58, C.blau); ikon(ik, x, py + 75, 70, sel ? "#fff" : C.l2); }); ctx.restore(); }
   [["herz", 46.12, C.pink, -40], ["daumen_runter", 47.1, C.l1, 110]].forEach(([ik, t0, f, dx]) => { if (ts < t0 + 0.1) return; const q = zurueck((ts - t0 - 0.1) / 0.3); ctx.save(); ctx.translate(bx + dx + 30, by - 10); ctx.scale(q, q); schatten(() => kreis(0, 0, 58, C.bg3), 16, 4, 0.5); ctx.lineWidth = 6; ctx.strokeStyle = C.bg; ctx.beginPath(); ctx.arc(0, 0, 58, 0, Math.PI * 2); ctx.stroke(); ikon(ik, 0, 0, 56, f); ctx.restore(); });
   eingabe(); }
 // ---------- 11) Standort mit „Polizei“ teilen? → Nicht teilen ----------
@@ -358,8 +358,8 @@ window.zeichne = T => { const ts = T + A; ctx = cv.getContext("2d"); ctx.setTran
   else { bild(inBuf(0, sTap, ts), 1, 1, 0, 0, 0, ts > 47.4 ? 18 * clamp((ts - 47.4) / 0.3, 0, 1) : 0); zinken(ts); }
   // Statusleiste + Insel (immer fest oben)
   const dunkelText = false; statusleiste(dunkelText ? "#000" : "#fff"); const e = inselAuf(ts);
-  if (e > 0) inselGross(ts, e); else { const laut = ts > 32.25 && ts < 34.4, lq = laut ? zurueck((ts - 32.25) / 0.32) * (1 - ein((ts - 34.0) / 0.3)) : 0, w = inselNormal(ts, 150 * lq);
-    if (lq > 0.05) { ctx.save(); ctx.globalAlpha = clamp(lq, 0, 1); kreis(W / 2 - w / 2 + 58, INSEL.y + 51, 30, C.orange); ikon("glocke_aus", W / 2 - w / 2 + 58, INSEL.y + 51, 34, "#fff"); text("Lautlos", W / 2 + w / 2 - 40, INSEL.y + 64, 36, C.orange, 600, 999, 1, "right"); ctx.restore(); } else musikAktivitaet(ts, w); }
+  if (e > 0) inselGross(ts, e); else { const laut = ts > 32.25 && ts < 34.4, lq = laut ? zurueck((ts - 32.25) / 0.32) * (1 - ein((ts - 34.0) / 0.3)) : 0, w = inselNormal(ts, 40 * lq);
+    if (lq > 0.05) { ctx.save(); ctx.globalAlpha = clamp(lq, 0, 1); kreis(W / 2 - w / 2 + 56, INSEL.y + 51, 30, C.orange); ikon("glocke_aus", W / 2 - w / 2 + 56, INSEL.y + 51, 34, "#fff"); text("Lautlos", W / 2 + w / 2 - 36, INSEL.y + 63, 34, C.orange, 600, 999, 1, "right"); ctx.restore(); } else musikAktivitaet(ts, w); }
   const r = ENDE - T; if (r < 0.15) { ctx.fillStyle = `rgba(0,0,0,${1 - r / 0.15})`; ctx.fillRect(0, 0, W, H); } };
 (async () => { for (const w of [400, 500, 600, 700, 800]) await document.fonts.load(`${w} 60px I`); COVER = await lade("assets/cover.png");
   for (let i = 0; i < 8; i++) CAP.push(await lade(`assets/cap${i}.png`));
