@@ -1,4 +1,3 @@
 Verbundene Konten: tiktok:storys4you.de1, instagram:sto.rys4you, youtube:sto.rys4you (2. Zernio-Konto), tiktok:storys4you_eng (2. Zernio-Konto), youtube:storys4you_eng (3. Zernio-Konto), instagram:sory4you_eng (3. Zernio-Konto)
-  taeglich-yt-b01k: Prüfung ok (Bild, Ton, Lautstärke)
-✓ taeglich-yt-b01k eingeplant für 2026-11-23T19:58:00 (6b041dd2ab08e07ff677caf4)
-Fertig: 1 neu eingeplant, 0 Fehler.
+🗑 taeglich-yt-n002 zurückgezogen
+Fertig: 0 neu eingeplant, 0 Fehler.

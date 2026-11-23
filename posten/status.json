@@ -10337,14 +10337,16 @@
   "am": "2026-11-23T07:19:31.669Z"
  },
  "taeglich-yt-n002": {
-  "ok": true,
+  "ok": false,
   "zeit": "2026-11-23T17:32:00",
   "zernioId": "6b03e905924192f8b808df03",
   "yt": true,
   "k": 1,
   "konto": "sto.rys4you",
   "http": 201,
-  "am": "2026-11-23T07:19:33.990Z"
+  "am": "2026-11-23T07:19:33.990Z",
+  "geloescht": true,
+  "loeschHttp": 200
  },
  "taeglich-tiktok-en-n002": {
   "ok": true,
