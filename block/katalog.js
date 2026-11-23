@@ -40,6 +40,8 @@ const FO = {
   lehrer: { haut: "#e8b890", hemd: "#f4f4f4", jacke: "#2ab0a0", hose: "#c8a878", haare: "#6a4a2a", brille: true, skala: 1.05 },
   junge2: { haut: "#f2d0b0", hemd: "#e8e8ec", hose: "#3a4a8a", haare: "#e8e0d0", frisur: "strubbel", propeller: true, muster: { hemd: "streifen", hose: "karo" }, struktur: true, skala: 0.78 },
   opa: { haut: "#f0c8a8", hemd: "#5a4a3a", jacke: "#2a2a30", hose: "#3a3a40", haare: "#e8e8e8", frisur: "glatze", sonnenbrille: true, struktur: true, skala: 1.0 },
+  wuestenkind: { haut: "#d89a6a", hemd: "#f4ecdc", hose: "#f4ecdc", haare: "#5a3418", frisur: "strubbel", kragen: true, struktur: true, skala: 0.78 },
+  herrscher: { haut: "#d89a6a", hemd: "#f4ecdc", hose: "#e8b830", haare: "#1a1a1a", kragen: "#2a4ab8", krone: true, struktur: true, skala: 0.85 },
   kind: { haut: "#8a5a3a", hemd: "#e85a9a", hose: "#3a3a5a", haare: "#1a1a1a", frisur: "zopf", kapuze: true, brust: "★", skala: 0.78 },
 };
 const F = {}; for (const [n, o] of Object.entries(FO)) F[n] = () => Fg.figur(o);
@@ -59,7 +61,7 @@ E["gesicht-schraeg"] = { gruppe: "Gesichter", zeige: () => { halter.clear(); con
 for (const g of GESICHTER) E["gesicht-" + g] = { gruppe: "Gesichter", zeige: () => { halter.clear(); const f = FIG.ich; f.visible = true; f.position.copy(STUDIO); f.rotation.set(0, 0, 0); Fg.pose(f, { ges: g }); const k = Fg.kopfPos(f); blick(k.clone().add(V(0.3, 0.15, 2.6)), k, 40); studioLicht.intensity = 1.2; licht(1.4, "#fff0e0", k); } };
 const nacht = () => {};
 const tag = () => { U.uTag.value = 1; U.uWolken.value = 1; Wt.hemi.intensity = 1.2; Wt.hemi.color.set("#cfe4ff"); Wt.hemi.groundColor.set("#8a8070"); };
-let STR = null, RT = null;
+let STR = null, RT = null, RW = null;
 const K = {   // Kulissen und Effekte in der Welt (Koordinaten siehe KATALOG.md)
   "stadt-nacht": () => { const z = blick(V(180, 150, 420), V(0, 10, 0), 55); licht(1.2, "#ffd8b0", z); },
   "stadt-tag": () => { tag(); const z = blick(V(180, 150, 420), V(0, 10, 0), 55); licht(1.6, "#fff4e0", z); },
@@ -75,6 +77,13 @@ const K = {   // Kulissen und Effekte in der Welt (Koordinaten siehe KATALOG.md)
   "aula-leer": () => { const A = Al.AULA; Al.raumlicht(A, 30); A.kinder(0); const z = blick(A.pos(-14, 4.5, 28), A.pos(0, 3, -20), 55); licht(0.8, "#fff4e0", z); },
   "geldregen": () => { tag(); const V = Al.VORSTADT; Al.geldSetzen(1.2, true, { ...V.pos(4, 3.5, 0), t0: 0, kraft: 4 }); const ich = FIG["ich-struktur"]; ich.visible = true; ich.position.copy(V.pos(4, 0.3, 0)); ich.rotation.set(0, Math.PI, 0); Fg.pose(ich, { armL: 2.6, armR: 2.6, ges: "lachen" });
     const z = blick(V.pos(3, 4.5, -10), V.pos(4, 4, 0), 50); licht(1.6, "#fff4e0", z); },
+  "wuestendorf-nacht": () => { const W_ = Al.WUESTE; W_.flammen(1); const z = blick(W_.pos(-2, 4.5, 60), W_.pos(1, 4, -20), 55); licht(0.7, "#ffb070", z); },
+  "wuestendorf-tag": () => { tag(); const W_ = Al.WUESTE; W_.flammen(1); const z = blick(W_.pos(-2, 4.5, 60), W_.pos(1, 4, -20), 55); licht(1.6, "#fff0d8", z); },
+  "wuestendorf-pyramiden": () => { const W_ = Al.WUESTE; const z = blick(W_.pos(-30, 8, -70), W_.pos(40, 30, -300), 55); licht(0.8, "#a8b8ff", z); },
+  "glockenturm": () => { const W_ = Al.WUESTE; const z = blick(W_.pos(3, 6, -80), W_.pos(0, 11, -96), 55); licht(0.9, "#ffb070", z); },
+  "thronsaal": () => { const T = Al.THRONSAAL; Al.raumlicht(T, 70); T.flammen(1); T.wandLicht(1); const z = blick(T.pos(0, 6, 40), T.pos(0, 6, -30), 55); licht(1.1, "#ffc070", z); },
+  "thronsaal-waechter": () => { const T = Al.THRONSAAL; Al.raumlicht(T, 70); T.flammen(1); const z = blick(T.pos(-2.5, 3.5, 10), T.pos(-7, 4, -6), 50); licht(1.1, "#ffc070", z); },
+  "riesen-waechter-wueste": () => { const W_ = Al.WUESTE; RW = RW || O.riesenWaechter(); RW.visible = true; RW.position.copy(W_.pos(38, 0, -125)); RW.rotation.y = -0.9; if (!RW.parent) scene.add(RW); const z = blick(W_.pos(24, 3, -66), W_.pos(36, 13, -125), 55); licht(0.9, "#a8b8ff", z); },
   "platz": () => { const z = blick(V(0, 14, 62), V(0, 5, 0), 55); licht(1.2, "#ffd8b0", z); },
   "gasse": () => { const z = blick(V(-70, 4, 96), V(-100, 3, 96), 50); licht(0.8, "#ffd8b0", z); },
   "laden-laternen": () => { const z = blick(V(58, 5, -24), V(79, 4.5, -30), 50); licht(1.2, "#ffd8b0", z); },
@@ -103,7 +112,7 @@ window.NAMEN = Object.keys(E); window.GRUPPEN = Object.fromEntries(Object.entrie
 window.zeige = (name) => { const e = E[name]; if (!e) throw new Error("Unbekannt: " + name);
   U.uT.value = 1; U.uWolken.value = 0; U.uAus.value = 1e6; U.uAn.value = 1e6; U.uTag.value = 0; U.uGold.value = 0; Wt.grade.uniforms.uFlash.value = 0; Wt.grade.uniforms.uVig.value = 0.3;
   Wt.hemi.intensity = 0.6; Wt.hemi.color.set("#5a6ab0"); Wt.hemi.groundColor.set("#141018"); Wt.suchkegel.forEach(k => k.visible = false);
-  Fg.FIGUREN.forEach(f => f.visible = false); if (STR) STR.visible = false; if (RT) RT.visible = false; Rq.ZIMMER.lichterkette.visible = false; Ws.schattenAus(); Ws.laternenAnlegen([]); Al.zuruecksetzen(); studioLicht.intensity = 0; halter.clear(); Wt.boden.visible = true;
+  Fg.FIGUREN.forEach(f => f.visible = false); if (STR) STR.visible = false; if (RT) RT.visible = false; if (RW) RW.visible = false; Rq.ZIMMER.lichterkette.visible = false; Ws.schattenAus(); Ws.laternenAnlegen([]); Al.zuruecksetzen(); studioLicht.intensity = 0; halter.clear(); Wt.boden.visible = true;
   Rq.polizeiSetzen(1, false, false); Rq.notlampenSetzen(0, false); Rq.mengeSetzen(1, { sichtbar: false }); Rq.konfettiSetzen(0, false);
   Wt.autosSetzen(1); Wt.lampenAktualisieren(1);
   e.zeige(1); if (studioLicht.intensity > 0) Wt.boden.visible = false; cam.updateProjectionMatrix();

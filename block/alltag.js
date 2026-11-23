@@ -32,7 +32,9 @@ export const schreibe = (m, zeilen, { bg = "#1f4a3a", fg = "#f4f2e8", font = "90
     x.fillStyle = bg; x.fillRect(0, 0, w, h);
     if (kreide) { x.globalAlpha = 0.06; for (let i = 0; i < 40; i++) { x.fillStyle = "#fff"; x.beginPath(); x.ellipse((i * 137) % w, (i * 71) % h, 120, 30, i, 0, 7); x.fill(); } x.globalAlpha = 1; }
     if (rahmen) { x.strokeStyle = rahmen; x.lineWidth = w * 0.03; x.strokeRect(0, 0, w, h); }
-    x.fillStyle = fg; x.font = font; x.textAlign = ausr; x.textBaseline = "middle"; const fs = parseInt(/(\d+)px/.exec(font)?.[1] || 100);
+    x.fillStyle = fg; let fs = parseInt(/(\d+)px/.exec(font)?.[1] || 100); const mitGr = (g) => font.replace(/\d+px/, g + "px"); x.font = font;
+    while (fs > 12 && (Math.max(...zeilen.map(z => x.measureText(z).width)) > w * 0.92 || zeilen.length * fs * 1.15 > h * 0.95)) { fs -= 4; x.font = mitGr(fs); }   // passt immer in die Fläche
+    x.textAlign = ausr; x.textBaseline = "middle";
     let rest = sichtbar; zeilen.forEach((z, i) => { const s = z.slice(0, Math.max(0, rest)); rest -= z.length + 1; const y = h / 2 + (i - (zeilen.length - 1) / 2) * fs * 1.15;
       x.fillText(s, ausr === "center" ? w / 2 : w * 0.08, y); });
   }, zeilen.join("|") + sichtbar + bg + fg);
@@ -162,7 +164,7 @@ export const STUBE = raum("stube", 1400, 600, 14, 12, 6.5, { wandU: "#c8a8e0", w
 
 // Ein Licht für den Raum, in dem gerade gefilmt wird (sonst aus): raumlicht(KLASSE) | raumlicht(null)
 export const RAUMLICHT = new THREE.PointLight("#fff4e4", 0, 40, 1.4); scene.add(RAUMLICHT);
-export const raumlicht = (R, staerke = 12) => { if (!R) { RAUMLICHT.intensity = 0; return; } RAUMLICHT.position.copy(R.lampe); RAUMLICHT.intensity = staerke; };
+export const raumlicht = (R, staerke = 12, farbe = null) => { if (!R) { RAUMLICHT.intensity = 0; RAUMLICHT.color.set("#fff4e4"); return; } RAUMLICHT.position.copy(R.lampe); RAUMLICHT.intensity = staerke; RAUMLICHT.color.set(farbe ?? R.lichtFarbe ?? "#fff4e4"); };
 
 // ---------- Effekte ----------
 export const regenbogen = new THREE.Mesh(new THREE.TorusGeometry(60, 6, 8, 64, Math.PI), new THREE.MeshBasicMaterial({ transparent: true, opacity: 0.75, depthWrite: false, fog: false,
@@ -280,3 +282,55 @@ export const geldSetzen = (t, an = false, o = {}) => { const { x = 0, y = 4, z =
     p.set(x + Math.cos(d.a) * hor + Math.sin(tt * d.w + d.ph) * 0.4, Math.max(0.05, y + kraft * d.up * steig * 2 - fall * 1.4), z + Math.sin(d.a) * hor + Math.cos(tt * d.w * 0.8 + d.ph) * 0.4);
     e.set(Math.sin(tt * d.w + d.ph) * 1.2, tt * d.w * 0.7 + d.ph, Math.cos(tt * d.w * 1.3) * 0.8); q.setFromEuler(e); m.compose(p, q, sk); geldW.setMatrixAt(i, m); }
   geldW.instanceMatrix.needsUpdate = true; };
+
+// ---------- Wüstendorf (Vergleich 24.11.): Gasse mit Lehmhäusern, Wimpelketten, Fackeln, Krügen, Palmen, Pyramiden am Horizont ----------
+// Bei (-1800, 0, -1000); Gasse entlang lokal z (-90 … 90), Häuser bei x ±10. WUESTE.fackeln: Flammen-Gruppen (sanft wiegen, nie flackern).
+const sandTex = canvasTex(256, 256, (x, w, h) => { x.fillStyle = "#e2c08a"; x.fillRect(0, 0, w, h); let s = 12; const r = () => { s = (s * 16807) % 2147483647; return s / 2147483647; }; for (let i = 0; i < 4000; i++) { const k = 0.9 + r() * 0.18; x.fillStyle = `rgb(${226 * k | 0},${192 * k | 0},${138 * k | 0})`; x.fillRect(r() * w, r() * h, 2, 2); } }, [80, 80]);
+export const WUESTE = (() => {
+  const g = new THREE.Group(); g.position.set(-1800, 0, -1000); scene.add(g); const W_ = { g, fackeln: [] }; let s = 41; const r = () => { s = (s * 16807) % 2147483647; return s / 2147483647; };
+  const sand = new THREE.Mesh(new THREE.PlaneGeometry(900, 900).rotateX(-Math.PI / 2), new THREE.MeshStandardMaterial({ map: sandTex, roughness: 0.95 })); sand.position.y = 0.04; g.add(sand);
+  const weg = new THREE.Mesh(new THREE.PlaneGeometry(9, 200).rotateX(-Math.PI / 2), new THREE.MeshStandardMaterial({ color: "#d8c8a8", roughness: 0.9 })); weg.position.y = 0.06; g.add(weg);
+  const farben = ["#e8c48a", "#f0d0a0", "#e0b080", "#f4dcb4", "#e8b898"], baender = ["#2ab0a8", "#2a6ae8", "#d84a3a", "#e8a82a"]; let k = 0;
+  for (let z = -84; z <= 84; z += 12) for (const sx of [-1, 1]) {
+    const h = O.lehmhaus({ farbe: farben[k % farben.length], band: baender[(k * 3) % baender.length], breite: 9 + r() * 3, tiefe: 8 + r() * 2, hoehe: 5.5 + r() * 2.5, saat: k + 7 }); k++;
+    h.position.set(sx * 10.5, 0.04, z); h.rotation.y = -sx * Math.PI / 2; g.add(h);
+    if (r() < 0.55) { const kr = O.krug({ farbe: ["#d8603a", "#c8502a", "#e07848"][k % 3], groesse: 0.8 + r() * 0.5 }); kr.position.set(sx * 5.2, 0.04, z + 3 + r() * 2); g.add(kr); }
+    if (k % 2 === 0) { const f = O.fackel({ hoehe: 4.2 }); f.position.set(sx * 5.4, 0.04, z - 4); g.add(f); W_.fackeln.push(f.userData.flamme); }
+    if (k % 3 === 1) { const w = O.wimpelkette({ laenge: 13, durchhang: 1 }); w.position.set(0, 7 + r(), z + 6); g.add(w); } }
+  for (let i = 0; i < 26; i++) { const p = O.palme({ hoehe: 8 + r() * 6, saat: i + 3 }); const a = r() * Math.PI * 2, d = 40 + r() * 120; p.position.set(Math.cos(a) * d * 1.3, 0.04, Math.sin(a) * d); g.add(p); }
+  for (const [x, z, gr] of [[-120, -260, 110], [60, -330, 150], [200, -240, 80]]) { const py = O.pyramide({ groesse: gr }); py.position.set(x, 0, z); g.add(py); }
+  const turm = new THREE.Group(); turm.position.set(0, 0.04, -96); g.add(turm); const tm = new THREE.MeshStandardMaterial({ map: lehmTexA(), roughness: 0.95 });
+  for (const sx of [-1, 1]) { const sl = new THREE.Mesh(new THREE.BoxGeometry(1.2, 14, 1.2), tm); sl.position.set(sx * 3, 7, 0); turm.add(sl); }
+  const dach = new THREE.Mesh(new THREE.BoxGeometry(8, 1.2, 3), tm); dach.position.y = 14.6; turm.add(dach); const gl = O.glocke(); gl.position.y = 11.6; turm.add(gl); W_.glocke = gl;
+  W_.flammen = (t) => W_.fackeln.forEach((f, i) => { const w = 1 + 0.06 * Math.sin(t * 2.3 + i * 1.7); f.scale.set(1, w, 1); f.rotation.z = 0.05 * Math.sin(t * 1.7 + i); });
+  W_.pos = (x, y, z) => new THREE.Vector3(g.position.x + x, y, g.position.z + z); return W_; })();
+function lehmTexA() { return canvasTex(128, 128, (x, w, h) => { x.fillStyle = "#e0b880"; x.fillRect(0, 0, w, h); for (let i = 0; i < 300; i++) { x.fillStyle = "rgba(120,80,40,0.12)"; x.fillRect((i * 37) % w, (i * 61) % h, 4, 2); } }); }
+
+// ---------- Thronsaal (Vergleich 24.11.): Säulenhalle, leuchtende Wandzeichen, Reihen kniender Steinwächter, Thron, Krone auf Sockel ----------
+// Bei (1800, 0, -1400); Thron am Ende bei lokal z = -40, Gang entlang z. THRONSAAL.wandLicht(0…1) lässt die Zeichen glühen.
+export const THRONSAAL = (() => {
+  const R = raum("thronsaal", 1800, -1400, 36, 90, 20, { wandU: "#c8a060", wandO: "#d8b070", boden: new THREE.MeshStandardMaterial({ color: "#e8c878", roughness: 0.35, metalness: 0.1 }), decke: "#8a6a3a" });
+  const g = R.g; const T = R; T.lichtFarbe = "#ffc070";
+  g.children.forEach(o => { if (o.isMesh && o.material.isMeshBasicMaterial && o.position.y > 19) o.material = new THREE.MeshBasicMaterial({ color: new THREE.Color(1.8, 1.25, 0.6) }); });   // warme Deckenlichter
+  const laeufer = new THREE.Mesh(new THREE.PlaneGeometry(4, 86).rotateX(-Math.PI / 2), mat("#2a4ab8", 0.8)); laeufer.position.y = 0.08; g.add(laeufer);
+  for (let i = 0; i < 8; i++) for (const sx of [-1, 1]) { const sl = new THREE.Group(); sl.position.set(sx * 12, 0, -36 + i * 10); g.add(sl);
+    const sm = mat("#d8b070", 0.7); const c = new THREE.Mesh(new THREE.CylinderGeometry(1.3, 1.4, 18, 20), sm); c.position.y = 9; sl.add(c);
+    for (const y of [1.5, 16.8]) { const rg = new THREE.Mesh(new THREE.CylinderGeometry(1.5, 1.5, 0.6, 20), mat("#2ab0a8", 0.5)); rg.position.y = y; sl.add(rg); }
+    const kap = new THREE.Mesh(new THREE.CylinderGeometry(2.0, 1.4, 1.4, 20), mat("#e8b830", 0.4, 0.6)); kap.position.y = 18.3; sl.add(kap); }
+  // leuchtende Wandzeichen (eigene Symbole, keine echte Schrift)
+  const zeichenTex = canvasTex(512, 512, (x, w, h) => { x.fillStyle = "#000"; x.fillRect(0, 0, w, h); x.fillStyle = "#ffd060"; let s = 9; const r = () => { s = (s * 16807) % 2147483647; return s / 2147483647; };
+    for (let row = 0; row < 12; row++) for (let col = 0; col < 10; col++) { const cx = col * 50 + 25, cy = row * 42 + 22, f = Math.floor(r() * 6); x.beginPath();
+      if (f === 0) x.arc(cx, cy, 10, 0, 7); else if (f === 1) { x.rect(cx - 9, cy - 12, 18, 24); } else if (f === 2) { x.moveTo(cx, cy - 14); x.lineTo(cx + 12, cy + 10); x.lineTo(cx - 12, cy + 10); } else if (f === 3) { x.rect(cx - 2, cy - 14, 4, 28); x.rect(cx - 10, cy - 4, 20, 4); } else if (f === 4) { x.ellipse(cx, cy, 13, 6, 0, 0, 7); } else { x.arc(cx, cy, 11, 0, Math.PI); }
+      x.globalAlpha = 0.85; x.fill(); x.globalAlpha = 1; } });
+  T.zeichenMat = new THREE.MeshBasicMaterial({ map: zeichenTex, color: new THREE.Color(1.6, 1.3, 0.7), transparent: true, blending: THREE.AdditiveBlending, depthWrite: false });
+  for (const sx of [-1, 1]) for (let i = 0; i < 4; i++) { const p = new THREE.Mesh(new THREE.PlaneGeometry(14, 10), T.zeichenMat); p.position.set(sx * 17.82, 9, -32 + i * 18); p.rotation.y = -sx * Math.PI / 2; g.add(p); }
+  T.wandLicht = (a = 1) => T.zeichenMat.color.setRGB(1.6 * a, 1.3 * a, 0.7 * a);
+  // kniende Steinwächter in Reihen beidseits des Gangs (zusammengefügt → wenige Zeichenaufrufe)
+  const w1 = O.steinwaechter(), w2 = O.steinwaechter({ ohren: true }); T.waechter = [];
+  for (let i = 0; i < 9; i++) for (let rr = 0; rr < 2; rr++) for (const sx of [-1, 1]) { const w = (i + rr) % 3 === 0 ? w2.clone() : w1.clone(); w.position.set(sx * (5 + rr * 3.6), 0, -34 + i * 8.5 + rr * 1.5); w.rotation.y = -sx * Math.PI / 2 * 0.0; w.scale.setScalar(0.85); g.add(w); T.waechter.push(w); }
+  const th = O.thron(); th.position.set(0, 0, -40); g.add(th); T.thron = th;
+  const so = O.sockel(); so.position.set(0, 2.4, -34.5); g.add(so); const kr = O.krone(); kr.position.set(0, 5.75, -34.5); g.add(kr); T.krone = kr;
+  T.fackeln = []; for (let i = 0; i < 8; i++) for (const sx of [-1, 1]) { const f = O.fackel({ hoehe: 3.6 }); f.position.set(sx * 9.6, 0, -36 + i * 10 + 5); g.add(f); T.fackeln.push(f.userData.flamme); }
+  T.banner = leinwand(16, 1.8, { px: 1600 }); T.banner.position.set(0, 16, -44.8); g.add(T.banner); schreibe(T.banner, ["DER HÜTER IST ZURÜCK"], { bg: "#2a2a3a", fg: "#ffd060", font: "700 150px 'DejaVu Serif', serif" });
+  T.flammen = (t) => T.fackeln.forEach((f, i) => { const w = 1 + 0.06 * Math.sin(t * 2.1 + i * 1.3); f.scale.set(1, w, 1); });
+  T.pos = (x, y, z) => new THREE.Vector3(g.position.x + x, y, g.position.z + z); return T; })();

@@ -61,7 +61,8 @@ const blobTex = (() => { const c = document.createElement("canvas"); c.width = c
 export const FIGUREN = [];
 // o: haut, hemd, hose, haare, frisur ('kurz','zopf','dutt','strubbel','glatze'), helm, weste, muetze, brille, kapuze, schuhe, skala,
 //    jacke (offene Jacke über dem Hemd), brust (Zeichen/Emoji auf der Brust, brustFarbe), struktur (Stoff- und Haarstruktur, für neue Folgen),
-//    propeller (Propellermütze; true oder 4 Farben; drehen: f.userData.propeller.rotation.y = t * 12), sonnenbrille, muster { hemd, hose: streifen|karo|punkte }
+//    propeller (Propellermütze; true oder 4 Farben; drehen: f.userData.propeller.rotation.y = t * 12), sonnenbrille, muster { hemd, hose: streifen|karo|punkte },
+//    kragen (breiter Halskragen; true oder Farbe), krone (goldene Krone)
 export const figur = (o) => {
   const sk = o.skala ?? 1, haut = o.haut ?? "#e8b98a";
   const f = new THREE.Group(); const hautM = plastik(haut);
@@ -88,9 +89,13 @@ export const figur = (o) => {
     prop.add(new THREE.Mesh(new THREE.SphereGeometry(0.07, 10, 8), plastik("#f2c21a"))); f.userData_propeller = prop; }
   if (o.sonnenbrille) { const sm = new THREE.MeshPhysicalMaterial({ color: "#0a0a0e", roughness: 0.08, clearcoat: 1, metalness: 0.3 }); for (const ex of [-0.3, 0.3]) { const gl = rb(0.42, 0.26, 0.05, 0.06, sm); gl.position.set(ex, 0.72, 0.66); kopfG.add(gl); }
     const st = rb(0.22, 0.05, 0.04, 0.01, sm); st.position.set(0, 0.77, 0.66); kopfG.add(st); for (const sx of [-1, 1]) { const b = rb(0.04, 0.05, 0.6, 0.01, sm); b.position.set(sx * 0.63, 0.75, 0.38); kopfG.add(b); } }
+  if (o.kragen) { const c = document.createElement("canvas"); c.width = 256; c.height = 32; const x = c.getContext("2d"); x.fillStyle = o.kragen === true ? "#2ab0a8" : o.kragen; x.fillRect(0, 0, 256, 32); x.fillStyle = "#f0c030"; for (let i = 0; i < 16; i++) { x.beginPath(); x.arc(i * 16 + 8, 16, 5, 0, 7); x.fill(); }
+    const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; t.wrapS = THREE.RepeatWrapping; t.repeat.set(2, 1); const k = new THREE.Mesh(new THREE.CylinderGeometry(1.05, 1.2, 0.35, 32, 1, true), new THREE.MeshStandardMaterial({ map: t, roughness: 0.5, side: THREE.DoubleSide })); k.position.y = 3.86; k.scale.set(1, 1, 0.62); f.userData_kragen = k; }
+  if (o.krone) { const gm = new THREE.MeshStandardMaterial({ color: "#f0c030", metalness: 0.85, roughness: 0.25, emissive: "#f0c030", emissiveIntensity: 0.15 }); const kr = new THREE.Group(); kr.position.y = 1.45; kopfG.add(kr);
+    kr.add(new THREE.Mesh(new THREE.CylinderGeometry(0.72, 0.72, 0.35, 24), gm)); for (let i = 0; i < 6; i++) { const a = i / 6 * Math.PI * 2; const z = new THREE.Mesh(new THREE.ConeGeometry(0.18, 0.5, 4), gm); z.position.set(Math.cos(a) * 0.64, 0.4, Math.sin(a) * 0.64); kr.add(z); const st = new THREE.Mesh(new THREE.SphereGeometry(0.08, 8, 6), new THREE.MeshBasicMaterial({ color: new THREE.Color(0.4, 2, 2.2) })); st.position.set(Math.cos(a) * 0.73, 0.05, Math.sin(a) * 0.73); kr.add(st); } }
   if (o.brille) { const bm = new THREE.MeshStandardMaterial({ color: "#222", roughness: 0.3 }); for (const ex of [-0.31, 0.31]) { const r = new THREE.Mesh(new THREE.TorusGeometry(0.17, 0.03, 6, 16), bm); r.position.set(ex, 0.72, 0.66); kopfG.add(r); } const st = rb(0.24, 0.04, 0.04, 0.01, bm); st.position.set(0, 0.74, 0.66); kopfG.add(st); }
   const hemdM = (o.kapuze || o.stoff) ? stoff(o.hemd) : plastik(o.hemd); if (S) strukturieren(hemdM); mustern(hemdM, o.muster?.hemd);
-  const torso = rb(2, 2, 1, 0.12, hemdM); torso.position.y = 2.95; koerper.add(torso);
+  const torso = rb(2, 2, 1, 0.12, hemdM); torso.position.y = 2.95; koerper.add(torso); if (f.userData_kragen) { koerper.add(f.userData_kragen); delete f.userData_kragen; }
   if (o.kapuze) { const k = rb(1.6, 0.5, 0.5, 0.2, hemdM); k.position.set(0, 3.85, -0.45); koerper.add(k); const t = rb(0.9, 0.6, 0.06, 0.05, stoff(new THREE.Color(o.hemd).multiplyScalar(0.8))); t.position.set(0, 2.45, 0.52); koerper.add(t); }
   if (o.weste) { const wm = plastik(o.weste); if (S) strukturieren(wm); const w = rb(2.06, 1.8, 1.06, 0.12, wm); w.position.y = 3.0; koerper.add(w); const st = new THREE.MeshStandardMaterial({ color: "#e8e8e0", emissive: "#bfbfb0", emissiveIntensity: 0.6, roughness: 0.3 });
     for (const y of [2.55, 3.25]) { const s = new THREE.Mesh(new THREE.BoxGeometry(2.1, 0.16, 1.1), st); s.position.y = y; koerper.add(s); } }

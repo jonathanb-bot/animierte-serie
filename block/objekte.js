@@ -214,5 +214,72 @@ export const lichterkette = ({ laenge = 10, n = 24, farbe = [3, 2.6, 1.6], durch
   g.add(im); const pts = []; for (let i = 0; i <= 64; i++) { const t = i / 64; pts.push(new THREE.Vector3(-laenge / 2 + t * laenge, -Math.sin(((t * laenge) % (laenge / 4)) / (laenge / 4) * Math.PI) * durchhang, 0)); }
   g.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts), new THREE.LineBasicMaterial({ color: "#2a2a2a" }))); return g; };
 
+// ---------- Wüste, Tempel, Wächter (Vergleich 24.11.: Wüstendorf mit Pyramiden; nur Mittel, keine echten Gottheiten) ----------
+const lehmTex = (farbe = "#e8c48a") => tex(256, 256, (x, w, h) => { x.fillStyle = farbe; x.fillRect(0, 0, w, h); let s = 6; const r = () => { s = (s * 16807) % 2147483647; return s / 2147483647; };
+  for (let i = 0; i < 6000; i++) { const k = 0.95 + r() * 0.08; const c = new THREE.Color(farbe); x.fillStyle = `rgb(${c.r * 255 * k | 0},${c.g * 255 * k | 0},${c.b * 255 * k | 0})`; x.fillRect(r() * w, r() * h, 1.5, 1.5); } }, [1, 1]);
+// Lehmhaus mit flachem Dach, Zierband, Fensterläden, Tür; Front nach +z
+export const lehmhaus = ({ farbe = "#e8c48a", band = "#2ab0a8", breite = 9, tiefe = 8, hoehe = 6.5, saat = 4 } = {}) => {
+  const g = new THREE.Group(), r = zufall(saat), wm = new THREE.MeshStandardMaterial({ map: lehmTex(farbe), roughness: 0.95 }); an(g, bx(breite, hoehe, tiefe, wm), 0, hoehe / 2, 0);
+  an(g, bx(breite + 0.4, 0.5, tiefe + 0.4, wm), 0, hoehe + 0.25, 0); an(g, bx(breite + 0.05, 0.35, tiefe + 0.05, mat(band, 0.6)), 0, hoehe - 0.6, 0);
+  an(g, bx(breite + 0.06, 0.15, tiefe + 0.06, mat("#d84a3a", 0.6)), 0, hoehe - 0.95, 0);
+  an(g, bx(1.8, 3.4, 0.2, mat("#7a4a2a", 0.7)), -breite * 0.2, 1.7, tiefe / 2 + 0.05);
+  for (const fx of [breite * 0.22]) { an(g, bx(1.4, 1.4, 0.15, mat("#3a2a1a")), fx, 3.6, tiefe / 2 + 0.03); for (const sx of [-1, 1]) an(g, bx(0.7, 1.5, 0.12, mat(band, 0.6)), fx + sx * 1.1, 3.6, tiefe / 2 + 0.1); }
+  if (r() < 0.6) { const st = an(g, bx(breite * 0.45, 2.2, tiefe * 0.5, wm), breite * 0.2, hoehe + 1.6, -tiefe * 0.15); }
+  if (r() < 0.5) { const m = an(g, new THREE.Mesh(new THREE.PlaneGeometry(3, 1.4), new THREE.MeshStandardMaterial({ color: ["#e85a5a", "#5a8ae8", "#f0c040"][saat % 3], side: THREE.DoubleSide, roughness: 0.8 })), breite * 0.2, 4.4, tiefe / 2 + 0.8); m.rotation.x = -0.5; }
+  return g; };
+// Wimpelkette: bunte Dreiecke an einer Leine (lokal x von -laenge/2 bis +laenge/2)
+export const wimpelkette = ({ laenge = 12, n = 14, farben = ["#e83a5a", "#2a8ae8", "#f2c21a", "#2ab0a8", "#8a5ae8"], durchhang = 0.8 } = {}) => { const g = new THREE.Group();
+  const geo = new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(-0.3, 0, 0), new THREE.Vector3(0.3, 0, 0), new THREE.Vector3(0, -0.75, 0)]); geo.computeVertexNormals();
+  const y = t => -Math.sin(t * Math.PI) * durchhang;
+  for (let i = 0; i < n; i++) { const t = (i + 0.5) / n; const w = an(g, new THREE.Mesh(geo, new THREE.MeshStandardMaterial({ color: farben[i % farben.length], side: THREE.DoubleSide, roughness: 0.8 })), -laenge / 2 + t * laenge, y(t), 0); }
+  const pts = []; for (let i = 0; i <= 32; i++) { const t = i / 32; pts.push(new THREE.Vector3(-laenge / 2 + t * laenge, y(t), 0)); } g.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts), new THREE.LineBasicMaterial({ color: "#3a2a1a" }))); return g; };
+// Fackel mit weicher Flamme (leuchtet, wiegt sich langsam: userData.flamme.scale pro Bild sanft ändern, nie flackern)
+export const fackel = ({ hoehe = 4.5, stand = true } = {}) => { const g = new THREE.Group(), em = metall("#6a4a2a");
+  if (stand) { an(g, zyl(0.12, 0.18, hoehe, em, 10), 0, hoehe / 2, 0); an(g, zyl(0.6, 0.6, 0.12, em, 16), 0, 0.06, 0); }
+  an(g, zyl(0.55, 0.25, 0.5, metall("#b8862a"), 16), 0, hoehe + 0.2, 0);
+  const fl = new THREE.Group(); fl.position.y = hoehe + 0.45; g.add(fl);
+  const f1 = an(fl, new THREE.Mesh(new THREE.SphereGeometry(0.45, 16, 12), leucht(3.2, 2.2, 0.6)), 0, 0.35, 0); f1.scale.set(1, 1.9, 1);
+  const f2 = an(fl, new THREE.Mesh(new THREE.SphereGeometry(0.28, 12, 10), leucht(3.6, 3.2, 1.8)), 0, 0.3, 0); f2.scale.set(1, 1.6, 1);
+  g.userData.flamme = fl; return g; };
+export const krug = ({ farbe = "#d8603a", groesse = 1 } = {}) => { const g = new THREE.Group(), m = mat(farbe, 0.75); const k = an(g, kugel(0.7, m, 18), 0, 0.75, 0); k.scale.set(1, 1.1, 1);
+  an(g, zyl(0.32, 0.42, 0.45, m, 16), 0, 1.6, 0); an(g, zyl(0.42, 0.42, 0.1, m, 16), 0, 1.85, 0); an(g, zyl(0.4, 0.4, 0.1, mat(new THREE.Color(farbe).multiplyScalar(0.55), 0.7), 18), 0, 1.05, 0).scale.set(1.62, 1, 1.62); g.scale.setScalar(groesse); return g; };
+export const palme = ({ hoehe = 9, saat = 2 } = {}) => { const g = new THREE.Group(), r = zufall(saat), sm = mat("#9a7a4a", 0.85), bm = mat("#3aa84a", 0.8);
+  let p = new THREE.Vector3(0, 0, 0); const neig = 0.06 + r() * 0.08; for (let i = 0; i < 8; i++) { const s = an(g, zyl(0.32 - i * 0.02, 0.36 - i * 0.02, hoehe / 8, sm, 8), p.x, p.y + hoehe / 16, 0); s.rotation.z = -neig; p = new THREE.Vector3(p.x + Math.sin(neig) * hoehe / 8, p.y + Math.cos(neig) * hoehe / 8, 0); }
+  for (let i = 0; i < 11; i++) { const a = i / 11 * Math.PI * 2 + r() * 0.2; const b = new THREE.Group(); b.position.copy(p); b.rotation.y = a; g.add(b); for (let k = 0; k < 3; k++) { const bl = an(b, rb(1.1 - k * 0.2, 0.08, 1.8, 0.04, k % 2 ? bm : mat("#2e9a3e", 0.8)), 0, -0.1 - k * 0.55, 0.9 + k * 1.5); bl.rotation.x = 0.2 + k * 0.32; } } an(g, kugel(0.5, mat("#7a5a2a", 0.8), 10), p.x, p.y - 0.3, 0); return g; };
+export const pyramide = ({ groesse = 60, farbe = "#e0b878" } = {}) => { const g = new THREE.Group(); const p = an(g, new THREE.Mesh(new THREE.ConeGeometry(groesse * 0.75, groesse, 4, 1), new THREE.MeshStandardMaterial({ color: farbe, roughness: 0.95, flatShading: true })), 0, groesse / 2, 0); p.rotation.y = Math.PI / 4; return g; };
+export const glocke = ({ farbe = "#d08a3a" } = {}) => { const g = new THREE.Group(), m = new THREE.MeshStandardMaterial({ color: farbe, metalness: 0.35, roughness: 0.35, side: THREE.DoubleSide });
+  const pts = [[0.01, 2.35], [0.45, 2.32], [0.68, 2.15], [0.74, 1.8], [0.78, 1.3], [0.9, 0.8], [1.1, 0.38], [1.36, 0.1], [1.42, 0.0], [1.3, 0.04]].map(([x, y]) => new THREE.Vector2(x, y));
+  an(g, new THREE.Mesh(new THREE.LatheGeometry(pts, 40), m)); an(g, kugel(0.24, m, 12), 0, 0.15, 0); an(g, zyl(0.04, 0.04, 2, m, 6), 0, 1.1, 0); an(g, new THREE.Mesh(new THREE.TorusGeometry(0.25, 0.08, 8, 16), m), 0, 2.5, 0);
+  g.userData.schwingen = g; return g; };
+// Thron mit hoher Lehne, Gold und Türkis
+export const thron = ({ gold = "#e8b830", stein = "#2ab0a8" } = {}) => { const g = new THREE.Group(), gm = new THREE.MeshStandardMaterial({ color: gold, metalness: 0.8, roughness: 0.3 }), sm = mat(stein, 0.4);
+  for (let i = 0; i < 4; i++) an(g, bx(9 - i * 1.4, 0.6, 6 - i * 0.8, mat("#d8b878", 0.8)), 0, 0.3 + i * 0.6, 0);
+  an(g, rb(3, 1.2, 2.6, 0.1, gm), 0, 3.3, 0); an(g, rb(3.2, 6, 0.6, 0.15, gm), 0, 6.5, -1.1); an(g, rb(2.2, 4.6, 0.2, 0.1, sm), 0, 6.5, -0.75);
+  for (const sx of [-1, 1]) { an(g, rb(0.5, 1.6, 2.6, 0.1, gm), sx * 1.6, 4.2, 0); an(g, kugel(0.35, sm, 12), sx * 1.6, 5.1, 1.0); }
+  an(g, kugel(0.7, gm, 16), 0, 9.6, -1.1).scale.set(1.4, 0.8, 0.5); return g; };
+// Krone auf Sockel (Leuchten optional); als Kopfschmuck: figur({ krone: true })
+export const krone = ({ gold = "#f0c030", leuchtet = true } = {}) => { const g = new THREE.Group(), gm = new THREE.MeshStandardMaterial({ color: gold, metalness: 0.85, roughness: 0.25, emissive: leuchtet ? gold : "#000", emissiveIntensity: leuchtet ? 0.25 : 0 });
+  an(g, zyl(0.8, 0.8, 0.45, gm, 24), 0, 0.22, 0); for (let i = 0; i < 6; i++) { const a = i / 6 * Math.PI * 2; const z = an(g, new THREE.Mesh(new THREE.ConeGeometry(0.22, 0.6, 4), gm), Math.cos(a) * 0.72, 0.7, Math.sin(a) * 0.72); an(g, kugel(0.1, leucht(0.4, 2.2, 2.4), 8), Math.cos(a) * 0.82, 0.3, Math.sin(a) * 0.82); } return g; };
+export const sockel = ({ farbe = "#2a3a6a" } = {}) => { const g = new THREE.Group(); an(g, rb(2.4, 3, 2.4, 0.08, mat(farbe, 0.5)), 0, 1.5, 0); an(g, rb(2.8, 0.3, 2.8, 0.05, new THREE.MeshStandardMaterial({ color: "#e8b830", metalness: 0.8, roughness: 0.3 })), 0, 3.1, 0); return g; };
+// Steinwächter (kniend, leuchtende Augen) – viele davon über steinwaechterReihen() in alltag.js
+export const steinwaechter = ({ stein = "#5a4a42", band = "#2ac8a8", ohren = false } = {}) => { const g = new THREE.Group(), sm = mat(stein, 0.85), bm = mat(band, 0.5);
+  an(g, rb(2.2, 2.4, 1.4, 0.15, sm), 0, 2.6, 0); an(g, bx(2.25, 0.6, 1.45, bm), 0, 3.4, 0.01); const k = an(g, rb(1.5, 1.5, 1.4, 0.15, sm), 0, 4.6, 0.1);
+  for (const sx of [-0.35, 0.35]) an(g, bx(0.32, 0.14, 0.05, leucht(1.2, 3, 3.2)), sx, 4.75, 0.82);
+  if (ohren) for (const sx of [-0.45, 0.45]) an(g, bx(0.3, 1.0, 0.25, sm), sx, 5.8, 0);
+  for (const sx of [-1, 1]) { an(g, rb(0.7, 2.2, 0.8, 0.1, sm), sx * 1.45, 2.6, 0.3); an(g, rb(0.8, 0.9, 2.2, 0.1, sm), sx * 0.55, 0.45, 0.6); }
+  an(g, rb(2.6, 0.5, 3, 0.05, new THREE.MeshStandardMaterial({ color: "#c8962a", metalness: 0.6, roughness: 0.4 })), 0, -0.05, 0.3); return g; };
+// Riesen-Wächter: großes, schlankes Steinwesen mit Goldbändern, leuchtenden Augen und Stab (eigenes Wesen). groesse 1 ≈ 22 m
+export const riesenWaechter = ({ stein = "#1a1e30", gold = "#e8b830", augen = [3.2, 2.6, 0.6], groesse = 1 } = {}) => { const g = new THREE.Group(), sm = mat(stein, 0.5), gm = new THREE.MeshStandardMaterial({ color: gold, metalness: 0.8, roughness: 0.3 });
+  for (const sx of [-1, 1]) { an(g, rb(1.6, 8, 1.8, 0.2, sm), sx * 1.3, 4, 0); for (let i = 0; i < 3; i++) an(g, bx(1.7, 0.3, 1.9, gm), sx * 1.3, 2 + i * 2.4, 0); }
+  an(g, rb(4.6, 3, 2.6, 0.2, gm), 0, 9.2, 0); an(g, rb(5.2, 6, 2.6, 0.3, sm), 0, 12.5, 0); for (let i = 0; i < 4; i++) an(g, bx(5.3, 0.3, 2.7, gm), 0, 10.5 + i * 1.5, 0);
+  an(g, rb(7.4, 1.2, 3.0, 0.3, gm), 0, 15.2, 0);
+  for (const sx of [-1, 1]) { const arm = an(g, rb(1.3, 7, 1.4, 0.2, sm), sx * 3.5, 12.2, 0.3); for (let i = 0; i < 2; i++) an(g, bx(1.4, 0.3, 1.5, gm), sx * 3.5, 10 + i * 2.2, 0.3); }
+  const kopf = new THREE.Group(); kopf.position.set(0, 16.6, 0); g.add(kopf); an(kopf, rb(2.6, 2.4, 2.6, 0.3, sm), 0, 1.2, 0); 
+  for (const sx of [-0.65, 0.65]) an(kopf, bx(0.7, 0.3, 0.1, leucht(...augen)), sx, 1.4, 1.32);
+  for (let i = -2; i <= 2; i++) { const k = an(kopf, rb(0.5, 1.6 - Math.abs(i) * 0.3, 0.3, 0.12, gm), i * 0.5, 3.0 - Math.abs(i) * 0.15, -0.2); k.rotation.z = -i * 0.25; }   // Kamm aus Goldplatten (eigenes Wesen)
+  an(kopf, bx(2.7, 0.35, 2.7, gm), 0, 2.2, 0);
+  const stab = an(g, zyl(0.25, 0.25, 22, gm, 12), 4.6, 11, 1.4); an(g, kugel(0.8, leucht(...augen), 16), 4.6, 22.3, 1.4);
+  g.userData = { kopf }; g.scale.setScalar(groesse); return g; };
+
 // Liste für Katalog und Vorschau (Name → Bau-Funktion mit Standardwerten)
-export const ALLE = { baum, blumenkuebel, hecke, bank, laterne, ampel, hydrant, muelltonne, briefkasten, schild, zaun, brunnen, laden, haltestelle, fahrrad, bus, hund, katze, vogel, tisch, stuhl, sofa, stehlampe, regal, geschenk, fernseher, riesenTier, haus, schule, sportwagen, lichterkette };
+export const ALLE = { baum, blumenkuebel, hecke, bank, laterne, ampel, hydrant, muelltonne, briefkasten, schild, zaun, brunnen, laden, haltestelle, fahrrad, bus, hund, katze, vogel, tisch, stuhl, sofa, stehlampe, regal, geschenk, fernseher, riesenTier, haus, schule, sportwagen, lichterkette, lehmhaus, wimpelkette, fackel, krug, palme, pyramide, glocke, thron, krone, sockel, steinwaechter, riesenWaechter };
