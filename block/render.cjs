@@ -20,6 +20,8 @@ const von = Number(process.env.VON || 0), bis = process.env.BIS ? Number(process
   if (nurBilder) { fs.rmSync("bilder", { recursive: true, force: true }); fs.mkdirSync("bilder"); } else fs.mkdirSync(ordner, { recursive: true });
   let i = 0; const t0 = Date.now();
   for (const t of zeiten) {
+    const name0 = nurBilder ? null : `${ordner}/${String(von + i).padStart(5, "0")}.jpg`;
+    if (name0 && process.env.WEITER && fs.existsSync(name0)) { i++; continue; }   // WEITER=1: schon fertige Bilder überspringen
     await page.evaluate(t => window.renderAt(t), t);
     const name = nurBilder ? `bilder/${String(i).padStart(3, "0")}_${t.toFixed(2)}.jpg` : `${ordner}/${String(von + i).padStart(5, "0")}.jpg`;
     await page.screenshot({ path: name, type: "jpeg", quality: 93 }); i++;

@@ -186,7 +186,9 @@ class Ton:
         stimme_pfad = stimme_pfad or os.environ.get("STIMME", "stimme_final.wav"); ziel = ziel or os.environ.get("MIX", "mix.wav")
         st, sr2 = sf.read(stimme_pfad, dtype="float64"); st = st.mean(1) if st.ndim > 1 else st
         assert sr2 == SR; stimme = np.zeros(self.n); stimme[:min(self.n, len(st))] = st[:self.n]
-        glatt = lambda x, s: np.convolve(x, np.ones(int(s * SR)) / int(s * SR), "same")
+        def glatt(x, s):   # gleitender Mittelwert über s Sekunden (wie np.convolve(..., "same"), aber O(n))
+            k = max(1, int(s * SR)); c = np.concatenate([[0.0], np.cumsum(x)]); a = np.arange(len(x)) - k // 2
+            lo = np.clip(a, 0, len(x)); hi = np.clip(a + k, 0, len(x)); return (c[hi] - c[lo]) / k
         db = lambda x: 20 * np.log10(np.sqrt((x ** 2).mean()) + 1e-9)
         if musik_laut is not None:   # altes Verhalten (Folge 1)
             hk = glatt(np.abs(stimme), 0.25); duck = 1 - 0.6 * np.clip(hk / (hk.max() * 0.25), 0, 1)

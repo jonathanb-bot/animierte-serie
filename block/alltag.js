@@ -394,7 +394,7 @@ const kzTex = (text, farbe) => { const k = text + farbe; if (KZ_TEX.has(k)) retu
 export const kopfzahl = (wer, text, { farbe = "#4ef07a", groesse = 1, hoehe = 2.3 } = {}) => {
   let s2 = KZ[kzN]; if (!s2) { s2 = new THREE.Sprite(new THREE.SpriteMaterial({ transparent: true, depthWrite: false, fog: false })); s2.renderOrder = 5; scene.add(s2); KZ.push(s2); } kzN++;
   const p = new THREE.Vector3(); let sk = 1; if (wer.userData?.kopfG) { wer.userData.kopfG.getWorldPosition(p); sk = wer.scale.y; p.y += hoehe * sk; } else p.copy(wer);
-  s2.material.map = kzTex(String(text), farbe); s2.material.needsUpdate = true; s2.position.copy(p); s2.scale.set(3.2 * groesse * Math.max(sk, 0.7), 1.0 * groesse * Math.max(sk, 0.7), 1); s2.visible = true; return s2; };
+  { const tx = kzTex(String(text), farbe); if (s2.material.map !== tx) { s2.material.map = tx; s2.material.needsUpdate = true; } }   /* nur bei Wechsel, sonst sehr langsam */ s2.position.copy(p); s2.scale.set(3.2 * groesse * Math.max(sk, 0.7), 1.0 * groesse * Math.max(sk, 0.7), 1); s2.visible = true; return s2; };
 const kopfzahlenAus = () => { KZ.forEach(s2 => s2.visible = false); kzN = 0; };
 
 // ---------- Wetter-Effekte (Vergleich 24.11.): eigene Regenwolke über einer Figur, Blitz, Rauch ----------

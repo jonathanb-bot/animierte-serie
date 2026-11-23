@@ -73,7 +73,8 @@ export const ring = (n, r0, r1, t, o = {}) => { for (let i = 0; i < n; i++) { co
   schatten((o.start ?? 0) + i, (o.cx ?? 0) + Math.cos(a) * r, (o.cz ?? 0) + Math.sin(a) * r, Math.atan2(-Math.cos(a), -Math.sin(a)), { g: o.g ?? 1.6, kriech: 0.5 + 0.4 * Math.sin(t * 1.3 + i), aufl: o.aufl ? o.aufl(i, a, r) : 0 }); } };
 
 // ---------- Zustand pro Bild (Folge kann ihn in grund() und in Einstellungen setzen) ----------
-export const Z_ = { menge: null, vignette: 0.35, zaehler: null, plus: null };
+export const Z_ = { menge: null, vignette: 0.35, zaehler: null, plus: null, mengeZahl: null };
+// Zahlen über der Menge ohne die Leute, die für die Kamera ausgeblendet sind: Z_.mengeZahl = { text: (i) => "3", farbe }
 // Geld-/Punkte-Zähler im Bild (Vergleich 24.11.): Z_.zaehler = { wert: zahl | text, farbe: "gruen"|"rot"|"gelb", einheit: " €" }, Z_.plus = { text: "+5 €", t0 }
 // oben mittig (nie oben links, Issue #19), nur in Einstellungen, in denen die Geschichte ihn braucht.
 // Wisch-Übergang am Schnitt: Wt.grade.uniforms.uWisch.value = B.wisch(t, schnittZeit) – kurz verwischt, kein Wackeln (Vergleich 24.11.)
@@ -100,7 +101,7 @@ export function start(o = {}) {
     for (const p of [Rq.muell, Rq.megafon, Rq.taschenlampe, Rq.lampenKegel, Rq.kisten]) p.visible = false;
     Rq.GASSE.lampe.material = Rq.GASSE.lampeAn; Rq.GASSE.licht.intensity = 40; Rq.ZIMMER.schirm.material = Rq.ZIMMER.schirmAn; Rq.ZIMMER.licht.intensity = 30;
     Al.zuruecksetzen(); cam.up.set(0, 1, 0); NAH.wert = null;
-    Z_.menge = null; Z_.vignette = 0.35; Z_.zaehler = null; Z_.plus = null; cam.fov = 55;
+    Z_.menge = null; Z_.vignette = 0.35; Z_.zaehler = null; Z_.plus = null; Z_.mengeZahl = null; cam.fov = 55;
     grund(t);                                  // Folge: Uniforms, Autos, Polizei, Notlampen, Menge …
     const tag = U.uTag.value > 0.5;
     if (!o.eigeneAutos) Wt.autosSetzen(t);
@@ -118,6 +119,7 @@ export function start(o = {}) {
           Rq.MENGE.forEach((p, i) => { if (Rq.mengeImWeg(p, r.kam, r.ziel, r.frei, r.menge.dx ?? 0, r.menge.dz ?? 0)) set.add(i); }); }
         VERSTECK.set(key, set); return window.renderAt(t); }
       Rq.mengeSetzen(t, { sichtbar: true, armeHoch: m.armeHoch ?? (() => 0), huepf: m.huepf ?? (() => 0), licht: m.licht ?? (tag ? 1 : 0.5), dx: m.dx ?? 0, dz: m.dz ?? 0, versteckt: VERSTECK.get(key) });
+      if (Z_.mengeZahl) { const mz = Z_.mengeZahl; Rq.MENGE.forEach((p, i) => { if (p.weg) return; Al.kopfzahl(new THREE.Vector3(p.x + (m.dx ?? 0), 5.6 * p.s, p.z + (m.dz ?? 0)), mz.text(i), { groesse: mz.groesse ?? 0.8, farbe: mz.farbe ?? "#4ef07a" }); }); }
     } else Rq.mengeSetzen(t, { sichtbar: false });
     Ws.laternenSetzen(t, haltePos ? (L) => haltePos(L, t) : null); Ws.schattenSetzen(t); Ws.funkenSetzen(t); Ws.staubSetzen(t);
     nach(t);
