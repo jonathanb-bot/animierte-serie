@@ -2322,6 +2322,12 @@
    "bild_s": 112.45,
    "ton_s": 112.45,
    "lufs": -14.6
+  },
+  "taeglich/block-b01k.mp4": {
+   "ok": true,
+   "bild_s": 88.7,
+   "ton_s": 88.72,
+   "lufs": -14.6
   }
  },
  "serien": {
@@ -2602,6 +2608,10 @@
   "block-b01": {
    "titel": "In meiner Stadt geht nie ein Licht aus",
    "datei": "taeglich/block-b01.mp4"
+  },
+  "block-b01k": {
+   "titel": "In meiner Stadt geht nie ein Licht aus",
+   "datei": "taeglich/block-b01k.mp4"
   }
  },
  "taeglich_staffeln": {
