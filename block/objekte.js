@@ -281,5 +281,66 @@ export const riesenWaechter = ({ stein = "#1a1e30", gold = "#e8b830", augen = [3
   const stab = an(g, zyl(0.25, 0.25, 22, gm, 12), 4.6, 11, 1.4); an(g, kugel(0.8, leucht(...augen), 16), 4.6, 22.3, 1.4);
   g.userData = { kopf }; g.scale.setScalar(groesse); return g; };
 
+// ---------- Reich und arm, Himmel und All (Vergleich 24.11.: „je reicher, desto höher das Haus“) ----------
+// 3D-Wolke aus weichen Kugeln (fester Zufall); groesse 1 ≈ 30 m breit
+export const wolke = ({ groesse = 1, saat = 3, farbe = "#ffffff" } = {}) => { const g = new THREE.Group(), r = zufall(saat), m = new THREE.MeshStandardMaterial({ color: farbe, roughness: 1, emissive: "#c8d8f0", emissiveIntensity: 0.25 });
+  for (let i = 0; i < 14; i++) { const a = r() * Math.PI * 2, d = r() * 10; an(g, kugel(5 + r() * 5, m, 18), Math.cos(a) * d * 1.4, 2 + r() * 4 - d * 0.2, Math.sin(a) * d * 0.7); }
+  g.scale.setScalar(groesse); return g; };
+const glasTurmTex = (() => { let t = null; return () => t || (t = tex(128, 128, (x, w, h) => { x.fillStyle = "#e8f2fa"; x.fillRect(0, 0, w, h); x.fillStyle = "#4a9ae8"; for (let i = 0; i < 4; i++) for (let j = 0; j < 4; j++) x.fillRect(i * 32 + 4, j * 32 + 5, 24, 22); x.fillStyle = "rgba(255,255,255,0.35)"; for (let i = 0; i < 4; i++) for (let j = 0; j < 4; j++) x.fillRect(i * 32 + 6, j * 32 + 7, 8, 18); }, [2, 10])); })();
+// Himmelshaus: dünne Stelze bis in große Höhe, oben eine Plattform mit Villa, Palmen und Pool-Becken
+export const himmelshaus = ({ hoehe = 220, farbe = "#f4f6fa", glas = "#6ab0f0", saat = 2 } = {}) => { const g = new THREE.Group(), r = zufall(saat), wm = mat(farbe, 0.5), gm = new THREE.MeshPhysicalMaterial({ color: glas, roughness: 0.1, clearcoat: 1, emissive: "#2a5a9a", emissiveIntensity: 0.2 });
+  const ft = glasTurmTex(); const st = new THREE.MeshStandardMaterial({ map: ft.clone(), roughness: 0.25, metalness: 0.1, emissive: "#4a7ab8", emissiveIntensity: 0.15 }); st.map.repeat.set(2, Math.round(hoehe / 6)); st.map.needsUpdate = true;
+  const breite = 7 + r() * 4; an(g, bx(breite, hoehe, breite, st), 0, hoehe / 2, 0); for (const sx of [-1, 1]) for (const sz of [-1, 1]) an(g, bx(0.4, hoehe, 0.4, mat("#e8b830", 0.4, 0.5)), sx * breite / 2, hoehe / 2, sz * breite / 2);
+  const top = new THREE.Group(); top.position.y = hoehe; g.add(top); an(top, rb(26, 2, 26, 0.5, wm), 0, 0, 0); an(top, bx(23, 0.1, 23, mat("#e8eef4", 0.3)), 0, 1.05, 0);
+  const villa = an(top, rb(14, 7, 10, 0.3, wm), -3, 4.6, -5); for (let i = 0; i < 3; i++) an(top, bx(3.6, 4, 0.15, gm), -8 + i * 5, 4.8, 0.05);
+  const pool = an(top, bx(10, 0.3, 6, new THREE.MeshPhysicalMaterial({ color: "#3ac0f0", roughness: 0.05, clearcoat: 1, emissive: "#1a6a9a", emissiveIntensity: 0.3 })), 5, 1.15, 7);
+  for (let i = 0; i < 4; i++) { const p = palme({ hoehe: 6 + r() * 3, saat: saat * 7 + i }); p.position.set(-10 + r() * 20, 1, 8 + r() * 3); p.scale.setScalar(0.7); top.add(p); }
+  for (let i = 0; i < 8; i++) { const a = i / 8 * Math.PI * 2; an(top, kugel(0.5, leucht(2.4, 2.4, 2.2), 8), Math.cos(a) * 11, -1.2, Math.sin(a) * 11); }
+  g.userData.oben = top; return g; };
+// Bretterbude (arm): schiefe Bretter, Wellblechdach, Nummernschild
+export const bretterbude = ({ holz = "#7a5232", dach = "#8a929a", saat = 5 } = {}) => { const g = new THREE.Group(), r = zufall(saat);
+  for (let i = 0; i < 7; i++) { const b = an(g, bx(0.85, 4.4 + r() * 0.6, 0.18, mat(new THREE.Color(holz).multiplyScalar(0.8 + r() * 0.35), 0.9)), -2.6 + i * 0.86, 2.2, 2); b.rotation.z = (r() - 0.5) * 0.06; }
+  an(g, bx(6, 4.6, 0.2, mat(holz, 0.9)), 0, 2.3, -2); for (const sx of [-1, 1]) an(g, bx(0.2, 4.6, 4, mat(holz, 0.9)), sx * 3, 2.3, 0);
+  const d = an(g, new THREE.Mesh(new THREE.BoxGeometry(6.8, 0.12, 5, 12, 1, 1), new THREE.MeshStandardMaterial({ color: dach, metalness: 0.5, roughness: 0.5 })), 0, 4.8, 0.2); d.rotation.x = -0.12;
+  an(g, bx(1.6, 3, 0.1, mat("#4a3020", 0.9)), 0.8, 1.5, 2.12); an(g, bx(1, 0.5, 0.05, mat("#f0f0f0")), -1.6, 3.6, 2.15); return g; };
+// Müllberg: Haufen aus Säcken, Kisten, Reifen (fester Zufall)
+export const muellberg = ({ groesse = 1, saat = 8 } = {}) => { const g = new THREE.Group(), r = zufall(saat);
+  an(g, kugel(1, mat("#6a5a48", 1), 16), 0, 0, 0).scale.set(6.5, 1.8, 5);
+  for (let i = 0; i < 40; i++) { const a = r() * Math.PI * 2, d = Math.sqrt(r()) * 5.5, y = 1.8 * Math.sqrt(Math.max(0, 1 - (d / 6.3) ** 2)) + 0.35; const t = r();
+    const o = t < 0.4 ? kugel(0.8 + r() * 0.4, mat(["#2a2a30", "#3a4a3a", "#4a3a2a"][i % 3], 0.6), 10) : t < 0.7 ? bx(1 + r(), 0.8 + r() * 0.6, 1 + r(), mat(["#b8864a", "#8a8a8a", "#c83a3a", "#3a6ac8"][i % 4], 0.8)) : new THREE.Mesh(new THREE.TorusGeometry(0.6, 0.25, 8, 16), mat("#18181c", 0.7));
+    an(g, o, Math.cos(a) * d * 1.0, y, Math.sin(a) * d * 0.78); o.rotation.set(r() * 3, r() * 3, r() * 3); }
+  g.scale.setScalar(groesse); return g; };
+export const leiter = ({ hoehe = 6, schief = 0.06 } = {}) => { const g = new THREE.Group(), m = mat("#a87a4a", 0.85); for (const sx of [-0.5, 0.5]) an(g, bx(0.15, hoehe, 0.15, m), sx, hoehe / 2, 0);
+  for (let y = 0.5; y < hoehe; y += 0.6) { const s = an(g, bx(1.0, 0.1, 0.12, m), 0, y, 0); if (y > hoehe * 0.6 && y < hoehe * 0.72) s.visible = false; } g.rotation.z = schief; return g; };   // eine Sprosse fehlt (kaputt)
+// Pool mit Wasser, Rand, Schwimmring und Ball
+export const pool = ({ breite = 10, laenge = 16 } = {}) => { const g = new THREE.Group(); an(g, rb(breite + 1.6, 0.8, laenge + 1.6, 0.2, mat("#f4f4f4", 0.4)), 0, 0.4, 0);
+  an(g, bx(breite, 0.2, laenge, new THREE.MeshPhysicalMaterial({ color: "#3ac8f0", roughness: 0.05, clearcoat: 1, emissive: "#1a7aaa", emissiveIntensity: 0.35 })), 0, 0.72, 0);
+  an(g, new THREE.Mesh(new THREE.TorusGeometry(0.9, 0.35, 12, 24), plastik("#f2c21a")), 1.5, 0.9, 2).rotation.x = Math.PI / 2; an(g, kugel(0.5, plastik("#e84a6a"), 14), -2, 1.1, -3); return g; };
+// Glasaufzug: Röhre mit Goldrahmen und Kabine (userData.kabine.position.y bewegen)
+export const glasaufzug = ({ hoehe = 30 } = {}) => { const g = new THREE.Group(), gold = new THREE.MeshStandardMaterial({ color: "#e8b830", metalness: 0.8, roughness: 0.3 });
+  an(g, new THREE.Mesh(new THREE.CylinderGeometry(2.2, 2.2, hoehe, 24, 1, true), new THREE.MeshPhysicalMaterial({ color: "#cfe8ff", roughness: 0.05, transparent: true, opacity: 0.25, side: THREE.DoubleSide })), 0, hoehe / 2, 0);
+  for (let y = 0; y <= hoehe; y += hoehe / 6) an(g, new THREE.Mesh(new THREE.TorusGeometry(2.25, 0.12, 8, 28), gold), 0, y, 0).rotation.x = Math.PI / 2;
+  const k = new THREE.Group(); g.add(k); an(k, zyl(2, 2, 0.3, gold, 24), 0, 0.15, 0); an(k, zyl(2, 2, 0.2, gold, 24), 0, 5.2, 0); g.userData.kabine = k; return g; };
+// Absperrung: zwei Pfosten mit roter Kordel
+export const absperrung = ({ breite = 5 } = {}) => { const g = new THREE.Group(), gold = new THREE.MeshStandardMaterial({ color: "#e8b830", metalness: 0.8, roughness: 0.3 });
+  for (const sx of [-1, 1]) { an(g, zyl(0.12, 0.12, 2.4, gold, 10), sx * breite / 2, 1.2, 0); an(g, zyl(0.45, 0.5, 0.2, gold, 16), sx * breite / 2, 0.1, 0); an(g, kugel(0.2, gold, 10), sx * breite / 2, 2.45, 0); }
+  const kurve = new THREE.QuadraticBezierCurve3(new THREE.Vector3(-breite / 2, 2.2, 0), new THREE.Vector3(0, 1.4, 0), new THREE.Vector3(breite / 2, 2.2, 0)); an(g, new THREE.Mesh(new THREE.TubeGeometry(kurve, 20, 0.08, 8), mat("#c81a2a", 0.6))); return g; };
+// Goldvilla mit Diamantfenstern, Säulen, Kuppel
+export const goldvilla = ({ breite = 40 } = {}) => { const g = new THREE.Group(), gold = new THREE.MeshStandardMaterial({ color: "#f0c030", metalness: 0.7, roughness: 0.3 }), weiss = mat("#fbfaf6", 0.4);
+  const dia = new THREE.MeshPhysicalMaterial({ color: "#e8f8ff", roughness: 0.02, clearcoat: 1, emissive: "#a8d8ff", emissiveIntensity: 0.5 });
+  an(g, bx(breite, 16, 24, gold), 0, 8, 0); an(g, bx(breite + 1, 1, 25, weiss), 0, 16.5, 0);
+  for (let st = 0; st < 2; st++) for (let i = 0; i < 8; i++) { const d = an(g, new THREE.Mesh(new THREE.OctahedronGeometry(1.4, 0), dia), -breite / 2 + 3 + i * (breite - 6) / 7, 5 + st * 7, 12.1); d.scale.set(1, 1.3, 0.3); }
+  for (let i = 0; i < 6; i++) an(g, zyl(0.8, 0.9, 16, weiss, 16), -12.5 + i * 5, 8, 14);
+  an(g, new THREE.Mesh(new THREE.SphereGeometry(7, 24, 12, 0, Math.PI * 2, 0, Math.PI / 2), gold), 0, 17, 0); for (const sx of [-1, 1]) { an(g, zyl(1.6, 1.6, 10, gold, 16), sx * (breite / 2 - 2), 21, 0); an(g, new THREE.Mesh(new THREE.ConeGeometry(2, 4, 16), gold), sx * (breite / 2 - 2), 28, 0); }
+  an(g, bx(6, 9, 0.3, mat("#c8962a", 0.4, 0.6)), 0, 4.5, 12.2); return g; };
+export const goldschluessel = ({ groesse = 1 } = {}) => { const g = new THREE.Group(), gold = new THREE.MeshStandardMaterial({ color: "#f0c030", metalness: 0.85, roughness: 0.2, emissive: "#f0c030", emissiveIntensity: 0.2 });
+  an(g, new THREE.Mesh(new THREE.TorusGeometry(0.45, 0.14, 10, 24), gold), -0.9, 0, 0); an(g, zyl(0.1, 0.1, 1.6, gold, 10), 0.3, 0, 0).rotation.z = Math.PI / 2; for (const x of [0.8, 1.05]) an(g, bx(0.12, 0.35, 0.12, gold), x, -0.2, 0); g.scale.setScalar(groesse); return g; };
+// Weltraum-Turmspitze: Turm mit Ringen, darüber Teller-Plattform mit Glaskuppel (für die Weltall-Kulisse)
+export const tellerhaus = ({ farbe = "#2a4ab8" } = {}) => { const g = new THREE.Group(), fm = mat(farbe, 0.4, 0.3), weiss = mat("#f4f4f8", 0.4), gold = new THREE.MeshStandardMaterial({ color: "#e8b830", metalness: 0.8, roughness: 0.3 });
+  an(g, zyl(4, 5, 60, weiss, 24), 0, 30, 0); for (let y = 6; y < 60; y += 10) an(g, zyl(5.2, 5.2, 1, gold, 24), 0, y, 0);
+  an(g, zyl(16, 6, 4, fm, 32), 0, 62, 0); an(g, zyl(16.5, 16.5, 0.8, gold, 32), 0, 64, 0);
+  an(g, new THREE.Mesh(new THREE.SphereGeometry(9, 24, 12, 0, Math.PI * 2, 0, Math.PI / 2), new THREE.MeshPhysicalMaterial({ color: "#cfe8ff", roughness: 0.05, transparent: true, opacity: 0.35 })), 0, 64.4, 0);
+  for (let i = 0; i < 6; i++) { const a = i / 6 * Math.PI * 2; an(g, kugel(0.9, leucht(0.6, 2.6, 2.4), 10), Math.cos(a) * 12, 60.2, Math.sin(a) * 12); } return g; };
+
 // Liste für Katalog und Vorschau (Name → Bau-Funktion mit Standardwerten)
-export const ALLE = { baum, blumenkuebel, hecke, bank, laterne, ampel, hydrant, muelltonne, briefkasten, schild, zaun, brunnen, laden, haltestelle, fahrrad, bus, hund, katze, vogel, tisch, stuhl, sofa, stehlampe, regal, geschenk, fernseher, riesenTier, haus, schule, sportwagen, lichterkette, lehmhaus, wimpelkette, fackel, krug, palme, pyramide, glocke, thron, krone, sockel, steinwaechter, riesenWaechter };
+export const ALLE = { baum, blumenkuebel, hecke, bank, laterne, ampel, hydrant, muelltonne, briefkasten, schild, zaun, brunnen, laden, haltestelle, fahrrad, bus, hund, katze, vogel, tisch, stuhl, sofa, stehlampe, regal, geschenk, fernseher, riesenTier, haus, schule, sportwagen, lichterkette, lehmhaus, wimpelkette, fackel, krug, palme, pyramide, glocke, thron, krone, sockel, steinwaechter, riesenWaechter, wolke, himmelshaus, bretterbude, muellberg, leiter, pool, glasaufzug, absperrung, goldvilla, goldschluessel, tellerhaus };

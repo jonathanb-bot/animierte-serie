@@ -179,7 +179,7 @@ export const ballonsSetzen = (t, an = false, o = { x: 0, z: 0, t0: 0 }) => { con
     ballonW.setMatrixAt(i, m); } ballonW.instanceMatrix.needsUpdate = true; };
 
 // ---------- Pro Bild ----------
-export const zuruecksetzen = () => { if (HANDY.arm) HANDY.arm.visible = true; HANDY.arm = null; handy.visible = false; videowand.visible = false; videowand.scale.setScalar(1); regenbogen.visible = false; regenbogen.scale.setScalar(1); handyWelt(); raumlicht(null); STUBE.tvSchirm.material = STUBE.tvAus; ballonsSetzen(0, false); geldSetzen(0, false); VORSTADT.nacht(false); AULA.kinder(1); };
+export const zuruecksetzen = () => { if (HANDY.arm) HANDY.arm.visible = true; HANDY.arm = null; handy.visible = false; videowand.visible = false; videowand.scale.setScalar(1); regenbogen.visible = false; regenbogen.scale.setScalar(1); handyWelt(); raumlicht(null); STUBE.tvSchirm.material = STUBE.tvAus; ballonsSetzen(0, false); geldSetzen(0, false); VORSTADT.nacht(false); AULA.kinder(1); WELTALL.an(false); };
 export const fernseherAn = () => { STUBE.tvSchirm.material = HANDY.weltMat; };
 export const fernseherAus = () => { STUBE.tvSchirm.material = STUBE.tvAus; };
 // Handy-Welt rendern (vor dem Haupt-Render), nur wenn ein Bildschirm sie zeigt. Bildschirme selbst dabei aus (keine Rückkopplung).
@@ -334,3 +334,33 @@ export const THRONSAAL = (() => {
   T.banner = leinwand(16, 1.8, { px: 1600 }); T.banner.position.set(0, 16, -44.8); g.add(T.banner); schreibe(T.banner, ["DER HÜTER IST ZURÜCK"], { bg: "#2a2a3a", fg: "#ffd060", font: "700 150px 'DejaVu Serif', serif" });
   T.flammen = (t) => T.fackeln.forEach((f, i) => { const w = 1 + 0.06 * Math.sin(t * 2.1 + i * 1.3); f.scale.set(1, w, 1); });
   T.pos = (x, y, z) => new THREE.Vector3(g.position.x + x, y, g.position.z + z); return T; })();
+
+// ---------- Himmelsstadt mit Armenviertel (Vergleich 24.11.): unten Bretterbuden und Müll, darüber Stelzen-Villen bis über die Wolken ----------
+// Bei (0, 0, -2000). Boden: Erde mit Buden (lokal |x| < 40, z 0…60), Müllberg; ringsum Himmelshäuser verschiedener Höhe; Wolkendecke bei y ≈ 120.
+export const HIMMELSSTADT = (() => {
+  const g = new THREE.Group(); g.position.set(0, 0, -2000); scene.add(g); const S = { g }; let s = 61; const r = () => { s = (s * 16807) % 2147483647; return s / 2147483647; };
+  const erde = new THREE.Mesh(new THREE.PlaneGeometry(500, 500).rotateX(-Math.PI / 2), new THREE.MeshStandardMaterial({ map: canvasTex(128, 128, (x, w, h) => { x.fillStyle = "#5a3e2a"; x.fillRect(0, 0, w, h); for (let i = 0; i < 900; i++) { x.fillStyle = `rgba(${40 + (i * 7) % 40},${30 + (i * 3) % 20},20,0.5)`; x.fillRect((i * 37) % w, (i * 53) % h, 2, 2); } }, [40, 40]), roughness: 1 })); erde.position.y = 0.04; g.add(erde);
+  const gras = new THREE.Mesh(new THREE.RingGeometry(70, 250, 48).rotateX(-Math.PI / 2), new THREE.MeshStandardMaterial({ color: "#5ab03a", roughness: 0.95 })); gras.position.y = 0.06; g.add(gras);
+  S.buden = []; for (let i = 0; i < 14; i++) { const b = O.bretterbude({ saat: i + 3 }); b.position.set(-34 + (i % 7) * 11 + r() * 2, 0.04, 8 + Math.floor(i / 7) * 16 + r() * 3); b.rotation.y = (r() - 0.5) * 0.4 + (i >= 7 ? Math.PI : 0); g.add(b); S.buden.push(b); }
+  const mb = O.muellberg({ groesse: 1.6 }); mb.position.set(30, 0, 48); g.add(mb); const mb2 = O.muellberg({ groesse: 1.1, saat: 4 }); mb2.position.set(-38, 0, 44); g.add(mb2);
+  const lt = O.leiter({ hoehe: 6 }); lt.position.set(0, 0, -2); lt.rotation.x = -0.25; g.add(lt); S.leiter = lt;
+  const gehweg = bx(120, 6, 10, mat("#cfd2d8", 0.8)); gehweg.position.set(0, 3, -10); g.add(gehweg);
+  S.haeuser = []; for (let i = 0; i < 26; i++) { const a = i / 26 * Math.PI * 2 + r() * 0.2, d = 90 + r() * 120; const h = O.himmelshaus({ hoehe: 120 + r() * 260, saat: i + 5 }); h.position.set(Math.cos(a) * d, 0, Math.sin(a) * d - 40); h.rotation.y = r() * 6; g.add(h); S.haeuser.push(h); }
+  for (let i = 0; i < 14; i++) { const a = i / 14 * Math.PI * 2 + 0.2, d = 70 + r() * 25; const t = O.himmelshaus({ hoehe: 40 + r() * 30, saat: 40 + i }); t.position.set(Math.cos(a) * d, 0, Math.sin(a) * d - 30); t.userData.oben.scale.setScalar(0.6); g.add(t); }   // kleine Türme (Mittelschicht), außerhalb des Armenviertels
+  S.wolken = []; for (let i = 0; i < 34; i++) { const w = O.wolke({ groesse: 0.8 + r() * 1.4, saat: i + 2 }); const a = r() * Math.PI * 2, d = 30 + r() * 220; w.position.set(Math.cos(a) * d, 100 + r() * 70, Math.sin(a) * d - 40); g.add(w); S.wolken.push(w); }
+  S.pos = (x, y, z) => new THREE.Vector3(g.position.x + x, y, g.position.z + z); return S; })();
+
+// ---------- Weltall (Vergleich 24.11.): Sternenhimmel, Erde unten, Mond, Turmspitzen mit Teller-Häusern ----------
+// Bei (2000, 0, 600) in einer eigenen Sternenkugel. WELTALL.pos(x, y, z); Kamera innerhalb von 250 m um den Mittelpunkt (y ≈ 60) halten.
+export const WELTALL = (() => {
+  const g = new THREE.Group(); g.position.set(2000, 0, 600); scene.add(g); const A = { g };
+  const sterne = canvasTex(1024, 512, (x, w, h) => { x.fillStyle = "#03040c"; x.fillRect(0, 0, w, h); let s = 17; const r = () => { s = (s * 16807) % 2147483647; return s / 2147483647; }; for (let i = 0; i < 1600; i++) { const b = 120 + r() * 135; x.fillStyle = `rgb(${b},${b},${Math.min(255, b + 20)})`; const g2 = r() < 0.06 ? 2.5 : 1.2; x.fillRect(r() * w, r() * h, g2, g2); } });
+  g.add(new THREE.Mesh(new THREE.SphereGeometry(300, 48, 24), new THREE.MeshBasicMaterial({ map: sterne, side: THREE.BackSide, fog: false })));
+  const erde = new THREE.Mesh(new THREE.SphereGeometry(260, 64, 32), new THREE.MeshStandardMaterial({ roughness: 0.8, map: canvasTex(512, 256, (x, w, h) => { x.fillStyle = "#1a5ab8"; x.fillRect(0, 0, w, h); let s = 23; const r = () => { s = (s * 16807) % 2147483647; return s / 2147483647; };
+    for (let i = 0; i < 26; i++) { x.fillStyle = r() < 0.7 ? "#3a9a4a" : "#c8b070"; x.beginPath(); x.ellipse(r() * w, h * 0.2 + r() * h * 0.6, 20 + r() * 50, 12 + r() * 30, r() * 3, 0, 7); x.fill(); } x.fillStyle = "rgba(255,255,255,0.75)"; for (let i = 0; i < 40; i++) { x.beginPath(); x.ellipse(r() * w, r() * h, 18 + r() * 30, 4 + r() * 6, r(), 0, 7); x.fill(); } }) }));
+  erde.position.set(0, -250, 0); g.add(erde); A.erde = erde;
+  const mondK = new THREE.Mesh(new THREE.SphereGeometry(40, 32, 16), new THREE.MeshStandardMaterial({ color: "#e8e8ec", roughness: 0.9 })); mondK.position.set(-120, 110, -160); g.add(mondK);
+  A.licht = new THREE.DirectionalLight("#ffffff", 0); A.licht.position.set(g.position.x + 200, 300, g.position.z + 200); A.licht.target.position.copy(g.position); scene.add(A.licht, A.licht.target);
+  A.tuerme = []; for (const [x, z, s2, f] of [[0, 0, 1, "#2a4ab8"], [-60, -50, 0.8, "#c83a3a"], [55, -70, 0.9, "#2ab08a"]]) { const t = O.tellerhaus({ farbe: f }); t.position.set(x, -40, z); t.scale.setScalar(s2); g.add(t); A.tuerme.push(t); }
+  A.an = (an = true) => { A.licht.intensity = an ? 2.2 : 0; };
+  A.pos = (x, y, z) => new THREE.Vector3(g.position.x + x, y, g.position.z + z); return A; })();
