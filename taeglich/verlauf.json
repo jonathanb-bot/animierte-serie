@@ -946,7 +946,17 @@
      "family",
      "story"
     ],
-    "kommentar_frage": "Who's the first person you'd tell about winning thirty million – or would you tell no one?"
+    "kommentar_frage": "Who's the first person you'd tell about winning thirty million – or would you tell no one?",
+    "veroeffentlicht": {
+     "video": "https://raw.githubusercontent.com/jonathanb-bot/animierte-serie/youtube-upload/taeglich/nische-n002-en.mp4",
+     "geplant": {
+      "tiktok": "2026-11-24T00:52:00",
+      "instagram": "2026-11-23T22:04:00",
+      "youtube": "2026-11-23T23:31:00"
+     },
+     "lufs": -14.6,
+     "dauer_s": 65.25
+    }
    },
    "veroeffentlicht": {
     "video": "https://raw.githubusercontent.com/jonathanb-bot/animierte-serie/youtube-upload/taeglich/nische-n002.mp4",
