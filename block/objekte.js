@@ -42,10 +42,10 @@ export const bank = ({ holz = "#c8864a", eisen = "#2a2e36" } = {}) => {
   for (let i = 0; i < 2; i++) { const l = an(g, rb(5, 0.18, 0.45, 0.05, hm), 0, 2.4 + i * 0.6, -1.0); l.rotation.x = -0.15; }
   for (const x of [-2.1, 2.1]) { an(g, bx(0.18, 1.6, 0.18, em), x, 0.8, 0.6); an(g, bx(0.18, 3.2, 0.18, em), x, 1.6, -1.05); an(g, bx(0.18, 0.18, 1.8, em), x, 1.5, -0.2); }
   return g; };
-export const laterne = ({ hoehe = 9, an: leuchtet = true } = {}) => {
+export const laterne = ({ hoehe = 9, an: leuchtet = true, punktlicht = true } = {}) => {
   const g = new THREE.Group(), em = metall("#262a32"); an(g, zyl(0.4, 0.5, 0.8, em, 12), 0, 0.4, 0); an(g, zyl(0.16, 0.2, hoehe, em, 12), 0, hoehe / 2, 0);
   an(g, zyl(0.7, 0.4, 0.5, em, 12), 0, hoehe + 0.2, 0); an(g, zyl(0.45, 0.45, 0.9, leuchtet ? leucht(3, 2.4, 1.4) : mat("#e8e0c8"), 16), 0, hoehe - 0.4, 0);
-  if (leuchtet) { const l = new THREE.PointLight("#ffcf8a", 20, 18, 1.8); l.position.y = hoehe - 1; g.add(l); } return g; };
+  if (leuchtet && punktlicht) { const l = new THREE.PointLight("#ffcf8a", 20, 18, 1.8); l.position.y = hoehe - 1; g.add(l); } return g; };
 export const ampel = ({ phase = "rot" } = {}) => {
   const g = new THREE.Group(), em = metall("#30343c"); an(g, zyl(0.16, 0.2, 7, em, 12), 0, 3.5, 0); an(g, rb(0.9, 2.4, 0.7, 0.15, plastik("#1c1e24")), 0, 7.6, 0);
   [["rot", "#ff2a2a", 8.35], ["gelb", "#ffc02a", 7.6], ["gruen", "#2aff6a", 6.85]].forEach(([n, c, y]) => { const col = new THREE.Color(c); an(g, kugel(0.25, n === phase ? leucht(col.r * 3, col.g * 3, col.b * 3) : mat(col.clone().multiplyScalar(0.25)), 14), 0, y, 0.33); });
@@ -161,5 +161,58 @@ export const riesenTier = ({ fell = "#8a5a3a", bauch = "#c89a6a", augenFarbe = "
   for (const sx of [-1, 1]) { const arm = an(koerper, kugel(1, fm, 16), sx * 7.2, cy - 1, 1.5); arm.scale.set(1.5, 3.2, 1.6); arm.rotation.z = sx * 0.35; }
   g.userData = { augen, koerper }; g.scale.setScalar(groesse); return g; };
 
+// ---------- Vorstadt, Schule, Sportwagen, Lichterkette (Vergleich 24.11.: „Geld fürs Verspäten“) ----------
+const ziegelTex = (farbe = "#b8503a", fuge = "#e8d8c8") => tex(256, 256, (x, w, h) => { x.fillStyle = fuge; x.fillRect(0, 0, w, h); const c = new THREE.Color(farbe); let s = 3; const r = () => { s = (s * 16807) % 2147483647; return s / 2147483647; };
+  for (let y = 0; y < 16; y++) for (let i = -1; i < 9; i++) { const k = 0.85 + r() * 0.25; x.fillStyle = `rgb(${c.r * 255 * k | 0},${c.g * 255 * k | 0},${c.b * 255 * k | 0})`; x.fillRect(i * 32 + (y % 2) * 16 + 1, y * 16 + 1, 30, 14); } }, [3, 3]);
+const fensterTeil = (g, x, y, z, w = 1.8, h = 2.2, ry = 0, rahmen = "#ffffff") => { const f = new THREE.Group(); f.position.set(x, y, z); f.rotation.y = ry; g.add(f);
+  an(f, bx(w, h, 0.1, new THREE.MeshPhysicalMaterial({ color: "#8ac4e8", roughness: 0.08, clearcoat: 1, emissive: "#ffd890", emissiveIntensity: 0 })), 0, 0, 0.02).name = "glas";
+  for (const [ww, hh, px, py] of [[w + 0.3, 0.2, 0, h / 2], [w + 0.3, 0.2, 0, -h / 2], [0.2, h, -w / 2, 0], [0.2, h, w / 2, 0], [w, 0.12, 0, 0], [0.12, h, 0, 0]]) an(f, bx(ww, hh, 0.2, mat(rahmen, 0.5)), px, py, 0.08);
+  return f; };
+// Einfamilienhaus mit Satteldach, Tür, Fenstern (nachts mit `licht: true` leuchtende Fenster). Front nach +z.
+export const haus = ({ wand = "#f4e8b8", dach = "#3a4a6a", tuer = "#c83a3a", breite = 12, tiefe = 10, stock = 2, licht = false, saat = 2 } = {}) => {
+  const g = new THREE.Group(), H = stock * 4.2, r = zufall(saat); an(g, bx(breite, H, tiefe, mat(wand, 0.85)), 0, H / 2, 0);
+  const d = new THREE.Shape(); d.moveTo(-breite / 2 - 0.6, 0); d.lineTo(0, breite * 0.36); d.lineTo(breite / 2 + 0.6, 0); d.lineTo(-breite / 2 - 0.6, 0);
+  const dg = new THREE.ExtrudeGeometry(d, { depth: tiefe + 1.2, bevelEnabled: false }); dg.translate(0, 0, -(tiefe + 1.2) / 2); const dm = an(g, new THREE.Mesh(dg, mat(dach, 0.7)), 0, H, 0);
+  an(g, bx(1.6, 3.4, 0.2, mat(tuer, 0.6)), 0, 1.7, tiefe / 2 + 0.05); an(g, kugel(0.12, metall("#e8c040"), 8), 0.55, 1.7, tiefe / 2 + 0.2); an(g, bx(2.6, 0.25, 1.2, mat("#d8d0c0")), 0, 0.12, tiefe / 2 + 0.6);
+  an(g, bx(2.4, 0.15, 1.0, mat(dach, 0.7)), 0, 3.8, tiefe / 2 + 0.5);
+  const fenster = []; for (let st = 0; st < stock; st++) for (const fx of [-breite / 3, breite / 3, ...(st > 0 ? [0] : [])]) fenster.push(fensterTeil(g, fx, 2.4 + st * 4.2, tiefe / 2 + 0.02));
+  for (const sx of [-1, 1]) for (let st = 0; st < stock; st++) fenster.push(fensterTeil(g, sx * (breite / 2 + 0.02), 2.4 + st * 4.2, 0, 1.8, 2.2, sx * Math.PI / 2));
+  if (licht) fenster.forEach((f, i) => { if (r() < 0.7) { const gl = f.getObjectByName("glas"); gl.material = gl.material.clone(); gl.material.emissiveIntensity = 1.6; gl.material.color.set("#ffe0a0"); } });
+  if (r() < 0.6) { an(g, bx(1.2, 2.6, 1.2, mat("#a8443a", 0.8)), breite * 0.25, H + breite * 0.25, -tiefe * 0.15); }
+  g.userData = { fenster }; return g; };
+// Schule: Backstein, Säulen-Eingang, Schild mit Namen, Banner (Text frei), Uhr über dem Eingang (userData.uhr = leinwand-Zeichenfunktion)
+export const schule = ({ name = "GRUNDSCHULE AM PARK", banner = "HEUTE: SPORTFEST", breite = 34 } = {}) => {
+  const g = new THREE.Group(), H = 12, zm = new THREE.MeshStandardMaterial({ map: ziegelTex(), roughness: 0.9 }); an(g, bx(breite, H, 14, zm), 0, H / 2, 0);
+  an(g, bx(breite + 0.6, 0.8, 14.6, mat("#f4f0e8", 0.6)), 0, H + 0.4, 0); an(g, bx(breite + 0.4, 0.4, 14.4, mat("#f4f0e8", 0.6)), 0, H / 2, 0);
+  for (let st = 0; st < 2; st++) for (let i = 0; i < 6; i++) { const fx = -breite / 2 + 3 + i * (breite - 6) / 5; if (Math.abs(fx) < 5) continue; fensterTeil(g, fx, 3 + st * 6, 7.02, 2.6, 3, 0); }
+  const ein = new THREE.Group(); ein.position.z = 7; g.add(ein); an(ein, bx(10, 0.8, 4, mat("#f4f0e8", 0.6)), 0, 7.6, 2); for (const sx of [-4.4, 4.4]) an(ein, zyl(0.5, 0.55, 7.2, mat("#f4f0e8", 0.5)), sx, 3.6, 3.6);
+  an(ein, bx(4.4, 5.6, 0.2, mat("#2a5ad8", 0.4)), 0, 2.8, 0.1); an(ein, bx(0.12, 5.6, 0.3, mat("#ffffff")), 0, 2.8, 0.2); for (let i = 0; i < 3; i++) an(ein, bx(10, 0.3, 1.2, mat("#cfcac0")), 0, 0.15 + i * 0.3, 4.6 - i * 0.6);
+  const schildT = tex(1024, 128, (x, w, h) => { x.fillStyle = "#f6f2ea"; x.fillRect(0, 0, w, h); x.fillStyle = "#3a3a46"; let fs = 78; x.font = `700 ${fs}px 'DejaVu Serif', serif`; while (x.measureText(name).width > w * 0.92 && fs > 20) { fs -= 2; x.font = `700 ${fs}px 'DejaVu Serif', serif`; } x.textAlign = "center"; x.textBaseline = "middle"; x.fillText(name, w / 2, h / 2 + 4); });
+  an(g, new THREE.Mesh(new THREE.PlaneGeometry(breite * 0.6, breite * 0.075), new THREE.MeshStandardMaterial({ map: schildT, roughness: 0.6 })), 0, H - 1.4, 7.05);
+  const banT = tex(1024, 128, (x, w, h) => { x.fillStyle = "#d82a2a"; x.fillRect(0, 0, w, h); x.fillStyle = "#fff"; x.font = "900 80px 'Inter Display', Inter, sans-serif"; x.textAlign = "center"; x.textBaseline = "middle"; x.fillText(banner, w / 2, h / 2 + 4); });
+  const ban = an(ein, new THREE.Mesh(new THREE.PlaneGeometry(9, 1.1), new THREE.MeshStandardMaterial({ map: banT, roughness: 0.7 })), 0, 6.6, 0.25); g.userData.banner = ban;
+  for (const sx of [-1, 1]) for (let i = 0; i < 3; i++) an(g, kugel(1.0, mat("#3a8a3a", 0.85), 12), sx * (6 + i * 1.8), 0.8, 8.2);
+  return g; };
+// Sportwagen (flach, breite Räder, Spoiler); 1,7-fach wie die Stadtautos
+export const sportwagen = ({ farbe = "#e82a2a", groesse = 1.7 } = {}) => { const g = new THREE.Group(), lack = new THREE.MeshPhysicalMaterial({ color: farbe, roughness: 0.2, metalness: 0.3, clearcoat: 1, clearcoatRoughness: 0.05 });
+  const glas = new THREE.MeshPhysicalMaterial({ color: "#1a2a3a", roughness: 0.05, clearcoat: 1, metalness: 0.2 });
+  // flacher Keil: Unterteil, nach vorn abfallende Haube, niedrige Kabine mit schrägen Scheiben
+  an(g, rb(2.1, 0.5, 4.8, 0.2, lack), 0, 0.55, 0);
+  const haube = an(g, rb(2.0, 0.22, 2.0, 0.1, lack), 0, 0.82, 1.35); haube.rotation.x = 0.09;
+  const kab = an(g, rb(1.7, 0.45, 2.0, 0.22, lack), 0, 1.0, -0.45);
+  const front = an(g, bx(1.55, 0.05, 0.9, glas), 0, 1.03, 0.62); front.rotation.x = 0.62; const heck = an(g, bx(1.5, 0.05, 0.7, glas), 0, 1.05, -1.55); heck.rotation.x = -0.5;
+  for (const sx of [-1, 1]) { const sf = an(g, bx(0.05, 0.32, 1.5, glas), sx * 0.86, 1.08, -0.4); }
+  an(g, bx(1.9, 0.07, 0.45, mat("#111")), 0, 1.2, -2.2); for (const sx of [-0.7, 0.7]) an(g, bx(0.08, 0.35, 0.18, mat("#111")), sx, 0.98, -2.15);
+  for (const [x, z] of [[-0.92, 1.5], [0.92, 1.5], [-0.92, -1.5], [0.92, -1.5]]) { const rd = an(g, zyl(0.4, 0.4, 0.36, mat("#141418", 0.6), 20), x, 0.4, z); rd.rotation.z = Math.PI / 2; const fg = an(g, zyl(0.24, 0.24, 0.38, metall("#c8ccd4"), 12), x, 0.4, z); fg.rotation.z = Math.PI / 2; }
+  for (const sx of [-0.68, 0.68]) { an(g, bx(0.46, 0.1, 0.05, leucht(2, 1.95, 1.7)), sx, 0.68, 2.41); an(g, bx(0.5, 0.09, 0.05, leucht(2.4, 0.25, 0.15)), sx, 0.7, -2.41); }
+  an(g, bx(1.2, 0.12, 0.06, mat("#111")), 0, 0.45, 2.41);
+  g.scale.setScalar(groesse); return g; };
+// Lichterkette: kleine leuchtende Kugeln an einem Draht, durchhängend zwischen zwei Punkten (lokal von x -laenge/2 bis +laenge/2)
+export const lichterkette = ({ laenge = 10, n = 24, farbe = [3, 2.6, 1.6], durchhang = 0.5 } = {}) => { const g = new THREE.Group(), lm = leucht(...farbe);
+  const im = new THREE.InstancedMesh(new THREE.SphereGeometry(0.11, 10, 8), lm, n); const m = new THREE.Matrix4();
+  for (let i = 0; i < n; i++) { const t = (i + 0.5) / n, x = -laenge / 2 + t * laenge, bog = Math.sin(((t * laenge) % (laenge / 4)) / (laenge / 4) * Math.PI) * durchhang; m.makeTranslation(x, -bog - 0.12, 0); im.setMatrixAt(i, m); }
+  g.add(im); const pts = []; for (let i = 0; i <= 64; i++) { const t = i / 64; pts.push(new THREE.Vector3(-laenge / 2 + t * laenge, -Math.sin(((t * laenge) % (laenge / 4)) / (laenge / 4) * Math.PI) * durchhang, 0)); }
+  g.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts), new THREE.LineBasicMaterial({ color: "#2a2a2a" }))); return g; };
+
 // Liste für Katalog und Vorschau (Name → Bau-Funktion mit Standardwerten)
-export const ALLE = { baum, blumenkuebel, hecke, bank, laterne, ampel, hydrant, muelltonne, briefkasten, schild, zaun, brunnen, laden, haltestelle, fahrrad, bus, hund, katze, vogel, tisch, stuhl, sofa, stehlampe, regal, geschenk, fernseher, riesenTier };
+export const ALLE = { baum, blumenkuebel, hecke, bank, laterne, ampel, hydrant, muelltonne, briefkasten, schild, zaun, brunnen, laden, haltestelle, fahrrad, bus, hund, katze, vogel, tisch, stuhl, sofa, stehlampe, regal, geschenk, fernseher, riesenTier, haus, schule, sportwagen, lichterkette };

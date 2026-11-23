@@ -73,13 +73,19 @@ export const ring = (n, r0, r1, t, o = {}) => { for (let i = 0; i < n; i++) { co
   schatten((o.start ?? 0) + i, (o.cx ?? 0) + Math.cos(a) * r, (o.cz ?? 0) + Math.sin(a) * r, Math.atan2(-Math.cos(a), -Math.sin(a)), { g: o.g ?? 1.6, kriech: 0.5 + 0.4 * Math.sin(t * 1.3 + i), aufl: o.aufl ? o.aufl(i, a, r) : 0 }); } };
 
 // ---------- Zustand pro Bild (Folge kann ihn in grund() und in Einstellungen setzen) ----------
-export const Z_ = { menge: null, vignette: 0.35 };   // menge: { armeHoch, huepf, licht, dz } oder null
+export const Z_ = { menge: null, vignette: 0.35, zaehler: null, plus: null };
+// Geld-/Punkte-Zähler im Bild (Vergleich 24.11.): Z_.zaehler = { wert: zahl | text, farbe: "gruen"|"rot"|"gelb", einheit: " €" }, Z_.plus = { text: "+5 €", t0 }
+// oben mittig (nie oben links, Issue #19), nur in Einstellungen, in denen die Geschichte ihn braucht.
+export const euro = (n, vorzeichen = true) => (vorzeichen && n > 0 ? "+" : n < 0 ? "−" : "") + Math.abs(Math.round(n)).toLocaleString("de-DE");
+export const zaehlen = (t, t0, t1, von, bis) => von + (bis - von) * easeIO((t - t0) / Math.max(0.01, t1 - t0));   // menge: { armeHoch, huepf, licht, dz } oder null
 
 // ---------- Start ----------
 export function start(o = {}) {
   const { grund = () => {}, frage = null, haltePos = null, nach = () => {} } = o;
   const GRENZEN = S.map(s => s[0]); const VERSTECK = new Map();
   const cap = document.getElementById("cap"), fr = document.getElementById("frage"), wahl = document.getElementById("wahl");
+  const zl = document.createElement("div"), pl = document.createElement("div"); for (const [el, top, gr] of [[zl, 150, 86], [pl, 262, 60]]) { el.style.cssText = `position:absolute;left:0;right:0;top:${top}px;text-align:center;font:900 ${gr}px "Inter Display","Inter",sans-serif;-webkit-text-stroke:12px #0a0a0a;paint-order:stroke fill;text-shadow:0 7px 0 rgba(0,0,0,.35);display:none;transform-origin:center`; document.getElementById("wrap").appendChild(el); }
+  const FARBE = { gruen: "#4ef07a", rot: "#ff4a4a", gelb: "#ffe53a" };
   if (frage) { fr.textContent = frage.text ?? "Was soll ich tun?"; wahl.innerHTML = frage.karten.map(([b, e, txt]) => `<div class="karte"><b>${b}</b><span class="e">${e}</span>${txt}</div>`).join(""); }
   window.renderAt = (t, probe = false) => {
     // neutraler Grundzustand
@@ -90,7 +96,7 @@ export function start(o = {}) {
     for (const p of [Rq.muell, Rq.megafon, Rq.taschenlampe, Rq.lampenKegel, Rq.kisten]) p.visible = false;
     Rq.GASSE.lampe.material = Rq.GASSE.lampeAn; Rq.GASSE.licht.intensity = 40; Rq.ZIMMER.schirm.material = Rq.ZIMMER.schirmAn; Rq.ZIMMER.licht.intensity = 30;
     Al.zuruecksetzen(); cam.up.set(0, 1, 0); NAH.wert = null;
-    Z_.menge = null; Z_.vignette = 0.35; cam.fov = 55;
+    Z_.menge = null; Z_.vignette = 0.35; Z_.zaehler = null; Z_.plus = null; cam.fov = 55;
     grund(t);                                  // Folge: Uniforms, Autos, Polizei, Notlampen, Menge …
     const tag = U.uTag.value > 0.5;
     if (!o.eigeneAutos) Wt.autosSetzen(t);
@@ -115,6 +121,9 @@ export function start(o = {}) {
     // Untertitel: ein Wort, gelb
     const w = F.woerter.find(([a, b]) => t >= a - 0.02 && t < b + 0.05);
     if (w) { cap.textContent = sauber(w[2]).toLowerCase(); const pop = ease((t - w[0]) / 0.08); cap.style.transform = `scale(${0.8 + 0.2 * pop}) rotate(${(Math.sin(w[0] * 13) * 2).toFixed(1)}deg)`; } else cap.textContent = "";
+    // Zähler
+    if (Z_.zaehler) { const z = Z_.zaehler; zl.style.display = "block"; zl.style.color = FARBE[z.farbe ?? "gruen"] ?? z.farbe; zl.textContent = (typeof z.wert === "number" ? euro(z.wert, z.vorzeichen ?? true) : z.wert) + (z.einheit ?? " €"); } else zl.style.display = "none";
+    if (Z_.plus && t >= Z_.plus.t0 && t < Z_.plus.t0 + 1.2) { const q = (t - Z_.plus.t0) / 1.2; pl.style.display = "block"; pl.style.color = FARBE[Z_.plus.farbe ?? "gruen"]; pl.textContent = Z_.plus.text; pl.style.opacity = Math.min(1, (1 - q) * 3); pl.style.transform = `translateY(${-q * 60}px) scale(${0.7 + 0.3 * ease(q * 5)})`; } else pl.style.display = "none";
     // Mitmach-Frage
     Wt.grade.uniforms.uVig.value = Z_.vignette;
     if (frage && F.plan.zeilen.length > frage.zeile && t >= F.Z[frage.zeile] - 0.15) {

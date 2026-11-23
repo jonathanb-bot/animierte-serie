@@ -47,11 +47,21 @@ const farbStrukturTex = (art) => { if (FARBSTRUKTUR[art]) return FARBSTRUKTUR[ar
   const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; t.wrapS = t.wrapT = THREE.RepeatWrapping; t.repeat.copy(strukturTex(art).repeat); t.anisotropy = 4; return FARBSTRUKTUR[art] = t; };
 const strukturieren = (m, art = "stoff") => { if (!m) return m; m.bumpMap = strukturTex(art); m.bumpScale = art === "haar" ? 9 : 6; m.map = farbStrukturTex(art); m.color.multiplyScalar(1.12); m.roughness = art === "haar" ? 0.6 : 0.85; if ("clearcoat" in m) m.clearcoat = art === "haar" ? 0.25 : 0.04; m.needsUpdate = true; return m; };
 
+// Stoffmuster (Vergleich 24.11.): muster: { hemd: "streifen" | "karo" | "punkte", hose: … }, Farbe kommt weiter aus hemd/hose
+const MUSTER = {};
+const musterTex = (art) => { if (MUSTER[art]) return MUSTER[art]; const c = document.createElement("canvas"); c.width = c.height = 256; const x = c.getContext("2d"); x.fillStyle = "#ffffff"; x.fillRect(0, 0, 256, 256);
+  if (art === "streifen") { for (let i = 0; i < 8; i++) { x.fillStyle = i % 2 ? "#ffffff" : "#9a9aa2"; x.fillRect(i * 32, 0, 32, 256); x.fillStyle = "rgba(0,0,0,0.25)"; x.fillRect(i * 32, 0, 3, 256); } }
+  else if (art === "karo") { x.fillStyle = "#5a5a66"; for (let i = 0; i < 4; i++) { x.globalAlpha = 0.55; x.fillRect(i * 64 + 8, 0, 24, 256); x.fillRect(0, i * 64 + 8, 256, 24); x.globalAlpha = 0.9; x.fillRect(i * 64 + 40, 0, 4, 256); x.fillRect(0, i * 64 + 40, 256, 4); } x.globalAlpha = 1; }
+  else if (art === "punkte") { x.fillStyle = "#8a8a94"; for (let i = 0; i < 6; i++) for (let j = 0; j < 6; j++) { x.beginPath(); x.arc(i * 43 + (j % 2) * 21 + 10, j * 43 + 10, 8, 0, 7); x.fill(); } }
+  const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; t.wrapS = t.wrapT = THREE.RepeatWrapping; t.repeat.set(1.5, 1.5); t.anisotropy = 4; return MUSTER[art] = t; };
+const mustern = (m, art) => { if (!m || !art) return m; m.map = musterTex(art); if (m.bumpMap) { /* Struktur bleibt als Relief */ } m.needsUpdate = true; return m; };
+
 const blobTex = (() => { const c = document.createElement("canvas"); c.width = c.height = 128; const x = c.getContext("2d"); const g = x.createRadialGradient(64, 64, 4, 64, 64, 62); g.addColorStop(0, "rgba(0,0,0,0.7)"); g.addColorStop(1, "rgba(0,0,0,0)"); x.fillStyle = g; x.fillRect(0, 0, 128, 128); return new THREE.CanvasTexture(c); })();
 
 export const FIGUREN = [];
 // o: haut, hemd, hose, haare, frisur ('kurz','zopf','dutt','strubbel','glatze'), helm, weste, muetze, brille, kapuze, schuhe, skala,
-//    jacke (offene Jacke über dem Hemd), brust (Zeichen/Emoji auf der Brust, brustFarbe), struktur (Stoff- und Haarstruktur, für neue Folgen)
+//    jacke (offene Jacke über dem Hemd), brust (Zeichen/Emoji auf der Brust, brustFarbe), struktur (Stoff- und Haarstruktur, für neue Folgen),
+//    propeller (Propellermütze; true oder 4 Farben; drehen: f.userData.propeller.rotation.y = t * 12), sonnenbrille, muster { hemd, hose: streifen|karo|punkte }
 export const figur = (o) => {
   const sk = o.skala ?? 1, haut = o.haut ?? "#e8b98a";
   const f = new THREE.Group(); const hautM = plastik(haut);
@@ -70,8 +80,16 @@ export const figur = (o) => {
     if (fr === "strubbel") for (const [dx, dz, rz] of [[-0.35, 0.25, -0.4], [0.3, 0.3, 0.3], [0, -0.2, 0.1], [0.4, -0.3, 0.5]]) { const s = rb(0.5, 0.38, 0.5, 0.15, hm); s.position.set(dx, 1.45, dz); s.rotation.z = rz; kopfG.add(s); } }
   if (o.helm) { const hm2 = plastik(o.helm); const k = new THREE.Mesh(new THREE.SphereGeometry(0.8, 20, 12, 0, Math.PI * 2, 0, Math.PI / 2), hm2); k.scale.set(1, 0.85, 1.05); k.position.y = 1.2; kopfG.add(k); const r = new THREE.Mesh(new THREE.CylinderGeometry(0.95, 0.95, 0.08, 24), hm2); r.position.set(0, 1.2, 0.08); kopfG.add(r); }
   if (o.muetze) { const mm = plastik(o.muetze); const k = new THREE.Mesh(new THREE.CylinderGeometry(0.72, 0.68, 0.45, 20), mm); k.position.y = 1.42; kopfG.add(k); const s = rb(0.9, 0.08, 0.5, 0.04, plastik("#111")); s.position.set(0, 1.22, 0.62); kopfG.add(s); const b = rb(0.25, 0.25, 0.05, 0.05, new THREE.MeshStandardMaterial({ color: "#e8c040", metalness: 0.8, roughness: 0.3 })); b.position.set(0, 1.48, 0.72); kopfG.add(b); }
+  if (o.propeller) { const farben = Array.isArray(o.propeller) ? o.propeller : ["#e83a3a", "#2a6ae8", "#f2c21a", "#2ab04a"]; const pm = new THREE.Group(); pm.position.y = 1.3; kopfG.add(pm);
+    for (let i = 0; i < 4; i++) { const seg = new THREE.Mesh(new THREE.SphereGeometry(0.8, 16, 10, i * Math.PI / 2, Math.PI / 2, 0, Math.PI / 2), plastik(farben[i % farben.length])); seg.scale.set(1, 0.8, 1.02); pm.add(seg); }
+    const schirm = rb(1.05, 0.08, 0.75, 0.03, plastik(farben[1 % farben.length])); schirm.position.set(0, 0.03, 0.9); pm.add(schirm);
+    const stiel = new THREE.Mesh(new THREE.CylinderGeometry(0.04, 0.04, 0.32, 8), plastik("#f2c21a")); stiel.position.y = 0.78; pm.add(stiel);
+    const prop = new THREE.Group(); prop.position.y = 0.96; pm.add(prop); for (const sx of [-1, 1]) { const b = rb(0.62, 0.05, 0.16, 0.03, plastik(sx < 0 ? "#e83a3a" : "#2a6ae8")); b.position.x = sx * 0.33; b.rotation.x = sx * 0.25; prop.add(b); }
+    prop.add(new THREE.Mesh(new THREE.SphereGeometry(0.07, 10, 8), plastik("#f2c21a"))); f.userData_propeller = prop; }
+  if (o.sonnenbrille) { const sm = new THREE.MeshPhysicalMaterial({ color: "#0a0a0e", roughness: 0.08, clearcoat: 1, metalness: 0.3 }); for (const ex of [-0.3, 0.3]) { const gl = rb(0.42, 0.26, 0.05, 0.06, sm); gl.position.set(ex, 0.72, 0.66); kopfG.add(gl); }
+    const st = rb(0.22, 0.05, 0.04, 0.01, sm); st.position.set(0, 0.77, 0.66); kopfG.add(st); for (const sx of [-1, 1]) { const b = rb(0.04, 0.05, 0.6, 0.01, sm); b.position.set(sx * 0.63, 0.75, 0.38); kopfG.add(b); } }
   if (o.brille) { const bm = new THREE.MeshStandardMaterial({ color: "#222", roughness: 0.3 }); for (const ex of [-0.31, 0.31]) { const r = new THREE.Mesh(new THREE.TorusGeometry(0.17, 0.03, 6, 16), bm); r.position.set(ex, 0.72, 0.66); kopfG.add(r); } const st = rb(0.24, 0.04, 0.04, 0.01, bm); st.position.set(0, 0.74, 0.66); kopfG.add(st); }
-  const hemdM = (o.kapuze || o.stoff) ? stoff(o.hemd) : plastik(o.hemd); if (S) strukturieren(hemdM);
+  const hemdM = (o.kapuze || o.stoff) ? stoff(o.hemd) : plastik(o.hemd); if (S) strukturieren(hemdM); mustern(hemdM, o.muster?.hemd);
   const torso = rb(2, 2, 1, 0.12, hemdM); torso.position.y = 2.95; koerper.add(torso);
   if (o.kapuze) { const k = rb(1.6, 0.5, 0.5, 0.2, hemdM); k.position.set(0, 3.85, -0.45); koerper.add(k); const t = rb(0.9, 0.6, 0.06, 0.05, stoff(new THREE.Color(o.hemd).multiplyScalar(0.8))); t.position.set(0, 2.45, 0.52); koerper.add(t); }
   if (o.weste) { const wm = plastik(o.weste); if (S) strukturieren(wm); const w = rb(2.06, 1.8, 1.06, 0.12, wm); w.position.y = 3.0; koerper.add(w); const st = new THREE.MeshStandardMaterial({ color: "#e8e8e0", emissive: "#bfbfb0", emissiveIntensity: 0.6, roughness: 0.3 });
@@ -86,9 +104,9 @@ export const figur = (o) => {
     if (hand) { const hd = rb(0.96, 0.5, 0.96, 0.12, hautM); hd.position.y = -1.7; p.add(hd); } else { const s = rb(1.0, 0.42, 1.12, 0.12, plastik(o.schuhe ?? "#2a2a2e")); s.position.set(0, -1.75, 0.06); p.add(s); } return p; };
   const armM = o.weste ? (S ? strukturieren(plastik(o.aermel ?? o.hemd)) : plastik(o.aermel ?? o.hemd)) : hemdM;
   const armL = glied(-1.5, 3.85, armM, true), armR = glied(1.5, 3.85, armM, true); koerper.add(armL, armR);
-  const hoseM = plastik(o.hose); if (S) strukturieren(hoseM); const beinL = glied(-0.5, 1.95, hoseM), beinR = glied(0.5, 1.95, hoseM); f.add(beinL, beinR);
+  const hoseM = plastik(o.hose); if (S) strukturieren(hoseM); mustern(hoseM, o.muster?.hose); const beinL = glied(-0.5, 1.95, hoseM), beinR = glied(0.5, 1.95, hoseM); f.add(beinL, beinR);
   const blob = new THREE.Mesh(new THREE.PlaneGeometry(3.2, 3.2).rotateX(-Math.PI / 2), new THREE.MeshBasicMaterial({ map: blobTex, transparent: true, depthWrite: false })); blob.position.y = 0.03; f.add(blob);
-  f.userData = { koerper, kopfG, gm, armL, armR, beinL, beinR, skala: sk, haut, rund };
+  f.userData = { koerper, kopfG, gm, armL, armR, beinL, beinR, skala: sk, haut, rund, propeller: f.userData_propeller ?? null }; delete f.userData_propeller;
   f.scale.setScalar(0.9 * sk); scene.add(f); FIGUREN.push(f); return f; };
 
 export const pose = (f, o = {}) => {

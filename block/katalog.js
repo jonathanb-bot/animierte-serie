@@ -38,6 +38,8 @@ const FO = {
   oma: { haut: "#f2d0b0", hemd: "#8a4a6a", stoff: true, hose: "#4a3a4a", haare: "#e0e0e0", frisur: "dutt", brille: true, schal: "#c8a050", skala: 0.95 },
   polizist: { haut: "#9a6038", hemd: "#1e2e5a", hose: "#1a2240", muetze: "#1e2e5a", abzeichen: true, frisur: "glatze", haare: "#111", skala: 1.05 },
   lehrer: { haut: "#e8b890", hemd: "#f4f4f4", jacke: "#2ab0a0", hose: "#c8a878", haare: "#6a4a2a", brille: true, skala: 1.05 },
+  junge2: { haut: "#f2d0b0", hemd: "#e8e8ec", hose: "#3a4a8a", haare: "#e8e0d0", frisur: "strubbel", propeller: true, muster: { hemd: "streifen", hose: "karo" }, struktur: true, skala: 0.78 },
+  opa: { haut: "#f0c8a8", hemd: "#5a4a3a", jacke: "#2a2a30", hose: "#3a3a40", haare: "#e8e8e8", frisur: "glatze", sonnenbrille: true, struktur: true, skala: 1.0 },
   kind: { haut: "#8a5a3a", hemd: "#e85a9a", hose: "#3a3a5a", haare: "#1a1a1a", frisur: "zopf", kapuze: true, brust: "★", skala: 0.78 },
 };
 const F = {}; for (const [n, o] of Object.entries(FO)) F[n] = () => Fg.figur(o);
@@ -50,7 +52,7 @@ const GESICHTER = ["froh", "lachen", "reden", "schreien", "angst", "idee", "erns
 const E = {};
 for (const [n, bau] of Object.entries(O.ALLE)) { let obj = null; E["objekt-" + n] = { gruppe: "Objekte (objekte.js)", zeige: () => { obj = obj || bau(); imStudio(obj); } }; }
 for (const n of Object.keys(F)) E["figur-" + n] = { gruppe: "Figuren", zeige: () => { halter.clear(); const f = FIG[n]; f.visible = true; f.position.copy(STUDIO); f.rotation.set(0, -0.35, 0); Fg.pose(f, { armR: 0.3, ges: "froh" });
-  const h = 4.3 * f.scale.y; blick(STUDIO.clone().add(V(-3.2 * h / 4, h * 0.62, 9.5 * h / 4)), STUDIO.clone().add(V(0, h * 0.5, 0))); studioLicht.intensity = 1.2; licht(1.5, "#fff0e0", STUDIO.clone().add(V(0, h * 0.5, 0))); } };
+  const h = 4.3 * f.scale.y; blick(STUDIO.clone().add(V(-3.4 * h / 4, h * 0.66, 11 * h / 4)), STUDIO.clone().add(V(0, h * 0.56, 0))); studioLicht.intensity = 1.2; licht(1.5, "#fff0e0", STUDIO.clone().add(V(0, h * 0.5, 0))); } };
 E["figur-gesichter"] = { gruppe: "Figuren", zeige: () => { halter.clear(); const f = FIG.ich; f.visible = true; f.position.copy(STUDIO); f.rotation.set(0, 0, 0); Fg.pose(f, { ges: "staunen" }); const k = Fg.kopfPos(f); blick(k.clone().add(V(0, 0.1, 2.4)), k, 40); studioLicht.intensity = 1.2; licht(1.4, "#fff0e0", k); } };
 E["gesicht-seite"] = { gruppe: "Gesichter", zeige: () => { halter.clear(); const f = FIG["ich-struktur"] || FIG.ich; f.visible = true; f.position.copy(STUDIO); f.rotation.set(0, 0.95, 0); Fg.pose(f, { ges: "lachen" }); const k = Fg.kopfPos(f); blick(k.clone().add(V(0.4, 0.2, 2.6)), k, 40); studioLicht.intensity = 1.2; licht(1.4, "#fff0e0", k); } };
 E["gesicht-schraeg"] = { gruppe: "Gesichter", zeige: () => { halter.clear(); const f = FIG["lehrer-struktur"] || FIG.lehrer; f.visible = true; f.position.copy(STUDIO); f.rotation.set(0, -0.55, 0); Fg.pose(f, { ges: "staunen", kopfNeig: -0.25 }); const k = Fg.kopfPos(f); blick(k.clone().add(V(-0.3, -0.9, 2.8)), k, 40); studioLicht.intensity = 1.2; licht(1.4, "#fff0e0", k); } };
@@ -66,11 +68,19 @@ const K = {   // Kulissen und Effekte in der Welt (Koordinaten siehe KATALOG.md)
   "einkaufsstrasse-tag": () => { tag(); STR = STR || Al.einkaufsstrasse({ x: 24, z0: 70, z1: 330 }); STR.visible = true; const z = blick(V(26, 4.2, 74), V(24, 3.5, 150), 50); licht(1.6, "#fff4e0", z); },
   "riesen-tier-strasse": () => { tag(); STR = STR || Al.einkaufsstrasse({ x: 24, z0: 70, z1: 330 }); STR.visible = true; RT = RT || O.riesenTier({ groesse: 0.9 }); RT.visible = true; RT.position.set(24, 0, 150); RT.rotation.y = Math.PI; if (!RT.parent) scene.add(RT);
     const z = blick(V(25, 2.5, 100), V(24, 9, 150), 55); licht(1.6, "#fff4e0", z); },
+  "vorstadt-tag": () => { tag(); const V = Al.VORSTADT; const z = blick(V.pos(-2, 4.5, -60), V.pos(4, 3.5, 10), 52); licht(1.6, "#fff4e0", z); },
+  "vorstadt-nacht": () => { const V = Al.VORSTADT; V.nacht(true); const z = blick(V.pos(-2, 4.5, -60), V.pos(4, 3.5, 10), 52); licht(0.6, "#ffd8b0", z); },
+  "vorstadt-haltestelle": () => { tag(); const V = Al.VORSTADT; const z = blick(V.pos(-3, 3.5, -8), V.pos(9, 3, 12), 50); licht(1.6, "#fff4e0", z); },
+  "aula-voll": () => { const A = Al.AULA; Al.raumlicht(A, 30); A.kinder(1); Al.schreibe(A.banner, ["SCHULFEST"], { bg: "#2a4ab8", fg: "#ffd23a", font: "900 230px 'Inter Display', Inter, sans-serif" }); const z = blick(A.pos(0, 10, 30), A.pos(0, 2.5, -10), 60); licht(0.8, "#fff4e0", z); },
+  "aula-leer": () => { const A = Al.AULA; Al.raumlicht(A, 30); A.kinder(0); const z = blick(A.pos(-14, 4.5, 28), A.pos(0, 3, -20), 55); licht(0.8, "#fff4e0", z); },
+  "geldregen": () => { tag(); const V = Al.VORSTADT; Al.geldSetzen(1.2, true, { ...V.pos(4, 3.5, 0), t0: 0, kraft: 4 }); const ich = FIG["ich-struktur"]; ich.visible = true; ich.position.copy(V.pos(4, 0.3, 0)); ich.rotation.set(0, Math.PI, 0); Fg.pose(ich, { armL: 2.6, armR: 2.6, ges: "lachen" });
+    const z = blick(V.pos(3, 4.5, -10), V.pos(4, 4, 0), 50); licht(1.6, "#fff4e0", z); },
   "platz": () => { const z = blick(V(0, 14, 62), V(0, 5, 0), 55); licht(1.2, "#ffd8b0", z); },
   "gasse": () => { const z = blick(V(-70, 4, 96), V(-100, 3, 96), 50); licht(0.8, "#ffd8b0", z); },
   "laden-laternen": () => { const z = blick(V(58, 5, -24), V(79, 4.5, -30), 50); licht(1.2, "#ffd8b0", z); },
   "lager": () => { const z = blick(V(1400, 5, -590), V(1400, 3, -606), 55); licht(0.8, "#ffd8b0", z); },
   "schlafzimmer": () => { const zm = Rq.zimmer; zm.updateMatrixWorld(true); const z = blick(V(3.5, 5.5, -3.5).applyMatrix4(zm.matrixWorld), V(-1, 2, 2.5).applyMatrix4(zm.matrixWorld), 55); licht(0.4, "#ffc080", z); },
+  "kinderzimmer-lichterkette": () => { const zm = Rq.zimmer; zm.updateMatrixWorld(true); Rq.ZIMMER.lichterkette.visible = true; const z = blick(V(3.5, 5.0, -3.8).applyMatrix4(zm.matrixWorld), V(-2, 5.5, 3).applyMatrix4(zm.matrixWorld), 60); licht(0.4, "#ffc080", z); },
   "kraftwerk": () => { const z = blick(V(70, 30, -430), V(0, 15, -520), 55); licht(1.2, "#ffd8b0", z); },
   "polizei-kreis": () => { const z = blick(V(0, 45, 75), V(0, 0, 0), 55); Rq.polizeiSetzen(1, true, true, 27, cam.position); licht(1, "#ffd8b0", z); },
   "notlampen": () => { const z = blick(V(0, 10, 36), V(0, 2, 0), 55); Rq.notlampenSetzen(1, true, 21); licht(0.8, "#ffd8b0", z); },
@@ -93,10 +103,10 @@ window.NAMEN = Object.keys(E); window.GRUPPEN = Object.fromEntries(Object.entrie
 window.zeige = (name) => { const e = E[name]; if (!e) throw new Error("Unbekannt: " + name);
   U.uT.value = 1; U.uAus.value = 1e6; U.uAn.value = 1e6; U.uTag.value = 0; U.uGold.value = 0; Wt.grade.uniforms.uFlash.value = 0; Wt.grade.uniforms.uVig.value = 0.3;
   Wt.hemi.intensity = 0.6; Wt.hemi.color.set("#5a6ab0"); Wt.hemi.groundColor.set("#141018"); Wt.suchkegel.forEach(k => k.visible = false);
-  Fg.FIGUREN.forEach(f => f.visible = false); if (STR) STR.visible = false; if (RT) RT.visible = false; Ws.schattenAus(); Ws.laternenAnlegen([]); Al.zuruecksetzen(); studioLicht.intensity = 0; halter.clear();
+  Fg.FIGUREN.forEach(f => f.visible = false); if (STR) STR.visible = false; if (RT) RT.visible = false; Rq.ZIMMER.lichterkette.visible = false; Ws.schattenAus(); Ws.laternenAnlegen([]); Al.zuruecksetzen(); studioLicht.intensity = 0; halter.clear(); Wt.boden.visible = true;
   Rq.polizeiSetzen(1, false, false); Rq.notlampenSetzen(0, false); Rq.mengeSetzen(1, { sichtbar: false }); Rq.konfettiSetzen(0, false);
   Wt.autosSetzen(1); Wt.lampenAktualisieren(1);
-  e.zeige(1); cam.updateProjectionMatrix();
+  e.zeige(1); if (studioLicht.intensity > 0) Wt.boden.visible = false; cam.updateProjectionMatrix();
   Ws.laternenSetzen(1); Ws.schattenSetzen(1); Ws.funkenSetzen(1); Ws.staubSetzen(1); Al.bildschirmeRendern();
   document.getElementById("cap").textContent = name; composer.render(); return true; };
 window.bereit = true;

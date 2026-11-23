@@ -50,11 +50,11 @@ sh(E[5] + 0.1, (t, q) => { const R = Al.STUBE; Al.raumlicht(R); handyFilm(t); Al
 sh(E[6] + 0.1, (t, q) => { Wt.U.uTag.value = 1; Wt.hemi.intensity = 1.2; Wt.hemi.color.set("#cfe4ff"); Wt.hemi.groundColor.set("#8a8070");
   Al.videowand.visible = true; Al.videowand.position.set(-14, 0, -40); Al.videowand.rotation.y = 0.2; Al.videowand.scale.setScalar(1.6);
   Al.handyBlick(V(14, 6, 60), V(0, 3, 20), 50); papa.visible = true; papa.position.set(0, 0, 22); papa.rotation.y = 0.6; Fg.pose(papa, { armR: 2.6, ges: "lachen" });
-  Z_.menge = { armeHoch: (p) => 0, licht: 1, dz: 6 };
+  Z_.menge = { armeHoch: (p) => 0, licht: 1, dz: 6 }; Z_.zaehler = { wert: B.zaehlen(t, Z[6], E[6], 0, 146376), farbe: "gruen" }; Z_.plus = { text: "+600 €", t0: Z[6] + 0.8 };
   kamera.fahrt(q, V(0, 7, 34), V(0, 9, 30), V(-14, 12, -40), V(-14, 14, -40), 55); licht(1.6, "#fff4e0", 1.0, "#ffffff"); });
 // 7 Ballons + Regenbogen
 sh(DAUER + 1, (t, q) => { Wt.U.uTag.value = 1; Wt.hemi.intensity = 1.2; Wt.hemi.color.set("#cfe4ff"); Al.regenbogen.visible = true; Al.regenbogen.position.set(0, 30, -160); Al.regenbogen.scale.setScalar(1.2);
-  Al.ballonsSetzen(t, true, { x: 0, z: -10, t0: Z[7] - 0.5 }); Z_.menge = { armeHoch: () => 1, licht: 1, dz: 0 };
+  Al.ballonsSetzen(t, true, { x: 0, z: -10, t0: Z[7] - 0.5 }); Z_.zaehler = { wert: -50000, farbe: "rot" }; Al.geldSetzen(t, true, { x: 0, y: 6, z: 10, t0: Z[7] - 0.2, kraft: 5 }); Z_.menge = { armeHoch: () => 1, licht: 1, dz: 0 };
   kamera.fahrt(q, V(0, 5, 30), V(0, 6, 26), V(0, 14, -40), V(0, 18, -40), 60); licht(1.6, "#fff4e0", 1.0, "#ffffff"); });
 
 B.start({ grund: (t) => {} });

@@ -36,6 +36,9 @@ Nur die Mittel übernehmen, nie Inhalte (keine Lava-Stunde, keine Mammuts, keine
 - **Text in der Welt:** Tafel, Schild, Handy-Seite, Fehlermeldung. Nur kurze Wörter, groß lesbar, nie mehr als eine Zeile gleichzeitig zum Lesen.
 - **Tempo:** Etwa alle 2 s ein neues Bild, jede Zeile mindestens eine eigene Einstellung. Mischen aus Totale, Über-die-Schulter, Gesicht in Nahaufnahme (`staunen`, `angst`) und Blick aufs Handy.
 - **Wendepunkt:** „Aber …“ oder „Doch dann …“ nach etwa einem Drittel, danach ein Spektakel-Höhepunkt mit eigenen großen Wesen oder Massen.
+- **Zeitraffer mit Uhrzeit (24.11.):** „8 Uhr … 9 Uhr … Mittag …“, jede Uhrzeit ein eigenes kurzes Bild mit Uhr in der Welt (Wecker, Wanduhr, `leinwand`).
+- **Laufender Zähler (24.11.):** Wenn es um Geld, Punkte oder Anzahl geht, zählt `Z_.zaehler` sichtbar mit (grün hoch, rot runter). Das ist ein starker Dopamin-Moment.
+- **Doppelte Wendung (24.11.):** Der Plan scheint aufzugehen, dann kommt die Wendung („alle hatten denselben Plan“), und danach dreht sich alles um (der Zähler läuft rückwärts). Am Ende steht ein kurzer, witziger Satz einer bekannten Person (Opa, Oma).
 - **Helle Szenen als Kontrast:** Tag (`U.uTag = 1`), bunte Innenräume und Feier-Effekte (Konfetti, Ballons, Regenbogen) sind erlaubt. Die Stadt bleibt aber meist nachts, das ist unser Wiedererkennungszeichen.
 
 ## Ablauf

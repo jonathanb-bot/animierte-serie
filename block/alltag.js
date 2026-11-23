@@ -7,6 +7,7 @@
 //   Effekte     Regenbogen, Luftballons.
 import { THREE, RoundedBoxGeometry, scene, renderer, W, H, LOTS } from "./welt.js";
 import * as O from "./objekte.js";
+import { mergeGeometries as mergeGeo } from "three/addons/utils/BufferGeometryUtils.js";
 import { rnd } from "./wesen.js";
 const mat = (c, r = 0.7, m = 0) => new THREE.MeshStandardMaterial({ color: c, roughness: r, metalness: m });
 const plastik = c => new THREE.MeshPhysicalMaterial({ color: c, roughness: 0.4, clearcoat: 0.5 });
@@ -176,7 +177,7 @@ export const ballonsSetzen = (t, an = false, o = { x: 0, z: 0, t0: 0 }) => { con
     ballonW.setMatrixAt(i, m); } ballonW.instanceMatrix.needsUpdate = true; };
 
 // ---------- Pro Bild ----------
-export const zuruecksetzen = () => { if (HANDY.arm) HANDY.arm.visible = true; HANDY.arm = null; handy.visible = false; videowand.visible = false; videowand.scale.setScalar(1); regenbogen.visible = false; regenbogen.scale.setScalar(1); handyWelt(); raumlicht(null); STUBE.tvSchirm.material = STUBE.tvAus; ballonsSetzen(0, false); };
+export const zuruecksetzen = () => { if (HANDY.arm) HANDY.arm.visible = true; HANDY.arm = null; handy.visible = false; videowand.visible = false; videowand.scale.setScalar(1); regenbogen.visible = false; regenbogen.scale.setScalar(1); handyWelt(); raumlicht(null); STUBE.tvSchirm.material = STUBE.tvAus; ballonsSetzen(0, false); geldSetzen(0, false); VORSTADT.nacht(false); AULA.kinder(1); };
 export const fernseherAn = () => { STUBE.tvSchirm.material = HANDY.weltMat; };
 export const fernseherAus = () => { STUBE.tvSchirm.material = STUBE.tvAus; };
 // Handy-Welt rendern (vor dem Haupt-Render), nur wenn ein Bildschirm sie zeigt. Bildschirme selbst dabei aus (keine Rückkopplung).
@@ -205,3 +206,77 @@ export const einkaufsstrasse = ({ x = 24, z0 = 70, z1 = 330, saat = 4 } = {}) =>
       const bm = O.baum({ art: r() < 0.7 ? "rund" : "kegel", groesse: 0.55 + r() * 0.15, saat: k }); bm.position.set(front - seite * 1.4, 0, l.z + b / 2 + 1.2); g.add(bm);
     } }
   return g; };
+
+// ---------- Vorstadt (Vergleich 24.11.): Straße mit Einfamilienhäusern, Vorgärten, Zäunen, Bäumen, Bushaltestelle ----------
+// Liegt bei (-1400, 0, 1800); Straße läuft lokal entlang z (von -150 bis 150), Häuser links und rechts schauen zur Straße.
+// VORSTADT.nacht(true) schaltet Fenster und Laternenköpfe an (Licht in den Häusern), sonst Tag. In der Ferne sieht man die Hochhäuser.
+const graszTex = canvasTex(256, 256, (x, w, h) => { x.fillStyle = "#5aa83a"; x.fillRect(0, 0, w, h); let s = 8; const r = () => { s = (s * 16807) % 2147483647; return s / 2147483647; }; for (let i = 0; i < 5000; i++) { const g = 140 + r() * 60; x.fillStyle = `rgb(${g * 0.45 | 0},${g | 0},${g * 0.3 | 0})`; x.fillRect(r() * w, r() * h, 2, 3); } }, [60, 60]);
+const strasseTex = canvasTex(256, 512, (x, w, h) => { x.fillStyle = "#5a5e66"; x.fillRect(0, 0, w, h); let s = 4; const r = () => { s = (s * 16807) % 2147483647; return s / 2147483647; }; for (let i = 0; i < 3000; i++) { const g = 80 + r() * 30; x.fillStyle = `rgb(${g},${g},${g + 6})`; x.fillRect(r() * w, r() * h, 2, 2); }
+  x.fillStyle = "#f2c21a"; x.fillRect(w / 2 - 9, 0, 6, h); x.fillRect(w / 2 + 3, 0, 6, h); x.fillStyle = "#f0f0f0"; x.fillRect(8, 0, 5, h); x.fillRect(w - 13, 0, 5, h); }, [1, 20]);
+export const VORSTADT = (() => {
+  const g = new THREE.Group(); g.position.set(-1400, 0, 1800); scene.add(g); const V = { g, glas: [], koepfe: [] }; let s = 21; const r = () => { s = (s * 16807) % 2147483647; return s / 2147483647; };
+  const gras = new THREE.Mesh(new THREE.PlaneGeometry(600, 600).rotateX(-Math.PI / 2), new THREE.MeshStandardMaterial({ map: graszTex, roughness: 0.95 })); gras.position.y = 0.04; g.add(gras);
+  const str = new THREE.Mesh(new THREE.PlaneGeometry(12, 600).rotateX(-Math.PI / 2), new THREE.MeshStandardMaterial({ map: strasseTex, roughness: 0.85 })); str.position.y = 0.06; g.add(str);
+  for (const sx of [-1, 1]) { const gw = bx(3.2, 0.3, 600, mat("#d8d8d4", 0.8)); gw.position.set(sx * 7.6, 0.15, 0); g.add(gw); const bord = bx(0.25, 0.32, 600, mat("#b8b8b4", 0.7)); bord.position.set(sx * 6.1, 0.16, 0); g.add(bord); }
+  const wandF = ["#f4e8b8", "#cfe4f4", "#f4d0d8", "#d8f0d0", "#f8f4ec", "#e8d8f4", "#f8dcb8"], dachF = ["#3a4a6a", "#5a3a3a", "#3a5a4a", "#4a4a52", "#7a3a2a"], tuerF = ["#c83a3a", "#2a5ad8", "#2a8a4a", "#f2c21a", "#6a3a8a"];
+  let k = 0;
+  for (let z = -140; z <= 140; z += 24) for (const sx of [-1, 1]) {
+    const h = O.haus({ wand: wandF[k % wandF.length], dach: dachF[(k * 3) % dachF.length], tuer: tuerF[(k * 2) % tuerF.length], breite: 11 + r() * 3, tiefe: 9 + r() * 2, stock: r() < 0.75 ? 2 : 1, saat: k + 3 }); k++;
+    h.position.set(sx * 23, 0.04, z + (r() - 0.5) * 4); h.rotation.y = -sx * Math.PI / 2; g.add(h);
+    h.traverse(o => { if (o.name === "glas") { o.material = o.material.clone(); V.glas.push([o.material, r() < 0.7]); } });
+    const zn = O.zaun({ laenge: 14 }); zn.position.set(sx * 11.2, 0.2, z); zn.rotation.y = Math.PI / 2; zn.scale.setScalar(0.8); g.add(zn);
+    const weg = bx(2.4, 0.08, 9.5, mat("#d0c8b8", 0.8)); weg.position.set(sx * 13.8, 0.08, z); weg.rotation.y = Math.PI / 2; g.add(weg);
+    if (r() < 0.8) { const b = O.baum({ art: r() < 0.75 ? "rund" : "kegel", groesse: 0.6 + r() * 0.25, saat: k * 7 }); b.position.set(sx * (14 + r() * 4), 0.04, z + 8 + r() * 2); g.add(b); }
+    if (r() < 0.5) { const bk = O.blumenkuebel({ farbe: "#c8a060" }); bk.scale.setScalar(0.7); bk.position.set(sx * 16, 0.04, z - 6); g.add(bk); }
+    if (r() < 0.6) { const bf = O.briefkasten({ farbe: ["#f2c21a", "#2a5ad8", "#c83a3a"][k % 3] }); bf.scale.setScalar(0.75); bf.position.set(sx * 10.6, 0.3, z + 3.5); bf.rotation.y = -sx * Math.PI / 2; g.add(bf); }
+    if (k % 3 === 0) { const l = O.laterne({ hoehe: 8, an: true, punktlicht: false }); l.position.set(sx * 9.4, 0.3, z + 12); g.add(l); l.traverse(o => { if (o.isMesh && o.material.isMeshBasicMaterial) { o.material = o.material.clone(); V.koepfe.push(o.material); } }); } }
+  const hs = O.haltestelle({ farbe: "#2a8ae8" }); hs.position.set(9.4, 0.3, 10); hs.rotation.y = -Math.PI / 2; g.add(hs); V.haltestelle = hs;
+  const sch = O.schild({ text: "BUS", farbe: "#2ab04a", form: "eckig" }); sch.position.set(9.0, 0.3, 4); sch.rotation.y = -Math.PI / 2; g.add(sch);
+  V.nacht = (an) => { for (const [m, ein] of V.glas) { m.emissiveIntensity = an && ein ? 1.6 : 0; m.color.set(an && ein ? "#ffe0a0" : "#8ac4e8"); } for (const m of V.koepfe) m.color.setRGB(an ? 3 : 0.9, an ? 2.4 : 0.88, an ? 1.4 : 0.8); };
+  V.nacht(false); V.pos = (x, y, z) => new THREE.Vector3(g.position.x + x, y, g.position.z + z); return V; })();
+
+// ---------- Aula (Vergleich 24.11.): Halle mit Bühne, Banner, 600 Sitzen in Reihen und sitzenden Kindern ----------
+// AULA.kinder(anteil 0…1) setzt, wie viele Plätze besetzt sind (fester Zufall, 0 = leere Halle). AULA.banner ist eine Leinwand (schreibe).
+export const AULA = (() => {
+  const R = raum("aula", 1400, 1800, 44, 64, 13, { wandU: "#b8463a", wandO: "#f4ecdc", boden: new THREE.MeshStandardMaterial({ map: holzTex("#b8824a", "#a8723a"), roughness: 0.6 }) });
+  const g = R.g; const A = R;
+  for (let i = 0; i < 4; i++) for (let j = 0; j < 6; j++) { const p = bx(3.4, 0.08, 3.4, new THREE.MeshBasicMaterial({ color: new THREE.Color(1.7, 1.65, 1.5) })); p.position.set(-15 + i * 10, 12.95, -26 + j * 10); g.add(p); }
+  const buehne = rb(30, 2.2, 10, 0.15, mat("#6a3a22", 0.6)); buehne.position.set(0, 1.1, -27); g.add(buehne);
+  for (const sx of [-1, 1]) { const v = bx(7, 11, 0.6, mat("#a8222a", 0.8)); v.position.set(sx * 18, 6.6, -31.6); g.add(v); }
+  const pult = rb(2.4, 2.6, 1.4, 0.1, mat("#8a5a32", 0.6)); pult.position.set(0, 3.5, -25); g.add(pult);
+  A.banner = leinwand(22, 2.6, { px: 1600 }); A.banner.position.set(0, 10.4, -31.8); g.add(A.banner); schreibe(A.banner, ["SCHULFEST"], { bg: "#2a4ab8", fg: "#ffd23a", font: "900 230px 'Inter Display', Inter, sans-serif" });
+  A.uhr = leinwand(5, 2, { px: 512, leuchtet: true, hell: 1.4 }); A.uhr.position.set(-21.82, 9, -10); A.uhr.rotation.y = Math.PI / 2; g.add(A.uhr); schreibe(A.uhr, ["8:00"], { bg: "#111", fg: "#ff3a2a", font: "700 150px 'DejaVu Sans Mono', monospace" });
+  for (let i = 0; i < 4; i++) fenster(A, 21.82, 8, -18 + i * 12, -Math.PI / 2, 4, 4);
+  // Sitze: 20 Reihen × 30, Mittelgang
+  const sitzGeo = mergeGeo([new THREE.BoxGeometry(0.95, 0.18, 0.9).translate(0, 1.0, 0), new THREE.BoxGeometry(0.95, 1.1, 0.14).translate(0, 1.6, -0.42), new THREE.BoxGeometry(0.1, 1.0, 0.8).translate(-0.48, 0.5, 0), new THREE.BoxGeometry(0.1, 1.0, 0.8).translate(0.48, 0.5, 0)]);
+  const sitze = new THREE.InstancedMesh(sitzGeo, mat("#b8222a", 0.75), 600); A.plaetze = [];
+  const m4 = new THREE.Matrix4(); let n = 0;
+  for (let reihe = 0; reihe < 20; reihe++) for (let i = 0; i < 30; i++) { const x = -17 + i * 1.18 + (i >= 15 ? 1.6 : 0), z = -17 + reihe * 2.15; m4.makeTranslation(x, 0.06 + reihe * 0.08, z); sitze.setMatrixAt(n++, m4); A.plaetze.push([g.position.x + x, 0.06 + reihe * 0.08, g.position.z + z]); }
+  g.add(sitze);
+  // sitzende Kinder (Instanzen: Körper, Kopf, Haare) – billig, aber im Blockstil
+  const kk = new THREE.InstancedMesh(new RoundedBoxGeometry(0.85, 0.95, 0.5, 2, 0.08), new THREE.MeshStandardMaterial({ roughness: 0.6 }), 600);
+  const kp = new THREE.InstancedMesh(new RoundedBoxGeometry(0.58, 0.55, 0.58, 2, 0.15), new THREE.MeshStandardMaterial({ roughness: 0.5 }), 600);
+  const kh = new THREE.InstancedMesh(new RoundedBoxGeometry(0.64, 0.24, 0.64, 2, 0.08), new THREE.MeshStandardMaterial({ roughness: 0.6 }), 600);
+  for (const im of [kk, kp, kh]) { im.frustumCulled = false; g.add(im); }
+  const hemd = ["#e84a4a", "#4a8ae8", "#f2c21a", "#3ab86a", "#e87ab8", "#8a5ae8", "#f08a3a", "#3ac8c8", "#f4f4f4", "#2a3a5a"], haut = ["#f0c8a0", "#d89a6a", "#8a5a3a", "#f2d0b0", "#c8865a"], haar = ["#2a1a10", "#5a3418", "#c8a050", "#1a1a1a", "#8a4a20"];
+  let ss = 31; const rr = () => { ss = (ss * 16807) % 2147483647; return ss / 2147483647; }; const c = new THREE.Color(); A.reihenfolge = [];
+  for (let i = 0; i < 600; i++) { kk.setColorAt(i, c.set(hemd[Math.floor(rr() * hemd.length)])); kp.setColorAt(i, c.set(haut[Math.floor(rr() * haut.length)])); kh.setColorAt(i, c.set(haar[Math.floor(rr() * haar.length)])); A.reihenfolge.push([rr(), i]); }
+  A.reihenfolge.sort((a, b) => a[0] - b[0]);
+  A.kinder = (anteil = 1, huepf = 0, t = 0) => { const nb = Math.round(600 * anteil), an = new Set(A.reihenfolge.slice(0, nb).map(x => x[1])), m = new THREE.Matrix4(), nul = new THREE.Matrix4().makeScale(0, 0, 0);
+    for (let i = 0; i < 600; i++) { if (!an.has(i)) { kk.setMatrixAt(i, nul); kp.setMatrixAt(i, nul); kh.setMatrixAt(i, nul); continue; } const [x, y, z] = A.plaetze[i], lx = x - g.position.x, lz = z - g.position.z, hy = huepf ? Math.max(0, Math.sin(t * 7 + i)) * huepf : 0;
+      m.makeTranslation(lx, y + 1.6 + hy, lz + 0.05); kk.setMatrixAt(i, m); m.makeTranslation(lx, y + 2.38 + hy, lz + 0.05); kp.setMatrixAt(i, m); m.makeTranslation(lx, y + 2.72 + hy, lz + 0.02); kh.setMatrixAt(i, m); }
+    for (const im of [kk, kp, kh]) im.instanceMatrix.needsUpdate = true; };
+  A.kinder(1); A.pos = (x, y, z) => new THREE.Vector3(g.position.x + x, y, g.position.z + z); return A; })();
+
+// ---------- Geldscheine (Vergleich 24.11.): flattern aus einem Punkt nach oben und fallen herab, fest vorausberechnet ----------
+// geldSetzen(t, an, { x, y, z, t0, kraft, n }) pro Bild aufrufen (Standard: aus)
+const GELD_N = 160;
+const geldTex = canvasTex(128, 64, (x, w, h) => { x.fillStyle = "#5ac87a"; x.fillRect(0, 0, w, h); x.strokeStyle = "#2a8a4a"; x.lineWidth = 5; x.strokeRect(4, 4, w - 8, h - 8); x.fillStyle = "#2a7a3a"; x.font = "900 40px 'Inter Display', Inter, sans-serif"; x.textAlign = "center"; x.textBaseline = "middle"; x.fillText("€", w / 2, h / 2 + 2); x.beginPath(); x.arc(22, h / 2, 9, 0, 7); x.arc(w - 22, h / 2, 9, 0, 7); x.fill(); });
+export const geldW = new THREE.InstancedMesh(new THREE.PlaneGeometry(0.9, 0.45), new THREE.MeshStandardMaterial({ map: geldTex, side: THREE.DoubleSide, roughness: 0.7 }), GELD_N); geldW.frustumCulled = false; scene.add(geldW);
+const geldD = []; { let s = 13; const r = () => { s = (s * 16807) % 2147483647; return s / 2147483647; }; for (let i = 0; i < GELD_N; i++) geldD.push({ a: r() * Math.PI * 2, v: 0.4 + r() * 0.8, up: 0.7 + r() * 0.6, ph: r() * 6, dt: r() * 0.6, w: 2 + r() * 3 }); }
+export const geldSetzen = (t, an = false, o = {}) => { const { x = 0, y = 4, z = 0, t0 = 0, kraft = 5, n = GELD_N } = o; const m = new THREE.Matrix4(), q = new THREE.Quaternion(), e = new THREE.Euler(), p = new THREE.Vector3(), sk = new THREE.Vector3(1, 1, 1);
+  for (let i = 0; i < GELD_N; i++) { const d = geldD[i], tt = t - t0 - d.dt; if (!an || tt < 0 || i >= n) { m.makeScale(0, 0, 0); geldW.setMatrixAt(i, m); continue; }
+    const steig = Math.min(tt, 0.5), fall = Math.max(0, tt - 0.5), hor = kraft * d.v * (1 - Math.exp(-tt * 1.5));
+    p.set(x + Math.cos(d.a) * hor + Math.sin(tt * d.w + d.ph) * 0.4, Math.max(0.05, y + kraft * d.up * steig * 2 - fall * 1.4), z + Math.sin(d.a) * hor + Math.cos(tt * d.w * 0.8 + d.ph) * 0.4);
+    e.set(Math.sin(tt * d.w + d.ph) * 1.2, tt * d.w * 0.7 + d.ph, Math.cos(tt * d.w * 1.3) * 0.8); q.setFromEuler(e); m.compose(p, q, sk); geldW.setMatrixAt(i, m); }
+  geldW.instanceMatrix.needsUpdate = true; };

@@ -1,6 +1,7 @@
 // Requisiten und Sets: Polizei, Notlampen, Gasse, Omas Laden + Lager, Schlafzimmer, Menge, Platz-Deko, Konfetti.
 import { THREE, RoundedBoxGeometry, mergeGeometries, scene, kegel, gebaeude, LOTS, PLATZ } from "./welt.js";
 import { rnd } from "./wesen.js";
+import * as O from "./objekte.js";
 const mat = (c, r = 0.7, m = 0) => new THREE.MeshStandardMaterial({ color: c, roughness: r, metalness: m });
 const plastik = c => new THREE.MeshPhysicalMaterial({ color: c, roughness: 0.4, clearcoat: 0.5 });
 const leucht = (r, g, b) => new THREE.MeshBasicMaterial({ color: new THREE.Color(r, g, b) });
@@ -126,6 +127,9 @@ export const ZIMMER = {};
   const regal = bx(0.8, 0.1, 3, holz); regal.position.set(5.6, 4.5, 0); zimmer.add(regal);
   for (let i = 0; i < 5; i++) { const b = rb(0.5, 0.7 + (i % 2) * 0.2, 0.4, 0.05, mat(["#c83a3a", "#3a8ac8", "#e8c040", "#4ab84a", "#8a4ac8"][i], 0.6)); b.position.set(5.6, 5.0, -1.2 + i * 0.6); zimmer.add(b); }
   ZIMMER.mond = new THREE.PointLight("#8aa8ff", 8, 20, 1.5); ZIMMER.mond.position.set(0, 5, -4); zimmer.add(ZIMMER.mond); }
+// Lichterketten unter der Decke (Vergleich 24.11.), standardmäßig aus: ZIMMER.lichterkette.visible = true
+{ const g = new THREE.Group(); g.visible = false; zimmer.add(g); ZIMMER.lichterkette = g;
+  for (const [x, z, ry, l] of [[0, 5.75, 0, 11], [-5.75, 0, Math.PI / 2, 11], [5.75, 0, Math.PI / 2, 11]]) { const k = O.lichterkette({ laenge: l, n: 26, durchhang: 0.35 }); k.position.set(x, 7.5, z); k.rotation.y = ry; g.add(k); } }
 export const weckerZeichnen = (txt, an = true) => { const x = ZIMMER.weckerX; x.fillStyle = "#050505"; x.fillRect(0, 0, 256, 128); if (an) { x.fillStyle = "#ff3a2a"; x.font = "700 92px DejaVu Sans Mono"; x.textAlign = "center"; x.textBaseline = "middle"; x.fillText(txt, 128, 68); } ZIMMER.weckerTex.needsUpdate = true; };
 
 // ---------- Menge auf dem Platz (Instanzen, billig) ----------

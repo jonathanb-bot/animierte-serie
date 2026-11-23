@@ -29,6 +29,7 @@ Ziel (Jonathan 23.11.): Jede Folge setzt sich aus fertigen, geprüften Teilen zu
 - Frisuren: kurz, zopf, dutt, strubbel, glatze.
 - Neu (23.11.): `jacke` (offene Jacke über dem Hemd, z. B. Lehrer), `brust` (Zeichen oder Emoji auf der Brust, `brustFarbe`).
 - Neu (23.11.): **Gesicht auf der runden Kopfform**: Augen, Mund, Brauen und Wangen liegen direkt auf dem gerundeten Kopf, ohne eckige Gesichtsfläche (Standard; alte Darstellung mit `flachesGesicht: true`). Prüfbilder: `gesicht-seite`, `gesicht-schraeg`.
+- Neu (24.11.): **`propeller`** (Propellermütze; `true` oder 4 Farben; drehen mit `f.userData.propeller.rotation.y = t * 12`), **`sonnenbrille`**, **`muster: {hemd, hose}`** mit `streifen`, `karo` oder `punkte` (z. B. Schlafanzug).
 - Neu (23.11.): **`struktur: true`** gibt Kleidung ein Strickmuster und Haaren Strähnen. Für alle neuen Folgen benutzen; ohne die Option bleibt das alte glatte Aussehen (Folge 1).
 
 `pose(f, {lauf, renn, phase, sitz, liegen, armL, armR, armLz, armRz, kopfNeig, kopfDreh, ges, huepf, atmen, neig})`
@@ -83,7 +84,14 @@ Jede Funktion baut ein Objekt (`THREE.Group`, noch nicht in der Szene): `const b
 | Fahrzeuge | `fahrrad`, `bus({farbe, text})` |
 | Tiere | `hund`, `katze`, `vogel` (`userData.schwanz` bzw. `fluegelL/R` zum Bewegen) |
 | Riesen-Wesen | `riesenTier({fell, bauch, groesse, dichte})`: flauschiger Riese mit hängendem Fell, etwa 18 m hoch; `userData.augen` zum Blinzeln. Eigenes Wesen, kein Mammut |
-| Möbel und Kram | `tisch`, `stuhl`, `sofa`, `stehlampe`, `regal`, `geschenk`, `fernseher` (`userData.schirm`) |
+| Möbel und Kram | `tisch`, `stuhl`, `sofa`, `stehlampe`, `regal`, `geschenk`, `fernseher` (`userData.schirm`), `lichterkette({laenge, n, durchhang})` |
+| Gebäude und Autos (24.11.) | `haus({wand, dach, tuer, breite, tiefe, stock, licht})` (Einfamilienhaus mit Satteldach), `schule({name, banner})` (Backstein, Säulen-Eingang, Schild), `sportwagen({farbe})`; `laterne({punktlicht: false})` ohne eigene Lichtquelle für viele Laternen |
+
+Fertige Kulissen (`alltag.js`, 24.11.):
+- **`VORSTADT`** bei (−1400, 0, 1800): Straße mit Einfamilienhäusern, Vorgärten, Zäunen, Bäumen, Briefkästen, Laternen und Bushaltestelle. `VORSTADT.nacht(true)` macht Licht in den Fenstern; `VORSTADT.pos(x, y, z)` gibt lokale Koordinaten (Straße entlang z, Häuser bei x ±23).
+- **`AULA`** bei (1400, 0, 1800): Halle mit Bühne, Pult, Banner (`schreibe(AULA.banner, [...])`), Uhr (`AULA.uhr`), 600 Sitzen und sitzenden Kindern. `AULA.kinder(anteil, huepf, t)`: 1 = voll, 0 = leer; `raumlicht(AULA, 30)`.
+- **Geld:** `geldSetzen(t, an, {x, y, z, t0, kraft, n})` lässt Geldscheine hochfliegen und herabflattern. Zähler im Bild über das Gerüst: `Z_.zaehler = {wert, farbe: "gruen"|"rot"}`, `Z_.plus = {text: "+5 €", t0}`, Helfer `B.zaehlen(t, t0, t1, von, bis)` und `B.euro(n)`. Der Zähler steht oben mittig, nie oben links.
+- **Kinderzimmer:** `ZIMMER.lichterkette.visible = true` (Lichterketten unter der Decke).
 
 Fertige Straßenzüge (`alltag.js`): **`einkaufsstrasse({x: 24, z0: 70, z1: 330})`** setzt an alle Häuser einer Nord-Süd-Straße Ladenfronten mit Markisen (Bäckerei, Eis, Blumen …) und Gehweg-Deko (Bäume, Bänke, Hydranten, Briefkästen). Die Straße ist zuerst unsichtbar, `.visible = true` pro Einstellung setzen.
 
