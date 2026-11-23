@@ -52,7 +52,7 @@
 // Source: as above – the "rich" players got ruder and credited their strategy, not the coin flip
 [gesicht du ort=kueche schreck palette=orange zoom-rein] That player got ruder. And decided he'd earned it.
 // 53 s – Twist 2 (setup): Grandpa's old ticket was a winner
-[objekt objekte="lottoschein:Winner|geld:1,000,000" gross="GRANDPA'S WIN" palette=orange zoom-rein ton=hit ein="million>#1,000,000>geld" ein_y=1500] He taps the old ticket. A winner. One million.
+[objekt objekte="lottoschein:Winner|geld:1,000,000" gross="GRANDPA'S WIN" palette=orange zoom-rein ton=hit ein="million>1,000,000>geld" ein_y=1500] He taps the old ticket. A winner. One million.
 // 57 s – Twist 2: what the money was for – warm family shot
 [esstisch mama papa lina du opa gedeckt kerzen zeit=abend palette=orange zoom-raus ein="house>YOUR HOUSE>schluessel|college>MOM'S COLLEGE>herz" ein_y=430] Your house. Your mom's college.
 // 60 s – Twist 2: one more detail that's about you
