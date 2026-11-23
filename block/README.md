@@ -38,7 +38,7 @@ Ausgewertet wird in der nächsten großen Analyse.
    - Danach `python3 zusammen.py` (volle Fassung) und `python3 zusammen_yt.py` (YouTube, höchstens 89 s).
 3. Standbilder prüfen: `node mitten.cjs alle`.
 4. Rendern: in 3 parallelen Teilen, 60 fps. Für eine 95-s-Folge dauert das etwa 55 min.
-5. Ton erzeugen: `python3 ton.py`, für YouTube mit `PLAN=plan_yt.json STIMME=stimme_yt.wav MIX=mix_yt.wav`.
+5. Ton erzeugen: `python3 tonspur.py`, für YouTube mit `PLAN=plan_yt.json STIMME=stimme_yt.wav MIX=mix_yt.wav`.
 6. Kodieren: unter 100 MB, weil GitHub keine größeren Dateien annimmt. Zum Beispiel `-c:v libx264 -preset slow -crf 22 -maxrate 7M -bufsize 14M`, Ton auf −14 LUFS.
 7. Veröffentlichen:
    - `ausgabe/taeglich-block-bNN.mp4` mit `taeglich/veroeffentlichen.py block-bNN --max-dauer 120 --plattformen tiktok,instagram`.
