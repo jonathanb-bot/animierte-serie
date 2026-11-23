@@ -95,6 +95,11 @@ const K = {   // Kulissen und Effekte in der Welt (Koordinaten siehe KATALOG.md)
   "turnhalle": () => { const R = Al.TURNHALLE; Al.raumlicht(R, 16); const z = blick(R.pos(10, 7, 22), R.pos(0, 3, -10), 60); licht(0.8, "#fff4e0", z); },
   "krankenhaus": () => { const R = Al.KRANKENHAUS; Al.raumlicht(R, 14); R.monitor.userData.zeichne(1); const z = blick(R.pos(6, 5, 6), R.pos(0, 2.6, -3), 58); licht(0.5, "#f0fff8", z); },
   "krankenwagen": () => { tag(); const V = Al.VORSTADT; KW2 = KW2 || O.krankenwagen(); KW2.visible = true; KW2.position.copy(V.pos(3, 0.06, 20)); KW2.rotation.y = 0.5; if (!KW2.parent) scene.add(KW2); const z = blick(V.pos(-9, 3.5, 40), V.pos(3, 2.5, 20), 50); licht(1.6, "#fff4e0", z); },
+  "kopfzahlen": () => { tag(); const V = Al.VORSTADT; const fs = [FIG["ich-struktur"], FIG["oma-struktur"], FIG["papa-struktur"], FIG.baby]; const zz = ["1", "3", "12.000", "31.000"];
+    fs.forEach((f, i) => { f.visible = true; f.position.copy(V.pos(-4 + i * 2.8, 0.3, 4 - (i % 2))); f.rotation.set(0, Math.PI, 0); Fg.pose(f, { ges: i ? "froh" : "ernst" }); Al.kopfzahl(f, zz[i], { farbe: i ? "#4ef07a" : "#ff4a4a" }); });
+    const z = blick(V.pos(0, 5, -8), V.pos(0, 4, 4), 55); licht(1.6, "#fff4e0", z); },
+  "gewitter": () => { tag(); U.uGewitter.value = 1; const V = Al.VORSTADT; const z = blick(V.pos(-2, 4.5, -60), V.pos(4, 12, 10), 55); licht(1.0, "#c8d0e0", z); },
+  "wisch-uebergang": () => { tag(); Wt.grade.uniforms.uWisch.value = 0.8; const V = Al.VORSTADT; const z = blick(V.pos(-2, 4.5, -60), V.pos(4, 3.5, 10), 52); licht(1.6, "#fff4e0", z); },
   "platz": () => { const z = blick(V(0, 14, 62), V(0, 5, 0), 55); licht(1.2, "#ffd8b0", z); },
   "gasse": () => { const z = blick(V(-70, 4, 96), V(-100, 3, 96), 50); licht(0.8, "#ffd8b0", z); },
   "laden-laternen": () => { const z = blick(V(58, 5, -24), V(79, 4.5, -30), 50); licht(1.2, "#ffd8b0", z); },
@@ -121,7 +126,7 @@ for (const [n, f] of Object.entries(K)) E["kulisse-" + n] = { gruppe: "Kulissen,
 // ---------- Rendern ----------
 window.NAMEN = Object.keys(E); window.GRUPPEN = Object.fromEntries(Object.entries(E).map(([n, e]) => [n, e.gruppe]));
 window.zeige = (name) => { const e = E[name]; if (!e) throw new Error("Unbekannt: " + name);
-  U.uT.value = 1; U.uWolken.value = 0; U.uAus.value = 1e6; U.uAn.value = 1e6; U.uTag.value = 0; U.uGold.value = 0; Wt.grade.uniforms.uFlash.value = 0; Wt.grade.uniforms.uVig.value = 0.3;
+  U.uT.value = 1; U.uWolken.value = 0; U.uAus.value = 1e6; U.uAn.value = 1e6; U.uTag.value = 0; U.uGold.value = 0; Wt.grade.uniforms.uFlash.value = 0; Wt.grade.uniforms.uWisch.value = 0; U.uGewitter.value = 0; Wt.grade.uniforms.uVig.value = 0.3;
   Wt.hemi.intensity = 0.6; Wt.hemi.color.set("#5a6ab0"); Wt.hemi.groundColor.set("#141018"); Wt.suchkegel.forEach(k => k.visible = false);
   Fg.FIGUREN.forEach(f => f.visible = false); if (STR) STR.visible = false; if (RT) RT.visible = false; if (RW) RW.visible = false; if (GV) GV.visible = false; if (KW2) KW2.visible = false; Rq.ZIMMER.lichterkette.visible = false; Ws.schattenAus(); Ws.laternenAnlegen([]); Al.zuruecksetzen(); studioLicht.intensity = 0; halter.clear(); Wt.boden.visible = true;
   Rq.polizeiSetzen(1, false, false); Rq.notlampenSetzen(0, false); Rq.mengeSetzen(1, { sichtbar: false }); Rq.konfettiSetzen(0, false);

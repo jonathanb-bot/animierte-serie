@@ -19,11 +19,13 @@ composer.addPass(new RenderPass(scene, cam));
 export const bloom = new UnrealBloomPass(new THREE.Vector2(W / 2, H / 2), 0.55, 0.5, 0.92); composer.addPass(bloom);
 // Farbabstufung + Vignette + leichte Körnung
 export const grade = new ShaderPass({
-  uniforms: { tDiffuse: { value: null }, uVig: { value: 0.35 }, uWarm: { value: 0 }, uT: { value: 0 }, uFlash: { value: 0 } },
+  uniforms: { tDiffuse: { value: null }, uVig: { value: 0.35 }, uWarm: { value: 0 }, uT: { value: 0 }, uFlash: { value: 0 }, uWisch: { value: 0 } },
   vertexShader: `varying vec2 vUv; void main(){ vUv = uv; gl_Position = projectionMatrix*modelViewMatrix*vec4(position,1.); }`,
-  fragmentShader: `uniform sampler2D tDiffuse; uniform float uVig, uWarm, uT, uFlash; varying vec2 vUv;
+  fragmentShader: `uniform sampler2D tDiffuse; uniform float uVig, uWarm, uT, uFlash, uWisch; varying vec2 vUv;
     float h(vec2 p){ return fract(sin(dot(p, vec2(12.9898,78.233)) + uT*3.1)*43758.5453); }
-    void main(){ vec4 c = texture2D(tDiffuse, vUv); vec2 d = vUv - 0.5; d.x *= 0.75;
+    void main(){ vec4 c = texture2D(tDiffuse, vUv);
+      if (uWisch > 0.001) { vec4 a = vec4(0.); for (int i = 0; i < 16; i++) { float o = (float(i) / 15. - 0.5) * uWisch * 0.12; a += texture2D(tDiffuse, vUv + vec2(o, 0.)); } c = a / 16.; }   // Wisch-Übergang (Vergleich 24.11.)
+      vec2 d = vUv - 0.5; d.x *= 0.75;
       c.rgb *= 1.0 - uVig * smoothstep(0.25, 0.75, length(d));
       c.rgb = mix(c.rgb, c.rgb * vec3(1.08, 0.98, 0.86), uWarm);
       c.rgb = mix(c.rgb, vec3(1.0, 0.97, 0.9) * 2.0, uFlash);
@@ -31,7 +33,7 @@ export const grade = new ShaderPass({
 composer.addPass(grade);
 composer.addPass(new OutputPass());
 
-export const U = { uWolken: { value: 0 }, uT: { value: 0 }, uAus: { value: 1e6 }, uTag: { value: 0 }, uGold: { value: 0 }, uMond: { value: 1 }, uAn: { value: 1e6 } };
+export const U = { uWolken: { value: 0 }, uGewitter: { value: 0 }, uT: { value: 0 }, uAus: { value: 1e6 }, uTag: { value: 0 }, uGold: { value: 0 }, uMond: { value: 1 }, uAn: { value: 1e6 } };
 export const PLANT = new THREE.Vector2(0, -520);
 export const P = 48, BLOCK = 36, N = 7;                 // Raster: Blöcke 36 m, Straßen 12 m
 export const PLATZ = 66;                                // großer Platz in der Mitte (|x|,|z| < PLATZ)
@@ -60,7 +62,7 @@ export const strom = (x, z, t) => { const dx = Math.floor((x + 384) / 96), dz = 
 export const himmel = new THREE.Mesh(new THREE.SphereGeometry(2500, 48, 24), new THREE.ShaderMaterial({ side: THREE.BackSide, depthWrite: false, fog: false,
   uniforms: U,
   vertexShader: `varying vec3 vP; void main(){ vP = normalize(position); gl_Position = projectionMatrix*modelViewMatrix*vec4(position,1.); gl_Position.z = gl_Position.w; }`,
-  fragmentShader: `varying vec3 vP; uniform float uTag, uGold, uT, uAus, uAn, uWolken;
+  fragmentShader: `varying vec3 vP; uniform float uTag, uGold, uT, uAus, uAn, uWolken, uGewitter;
     float hh(vec2 p){ return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453); }
     float rauschen(vec2 p){ vec2 i = floor(p), f = fract(p); f = f*f*(3.-2.*f); return mix(mix(hh(i), hh(i+vec2(1,0)), f.x), mix(hh(i+vec2(0,1)), hh(i+vec2(1,1)), f.x), f.y); }
     float fbm(vec2 p){ float v = 0., a = 0.5; for (int i = 0; i < 5; i++){ v += a * rauschen(p); p *= 2.03; a *= 0.5; } return v; }
@@ -75,6 +77,7 @@ export const himmel = new THREE.Mesh(new THREE.SphereGeometry(2500, 48, 24), new
       if (uWolken > 0.) { vec3 blau = mix(vec3(0.30,0.56,0.92), vec3(0.06,0.24,0.72), pow(max(h,0.),0.5));
         vec2 wp = vP.xz / max(vP.y + 0.08, 0.05) * 1.6; float w = smoothstep(0.5, 0.74, fbm(wp + vec2(uT * 0.004, 0.))) * smoothstep(0.0, 0.12, h);
         vec3 wolke = mix(vec3(0.82,0.86,0.94), vec3(1.15,1.15,1.12), smoothstep(0.55, 0.85, fbm(wp * 1.3 + 3.1)));
+        blau = mix(blau, vec3(0.32,0.36,0.44), uGewitter); wolke = mix(wolke, vec3(0.16,0.17,0.2) * (0.8 + 0.4 * fbm(wp * 2.)), uGewitter); w = mix(w, smoothstep(0.35, 0.6, fbm(wp + 7.)) * smoothstep(0.0, 0.1, h), uGewitter);   // dunkle Wolken ziehen auf
         tag = mix(tag, mix(blau, wolke, w), uWolken); }
       vec3 c = mix(nacht, tag, uTag * (1. - uGold));
       c = mix(c, mix(horizont(), vec3(0.05,0.02,0.04), pow(max(h,0.),0.5)), uGold * (1. - uTag));

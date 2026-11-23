@@ -57,6 +57,16 @@ Vorbild: `block/vergleiche/2026-11-24-erstes-wort.md`. Nach dem aktuellen Spannu
 - **Ende:** Auch hier gibt es eine Mitmach-Frage, aber eine leise, zum Beispiel „Was soll ich ihm sagen?“ mit A/B/C.
 - **Grenzen:** nie Blut, nie Gewalt. Krankheit nur andeuten (Husten, Krankenhausbett), kein Tod im Bild.
 
+## Story-Richtung „Fesselnd“ (Jonathan 24.11.: „auch sowas in die Richtung, was fesselnd ist“)
+
+Vorbild: `block/vergleiche/2026-11-24-ein-tag.md` (69 s, sehr dicht). Merkmale, die wir übernehmen:
+- **Eine sichtbare Regel mit Zahl:** Jeder sieht etwas über dem Kopf, zum Beispiel eine Zahl oder einen Text (`Al.kopfzahl`, für die ganze Menge `B.mengeZahlen`). So versteht man die Regel in einer Sekunde.
+- **Beispiel-Salve:** 4–5 Leute aus der Stadt mit Zahl und einem witzigen Halbsatz („Opa: nur noch 3 – deshalb fährt er heute zum ersten Mal Achterbahn“).
+- **Die Hauptperson ist die Ausnahme:** „Und ich? Bei mir steht seit meiner Geburt …“
+- **Montage:** Die Hauptperson lebt die Regel aus, mit 4–6 schnellen Bildern, jedes mit Pointe, alle 1–1,5 s ein Schnitt (Wisch-Übergang `B.wisch`).
+- **Wendung in den letzten 10 s**, die alles umdreht: Über **allen** Köpfen steht plötzlich dieselbe Zahl, und Gewitterwolken ziehen auf (`U.uGewitter`). Danach sofort die Mitmach-Frage A/B/C.
+- **Länge 65–75 s**, Sätze höchstens 8 Wörter.
+
 ## Test ab 24.11. (Jonathan 23.11.: „als Test einfach morgen verwenden“)
 
 Ab Folge 2 kommen die neuen Bibliotheks-Elemente zum Einsatz. Jede Folge nutzt mindestens:

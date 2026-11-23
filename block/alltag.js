@@ -179,7 +179,7 @@ export const ballonsSetzen = (t, an = false, o = { x: 0, z: 0, t0: 0 }) => { con
     ballonW.setMatrixAt(i, m); } ballonW.instanceMatrix.needsUpdate = true; };
 
 // ---------- Pro Bild ----------
-export const zuruecksetzen = () => { if (HANDY.arm) HANDY.arm.visible = true; HANDY.arm = null; handy.visible = false; videowand.visible = false; videowand.scale.setScalar(1); regenbogen.visible = false; regenbogen.scale.setScalar(1); handyWelt(); raumlicht(null); STUBE.tvSchirm.material = STUBE.tvAus; ballonsSetzen(0, false); geldSetzen(0, false); VORSTADT.nacht(false); AULA.kinder(1); WELTALL.an(false); };
+export const zuruecksetzen = () => { kopfzahlenAus(); if (HANDY.arm) HANDY.arm.visible = true; HANDY.arm = null; handy.visible = false; videowand.visible = false; videowand.scale.setScalar(1); regenbogen.visible = false; regenbogen.scale.setScalar(1); handyWelt(); raumlicht(null); STUBE.tvSchirm.material = STUBE.tvAus; ballonsSetzen(0, false); geldSetzen(0, false); VORSTADT.nacht(false); AULA.kinder(1); WELTALL.an(false); };
 export const fernseherAn = () => { STUBE.tvSchirm.material = HANDY.weltMat; };
 export const fernseherAus = () => { STUBE.tvSchirm.material = STUBE.tvAus; };
 // Handy-Welt rendern (vor dem Haupt-Render), nur wenn ein Bildschirm sie zeigt. Bildschirme selbst dabei aus (keine Rückkopplung).
@@ -384,3 +384,15 @@ export const KRANKENHAUS = (() => { const R = raum("krankenhaus", -600, -1800, 1
   fenster(R, -7.82, 4, -2, Math.PI / 2, 3, 2.6); const vh = bx(0.1, 6.5, 3.5, mat("#f0e8d8", 0.9)); vh.position.set(-7.7, 3.3, -5); R.g.add(vh);
   for (let i = 0; i < 4; i++) { const st = O.stuhl({ farbe: "#3a8ae8" }); st.position.set(5.5, 0, 1 + i * 1.6); st.rotation.y = -Math.PI / 2; st.scale.setScalar(0.85); R.g.add(st); }
   R.pos = (x, y, z) => new THREE.Vector3(R.g.position.x + x, y, R.g.position.z + z); return R; })();
+
+// ---------- Zahl/Text über dem Kopf (Vergleich 24.11.: „Nur noch 1 Tag“) ----------
+// Pro Bild aufrufen: kopfzahl(figurOderPosition, "12.000", { farbe, groesse }). Immer zur Kamera gedreht, wird pro Bild zurückgesetzt.
+const KZ_TEX = new Map(); const KZ = []; let kzN = 0;
+const kzTex = (text, farbe) => { const k = text + farbe; if (KZ_TEX.has(k)) return KZ_TEX.get(k); const c = document.createElement("canvas"); c.width = 512; c.height = 160; const x = c.getContext("2d");
+  x.font = "900 120px 'Inter Display', Inter, sans-serif"; x.textAlign = "center"; x.textBaseline = "middle"; x.lineJoin = "round"; x.lineWidth = 22; x.strokeStyle = "#0a0a0a"; x.strokeText(text, 256, 86); x.fillStyle = farbe; x.fillText(text, 256, 86);
+  const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 4; KZ_TEX.set(k, t); return t; };
+export const kopfzahl = (wer, text, { farbe = "#4ef07a", groesse = 1, hoehe = 2.3 } = {}) => {
+  let s2 = KZ[kzN]; if (!s2) { s2 = new THREE.Sprite(new THREE.SpriteMaterial({ transparent: true, depthWrite: false, fog: false })); s2.renderOrder = 5; scene.add(s2); KZ.push(s2); } kzN++;
+  const p = new THREE.Vector3(); let sk = 1; if (wer.userData?.kopfG) { wer.userData.kopfG.getWorldPosition(p); sk = wer.scale.y; p.y += hoehe * sk; } else p.copy(wer);
+  s2.material.map = kzTex(String(text), farbe); s2.material.needsUpdate = true; s2.position.copy(p); s2.scale.set(3.2 * groesse * Math.max(sk, 0.7), 1.0 * groesse * Math.max(sk, 0.7), 1); s2.visible = true; return s2; };
+const kopfzahlenAus = () => { KZ.forEach(s2 => s2.visible = false); kzN = 0; };

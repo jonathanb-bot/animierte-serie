@@ -76,6 +76,10 @@ export const ring = (n, r0, r1, t, o = {}) => { for (let i = 0; i < n; i++) { co
 export const Z_ = { menge: null, vignette: 0.35, zaehler: null, plus: null };
 // Geld-/Punkte-Zähler im Bild (Vergleich 24.11.): Z_.zaehler = { wert: zahl | text, farbe: "gruen"|"rot"|"gelb", einheit: " €" }, Z_.plus = { text: "+5 €", t0 }
 // oben mittig (nie oben links, Issue #19), nur in Einstellungen, in denen die Geschichte ihn braucht.
+// Wisch-Übergang am Schnitt: Wt.grade.uniforms.uWisch.value = B.wisch(t, schnittZeit) – kurz verwischt, kein Wackeln (Vergleich 24.11.)
+export const wisch = (t, ts, dauer = 0.22) => Math.max(0, 1 - Math.abs(t - ts) / dauer);
+// Zahlen über allen Köpfen der Menge: B.mengeZahlen((i) => "1", { farbe })
+export const mengeZahlen = (text, o = {}) => Rq.MENGE.forEach((p, i) => { if (!Rq.mengeSichtbar || Rq.mengeSichtbar(i)) Al.kopfzahl(new THREE.Vector3(p.x + (Z_.menge?.dx ?? 0), 5.6 * p.s, p.z + (Z_.menge?.dz ?? 0)), text(i), { groesse: 0.8, ...o }); });
 export const euro = (n, vorzeichen = true) => (vorzeichen && n > 0 ? "+" : n < 0 ? "−" : "") + Math.abs(Math.round(n)).toLocaleString("de-DE");
 export const zaehlen = (t, t0, t1, von, bis) => von + (bis - von) * easeIO((t - t0) / Math.max(0.01, t1 - t0));   // menge: { armeHoch, huepf, licht, dz } oder null
 
@@ -90,7 +94,7 @@ export function start(o = {}) {
   window.renderAt = (t, probe = false) => {
     // neutraler Grundzustand
     U.uT.value = t; U.uWolken.value = 0; U.uAus.value = 1e6; U.uAn.value = 1e6; U.uTag.value = 0; U.uGold.value = 0;
-    Wt.grade.uniforms.uT.value = t; Wt.grade.uniforms.uFlash.value = 0; Wt.grade.uniforms.uWarm.value = 0;
+    Wt.grade.uniforms.uT.value = t; Wt.grade.uniforms.uFlash.value = 0; Wt.grade.uniforms.uWisch.value = 0; U.uGewitter.value = 0; Wt.grade.uniforms.uWarm.value = 0;
     Wt.hemi.intensity = 0.6; Wt.hemi.color.set("#5a6ab0"); Wt.hemi.groundColor.set("#141018"); Wt.mondLicht.intensity = 0.5;
     Wt.suchkegel.forEach(k => k.visible = false); Fg.FIGUREN.forEach(f => f.visible = false); Ws.schattenAus();
     for (const p of [Rq.muell, Rq.megafon, Rq.taschenlampe, Rq.lampenKegel, Rq.kisten]) p.visible = false;
