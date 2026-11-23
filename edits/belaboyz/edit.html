@@ -115,8 +115,8 @@ function sSprach(ts) { ctx.fillStyle = C.bg; ctx.fillRect(0, 0, W, H); navLeiste
   avatar(80, 1080, 40, "K", AV.K); text("Kardo", 160, 650, 33, C.l2);
   const p = clamp((ts - 5.2) / 10.3, 0, 1); blase(130, 670, W - 190, 470, C.bg3);
   kreis(225, 765, 52, C.l1); ikon(ts < 15.2 ? "pause" : "play", 225, 765, 44, C.bg3);
-  for (let i = 0; i < 40; i++) { const x = 310 + i * 16.5, hh = 12 + 52 * Math.abs(Math.sin(i * 1.7) * Math.cos(i * 0.6) + 0.15 * Math.sin(i * 3.1)) * (i / 40 < p ? 0.85 + 0.15 * Math.abs(Math.sin(ts * 8 + i)) : 1); rr(x, 765 - hh / 2, 8, hh, 4); ctx.fillStyle = i / 40 < p ? C.l1 : C.l3; ctx.fill(); }
-  text("0:" + String(Math.floor(5 + p * 10)).padStart(2, "0"), W - 120, 780, 36, C.l2, 400, 999, 1, "right");
+  for (let i = 0; i < 34; i++) { const x = 310 + i * 16.5, hh = 12 + 52 * Math.abs(Math.sin(i * 1.7) * Math.cos(i * 0.6) + 0.15 * Math.sin(i * 3.1)) * (i / 34 < p ? 0.85 + 0.15 * Math.abs(Math.sin(ts * 8 + i)) : 1); rr(x, 765 - hh / 2, 8, hh, 4); ctx.fillStyle = i / 34 < p ? C.l1 : C.l3; ctx.fill(); }
+  text("0:" + String(Math.floor(5 + p * 10)).padStart(2, "0"), W - 110, 778, 36, C.l2, 400, 999, 1, "right");
   ctx.fillStyle = C.sep; ctx.fillRect(175, 850, W - 280, 1.5); text("Transkript", 175, 910, 33, C.l2, 500);
   const n = zeile(tipp(ts, "i1"), 175, 1000, 64, W - 330); zeile(tipp(ts, "i2"), 175, 1000 + Math.max(n, 2) * 70 + 10, 64, W - 330, C.l1);
   eingabe(); }
@@ -216,14 +216,14 @@ function aufA3(s) { for (let i = 1; i < A3.length; i++) if (s <= LR[i]) { const 
 const SCANNER = geo(7.83, 50.43); // Montabaur
 function personPin(c, b, lo, la, t0, ts) { if (ts < t0 - 0.02) return; const q = zurueck((ts - t0) / 0.32), [x, y] = zuB(c, geo(lo, la)); ctx.save(); ctx.translate(x, y); ctx.scale(q, q); schatten(() => kreis(0, -62, 52, "#fff"), 20, 6, 0.5); avatar(0, -62, 45, b, AV[b]); ctx.beginPath(); ctx.moveTo(-12, -14); ctx.lineTo(12, -14); ctx.lineTo(0, 0); ctx.fillStyle = "#fff"; ctx.fill(); ctx.restore(); }
 function sWo(ts) { const c = camWo(ts); karte(c, clamp((ts - 23.2) / 0.9, 0, 1));
-  personPin(c, "K", 6.975, 51.462, 21.2, ts); personPin(c, "G", 8.682, 50.11, 22.9, ts); personPin(c, "B", 7.217, 51.274, 23.95, ts);
+  ctx.save(); ctx.globalAlpha = 1 - clamp((ts - 24.85) / 0.3, 0, 1); if (ctx.globalAlpha > 0) { personPin(c, "K", 6.975, 51.462, 21.2, ts); personPin(c, "G", 8.682, 50.11, 22.9, ts); personPin(c, "B", 7.217, 51.274, 23.95, ts); } ctx.restore();
   if (ts > 23.6 && ts < 25.1) { const a = clamp((ts - 23.6) / 0.25, 0, 1) * clamp((25.1 - ts) / 0.2, 0, 1), [x, y] = zuB(c, geo(7.42, 50.68)); ctx.save(); ctx.globalAlpha = a; karteRR(x - 150, y - 60, 300, 110, 30, "rgba(28,28,30,0.95)"); ikon("lkw", x - 100, y - 4, 44, C.l1); text("2 Std. 18 Min.", x + 30, y - 4, 34, C.l1, 600, 999, 1, "center"); text("231 km · A3, A1", x + 30, y + 34, 26, C.l2, 400, 999, 1, "center"); ctx.restore(); }
   if (ts > 24.85) { const a = clamp((ts - 24.85) / 0.2, 0, 1); ctx.save(); ctx.globalAlpha = a; const [sx, sy] = zuB(c, SCANNER), ok = ts > 26.3; karteRR(sx - 120, sy - 140, 240, 76, 38, ok ? C.gruen : "rgba(44,44,48,0.95)"); if (ok) ikon("haken", sx - 70, sy - 102, 32); text("Scanner", sx + (ok ? 20 : 0), sy - 90, 34, C.l1, 600, 999, 1, "center"); kreis(sx, sy, 12, ok ? C.gruen : C.l2);
     const s = lerp(LR[6] - 40, LR[9], clamp((ts - 24.9) / 2.4, 0, 1)), [lx, ly] = zuB(c, aufA3(s)); schatten(() => kreis(lx, ly, 46, "#fff"), 20, 6, 0.5); kreis(lx, ly, 40, C.orange); ikon("lkw", lx, ly, 46, "#fff"); ctx.restore(); }
   // schwebende Karte oben (wie Karten-Hinweis)
-  const k = ts < 22.8 ? "l3" : ts < 24.85 ? "l4" : "l5"; karteRR(44, 168, W - 88, 400, 56, "rgba(30,30,33,0.94)");
+  const k = ts < 22.8 ? "l3" : ts < 24.85 ? "l4" : "l5", kA = 1 - clamp((ts - 28.7) / 0.2, 0, 1); ctx.save(); ctx.globalAlpha = kA; if (kA > 0) { karteRR(44, 168, W - 88, 400, 56, "rgba(30,30,33,0.94)");
   if (k === "l5") { kreis(124, 252, 34, C.orange); ikon("tag", 124, 252, 40, "#fff"); text("LKW · Sender", 180, 266, 40, C.l1, 600); } else { ikon("personen", 124, 252, 64, C.gruen); text(k === "l3" ? "Standort geteilt" : "Route · Frankfurt → Oberbarmen", 180, 266, 38, C.l2, 500); }
-  zeile(tipp(ts, k), 104, 380, 72, W - 208);
+  zeile(tipp(ts, k), 104, 380, 72, W - 208); } ctx.restore();
   // Blatt unten
   schatten(() => { rr(0, 1440, W, 600, 56); ctx.fillStyle = "rgba(28,28,30,0.97)"; ctx.fill(); }); rr(W / 2 - 50, 1458, 100, 14, 7); ctx.fillStyle = C.l3; ctx.fill();
   const obj = ts > 24.85; text(obj ? "Objekte" : "Personen", 60, 1555, 60, C.l1, 700);
@@ -248,8 +248,8 @@ function inselGross(ts, e) { const r = { x: lerp(INSEL.x, 30, e), y: INSEL.y, w:
   text("Blocks raus", 90, 330, 46, C.orange, 600); for (let i = 0; i < 6; i++) { rr(90 + i * 152, 380, 136, 22, 11); ctx.fillStyle = i < n ? C.orange : "rgba(235,235,245,0.18)"; ctx.fill(); } ctx.restore();
   ctx.save(); ctx.globalAlpha = e; zeile(tipp(ts, "l7"), 70, 860, 96, W - 140); ctx.restore(); }
 // AirDrop an alle (Teilen-Blatt) – danach schließt es sich wieder
-function airdrop(ts) { const t0 = 31.0, t1 = 32.75; if (ts < t0 || ts > t1 + 0.35) return; const q = zurueck((ts - t0) / 0.34) * (1 - ein((ts - t1) / 0.32)), top = lerp(H, 820, q); ctx.fillStyle = `rgba(0,0,0,${0.5 * clamp(q, 0, 1)})`; ctx.fillRect(0, 0, W, H);
-  ctx.save(); ctx.globalAlpha = clamp(q, 0, 1); zeile(tipp(ts, "l8"), 70, 380, 92, W - 140); ctx.restore();
+function airdrop(ts) { const t0 = 31.0, t1 = 32.52; if (ts < t0 || ts > t1 + 0.35) return; const q = zurueck((ts - t0) / 0.34) * (1 - ein((ts - t1) / 0.32)), top = lerp(H, 820, q); ctx.fillStyle = `rgba(0,0,0,${0.5 * clamp(q, 0, 1)})`; ctx.fillRect(0, 0, W, H);
+  ctx.save(); ctx.globalAlpha = clamp(q, 0, 1) * (1 - clamp((ts - 32.6) / 0.2, 0, 1)); zeile(tipp(ts, "l8"), 70, 380, 92, W - 140); ctx.restore();
   ctx.save(); ctx.translate(0, top - 820); schatten(() => { rr(0, 820, W, 1200, 56); ctx.fillStyle = C.bg2; ctx.fill(); }); rr(W / 2 - 50, 838, 100, 14, 7); ctx.fillStyle = C.l3; ctx.fill();
   if (COVER) { ctx.save(); rr(60, 900, 120, 120, 18); ctx.clip(); ctx.drawImage(COVER, 60, 900, 120, 120); ctx.restore(); } text("BELABOYZ (XWAVE)", 210, 950, 42, C.l1, 600); text("An alle senden", 210, 1000, 36, C.l2); kreis(W - 104, 960, 44, C.fill2); ikon("x", W - 104, 960, 30, C.l2);
   ctx.fillStyle = C.sep; ctx.fillRect(0, 1070, W, 1.5); text("AirDrop", 60, 1150, 36, C.l2, 500);
@@ -293,7 +293,7 @@ function sNotiz(ts) { ctx.fillStyle = C.bg; ctx.fillRect(0, 0, W, H); ikon("zuru
   [["l13a", 41.3], ["l13b", 42.32], ["l14a", 43.4]].forEach(([k, t0], i) => { const y = 640 + i * 230, t = tipp(ts, k); if (!t) return; const ok = fertig(ts, k);
     ctx.beginPath(); ctx.arc(104, y - 22, 34, 0, Math.PI * 2); if (ok) { ctx.fillStyle = C.gelb; ctx.fill(); ikon("haken", 104, y - 22, 34, "#000"); } else { ctx.strokeStyle = C.l3; ctx.lineWidth = 4; ctx.stroke(); }
     zeile(t, 170, y, 76, W - 230, ok ? C.l2 : C.l1); });
-  const t = tipp(ts, "l14b"); if (t) { const y = 1400; zeile(t, 60, y, 100, W - 120, C.l1); font(700, 100); const w = ctx.measureText(t).width; rr(60, y + 30, Math.min(w, W - 120) * clamp((ts - 44.9) / 0.3, 0, 1), 10, 5); ctx.fillStyle = C.gelb; ctx.fill(); } }
+  const t = tipp(ts, "l14b"); if (t) { const y = 1400; zeile(t, 60, y, 86, W - 120, C.l1); font(700, 86); const w = ctx.measureText(t).width; rr(60, y + 30, Math.min(w, W - 120) * clamp((ts - 44.9) / 0.3, 0, 1), 10, 5); ctx.fillStyle = C.gelb; ctx.fill(); } }
 // ---------- 10) Nachrichten: Tapbacks lieben / hassen ----------
 function sTap(ts) { ctx.fillStyle = C.bg; ctx.fillRect(0, 0, W, H); navLeiste("Deutschrap", "", "X", AV.X);
   [["ihr seid nur blender", 470], ["wer macht es besser?", 610]].forEach(([t, y]) => { font(400, 47); const w = ctx.measureText(t).width + 76; blase(60, y, w, 118, C.bg3); text(t, 98, y + 76, 47, C.l1); });
@@ -333,11 +333,11 @@ function sWoAlles(ts) { sWo(ts); eilmeldung(ts); airdrop(ts); }
 window.laden = async () => {};
 window.zeichne = T => { const ts = T + A; ctx = cv.getContext("2d"); ctx.setTransform(K, 0, 0, K, 0, 0); ctx.filter = "none"; ctx.globalAlpha = 1; ctx.letterSpacing = "0px"; ctx.fillStyle = "#000"; ctx.fillRect(0, 0, W, H);
   if (ts < 9.95) bild(inBuf(0, sSprach, ts));
-  else if (ts < 10.32) { const e = ein((ts - 9.95) / 0.37); bild(inBuf(0, sSprach, ts), 1, 1, 0.45 * e, 0, 0, 40 * e); ctx.save(); ctx.globalAlpha = e; ctx.translate(W * 0.28 * (1 - e), -260 * (1 - e)); const s = lerp(0.82, 1, e); ctx.translate(W, 0); ctx.scale(s, s); ctx.translate(-W, 0); ccRaster(ts); ctx.restore(); }
+  else if (ts < 10.32) { const e = ein((ts - 9.95) / 0.37); bild(inBuf(0, sSprach, ts), 1, 1, 0.45 * e, 0, 0, 40 * e); ctx.save(); ctx.globalAlpha = e; const s = lerp(0.86, 1, e); ctx.translate(W * 0.92, 60); ctx.scale(s, s); ctx.translate(-W * 0.92, -60); ccRaster(ts); ctx.restore(); }
   else if (ts < 15.42) bild(inBuf(0, sKontroll, ts));
   else if (ts < 15.8) { // Drop: die Wiedergabe-Karte wächst zum Vollbild-Songtext
     const e = ein((ts - 15.42) / 0.38), b = inBuf(1, sSongtext, ts); bild(inBuf(0, sKontroll, ts), 1, 1, 0.5 * e); const r = { x: lerp(NPG.x, 0, e), y: lerp(NPG.y, 0, e), w: lerp(NPG.w, W, e), h: lerp(NPG.h, H, e) };
-    ctx.save(); rr(r.x, r.y, r.w, r.h, lerp(80, 0, e)); ctx.clip(); ctx.globalAlpha = clamp(e * 1.8, 0, 1); ctx.drawImage(b, 0, 0, W, H); ctx.restore(); }
+    ctx.save(); rr(r.x, r.y, r.w, r.h, lerp(80, 0, e)); ctx.clip(); ctx.fillStyle = `rgba(48,48,54,${clamp(e / 0.25, 0, 1)})`; ctx.fillRect(r.x, r.y, r.w, r.h); ctx.globalAlpha = clamp((e - 0.3) / 0.45, 0, 1); ctx.drawImage(b, 0, 0, W, H); ctx.restore(); }
   else if (ts < 17.95) bild(inBuf(0, sSongtext, ts));
   else if (ts < 18.4) umschalten(sSongtext, sCap, 17.95, 0.45, ts);
   else if (ts < 20.78) bild(inBuf(0, sCap, ts));
