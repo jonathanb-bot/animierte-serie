@@ -4,7 +4,7 @@ p = json.load(open(os.environ.get("PLAN", "plan_final.json"))); Z = [z["start"] 
 sauber = lambda w: w.strip(".,!?:„“\"").lower()
 leer = lambda i: not p["zeilen"][i]["woerter"]
 def wz(n, z): return next(w[0] for w in p["zeilen"][z]["woerter"] if sauber(w[2]) == n.lower())
-DAUER = E[25] + 1.6
+DAUER = E[-1] + 1.6
 T_KNALL = wz("kaputtgegangen", 5) + 0.25; T_WECKER = wz("zwei", 6) + 0.15; T_BETT_AUS = wz("strom", 6) + 0.1; T_AUS = Z[6] + 0.64
 T_KREIS = Z[10]; T_LOS = wz("ließen", 20) + 0.1; T_TAG = Z[23] - 0.05; tDunkel = wz("dunkel", 1); tSchatten = wz("schatten", 1)
 tWeg = wz("verschwindet", 2); tSchein = wz("scheinwerfer", 9); tJetzt = wz("jetzt", 19); tLoes = wz("lösten", 22)

@@ -34,7 +34,7 @@ const Z = plan.zeilen.map(z => z.start), E = plan.zeilen.map(z => z.start + z.da
 const sauber = w => w.replace(/[.,!?:„“"]/g, "");
 const wz = (name, zeile) => { const zl = plan.zeilen[zeile]; if (!zl.woerter.length) return zl.start; const w = zl.woerter.find(x => sauber(x[2]).toLowerCase() === name.toLowerCase()); if (!w) throw new Error("Wort fehlt: " + name + " in " + zeile); return w[0]; };
 const woerter = plan.zeilen.flatMap(z => z.woerter);
-const DAUER = E[25] + 1.6;
+const DAUER = E[E.length - 1] + 1.6;
 const ease = x => x <= 0 ? 0 : x >= 1 ? 1 : x * x * (3 - 2 * x);
 const easeIO = x => x <= 0 ? 0 : x >= 1 ? 1 : (x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2);
 const lerp = (a, b, q) => a + (b - a) * q;
@@ -116,7 +116,7 @@ sh(E[2] + 0.25, (t, q) => { Rq.muell.visible = true; Rq.muell.position.set(-80, 
   schatten(0, lerp(-90, -82.6, ease(q * 1.3)), 97.6, Math.PI / 2 - 0.15, { g: 1.5, kriech: 1 }); blick(V(-72.0, 1.5, 96.8), V(-83, 1.0, 97.4), t, 0.3); cam.fov = 50; licht(0.8, "#8aa0ff", 1.2); Wt.hemi.intensity = 1.0;
   if (t > tWeg) { blitz.style.opacity = 0; } });
 // 6 Laternenreihe
-sh(wz("Scheinwerfer", 3) - 0.1, (t, q) => { blick(V(-116.8, 3.0, lerp(178, 160, q)), V(-115, 7.2, lerp(140, 120, q)), t, 0.3); cam.fov = 62; });
+sh(wz("Scheinwerfer", 3) - 0.1, (t, q) => { blick(V(-113.3, 3.0, lerp(178, 160, q)), V(-115.5, 7.2, lerp(140, 120, q)), t, 0.3); cam.fov = 62; });
 // 7 Suchscheinwerfer auf dem Dach
 const HOCH = Wt.LOTS.filter(l => Math.hypot(l.x, l.z) < 260).sort((a, b) => b.h - a.h)[0];
 sh(wz("Millionen", 3) - 0.1, (t, q) => { const b = V(HOCH.x, HOCH.h + 1, HOCH.z); const a = 1.2 + t * 0.45; Wt.suchkegel[0].visible = true; Wt.suchkegel[0].userData.richte(b, b.clone().add(V(Math.sin(a) * 400, 800, Math.cos(a) * 400)));
