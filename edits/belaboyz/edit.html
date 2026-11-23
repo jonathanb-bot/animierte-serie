@@ -178,8 +178,8 @@ function sCap(ts) { const g = ctx.createLinearGradient(0, 0, 0, H); g.addColorSt
 // ---------- 5) „Wo ist?“ mit genauer Karte ----------
 const geo = (lon, lat) => [(lon - 7.6) * 69.8, -(lat - 50.8) * 111.2];
 const G_ = a => a.map(([lo, la]) => geo(lo, la));
-const STADT = { essen: [7.012, 51.456, "Essen", 2], altendorf: [6.975, 51.462, "Altendorf", 0], duisburg: [6.762, 51.434, "Duisburg", 1], bochum: [7.216, 51.481, "Bochum", 1], dortmund: [7.468, 51.514, "Dortmund", 2],
-  duesseldorf: [6.776, 51.227, "Düsseldorf", 2], wuppertal: [7.15, 51.256, "Wuppertal", 1], oberbarmen: [7.217, 51.274, "Oberbarmen", 0], hagen: [7.474, 51.361, "Hagen", 1], koeln: [6.958, 50.938, "Köln", 2], bonn: [7.098, 50.737, "Bonn", 1],
+const STADT = { essen: [7.012, 51.456, "Essen", 2], duisburg: [6.762, 51.434, "Duisburg", 1], bochum: [7.216, 51.481, "Bochum", 1], dortmund: [7.468, 51.514, "Dortmund", 2],
+  duesseldorf: [6.776, 51.227, "Düsseldorf", 2], wuppertal: [7.15, 51.256, "Wuppertal", 2], hagen: [7.474, 51.361, "Hagen", 1], koeln: [6.958, 50.938, "Köln", 2], bonn: [7.098, 50.737, "Bonn", 1],
   siegen: [8.024, 50.875, "Siegen", 1], koblenz: [7.598, 50.356, "Koblenz", 1], limburg: [8.062, 50.389, "Limburg", 0], giessen: [8.678, 50.584, "Gießen", 1], wiesbaden: [8.24, 50.082, "Wiesbaden", 1], mainz: [8.271, 49.993, "Mainz", 1],
   frankfurt: [8.682, 50.11, "Frankfurt", 2], offenbach: [8.766, 50.1, "Offenbach", 0], leverkusen: [6.984, 51.033, "Leverkusen", 0], solingen: [7.084, 51.165, "Solingen", 0], remscheid: [7.19, 51.179, "Remscheid", 0], marburg: [8.77, 50.81, "Marburg", 0] };
 const RHEIN = G_([[8.27, 49.98], [8.23, 50.04], [8.12, 50.03], [7.97, 49.97], [7.86, 50.0], [7.77, 50.06], [7.71, 50.15], [7.6, 50.23], [7.6, 50.36], [7.46, 50.43], [7.38, 50.47], [7.23, 50.58], [7.13, 50.7], [7.04, 50.82], [6.97, 50.94], [6.98, 51.04], [6.9, 51.12], [6.77, 51.23], [6.73, 51.33], [6.75, 51.44], [6.66, 51.56], [6.6, 51.68]]);
@@ -200,15 +200,15 @@ const WALD = [G_([[7.75, 51.0], [7.8, 51.3], [8.3, 51.35], [8.55, 51.1], [8.3, 5
 const zuB = (c, [x, y]) => [W / 2 + (x - c.cx) * c.z, c.ay + (y - c.cy) * c.z];
 function pfad(c, pts) { ctx.beginPath(); pts.forEach((p, i) => { const [x, y] = zuB(c, p); i ? ctx.lineTo(x, y) : ctx.moveTo(x, y); }); }
 function karte(c, routeA = 0) { ctx.fillStyle = "#202124"; ctx.fillRect(0, 0, W, H);
-  ctx.fillStyle = "#1e2a22"; WALD.forEach(p => { pfad(c, p); ctx.closePath(); ctx.fill(); });
-  ctx.fillStyle = "#2a2b2f"; STADTFL.forEach(p => { pfad(c, p); ctx.closePath(); ctx.fill(); });
+  ctx.save(); ctx.filter = `blur(${Math.min(40, 1.6 * c.z).toFixed(0)}px)`; ctx.fillStyle = "#1e2a22"; WALD.forEach(p => { pfad(c, p); ctx.closePath(); ctx.fill(); });
+  ctx.fillStyle = "#28292d"; STADTFL.forEach(p => { pfad(c, p); ctx.closePath(); ctx.fill(); }); ctx.restore();
   ctx.lineJoin = "round"; ctx.lineCap = "round"; [[RHEIN, 3.2], [MAIN, 1.8], [RUHR, 1.2], [WUPPER, 0.9], [LAHN, 1.0], [SIEG, 1.0]].forEach(([p, b]) => { pfad(c, p); ctx.strokeStyle = "#1f3b5a"; ctx.lineWidth = Math.max(4, b * c.z * 0.55); ctx.stroke(); });
   [A3, A1, A45, A5, A46, A40, A4].forEach(p => { pfad(c, p); ctx.strokeStyle = "#3a2f1c"; ctx.lineWidth = Math.max(7, c.z * 0.75); ctx.stroke(); pfad(c, p); ctx.strokeStyle = "#8a6c35"; ctx.lineWidth = Math.max(4, c.z * 0.45); ctx.stroke(); });
   if (routeA > 0) { ctx.globalAlpha = routeA; const n = Math.round(ROUTE.length * clamp(routeA * 1.4, 0, 1)); const teil = ROUTE.slice(0, Math.max(2, n)); pfad(c, teil); ctx.strokeStyle = "#0a5ad0"; ctx.lineWidth = Math.max(14, c.z * 1.6); ctx.stroke(); pfad(c, teil); ctx.strokeStyle = C.blau; ctx.lineWidth = Math.max(9, c.z * 1.1); ctx.stroke(); ctx.globalAlpha = 1; }
   // Autobahn-Schilder
-  [["3", 7.66, 50.55], ["1", 7.42, 51.37], ["45", 7.85, 51.03], ["5", 8.66, 50.3], ["46", 6.95, 51.22]].forEach(([n, lo, la]) => { const [x, y] = zuB(c, geo(lo, la)); if (x < 0 || x > W || y < 0 || y > H) return; rr(x - 26, y - 20, 52, 40, 9); ctx.fillStyle = "#2b5ab8"; ctx.fill(); ctx.strokeStyle = "#fff"; ctx.lineWidth = 2.5; ctx.stroke(); text(n, x, y + 12, 28, "#fff", 700, 999, 1, "center"); });
-  Object.values(STADT).forEach(([lo, la, n, gr]) => { const [x, y] = zuB(c, geo(lo, la)); if (x < -100 || x > W + 100 || y < -50 || y > H + 50) return; if (gr === 0 && c.z < 9) return; if (gr === 1 && c.z < 5.2) return;
-    kreis(x, y, gr === 2 ? 9 : 7, "rgba(235,235,245,0.55)"); ctx.save(); ctx.shadowColor = "rgba(0,0,0,0.9)"; ctx.shadowBlur = 8; text(n, x, y + (gr === 2 ? 50 : 44), gr === 2 ? 38 : 32, gr === 2 ? "rgba(235,235,245,0.9)" : "rgba(235,235,245,0.7)", gr === 2 ? 600 : 500, 999, 1, "center"); ctx.restore(); }); }
+  [["3", 7.66, 50.55], ["1", 7.42, 51.37], ["45", 7.85, 51.03], ["5", 8.66, 50.3]].forEach(([n, lo, la]) => { const [x, y] = zuB(c, geo(lo, la)); if (x < 0 || x > W || y < 0 || y > H) return; rr(x - 26, y - 20, 52, 40, 9); ctx.fillStyle = "#2b5ab8"; ctx.fill(); ctx.strokeStyle = "#fff"; ctx.lineWidth = 2.5; ctx.stroke(); text(n, x, y + 12, 28, "#fff", 700, 999, 1, "center"); });
+  Object.values(STADT).forEach(([lo, la, n, gr]) => { const [x, y] = zuB(c, geo(lo, la)); if (x < -100 || x > W + 100 || y < -50 || y > H + 50) return; if (gr === 0 && c.z < 9) return; if (gr === 1 && c.z < 9) return;
+    kreis(x, y, gr === 2 ? 9 : 7, "rgba(235,235,245,0.55)"); ctx.save(); ctx.shadowColor = "rgba(0,0,0,0.9)"; ctx.shadowBlur = 8; if (n === "Düsseldorf" && c.z < 9) return; text(n, x, y + (gr === 2 ? 50 : 44), gr === 2 ? 38 : 32, gr === 2 ? "rgba(235,235,245,0.9)" : "rgba(235,235,245,0.7)", gr === 2 ? 600 : 500, 999, 1, "center"); ctx.restore(); }); }
 function camWo(ts) { const z1 = { cx: geo(6.975, 51.462)[0], cy: geo(6.975, 51.462)[1], z: 24, ay: 1075 }, z2 = { cx: geo(7.83, 50.78)[0], cy: geo(7.83, 50.78)[1], z: 4.4, ay: 1035 }, z3 = { cx: geo(7.85, 50.5)[0], cy: geo(7.85, 50.5)[1], z: 11, ay: 1075 };
   const m = (a, b, q) => ({ cx: lerp(a.cx, b.cx, q), cy: lerp(a.cy, b.cy, q), z: a.z * Math.pow(b.z / a.z, q), ay: lerp(a.ay, b.ay, q) }); return m(m(z1, z2, ein((ts - 22.75) / 1.0)), z3, ein((ts - 24.8) / 0.9)); }
 let LR = [0]; for (let i = 1; i < A3.length; i++) LR.push(LR[i - 1] + Math.hypot(A3[i][0] - A3[i - 1][0], A3[i][1] - A3[i - 1][1]));
@@ -221,7 +221,7 @@ function sWo(ts) { const c = camWo(ts); karte(c, clamp((ts - 23.2) / 0.9, 0, 1))
   if (ts > 24.85) { const a = clamp((ts - 24.85) / 0.2, 0, 1); ctx.save(); ctx.globalAlpha = a; const [sx, sy] = zuB(c, SCANNER), ok = ts > 26.3; karteRR(sx - 120, sy - 140, 240, 76, 38, ok ? C.gruen : "rgba(44,44,48,0.95)"); if (ok) ikon("haken", sx - 70, sy - 102, 32); text("Scanner", sx + (ok ? 20 : 0), sy - 90, 34, C.l1, 600, 999, 1, "center"); kreis(sx, sy, 12, ok ? C.gruen : C.l2);
     const s = lerp(LR[6] - 40, LR[9], clamp((ts - 24.9) / 2.4, 0, 1)), [lx, ly] = zuB(c, aufA3(s)); schatten(() => kreis(lx, ly, 46, "#fff"), 20, 6, 0.5); kreis(lx, ly, 40, C.orange); ikon("lkw", lx, ly, 46, "#fff"); ctx.restore(); }
   // schwebende Karte oben (wie Karten-Hinweis)
-  const k = ts < 22.8 ? "l3" : ts < 24.85 ? "l4" : "l5", kA = 1 - clamp((ts - 28.7) / 0.2, 0, 1); ctx.save(); ctx.globalAlpha = kA; if (kA > 0) { karteRR(44, 168, W - 88, 400, 56, "rgba(30,30,33,0.94)");
+  const k = ts < 22.8 ? "l3" : ts < 24.85 ? "l4" : "l5", kA = 1 - clamp((ts - 26.6) / 0.2, 0, 1); ctx.save(); ctx.globalAlpha = kA; if (kA > 0) { karteRR(44, 168, W - 88, 400, 56, "rgba(30,30,33,0.94)");
   if (k === "l5") { kreis(124, 252, 34, C.orange); ikon("tag", 124, 252, 40, "#fff"); text("LKW · Sender", 180, 266, 40, C.l1, 600); } else { ikon("personen", 124, 252, 64, C.gruen); text(k === "l3" ? "Standort geteilt" : "Route · Frankfurt → Oberbarmen", 180, 266, 38, C.l2, 500); }
   zeile(tipp(ts, k), 104, 380, 72, W - 208); } ctx.restore();
   // Blatt unten
@@ -239,7 +239,7 @@ function eilmeldung(ts) { const t0 = 26.72; if (ts < t0 || ts > 29.0) return; co
   karteRR(W - 560, 1150, 516, 230, 36, "rgba(44,44,48,0.97)"); text("Öffnen", W - 520, 1238, 44, C.l1); ctx.fillStyle = C.sep; ctx.fillRect(W - 560, 1265, 516, 1.5); text("Löschen", W - 520, 1348, 44, C.rot); ikon("muell", W - 100, 1330, 40, C.rot);
   ctx.restore(); }
 // Live-Aktivität (Dynamic Island aufgeklappt): 4 → 5 → 6 Blocks
-function inselAuf(ts) { const t0 = 28.85, t1 = 30.95; if (ts < t0 || ts > t1 + 0.32) return 0; return ein((ts - t0) / 0.34) * (1 - ein((ts - t1) / 0.32)); }
+function inselAuf(ts) { const t0 = 28.85, t1 = 30.72; if (ts < t0 || ts > t1 + 0.32) return 0; return ein((ts - t0) / 0.34) * (1 - ein((ts - t1) / 0.32)); }
 function inselGross(ts, e) { const r = { x: lerp(INSEL.x, 30, e), y: INSEL.y, w: lerp(INSEL.w, W - 60, e), h: lerp(INSEL.h, 500, e) }; ctx.fillStyle = `rgba(0,0,0,${0.5 * e})`; ctx.fillRect(0, 0, W, H);
   rr(r.x, r.y, r.w, r.h, lerp(51, 110, e)); ctx.fillStyle = "#000"; ctx.fill(); if (e < 0.55) return; ctx.save(); ctx.globalAlpha = (e - 0.55) / 0.45;
   const n = ts < 30.08 ? 4 : ts < 30.6 ? 5 : 6, t = ts < 30.08 ? 28.98 : ts < 30.6 ? 30.08 : 30.6, q = zurueck((ts - t) / 0.22);
@@ -343,7 +343,7 @@ window.zeichne = T => { const ts = T + A; ctx = cv.getContext("2d"); ctx.setTran
   else if (ts < 20.78) bild(inBuf(0, sCap, ts));
   else if (ts < 21.02) { bild(inBuf(0, sCap, ts)); bannerFall("wo", 20.78, ts); }
   else if (ts < 21.36) oeffnen(sCap, sWo, "wo", 21.02, 0.34, ts);
-  else if (ts < 32.88) bild(inBuf(0, sWoAlles, ts), 1, 1, 0, 0, 0, ts > 28.85 && ts < 31.3 ? 22 * inselAuf(ts) : 0);
+  else if (ts < 32.88) { bild(inBuf(0, sWo, ts), 1, 1, 0, 0, 0, ts > 28.85 && ts < 31.1 ? 22 * inselAuf(ts) : 0); eilmeldung(ts); airdrop(ts); }
   else if (ts < 33.3) umschalten(sWoAlles, sWlan, 32.88, 0.42, ts);
   else if (ts < 34.98) bild(inBuf(0, sWlan, ts));
   else if (ts < 35.22) { bild(inBuf(0, sWlan, ts)); bannerFall("wetter", 34.98, ts); }
