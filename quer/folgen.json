@@ -81,6 +81,15 @@
      "72 hours",
      "storytime"
     ]
+   },
+   "veroeffentlicht": {
+    "de": {
+     "post": "quer-yt-q02",
+     "zernio_id": "6b03f24d24eb69490e48503e",
+     "zeit": "2026-11-23T16:52",
+     "laenge_s": 635.8,
+     "video": "https://github.com/jonathanb-bot/animierte-serie/releases/download/quer-q02/quer-q02.mp4"
+    }
    }
   },
   {
