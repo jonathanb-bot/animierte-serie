@@ -61,15 +61,15 @@ export const skelett = (o = {}) => {
   const oa = H * 0.19 * (o.armLang ?? 1), ua = H * 0.16 * (o.armLang ?? 1), hr = H * 0.075 * (o.armLang ?? 1) ** 0.3 * (o.handGr ?? 1);
   for (const [s, n] of [[-1, "L"], [1, "R"]]) {
     const sch = j["schulter" + n] = gruppe(j.brust, s * sw * 0.5, rumpf * 0.86, 0); an(sch, kugel(sw * 0.15 * d, o.aermel ?? oben, 12));
-    an(sch, kapsel(sw * 0.14 * d, oa * 0.9, o.aermel ?? oben), 0, -oa / 2, 0);
-    const el = j["ellbogen" + n] = gruppe(sch, 0, -oa, 0); an(el, kugel(sw * 0.125 * d, o.unterarm ?? o.aermel ?? oben, 10)); an(el, kapsel(sw * 0.115 * d, ua * 0.9, o.unterarm ?? o.aermel ?? oben), 0, -ua / 2, 0);
+    an(sch, kapsel(sw * 0.14 * d, oa * 0.98, o.aermel ?? oben), 0, -oa / 2, 0);
+    const el = j["ellbogen" + n] = gruppe(sch, 0, -oa, 0); an(el, kugel(sw * 0.125 * d, o.unterarm ?? o.aermel ?? oben, 10)); an(el, kapsel(sw * 0.115 * d, ua * 0.98, o.unterarm ?? o.aermel ?? oben), 0, -ua / 2, 0);
     const ha = j["hand" + n] = gruppe(el, 0, -ua, 0); const hm = o.handMat ?? haut;
     const flaeche = an(ha, kapsel(hr * 0.24, hr * 0.3, hm, 10), 0, -hr * 0.3, 0); flaeche.scale.set(1.15, 1, 0.5);
     for (let i = 0; i < 4; i++) { const f = an(ha, kapsel(hr * 0.065, hr * 0.38 * (o.finger ?? 1), hm, 6), (i - 1.5) * hr * 0.12, -hr * (0.68 + 0.19 * (o.finger ?? 1)), 0); f.rotation.x = 0.25; }
     const dm = an(ha, kapsel(hr * 0.06, hr * 0.28, hm, 6), -s * hr * 0.22, -hr * 0.35, hr * 0.05); dm.rotation.z = s * 0.6;
     const ob = H * 0.245 * (o.beinLang ?? 1), un = H * 0.24 * (o.beinLang ?? 1);
-    const bein = j["bein" + n] = gruppe(j.huefte, s * sw * 0.22, 0, 0); an(bein, kapsel(sw * 0.2 * d, ob * 0.85, unten), 0, -ob / 2, 0);
-    const kn = j["knie" + n] = gruppe(bein, 0, -ob, 0); an(kn, kugel(sw * 0.16 * d, unten, 10)); an(kn, kapsel(sw * 0.155 * d, un * 0.88, unten), 0, -un / 2, 0);
+    const bein = j["bein" + n] = gruppe(j.huefte, s * sw * 0.22, 0, 0); an(bein, kapsel(sw * 0.2 * d, ob * 0.98, unten), 0, -ob / 2, 0);
+    const kn = j["knie" + n] = gruppe(bein, 0, -ob, 0); an(kn, kugel(sw * 0.16 * d, unten, 10)); an(kn, kapsel(sw * 0.155 * d, un * 1.0, unten), 0, -un / 2, 0);
     const fu = j["fuss" + n] = gruppe(kn, 0, -un, 0); const sh = an(fu, kapsel(sw * 0.1, H * 0.06, schuhe, 10), 0, -H * 0.015, H * 0.035); sh.rotation.x = Math.PI / 2; sh.scale.set(1.2, 1, 0.7);
   }
   g.userData.j = j; g.userData.H = H; return g; };
@@ -165,6 +165,53 @@ export const REAL = {
   huggywuggy: { name: "Huggy Wuggy", groesse: 5.5, bau: () => pluesch("#2a56e0", { id: "huggywuggy", name: "Huggy Wuggy" }) },
   kissymissy: { name: "Kissy Missy", groesse: 5.5, bau: () => pluesch("#e8569c", { wimpern: true, schleife: true, id: "kissymissy", name: "Kissy Missy" }) },
 };
+
+// ---------- Dorfbewohner (Jonathan 24.11.: „die Personen noch besser darstellen“) ----------
+const haare = (j, farbe, art = "kurz") => { const kr = j.kopfR, m = stoff(farbe, 1);
+  if (art === "kurz") { const h = an(j.kopf, new THREE.Mesh(new THREE.SphereGeometry(kr * 1.06, 26, 16, 0, Math.PI * 2, 0, Math.PI * 0.42), m), 0, kr * 0.06, -kr * 0.05); h.scale.set(0.9, 1.05, 1.0); const hint = an(j.kopf, new THREE.Mesh(new THREE.SphereGeometry(kr * 1.04, 20, 12, Math.PI * 1.15, Math.PI * 0.7, 0, Math.PI * 0.72), m), 0, 0, -kr * 0.06); hint.scale.set(0.9, 1.06, 1); }
+  else if (art === "lang") { const h = an(j.kopf, new THREE.Mesh(new THREE.SphereGeometry(kr * 1.07, 26, 16, 0, Math.PI * 2, 0, Math.PI * 0.45), m), 0, kr * 0.06, -kr * 0.04); h.scale.set(0.92, 1.05, 1.0); const r = an(j.kopf, new THREE.Mesh(new THREE.CylinderGeometry(kr * 0.85, kr * 0.95, kr * 2.2, 20, 1, true, Math.PI * 0.24, Math.PI * 1.52), m), 0, -kr * 0.7, -kr * 0.05); r.material.side = THREE.DoubleSide; }
+  else if (art === "dutt") { const h = an(j.kopf, new THREE.Mesh(new THREE.SphereGeometry(kr * 1.05, 24, 14, 0, Math.PI * 2, 0, Math.PI * 0.45), m), 0, kr * 0.05, -kr * 0.04); h.scale.set(0.9, 1.05, 1.0); an(j.kopf, kugel(kr * 0.42, m, 14), 0, kr * 0.75, -kr * 0.7); }
+  else if (art === "glatze") { for (const s2 of [-1, 1]) { const h = an(j.kopf, kugel(kr * 0.4, m, 12), s2 * kr * 0.75, kr * 0.05, -kr * 0.3); h.scale.set(0.5, 0.8, 1.2); } } };
+const normalGesicht = (j, haut, { auge = "#4a6a3a", brauen = "#3a2414", lippen = "#b8706a", alt = false, kind = false, stimmung = "ernst" } = {}) => gesicht(j.kopf, j.kopfR, (x, w, h) => {
+  Z.haut(x, w, h, haut, "rgba(60,30,20,0.22)"); const ay = kind ? 0.5 : 0.46;
+  Z.augenhoehle(x, w, h, { y: ay, abst: 0.15, farbe: "rgba(80,40,30,0.25)" }); Z.auge(x, w, h, { y: ay, abst: 0.15, r: kind ? 0.04 : 0.032, iris: auge, pupille: 0.5 });
+  x.strokeStyle = brauen; x.lineCap = "round"; x.lineWidth = kind ? 7 : 9; for (const s2 of [-1, 1]) { const sorge = stimmung === "angst" ? 0.03 : 0; x.beginPath(); x.moveTo(w / 2 + s2 * w * 0.08, h * (ay - 0.08 - sorge * 1.2)); x.quadraticCurveTo(w / 2 + s2 * w * 0.15, h * (ay - 0.1), w / 2 + s2 * w * 0.22, h * (ay - 0.07 + sorge)); x.stroke(); }
+  Z.nase(x, w, h, { y: kind ? 0.62 : 0.6 }); x.fillStyle = "rgba(200,90,80,0.18)"; for (const s2 of [-1, 1]) { x.beginPath(); x.arc(w / 2 + s2 * w * 0.2, h * 0.63, w * 0.06, 0, 7); x.fill(); }
+  if (stimmung === "angst") { Z.mund(x, w, h, { y: 0.72, b: 0.05, farbe: "#3a1414", dicke: 0.035 }); } else { x.strokeStyle = lippen; x.lineWidth = 8; x.beginPath(); x.moveTo(w * 0.42, h * 0.72); x.quadraticCurveTo(w / 2, h * (stimmung === "froh" ? 0.76 : 0.725), w * 0.58, h * 0.72); x.stroke(); }
+  if (alt) { x.strokeStyle = "rgba(90,50,40,0.35)"; x.lineWidth = 3; for (const s2 of [-1, 1]) { x.beginPath(); x.moveTo(w / 2 + s2 * w * 0.26, h * 0.44); x.lineTo(w / 2 + s2 * w * 0.3, h * 0.47); x.stroke(); x.beginPath(); x.moveTo(w / 2 + s2 * w * 0.07, h * 0.66); x.quadraticCurveTo(w / 2 + s2 * w * 0.1, h * 0.72, w / 2 + s2 * w * 0.08, h * 0.76); x.stroke(); } x.beginPath(); x.moveTo(w * 0.35, h * 0.3); x.lineTo(w * 0.65, h * 0.3); x.stroke(); }
+}, { breite: 1.6, hoehe: 1.3 });
+const mensch = (o) => { const g = skelett({ groesse: o.groesse, schulter: o.schulter ?? 0.44, haut: o.haut, oben: stoff(o.oben), aermel: stoff(o.oben), unten: stoff(o.unten), schuhe: o.schuhe ?? "#2a1e16", kopfGr: o.kind ? 1.25 : 1 });
+  const j = g.userData.j; normalGesicht(j, o.haut, o); haare(j, o.haare, o.frisur); if (o.jacke) { const jk = an(j.brust, kapselJ(j, o.jacke), 0, 0, 0); }
+  if (o.kleid) robe(g, stoff(o.kleid), [[0.34, 0.35], [0.3, 0.6], [0.24, 0.95], [0.2, 1.05]]);
+  g.userData.horror = { id: o.id, name: o.name }; return g; };
+const kapselJ = (j, farbe) => { const m = new THREE.Mesh(new THREE.CapsuleGeometry(1, 1, 6, 16), stoff(farbe)); const t = j.torso; m.scale.copy(t.scale).multiply(new THREE.Vector3(t.geometry.parameters.radius * 1.07, (t.geometry.parameters.length + t.geometry.parameters.radius * 2) * 0.33, t.geometry.parameters.radius * 1.07)); m.position.copy(t.position); return m; };
+Object.assign(REAL, {
+  papa: { name: "Papa (Dorfbewohner)", groesse: 1.85, bau: () => mensch({ id: "papa", name: "Papa", groesse: 1.85, schulter: 0.48, haut: "#d8a080", oben: "#3a5a8a", unten: "#2a2a30", haare: "#3a2414", frisur: "kurz", auge: "#5a3a1a" }) },
+  mama: { name: "Mama (Dorfbewohnerin)", groesse: 1.7, bau: () => mensch({ id: "mama", name: "Mama", groesse: 1.7, schulter: 0.4, haut: "#ecc0a0", oben: "#a83a4a", unten: "#3a3a52", haare: "#6a3418", frisur: "lang", auge: "#3a6a8a", lippen: "#c04a4a" }) },
+  kind: { name: "Ich (Kind, realistisch)", groesse: 1.35, bau: () => mensch({ id: "kind", name: "Ich", groesse: 1.35, schulter: 0.34, haut: "#f0c8a0", oben: "#e8a020", unten: "#2a3a5a", haare: "#5a3418", frisur: "kurz", kind: true, auge: "#4a6a3a", stimmung: "angst" }) },
+  oma: { name: "Oma (Dorfbewohnerin)", groesse: 1.6, bau: () => mensch({ id: "oma", name: "Oma", groesse: 1.6, schulter: 0.4, haut: "#f0d0b8", oben: "#7a4a6a", unten: "#4a3a4a", haare: "#e0e0e0", frisur: "dutt", alt: true, kleid: "#7a4a6a", auge: "#6a7a8a" }) },
+  nachbar: { name: "Herr Krause (Nachbar)", groesse: 1.78, bau: () => mensch({ id: "nachbar", name: "Herr Krause", groesse: 1.78, schulter: 0.47, haut: "#e8b898", oben: "#5a6a3a", unten: "#4a4038", haare: "#8a8a8a", frisur: "glatze", alt: true, auge: "#5a5a5a" }) },
+});
+
+
+// ---------- Siren Head (Trevor Henderson), ~12 m: ausgemergelter Körper, Mast-Hals, zwei Sirenen ----------
+const rostTex = () => { const c = document.createElement("canvas"); c.width = c.height = 256; const x = c.getContext("2d"); x.fillStyle = "#6a3e26"; x.fillRect(0, 0, 256, 256);
+  for (let i = 0; i < 900; i++) { const k = ["#7a4a2c", "#5a3020", "#8a5a34", "#4a2618"][i % 4]; x.fillStyle = k; x.fillRect((i * 37) % 256, (i * 71) % 256, 2 + (i % 4), 6 + (i % 7)); }
+  x.strokeStyle = "rgba(30,15,10,0.6)"; x.lineWidth = 2; for (let i = 0; i < 40; i++) { x.beginPath(); x.moveTo((i * 53) % 256, 0); x.bezierCurveTo((i * 31) % 256, 80, (i * 97) % 256, 160, (i * 13) % 256, 256); x.stroke(); }
+  const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; t.wrapS = t.wrapT = THREE.RepeatWrapping; t.repeat.set(2, 4); return t; };
+const sirenHeadReal = () => { const haut = new THREE.MeshStandardMaterial({ map: rostTex(), roughness: 0.95 });
+  const g = skelett({ groesse: 12, schulter: 1.1, hautMat: haut, oben: haut, aermel: haut, unten: haut, handMat: haut, schuheMat: haut, dick: 0.58, armLang: 1.45, beinLang: 1.05, finger: 1.6, kopfGr: 0.01 }); const j = g.userData.j, H = g.userData.H;
+  j.schaedel.visible = false; g.userData.kiefer.visible = false; j.torso.scale.set(0.95, 1.05, 0.55);
+  for (let i = 0; i < 7; i++) { const r = an(j.brust, new THREE.Mesh(new THREE.TorusGeometry(0.42 * M * (1 - Math.abs(i - 2) * 0.06), 0.035 * M, 6, 24, Math.PI), haut), 0, H * 0.3 * (0.35 + i * 0.075), 0.02 * M); r.scale.set(1.15, 1, 0.6); }   // Rippen
+  const mast = an(j.hals, new THREE.Mesh(new THREE.CylinderGeometry(0.1 * M, 0.14 * M, 2.4 * M, 10), new THREE.MeshStandardMaterial({ color: "#5a5048", roughness: 0.6, metalness: 0.35 })), 0, 1.2 * M, 0);
+  for (let i = 0; i < 4; i++) { const sehne = an(j.hals, new THREE.Mesh(new THREE.CylinderGeometry(0.03 * M, 0.05 * M, 0.9 * M, 6), haut), Math.cos(i * 1.6) * 0.12 * M, 0.4 * M, Math.sin(i * 1.6) * 0.12 * M); sehne.rotation.set(Math.sin(i) * 0.3, 0, Math.cos(i) * 0.3); }
+  const kopf = gruppe(j.hals, 0, 2.3 * M, 0); g.userData.sirenKopf = kopf; const blech = new THREE.MeshStandardMaterial({ color: "#8a8478", roughness: 0.45, metalness: 0.6 });
+  g.userData.sirenen = [-1, 1].map(s2 => { const k = gruppe(kopf, s2 * 0.35 * M, 0, 0); k.rotation.y = s2 * 0.25; const tr = an(k, new THREE.Mesh(new THREE.CylinderGeometry(0.16 * M, 0.55 * M, 0.9 * M, 20, 1, true), blech), s2 * 0.42 * M, 0, 0); tr.rotation.z = s2 * Math.PI / 2; tr.material.side = THREE.DoubleSide;
+    const gi = an(k, new THREE.Mesh(new THREE.CircleGeometry(0.53 * M, 20), new THREE.MeshStandardMaterial({ map: tex(128, 128, (x, w, h) => { x.fillStyle = "#14100c"; x.fillRect(0, 0, w, h); x.strokeStyle = "#3a342c"; x.lineWidth = 3; for (let i = 0; i < 9; i++) { x.beginPath(); x.moveTo(0, i * 15); x.lineTo(w, i * 15); x.stroke(); } }), roughness: 0.8 })), s2 * 0.86 * M, 0, 0); gi.rotation.y = s2 * Math.PI / 2;
+    an(k, new THREE.Mesh(new THREE.BoxGeometry(0.28 * M, 0.3 * M, 0.3 * M), blech), 0, 0, 0); return k; });
+  g.userData.horror = { id: "sirenhead", name: "Siren Head" }; return g; };
+REAL.sirenhead = { name: "Siren Head", groesse: 12, bau: sirenHeadReal };
+
 export const real = (id) => { const e = REAL[id]; if (!e) throw new Error("keine realistische Fassung: " + id); const g = e.bau(); scene.add(g); return g; };
 
 
@@ -180,6 +227,8 @@ export const ranim = (g, t, modus = "stehen", o = {}) => { const id = g.userData
   else if (id === "huggywuggy" || id === "kissymissy") { const sw = gehen || angr ? Math.sin(p * 2.6) : 0; rpose(g, { ...st, lauf: gehen || angr ? 0.6 : 0, phase: p * 2.6, armL: angr || schrei ? 1.6 : 0.15 - sw * 0.2, armR: angr || schrei ? 1.6 : 0.15 + sw * 0.2, armLz: 0.25, armRz: 0.25, ellbogen: 0.05, kopfNeig: -0.1 + ruck(t, 2.4) * 0.3, kopfDreh: Math.sin(t * 0.8) * 0.2, neig: 0.12 }); }
   else if (id === "pennywise") { const tanz = gehen ? Math.abs(Math.sin(p * 4)) : 0; rpose(g, { ...st, lauf: gehen ? 0.9 : 0, phase: p * 4, armL: angr ? 1.5 : 0.4 + Math.sin(p * 4) * 0.3 * (gehen ? 1 : 0), armR: angr ? 1.5 : 0.4 - Math.sin(p * 4) * 0.3 * (gehen ? 1 : 0), ellbogen: 0.6, kopfNeig: 0.25 * Math.sin(t * 0.9) + ruck(t, 2.2) * 0.4, kopfDreh: 0.35 * Math.sin(t * 0.6), neig: schrei ? 0.3 : 0.15, schweben: tanz * 0.05 }); }
   else if (id === "jason" || id === "michaelmyers") { rpose(g, { ...st, lauf: gehen || angr ? 0.7 : 0, phase: p * (id === "jason" ? 2.2 : 2.6), armR: angr ? 2.4 : 0.15, ellbogen: angr ? 0.2 : 0.25, armL: 0.05, kopfNeig: id === "michaelmyers" ? 0.08 + ruck(t, 4.2, 0.6) * 0.35 : 0.12, kopfDreh: id === "michaelmyers" ? ruck(t + 2, 4.2, 0.9) * 0.45 : 0, neig: 0.06 }); }
+  else if (id === "sirenhead") { rpose(g, { ...st, lauf: gehen || angr ? 0.55 : 0, phase: p * 1.2, armL: angr ? 1.0 : 0.05, armR: angr ? 1.1 : 0.05, armLz: 0.08, armRz: 0.08, ellbogen: 0.3, neig: 0.18 });
+    const k = g.userData.sirenKopf; if (k) { k.rotation.y = Math.sin(t * 0.5) * 0.6 + ruck(t, 3.7, 0.25) * 1.4; k.rotation.z = Math.sin(t * 0.7) * 0.08; } }
   else rpose(g, { ...st, lauf: gehen ? 0.7 : 0, phase: p * 2.5 });
   const kf = g.userData.kiefer; if (kf) kf.position.y = kf.userData.y0 - (schrei ? 0.35 : 0) * j.kopfR;
   const gs = g.userData.gesicht; if (gs && gs.userData.schrei) gs.material.map = schrei ? gs.userData.schrei : gs.userData.normal; };
