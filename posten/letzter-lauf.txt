@@ -1,9 +1,7 @@
 Verbundene Konten: tiktok:storys4you.de1, instagram:sto.rys4you, youtube:sto.rys4you (2. Zernio-Konto), tiktok:storys4you_eng (2. Zernio-Konto), youtube:storys4you_eng (3. Zernio-Konto), instagram:sory4you_eng (3. Zernio-Konto)
-  taeglich-tiktok-en-n003: Prüfung ok (Bild, Ton, Lautstärke)
-✓ taeglich-tiktok-en-n003 eingeplant für 2026-11-25T00:53:00 (6b05312fcef40854250d7de9)
+  taeglich-tiktok-b02: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-tiktok-b02 eingeplant für 2026-11-24T19:12:00 (6b0549b233ed27cbdc4a3b58)
   KI-Kennzeichnung laut Zernio: "videoMadeWithAi":false, "videoMadeWithAi":false
-  taeglich-insta-en-n003: Prüfung ok (Bild, Ton, Lautstärke)
-✓ taeglich-insta-en-n003 eingeplant für 2026-11-24T22:26:00 (6b053132055bbdce6fd2cabb)
-  taeglich-yt-en-n003: Prüfung ok (Bild, Ton, Lautstärke)
-✓ taeglich-yt-en-n003 eingeplant für 2026-11-24T23:22:00 (6b053134f3b53699271290b1)
-Fertig: 3 neu eingeplant, 0 Fehler.
+  taeglich-insta-b02: Prüfung ok (Bild, Ton, Lautstärke)
+✓ taeglich-insta-b02 eingeplant für 2026-11-24T11:43:00 (6b0549b533ed27cbdc4a3b66)
+Fertig: 2 neu eingeplant, 0 Fehler.
