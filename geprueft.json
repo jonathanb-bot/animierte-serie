@@ -2328,6 +2328,12 @@
    "bild_s": 88.7,
    "ton_s": 88.72,
    "lufs": -14.6
+  },
+  "taeglich/nische-n003-en.mp4": {
+   "ok": true,
+   "bild_s": 71.1,
+   "ton_s": 71.08,
+   "lufs": -14.6
   }
  },
  "serien": {
@@ -2612,6 +2618,10 @@
   "block-b01k": {
    "titel": "In meiner Stadt geht nie ein Licht aus",
    "datei": "taeglich/block-b01k.mp4"
+  },
+  "nische-n003-en": {
+   "titel": "Your Reflection Is One Second Late",
+   "datei": "taeglich/nische-n003-en.mp4"
   }
  },
  "taeglich_staffeln": {
