@@ -9,6 +9,8 @@ Arbeite selbstständig, ohne Rückfragen, auf Deutsch. Qualität vor Quantität 
 
 ## Feste Regeln (Jonathan)
 
+- **MARKEN ERLAUBT (24.11., Issue #42):** Marken und Spiele dürfen genannt und gezeigt werden, Logos möglichst detailgetreu.
+
 - **STIMME UNVERÄNDERT (24.11. abends):** Die Stimme wird nicht bearbeitet – keine Tonhöhe, kein Kompressor/EQ, kein Tempo, kein Begrenzer, kein `loudnorm`. Nur Musik und Geräusche anpassen. Zum Kodieren `block/lautheit.py` (fester Faktor). Details: `block/README.md` → „Stimme unverändert“.
 
 - **Stil:** wie Folge 1. Nachtstadt, Blockfiguren, Ich-Erzählung („In meiner Stadt …“ in Folge 1; ab Folge 2 geht es direkt weiter). Papa, Oma und die Schatten-Wesen bleiben.

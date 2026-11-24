@@ -65,3 +65,7 @@ Ausgewertet wird in der nächsten großen Analyse.
 - Zu tiefe Zeilen werden **nicht** mehr angehoben – lieber den Abschnitt neu anfragen.
 - `tonbib.mischen`: Musik/Geräusche werden unter die Stimme geduckt und gepegelt; kein Begrenzer auf der Mischung.
 - Kodieren: **kein** `loudnorm` (regelt dynamisch und drückt die Stimme), sondern `python3 block/lautheit.py mix.wav mix_fertig.wav` (fester Faktor, ohne Begrenzer; lieber etwas leiser als −14 LUFS).
+
+## Marken, Spiele, Logos (Jonathan 24.11., Issue #42)
+
+Marken und Spiele dürfen genannt und gezeigt werden, Logos möglichst detailgetreu (als Textur auf Leinwand/Schild/Box nachzeichnen). Ältere Hinweise „ohne Marke“, „kein echtes Logo“, „keine Roblox-Namen“ gelten nicht mehr.

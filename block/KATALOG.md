@@ -139,6 +139,12 @@ Aus dem Vorbild-Video übernommen (nur die Mittel, nie Inhalte). Beispiel für a
 | `raumlicht(R)` | ein Licht für den Raum, in dem gerade gefilmt wird | pro Einstellung aufrufen, Lichtstärke dazu `licht(0.6, …)` |
 | `regenbogen`, `ballonsSetzen(t, an, {x, z, t0})` | Feier-Effekte | – |
 
+## Marken-Logos (`logos.js`, 24.11., Issue #42)
+
+`LOGO.nasa(x, w, h)`, `LOGO.lieferando(x, w, h, {hintergrund, schrift})` zeichnen das Logo in einen Canvas (z. B. `leinwand.userData.zeichne`, `handySeite`). `logoTextur(name)` und `logoAufkleber(name, breite, hoehe)` für Raketen, Boxen, Schilder. Neue Marken hier ergänzen, möglichst detailgetreu.
+
+Neue Objekte (24.11. abends): `rakete({hoehe, farbe, akzent})` (`userData.flamme`), `startrampe`, `grill` (`userData.feuer`, `deckel`), `trampolin` (`userData.matte`), `roller({farbe, box})`, `flugzeug`, `koffer`, `sternglas({n, brett, etikett, sprung})` (`userData.setze(n)`, `oben()`), `stern`, `besen`; Figuren-Option `schuhLoch`.
+
 ## Gerüst (`folge.js`) – nie neu schreiben
 
 | Name | Was |

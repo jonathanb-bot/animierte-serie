@@ -3,6 +3,7 @@
 // Garten hinter einem Vorstadt-Haus, Flug durch 3D-Wolken, Liefer-App auf dem Handy.
 import * as B from "../folge.js";
 import * as O from "../objekte.js";
+import { LOGO, logoAufkleber } from "../logos.js";
 const { V, sh, blick, licht, kamera, Fg, Al, Rq, Wt, Z_, THREE } = B;
 await B.laden(); const { Z, E, DAUER, wz } = B.F;
 
@@ -24,17 +25,21 @@ const kleine = O.rakete({ hoehe: 16 }); kleine.rotation.order = "YXZ"; Wt.scene.
 const knopf = new THREE.Group(); { const k = new THREE.Mesh(new THREE.BoxGeometry(0.9, 0.9, 0.9), new THREE.MeshStandardMaterial({ color: "#3a3a40" })); k.position.y = 0.45; knopf.add(k);
   const r = new THREE.Mesh(new THREE.CylinderGeometry(0.3, 0.3, 0.2, 16), new THREE.MeshStandardMaterial({ color: "#e82a2a", emissive: "#a00000", emissiveIntensity: 0.4 })); r.position.y = 1.0; knopf.add(r); knopf.userData.rot = r; } Wt.scene.add(knopf);
 const tramp = O.trampolin(); Wt.scene.add(tramp);
-const roller = O.roller(); Wt.scene.add(roller);
+// NASA-Logo auf den Raketen (Issue #42: Marken und Logos erlaubt)
+const nasaAuf = (r, h) => { const R = h * 0.09, a = logoAufkleber("nasa", R * 1.25, R * 1.25); a.position.set(0, h * 0.34, R * 1.03); r.add(a); };
+nasaAuf(kleine, 16);
+const roller = O.roller({ box: "#ff8000" }); Wt.scene.add(roller);
+for (const [x, z, ry] of [[0.56, -1.0, Math.PI / 2], [-0.56, -1.0, -Math.PI / 2], [0, -1.51, Math.PI]]) { const a = logoAufkleber("lieferando", 0.95, 0.85); a.position.set(x, 2.1, z); a.rotation.y = ry; roller.add(a); }
 const flieger = O.flugzeug(); Wt.scene.add(flieger);
-// Raumfahrtzentrum auf der Wiese westlich der Vorstadt
+// NASA-Gelände auf der Wiese westlich der Vorstadt
 const RZ = (x, y, z) => VP(-150 + x, 0.04 + y, z);
 const rampe = O.startrampe(); rampe.position.copy(RZ(-10, 0, -20)); Wt.scene.add(rampe);
-const gross = O.rakete({ hoehe: 60, akzent: "#2a6ae8" }); gross.position.copy(RZ(-10, 1.2, -20)); Wt.scene.add(gross);
-const mittel = O.rakete({ hoehe: 36, akzent: "#f2a21a" }); mittel.position.copy(RZ(20, 0, -34)); Wt.scene.add(mittel);
+const gross = O.rakete({ hoehe: 60, akzent: "#2a6ae8" }); gross.position.copy(RZ(-10, 1.2, -20)); gross.rotation.y = Math.PI / 2; nasaAuf(gross, 60); Wt.scene.add(gross);
+const mittel = O.rakete({ hoehe: 36, akzent: "#f2a21a" }); mittel.position.copy(RZ(20, 0, -34)); mittel.rotation.y = Math.PI / 2; nasaAuf(mittel, 36); Wt.scene.add(mittel);
 for (let i = 0; i < 5; i++) { const z = O.zaun({ laenge: 14 }); z.position.copy(RZ(40, 0, -30 + i * 14)); z.rotation.y = Math.PI / 2; Wt.scene.add(z); }
 const wStuhl = O.stuhl(); wStuhl.position.copy(RZ(44, 0, 8)); wStuhl.rotation.y = -Math.PI / 2; Wt.scene.add(wStuhl);
 const schild = Al.leinwand(16, 2.6, {}); schild.position.copy(RZ(41, 7, 14)); schild.rotation.y = Math.PI / 2; Wt.scene.add(schild);
-Al.schreibe(schild, ["RAUMFAHRTZENTRUM"], { bg: "#f4f4f4", fg: "#1a3a6a", font: "900 150px 'Inter Display', sans-serif" });
+schild.userData.zeichne((x, w, h) => { x.fillStyle = "#f4f4f4"; x.fillRect(0, 0, w, h); x.save(); x.translate(w * 0.03, 0); LOGO.nasa(x, h, h); x.restore(); x.fillStyle = "#0b3d91"; x.font = "900 120px 'Inter Display', sans-serif"; x.textAlign = "left"; x.textBaseline = "middle"; x.fillText("NASA SPACE CENTER", h + w * 0.05, h / 2); }, "nasa-schild");
 for (const p of [RZ(41, 0, 8), RZ(41, 0, 20)]) { const s = new THREE.Mesh(new THREE.CylinderGeometry(0.15, 0.15, 7, 8), new THREE.MeshStandardMaterial({ color: "#8a8a90" })); s.position.copy(p).add(V(0, 3.5, 0)); Wt.scene.add(s); }
 // Wolken für den Flug (über dem Garten)
 const wolken = []; for (let i = 0; i < 16; i++) { const w = O.wolke({ groesse: 1.4 + (i % 3) * 0.5, saat: i + 3 }); const a = i * 2.4, r = 55 + (i * 17) % 70; w.position.copy(G(Math.cos(a) * r, 130 + (i * 23) % 70, Math.sin(a) * r)); Wt.scene.add(w); wolken.push(w); }
@@ -95,7 +100,7 @@ const fallY = (t) => 250 - Math.max(0, t - Z[10]) ** 2 * 5;
 const fallen = (t) => { ich.visible = true; ich.position.copy(G(1.5, fallY(t), 2)); ich.rotation.set(0.5, 0, 0); Fg.pose(ich, { ges: "schreien", armL: 2.6 + 0.3 * Math.sin(t * 14), armR: 2.6 - 0.3 * Math.sin(t * 14), armLz: 0.8, armRz: -0.8 }); };
 sh(E[10] + 0.1, (t, q) => { tag(); fallen(t); const k = Fg.kopfPos(ich); kamera.fahrt(q, k.clone().add(V(4, -9, 6)), k.clone().add(V(3, -8, 5)), k, k, 58); licht(1.6, "#fff4e0", 1.0, "#ffffff"); wisch(t, 10); });
 // 11–12 Handy: Liefer-App, Trampolin, Express 30 Sekunden
-const app = (t) => Al.handySeite((x, w, h) => { x.fillStyle = "#1e2630"; x.fillRect(0, 0, w, h); x.fillStyle = "#f26a1a"; x.fillRect(0, 0, w, 190); x.fillStyle = "#ffffff"; x.font = "900 70px 'Inter Display', sans-serif"; x.textAlign = "center"; x.fillText("LIEFER-APP", w / 2, 125);
+const app = (t) => Al.handySeite((x, w, h) => { x.fillStyle = "#1e2630"; x.fillRect(0, 0, w, h); x.fillStyle = "#ff8000"; x.fillRect(0, 0, w, 250); x.save(); x.translate(30, 25); LOGO.lieferando(x, 200, 200, { hintergrund: false, schrift: false }); x.restore(); x.fillStyle = "#ffffff"; x.font = "900 88px 'Inter Display', sans-serif"; x.textAlign = "left"; x.textBaseline = "middle"; x.fillText("Lieferando", 240, 128); x.textBaseline = "alphabetic"; x.textAlign = "center";
   x.fillStyle = "#2a8ae8"; x.beginPath(); x.ellipse(w / 2, 470, 210, 60, 0, 0, 7); x.lineWidth = 34; x.strokeStyle = "#2a8ae8"; x.stroke(); x.fillStyle = "#1a1a1e"; x.beginPath(); x.ellipse(w / 2, 470, 190, 48, 0, 0, 7); x.fill();
   x.fillStyle = "#ffffff"; x.font = "900 66px 'Inter Display', sans-serif"; x.fillText("TRAMPOLIN", w / 2, 680); x.fillStyle = "#ff6a4a"; x.font = "900 56px 'Inter Display', sans-serif"; x.fillText("EXPRESS: 30 SEK", w / 2, 780);
   x.fillStyle = "#2ab04a"; x.beginPath(); x.roundRect(80, 880, w - 160, 150, 40); x.fill(); x.fillStyle = "#ffffff"; x.font = "900 70px 'Inter Display', sans-serif"; x.fillText("BESTELLEN", w / 2, 980); }, "app");
