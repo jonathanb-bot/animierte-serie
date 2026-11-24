@@ -139,6 +139,10 @@ Aus dem Vorbild-Video übernommen (nur die Mittel, nie Inhalte). Beispiel für a
 | `raumlicht(R)` | ein Licht für den Raum, in dem gerade gefilmt wird | pro Einstellung aufrufen, Lichtstärke dazu `licht(0.6, …)` |
 | `regenbogen`, `ballonsSetzen(t, an, {x, z, t0})` | Feier-Effekte | – |
 
+## Horrorfiguren (`horror.js`, 24.11., Issue #43)
+
+52 fertige Skins bekannter Horrorfiguren (The Nun, Siren Head, Slender Man, Michael Myers, Pennywise, Huggy Wuggy, FNAF …): `horror("id")`. Liste mit ids und Merkmalen: `vorlagen/horrorfiguren.md`. Menschliche Figuren sind Fg-Figuren (Fg.pose wirkt), dazu `userData.waffe`, Slender Man `userData.tentakel`, Siren Head `userData.sirenen`.
+
 ## Marken-Logos (`logos.js`, 24.11., Issue #42)
 
 `LOGO.nasa(x, w, h)`, `LOGO.lieferando(x, w, h, {hintergrund, schrift})` zeichnen das Logo in einen Canvas (z. B. `leinwand.userData.zeichne`, `handySeite`). `logoTextur(name)` und `logoAufkleber(name, breite, hoehe)` für Raketen, Boxen, Schilder. Neue Marken hier ergänzen, möglichst detailgetreu.

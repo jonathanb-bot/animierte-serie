@@ -7,6 +7,7 @@ import * as Ws from "./wesen.js";
 import * as Rq from "./requisiten.js";
 import * as Al from "./alltag.js";
 import * as O from "./objekte.js";
+import * as H from "./horror.js";
 const { THREE, cam, composer, U, scene } = Wt;
 const V = (x, y, z) => new THREE.Vector3(x, y, z);
 await document.fonts.load('900 78px "Inter Display"');
@@ -54,6 +55,7 @@ const GESICHTER = ["froh", "lachen", "reden", "schreien", "angst", "idee", "erns
 
 // ---------- Einträge: name → { gruppe, zeige(t) } ----------
 const E = {};
+for (const id of H.HORROR_IDS) { let obj = null; E["horror-" + id] = { gruppe: "Horrorfiguren (horror.js)", zeige: () => { obj = obj || H.horror(id); obj.visible = true; if (obj.userData.koerper) Fg.pose(obj, { ges: "froh" }); imStudio(obj, { dreh: -0.35, hoehe: 0.25, rand: 1.15 }); } }; }
 for (const [n, bau] of Object.entries(O.ALLE)) { let obj = null; E["objekt-" + n] = { gruppe: "Objekte (objekte.js)", zeige: () => { obj = obj || bau(); imStudio(obj); } }; }
 for (const n of Object.keys(F)) E["figur-" + n] = { gruppe: "Figuren", zeige: () => { halter.clear(); const f = FIG[n]; f.visible = true; f.position.copy(STUDIO); f.rotation.set(0, -0.35, 0); Fg.pose(f, { armR: 0.3, ges: "froh" });
   const h = 4.3 * f.scale.y; blick(STUDIO.clone().add(V(-3.4 * h / 4, h * 0.66, 11 * h / 4)), STUDIO.clone().add(V(0, h * 0.56, 0))); studioLicht.intensity = 1.2; licht(1.5, "#fff0e0", STUDIO.clone().add(V(0, h * 0.5, 0))); } };
