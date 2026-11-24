@@ -287,11 +287,11 @@ def bauen(drehbuch: str, nur_stimme=False, drone=False, stimme="edge", anfragen=
         if f.stem not in gueltig:
             f.unlink()
 
-    # Erzählstimme auf die Referenz aus „24. Stock“ angleichen (Gemini schwankt in der Tonhöhe).
-    # Nur für Orus: andere Stimmen (z. B. „Puck“ bei „Deine Welt“, 14.11.) haben ihre eigene Tonlage und würden sonst verzerrt.
+    # Issue #41 (Jonathan 24.11., erneut bekräftigt): die Stimme wird NIE gepitcht – sie bleibt auf ihrer natürlichen Höhe.
+    # Früher wurde Orus hier automatisch auf 118 Hz verschoben; das ist abgeschaltet. Nur messen und ins Log schreiben.
     if stimme.startswith("gemini") and stimme.split(":", 1)[-1] in ("gemini", "Orus"):
         from .angleichen import angleichen
-        angleichen(audio_dir, log=log)
+        angleichen(audio_dir, nur_messen=True, log=log)
 
     # 2) Zeitachse – identisch zu render.mjs
     t = 0.0

@@ -109,10 +109,8 @@ def zusammen(ordner=".", extra=None, yt=False, ohne=None, ziel=88.9, tempo=None,
     ordner = Path(ordner); extra = {k: min(EXTRA_MAX, v) for k, v in (extra or {}).items()}
     quelle = ordner / "stimme.wav"; p = json.load(open(ordner / "plan.json"))
     if yt:
-        tempo = tempo or float(os.environ.get("TEMPO", "1.0"))   # 24.11. abends: Stimme nicht schneller machen, lieber Zeilen weglassen
-        with tempfile.TemporaryDirectory() as d:
-            subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(quelle), "-af", f"rubberband=tempo={tempo}:pitchq=quality", d + "/t.wav"], check=True)
-            x, sr = sf.read(d + "/t.wav", dtype="float32")
+        tempo = 1.0   # Issue #41 (Jonathan 24.11.): Stimme nie bearbeiten – kein Tempo, keine Tonhöhe; für YouTube lieber Zeilen weglassen
+        x, sr = sf.read(str(quelle), dtype="float32")
         for z in p["zeilen"]:
             z["start"] /= tempo; z["dauer"] /= tempo; z["woerter"] = [[w[0] / tempo, w[1] / tempo, w[2]] for w in z["woerter"]]
     else:

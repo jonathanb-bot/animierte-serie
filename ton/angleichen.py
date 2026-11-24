@@ -66,6 +66,8 @@ def angleichen(ordner: Path, nur_messen=False, log=print) -> float:
     ist = float(np.median(werte))
     ht = 12 * np.log2(ZIEL_HZ / ist)
     log(f"{ordner}: {len(dateien)} Dateien, Grundton {ist:.0f} Hz → Ziel {ZIEL_HZ:.0f} Hz ({ht:+.1f} Halbtöne)")
+    # Issue #41 (Jonathan 24.11.): Stimme nie pitchen – dieses Werkzeug misst nur noch, es verändert keine Datei mehr.
+    return ist
     if nur_messen or abs(ht) < TOLERANZ_HT:
         return ist
     faktor = ZIEL_HZ / ist
