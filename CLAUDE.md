@@ -1,5 +1,7 @@
 # Hinweise für Claude
 
+> **NEUER DEUTSCHER YOUTUBE-KANAL (Jonathan 24.11.): `storys4youytube`** im 2. Zernio-Konto, bewusster Neustart („Refresh“). Der alte Kanal `sto.rys4you` ist absichtlich nicht mehr verbunden. Alle neuen deutschen YouTube-Videos (Blockstadt, Dorf, Querformat) gehen auf den neuen Kanal.
+
 > **BLOCKSTADT-SERIE auf den deutschen Kanälen (Jonathan 22./23.11.):** Ab 23.11. jeden Tag 1 Folge (TikTok + Instagram volle Länge, YouTube ≤ 89 s), Mitmach-Frage A/B/C am Ende, die nächste Folge setzt den Top-Kommentar um. Deutsche Nischen-Kurzvideos pausieren ab 24.11., englische Nischen-Folgen und Querformat laufen weiter. Werkzeug und Regeln: `block/README.md`, Lauf `taeglich/laeufe/blockstadt.md`. Kein Kamera-Wackeln, kein Flackern, Musik passend zur Stimmung, Stimme Gemini „Puck“ (Kinderstimme, kurze Abschnitte, ohne Radio-Kette). **Stimme nie bearbeiten (Issue #41, 24.11., erneut bekräftigt – gilt für ALLE Serien und Sprachen):** nie pitchen, keine Tonhöhe, kein Kompressor/EQ/Tempo/Begrenzer, kein loudnorm – nur Musik und Geräusche anpassen, Kodieren mit `block/lautheit.py`.
 
 > **HORROR: BLUTROT STILISIERT UND BEKANNTE HORRORFIGUREN ERLAUBT (Jonathan 24.11., Issue #43):** rote Spritzer/Lachen im Flat-Stil, erkennbar aber unrealistisch, keine realistischen Wunden; Figuren wie The Nun, Siren Head, Slender Man dürfen vorkommen. Ersetzt „Blut höchstens angedeutet“ und „nur eigene Wesen“.
