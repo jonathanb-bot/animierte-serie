@@ -182,7 +182,7 @@ function sCap(ts) { const g = ctx.createLinearGradient(0, 0, 0, H); g.addColorSt
   const sp = ctx.createRadialGradient(W / 2, 820, 40, W / 2, 820, 700); sp.addColorStop(0, "rgba(255,236,200,0.16)"); sp.addColorStop(1, "rgba(255,236,200,0)"); ctx.fillStyle = sp; ctx.fillRect(0, 0, W, H);
   kreis(104, 230, 54, "rgba(120,120,128,0.32)"); ikon("x", 104, 230, 44, C.l1); kreis(W - 104, 230, 54, "rgba(120,120,128,0.32)"); ikon("teilen", W - 104, 226, 44, C.l1);
   rr(W / 2 - 210, 186, 420, 88, 44); ctx.fillStyle = "rgba(120,120,128,0.32)"; ctx.fill(); rr(W / 2 - 205, 191, 205, 78, 39); ctx.fillStyle = "rgba(255,255,255,0.9)"; ctx.fill(); text("Objekt", W / 2 - 102, 243, 36, "#000", 600, 999, 1, "center"); text("AR", W / 2 + 102, 243, 36, C.l1, 600, 999, 1, "center");
-  const omega = Math.PI * 2 * 3.0; capZeichnen((ts - 17.95) * omega, omega, W / 2, 790 + Math.sin(ts * 1.8) * 5);
+  const omega = Math.PI * 2 * 2.4; capZeichnen((ts - 17.95) * omega, omega, W / 2, 790 + Math.sin(ts * 1.8) * 5);
   karteRR(44, 1300, W - 88, 520, 56, "rgba(36,36,40,0.92)"); text("Kappe aus GG Canvas", 104, 1390, 36, C.l2, 500); const t1 = ts < 18.6 ? "Gucci-Kappe" : "", t2 = tipp(ts, "l2");
   if (t2) zeile(t2, 104, 1500, 76, W - 208); else zeile(t1, 104, 1500, 76, W - 208); }
 // ---------- 5) „Wo ist?“ mit genauer Karte ----------
