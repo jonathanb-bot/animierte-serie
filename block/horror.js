@@ -93,7 +93,7 @@ const sirenHead = () => { const g = new THREE.Group(), haut = mat("#7a4a2e", 0.9
   an(g, zyl(0.32, 0.4, 6.5, mat("#5a5048", 0.6, 0.3), 10), 0, 29, 0);   // Mast-Hals
   const sirene = (s) => { const k = new THREE.Group(); k.position.set(s * 0.9, 32, 0); g.add(k); const t = an(k, new THREE.Mesh(new THREE.CylinderGeometry(0.4, 1.3, 2.2, 16, 1, true), mat("#8a8278", 0.5, 0.5)), 0, 0, 0); t.rotation.z = s * Math.PI / 2; t.material.side = THREE.DoubleSide;
     const gi = an(k, new THREE.Mesh(new THREE.CircleGeometry(1.25, 16), mat("#1a1612", 0.8)), s * 1.1, 0, 0); gi.rotation.y = s * Math.PI / 2; an(k, bx(0.5, 0.5, 0.5, mat("#5a5048", 0.6, 0.3)), -s * 0.9, 0, 0); return k; };
-  g.userData.sirenen = [sirene(-1), sirene(1)]; g.scale.setScalar(0.38); return merk(g, "sirenhead", "Siren Head"); };
+  g.userData.sirenen = [sirene(-1), sirene(1)]; g.scale.setScalar(0.8); /* ~12 m echte Größe (1 m = 2,3 Einheiten) */ return merk(g, "sirenhead", "Siren Head"); };
 const longHorse = () => { const g = new THREE.Group(), haut = mat("#3a2a24", 0.9), knochen = mat("#e8e0d0", 0.6);
   for (const [x, z] of [[-1, -2.5], [1, -2.5], [-1, 2.5], [1, 2.5]]) an(g, zyl(0.18, 0.12, 9, haut, 8), x, 4.5, z);
   an(g, rb(2.4, 2, 6.5, 0.8, haut), 0, 9.6, 0); for (let i = 0; i < 26; i++) { const s = an(g, kugel(0.42 - i * 0.006, haut, 10), 0, 10.4 + i * 0.85, 2.8 + Math.sin(i * 0.12) * 1.2); }

@@ -9,6 +9,7 @@ import * as Al from "./alltag.js";
 import * as O from "./objekte.js";
 import * as H from "./horror.js";
 import * as HW from "./horrorwelt.js";
+import * as HR from "./horror_real.js";
 const { THREE, cam, composer, U, scene } = Wt;
 const V = (x, y, z) => new THREE.Vector3(x, y, z);
 await document.fonts.load('900 78px "Inter Display"');
@@ -56,6 +57,10 @@ const GESICHTER = ["froh", "lachen", "reden", "schreien", "angst", "idee", "erns
 
 // ---------- Einträge: name → { gruppe, zeige(t) } ----------
 const E = {};
+for (const id of Object.keys(HR.REAL)) { let obj = null; E["real-" + id] = { gruppe: "Horrorfiguren realistisch (horror_real.js)", zeige: () => { obj = obj || HR.real(id); HR.rpose(obj, { armR: 0.3, armL: 0.1 }); imStudio(obj, { dreh: -0.3, hoehe: 0.2, rand: 1.12 }); } }; }
+for (const id of Object.keys(HR.REAL)) { let obj = null; E["realkopf-" + id] = { gruppe: "Horrorfiguren realistisch (horror_real.js)", zeige: () => { halter.clear(); obj = obj || HR.real(id); halter.add(obj); obj.position.set(0, 0, 0); HR.rpose(obj, {}); halter.updateMatrixWorld(true);
+  const k = new THREE.Vector3(); obj.userData.j.kopf.getWorldPosition(k); const r = obj.userData.j.kopfR; const z = blick(k.clone().add(V(r * 1.2, r * 0.4, r * 5.5)), k, 40); licht(1.2, "#ffe8d0", z); } }; }
+E["real-vergleich"] = { gruppe: "Horrorfiguren realistisch (horror_real.js)", zeige: () => { halter.clear(); const g = new THREE.Group(); let x = 0; for (const id of ["michaelmyers", "nun", "pennywise", "jason", "slenderman", "huggywuggy"]) { const f = HR.real(id); HR.rpose(f, {}); f.position.set(x, 0, 0); g.add(f); x += id === "huggywuggy" ? 0 : 3.2; if (id === "slenderman") x += 4; } const ich = Fg.figur({ haut: "#f0c8a0", hemd: "#e8a020", hose: "#2a3a5a", haare: "#5a3418", frisur: "strubbel", kapuze: true, skala: 0.78, struktur: true }); ich.position.set(-3.2, 0, 0); g.add(ich); imStudio(g, { dreh: 0, hoehe: 0.12, rand: 1.05 }); } };
 for (const id of H.HORROR_IDS) { let obj = null; E["horror-" + id] = { gruppe: "Horrorfiguren (horror.js)", zeige: () => { obj = obj || H.horror(id); obj.visible = true; if (obj.userData.koerper) Fg.pose(obj, { ges: "froh" }); imStudio(obj, { dreh: -0.35, hoehe: 0.25, rand: 1.15 }); } }; }
 for (const [n, bau] of Object.entries(O.ALLE)) { let obj = null; E["objekt-" + n] = { gruppe: "Objekte (objekte.js)", zeige: () => { obj = obj || bau(); imStudio(obj); } }; }
 for (const n of Object.keys(F)) E["figur-" + n] = { gruppe: "Figuren", zeige: () => { halter.clear(); const f = FIG[n]; f.visible = true; f.position.copy(STUDIO); f.rotation.set(0, -0.35, 0); Fg.pose(f, { armR: 0.3, ges: "froh" });
