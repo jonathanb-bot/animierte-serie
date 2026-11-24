@@ -1282,6 +1282,23 @@
     "lufs": -14.5,
     "dauer_s": 85.75
    }
+  },
+  {
+   "id": "block-v03",
+   "datum": "2026-11-24",
+   "titel": "In meiner Stadt bekommst du für jede gute Tat einen Stern",
+   "emoji": "⭐",
+   "serie": "Blockstadt-Vorrat (eigenständig, Story-Richtung „Herz“)",
+   "art": "blockstadt",
+   "stimme": "Puck (Kinderstimme, Gemini, Storytime-Anweisung)",
+   "thema": "Sterne für gute Taten im Glas am Fenster; der Hausmeister hat ein leeres Glas, alle halten ihn für geizig; falsche Beschuldigung, Zusammenbruch, Oma erzählt: er verschenkt jede Nacht heimlich seine Sterne – mein erster Stern war von ihm. Frage: A Entschuldigung, B Danke, C meine 12 Sterne.",
+   "kulisse": "Buntdorf mit Schule, Kinderzimmer, Stube, Klasse, Krankenhaus, Buntdorf bei Nacht",
+   "fassung": "voll (reicht auch für YouTube)",
+   "status": "vorrat, noch nicht eingeplant",
+   "video": "https://raw.githubusercontent.com/jonathanb-bot/animierte-serie/youtube-upload/taeglich/block-v03.mp4",
+   "lufs": -15.4,
+   "dauer_s": 73.93,
+   "sprachpruefung": 0.915
   }
  ]
 }
