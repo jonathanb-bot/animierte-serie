@@ -163,7 +163,7 @@ class Ton:
     def uhr(self, t0, d, g=0.08):
         for i in range(int(d)): self.add(self.f, t0 + i, self.klick(1.0), g)
     def fx(self, t0, y, g=1.0): self.add(self.f, t0, y, g)
-    def jumpscare(self, t0, g=1.0, halten=0.0):
+    def jumpscare(self, t0, g=1.0, halten=0.0, art="hell"):
         """Jumpscare-Schrei (Jonathan 24.11.: laut und gruselig, sehr hochwertig). Schichten: harter Anschlag, dissonantes Streicher-Kreischen
         mit Abwärtsrutsch, Schrei mit Vokal-Formanten, Metallschlag, Sub-Schlag, kurzer Hall. Eigene, ungedeckelte Spur – nur in Sprechpausen.
         Davor wird der Hintergrund 0,6 s fast still (Stille macht den Schreck). halten > 0: Schrei bleibt so viele Sekunden laut
@@ -183,6 +183,18 @@ class Ton:
         metall = sum(np.sin(2 * np.pi * f * t) * np.exp(-t * (3 + i)) for i, f in enumerate((317, 529, 863, 1397, 2251))) / 5
         sub = np.sin(2 * np.pi * (55 * np.exp(-t * 1.8) + 30) * t) * np.exp(-t * 3.5)
         y = 0.55 * anschlag + 0.8 * streicher + 0.75 * schrei + 0.35 * metall + 1.0 * sub
+        if art == "dunkel":
+            # Jonathan 24.11. (Vorbild-TikTok): tief, dröhnend, dicht – viel Bass, Brüllen im Mittenbereich, kaum Höhen, gesättigt
+            h = huelle(1.4); vib = 1 + 0.03 * np.sin(2 * np.pi * 5.5 * t) + 0.02 * band(rng.standard_normal(len(t)), 3, 25) * 8
+            f0 = (430 * np.exp(-t * 0.9) + 250) * vib; ph = 2 * np.pi * np.cumsum(f0) / SR
+            stimme = sum(np.sin(k * ph) / k ** 0.9 for k in range(1, 14)) * (1 + 0.6 * np.sin(2 * np.pi * 31 * t))      # Säge + Knurren (31 Hz)
+            bruell = sum(band(stimme, fc - bw, fc + bw) * a2 for fc, bw, a2 in ((650, 200, 1.0), (1100, 250, 1.1), (1450, 250, 0.8), (2400, 400, 0.45), (380, 120, 0.6)))
+            bruell = bruell / (np.abs(bruell).max() + 1e-9) + 0.45 * band(rau, 300, 2200) / (np.abs(band(rau, 300, 2200)).max() + 1e-9)
+            rumpeln = band(rng.standard_normal(len(t)), 25, 110); rumpeln /= np.abs(rumpeln).max() + 1e-9
+            tief = sum(np.sin(2 * np.pi * f1 * np.cumsum(rutsch) / SR) for f1 in (196.0, 207.7, 233.1, 246.9)) / 4 * trem
+            schlag = np.sin(2 * np.pi * (70 * np.exp(-t * 4) + 32) * t) * np.exp(-t * 2.2) + band(rng.standard_normal(len(t)), 60, 1500) * np.exp(-t * 25) * 0.8
+            y = (1.2 * bruell + 0.55 * rumpeln + 0.45 * tief) * h * (1 - np.exp(-t * 250)) + 1.3 * schlag
+            y = np.tanh(2.6 * y / (np.abs(y).max() + 1e-9)); y = band(y, 20, 6500)                                    # Sättigung = dicht wie im Vorbild
         ir = rng.standard_normal(int(1.1 * SR)) * np.exp(-np.arange(int(1.1 * SR)) / SR * 5); hall = np.convolve(y, ir)[:len(y)] / 40
         y = y + 0.35 * hall; y = y / np.abs(y).max()
         self.add(self.js, t0, y, g)
