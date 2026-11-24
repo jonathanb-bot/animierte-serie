@@ -218,6 +218,7 @@ def streuen(z: dt.datetime, frueh: dt.datetime | None = None) -> dt.datetime:
 
 
 # Englische Konten (wie staffel_englisch.py): TikTok @storys4you_eng (2. Zernio-Konto), Instagram/YouTube im 3. Konto
+YT_KONTO = None   # deutsches YouTube-Konto für neue Folgen (None = Standard: 2. Zernio-Konto)
 KONTEN_EN = {"tiktok": "storys4you_eng", "instagram": "zernio:3", "youtube": "zernio:3"}
 
 
@@ -241,10 +242,12 @@ def einplanen(vid: str, eintrag: dict, zeit: dt.datetime, yt_zeit: dt.datetime, 
         if pid in ids:
             print(f"{pid} steht schon im Plan – übersprungen")
             continue
-        konto = KONTEN_EN[platform] if englisch else None
+        konto = KONTEN_EN[platform] if englisch else (YT_KONTO if platform == "youtube" and YT_KONTO else None)
         z = streuen(freie_zeit(plan["posts"], loeschen, platform, z, konto))
         post = {"id": pid, "platform": platform, "zeit": z.strftime("%Y-%m-%dT%H:%M:00"),
                 "serie": "taeglich-en" if englisch else "taeglich", "video": url}
+        if konto and not englisch:
+            post["konto"] = konto   # eigener YouTube-Kanal (--yt-konto, Jonathan 24.11.)
         if englisch:
             post["konto"] = konto
             if platform == "youtube":
@@ -289,9 +292,12 @@ def main(argv=None) -> int:
     ap.add_argument("--insta-zeit", help="Instagram zu einer eigenen Zeit (Standard: wie --zeit)")
     ap.add_argument("--max-dauer", type=float, default=MAX_DAUER,
                     help="Höchstdauer in s (Standard 89; Blockstadt-Test 23.11.: TikTok/Instagram dürfen länger sein, YouTube nicht)")
+    ap.add_argument("--yt-konto", help="YouTube auf diesen Kanal (Zernio-Benutzername aus posten/konten.txt oder zernio:N), z. B. der neue Kanal ab 25.11.")
     ap.add_argument("--englisch", action="store_true",
                     help="englische Fassung: Video ausgabe/taeglich-<id>-en.mp4, Texte aus dem Eintrag → en, englische Konten")
     a = ap.parse_args(argv)
+    global YT_KONTO
+    YT_KONTO = a.yt_konto or os.environ.get("YT_KONTO") or None
 
     verlauf = json.loads(VERLAUF.read_text(encoding="utf-8"))
     eintrag = next((e for e in verlauf["videos"] if e["id"] == a.id), None)

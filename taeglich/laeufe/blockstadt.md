@@ -134,10 +134,10 @@ Fehlt für die Geschichte ein Element: es in der Bibliothek bauen (Regeln im Ski
    - `FOLGE=folge-NN node block/mitten.cjs alle`, als Kontaktbogen ansehen.
    - Prüfen: keine Kamera in Objekten, nichts verdeckt Gesichter, Karten verdecken nichts Wichtiges.
    - Korrigieren, bis alles sauber ist. Danach mit `PLAN=plan_yt.json` noch einmal.
-8. **Rendern:** `block/alles_rendern.sh <Bilder voll> <Bilder yt>` (anpassen auf `FOLGE`). 60 fps, etwa 1,7 Bilder pro Sekunde mit 3 Teilen.
+8. **Rendern:** `SKALA=2 block/alles_rendern.sh <Bilder voll> <Bilder yt>` (anpassen auf `FOLGE`). **Ab 25.11. immer `SKALA=2`** (rendert 1440×2560, Qualitätstest 24.11.: deutlich schärfer als 720p, nach TikTok fast so gut wie 1440p mit 25 Mbit/s). 60 fps, dauert etwa doppelt so lange wie 720p.
 9. **Ton:** `tonspur.py` der Folge mit `tonbib.Ton` (Musik nach Stimmung, Geräusche, Karten-Töne) und `T.mischen()` ohne `musik_laut` (Ausgabe „Abstand Stimme–Hintergrund“ muss ≈ 12 LU sein), für YouTube mit `PLAN=plan_yt.json STIMME=stimme_yt.wav MIX=mix_yt.wav`.
 10. **Kodieren und prüfen:**
-    - Unter 100 MB: `-crf 22 -maxrate 7M -bufsize 14M`, Ton −14 LUFS.
+    - **1080×1920, unter 100 MB** (GitHub-Grenze): `-vf scale=1080:1920:flags=lanczos -c:v libx264 -preset slow -crf 18 -maxrate <R> -bufsize <2R> -pix_fmt yuv420p`, dabei R = 8M bis 90 s, darüber R = 760 / Dauer in s (z. B. 110 s → 6.9M). Mehr Bitrate bringt nach TikTok nichts (Test 24.11.). Ton mit `block/lautheit.py` auf −14 LUFS, die Stimme bleibt unbearbeitet (Issue #41).
     - Kontaktbogen im Halbsekunden-Abstand ansehen.
     - Spracherkennung über die Mischung: Jede Zeile muss erkennbar sein. Werden Wörter verschluckt, Geräusche verschieben oder leiser machen.
 11. **Veröffentlichen:**
@@ -146,7 +146,10 @@ Fehlt für die Geschichte ein Element: es in der Bibliothek bauen (Regeln im Ski
     - Dann:
       ```
       TAEGLICH_TRAILER=<Attribution> python taeglich/veroeffentlichen.py block-bNN --max-dauer 120 --plattformen tiktok,instagram --insta-zeit <heute>T12:00 --zeit <heute>T19:00
-      TAEGLICH_TRAILER=<Attribution> python taeglich/veroeffentlichen.py block-bNNk --plattformen youtube --zeit <heute>T19:00 --yt-zeit <heute>T17:30
+      TAEGLICH_TRAILER=<Attribution> python taeglich/veroeffentlichen.py block-bNNk --plattformen youtube --zeit <heute>T19:00 --yt-zeit <heute>T17:30 --yt-konto <neuer Kanal>
+      ```
+      **Neuer YouTube-Kanal ab 25.11. (Jonathan 24.11.):** Die neuen Folgen gehen auf den neuen Kanal. Den Benutzernamen aus `posten/konten.txt` auf `main` nehmen (dort erscheint er, sobald Jonathan ihn in Zernio verbunden hat und der Workflow „Posts einplanen“ gelaufen ist). Ist er noch nicht da, YouTube **nicht** auf den alten Kanal planen, sondern Jonathan Bescheid geben.
+      ```
       ```
     - Im Log von „Posts einplanen“ prüfen, dass alle Posts mit ✓ eingeplant sind.
 12. **Sichern:** Alles committen und auf `taeglich` pushen, mit `[skip ci]` und den Attributionszeilen.
