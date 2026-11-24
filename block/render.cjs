@@ -13,7 +13,7 @@ const von = Number(process.env.VON || 0), bis = process.env.BIS ? Number(process
   const page = await browser.newPage({ viewport: { width: 720, height: 1280 }, deviceScaleFactor: Number(process.env.SKALA || 1) });
   page.on("console", m => console.log("[seite]", m.text()));
   page.on("pageerror", e => console.log("[fehler]", e.message));
-  await page.goto((fs.existsSync("szene.js") ? `http://127.0.0.1:8767/folge.html?folge=${FOLGE}&plan=${process.env.PLAN || "plan_final.json"}` : `http://127.0.0.1:8767/${FOLGE}/szene.html${process.env.PLAN ? "?plan=" + process.env.PLAN : ""}`));
+  await page.goto((fs.existsSync("szene.js") ? `http://127.0.0.1:8767/folge.html?folge=${FOLGE}&plan=${process.env.PLAN || "plan_final.json"}${process.env.SPRACHE ? "&sprache=" + process.env.SPRACHE : ""}` : `http://127.0.0.1:8767/${FOLGE}/szene.html${process.env.PLAN ? "?plan=" + process.env.PLAN : ""}`));
   await page.waitForFunction(() => window.bereit === true, null, { timeout: 120000 });
   const DAUER = await page.evaluate(() => window.DAUER);
   const n = Math.round(DAUER * FPS);

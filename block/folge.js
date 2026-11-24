@@ -24,6 +24,9 @@ export const lerpV = (a, b, q) => a.clone().lerp(b, q);
 
 // ---------- Zeitplan ----------
 export const F = {};
+// Sprache der Fassung (SPRACHE=en beim Rendern → ?sprache=en). Text im Bild: B.T({ de: "BÄCKEREI", en: "BAKERY" })
+export const SPRACHE = new URLSearchParams(location.search).get("sprache") || "de";
+export const T = (t) => (typeof t === "string" ? t : t[SPRACHE] ?? t.de);
 const sauber = w => w.replace(/[.,!?:„“"]/g, "");
 export async function laden() {
   const PLAN = new URLSearchParams(location.search).get("plan") || "plan_final.json";

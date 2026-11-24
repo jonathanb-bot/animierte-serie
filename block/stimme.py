@@ -25,6 +25,9 @@ sys.path.insert(0, str(WURZEL))
 ANWEISUNG = ("ein fröhliches Kind, das ein Storytime-Video für TikTok erzählt: hell, energiegeladen und verspielt, "
              "hörbar lächelnd, zügig und ohne lange Pausen, stark betonte Schlüsselwörter, Spannung mit hoher Stimme "
              "aufbauen und bei Pointen kurz innehalten")
+if os.environ.get("SPRACHE") == "en":   # englische Fassung (Jonathan 24.11.: zweiter englischer Post, sobald es mehr Gemini-Schlüssel gibt)
+    ANWEISUNG = ("a cheerful kid telling a TikTok storytime video: bright, energetic and playful, audibly smiling, brisk with no long pauses, "
+                 "strongly stressed key words, build suspense with a higher voice and pause briefly before punchlines")
 # Jonathans Regel bleibt: nie flüstern oder hauchen. „Gleichbleibende Lautstärke“ fällt hier weg, weil sie den Vortrag
 # flach machte; die Lautstärke gleicht danach der Kompressor an.
 VOLL = ", immer mit voller, klarer Sprechstimme, niemals flüstern oder hauchen"

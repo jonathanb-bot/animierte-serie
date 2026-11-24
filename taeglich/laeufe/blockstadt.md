@@ -153,3 +153,20 @@ Fehlt für die Geschichte ein Element: es in der Bibliothek bauen (Regeln im Ski
       ```
     - Im Log von „Posts einplanen“ prüfen, dass alle Posts mit ✓ eingeplant sind.
 12. **Sichern:** Alles committen und auf `taeglich` pushen, mit `[skip ci]` und den Attributionszeilen.
+
+## Englische Blockstadt – zweiter englischer Post (Jonathan 24.11. abends)
+**Gilt erst, wenn es mindestens einen zusätzlichen Gemini-Schlüssel gibt:** `env | grep -c "^GEMINI_API_KEY_6="` muss 1 ergeben.
+Ohne zusätzlichen Schlüssel diesen Abschnitt überspringen (sonst reicht das Kontingent nicht, Rechnung in `quer/FORMAT-3D.md`).
+Dann bekommen die englischen Konten täglich 2 Posts: das Nischen-Video (wie bisher) und die englische Blockstadt-Folge des Tages.
+- **Wann:** im selben Lauf, nachdem die deutsche Folge geplant ist. Reicht die Zeit nicht, am nächsten Tag zuerst nachholen.
+- **Text:** die Zeilen der deutschen Folge in natürliches amerikanisches Englisch übersetzen (gleiche Pointen, kurze Sätze),
+  Ich-Erzählung, Mitmach-Frage A/B/C auf Englisch. In `zeilen_en.json` im Folgen-Ordner.
+- **Text im Bild:** alle Schilder, Tafeln, Handy-Texte in der Szene mit `B.T({ de: "…", en: "…" })` schreiben (ab jetzt in jeder neuen Folge).
+  Marken und Logos bleiben gleich.
+- **Stimme:** `SPRACHE=en VERSUCHE=2` mit `stimme.erzeugen(zeilen_en, "en")` und `zusammen("en", …)` → Ordner `en/` (Puck, unbearbeitet, Issue #41).
+- **Rendern:** `SPRACHE=en SKALA=2 PLAN=en/plan_final.json ORDNER=frames_en ./rendern.sh <folge>`, YouTube-Fassung ≤ 89 s ebenso mit `en/plan_yt.json`.
+  Ton mit `tonspur.py` (PLAN/STIMME/MIX auf die englischen Dateien), kodieren wie oben, `lautheit.py`.
+- **Veröffentlichen:** Eintrag `en` in `verlauf.json` (titel, beschreibung, hashtags, tags auf Englisch), dann
+  `python taeglich/veroeffentlichen.py block-bNN --englisch --max-dauer 120 --plattformen tiktok,instagram --insta-zeit <heute>T19:00 --zeit <morgen>T03:30`
+  und `… block-bNNk --englisch --plattformen youtube --zeit <morgen>T03:30 --yt-zeit <heute>T20:30`.
+  Uhrzeiten (Berlin, ±30 min): Instagram 19:00, YouTube 20:30, TikTok 03:30 (US-Abend). So liegen sie über 2 h neben dem Nischen-Video (22:00/23:30/01:00).

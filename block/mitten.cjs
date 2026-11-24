@@ -5,7 +5,7 @@ const FOLGE = process.env.FOLGE || "folge-01"; process.chdir(path.join(__dirname
 const fs = require("fs");
 (async () => { const b = await chromium.launch({ executablePath: "/opt/pw-browsers/chromium", args: ["--use-gl=angle", "--use-angle=swiftshader", "--enable-unsafe-swiftshader", "--ignore-gpu-blocklist"] });
   const p = await b.newPage({ viewport: { width: 720, height: 1280 } }); p.on("pageerror", e => console.log("[fehler]", e.message, e.stack)); p.on("console", m => { if (!/GL Driver|404/.test(m.text())) console.log("[seite]", m.text()); });
-  await p.goto((fs.existsSync("szene.js") ? `http://127.0.0.1:8767/folge.html?folge=${FOLGE}&plan=${process.env.PLAN || "plan_final.json"}` : `http://127.0.0.1:8767/${FOLGE}/szene.html${process.env.PLAN ? "?plan=" + process.env.PLAN : ""}`)); await p.waitForFunction(() => window.bereit === true, null, { timeout: 180000 });
+  await p.goto((fs.existsSync("szene.js") ? `http://127.0.0.1:8767/folge.html?folge=${FOLGE}&plan=${process.env.PLAN || "plan_final.json"}${process.env.SPRACHE ? "&sprache=" + process.env.SPRACHE : ""}` : `http://127.0.0.1:8767/${FOLGE}/szene.html${process.env.PLAN ? "?plan=" + process.env.PLAN : ""}`)); await p.waitForFunction(() => window.bereit === true, null, { timeout: 180000 });
   const G = await p.evaluate(() => window.GRENZEN); const arg = process.argv[2];
   let zeiten; if (arg && arg !== "alle") zeiten = arg.split(",").map(Number); else zeiten = G.map((g, i) => ((i ? G[i - 1] : 0) + Math.min(g, 95.5)) / 2);
   fs.rmSync("bilder", { recursive: true, force: true }); fs.mkdirSync("bilder"); const t0 = Date.now();
