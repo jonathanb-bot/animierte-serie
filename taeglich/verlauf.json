@@ -1052,6 +1052,23 @@
     "lufs": -14.6,
     "dauer_s": 88.7
    }
+  },
+  {
+   "id": "block-v01",
+   "datum": "2026-11-24",
+   "titel": "In meiner Stadt sieht jeder, wie oft du lügst",
+   "emoji": "🔢",
+   "serie": "Blockstadt-Vorrat (eigenständig, Jonathan 23.11.)",
+   "art": "blockstadt",
+   "stimme": "Puck (Kinderstimme, Gemini, Storytime-Anweisung)",
+   "thema": "Lügen-Zahl über jedem Kopf, ich habe seit Geburt eine 0; Bürgermeister sagt auf dem Dorfplatz 'die Stadt ist sicher' und alle Zahlen springen +1 – nur meine auf 1. Frage: A Papa fragen, B Zum Bürgermeister, C Lüge selbst suchen.",
+   "kulisse": "Buntdorf (bunte Häuser, Dorfplatz)",
+   "fassung": "voll",
+   "status": "vorrat, noch nicht eingeplant",
+   "video": "https://raw.githubusercontent.com/jonathanb-bot/animierte-serie/youtube-upload/taeglich/block-v01.mp4",
+   "lufs": -14.6,
+   "dauer_s": 81.35,
+   "sprachpruefung": 0.965
   }
  ]
 }
