@@ -79,9 +79,11 @@ Ein Blick ins Tal: Hinter dem Wald liegt eine große Stadt – voller Lichter. �
 | 19 | „Was hilft gegen sie? Schreib eine Waffe in die Kommentare. Die meisten Likes kommen in dein Dorf.“ | Dorf von oben, leere Bauplätze leuchten |
 
 ## Produktion
-- Figuren: `horror("nun")` usw. (fertig, Fotostudio-Bilder in `block/katalog/horror-*.jpg`).
+- Figuren: realistisch in echter Größe mit `real("nun")` aus `block/horror_real.js` (The Nun, Slender Man, Jason, Michael Myers, Pennywise, Huggy Wuggy, Kissy Missy; weitere folgen), Siren Head aus `horror("sirenhead")` (~12 m). Blockfiguren-Fassungen bleiben in `horror.js`.
+- Kulissen: `block/horrorwelt.js` (SCHATTENTAL, KAPELLE, WALDWEG, viel Blut und Details).
+- Alt: `horror("nun")` usw. (fertig, Fotostudio-Bilder in `block/katalog/horror-*.jpg`).
 - Neu zu bauen: Glockenturm/Kapelle, roter Mond + Nebel (Bilderbuch-Nacht), Häuser-Anzeige, Uhr-Anzeige, Waffen-Baukasten (Wasserwerfer, Weihwasser-Kanone, Flutlicht, Netzwerfer, Feuer, Glocke …), stilisierte Blut-Decals (fest, flackerfrei).
-- Stimme: ernste Erzählstimme (Vorschlag Orus), unverändert, nie flüstern. Musik: tiefe Flächen, Herzschlag, Glocke – die Stimme bleibt klar darüber.
+- Stimme: düstere Gemini-Stimme nach Hörprobe (Charon/Algenib/Fenrir/Orus), unverändert (#41), nie flüstern. Musik: tiefe Flächen, Herzschlag, Glocke – die Stimme bleibt klar darüber.
 - Arbeit pro Folge nach dem Aufbau: ca. 1 h + 1,5 h Rendern.
 
 ## Offene Fragen an Jonathan

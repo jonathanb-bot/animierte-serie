@@ -75,7 +75,7 @@ let STR = null, RT = null, RW = null, GV = null, KW2 = null, BU = null;
 const K = {   // Kulissen und Effekte in der Welt (Koordinaten siehe KATALOG.md)
   "schattental-strasse": () => { HW.nacht(); const P = HW.SCHATTENTAL.pos; HW.SCHATTENTAL.licht.intensity = 30; const z = blick(P(2, 4.5, 40), P(0, 6, -60), 58); licht(0.5, "#ffb0a0", z); },
   "schattental-kapelle": () => { HW.nacht(); const P = HW.SCHATTENTAL.pos; HW.SCHATTENTAL.licht.intensity = 30; const z = blick(P(4, 5, -66), P(0, 14, -120), 60); licht(0.5, "#ffb0a0", z); },
-  "schattental-friedhof": () => { HW.nacht(); const P = HW.SCHATTENTAL.pos; HW.SCHATTENTAL.licht.intensity = 30; const z = blick(P(-9, 3.0, -91), P(4, 1.4, -100), 62); licht(0.5, "#ffb0a0", z); },
+  "schattental-friedhof": () => { HW.nacht(); const P = HW.SCHATTENTAL.pos; HW.SCHATTENTAL.licht.intensity = 30; const z = blick(P(2, 3.0, -89), P(-1, 1.4, -101), 62); licht(0.5, "#ffb0a0", z); },
   "kapelle-innen": () => { HW.nacht(); const R = HW.KAPELLE; R.licht.intensity = 60; const z = blick(R.pos(3.5, 4.5, 10), R.pos(0, 2.5, -8), 60); licht(0.4, "#ffb070", z); },
   "waldweg": () => { HW.nacht(); const P = HW.WALDWEG.pos; const z = blick(P(0.5, 3.2, 40), P(0, 3, -20), 58); licht(0.5, "#ffb0a0", z); },
   "stadt-nacht": () => { const z = blick(V(180, 150, 420), V(0, 10, 0), 55); licht(1.2, "#ffd8b0", z); },
