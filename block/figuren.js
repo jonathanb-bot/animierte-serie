@@ -69,7 +69,7 @@ export const FIGUREN = [];
 // o: haut, hemd, hose, haare, frisur ('kurz','zopf','dutt','strubbel','glatze'), helm, weste, muetze, brille, kapuze, schuhe, skala,
 //    jacke (offene Jacke über dem Hemd), brust (Zeichen/Emoji auf der Brust, brustFarbe), struktur (Stoff- und Haarstruktur, für neue Folgen),
 //    propeller (Propellermütze; true oder 4 Farben; drehen: f.userData.propeller.rotation.y = t * 12), sonnenbrille, muster { hemd, hose: streifen|karo|punkte },
-//    kragen (breiter Halskragen; true oder Farbe), krone (goldene Krone), zylinder (Zylinderhut; true oder Farbe, zylinderBand), goldkette, baby (großer Kopf; mit skala ≈ 0.45)
+//    schuhLoch (Löcher vorne in den Schuhen, Zehen schauen raus; arme Figur), kragen (breiter Halskragen; true oder Farbe), krone (goldene Krone), zylinder (Zylinderhut; true oder Farbe, zylinderBand), goldkette, baby (großer Kopf; mit skala ≈ 0.45)
 export const figur = (o) => {
   const sk = o.skala ?? 1, haut = o.haut ?? "#e8b98a";
   const f = new THREE.Group(); const hautM = plastik(haut);
@@ -116,7 +116,8 @@ export const figur = (o) => {
     const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; const b = new THREE.Mesh(new THREE.PlaneGeometry(0.75, 0.75), new THREE.MeshStandardMaterial({ map: t, transparent: true, roughness: 0.7 })); b.position.set(0, 3.1, o.weste || o.jacke ? 0.56 : 0.51); koerper.add(b); }
   if (o.schal) { const s = rb(2.0, 0.4, 1.1, 0.15, S ? strukturieren(stoff(o.schal)) : stoff(o.schal)); s.position.y = 3.85; koerper.add(s); }
   const glied = (x, y, m, hand) => { const p = new THREE.Group(); p.position.set(x, y, 0); const b = rb(0.96, hand ? 1.5 : 1.6, 0.96, 0.12, m); b.position.y = hand ? -0.7 : -0.75; p.add(b);
-    if (hand) { const hd = rb(0.96, 0.5, 0.96, 0.12, hautM); hd.position.y = -1.7; p.add(hd); } else { const s = rb(1.0, 0.42, 1.12, 0.12, plastik(o.schuhe ?? "#2a2a2e")); s.position.set(0, -1.75, 0.06); p.add(s); } return p; };
+    if (hand) { const hd = rb(0.96, 0.5, 0.96, 0.12, hautM); hd.position.y = -1.7; p.add(hd); } else { const s = rb(1.0, 0.42, 1.12, 0.12, plastik(o.schuhe ?? "#2a2a2e")); s.position.set(0, -1.75, 0.06); p.add(s);
+      if (o.schuhLoch) { const l = rb(0.36, 0.22, 0.1, 0.05, hautM); l.position.set(x > 0 ? 0.12 : -0.14, -1.74, 0.62); p.add(l); const fl = rb(0.3, 0.2, 0.06, 0.04, plastik("#8a8a7a")); fl.position.set(x > 0 ? -0.24 : 0.22, -1.62, 0.6); fl.rotation.z = 0.5; p.add(fl); } } return p; };
   const armM = o.weste ? (S ? strukturieren(plastik(o.aermel ?? o.hemd)) : plastik(o.aermel ?? o.hemd)) : hemdM;
   const armL = glied(-1.5, 3.85, armM, true), armR = glied(1.5, 3.85, armM, true); koerper.add(armL, armR);
   const hoseM = plastik(o.hose); if (S) strukturieren(hoseM); mustern(hoseM, o.muster?.hose); const beinL = glied(-0.5, 1.95, hoseM), beinR = glied(0.5, 1.95, hoseM); f.add(beinL, beinR);

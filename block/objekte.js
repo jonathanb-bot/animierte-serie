@@ -458,4 +458,39 @@ export const broetchen = ({ teller = "#ffffff", farbe = "#d8944a" } = {}) => { c
   for (const [x, z] of [[-0.18, 0.08], [0.12, -0.1], [0.25, 0.12], [-0.05, -0.2]]) an(b, kugel(0.035, mat("#f4ecd8", 0.6), 8), x, 0.49, z);
   g.add(b); g.userData.broetchen = b; return g; };
 
-export const ALLE = { reihenhaus, glasturm, baum, blumenkuebel, hecke, bank, laterne, ampel, hydrant, muelltonne, briefkasten, schild, zaun, brunnen, laden, haltestelle, fahrrad, bus, hund, katze, vogel, tisch, stuhl, sofa, stehlampe, regal, geschenk, fernseher, riesenTier, haus, schule, sportwagen, lichterkette, lehmhaus, wimpelkette, fackel, krug, palme, pyramide, glocke, thron, krone, sockel, steinwaechter, riesenWaechter, wolke, himmelshaus, bretterbude, muellberg, leiter, pool, glasaufzug, absperrung, goldvilla, goldschluessel, tellerhaus, spind, tribuene, krankenwagen, krankenbett, herzmonitor, babybett, achterbahn, torte, kinderwagen, gluehbirnenladen, limousine, liegestuhl, broetchen };
+// ---------- Sterne für gute Taten (24.11., Vorrat 03 „Das leere Glas“) ----------
+const sternGeo = (r = 0.5, tiefe = 0.18) => { const f = new THREE.Shape(); for (let i = 0; i < 10; i++) { const a = Math.PI / 2 + i * Math.PI / 5, rr = i % 2 ? r * 0.45 : r; i ? f.lineTo(Math.cos(a) * rr, Math.sin(a) * rr) : f.moveTo(Math.cos(a) * rr, Math.sin(a) * rr); }
+  const g = new THREE.ExtrudeGeometry(f, { depth: tiefe, bevelEnabled: true, bevelThickness: 0.05, bevelSize: 0.05, bevelSegments: 2 }); g.center(); return g; };
+const STERN_MAT = new THREE.MeshBasicMaterial({ color: new THREE.Color(1.0, 0.72, 0.06), toneMapped: false });
+const STERN_GLAS_MAT = new THREE.MeshStandardMaterial({ color: "#ffc21a", emissive: "#ffa000", emissiveIntensity: 0.55, roughness: 0.35, metalness: 0.2 });
+// einzelner leuchtender Stern (fliegt z. B. ins Glas); userData.halo = weicher Schein
+export const stern = ({ groesse = 1 } = {}) => { const g = new THREE.Group(); an(g, new THREE.Mesh(sternGeo(0.5), STERN_MAT));
+  const halo = an(g, new THREE.Mesh(new THREE.CircleGeometry(1.0, 32), new THREE.MeshBasicMaterial({ color: "#ffc83a", transparent: true, opacity: 0.18, depthWrite: false }))); halo.position.z = -0.12; g.userData.halo = halo; g.scale.setScalar(groesse); return g; };
+// Glas mit Sternen; userData.setze(n) zeigt n Sterne (0 … max), feste Lage je Stern (flackerfrei). brett: kleine Fensterbank darunter
+export const sternglas = ({ max = 60, brett = false, etikett = "", n = 24, sprung = false } = {}) => {
+  const g = new THREE.Group(), H = 1.5, R = 0.62, y0 = brett ? 0.16 : 0;
+  if (brett) an(g, rb(1.9, 0.16, 1.1, 0.04, mat("#f4f0e8", 0.6)), 0, 0.08, 0);
+  const glas = new THREE.MeshStandardMaterial({ color: "#cfe8ff", roughness: 0.05, metalness: 0.1, transparent: true, opacity: 0.4, depthWrite: false }), rand = mat("#eef8ff", 0.2);
+  const k = an(g, zyl(R, R * 0.92, H, glas, 28), 0, y0 + H / 2, 0); k.renderOrder = 2;
+  an(g, zyl(R * 0.98, R * 0.98, 0.04, glas, 28), 0, y0 + 0.02, 0);
+  an(g, zyl(R * 0.82, R * 0.82, 0.12, glas, 28), 0, y0 + H + 0.03, 0);
+  for (const yy of [y0 + 0.03, y0 + H - 0.02]) an(g, new THREE.Mesh(new THREE.TorusGeometry(R + 0.005, 0.03, 8, 40).rotateX(Math.PI / 2), rand), 0, yy, 0);   // helle Ränder, damit das Glas vor hellem Grund sichtbar bleibt
+  for (const a of [-0.9, -0.55]) { const gl = an(g, bx(0.06, H * 0.8, 0.02, new THREE.MeshBasicMaterial({ color: '#ffffff', transparent: true, opacity: 0.5, depthWrite: false })), Math.sin(a) * (R + 0.01), y0 + H * 0.5, Math.cos(a) * (R + 0.01)); gl.rotation.y = a; }   // Glanzstreifen
+  an(g, zyl(R * 0.86, R * 0.86, 0.22, mat("#c8784a", 0.5), 28), 0, y0 + H + 0.17, 0);                    // Korkdeckel
+  if (etikett) { const t = tex(256, 128, (x, w, h) => { x.fillStyle = "#fff8e8"; x.fillRect(0, 0, w, h); x.fillStyle = "#3a2a1a"; x.font = "900 64px 'Inter Display', sans-serif"; x.textAlign = "center"; x.textBaseline = "middle"; x.fillText(etikett, w / 2, h / 2 + 4); });
+    const e = an(g, new THREE.Mesh(new THREE.CylinderGeometry(R + 0.01, R + 0.01, 0.42, 28, 1, true, -0.8, 1.6), new THREE.MeshStandardMaterial({ map: t, roughness: 0.8 })), 0, y0 + H * 0.62, 0); e.rotation.y = Math.PI / 2 - 0.0; }
+  if (sprung) { const sm = new THREE.MeshBasicMaterial({ color: "#ffffff" }), pts = [[0.05, 0.25], [0.18, 0.5], [0.02, 0.72], [0.2, 0.95], [0.08, 1.15]];
+    for (let i = 0; i < pts.length - 1; i++) { const [a0, h0] = pts[i], [a1, h1] = pts[i + 1], l = Math.hypot((a1 - a0) * R, h1 - h0); const st = an(g, bx(0.035, l, 0.02, sm), Math.sin((a0 + a1) / 2) * (R + 0.012), y0 + (h0 + h1) / 2, Math.cos((a0 + a1) / 2) * (R + 0.012)); st.rotation.set(0, (a0 + a1) / 2, Math.atan2((a1 - a0) * R, h1 - h0) * -1); }
+    g.userData.klebeband = an(g, new THREE.Mesh(new THREE.CylinderGeometry(R + 0.02, R + 0.02, 0.18, 28, 1, true, -0.5, 1.0), new THREE.MeshStandardMaterial({ color: "#f4ecc8", roughness: 0.6, transparent: true, opacity: 0.85 })), 0, y0 + 0.7, 0); g.userData.klebeband.visible = false; }
+  const r = zufall(17), geo = sternGeo(0.12, 0.05), sterne = [];
+  for (let i = 0; i < max; i++) { const lage = Math.floor(i / 9), a = r() * Math.PI * 2, d = Math.sqrt(r()) * (R - 0.16);
+    const m = an(g, new THREE.Mesh(geo, STERN_GLAS_MAT), Math.cos(a) * d, y0 + 0.12 + lage * 0.1 + r() * 0.05, Math.sin(a) * d); m.rotation.set(r() * 3, r() * 3, r() * 3); m.visible = false; sterne.push(m); }
+  const schein = an(g, new THREE.Mesh(new THREE.SphereGeometry(R * 1.25, 20, 14), new THREE.MeshBasicMaterial({ color: "#ffd84a", transparent: true, opacity: 0, depthWrite: false })), 0, y0 + H * 0.4, 0);
+  g.userData.setze = (n) => { n = Math.max(0, Math.min(max, Math.round(n))); sterne.forEach((m, i) => m.visible = i < n); schein.material.opacity = Math.min(0.05, n * 0.002); };
+  g.userData.oben = () => g.localToWorld(new THREE.Vector3(0, y0 + H + 0.4, 0));
+  g.userData.setze(n); return g; };
+
+// Besen des Hausmeisters (Stiel entlang +y, Borsten unten); in der Hand: an handPos setzen
+export const besen = ({ stiel = "#c8864a", borsten = "#e8c860" } = {}) => { const g = new THREE.Group(); an(g, zyl(0.07, 0.07, 4.2, mat(stiel, 0.6), 10), 0, 2.4, 0);
+  an(g, rb(1.3, 0.3, 0.4, 0.08, mat("#8a5a32", 0.6)), 0, 0.42, 0); an(g, rb(1.4, 0.38, 0.36, 0.06, mat(borsten, 0.9)), 0, 0.12, 0); return g; };
+export const ALLE = { stern, sternglas, besen, reihenhaus, glasturm, baum, blumenkuebel, hecke, bank, laterne, ampel, hydrant, muelltonne, briefkasten, schild, zaun, brunnen, laden, haltestelle, fahrrad, bus, hund, katze, vogel, tisch, stuhl, sofa, stehlampe, regal, geschenk, fernseher, riesenTier, haus, schule, sportwagen, lichterkette, lehmhaus, wimpelkette, fackel, krug, palme, pyramide, glocke, thron, krone, sockel, steinwaechter, riesenWaechter, wolke, himmelshaus, bretterbude, muellberg, leiter, pool, glasaufzug, absperrung, goldvilla, goldschluessel, tellerhaus, spind, tribuene, krankenwagen, krankenbett, herzmonitor, babybett, achterbahn, torte, kinderwagen, gluehbirnenladen, limousine, liegestuhl, broetchen };
