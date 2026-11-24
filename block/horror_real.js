@@ -122,8 +122,11 @@ const jason = () => { const g = skelett({ groesse: 2.0, schulter: 0.55, haut: "#
   g.userData.horror = { id: "jason", name: "Jason Voorhees" }; return g; };
 
 const myers = () => { const g = skelett({ groesse: 1.96, schulter: 0.5, haut: "#e8d4c0", oben: stoff("#1c2636"), aermel: stoff("#1c2636"), unten: stoff("#1c2636") }); const j = g.userData.j, kr = j.kopfR;
-  gesicht(j.kopf, kr, (x, w, h) => { Z.haut(x, w, h, "#ece6dc", "rgba(60,60,70,0.35)"); x.fillStyle = "#050505"; for (const s of [-1, 1]) { x.beginPath(); x.ellipse(w / 2 + s * w * 0.14, h * 0.46, w * 0.06, h * 0.035, 0, 0, 7); x.fill(); } Z.nase(x, w, h, { y: 0.6, farbe: "rgba(0,0,0,0.25)" }); x.strokeStyle = "rgba(60,50,50,0.7)"; x.lineWidth = 4; x.beginPath(); x.moveTo(w * 0.42, h * 0.72); x.lineTo(w * 0.58, h * 0.72); x.stroke(); }, { breite: 1.6, hoehe: 1.3 });
-  const haar = an(j.kopf, kugel(kr * 1.05, stoff("#3a2a1c"), 24), 0, kr * 0.22, -kr * 0.12); haar.scale.set(0.9, 0.85, 0.98);
+  gesicht(j.kopf, kr, (x, w, h) => { Z.haut(x, w, h, "#ece6dc", "rgba(60,60,70,0.35)"); x.fillStyle = "#050505"; for (const s of [-1, 1]) { x.beginPath(); x.ellipse(w / 2 + s * w * 0.14, h * 0.46, w * 0.06, h * 0.035, 0, 0, 7); x.fill(); } Z.nase(x, w, h, { y: 0.6, farbe: "rgba(0,0,0,0.25)" }); x.strokeStyle = "rgba(60,50,50,0.7)"; x.lineWidth = 4; x.beginPath(); x.moveTo(w * 0.42, h * 0.72); x.lineTo(w * 0.58, h * 0.72); x.stroke();
+    x.strokeStyle = "rgba(120,110,100,0.35)"; x.lineWidth = 3; for (const s2 of [-1, 1]) { x.beginPath(); x.moveTo(w / 2 + s2 * w * 0.2, h * 0.5); x.quadraticCurveTo(w / 2 + s2 * w * 0.18, h * 0.65, w / 2 + s2 * w * 0.1, h * 0.8); x.stroke(); } }, { breite: 1.75, hoehe: 1.5 });
+  const haar = an(j.kopf, new THREE.Mesh(new THREE.SphereGeometry(kr * 1.07, 26, 16, 0, Math.PI * 2, 0, Math.PI * 0.45), stoff("#3a2a1c", 1)), 0, kr * 0.08, -kr * 0.06); haar.scale.set(0.92, 1.05, 1.0); haar.rotation.x = -0.2;
+  for (let i = 0; i < 9; i++) { const st = an(j.kopf, kapsel(kr * 0.1, kr * 0.35, stoff("#3a2a1c", 1), 6), Math.cos(i * 0.8) * kr * 0.7, kr * (0.55 + (i % 3) * 0.12), Math.sin(i * 0.8) * kr * 0.55 - kr * 0.1); st.rotation.set(0.9 + (i % 2) * 0.4, i, (i % 3 - 1) * 0.5); }
+  j.schaedel.scale.set(0.84, 1.1, 0.96);
   const m = new THREE.Group(); an(m, new THREE.Mesh(new THREE.CylinderGeometry(0.03, 0.03, 0.14, 8), physisch("#2a1a10")), 0, 0, 0); an(m, new THREE.Mesh(new THREE.BoxGeometry(0.008, 0.3, 0.05), physisch("#d8dce4", 0.2, { metalness: 0.9 })), 0, 0.22, 0.012); m.scale.setScalar(M); m.rotation.x = Math.PI / 2 + 0.2; m.position.y = -0.25; j.handR.add(m); g.userData.waffe = m;
   g.userData.horror = { id: "michaelmyers", name: "Michael Myers" }; return g; };
 
@@ -168,7 +171,7 @@ export const REAL = {
 
 // ---------- Dorfbewohner (Jonathan 24.11.: „die Personen noch besser darstellen“) ----------
 const haare = (j, farbe, art = "kurz") => { const kr = j.kopfR, m = stoff(farbe, 1);
-  if (art === "kurz") { const h = an(j.kopf, new THREE.Mesh(new THREE.SphereGeometry(kr * 1.06, 26, 16, 0, Math.PI * 2, 0, Math.PI * 0.42), m), 0, kr * 0.06, -kr * 0.05); h.scale.set(0.9, 1.05, 1.0); const hint = an(j.kopf, new THREE.Mesh(new THREE.SphereGeometry(kr * 1.04, 20, 12, Math.PI * 1.15, Math.PI * 0.7, 0, Math.PI * 0.72), m), 0, 0, -kr * 0.06); hint.scale.set(0.9, 1.06, 1); }
+  if (art === "kurz") { const h = an(j.kopf, new THREE.Mesh(new THREE.SphereGeometry(kr * 1.05, 26, 16, 0, Math.PI * 2, 0, Math.PI * 0.4), m), 0, kr * 0.04, -kr * 0.08); h.scale.set(0.9, 1.06, 1.0); h.rotation.x = -0.32; for (let i = 0; i < 5; i++) { const st = an(j.kopf, kapsel(kr * 0.09, kr * 0.25, m, 6), (i - 2) * kr * 0.17, kr * 0.72, kr * 0.62 - Math.abs(i - 2) * kr * 0.06); st.rotation.set(1.2, 0, (i - 2) * 0.25); } const hint = an(j.kopf, new THREE.Mesh(new THREE.SphereGeometry(kr * 1.04, 20, 12, Math.PI * 1.15, Math.PI * 0.7, 0, Math.PI * 0.72), m), 0, 0, -kr * 0.06); hint.scale.set(0.9, 1.06, 1); }
   else if (art === "lang") { const h = an(j.kopf, new THREE.Mesh(new THREE.SphereGeometry(kr * 1.07, 26, 16, 0, Math.PI * 2, 0, Math.PI * 0.45), m), 0, kr * 0.06, -kr * 0.04); h.scale.set(0.92, 1.05, 1.0); const r = an(j.kopf, new THREE.Mesh(new THREE.CylinderGeometry(kr * 0.85, kr * 0.95, kr * 2.2, 20, 1, true, Math.PI * 0.24, Math.PI * 1.52), m), 0, -kr * 0.7, -kr * 0.05); r.material.side = THREE.DoubleSide; }
   else if (art === "dutt") { const h = an(j.kopf, new THREE.Mesh(new THREE.SphereGeometry(kr * 1.05, 24, 14, 0, Math.PI * 2, 0, Math.PI * 0.45), m), 0, kr * 0.05, -kr * 0.04); h.scale.set(0.9, 1.05, 1.0); an(j.kopf, kugel(kr * 0.42, m, 14), 0, kr * 0.75, -kr * 0.7); }
   else if (art === "glatze") { for (const s2 of [-1, 1]) { const h = an(j.kopf, kugel(kr * 0.4, m, 12), s2 * kr * 0.75, kr * 0.05, -kr * 0.3); h.scale.set(0.5, 0.8, 1.2); } } };
@@ -238,3 +241,10 @@ export const ranim = (g, t, modus = "stehen", o = {}) => { const id = g.userData
 export const jumpscareBlick = (g, q) => { const j = g.userData.j, k = new THREE.Vector3(), r = j.kopfR; g.updateMatrixWorld(true); j.kopf.getWorldPosition(k);
   const vor = new THREE.Vector3(0, 0, 1).applyQuaternion(g.getWorldQuaternion(new THREE.Quaternion())); const e = 1 - Math.pow(1 - Math.min(1, q), 4);
   const abst = r * (11 - 7 * e); return { pos: k.clone().addScaledVector(vor, abst).add(new THREE.Vector3(0, r * 0.1, 0)), ziel: k.clone().add(new THREE.Vector3(0, -r * 0.1, 0)), fov: 50 - 14 * e }; };
+
+// Sprung-Jumpscare (Typ 2): Figur springt aus einem Fenster/Versteck auf die Kamera zu. q 0…1 (ca. 0,45 s).
+// Setzt Position/Drehung der Figur; Kamera bleibt fest (kein Wackeln). von, kamPos: THREE.Vector3
+export const jumpscareSprung = (g, q, von, kamPos, t = 0) => { const e = 1 - Math.pow(1 - Math.min(1, q), 3), j = g.userData.j;
+  const ziel = kamPos.clone().add(von.clone().sub(kamPos).normalize().multiplyScalar(j.kopfR * 4.2)).add(new THREE.Vector3(0, -g.userData.H * 0.86, 0));
+  g.position.lerpVectors(von, ziel, e); g.position.y += Math.sin(Math.PI * e) * g.userData.H * 0.08; g.lookAt(kamPos.x, g.position.y, kamPos.z);
+  ranim(g, t, e > 0.35 ? "schrei" : "angriff"); rpose(g, { armL: 1.7, armR: 1.7, armLz: 0.35, armRz: 0.35, ellbogen: 0.3, neig: 0.35 - e * 0.2, kopfNeig: -0.15 }); if (g.userData.gesicht?.userData.schrei) g.userData.gesicht.material.map = e > 0.35 ? g.userData.gesicht.userData.schrei : g.userData.gesicht.userData.normal; };
