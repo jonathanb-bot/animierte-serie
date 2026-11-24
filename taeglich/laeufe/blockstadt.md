@@ -146,9 +146,9 @@ Fehlt für die Geschichte ein Element: es in der Bibliothek bauen (Regeln im Ski
     - Dann:
       ```
       TAEGLICH_TRAILER=<Attribution> python taeglich/veroeffentlichen.py block-bNN --max-dauer 120 --plattformen tiktok,instagram --insta-zeit <heute>T12:00 --zeit <heute>T19:00
-      TAEGLICH_TRAILER=<Attribution> python taeglich/veroeffentlichen.py block-bNNk --plattformen youtube --zeit <heute>T19:00 --yt-zeit <heute>T17:30 --yt-konto <neuer Kanal>
+      TAEGLICH_TRAILER=<Attribution> python taeglich/veroeffentlichen.py block-bNNk --plattformen youtube --zeit <heute>T19:00 --yt-zeit <heute>T17:30 --yt-konto storys4youytube
       ```
-      **Neuer YouTube-Kanal ab 25.11. (Jonathan 24.11.):** Die neuen Folgen gehen auf den neuen Kanal. Den Benutzernamen aus `posten/konten.txt` auf `main` nehmen (dort erscheint er, sobald Jonathan ihn in Zernio verbunden hat und der Workflow „Posts einplanen“ gelaufen ist). Ist er noch nicht da, YouTube **nicht** auf den alten Kanal planen, sondern Jonathan Bescheid geben.
+      **Neuer YouTube-Kanal ab 25.11. (Jonathan 24.11.):** Die neuen Folgen gehen auf den neuen Kanal. Er heißt `storys4youytube` (2. Zernio-Konto, verbunden am 24.11.). Fehlt er in `posten/konten.txt`, YouTube nicht planen, sondern Jonathan Bescheid geben.
       ```
       ```
     - Im Log von „Posts einplanen“ prüfen, dass alle Posts mit ✓ eingeplant sind.
