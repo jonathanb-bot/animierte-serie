@@ -1143,7 +1143,17 @@
      "family",
      "story"
     ],
-    "kommentar_frage": "Would you still look in the mirror tonight?"
+    "kommentar_frage": "Would you still look in the mirror tonight?",
+    "veroeffentlicht": {
+     "video": "https://raw.githubusercontent.com/jonathanb-bot/animierte-serie/youtube-upload/taeglich/nische-n003-en.mp4",
+     "geplant": {
+      "tiktok": "2026-11-25T00:53:00",
+      "instagram": "2026-11-24T22:26:00",
+      "youtube": "2026-11-24T23:22:00"
+     },
+     "lufs": -14.6,
+     "dauer_s": 71.1
+    }
    }
   }
  ]
