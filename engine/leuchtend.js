@@ -650,6 +650,122 @@
   };
 
   // =====================================================================
+  // SPIEGEL – Badezimmer bei Nacht, Blick über deine Schulter in den großen Spiegel (n003 „Eine Sekunde zu spät“):
+  // dunkelblaue Fliesen, kühle Spiegelleuchte, Waschbecken, Zahnputzbecher, kleine LED-Uhr, im Spiegel dein Spiegelbild
+  // und dahinter die angelehnte Tür mit warmem Flurlicht. Vorne unscharf dein Hinterkopf und deine Schulter.
+  // (uhr="23:12" (LED-Uhr), heben (du hebst die rechte Hand), ab=0.8 (Sekunde, ab der du hebst), verzoegerung=1
+  //  (das Spiegelbild hebt so viel später), vor (umgekehrt: das Spiegelbild hebt zuerst, du folgst), still (niemand hebt),
+  //  spiegel_ausdruck=froh|schreck|… (nur das Spiegelbild), mama (deine Mama steht hinter dir im Spiegel, spricht ggf.),
+  //  beschlagen, schrift="TEXT" (in den beschlagenen Spiegel geschrieben), ohne_du (Spiegel ohne Hinterkopf vorne),
+  //  leer (kein Spiegelbild, z. B. als Hintergrund für gesicht/handy mit ort=spiegel), gross)
+  // =====================================================================
+  SZ.spiegel = (s, t) => {
+    const P = { wand: "#0d1a3a", wand2: "#18295a", fuge: "#08122c", glas: "#122454", glas2: "#1d3a78", licht: "#d8ecff",
+      warm: "#ffc878", keramik: "#c9d8f0", keramik2: "#8ea6d0", led: "#6fe0ff" };
+    const du = A.fig("du"), mx0 = 110, my0 = 200, mb = 860, mh = 1150, mx1 = mx0 + mb, my1 = my0 + mh;
+    // Zeitlogik fürs Handheben
+    const ab = s.ab ?? 0.8, vz = s.verzoegerung ?? 1, hebDauer = 0.45;
+    const hoch = start => clamp((t - start) / hebDauer, 0, 1);
+    const hebeDu = s.still ? 0 : s.heben || s.vor ? E.sanft(hoch(s.vor ? ab + vz : ab)) : 0;
+    const hebeSp = s.still ? 0 : s.heben || s.vor ? E.sanft(hoch(s.vor ? ab : ab + vz)) : 0;
+    // ---- Wand: dunkelblaue Fliesen mit feinen Fugen und Glanz ----
+    ctx.fillStyle = lgrad(0, -600, 0, 2300, [[0, "#050b1e"], [0.45, P.wand], [1, "#060c20"]]); ctx.fillRect(-1500, -1500, 4080, 4000);
+    for (let x = -1500; x < 2600; x += 130) line(x, -1500, x, 2600, 3, rgba(P.fuge, 0.8));
+    for (let y = -1500; y < 2600; y += 130) line(-1500, y, 2600, y, 3, rgba(P.fuge, 0.8));
+    { const r = rnd(611); for (let i = 0; i < 26; i++) { const x = -260 + Math.floor(r() * 12) * 130, y = -300 + Math.floor(r() * 18) * 130; box(x + 10, y + 10, 50, 10, 5, rgba("#6f8fd8", 0.06 + r() * 0.05)); } }
+    // Lichtkegel der Spiegelleuchte auf der Wand
+    glut(540, my0 - 70, 900, "#7fb0ff", 0.32);
+    // ---- Spiegel ----
+    box(mx0 - 22, my0 - 22, mb + 44, mh + 44, 34, "#0a1430"); box(mx0 - 22, my0 - 22, mb + 44, 8, 4, rgba(P.licht, 0.18));
+    ctx.save(); A.rr(mx0, my0, mb, mh, 24); ctx.clip();
+    // gespiegelter Raum: hellere Fliesen, angelehnte Tür mit warmem Flurlicht
+    ctx.fillStyle = lgrad(0, my0, 0, my1, [[0, P.glas2], [1, P.glas]]); ctx.fillRect(mx0, my0, mb, mh);
+    ebene("spraum", 3.5, () => {
+      for (let x = mx0 - 40; x < mx1 + 40; x += 110) line(x, my0, x, my1, 3, rgba("#0b1840", 0.7));
+      for (let y = my0 + 40; y < my1; y += 110) line(mx0, y, mx1, y, 3, rgba("#0b1840", 0.7));
+      // Tür hinten rechts, einen Spalt offen
+      const tx = 650, ty = 330, tb = 230, th = 760;
+      box(tx - 16, ty - 16, tb + 32, th + 16, 8, "#0c1838"); box(tx, ty, tb, th, 4, "#1a2c5c");
+      ctx.save(); ctx.globalCompositeOperation = "screen";
+      box(tx + 4, ty + 4, 34, th - 4, 2, rgba(P.warm, 0.85)); glut(tx + 20, ty + th * 0.55, 330, P.warm, 0.45);
+      ctx.fillStyle = lgrad(tx, 0, tx - 260, 0, [[0, rgba(P.warm, 0.28)], [1, rgba(P.warm, 0)]]); poly([[tx + 4, ty + th], [tx + 38, ty + th], [tx - 120, my1 + 40], [tx - 330, my1 + 40]]); ctx.fill();
+      ctx.restore();
+      poly([[tx + 38, ty + 4], [tx + tb - 6, ty + 30], [tx + tb - 6, ty + th - 10], [tx + 38, ty + th]], "#14244e");
+      circle(tx + 60, ty + th * 0.52, 12, "#c8a060");
+      // Handtuchhalter links
+      box(mx0 + 40, 520, 160, 14, 7, "#5a6e9a"); box(mx0 + 50, 534, 140, 230, 18, "#2f5a9a"); box(mx0 + 50, 600, 140, 14, 4, "#244a84");
+    });
+    // Figuren im Spiegel: auch die Figurenmaske des Farblooks auf den Spiegel begrenzen
+    A.mctx.save(); A.mctx.setTransform(ctx.getTransform()); A.umleiten(A.mctx, () => { A.rr(mx0, my0, mb, mh, 24); ctx.clip(); });
+    // Mama hinter dir im Spiegel
+    const mamaDa = (s.figuren || []).includes("mama");
+    if (mamaDa) { const mf = A.fig("mama"); A.figur(270, 1850, 2.0, mf, { t: t + 2, ausdruck: (s.ausdruecke || {}).mama || s.mama_ausdruck || "neutral", spricht: s._spricht && s.sprecher === "mama", blick: [1, 0], seed: 7 }); }
+    // dein Spiegelbild
+    const spX = mamaDa ? 680 : 580;
+    if (!s.leer) A.figur(spX, s.gross ? 2060 : 1830, s.gross ? 2.5 : 2.1, du, { t, ausdruck: s.spiegel_ausdruck || (s.ausdruecke || {}).du || s.ausdruck, hebR: hebeSp, blick: [0, 0], seed: 3, phase: 0 });
+    A.mctx.restore();
+    // kühles Licht von oben auf dem Spiegelbild
+    ctx.save(); ctx.globalCompositeOperation = "screen"; ctx.fillStyle = lgrad(0, my0, 0, my0 + 700, [[0, rgba("#9fc8ff", 0.22)], [1, rgba("#9fc8ff", 0)]]); ctx.fillRect(mx0, my0, mb, 700); ctx.restore();
+    // Glas: Tönung, Kantenschatten, Glanzstreifen
+    ctx.fillStyle = rgba("#0a1a4a", 0.16); ctx.fillRect(mx0, my0, mb, mh);
+    ctx.fillStyle = rgrad(540, my0 + mh / 2, mh * 0.35, mh * 0.75, [[0, rgba("#000000", 0)], [1, rgba("#020818", 0.45)]]); ctx.fillRect(mx0, my0, mb, mh);
+    ctx.save(); ctx.globalCompositeOperation = "screen";
+    for (const [x, b, a] of [[mx0 + 120, 90, 0.08], [mx0 + 260, 34, 0.06], [mx1 - 210, 60, 0.05]]) { ctx.fillStyle = rgba("#dff0ff", a); poly([[x, my0], [x + b, my0], [x + b - 260, my1], [x - 260, my1]]); ctx.fill(); }
+    ctx.restore();
+    // beschlagen + Schrift
+    if (s.beschlagen || s.schrift) {
+      ebene("spbeschlag", 12, () => { ctx.fillStyle = rgba("#c8dcff", 0.32); ctx.fillRect(mx0, my0, mb, mh); for (let i = 0; i < 18; i++) { const r = rnd(631 + i); ellipse(mx0 + r() * mb, my0 + r() * mh, 140, 70, rgba("#e6f0ff", 0.08)); } });
+      if (s.schrift) { const txt = String(s.schrift), n = txt.length, zeig = Math.max(1, Math.min(n, Math.floor(t * 3.2) + 1));
+        A.text(txt.slice(0, zeig), 540, 560, 150, rgba("#06102a", 0.82), "center", 700, "Titel", 700);
+        for (let j = 0; j < Math.min(zeig, 7); j++) { const dx = 540 - n * 40 + j * 86, dl = ((t * 40 + j * 37) % 120); box(dx, 610, 7, 24 + dl, 3, rgba("#06102a", 0.6)); } }
+    }
+    ctx.restore();
+    // Spiegelleuchte oben
+    box(mx0 + 120, my0 - 92, mb - 240, 46, 23, "#0c1636"); box(mx0 + 140, my0 - 76, mb - 280, 16, 8, P.licht);
+    glut(540, my0 - 68, 420, P.licht, 0.55); A.licht(540, my0 - 40, 640, "#bcd8ff", 0.8);
+    // ---- Waschtisch ----
+    const wy = my1 + 70;
+    box(-1500, wy, 4080, 60, 10, "#1e3060"); box(-1500, wy, 4080, 10, 5, rgba(P.licht, 0.25));
+    box(-1500, wy + 60, 4080, 900, 0, "#0a142e");
+    ellipse(540, wy + 18, 260, 34, P.keramik); ellipse(540, wy + 20, 220, 24, "#0e1a3a"); ellipse(540, wy + 16, 210, 18, rgba(P.keramik2, 0.6));
+    box(525, wy - 120, 30, 120, 12, "#9fb0d0"); box(480, wy - 130, 120, 26, 13, "#b8c8e6"); box(482, wy - 126, 50, 8, 4, rgba("#ffffff", 0.6));
+    if (s.tropft !== false) { const d = (t * 260) % 160; ellipse(490, wy - 100 + d, 6, 10, rgba("#bfe0ff", 0.8 * (1 - d / 160))); }
+    // Zahnputzbecher mit zwei Zahnbürsten
+    { const bx = 820, by = wy; box(bx - 36, by - 100, 72, 100, 14, "#3a6ab8"); box(bx - 36, by - 100, 18, 100, 8, rgba("#ffffff", 0.18));
+      ctx.save(); ctx.translate(bx - 10, by - 96); ctx.rotate(-0.25); box(-8, -150, 16, 160, 8, "#ff7a6a"); box(-12, -170, 24, 40, 8, "#f4f6ff"); ctx.restore();
+      ctx.save(); ctx.translate(bx + 12, by - 96); ctx.rotate(0.2); box(-8, -140, 16, 150, 8, "#7fd0a0"); box(-12, -158, 24, 38, 8, "#f4f6ff"); ctx.restore(); }
+    // LED-Uhr links
+    if (s.uhr) { const ux = 250, uy = wy - 64; box(ux - 110, uy - 46, 220, 92, 18, "#050a1a"); box(ux - 110, uy - 46, 220, 8, 4, rgba(P.licht, 0.15));
+      A.text(String(s.uhr), ux, uy + 2, 62, P.led, "center", 800); glut(ux, uy, 200, P.led, 0.35); }
+    // ---- Vordergrund: dein Hinterkopf und deine Schulter (unscharf), ggf. erhobene Hand ----
+    if (!s.ohne_du) {
+      const hx = 250, hy = 1680;
+      const haar = mix(du.haare || "#2a2030", P.wand, 0.45), jacke = mix(du.jacke || "#3a4a6a", P.wand, 0.55), haut = mix(du.haut || "#f2cfb3", P.wand, 0.5);
+      ebene("spvorne", 3, () => {
+        // Schultern und Kragen
+        ellipse(hx + 60, hy + 470, 470, 280, jacke); ellipse(hx + 40, hy + 215, 150, 70, shade(jacke, -0.15));
+        // Arm: von der rechten Schulter nach oben, Hand offen
+        if (hebeDu > 0) {
+          const sx = hx + 330, sy = hy + 330, ex = lerp(sx + 30, hx + 300, hebeDu), ey = lerp(sy + 60, hy - 330, hebeDu);
+          line(sx, sy, ex, ey + 110, 150, jacke); line(sx + 40, sy - 10, ex + 38, ey + 120, 12, rgba("#9fc8ff", 0.22));
+          ctx.save(); ctx.translate(ex, ey); ctx.scale(1.25, 1.25); box(-58, -70, 116, 150, 44, haut);
+          for (let k = 0; k < 4; k++) box(-52 + k * 30, -150, 24, 100, 12, haut);
+          ctx.save(); ctx.rotate(-0.6); box(-110, -10, 70, 26, 13, haut); ctx.restore();
+          box(30, -150, 22, 220, 11, rgba("#bcd8ff", 0.25)); ctx.restore();
+        }
+        // Hinterkopf mit Haaren und Ohr, Randlicht von der Spiegelleuchte
+        ellipse(hx + 205, hy + 20, 34, 56, haut);
+        ellipse(hx, hy, 215, 245, haar);
+        ctx.save(); ctx.beginPath(); ctx.ellipse(hx, hy, 215, 245, 0, 0, Math.PI * 2); ctx.clip();
+        ctx.beginPath(); ctx.ellipse(hx + 30, hy + 36, 215, 245, 0, 0, Math.PI * 2); ctx.rect(hx - 400, hy - 400, 800, 800); ctx.fillStyle = rgba("#a8ccff", 0.35); ctx.fill("evenodd");
+        for (let k = 0; k < 7; k++) line(hx - 150 + k * 46, hy - 200, hx - 170 + k * 52, hy + 120, 10, rgba("#000000", 0.12));
+        ctx.restore();
+      });
+    }
+    A._dunkel = 0;
+  };
+
+  // =====================================================================
   // WOHNRING – alternde Raumstation (s06 „Ein Zimmer weniger“): orangefarbener Planet, farbige Zimmertüren, Kuppel.
   //  ansicht=ring (Standard): gekrümmter Ring-Gang, der nach hinten nach oben wegbiegt, Türen links/rechts in Farben,
   //    Glasdecke vorne mit Planet; grau="1,4" (Türen geräumt/grau), warn="2,3" (rotes Warnlicht über Türen),

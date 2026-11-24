@@ -255,6 +255,8 @@
   A.figur = (x, y, s, f, o = {}) => {
     const t = o.t || 0, ph = o.phase ?? (x * 0.013);
     const P = pose(o.pose || (f.zombie ? "zombie" : "steht"), t, f, ph);
+    // hebR (0–1): rechte Hand stufenlos heben (neu 24.11., Kulisse „spiegel“); ohne Angabe unverändert
+    if (o.hebR) { const k = clamp(o.hebR, 0, 1); P.hr = [lerp(P.hr[0], 165, k), lerp(P.hr[1], -600, k)]; }
     let bob = Math.sin(t * 2.1 + ph) * 2.5;
     let fl = [-40, 0], fr = [40, 0], lift = [0, 0];
     if (P.gehen) {

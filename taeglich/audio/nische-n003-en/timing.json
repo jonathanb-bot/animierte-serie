@@ -1,0 +1,194 @@
+{
+ "dauer": 71.814,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "spiegel",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 4.31,
+   "emotion": "erzaehlend",
+   "text": "Your reflection moves one second too late."
+  },
+  {
+   "nr": 2,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 4.31,
+   "dauer": 4.19,
+   "emotion": "ernst",
+   "text": "Eleven twelve. You're brushing your teeth. You raise your hand."
+  },
+  {
+   "nr": 3,
+   "typ": "spiegel",
+   "kapitel": 1,
+   "start": 8.5,
+   "dauer": 4.19,
+   "emotion": "erzaehlend",
+   "text": "You count. One. Only then does it raise its hand."
+  },
+  {
+   "nr": 4,
+   "typ": "handy",
+   "kapitel": 1,
+   "start": 12.69,
+   "dauer": 4.334,
+   "emotion": "erzaehlend",
+   "text": "You open your phone camera. Same thing. One second late."
+  },
+  {
+   "nr": 5,
+   "typ": "spiegel",
+   "kapitel": 1,
+   "start": 17.024,
+   "dauer": 4.19,
+   "emotion": "erzaehlend",
+   "text": "You call your mom. Next to you in the mirror, she's perfectly normal."
+  },
+  {
+   "nr": 6,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 21.214,
+   "dauer": 1.886,
+   "emotion": "ruhig",
+   "text": "You tell yourself you're just tired."
+  },
+  {
+   "nr": 7,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 23.1,
+   "dauer": 4.79,
+   "emotion": "spannend",
+   "text": "But Mom isn't looking at the mirror. She's looking at you. And she goes pale."
+  },
+  {
+   "nr": 8,
+   "typ": "titel",
+   "kapitel": 1,
+   "start": 27.89,
+   "dauer": 2.51,
+   "emotion": "erzaehlend",
+   "text": "The mirror isn't late. You are."
+  },
+  {
+   "nr": 9,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 30.4,
+   "dauer": 3.086,
+   "emotion": "spannend",
+   "text": "\"You always answer me one second late.\""
+  },
+  {
+   "nr": 10,
+   "typ": "zimmer",
+   "kapitel": 2,
+   "start": 33.486,
+   "dauer": 4.79,
+   "emotion": "spannend",
+   "text": "Your little sister tosses you her stuffed bird. It hits you before you see it fly."
+  },
+  {
+   "nr": 11,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 38.276,
+   "dauer": 3.206,
+   "emotion": "froh",
+   "text": "You hear her laugh. Then you see her throw."
+  },
+  {
+   "nr": 12,
+   "typ": "spiegel",
+   "kapitel": 2,
+   "start": 41.482,
+   "dauer": 2.534,
+   "emotion": "erzaehlend",
+   "text": "Midnight. Now it's two seconds."
+  },
+  {
+   "nr": 13,
+   "typ": "esstisch",
+   "kapitel": 2,
+   "start": 44.016,
+   "dauer": 3.398,
+   "emotion": "erzaehlend",
+   "text": "Your mom sits down with you and holds your hand. All night."
+  },
+  {
+   "nr": 14,
+   "typ": "objekt",
+   "kapitel": 2,
+   "start": 47.414,
+   "dauer": 2.654,
+   "emotion": "erklaerend",
+   "text": "Everyone sees the world a little late, actually."
+  },
+  {
+   "nr": 15,
+   "typ": "titel",
+   "kapitel": 2,
+   "start": 50.068,
+   "dauer": 4.022,
+   "emotion": "erzaehlend",
+   "text": "Your brain waits about eighty milliseconds until everything lines up."
+  },
+  {
+   "nr": 16,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 54.09,
+   "dauer": 3.254,
+   "emotion": "ernst",
+   "text": "Yours is three seconds now. And it's growing."
+  },
+  {
+   "nr": 17,
+   "typ": "grossstadt",
+   "kapitel": 2,
+   "start": 57.344,
+   "dauer": 4.19,
+   "emotion": "erzaehlend",
+   "text": "Three in the morning. In the whole city, only your light is on."
+  },
+  {
+   "nr": 18,
+   "typ": "spiegel",
+   "kapitel": 2,
+   "start": 61.534,
+   "dauer": 3.014,
+   "emotion": "erzaehlend",
+   "text": "You stand in front of the mirror. Perfectly still."
+  },
+  {
+   "nr": 19,
+   "typ": "spiegel",
+   "kapitel": 2,
+   "start": 64.548,
+   "dauer": 3.134,
+   "emotion": "erzaehlend",
+   "text": "Your reflection raises its hand. You don't."
+  },
+  {
+   "nr": 20,
+   "typ": "spiegel",
+   "kapitel": 2,
+   "start": 67.682,
+   "dauer": 1.502,
+   "emotion": "erzaehlend",
+   "text": "And it smiles at you."
+  },
+  {
+   "nr": 21,
+   "typ": "spiegel",
+   "kapitel": 2,
+   "start": 69.184,
+   "dauer": 2.63,
+   "emotion": "erzaehlend",
+   "text": "Then your hand rises. On its own."
+  }
+ ]
+}

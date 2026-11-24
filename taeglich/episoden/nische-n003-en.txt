@@ -1,0 +1,64 @@
+# One Second Too Late
+@musik musik/nische-n003-en.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung grusel
+@vortrag lebendig
+@klang studio
+@mund zitate
+@einblenden aus
+@untertitel aus
+@qualitaet max
+@look 0.75
+@kino 0.35
+@stil leuchtend
+@palette blau
+@zeit nacht
+@sprache en
+
+== Loop 1 ==
+// 0 s – Setup 1 (hook): bathroom at night, you raise your hand, your reflection follows a second later, premise big on screen
+[spiegel du heben ab=0.6 verzoegerung=1 uhr="11:12" palette=blau zoom-rein hooktext="YOUR REFLECTION IS 1 SECOND LATE"] Your reflection moves one second too late.
+// 3 s – Setup 1: the clock keeps running, a normal night, brushing your teeth
+[gesicht du ort=spiegel leer ohne_du zeit=nacht palette=blau misstrauisch zoom-rein ein="eleven>11:12 PM>uhr" ein_y=430] Eleven twelve. You're brushing your teeth. You raise your hand.
+// 7 s – Setup 1: the test, you count – counter on screen
+[spiegel du heben ab=1.4 verzoegerung=1 uhr="11:13" palette=blau gross zoom-rein ein="One>1.0 SECONDS>uhr" ein_y=430] You count. One. Only then does it raise its hand.
+// 11 s – Big question 1: first consequence – the phone camera too
+[handy ort=spiegel leer ohne_du zeit=nacht palette=blau netz=4 akku=21 selfie selfie_text="REC · 1 SEC DELAY" zoom-rein ein="camera>THE CAMERA TOO>auge" ein_y=1500] You open your phone camera. Same thing. One second late.
+// 15 s – Big question 1: second consequence – your mom comes in, for her everything is normal
+[spiegel du mama uhr="11:16" palette=blau zoom-rein ein="mom>MOM: NORMAL>herz" ein_y=430] You call your mom. Next to you in the mirror, she's perfectly normal.
+// 19 s – Big question 1: the obvious explanation A
+[gesicht du ort=spiegel leer ohne_du zeit=nacht palette=blau muede zoom-rein] You tell yourself you're just tired.
+// 21 s – Twist 1 (setup): Mom isn't looking at the mirror – she's looking at you, and goes pale
+[gesicht mama ort=spiegel leer ohne_du zeit=nacht palette=blau schreck zoom-rein ton=hit] But Mom isn't looking at the mirror. She's looking at you. And she goes pale.
+// 26 s – Twist 1: it's not the mirror that's late – it's you (keyword YOU)
+[titel oben="Not the mirror" gross="YOU" unten="are the one who's late" farbe=#0c1838 akzent=#7fc0ff groesse=230 hud=false palette=blau zoom-rein ton=hit] The mirror isn't late. You are.
+// 29 s – Rehook: Mom's line opens the bigger question (character voice)
+[gesicht mama ort=spiegel leer ohne_du zeit=nacht palette=blau angst figurstimme=frau sprecher=mama zoom-rein] "You always answer me one second late."
+
+== Loop 2 ==
+// 32 s – Setup 2: your little sister throws you her stuffed animal – it hits you before you see it fly
+[zimmer du:schreck lina:froh wurf=stoffvogel zeit=nacht lichterkette palette=blau zoom-rein ein="hits>SEEN TOO LATE>auge" ein_y=430] Your little sister tosses you her stuffed bird. It hits you before you see it fly.
+// 36 s – Setup 2: the order is wrong – sound first, picture later
+[gesicht lina ort=zimmer zeit=nacht lichterkette palette=blau froh zoom-rein ein="laugh>LAUGH FIRST>ohr" ein_y=430] You hear her laugh. Then you see her throw.
+// 37 s – Setup 2: midnight, it's two seconds now – higher stakes
+[spiegel du beschlagen schrift="2 SEC" uhr="12:00" palette=blau ruhig ton=hit] Midnight. Now it's two seconds.
+// 40 s – Setup 2: warm moment, Mom holds your hand
+[esstisch mama du kerzen zeit=nacht palette=blau nah ein="hand>MOM STAYS>herz" ein_y=430] Your mom sits down with you and holds your hand. All night.
+// 45 s – Big question 2: real fact – everyone sees the world a little late
+// Source: Eagleman & Sejnowski, Salk Institute, Science 2000 (flash-lag study, "We live in the past"): perception is assembled from about 80 milliseconds after the event
+[objekt objekte="auge|uhr" gross="80 MS" palette=blau zoom-rein ein="Everyone>EVERYONE>auge" ein_y=1500] Everyone sees the world a little late, actually.
+// 48 s – Big question 2: the number with source
+[titel oben="Salk Institute · 2000" gross="80 MS" unten="your brain lives in the past" farbe=#0c1838 akzent=#7fc0ff groesse=210 hud=false palette=blau zoom-rein] Your brain waits about eighty milliseconds until everything lines up.
+// 53 s – Big question 2: escalation – yours keeps growing
+[gesicht du ort=zimmer zeit=nacht palette=blau besorgt zoom-rein ein="three>3 SECONDS>uhr" ein_y=430] Yours is three seconds now. And it's growing.
+// 57 s – Twist 2 (setup): wow shot, the whole city asleep, only your light
+[grossstadt zeit=nacht palette=blau zoom-raus ein="Three>3:00 AM>uhr" ein_y=430] Three in the morning. In the whole city, only your light is on.
+// 61 s – Twist 2: you stand perfectly still in front of the mirror
+[spiegel du still uhr="3:00" palette=blau zoom-rein] You stand in front of the mirror. Perfectly still.
+// 64 s – Twist 2: the reflection raises its hand – you don't
+[spiegel du vor ab=0.4 verzoegerung=9 spiegel_ausdruck=froh uhr="3:01" palette=blau gross zoom-rein] Your reflection raises its hand. You don't.
+// 66 s – Twist 2: the reflection smiles at you, its hand still up
+[spiegel du vor ab=-5 verzoegerung=30 spiegel_ausdruck=froh uhr="3:01" palette=blau gross nah] And it smiles at you.
+// 67 s – Twist 2 = hard ending: it was never late, you follow it – your hand rises on its own
+[spiegel du vor ab=-1 verzoegerung=1.6 spiegel_ausdruck=froh uhr="3:01" palette=blau zoom-raus ein="own>ON ITS OWN>auge" ein_y=330] Then your hand rises. On its own.

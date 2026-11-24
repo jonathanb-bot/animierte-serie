@@ -1086,6 +1086,65 @@
    "lufs": -15.1,
    "dauer_s": 86.23,
    "sprachpruefung": 0.935
+  },
+  {
+   "id": "nische-n003",
+   "datum": "2026-11-24",
+   "titel": "Dein Spiegelbild ist eine Sekunde zu spät",
+   "emoji": "🪞",
+   "serie": "Was wäre, wenn du … (Gewinner-Nische, Issue #39) – eigenständig",
+   "art": "grusel",
+   "idee_nr": 10,
+   "stimmung": "grusel",
+   "stimme": "Orus",
+   "thema": "Um 23:12 bewegt sich dein Spiegelbild eine Sekunde zu spät, auch in der Handykamera; bei deiner Mama ist alles normal. Finte 1: Mama schaut dich an und wird kreidebleich – nicht der Spiegel ist zu spät, du bist es. Schleife 2: der Stoffvogel deiner Schwester trifft dich, bevor du ihn fliegen siehst, um Mitternacht sind es zwei Sekunden, Mama hält deine Hand. Fakt: Eagleman & Sejnowski (Salk Institute, Science 2000) – das Gehirn setzt die Wahrnehmung aus etwa 80 ms danach zusammen. Finte 2/Ende: 3 Uhr, du stehst still, dein Spiegelbild hebt die Hand und lächelt – dann hebt sich deine Hand von allein.",
+   "stil": "leuchtend, Grusel-Look (@look 0.75, palette blau), neue Kulisse spiegel (Bad bei Nacht, Blick über die Schulter), Handy mit Selfie-Kamera, Wurf im Kinderzimmer",
+   "kulissen": [
+    "spiegel",
+    "gesicht",
+    "handy",
+    "titel",
+    "zimmer",
+    "esstisch",
+    "objekt",
+    "grossstadt"
+   ],
+   "beschreibung": "Dein Spiegelbild bewegt sich eine Sekunde zu spät. Deine Mama sieht nichts davon – bis sie dich ansieht.",
+   "hashtags": [
+    "#waswärewenn",
+    "#gruselgeschichte",
+    "#animation",
+    "#spiegel"
+   ],
+   "tags": [
+    "was wäre wenn",
+    "grusel",
+    "animation",
+    "spiegel",
+    "familie",
+    "story"
+   ],
+   "kommentar_frage": "Würdest du heute Nacht noch in den Spiegel schauen?",
+   "nur_englisch": "Deutsch pausiert ab 24.11. (Blockstadt-Serie), deutsches Drehbuch nur Vorlage",
+   "en": {
+    "titel": "Your Reflection Is One Second Late",
+    "beschreibung": "Your reflection moves one second too late. Your mom doesn't notice a thing – until she looks at you.",
+    "hashtags": [
+     "#whatif",
+     "#scarystories",
+     "#animation",
+     "#mirror"
+    ],
+    "tags": [
+     "what if",
+     "scary story",
+     "animation",
+     "mirror",
+     "family",
+     "story"
+    ],
+    "kommentar_frage": "Would you still look in the mirror tonight?"
+   }
   }
  ]
 }

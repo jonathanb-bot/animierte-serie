@@ -920,7 +920,14 @@
     for (let k = 0; k < 4; k++) box(-180 + k * 22, -360 - k * 10, 14, 16 + k * 10, 3, k < nz ? "#ffffff" : "rgba(255,255,255,0.25)");
     if (nz === 0) A.text(A.sprache === "en" ? "NO SERVICE" : "KEIN NETZ", -60, -366, 24, "#ff8a7a", "left", 700, "HUD");
     const akku = s.akku ?? 34; box(120, -378, 60, 26, 6, "rgba(255,255,255,0.3)"); box(124, -374, 52 * akku / 100, 18, 4, akku < 25 ? "#ff5a4a" : "#ffffff");
-    A.text(s.uhrzeit || "23:19", 0, -230, 120, "#ffffff", "center", 700, "HUD");
+    if (s.selfie) { // neu 24.11. (n003): Handykamera im Selfie-Modus, dein Gesicht, Aufnahme läuft
+      ctx.fillStyle = lgrad(0, -416, 0, 416, [[0, "#20386a"], [1, "#0c1630"]]); ctx.fillRect(-210, -416, 420, 832);
+      for (let k = -4; k <= 4; k++) line(k * 90, -416, k * 90, 416, 3, "rgba(0,0,0,0.18)");
+      ctx.save(); ctx.translate(0, 0); A.kopf(0, 40, 150, jf, { t, ausdruck: s.selfie_ausdruck || "misstrauisch", blick: [0, 0], drehung: 0 }); ctx.restore();
+      box(-210, 260, 420, 156, 0, "rgba(0,0,0,0.45)"); ctx.beginPath(); ctx.arc(0, 338, 46, 0, Math.PI * 2); ctx.lineWidth = 8; ctx.strokeStyle = "#ffffff"; ctx.stroke(); circle(0, 338, 34, "#ff4a3a");
+      circle(-150, -360, 12, Math.sin(t * 6) > 0 ? "#ff4a3a" : "rgba(255,74,58,0.3)"); A.text(String(s.selfie_text || "REC"), -128, -360, 26, "#ffffff", "left", 700, "HUD");
+      for (const [x, y, dx, dy] of [[-170, -300, 1, 1], [170, -300, -1, 1], [-170, 220, 1, -1], [170, 220, -1, -1]]) { line(x, y, x + 40 * dx, y, 6, "rgba(255,255,255,0.8)"); line(x, y, x, y + 40 * dy, 6, "rgba(255,255,255,0.8)"); }
+    } else A.text(s.uhrzeit || "23:19", 0, -230, 120, "#ffffff", "center", 700, "HUD");
     if (s.nachricht) {
       const zeilen = umbrechen(s.nachricht, 300, 32), h = 70 + zeilen.length * 42, ein = E.pop(clamp(t / 0.4, 0, 1));
       ctx.save(); ctx.translate(0, -40); ctx.scale(ein, ein);

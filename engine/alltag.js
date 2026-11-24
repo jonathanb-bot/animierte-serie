@@ -226,6 +226,11 @@
     if (s.laptop !== false && (nacht || s.laptop)) lichtfleck(810, 1500, 300, "#9fc6ff", 0.25);
     const stehen = { ...s, figuren: (s.figuren || []).filter(n => n !== s.im_bett) };
     A.figurenZeigen(stehen, t, 1640, 0.95);
+    if (s.wurf) { // neu 24.11. (n003): Kuscheltier fliegt von rechts nach links und fällt zu Boden (wurf=stoffvogel o. ä.)
+      const ic = typeof s.wurf === "string" ? s.wurf : "stoffvogel", k = A.clamp((t - 0.4) / 1.1, 0, 1), f = A.clamp((t - 1.5) / 0.45, 0, 1);
+      const x = A.lerp(690, 400, k), y = A.lerp(1230, 1170, k) - Math.sin(k * Math.PI) * 260 + f * f * 460;
+      ctx.save(); ctx.translate(x, y); ctx.rotate(-k * 5 - f * 1.5); A.objekt(ic, 0, 0, 0.42, t); ctx.restore();
+    }
     A.alltagWetter(s, t, false);
     A._dunkel = an ? (nacht ? 0.2 : 0.04) : nacht ? 0.6 : zeit === "abend" ? 0.25 : zeit === "morgen" ? 0.12 : 0.04;
   };

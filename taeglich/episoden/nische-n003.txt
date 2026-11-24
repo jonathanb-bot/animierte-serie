@@ -1,0 +1,63 @@
+# Eine Sekunde zu spät
+@musik musik/nische-n003.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung grusel
+@vortrag lebendig
+@klang studio
+@mund zitate
+@einblenden aus
+@untertitel aus
+@qualitaet max
+@look 0.75
+@kino 0.35
+@stil leuchtend
+@palette blau
+@zeit nacht
+
+== Schleife 1 ==
+// 0 s – Einsatz 1 (Hook): Bad bei Nacht, du hebst die Hand, dein Spiegelbild folgt eine Sekunde später, Prämisse groß im Bild
+[spiegel du heben ab=0.6 verzoegerung=1 uhr="23:12" palette=blau zoom-rein hooktext="DEIN SPIEGELBILD: 1 SEKUNDE ZU SPÄT"] Dein Spiegelbild bewegt sich eine Sekunde zu spät.
+// 3 s – Einsatz 1: Uhrzeit läuft mit, ganz normaler Abend, Zähneputzen
+[gesicht du ort=spiegel leer ohne_du zeit=nacht palette=blau misstrauisch zoom-rein ein="zwölf>23:12 UHR>uhr" ein_y=430] Dreiundzwanzig Uhr zwölf. Du putzt Zähne. Du hebst die Hand.
+// 7 s – Einsatz 1: der Test, du zählst – Zähler im Bild
+[spiegel du heben ab=1.4 verzoegerung=1 uhr="23:13" palette=blau gross zoom-rein ein="Eins>1,0 SEKUNDEN>uhr" ein_y=430] Du zählst. Eins. Erst dann hebt es seine.
+// 11 s – Große Frage 1: erste Folge – auch die Handykamera
+[handy ort=spiegel leer ohne_du zeit=nacht palette=blau netz=4 akku=21 selfie selfie_text="REC · 1 SEK VERZÖGERT" zoom-rein ein="Kamera>AUCH IN DER KAMERA>auge" ein_y=1500] Du öffnest die Handykamera. Auch hier: eine Sekunde zu spät.
+// 15 s – Große Frage 1: zweite Folge – deine Mama kommt, bei ihr ist alles normal
+[spiegel du mama uhr="23:16" palette=blau zoom-rein ein="Mama>MAMA: NORMAL>herz" ein_y=430] Du rufst deine Mama. Neben dir im Spiegel: alles normal.
+// 19 s – Große Frage 1 aufgespannt: die naheliegende Erklärung A
+[gesicht du ort=spiegel leer ohne_du zeit=nacht palette=blau muede zoom-rein] Du denkst: Du bist einfach müde.
+// 21 s – Finte 1 (Vorbereitung): Mama schaut nicht in den Spiegel – sie schaut dich an und wird kreidebleich
+[gesicht mama ort=spiegel leer ohne_du zeit=nacht palette=blau schreck zoom-rein ton=hit] Aber Mama schaut nicht in den Spiegel. Sie schaut dich an. Und wird kreidebleich.
+// 26 s – Finte 1: Nicht der Spiegel ist zu spät – du bist es (Schlüsselwort DU)
+[titel oben="Nicht der Spiegel" gross="DU" unten="bist zu spät" farbe=#0c1838 akzent=#7fc0ff groesse=230 hud=false palette=blau zoom-rein ton=hit] Nicht der Spiegel ist zu spät. Du bist es.
+// 29 s – Rehook: Mamas Satz öffnet die größere Frage (Figurenstimme)
+[gesicht mama ort=spiegel leer ohne_du zeit=nacht palette=blau angst figurstimme=frau sprecher=mama zoom-rein] „Du antwortest mir immer erst eine Sekunde später.“
+
+== Schleife 2 ==
+// 32 s – Einsatz 2: deine kleine Schwester wirft dir ihren Stoffvogel zu – es trifft dich, bevor du es fliegen siehst
+[zimmer du:schreck lina:froh wurf=stoffvogel zeit=nacht lichterkette palette=blau zoom-rein ein="trifft>ZU SPÄT GESEHEN>auge" ein_y=430] Deine kleine Schwester wirft dir ihren Stoffvogel zu. Es trifft dich, bevor du es fliegen siehst.
+// 36 s – Einsatz 2: die Reihenfolge stimmt nicht – erst Ton, dann Bild
+[gesicht lina ort=zimmer zeit=nacht lichterkette palette=blau froh zoom-rein ein="lachen>ERST DAS LACHEN>ohr" ein_y=430] Du hörst sie lachen. Dann siehst du sie werfen.
+// 37 s – Einsatz 2: Mitternacht, es werden zwei Sekunden – mehr steht auf dem Spiel
+[spiegel du beschlagen schrift="2 SEK" uhr="0:00" palette=blau ruhig ton=hit] Mitternacht. Jetzt sind es zwei Sekunden.
+// 40 s – Einsatz 2: warmer Moment, Mama hält deine Hand
+[esstisch mama du kerzen zeit=nacht palette=blau nah ein="Hand>MAMA BLEIBT>herz" ein_y=430] Deine Mama setzt sich zu dir und hält deine Hand. Die ganze Nacht.
+// 45 s – Große Frage 2: echter Fakt – jeder sieht die Welt ein bisschen zu spät
+// Quelle: Eagleman & Sejnowski, Salk Institute, Science 2000 (Flash-Lag-Studie, „We live in the past“): die Wahrnehmung wird aus etwa 80 Millisekunden danach zusammengesetzt
+[objekt objekte="auge|uhr" gross="80 MS" palette=blau zoom-rein ein="jeder>JEDER MENSCH>auge" ein_y=1500] Dabei sieht jeder Mensch die Welt ein bisschen zu spät.
+// 48 s – Große Frage 2: die Zahl mit Quelle
+[titel oben="Salk Institute · 2000" gross="80 MS" unten="lebt dein Gehirn in der Vergangenheit" farbe=#0c1838 akzent=#7fc0ff groesse=210 hud=false palette=blau zoom-rein] Dein Gehirn wartet etwa achtzig Millisekunden, bis alles zusammenpasst.
+// 53 s – Große Frage 2: Zuspitzung – bei dir wächst es
+[gesicht du ort=zimmer zeit=nacht palette=blau besorgt zoom-rein ein="mehr>3 SEKUNDEN>uhr" ein_y=430] Bei dir sind es jetzt drei Sekunden. Und es werden mehr.
+// 57 s – Finte 2 (Vorbereitung): Wow-Bild, das ganze Haus schläft, nur ein Licht
+[grossstadt zeit=nacht palette=blau zoom-raus ein="drei>3:00 UHR>uhr" ein_y=430] Drei Uhr nachts. In der ganzen Stadt brennt nur dein Licht.
+// 61 s – Finte 2: du stehst ganz still vor dem Spiegel
+[spiegel du still uhr="3:00" palette=blau zoom-rein] Du stellst dich vor den Spiegel. Ganz still.
+// 64 s – Finte 2: das Spiegelbild hebt die Hand – du nicht
+[spiegel du vor ab=0.4 verzoegerung=9 spiegel_ausdruck=froh uhr="3:01" palette=blau gross zoom-rein] Dein Spiegelbild hebt die Hand. Du nicht.
+// 66 s – Finte 2: das Spiegelbild lächelt dich an, die Hand noch oben
+[spiegel du vor ab=-5 verzoegerung=30 spiegel_ausdruck=froh uhr="3:01" palette=blau gross nah] Und es lächelt dich an.
+// 67 s – Finte 2 = hartes Ende: es war nie zu spät, du folgst ihm – deine Hand hebt sich von allein
+[spiegel du vor ab=-1 verzoegerung=1.6 spiegel_ausdruck=froh uhr="3:01" palette=blau zoom-raus ein="allein>VON ALLEIN>auge" ein_y=330] Dann hebt sich deine Hand. Von allein.
