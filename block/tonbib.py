@@ -163,21 +163,23 @@ class Ton:
     def uhr(self, t0, d, g=0.08):
         for i in range(int(d)): self.add(self.f, t0 + i, self.klick(1.0), g)
     def fx(self, t0, y, g=1.0): self.add(self.f, t0, y, g)
-    def jumpscare(self, t0, g=1.0):
+    def jumpscare(self, t0, g=1.0, halten=0.0):
         """Jumpscare-Schrei (Jonathan 24.11.: laut und gruselig, sehr hochwertig). Schichten: harter Anschlag, dissonantes Streicher-Kreischen
         mit Abwärtsrutsch, Schrei mit Vokal-Formanten, Metallschlag, Sub-Schlag, kurzer Hall. Eigene, ungedeckelte Spur – nur in Sprechpausen.
-        Davor wird der Hintergrund 0,6 s fast still (Stille macht den Schreck)."""
+        Davor wird der Hintergrund 0,6 s fast still (Stille macht den Schreck). halten > 0: Schrei bleibt so viele Sekunden laut
+        (Vorbild 24.11.: Gesicht bleibt ~1,3 s vor der Linse, der Schrei hält mit) und klingt erst dann aus."""
         n = len(self.m); a = max(0, int((t0 - 0.6) * SR)); b = min(n, int(t0 * SR))
         if b > a: k = np.linspace(1, 0.04, b - a); self.m[a:b] *= k; self.f[a:b] *= k
-        rng = np.random.default_rng(13); d = 2.2; t = np.arange(int(d * SR)) / SR
+        rng = np.random.default_rng(13); d = max(2.2, halten + 1.2); t = np.arange(int(d * SR)) / SR
+        def huelle(k): return np.exp(-t * k) if halten <= 0 else np.where(t < halten, 1.0 - 0.25 * t / halten, 0.75 * np.exp(-(t - halten) * 4))
         def band(x, lo, hi):
             X = np.fft.rfft(x); f = np.fft.rfftfreq(len(x), 1 / SR); X[(f < lo) | (f > hi)] = 0; return np.fft.irfft(X, len(x))
         anschlag = band(rng.standard_normal(len(t)), 2500, 12000) * np.exp(-t * 60)
         rutsch = 1 - 0.12 * (1 - np.exp(-t * 2.5)); trem = 1 + 0.35 * np.sin(2 * np.pi * 9 * t)
         streicher = sum(sum(np.sin(2 * np.pi * f0 * h * np.cumsum(rutsch) / SR) / h for h in (1, 2, 3, 5)) for f0 in (1046.5, 1108.7, 1174.7, 1244.5, 1661.2)) / 9
-        streicher = streicher * trem * np.exp(-t * 1.6) * (1 - np.exp(-t * 300))
+        streicher = streicher * trem * huelle(1.6) * (1 - np.exp(-t * 300))
         rau = rng.standard_normal(len(t)); schrei = sum(band(rau, f - bw, f + bw) * a2 for f, bw, a2 in ((820, 120, 1.0), (1180, 150, 0.8), (2900, 300, 0.5), (3400, 350, 0.3)))
-        schrei = schrei / (np.abs(schrei).max() + 1e-9) * np.exp(-t * 2.2) * (1 - np.exp(-t * 200)) * (1 + 0.25 * np.sin(2 * np.pi * 6 * t))
+        schrei = schrei / (np.abs(schrei).max() + 1e-9) * huelle(2.2) * (1 - np.exp(-t * 200)) * (1 + 0.25 * np.sin(2 * np.pi * 6 * t))
         metall = sum(np.sin(2 * np.pi * f * t) * np.exp(-t * (3 + i)) for i, f in enumerate((317, 529, 863, 1397, 2251))) / 5
         sub = np.sin(2 * np.pi * (55 * np.exp(-t * 1.8) + 30) * t) * np.exp(-t * 3.5)
         y = 0.55 * anschlag + 0.8 * streicher + 0.75 * schrei + 0.35 * metall + 1.0 * sub

@@ -29,7 +29,9 @@ const gesicht = (kopf, r, zeichne, { breite = 1.25, hoehe = 1.0, auf = 0 } = {})
   const geo = new THREE.SphereGeometry(r * 1.015, 40, 30, Math.PI / 2 - breite / 2, breite, Math.PI / 2 - hoehe / 2 - auf, hoehe); geo.scale(0.86, 1.06, 0.96);
   const m = new THREE.Mesh(geo, new THREE.MeshPhysicalMaterial({ map: tex(512, 512, zeichne), transparent: true, roughness: 0.7, clearcoat: 0.0, polygonOffset: true, polygonOffsetFactor: -2 }));
   m.rotation.y = -Math.PI / 2 + Math.PI / 2; kopf.add(m); return m; };
-const schreiGesicht = (g, mesh, zeichne) => { g.userData.gesicht = mesh; mesh.userData.normal = mesh.material.map; mesh.userData.schrei = tex(512, 512, zeichne); };
+const schreiGesicht = (g, mesh, zeichne) => { g.userData.gesicht = mesh; mesh.userData.normal = mesh.material.map; mesh.userData.schrei = tex(512, 512, zeichne); mesh.material.emissiveMap = mesh.material.map; mesh.material.emissive = new THREE.Color("#000000"); };
+// Gesicht umschalten; blitz 0..1 = überbelichteter Blitz-Look (wie Handy-Blitz im Dunkeln)
+export const setzeGesicht = (g, schrei, blitz = 0) => { const gs = g.userData.gesicht; if (!gs || !gs.userData.schrei) return; const m = schrei ? gs.userData.schrei : gs.userData.normal; gs.material.map = m; gs.material.emissiveMap = m; gs.material.emissive.setScalar(blitz); };
 // Zeichenhilfen für realistischere Gesichter (weiche Schatten)
 const Z = {
   haut(x, w, h, farbe, schatten = "rgba(0,0,0,0.25)") { x.fillStyle = farbe; x.fillRect(0, 0, w, h); const g = x.createRadialGradient(w / 2, h * 0.45, w * 0.15, w / 2, h / 2, w * 0.6); g.addColorStop(0, "rgba(0,0,0,0)"); g.addColorStop(1, schatten); x.fillStyle = g; x.fillRect(0, 0, w, h); },
@@ -90,9 +92,20 @@ const nun = () => { const g = skelett({ groesse: 1.85, schulter: 0.4, haut: "#ec
   g.userData.robe = robe(g, stoff("#0d0c10", 0.95), [[0.42, 0], [0.38, 0.3], [0.3, 0.9], [0.24, 1.25], [0.22, 1.4], [0.15, 1.5], [0.05, 1.55]]);
   gesicht(j.kopf, kr, (x, w, h) => { Z.haut(x, w, h, "#ebe7e2", "rgba(40,40,60,0.35)"); Z.adern(x, w, h); Z.augenhoehle(x, w, h, { y: 0.47, abst: 0.16, rx: 0.1, ry: 0.07, farbe: "rgba(15,10,20,0.95)" });
     Z.auge(x, w, h, { y: 0.47, abst: 0.16, r: 0.03, iris: "#e8c41a", weiss: "#d8d0b8", pupille: 0.35 }); Z.nase(x, w, h, { y: 0.6 }); x.fillStyle = "#14080c"; x.beginPath(); x.ellipse(w / 2, h * 0.73, w * 0.11, h * 0.035, 0, 0, 7); x.fill(); x.fillStyle = "#f2f0ec"; x.fillRect(0, 0, w, h * 0.09); }, { breite: 1.6, hoehe: 1.3 });
-  schreiGesicht(g, g.children.length ? j.kopf.children[j.kopf.children.length - 1] : null, (x, w, h) => { Z.haut(x, w, h, "#ebe7e2", "rgba(40,40,60,0.45)"); Z.adern(x, w, h, "rgba(40,30,60,0.8)", 12); Z.augenhoehle(x, w, h, { y: 0.44, abst: 0.16, rx: 0.11, ry: 0.08, farbe: "rgba(10,5,15,1)" }); Z.auge(x, w, h, { y: 0.44, abst: 0.16, r: 0.036, iris: "#f0d020", weiss: "#e8d8a0", pupille: 0.25, glanz: false });
-    x.fillStyle = "#0a0204"; x.beginPath(); x.ellipse(w / 2, h * 0.7, w * 0.2, h * 0.19, 0, 0, 7); x.fill(); x.lineWidth = 14; x.strokeStyle = BLUT; x.stroke(); Z.zaehne(x, w, h, { y: 0.7, b: 0.18, hoch: 0.17, farbe: "#ece2cc", n: 13 }); Z.zaehne(x, w, h, { y: 0.7, b: 0.12, hoch: 0.1, farbe: "#c8bca4", n: 9 });
-    x.fillStyle = BLUT; for (let i = 0; i < 4; i++) { x.fillRect(w * (0.38 + i * 0.08), h * 0.86, 7, 30 + i * 9); }
+  // Schrei-Gesicht nach Vorbild (Jonathan 24.11.): kreidebleich, eingefallene Wangen, tiefe pechschwarze Augenhöhlen mit winzigem Lichtpunkt, lang aufgerissener Mund
+  schreiGesicht(g, g.children.length ? j.kopf.children[j.kopf.children.length - 1] : null, (x, w, h) => { Z.haut(x, w, h, "#f4f1ee", "rgba(70,60,80,0.4)");
+    for (const s2 of [-1, 1]) { const gw = x.createRadialGradient(w / 2 + s2 * w * 0.24, h * 0.66, 4, w / 2 + s2 * w * 0.24, h * 0.66, w * 0.17); gw.addColorStop(0, "rgba(90,70,90,0.45)"); gw.addColorStop(1, "rgba(0,0,0,0)"); x.fillStyle = gw; x.fillRect(0, 0, w, h); }
+    Z.adern(x, w, h, "rgba(60,40,80,0.5)", 10);
+    for (const s2 of [-1, 1]) { const cx = w / 2 + s2 * w * 0.165, cy = h * 0.43;
+      const ga = x.createRadialGradient(cx, cy, w * 0.02, cx, cy, w * 0.16); ga.addColorStop(0, "rgba(0,0,0,1)"); ga.addColorStop(0.45, "rgba(5,0,8,0.97)"); ga.addColorStop(0.75, "rgba(60,30,60,0.45)"); ga.addColorStop(1, "rgba(0,0,0,0)");
+      x.fillStyle = ga; x.beginPath(); x.ellipse(cx, cy, w * 0.16, h * 0.15, s2 * 0.15, 0, 7); x.fill();
+      x.strokeStyle = "rgba(255,255,255,0.95)"; x.lineWidth = 4; x.lineCap = "round"; x.beginPath(); x.moveTo(cx + s2 * w * 0.006, cy - h * 0.012); x.lineTo(cx + s2 * w * 0.016, cy + h * 0.008); x.stroke(); }
+    { const gn = x.createLinearGradient(w * 0.44, 0, w * 0.56, 0); gn.addColorStop(0, "rgba(60,40,60,0.28)"); gn.addColorStop(0.5, "rgba(0,0,0,0)"); gn.addColorStop(1, "rgba(60,40,60,0.12)"); x.fillStyle = gn; x.fillRect(w * 0.44, h * 0.47, w * 0.12, h * 0.13); x.fillStyle = "rgba(20,8,14,0.8)"; for (const s2 of [-1, 1]) { x.beginPath(); x.ellipse(w / 2 + s2 * w * 0.024, h * 0.6, w * 0.016, h * 0.009, s2 * 0.4, 0, 7); x.fill(); } }
+    x.fillStyle = "#0e0204"; x.beginPath(); x.moveTo(w * 0.37, h * 0.67); x.quadraticCurveTo(w / 2, h * 0.655, w * 0.63, h * 0.67); x.quadraticCurveTo(w * 0.64, h * 0.95, w / 2, h * 0.985); x.quadraticCurveTo(w * 0.36, h * 0.95, w * 0.37, h * 0.67); x.fill();
+    x.fillStyle = "#3a0a10"; x.beginPath(); x.ellipse(w / 2, h * 0.9, w * 0.07, h * 0.045, 0, 0, 7); x.fill();
+    x.fillStyle = "#ddd2bc"; for (let i = 0; i < 8; i++) { const xx = w * (0.385 + i * 0.0287); x.beginPath(); x.moveTo(xx, h * 0.67); x.lineTo(xx + w * 0.027, h * 0.67); x.lineTo(xx + w * 0.0135, h * (0.705 + (i % 3) * 0.008)); x.fill(); }
+    for (let i = 0; i < 6; i++) { const xx = w * (0.415 + i * 0.0283); x.beginPath(); x.moveTo(xx, h * 0.96); x.lineTo(xx + w * 0.026, h * 0.96); x.lineTo(xx + w * 0.013, h * 0.925); x.fill(); }
+    x.strokeStyle = "rgba(70,40,55,0.5)"; x.lineWidth = 5; for (const s2 of [-1, 1]) { x.beginPath(); x.moveTo(w / 2 + s2 * w * 0.13, h * 0.68); x.quadraticCurveTo(w / 2 + s2 * w * 0.17, h * 0.8, w / 2 + s2 * w * 0.12, h * 0.95); x.stroke(); }
     x.fillStyle = "#f2f0ec"; x.fillRect(0, 0, w, h * 0.09); });
   const schw = stoff("#0b0a0d", 0.95), weiss = physisch("#f2f0ec", 0.7);
   const haube = an(j.kopf, new THREE.Mesh(new THREE.SphereGeometry(kr * 1.14, 28, 20, Math.PI * 0.62, Math.PI * 1.76), schw), 0, kr * 0.1, -kr * 0.08); haube.scale.set(0.95, 1.08, 1.0); haube.material.side = THREE.DoubleSide;
@@ -234,7 +247,7 @@ export const ranim = (g, t, modus = "stehen", o = {}) => { const id = g.userData
     const k = g.userData.sirenKopf; if (k) { k.rotation.y = Math.sin(t * 0.5) * 0.6 + ruck(t, 3.7, 0.25) * 1.4; k.rotation.z = Math.sin(t * 0.7) * 0.08; } }
   else rpose(g, { ...st, lauf: gehen ? 0.7 : 0, phase: p * 2.5 });
   const kf = g.userData.kiefer; if (kf) kf.position.y = kf.userData.y0 - (schrei ? 0.35 : 0) * j.kopfR;
-  const gs = g.userData.gesicht; if (gs && gs.userData.schrei) gs.material.map = schrei ? gs.userData.schrei : gs.userData.normal; };
+  const gs = g.userData.gesicht; if (gs && gs.userData.schrei) { gs.material.map = gs.material.emissiveMap = schrei ? gs.userData.schrei : gs.userData.normal; } };
 
 // Jumpscare-Kamera: Figur springt ins Bild. q 0…1 über die Dauer (ca. 0,35 s); Kamera endet direkt vor dem Gesicht.
 // Kein Wackeln (Jonathans Regel): nur harter Schnitt + schnelles Heranfahren. Rückgabe { pos, ziel, fov }.
@@ -247,4 +260,4 @@ export const jumpscareBlick = (g, q) => { const j = g.userData.j, k = new THREE.
 export const jumpscareSprung = (g, q, von, kamPos, t = 0) => { const e = 1 - Math.pow(1 - Math.min(1, q), 3), j = g.userData.j;
   const ziel = kamPos.clone().add(von.clone().sub(kamPos).normalize().multiplyScalar(j.kopfR * 4.2)).add(new THREE.Vector3(0, -g.userData.H * 0.86, 0));
   g.position.lerpVectors(von, ziel, e); g.position.y += Math.sin(Math.PI * e) * g.userData.H * 0.08; g.lookAt(kamPos.x, g.position.y, kamPos.z);
-  ranim(g, t, e > 0.35 ? "schrei" : "angriff"); rpose(g, { armL: 1.7, armR: 1.7, armLz: 0.35, armRz: 0.35, ellbogen: 0.3, neig: 0.35 - e * 0.2, kopfNeig: -0.15 }); if (g.userData.gesicht?.userData.schrei) g.userData.gesicht.material.map = e > 0.35 ? g.userData.gesicht.userData.schrei : g.userData.gesicht.userData.normal; };
+  ranim(g, t, e > 0.35 ? "schrei" : "angriff"); rpose(g, { armL: 1.7, armR: 1.7, armLz: 0.35, armRz: 0.35, ellbogen: 0.3, neig: 0.35 - e * 0.2, kopfNeig: -0.15 }); setzeGesicht(g, e > 0.35); };
