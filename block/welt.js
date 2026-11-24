@@ -10,11 +10,11 @@ import { mergeGeometries } from "three/addons/utils/BufferGeometryUtils.js";
 
 export const W = 720, H = 1280;
 export const renderer = new THREE.WebGLRenderer({ antialias: true, preserveDrawingBuffer: true });
-renderer.setSize(W, H); renderer.setPixelRatio(1);
+renderer.setSize(W, H); renderer.setPixelRatio(window.devicePixelRatio || 1);   // höhere Auflösung über deviceScaleFactor (render.cjs SKALA)
 renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.toneMappingExposure = 1.0;
 export const scene = new THREE.Scene();
 export const cam = new THREE.PerspectiveCamera(55, W / H, 0.1, 3000);
-export const composer = new EffectComposer(renderer);
+export const composer = new EffectComposer(renderer); composer.setPixelRatio(window.devicePixelRatio || 1);
 composer.addPass(new RenderPass(scene, cam));
 export const bloom = new UnrealBloomPass(new THREE.Vector2(W / 2, H / 2), 0.55, 0.5, 0.92); composer.addPass(bloom);
 // Farbabstufung + Vignette + leichte Körnung
