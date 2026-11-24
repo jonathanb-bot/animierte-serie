@@ -35,6 +35,7 @@ Keller-Bild bzw. im Vorbild-TikTok), nur länger und mit längeren Geschichten. 
   Wird das knapp, kommt die englische Fassung einen Tag später.
 
 ## Festgelegt (Jonathan 24.11.)
+- **60 fps** (entschieden 24.11.): Kamerafahrten und Bewegungen laufen sichtbar flüssiger, YouTube gibt 1440p60 eine höhere Bitrate als 30 fps, und die Renderzeit läuft auf GitHub ohne Arbeit für uns. Passt zu „Qualität vor Quantität“ (Issue #30).
 - **1 langes Video pro Woche, immer samstags** (Deutsch 17:00, Englisch 23:30, ±30 min). Der Lauf startet donnerstags 21:23.
 
 ## Gemini-Verbrauch (Rechnung 24.11.)
@@ -53,4 +54,3 @@ Kontingent: etwa 10 Anfragen pro Schlüssel und Tag, 5 Schlüssel ≈ 50. Die St
 
 ## Offene Entscheidungen (Jonathan)
 - Erzähler: Ich-Erzählung mit Puck wie die Blockstadt, oder Du-Erzählung wie bisher im Querformat?
-- 60 fps oder 30 fps (30 fps halbiert die Renderzeit, bei langen Videos kaum sichtbar)?
