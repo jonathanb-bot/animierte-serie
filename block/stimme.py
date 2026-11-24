@@ -6,6 +6,7 @@ damit es spannend ist – mehr freudige Stimme wie im Vorbild.“ Gemessen am Vo
   Folge 1: Stimme  3 dB über dem Hintergrund, Pausen Ø 0,81 s, Melodie-Spanne ~16 Halbtöne, F0 ~200 Hz
 Darum: fröhliche Storytime-Anweisung (Hörproben 23.11., höchste Melodie), Auswahl nach Melodie, kurze Pausen.
 Die Lautstärke regelt tonbib.Ton.mischen (Abstand 12 LU).
+Seit 24.11. abends (Jonathan): Die Stimme bleibt unverändert – keine Tonhöhen-Anpassung, kein Kompressor/EQ, kein Tempo.
 
     import sys; sys.path.insert(0, "..")
     from stimme import erzeugen, zusammen
@@ -77,6 +78,7 @@ def erzeugen(zeilen, ordner=".", gruppe=3, versuche=None):
         out += o; anp += [ZIEL_HZ / f0] * len(teil)
 
     def angleich(y, r):
+        return y   # Jonathan 24.11. abends: Stimme auf natürlicher Höhe lassen, keine Tonhöhen-Änderung mehr
         r = float(np.clip(r, 2 ** (-2 / 12), 2 ** (2 / 12)))
         if abs(12 * np.log2(r)) < 0.4: return y
         with tempfile.TemporaryDirectory() as d:
@@ -90,13 +92,12 @@ def erzeugen(zeilen, ordner=".", gruppe=3, versuche=None):
         plan.append({"text": z, "start": t, "dauer": len(y) / A.SR, "woerter": [[t + a - ab, t + b - ab, w] for a, b, w, *_ in g.woerter]})
         teile += [y, np.zeros(int(PAUSE * A.SR), dtype=np.float32)]; t += len(y) / A.SR + PAUSE
     x = np.concatenate(teile).astype(np.float32)
-    # etwas mehr Verdichtung als Folge 1 (Vorbild: gleichmäßig präsent), Präsenz bei 3 kHz statt Höhenabsenkung
-    x = A.hp(x, 80); x = A.kompressor(x, -22, 3.0, 0.004, 0.12, makeup_db=4)
+    # Jonathan 24.11. abends: Stimme NICHT verändern – kein Kompressor, kein EQ, kein Hochpass, keine Tonhöhe.
+    # Nur gleichmäßig verstärkt (Spitze −1 dBFS), damit sie nicht zu leise im Mix landet.
+    x = x * (10 ** (-1 / 20) / max(1e-6, float(np.abs(x).max())))
     with tempfile.TemporaryDirectory() as d:
         A.schreiben_wav(d + "/v.wav", x)
-        subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", d + "/v.wav", "-af",
-                        "equalizer=f=250:t=q:w=1:g=1,equalizer=f=3000:t=q:w=1.2:g=2,highshelf=f=9000:g=-2",
-                        "-ar", "48000", str(ordner / "stimme.wav")], check=True)
+        subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", d + "/v.wav", "-ar", "48000", str(ordner / "stimme.wav")], check=True)
     json.dump({"dauer": len(x) / A.SR, "zeilen": plan, "abschnitte": info}, open(ordner / "plan.json", "w"), ensure_ascii=False, indent=1)
     print("Dauer", round(len(x) / A.SR, 1), "Abschnitte (F0, Spanne):", info)
 
@@ -108,7 +109,7 @@ def zusammen(ordner=".", extra=None, yt=False, ohne=None, ziel=88.9, tempo=None,
     ordner = Path(ordner); extra = {k: min(EXTRA_MAX, v) for k, v in (extra or {}).items()}
     quelle = ordner / "stimme.wav"; p = json.load(open(ordner / "plan.json"))
     if yt:
-        tempo = tempo or float(os.environ.get("TEMPO", "1.05"))
+        tempo = tempo or float(os.environ.get("TEMPO", "1.0"))   # 24.11. abends: Stimme nicht schneller machen, lieber Zeilen weglassen
         with tempfile.TemporaryDirectory() as d:
             subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(quelle), "-af", f"rubberband=tempo={tempo}:pitchq=quality", d + "/t.wav"], check=True)
             x, sr = sf.read(d + "/t.wav", dtype="float32")

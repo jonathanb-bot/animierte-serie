@@ -57,3 +57,11 @@ Ausgewertet wird in der nächsten großen Analyse.
 
 - **Flackern:** Der Software-Renderer lässt in einzelnen Bildern reproduzierbar eine Textur weg (Gras blass, Klassenboden dunkelgrün). Vor dem Kodieren immer `python3 block/entflackern.py <folge>/frames` laufen lassen: ersetzt einzelne (oder 2) Ausreißer-Bilder durch die Mitte der Nachbarn, Originale landen in `<folge>/frames_flacker/`.
 - **Ruckeln:** Der Wisch-Übergang dauert seit 24.11. abends nur noch 0,1 s pro Seite (vorher 0,22 s) und ist weicher (`folge.js` → `wisch`, Shader in `welt.js`). Alte Bilder neu rendern: `entflackern.py <frames> --wisch-liste liste.txt`, dann `LISTE=liste.txt node render.cjs` (mit `FOLGE`, `PLAN`).
+
+## Stimme unverändert (Jonathan 24.11. abends, feste Regel)
+
+„Die Stimme soll auf normaler Höhe bleiben, nicht verändern, nicht runtertrimmen. Hintergrundmusik und Soundeffekte kannst du verändern, aber nicht die Stimmen.“
+- `stimme.py`: keine Tonhöhen-Anpassung, kein Kompressor, kein EQ, kein Hochpass, kein Tempo (YouTube-Fassung kürzt nur durch Weglassen von Zeilen). Einzige Ausnahme: eine gleichmäßige Verstärkung der ganzen Spur (Spitze −1 dBFS). Auswahl des besten Versuchs je Abschnitt bleibt erlaubt (verändert nichts).
+- Zu tiefe Zeilen werden **nicht** mehr angehoben – lieber den Abschnitt neu anfragen.
+- `tonbib.mischen`: Musik/Geräusche werden unter die Stimme geduckt und gepegelt; kein Begrenzer auf der Mischung.
+- Kodieren: **kein** `loudnorm` (regelt dynamisch und drückt die Stimme), sondern `python3 block/lautheit.py mix.wav mix_fertig.wav` (fester Faktor, ohne Begrenzer; lieber etwas leiser als −14 LUFS).

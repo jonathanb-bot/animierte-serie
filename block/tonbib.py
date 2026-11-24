@@ -206,7 +206,7 @@ class Ton:
             mix = stimme + bett
             print(f"   Abstand Stimme–Hintergrund: {self._lufs(stimme) - self._lufs(bett):.1f} LU (Ziel {abstand:.0f})")
         spitze = np.abs(mix).max()
-        if spitze > 0.95: mix = np.where(np.abs(mix) > 0.8, np.sign(mix) * (0.8 + 0.15 * np.tanh((np.abs(mix) - 0.8) / 0.15)), mix)
+        # 24.11. abends: kein weicher Begrenzer mehr (veränderte die Stimme), nur noch gleichmäßige Verstärkung
         mix *= 0.9 / np.abs(mix).max()
         sf.write(ziel, mix.astype(np.float32), SR)
         v = np.abs(stimme) > 0.02
