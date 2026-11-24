@@ -143,6 +143,14 @@ Aus dem Vorbild-Video übernommen (nur die Mittel, nie Inhalte). Beispiel für a
 
 52 fertige Skins bekannter Horrorfiguren (The Nun, Siren Head, Slender Man, Michael Myers, Pennywise, Huggy Wuggy, FNAF …): `horror("id")`. Liste mit ids und Merkmalen: `vorlagen/horrorfiguren.md`. Menschliche Figuren sind Fg-Figuren (Fg.pose wirkt), dazu `userData.waffe`, Slender Man `userData.tentakel`, Siren Head `userData.sirenen`.
 
+## Horror-Kulissen (`horrorwelt.js`, 24.11., Issue #43)
+
+- **`SCHATTENTAL`** bei (−2400, 0, −2400): Dorfstraße bei Nacht mit dunklen Häusern (`haeuser`), Laternen (`laternen`), Kapelle mit zugemauertem Glockenturm (`kapelle`, `glocke` schwingen über `.rotation.z`), Friedhof, toter Wald, roter Mond, Nebel, viel stilisiertes Blut (Lachen, Spuren, Handabdrücke, „HILFE“, „13“). `SCHATTENTAL.pos(x, y, z)`, `SCHATTENTAL.licht` (rötliches Punktlicht).
+- **`KAPELLE`** bei (−2400, 0, −3000): Innenraum mit Bänken, Altar, Kerzen, Kreuz mit Blutspritzer, Glockenseil (`seil`), „LÄUTE“ in Blut. `KAPELLE.licht`.
+- **`WALDWEG`** bei (−2900, 0, −2400): Pfad durch toten Wald mit Blutspur, roter Mond, Nebel.
+- **`blut(art, groesse, saat)`**: Decal `spritzer`, `lache`, `hand`, `tropfen`, `spur`, `schrift:TEXT` (Wand: XY-Ebene, Boden: `rotation.x = −π/2`). **`nacht()`**: Horror-Licht pro Bild.
+- Vorschau: `node katalog_bilder.cjs kulisse-schattental-strasse,kulisse-schattental-kapelle,kulisse-schattental-friedhof,kulisse-kapelle-innen,kulisse-waldweg`.
+
 ## Marken-Logos (`logos.js`, 24.11., Issue #42)
 
 `LOGO.nasa(x, w, h)`, `LOGO.lieferando(x, w, h, {hintergrund, schrift})` zeichnen das Logo in einen Canvas (z. B. `leinwand.userData.zeichne`, `handySeite`). `logoTextur(name)` und `logoAufkleber(name, breite, hoehe)` für Raketen, Boxen, Schilder. Neue Marken hier ergänzen, möglichst detailgetreu.
