@@ -117,7 +117,15 @@ const nun = () => { const g = skelett({ groesse: 1.85, schulter: 0.4, haut: "#ec
   g.userData.horror = { id: "nun", name: "The Nun" }; return g; };
 
 const slender = () => { const anzug = stoff("#0b0b0d", 0.8); const g = skelett({ groesse: 2.6, schulter: 0.44, haut: "#f2f2f0", oben: anzug, aermel: anzug, unten: anzug, dick: 0.75, armLang: 1.25, beinLang: 1.1, finger: 1.4 }); const j = g.userData.j, kr = j.kopfR;
-  j.schaedel.scale.set(0.82, 1.15, 0.92); j.schaedel.material = physisch("#f4f4f2", 0.35);
+  j.schaedel.scale.set(0.82, 1.15, 0.92); j.schaedel.material = physisch("#ecebe8", 0.8);
+  // Gesicht: normal völlig leer (nur weiche Mulden), beim Schrei reißt ein senkrechter Mund auf (Jonathan 24.11.: Jumpscare)
+  const leer = (x, w, h) => { Z.haut(x, w, h, "#ecebe8", "rgba(60,60,70,0.28)"); for (const s of [-1, 1]) { const g2 = x.createRadialGradient(w / 2 + s * w * 0.15, h * 0.44, 4, w / 2 + s * w * 0.15, h * 0.44, w * 0.11); g2.addColorStop(0, "rgba(70,70,80,0.22)"); g2.addColorStop(1, "rgba(0,0,0,0)"); x.fillStyle = g2; x.fillRect(0, 0, w, h); } };
+  gesicht(j.kopf, kr, leer, { breite: 1.7, hoehe: 1.5 }); { const gm = j.kopf.children[j.kopf.children.length - 1]; gm.scale.set(0.965, 1.095, 0.97); }
+  schreiGesicht(g, j.kopf.children[j.kopf.children.length - 1], (x, w, h) => { leer(x, w, h);
+    for (const s of [-1, 1]) { const cx = w / 2 + s * w * 0.15, cy = h * 0.42, g2 = x.createRadialGradient(cx, cy, 3, cx, cy, w * 0.12); g2.addColorStop(0, "rgba(5,5,10,0.95)"); g2.addColorStop(0.6, "rgba(30,30,40,0.5)"); g2.addColorStop(1, "rgba(0,0,0,0)"); x.fillStyle = g2; x.beginPath(); x.ellipse(cx, cy, w * 0.12, h * 0.09, 0, 0, 7); x.fill(); }
+    x.fillStyle = "#070305"; x.beginPath(); x.moveTo(w / 2, h * 0.5); x.bezierCurveTo(w * 0.62, h * 0.6, w * 0.6, h * 0.86, w / 2, h * 0.98); x.bezierCurveTo(w * 0.4, h * 0.86, w * 0.38, h * 0.6, w / 2, h * 0.5); x.fill();
+    x.fillStyle = "#e6e0d0"; for (let i = 2; i < 9; i++) { const y = h * (0.56 + i * 0.045), b = w * 0.085 * Math.sin(Math.PI * (i + 0.5) / 9); for (const s of [-1, 1]) { x.beginPath(); x.moveTo(w / 2 + s * b, y); x.lineTo(w / 2 + s * b, y + h * 0.035); x.lineTo(w / 2 + s * (b - w * 0.04), y + h * 0.018); x.fill(); } }
+    x.strokeStyle = "rgba(90,20,30,0.7)"; x.lineWidth = 4; x.beginPath(); x.moveTo(w / 2, h * 0.5); x.bezierCurveTo(w * 0.62, h * 0.6, w * 0.6, h * 0.86, w / 2, h * 0.98); x.bezierCurveTo(w * 0.4, h * 0.86, w * 0.38, h * 0.6, w / 2, h * 0.5); x.stroke(); });
   const hemd = an(j.torso.parent, new THREE.Mesh(new THREE.PlaneGeometry(0.16 * M, 0.38 * M), physisch("#f4f4f4", 0.6)), 0, g.userData.H * 0.3 * 0.86, 0.13 * M * 0.98);
   const kr2 = an(j.torso.parent, new THREE.Mesh(new THREE.PlaneGeometry(0.05 * M, 0.34 * M), physisch("#0a0a0a", 0.5)), 0, g.userData.H * 0.3 * 0.8, 0.13 * M * 0.99 + 0.01);
   const t = gruppe(j.brust, 0, g.userData.H * 0.25, -0.12 * M); t.visible = false; g.userData.tentakel = t; const tm = physisch("#0a0a0c", 0.4);
