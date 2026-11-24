@@ -164,15 +164,26 @@ class Ton:
         for i in range(int(d)): self.add(self.f, t0 + i, self.klick(1.0), g)
     def fx(self, t0, y, g=1.0): self.add(self.f, t0, y, g)
     def jumpscare(self, t0, g=1.0):
-        """Jumpscare-Knall (Jonathan 24.11.: 1–2 echte Jumpscares pro Horror-Folge): harter Einsatz aus Stille, Schrei-Kreischen + tiefer Schlag.
-        Liegt auf einer eigenen Spur, die NICHT auf Stimme −3 dB gedeckelt wird (nur in Sprechpausen setzen). Davor 0,6 s Stille im Hintergrund."""
-        n = len(self.m); a = max(0, int((t0 - 0.6) * SR)); b = min(n, int(t0 * SR)); self.m[a:b] *= np.linspace(1, 0.05, b - a) if b > a else 1; self.f[a:b] *= 0.05
-        d = 1.4; t = np.arange(int(d * SR)) / SR; huell = np.exp(-t * 3.2) * (1 - np.exp(-t * 400))
-        kreisch = sum(np.sin(2 * np.pi * f * t * (1 + 0.04 * np.sin(2 * np.pi * 7 * t))) for f in (1180, 1460, 1873, 2410)) / 4
-        rau = self.rng.standard_normal(len(t)); rau = np.convolve(rau, np.ones(6) / 6, "same")
-        schlag = np.sin(2 * np.pi * 48 * t * np.exp(-t * 2)) * np.exp(-t * 5)
-        y = (0.55 * kreisch + 0.35 * rau) * huell + 0.9 * schlag
-        self.add(self.js, t0, y / np.abs(y).max(), g)
+        """Jumpscare-Schrei (Jonathan 24.11.: laut und gruselig, sehr hochwertig). Schichten: harter Anschlag, dissonantes Streicher-Kreischen
+        mit Abwärtsrutsch, Schrei mit Vokal-Formanten, Metallschlag, Sub-Schlag, kurzer Hall. Eigene, ungedeckelte Spur – nur in Sprechpausen.
+        Davor wird der Hintergrund 0,6 s fast still (Stille macht den Schreck)."""
+        n = len(self.m); a = max(0, int((t0 - 0.6) * SR)); b = min(n, int(t0 * SR))
+        if b > a: k = np.linspace(1, 0.04, b - a); self.m[a:b] *= k; self.f[a:b] *= k
+        rng = np.random.default_rng(13); d = 2.2; t = np.arange(int(d * SR)) / SR
+        def band(x, lo, hi):
+            X = np.fft.rfft(x); f = np.fft.rfftfreq(len(x), 1 / SR); X[(f < lo) | (f > hi)] = 0; return np.fft.irfft(X, len(x))
+        anschlag = band(rng.standard_normal(len(t)), 2500, 12000) * np.exp(-t * 60)
+        rutsch = 1 - 0.12 * (1 - np.exp(-t * 2.5)); trem = 1 + 0.35 * np.sin(2 * np.pi * 9 * t)
+        streicher = sum(sum(np.sin(2 * np.pi * f0 * h * np.cumsum(rutsch) / SR) / h for h in (1, 2, 3, 5)) for f0 in (1046.5, 1108.7, 1174.7, 1244.5, 1661.2)) / 9
+        streicher = streicher * trem * np.exp(-t * 1.6) * (1 - np.exp(-t * 300))
+        rau = rng.standard_normal(len(t)); schrei = sum(band(rau, f - bw, f + bw) * a2 for f, bw, a2 in ((820, 120, 1.0), (1180, 150, 0.8), (2900, 300, 0.5), (3400, 350, 0.3)))
+        schrei = schrei / (np.abs(schrei).max() + 1e-9) * np.exp(-t * 2.2) * (1 - np.exp(-t * 200)) * (1 + 0.25 * np.sin(2 * np.pi * 6 * t))
+        metall = sum(np.sin(2 * np.pi * f * t) * np.exp(-t * (3 + i)) for i, f in enumerate((317, 529, 863, 1397, 2251))) / 5
+        sub = np.sin(2 * np.pi * (55 * np.exp(-t * 1.8) + 30) * t) * np.exp(-t * 3.5)
+        y = 0.55 * anschlag + 0.8 * streicher + 0.75 * schrei + 0.35 * metall + 1.0 * sub
+        ir = rng.standard_normal(int(1.1 * SR)) * np.exp(-np.arange(int(1.1 * SR)) / SR * 5); hall = np.convolve(y, ir)[:len(y)] / 40
+        y = y + 0.35 * hall; y = y / np.abs(y).max()
+        self.add(self.js, t0, y, g)
     def kartenToene(self, zeile_frage, woerter):
         """Mitmach-Frage: leise Fläche + Ton pro Antwortkarte (woerter: Wort in der Zeile nach der Frage, je Karte)."""
         self.add(self.m, self.Z[zeile_frage] - 0.3, self.flaeche([57, 60, 64, 69], self.DAUER - self.Z[zeile_frage] + 0.5, hell=4, a=0.8, r=1.2), 0.22)

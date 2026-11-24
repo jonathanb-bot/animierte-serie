@@ -223,3 +223,9 @@ const huette = () => { const g = new THREE.Group(); an(g, bx(6, 4, 5, holz("#3a2
   for (let i = 0; i < 12; i++) { const s = r() < 0.5 ? knochen() : schaedel(); s.position.set((r() - 0.5) * 6, 0.05, -80 + r() * 150); s.rotation.y = r() * 7; g.add(s); }
   for (let i = 0; i < 8; i++) { const lg = an(g, zyl(0.4, 0.5, 8, mat("#1a1612"), 8), (r() < 0.5 ? -1 : 1) * (5 + r() * 10), 0.5, -80 + r() * 150); lg.rotation.set(Math.PI / 2, r() * 3, 0); }
   for (let i = 0; i < 6; i++) { const n = spinnennetz(2.5); n.position.set(i % 2 ? 3.4 : -3.4, 3.5, -70 + i * 25); n.rotation.y = i % 2 ? -Math.PI / 2 : Math.PI / 2; g.add(n); } }
+
+// Abdunkeln vor einem Jumpscare (Stille-Moment): schwarze Scheibe direkt vor der Kamera, a = 0 … 1. Pro Bild aufrufen (sonst aus).
+const SCHWARZ = new THREE.Mesh(new THREE.PlaneGeometry(4, 4), new THREE.MeshBasicMaterial({ color: "#000000", transparent: true, opacity: 0, depthTest: false, depthWrite: false, fog: false, toneMapped: false }));
+SCHWARZ.renderOrder = 999; SCHWARZ.visible = false; scene.add(SCHWARZ);
+export const dunkel = (a = 0) => { const c = Wt.cam; SCHWARZ.visible = a > 0.001; if (!SCHWARZ.visible) return; SCHWARZ.material.opacity = Math.min(1, a);
+  const d = 5; SCHWARZ.scale.setScalar(d * 2); SCHWARZ.position.copy(c.position).add(new THREE.Vector3(0, 0, -d).applyQuaternion(c.quaternion)); SCHWARZ.quaternion.copy(c.quaternion); };   // hinter der Nah-Ebene

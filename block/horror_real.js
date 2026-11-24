@@ -27,7 +27,7 @@ const BLUT = "#9a0c16";
 // Gesicht als gewölbte Schale vorne am Kopf (Teilkugel), gezeichnet auf 512×512
 const gesicht = (kopf, r, zeichne, { breite = 1.25, hoehe = 1.0, auf = 0 } = {}) => {
   const geo = new THREE.SphereGeometry(r * 1.015, 40, 30, Math.PI / 2 - breite / 2, breite, Math.PI / 2 - hoehe / 2 - auf, hoehe); geo.scale(0.86, 1.06, 0.96);
-  const m = new THREE.Mesh(geo, new THREE.MeshPhysicalMaterial({ map: tex(512, 512, zeichne), transparent: true, roughness: 0.45, clearcoat: 0.2, polygonOffset: true, polygonOffsetFactor: -2 }));
+  const m = new THREE.Mesh(geo, new THREE.MeshPhysicalMaterial({ map: tex(512, 512, zeichne), transparent: true, roughness: 0.7, clearcoat: 0.0, polygonOffset: true, polygonOffsetFactor: -2 }));
   m.rotation.y = -Math.PI / 2 + Math.PI / 2; kopf.add(m); return m; };
 const schreiGesicht = (g, mesh, zeichne) => { g.userData.gesicht = mesh; mesh.userData.normal = mesh.material.map; mesh.userData.schrei = tex(512, 512, zeichne); };
 // Zeichenhilfen für realistischere Gesichter (weiche Schatten)
@@ -89,14 +89,18 @@ const BINDEN = (g) => g;
 const nun = () => { const g = skelett({ groesse: 1.85, schulter: 0.4, haut: "#ece8e4", oben: stoff("#0c0b0e", 0.95), aermel: stoff("#0c0b0e", 0.95), unten: stoff("#0c0b0e"), finger: 1.25 }); const j = g.userData.j, kr = j.kopfR;
   g.userData.robe = robe(g, stoff("#0d0c10", 0.95), [[0.42, 0], [0.38, 0.3], [0.3, 0.9], [0.24, 1.25], [0.22, 1.4], [0.15, 1.5], [0.05, 1.55]]);
   gesicht(j.kopf, kr, (x, w, h) => { Z.haut(x, w, h, "#ebe7e2", "rgba(40,40,60,0.35)"); Z.adern(x, w, h); Z.augenhoehle(x, w, h, { y: 0.47, abst: 0.16, rx: 0.1, ry: 0.07, farbe: "rgba(15,10,20,0.95)" });
-    Z.auge(x, w, h, { y: 0.47, abst: 0.16, r: 0.03, iris: "#e8c41a", weiss: "#d8d0b8", pupille: 0.35 }); Z.nase(x, w, h, { y: 0.6 }); x.fillStyle = "#14080c"; x.beginPath(); x.ellipse(w / 2, h * 0.73, w * 0.11, h * 0.035, 0, 0, 7); x.fill(); }, { breite: 1.6, hoehe: 1.3 });
+    Z.auge(x, w, h, { y: 0.47, abst: 0.16, r: 0.03, iris: "#e8c41a", weiss: "#d8d0b8", pupille: 0.35 }); Z.nase(x, w, h, { y: 0.6 }); x.fillStyle = "#14080c"; x.beginPath(); x.ellipse(w / 2, h * 0.73, w * 0.11, h * 0.035, 0, 0, 7); x.fill(); x.fillStyle = "#f2f0ec"; x.fillRect(0, 0, w, h * 0.09); }, { breite: 1.6, hoehe: 1.3 });
   schreiGesicht(g, g.children.length ? j.kopf.children[j.kopf.children.length - 1] : null, (x, w, h) => { Z.haut(x, w, h, "#ebe7e2", "rgba(40,40,60,0.45)"); Z.adern(x, w, h, "rgba(40,30,60,0.8)", 12); Z.augenhoehle(x, w, h, { y: 0.44, abst: 0.16, rx: 0.11, ry: 0.08, farbe: "rgba(10,5,15,1)" }); Z.auge(x, w, h, { y: 0.44, abst: 0.16, r: 0.036, iris: "#f0d020", weiss: "#e8d8a0", pupille: 0.25, glanz: false });
-    x.fillStyle = "#0a0204"; x.beginPath(); x.ellipse(w / 2, h * 0.76, w * 0.17, h * 0.15, 0, 0, 7); x.fill(); x.fillStyle = BLUT; x.beginPath(); x.ellipse(w / 2, h * 0.76, w * 0.17, h * 0.15, 0, 0, 7); x.lineWidth = 10; x.strokeStyle = BLUT; x.stroke(); Z.zaehne(x, w, h, { y: 0.76, b: 0.15, hoch: 0.13, farbe: "#e8dcc4", n: 12 }); });
+    x.fillStyle = "#0a0204"; x.beginPath(); x.ellipse(w / 2, h * 0.7, w * 0.2, h * 0.19, 0, 0, 7); x.fill(); x.lineWidth = 14; x.strokeStyle = BLUT; x.stroke(); Z.zaehne(x, w, h, { y: 0.7, b: 0.18, hoch: 0.17, farbe: "#ece2cc", n: 13 }); Z.zaehne(x, w, h, { y: 0.7, b: 0.12, hoch: 0.1, farbe: "#c8bca4", n: 9 });
+    x.fillStyle = BLUT; for (let i = 0; i < 4; i++) { x.fillRect(w * (0.38 + i * 0.08), h * 0.86, 7, 30 + i * 9); }
+    x.fillStyle = "#f2f0ec"; x.fillRect(0, 0, w, h * 0.09); });
   const schw = stoff("#0b0a0d", 0.95), weiss = physisch("#f2f0ec", 0.7);
   const haube = an(j.kopf, new THREE.Mesh(new THREE.SphereGeometry(kr * 1.14, 28, 20, Math.PI * 0.62, Math.PI * 1.76), schw), 0, kr * 0.1, -kr * 0.08); haube.scale.set(0.95, 1.08, 1.0); haube.material.side = THREE.DoubleSide;
-  const band = an(j.kopf, new THREE.Mesh(new THREE.TorusGeometry(kr * 0.88, kr * 0.07, 8, 40, Math.PI * 1.2), weiss), 0, kr * 0.05, kr * 0.15); band.geometry = new THREE.TorusGeometry(kr * 0.82, kr * 0.09, 8, 40, Math.PI * 1.15); band.rotation.z = -Math.PI * 0.075; band.position.set(0, kr * 0.02, kr * 0.62); band.scale.set(0.95, 1.12, 1);
+  const kappe = an(j.kopf, new THREE.Mesh(new THREE.SphereGeometry(kr * 1.15, 28, 12, 0, Math.PI * 2, 0, Math.PI * 0.34), schw), 0, kr * 0.1, -kr * 0.08); kappe.scale.set(0.95, 1.08, 1.0);
+  
   const schleier = robe(j.hals, schw, [[0.32, -0.32], [0.25, -0.15], [0.17, 0.05], [0.13, 0.2], [0.11, 0.3]]); schleier.position.z = -0.04 * M;
   const kragen = an(j.hals, new THREE.Mesh(new THREE.CylinderGeometry(kr * 0.5, kr * 0.85, kr * 0.5, 24, 1, true), weiss), 0, 0, 0); kragen.material.side = THREE.DoubleSide;
+  { const am = new THREE.MeshBasicMaterial({ color: new THREE.Color(2.4, 1.9, 0.3), transparent: true, opacity: 0.9, depthWrite: false }); const ag = new THREE.Group(); j.kopf.add(ag); for (const s2 of [-1, 1]) { const e = an(ag, kugel(kr * 0.07, am, 10), s2 * kr * 0.27, kr * 0.04, kr * 0.97); e.scale.set(1.3, 0.8, 0.4); } ag.visible = false; g.userData.augen = ag; }   // leuchtende Augen im Dunkeln
   g.userData.horror = { id: "nun", name: "The Nun" }; return g; };
 
 const slender = () => { const anzug = stoff("#0b0b0d", 0.8); const g = skelett({ groesse: 2.6, schulter: 0.44, haut: "#f2f2f0", oben: anzug, aermel: anzug, unten: anzug, dick: 0.75, armLang: 1.25, beinLang: 1.1, finger: 1.4 }); const j = g.userData.j, kr = j.kopfR;
