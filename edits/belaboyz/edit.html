@@ -163,16 +163,26 @@ function sSongtext(ts) { if (COVER) { ctx.save(); ctx.filter = "blur(90px) satur
   text("0:" + String(Math.floor(ts)).padStart(2, "0"), 70, H - 230, 32, "rgba(255,255,255,0.6)"); text("-1:" + String(126 - 60 - Math.floor(ts)).padStart(2, "0"), W - 70, H - 230, 32, "rgba(255,255,255,0.6)", 400, 999, 1, "right");
   ikon("zurueck", W / 2 - 260, H - 140, 74); ikon("pause", W / 2, H - 140, 80); ikon("vor", W / 2 + 260, H - 140, 74); }
 // ---------- 4) Gucci-Cap in der 3D-Objektansicht (dreht sich gleichmäßig) ----------
-function capZeichnen(w, cx, cy, breite) { const pos = ((w / (Math.PI * 2)) % 1 + 1) % 1 * 8, i = Math.floor(pos) % 8, f = pos - Math.floor(pos);
-  const sm = x => x * x * (3 - 2 * x), mix = sm(clamp((f - 0.2) / 0.6, 0, 1)); const a = CAP[i], b = CAP[(i + 1) % 8], s = breite / a.width, w2 = a.width * s, h2 = a.height * s;
-  const g = ctx.createRadialGradient(cx, cy + h2 * 0.5, 10, cx, cy + h2 * 0.5, w2 * 0.5); g.addColorStop(0, "rgba(0,0,0,0.55)"); g.addColorStop(1, "rgba(0,0,0,0)");
-  ctx.save(); ctx.translate(cx, cy + h2 * 0.5); ctx.scale(1, 0.16); ctx.translate(-cx, -(cy + h2 * 0.5)); ctx.fillStyle = g; ctx.fillRect(cx - w2, cy, w2 * 2, h2); ctx.restore();
-  for (const [img, al] of [[a, 1 - mix], [b, mix]]) { if (al < 0.01) continue; ctx.save(); ctx.globalAlpha = al; ctx.filter = "blur(0.6px)"; ctx.drawImage(img, cx - w2 / 2, cy - h2 / 2, w2, h2); ctx.restore(); } }
+// Cap: 8 scharfe Ansichten (Lanczos auf exakte Zielgröße, nachgeschärft), KEIN Überblenden; schnelle Drehung mit echter
+// Bewegungsunschärfe: pro Bild werden 7 Zeitpunkte innerhalb der Belichtung (halbe Bilddauer) gemittelt
+const CAP_W = 840; // logisch = 1120 echte Pixel = Bildbreite der Ansichten
+function capAnsicht(w) { return ((Math.round((w / (Math.PI * 2)) * 8) % 8) + 8) % 8; }
+function capZeichnen(w, omega, cx, cy, spiegel = true) { const a = CAP[0], s = CAP_W / a.width, w2 = CAP_W, h2 = a.height * s;
+  ctx.imageSmoothingEnabled = true; ctx.imageSmoothingQuality = "high";
+  const N = 7, belicht = omega / 60 * 0.5, gew = new Map(); for (let k = 0; k < N; k++) { const i = capAnsicht(w - belicht * (k / (N - 1))); gew.set(i, (gew.get(i) || 0) + 1 / N); }
+  const liste = [...gew.entries()].sort((p, q) => q[1] - p[1]);
+  // Bodenschatten
+  const g = ctx.createRadialGradient(cx, cy + h2 * 0.47, 10, cx, cy + h2 * 0.47, w2 * 0.48); g.addColorStop(0, "rgba(0,0,0,0.6)"); g.addColorStop(1, "rgba(0,0,0,0)");
+  ctx.save(); ctx.translate(cx, cy + h2 * 0.47); ctx.scale(1, 0.13); ctx.translate(-cx, -(cy + h2 * 0.47)); ctx.fillStyle = g; ctx.fillRect(cx - w2, cy, w2 * 2, h2); ctx.restore();
+  const malen = (yy, flip) => { let summe = 0; for (const [i, wt] of liste) { summe += wt; ctx.save(); ctx.globalAlpha *= wt / summe; ctx.translate(cx, yy); if (flip) ctx.scale(1, -1); ctx.drawImage(CAP[i], -w2 / 2, -h2 / 2, w2, h2); ctx.restore(); } };
+  // dezente Spiegelung auf dem Boden
+  if (spiegel) { ctx.save(); ctx.globalAlpha = 0.13; malen(cy + h2 * 0.94, true); ctx.restore(); const f = ctx.createLinearGradient(0, cy + h2 * 0.45, 0, cy + h2 * 1.1); f.addColorStop(0, "rgba(26,24,21,0)"); f.addColorStop(0.45, "rgba(26,24,21,0.85)"); f.addColorStop(1, "rgba(26,24,21,1)"); ctx.fillStyle = f; ctx.fillRect(cx - w2, cy + h2 * 0.45, w2 * 2, h2 * 0.7); }
+  ctx.globalAlpha = 1; malen(cy, false); }
 function sCap(ts) { const g = ctx.createLinearGradient(0, 0, 0, H); g.addColorStop(0, "#26231f"); g.addColorStop(0.55, "#1a1815"); g.addColorStop(1, "#0d0c0b"); ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
   const sp = ctx.createRadialGradient(W / 2, 820, 40, W / 2, 820, 700); sp.addColorStop(0, "rgba(255,236,200,0.16)"); sp.addColorStop(1, "rgba(255,236,200,0)"); ctx.fillStyle = sp; ctx.fillRect(0, 0, W, H);
   kreis(104, 230, 54, "rgba(120,120,128,0.32)"); ikon("x", 104, 230, 44, C.l1); kreis(W - 104, 230, 54, "rgba(120,120,128,0.32)"); ikon("teilen", W - 104, 226, 44, C.l1);
   rr(W / 2 - 210, 186, 420, 88, 44); ctx.fillStyle = "rgba(120,120,128,0.32)"; ctx.fill(); rr(W / 2 - 205, 191, 205, 78, 39); ctx.fillStyle = "rgba(255,255,255,0.9)"; ctx.fill(); text("Objekt", W / 2 - 102, 243, 36, "#000", 600, 999, 1, "center"); text("AR", W / 2 + 102, 243, 36, C.l1, 600, 999, 1, "center");
-  capZeichnen((ts - 18.0) * Math.PI * 2 * 0.42 + Math.PI * 0.15, W / 2, 810 + Math.sin(ts * 1.8) * 6, 880);
+  const omega = Math.PI * 2 * 3.0; capZeichnen((ts - 17.95) * omega, omega, W / 2, 790 + Math.sin(ts * 1.8) * 5);
   karteRR(44, 1300, W - 88, 520, 56, "rgba(36,36,40,0.92)"); text("Kappe aus GG Canvas", 104, 1390, 36, C.l2, 500); const t1 = ts < 18.6 ? "Gucci-Kappe" : "", t2 = tipp(ts, "l2");
   if (t2) zeile(t2, 104, 1500, 76, W - 208); else zeile(t1, 104, 1500, 76, W - 208); }
 // ---------- 5) „Wo ist?“ mit genauer Karte ----------
@@ -362,6 +372,6 @@ window.zeichne = T => { const ts = T + A; ctx = cv.getContext("2d"); ctx.setTran
     if (lq > 0.05) { ctx.save(); ctx.globalAlpha = clamp(lq, 0, 1); kreis(W / 2 - w / 2 + 56, INSEL.y + 51, 30, C.orange); ikon("glocke_aus", W / 2 - w / 2 + 56, INSEL.y + 51, 34, "#fff"); text("Lautlos", W / 2 + w / 2 - 36, INSEL.y + 63, 34, C.orange, 600, 999, 1, "right"); ctx.restore(); } else musikAktivitaet(ts, w); }
   const r = ENDE - T; if (r < 0.15) { ctx.fillStyle = `rgba(0,0,0,${1 - r / 0.15})`; ctx.fillRect(0, 0, W, H); } };
 (async () => { for (const w of [400, 500, 600, 700, 800]) await document.fonts.load(`${w} 60px I`); COVER = await lade("assets/cover.png");
-  for (let i = 0; i < 8; i++) CAP.push(await lade(`assets/cap${i}.png`));
+  for (let i = 0; i < 8; i++) CAP.push(await lade(`assets/capHQ${i}.png`));
   for (let i = 0; i < 3; i++) { const c = document.createElement("canvas"); c.width = W * K; c.height = H * K; BUF.push(c); } window.bereit = true; })();
 </script></body></html>
