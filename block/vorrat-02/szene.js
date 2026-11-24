@@ -77,7 +77,7 @@ sh(E[7] + 0.4, (t, q) => { imBett(ich, "staunen"); Rq.weckerZeichnen("03:00"); R
   kamera.fahrt(q, ZI(-1.0, 5.6, 2.2), ZI(-1.3, 5.3, 2.6), ZI(-2.2, 2.5, 3.9), ZI(-2.2, 2.5, 3.9), 52); licht(0.25, "#8aa0ff", 0.4); wisch(t, 7); });
 // 8 Versuch eins: Schäfchen zählen – Zahl über dem Kopf rast hoch
 sh(E[8] + 0.06, (t, q) => { imBett(ich, t > wz("zehntausend", 8) ? "muede" : "staunen"); Rq.ZIMMER.licht.intensity = 4; Rq.ZIMMER.schirm.material = Rq.ZIMMER.schirmAus;
-  const n = Math.round(B.zaehlen(t, wz("schäfchen", 8), wz("zehntausend", 8) + 0.4, 1, 10000)); Al.kopfzahl(ich, n.toLocaleString("de-DE") + " 🐑", { farbe: "#ffffff", groesse: 1.0 });
+  const n = Math.round(B.zaehlen(Math.floor(t * 10) / 10, wz("schäfchen", 8), wz("zehntausend", 8) + 0.4, 1, 10000));   // 24.11. abends: 10 Wechsel pro Sekunde statt 60 (flackerte) Al.kopfzahl(ich, n.toLocaleString("de-DE") + " 🐑", { farbe: "#ffffff", groesse: 1.0 });
   Rq.weckerZeichnen(t < Z[8] + 2 ? "03:10" : t < Z[8] + 3.5 ? "04:40" : "05:58"); if (t > wz("zehntausend", 8)) rotNull();
   kamera.fahrt(q, ZI(-0.6, 6.4, 1.6), ZI(-0.9, 6.0, 2.0), ZI(-2.2, 3.4, 3.6), ZI(-2.2, 3.6, 3.6), 56); licht(0.35, "#8aa0ff", 0.4); wisch(t, 8); });
 // 9 Papa schläft nebenan (Sofa), +100 € für ihn
