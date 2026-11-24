@@ -111,3 +111,5 @@ Gleiche Mechanik wie Plan B (Dorf, Waffen bleiben, Wellen werden stärker, gehei
 **Musik:** tiefe Horror-Flächen, Herzschlag, Glocke; die Stimme bleibt laut und klar darüber.
 **Bibliothek neu:** The Nun, Siren Head, Slender Man als Blockfiguren (detailgetreu im Serienstil), Blutspritzer-Effekt (Decals, fest, flackerfrei),
 roter Mond/Nebel, Waldrand, Kirchturm, 25–30 Waffen mit Effekten (Flutlicht, Wasserwerfer, Netz, Weihwasser, Feuer, Strom, Glocke …).
+
+**Figuren-Vorlagen (Namen, Aussehen, Quellen):** `block/vorlagen/horrorfiguren.md` – The Nun (Valak), Siren Head, Slender Man, Huggy Wuggy. Vor dem Bau Vorbilder ansehen und im Fotostudio angleichen, bis man jede Figur sofort erkennt.
