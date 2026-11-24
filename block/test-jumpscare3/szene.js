@@ -18,8 +18,8 @@ const kam = (t) => KAM_A.clone().lerp(KAM_B, ss(0, T_AUF, t));
 const ZIEL = FENSTER.clone().add(V(0, -0.1, 0.9));
 const K = kam(T_AUF), VOR = ZIEL.clone().sub(K).normalize();
 // Kopf an eine Weltposition setzen (Körper folgt), Blick zur Kamera
-const kopfNach = (ziel, t, modus) => { nun.userData.j.kopf.scale.set(1, 1, 1); nun.visible = true; nun.lookAt(K.x, nun.position.y, K.z); ranim(nun, t, modus); rpose(nun, { armL: 1.4, armR: 1.4, armLz: 0.75, armRz: 0.75, ellbogen: 0.4, neig: 0.3, kopfNeig: -0.1 }); nun.userData.augen.visible = false;
-  nun.updateMatrixWorld(true); nun.position.add(ziel.clone().sub(kopfW())); };
+const kopfNach = (ziel, t, modus) => { nun.userData.j.kopf.scale.set(1, 1, 1); nun.visible = true; nun.lookAt(K.x, nun.position.y, K.z); ranim(nun, t, modus); rpose(nun, { armL: 1.4, armR: 1.4, armLz: 0.2, armRz: 0.2, ellbogen: 0.4, neig: 0.3, kopfNeig: -0.1 }); nun.userData.augen.visible = false;
+  for (let i = 0; i < 2; i++) { nun.updateMatrixWorld(true); nun.position.add(ziel.clone().sub(kopfW())); nun.lookAt(K.x, nun.position.y, K.z); } };
 // zufällige, ruckartige Zuckungen (stufig alle ~0.11 s, mit kurzem Übergang) – die Figur zuckt, die Kamera nie
 const ruck = (t, k) => { const i = Math.floor(t / 0.11), f = ss(0, 0.35, (t / 0.11) % 1), r = (n) => Math.sin(n * 12.9898 + k * 78.233) * 43758.5453 % 1; return r(i) + (r(i + 1) - r(i)) * f; };
 // Blitzlicht nur fürs Gesicht (kurze Reichweite, beleuchtet den Turm nicht)
@@ -39,13 +39,13 @@ sh(T_AUF, (t, q) => { grund(); augen(Math.max(0, 0.75 - q * 6)); blick(kam(t), F
 sh(T_STARR, (t, q) => { grund(); const e = ss(0, 1, q); nurKopf(true); kopfNach(ZIEL.clone().add(V(0, -0.9 + 0.9 * e, 0.2)), t, "stehen"); setzeGesicht(nun, true, 0.12); nun.userData.j.kopf.rotation.z = 0.12 * e;
   blick(K, FENSTER); Wt.cam.fov = 36; nacht(t); HW.dunkel(0.4); blitz(0.6 + 0.6 * e); });
 // 4) Sprung bis ganz vor die Linse: Weitwinkel, Blitz-Licht
-sh(T_SPRUNG, (t, q) => { grund(); const e = q * q * (3 - 2 * q) * 0.6 + q * q * 0.4; const nah = K.clone().add(VOR.clone().multiplyScalar(kr * 2.2)).add(V(0, -kr * 0.15, 0));
+sh(T_SPRUNG, (t, q) => { grund(); const e = 1 - Math.pow(1 - q, 3); const nah = K.clone().add(VOR.clone().multiplyScalar(kr * 2.2)).add(V(0, -kr * 0.15, 0));
   nurKopf(false); Wt.bloom.strength = 0.55 - 0.45 * q; kopfNach(ZIEL.clone().lerp(nah, e), t, "schrei"); setzeGesicht(nun, true, 0.1 - 0.04 * q); nun.userData.j.kopf.rotation.z = 0.12 - 0.2 * q;
-  blick(K, FENSTER.clone().lerp(kopfW(), q)); Wt.cam.fov = 36 + 50 * q; nacht(t); blitz(1.8 - 0.2 * q); nun.userData.j.kopf.scale.set(1 - 0.08 * q, 1 + 0.14 * q, 1); Z_.vignette = 0.75; HW.dunkel(0.4 * (1 - q)); });
+  blick(K, FENSTER.clone().lerp(kopfW(), q)); Wt.cam.fov = 36 + 50 * q * q * q; nacht(t); blitz(1.8 - 0.2 * q); nun.userData.j.kopf.scale.set(1 - 0.08 * q, 1 + 0.14 * q, 1); Z_.vignette = 0.75; HW.dunkel(0.4 * (1 - q)); });
 // 5) bleibt zuckend ganz nah, drückt noch näher heran
-sh(T_ENDE, (t, q) => { grund(); const d = kr * (2.2 - 0.55 * ss(0, 1, q)); const nah = K.clone().add(VOR.clone().multiplyScalar(d)).add(V((ruck(t, 1) - 0.5) * kr * 0.35, -kr * 0.15 + (ruck(t, 2) - 0.5) * kr * 0.25, 0));
-  nurKopf(false); Wt.bloom.strength = 0.1; kopfNach(nah, t, "schrei"); setzeGesicht(nun, true, 0.06); const kp = nun.userData.j.kopf; kp.rotation.z = -0.08 + (ruck(t, 3) - 0.5) * 0.3; kp.rotation.x += (ruck(t, 4) - 0.5) * 0.3;
-  blick(K, K.clone().add(VOR)); Wt.cam.fov = 86; nacht(t); blitz(1.5); kp.scale.set(0.92, 1.14 + (ruck(t, 5) - 0.5) * 0.06, 1); Z_.vignette = 0.75; });
+sh(T_ENDE, (t, q) => { grund(); const d = kr * (2.2 - 0.55 * ss(0, 1, q)), a = ss(T_SPRUNG, T_SPRUNG + 0.18, t); const nah = K.clone().add(VOR.clone().multiplyScalar(d)).add(V((ruck(t, 1) - 0.5) * kr * 0.35 * a, -kr * 0.15 + (ruck(t, 2) - 0.5) * kr * 0.25 * a, 0));
+  nurKopf(false); Wt.bloom.strength = 0.1; kopfNach(nah, t, "schrei"); setzeGesicht(nun, true, 0.06); const kp = nun.userData.j.kopf; kp.rotation.z = -0.08 + (ruck(t, 3) - 0.5) * 0.3 * a; kp.rotation.x += (ruck(t, 4) - 0.5) * 0.3 * a;
+  blick(K, K.clone().add(VOR)); Wt.cam.fov = 86; nacht(t); blitz(1.5); kp.scale.set(0.92, 1.14 + (ruck(t, 5) - 0.5) * 0.06 * a, 1); Z_.vignette = 0.75; });
 // 6) harter Schnitt: leeres Fenster
 sh(DAUER + 1, (t, q) => { grund(); blick(K, FENSTER); Wt.cam.fov = 36; nacht(t); HW.dunkel(0.4); });
 B.start({ grund: () => {} });
