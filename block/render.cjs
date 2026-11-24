@@ -16,14 +16,16 @@ const von = Number(process.env.VON || 0), bis = process.env.BIS ? Number(process
   await page.waitForFunction(() => window.bereit === true, null, { timeout: 120000 });
   const DAUER = await page.evaluate(() => window.DAUER);
   const n = Math.round(DAUER * FPS);
-  const zeiten = nurBilder ? process.argv[bi + 1].split(",").map(Number) : Array.from({ length: n }, (_, i) => i / FPS).slice(von, bis ?? n);
+  // LISTE=datei: nur diese Bildnummern (eine pro Zeile) neu rendern, z. B. nach entflackern.py --liste
+  const liste = process.env.LISTE ? fs.readFileSync(process.env.LISTE, "utf8").split(/\s+/).filter(Boolean).map(Number) : null;
+  const zeiten = nurBilder ? process.argv[bi + 1].split(",").map(Number) : liste ? liste.map(k => k / FPS) : Array.from({ length: n }, (_, i) => i / FPS).slice(von, bis ?? n);
   if (nurBilder) { fs.rmSync("bilder", { recursive: true, force: true }); fs.mkdirSync("bilder"); } else fs.mkdirSync(ordner, { recursive: true });
   let i = 0; const t0 = Date.now();
   for (const t of zeiten) {
-    const name0 = nurBilder ? null : `${ordner}/${String(von + i).padStart(5, "0")}.jpg`;
+    const nr = liste ? liste[i] : von + i; const name0 = nurBilder ? null : `${ordner}/${String(nr).padStart(5, "0")}.jpg`;
     if (name0 && process.env.WEITER && fs.existsSync(name0)) { i++; continue; }   // WEITER=1: schon fertige Bilder überspringen
     await page.evaluate(t => window.renderAt(t), t);
-    const name = nurBilder ? `bilder/${String(i).padStart(3, "0")}_${t.toFixed(2)}.jpg` : `${ordner}/${String(von + i).padStart(5, "0")}.jpg`;
+    const name = nurBilder ? `bilder/${String(i).padStart(3, "0")}_${t.toFixed(2)}.jpg` : `${ordner}/${String(nr).padStart(5, "0")}.jpg`;
     await page.screenshot({ path: name, type: "jpeg", quality: 93, timeout: 180000 }); i++;
     if (i % 60 === 0) console.log(`${i}/${zeiten.length} Bilder, ${((Date.now() - t0) / 1000).toFixed(0)} s`);
   }

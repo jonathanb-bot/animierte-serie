@@ -78,7 +78,7 @@ export const Z_ = { menge: null, vignette: 0.35, zaehler: null, plus: null, meng
 // Geld-/Punkte-Zähler im Bild (Vergleich 24.11.): Z_.zaehler = { wert: zahl | text, farbe: "gruen"|"rot"|"gelb", einheit: " €" }, Z_.plus = { text: "+5 €", t0 }
 // oben mittig (nie oben links, Issue #19), nur in Einstellungen, in denen die Geschichte ihn braucht.
 // Wisch-Übergang am Schnitt: Wt.grade.uniforms.uWisch.value = B.wisch(t, schnittZeit) – kurz verwischt, kein Wackeln (Vergleich 24.11.)
-export const wisch = (t, ts, dauer = 0.22) => Math.max(0, 1 - Math.abs(t - ts) / dauer);
+export const wisch = (t, ts, dauer = 0.1) => { const q = Math.max(0, 1 - Math.abs(t - ts) / dauer); return q * q * (3 - 2 * q); };   // 24.11. abends: 0,1 s statt 0,22 s, weich (vorher wirkte es wie Ruckeln)
 // Zahlen über allen Köpfen der Menge: B.mengeZahlen((i) => "1", { farbe })
 export const mengeZahlen = (text, o = {}) => Rq.MENGE.forEach((p, i) => { if (!Rq.mengeSichtbar || Rq.mengeSichtbar(i)) Al.kopfzahl(new THREE.Vector3(p.x + (Z_.menge?.dx ?? 0), 5.6 * p.s, p.z + (Z_.menge?.dz ?? 0)), text(i), { groesse: 0.8, ...o }); });
 export const euro = (n, vorzeichen = true) => (vorzeichen && n > 0 ? "+" : n < 0 ? "−" : "") + Math.abs(Math.round(n)).toLocaleString("de-DE");

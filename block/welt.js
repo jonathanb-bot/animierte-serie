@@ -24,7 +24,7 @@ export const grade = new ShaderPass({
   fragmentShader: `uniform sampler2D tDiffuse; uniform float uVig, uWarm, uT, uFlash, uWisch; varying vec2 vUv;
     float h(vec2 p){ return fract(sin(dot(p, vec2(12.9898,78.233)) + uT*3.1)*43758.5453); }
     void main(){ vec4 c = texture2D(tDiffuse, vUv);
-      if (uWisch > 0.001) { vec4 a = vec4(0.); for (int i = 0; i < 16; i++) { float o = (float(i) / 15. - 0.5) * uWisch * 0.12; a += texture2D(tDiffuse, vUv + vec2(o, 0.)); } c = a / 16.; }   // Wisch-Übergang (Vergleich 24.11.)
+      if (uWisch > 0.001) { vec4 a = vec4(0.); float ws = 0.; for (int i = 0; i < 25; i++) { float u = float(i) / 24. - 0.5, w = 1. - abs(u) * 1.6; a += texture2D(tDiffuse, vUv + vec2(u * uWisch * 0.07, 0.)) * w; ws += w; } c = a / ws; }   // Wisch-Übergang: seit 24.11. abends kürzer und weicher (Jonathan: Ruckeln)
       vec2 d = vUv - 0.5; d.x *= 0.75;
       c.rgb *= 1.0 - uVig * smoothstep(0.25, 0.75, length(d));
       c.rgb = mix(c.rgb, c.rgb * vec3(1.08, 0.98, 0.86), uWarm);

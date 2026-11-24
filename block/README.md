@@ -51,3 +51,9 @@ Ausgewertet wird in der nächsten großen Analyse.
 - Ein-Wort-Untertitel in Gelb.
 - Große Autos.
 - Mitmach-Frage am Ende als 3 Karten A/B/C.
+
+
+## Flackern und Ruckeln (Jonathan 24.11. abends)
+
+- **Flackern:** Der Software-Renderer lässt in einzelnen Bildern reproduzierbar eine Textur weg (Gras blass, Klassenboden dunkelgrün). Vor dem Kodieren immer `python3 block/entflackern.py <folge>/frames` laufen lassen: ersetzt einzelne (oder 2) Ausreißer-Bilder durch die Mitte der Nachbarn, Originale landen in `<folge>/frames_flacker/`.
+- **Ruckeln:** Der Wisch-Übergang dauert seit 24.11. abends nur noch 0,1 s pro Seite (vorher 0,22 s) und ist weicher (`folge.js` → `wisch`, Shader in `welt.js`). Alte Bilder neu rendern: `entflackern.py <frames> --wisch-liste liste.txt`, dann `LISTE=liste.txt node render.cjs` (mit `FOLGE`, `PLAN`).
