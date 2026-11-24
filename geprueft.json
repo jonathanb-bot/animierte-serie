@@ -2334,6 +2334,12 @@
    "bild_s": 71.1,
    "ton_s": 71.08,
    "lufs": -14.6
+  },
+  "taeglich/block-b02.mp4": {
+   "ok": true,
+   "bild_s": 85.75,
+   "ton_s": 85.75,
+   "lufs": -14.5
   }
  },
  "serien": {
@@ -2622,6 +2628,10 @@
   "nische-n003-en": {
    "titel": "Your Reflection Is One Second Late",
    "datei": "taeglich/nische-n003-en.mp4"
+  },
+  "block-b02": {
+   "titel": "Unter meinem Bett sitzt ein kleiner Schatten",
+   "datei": "taeglich/block-b02.mp4"
   }
  },
  "taeglich_staffeln": {
