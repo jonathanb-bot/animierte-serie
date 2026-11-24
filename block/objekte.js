@@ -450,4 +450,12 @@ const GLAS = tex(64, 256, (x, w, h) => { x.fillStyle = "#bfe2f4"; x.fillRect(0, 
 export const glasturm = ({ breite = 16, hoehe = 70, farbe = "#a8d8f0" } = {}) => { const g = new THREE.Group(); const m = new THREE.MeshStandardMaterial({ map: GLAS, color: farbe, roughness: 0.25, metalness: 0.2 });
   const b = an(g, bx(breite, hoehe, breite, m), 0, hoehe / 2, 0); an(g, bx(breite + 0.6, 1.2, breite + 0.6, mat("#f4f8fa", 0.5)), 0, hoehe + 0.6, 0); return g; };
 
-export const ALLE = { reihenhaus, glasturm, baum, blumenkuebel, hecke, bank, laterne, ampel, hydrant, muelltonne, briefkasten, schild, zaun, brunnen, laden, haltestelle, fahrrad, bus, hund, katze, vogel, tisch, stuhl, sofa, stehlampe, regal, geschenk, fernseher, riesenTier, haus, schule, sportwagen, lichterkette, lehmhaus, wimpelkette, fackel, krug, palme, pyramide, glocke, thron, krone, sockel, steinwaechter, riesenWaechter, wolke, himmelshaus, bretterbude, muellberg, leiter, pool, glasaufzug, absperrung, goldvilla, goldschluessel, tellerhaus, spind, tribuene, krankenwagen, krankenbett, herzmonitor, babybett, achterbahn, torte, kinderwagen, gluehbirnenladen, limousine, liegestuhl };
+// Brötchen auf Teller (Folge 2, 24.11.): Frühstück, kann angeknabbert verschwinden (.visible); userData.broetchen = nur das Brötchen
+export const broetchen = ({ teller = "#ffffff", farbe = "#d8944a" } = {}) => { const g = new THREE.Group();
+  an(g, zyl(0.62, 0.55, 0.07, plastik(teller), 28), 0, 0.035, 0);
+  const b = new THREE.Group(); const k = an(b, kugel(0.42, mat(farbe, 0.75), 24), 0, 0.26, 0); k.scale.set(1.25, 0.62, 0.85);
+  const schnitt = an(b, rb(0.07, 0.06, 0.62, 0.03, mat("#f0d8a8", 0.8)), 0, 0.5, 0); schnitt.rotation.z = 0.1;
+  for (const [x, z] of [[-0.18, 0.08], [0.12, -0.1], [0.25, 0.12], [-0.05, -0.2]]) an(b, kugel(0.035, mat("#f4ecd8", 0.6), 8), x, 0.49, z);
+  g.add(b); g.userData.broetchen = b; return g; };
+
+export const ALLE = { reihenhaus, glasturm, baum, blumenkuebel, hecke, bank, laterne, ampel, hydrant, muelltonne, briefkasten, schild, zaun, brunnen, laden, haltestelle, fahrrad, bus, hund, katze, vogel, tisch, stuhl, sofa, stehlampe, regal, geschenk, fernseher, riesenTier, haus, schule, sportwagen, lichterkette, lehmhaus, wimpelkette, fackel, krug, palme, pyramide, glocke, thron, krone, sockel, steinwaechter, riesenWaechter, wolke, himmelshaus, bretterbude, muellberg, leiter, pool, glasaufzug, absperrung, goldvilla, goldschluessel, tellerhaus, spind, tribuene, krankenwagen, krankenbett, herzmonitor, babybett, achterbahn, torte, kinderwagen, gluehbirnenladen, limousine, liegestuhl, broetchen };

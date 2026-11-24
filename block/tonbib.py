@@ -159,7 +159,7 @@ class Ton:
             self.add(self.f, t, np.sin(2 * np.pi * np.cumsum(fr) / SR) * env(dd, 0.01, 0.05), 0.03); t += 0.15 + self.rng.random() * 0.5
     def schritte(self, t0, d, abst=0.32, g=0.08):
         t = t0
-        while t < t0 + d: self.add(self.f, t, self.klick(1.0) * 0.6 + self.puls(40, 0.08) * 0.4, g); t += abst
+        while t < t0 + d: self.add(self.f, t, self.klick(1.0) * 0.6, g); self.add(self.f, t, self.puls(40, 0.08) * 0.4, g); t += abst   # getrennt: Klick und Puls sind unterschiedlich lang (24.11.)
     def uhr(self, t0, d, g=0.08):
         for i in range(int(d)): self.add(self.f, t0 + i, self.klick(1.0), g)
     def fx(self, t0, y, g=1.0): self.add(self.f, t0, y, g)
