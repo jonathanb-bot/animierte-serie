@@ -21,7 +21,7 @@ const K = kam(T_AUF), VOR = ZIEL.clone().sub(K).normalize(), RECHTS = VOR.clone(
 // Versteck: unten rechts im Vordergrund, knapp unter dem Bildrand (nicht dort, wo die Augen waren)
 const VERSTECK = (h) => K.clone().add(VOR.clone().multiplyScalar(kr * 15)).add(RECHTS.clone().multiplyScalar(kr * 2.1)).add(new THREE.Vector3(0, kr * (-6.6 + 3.4 * h), 0));
 // Kopf an eine Weltposition setzen (Körper folgt), Blick zur Kamera
-const kopfNach = (ziel, t, modus) => { nun.userData.j.kopf.scale.set(1, 1, 1); nun.visible = true; nun.lookAt(K.x, nun.position.y, K.z); ranim(nun, t, modus); rpose(nun, { armL: 1.4, armR: 1.4, armLz: 0.2, armRz: 0.2, ellbogen: 0.4, neig: 0.3, kopfNeig: -0.1 }); nun.userData.augen.visible = false;
+const kopfNach = (ziel, t, modus) => { nun.userData.j.kopf.scale.set(1, 1, 1); nun.visible = true; nun.lookAt(K.x, nun.position.y, K.z); ranim(nun, t, modus); rpose(nun, { armL: 0.15, armR: 0.15, armLz: 0.1, armRz: 0.1, ellbogen: 0.2, neig: 0.3, kopfNeig: -0.1 }); nun.userData.augen.visible = false;
   for (let i = 0; i < 2; i++) { nun.updateMatrixWorld(true); nun.position.add(ziel.clone().sub(kopfW())); nun.lookAt(K.x, nun.position.y, K.z); } };
 // zufällige, ruckartige Zuckungen (stufig alle ~0.11 s, mit kurzem Übergang) – die Figur zuckt, die Kamera nie
 const ruck = (t, k) => { const i = Math.floor(t / 0.11), f = ss(0, 0.35, (t / 0.11) % 1), r = (n) => Math.sin(n * 12.9898 + k * 78.233) * 43758.5453 % 1; return r(i) + (r(i + 1) - r(i)) * f; };
