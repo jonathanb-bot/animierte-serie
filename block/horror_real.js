@@ -70,7 +70,7 @@ export const skelett = (o = {}) => {
     const ob = H * 0.245 * (o.beinLang ?? 1), un = H * 0.24 * (o.beinLang ?? 1);
     const bein = j["bein" + n] = gruppe(j.huefte, s * sw * 0.22, 0, 0); an(bein, kapsel(sw * 0.2 * d, ob * 0.98, unten), 0, -ob / 2, 0);
     const kn = j["knie" + n] = gruppe(bein, 0, -ob, 0); an(kn, kugel(sw * 0.16 * d, unten, 10)); an(kn, kapsel(sw * 0.155 * d, un * 1.0, unten), 0, -un / 2, 0);
-    const fu = j["fuss" + n] = gruppe(kn, 0, -un, 0); const sh = an(fu, kapsel(sw * 0.1, H * 0.06, schuhe, 10), 0, -H * 0.015, H * 0.035); sh.rotation.x = Math.PI / 2; sh.scale.set(1.2, 1, 0.7);
+    const fu = j["fuss" + n] = gruppe(kn, 0, -un, 0); const sh = an(fu, kapsel(sw * 0.1 * Math.max(1, d), H * 0.06, schuhe, 10), 0, -sw * 0.04, H * 0.035); sh.rotation.x = Math.PI / 2; sh.scale.set(1.2, 1, 0.7);
   }
   g.userData.j = j; g.userData.H = H; return g; };
 
