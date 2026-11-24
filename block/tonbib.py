@@ -50,7 +50,7 @@ class Ton:
         self.p = json.load(open(planpfad))
         self.Z = [z["start"] for z in self.p["zeilen"]]; self.E = [z["start"] + z["dauer"] for z in self.p["zeilen"]]
         self.DAUER = dauer or (self.E[-1] + 1.6); self.n = int(self.DAUER * SR)
-        self.m = np.zeros(self.n); self.f = np.zeros(self.n); self.rng = np.random.default_rng(5)
+        self.m = np.zeros(self.n); self.f = np.zeros(self.n); self.js = np.zeros(self.n); self.rng = np.random.default_rng(5)
 
     # ---------- Zeiten ----------
     def leer(self, i): return not self.p["zeilen"][i]["woerter"]
@@ -163,6 +163,16 @@ class Ton:
     def uhr(self, t0, d, g=0.08):
         for i in range(int(d)): self.add(self.f, t0 + i, self.klick(1.0), g)
     def fx(self, t0, y, g=1.0): self.add(self.f, t0, y, g)
+    def jumpscare(self, t0, g=1.0):
+        """Jumpscare-Knall (Jonathan 24.11.: 1–2 echte Jumpscares pro Horror-Folge): harter Einsatz aus Stille, Schrei-Kreischen + tiefer Schlag.
+        Liegt auf einer eigenen Spur, die NICHT auf Stimme −3 dB gedeckelt wird (nur in Sprechpausen setzen). Davor 0,6 s Stille im Hintergrund."""
+        n = len(self.m); a = max(0, int((t0 - 0.6) * SR)); b = min(n, int(t0 * SR)); self.m[a:b] *= np.linspace(1, 0.05, b - a) if b > a else 1; self.f[a:b] *= 0.05
+        d = 1.4; t = np.arange(int(d * SR)) / SR; huell = np.exp(-t * 3.2) * (1 - np.exp(-t * 400))
+        kreisch = sum(np.sin(2 * np.pi * f * t * (1 + 0.04 * np.sin(2 * np.pi * 7 * t))) for f in (1180, 1460, 1873, 2410)) / 4
+        rau = self.rng.standard_normal(len(t)); rau = np.convolve(rau, np.ones(6) / 6, "same")
+        schlag = np.sin(2 * np.pi * 48 * t * np.exp(-t * 2)) * np.exp(-t * 5)
+        y = (0.55 * kreisch + 0.35 * rau) * huell + 0.9 * schlag
+        self.add(self.js, t0, y / np.abs(y).max(), g)
     def kartenToene(self, zeile_frage, woerter):
         """Mitmach-Frage: leise Fläche + Ton pro Antwortkarte (woerter: Wort in der Zeile nach der Frage, je Karte)."""
         self.add(self.m, self.Z[zeile_frage] - 0.3, self.flaeche([57, 60, 64, 69], self.DAUER - self.Z[zeile_frage] + 0.5, hell=4, a=0.8, r=1.2), 0.22)
@@ -205,6 +215,8 @@ class Ton:
             kurz = np.sqrt(glatt(bett ** 2, 0.4)) + 1e-9; bett *= np.minimum(1.0, glatt(np.minimum(1.0, ref / kurz), 0.1))
             mix = stimme + bett
             print(f"   Abstand Stimme–Hintergrund: {self._lufs(stimme) - self._lufs(bett):.1f} LU (Ziel {abstand:.0f})")
+        if np.abs(self.js).max() > 0:   # Jumpscare-Spur: so laut wie die Stimmspitzen, ungedeckelt
+            mix = mix + self.js * (np.percentile(np.abs(stimme[np.abs(stimme) > 0.02]), 99.5) * 1.1)
         spitze = np.abs(mix).max()
         # 24.11. abends: kein weicher Begrenzer mehr (veränderte die Stimme), nur noch gleichmäßige Verstärkung
         mix *= 0.9 / np.abs(mix).max()

@@ -90,3 +90,9 @@ Ein Blick ins Tal: Hinter dem Wald liegt eine große Stadt – voller Lichter. �
 1. Passt „Die 13. Glocke“ als Rahmen? Dorfname „Schattental“ oder eine echte Stadt von Anfang an?
 2. Stimme: Orus (ernst) oder Puck (Kind, wie Blockstadt)?
 3. Eigene Serie oder statt Blockstadt?
+
+## Jumpscares (Jonathan 24.11.: pro Folge 1–2 echte Jumpscares)
+Werkzeug: `ranim(figur, t, "schrei")` (Schrei-Gesicht/aufgerissenes Maul), `jumpscareBlick(figur, q)` (Kamera springt in ~0,35 s vor das Gesicht, kein Wackeln), Ton `T.jumpscare(t)` in `tonbib.py` (0,6 s Stille davor, dann Kreischen + tiefer Schlag auf eigener, ungedeckelter Spur – nur in Sprechpausen).
+Regeln: immer nach einem ruhigen Moment (Stille, Kamera langsam), harter Schnitt ohne Übergang, maximal 0,6 s Großaufnahme, danach sofort weiter. Kein Bild-Flackern, kein Kamerawackeln. Nie in den ersten 3 Sekunden (sonst ist der Hook verschenkt).
+Pilot „Nacht 1“: **Jumpscare 1** nach Zeile 6 – die letzte Laterne geht aus, 0,6 s Dunkel, dann The Nun direkt vor der Kamera mit Schrei-Gesicht. **Jumpscare 2** nach Zeile 17 – Kamera fährt langsam ans Turmfenster, das Seil schwingt … dann springt die Nonne aus dem Fenster ins Bild.
+Staffelplan: jede Nacht 1 Jumpscare im Angriff (das Wesen taucht plötzlich auf) + 1 am Ende (Rätsel-Spur kippt in einen Schreck).

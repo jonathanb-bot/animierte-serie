@@ -29,6 +29,7 @@ const gesicht = (kopf, r, zeichne, { breite = 1.25, hoehe = 1.0, auf = 0 } = {})
   const geo = new THREE.SphereGeometry(r * 1.015, 40, 30, Math.PI / 2 - breite / 2, breite, Math.PI / 2 - hoehe / 2 - auf, hoehe); geo.scale(0.86, 1.06, 0.96);
   const m = new THREE.Mesh(geo, new THREE.MeshPhysicalMaterial({ map: tex(512, 512, zeichne), transparent: true, roughness: 0.45, clearcoat: 0.2, polygonOffset: true, polygonOffsetFactor: -2 }));
   m.rotation.y = -Math.PI / 2 + Math.PI / 2; kopf.add(m); return m; };
+const schreiGesicht = (g, mesh, zeichne) => { g.userData.gesicht = mesh; mesh.userData.normal = mesh.material.map; mesh.userData.schrei = tex(512, 512, zeichne); };
 // Zeichenhilfen für realistischere Gesichter (weiche Schatten)
 const Z = {
   haut(x, w, h, farbe, schatten = "rgba(0,0,0,0.25)") { x.fillStyle = farbe; x.fillRect(0, 0, w, h); const g = x.createRadialGradient(w / 2, h * 0.45, w * 0.15, w / 2, h / 2, w * 0.6); g.addColorStop(0, "rgba(0,0,0,0)"); g.addColorStop(1, schatten); x.fillStyle = g; x.fillRect(0, 0, w, h); },
@@ -56,7 +57,7 @@ export const skelett = (o = {}) => {
   j.hals = gruppe(j.brust, 0, rumpf * 0.98, 0); an(j.hals, kapsel(sw * 0.1, H * 0.035, haut, 10), 0, H * 0.02, 0);
   const kr = H * 0.065 * (o.kopfGr ?? 1); j.kopf = gruppe(j.hals, 0, H * 0.045 + kr * 0.9, 0); j.kopfR = kr;
   const schaedel = an(j.kopf, kugel(kr, o.kopfMat ?? haut, 28), 0, 0, 0); schaedel.scale.set(0.86, 1.06, 0.96); j.schaedel = schaedel;
-  const kiefer = an(j.kopf, kugel(kr * 0.72, o.kopfMat ?? haut, 20), 0, -kr * 0.42, kr * 0.12); kiefer.scale.set(0.95, 0.75, 0.9);
+  const kiefer = an(j.kopf, kugel(kr * 0.72, o.kopfMat ?? haut, 20), 0, -kr * 0.42, kr * 0.12); kiefer.scale.set(0.95, 0.75, 0.9); kiefer.userData.y0 = kiefer.position.y; g.userData.kiefer = kiefer;
   const oa = H * 0.19 * (o.armLang ?? 1), ua = H * 0.16 * (o.armLang ?? 1), hr = H * 0.075 * (o.armLang ?? 1) ** 0.3 * (o.handGr ?? 1);
   for (const [s, n] of [[-1, "L"], [1, "R"]]) {
     const sch = j["schulter" + n] = gruppe(j.brust, s * sw * 0.5, rumpf * 0.86, 0); an(sch, kugel(sw * 0.15 * d, o.aermel ?? oben, 12));
@@ -86,9 +87,11 @@ const BINDEN = (g) => g;
 
 // ---------- Figuren ----------
 const nun = () => { const g = skelett({ groesse: 1.85, schulter: 0.4, haut: "#ece8e4", oben: stoff("#0c0b0e", 0.95), aermel: stoff("#0c0b0e", 0.95), unten: stoff("#0c0b0e"), finger: 1.25 }); const j = g.userData.j, kr = j.kopfR;
-  robe(g, stoff("#0d0c10", 0.95), [[0.42, 0], [0.38, 0.3], [0.3, 0.9], [0.24, 1.25], [0.22, 1.4], [0.15, 1.5], [0.05, 1.55]]);
+  g.userData.robe = robe(g, stoff("#0d0c10", 0.95), [[0.42, 0], [0.38, 0.3], [0.3, 0.9], [0.24, 1.25], [0.22, 1.4], [0.15, 1.5], [0.05, 1.55]]);
   gesicht(j.kopf, kr, (x, w, h) => { Z.haut(x, w, h, "#ebe7e2", "rgba(40,40,60,0.35)"); Z.adern(x, w, h); Z.augenhoehle(x, w, h, { y: 0.47, abst: 0.16, rx: 0.1, ry: 0.07, farbe: "rgba(15,10,20,0.95)" });
     Z.auge(x, w, h, { y: 0.47, abst: 0.16, r: 0.03, iris: "#e8c41a", weiss: "#d8d0b8", pupille: 0.35 }); Z.nase(x, w, h, { y: 0.6 }); x.fillStyle = "#14080c"; x.beginPath(); x.ellipse(w / 2, h * 0.73, w * 0.11, h * 0.035, 0, 0, 7); x.fill(); }, { breite: 1.6, hoehe: 1.3 });
+  schreiGesicht(g, g.children.length ? j.kopf.children[j.kopf.children.length - 1] : null, (x, w, h) => { Z.haut(x, w, h, "#ebe7e2", "rgba(40,40,60,0.45)"); Z.adern(x, w, h, "rgba(40,30,60,0.8)", 12); Z.augenhoehle(x, w, h, { y: 0.44, abst: 0.16, rx: 0.11, ry: 0.08, farbe: "rgba(10,5,15,1)" }); Z.auge(x, w, h, { y: 0.44, abst: 0.16, r: 0.036, iris: "#f0d020", weiss: "#e8d8a0", pupille: 0.25, glanz: false });
+    x.fillStyle = "#0a0204"; x.beginPath(); x.ellipse(w / 2, h * 0.76, w * 0.17, h * 0.15, 0, 0, 7); x.fill(); x.fillStyle = BLUT; x.beginPath(); x.ellipse(w / 2, h * 0.76, w * 0.17, h * 0.15, 0, 0, 7); x.lineWidth = 10; x.strokeStyle = BLUT; x.stroke(); Z.zaehne(x, w, h, { y: 0.76, b: 0.15, hoch: 0.13, farbe: "#e8dcc4", n: 12 }); });
   const schw = stoff("#0b0a0d", 0.95), weiss = physisch("#f2f0ec", 0.7);
   const haube = an(j.kopf, new THREE.Mesh(new THREE.SphereGeometry(kr * 1.14, 28, 20, Math.PI * 0.62, Math.PI * 1.76), schw), 0, kr * 0.1, -kr * 0.08); haube.scale.set(0.95, 1.08, 1.0); haube.material.side = THREE.DoubleSide;
   const band = an(j.kopf, new THREE.Mesh(new THREE.TorusGeometry(kr * 0.88, kr * 0.07, 8, 40, Math.PI * 1.2), weiss), 0, kr * 0.05, kr * 0.15); band.geometry = new THREE.TorusGeometry(kr * 0.82, kr * 0.09, 8, 40, Math.PI * 1.15); band.rotation.z = -Math.PI * 0.075; band.position.set(0, kr * 0.02, kr * 0.62); band.scale.set(0.95, 1.12, 1);
@@ -125,6 +128,9 @@ const pennywise = () => { const kost = stoff("#d8d4cc", 0.85); const g = skelett
   gesicht(j.kopf, kr, (x, w, h) => { Z.haut(x, w, h, "#f8f6f2", "rgba(120,110,110,0.3)"); x.strokeStyle = "#c01018"; x.lineWidth = 12; x.lineCap = "round"; for (const s of [-1, 1]) { x.beginPath(); x.moveTo(w / 2 + s * w * 0.13, h * 0.15); x.lineTo(w / 2 + s * w * 0.15, h * 0.52); x.stroke(); }
     Z.augenhoehle(x, w, h, { y: 0.45, abst: 0.13, farbe: "rgba(120,60,40,0.5)" }); Z.auge(x, w, h, { y: 0.45, abst: 0.13, r: 0.032, iris: "#e8b820", pupille: 0.35 }); x.fillStyle = "#c01018"; x.beginPath(); x.arc(w / 2, h * 0.6, w * 0.035, 0, 7); x.fill();
     x.strokeStyle = "#c01018"; x.lineWidth = 14; for (const s of [-1, 1]) { x.beginPath(); x.moveTo(w / 2, h * 0.73); x.quadraticCurveTo(w / 2 + s * w * 0.16, h * 0.77, w / 2 + s * w * 0.2, h * 0.6); x.stroke(); } x.fillStyle = "#3a0a0a"; x.beginPath(); x.ellipse(w / 2, h * 0.75, w * 0.09, h * 0.03, 0, 0, 7); x.fill(); Z.zaehne(x, w, h, { y: 0.75, b: 0.08, hoch: 0.025 }); }, { breite: 1.6, hoehe: 1.75, auf: 0.12 });
+  { const gm = j.kopf.children[j.kopf.children.length - 1]; gm.position.y = kr * 0.1; gm.scale.set(1.05, 1.13, 1.02); }
+  schreiGesicht(g, j.kopf.children[j.kopf.children.length - 1], (x, w, h) => { Z.haut(x, w, h, "#f8f6f2", "rgba(120,110,110,0.35)"); x.strokeStyle = "#c01018"; x.lineWidth = 12; x.lineCap = "round"; for (const s2 of [-1, 1]) { x.beginPath(); x.moveTo(w / 2 + s2 * w * 0.13, h * 0.12); x.lineTo(w / 2 + s2 * w * 0.15, h * 0.45); x.stroke(); }
+    Z.auge(x, w, h, { y: 0.4, abst: 0.13, r: 0.04, iris: "#f0c020", pupille: 0.2, glanz: false }); x.fillStyle = "#1a0204"; x.beginPath(); x.ellipse(w / 2, h * 0.72, w * 0.22, h * 0.2, 0, 0, 7); x.fill(); x.strokeStyle = "#c01018"; x.lineWidth = 14; x.stroke(); Z.zaehne(x, w, h, { y: 0.72, b: 0.2, hoch: 0.18, farbe: "#f0e8d0", n: 14 }); Z.zaehne(x, w, h, { y: 0.72, b: 0.13, hoch: 0.1, farbe: "#d8d0b8", n: 10 }); });
   const haar = stoff("#e0661a", 1); for (const s of [-1, 1]) { const b = an(j.kopf, kugel(kr * 0.42, haar, 14), s * kr * 0.82, kr * 0.25, -kr * 0.2); b.scale.set(0.8, 0.7, 1.1); }
   for (let i = 0; i < 3; i++) { const k = an(j.hals, new THREE.Mesh(new THREE.TorusGeometry(kr * (1.1 + i * 0.2), kr * 0.18, 8, 28), stoff(i % 2 ? "#e8e2da" : "#d0c8be")), 0, -kr * 0.1 - i * kr * 0.12, 0); k.rotation.x = Math.PI / 2; }
   for (let i = 0; i < 3; i++) an(j.brust, kugel(0.07 * M, stoff("#e0661a"), 12), 0, g.userData.H * 0.3 * (0.75 - i * 0.2), 0.16 * M);
@@ -139,6 +145,8 @@ const pluesch = (farbe, { lippen = "#e0141e", wimpern = false, schleife = false,
       if (wimpern) { x.strokeStyle = "#050505"; x.lineWidth = 5; for (let i = 0; i < 3; i++) { x.beginPath(); x.moveTo(w / 2 + s * w * (0.15 + 0.03 * (i - 1)), h * 0.34); x.lineTo(w / 2 + s * w * (0.17 + 0.05 * (i - 1)), h * 0.28); x.stroke(); } } }
     x.fillStyle = lippen; x.beginPath(); x.moveTo(w * 0.22, h * 0.6); x.quadraticCurveTo(w / 2, h * 0.96, w * 0.78, h * 0.6); x.quadraticCurveTo(w / 2, h * 0.74, w * 0.22, h * 0.6); x.fill();
     x.fillStyle = "#2a0606"; x.beginPath(); x.moveTo(w * 0.27, h * 0.63); x.quadraticCurveTo(w / 2, h * 0.9, w * 0.73, h * 0.63); x.quadraticCurveTo(w / 2, h * 0.75, w * 0.27, h * 0.63); x.fill(); Z.zaehne(x, w, h, { y: 0.71, b: 0.2, hoch: 0.045, n: 14 }); }, { breite: 1.7, hoehe: 1.4 });
+  schreiGesicht(g, j.kopf.children[j.kopf.children.length - 1], (x, w, h) => { for (const s2 of [-1, 1]) { x.fillStyle = "#050505"; x.beginPath(); x.arc(w / 2 + s2 * w * 0.16, h * 0.3, w * 0.06, 0, 7); x.fill(); }
+    x.fillStyle = lippen; x.beginPath(); x.ellipse(w / 2, h * 0.66, w * 0.34, h * 0.3, 0, 0, 7); x.fill(); x.fillStyle = "#1a0303"; x.beginPath(); x.ellipse(w / 2, h * 0.66, w * 0.29, h * 0.25, 0, 0, 7); x.fill(); for (let r2 = 0; r2 < 3; r2++) Z.zaehne(x, w, h, { y: 0.66, b: 0.28 - r2 * 0.07, hoch: 0.24 - r2 * 0.07, n: 16 - r2 * 3, farbe: r2 ? "#d8d0c0" : "#f4f0e4" }); });
   for (const s of [-1, 1]) { const o = an(j.kopf, kugel(kr * 0.3, f, 14), s * kr * 0.72, kr * 0.78, 0); o.scale.set(1, 1, 0.6); }
   if (schleife) { const sm = physisch("#f4f4f4", 0.5); for (const s of [-1, 1]) { const b = an(j.kopf, kugel(kr * 0.22, sm, 12), kr * 0.45 + s * kr * 0.2, kr * 0.95, kr * 0.2); b.scale.set(1.2, 0.8, 0.5); } }
   g.userData.horror = { id, name }; return g; };
@@ -154,3 +162,26 @@ export const REAL = {
   kissymissy: { name: "Kissy Missy", groesse: 5.5, bau: () => pluesch("#e8569c", { wimpern: true, schleife: true, id: "kissymissy", name: "Kissy Missy" }) },
 };
 export const real = (id) => { const e = REAL[id]; if (!e) throw new Error("keine realistische Fassung: " + id); const g = e.bau(); scene.add(g); return g; };
+
+
+// ---------- Bewegung (Jonathan 24.11.: Form, Bewegung und Animation der Horrorfiguren verbessern) ----------
+// ranim(g, t, modus, o): typische Bewegung je Figur, ohne Wackeln/Flackern (alles stetig).
+//   modus: "stehen" (lauern, atmen, Kopf-Ruck), "gehen" (Figur-eigener Gang), "angriff" (Arme vor, schneller), "schrei" (Jumpscare-Haltung)
+const ruck = (t, alle = 3.1, dauer = 0.18) => { const p = t % alle; return p < dauer ? Math.sin(p / dauer * Math.PI) : 0; };   // seltener, kurzer Kopf-Ruck
+export const ranim = (g, t, modus = "stehen", o = {}) => { const id = g.userData.horror?.id, j = g.userData.j; if (!j) return; const tempo = o.tempo ?? 1, p = t * tempo;
+  const st = { atmen: t * 1.6 }, gehen = modus === "gehen", angr = modus === "angriff", schrei = modus === "schrei";
+  if (id === "nun") { if (g.userData.robe) { g.userData.robe.rotation.z = Math.sin(t * 1.3) * 0.025; g.userData.robe.rotation.x = Math.sin(t * 0.9) * 0.02 + (angr ? 0.06 : 0); g.userData.robe.position.y = (0.12 + Math.sin(t * 1.3) * 0.04) * M; } rpose(g, { ...st, schweben: 0.12 + Math.sin(t * 1.3) * 0.04, kopfNeig: 0.12 + ruck(t, 2.7) * 0.35, kopfDreh: ruck(t + 1, 3.3) * -0.5, armL: angr || schrei ? 1.3 : 0.05, armR: angr || schrei ? 1.4 : 0.05, ellbogen: angr ? 0.5 : 0.1, neig: schrei ? 0.25 : 0.05 }); }
+  else if (id === "slenderman") { rpose(g, { ...st, lauf: gehen ? 0.35 : 0, phase: p * 2.2, kopfNeig: 0.18 + Math.sin(t * 0.7) * 0.05, kopfDreh: Math.sin(t * 0.4) * 0.25, armL: 0.04, armR: 0.04, armLz: 0.06, armRz: 0.06 });
+    if (g.userData.tentakel) { g.userData.tentakel.visible = angr || schrei || !!o.tentakel; g.userData.tentakel.children.forEach((c, i) => { c.rotation.set(Math.sin(t * 1.5 + i) * 0.25, Math.sin(t * 1.1 + i * 2) * 0.3, Math.cos(t * 1.3 + i) * 0.2); }); } }
+  else if (id === "huggywuggy" || id === "kissymissy") { const sw = gehen || angr ? Math.sin(p * 2.6) : 0; rpose(g, { ...st, lauf: gehen || angr ? 0.6 : 0, phase: p * 2.6, armL: angr || schrei ? 1.6 : 0.15 - sw * 0.2, armR: angr || schrei ? 1.6 : 0.15 + sw * 0.2, armLz: 0.25, armRz: 0.25, ellbogen: 0.05, kopfNeig: -0.1 + ruck(t, 2.4) * 0.3, kopfDreh: Math.sin(t * 0.8) * 0.2, neig: 0.12 }); }
+  else if (id === "pennywise") { const tanz = gehen ? Math.abs(Math.sin(p * 4)) : 0; rpose(g, { ...st, lauf: gehen ? 0.9 : 0, phase: p * 4, armL: angr ? 1.5 : 0.4 + Math.sin(p * 4) * 0.3 * (gehen ? 1 : 0), armR: angr ? 1.5 : 0.4 - Math.sin(p * 4) * 0.3 * (gehen ? 1 : 0), ellbogen: 0.6, kopfNeig: 0.25 * Math.sin(t * 0.9) + ruck(t, 2.2) * 0.4, kopfDreh: 0.35 * Math.sin(t * 0.6), neig: schrei ? 0.3 : 0.15, schweben: tanz * 0.05 }); }
+  else if (id === "jason" || id === "michaelmyers") { rpose(g, { ...st, lauf: gehen || angr ? 0.7 : 0, phase: p * (id === "jason" ? 2.2 : 2.6), armR: angr ? 2.4 : 0.15, ellbogen: angr ? 0.2 : 0.25, armL: 0.05, kopfNeig: id === "michaelmyers" ? 0.08 + ruck(t, 4.2, 0.6) * 0.35 : 0.12, kopfDreh: id === "michaelmyers" ? ruck(t + 2, 4.2, 0.9) * 0.45 : 0, neig: 0.06 }); }
+  else rpose(g, { ...st, lauf: gehen ? 0.7 : 0, phase: p * 2.5 });
+  const kf = g.userData.kiefer; if (kf) kf.position.y = kf.userData.y0 - (schrei ? 0.35 : 0) * j.kopfR;
+  const gs = g.userData.gesicht; if (gs && gs.userData.schrei) gs.material.map = schrei ? gs.userData.schrei : gs.userData.normal; };
+
+// Jumpscare-Kamera: Figur springt ins Bild. q 0…1 über die Dauer (ca. 0,35 s); Kamera endet direkt vor dem Gesicht.
+// Kein Wackeln (Jonathans Regel): nur harter Schnitt + schnelles Heranfahren. Rückgabe { pos, ziel, fov }.
+export const jumpscareBlick = (g, q) => { const j = g.userData.j, k = new THREE.Vector3(), r = j.kopfR; g.updateMatrixWorld(true); j.kopf.getWorldPosition(k);
+  const vor = new THREE.Vector3(0, 0, 1).applyQuaternion(g.getWorldQuaternion(new THREE.Quaternion())); const e = 1 - Math.pow(1 - Math.min(1, q), 4);
+  const abst = r * (11 - 7 * e); return { pos: k.clone().addScaledVector(vor, abst).add(new THREE.Vector3(0, r * 0.1, 0)), ziel: k.clone().add(new THREE.Vector3(0, -r * 0.1, 0)), fov: 50 - 14 * e }; };
