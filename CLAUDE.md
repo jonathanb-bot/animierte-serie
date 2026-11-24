@@ -1,3 +1,4 @@
+> **HORROR (Jonathan 24.11., Issue #43):** Blutrot stilisiert (erkennbar, aber unrealistisch) und bekannte Horrorfiguren (The Nun, Siren Head, Slender Man …) erlaubt. Ersetzt „Blut höchstens angedeutet“ und „nur eigene Wesen“.
 > **MARKEN, SPIELE UND LOGOS ERLAUBT (Jonathan 24.11., Issue #42):** Marken und Spiele dürfen komplett genannt und gezeigt werden, Logos möglichst detailgetreu. Ersetzt ältere Regeln wie „keine Marken“, „kein echtes Logo“, „keine echten Roblox-Namen“.
 > **STIMME NIE BEARBEITEN (Jonathan 24.11., Issue #41):** keine Tonhöhe, kein Kompressor/EQ/Tempo/Begrenzer, kein loudnorm – nur Musik und Geräusche anpassen.
 
