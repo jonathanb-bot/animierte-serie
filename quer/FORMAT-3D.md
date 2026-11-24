@@ -34,7 +34,23 @@ Keller-Bild bzw. im Vorbild-TikTok), nur länger und mit längeren Geschichten. 
 - **Insgesamt kostet Englisch etwa 25–30 % zusätzliche Arbeit** (Übersetzung, Texte im Bild, Prüfen), dazu das doppelte Kontingent.
   Wird das knapp, kommt die englische Fassung einen Tag später.
 
+## Festgelegt (Jonathan 24.11.)
+- **1 langes Video pro Woche, immer samstags** (Deutsch 17:00, Englisch 23:30, ±30 min). Der Lauf startet donnerstags 21:23.
+
+## Gemini-Verbrauch (Rechnung 24.11.)
+| Was | Anfragen |
+|---|---|
+| Blockstadt täglich (≈24 Zeilen, Dreiergruppen, 1–2 Versuche) | 8–16 |
+| Dorf täglich (≈20 Zeilen) | 7–14 |
+| Nische englisch täglich | 1–3 |
+| **Montag–Freitag zusammen** | **16–33 pro Tag** |
+| Langes Video Deutsch (≈150 Zeilen, 8–10 pro Anfrage) | 16–20 |
+| Langes Video Englisch | 16–20 |
+
+Kontingent: etwa 10 Anfragen pro Schlüssel und Tag, 5 Schlüssel ≈ 50. Die Stimme des langen Videos wird deshalb verteilt:
+**Donnerstag Deutsch, Freitag Englisch** (je Tag dann 32–53, im ungünstigsten Fall knapp über 50). Mit 1–2 zusätzlichen Schlüsseln
+(`GEMINI_API_KEY_6`, `_7`) ist immer Luft.
+
 ## Offene Entscheidungen (Jonathan)
-- Wie oft pro Woche (Vorschlag 1, später 2)?
 - Erzähler: Ich-Erzählung mit Puck wie die Blockstadt, oder Du-Erzählung wie bisher im Querformat?
 - 60 fps oder 30 fps (30 fps halbiert die Renderzeit, bei langen Videos kaum sichtbar)?
