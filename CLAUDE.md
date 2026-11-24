@@ -2,6 +2,8 @@
 
 > **BLOCKSTADT-SERIE auf den deutschen Kanälen (Jonathan 22./23.11.):** Ab 23.11. jeden Tag 1 Folge (TikTok + Instagram volle Länge, YouTube ≤ 89 s), Mitmach-Frage A/B/C am Ende, die nächste Folge setzt den Top-Kommentar um. Deutsche Nischen-Kurzvideos pausieren ab 24.11., englische Nischen-Folgen und Querformat laufen weiter. Werkzeug und Regeln: `block/README.md`, Lauf `taeglich/laeufe/blockstadt.md`. Kein Kamera-Wackeln, kein Flackern, Musik passend zur Stimmung, Stimme Gemini „Puck“ (Kinderstimme, kurze Abschnitte, ohne Radio-Kette). **Stimme nie bearbeiten (Issue #41, 24.11.):** keine Tonhöhe, kein Kompressor/EQ/Tempo/Begrenzer, kein loudnorm – nur Musik und Geräusche anpassen, Kodieren mit `block/lautheit.py`.
 
+> **HORROR: BLUTROT STILISIERT UND BEKANNTE HORRORFIGUREN ERLAUBT (Jonathan 24.11., Issue #43):** rote Spritzer/Lachen im Flat-Stil, erkennbar aber unrealistisch, keine realistischen Wunden; Figuren wie The Nun, Siren Head, Slender Man dürfen vorkommen. Ersetzt „Blut höchstens angedeutet“ und „nur eigene Wesen“.
+
 > **MARKEN, SPIELE UND LOGOS ERLAUBT (Jonathan 24.11., Issue #42):** Marken und Spiele dürfen komplett genannt und gezeigt werden, Logos möglichst detailgetreu (z. B. NASA, Lieferando, Roblox, Minecraft, Fortnite). Ersetzt alle älteren Regeln wie „keine Marken“, „kein echtes Logo“, „keine echten Roblox-Namen“. Nur die Handlung von Vorbild-Videos übernehmen wir weiterhin nicht 1:1.
 
 > **MASTER-VORAUSSETZUNG (Jonathan 21.11.): `taeglich/MASTER.md` vor jedem neuen Video lesen und die Abnahme (Abschnitt 9) abhaken** – fasst Auswertung, #38, #39, Dopamin-Loop, 7 Content-Gesetze und alle festen Regeln zusammen.

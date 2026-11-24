@@ -105,6 +105,8 @@ Bis zum 22. November wird viel ausprobiert und alles genau ausgewertet. **Mögli
 
 ## Horror-Geschichten (Jonathans Wunsch 4.11., Issue #23)
 
+**Seit 24.11. (Issue #43): Blutrot stilisiert und bekannte Horrorfiguren (The Nun, Siren Head …) erlaubt – die zwei Regeln unten zu Blut und „nur eigene Wesen“ gelten nicht mehr.**
+
 Jonathan möchte mehr Horror testen, **ohne echte Gewalt** (Blut höchstens angedeutet, Jonathan 7.11.): unheimliche Wesen im Stil moderner Internet-Gruselgeschichten (Creepypasta, Kryptiden), kurz als Test mit Folgen von **2–3 Minuten**, um zu sehen, ob es die Leute packt.
 - **Format „horror“:** 3–5 Folgen à 120–180 s (330–430 Wörter, 30–40 Einstellungen), TikTok jede Folge ein eigener Post, Instagram/YouTube jede Folge ein Post (Reels und Shorts erlauben bis 3 min; `staffel_veroeffentlichen.py` erlaubt bei `laengenband` „horror …“ bis 185 s). In `staffeln.json` → `format.laengenband` mit „horror“ beginnen. Stimme bei Folgen über 2 min mit `--anfragen 2`.
 - **Gruseln statt Gewalt:** Blut höchstens angedeutet (Jonathan 7.11.: dunkler Fleck im Schnee, roter Abdruck an einer Tür, Kratzspuren), keine Wunden, keine Gewalt im Bild, keine Leichen, keine Gewalt gegen Kinder, nie Suizid. Die Angst entsteht aus Stille, Geräuschen, einer Stimme, die jemanden nachahmt, Licht, das ausgeht, und dem Wesen, das man nie ganz sieht (nur Umriss, Augen, Schatten). Am Ende jeder Folge der Cliffhanger, die letzte Folge darf offen und unheimlich enden.

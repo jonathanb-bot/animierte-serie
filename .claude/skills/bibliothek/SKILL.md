@@ -5,7 +5,7 @@ description: Blockstadt-Bibliothek mit einem Vorbild-Video abgleichen und verbes
 
 # Bibliothek: Vorbild-Video zerlegen, vergleichen, verbessern
 
-Ziel (Jonathan 23.11.): Die Blockstadt-Folgen bauen sich aus fertigen, geprüften Teilen zusammen (`block/KATALOG.md`). Jedes Vorbild-Video soll die Bibliothek ein Stück besser machen. Wir übernehmen dabei, **wie** etwas gemacht ist, nie **was** gezeigt wird. Das hat zwei Gründe: Jonathans feste Regel (nur den Aufbau von Vorbildern übernehmen, nie Inhalte; eigene Wesen, nie bekannte nachbauen). Seit 24.11. gilt: Marken und Spiele dürfen genannt und gezeigt werden, auch mit Logos, möglichst detailgetreu (Jonathan 24.11., Issue #42) – Marken, Spiele und Logos aus dem Vorbild dürfen also vorkommen; die Handlung bleibt trotzdem unsere eigene., und die Folgen sollen eigenständig bleiben.
+Ziel (Jonathan 23.11.): Die Blockstadt-Folgen bauen sich aus fertigen, geprüften Teilen zusammen (`block/KATALOG.md`). Jedes Vorbild-Video soll die Bibliothek ein Stück besser machen. Wir übernehmen dabei, **wie** etwas gemacht ist, nie **was** gezeigt wird. Das hat zwei Gründe: Jonathans feste Regel (nur den Aufbau von Vorbildern übernehmen, nie Inhalte; eigene Wesen, nie bekannte nachbauen – seit 24.11. aufgehoben: bekannte Horrorfiguren und stilisiertes Blutrot erlaubt, Issue #43). Seit 24.11. gilt: Marken und Spiele dürfen genannt und gezeigt werden, auch mit Logos, möglichst detailgetreu (Jonathan 24.11., Issue #42) – Marken, Spiele und Logos aus dem Vorbild dürfen also vorkommen; die Handlung bleibt trotzdem unsere eigene., und die Folgen sollen eigenständig bleiben.
 
 Arbeite selbstständig und ohne Rückfragen, auf Deutsch. Qualität vor Menge: lieber 4 Elemente richtig gut als 15 halb.
 
