@@ -1,3 +1,6 @@
+> **MARKEN, SPIELE UND LOGOS ERLAUBT (Jonathan 24.11., Issue #42):** Marken und Spiele dürfen komplett genannt und gezeigt werden, Logos möglichst detailgetreu. Ersetzt ältere Regeln wie „keine Marken“, „kein echtes Logo“, „keine echten Roblox-Namen“.
+> **STIMME NIE BEARBEITEN (Jonathan 24.11., Issue #41):** keine Tonhöhe, kein Kompressor/EQ/Tempo/Begrenzer, kein loudnorm – nur Musik und Geräusche anpassen.
+
 # Hinweise für Claude
 
 > **MASTER-VORAUSSETZUNG (Jonathan 21.11.): `taeglich/MASTER.md` (Branch `taeglich`) vor jedem neuen Video lesen und die Abnahme (Abschnitt 9) abhaken** – fasst Auswertung, #38, #39, Dopamin-Loop, 7 Content-Gesetze und alle festen Regeln zusammen.
