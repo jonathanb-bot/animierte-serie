@@ -105,3 +105,7 @@ Jonathan will zwei Serien parallel: täglich 1 Blockstadt-Folge („In meiner St
 - **Uhrzeiten (Berlin, ±30 min gestreut):** Blockstadt wie bisher (Instagram 12:00, YouTube 17:30, TikTok 19:00),
   Dorf am Abend: Instagram 18:00, YouTube 20:30, TikTok 21:30. Zwei Posts derselben Plattform liegen so immer über 2 h auseinander.
 - **Kontingent:** Zwei Folgen am Tag brauchen doppelt so viele Gemini-Anfragen. Ist das Kontingent knapp, kommt die Blockstadt zuerst.
+
+## Stimme (Jonathan 24.11. abends)
+Keine düstere Stimme: eine normale Erzählstimme, gern kindlich wie bei der Blockstadt (Gemini „Puck“), **unbearbeitet** (Issue #41).
+Die Horrorfiguren sprechen nie. Die Hörproben düsterer Stimmen entfallen. Uhrzeiten (Instagram 18:00, YouTube 20:30, TikTok 21:30) sind von Jonathan bestätigt.
