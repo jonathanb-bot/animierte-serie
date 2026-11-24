@@ -194,7 +194,7 @@ class Ton:
             tief = sum(np.sin(2 * np.pi * f1 * np.cumsum(rutsch) / SR) for f1 in (196.0, 207.7, 233.1, 246.9)) / 4 * trem
             schlag = np.sin(2 * np.pi * (70 * np.exp(-t * 4) + 32) * t) * np.exp(-t * 2.2) + band(rng.standard_normal(len(t)), 60, 1500) * np.exp(-t * 25) * 0.8
             y = (1.2 * bruell + 0.55 * rumpeln + 0.45 * tief) * h * (1 - np.exp(-t * 250)) + 1.3 * schlag
-            y = np.tanh(2.6 * y / (np.abs(y).max() + 1e-9)); y = band(y, 20, 6500)                                    # Sättigung = dicht wie im Vorbild
+            y = np.tanh(4.2 * y / (np.abs(y).max() + 1e-9)); y = band(y, 20, 6500)                                    # Sättigung = dicht wie im Vorbild
         ir = rng.standard_normal(int(1.1 * SR)) * np.exp(-np.arange(int(1.1 * SR)) / SR * 5); hall = np.convolve(y, ir)[:len(y)] / 40
         y = y + 0.35 * hall; y = y / np.abs(y).max()
         self.add(self.js, t0, y, g)
