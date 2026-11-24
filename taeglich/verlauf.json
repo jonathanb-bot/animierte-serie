@@ -1069,6 +1069,23 @@
    "lufs": -14.6,
    "dauer_s": 81.35,
    "sprachpruefung": 0.965
+  },
+  {
+   "id": "block-v02",
+   "datum": "2026-11-24",
+   "titel": "In meiner Stadt bekommst du Geld fürs Schlafen",
+   "emoji": "💤",
+   "serie": "Blockstadt-Vorrat (eigenständig, Jonathan 23.11.)",
+   "art": "blockstadt",
+   "stimme": "Puck (Kinderstimme, Gemini, Storytime-Anweisung)",
+   "thema": "Jede Minute Schlaf bringt Geld, ich kann als Einziger nicht schlafen (0 €); Schlafamt misst 0 %; Bürgermeister macht mich zum Nachtwächter, dann gehen alle Laternen aus. Frage: A Papa wecken, B Rausgehen, C Bürgermeister anrufen.",
+   "kulisse": "Buntdorf-Platz, Vorstadt-Villa, Schlafamt, Nachtstadt",
+   "fassung": "voll",
+   "status": "vorrat, noch nicht eingeplant",
+   "video": "https://raw.githubusercontent.com/jonathanb-bot/animierte-serie/youtube-upload/taeglich/block-v02.mp4",
+   "lufs": -15.1,
+   "dauer_s": 86.23,
+   "sprachpruefung": 0.935
   }
  ]
 }
