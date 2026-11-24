@@ -499,4 +499,55 @@ export const koffer = ({ farbe = "#c83a3a", groesse = 1 } = {}) => { const g = n
   for (const x of [-0.25, 0.25]) an(g, zyl(0.05, 0.05, 0.7, metall(), 8), x, 2.6, 0); an(g, rb(0.62, 0.1, 0.12, 0.04, metall("#2a2a2e")), 0, 2.95, 0);
   for (const x of [-0.55, 0.55]) { const r = an(g, zyl(0.13, 0.13, 0.12, mat("#1a1a1e", 0.6), 14), x, 0.13, 0.28); r.rotation.z = Math.PI / 2; }
   an(g, rb(0.5, 0.35, 0.03, 0.04, mat("#f4ecd8", 0.7)), 0.35, 1.7, 0.41); g.scale.setScalar(groesse); return g; };
-export const ALLE = { koffer, stern, sternglas, besen, reihenhaus, glasturm, baum, blumenkuebel, hecke, bank, laterne, ampel, hydrant, muelltonne, briefkasten, schild, zaun, brunnen, laden, haltestelle, fahrrad, bus, hund, katze, vogel, tisch, stuhl, sofa, stehlampe, regal, geschenk, fernseher, riesenTier, haus, schule, sportwagen, lichterkette, lehmhaus, wimpelkette, fackel, krug, palme, pyramide, glocke, thron, krone, sockel, steinwaechter, riesenWaechter, wolke, himmelshaus, bretterbude, muellberg, leiter, pool, glasaufzug, absperrung, goldvilla, goldschluessel, tellerhaus, spind, tribuene, krankenwagen, krankenbett, herzmonitor, babybett, achterbahn, torte, kinderwagen, gluehbirnenladen, limousine, liegestuhl, broetchen };
+// ---------- Random-Folge (Vorrat 05, 24.11.): Rakete, Startrampe, Grill, Trampolin, Lieferroller, Flugzeug ----------
+// Rakete (eigene Form, kein echtes Vorbild): weißer Rumpf, rote Spitze und Flossen, Fenster, Düse. userData.flamme (Gruppe, .visible/.scale), Spitze bei y = hoehe
+export const rakete = ({ hoehe = 16, farbe = "#f4f4f4", akzent = "#e83a3a" } = {}) => { const g = new THREE.Group(), R = hoehe * 0.09, km = plastik(farbe), am = plastik(akzent);
+  an(g, zyl(R, R * 1.05, hoehe * 0.62, km, 28), 0, hoehe * 0.12 + hoehe * 0.31, 0);
+  an(g, new THREE.Mesh(new THREE.ConeGeometry(R, hoehe * 0.26, 28), am), 0, hoehe * 0.74 + hoehe * 0.13, 0);
+  an(g, zyl(R * 1.01, R * 1.01, hoehe * 0.05, am, 28), 0, hoehe * 0.6, 0);
+  an(g, zyl(R * 0.75, R * 0.95, hoehe * 0.12, metall("#5a5a62"), 20), 0, hoehe * 0.06, 0);
+  for (let i = 0; i < 4; i++) { const a = i * Math.PI / 2, fl = an(g, rb(0.18, hoehe * 0.22, R * 1.4, 0.05, am), Math.sin(a) * R * 1.45, hoehe * 0.17, Math.cos(a) * R * 1.45); fl.rotation.y = a; }
+  const fe = an(g, zyl(R * 0.36, R * 0.36, 0.12, mat("#3a4a5e", 0.2), 20), 0, hoehe * 0.5, R * 0.98); fe.rotation.x = Math.PI / 2; an(g, new THREE.Mesh(new THREE.TorusGeometry(R * 0.38, 0.07, 8, 24), metall()), 0, hoehe * 0.5, R * 1.02);
+  const fl = new THREE.Group(); g.add(fl); const f1 = an(fl, new THREE.Mesh(new THREE.ConeGeometry(R * 0.8, hoehe * 0.35, 18), leucht(3.4, 1.8, 0.4)), 0, -hoehe * 0.17, 0); f1.rotation.x = Math.PI;
+  const f2 = an(fl, new THREE.Mesh(new THREE.ConeGeometry(R * 0.45, hoehe * 0.22, 14), leucht(3.8, 3.4, 2.0)), 0, -hoehe * 0.1, 0); f2.rotation.x = Math.PI; fl.visible = false; g.userData.flamme = fl; return g; };
+// Startrampe: Betonplatte mit gelben Streifen, Gitterturm, Arm
+export const startrampe = ({ groesse = 1 } = {}) => { const g = new THREE.Group(), st = metall("#c8c8cc"), rot = plastik("#e85a3a");
+  an(g, bx(26, 1.2, 26, mat("#9a9aa0", 0.9)), 0, 0.6, 0); for (const s of [-1, 1]) an(g, bx(26, 0.05, 0.8, mat("#f2c21a", 0.6)), 0, 1.23, s * 12);
+  for (let y = 0; y < 26; y += 3) { an(g, bx(4, 0.25, 0.25, st), -9, 1.2 + y, -2); an(g, bx(4, 0.25, 0.25, st), -9, 1.2 + y, 2); an(g, bx(0.25, 0.25, 4, st), -11, 1.2 + y, 0); an(g, bx(0.25, 0.25, 4, st), -7, 1.2 + y, 0); }
+  for (const [x, z] of [[-11, -2], [-11, 2], [-7, -2], [-7, 2]]) an(g, bx(0.4, 27, 0.4, rot), x, 14.7, z);
+  an(g, bx(6, 0.5, 0.8, rot), -4, 20, 0); g.scale.setScalar(groesse); return g; };
+// Kugelgrill auf drei Beinen; userData.feuer (Glut + Flammen, .visible), userData.deckel
+export const grill = ({ farbe = "#1e1e22" } = {}) => { const g = new THREE.Group(), km = new THREE.MeshPhysicalMaterial({ color: farbe, roughness: 0.35, clearcoat: 0.6 });
+  const sch = an(g, new THREE.Mesh(new THREE.SphereGeometry(1.0, 24, 12, 0, Math.PI * 2, Math.PI / 2, Math.PI / 2), km), 0, 2.4, 0); sch.material.side = THREE.DoubleSide;
+  for (let i = 0; i < 3; i++) { const a = i * Math.PI * 2 / 3, b = an(g, zyl(0.06, 0.06, 2.3, metall("#8a8a90"), 8), Math.sin(a) * 0.55, 1.1, Math.cos(a) * 0.55); b.rotation.set(Math.cos(a) * 0.22, 0, -Math.sin(a) * 0.22); }
+  an(g, new THREE.Mesh(new THREE.TorusGeometry(0.98, 0.04, 6, 32).rotateX(Math.PI / 2), metall()), 0, 2.38, 0);
+  for (let i = -3; i <= 3; i++) an(g, bx(1.9 * Math.cos(Math.asin(i / 3.6)), 0.03, 0.03, metall()), 0, 2.36, i * 0.27);
+  const fe = new THREE.Group(); fe.position.y = 2.0; g.add(fe); for (let i = 0; i < 7; i++) an(fe, kugel(0.18, leucht(2.6, 0.9, 0.2), 10), Math.cos(i * 2.4) * 0.45, 0.02, Math.sin(i * 2.4) * 0.45);
+  for (let i = 0; i < 4; i++) { const f = an(fe, new THREE.Mesh(new THREE.ConeGeometry(0.22, 0.9, 10), leucht(3.4, 2.0, 0.5)), Math.cos(i * 1.6) * 0.3, 0.7, Math.sin(i * 1.6) * 0.3); f.scale.set(1, 1 + i * 0.15, 1); }
+  fe.visible = false; g.userData.feuer = fe;
+  const de = an(g, new THREE.Mesh(new THREE.SphereGeometry(1.0, 24, 12, 0, Math.PI * 2, 0, Math.PI / 2), km), 0, 2.4, 0); de.visible = false; g.userData.deckel = de;
+  for (const x of [-0.35, 0, 0.35]) { const w = an(g, zyl(0.11, 0.11, 0.9, mat("#c8603a", 0.5), 10), x, 2.48, 0); w.rotation.x = Math.PI / 2; }      // Würstchen
+  return g; };
+// Trampolin; userData.matte (Delle: scale.y bzw. position.y), Durchmesser ~5 m
+export const trampolin = ({ farbe = "#2a8ae8", d = 5 } = {}) => { const g = new THREE.Group(), r = d / 2;
+  an(g, new THREE.Mesh(new THREE.TorusGeometry(r, 0.22, 10, 40).rotateX(Math.PI / 2), plastik(farbe)), 0, 1.4, 0);
+  const m = an(g, zyl(r - 0.15, r - 0.15, 0.06, mat("#1a1a1e", 0.8), 40), 0, 1.38, 0); g.userData.matte = m;
+  for (let i = 0; i < 6; i++) { const a = i * Math.PI / 3; an(g, zyl(0.08, 0.08, 1.4, metall("#8a8a90"), 8), Math.cos(a) * r, 0.7, Math.sin(a) * r); }
+  return g; };
+// Lieferroller mit Thermobox (ohne Marke); Fahrer setzt man mit sitz: 1 auf y ≈ 1.3
+export const roller = ({ farbe = "#f2a21a", box = "#f26a1a" } = {}) => { const g = new THREE.Group(), km = plastik(farbe);
+  for (const z of [-1.0, 1.0]) { const r = an(g, new THREE.Mesh(new THREE.TorusGeometry(0.42, 0.16, 10, 24), mat("#1a1a1e", 0.7)), 0, 0.55, z); r.rotation.y = Math.PI / 2; }
+  an(g, rb(0.7, 0.35, 2.0, 0.12, km), 0, 0.85, 0); an(g, rb(0.7, 0.7, 0.9, 0.2, km), 0, 1.15, -0.6); an(g, rb(0.6, 0.18, 1.0, 0.08, mat("#2a2a2e", 0.6)), 0, 1.55, -0.4);
+  const st = an(g, zyl(0.07, 0.07, 1.6, metall(), 8), 0, 1.5, 0.95); st.rotation.x = -0.25; an(g, bx(1.1, 0.08, 0.08, metall("#2a2a2e")), 0, 2.25, 1.15);
+  an(g, rb(1.1, 1.0, 1.0, 0.1, plastik(box)), 0, 2.1, -1.0); an(g, bx(0.6, 0.06, 0.02, mat("#ffffff")), 0, 2.15, -0.49);
+  return g; };
+// Passagierflugzeug (eigene schlichte Form), Nase in +z
+export const flugzeug = ({ farbe = "#f4f4f4", akzent = "#2a6ae8" } = {}) => { const g = new THREE.Group(), km = plastik(farbe), am = plastik(akzent);
+  const r = an(g, zyl(1.6, 1.6, 22, km, 24), 0, 0, 0); r.rotation.x = Math.PI / 2; const n = an(g, kugel(1.6, km, 24), 0, 0, 11); n.scale.set(1, 1, 1.6);
+  const h = an(g, new THREE.Mesh(new THREE.ConeGeometry(1.6, 5, 24), km), 0, 0.3, -13.5); h.rotation.x = -Math.PI / 2;
+  an(g, rb(26, 0.35, 4.5, 0.15, km), 0, -0.5, 0); an(g, rb(9, 0.3, 2.4, 0.12, km), 0, 0.6, -14); const lw = an(g, rb(0.35, 5, 3.2, 0.12, am), 0, 3.0, -14.2); lw.rotation.x = 0.3;
+  for (const x of [-6, 6]) { const tw = an(g, zyl(0.8, 0.7, 3, metall("#c8c8cc"), 16), x, -1.4, 1); tw.rotation.x = Math.PI / 2; }
+  an(g, bx(0.05, 0.5, 18, am), 1.61, 0.3, 0); an(g, bx(0.05, 0.5, 18, am), -1.61, 0.3, 0);
+  for (let i = 0; i < 14; i++) for (const s of [-1, 1]) an(g, bx(0.06, 0.35, 0.5, mat("#2a3a4e", 0.2)), s * 1.6, 0.9, -8 + i * 1.3);
+  return g; };
+export const ALLE = { rakete, startrampe, grill, trampolin, roller, flugzeug, koffer, stern, sternglas, besen, reihenhaus, glasturm, baum, blumenkuebel, hecke, bank, laterne, ampel, hydrant, muelltonne, briefkasten, schild, zaun, brunnen, laden, haltestelle, fahrrad, bus, hund, katze, vogel, tisch, stuhl, sofa, stehlampe, regal, geschenk, fernseher, riesenTier, haus, schule, sportwagen, lichterkette, lehmhaus, wimpelkette, fackel, krug, palme, pyramide, glocke, thron, krone, sockel, steinwaechter, riesenWaechter, wolke, himmelshaus, bretterbude, muellberg, leiter, pool, glasaufzug, absperrung, goldvilla, goldschluessel, tellerhaus, spind, tribuene, krankenwagen, krankenbett, herzmonitor, babybett, achterbahn, torte, kinderwagen, gluehbirnenladen, limousine, liegestuhl, broetchen };
