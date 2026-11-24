@@ -79,3 +79,35 @@ Wenn es keine gültigen Kommentare gibt, kommt eine Waffe aus einer Reserve-List
 1. Plan A (jede Folge neue Stadt) oder Plan B (ein Dorf, Waffen bleiben, Wellen)? Oder B mit Städten: jede Saison verteidigt die meistgenannte Stadt.
 2. Eigene Serie neben Blockstadt oder statt einer Blockstadt-Folge?
 3. Stimme: Puck (Kind, wie Blockstadt) oder eine erwachsene Erzählstimme wie bei Spiele-Videos?
+
+---
+
+## Horror-Fassung (Jonathan 24.11. abends, Issue #43) – „Nacht-Defense“
+
+Gleiche Mechanik wie Plan B (Dorf, Waffen bleiben, Wellen werden stärker, geheime Fähigkeit), aber als **Horror bei Nacht**:
+- **Look:** Buntdorf nachts, Nebel, roter Mond, flackerfreie Laternen, Kirchturmglocke. Blutrot stilisiert: rote Spritzer an Hauswänden,
+  rote Pfützen, rote Schrift „WELLE 7“ wie gemalt, rote Augen im Wald. Erkennbar, aber im Flat-Stil, keine realistischen Wunden.
+- **Wer verliert, verschwindet:** Getroffene Dorfbewohner werden ins Dunkel gezogen (Schatten, roter Fleck bleibt) – man erahnt es, sieht es nicht.
+- **Countdown-Gefühl:** Uhr läuft bis 3:00 Uhr nachts; schafft das Dorf die Nacht, geht die Sonne auf (Erlösung + Jubel).
+
+**Monster = bekannte Horrorfiguren, je eine geheime Fähigkeit (die Zuschauer kennen die Figuren, raten aber die Schwäche):**
+| Welle | Figur | Geheime Fähigkeit | Hinweis im Video | Konter |
+|---|---|---|---|---|
+| 1–3 | The Nun | immun gegen Wucht/Kugeln | Kugeln fliegen durch sie durch | Licht, Weihwasser, Kreuz |
+| 4–6 | Siren Head | wird von Lärm angelockt und stärker | wächst bei jeder Sirene | Stille, Fangen (Netz), Kälte |
+| 7–9 | Slender Man | teleportiert, nur verwundbar, wenn man ihn nicht ansieht | verschwindet beim Hinsehen | Fallen, Spiegel, Licht von hinten |
+| 10–12 | Schatten-Schwarm (unser Wesen) | immun gegen Licht, heilt sich im Dunkeln | wächst, wenn Laternen ausgehen | Feuer, Wasser, Strom |
+| Boss | alle zusammen | – | – | das ganze Dorf |
+
+**Ablauf einer Folge (60–75 s):**
+1. **Hook (3 s):** roter Mond, Glocke schlägt, rote Schrift „NACHT 7“. „Du bist Teil dieses Dorfes. Überlebst du die Nacht?“
+2. **Neue Waffe (12 s):** „Eure Waffe: Flutlicht (die meisten Likes).“ Wird aufgebaut, kurzer Test.
+3. **Angriff (35 s):** Nebel, Figur erscheint am Waldrand, kommt näher (Jumpscare-artiger Schnitt, aber ohne Flackern). Waffen feuern,
+   Schadenszahlen, **„0 Schaden!“** – Fähigkeit wird sichtbar. Dorfbewohner verschwinden, rote Spritzer.
+4. **Ausgang (8 s):** Sonnenaufgang (geschafft) oder rote Schrift „DAS DORF IST GEFALLEN“.
+5. **Aufruf (8 s):** „Morgen kommt sie zurück – stärker. Was hilft gegen sie? Die meisten Likes kommen ins Dorf.“
+
+**Stimme:** Eine ernste, spannende Erzählstimme passt besser als das fröhliche Kind (Vorschlag: Gemini „Orus“ oder „Charon“, unverändert nach #41, nie flüstern).
+**Musik:** tiefe Horror-Flächen, Herzschlag, Glocke; die Stimme bleibt laut und klar darüber.
+**Bibliothek neu:** The Nun, Siren Head, Slender Man als Blockfiguren (detailgetreu im Serienstil), Blutspritzer-Effekt (Decals, fest, flackerfrei),
+roter Mond/Nebel, Waldrand, Kirchturm, 25–30 Waffen mit Effekten (Flutlicht, Wasserwerfer, Netz, Weihwasser, Feuer, Strom, Glocke …).
