@@ -1,5 +1,8 @@
 # Lauf „Querformat lang“ (So/Di/Do 21:23, neuer Chat) – Jonathan 17.11., Issue #37
 
+> **UMSTIEG AUF 3D (Jonathan 24.11. abends):** Die langen Querformat-Videos werden komplett auf den 3D-Stil der Blockstadt umgestellt (`quer/FORMAT-3D.md`). Bis die 3D-Technik dafür fertig ist, **keine neue Folge im alten Stil anfangen und keine angefangene alte Folge veröffentlichen**. Der Lauf prüft nur, ob in `quer/FORMAT-3D.md` „Technik fertig“ steht; wenn nicht, PushNotification „Querformat: wartet auf 3D-Umstieg“ und Ende.
+
+
 Pro Lauf entsteht **ein langes Querformat-Video (8–12 min), Deutsch und Englisch**, das am nächsten Tag (Mo/Mi/Fr) auf YouTube kommt. Die Serie läuft **getrennt von der Analyse** der Kurzvideos. Verbindlich: `quer/FORMAT.md`, Muster aus `quer/vorlagen.md`, Plan `quer/folgen.json`. Arbeite selbstständig und ohne Rückfragen, auf Deutsch.
 
 1. **Repo vorbereiten:** `cd /home/user/animierte-serie && git fetch origin taeglich main && git checkout -B taeglich origin/taeglich`, dann `pip install -q -r requirements.txt && npm ci --ignore-scripts --no-audit --no-fund`, `export CHROMIUM=/opt/pw-browsers/chromium`.
