@@ -1,0 +1,269 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face { font-family: "I"; src: url("assets/Inter-400.ttf"); font-weight: 400; }
+@font-face { font-family: "I"; src: url("assets/Inter-500.ttf"); font-weight: 500; }
+@font-face { font-family: "I"; src: url("assets/Inter-600.ttf"); font-weight: 600; }
+@font-face { font-family: "I"; src: url("assets/Inter-700.ttf"); font-weight: 700; }
+@font-face { font-family: "I"; src: url("assets/InterTight-800.ttf"); font-weight: 800; }
+html,body{margin:0;background:#000}canvas{display:block}
+</style></head><body>
+<canvas id="c"></canvas>
+<script>
+const W = 1080, H = 1920, K = 1440 / 1080, A = 3.15, ENDE = 30.85, PT = 2.75;
+const cv = document.getElementById("c"); cv.width = W * K; cv.height = H * K; let ctx = cv.getContext("2d");
+const clamp = (v, a, b) => Math.max(a, Math.min(b, v)), lerp = (a, b, t) => a + (b - a) * t, ein = p => { p = clamp(p, 0, 1); return p < 0.5 ? 4 * p * p * p : 1 - Math.pow(-2 * p + 2, 3) / 2; };
+const raus = p => 1 - Math.pow(1 - clamp(p, 0, 1), 3), feder = p => { p = clamp(p, 0, 1); return 1 - Math.pow(1 - p, 3) * Math.cos(p * Math.PI * 1.1) * (1 - p * 0.2); };
+const zurueck = p => { p = clamp(p, 0, 1); const c1 = 1.2, c3 = c1 + 1; return 1 + c3 * Math.pow(p - 1, 3) + c1 * Math.pow(p - 1, 2); };
+const rr = (x, y, w, h, r) => { ctx.beginPath(); ctx.roundRect(x, y, w, h, r); };
+const lade = src => new Promise(r => { const i = new Image(); i.onload = () => r(i); i.onerror = () => r(null); i.src = src; });
+// iOS Dark-Mode-Systemfarben
+const C = { bg: "#000", bg2: "#1c1c1e", bg3: "#2c2c2e", fill: "rgba(120,120,128,0.36)", fill2: "rgba(120,120,128,0.24)", sep: "rgba(84,84,88,0.6)", l1: "#fff", l2: "rgba(235,235,245,0.6)", l3: "rgba(235,235,245,0.3)",
+  blau: "#0a84ff", gruen: "#30d158", rot: "#ff453a", orange: "#ff9f0a", gelb: "#ffd60a", indigo: "#5e5ce6", pink: "#ff375f", lila: "#bf5af2", grau: "#8e8e93" };
+
+function tipp(ts, k) { let s = ""; for (const w of Z[k].woerter) { if (ts < w.a - 0.04) break; const n = Math.max(1, Math.round(clamp((ts - w.a + 0.04) / 0.09, 0, 1) * w.w.length)); s += (s ? " " : "") + w.w.slice(0, n); } return s; }
+const fertig = (ts, k) => ts > Z[k].e + 0.15;
+function font(gew, fs) { ctx.font = `${gew} ${fs}px I`; ctx.letterSpacing = fs >= 60 ? `${(-fs * 0.022).toFixed(1)}px` : fs >= 44 ? `${(-fs * 0.01).toFixed(1)}px` : "0px"; }
+function umbruch(t, max) { const z = []; let r = ""; for (const w of t.split(" ")) { const x = r ? r + " " + w : w; if (ctx.measureText(x).width > max && r) { z.push(r); r = w; } else r = x; } if (r) z.push(r); return z; }
+function text(t, x, y, fs, farbe = C.l1, gew = 400, max = 5000, lh = 1.2, align = "left") { if (!t) return 0; font(gew, fs); ctx.fillStyle = farbe; ctx.textAlign = align; ctx.textBaseline = "alphabetic"; const z = umbruch(t, max); z.forEach((l, i) => ctx.fillText(l, x, y + i * fs * lh)); ctx.textAlign = "left"; return z.length; }
+// große Liedzeile (SF-Display-artig: fett, eng gesetzt)
+const zeile = (t, x, y, fs = 80, max = W - 2 * 60, farbe = C.l1, align = "left") => text(t, x, y, fs, farbe, 700, max, 1.1, align);
+function cursor(ts, x, y, h, farbe = C.blau) { if (Math.floor(ts * 2.5) % 2 === 0) { ctx.fillStyle = farbe; rr(x, y - h * 0.8, 5, h, 2.5); ctx.fill(); } }
+function schatten(f, blur = 50, dy = 16, a = 0.45) { ctx.save(); ctx.shadowColor = `rgba(0,0,0,${a})`; ctx.shadowBlur = blur; ctx.shadowOffsetY = dy; f(); ctx.restore(); }
+function karteRR(x, y, w, h, r, farbe, sch = true) { const f = () => { rr(x, y, w, h, r); ctx.fillStyle = farbe; ctx.fill(); }; sch ? schatten(f) : f(); }
+function kreis(x, y, r, farbe) { ctx.beginPath(); ctx.arc(x, y, r, 0, Math.PI * 2); ctx.fillStyle = farbe; ctx.fill(); }
+function avatar(x, y, r, buch, farbe) { const g = ctx.createLinearGradient(x, y - r, x, y + r); g.addColorStop(0, farbe[0]); g.addColorStop(1, farbe[1]); ctx.beginPath(); ctx.arc(x, y, r, 0, Math.PI * 2); ctx.fillStyle = g; ctx.fill(); text(buch, x, y + r * 0.36, r * 0.95, "#fff", 600, 999, 1, "center"); }
+const AV = { K: ["#a7774f", "#6e4a2c"], G: ["#7d7bf0", "#4b49c4"], B: ["#43a46a", "#256b43"], V: ["#c46a6a", "#874040"], X: ["#8e8e93", "#5a5a5f"], A: ["#6aa6d8", "#3c6f9c"], H: ["#9a9aa0", "#5c5c62"] };
+// ---------- SF-Symbol-artige Icons (Vektor) ----------
+function ikon(n, x, y, s, farbe = C.l1, gew = 0.1) { ctx.save(); ctx.translate(x, y); ctx.scale(s / 100, s / 100); ctx.strokeStyle = farbe; ctx.fillStyle = farbe; ctx.lineWidth = gew * 100; ctx.lineCap = "round"; ctx.lineJoin = "round"; const b = () => ctx.beginPath(), st = () => ctx.stroke(), fi = () => ctx.fill();
+  switch (n) {
+    case "lautsprecher": b(); ctx.moveTo(-40, -14); ctx.lineTo(-22, -14); ctx.lineTo(0, -34); ctx.lineTo(0, 34); ctx.lineTo(-22, 14); ctx.lineTo(-40, 14); ctx.closePath(); fi(); for (let i = 1; i <= 3; i++) { b(); ctx.arc(2, 0, 12 + i * 13, -0.75, 0.75); ctx.lineWidth = 7; st(); } break;
+    case "airplay": b(); ctx.arc(0, -6, 34, Math.PI * 0.82, Math.PI * 2.18); ctx.lineWidth = 8; st(); b(); ctx.arc(0, -6, 18, Math.PI * 0.8, Math.PI * 2.2); st(); b(); ctx.moveTo(-20, 40); ctx.lineTo(20, 40); ctx.lineTo(0, 14); ctx.closePath(); fi(); break;
+    case "haken": b(); ctx.moveTo(-30, 2); ctx.lineTo(-8, 24); ctx.lineTo(32, -24); ctx.lineWidth = 13; st(); break;
+    case "play": b(); ctx.moveTo(-24, -34); ctx.lineTo(34, 0); ctx.lineTo(-24, 34); ctx.closePath(); fi(); break;
+    case "pause": rr(-30, -34, 20, 68, 5); fi(); rr(10, -34, 20, 68, 5); fi(); break;
+    case "vor": [-30, 4].forEach(dx => { b(); ctx.moveTo(dx, -26); ctx.lineTo(dx + 30, 0); ctx.lineTo(dx, 26); ctx.closePath(); fi(); }); break;
+    case "zurueck": [30, -4].forEach(dx => { b(); ctx.moveTo(dx, -26); ctx.lineTo(dx - 30, 0); ctx.lineTo(dx, 26); ctx.closePath(); fi(); }); break;
+    case "wlan": for (let i = 0; i < 3; i++) { b(); ctx.arc(0, 26, 18 + i * 20, -Math.PI * 0.75, -Math.PI * 0.25); ctx.lineWidth = 11; st(); } kreis(0, 26, 8, farbe); break;
+    case "flugzeug": b(); ctx.moveTo(0, -40); ctx.quadraticCurveTo(6, -36, 6, -20); ctx.lineTo(6, -6); ctx.lineTo(40, 12); ctx.lineTo(40, 20); ctx.lineTo(6, 10); ctx.lineTo(6, 26); ctx.lineTo(16, 34); ctx.lineTo(16, 40); ctx.lineTo(0, 35); ctx.lineTo(-16, 40); ctx.lineTo(-16, 34); ctx.lineTo(-6, 26); ctx.lineTo(-6, 10); ctx.lineTo(-40, 20); ctx.lineTo(-40, 12); ctx.lineTo(-6, -6); ctx.lineTo(-6, -20); ctx.quadraticCurveTo(-6, -36, 0, -40); fi(); break;
+    case "antenne": kreis(0, -10, 8, farbe); b(); ctx.moveTo(0, -4); ctx.lineTo(0, 36); ctx.lineWidth = 9; st(); [1, -1].forEach(sx => { b(); ctx.arc(0, -10, 22, sx > 0 ? -0.8 : Math.PI - 0.8 + 1.6 - 1.6, sx > 0 ? 0.8 : Math.PI + 0.8); ctx.lineWidth = 8; st(); }); break;
+    case "bluetooth": b(); ctx.moveTo(-18, -18); ctx.lineTo(18, 16); ctx.lineTo(0, 34); ctx.lineTo(0, -34); ctx.lineTo(18, -16); ctx.lineTo(-18, 18); ctx.lineWidth = 9; st(); break;
+    case "mond": b(); ctx.arc(0, 0, 32, 0.35 * Math.PI, 1.85 * Math.PI); ctx.arc(14, -10, 26, 1.75 * Math.PI, 0.45 * Math.PI, true); ctx.closePath(); fi(); break;
+    case "schloss": rr(-26, -6, 52, 42, 8); fi(); b(); ctx.arc(0, -10, 16, Math.PI, 0); ctx.lineTo(16, -6); ctx.moveTo(-16, -10); ctx.lineTo(-16, -6); ctx.lineWidth = 9; st(); break;
+    case "spiegeln": rr(-34, -26, 52, 40, 6); ctx.lineWidth = 8; st(); rr(-14, -10, 52, 40, 6); fi(); break;
+    case "personen": kreis(-12, -14, 16, farbe); b(); ctx.ellipse(-12, 24, 28, 18, 0, Math.PI, 0); fi(); kreis(22, -18, 12, farbe); b(); ctx.ellipse(24, 16, 20, 14, 0, Math.PI, 0); fi(); break;
+    case "iphone": rr(-20, -36, 40, 72, 10); ctx.lineWidth = 8; st(); rr(-8, -30, 16, 5, 2); fi(); break;
+    case "tag": b(); ctx.arc(0, 0, 32, 0, Math.PI * 2); ctx.lineWidth = 8; st(); kreis(0, 0, 10, farbe); break;
+    case "lkw": rr(-40, -24, 50, 40, 5); fi(); b(); ctx.moveTo(14, -12); ctx.lineTo(30, -12); ctx.lineTo(42, 2); ctx.lineTo(42, 16); ctx.lineTo(14, 16); ctx.closePath(); fi(); kreis(-24, 22, 10, farbe); kreis(28, 22, 10, farbe); break;
+    case "pfeil": b(); ctx.moveTo(-30, 30); ctx.lineTo(30, -30); ctx.moveTo(-6, -30); ctx.lineTo(30, -30); ctx.lineTo(30, 6); ctx.lineWidth = 10; st(); break;
+    case "muell": rr(-24, -20, 48, 56, 8); ctx.lineWidth = 8; st(); b(); ctx.moveTo(-34, -22); ctx.lineTo(34, -22); ctx.moveTo(-10, -32); ctx.lineTo(10, -32); ctx.moveTo(-8, -6); ctx.lineTo(-8, 22); ctx.moveTo(8, -6); ctx.lineTo(8, 22); st(); break;
+    case "glocke_aus": b(); ctx.moveTo(-28, 20); ctx.lineTo(-22, 12); ctx.lineTo(-22, -6); ctx.quadraticCurveTo(-22, -32, 0, -32); ctx.quadraticCurveTo(22, -32, 22, -6); ctx.lineTo(22, 12); ctx.lineTo(28, 20); ctx.closePath(); fi(); b(); ctx.arc(0, 26, 8, 0, Math.PI); fi(); b(); ctx.moveTo(-34, -34); ctx.lineTo(34, 34); ctx.strokeStyle = "#000"; ctx.lineWidth = 16; st(); ctx.strokeStyle = farbe; ctx.lineWidth = 7; st(); break;
+    case "lupe": b(); ctx.arc(-6, -6, 24, 0, Math.PI * 2); ctx.lineWidth = 9; st(); b(); ctx.moveTo(12, 12); ctx.lineTo(32, 32); ctx.lineWidth = 11; st(); break;
+    case "herz": b(); ctx.moveTo(0, 32); ctx.bezierCurveTo(-40, 6, -38, -30, -14, -30); ctx.bezierCurveTo(-4, -30, 0, -20, 0, -16); ctx.bezierCurveTo(0, -20, 4, -30, 14, -30); ctx.bezierCurveTo(38, -30, 40, 6, 0, 32); fi(); break;
+    case "daumen_runter": ctx.rotate(Math.PI); case "daumen": rr(-36, -6, 16, 40, 4); fi(); b(); ctx.moveTo(-14, -6); ctx.lineTo(0, -34); ctx.quadraticCurveTo(12, -34, 10, -20); ctx.lineTo(8, -8); ctx.lineTo(30, -8); ctx.quadraticCurveTo(40, -6, 36, 6); ctx.lineTo(30, 30); ctx.quadraticCurveTo(28, 34, 22, 34); ctx.lineTo(-14, 34); ctx.closePath(); fi(); break;
+    case "haha": text("HA", -6, -4, 30, farbe, 800, 999, 1, "center"); text("HA", 8, 28, 30, farbe, 800, 999, 1, "center"); break;
+    case "ausruf": rr(-18, -32, 10, 44, 4); fi(); kreis(-13, 26, 6, farbe); rr(8, -32, 10, 44, 4); fi(); kreis(13, 26, 6, farbe); break;
+    case "frage": text("?", 0, 22, 70, farbe, 800, 999, 1, "center"); break;
+    case "x": b(); ctx.moveTo(-20, -20); ctx.lineTo(20, 20); ctx.moveTo(20, -20); ctx.lineTo(-20, 20); ctx.lineWidth = 10; st(); break;
+    case "teilen": rr(-26, -6, 52, 44, 8); ctx.lineWidth = 8; st(); ctx.fillStyle = C.bg; ctx.fillRect(-12, -10, 24, 10); b(); ctx.moveTo(0, 16); ctx.lineTo(0, -38); ctx.moveTo(-14, -24); ctx.lineTo(0, -38); ctx.lineTo(14, -24); st(); break;
+    case "chevron": b(); ctx.moveTo(-10, -22); ctx.lineTo(12, 0); ctx.lineTo(-10, 22); ctx.lineWidth = 9; st(); break;
+    case "zurueckpfeil": b(); ctx.moveTo(12, -26); ctx.lineTo(-14, 0); ctx.lineTo(12, 26); ctx.lineWidth = 10; st(); break;
+    case "mikro": rr(-12, -34, 24, 46, 12); fi(); b(); ctx.arc(0, 0, 22, 0.1 * Math.PI, 0.9 * Math.PI); ctx.lineWidth = 7; st(); b(); ctx.moveTo(0, 22); ctx.lineTo(0, 34); st(); break;
+    case "plus": b(); ctx.moveTo(-20, 0); ctx.lineTo(20, 0); ctx.moveTo(0, -20); ctx.lineTo(0, 20); ctx.lineWidth = 9; st(); break;
+    case "paket": b(); ctx.moveTo(0, -36); ctx.lineTo(32, -20); ctx.lineTo(32, 20); ctx.lineTo(0, 36); ctx.lineTo(-32, 20); ctx.lineTo(-32, -20); ctx.closePath(); fi(); ctx.strokeStyle = "#000"; ctx.lineWidth = 5; b(); ctx.moveTo(-32, -20); ctx.lineTo(0, -4); ctx.lineTo(32, -20); ctx.moveTo(0, -4); ctx.lineTo(0, 36); st(); break;
+    case "warn": b(); ctx.moveTo(0, -36); ctx.lineTo(38, 30); ctx.lineTo(-38, 30); ctx.closePath(); fi(); ctx.fillStyle = "#000"; rr(-4, -12, 8, 26, 3); fi(); kreis(0, 21, 5, "#000"); break;
+    case "wolke": b(); ctx.arc(-14, 6, 18, Math.PI * 0.5, Math.PI * 1.5); ctx.arc(4, -6, 22, Math.PI, Math.PI * 1.9); ctx.arc(22, 8, 16, Math.PI * 1.4, Math.PI * 0.5); ctx.closePath(); fi(); break;
+    case "blitz": b(); ctx.moveTo(6, -36); ctx.lineTo(-20, 6); ctx.lineTo(0, 6); ctx.lineTo(-8, 36); ctx.lineTo(22, -8); ctx.lineTo(2, -8); ctx.closePath(); fi(); break;
+    case "standort": b(); ctx.moveTo(30, -30); ctx.lineTo(-30, -4); ctx.lineTo(-2, 2); ctx.lineTo(4, 30); ctx.closePath(); fi(); break;
+  } ctx.restore(); }
+// ---------- Statusleiste + Dynamic Island (echte Maße) ----------
+const INSEL = { x: W / 2 - 173, y: 30, w: 346, h: 102 };
+function statusleiste(farbe = "#fff") { text("23:41", 205, 100, 47, farbe, 600, 999, 1, "center");
+  ctx.fillStyle = farbe; [12, 18, 24, 31].forEach((h, i) => { rr(748 + i * 14, 99 - h, 10, h, 3); ctx.fill(); }); text("5G", 838, 100, 40, farbe, 600);
+  ctx.globalAlpha = 0.4; rr(900, 70, 70, 33, 10); ctx.strokeStyle = farbe; ctx.lineWidth = 3; ctx.stroke(); rr(973, 80, 5, 13, 2.5); ctx.fill(); ctx.globalAlpha = 1; rr(905, 75, 52, 23, 6); ctx.fill(); }
+function inselNormal(ts, wE = 0) { const w = INSEL.w + wE; rr(W / 2 - w / 2, INSEL.y, w, INSEL.h, INSEL.h / 2); ctx.fillStyle = "#000"; ctx.fill(); return w; }
+function musikAktivitaet(ts, w, a = 1) { if (a <= 0) return; ctx.save(); ctx.globalAlpha = a; const x0 = W / 2 - w / 2; if (COVER) { ctx.save(); rr(x0 + 22, INSEL.y + 22, 58, 58, 14); ctx.clip(); ctx.drawImage(COVER, x0 + 22, INSEL.y + 22, 58, 58); ctx.restore(); }
+  const st = ts < 15.45 ? 0.45 : (ts > 46.5 && ts < 49.0 ? 0.2 : 1); for (let i = 0; i < 4; i++) { const h = 12 + 30 * st * Math.abs(Math.sin(ts * (5 + i * 1.9) + i * 1.3)); rr(x0 + w - 98 + i * 17, INSEL.y + 51 - h / 2, 9, h, 4.5); ctx.fillStyle = "#e3b878"; ctx.fill(); } ctx.restore(); }
+
+function navLeiste(titel, unter, avatarB, farbe) { ctx.fillStyle = "rgba(22,22,24,0.94)"; ctx.fillRect(0, 0, W, 360); ctx.fillStyle = C.sep; ctx.fillRect(0, 359, W, 1.5);
+  ikon("zurueckpfeil", 70, 236, 70, C.blau); text("12", 110, 252, 47, C.blau, 400); avatar(W / 2, 222, 66, avatarB, farbe); text(titel, W / 2, 334, 34, C.l1, 500, 999, 1, "center"); ikon("chevron", W / 2 + ctx.measureText(titel).width / 2 + 22, 322, 34, C.l3); }
+function eingabe() { ikon("plus", 92, H - 128, 64, C.l2); rr(150, H - 178, W - 200, 100, 50); ctx.strokeStyle = C.sep; ctx.lineWidth = 3; ctx.stroke(); text("iMessage", 190, H - 112, 44, C.l3); ikon("mikro", W - 110, H - 128, 50, C.l3); }
+function blase(x, y, w, h, farbe, rechts) { rr(x, y, w, h, 50); ctx.fillStyle = farbe; ctx.fill(); }
+
+function gruppe(x, y, w, zeilen, hz = 132) { rr(x, y, w, zeilen.length * hz, 30); ctx.fillStyle = C.bg2; ctx.fill(); zeilen.forEach((f, i) => { f(x, y + i * hz, w, hz); if (i < zeilen.length - 1) { ctx.fillStyle = C.sep; ctx.fillRect(x + 140, y + (i + 1) * hz - 1, w - 140, 1.5); } }); }
+function schalter(x, y, an) { rr(x, y, 140, 86, 43); ctx.fillStyle = an ? C.gruen : C.fill; ctx.fill(); kreis(an ? x + 97 : x + 43, y + 43, 37, "#fff"); }
+
+let BUF = [];
+function inBuf(i, f, ts) { const o = BUF[i].getContext("2d"); o.setTransform(K, 0, 0, K, 0, 0); o.globalAlpha = 1; o.filter = "none"; o.textAlign = "left"; o.clearRect(0, 0, W, H); const alt = ctx; ctx = o; try { f(ts); } finally { ctx = alt; } return BUF[i]; }
+function bild(b, s = 1, a = 1, dim = 0, dx = 0, dy = 0, blur = 0) { ctx.save(); ctx.globalAlpha = a; if (blur > 0.5) ctx.filter = `blur(${blur}px)`; ctx.translate(W / 2 + dx, H / 2 + dy); ctx.scale(s, s); ctx.translate(-W / 2, -H / 2); ctx.drawImage(b, 0, 0, W, H); ctx.restore(); if (dim > 0) { ctx.fillStyle = `rgba(0,0,0,${dim})`; ctx.fillRect(0, 0, W, H); } }
+function oeffnen(fA, fB, k, t0, d, ts) { const e = ein((ts - t0) / d); bild(inBuf(0, fA, ts), 1 - 0.08 * e, 1, 0.5 * e, 0, 0, 14 * e);
+  const r = { x: lerp(BANNER.x, 0, e), y: lerp(BANNER.y, 0, e), w: lerp(BANNER.w, W, e), h: lerp(BANNER.h, H, e) }, s = r.w / W, b = inBuf(1, fB, ts);
+  ctx.save(); rr(r.x, r.y, r.w, r.h, lerp(58, 0, e)); ctx.clip(); ctx.fillStyle = "#000"; ctx.fillRect(r.x, r.y, r.w, r.h); ctx.globalAlpha = clamp(e * 2.2, 0, 1); ctx.drawImage(b, r.x, r.y + r.h / 2 - (H * s) / 2 * lerp(0.25, 1, e) - lerp(H * s * 0.12, 0, e), r.w, H * s); ctx.restore(); banner(k, r, 1 - clamp(e * 3, 0, 1)); }
+function umschalten(fA, fB, t0, d, ts) { const e = ein((ts - t0) / d), s = 1 - 0.28 * Math.sin(Math.PI * e), r = 150 * Math.sin(Math.PI * e); ctx.fillStyle = "#101014"; ctx.fillRect(0, 0, W, H);
+  [[fA, -e * W * 0.82, 0], [fB, (1 - e) * W * 0.82, 1]].forEach(([f, dx, i]) => { const b = inBuf(i, f, ts); ctx.save(); ctx.translate(W / 2 + dx, H / 2); ctx.scale(s, s); ctx.translate(-W / 2, -H / 2); schatten(() => { rr(0, 0, W, H, 150); ctx.fillStyle = "#000"; ctx.fill(); }, 80, 0, 0.6); rr(0, 0, W, H, Math.max(r / s, 1)); ctx.clip(); ctx.drawImage(b, 0, 0, W, H); ctx.restore(); }); }
+
+let COVER = null;
+// „Mama (Remix)“ (Symba) – cleanes iOS-Edit im Stil von „Belaboyz v7“: 3,15–34,0 s (kurz vor „Mama“ bis „… mit dem Messer?“).
+// Durchgehende iPhone-Welt, Text tippt sich in echte App-Elemente, jeder Wechsel wächst aus dem vorigen Bild:
+// Sperrbildschirm → Chat mit Mama → Aktien (Glück/Pech) → Wallet „Socken“ + Späti-Umsätze → Notizen (über mich / uns zwei)
+// → Sprachmemo „Streets“ aus der Notiz → Sperren: Mitteilungen löschen, Mama bleibt → Training „Gehen“ (Demo) → Atmen → zurück zu Mama (Emoji-Ersetzen).
+const Z = {};
+[["l0", "und deswegen bin ich blessed", [3.18, 3.4, 3.62, 4.04, 4.22]],
+ ["h1", "Mama, bitte sag mir, warum sind die Leute schlecht?", [4.5, 5.08, 5.42, 5.82, 6.0, 6.2, 6.46, 6.62, 6.84]],
+ ["h2", "Warum sind die Leute falsch und deren Lächeln nicht mehr echt?", [7.3, 7.54, 7.82, 8.04, 8.24, 8.58, 8.74, 8.94, 9.34, 9.52, 9.72]],
+ ["h3", "Menschen haben Glück und andre Menschen haben Pech", [9.98, 10.62, 10.9, 11.2, 11.44, 11.7, 12.0, 12.26]],
+ ["h4", "Ich hab' Geld in mein'n Socken und bin blessed", [12.74, 12.96, 13.1, 13.3, 13.5, 13.7, 14.12, 14.28, 14.42]],
+ ["p1", "Parisienne-Kippen, Orangina und 'n Mic", [16.04, 16.92, 17.52, 17.7, 17.84]],
+ ["p2", "Heute schreib' ich über mich, früher schrieb ich von uns zwei", [18.18, 18.44, 18.84, 18.98, 19.18, 19.54, 19.82, 20.16, 20.3, 20.46, 20.58]],
+ ["p3", "Früher war'n wir in den Streets und riefen: „Fick die Polizei“", [20.82, 21.2, 21.48, 21.64, 21.76, 21.86, 22.2, 22.34, 22.66, 22.82, 22.96]],
+ ["p4", "Manches bleibt für immer und der Rest, der geht vorbei", [23.66, 24.32, 24.52, 24.72, 24.98, 25.16, 25.34, 25.56, 25.7, 25.82]],
+ ["p5", "Lauf' durch die Stadt auf 'ner Demo, halt' die Brust raus", [26.16, 26.42, 26.52, 26.7, 27.04, 27.24, 27.38, 27.78, 27.9, 28.06, 28.4]],
+ ["p6", "Wünsch' mir Freiheit für uns alle, lass' den Frust raus", [28.8, 29.32, 29.44, 29.68, 29.94, 30.1, 30.5, 30.64, 30.78, 31.12]],
+ ["p7", "Wenn du zwei Fäuste hast, warum dann mit dem Messer?", [31.3, 31.82, 32.0, 32.18, 32.46, 32.82, 33.0, 33.22, 33.4, 33.58]]
+].forEach(([k, t, z]) => Z[k] = { woerter: t.split(" ").map((w, i) => ({ w, a: z[i] })), a: z[0], e: z[z.length - 1] });
+const MAMA = ["#ff6b8b", "#c93d63"];
+function musikAktivitaet(ts, w, a = 1) { if (a <= 0) return; ctx.save(); ctx.globalAlpha = a; const x0 = W / 2 - w / 2; if (COVER) { ctx.save(); rr(x0 + 22, INSEL.y + 22, 58, 58, 14); ctx.clip(); ctx.drawImage(COVER, x0 + 22, INSEL.y + 22, 58, 58); ctx.restore(); }
+  const st = ts > 26.1 && ts < 31.3 ? 0.35 : 1; for (let i = 0; i < 4; i++) { const h = 12 + 30 * st * Math.abs(Math.sin(ts * (5 + i * 1.9) + i * 1.3)); rr(x0 + w - 98 + i * 17, INSEL.y + 51 - h / 2, 9, h, 4.5); ctx.fillStyle = "#f2a6b8"; ctx.fill(); } ctx.restore(); }
+function hintergrund(dunkel = 0.45) { if (COVER) { ctx.save(); ctx.filter = `blur(80px) saturate(1.2) brightness(${dunkel})`; ctx.drawImage(COVER, -500, -300, W + 1000, H + 600); ctx.restore(); } else { ctx.fillStyle = "#111"; ctx.fillRect(0, 0, W, H); } }
+// ---------- 1) Sperrbildschirm: Live-Lyrics + Nachricht von Mama ----------
+function mitteilung(x, y, w, titel, text_, zeit, icon, farbe, a = 1) { ctx.save(); ctx.globalAlpha *= a; rr(x, y, w, 196, 52); ctx.fillStyle = "rgba(60,60,66,0.72)"; ctx.fill();
+  rr(x + 32, y + 42, 112, 112, 26); ctx.fillStyle = farbe; ctx.fill(); if (icon === "msg") { ctx.fillStyle = "#fff"; ctx.beginPath(); ctx.ellipse(x + 88, y + 96, 38, 30, 0, 0, Math.PI * 2); ctx.fill(); } else ikon(icon, x + 88, y + 98, 64, "#fff");
+  text(titel, x + 172, y + 88, 42, C.l1, 600, w - 330); text(zeit, x + w - 40, y + 88, 32, C.l2, 400, 999, 1, "right"); text(text_, x + 172, y + 140, 40, "rgba(235,235,245,0.85)", 400, w - 210); ctx.restore(); }
+function sSperr(ts) { hintergrund(0.42); text("Dienstag, 24. November", W / 2, 360, 44, "rgba(255,255,255,0.85)", 600, 999, 1, "center"); text("23:41", W / 2, 600, 250, "#fff", 700, 999, 1, "center");
+  // Now Playing mit Live-Lyrics
+  rr(44, 1230, W - 88, 430, 56); ctx.fillStyle = "rgba(60,60,66,0.7)"; ctx.fill(); if (COVER) { ctx.save(); rr(88, 1272, 130, 130, 18); ctx.clip(); ctx.drawImage(COVER, 88, 1272, 130, 130); ctx.restore(); }
+  text("Mama (Remix)", 248, 1330, 44, C.l1, 600); text("Symba", 248, 1382, 38, C.l2); zeile(tipp(ts, "l0") || "…", 88, 1515, 56, W - 176);
+  rr(88, 1590, W - 176, 10, 5); ctx.fillStyle = "rgba(255,255,255,0.25)"; ctx.fill(); rr(88, 1590, (W - 176) * 0.31, 10, 5); ctx.fillStyle = "#fff"; ctx.fill();
+  if (ts > 3.35) { const q = zurueck((ts - 3.35) / 0.35); ctx.save(); ctx.translate(0, (1 - q) * 120); mitteilung(44, 880, W - 88, "Mama ❤️", "Alles gut bei dir? Meld dich mal", "jetzt", "msg", C.gruen, clamp((ts - 3.35) / 0.15, 0, 1)); ctx.restore(); } }
+// ---------- 2) Chat mit Mama ----------
+function chatKopf() { ctx.fillStyle = "rgba(22,22,24,0.94)"; ctx.fillRect(0, 0, W, 360); ctx.fillStyle = C.sep; ctx.fillRect(0, 359, W, 1.5); ikon("zurueckpfeil", 70, 236, 70, C.blau); text("3", 110, 252, 47, C.blau);
+  avatar(W / 2, 222, 66, "M", MAMA); text("Mama ❤️", W / 2, 334, 34, C.l1, 500, 999, 1, "center"); }
+function blaseR(t, y, fs = 60, farbe = C.blau) { font(600, fs); const z = umbruch(t, 720), bw = Math.max(...z.map(l => ctx.measureText(l).width)) + 84, bh = 50 + z.length * fs * 1.16, bx = W - 50 - bw; rr(bx, y, bw, bh, 48); ctx.fillStyle = farbe; ctx.fill(); z.forEach((l, i) => text(l, bx + 42, y + 32 + fs * 0.92 + i * fs * 1.16, fs, "#fff", 600)); return { bx, bw, bh }; }
+function blaseL(t, y, fs = 47) { font(400, fs); const z = umbruch(t, 700), bw = Math.max(...z.map(l => ctx.measureText(l).width)) + 76, bh = 40 + z.length * fs * 1.2; rr(60, y, bw, bh, 46); ctx.fillStyle = C.bg3; ctx.fill(); z.forEach((l, i) => text(l, 98, y + 26 + fs * 0.9 + i * fs * 1.2, fs, C.l1)); return bh; }
+function eingabeText(ts, t, fs = 56) { const leer = !t; font(400, fs); const z = umbruch(t || "iMessage", W - 400); const h = Math.max(100, 40 + z.length * fs * 1.2); rr(150, H - 78 - h, W - 200, h, 50); ctx.strokeStyle = C.sep; ctx.lineWidth = 3; ctx.stroke(); ikon("plus", 92, H - 128, 64, C.l2);
+  z.forEach((l, i) => text(l, 190, H - 78 - h + 26 + fs * 0.9 + i * fs * 1.2, fs, leer ? C.l3 : C.l1)); if (!leer) { kreis(W - 104, H - 128, 38, C.blau); ctx.save(); ctx.translate(W - 104, H - 128); ctx.rotate(-Math.PI / 2); ikon("chevron", 0, 0, 40, "#fff"); ctx.restore(); } else ikon("mikro", W - 110, H - 128, 50, C.l3); return h; }
+function sChat(ts) { ctx.fillStyle = C.bg; ctx.fillRect(0, 0, W, H); chatKopf(); text("Heute 23:41", W / 2, 440, 30, C.l2, 500, 999, 1, "center");
+  let y = 480; y += blaseL("Alles gut bei dir? Meld dich mal", y) + 40;
+  // h1/h2: erst im Eingabefeld getippt, dann als blaue Blase gesendet
+  const sende = [["h1", 6.95], ["h2", 9.85]]; let feld = "";
+  for (const [k, ts_] of sende) { if (ts < Z[k].a - 0.05) break; if (ts < ts_) { feld = tipp(ts, k); break; } const q = zurueck((ts - ts_) / 0.3); ctx.save(); ctx.translate(0, (1 - q) * 120); ctx.globalAlpha = clamp((ts - ts_) / 0.08, 0, 1); const r = blaseR(Z[k].woerter.map(w => w.w).join(" "), y); ctx.restore(); y += r.bh + 18; if (k === "h2" && ts > 10.15) text("Zugestellt", W - 60, y + 30, 30, C.l2, 500, 999, 1, "right"); }
+  if (ts > 9.95) { const q = zurueck((ts - 9.95) / 0.3); ctx.save(); ctx.translate(60, y + 70); ctx.scale(q, q); rr(0, 0, 200, 100, 50); ctx.fillStyle = C.bg3; ctx.fill(); for (let i = 0; i < 3; i++) kreis(60 + i * 40, 50, 12, `rgba(235,235,245,${0.35 + 0.5 * Math.max(0, Math.sin(ts * 8 - i * 0.9))})`); ctx.restore(); text("Mama schreibt …", 60, y + 210, 30, C.l2); }
+  eingabeText(ts, feld); }
+// ---------- 3) Aktien: Glück / Pech ----------
+function kurve(x, y, w, h, f, farbe, t) { ctx.beginPath(); for (let i = 0; i <= 60; i++) { const u = i / 60; const yy = y + h - f(u) * h; i ? ctx.lineTo(x + u * w * t, yy) : ctx.moveTo(x, yy); } ctx.strokeStyle = farbe; ctx.lineWidth = 6; ctx.lineJoin = "round"; ctx.stroke(); }
+function sAktien(ts) { ctx.fillStyle = C.bg; ctx.fillRect(0, 0, W, H); text("Aktien", 60, 300, 94, C.l1, 700); text("24. November", 60, 360, 44, C.l2, 600);
+  rr(44, 410, W - 88, 330, 30); ctx.fillStyle = C.bg2; ctx.fill(); text("MEINE LISTE · MENSCHEN", 94, 480, 30, C.l2, 600); zeile(tipp(ts, "h3"), 94, 580, 66, W - 188);
+  const p = ein((ts - 10.0) / 2.4);
+  [["GLÜCK", "Menschen mit Glück", "+12,4 %", C.gruen, u => 0.2 + 0.7 * u + 0.08 * Math.sin(u * 14), 10.9], ["PECH", "Andre Menschen", "−8,1 %", C.rot, u => 0.85 - 0.65 * u + 0.07 * Math.sin(u * 13), 12.26]].forEach(([n, s, v, f, fn, t0], i) => { const y = 800 + i * 230, an = ts > t0 - 0.05;
+    ctx.globalAlpha = an ? 1 : 0.35; text(n, 60, y + 70, 54, C.l1, 700); text(s, 60, y + 124, 38, C.l2); kurve(500, y + 20, 260, 120, fn, f, an ? clamp((ts - t0 + 0.2) / 0.6, 0.02, 1) : 0.02);
+    rr(W - 260, y + 40, 200, 90, 18); ctx.fillStyle = f; ctx.fill(); text(v, W - 160, y + 100, 40, "#fff", 600, 999, 1, "center"); ctx.globalAlpha = 1; ctx.fillStyle = C.sep; ctx.fillRect(60, y + 190, W - 120, 1.5); });
+  [["BLESSED", "+∞"], ["SOCKEN", "+4,2 %"]].forEach(([n, v], i) => { const y = 1300 + i * 150; text(n, 60, y, 54, C.l1, 700); text(v, W - 60, y, 44, C.gruen, 600, 999, 1, "right"); }); }
+// ---------- 4) Wallet: Karte „Socken“ + Späti ----------
+function sWallet(ts) { ctx.fillStyle = C.bg; ctx.fillRect(0, 0, W, H); ikon("zurueckpfeil", 66, 236, 70, C.blau); text("Wallet", 100, 252, 47, C.blau);
+  const kw = W - 176, kh = kw / 1.586; schatten(() => { rr(88, 300, kw, kh, 44); const g = ctx.createLinearGradient(88, 300, 88 + kw, 300 + kh); g.addColorStop(0, "#3a2f45"); g.addColorStop(1, "#141018"); ctx.fillStyle = g; ctx.fill(); }, 60, 24, 0.6);
+  text("Socken", 140, 400, 56, C.l1, 700); text("Bargeld", W - 140, 400, 36, C.l2, 500, 999, 1, "right");
+  const items = [[16.04, "Parisienne-Kippen", "Späti", 9.0], [16.92, "Orangina", "Späti", 2.5], [17.84, "Mic", "Musikhaus", 129.0]].filter(t => ts > t[0] - 0.05);
+  const saldo = 4200 - items.reduce((s, t) => s + t[3] * clamp((ts - t[0]) / 0.3, 0, 1), 0);
+  text("Kontostand", 140, 300 + kh - 140, 33, C.l2, 500); text(saldo.toLocaleString("de-DE", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + " €", 140, 300 + kh - 60, 84, C.l1, 700);
+  const k = ts < 15.9 ? "h4" : "p1"; zeile(tipp(ts, k), 70, 300 + kh + 150, 76, W - 140);
+  text("Letzte Transaktionen", 60, 1300, 47, C.l1, 700); const liste = [...items].reverse(); rr(44, 1340, W - 88, Math.max(1, liste.length) * 150, 30); ctx.fillStyle = C.bg2; ctx.fill(); if (!liste.length) text("Keine Transaktionen", W / 2, 1430, 40, C.l2, 400, 999, 1, "center");
+  liste.forEach(([t0, a, b, c], i) => { const y = 1340 + i * 150, q = raus((ts - t0) / 0.3); ctx.save(); ctx.globalAlpha = q; kreis(124, y + 75, 46, C.fill); ikon(a === "Mic" ? "mikro" : "paket", 124, y + 75, 42, C.l1); text(a, 200, y + 66, 44, C.l1, 600); text(b, 200, y + 112, 34, C.l2); text("−" + c.toLocaleString("de-DE", { minimumFractionDigits: 2 }) + " €", W - 90, y + 86, 44, C.l1, 600, 999, 1, "right"); ctx.restore(); if (i < liste.length - 1) { ctx.fillStyle = C.sep; ctx.fillRect(200, y + 149, W - 244, 1.5); } }); }
+// ---------- 5) Notizen: heute über mich / früher uns zwei ----------
+const AUDIO = { x: 60, y: 1210, w: W - 120, h: 210 };
+function sNotiz(ts) { ctx.fillStyle = C.bg; ctx.fillRect(0, 0, W, H); ikon("zurueckpfeil", 66, 236, 70, C.gelb); text("Notizen", 100, 252, 47, C.gelb); ikon("teilen", W - 200, 236, 52, C.gelb);
+  text("Über mich", 60, 420, 94, C.l1, 700); text("24. November 2026 um 23:41", 60, 490, 36, C.l2);
+  const t = tipp(ts, "p2"); const z1 = t.split(" ").slice(0, 5).join(" "), z2 = t.split(" ").slice(5).join(" "); const n1 = zeile(z1, 60, 640, 82, W - 120); if (z2) zeile(z2, 60, 640 + Math.max(n1, 1) * 90 + 50, 82, W - 120, C.l2);
+  // alte Notiz „Uns zwei“ mit Sprachmemo
+  text("Früher · 12. Juni 2019", 60, 1150, 36, C.l2, 600); rr(AUDIO.x, AUDIO.y, AUDIO.w, AUDIO.h, 36); ctx.fillStyle = C.bg2; ctx.fill(); kreis(AUDIO.x + 100, AUDIO.y + 105, 52, C.gelb); ikon("play", AUDIO.x + 104, AUDIO.y + 105, 44, "#000");
+  text("Uns zwei · Streets", AUDIO.x + 180, AUDIO.y + 92, 44, C.l1, 600); text("Sprachmemo · 0:42", AUDIO.x + 180, AUDIO.y + 144, 34, C.l2); }
+// ---------- 6) Sprachmemo „Streets“ mit Transkript ----------
+function sMemo(ts) { ctx.fillStyle = C.bg; ctx.fillRect(0, 0, W, H); ikon("zurueckpfeil", 66, 236, 70, C.blau); text("Notizen", 100, 252, 47, C.blau);
+  text("Uns zwei · Streets", 60, 420, 80, C.l1, 700); text("12. Juni 2019 · Kreuzberg", 60, 490, 36, C.l2);
+  const p = clamp((ts - 20.6) / 3.2, 0, 1); for (let i = 0; i < 70; i++) { const x = 60 + i * 13.6, h = 16 + 120 * Math.abs(Math.sin(i * 0.9) * Math.cos(i * 0.37)) * (0.8 + 0.2 * Math.sin(ts * 9 + i)); rr(x, 700 - h / 2, 7, h, 3.5); ctx.fillStyle = i / 70 < p ? C.rot : C.l3; ctx.fill(); }
+  ctx.fillStyle = C.rot; ctx.fillRect(60 + 70 * 13.6 * p, 600, 4, 200); text("0:" + String(Math.floor(p * 42)).padStart(2, "0"), 60, 860, 40, C.l1, 600); text("-0:" + String(42 - Math.floor(p * 42)).padStart(2, "0"), W - 60, 860, 40, C.l2, 500, 999, 1, "right");
+  rr(44, 940, W - 88, 600, 30); ctx.fillStyle = C.bg2; ctx.fill(); text("Transkript", 94, 1010, 33, C.l2, 500); zeile(tipp(ts, "p3"), 94, 1120, 76, W - 188);
+  ikon("zurueck", W / 2 - 230, 1720, 70); kreis(W / 2, 1720, 70, C.l1); ikon("pause", W / 2, 1720, 56, "#000"); ikon("vor", W / 2 + 230, 1720, 70); }
+// ---------- 7) Sperrbildschirm: Mitteilungen löschen, Mama bleibt ----------
+function sSperr2(ts) { hintergrund(0.36); text("Dienstag, 24. November", W / 2, 360, 44, "rgba(255,255,255,0.85)", 600, 999, 1, "center"); text("23:42", W / 2, 600, 250, "#fff", 700, 999, 1, "center");
+  zeile(tipp(ts, "p4"), W / 2, 820, 80, W - 140, C.l1, "center");
+  const weg = ein((ts - 25.0) / 0.45); const liste = [["Instagram", "12 neue Follower", "pink"], ["TikTok", "Dein Video ist im Trend", "#111"], ["Nachrichten", "Unbekannt: hast du kurz Zeit?", C.gruen]];
+  ctx.save(); ctx.translate(-weg * W * 1.15, 0); [2, 1].forEach(i => { rr(44 + i * 26, 1150 + 196 - 40 + i * 22, W - 88 - i * 52, 60, 30); ctx.fillStyle = `rgba(60,60,66,${0.55 - i * 0.12})`; ctx.fill(); }); mitteilung(44, 1150, W - 88, "Instagram", "12 neue Follower · und 2 weitere", "vor 2 Std.", "msg", C.pink); ctx.restore();
+  // Mama bleibt (angepinnt)
+  const yM = lerp(1430, 1180, weg); mitteilung(44, yM, W - 88, "Mama ❤️", "Alles gut bei dir? Meld dich mal", "23:41", "msg", C.gruen);
+  if (ts > 25.0) { ctx.save(); ctx.globalAlpha = clamp((ts - 25.0) / 0.3, 0, 1); text("bleibt für immer", W / 2, yM - 26, 32, C.l2, 500, 999, 1, "center"); ctx.restore(); }
+  if (ts > 25.55) { const q = zurueck((ts - 25.55) / 0.35); ctx.save(); ctx.translate(0, (1 - q) * 200); ctx.globalAlpha = clamp((ts - 25.55) / 0.15, 0, 1); laufAktiv(ts, LAUF); ctx.restore(); } }
+// Live-Aktivität „Gehen im Freien“ auf dem Sperrbildschirm
+const LAUF = { x: 44, y: 1460, w: W - 88, h: 230 };
+function laufAktiv(ts, r) { rr(r.x, r.y, r.w, r.h, 52); ctx.fillStyle = "rgba(20,20,22,0.9)"; ctx.fill(); kreis(r.x + 90, r.y + 115, 50, "#a5f02b"); ikon("standort", r.x + 90, r.y + 115, 50, "#000");
+  text("Gehen im Freien", r.x + 170, r.y + 100, 42, C.l1, 600); text("Demo · Kreuzberg", r.x + 170, r.y + 150, 34, C.l2); text("0:" + String(12 + Math.floor((ts - 25.5) * 2)).padStart(2, "0") + ":0" + Math.floor((ts * 3) % 10), r.x + r.w - 50, r.y + 128, 54, "#a5f02b", 600, 999, 1, "right"); }
+// ---------- 8) Training: Demo-Route durch die Stadt ----------
+function sTraining(ts) { ctx.fillStyle = "#0b0b0c"; ctx.fillRect(0, 0, W, H); text("Gehen im Freien", 60, 300, 70, "#a5f02b", 700); text("Demo · Kreuzberg", 60, 360, 40, C.l2, 500);
+  // Route auf dunkler Karte
+  rr(44, 410, W - 88, 520, 40); ctx.fillStyle = "#1c1d21"; ctx.fill(); ctx.save(); rr(44, 410, W - 88, 520, 40); ctx.clip(); ctx.strokeStyle = "#2c2e34"; ctx.lineWidth = 14; for (let i = 0; i < 9; i++) { ctx.beginPath(); ctx.moveTo(44 + i * 130, 410); ctx.lineTo(44 + i * 130 - 120, 930); ctx.stroke(); ctx.beginPath(); ctx.moveTo(44, 450 + i * 70); ctx.lineTo(W - 44, 420 + i * 70); ctx.stroke(); }
+  const pts = [[140, 860], [260, 760], [330, 640], [470, 600], [600, 520], [740, 560], [880, 480]], p = clamp((ts - 26.2) / 2.4, 0, 1); ctx.beginPath(); pts.forEach(([x, y], i) => i ? ctx.lineTo(x, y) : ctx.moveTo(x, y)); ctx.strokeStyle = "rgba(165,240,43,0.25)"; ctx.lineWidth = 12; ctx.lineCap = "round"; ctx.lineJoin = "round"; ctx.stroke();
+  const n = 1 + p * (pts.length - 1), k = Math.floor(n); ctx.beginPath(); for (let i = 0; i <= Math.min(k, pts.length - 1); i++) i ? ctx.lineTo(...pts[i]) : ctx.moveTo(...pts[i]); let cx = pts[Math.min(k, pts.length - 1)][0], cy = pts[Math.min(k, pts.length - 1)][1]; if (k < pts.length - 1) { const f = n - k; cx = lerp(pts[k][0], pts[k + 1][0], f); cy = lerp(pts[k][1], pts[k + 1][1], f); ctx.lineTo(cx, cy); } ctx.strokeStyle = "#a5f02b"; ctx.stroke(); kreis(cx, cy, 20, "#fff"); kreis(cx, cy, 14, "#a5f02b"); ctx.restore();
+  zeile(tipp(ts, "p5"), 60, 1060, 80, W - 120);
+  const werte = [["DAUER", "0:" + String(12 + Math.floor((ts - 25.5) * 2)).padStart(2, "0"), "#ffd60a"], ["SCHRITTE", Math.round(1840 + (ts - 26) * 37).toLocaleString("de-DE"), "#a5f02b"], ["PULS", String(Math.round(96 + 12 * Math.sin(ts * 2))) + " ♥", C.rot]];
+  werte.forEach(([n_, v, f], i) => { const x = 60 + i * 330; text(n_, x, 1460, 30, C.l2, 600); text(v, x, 1550, 76, f, 600); }); }
+// ---------- 9) Atmen ----------
+function sAtmen(ts) { const g = ctx.createLinearGradient(0, 0, 0, H); g.addColorStop(0, "#04131a"); g.addColorStop(1, "#071e24"); ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+  text("Achtsamkeit", W / 2, 300, 44, "#5ce1e6", 600, 999, 1, "center"); const t = (ts - 28.6), atem = 0.5 - 0.5 * Math.cos(Math.min(t, 2.6) / 2.6 * Math.PI) , aus = ts > 30.4 ? ein((ts - 30.4) / 0.8) : 0, r = lerp(70, 230, atem) * (1 - 0.55 * aus);
+  ctx.save(); ctx.translate(W / 2, 760); ctx.globalCompositeOperation = "screen"; for (let i = 0; i < 6; i++) { const a = i * Math.PI / 3 + t * 0.3; ctx.beginPath(); ctx.arc(Math.cos(a) * r * 0.55, Math.sin(a) * r * 0.55, r * 0.6, 0, Math.PI * 2); ctx.fillStyle = "rgba(92,225,230,0.32)"; ctx.fill(); } ctx.restore();
+  text(aus > 0.1 ? "Ausatmen" : "Einatmen", W / 2, 1130, 54, C.l1, 600, 999, 1, "center"); zeile(tipp(ts, "p6"), W / 2, 1330, 80, W - 140, C.l1, "center"); }
+// ---------- 10) Zurück bei Mama: Emoji-Ersetzen (Fäuste 👊, Messer 🔪) ----------
+function sMama2(ts) { ctx.fillStyle = C.bg; ctx.fillRect(0, 0, W, H); chatKopf(); let y = 420;
+  const alt = ["Mama, bitte sag mir, warum sind die Leute schlecht?", "Warum sind die Leute falsch und deren Lächeln nicht mehr echt?"]; alt.forEach(t => { const r = blaseR(t, y, 44); y += r.bh + 14; });
+  y += blaseL("Pass auf dich auf, mein Schatz ❤️", y + 20) + 50;
+  // Eingabe: Zeile getippt, Wörter „Fäuste“ und „Messer“ orange (Emoji-Vorschlag), dann ersetzt
+  const t = tipp(ts, "p7"); font(600, 64); const woerter = t ? t.split(" ") : []; const max = W - 180; let zeilen = [[]], wz = 0;
+  woerter.forEach(w => { const ww = ctx.measureText(w + " ").width; if (wz + ww > max && zeilen[zeilen.length - 1].length) { zeilen.push([]); wz = 0; } zeilen[zeilen.length - 1].push(w); wz += ww; });
+  const h = Math.max(120, 60 + zeilen.length * 80); rr(60, H - 120 - h, W - 120, h, 50); ctx.fillStyle = C.bg2; ctx.fill(); ctx.strokeStyle = C.sep; ctx.lineWidth = 3; ctx.stroke();
+  zeilen.forEach((zw, li) => { let x = 100; zw.forEach(w => { const roh = w.replace(/[?,]/g, ""), emo = roh === "Fäuste" ? ["👊👊", 32.75] : roh === "Messer" ? ["🔪", 33.75] : null; let anzeige = w, farbe = C.l1;
+      if (emo && ts > emo[1]) { anzeige = w.replace(roh, emo[0]); } else if (emo && ts > (roh === "Fäuste" ? 32.3 : 33.65)) { farbe = C.orange; }
+      font(600, 64); const ww = ctx.measureText(anzeige + " ").width; if (farbe === C.orange) { rr(x - 8, H - 120 - h + 40 + li * 80, ctx.measureText(anzeige).width + 16, 70, 14); ctx.fillStyle = "rgba(255,159,10,0.22)"; ctx.fill(); }
+      text(anzeige, x, H - 120 - h + 92 + li * 80, 64, farbe, 600); x += ww; }); });
+  // Emoji-Tastaturhinweis
+  if (ts > 32.25) { ctx.save(); ctx.globalAlpha = clamp((ts - 32.25) / 0.2, 0, 1); rr(W / 2 - 300, H - 120 - h - 130, 600, 96, 48); ctx.fillStyle = "rgba(60,60,66,0.95)"; ctx.fill(); text("Tippe auf Wörter für Emojis", W / 2, H - 120 - h - 68, 34, C.l1, 500, 999, 1, "center"); ctx.restore(); } }
+// ---------- Mitteilungen ----------
+const BANNER = { x: 30, y: 150, w: W - 60, h: 210 };
+const MITT = { mama: ["", C.gruen, "msg", "Mama ❤️", "Pass auf dich auf, mein Schatz ❤️"], atmen: ["", "#2bb5b9", "herz", "Achtsamkeit", "Zeit zum Durchatmen"] };
+function banner(k, r, a) { if (a <= 0) return; const [app, f, ik, t1, t2] = MITT[k]; ctx.save(); ctx.globalAlpha = a; schatten(() => { rr(r.x, r.y, r.w, r.h, 58); ctx.fillStyle = "rgba(48,48,52,0.96)"; ctx.fill(); });
+  rr(r.x + 36, r.y + 46, 118, 118, 27); ctx.fillStyle = f; ctx.fill(); if (ik === "msg") { ctx.fillStyle = "#fff"; ctx.beginPath(); ctx.ellipse(r.x + 95, r.y + 100, 40, 32, 0, 0, Math.PI * 2); ctx.fill(); } else ikon(ik, r.x + 95, r.y + 105, 64, "#fff");
+  text(t1, r.x + 184, r.y + 92, 44, C.l1, 600, r.w - 340); text("jetzt", r.x + r.w - 40, r.y + 92, 33, C.l2, 400, 999, 1, "right"); text(t2, r.x + 184, r.y + 146, 41, "rgba(235,235,245,0.85)", 400, r.w - 230); ctx.restore(); }
+function bannerFall(k, t0, ts) { const q = zurueck((ts - t0) / 0.28); banner(k, { ...BANNER, y: lerp(-260, BANNER.y, q) }, clamp((ts - t0) / 0.1, 0, 1)); }
+// Rechteck → Vollbild (App wächst aus einem Element)
+function ausRahmen(fA, fB, r0, t0, d, ts, rad = 52) { const e = ein((ts - t0) / d); bild(inBuf(0, fA, ts), 1 - 0.07 * e, 1, 0.5 * e, 0, 0, 14 * e);
+  const r = { x: lerp(r0.x, 0, e), y: lerp(r0.y, 0, e), w: lerp(r0.w, W, e), h: lerp(r0.h, H, e) }, s = r.w / W, b = inBuf(1, fB, ts);
+  ctx.save(); rr(r.x, r.y, r.w, r.h, lerp(rad, 0, e)); ctx.clip(); ctx.fillStyle = `rgba(52,52,58,${1 - e})`; ctx.fillRect(r.x, r.y, r.w, r.h); ctx.fillStyle = `rgba(0,0,0,${e})`; ctx.fillRect(r.x, r.y, r.w, r.h); ctx.globalAlpha = clamp(e * 1.6, 0, 1); ctx.drawImage(b, r.x, r.y + r.h / 2 - (H * s) / 2, r.w, H * s); ctx.restore(); }
+// Sperren (Seitentaste): Bild geht kurz aus, Sperrbildschirm wacht auf
+function sperren(fA, fB, t0, ts) { const d = ts - t0; if (d < 0.18) { bild(inBuf(0, fA, ts), 1 - 0.04 * d / 0.18); ctx.fillStyle = `rgba(0,0,0,${d / 0.18})`; ctx.fillRect(0, 0, W, H); } else { bild(inBuf(0, fB, ts), lerp(1.06, 1, ein((d - 0.18) / 0.4))); ctx.fillStyle = `rgba(0,0,0,${1 - clamp((d - 0.18) / 0.3, 0, 1)})`; ctx.fillRect(0, 0, W, H); } }
+// ---------- Ablauf ----------
+const MAMA_N = { x: 44, y: 880, w: W - 88, h: 196 };
+window.laden = async () => {};
+window.zeichne = T => { const ts = T + A; ctx = cv.getContext("2d"); ctx.setTransform(K, 0, 0, K, 0, 0); ctx.filter = "none"; ctx.globalAlpha = 1; ctx.letterSpacing = "0px"; ctx.fillStyle = "#000"; ctx.fillRect(0, 0, W, H);
+  if (ts < 4.3) bild(inBuf(0, sSperr, ts));
+  else if (ts < 4.68) ausRahmen(sSperr, sChat, MAMA_N, 4.3, 0.38, ts);          // Mamas Nachricht öffnet den Chat
+  else if (ts < 9.95) bild(inBuf(0, sChat, ts));
+  else if (ts < 10.38) umschalten(sChat, sAktien, 9.95, 0.43, ts);
+  else if (ts < 12.55) bild(inBuf(0, sAktien, ts));
+  else if (ts < 12.9) { const e = ein((ts - 12.55) / 0.35); bild(inBuf(0, sAktien, ts), 1 - 0.05 * e, 1, 0.55 * e); bild(inBuf(1, sWallet, ts), 1, 1, 0, 0, (1 - e) * H); } // Wallet per Doppelklick
+  else if (ts < 17.95) bild(inBuf(0, sWallet, ts));
+  else if (ts < 18.37) umschalten(sWallet, sNotiz, 17.95, 0.42, ts);
+  else if (ts < 20.62) bild(inBuf(0, sNotiz, ts));
+  else if (ts < 21.0) ausRahmen(sNotiz, sMemo, { ...AUDIO }, 20.62, 0.38, ts, 36); // Sprachmemo wächst aus der Notiz
+  else if (ts < 23.45) bild(inBuf(0, sMemo, ts));
+  else if (ts < 24.0) sperren(sMemo, sSperr2, 23.45, ts);
+  else if (ts < 26.05) bild(inBuf(0, sSperr2, ts));
+  else if (ts < 26.42) ausRahmen(sSperr2, sTraining, LAUF, 26.05, 0.37, ts);     // Live-Aktivität öffnet das Training
+  else if (ts < 28.3) bild(inBuf(0, sTraining, ts));
+  else if (ts < 28.55) { bild(inBuf(0, sTraining, ts)); bannerFall("atmen", 28.3, ts); }
+  else if (ts < 28.88) ausRahmen(sTraining, sAtmen, BANNER, 28.55, 0.33, ts, 58);
+  else if (ts < 30.95) bild(inBuf(0, sAtmen, ts));
+  else if (ts < 31.18) { bild(inBuf(0, sAtmen, ts)); bannerFall("mama", 30.95, ts); }
+  else if (ts < 31.5) ausRahmen(sAtmen, sMama2, BANNER, 31.18, 0.32, ts, 58);
+  else bild(inBuf(0, sMama2, ts));
+  statusleiste("#fff"); const w = inselNormal(ts, 0); musikAktivitaet(ts, w);
+  const r = ENDE - T; if (r < 0.3) { ctx.fillStyle = `rgba(0,0,0,${1 - r / 0.3})`; ctx.fillRect(0, 0, W, H); } };
+(async () => { for (const w of [400, 500, 600, 700, 800]) await document.fonts.load(`${w} 60px I`); COVER = await lade("assets/cover.png");
+  for (let i = 0; i < 3; i++) { const c = document.createElement("canvas"); c.width = W * K; c.height = H * K; BUF.push(c); } window.bereit = true; })();
+</script></body></html>
