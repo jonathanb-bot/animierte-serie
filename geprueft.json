@@ -2352,6 +2352,12 @@
    "bild_s": 71.22,
    "ton_s": 71.21,
    "lufs": -15.9
+  },
+  "taeglich/block-b03.mp4": {
+   "ok": true,
+   "bild_s": 88.77,
+   "ton_s": 88.79,
+   "lufs": -19.2
   }
  },
  "serien": {
@@ -2652,6 +2658,10 @@
   "nische-n004-en": {
    "titel": "How to Build a Tunnel Under the Sea",
    "datei": "taeglich/nische-n004-en.mp4"
+  },
+  "block-b03": {
+   "titel": "Ich habe Krümel zu seiner Mama gebracht",
+   "datei": "taeglich/block-b03.mp4"
   }
  },
  "taeglich_staffeln": {
