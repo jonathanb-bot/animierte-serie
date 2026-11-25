@@ -575,4 +575,47 @@ export const schranke = ({ laenge = 9, text = "KRAFTWERK" } = {}) => { const g =
   const st = tex(512, 128, (x, cw, ch) => { x.fillStyle = "#1a3a6a"; x.fillRect(0, 0, cw, ch); x.fillStyle = "#fff"; x.font = "900 76px 'Inter Display', Inter, sans-serif"; x.textAlign = "center"; x.textBaseline = "middle"; x.fillText(text, cw / 2, ch / 2 + 4, cw - 30); });
   const sc = an(h, new THREE.Mesh(new THREE.PlaneGeometry(3.2, 0.8), new THREE.MeshStandardMaterial({ map: st, roughness: 0.5, emissive: "#ffffff", emissiveMap: st, emissiveIntensity: 0.4 })), 0, 3.75, 1.2);
   return g; };
-export const ALLE = { werkstattwagen, schranke,  rakete, startrampe, grill, trampolin, roller, flugzeug, koffer, stern, sternglas, besen, reihenhaus, glasturm, baum, blumenkuebel, hecke, bank, laterne, ampel, hydrant, muelltonne, briefkasten, schild, zaun, brunnen, laden, haltestelle, fahrrad, bus, hund, katze, vogel, tisch, stuhl, sofa, stehlampe, regal, geschenk, fernseher, riesenTier, haus, schule, sportwagen, lichterkette, lehmhaus, wimpelkette, fackel, krug, palme, pyramide, glocke, thron, krone, sockel, steinwaechter, riesenWaechter, wolke, himmelshaus, bretterbude, muellberg, leiter, pool, glasaufzug, absperrung, goldvilla, goldschluessel, tellerhaus, spind, tribuene, krankenwagen, krankenbett, herzmonitor, babybett, achterbahn, torte, kinderwagen, gluehbirnenladen, limousine, liegestuhl, broetchen };
+
+// ---------- Dorf-Verteidigung: Waffen-Baukasten (Jonathan 24./25.11., Serie „Die 13. Glocke“) ----------
+// Jede Waffe hat userData.duese (Empty an der Mündung, Weltposition = Startpunkt für Strahl/Geschoss).
+const raeder = (g, w, z0, z1, r = 0.55, f = "#2a2a30") => { for (const x of [-w / 2, w / 2]) for (const z of [z0, z1]) { const rd = an(g, zyl(r, r, 0.35, mat(f, 0.8), 20), x, r, z); rd.rotation.z = Math.PI / 2; an(g, zyl(r * 0.45, r * 0.45, 0.37, metall("#c8ccd4"), 14), x, r, z).rotation.z = Math.PI / 2; } };
+export const wasserwerfer = ({ farbe = "#e83a2a" } = {}) => { const g = new THREE.Group();
+  an(g, rb(2.6, 0.5, 3.6, 0.15, mat("#3a3e48", 0.6)), 0, 0.85, 0); raeder(g, 2.7, -1.2, 1.2);
+  const tank = an(g, zyl(0.95, 0.95, 2.8, plastik(farbe), 28), 0, 1.95, -0.2); tank.rotation.x = Math.PI / 2;
+  for (const z of [-1.3, 0.9]) { const b = an(g, zyl(1.0, 1.0, 0.18, metall("#c8ccd4"), 28), 0, 1.95, z); b.rotation.x = Math.PI / 2; }
+  an(g, rb(1.2, 0.3, 0.5, 0.1, mat("#f4f4f4", 0.5)), 0, 1.95, 1.02);   // Schild
+  const kopf = new THREE.Group(); kopf.position.set(0, 3.0, 0.6); g.add(kopf); an(kopf, zyl(0.35, 0.45, 0.5, metall("#5a6068"), 16), 0, 0, 0);
+  const rohr = an(kopf, zyl(0.16, 0.2, 2.0, metall("#9aa0a8"), 16), 0, 0.15, 1.0); rohr.rotation.x = Math.PI / 2 - 0.15; an(kopf, zyl(0.24, 0.2, 0.3, metall("#e8b830"), 16), 0, 0.3, 2.0).rotation.x = Math.PI / 2 - 0.15;
+  const duese = new THREE.Object3D(); duese.position.set(0, 0.32, 2.2); kopf.add(duese);
+  const schlauch = an(g, new THREE.Mesh(new THREE.TorusGeometry(0.5, 0.09, 8, 24, Math.PI * 1.3), mat("#2a2a30", 0.7)), 0.9, 2.2, -0.2); schlauch.rotation.y = Math.PI / 2;
+  g.userData = { duese, kopf, staerke: 25, art: "Wasser" }; return g; };
+export const weihwasserkanone = () => { const g = new THREE.Group(), silber = metall("#d8dce4"), gold = new THREE.MeshStandardMaterial({ color: "#e8b830", metalness: 0.85, roughness: 0.25 });
+  an(g, rb(2.4, 0.6, 2.8, 0.15, mat("#5a3a22", 0.7)), 0, 0.8, 0); raeder(g, 2.5, -0.9, 0.9, 0.7, "#4a2e18");
+  const kopf = new THREE.Group(); kopf.position.set(0, 1.6, 0); g.add(kopf); const rohr = an(kopf, zyl(0.42, 0.55, 3.2, silber, 24), 0, 0.5, 0.8); rohr.rotation.x = Math.PI / 2 - 0.25;
+  for (const z of [-0.4, 0.8, 2.0]) an(kopf, zyl(0.6, 0.6, 0.16, gold, 24), 0, 0.5 + (z - 0.8) * 0.25, z).rotation.x = Math.PI / 2 - 0.25;
+  an(kopf, bx(0.14, 0.9, 0.08, gold), 0, 1.1, 0.4); an(kopf, bx(0.55, 0.14, 0.08, gold), 0, 1.25, 0.4);   // Kreuz
+  const glimm = an(kopf, new THREE.Mesh(new THREE.CircleGeometry(0.38, 24), leucht(0.6, 0.9, 1.6)), 0, 0.88, 2.42); glimm.rotation.x = -0.25;
+  const duese = new THREE.Object3D(); duese.position.set(0, 0.9, 2.5); kopf.add(duese); g.userData = { duese, kopf, glimm, staerke: 30, art: "Heilig" }; return g; };
+export const flutlicht = ({ hoehe = 7 } = {}) => { const g = new THREE.Group(), em = metall("#3a3e48");
+  an(g, rb(1.6, 0.3, 1.6, 0.1, em), 0, 0.15, 0); an(g, zyl(0.14, 0.18, hoehe, em, 12), 0, hoehe / 2, 0);
+  const kopf = new THREE.Group(); kopf.position.set(0, hoehe, 0.3); g.add(kopf); an(kopf, rb(2.4, 1.6, 0.5, 0.1, em), 0, 0, 0);
+  const flaeche = an(kopf, bx(2.1, 1.3, 0.05, leucht(3, 2.9, 2.6)), 0, 0, 0.27); for (let i = 1; i < 4; i++) an(kopf, bx(0.04, 1.3, 0.06, em), -1.05 + i * 0.525, 0, 0.3);
+  const spot = new THREE.SpotLight("#fff4e0", 0, 60, 0.55, 0.5, 1.2); spot.position.set(0, 0, 0.5); const ziel = new THREE.Object3D(); ziel.position.set(0, -4, 12); kopf.add(spot, ziel); spot.target = ziel;
+  g.userData = { kopf, flaeche, spot, duese: flaeche, staerke: 20, art: "Licht" }; return g; };
+export const netzwerfer = () => { const g = new THREE.Group(); an(g, rb(1.8, 0.4, 1.8, 0.1, mat("#4a5a3a", 0.7)), 0, 0.2, 0);
+  const kopf = new THREE.Group(); kopf.position.set(0, 1.4, 0); g.add(kopf); an(kopf, zyl(0.2, 0.25, 1.4, metall("#5a6068"), 12), 0, -0.6, 0);
+  const lauf = an(kopf, zyl(0.5, 0.42, 1.8, mat("#6a7a4a", 0.6), 20), 0, 0.3, 0.5); lauf.rotation.x = Math.PI / 2 - 0.3;
+  const netz = new THREE.Mesh(new THREE.SphereGeometry(0.38, 10, 8), new THREE.MeshStandardMaterial({ color: "#e8e0c8", wireframe: true })); netz.position.set(0, 0.55, 1.35); kopf.add(netz);
+  const duese = new THREE.Object3D(); duese.position.set(0, 0.6, 1.45); kopf.add(duese); g.userData = { kopf, netz, duese, staerke: 15, art: "Fangen" }; return g; };
+export const steinhaufen = ({ n = 9, saat = 4 } = {}) => { const g = new THREE.Group(), r = zufall(saat);
+  for (let i = 0; i < n; i++) { const st = an(g, new THREE.Mesh(new THREE.DodecahedronGeometry(0.28 + r() * 0.2, 0), mat(["#8a8a8a", "#7a746c", "#9a948a"][i % 3], 0.95)), (r() - 0.5) * 1.4, 0.25 + (i > 5 ? 0.35 : 0), (r() - 0.5) * 1.4); st.rotation.set(r() * 3, r() * 3, 0); }
+  return g; };
+// leuchtender Bauplatz für die nächste Waffe (gestrichelter Rahmen + Plus), userData.setze(a) = Leuchtstärke 0..1
+export const bauplatz = ({ groesse = 4, farbe = [0.4, 1.4, 2.2] } = {}) => { const g = new THREE.Group(), m = leucht(...farbe); m.transparent = true;
+  const n = 6, l = groesse / n; for (let s = 0; s < 4; s++) for (let i = 0; i < n; i += 2) { const st = an(g, bx(l * 0.9, 0.12, 0.28, m), 0, 0.05, 0); const a = -groesse / 2 + (i + 0.5) * l + l * 0.05;
+    if (s < 2) st.position.set(a, 0.05, (s ? 1 : -1) * groesse / 2); else { st.rotation.y = Math.PI / 2; st.position.set((s === 2 ? 1 : -1) * groesse / 2, 0.05, a); } }
+  an(g, bx(groesse * 0.28, 0.06, 0.22, m), 0, 0.05, 0); an(g, bx(0.22, 0.06, groesse * 0.28, m), 0, 0.05, 0);
+  const fm = new THREE.MeshBasicMaterial({ color: new THREE.Color(...farbe).multiplyScalar(0.35), transparent: true, opacity: 0.35, depthWrite: false }); const fl = an(g, new THREE.Mesh(new THREE.PlaneGeometry(groesse, groesse), fm), 0, 0.03, 0); fl.rotation.x = -Math.PI / 2;
+  g.userData.setze = (a) => { m.opacity = a; fm.opacity = 0.35 * a; g.visible = a > 0.01; }; return g; };
+
+export const ALLE = { wasserwerfer, weihwasserkanone, flutlicht, netzwerfer, steinhaufen, bauplatz, werkstattwagen, schranke,  rakete, startrampe, grill, trampolin, roller, flugzeug, koffer, stern, sternglas, besen, reihenhaus, glasturm, baum, blumenkuebel, hecke, bank, laterne, ampel, hydrant, muelltonne, briefkasten, schild, zaun, brunnen, laden, haltestelle, fahrrad, bus, hund, katze, vogel, tisch, stuhl, sofa, stehlampe, regal, geschenk, fernseher, riesenTier, haus, schule, sportwagen, lichterkette, lehmhaus, wimpelkette, fackel, krug, palme, pyramide, glocke, thron, krone, sockel, steinwaechter, riesenWaechter, wolke, himmelshaus, bretterbude, muellberg, leiter, pool, glasaufzug, absperrung, goldvilla, goldschluessel, tellerhaus, spind, tribuene, krankenwagen, krankenbett, herzmonitor, babybett, achterbahn, torte, kinderwagen, gluehbirnenladen, limousine, liegestuhl, broetchen };
