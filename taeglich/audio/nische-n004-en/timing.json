@@ -1,0 +1,176 @@
+{
+ "dauer": 71.93,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "meertunnel",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 4.502,
+   "emotion": "erzaehlend",
+   "text": "Drop a concrete tube into the sea, and your family can drive underwater."
+  },
+  {
+   "nr": 2,
+   "typ": "meertunnel",
+   "kapitel": 1,
+   "start": 4.502,
+   "dauer": 3.902,
+   "emotion": "erzaehlend",
+   "text": "But your tube is full of air. It won't sink. It floats."
+  },
+  {
+   "nr": 3,
+   "typ": "meertunnel",
+   "kapitel": 1,
+   "start": 8.404,
+   "dauer": 5.294,
+   "emotion": "erzaehlend",
+   "text": "So you build tanks inside and fill them with water. Slowly, it sinks."
+  },
+  {
+   "nr": 4,
+   "typ": "meertunnel",
+   "kapitel": 1,
+   "start": 13.698,
+   "dauer": 2.99,
+   "emotion": "erzaehlend",
+   "text": "But on the bare seabed, ship anchors would rip it open."
+  },
+  {
+   "nr": 5,
+   "typ": "meertunnel",
+   "kapitel": 1,
+   "start": 16.688,
+   "dauer": 5.39,
+   "emotion": "erzaehlend",
+   "text": "So you dig a trench first. Forty feet deep, three hundred thirty feet wide."
+  },
+  {
+   "nr": 6,
+   "typ": "titel",
+   "kapitel": 1,
+   "start": 22.078,
+   "dauer": 2.99,
+   "emotion": "erzaehlend",
+   "text": "Fifteen million cubic meters of mud."
+  },
+  {
+   "nr": 7,
+   "typ": "titel",
+   "kapitel": 1,
+   "start": 25.068,
+   "dauer": 4.598,
+   "emotion": "erzaehlend",
+   "text": "But one tube won't reach. Germany to Denmark is eleven miles of sea."
+  },
+  {
+   "nr": 8,
+   "typ": "meertunnel",
+   "kapitel": 1,
+   "start": 29.666,
+   "dauer": 4.934,
+   "emotion": "erzaehlend",
+   "text": "So you build a factory on the coast. Every piece is seven hundred twelve feet long."
+  },
+  {
+   "nr": 9,
+   "typ": "meertunnel",
+   "kapitel": 1,
+   "start": 34.6,
+   "dauer": 4.358,
+   "emotion": "erzaehlend",
+   "text": "Seventy-three thousand metric tons. Tugboats drag it out to sea."
+  },
+  {
+   "nr": 10,
+   "typ": "meertunnel",
+   "kapitel": 1,
+   "start": 38.958,
+   "dauer": 3.278,
+   "emotion": "erzaehlend",
+   "text": "And you need eighty-nine of them, joined underwater."
+  },
+  {
+   "nr": 11,
+   "typ": "meertunnel",
+   "kapitel": 2,
+   "start": 42.236,
+   "dauer": 2.726,
+   "emotion": "erzaehlend",
+   "text": "Because your family is riding the very first train."
+  },
+  {
+   "nr": 12,
+   "typ": "meertunnel",
+   "kapitel": 2,
+   "start": 44.962,
+   "dauer": 4.094,
+   "emotion": "erzaehlend",
+   "text": "But between two pieces, there's a gap. The whole sea pushes in."
+  },
+  {
+   "nr": 13,
+   "typ": "meertunnel",
+   "kapitel": 2,
+   "start": 49.056,
+   "dauer": 3.614,
+   "emotion": "erzaehlend",
+   "text": "So each end gets a thick rubber ring. You push them together."
+  },
+  {
+   "nr": 14,
+   "typ": "meertunnel",
+   "kapitel": 2,
+   "start": 52.67,
+   "dauer": 2.03,
+   "emotion": "erzaehlend",
+   "text": "Then you pump the water out of the gap."
+  },
+  {
+   "nr": 15,
+   "typ": "meertunnel",
+   "kapitel": 2,
+   "start": 54.7,
+   "dauer": 4.382,
+   "emotion": "erzaehlend",
+   "text": "And now the sea itself squeezes them shut. The deeper, the tighter."
+  },
+  {
+   "nr": 16,
+   "typ": "meertunnel",
+   "kapitel": 2,
+   "start": 59.082,
+   "dauer": 3.086,
+   "emotion": "erzaehlend",
+   "text": "Then you bury it under gravel, sand and stone."
+  },
+  {
+   "nr": 17,
+   "typ": "meertunnel",
+   "kapitel": 2,
+   "start": 62.168,
+   "dauer": 3.854,
+   "emotion": "erzaehlend",
+   "text": "The ferry takes forty-five minutes. Your train: seven."
+  },
+  {
+   "nr": 18,
+   "typ": "titel",
+   "kapitel": 2,
+   "start": 66.022,
+   "dauer": 2.198,
+   "emotion": "erzaehlend",
+   "text": "The longest immersed tunnel on Earth."
+  },
+  {
+   "nr": 19,
+   "typ": "meertunnel",
+   "kapitel": 2,
+   "start": 68.22,
+   "dauer": 3.71,
+   "emotion": "erzaehlend",
+   "text": "Congratulations. You just built the Fehmarnbelt Tunnel."
+  }
+ ]
+}

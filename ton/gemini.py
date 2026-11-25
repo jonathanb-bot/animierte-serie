@@ -352,6 +352,7 @@ def sprechen(zeilen: list[str], kapitel: list[int], stimme="Orus", kapitel_pro_a
             ws = [(min(dauer, max(0.0, zeiten[k][0] - start[z])), min(dauer, max(0.0, zeiten[k][1] - start[z])), w,
                    akzente.get(norm(w)))
                   for k, (zz, w) in enumerate(woerter) if zz == z]
-            out[i] = Gesprochen(_rauschtor(stimm_kette(y)), [(0.0, len(y) / A.SR, zeilen[i])], ws)
+            # Issue #41 (Jonathan 24.11.): Stimme nie bearbeiten – keine Rundfunk-Kette (EQ/Kompressor), kein Rauschtor.
+            out[i] = Gesprochen(np.asarray(y, dtype=np.float32), [(0.0, len(y) / A.SR, zeilen[i])], ws)
         log(f"    {len(idx)} Zeilen zugeordnet ({len(erkannt)} Wörter erkannt, Skript {len(woerter)})")
     return out

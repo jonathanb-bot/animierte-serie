@@ -1,0 +1,65 @@
+# Tunnel unter dem Meer
+@musik musik/nische-n004.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung spannend
+@vortrag lebendig
+@stimme roh
+@mund zitate
+@einblenden aus
+@untertitel aus
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette tuerkis
+@zeit tag
+// Test „So baust du …“ (MASTER 3b, art: bau, Idee Nr. 31). Kette aus „Aber … Also …“, Ende „Glückwunsch, du hast gerade … gebaut“.
+// Issue #41: kein @klang studio (kein EQ/Kompressor auf der Stimme).
+// Quellen: Femern A/S, Factsheet Fehmarnbelt-Tunnel, Nov. 2025 (18 km, 79 Standardelemente à 217 m und 73.000 t, 10 Spezialelemente,
+//   Graben im Schnitt 12 m tief und 100 m breit, 15 Mio. m³ Aushub, Fabrik bei Rødbyhavn, Schotten machen die Elemente schwimmfähig,
+//   Kies/Sand und Steinschicht darüber, Zug 7 min, Fähre 45 min); Arup 2026 (längster Absenktunnel der Welt, mehr als 3× so lang wie
+//   der 5,8 km lange Transbay Tube); Trelleborg (GINA-Gummidichtung) und Absenktunnel-Verfahren: Wasser im Spalt wird abgepumpt,
+//   der Wasserdruck von außen presst die Dichtung zusammen; Ballastwasser in Tanks zum Absenken.
+
+== Schleife 1 ==
+// 0 s – Einsatz (naive Lösung als Prämisse über dich): Betonrohr schwimmt an der Oberfläche, Hook-Text groß
+[meertunnel phase=wurf zoom-rein hooktext="EIN ROHR INS MEER?"] Wirf ein Betonrohr ins Meer, und deine Familie fährt unter Wasser.
+// 4 s – Finte 1 „Aber“: das Rohr ist voller Luft, es schwimmt
+[meertunnel phase=wurf nah ein="Luft>VOLLER LUFT|schwimmt>ES SCHWIMMT" ein_y=1500] Aber dein Rohr ist voller Luft. Es geht nicht unter. Es schwimmt.
+// 8 s – Lösung „Also“: Ballasttanks laufen voll, es sinkt
+[meertunnel phase=sinkt zoom-raus ein="Tanks>BALLASTTANKS" ein_y=1420] Also baust du Tanks hinein und füllst sie mit Wasser. Langsam sinkt es.
+// 13 s – Aber: auf dem offenen Boden reißen Strömung und Anker alles auf
+[meertunnel phase=graben pvon=0 pbis=0.35 schwenk-rechts ein="Anker>ANKER" ein_y=1420] Aber auf dem nackten Meeresboden würden Schiffsanker es aufreißen.
+// 17 s – Also: ein Graben, 12 Meter tief, 100 Meter breit
+[meertunnel phase=graben pvon=0.35 pbis=1 zoom-rein ein="zwölf>#12 M TIEF|hundert>#100 M BREIT" ein_y=1420] Also gräbst du zuerst einen Graben. Zwölf Meter tief, hundert Meter breit.
+// 21 s – Zahl mit Quelle: 15 Millionen Kubikmeter Schlamm
+[titel oben="Femern A/S · 2025" gross="15 MIO. m³" unten="Schlamm aus dem Graben" farbe=#0a3f63 akzent=#7fe8f0 groesse=170 hud=false zoom-rein] Fünfzehn Millionen Kubikmeter Schlamm.
+// 24 s – Finte 2 „Aber“: ein Rohr reicht nicht, das Meer ist 18 km breit
+[titel oben="Deutschland – Dänemark" gross="18 KM" unten="Meer dazwischen" farbe=#0a3f63 akzent=#7fe8f0 groesse=240 hud=false zoom-rein ton=hit] Aber ein Rohr reicht nicht. Zwischen Deutschland und Dänemark sind achtzehn Kilometer Meer.
+// 29 s – Also: Fabrik an der Küste, Schlepper ziehen das Riesenstück hinaus (Wow-Bild)
+[meertunnel phase=schlepper zeit=abend palette=orange zoom-raus ein="zweihundert>#217 M LANG" ein_y=430] Also baust du eine Fabrik an der Küste. Jedes Stück ist zweihundertsiebzehn Meter lang.
+// 34 s – Zahl: 73.000 Tonnen, Schlepper ziehen
+[meertunnel phase=schlepper zeit=abend palette=orange schwenk-rechts ein="dreiund>#73.000 TONNEN" ein_y=430] Dreiundsiebzigtausend Tonnen schwer. Schlepper ziehen es aufs Meer.
+// 38 s – Rehook: 89 davon, unter Wasser zusammengesteckt
+[meertunnel phase=kette zoom-rein ein="neunund>#89 STÜCKE" ein_y=1420] Und du brauchst neunundachtzig davon, unter Wasser verbunden.
+
+== Schleife 2 ==
+// 42 s – Einsatz 2: es geht um deine Familie im ersten Zug (warmer Moment)
+[meertunnel phase=fenster du lina mama zoom-rein ein="Familie>DEINE FAMILIE>herz" ein_y=400] Denn im allerersten Zug sitzt deine Familie.
+// 45 s – Große Frage 2 / Aber: zwischen zwei Stücken bleibt ein Spalt, das Meer drückt hinein
+[meertunnel phase=fuge pvon=0 pbis=0.04 zoom-rein ein="Spalt>DER SPALT" ein_y=430] Aber zwischen zwei Stücken bleibt ein Spalt. Das ganze Meer drückt hinein.
+// 49 s – Also: dicker Gummiring an jedes Ende, zusammenschieben
+[meertunnel phase=fuge pvon=0.04 pbis=0.3 nah ein="Gummi>GUMMIDICHTUNG" ein_y=430] Also bekommt jedes Ende einen dicken Gummiring. Du schiebst sie zusammen.
+// 53 s – Dann pumpst du das Wasser aus dem Spalt
+[meertunnel phase=fuge pvon=0.3 pbis=0.62 zoom-rein ein="pumpst>ABGEPUMPT" ein_y=430] Dann pumpst du das Wasser aus dem Spalt.
+// 56 s – Wendung (Geschenk-Fakt): das Meer selbst presst die Stücke zusammen
+[meertunnel phase=fuge pvon=0.62 pbis=1 zoom-raus ein="Meer>DAS MEER DICHTET|tiefer>JE TIEFER, DESTO FESTER" ein_y=380 ton=hit] Und jetzt presst das Meer selbst die Stücke zusammen. Je tiefer, desto fester.
+// 61 s – Aber/Also: Anker – zuschütten mit Kies, Sand und Steinen
+[meertunnel phase=zudecken zoom-raus ein="Kies>KIES · SAND · STEIN" ein_y=1420] Dann schüttest du alles mit Kies, Sand und Steinen zu.
+// 64 s – Ende Schritt: Schienen, der Zug fährt, Fähre oben 45 min gegen 7 min
+[meertunnel phase=fertig zoom-rein ein="Fähre>FÄHRE 45 MIN|Zug>ZUG 7 MIN" ein_y=720] Die Fähre braucht fünfundvierzig Minuten. Dein Zug: sieben.
+// 67 s – Fakt mit Quelle: längster Absenktunnel der Welt
+[titel oben="Arup · 2026" gross="NR. 1" unten="längster Absenktunnel" farbe=#0a3f63 akzent=#7fe8f0 groesse=240 hud=false zoom-rein] Der längste Absenktunnel der Welt.
+// 70 s – Finte 2 = hartes Ende: Glückwunsch, du hast gerade den Fehmarnbelt-Tunnel gebaut
+[meertunnel phase=fertig pvon=0.4 pbis=1 zoom-raus ein="Fehmarn>FEHMARNBELT-TUNNEL" ein_y=720] Glückwunsch. Du hast gerade den Fehmarnbelt-Tunnel gebaut.

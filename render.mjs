@@ -209,8 +209,10 @@ const tonDatei = path.join(tmp, "ton.wav");
     const ms = Math.round(s.start * 1000);
     filter.push(`[${n}:a]${ep.klang === "studio" ? STUDIO : ""}aresample=48000,aformat=channel_layouts=stereo,adelay=${ms}|${ms},volume=${ep.stimme_lautstaerke ?? 1.0}[v${n}]`); mix.push(`[v${n}]`); n++;
   }
-  filter.push(`${mix.join("")}amix=inputs=${mix.length}:normalize=0:duration=longest,atrim=0:${gesamt},alimiter=limit=0.95[out]`);
-  execFileSync("ffmpeg", ["-y", "-v", "error", ...inputs, "-filter_complex", filter.join(";"), "-map", "[out]", "-ar", "48000", "-ac", "2", tonDatei]);
+  // `@stimme roh` (Issue #41, Jonathan 24.11.): kein Begrenzer auf dem Mix (würde die Stimme drücken), Zwischenspur als 32-bit-Float,
+  // damit nichts übersteuert; die Lautheit gleicht danach ein fester Faktor an (veroeffentlichen.py). Ohne die Angabe bleibt alles wie bisher.
+  filter.push(`${mix.join("")}amix=inputs=${mix.length}:normalize=0:duration=longest,atrim=0:${gesamt}${ep.stimmeRoh ? "" : ",alimiter=limit=0.95"}[out]`);
+  execFileSync("ffmpeg", ["-y", "-v", "error", ...inputs, "-filter_complex", filter.join(";"), "-map", "[out]", "-ar", "48000", "-ac", "2", ...(ep.stimmeRoh ? ["-c:a", "pcm_f32le"] : []), tonDatei]);
 }
 
 // --nur-ton: das schon gerenderte Video behalten und nur die Tonspur neu bauen (z. B. nachträglich `@klang studio`).

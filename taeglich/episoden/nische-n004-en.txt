@@ -1,0 +1,66 @@
+# A Tunnel Under the Sea
+@musik musik/nische-n004-en.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung spannend
+@vortrag lebendig
+@stimme roh
+@mund zitate
+@einblenden aus
+@untertitel aus
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette tuerkis
+@zeit tag
+@sprache en
+// "How to build …" test (MASTER 3b, art: bau, idea no. 31). Chain of "But … So …", ending "Congratulations, you just built …".
+// Issue #41: no @klang studio (no EQ/compressor on the voice).
+// Sources: Femern A/S, Fehmarnbelt tunnel fact sheet, Nov 2025 (18 km, 79 standard elements of 217 m and 73,000 t, trench avg. 12 m deep
+//   and 100 m wide, 15 million m³ excavated, factory near Rødbyhavn, bulkheads make elements buoyant, gravel/sand backfill and stone layer,
+//   train 7 min, ferry 45 min); Arup 2026 (longest immersed tunnel in the world, more than 3× the 5.8 km Transbay Tube);
+//   Trelleborg (GINA rubber gasket) and immersed-tunnel method: water in the joint is pumped out, outside water pressure compresses the gasket;
+//   ballast water in tanks to sink the element. 73,000 metric tonnes → said as "tons" (US viewers), number unchanged.
+
+== Loop 1 ==
+// 0 s – Setup (naive solution as a premise about you): concrete tube floats on the surface, hook text big
+[meertunnel phase=wurf zoom-rein hooktext="A TUBE IN THE SEA?"] Drop a concrete tube into the sea, and your family can drive underwater.
+// 4 s – Twist 1 "But": the tube is full of air, it floats
+[meertunnel phase=wurf nah ein="air>FULL OF AIR|floats>IT FLOATS" ein_y=1500] But your tube is full of air. It won't sink. It floats.
+// 8 s – Fix "So": ballast tanks fill up, it sinks
+[meertunnel phase=sinkt zoom-raus ein="tanks>BALLAST TANKS" ein_y=1420] So you build tanks inside and fill them with water. Slowly, it sinks.
+// 13 s – But: on the open seabed, currents and anchors would tear it open
+[meertunnel phase=graben pvon=0 pbis=0.35 schwenk-rechts ein="anchors>ANCHORS" ein_y=1420] But on the bare seabed, ship anchors would rip it open.
+// 17 s – So: a trench, 12 meters deep, 100 meters wide
+[meertunnel phase=graben pvon=0.35 pbis=1 zoom-rein ein="forty>#40 FT DEEP|three>#330 FT WIDE" ein_y=1420] So you dig a trench first. Forty feet deep, three hundred thirty feet wide.
+// 21 s – Number with source: 15 million cubic meters of mud
+[titel oben="Femern A/S · 2025" gross="15 MILLION m³" unten="of mud from the trench" farbe=#0a3f63 akzent=#7fe8f0 groesse=140 hud=false zoom-rein] Fifteen million cubic meters of mud.
+// 24 s – Twist 2 "But": one tube isn't enough, the sea is 11 miles wide
+[titel oben="Germany – Denmark" gross="11 MILES" unten="of open sea" farbe=#0a3f63 akzent=#7fe8f0 groesse=220 hud=false zoom-rein ton=hit] But one tube won't reach. Germany to Denmark is eleven miles of sea.
+// 29 s – So: a factory on the coast, tugboats pull the giant piece out (wow shot)
+[meertunnel phase=schlepper zeit=abend palette=orange zoom-raus ein="seven>#712 FT LONG" ein_y=430] So you build a factory on the coast. Every piece is seven hundred twelve feet long.
+// 34 s – Number: 73,000 tons, tugboats pull it
+[meertunnel phase=schlepper zeit=abend palette=orange schwenk-rechts ein="Seventy>73,000 TONNES" ein_y=430] Seventy-three thousand metric tons. Tugboats drag it out to sea.
+// 38 s – Rehook: 89 of them, joined underwater
+[meertunnel phase=kette zoom-rein ein="eighty>#89 PIECES" ein_y=1420] And you need eighty-nine of them, joined underwater.
+
+== Loop 2 ==
+// 42 s – Setup 2: your family rides the very first train (warm moment)
+[meertunnel phase=fenster du lina mama zoom-rein ein="family>YOUR FAMILY>herz" ein_y=400] Because your family is riding the very first train.
+// 45 s – Big question 2 / But: between two pieces there's a gap, the sea pushes in
+[meertunnel phase=fuge pvon=0 pbis=0.04 zoom-rein ein="gap>THE GAP" ein_y=430] But between two pieces, there's a gap. The whole sea pushes in.
+// 49 s – So: a thick rubber ring on each end, push them together
+[meertunnel phase=fuge pvon=0.04 pbis=0.3 nah ein="rubber>RUBBER GASKET" ein_y=430] So each end gets a thick rubber ring. You push them together.
+// 53 s – Then you pump the water out of the gap
+[meertunnel phase=fuge pvon=0.3 pbis=0.62 zoom-rein ein="pump>PUMPED DRY" ein_y=430] Then you pump the water out of the gap.
+// 56 s – Turn (the gift fact): the sea itself squeezes the pieces shut
+[meertunnel phase=fuge pvon=0.62 pbis=1 zoom-raus ein="sea>THE SEA SEALS IT|deeper>DEEPER = TIGHTER" ein_y=380 ton=hit] And now the sea itself squeezes them shut. The deeper, the tighter.
+// 61 s – Bury it under gravel, sand and stone
+[meertunnel phase=zudecken zoom-raus ein="gravel>GRAVEL · SAND · ROCK" ein_y=1420] Then you bury it under gravel, sand and stone.
+// 64 s – Finished: the train runs, ferry above, 45 min vs 7 min
+[meertunnel phase=fertig zoom-rein ein="ferry>FERRY 45 MIN|train>TRAIN 7 MIN" ein_y=720] The ferry takes forty-five minutes. Your train: seven.
+// 67 s – Fact with source: longest immersed tunnel in the world
+[titel oben="Arup · 2026" gross="NO. 1" unten="longest immersed tunnel" farbe=#0a3f63 akzent=#7fe8f0 groesse=240 hud=false zoom-rein] The longest immersed tunnel on Earth.
+// 70 s – Twist 2 = hard ending: congratulations, you just built the Fehmarnbelt Tunnel
+[meertunnel phase=fertig pvon=0.4 pbis=1 zoom-raus ein="Fehmarn>FEHMARNBELT TUNNEL" ein_y=720] Congratulations. You just built the Fehmarnbelt Tunnel.

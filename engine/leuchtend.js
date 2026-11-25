@@ -1101,4 +1101,235 @@
       const a = 0.5 + 0.5 * Math.sin(t * 5); ctx.fillStyle = A.rgrad(0, -20, 0, 200, [[0, A.rgba("#ff4a3a", 0.5 * a)], [1, A.rgba("#ff4a3a", 0)]]); ctx.fillRect(-200, -220, 400, 400); },
   });
   for (const n of ["busticket", "halteknopf"]) if (!A.ICONS.includes(n)) A.ICONS.push(n);
+
+  // =====================================================================
+  // MEERTUNNEL – Schnitt durchs Meer: Himmel, Wasseroberfläche, Wassersäule mit Lichtstrahlen, Meeresboden mit Schichten
+  // (n004 „So baust du einen Tunnel unter dem Meer“, Absenktunnel nach dem Fehmarnbelt-Verfahren). Ein Tunnelelement wächst
+  // Schritt für Schritt (gleiche Kamera, jede Lösung sofort sichtbar):
+  //  phase=wurf (ein Betonrohr schwimmt an der Oberfläche, innen Luft), sinkt (Element mit Ballasttanks, die volllaufen – es sinkt
+  //  in den Graben), graben (Bagger-Schiff hebt den Graben aus), schlepper (Oberfläche: Schlepper ziehen ein Element aus der
+  //  Fabrik an der Küste), kette (Elemente liegen im Graben, das nächste sinkt dazu und dockt an), fuge (Nahaufnahme der Fuge:
+  //  Gummidichtung, Wasser wird abgepumpt, das Meer drückt die Elemente zusammen), zudecken (Kies und Steine darüber),
+  //  fertig (zugedeckter Tunnel im Schnitt, innen fährt ein Zug; familie = deine Familie am Fenster, nah = nur das Zugfenster)
+  //  zeit=tag|abend, faehre (Fähre oben, nur fertig/zudecken)
+  // =====================================================================
+  SZ.meertunnel = (s, t, p0 = 0) => {
+    const p = s.pvon != null ? lerp(s.pvon, s.pbis ?? 1, p0) : p0; // pvon=/pbis=: Ausschnitt des Bauschritts (z. B. Fuge über mehrere Einstellungen)
+    const ph = s.phase || "fertig", abend = s.zeit === "abend";
+    const WY = 470, BY = 1150, GY = 1330; // Wasseroberfläche, Meeresboden, Grabensohle
+    const P = { oben: abend ? "#3a3a7a" : "#4fb4d8", hor: abend ? "#ffb26a" : "#cdeff0", sonne: abend ? "#ffe0a0" : "#fffbe6",
+      w1: "#1fa6b8", w2: "#0f6f8f", w3: "#0a3f63", w4: "#072a48", boden: "#c9a46a", boden2: "#a8834e", boden3: "#7a5c3a", fels: "#5a4a3a",
+      beton: "#b9c4d2", beton2: "#8692a6", beton3: "#5d6880", innen: "#2a3550", tank: "#38c6e8", gelb: "#f6c445", rot: "#e8584a" };
+    const r0 = rnd(4401);
+    // ---------- Oberflächen-Ansicht (Schlepper) ----------
+    if (ph === "schlepper") {
+      const HY = 900;
+      ctx.fillStyle = lgrad(0, -600, 0, HY, [[0, abend ? "#2c2c6a" : P.oben], [0.65, abend ? "#c4507a" : "#9fdcea"], [1, abend ? "#ffb05a" : "#e6f7f2"]]); ctx.fillRect(-1500, -1500, 4080, HY + 1500);
+      const sx = 760, sy = HY - 150; glut(sx, sy, 900, abend ? "#ffb05a" : "#fff4c8", 0.55); glut(sx, sy, 260, "#fff1c0", 0.9); circle(sx, sy, 74, P.sonne); A.licht(sx, sy, 800, "#ffd9a0", 0.9);
+      for (const [wx, wy, k] of [[160, 300, 1], [880, 210, 0.8], [520, 420, 0.6]]) { const x = wx + Math.sin(t * 0.08 + wx) * 24; for (const [dx, dy, r] of [[0, 0, 40], [44, -16, 54], [96, 0, 38]]) circle(x + dx * k, wy + dy * k, r * k, rgba("#ffffff", abend ? 0.35 : 0.85)); }
+      // Küste links mit Fabrikhallen (unscharf, im Dunst)
+      ebene("mtkueste", 3, () => {
+        kurve([[-1500, HY - 30], [-300, HY - 40], [120, HY - 60], [330, HY - 20], [520, HY]], HY + 10); A.fill(abend ? "#7a4a6a" : "#7fa8a0");
+        for (const [x, b, h] of [[-260, 230, 120], [-10, 260, 150], [270, 200, 110]]) { box(x, HY - 40 - h, b, h, 6, abend ? "#8a5a78" : "#9fbcc0"); poly([[x - 10, HY - 40 - h], [x + b / 2, HY - 70 - h], [x + b + 10, HY - 40 - h]], abend ? "#6a3a5a" : "#88a8b0"); }
+        for (const x of [-120, 150]) { line(x, HY - 40, x, HY - 330, 10, abend ? "#5a3050" : "#6a8a90"); line(x, HY - 330, x + 180, HY - 330, 8, abend ? "#5a3050" : "#6a8a90"); line(x + 160, HY - 330, x + 160, HY - 240, 3, abend ? "#5a3050" : "#6a8a90"); }
+      }, 0.95);
+      // Meer mit Glitzerbahn
+      ctx.fillStyle = lgrad(0, HY, 0, 2000, [[0, abend ? "#e08a6a" : "#5cc8d8"], [0.35, abend ? "#8a4a7a" : "#1f9ab8"], [1, abend ? "#2a2a5a" : "#0a5a86"]]); ctx.fillRect(-1500, HY, 4080, 2000);
+      ctx.save(); ctx.globalCompositeOperation = "screen";
+      for (let i = 0; i < 70; i++) { const y = HY + 8 + Math.pow(i / 70, 1.6) * 900, b = 20 + i * 3, x = sx + Math.sin(i * 3.7 + t * 1.3) * (20 + i * 4); box(x - b / 2, y, b, 4 + i * 0.12, 3, rgba("#fff0c8", 0.5 * (1 - i / 80))); }
+      ctx.restore();
+      for (let i = 0; i < 26; i++) { const y = HY + 40 + r0() * 1000, x = -100 + r0() * 1300 + Math.sin(t * 0.6 + i) * 16, b = 40 + (y - HY) * 0.12; box(x, y, b, 5, 3, rgba("#ffffff", 0.18)); }
+      // Element: langer Betonquader, fast ganz unter Wasser, mit gelben Absenk-Pontons
+      const ex = 180 + p * 60, ey = 1260, eb = 860, bob = Math.sin(t * 1.1) * 4;
+      ctx.save(); ctx.translate(0, bob);
+      ctx.fillStyle = rgba("#06304a", 0.45); A.rr(ex - 20, ey + 30, eb + 40, 90, 30); ctx.fill();
+      box(ex, ey - 26, eb, 60, 10, P.beton); box(ex, ey - 26, eb, 12, 6, shade(P.beton, 0.35)); box(ex, ey + 14, eb, 20, 6, P.beton2);
+      for (const px of [ex + 120, ex + eb - 260]) { box(px, ey - 150, 140, 124, 10, P.gelb); box(px, ey - 150, 140, 20, 8, shade(P.gelb, 0.3)); box(px + 20, ey - 210, 16, 60, 4, "#4a4a5a"); box(px + 100, ey - 230, 14, 80, 4, "#4a4a5a"); circle(px + 107, ey - 236, 9, P.rot); glut(px + 107, ey - 236, 50, P.rot, 0.6 + 0.4 * Math.sin(t * 4)); }
+      ctx.restore();
+      // Gischt am Bug
+      for (let i = 0; i < 9; i++) ellipse(ex + eb + 10 + i * 18, ey + 20 + Math.sin(t * 3 + i) * 5, 30 - i * 2, 7, rgba("#ffffff", 0.6 - i * 0.06));
+      // zwei Schlepper vorne rechts mit Trossen
+      const zug = (x, y, k) => {
+        line(ex + eb - 10, ey - 10 + bob, x - 120 * k, y - 20 * k, 4, "#2a2a3a");
+        ellipse(x, y + 14 * k, 200 * k, 26 * k, rgba("#06304a", 0.4));
+        poly([[x - 170 * k, y - 30 * k], [x + 190 * k, y - 30 * k], [x + 150 * k, y + 20 * k], [x - 150 * k, y + 20 * k]], P.rot);
+        box(x - 170 * k, y - 38 * k, 360 * k, 14 * k, 6 * k, "#f2f2f2");
+        box(x - 60 * k, y - 120 * k, 150 * k, 84 * k, 10 * k, "#f4f0e6"); box(x - 40 * k, y - 104 * k, 110 * k, 26 * k, 6 * k, "#2a4a6a");
+        box(x + 10 * k, y - 190 * k, 30 * k, 74 * k, 6 * k, "#3a3a4a"); box(x + 6 * k, y - 196 * k, 38 * k, 14 * k, 5 * k, P.rot);
+        for (let i = 0; i < 4; i++) ellipse(x - 200 * k - i * 50 * k, y + 8 * k, 40 * k, 6 * k, rgba("#ffffff", 0.5 - i * 0.1));
+      };
+      zug(1180 + p * 60, 1150, 0.8); zug(1240 + p * 60, 1420, 1.0);
+      A._dunkel = 0; return;
+    }
+    // ---------- Schnitt-Ansicht ----------
+    // Himmel
+    ctx.fillStyle = lgrad(0, -900, 0, WY, [[0, P.oben], [1, P.hor]]); ctx.fillRect(-1500, -1500, 4080, WY + 1500);
+    glut(820, 230, 520, abend ? "#ffb05a" : "#fff6d0", 0.6); circle(820, 230, 60, P.sonne); A.licht(820, 230, 600, "#fff0c0", 0.7);
+    for (const [wx, wy] of [[120, 160], [470, 330]]) { const x = wx + Math.sin(t * 0.1 + wx) * 20; for (const [dx, dy, r] of [[0, 0, 34], [38, -14, 46], [84, 0, 32]]) circle(x + dx, wy + dy, r, rgba("#ffffff", abend ? 0.3 : 0.8)); }
+    // Küsten am Rand (Dänemark links, Deutschland rechts), weit weg
+    ebene("mtkuesten", 2.5, () => { kurve([[-1500, WY - 50], [-150, WY - 60], [40, WY - 20], [120, WY]], WY + 6); A.fill("#6f9a7a"); kurve([[960, WY], [1060, WY - 30], [1300, WY - 55], [2600, WY - 60]], WY + 6); A.fill("#7aa080"); }, 0.9);
+    // Wasser
+    ctx.fillStyle = lgrad(0, WY, 0, BY + 200, [[0, P.w1], [0.3, P.w2], [0.7, P.w3], [1, P.w4]]); ctx.fillRect(-1500, WY, 4080, 3000);
+    // Lichtstrahlen von oben
+    ctx.save(); ctx.globalCompositeOperation = "screen";
+    for (let i = 0; i < 7; i++) { const x = -100 + i * 190 + Math.sin(t * 0.3 + i * 2) * 30, b = 60 + (i % 3) * 40; ctx.fillStyle = lgrad(0, WY, 0, BY, [[0, rgba("#bff6ff", 0.16)], [1, rgba("#bff6ff", 0)]]); poly([[x, WY], [x + b, WY], [x + b + 160, BY], [x + 120, BY]]); ctx.fill(); }
+    ctx.restore();
+    // Wellenlinie an der Oberfläche
+    ctx.beginPath(); ctx.moveTo(-1500, WY); for (let x = -1500; x <= 2600; x += 40) ctx.lineTo(x, WY + Math.sin(x * 0.02 + t * 2) * 5); ctx.lineTo(2600, WY - 14); ctx.lineTo(-1500, WY - 14); ctx.closePath(); A.fill(rgba("#dffaff", 0.5));
+    // Schwebeteilchen und Fische
+    { const r = rnd(4411); for (let i = 0; i < 60; i++) { const x = r() * 1300 - 110, y = WY + 40 + ((r() * 900 + t * (6 + r() * 10)) % 900); circle(x + Math.sin(t + i) * 6, y, 2 + r() * 3, rgba("#d8fbff", 0.25 + r() * 0.25)); } }
+    const fisch = (x, y, k, f) => { ellipse(x, y, 26 * k, 11 * k, f); poly([[x - 22 * k, y], [x - 42 * k, y - 12 * k], [x - 42 * k, y + 12 * k]], f); circle(x + 14 * k, y - 3 * k, 2.5 * k, "#0a2030"); };
+    if (ph !== "fuge") for (let i = 0; i < 7; i++) { const sp = 30 + i * 6, x = ((i * 233 + t * sp) % 1500) - 200, y = 620 + (i * 97) % 440 + Math.sin(t * 1.5 + i) * 8; fisch(x, y, 0.8 + (i % 3) * 0.25, i % 2 ? "#ffb85a" : "#e8f4ff"); }
+    // ---------- Fuge (Nahaufnahme) ----------
+    if (ph === "fuge") {
+      const ty = 640, th = 900, spalt0 = 130, ab = E.sanft(clamp(p / 0.6, 0, 1)), spalt = lerp(spalt0, 34, E.sanft(clamp((p - 0.35) / 0.5, 0, 1)));
+      const lx = 540 - spalt / 2, rx = 540 + spalt / 2;
+      // Grabensohle mit Kies
+      box(-1500, ty + th - 10, 4080, 900, 0, P.boden2); for (let i = 0; i < 90; i++) { const r = rnd(4500 + i); ellipse(-200 + r() * 1500, ty + th + 10 + r() * 120, 14 + r() * 16, 9 + r() * 8, r() > 0.5 ? P.boden3 : shade(P.boden, 0.15)); }
+      // linkes Element (schon verlegt)
+      box(-900, ty, lx + 900, th, 30, P.beton); box(-900, ty, lx + 900, 26, 12, shade(P.beton, 0.3)); box(lx - 40, ty, 40, th, 10, P.beton2);
+      // rechtes Element (neu)
+      box(rx, ty, 1500, th, 30, P.beton); box(rx, ty, 1500, 26, 12, shade(P.beton, 0.3)); box(rx, ty, 40, th, 10, P.beton2);
+      // Gummidichtung (Gina) am rechten Element: oben und unten sichtbar als dunkle Wülste
+      const gq = lerp(1, 0.6, clamp((p - 0.35) / 0.5, 0, 1));
+      for (const y of [ty + 60, ty + th - 60]) { ellipse(rx - 14 * gq, y, 22 * gq + 6, 34, "#22252e"); ellipse(rx - 18 * gq, y - 10, 8, 14, rgba("#ffffff", 0.18)); }
+      // Spalt: Wasser zwischen den Schotten, wird abgepumpt (Luft = hell)
+      const wl = lerp(ty + 90, ty + th - 90, ab);
+      box(lx, ty + 90, spalt, th - 180, 4, "#bfe6ff");
+      box(lx, wl, spalt, ty + th - 90 - wl, 4, P.w2);
+      // Pumpe + Schlauch
+      if (p > 0.05) { line(lx - 170, ty + th - 140, lx - 170, ty + th - 40, 22, "#3a3a4a"); line(lx - 100, ty + th - 180, lx, ty + th - 120, 16, "#3a3a4a"); box(lx - 240, ty + th - 230, 140, 100, 18, P.gelb); circle(lx - 170, ty + th - 180, 30, shade(P.gelb, -0.3)); ctx.save(); ctx.translate(lx - 170, ty + th - 180); ctx.rotate(t * 8); box(-4, -26, 8, 52, 4, "#3a3a4a"); ctx.restore(); }
+      // Druckpfeile: das Meer drückt von außen
+      const pf = clamp((p - 0.3) / 0.3, 0, 1);
+      if (pf > 0) for (let i = 0; i < 4; i++) { const y = ty + 160 + i * 190, x = 1040 - ((t * 120 + i * 40) % 80); ctx.globalAlpha = pf; poly([[x, y - 26], [x - 120, y - 26], [x - 120, y - 56], [x - 200, y], [x - 120, y + 56], [x - 120, y + 26], [x, y + 26]], rgba("#ffffff", 0.85)); ctx.globalAlpha = 1; }
+      // Tiefen-Maßstab links oben
+      A._dunkel = 0; return;
+    }
+    // ---------- Zugfenster (nah): deine Familie im ersten Zug durch den Tunnel ----------
+    if (ph === "fenster") {
+      ctx.fillStyle = lgrad(0, 0, 0, 1920, [[0, "#3a4258"], [0.5, "#4a5470"], [1, "#2a3044"]]); ctx.fillRect(-1500, -1500, 4080, 5000);
+      // vorbeiziehende Tunnellichter (Bewegung)
+      for (let i = 0; i < 8; i++) { const x = 1400 - ((t * 900 + i * 260) % 2200); box(x, 250, 120, 22, 11, "#fff2c0"); glut(x + 60, 262, 160, "#ffe8a0", 0.45); box(x, 1700, 200, 10, 5, rgba("#fff2c0", 0.4)); }
+      for (let i = 0; i < 14; i++) { const x = 1500 - ((t * 1400 + i * 170) % 2400); line(x, 360 + (i % 5) * 300, x + 160, 360 + (i % 5) * 300, 4, rgba("#c8d4f0", 0.18)); }
+      // Wagenwand mit drei Fenstern
+      box(-300, 520, 1680, 1060, 40, "#eef1f6"); box(-300, 1440, 1680, 36, 8, P.rot); box(-300, 520, 1680, 24, 12, "#ffffff");
+      const namen = s.figuren && s.figuren.length ? s.figuren : ["du", "lina", "mama"];
+      const fenster = [[60, 300], [400, 300], [740, 300]];
+      fenster.forEach(([fx, fb], k) => {
+        const fy = 660, fh = 560;
+        box(fx - 14, fy - 14, fb + 28, fh + 28, 46, "#c8ced8");
+        ctx.save(); A.rr(fx, fy, fb, fh, 36); ctx.clip();
+        ctx.fillStyle = lgrad(0, fy, 0, fy + fh, [[0, "#ffe7b0"], [1, "#f6c47a"]]); ctx.fillRect(fx, fy, fb, fh);
+        box(fx, fy + fh - 130, fb, 130, 0, "#c8604a"); // Sitzlehne
+        A.mctx.save(); A.mctx.setTransform(ctx.getTransform()); A.umleiten(A.mctx, () => { A.rr(fx, fy, fb, fh, 36); ctx.clip(); });
+        const n = namen[k]; if (n && A.fig(n)) A.figur(fx + fb / 2, fy + fh + 400 - (n === "lina" ? 110 : 0), 1.2, A.fig(n), { t: t + k * 1.3, ausdruck: (s.ausdruecke || {})[n] || "froh", blick: [k === 2 ? -1 : 1, 0], seed: 21 + k }); A.mctx.restore();
+        // Spiegelung im Glas
+        ctx.save(); ctx.globalCompositeOperation = "screen"; ctx.fillStyle = rgba("#ffffff", 0.12); poly([[fx + 40, fy], [fx + 120, fy], [fx + 10, fy + fh], [fx - 70, fy + fh]]); ctx.fill(); ctx.restore();
+        ctx.restore();
+      });
+      A._dunkel = 0; return;
+    }
+    // ---------- Meeresboden im Schnitt ----------
+    const grabenVon = ph === "graben" ? -400 : -1500, grabenBis = ph === "graben" ? lerp(260, 820, E.weich(p)) : 2600, grabenTief = ph === "wurf" ? 0 : GY;
+    // Schichten
+    const schicht = (y0, farbe) => { ctx.beginPath(); ctx.moveTo(-1500, 3000); for (let x = -1500; x <= 2600; x += 60) ctx.lineTo(x, y0 + Math.sin(x * 0.011 + y0) * 10); ctx.lineTo(2600, 3000); ctx.closePath(); A.fill(farbe); };
+    schicht(BY, P.boden); schicht(BY + 120, P.boden2); schicht(BY + 300, P.boden3); schicht(BY + 520, "#5a4430");
+    for (let i = 0; i < 70; i++) { const r = rnd(4600 + i), x = -200 + r() * 1500, y = BY + 30 + r() * 600; ellipse(x, y, 10 + r() * 22, 6 + r() * 12, rgba(i % 2 ? "#4a3a2a" : "#e8cf98", 0.35)); }
+    // Seegras und Steine auf dem Boden
+    for (let i = 0; i < 14; i++) { const r = rnd(4700 + i), x = -150 + r() * 1400; if (grabenTief && x > grabenVon && x < grabenBis) continue; for (let k = 0; k < 3; k++) { ctx.beginPath(); ctx.moveTo(x + k * 10, BY + 4); ctx.quadraticCurveTo(x + k * 10 + Math.sin(t * 1.2 + i + k) * 26, BY - 60, x + k * 14 + Math.sin(t + i) * 30, BY - 110 - r() * 60); ctx.lineWidth = 7; ctx.strokeStyle = k % 2 ? "#2f8a6a" : "#3fa878"; ctx.stroke(); } ellipse(x + 40, BY + 6, 26, 14, P.fels); }
+    // Graben ausschneiden (Wasser zeigt sich, schräge Wände)
+    if (grabenTief) {
+      const g = ctx.createLinearGradient(0, BY, 0, GY); g.addColorStop(0, P.w3); g.addColorStop(1, P.w4);
+      poly([[grabenVon - 160, BY - 2], [grabenBis + 160, BY - 2], [grabenBis, GY], [grabenVon, GY]], g);
+      box(grabenVon, GY - 4, grabenBis - grabenVon, 30, 8, shade(P.boden, 0.1));
+      for (let i = 0; i < 60; i++) { const r = rnd(4800 + i), x = grabenVon + r() * (grabenBis - grabenVon); if (x < -200 || x > 1300) continue; ellipse(x, GY + 6 + r() * 14, 8 + r() * 8, 5 + r() * 4, r() > 0.5 ? "#e0c890" : "#8a7050"); }
+    }
+    // Schiff an der Oberfläche
+    const schiff = (x, k, art) => {
+      ellipse(x, WY + 16, 230 * k, 18 * k, rgba("#062a40", 0.35));
+      poly([[x - 220 * k, WY - 40 * k], [x + 240 * k, WY - 40 * k], [x + 190 * k, WY + 26 * k], [x - 190 * k, WY + 26 * k]], art === "faehre" ? "#f2f2f2" : "#2f4a6a");
+      box(x - 220 * k, WY - 6 * k, 440 * k, 12 * k, 4 * k, art === "faehre" ? "#2a6ab8" : P.rot);
+      if (art === "faehre") { box(x - 150 * k, WY - 120 * k, 300 * k, 80 * k, 10 * k, "#ffffff"); for (let i = 0; i < 8; i++) box(x - 130 * k + i * 34 * k, WY - 100 * k, 22 * k, 16 * k, 4 * k, "#2a4a6a"); box(x + 40 * k, WY - 170 * k, 40 * k, 50 * k, 6 * k, "#2a6ab8"); }
+      else { box(x + 60 * k, WY - 130 * k, 120 * k, 90 * k, 8 * k, "#f4f0e6"); box(x + 76 * k, WY - 114 * k, 88 * k, 22 * k, 5 * k, "#2a4a6a"); }
+    };
+    // Element zeichnen (Seitenansicht, aufgeschnitten)
+    const element = (x, y, b, h, o = {}) => {
+      ctx.fillStyle = rgba("#041a2c", 0.35); A.rr(x + 10, y + h - 6, b, 26, 13); ctx.fill();
+      box(x, y, b, h, 18, P.beton); box(x, y, b, 14, 7, shade(P.beton, 0.35)); box(x, y + h - 26, b, 26, 10, P.beton2);
+      box(x + 6, y + 10, 18, h - 20, 6, P.beton3); box(x + b - 24, y + 10, 18, h - 20, 6, P.beton3); // Schotten
+      if (o.innen) {
+        box(x + 34, y + 26, b - 68, h - 56, 10, o.luft ? "#cfeefa" : P.innen);
+        if (o.tanks != null) for (const tx of [x + 70, x + b - 70 - (b - 220) / 3]) { const tb = (b - 220) / 3, th = h - 80; box(tx, y + 38, tb, th, 8, rgba("#9fdcf0", 0.25)); box(tx, y + 38 + th * (1 - o.tanks), tb, th * o.tanks, 6, P.tank); if (o.tanks > 0 && o.tanks < 1) for (let i = 0; i < 4; i++) circle(tx + 20 + i * tb / 4, y + 38 + th * (1 - o.tanks) + ((t * 60 + i * 13) % 20), 4, rgba("#ffffff", 0.6)); }
+        if (o.zug != null) {
+          // Gleis, Licht im Tunnel, Zug
+          box(x + 34, y + h - 48, b - 68, 8, 4, "#9aa0b0");
+          for (let i = 0; i < 12; i++) { const lx = x + 70 + i * (b - 140) / 11; box(lx - 16, y + 30, 32, 8, 4, "#fff4c8"); glut(lx, y + 36, 70, "#ffe8a0", 0.35); }
+          ctx.save(); A.rr(x + 34, y + 26, b - 68, h - 56, 10); ctx.clip();
+          const zx = o.zug, zh = h - 96, zy = y + h - 50 - zh;
+          for (let w = 0; w < 4; w++) { const wx = zx + w * 250; box(wx, zy, 236, zh, 22, "#f4f6fa"); box(wx, zy + zh - 26, 236, 14, 4, P.rot); for (let f = 0; f < 4; f++) { box(wx + 18 + f * 54, zy + 18, 40, zh * 0.42, 8, "#ffe9a8"); glut(wx + 38 + f * 54, zy + 18 + zh * 0.2, 60, "#ffe9a8", 0.4); } }
+          poly([[zx + 1000, zy], [zx + 1060, zy + zh * 0.5], [zx + 1060, zy + zh], [zx + 986, zy + zh]], "#f4f6fa");
+          ctx.restore();
+        }
+      }
+    };
+    // ---------- Phasen ----------
+    if (ph === "wurf") {
+      // Rohr schwimmt an der Oberfläche, Wasserringe
+      const bob = Math.sin(t * 1.6) * 6, x = 160, y = WY - 92 + bob, b = 760, h = 170;
+      for (let i = 0; i < 3; i++) { const q = ((t * 0.5 + i / 3) % 1); ellipse(540, WY + 2, 320 + q * 380, 14 + q * 12, rgba("#ffffff", 0.35 * (1 - q))); }
+      element(x, y, b, h, { innen: true, luft: true });
+      A.text(A.sprache === "en" ? "AIR" : "LUFT", x + b / 2, y + h / 2 + 4, 56, "#2a6a8a", "center", 900);
+      for (let i = 0; i < 6; i++) ellipse(x - 20 + i * 130, WY + 4 + Math.sin(t * 3 + i) * 3, 40, 8, rgba("#ffffff", 0.5));
+    } else if (ph === "graben") {
+      schiff(grabenBis + 40, 0.9, "bagger");
+      const gx = grabenBis - 20, zyk = (t * 0.45) % 1, gy = lerp(WY + 40, GY - 60, Math.sin(zyk * Math.PI));
+      line(gx + 60, WY - 160, gx + 60, WY - 260, 18, "#3a3a4a"); line(gx + 60, WY - 260, gx - 40, WY - 200, 12, "#3a3a4a");
+      line(gx - 40, WY - 200, gx - 40, gy - 50, 4, "#2a2a3a");
+      box(gx - 90, gy - 50, 100, 80, 16, P.gelb); box(gx - 90, gy - 50, 100, 16, 8, shade(P.gelb, 0.3));
+      for (let i = 0; i < 10; i++) { const r = rnd(4900 + i); ellipse(gx - 40 + (r() - 0.5) * 300, GY - 20 - r() * 160 - Math.sin(t + i) * 10, 60 + r() * 60, 40 + r() * 30, rgba("#c9a46a", 0.18)); }
+    } else if (ph === "sinkt") {
+      const f = clamp(p * 1.7, 0, 1), sink = E.sanft(clamp((p - 0.2) / 0.8, 0, 1)), h = 180, y = lerp(WY - 30, GY - h + 4, sink);
+      element(60, y, 960, h, { innen: true, tanks: f });
+      for (let i = 0; i < 14; i++) { const r = rnd(5000 + i), q = (t * 0.6 + r()) % 1; circle(120 + r() * 840, y - q * 300, 4 + r() * 6, rgba("#e8fcff", 0.5 * (1 - q))); }
+      line(300, WY - 60, 300, y, 4, "#2a2a3a"); line(780, WY - 60, 780, y, 4, "#2a2a3a");
+      box(220, WY - 80, 160, 40, 10, P.gelb); box(700, WY - 80, 160, 40, 10, P.gelb);
+    } else if (ph === "kette") {
+      const b = 520, h = 150, yb = GY - h + 4;
+      for (const x of [-1040, -520, 0]) element(x, yb, b - 20, h, { innen: false });
+      const sink = E.sanft(clamp(p / 0.6, 0, 1)), schub = E.sanft(clamp((p - 0.6) / 0.4, 0, 1));
+      const nx = lerp(600, 504, schub), ny = lerp(WY + 40, yb, sink);
+      element(nx, ny, b - 20, h, { innen: true, tanks: 0.9 });
+      line(nx + 80, WY - 60, nx + 80, ny, 4, "#2a2a3a"); line(nx + b - 100, WY - 60, nx + b - 100, ny, 4, "#2a2a3a");
+      box(nx + 20, WY - 80, 140, 40, 10, P.gelb); box(nx + b - 180, WY - 80, 140, 40, 10, P.gelb);
+    } else if (ph === "zudecken" || ph === "fertig") {
+      const h = 210, y = GY - h + 4, fertig = ph === "fertig";
+      element(-700, y, 790, h, { innen: fertig, zug: fertig ? -9999 : null });
+      element(90, y, 900, h, { innen: fertig, zug: fertig ? -9999 : null });
+      element(990, y, 900, h, { innen: fertig, zug: fertig ? -9999 : null });
+      if (fertig) { // ein Zug durch alle Elemente
+        ctx.save(); ctx.beginPath(); ctx.rect(-666, y + 26, 2522, h - 56); ctx.clip();
+        const zx = lerp(-1300, 500, p), zh = h - 96, zy = y + h - 50 - zh;
+        for (let w = 0; w < 5; w++) { const wx = zx + w * 250; box(wx, zy, 236, zh, 22, "#f4f6fa"); box(wx, zy + zh - 26, 236, 14, 4, P.rot); for (let f = 0; f < 4; f++) { box(wx + 18 + f * 54, zy + 18, 40, zh * 0.42, 8, "#ffe9a8"); glut(wx + 38 + f * 54, zy + 18 + zh * 0.2, 60, "#ffe9a8", 0.4); } }
+        poly([[zx + 1250, zy], [zx + 1320, zy + zh * 0.55], [zx + 1320, zy + zh], [zx + 1236, zy + zh]], "#f4f6fa"); glut(zx + 1310, zy + zh * 0.7, 160, "#fff6d0", 0.8);
+        ctx.restore();
+      }
+      // Aufschüttung: Kies/Sand bis über das Element, oben Steine
+      const hoehe = fertig ? 1 : E.weich(clamp(p, 0, 1)), top = lerp(GY, y - 70, hoehe);
+      if (hoehe > 0.02) {
+        ctx.save(); if (fertig) { ctx.beginPath(); ctx.rect(-1500, -1500, 4080, 4000); ctx.rect(-680, y + 20, 2550, h - 44); ctx.clip("evenodd"); }
+        const g = ctx.createLinearGradient(0, top, 0, GY); g.addColorStop(0, "#b89a6a"); g.addColorStop(1, "#9a7a50");
+        poly([[-1500, GY], [-1500, top], [2600, top], [2600, GY]], g);
+        ctx.restore();
+        for (let i = 0; i < 80; i++) { const r = rnd(5100 + i), x = -200 + r() * 1500; ellipse(x, top + 6 + r() * 10, 16 + r() * 14, 10 + r() * 6, r() > 0.5 ? "#6a6a72" : "#8a8a90"); }
+      }
+      if (!fertig) {
+        schiff(560, 0.9, "bagger");
+        const fx = 560 + Math.sin(t * 0.5) * 30; line(fx, WY, fx, top - 120, 26, "#3a3a4a");
+        for (let i = 0; i < 40; i++) { const r = rnd(5200 + i), q = (t * 0.9 + r()) % 1; ellipse(fx + (r() - 0.5) * 60 * q, lerp(top - 120, top, q), 8, 6, rgba("#8a8a90", 0.9)); }
+      } else if (s.faehre !== false) schiff(620 - p * 60, 0.75, "faehre");
+    }
+    // Vordergrund: unscharfe Steine/Seegras unten am Rand
+    ebene("mtvorne", 7, () => { for (const [x, y, r] of [[-60, 1900, 180], [1120, 1880, 200], [980, 1960, 140]]) ellipse(x, y, r, r * 0.6, "#3a3028"); for (let k = 0; k < 4; k++) { ctx.beginPath(); ctx.moveTo(40 + k * 30, 1960); ctx.quadraticCurveTo(60 + k * 30 + Math.sin(t + k) * 30, 1700, 30 + k * 40, 1560); ctx.lineWidth = 18; ctx.strokeStyle = "#1f5a4a"; ctx.stroke(); } });
+    A._dunkel = 0;
+  };
 })();

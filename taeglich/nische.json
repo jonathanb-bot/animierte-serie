@@ -219,8 +219,9 @@
    "nr": 31,
    "hook": "So baust du einen Tunnel unter dem Meer – mit deiner Familie im ersten Zug.",
    "art": "bau",
-   "id": null,
-   "status": "offen"
+   "id": "nische-n004",
+   "status": "in Arbeit",
+   "datum": "2026-11-25"
   },
   {
    "nr": 32,

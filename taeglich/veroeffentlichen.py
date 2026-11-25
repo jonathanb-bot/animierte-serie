@@ -68,6 +68,14 @@ def lufs(f: Path) -> float | None:
     return float(m.group(1)) if m else None
 
 
+def spitzenpegel(f: Path) -> float | None:
+    """Höchster Abtastwert der Tonspur in dBFS (für die feste Verstärkung ohne Begrenzer, Issue #41)."""
+    err = subprocess.run(["ffmpeg", "-nostats", "-i", str(f), "-map", "0:a:0", "-af", "volumedetect", "-f", "null", "-"],
+                         capture_output=True, text=True).stderr
+    m = re.search(r"max_volume:\s+(-?[\d.]+) dB", err)
+    return float(m.group(1)) if m else None
+
+
 def helligkeit_start(f: Path) -> float | None:
     """Mittlere Helligkeit (0–255) des ersten Bildes (Jonathan 6./7.11.: das erste Bild darf nie schwarz sein)."""
     out = subprocess.run(["ffmpeg", "-v", "error", "-i", str(f), "-frames:v", "1", "-vf", "scale=90:160,format=gray",
@@ -101,7 +109,11 @@ def angleichen(roh: Path, ziel: Path) -> None:
     if l is None:
         raise RuntimeError("Lautheit des gerenderten Videos nicht messbar – fehlt die Tonspur?")
     gain = max(-6.0, min(8.0, ZIEL_LUFS - l))
-    lauf("ffmpeg", "-y", "-v", "error", "-i", roh, "-c:v", "copy", "-af", f"volume={gain:.2f}dB,alimiter=limit=0.95",
+    # Issue #41 (Jonathan 24.11.): kein Begrenzer – nur ein fester Faktor; würde die Spitze über −1 dBFS gehen, bleibt es lieber leiser.
+    spitze = spitzenpegel(roh)
+    if spitze is not None and spitze + gain > -1.0:
+        gain = -1.0 - spitze
+    lauf("ffmpeg", "-y", "-v", "error", "-i", roh, "-c:v", "copy", "-af", f"volume={gain:.2f}dB",
          "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-movflags", "+faststart", ziel)
     print(f"Lautheit: {l:.1f} → {lufs(ziel):.1f} LUFS")
 

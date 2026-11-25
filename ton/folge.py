@@ -275,7 +275,8 @@ def bauen(drehbuch: str, nur_stimme=False, drone=False, stimme="edge", anfragen=
     for e, g in zip(sprechend, gesprochen):
         x = g.audio * A.db(STIMME_RMS - _rms_db(g.audio) + 20 * np.log10(
             max(0.05, 1 + S.EMOTIONEN.get(emotion_fuer(e), S.EMOTIONEN["neutral"])[2] / 100)))
-        x = A.limiter(x, -1.0)
+        # Issue #41: kein Begrenzer auf der Stimme – liegt die Spitze über −1 dBFS, die ganze Zeile gleichmäßig leiser.
+        x = x * min(1.0, A.db(-1.0) / max(float(np.abs(x).max()), 1e-9))
         ziel = audio_dir / f"{e.nr:03d}.mp3"
         _mp3(x, ziel)
         woerter = [{"w": w, "start": round(a, 3), "ende": round(b, 3)} for a, b, w, _ in g.woerter]
