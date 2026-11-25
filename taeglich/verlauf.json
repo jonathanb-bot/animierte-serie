@@ -1355,7 +1355,17 @@
      "animation",
      "family"
     ],
-    "kommentar_frage": "Would you ride the very first train through a tunnel under the sea?"
+    "kommentar_frage": "Would you ride the very first train through a tunnel under the sea?",
+    "veroeffentlicht": {
+     "video": "https://raw.githubusercontent.com/jonathanb-bot/animierte-serie/youtube-upload/taeglich/nische-n004-en.mp4",
+     "geplant": {
+      "tiktok": "2026-11-26T01:18:00",
+      "instagram": "2026-11-25T21:57:00",
+      "youtube": "2026-11-25T23:47:00"
+     },
+     "lufs": -15.9,
+     "dauer_s": 71.22
+    }
    }
   }
  ]
