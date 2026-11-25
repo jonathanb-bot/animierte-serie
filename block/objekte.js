@@ -550,4 +550,29 @@ export const flugzeug = ({ farbe = "#f4f4f4", akzent = "#2a6ae8" } = {}) => { co
   an(g, bx(0.05, 0.5, 18, am), 1.61, 0.3, 0); an(g, bx(0.05, 0.5, 18, am), -1.61, 0.3, 0);
   for (let i = 0; i < 14; i++) for (const s of [-1, 1]) an(g, bx(0.06, 0.35, 0.5, mat("#2a3a4e", 0.2)), s * 1.6, 0.9, -8 + i * 1.3);
   return g; };
-export const ALLE = { rakete, startrampe, grill, trampolin, roller, flugzeug, koffer, stern, sternglas, besen, reihenhaus, glasturm, baum, blumenkuebel, hecke, bank, laterne, ampel, hydrant, muelltonne, briefkasten, schild, zaun, brunnen, laden, haltestelle, fahrrad, bus, hund, katze, vogel, tisch, stuhl, sofa, stehlampe, regal, geschenk, fernseher, riesenTier, haus, schule, sportwagen, lichterkette, lehmhaus, wimpelkette, fackel, krug, palme, pyramide, glocke, thron, krone, sockel, steinwaechter, riesenWaechter, wolke, himmelshaus, bretterbude, muellberg, leiter, pool, glasaufzug, absperrung, goldvilla, goldschluessel, tellerhaus, spind, tribuene, krankenwagen, krankenbett, herzmonitor, babybett, achterbahn, torte, kinderwagen, gluehbirnenladen, limousine, liegestuhl, broetchen };
+// Werkstattwagen (25.11., Folge 3): Papas Arbeitsauto vom Kraftwerk – orange, Rundumleuchte (userData.leuchte), Schriftzug an beiden Seiten
+export const werkstattwagen = ({ farbe = "#f07a1a", text = "KRAFTWERK", groesse = 1.7 } = {}) => { const g = new THREE.Group(), k = plastik(farbe), w = plastik("#f4f2ee");
+  an(g, rb(2.5, 2.7, 4.6, 0.2, w), 0, 1.85, -1.0); an(g, rb(2.4, 1.9, 1.9, 0.25, k), 0, 1.4, 2.3); an(g, bx(2.52, 0.45, 4.62, k), 0, 1.15, -1.0);
+  const st = tex(512, 128, (x, cw, ch) => { x.clearRect(0, 0, cw, ch); x.fillStyle = farbe; x.font = "900 86px 'Inter Display', Inter, sans-serif"; x.textAlign = "center"; x.textBaseline = "middle"; x.fillText(text, cw / 2, ch / 2 + 4, cw - 40); });
+  for (const sx of [-1, 1]) { const p = an(g, new THREE.Mesh(new THREE.PlaneGeometry(3.8, 0.95), new THREE.MeshStandardMaterial({ map: st, transparent: true, roughness: 0.5 })), sx * 1.262, 2.25, -1.0); p.rotation.y = sx * Math.PI / 2; }
+  for (const sx of [-1, 1]) for (let i = 0; i < 5; i++) an(g, bx(0.04, 0.22, 0.42, plastik(i % 2 ? "#f4f2ee" : "#e83a2a")), sx * 1.27, 0.75, -3.0 + i * 0.42);
+  an(g, bx(2.1, 0.95, 0.05, new THREE.MeshPhysicalMaterial({ color: "#2a3a4a", roughness: 0.05, clearcoat: 1 })), 0, 1.95, 3.26);
+  for (const sx of [-1, 1]) an(g, bx(0.05, 0.8, 1.2, new THREE.MeshPhysicalMaterial({ color: "#2a3a4a", roughness: 0.05, clearcoat: 1 })), sx * 1.21, 1.9, 2.3);
+  for (const [x, z] of [[-1.05, 2.3], [1.05, 2.3], [-1.05, -2.2], [1.05, -2.2]]) { const rd = an(g, zyl(0.5, 0.5, 0.38, mat("#141418"), 18), x, 0.5, z); rd.rotation.z = Math.PI / 2; const fe = an(g, zyl(0.24, 0.24, 0.4, metall("#c8ccd4"), 12), x * 1.01, 0.5, z); fe.rotation.z = Math.PI / 2; }
+  for (const sx of [-0.8, 0.8]) an(g, bx(0.5, 0.26, 0.08, leucht(3.2, 3.0, 2.4)), sx, 1.25, 3.27);
+  for (const sx of [-0.9, 0.9]) an(g, bx(0.4, 0.3, 0.08, leucht(2.4, 0.2, 0.15)), sx, 1.5, -3.32);
+  an(g, bx(1.6, 0.12, 0.8, metall("#5a5e68")), 0, 3.25, 2.0);
+  g.userData.leuchte = an(g, kugel(0.26, leucht(3.4, 1.4, 0.1), 14), 0, 3.5, 2.0); g.scale.setScalar(groesse); return g; };
+// Schranke mit Pförtnerhäuschen (25.11., Folge 3): Tor zum Kraftwerk; userData.arm.rotation.z = 0 (zu) … 1.4 (offen), userData.lampe
+export const schranke = ({ laenge = 9, text = "KRAFTWERK" } = {}) => { const g = new THREE.Group(), w = plastik("#f4f2ee"), r = plastik("#e02a2a");
+  an(g, rb(0.9, 1.6, 0.9, 0.15, plastik("#f0c020")), 0, 0.8, 0);
+  const arm = new THREE.Group(); arm.position.set(0, 1.25, 0); g.add(arm); g.userData.arm = arm;
+  for (let i = 0; i < Math.round(laenge / 0.75); i++) an(arm, bx(0.75, 0.22, 0.14, i % 2 ? w : r), 0.6 + i * 0.75, 0, 0);
+  g.userData.lampe = an(g, kugel(0.18, leucht(3.2, 0.3, 0.2), 12), 0, 1.75, 0);
+  const h = new THREE.Group(); h.position.set(-3.2, 0, 0); g.add(h); an(h, rb(3, 3, 3, 0.15, mat("#d8d4cc", 0.8)), 0, 1.5, 0); an(h, rb(3.4, 0.3, 3.4, 0.1, mat("#3a3e48", 0.6)), 0, 3.15, 0);
+  const gl = new THREE.MeshPhysicalMaterial({ color: "#2a3a4a", roughness: 0.05, clearcoat: 1, emissive: "#ffd890", emissiveIntensity: 0.25 });
+  for (const [x, z, ry] of [[0, 1.52, 0], [1.52, 0, Math.PI / 2], [0, -1.52, 0]]) { const f = an(h, bx(2.2, 1.2, 0.04, gl), x, 1.9, z); f.rotation.y = ry; }
+  const st = tex(512, 128, (x, cw, ch) => { x.fillStyle = "#1a3a6a"; x.fillRect(0, 0, cw, ch); x.fillStyle = "#fff"; x.font = "900 76px 'Inter Display', Inter, sans-serif"; x.textAlign = "center"; x.textBaseline = "middle"; x.fillText(text, cw / 2, ch / 2 + 4, cw - 30); });
+  const sc = an(h, new THREE.Mesh(new THREE.PlaneGeometry(3.2, 0.8), new THREE.MeshStandardMaterial({ map: st, roughness: 0.5, emissive: "#ffffff", emissiveMap: st, emissiveIntensity: 0.4 })), 0, 3.75, 1.2);
+  return g; };
+export const ALLE = { werkstattwagen, schranke,  rakete, startrampe, grill, trampolin, roller, flugzeug, koffer, stern, sternglas, besen, reihenhaus, glasturm, baum, blumenkuebel, hecke, bank, laterne, ampel, hydrant, muelltonne, briefkasten, schild, zaun, brunnen, laden, haltestelle, fahrrad, bus, hund, katze, vogel, tisch, stuhl, sofa, stehlampe, regal, geschenk, fernseher, riesenTier, haus, schule, sportwagen, lichterkette, lehmhaus, wimpelkette, fackel, krug, palme, pyramide, glocke, thron, krone, sockel, steinwaechter, riesenWaechter, wolke, himmelshaus, bretterbude, muellberg, leiter, pool, glasaufzug, absperrung, goldvilla, goldschluessel, tellerhaus, spind, tribuene, krankenwagen, krankenbett, herzmonitor, babybett, achterbahn, torte, kinderwagen, gluehbirnenladen, limousine, liegestuhl, broetchen };

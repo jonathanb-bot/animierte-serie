@@ -34,7 +34,7 @@ Ausgewertet wird in der nächsten großen Analyse.
 
 1. `npm ci --ignore-scripts`, dann den Server starten: `python3 -m http.server 8767 --directory block`.
 2. Stimme erzeugen mit `stimme.py` (gemeinsam für alle Folgen, seit 23.11. abends):
-   - `erzeugen(zeilen, ordner)`: Gemini „Puck“, fröhliche Storytime-Anweisung, kurze Abschnitte, Auswahl nach Sprachmelodie, keine Rundfunk-Kette, kleiner Tonhöhen-Angleich auf etwa 200 Hz.
+   - `erzeugen(zeilen, ordner)`: Gemini „Puck“, fröhliche Storytime-Anweisung, kurze Abschnitte, Auswahl nach Sprachmelodie, keine Rundfunk-Kette, keine Tonhöhen-Angleichung (Issue #41).
    - `zusammen(ordner, extra)` (volle Fassung) und `zusammen(ordner, extra, yt=True, ohne=[…])` (YouTube, höchstens 89 s).
    - Folge 1 nutzt noch ihre eigenen Skripte (`folge-01/stimme4.py`, `zusammen*.py`).
 3. Standbilder prüfen: `node mitten.cjs alle`.

@@ -155,6 +155,8 @@ Aus dem Vorbild-Video übernommen (nur die Mittel, nie Inhalte). Beispiel für a
 
 `LOGO.nasa(x, w, h)`, `LOGO.lieferando(x, w, h, {hintergrund, schrift})` zeichnen das Logo in einen Canvas (z. B. `leinwand.userData.zeichne`, `handySeite`). `logoTextur(name)` und `logoAufkleber(name, breite, hoehe)` für Raketen, Boxen, Schilder. Neue Marken hier ergänzen, möglichst detailgetreu.
 
+Neue Objekte (25.11., Folge 3): `werkstattwagen({farbe, text, groesse})` (Papas oranger Kraftwerks-Wagen mit Rundumleuchte `userData.leuchte` und Schriftzug an den Seiten), `schranke({laenge, text})` (Schranke mit Pförtnerhäuschen; öffnen über `userData.arm.rotation.z` 0 … 1.4, Lampe `userData.lampe`).
+
 Neue Objekte (24.11. abends): `rakete({hoehe, farbe, akzent})` (`userData.flamme`), `startrampe`, `grill` (`userData.feuer`, `deckel`), `trampolin` (`userData.matte`), `roller({farbe, box})`, `flugzeug`, `koffer`, `sternglas({n, brett, etikett, sprung})` (`userData.setze(n)`, `oben()`), `stern`, `besen`; Figuren-Option `schuhLoch`.
 
 ## Gerüst (`folge.js`) – nie neu schreiben
@@ -187,4 +189,4 @@ Danach `mischen()`: Der Hintergrund (Musik + Geräusche) wird automatisch so gep
 
 ## Stimme
 
-`stimme.py` (seit 23.11. abends, für alle neuen Folgen): `erzeugen(zeilen, ordner, gruppe=4)` mit Gemini „Puck“ und fröhlicher Storytime-Anweisung, bis zu 3 Versuche je Abschnitt, Auswahl nach Tonhöhe (200 Hz) und Sprachmelodie (Ziel > 17 Halbtöne, Vorbild ~20), kurze Pausen. Dann `zusammen(ordner, extra)` und `zusammen(ordner, extra, yt=True, ohne=[…])`. Liegt die volle Fassung unter 89 s, reicht sie auch für YouTube. Kommt ein Abschnitt zu tief (F0 < 175 Hz), diesen Teil von `stimme.wav` mit rubberband anheben und `--nur-zusammen` laufen lassen. Das Kontingent liegt bei etwa 10 Anfragen pro Schlüssel und Tag; es gibt 5 Schlüssel.
+`stimme.py` (seit 23.11. abends, für alle neuen Folgen): `erzeugen(zeilen, ordner, gruppe=4)` mit Gemini „Puck“ und fröhlicher Storytime-Anweisung, bis zu 3 Versuche je Abschnitt, Auswahl nach Tonhöhe (200 Hz) und Sprachmelodie (Ziel > 17 Halbtöne, Vorbild ~20), kurze Pausen. Dann `zusammen(ordner, extra)` und `zusammen(ordner, extra, yt=True, ohne=[…])`. Liegt die volle Fassung unter 89 s, reicht sie auch für YouTube. Kommt ein Abschnitt zu tief, wird er **nicht** angehoben (Issue #41: Stimme nie bearbeiten), sondern höchstens neu angefragt. Das Kontingent liegt bei etwa 10 Anfragen pro Schlüssel und Tag; es gibt 5 Schlüssel.
