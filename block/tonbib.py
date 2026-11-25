@@ -19,6 +19,7 @@ import numpy as np
 import soundfile as sf
 
 SR = 48000
+BETT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "musik", "hintergrund.wav")   # fester Hintergrundsound (25.11.)
 f = lambda m: 440 * 2 ** ((m - 69) / 12)
 
 AKKORDE = {"Am": [57, 60, 64], "F": [53, 57, 60], "C": [48, 55, 60, 64], "G": [55, 59, 62], "Dm": [50, 57, 62, 65], "E": [52, 56, 59],
@@ -90,9 +91,27 @@ class Ton:
             k = int(d * SR); z = np.zeros_like(y); z[k:] = y[:-k] * g; out += z * mix
         return out
 
+    # ---------- fester Hintergrundsound (Jonathan 25.11.) ----------
+    def bett(self, pfad=None):
+        """Jonathan 25.11.: hinter jedes normale Video (nicht Horror) genau dieser Hintergrundsound.
+        Datei musik/hintergrund.wav (Musik aus dem Vorbild-TikTok, Sprecher herausgetrennt), läuft in Schleife mit
+        weichem Übergang über die ganze Folge. Die Stimme wird nicht verändert (Issue #41); gepegelt wird nur das Bett in mischen()."""
+        pfad = pfad or BETT; x, sr = sf.read(pfad, dtype="float64"); x = x.mean(1) if x.ndim > 1 else x
+        assert sr == SR, "hintergrund.wav muss 48 kHz haben"
+        ueb = int(1.5 * SR); out = np.zeros(self.n); pos = 0; ein = np.linspace(0, 1, ueb); aus = 1 - ein
+        while pos < self.n:
+            y = x.copy()
+            if pos: y[:ueb] *= ein
+            y[-ueb:] *= aus; e = min(self.n, pos + len(y)); out[pos:e] += y[:e - pos]; pos += len(y) - ueb
+        rest = int(1.2 * SR); out[-rest:] *= np.linspace(1, 0, rest)   # am Ende ausblenden
+        self.m += out; self.abschnitte = [("bett", 0.0, self.DAUER)]; return self.abschnitte
+
     # ---------- Musik nach Stimmung ----------
     def musik(self, stimmungen, start=0.0, hall=0.35):
-        """stimmungen: eine Stimmung pro Zeile (Liste) → Abschnitte mit eigener Musik."""
+        """stimmungen: eine Stimmung pro Zeile (Liste) → Abschnitte mit eigener Musik.
+        Seit 25.11.: Bei normalen Folgen ersetzt der feste Hintergrundsound (bett) die erzeugte Musik, sobald
+        musik/hintergrund.wav existiert. Horror (Stimmung „grusel“) oder EIGENE_MUSIK=1 behalten die erzeugte Musik."""
+        if os.path.exists(BETT) and not os.environ.get("EIGENE_MUSIK") and "grusel" not in stimmungen: return self.bett()
         assert len(stimmungen) == len(self.Z), f"{len(stimmungen)} Stimmungen für {len(self.Z)} Zeilen"
         abschnitte = []; i = 0
         while i < len(stimmungen):

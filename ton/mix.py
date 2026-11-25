@@ -11,6 +11,7 @@ import zlib
 from dataclasses import dataclass, field
 from pathlib import Path
 
+import os
 import numpy as np
 import yaml
 
@@ -292,6 +293,24 @@ def bauen(drehbuch_pfad: str, ausgabe: str | None = None, video: str | None = No
                     rampe[s_aus + f_n:] = 0
                     x = x * rampe[:, None]
             musik = A.einmischen(musik, x, A.sek(a))
+        # Jonathan 25.11.: hinter jedes normale Video (nicht Horror) genau dieser Hintergrundsound statt der erzeugten Musik.
+        # Abschalten (Horror): EIGENE_MUSIK=1 oder im Drehbuch-Kopf „@musik eigen“. Die Stimme bleibt unverändert (Issue #41).
+        bett_pfad = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "block", "musik", "hintergrund.wav")
+        eigen = os.environ.get("EIGENE_MUSIK") or "@musik eigen" in open(drehbuch_pfad, encoding="utf-8").read()
+        if os.path.exists(bett_pfad) and not eigen:
+            import soundfile as _sf
+            b_roh, b_sr = _sf.read(bett_pfad, dtype="float32", always_2d=True)
+            if b_roh.shape[1] == 1: b_roh = np.repeat(b_roh, 2, 1)
+            if b_sr != A.SR:
+                from scipy.signal import resample_poly
+                b_roh = resample_poly(b_roh, A.SR, b_sr, axis=0).astype(np.float32)
+            ueb = A.sek(1.5); bett = np.zeros((n, 2), np.float32); pos = 0
+            while pos < n:
+                y = b_roh.copy()
+                if pos: y[:ueb] *= np.linspace(0, 1, ueb)[:, None]
+                y[-ueb:] *= np.linspace(1, 0, ueb)[:, None]; e = min(n, pos + len(y)); bett[pos:e] += y[:e - pos]; pos += len(y) - ueb
+            musik = A.fade(_auf_rms(bett, stil["musik_rms"]), 0.3, 1.2)
+            log("Musik: fester Hintergrundsound (block/musik/hintergrund.wav)")
         musik = A.ducking(musik[:n], stimme, stil["ducking"])
     else:
         sfx = sfx * 0
