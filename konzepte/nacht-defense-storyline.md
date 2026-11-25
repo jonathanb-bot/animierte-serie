@@ -83,7 +83,7 @@ Ein Blick ins Tal: Hinter dem Wald liegt eine große Stadt – voller Lichter. �
 - Kulissen: `block/horrorwelt.js` (SCHATTENTAL, KAPELLE, WALDWEG, viel Blut und Details).
 - Alt: `horror("nun")` usw. (fertig, Fotostudio-Bilder in `block/katalog/horror-*.jpg`).
 - Neu zu bauen: Glockenturm/Kapelle, roter Mond + Nebel (Bilderbuch-Nacht), Häuser-Anzeige, Uhr-Anzeige, Waffen-Baukasten (Wasserwerfer, Weihwasser-Kanone, Flutlicht, Netzwerfer, Feuer, Glocke …), stilisierte Blut-Decals (fest, flackerfrei).
-- Stimme: düstere Gemini-Stimme nach Hörprobe (Charon/Algenib/Fenrir/Orus), unverändert (#41), nie flüstern. Musik: tiefe Flächen, Herzschlag, Glocke – die Stimme bleibt klar darüber.
+- Stimme: Gemini „Puck“ (normale Kinderstimme), unbearbeitet (#41), nie flüstern; Horrorfiguren sprechen nie. Musik: tiefe Flächen, Herzschlag, Glocke – die Stimme bleibt klar darüber.
 - Arbeit pro Folge nach dem Aufbau: ca. 1 h + 1,5 h Rendern.
 
 ## Offene Fragen an Jonathan

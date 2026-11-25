@@ -59,10 +59,12 @@ const nebel = (g, n, bereich, saat, hoehe = 1.5) => { const r = zufall(saat), m 
 // Kapelle mit Glockenturm (Turmfenster zugemauert, Glocke sichtbar durch Lücke)
 const kapelle = () => { const g = new THREE.Group(), stein = new THREE.MeshStandardMaterial({ map: steinTex, roughness: 0.95 }), dach = mat("#2a2228", 0.8);
   an(g, bx(14, 10, 22, stein), 0, 5, 0); const d = an(g, new THREE.Mesh(new THREE.CylinderGeometry(0.01, 10.5, 7, 4, 1), dach), 0, 13.5, 0); d.rotation.y = Math.PI / 4; d.scale.set(1, 1, 1.55);
-  an(g, bx(6, 22, 6, stein), 0, 11, 12); const sp = an(g, new THREE.Mesh(new THREE.ConeGeometry(4.6, 10, 4), dach), 0, 27, 12); sp.rotation.y = Math.PI / 4;
+  an(g, bx(6, 17, 6, stein), 0, 8.5, 12); an(g, bx(6.4, 0.5, 6.4, stein), 0, 22, 12);   // Turm mit offener Glockenstube (Seiten offen, vorne zugemauert)
+  for (const sx of [-1, 1]) for (const sz of [-1, 1]) an(g, bx(0.6, 4.8, 0.6, stein), sx * 2.7, 19.5, 12 + sz * 2.7); an(g, bx(6.2, 4.6, 0.3, stein), 0, 19.5, 9.15);
+  for (const sx of [-1, 1]) an(g, bx(1.4, 4.6, 0.4, stein), sx * 2.3, 19.5, 15.1); const sp = an(g, new THREE.Mesh(new THREE.ConeGeometry(4.6, 10, 4), dach), 0, 27, 12); sp.rotation.y = Math.PI / 4;
   an(g, bx(0.25, 2.6, 0.25, mat("#2a2a2a", 0.5, 0.6)), 0, 33.3, 12); an(g, bx(1.4, 0.25, 0.25, mat("#2a2a2a", 0.5, 0.6)), 0, 33.6, 12);
   const glocke = new THREE.Group(); glocke.position.set(0, 19.5, 12); g.add(glocke); const gl = an(glocke, new THREE.Mesh(new THREE.CylinderGeometry(0.7, 1.4, 2.0, 20, 1, true), mat("#8a6a2a", 0.35, 0.8)), 0, -1.2, 0); gl.material.side = THREE.DoubleSide; an(glocke, new THREE.Mesh(new THREE.SphereGeometry(0.7, 16, 8, 0, Math.PI * 2, 0, Math.PI / 2), mat("#8a6a2a", 0.35, 0.8)), 0, -0.2, 0);
-  for (const s of [-1, 1]) { an(g, bx(0.3, 4.5, 6.2, stein), s * 3, 19.5, 12); } an(g, bx(6.2, 0.4, 6.2, stein), 0, 17.2, 12);
+  an(g, bx(6.2, 0.4, 6.2, stein), 0, 17.2, 12);
   const zu = an(g, bx(3.2, 2.0, 0.4, mat("#4a4a52", 0.95)), 0, 18.6, 15.1); const zu2 = an(g, bx(3.2, 1.0, 0.4, mat("#4a4a52", 0.95)), 0, 21.3, 15.1);   // zugemauert, nur Spalt
   const fM = new THREE.MeshBasicMaterial({ color: new THREE.Color(2.2, 1.4, 0.6) }); for (const s of [-1, 1]) for (let i = 0; i < 3; i++) { const f = an(g, rb(0.1, 3.2, 1.6, 0.05, fM), s * 7.06, 5, -6 + i * 6); }
   an(g, rb(3.2, 5.5, 0.4, 0.1, mat("#3a2014", 0.8)), 0, 2.75, 15.05); g.userData.glocke = glocke; g.userData.fensterMat = fM; return g; };
