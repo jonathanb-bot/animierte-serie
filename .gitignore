@@ -3,3 +3,4 @@ ausgabe/
 *.log
 __pycache__/
 .cache/
+block/*/mix14.wav
