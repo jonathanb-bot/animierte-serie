@@ -1444,7 +1444,26 @@
    "video": "https://raw.githubusercontent.com/jonathanb-bot/animierte-serie/youtube-upload/taeglich/block-v04.mp4",
    "lufs": -21.7,
    "dauer_s": 77.91,
-   "technik": "1440p gerendert (SKALA=2), 1080p H.264 crf 18 maxrate 8M, Ton lautheit.py (Spitze der unbearbeiteten Stimme begrenzt die Lautheit)"
+   "technik": "1440p gerendert (SKALA=2), 1080p H.264 crf 18 maxrate 8M, Ton lautheit.py (Spitze der unbearbeiteten Stimme begrenzt die Lautheit)",
+   "ton": "fester Hintergrundsound (Issue #44)"
+  },
+  {
+   "id": "block-v05",
+   "datum": "2026-11-25",
+   "titel": "Um den Grill anzuzünden, habe ich eine Rakete von der NASA geklaut",
+   "emoji": "🚀",
+   "serie": "Blockstadt-Vorrat (Random-Folge, Jonathan 24.11.)",
+   "art": "blockstadt",
+   "stimme": "Puck (Kinderstimme, Gemini, unbearbeitet, Issue #41)",
+   "thema": "Rakete von der NASA für den Grill, Grill an und ich auch, durch die Wolken, Sprit leer, Absturz, per Lieferando Express-Trampolin bestellt, sanfte Landung auf Papas Liegestuhl; Pointe: Papa fragt nach den Würstchen, Fahrer will fünf Sterne. Keine Mitmach-Frage.",
+   "kulisse": "Vorstadt-Garten, NASA-Gelände, Flug durch Wolken, Liefer-App",
+   "fassung": "voll (54,7 s, reicht auch für YouTube)",
+   "status": "vorrat, noch nicht eingeplant",
+   "video": "https://raw.githubusercontent.com/jonathanb-bot/animierte-serie/youtube-upload/taeglich/block-v05.mp4",
+   "lufs": -18.0,
+   "dauer_s": 54.7,
+   "ton": "fester Hintergrundsound (Issue #44)",
+   "technik": "1440p gerendert (SKALA=2), 1080p H.264 crf 18 maxrate 8M, Ton lautheit.py"
   },
   {
    "id": "nische-n004",
