@@ -1413,6 +1413,23 @@
    "sprachpruefung": 0.915
   },
   {
+   "id": "block-v04",
+   "datum": "2026-11-25",
+   "titel": "In meiner Stadt bekommst du hundert Dollar, wenn dich jemand anlügt",
+   "emoji": "💵",
+   "serie": "Blockstadt-Vorrat (eigenständig, Storyline von Jonathan 24.11.)",
+   "art": "blockstadt",
+   "stimme": "Puck (Kinderstimme, Gemini, unbearbeitet, Issue #41)",
+   "thema": "+100 $ für jede Lüge, die man hört, −500 $ für jede eigene; ich werde mit Fang-Fragen reich, nur mein bester Freund lügt nie – bis er mit Koffer vor der Tür steht und zweimal lügt. Frage: A festhalten, B heimlich folgen, C seine Mama anrufen.",
+   "kulisse": "Blockstadt, Stube, Klasse, Kinderzimmer, Haustür am Abend",
+   "fassung": "voll (77,9 s, reicht auch für YouTube)",
+   "status": "vorrat, noch nicht eingeplant",
+   "video": "https://raw.githubusercontent.com/jonathanb-bot/animierte-serie/youtube-upload/taeglich/block-v04.mp4",
+   "lufs": -21.7,
+   "dauer_s": 77.91,
+   "technik": "1440p gerendert (SKALA=2), 1080p H.264 crf 18 maxrate 8M, Ton lautheit.py (Spitze der unbearbeiteten Stimme begrenzt die Lautheit)"
+  },
+  {
    "id": "nische-n004",
    "datum": "2026-11-25",
    "titel": "So baust du einen Tunnel unter dem Meer",
