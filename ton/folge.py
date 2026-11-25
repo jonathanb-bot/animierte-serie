@@ -20,6 +20,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import re
 import subprocess
 import sys
@@ -332,6 +333,20 @@ def bauen(drehbuch: str, nur_stimme=False, drone=False, stimme="edge", anfragen=
         x = A.fade(x * A.db(BETT_RMS - _rms_db(x)), 0.8 if k else 1.5, 1.0)
         bett = A.einmischen(bett, x, A.sek(max(0, a - 0.75)))
     bett = bett[:n]
+    # Jonathan 25.11. (Issue #44): hinter jedes normale Video der feste Hintergrundsound (block/musik/hintergrund.wav).
+    # Horror: EIGENE_MUSIK=1 oder „@musik eigen“ im Drehbuch. Die Stimme bleibt unverändert (Issue #41).
+    bett_datei = ROOT / "block" / "musik" / "hintergrund.wav"
+    if bett_datei.exists() and not os.environ.get("EIGENE_MUSIK") and "@musik eigen" not in pfad.read_text(encoding="utf-8"):
+        import soundfile as _sf
+        b_roh, b_sr = _sf.read(str(bett_datei), dtype="float32", always_2d=True)
+        if b_roh.shape[1] == 1: b_roh = np.repeat(b_roh, 2, 1)
+        ueb = A.sek(1.5); schleife = np.zeros((n, 2), np.float32); pos = 0
+        while pos < n:
+            y = b_roh.copy()
+            if pos: y[:ueb] *= np.linspace(0, 1, ueb)[:, None]
+            y[-ueb:] *= np.linspace(1, 0, ueb)[:, None]; e2 = min(n, pos + len(y)); schleife[pos:e2] += y[:e2 - pos]; pos += len(y) - ueb
+        bett = bett + A.fade(schleife * A.db(BETT_RMS - _rms_db(schleife)), 0.3, 1.2)
+        log("  fester Hintergrundsound (block/musik/hintergrund.wav)")
     for e in einst:
         for s in geraeusche_fuer(e):
             kw = dict(s.get("parameter", {}))
