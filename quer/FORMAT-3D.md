@@ -52,5 +52,11 @@ Kontingent: etwa 10 Anfragen pro Schlüssel und Tag, 5 Schlüssel ≈ 50. Die St
 **Donnerstag Deutsch, Freitag Englisch** (je Tag dann 32–53, im ungünstigsten Fall knapp über 50). Mit 1–2 zusätzlichen Schlüsseln
 (`GEMINI_API_KEY_6`, `_7`) ist immer Luft.
 
-## Offene Entscheidungen (Jonathan)
-- Erzähler: Ich-Erzählung mit Puck wie die Blockstadt, oder Du-Erzählung wie bisher im Querformat?
+## Erzähler (Jonathan 25.11.: „entscheid du“ → entschieden)
+- **Ich-Erzählung mit Puck, derselbe Junge wie in der Blockstadt.** Gründe: Die langen Videos sehen aus wie die Blockstadt,
+  also soll man auch dieselbe Figur und Stimme wiedererkennen (Kurzvideo → langes Video als „Spezial“). Die Vorlage-Videos
+  im 3D-Stil sind fast alle Ich-Geschichten („In my town …“). Eine Du-Erzählung mit Kinderstimme würde nicht passen,
+  und eine zweite Erzählstimme würde die Marke teilen.
+- Damit 10 Minuten Kinderstimme nicht ermüden: kurze Sätze, alle 60–90 s eine Wendung, Figurenstimmen sparsam für andere
+  Figuren (Gemini, unbearbeitet), Musik wechselt mit den Kapiteln. Stimme nie bearbeiten (Issue #41).
+- Die anderen Figuren gehören zu mir („mein Papa“, „mein bester Freund“), Hook in Sekunde 1 mit der verrückten Regel.
