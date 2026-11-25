@@ -1299,6 +1299,64 @@
    "lufs": -15.4,
    "dauer_s": 73.93,
    "sprachpruefung": 0.915
+  },
+  {
+   "id": "nische-n004",
+   "datum": "2026-11-25",
+   "titel": "So baust du einen Tunnel unter dem Meer",
+   "emoji": "🚇",
+   "serie": "So baust du … (Test Mittwoch, MASTER 3b, Jonathan 22.11.) – eigenständig",
+   "art": "bau",
+   "idee_nr": 31,
+   "stimmung": "spannend",
+   "stimme": "Orus",
+   "thema": "Naive Lösung: Betonrohr ins Meer werfen. Aber voller Luft – es schwimmt; also Ballasttanks. Aber Schiffsanker – also ein Graben (12 m tief, 100 m breit, 15 Mio. m³ Schlamm). Aber 18 km Meer zwischen Deutschland und Dänemark – also eine Fabrik, Stücke à 217 m und 73.000 t, 89 davon. Deine Familie sitzt im ersten Zug. Aber der Spalt zwischen zwei Stücken – Gummidichtung, Wasser abpumpen, und das Meer selbst presst die Stücke zusammen (je tiefer, desto fester). Zuschütten mit Kies, Sand und Stein. Fähre 45 min, Zug 7 min, längster Absenktunnel der Welt. Ende: „Glückwunsch, du hast gerade den Fehmarnbelt-Tunnel gebaut.“",
+   "quellen": [
+    "Femern A/S, Factsheet Fehmarnbelt-Tunnel, Nov. 2025",
+    "Arup 2026: erstes Element abgesenkt, längster Absenktunnel der Welt (>3× Transbay Tube)",
+    "Trelleborg: GINA-Dichtung"
+   ],
+   "stil": "leuchtend, @look 0, palette tuerkis/orange, neue Kulisse meertunnel (Schnitt durchs Meer, Bau Schritt für Schritt), Issue #41: Stimme unbearbeitet (@stimme roh, kein @klang studio)",
+   "kulissen": [
+    "meertunnel",
+    "titel"
+   ],
+   "beschreibung": "Wirf ein Betonrohr ins Meer, und deine Familie fährt unter Wasser – so einfach ist es nicht. So entsteht Schritt für Schritt ein Tunnel unter der Ostsee.",
+   "hashtags": [
+    "#sobaustdu",
+    "#tunnel",
+    "#animation",
+    "#fehmarnbelt"
+   ],
+   "tags": [
+    "so baust du",
+    "tunnel",
+    "fehmarnbelt",
+    "ingenieur",
+    "animation",
+    "familie"
+   ],
+   "kommentar_frage": "Würdest du als Erste/r durch einen Tunnel unter dem Meer fahren?",
+   "nur_englisch": "Deutsch pausiert ab 24.11. (Blockstadt-Serie), deutsches Drehbuch nur Vorlage",
+   "en": {
+    "titel": "How to Build a Tunnel Under the Sea",
+    "beschreibung": "Drop a concrete tube into the sea and your family can drive underwater – if only it were that easy. Here's how the world's longest immersed tunnel is built, step by step.",
+    "hashtags": [
+     "#engineering",
+     "#tunnel",
+     "#animation",
+     "#howitsmade"
+    ],
+    "tags": [
+     "how to build",
+     "tunnel",
+     "engineering",
+     "fehmarnbelt",
+     "animation",
+     "family"
+    ],
+    "kommentar_frage": "Would you ride the very first train through a tunnel under the sea?"
+   }
   }
  ]
 }
