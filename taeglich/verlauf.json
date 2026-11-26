@@ -1504,6 +1504,15 @@
      "A": "hold the door shut",
      "B": "escape over the roof",
      "C": "open it"
+    },
+    "veroeffentlicht": {
+     "video": "https://raw.githubusercontent.com/jonathanb-bot/animierte-serie/youtube-upload/taeglich/block-b04-en.mp4",
+     "geplant": {
+      "tiktok": "2026-11-27T03:33:00",
+      "instagram": "2026-11-26T18:59:00"
+     },
+     "lufs": -18.1,
+     "dauer_s": 86.15
     }
    },
    "veroeffentlicht": {
