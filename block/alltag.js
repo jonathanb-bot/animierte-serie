@@ -129,7 +129,7 @@ export const KUECHE = raum("kueche", -1400, -600, 12, 11, 6.5, { wandU: "#f8d27a
   tisch.position.set(0, 0, 0.5); g.add(tisch); KUECHE.tisch = tisch;
   for (const sx of [-2.8, 2.8]) { const st = new THREE.Group(); const s = rb(1.4, 0.18, 1.4, 0.05, mat("#4a8ae8", 0.5)); s.position.y = 1.3; st.add(s); const l = rb(0.16, 1.5, 1.4, 0.05, mat("#4a8ae8", 0.5)); l.position.set(sx > 0 ? 0.65 : -0.65, 2.1, 0); st.add(l);
     for (const [lx, lz] of [[-0.55, -0.55], [0.55, -0.55], [-0.55, 0.55], [0.55, 0.55]]) { const b = zyl(0.06, 0.06, 1.3, mat("#e8e8ec", 0.4), 8); b.position.set(lx, 0.65, lz); st.add(b); } st.position.set(sx, 0, 0.5); g.add(st); }
-  const kuehl = rb(2.2, 5.2, 2, 0.15, plastik("#f2f4f8")); kuehl.position.set(4.6, 2.6, -4.3); g.add(kuehl); const gr = rb(0.12, 1.6, 0.15, 0.05, mat("#9aa0a8", 0.3, 0.7)); gr.position.set(3.75, 3.4, -3.25); g.add(gr);
+  const kuehl = rb(2.2, 5.2, 2, 0.15, plastik("#f2f4f8")); kuehl.position.set(4.6, 2.6, -4.3); g.add(kuehl); const gr = rb(0.12, 1.6, 0.15, 0.05, mat("#9aa0a8", 0.3, 0.7)); gr.position.set(3.75, 3.4, -3.25); g.add(gr); KUECHE.kuehl = [kuehl, gr];   // ausblenden, wenn O.kuehlschrank (mit Tür) an dieselbe Stelle kommt
   const theke = rb(6, 2.2, 1.8, 0.06, mat("#7ac0e8", 0.5)); theke.position.set(-2, 1.1, -4.6); g.add(theke); const ap = rb(6.2, 0.15, 2, 0.04, mat("#f4f0e8", 0.4)); ap.position.set(-2, 2.28, -4.6); g.add(ap);
   for (let i = 0; i < 3; i++) { const sch = rb(1.8, 1.4, 0.8, 0.06, mat("#7ac0e8", 0.5)); sch.position.set(-4 + i * 2, 4.8, -5.05); g.add(sch); }
   fenster(KUECHE, 0.6, 4.0, -5.32, 0, 2.6, 2.2); }
@@ -145,7 +145,7 @@ export const STUBE = raum("stube", 1400, 600, 14, 12, 6.5, { wandU: "#c8a8e0", w
   const sessel = sofa.clone(); sessel.scale.set(0.42, 1, 1); sessel.position.set(-5.3, 0, 0.5); sessel.rotation.y = Math.PI / 2; g.add(sessel);
   const ct = new THREE.Group(); const cp = rb(3, 0.2, 1.8, 0.06, holz); cp.position.y = 1.3; ct.add(cp); for (const [lx, lz] of [[-1.3, -0.7], [1.3, -0.7], [-1.3, 0.7], [1.3, 0.7]]) { const b = zyl(0.08, 0.08, 1.25, holz, 8); b.position.set(lx, 0.62, lz); ct.add(b); }
   const tasse = zyl(0.22, 0.18, 0.35, plastik("#ffffff"), 16); tasse.position.set(-0.6, 1.58, 0.1); ct.add(tasse); const tee = new THREE.Mesh(new THREE.CircleGeometry(0.2, 16).rotateX(-Math.PI / 2), mat("#a0602a", 0.3)); tee.position.set(-0.6, 1.74, 0.1); ct.add(tee);
-  const teller = zyl(0.5, 0.45, 0.06, plastik("#ffffff"), 24); teller.position.set(0.6, 1.43, 0); ct.add(teller); const kuchen = zyl(0.38, 0.38, 0.22, mat("#f0b860", 0.7), 24); kuchen.position.set(0.6, 1.58, 0); ct.add(kuchen);
+  const teller = zyl(0.5, 0.45, 0.06, plastik("#ffffff"), 24); teller.position.set(0.6, 1.43, 0); ct.add(teller); const kuchen = zyl(0.38, 0.38, 0.22, mat("#f0b860", 0.7), 24); kuchen.position.set(0.6, 1.58, 0); ct.add(kuchen); STUBE.kuchen = kuchen; STUBE.teller = teller;   // einzeln ausblenden (Folge 4: aufgegessen)
   ct.position.set(0, 0, 0.3); g.add(ct);
   const lampe = new THREE.Group(); const st = zyl(0.06, 0.06, 4.2, mat("#3a3a40", 0.4, 0.6), 8); st.position.y = 2.1; lampe.add(st); const fu = zyl(0.5, 0.6, 0.12, mat("#3a3a40", 0.4, 0.6), 20); fu.position.y = 0.06; lampe.add(fu);
   const schirm = new THREE.Mesh(new THREE.CylinderGeometry(0.5, 0.85, 0.9, 20, 1, true), new THREE.MeshBasicMaterial({ color: new THREE.Color(2.6, 2.1, 1.5), side: THREE.DoubleSide })); schirm.position.y = 4.4; lampe.add(schirm);
@@ -461,3 +461,24 @@ export const BUNTDORF = (() => {
   const TF = ["#a8d8f0", "#bfe8e0", "#d8c8f0", "#c8e0f8", "#f0d8e8", "#b0d0f0"];
   for (let i = 0; i < 46; i++) { const a = i / 46 * Math.PI * 2 + r() * 0.08, rr = 300 + r() * 160; const t = O.glasturm({ breite: 18 + r() * 16, hoehe: 70 + r() * 130, farbe: TF[i % TF.length] }); t.position.set(Math.cos(a) * rr, 0, Math.sin(a) * rr); t.rotation.y = r() * 2; g.add(t); }
   D.pos = (x, y, z) => new THREE.Vector3(g.position.x + x, y, g.position.z + z); return D; })();
+
+// ---------- Leuchtendes Haus (26.11., Folge 4) ----------
+// leuchtfassade(lot, {farbe, saat}) legt goldene Fenster auf alle 4 Seiten eines Hauses aus LOTS ({x, z, w, d, h}).
+// userData.setze(anteil 0…1): so viele Fenster leuchten (feste Reihenfolge per Zufall, unten zuerst etwas früher, kein Flackern).
+export const leuchtfassade = (lot, { farbe = [2.5, 1.55, 0.55], saat = 5, abstand = 0.18, ab = 1 } = {}) => {
+  const g = new THREE.Group(); g.visible = false; scene.add(g); const fen = [];
+  let s = saat; const r = () => (s = (s * 16807) % 2147483647) / 2147483647;
+  const reihen = Math.max(2, Math.floor((lot.h - 3) / 3.2));
+  for (const [nx, nz, breite] of [[0, 1, lot.w], [0, -1, lot.w], [1, 0, lot.d], [-1, 0, lot.d]]) {
+    const n = Math.max(2, Math.floor(breite / 3.0));
+    for (let iy = ab; iy < reihen; iy++) for (let ix = 0; ix < n; ix++) {   // ab: unterste Reihen frei lassen (Eingang)
+      const u = (ix + 0.5) / n - 0.5, y = 2.6 + iy * 3.2;
+      const x = lot.x + (nx ? nx * (lot.w / 2 + abstand) : u * breite), z = lot.z + (nz ? nz * (lot.d / 2 + abstand) : u * breite);
+      fen.push({ x, y, z, ry: nx ? nx * Math.PI / 2 : (nz > 0 ? 0 : Math.PI), w: (breite / n) * 0.55, s: r() * 0.8 + (iy / reihen) * 0.2 });
+    } }
+  const m = new THREE.InstancedMesh(new THREE.PlaneGeometry(1, 1.7), new THREE.MeshBasicMaterial({ color: new THREE.Color(...farbe), fog: false }), fen.length); m.frustumCulled = false; g.add(m);
+  const M = new THREE.Matrix4(), q = new THREE.Quaternion(), e = new THREE.Euler(), v = new THREE.Vector3(), sc = new THREE.Vector3();
+  g.userData.licht = new THREE.PointLight("#ffb050", 0, lot.h * 1.6, 1.6); g.userData.licht.position.set(lot.x, lot.h * 0.6, lot.z); g.add(g.userData.licht);
+  g.userData.setze = (anteil) => { fen.forEach((f, i) => { const an = anteil >= 1 || f.s < anteil ? 1 : 0; v.set(f.x, f.y, f.z); q.setFromEuler(e.set(0, f.ry, 0)); sc.set(f.w * an, f.w * an, 1); M.compose(v, q, sc); m.setMatrixAt(i, M); });
+    m.instanceMatrix.needsUpdate = true; g.userData.licht.intensity = 260 * anteil; g.visible = anteil > 0; };
+  g.userData.setze(0); return g; };

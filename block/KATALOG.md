@@ -190,3 +190,12 @@ Danach `mischen()`: Der Hintergrund (Musik + Geräusche) wird automatisch so gep
 ## Stimme
 
 `stimme.py` (seit 23.11. abends, für alle neuen Folgen): `erzeugen(zeilen, ordner, gruppe=4)` mit Gemini „Puck“ und fröhlicher Storytime-Anweisung, bis zu 3 Versuche je Abschnitt, Auswahl nach Tonhöhe (200 Hz) und Sprachmelodie (Ziel > 17 Halbtöne, Vorbild ~20), kurze Pausen. Dann `zusammen(ordner, extra)` und `zusammen(ordner, extra, yt=True, ohne=[…])`. Liegt die volle Fassung unter 89 s, reicht sie auch für YouTube. Kommt ein Abschnitt zu tief, wird er **nicht** angehoben (Issue #41: Stimme nie bearbeiten), sondern höchstens neu angefragt. Das Kontingent liegt bei etwa 10 Anfragen pro Schlüssel und Tag; es gibt 5 Schlüssel.
+
+Neu (26.11., Folge 4):
+- **Schatten leuchten golden:** `schatten(i, x, z, ry, {…, gold: 0…1})` – glückliche Schatten glühen gold (Farbe > 1 → Leuchten im Shader), dazu am besten ein goldenes Punktlicht.
+- **`O.kuehlschrank({farbe, voll})`**: Kühlschrank mit Tür, `userData.setze(0 zu … 1 offen)`, Innenlicht, Fächer (`userData.faecher`). In der `KUECHE` vorher `KUECHE.kuehl.forEach(m => m.visible = false)` und an lokal (4.6, 0, −4.3) stellen.
+- **`O.helm({farbe})`**: Bauhelm zum In-der-Hand-Halten (umgedreht: `rotation.x = Math.PI`).
+- **`werkstattwagen({kasten, schrift})`**: Kasten- und Schriftfarbe, z. B. schwarzer „SCHATTENFÄNGER“ mit neongrüner Schrift.
+- **`Al.leuchtfassade(lot, {farbe, ab})`**: goldene Fenster auf allen Seiten eines Hauses aus `LOTS`, `userData.setze(0…1)` lässt sie nacheinander aufleuchten (ganzes Haus „wie eine Laterne“).
+- Einzeln ausblendbar: `STUBE.kuchen`, `STUBE.teller`, `ZIMMER.weckerG` + `ZIMMER.anzeige`.
+- Konfetti im Innenraum: `Rq.konfettiW.position.copy(Raum-Mitte); Rq.konfettiW.scale.set(0.42, 0.3, 0.42)` (im `grund` zurücksetzen).

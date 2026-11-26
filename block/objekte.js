@@ -551,9 +551,10 @@ export const flugzeug = ({ farbe = "#f4f4f4", akzent = "#2a6ae8" } = {}) => { co
   for (let i = 0; i < 14; i++) for (const s of [-1, 1]) an(g, bx(0.06, 0.35, 0.5, mat("#2a3a4e", 0.2)), s * 1.6, 0.9, -8 + i * 1.3);
   return g; };
 // Werkstattwagen (25.11., Folge 3): Papas Arbeitsauto vom Kraftwerk – orange, Rundumleuchte (userData.leuchte), Schriftzug an beiden Seiten
-export const werkstattwagen = ({ farbe = "#f07a1a", text = "KRAFTWERK", groesse = 1.7 } = {}) => { const g = new THREE.Group(), k = plastik(farbe), w = plastik("#f4f2ee");
+// kasten/schrift (26.11., Folge 4): Farbe des Kastens und der Schrift, z. B. schwarzer Schattenfänger { farbe: "#1a1a22", kasten: "#141418", schrift: "#7aff5a", text: "SCHATTENFÄNGER" }
+export const werkstattwagen = ({ farbe = "#f07a1a", text = "KRAFTWERK", groesse = 1.7, kasten = "#f4f2ee", schrift = null } = {}) => { const g = new THREE.Group(), k = plastik(farbe), w = plastik(kasten);
   an(g, rb(2.5, 2.7, 4.6, 0.2, w), 0, 1.85, -1.0); an(g, rb(2.4, 1.9, 1.9, 0.25, k), 0, 1.4, 2.3); an(g, bx(2.52, 0.45, 4.62, k), 0, 1.15, -1.0);
-  const st = tex(512, 128, (x, cw, ch) => { x.clearRect(0, 0, cw, ch); x.fillStyle = farbe; x.font = "900 86px 'Inter Display', Inter, sans-serif"; x.textAlign = "center"; x.textBaseline = "middle"; x.fillText(text, cw / 2, ch / 2 + 4, cw - 40); });
+  const st = tex(512, 128, (x, cw, ch) => { x.clearRect(0, 0, cw, ch); x.fillStyle = schrift ?? farbe; x.font = "900 86px 'Inter Display', Inter, sans-serif"; x.textAlign = "center"; x.textBaseline = "middle"; x.fillText(text, cw / 2, ch / 2 + 4, cw - 40); });
   for (const sx of [-1, 1]) { const p = an(g, new THREE.Mesh(new THREE.PlaneGeometry(3.8, 0.95), new THREE.MeshStandardMaterial({ map: st, transparent: true, roughness: 0.5 })), sx * 1.262, 2.25, -1.0); p.rotation.y = sx * Math.PI / 2; }
   for (const sx of [-1, 1]) for (let i = 0; i < 5; i++) an(g, bx(0.04, 0.22, 0.42, plastik(i % 2 ? "#f4f2ee" : "#e83a2a")), sx * 1.27, 0.75, -3.0 + i * 0.42);
   an(g, bx(2.1, 0.95, 0.05, new THREE.MeshPhysicalMaterial({ color: "#2a3a4a", roughness: 0.05, clearcoat: 1 })), 0, 1.95, 3.26);
@@ -563,6 +564,30 @@ export const werkstattwagen = ({ farbe = "#f07a1a", text = "KRAFTWERK", groesse 
   for (const sx of [-0.9, 0.9]) an(g, bx(0.4, 0.3, 0.08, leucht(2.4, 0.2, 0.15)), sx, 1.5, -3.32);
   an(g, bx(1.6, 0.12, 0.8, metall("#5a5e68")), 0, 3.25, 2.0);
   g.userData.leuchte = an(g, kugel(0.26, leucht(3.4, 1.4, 0.1), 14), 0, 3.5, 2.0); g.scale.setScalar(groesse); return g; };
+// Kühlschrank mit Tür (26.11., Folge 4): userData.setze(0 zu … 1 offen), Tür schwenkt nach vorn auf (Scharnier rechts), Innenlicht userData.licht (an, wenn offen),
+// Fächer userData.faecher (Platz für Essen/Schatten), Innenraum ab lokal y 0.4 … 4.8, Tiefe z −0.8 … 0.8.
+export const kuehlschrank = ({ farbe = "#f2f4f8", breite = 2.2, hoehe = 5.2, tiefe = 2.0, voll = false } = {}) => { const g = new THREE.Group(), k = plastik(farbe);
+  const innen = new THREE.MeshStandardMaterial({ color: "#eef6ff", roughness: 0.5, emissive: "#cfe6ff", emissiveIntensity: 0.35 });
+  an(g, bx(breite, hoehe, 0.12, k), 0, hoehe / 2, -tiefe / 2 + 0.06); for (const sx of [-1, 1]) an(g, bx(0.12, hoehe, tiefe, k), sx * (breite / 2 - 0.06), hoehe / 2, 0);
+  an(g, bx(breite, 0.14, tiefe, k), 0, hoehe - 0.07, 0); an(g, bx(breite, 0.35, tiefe, k), 0, 0.18, 0);
+  an(g, bx(breite - 0.26, hoehe - 0.55, 0.04, innen), 0, hoehe / 2 + 0.1, -tiefe / 2 + 0.14);
+  g.userData.faecher = [];
+  for (const y of [1.5, 2.7, 3.9]) { const f = an(g, bx(breite - 0.3, 0.06, tiefe - 0.3, new THREE.MeshPhysicalMaterial({ color: "#dff0ff", roughness: 0.1, transmission: 0.3, clearcoat: 1 })), 0, y, 0); g.userData.faecher.push(f); }
+  if (voll) { const z = zufall(7); for (const y of [1.5, 2.7, 3.9]) for (let i = 0; i < 4; i++) an(g, rb(0.3, 0.45 + z() * 0.3, 0.3, 0.06, plastik(["#e84a4a", "#4aa0e8", "#f0c040", "#5ac85a"][i])), -0.65 + i * 0.43, y + 0.3, -0.2 + z() * 0.3); }
+  const lampe = an(g, bx(0.5, 0.06, 0.25, leucht(3, 3, 2.8)), 0, hoehe - 0.24, -0.3);
+  g.userData.licht = new THREE.PointLight("#e8f4ff", 6, 6, 1.6); g.userData.licht.position.set(0, hoehe - 0.8, 0.6); g.add(g.userData.licht);
+  const tuer = new THREE.Group(); tuer.position.set(breite / 2, 0, tiefe / 2); g.add(tuer); g.userData.tuer = tuer;
+  an(tuer, rb(breite, hoehe - 0.05, 0.22, 0.1, k), -breite / 2, hoehe / 2, 0.11);
+  an(tuer, rb(0.12, 1.6, 0.15, 0.05, metall()), -breite + 0.25, hoehe * 0.62, 0.3);
+  for (const y of [1.4, 2.6]) an(tuer, bx(breite - 0.4, 0.3, 0.3, plastik("#dfe8f2")), -breite / 2, y, -0.12);
+  g.userData.setze = (offen) => { tuer.rotation.y = 1.6 * offen; g.userData.licht.visible = offen > 0.05; lampe.visible = offen > 0.05; };
+  g.userData.setze(0); return g; };
+// Bauhelm zum In-der-Hand-Halten (26.11., Folge 4), Öffnung nach unten; umgedreht halten: rotation.x = Math.PI. Größe passt zu einer Figur skala 1.1.
+export const helm = ({ farbe = "#f0c020", groesse = 1 } = {}) => { const g = new THREE.Group(), k = plastik(farbe);
+  const s = an(g, new THREE.Mesh(new THREE.SphereGeometry(0.8, 24, 12, 0, Math.PI * 2, 0, Math.PI / 2), new THREE.MeshPhysicalMaterial({ color: farbe, roughness: 0.4, clearcoat: 0.5, side: THREE.DoubleSide })), 0, 0, 0); s.scale.set(1, 0.85, 1.05);
+  an(g, zyl(0.95, 0.95, 0.08, k, 28), 0, 0, 0.08); an(g, rb(0.18, 0.12, 1.5, 0.05, k), 0, 0.66, 0);
+  const innen = an(g, new THREE.Mesh(new THREE.CircleGeometry(0.76, 24).rotateX(Math.PI / 2), mat("#2a2a2e")), 0, 0.02, 0); g.userData.innen = innen;
+  g.scale.setScalar(groesse * 1.1); return g; };
 // Schranke mit Pförtnerhäuschen (25.11., Folge 3): Tor zum Kraftwerk; userData.arm.rotation.z = 0 (zu) … 1.4 (offen), userData.lampe
 export const schranke = ({ laenge = 9, text = "KRAFTWERK" } = {}) => { const g = new THREE.Group(), w = plastik("#f4f2ee"), r = plastik("#e02a2a");
   an(g, rb(0.9, 1.6, 0.9, 0.15, plastik("#f0c020")), 0, 0.8, 0);
@@ -618,4 +643,4 @@ export const bauplatz = ({ groesse = 4, farbe = [0.4, 1.4, 2.2] } = {}) => { con
   const fm = new THREE.MeshBasicMaterial({ color: new THREE.Color(...farbe).multiplyScalar(0.35), transparent: true, opacity: 0.35, depthWrite: false }); const fl = an(g, new THREE.Mesh(new THREE.PlaneGeometry(groesse, groesse), fm), 0, 0.03, 0); fl.rotation.x = -Math.PI / 2;
   g.userData.setze = (a) => { m.opacity = a; fm.opacity = 0.35 * a; g.visible = a > 0.01; }; return g; };
 
-export const ALLE = { wasserwerfer, weihwasserkanone, flutlicht, netzwerfer, steinhaufen, bauplatz, werkstattwagen, schranke,  rakete, startrampe, grill, trampolin, roller, flugzeug, koffer, stern, sternglas, besen, reihenhaus, glasturm, baum, blumenkuebel, hecke, bank, laterne, ampel, hydrant, muelltonne, briefkasten, schild, zaun, brunnen, laden, haltestelle, fahrrad, bus, hund, katze, vogel, tisch, stuhl, sofa, stehlampe, regal, geschenk, fernseher, riesenTier, haus, schule, sportwagen, lichterkette, lehmhaus, wimpelkette, fackel, krug, palme, pyramide, glocke, thron, krone, sockel, steinwaechter, riesenWaechter, wolke, himmelshaus, bretterbude, muellberg, leiter, pool, glasaufzug, absperrung, goldvilla, goldschluessel, tellerhaus, spind, tribuene, krankenwagen, krankenbett, herzmonitor, babybett, achterbahn, torte, kinderwagen, gluehbirnenladen, limousine, liegestuhl, broetchen };
+export const ALLE = { kuehlschrank, helm, wasserwerfer, weihwasserkanone, flutlicht, netzwerfer, steinhaufen, bauplatz, werkstattwagen, schranke,  rakete, startrampe, grill, trampolin, roller, flugzeug, koffer, stern, sternglas, besen, reihenhaus, glasturm, baum, blumenkuebel, hecke, bank, laterne, ampel, hydrant, muelltonne, briefkasten, schild, zaun, brunnen, laden, haltestelle, fahrrad, bus, hund, katze, vogel, tisch, stuhl, sofa, stehlampe, regal, geschenk, fernseher, riesenTier, haus, schule, sportwagen, lichterkette, lehmhaus, wimpelkette, fackel, krug, palme, pyramide, glocke, thron, krone, sockel, steinwaechter, riesenWaechter, wolke, himmelshaus, bretterbude, muellberg, leiter, pool, glasaufzug, absperrung, goldvilla, goldschluessel, tellerhaus, spind, tribuene, krankenwagen, krankenbett, herzmonitor, babybett, achterbahn, torte, kinderwagen, gluehbirnenladen, limousine, liegestuhl, broetchen };

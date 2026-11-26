@@ -120,8 +120,8 @@ export const ZIMMER = {};
   ZIMMER.schirm = new THREE.Mesh(new THREE.CylinderGeometry(0.45, 0.8, 0.9, 20, 1, true), ZIMMER.schirmAn); ZIMMER.schirm.position.set(1.4, 3.3, 4.5); zimmer.add(ZIMMER.schirm);
   ZIMMER.licht = new THREE.PointLight("#ffc080", 30, 14, 1.8); ZIMMER.licht.position.set(1.4, 3.4, 4.3); zimmer.add(ZIMMER.licht);
   const wc = document.createElement("canvas"); wc.width = 256; wc.height = 128; ZIMMER.weckerX = wc.getContext("2d"); ZIMMER.weckerTex = new THREE.CanvasTexture(wc); ZIMMER.weckerTex.colorSpace = THREE.SRGBColorSpace;
-  const wk = rb(0.9, 0.5, 0.4, 0.08, mat("#1a1a1e", 0.4)); wk.position.set(0.6, 2.25, 4.1); wk.rotation.y = -0.4; zimmer.add(wk);
-  ZIMMER.anzeige = new THREE.Mesh(new THREE.PlaneGeometry(0.76, 0.38), new THREE.MeshBasicMaterial({ map: ZIMMER.weckerTex, color: new THREE.Color(1.8, 1.8, 1.8) })); ZIMMER.anzeige.position.set(0.6 + 0.084, 2.25, 4.1 - 0.19); ZIMMER.anzeige.rotation.y = -0.4 + Math.PI; zimmer.add(ZIMMER.anzeige);
+  const wk = rb(0.9, 0.5, 0.4, 0.08, mat("#1a1a1e", 0.4)); wk.position.set(0.6, 2.25, 4.1); wk.rotation.y = -0.4; zimmer.add(wk); ZIMMER.weckerG = wk;
+  ZIMMER.anzeige = new THREE.Mesh(new THREE.PlaneGeometry(0.76, 0.38), new THREE.MeshBasicMaterial({ map: ZIMMER.weckerTex, color: new THREE.Color(1.8, 1.8, 1.8) })); ZIMMER.anzeige.position.set(0.6 + 0.084, 2.25, 4.1 - 0.19); ZIMMER.anzeige.rotation.y = -0.4 + Math.PI; zimmer.add(ZIMMER.anzeige);   // Wecker ausblenden: ZIMMER.weckerG.visible = ZIMMER.anzeige.visible = false (Folge 4)
   // Poster, Regal, Spielzeug
   const poster = bx(2.2, 3, 0.05, mat("#d8a030", 0.8)); poster.position.set(-5.8, 5, -1.5); poster.rotation.y = Math.PI / 2; zimmer.add(poster);
   const regal = bx(0.8, 0.1, 3, holz); regal.position.set(5.6, 4.5, 0); zimmer.add(regal);

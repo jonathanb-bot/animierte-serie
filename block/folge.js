@@ -71,7 +71,7 @@ const S = [];
 export const sh = (bis, fn) => S.push([bis, fn]);
 
 // ---------- Schatten-Helfer ----------
-export const schatten = (i, x, z, ry, o = {}) => { const s = Ws.SCHATTEN[i]; s.aktiv = true; s.x = x; s.z = z; s.y = o.y ?? 0; s.ry = ry; s.groesse = o.g ?? 1.3; s.kriech = o.kriech ?? 0.5; s.aufl = o.aufl ?? 0; s.augen = o.augen ?? 1; return s; };
+export const schatten = (i, x, z, ry, o = {}) => { const s = Ws.SCHATTEN[i]; s.aktiv = true; s.x = x; s.z = z; s.y = o.y ?? 0; s.ry = ry; s.groesse = o.g ?? 1.3; s.kriech = o.kriech ?? 0.5; s.aufl = o.aufl ?? 0; s.augen = o.augen ?? 1; s.gold = o.gold ?? 0; return s; };
 export const ring = (n, r0, r1, t, o = {}) => { for (let i = 0; i < n; i++) { const a = i / n * Math.PI * 2 + 0.13 + (o.dreh ?? 0); const r = r0 + (r1 - r0) * ((i * 7) % 5) / 4 + Math.sin(t * 0.8 + i) * (o.wackel ?? 0.4);
   schatten((o.start ?? 0) + i, (o.cx ?? 0) + Math.cos(a) * r, (o.cz ?? 0) + Math.sin(a) * r, Math.atan2(-Math.cos(a), -Math.sin(a)), { g: o.g ?? 1.6, kriech: 0.5 + 0.4 * Math.sin(t * 1.3 + i), aufl: o.aufl ? o.aufl(i, a, r) : 0 }); } };
 

@@ -3,11 +3,13 @@ import { THREE, scene, RoundedBoxGeometry } from "./welt.js";
 let seed = 99; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
 
 // ---------- Schatten ----------
+// gold 0…1 (26.11., Folge 4): glückliche Schatten leuchten golden (Farbe > 1 → Leuchten im Shader), alte Folgen unverändert (gold 0)
+const GOLD = new THREE.Color();
 const WUERFEL = 46, MAX = 60;
 export const SCHATTEN = [];   // {x, z, ry, groesse, aktiv, aufl (0..1), kriech, augen (0..1), phase}
-for (let i = 0; i < MAX; i++) SCHATTEN.push({ x: 0, z: 0, y: 0, ry: 0, groesse: 1, aktiv: false, aufl: 0, kriech: 0, augen: 1, phase: rnd() * 10, off: Array.from({ length: WUERFEL }, () => [rnd(), rnd(), rnd(), rnd()]) });
+for (let i = 0; i < MAX; i++) SCHATTEN.push({ x: 0, z: 0, y: 0, ry: 0, groesse: 1, aktiv: false, aufl: 0, gold: 0, kriech: 0, augen: 1, phase: rnd() * 10, off: Array.from({ length: WUERFEL }, () => [rnd(), rnd(), rnd(), rnd()]) });
 const schattenMat = new THREE.MeshStandardMaterial({ color: "#ffffff", roughness: 0.35, metalness: 0.2, emissive: "#000000" });
-schattenMat.onBeforeCompile = sh => { sh.fragmentShader = sh.fragmentShader.replace("#include <emissivemap_fragment>", "#include <emissivemap_fragment>\n totalEmissiveRadiance += vec3(0.10,0.0,0.22) * pow(1.0 - abs(dot(normalize(vNormal), vec3(0.,0.,1.))), 3.0) * (1.0 - vColor.r * 3.0);"); };
+schattenMat.onBeforeCompile = sh => { sh.fragmentShader = sh.fragmentShader.replace("#include <emissivemap_fragment>", "#include <emissivemap_fragment>\n totalEmissiveRadiance += vec3(0.10,0.0,0.22) * pow(1.0 - abs(dot(normalize(vNormal), vec3(0.,0.,1.))), 3.0) * (1.0 - vColor.r * 3.0);\n totalEmissiveRadiance += vec3(1.0,0.62,0.22) * clamp(vColor.r - 1.0, 0.0, 1.0) * 1.6;"); };
 schattenMat.vertexColors = false;
 export const schattenW = new THREE.InstancedMesh(new RoundedBoxGeometry(1, 1, 1, 2, 0.12), schattenMat, MAX * WUERFEL);
 schattenW.instanceColor = new THREE.InstancedBufferAttribute(new Float32Array(MAX * WUERFEL * 3), 3);
@@ -31,7 +33,9 @@ export const schattenSetzen = (t) => { const m = new THREE.Matrix4(), q = new TH
       v.x += Math.sin(r1 * 9 + d * 4) * flug * 1.5 * g; v.z += Math.cos(r2 * 9 + d * 4) * flug * 1.5 * g;
       q.setFromEuler(e.set(ph * 0.2 + r2, r3 * 3 + S.ry, ph * 0.15)); s.setScalar(sc * g * Math.max(0, 1 - d * 1.15));
       m.compose(v, q, s); schattenW.setMatrixAt(k, m);
-      col.setRGB(0.012, 0.010, 0.02).lerp(new THREE.Color(1.0, 0.65, 0.25), Math.min(1, d * 2.2)); schattenW.setColorAt(k, col);
+      col.setRGB(0.012, 0.010, 0.02).lerp(new THREE.Color(1.0, 0.65, 0.25), Math.min(1, d * 2.2));
+      if (S.gold > 0) col.lerp(GOLD.setRGB(1.25 + r3 * 0.6, 0.78 + r3 * 0.3, 0.28), S.gold);   // glücklich: leuchtet golden (Folge 4)
+      schattenW.setColorAt(k, col);
     }
     for (const sx of [-1, 1]) { const zu = S.aktiv ? Math.max(0, S.augen * (1 - S.aufl * 2.5)) * (Math.sin(t * 0.9 + S.phase * 3) > 0.985 ? 0.1 : 1) : 0;
       v.set(sx * 0.32 * S.groesse, (1.25 + Math.sin(t * 1.4 + S.phase) * 0.1) * S.groesse, 0.85 * S.groesse).applyEuler(e.set(0, S.ry, 0)).add(new THREE.Vector3(S.x, S.y, S.z));
