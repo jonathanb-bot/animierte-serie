@@ -2370,6 +2370,12 @@
    "bild_s": 68.68,
    "ton_s": 68.71,
    "lufs": -17.0
+  },
+  "taeglich/block-b04.mp4": {
+   "ok": true,
+   "bild_s": 85.83,
+   "ton_s": 85.82,
+   "lufs": -19.1
   }
  },
  "serien": {
@@ -2682,6 +2688,10 @@
   "nische-n005-en": {
    "titel": "You're Twelve Again",
    "datei": "taeglich/nische-n005-en.mp4"
+  },
+  "block-b04": {
+   "titel": "Ich habe alle 44 Schatten reingelassen",
+   "datei": "taeglich/block-b04.mp4"
   }
  },
  "taeglich_staffeln": {
