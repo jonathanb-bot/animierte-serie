@@ -2388,6 +2388,12 @@
    "bild_s": 86.15,
    "ton_s": 86.14,
    "lufs": -18.1
+  },
+  "taeglich/block-b04k-en.mp4": {
+   "ok": true,
+   "bild_s": 86.15,
+   "ton_s": 86.14,
+   "lufs": -18.1
   }
  },
  "serien": {
@@ -2712,6 +2718,10 @@
   "block-b04-en": {
    "titel": "I let all 44 shadows in",
    "datei": "taeglich/block-b04-en.mp4"
+  },
+  "block-b04k-en": {
+   "titel": "I let all 44 shadows in",
+   "datei": "taeglich/block-b04k-en.mp4"
   }
  },
  "taeglich_staffeln": {
