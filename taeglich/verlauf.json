@@ -1514,7 +1514,8 @@
     },
     "lufs": -19.1,
     "dauer_s": 85.83
-   }
+   },
+   "status": "nicht gepostet, durch v05 ersetzt (Issue #45)"
   },
   {
    "id": "block-b04k",
@@ -1642,7 +1643,7 @@
    "thema": "Rakete von der NASA für den Grill, Grill an und ich auch, durch die Wolken, Sprit leer, Absturz, per Lieferando Express-Trampolin bestellt, sanfte Landung auf Papas Liegestuhl; Pointe: Papa fragt nach den Würstchen, Fahrer will fünf Sterne. Keine Mitmach-Frage.",
    "kulisse": "Vorstadt-Garten, NASA-Gelände, Flug durch Wolken, Liefer-App",
    "fassung": "voll (54,7 s, reicht auch für YouTube)",
-   "status": "vorrat, noch nicht eingeplant",
+   "status": "eingeplant 26.11. statt Folge 4 (IG 12:53, YT 17:01 storys4youytube, TikTok 18:58)",
    "video": "https://raw.githubusercontent.com/jonathanb-bot/animierte-serie/youtube-upload/taeglich/block-v05.mp4",
    "lufs": -18.0,
    "dauer_s": 54.7,
@@ -1786,7 +1787,8 @@
      "lufs": -17.0,
      "dauer_s": 68.68
     }
-   }
+   },
+   "status": "zurückgezogen 26.11. (Nische eingestellt, Issue #45)"
   }
  ]
 }
