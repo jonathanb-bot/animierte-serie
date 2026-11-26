@@ -8,13 +8,16 @@
 >   im Beschreibungstext ist erlaubt („Welche Regel soll meine Stadt als Nächstes haben?“).
 > - Jeden Tag eine **andere Regel und eine andere Welt/Kulisse**, nie eine Regel wiederholen: vorher `taeglich/verlauf.json`
 >   (art „blockstadt“) und `block/vorrat-*/zeilen.py` durchsehen und die neue Regel unten in „Benutzte Regeln“ eintragen.
+> - **REALISTISCH, KEINE RANDOM-VIDEOS (Jonathan 26.11., Issue #46):** Alles muss sozusagen realistisch aussehen – nichts steckt
+>   ineinander (z. B. Rakete nicht in etwas drin), nichts ragt durch Wände/Möbel/Fahrzeuge, alles steht auf dem Boden. Standbilder
+>   genau darauf prüfen. Keine Random-Folgen wie „Grill-Rakete“ (v05) mehr, nur noch „In meiner Stadt …“ mit einer Regel.
 > - **Nur noch 3D-Videos.** Die Nischen-Videos „Was wäre, wenn du …“ / „So baust du …“ (alter 2D-Stil) sind eingestellt.
 >   Die englischen Konten bekommen deshalb täglich die englische Blockstadt-Folge (Abschnitt „Englische Blockstadt“ unten).
 > - Fester Hintergrundsound (Issue #44), Stimme Puck unbearbeitet (Issue #41), 1440p rendern, kein Wackeln, kein Flackern.
 > - Ist eine fertige eigenständige Folge im Vorrat (`block/vorrat-*`, status „vorrat“ in `verlauf.json`), darf sie bei Zeitnot
 >   eingeplant werden; Vorrat-Folgen mit A/B/C-Frage am Ende nur nach Kürzen der Frage (YouTube-/plan-Schnitt über `zusammen(..., ohne=…)`).
 >
-> **Benutzte Regeln:** Lügen-Zahl über dem Kopf (v01), Geld fürs Schlafen (v02), gute Tat = Stern (v03), angelogen werden = +100 $ (v04), Grill-Rakete (v05, Random) – hier ergänzen
+> **Benutzte Regeln:** Lügen-Zahl über dem Kopf (v01), Geld fürs Schlafen (v02), gute Tat = Stern (v03), angelogen werden = +100 $ (v04), Grill-Rakete (v05, Random – so nicht mehr, #46) – hier ergänzen
 
 ## Alte Fassung (bis 25.11., nur noch als Werkzeug-Referenz)
 

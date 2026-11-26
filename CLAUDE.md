@@ -1,5 +1,7 @@
 # Hinweise für Claude
 
+> **REALISTISCH, NUR „IN MEINER STADT …“ (Jonathan 26.11., Issue #46):** In Blockstadt-Videos muss alles realistisch aussehen (nichts steckt ineinander, z. B. keine Rakete in einem Objekt, nichts ragt durch Wände/Möbel). Keine Random-Videos wie die Grill-Rakete mehr, nur noch „In meiner Stadt …“-Folgen mit einer Regel.
+
 > **NUR NOCH 3D (Jonathan 26.11., Issue #45):** „Was wäre, wenn du …“/Nische (2D) eingestellt, Lauf 06:17 aus. Blockstadt ab jetzt **eigenständige Folgen**, jeden Tag eine neue verrückte Regel („In meiner Stadt bekommst du Geld fürs Schlafen …“), keine Fortsetzung, keine A/B/C-Frage. Englische Konten bekommen die englische Blockstadt-Folge. Details oben in `taeglich/laeufe/blockstadt.md`.
 
 > **FESTER HINTERGRUNDSOUND (Jonathan 25.11.):** Hinter jedes normale Video (Blockstadt, Nische, Querformat, DE + EN) kommt genau der Sound aus Jonathans Vorbild (`block/musik/hintergrund.wav`, Musik ohne Sprecher, läuft in Schleife). Automatisch in `block/tonbib.py` (`T.musik` → `bett`) und `ton/mix.py`. **Nicht bei Horror** (Dorf/„grusel“): dort eigene Musik, abschalten mit `EIGENE_MUSIK=1` oder `@musik eigen`. Stimme bleibt unbearbeitet (#41).
