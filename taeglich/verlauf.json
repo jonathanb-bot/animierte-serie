@@ -1505,6 +1505,15 @@
      "B": "escape over the roof",
      "C": "open it"
     }
+   },
+   "veroeffentlicht": {
+    "video": "https://raw.githubusercontent.com/jonathanb-bot/animierte-serie/youtube-upload/taeglich/block-b04.mp4",
+    "geplant": {
+     "tiktok": "2026-11-26T18:58:00",
+     "instagram": "2026-11-26T12:53:00"
+    },
+    "lufs": -19.1,
+    "dauer_s": 85.83
    }
   },
   {
@@ -1577,6 +1586,14 @@
      "B": "escape over the roof",
      "C": "open it"
     }
+   },
+   "veroeffentlicht": {
+    "video": "https://raw.githubusercontent.com/jonathanb-bot/animierte-serie/youtube-upload/taeglich/block-b04k.mp4",
+    "geplant": {
+     "youtube": "2026-11-26T17:01:00"
+    },
+    "lufs": -19.1,
+    "dauer_s": 85.83
    }
   },
   {
