@@ -4,3 +4,5 @@ ausgabe/
 __pycache__/
 .cache/
 block/*/mix14.wav
+block/*/en/stimme.wav
+block/*/en/mix*.wav
