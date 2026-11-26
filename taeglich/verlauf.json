@@ -1532,6 +1532,67 @@
      "dauer_s": 71.22
     }
    }
+  },
+  {
+   "id": "nische-n005",
+   "datum": "2026-11-26",
+   "titel": "Du bist wieder zwölf",
+   "emoji": "⏰",
+   "serie": "Was wäre, wenn du … (Issue #39) – eigenständig",
+   "art": "praemisse",
+   "idee_nr": 3,
+   "stimmung": "warm",
+   "stimme": "Orus",
+   "thema": "Dein Wecker klingelt, du bist wieder zwölf, mit allem Wissen von heute – nur bis Mitternacht. Du kennst jede Antwort im Mathe-Test und das Ergebnis vom Finale, könntest reich werden (A). Finte 1: Nach der Schule steht dein Opa vor der Tür und fragt, ob du mit an den See kommst – damals hast du Nein gesagt, drei Jahre später war er nicht mehr da (B). Diesmal Ja: Steine hüpfen, Opa erzählt von einem Sommer, als wäre er ihn zweimal erlebt. Fakt Cornell 1994: 3 von 4 bereuen mehr, was sie nicht getan haben. Finte 2: „Danke, dass du diesmal mitgekommen bist.“ – Opa erinnert sich auch.",
+   "quellen": [
+    "Gilovich & Medvec, Cornell University, The temporal pattern to the experience of regret, JPSP 1994 (45 von 60 = 75 % bereuten Nicht-Getanes mehr)"
+   ],
+   "stil": "leuchtend, @look 0, palette orange/tuerkis/rosa/lila, Kulissen zimmer, handy, klassenzimmer, wohnzimmer, see, landschaft; Issue #41: Stimme unbearbeitet (@stimme roh, kein @klang studio), Hintergrundsound #44; Figurenstimme Gacrux (2 Zeilen)",
+   "kulissen": [
+    "zimmer",
+    "handy",
+    "klassenzimmer",
+    "wohnzimmer",
+    "see",
+    "landschaft",
+    "titel",
+    "objekt",
+    "gesicht"
+   ],
+   "beschreibung": "Dein Wecker klingelt, und du bist wieder zwölf – mit allem, was du heute weißt, aber nur bis Mitternacht. Du könntest reich werden. Doch dann steht dein Opa vor der Tür.",
+   "hashtags": [
+    "#waswärewenn",
+    "#opa",
+    "#animation"
+   ],
+   "tags": [
+    "was wäre wenn",
+    "zeitreise",
+    "opa",
+    "familie",
+    "bereuen",
+    "animation"
+   ],
+   "kommentar_frage": "Wofür würdest du deinen einen Tag mit zwölf nutzen?",
+   "nur_englisch": "Deutsch pausiert ab 24.11. (Blockstadt-Serie), deutsches Drehbuch nur Vorlage",
+   "en": {
+    "titel": "You're Twelve Again",
+    "beschreibung": "Your alarm goes off and you're twelve again – with everything you know today, but only until midnight. You could get rich. Then your grandpa rings the doorbell.",
+    "hashtags": [
+     "#whatif",
+     "#grandpa",
+     "#animation"
+    ],
+    "tags": [
+     "what if",
+     "time travel",
+     "grandpa",
+     "family",
+     "regret",
+     "animation"
+    ],
+    "kommentar_frage": "What would you do with one more day at twelve?"
+   }
   }
  ]
 }
