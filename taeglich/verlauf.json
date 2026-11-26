@@ -1758,7 +1758,17 @@
      "regret",
      "animation"
     ],
-    "kommentar_frage": "What would you do with one more day at twelve?"
+    "kommentar_frage": "What would you do with one more day at twelve?",
+    "veroeffentlicht": {
+     "video": "https://raw.githubusercontent.com/jonathanb-bot/animierte-serie/youtube-upload/taeglich/nische-n005-en.mp4",
+     "geplant": {
+      "tiktok": "2026-11-27T01:07:00",
+      "instagram": "2026-11-26T22:13:00",
+      "youtube": "2026-11-26T23:08:00"
+     },
+     "lufs": -17.0,
+     "dauer_s": 68.68
+    }
    }
   }
  ]
