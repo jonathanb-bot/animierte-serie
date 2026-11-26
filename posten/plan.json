@@ -10116,6 +10116,40 @@
     "shorts"
    ],
    "text": "Ihr habt entschieden: alle reinlassen. 44 kleine Schatten haben alles aufgegessen … bis sie auf unserer Party golden geleuchtet haben. Und dann hat es geklingelt. Was soll ich tun: A, B oder C? Schreib es in die Kommentare – die meisten Stimmen entscheiden, wie es weitergeht!\nAbonnieren für die nächste Geschichte!\n\n#animation #geschichte"
+  },
+  {
+   "id": "taeglich-insta-v05",
+   "platform": "instagram",
+   "zeit": "2026-11-26T12:53:00",
+   "serie": "taeglich",
+   "video": "https://raw.githubusercontent.com/jonathanb-bot/animierte-serie/youtube-upload/taeglich/block-v05.mp4",
+   "text": "Ich habe eine NASA-Rakete für unseren Grill geklaut 🚀\nPapa hat eine Stunde gepustet, der Grill ging nicht an. Also habe ich bei der NASA die kleinste Rakete geholt … und dann war der Sprit leer. Welche verrückte Idee soll ich als Nächstes ausprobieren? Schreib's in die Kommentare!\n\n#animation #geschichte"
+  },
+  {
+   "id": "taeglich-yt-v05",
+   "platform": "youtube",
+   "zeit": "2026-11-26T17:01:00",
+   "serie": "taeglich",
+   "video": "https://raw.githubusercontent.com/jonathanb-bot/animierte-serie/youtube-upload/taeglich/block-v05.mp4",
+   "konto": "storys4youytube",
+   "titel": "Ich habe eine NASA-Rakete für unseren Grill geklaut 🚀",
+   "tags": [
+    "animation",
+    "geschichte",
+    "nasa",
+    "rakete",
+    "story",
+    "shorts"
+   ],
+   "text": "Papa hat eine Stunde gepustet, der Grill ging nicht an. Also habe ich bei der NASA die kleinste Rakete geholt … und dann war der Sprit leer. Welche verrückte Idee soll ich als Nächstes ausprobieren? Schreib's in die Kommentare!\nAbonnieren für die nächste Geschichte!\n\n#animation #geschichte"
+  },
+  {
+   "id": "taeglich-tiktok-v05",
+   "platform": "tiktok",
+   "zeit": "2026-11-26T18:58:00",
+   "serie": "taeglich",
+   "video": "https://raw.githubusercontent.com/jonathanb-bot/animierte-serie/youtube-upload/taeglich/block-v05.mp4",
+   "text": "Ich habe eine NASA-Rakete für unseren Grill geklaut 🚀\nPapa hat eine Stunde gepustet, der Grill ging nicht an. Also habe ich bei der NASA die kleinste Rakete geholt … und dann war der Sprit leer. Welche verrückte Idee soll ich als Nächstes ausprobieren? Schreib's in die Kommentare!\nFolg mir für die nächste Geschichte!\n\n#animation #geschichte"
   }
  ],
  "loeschen": [
@@ -10487,7 +10521,13 @@
   "taeglich-tiktok-w001-v2",
   "taeglich-insta-w001-v2",
   "taeglich-yt-w001-v2",
-  "taeglich-yt-n002"
+  "taeglich-yt-n002",
+  "taeglich-insta-b04",
+  "taeglich-yt-b04k",
+  "taeglich-tiktok-b04",
+  "taeglich-insta-en-n005",
+  "taeglich-yt-en-n005",
+  "taeglich-tiktok-en-n005"
  ],
  "_zeiten": "Reihenfolge strikt nacheinander (Jonathans Vorgabe 30.10.): erst 24. Stock komplett, dann Der Alien komplett, danach Der letzte Mann. TikTok 8 und 20 Uhr, Instagram alle 4 Stunden (0, 4, 8, 12, 16, 20 Uhr), YouTube jeweils :30. NEU (Jonathans Vorgabe 2.11., Issue #14): Instagram alle 2 Stunden (0, 2, 4 … 22 Uhr), YouTube jeweils :30, damit Instagram/YouTube höchstens 1 Tag hinter TikTok liegen. TikTok 08/12/16/20 Uhr.",
  "_tiktok": "TikTok (Jonathans Vorgabe 31.10.): Folgen zu wenigen Sammelteilen zusammenschneiden (bei 10 Folgen: 4 Teile, jeder Teil höchstens 10 min, sonst mehr Teile – Der Alien: 5 Teile à 2 Folgen), die 'Fortsetzung folgt'-Karte mit der nächsten Folge zwischen den Folgen herausschneiden und nur am Teilende behalten. Stimme nicht neu einsprechen, nur schneiden. Videos: youtube-upload/<serie>-tiktok/teil-N.mp4. Instagram/YouTube unverändert. Keine Fragen ans Publikum (Check, 'Was hättest du gemacht?') – werden mit herausgeschnitten (Issue #8).",
