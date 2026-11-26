@@ -10649,5 +10649,25 @@
   "konto": "storys4you.de1",
   "http": 201,
   "am": "2026-11-26T11:29:48.853Z"
+ },
+ "taeglich-tiktok-en-b04": {
+  "ok": true,
+  "zeit": "2026-11-27T03:33:00",
+  "zernioId": "6b0844ce33347856856fbd47",
+  "yt": true,
+  "k": 1,
+  "konto": "storys4you_eng",
+  "http": 201,
+  "am": "2026-11-26T14:40:14.438Z"
+ },
+ "taeglich-insta-en-b04": {
+  "ok": true,
+  "zeit": "2026-11-26T18:59:00",
+  "zernioId": "6b0844d0dcf17062f384d611",
+  "yt": false,
+  "k": 2,
+  "konto": "sory4you_eng",
+  "http": 201,
+  "am": "2026-11-26T14:40:17.113Z"
  }
 }
