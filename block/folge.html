@@ -22,6 +22,7 @@
 const folge = new URLSearchParams(location.search).get("folge");
 // Zeitplan relativ zum Ordner der Folge laden
 const plan = new URLSearchParams(location.search).get("plan") || "plan_final.json";
-history.replaceState(null, "", `${folge}/?plan=${plan}`);
+const sprache = new URLSearchParams(location.search).get("sprache");
+history.replaceState(null, "", `${folge}/?plan=${plan}${sprache ? "&sprache=" + sprache : ""}`);   // Sprache behalten (englische Fassung, 26.11.)
 await import(`/${folge}/szene.js`);
 </script></body></html>

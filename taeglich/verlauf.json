@@ -1435,6 +1435,151 @@
    }
   },
   {
+   "id": "block-b04",
+   "datum": "2026-11-26",
+   "titel": "Ich habe alle 44 Schatten reingelassen",
+   "emoji": "✨",
+   "serie": "Blockstadt (Jonathan 22./23.11.): Ich-Erzählung, Blockfiguren, Mitmach-Frage am Ende, nächste Folge setzt den Top-Kommentar um",
+   "art": "blockstadt",
+   "stimme": "Puck (Kinderstimme, Gemini, Storytime-Anweisung, unbearbeitet – Issue #41)",
+   "folge": 4,
+   "thema": "Setzt Abstimmung zu Folge 3 um (A: alle reinlassen, 4:0:0). 44 kleine Schatten ziehen in mein Zimmer (Zähler), sie haben riesigen Hunger: Zeitraffer 06:00 Wecker aufgegessen, 07:00 Kühlschrank leer bis auf einen rülpsenden Schatten, 08:00 drei im Helm von Papa, bei Oma der ganze Kuchen mit Teller. Oma: Schatten werden riesig, wenn sie traurig sind, und leuchten, wenn sie glücklich sind. Party im Kinderzimmer, erst einer, dann alle 44 leuchten golden, das ganze Haus strahlt wie eine Laterne. Dann hält ein schwarzer Lastwagen „Schattenfänger“, jemand klingelt. Frage: A Tür zuhalten, B übers Dach fliehen, C aufmachen.",
+   "kulisse": "Kinderzimmer bei Nacht, Küche, Omas Stube mit Fernseher, Party im Kinderzimmer, Stadt mit leuchtendem Haus, Straße mit Lastwagen, Haustür mit Klingel",
+   "elemente": [
+    "struktur: true",
+    "Schatten-Zähler 1→44 (Z_.zaehler)",
+    "Zeitraffer mit Uhr in der Welt (Wecker 06:00, Küchenuhr 07:00/08:00)",
+    "Kühlschrank mit Tür (neu, objekte.js)",
+    "Blick aus dem Kühlschrank",
+    "Bauhelm in der Hand (neu)",
+    "Text in der Welt: RÜLPS!",
+    "Kuchen + Teller verschwinden (STUBE)",
+    "Fernseher zeigt den Riesen-Schatten",
+    "goldene Schatten (neu, wesen.js gold)",
+    "Party: Konfetti im Raum, Banner PARTY!, Musik-Handy",
+    "leuchtendes Haus (neu, leuchtfassade)",
+    "Schattenfänger-Lastwagen (werkstattwagen kasten/schrift)",
+    "Mann mit Sonnenbrille + Klingelschild (leinwand)",
+    "Wisch-Übergang"
+   ],
+   "beschreibung": "Ihr habt entschieden: alle reinlassen. 44 kleine Schatten haben alles aufgegessen … bis sie auf unserer Party golden geleuchtet haben. Und dann hat es geklingelt. Was soll ich tun: A, B oder C? Schreib es in die Kommentare – die meisten Stimmen entscheiden, wie es weitergeht!",
+   "hashtags": [
+    "#animation",
+    "#geschichte"
+   ],
+   "tags": [
+    "animation",
+    "geschichte",
+    "schatten",
+    "mitmachen",
+    "story"
+   ],
+   "kommentar_frage": "Was soll ich tun? A: Die Tür zuhalten 🚪 B: Mit allen übers Dach fliehen 🏠 C: Aufmachen 🔓 – die meisten Stimmen entscheiden die nächste Folge!",
+   "antworten": {
+    "A": "die Tür zuhalten",
+    "B": "übers Dach fliehen",
+    "C": "aufmachen"
+   },
+   "plattformen": [
+    "tiktok",
+    "instagram"
+   ],
+   "fassung": "voll (85,8 s, alle Zeilen – gilt auch für YouTube)",
+   "en": {
+    "titel": "I let all 44 shadows in",
+    "beschreibung": "You decided: let them all in. 44 little shadows ate everything … until they glowed gold at our party. And then someone rang the doorbell. What should I do: A, B or C? Tell me in the comments – most votes decide what happens next!",
+    "hashtags": [
+     "#animation",
+     "#story"
+    ],
+    "tags": [
+     "animation",
+     "story",
+     "shadows",
+     "choose",
+     "storytime"
+    ],
+    "kommentar_frage": "What should I do? A: Hold the door shut 🚪 B: Escape over the roof with all of them 🏠 C: Open it 🔓 – most votes decide the next episode!",
+    "antworten": {
+     "A": "hold the door shut",
+     "B": "escape over the roof",
+     "C": "open it"
+    }
+   }
+  },
+  {
+   "id": "block-b04k",
+   "datum": "2026-11-26",
+   "titel": "Ich habe alle 44 Schatten reingelassen",
+   "emoji": "✨",
+   "serie": "Blockstadt (Jonathan 22./23.11.): Ich-Erzählung, Blockfiguren, Mitmach-Frage am Ende, nächste Folge setzt den Top-Kommentar um",
+   "art": "blockstadt",
+   "stimme": "Puck (Kinderstimme, Gemini, Storytime-Anweisung, unbearbeitet – Issue #41)",
+   "folge": 4,
+   "thema": "Setzt Abstimmung zu Folge 3 um (A: alle reinlassen, 4:0:0). 44 kleine Schatten ziehen in mein Zimmer (Zähler), sie haben riesigen Hunger: Zeitraffer 06:00 Wecker aufgegessen, 07:00 Kühlschrank leer bis auf einen rülpsenden Schatten, 08:00 drei im Helm von Papa, bei Oma der ganze Kuchen mit Teller. Oma: Schatten werden riesig, wenn sie traurig sind, und leuchten, wenn sie glücklich sind. Party im Kinderzimmer, erst einer, dann alle 44 leuchten golden, das ganze Haus strahlt wie eine Laterne. Dann hält ein schwarzer Lastwagen „Schattenfänger“, jemand klingelt. Frage: A Tür zuhalten, B übers Dach fliehen, C aufmachen.",
+   "kulisse": "Kinderzimmer bei Nacht, Küche, Omas Stube mit Fernseher, Party im Kinderzimmer, Stadt mit leuchtendem Haus, Straße mit Lastwagen, Haustür mit Klingel",
+   "elemente": [
+    "struktur: true",
+    "Schatten-Zähler 1→44 (Z_.zaehler)",
+    "Zeitraffer mit Uhr in der Welt (Wecker 06:00, Küchenuhr 07:00/08:00)",
+    "Kühlschrank mit Tür (neu, objekte.js)",
+    "Blick aus dem Kühlschrank",
+    "Bauhelm in der Hand (neu)",
+    "Text in der Welt: RÜLPS!",
+    "Kuchen + Teller verschwinden (STUBE)",
+    "Fernseher zeigt den Riesen-Schatten",
+    "goldene Schatten (neu, wesen.js gold)",
+    "Party: Konfetti im Raum, Banner PARTY!, Musik-Handy",
+    "leuchtendes Haus (neu, leuchtfassade)",
+    "Schattenfänger-Lastwagen (werkstattwagen kasten/schrift)",
+    "Mann mit Sonnenbrille + Klingelschild (leinwand)",
+    "Wisch-Übergang"
+   ],
+   "beschreibung": "Ihr habt entschieden: alle reinlassen. 44 kleine Schatten haben alles aufgegessen … bis sie auf unserer Party golden geleuchtet haben. Und dann hat es geklingelt. Was soll ich tun: A, B oder C? Schreib es in die Kommentare – die meisten Stimmen entscheiden, wie es weitergeht!",
+   "hashtags": [
+    "#animation",
+    "#geschichte"
+   ],
+   "tags": [
+    "animation",
+    "geschichte",
+    "schatten",
+    "mitmachen",
+    "story"
+   ],
+   "kommentar_frage": "Was soll ich tun? A: Die Tür zuhalten 🚪 B: Mit allen übers Dach fliehen 🏠 C: Aufmachen 🔓 – die meisten Stimmen entscheiden die nächste Folge!",
+   "antworten": {
+    "A": "die Tür zuhalten",
+    "B": "übers Dach fliehen",
+    "C": "aufmachen"
+   },
+   "plattformen": [
+    "youtube"
+   ],
+   "fassung": "YouTube: dieselbe Fassung (85,8 s ≤ 89 s)",
+   "en": {
+    "titel": "I let all 44 shadows in",
+    "beschreibung": "You decided: let them all in. 44 little shadows ate everything … until they glowed gold at our party. And then someone rang the doorbell. What should I do: A, B or C? Tell me in the comments – most votes decide what happens next!",
+    "hashtags": [
+     "#animation",
+     "#story"
+    ],
+    "tags": [
+     "animation",
+     "story",
+     "shadows",
+     "choose",
+     "storytime"
+    ],
+    "kommentar_frage": "What should I do? A: Hold the door shut 🚪 B: Escape over the roof with all of them 🏠 C: Open it 🔓 – most votes decide the next episode!",
+    "antworten": {
+     "A": "hold the door shut",
+     "B": "escape over the roof",
+     "C": "open it"
+    }
+   }
+  },
+  {
    "id": "block-v03",
    "datum": "2026-11-24",
    "titel": "In meiner Stadt bekommst du für jede gute Tat einen Stern",

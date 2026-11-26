@@ -6,7 +6,11 @@
 import * as B from "../folge.js";
 import * as O from "../objekte.js";
 const { V, sh, blick, licht, kamera, ease, easeIO, lerp, lerpV, Fg, Al, Rq, Wt, Ws, Z_ } = B;
-await B.laden(); const { Z, E, DAUER, wz } = B.F;
+await B.laden(); const { Z, E, DAUER } = B.F;
+// Englische Fassung (?sprache=en): deutsche Stichwörter → englische Wörter derselben Zeile
+const EN = { aufgemacht: "opened", vierundvierzig: "little", hunger: "hungry", aufgegessen: "ate", leer: "empty", "gerülpst": "burped", drei: "three", gegessen: "ate", teller: "plate",
+  endlich: "finally", "glücklich": "happy", oma: "grandma", gekichert: "giggled", golden: "gold", zweite: "second", alle: "all", lastwagen: "truck", geklingelt: "rang" };
+const wz = (w, i) => B.F.wz(B.SPRACHE === "en" ? (EN[w] ?? w) : w, i);
 
 const S = { struktur: true };
 const ich = Fg.figur({ haut: "#f0c8a0", hemd: "#e8a020", hose: "#2a3a5a", haare: "#5a3418", frisur: "strubbel", kapuze: true, skala: 0.78, schuhe: "#e8e8e8", ...S });
@@ -30,7 +34,7 @@ const uhr = Al.leinwand(1.9, 0.8, { px: 512, leuchtet: true, hell: 1.4 }); Wt.sc
 const uhrZeigen = (txt, x) => { uhr.visible = true; uhr.position.copy(loc(KU, x, 5.95, -5.33)); Al.schreibe(uhr, [txt], { bg: "#111", fg: "#ff3a2a", font: "700 300px 'DejaVu Sans Mono', monospace" }); };
 const banner = Al.leinwand(6.5, 1.6, { px: 1024 }); Wt.scene.add(banner); banner.visible = false;
 Al.schreibe(banner, ["PARTY!"], { bg: "#e83a7a", fg: "#ffe53a", font: "900 330px 'Inter Display', sans-serif" });
-const wagen = O.werkstattwagen({ farbe: "#1a1a22", kasten: "#141418", schrift: "#7aff5a", text: "SCHATTENFÄNGER" }); Wt.scene.add(wagen); wagen.visible = false;
+const wagen = O.werkstattwagen({ farbe: "#1a1a22", kasten: "#141418", schrift: "#7aff5a", text: B.T({ de: "SCHATTENFÄNGER", en: "SHADOW CATCHER" }) }); Wt.scene.add(wagen); wagen.visible = false;
 const klingel = Al.leinwand(1.1, 1.6, { px: 512, leuchtet: true, hell: 1.1 }); Wt.scene.add(klingel); klingel.visible = false;
 klingel.userData.zeichne((x, w, h) => { x.fillStyle = "#c8ccd4"; x.fillRect(0, 0, w, h); x.fillStyle = "#9aa0a8"; x.fillRect(14, 14, w - 28, h - 28);
   for (let i = 0; i < 4; i++) { const y = 70 + i * 170; x.fillStyle = "#f4f2ea"; x.fillRect(40, y, w - 170, 110); x.fillStyle = "#1a1a1a"; x.font = "700 58px 'Inter Display', sans-serif"; x.textAlign = "left"; x.textBaseline = "middle";
@@ -92,7 +96,7 @@ const amFenster = (ges, arme) => { ich.visible = true; ich.position.copy(ZI(0.4,
 sh(E[0] + 0.1, (t, q) => { wohnung(); kette(); const k = ease((t - wz("aufgemacht", 0) + 0.4) / 0.6); amFenster("staunen", 0.3 + 2.3 * k); alle(t, { einzug: true });
   kamera.fahrt(q, ZI(3.0, 3.6, -0.5), ZI(2.8, 3.7, -0.9), FENSTER(-0.4, 3.2, -1), FENSTER(-0.4, 3.4, -1), 58); licht(0.45, "#ffb060", 0.6, "#a080ff"); });
 // ===== 1 Einer nach dem anderen kommen sie rein (Zähler zählt mit)
-const zaehler = (t) => { const n = PLATZ.reduce((s2, _, k) => s2 + (t >= EIN(k) + 0.55 ? 1 : 0), 0); if (n > 0) Z_.zaehler = { wert: n, farbe: "gelb", vorzeichen: false, einheit: " Schatten" }; };
+const zaehler = (t) => { const n = PLATZ.reduce((s2, _, k) => s2 + (t >= EIN(k) + 0.55 ? 1 : 0), 0); if (n > 0) Z_.zaehler = { wert: n, farbe: "gelb", vorzeichen: false, einheit: B.T({ de: " Schatten", en: " shadows" }) }; };
 const daneben = (ges) => { ich.visible = true; ich.position.copy(ZI(1.3, 0, -0.9)); ich.rotation.y = RZ + Math.PI - 0.5; Fg.pose(ich, { ges, armL: 0.5, armR: 0.5, kopfNeig: -0.1 }); };
 sh(E[1] + 0.1, (t, q) => { wohnung(); kette(); daneben("staunen"); alle(t, { einzug: true }); zaehler(t);
   kamera.fahrt(q, ZI(4.4, 6.4, 4.8), ZI(3.8, 6.0, 4.2), ZI(-0.6, 2.6, -3.2), ZI(-0.6, 2.4, -2.6), 60); licht(0.45, "#ffb060", 0.6, "#a080ff"); wisch(t, 1); });
@@ -125,7 +129,7 @@ sh(E[6] + 0.1, (t, q) => { kueche(t, "staunen", { kopfNeig: 0.25 });
 const T_RUELPS = wz("gerülpst", 7);
 sh(E[7] + 0.2, (t, q) => { kueche(t, "staunen", { kopfNeig: 0.3, x: 4.9, dreh: 0.15 }); const p = loc(KU, 4.5, 2.8, -4.2); const b = Math.max(0, Math.sin((t - T_RUELPS) * 10)) * (t > T_RUELPS && t < T_RUELPS + 0.32 ? 1 : 0);
   B.schatten(2, p.x, p.z, 0, { y: p.y + b * 0.15, g: 0.32 * (1 + b * 0.15), kriech: 0.1, augen: t > T_RUELPS && t < T_RUELPS + 0.5 ? 0.25 : 1 });
-  if (t > T_RUELPS - 0.05 && t < T_RUELPS + 1.4) Al.kopfzahl(V(p.x - 0.3, p.y + 1.35, p.z + 0.4), "RÜLPS!", { farbe: "#ffe53a", groesse: 0.42 });
+  if (t > T_RUELPS - 0.05 && t < T_RUELPS + 1.4) Al.kopfzahl(V(p.x - 0.3, p.y + 1.35, p.z + 0.4), B.T({ de: "RÜLPS!", en: "BURP!" }), { farbe: "#ffe53a", groesse: 0.42 });
   kamera.fahrt(q, loc(KU, 2.6, 4.1, -0.6), loc(KU, 2.9, 3.9, -1.1), p.clone().add(V(0, 0.35, 0)), p.clone().add(V(0, 0.35, 0)), 48); licht(0.6, "#e8f4ff", 0.4, "#e0f0ff"); wisch(t, 7); });
 // ===== 8 08:00 – Papa will den Helm aufsetzen: drei sitzen drin
 const T_DREI = wz("drei", 8);
@@ -195,7 +199,7 @@ sh(E[17] + 0.15, (t, q) => { party(t, { ich: "staunen", oma: "staunen", papa: "s
   kamera.fahrt(q, ZI(-0.2, 3.5, -2.9), ZI(-0.3, 3.3, -2.5), p.clone().add(V(0, 0.5, 0)), p.clone().add(V(0, 0.5, 0)), 48); licht(0.5, "#ffb060", 0.6, "#ff70c0"); wisch(t, 17); });
 // ===== 18 Dann der zweite, dann alle 44 (Zähler zählt golden mit)
 sh(E[18] + 0.2, (t, q) => { const ga = easeIO((t - T_GA) / 1.6); party(t, { gold: ga, ich: "staunen", oma: "lachen", papa: "staunen", papaArme: 0.6 }); alle(t, { gold: true, huepf: 0.2, kriech: 0.2 });
-  const n = zaehlGold(t); if (n > 0) Z_.zaehler = { wert: n, farbe: "gelb", vorzeichen: false, einheit: " leuchten" }; LEUCHT.intensity = 0;
+  const n = zaehlGold(t); if (n > 0) Z_.zaehler = { wert: n, farbe: "gelb", vorzeichen: false, einheit: B.T({ de: " leuchten", en: " glowing" }) }; LEUCHT.intensity = 0;
   kamera.fahrt(q, ZI(2.0, 7.2, -5.4), ZI(1.8, 6.8, -4.9), ZI(0.0, 1.2, 2.0), ZI(0.0, 1.4, 1.8), 66); licht(0.55 + 0.3 * ga, "#ffc060", 0.6, "#ffb040"); wisch(t, 18); });
 // ===== 19 Unser ganzes Haus strahlt wie eine riesige Laterne
 const HAUS = Wt.LOTS.filter(l => l.z > 70 && l.z < 140 && Math.abs(l.x) < 80 && l.h > 30 && l.h < 90 && !l.aufsatz).sort((a, b) => Math.abs(a.x) - Math.abs(b.x))[0];
@@ -232,5 +236,6 @@ B.start({
   grund: (t) => { kuehl.visible = false; KU.kuehl.forEach(m => m.visible = true); helm.visible = false; uhr.visible = false; banner.visible = false; wagen.visible = false; klingel.visible = false; tuerHaus.visible = false;
     Rq.ZIMMER.lichterkette.visible = false; Rq.ZIMMER.weckerG.visible = Rq.ZIMMER.anzeige.visible = true; Rq.ZIMMER.mond.color.set("#8aa8ff"); ST.kuchen.visible = ST.teller.visible = true;
     Rq.konfettiSetzen(t, false); Rq.konfettiW.position.set(0, 0, 0); Rq.konfettiW.scale.set(1, 1, 1); fassade.userData.setze(0); LEUCHT.intensity = 0; Wt.U.uAus.value = 1e6; },
-  frage: { zeile: 23, text: "Was soll ich tun?", karten: [["A", "🚪", "Die Tür zuhalten", "tür"], ["B", "🏠", "Übers Dach fliehen", "dach"], ["C", "🔓", "Aufmachen", "aufmachen"]] },
+  frage: B.SPRACHE === "en" ? { zeile: 23, text: "What should I do?", karten: [["A", "🚪", "Hold the door shut", "door"], ["B", "🏠", "Escape over the roof", "roof"], ["C", "🔓", "Open it", "open"]] }
+    : { zeile: 23, text: "Was soll ich tun?", karten: [["A", "🚪", "Die Tür zuhalten", "tür"], ["B", "🏠", "Übers Dach fliehen", "dach"], ["C", "🔓", "Aufmachen", "aufmachen"]] },
 });
