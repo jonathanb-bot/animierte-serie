@@ -2364,6 +2364,12 @@
    "bild_s": 88.77,
    "ton_s": 88.79,
    "lufs": -19.2
+  },
+  "taeglich/nische-n005-en.mp4": {
+   "ok": true,
+   "bild_s": 68.68,
+   "ton_s": 68.71,
+   "lufs": -17.0
   }
  },
  "serien": {
@@ -2672,6 +2678,10 @@
   "block-b03k": {
    "titel": "Ich habe Krümel zu seiner Mama gebracht",
    "datei": "taeglich/block-b03k.mp4"
+  },
+  "nische-n005-en": {
+   "titel": "You're Twelve Again",
+   "datei": "taeglich/nische-n005-en.mp4"
   }
  },
  "taeglich_staffeln": {
