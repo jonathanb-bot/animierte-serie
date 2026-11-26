@@ -10597,5 +10597,15 @@
   "konto": "sto.rys4you",
   "http": 201,
   "am": "2026-11-26T10:46:43.988Z"
+ },
+ "taeglich-yt-b04k": {
+  "ok": true,
+  "zeit": "2026-11-26T17:01:00",
+  "zernioId": "6b080f4096d09c085ae5f0dc",
+  "yt": true,
+  "k": 1,
+  "konto": "storys4youytube",
+  "http": 201,
+  "am": "2026-11-26T10:51:45.802Z"
  }
 }
