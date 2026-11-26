@@ -1,5 +1,5 @@
 Verbundene Konten: tiktok:storys4you.de1, instagram:sto.rys4you, tiktok:storys4you_eng (2. Zernio-Konto), youtube:storys4youytube (2. Zernio-Konto), youtube:storys4you_eng (3. Zernio-Konto), instagram:sory4you_eng (3. Zernio-Konto)
 Hauptkonto: Antwort-Felder data, pagination, meta; 100 Posts
-2. Zernio-Konto: Antwort-Felder data, pagination, meta; 48 Posts
+2. Zernio-Konto: Antwort-Felder data, pagination, meta; 50 Posts
 3. Zernio-Konto: Antwort-Felder data, pagination, meta; 100 Posts
-120 Posts mit Kommentaren, 1930 Kommentare geladen, 0 Fehler
+131 Posts mit Kommentaren, 1954 Kommentare geladen, 0 Fehler
