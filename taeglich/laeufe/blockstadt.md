@@ -1,4 +1,22 @@
-# Lauf „Blockstadt“: täglich 1 Folge mit Mitmach-Frage (07:07, neuer Chat)
+# Lauf „Blockstadt“: täglich 1 eigenständige Folge „In meiner Stadt …“ (07:07, neuer Chat)
+
+> **NEU (Jonathan 26.11., Issue #45) – gilt vor allem, was weiter unten steht:**
+> - **Keine fortlaufende Serie mehr** („keine Folge 4“). Jede Folge ist **eigenständig** und hat eine **neue verrückte Regel der Stadt**,
+>   z. B. „In meiner Stadt bekommst du Geld fürs Schlafen“, „… Geld, wenn dich jemand anlügt“, „… kein Geld fürs Arbeiten“.
+>   Erster Satz = die Regel (Hook), danach Folgen der Regel, Eskalation, Wendung/Pointe am Ende (wie Vorrat 04/05).
+> - **Keine Mitmach-Frage A/B/C mehr, kein Top-Kommentar, keine Abstimmung** (Schritt 4 entfällt). Eine einfache Kommentar-Frage
+>   im Beschreibungstext ist erlaubt („Welche Regel soll meine Stadt als Nächstes haben?“).
+> - Jeden Tag eine **andere Regel und eine andere Welt/Kulisse**, nie eine Regel wiederholen: vorher `taeglich/verlauf.json`
+>   (art „blockstadt“) und `block/vorrat-*/zeilen.py` durchsehen und die neue Regel unten in „Benutzte Regeln“ eintragen.
+> - **Nur noch 3D-Videos.** Die Nischen-Videos „Was wäre, wenn du …“ / „So baust du …“ (alter 2D-Stil) sind eingestellt.
+>   Die englischen Konten bekommen deshalb täglich die englische Blockstadt-Folge (Abschnitt „Englische Blockstadt“ unten).
+> - Fester Hintergrundsound (Issue #44), Stimme Puck unbearbeitet (Issue #41), 1440p rendern, kein Wackeln, kein Flackern.
+> - Ist eine fertige eigenständige Folge im Vorrat (`block/vorrat-*`, status „vorrat“ in `verlauf.json`), darf sie bei Zeitnot
+>   eingeplant werden; Vorrat-Folgen mit A/B/C-Frage am Ende nur nach Kürzen der Frage (YouTube-/plan-Schnitt über `zusammen(..., ohne=…)`).
+>
+> **Benutzte Regeln:** Lügen-Zahl über dem Kopf (v01), Geld fürs Schlafen (v02), gute Tat = Stern (v03), angelogen werden = +100 $ (v04), Grill-Rakete (v05, Random) – hier ergänzen
+
+## Alte Fassung (bis 25.11., nur noch als Werkzeug-Referenz)
 
 Jonathans Auftrag vom 22./23.11.: Auf den deutschen Kanälen erscheint jeden Tag 1 Folge der Blockstadt-Serie, auf TikTok, Instagram und YouTube.
 - **Ende jeder Folge:** eine offene Frage mit 3 Antworten (A/B/C). Die Zuschauer schreiben ihre Wahl in die Kommentare.
