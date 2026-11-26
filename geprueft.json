@@ -2382,6 +2382,12 @@
    "bild_s": 85.83,
    "ton_s": 85.82,
    "lufs": -19.1
+  },
+  "taeglich/block-b04-en.mp4": {
+   "ok": true,
+   "bild_s": 86.15,
+   "ton_s": 86.14,
+   "lufs": -18.1
   }
  },
  "serien": {
@@ -2702,6 +2708,10 @@
   "block-b04k": {
    "titel": "Ich habe alle 44 Schatten reingelassen",
    "datei": "taeglich/block-b04k.mp4"
+  },
+  "block-b04-en": {
+   "titel": "I let all 44 shadows in",
+   "datei": "taeglich/block-b04-en.mp4"
   }
  },
  "taeglich_staffeln": {
