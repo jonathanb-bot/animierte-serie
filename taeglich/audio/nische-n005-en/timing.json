@@ -1,0 +1,167 @@
+{
+ "dauer": 69.324,
+ "einstellungen": [
+  {
+   "nr": 1,
+   "typ": "zimmer",
+   "kapitel": 1,
+   "start": 0.0,
+   "dauer": 4.814,
+   "emotion": "erzaehlend",
+   "text": "Your alarm goes off, and you're twelve again. With everything you know today."
+  },
+  {
+   "nr": 2,
+   "typ": "handy",
+   "kapitel": 1,
+   "start": 4.814,
+   "dauer": 5.918,
+   "emotion": "erzaehlend",
+   "text": "Your old phone. Friday. And somehow you know: at midnight, it's over."
+  },
+  {
+   "nr": 3,
+   "typ": "klassenzimmer",
+   "kapitel": 1,
+   "start": 10.732,
+   "dauer": 5.15,
+   "emotion": "erzaehlend",
+   "text": "First period, math test. You know every answer. You're done in four minutes."
+  },
+  {
+   "nr": 4,
+   "typ": "wohnzimmer",
+   "kapitel": 1,
+   "start": 15.882,
+   "dauer": 3.878,
+   "emotion": "erzaehlend",
+   "text": "You even know who wins tonight's final. Your dad bets against you."
+  },
+  {
+   "nr": 5,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 19.76,
+   "dauer": 3.95,
+   "emotion": "froh",
+   "text": "With this one day, you could get rich. You already have a plan."
+  },
+  {
+   "nr": 6,
+   "typ": "titel",
+   "kapitel": 1,
+   "start": 23.71,
+   "dauer": 4.238,
+   "emotion": "erzaehlend",
+   "text": "But after school, the doorbell rings. It's your grandpa."
+  },
+  {
+   "nr": 7,
+   "typ": "gesicht",
+   "kapitel": 1,
+   "start": 27.948,
+   "dauer": 2.246,
+   "emotion": "froh",
+   "text": "\"Want to come down to the lake?\""
+  },
+  {
+   "nr": 8,
+   "typ": "objekt",
+   "kapitel": 1,
+   "start": 30.194,
+   "dauer": 5.27,
+   "emotion": "erklaerend",
+   "text": "Back then, you said no. You wanted to play games. Three years later, he was gone."
+  },
+  {
+   "nr": 9,
+   "typ": "see",
+   "kapitel": 2,
+   "start": 35.464,
+   "dauer": 2.006,
+   "emotion": "erzaehlend",
+   "text": "This time, you say yes."
+  },
+  {
+   "nr": 10,
+   "typ": "see",
+   "kapitel": 2,
+   "start": 37.47,
+   "dauer": 5.078,
+   "emotion": "erzaehlend",
+   "text": "He shows you how to skip a flat stone. Yours sinks. His skips seven times."
+  },
+  {
+   "nr": 11,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 42.548,
+   "dauer": 4.07,
+   "emotion": "froh",
+   "text": "The test, the final, the money. You stop thinking about them."
+  },
+  {
+   "nr": 12,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 46.618,
+   "dauer": 4.454,
+   "emotion": "froh",
+   "text": "He tells you about a summer when he was twelve, too. Like he lived it twice."
+  },
+  {
+   "nr": 13,
+   "typ": "landschaft",
+   "kapitel": 2,
+   "start": 51.072,
+   "dauer": 3.494,
+   "emotion": "erzaehlend",
+   "text": "Researchers at Cornell asked people what they regret most."
+  },
+  {
+   "nr": 14,
+   "typ": "titel",
+   "kapitel": 2,
+   "start": 54.566,
+   "dauer": 3.374,
+   "emotion": "erzaehlend",
+   "text": "Three out of four regretted the things they didn't do more."
+  },
+  {
+   "nr": 15,
+   "typ": "see",
+   "kapitel": 2,
+   "start": 57.94,
+   "dauer": 2.702,
+   "emotion": "erzaehlend",
+   "text": "It gets dark. Midnight is close."
+  },
+  {
+   "nr": 16,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 60.642,
+   "dauer": 4.31,
+   "emotion": "erzaehlend",
+   "text": "Grandpa looks at you for a long time. Like he's been waiting for this day."
+  },
+  {
+   "nr": 17,
+   "typ": "gesicht",
+   "kapitel": 2,
+   "start": 64.952,
+   "dauer": 1.574,
+   "emotion": "froh",
+   "text": "\"Thank you for coming this time.\""
+  },
+  {
+   "nr": 18,
+   "typ": "see",
+   "kapitel": 2,
+   "start": 66.526,
+   "dauer": 2.798,
+   "emotion": "erzaehlend",
+   "text": "This time. So he remembers too."
+  }
+ ]
+}

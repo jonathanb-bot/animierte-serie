@@ -1,0 +1,59 @@
+# You're Twelve Again
+@musik musik/nische-n005-en.mp3
+@musik_lautstaerke 1
+@whoosh aus
+@stimmung warm
+@vortrag lebendig
+@stimme roh
+@mund zitate
+@einblenden aus
+@untertitel aus
+@qualitaet max
+@look 0
+@kino 0.35
+@stil leuchtend
+@palette orange
+@zeit morgen
+@sprache en
+// Niche idea no. 3 (praemisse). Issue #41: no @klang studio, voice untouched.
+// Source: Gilovich & Medvec, Cornell University, "The temporal pattern to the experience of regret", Journal of Personality and Social Psychology 1994 – 45 of 60 respondents (75%) regretted the things they did not do more.
+
+== Loop 1 ==
+// 0 s – Setup 1 (hook): you in your childhood bed, morning light, premise big on screen
+[zimmer im_bett=du zeit=morgen lichterkette palette=orange zoom-rein hooktext="YOU'RE 12 AGAIN"] Your alarm goes off, and you're twelve again. With everything you know today.
+// 5 s – Setup 1: proof + time pressure, old phone with the date
+[handy ort=zimmer zeit=morgen palette=orange netz=3 akku=100 uhrzeit="6:47" von="Alarm" nachricht="Friday, May 14" zoom-rein ein="midnight>UNTIL 12:00 AM>uhr" ein_y=430] Your old phone. Friday. And somehow you know: at midnight, it's over.
+// 10 s – Big question 1: first consequence – you know every answer
+[klassenzimmer du lehrerin tafel="MATH TEST|Questions 1–6" uhr="08:15" palette=tuerkis schwenk-rechts ein="answer>EVERY ANSWER>auge" ein_y=860] First period, math test. You know every answer. You're done in four minutes.
+// 13 s – Big question 1: second consequence – you know who wins the final
+[wohnzimmer papa du tv zeit=abend licht=an palette=orange zoom-rein ein="final>FINAL: 2–1>geld" ein_y=430] You even know who wins tonight's final. Your dad bets against you.
+// 17 s – Big question 1 set up: obvious answer A – get rich
+[gesicht du ort=klassenzimmer froh palette=tuerkis zoom-rein] With this one day, you could get rich. You already have a plan.
+// 20 s – Twist 1: the doorbell, Grandpa – the most important thing you know isn't money
+[titel oben="At the door" gross="GRANDPA" unten="he's still alive" farbe=#3a2414 akzent=#ffb45e groesse=190 hud=false palette=orange zoom-rein ton=hit] But after school, the doorbell rings. It's your grandpa.
+// 24 s – Rehook: Grandpa's question (character voice)
+[gesicht opa ort=wohnzimmer froh palette=orange figurstimme=mann_alt sprecher=opa zoom-rein] "Want to come down to the lake?"
+// 26 s – Rehook: back then you said no – the bigger question
+[objekt objekte="uhr:Back then|herz:Grandpa" gross="NO" palette=orange zoom-rein ein="no>BACK THEN: NO>uhr" ein_y=1500] Back then, you said no. You wanted to play games. Three years later, he was gone.
+
+== Loop 2 ==
+// 31 s – Setup 2: this time you say yes – wow shot, lake at sunset
+[see du opa sitzen zeit=abend palette=orange zoom-raus] This time, you say yes.
+// 33 s – Setup 2: warm moment, skipping stones
+[see du opa zeit=abend palette=orange schwenk-rechts ein="seven>#7 SKIPS>herz" ein_y=430] He shows you how to skip a flat stone. Yours sinks. His skips seven times.
+// 37 s – Setup 2: test, final, money – forgotten
+[gesicht du ort=see zeit=abend froh palette=orange zoom-rein] The test, the final, the money. You stop thinking about them.
+// 39 s – Setup 2: Grandpa talks about when he was twelve (fair hint for twist 2)
+[gesicht opa ort=see zeit=abend froh palette=orange zoom-rein] He tells you about a summer when he was twelve, too. Like he lived it twice.
+// 41 s – Big question 2: real fact, Cornell study
+[landschaft zeit=abend see palette=rosa schwenk-links ein="Cornell>CORNELL, 1994>auge" ein_y=470] Researchers at Cornell asked people what they regret most.
+// 45 s – Big question 2: the number big
+[titel oben="Study · Cornell 1994" gross="3 IN 4" unten="regret what they didn't do" farbe=#3a1f2e akzent=#ff9ec4 groesse=200 hud=false palette=rosa zoom-rein] Three out of four regretted the things they didn't do more.
+// 50 s – Big question 2: escalation – the time pressure returns
+[see du opa sitzen zeit=nacht gluehwuermchen palette=lila zoom-rein ein="midnight>11:58 PM>uhr" ein_y=430] It gets dark. Midnight is close.
+// 53 s – Setup for twist 2: Grandpa looks at you as if he'd been waiting
+[gesicht du ort=see zeit=nacht palette=lila zoom-rein] Grandpa looks at you for a long time. Like he's been waiting for this day.
+// 57 s – Twist 2: Grandpa's line flips the premise (character voice)
+[gesicht opa ort=see zeit=nacht froh palette=lila figurstimme=mann_alt sprecher=opa zoom-rein] "Thank you for coming this time."
+// 60 s – Twist 2 = hard ending: final shot, dock at night, keyword THIS TIME
+[see du opa sitzen zeit=nacht gluehwuermchen palette=lila zoom-raus ein="This>THIS TIME>herz" ein_y=330] This time. So he remembers too.
