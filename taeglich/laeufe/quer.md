@@ -8,10 +8,6 @@
 Arbeite selbstständig und ohne Rückfragen, auf Deutsch. Qualität vor Quantität (#30). Verbindlich: `quer/FORMAT-3D.md`,
 `quer/FORMAT.md` (Geschichte: Hook, Wendungen, Kapitel), `block/README.md` + `block/KATALOG.md` (Bibliothek, Regeln), Plan `quer/folgen.json`.
 
-> **SPERRE BIS ZUM TESTERFOLG (27.11.):** Nur weitermachen, wenn das Release `quer-test` die Datei `quer-test.mp4` hat
-> (`gh api repos/jonathanb-bot/animierte-serie/releases/tags/quer-test --jq '.assets[].name'`). Sonst PushNotification
-> „Querformat: 3D-Test noch nicht fertig“ und Ende. (Diese Sperre wird nach dem erfolgreichen Test entfernt.)
-
 ## Welcher Tag?
 
 1. **Repo vorbereiten:** `cd /home/user/animierte-serie && git fetch origin taeglich main && git checkout -B taeglich origin/taeglich`,
