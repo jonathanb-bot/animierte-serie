@@ -1,0 +1,136 @@
+name: Querformat 3D rendern (lange Videos, Blockstadt-Stil)
+
+# Lange Querformat-Videos im 3D-Stil der Blockstadt (Jonathan 24.11., quer/FORMAT-3D.md): 2560×1440, 60 fps.
+# Ein Bild braucht im Software-Renderer ca. 6 s, darum wird in Stücken (Standard 30 s = 1800 Bilder ≈ 3 h) auf bis zu
+# 20 Rechnern parallel gerendert. Jedes Stück wird entflackert (block/entflackern.py) und gleich kodiert, danach werden die
+# Stücke ohne Neukodierung zusammengesetzt und die fertige Tonspur (block/<folge>/ton.m4a bzw. en/ton.m4a, schon auf −14 LUFS,
+# Stimme unbearbeitet nach Issue #41) ohne Neukodierung darunter gelegt. Ablage als GitHub-Release `<folge>` bzw. `<folge>-en`.
+on:
+  workflow_dispatch:
+    inputs:
+      folge:
+        description: "Ordner in block/, z. B. quer-q03"
+        required: true
+      sprache:
+        description: "de oder en"
+        required: false
+        default: "de"
+      ref:
+        description: "Branch mit Szene, Zeitplan und Ton"
+        required: false
+        default: "taeglich"
+      stueck:
+        description: "Sekunden pro Stück"
+        required: false
+        default: "30"
+
+permissions:
+  contents: write
+
+env:
+  F: ${{ github.event.inputs.folge }}
+  EN: ${{ github.event.inputs.sprache == 'en' && 'en/' || '' }}
+  NAME: ${{ github.event.inputs.folge }}${{ github.event.inputs.sprache == 'en' && '-en' || '' }}
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      liste: ${{ steps.p.outputs.liste }}
+      bilder: ${{ steps.p.outputs.bilder }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.inputs.ref }}
+      - id: p
+        run: |
+          set -eo pipefail
+          test -f "block/$F/${EN}plan_final.json" || { echo "block/$F/${EN}plan_final.json fehlt"; exit 1; }
+          test -f "block/$F/${EN}ton.m4a" || { echo "block/$F/${EN}ton.m4a fehlt (python3 block/lang.py block/$F --ton)"; exit 1; }
+          test -f "block/$F/szene.js" || { echo "block/$F/szene.js fehlt"; exit 1; }
+          # Länge wie folge.js: Ende der letzten Zeile + 1,6 s, 60 fps
+          n=$(python3 -c "import json; z=json.load(open('block/$F/${EN}plan_final.json'))['zeilen'][-1]; print(round((z['start']+z['dauer']+1.6)*60))")
+          k=$(python3 -c "import math; print(math.ceil($n / (${{ github.event.inputs.stueck }} * 60)))")
+          echo "bilder=$n" >> "$GITHUB_OUTPUT"
+          echo "liste=$(python3 -c "import json; print(json.dumps(list(range($k))))")" >> "$GITHUB_OUTPUT"
+          echo "$NAME: $n Bilder ($(python3 -c "print(round($n/60/60, 2))") min), $k Stücke"
+
+  rendern:
+    needs: plan
+    runs-on: ubuntu-latest
+    timeout-minutes: 345
+    strategy:
+      fail-fast: true
+      max-parallel: 20
+      matrix:
+        i: ${{ fromJson(needs.plan.outputs.liste) }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.inputs.ref }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Werkzeuge und Schriften installieren
+        run: |
+          set -eo pipefail
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg fonts-inter fonts-noto-color-emoji fonts-dejavu-core python3-numpy python3-pil
+          if ! fc-list | grep -q "Inter Display"; then
+            # Ubuntu-Paket ohne „Inter Display“ → Schrift direkt von der Inter-Seite (rsms/inter, v4.0)
+            curl -sSL -o inter.zip https://github.com/rsms/inter/releases/download/v4.0/Inter-4.0.zip
+            mkdir -p ~/.local/share/fonts/inter && unzip -q -o inter.zip "extras/otf/*" -d inter && cp inter/extras/otf/*.otf ~/.local/share/fonts/inter/ && fc-cache -f
+          fi
+          fc-list | grep -q "Inter Display" || { echo "Schrift Inter Display fehlt"; exit 1; }
+          npm ci --ignore-scripts --no-audit --no-fund
+          (cd block && npm ci --ignore-scripts --no-audit --no-fund)
+          npx playwright install --with-deps chromium
+      - name: Stück rendern (2560×1440, 60 fps)
+        run: |
+          set -eo pipefail
+          S=$(( ${{ github.event.inputs.stueck }} * 60 )); VON=$(( ${{ matrix.i }} * S )); BIS=$(( VON + S )); N=${{ needs.plan.outputs.bilder }}
+          [ $BIS -gt $N ] && BIS=$N
+          echo "Bilder $VON bis $BIS"
+          FOLGE=$F FORMAT=quer SKALA=2 VON=$VON BIS=$BIS ORDNER=frames PLAN=${EN}plan_final.json SPRACHE=${{ github.event.inputs.sprache }} \
+            node block/render.cjs 2>&1 | sed "/^\[seite\]/d"
+          test "$(ls block/$F/frames | wc -l)" -eq $(( BIS - VON )) || { echo "Bilder fehlen"; exit 1; }
+          python3 block/entflackern.py "block/$F/frames"
+          mkdir -p stueck
+          ffmpeg -y -v error -framerate 60 -start_number $VON -i "block/$F/frames/%05d.jpg" -frames:v $(( BIS - VON )) \
+            -c:v libx264 -preset slow -crf 17 -maxrate 24M -bufsize 48M -pix_fmt yuv420p -r 60 -g 120 \
+            "stueck/$(printf %03d ${{ matrix.i }}).mp4"
+          ffprobe -v error -show_entries stream=width,height,nb_frames -of compact "stueck/$(printf %03d ${{ matrix.i }}).mp4"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: stueck-${{ matrix.i }}
+          path: stueck/
+          retention-days: 3
+
+  zusammen:
+    needs: [plan, rendern]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.inputs.ref }}
+      - uses: actions/download-artifact@v4
+        with:
+          path: stuecke
+          pattern: stueck-*
+          merge-multiple: true
+      - name: Zusammensetzen und Ton darunterlegen
+        run: |
+          set -eo pipefail
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+          ls stuecke | sort | sed "s|^|file '$PWD/stuecke/|; s|$|'|" > liste.txt
+          ffmpeg -y -v error -f concat -safe 0 -i liste.txt -i "block/$F/${EN}ton.m4a" -map 0:v -map 1:a -c copy -shortest -movflags +faststart "$NAME.mp4"
+          ffprobe -v error -show_entries stream=codec_type,width,height,r_frame_rate,nb_frames,duration -show_entries format=duration,size -of compact "$NAME.mp4" | tee info.txt
+          # Erstes Bild nie schwarz (Jonathans Vorgabe 6.11.)
+          ffmpeg -v error -y -i "$NAME.mp4" -frames:v 1 -vf scale=64:36 -f rawvideo -pix_fmt gray erstes.raw
+          python3 -c "d=open('erstes.raw','rb').read(); h=sum(d)/len(d); print('Helligkeit erstes Bild', round(h,1)); exit(1 if h < 12 else 0)"
+      - name: Als Release ablegen
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release view "$NAME" >/dev/null 2>&1 || gh release create "$NAME" --title "$NAME (Querformat 3D)" --notes "Langes Querformat-Video im 3D-Stil, gerendert aus block/$F (${{ github.event.inputs.sprache }}), quer/FORMAT-3D.md." --target main
+          gh release upload "$NAME" "$NAME.mp4" info.txt --clobber
+          echo "https://github.com/${{ github.repository }}/releases/download/$NAME/$NAME.mp4"
