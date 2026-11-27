@@ -677,15 +677,15 @@ sh(E[125] + 0.1, (t, q) => { zimmerNacht(1); tuer.oeffne(1); tuer.licht.intensit
   kamera.fahrt(q, k.clone().add(V(0, 0.4, 0)).addScaledVector(V(Math.sin(RZ + 0.6), 0, Math.cos(RZ + 0.6)), -5.2), k.clone().add(V(0, 0.8, 0)).addScaledVector(V(Math.sin(RZ + 0.6), 0, Math.cos(RZ + 0.6)), -4.4), k.clone().add(V(0, 1.4, 0)), k.clone().add(V(0, 1.8, 0)), 44); licht(0.4, "#ffb060", 0.6, "#ffd8a0"); wisch(t, 125); });
 // 126 Und genau da mache ich die Augen auf
 sh(E[126] + 0.2, (t, q) => { zimmerNacht(1); tuer.oeffne(1); tuer.licht.intensity = 5; bettNacht(t > wz("augen", 126) ? "staunen" : "schlaf"); zahl(ichPyj, 1); papaAmBett(t, "froh"); const kp = bettKopf();
-  kamera.fahrt(q, ZI(-4.7, 3.3, 2.2), ZI(-4.6, 3.3, 2.5), kp.clone().add(V(0, 0.55, 0)), kp.clone().add(V(0, 0.6, 0)), 42); licht(0.4, "#ffb060", 0.6, "#ffd8a0"); wisch(t, 126); });
+  papa.visible = false; kamera.fahrt(q, ZI(-3.9, 6.0, 2.4), ZI(-3.8, 5.7, 2.7), kp.clone().add(V(0, 0.3, 0)), kp.clone().add(V(0, 0.3, 0)), 44); licht(0.4, "#ffb060", 0.6, "#ffd8a0"); wisch(t, 126); });
 // 127 Papa guckt, als hätte er ein Gespenst gesehen
 sh(E[127] + 0.1, (t, q) => { zimmerNacht(1); tuer.oeffne(1); tuer.licht.intensity = 5; bettNacht("froh"); papaAmBett(t, "staunen", { pose: { kopfNeig: 0.2 } }); nah(q, papa, 4.6, -0.7, -0.4, 42); licht(0.4, "#ffb060", 0.6, "#ffd8a0"); wisch(t, 127); });
 // 128 Ich hatte nur noch ein einziges Wort
 sh(E[128] + 0.3, (t, q) => { zimmerNacht(1); tuer.oeffne(1); tuer.licht.intensity = 5; bettNacht("froh"); zahl(ichPyj, 1, 0.9); papaAmBett(t, "staunen"); const kp = bettKopf();
-  kamera.fahrt(q, ZI(-4.7, 3.3, 2.2), ZI(-4.6, 3.3, 2.5), kp.clone().add(V(0, 0.55, 0)), kp.clone().add(V(0, 0.6, 0)), 42); licht(0.4, "#ffb060", 0.6, "#ffd8a0"); wisch(t, 128); });
+  papa.visible = false; kamera.fahrt(q, ZI(-3.9, 6.0, 2.4), ZI(-3.8, 5.7, 2.7), kp.clone().add(V(0, 0.3, 0)), kp.clone().add(V(0, 0.3, 0)), 44); licht(0.4, "#ffb060", 0.6, "#ffd8a0"); wisch(t, 128); });
 // 129 „Auch.“ (1 → 0)
 sh(E[129] + 0.4, (t, q) => { zimmerNacht(1); tuer.oeffne(1); tuer.licht.intensity = 5; bettNacht(Fg.mund(t) === "reden" ? "reden" : "lachen"); zahl(ichPyj, ichZahl(t), 0.9); papaAmBett(t, "staunen"); const kp = bettKopf();
-  kamera.fahrt(q, ZI(-4.7, 3.3, 2.2), ZI(-4.6, 3.3, 2.5), kp.clone().add(V(0, 0.55, 0)), kp.clone().add(V(0, 0.6, 0)), 40); licht(0.4, "#ffb060", 0.6, "#ffd8a0"); wisch(t, 129); });
+  papa.visible = false; kamera.fahrt(q, ZI(-3.9, 6.0, 2.4), ZI(-3.8, 5.7, 2.7), kp.clone().add(V(0, 0.3, 0)), kp.clone().add(V(0, 0.3, 0)), 44); licht(0.4, "#ffb060", 0.6, "#ffd8a0"); wisch(t, 129); });
 // 130 Papa sagt nichts, er kann ja nicht mehr
 sh(E[130] + 0.1, (t, q) => { zimmerNacht(1); tuer.oeffne(1); tuer.licht.intensity = 5; bettNacht("lachen"); zahl(ichPyj, 0); papaAmBett(t, Math.sin(t * 5) > 0 ? "staunen" : "ernst"); nah(q, papa, 4.4, 0.6, -0.3, 42); licht(0.4, "#ffb060", 0.6, "#ffd8a0"); wisch(t, 130); });
 // 131 Nasse Augen, die festeste Umarmung (ich sitze auf, Papa beugt sich zu mir)
@@ -715,7 +715,7 @@ sh(E[137] + 0.1, (t, q) => { zimmerNacht(1); tuer.oeffne(1); tuer.licht.intensit
   kamera.fahrt(q, ZI(2.4, 5.6, 5.0), ZI(2.1, 5.4, 4.6), ZI(-1.1, 3.9, 2.4), ZI(-1.1, 3.9, 2.6), 56); licht(0.4, "#ffb060", 0.6, "#ffd8a0"); wisch(t, 137); });
 // 138 Man braucht gar keine hundert Wörter (nah, ich lächle)
 sh(E[138] + 0.1, (t, q) => { zimmerNacht(1); tuer.oeffne(1); tuer.licht.intensity = 5; Rq.weckerZeichnen("23:59", true); bettNacht("froh"); zahl(ichPyj, 3); papaAmBett(t, "froh"); const kp = bettKopf();
-  kamera.fahrt(q, ZI(-4.7, 3.3, 2.2), ZI(-4.6, 3.3, 2.5), kp.clone().add(V(0, 0.55, 0)), kp.clone().add(V(0, 0.6, 0)), 42); licht(0.4, "#ffb060", 0.6, "#ffd8a0"); wisch(t, 138); });
+  papa.visible = false; kamera.fahrt(q, ZI(-3.9, 6.0, 2.4), ZI(-3.8, 5.7, 2.7), kp.clone().add(V(0, 0.3, 0)), kp.clone().add(V(0, 0.3, 0)), 44); licht(0.4, "#ffb060", 0.6, "#ffd8a0"); wisch(t, 138); });
 // 139 Manchmal reicht ein einziges (Kamera fährt zurück zum Fenster, Kirchturm und Mond)
 sh(DAUER + 1, (t, q) => { zimmerNacht(1); tuer.oeffne(1); tuer.licht.intensity = 5; turm.licht.intensity = 22; Rq.weckerZeichnen("23:59", true); bettNacht("froh"); zahl(ichPyj, 3); papaAmBett(t, "froh");
   kamera.fahrt(q, ZI(-4.6, 5.2, -1.6), ZI(-4.4, 6.8, -4.6), ZI(-1.6, 2.8, 3.0), ZI(-1.4, 3.2, 2.6), 54); licht(0.4, "#ffb060", 0.6, "#ffd8a0"); Z_.vignette = 0.45; });
