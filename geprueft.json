@@ -2400,6 +2400,12 @@
    "bild_s": 68.55,
    "ton_s": 68.56,
    "lufs": -21.5
+  },
+  "taeglich/block-v04-en.mp4": {
+   "ok": true,
+   "bild_s": 70.02,
+   "ton_s": 70.02,
+   "lufs": -20.2
   }
  },
  "serien": {
@@ -2732,6 +2738,10 @@
   "block-v04": {
    "titel": "In meiner Stadt bekommst du hundert Dollar, wenn dich jemand anlügt",
    "datei": "taeglich/block-v04.mp4"
+  },
+  "block-v04-en": {
+   "titel": "In my town, you get 100 dollars every time someone lies to you",
+   "datei": "taeglich/block-v04-en.mp4"
   }
  },
  "taeglich_staffeln": {
