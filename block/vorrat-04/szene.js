@@ -4,7 +4,10 @@
 import * as B from "../folge.js";
 import * as O from "../objekte.js";
 const { V, sh, blick, licht, kamera, Fg, Al, Rq, Wt, Z_, THREE } = B;
-await B.laden(); const { Z, E, DAUER, wz } = B.F;
+await B.laden(); const { Z, E, DAUER } = B.F;
+// Englische Fassung (?sprache=en, 27.11.): deutsche Stichwörter → englische Wörter derselben Zeile
+const EN = { hundert: "hundred", "fünfhundert": "five", plus: "plus", minus: "minus", zehntausend: "ten" };
+const wz = (w, i) => B.F.wz(B.SPRACHE === "en" ? (EN[w] ?? w) : w, i);
 
 const S = { struktur: true };
 const ich = Fg.figur({ haut: "#f0c8a0", hemd: "#e8a020", hose: "#2a3a5a", haare: "#5a3418", frisur: "strubbel", kapuze: true, skala: 0.78, schuhe: "#e8e8e8", ...S });
@@ -67,7 +70,7 @@ sh(E[4] + 0.06, (t, q) => { const R = Al.STUBE; Al.raumlicht(R, 9); oma.visible 
   konto(t > wz("plus", 4) ? 200 : 100); plus(wz("plus", 4));
   kamera.fahrt(q, loc(R, 0.4, 4.6, 3.6), loc(R, 0.7, 4.3, 2.8), loc(R, 1.2, 2.9, -3.4), loc(R, 1.2, 2.9, -3.4), 50); licht(0.6, "#ffe8d0", 0.4, "#f0d0ff"); wisch(t, 4); });
 // 5 Lehrer: „Der Test wird ganz leicht“ → +100 über allen Kindern
-const klasse = (t, plusAlle) => { const R = Al.KLASSE; Al.raumlicht(R); Al.schreibe(R.tafel, ["TEST", "SEITE 1 – 40"], { kreide: true, font: "700 170px 'Inter Display', sans-serif" });
+const klasse = (t, plusAlle) => { const R = Al.KLASSE; Al.raumlicht(R); Al.schreibe(R.tafel, [B.T({ de: "TEST", en: "TEST" }), B.T({ de: "SEITE 1 – 40", en: "PAGE 1 – 40" })], { kreide: true, font: "700 170px 'Inter Display', sans-serif" });
   lehrer.visible = true; lehrer.position.copy(loc(R, -2.6, 0, -5.2)); lehrer.rotation.y = 0.25; Fg.pose(lehrer, { ges: Fg.mund(t) === "reden" ? "lachen" : "froh", armR: 1.6 });
   const sitzen = (f, p) => { f.visible = true; f.position.set(R.plaetze[p].x, -0.05, R.plaetze[p].z - 0.2); f.rotation.y = Math.PI; Fg.pose(f, { sitz: 1, ges: plusAlle ? "staunen" : "froh" }); if (plusAlle) Al.kopfzahl(f, "+100 $", { farbe: "#4ef07a", groesse: 0.7 }); };
   sitzen(ich, 3); sitzen(freund, 0); sitzen(k2, 5); sitzen(k3, 4); };
@@ -119,9 +122,9 @@ sh(E[19] + 0.15, (t, q) => { tuer(t, "angst", "froh"); const tp = wz("plus", 19)
 sh(E[20] + 0.4, (t, q) => { tuer(t, "traurig", "froh"); konto(10200); nah(q, ich, 5.6, 0.7); licht(1.1, "#ffd8a0", 0.6, "#8aa0ff"); Z_.vignette = 0.55; wisch(t, 20); });
 // 21–23 Mitmach-Frage: er geht mit dem Koffer die Straße hinunter, ich an der Tür
 sh(DAUER + 1, (t, q) => { nacht(); ich.visible = true; ich.position.copy(HT(0, 0.05, 5.4)); ich.rotation.y = 0.3; Fg.pose(ich, { ges: "traurig" });
-  const w = Math.min(1, Math.max(0, (t - Z[21]) / 7)); freund.visible = true; freund.position.copy(HT(2 + w * 10, 0.05, 11 + w * 5)); freund.rotation.y = 1.1; Fg.pose(freund, { lauf: 0.7, phase: t * 5, ges: "ernst" });
+  const w = Math.min(1, Math.max(0, (t - (Z[21] ?? E[20])) / 7)); freund.visible = true; freund.position.copy(HT(2 + w * 10, 0.05, 11 + w * 5)); freund.rotation.y = 1.1; Fg.pose(freund, { lauf: 0.7, phase: t * 5, ges: "ernst" });
   freund.updateMatrixWorld(true); koffer.visible = true; koffer.position.copy(freund.localToWorld(V(1.4, 0, -0.4))); koffer.rotation.y = freund.rotation.y;
   kamera.fahrt(q, HT(-2.4, 3.6, 5.9), HT(-2.2, 3.7, 6.2), HT(5, 4.6, 13), HT(8, 4.4, 15), 56); licht(1.1, "#ffd8a0", 0.6, "#8aa0ff"); Z_.vignette = 0.5; });
 
 B.start({ grund: (t) => { bild.visible = false; kuchen.visible = false; koffer.visible = false; },
-  frage: { zeile: 21, text: "Was soll ich tun?", karten: [["A", "🤝", "Ihn festhalten", "festhalten"], ["B", "👣", "Heimlich folgen", "folgen"], ["C", "📞", "Seine Mama anrufen", "mama"]] } });
+  frage: { zeile: 21, text: B.T({ de: "Was soll ich tun?", en: "What should I do?" }), karten: [["A", "🤝", "Ihn festhalten", "festhalten"], ["B", "👣", "Heimlich folgen", "folgen"], ["C", "📞", "Seine Mama anrufen", "mama"]] } });

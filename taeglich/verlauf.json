@@ -1640,13 +1640,54 @@
    "stimme": "Puck (Kinderstimme, Gemini, unbearbeitet, Issue #41)",
    "thema": "+100 $ für jede Lüge, die man hört, −500 $ für jede eigene; ich werde mit Fang-Fragen reich, nur mein bester Freund lügt nie – bis er mit Koffer vor der Tür steht und zweimal lügt. Frage: A festhalten, B heimlich folgen, C seine Mama anrufen.",
    "kulisse": "Blockstadt, Stube, Klasse, Kinderzimmer, Haustür am Abend",
-   "fassung": "voll (77,9 s, reicht auch für YouTube)",
-   "status": "vorrat, noch nicht eingeplant",
+   "fassung": "gekürzt ohne A/B/C-Frage (68,55 s, Schnitt nach Zeile 20, Issue #45), eine Fassung für alle Plattformen",
+   "status": "eingeplant 27.11. als eigenständige Folge ohne A/B/C-Frage (IG 12:29, YT 17:51 storys4youytube, TikTok 18:34)",
    "video": "https://raw.githubusercontent.com/jonathanb-bot/animierte-serie/youtube-upload/taeglich/block-v04.mp4",
    "lufs": -21.7,
    "dauer_s": 77.91,
    "technik": "1440p gerendert (SKALA=2), 1080p H.264 crf 18 maxrate 8M, Ton lautheit.py (Spitze der unbearbeiteten Stimme begrenzt die Lautheit)",
-   "ton": "fester Hintergrundsound (Issue #44)"
+   "ton": "fester Hintergrundsound (Issue #44)",
+   "beschreibung": "In meiner Stadt bringt dir jede Lüge, die du hörst, hundert Dollar – aber jede eigene kostet fünfhundert. Ich bin mit Fang-Fragen reich geworden. Nur mein bester Freund lügt nie … bis heute Abend. Welche Regel soll meine Stadt als Nächstes haben?",
+   "hashtags": [
+    "#animation",
+    "#geschichte"
+   ],
+   "tags": [
+    "animation",
+    "geschichte",
+    "in meiner stadt",
+    "blockstadt",
+    "lügen",
+    "bester freund"
+   ],
+   "kommentar_frage": "Welche Regel soll meine Stadt als Nächstes haben?",
+   "en": {
+    "titel": "In my town, you get 100 dollars every time someone lies to you",
+    "beschreibung": "In my town, every lie you hear pays you 100 dollars – but every lie you tell costs you 500. I got rich with trick questions. Only my best friend never lies … until tonight. What rule should my town have next?",
+    "hashtags": [
+     "#animation",
+     "#story"
+    ],
+    "tags": [
+     "animation",
+     "story",
+     "in my town",
+     "lies",
+     "best friend",
+     "storytime"
+    ],
+    "kommentar_frage": "What rule should my town have next?"
+   },
+   "veroeffentlicht": {
+    "video": "https://raw.githubusercontent.com/jonathanb-bot/animierte-serie/youtube-upload/taeglich/block-v04.mp4",
+    "geplant": {
+     "tiktok": "2026-11-27T18:34:00",
+     "instagram": "2026-11-27T12:29:00",
+     "youtube": "2026-11-27T17:51:00"
+    },
+    "lufs": -21.5,
+    "dauer_s": 68.55
+   }
   },
   {
    "id": "block-v05",

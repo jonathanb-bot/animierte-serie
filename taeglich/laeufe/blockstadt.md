@@ -17,7 +17,7 @@
 > - Ist eine fertige eigenständige Folge im Vorrat (`block/vorrat-*`, status „vorrat“ in `verlauf.json`), darf sie bei Zeitnot
 >   eingeplant werden; Vorrat-Folgen mit A/B/C-Frage am Ende nur nach Kürzen der Frage (YouTube-/plan-Schnitt über `zusammen(..., ohne=…)`).
 >
-> **Benutzte Regeln:** Lügen-Zahl über dem Kopf (v01), Geld fürs Schlafen (v02), gute Tat = Stern (v03), angelogen werden = +100 $ (v04), Grill-Rakete (v05, Random – so nicht mehr, #46) – hier ergänzen
+> **Benutzte Regeln:** Lügen-Zahl über dem Kopf (v01), Geld fürs Schlafen (v02), gute Tat = Stern (v03), angelogen werden = +100 $ (v04), Grill-Rakete (v05, Random – so nicht mehr, #46); gesendet: v05 (26.11.), v04 (27.11., gekürzt ohne Frage) – hier ergänzen
 
 ## Alte Fassung (bis 25.11., nur noch als Werkzeug-Referenz)
 
