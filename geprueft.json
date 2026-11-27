@@ -2394,6 +2394,12 @@
    "bild_s": 86.15,
    "ton_s": 86.14,
    "lufs": -18.1
+  },
+  "taeglich/block-v04.mp4": {
+   "ok": true,
+   "bild_s": 68.55,
+   "ton_s": 68.56,
+   "lufs": -21.5
   }
  },
  "serien": {
@@ -2722,6 +2728,10 @@
   "block-b04k-en": {
    "titel": "I let all 44 shadows in",
    "datei": "taeglich/block-b04k-en.mp4"
+  },
+  "block-v04": {
+   "titel": "In meiner Stadt bekommst du hundert Dollar, wenn dich jemand anlügt",
+   "datei": "taeglich/block-v04.mp4"
   }
  },
  "taeglich_staffeln": {
