@@ -26,6 +26,10 @@ export const lerpV = (a, b, q) => a.clone().lerp(b, q);
 export const F = {};
 // Sprache der Fassung (SPRACHE=en beim Rendern → ?sprache=en). Text im Bild: B.T({ de: "BÄCKEREI", en: "BAKERY" })
 export const SPRACHE = new URLSearchParams(location.search).get("sprache") || "de";
+// Querformat (?format=quer, lange Videos): Kamerawinkel der Einstellungen sind fürs Hochformat gedacht (fov = senkrecht).
+// Test 27.11. mit Folge 4 im 16:9-Bild: gleiches senkrechtes fov wirkt am besten (0,8/0,9 schneiden Köpfe an) → FOV_QUER = 1.
+// Eine Einstellung kann mit Z_.fovQuer (z. B. 0,85) im Querformat enger werden, ohne das Hochformat zu ändern.
+export const QUER = Wt.QUER, FOV_QUER = 1;
 export const T = (t) => (typeof t === "string" ? t : t[SPRACHE] ?? t.de);
 const sauber = w => w.replace(/[.,!?:„“"]/g, "");
 export async function laden() {
@@ -59,11 +63,11 @@ export const kamera = {
   insHandy: (q, von, fov = 50) => { const h = Al.handy, s = Al.HANDY.schirm; h.updateMatrixWorld(true); const mitte = s.getWorldPosition(V(0, 0, 0));
     const n = V(0, 0, 1).transformDirection(s.matrixWorld), oben = V(0, 1, 0).transformDirection(s.matrixWorld), hw = Al.HANDY.schirmH * h.getWorldScale(V(0, 0, 0)).y;
     const ende = mitte.clone().addScaledVector(n, (hw / 2) / Math.tan(fov * Math.PI / 360)); const k = easeIO(q);
-    cam.up.copy(V(0, 1, 0).lerp(oben, k).normalize()); blick(lerpV(von, ende, k), mitte); cam.fov = fov;
+    cam.up.copy(V(0, 1, 0).lerp(oben, k).normalize()); blick(lerpV(von, ende, k), mitte); cam.fov = fov; Z_.fovQuer = 1;
     // Hand, Arm, Kopf vor dem Bildschirm verschwinden sanft: vordere Schnittebene wandert bis kurz vor den Bildschirm
     NAH.wert = Math.max(0.15, cam.position.distanceTo(mitte) * 0.985 * ease((q - 0.25) / 0.6)); if (q > 0.72 && Al.HANDY.arm) Al.HANDY.arm.visible = false; },
   // Bildschirm-Kamera als Hauptkamera (direkt nach insHandy)
-  imHandy: () => { cam.position.copy(Al.HANDY.cam.position); cam.quaternion.copy(Al.HANDY.cam.quaternion); cam.fov = Al.HANDY.cam.fov; ZIEL.copy(cam.position).add(V(0, 0, -10).applyQuaternion(cam.quaternion)); },
+  imHandy: () => { cam.position.copy(Al.HANDY.cam.position); cam.quaternion.copy(Al.HANDY.cam.quaternion); cam.fov = Al.HANDY.cam.fov; Z_.fovQuer = 1; ZIEL.copy(cam.position).add(V(0, 0, -10).applyQuaternion(cam.quaternion)); },
 };
 
 // ---------- Einstellungen ----------
@@ -76,7 +80,7 @@ export const ring = (n, r0, r1, t, o = {}) => { for (let i = 0; i < n; i++) { co
   schatten((o.start ?? 0) + i, (o.cx ?? 0) + Math.cos(a) * r, (o.cz ?? 0) + Math.sin(a) * r, Math.atan2(-Math.cos(a), -Math.sin(a)), { g: o.g ?? 1.6, kriech: 0.5 + 0.4 * Math.sin(t * 1.3 + i), aufl: o.aufl ? o.aufl(i, a, r) : 0 }); } };
 
 // ---------- Zustand pro Bild (Folge kann ihn in grund() und in Einstellungen setzen) ----------
-export const Z_ = { menge: null, vignette: 0.35, zaehler: null, plus: null, mengeZahl: null };
+export const Z_ = { menge: null, vignette: 0.35, zaehler: null, plus: null, mengeZahl: null, fovQuer: FOV_QUER };
 // Zahlen über der Menge ohne die Leute, die für die Kamera ausgeblendet sind: Z_.mengeZahl = { text: (i) => "3", farbe }
 // Geld-/Punkte-Zähler im Bild (Vergleich 24.11.): Z_.zaehler = { wert: zahl | text, farbe: "gruen"|"rot"|"gelb", einheit: " €" }, Z_.plus = { text: "+5 €", t0 }
 // oben mittig (nie oben links, Issue #19), nur in Einstellungen, in denen die Geschichte ihn braucht.
@@ -92,7 +96,7 @@ export function start(o = {}) {
   const { grund = () => {}, frage = null, haltePos = null, nach = () => {} } = o;
   const GRENZEN = S.map(s => s[0]); const VERSTECK = new Map();
   const cap = document.getElementById("cap"), fr = document.getElementById("frage"), wahl = document.getElementById("wahl");
-  const zl = document.createElement("div"), pl = document.createElement("div"); for (const [el, top, gr] of [[zl, 150, 86], [pl, 262, 60]]) { el.style.cssText = `position:absolute;left:0;right:0;top:${top}px;text-align:center;font:900 ${gr}px "Inter Display","Inter",sans-serif;-webkit-text-stroke:12px #0a0a0a;paint-order:stroke fill;text-shadow:0 7px 0 rgba(0,0,0,.35);display:none;transform-origin:center`; document.getElementById("wrap").appendChild(el); }
+  const zl = document.createElement("div"), pl = document.createElement("div"); for (const [el, top, gr] of QUER ? [[zl, 34, 72], [pl, 126, 52]] : [[zl, 150, 86], [pl, 262, 60]]) { el.style.cssText = `position:absolute;left:0;right:0;top:${top}px;text-align:center;font:900 ${gr}px "Inter Display","Inter",sans-serif;-webkit-text-stroke:12px #0a0a0a;paint-order:stroke fill;text-shadow:0 7px 0 rgba(0,0,0,.35);display:none;transform-origin:center`; document.getElementById("wrap").appendChild(el); }
   const FARBE = { gruen: "#4ef07a", rot: "#ff4a4a", gelb: "#ffe53a" };
   if (frage) { fr.textContent = frage.text ?? "Was soll ich tun?"; wahl.innerHTML = frage.karten.map(([b, e, txt]) => `<div class="karte"><b>${b}</b><span class="e">${e}</span>${txt}</div>`).join(""); }
   window.renderAt = (t, probe = false) => {
@@ -104,7 +108,7 @@ export function start(o = {}) {
     for (const p of [Rq.muell, Rq.megafon, Rq.taschenlampe, Rq.lampenKegel, Rq.kisten]) p.visible = false;
     Rq.GASSE.lampe.material = Rq.GASSE.lampeAn; Rq.GASSE.licht.intensity = 40; Rq.ZIMMER.schirm.material = Rq.ZIMMER.schirmAn; Rq.ZIMMER.licht.intensity = 30;
     Al.zuruecksetzen(); cam.up.set(0, 1, 0); NAH.wert = null;
-    Z_.menge = null; Z_.vignette = 0.35; Z_.zaehler = null; Z_.plus = null; Z_.mengeZahl = null; cam.fov = 55;
+    Z_.menge = null; Z_.vignette = 0.35; Z_.zaehler = null; Z_.plus = null; Z_.mengeZahl = null; Z_.fovQuer = FOV_QUER; cam.fov = 55;
     grund(t);                                  // Folge: Uniforms, Autos, Polizei, Notlampen, Menge …
     const tag = U.uTag.value > 0.5;
     if (!o.eigeneAutos) Wt.autosSetzen(t);
@@ -112,6 +116,7 @@ export function start(o = {}) {
     // Einstellung
     let k = GRENZEN.findIndex(b => t < b); if (k < 0) k = S.length - 1; const von = k ? GRENZEN[k - 1] : 0, bis = GRENZEN[k];
     S[k][1](t, Math.min(1, Math.max(0, (t - von) / (bis - von))));
+    if (QUER) cam.fov *= Z_.fovQuer;
     cam.updateProjectionMatrix();
     if (probe) return { kam: cam.position.clone(), ziel: ZIEL.clone(), frei: Fg.FIGUREN.filter(f => f.visible).map(f => f.position.clone()), menge: Z_.menge };
     cam.near = NAH.wert ?? Math.min(3, Math.max(0.15, cam.position.distanceTo(ZIEL) * 0.04)); cam.updateProjectionMatrix();

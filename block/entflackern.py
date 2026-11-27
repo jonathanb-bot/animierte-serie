@@ -19,7 +19,10 @@ W, H, TX, TY = 90, 160, 3, 6
 
 
 def klein(pfad):
-    return np.asarray(Image.open(pfad).convert("L").resize((W, H), Image.BILINEAR), np.float32)
+    global W, H, TX, TY
+    b = Image.open(pfad)
+    if b.width > b.height and W < H: W, H, TX, TY = H, W, TY, TX   # Querformat (lange Videos): 160×90, 6×3 Kacheln
+    return np.asarray(b.convert("L").resize((W, H), Image.BILINEAR), np.float32)
 
 
 def kachel(a, b):

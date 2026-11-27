@@ -5,7 +5,7 @@
 //   leinwand    beliebiger Text/Zeichnung in der Welt: Tafel, Schild, Preisschild, Fehlermeldung …
 //   Räume       Klassenzimmer, Küche, Omas Wohnzimmer (weit weg, eigene Sets) + raumlicht(raum).
 //   Effekte     Regenbogen, Luftballons.
-import { THREE, RoundedBoxGeometry, scene, renderer, W, H, LOTS } from "./welt.js";
+import { THREE, RoundedBoxGeometry, scene, renderer, W, H, LOTS, QUER } from "./welt.js";
 import * as O from "./objekte.js";
 import { mergeGeometries as mergeGeo } from "three/addons/utils/BufferGeometryUtils.js";
 import { rnd } from "./wesen.js";
@@ -49,7 +49,9 @@ HANDY.weltMat = new THREE.MeshBasicMaterial({ map: HANDY.rt.texture, fog: false 
 export const handy = new THREE.Group(); scene.add(handy); handy.visible = false;
 { const k = rb(0.94, 1.66, 0.11, 0.1, plastik("#16161c")); handy.add(k);
   const r = rb(0.97, 1.69, 0.08, 0.1, new THREE.MeshStandardMaterial({ color: "#8a8c96", metalness: 0.7, roughness: 0.3 })); r.position.z = -0.02; handy.add(r);
-  HANDY.schirm = new THREE.Mesh(new THREE.PlaneGeometry(HANDY.schirmW, HANDY.schirmH), HANDY.weltMat); HANDY.schirm.position.z = 0.058; handy.add(HANDY.schirm);
+  const sg = new THREE.PlaneGeometry(HANDY.schirmW, HANDY.schirmH);
+  if (QUER) { const uv = sg.attributes.uv, band = (HANDY.schirmW / HANDY.schirmH) / (W / H); for (let i = 0; i < uv.count; i++) uv.setX(i, 0.5 + (uv.getX(i) - 0.5) * band); }   // Querformat: Handy zeigt die Mitte des 16:9-Bildes (nicht gestaucht)
+  HANDY.schirm = new THREE.Mesh(sg, HANDY.weltMat); HANDY.schirm.position.z = 0.058; handy.add(HANDY.schirm);
   const kam = new THREE.Mesh(new THREE.CircleGeometry(0.03, 12), new THREE.MeshBasicMaterial({ color: "#000" })); kam.position.set(0, 0.77, 0.059); handy.add(kam); }
 // Seite statt Welt anzeigen: handySeite((x, w, h) => {...}, schluessel)  |  zurück: handyWelt()
 export const handySeite = (fn, schluessel = null) => { HANDY.modus = "seite"; HANDY.seite.userData.zeichne(fn, schluessel); HANDY.schirm.material = HANDY.seite.material; };
@@ -65,7 +67,8 @@ export const handyHalten = (f, handPos, kopfPos, { rechts = true, zu = null, abs
 // ---------- Großbildschirm + Fernseher (zeigen dasselbe wie das Handy) ----------
 export const videowand = new THREE.Group(); scene.add(videowand); videowand.visible = false;
 { const r = rb(9.6, 16.6, 0.8, 0.2, mat("#202430", 0.4, 0.5)); r.position.y = 14; videowand.add(r);
-  const s = new THREE.Mesh(new THREE.PlaneGeometry(9, 16), HANDY.weltMat); s.position.set(0, 14, 0.42); videowand.add(s); HANDY.wandSchirm = s;
+  const wg = new THREE.PlaneGeometry(9, 16); if (QUER) { const uv = wg.attributes.uv, band = (9 / 16) / (W / H); for (let i = 0; i < uv.count; i++) uv.setX(i, 0.5 + (uv.getX(i) - 0.5) * band); }   // Querformat: Mitte des Bildes
+  const s = new THREE.Mesh(wg, HANDY.weltMat); s.position.set(0, 14, 0.42); videowand.add(s); HANDY.wandSchirm = s;
   for (const x of [-3, 3]) { const p = zyl(0.35, 0.45, 6, mat("#3a3e48", 0.4, 0.6), 12); p.position.set(x, 3, -0.2); videowand.add(p); }
   const fuss = rb(9, 0.6, 3, 0.15, mat("#3a3e48", 0.5, 0.4)); fuss.position.y = 0.3; videowand.add(fuss); }
 

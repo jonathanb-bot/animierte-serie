@@ -13,6 +13,9 @@
          font:900 46px "Inter Display","Inter",sans-serif;color:#fff;box-shadow:0 10px 0 rgba(0,0,0,.35);transform-origin:left center}
   .karte b{display:inline-flex;align-items:center;justify-content:center;width:70px;height:70px;border-radius:50%;background:#ffe53a;color:#111;font-size:44px;flex:none}
   .karte span.e{font-family:"Noto Color Emoji";font-size:48px}
+  /* Querformat für lange Videos (?format=quer, 1280×720): Untertitel unten im Bild, etwas kleiner */
+  body.quer #wrap{width:1280px;height:720px}
+  body.quer #cap{top:530px;font-size:64px;-webkit-text-stroke:10px #0a0a0a}
   #frage{position:absolute;left:30px;right:30px;top:170px;text-align:center;font:900 64px "Inter Display","Inter",sans-serif;color:#fff;-webkit-text-stroke:10px #0a0a0a;paint-order:stroke fill;display:none}
 </style>
 <script type="importmap">{"imports":{"three":"./node_modules/three/build/three.module.min.js","three/addons/":"./node_modules/three/examples/jsm/"}}</script>
@@ -23,6 +26,8 @@ const folge = new URLSearchParams(location.search).get("folge");
 // Zeitplan relativ zum Ordner der Folge laden
 const plan = new URLSearchParams(location.search).get("plan") || "plan_final.json";
 const sprache = new URLSearchParams(location.search).get("sprache");
-history.replaceState(null, "", `${folge}/?plan=${plan}${sprache ? "&sprache=" + sprache : ""}`);   // Sprache behalten (englische Fassung, 26.11.)
+const format = new URLSearchParams(location.search).get("format");   // "quer" = lange Videos 16:9
+if (format === "quer") document.body.classList.add("quer");
+history.replaceState(null, "", `${folge}/?plan=${plan}${sprache ? "&sprache=" + sprache : ""}${format ? "&format=" + format : ""}`);   // Sprache behalten (englische Fassung, 26.11.)
 await import(`/${folge}/szene.js`);
 </script></body></html>
