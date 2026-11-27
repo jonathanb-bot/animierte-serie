@@ -69,3 +69,11 @@ Ausgewertet wird in der nächsten großen Analyse.
 ## Marken, Spiele, Logos (Jonathan 24.11., Issue #42)
 
 Marken und Spiele dürfen genannt und gezeigt werden, Logos möglichst detailgetreu (als Textur auf Leinwand/Schild/Box nachzeichnen). Ältere Hinweise „ohne Marke“, „kein echtes Logo“, „keine Roblox-Namen“ gelten nicht mehr.
+
+## Querformat für lange Videos (27.11., quer/FORMAT-3D.md)
+
+- `FORMAT=quer` (Adresse `?format=quer`) schaltet Engine, Untertitel und Zähler auf 1280×720 um, mit `SKALA=2` 2560×1440. Ohne die
+  Angabe bleibt alles Hochformat (pixelgleich geprüft). In Szenen: `B.QUER` (true im Querformat), `Z_.fovQuer` (Standard 1).
+- Handy und Videowand zeigen im Querformat die Bildmitte (nicht gestaucht); `kamera.insHandy` füllt die Höhe, nicht die ganze Breite.
+- `render.cjs` und `mitten.cjs` starten den Webserver selbst (`server.cjs`); läuft schon einer auf 8767, wird der benutzt.
+- Lange Folgen: `block/quer-qNN/`, Stimme/Ton mit `lang.py`, Rendern mit dem Workflow „Querformat 3D rendern“, Ablauf `taeglich/laeufe/quer.md`.

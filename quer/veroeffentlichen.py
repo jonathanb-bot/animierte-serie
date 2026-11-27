@@ -3,9 +3,11 @@
 
 Aufruf:  TAEGLICH_TRAILER=<Attributionszeilen> python quer/veroeffentlichen.py q01 [--en] [--probe]
 
-- Video: GitHub-Release `quer-q01` bzw. `quer-q01-en` (Workflow „Querformat rendern (lange Videos)“), wird vorher
+- Video: GitHub-Release `quer-q01` bzw. `quer-q01-en` (ab q03 im 3D-Stil: Workflow „Querformat 3D rendern“
+  `block-quer-rendern.yml`, vorher „Querformat rendern (lange Videos)“), wird vorher
   heruntergeladen und geprüft (Ton = Bild, Lautheit, 1920×1080 oder 2560×1440, 7–14 min, erstes Bild nicht schwarz).
-- Termin: nächster freier Mo/Mi/Fr. Deutsch 17:00, Englisch 23:30 (US-Nachmittag), jeweils ±30 min gestreut (Issue #26).
+- Termin: nächster freier Samstag (quer/FORMAT-3D.md, Jonathan 24.11.: 1 langes Video pro Woche, immer samstags;
+  vorher Mo/Mi/Fr). Deutsch 17:00, Englisch 23:30 (US-Nachmittag), jeweils ±30 min gestreut (Issue #26).
 - Serie `quer` / `quer-en`: getrennt von der Analyse der Kurzvideos (Jonathan 17.11.: „extern von Analyse“).
 - Metadaten aus `quer/folgen.json` (titel, beschreibung, tags; englisch unter `en`).
 """
@@ -27,7 +29,7 @@ sys.path.insert(0, str(ROOT / "quer"))
 from kapitel import kapitel  # noqa: E402
 
 REPO = "jonathanb-bot/animierte-serie"
-TAGE = (0, 2, 4)  # Mo, Mi, Fr
+TAGE = (5,)  # Samstag (seit dem 3D-Umstieg, quer/FORMAT-3D.md; vorher Mo/Mi/Fr)
 UHR = {"de": (17, 0), "en": (23, 30)}
 
 

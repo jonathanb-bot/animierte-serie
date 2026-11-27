@@ -1,5 +1,5 @@
 {
- "_info": "Querformat-Serie (Jonathan 17.11., Issue #37). Pro Folge: id, titel/beschreibung/tags (deutsch) und en{titel,beschreibung,tags}. Reihenfolge = Produktionsreihenfolge, Vorlage-Muster aus quer/vorlagen.md.",
+ "_info": "Querformat-Serie (Jonathan 17.11., Issue #37). Pro Folge: id, titel/beschreibung/tags (deutsch) und en{titel,beschreibung,tags}. Reihenfolge = Produktionsreihenfolge, Vorlage-Muster aus quer/vorlagen.md. Ab q03 im 3D-Stil (quer/FORMAT-3D.md, 27.11.): Ich-Erzählung „In meiner Stadt …“ mit einer verrückten Regel, Ordner block/quer-qNN/, Felder welt/regel; Vorschläge vor dem Lauf gegen „Benutzte Regeln“ (taeglich/laeufe/blockstadt.md) prüfen. Alte 2D-Ideen unter arbeitstitel_2d.",
  "folgen": [
   {
    "id": "q01",
@@ -102,23 +102,43 @@
   },
   {
    "id": "q03",
-   "arbeitstitel": "Du wachst nachts allein im Wald auf – würdest du bis zum Morgen überleben?",
-   "muster": "Du wachst … auf – würdest du überleben? (Leicht Erklärt 151-fach)"
+   "arbeitstitel": "In meiner Stadt darf jeder nur 100 Wörter am Tag sagen",
+   "muster": "Regel + Zähler + Herz-Ende (Papa spart seine letzten Wörter für mich)",
+   "arbeitstitel_2d": "Du wachst nachts allein im Wald auf – würdest du bis zum Morgen überleben?",
+   "muster_2d": "Du wachst … auf – würdest du überleben? (Leicht Erklärt 151-fach)",
+   "welt": "Buntdorf, Schule, Stube, Küche",
+   "regel": "100 Wörter pro Tag, danach ist man stumm bis Mitternacht (Zähler über dem Kopf)",
+   "stil": "3d"
   },
   {
    "id": "q04",
-   "arbeitstitel": "Was wäre, wenn du deinen Opa mit 17 treffen könntest?",
-   "muster": "Was wäre, wenn du … + Familie"
+   "arbeitstitel": "In meiner Stadt geht jede Nacht um 22 Uhr der Strom aus – nur bei uns nicht",
+   "muster": "Regel + Geheimnis + Grusel-Spannung, Wendung alle 60–90 s",
+   "arbeitstitel_2d": "Was wäre, wenn du deinen Opa mit 17 treffen könntest?",
+   "muster_2d": "Was wäre, wenn du … + Familie",
+   "welt": "Nachtstadt (Stromausfall-Shader), Keller, Vorstadt",
+   "regel": "Stromausfall 22 Uhr, nur unser Haus leuchtet",
+   "stil": "3d"
   },
   {
    "id": "q05",
-   "arbeitstitel": "Du wachst 1000 Jahre in der Zukunft auf",
-   "muster": "Was wäre, wenn du … (Vergessene Welten 11-fach, 20.000 Jahre)"
+   "arbeitstitel": "In meiner Stadt bekommst du 1 € für jedes Lachen",
+   "muster": "Regel + laufender Geld-Zähler + doppelte Wendung",
+   "arbeitstitel_2d": "Du wachst 1000 Jahre in der Zukunft auf",
+   "muster_2d": "Was wäre, wenn du … (Vergessene Welten 11-fach, 20.000 Jahre)",
+   "welt": "Buntdorf, Schule, Dorfplatz",
+   "regel": "Lachen = 1 €, Weinen kostet 1 €",
+   "stil": "3d"
   },
   {
    "id": "q06",
-   "arbeitstitel": "Dein Handy zeigt, wie viele Abende du noch mit deinen Eltern hast (Minute für Minute)",
-   "muster": "Lebenszeit, stärkster TikTok-Start (video-001) + Zeitgerüst"
+   "arbeitstitel": "In meiner Stadt zeigt jedes Handy, wie viele Abende du noch mit deinen Eltern hast",
+   "muster": "Herz-Geschichte (block/vergleiche/2026-11-24-erstes-wort.md), Zähler",
+   "arbeitstitel_2d": "Dein Handy zeigt, wie viele Abende du noch mit deinen Eltern hast (Minute für Minute)",
+   "muster_2d": "Lebenszeit, stärkster TikTok-Start (video-001) + Zeitgerüst",
+   "welt": "Stube, Küche, Vorstadt",
+   "regel": "Handy zählt die gemeinsamen Abende",
+   "stil": "3d"
   }
  ]
 }

@@ -4,7 +4,21 @@ Jonathan: Die langen Querformat-Videos sollen ab jetzt aussehen wie die Blocksta
 Keller-Bild bzw. im Vorbild-TikTok), nur länger und mit längeren Geschichten. **Kompletter Umstieg**, der alte Stil (Drehbuch-Engine,
 `render.mjs`) wird für neue lange Folgen nicht mehr benutzt.
 
-## Was dafür nötig ist (einmalig)
+## Stand: Technik fertig (27.11.)
+
+Alle drei Bausteine sind gebaut und getestet (Testfolge `block/quer-test` = Folge 4 im Querformat, Workflow-Lauf auf GitHub):
+
+| Baustein | Werkzeug |
+|---|---|
+| Engine im Querformat | `?format=quer` bzw. `FORMAT=quer` → 1280×720, mit `SKALA=2` 2560×1440. `welt.js` (`QUER`, `W`/`H`), `folge.html` (Untertitel unten, 64 px), `folge.js` (`B.QUER`, Zähler oben, `Z_.fovQuer`), Handy/Videowand zeigen die Bildmitte. Hochformat pixelgleich (geprüft). Standbilder: `FOLGE=quer-qNN FORMAT=quer node block/mitten.cjs alle` |
+| Rendern auf GitHub | Workflow „Querformat 3D rendern“ (`.github/workflows/block-quer-rendern.yml` auf `main`): 30-s-Stücke auf bis zu 20 Rechnern (ca. 6 s pro Bild → ca. 3–3,5 h für 10 min), entflackert, Release `quer-qNN` / `quer-qNN-en` |
+| Stimme in großen Abschnitten | `python3 block/lang.py block/quer-qNN` (9 Zeilen pro Anfrage, 1 Versuch, ca. 17 Anfragen pro Sprache, Puck unbearbeitet), `--ton` → `ton.m4a` |
+
+Ablauf pro Folge: `taeglich/laeufe/quer.md` (Do Deutsch, Fr Englisch, Samstag veröffentlicht). `render.cjs`/`mitten.cjs` starten ihren
+Webserver selbst (`block/server.cjs`). Hinweis Lautheit: Wie bei der Blockstadt bringt `lautheit.py` die Mischung ohne Begrenzer nur so weit
+hoch, wie die Spitzen es erlauben (Testfolge −19 LUFS statt −14), die Stimme bleibt dabei unverändert (#41).
+
+## Was dafür nötig war (einmalig, erledigt 27.11.)
 1. **Engine im Querformat:** `block/welt.js` hat feste Maße 720×1280. Neu: Format über die Adresse (`?format=quer`) → 1280×720,
    mit `SKALA=2` gerendert 2560×1440 (wie bisher bei „quer“). Untertitel, Texttafeln und Kamera-Hilfen (`kamera.*`) auf 16:9 anpassen.
    Aufwand: etwa ein halber Tag mit Prüfen.
@@ -36,7 +50,7 @@ Keller-Bild bzw. im Vorbild-TikTok), nur länger und mit längeren Geschichten. 
 
 ## Festgelegt (Jonathan 24.11.)
 - **60 fps** (entschieden 24.11.): Kamerafahrten und Bewegungen laufen sichtbar flüssiger, YouTube gibt 1440p60 eine höhere Bitrate als 30 fps, und die Renderzeit läuft auf GitHub ohne Arbeit für uns. Passt zu „Qualität vor Quantität“ (Issue #30).
-- **1 langes Video pro Woche, immer samstags** (Deutsch 17:00, Englisch 23:30, ±30 min). Der Lauf startet donnerstags 21:23.
+- **1 langes Video pro Woche, immer samstags** (Deutsch 17:00, Englisch 23:30, ±30 min). Der Lauf startet donnerstags 21:23 (Geschichte, Szenen, Deutsch) und freitags 21:23 (Englisch).
 
 ## Gemini-Verbrauch (Rechnung 24.11.)
 | Was | Anfragen |
