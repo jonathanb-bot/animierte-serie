@@ -1676,7 +1676,17 @@
      "best friend",
      "storytime"
     ],
-    "kommentar_frage": "What rule should my town have next?"
+    "kommentar_frage": "What rule should my town have next?",
+    "veroeffentlicht": {
+     "video": "https://raw.githubusercontent.com/jonathanb-bot/animierte-serie/youtube-upload/taeglich/block-v04-en.mp4",
+     "geplant": {
+      "tiktok": "2026-11-28T03:52:00",
+      "instagram": "2026-11-27T18:34:00",
+      "youtube": "2026-11-27T20:20:00"
+     },
+     "lufs": -20.2,
+     "dauer_s": 70.02
+    }
    },
    "veroeffentlicht": {
     "video": "https://raw.githubusercontent.com/jonathanb-bot/animierte-serie/youtube-upload/taeglich/block-v04.mp4",
