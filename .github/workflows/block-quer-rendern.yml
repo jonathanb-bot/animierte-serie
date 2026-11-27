@@ -49,7 +49,7 @@ jobs:
           test -f "block/$F/${EN}ton.m4a" || { echo "block/$F/${EN}ton.m4a fehlt (python3 block/lang.py block/$F --ton)"; exit 1; }
           test -f "block/$F/szene.js" || { echo "block/$F/szene.js fehlt"; exit 1; }
           # Länge wie folge.js: Ende der letzten Zeile + 1,6 s, 60 fps
-          n=$(python3 -c "import json; z=json.load(open('block/$F/${EN}plan_final.json'))['zeilen'][-1]; print(round((z['start']+z['dauer']+1.6)*60))")
+          n=$(python3 -c "import json, math; z=json.load(open('block/$F/${EN}plan_final.json'))['zeilen'][-1]; print(math.floor((z['start']+z['dauer']+1.6)*60+0.5))")   # wie Math.round in render.cjs
           k=$(python3 -c "import math; print(math.ceil($n / (${{ github.event.inputs.stueck }} * 60)))")
           echo "bilder=$n" >> "$GITHUB_OUTPUT"
           echo "liste=$(python3 -c "import json; print(json.dumps(list(range($k))))")" >> "$GITHUB_OUTPUT"
