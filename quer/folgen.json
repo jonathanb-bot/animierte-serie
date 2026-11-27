@@ -106,9 +106,24 @@
    "muster": "Regel + Zähler + Herz-Ende (Papa spart seine letzten Wörter für mich)",
    "arbeitstitel_2d": "Du wachst nachts allein im Wald auf – würdest du bis zum Morgen überleben?",
    "muster_2d": "Du wachst … auf – würdest du überleben? (Leicht Erklärt 151-fach)",
-   "welt": "Buntdorf, Schule, Stube, Küche",
+   "welt": "Buntdorf (Dorfplatz, Bushaltestelle, Schule, Kiosk), Blockstadt-Platz (Rückblick), Kinderzimmer, Küche, Klasse, Omas Stube, Mensa, Nachrichtenstudio, Mias Zimmer",
    "regel": "100 Wörter pro Tag, danach ist man stumm bis Mitternacht (Zähler über dem Kopf)",
-   "stil": "3d"
+   "stil": "3d",
+   "titel": "In meiner Stadt darf jeder nur 100 WÖRTER am Tag sagen (um 8 Uhr hatte ich nur noch 3)",
+   "beschreibung": "In meiner Stadt schwebt über jedem Kopf eine Zahl: 100 Wörter pro Tag. Jedes Wort zählt, sogar geschriebene. Bei null bist du stumm bis Mitternacht. Und ich habe mich schon an der Bushaltestelle verplappert: drei Wörter für den ganzen Tag. Ein mündlicher Test, ein Wörtermarkt auf dem Schulhof, ein Bus, der um die Ecke kommt – und ein Geheimnis, das mir meine Oma über meinen Papa verrät. Wofür würdest du deine letzten drei Wörter aufheben?\n\nNeue Folge jeden Samstag – abonnieren, damit du keine verpasst!",
+   "tags": [
+    "in meiner stadt",
+    "100 wörter",
+    "animation",
+    "geschichte",
+    "story",
+    "blockstadt",
+    "minecraft",
+    "familie",
+    "papa",
+    "deutsch"
+   ],
+   "laenge_s": 502
   },
   {
    "id": "q04",
