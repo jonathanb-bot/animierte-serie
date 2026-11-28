@@ -63,6 +63,7 @@ export function parse(text, cast = {}) {
       const [cmd, ...rest] = zeile.slice(1).split(/\s+/);
       if (cmd === "musik") ep.musik = rest[0];
       else if (cmd === "musik_lautstaerke") ep.musik_lautstaerke = Number(rest[0]);
+      else if (cmd === "whoosh") ep.whoosh = rest[0] !== "aus";
       else if (cmd === "zeit") zeit = rest[0];
       else if (cmd === "hud") {
         if (rest[0] === "aus") { hud = null; continue; }

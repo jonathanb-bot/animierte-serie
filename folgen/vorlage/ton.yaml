@@ -1,0 +1,45 @@
+# Vorlage für eine Folge von „24. Stock“ im Serien-Stil. Kopieren nach folgen/folge-XX/ton.yaml.
+# Schreibregeln und Format: docs/ton-drehbuch.md
+titel: "24. Stock – Folge X: <Titel>"
+stil: kurzgeschichte
+video: folge-XX.mp4
+
+kapitel:
+  - titel: Was bisher geschah          # ab Folge 2
+    musik: dunkel
+    hud: {tag: 1, uhr: "21:40", anzeige: "Wasser", wert: 0.8, text: "80 %"}
+    ablauf:
+      - erzaehler: "Was bisher geschah."
+      - erzaehler: "<2–4 kurze Sätze>"
+      - schnitt: 0.5
+
+  # --- Kapitel 1 bis 10: kurze Sätze, Du-Form, Präsens ---
+  - titel: "Kapitel 1: <…>"
+    musik: dunkel                      # dunkel | dunkel_puls (Spannung)
+    hud: {uhr: "21:41", uhr_bis: "21:45"}
+    ablauf:
+      - erzaehler: "<Satz>. <Satz>. <Detail>."
+      - erzaehler: "Die *Gefahr* steht in Sternchen. _Namen_ und _Zahlen_ in Unterstrichen."
+      - einblendung: "<2 Wörter>"
+      - schnitt: 0.45                  # Szenenwechsel: harte Stille
+
+  - titel: Cliffhanger
+    musik: dunkel_puls
+    ablauf:
+      - erzaehler: "<letzter Satz>... *<Wendung>*."
+        emotion: dramatisch
+      - schnitt: 0.6
+
+  - titel: Überlebens-Check
+    musik: dunkel
+    hud: aus
+    ablauf:
+      - einblendung: "Überlebens-Check"
+        dauer: 2.0
+      - erzaehler: "Überlebens-Check."
+        emotion: ernst
+      - erzaehler: "Was denkst du: Was passiert als Nächstes?"
+        emotion: fragend
+      - erzaehler: "Und wie würdest du reagieren? A: <…>. B: <…>. C: <…>."
+      - erzaehler: "Schreib es in die Kommentare."
+      - pause: 1.2

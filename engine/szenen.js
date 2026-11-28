@@ -6,7 +6,7 @@
 
   // ---------- Paletten ----------
   const HIMMEL = {
-    tag: ["#6fa8d6", "#cfe5f0"], morgen: ["#8fa6c9", "#f4cfae"], abend: ["#384073", "#ee9a66"], nacht: ["#0a0f24", "#25305a"], rot: ["#3a0f12", "#b2412f"],
+    tag: ["#24456e", "#5f86a8"], morgen: ["#2a3a66", "#b07c6c"], abend: ["#1f2450", "#a8655a"], nacht: ["#070b1d", "#1c2550"], rot: ["#2a0c14", "#83332c"],
   };
   const zeitVon = s => s.zeit || "tag";
   A.himmelMalen = (zeit, x0 = -3000, y0 = -3000, w = 9000, h = 12000, top = -800, bottom = 1400) => {
@@ -496,7 +496,7 @@
     const r = rnd(5); for (let i = 0; i < 26; i++) circle(r() * W, r() * H, 2 + r() * 4, rgba("#ffffff", 0.06 + 0.06 * Math.sin(t + i)));
     const items = s.objekte || [];
     const n = items.length;
-    const pos = n === 1 ? [[540, 860]] : n === 2 ? [[300, 860], [780, 860]] : n === 3 ? [[540, 640], [280, 1080], [800, 1080]] : items.map((_, i) => [270 + (i % 2) * 540, 560 + Math.floor(i / 2) * 470]);
+    const pos = n === 1 ? [[540, 860]] : n === 2 ? [[300, 860], [780, 860]] : n === 3 ? [[540, 570], [280, 985], [800, 985]] : items.map((_, i) => [270 + (i % 2) * 540, 560 + Math.floor(i / 2) * 470]);
     const gr = n === 1 ? 1.5 : n === 2 ? 1.05 : n === 3 ? 0.95 : 0.8;
     items.forEach((it, i) => {
       const [name, label] = it.split(":");
@@ -581,7 +581,7 @@
     const bg = { ...s, figuren: [], figur: null, objekt: null, horde: 3, laerm_x: null, zombies: s.zombies, klopfen: false };
     A.umleiten(oc, () => (SZ[ort] || SZ.wohnung)(bg, t, 0.5));
     ctx.save(); ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.filter = "blur(12px)"; ctx.drawImage(A._off, -20, -20, W + 40, H + 40); ctx.restore();
-    ctx.fillStyle = "rgba(0,0,0,0.12)"; ctx.fillRect(-2000, -2000, 5000, 6000);
+    ctx.fillStyle = "rgba(8,10,26,0.28)"; ctx.fillRect(-2000, -2000, 5000, 6000);
     const f = A.fig(s.figur);
     const bob = Math.sin(t * 1.5) * 7;
     const atem = 1 + Math.sin(t * 2) * 0.006;
@@ -607,11 +607,24 @@
     const r = rnd(3); for (let i = 0; i < 40; i++) { const y = (r() * H - t * 30 * (0.5 + r())) % H; circle(r() * W, (y + H) % H, 2 + r() * 3, rgba("#ffffff", 0.15)); }
     const ein = E.pop(clamp(t / 0.5, 0, 1));
     ctx.save(); ctx.translate(540, 820); ctx.scale(0.8 + 0.2 * ein, 0.8 + 0.2 * ein); ctx.globalAlpha = clamp(t / 0.25, 0, 1);
-    if (s.oben) A.text(s.oben.toUpperCase(), 0, -170, 60, s.akzent || "#ffcf3d");
     const zeilen = String(s.gross || "").toUpperCase().split("|");
+    if (s.oben) A.text(s.oben.toUpperCase(), 0, -170 - (zeilen.length - 1) * 45, 60, s.akzent || "#ffcf3d");
     zeilen.forEach((z, i) => { ctx.save(); ctx.shadowColor = "rgba(0,0,0,0.6)"; ctx.shadowBlur = 30; A.text(z, 0, i * (s.groesse || 150) * 1.05 - (zeilen.length - 1) * (s.groesse || 150) * 0.5, s.groesse || 150, s.textfarbe || "#f4efe6", "center", 900, "Titel", 940); ctx.restore(); });
     if (s.unten) A.text(s.unten.toUpperCase(), 0, 170 + (zeilen.length - 1) * 80, 52, "rgba(255,255,255,0.7)", "center", 700, "HUD");
     ctx.restore();
+    // Knopf unter dem Titel (z. B. „Jetzt auf dem Profil“), erscheint kurz nach dem Titel und pulsiert sanft
+    if (s.knopf) {
+      const k = E.pop(clamp((t - 0.6) / 0.5, 0, 1));
+      if (k > 0) {
+        const txt = s.knopf.toUpperCase(), y = 820 + 250 + (zeilen.length - 1) * 80;
+        ctx.save(); ctx.translate(540, y); ctx.scale(k * (1 + 0.025 * Math.sin(t * 3.2)), k * (1 + 0.025 * Math.sin(t * 3.2)));
+        ctx.font = "900 50px Titel";
+        const tw = ctx.measureText(txt).width;
+        box(-tw / 2 - 50, -50, tw + 100, 100, 50, s.knopf_farbe || "#e2b443");
+        A.text(txt, 0, 0, 50, "#1a1410");
+        ctx.restore();
+      }
+    }
     A._dunkel = 0;
   };
 })();

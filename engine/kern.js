@@ -6,6 +6,15 @@ A.W = 1080; A.H = 1920;
 let ctx = A.ctx;
 // Zeichnen in eine andere Leinwand umleiten (z.B. für unscharfen Hintergrund)
 A.umleiten = (c2, fn) => { const alt = ctx; ctx = c2; try { fn(); } finally { ctx = alt; } };
+// Maske der Figuren: der Farblook dunkelt dort kaum ab, damit Figuren warm vor dem dunklen Hintergrund stehen
+A.maske = document.createElement("canvas"); A.maske.width = A.W; A.maske.height = A.H;
+A.mctx = A.maske.getContext("2d", { willReadFrequently: true });
+A.inMaske = false;
+A.maskeZeichnen = fn => {
+  if (A.inMaske || ctx !== A.ctx) return; // nicht doppelt und nicht in Hilfsleinwände (z. B. unscharfer Hintergrund)
+  A.inMaske = true; A.mctx.setTransform(ctx.getTransform());
+  try { A.umleiten(A.mctx, fn); } finally { A.inMaske = false; }
+};
 
 A.clamp = (v, a, b) => Math.max(a, Math.min(b, v));
 A.lerp = (a, b, p) => a + (b - a) * p;
@@ -67,6 +76,7 @@ A.ik = (sx, sy, tx, ty, l1, l2, bend) => {
 // ---- Licht: Szenen melden Lichtquellen, danach wird abgedunkelt ----
 A.lichter = [];
 A.licht = (x, y, r, farbe = "#ffd9a0", st = 1) => {
+  if (A.inMaske) return;
   // x,y,r in lokalen Koordinaten -> Bildschirm
   const m = ctx.getTransform(); const q = m.transformPoint(new DOMPoint(x, y));
   A.lichter.push({ x: q.x, y: q.y, r: r * Math.hypot(m.a, m.b), farbe, st });

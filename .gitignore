@@ -1,6 +1,7 @@
 node_modules/
 ausgabe/
 *.log
+.cache/
 
 # /watch-Skill: Python-Cache
 __pycache__/
