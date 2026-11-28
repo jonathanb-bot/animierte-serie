@@ -2412,6 +2412,12 @@
    "bild_s": 71.35,
    "ton_s": 71.34,
    "lufs": -19.5
+  },
+  "taeglich/block-b05-en.mp4": {
+   "ok": true,
+   "bild_s": 78.83,
+   "ton_s": 78.83,
+   "lufs": -18.6
   }
  },
  "serien": {
@@ -2752,6 +2758,10 @@
   "block-b05": {
    "titel": "In meiner Stadt hat jeder einen Akku über dem Kopf",
    "datei": "taeglich/block-b05.mp4"
+  },
+  "block-b05-en": {
+   "titel": "In my town, everyone has a battery above their head",
+   "datei": "taeglich/block-b05-en.mp4"
   }
  },
  "taeglich_staffeln": {
