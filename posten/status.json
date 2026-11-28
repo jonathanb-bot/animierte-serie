@@ -10739,5 +10739,15 @@
   "konto": "storys4you_eng",
   "http": 201,
   "am": "2026-11-27T09:37:55.905Z"
+ },
+ "quer-yt-q03": {
+  "ok": true,
+  "zeit": "2026-11-28T16:42:00",
+  "zernioId": "6b0a41920222a4a0570a0d8f",
+  "yt": true,
+  "k": 1,
+  "konto": "storys4youytube",
+  "http": 201,
+  "am": "2026-11-28T02:50:58.973Z"
  }
 }
