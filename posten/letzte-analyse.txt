@@ -1,15 +1,14 @@
-Verbundene Konten: tiktok:storys4you.de1, instagram:sto.rys4you, youtube:sto.rys4you (2. Zernio-Konto), tiktok:storys4you_eng (2. Zernio-Konto), youtube:storys4you_eng (3. Zernio-Konto), instagram:sory4you_eng (3. Zernio-Konto)
-Konto tiktok:storys4you.de1 Follower=75 Insights ok
-Konto instagram:sto.rys4you Follower=18 Insights ok
-Konto youtube:sto.rys4you Follower=69 Insights ok
-Konto tiktok:storys4you_eng Follower=5 Insights ok
-Konto youtube:storys4you_eng Follower=22 Insights ok
-Konto instagram:sory4you_eng Follower=4 Insights ok
+Verbundene Konten: tiktok:storys4you.de1, instagram:sto.rys4you, tiktok:storys4you_eng (2. Zernio-Konto), youtube:storys4youytube (2. Zernio-Konto), youtube:storys4you_eng (3. Zernio-Konto), instagram:sory4you_eng (3. Zernio-Konto)
+Konto tiktok:storys4you.de1 Follower=77 Insights ok
+Konto instagram:sto.rys4you Follower=19 Insights ok
+Konto tiktok:storys4you_eng Follower=4 Insights ok
+Konto youtube:storys4youytube Follower=8 Insights ok
+Konto youtube:storys4you_eng Follower=24 Insights ok
+Konto instagram:sory4you_eng Follower=5 Insights ok
 Posts (haupt) Seite 1: 100
 Posts (haupt) Seite 2: 100
-Posts (haupt) Seite 3: 13
-Posts (yt) Seite 1: 100
-Posts (yt) Seite 2: 66
+Posts (haupt) Seite 3: 37
+Posts (yt) Seite 1: 51
 Posts (drei) Seite 1: 100
-Posts (drei) Seite 2: 9
-Fertig: 6 Konten, 481 Posts (481 mit Zahlen), 0 Fehler → posten/analyse.json
+Posts (drei) Seite 2: 36
+Fertig: 6 Konten, 417 Posts (417 mit Zahlen), 0 Fehler → posten/analyse.json
