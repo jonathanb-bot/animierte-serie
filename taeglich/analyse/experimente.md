@@ -131,6 +131,7 @@ Jeder Schnitt in YouTube Studio (Editor → Trim & Cut, iMac-Aufgabe) mit Zahlen
 | Datum | Video (YouTube-ID) | Schnitt | vorher (Aufrufe, Ø %, Angesehen-Anteil) | 7 Tage danach |
 |---|---|---|---|---|
 | vorgeschlagen 21.11. | Bis zum Mond F1 (cqpT_3exhF4) | ca. 4,2–7,4 s (Einstellung 2 „Alles beginnt hier …“) und ca. 17,2–20,5 s (zweite Regelkarte „Und jedes Like …“) | 841 Aufrufe, Ø 36,7 %, 71 % angesehen (6.–21.11.) | offen |
+| 28.11. (Wochenanalyse) | – | keine neuen Vorschläge: vidIQ 4 Credits (Reserve 10, erneuert 1.12.), Zernio liefert keine YouTube-Kurven; nächste Woche zuerst v04/b05 (de/en) | – | – |
 
 ## Der letzte Raub – Ihr entscheidet (ab 16.11., Issue #35)
 - **Experiment:** Mitmach-Thriller mit A/B-Abstimmung über den Top-Kommentar (Erzählform „interaktiv“), Stimme Orus, eigene Kulissen `engine/raub.js`, du immer von hinten. Zu messen: Anteil Kommentare mit A/B, Likes auf dem Top-Kommentar, Durchhalten von Folge zu Folge, Kommentare pro 1.000 Aufrufe im Vergleich zu „Bis zum Mond“ und „Deine Welt“.

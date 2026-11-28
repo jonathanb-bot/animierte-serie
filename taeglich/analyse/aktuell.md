@@ -1,28 +1,31 @@
-# Vorgaben für den Lauf „Was wäre, wenn du …“ (Stand: große Auswertung 21.11.2026)
+# Aktuelle Vorgaben aus den Daten (Wochenanalyse 28.11.2026)
 
-Gilt für `taeglich/laeufe/nische.md`, bis die Wochenanalyse (samstags) diese Datei neu schreibt. Grundlage: `taeglich/analyse/2026-11-22-abschluss.md`. **Jonathan 21.11.: keine Staffel und keine Serie mehr fortsetzen, nur noch nach den Analysedaten.** Feste Regeln gehen vor (#30, #31, #12, #8, #11, #2, #19, #15, Orus 118 Hz, Stil „leuchtend“, erstes Bild nie schwarz, Stimme nie flüstern, `FORMAT.md` → „Regeln aus Issue #38“).
+Gilt ab jetzt für den Lauf **Blockstadt** (`taeglich/laeufe/blockstadt.md`, deutsch + englisch). Der Nischen-Lauf ist seit 26.11. eingestellt (#45). Die Vorgaben gelten, bis die nächste Wochenanalyse (Sa 5.12.) diese Datei neu schreibt. Grundlage: `taeglich/analyse/2026-11-28-woche.md`. Feste Regeln gehen vor: #45, #46, #44, #42, #41, #30, #31, #8, #11, #2, #15, erstes Bild nie schwarz, kein Wackeln und kein Flackern. Ab 6 Posts je Variante gilt ein Punkt als belastbar, darunter als „Tendenz“.
 
 ## Mehr davon
-1. **Kühne Prämisse über dich in Satz 1** („Ab heute bist du Millionär. Und die erste Regel lautet: Halt den Mund.“ → Instagram 4.576 Aufrufe, Ø 71 % angesehen). Familie im Satz („dein Opa“, „deine Mama“).
-2. **Uhrzeit + unmögliche Kleinigkeit** bei Grusel (s05-f01/F4: 1.502/1.820 auf Instagram, Abbruch 24–36 %).
-3. **Kurz: 62–75 s** (Horror kurz schlägt lang, belastbar). Jedes Video eigenständig (Teil-1-Effekt: spätere Teile verlieren).
-4. **„Ende zuerst“ als Hook-Variante** ab und zu (Instagram de Ø 27,6 % gegen 15,2 %).
-5. **Tempo:** alle 3–5 s Bildwechsel/Bewegung, Textschilder an Schlüsselmomenten.
-
-6a. **Dopamin-Loop (Jonathan 21.11.):** jede Geschichte mit 2 Schleifen aus Einsatz → große Frage → Finte → Rehook, die zweite Finte ist das Ende (`FORMAT.md` → „Dopamin-Loop“). Die Wochenanalyse prüft an der Bindungskurve, ob die Finte bei ca. 20–25 s die Leute hält.
-
-6b. **7 Content-Gesetze (Jonathan 21.11.):** Hook immer einlösen, eine Nische, jedes Video schenkt einen Gedanken oder echten Fakt, Bild zeigt die Prämisse, jeden Tag posten (`FORMAT.md` → „Die 7 Content-Gesetze“). Die Wochenanalyse misst Teilen und Speichern pro 1.000 Aufrufe als Zeichen für „Geben“.
-
-6c. **Test „So baust du …“ (Jonathan 22.11.):** jeden Mittwoch statt des Nischen-Videos (MASTER Abschnitt 3b), Kette aus „Aber … Also …“, Ende „Glückwunsch, du hast gerade … gebaut“. Erster Termin: Mittwoch 25.11.
+1. **Regel + Zahl im ersten Satz:** „In meiner Stadt bekommst du hundert Dollar, wenn …“. v04 hält auf TikTok de 58/42/37 % nach 3/6/10 s, die Fortsetzungen nur 41–59/25–28/16–18 %. Ø 24,8 s auf TikTok, Ø 36,8 s auf Instagram (Tendenz, 2 Posts).
+2. **Sichtbarer Zähler und Gegenregel im zweiten Satz** („Aber wenn du selbst lügst, verlierst du fünfhundert“). So entsteht sofort ein Einsatz, wie bei v04.
+3. **Jede Folge eigenständig:** Auf Instagram de bekamen die eigenständigen Videos 778–1.710 Aufrufe, die Fortsetzungen b01–b03 nur 134–151 bei bis zu 50 % Abbruch (belastbar: 7 Posts).
+4. **Bekannte Marke oder Ort im Bild**, wenn sie zur Regel passt (#42). NASA brachte v05 auf Instagram 1.580 Aufrufe.
+5. **Du bzw. „ich“ + Familie** (Papa, Oma) in den ersten 10 s. n001 (Familie im Satz 1) war das stärkste Nischen-Video.
 
 ## Weniger davon
-6. Kein Einstieg mit Ort, Regel, Aufzählung oder ruhiger Vorgeschichte (s03: 30 % nach 3 s, Instagram Abbruch 54 %; Mond F1 verliert bei 5–9 s an einer ruhigen Einstellung).
-7. Keine Serien-, Staffel- oder Mitmach-Logik, keine A/B-Abstimmung, keine Verweise auf andere Folgen.
-8. Kein Masse-Takt: 1 Video am Tag pro Plattform (TikTok de 282 → 15 Aufrufe im Masse-Test).
+6. **Kein Einstieg mit Vorwissen** („Ihr habt gesagt …“, „Ihr wolltet …“). b03 fällt von 59 % auf 27 % zwischen 3 und 6 s.
+7. **Keine Random-Folgen ohne Regel** (#46): v05 hat auf TikTok die schwächste Bindung (33/19/13 %).
+8. Keine A/B/C-Frage, keine Abstimmung, nie mehr als 1 neue Folge am Tag pro Plattform (Masse-Test: TikTok 282 → 13).
 
-## Reihenfolge der nächsten Ideen (`taeglich/nische.json`)
-9. Start mit Nr. 1 („Ab heute zeigt dein Handy, wie viele Abende du noch mit deinen Eltern hast.“, nah an video-001, dem besten TikTok-Start), dann Nr. 2 (Prämisse Geld wie s02), Nr. 10 (Grusel), danach der Liste nach; Grusel höchstens jedes 4. Video.
+## Reihenfolge der nächsten Regeln
+9. Zuerst die fertigen Vorrat-Folgen mit Regel, die Frage am Ende jeweils gekürzt: **v02 „Geld fürs Schlafen“** (Jonathans eigenes Beispiel), dann **v01 „Lügen-Zahl über dem Kopf“**, dann **v03 „Gute Tat = Stern“**. v01 nur, wenn sie sich klar genug von v04 (Lügen) abhebt, sonst ans Ende.
+10. Neue Regeln, alle mit Zahl und Gegenregel, nie wiederholen (vorher „Benutzte Regeln“ in `blockstadt.md` prüfen):
+    - Jede Stunde Handy kostet dich einen Zentimeter Größe.
+    - Wer zuerst lacht, muss die Rechnung zahlen.
+    - Kinder bekommen das Gehalt, Eltern das Taschengeld.
+    - Für jedes „Nein“ bekommst du 10 $, für jedes „Ja“ musst du 50 $ zahlen.
+    - Alles, was du um Mitternacht sagst, wird wahr, aber nur für eine Stunde.
+    - Bei jedem Lob bekommst du einen Tag dazu, bei jeder Beleidigung verlierst du einen.
+    - Supermärkte sind gratis, aber nur rückwärts laufend.
+    - Jeder trägt ein Schild mit dem Kontostand.
 
-## Messen (für die Wochenanalyse)
-10. Je Video: TikTok 3/6/10 s, Instagram Ø % und Abbruch, YouTube Angesehen-Anteil (Ziel 80 %). Vergleich mit der Qualitätsphase (TikTok de 282, Instagram de 152, TikTok en 721 – Median nach 2–4 Tagen).
-11. TikTok de/en: 7-Tage-Erholungstest bis 28.11.; bleibt der Median unter 100, empfiehlt die Wochenanalyse einen neuen Kanal.
+## Messen (nächste Wochenanalyse)
+11. Neue Vergleichswerte (Median der neuen Videos, 7–142 h alt): TikTok de 681, Instagram de 176, TikTok en 672, Instagram en 188, YouTube en 119. YouTube de: noch keine Zahlen je Post.
+12. Je Folge festhalten: TikTok 3/6/10 s, Instagram Ø s und Abbruch, Teilen und Speichern je 1.000 (bisher 1–3, Ziel > 5). Mit 6 eigenständigen „In meiner Stadt …“-Folgen wird Punkt 1 belastbar.

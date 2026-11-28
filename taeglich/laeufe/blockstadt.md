@@ -11,6 +11,7 @@
 > - **REALISTISCH, KEINE RANDOM-VIDEOS (Jonathan 26.11., Issue #46):** Alles muss sozusagen realistisch aussehen – nichts steckt
 >   ineinander (z. B. Rakete nicht in etwas drin), nichts ragt durch Wände/Möbel/Fahrzeuge, alles steht auf dem Boden. Standbilder
 >   genau darauf prüfen. Keine Random-Folgen wie „Grill-Rakete“ (v05) mehr, nur noch „In meiner Stadt …“ mit einer Regel.
+> - **Datenvorgaben:** vor dem Schreiben `taeglich/analyse/aktuell.md` lesen (Wochenanalyse, samstags), u. a. Regel + Zahl im ersten Satz, Reihenfolge der nächsten Regeln.
 > - **Nur noch 3D-Videos.** Die Nischen-Videos „Was wäre, wenn du …“ / „So baust du …“ (alter 2D-Stil) sind eingestellt.
 >   Die englischen Konten bekommen deshalb täglich die englische Blockstadt-Folge (Abschnitt „Englische Blockstadt“ unten).
 > - Fester Hintergrundsound (Issue #44), Stimme Puck unbearbeitet (Issue #41), 1440p rendern, kein Wackeln, kein Flackern.

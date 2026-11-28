@@ -380,6 +380,59 @@
     "median_letzte_20": 112
    },
    "erkenntnis": "Masse-Test bringt beide TikTok-Konten an die 0-Grenze; Instagram deutsch hält; YouTube beide Kanäle gedrosselt; Bis zum Mond einzige Mitmach-Serie mit echter Beteiligung."
+  },
+  {
+   "datum": "2026-11-28T09:39",
+   "quelle": "Wochenanalyse (Zernio 417 Posts, 0 Fehler; vidIQ 4 Credits, nicht genutzt)",
+   "tiktok": {
+    "follower": 77,
+    "followers_30_tage": "+29/-3",
+    "likes_gesamt": 1957,
+    "videos": 94,
+    "median_letzte_20": 13,
+    "median_neu": 681,
+    "v04_bindung_3_6_10": "58/42/37 %"
+   },
+   "instagram": {
+    "follower": 19,
+    "aufrufe_30_tage": 61705,
+    "reichweite_30_tage": 32506,
+    "median_letzte_20": 152,
+    "median_neu": 176
+   },
+   "youtube": {
+    "kanal": "storys4youytube (neu)",
+    "abonnenten": 8,
+    "aufrufe_30_tage": 1218,
+    "minuten_30_tage": 506,
+    "hinweis": "keine Post-Zahlen über Zernio"
+   },
+   "youtube_alt": {
+    "kanal": "@sto.rys4you",
+    "abonnenten": 74,
+    "aufrufe_gesamt": 29902
+   },
+   "tiktok_eng": {
+    "follower": 4,
+    "likes_gesamt": 622,
+    "median_letzte_20": 3,
+    "median_neu": 672
+   },
+   "instagram_eng": {
+    "follower": 5,
+    "aufrufe_30_tage": 8663,
+    "median_letzte_20": 125.5,
+    "median_neu": 188
+   },
+   "youtube_eng": {
+    "follower": 24,
+    "aufrufe_30_tage": 8603,
+    "minuten_30_tage": 2969,
+    "median_letzte_20": 21.5,
+    "median_neu": 119
+   },
+   "erkenntnis": "Beide TikTok-Konten nach dem Masse-Test erholt (Median neue Videos ~680, kein neuer Kanal nötig). Regel im ersten Satz (v04) hält auf TikTok am besten, eigenständige Folgen schlagen Fortsetzungen auf Instagram klar, Random (v05) schwächste TikTok-Bindung.",
+   "vidiq_credits_danach": 4
   }
  ],
  "letzte_analyse": "taeglich/analyse/2026-11-08.md"
