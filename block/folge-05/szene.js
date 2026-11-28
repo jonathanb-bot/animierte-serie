@@ -70,7 +70,7 @@ const kueche = (t, schlaf, tSchlaf = 0) => { const R = Al.KUECHE; Al.raumlicht(R
 sh(E[4] + 0.06, (t, q) => { const tn = wz("null", 4); kueche(t, t > tn + 0.25, tn + 0.25); Al.kopfakku(oma, t > tn ? 0 : 1, { groesse: 0.85 }); const R = Al.KUECHE;
   kamera.fahrt(q, loc(R, 0.4, 5.0, 5.0), loc(R, 0.1, 4.8, 4.3), loc(R, -2.2, 3.4, 0.5), loc(R, -2.2, 3.4, 0.5), 50); licht(0.6, "#ffe8d0", 0.4, "#f0d0ff"); wisch(t, 4); });
 sh(E[5] + 0.06, (t, q) => { kueche(t, true, -10); Al.kopfakku(oma, 0, { groesse: 0.8 }); zzz(oma, 1.1); const R = Al.KUECHE;
-  kamera.fahrt(q, loc(R, 1.4, 4.0, 5.0), loc(R, 1.1, 3.9, 4.5), loc(R, -2.1, 3.0, 0.5), loc(R, -2.1, 3.0, 0.5), 44); licht(0.6, "#ffe8d0", 0.4, "#f0d0ff"); wisch(t, 5); });
+  kamera.fahrt(q, loc(R, 1.4, 4.0, 5.0), loc(R, 1.1, 3.9, 4.5), loc(R, -2.1, 3.5, 0.5), loc(R, -2.1, 3.5, 0.5), 50); licht(0.6, "#ffe8d0", 0.4, "#f0d0ff"); wisch(t, 5); });
 // 6 Papa lädt sich jeden Abend auf dem Sofa auf (liegt, Blitz im Akku, zählt hoch)
 sh(E[6] + 0.06, (t, q) => { const R = Al.STUBE; Al.raumlicht(R, 6, "#ffd0a0"); papa.visible = true; papa.position.copy(loc(R, 2.35, 1.85, -3.4)); papa.rotation.set(0, Math.PI / 2, 0); Fg.pose(papa, { liegen: 1, ges: "schlaf" });
   Al.kopfakku(papa, B.zaehlen(t, Z[6] + 0.3, E[6], 8, 61), { laden: true, groesse: 0.9 }); zzz(papa, -1.0);
