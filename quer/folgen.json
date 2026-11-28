@@ -123,7 +123,16 @@
     "papa",
     "deutsch"
    ],
-   "laenge_s": 502
+   "laenge_s": 502,
+   "veroeffentlicht": {
+    "de": {
+     "post": "quer-yt-q03",
+     "zernio_id": "6b0a41920222a4a0570a0d8f",
+     "zeit": "2026-11-28T16:42",
+     "laenge_s": 501.2,
+     "video": "https://github.com/jonathanb-bot/animierte-serie/releases/download/quer-q03/quer-q03.mp4"
+    }
+   }
   },
   {
    "id": "q04",
