@@ -2406,6 +2406,12 @@
    "bild_s": 70.02,
    "ton_s": 70.02,
    "lufs": -20.2
+  },
+  "taeglich/block-b05.mp4": {
+   "ok": true,
+   "bild_s": 71.35,
+   "ton_s": 71.34,
+   "lufs": -19.5
   }
  },
  "serien": {
@@ -2742,6 +2748,10 @@
   "block-v04-en": {
    "titel": "In my town, you get 100 dollars every time someone lies to you",
    "datei": "taeglich/block-v04-en.mp4"
+  },
+  "block-b05": {
+   "titel": "In meiner Stadt hat jeder einen Akku über dem Kopf",
+   "datei": "taeglich/block-b05.mp4"
   }
  },
  "taeglich_staffeln": {
