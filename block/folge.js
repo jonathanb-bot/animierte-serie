@@ -82,6 +82,7 @@ export const ring = (n, r0, r1, t, o = {}) => { for (let i = 0; i < n; i++) { co
 // ---------- Zustand pro Bild (Folge kann ihn in grund() und in Einstellungen setzen) ----------
 export const Z_ = { menge: null, vignette: 0.35, zaehler: null, plus: null, mengeZahl: null, fovQuer: FOV_QUER };
 // Zahlen über der Menge ohne die Leute, die für die Kamera ausgeblendet sind: Z_.mengeZahl = { text: (i) => "3", farbe }
+// Akku über der Menge statt Zahl (Folge 5): Z_.mengeZahl = { akku: (i) => prozent, groesse }
 // Geld-/Punkte-Zähler im Bild (Vergleich 24.11.): Z_.zaehler = { wert: zahl | text, farbe: "gruen"|"rot"|"gelb", einheit: " €" }, Z_.plus = { text: "+5 €", t0 }
 // oben mittig (nie oben links, Issue #19), nur in Einstellungen, in denen die Geschichte ihn braucht.
 // Wisch-Übergang am Schnitt: Wt.grade.uniforms.uWisch.value = B.wisch(t, schnittZeit) – kurz verwischt, kein Wackeln (Vergleich 24.11.)
@@ -127,7 +128,7 @@ export function start(o = {}) {
           Rq.MENGE.forEach((p, i) => { if (Rq.mengeImWeg(p, r.kam, r.ziel, r.frei, r.menge.dx ?? 0, r.menge.dz ?? 0)) set.add(i); }); }
         VERSTECK.set(key, set); return window.renderAt(t); }
       Rq.mengeSetzen(t, { sichtbar: true, armeHoch: m.armeHoch ?? (() => 0), huepf: m.huepf ?? (() => 0), licht: m.licht ?? (tag ? 1 : 0.5), dx: m.dx ?? 0, dz: m.dz ?? 0, versteckt: VERSTECK.get(key) });
-      if (Z_.mengeZahl) { const mz = Z_.mengeZahl; Rq.MENGE.forEach((p, i) => { if (p.weg) return; Al.kopfzahl(new THREE.Vector3(p.x + (m.dx ?? 0), 5.6 * p.s, p.z + (m.dz ?? 0)), mz.text(i), { groesse: mz.groesse ?? 0.8, farbe: mz.farbe ?? "#4ef07a" }); }); }
+      if (Z_.mengeZahl) { const mz = Z_.mengeZahl; Rq.MENGE.forEach((p, i) => { if (p.weg) return; if (mz.akku) return Al.kopfakku(new THREE.Vector3(p.x + (m.dx ?? 0), 5.5 * p.s, p.z + (m.dz ?? 0)), mz.akku(i), { groesse: mz.groesse ?? 0.8 }); Al.kopfzahl(new THREE.Vector3(p.x + (m.dx ?? 0), 5.6 * p.s, p.z + (m.dz ?? 0)), mz.text(i), { groesse: mz.groesse ?? 0.8, farbe: mz.farbe ?? "#4ef07a" }); }); }
     } else Rq.mengeSetzen(t, { sichtbar: false });
     Ws.laternenSetzen(t, haltePos ? (L) => haltePos(L, t) : null); Ws.schattenSetzen(t); Ws.funkenSetzen(t); Ws.staubSetzen(t);
     nach(t);

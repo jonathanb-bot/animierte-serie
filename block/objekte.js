@@ -644,3 +644,9 @@ export const bauplatz = ({ groesse = 4, farbe = [0.4, 1.4, 2.2] } = {}) => { con
   g.userData.setze = (a) => { m.opacity = a; fm.opacity = 0.35 * a; g.visible = a > 0.01; }; return g; };
 
 export const ALLE = { kuehlschrank, helm, wasserwerfer, weihwasserkanone, flutlicht, netzwerfer, steinhaufen, bauplatz, werkstattwagen, schranke,  rakete, startrampe, grill, trampolin, roller, flugzeug, koffer, stern, sternglas, besen, reihenhaus, glasturm, baum, blumenkuebel, hecke, bank, laterne, ampel, hydrant, muelltonne, briefkasten, schild, zaun, brunnen, laden, haltestelle, fahrrad, bus, hund, katze, vogel, tisch, stuhl, sofa, stehlampe, regal, geschenk, fernseher, riesenTier, haus, schule, sportwagen, lichterkette, lehmhaus, wimpelkette, fackel, krug, palme, pyramide, glocke, thron, krone, sockel, steinwaechter, riesenWaechter, wolke, himmelshaus, bretterbude, muellberg, leiter, pool, glasaufzug, absperrung, goldvilla, goldschluessel, tellerhaus, spind, tribuene, krankenwagen, krankenbett, herzmonitor, babybett, achterbahn, torte, kinderwagen, gluehbirnenladen, limousine, liegestuhl, broetchen };
+// Suppenteller mit Tomatensuppe und Löffel (28.11., Folge 5: Oma schnarcht über der Suppe). Unterkante bei y = 0 → auf den Tisch stellen.
+export const suppenteller = ({ suppe = "#e0603a", teller = "#f8f8fa" } = {}) => { const g = new THREE.Group(), tm = new THREE.MeshPhysicalMaterial({ color: teller, roughness: 0.3, clearcoat: 0.6 });
+  an(g, zyl(0.75, 0.55, 0.08, tm, 32), 0, 0.04, 0); an(g, zyl(0.62, 0.38, 0.28, tm, 32), 0, 0.2, 0); an(g, new THREE.Mesh(new THREE.CircleGeometry(0.56, 32).rotateX(-Math.PI / 2), mat(suppe, 0.35)), 0, 0.3, 0);
+  for (let i = 0; i < 5; i++) { const a = i * 1.3; an(g, kugel(0.05, mat("#3aa84a", 0.6), 8), Math.cos(a) * 0.3, 0.31, Math.sin(a) * 0.3).scale.set(1, 0.3, 1); }
+  const l = an(g, rb(0.11, 0.04, 0.9, 0.02, metall("#cfd2d8")), 0.5, 0.36, 0.25); l.rotation.set(-0.25, 0.7, 0); return g; };
+

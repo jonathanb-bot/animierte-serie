@@ -31,6 +31,7 @@ if os.environ.get("SPRACHE") == "en":   # englische Fassung (Jonathan 24.11.: zw
 # Jonathans Regel bleibt: nie flüstern oder hauchen. „Gleichbleibende Lautstärke“ fällt hier weg, weil sie den Vortrag
 # flach machte; die Lautstärke gleicht danach der Kompressor an.
 VOLL = ", immer mit voller, klarer Sprechstimme, niemals flüstern oder hauchen"
+VOLL_EN = ", always in a full, clear speaking voice, never whisper or breathe the words, in natural American English"
 ZIEL_HZ = 200.0
 PAUSE = 0.12        # zwischen zwei Zeilen (vorher 0,2 + 0,2)
 EXTRA_MAX = 0.45    # längste Spannungspause zusätzlich (Vorbild: Ø 0,47 s)
@@ -59,14 +60,17 @@ def erzeugen(zeilen, ordner=".", gruppe=3, versuche=None):
     G.stimm_kette = lambda y: y
     G._rauschtor = lambda y, **k: y.astype(np.float32)
     G.MAX_PAUSE = 0.35
-    G.figur_setzen(ANWEISUNG); G.STIL = G.STIL.replace(G.NORMAL, VOLL)
+    # 28.11.: Englisch bekam bisher die deutsche Hülle („Sprich den folgenden deutschen Text …“) → Gemini sprach Zeilen teils deutsch.
+    EN = os.environ.get("SPRACHE") == "en"
+    if EN: G.figur_setzen(ANWEISUNG, "en"); G.STIL = G.STIL.replace(G.NORMAL_EN, VOLL_EN); MARKE = "Speak only the text"
+    else: G.figur_setzen(ANWEISUNG); G.STIL = G.STIL.replace(G.NORMAL, VOLL); MARKE = "Nur den Text sprechen"
     basis = G.STIL; versuche = versuche or int(os.environ.get("VERSUCHE", "3"))
     ordner = Path(ordner); GR = list(range(0, len(zeilen), gruppe)) + [len(zeilen)]
     out, anp, info = [], [], []
     for gi in range(len(GR) - 1):
         teil = zeilen[GR[gi]:GR[gi + 1]]; kand = []
         for v in range(versuche):
-            G.STIL = basis.replace("Nur den Text sprechen", " " * (v + 11) + "Nur den Text sprechen")
+            G.STIL = basis.replace(MARKE, " " * (v + 11) + MARKE)
             try: o = G.sprechen(teil, [0] * len(teil), stimme="Puck", anfragen=1)
             except G.KontingentErschoepft:
                 if kand: break

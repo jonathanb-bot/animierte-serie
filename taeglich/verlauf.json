@@ -1855,6 +1855,57 @@
      "dauer_s": 68.68
     }
    }
+  },
+  {
+   "id": "block-b05",
+   "datum": "2026-11-28",
+   "titel": "In meiner Stadt hat jeder einen Akku über dem Kopf",
+   "emoji": "🔋",
+   "serie": "Blockstadt „In meiner Stadt …“ (eigenständig, Issue #45)",
+   "art": "blockstadt",
+   "stimme": "Puck (Kinderstimme, Gemini, unbearbeitet, Issue #41)",
+   "thema": "Jeder hat einen Akku über dem Kopf, bei 0 % schläfst du sofort ein (Mann auf der Bank, Lehrer mitten im Satz, Oma über der Suppe, Papa lädt auf dem Sofa). Mein Akku steht seit Geburt auf 100 % (Minecraft die ganze Nacht, zehn Runden um den Brunnen). Wendung (Herz): Nachts sitzt Mama mit 1 % an meinem Bett, ein Lichtfaden läuft von ihrem Akku zu meinem – sie hat mir jede Nacht ihren geschenkt. Sie schläft bei 0 % ein, ich nehme ihre Hand und gebe zurück: 90, 70, 50 – zum ersten Mal bin ich müde, das schönste Gefühl der Welt.",
+   "kulisse": "Buntdorf-Platz mit Brunnen und Bank, Klasse, Küche, Stube (Fernseher), Kinderzimmer bei Nacht",
+   "elemente": [
+    "Al.kopfakku (Akku über dem Kopf, auch Menge)",
+    "Al.akkuStrahl (Lichtfaden)",
+    "O.suppenteller",
+    "LOGO.minecraft",
+    "Laufender Akku-Zähler oben",
+    "Story-Richtung Herz"
+   ],
+   "fassung": "eine Fassung für alle Plattformen (≤ 89 s, keine A/B/C-Frage)",
+   "beschreibung": "In meiner Stadt hat jeder einen Akku über dem Kopf. Ist er leer, schläfst du sofort ein – egal wo. Nur meiner steht immer auf 100 %. Heute Nacht habe ich herausgefunden, warum. Welche Regel soll meine Stadt als Nächstes haben?",
+   "hashtags": [
+    "#animation",
+    "#geschichte"
+   ],
+   "tags": [
+    "animation",
+    "geschichte",
+    "in meiner stadt",
+    "blockstadt",
+    "akku",
+    "mama"
+   ],
+   "kommentar_frage": "Welche Regel soll meine Stadt als Nächstes haben?",
+   "en": {
+    "titel": "In my town, everyone has a battery above their head",
+    "beschreibung": "In my town, everyone has a battery above their head. When it hits zero, you fall asleep instantly – anywhere. Only mine is always at 100%. Tonight I found out why. What rule should my town have next?",
+    "hashtags": [
+     "#animation",
+     "#story"
+    ],
+    "tags": [
+     "animation",
+     "story",
+     "in my town",
+     "battery",
+     "mom",
+     "storytime"
+    ],
+    "kommentar_frage": "What rule should my town have next?"
+   }
   }
  ]
 }

@@ -182,7 +182,7 @@ export const ballonsSetzen = (t, an = false, o = { x: 0, z: 0, t0: 0 }) => { con
     ballonW.setMatrixAt(i, m); } ballonW.instanceMatrix.needsUpdate = true; };
 
 // ---------- Pro Bild ----------
-export const zuruecksetzen = () => { kopfzahlenAus(); regenwolke(0, false); blitz(false); rauch(0, false); if (HANDY.arm) HANDY.arm.visible = true; HANDY.arm = null; handy.visible = false; videowand.visible = false; videowand.scale.setScalar(1); regenbogen.visible = false; regenbogen.scale.setScalar(1); handyWelt(); raumlicht(null); STUBE.tvSchirm.material = STUBE.tvAus; ballonsSetzen(0, false); geldSetzen(0, false); VORSTADT.nacht(false); AULA.kinder(1); WELTALL.an(false); };
+export const zuruecksetzen = () => { kopfzahlenAus(); akkuStrahl(0, false); regenwolke(0, false); blitz(false); rauch(0, false); if (HANDY.arm) HANDY.arm.visible = true; HANDY.arm = null; handy.visible = false; videowand.visible = false; videowand.scale.setScalar(1); regenbogen.visible = false; regenbogen.scale.setScalar(1); handyWelt(); raumlicht(null); STUBE.tvSchirm.material = STUBE.tvAus; ballonsSetzen(0, false); geldSetzen(0, false); VORSTADT.nacht(false); AULA.kinder(1); WELTALL.an(false); };
 export const fernseherAn = () => { STUBE.tvSchirm.material = HANDY.weltMat; };
 export const fernseherAus = () => { STUBE.tvSchirm.material = STUBE.tvAus; };
 // Handy-Welt rendern (vor dem Haupt-Render), nur wenn ein Bildschirm sie zeigt. Bildschirme selbst dabei aus (keine Rückkopplung).
@@ -399,6 +399,34 @@ export const kopfzahl = (wer, text, { farbe = "#4ef07a", groesse = 1, hoehe = 2.
   const p = new THREE.Vector3(); let sk = 1; if (wer.userData?.kopfG) { wer.userData.kopfG.getWorldPosition(p); sk = wer.scale.y; p.y += hoehe * sk; } else p.copy(wer);
   { const tx = kzTex(String(text), farbe); if (s2.material.map !== tx) { s2.material.map = tx; s2.material.needsUpdate = true; } }   /* nur bei Wechsel, sonst sehr langsam */ s2.position.copy(p); s2.scale.set(3.2 * groesse * Math.max(sk, 0.7), 1.0 * groesse * Math.max(sk, 0.7), 1); s2.visible = true; return s2; };
 const kopfzahlenAus = () => { KZ.forEach(s2 => s2.visible = false); kzN = 0; };
+// ---------- Akku über dem Kopf (28.11., Folge 5 „Akku“) ----------
+// kopfakku(figurOderPosition, prozent, { laden, groesse, hoehe }): Batterie-Symbol mit Füllstand (grün > 50 %, gelb > 20 %, rot) und
+// Prozentzahl, optional Blitz (lädt gerade). Teilt sich den Sprite-Vorrat mit kopfzahl (wird pro Bild zurückgesetzt).
+const AK_TEX = new Map();
+const akkuTex = (p, laden) => { p = Math.max(0, Math.min(100, Math.round(p))); const k = p + (laden ? "L" : ""); if (AK_TEX.has(k)) return AK_TEX.get(k);
+  const c = document.createElement("canvas"); c.width = 420; c.height = 180; const x = c.getContext("2d"); const rr = (x0, y0, w, h, r) => { x.beginPath(); x.roundRect(x0, y0, w, h, r); };
+  const farbe = p > 50 ? "#4ef07a" : p > 20 ? "#ffd23a" : "#ff4a4a";
+  x.fillStyle = "#0a0a0a"; rr(10, 14, 360, 152, 34); x.fill(); rr(366, 58, 40, 64, 14); x.fill();                 // dunkler Rand
+  x.fillStyle = "#f4f4f4"; rr(24, 28, 332, 124, 24); x.fill(); rr(370, 70, 24, 40, 8); x.fill();                  // Hülle
+  x.fillStyle = "#1c1c22"; rr(36, 40, 308, 100, 16); x.fill();                                                     // Innenraum
+  if (p > 0) { x.fillStyle = farbe; rr(36, 40, Math.max(18, 308 * p / 100), 100, 16); x.fill(); }
+  x.font = "900 86px 'Inter Display', Inter, sans-serif"; x.textAlign = "center"; x.textBaseline = "middle"; x.lineJoin = "round";
+  const tx = laden ? 222 : 190; x.lineWidth = 14; x.strokeStyle = "#0a0a0a"; x.strokeText(p + "%", tx, 94); x.fillStyle = "#ffffff"; x.fillText(p + "%", tx, 94);
+  if (laden) { x.fillStyle = "#ffe53a"; x.strokeStyle = "#0a0a0a"; x.lineWidth = 8; x.beginPath(); x.moveTo(84, 30); x.lineTo(50, 98); x.lineTo(76, 98); x.lineTo(62, 152); x.lineTo(112, 78); x.lineTo(86, 78); x.lineTo(104, 30); x.closePath(); x.stroke(); x.fill(); }
+  const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 4; AK_TEX.set(k, t); return t; };
+export const kopfakku = (wer, prozent, { laden = false, groesse = 1, hoehe = 2.1 } = {}) => {
+  const s2 = kopfzahl(wer, "", { groesse, hoehe }); const tx = akkuTex(prozent, laden); if (s2.material.map !== tx) { s2.material.map = tx; s2.material.needsUpdate = true; }
+  const sk = s2.scale.y / groesse; s2.scale.set(2.3 * groesse * sk, 0.99 * groesse * sk, 1); return s2; };
+// Leuchtender Faden zwischen zwei Punkten (z. B. von Akku zu Akku), mit wandernden Lichtpunkten: akkuStrahl(t, true, von, nach, { staerke })
+export const STRAHL = new THREE.Group(); STRAHL.visible = false; scene.add(STRAHL);
+{ const sm = new THREE.MeshBasicMaterial({ color: new THREE.Color(2.4, 2.1, 0.9), transparent: true, opacity: 0.85, depthWrite: false, fog: false });
+  STRAHL.faden = new THREE.Mesh(new THREE.CylinderGeometry(0.035, 0.035, 1, 8, 1, true), sm); STRAHL.add(STRAHL.faden);
+  STRAHL.punkte = []; for (let i = 0; i < 7; i++) { const k = new THREE.Mesh(new THREE.SphereGeometry(0.09, 10, 8), new THREE.MeshBasicMaterial({ color: new THREE.Color(3.2, 2.8, 1.2), transparent: true, depthWrite: false, fog: false })); STRAHL.add(k); STRAHL.punkte.push(k); } }
+export const akkuStrahl = (t, an = false, von = null, nach = null, { staerke = 1, tempo = 0.6 } = {}) => { STRAHL.visible = an && staerke > 0.01; if (!STRAHL.visible) return;
+  const d = nach.clone().sub(von), L = d.length(); STRAHL.faden.position.copy(von).addScaledVector(d, 0.5); STRAHL.faden.scale.set(1, L, 1);
+  STRAHL.faden.quaternion.setFromUnitVectors(new THREE.Vector3(0, 1, 0), d.clone().normalize()); STRAHL.faden.material.opacity = 0.85 * staerke;
+  STRAHL.punkte.forEach((k, i) => { const f = ((t * tempo + i / STRAHL.punkte.length) % 1 + 1) % 1; k.position.copy(von).addScaledVector(d, f); k.material.opacity = staerke * Math.sin(Math.PI * f); k.scale.setScalar(0.8 + 0.4 * Math.sin(Math.PI * f)); }); };
+
 
 // ---------- Wetter-Effekte (Vergleich 24.11.): eigene Regenwolke über einer Figur, Blitz, Rauch ----------
 // regenwolke(t, an, {x, y, z, breite}) – kleine dunkle Wolke mit fallenden Tropfen und Pfütze darunter (fest vorausberechnet)

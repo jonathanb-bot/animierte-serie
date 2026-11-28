@@ -20,6 +20,22 @@ export const LOGO = {
     x.fillStyle = "#ff8000"; x.fillRect(cx - s * 0.2, cy + s * 0.02, s * 0.06, s * 0.33); x.fillRect(cx - s * 0.27, cy + s * 0.02, s * 0.2, s * 0.05);
     x.beginPath(); x.ellipse(cx + s * 0.17, cy + s * 0.1, s * 0.07, s * 0.12, 0, 0, 7); x.fill(); x.fillRect(cx + s * 0.145, cy + s * 0.15, s * 0.05, s * 0.2);
     if (schrift) { x.fillStyle = "#ffffff"; x.font = `900 ${Math.round(h * 0.17)}px 'Inter Display', Helvetica, sans-serif`; x.textAlign = "center"; x.textBaseline = "middle"; x.fillText("Lieferando", cx, h * 0.83); } },
+  // Minecraft: Titelbild mit Gras-/Erdblöcken und dem kantigen Steinschriftzug „MINECRAFT“ (Pixel-Buchstaben, heller Stein oben, dunkle Kante)
+  minecraft(x, w, h, { landschaft = true } = {}) {
+    if (landschaft) { x.fillStyle = "#7ab8ff"; x.fillRect(0, 0, w, h); const b = Math.round(w / 16); let s = 7; const r = () => { s = (s * 16807) % 2147483647; return s / 2147483647; };
+      for (let i = 0; i < 17; i++) { const top = Math.round(h * 0.62 / b) * b - (i % 5 === 2 ? b : i % 7 === 4 ? 2 * b : 0);
+        for (let y = top; y < h; y += b) { const gras = y === top; x.fillStyle = gras ? "#5cab3c" : y < top + 3 * b ? "#8a5a32" : "#7a7a7a"; x.fillRect(i * b, y, b, b);
+          for (let p = 0; p < 6; p++) { x.fillStyle = gras ? (r() < 0.5 ? "#4a9a2c" : "#6cc04a") : y < top + 3 * b ? (r() < 0.5 ? "#6e4424" : "#a06a3e") : (r() < 0.5 ? "#666" : "#8c8c8c"); x.fillRect(i * b + Math.floor(r() * 4) * b / 4, y + Math.floor(r() * 4) * b / 4, b / 4, b / 4); } } }
+      for (const [cx, cy] of [[0.2, 0.12], [0.75, 0.2]]) { x.fillStyle = "rgba(255,255,255,0.9)"; x.fillRect(w * cx, h * cy, b * 3, b); x.fillRect(w * cx + b, h * cy - b * 0.6, b * 1.5, b * 0.6); } }
+    const F = { M: ["10001", "11011", "10101", "10001", "10001"], I: ["111", "010", "010", "010", "111"], N: ["1001", "1101", "1011", "1001", "1001"], E: ["111", "100", "110", "100", "111"],
+      C: ["111", "100", "100", "100", "111"], R: ["110", "101", "110", "101", "101"], A: ["010", "101", "111", "101", "101"], F: ["111", "100", "110", "100", "100"], T: ["111", "010", "010", "010", "010"] };
+    const wort = "MINECRAFT"; const breite = [...wort].reduce((a, c) => a + F[c][0].length + 1, -1); const px = Math.floor(w * 0.9 / breite), x0 = (w - breite * px) / 2, y0 = h * 0.3;
+    let cx = x0; for (const c of wort) { const m = F[c]; m.forEach((zeile, j) => [...zeile].forEach((v, i) => { if (v !== "1") return; const X = cx + i * px, Y = y0 + j * px;
+        x.fillStyle = "#2a2a2a"; x.fillRect(X + px * 0.12, Y + px * 0.18, px, px);                                     // Schlagschatten
+        x.fillStyle = j < 2 ? "#c8c8c8" : j < 4 ? "#a0a0a0" : "#7c7c7c"; x.fillRect(X, Y, px, px);
+        x.fillStyle = "rgba(255,255,255,0.18)"; x.fillRect(X, Y, px, px * 0.18); x.fillStyle = "rgba(0,0,0,0.18)"; x.fillRect(X + px * 0.25, Y + px * 0.45, px * 0.25, px * 0.25); }));
+      cx += (m[0].length + 1) * px; }
+    x.strokeStyle = "#1a1a1a"; x.lineWidth = Math.max(2, px * 0.08); cx = x0; for (const c of wort) { const m = F[c]; m.forEach((zeile, j) => [...zeile].forEach((v, i) => { if (v === "1") x.strokeRect(cx + i * px, y0 + j * px, px, px); })); cx += (m[0].length + 1) * px; } },
 };
 const CACHE = new Map();
 export const logoTextur = (name, w = 512, h = 512, o = {}) => { const k = name + w + "x" + h + JSON.stringify(o); if (CACHE.has(k)) return CACHE.get(k);

@@ -199,3 +199,11 @@ Neu (26.11., Folge 4):
 - **`Al.leuchtfassade(lot, {farbe, ab})`**: goldene Fenster auf allen Seiten eines Hauses aus `LOTS`, `userData.setze(0…1)` lässt sie nacheinander aufleuchten (ganzes Haus „wie eine Laterne“).
 - Einzeln ausblendbar: `STUBE.kuchen`, `STUBE.teller`, `ZIMMER.weckerG` + `ZIMMER.anzeige`.
 - Konfetti im Innenraum: `Rq.konfettiW.position.copy(Raum-Mitte); Rq.konfettiW.scale.set(0.42, 0.3, 0.42)` (im `grund` zurücksetzen).
+
+Neu (28.11., Folge 5 „Akku“):
+- **`Al.kopfakku(figurOderPosition, prozent, {laden, groesse, hoehe})`**: Akku-Symbol über dem Kopf (grün > 50 %, gelb > 20 %, rot, Prozentzahl innen, `laden: true` → gelber Blitz). Teilt den Sprite-Vorrat mit `kopfzahl`, wird pro Bild zurückgesetzt. Für die Menge: `Z_.mengeZahl = { akku: (i) => prozent, groesse }`.
+- **`Al.akkuStrahl(t, an, von, nach, {staerke, tempo})`**: leuchtender Faden mit wandernden Lichtpunkten zwischen zwei Punkten (z. B. von Akku zu Akku), im `zuruecksetzen` automatisch aus.
+- **`O.suppenteller({suppe, teller})`**: Teller mit Tomatensuppe und Löffel (Unterkante y = 0, in der `KUECHE` vorher `KUECHE.schale.visible = false`).
+- **`LOGO.minecraft(x, w, h, {landschaft})`**: Titelbild mit Gras-/Erdblöcken und kantigem Stein-Schriftzug „MINECRAFT“ (z. B. als `leinwand({leuchtet: true})` vor `STUBE.tv`).
+- Realismus (Issue #46): Erwachsene im Kinderzimmer nie auf die Bettkante setzen (zu groß, verdeckt alles) – `O.stuhl` neben das Kopfende (Zimmer-lokal x ≈ 1,7, Blick −x), Figur mit `sitz: 1` auf y −0,03.
+- **Stimme Englisch (Fehler behoben 28.11.):** `stimme.py` gab Gemini auch bei `SPRACHE=en` die deutsche Hülle („Sprich den folgenden deutschen Text …“) → einzelne Abschnitte kamen auf Deutsch. Jetzt englische Hülle. Englische Spur immer per Spracherkennung prüfen (`language`-Erkennung). Liegen Zeilengrenzen daneben (Wörter abgeschnitten): `folge-05/grenzen_pausen.py <ordner>` legt sie an echte Sprechpausen; einzelne Abschnitte neu: `folge-05/neu_en_abschnitt.py A B`.
